@@ -1,0 +1,33 @@
+---
+title: AEM Headless快速入門
+description: 端對端教學課程，說明如何使用AEM Headless建立和公開內容。
+translation-type: tm+mt
+source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
+
+---
+
+
+# AEM Headless快速入門
+
+端對端教學課程，說明如何在無頭CMS情境中使用AEM來建立和公開內容，並由原生行動應用程式使用。
+
+>[!VIDEO](https://video.tv.adobe.com/v/28315/?quality=12&learn=on)
+
+本教學課程探討如何使用AEM Content Services來強化顯示「活動」資訊（音樂、效能、藝術等）的行動應用程式體驗 由世界開發組織的團隊組織。
+
+本教學課程將涵蓋下列主題：
+
+* 使用內容片段建立代表事件的內容
+* 使用AEM Sites的範本和將事件資料公開為JSON的頁面，定義AEM Content Services端點
+* 探索如何使用AEM WCM核心元件讓行銷人員製作JSON端點
+* 從行動應用程式使用AEM Content Services JSON
+   * 使用Android是因為本教學課程的所有使用者（Windows、macOS和Linux）都可使用它來執行原生應用程式，因此它具備跨平台模擬器。
+
+## GitHub專案
+
+原始碼和內容套件可從 [AEM Guides - WKND Mobile GitHub專案取得](https://github.com/adobe/aem-guides-wknd-mobile)。
+
+如果您發現教學課程或程式碼有問題，請留下 [GitHub問題](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
