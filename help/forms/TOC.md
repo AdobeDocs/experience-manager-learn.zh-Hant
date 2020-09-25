@@ -6,9 +6,9 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: c7ae9a51800bb96de24ad577863989053d53da6b
+source-git-commit: 9f8c858197e44de020ab195373f30e3d38dfd2cc
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '835'
 ht-degree: 3%
 
 ---
@@ -38,7 +38,8 @@ ht-degree: 3%
    + [設定最適化表單以觸發AEM工作流程——視訊](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [PTO AEM工作流程](handling-form-submissions/invoking-aem-workflow-on-form-submission-article-use.md)
    + [自定義分配任務通知](handling-form-submissions/customize-assign-task-notification.md)
-
++ 有用的整合{#some-useful-integrations}
+   + [雙因素驗證](some-useful-integrations/two-factor-authentication.md)
 + 適用性表單 {#adaptive-forms}
    + [在Windows上安裝AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [最適化表單中的預填服務](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
