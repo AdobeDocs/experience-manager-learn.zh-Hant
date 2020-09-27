@@ -10,7 +10,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -110,7 +110,7 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **若要在本機系統上測試此功能，請依照下列指示進行：**
 
-* 如本文所述，設定Tomcat [。](/help/forms/ic-print-channel-tutorial/partone.md) Tomcat具有生成樣例資料的war檔案。
+* 如本文所述，設定Tomcat [。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成樣例資料的war檔案。
 * 如本文所述，設定服務即系統用 [戶](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。
 請確定此系統用戶對以下節點具有讀取權限。 若要將權限登入給使 [用者管理員](https://localhost:4502/useradmin) ，並搜尋系統使用者「資料」，並透過Tabbing至權限標籤，為下列節點提供讀取權限
    * /content/dam/formsanddocuments
