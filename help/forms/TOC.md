@@ -6,9 +6,9 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 9f8c858197e44de020ab195373f30e3d38dfd2cc
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '836'
 ht-degree: 3%
 
 ---
@@ -30,16 +30,17 @@ ht-degree: 3%
    + [設定資產面板](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [使用自訂函式和程式碼編輯器](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
 + 處理表單提交 {#handling-af-form-submissions}
-   + [建立審核工作流](handling-form-submissions/create-workflow-to-review.md)
-   + [設定最適化表單以觸發工作流程](handling-form-submissions/trigger-workflow-on-form-submission.md)
+   + [建立審核工作流](handling-form-submissions/creating-a-review-workflow.md)
+   + [設定最適化表單以觸發工作流程](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [顯示感謝頁面](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
    + [提交到外部端點](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [傳送電子郵件](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
+   + [付費請求工作流程](handling-form-submissions/paid-time-off-request-workflow.md)
    + [設定最適化表單以觸發AEM工作流程——視訊](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
-   + [PTO AEM工作流程](handling-form-submissions/invoking-aem-workflow-on-form-submission-article-use.md)
    + [自定義分配任務通知](handling-form-submissions/customize-assign-task-notification.md)
 + 有用的整合{#some-useful-integrations}
    + [雙因素驗證](some-useful-integrations/two-factor-authentication.md)
+
 + 適用性表單 {#adaptive-forms}
    + [在Windows上安裝AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [最適化表單中的預填服務](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
@@ -169,17 +170,17 @@ ht-degree: 3%
    + [認證檔案](document-services/certifying-documents-aem-forms-tutorial.md)
 + 印刷頻道的互動式通訊 {#ic-print-channel-tutorial}
    + [簡介](ic-print-channel-tutorial/introduction.md)
-   + [設定Tomcat](ic-print-channel-tutorial/partone.md)
-   + [建立資料來源](ic-print-channel-tutorial/parttwo.md)
-   + [建立表單資料模型](ic-print-channel-tutorial/partthree.md)
-   + [使用Forms Designer建立XDP版面](ic-print-channel-tutorial/partfour.md)
-   + [建立檔案片段](ic-print-channel-tutorial/partfive.md)
-   + [建立列印渠道檔案](ic-print-channel-tutorial/partsix.md)
-   + [新增內容至目標區域](ic-print-channel-tutorial/partseven.md)
-   + [配置折線圖](ic-print-channel-tutorial/parteight.md)
-   + [新增表格至列印渠道](ic-print-channel-tutorial/partnine.md)
-   + [使用Watched資料夾產生列印檔案](ic-print-channel-tutorial/partten.md)
-   + [在表單提交時開啟代理UI](ic-print-channel-tutorial/parteleven.md)
+   + [設定Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
+   + [建立資料來源](ic-print-channel-tutorial/create-data-source.md)
+   + [建立表單資料模型](ic-print-channel-tutorial/create-form-data-model.md)
+   + [使用Forms Designer建立XDP版面](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
+   + [建立檔案片段](ic-print-channel-tutorial/create-document-fragment.md)
+   + [建立列印渠道檔案](ic-print-channel-tutorial/create-print-channel-document.md)
+   + [新增內容至目標區域](ic-print-channel-tutorial/add-content-to-target-areas.md)
+   + [配置折線圖](ic-print-channel-tutorial/configuring-line-chart.md)
+   + [新增表格至列印渠道](ic-print-channel-tutorial/adding-table-to-print-channel.md)
+   + [使用Watched資料夾產生檔案](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
+   + [在表單提交時開啟代理UI](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
 + 互動式通訊 {#interactive-communications}
    + [使用批次API](interactive-communications/batch-generation-interactive-communications.md)
    + [MultiSeries Charts](interactive-communications/multiseriescharts.md)
