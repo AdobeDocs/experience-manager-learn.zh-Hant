@@ -10,10 +10,10 @@ doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 3%
+source-wordcount: '224'
+ht-degree: 2%
 
 ---
 
@@ -37,18 +37,4 @@ ht-degree: 3%
 * 建立檔案片段
 * 配置表和圖表
 * 使用「監看的資料夾」，以批次模式產生檔案
-
-## 教學課程
-
-* [設定Tomcat](partone.md)
-* [建立資料來源](parttwo.md)
-* [建立表單資料模型](partthree.md)
-* [使用Forms Designer建立XDP版面](partfour.md)
-* [建立檔案片段](partfive.md)
-* [建立列印渠道檔案](partsix.md)
-* [新增內容至目標區域](partseven.md)
-* [配置折線圖](parteight.md)
-* [新增表格至列印渠道](partnine.md)
-* [使用Watched資料夾產生列印檔案](partten.md)
-* [在表單提交時開啟代理UI](parteleven.md)
 
