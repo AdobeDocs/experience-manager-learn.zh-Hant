@@ -10,7 +10,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: 4f51f7bf00827210d2631b9335768a9980f6655c
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 0%
@@ -26,5 +26,5 @@ Row1會根據服務呼叫傳回的資料而設定成成長。 請注意此處指
 
 ## 將它部署在您的伺服器上
 
-[按此處指定的方式安裝](/help/forms/ic-print-channel-tutorial/partone.md)[Tomcat部署SampleRest.war檔案使用AEM套件管理器安裝](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)資產開啟攤銷排程表[](assets/amortizationschedule.zip)[](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)Enter the appropriate value and click on calculate攤銷排程應填入您的表單
+[按此處指定的方式安裝](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)[Tomcat部署SampleRest.war檔案使用AEM套件管理器安裝](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)資產開啟攤銷排程表[](assets/amortizationschedule.zip)[](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)Enter the appropriate value and click on calculate攤銷排程應填入您的表單
 
