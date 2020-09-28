@@ -10,7 +10,7 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: c7ae9a51800bb96de24ad577863989053d53da6b
+source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 0%
@@ -133,7 +133,7 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 #### 建立和部署
 
-[按照此處所述構建包](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)[確保包已部署且處於活動狀態](http://localhost:450/system/console/bundles)
+[按照此處所述構建包](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)[確保包已部署且處於活動狀態](http://localhost:4502/system/console/bundles)
 
 建立工作流程模型。 在工作流模型中拖放流程步驟。 將流程步驟與「將最適化表單附件保存到檔案系統」關聯。
 
