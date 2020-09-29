@@ -10,9 +10,9 @@ audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
 translation-type: tm+mt
-source-git-commit: 1eb15af3d9d2904856218aaad4d5c52233603a71
+source-git-commit: 7fd232d6821f91c342dd04fcdd04b9b505cb7250
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '990'
 ht-degree: 1%
 
 ---
@@ -28,6 +28,12 @@ Pod Id會提供在每個log陳述式中，並允許篩選或整合log陳述式�
 
 + `cm-p<PROGRAM ID>-e<ENVIRONMENT ID>-aem-<author|publish>-<POD NAME>`
 + 範例: `cm-p12345-e56789-aem-author-abcdefabde-98765`
+
+## 自訂記錄檔
+
+AEM做為Cloud Services不支援自訂記錄檔，但支援自訂記錄。
+
+若要在AEM中以雲端服務形式提供Java記錄檔(透過 [Cloud Manager](#cloud-manager) 或 [Adobe I/O CLI](#aio))，必須編寫自訂記錄檔陳述式 `error.log`。 寫入自訂命名記錄的記錄檔(例如 `example.log`)將無法從AEM以雲端服務的形式存取。
 
 ## AEM Author和Publish服務記錄檔
 
@@ -54,7 +60,7 @@ AEM Author和Publish服務都提供AEM執行階段伺服器記錄：
    + 分段: `WARN`
    + 生產: `ERROR`
 
-## Cloud Manager
+## Cloud Manager{#cloud-manager}
 
 Adobe Cloud Manager允許透過環境的「下載記錄檔」動作，按日下載記錄檔。
 
@@ -62,7 +68,7 @@ Adobe Cloud Manager允許透過環境的「下載記錄檔」動作，按日下�
 
 這些記錄檔可透過任何記錄檔分析工具進行下載和檢查。
 
-## Adobe I/O CLI with Cloud Manager plugin
+## Adobe I/O CLI with Cloud Manager plugin{#aio}
 
 Adobe Cloud Manager支援透過 [Adobe I/O CLI以Adobe I/O CLI的Cloud Manager外掛程式，以Cloud Service記錄檔形式存取AEM](https://github.com/adobe/aio-cli)[](https://github.com/adobe/aio-cli-plugin-cloudmanager)。
 
