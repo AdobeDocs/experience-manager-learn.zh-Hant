@@ -6,10 +6,10 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -119,6 +119,7 @@ ht-degree: 3%
    + [JSON變數](variables-aem-workflow/part2.md)
    + [檔案變數](variables-aem-workflow/part3.md)
    + [ArrayList變數](variables-aem-workflow/part4.md)
+   + [表單資料模型變數](variables-aem-workflow/form-data-model.md)
    + [AEM工作流程中的規則編輯器](variables-aem-workflow/part5.md)
 + 在MySQL資料庫中儲存和檢索表單資料{#storing-and-retrieving-form-data}
    + [簡介](storing-retrieving-form-data/introduction.md)
