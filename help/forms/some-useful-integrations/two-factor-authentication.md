@@ -9,7 +9,7 @@ activity: use
 version: 6.4,6.5
 kt: 6317
 translation-type: tm+mt
-source-git-commit: 9f8c858197e44de020ab195373f30e3d38dfd2cc
+source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
@@ -67,7 +67,9 @@ AEM Forms資料整合提供直覺式使用者介面，以建立及使用表 [單
 * 您可從此處下載範例最適 [化表單](assets/sms-2fa-verification-af.zip)。 此示例表單使用作為本文一部分提供的表單資料模型的服務調用。
 * 從表單和檔案UI將表 [單匯入AEM](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 在編輯模式中開啟表格。 開啟下列欄位的規則編輯器
-   ![sms-send](assets/check-sms.PNG)
+
+![sms-send](assets/check-sms.PNG)
+
 * 編輯與欄位關聯的規則。 提供您適當的API金鑰
 * 儲存表格
 * [預覽表格](http://localhost:4502/content/dam/formsanddocuments/sms-2fa-verification/jcr:content?wcmmode=disabled) ，並測試功能
