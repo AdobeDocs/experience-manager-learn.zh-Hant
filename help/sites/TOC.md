@@ -4,9 +4,9 @@ user-guide-description: A collection of videos and tutorials for Adobe Experienc
 breadcrumb-title: AEM Sites Tutorials
 sub-product: sites
 translation-type: tm+mt
-source-git-commit: e13a5171fbeb9e1eb5f78d1c691bc8b4b896a998
+source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '457'
 ht-degree: 4%
 
 ---
@@ -101,3 +101,12 @@ ht-degree: 4%
    + 分析 {#analytics}
       + [使用Adobe Analytics收集頁面資料](integrations/analytics/collect-data-analytics.md)
       + [使用Adobe Analytics追蹤點按的元件](integrations/analytics/track-clicked-component.md)
+   + Adobe Target {#target}
+      + [概覽](integrations/adobe-target/overview.md)
+      + [將Target擴充功能新增至Launch屬性](integrations/adobe-target/add-target-launch-extension.md)
+      + [載入並觸發Target呼叫](integrations/adobe-target/load-and-fire-target.md)
+      + [建立Adobe Target Cloud服務帳戶](integrations/adobe-target/setup-aem-target-cloud-service.md)
+      + [將體驗片段匯出至Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
+      + [使用體驗片段選件建立Target活動](integrations/adobe-target/create-target-activity.md)
+      + [使用Visual Experience Composer進行個人化](integrations/adobe-target/personalization-using-vec.md)
+      + [個人化完整網頁體驗](integrations/adobe-target/personalization-web-page.md)
