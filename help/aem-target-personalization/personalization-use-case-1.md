@@ -4,10 +4,10 @@ seo-title: 使用Adobe Experience Manager(AEM)Experience Fragments和Adobe Targe
 description: 教學課程的端對端說明如何使用Adobe Experience Manager Experience Fragments和Adobe Target建立和提供個人化體驗。
 seo-description: 教學課程的端對端說明如何使用Adobe Experience Manager Experience Fragments和Adobe Target建立和提供個人化體驗。
 translation-type: tm+mt
-source-git-commit: 1209064fd81238d4611369b8e5b517365fc302e3
+source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
 workflow-type: tm+mt
-source-wordcount: '1729'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -52,9 +52,9 @@ WKND網站計畫透過其網站在美國各地推出 **SkateFest競賽** ，並�
       * **文字**:「註冊試用版」
       * **按鈕**:指向WKND SkateFest頁面的「活動詳細資訊」
       * **WKND SkateFest頁面**:包含活動詳細資訊的新頁面，包括試鏡地點、日期和時間。
-2. 根據需求，AEM內容編輯器會為內容區塊建立體驗片段，並將它匯出為選件。 為了為美國所有州提供個人化內容，內容作者可以建立一個體驗片段主變數，然後建立50個其他變數，每個州各一個。 然後，您可以手動編輯每個狀態變化與相關影像和文字的內容。 製作Experience Fragment時，內容編輯人員可以使用Asset Finder選項，快速存取AEM Assets中的所有可用資產。 當體驗片段匯出至Adobe Target時，其所有變數也會以選件的形式推送至Adobe Target。
+1. 根據需求，AEM內容編輯器會為內容區塊建立體驗片段，並將它匯出為選件。 為了為美國所有州提供個人化內容，內容作者可以建立一個體驗片段主變數，然後建立50個其他變數，每個州各一個。 然後，您可以手動編輯每個狀態變化與相關影像和文字的內容。 製作Experience Fragment時，內容編輯人員可以使用Asset Finder選項，快速存取AEM Assets中的所有可用資產。 當體驗片段匯出至Adobe Target時，其所有變數也會以選件的形式推送至Adobe Target。
 
-3. 將體驗片段從AEM匯出至Adobe Target做為選件後，行銷人員可以使用這些選件在Target中建立活動。 根據WKND網站SkateFest促銷活動，行銷人員需要建立個人化體驗，並向來自每個州的WKND網站訪客提供。 若要建立「體驗定位」活動，行銷人員需要識別受眾。 我們的WKND SkateFest活動需要根據觀眾造訪WKND網站的位置，建立50個不同的觀眾。
+1. 將體驗片段從AEM匯出至Adobe Target做為選件後，行銷人員可以使用這些選件在Target中建立活動。 根據WKND網站SkateFest促銷活動，行銷人員需要建立個人化的體驗，並從每個州向WKND網站訪客提供。 若要建立「體驗定位」活動，行銷人員需要識別受眾。 我們的WKND SkateFest活動需要根據觀眾造訪WKND網站的位置，建立50個不同的觀眾。
    * [觀眾](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) ，會定義您活動的目標，並用於任何有目標的地方。 目標對象是一組定義的訪客條件。 選件可定位至特定對象（或區段）。 只有屬於該對象的訪客才會看到其目標體驗。  例如，您可以將選件傳送給由使用特定瀏覽器或來自特定地理位置的訪客所組成的觀眾。
    * 選 [件](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9) ，是促銷活動或活動期間在您的網頁上顯示的內容。 當您測試網頁時，會測量每個體驗在您所在位置使用不同選件時的成功程度。 選件可包含不同類型的內容，包括：
       * 影像
@@ -77,27 +77,27 @@ WKND網站計畫透過其網站在美國各地推出 **SkateFest競賽** ，並�
 ### 建立具有地理定位的對象 {#marketer-audience}
 
 1. 導覽至您的 [組織Adobe Experience Cloud](https://experiencecloud.adobe.com/) (<https://>`<yourcompany>`.experiencecloud.adobe.com)
-2. 使用您的Adobe ID登入，並確定您所在的組織正確。
-3. 在解決方案切換器中，按一 **下Target** ，然後 **啟動** Adobe Target。
+1. 使用您的Adobe ID登入，並確定您所在的組織正確。
+1. 在解決方案切換器中，按一 **下Target** ，然後 **啟動** Adobe Target。
 
    ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/exp-cloud-adobe-target.png)
 
-4. 導覽至「選 **件** 」標籤，並搜尋「WKND」選件。 您應該能夠查看從AEM匯出為HTML選件的「體驗片段」變數清單。 每個選件都對應一個狀態。 例如， *WKND SkateFest California* 是提供給來自加州的WKND網站訪客的優惠。
+1. 導覽至「選 **件** 」標籤，並搜尋「WKND」選件。 您應該能夠查看從AEM匯出為HTML選件的「體驗片段」變數清單。 每個選件都對應一個狀態。 例如， *WKND SkateFest California* 是提供給來自加州的WKND網站訪客的優惠。
 
    ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/html-offers.png)
 
-5. 在主導覽中，按一下「對 **像」**。
+1. 在主導覽中，按一下「對 **像」**。
 
    行銷人員需要為來自美國每個州的WKND網站訪客建立50個不同的觀眾。
 
-6. 若要建立對象，請按一下「 **建立對象** 」按鈕，並提供對象名稱。
+1. 若要建立對象，請按一下「 **建立對象** 」按鈕，並提供對象名稱。
 
    **對象名稱格式：WKND-\&lt;*state*\>**
 
    ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/audience-target-1.png)
 
-7. 按一 **下「新增規則>地理」**。
-8. 按一 **下「選取**」，然後選取下列其中一個選項：
+1. 按一 **下「新增規則>地理」**。
+1. 按一 **下「選取**」，然後選取下列其中一個選項：
    * 國家/地區
    * **狀態** ( *WKND Site SkateFest促銷活動的選取狀態)*
    * 城市
@@ -112,14 +112,14 @@ WKND網站計畫透過其網站在美國各地推出 **SkateFest競賽** ，並�
    >[!NOTE]
    >訪客的IP位址會隨mbox請求傳遞，每次瀏覽（作業）一次，以解決該訪客的地理定位參數。
 
-9. 選取運算元為 **符合**，提供適當的值(例如：California)，並 **儲存您** 的變更。 在本例中，請提供州名。
+1. 選取運算元為 **符合**，提供適當的值(例如：California)，並 **儲存您** 的變更。 在本例中，請提供州名。
 
    ![Adobe Target-地理規則](assets/personalization-use-case-1/audience-geo-rule.png)
 
    >[!NOTE]
    >您可以為對象指派多個規則。
 
-10. 重複步驟6-9以建立其他狀態的觀眾。
+1. 重複步驟6-9以建立其他狀態的觀眾。
 
    ![Adobe Target - WKND觀眾](assets/personalization-use-case-1/adobe-target-audiences-50.png)
 
@@ -128,44 +128,60 @@ WKND網站計畫透過其網站在美國各地推出 **SkateFest競賽** ，並�
 ### 建立具有地理定位的活動
 
 1. 從Adobe Target視窗，導覽至「活 **動** 」標籤。
-2. 按一 **下「建立活動** 」，然後選取「 **** 體驗定位」活動類型。
-3. 選取網 **路頻道** ，然後選擇 **視覺體驗撰寫器**。
-4. 輸入「 **活動URL** 」，然後按 **一下「下一步** 」以開啟「視覺體驗撰寫器」。
+1. 按一 **下「建立活動** 」，然後選取「 **** 體驗定位」活動類型。
+1. 選取網 **路頻道** ，然後選擇 **視覺體驗撰寫器**。
+1. 輸入「 **活動URL** 」，然後按 **一下「下一步** 」以開啟「視覺體驗撰寫器」。
 
    WKND網站首頁發佈URL:http://localhost:4503/content/wknd/en.html
+
    ![體驗定位活動](assets/personalization-use-case-1/target-activity.png)
-5. 若要 **載入Visual Experience Composer** ，請啟用 **在瀏覽器上允許載入不安全指令碼** ，然後重新載入頁面。
+
+1. 若要 **載入Visual Experience Composer** ，請啟用 **在瀏覽器上允許載入不安全指令碼** ，然後重新載入頁面。
+
    ![體驗定位活動](assets/personalization-use-case-1/load-unsafe-scripts.png)
-6. 請注意，WKND網站首頁在Visual Experience Composer編輯器中開啟。
+
+1. 請注意，WKND網站首頁在Visual Experience Composer編輯器中開啟。
+
    ![VEC](assets/personalization-use-case-1/vec.png)
-7. 若要新增對象至VEC，請按一下「對象」下 **的「新增體驗定位** 」，然後選取「WKND-California對象」並按一下「下 **一步」**。
+
+1. 若要新增對象至VEC，請按一下「對象」下 **的「新增體驗定位** 」，然後選取「WKND-California對象」並按一下「下 **一步」**。
+
    ![VEC](assets/personalization-use-case-1/vec-select-audience.png)
-8. 按一下VEC中的WKND網站頁面，選取HTML元素以新增WKND-California觀眾的選件，然後選擇「取代為」選項，然後選 **取HTML選件******。
+
+1. 按一下VEC中的WKND網站頁面，選取HTML元素以新增WKND-California觀眾的選件，然後選擇「取代為」選項，然後選 **取HTML選件******。
+
    ![體驗定位活動](assets/personalization-use-case-1/vec-selecting-div.png)
-9. 從選 **擇的UI中，為** WKND-California觀眾選取WKND SkateFest California **HTML選件，然後按一下「** 完成 ****」。
-10. 您現在應該可以看到 **WKND SkateFest California** HTML選件新增至WKND-California觀眾的WKND網站頁面。
-11. 重複步驟7-10，為其他狀態新增「體驗定位」，並選擇對應的HTML選件。
-12. 按一 **下「下一** 步」繼續，您會看到「觀眾」與「體驗」的對應。
-13. 按一 **下** 「下一步」以移至「目標與設定」。
-14. 選擇您的報表來源並識別活動的主要目標。 對於我們的藍本，我們選取「報表來源」作為 **Adobe Target**、將活動測量為 **Conversion**、將動作測量為檢視的頁面，以及指向「WKND SkateFest詳細資料」頁面的URL。
+
+1. 從選 **擇的UI中，為** WKND-California觀眾選取WKND SkateFest California **HTML選件，然後按一下「** 完成 ****」。
+1. 您現在應該可以看到 **WKND SkateFest California** HTML選件新增至WKND-California觀眾的WKND網站頁面。
+1. 重複步驟7-10，為其他狀態新增「體驗定位」，並選擇對應的HTML選件。
+1. 按一 **下「下一** 步」繼續，您會看到「觀眾」與「體驗」的對應。
+1. 按一 **下** 「下一步」以移至「目標與設定」。
+1. 選擇您的報表來源並識別活動的主要目標。 對於我們的藍本，我們選取「報表來源」作為 **Adobe Target**、將活動測量為 **Conversion**、將動作測量為檢視的頁面，以及指向「WKND SkateFest詳細資料」頁面的URL。
+
    ![目標與目標——目標](assets/personalization-use-case-1/goal-metric-target.png)
 
    >[!NOTE]
    >您也可以選擇Adobe Analytics做為報表來源。
 
-15. 將滑鼠指標暫留在目前的活動名稱上，您可將它重新命名為 **WKND SkateFest - USA**，然後 **** 儲存並關閉變更。
-16. 在「活動詳細資訊」畫面中，請確定「啟 **動** 」活動。
+1. 將滑鼠指標暫留在目前的活動名稱上，您可將它重新命名為 **WKND SkateFest - USA**，然後 **** 儲存並關閉變更。
+1. 在「活動詳細資訊」畫面中，請確定「啟 **動** 」活動。
+
    ![啟動活動](assets/personalization-use-case-1/activate-activity.png)
-17. 您的WKND SkateFest促銷活動現在可供所有WKND網站訪客使用。
-18. 導覽至 [WKND網站首頁](http://localhost:4503/content/wknd/en.html)，您應該可以根據您的地理位置(*州：)*。
+
+1. 您的WKND SkateFest促銷活動現在可供所有WKND網站訪客使用。
+1. 導覽至 [WKND網站首頁](http://localhost:4503/content/wknd/en.html)，您應該可以根據您的地理位置(*州：)*。
+
    ![活動QA](assets/personalization-use-case-1/wknd-california.png)
 
 ### 目標活動QA
 
 1. 在「 **活動詳細資訊>概述** 」標籤下，按一下「活動 **QA** 」按鈕，即可取得所有體驗的直接QA連結。
+
    ![活動QA](assets/personalization-use-case-1/activity-qa.png)
-2. 導覽至 [WKND網站首頁](http://localhost:4503/content/wknd/en.html)，您就可以根據您的地理位置（州），檢視WKND SkateFest優惠。
-3. 觀看以下影片，瞭解選件如何傳送至您的頁面、如何自訂回應Token，以及執行品質檢查。
+
+1. 導覽至 [WKND網站首頁](http://localhost:4503/content/wknd/en.html)，您就可以根據您的地理位置（州），檢視WKND SkateFest優惠。
+1. 觀看以下影片，瞭解選件如何傳送至您的頁面、如何自訂回應Token，以及執行品質檢查。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28658?quality=12&learn=on)
 
