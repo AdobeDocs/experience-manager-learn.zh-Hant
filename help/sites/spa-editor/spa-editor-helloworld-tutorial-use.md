@@ -9,7 +9,7 @@ doc-type: tutorial
 activity: use
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: e19e177589df7ce6a56c0be3f9d590cbca2f8ce7
+source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
 workflow-type: tm+mt
 source-wordcount: '3181'
 ht-degree: 0%
@@ -104,7 +104,7 @@ SPA開發只有AEM開發的一步，而另一步則是。 其目標是讓SPA開�
    >
    >本教程將針對具有 **1.2** .1- **** SNAPSHOT版本的主分支使用。
 
-2. 下列結構應可見：
+1. 下列結構應可見：
 
    ![專案資料夾結構](assets/spa-editor-helloworld-tutorial-use/folder-structure.png)
 
@@ -117,7 +117,7 @@ SPA開發只有AEM開發的一步，而另一步則是。 其目標是讓SPA開�
    * `react-app`:We.Retail Journal React Application. 這既是Maven模組，也是Webpack項目。
    * `angular-app`:We.Retail Journal Angular應用程式。 這既是模 [!DNL Maven] 塊項目，也是Webpack項目。
 
-3. 開啟新的終端機視窗並執行下列命令，以建立整個應用程式並部署至http://localhost:4502上執行的本機AEM [例項](http://localhost:4502)。
+1. 開啟新的終端機視窗並執行下列命令，以建立整個應用程式並部署至http://localhost:4502上執行的本機AEM [例項](http://localhost:4502)。
 
    ```shell
    $ cd <src>/aem-sample-we-retail-journal
@@ -132,22 +132,22 @@ SPA開發只有AEM開發的一步，而另一步則是。 其目標是讓SPA開�
    >
    > 如果您在建置期間收到錯誤，請確 [定您的Maven settings.xml檔案包含Adobe的Maven工件儲存庫](https://helpx.adobe.com/experience-manager/kb/SetUpTheAdobeMavenRepository.html)。
 
-4. 導航到:
+1. 導航到:
 
    * [http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html)
    * [http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html)
 
    We.Retail Journal應用程式應顯示在AEM Sites編輯器中。
 
-5. 在「 [!UICONTROL 編輯] 」模式中，選擇要編輯的元件並對內容進行更新。
+1. 在「 [!UICONTROL 編輯] 」模式中，選擇要編輯的元件並對內容進行更新。
 
    ![編輯元件](assets/spa-editor-helloworld-tutorial-use/editcontent.png)
 
-6. 選取「頁 [!UICONTROL 面屬性] 」圖示以開啟「 [!UICONTROL 頁面屬性」]。 選 [!UICONTROL 擇編輯模板] ，以開啟頁面的模板。
+1. 選取「頁 [!UICONTROL 面屬性] 」圖示以開啟「 [!UICONTROL 頁面屬性」]。 選 [!UICONTROL 擇編輯模板] ，以開啟頁面的模板。
 
    ![頁面屬性功能表](assets/spa-editor-helloworld-tutorial-use/page-properties.png)
 
-7. 在最新版的SPA編輯器中， [可編輯的範本](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html) ，可與傳統網站實作的使用方式相同。 我們稍後會使用自訂元件來重新檢視此項目。
+1. 在最新版的SPA編輯器中， [可編輯的範本](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html) ，可與傳統網站實作的使用方式相同。 我們稍後會使用自訂元件來重新檢視此項目。
 
    >[!NOTE]
    >
@@ -160,8 +160,8 @@ SPA開發只有AEM開發的一步，而另一步則是。 其目標是讓SPA開�
 SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下列高階步驟（如上圖所示）。
 
 1. 會叫用AEM專案組建版本，而這會觸發SPA專案的建立。 We.Retail Journal使用 [**frontend-maven-plugin**](https://github.com/eirslett/frontend-maven-plugin)。
-2. SPA專案的 [**aem-clientlib-generator**](https://www.npmjs.com/package/aem-clientlib-generator) ，會將編譯的SPA內嵌為AEM專案中的AEM用戶端程式庫。
-3. AEM專案會產生AEM套件，包括編譯的SPA，以及任何其他支援AEM程式碼。
+1. SPA專案的 [**aem-clientlib-generator**](https://www.npmjs.com/package/aem-clientlib-generator) ，會將編譯的SPA內嵌為AEM專案中的AEM用戶端程式庫。
+1. AEM專案會產生AEM套件，包括編譯的SPA，以及任何其他支援AEM程式碼。
 
 ## 建立AEM元件 {#aem-component}
 
@@ -197,8 +197,8 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
        </plugin>
    ```
 
-2. 在 **we-retail-journal-content** (`<src>/aem-sample-we-retail-journal/ui.apps`)模組中，在名為 `ui.apps/jcr_root/apps/we-retail-journal/components` helloworld **type** f **** c:ComponentContent(cq:ComponentContent)的下方建立一個新節點。
-3. 將下列屬性新增至 **helloworld** 元件，以XML(`/helloworld/.content.xml`)表示：
+1. 在 **we-retail-journal-content** (`<src>/aem-sample-we-retail-journal/ui.apps`)模組中，在名為 `ui.apps/jcr_root/apps/we-retail-journal/components` helloworld **type** f **** c:ComponentContent(cq:ComponentContent)的下方建立一個新節點。
+1. 將下列屬性新增至 **helloworld** 元件，以XML(`/helloworld/.content.xml`)表示：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -217,8 +217,8 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    >
    > 只有AEM 6.5和AEM 6.4 + **Service Pack 5支援可編輯的範本** 。
 
-4. 接下來將建立一個對話框，允許為 **Hello World元件配置自定義** 消息。 在下 `/apps/we-retail-journal/components/helloworld` 面添加節點名 **稱cq:dialog** of **nt:antrustructed**。
-5. cq: **dialog** 將顯示單一文字欄位，將文字保留至名為的屬性 **[!DNL message]**。 在新建立的 **cq:dialog下方** ，新增下列節點和屬性，如下(`helloworld/_cq_dialog/.content.xml`)所示：
+1. 接下來將建立一個對話框，允許為 **Hello World元件配置自定義** 消息。 在下 `/apps/we-retail-journal/components/helloworld` 面添加節點名 **稱cq:dialog** of **nt:antrustructed**。
+1. cq: **dialog** 將顯示單一文字欄位，將文字保留至名為的屬性 **[!DNL message]**。 在新建立的 **cq:dialog下方** ，新增下列節點和屬性，如下(`helloworld/_cq_dialog/.content.xml`)所示：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -273,7 +273,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
 
    上述XML節點定義將建立一個對話框，其中包含一個文本欄位，允許用戶輸入「消息」。 請注意節 `name="./message"` 點內的 `<message />` 屬性。 這是將儲存在AEM中JCR的屬性的名稱。
 
-6. 接下來將建立一個空策略對話框(`cq:design_dialog`)。 需要「策略」對話框才能在模板編輯器中查看元件。 對於這個簡單的使用案例，它將是空白對話方塊。
+1. 接下來將建立一個空策略對話框(`cq:design_dialog`)。 需要「策略」對話框才能在模板編輯器中查看元件。 對於這個簡單的使用案例，它將是空白對話方塊。
 
    在 `/apps/we-retail-journal/components/helloworld` 添加節點名 `cq:design_dialog` 下 `nt:unstructured`。
 
@@ -285,7 +285,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    jcr:primaryType="nt:unstructured" />
    ```
 
-7. 從命令列將程式碼庫部署至AEM:
+1. 從命令列將程式碼庫部署至AEM:
 
    ```shell
    $ cd <src>/aem-sample-we-retail-journal/content
@@ -309,7 +309,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
 >最佳實務是，開發人員應盡可能 [使用AEM Core Components](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) 。 除了其他功能外，核心元件 [!DNL Sling Models] 還提供「SPA就緒」的JSON輸出，讓開發人員可更專注於前端簡報。
 
 1. 在您選擇的編輯器中，開啟 **we-retail-journal-commons專案** ( `<src>/aem-sample-we-retail-journal/bundles/commons`)。
-2. 在包中 `com.adobe.cq.sample.spa.commons.impl.models`:
+1. 在包中 `com.adobe.cq.sample.spa.commons.impl.models`:
    * 建立名為的新類 `HelloWorld`。
    * 新增實作介面 `com.adobe.cq.export.json.ComponentExporter.`
 
@@ -331,7 +331,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
     }
    ```
 
-3. 添加名為的靜 `RESOURCE_TYPE` 態變數以 [!DNL HelloWorld] 標識元件的資源類型：
+1. 添加名為的靜 `RESOURCE_TYPE` 態變數以 [!DNL HelloWorld] 標識元件的資源類型：
 
    ```java
     ...
@@ -343,7 +343,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
     }
    ```
 
-4. 為和添加OSGi `@Model` 批注 `@Exporter`。 注 `@Model` 釋將類註冊為 [!DNL Sling Model]。 注 `@Exporter` 釋會使用架構將方法顯示為序列化的JSON [!DNL Jackson Exporter] 。
+1. 為和添加OSGi `@Model` 批注 `@Exporter`。 注 `@Model` 釋將類註冊為 [!DNL Sling Model]。 注 `@Exporter` 釋會使用架構將方法顯示為序列化的JSON [!DNL Jackson Exporter] 。
 
    ```java
    import org.apache.sling.api.SlingHttpServletRequest;
@@ -366,7 +366,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    ...
    ```
 
-5. 實作方法 `getDisplayMessage()` 以傳回JCR屬性 `message`。 使用的 [!DNL Sling Model] 注釋 `@ValueMapValue` 可方便檢索儲存在元件下 `message` 面的屬性。 注 `@Optional` 釋很重要，因為首次將元件添加到頁面時， `message` 不會填入。
+1. 實作方法 `getDisplayMessage()` 以傳回JCR屬性 `message`。 使用的 [!DNL Sling Model] 注釋 `@ValueMapValue` 可方便檢索儲存在元件下 `message` 面的屬性。 注 `@Optional` 釋很重要，因為首次將元件添加到頁面時， `message` 不會填入。
 
    作為商業邏輯的一部分，字串&quot;**Hello**&quot;會優先於訊息。
 
@@ -401,7 +401,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
 
    方法也 `getExportedType` 很重要。 元件的值 `resourceType` 將用來「映射」JSON資料至前端元件(Angular / React)。 我們將在下一節中探討此問題。
 
-6. 實施方法 `getExportedType()` 以返回元件的資源類 `HelloWorld` 型。
+1. 實施方法 `getExportedType()` 以返回元件的資源類 `HelloWorld` 型。
 
    ```java
     @Override
@@ -412,7 +412,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
 
    您可在此處 [**找到HelloWorld.java** 的完整程式碼。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/bundles/commons/HelloWorld.java)
 
-7. 使用Apache Maven將程式碼部署至AEM:
+1. 使用Apache Maven將程式碼部署至AEM:
 
    ```shell
    $ cd <src>/sample-we-retail-spa-content/bundles/commons
@@ -442,15 +442,15 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
 
    ![Reacte元件檔案結構](assets/spa-editor-helloworld-tutorial-use/react-components.png)
 
-2. 在名為的元件資料夾下添加新檔案 `HelloWorld.js`。
-3. 開啟 `HelloWorld.js`. 新增匯入陳述式以匯入React元件庫。 新增第二個匯入陳述式，以匯入Adobe `MapTo` 提供的協助程式。 Helper `MapTo` 提供React元件與AEM元件JSON的對應。
+1. 在名為的元件資料夾下添加新檔案 `HelloWorld.js`。
+1. 開啟 `HelloWorld.js`. 新增匯入陳述式以匯入React元件庫。 新增第二個匯入陳述式，以匯入Adobe `MapTo` 提供的協助程式。 Helper `MapTo` 提供React元件與AEM元件JSON的對應。
 
    ```js
    import React, {Component} from 'react';
    import {MapTo} from '@adobe/cq-react-editable-components';
    ```
 
-4. 在匯入下方建立新類別，名 `HelloWorld` 為擴充React介 `Component` 面。 將所需的 `render()` 方法添加到類 `HelloWorld` 中。
+1. 在匯入下方建立新類別，名 `HelloWorld` 為擴充React介 `Component` 面。 將所需的 `render()` 方法添加到類 `HelloWorld` 中。
 
    ```js
    import React, {Component} from 'react';
@@ -464,7 +464,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    }
    ```
 
-5. 幫 `MapTo` 助工具會自動包含名為 `cqModel` React元件props一部分的物件。 包含 `cqModel` 由公開的所有屬性 [!DNL Sling Model]。
+1. 幫 `MapTo` 助工具會自動包含名為 `cqModel` React元件props一部分的物件。 包含 `cqModel` 由公開的所有屬性 [!DNL Sling Model]。
 
    請記住， [!DNL Sling Model] 先前建立的包含方法 `getDisplayMessage()`。 `getDisplayMessage()` 會轉譯為輸出時命名 `displayMessage` 的JSON索引鍵。
 
@@ -488,7 +488,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    }
    ```
 
-6. 實施編輯配置方法。 此方法會透過協助工具傳 `MapTo` 遞，並提供AEM編輯器資訊，以在元件為空白時顯示預留位置。 當元件新增至SPA但尚未編寫時，就會發生此情況。 在類別下方新增下 `HelloWorld` 列：
+1. 實施編輯配置方法。 此方法會透過協助工具傳 `MapTo` 遞，並提供AEM編輯器資訊，以在元件為空白時顯示預留位置。 當元件新增至SPA但尚未編寫時，就會發生此情況。 在類別下方新增下 `HelloWorld` 列：
 
    ```js
    ...
@@ -509,7 +509,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    ...
    ```
 
-7. 在檔案結尾，呼叫協助 `MapTo` 程式，傳送類 `HelloWorld` 別和 `HelloWorldEditConfig`。 這會根據AEM元件的資源類型，將React Component對應至AEM元件： `we-retail-journal/components/helloworld`.
+1. 在檔案結尾，呼叫協助 `MapTo` 程式，傳送類 `HelloWorld` 別和 `HelloWorldEditConfig`。 這會根據AEM元件的資源類型，將React Component對應至AEM元件： `we-retail-journal/components/helloworld`.
 
    ```js
    MapTo('we-retail-journal/components/helloworld')(HelloWorld, HelloWorldEditConfig);
@@ -517,7 +517,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
 
    您可在此找到 [**HelloWorld.js的完成程式碼** 。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/react-app/components/HelloWorld.js)
 
-8. 開啟檔案 `ImportComponents.js`。 可在中找到 `<src>/aem-sample-we-retail-journal/react-app/src/ImportComponents.js`。
+1. 開啟檔案 `ImportComponents.js`。 可在中找到 `<src>/aem-sample-we-retail-journal/react-app/src/ImportComponents.js`。
 
    添加一行以要求 `HelloWorld.js` 與編譯的JavaScript包中的其他元件一起使用：
 
@@ -529,7 +529,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    ...
    ```
 
-9. 在資料 `components` 夾中，建立名為 `HelloWorld.css` 「填入檔案的同級檔案」( `HelloWorld.js.` Populate the file with the following)的新檔案，以建立元件的一些基本樣 `HelloWorld` 式：
+1. 在資料 `components` 夾中，建立名為 `HelloWorld.css` 「填入檔案的同級檔案」( `HelloWorld.js.` Populate the file with the following)的新檔案，以建立元件的一些基本樣 `HelloWorld` 式：
 
    ```css
    /* HelloWorld.css to style HelloWorld component */
@@ -542,7 +542,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    }
    ```
 
-10. 請重新開啟 `HelloWorld.js` 並更新匯入陳述式，以要求 `HelloWorld.css`:
+1. 請重新開啟 `HelloWorld.js` 並更新匯入陳述式，以要求 `HelloWorld.css`:
 
    ```js
    import React, {Component} from 'react';
@@ -553,14 +553,14 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    ...
    ```
 
-11. 使用Apache Maven將程式碼部署至AEM:
+1. 使用Apache Maven將程式碼部署至AEM:
 
    ```shell
    $ cd <src>/sample-we-retail-spa-content
    $ mvn -PautoInstallSinglePackage clean install
    ```
 
-12. 在 [CRXDE-Lite中](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js) ，開啟 `/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js`。 在app.js中快速搜尋HelloWorld，以確認已編譯的應用程式中已包含React元件。
+1. 在 [CRXDE-Lite中](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js) ，開啟 `/apps/we-retail-journal/react/clientlibs/we-retail-journal-react/js/app.js`。 在app.js中快速搜尋HelloWorld，以確認已編譯的應用程式中已包含React元件。
 
    >[!NOTE]
    >
@@ -581,7 +581,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
 
    ![角度檔案結構](assets/spa-editor-helloworld-tutorial-use/angular-file-structure.png)
 
-2. 在名為的元件資料夾下添加新資料夾 `helloworld`。 在資料夾 `helloworld` 下方新增名為的新檔案 `helloworld.component.css, helloworld.component.html, helloworld.component.ts`。
+1. 在名為的元件資料夾下添加新資料夾 `helloworld`。 在資料夾 `helloworld` 下方新增名為的新檔案 `helloworld.component.css, helloworld.component.html, helloworld.component.ts`。
 
    ```plain
    /angular-app
@@ -594,7 +594,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    +                    helloworld.component.ts
    ```
 
-3. 開啟 `helloworld.component.ts`. 添加導入語句以導入Angular `Component` 和 `Input` 類。 建立新元件，指 `styleUrls` 向 `templateUrl` 和 `helloworld.component.css` 和 `helloworld.component.html`。 最後，使用 `HelloWorldComponent` 的預期輸入匯出類別 `displayMessage`。
+1. 開啟 `helloworld.component.ts`. 添加導入語句以導入Angular `Component` 和 `Input` 類。 建立新元件，指 `styleUrls` 向 `templateUrl` 和 `helloworld.component.css` 和 `helloworld.component.html`。 最後，使用 `HelloWorldComponent` 的預期輸入匯出類別 `displayMessage`。
 
    ```js
    //helloworld.component.ts
@@ -617,7 +617,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    >
    > 如果您回想 [!DNL Sling Model] 先前建立的內容，則會有 **getDisplayMessage()方法**。 此方法的序號JSON將是 **displayMessage**，我們現在正在Angular應用程式中閱讀它。
 
-4. 開啟 `helloworld.component.html` 以包含 `h1` 將列印屬性的標 `displayMessage` 簽：
+1. 開啟 `helloworld.component.html` 以包含 `h1` 將列印屬性的標 `displayMessage` 簽：
 
    ```html
    <h1 *ngIf="displayMessage" class="cmp-helloworld_message">
@@ -625,7 +625,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    </h1>
    ```
 
-5. 更新 `helloworld.component.css` 以包含元件的一些基本樣式。
+1. 更新 `helloworld.component.css` 以包含元件的一些基本樣式。
 
    ```css
    :host-context {
@@ -643,7 +643,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    }
    ```
 
-6. 使用 `helloworld.component.spec.ts` 下列測試台更新：
+1. 使用 `helloworld.component.spec.ts` 下列測試台更新：
 
    ```js
    import { async, ComponentFixture, TestBed } from '@angular/core/testing';
@@ -673,7 +673,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    });
    ```
 
-7. 下次更 `src/components/mapping.ts` 新將包含 `HelloWorldComponent`。 新增 `HelloWorldEditConfig` 會在AEM編輯器中標示預留位置(placeholder)，然後再設定元件。 最後，使用輔助工具新增行，將AEM元件對應至Angular元 `MapTo` 件。
+1. 下次更 `src/components/mapping.ts` 新將包含 `HelloWorldComponent`。 新增 `HelloWorldEditConfig` 會在AEM編輯器中標示預留位置(placeholder)，然後再設定元件。 最後，使用輔助工具新增行，將AEM元件對應至Angular元 `MapTo` 件。
 
    ```js
    // src/components/mapping.ts
@@ -698,7 +698,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
 
    您可在此處 [**找到mapping.ts的** 完整程式碼。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/angular-app/mapping.ts)
 
-8. 更新 `src/app.module.ts` 以更新 **NgModule**。 新增 **`HelloWorldComponent`** 為屬於 **AppModule的** 聲明 ****。 此外，也 `HelloWorldComponent` 可新增為 **entryComponent** ，以便在處理JSON模型時，將它編譯並動態包含在應用程式中。
+1. 更新 `src/app.module.ts` 以更新 **NgModule**。 新增 **`HelloWorldComponent`** 為屬於 **AppModule的** 聲明 ****。 此外，也 `HelloWorldComponent` 可新增為 **entryComponent** ，以便在處理JSON模型時，將它編譯並動態包含在應用程式中。
 
    ```js
    import { HelloWorldComponent } from './components/helloworld/helloworld.component';
@@ -737,14 +737,14 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
 
    您可在這裡 [**找到app.module.ts的完成程式碼** 。](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/spa-helloworld-guide/src/angular-app/app.module.ts)
 
-9. 使用Maven將程式碼部署至AEM:
+1. 使用Maven將程式碼部署至AEM:
 
    ```shell
    $ cd <src>/sample-we-retail-spa-content
    $ mvn -PautoInstallSinglePackage clean install
    ```
 
-10. 在 [CRXDE-Lite中](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js) ，開啟 `/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js`。 在中快速搜索 **HelloWorld** , `main.js` 以驗證Angular元件是否已包含。
+1. 在 [CRXDE-Lite中](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js) ，開啟 `/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js`。 在中快速搜索 **HelloWorld** , `main.js` 以驗證Angular元件是否已包含。
 
    >[!NOTE]
    >
@@ -757,7 +757,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    * (Angular) [http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html](http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html)
    * (React) [http://localhost:4502/editor.html/conf/we-retail-journal/react/settings/wcm/templates/we-retail-react-weather-template/structure.html](http://localhost:4502/editor.html/conf/we-retail-journal/react/settings/wcm/templates/we-retail-react-weather-template/structure.html)
 
-2. 選取主要的 [!UICONTROL 配置容器] ，並選取  原則圖示以開啟其原則：
+1. 選取主要的 [!UICONTROL 配置容器] ，並選取  原則圖示以開啟其原則：
 
    ![選取版面原則](assets/spa-editor-helloworld-tutorial-use/select-page-policy.png)
 
@@ -765,7 +765,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
 
    ![配置容器策略配置](assets/spa-editor-helloworld-tutorial-use/layoutcontainer-update.png)
 
-3. 儲存後，您應將元件視 **[!DNL HelloWorld]** 為「版面容器」中允許的 [!UICONTROL 元件]。
+1. 儲存後，您應將元件視 **[!DNL HelloWorld]** 為「版面容器」中允許的 [!UICONTROL 元件]。
 
    ![允許的元件已更新](assets/spa-editor-helloworld-tutorial-use/allowed-components.png)
 
@@ -784,7 +784,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
    * [http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html)
    * [http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html)
 
-2. 尋找元 **[!DNL Hello World]** 件並將元件拖放 **[!DNL Hello World]** 至頁面上。
+1. 尋找元 **[!DNL Hello World]** 件並將元件拖放 **[!DNL Hello World]** 至頁面上。
 
    ![hello world drag + drop](assets/spa-editor-helloworld-tutorial-use/fig7.png)
 
@@ -792,7 +792,7 @@ SPA開發改版不受AEM影響。 當SPA準備好部署至AEM時，會進行下�
 
    ![Hello world place holder](assets/spa-editor-helloworld-tutorial-use/fig10.png)
 
-3. 選取元件並在對話方塊中新增訊息，例如「World」或「Your Name」。 儲存變更。
+1. 選取元件並在對話方塊中新增訊息，例如「World」或「Your Name」。 儲存變更。
 
    ![渲染元件](assets/spa-editor-helloworld-tutorial-use/fig11.png)
 
