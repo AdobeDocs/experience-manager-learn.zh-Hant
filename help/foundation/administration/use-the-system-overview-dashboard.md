@@ -9,7 +9,7 @@ audience: administrator, architect, developer, implementer
 doc-type: technical video
 contentOwner: dgordon
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: c9a11bcb01a5ec9f7390deab68e6d0e1dec273de
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe Experience Manager&#39;s(AEM) [!UICONTROL System Overview] （AEM系統概
 
 1. 可從以下位置訪問系統概述： **AEM Start** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL System Overview]**
 
-   直接在 **[!DNL <server-host>/libs/granite/operations/content/systemoverview.html]**
+   直接在 **`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
 1. 按一下「Download [!UICONTROL （下載）」按] 鈕 [!UICONTROL ，可導出「System Overview（系統概述）」中] 的資訊。 這些資訊也會透過下列端點公 [!DNL REST] 開：
 1. 以下是從「系統概述」匯出的JSON輸 [!UICONTROL 出範例]:
