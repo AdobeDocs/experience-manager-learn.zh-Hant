@@ -92,7 +92,7 @@ Adobe Experience Manager Assets是AEM Platform上的數位資產管理工具，�
 ## 其他資源
 
 * [Experience League —— 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Assets檔案](Https://helpx.adobe.com/tw/experience-manager/6-5/assets/user-guide.html)
+* [AEM Assets檔案](https://helpx.adobe.com/tw/experience-manager/6-5/assets/user-guide.html)
 * [AEM雲端服務教學課程](/help/cloud-service/overview.md)
 * [AEM Sites教學課程](/help/sites/overview.md)
 * [AEM Forms教學課程](/help/forms/overview.md)
