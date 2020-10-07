@@ -10,10 +10,10 @@ doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
 translation-type: tm+mt
-source-git-commit: 59bfc9ae08acca6c41234f23eaa60f56e2eda890
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 2%
+source-wordcount: '778'
+ht-degree: 1%
 
 ---
 
@@ -76,6 +76,14 @@ ht-degree: 2%
 ## 已完成!
 
 恭喜！ 您已完成教學課 [程](../overview.md) ，瞭解如何將AEM延伸為雲端服務資產計算微服務！ 您現在應該能夠設定、開發、測試、除錯和部署自訂的「資產計算」工作者，以便AEM做為「雲端服務作者」服務使用。
+
+### 在Github上檢視完整的專案原始碼
+
+Github上提供最終資產計算專案，網址為：
+
++ [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
+
+_Github contains是專案的最終狀態，已填入工作者和測試案例，但不包含任何憑證，例如。`.env`、`.config.json`或`.aio`。_
 
 ## 疑難排解
 
