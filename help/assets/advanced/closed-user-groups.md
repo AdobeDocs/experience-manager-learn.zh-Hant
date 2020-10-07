@@ -1,5 +1,5 @@
 ---
-title: 搭配AEM資產使用已關閉的使用者群組
+title: AEM資產中的已關閉使用者群組
 description: '「封閉使用者群組」(CUG)是一種功能，可用來限制對發佈網站上特定使用者群組的內容存取。 此影片說明如何搭配Adobe Experience Manager Assets使用「已關閉的使用者群組」，以限制對特定資產資料夾的存取。 AEM 6.4首次推出「使用AEM資產的封閉使用者群組」支援。 '
 feature: asset-share
 topics: authoring, collaboration, operations, sharing
@@ -8,15 +8,15 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 
-# 搭配AEM資產使用已關閉的使用者群組{#using-closed-user-groups-with-aem-assets}
+# 已關閉的使用者群組{#using-closed-user-groups-with-aem-assets}
 
 「封閉使用者群組」(CUG)是一種功能，可用來限制對發佈網站上特定使用者群組的內容存取。 此影片說明如何搭配Adobe Experience Manager Assets使用「已關閉的使用者群組」，以限制對特定資產資料夾的存取。 AEM 6.4首次推出「使用AEM資產的封閉使用者群組」支援。
 
