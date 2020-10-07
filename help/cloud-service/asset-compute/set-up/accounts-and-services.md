@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ## AEM 雲端服務{#aem-as-a-cloud-service}
 
-必須存取AEM作為雲端服務環境，才能設定AEM資產處理設定檔以叫用自訂資產計算應用程式。
+必須存取AEM作為雲端服務環境，才能設定AEM資產處理設定檔以叫用自訂資產計算工作者。
 
 最理想的情況是提供沙盒程式或非沙盒開發環境。
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 ## Adobe Project Firefly{#adobe-project-firefly}
 
-Adobe [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly.html) framework可用來建立自訂應用程式，並將它部署至Adobe的無伺服器平台Adobe I/O Runtime。 AEM Asset Compute應用程式是特別建立的Firefly應用程式，可透過「處理設定檔」與AEM Assets整合，並提供存取和處理資產二進位檔的功能。
+Adobe [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly.html) framework可用來建立自訂動作，並將之部署至Adobe的無伺服器平台Adobe I/O Runtime。 AEM Asset Compute專案是特別建立的Firefly專案，可透過「處理設定檔」與AEM Assets整合，並提供存取和處理資產二進位檔的功能。
 
 若要存取Project Firefly，請註冊預覽。
 
@@ -57,9 +57,9 @@ Adobe [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-fir
 
 ## 雲端儲存空間
 
-本端開發資產計算應用程式需要雲端儲存空間。
+本地開發資產計算專案需要雲端儲存空間。
 
-當資產計算應用程式部署至Adobe I/O Runtime以供AEM直接用作雲端服務時，並非嚴格要求此雲端儲存空間，因為AEM提供的雲端儲存空間可讀取資產並寫入其轉譯。
+當資產計算工作者部署至Adobe I/O Runtime以供AEM直接用作雲端服務時，並非嚴格要求此雲端儲存空間，因為AEM提供的雲端儲存空間可讀取資產並寫入其轉譯。
 
 ### Microsoft Azure Blob儲存空間{#azure-blob-storage}
 
