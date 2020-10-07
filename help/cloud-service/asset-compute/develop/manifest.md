@@ -1,6 +1,6 @@
 ---
 title: 設定資產計算專案的manifest.yml
-description: Asset Compute專案的manifest.yml說明此應用程式中要部署的所有工作者。
+description: Asset Compute項目的manifest.yml描述了此項目中要部署的所有員工。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -93,6 +93,13 @@ packages:
         annotations:
           require-adobe-auth: true
 ```
+
+## github上的manifest.yml
+
+Github上 `.manifest.yml` 提供最終版本：
+
++ [aem-guides-wknd-asset-compute/manifest.yml](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/manifest.yml)
+
 
 ## 驗證manifest.yml
 
