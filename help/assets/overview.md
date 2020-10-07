@@ -5,9 +5,9 @@ description: Adobe Experience Manager Assets的視訊和教學課程集
 seo-description: Adobe Experience Manager Assets的視訊和教學課程集
 sub-product: 資產，動態媒體
 translation-type: tm+mt
-source-git-commit: a2772bd8dd65e8bcb4caf660709f6aceb6e28eb4
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '244'
 ht-degree: 5%
 
 ---
@@ -18,6 +18,11 @@ ht-degree: 5%
 Adobe Experience Manager Assets是AEM Platform上的數位資產管理工具，可讓使用者在網路儲存庫中建立、管理及共用其數位資產（影像、視訊、檔案和音訊剪輯）。 本使用指南包含有關AEM Assets許多功能的影片和教學課程。
 
 ## 新增功能
+
+* **[浮水印（視訊）](./advanced/watermarks.md)**
+
+   <br>
+   *瞭解如何在AEM中以雲端服務的形式加上資產轉譯水印*
 
 * **[基線權限（視訊）](./configuring/baseline-permissions.md)**
 
@@ -38,12 +43,6 @@ Adobe Experience Manager Assets是AEM Platform上的數位資產管理工具，�
 
    <br>
    *探索「AEM資產中的系列」如何提供新的方式來組織和探索資產*
-
-* **[使用審閱任務（視頻）](./collaboration/review-task.md)**
-
-   <br>
-   *使用「檢閱工作」工作流程，快速輕鬆地核准（或拒絕）資產*
-
 
 ## 員工挑選
 
@@ -92,7 +91,7 @@ Adobe Experience Manager Assets是AEM Platform上的數位資產管理工具，�
 ## 其他資源
 
 * [Experience League —— 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Assets檔案](https://helpx.adobe.com/tw/experience-manager/6-5/assets/user-guide.html)
+* [AEM Assets檔案](Https://helpx.adobe.com/tw/experience-manager/6-5/assets/user-guide.html)
 * [AEM雲端服務教學課程](/help/cloud-service/overview.md)
 * [AEM Sites教學課程](/help/sites/overview.md)
 * [AEM Forms教學課程](/help/forms/overview.md)
