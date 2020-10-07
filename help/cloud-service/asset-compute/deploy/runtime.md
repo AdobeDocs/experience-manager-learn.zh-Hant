@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ AEM會在呼叫「資產計算工 `.env` 作器」時，隱式提供檔案中定
 
 要部署到項目檔案中定義的工作區，請執 `.env` 行以下操作：
 
-1. 在Asset Compute應用程式項目的根目錄中開啟命令行
+1. 在「資產計算」項目的根目錄中開啟命令行
 1. 執行命令 `aio app deploy`
 1. 執行命令以 `aio app get-url` 取得要在AEM中當做雲端服務處理設定檔使用的工作器URL，以參考此自訂的資產計算工作器。 如果項目包含多個工作者，則會列出每個工作者的離散URL。
 
@@ -54,7 +54,7 @@ AEM會在呼叫「資產計算工 `.env` 作器」時，隱式提供檔案中定
 部署到舞台和生產環境的一般方法（通常由CI/CD系統自動執行）是：
 
 1. 確保 [已安裝Adobe I/O CLI npm模組和Asset Compute插件](../set-up/development-environment.md#aio)
-1. 查看資產計算應用程式以從Git進行部署
+1. 查看要從Git部署的Asset Compute項目
 1. 使用與目標工作區（「舞台」或「生產」）對應的值設定環境變數
    + 這兩個必要的變 `AIO_runtime_namespace` 數是 `AIO_runtime_auth` Adobe I/O Developer Console中的每個工作區，並透過工作區的「全部下載 ____ 」功能取得。
 
@@ -74,7 +74,7 @@ $ export AIO_runtime_auth=27100f9f-2676-4cce-b73d-b3fb6bac47d1:0tDu307W6MboQf5VW
 1. AEM參照的「Cloud Service Processing Profile」（雲端服務處理設定檔）也可透過下列方式取得：
    + `aio app get-url`。
 
-如果資產計算應用程式版本更改了工作器URL也更改為反映新版本，則需要在處理配置檔案中更新該URL。
+如果「資產計算」項目版本更改了工作URL，也更改為反映新版本，則需要在「處理配置檔案」中更新URL。
 
 ## 工作區API布建{#workspace-api-provisioning}
 
