@@ -1,6 +1,6 @@
 ---
 title: 開發資產計算員工
-description: 資產計算工作者是資產計算應用程式的核心，因為它提供了對資產執行或協調的定製功能，以建立新的轉譯。
+description: 資產計算工作者是資產計算項目的核心，因為它提供了對資產執行或協調的定製功能，以建立新的轉譯。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1508'
 ht-degree: 0%
 
 ---
@@ -20,26 +20,28 @@ ht-degree: 0%
 
 # 開發資產計算員工
 
-資產計算工作者是資產計算應用程式的核心，因為它提供了對資產執行或協調的定製功能，以建立新的轉譯。
+資產計算工作者是資產計算項目的核心，因為它提供了對資產執行或協調的定製功能，以建立新的轉譯。
 
 「資產計算」項目會自動生成一個簡單工作器，該工作器將資產的原始二進位檔案複製到命名格式副本中，而不進行任何轉換。 在本教程中，我們將修改此工作器，以製作更有趣的轉譯，以說明「資產計算」工作器的強大功能。
 
-我們將建立一個資產計算工作人員，該工作人員將生成新的水準影像格式副本，該格式副本在資產版本模糊的情況下覆蓋資產格式副本左側和右側的空白空間。 最終轉譯的寬度、高度和模糊都會參數化。
+我們將建立一個「資產計算」工作器，生成新的水準影像格式副本，該格式副本在資產格式副本的左側和右側覆蓋空白空間，並且資產版本模糊。 最終轉譯的寬度、高度和模糊都會參數化。
 
-## 瞭解資產計算工作者的執行
+## 資產計算工作器調用的邏輯流
 
-資產計算工作者實作資產計算SDK工作者API合約，其簡單：
+資產計算工作者在功能中實作資產計算SDK工作者API合 `renditionCallback(...)` 約，該合約在概念上：
 
 + __輸入：__ AEM資產的原始資產二進位檔和參數
 + __輸出：__ 要新增至AEM資產的一或多個轉譯
 
-![資產計算工作者執行流程](./assets/worker/execution-flow.png)
+![資產計算工作器邏輯流](./assets/worker/logical-flow.png)
 
 1. 當從AEM Author服務呼叫資產計算工作者時，它會透過「處理設定檔」針對AEM資產。 資產的 __(1a)__ （原始二進位檔）會透過轉譯回呼函式的參數傳遞給工作者， `source` (1b) __「處理設定檔」中透過參數集定義的任何__`rendition.instructions` 參數。
-1. Asset Compute工作程式碼根據 __(1b)提供的任何參數轉換(1a)中提供的源二進位______ ，以生成源二進位的格式副本。
+1. 資產計算SDK層接受處理配置檔案中的請求，並協調自定義資產計算工作者的功能的執行 `renditionCallback(...)` ，根據 __(1b)______ (1a)提供的任何參數轉換(1a)中提供的源二進位檔案，以生成源二進位檔案的格式副本。
    + 在本教學課程中，會建立「正在處理中」的轉譯，這表示工作者會合成轉譯，不過，來源二進位檔也可以傳送至其他Web服務API，以產生轉譯。
 1. 「資產計算」工作者會儲存轉譯的二進位表示 `rendition.path` 法，以便儲存至AEM Author服務。
-1. 完成時，寫入的二進位資 `rendition.path` 料會透過AEM Author Service公開，做為Asset Compute工作者所呼叫之AEM資產的轉譯。
+1. 完成時，寫入的二進位資 `rendition.path` 料會透過Asset Compute SDK傳輸，並透過AEM Author Service公開為AEM UI中的轉譯。
+
+上圖說明了資產計算開發人員關注的問題和資產計算工作者調用的邏輯流程。 出於好奇，「資 [產計算」執行的內部詳細資訊可供使用](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) ，但只有公開的「資產計算SDK API」合約才應依賴。
 
 ## 工人解剖
 
@@ -106,7 +108,7 @@ function customHelperFunctions() { ... }
 
 ## 安裝和導入支援NPM模組
 
-資產計算應用程式作為Node.js應用程式，可從強穩的 [npm模組生態系統獲益](https://npmjs.com)。 要利用npm模組，我們必須首先將它們安裝到我們的Asset Compute應用程式項目中。
+資產計算項目基於Node.js，可從強大的 [npm模組生態系統中獲益](https://npmjs.com)。 要利用npm模組，我們必須首先將它們安裝到Asset Compute項目中。
 
 在此員工中，我們運用 [jimp](https://www.npmjs.com/package/jimp) ，直接在Node.js程式碼中建立和控制轉譯影像。
 
@@ -380,6 +382,12 @@ class RenditionInstructionsError extends ClientError {
    ![參數化PNG轉譯](./assets/worker/parameterized-rendition.png)
 
 1. 將其他影像上傳至 __Source檔案下拉式清單__ ，然後嘗試使用不同的參數來針對工作者執行工作！
+
+## Github上的Worker index.js
+
+Github上 `index.js` 提供最終版本：
+
++ [aem-guides-wknd-asset-compute/actions/worker/index.js](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/actions/worker/index.js)
 
 ## 疑難排解
 
