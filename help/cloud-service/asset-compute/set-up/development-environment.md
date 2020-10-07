@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
 translation-type: tm+mt
-source-git-commit: 53e4235c55d890765e9f13ffeb37a2c805fb307b
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 設定本機開發環境
 
-Adobe Asset Compute應用程式無法與AEM SDK提供的本機AEM執行階段整合，而且是使用其專屬的工具鏈來開發，這與AEM應用程式以AEM Maven專案原型為基礎所需的工具鏈不同。
+Adobe Asset Compute專案無法與AEM SDK提供的本機AEM執行階段整合，而且是使用其專屬的工具鏈來開發，這與AEM應用程式根據AEM Maven專案原型所需的工具鏈不同。
 
 若要擴充Asset Compute microservices，必須在本機開發人員機器上安裝下列工具。
 
@@ -46,7 +46,7 @@ Adobe Asset Compute應用程式無法與AEM SDK提供的本機AEM執行階段整
 
 ## 安裝Visual Studio代碼{#vscode}
 
-[Microsoft Visual Studio代碼](https://code.visualstudio.com/download) ，用於開發和調試資產計算應用程式。 雖然可 [以使用其他與](../../local-development-environment/development-tools.md#set-up-the-development-ide) JavaScript相容的IDE [，來開發應用程式，但只有Visual Studio程式碼可整合至除錯](../test-debug/debug.md) Asset Compute應用程式。
+[Microsoft Visual Studio代碼](https://code.visualstudio.com/download) ，用於開發和調試資產計算工作器。 雖然可 [以使用其他與](../../local-development-environment/development-tools.md#set-up-the-development-ide) JavaScript相容的IDE [，來開發工作器，但只有Visual Studio代碼可與Asset](../test-debug/debug.md) Compute工作器進行整合。
 
 _需要有Visual Studio Code 1.48.x+才能[wskdebug](#wskdebug)運作。_
 
@@ -67,7 +67,7 @@ Windows電腦的開發人員應確定他們使用Linux容器來處理上述影�
 
 ## 安裝Node.js（和npm）{#node-js}
 
-資產計算工 [作者是Node.js](https://nodejs.org/) 應用程式，因此需要Node.js 10+（和npm）來開發和構建。
+資產計算工 [作者是基於Node.js](https://nodejs.org/)，因此需要Node.js 10+（和npm）來開發和構建。
 
 + [以與傳統AEM開發相同的方式安裝Node.js（和npm）](../../local-development-environment/development-tools.md#node-js) 。
 
@@ -89,7 +89,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 ## 安裝wskdebug{#wskdebug}
 
-下載並安裝 [Apache OpenWhisk debug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組，以利於資產計算應用程式的本機除錯。
+下載並安裝 [Apache OpenWhisk debug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組，以方便資產計算工作者的本機除錯。
 
 _需要有Visual Studio Code 1.48.x+才能[wskdebug](#wskdebug)運作。_
 
@@ -99,7 +99,7 @@ $ npm install -g @openwhisk/wskdebug
 
 ## 安裝ngrok{#ngrok}
 
-下載並安裝 [ngrok](https://www.npmjs.com/package/ngrok) npm模組，讓您可公開存取本機開發機器，以方便在本端除錯Asset Compute應用程式。
+下載並安裝 [ngrok](https://www.npmjs.com/package/ngrok) npm模組，此模組可公開存取您的本機開發機器，以方便資產計算工作者的本機除錯。
 
 ```
 $ npm install -g ngrok --unsafe-perm=true
