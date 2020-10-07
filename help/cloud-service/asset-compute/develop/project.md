@@ -1,6 +1,6 @@
 ---
 title: 為資產計算擴充性建立資產計算項目
-description: 資產計算應用程式是使用Adobe I/O CLI產生的Node.js專案，符合特定結構，可讓這些專案部署至Adobe I/O Runtime，並與AEM整合為雲端服務。
+description: 「資產計算」專案是使用Adobe I/O CLI產生的Node.js專案，符合特定結構，可讓這些專案部署至Adobe I/O Runtime，並與AEM整合為雲端服務。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: a71c61304bbc9d54490086b3313c823225fbe2e0
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 建立資產計算項目
 
-資產計算應用程式是使用Adobe I/O CLI產生的Node.js專案，符合特定結構，可讓這些專案部署至Adobe I/O Runtime，並與AEM整合為雲端服務。 單一資產計算專案可以包含一或多個資產計算工作者，每個工作者都有可從AEM做為雲端服務處理設定檔的離散HTTP端點參考。
+「資產計算」專案是使用Adobe I/O CLI產生的Node.js專案，符合特定結構，可讓這些專案部署至Adobe I/O Runtime，並與AEM整合為雲端服務。 單一資產計算專案可以包含一或多個資產計算工作者，每個工作者都有可從AEM做為雲端服務處理設定檔的離散HTTP端點參考。
 
 ## 產生專案
 
@@ -51,7 +51,7 @@ _產生資產計算專案的點進（無音訊）_
 
 ## 審查專案剖析
 
-產生的「資產計算」專案是專用Adobe Project Firefly應用程式的Node.js專案，下列為「資產計算」專案的特有項目：
+產生的「資產計算」專案是專用Adobe Project Firefly專案的Node.js專案，下列項目為資產計算專案的特有項目：
 
 + `/actions` 包含子資料夾，每個子資料夾都定義一個「資產計算」工作器。
    + `/actions/<worker-name>/index.js` 定義執行JavaScript以執行此工作器的工作。
@@ -65,6 +65,14 @@ _產生資產計算專案的點進（無音訊）_
 + `/.env` 在語法中定義環 `key=value` 境變數，並包含不應共用的機密。 為保護這些機密，不應將此檔案簽入Git，而應透過專案的預設檔案忽略 `.gitignore` 此檔案。
    + 在此檔案中定義的變數可透過在命 [令列上匯出變](../deploy/runtime.md) 數來覆寫。
 
-如需專案結構審核的詳細資訊，請參閱 [Adobe Project Firefly應用程式的剖析](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)。
+如需專案結構審查的詳細資訊，請參 [閱Adobe Project Firefly專案剖析](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)。
 
 大部分的開發都發生在開發工作者實 `/actions` 施的資料夾中，以及為自定義資產計算 `/test/asset-compute` 工作者編寫測試時。
+
+## Github上的資產計算項目
+
+Github上提供最終資產計算專案，網址為：
+
++ [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
+
+_Github contains是專案的最終狀態，已填入工作者和測試案例，但不包含任何憑證，例如。`.env`，或`.config.json`者`.aio`。_
