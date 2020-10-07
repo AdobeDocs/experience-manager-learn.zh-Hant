@@ -1,6 +1,6 @@
 ---
 title: 為資產計算擴充性設定Adobe Project Firefly
-description: 資產計算應用程式是特別定義的Adobe Project Firefly應用程式，因此需要在Adobe Developer Console中存取Adobe Project Firefly，才能設定和部署它們。
+description: 「資產計算」專案是特別定義的Adobe Project Firefly專案，因此，您必須在Adobe Developer Console中存取Adobe Project Firefly，才能設定和部署這些項目。
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 設定Adobe Project Firefly
 
-資產計算應用程式是特別定義的Adobe Project Firefly應用程式，因此需要在Adobe Developer Console中存取Adobe Project Firefly，才能設定和部署它們。
+「資產計算」專案是特別定義的Adobe Project Firefly專案，因此，您必須在Adobe Developer Console中存取Adobe Project Firefly，才能設定和部署這些項目。
 
 ## 在Adobe Developer Console中建立和設定Adobe Project Firefly{#set-up}
 
@@ -34,8 +34,8 @@ _設定Adobe Project Firefly的點進（無音效）_
 
    + __專案標題__: `WKND AEM Asset Compute`
    + __應用程式名稱__: `wkndAemAssetCompute<YourName>`
-      + 應用 __程式名稱__ ，在所有Firefly應用程式中必須是唯一的，以後無法修改。 在公司或組織名稱前加上前置詞，加上有意義的後置詞是個好方法，例如： `wkndAemAssetCompute`.
-      + 若要自我啟用，通常最好將您的名稱貼至應用程式名 __稱__，例如 `wkndAemAssetComputeJaneDoe` 避免與其他Project Firefly應用程式衝突。
+      + 應用 __程式名稱__ ，在所有Firefly專案中必須是唯一的，以後無法修改。 在公司或組織名稱前加上前置詞，加上有意義的後置詞是個好方法，例如： `wkndAemAssetCompute`.
+      + 若要自我啟用，通常最好將您的名稱張貼至 __App名稱__，例如 `wkndAemAssetComputeJaneDoe` 避免與其他Project Firefly專案衝突。
    + 在「工 __作區__ 」(Workspaces)下，新增名為 `Development`
    + 在「 __Adobe I/O Runtime__ 」下，請確 __定已選取「包含執行時期__ 」及每個工作區
    + 點選「 __儲存__ 」以儲存專案
@@ -58,7 +58,7 @@ _設定Adobe Project Firefly的點進（無音效）_
 
 ## 查看服務帳戶(JWT)憑據
 
-本機 [Asset Compute Development Tool](../develop/development-tool.md) （資產計算開發工具）會使用此Adobe I/O專案的認證來與Adobe I/O Runtime互動，而且需要將其整合在資產計算應用程式專案中。 熟悉服務帳戶(JWT)認證。
+本機 [Asset Compute Development Tool](../develop/development-tool.md) （資產計算開發工具）會使用此Adobe I/O專案的認證來與Adobe I/O Runtime互動，而且需要將其整合在資產計算專案中。 熟悉服務帳戶(JWT)認證。
 
 ![Adobe開發人員服務帳戶認證](./assets/firefly/service-account.png)
 
