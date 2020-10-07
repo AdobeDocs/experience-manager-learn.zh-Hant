@@ -5,9 +5,9 @@ breadcrumb-title: AEM Assets Tutorials
 sub-product: 資產
 team: TM
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '239'
 ht-degree: 20%
 
 ---
@@ -47,10 +47,11 @@ ht-degree: 20%
    + [搜尋提升](./search-and-discovery/search-boost.md)
 
 + 進階功能{#advanced}
-   + [權限(CUG)](./advanced/closed-user-groups.md)
-   + [資產報表](./advanced/asset-reports.md)
-   + [資產 Insights](./advanced/asset-insights-launch-tutorial.md)
    + [註解PDF輸出](./advanced/customizing-annotations-pdf-output.md)
+   + [資產 Insights](./advanced/asset-insights-launch-tutorial.md)
+   + [資產報表](./advanced/asset-reports.md)
+   + [權限(CUG)](./advanced/closed-user-groups.md)
+   + [浮水印](./advanced/watermarks.md)
 
 + 進階中繼資料管理{#metadata}
    + [階層式中繼資料](metadata/cascade-metadata-feature-video-use.md)
