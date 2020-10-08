@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -45,6 +45,7 @@ ht-degree: 0%
 wskdebug [](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組支援將調試器附加到資產計算工作，包括能夠在VS代碼中設定斷點並逐步執行代碼。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40383/?quality=12&learn=on)
+
 _使用wskdebug調試資產計算工作器的點進（無音頻）_
 
 1. 確 [保已安](../set-up/development-environment.md#wskdebug) 裝wskdebug [和](../set-up/development-environment.md#ngork) ngrok npm模組
