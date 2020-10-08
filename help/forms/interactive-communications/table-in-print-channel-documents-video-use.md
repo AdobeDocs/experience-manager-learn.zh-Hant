@@ -9,7 +9,7 @@ doc-type: technical video
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
@@ -26,7 +26,8 @@ ht-degree: 0%
 表格用於以表格形式顯示資料。 表格中的列需要根據資料源返回的資料增長或縮小。 若要在列印頻道檔案中使用表格，我們需要使用AEM Forms Designer建立版面檔案（xdp檔案）。 在此版面檔案中，我們新增具有所需欄數的表格。 請根據您的需求，確定欄位物件類型為TextField或Numeric Field。 對於每個欄，欄位會確定資料系結已設為「使用名稱」。
 
 >[!NOTE]
-要使表動態，請確保已將行標籤為重複。
+>
+>要使表動態，請確保已將行標籤為重複。
 
 **在您自己的伺服器上試用**
 
