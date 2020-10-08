@@ -12,27 +12,33 @@ activity: setup
 version: 6.4,6.5
 discoiquuid: 1182ef4d-5838-433b-991d-e24ab805ae0e
 translation-type: tm+mt
-source-git-commit: 82127d5be9a4b969537738f9ba537efe07f38479
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 1%
 
 ---
 
+
 # 在Windows上安裝AEM表單的簡化步驟
 
 >[!NOTE]
+>
 >如果您想要使用AEM Forms，請勿按兩下「AEM快速入門」jar。
+>
 >此外，請確定「AEM Forms安裝」檔案夾路徑中沒有空格。
+>
 >例如，請勿在c:\jack and jill\AEM Forms folder中安裝AEM Forms
 
 >[!NOTE]
-如果您要安裝AEM Forms 6.5，請確定您已安裝下列32位元Microsoft Visual C++可轉散發套件。
+>
+>如果您要安裝AEM Forms 6.5，請確定您已安裝下列32位元Microsoft Visual C++可轉散發套件。
+>
+>* Microsoft Visual C++ 2008可重新分發
+>* Microsoft Visual C++ 2010可重新分發
+>* Microsoft Visual C++ 2012可重新分發
+>* Microsoft Visual C++ 2013可重新分發（截止至6.5日）
 
-* Microsoft Visual C++ 2008可重新分發
-* Microsoft Visual C++ 2010可重新分發
-* Microsoft Visual C++ 2012可重新分發
-* Microsoft Visual C++ 2013可重新分發（截止至6.5日）
 
 雖然我們建議依照正式 [檔案](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) ，安裝AEM Forms。 請依照下列步驟，在Windows環境中安裝及設定AEM Forms:
 
