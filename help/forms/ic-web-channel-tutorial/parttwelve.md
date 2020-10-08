@@ -12,7 +12,7 @@ activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
 translation-type: tm+mt
-source-git-commit: 4f51f7bf00827210d2631b9335768a9980f6655c
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -68,5 +68,7 @@ ht-degree: 0%
 * [開啟getad.html](http://localhost:4502/content/getad.html)
 
 * 與此URL關聯的程式碼將取得登入使用者的帳號。 然後，此帳戶編號將作為request屬性傳遞到FDM。 然後，FDM將讀取與此帳戶號碼關聯的資料，並填充Web渠道文檔。
+
 >[!NOTE]
-請檢視crx中的 **/apps/AEMForms/fetchad/GET.jsp** file。 請確定字串變數webChannelDocument指向有效的通訊檔案路徑。
+>
+>請檢視crx中的 **/apps/AEMForms/fetchad/GET.jsp** file。 請確定字串變數webChannelDocument指向有效的通訊檔案路徑。
