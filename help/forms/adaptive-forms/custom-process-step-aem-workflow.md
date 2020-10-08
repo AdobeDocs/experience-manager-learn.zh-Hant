@@ -10,7 +10,7 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 0%
@@ -129,7 +129,8 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 其餘的代碼通過使用API在指向attachmentFilePath的資源的子對象中循環來建立文檔對象。 此檔案物件是AEM Forms專屬的。 然後，我們使用文檔對象的copyToFile方法來保存文檔對象。
 
 >[!NOTE]
-由於我們使用AEM Forms專屬的Document物件，因此您必須在您的主要專案中加入aemfd-client-sdk相依性。 群組ID為com.adobe.aemfd，物件ID為aemfd-client-sdk。
+>
+>由於我們使用AEM Forms專屬的Document物件，因此您必須在您的主要專案中加入aemfd-client-sdk相依性。 群組ID為com.adobe.aemfd，物件ID為aemfd-client-sdk。
 
 #### 建立和部署
 
