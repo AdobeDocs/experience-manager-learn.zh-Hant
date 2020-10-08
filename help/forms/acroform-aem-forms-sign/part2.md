@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4
 translation-type: tm+mt
-source-git-commit: 1ba56ad44df4dc327cf37d39ac72539b5c7af4a2
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -32,4 +32,5 @@ ht-degree: 0%
 若要在您的系統上執行此示範，您必須建立名為「AEM資產」的 `acroforms` 檔案夾。 將Acroform上傳至此資 `acroforms` 料夾。
 
 >[!NOTE]
-范常式式碼會在此資料夾中尋找Acroform。 需要Acroform才能合併最適化表單的已提交資料。
+>
+>范常式式碼會在此資料夾中尋找Acroform。 需要Acroform才能合併最適化表單的已提交資料。
