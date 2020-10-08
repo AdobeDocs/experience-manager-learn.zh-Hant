@@ -7,7 +7,7 @@ audience: developer
 doc-type: article
 activity: implement
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
@@ -39,7 +39,8 @@ ht-degree: 0%
 * 第89行：這是服務的入口點。該方法以formName `getCSVFile(..)` 為輸入參數，並提取與給定表單名稱相關的提交資料。
 
 >[!NOTE]
-此程式碼假設您已在Felix Web Console中定義了稱為「aemformstutorial」的共用DataSource連線。此程式碼也假設您在資料庫中有一個稱為aemformstutorial的架構
+>
+>此程式碼假設您已在Felix Web Console中定義了稱為「aemformstutorial」的共用DataSource連線。此程式碼也假設您在資料庫中有一個稱為aemformstutorial的架構
 
 ```java
 package com.aemforms.storeandexport.core;
