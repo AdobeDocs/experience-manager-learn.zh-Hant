@@ -11,7 +11,7 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 1%
@@ -74,6 +74,7 @@ Dispatcher Tools的版本與AEM SDK的版本不同。 請確定Dispatcher Tools�
 請注意，下面發出的所有命令假定當前工作目錄包含正在擴展的Dispatcher Tools內容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
+
 *此視訊使用macOS做為說明用途。 等效的Windows/Linux命令可用於獲得類似的結果*
 
 ## 瞭解Dispatcher配置檔案
@@ -86,6 +87,7 @@ Dispatcher Tools提供一組Apache HTTP Web伺服器和Dispatcher配置檔案，
 如果Experience Manager Maven專案中不存在這些檔案， `dispatcher/src` 則這些檔案會複製到Experience Manager Maven專案中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30602/?quality=12&learn=on)
+
 *此視訊使用macOS做為說明用途。 等效的Windows/Linux命令可用於獲得類似的結果*
 
 在解壓縮的Dispatcher Tools中，可獲得配置檔案的完整說明，如 `dispatcher-sdk-x.x.x/docs/Config.html`。
@@ -142,6 +144,7 @@ AEM as a Cloud Service SDK&#39;s Publish Service，在埠4503本機上執行，�
    ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30603/?quality=12&learn=on)
+
 *此視訊使用macOS做為說明用途。 等效的Windows/Linux命令可用於獲得類似的結果*
 
 ## Dispatcher Tools日誌
@@ -177,6 +180,7 @@ Dispatcher Tools日誌在運行時發出到標準 `docker_run` 輸出。
    ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12&learn=on)
+
 *此視訊使用macOS做為說明用途。 等效的Windows/Linux命令可用於獲得類似的結果*
 
 ## 何時更新Dispatcher Tools{#dispatcher-tools-version}
