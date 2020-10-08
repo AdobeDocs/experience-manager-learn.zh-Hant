@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 1%
@@ -68,6 +68,7 @@ Adobe [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-fir
 本教學課程將使用Azure Blob Storage，但 [Amazon S3](#amazon-s3) ，也只能使用本教學課程的小變數。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40377/?quality=12&learn=on)
+
 _點進Azure Blob儲存空間布建（無音訊）_
 
 
