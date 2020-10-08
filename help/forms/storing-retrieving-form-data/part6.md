@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 translation-type: tm+mt
-source-git-commit: 6ae8110d4f4bc80682c35b0dab3fe7a62cad88f3
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
@@ -19,7 +19,12 @@ ht-degree: 0%
 # 將它部署在您的伺服器上
 
 >[!NOTE]
-以下是在您的系統上運行此命令所必需的AEM Forms（6.3版或更高版本）MYSQL資料庫
+>
+>以下是在您的系統上執行此項作業的必要條件
+>
+>* AEM Forms（6.3版或更新版本）
+>* MYSQL資料庫
+
 
 若要在您的AEM Forms例項上測試此功能，請依照下列步驟進行
 
