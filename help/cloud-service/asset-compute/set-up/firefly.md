@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 0%
@@ -25,6 +25,7 @@ ht-degree: 0%
 ## 在Adobe Developer Console中建立和設定Adobe Project Firefly{#set-up}
 
 >[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
+
 _設定Adobe Project Firefly的點進（無音效）_
 
 1. 使用與布建 [帳戶和服務相關聯的Adobe ID](https://console.adobe.io) ，登入 [Adobe Developer Console](./accounts-and-services.md)。 請確定您是系統管 __理員__ ，或是正確Adobe組織 __的「開發人員角色__ 」。
