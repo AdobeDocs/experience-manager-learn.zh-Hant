@@ -11,7 +11,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
@@ -49,8 +49,10 @@ ht-degree: 0%
 * [使用Document Service API](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 或者，您也可以使用隨附的範例套裝，做為本教學課程資產的一部分。
+
 >[!NOTE]
-範例包使用別名&quot;ares&quot;來認證檔案。 因此，使用此捆綁包時，請確保您的別名為「ares」
+>
+>範例包使用別名&quot;ares&quot;來認證檔案。 因此，使用此捆綁包時，請確保您的別名為「ares」
 
 ## 在您的本機系統上測試範例
 
