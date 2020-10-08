@@ -12,7 +12,7 @@ doc-type: technical video
 activity: setup
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 3%
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> 若要設定智慧型內容服務，您必須擁有Adobe ID帳戶，且該帳戶具有啟用智慧型內容服務之組織的管理員權限。
+>若要設定智慧型內容服務，您必須擁有已啟用智慧型內容服務之組織的管理員權限的Adobe ID帳戶。
 
 視訊詳細說明設定智慧型內容服務所需的下列主要工作。
 
