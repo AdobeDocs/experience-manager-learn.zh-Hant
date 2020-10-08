@@ -10,7 +10,7 @@ audience: developer
 kt: 4267
 thumbnail: 25907.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: cb5f3c323c433c9321ba26ac1194be0cd225a405
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 0%
@@ -88,8 +88,10 @@ Homebrew是適用於macOS、Windows和Linux的開放原始碼封裝管理程式�
 ![Node.js和npm](./assets/development-tools/nodejs-and-npm.png)
 
 >[!TIP]
-> [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)-based AEM Projects會在建立時安裝Node.js的隔離版本。 最好讓本機開發系統的版本與AEM Maven專案Reactor pom.xml中指定的Node.js和npm版本保持同步（或接近）。
-請參閱此范 [例AEM Project Reactor pom.xml](https://github.com/adobe/aem-guides-wknd/blob/9ac94f3f40c978a53ec88fae79fbc17dd2db72f2/pom.xml#L117-L118) ，以取得Node.js和npm組建版本的位置。
+>
+>[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)-based AEM Projects會在建立時安裝Node.js的隔離版本。 最好讓本機開發系統的版本與AEM Maven專案Reactor pom.xml中指定的Node.js和npm版本保持同步（或接近）。
+>
+>請參閱此范 [例AEM Project Reactor pom.xml](https://github.com/adobe/aem-guides-wknd/blob/9ac94f3f40c978a53ec88fae79fbc17dd2db72f2/pom.xml#L117-L118) ，以取得Node.js和npm組建版本的位置。
 
 ## 安裝Maven
 
