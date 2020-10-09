@@ -1,20 +1,20 @@
 ---
 sub-product: 表單
 audience: developer
-user-guide-title: AEM Forms影片和教學課程
+user-guide-title: AEM 表單影片和教學課程
 user-guide-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers.
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
+source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '843'
+ht-degree: 4%
 
 ---
 
 
-# AEM Forms影片和教學課程 {#forms}
+# AEM 表單影片和教學課程 {#forms}
 
 + [概覽](overview.md)
 + [要遵循的最佳做法](adaptive-forms/best-practices-adaptive-forms.md)
@@ -169,7 +169,9 @@ ht-degree: 0%
    + [在XDP轉譯上套用PDF的使用權](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [將使用權限套用至已上傳的PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [認證檔案](document-services/certifying-documents-aem-forms-tutorial.md)
-+ 印刷頻道的互動式通訊 {#ic-print-channel-tutorial}
+   + [組合表單附件](document-services/assemble-form-attachments.md)
++ 印刷頻道的互動式通訊
+{#ic-print-channel-tutorial}
    + [簡介](ic-print-channel-tutorial/introduction.md)
    + [設定Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
    + [建立資料來源](ic-print-channel-tutorial/create-data-source.md)
