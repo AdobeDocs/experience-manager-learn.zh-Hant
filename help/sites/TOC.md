@@ -1,18 +1,18 @@
 ---
-user-guide-title: AEM Sites影片和教學課程
-user-guide-description: A collection of videos and tutorials for Adobe Experience Manager Sites.
-breadcrumb-title: AEM Sites Tutorials
+user-guide-title: AEM Sites 影片和教學課程
+user-guide-description: Adobe Experience Manager Sites 的影片和教學課程系列。
+breadcrumb-title: AEM Sites 教學課程
 sub-product: sites
 translation-type: tm+mt
 source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 4%
+source-wordcount: '471'
+ht-degree: 10%
 
 ---
 
 
-# AEM Sites影片和教學課程 {#sites}
+# AEM Sites 影片和教學課程 {#sites}
 
 + [概覽](overview.md)
 + 頁面編寫 {#page-authoring}
@@ -49,7 +49,7 @@ ht-degree: 4%
 + 開發 {#developing}
    + [AEM Project Archetype](developing/aem-project-archetype.md)
    + [AEM Sites快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-   + [AEM Headless快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+   + [AEM Headless 快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [AEM SPA編輯器快速入門與回應](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM SPA編輯器和Angular快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
