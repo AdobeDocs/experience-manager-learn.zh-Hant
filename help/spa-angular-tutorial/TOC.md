@@ -5,19 +5,19 @@ version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
-user-guide-title: AEM SPA編輯器和Angular快速入門
-user-guide-description: Create your first Angular Single Page Application (SPA) that is editable in AEM with the WKND SPA.
-breadcrumb-title: AEM SPA Editor and Angular Tutorial
+user-guide-title: AEM SPA Editor and Angular 快速入門
+user-guide-description: 建立可在 AEM 中使用 WKND SPA 編輯的第一個 Angular Single Page Application (SPA)。
+breadcrumb-title: AEM SPA Editor and Angular 教學課程
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 2%
+source-wordcount: '59'
+ht-degree: 71%
 
 ---
 
 
-# AEM SPA編輯器和Angular快速入門 {#spa-angular-tutorial}
+# AEM SPA Editor and Angular 快速入門 {#spa-angular-tutorial}
 
 + [概覽](overview.md)
 + [SPA編輯器項目](create-project.md)
