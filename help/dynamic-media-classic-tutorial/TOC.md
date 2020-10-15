@@ -5,20 +5,20 @@ version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
-user-guide-title: Dynamic Media Classic簡介
-user-guide-description: This tutorial shows how to use Dynamic Media Classic to create, author, and deliver rich media content.
-breadcrumb-title: Dynamic Media Classic Tutorials
+user-guide-title: Dynamic Media Classic 簡介
+user-guide-description: 本教學課程說明如何使用 Dynamic Media Classic 來建立、編寫和發佈多媒體內容。
+breadcrumb-title: Dynamic Media Classic 教學課程
 index: y
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 7%
+source-wordcount: '76'
+ht-degree: 46%
 
 ---
 
 
-# Dynamic Media Classic簡介 {#dynamic-media-classic-tutorial}
+# Dynamic Media Classic 簡介 {#dynamic-media-classic-tutorial}
 
 + [Dynamic Media Classic概觀](./overview.md)
 + [資產工作流程與預覽](./main-workflow.md)
