@@ -1,20 +1,20 @@
 ---
 sub-product: 表單
 audience: developer
-user-guide-title: AEM 表單影片和教學課程
-user-guide-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers.
-breadcrumb-title: AEM Forms Tutorials
+user-guide-title: AEM Forms 影片和教學課程
+user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
+breadcrumb-title: AEM Forms 教學課程
 index: y
 translation-type: tm+mt
 source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 4%
+source-wordcount: '858'
+ht-degree: 6%
 
 ---
 
 
-# AEM 表單影片和教學課程 {#forms}
+# AEM Forms 影片和教學課程 {#forms}
 
 + [概覽](overview.md)
 + [要遵循的最佳做法](adaptive-forms/best-practices-adaptive-forms.md)
