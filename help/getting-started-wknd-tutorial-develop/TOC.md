@@ -5,20 +5,20 @@ version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
-user-guide-title: AEM Sites快速入門- WKND教學課程
-user-guide-description: A multi-part tutorial for developers new to AEM. Implement an AEM site for a fictitious lifestyle brand, the WKND.
-breadcrumb-title: AEM Sites WKND Tutorials
+user-guide-title: AEM Sites - WKND 教學課程快速入門
+user-guide-description: AEM 的新開發人員的多部分教學課程。實作虛構的生活風格品牌 WKND 的 AEM 網站。
+breadcrumb-title: AEM Sites WKND 教學課程
 index: y
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '33'
-ht-degree: 12%
+source-wordcount: '56'
+ht-degree: 73%
 
 ---
 
 
-# Getting Started with AEM Sites - WKND Tutorial {#getting-started-wknd-tutorial-develop}
+# AEM Sites - WKND 教學課程快速入門 {#getting-started-wknd-tutorial-develop}
 
 + [WKND教學課程總覽](overview.md)
 + [專案設定](project-setup.md)
