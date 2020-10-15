@@ -1,19 +1,19 @@
 ---
-user-guide-title: AEM Assets影片和教學課程
-user-guide-description: A collection of videos and tutorials for Adobe Experience Manager Assets.
-breadcrumb-title: AEM Assets Tutorials
+user-guide-title: AEM 資產影片和教學課程
+user-guide-description: Adobe Experience Manager Assets 的影片和教學課程系列。
+breadcrumb-title: AEM 資產教學課程
 sub-product: 資產
 team: TM
 translation-type: tm+mt
 source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 20%
+source-wordcount: '253'
+ht-degree: 28%
 
 ---
 
 
-# AEM Assets影片和教學課程 {#assets}
+# AEM 資產影片和教學課程 {#assets}
 
 + [概覽](overview.md)
 
