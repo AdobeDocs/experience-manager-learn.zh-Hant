@@ -10,9 +10,9 @@ version: cloud-service
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 translation-type: tm+mt
-source-git-commit: 97fe98c8c62f5472f7771bbc803b2a47dc97044d
+source-git-commit: 096cdccdf1675480aa0a35d46ce7b62a3906dad1
 workflow-type: tm+mt
-source-wordcount: '2402'
+source-wordcount: '2414'
 ht-degree: 1%
 
 ---
@@ -270,6 +270,10 @@ Adobe用戶端資料層是事件 **導向** 的資料層。 載入AEM **Page資�
    >[!TIP]
    >
    >我們建議使用「 *Manage the library for me* 」（為我管理資料庫）選項作為「Library Management」（資料庫管理）設定，因為這可讓資料庫 `AppMeasurement.js` 保持最新狀態更輕鬆。
+
+1. 核取方塊以啟用「 **使用Activity Map」**。
+
+   ![啟用使用Activity Map](assets/track-clicked-component/analytic-track-click.png)
 
 1. 在「 **一般** >追 **蹤伺服器**」下，輸入您的追蹤伺服器，例如 `tmd.sc.omtrdc.net`. 如果您的網站支援 `https://`
 
