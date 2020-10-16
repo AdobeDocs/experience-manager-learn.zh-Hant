@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
 translation-type: tm+mt
-source-git-commit: 97fe98c8c62f5472f7771bbc803b2a47dc97044d
+source-git-commit: 096cdccdf1675480aa0a35d46ce7b62a3906dad1
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1831'
 ht-degree: 1%
 
 ---
@@ -255,9 +255,13 @@ Adobe用戶端資料層是事件 **導向** 的資料層。 當任何核心元�
 
    * `evar8` - `%Component ID%`
    * `prop8` - `%Component ID%`
-   * `event8` - `CTA Clicked`
+   * `event8`
 
    ![設定eVar Prop和事件](assets/track-clicked-component/set-evar-prop-event.png)
+
+   >[!NOTE]
+   >
+   > 這 `%Component ID%` 里是使用的，因為它會為所點按的CTA取得唯一識別碼。 使用Analytics報表的潛 `%Component ID%` 在缺點是會包含類似的值 `button-2e6d32893a`。 使用 `%Component Title%` 會提供更人性化的名稱，但其值可能並非唯一。
 
 1. 接著，點選加號圖示，在 **Adobe Analytics —— 設定變數右側新增其** 他動作 **** :
 
@@ -265,9 +269,11 @@ Adobe用戶端資料層是事件 **導向** 的資料層。 當任何核心元�
 
 1. 將「延 **伸功能** 」類型設 **定為Adobe Analytics** ，並將「 **動作類型** 」設定為「傳送 ****&#x200B;信標」。
 1. 在「 **追蹤** 」下方，將選項按鈕設為 **`s.tl()`**。
-1. 對於「 **連結類型** 」，請選擇「 **自定義連結** 」，並為「連結名稱 **」將值設定為「資料要素元件******&#x200B;標題：
+1. 對於 **連結類型** ，請選 **擇「自訂連結** 」，對於「 **連結名稱** 」，請將值設定為： **`%Component Title%: CTA Clicked`**:
 
    ![傳送連結信標的設定](assets/track-clicked-component/analytics-send-beacon-link-track.png)
+
+   這會結合資料元素「元件標題」中的動 **態變數** ，以及「點按的 **靜態字串CTA**」。
 
 1. 儲存變更。「 **CTA點按規則** 」現在應具備下列設定：
 
