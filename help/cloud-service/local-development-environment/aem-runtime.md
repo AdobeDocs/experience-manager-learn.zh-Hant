@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: 4cfbf975919eb38413be8446b70b107bbfebb845
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1406'
 ht-degree: 1%
 
 ---
@@ -23,12 +23,6 @@ ht-degree: 1%
 Adobe Experience Manager(AEM)可以使用AEM作為雲端服務SDK的Quickstart Jar在本機執行。 這可讓開發人員在將自訂程式碼、組態和內容提交至來源控制項，並將它部署至AEM做為雲端服務環境之前，先進行部署和測試。
 
 請注意， `~` 這是用戶目錄的速記。 在Windows中，這相當於 `%HOMEPATH%`。
-
->[!VIDEO](https://video.tv.adobe.com/v/32551/?quality=12&learn=on)
-
->[!NOTE]
->
-> 此影片說明如何使用AEM SDK的本機快速入門，在幾分鐘內安裝及執行Adobe Experience Manager的本機執行個體。 此影片會以連按兩下快速入門Jar檔案的方式，顯示如何啟動AEM SDK的本機快速入門，但是這在安裝在電腦上的Java 8中無法運作。 或者，AEM SDK的本機快速入門可從命令列使用本頁所述 `java -jar ...` 的命 [令啟動](#set-up-local-aem-author-service)。
 
 ## 安裝Java
 
@@ -55,9 +49,6 @@ AEM(Cloud Service SDK)或AEM SDK包含用來在本機執行AEM Author和Publish�
 ## 從AEM SDK zip解壓縮快速入門(Quickstart Jar)
 
 1. 解壓縮下載的檔 `aem-sdk-XXX.zip` 案
-1. 確保您的Experience Manager開發人 __員license.properties__ 檔案可用
-
-請注意，啟動 _AEM Author和Publish Services時，會使用相同的Quickstart Jar和license.properties_ 檔案。
 
 ## 設定本機AEM Author服務{#set-up-local-aem-author-service}
 
@@ -65,7 +56,6 @@ AEM(Cloud Service SDK)或AEM SDK包含用來在本機執行AEM Author和Publish�
 
 1. 建立資料夾 `~/aem-sdk/author`
 1. 將快速 __啟動JAR檔案複製到__ ，並 `~/aem-sdk/author` 將其更名為 `aem-author-p4502.jar`
-1. 將 __license.properties檔案複製__ 至  `~/aem-sdk/author`
 1. 從命令列執行下列動作，以啟動本機AEM作者服務：
    + `java -jar aem-author-p4502.jar`
       + 將管理員密碼提供為 `admin`。 任何管理員密碼都可接受，但建議使用本端開發的預設密碼，以減少重新設定的需要。
@@ -78,7 +68,6 @@ Windows:
 ```shell
 $ mkdir -p c:\Users\<My User>\aem-sdk\author
 $ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\author\aem-author-p4502.jar
-$ copy ../license.properties c:\Users\<My User>\aem-sdk\author
 $ cd c:\Users\<My User>\aem-sdk\author
 $ java -jar aem-author-p4502.jar
 ```
@@ -88,7 +77,6 @@ macOS / Linux:
 ```shell
 $ mkdir -p ~/aem-sdk/author
 $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/author/aem-author-p4502.jar
-$ cp ../license.properties ~/aem-sdk/author
 $ cd ~/aem-sdk/author
 $ java -jar aem-author-p4502.jar
 ```
@@ -99,7 +87,6 @@ $ java -jar aem-author-p4502.jar
 
 1. 建立資料夾 `~/aem-sdk/publish`
 1. 將快速 __啟動JAR檔案複製到__ ，並 `~/aem-sdk/publish` 將其更名為 `aem-publish-p4503.jar`
-1. 將 __license.properties檔案複製__ 至  `~/aem-sdk/publish`
 1. 從命令列執行下列動作，以啟動本機AEM Publish Service:
    + `java -jar aem-publish-p4503.jar`
       + 將管理員密碼提供為 `admin`。 任何管理員密碼都可接受，但建議使用本端開發的預設密碼，以減少重新設定的需要。
@@ -112,7 +99,6 @@ Windows:
 ```shell
 $ mkdir -p c:\Users\<My User>\aem-sdk\publish
 $ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\publish\aem-publish-p4503.jar
-$ copy ../license.properties c:\Users\<My User>\aem-sdk\publish
 $ cd c:\Users\<My User>\aem-sdk\publish
 $ java -jar aem-publish-p4503.jar
 ```
@@ -122,7 +108,6 @@ macOS / Linux:
 ```shell
 $ mkdir -p ~/aem-sdk/publish
 $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
-$ cp ../license.properties ~/aem-sdk/publish
 $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
