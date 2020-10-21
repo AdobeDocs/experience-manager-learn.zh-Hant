@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Sites 的影片和教學課程�
 breadcrumb-title: AEM Sites 教學課程
 sub-product: sites
 translation-type: tm+mt
-source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
+source-git-commit: 55beee99b91c44f96cd37d161bb3b4ffe38d2687
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '476'
 ht-degree: 10%
 
 ---
@@ -101,6 +101,7 @@ ht-degree: 10%
    + 分析 {#analytics}
       + [使用Adobe Analytics收集頁面資料](integrations/analytics/collect-data-analytics.md)
       + [使用Adobe Analytics追蹤點按的元件](integrations/analytics/track-clicked-component.md)
+      + [使用分析工作區分析資料](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
       + [概覽](integrations/adobe-target/overview.md)
       + [將Target擴充功能新增至Launch屬性](integrations/adobe-target/add-target-launch-extension.md)
