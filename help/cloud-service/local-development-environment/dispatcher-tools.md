@@ -11,10 +11,10 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 1b4a927a68d24eeb08d0ee244e85519323482910
 workflow-type: tm+mt
-source-wordcount: '1508'
-ht-degree: 1%
+source-wordcount: '1534'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,8 @@ Adobe Experience Manager(AEM)的Dispatcher是Apache HTTP Web伺服器模組，�
 AEM a Cloud Service SDK包含建議的Dispatcher Tools版本，可協助在本機設定、驗證和模擬Dispatcher。 Dispatcher Tools由以下組成：
 
 + Apache HTTP Web伺服器和Dispatcher配置檔案的基準集，位於 `.../dispatcher-sdk-x.x.x/src`
-+ 配置驗證器CLI工具，位於 `.../dispatcher-sdk-x.x.x/bin/validator`
++ 配置驗證器CLI工具，位 `.../dispatcher-sdk-x.x.x/bin/validate` 於(Dispatcher SDK 2.0.29+)
++ 配置生成CLI工具，位於 `.../dispatcher-sdk-x.x.x/bin/validator`
 + 配置部署CLI工具，位於 `.../dispatcher-sdk-x.x.x/bin/docker_run`
 + 使用Dispatcher模組運行Apache HTTP Web伺服器的Docker映像
 
@@ -39,7 +40,7 @@ AEM a Cloud Service SDK包含建議的Dispatcher Tools版本，可協助在本�
 ## 必備條件
 
 1. Windows使用者必須使用Windows 10 Professional
-1. 在本 [機開發機器上安裝Experience Manager](./aem-runtime.md) Publish QuickStart。
+1. 在本 [機開發機器上安裝Experience Manager Publish Quickstart Jar](./aem-runtime.md) 。
    + （可選）在本機 [AEM Publish服務上安裝最新](https://github.com/adobe/aem-guides-wknd/releases) AEM參考網站。 本教程使用此網站來直觀顯示工作的Dispatcher。
 1. 在本機開發機器上安裝並啟動 [Docker](https://www.docker.com/) (Docker Desktop 2.2.0.5+ / Docker Engine v19.03.9+)的最新版本。
 
@@ -49,13 +50,10 @@ AEM(Cloud Service SDK)或AEM SDK包含Dispatcher Tools，可用來在本機執�
 
 如果AEM已下載為Cloud Service SDK，以 [設定本機AEM執行階段](./aem-runtime.md)，則不需要重新下載。
 
-1. 使用您 [的Adobe ID登入experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads)
-   + 請注意，您的Adobe __組織__ 必須布建AEM做為雲端服務，才能將AEM下載為雲端服務SDK。
-1. 導覽至「 __AEM做為雲端服務」標籤__
-1. 依發佈日 __期__ ，依 __遞減__
-1. 按一下最新 __的AEM SDK__ 結果列
-1. 檢閱並接受EULA，然後點選「下 __載__ 」按鈕
-1. 確保已使用AEM SDK的Dispatcher Tools v2.0.21+
+1. 使用您 [的Adobe ID登入experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderstestModied&amp;orderby.st.sort.st.st.st.st.st.st&amp;st.sted&amp;orde.sted&amp;ord&amp;orde.s.sted&amp;ord.se.s.st.st.s.se.st.se.se.s=desc&amp;d.se.se.st.s&amp;dsc&amp;des&amp;des&amp;desc&amp;s&amp;desc&amp;s&amp;d.sy=list&amp;p.offset=0&amp;p.limit=1)
+   + 您的Adobe組 __織必須__ 布建AEM做為雲端服務，才能將AEM下載為雲端服務SDK
+1. 按一下最新 __的AEM SDK__ 結果列以下載
+   + 請確定下載說明中已注明AEM SDK的Dispatcher Tools v2.0.29+
 
 ## 從AEM SDK zip解壓縮Dispatcher Tools
 
@@ -92,20 +90,25 @@ Dispatcher Tools提供一組Apache HTTP Web伺服器和Dispatcher配置檔案，
 
 在解壓縮的Dispatcher Tools中，可獲得配置檔案的完整說明，如 `dispatcher-sdk-x.x.x/docs/Config.html`。
 
+## 驗證配置
+
+或者，Dispatcher和Apache Web伺服器配置(通過 `httpd -t`)可以使用指令碼進行驗證( `validate` 不要與執行檔 `validator` 混淆)。
+
++ 使用狀況:
+   + Windows: `bin\validate src`
+   + macOS / Linux: `./bin/validate ./src`
+
 ## 在本地運行Dispatcher
 
-要在本地運行Dispatcher，必須使用Dispatcher Tools的 `validator` CLI工具驗證要用於配置Dispatcher的Dispatcher配置檔案。
+要在本地運行Dispatcher，必須使用Dispatcher Tools的 `validator` CLI工具生成Dispatcher配置檔案。
 
 + 使用狀況:
    + Windows: `bin\validator full -d out src`
    + macOS / Linux: `./bin/validator full -d ./out ./src`
 
-驗證有雙重目的：
+此命令將配置傳輸到與Docker容器的Apache HTTP Web伺服器相容的檔案集中。
 
-+ 驗證Apache HTTP Web伺服器和Dispatcher配置檔案是否正確
-+ 將配置傳輸到與Docker容器的Apache HTTP Web Server相容的檔案集中。
-
-經過驗證後，使用經過傳輸的配置時，將在Docker容器的本地運行Dispatcher。 請務必確保使用驗證器選項驗證和 __輸出最__ 新配置 `-d` 。
+生成後，將使用經傳輸的配置在Docker容器中本地運行Dispatcher。 請務必確保最新配置已通過驗證器選 `validate` 項的 __驗證__ ，並使用驗證器 `-d` 選項輸出。
 
 + 使用狀況:
    + Windows: `bin\docker_run <deployment-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
@@ -231,7 +234,7 @@ Waiting until host.docker.internal is available
 
 當執行 `docker_run.cmd`時，會顯示讀取** __錯誤的錯誤：找不到部署資料夾：__。 這通常是因為路徑中有空格。 如果可能，請刪除資料夾中的空格，或將 `aem-sdk` 資料夾移動到不包含空格的路徑。
 
-例如，Windows使用者資料夾通常 `<First name> <Last name>`是，中間有空格。 在下面的示例中，該文 `...\My User\...` 件夾包含一個空格，該空格會中斷本地Dispatcher Tools的執 `docker_run` 行。 如果空格位於Windows使用者資料夾中，請勿嘗試重新命名此資料夾，因為它會中斷Windows，而是將資料夾移至您的使用者有權完全修改的新位置。 `aem-sdk` 請注意，假定該文 `aem-sdk` 件夾位於用戶的主目錄中的說明，必須調整到新位置。
+例如，Windows使用者資料夾通常 `<First name> <Last name>`是，中間有空格。 在下面的示例中，該文 `...\My User\...` 件夾包含一個空格，該空格會中斷本地Dispatcher Tools的執 `docker_run` 行。 如果空格位於Windows使用者資料夾中，請勿嘗試重新命名此資料夾，因為它會中斷Windows，而是將資料夾移至您的使用者有權完全修改的新位置。 `aem-sdk` 請注意，假定該文 `aem-sdk` 件夾位於用戶的主目錄中的說明，需要調整到新位置。
 
 #### 範例錯誤
 
