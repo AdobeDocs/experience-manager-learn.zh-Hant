@@ -30,13 +30,13 @@ Smart Imaging也受益於與Adobe同級最佳優質服務完全整合的額外�
 
 ![影像](assets/smart-imaging/smart-imaging-1.png)
 
-## Smart Imaging的運作方式
+## Smart Imaging的運作方式 {#smart-imaging-1}
 
 如前所述，智慧型影像運用Adobe Sensei AI功能，並搭配現有的影像預設集來自動將影像轉換為最佳的新一代影像格式，例如WebP，同時仍能維持視覺完整性。
 
 進一步了 [解Smart Imaging的運作方式](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)，包括支援的影像格式（以及不使用這些格式時會發生什麼情況）等詳細資訊，以及它對現有使用的影像預設集的影響。
 
-## Smart Imaging的影響
+## Smart Imaging的影響 {#smart-imaging-1-1}
 
 您可能擔心您必須變更網站上的URL、影像預設集和程式碼，才能運用智慧型影像。 如果您符合使用智慧型影像的先決條件，而且您只使用支援的JPEG和PNG影像格式來處理影像，則不必進行任何變更。
 
