@@ -1,11 +1,11 @@
 ---
-user-guide-title: AEM 資產影片和教學課程
+user-guide-title: AEM Assets 影片和教學課程
 user-guide-description: Adobe Experience Manager Assets 的影片和教學課程系列。
-breadcrumb-title: AEM 資產教學課程
+breadcrumb-title: AEM Assets 教學課程
 sub-product: 資產
 team: TM
 translation-type: tm+mt
-source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
+source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 28%
@@ -13,7 +13,7 @@ ht-degree: 28%
 ---
 
 
-# AEM 資產影片和教學課程 {#assets}
+# AEM Assets 影片和教學課程 {#assets}
 
 + [概覽](overview.md)
 
@@ -55,10 +55,9 @@ ht-degree: 28%
 
 + 進階中繼資料管理{#metadata}
    + [階層式中繼資料](metadata/cascade-metadata-feature-video-use.md)
-   + [智慧型標籤概述](metadata/smart-tags-feature-video-use.md)
-   + [設定智慧標記](metadata/smart-tags-technical-video-setup.md)
-   + [增強型智慧標記](metadata/enhanced-smart-tags-feature-video-use.md)
-   + [設定增強的智慧標籤](metadata/enhanced-smart-tags-technical-video-setup.md)
+   + [影像的智慧型標籤](metadata/image-smart-tags.md)
+   + [影像的自訂智慧型標籤](metadata/custom-smart-tags.md)
+   + [視訊智慧標記](metadata/video-smart-tags.md)
    + [匯入和匯出中繼資料](metadata/metadata-import-feature-video-use.md)
 
 + 分享與散發{#sharing}
