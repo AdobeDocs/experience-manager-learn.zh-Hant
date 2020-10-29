@@ -4,9 +4,9 @@ seo-title: AEM Content Services快速入門——第2章——定義事件內容
 description: AEM無頭教學課程的第2章涵蓋啟用和定義內容片段模型，用於定義標準化的資料結構和製作介面以建立事件。
 seo-description: AEM無頭教學課程的第2章涵蓋啟用和定義內容片段模型，用於定義標準化的資料結構和製作介面以建立事件。
 translation-type: tm+mt
-source-git-commit: 885e30dea2a21dff789c98bdc5beb2f758b806f3
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '994'
 ht-degree: 6%
 
 ---
@@ -25,7 +25,7 @@ AEM內容片段模型可定義內容結構描述，這些結構描述可用於�
 
 ## 啟用內容片段模型
 
-內容片段模 **型必須** 透過 **AEM的「設定瀏[!UICONTROL 覽器」啟用]**。
+內容片段模 **型必須** 透過 **[AEM的「設定瀏 [!UICONTROL 覽器」啟用]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)**。
 
 如果未針對設定啟 **用「內容片段模型** 」，則相關AEM設定將不會顯示「建立 **[!UICONTROL >]** 內容片段」按鈕。
 
@@ -36,11 +36,13 @@ AEM內容片段模型可定義內容結構描述，這些結構描述可用於�
 >為了讓配置影響內容分層結構，必須通過該內容分層結構上 `cq:conf` 的屬性引用該配置。 (這是在以下步 [!DNL WKND Mobile] 驟 **5中完成** )。
 >
 >使用 `global` 配置時，配置將應用於所有內容， `cq:conf` 無需設定。
+>
+>See the [[!UICONTROL Configuration Browser] documentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html) for more information.
 
 1. 以具有適當權限的使用者身分登入AEM Author，以修改相關設定。
    * 在本教學課程中， **可使用** admin使用者。
-1. 導覽至「工 **[!UICONTROL 具]>一般[!UICONTROL >設定瀏][!UICONTROL 覽器」]**
-1. 點選 **旁的資料夾圖示** , **[!DNL WKND Mobile]** 然後點選左上角的「 **[!UICONTROL Edit]（編輯）** 」按鈕。
+1. 導覽至「工 **[!UICONTROL 具] >一般 [!UICONTROL >設定瀏][!UICONTROL 覽器」]**
+1. 點選 **旁的資料夾圖示** , **[!DNL WKND Mobile]** 然後點選左上角的「 **[!UICONTROL Edit] （編輯）** 」按鈕。
 1. 選取 **[!UICONTROL 內容片段模型]**，然後點選右 **[!UICONTROL 上方的「儲存並關閉]** 」。
 
    如此可啟用已套用設定之資產資料夾內容樹上的內容片段 [!DNL WKND Mobile] 模型。
@@ -58,7 +60,7 @@ AEM內容片段模型可定義內容結構描述，這些結構描述可用於�
 
 1. 將設定 **[!DNL WKND Mobile]** 套用至「資產」檔 **[!DNL WKND Mobile]案夾** ，以允許在「資產」檔案夾階層中建立「內容片段模型」的內容片段：
 
-   1. 導覽至「 **[!UICONTROL AEM]>資[!UICONTROL 產]>檔[!UICONTROL 案」]**
+   1. 導覽至「 **[!UICONTROL AEM] >資 [!UICONTROL 產] >檔 [!UICONTROL 案」]**
    1. 選擇「 **[!UICONTROL WKND Mobile」檔案夾]**
    1. 點選頂端 **[!UICONTROL 動作列中的]** 「屬性」按鈕，以開啟「資料 [!UICONTROL 夾屬性」]
    1. 在資 [!UICONTROL 料夾屬性]，點選「雲端 **[!UICONTROL 服務」標籤]**
@@ -79,7 +81,7 @@ AEM內容片段模型可定義內容結構描述，這些結構描述可用於�
 
 ## 建立內容片段模型
 
-1. 導覽至「 **[!UICONTROL 工具]>資[!UICONTROL 產]>內[!UICONTROL 容片段模型」]**。
+1. 導覽至「 **[!UICONTROL 工具] >資 [!UICONTROL 產] >內 [!UICONTROL 容片段模型」]**。
 1. 點選資料 **[!DNL WKND Mobile]** 夾以開啟。
 1. 點選「 **[!UICONTROL 建立]** 」以開啟「內容片段模型建立精靈」。
 1. 輸入 **[!DNL Event]** 為「模 **[!UICONTROL 型標題]** 」(說明 *為可選)* ，然後點選「 **[!UICONTROL 建立]** 」以儲存。
@@ -88,10 +90,10 @@ AEM內容片段模型可定義內容結構描述，這些結構描述可用於�
 
 ## 定義內容片段模型的結構
 
-1. 導覽至「 **[!UICONTROL 工具]>資[!UICONTROL 產]>內[!UICONTROL 容片段模型]>[!DNL WKND]**」。
+1. 導覽至「 **[!UICONTROL 工具] >資 [!UICONTROL 產] >內 [!UICONTROL 容片段模型] >[!DNL WKND]**」。
 1. 選取「內 **[!DNL Event]** 容片段模型」，然後點選 **[!UICONTROL 頂端動作列中的]** 「編輯」。
-1. 從右側 **[!UICONTROL 的「資料類型]」標籤，將「單** 行文字輸入 **[!UICONTROL 」拖曳至左側的下拉區域以定義欄]****[!DNL Question]** 位。
-1. 請確定左 **[!UICONTROL 側已選取新的「單行文字]** 」輸入，右側已選取「屬 **[!UICONTROL 性]」索引標籤** 。 按如下方式填入「屬性」欄位：
+1. 從右側 **[!UICONTROL 的「資料類型] 」標籤，將「單** 行文字輸入 **[!UICONTROL 」拖曳至左側的下拉區域以定義欄]****[!DNL Question]** 位。
+1. 請確定左 **[!UICONTROL 側已選取新的「單行文字]** 」輸入，右側已選取「屬 **[!UICONTROL 性] 」索引標籤** 。 按如下方式填入「屬性」欄位：
 
    * [!UICONTROL 呈現為] : `textfield`
    * [!UICONTROL 欄位標籤] : `Event Title`
