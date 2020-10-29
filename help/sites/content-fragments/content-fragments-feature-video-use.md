@@ -9,9 +9,9 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '396'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ AEM內容片段是文字編輯內容，可能包含一些關聯的結構化資�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEM內容片段模型（內容片段的資料結構）必須透過AEM的 [!UICONTROL Configuration Browser]（設定瀏覽器）啟用，這可讓內容片段模型根據每個組態來定義。
+AEM內容片段模型（內容片段的資料結構）必須透過AEM的 [[!UICONTROL Configuration Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)（設定瀏覽器）啟用，這可讓內容片段模型根據每個組態來定義。
 
 ## 建立內容片段 {#creating-content-fragments}
 
