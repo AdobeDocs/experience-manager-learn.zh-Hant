@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 AEM作為Cloud Service的Asset Compute microservices支援自訂工作者的開發與部署，這些工作者用來讀取和控制儲存在AEM中的資產的二進位資料，最常用的是，用來建立自訂資產轉譯。
 
-而在AEM 6.x中，自訂的AEM Workflow流程是用來讀取、轉換和回寫「資產」轉譯，而在AEM中，「雲端服務資產計算」工作者可以滿足此需求。
+而在AEM 6.x中，自訂的AEM Workflow流程是用來讀取、轉換和回寫資產轉譯，而在AEM中，Cloud Service Asset Compute工作者可滿足此需求。
 
 ## 您將做的事
 
@@ -112,7 +112,7 @@ Asset Compute Development Tool提供本機Web控管，用於部署、執行和�
 
 ## 部署
 
-瞭解如何將自訂資產計算工作者與AEM整合為雲端服務，方法是先將他們部署至Adobe I/O Runtime，再透過AEM資產處理設定檔從AEM叫用為雲端服務作者。
+瞭解如何將自訂資產計算工作者與AEM整合為雲端服務，方法是先將他們部署至Adobe I/O Runtime，再透過AEM Assets的「處理設定檔」從AEM叫用為雲端服務作者。
 
 ### 部署至Adobe I/O Runtime
 
@@ -122,13 +122,19 @@ Asset Compute Development Tool提供本機Web控管，用於部署、執行和�
 
 ### 透過AEM處理設定檔整合工作者
 
-部署至Adobe I/O Runtime後，資產計算工作者即可透過資產處理設定檔在AEM中註冊為雲 [端服務](../../assets/configuring/processing-profiles.md)。 「處理設定檔」則會套用至套用至其中資產的「資產」檔案夾。
+部署至Adobe I/O Runtime後，資產計算工作者即可透過資產處理設定檔在AEM中註冊為雲 [端服務](../../assets/configuring/processing-profiles.md)。 處理設定檔則套用至套用至資產資料夾的資產。
 
 + [與AEM處理設定檔整合](./deploy/processing-profiles.md)
 
-## Github上的教學課程程式碼基底
+## 進階
 
-教學課程程式碼基底可在Github取得，網址為：
+這些簡略的教學課程以前幾章中建立的基礎學習為基礎，處理更進階的使用案例。
+
++ [開發資產計算元資料工作器](./advanced/metadata.md) ，該工作器可將元資料寫回
+
+## Github上的代碼庫
+
+教學課程的程式碼基底可在Github取得，網址為：
 
 + [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @ master branch
 
@@ -142,14 +148,13 @@ Asset Compute Development Tool提供本機Web控管，用於部署、執行和�
 
 + [資產計算服務文檔](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html)
 + [資產計算開發工具自述檔案](https://github.com/adobe/asset-compute-devtool)
-
-### 其他程式碼範例
-
 + [資產計算示例工作程式](https://github.com/adobe/asset-compute-example-workers)
 
 ### API和SDK
 
 + [資產計算SDK](https://github.com/adobe/asset-compute-sdk)
    + [資產計算共用](https://github.com/adobe/asset-compute-commons)
+   + [資產計算XMP](https://github.com/adobe/asset-compute-xmp#readme)
 + [Adobe Cloud Blobstore包裝函式庫](https://github.com/adobe/node-cloud-blobstore-wrapper)
 + [Adobe節點擷取重試程式庫](https://github.com/adobe/node-fetch-retry)
++ [資產計算示例工作程式](https://github.com/adobe/asset-compute-example-workers)
