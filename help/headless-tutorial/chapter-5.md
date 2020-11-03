@@ -2,7 +2,7 @@
 title: 第5章——編寫內容服務頁面
 description: AEM無頭教學課程的第5章涵蓋從第4章中定義的範本建立頁面。 這些頁面將充當JSON HTTP端點。
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 0%
@@ -20,7 +20,7 @@ AEM無頭教學課程的第5章涵蓋從第4章中定義的範本建立頁面。
 
 ## 「建立事件API」頁
 
-1. 導覽至 **[!UICONTROL AEM]>網[!UICONTROL 站]>[!DNL WKND Mobile]>[!DNL English]>[!DNL API]**。
+1. 導覽至 **[!UICONTROL AEM] >網 [!UICONTROL 站] > [!DNL WKND Mobile] > [!DNL English] >[!DNL API]**。
 1. **點選API頁面的標籤**，然後點選頂端動作列中的「建立 **** 」按鈕，並在API頁面下建立新的事件API頁面。
    1. 點選 **頂端動作列中的** 「建立」
    1. 選擇 **事件API範本**
@@ -44,7 +44,7 @@ AEM無頭教學課程的第5章涵蓋從第4章中定義的範本建立頁面。
 1. 新增 **標籤行** ，以顯示在事件上方。
    1. 編輯 **Text元件**
    1. 輸入文字：
-      1. `The WKND is here.`
+      * `The WKND is here.`
 
 1. 選取要 **顯示的事** 件：
    1. 在「屬性」( **Properties)頁籤上設定以** 下配置：
