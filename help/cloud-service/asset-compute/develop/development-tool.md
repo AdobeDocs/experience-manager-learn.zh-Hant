@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -84,24 +84,10 @@ _在開發工具中執行資產計算工作的點進（無音訊）_
 
 ## 疑難排解
 
-### 來源檔案下拉式清單不正確{#troubleshooting__dev-tool-application-cache}
-
-資產計算開發工具可能會進入其提取過時資料的狀態，在顯示錯誤項目的「來源檔案」下拉式清單 __中__ ，這個狀態最為明顯。
-
-+ __錯誤：__ 來源檔案下拉式清單顯示不正確的項目。
-+ __原因：__ 過期的快取瀏覽器狀態會導致
-+ __解析度：__ 在您的瀏覽器中，完全清除瀏覽器標籤的「應用程式狀態」、瀏覽器快取、本機儲存空間和服務工作者。
-
-### 遺失或無效的devToolToken查詢參數{#troubleshooting__devtooltoken}
-
-+ __錯誤：__ 資產計算開發工具中的「未授權」通知
-+ __原因：__`devToolToken` 遺失或無效
-+ __解析度：__ 關閉「資產計算開發工具」瀏覽器窗口，終止任何通過命令啟動的運行中的「開發工具」 `aio app run` 進程，然後重新啟動「開發工具」(使用 `aio app run`)。
-
-### 無法刪除源檔案{#troubleshooting__remove-source-files}
-
-+ __錯誤：__ 無法從開發工具UI移除新增的來源檔案
-+ __原因：__ 此功能尚未實作
-+ __解析度：__ 使用中定義的憑證登入您的雲端儲存供應商 `.env`。 找出「開發工具」(也在中指定 `.env`)所使用的容器，導覽至 __來源__ ，並刪除任何來源影像。 如果刪除的來源檔案仍繼續顯示在下拉式清單中 [](#troubleshooting__dev-tool-application-cache) ,YOu可能需要執行「來源檔案」下拉式清單中概述的步驟，因為這些檔案可能會在開發工具的「應用程式狀態」中快取在本機。
-
-   ![Microsoft Azure Blob儲存空間](./assets/development-tool/troubleshooting__remove-source-files.png)
++ [錯誤的YAML縮排](../troubleshooting.md#incorrect-yaml-indentation)
++ [memorySize限制設定為過低](../troubleshooting.md#memorysize-limit-is-set-too-low)
++ [由於缺少private.key，開發工具無法啟動](../troubleshooting.md#missing-private-key)
++ [來源檔案下拉式清單不正確](../troubleshooting.md#source-files-dropdown-incorrect)
++ [遺失或無效的devToolToken查詢參數](../troubleshooting.md#missing-or-invalid-devtooltoken-query-parameter)
++ [無法刪除源檔案](../troubleshooting.md#unable-to-remove-source-files)
++ [傳回的轉譯部分繪製／損毀](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
