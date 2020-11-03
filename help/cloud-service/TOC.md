@@ -1,13 +1,13 @@
 ---
 user-guide-title: Adobe Experience Manager 雲端服務教學課程
-user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程的系列。
-breadcrumb-title: AEM as a Cloud Service 教學課程
+user-guide-description: Adobe Experience Manager 雲端服務教學課程的系列。
+breadcrumb-title: AEM 雲端服務教學課程
 sub-product: 雲端服務
 team: TM
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '201'
 ht-degree: 31%
 
 ---
@@ -69,4 +69,8 @@ ht-degree: 31%
    + 部署{#deploy}
       + [部署至Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
       + [與AEM整合](./asset-compute/deploy/processing-profiles.md)
+   + 進階{#advanced}
+      + [中繼資料工作者](./asset-compute/advanced/metadata.md)
+   + [疑難排解](./asset-compute/troubleshooting.md)
+
 + [開始開發 AEM Sites - WKND 教學課程](./develop-wknd-tutorial.md)
