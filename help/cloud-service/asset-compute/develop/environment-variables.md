@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -113,8 +113,4 @@ AWS_REGION=us-east-1
 
 ## 疑難排解
 
-### 由於缺少private.key，資產計算本地開發工具無法啟動
-
-+ __錯誤：__ 本機開發伺服器錯誤：validatePrivateKeyFile中缺少所需檔案……. (透過標準輸出命令 `aio app run` )
-+ __原因：__ 檔 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 案中的 `.env` 值不指向目前使用者 `private.key` ，或 `private.key` 者無法讀取。
-+ __解析度：__ 檢視檔 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 案中的 `.env` 值，並確定它包含檔案系統上的完整 `private.key` 絕對路徑。
++ [由於缺少private.key，開發工具無法啟動](../troubleshooting.md#missing-private-key)
