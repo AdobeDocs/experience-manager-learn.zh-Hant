@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 ...
 /test/
   asset-compute/
-    <worker-name>/           <--- Test suite for the worker
+    <worker-name>/           <--- Test suite for the worker, must match the yaml key for this worker in manifest.yml
         <test-case-1>/       <--- Specific test case 
             file.jpg         <--- Input file (ie. `source.path` or `source.url`)
             params.json      <--- Parameters (ie. `rendition.instructions`)
@@ -118,21 +118,5 @@ Github上提供最終測試案例，網址為：
 
 ## 疑難排解
 
-### 未產生轉譯
-
-測試案例在不產生轉譯的情況下失敗。
-
-+ __錯誤：__ 失敗：未產生轉譯。
-+ __原因：__ 由於意外錯誤（如JavaScript語法錯誤），工作者無法產生轉譯。
-+ __解析度：__ 查看測試執行的位 `test.log` 置 `/build/test-results/test-worker/test.log`。 在此檔案中找到與失敗測試案例對應的部分，並查看錯誤。
-
-   ![疑難排解——未產生轉譯](./assets/test/troubleshooting__no-rendition-generated.png)
-
-### 測試會產生錯誤的轉譯
-
-測試案例無法產生錯誤的轉譯。
-
-+ __錯誤：__ 失敗：轉譯&#39;rendition.xxx&#39;不如預期。
-+ __原因：__ 工作者輸出與測試案例中提供的格 `rendition.<extension>` 式副本不同的格式副本。
-   + 如果在測 `rendition.<extension>` 試案例中，未以與本機產生的轉譯完全相同的方式建立預期的檔案，則測試可能會失敗，因為位可能會有一些差異。 如果測試案例中的預期轉譯是從「開發工具」儲存（即在Adobe I/O Runtime中產生），位元在技術上可能會有所不同，導致測試失敗，即使從人類角度看，預期和實際的轉譯檔案完全相同。
-+ __解析度：__ 導覽至測試以檢視轉譯輸出，並 `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`將它與測試案例中預期的轉譯檔案比較。
++ [測試執行期間未產生轉譯](../troubleshooting.md#test-no-rendition-generated)
++ [測試會產生錯誤的轉譯](../troubleshooting.md#tests-generates-incorrect-rendition)
