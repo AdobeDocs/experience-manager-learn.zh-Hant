@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -30,18 +30,20 @@ ht-degree: 0%
 
 資產計算工作者在功能中實作資產計算SDK工作者API合 `renditionCallback(...)` 約，該合約在概念上：
 
-+ __輸入：__ AEM資產的原始資產二進位檔和參數
++ __輸入：__ AEM資產的原始二進位和處理描述檔參數
 + __輸出：__ 要新增至AEM資產的一或多個轉譯
 
 ![資產計算工作器邏輯流](./assets/worker/logical-flow.png)
 
-1. 當從AEM Author服務呼叫資產計算工作者時，它會透過「處理設定檔」針對AEM資產。 資產的 __(1a)__ （原始二進位檔）會透過轉譯回呼函式的參數傳遞給工作者， `source` (1b) __「處理設定檔」中透過參數集定義的任何__`rendition.instructions` 參數。
-1. 資產計算SDK層接受處理配置檔案中的請求，並協調自定義資產計算工作者的功能的執行 `renditionCallback(...)` ，根據 __(1b)______ (1a)提供的任何參數轉換(1a)中提供的源二進位檔案，以生成源二進位檔案的格式副本。
-   + 在本教學課程中，會建立「正在處理中」的轉譯，這表示工作者會合成轉譯，不過，來源二進位檔也可以傳送至其他Web服務API，以產生轉譯。
-1. 「資產計算」工作者會儲存轉譯的二進位表示 `rendition.path` 法，以便儲存至AEM Author服務。
-1. 完成時，寫入的二進位資 `rendition.path` 料會透過Asset Compute SDK傳輸，並透過AEM Author Service公開為AEM UI中的轉譯。
+1. AEM Author服務會叫用「資產計算工作者」，提供資產的 __(1a)__ 原始二進位檔(`source` 參數)和 __(1b)__`rendition.instructions` (處理設定檔（參數）中定義的任何參數。
+1. Asset Compute SDK可協調自訂Asset Compute中繼資料工作者的功能執行 `renditionCallback(...)` ，根據資產的原始二進位檔(1a) __，以及任何參數__ (1b)產生新的二進位轉譯 ____。
 
-上圖說明了資產計算開發人員關注的問題和資產計算工作者調用的邏輯流程。 出於好奇，「資 [產計算」執行的內部詳細資訊可供使用](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) ，但只有公開的「資產計算SDK API」合約才應依賴。
+   + 在本教學課程中，會建立「正在處理中」的轉譯，這表示工作者會合成轉譯，不過，來源二進位檔也可以傳送至其他Web服務API，以產生轉譯。
+
+1. Asset Compute工作者會將新轉譯的二進位資料儲存至 `rendition.path`。
+1. 寫入的二進位資 `rendition.path` 料會透過Asset Compute SDK傳輸至AEM Author Service，並以 __(4a)__ 、文字轉譯和 __(4b)__ (4b)保存在資產的中繼資料節點上的方式公開。
+
+上圖說明了資產計算開發人員關注的問題和資產計算工作者調用的邏輯流程。 出於好奇，「資 [產計算」執行的內部詳細資訊可供使用](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) ，但只有公開的「資產計算SDK API」合約才能依賴。
 
 ## 工人解剖
 
@@ -316,7 +318,7 @@ class RenditionInstructionsError extends ClientError {
 現在工作程式碼已完成，而且先前已在 [manifest.yml中註冊並設定](./manifest.md)，您可使用本機資產計算開發工具來執行它，以檢視結果。
 
 1. 從資產計算項目的根目錄
-1. 執行 `app aio run`
+1. 執行 `aio app run`
 1. 等待資產計算開發工具在新窗口中開啟
 1. 在「選 __擇檔案……」中__ 下拉式清單中，選取要處理的範例影像
    + 選取範例影像檔案，做為來源資產二進位檔
@@ -391,11 +393,4 @@ Github上 `index.js` 提供最終版本：
 
 ## 疑難排解
 
-### 傳回部分繪製的轉譯
-
-+ __錯誤__:當轉譯檔案總大小較大時，轉譯會呈現不完整
-
-   ![疑難排解——傳回的轉譯部分繪製](./assets/worker/troubleshooting__await.png)
-
-+ __原因__:工作者的功 `renditionCallback` 能會在轉譯完全寫入之前退出 `rendition.path`。
-+ __解析度__:檢閱自訂工作程式碼，並確保所有非同步呼叫都同步進行。
++ [傳回的轉譯部分繪製／損毀](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
