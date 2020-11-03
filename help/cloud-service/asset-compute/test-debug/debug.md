@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -103,40 +103,9 @@ _使用wskdebug調試資產計算工作器的點進（無音頻）_
 
 ## 疑難排解
 
-### 除錯程式未附加
-
-+ __錯誤__:處理啟動時出錯：錯誤：無法連接到調試目標……
-+ __原因__:Docker Desktop未在本地系統上運行。 檢視VS程式碼除錯主控台（「檢視>除錯主控台」）以確認此錯誤，並報告此錯誤。
-+ __解析度__:啟動 [Docker Desktop，並確認安裝了必要的Docker映像](../set-up/development-environment.md#docker)。
-
-### 中斷點不會暫停
-
-+ __錯誤__:從可除錯的開發工具執行Asset Compute工具時，VS程式碼不會在中斷點暫停。
-
-#### VS程式碼除錯程式未附加
-
-+ __原因：__ VS代碼調試器已停止／斷開。
-+ __解析度：__ 重新啟動VS程式碼除錯程式，並透過檢視VS程式碼除錯輸出主控台（檢視>除錯主控台）來驗證它是否連接
-
-#### VS代碼調試器在工作器執行開始後附加
-
-+ __原因：__ 在點選「在開發工具中執行」之前，VS程式碼除錯程 __式__ 未附加。
-+ __解析度：__ 檢視VS程式碼的除錯控制台（「檢視>除錯控制台」），然後從開發工具重新執行Asset Compute Worker，以確保除錯程式已附加。
-
-### 在調試時工作器超時
-
-+ __錯誤__:「除錯控制台」報告「動作將逾時-XXX毫秒」或 [Asset Compute Development Tool的轉譯預覽無限期旋轉](../develop/development-tool.md) ，或
-+ __原因__:在除錯期間，會超出manifest.yml中 [定義的工作器逾時](../develop/manifest.md) 。
-+ __解析度__:暫時增加manifest.yml中工作者的逾 [時](../develop/manifest.md) ，或加速除錯活動。
-
-### 無法終止調試器進程
-
-+ __錯誤__: `Ctrl-C` 命令行上不終止調試程式進程(`npx adobe-asset-compute devtool`)。
-+ __原因__:1.3.x `@adobe/aio-cli-plugin-asset-compute` 中出現錯誤，導致 `Ctrl-C` 無法識別為終止命令。
-+ __解析度__:更 `@adobe/aio-cli-plugin-asset-compute` 新至1.4.1+版
-
-   ```
-   $ aio update
-   ```
-
-   ![疑難排解——一體機更新](./assets/debug/troubleshooting__terminate.png)
++ [除錯程式未附加](../troubleshooting.md#debugger-does-not-attach)
++ [中斷點不會暫停](../troubleshooting.md#breakpoints-no-pausing)
++ [VS程式碼除錯程式未連接](../troubleshooting.md#vs-code-debugger-not-attached)
++ [VS代碼調試器在工作器執行開始後附加](../troubleshooting.md#vs-code-debugger-attached-after-worker-execution-began)
++ [在調試時工作器超時](../troubleshooting.md#worker-times-out-while-debugging)
++ [無法終止調試器進程](../troubleshooting.md#cannot-terminate-debugger-process)
