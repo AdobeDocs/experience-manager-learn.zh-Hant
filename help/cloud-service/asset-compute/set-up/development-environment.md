@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Adobe Asset Compute專案無法與AEM SDK提供的本機AEM執行階段整合，
 1. [安裝Docker Desktop](https://www.docker.com/products/docker-desktop) ，並提取所需的Docker映像：
 
    ```
-   $ docker pull openwhisk/action-nodejs-v10:latest
-   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
+   $ docker pull openwhisk/action-nodejs-v12:latest
+   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:latest
    ```
 
 1. [安裝Visual Studio代碼](https://code.visualstudio.com/download)
@@ -44,11 +44,13 @@ Adobe Asset Compute專案無法與AEM SDK提供的本機AEM執行階段整合，
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
+有關簡略安裝說明的詳細資訊，請閱讀以下各節。
+
 ## 安裝Visual Studio代碼{#vscode}
 
 [Microsoft Visual Studio代碼](https://code.visualstudio.com/download) ，用於開發和調試資產計算工作器。 雖然可 [以使用其他與](../../local-development-environment/development-tools.md#set-up-the-development-ide) JavaScript相容的IDE [，來開發工作器，但只有Visual Studio代碼可與Asset](../test-debug/debug.md) Compute工作器進行整合。
 
-_需要有Visual Studio Code 1.48.x+才能[wskdebug](#wskdebug)運作。_
+_需要有Visual Studio Code 1.48.x+才能 [wskdebug](#wskdebug) 運作。_
 
 本教學課程假設使用Visual Studio代碼，因為它為擴展資產計算提供了最佳的開發人員體驗。
 
@@ -59,7 +61,7 @@ _需要有Visual Studio Code 1.48.x+才能[wskdebug](#wskdebug)運作。_
 安裝Docker Desktop後，啟動它並從命令行安裝以下Docker映像：
 
 ```
-$ docker pull openwhisk/action-nodejs-v10:latest
+$ docker pull openwhisk/action-nodejs-v12:latest
 $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
 ```
 
@@ -91,7 +93,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 下載並安裝 [Apache OpenWhisk debug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組，以方便資產計算工作者的本機除錯。
 
-_需要有Visual Studio Code 1.48.x+才能[wskdebug](#wskdebug)運作。_
+_需要有Visual Studio Code 1.48.x+才能 [wskdebug](#wskdebug) 運作。_
 
 ```
 $ npm install -g @openwhisk/wskdebug
