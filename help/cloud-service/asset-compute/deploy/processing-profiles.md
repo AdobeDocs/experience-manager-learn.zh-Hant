@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '630'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
    + __擴充功能：__ `png`
       + 將生成的轉譯的副檔名。 設為 `png` 這樣，工作者的web services就支援的輸出格式，會在剪掉的圓圈後面產生透明背景。
    + __端點：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/worker`
-      + 這是通過獲取的員工的URL `aio app get-url`。 根據AEM為「處理設定檔」所設定的雲端服務環境，確保URL點位於正確的工作區。 請注意，此子網域與工作區相 `development` 符。
+      + 這是通過獲取的員工的URL `aio app get-url`。 根據AEM做為雲端服務環境，確保URL點位於正確的工作區。
       + 請確定工作器URL指向正確的工作區。 AEM作為雲端服務舞台應使用「舞台」工作區URL，而AEM作為雲端服務生產應使用「生產」工作區URL。
    + __服務參數__
       + 點選「 __新增參數」__
@@ -54,7 +54,7 @@ ht-degree: 1%
       + 這些鍵／值配對會傳遞至資產計算工作器，並可透過 `rendition.instructions` JavaScript物件使用。
    + __Mime 類型__
       + __包括：__`image/jpeg`, `image/png`, `image/gif`, `image/bmp`, `image/tiff`
-         + 這些MIME類型是工作者的Web服務唯一支援的類型，這將限制自訂工作者可以處理哪些資產。
+         + 這些MIME類型是工作者的npm模組中唯一的MIME類型。 此清單會限制自訂工作者將處理哪些資產。
       + __排除：__ `Leave blank`
          + 切勿使用此服務配置使用這些MIME類型處理資產。 在這種情況下，我們只使用允許清單。
 1. 點選 __右上__ 「儲存」
@@ -83,26 +83,9 @@ Github上提供最終資產計算專案，網址為：
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_Github contains是專案的最終狀態，已填入工作者和測試案例，但不包含任何憑證，例如。`.env`、`.config.json`或`.aio`。_
+_Github contains是專案的最終狀態，已填入工作者和測試案例，但不包含任何憑證，例如。 `.env`、 `.config.json` 或 `.aio`。_
 
 ## 疑難排解
 
-### 資產中遺失自訂轉譯
-
-+ __錯誤：__ 新資產和重新處理的資產處理成功，但遺失自訂轉譯
-
-#### 處理配置檔案未應用到祖先資料夾
-
-+ __原因：__ 資產不存在於使用自訂工作器的「處理設定檔」資料夾下
-+ __解析度：__ 將處理描述檔套用至資產的祖先資料夾
-
-#### 處理設定檔由較低的處理設定檔取代
-
-+ __原因：__ 資產存在於套用自訂工作者處理設定檔的資料夾下方，但該資料夾與資產之間已套用不使用客戶工作者的不同處理設定檔。
-+ __解析度：__ 合併或協調兩個處理配置檔案並刪除中間處理配置檔案
-
-### 資產處理失敗
-
-+ __錯誤：__ 資產處理失敗標章顯示在資產上
-+ __原因：__ 自定義工作器的執行時出錯
-+ __解析度：__ 請依照使用 [除錯Adobe I/O Runtime啟動的指示](../test-debug/debug.md#aio-app-logs)`aio app logs`。
++ [AEM中資產中遺失自訂轉譯](../troubleshooting.md#custom-rendition-missing-from-asset)
++ [AEM中的資產處理失敗](../troubleshooting.md#asset-processing-fails)
