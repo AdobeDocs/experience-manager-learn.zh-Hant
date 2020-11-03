@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -122,14 +122,5 @@ Github上 `.manifest.yml` 提供最終版本：
 
 ## 疑難排解
 
-### 錯誤的YAML縮排
-
-+ __錯誤：__ YAMLException:在行X，列Y:（通過從命令中標準輸出）處對映條目進行不 `aio app run` 良縮進
-+ __原因：__ Yaml檔案會以白色間隔顯示，可能是縮排不正確。
-+ __解析度：__ 檢閱您的 `manifest.yml` 縮排，並確保所有縮排正確無誤。
-
-### memorySize限制設定為過低
-
-+ __錯誤：__ 本機開發伺服器OpenWhiskError:PUT https://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true傳回HTTP 400（錯誤請求）—> &quot;請求內容格式錯誤：requirement失敗：記憶體低於允許的閾值64 MB 134217728 B&quot;
-+ __原因：__ 資訊 `memorySize` 清單中的限制設定在錯誤訊息所報告的最小允許臨界值以下（以位元組為單位）。
-+ __解析度：__ 檢閱中 `memorySize` 的限制， `manifest.yml` 並確保這些限制都大於允許的最小閾值。
++ [錯誤的YAML縮排](../troubleshooting.md#incorrect-yaml-indentation)
++ [memorySize限制設定為過低](../troubleshooting.md#memorysize-limit-is-set-too-low)
