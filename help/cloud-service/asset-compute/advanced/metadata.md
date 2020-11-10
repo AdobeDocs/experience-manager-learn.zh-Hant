@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: c2a8e6c3ae6dcaa45816b1d3efe569126c6c1e60
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1434'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 + 與協力廠商系統的整合，例如PIM（產品資訊管理系統），在此系統中，必須擷取額外的中繼資料並儲存在資產上
 + 與Adobe服務（例如Content and Commerce AI）整合，以運用額外的機器學習屬性來增強資產中繼資料
-+ 從資產的二進位元資料中衍生資產的中繼資料，並將其儲存為AEM中的資產中繼資料，做為雲端服務
++ 從資產的二進位元資料中衍生資產的中繼資料，並將它儲存為AEM中的資產中繼資料，做為雲端服務
 
 ## 您將做的事
 
@@ -306,7 +306,7 @@ $ aio app deploy
 1. 處理完成時，選取資產，並點選頂端動 __作列中的__ 「屬性」以顯示其中繼資料
 1. 查看從自 `Colors Family` 訂Asset Compute中繼資 `Colors` 料工作器回寫的中繼資料 [](#metadata-schema) ，以及中繼資料欄位。
 
-此色彩中繼資料現在可以寫回二進位檔，做為XMP資料（在下一個XMP回寫時），並透過全文搜尋來協助資產探索功能。
+將顏色中繼資料寫入資產的中繼資料（在資源上）後，使用這些詞語透過搜尋為此中繼資料建立索引，以增強資產發現能力，而且如果在資源上呼叫 `[dam:Asset]/jcr:content/metadata`____ DAM中繼資料回寫工作流程，則甚至可將這些中繼資料回寫資產的二進位檔案。
 
 ### AEM Assets中的中繼資料轉譯
 
