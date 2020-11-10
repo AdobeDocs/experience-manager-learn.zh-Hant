@@ -1,20 +1,20 @@
 ---
-title: Adobe Experience Manager做為雲端服務教學課程
+title: Adobe Experience Manager as Cloud Service 教學課程
 description: Adobe Experience Manager(AEM)雲端服務教學課程的集合
 sub-product: 站點，雲端管理員，基礎，資產
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 06632b90e5cdaf80b9343e5a69ab9c735d4a70f1
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
 
 # 概覽 {#overview}
 
-Adobe Experience Manager (AEM) 現在能以雲端服務形式使用。AEM作為Cloud Service推出新一代的Experience Manager產品系列，以過去的投資和創新為基礎，保留並擴充所有使用案例和功能。
+Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM作為Cloud Service推出新一代的Experience Manager產品系列，以過去的投資和創新為基礎，保留並擴充所有使用案例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
@@ -22,27 +22,22 @@ Adobe Experience Manager (AEM) 現在能以雲端服務形式使用。AEM作為C
 
 * **[資產計算微服務擴充性（教學課程）](./asset-compute/overview.md)**
 
-   <br>
    *瞭解如何開發資產計算工作者以產生自訂資產轉譯*
 
 * **[將AEM的存取權設定為雲端服務（教學課程）](./accessing/overview.md)**
 
-   <br>
    *瞭解如何在Adobe Admin Console中設定IMS使用者，讓他們可以存取AEM*
 
 * **[將AEM除錯為雲端服務（教學課程）](./debugging/cloud-service/overview.md)**
 
-   <br>
    *探索如何將AEM除錯為雲端服務*
 
 * **[除錯AEM SDK（教學課程）](./debugging/aem-sdk-local-quickstart/overview.md)**
 
-   <br>
    *探索在AEM（Cloud Service SDK的本機快速入門）上用來除錯應用程式的各種工具*
 
 * **[本地開發環境設定（教程）](./local-development-environment/overview.md)**
 
-   <br>
    *瞭解如何將AEM的本機開發機器設定為雲端服務開發*
 
 ## 員工挑選
