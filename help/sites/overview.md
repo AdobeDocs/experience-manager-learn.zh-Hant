@@ -1,14 +1,14 @@
 ---
-title: AEM Sites教學課程
-seo-title: AEM Sites教學課程
-description: 'Adobe Experience Manager Sites的視訊和教學課程集合。 '
+title: AEM Sites 教學課程
+seo-title: AEM Sites 教學課程
+description: 'Adobe Experience Manager Sites 的影片和教學課程系列。 '
 seo-description: Adobe Experience Manager Sites的視訊和教學課程集
 sub-product: 網站，內容服務
 translation-type: tm+mt
-source-git-commit: 2325132bc5fecf6637d6c105b66d4455e7edf485
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '396'
-ht-degree: 1%
+ht-degree: 13%
 
 ---
 
@@ -19,34 +19,28 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
 
 ## 新增功能
 
-* **[AEM SPA編輯器與React快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)（教學課程）**
+* **[AEM SPA編輯器與React快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html) （教學課程）**
 
-   <br>
    *開發人員使用React整合單一頁面應用程式(SPA)與AEM的快速入門手冊*
 
-* **[AEM SPA編輯器和Angular快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)（教學課程）**
+* **[AEM SPA編輯器和Angular快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) （教學課程）**
 
-   <br>
    *開發人員使用Angular整合單一頁面應用程式(SPA)與AEM的快速入門手冊*
 
 * **[AEM Headless快速入門（教學課程）](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)**
 
-   <br>
    *如何在無頭CMS案例中，從AEM公開內容，讓原生行動應用程式使用。*
 
 * **[使用體驗片段（視訊系列）](./experience-fragments/experience-fragments-feature-video-use.md)**
 
-   <br>
    *瞭解AEM體驗片段，以推廣跨通道的內容。*
 
 * **[使用內容片段（視訊系列）](./content-fragments/content-fragments-feature-video-use.md)**
 
-   <br>
    *內容片段是可重複使用的不受頻道限制的內容片段。*
 
 * **[使用SPA編輯器（視訊）](./spa-editor/spa-editor-framework-feature-video-use.md)**
 
-   <br>
    *瞭解AEM針對單頁應用程式(SPA)的編輯功能。*
 
 ## 員工挑選
@@ -55,7 +49,7 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
 <tr>
   <td>
     <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
-      <img alt="AEM Sites快速入門- WKND教學課程" src="./assets/aem-wknd-tutorial.png" />
+      <img alt="AEM Sites - WKND 教學課程快速入門" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
       <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
@@ -68,11 +62,11 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
   </td>
   <td>
     <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html">
-    <img alt="AEM Headless快速入門" src="./assets/aem-headless-tutorial.png" />
+    <img alt="AEM Headless 快速入門" src="./assets/aem-headless-tutorial.png" />
     </a>
     <div>
     <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html">
-    <strong>AEM Headless快速入門</strong>
+    <strong>AEM Headless 快速入門</strong>
     </a>
     </div>
     <p>
@@ -102,7 +96,7 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
 * [AEM Sites開發檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites管理檔案](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
 * [AEM Sites部署檔案](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
-* [AEM雲端服務教學課程](/help/cloud-service/overview.md)
-* [AEM Assets教學課程](/help/assets/overview.md)
-* [AEM Forms教學課程](/help/forms/overview.md)
-* [AEM Foundation教學課程](/help/foundation/overview.md)
+* [AEM as a Cloud Service 教學課程](/help/cloud-service/overview.md)
+* [AEM Assets 教學課程](/help/assets/overview.md)
+* [AEM Forms 教學課程](/help/forms/overview.md)
+* [AEM Foundation 教學課程](/help/foundation/overview.md)
