@@ -1,13 +1,13 @@
 ---
-title: AEM Foundation影片和教學課程
-seo-title: AEM Foundation影片和教學課程
-description: 'Adobe Experience Manager Foundation的視訊和教學課程集合。 '
+title: AEM Foundation 影片和教學課程
+seo-title: AEM Foundation 影片和教學課程
+description: 'Adobe Experience Manager Foundation 的影片和教學課程系列。 '
 seo-description: Adobe Experience Manager Foundation的視訊和教學課程集
 translation-type: tm+mt
-source-git-commit: e19e177589df7ce6a56c0be3f9d590cbca2f8ce7
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '261'
-ht-degree: 1%
+ht-degree: 18%
 
 ---
 
@@ -19,22 +19,15 @@ Adobe Experience Manager為AEM Sites的使用者提供一組通用的功 [!DNL A
 ## 新增功能
 
 * **[在AEM（視訊）中使用工作流程管理](./workflow/use-workflow-management.md)**
-
-   <br>
-   *AEM可洞悉執行中的工作流程，並簡化定義的[!DNL Workflow]管理。*
+   *AEM可洞悉執行中的工作流程，並簡化定義的 [!DNL Workflow] 管理。*
 
 * **[瞭解Cloud Manager for AEM（視訊）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   <br>
-
    *Cloud Manager for AEM可讓您輕鬆管理、檢查和自助服務AEM環境。*
 
 * **[設定公開和私密金鑰以搭配Adobe I/O使用（教學課程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   <br>
-   *瞭解如何使用AEM和Adobe I/O[!DNL openssl]產生金鑰和鑰匙圈。*
+   *瞭解如何使用AEM和Adobe I/O [!DNL openssl] 產生金鑰和鑰匙圈。*
 
 * **[使用Cloud Manager CI/CD管道（視訊）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   <br>
-
    *瞭解如何使用Cloud Manager的CI/CD管道來確保部署安全一致。*
 
 ## 員工挑選
@@ -86,7 +79,7 @@ Adobe Experience Manager為AEM Sites的使用者提供一組通用的功 [!DNL A
 ## 其他資源
 
 * [Experience League —— 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM雲端服務教學課程](/help/cloud-service/overview.md)
-* [AEM Sites影片和教學課程](/help/sites/overview.md)
-* [AEM Assets影片和教學課程](/help/assets/overview.md)
-* [AEM Forms影片和教學課程](/help/forms/overview.md)
+* [AEM as a Cloud Service 教學課程](/help/cloud-service/overview.md)
+* [AEM Sites 影片和教學課程](/help/sites/overview.md)
+* [AEM Assets 影片和教學課程](/help/assets/overview.md)
+* [AEM Forms 影片和教學課程](/help/forms/overview.md)
