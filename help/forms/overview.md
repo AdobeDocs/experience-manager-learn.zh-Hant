@@ -5,10 +5,10 @@ description: AEM Forms初學者和經驗豐富的AEM Forms開發人員適用的A
 seo-description: AEM Forms初學者和經驗豐富的AEM Forms開發人員適用的AEM Forms資源集合
 sub-product: 表單
 translation-type: tm+mt
-source-git-commit: b085a2c75f8e0b4860d503774ea01a108773ad09
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '303'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -21,18 +21,15 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，以建立、管
 
 * **[調用表單資料模型服務步驟中的錯誤消息處理](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
 
-   <br>
    *工作流模型中的變數是根據其資料類型儲存值的方法*
 
 * **[互動式通信文檔（視頻）中的多序列圖](./interactive-communications/multiseriescharts.md)**
 
-   <br>
    *在同一圖表中繪製多個系列。多個系列圖表通常與折線圖、條形圖、列圖類型相關聯使用。*
 
 * **[建立可重複使用的工作流程模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
-   <br>
-   _建立未系結至特定表單的工作流程模型_
+   *建立未系結至特定表單的工作流程模型*
 
 ## 員工挑選
 
@@ -87,7 +84,7 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，以建立、管
 * [AEM Sites開發檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites管理檔案](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
 * [AEM Sites部署檔案](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
-* [AEM雲端服務教學課程](/help/cloud-service/overview.md)
-* [AEM Assets教學課程](/help/assets/overview.md)
-* [AEM Forms教學課程](/help/forms/overview.md)
-* [AEM Foundation教學課程](/help/foundation/overview.md)
+* [AEM as a Cloud Service 教學課程](/help/cloud-service/overview.md)
+* [AEM Assets 教學課程](/help/assets/overview.md)
+* [AEM Forms 教學課程](/help/forms/overview.md)
+* [AEM Foundation 教學課程](/help/foundation/overview.md)
