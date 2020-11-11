@@ -6,10 +6,10 @@ user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使
 breadcrumb-title: AEM Forms 教學課程
 index: y
 translation-type: tm+mt
-source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
+source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 6%
+source-wordcount: '898'
+ht-degree: 5%
 
 ---
 
@@ -94,7 +94,18 @@ ht-degree: 6%
    + [新增自訂欄](inbox-customization/add-married-column.md)
    + [使用Sightly範本](inbox-customization/use-sightly-template.md)
 
-
++ 儲存和檢索最適化表單{#store-and-retrieve-af-with-2fa}
+   + [簡介](store-and-retrieve-af-with-2fa/introduction.md)
+   + [配置資料源](store-and-retrieve-af-with-2fa/configure-data-source.md)
+   + [儲存表單附件](store-and-retrieve-af-with-2fa/store-form-attachments.md)
+   + [儲存表單資料](store-and-retrieve-af-with-2fa/store-form-data.md)
+   + [建立Servlet](store-and-retrieve-af-with-2fa/create-servlet.md)
+   + [使用儲存的資料轉換表格](store-and-retrieve-af-with-2fa/retrieve-saved-form.md)
+   + [建立客戶端庫](store-and-retrieve-af-with-2fa/create-client-lib.md)
+   + [與OTP服務整合](store-and-retrieve-af-with-2fa/verify-users-with-otp.md)
+   + [建立主表單](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
+   + [建立MyAccount表單](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
+   + [部署範例](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
 + 以CSV格式匯出已提交的資料{#export-submitted-data-csv-format}
    + [匯出提交的資料](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 Forms{#html5-forms}
