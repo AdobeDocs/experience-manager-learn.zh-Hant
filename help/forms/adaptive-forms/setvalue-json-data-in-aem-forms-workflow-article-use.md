@@ -66,7 +66,7 @@ afData.afUnboundData.data.initialStep,N
 
 
 >[!NOTE]
-
+>
 >由於我們使用使用者描述檔預先填入最適化表單，請確定管理員使 [用者描述檔資訊 ](http://localhost:4502/security/users.html)。 請至少確定您已設定「名字」、「姓氏」和「電子郵件」欄位值。
 >您可以在此處啟用com.aemforms.setvalue.core.SetValueInJson的記錄程式，以啟用除錯 [記錄功能](http://localhost:4502/system/console/slinglog)
 
