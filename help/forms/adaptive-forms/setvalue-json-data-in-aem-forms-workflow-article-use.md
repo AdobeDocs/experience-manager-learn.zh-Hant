@@ -12,7 +12,7 @@ activity: setup
 version: 6.4
 discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
 translation-type: tm+mt
-source-git-commit: f07680e73316efb859a675f4b2212d8c3e03f6a0
+source-git-commit: 233ad7184cb48098253a78c07a3913356ac9e774
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
@@ -46,7 +46,7 @@ afData.afUnboundData.data.initialStep,N
 
 * [下載並部署DevelopingWiteServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-*下[載並部署setvalue套件](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 這是自訂OSGI搭售，可讓您在提交的json資料中設定元素的值。
+* [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 這是自訂OSGI搭售，可讓您在提交的json資料中設定元素的值。
 
 * [下載並解壓縮zip檔案的內容](assets/set-value-jsondata.zip)
    * 將您的瀏覽器指向套 [件管理員](http://localhost:4502/crx/packmgr/index.jsp)
@@ -62,8 +62,6 @@ afData.afUnboundData.data.initialStep,N
 * 開啟與任務關聯的表單。
 * 請注意，第一個面板中的欄位已停用。
 * 請注意，現在會顯示要核准或拒絕請求的面板。
-
-
 
 >[!NOTE]
 >
