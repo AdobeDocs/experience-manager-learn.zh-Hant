@@ -1,6 +1,6 @@
 ---
 title: 個人化完整網頁體驗
-description: 瞭解如何建立活動，使用Adobe Target將AEM上裝載的網站頁面重新導向至新頁面。
+description: 瞭解如何建立Target活動，以使用Adobe Target將AEM網站頁面重新導向至新頁面。
 feature: targeting
 topics: integrations, authoring, personalization, activity, offers
 audience: all
@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6353
 thumbnail: 6353-personalization-web-page.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,12 @@ ht-degree: 0%
 
 瞭解如何建立活動，使用Adobe Target將AEM上裝載的網站頁面重新導向至新頁面。
 
-在Target中建立活動之前，您必須先進行設定：
+## 必備條件
 
-1. [整合Experience Platform Launch和AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
+若要個人化AEM網站的完整頁面，必須完成下列設定：
+
+1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
 
 ## 藍本概觀
 
