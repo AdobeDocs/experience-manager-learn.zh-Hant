@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6133
 thumbnail: 41243.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '613'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 # 載入並觸發Target呼叫 {#load-fire-target}
 
-瞭解如何使用啟動規則載入、將參數傳遞至頁面請求，以及從您的網站頁面觸發Target呼叫。 頁面資訊會使用Adobe用戶端資料層來擷取並傳遞為參數，此資料層可讓您收集和儲存有關訪客在網頁上的體驗資料，然後方便存取此資料。
+瞭解如何使用啟動規則載入、將參數傳遞至頁面請求，以及從您的網站頁面觸發Target呼叫。 網頁資訊會使用Adobe用戶端資料層來擷取並傳遞為參數，此資料層可讓您收集並儲存網頁上訪客體驗的相關資料，然後方便存取此資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
@@ -28,98 +28,134 @@ ht-degree: 3%
 
 Adobe用戶端資料層是事件導向的資料層。 載入AEM Page資料層時，會觸發事件 `cmp:show` 。 在視訊中，會使 `Launch Library Loaded` 用自訂事件來呼叫規則。 以下是自訂事件和資料元素在視訊中使用的程式碼片段。
 
-### 自訂事件
+### 自訂頁面顯示事件{#page-event}
 
-以下程式碼片段會將函式推送至資料層，以新增事件偵聽器。 觸發事 `cmp:show` 件時，會呼 `pageShownEventHandler` 叫函式。 在此函式中，會新增一些例行性檢查，並 `dataObject` 針對觸發事件的元件，以資料層的最新狀態建構新的例行性檢查。
+![頁面顯示事件設定和自訂代碼](assets/load-and-fire-target-call.png)
 
-之後就 `trigger(dataObject)` 叫了。 `trigger()` 是Launch中的保留名稱，將「觸發」啟動規則。 我們將事件物件傳遞為參數，而參數會以Launch命名事件中的其他保留名稱呈現。 Launch中的資料元素現在可以參照各種屬性，例如： `event.component['someKey']`.
+在「啟動」屬性中，新增 **事件** 至規 **則**
+
++ __擴充功能：__ 核心
++ __事件類型：__ 自訂代碼
++ __名稱：__ 頁面顯示事件處理常式（或描述性內容）
+
+點選「開 __啟編輯器__ 」按鈕並貼入下列程式碼片段。 此程式 __碼必須__ 新增至「事 __件設定__ 」和後續 __動作__。
 
 ```javascript
-var pageShownEventHandler = function(evt) {
-// defensive coding to avoid a null pointer exception
-if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-   //trigger Launch Rule and pass event
-   console.debug("cmp:show event: " + evt.eventInfo.path);
-   var event = {
-      //include the id of the component that triggered the event
-      id: evt.eventInfo.path,
-      //get the state of the component that triggered the event
-      component: window.adobeDataLayer.getState(evt.eventInfo.path)
-   };
+// Define the event handler function
+var pageShownEventHandler = function(coreComponentEvent) {
 
-      //Trigger the Launch Rule, passing in the new `event` object
-      // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
-      // i.e `event.component['someKey']`
-      trigger(event);
+    // Check to ensure event trigger via AEM Core Components is shaped correctly
+    if (coreComponentEvent.hasOwnProperty("eventInfo") && 
+        coreComponentEvent.eventInfo.hasOwnProperty("path")) {
+    
+        // Debug the AEM Component path the show event is associated with
+        console.debug("cmp:show event: " + coreComponentEvent.eventInfo.path);
+
+        // Create the Launch Event object
+        var launchEvent = {
+            // Include the ID of the AEM Component that triggered the event
+            id: coreComponentEvent.eventInfo.path,
+            // Get the state of the AEM Component that triggered the event           
+            component: window.adobeDataLayer.getState(coreComponentEvent.eventInfo.path)
+        };
+
+        //Trigger the Launch Rule, passing in the new `event` object
+        // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
+        // i.e `event.component['someKey']`
+        trigger(launchEvent);
    }
 }
 
-//set the namespace to avoid a potential race condition
+// With the AEM Core Component event handler, that proxies the event and relevant information to Adobe Launch, defined above...
+
+// Initialize the adobeDataLayer global object in a safe way
 window.adobeDataLayer = window.adobeDataLayer || [];
-//push the event listener for cmp:show into the data layer
-window.adobeDataLayer.push(function (dl) {
-   //add event listener for `cmp:show` and callback to the `pageShownEventHandler` function
-   dl.addEventListener("cmp:show", pageShownEventHandler);
+
+// Push the event custom listener onto the Adobe Data Layer
+window.adobeDataLayer.push(function (dataLayer) {
+   // Add event listener for the `cmp:show` event, and the custom `pageShownEventHandler` function as the callback
+   dataLayer.addEventListener("cmp:show", pageShownEventHandler);
 });
 ```
 
-### 資料層頁面ID
+自訂函式會定義 `pageShownEventHandler`，並監聽AEM核心元件所發出的事件、衍生核心元件的相關資訊、將其封裝成事件物件，以及在其裝載處以衍生事件資訊觸發啟動事件。
+
+啟動規則是使用啟動的函式來觸發 `trigger(...)` 的，此函 ____ 數僅可從規則事件的自訂程式碼片段定義中使用。
+
+此函 `trigger(...)` 數會將事件物件視為參數，而此參數會依序在啟動資料元素中公開，由Launch中另一個名為的保留名稱 `event`。 Launch中的「資料元素」現在可使用類似的語法，參考來自該物件 `event` 的此事件物件資料 `event.component['someKey']`。
+
+如 `trigger(...)` 果在事件的「自訂代碼」事件類型（例如，在動作中）的上下文外使用，則與「啟動」屬性整合的網站上會 `trigger is undefined` 擲出JavaScript錯誤。
+
+
+### 資料元素
+
+![資料元素](assets/data-elements.png)
+
+Adobe Launch Data Elements會透過核心延伸模組的自訂代碼資料元素類型，將自訂「顯示頁面」事件中觸發 [的事件物件資料對應至](#page-event) Adobe Target中可用的變數。
+
+#### 頁面ID資料元素
 
 ```
-if(event && event.id) {
+if (event && event.id) {
     return event.id;
 }
 ```
 
+此程式碼會傳回核心元件的產生唯一Id。
+
 ![頁面ID](assets/pageid.png)
 
-### 頁面路徑
+### 頁面路徑資料元素
 
 ```
-if(event && event.component && event.component.hasOwnProperty('repo:path')) {
+if (event && event.component && event.component.hasOwnProperty('repo:path')) {
     return event.component['repo:path'];
 }
 ```
 
+此程式碼會傳回AEM頁面的路徑。
+
 ![頁面路徑](assets/pagepath.png)
 
-### 頁面標題
+### 頁面標題資料元素
 
 ```
-if(event && event.component && event.component.hasOwnProperty('dc:title')) {
+if (event && event.component && event.component.hasOwnProperty('dc:title')) {
     return event.component['dc:title'];
 }
 ```
 
+此程式碼會傳回AEM頁面的標題。
+
 ![頁面標題](assets/pagetitle.png)
 
-### 常見問題
+## 疑難排解
 
-#### 為什麼我的mbox無法在我的網頁上引發？
+### 為什麼我的mbox無法在我的網頁上引發？
 
-**未設定mboxDisable Cookie時的錯誤訊息**
+#### 未設定mboxDisable Cookie時的錯誤訊息**
 
 ![目標Cookie網域錯誤](assets/target-cookie-error.png)
 
-**解決方案**
+#### 解決方案
 
 目標客戶有時會搭配Target使用雲端執行個體，以進行測試或進行簡單的概念驗證。 這些網域和其他許多網域都屬於「公用尾碼清單」。
 如果您使用這些網域，現代瀏覽器將不會儲存Cookie，除非您使用自訂 `cookieDomain` 設定 `targetGlobalSettings()`。
 
 ```
 window.targetGlobalSettings = {  
-   cookieDomain: 'your-domain' //set the cookie directly on this subdomain 
+   cookieDomain: 'your-domain' //set the cookie directly on this subdomain, for example: 'publish-p1234-e5678.adobeaemcloud.com'
 };
 ```
 
 ## 後續步驟
 
-1. [將體驗片段匯出至Adobe Target](./export-experience-fragment-target.md)
++ [將體驗片段匯出至Adobe Target](./export-experience-fragment-target.md)
 
 ## 支援連結
 
-* [Adobe用戶端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [Adobe Experience Cloud除錯程式- Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
-* [Adobe Experience Cloud除錯程式- Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-* [使用Adobe用戶端資料層與核心元件檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/data-layer/overview.html)
-* [Adobe Experience Platform Debugger簡介](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
++ [Adobe用戶端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe Experience Cloud除錯程式- Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud除錯程式- Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [使用Adobe用戶端資料層與核心元件檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Adobe Experience Platform Debugger簡介](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
