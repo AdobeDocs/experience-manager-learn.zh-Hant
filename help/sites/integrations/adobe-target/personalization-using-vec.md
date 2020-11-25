@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,12 @@ ht-degree: 0%
 
 瞭解如何使用視覺體驗撰寫器(VEC)建立A/B測試目標活動。
 
-在Target中建立活動之前，您必須先進行設定：
+## 必備條件
 
-1. [整合Experience Platform Launch和AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-2. [使用雲端服務將Adobe Experience Manager與Adobe Target整合](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/target/setup-aem-target-cloud-service.html)
+若要在AEM網站上使用VEC，必須完成下列設定：
+
+1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
 
 ## 藍本概觀
 
@@ -33,7 +35,10 @@ WKND網站首頁以資訊卡的形式顯示城市周邊的本地活動或最佳�
 
 ## 使用Visual Experience Composer(VEC)建立A/B測試的步驟
 
-1. 登入Adobe Target並導覽至「活動」標籤
+1. 登入 [Adobe Experience Cloud](https://experience.adobe.com/)、點選 __Target__、導覽至「活 __動__ 」標籤
+
+   + 如果您在Experience Cloud儀表板上未看到 __Target__ ，請確定在右上角的組織切換器中選取了正確的Adobe組織，且您的使用者已獲得 [Adobe Admin Console中Target的存取權](https://adminconsole.adobe.com/)。
+
 1. 按一 **下「建立活動** 」按鈕，然後選擇 **A/B測試活動** 。
 
    ![A/B活動](assets/ab-target-activity.png)
@@ -82,5 +87,5 @@ WKND網站首頁以資訊卡的形式顯示城市周邊的本地活動或最佳�
 
 ## 支援連結
 
-* [Adobe Experience Cloud除錯程式- Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
-* [Adobe Experience Cloud除錯程式- Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Adobe Experience Cloud除錯程式- Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud除錯程式- Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
