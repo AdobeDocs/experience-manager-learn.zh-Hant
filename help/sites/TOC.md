@@ -4,7 +4,7 @@ user-guide-description: Adobe Experience Manager Sites 的影片和教學課程�
 breadcrumb-title: AEM Sites 教學課程
 sub-product: sites
 translation-type: tm+mt
-source-git-commit: 55beee99b91c44f96cd37d161bb3b4ffe38d2687
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 10%
