@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 即時複製控制台 {#live-copy-console}
+# 即時複製控制台{#live-copy-console}
 
 瞭解如何使用即時副本概述主控台檢視或管理網站上的繼承，或執行轉出作業。
 
