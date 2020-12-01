@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# 在本機AEM上設定資產共用公域 {#setup-asset-share-commons}
+# 在本機AEM上設定資產共用共用共用權{#setup-asset-share-commons}
 
 在本機AEM例項上執行「資產共用共用」的簡短指南。
 
