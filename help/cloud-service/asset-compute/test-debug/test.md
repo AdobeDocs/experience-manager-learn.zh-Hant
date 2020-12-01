@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 測試資產計算工作者
 
-「資產計算」項目定義了一種模式，以便輕鬆建立和執 [行資產計算工作者的測試](https://docs.adobe.com/content/help/en/asset-compute/using/extend/test-custom-application.html)。
+「資產計算」項目定義了一種模式，以便輕鬆建立和執行資產計算工作者的[測試。](https://docs.adobe.com/content/help/en/asset-compute/using/extend/test-custom-application.html)
 
 ## 工人測驗的剖析
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 每個測試轉播都可以有下列檔案：
 
 + `file.<extension>`
-   + 要測試的來源檔案(副檔名可以是除外的任何 `.link`)
+   + 要測試的源檔案（副檔名可以是`.link`以外的任何內容）
    + 必要
 + `rendition.<extension>`
    + 預期的轉譯
@@ -55,20 +55,20 @@ ht-degree: 0%
    + 可選
 + `validate`
    + 一種指令碼，其將預期和實際的轉譯檔案路徑視為引數，若結果正常，則必須傳回退出代碼0；若驗證或比較失敗，則必須傳回非零退出代碼。
-   + 可選，預設為命 `diff` 令
+   + 可選，預設為`diff`命令
    + 使用外殼指令碼，該指令碼將docker運行命令包住，以使用不同的驗證工具
 + `mock-<host-name>.json`
-   + 模擬外部服務呼叫的JSON [格式化HTTP回應](https://www.mock-server.com/mock_server/creating_expectations.html)。
+   + 針對[模擬外部服務呼叫](https://www.mock-server.com/mock_server/creating_expectations.html)的JSON格式HTTP回應。
    + 可選，僅在工作程式碼發出HTTP要求時使用
 
 ## 編寫測試案例
 
-此測試案例斷言輸入檔案(`params.json`)的參數化輸入(`file.jpg`)會產生預期的PNG轉譯(`rendition.png`)。
+此測試案例斷言輸入檔案(`file.jpg`)的參數化輸入(`params.json`)會產生預期的PNG轉譯(`rendition.png`)。
 
-1. 請先刪除自動產生的測 `simple-worker` 試案例，因 `/test/asset-compute/simple-worker` 為這是無效的，因為我們的員工不再只是將來源複製到轉譯。
-1. 在上建立新的測試案例資料夾， `/test/asset-compute/worker/success-parameterized` 以測試生成PNG格式副本的工作器是否成功執行。
-1. 在資料 `success-parameterized` 夾中，新增此測 [試案例的測試輸入檔](./assets/test/success-parameterized/file.jpg) ，並為其命名 `file.jpg`。
-1. 在資料夾 `success-parameterized` 中，添加一個名為的新檔案， `params.json` 該檔案定義了工作器的輸入參數：
+1. 首先刪除自動生成的`simple-worker`測試案例（位於`/test/asset-compute/simple-worker`），因為該案例無效，因為我們的員工不再只是將源複製到格式副本。
+1. 在`/test/asset-compute/worker/success-parameterized`建立新的測試案例資料夾，以測試產生PNG轉譯的工作者的成功執行。
+1. 在`success-parameterized`資料夾中，新增此測試案例的測試[輸入檔案](./assets/test/success-parameterized/file.jpg)，並將它命名為`file.jpg`。
+1. 在`success-parameterized`資料夾中，添加一個名為`params.json`的新檔案，該檔案定義工作器的輸入參數：
 
    ```json
    { 
@@ -77,21 +77,21 @@ ht-degree: 0%
        "brightness": "-0.50"
    }
    ```
-   這些是傳入「開發工具」的「資產計算」 [描述檔定義中的相同鍵／值](../develop/development-tool.md)，減去 `worker` 鍵。
-1. 將預期的轉 [譯檔案新增至](./assets/test/success-parameterized/rendition.png) 此測試案例，並為其命名 `rendition.png`。 此檔案表示工作器對給定輸入的預期輸出 `file.jpg`。
-1. 在命令行中，通過執行 `aio app test`
-   + 確 [保已安裝並啟動Docker Desktop](../set-up/development-environment.md#docker) ，並支援Docker映像
+   這些是傳遞至[開發工具的「資產計算」配置檔案定義](../develop/development-tool.md)的相同鍵／值，減去`worker`鍵。
+1. 將預期的[轉譯檔案](./assets/test/success-parameterized/rendition.png)新增至此測試案例，並將它命名為`rendition.png`。 此檔案表示給定輸入`file.jpg`的工作器預期輸出。
+1. 在命令行中，通過執行`aio app test`來運行項目根
+   + 確保已安裝並啟動[Docker Desktop](../set-up/development-environment.md#docker)和支援Docker映像
    + 終止任何正在運行的開發工具實例
 
-![測試——成功 ](./assets/test/success-parameterized/result.png)
+![測試——成功  ](./assets/test/success-parameterized/result.png)
 
 ## 編寫錯誤檢查測試案例
 
-此測試案例測試可確保當參數設為無效值時，工 `contrast` 作者會擲出適當的錯誤。
+此測試案例測試可確保當`contrast`參數設為無效值時，工作者拋出適當的錯誤。
 
-1. 在上建立新的測試案例資料夾 `/test/asset-compute/worker/error-contrast` ，以測試由於參數值無效而導致的工作器的重 `contrast` 復執行。
-1. 在資料 `error-contrast` 夾中，新增此測 [試案例的測試輸入檔](./assets/test/error-contrast/file.jpg) ，並為其命名 `file.jpg`。 該檔案的內容對本測試不重要，只需存在即可通過「損壞源」檢查，才能達到有效性檢查，該測試案例 `rendition.instructions` 驗證了該檢查。
-1. 在資料夾 `error-contrast` 中，添加一個名為的新檔案，該文 `params.json` 件定義了具有以下內容的工作器的輸入參數：
+1. 在`/test/asset-compute/worker/error-contrast`建立新的測試案例資料夾，以測試因`contrast`參數值無效而導致的工作器重複執行。
+1. 在`error-contrast`資料夾中，新增此測試案例的測試[輸入檔案](./assets/test/error-contrast/file.jpg)，並將它命名為`file.jpg`。 此檔案的內容對本測試並不重要，只需存在即可通過「Corrupt source」（損壞來源）檢查，才能達到`rendition.instructions`有效性檢查，此測試案例即可驗證。
+1. 在`error-contrast`資料夾中，添加一個名為`params.json`的新檔案，該檔案定義了具有以下內容的工作器的輸入參數：
 
    ```json
    {
@@ -100,12 +100,12 @@ ht-degree: 0%
    }
    ```
 
-   + 將參 `contrast` 數設為 `10`無效值，因為對比必須介於-1和1之間，才能擲出 `RenditionInstructionsError`。
-   + 在測試中，借由將索引鍵設定為與預期錯誤 `errorReason` 相關聯的「原因」，以宣告適當的錯誤。 此無效的對比參數會 [引發自訂錯誤](../develop/worker.md#errors), `RenditionInstructionsError`因此請將此 `errorReason` 錯誤設為原因`rendition_instructions_error` ，或是斷送。
+   + 將`contrast`參數設為`10`，表示一個無效值，因為對比度必須介於-1和1之間，以拋出`RenditionInstructionsError`。
+   + 將`errorReason`鍵設為與預期錯誤相關的&quot;reason&quot;，以在測試中提出正確的錯誤。 此無效的對比參數會拋出[自訂錯誤](../develop/worker.md#errors)、`RenditionInstructionsError`，因此請將`errorReason`設為此錯誤的原因，或將`rendition_instructions_error`設為斷言它已拋出。
 
-1. 由於在執行錯誤期間不應產生任何轉譯，因此不 `rendition.<extension>` 需要任何檔案。
-1. 執行命令，從專案的根目錄執行測試套裝 `aio app test`
-   + 確 [保已安裝並啟動Docker Desktop](../set-up/development-environment.md#docker) ，並支援Docker映像
+1. 由於在執行錯誤時不應產生任何轉譯，因此不需要`rendition.<extension>`檔案。
+1. 通過執行命令`aio app test`從項目的根目錄運行測試套件
+   + 確保已安裝並啟動[Docker Desktop](../set-up/development-environment.md#docker)和支援Docker映像
    + 終止任何正在運行的開發工具實例
 
 ![測試——錯誤對比](./assets/test/error-contrast/result.png)
