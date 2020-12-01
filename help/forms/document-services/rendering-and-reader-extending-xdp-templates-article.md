@@ -20,21 +20,21 @@ ht-degree: 0%
 ---
 
 
-# 使用使用權將XDP轉換為PDF{#rendering-xdp-into-pdf-with-usage-rights}
+# 使用使用權限將XDP轉換為PDF{#rendering-xdp-into-pdf-with-usage-rights}
 
 常見的使用案例是將xdp轉譯為PDF，並將Reader擴充功能套用至轉譯的PDF。
 
 例如，在AEM Forms的表單入口網站中，當使用者按一下XDP時，我們可將XDP轉換為PDF，而Reader則可擴充PDF。
 
-若要測試此功能，您可以試用此 [連結](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 範例名稱為「Render XDP with RE」
+若要測試此功能，您可以試用此[link](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 範例名稱為「Render XDP with RE」
 
 要完成此使用案例，我們需要執行以下操作。
 
-* 將Reader Extensions憑證新增至「fd-service」使用者。 此處列出新增Reader Extensions憑證的步 [驟](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
+* 將Reader Extensions憑證新增至「fd-service」使用者。 添加Reader Extensions憑據的步驟列在[此處](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
 
 * 建立自訂OSGi服務，以呈現並套用使用權限。 完成此作業的程式碼列於下方
 
-## 演算XDP並套用使用權 {#render-xdp-and-apply-usage-rights}
+## 演算XDP並套用使用權限{#render-xdp-and-apply-usage-rights}
 
 * 第7行：使用FormsService的renderPDForm，我們會從XDP產生PDF。
 
@@ -123,7 +123,7 @@ public @interface DocSvcConfiguration {
 }
 ```
 
-## 建立Servlet以串流PDF {#create-servlet-to-stream-the-pdf}
+## 建立Servlet以串流化PDF {#create-servlet-to-stream-the-pdf}
 
 下一步是使用GET方法建立servlet，將Reader擴充的PDF傳回給使用者。 在這種情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會轉譯為動態PDF，而隨瀏覽器提供的PDF檢視器則不會處理動態PDF。
 
@@ -203,7 +203,7 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 1. [使用套件管理員將與本文相關的資產下載並匯入AEM](assets/renderandextendxdp.zip)
    * 此套件包含範例入口網站和xdp檔案
 1. 將Reader擴充功能憑證新增至「fd-service」使用者
-1. 將您的瀏覽器指向 [入口網站網頁](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
+1. 將瀏覽器指向[入口網頁](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
 1. 按一下pdf圖示以轉譯xdp並取得Reader Extended的pdf
 
 
