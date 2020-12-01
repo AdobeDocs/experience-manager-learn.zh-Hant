@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# 除錯啟動實作 {#debug-launch-implementation}
+# 除錯啟動實施{#debug-launch-implementation}
 
 簡介用來除錯Launch實作的常用工具和技術。 瞭解如何使用瀏覽器的開發人員主控台和Experience Platform Debugger擴充功能來識別和疑難排解Launch實作的主要方面。
 
