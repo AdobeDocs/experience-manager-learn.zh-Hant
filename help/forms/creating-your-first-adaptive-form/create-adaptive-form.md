@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# 建立最適化表單 {#creating-adaptive-form}
+# 建立最適化表單{#creating-adaptive-form}
 
 在Part1中，我們將根據在上一課中建立的模板建立最適化表單，並使用相應的按鈕配置工具欄。
 
