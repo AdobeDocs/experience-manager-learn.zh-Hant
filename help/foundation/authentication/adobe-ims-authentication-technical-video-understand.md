@@ -24,7 +24,7 @@ Adobe Experience Manager針對AEM例項和Adobe IMS（身分管理系統）在�
 >[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
 
 * Adobe Experience Manager IMS驗證支援僅適用於「內部」使用者（作者、審閱者、管理員、開發人員等），而不適用於外部使用者，例如網站訪客。
-* [Admin Console](https://adminconsole.adobe.com/) 將AEM Managed Services客戶代表為IMS組織，AEM例項則代表為產品內容。 管理控制台系統和產品管理員可以定義和管理。
+* [Admin ](https://adminconsole.adobe.com/) Console會將AEM Managed Services客戶代表為IMS組織，而AEM例項則代表為產品內容。管理控制台系統和產品管理員可以定義和管理。
 * AEM Managed Services會將您的拓撲與Admin Console同步，以建立「產品內容」與AEM例項之間的1對1對應。
 * Admin Console中的產品設定檔將決定使用者可存取的AEM例項。
 * 驗證支援包括客戶SAML2相容的IDP，以進行SSO。
@@ -32,7 +32,7 @@ Adobe Experience Manager針對AEM例項和Adobe IMS（身分管理系統）在�
 
 ** AEM 6.4 SP3及更新版本支援Adobe Managed Services客戶使用此功能。*
 
-## Best practices {#best-practices}
+## 最佳做法{#best-practices}
 
 ### 在管理控制台中套用權限
 
@@ -46,4 +46,4 @@ Adobe Experience Manager針對AEM例項和Adobe IMS（身分管理系統）在�
 
 ### 在Adobe Experience Manager中套用權限
 
-在Adobe Experience Manager中，從Adobe IMS同步的使用者群組應以詞語新增至 [AEM提供的使用者群組](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html)，這些使用者群組已預先設定好在AEM中執行特定工作組的適當權限。 從Adobe IMS同步的使用者不應直接新增至 [AEM提供的使用者群組](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html)。
+在Adobe Experience Manager中，與Adobe IMS同步的使用者群組應以辭彙新增至[AEM提供的使用者群組](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html)，這些使用者群組已預先設定好在AEM中執行特定工作組的適當權限。 從Adobe IMS同步的使用者不應直接新增至[AEM提供的使用者群組](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html)。
