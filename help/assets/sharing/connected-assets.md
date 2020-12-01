@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 搭配AEM資產使用連線的資產{#using-connected-assets-with-aem-assets}
+# 搭配AEM Assets使用連線的資產{#using-connected-assets-with-aem-assets}
 
 「連線資產」功能可讓AEM Sites作者順暢地分享托管於不同AEM例項的數位資產。
 
@@ -28,4 +28,4 @@ ht-degree: 0%
 * 03:30 — 使用來自連線資產的影像
 * 04:42 — 啟用「已連接資產」功能的管理員配置
 
-請檢閱Connected Assets [的支援部署](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) ，以瞭解您的AEM部署是否可支援Connected Assets。
+請檢閱[支援的「已連線資產」部署](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites)，以瞭解您的AEM部署是否可支援「已連線資產」。
