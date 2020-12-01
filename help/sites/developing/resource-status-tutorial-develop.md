@@ -15,7 +15,7 @@ ht-degree: 2%
 ---
 
 
-# 開發資源狀態 {#developing-resource-statuses-in-aem-sites}
+# 開發資源狀態{#developing-resource-statuses-in-aem-sites}
 
 Adobe Experience Manager的Resource Status API&#39;s是可插拔的架構，可在AEM的各種編輯器網頁UI中顯示狀態訊息。
 
@@ -33,7 +33,7 @@ AEM的「頁面」、「體驗片段」和「範本」編輯器中，原生可�
 
 ![AEM編輯器資源狀態概觀](assets/sample-editor-resource-status-screenshot.png)
 
-## 資源狀態提供者框架 {#resource-status-provider-framework}
+## 資源狀態提供器框架{#resource-status-provider-framework}
 
 在開發自定義資源狀態時，開發工作包括：
 
@@ -44,19 +44,19 @@ AEM的「頁面」、「體驗片段」和「範本」編輯器中，原生可�
 
 3. 作為「頁面」、「體驗片段」和「範本」編輯器一部分提供的狀態資源，會透過資源「[!DNL statusType]」屬性提供類型。
 
-   * 頁面編輯器： `editor`
-   * Experience Fragment editor: `editor`
+   * 頁面編輯器：`editor`
+   * 體驗片段編輯器：`editor`
    * 範本編輯器: `template-editor`
 
-4. 狀態資源的與已注 `statusType` 冊的OSGi配置 `CompositeStatusType` 屬性相 `name` 匹配。
+4. 狀態資源的`statusType`與已註冊的`CompositeStatusType` OSGi configured `name`屬性匹配。
 
-   對於所有匹配項， `CompositeStatusType's` 會收集這些類型，並用於收集具 `ResourceStatusProvider` 有此類型的實施，方法為 `ResourceStatusProvider.getType()`。
+   對於所有匹配項，將收集`CompositeStatusType's`類型，並用於通過`ResourceStatusProvider.getType()`收集具有此類型的`ResourceStatusProvider`實施。
 
-5. 匹配項 `ResourceStatusProvider` 在編輯器 `resource` 中傳遞，並確定是否 `resource` 有要顯示的狀態。 如果需要狀態，此實作負責建立0或許多要傳回的 `ResourceStatuses` 項目，每個項目代表要顯示的狀態。
+5. 匹配的`ResourceStatusProvider`在編輯器中傳遞`resource`，並確定`resource`是否具有要顯示的狀態。 如果需要狀態，此實作負責建立0或許多要傳回的`ResourceStatuses`，每個&lt;a0/>代表要顯示的狀態。
 
-   通常，每 `ResourceStatusProvider` 個返回0 `ResourceStatus` 或1 `resource`。
+   通常，`ResourceStatusProvider`會傳回0或1個`ResourceStatus`，每個`resource`。
 
-6. ResourceStatus是可由客戶實施的介面，或者可用 `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` 於構建狀態。 狀態包括：
+6. ResourceStatus是可由客戶實施的介面，或者可使用有用的`com.day.cq.wcm.commons.status.EditorResourceStatus.Builder`來構建狀態。 狀態包括：
 
    * 標題
    * 訊息
@@ -66,7 +66,7 @@ AEM的「頁面」、「體驗片段」和「範本」編輯器中，原生可�
    * 動作
    * 資料
 
-7. 或者，如果 `Actions` 為對象提供 `ResourceStatus` 了，則需要支援客戶端將功能綁定到狀態欄中的操作連結。
+7. 或者，如果為`ResourceStatus`對象提供`Actions`，則需要支援客戶端將功能綁定到狀態欄中的操作連結。
 
    ```js
    (function(jQuery, document) {
@@ -81,11 +81,11 @@ AEM的「頁面」、「體驗片段」和「範本」編輯器中，原生可�
 
 8. 任何支援JavaScript或CSS以支援這些動作的支援，都必須透過每個編輯器的個別用戶端程式庫來編寫，以確保編輯器中有前端程式碼可供使用。
 
-   * 頁面編輯器類別： `cq.authoring.editor.sites.page`
-   * 體驗片段編輯器類別： `cq.authoring.editor.sites.page`
-   * 範本編輯器類別： `cq.authoring.editor.sites.template`
+   * 頁面編輯器類別：`cq.authoring.editor.sites.page`
+   * 體驗片段編輯器類別：`cq.authoring.editor.sites.page`
+   * 範本編輯器類別：`cq.authoring.editor.sites.template`
 
-## 檢視程式碼 {#view-the-code}
+## 檢視程式碼{#view-the-code}
 
 [請參閱GitHub上的程式碼](https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples/resourcestatus/impl/SampleEditorResourceStatusProvider.java)
 
