@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 使用樣式系統 {#using-the-style-system-with-aem-sites}
+# 使用樣式系統{#using-the-style-system-with-aem-sites}
 
 Adobe Experience Manager的Style System可讓您以視覺化方式變更元件，毋需後端開發，讓AEM元件更能重複使用，而且內容製作更多功能更有效率。 Style System搭配AEM核心元件、範本編輯器和互動式版面使用時，提供強大的功能，可快速合成豐富的體驗。
 
@@ -28,7 +28,7 @@ Adobe Experience Manager的Style System可讓您以視覺化方式變更元件�
 
 此影片示範如何運用樣式系統，只使用CSS，為單一元件建立截然不同的視覺外觀。
 
-顯示的樣式由 [WKND應用程式提供](https://github.com/adobe/aem-guides-wknd)。 這些樣式已定義為CSS，不需要變更元件的後端邏輯、HTL指令碼或Sling Model。
+顯示的樣式由[WKND應用程式](https://github.com/adobe/aem-guides-wknd)提供。 這些樣式已定義為CSS，不需要變更元件的後端邏輯、HTL指令碼或Sling Model。
 
 ## 其他資源 {#additional-resources}
 
