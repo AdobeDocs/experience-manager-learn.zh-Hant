@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms工作流程中設定JSON資料元素的值 {#setting-value-of-json-data-element-in-aem-forms-workflow}
+# 在AEM Forms Workflow {#setting-value-of-json-data-element-in-aem-forms-workflow}中設定JSON資料元素的值
 
 當「最適化表單」在AEM Workflow中路由給不同的使用者時，將會要求根據審閱表單的人員來隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
 
@@ -46,27 +46,27 @@ afData.afUnboundData.data.initialStep,N
 
 * [下載並部署DevelopingWiteServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 這是自訂OSGI搭售，可讓您在提交的json資料中設定元素的值。
+* [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。這是自訂OSGI搭售，可讓您在提交的json資料中設定元素的值。
 
 * [下載並解壓縮zip檔案的內容](assets/set-value-jsondata.zip)
-   * 將您的瀏覽器指向套 [件管理員](http://localhost:4502/crx/packmgr/index.jsp)
+   * 將瀏覽器指向[軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
       * 匯入並安裝SetValueOfElementInJSONDataWorkflow.zip。此套件包含與表單相關聯的範例工作流程模型和表單資料模型。
 
-* 將您的瀏覽器指向表 [單和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 將瀏覽器指向[表單與檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下「建立」 |檔案上傳
 * 上傳TimeOffRequestForm.zip檔案
    **此表單是使用AEM Forms 6.4建立。請確定您使用的是AEM Forms 6.4或更新版本**
-* 開啟表 [單](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
+* 開啟[form](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
 * 填寫開始和結束日期並提交表單。
-* 前往「收 [件匣」](http://localhost:4502/aem/inbox)
+* 前往[「收件箱」](http://localhost:4502/aem/inbox)
 * 開啟與任務關聯的表單。
 * 請注意，第一個面板中的欄位已停用。
 * 請注意，現在會顯示要核准或拒絕請求的面板。
 
 >[!NOTE]
 >
->由於我們使用使用者描述檔預先填入最適化表單，請確定管理員使 [用者描述檔資訊 ](http://localhost:4502/security/users.html)。 請至少確定您已設定「名字」、「姓氏」和「電子郵件」欄位值。
->您可以在此處啟用com.aemforms.setvalue.core.SetValueInJson的記錄程式，以啟用除錯 [記錄功能](http://localhost:4502/system/console/slinglog)
+>由於我們使用用戶配置檔案預填充最適化表單，因此請確保管理員[用戶配置檔案資訊](http://localhost:4502/security/users.html)。 請至少確定您已設定「名字」、「姓氏」和「電子郵件」欄位值。
+>您可以透過啟用com.aemforms.setvalue.core.SetValueInJson [from here](http://localhost:4502/system/console/slinglog)的記錄器來啟用除錯記錄
 
 >[!NOTE]
 >
