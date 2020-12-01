@@ -19,11 +19,11 @@ ht-degree: 0%
 
 ---
 
-# 使用ACS配置檔案預填充自適應表單 {#prefilling-adaptive-form-using-acs-profile}
+# 使用ACS配置檔案{#prefilling-adaptive-form-using-acs-profile}預填充自適應表單
 
 在本部分，我們將用從ACS獲取的配置檔案資訊預填充自適應表單。 AEM Forms具備預先填入最適化表單的強大功能。
 
-若要進一步瞭解預先填入最適化表單，請閱讀本教 [學課程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
+若要進一步瞭解預先填入最適化表單，請閱讀本[教學課程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
 
 若要從ACS擷取資料來預先填入Adaptive Form，我們會假設ACS中有與登入的AEM使用者相同的電子郵件描述檔。 例如，如果登入AEM的人員的電子郵件ID是csimms@adobe.com，我們預期會在電子郵件是csimms@adobe.com的ACS中找到描述檔。
 
