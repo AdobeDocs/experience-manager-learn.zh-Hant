@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 搭配AEM資產使用動態媒體 {#understanding-aem-dynamic-media}
+# 搭配使用動態媒體與AEM資產{#understanding-aem-dynamic-media}
 
 本多部分視訊系列提供您如何使用Adobe Experience Manager Dynamic Media作為內容服務來管理和存取媒體內容的概觀。 動態媒體可讓您管理和發佈動態數位體驗— Experience Manager Assets的獨有功能。 我們的架構和元件套件可讓行銷人員自訂並提供跨所有裝置的互動式多媒體體驗。
 
