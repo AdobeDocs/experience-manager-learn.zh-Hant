@@ -17,31 +17,31 @@ ht-degree: 2%
 ---
 
 
-# 編寫內容片段 {#authoring-content-fragments}
+# 編寫內容片段{#authoring-content-fragments}
 
 「內容片段」是AEM中的內容抽象，可讓文字內容獨立於其支援的頻道進行製作和管理。
 
 >[!NOTE]
 >
->這些影片中涵蓋的AEM內容片段功能最初是在 [AEM 6.3 + FP 19008和FP19614中推出](https://helpx.adobe.com/experience-manager/6-3/release-notes/content-services-fragments-featurepack.html)。
+>這些影片中涵蓋的AEM內容片段功能最初是在[AEM 6.3 + FP 19008和FP19614](https://helpx.adobe.com/experience-manager/6-3/release-notes/content-services-fragments-featurepack.html)中引進的。
 
 
 AEM內容片段是文字編輯內容，可能包含一些關聯的結構化資料元素，但視為純內容，而無設計或版面資訊。 內容片段通常建立為不受通道限制的內容，以便跨通道使用和重複使用，進而將內容包住特定內容的內容。
 
-此影片系列涵蓋AEM中內容片段的製作生命週期。 如需傳送 [內容片段的詳細資訊，請參閱這裡](content-fragments-delivery-feature-video-use.md)。
+此影片系列涵蓋AEM中內容片段的製作生命週期。 有關[傳送內容片段的詳細資訊，請參閱此處](content-fragments-delivery-feature-video-use.md)。
 
 1. 啟用和定義內容片段模型
 2. 編寫內容片段
 3. 下載內容片段
 4. 編輯功能
 
-## Defining Content Fragment Models {#defining-content-fragment-models}
+## 定義內容片段模型{#defining-content-fragment-models}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEM內容片段模型（內容片段的資料結構）必須透過AEM的 [[!UICONTROL Configuration Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)（設定瀏覽器）啟用，這可讓內容片段模型根據每個組態來定義。
+AEM內容片段模型（內容片段的資料結構）必須透過AEM的[[!UICONTROL Configuration Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)啟用，這可讓內容片段模型根據每個組態來定義。
 
-## 建立內容片段 {#creating-content-fragments}
+## 建立內容片段{#creating-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
 
@@ -52,7 +52,7 @@ AEM設定會套用至AEM Assets檔案夾階層，以允許其「內容片段模�
 *匯入的運動員傳記範例：*\
 **[sandra-sprient-bio.txt](assets/sandra-sprient-bio.txt)**
 
-## 下載內容片段 {#downloading-content-fragments}
+## 下載內容片段{#downloading-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22450/?quality=12&learn=on)
 
@@ -61,17 +61,17 @@ AEM內容片段可從AEM Author下載為包含變數、元素和中繼資料的Z
 *內容片段下載Zip檔案範例：*\
 **[daniel_schreder.zip](assets/daniel_schreder.zip)**
 
-## 內容片段編輯功能 {#editorial-capabilities}
+## 內容片段編輯功能{#editorial-capabilities}
 
 >[!VIDEO](https://video.tv.adobe.com/v/25891/?quality=12&learn=on)
 
 >[!NOTE]
 >
-> AEM 6.4 Service Pack 2和 [AEM 6.3 Service Pack 3中引入了內容片段的註解和版本比較](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)[](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp3-release-notes.html)。
+> [AEM 6.4 Service Pack 2](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)和[AEM 6.3 Service Pack 3](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp3-release-notes.html)已引入內容片段的註解和版本比較。
 
 ## 後續步驟
 
-瞭解如何 [傳送內容片段](content-fragments-delivery-feature-video-use.md)。
+瞭解[傳送內容片段](content-fragments-delivery-feature-video-use.md)。
 
 ## 其他資源 {#additional-resources}
 
