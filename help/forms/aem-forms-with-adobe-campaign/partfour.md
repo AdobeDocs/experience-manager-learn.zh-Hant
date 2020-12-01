@@ -20,11 +20,11 @@ ht-degree: 2%
 ---
 
 
-# 使用表單資料模型建立促銷活動描述檔 {#create-campaign-profile-using-form-data-model}
+# 使用表單資料模型{#create-campaign-profile-using-form-data-model}建立促銷活動描述檔
 
 使用AEM Forms Data Model建立Adobe Campaign Standard描述檔的步驟
 
-## 建立自訂驗證 {#create-custom-authentication}
+## 建立自訂驗證{#create-custom-authentication}
 
 使用Swagger檔案建立「資料來源」時，AEM Forms支援下列驗證類型
 
@@ -105,7 +105,7 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 }
 ```
 
-## 建立資料來源 {#create-data-source}
+## 建立資料源{#create-data-source}
 
 第一步是建立Swagger檔案。 Swagger檔案會定義REST API，此API將用於在Adobe Campaign Standard中建立描述檔。 swagger檔案定義REST API的輸入參數和輸出參數。
 
@@ -113,12 +113,13 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 
 範例Swagger檔案會提供給您，做為資產與本文相關的一部分。**請確定您更改swagger檔案中的主機和basePath以匹配您的ACS實例**
 
-## 測試解決方案 {#test-the-solution}
+## 測試解決方案{#test-the-solution}
 
 若要測試解決方案，請遵循下列步驟：
 * [請確定您已依照此處所述的步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [下載並解壓縮此檔案以取得Swagger檔案](assets/create-acs-profile-swagger-file.zip)
-* 使用Swagger檔案建立資料來源建立表單資料模型，並以上一步驟中建立的資料來源為基礎
+* 使用Swagger檔案建立資料來源
+建立表單資料模型，並以上一步驟中建立的資料來源為基礎
 * 根據在前一步驟中建立的表單資料模型建立自適應表單。
 * 將下列元素從資料來源標籤拖放至最適化表單
 
