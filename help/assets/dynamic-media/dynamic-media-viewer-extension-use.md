@@ -19,7 +19,7 @@ ht-degree: 3%
 ---
 
 
-# Using Dynamic Media Viewers with Adobe Analytics and Adobe Launch{#using-dynamic-media-viewers-adobe-analytics-launch}
+# 搭配Adobe Analytics和Adobe Launch使用動態媒體檢視器{#using-dynamic-media-viewers-adobe-analytics-launch}
 
 對於使用Dynamic Media和Adobe Analytics的客戶，您現在可以使用Dynamic Media Viewer Extension來追蹤網站上Dynamic Media Viewer的使用情形。
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> 在Dynamic Media Scene7模式中執行Adobe Experience Manager，以取得此功能。 您也需要將 [Adobe Experience Platform Launch與AEM實例整合](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)。
+> 在Dynamic Media Scene7模式中執行Adobe Experience Manager，以取得此功能。 您也需要[將Adobe Experience Platform Launch與AEM實例](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)整合。
 
 隨著Dynamic Media Viewer擴充功能的推出，Adobe Experience Manager現在針對動態媒體檢視器(5.13)所提供的資產提供進階分析支援，在「網站」頁面上使用動態媒體檢視器時，可更精細地控制事件追蹤。
 
