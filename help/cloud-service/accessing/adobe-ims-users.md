@@ -20,7 +20,7 @@ ht-degree: 4%
 
 # Adobe IMS使用者
 
-需要存取AEM Author服務的使用者在 [Adobe的Admin Console中](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html)[，以Adobe IMS使用者的身分管理](https://adminconsole.adobe.com)。 瞭解Adobe IMS使用者的身分，以及如何在Admin Console中存取和管理他們。
+需要存取AEM Author服務的使用者在[Adobe的Admin Console](https://adminconsole.adobe.com)中，會以[Adobe IMS使用者](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html)的身分管理。 瞭解Adobe IMS使用者的身分，以及如何在Admin Console中存取和管理他們。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39149/?quality=12&learn=on)
 
