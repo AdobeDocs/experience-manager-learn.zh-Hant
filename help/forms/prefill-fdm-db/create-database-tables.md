@@ -22,13 +22,13 @@ ht-degree: 0%
 
 表單資料模型可以以RDBMS、RESTfull、SOAP或OData來源為基礎。 本課程的重點是使用由RDBMS資料源支援的表單資料模型預先歸檔自適應表單。 本教學課程使用MYSQL資料庫。 我們建立了下列兩個表格來示範使用案例
 
-* **newhire表** -此表儲存了新的資訊
+* **** newhiretable —— 此表儲存新資訊
 
    ![newhire](assets/newhire-table.png)
 
 
-* **受益人** 表——這家商店的受益人
+* **受益** 者——這家商店的受益者
 
    ![受益人](assets/beneficiaries-table.png)
 
-您可以使用MySQL工 [作台將sql檔案導入](assets/db-schema.sql) ，以便建立到具有某些示例資料的表。
+您可以使用MySQL工作台將[sql檔案](assets/db-schema.sql)導入到具有某些示例資料的表。
