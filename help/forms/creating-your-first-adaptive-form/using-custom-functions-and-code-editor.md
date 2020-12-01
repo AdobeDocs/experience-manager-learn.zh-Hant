@@ -22,24 +22,24 @@ ht-degree: 0%
 ---
 
 
-# 使用自訂函式和程式碼編輯器 {#using-functions-and-code-editor}
+# 使用自訂函式和程式碼編輯器{#using-functions-and-code-editor}
 
 在本部分，我們將使用自訂函式和程式碼編輯器來編寫業務規則。
 
-在本教學課程的前面，您已 [經安裝了帶有自定義函式](assets/client-libs-and-logo.zip) 的ClientLib。
+在本教程中，您已經安裝了[ClientLib和custom function](assets/client-libs-and-logo.zip)。
 
 通常用戶端程式庫包含CSS和Javascript檔案。 此用戶端程式庫包含javascript檔案，可讓函式填入下拉式清單值。
 
 
-## 填入下拉式清單的函式 {#function-to-populate-drop-down-list}
+## 填入下拉式清單{#function-to-populate-drop-down-list}的函式
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
 
-### 設定面板的摘要標題 {#set-the-summary-title-of-panels}
+### 設定面板的摘要標題{#set-the-summary-title-of-panels}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
 
-#### 驗證面板 {#validate-panels-using-rule-editor}
+#### 驗證面板{#validate-panels-using-rule-editor}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28409?quality=9&learn=on)
 
