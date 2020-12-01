@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 送出以感謝頁面 {#submitting-to-thank-you-page}
+# 送出以感謝頁面{#submitting-to-thank-you-page}
 
 「提交到REST端點」選項會將表單中填入的資料傳遞至已設定的確認頁面，作為HTTP GET請求的一部分。 您可以新增要請求的欄位名稱。 請求的格式為：
 
@@ -39,8 +39,8 @@ submitterName=submitter
 
 若要在您的伺服器上測試此功能，請依照下列指示進行：
 
-* 使用套 [件管理員將與此文章關聯的資產檔案匯入AEM](assets/submittingtorestendpoint.zip)
-* 將您的瀏覽器指向「 [暫停申請表」](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* 使用套件管理員](assets/submittingtorestendpoint.zip)將與本文相關的[資產檔案匯入AEM
+* 將瀏覽器指向[關閉請求表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填寫必填欄位並提交表格
 * 您應該會收到感謝頁面，並在頁面中填入您的資訊
 
