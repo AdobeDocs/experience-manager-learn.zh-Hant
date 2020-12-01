@@ -16,19 +16,19 @@ ht-degree: 0%
 ---
 
 
-# 針對頁面差異進行開發 {#developing-for-page-difference}
+# 開發頁面差異{#developing-for-page-difference}
 
 此影片說明如何提供AEM Sites「頁面差異」功能的自訂樣式。
 
-## 自訂頁面差異樣式 {#customizing-page-difference-styles}
+## 自訂頁面差異樣式{#customizing-page-difference-styles}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18871/?quality=9&learn=on)
 
 >[!NOTE]
 >
->此影片將自訂CSS新增至we.Retail用戶端程式庫，因此應對客戶的AEM Sites專案進行這些變更；在以下范常式式碼中： `my-project`.
+>此影片將自訂CSS新增至we.Retail用戶端程式庫，因此應對客戶的AEM Sites專案進行這些變更；在以下范常式式碼中：`my-project`。
 
-AEM的頁面差異會透過直接載入的方式取得OOTB CSS `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`。
+AEM的頁面差異透過直接載入`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`來取得OOTB CSS。
 
 由於直接載入CSS而非使用用戶端資料庫類別，因此我們必須為自訂樣式尋找另一個注入點，而此自訂注入點是專案的編寫clientlib。
 
@@ -36,7 +36,7 @@ AEM的頁面差異會透過直接載入的方式取得OOTB CSS `/libs/cq/gui/com
 
 ### 準備編寫clientlib {#prepare-the-authoring-clientlib}
 
-請確定您的專 `authoring` 案是否有clientlib，位址為 `/apps/my-project/clientlib/authoring.`
+確保項目`/apps/my-project/clientlib/authoring.`中存在`authoring` clientlib
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -47,7 +47,7 @@ AEM的頁面差異會透過直接載入的方式取得OOTB CSS `/libs/cq/gui/com
 
 ### 提供自訂CSS {#provide-the-custom-css}
 
-新增至專案的clientlib, `authoring` 以指向 `css.txt` 提供覆寫樣式的較少檔案。 [較少](https://lesscss.org/) ，因為它有許多方便的功能，包括本範例中運用的類別封裝。
+新增至專案的`authoring` clientlib a `css.txt`，指向提供覆寫樣式的較少檔案。 [Less](https://lesscss.org/) 是較佳的選擇，因為它有許多方便的功能，包括本例中運用的類別封裝功能。
 
 ```shell
 base=./css
@@ -55,7 +55,7 @@ base=./css
 htmldiff.less
 ```
 
-在中建 `less` 立包含樣式覆寫的檔 `/apps/my-project/clientlibs/authoring/css/htmldiff.less`案，並視需要提供覆寫樣式。
+在`/apps/my-project/clientlibs/authoring/css/htmldiff.less`建立包含樣式覆寫的`less`檔案，並視需要提供覆寫樣式。
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -101,11 +101,11 @@ body {
 }
 ```
 
-### 透過頁面元件加入編寫clientlib CSS {#include-the-authoring-clientlib-css-via-the-page-component}
+### 透過頁面元件{#include-the-authoring-clientlib-css-via-the-page-component}加入編寫clientlib CSS
 
-將編寫clientlibs類別直接加入專案基本頁面的 `/apps/my-project/components/structure/page/customheaderlibs.html` 標籤前， `</head>` 以確保載入樣式。
+將編寫clientlibs類別加入專案基本頁面的`/apps/my-project/components/structure/page/customheaderlibs.html`中，直接加入`</head>`標籤，以確保載入樣式。
 
-這些樣式應限制為「 [!UICONTROL 編輯][!UICONTROL 和預] 覽WCM」模式。
+這些樣式應限制為[!UICONTROL Edit]和[!UICONTROL preview] WCM模式。
 
 ```xml
 <head>
