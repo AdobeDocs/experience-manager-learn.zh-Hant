@@ -30,12 +30,12 @@ ht-degree: 0%
    * 使用套件管理員將StoreAFInDBWorkflow.zip匯入AEM。 軟體包具有將AF資料儲存到資料庫的示例工作流。 開啟工作流程模型。 工作流程只有一個步驟。 此步驟調用在包中寫入的代碼，以將AF資料儲存到資料庫中。 我正在將單一論據傳遞至程式。 這是保存其資料的最適化表單的名稱。
    * 使用Felix網頁主控台部署insertdata.core-0.0.1-SNAPSHOT.jar。 此捆綁包具有將提交的表單資料寫入資料庫的代碼
 
-* 轉至 [ConfigMgr](http://localhost:4502/system/console/configMgr)
+* 轉至[ConfigMgr](http://localhost:4502/system/console/configMgr)
 
    * 搜索「JDBC連接池」。 建立新的日公用JDBC連接池。 指定您資料庫的特定設定。
 
    * ![jdbc連接池](assets/jdbc-connection-pool.png)
-   * 搜索「將表&#x200B;**單資料插入資料庫**」
+   * 搜索「**將表單資料插入DB**」
    * 指定資料庫的特定屬性。
       * DataSourceName：您先前設定之資料來源的名稱。
       * TableName —要儲存AF資料的表的名稱
