@@ -16,7 +16,7 @@ ht-degree: 1%
 ---
 
 
-# 為個人化設定ContextHub {#set-up-contexthub}
+# 設定個人化的ContextHub {#set-up-contexthub}
 
 ContextHub是儲存、控制和呈現上下文資料的架構。 ContextHub Javascript API可讓您存取商店，以視需要建立、更新和刪除資料。 因此，ContextHub代表您頁面上的資料層。 本頁面說明如何新增內容中樞至AEM網站頁面。
 
@@ -24,13 +24,13 @@ ContextHub是儲存、控制和呈現上下文資料的架構。 ContextHub Java
 
 >[!NOTE]
 >
->我們使用此視訊的WKND參考網站，但它不是AEM版本的一部分。 您可以從這裡下 [載最新版本](https://github.com/adobe/aem-guides-wknd/releases)。
+>我們使用此視訊的WKND參考網站，但它不是AEM版本的一部分。 您可以在此處下載[最新版本](https://github.com/adobe/aem-guides-wknd/releases)。
 
 將ContextHub新增至您的頁面，以啟用ContextHub功能並連結至ContextHub JavaScript程式庫。 ContextHub JavaScript API可讓您存取ContextHub管理的上下文資料。
 
-## 將ContextHub新增至頁面元件 {#adding-contexthub-to-a-page-component}
+## 將ContextHub新增至頁面元件{#adding-contexthub-to-a-page-component}
 
-若要啟用ContextHub功能並連結至ContextHub JavaScript程式庫，請在網頁的 `contexthub` 區段中 `<head>` 加入元件。 頁面元件的HTL程式碼類似下列範例：
+若要啟用ContextHub功能並連結至ContextHub JavaScript程式庫，請在網頁的`<head>`區段中包含`contexthub`元件。 頁面元件的HTL程式碼類似下列範例：
 
 ```java
 <!--/* Include Context Hub */-->
@@ -38,15 +38,15 @@ ContextHub是儲存、控制和呈現上下文資料的架構。 ContextHub Java
 */-->
 ```
 
-## 網站設定和ContextHub區段 {#site-configuration-and-contexthub-segments}
+## 網站設定和ContextHub區段{#site-configuration-and-contexthub-segments}
 
-ContextHub包含區段引擎，可管理區段並判斷哪些區段可針對目前的上下文加以解析。 已定義數個區段。 您可以使用Javascript API來判斷已解 [決的區段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)。 在「設定瀏覽器」下啟用您網站的ContextHub [[!UICONTROL 區段]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)。
+ContextHub包含區段引擎，可管理區段並判斷哪些區段可針對目前的上下文加以解析。 已定義數個區段。 您可以使用Javascript API來判斷已解析的區段[。 ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)在[[!UICONTROL Configuration Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)下啟用您網站的ContextHub區段。
 
-## 建立區段 {#create-segments}
+## 建立區段{#create-segments}
 
 建立AEM區段，以做為預告的規則。 也就是說，它們會定義摘要內容出現在網頁上的時間。 然後，視訪客所符合的區段而定，內容可特別針對訪客的需求和興趣。
 
-## 將雲端設定、區段路徑和ContextHub路徑指派至您的網站 {#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
+## 將雲端設定、區段路徑和ContextHub路徑指派至您的網站{#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
 
 將雲端設定路徑、區段路徑和ContextHub路徑指派至您的網站根節點，以便您為受眾建立個人化體驗。 使用ContextHub，您可以控制上下文資料並測試已解析的區段。
 
