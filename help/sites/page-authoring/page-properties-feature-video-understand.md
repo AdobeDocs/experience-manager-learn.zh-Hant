@@ -20,7 +20,7 @@ ht-degree: 27%
 ---
 
 
-# 瞭解頁面屬性 {#understanding-page-properties-aem-sites}
+# 瞭解頁面屬性{#understanding-page-properties-aem-sites}
 
 以下影片介紹與Adobe Experience Manager中的頁面相關的頁面屬性。
 
