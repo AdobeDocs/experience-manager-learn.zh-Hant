@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 建立沒有資料源的表單資料模型 {#creating-form-data-model-without-data-source}
+# 建立沒有資料源{#creating-form-data-model-without-data-source}的表單資料模型
 
 從AEM Forms 6.4開始，我們現在可以定義表單資料模型(FDM)，而不需將它與資料來源關聯。 以下視頻將逐步介紹建立沒有任何資料源的FDM的步驟。
 
