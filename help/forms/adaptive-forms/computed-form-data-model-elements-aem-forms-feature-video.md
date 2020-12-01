@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM表單中建立計算表單資料模型元素{#creating-computed-form-data-model-elements-in-aem-forms}
+# 在AEM Forms中建立計算表單資料模型元素{#creating-computed-form-data-model-elements-in-aem-forms}
 
 計算表單資料模型元素允許您將操作結果儲存在一個或多個表單資料模型元素上。 例如，您可能希望通過對薪金欄位執行數學運算來計算和儲存月薪。 為此，您將薪金除以12，並將結果儲存為計算表單資料模型元素，稱為monthlySalary。
 
