@@ -35,29 +35,29 @@ CORS組態在AEM中管理為OSGi組態工廠，每個原則都代表為工廠的
 
 通過比較
 
-* `Allowed Origin` 具有請 `Origin` 求標題
-* 和 `Allowed Paths` 請求路徑。
+* `Allowed Origin` 與請求 `Origin` 標題
+* 和`Allowed Paths`。
 
-將使用與這些值匹配的第一個策略。 如果找不到任何請求， [!DNL CORS] 則會拒絕任何請求。
+將使用與這些值匹配的第一個策略。 如果找不到任何[!DNL CORS]請求，則會拒絕。
 
-如果完全未配置策略，則 [!DNL CORS] 請求也將不被應答，因為處理程式將被禁用，從而有效地被拒絕——只要伺服器的其他模組沒有響應 [!DNL CORS]。
+如果完全未配置策略，則[!DNL CORS]請求也將不會被應答，因為處理程式將被禁用，因而有效地被拒絕——只要伺服器的其他模組沒有響應[!DNL CORS]。
 
 ### 策略屬性
 
 #### [!UICONTROL 允許的原始源]
 
 * `"alloworigin" <origin> | *`
-* 指定可 `origin` 能訪問資源的URI的參數清單。 對於沒有憑證的請求，伺服器可指定*為萬用字元，以允許任何來源存取資源。 *絕對不建議在生產中使`Allow-Origin: *`用，因為它可讓每個外國（即攻擊者）網站提出沒有CORS的要求，而瀏覽器嚴格禁止這些要求。*
+* `origin`參數的清單，這些參數指定了可訪問資源的URI。 對於沒有憑證的請求，伺服器可指定*為萬用字元，以允許任何來源存取資源。 *絕對不建議在生產 `Allow-Origin: *` 中使用，因為它可讓每個外國（即攻擊者）網站提出沒有CORS的要求，而瀏覽器嚴格禁止。*
 
 #### [!UICONTROL 允許的原點(Regexp)]
 
 * `"alloworiginregexp" <regexp>`
-* 指定可 `regexp` 能訪問資源的URI的規則表達式清單。 *規則運算式若未仔細建立，可能會產生非預期的相符項目，讓攻擊者使用自訂網域名稱，並符合原則。* 通常建議對每個特定的源主機名都使用不同的策略，即 `alloworigin`使這意味著重複配置其他策略屬性。 不同的起源往往有不同的生命週期和要求，因而從明確的分離中獲益。
+* `regexp`規則運算式的清單，指定可存取資源的URI。 *規則運算式若未仔細建立，可能會產生非預期的相符項目，讓攻擊者使用自訂網域名稱，並符合原則。* 通常建議對每個特定的源主機名都使用不同的策略，即 `alloworigin`使這意味著重複配置其他策略屬性。不同的起源往往有不同的生命週期和要求，因而從明確的分離中獲益。
 
 #### [!UICONTROL 允許的路徑]
 
 * `"allowedpaths" <regexp>`
-* 規則運 `regexp` 算式清單，指定套用原則的資源路徑。
+* `regexp`規則運算式的清單，指定套用原則的資源路徑。
 
 #### [!UICONTROL 公開的標題]
 
@@ -67,12 +67,12 @@ CORS組態在AEM中管理為OSGi組態工廠，每個原則都代表為工廠的
 #### [!UICONTROL 最大年齡]
 
 * `"maxage" <seconds>`
-* 指 `seconds` 示可快取預備請求結果的時間長度的參數。
+* `seconds`參數，指出可快取預備要求結果的時間長度。
 
 #### [!UICONTROL 支援的標題]
 
 * `"supportedheaders" <header>`
-* 參數清 `header` 單，指出在提出實際請求時可使用哪些HTTP標題。
+* `header`參數清單，指出在提出實際請求時可使用哪個HTTP標題。
 
 #### [!UICONTROL 允許的方法]
 
@@ -82,11 +82,11 @@ CORS組態在AEM中管理為OSGi組態工廠，每個原則都代表為工廠的
 #### [!UICONTROL 支援認證]
 
 * `"supportscredentials" <boolean>`
-* 指 `boolean` 示對請求的響應是否可向瀏覽器公開。 當用作對預檢請求之回應的一部分時，這表示是否可使用認證來提出實際請求。
+* `boolean`，指示對請求的回應是否可公開給瀏覽器。 當用作對預檢請求之回應的一部分時，這表示是否可使用認證來提出實際請求。
 
 ### 配置示例
 
-網站1是基本、匿名存取、唯讀的藍本，內容會透過請求 [!DNL GET] 使用：
+網站1是可匿名存取的基本唯讀藍本，內容透過[!DNL GET]請求使用：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -122,17 +122,17 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 />
 ```
 
-## Dispatcher快取問題和配置 {#dispatcher-caching-concerns-and-configuration}
+## Dispatcher快取問題和配置{#dispatcher-caching-concerns-and-configuration}
 
-從Dispatcher 4.1.1+回應標頭開始，可以快取。 這樣，只要請求是 [!DNL CORS] 匿名的，就可 [!DNL CORS]以沿請求資源快取標題。
+從Dispatcher 4.1.1+回應標頭開始，可以快取。 這樣，只要請求是匿名的，就可以將[!DNL CORS]標頭與&lt;a1/>請求的資源一起快取。[!DNL CORS]
 
-一般而言，在Dispatcher中快取內容的相同考量，可套用至dispatcher中快取CORS回應標頭。 下表定義何時可 [!DNL CORS] 快取標題( [!DNL CORS] 以及請求)。
+一般而言，在Dispatcher中快取內容的相同考量，可套用至dispatcher中快取CORS回應標頭。 下表定義了可快取[!DNL CORS]標題（以及[!DNL CORS]請求）的時間。
 
 | 可快取 | 環境 | 驗證狀態 | 說明 |
 |-----------|-------------|-----------------------|-------------|
 | 否 | AEM 發佈 | 已驗證 | AEM Author上的Dispatcher快取限於靜態、非編寫的資產。 這讓您在AEM Author上快取大部分資源（包括HTTP回應標頭）變得困難且不切實際。 |
 | 否 | AEM 發佈 | 已驗證 | 避免在已驗證的請求上快取CORS標題。 這與未快取已驗證請求的一般指導一致，因為很難確定請求用戶的驗證／授權狀態將如何影響所傳送的資源。 |
-| 是 | AEM 發佈 | 匿名 | Dispatcher的匿名請求可快取，也可快取其回應標頭，以確保未來的CORS請求可存取快取的內容。 AEM Publish上的任何CORS設定變更 **必須** ，且受影響快取資源的失效。 最佳做法要求在代碼或配置部署中清除調度程式快取，因為很難確定哪些快取內容可能受到影響。 |
+| 是 | AEM 發佈 | 匿名 | Dispatcher的匿名請求可快取，也可快取其回應標頭，以確保未來的CORS請求可存取快取的內容。 AEM Publish **上的任何CORS組態變更必須**，之後才會有受影響的快取資源失效。 最佳做法要求在代碼或配置部署中清除調度程式快取，因為很難確定哪些快取內容可能受到影響。 |
 
 若要允許快取CORS標頭，請將下列組態新增至所有支援的AEM Publish dispatcher.any檔案。
 
@@ -151,24 +151,24 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 }
 ```
 
-請記得 **在對檔案進行更改後** ，重新啟動Web伺服器應 `dispatcher.any` 用程式。
+在對`dispatcher.any`檔案進行更改後，請記住&#x200B;**重新啟動Web伺服器應用程式**。
 
-可能需要完全清除快取，以確保在設定更新後，標題會在下一個請求上正確快取 `/headers` 。
+在`/headers`組態更新後，可能需要完全清除快取，以確保標頭會在下次要求時正確快取。
 
 ## 疑難排解CORS
 
-Logging is available under `com.adobe.granite.cors`:
+在`com.adobe.granite.cors`下可使用日誌：
 
-* 啟用 `DEBUG` 查看拒絕請求的 [!DNL CORS] 詳細資訊
-* 啟用 `TRACE` 以檢視有關透過CORS處理常式之所有請求的詳細資訊
+* 啟用`DEBUG`以查看[!DNL CORS]請求被拒絕的詳細資訊
+* 啟用`TRACE`以檢視透過CORS處理常式之所有請求的詳細資訊
 
 ### 提示：
 
 * 使用捲曲手動重新建立XHR請求，但請務必複製所有標題和詳細資訊，因為每個標題和詳細資訊都可產生影響；某些瀏覽器控制台允許複製curl命令
 * 驗證請求是否遭到CORS處理常式拒絕，而非驗證、CSRF Token篩選、分派器篩選或其他安全層拒絕
-   * 如果CORS處理常式以200回應，但 `Access-Control-Allow-Origin`[!DNL DEBUG] 回應上沒有標題，請檢閱位於 `com.adobe.granite.cors`
-* 如果已啟用請求 [!DNL CORS] 的調度程式快取
-   * 確保將 `/headers` 配置應用於並 `dispatcher.any` 且Web伺服器已成功重新啟動
+   * 如果CORS處理常式以200回應，但回應上沒有`Access-Control-Allow-Origin`標題，請檢閱`com.adobe.granite.cors`中[!DNL DEBUG]下的拒絕記錄
+* 如果[!DNL CORS]請求的分發程式快取已啟用
+   * 確保`/headers`配置已應用於`dispatcher.any`並且Web伺服器已成功重新啟動
    * 確保在任何OSGi或dispatcher.any配置更改後，快取已正確清除。
 * 如有需要，請檢查請求上是否有驗證憑證。
 
