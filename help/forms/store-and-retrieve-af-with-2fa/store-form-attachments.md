@@ -31,7 +31,7 @@ ht-degree: 0%
 }
 ```
 
-以下代碼從請求中提取附件並將其儲存在 **/content/afattachments資料夾下** 。
+以下代碼從請求中提取附件並將其儲存在&#x200B;**/content/afattachments**&#x200B;資料夾下
 
 ```java
 public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest request) {
