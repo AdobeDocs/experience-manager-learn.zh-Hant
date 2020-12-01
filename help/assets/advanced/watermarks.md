@@ -26,7 +26,7 @@ AEM做為Cloud Service的浮水印功能可讓自訂影像轉譯使用任何PNG�
 
 ## OSGi配置
 
-您可以更新下列OSGi組態存根，並將它新增至AEM專案 `ui.config` 的子專案。
+您可以更新下列OSGi組態存根，並將其新增至AEM專案的`ui.config`子專案。
 
 `/apps/example/osgiconfig/config.author/com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json`
 
