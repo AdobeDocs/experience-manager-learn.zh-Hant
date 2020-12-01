@@ -1,6 +1,6 @@
 ---
-title: AEM Sites快速入門- WKND教學課程
-description: AEM Sites快速入門- WKND教學課程。 WKND教學課程是多部分教學課程，專為Adobe Experience Manager新手開發人員所設計。 本教學課程將逐步介紹AEM網站的實作，以建立虛構的生活品牌WKND。 本教學課程涵蓋基本主題，例如專案設定、主原型、核心元件、可編輯範本、用戶端程式庫和元件開發。
+title: AEM Sites - WKND 教學課程快速入門
+description: AEM Sites - WKND 教學課程快速入門. WKND教學課程是多部分教學課程，專為Adobe Experience Manager新手開發人員所設計。 本教學課程將逐步介紹AEM網站的實作，以建立虛構的生活品牌WKND。 本教學課程涵蓋基本主題，例如專案設定、主原型、核心元件、可編輯範本、用戶端程式庫和元件開發。
 sub-product: sites
 topics: development
 version: cloud-service
@@ -15,12 +15,12 @@ translation-type: tm+mt
 source-git-commit: 69c1767098cc9da8ec0ae2bd83d25417d330f393
 workflow-type: tm+mt
 source-wordcount: '970'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 
-# Getting Started with AEM Sites - WKND Tutorial {#introduction}
+# AEM Sites - WKND 教學課程快速入門 {#introduction}
 
 歡迎使用專為Adobe Experience Manager(AEM)新手開發人員所設計的多部份教學課程。 本教學課程將逐步介紹AEM網站對WKND這個虛構生活方式品牌的實作。 本教學課程涵蓋基本主題，例如專案設定、核心元件、可編輯範本、用戶端程式庫，以及使用Adobe Experience Manager Sites進行元件開發。
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-教學課程是專為搭配 **AEM做為Cloud Service** ，並向後相容於 **AEM 6.5+** 和 **AEM 6.4.2+**。 網站的實作方式為：
+教學課程旨在搭配&#x200B;**AEM做為Cloud Service**&#x200B;使用，並向後相容於&#x200B;**AEM 6.5+**&#x200B;和&#x200B;**AEM 6.4.2+**。 網站的實作方式為：
 
 * [Maven AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
 * [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
@@ -41,22 +41,22 @@ ht-degree: 3%
 
 *預計1-2小時即可完成教學課程的每個部分。*
 
-## 關於教學課程 {#about-tutorial}
+## 關於教學課程{#about-tutorial}
 
 WKND是虛構的線上雜誌和部落格，主要針對數個國際城市的夜生活、活動和活動。
 
 ### Adobe XD UI套件
 
-為了讓本教學課程更貼近實際案例，Adobe有才華的UX設計人員使用 [Adobe XD為網站建立了模型](https://www.adobe.com/products/xd.html)。 在教學課程中，各種設計會建置在完全可供作者使用的AEM網站中。 特別感謝 **Lorenzo Buosi****和Kilian Amendola** ，他們為WKND網站設計了美麗的設計。
+為了讓本教學課程更接近實際案例，Adobe有才華的UX設計人員使用[Adobe XD](https://www.adobe.com/products/xd.html)為網站建立了模型。 在教學課程中，各種設計會建置在完全可供作者使用的AEM網站中。 特別感謝為世界開發組織網站設計精美設計的&#x200B;**洛倫佐·布奧西**&#x200B;和&#x200B;**基利安·阿門多拉**。
 
 下載XD UI套件：
 
 * [AEM核心元件UI套件](assets/overview/AEM-CoreComponents-UI-Kit.xd)
 * [WKND UI Kit](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND.xd)
 
-WKND的名稱很合適，因為我們預期開發人員可在週末的大部分時間 ***內*** ，完成教學課程。
+WKND名稱正合適，因為我們預期開發人員會參與&#x200B;***weekend***&#x200B;的大部分工作，以完成教學課程。
 
-### 吉圖布 {#github}
+### Github {#github}
 
 專案的所有程式碼都可在AEM Guide回購網站的Github上找到：
 
@@ -66,9 +66,9 @@ WKND的名稱很合適，因為我們預期開發人員可在週末的大部分�
 
 >[!NOTE]
 >
-> 如果您使用本教學課程的舊版，您仍可在GitHub上找 [到解決方](https://github.com/adobe/aem-guides-wknd/releases/tag/archetype-18.1) 案 [套件和程式碼](https://github.com/adobe/aem-guides-wknd/tree/archetype-18.1) 。
+> 如果您使用本教學課程的舊版，您仍可在GitHub上找到[解決方案套件](https://github.com/adobe/aem-guides-wknd/releases/tag/archetype-18.1)和[程式碼](https://github.com/adobe/aem-guides-wknd/tree/archetype-18.1)。
 
-## 當地開發環境 {#local-dev-environment}
+## 本地開發環境{#local-dev-environment}
 
 完成本教學課程時，必須具備本機開發環境。 螢幕擷取畫面和視訊會使用AEM擷取，當作在Mac OS環境上執行的Cloud Service SDK。 除非另有說明，指令和程式碼應獨立於本機作業系統。
 
@@ -80,7 +80,7 @@ WKND的名稱很合適，因為我們預期開發人員可在週末的大部分�
 
 本機應安裝下列程式碼：
 
-* [AEM as a Cloud Service SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)[或AEM 6.5](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/technical-requirements.html) 或 [AEM 6.4 + SP2](https://helpx.adobe.com/tw/experience-manager/6-4/release-notes/sp-release-notes.html)
+* [AEM as a Cloud Service ](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk) SDK [或AEM 6.5](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/technical-requirements.html) 或 [AEM 6.4 + SP2](https://helpx.adobe.com/tw/experience-manager/6-4/release-notes/sp-release-notes.html)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html) （僅限AEM 6.5+）
 * [Apache Maven](https://maven.apache.org/) （3.3.9或更新版本）
 * [Node.js v10+](https://nodejs.org/en/)
@@ -89,24 +89,24 @@ WKND的名稱很合適，因為我們預期開發人員可在週末的大部分�
 
 ### 整合開發環境(IDE)
 
-本教學課 [程將](https://www.eclipse.org/) Eclipse與 [AEM Developer Tool Plugin](https://eclipse.adobe.com/aem/dev-tools/) （AEM開發人員工具外掛程式）搭配使用，不過可使用支援Java和Maven專案的任何IDE。 本教學課程對特定IDE功能的依賴度很低。
+本教學課程將[Eclipse](https://www.eclipse.org/)與[AEM Developer Tool Plugin](https://eclipse.adobe.com/aem/dev-tools/)搭配使用，做為IDE，但是可使用支援Java和Maven專案的任何IDE。 本教學課程對特定IDE功能的依賴度很低。
 
-如需使用Eclipse或其他IDE(例如 [Visual Studio Code](https://code.visualstudio.com/) 或 [IntelliJ](https://www.jetbrains.com/idea/))的詳細步 [驟，請參閱以下指南](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+有關使用Eclipse或其他IDE（如[Visual Studio Code](https://code.visualstudio.com/)或[IntelliJ](https://www.jetbrains.com/idea/)）的詳細步驟，請參閱以下指南](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。[
 
 ## 引用網站 {#reference-site}
 
-WKND網站的完成版本也可供參考： [https://wknd.site/](https://wknd.site/)
+WKND網站的完成版本也可供參考：[https://wknd.site/](https://wknd.site/)
 
-本教學課程涵蓋AEM開發人員所需的主要開發技 *巧* ，但不會建立整個網站。 完成的參考網站是探索並檢視更多AEM現成可用功能的絕佳資源。
+本教學課程涵蓋AEM開發人員所需的主要開發技巧，但&#x200B;*not*&#x200B;將建立整個網站的端對端。 完成的參考網站是探索並檢視更多AEM現成可用功能的絕佳資源。
 
-若要在跳至教學課程之前先測試最新程式碼，請從GitHub下載 **[並安裝最新版本](https://github.com/adobe/aem-guides-wknd/releases/latest)**。
+若要在跳至教學課程之前測試最新程式碼，請從GitHub](https://github.com/adobe/aem-guides-wknd/releases/latest)**下載並安裝**[&#x200B;最新版本。
 
 ### 由Adobe Stock提供支援
 
-WKND參考網站中的許多影像都來自 [Adobe Stock](https://stock.adobe.com/) ，並且是示範資產附加條款(Demo Asset Additional Terms)中定義的第三方 [材料](https://www.adobe.com/legal/terms.html)。 如果您想要將Adobe Stock影像用於檢視本示範網站以外的其他用途，例如在網站上加以展示，或在行銷資料中，則可以購買Adobe Stock授權。
+WKND參考網站中的許多影像都來自[Adobe Stock](https://stock.adobe.com/)，並且如示範資產附加條款(位於[https://www.adobe.com/legal/terms.html](https://www.adobe.com/legal/terms.html))中所定義，為協力廠商內容。 如果您想要將Adobe Stock影像用於檢視本示範網站以外的其他用途，例如在網站上加以展示，或在行銷資料中，則可以購買Adobe Stock授權。
 
 有了Adobe Stock，您就可以存取超過1億4千萬張高品質且免版稅的影像，包括像片、圖形、視訊和範本，快速開始您的創意專案。
 
-## 後續步驟 {#next-steps}
+## 後續步驟{#next-steps}
 
-你在等什麼！導覽至「專案設定」 [一章](project-setup.md) ，以開始教學課程，並瞭解如何使用AEM專案原型產生新的Adobe Experience Manager專案。
+你在等什麼！導覽至「[專案設定](project-setup.md)」章節，開始教學課程，並瞭解如何使用AEM專案原型產生新的Adobe Experience Manager專案。
