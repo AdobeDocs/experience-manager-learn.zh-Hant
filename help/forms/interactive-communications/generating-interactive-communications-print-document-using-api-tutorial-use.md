@@ -30,13 +30,13 @@ ht-degree: 0%
 
 &lt;accountnumbers>
 
-&lt;accountnumber>509840&lt;/accountnumber>
+&lt;accountnumber>郵編：509840&lt;/accountnumber>
 
-&lt;accountnumber>948576&lt;/accountnumber>
+&lt;accountnumber>郵編：948576&lt;/accountnumber>
 
-&lt;accountnumber>398762&lt;/accountnumber>
+&lt;accountnumber>郵編：398762&lt;/accountnumber>
 
-&lt;accountnumber>291723&lt;/accountnumber>
+&lt;accountnumber>郵編：291723&lt;/accountnumber>
 
 &lt;/accountnumbers>
 
@@ -110,9 +110,9 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **若要在本機系統上測試此功能，請依照下列指示進行：**
 
-* 如本文所述，設定Tomcat [。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成樣例資料的war檔案。
-* 如本文所述，設定服務即系統用 [戶](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。
-請確定此系統用戶對以下節點具有讀取權限。 若要將權限登入給使 [用者管理員](https://localhost:4502/useradmin) ，並搜尋系統使用者「資料」，並透過Tabbing至權限標籤，為下列節點提供讀取權限
+* 如本[文章所述，設定Tomcat。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成樣例資料的war檔案。
+* 按照本[文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md)中所述，設定服務即系統用戶。
+請確定此系統用戶對以下節點具有讀取權限。 要將權限登錄給[用戶admin](https://localhost:4502/useradmin)並搜索系統用戶「data」，並通過跳至權限頁籤來授予對以下節點的讀取權限
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
