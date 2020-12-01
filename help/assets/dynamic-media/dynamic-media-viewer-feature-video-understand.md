@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 使用AEM Dynamic Media瞭解資產檢視器{#understanding-the-asset-viewer-with-aem-dynamic-media}
+# 瞭解使用AEM Dynamic Media的資產檢視器{#understanding-the-asset-viewer-with-aem-dynamic-media}
 
 AEM Dynamic Media Viewer增強功能可讓AEM作者定義並自訂將呈現給網站使用者的體驗資產。
 
