@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 管理元件上的即時副本繼承 {#manage-live-copy-component}
+# 管理元件{#manage-live-copy-component}上的即時副本繼承
 
 瞭解如何在元件層級管理即時副本與其Blueprint之間的繼承。
 
