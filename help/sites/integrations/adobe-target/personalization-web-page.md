@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 個人化完整網頁體驗 {#personalization-fpe}
+# 個人化完整網頁體驗{#personalization-fpe}
 
 瞭解如何建立活動，使用Adobe Target將AEM上裝載的網站頁面重新導向至新頁面。
 
@@ -36,27 +36,27 @@ WKND網站重新設計其首頁，並想要將目前的首頁訪客重新導向�
 ## 使用Visual Experience Composer(VEC)建立A/B測試的步驟
 
 1. 登入Adobe Target並導覽至「活動」標籤
-1. 按一 **下「建立活動** 」按鈕，然後選擇 **A/B測試活動** 。
+1. 按一下「建立活動」按鈕，然後選擇「**A/B測試」**&#x200B;活動&#x200B;****
 
    ![A/B活動](assets/ab-target-activity.png)
 
-1. 選取「 **Visual Experience Composer** 」選項、提供「活動URL」，然後按「下一 **步」**
+1. 選擇&#x200B;**Visual Experience Composer**&#x200B;選項，提供活動URL，然後按一下&#x200B;**Next**
 
    ![活動URL](assets/ab-test-url.png)
 
-1. 在您建立新活動後，Visual Experience Composer會在左側顯示兩個標籤： *體驗A**和B*。 從清單中選取體驗。 您可以使用「新增體驗」按鈕，將新的體驗新 **增至清單** 。
+1. 在您建立新活動後，Visual Experience Composer會在左側顯示兩個標籤：*體驗A*&#x200B;和&#x200B;*體驗B*。 從清單中選取體驗。 您可以使用&#x200B;**新增體驗**&#x200B;按鈕，將新體驗新增至清單。
 
    ![體驗選項](assets/experience-options.png)
 
-1. 檢視體驗A的可用選項，然後選取「重 **新導向至URL** 」選項，並提供新WKND網站首頁的URL。
+1. 檢視體驗A的可用選項，然後選取「重新導向至URL **」選項，並提供新WKND網站首頁的URL。**
 
    ![重新導向URL](assets/redirect-url.png)
 
-1. 將 *體驗A重新命名* 為 *新的WKND首頁* ，將 *體驗B* 重新命 *名為WKND首頁*
+1. 將體驗A *重新命名為*&#x200B;新WKND首頁&#x200B;*和*&#x200B;體驗B *重新命名為* WKND首頁&#x200B;**
 
    ![冒險](assets/new-experiences.png)
 
-1. 按一 **下「下一** 步」移至「定位」，並在兩個體驗之間將「手動」流量分配維持在50-50。
+1. 按一下「下一步」移至「定位」，並將兩個體驗之間的「手動」流量分配維持在50-50。****
 
    ![定位](assets/targeting.png)
 
