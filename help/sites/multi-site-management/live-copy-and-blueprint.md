@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 即時文案和藍色印刷 {#livecopy-blueprint}
+# 即時複製和藍色列印{#livecopy-blueprint}
 
 瞭解AEM Sites中即時副本及其Blueprint之間的關係。
 
