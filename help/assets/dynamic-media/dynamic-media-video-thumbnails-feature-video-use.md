@@ -33,4 +33,4 @@ AEM Assets自訂視訊縮圖可讓作者從一組產生的縮圖中選取適當�
 
 >[!NOTE]
 >
->您應在動態 [媒體模式中執行AEM例項](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)
+>您應在Dynamic Media](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)模式中執行[AEM例項
