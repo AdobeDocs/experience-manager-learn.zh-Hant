@@ -31,5 +31,5 @@ AEM的收件匣可協助您進一步協作，並洞悉工作和工作流程。
 * 工作流程資訊主控台
 * 臨機任務建立
 * 任務和工作項目可見性
-* [!DNL Inbox] 與整 [!DNL Omnisearch] 合
-* [!DNL Inbox] 與整 [!DNL AEM Projects] 合
+* [!DNL Inbox] 和整 [!DNL Omnisearch] 合
+* [!DNL Inbox] 和整 [!DNL AEM Projects] 合
