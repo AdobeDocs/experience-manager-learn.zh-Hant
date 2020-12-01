@@ -31,7 +31,7 @@ ht-degree: 0%
 
 下列程式碼會解碼條碼，並使用解碼值填入JSON物件。 然後，servlet會在回應呼叫應用程式時傳回JSON物件。
 
-您可以即時檢視此功能，請造訪範例入口 [網站](https://forms.enablementadobe.com/content/samples/samples.html?query=0) ，並搜尋條碼服務展示
+您可以即時檢視此功能，請造訪[samples portal](https://forms.enablementadobe.com/content/samples/samples.html?query=0)並搜尋條碼服務展示
 
 ```java
 public JSONObject extractBarCode(Document pdfDocument) {
@@ -146,11 +146,11 @@ $(document).ready(function()
 
 若要在您的系統上執行此程式，請依照下列步驟進行
 
-1. [下載BarcodeService.zip](assets/barcodeservice.zip) ，並使用套件管理器匯入AEM
+1. [下載BarcodeService.](assets/barcodeservice.zip) zip並使用套件管理器匯入AEM
 1. [下載並安裝自訂DocumentServices套件](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [下載並安裝DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下載範例PDF表格](assets/barcode.pdf)
-1. 將您的瀏覽器指向范 [例最適化表單](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. 將瀏覽器指向[示例自適應表單](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
 1. 上傳提供的範例PDF
 1. 您應看到填入資料的表單
 
