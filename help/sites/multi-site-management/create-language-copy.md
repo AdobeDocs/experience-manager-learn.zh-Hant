@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 建立語言副本 {#create-language-copy}
+# 建立語言副本{#create-language-copy}
 
 探索如何使用「建立語言副本」精靈為AEM網站建立語言副本。
 
