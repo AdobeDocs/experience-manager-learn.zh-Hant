@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 建立國家網站 {#create-country-site}
+# 建立國家／地區網站{#create-country-site}
 
 瞭解如何使用「建立網站」精靈，從現有的語言副本建立國家網站。
 
