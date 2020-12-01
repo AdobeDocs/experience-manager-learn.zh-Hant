@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 建立檔案片段以保存收件者名稱和位址 {#creating-document-fragments-to-hold-the-recipient-name-and-address}
+# 建立文檔片段以保存收件人名稱和地址{#creating-document-fragments-to-hold-the-recipient-name-and-address}
 
 在本部分，我們將建立文檔片段以保存收件人的名稱和地址。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 富格文字編輯器的直覺性足夠讓商業使用者編寫文字並插入表單資料元素。 檔案片段編輯器可設定文字格式、指定字型類型和樣式、插入特殊字元並建立超連結。
 
-檔案片段編輯器也能將內嵌條件插入文字，如此影片所 [示](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+檔案片段編輯器還能將內嵌條件插入文字中，如本[影片](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)所示
 
 >[!NOTE]
 >
