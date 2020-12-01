@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在最適化表單提交上建立促銷活動描述檔 {#creating-campaign-profile-on-adaptive-form-submission}
+# 在最適化表單提交上建立促銷活動描述檔{#creating-campaign-profile-on-adaptive-form-submission}
 
 本文將說明在Adobe Campaign Standard中針對最適化表單提交建立描述檔所需的步驟。 此程式使用自訂提交機制來處理最適化表單提交。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 * 建立自訂提交動作以處理最適化表單提交
 * 叫用CampaignService的createProfile方法
 
-## 建立AEM服務 {#create-aem-service}
+## 建立AEM服務{#create-aem-service}
 
 建立AEM服務以建立Adobe Campaign設定檔。 此AEM服務將從OSGI設定擷取Adobe Campaign認證。 在取得促銷活動認證後，就會產生存取Token，並使用存取Token HTTP Post呼叫，在Adobe Campaign中建立描述檔。 以下是建立描述檔的程式碼。
 
@@ -245,11 +245,11 @@ return null;
 }
 ```
 
-## Custom Submit {#custom-submit}
+## 自訂提交{#custom-submit}
 
 建立自訂的提交處理常式，以處理Adaptive Form的提交。 在此自訂提交處理常式中，我們會呼叫CampaignService的createProfile方法。 createProfile方法接受表示需要建立的配置檔案的JSONObject。
 
-若要進一步瞭解AEM Forms中的自訂提交處理常式，請遵循此連 [結](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
+若要進一步瞭解AEM Forms中的自訂提交處理常式，請遵循此[link](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
 
 以下是自訂提交中的程式碼
 
@@ -264,13 +264,13 @@ profile.addProperty("mobilePhone",request.getParameter("phone"));
 String pkey = addNewProfile.createProfile(profile);
 ```
 
-## 測試解決方案 {#test-the-solution}
+## 測試解決方案{#test-the-solution}
 
 一旦我們定義了服務和自訂提交動作，就可以測試我們的解決方案。 若要測試解決方案，請執行下列步驟
 
 
 * [請確定您已依照此處所述的步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [使用包管理器導入最適化表單和自定義提交處理程式](assets/create-acs-profile-on-af-submission.zip)。此包包含配置為提交到自定義提交操作的最適化表單。
-* 預覽表 [格](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
+* 預覽[form](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * 填寫所有欄位並提交
 * 將在您的ACS實例中建立新配置檔案
