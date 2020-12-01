@@ -22,7 +22,7 @@ ht-degree: 2%
 
 互動式通訊是AEM Forms 6.4的新手。本檔案將逐步引導您建立適用於列印頻道的互動式通訊。
 
-請造訪 [AEM Forms範例頁面](https://forms.enablementadobe.com/content/samples/samples.html?query=0) ，以取得此功能的即時示範連結。
+請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)頁面，以取得此功能的即時示範連結。
 
 ## 必備條件 {#prerequistes}
 
