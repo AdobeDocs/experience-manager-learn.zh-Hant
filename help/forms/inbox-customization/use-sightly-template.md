@@ -18,13 +18,14 @@ ht-degree: 0%
 
 # 使用Sightly範本顯示收件匣資料
 
-您可以使用Sightly範本來格式化要顯示在收件匣欄中的資料。 在此範例中，我們會根據收入欄的值來顯示coral-ui圖示。 以下螢幕抓圖顯示收入列表徵圖的![使用情況](assets/income-column.PNG)
+您可以使用Sightly範本來格式化要顯示在收件匣欄中的資料。 在此範例中，我們會根據收入欄的值來顯示coral-ui圖示。 以下螢幕抓圖顯示收入列中表徵圖的使用
+![income-icons](assets/income-column.PNG)
 
-[本文提供](assets/sightly-template.zip) sightly範本，用來顯示自訂珊瑚UI圖示。
+[本文](assets/sightly-template.zip) 中提供用來顯示自訂珊瑚UI圖示的美觀範本。
 
 ## Sightly範本
 
-Following is the sightly template. 範本中的程式碼會根據收入顯示圖示。 AEM隨附的Coral [ui圖示庫中](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) ，提供這些圖示。
+Following is the sightly template. 範本中的程式碼會根據收入顯示圖示。 這些圖示是隨附於AEM的[coral ui圖示庫](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)的一部分。
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -78,7 +79,7 @@ return val;
 
 >[!NOTE]
 >
->本文假設您已安裝本系 [列先前文章的](assets/review-workflow.zip)[範例工作流程](assets/snap-form.zip) 和範例表單 [](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/inbox-customization/add-married-column.md) 。
+>本文假設您已安裝本系列中[先前文章](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/inbox-customization/add-married-column.md)的[範例工作流程](assets/review-workflow.zip)和[範例表單](assets/snap-form.zip)。
 
 * [以管理員使用者身分登入crx](http://localhost:4502/crx/de/index.jsp)
 * [匯入高雅的範本](assets/sightly-template.zip)
@@ -88,7 +89,7 @@ return val;
 * 按一下「建立」按鈕旁的「清單檢視」，以開啟「管理控制項」
 * 將收入列添加到收件箱並保存您所做的更改
 * [預覽表格](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* 選擇婚 _姻狀態_ ，並提交表單
+* 選擇&#x200B;_婚姻狀態_&#x200B;並提交表單
 * [查看收件箱](http://localhost:4502/aem/inbox)
 
 提交表單會觸發工作流程，並指派工作給「管理員」使用者。 您應該會在收入欄下看到適當的圖示
