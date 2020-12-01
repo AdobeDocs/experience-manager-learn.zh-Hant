@@ -21,7 +21,7 @@ ht-degree: 13%
 ---
 
 
-# 瞭解使用AEM Dynamic Media進行色彩管理{#understanding-color-management-with-aem-dynamic-media}
+# 瞭解使用AEM Dynamic Media的色彩管理{#understanding-color-management-with-aem-dynamic-media}
 
 在此影片中，我們將探索「動態媒體色彩管理」，以及如何使用它來提供AEM Assets的色彩校正預覽功能。
 
@@ -29,11 +29,11 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->[在AEM中啟用Dynamic Media](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) ，以使用此功能。
+>[啟用Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Mediain AEM以使用此功能。
 
 此功能適用於AEM 6.1和6.2版本的功能套件。
 
-## 色彩管理配置節點的XML模板 {#xml-template-for-the-color-management-configuration-node}
+## 色彩管理配置節點{#xml-template-for-the-color-management-configuration-node}的XML模板
 
 以下是「色彩管理」設定節點的XML範本。 此XML範本可複製至AEM開發專案，並以專案適當的設定進行設定。
 
@@ -91,15 +91,15 @@ ht-degree: 13%
 />
 ```
 
-### 預設Adobe色彩描述檔清單列於下方 {#list-of-default-adobe-color-profiles-are-listed-below}
+### 預設Adobe色彩描述檔清單列於{#list-of-default-adobe-color-profiles-are-listed-below}下方
 
 | 名稱 | 色彩空間 | 說明 |
 | ------------------- | ---------- | ------------------------------------- |
 | AdobeRGB | RGB | Adobe RGB(1998) |
 | AppleRGB | RGB | Apple RGB |
 | CIERGB | RGB | CIE RGB |
-| CoatedFogra27 | CMYK | 塗覆FOGRA27(ISO 12647-2:2004) |
-| CoatedFogra39 | CMYK | 塗覆FOGRA39(ISO 12647-2:2004) |
+| CobatedFogra27 | CMYK | 塗覆FOGRA27(ISO 12647-2:2004) |
+| CobatedFogra39 | CMYK | 塗覆FOGRA39(ISO 12647-2:2004) |
 | CobatedGraCol | CMYK | 塗層GRACoL 2006(ISO 12647-2:2004) |
 | ColorMatchRGB | RGB | ColorMatch RGB |
 | EuropeISOCoated | CMYK | 歐洲ISO塗層FOGRA27 |
@@ -120,11 +120,11 @@ ht-degree: 13%
 | 張紙未塗覆 | CMYK | 美國張紙未塗覆v2 |
 | SMPTE | RGB | SMPTE-C |
 | sRGB | RGB sRGB | IEC61966-2.1 |
-| UncoatedFogra29 | CMYK | 未塗覆的FOGRA29(ISO 12647-2:2004) |
+| UncovedFogra29 | CMYK | 未塗覆的FOGRA29(ISO 12647-2:2004) |
 | WebCoated | CMYK | 美國網衣(SWOP)v2 |
 | WebCoatedFogra28 | CMYK | 網頁塗層FOGRA28(ISO 12647-2:2004) |
 | WebCoatedGrade3 | CMYK | 塗網SWOP 2006三級紙 |
-| WebCoatedGrade5 | CMYK | 塗網SWOP 2006五級紙 |
+| WebCobatedGrade5 | CMYK | 塗網SWOP 2006五級紙 |
 | WebUncoated | CMYK | U.S. Web Uncoved v2 |
 | 寬色域RGB | RGB | 寬色域RGB |
 
