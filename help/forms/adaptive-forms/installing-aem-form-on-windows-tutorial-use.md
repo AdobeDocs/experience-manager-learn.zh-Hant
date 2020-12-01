@@ -40,14 +40,14 @@ ht-degree: 1%
 >* Microsoft Visual C++ 2013可重新分發（截止至6.5日）
 
 
-雖然我們建議依照正式 [檔案](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) ，安裝AEM Forms。 請依照下列步驟，在Windows環境中安裝及設定AEM Forms:
+雖然我們建議依照[官方檔案](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)安裝AEM Forms。 請依照下列步驟，在Windows環境中安裝及設定AEM Forms:
 
 * 請確定您已安裝適當的JDK
    * AEM 6.2，您需要：Oracle SE 8 JDK 1.8.x（64位）
 * 
    * AEM 6.3和AEM 6.4，您需要：Oracle SE 8 JDK 1.8.x（64位）
 * AEM 6.5需要JDK 8或JDK 11
-* [此處列出了正式的JDK要求](https://helpx.adobe.com/experience-manager/6-3/sites/deploying/using/technical-requirements.html) 。
+* [此處列](https://helpx.adobe.com/experience-manager/6-3/sites/deploying/using/technical-requirements.html) 出正式JDK要求
 * 請確定JAVA_HOME已設定為指向已安裝的JDK。
    * 要在Windows中建立JAVA_HOME變數，請執行以下步驟：
       * 按一下右鍵「My Computer（我的電腦）」 ，然後選擇「Properties（屬性）」
@@ -70,7 +70,7 @@ ht-degree: 1%
 * 啟動完成後，請開啟sling.properties檔案。 這位於c:\AEMForms\crx-quickstart\conf folder。
 
 * 將下列2行複製到檔案底部
-   * **sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa。*****sling.bootdelegation.class.org.bouncycastle.jce.provider.BuncyCastleProvider=org.buncycastle.***
+   * **sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa。*** **sling.bootdelegation.class.org.bouncycastle.jce.provider.BuncyCastleProvider=org.bouncycastle.***
 * 檔案服務必須具備這兩個屬性才能運作
 * 儲存sling.properties檔案
 
@@ -78,20 +78,20 @@ ht-degree: 1%
 
    * 您需要AdobeId才能登入以套件共用
    * 搜尋適合您AEM Forms和作業系統版本的AEM Forms Add on套件
-   * 或者 [您可以下載適當的表單addon套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
+   * 或者，您也可以下載適當的表單addon package[](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
    * 安裝Add on軟體包後，需要遵循以下步驟
 
-      * **請確定所有束都處於活動狀態。 （AEMFD簽名套裝除外）。**
+      * **請確定所有束都處於活動狀態。（除AEMFD簽名套裝外）。**
       * **所有捆綁包通常需要5分鐘或更長時間才能進入活動狀態。**
    * **當所有整合都生效（AEMFD簽章整合除外）後，請重新啟動您的系統以完成AEM Forms安裝**
 
 
-* 將包 `sun.util.calendar` 添加到允許的清單：
+* 將`sun.util.calendar`軟體包添加到允許的清單：
 
-   1. 在您的瀏覽器視窗中開啟Felix網 [頁主控台](http://localhost:4502/system/console/configMgr)
-   2. 搜索並開啟還原序列化防火牆配置： `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
-   3. 新增 `sun.util.calendar` 為 `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
+   1. 在您的[瀏覽器視窗](http://localhost:4502/system/console/configMgr)中開啟Felix網頁主控台
+   2. 搜索並開啟還原序列化防火牆配置：`com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
+   3. 在`com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`下將`sun.util.calendar`新增為新項目
    4. 儲存變更。
 
 恭喜！!! 您現在已在您的系統上安裝並設定AEM Forms。
-視您的需求而定，您可以在 [伺服器上設定](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html) Reader Extensions [ 或](https://helpx.adobe.com/experience-manager/6-3/forms/using/install-configure-pdf-generator.html) PDFG
+視您的需求而定，您可在伺服器上設定[Reader Extensions](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)或[ PDFG](https://helpx.adobe.com/experience-manager/6-3/forms/using/install-configure-pdf-generator.html)
