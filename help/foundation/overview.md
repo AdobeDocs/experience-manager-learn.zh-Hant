@@ -14,12 +14,12 @@ ht-degree: 18%
 
 # 概覽 {#overview}
 
-Adobe Experience Manager為AEM Sites的使用者提供一組通用的功 [!DNL Assets] 能 [!DNL Forms]。
+Adobe Experience Manager為AEM Sites、[!DNL Assets]和[!DNL Forms]的使用者提供一組通用的功能。
 
 ## 新增功能
 
 * **[在AEM（視訊）中使用工作流程管理](./workflow/use-workflow-management.md)**
-   *AEM可洞悉執行中的工作流程，並簡化定義的 [!DNL Workflow] 管理。*
+   *AEM可洞悉執行中的工作流程，並簡化定義 [!DNL Workflow] 管理。*
 
 * **[瞭解Cloud Manager for AEM（視訊）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
    *Cloud Manager for AEM可讓您輕鬆管理、檢查和自助服務AEM環境。*
