@@ -18,25 +18,25 @@ ht-degree: 0%
 ---
 
 
-# 新增導覽和路由 {#navigation-routing}
+# 添加導航和路由{#navigation-routing}
 
 透過SPA編輯器SDK對應至AEM頁面，瞭解如何支援SPA中的多個檢視。 動態導航是使用React Router實現的，並添加到現有的Header元件中。
 
 ## 目標
 
 1. 瞭解使用SPA編輯器時可用的SPA模型路由選項。
-1. 瞭解如何使 [用React Router](https://reacttraining.com/react-router/) ，在SPA的不同視圖之間導航。
+1. 瞭解如何使用[ React Router](https://reacttraining.com/react-router/)在SPA的不同視圖之間導航。
 1. 實作由AEM頁面階層驅動的動態導覽。
 
 ## 您將建立的
 
-本章將向現有元件添加導航 `Header` 菜單。 導覽功能表將由AEM頁面階層所驅動，並將運用「導覽核心元件」提供的 [JSON模型](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)。
+本章將向現有`Header`元件添加導航菜單。 導覽功能表將由AEM頁面階層所驅動，並將運用[導覽核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)所提供的JSON模型。
 
 ![實作導覽](assets/navigation-routing/final-navigation-implemented.gif)
 
 ## 必備條件
 
-檢視建立本機開發環境所需的工 [具和指示](overview.md#local-dev-environment)。
+檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。
 
 ### 取得程式碼
 
@@ -54,30 +54,30 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   如果使用 [AEM 6.x](overview.md#compatibility) ，請新增 `classic` 描述檔：
+   如果使用[AEM 6.x](overview.md#compatibility)新增`classic`描述檔：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-1. 為傳統的 [WKND參考站點安裝完成的軟體包](https://github.com/adobe/aem-guides-wknd/releases/latest)。 WKND參考網 [站提供的影像](https://github.com/adobe/aem-guides-wknd/releases/latest) ，將重新用於WKND SPA。 您可使用 [AEM的Package Manager來安裝套件](http://localhost:4502/crx/packmgr/index.jsp)。
+1. 為傳統[WKND參考站點](https://github.com/adobe/aem-guides-wknd/releases/latest)安裝完成的軟體包。 由[WKND參考站點](https://github.com/adobe/aem-guides-wknd/releases/latest)提供的影像將重新用於WKND SPA。 可使用[AEM的Package Manager](http://localhost:4502/crx/packmgr/index.jsp)安裝套件。
 
    ![Package Manager install wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
-您隨時都可以在 [GitHub上檢視完成的程式碼](https://github.com/adobe/aem-guides-wknd-spa/tree/React/navigation-routing-solution) ，或切換至分支，在本機檢出程式碼 `React/navigation-routing-solution`。
+您隨時都可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/React/navigation-routing-solution)上檢視完成的程式碼，或切換至分支`React/navigation-routing-solution`，在本機檢出程式碼。
 
-## 檢查頁首更新 {#inspect-header}
+## 檢查標題更新{#inspect-header}
 
-在前幾章中，元 `Header` 件是以純React元件的形式加入，透過 `App.js`。 在本章中，元件 `Header` 已被刪除，將通過模板編輯器 [添加](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)。 這可讓使用者在AEM中設定導 `Header` 覽功能表。
+在前幾章中，`Header`元件被新增為透過`App.js`所包含的純React元件。 在本章中，`Header`元件已被刪除，將通過[模板編輯器](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)添加。 這可讓使用者從AEM中設定`Header`的導覽功能表。
 
 >[!NOTE]
 >
-> 已對程式碼庫進行數項CSS和JavaScript更新，以開始本章節。 為了集中討論核心概念，並 **非所有** 、程式碼的變更。 您可以在這裡檢視完整 [變更](https://github.com/adobe/aem-guides-wknd-spa/compare/React/map-components-solution...React/navigation-routing-start)。
+> 已對程式碼庫進行數項CSS和JavaScript更新，以開始本章節。 為了集中討論核心概念，不討論代碼更改的&#x200B;**all**。 您可以在[這裡](https://github.com/adobe/aem-guides-wknd-spa/compare/React/map-components-solution...React/navigation-routing-start)檢視完整變更。
 
 1. 在您選擇的IDE中，開啟本章的SPA啟動程式項目。
-1. 在模組 `ui.frontend` 下方，檢查檔案 `Header.js` 位置： `ui.frontend/src/components/Header/Header.js`.
+1. 在`ui.frontend`模組下，檢查檔案`Header.js` :`ui.frontend/src/components/Header/Header.js`。
 
-   已進行數項更新，包括新增 `HeaderEditConfig` 和 `MapTo` 以讓元件對應至AEM元件 `wknd-spa-react/components/header`。
+   已進行數項更新，包括新增`HeaderEditConfig`和`MapTo`，讓元件可對應至AEM元件`wknd-spa-react/components/header`。
 
    ```js
    /* Header.js */
@@ -89,7 +89,7 @@ ht-degree: 0%
    MapTo('wknd-spa-react/components/header')(withRouter(Header), HeaderEditConfig);
    ```
 
-1. 在模 `ui.apps` 塊中檢查AEM元件的元件定 `Header` 義： `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/header/.content.xml`:
+1. 在`ui.apps`模組中，檢查AEM `Header`元件的元件定義：`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/header/.content.xml`:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -101,49 +101,49 @@ ht-degree: 0%
        componentGroup="WKND SPA React - Structure"/>
    ```
 
-   AEM元 `Header` 件將透過屬性繼承 [Navigation Core Component的所有](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)`sling:resourceSuperType` 功能。
+   AEM `Header`元件將透過`sling:resourceSuperType`屬性繼承[導覽核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)的所有功能。
 
-## 將頁首新增至範本 {#add-header-template}
+## 將標題新增至範本{#add-header-template}
 
-1. 開啟瀏覽器並登入AEM, [http://localhost:4502/](http://localhost:4502/)。 應已部署起始代碼庫。
-1. 導覽至 **SPA頁面範本**: [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
-1. 選取最外層的「根版 **面配置容器」** ，然後按一下 **「原則** 」圖示。 請小 **心不要選取** 「版面容器 **」(Layout Container** )解除鎖定以進行製作。
+1. 開啟瀏覽器並登入AEM,[http://localhost:4502/](http://localhost:4502/)。 應已部署起始代碼庫。
+1. 導覽至&#x200B;**SPA頁面範本**:[http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html)。
+1. 選擇最外層的&#x200B;**根佈局容器** ，然後按一下其&#x200B;**策略**&#x200B;表徵圖。 請務必&#x200B;**not**，以選擇&#x200B;**版面容器**&#x200B;未鎖定以進行編寫。
 
    ![選取根配置容器原則圖示](assets/navigation-routing/root-layout-container-policy.png)
 
-1. 建立名為 **SPA結構的新策略**:
+1. 建立名為&#x200B;**SPA結構**&#x200B;的新策略：
 
    ![SPA結構政策](assets/navigation-routing/spa-policy-update.png)
 
-   在「允 **許的元件** >一般 **」(Allowed Components** ) **>選取「** 版面容器」(Layout Container)元件。
+   在「**允許的元件** > **一般** >」下，選擇「版面容器&#x200B;**」元件。**
 
-   在「 **允許的元件** > **WKND SPA REACT - STRUCTURE** >選取標題元 **件** :
+   在「**允許的元件** > **WKND SPA REACT - STRUCTURE**」下，選擇&#x200B;**標題**&#x200B;元件：
 
    ![選擇標題元件](assets/navigation-routing/select-header-component.png)
 
-   在「 **允許的元件** > **WKND SPA REACT —— 內容** >選取影 **像** 和文字 **** 元件」下。 您應選取總共4個元件。
+   在「**允許的元件** > **WKND SPA REACT —— 內容**」下，選擇&#x200B;**Image**&#x200B;和&#x200B;**Text**&#x200B;元件。 您應選取總共4個元件。
 
-   Click **Done** to save the changes.
+   按一下&#x200B;**Done**&#x200B;保存更改。
 
-1. 重新整理頁面，並在未鎖定的 **版面容器上方新增** 標題元件 ****:
+1. 重新整理頁面，並在未鎖定的&#x200B;**版面容器**&#x200B;上方新增&#x200B;**Header**&#x200B;元件：
 
    ![將標題元件新增至範本](./assets/navigation-routing/add-header-component.gif)
 
-1. 選擇標 **頭元件** ，然後按一下其 **** 策略表徵圖以編輯策略。
-1. 使用 **WKND SPA標題的策略標題** ，創 **建新策略**。
+1. 選擇&#x200B;**標題**&#x200B;元件，然後按一下其&#x200B;**策略**&#x200B;表徵圖以編輯策略。
+1. 使用&#x200B;**WKND SPA標題**&#x200B;的&#x200B;**策略標題**&#x200B;建立新策略。
 
-   在「屬 **性**:
+   在&#x200B;**屬性**&#x200B;下：
 
-   * 將「導 **覽根** 」設為 `/content/wknd-spa-react/us/en`。
-   * 將「排 **除根層級** 」設 **為1**。
-   * Uncheck **Collect all child pages**.
-   * 將「導 **覽結構深度** 」設 **為3**。
+   * 將&#x200B;**導覽根**&#x200B;設為`/content/wknd-spa-react/us/en`。
+   * 將&#x200B;**排除根級別**&#x200B;設定為&#x200B;**1**。
+   * 取消選中&#x200B;**收集所有子頁**。
+   * 將&#x200B;**導覽結構深度**&#x200B;設為&#x200B;**3**。
 
    ![配置標題策略](assets/navigation-routing/header-policy.png)
 
-   這會收集深處的導覽2層級 `/content/wknd-spa-react/us/en`。
+   這會收集`/content/wknd-spa-react/us/en`下方深處的導覽2層級。
 
-1. 儲存變更後，您應將填入的變 `Header` 更視為範本的一部分：
+1. 儲存變更後，您應將填入的`Header`視為範本的一部分：
 
    ![填入的標題元件](assets/navigation-routing/populated-header.png)
 
@@ -151,28 +151,28 @@ ht-degree: 0%
 
 接著，在AEM中建立其他頁面，做為SPA中的不同檢視。 我們也會檢查AEM提供的JSON模型階層結構。
 
-1. 導覽至 **Sites** Console: [http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home). 選擇 **WKND SPA React首頁** ，然後單 **擊建立****>**&#x200B;頁：
+1. 導覽至&#x200B;**Sites**&#x200B;主控台：[http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home)。 選擇&#x200B;**WKND SPA React Home Page** ，然後按一下&#x200B;**建立** > **頁** :
 
    ![建立新頁面](assets/navigation-routing/create-new-page.png)
 
-1. 在「模 **板** 」下 **選擇「SPA頁面」**。 在「 **屬性** 」下， **為Title** - **1輸入Page 1，並****** 將page-1作為名稱。
+1. 在&#x200B;**Template**&#x200B;下，選擇&#x200B;**SPA頁**。 在&#x200B;**Properties**&#x200B;下輸入&#x200B;**Page 1**&#x200B;作為&#x200B;**Title**&#x200B;和&#x200B;**page-1**&#x200B;的名稱。
 
    ![輸入初始頁面屬性](assets/navigation-routing/initial-page-properties.png)
 
-   按一 **下「建立** 」，然後在對話方塊快顯視窗中，按一下「 **開啟** 」以在AEM SPA編輯器中開啟頁面。
+   按一下「建立」**，然後在對話方塊快顯視窗中，按一下「開啟」**&#x200B;以在AEM SPA編輯器中開啟頁面。****
 
-1. 將新的 **Text** 元件新增至主 **版面容器**。 編輯元件並輸入文本： **第1頁** (使用RTE和 **H1** 元素)（您必須進入全屏模式才能更改段落元素）
+1. 將新的&#x200B;**Text**&#x200B;元件新增至主&#x200B;**版面容器**。 編輯元件並輸入文本：**使用RTE和** H1 **元素的第1**&#x200B;頁（您必須進入全螢幕模式才能變更段落元素）
 
    ![範例內容頁面1](assets/navigation-routing/page-1-sample-content.png)
 
    您可以隨意新增其他內容，例如影像。
 
-1. 返回AEM Sites主控台並重複上述步驟，建立名為 **Page 2** 的第二頁，作為 **Page 1的同級**。
-1. 最後，請建立第三頁( **第3頁** )，但 **以第** 2頁 **的子**&#x200B;頁身分。 完成網站階層後，網站階層應如下所示：
+1. 返回AEM Sites主控台並重複上述步驟，建立名為&#x200B;**Page 2**&#x200B;的第二頁，作為&#x200B;**Page 1**&#x200B;的同級頁面。
+1. 最後，建立第三頁，**第3**&#x200B;頁，但作為&#x200B;**第2**&#x200B;頁的&#x200B;**子**。 完成網站階層後，網站階層應如下所示：
 
    ![網站階層範例](assets/navigation-routing/wknd-spa-sample-site-hierarchy.png)
 
-1. 在新標籤中，開啟AEM提供的JSON模型API: [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). 首次載入SPA時，會要求此JSON內容。 外部結構如下所示：
+1. 在新標籤中，開啟AEM提供的JSON模型API:[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)。 首次載入SPA時，會要求此JSON內容。 外部結構如下所示：
 
    ```json
    {
@@ -195,25 +195,25 @@ ht-degree: 0%
    }
    ```
 
-   在下 `:children` 方，您應該會看到每個已建立頁面的項目。 所有頁面的內容都在此初始JSON請求中。 一旦實施導航路由，SPA的後續視圖將被快速載入，因為內容已經可在客戶端使用。
+   在`:children`下，您應該會看到每個已建立頁面的項目。 所有頁面的內容都在此初始JSON請求中。 一旦實施導航路由，SPA的後續視圖將被快速載入，因為內容已經可在客戶端使用。
 
-   在初始JSON請求中載 **入SPA的ALL** ，並不明智，因為這會減緩初始頁面載入的速度。 接下來，讓我們來瞭解如何收集頁面的階層深度。
+   在初始JSON請求中載入SPA內容的&#x200B;**ALL**&#x200B;並不明智，因為這會減緩初始頁面載入的速度。 接下來，讓我們來瞭解如何收集頁面的階層深度。
 
-1. 導覽至 **SPA根模板** ，網址為： [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html).
+1. 導覽至&#x200B;**SPA Root**&#x200B;範本，網址為：[http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html)。
 
-   按一下「 **頁面屬性」功能表** > **頁面原則**:
+   按一下&#x200B;**頁面屬性菜單** > **頁面策略**:
 
    ![開啟SPA根目錄的頁面原則](assets/navigation-routing/open-page-policy.png)
 
-1. **SPA根範本** ，有額外的「階層 **** 結構」索引標籤來控制所收集的JSON內容。 「結 **構深度** 」可決定網站階層中根目錄下收集子頁面的深 **度**。 您也可以使用「結 **構模式」欄位** ，根據規則運算式篩選掉其他頁面。
+1. **SPA Root**&#x200B;範本有額外的&#x200B;**階層結構**&#x200B;標籤，以控制所收集的JSON內容。 **結構深度**&#x200B;可決定在網站階層中收集&#x200B;**root**&#x200B;下方子頁面的深度。 您也可以使用&#x200B;**結構模式**&#x200B;欄位，根據規則運算式來篩選其他頁面。
 
-   將「結構 **深度** 」更新 **為2**:
+   將&#x200B;**結構深度**&#x200B;更新為&#x200B;**2**:
 
    ![更新結構深度](assets/navigation-routing/update-structure-depth.png)
 
-   按一 **下「完成** 」以儲存對原則所做的變更。
+   按一下&#x200B;**Done**&#x200B;保存對策略所做的更改。
 
-1. 重新開啟JSON模型 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)。
+1. 重新開啟JSON模型[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)。
 
    ```json
    {
@@ -235,15 +235,15 @@ ht-degree: 0%
    }
    ```
 
-   請注意， **Page 3** path已移除： `/content/wknd-spa-react/us/en/home/page-2/page-3` 從初始JSON模型。
+   請注意，**第3頁**&#x200B;路徑已移除：`/content/wknd-spa-react/us/en/home/page-2/page-3`。
 
    稍後，我們將觀察AEM SPA Editor SDK如何動態載入其他內容。
 
 ## 實作導覽
 
-接著，實作導覽功能表作為的一部分 `Header`。 我們可以直接在中加入程式碼， `Header.js` 但更好的做法是避免使用大型元件。 相反地，我們將實作 `Navigation` SPA元件，稍後可能會重新使用。
+接著，將導覽功能表作為`Header`的一部分實作。 我們可以直接在`Header.js`中新增程式碼，但更好的做法是避免使用大型元件。 相反地，我們將實作`Navigation` SPA元件，稍後可能會重新使用。
 
-1. 檢視AEM元件公開的JSON，網址 `Header` 為 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json):
+1. 檢視AEM `Header`元件公開的JSON，網址為[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json):
 
    ```json
    ...
@@ -295,25 +295,25 @@ ht-degree: 0%
    ":type": "wknd-spa-react/components/header"
    ```
 
-   AEM頁面的階層性質是以JSON為模型，可用來填入導覽功能表。 請記得， `Header` 元件繼承了導覽核心元件的所有功能 [](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html) ，透過JSON公開的內容會自動對應至React prop。
+   AEM頁面的階層性質是以JSON為模型，可用來填入導覽功能表。 請記住，`Header`元件繼承了[導覽核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)的所有功能，透過JSON公開的內容會自動對應至React prop。
 
-1. 開啟新的終端窗口並導航到SPA `ui.frontend` 項目的資料夾。 使用 **命令啟動webpack-dev-server**`npm start`。
+1. 開啟新的終端窗口，並導航到SPA項目的`ui.frontend`資料夾。 使用命令`npm start`啟動&#x200B;**webpack-dev-server**。
 
    ```shell
    $ cd ui.frontend
    $ npm start
    ```
 
-1. 開啟新的瀏覽器標籤並導覽至 [http://localhost:3000/](http://localhost:3000/)。
+1. 開啟新的瀏覽器標籤並導覽至[http://localhost:3000/](http://localhost:3000/)。
 
-   應 **將webpack-dev-server** 設定為從AEM()的本機例項代理JSON模型`ui.frontend/.env.development`。 這可讓我們直接針對先前練習中在AEM中建立的內容進行程式碼編寫。 請確定您已在相同的瀏覽工作階段中驗證為AEM。
+   應將&#x200B;**webpack-dev-server**&#x200B;設定為從AEM的本機例項(`ui.frontend/.env.development`)代理JSON模型。 這可讓我們直接針對先前練習中在AEM中建立的內容進行程式碼編寫。 請確定您已在相同的瀏覽工作階段中驗證為AEM。
 
    ![菜單切換工作](./assets/navigation-routing/nav-toggle-static.gif)
 
-   目前 `Header` 的功能表切換功能已經實作。 接著，實施導覽功能表。
+   `Header`目前已實作功能表切換功能。 接著，實施導覽功能表。
 
-1. 返回您選擇的IDE，並開啟 `Header.js` at `ui.frontend/src/components/Header/Header.js`。
-1. 更新 `homeLink()` 方法以移除硬式編碼字串，並使用AEM元件傳入的動態prop:
+1. 返回您選擇的IDE，並在`ui.frontend/src/components/Header/Header.js`處開啟`Header.js`。
+1. 更新`homeLink()`方法以移除硬式編碼字串，並使用AEM元件傳入的動態prop:
 
    ```js
    /* Header.js */
@@ -329,11 +329,11 @@ ht-degree: 0%
    ...
    ```
 
-   上述程式碼將根據元件所設定的根導覽項目填入URL。 `homeLink()` 用於在方法中填入標 `logo()` 志，並用於確定是否應在中顯示背面按鈕 `backButton()`。
+   上述程式碼將根據元件所設定的根導覽項目填入URL。 `homeLink()` 用於在方法中填入標 `logo()` 志，並用於確定是否應在中顯示「上一頁」按鈕 `backButton()`。
 
-   保存更改 `Header.js`。
+   保存對`Header.js`的更改。
 
-1. 在頂部添加一行，以 `Header.js` 將元件導入 `Navigation` 到其他導入的下方：
+1. 在`Header.js`頂部添加一行，將`Navigation`元件導入到其它導入項下：
 
    ```js
    /* Header.js */
@@ -341,7 +341,7 @@ ht-degree: 0%
    import Navigation from '../Navigation/Navigation';
    ```
 
-1. 下一步更新 `get navigation()` 方法以實例化 `Navigation` 元件：
+1. 下一步更新`get navigation()`方法以實例化`Navigation`元件：
 
    ```js
    /* Header.js */
@@ -353,9 +353,9 @@ ht-degree: 0%
    ...
    ```
 
-   如前所述，我們將實施元件中的大 `Header` 部分邏輯，而不是在元件中實施導 `Navigation` 航。  prop包含建 `Header` 立功能表所需的JSON結構，我們會傳遞所有prop。
-1. 在中開啟 `Navigation.js` 檔案 `ui.frontend/src/components/Navigation/Navigation.js`。
-1. 實作方 `renderGroupNav(children)` 法：
+   如前所述，我們將實作`Navigation`元件中的大部分邏輯，而不是在`Header`中實作導覽。  `Header`的prop包含建立功能表所需的JSON結構，我們會傳遞所有prop。
+1. 在`ui.frontend/src/components/Navigation/Navigation.js`開啟檔案`Navigation.js`。
+1. 實施`renderGroupNav(children)`方法：
 
    ```js
    /* Navigation.js */
@@ -375,9 +375,9 @@ ht-degree: 0%
    ...
    ```
 
-   此方法會取用導覽項目的陣列， `children`並建立未排序的清單。 然後，它會重複陣列，並將項目傳遞至 `renderNavItem`，接下來將實施。
+   此方法會取用導覽項目的陣列`children`，並建立未排序的清單。 然後，它會重複陣列，並將項目傳遞至`renderNavItem`，該&lt;a0/>將在下一個實施。
 
-1. 實作 `renderNavItem`:
+1. 實施`renderNavItem`:
 
    ```js
    /* Navigation.js */
@@ -396,17 +396,17 @@ ht-degree: 0%
    ...
    ```
 
-   此方法會轉譯清單項目，其中CSS類別會根據屬性 `level` 和 `active`。 然後，方法會 `renderLink` 呼叫以建立錨點標籤。 由於內 `Navigation` 容是分層的，因此使用遞歸策略來調 `renderGroupNav` 用當前項的子項。
+   此方法會轉譯清單項目，其中CSS類別會根據屬性`level`和`active`轉換。 然後，方法會呼叫`renderLink`以建立錨記。 由於`Navigation`內容是分層的，因此使用遞歸策略來調用當前項的子項的`renderGroupNav`。
 
-1. 實作方 `renderLink` 法：
+1. 實施`renderLink`方法：
 
-   在檔案頂部為 [Link](https://reacttraining.com/react-router/web/api/Link) 元件（React路由器的一部分）添加導入方法，同時導入其他元件：
+   將[Link](https://reacttraining.com/react-router/web/api/Link)元件（React路由器的一部分）的導入方法添加到檔案頂部，並導入其他導入：
 
    ```js
    import {Link} from "react-router-dom";
    ```
 
-   接下來完成該方法的 `renderLink` 實現：
+   接下來完成`renderLink`方法的實作：
 
    ```js
    renderLink(item){
@@ -417,9 +417,9 @@ ht-degree: 0%
    }
    ```
 
-   請注意，使用的不是一般錨點標 `<a>`簽，而 [是Link](https://reacttraining.com/react-router/web/api/Link) 元件。 這可確保不會觸發完整頁面的重新整理，而是運用AEM SPA編輯器JS SDK提供的React路由器。
+   請注意，使用[Link](https://reacttraining.com/react-router/web/api/Link)元件而非一般錨記`<a>`。 這可確保不會觸發完整頁面的重新整理，而是運用AEM SPA編輯器JS SDK提供的React路由器。
 
-1. 將更改保 `Navigation.js` 存並返回 **webpack-dev-server**: [http://localhost:3000](http://localhost:3000)
+1. 保存對`Navigation.js`的更改並返回至&#x200B;**webpack-dev-server** :[http://localhost:3000](http://localhost:3000)
 
    ![完成的頁首導覽](assets/navigation-routing/completed-header.png)
 
@@ -429,7 +429,7 @@ ht-degree: 0%
 
 現在已實作導覽，請在AEM中檢查路由。
 
-1. 在IDE中，開啟文 `index.js` 件 `ui.frontend/src/index.js`。
+1. 在IDE中，開啟`index.js`檔案，位於`ui.frontend/src/index.js`。
 
    ```js
    /* index.js */
@@ -454,7 +454,7 @@ ht-degree: 0%
    });
    ```
 
-   請注意， `App` React Router的組 `Router` 件包 [裝了它](https://reacttraining.com/react-router/)。 由 `ModelManager`AEM SPA編輯器JS SDK提供的動態路由會根據JSON模型API新增至AEM頁面。
+   請注意，`App`被包在[ React Router](https://reacttraining.com/react-router/)的`Router`元件中。 `ModelManager`由AEM SPA編輯器JS SDK提供，會根據JSON模型API將動態路由新增至AEM頁面。
 
 1. 開啟終端機、導覽至專案的根目錄，並使用您的Maven技巧將專案部署至AEM:
 
@@ -463,30 +463,30 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. 導覽至AEM中的SPA首頁： [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html) ，並開啟您瀏覽器的開發人員工具。 以下螢幕擷取自Google Chrome瀏覽器。
+1. 導覽至AEM中的SPA首頁：[http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html)並開啟您瀏覽器的開發人員工具。 以下螢幕擷取自Google Chrome瀏覽器。
 
-   重新整理頁面，您應該會看到XHR要求， `/content/wknd-spa-react/us/en.model.json`即SPA根目錄。 請注意，根據本教學課程前面所做的SPA根範本的階層深度設定，僅包含三個子頁面。 這不包括第 **3頁**。
+   重新整理頁面，您應該會看到對`/content/wknd-spa-react/us/en.model.json`的XHR請求，此為SPA根目錄。 請注意，根據本教學課程前面所做的SPA根範本的階層深度設定，僅包含三個子頁面。 這不包括&#x200B;**第3頁**。
 
    ![初始JSON請求- SPA根目錄](assets/navigation-routing/initial-json-request.png)
 
-1. 開啟開發人員工具後，使用導 `Header` 覽導覽至第 **3頁**:
+1. 開啟開發人員工具後，使用`Header`導覽導覽至&#x200B;**第3頁**:
 
    ![第3頁導覽](assets/navigation-routing/page-three-navigation.png)
 
-   請注意，新的XHR要求是： `/content/wknd-spa-react/us/en/home/page-2/page-3.model.json`
+   請注意，新的XHR要求是：`/content/wknd-spa-react/us/en/home/page-2/page-3.model.json`
 
    ![第3頁XHR請求](assets/navigation-routing/page-3-xhr-request.png)
 
-   AEM模型管理員瞭解 **Page 3** JSON內容不可用，並自動觸發其他XHR請求。
+   AEM模型管理員瞭解&#x200B;**第3頁** JSON內容不可用，並自動觸發其他XHR請求。
 
-1. 使用元件的各種導覽連結，繼續導覽SPA `Header` 。 請注意，未提出其他XHR要求，且未進行完整頁面重新整理。 這可讓使用者快速取得SPA，並減少不必要的回AEM要求。
+1. 使用`Header`元件的各種導航連結繼續導航SPA。 請注意，未提出其他XHR要求，且未進行完整頁面重新整理。 這可讓使用者快速取得SPA，並減少不必要的回AEM要求。
 
    ![實作導覽](assets/navigation-routing/final-navigation-implemented.gif)
 
-1. 直接導覽至： [http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html). 請注意，瀏覽器的「上一步」按鈕仍能繼續運作。
+1. 直接導覽至：[http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html)。 請注意，瀏覽器的「上一步」按鈕仍能繼續運作。
 
-## 恭喜！ {#congratulations}
+## 恭喜！{#congratulations}
 
-恭喜您，您瞭解如何透過SPA編輯器SDK對應至AEM頁面，以支援SPA中的多個檢視。 動態導航已使用React Router實現，並添加到元件 `Header` 中。
+恭喜您，您瞭解如何透過SPA編輯器SDK對應至AEM頁面，以支援SPA中的多個檢視。 動態導航已使用React Router實現，並添加到`Header`元件中。
 
-您隨時都可以在 [GitHub上檢視完成的程式碼](https://github.com/adobe/aem-guides-wknd-spa/tree/React/navigation-routing-solution) ，或切換至分支，在本機檢出程式碼 `React/navigation-routing-solution`。
+您隨時都可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/React/navigation-routing-solution)上檢視完成的程式碼，或切換至分支`React/navigation-routing-solution`，在本機檢出程式碼。
