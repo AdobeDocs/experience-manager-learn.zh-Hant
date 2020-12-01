@@ -20,7 +20,7 @@ ht-degree: 1%
 ---
 
 
-# 瞭解互動式版面 {#understanding-responsive-layout-with-aem-sites}
+# 瞭解自適應版面{#understanding-responsive-layout-with-aem-sites}
 
 Adobe Experience Manager Sites可讓作者根據裝置寬度管理元件的寬度，以利進行互動式網站設計。 使用「版面模式」和「版面容器」，使用者就可針對不同裝置建立互動式內容，並預覽使用者體驗，毋需離開AEM UI。
 
