@@ -20,7 +20,7 @@ ht-degree: 1%
 ---
 
 
-# 使用時間彎曲 {#using-timewarp-with-aem-sites}
+# 使用時間彎曲{#using-timewarp-with-aem-sites}
 
 時間彎曲是Adobe Experience Manager Sites的一項功能，可讓作者快速檢視過去特定時間頁面的狀態。
 
