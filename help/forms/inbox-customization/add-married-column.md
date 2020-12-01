@@ -82,12 +82,12 @@ return isMarried(inboxItem);
 * [登入AEM網頁主控台](http://localhost:4502/system/console/bundles)
 * [部署和啟動收件箱自定義包](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [開啟您的收件匣](http://localhost:4502/aem/inbox)
-* 按一下「建立」按鈕旁 _的「清單檢視_ 」圖示，以開 _啟「管理控制_ 」
+* 按一下&#x200B;_建立_&#x200B;按鈕旁的&#x200B;_清單檢視_&#x200B;圖示，以開啟管理控制項
 * 將「已婚」欄新增至「收件匣」並儲存您的變更
 * [前往FormsAndDocuments UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [從「建立」菜單中選擇](assets/snap-form.zip) 「檔案 _上載」(File Upload_ from _Create_ )，導入示例表單
+* [選擇「檔案」(File)「從創](assets/snap-form.zip) 建菜單上載」( _Uploadfrom_ Createmenu)，導入示例 __ 格式
 * [預覽表格](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* 選擇婚 _姻狀態_ ，並提交表單
+* 選擇&#x200B;_婚姻狀態_並提交表單
    [查看收件匣](http://localhost:4502/aem/inbox)
 
 提交表單會觸發工作流程，並指派工作給「管理員」使用者。 您應該會在「已婚」欄下看到值，如此螢幕擷取畫面中所示
