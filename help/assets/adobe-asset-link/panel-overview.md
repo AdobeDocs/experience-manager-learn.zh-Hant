@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Adobe Asset Link面板概觀 {#adobe-asset-link-panel-overview}
+# Adobe Asset Link面板概觀{#adobe-asset-link-panel-overview}
 
 Adobe Asset Link讓創意使用者能夠使用InDesign、Photoshop和Illustrator的應用程式內面板，瀏覽、搜尋、取出和存回儲存在AEM Assets中的資產。 瞭解Adobe Asset Link面板的UI及其功能。
 
