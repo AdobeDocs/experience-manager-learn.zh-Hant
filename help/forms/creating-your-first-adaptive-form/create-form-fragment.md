@@ -26,9 +26,9 @@ ht-degree: 0%
 
 
 
-如需詳細資訊， [請參閱最適化表單範本檔案](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html) 。
+如需詳細資訊，請參閱[最適化表單範本檔案](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html)
 
-如有需要，您可以下載配偶 [詳細資料片段， ](assets/spouse-details-fragment.zip) 並使用套件管理員匯 [入AEM](http://localhost:4502/crx/packmgr/index.jsp)
+如有需要，您可以下載[配偶詳細資料——片段](assets/spouse-details-fragment.zip)，並使用[套件管理員](http://localhost:4502/crx/packmgr/index.jsp)匯入AEM
 
 
 
