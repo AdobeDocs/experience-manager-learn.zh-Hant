@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 新增元件至人員面板 {#adding-components-to-people-panel}
+# 將元件添加到人員面板{#adding-components-to-people-panel}
 
 新增配偶詳細資料片段，以設定「人員」面板。 建立規則，以在申請人婚姻狀況已結婚時，顯示配偶詳細資料片段。
 
