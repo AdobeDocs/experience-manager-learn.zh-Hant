@@ -38,16 +38,16 @@ ht-degree: 1%
 
     ![Target API UI錯誤](assets/error-target-offer.png)
 
-...和日誌中的以下日誌 `aemerror` 消息：
+...和`aemerror`日誌中的以下日誌消息：
 
     ![Target API Console錯誤](assets/target-console-error.png)
 
 #### 解析度
 
-1. 使用Adobe Target [產品設定檔的管理權限登入Admin Console](https://adminconsole.adobe.com/) ，但使用AEM整合
-2. 選擇 __產品> Adobe Target >產品設定檔__
-3. 在「 __整合__ 」索引標籤下，選取AEM的整合為雲端服務環境（與Adobe I/O專案同名）
-4. 指派 __編輯者__ 或審 __批者角色__
+1. 使用Adobe Target產品設定檔的管理權限登入[管理控制台](https://adminconsole.adobe.com/)，但是AEM整合
+2. 選擇&#x200B;__產品> Adobe Target >產品描述檔__
+3. 在「__Integrations__」標籤下，選取AEM的整合為雲端服務環境（與Adobe I/O專案相同）
+4. 指派&#x200B;__Editor__&#x200B;或&#x200B;__Approver__&#x200B;角色
 
    ![目標API錯誤](assets/target-permissions.png)
 
