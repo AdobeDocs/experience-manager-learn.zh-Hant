@@ -24,7 +24,7 @@ AEM Assets的影像智慧標籤會自動新增衍生的中繼資料標籤至影�
 
 >[!VIDEO](https://video.tv.adobe.com/v/17019/?quality=12&learn=on)
 
-## 為AEM 6.x設定{#set-up}
+## 設定AEM 6.x{#set-up}
 
 >[!NOTE]
 > 影像的智慧型標籤會自動布建給AEM做為雲端服務。
