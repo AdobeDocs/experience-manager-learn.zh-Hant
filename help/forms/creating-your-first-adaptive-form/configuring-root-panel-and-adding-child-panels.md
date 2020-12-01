@@ -22,9 +22,9 @@ ht-degree: 0%
 ---
 
 
-# 新增子面板至根面板 {#adding-child-panels-to-root-panel}
+# 將子面板添加到根面板{#adding-child-panels-to-root-panel}
 
-將子面板新增至根面板時，請 **確定您處於編輯模式。 編輯按鈕位於瀏覽器的右上方。**
+將子面板添加到根面板時，請&#x200B;**確保處於編輯模式。 編輯按鈕位於瀏覽器的右上方。**
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28536?quality=9&learn=on)
