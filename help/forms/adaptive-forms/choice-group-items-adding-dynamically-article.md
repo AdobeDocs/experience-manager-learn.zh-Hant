@@ -23,18 +23,18 @@ ht-degree: 0%
 
 AEM Forms 6.5引入了將項目動態新增至Adaptive Forms選擇群組元件（例如CheckBox、Radio Button和Image List）的功能。
 
-[此功能可在Samples Server上即時使用](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 搜尋「動態核取方塊」項目資訊卡，然後按一下「試用」
+[此功能可在Samples Server上即時使用](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。搜尋「動態核取方塊」項目資訊卡，然後按一下「試用」
 
 
 您可以使用視覺編輯器以及程式碼編輯器來新增項目，視您的使用案例而定。
 
-**使用視覺編輯器：** 您可以根據函式呼叫或服務呼叫的結果填入選擇群組的項目。 例如，您可以使用REST API呼叫的回應來設定選擇群組的項目。
+**使用視覺編輯器：** 您可以從函式呼叫或服務呼叫的結果填入選擇群組的項目。例如，您可以使用REST API呼叫的回應來設定選擇群組的項目。
 
 在以下的螢幕擷取中，我們將設定貸款期間（年）選項，以取得名為getLoanPeriods的服務呼叫結果。
 
 ![規則編輯器](assets/ruleeditor.png)
 
-**使用程式碼編輯器**:當您想要根據在表單中輸入的值動態設定選擇群組中的項目時。 例如，以下代碼片段將複選框的項設定為在「最適化表單」的申請人名稱和配偶欄位中輸入的值。
+**使用程式碼編輯器**:當您想要根據在表單中輸入的值動態設定選擇群組中的項目時。例如，以下代碼片段將複選框的項設定為在「最適化表單」的申請人名稱和配偶欄位中輸入的值。
 
 在代碼片段中，我們正在設定WorkingMembers的項目（作為複選框元件）。 項目的陣列是動態建立的，方法是擷取最適化表單的applicantName和配偶文字欄位的值
 
