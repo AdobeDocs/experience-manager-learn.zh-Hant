@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## 建立實作WorkflowProcess介面的OSGi元件
 
-建立實作 [com.adobe.granite.workflow.exec.WorkflowProcess介面的OSGi元件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)。 此元件中的程式碼可與AEM工作流程中的流程步驟元件相關聯。 在此元件中實現了介面com.adobe.granite.workflow.exec.WorkflowProcess的執行方法。
+建立實作[com.adobe.granite.workflow.exec.WorkflowProcess介面](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)的OSGi元件。 此元件中的程式碼可與AEM工作流程中的流程步驟元件相關聯。 在此元件中實現了介面com.adobe.granite.workflow.exec.WorkflowProcess的執行方法。
 
 提交最適化表單以觸發AEM工作流程時，提交的資料會儲存在裝載檔案夾下的指定檔案中。 例如，這是已提交的資料檔案。 我們需要將idcard和bankstatements標籤下指定的附件組合起來。
 ![submitted-data](assets/submitted-data.JPG).
@@ -45,7 +45,7 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### 從附件名稱建立DDX
 
-然後需要建立 [Document Description XML(DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf) （文檔描述XML,DDX）文檔，Assembler服務使用它來組合文檔。 以下是從進程參數建立的DDX。 請注意，PDF來源元素的順序正確，如流程引數中所指定。
+然後，我們需要建立[文檔描述XML(DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)文檔，該文檔由匯編器服務用來組合文檔。 以下是從進程參數建立的DDX。 請注意，PDF來源元素的順序正確，如流程引數中所指定。
 
 ![ddx-xml](assets/ddx-xml.JPG)
 
@@ -134,15 +134,15 @@ session.save();
 
 ### 若要讓此功能在您的AEM伺服器上運作
 
-* 將「組 [合表單附件表單](assets/assemble-form-attachments-af.zip) 」下載到本地系統。
-* 從「表單與文[件」頁面匯入表單](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) 。
-* 下載 [工作流程](assets/assemble-form-attachments.zip) ，並使用套件管理器匯入至AEM。
-* 下載自 [訂搭售](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
-* 使用Web主控台部署並啟 [動套件](http://localhost:4502/system/console/bundles)
-* 將瀏覽器指向「組合附件 [」表單](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
+* 將[組合表單附件表單](assets/assemble-form-attachments-af.zip)下載到本地系統。
+* 從[表單與檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)頁面匯入表單。
+* 下載[workflow](assets/assemble-form-attachments.zip)並使用套件管理器匯入AEM。
+* 下載[自訂搭售](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
+* 使用[Web控制台](http://localhost:4502/system/console/bundles)部署並啟動包
+* 將瀏覽器指向[AssembleAttachments Form](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
 * 在「ID檔案」中新增附件和數張PDF檔案至銀行對帳單區段
 * 提交表單以觸發工作流程
-* 在crx中檢查工作流 [程的裝載資料夾](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) ，以找出已組合的pdf
+* 檢查crx](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload)中工作流程的[裝載資料夾，以取得已組合的pdf
 
 >[!NOTE]
 > 如果您已為自訂搭售啟用記錄程式，則DDX和已組合的檔案會寫入AEM安裝的資料夾。
