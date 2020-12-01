@@ -17,21 +17,21 @@ ht-degree: 0%
 ---
 
 
-# 設定包含體驗片段的社交貼文 {#set-up-social-posting-with-experience-fragments}
+# 使用體驗片段設定社交貼文{#set-up-social-posting-with-experience-fragments}
 
 「體驗片段」可讓行銷人員將在AEM中建立的體驗張貼至社交媒體平台。 以下影片詳細說明將體驗片段發佈至Facebook和Pinterest所需的設定和設定。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20592/?quality=9&learn=on)
 
-*[體驗片段]-設定和設定社交貼文至Facebook和Pinterest*
+*[體驗片段] -設定和設定社交貼文至Facebook和Pinterest*
 
 ## 設定要張貼至Facebook和Pinterest的體驗片段檢查清單
 
 1. AEM Author Instance正在HTTPS上執行
 2. Facebook帳戶+ Facebook開發人員應用程式
 3. Pinterest帳戶+ Pinterest開發人員應用程式
-4. [!UICONTROL AEM Cloud Services] Configuration - Facebook
-5. [!UICONTROL AEM Cloud Services] Configuration - Pinterest
+4. [!UICONTROL AEM Cloud ] ServicesConfiguration - Facebook
+5. [!UICONTROL AEM Cloud ] ServicesConfiguration - Pinterest
 6. AEM Experience Fragment with Cloud Services for Facebook + Pinterest
 7. 使用Facebook範本的體驗片段變異
 8. 使用Pinterest範本的體驗片段變化
