@@ -1,7 +1,7 @@
 ---
-user-guide-title: Adobe Experience Manager 雲端服務教學課程
-user-guide-description: Adobe Experience Manager 雲端服務教學課程的系列。
-breadcrumb-title: AEM 雲端服務教學課程
+user-guide-title: Adobe Experience Manager as a Cloud Service 教學課程
+user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程的系列。
+breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: 雲端服務
 team: TM
 translation-type: tm+mt
@@ -13,17 +13,17 @@ ht-degree: 31%
 ---
 
 
-# Adobe Experience Manager 雲端服務教學課程 {#cloud-service}
+# Adobe Experience Manager as a Cloud Service 教學課程 {#cloud-service}
 
 + [概覽](./overview.md)
-+ 基礎技術 {#underlying-technology}
++ 基礎技術{#underlying-technology}
    + [AEM架構簡介](./underlying-technology/introduction-architecture.md)
    + [OSGi簡介](./underlying-technology/introduction-osgi.md)
    + [Java內容儲存庫簡介](./underlying-technology/introduction-jcr.md)
    + [Sling簡介](./underlying-technology/introduction-sling.md)
    + [作者與發佈層簡介](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher 簡介](./underlying-technology/introduction-dispatcher.md)
-+ 地方開發環境設定 {#local-development-environment-set-up}
++ 本地開發環境設定{#local-development-environment-set-up}
    + [概覽](./local-development-environment/overview.md)
    + [開發工具](./local-development-environment/development-tools.md)
    + [本機AEM Runtime](./local-development-environment/aem-runtime.md)
@@ -49,7 +49,7 @@ ht-degree: 31%
    + [Adobe IMS產品設定檔](./accessing/adobe-ims-product-profiles.md)
    + [AEM使用者、群組和權限](./accessing/aem-users-groups-and-permissions.md)
    + [設定AEM逐步存取權](./accessing/walk-through.md)
-+ 移轉 {#migration}
++ 遷移{#migration}
    + [內容轉移工具](./migration/content-transfer-tool.md)
 + 資產計算擴充性{#asset-compute}
    + [概覽](./asset-compute/overview.md)
@@ -66,7 +66,7 @@ ht-degree: 31%
    + 測試與除錯{#test-debug}
       + [測試工作者](./asset-compute/test-debug/test.md)
       + [對工作者進行除錯](./asset-compute/test-debug/debug.md)
-   + 部署{#deploy}
+   + Deploy{#deploy}
       + [部署至Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
       + [與AEM整合](./asset-compute/deploy/processing-profiles.md)
    + 進階{#advanced}
