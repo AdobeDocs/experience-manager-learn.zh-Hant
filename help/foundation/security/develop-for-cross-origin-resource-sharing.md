@@ -11,7 +11,7 @@ doc-type: tutorial
 translation-type: tm+mt
 source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -19,27 +19,27 @@ ht-degree: 0%
 
 # 開發跨原始資源共用(CORS)
 
-透過用戶端JavaScript [!DNL CORS] 運用來從外部網路應用程式存取AEM內容的簡短範例。
+利用[!DNL CORS]透過用戶端JavaScript從外部Web應用程式存取AEM內容的簡短範例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837/?quality=12&learn=on)
 
 在此影片中：
 
-* **www.example.com** maps to localhost via `/etc/hosts`
-* **aem-publish.local** maps to localhost via `/etc/hosts`
-* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12) ([!DNL Python]的 [SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html))正在通過埠8000為HTML頁提供服務。
-* [!DNL AEM Dispatcher] 正在2. [!DNL Apache HTTP Web Server] 4上執行，並反向代理請求 `aem-publish.local` 至 `localhost:4503`。
+* **www.example.** commaps to localhost via  `/etc/hosts`
+* **aem-publish.** localmaps至localhost(透過  `/etc/hosts`
+* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12) (SimpleHTTPServer的包裝函 [[!DNL Python]式](https://docs.python.org/2/library/simplehttpserver.html))正透過連接埠8000為HTML頁面提供服務。
+* [!DNL AEM Dispatcher] 正在 [!DNL Apache HTTP Web Server] 2.4上執行，並反向代理請求 `aem-publish.local` 至 `localhost:4503`。
 
-如需詳細資訊，請 [參閱「瞭解AEM中的跨原始資源共用(CORS)」](./understand-cross-origin-resource-sharing.md)。
+如需詳細資訊，請參閱「瞭解AEM[中的跨原始資源共用(CORS)」。](./understand-cross-origin-resource-sharing.md)
 
 ## www.example.com HTML和JavaScript
 
 此網頁具有
 
 1. 按一下按鈕時
-1. 提出 [!DNL AJAX GET] 要求 `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
-1. 擷取 `jcr:title` JSON回應的表單
-1. 插入 `jcr:title` DOM
+1. 向`http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`發出[!DNL AJAX GET]請求
+1. 從JSON回應擷取`jcr:title`
+1. 將`jcr:title`插入DOM
 
 ```xml
 <html>
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ## OSGi工廠配置
 
-OSGi Configuration factory for可 [!DNL Cross-Origin Resource Sharing] 通過：
+[!DNL Cross-Origin Resource Sharing]的OSGi配置工廠可通過以下方式獲得：
 
 * `http://<host>:<port>/system/console/configMgr > [!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]`
 
@@ -96,7 +96,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## Dispatcher configuration {#dispatcher-configuration}
 
-若要允許快取和提供快取內 [!DNL CORS] 容上的標題，請將下列組態新增至所有支援的AEM Publish `dispatcher.any` 檔案。
+若要允許快取和提供快取內容上的[!DNL CORS]標題，請將下列組態新增至所有支援的AEM Publish `dispatcher.any`檔案。
 
 ```
 /cache { 
@@ -113,11 +113,11 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 }
 ```
 
-**對檔案進行更改後** ，重新啟動Web伺服器應 `dispatcher.any` 用程式。
+**對檔案進行更改** 後，重新啟動Web伺服器應 `dispatcher.any` 用程式。
 
-可能需要完全清除快取，以確保在設定更新後，標題會在下一個請求上正確快取 `/headers` 快取。
+在`/headers`組態更新後，可能需要完全清除快取，以確保標頭會在下次要求時正確快取。
 
-## 支援材料 {#supporting-materials}
+## 支援材料{#supporting-materials}
 
 * [AEM OSGi Configuration Factory for Cross-Origin Resource Sharing Policy](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [SimpleHTTPServer for macOS](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
