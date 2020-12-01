@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 資產搜尋 {#asset-search}
+# 資產搜尋{#asset-search}
 
 有了Adobe Asset Link面板，創意使用者可以使用關鍵字搜尋儲存在AEM Assets中的資產，或在特定位置下執行搜尋。 除了基本搜尋選項外，Adobe Asset Link還可讓您使用資產在AEM Assets中搜尋視覺上類似的結果。 視覺化搜尋由Adobe Sensei的機器學習提供支援，可顯示與目標影像相關的美學特徵結果。
 
