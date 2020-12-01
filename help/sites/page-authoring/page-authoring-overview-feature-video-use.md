@@ -20,7 +20,7 @@ ht-degree: 11%
 ---
 
 
-# 編寫頁面 {#authoring-page-aem-sites}
+# 編寫頁面{#authoring-page-aem-sites}
 
 瞭解如何使用網站編輯器的UI在Adobe Experience Manager Sites中製作頁面。
 
