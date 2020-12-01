@@ -25,7 +25,7 @@ ht-degree: 0%
 
 您可以使用現有資料預先填寫最適化表單的欄位。 當使用者開啟表格時，這些欄位的值會預先填入。 有多種方式可預先填寫最適化表單欄位。 在本文中，我們將討論如何使用AEM Forms Prefill服務來預先填寫最適化表單。
 
-若要進一步瞭解預先填入最適化表單的各種方法，請 [遵循本檔案](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+若要進一步瞭解預先填入最適化表單的各種方法，請遵循本檔案[](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
 
 若要使用預填服務預填最適化表單，您必須建立實作DataProvider介面的類別。 getPrefillData方法將具有邏輯來建立並傳回最適化表單會用來預先填入欄位的資料。 在此方法中，您可以從任何來源擷取資料並傳回資料檔案的輸入串流。 下列示例代碼讀取登錄用戶的用戶簡檔資訊，並構建XML文檔，其輸入流被返回為被自適應表單所消耗。
 
@@ -88,8 +88,8 @@ public class PrefillAdaptiveForm implements DataProvider {
 若要在您的伺服器上測試此功能，請執行下列動作
 
 * [下載並解壓郵遞區號檔的內容至您的電腦](assets/prefillservice.zip)
-* 請確定已登入使 [用者的設定檔資訊](http://localhost:4502/libs/granite/security/content/useradmin) ，已完全填滿。 這是樣本運作所必需的。 範例不會檢查遺失的使用者描述檔屬性。
-* 使用 [AEM網頁主控台部署套件](http://localhost:4502/system/console/bundles)
+* 請確定登入[使用者的設定檔](http://localhost:4502/libs/granite/security/content/useradmin)資訊已完全填滿。 這是樣本運作所必需的。 範例不會檢查遺失的使用者描述檔屬性。
+* 使用[AEM網頁主控台](http://localhost:4502/system/console/bundles)部署套件
 * 使用XSD建立最適化表單
 * 將「自訂Aem表單預填服務」關聯為最適化表單的預填服務
 * 將架構元素拖放到表單
@@ -99,5 +99,5 @@ public class PrefillAdaptiveForm implements DataProvider {
 >
 >如果最適化表單是以XSD為基礎，請確定預填服務傳回的XML檔案符合您最適化表單所依據的XSD。
 >
->如果最適化表單不以XSD為基礎，則您必須手動系結欄位。 例如，要將最適化表單欄位系結至XML資料中的fname元素，您將在最適化表單欄位的「 `/data/fname` 系結參考」中使用。
+>如果最適化表單不以XSD為基礎，則您必須手動系結欄位。 例如，要將自適應表單域綁定到XML資料中的fname元素，您將在自適應表單域的「綁定」引用中使用`/data/fname`。
 
