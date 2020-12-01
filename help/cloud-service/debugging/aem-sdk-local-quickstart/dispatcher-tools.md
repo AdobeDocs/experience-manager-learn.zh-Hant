@@ -28,15 +28,15 @@ Dispatcher Tools提供容器化的Apache Web Server環境，可用來將AEM模�
 
 ## Dispatcher Tools日誌
 
-Dispatcher Tools日誌可通過或命 `stdout` 令獲 `bin/docker_run` 得，或在Docker容器()中提供更多詳細資訊 `/etc/https/logs`。
+Dispatcher Tools日誌可通過`stdout`或`bin/docker_run`命令獲得，或通過`/etc/https/logs`的Docker容器獲得更詳細的資訊。
 
-有關如 [何直接訪問Dispatcher Tools](./logs.md#dispatcher-logs) &#39; Docker容器日誌的說明，請參閱Dispatcher日誌。
+有關如何直接訪問Dispatcher Tools&#39; Docker容器日誌的說明，請參見[ Dispatcher logs](./logs.md#dispatcher-logs)。
 
 ## Dispatcher Tools快取
 
 ### 訪問Docker容器中的日誌
 
-Dispatcher快取可直接在Docker容器中存取，位址為 ` /mnt/var/www/html`。
+Dispatcher快取可以直接訪問` /mnt/var/www/html`的Docker容器中。
 
 ```shell
 $ docker ps
@@ -56,7 +56,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 
 ### 將Docker日誌複製到本地檔案系統
 
-Dispatcher日誌可從位於的Docker容器複製到本 `/mnt/var/www/html` 地檔案系統，以便使用您喜愛的工具進行檢查。 請注意，這是時間點副本，不會提供快取的即時更新。
+Dispatcher日誌可以從`/mnt/var/www/html`的Docker容器複製到本地檔案系統，以便使用您喜愛的工具進行檢查。 請注意，這是時間點副本，不會提供快取的即時更新。
 
 ```shell
 $ docker ps
