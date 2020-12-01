@@ -15,11 +15,11 @@ ht-degree: 4%
 ---
 
 
-# 使用資產中繼資料提升搜尋 {#search-boost-asset}
+# 使用資產中繼資料{#search-boost-asset}進行搜尋提升
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=12&learn=on)
 
-## 瞭解AEM資產中的搜尋提升功能{#understanding-search-boosting-in-aem-assets}
+## 瞭解AEM Assets中的搜尋提升{#understanding-search-boosting-in-aem-assets}
 
 深入檢視AEM Assets搜尋提升功能，以及它在AEM更廣泛內容中的運作方式。
 
