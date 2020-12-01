@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 與AEM Forms使用使用者設定檔資料整合{#using-user-profile-data-integration-with-aem-forms}
+# 將使用者設定檔資料整合至AEM Forms{#using-user-profile-data-integration-with-aem-forms}
 
 AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 以下是現成可用的支援。 不過，只需少量自訂，您也可以整合其他資料來源。
 
@@ -29,7 +29,8 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
 1. AEM使用者設定檔
 1. REST風格的Web服務
 1. 基於SOAP的web services
-1. OData服務本文章將重點說明整合AEM使用者設定檔資訊與Adaptive Forms。
+1. OData服務
+本文將重點說明整合AEM使用者設定檔資訊與Adaptive Forms。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17432/?quality=9&learn=on)
 
