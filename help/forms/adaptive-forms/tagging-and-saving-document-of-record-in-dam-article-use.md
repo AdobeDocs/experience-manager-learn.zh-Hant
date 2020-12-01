@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在DAM中標籤和儲存AEM Forms DoR {#tagging-and-storing-aem-forms-dor-in-dam}
+# 在DAM {#tagging-and-storing-aem-forms-dor-in-dam}中標籤和儲存AEM Forms DoR
 
 本文將逐步介紹在AEM DAM中儲存和標籤AEM Forms產生的DoR的使用案例。 根據提交的表單資料來標籤檔案。
 
@@ -46,7 +46,7 @@ tagManager.setTags(metadata, tagArray, true);
 若要讓此範例在您的系統上運作，請遵循下列步驟：
 * [部署使用服務使用者套件進行開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 這是自訂OSGI搭售，可從提交的表單資料設定標籤。
+* [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。這是自訂OSGI搭售，可從提交的表單資料設定標籤。
 
 * [下載範例最適化表單](assets/tag-and-store-in-dam-assets.zip)
 
@@ -54,12 +54,12 @@ tagManager.setTags(metadata, tagArray, true);
 
 * 按一下「建立」 |檔案上傳及上傳sampleadaptiveform.zip
 
-* [使用AEM套件管理員匯入文章資產](assets/tag-and-store-in-dam-assets.zip) （英文）
-* 在預覽模 [式中開啟範例表格](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled)。 填寫「人員」區段並提交表格。
-* [導覽至DAM中的「尖峰」資料夾](http://localhost:4502/assets.html/content/dam/Peak)。 您應該會在「峰值」資料夾中看到DoR。 檢查文檔的屬性。 應適當標籤。
+* [使用AEM套件管](assets/tag-and-store-in-dam-assets.zip) 理員匯入文章資產
+* 在預覽模式](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled)中開啟[範例表單。 填寫「人員」區段並提交表格。
+* [導覽至DAM中的「尖峰」資料夾](http://localhost:4502/assets.html/content/dam/Peak)。您應該會在「峰值」資料夾中看到DoR。 檢查文檔的屬性。 應適當標籤。
 恭喜！! 您已成功在系統上安裝示例
 
-* 讓我們來探索表單 [提交時](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) ，觸發的工作流程。
+* 讓我們來探索[workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html)，它會在表單提交時觸發。
 * 工作流程中的第一步會串連申請人名稱和居住地郡，以建立唯一的檔案名稱。
 * 工作流程的第二個步驟會傳遞標籤階層和需要標籤的表單欄位元素。 處理步驟從提交的資料中提取值，並構建需要標籤文檔的標籤標題。
 * 如果您想要將DoR儲存在DAM中的其他資料夾中，您可使用下列螢幕擷取中指定的設定屬性來指定資料夾位置。
