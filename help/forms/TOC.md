@@ -6,9 +6,9 @@ user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使
 breadcrumb-title: AEM Forms 教學課程
 index: y
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 787a79663472711b78d467977d633e3d410803e5
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '896'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 + [概覽](overview.md)
 + [要遵循的最佳做法](adaptive-forms/best-practices-adaptive-forms.md)
 + [設定AEM作者的OKTA驗證](adaptive-forms/single-sign-on-with-okta.md)
-+ 建立您的第一個最適化表單 {#creating-your-first-adaptive-form}
++ 建立第一個最適化表單{#creating-your-first-adaptive-form}
    + [簡介和設定](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [建立最適化表單範本](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [建立表單片段](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -29,7 +29,7 @@ ht-degree: 5%
    + [將表格添加到收入面板](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [設定資產面板](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [使用自訂函式和程式碼編輯器](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ 處理表單提交 {#handling-af-form-submissions}
++ 處理表單提交{#handling-af-form-submissions}
    + [建立審核工作流](handling-form-submissions/creating-a-review-workflow.md)
    + [設定最適化表單以觸發工作流程](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [顯示感謝頁面](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -83,13 +83,13 @@ ht-degree: 5%
    + [預先填入HTML5表格](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [使用Salesforce建立資料模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [動態新增項目至Choice元件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ 使用表單資料模型預先填入自適應表單{#prefill-fdm-db}
++ 使用表單資料模型預先填寫最適化表單{#prefill-fdm-db}
    + [簡介](prefill-fdm-db/introduction.md)
    + [建立資料庫表](prefill-fdm-db/create-database-tables.md)
    + [配置表單資料模型](prefill-fdm-db/configuring-form-data-model.md)
    + [取得請求參數](prefill-fdm-db/get-request-parameter.md)
    + [建立最適化表單](prefill-fdm-db/create-adaptive-form.md)
-+ 收件匣自訂{#inbox-customization}
++ 收件箱自定義{#inbox-customization}
    + [簡介](inbox-customization/introduction.md)
    + [新增自訂欄](inbox-customization/add-married-column.md)
    + [使用Sightly範本](inbox-customization/use-sightly-template.md)
@@ -106,7 +106,7 @@ ht-degree: 5%
    + [建立主表單](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
    + [建立MyAccount表單](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
    + [部署範例](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
-+ 以CSV格式匯出已提交的資料{#export-submitted-data-csv-format}
++ 以CSV格式導出提交的資料{#export-submitted-data-csv-format}
    + [匯出提交的資料](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 Forms{#html5-forms}
    + [建立HTML5表格](html5-forms/create-html5-form.md)
@@ -124,7 +124,7 @@ ht-degree: 5%
    + [將PDF表格轉換為最適化表格](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [配置轉換的最適化表單](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [搭配Adobe Sign使用XDP範本](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
-+ AEM工作流程中的變數{#variables-aem-workflow}
++ AEM Workflow{#variables-aem-workflow}中的變數
    + [簡介——工作流程中的變數](variables-aem-workflow/introduction.md)
    + [XML變數](variables-aem-workflow/part1.md)
    + [JSON變數](variables-aem-workflow/part2.md)
@@ -132,21 +132,21 @@ ht-degree: 5%
    + [ArrayList變數](variables-aem-workflow/part4.md)
    + [表單資料模型變數](variables-aem-workflow/form-data-model.md)
    + [AEM工作流程中的規則編輯器](variables-aem-workflow/part5.md)
-+ 在MySQL資料庫中儲存和檢索表單資料{#storing-and-retrieving-form-data}
++ 在MySQL DB{#storing-and-retrieving-form-data}中儲存和檢索表單資料
    + [簡介](storing-retrieving-form-data/introduction.md)
    + [配置資料源](storing-retrieving-form-data/part1.md)
-   + [儲存資料的Servlet](storing-retrieving-form-data/part2.md)
-   + [擷取資料的服務](storing-retrieving-form-data/part3.md)
+   + [儲存資料的服務](storing-retrieving-form-data/part3.md)
+   + [建立Servlet](storing-retrieving-form-data/part2.md)
    + [客戶庫](storing-retrieving-form-data/part4.md)
    + [最適化表單範本](storing-retrieving-form-data/part5.md)
    + [部署範例資產](storing-retrieving-form-data/part6.md)
-+ 從Mobile表單提交觸發AEM工作流程{#offline-mobile-form-submission}
++ 從Mobile Form提交觸發AEM工作流程{#offline-mobile-form-submission}
    + [簡介](offline-mobile-form-submission/introduction.md)
    + [自訂設定檔](offline-mobile-form-submission/part-one.md)
    + [處理PDF提交](offline-mobile-form-submission/part-two.md)
    + [審核PDF的工作流程](offline-mobile-form-submission/part-three.md)
    + [部署在您的系統上](offline-mobile-form-submission/part-four.md)
-+ 查詢提交的資料{#querying-submitted-data}
++ 查詢已提交的資料{#querying-submitted-data}
    + [簡介](querying-submitted-data/introduction.md)
    + [根據JSON結構描述建立表格](querying-submitted-data/part1.md)
    + [儲存提交的資料](querying-submitted-data/part2.md)
@@ -168,7 +168,7 @@ ht-degree: 5%
    + [Part3 —— 使用ACS配置檔案資訊預填充表單](aem-forms-with-adobe-campaign/partthree.md)
    + [Part4 —— 使用表單資料模型建立ACS配置檔案](aem-forms-with-adobe-campaign/partfour.md)
 
-+ 檔案服務 {#document-services}
++ 檔案服務{#document-services}
    + [在AEM Forms中使用Assembler Service](document-services/using-assembler-service-in-aem-forms.md)
    + [在AEM表格中使用Watched資料夾](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms中使用條碼服務](document-services/barcode-service-adaptive-forms-article.md)
@@ -204,7 +204,7 @@ ht-degree: 5%
    + [在AEM Forms列印頻道檔案中使用表格元件](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [使用監控資料夾產生適用於印刷頻道的互動式通訊檔案](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
-+ Interactive Communications For Web Channel {#ic-web-channel-tutorial}
++ 用於Web通道的互動式通信{#ic-web-channel-tutorial}
    + [簡介](ic-web-channel-tutorial/introduction.md)
    + [設定Tomcat](ic-web-channel-tutorial/partone.md)
    + [建立資料來源](ic-web-channel-tutorial/parttwo.md)
