@@ -24,4 +24,4 @@ ht-degree: 0%
 
 可從下列連結下載與此視訊相關的資產
 
-* [受益人表單變更 ](assets/change-of-beneficiary-form.zip)
+* [受益人表單變更  ](assets/change-of-beneficiary-form.zip)
