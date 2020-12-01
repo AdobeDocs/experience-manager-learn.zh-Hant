@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 在最適化表單提交時傳送電子郵件 {#sending-email-on-adaptive-form-submission}
+# 在最適化表單提交時傳送電子郵件{#sending-email-on-adaptive-form-submission}
 
 常見的操作之一是在成功提交Adaptive Form時向提交者發送確認電子郵件。 為完成此作業，我們會選取「傳送電子郵件」作為提交動作。
 
@@ -31,9 +31,9 @@ ht-degree: 0%
 
 ![SendEmail](assets/sendemailaction.gif)
 
-## 需要的配置 {#configurations-needed}
+## 需要的配置{#configurations-needed}
 
-您必須設定Day CQ Mail服務。 您可將瀏覽器指向 [Felix Configuration Manager來設定此設定](http://localhost:4502/system/console/configMgr)
+您必須設定Day CQ Mail服務。 您可將瀏覽器指向[Felix Configuration Manager](http://localhost:4502/system/console/configMgr)來設定此值
 
 此螢幕擷取顯示adobe郵件伺服器的設定屬性。
 
@@ -41,9 +41,9 @@ ht-degree: 0%
 
 要在伺服器上試用此功能，請遵循以下說明：
 
-* [使用套件管理器](assets/timeoffrequest.zip) ，在AEM中匯入與此文章關聯的資產。
+* [使用套](assets/timeoffrequest.zip) 件管理員，在AEM中匯入與此文章關聯的資產。
 
-* 開啟 [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)。
+* 開啟[TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)。
 
 * 填寫詳細資訊。請務必在電子郵件欄位中提供有效的電子郵件地址。
 
