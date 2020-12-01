@@ -23,11 +23,11 @@ AEM Assets提供企業級報告架構，可透過直覺式的使用體驗，針�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22140/?quality=12&learn=on)
 
-## Microsoft Excel公式 {#excel-formulas}
+## Microsoft Excel公式{#excel-formulas}
 
 在視訊中使用下列公式，以在Microsoft Excel中產生「依大小劃分的資產」圖表。
 
-### 資產大小標準化為位元組 {#asset-size-normalization-to-bytes}
+### 資產大小標準化為位元組{#asset-size-normalization-to-bytes}
 
 ```
 =IF(RIGHT(D2,2)="KB",
@@ -40,7 +40,7 @@ AEM Assets提供企業級報告架構，可透過直覺式的使用體驗，針�
       LEFT(D2,(LEN(D2)-2))*1024*1024*1024*1024, 0))))
 ```
 
-### 依大小劃分的資產計數 {#asset-count-by-size}
+### 依大小{#asset-count-by-size}劃分的資產計數
 
 #### 小於200 KB {#less-than-kb}
 
@@ -62,4 +62,4 @@ AEM Assets提供企業級報告架構，可透過直覺式的使用體驗，針�
 
 ## 其他資源{#additional-resources}
 
-下載 [所有資產Excel檔案及圖表](./assets/asset-reports/all-assets.xlsx)
+下載[所有資產Excel檔案及Chart](./assets/asset-reports/all-assets.xlsx)
