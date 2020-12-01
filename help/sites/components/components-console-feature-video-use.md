@@ -15,7 +15,7 @@ ht-degree: 1%
 ---
 
 
-# 使用元件控制台 {#using-the-components-console-with-aem-sites}
+# 使用元件控制台{#using-the-components-console-with-aem-sites}
 
 「元件主控台」可讓開發人員和管理員集中管理網站實作中的所有元件。 下面的視頻詳細介紹了「元件控制台」的功能。
 
@@ -28,8 +28,8 @@ ht-degree: 1%
 * [!UICONTROL 策略]:顯示給定元件和相關模板的任何現有策略
 * [!UICONTROL 即時使用]:顯示包含元件的頁的清單
 
-「元件控制台」位於「工具 **** >一般 **** >元 **[!UICONTROL 件」下]**。
-元件控制台URL（本機AEM作者）: [http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
+元件控制台位於&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Components]**下。
+元件控制台URL（本機AEM作者）:[http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
 
 ## 其他資源 {#additional-resources}
 
