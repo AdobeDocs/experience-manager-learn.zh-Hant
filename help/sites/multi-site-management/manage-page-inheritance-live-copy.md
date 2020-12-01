@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 管理頁面上的即時副本繼承 {#manage-live-copy-page}
+# 管理頁面{#manage-live-copy-page}上的即時副本繼承
 
 瞭解如何在頁面層級管理即時副本與其Blueprint之間的繼承。
 >[!VIDEO](https://video.tv.adobe.com/v/36679?quality=12&learn=on)
