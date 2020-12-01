@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 設定Web頻道檔案的傳送 {#setting-up-the-delivery-of-web-channel-document}
+# 設定Web頻道檔案{#setting-up-the-delivery-of-web-channel-document}的傳送
 
 
 在本部分，我們將討論透過電子郵件傳送Web通路檔案的方式。
@@ -50,7 +50,7 @@ ht-degree: 0%
 * 請確定您已儲存變更。
    ![fdm](assets/requestattribute.gif)
 
-## 測試Web Channel檔案的電子郵件傳送 {#test-email-delivery-of-web-channel-document}
+## 測試Web Channel文檔的電子郵件傳送{#test-email-delivery-of-web-channel-document}
 
 * [使用套件管理員安裝範例資產](assets/webchanneldelivery.zip)
 * [登入crx](http://localhost:4502/crx/de/index.jsp#)
@@ -71,4 +71,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->請檢視crx中的 **/apps/AEMForms/fetchad/GET.jsp** file。 請確定字串變數webChannelDocument指向有效的通訊檔案路徑。
+>請查看crx中的&#x200B;**/apps/AEMForms/fetchad/GET.jsp**&#x200B;檔案。 請確定字串變數webChannelDocument指向有效的通訊檔案路徑。
