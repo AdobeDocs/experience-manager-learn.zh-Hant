@@ -17,13 +17,13 @@ ht-degree: 0%
 ---
 
 
-# 自訂AEM Assets中的註解{#using-annotations-in-aem-assets}
+# 自訂AEM Assets中的附註{#using-annotations-in-aem-assets}
 
 AEM支援自訂注釋的輸出為PDF。
 
 ## PDF註解sling:OsgiConfig定義
 
-若要自訂PDF註解，請在您的AEM專 **案中建立sling:OsgiConfig** 節點，位於
+若要自訂PDF註解，請在您的AEM專案中建立&#x200B;**sling:OsgiConfig**&#x200B;節點，位於
 
 `/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` 並視需要調整值：
 
