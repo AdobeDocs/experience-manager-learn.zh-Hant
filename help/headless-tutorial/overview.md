@@ -1,16 +1,16 @@
 ---
-title: AEM Headless快速入門
-description: 端對端教學課程，說明如何使用AEM Headless建立和公開內容。
+title: AEM Headless 快速入門
+description: 端對端的教學課程，說明如何使用 AEM Headless 來建立和公開內容。
 translation-type: tm+mt
 source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
 workflow-type: tm+mt
 source-wordcount: '211'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
 
-# AEM Headless快速入門
+# AEM Headless 快速入門
 
 端對端教學課程，說明如何在無頭CMS情境中使用AEM來建立和公開內容，並由原生行動應用程式使用。
 
@@ -28,6 +28,6 @@ ht-degree: 0%
 
 ## GitHub專案
 
-原始碼和內容套件可從 [AEM Guides - WKND Mobile GitHub專案取得](https://github.com/adobe/aem-guides-wknd-mobile)。
+您可在[AEM Guides - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile)中取得原始碼和內容套件。
 
-如果您發現教學課程或程式碼有問題，請留下 [GitHub問題](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
+如果您發現教學課程或程式碼有問題，請留下[GitHub問題](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
