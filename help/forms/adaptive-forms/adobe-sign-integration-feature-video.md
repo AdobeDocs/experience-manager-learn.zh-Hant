@@ -32,4 +32,4 @@ ht-degree: 0%
 >
 >此功能僅適用於AEM 6.3以上版本。
 
-請造訪 [AEM Forms範例頁面](https://forms.enablementadobe.com/content/samples/samples.html?query=0) ，以取得此功能的即時示範連結。
+請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)頁面，以取得此功能的即時示範連結。
