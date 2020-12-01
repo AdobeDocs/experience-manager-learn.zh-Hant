@@ -29,11 +29,11 @@ ht-degree: 0%
 
 當您在AEM中設定監看資料夾時，會關聯將檔案拖放至監看資料夾時執行的ECMA指令碼或Java程式碼。 在本文中，我們將重點介紹ECMA指令碼，它將生成打印通道文檔並將其保存到檔案系統。
 
-在本教學課程開始時，您匯入的資產中會包含監看的檔案夾設定 [和ECMA指令碼](introduction.md)
+監視的資料夾配置和ECMA指令碼是您在本教程[開頭導入的資產的一部分。](introduction.md)
 
 拖放至監看資料夾的輸入檔案具有下列結構。 ECMA指令碼讀取帳戶編號並為每個帳戶生成打印渠道文檔。
 
-有關生成文檔的ECMA指令碼的詳細資訊，請 [參閱本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+有關生成文檔的ECMA指令碼的詳細資訊，請參閱本文[](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 ```xml
 <accountnumbers>
