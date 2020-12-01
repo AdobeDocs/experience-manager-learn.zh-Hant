@@ -33,13 +33,13 @@ Pod Id會提供在每個log陳述式中，並允許篩選或整合log陳述式�
 
 AEM做為Cloud Services不支援自訂記錄檔，但支援自訂記錄。
 
-若要在AEM中以雲端服務形式提供Java記錄檔(透過 [Cloud Manager](#cloud-manager) 或 [Adobe I/O CLI](#aio))，必須編寫自訂記錄檔陳述式 `error.log`。 寫入自訂命名記錄的記錄檔(例如 `example.log`)將無法從AEM以雲端服務的形式存取。
+若要在AEM中以雲端服務形式提供Java記錄檔（透過[Cloud Manager](#cloud-manager)或[Adobe I/O CLI](#aio)），自訂記錄檔必須寫入`error.log`。 寫入自訂命名記錄檔（例如`example.log`）的記錄檔將無法透過AEM以雲端服務方式存取。
 
 ## AEM Author和Publish服務記錄檔
 
 AEM Author和Publish服務都提供AEM執行階段伺服器記錄：
 
-+ `aemerror` 是Java錯誤記錄檔(可在AEM SDK本 `/crx-quickstart/error.log` 機快速入門中找到)。 以下是依環境類 [型自訂記錄程式](#log-levels) ，建議的記錄層級：
++ `aemerror` 是Java錯誤記錄檔(可在AEM SDK本 `/crx-quickstart/error.log` 機快速入門中找到)。以下是[針對每種環境類型的自定義日誌程式建議的日誌級別](#log-levels):
    + 開發: `DEBUG`
    + 分段: `WARN`
    + 生產: `ERROR`
@@ -70,11 +70,11 @@ Adobe Cloud Manager允許透過環境的「下載記錄檔」動作，按日下�
 
 ## Adobe I/O CLI with Cloud Manager plugin{#aio}
 
-Adobe Cloud Manager支援透過 [Adobe I/O CLI以Adobe I/O CLI的Cloud Manager外掛程式，以Cloud Service記錄檔形式存取AEM](https://github.com/adobe/aio-cli)[](https://github.com/adobe/aio-cli-plugin-cloudmanager)。
+Adobe Cloud Manager支援透過[Adobe I/O CLI](https://github.com/adobe/aio-cli)以Adobe I/O CLI[ Cloud Manager外掛程式，以雲端服務記錄檔形式存取AEM。](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 
-首先， [設定Adobe I/O with Cloud Manager plugin](../../local-development-environment/development-tools.md#aio-cli)。
+首先，[使用Cloud Manager外掛程式設定Adobe I/O。](../../local-development-environment/development-tools.md#aio-cli)
 
-確保已識別相關的程式ID和環境ID，並使用 [list-available-log-options](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerlist-available-log-options-environmentid) ，列出用於跟蹤或下載日誌 [的日誌選](#aio-cli-tail-logs) 項 [](#aio-cli-download-logs) 。
+確保已識別相關的程式Id和環境Id，並使用[list-available-log-options](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerlist-available-log-options-environmentid)列出用於[tail](#aio-cli-tail-logs)或[download](#aio-cli-download-logs)日誌的日誌選項。
 
 ```
 $ aio cloudmanager:list-programs
@@ -106,24 +106,24 @@ Environment Id Service    Name
 
 ### 跟蹤日誌{#aio-cli-tail-logs}
 
-Adobe I/O CLI提供使用tail-logs命令從AEM即時追蹤雲端服務記錄 [的功能](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name) 。 當AEM的「雲端服務」環境執行動作時，追蹤對於監視即時記錄活動非常有用。
+Adobe I/O CLI提供使用[tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name)命令從AEM即時追蹤雲端服務記錄的功能。 當AEM的「雲端服務」環境執行動作時，追蹤對於監視即時記錄活動非常有用。
 
 ```
 $ aio config:set cloudmanager_programid <PROGRAM ID>
 $ aio cloudmanager:tail-logs <ENVIRONMENT ID> <SERVICE> <NAME>
 ```
 
-其他命令列工具(例如， `grep` 可搭配使用)可 `tail-logs` 協助隔離感興趣的日誌陳述式，例如：
+其他命令行工具（例如`grep`）可與`tail-logs`搭配使用，以幫助隔離感興趣的日誌語句，例如：
 
 ```
 $ aio cloudmanager:tail-logs 12345 author | grep com.example.MySlingModel
 ```
 
-...只顯示從中生成或包含 `com.example.MySlingModel` 該字串的日誌語句。
+...僅顯示從`com.example.MySlingModel`生成的日誌語句，或在其中包含該字串。
 
-### 下載記錄檔{#aio-cli-download-logs}
+### 下載日誌{#aio-cli-download-logs}
 
-Adobe I/O CLI提供使用download-logs命令從AEM下載雲端服務記 [錄檔](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerdownload-logs-environmentid-service-name-days)。 這提供了與從Cloud Manager Web UI下載日誌相同的最終結果，其區別在於，該命令會根據請求的日誌數天合併日誌。 `download-logs`
+Adobe I/O CLI提供使用[download-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerdownload-logs-environmentid-service-name-days)命令從AEM下載雲端服務記錄檔的功能。 這提供與從Cloud Manager Web UI下載日誌相同的最終結果，其差異是`download-logs`命令會根據請求的日誌數天合併日誌。
 
 ```
 $ aio config:set cloudmanager_programid <PROGRAM ID>
@@ -132,7 +132,7 @@ $ aio cloudmanager:download-logs <ENVIRONMENT> <SERVICE> <NAME> <DAYS>
 
 ## 瞭解記錄檔
 
-以雲端服務身分登入AEM的Pod有多個將log陳述式寫入其中。 由於多個AEM例項會寫入相同的記錄檔，因此在除錯時，請務必瞭解如何分析並降低雜訊。 要解釋，將使 `aemerror` 用以下日誌代碼段：
+以雲端服務身分登入AEM的Pod有多個將log陳述式寫入其中。 由於多個AEM例項會寫入相同的記錄檔，因此在除錯時，請務必瞭解如何分析並降低雜訊。 要解釋，將使用以下`aemerror`日誌代碼段：
 
 ```
 01.01.2020 12:00:00.000 [cm-p12345-e56789-aem-author-abcdefg-1111] *DEBUG* [qtp2078364989-269] com.example.components.impl.ExampleModelImpl Preparing to collect resources
@@ -155,11 +155,11 @@ __Pod cm-p12345-e56789-aem-author-abcdefg-2222__
 01.01.2020 12:00:01.002 [cm-p12345-e56789-aem-author-abcdefg-2222] *WARN*  [qtp2078364989-269] com.example.services.impl.ExampleServiceImpl Unable to resolve resource [ /content/example ] to a resource. Aborting.
 ```
 
-## 建議的記錄層級{#log-levels}
+## 建議的日誌級別{#log-levels}
 
 Adobe針對每個AEM做為雲端服務環境之記錄層級的一般指引如下：
 
-+ 本機開發(AEM SDK): `DEBUG`
++ 本機開發(AEM SDK):`DEBUG`
 + 開發: `DEBUG`
 + 分段: `WARN`
 + 生產: `ERROR`
@@ -173,9 +173,9 @@ Adobe針對每個AEM做為雲端服務環境之記錄層級的一般指引如下
 
 ### 用於設定Java日誌級別的環境特定變數
 
-為每個環境設定靜態眾所周知的Java記錄檔層級的替代方法，是使用AEM做為Cloud Service的環境特定變數 [，以參數化記錄檔層級，允許透過](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values) Adobe I/O CLI與Cloud Manager外掛程式動態變更值 [](#aio-cli)。
+為每個環境設定靜態眾所周知的Java記錄檔層級的替代方法，是使用AEM做為雲端服務的[環境特定變數](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)來參數化記錄檔層級，讓您透過[Adobe I/O CLI及Cloud Manager](#aio-cli)動態變更值。
 
-這需要更新日誌OSGi配置以使用環境特定的變數佔位符。 [記錄檔層級](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) 的預設值應依據 [Adobe建議而設定](#log-levels)。 例如：
+這要求更新日誌OSGi配置以使用環境特定的變數佔位符。 [記錄](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) 層級的預設值應依據 [Adobe建議而設定](#log-levels)。例如：
 
 `/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
@@ -189,7 +189,7 @@ Adobe針對每個AEM做為雲端服務環境之記錄層級的一般指引如下
 這種方法有其缺點，必須加以考慮：
 
 + [允許的環境變數數量有限](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#number-of-variables)，建立用於管理日誌級別的變數將使用一個。
-+ 環境變數只能透過 [Adobe I/O CLI或](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) Cloud Manager HTTP API以程式設計方式管理 [](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#cloud-manager-api-format-for-setting-properties)。
++ 環境變數只能透過[Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)或[Cloud Manager HTTP API](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#cloud-manager-api-format-for-setting-properties)以程式方式管理。
 + 環境變數的變更必須由支援的工具手動重設。 忘記將高流量環境（例如「生產」）重設為較少的詳細記錄層級，可能會淹沒記錄檔並影響AEM的效能。
 
 _環境特定變數不適用於Apache Web伺服器或Dispatcher日誌配置，因為這些配置不是通過OSGi配置進行配置的。_
