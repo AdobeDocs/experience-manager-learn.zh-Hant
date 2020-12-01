@@ -15,12 +15,12 @@ translation-type: tm+mt
 source-git-commit: f568c991cd33c5c5349da32f505cff356a6ebfd2
 workflow-type: tm+mt
 source-wordcount: '284'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
 
-# 搭配AEM Sites使用SPA編輯器 {#using-the-spa-editor-with-aem-sites}
+# 搭配AEM Sites {#using-the-spa-editor-with-aem-sites}使用SPA編輯器
 
 在AEM Sites中製作單頁應用程式內容的影片總覽。
 
@@ -38,9 +38,9 @@ AEM的SPA編輯器可讓作者編輯單頁應用程式或SPA的內容。 使用�
 
 WKND SPA實作僅提供AEM 6.4.8+、AEM 6.5.5+和AEM雲端服務支援。
 
-根據您的AEM版本，下載 [並安裝適當的WKND SPA套件](https://github.com/adobe/aem-guides-wknd-spa/releases) 。 React和Angular有不同 **的版****本**。
+根據您的AEM版本，下載並安裝適當的[WKND SPA套件](https://github.com/adobe/aem-guides-wknd-spa/releases)。 **React**&#x200B;和&#x200B;**Angular**&#x200B;有不同的版本。
 
 有關使用SPA編輯器進行開發的詳細教程，請參閱：
 
-* [AEM SPA編輯器和Angular快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
-* [AEM SPA編輯器快速入門與回應](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+* [AEM SPA Editor and Angular 快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+* [AEM SPA Editor and React 快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
