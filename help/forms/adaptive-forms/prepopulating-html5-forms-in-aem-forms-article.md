@@ -20,17 +20,17 @@ ht-degree: 0%
 ---
 
 
-# 使用資料屬性預先填入HTML5表單 {#prepopulate-html-forms-using-data-attribute}
+# 使用資料屬性{#prepopulate-html-forms-using-data-attribute}預先填入HTML5表單
 
-請造訪 [AEM Forms範例頁面](https://forms.enablementadobe.com/content/samples/samples.html?query=0) ，以取得此功能的即時示範連結。
+請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)頁面，以取得此功能的即時示範連結。
 
 使用AEM Forms以HTML格式轉譯的XDP範本稱為HTML5或Mobile Forms。 常見的使用案例是，在轉譯這些表單時預先填入這些表單。
 
 當xdp範本轉換為HTML時，有2種方式可將資料與xdp範本合併。
 
-**dataRef**:您可以在URL中使用dataRef參數。 此參數指定與模板合併的資料檔案的絕對路徑。 此參數可以是傳回XML格式資料之其餘服務的URL。
+**dataRef**:您可以在URL中使用dataRef參數。此參數指定與模板合併的資料檔案的絕對路徑。 此參數可以是傳回XML格式資料之其餘服務的URL。
 
-**資料**:此參數指定與範本合併的UTF-8編碼資料位元組。 如果指定此參數，HTML5表單會忽略dataRef參數。 建議您使用資料方法作為最佳實務。
+**資料**:此參數指定與範本合併的UTF-8編碼資料位元組。如果指定此參數，HTML5表單會忽略dataRef參數。 建議您使用資料方法作為最佳實務。
 
 建議的方法是使用您要預先填入表單的資料，來設定請求中的資料屬性。
 
@@ -38,7 +38,7 @@ slingRequest.setAttribute(&quot;data&quot;, content);
 
 在此範例中，我們會設定內容的資料屬性。 內容代表您要預先填入表單的資料。 通常，您會透過對內部服務進行REST呼叫來擷取「內容」。
 
-若要達成此使用案例，您需要建立自訂描述檔。 有關建立自訂描述檔的詳細資訊，請在此處的 [AEM Forms檔案中清楚說明](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html)。
+若要達成此使用案例，您需要建立自訂描述檔。 有關建立自訂描述檔的詳細資訊，請詳細說明在[AEM Forms說明檔案中，此處](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html)。
 
 建立自訂描述檔後，您就會建立JSP檔案，透過呼叫後端系統來擷取資料。 擷取資料後，您就會使用slingRequest.setAttribute(&quot;data&quot;, content);要預先填入表格
 
@@ -49,7 +49,8 @@ slingRequest.setAttribute(&quot;data&quot;, content);
 您編寫的JSP將可透過request.getParameter(&quot;name&quot;)存取name參數。 然後，您可以將此參數的值傳遞至後端程式，以擷取所需的資料。
 若要讓此功能在您的系統上運作，請遵循下列步驟：
 
-* [下載並使用套件管理員將資產匯入AEM](assets/prepopulatemobileform.zip)套件將安裝下列
+* [下載並使用套件管理員將資產匯入AEM](assets/prepopulatemobileform.zip)
+套件將安裝下列
 
    * CustomProfile
    * 範例XDP
@@ -59,4 +60,4 @@ slingRequest.setAttribute(&quot;data&quot;, content);
 >
 >如果您想要透過呼叫workbench進程來填入表單，您可能想將callWorkbenchProcess.jsp包含在/apps/AEMFormsDemoListings/customprofiles/PrepopulateForm/html.jsp中，而非setdata.jsp
 
-* [將您最愛的瀏覽器指向此URL](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=Adobe%20Systems)。 表單應預先填入名稱參數的值
+* [將您最愛的瀏覽器指向此URL](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=Adobe%20Systems)。表單應預先填入名稱參數的值
