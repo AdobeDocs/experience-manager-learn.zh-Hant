@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# 搭配AEM Assets動態媒體使用智慧裁切{#using-smart-crop-with-aem-assets-dynamic-media}
+# 搭配AEM Assets Dynamic Media使用智慧型裁切{#using-smart-crop-with-aem-assets-dynamic-media}
 
 智慧型裁切使用Adobe Sensei來消除裁切內容以進行自適應設計所耗費的時間與成本。
 
