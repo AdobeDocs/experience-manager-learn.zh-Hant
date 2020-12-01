@@ -32,7 +32,7 @@ Bundles主控台是OSGi Bundles的目錄，以及部署至AEM的詳細資訊，�
 Bundles控制台位於：
 
 + 「工具>作業> Web Console > OSGi >組合」
-+ 或直接在： [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
++ 或直接在：[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
 按一下每個套件，提供有助於除錯應用程式的詳細資訊。
 
@@ -49,7 +49,7 @@ Components主控台是部署至AEM的所有OSGi元件的目錄，並提供有關
 元件控制台位於：
 
 + 「工具>作業> Web Console > OSGi >元件」
-+ 或直接在： [http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
++ 或直接在：[http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
 
 協助除錯活動的主要方面：
 
@@ -66,7 +66,7 @@ Components主控台是部署至AEM的所有OSGi元件的目錄，並提供有關
 Sling Models主控台位於：
 
 + 「工具>作業> Web Console >狀態> Sling Models」
-+ 或直接在： [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
++ 或直接在：[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
 
 協助除錯活動的主要方面：
 
