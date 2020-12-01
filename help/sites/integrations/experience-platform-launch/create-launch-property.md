@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# 建立啟動屬性 {#create-launch-property}
+# 建立啟動屬性{#create-launch-property}
 
 瞭解如何使用設定與Adobe Experience Manager整合的其餘部分所需的最低配置，來建立Launch屬性。 使用者將會進入Launch UI，並瞭解擴充功能、規則和發佈工作流程。
 
