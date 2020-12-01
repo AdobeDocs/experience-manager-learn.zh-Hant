@@ -68,12 +68,15 @@ AEM Forms 6.5中已引入ArrayList類型的變數。使用ArrayList變數的常�
 ```
 
 若要初始化子類型字串的ArrayList變數，您可以使用JSON Dot Notation或XPath對應模式。 下列螢幕擷取顯示您使用JSON點記法填入名為CustomRoutes的ArrayList變數。 請確定您指向的是陣列物件中的元素，如下方螢幕擷取所示。 我們將用managerchain陣列對象的名稱填充CustomRoutes ArrayList。
-CustomRoutes ArrayList隨後用於填充AssignTask元件![customroutes](assets/arraylist.jpg)CustomRoutes ArrayList變數，一旦用提交資料中的值初始化CustomRoutes ArrayList變數，則AssignTask元件的Routes將使用CustomRoutes變數填充。 下面的螢幕截圖顯示了AssignTask作為任務中的自定義![路由](assets/customactions.jpg)
+然後， CustomRoutes ArrayList用於在AssignTask元件中填充路由
+![customroutes](assets/arraylist.jpg)
+使用提交資料中的值初始化CustomRoutes ArrayList變數後，AssignTask元件的路由將使用CustomRoutes變數填充。 以下螢幕抓圖顯示AssignTask中的自定義路由
+![asingtask](assets/customactions.jpg)
 
 若要在您的系統上測試此工作流程，請依照下列步驟進行
 
 * 下載ArrayListVariable.zip檔案並儲存至您的檔案系統
-* [使用AEM Package Manager匯入zip檔案](assets/arraylistvariable.zip) 。
+* [使用AEM套](assets/arraylistvariable.zip) 件管理員匯入zip檔案
 * [開啟TravelExpenseReport表單](http://localhost:4502/content/dam/formsanddocuments/helpx/travelexpensereport/jcr:content?wcmmode=disabled)
 * 輸入一些費用和2名經理的姓名
 * 按一下提交按鈕
