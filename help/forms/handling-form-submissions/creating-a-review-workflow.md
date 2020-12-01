@@ -25,13 +25,13 @@ ht-degree: 0%
 
 ## 先決條件
 
-請確定您有AEM Forms的運作實例。 請依照安 [裝指南](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) ，安裝和設定AEM Forms
+請確定您有AEM Forms的運作實例。 請依照[安裝指南](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)來安裝和設定AEM Forms
 
 以下影片說明使用AEM Forms元件建立「檢閱與核准」工作流程的方式
 >[!VIDEO](https://video.tv.adobe.com/v/40242/?quality=9&learn=on)
 
 
-如果由於某些原因，您無法建立工作流程，您可從此處下載完成的 [工作流程](assets/review-submitted-data-workflow.zip) ，並使用套件管理器將相 [](http://localhost:4502/crx/packmgr/index.jsp) 同的工作流程匯入AEM例項。
+如果由於某些原因無法建立工作流程，您可以從[這裡](assets/review-submitted-data-workflow.zip)下載完成的工作流程，然後使用[套件管理員](http://localhost:4502/crx/packmgr/index.jsp)將相同的工作流程匯入您的AEM例項。
 
 
 
