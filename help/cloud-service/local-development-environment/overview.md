@@ -28,9 +28,9 @@ ht-degree: 0%
 
 AEM的本機開發環境可分為三個邏輯群組：
 
-+ __AEM Project包含自訂代碼__ 、設定和自訂AEM應用程式的內容。
-+ 本 __機AEM Runtime__ ，可在本機執行AEM Author和Publish服務的本機版本。
-+ 本 __地Dispatcher Runtime__ ，它運行Apache HTTP Web Server和Dispatcher的本地版本。
++ __AEM Project__&#x200B;包含自訂AEM應用程式的自訂程式碼、設定和內容。
++ __本機AEM Runtime__&#x200B;會在本機執行AEM Author和Publish服務的本機版本。
++ __Local Dispatcher Runtime__，它運行Apache HTTP Web Server和Dispatcher的本地版本。
 
 本教學課程將逐步說明如何安裝和設定上圖中反白顯示的項目，為AEM開發提供穩定的本機開發環境。
 
@@ -44,16 +44,16 @@ AEM的本機開發環境可分為三個邏輯群組：
 + `~/aem-sdk/dispatcher` 包含Dispatcher Tools
 + `~/code/<project name>` 包含自訂AEM Project原始碼
 
-請注 `~` 意，這是用戶目錄的簡稱。 在Windows中，這相當於 `%HOMEPATH%`;
+請注意，`~`是用戶目錄的速記。 在Windows中，這相當於`%HOMEPATH%`;
 
 ## AEM專案的開發工具
 
-AEM專案是自訂的程式碼庫，包含透過Cloud Manager部署至AEM的程式碼、設定和內容，做為雲端服務。 基線項目結構是透過 [AEM Project Maven Archetype產生](https://github.com/adobe/aem-project-archetype)。
+AEM專案是自訂的程式碼庫，包含透過Cloud Manager部署至AEM的程式碼、設定和內容，做為雲端服務。 基線項目結構是透過[AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype)產生。
 
 教學課程的本節說明如何：
 
 + 安裝 [!DNL Java]
-+ 安裝 [!DNL Node.js] （和npm）
++ 安裝[!DNL Node.js]（和npm）
 + 安裝 [!DNL Maven]
 + 安裝 [!DNL Git]
 
@@ -61,25 +61,25 @@ AEM專案是自訂的程式碼庫，包含透過Cloud Manager部署至AEM的程�
 
 ## 本機AEM Runtime
 
-AEM as a Cloud Service SDK提供執行 [!DNL QuickStart Jar] 本機版AEM的功能。 您可 [!DNL QuickStart Jar] 以使用本端執行AEM Author Service或AEM Publish Service。 請注意，雖然 [!DNL QuickStart Jar] 提供本機開發體驗，但並非AEM中所有雲端服務可用的功能都包含在中 [!DNL QuickStart Jar]。
+AEM as a Cloud Service SDK提供[!DNL QuickStart Jar]，可執行AEM的本機版本。 [!DNL QuickStart Jar]可用來在本機執行AEM Author Service或AEM Publish Service。 請注意，雖然[!DNL QuickStart Jar]提供本機開發體驗，但[!DNL QuickStart Jar]中並未包含AEM中所有雲端服務可用的功能。
 
 教學課程的本節說明如何：
 
 + 安裝 [!DNL Java]
 + 下載AEM SDK
-+ 執行 [!DNL AEM Author Service]
-+ 執行 [!DNL AEM Publish Service]
++ 運行[!DNL AEM Author Service]
++ 運行[!DNL AEM Publish Service]
 
 [設定本機AEM執行階段](./aem-runtime.md)
 
-## 本機執 [!DNL Dispatcher] 行時期
+## 本機[!DNL Dispatcher]執行時期
 
-AEM做為Cloud Service SDK的Dispatcher Tools提供設定本機執行階段所需的一切 [!DNL Dispatcher] 功能。 [!DNL Dispatcher] 工具是以 [!DNL Docker]命令列工具為基礎，可將 [!DNL Apache HTTP] Web Server和組態檔轉換為相容格式，並將它們部署至容 [!DNL Dispatcher] 器中執行 [!DNL Dispatcher][!DNL Docker] 的。
+AEM as a Cloud Service SDK&#39;s Dispatcher Tools提供設定本機[!DNL Dispatcher]執行階段所需的一切。 [!DNL Dispatcher] 工具是以 [!DNL Docker]命令列工具為基礎，可將 [!DNL Apache HTTP] Web Server和組態檔 [!DNL Dispatcher] 轉換為相容格式，並將它們部署至容 [!DNL Dispatcher] 器中執 [!DNL Docker] 行。
 
 教學課程的本節說明如何：
 
 + 下載AEM SDK
-+ 安裝工 [!DNL Dispatcher] 具
-+ 執行本機執行 [!DNL Dispatcher] 時期
++ 安裝[!DNL Dispatcher]工具
++ 執行本機[!DNL Dispatcher]執行時期
 
 [設定 [!DNL Dispatcher] LocalRuntime](./dispatcher-tools.md)
