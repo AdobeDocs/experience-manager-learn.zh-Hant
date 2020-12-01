@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 建立Launch Cloud服務設定 {#create-launch-cloud-service}
+# 建立Launch Cloud服務設定{#create-launch-cloud-service}
 
 瞭解如何在Adobe Experience Manager中建立新的Launch Cloud服務設定。 然後，AEM的Launch Cloud服務設定可套用至現有的網站，而且在「作者」和「發佈」環境中都可看到載入Launch程式庫。
 
