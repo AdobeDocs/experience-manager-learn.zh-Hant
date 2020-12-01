@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 登入登出 {#check-in-check-out}
+# 登入登出{#check-in-check-out}
 
 Adobe Asset可讓您直接從您正在使用的創意應用程式中取出AEM Assets，並立即開始進行編輯。 在Creative Cloud應用程式中編輯完資產後，您可以使用適當的版本修訂和注釋，輕鬆將資產存回AEM Assets。
 
