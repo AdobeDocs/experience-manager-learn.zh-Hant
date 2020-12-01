@@ -30,7 +30,7 @@ CRXDE Lite是以Web為基礎的介面，可與AEM的資料儲存庫JCR互動。 
 CRXDE Lite位於：
 
 + 「工具>一般> CRXDE Lite」
-+ 或直接寄至 [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
++ 或直接寄至[http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 
 ## 說明查詢
 
@@ -41,13 +41,13 @@ CRXDE Lite位於：
 Explain Query位於：
 
 + 「工具>診斷>查詢效能>說明查詢標籤」
-+ [「http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) >說明查詢」索引標籤
++ [http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) >「說明查詢」標籤
 
 ## QueryBuilder除錯程式
 
 ![QueryBuilder除錯程式](./assets/other-tools/query-debugger.png)
 
-QueryBuilder除錯程式是網路工具，可協助您使用AEM的 [QueryBuilder語法除錯和瞭解搜尋查詢](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) 。
+QueryBuilder除錯程式是網路工具，可協助您使用AEM的[QueryBuilder](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)語法來除錯和瞭解搜尋查詢。
 
 QueryBuilder除錯程式位於：
 
@@ -57,9 +57,9 @@ QueryBuilder除錯程式位於：
 
 ![Sling Log Tracer和AEM Chrome增效模組](./assets/other-tools/log-tracer.png)
 
-[隨附於AEM SDK本機快速入門的Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html)，可讓您深入追蹤HTTP請求，並依請求提供深入的除錯資訊。 必 [須配置Log Tracer OSGi配置](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1) ，才能啟用此功能。
+[隨附於AEM SDK本機快速入門的Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html)，可讓您深入追蹤HTTP請求，並依請求提供深入的除錯資訊。[Log Tracer OSGi配置必須配置](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1)才能啟用此功能。
 
-[Google Chrome網頁瀏覽器專用的開放原始碼](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US) AEM Chrome增效模組已與Log Tracer整合 [](https://www.google.com/chrome/)，可直接在Chrome的「開發工具」中公開除錯資訊。
+適用於[Google Chrome網頁瀏覽器](https://www.google.com/chrome/)的開放原始碼[AEM Chrome增效模組](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)與Log Tracer整合，直接在Chrome的Dev Tools中公開除錯資訊。
 
 _AEM Chrome增效模組是開放原始碼工具，Adobe不提供支援。_
 
