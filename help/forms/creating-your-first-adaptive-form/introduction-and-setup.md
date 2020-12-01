@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 最適化表單快速入門 {#getting-started-with-adaptive-forms}
+# Adaptive Forms {#getting-started-with-adaptive-forms}快速入門
 
 本教學課程將引導您逐步瞭解建立多標籤式最適化表單的相關步驟。 您將學習使用表格、收合式配置和規則編輯器來編寫業務規則。
 
@@ -36,8 +36,8 @@ ht-degree: 0%
 
 * **假設您正在localhost:4502上執行AEM Forms 6.4版或更新版本。**
 
-* [將client-libs-and-logo和](assets/client-libs-and-logo.zip)[getting-started-fragment下載至硬碟](assets/getting-started-fragment.zip) 。
+* [將client-libs-and-](assets/client-libs-and-logo.zip) logoand  [getting-started-](assets/getting-started-fragment.zip) fragment下載至硬碟。
 
-* 使用套件管理器將zip檔案匯 [入AEM ](http://localhost:4502/crx/packmgr/index.jsp)
+* 使用[套件管理器](http://localhost:4502/crx/packmgr/index.jsp)將zip檔案匯入AEM
 
 
