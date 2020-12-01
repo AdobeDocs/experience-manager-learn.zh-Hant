@@ -28,12 +28,12 @@ ht-degree: 0%
 + 在清單檢視設定下啟用「工作流程」中繼資料。
 + 從清單檢視輕鬆導覽至工作流程時間軸
 + 複製並貼上現有的OOTB工作流程，以自訂或覆寫預設功能
-+ 執行快速發佈 [!DNL Workflow Models] 和 [!DNL Launchers]
-+ 管理發布 [!DNL Workflow Models] 和 [!DNL Launchers]。
++ 對[!DNL Workflow Models]和[!DNL Launchers]執行快速發佈
++ 管理[!DNL Workflow Models]和[!DNL Launchers]的出版物。
 + 嘗試編輯OOTB工作流程模型或啟動器時，會以警告工具提示通知使用者。
 + 能夠恢復對OOTB工作流模型或啟動器所做的更改。
 
-此視訊用 [!DNL Workflow models] 來展示這組功能，但也適用於 [!DNL AEM Launchers]。
+此視訊使用[!DNL Workflow models]來展示此組功能，但也適用於[!DNL AEM Launchers]。
 
 
 >[!NOTE]
