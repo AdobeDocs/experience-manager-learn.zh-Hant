@@ -39,7 +39,7 @@ ht-degree: 0%
 
    1. 取消選中「打印渠道」複選框。 我們不會為列印渠道建立檔案。
    1. Web:選取此選項，以產生適用於網頁頻道的檔案
-   1. 互動式通訊：範本： **global>** RetirementAccountStatement（這是在前一步中建立的模板）
+   1. 互動式通訊：範本：**global>RetirementAccountStatemen** t（這是在前一步中建立的模板）
    1. 主題：**參考主題->Canvas 2.0**
 
 1. 點選建立
