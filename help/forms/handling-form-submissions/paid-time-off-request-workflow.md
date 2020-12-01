@@ -27,7 +27,7 @@ ht-degree: 0%
 * 管理員開啟表單。 管理員不能編輯提交者填寫的任何資訊。
 * 核准者區段應該會顯示給核准者（在此例中為AEM管理員使用者）。
 
-為了滿足上述要求，我們在表單中使用一個名為 **initialstep** 的隱藏欄位，其預設值設定為Yes。提交表單時，工作流的第一步將初始步驟的值設定為No。 表單有業務規則可根據初始步驟值來隱藏和顯示適當的章節。
+為滿足上述要求，我們在表單中使用名為&#x200B;**initialstep**&#x200B;的隱藏欄位，其預設值設定為「是」。提交表單時，工作流中的第一步將初始步驟的值設定為「否」。 表單有業務規則可根據初始步驟值來隱藏和顯示適當的章節。
 
 **設定表單以觸發AEM工作流程**
 
@@ -51,8 +51,8 @@ ht-degree: 0%
 * [下載並部署DevelopingWiteServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [下載並部署SetValue自訂OSGI套件](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
 * [將與此文章相關的資產匯入AEM](assets/helpxworkflow.zip)
-* 開啟「 [暫停請求」表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* 開啟[關閉時間請求表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填寫詳細資訊並提交
-* 開啟收 [件箱](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html)。 您應該會看到指派的新任務。 開啟表格。 提交者的資料應為只讀，並且應顯示新的批准者部分。
-* 探索工作 [流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
+* 開啟[inbox](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html)。 您應該會看到指派的新任務。 開啟表格。 提交者的資料應為只讀，並且應顯示新的批准者部分。
+* 探索[工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
 * 探索程式步驟。 此步驟將初始步驟的值設定為「否」。
