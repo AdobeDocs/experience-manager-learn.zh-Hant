@@ -23,7 +23,8 @@ OutputService提供多種方法，可使用表單設計建立檔案，並使用�
 
 ![多記錄-xml](assets/multi-record-xml.PNG)
 
-資料xml有2個記錄。 每個記錄由form1元素表示。 此xml會傳遞至OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) ，我們會取得pdf檔案清單（每份記錄一份）產生PDF檔案的簽名generatePDFOutputBatch方法會採用下列參數
+資料xml有2個記錄。 每個記錄由form1元素表示。 此xml會傳遞至OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html)，我們會取得pdf檔案清單（每份記錄一份）
+generatePDFOutputBatch方法的簽名採用下列參數
 
 * 模板——包含模板的映射，由鍵標識
 * data —— 包含XML資料檔案的地圖，由索引鍵識別
@@ -32,7 +33,7 @@ OutputService提供多種方法，可使用表單設計建立檔案，並使用�
 
 >[!NOTE]
 >
->此使用案例在此網站上提供即時 [範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。
+>此使用案例在此[website](https://forms.enablementadobe.com/content/samples/samples.html?query=0)上提供即時範例。
 
 ## 使用案例詳細資訊{#use-case-details}
 
@@ -73,7 +74,7 @@ Document zippedDocument = documentServices.generateMultiplePdfs(templateMap, dat
 ....
 ```
 
-### 介面實作代碼{#Interface-Implementation-Code}
+### 介面實施代碼{#Interface-Implementation-Code}
 
 下列程式碼使用OutputService的generatePDFOutputBatch產生多個pdf，並將包含pdf檔案的zip檔案傳回至呼叫servlet
 
@@ -133,7 +134,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 * [部署DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
 * [部署自訂AEMFormsDocumentServices Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Custom bundle，它使用OutputService API產生pdf
 * [將您的瀏覽器指向封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* [匯入並安裝套件](assets/generate-multiple-pdf-from-xml.zip)。 此套件包含html頁面，可讓您拖放範本和資料檔案。
+* [匯入並安裝套件](assets/generate-multiple-pdf-from-xml.zip)。此套件包含html頁面，可讓您拖放範本和資料檔案。
 * [將您的瀏覽器指向MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html?)
 * 將範本和xml資料檔案拖放在一起
 * 下載已建立的zip檔案。 此zip檔案包含輸出服務產生的pdf檔案。
