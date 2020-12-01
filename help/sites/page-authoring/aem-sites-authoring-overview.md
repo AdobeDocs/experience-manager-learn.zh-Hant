@@ -20,7 +20,7 @@ ht-degree: 1%
 ---
 
 
-# 編寫概觀 {#authoring-overview}
+# 編寫概述{#authoring-overview}
 
 以下影片概述在AEM Sites的AEM作者環境中編寫基本概念。
 
