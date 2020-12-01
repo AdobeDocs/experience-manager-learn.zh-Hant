@@ -24,9 +24,9 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324/quality=9)
 
-如需詳細資訊， [請參閱最適化表單範本檔案](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) 。
+如需詳細資訊，請參閱[最適化表單範本檔案](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
 
-如有需要，您可以下載 [最適化表單範本](assets/peak-application-template.zip) ，並使用套件管理器匯 [入至AEM](http://localhost:4502/crx/packmgr/index.jsp)
+如果需要，您可以下載[最適化表單範本](assets/peak-application-template.zip)，然後使用[套件管理器](http://localhost:4502/crx/packmgr/index.jsp)匯入AEM
 
 
 
