@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 置入連結{#place-linked}
+# 置入連結的{#place-linked}
 
 瞭解如何使用「置入連結」作業，從AEM Assets使用資產。
 
