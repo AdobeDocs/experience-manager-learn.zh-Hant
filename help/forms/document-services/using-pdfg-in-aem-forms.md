@@ -24,19 +24,20 @@ ht-degree: 0%
 
 展示使用AEM Forms建立PDF的拖放功能
 
-PDFG代表PDF產生。 這表示您可以將多種檔案格式轉換為PDF。 最常見的是Microsoft Office檔案。 PDFG自6.1起就加入AEM Forms。[此處列出了PDFG API的Javadoc](https://helpx.adobe.com/experience-manager/6-3/forms/using/aem-document-services-programmatically.html#PDFGeneratorService)
+PDFG代表PDF產生。 這表示您可以將多種檔案格式轉換為PDF。 最常見的是Microsoft Office檔案。 PDFG自6.1起就加入AEM Forms。
+[此處列出了PDFG API的javadoc](https://helpx.adobe.com/experience-manager/6-3/forms/using/aem-document-services-programmatically.html#PDFGeneratorService)
 
 與本文相關的資產可讓您將MS office檔案或JPG檔案拖放至HTML頁面的拖放區。 檔案一旦放棄後，就會叫用PDF服務，並將檔案轉換為PDF並儲存在AEM Server的檔案系統中。
 
 若要安裝示範資產，請執行下列步驟
 
-1. 如本檔案所述設定PDFG [](https://helpx.adobe.com/experience-manager/6-4/forms/using/install-configure-pdf-generator.html)。
+1. 如本檔案[此處](https://helpx.adobe.com/experience-manager/6-4/forms/using/install-configure-pdf-generator.html)所述配置PDF。
 1. 請依照與AEM Forms版本相關的適當檔案進行。
 1. [使用套件管理員匯入及安裝與本文相關的資產。](assets/createpdfgdemov2.zip)
-1. [導覽至CRX中的post](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) .jsp
+1. [導覽至post.](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) jspin您的CRX
 1. 根據您的偏好設定變更儲存位置（第9行）
 1. 儲存您的變更。
-1. 開啟 [ html頁面](http://localhost:4502/content/DocumentServices/CreatePDFG.html) ，以拖放檔案進行轉換。
+1. 開啟[ html page](http://localhost:4502/content/DocumentServices/CreatePDFG.html)以拖放檔案進行轉換。
 1. 將單字檔案或jpg拖放至拖放區。
 1. 輸入檔案將轉換為PDF並儲存在與第4點中指定的相同位置。
 
