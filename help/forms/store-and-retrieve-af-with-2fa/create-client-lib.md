@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 建立客戶端庫
 
-建 [立用戶端](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html) lib `doAjaxSubmitWithFileAttachment` ，其中會包含程式碼，以在CSS類別儲存按鈕所識別的按鈕上，叫用 `guideBridge` API的方法 ****。  我們會傳遞最適化表單資 `fileMap`料，以及 `mobileNumber` 傳送至 `**/bin/storeafdatawithattachments`
+建立[client lib](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html)，其中將包含在CSS類&#x200B;**savebutton**&#x200B;所標識的按鈕的click事件上調用`guideBridge` API方法`doAjaxSubmitWithFileAttachment`的代碼。  我們會將最適化表單資料`fileMap`和`mobileNumber`傳遞至位於`**/bin/storeafdatawithattachments`的端點監聽
 
 在儲存表單資料後，會產生唯一的應用程式ID，並在對話方塊中呈現給使用者。 關閉對話框後，用戶將進入允許他們使用唯一應用程式ID檢索保存的自適應表單的表單。
 
@@ -67,6 +67,6 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> 我們已使用 [bootbox javascript程式庫](http://bootboxjs.com/examples.html) ，來顯示對話方塊
+> 我們已使用[bootbox javascript library](http://bootboxjs.com/examples.html)來顯示對話方塊
 
-此範例中使用的用戶端程式庫可從 [此處下載](assets/client-libraries.zip)
+此示例中使用的客戶端庫可從此處[下載](assets/client-libraries.zip)
