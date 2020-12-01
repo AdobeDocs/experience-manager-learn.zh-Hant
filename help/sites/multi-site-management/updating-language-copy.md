@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 使用啟動更新語言副本 {#update-language-copy-launch}
+# 使用啟動{#update-language-copy-launch}更新語言副本
 
 瞭解如何透過啟動來更新、檢閱和核准語言副本中的變更。
 
