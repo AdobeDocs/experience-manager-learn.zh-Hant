@@ -26,7 +26,7 @@ Adobe Experience Manager(AEM)和Adobe Target是功能強大的解決方案，具
 
 在此影片中，我們討論三種使用AEM和Target的方法，並協助您瞭解哪些方法對您的組織最有效。
 
-* __方案1:__ 使用AEM體驗片段選件進行個人化
+* __藍本1：使用__ AEM體驗片段選件個人化
 
    1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
    1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
@@ -34,13 +34,13 @@ Adobe Experience Manager(AEM)和Adobe Target是功能強大的解決方案，具
    1. [將AEM體驗片段匯出至Adobe Target](./export-experience-fragment-target.md)
    1. [使用體驗片段選件個人化網頁的一部分](./create-target-activity.md)
 
-* __方案2:__ 使用視覺體驗撰寫器(VEC)進行個人化
+* __藍本2：使__ 用視覺體驗撰寫器(VEC)個人化
 
    1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
    1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
    1. [使用Visual Experience Composer個人化部分網頁](./personalization-using-vec.md)
 
-* __方案3:__ 個人化完整的網頁體驗
+* __藍本3：完__ 整網頁體驗的個人化
 
    1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
    1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
