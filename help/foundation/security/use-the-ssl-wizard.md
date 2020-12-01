@@ -13,7 +13,7 @@ discoiquuid: 9e666741-0f76-43c9-ab79-1ef149884686
 translation-type: tm+mt
 source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -33,11 +33,11 @@ Adobe Experience Manager的SSL設定精靈，讓您更輕鬆地設定透過HTTPS
 
 ## 私密金鑰和自簽證書下載
 
-下列zip包含在 [!DNL DER] localhost [!DNL CRT] 上設定AEM SSL所需的檔案，且僅供本機開發之用。
+下列zip包含在localhost上設定AEM SSL所需的[!DNL DER]和[!DNL CRT]檔案，僅供本機開發之用。
 
-為方 [!DNL DER] 便起 [!DNL CERT] 見，使用下面「產生私密金鑰」和「自簽證書」一節中所述的步驟產生和產生檔案。
+提供[!DNL DER]和[!DNL CERT]檔案是為了方便起見，並依照下面「產生私密金鑰和自簽證書」一節所述的步驟產生。
 
-如有需要，憑證密碼片語為 **admin**。
+如果需要，憑證密碼片語為&#x200B;**admin**。
 
 localhost —— 私密金鑰和自簽證書。zip（於2028年7月到期）
 
@@ -45,7 +45,7 @@ localhost —— 私密金鑰和自簽證書。zip（於2028年7月到期）
 
 ## 私密金鑰和自簽名憑證產生
 
-上述影片說明使用自簽證書在AEM作者例項上設定和設定SSL。 使用 [[!DNL OpenSSL]](https://www.openssl.org/) 的以下命令可生成要用於嚮導步驟2的私鑰和證書。
+上述影片說明使用自簽證書在AEM作者例項上設定和設定SSL。 使用[[!DNL OpenSSL]](https://www.openssl.org/)的以下命令可生成用於嚮導步驟2的私鑰和證書。
 
 ```shell
 ### Create Private Key
