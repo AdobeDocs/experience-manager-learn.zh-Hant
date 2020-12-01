@@ -22,13 +22,18 @@ ht-degree: 0%
 >
 >此示例僅適用於不基於模式或表單資料模型的自適應表單
 
-![表結構](assets/tablestructure.PNG)如您所見，架構的名稱是aemformsturior。此架構內部是表格式提交，已定義以下列
+![表結](assets/tablestructure.PNG)
+構如您所見，架構的名稱為aemformstuorial。此架構內部是表格式提交，定義了以下列
 
 * formdata:此欄將包含提交的表單資料
 * formname:此列將保存提交的表單的名稱
 * id:這是主鍵，設定為自動增量
 
-表格名稱和兩欄名稱會公開為OSGi組態屬性，如下列螢幕擷取所示：![osgi-configuration](assets/configuration.PNG)代碼將讀取這些值並構造要執行的適當SQL查詢。 例如，將根據上述值&#x200B;**SELECT formdata FROM aemformstuorial.formsubmissions執行下列查詢，其中formname=timeoffrequestform**&#x200B;在上述查詢中，表單名稱(timeoffrequestform)將作為請求參數傳遞給servlet。
+表格名稱和兩欄名稱會公開為OSGi組態屬性，如下列螢幕擷取所示：
+![osgi-configuration](assets/configuration.PNG)
+代碼將讀取這些值並構造要執行的適當SQL查詢。 例如，以下查詢將根據上述值執行
+**SELECT formdata FROM aemformstutorial.formsubmissions，其中formname=timeoffrequestform**
+在上述查詢中，表單(timeofrequestform)的名稱將作為請求參數傳遞給servlet。
 
 ## **建立OSGi服務**
 
@@ -36,7 +41,7 @@ ht-degree: 0%
 
 * 第37行：我們正在存取Apache Sling Connection Pooled DataSource。
 
-* 第89行：這是服務的入口點。該方法以formName `getCSVFile(..)` 為輸入參數，並提取與給定表單名稱相關的提交資料。
+* 第89行：這是服務的入口點。方法`getCSVFile(..)`以formName為輸入參數，並提取與給定表單名稱相關的提交資料。
 
 >[!NOTE]
 >
@@ -256,7 +261,7 @@ public @interface StoreAndExportConfiguration {
 
 ## Servlet
 
-以下是調用服務方法 `getCSVFile(..)` 的servlet代碼。 服務返回StringBuffer對象，然後將其流回調用應用程式
+以下是調用服務`getCSVFile(..)`方法的servlet代碼。 服務返回StringBuffer對象，然後將其流回調用應用程式
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -298,6 +303,6 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 
 ### 部署在您的伺服器上
 
-* 使用MySQL [工作台](assets/formsubmissions.sql) ，將SQL檔案導入MySQL伺服器。 這會建立稱為 **aemformstutorial的架構** ，以及稱為 **formsubmissions的表格** ，其中包含一些範例資料。
-* 使用 [Felix網頁主控台](assets/store-export.jar) ，部署OSGi Bundle
-* [取得TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)。 您應將CSV檔案串流傳回給您。
+* 使用MySQL Workbench將[SQL檔案](assets/formsubmissions.sql)導入MySQL伺服器。 這將建立名為&#x200B;**aemformstutorial**&#x200B;的架構，並建立名為&#x200B;**formsubmissions**&#x200B;的表，其中包含一些示例資料。
+* 使用Felix網頁主控台部署[OSGi Bundle](assets/store-export.jar)
+* [取得TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)。您應將CSV檔案串流傳回給您。
