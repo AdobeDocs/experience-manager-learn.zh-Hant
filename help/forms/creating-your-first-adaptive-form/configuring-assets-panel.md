@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 新增元件至資產區段 {#adding-components-to-assets-section}
+# 新增元件至資產區段{#adding-components-to-assets-section}
 
 為「資產」面板設定accordion版面。accordion版面為新增可重複區段提供更佳的使用者體驗。
 
