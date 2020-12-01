@@ -1,6 +1,6 @@
 ---
 user-guide-title: AEM Dispatcher Cache 教學課程
-user-guide-description: 此教學課程可協助您更瞭解 Dispatcher 的運作方式，以及您如何使用。
+user-guide-description: 此教學課程可協助您更了解 Dispatcher 的運作方式，以及您如何使用。
 version: 6.x
 sub-product: 基礎
 doc-type: tutorial
