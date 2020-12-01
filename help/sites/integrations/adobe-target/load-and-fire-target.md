@@ -18,7 +18,7 @@ ht-degree: 3%
 ---
 
 
-# 載入並觸發Target呼叫 {#load-fire-target}
+# 載入並觸發Target呼叫{#load-fire-target}
 
 瞭解如何使用啟動規則載入、將參數傳遞至頁面請求，以及從您的網站頁面觸發Target呼叫。 網頁資訊會使用Adobe用戶端資料層來擷取並傳遞為參數，此資料層可讓您收集並儲存網頁上訪客體驗的相關資料，然後方便存取此資料。
 
@@ -26,19 +26,19 @@ ht-degree: 3%
 
 ## 頁面載入規則
 
-Adobe用戶端資料層是事件導向的資料層。 載入AEM Page資料層時，會觸發事件 `cmp:show` 。 在視訊中，會使 `Launch Library Loaded` 用自訂事件來呼叫規則。 以下是自訂事件和資料元素在視訊中使用的程式碼片段。
+Adobe用戶端資料層是事件導向的資料層。 載入AEM Page資料層時，會觸發事件`cmp:show`。 在視訊中，使用自訂事件來呼叫`Launch Library Loaded`規則。 以下是自訂事件和資料元素在視訊中使用的程式碼片段。
 
 ### 自訂頁面顯示事件{#page-event}
 
 ![頁面顯示事件設定和自訂代碼](assets/load-and-fire-target-call.png)
 
-在「啟動」屬性中，新增 **事件** 至規 **則**
+在「啟動」屬性中，將新&#x200B;**Event**&#x200B;新增至&#x200B;**Rule**
 
 + __擴充功能：__ 核心
-+ __事件類型：__ 自訂代碼
-+ __名稱：__ 頁面顯示事件處理常式（或描述性內容）
++ __事件類型：自__ 訂代碼
++ __名稱：頁__ 面顯示事件處理常式（或描述性內容）
 
-點選「開 __啟編輯器__ 」按鈕並貼入下列程式碼片段。 此程式 __碼必須__ 新增至「事 __件設定__ 」和後續 __動作__。
+點選&#x200B;__開啟編輯器__&#x200B;按鈕，然後貼入下列程式碼片段。 此代碼&#x200B;__必須__&#x200B;被添加到&#x200B;__事件配置__&#x200B;和後續的&#x200B;__操作__&#x200B;中。
 
 ```javascript
 // Define the event handler function
@@ -78,20 +78,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-自訂函式會定義 `pageShownEventHandler`，並監聽AEM核心元件所發出的事件、衍生核心元件的相關資訊、將其封裝成事件物件，以及在其裝載處以衍生事件資訊觸發啟動事件。
+自訂函式會定義`pageShownEventHandler`，並監聽AEM核心元件所發出的事件、衍生核心元件的相關資訊、將它封裝成事件物件，以及在其裝載上以衍生事件資訊觸發啟動事件。
 
-啟動規則是使用啟動的函式來觸發 `trigger(...)` 的，此函 ____ 數僅可從規則事件的自訂程式碼片段定義中使用。
+啟動規則是使用啟動的`trigger(...)`函式來觸發，此函式&#x200B;__僅__&#x200B;可從規則事件的自訂程式碼片段定義中使用。
 
-此函 `trigger(...)` 數會將事件物件視為參數，而此參數會依序在啟動資料元素中公開，由Launch中另一個名為的保留名稱 `event`。 Launch中的「資料元素」現在可使用類似的語法，參考來自該物件 `event` 的此事件物件資料 `event.component['someKey']`。
+`trigger(...)`函式將事件物件視為參數，而此參數會依序在啟動資料元素中以名為`event`的Launch中的其他保留名稱公開。 Launch中的「資料元素」現在可以使用語法（例如`event.component['someKey']`），參考來自`event`物件的此事件物件資料。
 
-如 `trigger(...)` 果在事件的「自訂代碼」事件類型（例如，在動作中）的上下文外使用，則與「啟動」屬性整合的網站上會 `trigger is undefined` 擲出JavaScript錯誤。
+如果在事件的「自訂代碼」事件類型（例如，在「動作」中）的上下文外使用`trigger(...)`，則與Launch屬性整合的網站上會擲出JavaScript錯誤`trigger is undefined`。
 
 
 ### 資料元素
 
 ![資料元素](assets/data-elements.png)
 
-Adobe Launch Data Elements會透過核心延伸模組的自訂代碼資料元素類型，將自訂「顯示頁面」事件中觸發 [的事件物件資料對應至](#page-event) Adobe Target中可用的變數。
+Adobe Launch Data Elements會透過核心擴充功能的自訂代碼資料元素類型，將自訂「顯示頁面事件」](#page-event)中觸發的事件物件[資料對應至Adobe Target中可用的變數。
 
 #### 頁面ID資料元素
 
@@ -140,7 +140,7 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 #### 解決方案
 
 目標客戶有時會搭配Target使用雲端執行個體，以進行測試或進行簡單的概念驗證。 這些網域和其他許多網域都屬於「公用尾碼清單」。
-如果您使用這些網域，現代瀏覽器將不會儲存Cookie，除非您使用自訂 `cookieDomain` 設定 `targetGlobalSettings()`。
+如果您使用這些網域，現代瀏覽器將不會儲存Cookie，除非您使用`targetGlobalSettings()`自訂`cookieDomain`設定。
 
 ```
 window.targetGlobalSettings = {  
