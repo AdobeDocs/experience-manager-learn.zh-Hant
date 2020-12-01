@@ -20,19 +20,19 @@ ht-degree: 0%
 ---
 
 
-# 產生JSON網頁Token和存取Token {#generating-json-web-token-and-access-token}
+# 產生JSON Web Token和存取Token {#generating-json-web-token-and-access-token}
 
 本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取Token所需的程式碼
 
 ## 產生JSON Web Token {#generate-json-web-token}
 
-使用Adobe Campaign API的第一步是產生JWT。 有關如何為ACS生成JWT的代碼示例很多。 您可以遵循此 [java代碼示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) ，生成JWT。
+使用Adobe Campaign API的第一步是產生JWT。 有關如何為ACS生成JWT的代碼示例很多。 您可以遵循此[java代碼示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)生成JWT。
 
 為了搭配AEM Forms使用ACS API，我們需要在OSGi套件中建立JWT。 以下代碼片段用於在此示例OSGI包中生成JWT。 有關ACS實例的詳細資訊是從OSGI配置屬性中提取的，如上所示。
 
 ![配置](assets/campaignconfiguration.gif)
 
-**答：** 此處顯示的值是虛擬值
+**A.** 此處顯示的值是虛值
 
 下列程式碼會從OSGI設定中擷取有關Adobe Campaign Server的詳細資訊。 我們建立一個從80到104行的私鑰。
 
