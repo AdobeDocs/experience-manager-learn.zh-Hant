@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 建立頁面版本 {#creating-page-versions-aem-sites}
+# 建立頁面版本{#creating-page-versions-aem-sites}
 
 頁面版本修訂可協助內容作者建立頁面版本以追蹤與頁面相關的變更，並提供預覽版本、還原版本以及比較版本與頁面目前版本的選項。
 
