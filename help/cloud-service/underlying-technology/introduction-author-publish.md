@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 作者與發佈層簡介 {#introduction-author-publish}
+# 作者與發佈層簡介{#introduction-author-publish}
 
 Adobe Experience Manager架構中的作者和發佈層簡介。
 
