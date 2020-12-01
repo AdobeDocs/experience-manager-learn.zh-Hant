@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms中使用Output和Forms Services進行開發{#developing-with-output-and-forms-services-in-aem-forms}
+# 在AEM Forms中使用Output and Forms Services進行開發{#developing-with-output-and-forms-services-in-aem-forms}
 
 在AEM Forms中使用Output and Forms Service API
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 * 輸出服務——通常，此服務用於將xml資料與xdp範本或pdf合併，以產生平面化的pdf
 * FormsService —— 這項多功能服務可讓您從PDF檔案匯出／匯入資料
 
-此處列出AEM Forms API的正式Javadoc [。](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+AEM Forms API的正式Javadoc列在[這裡](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 下列程式碼片段會從PDF檔案匯出資料
 
@@ -67,10 +67,16 @@ Line2從請求中提取saveLocation
 1. /content/AemFormsSamples/exportdata
 1. /content/AemFormsSamples/outputservice
 1. 搜尋「Sling Referrer篩選」
-1. 選中「允許空」複選框。 （此設定應僅供測試之用）有多種方法可測試范常式式碼。 最快速最簡單的方式就是使用Postman應用程式。 郵遞員可讓您向伺服器提出POST要求。 在您的系統上安裝Postman應用程式。
+1. 選中「允許空」複選框。 （此設定應僅用於測試用途）
+有許多方法可測試范常式式碼。 最快速最簡單的方式就是使用Postman應用程式。 郵遞員可讓您向伺服器提出POST要求。 在您的系統上安裝Postman應用程式。
 啟動應用程式並輸入下列URL以測試匯出資料API
 
-請確定您已從下拉式清單中選取「POST」http://localhost:4502/content/AemFormsSamples/exportdata.html請確定您指定「授權」為「基本驗證」。 指定AEM Server使用者名稱和密碼導覽至「Body」（內文）索引標籤，並指定請求參數，如下列匯出影像所![示](assets/postexport.png)，然後按一下「傳送」按鈕
+確定您已從下拉式清單中選取「POST」
+http://localhost:4502/content/AemFormsSamples/exportdata.html
+請確定您指定「授權」為「基本授權」。 指定AEM Server使用者名稱和密碼
+導覽至「內文」標籤，並指定請求參數，如下圖所示
+![export](assets/postexport.png)
+然後按一下「傳送」按鈕
 
 包含3個樣本。 以下各段說明何時使用輸出服務或Forms服務、服務的URL、輸入每個服務所需的參數
 
