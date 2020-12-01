@@ -20,7 +20,7 @@ ht-degree: 7%
 ---
 
 
-# AEM Sites UI和導覽 {#basic-handling-aem-sites}
+# AEM Sites UI和導覽{#basic-handling-aem-sites}
 
 以下影片提供使用AEM作者環境時基本處理的概觀。 它以Sites主控台為基礎。
 
