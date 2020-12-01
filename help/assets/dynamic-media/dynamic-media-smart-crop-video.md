@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 使用視訊的動態媒體智慧裁切 {#using-smart-crop-video}
+# 使用視訊的動態媒體智慧裁切{#using-smart-crop-video}
 
 適用於視訊的動態媒體智慧型裁切(Dynamic Media Smart Crop for video)使用Adobe Sensei智慧追蹤視訊的興趣點，確保視訊在所有螢幕大小上呈現最佳效果。
 
