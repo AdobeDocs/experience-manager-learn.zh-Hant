@@ -26,7 +26,7 @@ ht-degree: 0%
 
 * FormsService —— 這項多功能服務可讓您從PDF檔案匯出／匯入資料，並借由將xml資料合併為xdp範本，產生互動式pdf
 
-此處列出AEM Forms API的正式Javadoc [。](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+AEM Forms API的正式Javadoc列在[這裡](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 下列程式碼片段會使用FormsService的renderPDFForm操作來轉譯互動式pdf。 申根。xdp是用於合併xml資料的範本。
 
@@ -63,10 +63,10 @@ return interactivePDF;
 1. 在排除的區段中新增下列路徑並儲存
 1. /bin/generateinteractivepdf
 1. [開啟行動表單](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
-1. 填寫幾個欄位，然後按一下「下 ***載並填寫……」.*** 按鈕
+1. 填寫幾個欄位，然後按一下&#x200B;***下載並填寫…….*** 按鈕
 1. 互動式pdf應下載至您的本機系統
 
 
-範例套件包含與Mobile Form關聯的自訂描述檔。 請瀏覽 [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) 檔案。 此jsp從移動表單中提取資料，並對裝載在 ***/bin/generateinteractivepdf路徑上的servlet發出POST請求*** 。 Servlet會將互動式pdf傳回至呼叫應用程式。 customtoolbar.jsp中的代碼然後將檔案下載到本地系統
+範例套件包含與Mobile Form關聯的自訂描述檔。 請瀏覽[customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp)檔案。 此jsp從移動表單中提取資料，並對裝載在&#x200B;***/bin/generateinteractivepdf***&#x200B;路徑上的servlet發出POST請求。 Servlet會將互動式pdf傳回至呼叫應用程式。 customtoolbar.jsp中的代碼然後將檔案下載到本地系統
 
 
