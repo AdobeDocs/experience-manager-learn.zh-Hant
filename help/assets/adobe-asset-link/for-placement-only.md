@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 僅限位置(FPO)轉譯{#for-placement-only-rendition}
+# 僅用於位置(FPO)轉譯{#for-placement-only-rendition}
 
 探索如何針對AEM資產建立和使用「僅限於位置(FPO)」轉譯。
 
