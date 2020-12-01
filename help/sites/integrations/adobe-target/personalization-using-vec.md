@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 使用Visual Experience Composer進行個人化 {#personalization-vec}
+# 使用Visual Experience Composer {#personalization-vec}進行個人化
 
 瞭解如何使用視覺體驗撰寫器(VEC)建立A/B測試目標活動。
 
@@ -35,19 +35,19 @@ WKND網站首頁以資訊卡的形式顯示城市周邊的本地活動或最佳�
 
 ## 使用Visual Experience Composer(VEC)建立A/B測試的步驟
 
-1. 登入 [Adobe Experience Cloud](https://experience.adobe.com/)、點選 __Target__、導覽至「活 __動__ 」標籤
+1. 登入[Adobe Experience Cloud](https://experience.adobe.com/)，點選&#x200B;__Target__，導覽至&#x200B;__活動__&#x200B;標籤
 
-   + 如果您在Experience Cloud儀表板上未看到 __Target__ ，請確定在右上角的組織切換器中選取了正確的Adobe組織，且您的使用者已獲得 [Adobe Admin Console中Target的存取權](https://adminconsole.adobe.com/)。
+   + 如果您在Experience Cloud儀表板上未看到&#x200B;__Target__，請確定在右上角的組織切換器中選取了正確的Adobe組織，且您的使用者已獲得[Adobe Admin Console](https://adminconsole.adobe.com/)中Target的存取權。
 
-1. 按一 **下「建立活動** 」按鈕，然後選擇 **A/B測試活動** 。
+1. 按一下「建立活動」按鈕，然後選擇「**A/B測試」**&#x200B;活動&#x200B;****
 
    ![A/B活動](assets/ab-target-activity.png)
 
-1. 選取「 **Visual Experience Composer** 」選項、提供「活動URL」，然後按「下一 **步」**
+1. 選擇&#x200B;**Visual Experience Composer**&#x200B;選項，提供活動URL，然後按一下&#x200B;**Next**
 
    ![活動URL](assets/ab-test-url.png)
 
-1. 在您建立新活動後，Visual Experience Composer會在左側顯示兩個標籤： *體驗A**和B*。 從清單中選取體驗。 您可以使用「新增體驗」按鈕，將新的體驗新 **增至清單** 。
+1. 在您建立新活動後，Visual Experience Composer會在左側顯示兩個標籤：*體驗A*&#x200B;和&#x200B;*體驗B*。 從清單中選取體驗。 您可以使用&#x200B;**新增體驗**&#x200B;按鈕，將新體驗新增至清單。
 
    ![體驗A](assets/experience.png)
 
@@ -55,16 +55,16 @@ WKND網站首頁以資訊卡的形式顯示城市周邊的本地活動或最佳�
 
    ![元素](assets/select-element.png)
 
-1. 將文字從 *Camping in Western Australia變更為**Adventures of Australia*。 新增至「體驗」的變更清單會顯示在「修改」下。 您可以按一下並編輯已修改的項目，以檢視其CSS選取器和新增的內容。
+1. 將文本從&#x200B;*Camping in Western Australia*&#x200B;改為&#x200B;*Adventures of Australia*。 新增至「體驗」的變更清單會顯示在「修改」下。 您可以按一下並編輯已修改的項目，以檢視其CSS選取器和新增的內容。
 
    ![冒險](assets/adventures.png)
 
-1. 將體 *驗A重新命名* 為 *Adventure*
-1. 同樣地，請更新 *Camping in Western Australia的* Experience B *，以探* 索Australian Wilderness **。
+1. 將&#x200B;*體驗A*&#x200B;重新命名為&#x200B;*冒險*
+1. 同樣地，請將&#x200B;*體驗B*&#x200B;上的文字從&#x200B;*Camping in Western Australia*&#x200B;更新為&#x200B;*探索澳洲荒野*。
 
    ![探索](assets/explore.png)
 
-1. 按一 **下** 「下一步」移至「定位」，讓我們在兩個體驗之間將手動流量分配為50-50。
+1. 按一下「**Next**」移至「定位」，讓我們在兩個體驗之間將「手動」流量分配保持50-50。
 
    ![定位](assets/targeting.png)
 
