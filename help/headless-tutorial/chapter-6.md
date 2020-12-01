@@ -23,36 +23,41 @@ AEM Headless教學課程的第6章涵蓋確保所有必要的套件、設定和�
 * 審核與處理的工作流程
 * 以及從AEM Publish的AEM Content Services端點推送和拉出內容的啟動／停用
 
-1. 請確定「 **[!DNL WKND Mobile]Application Packages**( [Application Packages](./chapter-1.md#wknd-mobile-application-packages)，列於第1章)」是使用 **Package Manager在** AEM Publish 上安裝的。
+1. 確保&#x200B;**[!DNL WKND Mobile]Application Packages**（列於[Chapter 1](./chapter-1.md#wknd-mobile-application-packages)）已使用[!UICONTROL Package Manager]安裝在&#x200B;**AEM Publish**&#x200B;上。
    * [http://localhost:4503/crx/packmgr](http://localhost:4503/crx/packmgr)
 
-1. 發佈可編 **[!DNL WKND Mobile Events API]輯範本**
-   1. 導覽至「 **[!UICONTROL AEM]>工具[!UICONTROL >一般范]本[!UICONTROL >]Templates>[!DNL WKND Mobile]**
-   1. 選擇范 **[!DNL Event API]** 本
-   1. 在頂端 **[!UICONTROL 動作列中點選]** 「發佈」
-   1. 發佈范 **本****和所有參照** （內容原則、內容原則對應和範本）
+1. 發佈&#x200B;**[!DNL WKND Mobile Events API]可編輯範本**
+   1. 導覽至&#x200B;**[!UICONTROL AEM] > [!UICONTROL 工具] > [!UICONTROL 一般] > [!UICONTROL 範本] >[!DNL WKND Mobile]**
+   1. 選擇&#x200B;**[!DNL Event API]**&#x200B;模板
+   1. 點選頂端動作列中的&#x200B;**[!UICONTROL Publish]**
+   1. 發佈&#x200B;**template**&#x200B;和&#x200B;**所有參考**（內容原則、內容原則對應和範本）
 
-1. 發佈內 **[!DNL WKND Mobile Events]容片段**。
+1. 發佈&#x200B;**[!DNL WKND Mobile Events]內容片段**。
 
 請注意，這是必要的，因為事件API使用內容片段清單元件，而不是特別引用內容片段。
-1.導覽至「AEM **[!UICONTROL >資]產>>[!UICONTROL Assets]>[!DNL WKND Mobile]>[!DNL English][!DNL Events]** J1」。選取所有 **[!DNL Event]** 內容片段1。點選頂端 **[!UICONTROL 動作列]** 1中的「管理出版物」。保留預設 **的「發佈** 」動作原樣，點選頂端動 **[!UICONTROL 作列1中的「下一步]** 」。選取 **所有** content fragments1。點選 **[!UICONTROL 頂端動作列中的Publish]** * 「內容片段模型」和 *[!DNL Events]參照「事件影像」會與內容片段一起自動發佈。*
+1.導覽至「**[!UICONTROL AEM] > [!UICONTROL 資產] > [!UICONTROL 檔案] > [!DNL WKND Mobile] > [!DNL English] >[!DNL Events]**」
+1.選取所有**[!DNL Event]**內容片段
+1.點選頂端動作列中的「管理出版物」(**[!UICONTROL Manage Publication)
+1.保留預設的** Publish **動作原樣，點選頂端動作列中的**[!UICONTROL  Next ]**1.選擇** all **內容片段
+1.點選頂端動作列中的「發佈」(Publish)
+* *[!DNL Events]內容片段模型和參考事件影像將會自動與內容片段一起發佈。*]**]****[!UICONTROL 
 
-1. 發佈頁 **[!DNL Events API]面**。
-   1. 導覽至 **[!UICONTROL AEM]>網[!UICONTROL 站]>[!DNL WKND Mobile]>[!DNL English]>[!DNL API]**
-   1. 選擇頁 **[!DNL Events]** 面
-   1. 點選頂端 **[!UICONTROL 動作列中的]** 「管理出版物」
-   1. 保留預設的 **「發佈** 」動作原樣，點選頂端動作列中的「 **[!UICONTROL Next]** 」（下一步）
-   1. 選擇頁 **[!DNL Events]** 面
-   1. 在頂端 **[!DNL Publish]** 動作列中點選
+1. 發佈&#x200B;**[!DNL Events API]頁面**。
+   1. 導覽至&#x200B;**[!UICONTROL AEM] > [!UICONTROL Sites] > [!DNL WKND Mobile] > [!DNL English] >[!DNL API]**
+   1. 選擇&#x200B;**[!DNL Events]**&#x200B;頁面
+   1. 點選頂端動作列中的「管理出版物」****
+   1. 保留預設的&#x200B;**Publish**&#x200B;動作原樣，點選頂端動作列中的&#x200B;**[!UICONTROL Next]**
+   1. 選擇&#x200B;**[!DNL Events]**&#x200B;頁面
+   1. 在頂端動作列中點選&#x200B;**[!DNL Publish]**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28343/?quality=12&learn=on)
 
 ## 驗證AEM Publish
 
-1. 在新的Web瀏覽器中，請確定您已登出AEM Publish，並請求下列URL(取代正在執 `http://localhost:4503` 行的任何主機：埠AEM Publish)。
+1. 在新的Web瀏覽器中，請確定您已登出AEM Publish，並請求下列URL（以`http://localhost:4503`取代執行任何host:port AEM Publish的URL）。
 
    * [http://localhost:4503/content/wknd-mobile/en/api/events.model.json](http://localhost:4503/content/wknd-mobile/en/api/events.model.tidy.json)
-   這些請求應傳回與審閱對應AEM Author結束點時相同的JSON回應。 如果沒有，請確定所有發佈都成功（請檢查「複製」佇列）, [!DNL WKND Mobile] 此套件 `ui.apps` 已安裝在AEM Publish上，並檢 `error.log` 閱AEM Publish的相關資訊。
+   這些請求應傳回與審閱對應AEM Author結束點時相同的JSON回應。 如果沒有，請確定所有發佈都成功（檢查複製佇列）、[!DNL WKND Mobile] `ui.apps`套件已安裝在AEM Publish上，並檢視`error.log`的AEM Publish。
 
 ## 下一步
 
