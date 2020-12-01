@@ -21,32 +21,32 @@ ht-degree: 0%
 
 # 建立MyAccountForm
 
-在使用者 **驗證應用程式ID和與應用程式ID相關的行動電話號碼後，表單MyAccountForm** 可用來擷取部分完成的最適化表單。
+在用戶驗證了應用程式ID和與應用程式ID相關聯的移動號碼之後，使用&#x200B;**MyAccountForm**&#x200B;格式來檢索部分完成的自適應表單。
 
 ![我的帳戶表單](assets/6599.JPG)
 
-當使用者輸入應用程式ID並按一下 **FetchApplication** 按鈕時，會使用表單資料模型的「取得」操作，從資料庫擷取與應用程式ID相關的行動號碼。
+當用戶輸入應用程式ID並按一下&#x200B;**FetchApplication**&#x200B;按鈕時，使用表單資料模型的「獲取」操作從資料庫中獲取與應用程式ID相關的移動號碼。
 
-此表單利用表單資料模型的POST調用來驗證使用OTP的移動號碼。 使用下列程式碼成功驗證行動電話號碼時，會觸發表單的提交動作。 我們會觸發名為submitForm的submit按鈕的click **事件**。
+此表單利用表單資料模型的POST調用來驗證使用OTP的移動號碼。 使用下列程式碼成功驗證行動電話號碼時，會觸發表單的提交動作。 我們正在觸發名為&#x200B;**submitForm**&#x200B;的提交按鈕的click事件。
 
 >[!NOTE]
-> 您必須在MyAccountForm的適當欄位中，提供您 [Nexmo](https://dashboard.nexmo.com/) 帳戶專屬的API金鑰和API密碼值
+> 您必須在MyAccountForm的適當欄位中提供您[Nexmo](https://dashboard.nexmo.com/)帳戶專屬的API金鑰和API密碼值
 
 ![trigger-submit](assets/trigger-submit.JPG)
 
 
 
-此表單與自訂提交操作關聯，該操作會將表單提交轉發到掛載在 **/bin/renderaf上的servlet**
+此表單與將表單提交轉發到&#x200B;**/bin/renderaf**&#x200B;上裝載的servlet的自定義提交操作相關聯
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/renderaf",null,null);
 ```
 
-裝載於 **** /bin/renderaf的servlet中的代碼會轉送請求，以呈現已預先填入已儲存資料的附件最適化表單。
+裝載於&#x200B;**/bin/renderaf**&#x200B;的servlet中的代碼會轉送請求，以呈現已預先填入儲存資料的附件自適應表單。
 
 
-* MyAccountForm可從此 [處下載](assets/my-account-form.zip)
+* MyAccountForm可從此處[下載](assets/my-account-form.zip)
 
-* 範例表單是以自訂 [的最適化表單範本為基礎](assets/custom-template-with-page-component.zip) ，這些範例表單需要匯入AEM才能正確呈現。
+* 範例表單以[自訂最適化表單範本](assets/custom-template-with-page-component.zip)為基礎，需要匯入至AEM，讓範例表單正確呈現。
 
-* [與MyAccountForm提交](assets/custom-submit-my-account-form.zip) 關聯的自訂提交處理常式必須匯入AEM。
+* [與MyAccountForm](assets/custom-submit-my-account-form.zip) 提交相關聯的自訂提交處理器必須匯入AEM。
