@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Forms和Adobe Campaign Standard快速入門 {#getting-started-with-aem-forms-and-adobe-campaign-standard}
+# AEM Forms和Adobe Campaign Standard快速入門{#getting-started-with-aem-forms-and-adobe-campaign-standard}
 
 ![formandcampaign](assets/helpx-cards-forms.png)
 
@@ -38,8 +38,8 @@ ACS有一套豐富的API，可讓ACS與我們選擇的技術相互連接。 在�
 若要開始使用，請依照下列指示進行
 
 * [下載並解壓縮與本教學課程相關的資產。](assets/aem-forms-and-acs-bundles.zip)
-* 使用 [Felix網頁主控台部署套件](http://localhost:4502/system/console/bundles)
+* 使用[Felix網頁主控台](http://localhost:4502/system/console/bundles)部署套件
 * 在「Felix OSGI設定」中提供適當的Adobe Campaign設定。
-* [如本文所述建立服務使用者](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。 請確定部署與文章相關聯的OSGi套件。
+* [如本文所述建立服務使用者](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。請確定部署與文章相關聯的OSGi套件。
 * 將ACS私鑰儲存在etc/key/campaign/private.key中。 您必須在etc/key下建立名為campaign的資料夾。
 * [提供對服務使用者「資料」之促銷活動資料夾的讀取存取權。](http://localhost:4502/useradmin)
