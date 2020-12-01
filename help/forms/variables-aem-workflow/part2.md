@@ -37,7 +37,7 @@ ht-degree: 0%
 若要讓資產在您的系統上運作，請遵循下列步驟：
 
 * [使用套件管理員將資產下載並匯入AEM](assets/jsonandstringvariable.zip)
-* [探索工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html) ，以瞭解工作流程中使用的變數
+* [探索工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html) 程模型，瞭解工作流程中使用的變數
 * [設定電子郵件服務](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
 * [開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/afbasedonjson/jcr:content?wcmmode=disabled)
 * 填寫詳細資訊並提交表格
