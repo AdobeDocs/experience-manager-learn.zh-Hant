@@ -46,24 +46,24 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->故障排除提示——如果由於某些原因未在DAM中建立DOR.pdf，請按一下這裡重置資料源驗證 [設定](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam)。 這些是AEM驗證設定，預設為admin/admin。
+>故障排除提示——如果由於某些原因未在DAM中建立DOR.pdf，請按一下[此處](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam)重置資料源驗證設定。 這些是AEM驗證設定，預設為admin/admin。
 
 若要在您的伺服器上測試此功能，請遵循下列步驟：
 
-1.部[署Developmingwithserviceuser bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1.[部署Developingwithserviceuser bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [下載並部署setvalue bundle](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。此自訂OSGI bundle用於建立中繼資料屬性，並從提交的表單資料設定其值。
+1. [下載並部署setvalue bundle](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。此自訂OSGI bundle用來建立中繼資料屬性，並從提交的表單資料設定其值。
 
-1. [使用套件管理器](assets/postdortodam.zip) ，將與本文相關的資產匯入AEM。您將取得下列資訊
+1. [使用套](assets/postdortodam.zip) 件管理員將與本文相關的資產匯入AEM。您將取得下列
 
    1. 工作流程模型
    1. 已設定為送出至AEM工作流程的最適化表單
    1. 資料來源已設定為使用PostToDam.JSON檔案
    1. 使用資料來源的表單資料模型
 
-1. 指向您的 [瀏覽器以開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+1. 指向您的[瀏覽器以開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 1. 填寫表格並送出。
 1. 如果已建立並儲存記錄檔案，請勾選「資產」應用程式。
 
 
-[建立資料來源時使用的Swagger](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) File（Swagger檔案）可供您參考
+[建立資](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) 料來源時使用的Swagger檔案可供您參考
