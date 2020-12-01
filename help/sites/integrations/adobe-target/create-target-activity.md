@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 使用體驗片段選件建立Adobe Target活動 {#target-activity-experience-fragment}
+# 使用體驗片段選件{#target-activity-experience-fragment}建立Adobe Target活動
 
 瞭解如何使用AEM體驗片段選件建立和測試Adobe Target活動。
 
