@@ -16,13 +16,13 @@ ht-degree: 0%
 ---
 
 
-# 設定翻譯規則 {#set-up-translation-rules-in-aem}
+# 設定翻譯規則{#set-up-translation-rules-in-aem}
 
 「轉譯設定UI」可讓使用者管理在AEM網站中轉譯內容的規則。 此影片詳細說明如何為自訂元件建立新的轉譯規則。
 
 >[!NOTE]
 >
-> AEM 6.3已錄制下列視訊。AEM 6.4+推出新的儲存庫結構，以儲存轉譯規則XML檔案。 在AEM 6.4+中使用「轉譯設定」UI時，規則會儲存至位置 `/conf/global/settings/translation/rules/translation_rules.xml`。 如需詳 [細資訊，請參閱識別要翻譯的內容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html) 。
+> AEM 6.3已錄制下列視訊。AEM 6.4+推出新的儲存庫結構，以儲存轉譯規則XML檔案。 在AEM 6.4+中使用「轉譯設定UI」時，規則會儲存至`/conf/global/settings/translation/rules/translation_rules.xml`位置。 如需詳細資訊，請參閱[識別要翻譯的內容。](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html)
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135/?quality=9&learn=on)
 
@@ -36,11 +36,11 @@ ht-degree: 0%
 
 訪問翻譯配置UI:
 
-* **[!UICONTROL AEM開始功能表]>工[!UICONTROL 具]>一[!UICONTROL 般]>轉[[!UICONTROL 譯設定]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
+* **[!UICONTROL AEM Start Menu] >  [!UICONTROL Tools] >  [!UICONTROL General]  [[!UICONTROL > Translation Configuration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
-## AEM 6.3之前版本 {#prior-to-aem}
+## AEM 6.3 {#prior-to-aem}之前版本
 
-在先前的AEM版本轉譯規則中，是透過編輯位於「轉譯」工作流程下的XML檔案來手動更新： `/etc/workflow/models/translation/translation_rules.xml`.
+在先前的AEM版本轉譯規則中，是透過編輯位於「轉譯」工作流程下的XML檔案來手動更新：`/etc/workflow/models/translation/translation_rules.xml`。
 
 ## 其他資源 {#additional-resources}
 
