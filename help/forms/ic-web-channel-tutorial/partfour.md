@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 建立Web Channel檔案範本AEM表單 {#creating-web-channel-document-template-aem-forms}
+# 建立Web Channel檔案範本AEM表單{#creating-web-channel-document-template-aem-forms}
 
 在本部分，我們將為Web頻道檔案建立範本。
 在AEM Forms 6.4中建立Web Channel檔案範本
