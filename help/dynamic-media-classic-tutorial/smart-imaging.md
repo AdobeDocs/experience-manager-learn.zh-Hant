@@ -22,7 +22,7 @@ ht-degree: 1%
 
 Smart Imaging也受益於與Adobe同級最佳優質服務完全整合的額外效能提升。 此服務在伺服器、網路和互連點之間找到最佳的Internet路由，該路由的延遲和／或資料包丟失率比Internet上的預設路由低。
 
-進一步瞭解 [Smart Imaging](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html)。
+進一步瞭解[智慧型影像](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html)。
 
 ## 智慧影像的優點
 
@@ -30,13 +30,13 @@ Smart Imaging也受益於與Adobe同級最佳優質服務完全整合的額外�
 
 ![影像](assets/smart-imaging/smart-imaging-1.png)
 
-## Smart Imaging的運作方式 {#smart-imaging-1}
+## Smart Imaging的運作方式
 
 如前所述，智慧型影像運用Adobe Sensei AI功能，並搭配現有的影像預設集來自動將影像轉換為最佳的新一代影像格式，例如WebP，同時仍能維持視覺完整性。
 
-進一步了 [解Smart Imaging的運作方式](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)，包括支援的影像格式（以及不使用這些格式時會發生什麼情況）等詳細資訊，以及它對現有使用的影像預設集的影響。
+進一步瞭解[智慧型影像的運作方式](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)，包括支援的影像格式（以及如果您不使用這些格式會發生什麼情況）等詳細資訊，以及它對現有使用中影像預設集的影響。
 
-## Smart Imaging的影響 {#smart-imaging-1-1}
+## Smart Imaging的影響
 
 您可能擔心您必須變更網站上的URL、影像預設集和程式碼，才能運用智慧型影像。 如果您符合使用智慧型影像的先決條件，而且您只使用支援的JPEG和PNG影像格式來處理影像，則不必進行任何變更。
 
@@ -52,8 +52,8 @@ Smart Imaging隨附於您現有的Dynamic Media Classic授權中。 此功能不
 
 啟用Smart Imaging後，您將需要驗證它是否如預期般工作。
 
-您可能還有其他有關智慧型影像的問題。 我們已整理出一份常見問答集(FAQ)清單，提供解答。 閱讀常見 [問答](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html)。
+您可能還有其他有關智慧型影像的問題。 我們已整理出一份常見問答集(FAQ)清單，提供解答。 閱讀[常見問答](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html)。
 
 ## 其他資源
 
-觀看 [Dynamic Media Classic最佳化頁面效能技能產生器隨選網路研討會](https://seminars.adobeconnect.com/pzc1gw0cihpv) ，進一步瞭解智慧型影像。
+觀看[動態媒體經典最佳化頁面效能技能產生器](https://seminars.adobeconnect.com/pzc1gw0cihpv)隨選網路研討會，以進一步瞭解智慧型影像。
