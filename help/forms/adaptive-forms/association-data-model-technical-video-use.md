@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 將關聯資料模型與AEM表單搭配使用{#using-association-data-models-with-aem-forms}
+# 搭配AEM Forms使用關聯資料模型{#using-association-data-models-with-aem-forms}
 
 在表單資料模型中建立2個實體之間的關聯
 
