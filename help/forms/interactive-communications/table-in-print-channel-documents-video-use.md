@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms列印頻道檔案中使用表格元件 {#using-table-component-in-aem-forms-print-channel-document}
+# 在AEM Forms Print Channel Document {#using-table-component-in-aem-forms-print-channel-document}中使用表格元件
 
 以下視訊將逐步介紹在Interactive Communications中使用表格元件以列印頻道檔案的步驟。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
    * 互動式通訊檔案
    * sampleretirementaccountdata.json
 
-* 以編輯模式開啟「互動式通訊 [檔案」](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)。
+* 在[編輯模式](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)中開啟交互通信文檔。
 
 * 將TableDemo版面片段新增至貢獻區段。
 * 將表格儲存格系結至視訊中顯示的適當表單資料模型元素
