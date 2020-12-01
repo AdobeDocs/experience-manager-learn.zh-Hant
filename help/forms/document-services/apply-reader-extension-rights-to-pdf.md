@@ -22,10 +22,10 @@ ht-degree: 0%
 # 套用Reader擴充功能
 
 Reader Extensions可讓您控制PDF檔案的使用權限。 使用權限與Acrobat中提供但Adobe Reader中不提供的功能相關。 由Reader擴充功能控制的功能包括新增註解至檔案、填寫表格及儲存檔案的功能。 已新增使用權的PDF檔案稱為已啟用權限的檔案。 在Adobe Reader中開啟具有權限的PDF檔案的使用者，可以執行該檔案所啟用的作業。
-若要測試此功能，您可以試用此 [連結](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 範例名稱為「Render XDP with RE」
+若要測試此功能，您可以試用此[link](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 範例名稱為「Render XDP with RE」
 
 要完成此使用案例，我們需要執行以下操作：
-* 將Reader Extensions憑證新增至「fd-service」使用者。 此處列出新增Reader Extensions憑證的步 [驟](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
+* 將Reader Extensions憑證新增至「fd-service」使用者。 添加Reader Extensions憑據的步驟列在[此處](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
 
 * 建立自訂OSGi服務，將使用權限套用至檔案。 完成此作業的程式碼列於下方
 
@@ -67,12 +67,12 @@ public Document applyUsageRights(Document pdfDocument,UsageRights usageRights) {
 }
 ```
 
-## 建立Servlet以串流PDF {#create-servlet-to-stream-the-pdf}
+## 建立Servlet以串流化PDF {#create-servlet-to-stream-the-pdf}
 
 下一步是使用POST方法建立servlet，將Reader擴充的PDF傳回給使用者。 在這種情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會轉譯為動態PDF，而隨瀏覽器提供的PDF檢視器則不會處理動態PDF。
 
-以下是servlet的代碼。 Servlet將從Adaptive Form的 **customsubmit** （自定義提交）操作中調用。
-Servlet建立UsageRights對象，並根據用戶在自適應表單中輸入的值設定其屬性。 然後，Servlet調用為 **此目的建立的服務的applyUsageRights** 方法。
+以下是servlet的代碼。 Servlet將從Adaptive Form的&#x200B;**customsubmit**操作調用。
+Servlet建立UsageRights對象，並根據用戶在自適應表單中輸入的值設定其屬性。 然後，Servlet調用為此目的建立的服務的**applyUsageRights**&#x200B;方法。
 
 ```java
 package com.aemforms.ares.core.servlets;
@@ -191,7 +191,7 @@ try {
 
 若要在本機伺服器上測試此項，請依照下列步驟進行：
 1. [下載並安裝DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [下載並安裝ares.ares.core-ares Bundle](assets/ares.ares.core-ares.jar)。 這有自訂服務和servlet，可套用使用權限並將pdf串流回
+1. [下載並安裝ares.ares.core-ares Bundle](assets/ares.ares.core-ares.jar)。這有自訂服務和servlet，可套用使用權限並將pdf串流回
 1. [匯入用戶端lib和自訂提交](assets/applyaresdemo.zip)
 1. [匯入最適化表單](assets/applyaresform.zip)
 1. 將Reader擴充功能憑證新增至「fd-service」使用者
