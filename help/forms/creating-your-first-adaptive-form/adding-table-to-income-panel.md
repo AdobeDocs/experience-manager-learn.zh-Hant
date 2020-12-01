@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 將元件添加到收入面板 {#adding-components-to-income-panel}
+# 向收入面板添加元件{#adding-components-to-income-panel}
 
 我們將在「收入」面板中添加一個表格。 配置表行，並使用規則編輯器計算總計。
 
@@ -32,9 +32,9 @@ ht-degree: 0%
 
 
 
-## 使收入表動態 {#make-the-income-table-dynamic}
+## 使收入表動態{#make-the-income-table-dynamic}
 
-**請確定您處於編輯模式。 編輯按鈕位於瀏覽器的右上方。**
+**請確定您處於編輯模式。編輯按鈕位於瀏覽器的右上方。**
 
 * 預設情況下，將表插入最適化表單時，該表不是動態的，這意味著您無法在運行時向表中添加新行。
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 * 在「重複設定」下方，將「最小和最大計數」設為1和5，然後按一下藍色核取標籤圖示，儲存您的變更。 這表示表最多可以有5行。 若要設定無限數量的列，請將最大計數設為-1。
 
-## 建立規則以計算總計 {#create-rule-to-calculate-grand-total}
+## 建立規則以計算總計{#create-rule-to-calculate-grand-total}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/22197?quality=9&learn=on)
