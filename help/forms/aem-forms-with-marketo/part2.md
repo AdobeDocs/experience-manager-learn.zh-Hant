@@ -203,5 +203,5 @@ public class MarketoConfigurationService {
 ```
 
 1. 建立並部署套裝至您的AEM伺服器。
-1. [將您的瀏覽器指向configMgr](http://localhost:4502/system/console/configMgr) ，並搜尋「Marketo Credentials Service Configuration」
+1. [將您的瀏覽器指向](http://localhost:4502/system/console/configMgr) configMgrand搜尋「Marketo認證服務設定」
 1. 指定您Marketo實例專屬的適當屬性
