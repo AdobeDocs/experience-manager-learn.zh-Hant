@@ -24,7 +24,7 @@ ht-degree: 0%
 
 AEM Forms 6.4.1已推出交易報告功能，以擷取表單提交次數、使用檔案服務轉換檔案，以及互動式通訊（網路和印刷通道）。這項功能主要適用於想要根據提交表單和／或所提供檔案數量來授權軟體的客戶。 此功能目前僅適用於AEM Forms OSGI堆疊。
 
-## 啟用事務報告 {#enabling-transaction-reporting}
+## 啟用事務報告{#enabling-transaction-reporting}
 
 預設情況下會禁用事務記錄。 若要啟用交易記錄，請遵循下列步驟：
 
@@ -35,13 +35,13 @@ AEM Forms 6.4.1已推出交易報告功能，以擷取表單提交次數、使�
 
 在啟用交易報表後，您就可以提交Adaptive Forms、使用檔案服務產生檔案，或轉譯Interactive Communication檔案，以檢視交易報表的實際運作。
 
-## 查看事務處理報表 {#viewing-transaction-report}
+## 查看事務報表{#viewing-transaction-report}
 
 若要檢視交易報表，請以管理員身分登入AEM Forms。 只有fd-Administrator組的成員才能查看事務報告。
 
 選擇工具 |表格 |檢視交易報表
 
-或按一下此處檢視交易報 [表](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
+或按一下[此處](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)檢視交易報表
 
 ![TransactionReporting](assets/transactionreporting.gif)
 
@@ -53,5 +53,5 @@ AEM Forms 6.4.1已推出交易報告功能，以擷取表單提交次數、使�
 
 如果您正在查看作者實例的事務報告，請確保在所有發佈實例上配置了反向複製。
 
-若要進一步瞭解交易報表，請 [按一下這裡](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+若要進一步瞭解交易報表[，請按一下此處](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
 
