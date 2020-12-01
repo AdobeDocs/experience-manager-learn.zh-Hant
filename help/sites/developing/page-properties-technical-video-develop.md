@@ -16,13 +16,13 @@ ht-degree: 1%
 ---
 
 
-# 擴充頁面屬性 {#extending-page-properties-in-aem-sites}
+# 擴充頁面屬性{#extending-page-properties-in-aem-sites}
 
 自訂頁面屬性的中繼資料欄位是任何網站實作的常見需求。 此影片詳細說明使用Sling Resource Merger的功能來達成此目的最有效的方式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25173?quality=9&learn=on)
 
-上述視訊顯示使用Sling Resource Merger的各種功能，在 **AEM 6.4** 中自訂We.Retail應用程式的頁面屬性。 它可啟用下列自訂：
+上述影片顯示使用Sling Resource Merger的各種功能，在&#x200B;**AEM 6.4**&#x200B;中自訂We.Retail應用程式的頁面屬性。 它可啟用下列自訂：
 
 * 在「基本」標籤之前插入「自訂標籤」。
 * 作為「基本」(Basic)頁籤的一部分插入的新文本欄位。
