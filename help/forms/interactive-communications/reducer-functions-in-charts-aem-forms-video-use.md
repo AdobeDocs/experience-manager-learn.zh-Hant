@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms —— 圖表中使用Reducer函式{#using-reducer-functions-in-aem-forms-charts}
+# 在AEM Forms - Charts{#using-reducer-functions-in-aem-forms-charts}中使用Reducer函式
 
 Reducer函式用於匯總或分組圖表中顯示的值。
 
