@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 搭配AEM資產使用智慧型翻譯搜尋{#using-smart-translation-search-with-aem-assets}
+# 將智慧型翻譯搜尋與AEM Assets搭配使用{#using-smart-translation-search-with-aem-assets}
 
 智慧型轉譯搜尋功能可自動跨AEM內容（包括資產和頁面）進行跨語言搜尋和搜尋，支援超過50種語言，並減少手動內容轉譯的需求。
 
@@ -29,9 +29,9 @@ AEM智慧型翻譯搜尋可讓使用者使用非英文詞語來搜尋AEM中的�
 
 智慧型翻譯搜尋是套用英文資產的AEM智慧型標籤的完美輔助。
 
-此影片假設 [已設定AEM智慧型轉譯搜尋](smart-translation-search-technical-video-setup.md) 。
+此視訊假設已設定[AEM智慧型翻譯搜尋](smart-translation-search-technical-video-setup.md)。
 
-## 智慧型翻譯搜尋的運作方式 {#how-smart-translation-search-works}
+## 智慧型翻譯搜尋的運作方式{#how-smart-translation-search-works}
 
 ![智慧翻譯搜索流圖](assets/smart-translation-search-flow.png)
 
