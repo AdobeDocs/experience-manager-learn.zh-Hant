@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 將SPA元件對應至AEM元件 {#map-components}
+# 將SPA元件對應至AEM元件{#map-components}
 
 瞭解如何使用AEM SPA Editor JS SDK將React元件對應至Adobe Experience Manager(AEM)元件。 元件對應可讓使用者在AEM SPA編輯器中對SPA元件進行動態更新，類似於傳統的AEM編寫。
 
@@ -27,18 +27,18 @@ ht-degree: 0%
 ## 目標
 
 1. 瞭解如何將AEM元件對應至SPA元件。
-2. 瞭解Container元件與 **Content** 元件之 **間的差** 異。
+2. 瞭解&#x200B;**Container**&#x200B;元件與&#x200B;**Content**&#x200B;元件之間的差異。
 3. 建立新的React元件，以對應至現有的AEM元件。
 
 ## 您將建立的
 
-本章將檢查提供的 `Text` SPA元件如何對應至AEM元 `Text`件。 將會建 `Image` 立新的SPA元件，以便用於SPA並在AEM中編寫。 版面容器和範本編輯 **器(** Layout Container **** )原則的立即可用功能也可用來建立外觀更多樣的檢視。
+本章將檢查提供的`Text` SPA元件如何映射到AEM `Text`元件。 將會建立新的`Image` SPA元件，以便用於SPA並在AEM中編寫。 **版面容器**&#x200B;和&#x200B;**範本編輯器**&#x200B;原則的立即可用功能也將用來建立外觀稍有變化的檢視。
 
 ![章節範例最終編寫](./assets/map-components/final-page.png)
 
 ## 必備條件
 
-檢視建立本機開發環境所需的工 [具和指示](overview.md#local-dev-environment)。
+檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。
 
 ### 取得程式碼
 
@@ -56,13 +56,13 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   如果使用 [AEM 6.x](overview.md#compatibility) ，請新增 `classic` 描述檔：
+   如果使用[AEM 6.x](overview.md#compatibility)新增`classic`描述檔：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-您隨時都可以在 [GitHub上檢視完成的程式碼](https://github.com/adobe/aem-guides-wknd-spa/tree/React/map-components-solution) ，或切換至分支，在本機檢出程式碼 `React/map-components-solution`。
+您隨時都可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/React/map-components-solution)上檢視完成的程式碼，或切換至分支`React/map-components-solution`，在本機檢出程式碼。
 
 ## 映射方法
 
@@ -74,26 +74,26 @@ ht-degree: 0%
 
 ## 檢查文本元件
 
-[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)`Text` 提供對應至AEM [Text元件的元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。 這是內容元件的 **範例** ，其中會從 *AEM轉譯內* 容。
+[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)提供映射至AEM [Text元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)的`Text`元件。 這是&#x200B;**content**&#x200B;元件的範例，其中它會從AEM轉譯&#x200B;*content*。
 
 讓我們看看元件的運作方式。
 
 ### 檢查JSON模型
 
-1. 在跳至SPA程式碼之前，請務必瞭解AEM提供的JSON模型。 導覽至核 [心元件庫](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/text.html) ，並檢視文字元件的頁面。 核心元件庫提供所有AEM核心元件的範例。
-2. 選取 **其中一個範例的JSON** 標籤：
+1. 在跳至SPA程式碼之前，請務必瞭解AEM提供的JSON模型。 導覽至[核心元件庫](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/text.html)並檢視Text元件的頁面。 核心元件庫提供所有AEM核心元件的範例。
+2. 選擇&#x200B;**JSON**&#x200B;標籤，以取得其中一個範例：
 
    ![文字JSON模型](./assets/map-components/text-json.png)
 
-   您應該會看到三個屬性： `text`、 `richText`和 `:type`。
+   您應該會看到三個屬性：`text`、`richText`和`:type`。
 
-   `:type` 是一個保留屬性，會列 `sling:resourceType` 出AEM元件的（或路徑）。 值是用 `:type` 來將AEM元件對應至SPA元件的值。
+   `:type` 是一個保留屬性，會列 `sling:resourceType` 出AEM元件的（或路徑）。`:type`的值是用來將AEM元件對應至SPA元件的值。
 
-   `text` 以 `richText` 及SPA元件所暴露的其他屬性。
+   `text` 以 `richText` 及SPA元件的其他屬性。
 
 ### 檢查Text元件
 
-1. 開啟新的終端機，並導覽至專案 `ui.frontend` 內的資料夾。 執 `npm install` 行並 `npm start` 啟動 **webpack-dev-server**:
+1. 開啟新的終端機，並導覽至專案內的`ui.frontend`資料夾。 然後運行`npm install`和`npm start`以啟動&#x200B;**webpack-dev-server**:
 
    ```shell
    $ cd ui.frontend
@@ -101,17 +101,17 @@ ht-degree: 0%
    $ npm start
    ```
 
-   模 `ui.frontend` 組目前已設定為使用 [模擬JSON模型](./integrate-spa.md#mock-json)。
+   `ui.frontend`模組目前已設定為使用[模擬JSON模型](./integrate-spa.md#mock-json)。
 
-2. 您應會看到新的瀏覽器視窗開啟至 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html)
+2. 您應會看到新的瀏覽器視窗開啟至[http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html)
 
    ![具有模擬內容的Webpack開發伺服器](./assets/map-components/initial-start.png)
 
-3. 在您選擇的IDE中，開啟WKND SPA的AEM專案。 展開模 `ui.frontend` 塊並開啟以下 `Text.js` 檔案 `ui.frontend/src/components/Text/Text.js`:
+3. 在您選擇的IDE中，開啟WKND SPA的AEM專案。 展開`ui.frontend`模組並開啟`ui.frontend/src/components/Text/Text.js`下的`Text.js`檔案：
 
    ![Text.js React元件原始碼](./assets/map-components/vscode-ide-text-js.png)
 
-4. 我們將檢查的第一個區域是 `class Text` 第40行：
+4. 我們將檢查的第一個區域是~第40行的`class Text`:
 
    ```js
    class Text extends Component {
@@ -134,9 +134,9 @@ ht-degree: 0%
    }
    ```
 
-   `Text` 是標準的React元件。 元件會 `this.props.richText` 用來判斷要轉譯的內容是RTF還是純文字。 實際使用的「內容」來自 `this.props.text`。 為避免潛在的XSS攻擊，在使用危險的SetInnerHTML `DOMPurify` 來轉譯內容 [](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) 之前，會先透過逸出富格文字。 在練習 `richText` 中 `text` ，請回想JSON模型的和屬性。
+   `Text` 是標準的React元件。元件使用`this.props.richText`來判斷要轉譯的內容是富格文字還是純文字。 實際使用的「內容」來自`this.props.text`。 為避免潛在的XSS攻擊，在使用[allisalSetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml)來轉換內容之前，會先透過`DOMPurify`逸出富格文字。 在練習中，請前面的JSON模型中取用`richText`和`text`屬性。
 
-5. 接下來，請看 `TextEditConfig` ~29號線：
+5. 接下來，請看`TextEditConfig`的第29行：
 
    ```js
    const TextEditConfig = {
@@ -148,19 +148,19 @@ ht-degree: 0%
    };
    ```
 
-   上述程式碼負責決定何時在AEM作者環境中呈現預留位置。 如果方 `isEmpty` 法傳 **回true** ，則會呈現預留位置。
+   上述程式碼負責決定何時在AEM作者環境中呈現預留位置。 如果`isEmpty`方法返回&#x200B;**true**，則會呈現預留位置。
 
-6. 最後，請看~62 `MapTo` 號線的通話：
+6. 最後，請看~line 62的`MapTo`呼叫：
 
    ```js
    export default MapTo('wknd-spa-react/components/text')(Text, TextEditConfig);
    ```
 
-   `MapTo` 由AEM SPA Editor JS SDK(`@adobe/aem-react-editable-components`)提供。 路徑 `wknd-spa-react/components/text` 代表 `sling:resourceType` AEM元件。 此路徑與先前觀察到 `:type` 的JSON模型公開的路徑相符。 `MapTo` 負責剖析JSON模型回應，並將正確值傳 `props` 遞至SPA元件。
+   `MapTo` 由AEM SPA Editor JS SDK(`@adobe/aem-react-editable-components`)提供。路徑`wknd-spa-react/components/text`代表AEM元件的`sling:resourceType`。 此路徑與先前觀察到的JSON模型公開的`:type`相符。 `MapTo` 負責剖析JSON模型回應，並將正確值傳 `props` 遞至SPA元件。
 
-   您可在找到AEM元 `Text` 件定義 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/text`。
+   您可以在`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/text`找到AEM `Text`元件定義。
 
-7. 在中修改檔 `mock.model.json` 案以實驗 `ui.frontend/public/mock-content/mock.model.json`。 在~line 62更新第一個 `Text` 值，以使用 **`H1`** 和 **`u`** 標籤：
+7. 修改`ui.frontend/public/mock-content/mock.model.json`處的`mock.model.json`檔案以進行實驗。 在~line 62更新第一個`Text`值，以使用&#x200B;**`H1`**&#x200B;和&#x200B;**`u`**&#x200B;標籤：
 
    ```json
        "text": {
@@ -170,37 +170,37 @@ ht-degree: 0%
        }
    ```
 
-   導覽至 [http://localhost:3000](http://localhost:3000) ，以檢視效果：
+   導覽至[http://localhost:3000](http://localhost:3000)以檢視效果：
 
    ![更新的文字模型](./assets/map-components/updated-text-model.png)
 
-   嘗試在true `richText` / **false之間切****** 換屬性，以檢視演算邏輯的實際運作。
+   嘗試在&#x200B;**true** / **false**&#x200B;之間切換`richText`屬性，以檢視演算邏輯的實際運作。
 
-8. 在 `Text.scss` 檢查 `ui.frontend/src/components/Text/Text.scss`。
+8. 在`ui.frontend/src/components/Text/Text.scss`檢查`Text.scss`。
 
-   本章的起始程式碼庫已新增此檔案，並運用前一章中新增的 [Sass](https://sass-lang.com/) 功能。 請注意引用的變數 `ui.frontend/src/styles/_variables.scss`。
+   本章的起始代碼庫添加了此檔案，並使用前一章中添加的[Sass](https://sass-lang.com/)功能。 請注意`ui.frontend/src/styles/_variables.scss`引用的變數。
 
 ## 建立影像元件
 
-接著，建立 `Image` 對應至AEM [Image元件的Reacte元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/components/image.translate.html)。 該 `Image` 元件是內容元件的 **另一示例** 。
+接著，建立映射至AEM [Image元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)的`Image` React元件。 `Image`元件是&#x200B;**content**&#x200B;元件的另一個範例。
 
 ### 檢查JSON
 
 在跳至SPA程式碼之前，請先檢查AEM提供的JSON模型。
 
-1. 導覽至核心 [元件庫中的影像範例](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html)。
+1. 導覽至核心元件庫](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html)中的[影像範例。
 
    ![影像核心元件JSON](./assets/map-components/image-json.png)
 
-   將使 `src`用、 `alt`和 `title` 的屬性填充SPA組 `Image` 件。
+   `src`、`alt`和`title`的屬性將用於填充SPA `Image`元件。
 
    >[!NOTE]
    >
-   > 還有其他顯示(`lazyEnabled`, `widths`)的影像屬性可讓開發人員建立可調式和延遲載入的元件。 本教學課程中建立的元件將很簡單， **不會** 使用這些進階屬性。
+   > 還有其他顯示的影像屬性(`lazyEnabled`、`widths`)可讓開發人員建立可調式和延遲載入元件。 本教學課程中建立的元件將很簡單，而且&#x200B;**not**&#x200B;會使用這些進階屬性。
 
-2. 返回IDE並開啟 `mock.model.json` at `ui.frontend/public/mock-content/mock.model.json`。 由於這是專案的新元件，因此我們需要「模擬」影像JSON。
+2. 返回IDE並在`ui.frontend/public/mock-content/mock.model.json`處開啟`mock.model.json`。 由於這是專案的新元件，因此我們需要「模擬」影像JSON。
 
-   在~70行新增模型的JSON `image` 項目(別忘記第二個字元後面 `,` 的尾 `text_23828680`隨逗號)並更新 `:itemsOrder` 陣列。
+   在~line 70中，為`image`模型新增JSON項目（別忘記第二個`text_23828680`後面的尾隨逗號`,`），並更新`:itemsOrder`陣列。
 
    ```json
    ...
@@ -225,25 +225,25 @@ ht-degree: 0%
            ],
    ```
 
-   該項目包含將與 `/mock-content/adobestock-140634652.jpeg` webpack-dev-server一起使用 **的示例映像**。
+   專案包含`/mock-content/adobestock-140634652.jpeg`的範例影像，將與&#x200B;**webpack-dev-server**&#x200B;搭配使用。
 
-   您可以在此處檢 [視完整的mock.model.json](https://github.com/adobe/aem-guides-wknd-spa/blob/React/map-components-solution/ui.frontend/public/mock-content/mock.model.json)。
+   您可以在這裡檢視完整的[mock.model.json](https://github.com/adobe/aem-guides-wknd-spa/blob/React/map-components-solution/ui.frontend/public/mock-content/mock.model.json)。
 
 ### 實作影像元件
 
-1. 接下來，建立名為的新 `Image` 資料夾 `ui.frontend/src/components`。
-2. 在資料夾 `Image` 的下方建立一個名為的新檔案 `Image.js`。
+1. 接著，在`ui.frontend/src/components`下建立一個名為`Image`的新資料夾。
+2. 在`Image`資料夾下面建立一個名為`Image.js`的新檔案。
 
    ![Image.js檔案](./assets/map-components/image-js-file.png)
 
-3. 將以下語 `import` 句添加到 `Image.js`:
+3. 將以下`import`語句添加到`Image.js`:
 
    ```js
    import React, {Component} from 'react';
    import {MapTo} from '@adobe/aem-react-editable-components';
    ```
 
-4. 然後新增 `ImageEditConfig` 以決定何時在AEM中顯示預留位置：
+4. 然後新增`ImageEditConfig`以決定何時在AEM中顯示預留位置：
 
    ```js
    export const ImageEditConfig = {
@@ -256,9 +256,9 @@ ht-degree: 0%
    };
    ```
 
-   如果未設定屬性，則 `src` 會顯示預留位置。
+   如果未設定`src`屬性，則預留位置將顯示。
 
-5. 接下來實作 `Image` 類別：
+5. 接下來實作`Image`類別：
 
    ```js
     export default class Image extends Component {
@@ -284,17 +284,17 @@ ht-degree: 0%
    }
    ```
 
-   上述程式碼會根 `<img>` 據JSON模型傳入 `src`的 `alt`prop `title` 和prop來演算。
+   上述程式碼會根據JSON模型傳入的prop `src`、`alt`和`title`來轉換`<img>`。
 
-6. 新增程 `MapTo` 式碼，將Reacte元件對應至AEM元件：
+6. 新增`MapTo`程式碼，將React元件對應至AEM元件：
 
    ```js
    MapTo('wknd-spa-react/components/image')(Image, ImageEditConfig);
    ```
 
-   請注意，字 `wknd-spa-react/components/image` 串與AEM元件在以下位置的對 `ui.apps` 應位置： `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/image`.
+   請注意，字串`wknd-spa-react/components/image`與`ui.apps`中AEM元件的位置對應，網址為：`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/image`。
 
-7. 在同一目錄中創 `Image.scss` 建名為的新檔案並添加以下內容：
+7. 在同一目錄中建立名為`Image.scss`的新檔案並添加以下內容：
 
    ```scss
    .Image-src {
@@ -304,7 +304,7 @@ ht-degree: 0%
    }
    ```
 
-8. 在 `Image.js` 語句下方頂部添加對檔案的引 `import` 用：
+8. 在`Image.js`中，在`import`語句下方的頂部添加對檔案的引用：
 
    ```js
    import React, {Component} from 'react';
@@ -313,9 +313,9 @@ ht-degree: 0%
    require('./Image.scss');
    ```
 
-   您可以在這裡檢視已完 [成的Image.js](https://github.com/adobe/aem-guides-wknd-spa/blob/React/map-components-solution/ui.frontend/src/components/Image/Image.js)。
+   您可以在此處檢視已完成的[Image.js](https://github.com/adobe/aem-guides-wknd-spa/blob/React/map-components-solution/ui.frontend/src/components/Image/Image.js)。
 
-9. 開啟檔案 `ui.frontend/src/components/import-components.js` 並新增新元件的參 `Image` 考：
+9. 開啟檔案`ui.frontend/src/components/import-components.js`並添加對新`Image`元件的引用：
 
    ```js
    import './Page/Page';
@@ -323,7 +323,7 @@ ht-degree: 0%
    import './Image/Image'; //add reference to Image component
    ```
 
-10. 如果尚未啟動，請啟 **動webpack-dev-server**。 導覽至 [http://localhost:3000](http://localhost:3000) ，您應該會看到影像演算：
+10. 如果尚未啟動，請啟動&#x200B;**webpack-dev-server**。 導覽至[http://localhost:3000](http://localhost:3000)，您應該會看到影像演算：
 
    ![已新增影像至模擬](./assets/map-components/image-added-mock.png)
 
@@ -333,126 +333,126 @@ ht-degree: 0%
 
 ## AEM中的更新政策
 
-元 `Image` 件僅在 **webpack-dev-server中顯示**。 接著，將更新的SPA部署至AEM並更新範本原則。
+`Image`元件僅顯示在&#x200B;**webpack-dev-server**&#x200B;中。 接著，將更新的SPA部署至AEM並更新範本原則。
 
-1. 停止 **webpack-dev-server** ，並從專案的根目錄，使用您的Maven技巧將變更部署至AEM:
+1. 停止&#x200B;**webpack-dev-server**&#x200B;並從專案的根目錄，使用您的Maven技巧將變更部署至AEM:
 
    ```shell
    $ cd aem-guides-wknd-spa
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-2. 從「AEM開始」畫面導覽至「工 **具** >範本 **>** WKND SPA React **[](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-react)**」。
+2. 從「AEM開始」畫面導覽至「工具&#x200B;**** > **範本** > **[WKND SPA React](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-react)**」。
 
-   選擇並編輯 **SPA頁**:
+   選擇並編輯&#x200B;**SPA頁**:
 
    ![編輯SPA頁面範本](./assets/map-components/edit-spa-page-template.png)
 
-3. 選取「 **配置容器** 」，然後按一下其 **** 原則圖示以編輯原則：
+3. 選擇&#x200B;**配置容器**，然後按一下其&#x200B;**policy**&#x200B;表徵圖以編輯策略：
 
    ![配置容器原則](./assets/map-components/layout-container-policy.png)
 
-4. 在「 **允許的元件** > **WKND SPA React - Content** >檢查 **** 影像元件：
+4. 在「**允許的元件** > **WKND SPA反應——內容** >」下檢查&#x200B;**Image**&#x200B;元件：
 
    ![已選取影像元件](./assets/map-components/check-image-component.png)
 
-   在「 **Default Components** > **Add mapping** (預設元件 **>添加映射)」下，選擇「** Image - WKND SPA React - Content（影像- WKND SPA反應——內容元件）」:
+   在「**預設元件** > **添加映射**」下，選擇&#x200B;**影像- WKND SPA React —— 內容**&#x200B;元件：
 
    ![設定預設元件](./assets/map-components/default-components.png)
 
-   輸入 **MIME類型**`image/*`。
+   輸入&#x200B;**mime類型**&#x200B;的`image/*`。
 
-   按一下 **完成** ，保存策略更新。
+   按一下&#x200B;**Done**&#x200B;保存策略更新。
 
-5. 在「版 **面容器** 」中，按一 **下Text元件的** 原則圖示 **** :
+5. 在&#x200B;**版面容器**&#x200B;中，按一下&#x200B;**Text**&#x200B;元件的&#x200B;**policy**&#x200B;圖示：
 
    ![文本元件策略表徵圖](./assets/map-components/edit-text-policy.png)
 
-   建立名為 **WKND SPA Text的新策略**。 在「外 **掛程式** >格 **式設定** >選取所有方塊以啟用其他格式設定選項：
+   建立名為&#x200B;**WKND SPA文本**&#x200B;的新策略。 在「**Plugins** > **Formatting** >」下，選中所有框以啟用其他格式設定選項：
 
    ![啟用RTE格式](assets/map-components/enable-formatting-rte.png)
 
-   在「 **外掛程式** >段落樣式 **>」下方，核取「啟用段落樣式」** 方塊 ****:
+   在「**Plugins** > **段落樣式** >」下，選中該框以「啟用段落樣式&#x200B;**」:**
 
    ![啟用段落樣式](./assets/map-components/text-policy-enable-paragraphstyles.png)
 
-   按一下 **完成** ，保存策略更新。
+   按一下&#x200B;**Done**&#x200B;保存策略更新。
 
-6. 導覽至首 **頁**[http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。
+6. 導覽至&#x200B;**Homepage** [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。
 
-   您也可以編輯元件，並 `Text` 在全螢幕模式中新 **增其他段落** 。
+   您也可以編輯`Text`元件，並在&#x200B;**全螢幕**&#x200B;模式中新增其他段落樣式。
 
    ![全螢幕豐富式文字編輯](assets/map-components/full-screen-rte.png)
 
-7. 您也應該能夠從資產搜尋器拖放影 **像**:
+7. 您也可以從&#x200B;**Asset finder**&#x200B;拖放影像：
 
    ![拖放影像](./assets/map-components/drag-drop-image.gif)
 
-8. 透過 [AEM Assets](http://localhost:4502/assets.html/content/dam) ，新增您自己的影像，或安裝標準 [WKND參考網站的完成程式碼庫](https://github.com/adobe/aem-guides-wknd/releases/latest)。 WKND參 [考網站](https://github.com/adobe/aem-guides-wknd/releases/latest) ，包含許多可在WKND SPA上重新使用的影像。 您可使用 [AEM的Package Manager來安裝套件](http://localhost:4502/crx/packmgr/index.jsp)。
+8. 透過[AEM Assets](http://localhost:4502/assets.html/content/dam)新增您自己的影像，或安裝標準[WKND參考網站](https://github.com/adobe/aem-guides-wknd/releases/latest)的完成程式碼庫。 [WKND參考站點](https://github.com/adobe/aem-guides-wknd/releases/latest)包含許多可在WKND SPA上重新使用的影像。 可使用[AEM的Package Manager](http://localhost:4502/crx/packmgr/index.jsp)安裝套件。
 
    ![Package Manager install wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
 ## 檢查版面容器
 
-AEM SPA編輯 **器SDK會自動提供「版面容器** 」支援。 「 **版面容器**」（由名稱指示）是容器 **元件** 。 容器元件是接受JSON結構的元件，可代表其 *他元件* ，並動態執行個體化。
+AEM SPA編輯器SDK會自動提供對&#x200B;**版面容器**&#x200B;的支援。 **版面容器**&#x200B;是&#x200B;**容器**&#x200B;元件，如名稱所示。 容器元件是接受JSON結構的元件，其代表&#x200B;*other*&#x200B;元件並動態執行個體化它們。
 
 讓我們進一步檢查「版面容器」。
 
-1. 在瀏覽器中導覽至 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)
+1. 在瀏覽器中瀏覽至[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)
 
    ![JSON模型API —— 自適應格線](./assets/map-components/responsive-grid-modeljson.png)
 
-   Layout Container **元件有一** 個， `sling:resourceType` SPA編輯器會使用屬性來識別它，就像和元 `wcm/foundation/components/responsivegrid` 件一 `:type``Text``Image` 樣。
+   **版面容器**&#x200B;元件具有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，並由SPA編輯器使用`:type`屬性加以識別，就像`Text`和`Image`元件一樣。
 
-   SPA編輯器也提供使用版面模式重新調整 [元件大小](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) 的相同功能。
+   SPA編輯器提供使用[配置模式](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新調整元件大小的相同功能。
 
-2. 返回 [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。 新增其 **他影像** ，並嘗試使用「版面配置」選項重新調整 **其大小** :
+2. 返回[http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。 新增其他&#x200B;**Image**&#x200B;元件，並嘗試使用&#x200B;**Layout**&#x200B;選項重新調整其大小：
 
    ![使用版面模式重新調整影像大小](./assets/map-components/responsive-grid-layout-change.gif)
 
-3. 重新開啟JSON模型 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) ，並 `columnClassNames` 觀察JSON的一部分：
+3. 重新開啟JSON模型[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)，並觀察`columnClassNames`作為JSON的一部分：
 
    ![列類名](./assets/map-components/responsive-grid-classnames.png)
 
-   類名表 `aem-GridColumn--default--4` 示元件應基於12列網格為4列寬。 如需互動式格線 [的詳細資訊，請參閱這裡](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)。
+   類名`aem-GridColumn--default--4`表示元件應基於12列網格為4列寬。 如需[回應式格線的詳細資訊，請參閱此處](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)。
 
-4. 返回IDE，在模組中 `ui.apps` 有定義於的客戶端庫 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-grid`。 開啟檔案 `less/grid.less`。
+4. 返回到IDE，在`ui.apps`模組中，`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-grid`中定義了一個客戶端庫。 開啟檔案`less/grid.less`。
 
-   此檔案會決定「版面`default`容器」 `tablet`所使 `phone`用的中 **斷點**。 此檔案旨在根據專案規格自訂。 目前，中斷點設為 `1200px` 和 `650px`。
+   此檔案會決定&#x200B;**版面配置容器**&#x200B;使用的中斷點（`default`、`tablet`和`phone`）。 此檔案旨在根據專案規格自訂。 目前，中斷點設為`1200px`和`650px`。
 
-5. 您應該可以使用元件的回應功能和更新的豐富文字原 `Text` 則來製作如下的檢視：
+5. 您應該能夠使用`Text`元件的回應功能和更新的富格文字原則來製作如下檢視：
 
    ![章節範例最終編寫](./assets/map-components/final-page.png)
 
-## 恭喜！ {#congratulations}
+## 恭喜！{#congratulations}
 
-恭喜您，您已學習如何將SPA元件對應至AEM元件，並實作了新的元 `Image` 件。 您也有機會探索版面容器的互動 **功能**。
+恭喜您，您已學習如何將SPA元件對應至AEM元件，並實作新的`Image`元件。 您也可以探索&#x200B;**版面容器**&#x200B;的回應功能。
 
-您隨時都可以在 [GitHub上檢視完成的程式碼](https://github.com/adobe/aem-guides-wknd-spa/tree/React/map-components-solution) ，或切換至分支，在本機檢出程式碼 `React/map-components-solution`。
+您隨時都可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/React/map-components-solution)上檢視完成的程式碼，或切換至分支`React/map-components-solution`，在本機檢出程式碼。
 
-### 後續步驟 {#next-steps}
+### 後續步驟{#next-steps}
 
-[導覽和路由](navigation-routing.md) -瞭解如何透過SPA編輯器SDK對應至AEM頁面，以支援SPA中的多個檢視。 動態導航是使用React Router實現的，並添加到現有的Header元件中。
+[導覽和路由](navigation-routing.md) -瞭解如何透過SPA編輯器SDK對應至AEM頁面，以支援SPA中的多個檢視。動態導航是使用React Router實現的，並添加到現有的Header元件中。
 
-## 額外——保留源控制的配置 {#bonus}
+## 附加——將配置保留到源控制{#bonus}
 
 在許多情況下，尤其是在AEM專案開始時，將設定（例如範本和相關內容原則）保留至來源控制非常有用。 這可確保所有開發人員針對相同的內容和組態進行工作，並可確保環境之間的額外一致性。 一旦項目達到一定的成熟度，管理模板的做法就可以交給一組特殊的超級用戶。
 
-接下來的幾個步驟將會使用Visual Studio程式碼IDE和 [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) ，但可能會使用您設定為從AEM的本機例項提取或匯入內容的任何工具和任何IDE ******** 。
+接下來的幾個步驟將使用Visual Studio代碼IDE和[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)進行，但可能使用您已設定為從AEM的本機例項匯入&#x200B;**pull**&#x200B;或&#x200B;**內容的任何工具和任何IDE進行。**
 
-1. 在Visual Studio代碼IDE中，請確定您已透過Marketplace擴充功能 **安裝VSCode AEM Sync** :
+1. 在Visual Studio代碼IDE中，請確定您已透過Marketplace擴充功能安裝&#x200B;**VSCode AEM Sync**:
 
    ![VSCode AEM同步](./assets/map-components/vscode-aem-sync.png)
 
-2. 展開「 **專案檔案總管」中的ui.content** 模組，並導覽至 `/conf/wknd-spa-react/settings/wcm/templates`。
+2. 展開「項目瀏覽器」中的&#x200B;**ui.content**&#x200B;模組，並導航至`/conf/wknd-spa-react/settings/wcm/templates`。
 
-3. **以滑鼠右鍵** +按一 `templates` 下資料夾，然後選 **取「從AEM Server匯入」**:
+3. **Right+** 按一下 `templates` 資料夾，然 **後選取「從AEM Server匯入」**:
 
    ![VSCode匯入範本](./assets/map-components/import-aem-servervscode.png)
 
-4. 重複這些步驟以匯入內容，但選取位 **於的** 「原則」檔案夾 `/conf/wknd-spa-react/settings/wcm/templates/policies`。
+4. 重複這些步驟以導入內容，但選擇位於`/conf/wknd-spa-react/settings/wcm/templates/policies`的&#x200B;**policys**&#x200B;資料夾。
 
-5. 檢查位 `filter.xml` 於的檔案 `ui.content/src/main/content/META-INF/vault/filter.xml`。
+5. 檢查位於`ui.content/src/main/content/META-INF/vault/filter.xml`的`filter.xml`檔案。
 
    ```xml
    <!--ui.content filter.xml-->
@@ -465,6 +465,6 @@ AEM SPA編輯 **器SDK會自動提供「版面容器** 」支援。 「 **版面
     </workspaceFilter>
    ```
 
-   文 `filter.xml` 件負責標識隨軟體包一起安裝的節點的路徑。 請注意 `mode="merge"` 每個篩選器上的，指出現有內容不會修改，只會新增新內容。 由於內容作者可能正在更新這些路徑，因此請務必不要覆寫程 **式碼** 。 有關使用 [篩選元素的詳細資訊](https://jackrabbit.apache.org/filevault/filter.html) ，請參閱FileVault檔案。
+   `filter.xml`檔案負責標識將隨軟體包一起安裝的節點的路徑。 請注意，每個篩選器上的`mode="merge"`都表示不會修改現有內容，只會新增新內容。 由於內容作者可能正在更新這些路徑，因此代碼部署&#x200B;**not**&#x200B;覆寫內容非常重要。 有關使用篩選器元素的詳細資訊，請參閱[FileVault文檔](https://jackrabbit.apache.org/filevault/filter.html)。
 
-   比較 `ui.content/src/main/content/META-INF/vault/filter.xml` 並 `ui.apps/src/main/content/META-INF/vault/filter.xml` 瞭解每個模組管理的不同節點。
+   比較`ui.content/src/main/content/META-INF/vault/filter.xml`和`ui.apps/src/main/content/META-INF/vault/filter.xml`以瞭解每個模組管理的不同節點。
