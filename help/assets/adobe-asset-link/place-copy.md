@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 置入文案 {#place-copy}
+# 置入複製{#place-copy}
 
 瞭解如何使用「置入複製」作業，從AEM Assets使用資產。
 
