@@ -67,7 +67,7 @@ function consumeImage (file) {
 
 ### 部署在您的伺服器上
 
-* 使用AEM套件管理 [器，在您的AEM例項](assets/inline-image-client-library.zip) 上下載並安裝用戶端程式庫。
-* 使用AEM套件管 [理器，在您的AEM實例上下載並安裝範例表單](assets/inline-image-af.zip) 。
-* 指向您的瀏覽器以新 [增內嵌影像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* 使用AEM套件管理器，在您的AEM例項上下載並安裝[用戶端程式庫](assets/inline-image-client-library.zip)。
+* 使用AEM套件管理器，在您的AEM例項上下載並安裝[範例表單](assets/inline-image-af.zip)。
+* 將瀏覽器指向[新增內嵌影像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * 按一下「附加您的像片」按鈕以新增影像
