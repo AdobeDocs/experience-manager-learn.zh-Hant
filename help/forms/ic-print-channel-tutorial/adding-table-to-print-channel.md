@@ -25,7 +25,7 @@ ht-degree: 0%
 # 在稿件節中添加表
 
 在本部分，我們將在貢獻部分中添加一個表。
-有關在列印 [渠道檔案中使用表格的詳細資訊](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) ，請參閱「在列印渠道中使用表格」。
+有關在打印渠道文檔中使用表格的詳細資訊，請參閱[在打印渠道中使用表格](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md)。
 
 登入AEM Forms並導覽至「Adobe Experience Manager >表單>表單與檔案」。
 
