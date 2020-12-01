@@ -22,19 +22,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->對於要在系統上運作的範例資產，假設您的AEM Author和Publish執行個體分別在埠4502和4503上執行。 您也會假設AEM作者可透過 `admin`/存取`admin`。 如果埠號或管理員密碼已變更，則這些範例資產將無法運作。 您必須使用提供的范常式式碼建立自己的資產。
+>對於要在系統上運作的範例資產，假設您的AEM Author和Publish執行個體分別在埠4502和4503上執行。 您也假設AEM作者可透過`admin`/`admin`存取。 如果埠號或管理員密碼已變更，則這些範例資產將無法運作。 您必須使用提供的范常式式碼建立自己的資產。
 
 要使此使用案例在本地系統上工作，請執行以下步驟：
 
 * 在埠4502上安裝AEM Author例項，在埠4503上安裝AEM Publish例項
-* [依照在AEM Forms中與服務使用者一起開發時所指定的指示進行](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html)。 請務必建立服務使用者，並在您的AEM Author和Publish執行個體上部署套件。
+* [依照在AEM Forms中與服務使用者一起開發時所指定的指示進行](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html)。請務必建立服務使用者，並在您的AEM Author和Publish執行個體上部署套件。
 * [開啟osgi設定 ](http://localhost:4503/system/console/configMgr)。
-* 搜尋 **Apache Sling Referrer Filter**。 請確定已選中「允許空白」複選框。
-* [部署自訂AEMFormDocumentService Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。此套件必須部署在您的AEM Publish執行個體上。 此套件包含從行動表單產生互動式PDF的程式碼。
+* 搜尋&#x200B;**Apache Sling Referrer Filter**。 請確定已選中「允許空白」複選框。
+* [部署自訂AEMFormDocumentService Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。此套件必須部署在您的AEM Publish執行個體上。此套件包含從行動表單產生互動式PDF的程式碼。
 * [下載並解壓縮與本文相關的資產。](assets/offline-pdf-submission-assets.zip) 您將取得下列
-   * **offline-submission-profile.zip** —— 此AEM套件包含自訂設定檔，可讓您將互動式pdf下載至本機檔案系統。 將此套件部署在您的AEM Publish實例上。
-   * **xdp-form-and-workflow.zip** —— 此AEM套件包含XDP、範例工作流程、在節點內容/pdfsubmissions上設定的啟動程式。 將此套件部署在您的AEM Author和Publish執行個體上。
-   * **HandlePDFSubmission.HandlePDFSubmission.core-1.0-SNAPSHOT.jar** —— 此為AEM套件，可完成大部分工作。 此捆綁包包含裝載在上的servlet `/bin/startworkflow`。 此servlet會將已提交的表單資料儲 `/content/pdfsubmissions` 存在AEM儲存庫的節點下。 在您的AEM Author和Publish執行個體上部署此套件。
+   * **offline-submission-profile.zip**  —— 此AEM套件包含自訂描述檔，可讓您將互動式pdf下載至您的本機檔案系統。將此套件部署在您的AEM Publish實例上。
+   * **xdp-form-and-workflow.zip** -此AEM套件包含XDP、範例工作流程、在節點內容/pdfsubmissions上設定的啟動程式。將此套件部署在您的AEM Author和Publish執行個體上。
+   * **HandlePDFSubmission.HandlePDFSubmission.core-1.0-SNAPSHOT.jar** -這是AEM套件，可完成大部分工作。此捆綁包包含裝載在`/bin/startworkflow`上的servlet。 此servlet會將提交的表單資料儲存在AEM的儲存庫中的`/content/pdfsubmissions`節點下。 在您的AEM Author和Publish執行個體上部署此套件。
 * [預覽行動表單](http://localhost:4503/content/dam/formsanddocuments/testsubmision.xdp/jcr:content)
 * 填寫數個欄位，然後按一下工具列上的按鈕以下載互動式PDF。
 * 使用Acrobat填寫下載的PDF，然後按一下「送出」按鈕。
