@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 建立即時副本 {#create-livecopy}
+# 建立即時副本{#create-livecopy}
 
 瞭解如何使用「建立即時副本」精靈，從Blueprint建立網站的即時副本。
 
