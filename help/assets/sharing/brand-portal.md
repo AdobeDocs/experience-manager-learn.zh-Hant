@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 搭配AEM資產使用品牌入口網站{#using-brand-portal-with-aem-assets}
+# 搭配AEM Assets使用品牌入口網站{#using-brand-portal-with-aem-assets}
 
 Adobe Experience Manager(AEM)Assets品牌入口網站整合的視訊指南。
 
@@ -27,7 +27,7 @@ Adobe Experience Manager(AEM)Assets品牌入口網站整合的視訊指南。
 
 Brand Portal於2019年9月推出資產採購，可提高內容速度，並讓Experience Manager作者與協力廠商創意人員與貢獻者之間輕鬆快速地交換資產。
 
-### 品牌入口網站資產來源補充{#asset-sourcing}
+### 品牌門戶資產來源補充{#asset-sourcing}
 
 品牌入口網站的「資產來源補充」可用來收集第三方代理商和團隊的資產，並順暢地將資產同步回Experience Manager Author，以進行審核和使用。
 
@@ -35,9 +35,9 @@ Brand Portal於2019年9月推出資產採購，可提高內容速度，並讓Exp
 
 *Experience Manager Author 6.5 SP2(6.5.2)或更新版本才能使用資產來源補充*
 
-請參 [閱為資產來源補充啟用Experience Manager作者](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) ，以瞭解如何在Experience Manager作者上配置和設定資產來源補充的說明。
+請參閱[啟用資產來源補充的Experience Manager作者](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html)，瞭解如何在Experience Manager作者上配置和設定資產來源補充的說明。
 
-## 品牌入口網站2019年2月功能與增強功能{#brand-portal-features-and-enhancements-644}
+## 品牌入口網站2019年2月功能與增強{#brand-portal-features-and-enhancements-644}
 
 >[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
 
@@ -73,12 +73,12 @@ Brand Portal在篩選窗格中使用屬性謂語的部分文字搜尋功能來�
 #### 啟用資料夾階層
 
 管理員現在可以設定資料夾在登入時如何顯示給非管理員使用者（編輯者、檢視者和來賓使用者）。
-[「管理工具](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) 」面板中的「一般設定」中新增了「啟用檔案夾階層」設定。 如果配置為：
+[「管理工](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) 具」面板的「一般設定」中新增了「啟用檔案夾階層設定」。如果配置為：
 
 * 啟用後，從根資料夾開始的資料夾樹對非管理員用戶可見。 因此，可授予他們類似管理員的導覽體驗。
 * 停用時，登陸頁面上只會顯示共用資料夾。
 
-[啟用「資料夾階層](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) 」功能（啟用後）可協助您區分從不同階層共用相同名稱的資料夾。 登入時，非管理員使用者現在會看到共用資料夾的虛擬父（和上階）資料夾。
+[啟用「資](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) 料夾階層」功能（啟用後）可協助您區分具有不同階層共用之相同名稱的資料夾。登入時，非管理員使用者現在會看到共用資料夾的虛擬父（和上階）資料夾。
 
 共用資料夾被組織在虛擬資料夾中的各個目錄內。 您可以使用鎖定表徵圖來識別這些虛擬資料夾。
 
@@ -103,7 +103,7 @@ AEM Author例項位於Dynamic Media混合模式的使用者除了可以預覽和
 
 ### 排程發佈至品牌入口網站
 
-資產（和檔案夾）可排程從 [AEM(6.4.2.0)](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) 「作者」例項發佈至品牌入口網站的工作流程，以供日後的日期、時間使用。
+資產（和資料夾）可排程從[AEM(6.4.2.0)](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011)「作者例項」發佈至品牌入口網站的工作流程，以便在日後的日期、時間內執行。
 
 同樣地，發佈的資產也可以在稍後（時間）從入口網站移除，方法是排程「從品牌入口網站取消發佈」工作流程。
 
@@ -112,9 +112,9 @@ AEM Author例項位於Dynamic Media混合模式的使用者除了可以預覽和
 組織可在URL中使用替代首碼，以自訂其入口網站URL。 若要在現有入口網站URL中取得租用戶名稱的別名，組織必須聯絡Adobe支援。
 
 請注意，只能自訂品牌入口網站URL的首碼，而不能自訂整個URL。
-例如，具有現有網域的組織可 `wknd.brand-portal.adobe.com` 以應要 `wkndinc.brand-portal.adobe.com` 求建立。
+例如，現有網域`wknd.brand-portal.adobe.com`的組織可依要求建立`wkndinc.brand-portal.adobe.com`。
 
-不過，AEM Author例項只能以租 [用戶ID](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) URL設定，而不能以租用戶別名（替代）URL設定。
+不過，AEM Author例項可以[設定](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)，但只能使用租用戶ID URL，而不能使用租用戶別名（替代）URL。
 
 **使用案例** :組織可自訂入口網站URL，而不是固定Adobe提供的URL，以符合其品牌需求。
 
@@ -156,14 +156,14 @@ AEM Brand入口網站可讓訪客存取入口網站。 來賓用戶不需要憑�
 
 ### 其他增強功能
 
-* *卡片和清單檢視上的檔案夾階層路徑* — 可讓使用者知道儲存在品牌入口網站例項中的資料夾位置。 幫助用戶區分不同資料夾層次結構中具有相同名稱的資料夾。
-* *概述選項* — 選擇資產／資料夾，然後從工具列中選取概述選項，提供非管理員使用者有關資產／資料夾的中繼資料。 目前，顯示標題、建立日期和路徑
+* *卡片和清單檢視上的檔案夾階層路徑* — 可讓使用者知道儲存在品牌入口網站例項中的資料夾位置。幫助用戶區分不同資料夾層次結構中具有相同名稱的資料夾。
+* *概述選項* — 選擇資產／資料夾，然後從工具列中選取概述選項，提供非管理員使用者有關資產／資料夾的中繼資料。目前，顯示標題、建立日期和路徑
 
 ### Adobe I/O主機UI以設定Auth整合
 
-品牌入口網站使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) （英文）介面來建立JWT應用程式，此應用程式可設定oAuth整合，讓AEM Assets與品牌入口網站整合。 之前，用於設定OAuth整合的UI代管於中 `https://marketing.adobe.com/developer/`。 若要進一步瞭解如何整合AEM Assets與品牌入口網站，以便將資產和系列發佈至品牌入口網站，請參 [閱「設定AEM Assets與品牌入口網站整合」](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)。
+品牌入口網站使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)介面來建立JWT應用程式，此應用程式可啟用設定oAuth整合，以允許AEM資產與品牌入口網站整合。 之前，用於設定OAuth整合的UI是裝載在`https://marketing.adobe.com/developer/`中。 若要進一步瞭解如何整合AEM資產與品牌入口網站，以便將資產和系列發佈至品牌入口網站，請參閱[「設定AEM資產與品牌入口網站的整合」](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)。
 
-## 品牌入口網站2018年2月功能與增強功能{#brand-portal-features-and-enhancements-632}
+## 品牌入口網站2018年2月功能與增強{#brand-portal-features-and-enhancements-632}
 
 新功能增強功能，以將品牌入口網站與AEM整合為主。
 
