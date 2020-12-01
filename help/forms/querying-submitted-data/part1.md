@@ -21,11 +21,11 @@ ht-degree: 0%
 # 根據JSON結構描述建立最適化表單
 
 
-AEM Forms 6.3版本已推出以JSON結構描述為基礎建立最適化表單的功能。 本文將詳細說明如何使用JSON結構描述建立最適化表單 [](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-form-json-schema-form-model.html)。
+AEM Forms 6.3版本已推出以JSON結構描述為基礎建立最適化表單的功能。 有關使用JSON結構描述建立最適化表單的詳細資訊，請參閱[文章](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-form-json-schema-form-model.html)。
 
 根據JSON結構描述建立最適化表單後，下一步是將提交的資料儲存在資料庫中。 為此，我們將使用各種資料庫廠商引進的新JSON資料類型。 為了本文的目的，我們將使用MySql 8資料庫來儲存提交的資料。
 
-本文使用MySql 8資料庫。 MySQL引入了新的資料類型，稱為 [JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)。 這可讓儲存和查詢JSON物件更輕鬆。 我們將將提交的資料儲存在我們資料庫的JSON類型欄中。
+本文使用MySql 8資料庫。 MySQL引入了名為[JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)的新資料類型。 這可讓儲存和查詢JSON物件更輕鬆。 我們將將提交的資料儲存在我們資料庫的JSON類型欄中。
 
 下列螢幕擷取畫面顯示儲存在JSON資料類型中的已提交表單資料。 欄&quot;formdata&quot;是JSON類型。 我們還將與資料關聯的表單的名稱儲存在清單單名稱中
 
