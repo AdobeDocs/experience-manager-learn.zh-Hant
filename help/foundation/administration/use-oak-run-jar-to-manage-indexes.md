@@ -10,7 +10,7 @@ doc-type: technical video
 translation-type: tm+mt
 source-git-commit: e19e177589df7ce6a56c0be3f9d590cbca2f8ce7
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,8 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/21475/?quality=9&learn=on)
 
-* 使用的 [[!DNL oak-run.jar]版本必須符合AEM例項上使用的Oak版本](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&amp;g=org.apache.jackrabbit&amp;a=oak-run&amp;v=1.8.0) 。
-* 使用帶有各 [!DNL oak-run.jar] 種標誌的 **[!DNL index]** 命令管理索引，以支援不同的操作。
+* 使用的[[!DNL oak-run.jar]](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&amp;g=org.apache.jackrabbit&amp;a=oak-run&amp;v=1.8.0)版本必須符合AEM例項上使用的Oak版本。
+* 使用[!DNL oak-run.jar]管理索引使用&#x200B;**[!DNL index]**&#x200B;命令及各種標幟，以支援不同的作業。
 
    * `java -jar oak-run*.jar index ...`
 
@@ -47,34 +47,34 @@ ht-degree: 0%
 * `oak-run.jar` 快速判斷lucene Oak索引是否損毀。
 * 一致性檢查是安全的，可在使用中的AEM例項上執行，以取得一致性檢查層級1和2。
 
-## TarMK Online索引與 [!DNL oak-run.jar] {#tarmkonlineindexingwithoakrunjar}
+## 使用[!DNL oak-run.jar] {#tarmkonlineindexingwithoakrunjar}建立TarMK線上索引
 
 >[!VIDEO](https://video.tv.adobe.com/v/21479/?quality=12&learn=on)
 
-* 使用的聯 [!DNL TarMK] 機索 [!DNL oak-run.jar] 引比在節點上 `reindex=true` 設定更快 `oak:queryIndexDefinition` 。 儘管效能有所提高，但使用聯機索 [!DNL oak-run.jar] 引仍需要一個維護窗口來執行索引。
+* 使用[!DNL oak-run.jar]對[!DNL TarMK]進行聯機索引比在`oak:queryIndexDefinition`節點上設定`reindex=true`更快。 儘管效能有所提高，但使用[!DNL oak-run.jar]的聯機索引仍然需要一個維護窗口來執行索引。
 
-* 在AEM的例項 [!DNL TarMK] 維護 [!DNL oak-run.jar] 視窗外，不 **** 應針對AEM例項執行使用的線上索引。
+* 使用[!DNL oak-run.jar]的[!DNL TarMK]線上索引應&#x200B;**not**&#x200B;在AEM的例項維護視窗外針對AEM例項執行。
 
 ## 使用oak-run.jar建立TarMK離線索引
 
 >[!VIDEO](https://video.tv.adobe.com/v/21478/?quality=12&learn=on)
 
-* 離線索引使 [!DNL TarMK] 用是最簡 [!DNL oak-run.jar] 單的索引方法，因為它需 [!DNL oak-run.jar] 要單一命令，但 [!DNL TarMK][!DNL oak-run.jar] 它需要關閉AEM例項。
+* 使用[!DNL oak-run.jar]對[!DNL TarMK]進行離線索引是[!DNL TarMK]最簡單的[!DNL oak-run.jar]索引方法，因為它需要單一[!DNL oak-run.jar]命令，但是它需要關閉AEM實例。
 
 ## 使用oak-run.jar建立TarMK帶外索引
 
 >[!VIDEO](https://video.tv.adobe.com/v/21480/?quality=12&learn=on)
 
-* 使用帶外索引功能可將索 [!DNL TarMK] 引功 [!DNL oak-run.jar] 能對使用中AEM例項的影響降至最低。
+* 使用[!DNL oak-run.jar]在[!DNL TarMK]上建立帶外索引，可將索引對使用中AEM例項的影響降至最低。
 * 帶外索引是AEM安裝的建議索引方法，其中重新／索引的時間超過可用的維護視窗。
 
 ## MongoMK Online索引與oak-run.jar
 
-* Online index with [!DNL oak-run.jar] on [!DNL MongoMK] and [!DNL RDBMK] 是重新／索引（和）AEM安裝 [!DNL MongoMK] 的建議 [!DNL RDBMK]方法。 **或不應使用其他方[!DNL MongoMK]法[!DNL RDBMK]。**
+* 在[!DNL MongoMK]和[!DNL RDBMK]上具有[!DNL oak-run.jar]的線上索引是重新／索引[!DNL MongoMK]（和[!DNL RDBMK]）AEM安裝的建議方法。 **或不應使用其他方 [!DNL MongoMK] 法 [!DNL RDBMK]。**
 * 此索引必須僅針對叢集中的單一AEM例項執行。
-* 線上索引可 [!DNL MongoMK][!DNL MongoDB] 以安全地對正在運行的AEM群集執行，因為儲存庫遍歷將僅發生在單個節點上，使其他節點能夠繼續服務請求，而不會對效能產生顯著影響。
+* [!DNL MongoMK]的線上索引可安全地針對執行中的AEM叢集執行，因為資料庫周遊將僅發生在單一[!DNL MongoDB]節點上，讓其他節點繼續提供要求，而不會大幅影響效能。
 
-執 [!DNL oak-run.jar] 行聯機索引的index命令與Online索引相 [!DNL MongoMK] 同，其 [差異在於段儲存參數指向包含Node儲存的 [!DNL TarMK]  [!DNL oak-run.jar]](#tarmkonlineindexingwithoakrunjar)[!DNL MongoDB] 實例。
+用於執行[!DNL MongoMK]聯機索引的[!DNL oak-run.jar]索引命令與 [!DNL TarMK] 具有 [!DNL oak-run.jar]](#tarmkonlineindexingwithoakrunjar)的「聯機索引」命令相同，其差異在於段儲存參數指向包含Node儲存的[!DNL MongoDB]實例。[
 
 ```
 java -jar oak-run*.jar index
