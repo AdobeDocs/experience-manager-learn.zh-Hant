@@ -20,15 +20,15 @@ ht-degree: 2%
 ---
 
 
-# 使用多網站管理員 {#using-multi-site-manager-with-aem-sites}
+# 使用多站點管理器{#using-multi-site-manager-with-aem-sites}
 
-[!UICONTROL 「即時副本概觀] 」和「 [!UICONTROL Blueprint Configuration Manager] 」是AEM Author介面，可搭配Adobe Experience Manager Sites的「多網站管理員」功能使用。
+[!UICONTROL 即時副本] 概述和 [!UICONTROL Blueprint Configuration ] Manager是AEM Author介面，可搭配Adobe Experience Manager Sites的多網站管理器功能使用。
 
 ## 即時副本綜覽 {#live-copy-overview}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17054/?quality=9&learn=on)
 
-*即時副本概述是一種觸控式UI介面，用於管理即時副本及其各自的藍圖。 此功能在AEM 6.3中推出，取代了傳統UI Blueprint控制中心。*
+*即時副本概述是一種觸控式UI介面，用於管理即時副本及其各自的藍圖。此功能在AEM 6.3中推出，取代了傳統UI Blueprint控制中心。*
 
 ## Blueprint Configuration Manager - Touch UI {#blueprint-config-mgr}
 
