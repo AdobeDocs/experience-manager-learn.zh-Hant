@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 翻譯工作 {#translation-jobs}
+# 翻譯作業{#translation-jobs}
 
 瞭解如何將翻譯作業添加到現有的翻譯項目。
 
