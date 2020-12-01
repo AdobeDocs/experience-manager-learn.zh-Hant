@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 內容結構與階層 {#content-hierarchy}
+# 內容結構與階層{#content-hierarchy}
 
 瞭解如何在AEM Sites中建立及組織您組織的網站頁面。
 
