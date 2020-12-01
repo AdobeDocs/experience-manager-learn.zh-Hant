@@ -16,13 +16,13 @@ ht-degree: 0%
 ---
 
 
-# 將資產範本與AEM Assets和InDesign Server搭配使用{#using-asset-templates-with-aem-assets-and-indesign-server}
+# 將資產範本與AEM Assets和InDesign Server{#using-asset-templates-with-aem-assets-and-indesign-server}搭配使用
 
 AEM Assets範本可讓行銷人員建立、管理和提供數位和印刷的數位資產。 當與InDesign伺服器整合時，使用資產範本建立標籤手冊、名片、傳單、廣告和貼文卡會更輕鬆。
 
 >[!NOTE]
 >
->如需設定InDesign Server的步驟，請參閱「 [使用InDesign Server設定資產範本」](asset-templates-technical-video-setup.md)。
+>有關設定InDesign Server的步驟，請參閱「使用InDesign Server[設定資產範本」。](asset-templates-technical-video-setup.md)
 
 ## 概覽 {#overview}
 
@@ -30,7 +30,7 @@ AEM Assets範本可讓行銷人員建立、管理和提供數位和印刷的數�
 
 >[!VIDEO](https://video.tv.adobe.com/v/25170?quality=12&learn=on)
 
-## 技術概觀 {#technical-overview}
+## 技術概觀{#technical-overview}
 
 此影片提供AEM Assert Template功能的更技術性概觀，以及AEM如何透過InDesign促進AEM Assets和內容的構成，以建立豐富、引人入勝的列印體驗。
 
