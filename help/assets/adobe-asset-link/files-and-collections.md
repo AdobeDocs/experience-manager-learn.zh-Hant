@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 檔案和系列 {#files-and-collections}
+# 檔案和系列{#files-and-collections}
 
 瞭解如何從「資產連結」面板快速輕鬆地存取AEM Assets檔案和系列。
 
