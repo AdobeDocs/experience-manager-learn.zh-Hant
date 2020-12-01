@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 「建立語言副本」頁 {#create-language-copy-page}
+# 「建立語言副本」頁{#create-language-copy-page}
 
 瞭解如何在現有的「語言文案」中建立頁面，然後將內容翻譯為其他「語言文案」。
 
