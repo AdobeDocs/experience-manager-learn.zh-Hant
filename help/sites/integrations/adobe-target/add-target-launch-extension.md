@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# 將Target擴充功能新增至啟動屬性 {#adobe-target-extension}
+# 將Target擴充功能新增至啟動屬性{#adobe-target-extension}
 
-為了跟進此影片，您必須已將Experience Platform Launch [與AEM整合](../experience-platform-launch/overview.md)。
+若要跟隨此視訊，您必須已將[與AEM](../experience-platform-launch/overview.md)整合的Experience Platform Launch。
 
 瞭解如何使用Experience Platform Launch將Adobe Target啟用至您的AEM網站。
 
