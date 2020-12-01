@@ -21,7 +21,7 @@ ht-degree: 1%
 ---
 
 
-# 資產共用公地中的主題 {#asset-share-commons-theme}
+# 資產共用公域中的主題介紹{#asset-share-commons-theme}
 
 資產共用公域中的主題簡介 視訊會逐步介紹使用自訂色彩配置建立新主題的程式。
 
@@ -80,7 +80,7 @@ ht-degree: 1%
 @msgWarningBackgroundColor: @yellow;
 ```
 
-下載自 [訂用戶端程式庫主題](assets/asc-theme-demo.zip)
+下載[自訂用戶端程式庫主題](assets/asc-theme-demo.zip)
 
 ## 其他資源{#additional-resources}
 
