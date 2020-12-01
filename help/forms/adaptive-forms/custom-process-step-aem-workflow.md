@@ -31,18 +31,20 @@ ht-degree: 0%
 
 ## 建立Maven專案
 
-第一步是使用適當的Adobe Maven Archetype來建立大型專案。 本文將列出詳細的 [步驟](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)。 將您的主要專案匯入Eclipse後，您就可以開始編寫第一個OSGi元件，以便用於您的程式步驟。
+第一步是使用適當的Adobe Maven Archetype來建立大型專案。 詳細步驟列於此[文章](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)中。 將您的主要專案匯入Eclipse後，您就可以開始編寫第一個OSGi元件，以便用於您的程式步驟。
 
 
 ### 建立實作WorkflowProcess的類別
 
-在Eclipse IDE中開啟主專案。 展開 **專案名稱** > **核心資料夾** 。 展開src/main/java資料夾。 您應該看到以&quot;core&quot;結尾的套件。 建立在此包中實現WorkflowProcess的Java類。 您需要覆寫execute方法。 執行方法的簽名如下：public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throwsWorkflowException執行方法授予對以下3個變數的訪問權
+在Eclipse IDE中開啟主專案。 展開&#x200B;**projectname** > **core**資料夾。 展開src/main/java資料夾。 您應該看到以&quot;core&quot;結尾的套件。 建立在此包中實現WorkflowProcess的Java類。 您需要覆寫execute方法。 execute方法的簽名如下
+public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)拋出WorkflowException
+execute方法可存取下列3個變數
 
-**WorkItem**:workItem變數將授予對與工作流程相關資料的存取權。 此處提供公開API文 [件。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkItem**:workItem變數將授予對與工作流程相關資料的存取權。此處提供公用API檔案[。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**WorkflowSession**:此workflowSession變數可讓您控制工作流程。 此處提供公開API文 [件](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkflowSession**:此workflowSession變數可讓您控制工作流程。公開API檔案可在[這裡](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)取得
 
-**MetaDataMap**:所有與工作流關聯的元資料。 傳遞給流程步驟的任何流程參數都可以使用MetaDataMap對象。[API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
+**MetaDataMap**:所有與工作流關聯的元資料。傳遞給流程步驟的任何流程參數都可以使用MetaDataMap對象。[API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
 在本教學課程中，我們將將新增至Adaptive Form的附件寫入AEM工作流程的檔案系統。
 
@@ -134,7 +136,8 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 #### 建立和部署
 
-[按照此處所述構建包](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)[確保包已部署且處於活動狀態](http://localhost:4502/system/console/bundles)
+[按照此處所述構建包確](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)
+[保包已部署且處於活動狀態](http://localhost:4502/system/console/bundles)
 
 建立工作流程模型。 在工作流模型中拖放流程步驟。 將流程步驟與「將最適化表單附件保存到檔案系統」關聯。
 
