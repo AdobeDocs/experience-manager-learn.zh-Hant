@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 將JSON結構描述儲存在資料庫中 {#storing-json-schema-in-database}
+# 將JSON結構描述儲存在資料庫{#storing-json-schema-in-database}
 
 
 若要能夠查詢已提交的資料，我們需要儲存與已提交表單關聯的JSON結構描述。 JSON結構描述將用於查詢產生器中，以建立查詢。
