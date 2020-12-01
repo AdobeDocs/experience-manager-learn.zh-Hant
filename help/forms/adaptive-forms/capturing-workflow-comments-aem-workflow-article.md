@@ -28,7 +28,7 @@ ht-degree: 0%
 
 為符合此要求，提供範例OSGi套件，可用來擷取注釋並將這些注釋儲存為工作流程中繼資料屬性。
 
-下列螢幕擷取畫面顯示如何在 [AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) ，使用處理步驟來擷取注釋，並將它們儲存為中繼資料屬性。 &quot;Capture Workflow Comments&quot;是流程步驟中需要使用的java類的名稱。 您必須傳遞包含注釋的中繼資料屬性名稱。 在下方的螢幕擷取中，managerComments是儲存注釋的中繼資料屬性。
+下列螢幕擷取畫面顯示如何使用[AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)中的處理步驟來擷取注釋，並將它們儲存為中繼資料屬性。 &quot;Capture Workflow Comments&quot;是流程步驟中需要使用的java類的名稱。 您必須傳遞包含注釋的中繼資料屬性名稱。 在下方的螢幕擷取中，managerComments是儲存注釋的中繼資料屬性。
 
 ![workflowcomments1](assets/workflowcomments1.gif)
 
@@ -37,9 +37,9 @@ ht-degree: 0%
 
 * [部署使用服務使用者套件進行開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [部署SetValue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 此套件包含范常式式碼，可擷取注釋並將其儲存為中繼資料屬性
+* [部署SetValue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。此套件包含范常式式碼，可擷取注釋並將其儲存為中繼資料屬性
 
-* [將與本文相關的資產下載並解壓縮至您的檔案系統](assets/capturecomments.zip) 。資產包含工作流程模型和範例最適化表單。
+* [將與本文相關的資產下載並解壓縮至您的檔案系統](assets/capturecomments.zip) 資產包含工作流程模型和範例最適化表單。
 
 * 使用套件管理器將2個Zip檔案匯入AEM
 
