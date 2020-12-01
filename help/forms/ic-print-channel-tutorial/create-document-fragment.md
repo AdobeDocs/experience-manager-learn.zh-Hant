@@ -27,11 +27,11 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/22350/?quality=9&learn=on)
 
-檔案片段可容納互動式通訊檔案的文字內容。 此文本內容可以是靜態文本或從基礎資料模型元素值插入。 例如， **親愛的&#x200B;_{name}_**，其中「親愛的」是靜態文字，「名稱」是表單資料模型元素名稱。 在執行時期，這會依名稱&#x200B;**元素的值而解析為Gloria Rios****或**Dear John Jacobs。
+檔案片段可容納互動式通訊檔案的文字內容。 此文本內容可以是靜態文本或從基礎資料模型元素值插入。 例如&#x200B;**親愛的&#x200B;_{name}_**，其中「親愛的」是靜態文字，「名稱」是表單資料模型元素名稱。 在執行時期，這將會解析為&#x200B;**親愛的Gloria Rios**或&#x200B;**親愛的John Jacobs**，視名稱元素的值而定。
 
 豐富式文字編輯器具備足夠的直覺性，讓商業使用者能夠製作文字並插入表單資料元素。 檔案片段編輯器可設定文字格式、指定字型類型和樣式、插入特殊字元並建立超連結。
 
-檔案片段編輯器也能將內嵌條件插入文字，如此影片所 [示](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+檔案片段編輯器也能將內嵌條件插入文字，如本[影片](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)所示
 
 >[!NOTE]
 >
