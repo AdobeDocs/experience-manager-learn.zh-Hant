@@ -50,7 +50,7 @@ AEM支援的驗證（有時也會授權）機制的整合檢視。
             <td>✔</td>
         </tr>
         <tr>
-            <td>Token型(含封裝的 <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">Token</a>)</td>
+            <td>基於令牌（帶<a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝令牌</a>）</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -93,4 +93,4 @@ AEM支援的驗證（有時也會授權）機制的整合檢視。
     </tbody>
 </table>
 
-⁕透過社群專案提供，但Adobe不直接支援。 **
+&lt;a0/⁕>透過社群專案提供，但Adobe不直接支援。**
