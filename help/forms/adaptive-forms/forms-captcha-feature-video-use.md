@@ -24,7 +24,7 @@ ht-degree: 0%
 
 新增和使用AEM Adaptive Forms的CAPTCHA。
 
-請造訪 [AEM Forms範例頁面](https://forms.enablementadobe.com/content/samples/samples.html?query=0) ，以取得此功能的即時示範連結。
+請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)頁面，以取得此功能的即時示範連結。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 >
 >在作者例項上設定reCaptach
 >
->在作者例 [項上開啟](http://localhost:4502/system/console/bundles) felix網路主控台
+>在作者實例上開啟felix [web console](http://localhost:4502/system/console/bundles)
 >
 >搜尋com.adobe.granite.crypto.file套裝
 >
@@ -51,7 +51,7 @@ ht-degree: 0%
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * 複製HMAC和主檔案
 
-在您的發 [布例項上開啟](http://localhost:4502/system/console/bundles) felix網頁主控台。 搜尋com.adobe.granite.crypto.file套件。 請注意Bundle id
+在您的發佈例項上開啟[felix web console](http://localhost:4502/system/console/bundles)。 搜尋com.adobe.granite.crypto.file套件。 請注意Bundle id
 導覽至您發佈例項之檔案系統上的Bundle ID
 * &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * 刪除現有的HMAC和主檔案。
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 重新啟動您的AEM發佈伺服器
 
-## 支援材料 {#supporting-materials}
+## 支援材料{#supporting-materials}
 
 * [Google reCAPTCHA](https://www.google.com/recaptcha)
 
