@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# 語言副本簡介 {#introduction-language-copy}
+# 語言副本簡介{#introduction-language-copy}
 
 取得如何使用AEM Sites中的「語言副本」建立多語言網站的概觀。
 
