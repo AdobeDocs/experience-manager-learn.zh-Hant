@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Dispatcher是大多數AEM安裝的必備部分，即使不是所有安裝。 您可以找到許多討論如何配置Dispatcher以及提示和秘訣的線上文章。
 
-但是，這些細節總是從非常技術性的層面開始——假設您已經知道自己要做什麼，因此只提供了有關如何實現所需內容的詳細資訊。 我們從未找到任何概念性 _檔案，描述什麼是什麼_ ，為什麼是什麼，涉及到您可以和不能使用調度程式。
+但是，這些細節總是從非常技術性的層面開始——假設您已經知道自己要做什麼，因此只提供了有關如何實現所需內容的詳細資訊。 我們從未找到任何概念性檔案，其中描述&#x200B;_的內容，以及為什麼_&#x200B;涉及到您可以和不能對調度程式執行什麼操作。
 
 ### 反模式：Dispatcher as an Afterthoud
 
@@ -34,7 +34,7 @@ Dispatcher是大多數AEM安裝的必備部分，即使不是所有安裝。 您
 
 ### 「先讓它起作用，再讓它快速起作用」並非總是正確的
 
-您可能聽到過程式設計 _建議：「先讓它起作用，然後讓它快速起作用。」_. 這並非完全錯誤。 但是，若沒有正確的上下文，則往往會誤讀，無法正確套用。
+您可能聽到程式設計建議&#x200B;_&quot;先讓它起作用——然後讓它快速運作。&quot;_. 這並非完全錯誤。 但是，若沒有正確的上下文，則往往會誤讀，無法正確套用。
 
 建議應避免開發人員過早地最佳化程式碼，而此程式碼可能永遠無法執行，或極少執行，以至於最佳化無法產生足夠的影響，以證明投入最佳化的努力是合理的。 此外，優化還會導致代碼更複雜，從而引入錯誤。 因此，如果您是開發人員，請不要花太多時間在微量最佳化每一行程式碼上。 只要確定您選擇了正確的資料結構、演算法和程式庫，然後等待設定器的熱點分析，以瞭解更徹底的最佳化可提升整體效能。
 
@@ -95,7 +95,7 @@ Dispatcher是
 
 Dispatcher模組利用托管Apache伺服器提供的功能。 HTML頁面、下載和圖片等資源會儲存為Apache檔案系統中的簡單檔案。 就是這麼簡單。
 
-檔案名稱是由所請求資源的URL衍生而來。 如果您請求檔案 `/foo/bar.html` ，則會儲存檔案，例如在／下`var/cache/docroot/foo/bar.html`。
+檔案名稱是由所請求資源的URL衍生而來。 如果您請求檔案`/foo/bar.html`，它將儲存在例如/`var/cache/docroot/foo/bar.html`下。
 
 原則上，如果所有檔案都被快取並因此靜態儲存在Dispatcher中，則可以提取Publish系統的插件，Dispatcher將充當簡單的Web伺服器。 但這只是為了說明原則。 現實生活更複雜。 您無法快取所有內容，而且快取永遠不會完全「完整」，因為由於轉換程式的動態性質，資源數量可能是無限的。 靜態檔案系統的模型有助於生成調度程式功能的概要圖。 AND它有助於解釋調度程式的限制。
 
@@ -117,27 +117,27 @@ Dispatcher模組利用托管Apache伺服器提供的功能。 HTML頁面、下�
 
 * `pagename` 是資源標籤
 
-* `selectors` 代表Sling中使用的數個選擇器，以決定如何轉譯資源。 URL可以有任意數量的選擇器。 它們以句號分隔。 例如，選擇器區段可以是&quot;french.mobile.fancy&quot;。 選擇器應僅包含字母、數字和破折號。
+* `selectors` 代表Sling中使用的數個選擇器，以決定如何轉譯資源。URL可以有任意數量的選擇器。 它們以句號分隔。 例如，選擇器區段可以是&quot;french.mobile.fancy&quot;。 選擇器應僅包含字母、數字和破折號。
 
-* `html` 作為「選擇器」的最後一個名稱稱為副檔名。 在AEM/Sling中，它也會部分決定轉換指令碼。
+* `html` 作為「選擇器」的最後一個名稱稱為副檔名。在AEM/Sling中，它也會部分決定轉換指令碼。
 
-* `path/suffix.ext` 是類似路徑的運算式，可以是URL的尾碼。  它可用於AEM指令碼，以進一步控制資源的呈現方式。 稍後，我們將提供有關此部分的整節。 目前，您應該已經知道，您可以將它當做其他參數使用。 字尾必須有副檔名。
+* `path/suffix.ext` 是類似路徑的運算式，可以是URL的尾碼。它可用於AEM指令碼，以進一步控制資源的呈現方式。 稍後，我們將提供有關此部分的整節。 目前，您應該已經知道，您可以將它當做其他參數使用。 字尾必須有副檔名。
 
-* `?parameter=value&otherparameter=value` 是URL的查詢區段。 它可用來將任意參數傳遞至AEM。 無法快取含參數的URL，因此參數應限制為絕對必要的情況。
+* `?parameter=value&otherparameter=value` 是URL的查詢區段。它可用來將任意參數傳遞至AEM。 無法快取含參數的URL，因此參數應限制為絕對必要的情況。
 
 * `#fragment`，則URL的片段部分不會傳遞至AEM，而只會在瀏覽器中使用；在JavaScript架構中，選擇「路由參數」或跳至頁面上的特定部分。
 
-在Apache(參&#x200B;*考下圖*)中，
+在Apache（*參考下圖*）中，
 
 * `pagename.selectors.html` 用作快取檔案系統中的檔案名。
 
-如果URL有尾碼， `path/suffix.ext` 則
+如果URL有尾碼`path/suffix.ext`，則
 
 * `pagename.selectors.html` 建立為資料夾
 
 * `path` 資料夾中的文 `pagename.selectors.html` 件夾
 
-* `suffix.ext` 是資料夾中的 `path` 檔案。 注意：如果尾碼沒有副檔名，則不快取檔案。
+* `suffix.ext` 是資料夾中的 `path` 檔案。注意：如果尾碼沒有副檔名，則不快取檔案。
 
 ![從Dispatcher獲取URL後的檔案系統佈局](assets/chapter-1/filesystem-layout-urls-from-dispatcher.png)
 
@@ -151,7 +151,7 @@ URL、資源和檔案名稱之間的對應相當簡單。
 
 不過，你可能注意到一些陷阱，
 
-1. URL可能變長。 在本地檔案系統上添加「路 `/docroot` 徑」部分可能很容易超出某些檔案系統的限制。 在Windows上的NTFS中運行Dispatcher可能是個難題。 但是，Linux是安全的。
+1. URL可能變長。 在本地檔案系統上添加`/docroot`的「路徑」部分可能很容易超出某些檔案系統的限制。 在Windows上的NTFS中運行Dispatcher可能是個難題。 但是，Linux是安全的。
 
 2. URL可包含特殊字元和變母。 對於調度程式來說，這通常不是問題。 但請記住，URL會在應用程式的許多地方進行解譯。 我們經常會看到應用程式的奇怪行為，只是為了找出其中一個很少使用（自訂）的程式碼並未完整測試特殊字元。 如果可以的話，你應該避開他們。 如果不能，請規劃徹底測試。
 
@@ -181,7 +181,7 @@ URL永遠必須有副檔名。 雖然您可以在AEM中提供不含副檔名的U
 
 `http://domain.com/home/path/suffix.ext`
 
-是 `/home/path/suffix` 資源的路徑……，因此URL中沒有尾碼。
+`/home/path/suffix`是資源的路徑……因此URL中沒有尾碼。
 
 **結論**
 
@@ -201,11 +201,11 @@ URL永遠必須有副檔名。 雖然您可以在AEM中提供不含副檔名的U
 
 所以……有什麼問題？
 
-`home.html` 檔案系統中的檔案可以是檔案或資料夾。 與AEM不同的時間。
+`home.html` 檔案系統中的檔案可以是檔案或資料夾。與AEM不同的時間。
 
-如果您先 `home.html` 提出要求，則會將其建立為檔案。
+如果您先請求`home.html`，則會將其建立為檔案。
 
-後續返回有 `home.html/suffix.html` 效結果的請求，但由於檔案 `home.html` 「阻止」檔案系統中的位置， `home.html` 因此無法再次建立資料夾，因此不 `home.html/suffix.html` 進行快取。
+對`home.html/suffix.html`的後續請求返回有效結果，但由於檔案`home.html` &quot;blocks&quot;檔案在檔案系統中的位置，因此無法再次建立`home.html`作為資料夾，因此`home.html/suffix.html`不被快取。
 
 ![檔案系統中的檔案阻止位置防止子資源被快取](assets/chapter-1/file-blocking-position-in-filesystem.png)
 
@@ -213,7 +213,7 @@ URL永遠必須有副檔名。 雖然您可以在AEM中提供不含副檔名的U
 
 <br> 
 
-如果您以相反的方式來回執行，請先提出要求， `home.html/suffix.html` 然 `suffix.html` 後會先快取資料夾 `/home.html` 下的檔案。 但是，當您隨後請求作為資源時，此檔案 `home.html` 夾將被刪除 `home.html` 並替換為檔案。
+如果您以相反的方式來循環，則首先請求`home.html/suffix.html`，然後`suffix.html`會先快取至資料夾`/home.html`下。 但是，當您隨後請求`home.html`作為資源時，此資料夾將被刪除並替換為檔案`home.html`。
 
 ![將父項作為資源讀取時刪除路徑結構](assets/chapter-1/deleting-path-structure.png)
 
@@ -264,11 +264,11 @@ URL永遠必須有副檔名。 雖然您可以在AEM中提供不含副檔名的U
 
 ### 概覽
 
-最後一章列出了當Dispatcher無法快取請求時的大量例外。 但還有更多事情要考慮：僅僅因為Dispatcher _可以_ 快取請求，它並不一定表示它應該 _快取_。
+最後一章列出了當Dispatcher無法快取請求時的大量例外。 但還有更多事情要考慮：僅僅因為Dispatcher _可以_&#x200B;快取請求，它並不一定表示它&#x200B;_應該_。
 
 重點是：快取通常很簡單。 Dispatcher只需儲存響應的結果，並在下次收到完全相同的請求時返回。 右? 錯！
 
-難點是快取的 _失效__或_ 刷新。 Dispatcher需要查明資源何時更改，並需要重新呈現。
+難點部分是快取的&#x200B;_失效_&#x200B;或&#x200B;_flushing_。 Dispatcher需要查明資源何時更改，並需要重新呈現。
 
 乍一看，這似乎是一項微不足道的任務……但事實並非如此。 進一步閱讀，您將會發現單一資源和簡單資源與依賴高度網狀結構的多個資源的頁面之間有一些棘手的差異。
 
@@ -309,7 +309,7 @@ Dispatcher可以安全地刪除其已快取的所有轉譯的資源。 它會做
 
 `$ rm /content/dam/path/to/image.*`
 
-移除 `image.png` 和 `image.thumb.png` 所有其他與該模式相符的轉譯。
+移除`image.png`和`image.thumb.png`，以及與該模式相符的所有其他轉譯。
 
 確實非常簡單……只要您只使用一個資源來回應請求。
 
@@ -344,7 +344,7 @@ Dispatcher可以安全地刪除其已快取的所有轉譯的資源。 它會做
 </div>
 ```
 
-*到首頁* 。 首頁由Dispatcher以靜態。html檔案形式儲存，包括摘要及其標題在檔案中。
+** 進入首頁。首頁由Dispatcher以靜態。html檔案形式儲存，包括摘要及其標題在檔案中。
 
 現在，行銷人員已瞭解到摘要標題應該是可操作的。 因此，他決定將標題從「加拿大」改為「造訪加拿大」，並更新影像。
 
@@ -364,7 +364,7 @@ Dispatcher只是基於檔案系統的Web伺服器，速度快，但也相對簡�
 
 您可能認為，當資源發生更改時，Dispatcher會在渲染和刷新已使用此資源的所有頁時跟蹤它接觸的每個資源。 但Dispatcher不會呈現頁面。 演算由「發佈」系統執行。 Dispatcher不知道轉譯的。html檔案中會包含哪些資源。
 
-還是不相信？ 您可能認 *為「必須有一種方法來實施某種依賴性追蹤」*。 有的，或者更準確的 *是*。 第3號公報是AEM的曾曾曾祖父在會議上實施的一項扶養追蹤 _器_ ，用於翻頁。
+還是不相信？ 您可能認為&#x200B;*&quot;必須有一種方式來實施某種相依性追蹤&quot;*。 這裡有，或者更準確的是&#x200B;*was* 公報3,AEM的曾曾曾祖父在&#x200B;_session_&#x200B;中實施了一個依賴追蹤器，用於呈現頁面。
 
 在請求期間，透過此作業取得的每個資源都會被追蹤為目前呈現之URL的相依性。
 
@@ -410,9 +410,9 @@ Dispatcher只是基於檔案系統的Web伺服器，速度快，但也相對簡�
 
 <br> 
 
-您可能會問為什麼稱為&quot;。stat&quot;? 也許&quot;無效&quot;? 您可以想像，將該檔案放在檔案系統中有助於Dispatcher確定哪些資源可以靜態 *服務* —就像從靜態Web伺服器中一樣。 這些檔案不再需要動態呈現。
+您可能會問為什麼稱為&quot;。stat&quot;? 也許&quot;無效&quot;? 您可以想像，將該檔案放在檔案系統中有助於Dispatcher確定哪些資源可以&#x200B;*靜態*&#x200B;得到服務——就像從靜態Web伺服器中提供的資源一樣。 這些檔案不再需要動態呈現。
 
-然而，這個名字的真實性質，並不是暗喻。 它是從Unix系統調用中派生的， `stat()`它返回檔案的修改時間（其中包括其他屬性）。
+然而，這個名字的真實性質，並不是暗喻。 它源自Unix系統調用`stat()` ，該調用返回檔案的修改時間（以及其他屬性）。
 
 #### 混合簡單與自動驗證
 
@@ -450,9 +450,9 @@ Dispatcher的失效請求通常由複製代理從Publish系統引發。
 
 1. 真正瞭解您在做什麼。 要正確進行失效真的很困難。 這就是自動失效如此嚴格的原因之一；以避免傳送過時內容。
 
-2. 如果您的代理傳送HTTP標 `CQ-Action-Scope: ResourceOnly`題，表示此單一失效請求不會觸發自動失效。 此( [https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle](https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle))代碼片段可能是您自己的複製代理的好起點。
+2. 如果您的代理髮送HTTP-header `CQ-Action-Scope: ResourceOnly`，表示此單一失效請求不會觸發自動失效。 此([https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle](https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle))代碼片段可能是您自己的複製代理的好起點。
 
-3. `ResourceOnly`，則僅防止自動失效。 要實際執行必要的相關性解決和無效，您必須自己觸發失效請求。 您可能想要檢查Dispatcher刷新規則([https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html))包，以瞭解如何實際發生此情況。
+3. `ResourceOnly`，則僅防止自動失效。要實際執行必要的相關性解決和無效，您必須自己觸發失效請求。 您可能想檢查軟體包Dispatcher刷新規則([https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html))，以瞭解如何實際發生此情況。
 
 我們不建議您建立相依性解決方案。 我們的努力太多，收益也太少——正如以前所說，你會犯錯的人太多。
 
@@ -476,7 +476,7 @@ Dispatcher的失效請求通常由複製代理從Publish系統引發。
 
 讓我們說明具有互連二進位檔案的元件的通用模式（或反模式）。 我們將建立「respi」元件——用於「自適應影像」。 此元件應能將顯示的影像調整至所顯示的裝置。 在桌上型電腦和平板電腦上，它可顯示影像的完整解析度、在手機上以窄幅裁切的較小版本顯示影像，或甚至是完全不同的主題（在互動式世界中，這稱為「藝術方向」）。
 
-資產會上傳至AEM的DAM區域，且僅 _在回應式_ -影像元件中參考。
+資產會上傳至AEM的DAM區域，且回應式影像元件中只有&#x200B;_referenced_。
 
 響應元件同時處理標籤的渲染和二進位影像資料的發送。
 
@@ -490,7 +490,7 @@ Dispatcher的失效請求通常由複製代理從Publish系統引發。
 
 以下是我們的自適應影像元件的實作方式：
 
-該構件分為兩部分：第一部分會轉譯影像的HTML標籤，第二部分則會「線軸」參照影像的二進位資料。 由於這是具有互動式設計的現代網站，我們不會轉換簡單的標 `<img src"…">` 簽，而是在標籤中轉換一組影 `<picture/>` 像。 對於每個裝置，我們會將兩張不同的影像上傳至DAM，並從我們的影像元件參照這些影像。
+該構件分為兩部分：第一部分會轉譯影像的HTML標籤，第二部分則會「線軸」參照影像的二進位資料。 由於這是具有互動式設計的現代網站，我們不會轉換簡單的`<img src"…">`標籤，而是在`<picture/>`標籤中轉換一組影像。 對於每個裝置，我們會將兩張不同的影像上傳至DAM，並從我們的影像元件參照這些影像。
 
 此元件有三個轉譯指令碼（在JSP、HTL或Servlet中實作），每個轉譯指令碼都由專用選擇器處理：
 
@@ -599,7 +599,7 @@ Dispatcher的失效請求通常由複製代理從Publish系統引發。
 >
 >這是反模式。 不要使用它。 永遠。
 
-您看過類似的查詢參數嗎 `?ck=398547283745`? 它們稱為快取殺手(「ck」)。 其思想是，如果添加任何查詢參數，則不會訪問資源。 此外，如果您新增隨機數作為參數的值（例如&quot;398547283745&quot;）,URL將變為唯一，您確定AEM系統和螢幕之間的其他快取也無法快取。 通常的中間人懷疑是Dispatcher、CDN或甚至瀏覽器快取之前的「清漆」快取。 同樣：別這樣。 您確實希望盡可能多地快取您的資源。 快取是你的朋友。 別殺朋友。
+您有沒有看過像`?ck=398547283745`這樣的查詢參數？ 它們稱為快取殺手(「ck」)。 其思想是，如果添加任何查詢參數，則不會訪問資源。 此外，如果您新增隨機數作為參數的值（例如&quot;398547283745&quot;）,URL將變為唯一，您確定AEM系統和螢幕之間的其他快取也無法快取。 通常的中間人懷疑是Dispatcher、CDN或甚至瀏覽器快取之前的「清漆」快取。 同樣：別這樣。 您確實希望盡可能多地快取您的資源。 快取是你的朋友。 別殺朋友。
 
 #### 自動失效
 
@@ -617,11 +617,11 @@ Dispatcher的失效請求通常由複製代理從Publish系統引發。
 
 URL指紋看起來像是快取殺手。 但事實並非如此。 它不是隨機數，而是資源內容的特徵值。 這可以是資源內容的雜湊，或者更簡單的，是資源上傳、編輯或更新時的時間戳記。
 
-Unix時間戳記非常適合實際實作。 為了提高可讀性，我們在本教學課程中使用了更易讀的格式： `2018 31.12 23:59 or fp-2018-31-12-23-59`.
+Unix時間戳記非常適合實際實作。 為了提高可讀性，我們在本教學課程中使用了更易讀的格式：`2018 31.12 23:59 or fp-2018-31-12-23-59`。
 
-指紋不能用作查詢參數，因為無法快取含查詢參數的URL。 您可以使用選取器或指紋的字尾。
+指紋不能用作查詢參數，作為具有查詢參數的URL   無法快取。 您可以使用選取器或指紋的字尾。
 
-假設，檔案的日 `/content/dam/flower.jpg` 期是 `jcr:lastModified` 2018年12月31日，23:59。 指紋的URL是 `/content/home/jcr:content/par/respi.fp-2018-31-12-23-59.jpg`。
+假設`/content/dam/flower.jpg`檔案的日期`jcr:lastModified`為2018年12月31日，23:59。 具有指紋的URL為`/content/home/jcr:content/par/respi.fp-2018-31-12-23-59.jpg`。
 
 只要參考的資源(`flower.jpg`)檔案未變更，此URL就會維持穩定。 因此，它可以無限時間進行快取，而不是快取殺手。
 
@@ -629,9 +629,9 @@ Unix時間戳記非常適合實際實作。 為了提高可讀性，我們在本
 
 這就是基本概念。 不過，有些細節很容易被忽視。
 
-在我們的範例中，元件是在23:59轉譯並快取。 現在影像已經變更，假設是00:00。  此元件 _會在其標籤_ 中產生新的指紋印刷URL。
+在我們的範例中，元件是在23:59轉譯並快取。 現在影像已經變更，假設是00:00。  元件&#x200B;_would_&#x200B;在其標籤中生成新的指紋URL。
 
-你可能覺 _得_...但不是。由於只變更了影像的二進位元，而未接觸包含頁面，因此不需要重新轉換HTML標籤。 因此，Dispatcher使用舊指紋為頁面提供服務，從而提供舊版影像。
+您可能認為它&#x200B;_應_...但它沒有。由於只變更了影像的二進位元，而未接觸包含頁面，因此不需要重新轉換HTML標籤。 因此，Dispatcher使用舊指紋為頁面提供服務，從而提供舊版影像。
 
 ![比參考影像更近的影像元件，沒有產生新的指紋。](assets/chapter-1/recent-image-component.png)
 
@@ -649,9 +649,9 @@ Unix時間戳記非常適合實際實作。 為了提高可讀性，我們在本
 >
 >這是反模式。 只需在短期內使用它，就能贏得一些時間，並想出更精巧的解決方案。
 
-懶惰管理員通常「_將自動失效設為jpgs，並將statfile級別設為零——這總是有助於解決各種快取問題_。」 在技術論壇中，您會發現這一建議，並協助您解決失效問題。
+懶惰管理員通常&quot;_將自動失效設定為jpgs，並將statfile級別設定為零——始終有助於處理所有類型的快取問題_。&quot; 在技術論壇中，您會發現這一建議，並協助您解決失效問題。
 
-到目前為止，我們還沒討論過靜態檔案級別。 基本上，自動失效只適用於同一子樹中的檔案。 但問題是頁面和資產通常不在相同的子樹狀結構中。 頁面位於下方， `/content/mysite` 資產則位於下方 `/content/dam`。
+到目前為止，我們還沒討論過靜態檔案級別。 基本上，自動失效只適用於同一子樹中的檔案。 但問題是頁面和資產通常不在相同的子樹狀結構中。 頁面位於`/content/mysite`下方，而資產則位於`/content/dam`下方。
 
 「statfile level」定義子樹的根節點深度。 在上述範例中，層級為&quot;2&quot;(1=/content, 2=/mysite,dam)
 
@@ -679,7 +679,7 @@ Unix時間戳記非常適合實際實作。 為了提高可讀性，我們在本
 /content/site-b
 ```
 
-這樣，當您的自訂Dispatcher Flushing代理遇到更改時，可以輕鬆地向/content/site-a發送和失效請求 `/content/dam/site-a`。
+這樣，當您的自定義Dispatcher Flushing代理遇到`/content/dam/site-a`上的更改時，可以輕鬆地向/content/site-a發送和失效請求。
 
 事實上，您告訴Dispatcher使哪條路徑無效並不重要——只要它位於同一站點，位於同一「子樹」中。 您甚至不需要使用真正的資源路徑。 它也可以是「虛擬」的：
 
@@ -711,7 +711,7 @@ Invalidate-path /content/mysite/dummy`
 
 `/content/mysite/home/jcr:content/par/respi.img.fp-2018-31-12-23-59.jpg`
 
-與任何已失效的資源無關。 記憶? 我們只是使「虛擬」資源失效，而且依賴自動失效來考慮「家庭」無效。 影像本身可能永遠無法實 _際刪除_ 。 因此，快取將不斷增長和增長。 當映像被更改和激活時，它們會在Dispatcher的檔案系統中獲得新的檔案名。
+與任何已失效的資源無關。 記憶? 我們只是使「虛擬」資源失效，而且依賴自動失效來考慮「家庭」無效。 映像本身可能永遠不會被刪除&#x200B;_physical_。 因此，快取將不斷增長和增長。 當映像被更改和激活時，它們會在Dispatcher的檔案系統中獲得新的檔案名。
 
 無法實際刪除快取檔案並無限期保留檔案有三個問題：
 
@@ -745,9 +745,9 @@ Invalidate-path /content/mysite/dummy`
 
 您不僅可以對來自DAM的資產使用指紋結構描述，也可以對JS和CSS檔案及相關資源使用。
 
-[版本化Clientlibs](https://adobe-consulting-services.github.io/acs-aem-commons/features/versioned-clientlibs/index.html) 是使用此方法的模組。
+[版本化](https://adobe-consulting-services.github.io/acs-aem-commons/features/versioned-clientlibs/index.html) 的Clientlibs是使用此方法的模組。
 
-但在這裡，您可能會面臨另一個URL指紋的警告：它會將URL系結至內容。 若不變更URL（亦即更新修改日期），則無法變更內容。 這是指紋最初的設計目的。 但請考慮，您即將推出新版本，其中包含新的CSS和JS檔案，以及新的URL和新的指紋。 您的所有HTML頁面仍有舊指紋URL的參考。 因此，若要讓新版本一致運作，您必須一次使所有HTML頁面失效，以強制重新轉譯並參照新指紋的檔案。 如果您有多個網站依賴相同的資料庫，這可能需要大量重新轉換——而在這裡，您無法運用 `statfiles`。 因此，請準備好在轉出後，在您的發佈系統上看到負載峰值。 您可以考慮在Dispatcher前面部署藍綠色的快取，或者在Dispatcher前面部署基於TTL的快取……無限可能。
+但在這裡，您可能會面臨另一個URL指紋的警告：它會將URL系結至內容。 若不變更URL（亦即更新修改日期），則無法變更內容。 這是指紋最初的設計目的。 但請考慮，您即將推出新版本，其中包含新的CSS和JS檔案，以及新的URL和新的指紋。 您的所有HTML頁面仍有舊指紋URL的參考。 因此，若要讓新版本一致運作，您必須一次使所有HTML頁面失效，以強制重新轉譯並參照新指紋的檔案。 如果您有多個網站依賴相同的資料庫，這可能需要大量重新轉換——而您無法在此運用`statfiles`。 因此，請準備好在轉出後，在您的發佈系統上看到負載峰值。 您可以考慮在Dispatcher前面部署藍綠色的快取，或者在Dispatcher前面部署基於TTL的快取……無限可能。
 
 #### 短暫休息
 
@@ -803,7 +803,7 @@ AEM會注意到部分參考。 當您嘗試刪除或移動參考頁面或資產�
 
 我們使用資產原始資源路徑來呈現資料。 如果我們需要依原樣來呈現原始影像，我們只需對資產使用AEM。預設轉譯器。
 
-如果我們需要對特定元件執行一些特殊處理，我們將在該路徑和選擇器上註冊一個專用的servlet，以代表該元件進行轉換。 我們以&quot;。respi&quot;為榜樣。 選擇器。 最好追蹤全域URL空間(例如 `/content/dam`)上使用的選擇器名稱，並有良好的命名慣例以避免命名衝突。
+如果我們需要對特定元件執行一些特殊處理，我們將在該路徑和選擇器上註冊一個專用的servlet，以代表該元件進行轉換。 我們以&quot;。respi&quot;為榜樣。 選擇器。 最好追蹤全域URL空間（例如`/content/dam`）上使用的選擇器名稱，並有良好的命名慣例以避免命名衝突。
 
 順便說一下，我們沒有發現任何與程式碼一致性有關的問題。 Servlet可定義於與元件sling模型相同的Java套件中。
 
@@ -861,7 +861,7 @@ respi2元件是顯示回應式影像的元件——回應式元件亦然。 但�
 
 `/content/dam/flower.respi.jpg`
 
-所缺少的就是品質的價值。 元件知道作者輸入了什麼屬性……它可以在渲染標注時作為查詢參數輕鬆傳遞到影像渲染servlet，如 `flower.respi2.jpg?quality=60`:
+所缺少的就是品質的價值。 元件知道作者輸入了什麼屬性……它可以在渲染標籤時作為查詢參數輕鬆傳遞給影像渲染servlet，如`flower.respi2.jpg?quality=60`:
 
 ```plain
   <div class="respi2">
@@ -901,7 +901,7 @@ respi2元件是顯示回應式影像的元件——回應式元件亦然。 但�
   …
 ```
 
-這同樣會略過快取並在發佈系統上建立載入。 所以，這可能是個壞主意。 您只能篩選一小部分參數，以減輕此影響。 您只想允許 `q-20, q-40, q-60, q-80, q-100`。
+這同樣會略過快取並在發佈系統上建立載入。 所以，這可能是個壞主意。 您只能篩選一小部分參數，以減輕此影響。 您只想允許`q-20, q-40, q-60, q-80, q-100`。
 
 #### 使用選擇器時篩選無效請求
 
@@ -940,7 +940,7 @@ respi2元件是顯示回應式影像的元件——回應式元件亦然。 但�
 
 這種方法根本起不到任何作用。 這些請求實際上是有效的請求。  它們消耗處理能力並佔用Dispatcher上快取目錄中的空間。
 
-更好的做法是返回 `301 – Moved permanently`:
+最好是傳回`301 – Moved permanently`:
 
 ```plain
   GET /content/dam/flower.respi.q-41.jpg
@@ -949,9 +949,9 @@ respi2元件是顯示回應式影像的元件——回應式元件亦然。 但�
   Location: /content/dam/flower.respi.q-40.jpg
 ```
 
-AEM會告訴瀏覽器。 「我沒有 `q-41`。 但是，你可以問我&quot; `q-40` &quot;
+AEM會告訴瀏覽器。 「我沒有`q-41`。 但是，你可以問我`q-40` &quot;。
 
-這會為對話增加額外的請求——回應回圈，這有點開銷，但比對對話進行完整處理要便宜 `q-41`。 您也可以運用已快取的檔案 `q-40`。 不過，您必須瞭解，Dispatcher中並未快取302個回應，我們討論的是在AEM中執行的邏輯。 一次又一次。 因此，您最好讓它變得纖薄而快速。
+這會為對話增加額外的請求——回應回圈，這有些開銷，但比在`q-41`上完整處理要便宜。 此外，您還可以運用已快取至`q-40`下的檔案。 不過，您必須瞭解，Dispatcher中並未快取302個回應，我們討論的是在AEM中執行的邏輯。 一次又一次。 因此，您最好讓它變得纖薄而快速。
 
 我們個人最喜歡404個。 這讓事情變得非常明顯。 此外，在您分析日誌檔案時，還可協助偵測網站上的錯誤。 301可預設為，其中404應一律加以分析和刪除。
 
@@ -1039,7 +1039,7 @@ width = w-100、w-200、w-400、w-800、w-1000、w-1200
 
 我們必須承認，我們在一個真實的項目中，還沒有看到這個。 但無論如何，讓我們大膽進行一些思考實驗——作為您自己解決方案的起點。
 
-我們稱這種模式為 _倒勺_.. 反轉假離線程式必須基於影像資源，才能擁有所有好的快取失效屬性。
+我們將此模式稱為&#x200B;_反轉假離線程式_。 反轉假離線程式必須基於影像資源，才能擁有所有好的快取失效屬性。
 
 但它不能公開任何參數。 所有屬性都應封裝在元件中。 但我們可以公開元件路徑——作為對屬性的不透明參照。
 
@@ -1051,7 +1051,7 @@ width = w-100、w-200、w-400、w-800、w-1000、w-1200
 
 `.respi3` 是選擇正確servlet以傳送影像的選擇器
 
-`.content-mysite-home-jcrcontent-par-respi` 是其他選擇器。 它會對儲存影像轉換所需屬性的元件的路徑進行編碼。 選擇器的字元範圍會限制在路徑以下。 這裡的編碼方案只是個例子。 它用&quot;-&quot;替換&quot;/&quot;。 路徑本身也可包含&quot;-&quot;，這並未考慮。 在現實世界中，建議使用更複雜的編碼方案。 Base64應該可以。 但它讓除錯工作變得更加困難。
+`.content-mysite-home-jcrcontent-par-respi` 是其他選擇器。它會對儲存影像轉換所需屬性的元件的路徑進行編碼。 選擇器的字元範圍會限制在路徑以下。 這裡的編碼方案只是個例子。 它用&quot;-&quot;替換&quot;/&quot;。 路徑本身也可包含&quot;-&quot;，這並未考慮。 在現實世界中，建議使用更複雜的編碼方案。 Base64應該可以。 但它讓除錯工作變得更加困難。
 
 `.jpg` 是檔案尾碼
 
@@ -1065,43 +1065,43 @@ width = w-100、w-200、w-400、w-800、w-1000、w-1200
 
 #### 簡介
 
-我們之前曾簡短地提 _到過_ statfile。 它與自動失效有關：
+我們之前曾簡短地提及過&#x200B;_statfile_。 它與自動失效有關：
 
-如果Dispatcher檔案系統中配置為自動失效的所有快取檔案的上次修改日期早於上次修改日期，則這些檔案將被視 `statfile's` 為無效。
+如果Dispatcher檔案系統中配置為自動失效的所有快取檔案的上次修改日期早於`statfile's`上次修改日期，則這些檔案將被視為無效。
 
 >[!NOTE]
 >
->我們討論的最後修改日期是快取檔案是從客戶端瀏覽器請求檔案並最終在檔案系統中建立的日期。 它不是資 `jcr:lastModified` 源的日期。
+>我們討論的最後修改日期是快取檔案是從客戶端瀏覽器請求檔案並最終在檔案系統中建立的日期。 它不是資源的`jcr:lastModified`日期。
 
-statfile(`.stat`)的上次修改日期是Dispatcher上收到AEM的失效請求的日期。
+statfile的上次修改日期(`.stat`)是Dispatcher上收到AEM的失效請求的日期。
 
 如果您有多個Dispatcher，這可能會產生奇怪的效果。 您的瀏覽器可以有較新版本的調度程式（如果您有多個Dispatcher）。 或者， Dispatcher可能認為由其他Dispatcher發佈的瀏覽器版本已過時，並且不必要地發送新副本。 這些影響對效能或功能需求並無重大影響。 而且，當瀏覽器有最新版本時，它們會隨著時間逐漸停止。 不過，在最佳化和除錯瀏覽器快取行為時，可能會有些混淆。 所以，要小心。
 
 #### 使用/statfiles級別設定失效域
 
-當我們引入自動失效和statfile時，我們說 ** ，當發生任何更改時，所有檔案都將被視為無效，而且所有檔案都是相互依賴的。
+當我們引入自動失效和statfile時，我們說，當發生任何更改且所有檔案都相互依賴時，*all*&#x200B;檔案都將被視為無效。
 
-這不太準確。 通常，共用共同主導覽根目錄的所有檔案都是相互依存的。 但是，一個AEM實例可以代管多個網站——獨 *立網* 站。 不共用共用導覽功能——事實上，不共用任何功能。
+這不太準確。 通常，共用共同主導覽根目錄的所有檔案都是相互依存的。 但是，一個AEM例項可以代管許多網站- *independent*&#x200B;網站。 不共用共用導覽功能——事實上，不共用任何功能。
 
 B站點因為A站點有變更而失效豈不是浪費？ 是的。 而且不一定非要這樣。
 
-Dispatcher提供了一種簡單的方法，可以將站點彼此分離：那個 `statfiles-level`。
+Dispatcher提供了一種簡單的方法，可以將站點彼此分離：`statfiles-level`。
 
 它是一個數字，它定義了檔案系統上的哪個級別，兩個子樹被認為是「獨立的」。
 
 讓我們看一下statfilelevel為0的預設大小寫。
 
-![/statfilelevel &quot;0&quot;:_ _.stat_ _在docroot中建立。 失效域涵蓋整個安裝，包括所有站點](assets/chapter-1/statfile-level-0.png)
+![/statfilelevel &quot;0&quot;:_ _.stat_ _是在docroot中建立的。失效域涵蓋整個安裝，包括所有站點](assets/chapter-1/statfile-level-0.png)
 
-`/statfileslevel "0":` 檔案 `.stat` 在Docroot中建立。 失效域涵蓋整個安裝，包括所有站點。
+`/statfileslevel "0":` 文 `.stat` 件在Docroot中建立。失效域涵蓋整個安裝，包括所有站點。
 
-無論檔案是否失效， `.stat` 都始終會更新位於調度程式最上方的檔案。 因此，當您使 `/content/site-b/home`用無效時，也會使中的所 `/content/site-a` 有檔案失效，因為它們現在比docroot中 `.stat` 的檔案更舊。 顯然，當你失效時，你不需要什麼 `site-b`。
+無論檔案是否失效，都始終會更新調度程式Docroot最上方的`.stat`檔案。 因此，當使`/content/site-b/home`無效時，`/content/site-a`中的所有檔案也無效，因為它們現在比docroot中的`.stat`檔案更舊。 當您使`site-b`無效時，顯然不是您需要的。
 
-在此範例中，您寧可將設定 `statfileslevel` 為 `1`。
+在此範例中，您寧可將`statfileslevel`設為`1`。
 
-現在，如果您發佈——因此使下面的 `/content/site-b/home` 任何資源失效或失效， `/content/site-b`則 `.stat` 會在中建立檔案 `/content/site-b/`。
+現在，如果您發佈——並因此使`/content/site-b/home`或`/content/site-b`下的任何其他資源失效，則會在`/content/site-b/`上建立`.stat`檔案。
 
-以下內 `/content/site-a/` 容不受影響。 此內容會與位於的檔 `.stat` 案比較 `/content/site-a/`。 我們已建立兩個不同的失效網域。
+`/content/site-a/`下方的內容不受影響。 此內容將與`/content/site-a/`處的`.stat`檔案進行比較。 我們已建立兩個不同的失效網域。
 
 ![靜態檔案級別&quot;1&quot;建立不同的失效域](assets/chapter-1/statfiles-level-1.png)
 
@@ -1109,7 +1109,7 @@ Dispatcher提供了一種簡單的方法，可以將站點彼此分離：那個 
 
 <br> 
 
-大型安裝的結構通常比較複雜和更深。 一個共同的方案是按品牌、國家和語言來構建網站。 在這種情況下，您可以將statfiles級別設定得更高。 _1_ 會針對每個品牌、 _2_ 個國家和 __ 3個語言建立失效網域。
+大型安裝的結構通常比較複雜和更深。 一個共同的方案是按品牌、國家和語言來構建網站。 在這種情況下，您可以將statfiles級別設定得更高。 _1_ 會根據品牌、2個國家／地 _區_ 和 _3個語_ 言建立失效網域。
 
 ### 同質場地結構的必要性
 
@@ -1138,11 +1138,11 @@ statfilelevel同樣適用於設定中的所有站點。 因此，必須讓所有
   ..
 ```
 
-前者需要2 `statfileslevel` 分 _鐘_，後者需 _3分_&#x200B;鐘
+前者要求&#x200B;_2_&#x200B;的`statfileslevel`，後者要求&#x200B;_3_。
 
-不是理想情況。 如果您將其設 _為3_，則自動失效將無法在子分支之間較小的 `/home`站點 `/products` 中運作 `/about`。
+不是理想情況。 如果將它設定為&#x200B;_3_，則在子分支`/home`、`/products`和`/about`之間較小的站點內不能自動失效。
 
-設定為 _2_ ，表示您在較大的網站中宣告 `/canada/en` 並依 `/canada/fr` 賴，但可能不是。 因此，中的每個失 `/en` 效也會失效 `/fr`。 這會導致快取點擊率略有降低，但仍比傳送過時快取內容好。
+將它設為&#x200B;_2_&#x200B;表示在較大的站點中，您聲明`/canada/en`和`/canada/fr`相依，但它們可能不相依。 因此，`/en`中的每個失效也會使`/fr`失效。 這會導致快取點擊率略有降低，但仍比傳送過時快取內容好。
 
 當然，最佳的解決方案是讓所有網站的根基都同等深：
 
@@ -1158,9 +1158,9 @@ statfilelevel同樣適用於設定中的所有站點。 因此，必須讓所有
 
 ### 網站間連結
 
-現在哪一個是正確的級別？ 這取決於您在網站間的相依性數目。 解析用於呈現頁面的包含項被視為「硬相依性」。 在本指南的開 _頭_ ，我們介紹 _Teaser_ （摘要）元件時，演示了這種包含。
+現在哪一個是正確的級別？ 這取決於您在網站間的相依性數目。 解析用於呈現頁面的包含項被視為「硬相依性」。 在本指南開頭介紹&#x200B;_Teaser_&#x200B;元件時，我們演示了這樣的&#x200B;_inclusion_。
 
-_超連結_ (Hyperlinks)是較軟的相依性形式。 很可能，您會在一個網站中超連結……而且您的網站之間不一定會有連結。 簡單超連結通常不會在網站之間建立相依性。 只要想想您從網站設定到Facebook的外部連結……如果Facebook上有任何變更，您就不需要轉譯您的頁面，反之亦然，對吧？
+_超_ 連結是較軟的相依性。很可能，您會在一個網站中超連結……而且您的網站之間不一定會有連結。 簡單超連結通常不會在網站之間建立相依性。 只要想想您從網站設定到Facebook的外部連結……如果Facebook上有任何變更，您就不需要轉譯您的頁面，反之亦然，對吧？
 
 從連結資源（如導航標題）讀取內容時，會發生相關性。 如果您只依賴本機輸入的導覽標題，而不是從目標頁面繪製這些標題（如同使用外部連結），則可避免這些相依性。
 
@@ -1201,7 +1201,7 @@ www.shiny-brand.de
 
 像谷歌這樣的搜索引擎認為，在不同URL上有相同的內容是「欺騙的」。 使用者可能會想要建立提供相同內容的場，以嘗試更高或更常列出排名。 搜尋引擎會識別這些嘗試，並實際將頁面排名較低，只會重複使用內容。
 
-透過透明化、您實際上有多個頁面具有相同內容，以及您不嘗試「遊戲」系統(請參閱「向Google告知您頁面的本地化版本」 [)，可防止排名下降，方法是在每個頁面的頁首區段中設定](https://support.google.com/webmasters/answer/189077?hl=en)`<link rel="alternate">` 每個相關頁面的標籤：
+透過設定透明、您實際擁有多個相同內容的頁面，以及您不嘗試「遊戲」系統（請參閱[&quot;Tell Google about localized versions of your page&quot;](https://support.google.com/webmasters/answer/189077?hl=en)），您可以透過在每個頁面的頁首區段中設定`<link rel="alternate">`標籤來避免排名下滑：
 
 ```
 # URL: www.shiny-brand.fr/fr/home/produits.html
@@ -1247,13 +1247,13 @@ www.shiny-brand.de
 
 一些SEO專家甚至認為，這可能會將名聲或「連結果汁」從一種語言的高位網站，以不同的語言轉移到同一個網站。
 
-該方案不僅產生了許多環節，還產生了一些問題。 p所需的連結數 _為__n個語言_ (n _<sup>-n),</sup>_&#x200B;是px:每個頁面都會連結到彼此的頁&#x200B;_面(n x n_)，除了本身(_-n_)。 此方案會套用至每個頁面。 如果我們有4種語言的小型網站，共有20個頁面，則每個頁面的連結數 _為_ 240個。
+該方案不僅產生了許多環節，還產生了一些問題。 _n_&#x200B;語言中&#x200B;_p_&#x200B;所需的連結數為&#x200B;_p x(n<sup>2</sup>-n)_:每個頁面彼此連結(_n x n_)，但本身除外(_-n_)。 此方案會套用至每個頁面。 如果我們有4種語言的小型網站，共20頁，則每個網站等於&#x200B;_240_&#x200B;連結。
 
 首先，您不希望編輯器必須手動維護這些連結——這些連結必須由系統自動生成。
 
 其次，它們應該是準確的。 每當系統偵測到新的「相對」時，您就會想要從具有相同內容（但使用不同語言）的所有其他頁面連結它。
 
-在我們的專案中，新的相關頁面經常出現。 但它們並沒有成為「替代」的連結。 例如，當該頁 `de-de/produkte` 面在德國網站上發佈時，其他網站上不會立即顯示。
+在我們的專案中，新的相關頁面經常出現。 但它們並沒有成為「替代」的連結。 例如，當`de-de/produkte`頁面在德文網站上發佈時，其他網站上不會立即顯示。
 
 原因是，在我們的設定中，網站本應是獨立的。 因此，德國網站上的變更並未觸發法國網站上的無效。
 
@@ -1273,7 +1273,7 @@ www.shiny-brand.de
 …
 ```
 
-這本意是將該級別設 `statfiles` 為1 ——這會導致失效域過大。
+這本來意味著將`statfiles`級別設定為1 —— 這會導致失效域過大。
 
 重組網站本可以解決這個問題。 將所有品牌合併在一個共同的根下。 但那時我們沒有能力，而且——那只會讓我們達到2級。
 
@@ -1295,7 +1295,7 @@ www.shiny-brand.de
 
 如果客戶端同時請求該內容，Dispatcher將請求並儲存過時內容。
 
-較為可靠的設定是在發佈系統收到內容後 _傳送_ 失效要求。 文章「從發[布實例中使Dispatcher Cache失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)」將介紹詳細資訊。
+更可靠的設定是在發佈系統&#x200B;_收到內容後發送失效請求。_&#x200B;文章「[ Invalidating Dispatcher Cache from a Publishing Instance](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)」將介紹詳細資訊。
 
 **引用**
 
@@ -1305,9 +1305,9 @@ www.shiny-brand.de
 
 在過去， Dispatcher只是在檔案系統中儲存普通檔案。 如果您需要將HTTP標頭傳送給客戶，請根據您從檔案或位置取得的小資訊來設定Apache。 當您在AEM中建置嚴重依賴HTTP標題的Web應用程式時，這尤其令人討厭。 在僅限AEM的例項中，一切都正常運作，但當您使用Dispatcher時，卻無法正常運作。
 
-通常，您會開始使用資源路徑和尾碼可衍生的資訊，將缺 `mod_headers` 少的標題重新應用於Apache伺服器中的資源。 但這並不總是足夠的。
+通常，您會開始使用資源路徑和尾碼可衍生的資訊，將缺少的標頭重新應用於具有`mod_headers`的Apache伺服器中的資源。 但這並不總是足夠的。
 
-尤其令人討厭的是，即使在Dispatcher中，對瀏覽器的第一個未快取回應來自具有完整標題範圍的Publish系統，而後續回應則由Dispatcher產生，且標題組有限。 __
+尤其令人討厭的是，即使在Dispatcher中，第一個&#x200B;_uncached_&#x200B;對瀏覽器的回應也來自具有完整標題範圍的Publish系統，而後續的回應則由Dispatcher產生，且標題集有限。
 
 從Dispatcher 4.1.11開始，Dispatcher可以儲存由Publish系統生成的標頭。
 
@@ -1331,7 +1331,7 @@ www.shiny-brand.de
   response.setHeader("Pragma: no-cache");
 ```
 
-快取控制和編目指示是正式的HTTP標頭，會傳播至上層快取層（例如CDN）並由其解譯。 標 `Dispatcher` 頭只是Dispatcher不快取的提示。 它可用於告知Dispatcher不要快取，同時仍允許上層快取層進行快取。 事實上，很難找到這樣的例子。 但是，我們確定有些地方。
+快取控制和編目指示是正式的HTTP標頭，會傳播至上層快取層（例如CDN）並由其解譯。 `Dispatcher`標題只是Dispatcher不要快取的提示。 它可用於告知Dispatcher不要快取，同時仍允許上層快取層進行快取。 事實上，很難找到這樣的例子。 但是，我們確定有些地方。
 
 **引用**
 
@@ -1343,13 +1343,13 @@ www.shiny-brand.de
 
 您可以在資源上設定到期日，協助瀏覽器決定何時向伺服器要求新版本的檔案。
 
-通常，您會使用Apache的靜態方式執行此動作，或儲存來自AEM的快取控制項和過期標題（如果您需要更個別的控制項）。 `mod_expires`
+通常，您會使用Apache的`mod_expires`以靜態方式執行此動作，或儲存來自AEM的快取控制項和過期標題（如果您需要更個別的控制項）。
 
 瀏覽器中的快取檔案可有三個最新層級。
 
 1. _保證最新_ -瀏覽器可使用快取的檔案。
 
-2. _可能過時_ -瀏覽器應先詢問伺服器是否已快取檔案仍為最新，
+2. _可能過時_ -瀏覽器應先詢問伺服器，快取的檔案是否仍為最新，
 
 3. _過時_ -瀏覽器必須向伺服器請求新版本。
 
@@ -1357,29 +1357,29 @@ www.shiny-brand.de
 
 如果檔案到達到期日，仍可以是新的。 到期日是在檔案傳送時設定。 但是，您通常不會事先知道新內容何時可用，因此這只是保守的估計。
 
-若要判斷瀏覽器快取中的檔案是否仍與新要求時傳送的檔案相同，瀏覽器可使用文 `Last-Modified` 件的日期。 瀏覽器會詢問伺服器：
+若要判斷瀏覽器快取中的檔案是否仍與新要求時傳送的檔案相同，瀏覽器可使用檔案的`Last-Modified`日期。 瀏覽器會詢問伺服器：
 
-「我&#x200B;_有6月10日的版本……我需要更新嗎？_」此外，伺服器可以
+&quot;_我有6月10日的版本……我是否需要更新？_」此外，伺服器可以
 
-「_304 —— 您的版本仍為最新_」，不需重新傳輸資源，或伺服器可以回答
+&quot;_304 —— 您的版本仍為最新版本_&quot;，不需重新傳輸資源，或伺服器可以回答
 
-HTTP標&#x200B;_題中的&quot;200 —— 這裡是較新的版本_&quot;，以及HTTP內文中實際較新的內容。
+&quot;_200 - HTTP標題中有較新的版本_&quot;,HTTP內文中有實際較新的內容。
 
-若要讓第二個部分正常運作，請務必將日期傳 `Last-Modified` 送至瀏覽器，以便其有參考點要求更新。
+若要讓第二個部分正常運作，請務必將`Last-Modified`日期傳送至瀏覽器，讓其有參考點要求更新。
 
-我們稍早已說明，當Dispatcher產生日期時，由於瀏覽器要求快取的檔案（及其日期）會產生，因此不同的請求會有所不同。 `Last-Modified` 另一種選擇是使用「e-tags」-這些數字可識別實際內容（例如產生雜湊代碼）而非日期。
+我們稍早已說明，當`Last-Modified`日期由Dispatcher產生時，它可能會因不同請求而有所不同，因為快取檔案（及其日期）是在瀏覽器要求檔案時產生。 另一種選擇是使用「e-tags」-這些數字可識別實際內容（例如產生雜湊代碼）而非日期。
 
-[ACS Commons Package的「Etag Support](https://adobe-consulting-services.github.io/acs-aem-commons/features/etag/index.html)」(Etag Support __ )使用此方法。 然而，這是有代價的：由於E-Tag必須以標頭傳送，但雜湊代碼的計算需要完整讀取回應，因此回應必須在主記憶體中全緩衝，才能傳送。 當您的網站更有可能有未快取的資源，而且您當然需要留意AEM系統耗用的記憶體時，這可能會對延遲造成負面影響。
+_ACS Commons Package_&#x200B;中的&quot;[Etag Support](https://adobe-consulting-services.github.io/acs-aem-commons/features/etag/index.html)&quot;使用此方法。 然而，這是有代價的：由於E-Tag必須以標頭傳送，但雜湊代碼的計算需要完整讀取回應，因此回應必須在主記憶體中全緩衝，才能傳送。 當您的網站更有可能有未快取的資源，而且您當然需要留意AEM系統耗用的記憶體時，這可能會對延遲造成負面影響。
 
-如果您使用URL指紋，則可以設定很長的到期日。 您可以在瀏覽器中永久快取指紋資源。 新版本會標示新的URL，而舊版本則不必更新。
+如果您使用URL指紋，則可以設定很長的到期日。 您可以在瀏覽器中永久快取指紋資源。 新版本會標示新URL，而舊版本則不必更新。
 
-我們在介紹假離線模式時使用了URL指紋。 來自(CSS、JS) `/etc/design` 的靜態檔案很少變更，也很難讓這些檔案適合做為指紋。
+我們在介紹假離線模式時使用了URL指紋。 來自`/etc/design`(CSS、JS)的靜態檔案很少變更，也很適合做為指紋的候選檔案。
 
 對於一般檔案，我們通常會設定固定的配置，例如每30分鐘重新檢查一次HTML、每4小時重新檢查一次影像等。
 
 瀏覽器快取在Author系統上非常有用。 您想要盡可能在瀏覽器中快取，以增強編輯體驗。 很遺憾，最昂貴的資產，html頁面無法快取……作者應經常變更。
 
-可快取花崗岩資料庫（構成AEM的UI）相當長的時間。 您也可以在瀏覽器中快取網站的靜態檔案（字型、CSS和JavaScript）。 即使是中的影 `/content/dam` 像，通常也可快取約15分鐘，因為它們的變更頻率不會像頁面上的複製文字一樣高。 在AEM中不會以互動方式編輯影像。 先加以編輯並核准，然後再上傳至AEM。 因此，您可以假設它們的變更頻率不如文字。
+可快取花崗岩資料庫（構成AEM的UI）相當長的時間。 您也可以在瀏覽器中快取網站的靜態檔案（字型、CSS和JavaScript）。 即使是`/content/dam`中的影像，通常也可快取約15分鐘，因為它們的變更頻率不會像頁面上的複製文字一樣高。 在AEM中不會以互動方式編輯影像。 先加以編輯並核准，然後再上傳至AEM。 因此，您可以假設它們的變更頻率不如文字。
 
 快取UI檔案、您的網站程式庫檔案和影像，可大幅加速在編輯模式中重新載入頁面。
 
@@ -1387,7 +1387,7 @@ HTTP標&#x200B;_題中的&quot;200 —— 這裡是較新的版本_&quot;，以�
 
 **引用**
 
-*[developer.mozilla.org —— 快取](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
+*[developer.mozilla.org - Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
 
 * [apache.org —— 修改過期](https://httpd.apache.org/docs/current/mod/mod_expires.html)
 
@@ -1415,15 +1415,15 @@ HTTP標&#x200B;_題中的&quot;200 —— 這裡是較新的版本_&quot;，以�
 
 您必須在AEM上實作該對應——因為AEM必須知道如何根據該截斷格式來呈現連結。
 
-但不要只依賴AEM。 如果是，則快取的根目錄 `/home.html` 中會有類似的路徑。 現在，這是Finish、德文或加拿大網站的「家」嗎？ 如果Dispatcher中有文 `/home.html` 件，Dispatcher如何知道在傳入的失效請求時，這必須 `/content/brand/fi/fi/home` 失效。
+但不要只依賴AEM。 如果是，快取的根目錄中會有`/home.html`等路徑。 現在，這是Finish、德文或加拿大網站的「家」嗎？ 如果Dispatcher中有檔案`/home.html`,Dispatcher如何知道當`/content/brand/fi/fi/home`的失效請求傳入時，該檔案必須失效。
 
 我們看到一個專案，每個網域都有不同的Docroot。 除錯和維護是個噩夢——事實上，我們從未看到它完美地運行。
 
-通過重新構建快取，可以解決這些問題。 對於所有網域，我們只有一個Docroot，而失效請求可以處理1:1，因為伺服器上的所有檔案都是從開始的 `/content`。
+通過重新構建快取，可以解決這些問題。 對於所有網域，我們只有一個docroot，而且失效請求可以處理1:1，因為伺服器上的所有檔案都是以`/content`開頭的。
 
-截斷部分也很容易。  AEM根據中的設定產生截斷的連結 `/etc/map`。
+截斷部分也很容易。  AEM因`/etc/map`中的設定而產生截斷的連結。
 
-現在，當請求 `/home.html` 正在點擊Dispatcher時，首先發生的事情是套用可在內部展開路徑的重寫規則。
+現在，當請求`/home.html`正在命中Dispatcher時，首先發生的事情是應用在內部擴展路徑的重寫規則。
 
 該規則已在每個vhost配置中靜態設定。 簡言之，規則是這樣，
 
@@ -1433,7 +1433,7 @@ HTTP標&#x200B;_題中的&quot;200 —— 這裡是較新的版本_&quot;，以�
   RewriteRule "^(.\*\.html)" "/content/shiny-brand/finland/fi/$1"
 ```
 
-在檔案系統中，我們現在 `/content`有基於純的路徑，在「作者」和「發佈」上也可找到這些路徑——這幫助調試了很多。 更別提正確失效了——這已不再是問題。
+在檔案系統中，我們現在有基於`/content`的純路徑，這些路徑在「作者」和「發佈」上也可找到——這幫助調試了很多。 更別提正確失效了——這已不再是問題。
 
 注意，我們僅針對「可見」URL、顯示在瀏覽器URL位置的URL，執行此動作。 例如，影像的URL仍為純「/content」 URL。 我們認為，在搜尋引擎最佳化方面，美化「主要」URL是足夠的。
 
@@ -1453,13 +1453,13 @@ HTTP標&#x200B;_題中的&quot;200 —— 這裡是較新的版本_&quot;，以�
 
 在AEM類別中，您會學習如何在Sling中寫程式錯誤處理常式。 這和撰寫一般範本沒有太大不同。 您只需在JSP或HTL中編寫範本，對吧？
 
-是的，但這只是AEM部分。 記住- Dispatcher不快取 `404 – not found` 或 `500 – internal server error` 響應。
+是的，但這只是AEM部分。 記住- Dispatcher不快取`404 – not found`或`500 – internal server error`響應。
 
 如果您是在每個（失敗）請求上動態轉譯這些頁面，在「發佈」系統上會有不必要的高負載。
 
 我們發現，當發生錯誤時，不要轉譯完整錯誤頁面，只要該頁面經過超簡化、小版本，甚至是靜態版本，而不需要任何裝飾或邏輯。
 
-這當然不是客戶所見。 在Dispatcher中，我們注 `ErrorDocuments` 冊了：
+這當然不是客戶所見。 在Dispatcher中，我們註冊了`ErrorDocuments` ，如下所示：
 
 ```
 ErrorDocument 404 "/content/shiny-brand/fi/fi/edocs/error-404.html"
@@ -1470,9 +1470,9 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 這裡應該注意兩點。
 
-首先， `error-404.html` 始終是相同的頁面。 因此，沒有「您搜尋「_produckten_」未產生結果」等個別訊息。 我們可以輕易接受。
+首先，`error-404.html`始終是相同的頁面。 因此，沒有個別訊息，如「您搜尋「_productkten_」未產生結果」。 我們可以輕易接受。
 
-其次……如果我們看到內部伺服器錯誤——或更糟糕的是，我們遇到AEM系統中斷，就無法要求AEM產生錯誤頁面，對吧？ 指令中定義的必要後續請 `ErrorDocument` 求也會失敗。 我們通過運行cron-job來解決此問題，該cron-job會定期通過將錯誤頁從其定義的位置提取出來，並將錯誤頁儲存到指令中定義的 `wget` 靜態檔案位 `ErrorDocuments` 置中。
+其次……如果我們看到內部伺服器錯誤——或更糟糕的是，我們遇到AEM系統中斷，就無法要求AEM產生錯誤頁面，對吧？ `ErrorDocument`指令中定義的必要後續請求也會失敗。 我們解決這個問題的方法是執行cron-job，該cron-job會定期透過`wget`從其定義的位置提取錯誤頁面，並將它們儲存在`ErrorDocuments`指令中定義的靜態檔案位置。
 
 **引用**
 
@@ -1490,16 +1490,16 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 當然，你可以把三種方法結合起來
 
-**選項1**. 您的組織仍可能會強制執行「SSO」閘道。 如果您的存取方案非常粗糙，您可能不需要AEM的資訊來決定是否授與或拒絕資源的存取。
+**選項1**.您的組織仍可能會強制執行「SSO」閘道。 如果您的存取方案非常粗糙，您可能不需要AEM的資訊來決定是否授與或拒絕資源的存取。
 
 >[!NOTE]
 >
->此模式需要 _Gateway_ , _該Gateway會截_ 取每個請求並執行實 _際授權_ -授予或拒絕Dispatcher請求。 如果您的SSO系統是驗 _證器_，則此驗證器僅建立您必須實作選項3的使用者身分。 如果您在SSO系統手冊中閱讀「SAML」或「OAauth」等詞語，這是您必須實作選項3的強烈指標。
+>此模式要求&#x200B;___&lt;a2/>截取每個請求並執行實際的_&#x200B;授權&#x200B;_—— 授予或拒絕向Dispatcher發出請求的&lt;a0/>Gateway&lt;a1/>。_&#x200B;如果您的SSO系統是&#x200B;_authenticator_，則僅建立必須實作選項3的用戶的身份。 如果您在SSO系統手冊中閱讀「SAML」或「OAauth」等詞語，這是您必須實作選項3的強烈指標。
 
 
-**選項2**. 「不快取」通常是個壞主意。 如果您這麼做，請確定排除的流量和敏感資源數量較小。 或者，請確定Publish系統中已安裝一些記憶體內快取，讓Publish系統可以處理產生的負載——本系列第III部分的更多功能。
+**選項2**.「不快取」通常是個壞主意。 如果您這麼做，請確定排除的流量和敏感資源數量較小。 或者，請確定Publish系統中已安裝一些記憶體內快取，讓Publish系統可以處理產生的負載——本系列第III部分的更多功能。
 
-**選項3**. 「權限敏感快取」是一種有趣的方式。 Dispatcher正在快取資源——但在傳送資源之前，它會詢問AEM系統是否可能。 這會從Dispatcher向Publish建立額外的請求，但是，如果頁面已快取，Publish系統通常不會重新轉譯。 不過，此方法需要一些自訂實作。 請在文章「權限感應快取」中 [尋找詳細資訊](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)。
+**選項3**.「權限敏感快取」是一種有趣的方式。 Dispatcher正在快取資源——但在傳送資源之前，它會詢問AEM系統是否可能。 這會從Dispatcher向Publish建立額外的請求，但是，如果頁面已快取，Publish系統通常不會重新轉譯。 不過，此方法需要一些自訂實作。 請在文章[Permission sensitive caching](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)中尋找詳細資訊。
 
 **引用**
 
@@ -1517,19 +1517,19 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 <br> 
 
-要緩解這種「快取失效風暴」的問題（有時稱為「快取失效風暴」），您可以對解釋不那麼嚴 `statfile` 格。
+要緩解此「快取失效風暴」的問題（有時稱為「快取失效風暴」），可以對`statfile`解釋不那麼嚴格。
 
-您可以將Dispatcher設定為使用 `grace period` 自動失效。 這會在內部為修改日期增加一些 `statfiles` 額外時間。
+可以將Dispatcher設定為使用`grace period`自動失效。 這樣會在內部為`statfiles`修改日期增加一些時間。
 
-假設您的修改時 `statfile` 間為今天12:00，而您的 `gracePeriod` 修改時間設為2分鐘。 然後，所有自動失效的檔案都將視為在12:01和12:02有效。 12點02分後將重新演算。
+假設您的`statfile`的修改時間為今天12:00，而您的`gracePeriod`設為2分鐘。 然後，所有自動失效的檔案都將視為在12:01和12:02有效。 12點02分後將重新演算。
 
-參考配置建議 `gracePeriod` 兩分鐘，原因很充分。 你會想&quot;兩分鐘？ 這沒什麼。 我可以輕鬆等待10分鐘，讓內容顯示……」  因此，您可能會想設定較長的時段——例如10分鐘，假設您的內容至少在這10分鐘後顯示。
+參考配置建議使用`gracePeriod`兩分鐘，原因很充分。 你會想&quot;兩分鐘？ 這沒什麼。 我可以輕鬆等待10分鐘，讓內容顯示……」  因此，您可能會想設定較長的時段——例如10分鐘，假設您的內容至少在這10分鐘後顯示。
 
 >[!WARNING]
 >
->這不是它的 `gracePeriod` 運作方式 寬限期不是 _保證檔案_ 在其後失效的時間，而是不發生失效的時間範圍。 此畫格內的每個後續失效都 _會延長_ 時間畫格——這可能會無限期延長。
+>這不是`gracePeriod`的運作方式。 寬限期為&#x200B;_不_&#x200B;保證檔案失效的時間，但不發生失效的時間範圍。 在此幀&#x200B;_中的每個後續失效都延長_&#x200B;時間幀——這可以無限長。
 
-讓我們來說明實 `gracePeriod` 際上如何運用範例：
+讓我們來說明`gracePeriod`實際上是如何處理範例的：
 
 假設您在操作媒體網站，而編輯人員每5分鐘會定期提供內容更新。 請考慮將gracePeriod設為5分鐘。
 
@@ -1541,19 +1541,19 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 12:05 —— 另一位編輯發表他的文章——將寬限期延長至12:10。
 
-等等……內容永遠不會失效。 在寬限期 *內* ，每次失效都有效延長寬限時間。 這 `gracePeriod` 個設計是為了抵御無效風暴……但你最終必須冒雨……所以，保持相當短的距離，以防 `gracePeriod` 止永遠躲在避難所里。
+等等……內容永遠不會失效。 在寬限期內的每個失效&#x200B;*有效地延長寬限時間。*`gracePeriod`是為了抵御失效風暴而設計的……但是，您最終必須下雨……因此，請保持`gracePeriod`相當短，以防止永遠躲在避難所中。
 
 #### 確定性寬限期
 
 我們想介紹另一個想法，你如何能夠抵御失效風暴。 這只是個主意。 我們尚未在生產中嘗試過，但我們發現這個概念足夠有趣，可以和大家分享。
 
-如果 `gracePeriod` 常規複製間隔比您的時間短，則可能會變得不可預測的長 `gracePeriod`。
+如果常規複製間隔比`gracePeriod`短，則`gracePeriod`可能變得不可預測的長。
 
 另一個想法是：僅在固定時間間隔內失效。 介於兩者之間的時間永遠表示提供過時的內容。 此失效最終會發生，但會將多個失效收集到一個「大量」失效，因此Dispatcher有機會同時提供某些快取內容，並為Publish系統提供一些喘息的空氣。
 
 實作如下所示：
 
-您使用「自訂失效指令碼」（請參閱參考），會在失效發生後執行。 此指令碼將讀取上 `statfile's` 次修改日期，並將其捨入到下一個時間間隔停止。 使用Unix shell命 `touch --time`令，讓您指定時間。
+您使用「自訂失效指令碼」（請參閱參考），會在失效發生後執行。 此指令碼將讀取`statfile's`上次修改日期，並將其捨入到下一個時間間隔停止。 使用Unix shell命令`touch --time` ，讓您指定時間。
 
 例如，如果將寬限期設定為30秒，則Dispatcher會將statfile的上次修改日期捨入到下一個30秒。 發生在兩者之間的失效請求，只需設定相同的下一個完整30秒。
 
@@ -1587,7 +1587,7 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 *空快取上對同一資源的並行請求：請求會轉送至「發佈」*
 
-使用自動重新擷取功能，您可以在一定程度上減輕這種影響。 自動失效後，大部分失效的頁面仍實際儲存在Dispatcher中。 它們只被認 _為過時_ 。 _自動重新擷取_ ：表示您仍會在數秒內提供這些過時頁面，同時向發佈系統發起 _一_ 個請求，以重新擷取過時內容：
+使用自動重新擷取功能，您可以在一定程度上減輕這種影響。 自動失效後，大部分失效的頁面仍實際儲存在Dispatcher中。 它們只&#x200B;_被考慮_&#x200B;過時。 _自動_ 重新擷取意指您仍會在數秒內提供這些過時頁面，同時啟動 _一_ 個對發佈系統的單一要求，以重新擷取過時內容：
 
 ![在背景重新擷取時傳送過時內容](assets/chapter-1/fetching-background.png)
 
@@ -1632,7 +1632,7 @@ Dispatcher也會在內部標籤根據的URL，以便它知道，即使這些資�
 
 ### 屏蔽發佈系統
 
-Dispatcher將Publish系統屏蔽在僅用於維護目的的請求中，從而提供了一些額外的安全性。 例如，您不想將您或URL `/crx/de` 公開 `/system/console` 給公眾。
+Dispatcher將Publish系統屏蔽在僅用於維護目的的請求中，從而提供了一些額外的安全性。 例如，您不想將`/crx/de`或`/system/console` URL公開給公眾。
 
 在您的系統中安裝Web應用程式防火牆(WAF)並不有害。 但是，這為您的預算增加了大量成本，而且並非所有項目都處於他們負擔得起、甚至不會忘記運營和維護WAF的境地。
 
@@ -1667,7 +1667,7 @@ Dispatcher將Publish系統屏蔽在僅用於維護目的的請求中，從而提
 
 如果您這麼做，請不要忘記永遠將dispatcher-handler系結至Dispatcher的失效URL —— 否則您將無法從AEM傳送失效請求至Dispatcher。
 
-另一個將Dispatcher用作篩選器的替代方法是在 `dispatcher.any`
+另一個將Dispatcher用作篩選器的替代方法是在`dispatcher.any`中設定篩選器指令
 
 ```
 /filter {
@@ -1707,19 +1707,19 @@ Dispatcher將Publish系統屏蔽在僅用於維護目的的請求中，從而提
 
 你看到區別了嗎？
 
-B版使用單引號 `'` 來標示規則運 _算式模式_。 「任何字元」皆以使用來表示 `.*`。
+B版使用單引號`'`來標籤&#x200B;_規則運算式模式_。 「任何字元」是使用`.*`來表示。
 
-_Globbing patterns_, in morvising use double quotes and you `"` can only use simple paccelord olders like `*`.
+_Globbing patterns_, in morvising use double quotes  `"` and you can only use simple paccelors of  `*`like.
 
 如果您知道這種差異，那就微不足道了，但如果不知道，您可以輕鬆混搭引文，花上一個晴朗的午後時間來調試配置。 現在，我們警告你。
 
-「我可以 `'/url'` 在配置中識別……但您可能會問 `'/glob'` 的篩選條件中有哪些？
+&quot;I recognize `'/url'` in the config ...但您可能會問的篩選條件中的`'/glob'`是什麼？
 
 該指令代表整個請求字串，包括方法和路徑。 它可以代表
 
 `"GET /content/foo/bar.html HTTP/1.1"`
 
-這是您的模式所比較的字串。 初學者通常會忘記第一部分， `method` 即(GET、POST、...)。 所以，一個模式
+這是您的模式所比較的字串。 初學者通常會忘記第一部分`method`(GET、POST、...)。 所以，一個模式
 
 `/0002  { /glob "/content/\*" /type "allow" }`
 
@@ -1758,7 +1758,7 @@ _Globbing patterns_, in morvising use double quotes and you `"` can only use sim
 
 請注意，您可以在規則中混合規則運算式和全域運算式。
 
-在每個定義前面，最後一 `/005` 個&quot;行號&quot;
+每個定義前面的&quot;行號&quot;,`/005`
 
 根本沒有意義！ 您可以為規則選擇任意分母。 使用數字並不需要花太多精力去考慮一個方案，但請記住，順序很重要。
 
@@ -1832,7 +1832,7 @@ _Globbing patterns_, in morvising use double quotes and you `"` can only use sim
 
 >[!WARNING]
 >
->更精密的設定會將篩選規則分割為多個檔案，這些檔案由主設定檔 `dispatcher.any` 案所包含。 但是，新檔案不會引入新的命名空間。 因此，如果一個檔案中有規則&quot;001&quot;，另一個檔案中有規則&quot;001&quot;，就會出現錯誤。 更有理由用語意強的名字出來。
+>更精密的設定會將篩選規則分割為多個檔案，這些檔案由主`dispatcher.any`組態檔所包含。 但是，新檔案不會引入新的命名空間。 因此，如果一個檔案中有規則&quot;001&quot;，另一個檔案中有規則&quot;001&quot;，就會出現錯誤。 更有理由用語意強的名字出來。
 
 **引用**
 
@@ -1866,15 +1866,17 @@ CQ-Handle: <path-pattern>
 
 `POST /dispatcher/invalidate.cache HTTP/1.1` -第一行是Dispatcher控制端點的URL，您很可能不會更改它。
 
-`CQ-Action: <action>` -應發生的事。 `<action>` 為：
+`CQ-Action: <action>` -應發生的事。`<action>` 為：
 
-* `Activate:` 刪除 `/path-pattern.*`
-* `Deactive:` 刪除 `/path-pattern.*`和刪除 `/path-pattern/*`
-* `Delete:`   刪除 `/path-pattern.*`和刪除 
+* `Activate:` 刪除  `/path-pattern.*`
+* `Deactive:` 刪除 `/path-pattern.*`
+和刪除  `/path-pattern/*`
+* `Delete:`   刪除 `/path-pattern.*`
+和刪除 
 `/path-pattern/*`
 * `Test:`   傳回&quot;ok&quot;，但不執行任何動作
 
-`CQ-Handle: <path-pattern>` -要失效的內容資源路徑。 請注意， `<path-pattern>` 實際上是「路徑」，而非「模式」。
+`CQ-Handle: <path-pattern>` -要失效的內容資源路徑。請注意，`<path-pattern>`實際上是&quot;path&quot;而非&quot;pattern&quot;。
 
 `CQ-Action-Scope: ResourceOnly` -可選：如果設定了此標題，則 `.stat` 不會觸及檔案。
 
@@ -1898,19 +1900,19 @@ CQ-Handle: <path-pattern>
 
 ## 其他資源
 
-Dispatcher快取的好概述和簡介： [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)
+Dispatcher快取的好概述和簡介：[https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)
 
-更多最佳化秘訣與訣竅： [https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html#use-ttls](https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html#use-ttls)
+更多最佳化秘訣與訣竅：[https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html#use-ttls](https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html#use-ttls)
 
-Dispatcher文檔及所有指令說明： [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html)
+Dispatcher文檔及所有指令說明：[https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)
 
-一些常問的問題： [https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html)
+一些常問的問題：[https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html)
 
-錄制有關Dispatcher最佳化的網路研討會——強烈建議： [https://my.adobeconnect.com/p7th2gf8k43?proto=true](https://my.adobeconnect.com/p7th2gf8k43?proto=true)
+錄制有關Dispatcher最佳化的網路研討會——強烈建議：[https://my.adobeconnect.com/p7th2gf8k43?proto=true](https://my.adobeconnect.com/p7th2gf8k43?proto=true)
 
-2018年波茨坦&quot;內容失效的欠重視力&quot;,&quot;adaptTo()&quot;會議簡 [報https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html](https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html)
+在2018年波茨坦舉行的「內容失效的欠重視力」、「adaptTo()」會議上，發表「https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html[](https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html)
 
-從AEM使快取頁面無效： [https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
+從AEM使快取頁面無效：[https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
 
 ## 下一步
 
