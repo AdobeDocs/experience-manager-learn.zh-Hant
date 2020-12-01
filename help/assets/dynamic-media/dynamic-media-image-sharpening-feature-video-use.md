@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# 搭配AEM Dynamic Media使用影像銳利化{#using-image-sharpening-with-aem-dynamic-media}
+# 將影像銳利化與AEM Dynamic Media搭配使用{#using-image-sharpening-with-aem-dynamic-media}
 
 本影片說明銳利化影像對維持影像的完整性至關重要的原因，以及如何使用進階設定來製作完美影像。
 
