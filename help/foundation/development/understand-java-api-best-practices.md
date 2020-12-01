@@ -11,7 +11,7 @@ doc-type: article
 translation-type: tm+mt
 source-git-commit: fcb47ee3878f6a789b2151e283431c4806e12564
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2023'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ AEM以4個主要Java API集為基礎。
 1. **JCR**
 1. **OSGi**
 
-如果AEM提供API，則偏好它，而 [!DNL Sling]非JCR和OSGi。 如果AEM未提供API，則偏好 [!DNL Sling] JCR和OSGi。
+如果AEM提供API，則偏好API，而非[!DNL Sling]、JCR和OSGi。 如果AEM未提供API，則偏好[!DNL Sling]，而非JCR和OSGi。
 
 此訂單是一般規則，表示存在例外。 中斷此規則的可接受理由為：
 
@@ -64,9 +64,9 @@ AEM以4個主要Java API集為基礎。
 
 AEM API提供針對分類使用案例的抽象化和功能。
 
-例如，AEM的 [PageManager](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html) 和 [Page](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/model/Page.html) API為AEM中代表網頁的 `cq:Page` 節點提供抽象化。
+例如，AEM的[PageManager](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)和[Page](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/model/Page.html) API提供代表網頁之AEM中`cq:Page`節點的抽象化。
 
-雖然這些節點可透過 [!DNL Sling] API（資源）和JCR API（節點）取得，但AEM的API提供一般使用案例的抽象化。 使用AEM API可確保AEM與產品之間的一致行為，以及AEM的自訂和擴充功能。
+雖然這些節點可透過[!DNL Sling] API（資源）和JCR API（節點）取得，但AEM的API提供一般使用案例的抽象化。 使用AEM API可確保AEM與產品之間的一致行為，以及AEM的自訂和擴充功能。
 
 ### com.adobe.*與com.day比較。* API
 
@@ -76,50 +76,50 @@ AEM API具有以下Java套件所識別的套件內部偏好設定，依偏好設
 1. `com.adobe.granite`
 1. `com.day.cq`
 
-`com.adobe.cq` 支援產品使用案例， `com.adobe.granite` 但支援跨產品平台使用案例，例如工作流程或工作(在產品間使用：AEM Assets、Sites等)。
+`com.adobe.cq` 支援產品使用案例， `com.adobe.granite` 但支援跨產品平台使用案例，例如跨產品使用的工作流程或工作：AEM Assets、Sites等)。
 
-`com.day.cq` 包含「原始」API。 這些API可解決Adobe收購前及／或收購前後所存在的核心抽象化和功能 [!DNL Day CQ]。 這些API受支援，除非或提供（較新） `com.adobe.cq` 的替 `com.adobe.granite` 代項目，否則不應避免。
+`com.day.cq` 包含「原始」API。這些API可解決Adobe收購[!DNL Day CQ]之前及／或前後所存在的核心抽象化和功能。 這些API受支援，不應避免，除非`com.adobe.cq`或`com.adobe.granite`提供（較新）的替代選項。
 
-新的抽象， [!DNL Content Fragments] 例如 [!DNL Experience Fragments] 和，是在空間中建立， `com.adobe.cq` 而不是在下面 `com.day.cq` 描述。
+[!DNL Content Fragments]和[!DNL Experience Fragments]等新抽象是內建在`com.adobe.cq`空間中，而不是下面所述的`com.day.cq`。
 
 ### 查詢API
 
-AEM支援多種查詢語言。 3種主要語言是 [JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html)、XPath和 [AEM Query Builder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html)。
+AEM支援多種查詢語言。 3種主要語言為[JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html)、XPath和[AEM Query Builder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html)。
 
 最重要的問題是，在程式碼庫中維持一致的查詢語言，以降低理解的複雜性和成本。
 
-所有查詢語言都有效地具有相同的效能配置檔案，將它們轉存到JCR-SQL2中以執行最終查詢，與查詢時間本身相比，轉換到JCR-SQL2的時間可以忽略不計。 [!DNL Apache Oak]
+所有查詢語言都有效地具有相同的效能配置檔案，因為[!DNL Apache Oak]將它們轉換到JCR-SQL2以進行最終查詢執行，而與查詢時間本身相比，轉換到JCR-SQL2的時間可忽略不計。
 
-偏好的API是 [AEM Query Builder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html)，它是最高層級的抽象，提供強穩的API，可建立、執行和擷取查詢結果，並提供下列功能：
+偏好的API是[AEM Query Builder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html)，此為最高層級的抽象，並提供強穩的API來建立、執行和擷取查詢結果，並提供下列功能：
 
 * 簡單、參數化的查詢建構（以地圖為模型的查詢參數）
-* 原生 [Java API和HTTP API](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/querybuilder-api.html)
+* 原生[Java API和HTTP API](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/querybuilder-api.html)
 * [OOTB查詢除錯程式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html#TestingandDebugging)
-* [OOTB謂語](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) ，支援常見查詢需求
+* [OOTB預測支](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) 持常見查詢要求
 
-* 可擴充的API，可讓您開發自訂查詢謂 [語](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)
-* JCR-SQL2和XPath可直接透過 [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)[和](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)JCR API [[!DNL Sling] ，分別傳回結果](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) Resources [或](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)JCR Nodes Adobes
+* 可擴充的API，允許開發自訂[查詢謂語](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)
+* JCR-SQL2和XPath可直接通過[[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)和[JCR APIs](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)執行，分別返回結果a [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)或[JCR Nodes](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)。
 
 >[!CAUTION]
 >
->AEM QueryBuilder API會洩漏ResourceResolver物件。 為避免此漏洞，請依照此程 [式碼範例](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/search/querybuilder/impl/SampleQueryBuilder.java#L164)。
+>AEM QueryBuilder API會洩漏ResourceResolver物件。 要緩解此漏洞，請遵循此[程式碼範例](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/search/querybuilder/impl/SampleQueryBuilder.java#L164)。
 
 
 ## [!DNL Sling] API
 
-* [**Apache[!DNL Sling]API JavaDocs**](https://sling.apache.org/apidocs/sling10/)
+* [**Apache  [!DNL Sling] API JavaDocs**](https://sling.apache.org/apidocs/sling10/)
 
-[Apache [!DNL Sling]](https://sling.apache.org/) 是支撐AEM的REST風格Web架構。 [!DNL Sling] 提供HTTP請求路由、將JCR節點建模為資源、提供安全上下文等。
+[Apacheis  [!DNL Sling]](https://sling.apache.org/) REST風格的Web架構，支撐AEM。[!DNL Sling] 提供HTTP請求路由、將JCR節點建模為資源、提供安全上下文等。
 
-[!DNL Sling] API為擴充而建立的額外優點，這表示與可擴充性較低的JCR API相比，使用API建立的應用程式增加行為 [!DNL Sling] 通常更簡單且安全。
+[!DNL Sling] API為擴充而建立的額外優點，這表示與可擴充性較低的JCR API相比，使用 [!DNL Sling] API建立的應用程式增加行為通常更簡單且安全。
 
-### API的常見使 [!DNL Sling] 用
+### [!DNL Sling] API的常用
 
-* 以 [[!DNL Sling Resources]的身分存取JCR節點](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) ，並透過 [ValueMaps存取其資料](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ValueMap.html)。
+* 以[[!DNL Sling Resources]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)的形式訪問JCR節點，並通過[ValueMaps](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ValueMap.html)訪問其資料。
 
-* 通過ResourceResolver提供安全 [上下文](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html)。
-* 通過ResourceResolver的建立／移動／復 [制／刪除方法建立和刪除資源](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html)。
-* 透過 [ModifableValueMap更新屬性](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ModifiableValueMap.html)。
+* 通過[ResourceResolver](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html)提供安全上下文。
+* 通過資源解析器的[create/move/copy/delete方法](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html)建立和刪除資源。
+* 透過[ModifableValueMap](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ModifiableValueMap.html)更新屬性。
 * 建立請求處理建置區塊
 
    * [Servlet](https://sling.apache.org/documentation/the-sling-engine/servlets.html)
@@ -128,7 +128,7 @@ AEM支援多種查詢語言。 3種主要語言是 [JCR-SQL2](https://docs.jboss
 * 非同步工作處理構成塊
 
    * [事件和作業處理常式](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html)
-   * [計畫](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
+   * [排程器](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
    * [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 
 * [服務使用者](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-service-users.html)
@@ -137,11 +137,11 @@ AEM支援多種查詢語言。 3種主要語言是 [JCR-SQL2](https://docs.jboss
 
 * **[JCR 2.0 JavaDocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-[JCR(Java Content Repository)2.0 API](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) ，是JCR實作的規格(在AEM中為 [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))的一部分。 所有JCR實作都必須符合併實作這些API，因此是與AEM內容互動的最低層級API。
+[JCR（Java內容儲存庫）2.0 API](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)是JCR實作的規格（在AEM中為[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/)）的一部份。 所有JCR實作都必須符合併實作這些API，因此是與AEM內容互動的最低層級API。
 
-JCR本身是一個基於層次／樹的NoSQL資料儲存庫，AEM將其用作其內容儲存庫。 JCR有大量支援的API，從內容CRUD到查詢內容。 儘管有這種強穩的API，但較高階的AEM和抽象化版本更偏好的API還是很 [!DNL Sling] 少。
+JCR本身是一個基於層次／樹的NoSQL資料儲存庫，AEM將其用作其內容儲存庫。 JCR有大量支援的API，從內容CRUD到查詢內容。 儘管有這種強穩的API，但較高階的AEM和[!DNL Sling]抽象效果更偏好的API還是很少。
 
-永遠比Apache Jackrabbit Oak API更喜歡JCR API。 JCR API用於與JCR存 ***儲庫互動*** ，而Oak API用於實 ***施*** JCR儲存庫。
+永遠比Apache Jackrabbit Oak API更喜歡JCR API。 JCR API用於&#x200B;***與JCR儲存庫交互***，而Oak API用於&#x200B;***實施*** JCR儲存庫。
 
 ### JCR API的常見誤解
 
@@ -149,7 +149,7 @@ JCR本身是一個基於層次／樹的NoSQL資料儲存庫，AEM將其用作其
 
 >[!CAUTION]
 >
->在AEM應用程式中廣泛使用JCR API的「工作階段」和「節點」介面是程式碼味道。 請確 [!DNL Sling] 定不應改用API。
+>在AEM應用程式中廣泛使用JCR API的「工作階段」和「節點」介面是程式碼味道。 請確定[!DNL Sling] API不應改用。
 
 ### JCR API的常見用途
 
@@ -158,7 +158,7 @@ JCR本身是一個基於層次／樹的NoSQL資料儲存庫，AEM將其用作其
 * JCR觀察（監聽JCR事件）
 * 建立深層節點結構
 
-   * 雖然Sling APIs支援建立資源，但JCR APIs在 [JcrUtils](https://jackrabbit.apache.org/api/2.10/index.html?org/apache/jackrabbit/commons/JcrUtils.html) 和 [JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/jcr/JcrUtil.html) 中有方便的方法，可加速建立深層結構。
+   * 雖然Sling APIs支援建立資源，但JCR APIs在[JcrUtils](https://jackrabbit.apache.org/api/2.10/index.html?org/apache/jackrabbit/commons/JcrUtils.html)和[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/jcr/JcrUtil.html)中有方便的方法，可加速建立深層結構。
 
 ## OSGi API
 
@@ -167,21 +167,21 @@ JCR本身是一個基於層次／樹的NoSQL資料儲存庫，AEM將其用作其
 * **[OSGi Declative Services 1.2 Metatype註解JavaDocs](https://osgi.org/javadoc/r6/cmpn/org/osgi/service/metatype/annotations/package-summary.html)**
 * [**OSGi Framework JavaDocs**](https://osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html)
 
-OSGi API和較高層級的API(AEM、 [!DNL Sling]和JCR)之間幾乎沒有重疊，而且使用OSGi API的需求很少，而且需要具備高階的AEM開發專業知識。
+OSGi API與較高層級的API（AEM、[!DNL Sling]和JCR）之間幾乎沒有重疊，而且使用OSGi API的需求很少，而且需要具備高階的AEM開發專業知識。
 
 ### OSGi與Apache Felix API
 
 OSGi定義了所有OSGi容器必須實施和遵循的規範。 AEM的OSGi實作Apache Felix也提供數種其專屬的API。
 
-* 偏好OSGi API(`org.osgi`)而非Apache Felix API(`org.apache.felix`)。
+* 比起Apache Felix API(`org.apache.felix`)，偏好OSGi API(`org.osgi`)。
 
 ### OSGi API的常見用途
 
 * 聲明OSGi服務和元件的OSGi注釋。
 
-   * 首選 [OSGi Declariative Services(DS)1.2 Annotations](https://osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html) over [Felix SCR Annotations](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html) for allibing OSGi services and components
+   * 比起[Felix SCR注釋](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html),[OSGi Declariative Services(DS)1.2 Annotations](https://osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html)更適合聲明OSGi服務和元件
 
-* OSGi API，用於動態地在程式碼 [中取消／註冊OSGi服務／元件](https://osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html)。
+* OSGi API，用於動態在程式碼[中取消／註冊OSGi服務／元件](https://osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html)。
 
    * 當不需要條件式OSGi服務／元件管理時（通常情況下），偏好使用OSGi DS 1.2注釋。
 
@@ -191,32 +191,32 @@ OSGi定義了所有OSGi容器必須實施和遵循的規範。 AEM的OSGi實作A
 
 ### AEM Asset API
 
-* 比 [ 較喜 `com.day.cq.dam.api`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/package-summary.html) 歡 [`com.adobe.granite.asset.api`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/asset/api/package-summary.html)。
+* 偏好[ `com.day.cq.dam.api`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/package-summary.html)，而非[ `com.adobe.granite.asset.api`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/asset/api/package-summary.html)。
 
-   * 雖然 `com.day.cq` Assets API為AEM的資產管理使用案例提供更多免費工具。
+   * 雖然`com.day.cq` Assets API為AEM的資產管理使用案例提供更多免費工具。
    * Granite Assets API支援低階資產管理使用案例（版本、關係）。
 
 ### 查詢API
 
-* AEM QueryBuilder不支援某些查詢功能，例如 [建議](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions)、拼字檢查和索引提示等其他較不常見的功能。 要使用這些函式進行查詢，首選JCR-SQL2。
+* AEM QueryBuilder不支援某些查詢函式，例如[建議](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions)、拼字檢查和索引提示等其他較不常見的函式。 要使用這些函式進行查詢，首選JCR-SQL2。
 
-### [!DNL Sling] Servlet註冊 {#sling-servlet-registration}
+### [!DNL Sling] Servlet註冊  {#sling-servlet-registration}
 
-* [!DNL Sling] servlet註冊，偏好 [使用OSGi DS 1.2註解(含@SlingServletResourceTypes](https://sling.apache.org/documentation/the-sling-engine/servlets.html) ) `@SlingServlet`
+* [!DNL Sling] servlet註冊，偏好 [使用@](https://sling.apache.org/documentation/the-sling-engine/servlets.html) SlingServletResourceTypesover的OSGi DS 1.2註解  `@SlingServlet`
 
-### [!DNL Sling] 篩選器註冊 {#sling-filter-registration}
+### [!DNL Sling] 篩選器註冊  {#sling-filter-registration}
 
-* [!DNL Sling] 篩選器註冊，偏好 [使用OSGi DS 1.2註解(含@SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) )，而非 `@SlingFilter`
+* [!DNL Sling] 篩選器註冊，偏好 [使用@](https://sling.apache.org/documentation/the-sling-engine/filters.html) SlingServletFilterover的OSGi DS 1.2註解  `@SlingFilter`
 
 ## 有用的程式碼片段
 
 以下是有用的Java程式碼片段，可說明使用討論的API的常見使用案例最佳範例。 這些程式碼片段也說明如何從較不偏好的API移至較偏好的API。
 
-### JCR與資源解析器的 [!DNL Sling] 會話
+### JCR與[!DNL Sling]資源解析器的會話
 
 #### 自動關閉Sling ResourceResolver
 
-自從AEM 6.2起， [!DNL Sling] ResourceResolver就會 `AutoClosable` 在 [try-with-resources陳述式中](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) 。 使用此語法時，不需要明確 `resourceResolver .close()` 的呼叫。
+自從AEM 6.2起，[!DNL Sling]資源解析器在[try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html)陳述式中為`AutoClosable`。 使用此語法時，不需要明確呼叫`resourceResolver .close()`。
 
 ```java
 @Reference
@@ -232,7 +232,7 @@ try (ResourceResolver resourceResolver = rrf.getResourceResolver(authInfo)) {
 
 #### 手動關閉的Sling ResourceResolver
 
-如果不能使用上述自動關閉技術， `finally` 則必須手動關閉塊中的資源解析器。
+如果不能使用上述自動關閉技術，則必須在`finally`塊中手動關閉資源解析器。
 
 ```java
 @Reference
@@ -253,13 +253,13 @@ try {
 }
 ```
 
-### JCR到 [!DNL Sling] [!DNL Resource]
+### JCR到[!DNL Sling] [!DNL Resource]的路徑
 
 ```java
 Resource resource = ResourceResolver.getResource("/path/to/the/resource");
 ```
 
-### JCR節點至 [!DNL Sling] [!DNL Resource]
+### JCR節點到[!DNL Sling] [!DNL Resource]
 
 ```java
 Resource resource = resourceResolver.getResource(node.getPath());
@@ -269,7 +269,7 @@ Resource resource = resourceResolver.getResource(node.getPath());
 
 #### 建議的方法
 
-`DamUtil.resolveToAsset(..)`視需要向樹狀結構 `dam:Asset` 上移動，解析Asset物件下的任何資源。
+`DamUtil.resolveToAsset(..)`視需要向樹狀結 `dam:Asset` 構上移，解析Asset物件下的任何資源。
 
 ```java
 Asset asset = DamUtil.resolveToAsset(resource);
@@ -277,7 +277,7 @@ Asset asset = DamUtil.resolveToAsset(resource);
 
 #### 替代方法
 
-將資源調整為資產需要資源本身作為節 `dam:Asset` 點。
+將資源改編為資產需要資源本身為`dam:Asset`節點。
 
 ```java
 Asset asset = resource.adaptTo(Asset.class);
@@ -295,9 +295,9 @@ Page page = pageManager.getContainingPage(resource);
 Page page2 = pageManager.getContainingPage("/content/path/to/page/jcr:content/or/component");
 ```
 
-#### 替代方法 {#alternative-approach-1}
+#### 替代方法{#alternative-approach-1}
 
-將資源調整為頁面需要資源本身作為節 `cq:Page` 點。
+將資源適配到頁面需要資源本身作為`cq:Page`節點。
 
 ```java
 Page page = resource.adaptTo(Page.class);
@@ -305,7 +305,7 @@ Page page = resource.adaptTo(Page.class);
 
 ### 閱讀AEM頁面屬性
 
-使用Page物件的getter來取得已知的`getTitle()`屬 `getDescription()`性（、等） 並獲 `page.getProperties()` 取用於檢索其 `[cq:Page]/jcr:content` 他屬性的ValueMap。
+使用Page對象的getter獲取眾所周知的屬性（`getTitle()`、`getDescription()`等） 和`page.getProperties()`以取得`[cq:Page]/jcr:content` ValueMap以擷取其他屬性。
 
 ```java
 Page page = resource.adaptTo(Page.class);
@@ -315,7 +315,7 @@ Calendar value = page.getProperties().get("cq:lastModified", Calendar.getInstanc
 
 ### 閱讀AEM Asset中繼資料屬性
 
-資產API提供從節點讀取屬性的方便方 `[dam:Asset]/jcr:content/metadata` 法。 請注意，這不是ValueMap，不支援第2個參數（預設值和自動文字轉換）。
+資產API提供從`[dam:Asset]/jcr:content/metadata`節點讀取屬性的方便方法。 請注意，這不是ValueMap，不支援第2個參數（預設值和自動文字轉換）。
 
 ```java
 Asset asset = resource.adaptTo(Asset.class);
@@ -323,9 +323,9 @@ String title = asset.getMetadataValue("dc:title");
 Calendar lastModified = (Calendar) asset.getMetadata("cq:lastModified");
 ```
 
-### 讀取屬 [!DNL Sling][!DNL Resource] 性 {#read-sling-resource-properties}
+### 讀取[!DNL Sling] [!DNL Resource]屬性{#read-sling-resource-properties}
 
-當屬性儲存在AEM API（頁面、資產）無法直接存取的位置（屬性或相對資源）時，可使用 [!DNL Sling] Resources和ValueMaps來取得資料。
+當屬性儲存在AEM API（頁面、資產）無法直接存取的位置（屬性或相對資源）中時，[!DNL Sling]資源和值地圖可用來取得資料。
 
 ```java
 ValueMap properties = resource.getValueMap();
@@ -333,9 +333,9 @@ String value = properties.get("jcr:title", "Default title");
 String relativeResourceValue = properties.get("relative/propertyName", "Default value");
 ```
 
-在這種情況下，AEM物件可能必須轉換為AEM物件， [!DNL Sling] 以有 [!DNL Resource] 效率地找出所要的屬性或子資源。
+在這種情況下，AEM物件可能必須轉換為[!DNL Sling] [!DNL Resource]才能有效率地找出所要的屬性或子資源。
 
-#### AEM頁面至 [!DNL Sling] [!DNL Resource]
+#### AEM頁面至[!DNL Sling] [!DNL Resource]
 
 ```java
 Resource resource = page.adaptTo(Resource.class);
@@ -347,11 +347,11 @@ Resource resource = page.adaptTo(Resource.class);
 Resource resource = asset.adaptTo(Resource.class);
 ```
 
-### 使用的ModifableValueMap [!DNL Sling]寫入屬性
+### 使用[!DNL Sling]的ModifableValueMap寫入屬性
 
-使用 [!DNL Sling]的 [ModifableValueMap](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ModifiableValueMap.html) ，將屬性寫入節點。 這只能寫入直接節點（不支援相對屬性路徑）。
+使用[!DNL Sling]的[ ModifableValueMap](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ModifiableValueMap.html)將屬性寫入節點。 這只能寫入直接節點（不支援相對屬性路徑）。
 
-請注意，對的調 `.adaptTo(ModifiableValueMap.class)` 用要求對資源具有寫權限，否則將返回null。
+請注意，對`.adaptTo(ModifiableValueMap.class)`的調用要求對資源具有寫權限，否則它將返回null。
 
 ```java
 ModifiableValueMap properties = resource.adaptTo(ModifiableValueMap.class);
@@ -377,7 +377,7 @@ pageManager.create("/content/parent/path", "my-new-page", templatePath, "My New 
 if (!autoSave) { resourceResolver.commit(); }
 ```
 
-### Create a [!DNL Sling] Resource
+### 建立[!DNL Sling]資源
 
 資源解析器支援建立資源的基本操作。 建立更高層級的抽象化（AEM頁面、資產、標籤等） 使用其各自經理提供的方法。
 
@@ -391,7 +391,7 @@ resourceResolver.create(parentResource, "my-node-name", new ImmutableMap.Builder
 resourceResolver.commit();
 ```
 
-### 刪除資 [!DNL Sling] 源
+### 刪除[!DNL Sling]資源
 
 資源解析器支援刪除資源。 建立更高層級的抽象化（AEM頁面、資產、標籤等） 使用其各自經理提供的方法。
 
