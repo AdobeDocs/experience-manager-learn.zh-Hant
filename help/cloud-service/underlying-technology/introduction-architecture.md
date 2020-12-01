@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# AEM架構堆疊簡介 {#introduction-architecture}
+# AEM架構堆疊簡介{#introduction-architecture}
 
-在Adobe Experience Manager的技 [!DNL OSGi]術堆疊中 [!DNL JCR]，介 [!DNL Oak][!DNL Sling] 紹Adobe Experience Manager的技術、技術和技術。
+將[!DNL OSGi]、[!DNL JCR]、[!DNL Oak]和[!DNL Sling]等技術作為Adobe Experience Manager技術堆疊的一部分介紹。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32034/?quality=12&learn=on)
