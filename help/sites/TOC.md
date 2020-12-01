@@ -15,7 +15,7 @@ ht-degree: 10%
 # AEM Sites 影片和教學課程 {#sites}
 
 + [概覽](overview.md)
-+ 頁面編寫 {#page-authoring}
++ 頁面編寫{#page-authoring}
    + [編寫概觀](page-authoring/aem-sites-authoring-overview.md)
    + [AEM Sites中的基本導覽與處理](page-authoring/basic-handling-sites-feature-video-use.md)
    + [AEM Sites中的內容階層](page-authoring/content-hierarchy-feature-video-use.md)
@@ -64,12 +64,12 @@ ht-degree: 10%
    + [設定體驗片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [搭配Adobe Target使用體驗片段](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [設定ContextHub](personalization/context-hub-technical-video-setup.md)
-+ 單頁應用程式 {#spa-editor}
++ 單頁應用程式{#spa-editor}
    + [使用SPA編輯器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello World教學課程](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [AEM SPA編輯器快速入門與回應](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM SPA編輯器和Angular快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
-+ 多網站管理 {#multi-site-management}
++ 多站點管理{#multi-site-management}
    + [語言副本簡介](./multi-site-management/language-copy-overview.md)
    + [即時文案和藍圖](./multi-site-management/live-copy-and-blueprint.md)
    + [建立即時副本](./multi-site-management/create-live-copy.md)
@@ -89,14 +89,14 @@ ht-degree: 10%
    + [使用語言副本](translation/language-copy-feature-video-use.md)
    + [設定翻譯規則](translation/translation-rules-editor-technical-video-setup.md)
    + [翻譯增強功能](translation/translation-enhancements-feature-video-use.md)
-+ 整合 {#integrations}
-   + 體驗平台發佈 {#experience-platform-launch}
++ 整合{#integrations}
+   + 體驗平台啟動{#experience-platform-launch}
       + [概覽](integrations/experience-platform-launch/overview.md)
       + [建立啟動屬性](integrations/experience-platform-launch/create-launch-property.md)
       + [使用Adobe I/O將AEM與Launch連接](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
       + [建立Launch Cloud服務](integrations/experience-platform-launch/create-launch-cloud-service.md)
       + [除錯啟動實作](integrations/experience-platform-launch/debug-launch-implementation.md)
-   + Adobe用戶端資料層 {#adobe-client-data-layer}
+   + Adobe用戶端資料層{#adobe-client-data-layer}
       + [使用Adobe用戶端資料層](integrations/adobe-client-data-layer/data-layer-overview.md)
    + 分析 {#analytics}
       + [使用Adobe Analytics收集頁面資料](integrations/analytics/collect-data-analytics.md)
