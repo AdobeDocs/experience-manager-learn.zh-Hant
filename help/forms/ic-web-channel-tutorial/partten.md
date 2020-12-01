@@ -40,7 +40,7 @@ ht-degree: 0%
 
 * 選取「鉛筆」圖示以編輯預設文字。
 
-* 以「您的退休收入展&#x200B;**望」取代預設文字**
+* 將預設文字取代為「**Your Retirement Income Outlook」**
 
 **設定RightPanel目標區域**
 
@@ -52,15 +52,15 @@ ht-degree: 0%
 
 * 選取「鉛筆」圖示以編輯預設文字。
 
-* 將預設文字取代為「預&#x200B;**計每月退休收入」**
+* 將預設文字取代為&quot;**預估每月退休收入&quot;**
 
-## 添加退休收入展望文檔片段 {#add-retirement-income-outlook-document-fragment}
+## 添加退休收入展望文檔片段{#add-retirement-income-outlook-document-fragment}
 
 * 按一下「資產」圖示，並套用篩選以顯示「檔案片段」類型的資產。 將RetirementIncomeOutlook檔案片段拖放至「左側面板」目標區域。
 
-* 有關將文檔 [片段添加到內容區](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html) ，請參閱此頁。
+* 有關將文檔片段添加到內容區域，請參閱[到此頁](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html)。
 
-## 添加估計的月收入表 {#adding-estimated-monthly-income-chart}
+## 添加預計每月收入圖表{#adding-estimated-monthly-income-chart}
 
 * 按一下右側的「RightPanel」目標區域。 按一下「+」圖示以插入圖表元件。 我們將使用欄圖來顯示月度預估收入。 輕輕點選新插入的圖表元件。 選擇「Wrench」圖示以開啟設定屬性工作表。使用下列屬性設定圖表，如下方的螢幕擷取所示。
 
