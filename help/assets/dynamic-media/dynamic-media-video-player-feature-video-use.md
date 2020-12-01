@@ -27,7 +27,7 @@ AEM Dynamic Media視訊播放器過去依賴Flash執行時期來支援案頭用�
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
-## 快速瞭解非Flash Video Player {#quick-look-into-non-flash-video-player}
+## 快速檢視非Flash Video Player {#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
