@@ -23,7 +23,7 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
 
    *開發人員使用React整合單一頁面應用程式(SPA)與AEM的快速入門手冊*
 
-* **[AEM SPA編輯器和Angular快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) （教學課程）**
+* **[AEM SPA編輯器和Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) （教學課程）快速入門**
 
    *開發人員使用Angular整合單一頁面應用程式(SPA)與AEM的快速入門手冊*
 
