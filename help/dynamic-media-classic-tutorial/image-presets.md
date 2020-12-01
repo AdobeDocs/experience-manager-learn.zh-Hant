@@ -38,8 +38,8 @@ ht-degree: 1%
 >
 >在您的網站上，依每個獨特影像大小建立一個影像預設集。 例如，如果您需要350 X 350影像做為產品詳細資訊頁面、120 X 120影像用於瀏覽／搜尋頁面，以及90 X 90影像作為交叉銷售／功能項目，則您需要3個影像預設集，不論您有500張影像或500,000張影像。
 
-- 進一步瞭解 [影像預設集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html)。
-- 瞭解如何建 [立影像預設集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)。
+- 進一步瞭解[影像預設集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html)。
+- 瞭解如何[建立影像預設集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)。
 
 ## 影像預設集與銳利化
 
@@ -61,12 +61,12 @@ ht-degree: 1%
 
 Dynamic Media Classic可讓您使用三種銳利化類型：簡單的銳利化、重新取樣模式和非銳利化遮色片。
 
-進一步瞭解 [Dynamic Media Classic銳利化選項](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)。
+進一步瞭解[Dynamic Media Classic銳利化選項](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)。
 
 ## 其他資源
 
-[影像預設集指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)。 用來最佳化影像品質和載入速度的設定。
+[影像預設集指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)。用來最佳化影像品質和載入速度的設定。
 
-[影像是一切第2部分：從來不只是模糊。 品質與速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。 討論使用影像預設集來傳送高品質、快速載入影像的部落格文章。
+[影像是一切第2部分：從來不只是模糊。 品質與速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。討論使用影像預設集來傳送高品質、快速載入影像的部落格文章。
 
-[影像是網路研討會的一切](https://dynamicmediaseries2019.enterprise.adobeevents.com/)。 連結至「影像就是一切」系列中所有三 _個網路研討會的錄制_ 。 [網路研討會](https://seminars.adobeconnect.com/p6lqaotpjnd3) 2討論影像預設集。
+[影像是網路研討會的一切](https://dynamicmediaseries2019.enterprise.adobeevents.com/)。連結至&#x200B;_影像是一切_&#x200B;系列中所有三個網路研討會的錄制。 [網路研討會2](https://seminars.adobeconnect.com/p6lqaotpjnd3) 討論影像預設集。
