@@ -30,7 +30,7 @@ AEM作為Cloud Service的Asset Compute microservices支援自訂工作者的開�
 
 本教學課程將逐步介紹如何建立簡單的「資產計算」工作者，透過將原始資產裁切至社交圈來建立資產轉譯，並套用可設定的對比度和亮度。 雖然工作者本身是基本的，但本教學課程會使用它來探索建立、開發和部署自訂資產計算工作者，以便與AEM搭配使用做為雲端服務。
 
-### 目標 {#objective}
+### 目標{#objective}
 
 1. 配置和設定必要的帳戶和服務以構建和部署資產計算員工
 1. 建立和配置資產計算項目
@@ -42,7 +42,7 @@ AEM作為Cloud Service的Asset Compute microservices支援自訂工作者的開�
 
 瞭解如何正確準備擴展資產計算工作，並瞭解哪些服務和帳戶必須進行配置和配置，以及本地安裝的軟體以進行開發。
 
-### 帳戶和服務布建{#accounts-and-services}
+### 帳戶和服務設定{#accounts-and-services}
 
 下列帳戶和服務需要布建和存取權，才能完成教學課程AEM（雲端服務開發環境或沙盒程式）、Adobe Project Firefly和Microsoft Azure Blob儲存空間的存取。
 
@@ -72,7 +72,7 @@ AEM作為Cloud Service的Asset Compute microservices支援自訂工作者的開�
 
 ### 配置環境變數
 
-環境變數會保留在檔 `.env` 案中以進行本端開發，並用來提供本端開發所需的Adobe I/O憑證和雲端儲存憑證。
+環境變數會保留在`.env`檔案中，以供本機開發使用，並用來提供本機開發所需的Adobe I/O憑證和雲端儲存憑證。
 
 + [配置環境變數](./develop/environment-variables.md)
 
@@ -106,7 +106,7 @@ Asset Compute Development Tool提供本機Web控管，用於部署、執行和�
 
 ### 對工作者進行除錯
 
-資產計算工作者提供從傳統輸出到與 `console.log(..)` VS Code __和__ wskdebug ____&#x200B;整合的各種除錯層級，讓開發人員在執行工作者程式碼時可逐步執行。
+資產計算工作者提供從傳統`console.log(..)`輸出到與&#x200B;__VS代碼__&#x200B;和&#x200B;__wskdebug__&#x200B;整合的各種除錯層級，讓開發人員在工作者程式碼執行時逐步執行。
 
 + [對工作者進行除錯](./test-debug/debug.md)
 
@@ -122,7 +122,7 @@ Asset Compute Development Tool提供本機Web控管，用於部署、執行和�
 
 ### 透過AEM處理設定檔整合工作者
 
-部署至Adobe I/O Runtime後，資產計算工作者即可透過資產處理設定檔在AEM中註冊為雲 [端服務](../../assets/configuring/processing-profiles.md)。 處理設定檔則套用至套用至資產資料夾的資產。
+部署至Adobe I/O Runtime後，資產計算工作者可透過[資產處理設定檔](../../assets/configuring/processing-profiles.md)在AEM中註冊為雲端服務。 處理設定檔則套用至套用至資產資料夾的資產。
 
 + [與AEM處理設定檔整合](./deploy/processing-profiles.md)
 
@@ -130,15 +130,15 @@ Asset Compute Development Tool提供本機Web控管，用於部署、執行和�
 
 這些簡略的教學課程以前幾章中建立的基礎學習為基礎，處理更進階的使用案例。
 
-+ [開發資產計算元資料工作器](./advanced/metadata.md) ，該工作器可將元資料寫回
++ [開發資產計算中繼資](./advanced/metadata.md) 料工作器，可將中繼資料寫回
 
 ## Github上的代碼庫
 
 教學課程的程式碼基底可在Github取得，網址為：
 
-+ [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @ master branch
++ [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @主分支
 
-原始碼不包含必要 `.env` 或檔 `config.json` 案。 必須使用您的帳戶和服務資訊來 [新增和設定這些](#accounts-and-services) 。
+原始碼不包含所需的`.env`或`config.json`檔案。 必須使用[帳戶和服務](#accounts-and-services)資訊添加和配置這些。
 
 ## 其他資源
 
