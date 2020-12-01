@@ -21,23 +21,23 @@ ht-degree: 2%
 ---
 
 
-# 傳送內容片段 {#delivering-content-fragments}
+# 傳送內容片段{#delivering-content-fragments}
 
 Adobe Experience Manager(AEM)內容片段是文字編輯內容，可能包含一些與結構化資料元素相關聯但被認為是純粹的內容，而無設計或版面資訊。 內容片段通常建立為不受通道限制的內容，以便跨通道使用和重複使用，進而將內容包住特定內容的內容。
 
 內容片段與版面無關，可直接用於具有核心元件的AEM網站，或以無頭方式傳送至下游頻道。
 
-此影片系列涵蓋使用內容片段的傳送選項。 有關定義和編 [寫內容片段的詳細資訊，請參閱這裡](content-fragments-feature-video-use.md)。
+此影片系列涵蓋使用內容片段的傳送選項。 有關定義和[編寫內容片段的詳細資訊，請參閱](content-fragments-feature-video-use.md)。
 
 1. 在網頁上使用內容片段
 2. 使用AEM Content Services將內容片段公開為JSON
 3. 使用資產HTTP API
 
-## 在網頁中使用內容片段 {#using-content-fragments-in-web-pages}
+## 在網頁{#using-content-fragments-in-web-pages}中使用內容片段
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
 
-「內容片段」可以使用AEM WCM核心元件的「內容片段」元件，以類似的方式用於「AEM網站」 [頁面或「體驗片段」](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)。
+「內容片段」可用於AEM Sites頁面，或以類似方式使用「體驗片段」，使用AEM WCM核心元件&#39; [「內容片段」元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)。
 
 內容片段元件可使用AEM的Style System來設定樣式，以視需要顯示內容。
 
@@ -47,7 +47,7 @@ Adobe Experience Manager(AEM)內容片段是文字編輯內容，可能包含一
 
 AEM Content Services可協助建立以AEM頁面為基礎的HTTP端點，將內容轉譯為標準化的JSON格式。
 
-上述視訊使用「內 [容片段元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html) 」來公開個別的內容片段。 「內 [容片段清單元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-list.html) 」是新元件，可讓作者定義查詢，以動態填入「內容片段」清單的頁面。 當需要公開多個內容片段時，偏好使用內容片段清單元件。
+上述視訊使用[內容片段元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)來公開個別的內容片段。 [內容片段清單元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-list.html)是新元件，可讓作者定義查詢，以動態填入頁面的內容片段清單。 當需要公開多個內容片段時，偏好使用內容片段清單元件。
 
 *範例Content Services端點JSON裝載：*\
 **[materies.json](assets/athletes.json)**
@@ -58,7 +58,8 @@ AEM Content Services可協助建立以AEM頁面為基礎的HTTP端點，將內�
 
 AEM 6.5首次推出的內容片段是使用資產HTTP API增強支援。 這可讓開發人員輕鬆對內容片段執行「建立」、「讀取」、「更新」和「刪除」(CRUD)操作。
 
-*POSTMAN請求示例：***[CRUD-CFM-API-We.Retail.postman_collection.json](assets/CRUD-CFM-API-We.Retail.postman_collection.json)**
+*範例POSTMAN請求：*
+**[CRUD-CFM-API-We.Retail.postman_collection.json](assets/CRUD-CFM-API-We.Retail.postman_collection.json)**
 
 ## 使用哪一種傳送方法
 
@@ -77,7 +78,7 @@ AEM 6.5首次推出的內容片段是使用資產HTTP API增強支援。 這可�
 ## 其他資源 {#additional-resources}
 
 * [編寫內容片段](content-fragments-feature-video-use.md)
-* [AEM WCM核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
+* [AEM WCM核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [AEM WCM核心內容片段元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)
 
 若要從視訊系列下載並安裝下列套件至AEM 6.4+執行個體，以獲得最終狀態：\
