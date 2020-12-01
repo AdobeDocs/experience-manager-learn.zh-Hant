@@ -17,13 +17,13 @@ ht-degree: 6%
 ---
 
 
-# 搭配AEM內容片段使用翻譯{#using-translation-with-aem-content-fragments}
+# 搭配AEM內容片段使用轉譯{#using-translation-with-aem-content-fragments}
 
 AEM 6.3提供翻譯內容片段的功能。 與內容片段關聯的混合媒體資產和資產集合也符合提取和翻譯的資格。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=9&learn=on)
 
-## 內容片段轉譯使用案例 {#content-fragment-translation-use-cases}
+## 內容片段轉譯使用案例{#content-fragment-translation-use-cases}
 
 「內容片段」是AEM將擷取並傳送至外部轉譯服務的可識別內容類型。 現成可支援數個使用案例：
 
@@ -32,9 +32,9 @@ AEM 6.3提供翻譯內容片段的功能。 與內容片段關聯的混合媒體
 3. 內嵌在內容片段中的內嵌媒體資產可供擷取和翻譯。
 4. 與內容片段相關聯的資產集合可以擷取和翻譯
 
-## 翻譯配置選項 {#translation-config-options}
+## 翻譯配置選項{#translation-config-options}
 
-立即可用的轉換設定支援數個轉換內容片段的選項。 依預設，內嵌媒體資產和相關的資產集合不會進行翻譯。 要更新翻譯配置，請導航到 [http://localhost:4502/etc/cloudservices/translation/default_translation.html](http://localhost:4502/etc/cloudservices/translation/default_translation.html)。
+立即可用的轉換設定支援數個轉換內容片段的選項。 依預設，內嵌媒體資產和相關的資產集合不會進行翻譯。 要更新翻譯配置，請導航至[http://localhost:4502/etc/cloudservices/translation/default_translation.html](http://localhost:4502/etc/cloudservices/translation/default_translation.html)。
 
 轉換「內容片段」資產有四個選項：
 
