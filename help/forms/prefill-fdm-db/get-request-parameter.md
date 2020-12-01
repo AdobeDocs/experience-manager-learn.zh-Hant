@@ -21,17 +21,17 @@ ht-degree: 0%
 
 ## 獲取empID參數
 
-下一步是從url存取empID參數。 然後，將empID請求參數的值傳遞給表 **_單資料模_** 型的get服務操作。
+下一步是從url存取empID參數。 然後，將empID請求參數的值傳遞給表單資料模型的&#x200B;**_get_**服務操作。
 為了本課程的目的，我們建立並提供了以下內容
 
-* 稱為FDMDemo的最適化表 **_單範本_**
-* 名為 **_fdmdemo的頁面元件_**
+* 調用&#x200B;**_FDMDemo_**&#x200B;的自適應表單模板
+* 名為&#x200B;**_fdmdemo_**&#x200B;的頁面元件
 * 將我們的自訂jsp與頁面元件一起包含
 * 將最適化表單範本與頁面元件關聯
 
 執行此動作時，只有在轉換基於此自訂範本的最適化表單時，才會執行自訂jsp中的程式碼
 
-* [使用包管理器](assets/template-page-component.zip) 導入 [包](http://localhost:4502/crx/packmgr/index.jsp)
+* [使用包管](assets/template-page-component.zip) 理器導入 [包](http://localhost:4502/crx/packmgr/index.jsp)
 * [開啟fdmrequest.jsp](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
 * 取消注釋已注釋的行。
 * 儲存變更
