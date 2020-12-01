@@ -20,11 +20,11 @@ ht-degree: 0%
 ---
 
 
-# 從HTM5表單提交產生PDF {#generate-pdf-from-htm-form-submission}
+# 從HTM5表單提交{#generate-pdf-from-htm-form-submission}產生PDF
 
 本文將引導您逐步瞭解從HTML5（亦即行動表單）表單提交產生pdf時所涉及的步驟。 此示範程式也將說明將影像新增至HTML5表單並將影像合併為最終pdf所需的步驟。
 
-若要即時展示此功能，請造訪範例伺 [服器](https://forms.enablementadobe.com/content/samples/samples.html?query=0) ，並搜尋「行動表單至PDF」。
+若要即時展示此功能，請造訪[範例伺服器](https://forms.enablementadobe.com/content/samples/samples.html?query=0)，並搜尋「行動表單至PDF」。
 
 要將提交的資料合併到xdp模板中，我們將執行以下操作
 
@@ -84,7 +84,7 @@ $("#file1").click();
 });
 ```
 
-[自訂設定檔](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。 使用自訂描述檔，可更輕鬆地控制行動表單的HTML DOM物件。 隱藏的檔案元素會新增至HTML.jsp。 當使用者按一下「新增像片」時，我們會觸發檔案元素的點按事件。 這可讓使用者瀏覽並選取要附加的像片。 然後，我們使用javascript FileReader物件來取得影像的base64編碼字串。 base64影像字串會儲存在表單的文字欄位中。 提交表單時，我們會擷取此值，並將它插入XML的img元素中。 然後，此XML會用來與xdp合併，以產生最終的pdf。
+[自訂設定檔](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。使用自訂描述檔，可更輕鬆地控制行動表單的HTML DOM物件。 隱藏的檔案元素會新增至HTML.jsp。 當使用者按一下「新增像片」時，我們會觸發檔案元素的點按事件。 這可讓使用者瀏覽並選取要附加的像片。 然後，我們使用javascript FileReader物件來取得影像的base64編碼字串。 base64影像字串會儲存在表單的文字欄位中。 提交表單時，我們會擷取此值，並將它插入XML的img元素中。 然後，此XML會用來與xdp合併，以產生最終的pdf。
 
 本文使用的自訂描述檔已提供給您，做為本文資產的一部分。
 
@@ -121,7 +121,7 @@ function readURL(input) {
 
 * [下載並安裝與此文章相關的套件。](assets/pdf-from-mobile-form-submission.zip)
 
-* 檢視 [xdp的屬性頁面，確定已正確設定送出URL和HTML演算描述檔](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
+* 檢視[xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)的屬性頁面，確定已正確設定提交URL和HTML Render描述檔
 
 * [將XDP預覽為html](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 
