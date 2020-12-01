@@ -28,7 +28,7 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
 1. 基於SOAP的web services
 1. OData服務
 
-對於整合AEM Forms與Marketo，我們將使用REST風格的網站服務。 整合的第一步是設定資 [料來源。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) 請使用本教學課程中提供的Swagger檔案。 以下螢幕擷取顯示設定資料來源時需要指定的重要屬性。
+對於整合AEM Forms與Marketo，我們將使用REST風格的網站服務。 整合的第一步是設定[資料來源。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) 請使用本教學課程中提供的Swagger檔案。以下螢幕擷取顯示設定資料來源時需要指定的重要屬性。
 ![資料源](assets/datasource.jfif)
 
 「marketo.json」是Swagger檔案，是本教學課程資產的一部分。
@@ -39,7 +39,7 @@ AEM Forms Data Integration可讓您設定並連線至不同的資料來源。 �
 
 之後，設定資料來源的下一步是建立表單資料模型，此模型以前一步驟中設定的資料來源為基礎。 若要建立表單資料模型，請遵循下列步驟：
 
-將您的瀏覽器指向資 [料整合頁面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) 這會列出在AEM例項上建立的所有資料整合。
+將您的瀏覽器指向[資料整合頁面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) 這會列出在AEM例項上建立的所有資料整合。
 
 1. 按一下「建立」 |表單資料模型
 1. 提供有意義的標題，例如FormsAndMarketo，然後按一下「下一步」
