@@ -29,7 +29,7 @@ AEM 6.5中的Dynamic Media Viewer增強功能包括新增支援360視訊演算�
 
 >[!NOTE]
 >
->視訊會假設您的AEM例項在Dynamic Media S7模式中執行。  [如需有關使用動態媒體設定AEM的指示，請參閱這裡](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)。 在您上傳視訊時，如果視訊的外觀比例為2:1,Dynamic Media會依預設將視訊素材處理為360視訊。 即，寬高比為2:1。
+>視訊會假設您的AEM例項在Dynamic Media S7模式中執行。  [如需有關使用動態媒體設定AEM的指示，請參閱這裡](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)。在您上傳視訊時，如果視訊的外觀比例為2:1,Dynamic Media會依預設將視訊素材處理為360視訊。 即，寬高比為2:1。
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ AEM 6.5中的Dynamic Media Viewer增強功能包括新增支援360視訊演算�
    <tr>
       <td>動態媒體執行模式</td>
       <td>僅限動態媒體Scene7模式</td>
-      <td>僅限動態媒體Scene7模式<br>
+      <td>僅限動態媒體場景7模式<br>
          <br>
       </td>
    </tr>
