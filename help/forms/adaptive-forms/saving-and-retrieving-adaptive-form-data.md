@@ -30,7 +30,7 @@ ht-degree: 0%
 * [功能展示](#capability-demo)
 * [部署在您的伺服器上](#deploy-on-your-server)
 
-## 配置資料源 {#Configure-Data-Source}
+## 配置資料源{#Configure-Data-Source}
 
 Apache Sling Connection Pooled DataSource已設定為指向將用來儲存Adaptive Form資料的資料庫。 以下螢幕擷取顯示我例項的設定。 可複製並貼上下列屬性
 
@@ -212,7 +212,7 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 }
 ```
 
-## 建立OSGI服務以擷取資料 {#create-osgi-service}
+## 建立OSGI服務以獲取資料{#create-osgi-service}
 
 編寫以下代碼以獲取儲存的自適應表單資料。 簡單查詢用於讀取與給定GUID相關聯的自適應表單資料。 接著，擷取的資料會傳回至呼叫應用程式。 在此程式碼中參考的第一個步驟中建立的相同資料來源。
 
@@ -277,7 +277,7 @@ public class AemformWithDB implements AemFormsAndDB {
 }
 ```
 
-## 建立客戶端庫 {#create-client-library}
+## 建立客戶端庫{#create-client-library}
 
 AEM用戶端程式庫可管理您所有的用戶端javascript程式碼。 在本文中，我已建立簡單的javascript，以使用指南橋接API擷取最適化表單資料。 一旦提取了最適化表單資料，就會對servlet進行POST調用，以在資料庫中插入或更新最適化表單資料。 函式getALLUrlParams會傳回URL中的參數。 當您要更新資料時，就會使用此功能。 其餘功能都在與。savebutton類的click事件關聯的代碼中處理。 如果guid參數存在於URL中，則我們需要執行更新操作（如果不是插入操作）。
 
@@ -405,16 +405,16 @@ $(document).ready(function()
 });
 ```
 
-## 建立最適化表單範本和頁面元件 {#form-template-and-page-component}
+## 建立最適化表單模板和頁面元件{#form-template-and-page-component}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
-### 展示功能 {#capability-demo}
+### 演示功能{#capability-demo}
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
-#### 部署在您的伺服器上 {#deploy-on-your-server}
+#### 部署在您的伺服器{#deploy-on-your-server}
 
 若要在您的AEM Forms例項上測試此功能，請依照下列步驟進行
 
