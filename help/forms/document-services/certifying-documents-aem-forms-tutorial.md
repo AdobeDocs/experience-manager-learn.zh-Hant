@@ -25,16 +25,16 @@ ht-degree: 0%
 
 若要認證檔案，您可以在桌上型電腦或AEM Forms Document Services上使用Acrobat DC，做為伺服器上自動化程式的一部分。
 
-本文提供您使用AEM Forms Document Services來認證PDF檔案的範例OSGI套件。範例中使用的程式碼可 [在這裡](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+本文提供您使用AEM Forms Document Services來認證PDF檔案的範例OSGI套件。範例中使用的程式碼為[，請參閱此處](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 若要使用AEM Forms來認證檔案，必須遵循下列步驟
 
-## 新增憑證至信任存放區 {#adding-certificate-to-trust-store}
+## 將證書添加到信任儲存{#adding-certificate-to-trust-store}
 
 請依照下列步驟，將憑證新增至AEM的金鑰庫
 
 * [初始化全域信任存放區](http://localhost:4502/libs/granite/security/content/truststore.html)
-* [搜索fd-service用戶](http://localhost:4502/security/users.html)
+* [搜索fd-](http://localhost:4502/security/users.html) serviceuser
 * **您必須捲動結果頁面，以載入所有使用者以尋找fd-service使用者**
 * 連按兩下fd-service使用者以開啟使用者設定視窗
 * 按一下「從密鑰庫檔案添加私密密鑰」。指定證書專用的別名和密碼
@@ -56,11 +56,11 @@ ht-degree: 0%
 
 ## 在您的本機系統上測試範例
 
-* 下載並安裝自 [訂檔案服務套裝](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* 下載並安裝使 [用服務使用者套件開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* 下載並安裝[自訂檔案服務套裝](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* 下載並安裝[使用服務用戶包開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [請確定您已在Apache Sling Service User Mapper Service中新增下列項目](http://localhost:4502/system/console/configMgr)
 
-   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** ，如以下螢幕擷取所示
+   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-** service，如以下螢幕擷取所示
    ![用戶映射器](assets/user-mapper-service.PNG)
 * [匯入範例最適化表單](assets/certify-pdf-af.zip)
 * [匯入並安裝自訂提交](assets/custom-submit-certify.zip)
