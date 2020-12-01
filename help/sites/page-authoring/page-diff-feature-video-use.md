@@ -21,11 +21,11 @@ ht-degree: 1%
 ---
 
 
-# 使用頁面差異功能 {#using-page-difference-with-aem-sites}
+# 使用頁面差異功能{#using-page-difference-with-aem-sites}
 
 AEM Sites的頁面差異功能顯示提供快速、色彩編碼的檢視，瞭解頁面中變更的內容（版本、即時副本、啟動、語言副本）。
 
-## 比較頁面版本 {#comparing-page-versions}
+## 比較頁面版本{#comparing-page-versions}
 
 >[!VIDEO](https://video.tv.adobe.com/v/32152?quality=9&learn=on)
 
@@ -40,7 +40,7 @@ AEM Sites的頁面差異功能顯示提供快速、色彩編碼的檢視，瞭�
 * **紅色**:已移除元件
 * **藍色**:修改的元件
 
-## 比較啟動頁面 {#comparing-launch-pages}
+## 比較啟動頁面{#comparing-launch-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17746/?quality=9&learn=on)
 
