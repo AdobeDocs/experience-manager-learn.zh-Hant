@@ -25,11 +25,12 @@ ht-degree: 0%
 
 * 建立支援RDBMS的表單資料模型
 * 在2個實體之間建立關聯
-* 在表格中填入表格資料模型 _的_ get服務傳回的資料
+* 在表格中填入&#x200B;_get_&#x200B;服務傳回的表格資料模型
 * 使用表單資料模型的請求屬性
 
 
-[按一下查看功能的即時演示](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)以下視頻為您提供了課程的概述
+[按一下以檢視功能的即時](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)
+展示以下影片提供課程的概觀
 >[!VIDEO](https://video.tv.adobe.com/v/36387/quality=9)
 
 ## 必備條件
