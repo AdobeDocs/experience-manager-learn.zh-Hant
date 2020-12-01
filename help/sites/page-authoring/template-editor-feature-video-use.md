@@ -32,11 +32,11 @@ ht-degree: 0%
 **高級策略配置** -以下重點介紹了可編輯模板中提供的一些高級策略配置：
 
 * **配置容器** -可設定允許的元件、管理資產的拖放對應，以及回應式格線欄。
-* **Text Component** —— 能夠使用新的UI配置Rich Text Editor插件，並跨範本重複使用RTE策略。
+* **Text Component**  —— 能夠使用新的UI來配置Rich Text Editor插件，並跨範本重複使用RTE原則。
 * **影像元件** -能夠開啟／關閉裁切、使用新UI上傳案頭檔案等功能，以及跨範本重複使用影像原則。
 
-可編輯的範本位於「工具 **」** 「一 `>` 般範本」 **下方**`>`****。\
-可編輯的範本URL（本機AEM例項）: [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
+可在&#x200B;**Tools** `>` **General** `>` **Templates**&#x200B;下找到可編輯的模板。\
+可編輯的範本URL（本機AEM例項）:[http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 ## 其他資源 {#additional-resources}
 
