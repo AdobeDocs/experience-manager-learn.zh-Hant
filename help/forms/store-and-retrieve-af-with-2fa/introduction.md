@@ -26,7 +26,7 @@ ht-degree: 1%
 
 * 對servlet進行POST調用。 此servlet將資料儲存在資料庫中，並將表單附件儲存在CRX儲存庫中。 資料庫中儲存的資料與GUID相關聯。
 
-* 當您想用儲存的資料填入最適化表單時，請擷取與GUID相關的資料，並使用 **request.setAttribute方法填入最適化表單** 。
+* 當您想用儲存的資料填入最適化表單時，請擷取與GUID關聯的資料，並使用&#x200B;**request.setAttribute**&#x200B;方法填入最適化表單。
 
 ## 使用案例的展示
 
