@@ -22,10 +22,10 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Forms中建立DataSource設定{#creating-datasource-configuration-in-aem-forms}
+# 在AEM Forms中建立DataSource組態{#creating-datasource-configuration-in-aem-forms}
 
 在本部分，我們將建立一個REST支援的資料源。  以下視訊逐步說明建立資料來源的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27765/?quality=9&learn=on)
 
-請將提供給您的Swagger檔案當做本教學課程相關資產的一部分使用。 本教學課程的 [簡介](introduction.md) 中提供這些資產。
+請將提供給您的Swagger檔案當做本教學課程相關資產的一部分使用。 本教學課程的[簡介](introduction.md)中提供這些資產。
