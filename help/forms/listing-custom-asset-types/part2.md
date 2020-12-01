@@ -20,15 +20,15 @@ ht-degree: 0%
 ---
 
 
-# 列出AEM表單中的自訂資產類型 {#listing-custom-asset-types-in-aem-forms}
+# 列出AEM Forms {#listing-custom-asset-types-in-aem-forms}中的自訂資產類型
 
-## 建立自訂範本 {#creating-custom-template}
+## 建立自訂範本{#creating-custom-template}
 
 
 為了本文，我們將建立自訂範本，以顯示相同頁面上的自訂資產類型和OOTB資產類型。 若要建立自訂範本，請依照下列指示進行
 
 1. 建立吊索：資料夾。 將其命名為&quot; myportalcomponent &quot;
-1. 新增&quot;fpContentType&quot;屬性。 將其值設&#x200B;**為&quot;/libs/fd/fp/formTemplate&quot;。**
+1. 新增&quot;fpContentType&quot;屬性。 將其值設定為&quot;**/libs/fd/fp/formTemplate&quot;。**
 1. 新增「title」屬性，並將其值設為「自訂範本」。 這是您在Search and Lister元件下拉式清單中看到的名稱
 1. 在此資料夾下建立「template.html」。 此檔案會保留程式碼以設定樣式並顯示各種資產類型。
 
@@ -76,9 +76,9 @@ ht-degree: 0%
 >
 >若要在此範本中列出最適化表單，請建立新div，並將其資料類型屬性設為&quot;guide&quot;。 您可以複製並貼上div的data-type=&quot;printForm，並將新複製的div的data-type設為&quot;guide&quot;
 
-## 配置Search和Lister元件 {#configure-search-and-lister-component}
+## 配置搜索和Lister元件{#configure-search-and-lister-component}
 
-在定義自訂範本後，我們現在必須將此自訂範本與「搜尋與清單」元件建立關聯。 將您的瀏覽 [器指向此URL ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html)。
+在定義自訂範本後，我們現在必須將此自訂範本與「搜尋與清單」元件建立關聯。 將瀏覽器[指向此url ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html)。
 
 切換到「設計」模式，並將段落系統配置為在允許的元件組中包含Search And Lister元件。 Search and Lister元件是Document Services組的一部分。
 
@@ -108,10 +108,11 @@ Tab to the &quot;Display&quot; tab. 在此，您將選擇要在搜尋和清單�
 
 ![assettypes](assets/assettypes.png)
 
-現在您已設定好搜尋和Lister入口元件，是時候讓Lister開始運作了。 將您的瀏覽 [器指向此URL ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled)。 結果應該類似於下圖。
+現在您已設定好搜尋和Lister入口元件，是時候讓Lister開始運作了。 將瀏覽器[指向此url ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled)。 結果應該類似於下圖。
 
 >[!NOTE]
 >
->如果您的入口網站正在發佈伺服器上列出自訂資產類型，請確定您為節點 **/apps/fp/extensions/querybuilder的「fd-service」使用者提供「讀取」權限**
+>如果您的入口網站正在發佈伺服器上列出自訂資產類型，請確定您為節點&#x200B;**/apps/fp/extensions/querybuilder**&#x200B;的&quot;fd-service&quot;使用者提供「讀取」權限
 
-![assettypes](assets/assettypeslistings.png)[請使用套件管理器下載並安裝此套件。](assets/customassettypekt1.zip) 其中包含範例mp4和word檔案，以及xdp檔案，這些檔案將用作資產類型，以使用搜尋和lister元件列出
+![資](assets/assettypeslistings.png)
+[產類型請使用套件管理器下載並安裝此套件。](assets/customassettypekt1.zip) 其中包含範例mp4和word檔案，以及xdp檔案，這些檔案將用作資產類型，以使用搜尋和lister元件列出
