@@ -20,7 +20,7 @@ ht-degree: 34%
 
 # [!DNL Dispatcher] 簡介{#introduction-dispatcher}
 
-AEM架構的功能 [!DNL dispatcher] 與功能簡介。
+簡介[!DNL dispatcher]作為AEM架構一部分的功能與功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32029/?quality=12&learn=on)
 
