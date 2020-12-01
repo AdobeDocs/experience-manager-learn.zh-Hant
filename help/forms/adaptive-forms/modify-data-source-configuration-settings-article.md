@@ -30,5 +30,7 @@ ht-degree: 0%
 
 **AEM 6.4中的資料來源設定**
 
-![64DataSource設定](assets/64release.gif)**AEM 6.5和更高版本中的可編輯資料來源設定**![65DataSource設定](assets/modifiabledatasource.jfif)
+![64DataSource設](assets/64release.gif)
+**定AEM 6.5及以上版本的可編輯資料來源設定**
+![65DataSource設定](assets/modifiabledatasource.jfif)
 
