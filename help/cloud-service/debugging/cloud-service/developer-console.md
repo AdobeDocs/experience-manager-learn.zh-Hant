@@ -26,13 +26,13 @@ AEM as a Cloud Service為每個環境提供「開發人員主控台」，可公�
 
 ## Developer Console存取
 
-若要存取和使用Developer Console，必須透過 [Adobe的Admin Console為開發人員的Adobe ID提供下列權限](https://adminconsole.adobe.com)。
+若要存取和使用「開發人員主控台」，必須透過[Adobe的Admin Console](https://adminconsole.adobe.com)，為開發人員的Adobe ID提供下列權限。
 
 1. 確定已將Cloud Manger和AEM當做雲端服務產品的Adobe組織在Adobe組織切換器中處於作用中。
-1. 開發人員必須是Cloud Manager產品的開發人員——雲端服 __務產品設定檔__ 。
+1. 開發人員必須是Cloud Manager產品&#x200B;__的「開發人員——雲端服務」__&#x200B;產品設定檔的成員。
    + 如果此會籍不存在，開發人員將無法登入Developer Console。
-1. 開發人員必須是AEM Author和Publish服務的 __AEM Administrators__ Product Product Profile的成員。
-   + 如果此會籍不存在，狀 [態轉儲](#status) 將超時，並出現401未授權錯誤。
+1. 開發人員必須是AEM Author和Publish服務的&#x200B;__AEM Administrators__&#x200B;產品設定檔的成員。
+   + 如果此會籍不存在， [status](#status)轉儲將逾時，並出現401未授權錯誤。
 
 ### 疑難排解Developer Console存取
 
@@ -72,7 +72,7 @@ AEM（雲端服務作者）和Publish服務分別包含多個執行個體，以�
 
 ### 組合
 
-Bundles會列出AEM中的所有OSGi bundles。 此功能類似於 [AEM SDK的本機快速入門OSGi Bundles](http://localhost:4502/system/console/bundles) at `/system/console/bundles`。
+Bundles會列出AEM中的所有OSGi bundles。 此功能類似於[AEM SDK的本機快速入門的OSGi Bundles](http://localhost:4502/system/console/bundles)，位於`/system/console/bundles`。
 
 搭售除錯的說明，方法為：
 
@@ -82,7 +82,7 @@ Bundles會列出AEM中的所有OSGi bundles。 此功能類似於 [AEM SDK的本
 
 ### 元件
 
-元件會列出AEM中的所有OSGi元件。 此功能類似於 [AEM SDK的本機快速入門OSGi元件](http://localhost:4502/system/console/components) ，網址 `/system/console/components`。
+元件會列出AEM中的所有OSGi元件。 此功能類似於[AEM SDK的本機快速入門的OSGi元件](http://localhost:4502/system/console/components)，位於`/system/console/components`。
 
 元件在除錯時的說明，請依下列方式：
 
@@ -93,7 +93,7 @@ Bundles會列出AEM中的所有OSGi bundles。 此功能類似於 [AEM SDK的本
 
 ### 設定
 
-配置列出了所有OSGi元件的配置（OSGi屬性和值）。 此功能類似於 [AEM SDK的本機快速入門的OSGi Configuration Manager](http://localhost:4502/system/console/configMgr) ，網址 `/system/console/configMgr`為。
+配置列出了所有OSGi元件的配置（OSGi屬性和值）。 此功能類似於[AEM SDK的本機快速入門的OSGi Configuration Manager](http://localhost:4502/system/console/configMgr)，位於`/system/console/configMgr`。
 
 配置有助於調試，方法是：
 
@@ -102,7 +102,7 @@ Bundles會列出AEM中的所有OSGi bundles。 此功能類似於 [AEM SDK的本
 
 ### Oak Indexes
 
-Oak Indexes提供下面定義的節點轉儲 `/oak:index`。 請記住，這不會顯示合併索引，這會在修改AEM索引時發生。
+Oak Indexes提供在`/oak:index`下定義的節點轉儲。 請記住，這不會顯示合併索引，這會在修改AEM索引時發生。
 
 Oak Indexes在除錯時的說明：
 
@@ -110,7 +110,7 @@ Oak Indexes在除錯時的說明：
 
 ### OSGi服務
 
-元件列出所有OSGi服務。 此功能類似於 [AEM SDK的本機快速入門OSGi服務](http://localhost:4502/system/console/services) ，網址 `/system/console/services`為。
+元件列出所有OSGi服務。 此功能類似於[AEM SDK的本機快速入門的OSGi Services](http://localhost:4502/system/console/services)，位於`/system/console/services`。
 
 OSGi Services可協助除錯，方法如下：
 
@@ -118,7 +118,7 @@ OSGi Services可協助除錯，方法如下：
 
 ### Sling 工作
 
-Sling Jobs會列出所有Sling Jobs佇列。 此功能類似於 [AEM SDK本機快速入門的Jobs](http://localhost:4502/system/console/slingevent) at `/system/console/slingevent`。
+Sling Jobs會列出所有Sling Jobs佇列。 此功能類似於[AEM SDK的本機快速入門作業](http://localhost:4502/system/console/slingevent)（位於`/system/console/slingevent`）。
 
 Sling Jobs在除錯中的說明：
 
@@ -127,20 +127,20 @@ Sling Jobs在除錯中的說明：
 
 ## Java包
 
-Java套件可讓您檢查Java套件和版本是否可在AEM中以雲端服務的形式使用。 此功能與 [AEM SDK的本機快速入門相依性搜尋器(Dependency Finder](http://localhost:4502/system/console/depfinder) )相同 `/system/console/depfinder`。
+Java套件可讓您檢查Java套件和版本是否可在AEM中以雲端服務的形式使用。 此功能與[AEM SDK的本機快速入門相依性搜尋器](http://localhost:4502/system/console/depfinder)在`/system/console/depfinder`的功能相同。
 
 ![Developer Console - Java套件](./assets/developer-console/java-packages.png)
 
-Java Packages用於難以啟動Bundles，因為無法解析的匯入，或指令碼（HTL、JSP等）中的未解析類別。 如果Java包報告沒有包導出Java包（或版本與OSGi包導入的版本不匹配）:
+Java Packages用於難以啟動Bundles，因為無法解析的導入或指令碼（HTL、JSP等）中的未解析類。 如果Java包報告沒有包導出Java包（或版本與OSGi包導入的版本不匹配）:
 
 + 請確定您專案的AEM API Maven相依性版本符合環境的AEM Release版本（若可能，請將所有內容更新為最新版本）。
 + 如果Maven項目中使用了額外的Maven依賴項
    + 判斷是否可改用AEM SDK API相依性提供的替代API。
-   + 如果需要額外的相依性，請確定它是以OSGi包（而非純Jar）的形式提供，並且它嵌入到項目的代碼包中(`ui.apps`)，類似於核心OSGi包嵌入到包中的方 `ui.apps` 式。
+   + 如果需要額外的相依性，請確定它是以OSGi包（而非純Jar）的形式提供，並且它嵌入到項目的代碼包(`ui.apps`)中，類似於`ui.apps`包中嵌入核心OSGi包的方式。
 
 ## Servlet
 
-Servlet可用來分析AEM如何解析最終處理請求的Java servlet或指令碼(HTL、JSP)的URL。 此功能與 [AEM SDK的本機快速入門Sling Servlet解析程式](http://localhost:4502/system/console/servletresolver) ()相同 `/system/console/servletresolver`。
+Servlet可用來分析AEM如何解析最終處理請求的Java servlet或指令碼(HTL、JSP)的URL。 此功能與[AEM SDK本機快速入門的Sling Servlet Resolver](http://localhost:4502/system/console/servletresolver)在`/system/console/servletresolver`的功能相同。
 
 ![Developer Console - Servlets](./assets/developer-console/servlets.png)
 
@@ -151,7 +151,7 @@ Servlet有助於調試確定：
 
 ## 查詢
 
-查詢可協助您深入瞭解在AEM上執行搜尋查詢的方式與方式。 此功能與 [AEM SDK的本機快速入門工具>查詢效能控制 ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) 台相同。
+查詢可協助您深入瞭解在AEM上執行搜尋查詢的方式與方式。 此功能與[AEM SDK的本機快速入門工具>查詢效能](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)主控台相同。
 
 查詢僅在選取特定pod時運作，因為它會開啟該pod的Query Performance Web主控台，因此開發人員必須擁有登入AEM服務的存取權。
 
