@@ -15,7 +15,7 @@ ht-degree: 3%
 ---
 
 
-# 使用語言副本 {#using-language-copy}
+# 使用語言副本{#using-language-copy}
 
 透過AEM 6.3「建立語言副本精靈」網站轉譯增強功能，使用者可以從主版語言建立語言副本，而不需建立根頁面。
 
