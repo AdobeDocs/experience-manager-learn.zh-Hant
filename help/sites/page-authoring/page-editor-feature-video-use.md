@@ -20,7 +20,7 @@ ht-degree: 4%
 ---
 
 
-# 使用頁面編輯器 {#using-page-editor-with-aem-sites}
+# 使用頁面編輯器{#using-page-editor-with-aem-sites}
 
 AEM網站的頁面編輯器是建立和編輯網頁內容的強大工具。 頁面編輯器的工具和功能可從頁面編輯器的UI工具列存取。
 
