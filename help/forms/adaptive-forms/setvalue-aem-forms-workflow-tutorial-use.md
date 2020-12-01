@@ -44,18 +44,18 @@ LiveCycle過去會有設定值元件，可讓您設定XML元素的值。
 
 * [部署使用服務使用者套件進行開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [部署範例套件](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 這是自訂OSGI套件，可讓您在提交的xml資料中設定元素的值
+* [部署範例套件](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。這是自訂OSGI套件，可讓您在提交的xml資料中設定元素的值
 
 * [下載並解壓縮zip檔案的內容](assets/setvalueassets.zip)
-* 將您的瀏覽器指向套 [件管理員](http://localhost:4502/crx/packmgr/index.jsp)
+* 將瀏覽器指向[軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 * 匯入並安裝setValueWorkflow.zip。 此為範例工作流程模型。
-* 將您的瀏覽器指向表 [單和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 將瀏覽器指向[表單與檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下「建立」 |檔案上傳
 * 上傳TimeOfRequestForm.zip
-* 開啟 [TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
+* 開啟[TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
 * 填寫3個必填欄位並提交
 * 以「管理員」身分登入AEM（如果您尚未登入）
-* 前往「 [AEM收件匣」](http://localhost:4502/aem/inbox)
+* 前往[&quot;AEM Inbox&quot;](http://localhost:4502/aem/inbox)
 * 開啟「檢閱時間請求」表單
 * 請注意，第一個面板中的欄位已停用。 這是因為表單由審核者開啟。 此外，請注意，現在會顯示要核准或拒絕請求的面板
 
