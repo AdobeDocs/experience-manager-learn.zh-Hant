@@ -7,11 +7,11 @@ topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: cloud-service
 translation-type: tm+mt
-source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
+source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '374'
 ht-degree: 2%
 
 ---
@@ -20,11 +20,6 @@ ht-degree: 2%
 # 編寫內容片段{#authoring-content-fragments}
 
 「內容片段」是AEM中的內容抽象，可讓文字內容獨立於其支援的頻道進行製作和管理。
-
->[!NOTE]
->
->這些影片中涵蓋的AEM內容片段功能最初是在[AEM 6.3 + FP 19008和FP19614](https://helpx.adobe.com/experience-manager/6-3/release-notes/content-services-fragments-featurepack.html)中引進的。
-
 
 AEM內容片段是文字編輯內容，可能包含一些關聯的結構化資料元素，但視為純內容，而無設計或版面資訊。 內容片段通常建立為不受通道限制的內容，以便跨通道使用和重複使用，進而將內容包住特定內容的內容。
 
