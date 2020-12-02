@@ -41,12 +41,12 @@ ht-degree: 28%
    + [版本](./collaboration/versions.md)
    + [評論任務](./collaboration/review-task.md)
 
-+ 搜尋與探索{#search-and-discovery}
++ 搜索和發現{#search-and-discovery}
    + [搜尋](./search-and-discovery/search.md)
    + [集合](./search-and-discovery/collections.md)
    + [搜尋提升](./search-and-discovery/search-boost.md)
 
-+ 進階功能{#advanced}
++ 高級功能{#advanced}
    + [註解PDF輸出](./advanced/customizing-annotations-pdf-output.md)
    + [資產 Insights](./advanced/asset-insights-launch-tutorial.md)
    + [資產報表](./advanced/asset-reports.md)
@@ -60,7 +60,7 @@ ht-degree: 28%
    + [視訊智慧標記](metadata/video-smart-tags.md)
    + [匯入和匯出中繼資料](metadata/metadata-import-feature-video-use.md)
 
-+ 分享與散發{#sharing}
++ 共用與散發{#sharing}
    + [下載資產](./sharing/download.md)
    + [品牌入口網站](./sharing/brand-portal.md)
    + 資產共用{#assets-share}
