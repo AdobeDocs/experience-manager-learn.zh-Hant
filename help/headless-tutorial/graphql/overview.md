@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: null
 thumbnail: null
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 64d88ef98ec1fe3e2dbe727fc59b350bb0a2134b
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
@@ -37,12 +37,6 @@ ht-degree: 0%
 * 探索如何使用整合的GraphiQL開發工具來查詢AEM中的內容片段。
 * 從範例WKND GraphQL React應用程式使用AEM的GraphQL API
 * 使用片段參照執行進階資料模型
-
-## GraphQL概述
-
-以下影片概述在AEM中實作的GraphQL API。 AEM中的GraphQL API主要設計為將內容片段資料傳送至下游應用程式，做為無頭部署的一部分。
-
->[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
 
 ## GraphQL概述
 
