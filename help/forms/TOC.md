@@ -6,9 +6,9 @@ user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使
 breadcrumb-title: AEM Forms 教學課程
 index: y
 translation-type: tm+mt
-source-git-commit: 787a79663472711b78d467977d633e3d410803e5
+source-git-commit: c0db84f25334106c798d555c754d550113e91eac
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '899'
 ht-degree: 5%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 5%
    + [自定義分配任務通知](handling-form-submissions/customize-assign-task-notification.md)
 + 有用的整合{#some-useful-integrations}
    + [雙因素驗證](some-useful-integrations/two-factor-authentication.md)
+   + [OCR資料擷取](some-useful-integrations/ocr-data-extraction.md)
 
 + 適用性表單 {#adaptive-forms}
    + [在Windows上安裝AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
