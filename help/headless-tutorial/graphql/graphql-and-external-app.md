@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: null
 thumbnail: null
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 64d88ef98ec1fe3e2dbe727fc59b350bb0a2134b
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -208,40 +208,40 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
 1. 在IDE中，開啟檔案：`src/components/Adventures.js`。 此檔案代表家庭體驗的歷險元件，可查詢並顯示「歷險」卡片。
 1. 檢查未使用的函式`filterQuery(activity)`，但已準備好制定GraphQL查詢，該查詢按`activity`過濾歷險。
 
-請注意，參數`activity`會作為`adventureActivity`欄位中`filter`的一部分插入GraphQL查詢，要求該欄位的值與參數的值相符。
+   請注意，參數`activity`會作為`adventureActivity`欄位中`filter`的一部分插入GraphQL查詢，要求該欄位的值與參數的值相符。
 
-    &quot;
-    javascriptfunction filterQuery(activity){
-    return &#39;
-    
-    {adventures(filter:{
-    adventureActivity:{
-    _expressions:[
-    {
-    value:&quot;${activity}
-    }
-    ]
-    }){
-    items {
-    
-    
-    
-    
-    
-    
-    _pathadventureTripeventurePriceadventureTreghdventurePrimaryImage {..on ImageImage{
-    _
-    
-    
-    pathmimeTypewidthh
-    }
-    }
-    }
-    }
-    }{PathmimeTypewidthheight}Ref}
-    
-    
-    }LightRef}LightLight
+   ```javascript
+   function filterQuery(activity) {
+       return `
+           {
+           adventures (filter: {
+               adventureActivity: {
+               _expressions: [
+                   {
+                   value: "${activity}"
+                   }
+                 ]
+               }
+           }){
+               items {
+               _path
+               adventureTitle
+               adventurePrice
+               adventureTripLength
+               adventurePrimaryImage {
+               ... on ImageRef {
+                   _path
+                   mimeType
+                   width
+                   height
+               }
+               }
+             }
+         }
+       }
+       `;
+   }
+   ```
 
 1. 更新React Adventures元件的`return`陳述式，以新增呼叫新參數化`filterQuery(activity)`的按鈕，提供要列出的冒險。
 
