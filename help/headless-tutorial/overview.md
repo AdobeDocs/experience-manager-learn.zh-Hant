@@ -1,33 +1,58 @@
 ---
-title: AEM Headless 快速入門
-description: 端對端的教學課程，說明如何使用 AEM Headless 來建立和公開內容。
+title: AEM Headless教學課程
+description: 有關如何將Adobe Experience Manager用作無頭CMS的教學課程集。
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 10%
+source-wordcount: '364'
+ht-degree: 5%
 
 ---
 
 
-# AEM Headless 快速入門
+# AEM Headless教學課程
 
-端對端教學課程，說明如何在無頭CMS情境中使用AEM來建立和公開內容，並由原生行動應用程式使用。
+Adobe Experience Manager提供多種選項來定義無頭端點並將其內容傳送為JSON。 使用實際操作教學課程來探索如何使用各種選項並選擇適合您的選項。
 
->[!VIDEO](https://video.tv.adobe.com/v/28315/?quality=12&learn=on)
+## AEM GraphQL API教學課程
 
-本教學課程探討如何使用AEM Content Services來強化顯示「活動」資訊（音樂、效能、藝術等）的行動應用程式體驗 由世界開發組織的團隊組織。
+>[!CAUTION]
+>
+> AEM GraphQL API的內容片段傳送將於2021年初發行。
+> 相關檔案可供預覽使用。
 
-本教學課程將涵蓋下列主題：
+AEM的GraphQL內容片段API
+支援無頭CMS藍本，其中外部用戶端應用程式使用AEM中管理的內容來呈現體驗。
 
-* 使用內容片段建立代表事件的內容
-* 使用AEM Sites的範本和將事件資料公開為JSON的頁面，定義AEM Content Services端點
-* 探索如何使用AEM WCM核心元件讓行銷人員製作JSON端點
-* 從行動應用程式使用AEM Content Services JSON
-   * 使用Android是因為本教學課程的所有使用者（Windows、macOS和Linux）都可使用它來執行原生應用程式，因此它具備跨平台模擬器。
+現代化的內容傳送API是Javascript前端應用程式效率與效能的關鍵。 使用REST API會帶來挑戰：
 
-## GitHub專案
+* 一次提取一個對象的大量請求
+* 通常是「超量傳送」內容，這表示應用程式所接收的內容超出其需求
 
-您可在[AEM Guides - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile)中取得原始碼和內容套件。
+為克服這些挑戰，GraphQL提供以查詢為基礎的API，讓客戶僅查詢AEM所需的內容，並使用單一API呼叫接收。
 
-如果您發現教學課程或程式碼有問題，請留下[GitHub問題](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
+* 瞭解如何使用AEM的GraphQL API，請參閱[ AEM GraphQL APIs快速入門教學課程](./graphql/overview.md)
+
+## AEM Content Services教學課程
+
+AEM的Content Services運用傳統的AEM Pages來合成無頭REST API端點，而AEM Components會定義或參考要在這些端點上公開的內容。
+
+AEM Content Services允許使用與在AEM Sites中製作網頁時相同的內容抽象化，來定義這些HTTP API的內容和結構。 使用AEM頁面和AEM元件可讓行銷人員快速合成和更新可支援任何應用程式的彈性JSON API。
+
+* 瞭解如何使用AEM的Content Services，請參閱[AEM Content Services快速入門教學課程](./content-services/overview.md)
+
+## AEM GraphQL與AEM Content Services比較
+
+|  | AEM GraphQL API | AEM Content Services |
+|--------------------------------|:-----------------|:---------------------|
+| 架構定義 | 結構化內容片段模型 | AEM元件 |
+| 內容 | 內容片段 | AEM元件 |
+| 內容探索 | 按GraphQL查詢 | 依AEM頁面 |
+| 傳送格式 | GraphQL JSON | AEM ComponentExporter JSON |
+
+## 其他實用的教學課程
+
+其他與無頭概念相關的AEM教學課程包括：
+
+* [AEM SPA Editor and Angular 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
+* [AEM SPA Editor and React 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
