@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: null
 thumbnail: null
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 2e0352b051bf25a491b67468a76522084e53a71f
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
@@ -109,27 +109,15 @@ ht-degree: 1%
 >
 > 如果使用雲服務環境，請參閱如何[將WKND參考網站等程式碼庫部署至雲服務環境的檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#deploying)。
 
-## 允許GraphQL請求
+## 安裝GraphQL端點{#graphql-endpoint}
 
-AEM依預設是安全的，會封鎖跨原始碼要求，防止未授權的應用程式連線及呈現其內容。
+需要配置GraphQL端點。 這為項目提供了確定GraphQL API公開的確切端點的靈活性。 還需要[CORS](#cors-config)來授與對外部應用程式的存取權。 為加速教學課程，已預先建立套件。
 
-若要允許本教學課程的React應用程式與AEM的GraphQL API端點互動，請定義跨原始資源共用設定。
+1. 下載[aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip](./assets/setup/aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip)套件。
+1. 從&#x200B;**AEM Start**&#x200B;功能表導覽至&#x200B;**Tools** > **Deployment** > **Packages**。
+1. 按一下&#x200B;**上傳包**&#x200B;並選擇在上一步中下載的包。 按一下&#x200B;**Install**&#x200B;安裝軟體包。
 
-![跨原始資源共用配置](./assets/setup/cross-origin-resource-sharing-configuration.png)
-
-1. 導覽至AEM SDK的Web Console，網址為&#x200B;**Tools** > **Operations** > **Web Console**
-1. 按一下標示&#x200B;**Adobe Granite跨原始資源共用政策**&#x200B;的列，以建立新的設定
-1. 更新下列欄位，將其他欄位保留為預設值：
-   * 允許的來源：`localhost:3000`
-   * 允許的來源(Regex):`.* `
-   * 允許的路徑: `/content/graphql/endpoint.gql`
-   * 允許的方法：`GET`、`HEAD`、`POST`
-      * GraphQL只需要`POST`，但是其他方法在以無頭方式與AEM互動時可能很有用。
-   * 支援憑據：`Yes`
-      * 當我們的React應用程式將與AEM Author服務上受保護的GraphQL端點通訊時，這是必要項。
-1. 按一下&#x200B;**保存**
-
-此設定允許從`localhost:3000`發起的`POST` HTTP請求，以至路徑`/content/graphql/endpoint.gql`上的AEM Author服務。
+上述軟體包還包含[GraphiQL工具](https://github.com/graphql/graphiql)，將用於後續章節。 有關CORS組態的詳細資訊，請參閱[下方的](#cors-config)。
 
 ## 安裝範例應用程式{#sample-app}
 
@@ -209,3 +197,29 @@ AEM依預設是安全的，會封鎖跨原始碼要求，防止未授權的應�
 ## 後續步驟{#next-steps}
 
 在下一章[定義內容片段模型](content-fragment-models.md)中，瞭解如何建立內容模型，並使用&#x200B;**內容片段模型**&#x200B;建立架構。 您將查看現有模型並建立新模型。 您還將瞭解可用於定義模式作為模型一部分的不同資料類型。
+
+## （額外）CORS設定{#cors-config}
+
+AEM依預設是安全的，會封鎖跨原始碼要求，防止未授權的應用程式連線及呈現其內容。
+
+為了讓本教學課程的React應用程式與AEM的GraphQL API端點互動，GraphQL端點套件中已定義跨原始資源共用設定。
+
+![跨原始資源共用配置](./assets/setup/cross-origin-resource-sharing-configuration.png)
+
+若要手動設定：
+
+1. 導覽至AEM SDK的Web Console，網址為&#x200B;**Tools** > **Operations** > **Web Console**
+1. 按一下標示&#x200B;**Adobe Granite跨原始資源共用政策**&#x200B;的列，以建立新的設定
+1. 更新下列欄位，將其他欄位保留為預設值：
+   * 允許的來源：`localhost:3000`
+   * 允許的來源(Regex):`.* `
+   * 允許的路徑: `/content/graphql/endpoint.gql`
+   * 允許的方法：`GET`、`HEAD`、`POST`
+      * GraphQL只需要`POST`，但是其他方法在以無頭方式與AEM互動時可能很有用。
+   * 支援憑據：`Yes`
+      * 當我們的React應用程式將與AEM Author服務上受保護的GraphQL端點通訊時，這是必要項。
+1. 按一下&#x200B;**保存**
+
+此設定允許從`localhost:3000`發起的`POST` HTTP請求，以至路徑`/content/graphql/endpoint.gql`上的AEM Author服務。
+
+此配置和GraphQL端點是從AEM Project產生的。 [在這裡檢視詳細資訊](https://github.com/adobe/aem-guides-wknd-graphql/tree/master/aem-project)。
