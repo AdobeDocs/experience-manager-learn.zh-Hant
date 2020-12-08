@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Sites 的影片和教學課程�
 breadcrumb-title: AEM Sites 教學課程
 sub-product: sites
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: 16c73d19584eefff3c9551d2a3174b5b8ed6d427
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 10%
+source-wordcount: '441'
+ht-degree: 15%
 
 ---
 
@@ -16,36 +16,36 @@ ht-degree: 10%
 
 + [概覽](overview.md)
 + 頁面編寫{#page-authoring}
-   + [編寫概觀](page-authoring/aem-sites-authoring-overview.md)
-   + [AEM Sites中的基本導覽與處理](page-authoring/basic-handling-sites-feature-video-use.md)
-   + [AEM Sites中的內容階層](page-authoring/content-hierarchy-feature-video-use.md)
-   + [AEM Sites中的頁面製作](page-authoring/page-authoring-overview-feature-video-use.md)
-   + [建立新頁面](page-authoring/creating-page-feature-video-use.md)
-   + [使用頁面編輯器](page-authoring/page-editor-feature-video-use.md)
-   + [瞭解互動式版面](page-authoring/responsive-layout-feature-video-understand.md)
-   + [AEM網站中的頁面標籤](page-authoring/page-tagging-feature-video-use.md)
+   + [製作](page-authoring/aem-sites-authoring-overview.md)
+   + [導覽](page-authoring/basic-handling-sites-feature-video-use.md)
+   + [網站結構](page-authoring/content-hierarchy-feature-video-use.md)
+   + [頁面建立](page-authoring/creating-page-feature-video-use.md)
+   + [頁面編寫](page-authoring/page-authoring-overview-feature-video-use.md)
+   + [頁面編輯器](page-authoring/page-editor-feature-video-use.md)
+   + [頁面標籤](page-authoring/page-tagging-feature-video-use.md)
    + [頁面版本控制](page-authoring/page-versioning-feature-video-use.md)
-   + [比較頁面版本](page-authoring/page-diff-feature-video-use.md)
-   + [瞭解頁面屬性](page-authoring/page-properties-feature-video-understand.md)
-   + [基本頁面操作](page-authoring/page-operations-feature-video-use.md)
-   + [發佈頁面](page-authoring/publication-management-feature-video-use.md)
-   + [使用可編輯的頁面範本](page-authoring/template-editor-feature-video-use.md)
-   + [使用樣式系統](page-authoring/style-system-feature-video-use.md)
-   + [使用時間彎曲](page-authoring/timewarp-feature-video-use.md)
+   + [頁面版本比較](page-authoring/page-diff-feature-video-use.md)
+   + [頁面內容](page-authoring/page-properties-feature-video-understand.md)
+   + [頁面操作](page-authoring/page-operations-feature-video-use.md)
+   + [版面模式](page-authoring/responsive-layout-feature-video-understand.md)
+   + [發佈](page-authoring/publication-management-feature-video-use.md)
+   + [可編輯的範本](page-authoring/template-editor-feature-video-use.md)
+   + [樣式系統](page-authoring/style-system-feature-video-use.md)
+   + [Timewarp](page-authoring/timewarp-feature-video-use.md)
 + 元件 {#components}
    + [元件開發](components/component-development.md)
-   + [瞭解核心元件](components/core-components-feature-video-understand.md)
-   + [使用元件控制台](components/components-console-feature-video-use.md)
+   + [核心元件](components/core-components-feature-video-understand.md)
+   + [元件主控台](components/components-console-feature-video-use.md)
 + 內容片段 {#content-fragments}
    + [編寫內容片段](content-fragments/content-fragments-feature-video-use.md)
    + [傳送內容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
-   + [將翻譯與內容片段搭配使用](content-fragments/content-fragments-translation-feature-video-use.md)
-   + [瞭解內容片段與體驗片段](content-fragments/understand-content-fragments-and-experience-fragments.md)
+   + [使用內容片段翻譯](content-fragments/content-fragments-translation-feature-video-use.md)
+   + [內容片段與體驗片段](content-fragments/understand-content-fragments-and-experience-fragments.md)
 + 體驗片段 {#experience-fragments}
    + [使用體驗片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [瞭解體驗片段](experience-fragments/experience-fragments-feature-video-understand.md)
    + [設定包含體驗片段的社交貼文](experience-fragments/experience-fragments-social-technical-video-setup.md)
-   + [瞭解內容片段與體驗片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + [內容片段與體驗片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 開發 {#developing}
    + [AEM Project Archetype](developing/aem-project-archetype.md)
    + [AEM Sites快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
