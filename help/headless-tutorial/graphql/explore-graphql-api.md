@@ -8,12 +8,12 @@ doc-type: tutorial
 activity: develop
 audience: developer
 mini-toc-levels: 1
-kt: null
-thumbnail: null
+kt: 6714
+thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -278,6 +278,10 @@ AEM的GraphQL API提供功能強大的查詢語言，可將內容片段的資料
   }
 }
 ```
+
+## 其他資源
+
+有關GraphQL查詢的更多示例，請參見：[學習搭配使用GraphQL與AEM —— 範例內容與查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)。
 
 ## 恭喜！{#congratulations}
 
