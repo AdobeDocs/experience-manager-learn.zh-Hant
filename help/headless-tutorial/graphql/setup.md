@@ -8,12 +8,12 @@ doc-type: tutorial
 activity: develop
 audience: developer
 mini-toc-levels: 1
-kt: null
-thumbnail: null
+kt: 6386
+thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: 2e0352b051bf25a491b67468a76522084e53a71f
+source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1590'
 ht-degree: 1%
 
 ---
@@ -67,6 +67,10 @@ ht-degree: 1%
 1. 提供管理員密碼作為`admin`。 任何管理員密碼都可接受，但建議使用本端開發的預設密碼，以減少重新設定的需要。
 1. 幾分鐘後，AEM實例將完成安裝，而新的瀏覽器視窗應會在[http://localhost:4502](http://localhost:4502)開啟。
 1. 使用用戶名`admin`和密碼`admin`登錄。
+
+>[!CAUTION]
+>
+> 若要繼續設定，GraphQL功能現在必須在Quickstart SDK上手動啟用。 請洽詢您的Adobe聯絡人，以取得進一步指示。 只有在2021年推出功能之前，才需要此手動步驟。
 
 ## 安裝範例內容{#wknd-site}
 
