@@ -5,10 +5,10 @@ breadcrumb-title: AEM Assets 教學課程
 sub-product: 資產
 team: TM
 translation-type: tm+mt
-source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+source-git-commit: aa349fba9e0f1df97316105ada62ff9b32501573
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 28%
+source-wordcount: '257'
+ht-degree: 27%
 
 ---
 
@@ -102,6 +102,7 @@ ht-degree: 28%
    + [Dynamic Media Classic案頭應用程式](dynamic-media/dynamic-media-classic-desktop-application.md)
    + [動態媒體3D](dynamic-media/dynamic-media-3d-feature-video.md)
    + [動態媒體智慧型裁切視訊](dynamic-media/dynamic-media-smart-crop-video.md)
+   + [動態媒體核心元件](dynamic-media/dynamic-media-core-components.md)
 
 + 轉換 {#translation}
    + [源檔案轉換](translation/source-file-translation-feature-video-use.md)
