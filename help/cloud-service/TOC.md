@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: 雲端服務
 team: TM
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '205'
 ht-degree: 31%
 
 ---
@@ -51,6 +51,7 @@ ht-degree: 31%
    + [設定AEM逐步存取權](./accessing/walk-through.md)
 + 遷移{#migration}
    + [內容轉移工具](./migration/content-transfer-tool.md)
+   + [大量匯入資產](./migration/bulk-import.md)
 + 資產計算擴充性{#asset-compute}
    + [概覽](./asset-compute/overview.md)
    + 設定{#set-up}
