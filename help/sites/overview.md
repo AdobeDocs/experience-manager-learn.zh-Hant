@@ -5,10 +5,10 @@ description: 'Adobe Experience Manager Sites 的影片和教學課程系列。 '
 seo-description: Adobe Experience Manager Sites的視訊和教學課程集
 sub-product: 網站，內容服務
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 13%
+source-wordcount: '337'
+ht-degree: 16%
 
 ---
 
@@ -19,21 +19,13 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
 
 ## 新增功能
 
-* **[AEM SPA編輯器與React快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html) （教學課程）**
+* **[使用AEM元件自訂Adobe用戶端資料層](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
-   *開發人員使用React整合單一頁面應用程式(SPA)與AEM的快速入門手冊*
+   *瞭解如何使用自訂AEM元件的內容更新Adobe用戶端資料層。*
 
-* **[AEM SPA編輯器和Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) （教學課程）快速入門**
+* **[AEM無頭圖形QL快速入門（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *開發人員使用Angular整合單一頁面應用程式(SPA)與AEM的快速入門手冊*
-
-* **[AEM Headless快速入門（教學課程）](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)**
-
-   *如何在無頭CMS案例中，從AEM公開內容，讓原生行動應用程式使用。*
-
-* **[使用體驗片段（視訊系列）](./experience-fragments/experience-fragments-feature-video-use.md)**
-
-   *瞭解AEM體驗片段，以推廣跨通道的內容。*
+   *如何使用AEM的GraphQL API，將AEM的內容公開給原生行動應用程式使用。*
 
 * **[使用內容片段（視訊系列）](./content-fragments/content-fragments-feature-video-use.md)**
 
