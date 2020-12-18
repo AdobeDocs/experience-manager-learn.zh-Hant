@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6261
 thumbnail: 41195.jpg
 translation-type: tm+mt
-source-git-commit: e13a5171fbeb9e1eb5f78d1c691bc8b4b896a998
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '788'
 ht-degree: 1%
 
 ---
@@ -174,6 +174,8 @@ Adobe用戶端資料層採用標準方法來收集和儲存網頁上訪客體驗
 ## 後續步驟
 
 請參閱下列教學課程，瞭解如何使用事件導向的Adobe用戶端資料層來收集頁面資料並傳送至Adobe Analytics[。](../analytics/collect-data-analytics.md)
+
+或者，瞭解如何[使用AEM元件自訂Adobe用戶端資料層](./data-layer-customize.md)
 
 
 ## 其他資源 {#additional-resources}
