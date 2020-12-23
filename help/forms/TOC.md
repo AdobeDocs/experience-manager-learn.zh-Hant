@@ -6,10 +6,10 @@ user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使
 breadcrumb-title: AEM Forms 教學課程
 index: y
 translation-type: tm+mt
-source-git-commit: c0db84f25334106c798d555c754d550113e91eac
+source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 5%
+source-wordcount: '902'
+ht-degree: 6%
 
 ---
 
@@ -169,7 +169,7 @@ ht-degree: 5%
    + [Part3 —— 使用ACS配置檔案資訊預填充表單](aem-forms-with-adobe-campaign/partthree.md)
    + [Part4 —— 使用表單資料模型建立ACS配置檔案](aem-forms-with-adobe-campaign/partfour.md)
 
-+ 檔案服務{#document-services}
++ 文件服務 {#document-services}
    + [在AEM Forms中使用Assembler Service](document-services/using-assembler-service-in-aem-forms.md)
    + [在AEM表格中使用Watched資料夾](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms中使用條碼服務](document-services/barcode-service-adaptive-forms-article.md)
@@ -182,6 +182,7 @@ ht-degree: 5%
    + [將使用權限套用至已上傳的PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [認證檔案](document-services/certifying-documents-aem-forms-tutorial.md)
    + [組合表單附件](document-services/assemble-form-attachments.md)
+   + [實用的實用程式服務](document-services/useful-utility-services.md)
 + 印刷頻道的互動式通訊
 {#ic-print-channel-tutorial}
    + [簡介](ic-print-channel-tutorial/introduction.md)
