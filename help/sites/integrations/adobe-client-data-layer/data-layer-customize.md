@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6265
 thumbnail: KT-6265.jpg
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: 46936876de355de9923f7a755aa6915a13cca354
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2027'
 ht-degree: 1%
 
 ---
@@ -112,6 +112,8 @@ ht-degree: 1%
 1. 將以下導入語句添加到檔案的開頭：
 
    ```java
+   import java.util.HashMap;
+   import java.util.Map;
    import org.apache.sling.api.resource.Resource;
    import com.fasterxml.jackson.core.JsonProcessingException;
    import com.fasterxml.jackson.databind.ObjectMapper;
@@ -163,17 +165,6 @@ ht-degree: 1%
 
    `ObjectMapper`可用來序列化屬性並傳回JSON字串。 然後，此JSON字串可插入資料層。
 
-1. 在`core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java`開啟檔案`package-info.java`，並將版本從`1.0`更新為`2.0`:
-
-   ```java
-   @Version("2.0")
-   package com.adobe.aem.guides.wknd.core.models;
-   
-   import org.osgi.annotation.versioning.Version;
-   ```
-
-   由於介面`Byline.java`已更改，因此必須更新Java軟體包版本。
-
 1. 開啟終端窗口。 使用您的Maven技巧，只建立和部署`core`模組：
 
    ```shell
@@ -194,13 +185,11 @@ ht-degree: 1%
 
 1. 更新`byline.html`以包含`data-cmp-data-layer`屬性：
 
-   ```html
-    <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
+   ```diff
+     <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
        data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
        data-sly-test.hasContent="${!byline.empty}"
-       <!--/* Add the data-cmp-data-layer */-->
-       data-cmp-data-layer="${byline.data}"
-   
+   +   data-cmp-data-layer="${byline.data}"
        class="cmp-byline">
        ...
    ```
@@ -256,8 +245,11 @@ Adobe用戶端資料層是事件導向，觸發動作的最常見事件之一是
 
 1. 更新`byline.html`，將`data-cmp-clickable`屬性包含在Byline的&#x200B;**name**&#x200B;元素中：
 
-   ```html
-   <h2 class="cmp-byline__name" data-cmp-clickable>${byline.name}</h2>
+   ```diff
+     <h2 class="cmp-byline__name" 
+   +    data-cmp-clickable="${byline.data ? true : false}">
+        ${byline.name}
+     </h2>
    ```
 
 1. 開啟新的終端機。 使用您的Maven技巧，只建立和部署`ui.apps`模組：
@@ -289,7 +281,7 @@ Adobe用戶端資料層是事件導向，觸發動作的最常見事件之一是
 
    ```javascript
    window.adobeDataLayer.push(function (dl) {
-        dl.addEventListener("cmp:show", bylineClickHandler);
+        dl.addEventListener("cmp:click", bylineClickHandler);
    });
    ```
 
@@ -419,6 +411,13 @@ Adobe用戶端資料層是事件導向，觸發動作的最常見事件之一是
    ```
 
    請注意，`byline`元件條目中現在有`image`對象。 這會提供更多有關DAM中資產的資訊。 另請注意，`@type`和唯一ID（在本例中為`byline-136073cfcb`）已自動填入，以及`repo:modifyDate`在修改元件時指示的值。
+
+## 其他範例{#additional-examples}
+
+1. 延伸資料層的另一個範例是檢查WKND程式碼庫中的`ImageList`元件：
+   * `ImageList.java` -模組中的Java `core` 介面。
+   * `ImageListImpl.java` -模組中的Sling `core`  Model。
+   * `image-list.html` -模組中的HTL `ui.apps` 模板。
 
    >[!NOTE]
    >
