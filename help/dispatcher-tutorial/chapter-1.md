@@ -4,7 +4,7 @@ seo-title: AEM Content Services快速入門——第1章——教學課程設定
 description: AEM Headless教學課程的第1章，說明教學課程的AEM例項的基準設定。
 seo-description: AEM Headless教學課程的第1章，說明教學課程的AEM例項的基準設定。
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 52824c178ddf930df134608ecb01bb661d6c514c
 workflow-type: tm+mt
 source-wordcount: '17502'
 ht-degree: 0%
@@ -599,7 +599,7 @@ Dispatcher的失效請求通常由複製代理從Publish系統引發。
 >
 >這是反模式。 不要使用它。 永遠。
 
-您有沒有看過像`?ck=398547283745`這樣的查詢參數？ 它們稱為快取殺手(「ck」)。 其思想是，如果添加任何查詢參數，則不會訪問資源。 此外，如果您新增隨機數作為參數的值（例如&quot;398547283745&quot;）,URL將變為唯一，您確定AEM系統和螢幕之間的其他快取也無法快取。 通常的中間人懷疑是Dispatcher、CDN或甚至瀏覽器快取之前的「清漆」快取。 同樣：別這樣。 您確實希望盡可能多地快取您的資源。 快取是你的朋友。 別殺朋友。
+您有沒有看過像`?ck=398547283745`這樣的查詢參數？ 它們稱為快取殺手(「ck」)。 其思想是，如果添加任何查詢參數，則不會快取資源。 此外，如果您新增隨機數作為參數的值（例如&quot;398547283745&quot;）,URL將變為唯一，您確定AEM系統和螢幕之間的其他快取也無法快取。 通常的中間人懷疑是Dispatcher、CDN或甚至瀏覽器快取之前的「清漆」快取。 同樣：別這樣。 您確實希望盡可能多地快取您的資源。 快取是你的朋友。 別殺朋友。
 
 #### 自動失效
 
