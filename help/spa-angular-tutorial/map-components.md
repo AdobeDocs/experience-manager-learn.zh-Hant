@@ -11,7 +11,7 @@ audience: developer
 kt: 5311
 thumbnail: 5311-spa-angular.jpg
 translation-type: tm+mt
-source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
+source-git-commit: 28b5522e094a41d81116acb923dc0390478e2308
 workflow-type: tm+mt
 source-wordcount: '2387'
 ht-degree: 0%
@@ -481,7 +481,7 @@ AEM SPA編輯器SDK會自動提供對&#x200B;**版面容器**&#x200B;的支援�
 
    ![VSCode匯入範本](assets/map-components/import-aem-servervscode.png)
 
-4. 重複這些步驟以導入內容，但選擇位於`/conf/wknd-spa-angular/settings/wcm/templates/policies`的&#x200B;**policys**&#x200B;資料夾。
+4. 重複這些步驟以導入內容，但選擇位於`/conf/wknd-spa-angular/settings/wcm/policies`的&#x200B;**policys**&#x200B;資料夾。
 
 5. 檢查位於`ui.content/src/main/content/META-INF/vault/filter.xml`的`filter.xml`檔案。
 
