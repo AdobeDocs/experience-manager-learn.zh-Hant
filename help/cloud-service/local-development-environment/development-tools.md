@@ -10,7 +10,7 @@ audience: developer
 kt: 4267
 thumbnail: 25907.jpg
 translation-type: tm+mt
-source-git-commit: cb5f3c323c433c9321ba26ac1194be0cd225a405
+source-git-commit: debf13d8e376979548bcbf55f71661d8cb8eb823
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 0%
@@ -132,7 +132,7 @@ Adobe I/O Cloud Manager增效模組可讓aio CLI透過`aio cloudmanager`命令�
 
 Adobe I/O Cloud Manager插件允許aio CLI通過`aio asset-compute`命令生成並運行資產計算工作器。
 
-1. 執行`aio plugins:install @adobe/aio-cli-plugin-cloudmanager`以安裝[aio Asset Compute插件](https://github.com/adobe/aio-cli-plugin-asset-compute)。
+1. 執行`aio plugins:install @adobe/aio-cli-plugin-asset-compute`以安裝[aio Asset Compute插件](https://github.com/adobe/aio-cli-plugin-asset-compute)。
 
 ### 設定Adobe I/O CLI身份驗證
 
