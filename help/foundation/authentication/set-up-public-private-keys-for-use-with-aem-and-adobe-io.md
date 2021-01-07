@@ -9,9 +9,9 @@ audience: architect, developer, implementer
 doc-type: tutorial
 kt: 2450
 translation-type: tm+mt
-source-git-commit: c85a59a8bd180d5affe2a5bf5939dabfb2776d73
+source-git-commit: 3f973e36531a2d04cbaf6bb8dd70b39fef7d8b2f
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -114,10 +114,14 @@ AEM使用產生的&#x200B;**私密金鑰**&#x200B;與Adobe I/O和其他網站服
 在用戶的密鑰庫控制台中，按一下「從KeyStore檔案&#x200B;**[!UICONTROL 添加私密密鑰」並添加以下資訊：]**
 
 * **[!UICONTROL 新別名]**:AEM中的金鑰別名。這可以是任何內容，不必與使用openssl命令建立的密鑰庫的名稱相對應。
-* **[!UICONTROL 密鑰庫檔案]**:openssl pkcs12命令(keystore.p12)的輸出
-* **[!UICONTROL 私密金鑰別名]**:在openssl pkcs12命令中通過參數設定的 `-  passout` 口令。
+* **[!UICONTROL KeyStore檔案]**:openssl pkcs12命令(keystore.p12)的輸出
+* **[!UICONTROL KeyStore檔案密碼]**:在openssl pkcs12命令中通過參數設定的 `-passout` 口令。
+* **[!UICONTROL 私密金鑰別名]**:上述openssl pkcs12命 `-name` 令中為引數提供的值(即 `my-key`)。
+* **[!UICONTROL 私密金鑰密碼]**:在openssl pkcs12命令中通過參數設定的 `-passout` 口令。
 
-* **[!UICONTROL 私密金鑰密碼]**:在openssl pkcs12命令中通過參數設定的 `-  passout` 口令。
+>[!CAUTION]
+>
+>KeyStore檔案密碼和私密金鑰密碼對於這兩項輸入都相同。 輸入不相符的密碼將導致無法匯入金鑰。
 
 ### 驗證私密金鑰是否已載入AEM金鑰庫{#verify-the-private-key-is-loaded-into-the-aem-keystore}
 
