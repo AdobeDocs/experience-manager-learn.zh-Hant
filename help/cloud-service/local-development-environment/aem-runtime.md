@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: 4cfbf975919eb38413be8446b70b107bbfebb845
+source-git-commit: 398b9f855556fc425b034986a7f21159297dcba5
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1614'
 ht-degree: 1%
 
 ---
@@ -111,6 +111,39 @@ $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
 $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
+
+## 模擬內容分發{#content-distribution}
+
+在真正的雲端服務環境中，使用[Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe Pipeline，將內容從作者服務散發至Publish Service。 [Adobe Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution)是獨立的微型服務，僅適用於雲端環境。
+
+在開發期間，可能需要使用本機「作者」和「發佈」服務來模擬內容的發佈。 這可以通過啟用舊式複製代理來實現。
+
+>[!NOTE]
+>
+> 複製代理僅可用於本地快速啟動JAR中，並僅提供內容分發的模擬。
+
+1. 登入&#x200B;**Author**&#x200B;服務並導覽至[http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html)。
+1. 按一下&#x200B;**預設代理（發佈）**&#x200B;開啟預設的複製代理。
+1. 按一下&#x200B;**編輯**&#x200B;以開啟代理的配置。
+1. 在&#x200B;**Settings**&#x200B;標籤下，更新下列欄位：
+
+   + **啟用** -檢查是否為真
+   + **代理用戶Id**  —— 將此欄位留空
+
+   ![複製代理配置——設定](assets/aem-runtime/settings-config.png)
+
+1. 在&#x200B;**Transport**&#x200B;標籤下，更新以下欄位：
+
+   + **URI** -  `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
+   + **用戶** -  `admin`
+   + **密碼** -  `admin`
+
+   ![複製代理配置——傳輸](assets/aem-runtime/transport-config.png)
+
+1. 按一下&#x200B;**確定**&#x200B;保存配置並啟用&#x200B;**預設**&#x200B;複製代理。
+1. 您現在可以變更「作者」服務的內容，並將它們發佈至「發佈」服務。
+
+![發佈頁面](assets/aem-runtime/publish-page-changes.png)
 
 ## 快速啟動Jar啟動模式
 
