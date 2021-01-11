@@ -1,19 +1,16 @@
 ---
 title: 在AEM資產中使用中繼資料匯入和匯出
-seo-title: 在AEM資產中使用中繼資料匯入和匯出
 description: AEM Assets中繼資料匯入和匯出功能可讓內容作者輕鬆將資產中繼資料移入和移出AEM，並運用Microsoft Excel的強大功能來大規模控制中繼資料，以利AEM中現有資產的大量更新中繼資料。
-seo-description: AEM Assets中繼資料匯入和匯出功能可讓內容作者輕鬆將資產中繼資料移入和移出AEM，並運用Microsoft Excel的強大功能來大規模控制中繼資料，以利AEM中現有資產的大量更新中繼資料。
-uuid: db7e57a4-b0c1-4a48-906d-802c19964313
-discoiquuid: 72dd9230-73e1-454e-a3e0-9281e621d901
 topics: metadata
 audience: all
 doc-type: feature video
 activity: use
+kt: 647
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 2c0818d0223a3db55e6407068f4802b9e7f7dd83
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '256'
 ht-degree: 1%
 
 ---
@@ -56,7 +53,7 @@ AEM Assets中繼資料匯入和匯出功能可讓內容作者輕鬆將資產中�
 
 * 屬性名稱區分大小寫
    * 正確：`dc:title {{String}}`
-   * 錯誤：`Dc:Ttle {{String}}`
+   * 錯誤：`Dc:Title {{String}}`
 
 * 屬性類型不區分大小寫
 * 所有有效的[JCR屬性類型](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)都受支援
