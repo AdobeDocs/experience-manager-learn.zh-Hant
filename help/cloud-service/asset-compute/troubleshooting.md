@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 649d971ecaa67c0d1dd2636f3c212bfee3d13561
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,15 @@ ht-degree: 0%
 + __解析度__:檢閱自訂工作程式碼，並確保所有非同步呼叫都是使用同步呼叫 `await`。
 
 ## 開發工具{#development-tool}
+
+### Asset Compute專案中遺失Console.json檔案{#missing-console-json}
+
++ __錯誤：錯__ 誤：在驗證時缺少所需檔案(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY)，位於async setupAssetCompute(.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __原因：__ 資 `console.json` 產計算項目根目錄中缺少檔案
++ __解析度：__ 下載新 `console.json` 的Adobe I/O專案表單
+   1. 在console.adobe.io中，開啟Asset Compute專案設定為使用的Adobe I/O專案
+   1. 點選右上角的&#x200B;__Download__&#x200B;按鈕
+   1. 使用檔案名`console.json`將下載的檔案保存到資產計算項目的根目錄
 
 ### manifest.yml{#incorrect-yaml-indentation}中的YAML縮排不正確
 
@@ -95,7 +104,6 @@ ht-degree: 0%
    + 或者，在`/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`驗證測試產生的檔案，驗證其正確性，並將它當做預期的轉譯檔案使用
 
 ## 偵錯
-
 
 ### 除錯程式未附加{#debugger-does-not-attach}
 
