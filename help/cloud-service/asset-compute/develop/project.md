@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 676d4bfceaaec3ae8d4feb9f66294ec04e1ecd2b
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,6 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/40197/?quality=12&learn=on)
 
 _產生資產計算專案的點進（無音訊）_
-
 
 使用[Adobe I/O CLI Asset Compute plugin](../set-up/development-environment.md#aio-cli)產生新的空資產計算專案。
 
@@ -58,7 +57,21 @@ _產生資產計算專案的點進（無音訊）_
 $ aio app use
 ```
 
-驗證當前工作區詳細資訊是否正確，並且漂亮地`Y`或輸入以生成`console.json`。 如果檢測到`.env`和`.aio`已存在，請點選`x`以跳過其建立。
+驗證當前工作區詳細資訊是否正確，請按`Y`或輸入以生成`console.json`。 如果檢測到`.env`和`.aio`已存在，請點選`x`以跳過其建立。
+
+如果建立新的，或覆寫`.env` ，請將任何缺少的鍵／值重新添加到新的`.env` :
+
+```
+## please provide the following environment variables for the Asset Compute devtool. You can use AWS or Azure, not both:
+#ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
+#S3_BUCKET=
+#AWS_ACCESS_KEY_ID=
+#AWS_SECRET_ACCESS_KEY=
+#AWS_REGION=
+#AZURE_STORAGE_ACCOUNT=
+#AZURE_STORAGE_KEY=
+#AZURE_STORAGE_CONTAINER_NAME=
+```
 
 ## 審查專案剖析
 
