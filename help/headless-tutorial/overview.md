@@ -2,9 +2,9 @@
 title: AEM Headless教學課程
 description: 有關如何將Adobe Experience Manager用作無頭CMS的教學課程集。
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '373'
 ht-degree: 5%
 
 ---
@@ -18,8 +18,8 @@ Adobe Experience Manager提供多種選項來定義無頭端點並將其內容�
 
 >[!CAUTION]
 >
-> AEM GraphQL API的內容片段傳送將於2021年初發行。
-> 相關檔案可供預覽使用。
+> 內容片段傳送的AEM GraphQL API可應要求提供。
+> 請聯絡Adobe支援以啟用AEM雲端服務方案的API。
 
 AEM的GraphQL內容片段API
 支援無頭CMS藍本，其中外部用戶端應用程式使用AEM中管理的內容來呈現體驗。
