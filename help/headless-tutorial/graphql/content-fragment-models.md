@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '980'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
-> AEM GraphQL API的內容片段傳送將於2021年初發行。
-> 相關檔案可供預覽使用。
+> 內容片段傳送的AEM GraphQL API可應要求提供。
+> 請聯絡Adobe支援以啟用AEM雲端服務方案的API。
 
 在本章中，將學習如何使用&#x200B;**內容片段模型**&#x200B;來建立內容模型和架構。 您將查看現有模型並建立新模型。 您還將瞭解可用於定義模式作為模型一部分的不同資料類型。
 
