@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1599'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
-> AEM GraphQL API的內容片段傳送將於2021年初發行。
-> 相關檔案可供預覽使用。
+> 內容片段傳送的AEM GraphQL API可應要求提供。
+> 請聯絡Adobe支援以啟用AEM雲端服務方案的API。
 
 本章提供本機環境的快速設定，以檢視外部應用程式使用AEM的GraphQL API使用AEM的內容。 本教學課程的後續章節將建立此設定。
 
