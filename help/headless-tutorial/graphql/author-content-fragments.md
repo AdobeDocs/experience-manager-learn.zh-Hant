@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
-> AEM GraphQL API的內容片段傳送將於2021年初發行。
-> 相關檔案可供預覽使用。
+> 內容片段傳送的AEM GraphQL API可應要求提供。
+> 請聯絡Adobe支援以啟用AEM雲端服務方案的API。
 
 在本章中，您將根據[新定義的參與者內容片段模型](./content-fragment-models.md)來建立和編輯新的內容片段。 您也將學習如何建立內容片段的變體。
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 1. 按一下右上角菜單中的「摘要文本」。****
 
-1. 輸入&#x200B;**** 50 **字的&lt;a0/>Target**，然後按一下&#x200B;**開始**。
+1. 輸入&#x200B;**** 50 **字的Target**，然後按一下&#x200B;**開始**。
 
    ![摘要預覽](assets/author-content-fragments/summarize-text-preview.png)
 
