@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
-> AEM GraphQL API的內容片段傳送將於2021年初發行。
-> 相關檔案可供預覽使用。
+> 內容片段傳送的AEM GraphQL API可應要求提供。
+> 請聯絡Adobe支援以啟用AEM雲端服務方案的API。
 
 在本章中，我們將探討如何使用AEM的GraphQL API來推動外部應用程式的使用體驗。
 
@@ -49,7 +49,7 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
 
 ## 啟動React應用程式
 
-由於本章著重於開發客戶端以使用GraphQL上的內容片段，因此必須下載WKND GraphQL React應用程式原始碼範例，並在您的本機電腦上設定[，而](./setup.md#react-app)AEM SDK則以](./setup.md#aem-sdk)範例WKND的Author service[的方式執行已安裝站點[。](./setup.md#wknd-site)
+由於本章著重於開發客戶端以使用GraphQL上的內容片段，因此必須下載WKND GraphQL React應用程式原始碼範例，並在您的本機電腦上設定](./setup.md#react-app)，而[AEM SDK則以[範例WKND的Author service](./setup.md#aem-sdk)的方式執行已安裝站點](./setup.md#wknd-site)。[
 
 在[Quick Setup](./setup.md)一章中，將更詳細地列出啟動React應用程式，但可遵循以下節略說明：
 
@@ -109,7 +109,7 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
 
    此掛接使用簡單的`fetch`模組來發出HTTP POST GraphQL請求，但其他模組（如[Apollo GraphQL客戶端](https://www.apollographql.com/docs/react/)）可以使用類似的模組。
 
-1. 在IDE中開啟`src/components/Adventures.js`，該&lt;a0/>負責主視圖的冒險清單，並查看`useGraphQL`掛接的調用。
+1. 在IDE中開啟`src/components/Adventures.js`，該負責主視圖的冒險清單，並查看`useGraphQL`掛接的調用。
 
    此代碼將預設`query`設定為`allAdventuresQuery`，如此檔案下定義的。
 
@@ -158,7 +158,7 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
    const contentFragmentPath = props.location.pathname.substring(props.match.url.length);
    ```
 
-   ...而GraphQL參數化查詢是使用`adventureDetailQuery(..)`函式來建構，並傳遞至`useGraphQL(query)`，該&lt;a1/>會針對AEM執行GraphQL查詢並將結果傳回至`data`變數。
+   ...而GraphQL參數化查詢是使用`adventureDetailQuery(..)`函式來建構，並傳遞至`useGraphQL(query)`，該會針對AEM執行GraphQL查詢並將結果傳回至`data`變數。
 
    ```javascript
    const { data, errorMessage } = useGraphQL(adventureDetailQuery(contentFragmentPath));
