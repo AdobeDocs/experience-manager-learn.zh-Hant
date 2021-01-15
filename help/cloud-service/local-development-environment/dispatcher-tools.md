@@ -11,10 +11,10 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: 1b4a927a68d24eeb08d0ee244e85519323482910
+source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
 workflow-type: tm+mt
-source-wordcount: '1534'
-ht-degree: 2%
+source-wordcount: '1566'
+ht-degree: 1%
 
 ---
 
@@ -96,7 +96,7 @@ Dispatcher Tools提供一組Apache HTTP Web伺服器和Dispatcher配置檔案，
 
 + 使用狀況:
    + Windows: `bin\validate src`
-   + macOS / Linux:`./bin/validate ./src`
+   + macOS / Linux:`./bin/validate.sh ./src`
 
 ## 在本地運行Dispatcher
 
@@ -185,6 +185,13 @@ AEM作為雲端服務SDK的Publish Service，在埠4503上本機執行，可透�
 >[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12&learn=on)
 
 *此視訊使用macOS做為說明用途。可使用等效的Windows/Linux命令實現類似結果*
+
+### 記錄檔存取
+
+Apache Web伺服器和AEM Dispatcher記錄檔可直接在Docker容器中存取：
+
++ [訪問Docker容器中的日誌](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
++ [將Docker日誌複製到本地檔案系統](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
 
 ## 何時更新Dispatcher Tools{#dispatcher-tools-version}
 
