@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 5252
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '394'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 
 調用`bin/docker_run`時，調度程式日誌將輸出到stdout，但Docker包含的日誌可以直接訪問。
 
-### 訪問Docker容器中的日誌
+### 訪問Docker容器中的日誌{#dispatcher-tools-access-logs}
 
 Dispatcher日誌可以直接訪問`/etc/httpd/logs`的Docker容器中。
 
@@ -73,7 +73,10 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-### 將Docker日誌複製到本地檔案系統
+_必 `<CONTAINER ID>` 須 `docker exec -it <CONTAINER ID> /bin/sh` 以命令中列出的目標Docker CONTAINER ID替換 `docker ps` 中。_
+
+
+### 將Docker日誌複製到本地檔案系統{#dispatcher-tools-copy-logs}
 
 Dispatcher logs can be copied out of the Docker container at `/etc/httpd/logs` to the local file system for inspection using your favorite log analysis tool. 請注意，這是時間點副本，不會即時更新記錄檔。
 
@@ -90,3 +93,4 @@ $ ls
     dispatcher.log          healthcheck_access_log  httpd_access.log        httpd_error.log
 ```
 
+_必 `<CONTAINER_ID>` 須 `docker cp <CONTAINER_ID>:/var/log/apache2 ./` 以命令中列出的目標Docker CONTAINER ID替換 `docker ps` 中。_
