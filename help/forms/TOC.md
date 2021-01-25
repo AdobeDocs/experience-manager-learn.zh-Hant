@@ -6,9 +6,9 @@ user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使
 breadcrumb-title: AEM Forms 教學課程
 index: y
 translation-type: tm+mt
-source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
+source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '938'
 ht-degree: 6%
 
 ---
@@ -109,7 +109,7 @@ ht-degree: 6%
    + [部署範例](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
 + 以CSV格式導出提交的資料{#export-submitted-data-csv-format}
    + [匯出提交的資料](export-submitted-data-csv-format/export-submitted-data-csv.md)
-+ HTML5 Forms{#html5-forms}
++ HTML5 表單{#html5-forms}
    + [建立HTML5表格](html5-forms/create-html5-form.md)
    + [處理HTML5表單提交](html5-forms/handle-html5-form-submission.md)
 + AEM Forms和Adobe Sign{#forms-and-sign}
@@ -125,6 +125,18 @@ ht-degree: 6%
    + [將PDF表格轉換為最適化表格](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [配置轉換的最適化表單](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [搭配Adobe Sign使用XDP範本](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
++ 簽署多個表單{#sign-multiple-documents}
+   + [簡介](sign-multiple-documents/introduction.md)
+   + [配置資料源](sign-multiple-documents/configure-data-source.md)
+   + [建立OSGi服務](sign-multiple-documents/create-osgi-service.md)
+   + [建立主工作流程](sign-multiple-documents/create-main-workflow.md)
+   + [更新簽名狀態工作流程](sign-multiple-documents/update-signature-status.md)
+   + [自訂摘要元件](sign-multiple-documents/customize-summary-component.md)
+   + [建立客戶端庫](sign-multiple-documents/create-client-lib.md)
+   + [建立表單範本](sign-multiple-documents/create-af-template.md)
+   + [建立初始表單](sign-multiple-documents/create-initial-form.md)
+   + [建立簽署表格](sign-multiple-documents/create-forms-for-signing.md)
+   + [測試解決方案](sign-multiple-documents/testing-and-trouble-shooting.md)
 + AEM Workflow{#variables-aem-workflow}中的變數
    + [簡介——工作流程中的變數](variables-aem-workflow/introduction.md)
    + [XML變數](variables-aem-workflow/part1.md)
