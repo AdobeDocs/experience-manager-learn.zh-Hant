@@ -11,7 +11,7 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: bfcc9dbb70753f985a2e47f329dbb9f43f5805e2
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 0%
@@ -73,7 +73,7 @@ AEM的GraphQL API提供功能強大的查詢語言，可將內容片段的資料
 
    `fullName` 屬 `occupation` 於簡單屬性。從[定義內容片段模型](./content-fragment-models.md)一章中，請回顧`fullName`和`occupation`是定義各個欄位的&#x200B;**屬性名稱**&#x200B;時使用的值。
 
-1. `pictureReference` 並且 `biography` 表示更複雜的欄位。使用下列更新查詢，以傳回有關`pictureReference`和`biography`欄位的資料。
+1. `pictureReference` 並且 `biographyText` 表示更複雜的欄位。使用下列更新查詢，以傳回有關`pictureReference`和`biographyText`欄位的資料。
 
    ```graphql
    {
@@ -82,7 +82,7 @@ AEM的GraphQL API提供功能強大的查詢語言，可將內容片段的資料
          _path
          fullName
          occupation
-         biography {
+         biographyText {
            html
          }
          pictureReference {
@@ -97,7 +97,7 @@ AEM的GraphQL API提供功能強大的查詢語言，可將內容片段的資料
    }
    ```
 
-   `biography` 是多行文字欄位，而GraphQL API可讓我們為結果選擇多種格 `html`式 `markdown`, `json` 例如 `plaintext`。
+   `biographyText` 是多行文字欄位，而GraphQL API可讓我們為結果選擇多種格 `html`式 `markdown`, `json` 例如 `plaintext`。
 
    `pictureReference` 是內容參考，而且預期是影像，因此會使用內 `ImageRef` 建物件。這可讓我們要求有關參考影像的其他資料，例如`width`和`height`。
 
