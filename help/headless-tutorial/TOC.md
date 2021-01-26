@@ -12,9 +12,9 @@ activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '103'
 ht-degree: 31%
 
 ---
@@ -40,3 +40,7 @@ ht-degree: 31%
    + [4 —— 瞭解GraphQL API](./graphql/explore-graphql-api.md)
    + [5 —— 從外部應用程式查詢](./graphql/graphql-and-external-app.md)
    + [6 —— 使用片段參照建立進階資料模型](./graphql/fragment-references.md)
++ 代號型驗證{#authentication}
+   + [概覽](./authentication/overview.md)
+   + [1 —— 本機開發存取Token](./authentication/local-development-access-token.md)
+   + [2 —— 服務憑據](./authentication/service-credentials.md)
