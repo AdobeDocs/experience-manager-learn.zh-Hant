@@ -10,9 +10,9 @@ audience: developer
 kt: 6785
 thumbnail: 330477.jpg
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ![取得本機開發存取Token](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-「本機開發存取Token」提供AEM Author和Publish服務的存取權，以產生Token的使用者身分及其權限。 雖然這是開發Token，但請勿共用此Token。
+「本機開發存取Token」提供AEM Author和Publish服務的存取權，以產生Token的使用者身分及其權限。 雖然這是開發Token，但請勿共用此Token，或儲存在來源控制項中。
 
 1. 在[Adobe AdminConsole](https://adminconsole.adobe.com/)中，請確定您（開發人員）為下列成員：
    + __Cloud Manager -__ DeveloperIMS產品設定檔（授與AEM Developer Console的存取權）
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ![AEM Developer Console —— 整合——取得本機開發Token](./assets/local-development-access-token/developer-console.png)
 
-## 下載本機開發存取Token{#download-local-development-access-token}
+## 已使用本機開發存取Token{#use-local-development-access-token}
 
 ![本機開發存取Token —— 外部應用程式](assets/local-development-access-token/local-development-access-token-external-application.png)
 
@@ -55,11 +55,11 @@ ht-degree: 0%
 1. 外部應用程式會將HTTP請求建構為AEM的雲端服務，並將本機開發存取Token新增為HTTP請求的授權標題中的承載Token
 1. AEM作為雲端服務，會接收HTTP要求、驗證要求並執行HTTP要求所要求的工作，並將HTTP回應傳回外部應用程式
 
-### 外部應用程式
+### 範例外部應用程式
 
 我們將建立簡單的外部JavaScript應用程式，以說明如何使用本機開發人員存取Token，以程式設計方式透過HTTPS以雲端服務形式存取AEM。 這說明&#x200B;_任何_&#x200B;在AEM外部執行的應用程式或系統（不論架構或語言）如何使用存取Token，以程式設計方式驗證AEM並以雲端服務的身分存取AEM。 在[下一節](./service-credentials.md)中，我們將更新此應用程式碼，以支援產生代號以供生產使用的方法。
 
-此應用程式是從命令列執行，並使用AEM Assets HTTP API更新AEM Asset中繼資料，使用下列流程：
+此範例應用程式是從命令列執行，並使用AEM Assets HTTP API更新AEM Asset中繼資料，使用下列流程：
 
 1. 從命令行(`getCommandLineParams()`)讀取參數
 1. 取得用來驗證AEM為雲端服務(`getAccessToken(...)`)的存取Token
@@ -208,11 +208,11 @@ ht-degree: 0%
    }
    ```
 
-   查看`listAssetsByFolder(...)`和`updateMetadata(...)`中的`fetch(..)`調用，並注意`headers`定義了值`Bearer <ACCESS TOKEN>`的`Authorization` HTTP請求標頭。 這是從外部應用程式產生的HTTP要求如何以雲端服務的身分驗證AEM。
+   查看`listAssetsByFolder(...)`和`updateMetadata(...)`中的`fetch(..)`調用，並注意`headers`定義了值`Bearer ACCESS_TOKEN`的`Authorization` HTTP請求標頭。 這是從外部應用程式產生的HTTP要求如何以雲端服務的身分驗證AEM。
 
    ```javascript
    ...
-   return fetch(`${params.aem}${ASSETS_HTTP_API}${folder}.json?configid=ims`, {
+   return fetch(`${params.aem}${ASSETS_HTTP_API}${folder}.json`, {
                method: 'get',
                headers: { 
                    'Content-Type': 'application/json',
@@ -267,4 +267,6 @@ ht-degree: 0%
 
 ## 後續步驟
 
-既然我們已使用本機開發Token以程式設計方式將AEM存取為雲端服務，我們必須將程式碼更新為。
+現在，我們已使用本機開發Token以程式設計方式將AEM存取為Cloud Service，因此需要更新應用程式以使用「服務認證」來處理，如此此應用程式就可用於生產環境。
+
++ [如何使用服務憑據](./service-credentials.md)
