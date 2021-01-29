@@ -10,9 +10,9 @@ audience: developer
 kt: 6785
 thumbnail: 330519.jpg
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1824'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,11 @@ ht-degree: 0%
 
 「服務憑證」可能會以類似的[「本機開發存取Token」(a1/>)顯示，但以下列幾種主要方式不同：](./local-development-access-token.md)
 
-+ 「服務憑證」是&#x200B;_not_&#x200B;存取Token，而是用於取得存取Token的憑證。
-+ 「服務憑證」是永久性的，除非撤銷，否則不會變更，而「本機開發存取權杖」則每日到期。
-+ AEM的Cloud Service環境服務認證會對應至單一AEM使用者，而本機開發存取Token會驗證為產生存取Token的AEM使用者。
++ 服務憑證是&#x200B;_不是_&#x200B;存取Token，而是用於&#x200B;_取得_&#x200B;存取Token的憑證。
++ 「服務認證」會更為永久（每365天過期），除非撤銷，否則不會變更，而「本機開發存取權杖」則會每日到期。
++ AEM的Cloud Service環境服務認證會對應至單一AEM技術帳戶使用者，而本機開發存取Token會驗證為產生存取Token的AEM使用者。
+
+服務憑證及其產生的存取Token，以及本機開發存取Token，都應保持機密，因為這三個Token都可用來以雲端服務環境的身分存取其各自的AEM
 
 ## 生成服務憑據
 
@@ -39,7 +41,7 @@ ht-degree: 0%
 
 ### 服務憑據初始化
 
-與本機開發存取Token不同，「服務認證」需要您的Adobe組織IMS管理員進行一次性初始化，才能下載。
+與本機開發存取Token不同，「服務認證」需要Adobe組織IMS管理員進行一次性初始化&#x200B;_，才能下載。_
 
 ![初始化服務憑據](assets/service-credentials/initialize-service-credentials.png)
 
@@ -55,7 +57,7 @@ __這是每個AEM一次初始化，作為雲端服務環境__
 
 ![AEM Developer Console —— 整合——取得服務認證](./assets/service-credentials/developer-console.png)
 
-一旦AEM（Cloud Service環境的服務憑證）已初始化，其他使用者就可以下載。
+一旦初始化AEM作為雲端服務環境的「服務認證」後，您Adobe IMS組織中的其他AEM開發人員就可以下載這些認證。
 
 ### 下載服務認證
 
@@ -71,7 +73,7 @@ __這是每個AEM一次初始化，作為雲端服務環境__
 1. 在&#x200B;__Integrations__&#x200B;標籤中點選
 1. 點選&#x200B;__取得服務憑證__&#x200B;按鈕
 1. 點選左上角的下載按鈕，下載包含「服務認證」值的JSON檔案，並將檔案儲存至安全位置。
-   + _如果這些服務認證受到危害，請立即聯絡Adobe支援部門，讓其被撤銷_
+   + _如果服務認證受到危害，請立即聯絡Adobe支援以撤銷其認證_
 
 ## 安裝服務憑據
 
@@ -137,38 +139,38 @@ function getCommandLineParams() {
 
 1. 更新`getAccessToken(..)`以檢查JSON檔案內容，並判斷其代表本機開發存取Token或服務憑證。 這可透過檢查`.accessToken`屬性是否存在而輕鬆實現，此屬性僅存在於本機開發存取Token JSON。
 
-如果提供「服務認證」，應用程式會產生JWT，並與Adobe IMS交換JWT以取得存取Token。 我們將使用[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)的`auth(...)`函式，此函式會產生JWT，並在單一函式呼叫中將它交換為存取Token。  `auth(..)`的參數是[JSON物件，由「服務認證JSON」中可用的特定資訊](https://www.npmjs.com/package/@adobe/jwt-auth#config-object)組成，如程式碼中所述。
+   如果提供「服務認證」，應用程式會產生JWT，並與Adobe IMS交換JWT以取得存取Token。 我們將使用[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)的`auth(...)`函式，此函式會產生JWT，並在單一函式呼叫中將它交換為存取Token。  `auth(..)`的參數是[JSON物件，由「服務認證JSON」中可用的特定資訊](https://www.npmjs.com/package/@adobe/jwt-auth#config-object)組成，如程式碼中所述。
 
-```javascript
- async function getAccessToken(developerConsoleCredentials) {
+   ```javascript
+    async function getAccessToken(developerConsoleCredentials) {
+   
+        if (developerConsoleCredentials.accessToken) {
+            // This is a Local Development access token
+            return developerConsoleCredentials.accessToken;
+        } else {
+            // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
+            let serviceCredentials = developerConsoleCredentials.integration;
+   
+            // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
+            // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
+            let { access_token } = await auth({
+                clientId: serviceCredentials.technicalAccount.clientId, // Client Id
+                technicalAccountId: serviceCredentials.id,              // Technical Account Id
+                orgId: serviceCredentials.org,                          // Adobe IMS Org Id
+                clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
+                privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
+                metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
+                ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
+            });
+   
+            return access_token;
+        }
+    }
+   ```
 
-     if (developerConsoleCredentials.accessToken) {
-         // This is a Local Development access token
-         return developerConsoleCredentials.accessToken;
-     } else {
-         // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
-         let serviceCredentials = developerConsoleCredentials.integration;
+   現在，視透過`file`命令列參數傳入的JSON檔案（本機開發存取Token JSON或服務認證JSON）而定，應用程式將衍生存取Token。
 
-         // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
-         // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
-         let { access_token } = await auth({
-             clientId: serviceCredentials.technicalAccount.clientId, // Client Id
-             technicalAccountId: serviceCredentials.id,              // Technical Account Id
-             orgId: serviceCredentials.org,                          // Adobe IMS Org Id
-             clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
-             privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
-             metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
-             ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
-         });
-
-         return access_token;
-     }
- }
-```
-
-    現在，視透過`file&#39;命令列參數傳入的JSON檔案（本機開發存取Token JSON或服務認證JSON）而定，應用程式將衍生存取Token。
-    
-    請記住，雖然服務認證不會過期，但JWT和對應的存取Token會過期，而且需要在發出後12小時內重新整理。這可透過使用「refresh_token」[由Adobe IMS提供](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-token)來完成。
+   請記住，當服務憑證未過期時，JWT和對應的存取Token會過期，而且必須在過期前重新整理。 這可使用Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)提供的`refresh_token` [來完成。
 
 1. 在進行這些變更後，以及從AEM Developer Console下載的「服務認證JSON」（而且為簡單起見，會儲存為`service_token.json`與此`index.js`相同的檔案夾），執行應用程式，將命令列參數`file`取代為`service_token.json`，並將`propertyValue`更新為新值，以便在AEM中顯現效果。
 
@@ -241,11 +243,6 @@ $ node index.js \
 1. 檢視更新屬性的值，例如映射至更新的`metadata/dc:rights` JCR屬性的&#x200B;__Copyright__，現在會反映`propertyValue`參數中提供的值，例如&#x200B;__WKND Restricted Use__
 
 ![WKND限制使用中繼資料更新](./assets/service-credentials/asset-metadata.png)
-
-## 廢止服務憑證
-
-
-
 
 ## 恭喜！
 
