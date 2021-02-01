@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1397'
 ht-degree: 0%
 
 ---
 
 
 # 從外部應用程式使用GraphQL查詢AEM
-
->[!CAUTION]
->
-> 內容片段傳送的AEM GraphQL API可應要求提供。
-> 請聯絡Adobe支援以啟用AEM雲端服務方案的API。
 
 在本章中，我們將探討如何使用AEM的GraphQL API來推動外部應用程式的使用體驗。
 
