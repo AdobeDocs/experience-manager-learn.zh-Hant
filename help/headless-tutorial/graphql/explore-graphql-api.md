@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: bfcc9dbb70753f985a2e47f329dbb9f43f5805e2
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
 
 
 # 探索GraphQL API {#explore-graphql-apis}
-
->[!CAUTION]
->
-> 內容片段傳送的AEM GraphQL API可應要求提供。
-> 請聯絡Adobe支援以啟用AEM雲端服務方案的API。
 
 AEM的GraphQL API提供功能強大的查詢語言，可將內容片段的資料公開至下游應用程式。 內容片段模型定義內容片段所使用的資料架構。 每當建立或更新內容片段模型時，會將架構轉譯並新增至組成GraphQL API的「圖形」。
 
