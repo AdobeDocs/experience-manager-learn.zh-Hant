@@ -1,6 +1,6 @@
 ---
 title: Acroforms與AEM Forms
-seo-title: 將最適化表單資料與Acroform合併
+description: 教學課程，逐步說明如何使用Acroform建立最適化表單，並合併資料以取得PDF。 然後，您就可以使用Adobe Sign傳送包含合併資料的PDF以進行簽署。
 feature: adaptive-forms
 topics: development
 audience: developer
@@ -8,9 +8,9 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
