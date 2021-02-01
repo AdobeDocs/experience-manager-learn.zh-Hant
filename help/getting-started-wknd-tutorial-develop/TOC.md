@@ -10,10 +10,10 @@ user-guide-description: AEM 的新開發人員的多部分教學課程。實作�
 breadcrumb-title: AEM Sites WKND 教學課程
 index: y
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
 source-wordcount: '56'
-ht-degree: 73%
+ht-degree: 66%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 73%
 # AEM Sites - WKND 教學課程快速入門 {#getting-started-wknd-tutorial-develop}
 
 + [WKND教學課程總覽](overview.md)
-+ [專案設定](project-setup.md)
-+ [元件基礎](component-basics.md)
-+ [頁面和範本](pages-templates.md)
-+ [用戶端資源庫](client-side-libraries.md)
-+ [樣式系統](style-system.md)
-+ [自訂元件](custom-component.md)
-+ [單元測試](unit-testing.md)
++ [1 —— 項目設定](project-setup.md)
++ [2 —— 元件基礎](component-basics.md)
++ [3 —— 頁面和範本](pages-templates.md)
++ [4 —— 用戶端程式庫](client-side-libraries.md)
++ [5 —— 樣式系統](style-system.md)
++ [6 —— 自訂元件](custom-component.md)
++ [7 —— 單元測試](unit-testing.md)
