@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '950'
 ht-degree: 1%
 
 ---
 
 
 # 定義內容片段模型{#content-fragment-models}
-
->[!CAUTION]
->
-> 內容片段傳送的AEM GraphQL API可應要求提供。
-> 請聯絡Adobe支援以啟用AEM雲端服務方案的API。
 
 在本章中，將學習如何使用&#x200B;**內容片段模型**&#x200B;來建立內容模型和架構。 您將查看現有模型並建立新模型。 您還將瞭解可用於定義模式作為模型一部分的不同資料類型。
 
@@ -140,16 +135,16 @@ ht-degree: 1%
 
 內容片段模型在首次建立時預設為&#x200B;**Draft**&#x200B;狀態。 這可讓使用者在&#x200B;**之前調整內容片段模型**，讓作者使用它。 請記住，修改模型中某個欄位的&#x200B;**屬性名稱**&#x200B;會更改基礎資料模式，並且對現有片段和外部應用程式有顯著的下游影響。 建議謹慎規劃用於&#x200B;**欄位屬性名稱**&#x200B;的命名慣例。
 
-1. 請注意，**Contributor**&#x200B;模型目前處於&#x200B;**Draft**&#x200B;狀態。
+1. 觀察&#x200B;**Contributor**&#x200B;模型當前處於&#x200B;**Draft**&#x200B;狀態。
 
-1. 將滑鼠指標暫留在卡片上，然後按一下「啟用&#x200B;****」圖示，以啟用&#x200B;**Contributor Model**:
+1. 通過懸停在卡上並按一下「啟用&#x200B;****」表徵圖，啟用&#x200B;**參與者模型**:
 
    ![啟用參與者模型](assets/content-fragment-models/enable-contributor-model.png)
 
 ## 恭喜！{#congratulations}
 
-恭喜，您剛建立了第一個內容片段模型！
+恭喜，您剛剛建立了第一個內容片段模型！
 
 ## 後續步驟{#next-steps}
 
-在下一章[編寫內容片段模型](author-content-fragments.md)中，您將根據內容片段模型建立並編輯新的內容片段。 您也將學習如何建立內容片段的變體。
+在下一章[創作內容片段模型](author-content-fragments.md)中，您將根據內容片段模型建立和編輯新的內容片段。 您還將學習如何建立內容片段的變體。
