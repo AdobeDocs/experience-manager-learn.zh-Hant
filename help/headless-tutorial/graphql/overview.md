@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6678
 thumbnail: 328618.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
 
 # AEM無頭入門- GraphQL
-
->[!CAUTION]
->
-> 內容片段傳送的AEM GraphQL API可應要求提供。
-> 請聯絡Adobe支援以啟用AEM雲端服務方案的API。
 
 端對端教學課程，說明如何在無頭CMS案例中，使用AEM的GraphQL API建立和公開內容，並由外部應用程式使用。
 
