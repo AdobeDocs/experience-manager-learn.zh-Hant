@@ -12,10 +12,10 @@ mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
 translation-type: tm+mt
-source-git-commit: 69c1767098cc9da8ec0ae2bd83d25417d330f393
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 5%
+source-wordcount: '873'
+ht-degree: 7%
 
 ---
 
@@ -30,16 +30,37 @@ ht-degree: 5%
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-教學課程旨在搭配&#x200B;**AEM做為Cloud Service**&#x200B;使用，並向後相容於&#x200B;**AEM 6.5+**&#x200B;和&#x200B;**AEM 6.4.2+**。 網站的實作方式為：
+教學課程旨在搭配&#x200B;**AEM做為Cloud Service**&#x200B;使用，並向後相容於&#x200B;**AEM 6.5.5.0+**&#x200B;和&#x200B;**AEM 6.4.8.1+**。 網站的實作方式為：
 
-* [Maven AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Maven AEM Project Archetype](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/archetype/overview.html)
 * [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
 * [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)
-* Sling Models
+* Sling 模型
 * [可編輯的範本](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
 * [樣式系統](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
 *預計1-2小時即可完成教學課程的每個部分。*
+
+## 本地開發環境{#local-dev-environment}
+
+完成本教學課程時，必須具備本機開發環境。 螢幕擷取和視訊會使用AEM擷取，當作在Mac OS環境上執行的Cloud Service SDK，並以[Visual Studio Code](https://code.visualstudio.com/)做為IDE。 除非另有說明，指令和程式碼應獨立於本機作業系統。
+
+### 所需軟體
+
+本機應安裝下列程式碼：
+
+* 本機AEM **Author**&#x200B;例項（Cloud Service SDK, 6.5.5+或6.4.8.1+）
+* [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
+* [Apache Maven](https://maven.apache.org/) （3.3.9或更新版本）
+* [Node.js](https://nodejs.org/en/) （LTS —— 長期支援）
+* [npm 6+](https://www.npmjs.com/)
+* [Git](https://git-scm.com/)
+
+>[!NOTE]
+>
+> **您是AEM的新手嗎？** 請參閱下 [列指南，以使用AEM做為雲端服務SDK來設定本機開發環境](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+>
+> **您是AEM 6.5的新手嗎？** 請參閱以 [下指南以設定本機開發環境](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
 ## 關於教學課程{#about-tutorial}
 
@@ -68,31 +89,6 @@ WKND名稱正合適，因為我們預期開發人員會參與&#x200B;***weekend*
 >
 > 如果您使用本教學課程的舊版，您仍可在GitHub上找到[解決方案套件](https://github.com/adobe/aem-guides-wknd/releases/tag/archetype-18.1)和[程式碼](https://github.com/adobe/aem-guides-wknd/tree/archetype-18.1)。
 
-## 本地開發環境{#local-dev-environment}
-
-完成本教學課程時，必須具備本機開發環境。 螢幕擷取畫面和視訊會使用AEM擷取，當作在Mac OS環境上執行的Cloud Service SDK。 除非另有說明，指令和程式碼應獨立於本機作業系統。
-
-**您是AEM的新手嗎？** 請參閱下 [列指南，以使用AEM做為雲端服務SDK來設定本機開發環境](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
-
-**您是AEM 6.5的新手嗎？** 請參閱以 [下指南以設定本機開發環境](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
-
-### 所需軟體
-
-本機應安裝下列程式碼：
-
-* [AEM as a Cloud Service ](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk) SDK [或AEM 6.5](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/technical-requirements.html) 或 [AEM 6.4 + SP2](https://helpx.adobe.com/tw/experience-manager/6-4/release-notes/sp-release-notes.html)
-* [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html) （僅限AEM 6.5+）
-* [Apache Maven](https://maven.apache.org/) （3.3.9或更新版本）
-* [Node.js v10+](https://nodejs.org/en/)
-* [npm 6+](https://www.npmjs.com/)
-* [Git](https://git-scm.com/)
-
-### 整合開發環境(IDE)
-
-本教學課程將[Eclipse](https://www.eclipse.org/)與[AEM Developer Tool Plugin](https://eclipse.adobe.com/aem/dev-tools/)搭配使用，做為IDE，但是可使用支援Java和Maven專案的任何IDE。 本教學課程對特定IDE功能的依賴度很低。
-
-有關使用Eclipse或其他IDE（如[Visual Studio Code](https://code.visualstudio.com/)或[IntelliJ](https://www.jetbrains.com/idea/)）的詳細步驟，請參閱以下指南](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。[
-
 ## 引用網站 {#reference-site}
 
 WKND網站的完成版本也可供參考：[https://wknd.site/](https://wknd.site/)
@@ -103,7 +99,7 @@ WKND網站的完成版本也可供參考：[https://wknd.site/](https://wknd.sit
 
 ### 由Adobe Stock提供支援
 
-WKND參考網站中的許多影像都來自[Adobe Stock](https://stock.adobe.com/)，並且如示範資產附加條款(位於[https://www.adobe.com/legal/terms.html](https://www.adobe.com/legal/terms.html))中所定義，為協力廠商內容。 如果您想要將Adobe Stock影像用於檢視本示範網站以外的其他用途，例如在網站上加以展示，或在行銷資料中，則可以購買Adobe Stock授權。
+WKND參考網站中的許多影像都來自[Adobe Stock](https://stock.adobe.com/)，並且如示範資產附加條款(位於[https://www.adobe.com/legal/terms.html](https://www.adobe.com/tw/legal/terms.html))中所定義，為協力廠商內容。 如果您想要將Adobe Stock影像用於檢視本示範網站以外的其他用途，例如在網站上加以展示，或在行銷資料中，則可以購買Adobe Stock授權。
 
 有了Adobe Stock，您就可以存取超過1億4千萬張高品質且免版稅的影像，包括像片、圖形、視訊和範本，快速開始您的創意專案。
 
