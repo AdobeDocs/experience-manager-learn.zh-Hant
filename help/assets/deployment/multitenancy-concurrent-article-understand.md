@@ -1,8 +1,7 @@
 ---
 title: 多租與並行開發
 seo-title: 多租與並行開發
-description: 'null'
-seo-description: 'null'
+description: 瞭解使用Adobe Experience Manager Assets管理多租用戶實作的優點、挑戰和技巧。
 uuid: 682093fe-ce55-4ef8-af10-99f7062f8b1b
 discoiquuid: 0dfcdf39-7423-459f-8f35-ee5b4b829f2c
 feature: connected-assets
@@ -12,9 +11,9 @@ doc-type: article
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: 99f2a8cdfe0b4f5f6f1a149d96affd2a9e8bcf75
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '2024'
 ht-degree: 0%
 
 ---
