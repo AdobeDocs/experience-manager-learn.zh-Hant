@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '828'
 ht-degree: 1%
 
 ---
 
 
 # 使用片段參照建立進階資料模型
-
->[!CAUTION]
->
-> 內容片段傳送的AEM GraphQL API可應要求提供。
-> 請聯絡Adobe支援以啟用AEM雲端服務方案的API。
 
 可以從其他內容片段中參考內容片段。 這可讓使用者建立具有片段間關係的複雜資料模型。
 
