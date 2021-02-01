@@ -6,9 +6,9 @@ user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使
 breadcrumb-title: AEM Forms 教學課程
 index: y
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 48060b4d8c4b502e0c099ae8081695f97b423037
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '943'
 ht-degree: 6%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 6%
 + [概覽](overview.md)
 + [要遵循的最佳做法](adaptive-forms/best-practices-adaptive-forms.md)
 + [設定AEM作者的OKTA驗證](adaptive-forms/single-sign-on-with-okta.md)
++ [建立您的第一個OSGi套件](adaptive-forms/create-your-first-osgi-bundle.md)
 + 建立第一個最適化表單{#creating-your-first-adaptive-form}
    + [簡介和設定](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [建立最適化表單範本](creating-your-first-adaptive-form/create-adaptive-form-template.md)
