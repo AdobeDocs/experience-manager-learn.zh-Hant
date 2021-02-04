@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: c752106cc68774eb7e8b9fe525273bb7088d38e5
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1547'
 ht-degree: 1%
 
 ---
@@ -49,6 +49,10 @@ ht-degree: 1%
 1. 導覽至&#x200B;**[軟體散發入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM做為雲端服務**，並下載最新版的&#x200B;**AEM SDK**。
 
    ![軟體散發入口網站](assets/setup/software-distribution-portal-download.png)
+
+   >[!CAUTION]
+   >
+   > GraphQL功能預設僅在2021-02-04或更新版本的AEM SDK上啟用。
 
 1. 解壓縮下載並將快速啟動jar(`aem-sdk-quickstart-XXX.jar`)複製到專用資料夾，即`~/aem-sdk/author`。
 1. 將jar檔案重新命名為`aem-author-p4502.jar`。
