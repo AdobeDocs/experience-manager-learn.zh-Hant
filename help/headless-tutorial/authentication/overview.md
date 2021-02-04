@@ -8,9 +8,9 @@ feature: APIs
 activity: develop
 audience: developer
 kt: 6785
-thumbnail: 330460.jpg
+thumbnail: 330519.jpg
 translation-type: tm+mt
-source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
+source-git-commit: 733382dc0e0ca14d4bd6e49174ba33f8d7fc517d
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 在本教學課程中，請進一步瞭解外部應用程式如何使用存取Token，以程式設計方式將AEM驗證為透過HTTP的雲端服務並與之互動。
 
->[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
 
 ## 先決條件
 
