@@ -10,9 +10,9 @@ audience: developer
 kt: 4083
 thumbnail: 30359.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '3257'
+source-wordcount: '3291'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ ht-degree: 0%
 
    每個檔案都映射到核心元件，如[Accordion元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/accordion.html?lang=en#components)。 每個核心元件都使用[區塊元素修飾元](https://getbem.com/)或BEM記號建立，讓您更容易使用樣式規則來定位特定CSS類別。 `/components`下方的檔案已由AEM Project Archetype（AEM專案原型）捨棄，每個元件的BEM規則都不同。
 
-1. 下載WKND基本樣式&#x200B;**[wknd-base-styles-src.zip](./assets/client-side-libraries/wknd-base-styles-src.zip)**&#x200B;和&#x200B;**unzip**&#x200B;檔案。
+1. 下載WKND基本樣式&#x200B;**[wknd-base-styles-src.zip](./assets/client-side-libraries/wknd-base-styles-srcv2.zip)**&#x200B;和&#x200B;**unzip**&#x200B;檔案。
 
    ![WKND基本樣式](assets/client-side-libraries/wknd-base-styles-unzipped.png)
 
@@ -307,6 +307,10 @@ AEM Project Archetype會自動設定此整合。 接下來，探索它的運作�
    ...
    </body>
    ```
+
+   >[!NOTE]
+   >
+   > 如果遵循6.5/6.4的規定，則用戶端程式庫將不會自動縮小。 請參閱[HTML程式庫管理員上的檔案，以啟用精簡（建議）](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors)。
 
    >[!WARNING]
    >
