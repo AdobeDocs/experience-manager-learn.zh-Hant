@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,8 @@ ht-degree: 0%
 ## 必備條件 {#prerequisites}
 
 檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。
+
+影片中使用的IDE是[Visual Studio代碼](https://code.visualstudio.com/)和[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)外掛程式。
 
 ## 目標 {#objective}
 
@@ -110,7 +112,7 @@ HTML範本語言或&#x200B;**[HTL](https://docs.adobe.com/content/help/en/experi
 
 1. 切換到IDE並開啟項目至`ui.apps`模組。
 1. 開啟`helloworld.html`檔案並變更HTML標籤。
-1. 使用IDE工具，將檔案變更與本機AEM例項同步。
+1. 使用[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)等IDE工具，將檔案變更與本機AEM例項同步。
 1. 返回瀏覽器並觀察元件演算已變更。
 1. 開啟`.content.xml`檔案，該檔案定義`HelloWorld`元件的對話框，位置為：
 
@@ -209,14 +211,14 @@ Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects
        ...
    
        @ValueMapValue
-       protected String title;
+       private String title;
    
        @ValueMapValue
-       protected String text;
+       private String text;
    
-           @PostConstruct
-           protected void init() {
-               ...
+       @PostConstruct
+       protected void init() {
+           ...
    ```
 
 1. 將以下方法`getTitle()`添加到`HelloWorldModel`類中，該類返回名為`title`的屬性值。 此方法新增其他邏輯，以傳回「此處是預設值！」的字串值 如果屬性`title`為null或空：
@@ -349,6 +351,10 @@ Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects
    ```
 
 1. 使用開發人員外掛程式或使用您的Maven技巧，將變更部署至AEM的本機例項。
+
+   >[!NOTE]
+   >
+   > CSS和JavaScript經常由瀏覽器快取，以利效能。 如果您未立即看到客戶端庫的更改，請執行硬刷新並清除瀏覽器的快取。 使用Incognito窗口可以確保新快取。
 
 ## 恭喜！{#congratulations}
 
