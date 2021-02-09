@@ -6,9 +6,9 @@ user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使
 breadcrumb-title: AEM Forms 教學課程
 index: y
 translation-type: tm+mt
-source-git-commit: 48060b4d8c4b502e0c099ae8081695f97b423037
+source-git-commit: 1e945afddda3d7735005029952a9d7ec46828bc6
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '947'
 ht-degree: 6%
 
 ---
@@ -91,12 +91,12 @@ ht-degree: 6%
    + [配置表單資料模型](prefill-fdm-db/configuring-form-data-model.md)
    + [取得請求參數](prefill-fdm-db/get-request-parameter.md)
    + [建立最適化表單](prefill-fdm-db/create-adaptive-form.md)
-+ 收件箱自定義{#inbox-customization}
++ 自定義收件箱{#inbox-customization}
    + [簡介](inbox-customization/introduction.md)
    + [新增自訂欄](inbox-customization/add-married-column.md)
    + [使用Sightly範本](inbox-customization/use-sightly-template.md)
 
-+ 儲存和檢索最適化表單{#store-and-retrieve-af-with-2fa}
++ 儲存和檢索自適應表單{#store-and-retrieve-af-with-2fa}
    + [簡介](store-and-retrieve-af-with-2fa/introduction.md)
    + [配置資料源](store-and-retrieve-af-with-2fa/configure-data-source.md)
    + [儲存表單附件](store-and-retrieve-af-with-2fa/store-form-attachments.md)
@@ -183,6 +183,7 @@ ht-degree: 6%
    + [Part4 —— 使用表單資料模型建立ACS配置檔案](aem-forms-with-adobe-campaign/partfour.md)
 
 + 文件服務 {#document-services}
+   + [PDF表格類型](document-services/pdf-forms-and-documents.md)
    + [在AEM Forms中使用Assembler Service](document-services/using-assembler-service-in-aem-forms.md)
    + [在AEM表格中使用Watched資料夾](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms中使用條碼服務](document-services/barcode-service-adaptive-forms-article.md)
