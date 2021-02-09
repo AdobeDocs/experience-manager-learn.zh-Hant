@@ -3,9 +3,9 @@ title: AEM Assets 影片和教學課程
 description: Adobe Experience Manager Assets的視訊和教學課程集
 sub-product: 資產，動態媒體
 translation-type: tm+mt
-source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
+source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '230'
 ht-degree: 14%
 
 ---
@@ -17,6 +17,9 @@ Adobe Experience Manager Assets是AEM Platform上的數位資產管理工具，�
 
 ## 新增功能
 
+* **[建立關聯與取消關聯（視訊）](./authoring/relate-unrelate.md)**
+
+   *瞭解如何在AEM中建立和管理資產之間的關係*
 
 * **[發佈資產（視訊）](./sharing/publish.md)**
 
@@ -33,10 +36,6 @@ Adobe Experience Manager Assets是AEM Platform上的數位資產管理工具，�
 * **[自動啟動工作流程（視訊）](./configuring/auto-start-workflows.md)**
 
    *探索如何在已上傳或重新處理的資產上自動叫用AEM工作流程*
-
-* **[處理設定檔（視訊）](./configuring/processing-profiles.md)**
-
-   *探索如何叫用Assets microservices至轉譯資產*
 
 ## 員工挑選
 
