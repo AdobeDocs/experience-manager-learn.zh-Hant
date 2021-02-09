@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: 398b9f855556fc425b034986a7f21159297dcba5
+source-git-commit: 39ea3dd6133477a52fd91ee696936cd226fce5ea
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1652'
 ht-degree: 1%
 
 ---
@@ -180,6 +180,10 @@ Quickstart Jar的命名`aem-<tier>_<environment>-p<port number>.jar`指定如何
 ## 停止本機AEM執行階段
 
 若要停止本機AEM執行階段（AEM Author或Publish服務），請開啟用來啟動AEM Runtime的命令列視窗，然後點選`Ctrl-C`。 等待AEM關閉。 當關閉過程完成時，命令行提示將可用。
+
+## 選用的本機AEM執行時期設定工作
+
++ __OSGi組態環境變數和機__ 密變 [數是專為AEM本機執行階段設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development)，而非使用aio CLI管理。
 
 ## 何時更新快速啟動Jar
 
