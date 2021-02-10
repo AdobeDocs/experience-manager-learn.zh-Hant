@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 2d7ae5e46acb25eaaf7a1a35d9bbf20f7c14042e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ function customHelperFunctions() { ... }
 
 >[!WARNING]
 >
->資產計算並非所有用於資產操縱的npm模組都受到支援。 npm模組依賴於其他應用程式（如ImageMagick或OS相關庫）的現有應用程式。 最好限制僅限JavaScriptnpm模組的使用。
+>資產計算並非所有用於資產操縱的npm模組都受到支援。 不支援依賴ImageMagick或其他OS相關庫等應用程式存在的npm模組。 最好限制僅限JavaScriptnpm模組的使用。
 
 1. 在資產計算項目的根目錄中開啟命令行（可通過&#x200B;__終端機>新終端機__&#x200B;在VS代碼中完成此操作），然後執行命令：
 
