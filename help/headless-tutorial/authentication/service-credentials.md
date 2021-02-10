@@ -10,7 +10,7 @@ audience: developer
 kt: 6785
 thumbnail: 330519.jpg
 translation-type: tm+mt
-source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
+source-git-commit: 0b1150cd7ca32382cfaa880f9f956b55bfb65a33
 workflow-type: tm+mt
 source-wordcount: '1824'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 與AEM的Cloud Service整合必須能夠安全地向AEM驗證。 AEM的Developer Console授與「服務認證」的存取權，這些認證用來協助外部應用程式、系統和服務透過HTTP以程式設計方式與AEM Author或Publish服務互動。
 
->[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
 
 「服務憑證」可能會以類似的[「本機開發存取Token」(a1/>)顯示，但以下列幾種主要方式不同：](./local-development-access-token.md)
 
