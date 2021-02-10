@@ -10,9 +10,9 @@ audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
 translation-type: tm+mt
-source-git-commit: a405cf14d3f71bf51e32e50c828c3216d29aa253
+source-git-commit: b9fb3cb0c12afcabf4a92ded3d7d330ac9d229d6
 workflow-type: tm+mt
-source-wordcount: '2517'
+source-wordcount: '2537'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ Adobe Cloud Manager可協助建立程式碼並將之部署至AEM做為雲端服�
 
 若要解決程式碼掃描問題，請透過&#x200B;**下載詳細資訊**&#x200B;按鈕下載Cloud Manager提供的CSV格式報表，並檢視所有項目。
 
-如需詳細資訊，請參閱AEM特定規則，請參閱Cloud Manager檔案的「自訂AEM特定程式碼掃描規則」[。](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html)
+如需詳細資訊，請參閱AEM特定規則，請參閱Cloud Manager檔案的「自訂AEM特定程式碼掃描規則」](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html)。[
 
 ## 建立影像
 
@@ -231,6 +231,7 @@ AEM作為雲端服務會在每個AEM版本中自動包含最新的核心元件�
    1. 如果`/var`資源不需要，請從作為應用程式一部分部署的內容包中刪除`/var`下的任何資源。
    2. 如果需要`/var`資源，請使用[repoint](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)定義節點結構。 Repoinit指令碼可透過OSGi執行模式定位至AEM Author、AEM Publish或兩者。
    3. 如果`/var`資源僅需要於AEM作者，且無法使用[repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)合理地建立模型，請將它們移至離散內容套件，此套件僅由[embedding](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)安裝在AEM Author執行模式檔案夾(`<target>/apps/example-packages/content/install.author</target>`)的`all`套件中。
+   4. 按照本[ Adobe KB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html)中所述，為`sling-distribution-importer`服務用戶提供適當的ACL。
 
 ### 建立Adobe支援案例
 
