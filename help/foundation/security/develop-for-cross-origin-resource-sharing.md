@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 doc-type: tutorial
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: c657eefa69b383c1b1a9e2845276245d3db00e6f
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 * [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12) (SimpleHTTPServer的包裝函 [[!DNL Python]式](https://docs.python.org/2/library/simplehttpserver.html))正透過連接埠8000為HTML頁面提供服務。
 * [!DNL AEM Dispatcher] 正在 [!DNL Apache HTTP Web Server] 2.4上執行，並反向代理請求 `aem-publish.local` 至 `localhost:4503`。
 
-如需詳細資訊，請參閱「瞭解AEM[中的跨原始資源共用(CORS)」。](./understand-cross-origin-resource-sharing.md)
+如需詳細資訊，請參閱「瞭解AEM](./understand-cross-origin-resource-sharing.md)中的跨原始資源共用(CORS)」。[
 
 ## www.example.com HTML和JavaScript
 
@@ -96,12 +96,12 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## Dispatcher configuration {#dispatcher-configuration}
 
-若要允許快取和提供快取內容上的[!DNL CORS]標題，請將下列組態新增至所有支援的AEM Publish `dispatcher.any`檔案。
+若要允許快取和提供快取內容上的CORS標題，請將[/clientheaders configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)新增至所有支援的AEM Publish `dispatcher.any`檔案。
 
 ```
 /cache { 
   ...
-  /headers {
+  /clientheaders {
       "Access-Control-Allow-Origin",
       "Access-Control-Expose-Headers",
       "Access-Control-Max-Age",
@@ -115,7 +115,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 **對檔案進行更改** 後，重新啟動Web伺服器應 `dispatcher.any` 用程式。
 
-在`/headers`組態更新後，可能需要完全清除快取，以確保標頭會在下次要求時正確快取。
+在`/clientheaders`組態更新後，可能需要完全清除快取，以確保標頭會在下次要求時正確快取。
 
 ## 支援材料{#supporting-materials}
 
