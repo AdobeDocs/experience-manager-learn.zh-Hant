@@ -8,9 +8,9 @@ doc-type: feature video
 activity: use
 version: 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 9102505bbd826e17bf924cec719d7a430eea5095
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1094'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Adobe Asset Link v1.1現在提供Adobe Asset Link和AEM Assets之間的InDesign�
 
 >[!NOTE]
 >
->請僅使用您的Adobe Creative Cloud Enterprise ID或Federated ID。 請確定您[設定Adobe Asset Link](https://helpx.adobe.com/enterprise/using/configure-aem-for-aal-prerelease.html)的AEM。
+>請僅使用您的Adobe Creative Cloud Enterprise ID或Federated ID。 請確定您[設定Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)的AEM。
 
 
 ### Adobe Asset Link功能
@@ -73,8 +73,6 @@ FPO轉譯是原始資產的輕量型替代。 它們的長寬比相同，但與�
 * BMP
 
 如果FPO轉譯無法用於AEM Assets中的特定資產，則會改為參考原始的高解析度資產。 對於FPO影像，狀態FPO會顯示在「InDesign連結」面板中。
-
-
 
 ## 瞭解Adobe Asset Link驗證與AEM Assets{#understanding-adobe-asset-link-authentication-with-aem-assets}
 
