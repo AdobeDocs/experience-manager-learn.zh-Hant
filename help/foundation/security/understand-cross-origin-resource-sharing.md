@@ -9,7 +9,7 @@ activity: understand
 audience: architect, developer
 doc-type: article
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: bc14783840a47fb79ddf1876aca1ef44729d097e
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 1%
@@ -124,7 +124,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 
 ## Dispatcher快取問題和配置{#dispatcher-caching-concerns-and-configuration}
 
-從Dispatcher 4.1.1+回應標頭開始，可以快取。 這樣，只要請求是匿名的，就可以將[!DNL CORS]標頭與&lt;a1/>請求的資源一起快取。[!DNL CORS]
+從Dispatcher 4.1.1+回應標頭開始，可以快取。 這樣，只要請求是匿名的，就可以將[!DNL CORS]標頭與[!DNL CORS]請求的資源一起快取。
 
 一般而言，在Dispatcher中快取內容的相同考量，可套用至dispatcher中快取CORS回應標頭。 下表定義了可快取[!DNL CORS]標題（以及[!DNL CORS]請求）的時間。
 
@@ -139,12 +139,12 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 ```
 /cache { 
   ...
-  /headers {
-      "Access-Control-Allow-Origin",
-      "Access-Control-Expose-Headers",
-      "Access-Control-Max-Age",
-      "Access-Control-Allow-Credentials",
-      "Access-Control-Allow-Methods",
+  /clientheaders {
+      "Access-Control-Allow-Origin"
+      "Access-Control-Expose-Headers"
+      "Access-Control-Max-Age"
+      "Access-Control-Allow-Credentials"
+      "Access-Control-Allow-Methods"
       "Access-Control-Allow-Headers"
   }
   ...
@@ -153,7 +153,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 
 在對`dispatcher.any`檔案進行更改後，請記住&#x200B;**重新啟動Web伺服器應用程式**。
 
-在`/headers`組態更新後，可能需要完全清除快取，以確保標頭會在下次要求時正確快取。
+在`/clientheaders`組態更新後，可能需要完全清除快取，以確保標頭會在下次要求時正確快取。
 
 ## 疑難排解CORS
 
@@ -168,7 +168,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 * 驗證請求是否遭到CORS處理常式拒絕，而非驗證、CSRF Token篩選、分派器篩選或其他安全層拒絕
    * 如果CORS處理常式以200回應，但回應上沒有`Access-Control-Allow-Origin`標題，請檢閱`com.adobe.granite.cors`中[!DNL DEBUG]下的拒絕記錄
 * 如果[!DNL CORS]請求的分發程式快取已啟用
-   * 確保`/headers`配置已應用於`dispatcher.any`並且Web伺服器已成功重新啟動
+   * 確保`/clientheaders`配置已應用於`dispatcher.any`並且Web伺服器已成功重新啟動
    * 確保在任何OSGi或dispatcher.any配置更改後，快取已正確清除。
 * 如有需要，請檢查請求上是否有驗證憑證。
 
