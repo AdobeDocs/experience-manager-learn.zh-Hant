@@ -10,15 +10,20 @@ doc-type: article
 kt: 5882
 thumbnail: KT-5882.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: f30d15f0578b7e529e4acefb8e1d2e29157ab359
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
 
 
 # 將AEM的存取權設定為雲端服務
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_adobeims_overview"
+>title="Adobe IMS簡介"
+>abstract="AEM做為雲端服務，運用Adobe IMS(Identity Management System)來協助其管理員和一般使用者的使用者登入AEM Author服務。 瞭解Adobe IMS使用者、群組和產品設定檔如何與AEM群組和權限搭配使用，以提供AEM Author服務的精細存取。"
 
 AEM做為雲端服務是運用AEM應用程式的雲端原生方式，因此，利用Adobe IMS(Identity Management System)來協助其使用者（包括管理員和一般使用者）登入AEM Author服務。 瞭解Adobe IMS使用者、群組和產品設定檔如何與AEM群組和權限搭配使用，以提供AEM Author服務的精細存取。
 
