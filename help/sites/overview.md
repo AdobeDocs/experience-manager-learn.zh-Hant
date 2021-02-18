@@ -5,9 +5,9 @@ description: 'Adobe Experience Manager Sites 的影片和教學課程系列。 '
 seo-description: Adobe Experience Manager Sites的視訊和教學課程集
 sub-product: 網站，內容服務
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '363'
 ht-degree: 16%
 
 ---
@@ -19,7 +19,11 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
 
 ## 新增功能
 
-* **[使用AEM元件自訂Adobe用戶端資料層](./integrations/adobe-client-data-layer/data-layer-customize.md)**
+* **[搭配AEM Sites使用啟動（視訊）](./spa-editor/spa-editor-framework-feature-video-use.md)**
+
+   *瞭解AEM Sites的「啟動」，以及如何用來準備網站內容以供未來版本使用。*
+
+* **[使用AEM元件自訂Adobe用戶端資料層（教學課程）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
    *瞭解如何使用自訂AEM元件的內容更新Adobe用戶端資料層。*
 
