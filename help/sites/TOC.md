@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Sites 的影片和教學課程�
 breadcrumb-title: AEM Sites 教學課程
 sub-product: sites
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 14%
+source-wordcount: '448'
+ht-degree: 17%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 14%
    + [可編輯的範本](page-authoring/template-editor-feature-video-use.md)
    + [樣式系統](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
+   + [啟動](page-authoring/launches.md)
 + 元件 {#components}
    + [元件開發](components/component-development.md)
    + [核心元件](components/core-components-feature-video-understand.md)
@@ -47,7 +48,7 @@ ht-degree: 14%
    + [設定包含體驗片段的社交貼文](experience-fragments/experience-fragments-social-technical-video-setup.md)
    + [內容片段與體驗片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 開發 {#developing}
-   + [AEM Project Archetype](developing/aem-project-archetype.md)
+   + [AEM 專案原型](developing/aem-project-archetype.md)
    + [AEM Sites快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [AEM Headless 快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [AEM SPA編輯器快速入門與回應](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
@@ -64,12 +65,12 @@ ht-degree: 14%
    + [設定體驗片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [搭配Adobe Target使用體驗片段](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [設定ContextHub](personalization/context-hub-technical-video-setup.md)
-+ 單頁應用程式{#spa-editor}
++ 單頁應用程式 {#spa-editor}
    + [使用SPA編輯器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello World教學課程](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [AEM SPA編輯器快速入門與回應](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM SPA編輯器和Angular快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
-+ 多站點管理{#multi-site-management}
++ 多網站管理 {#multi-site-management}
    + [語言副本簡介](./multi-site-management/language-copy-overview.md)
    + [即時文案和藍圖](./multi-site-management/live-copy-and-blueprint.md)
    + [建立即時副本](./multi-site-management/create-live-copy.md)
@@ -89,7 +90,7 @@ ht-degree: 14%
    + [使用語言副本](translation/language-copy-feature-video-use.md)
    + [設定翻譯規則](translation/translation-rules-editor-technical-video-setup.md)
    + [翻譯增強功能](translation/translation-enhancements-feature-video-use.md)
-+ 整合{#integrations}
++ Integrations {#integrations}
    + 體驗平台啟動{#experience-platform-launch}
       + [概覽](integrations/experience-platform-launch/overview.md)
       + [建立啟動屬性](integrations/experience-platform-launch/create-launch-property.md)
