@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: 雲端服務
 team: TM
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 31%
+source-wordcount: '282'
+ht-degree: 28%
 
 ---
 
@@ -103,5 +103,11 @@ ht-degree: 31%
    + 進階{#advanced}
       + [中繼資料工作者](./asset-compute/advanced/metadata.md)
    + [疑難排解](./asset-compute/troubleshooting.md)
++ 多步驟教學課程{#multi-step-tutorials}
+   + [AEM Sites開發](./develop-wknd-tutorial.md)
+   + [GraphQL](../headless-tutorial/graphql/overview.md)
+   + [SPA編輯器(React)](../spa-react-tutorial/overview.md)
+   + [SPA編輯器（角度）](../spa-angular-tutorial/overview.md)
+   + [AEM Sites和Adobe Target](../aem-target-personalization/overview.md)
+   + [代號型驗證](../headless-tutorial/authentication/overview.md)
 
-+ [開始開發 AEM Sites - WKND 教學課程](./develop-wknd-tutorial.md)
