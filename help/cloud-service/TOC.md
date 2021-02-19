@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: 雲端服務
 team: TM
 translation-type: tm+mt
-source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
+source-git-commit: 91399ff4ab26655de27bbecab4ff773f6666d86a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 28%
+source-wordcount: '320'
+ht-degree: 24%
 
 ---
 
@@ -104,10 +104,10 @@ ht-degree: 28%
       + [中繼資料工作者](./asset-compute/advanced/metadata.md)
    + [疑難排解](./asset-compute/troubleshooting.md)
 + 多步驟教學課程{#multi-step-tutorials}
-   + [AEM Sites開發](./develop-wknd-tutorial.md)
-   + [GraphQL](../headless-tutorial/graphql/overview.md)
-   + [SPA編輯器(React)](../spa-react-tutorial/overview.md)
-   + [SPA編輯器（角度）](../spa-angular-tutorial/overview.md)
-   + [AEM Sites和Adobe Target](../aem-target-personalization/overview.md)
-   + [代號型驗證](../headless-tutorial/authentication/overview.md)
+   + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/develop-wknd-tutorial.html)
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
+   + [SPA編輯器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [SPA編輯器（角度）](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
+   + [代號型驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
 
