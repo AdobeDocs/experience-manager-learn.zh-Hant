@@ -2,7 +2,7 @@
 title: 延伸元件 | AEM SPA編輯器與Angular快速入門
 description: 瞭解如何擴充現有的核心元件，以便與AEM SPA編輯器搭配使用。 瞭解如何將屬性和內容新增至現有元件是擴充AEM SPA編輯器實作功能的強大技巧。 瞭解如何使用委派模式來擴充Sling Models和Sling Resource Merger的功能。
 sub-product: sites
-feature: SPA Editor
+feature: SPA編輯器
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -13,8 +13,8 @@ thumbnail: 5871-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
 workflow-type: tm+mt
-source-wordcount: '1984'
-ht-degree: 1%
+source-wordcount: '1986'
+ht-degree: 2%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 在實際實施中，更合適的做法是，只使用[Teaser元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/teaser.html)然後擴展[Image核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)，根據項目要求製作`Card`元件。 建議您盡可能直接使用[核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)。
+> 在實際實施中，更合適的做法是，只使用[Teaser元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/components/teaser.html)然後擴展[Image核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)，根據項目要求製作`Card`元件。 建議您盡可能直接使用[核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)。
 
 ## 必備條件
 
