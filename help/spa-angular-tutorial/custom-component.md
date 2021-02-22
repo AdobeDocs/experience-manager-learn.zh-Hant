@@ -2,7 +2,7 @@
 title: 建立自訂元件 | AEM SPA編輯器與Angular快速入門
 description: 瞭解如何建立要與AEM SPA編輯器搭配使用的自訂元件。 瞭解如何開發作者對話方塊和Sling Models以擴充JSON模型以填入自訂元件。
 sub-product: sites
-feature: SPA Editor
+feature: SPA編輯器
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -13,7 +13,7 @@ thumbnail: 5831-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: 1fd4d31770a4eac37a88a7c6960fd51845601bee
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1507'
 ht-degree: 1%
 
 ---
@@ -149,7 +149,7 @@ AEM元件定義為節點和屬性。 在項目中，這些節點和屬性在`ui.
 
    ![自訂元件定義](assets/custom-component/dialog-custom-component-defintion.png)
 
-   上述XML檔案會為`Custom Component`產生一個非常簡單的對話方塊。 檔案的關鍵部分是內部`<message>`節點。 此對話框將包含名為`Message`的簡單`textfield`，並將textifeld的值保存到名為`message`的屬性。
+   上述XML檔案會為`Custom Component`產生一個非常簡單的對話方塊。 檔案的關鍵部分是內部`<message>`節點。 此對話方塊將包含名為`Message`的簡單`textfield`，並將textifeld的值保留至名為`message`的屬性。
 
    Sling Model將會建立在旁邊，以透過JSON模型公開`message`屬性的值。
 
@@ -336,4 +336,4 @@ Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects
 
 ### 後續步驟{#next-steps}
 
-[擴充核心元件](extend-component.md) -瞭解如何擴充現有的核心元件以搭配AEM SPA編輯器使用。瞭解如何將屬性和內容新增至現有元件是擴充AEM SPA編輯器實作功能的強大技巧。
+[擴充核心元件](extend-component.md) -瞭解如何擴充現有的核心元件，以便與AEM SPA編輯器搭配使用。瞭解如何將屬性和內容新增至現有元件是擴充AEM SPA編輯器實作功能的強大技巧。
