@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: f568c991cd33c5c5349da32f505cff356a6ebfd2
 workflow-type: tm+mt
 source-wordcount: '715'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 4%
 
 教學課程旨在搭配&#x200B;**AEM做為雲端服務**&#x200B;使用，並向後相容於&#x200B;**AEM 6.5.4+**&#x200B;和&#x200B;**AEM 6.4.8+**。 SPA的實施方式如下：
 
-* [Maven AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Maven AEM Project Archetype](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/archetype/overview.html)
 * [AEM SPA編輯器](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
 * [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
 * [角度](https://angular.io/)
@@ -109,4 +109,4 @@ ht-degree: 4%
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
 ```
 
-為AEM實作產生新專案時，請一律使用[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)的最新版本，並更新`aemVersion`以定位您的AEM預定版本。
+為AEM實作產生新專案時，請一律使用[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)的最新版本，並更新`aemVersion`以定位您的AEM預期版本。
