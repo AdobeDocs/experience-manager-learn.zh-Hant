@@ -4,9 +4,9 @@ description: Adobe Experience Manager(AEM)雲端服務教學課程的集合
 sub-product: 站點，雲端管理員，基礎，資產
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '275'
 ht-degree: 8%
 
 ---
@@ -20,9 +20,13 @@ Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM作�
 
 ## 新增功能
 
-* **[代號型驗證（教學課程）](../headless-tutorial/authentication/overview.md)**
+* **[代號型驗證（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
    *瞭解如何使用以Token為基礎的驗證，透過HTTP與AEM做為雲端服務互動*
+
+* **[無頭圖形QL（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+
+   *瞭解如何使用AEM的GraphQL API來強化外部應用程式的體驗。*
 
 * **[大量匯入（視訊）](./migration/bulk-import.md)**
 
@@ -35,11 +39,6 @@ Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM作�
 * **[資產計算微服務擴充性（教學課程）](./asset-compute/overview.md)**
 
    *瞭解如何開發資產計算工作者以產生自訂資產轉譯*
-
-* **[將AEM的存取權設定為雲端服務（教學課程）](./accessing/overview.md)**
-
-   *瞭解如何在Adobe Admin Console中設定IMS使用者，讓他們可以存取AEM*
-
 
 ## 員工挑選
 
