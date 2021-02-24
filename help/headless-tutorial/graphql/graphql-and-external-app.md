@@ -11,7 +11,7 @@ mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
 source-wordcount: '1397'
 ht-degree: 0%
@@ -68,7 +68,7 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
 
 1. 請至[http://localhost:3000/](http://localhost:3000/)檢閱應用程式。 範例React應用程式包含兩個主要部分：
 
-   * 家庭體驗是WKND Adventures的索引，但是使用GraphQL查詢AEM中的&#x200B;__Adventure__&#x200B;內容片段。 在本章中，我們將修改此視圖，以支援按活動篩選冒險。
+   * 使用GraphQL查詢AEM中的&#x200B;__Adventure__&#x200B;內容片段，即可將家庭體驗當成WKND Adventures的索引。 在本章中，我們將修改此視圖，以支援按活動篩選冒險。
 
       ![WKND GraphQL React應用程式——首頁體驗](./assets/graphql-and-external-app/react-home-view.png)
 
