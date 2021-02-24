@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '966'
 ht-degree: 1%
 
 ---
@@ -133,18 +133,18 @@ ht-degree: 1%
 
 ## 啟用參與者模型
 
-內容片段模型在首次建立時預設為&#x200B;**Draft**&#x200B;狀態。 這可讓使用者在&#x200B;**之前調整內容片段模型**，讓作者使用它。 請記住，修改模型中某個欄位的&#x200B;**屬性名稱**&#x200B;會更改基礎資料模式，並且對現有片段和外部應用程式有顯著的下游影響。 建議謹慎規劃用於&#x200B;**欄位屬性名稱**&#x200B;的命名慣例。
+內容片段模型必須為&#x200B;**Enabled**，內容作者才能使用。 可&#x200B;**停用**&#x200B;內容片段模型，因此禁止作者使用。 請記住，修改模型中某個欄位的&#x200B;**屬性名稱**&#x200B;會更改基礎資料模式，並且對現有片段和外部應用程式有顯著的下游影響。 建議在為用戶啟用內容片段模型之前，仔細規劃用於&#x200B;**屬性名稱**&#x200B;欄位的命名慣例。
 
-1. 觀察&#x200B;**Contributor**&#x200B;模型當前處於&#x200B;**Draft**&#x200B;狀態。
+1. 請確定&#x200B;**Contributor**&#x200B;型號目前處於&#x200B;**Enabled**&#x200B;狀態。
 
-1. 通過懸停在卡上並按一下「啟用&#x200B;****」表徵圖，啟用&#x200B;**參與者模型**:
+   ![啟用的參與者模型](assets/content-fragment-models/enable-contributor-model.png)
 
-   ![啟用參與者模型](assets/content-fragment-models/enable-contributor-model.png)
+   將滑鼠指標暫留在卡片上，然後按一下「停用&#x200B;**/**&#x200B;啟用&#x200B;**」圖示，即可切換內容片段模型的狀態。**
 
 ## 恭喜！{#congratulations}
 
-恭喜，您剛剛建立了第一個內容片段模型！
+恭喜，您剛建立了第一個內容片段模型！
 
 ## 後續步驟{#next-steps}
 
-在下一章[創作內容片段模型](author-content-fragments.md)中，您將根據內容片段模型建立和編輯新的內容片段。 您還將學習如何建立內容片段的變體。
+在下一章[編寫內容片段模型](author-content-fragments.md)中，您將根據內容片段模型建立並編輯新的內容片段。 您也將學習如何建立內容片段的變體。
