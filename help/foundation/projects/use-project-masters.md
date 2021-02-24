@@ -1,16 +1,17 @@
 ---
-title: 在AEM中使用專案主版
+title: 如何在AEM中使用專案主控
 description: Project Masters透過AEM Projects大幅簡化使用者和團隊管理。
-version: 6.4, 6.5
-feature: projects, users-and-groups
-topics: administration, collaboration, performance
-activity: use
-audience: administrator, implementer, architect
-doc-type: article
+version: 6.4, 6.5, cloud-service
+topic: 內容管理
+feature: 專案
+level: 中級
+role: 業務從業人員
+kt: 256
+thumbnail: 17740.jpg
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 2d38baad8e8351d9debbef758050b9b63d860fe9
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -20,16 +21,16 @@ ht-degree: 0%
 
 專案主管使用[!DNL AEM Projects]大幅簡化使用者和團隊管理。
 
->[!VIDEO](https://video.tv.adobe.com/v/17740/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17740/?quality=12&learn=on)
 
 管理員現在可以建立&#x200B;**[!DNL Master Project]**，並將使用者指派給專案團隊中的角色／權限。 專案可從主專案建立，並自動繼承團隊會籍。 這提供了幾項優點：
 
-* 跨多個專案重新使用現有團隊
+* 跨多個專案重複使用現有團隊
 * 加速專案建立，因為團隊不需要手動重新建立
 * Projects會自動從中央位置管理團隊會籍，並繼承任何對團隊的更新
 * 避免建立可能導致效能問題的重複ACL
 
-[!DNL Master Projects] 可在「AEM專案」下  的「Mastersfolder」 [!UICONTROL 下建立]。建立[!DNL Master Project]後，當建立新的「專案」時，它會在精靈中顯示為可用範本的選項。
+[!DNL Master Projects] 可在「AEM專案」下  的「Mastersfolder」 [!UICONTROL 下建立]。建立主項目後，在建立新項目時，它將作為嚮導中可用模板的選項一起顯示。
 
 [!DNL Project Masters] URL（本機AEM作者例項）: [http://localhost:4502/projects.html/content/projects/masters](http://localhost:4502/projects.html/content/projects/masters)
 
@@ -49,6 +50,6 @@ ht-degree: 0%
 
 ![專案主修人員技術檢視](assets/use-project-masters/project-masters-architecture.png)
 
-[!DNL Project Masters] 工作方式：定義一組AEM使用者群組（擁有者、編輯者和觀察者），並允許衍生的「專案」參考和重複使用這些集中定義的使用者群組。
+[!DNL Project Masters] 透過定義一組AEM使用者群組（擁有者、編輯者和觀察者），並允許衍生的專案參考和重複使用這些集中定義的使用者群組，來工作。
 
-如此可減少AEM中所需的使用者群組總數。 在[!DNL Project Masters]之前，每個項目都建立了3個用戶組，其中附帶的ACE用於強制許可，因此100個項目產生了300個用戶組。 專案主管允許任意數量的專案重複使用相同的3個群組，前提是共用會籍符合專案的業務需求。
+如此可減少AEM中所需的使用者群組總數。 在[!DNL Project Masters]之前，每個項目都建立了3個用戶組，並附帶了ACE以強制執行權限，因此，100個項目產生了300個用戶組。 專案主管允許任意數量的專案重複使用相同的三個群組，前提是共用會籍符合專案中的業務需求。
