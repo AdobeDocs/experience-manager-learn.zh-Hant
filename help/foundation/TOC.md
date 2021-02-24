@@ -5,10 +5,10 @@ user-guide-description: 'Adobe Experience Manager Foundation 的影片和教學�
 sub-product: 基礎
 index: y
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: 2760064642002a684b3fd70337a81a7d6e28a343
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 19%
+source-wordcount: '147'
+ht-degree: 21%
 
 ---
 
@@ -46,6 +46,5 @@ ht-degree: 19%
 + 工作流程 {#workflow}
    + [使用工作流程編輯器](./workflow/use-the-workflow-editor.md)
    + [使用工作流程管理](./workflow/use-workflow-management.md)
-   + [搭配AEM專案和收件匣使用「行事歷檢視」](./workflow/use-the-calendar-view-with-aem-projects-and-inbox.md)
    + [使用收件箱](./workflow/use-the-inbox.md)
 
