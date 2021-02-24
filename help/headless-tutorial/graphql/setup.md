@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: c752106cc68774eb7e8b9fe525273bb7088d38e5
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1819'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 1%
 1. 從WKND參考網站下載並安裝範例內容。
 1. 下載並安裝範例應用程式，以使用GraphQL API來使用內容。
 
-## 安裝AEM SDK{#aem-sdk}
+## 安裝AEM SDK {#aem-sdk}
 
 本教學課程使用[AEM做為雲端服務SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#aem-as-a-cloud-service-sdk)來探索AEM的GraphQL API。 本節提供安裝AEM SDK並在「作者」模式中執行AEM SDK的快速指南。 有關設定本地開發環境[的更詳細指南，請參閱](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=en#local-development-environment-set-up)。
 
@@ -56,6 +56,9 @@ ht-degree: 1%
 
 1. 解壓縮下載並將快速啟動jar(`aem-sdk-quickstart-XXX.jar`)複製到專用資料夾，即`~/aem-sdk/author`。
 1. 將jar檔案重新命名為`aem-author-p4502.jar`。
+
+   `author`名稱指定Quickstartjar將以「作者」模式啟動。 `p4502`指定Quickstart伺服器將在埠4502上運行。
+
 1. 開啟新的終端窗口並導航到包含jar檔案的資料夾。 執行下列命令以安裝並啟動AEM例項：
 
    ```shell
@@ -67,9 +70,11 @@ ht-degree: 1%
 1. 幾分鐘後，AEM實例將完成安裝，而新的瀏覽器視窗應會在[http://localhost:4502](http://localhost:4502)開啟。
 1. 使用用戶名`admin`和密碼`admin`登錄。
 
-## 安裝範例內容{#wknd-site}
+## 安裝示例內容和GraphQL端點{#wknd-site-content-endpoints}
 
-將會安裝WKND參考網站的範例內容，以加速教學課程。 WKND是虛構的生活風格品牌，常與AEM訓練搭配使用。
+將安裝&#x200B;**WKND參考站點**&#x200B;中的示例內容以加速教程。 WKND是虛構的生活風格品牌，常與AEM訓練搭配使用。
+
+WKND參考站點包括公開[GraphQL端點](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html?lang=en#graphql-aem-endpoint)所需的配置。 在實際實施中，請遵循記錄的步驟，將GraphQL端點](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html?lang=en#graphql-aem-endpoint)納入您的客戶項目中。 [[CORS](#cors-config)也已封裝為WKND網站的一部分。 需要CORS組態才能授與外部應用程式的存取權，有關[CORS](#cors-config)的更多資訊，請參閱以下。
 
 1. 下載最新編譯的WKND網站AEM套件：[aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest)。
 
@@ -108,16 +113,6 @@ ht-degree: 1%
 >
 > 如果使用雲服務環境，請參閱如何[將WKND參考網站等程式碼庫部署至雲服務環境的檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#deploying)。
 
-## 安裝GraphQL端點{#graphql-endpoint}
-
-需要配置GraphQL端點。 這為項目提供了確定GraphQL API公開的確切端點的靈活性。 還需要[CORS](#cors-config)來授與對外部應用程式的存取權。 為加速教學課程，已預先建立套件。
-
-1. 下載[aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip](./assets/setup/aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip)套件。
-1. 從&#x200B;**AEM Start**&#x200B;功能表導覽至&#x200B;**Tools** > **Deployment** > **Packages**。
-1. 按一下&#x200B;**上傳包**&#x200B;並選擇在上一步中下載的包。 按一下&#x200B;**Install**&#x200B;安裝軟體包。
-
-上述軟體包還包含[GraphiQL工具](https://github.com/graphql/graphiql)，將用於後續章節。 有關CORS組態的詳細資訊，請參閱[下方的](#cors-config)。
-
 ## 安裝範例應用程式{#sample-app}
 
 本教學課程的目標之一，是示範如何使用GraphQL API，從外部應用程式使用AEM內容。 本教學課程使用已部分完成的React App範例來加速教學課程。 同樣的課程和概念也適用於使用iOS、Android或任何其他平台建立的應用程式。 React應用程式有意簡單，以避免不必要的複雜性；它不是指參照實施。
@@ -132,11 +127,11 @@ ht-degree: 1%
 
    ```plain
    REACT_APP_HOST_URI=http://localhost:4502
-   REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/endpoint.gql
+   REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json
    REACT_APP_AUTHORIZATION=admin:admin
    ```
 
-   請確定`React_APP_HOST_URI`符合您的本機AEM例項。 在本章中，我們將直接將React App連接至AEM **Author**&#x200B;環境，因此需要驗證。 這是開發期間的常見做法，因為它可讓我們快速變更AEM環境，並立即在應用程式中反映。
+   請確定`React_APP_HOST_URI`符合您的本機AEM例項。 在本章中，我們將直接將React App連接到AEM **Author**&#x200B;環境。 **依預** 設，授權需要驗證，因此我們的應用程式會以使用者身分 `admin` 連線。這是開發期間的常見做法，因為它可讓我們快速變更AEM環境，並立即在應用程式中反映。
 
    >[!NOTE]
    >
@@ -160,7 +155,7 @@ ht-degree: 1%
 
    ![Adventure Details（冒險詳細資訊）檢視](assets/setup/adventure-details-view.png)
 
-1. 使用瀏覽器的開發人員工具來檢查&#x200B;**Network**&#x200B;請求。 檢視&#x200B;**XHR**&#x200B;請求，並觀察對`/content/graphql/endpoint.gql`（為AEM設定的GraphQL端點）的多個POST請求。
+1. 使用瀏覽器的開發人員工具來檢查&#x200B;**Network**&#x200B;請求。 檢視&#x200B;**XHR**&#x200B;請求，並觀察對`/content/graphql/global/endpoint.json`（為AEM設定的GraphQL端點）的多個POST請求。
 
    ![GraphQL端點XHR請求](assets/setup/endpoint-gql.png)
 
@@ -189,6 +184,28 @@ ht-degree: 1%
 
    ![更新的巴釐島衝浪夏令營冒險](assets/setup/overnight-bali-surf-camp-changes.png)
 
+## 安裝GraphiQL工具{#install-graphiql}
+
+[GraphiQL](https://github.com/graphql/graphiql) 是開發工具，僅在低級環境（如開發或本地實例）上需要。GraphiQL IDE允許您快速測試和細化返回的查詢和資料。 GraphiQL還提供了對文檔的輕鬆訪問，使您能夠輕鬆瞭解和瞭解可用的方法。
+
+1. 導覽至&#x200B;**[軟體散發入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM作為雲端服務**。
+1. 搜索「GraphiQL」(請務必在&#x200B;**GraphiQL**&#x200B;中包含&#x200B;**i**。
+1. 下載最新的&#x200B;**GraphiQL內容包v.x.x.x**
+
+   ![下載GraphiQL軟體包](assets/explore-graphql-api/software-distribution.png)
+
+   zip檔案是可直接安裝的AEM套件。
+
+1. 從&#x200B;**AEM Start**&#x200B;功能表導覽至&#x200B;**Tools** > **Deployment** > **Packages**。
+1. 按一下&#x200B;**上傳包**&#x200B;並選擇在上一步中下載的包。 按一下&#x200B;**Install**&#x200B;安裝軟體包。
+
+   ![安裝GraphiQL軟體包](assets/explore-graphql-api/install-graphiql-package.png)
+1. 導覽至位於[http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html)的GraphiQL IDE，並開始探索GraphQL API。
+
+   >[!NOTE]
+   >
+   > 在教程](./explore-graphql-api.md)的後面，對GraphiQL工具和GraphQL API進行了更詳細的介紹。[
+
 ## 恭喜！{#congratulations}
 
 恭喜您，您現在有外部應用程式使用GraphQL的AEM內容。 在React應用程式中檢查程式碼，並繼續嘗試修改現有的內容片段。
@@ -201,24 +218,30 @@ ht-degree: 1%
 
 AEM依預設是安全的，會封鎖跨原始碼要求，防止未授權的應用程式連線及呈現其內容。
 
-為了讓本教學課程的React應用程式與AEM的GraphQL API端點互動，GraphQL端點套件中已定義跨原始資源共用設定。
+為了讓本教學課程的React應用程式與AEM的GraphQL API端點互動，WKND網站參考專案中已定義跨來源資源共用設定。
 
-![跨原始資源共用配置](./assets/setup/cross-origin-resource-sharing-configuration.png)
+![跨原始資源共用配置](assets/setup/cross-origin-resource-sharing-configuration.png)
 
-若要手動設定：
+要查看已部署的配置：
 
-1. 導覽至AEM SDK的Web Console，網址為&#x200B;**Tools** > **Operations** > **Web Console**
-1. 按一下標示&#x200B;**Adobe Granite跨原始資源共用政策**&#x200B;的列，以建立新的設定
-1. 更新下列欄位，將其他欄位保留為預設值：
-   * 允許的來源：`localhost:3000`
-   * 允許的來源(Regex):`.* `
-   * 允許的路徑: `/content/graphql/endpoint.gql`
+1. 導覽至AEM SDK的Web Console，網址為[http://localhost:4502/system/console](http://localhost:4502/system/console)。
+
+   >[!NOTE]
+   >
+   > Web Console僅適用於SDK。 在AEM做為雲端服務環境中，您可透過[開發人員主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html)檢視此資訊。
+
+1. 在頂部菜單中，按一下「**OSGI** > **配置**」以開啟所有「[OSGi配置](http://localhost:4502/system/console/configMgr)」。
+1. 向下捲動頁面&#x200B;**Adobe Granite跨原始資源共用**。
+1. 按一下`com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql`的配置。
+1. 下列欄位已更新：
+   * 允許的來源(Regex):`http://localhost:.*`
+      * 允許所有本地主機連接。
+   * 允許的路徑: `/content/graphql/global/endpoint.json`
+      * 這是當前唯一配置的GraphQL端點。 作為最佳做法，COR的配置應盡可能嚴格。
    * 允許的方法：`GET`、`HEAD`、`POST`
       * GraphQL只需要`POST`，但是其他方法在以無頭方式與AEM互動時可能很有用。
+   * 支援的標題：**authorization**&#x200B;已新增，以傳入作者環境的基本驗證。
    * 支援憑據：`Yes`
       * 當我們的React應用程式將與AEM Author服務上受保護的GraphQL端點通訊時，這是必要項。
-1. 按一下&#x200B;**保存**
 
-此設定允許從`localhost:3000`發起的`POST` HTTP請求，以至路徑`/content/graphql/endpoint.gql`上的AEM Author服務。
-
-此配置和GraphQL端點是從AEM Project產生的。 [在這裡檢視詳細資訊](https://github.com/adobe/aem-guides-wknd-graphql/tree/master/aem-project)。
+此配置和GraphQL端點是AEM WKND專案的一部分。 您可以在此處查看所有[OSGi配置](https://github.com/adobe/aem-guides-wknd/tree/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig)。
