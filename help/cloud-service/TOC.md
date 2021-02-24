@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: 雲端服務
 team: TM
 translation-type: tm+mt
-source-git-commit: 91399ff4ab26655de27bbecab4ff773f6666d86a
+source-git-commit: c7b3a6e408e46338a6a540c6403601be8c0893e2
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '329'
 ht-degree: 24%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 24%
       + [分析測試結果](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcher Configurations](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
-+ 本地開發環境設定{#local-development-environment-set-up}
++ 本地開發環境設定{#local-development-environment-setup}
    + [概覽](./local-development-environment/overview.md)
    + [開發工具](./local-development-environment/development-tools.md)
    + [本機AEM Runtime](./local-development-environment/aem-runtime.md)
@@ -58,6 +58,7 @@ ht-degree: 24%
       + [內容發佈](./developing/basics/content-publishing.md)
       + [OSGi配置](./developing/basics/osgi-configurations.md)
       + [Dispatcher配置遷移](./developing/basics/dispatcher-configuration.md)
+   + [AEM SDK API JavaDocs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/)
 + 除錯AEM{#debugging}
    + 除錯AEM SDK{#debugging-aem-sdk}
       + [概覽](./debugging/aem-sdk-local-quickstart/overview.md)
