@@ -5,17 +5,17 @@ breadcrumb-title: AEM Headless 教學課程
 version: cloud-service
 sub-product: 內容服務
 doc-type: tutorial
-feature: content-fragment, core-components
+feature: 內容片段，核心元件
 topics: content-delivery
 audience: architect, developer, implementer
 activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 31%
+source-wordcount: '107'
+ht-degree: 29%
 
 ---
 
@@ -40,6 +40,7 @@ ht-degree: 31%
    + [4 —— 瞭解GraphQL API](./graphql/explore-graphql-api.md)
    + [5 —— 從外部應用程式查詢](./graphql/graphql-and-external-app.md)
    + [6 —— 使用片段參照建立進階資料模型](./graphql/fragment-references.md)
+   + [7 —— 生產部署](./graphql/production-deployment.md)
 + 代號型驗證{#authentication}
    + [概覽](./authentication/overview.md)
    + [1 —— 本機開發存取Token](./authentication/local-development-access-token.md)
