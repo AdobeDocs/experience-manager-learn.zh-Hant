@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 AEM的GraphQL API提供功能強大的查詢語言，可將內容片段的資料公開至下游應用程式。 內容片段模型定義內容片段所使用的資料架構。 每當建立或更新內容片段模型時，會將架構轉譯並新增至組成GraphQL API的「圖形」。
 
-在本章中，我們將探索一些常用的GraphQL查詢以收集內容。 AEM內建一個名為[GraphiQL](https://github.com/graphql/graphiql)的IDE。 GraphiQL IDE允許您快速測試和細化返回的查詢和資料。 GraphiQL還提供了對文檔的輕鬆訪問，使您能夠輕鬆瞭解和瞭解可用的方法。
+在本章中，我們將探索一些常見的GraphQL查詢，以使用名為[GraphiQL](https://github.com/graphql/graphiql)的IDE收集內容。 GraphiQL IDE允許您快速測試和細化返回的查詢和資料。 GraphiQL還提供了對文檔的輕鬆訪問，使您能夠輕鬆瞭解和瞭解可用的方法。
 
 ## 必備條件 {#prerequisites}
 
@@ -36,6 +36,23 @@ AEM的GraphQL API提供功能強大的查詢語言，可將內容片段的資料
 * 瞭解如何篩選及請求特定資料屬性。
 * 瞭解如何查詢內容片段的變數。
 * 瞭解如何加入多個內容片段模型的查詢
+
+## 安裝GraphiQL工具{#install-graphiql}
+
+GraphiQL IDE是開發工具，僅在低級環境（如開發或本地實例）上需要。 因此，它不包含在AEM專案中，而是以個別套件形式提供，可以臨機安裝。
+
+1. 導覽至&#x200B;**[軟體散發入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM作為雲端服務**。
+1. 搜索「GraphiQL」(請務必在&#x200B;**GraphiQL**&#x200B;中包含&#x200B;**i**。
+1. 下載最新的&#x200B;**GraphiQL內容包v.x.x.x**
+
+   ![下載GraphiQL軟體包](assets/explore-graphql-api/software-distribution.png)
+
+   zip檔案是可直接安裝的AEM套件。
+
+1. 從&#x200B;**AEM Start**&#x200B;功能表導覽至&#x200B;**Tools** > **Deployment** > **Packages**。
+1. 按一下&#x200B;**上傳包**&#x200B;並選擇在上一步中下載的包。 按一下&#x200B;**Install**&#x200B;安裝軟體包。
+
+   ![安裝GraphiQL軟體包](assets/explore-graphql-api/install-graphiql-package.png)
 
 ## 查詢內容片段清單{#query-list-cf}
 
@@ -181,7 +198,7 @@ AEM的GraphQL API提供功能強大的查詢語言，可將內容片段的資料
        item {
          _path
          fullName
-         biography {
+         biographyText {
            html
          }
        }
@@ -205,7 +222,7 @@ AEM的GraphQL API提供功能強大的查詢語言，可將內容片段的資料
        item {
          _path
          fullName
-         biography {
+         biographyText {
            html
          }
        }
