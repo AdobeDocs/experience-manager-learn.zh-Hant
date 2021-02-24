@@ -138,7 +138,7 @@ ht-degree: 0%
 
    按一下&#x200B;**[!UICONTROL Done]**&#x200B;保存更改。
 
-5. **重** 新整理頁面。在未鎖定的&#x200B;**[!UICONTROL 版面容器]**&#x200B;上方新增&#x200B;**[!UICONTROL Header]**&#x200B;元件：
+5. **重** 新整理頁面。在未鎖定的&#x200B;**[!UICONTROL 版面容器]**&#x200B;上方新增&#x200B;**[!UICONTROL 標題]**&#x200B;元件：
 
    ![將標題元件新增至範本](./assets/navigation-routing/add-header-component.gif)
 
