@@ -1,20 +1,18 @@
 ---
-title: 使用工作流程管理
+title: 如何在AEM中管理工作流程
 description: 'AEM Workflow Management讓使用者在工作流程中更能檢視內容，並可更輕鬆地管理工作流程模型定義。 '
-seo-title: 在AEM中使用工作流程管理
-seo-description: 「EM工作流程管理」可讓使用者更清楚地檢視工作流程中的內容，並可更輕鬆地管理工作流程模型定義。
-version: 6.5
-sub-product: 基礎，網站，資產
-feature: workflow
-topics: governance, collaboration
-activity: use
-audience: administrator
-doc-type: feature video
+version: 6.5, cloud-service
+feature: 工作流程
+topic: 內容管理
+role: 管理員
+level: 中級
+kt: 2557
+thumbnail: 27848.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 46dead200ec61acf9fdf537f18818f5bb60dbc90
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 0%
+source-wordcount: '136'
+ht-degree: 1%
 
 ---
 
@@ -23,19 +21,18 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/27848/?quality=12&learn=on)
 
-本視訊探討AEM 6.5中引進的工作流程管理的下列方面：
+本視訊將探討工作流程管理的下列方面：
 
-+ 在清單檢視設定下啟用「工作流程」中繼資料。
-+ 從清單檢視輕鬆導覽至工作流程時間軸
-+ 複製並貼上現有的OOTB工作流程，以自訂或覆寫預設功能
-+ 對[!DNL Workflow Models]和[!DNL Launchers]執行快速發佈
-+ 管理[!DNL Workflow Models]和[!DNL Launchers]的出版物。
-+ 嘗試編輯OOTB工作流程模型或啟動器時，會以警告工具提示通知使用者。
-+ 能夠恢復對OOTB工作流模型或啟動器所做的更改。
++ 在清單檢視設定下啟用工作流程中繼資料。
++ 導覽至AEM中內容的工作流程時間軸
++ 自訂由AEM提供的工作流程
++ 快速發佈[!DNL Workflow Models]和[!DNL Launchers]
++ 管理[!DNL Workflow Models]和[!DNL Launchers]的發佈
++ 回復對工作流模型或啟動器所做的更改
 
-此視訊使用[!DNL Workflow models]來展示此組功能，但也適用於[!DNL AEM Launchers]。
+此視訊使用[!DNL Workflow Models]來展示此組功能，但也適用於[!DNL AEM Launchers]。
 
 
 >[!NOTE]
 >
-> 視訊使用AEM Sites UI來展示工作流程狀態中繼資料功能。 工作流程狀態中繼資料也適用於AEM Assets UI。 請務必選取清單檢視，以在UI中啟用工作流程狀態中繼資料。
+> 視訊使用AEM Sites來展示工作流程狀態中繼資料功能。 工作流程狀態中繼資料也適用於AEM Assets。 若要查看資產的工作流程狀態，請確定清單檢視已啟用。
