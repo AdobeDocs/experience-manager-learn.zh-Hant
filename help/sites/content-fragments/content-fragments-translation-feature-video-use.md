@@ -1,46 +1,41 @@
 ---
-title: 搭配AEM內容片段使用翻譯
-description: AEM 6.3提供翻譯內容片段的功能。 與內容片段關聯的混合媒體資產和資產集合也符合提取和翻譯的資格。
-sub-product: 網站、資產、內容服務
-feature: content-fragments, multi-site-manager
-topics: localization, content-architecture
-audience: all
-doc-type: feature video
-activity: use
-version: 6.3, 6.4, 6.5
+title: AEM內容片段的翻譯支援
+description: 瞭解如何使用Adobe Experience Manager本地化和翻譯內容片段。 與內容片段相關的混合媒體資產也符合擷取和翻譯的資格。
+feature: 內容片段，多網站管理員
+topics: Localization
+role: 業務從業人員
+level: 中級
+version: 6.3, 6.4, 6.5, cloud-service
+kt: 201
+thumbnail: 18131.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 4620acc18a08d71994753903b79247a8ed3fd8f5
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 6%
+source-wordcount: '250'
+ht-degree: 2%
 
 ---
 
 
-# 搭配AEM內容片段使用轉譯{#using-translation-with-aem-content-fragments}
+# AEM內容片段的轉譯支援{#translation-support-content-fragments}
 
-AEM 6.3提供翻譯內容片段的功能。 與內容片段關聯的混合媒體資產和資產集合也符合提取和翻譯的資格。
+瞭解如何使用Adobe Experience Manager本地化和翻譯內容片段。 與內容片段相關的混合媒體資產也符合擷取和翻譯的資格。
 
->[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=12&learn=on)
 
 ## 內容片段轉譯使用案例{#content-fragment-translation-use-cases}
 
-「內容片段」是AEM將擷取並傳送至外部轉譯服務的可識別內容類型。 現成可支援數個使用案例：
+「內容片段」是AEM擷取的可辨識內容類型，會傳送至外部轉譯服務。 現成可支援數個使用案例：
 
 1. 您可以直接在「資產」主控台中選取內容片段，以進行語言複製和翻譯
-2. 在「網站」頁面上參考的內容片段將複製至適當的語言資料夾，並在選取「網站」頁面做為語言副本時，擷取以供翻譯
+2. 在「網站」頁面上參考的內容片段會複製到適當的語言資料夾，並在選取「網站」頁面做為語言副本時，擷取以供翻譯
 3. 內嵌在內容片段中的內嵌媒體資產可供擷取和翻譯。
 4. 與內容片段相關聯的資產集合可以擷取和翻譯
 
-## 翻譯配置選項{#translation-config-options}
+## 翻譯規則編輯器 {#translation-rules-editor}
 
-立即可用的轉換設定支援數個轉換內容片段的選項。 依預設，內嵌媒體資產和相關的資產集合不會進行翻譯。 要更新翻譯配置，請導航至[http://localhost:4502/etc/cloudservices/translation/default_translation.html](http://localhost:4502/etc/cloudservices/translation/default_translation.html)。
+使用&#x200B;**翻譯規則編輯器**&#x200B;可更新Experience Manager翻譯行為。 要更新翻譯，請導航至&#x200B;**工具** > **一般** > **翻譯配置** ，位於[http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)。
 
-轉換「內容片段」資產有四個選項：
+立即可用的配置引用資源類型`core/wcm/components/contentfragment/v1/contentfragment`的`fragmentPath`上的內容片段。 預設配置會識別從`v1/contentfragment`繼承的所有元件。
 
-1. **不翻譯（預設）**
-2. **僅限內嵌媒體資產**
-3. **僅限相關的資產集合**
-4. **內嵌媒體資產和相關的集合**
-
-![翻譯設定](assets/classic-ui-dialog.png)
+![翻譯規則編輯器](assets/translation-configuration.png)
