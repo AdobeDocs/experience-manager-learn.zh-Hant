@@ -20,9 +20,9 @@ ht-degree: 71%
 # AEM SPA Editor and Angular 快速入門 {#spa-angular-tutorial}
 
 + [概覽](overview.md)
-+ [SPA編輯器項目](create-project.md)
++ [編SPA輯器專案](create-project.md)
 + [整合SPA](integrate-spa.md)
-+ [映射SPA元件](map-components.md)
++ [映射元SPA件](map-components.md)
 + [導覽和路由](navigation-routing.md)
 + [自訂元件](custom-component.md)
 + [延伸元件](extend-component.md)
