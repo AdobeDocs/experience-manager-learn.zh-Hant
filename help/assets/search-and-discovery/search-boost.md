@@ -1,26 +1,22 @@
 ---
-title: 搜尋提升
-description: 深入檢視AEM Assets搜尋提升功能，以及它在AEM更廣泛內容中的運作方式。
-topics: metadata, search
-audience: all
-doc-type: feature video
-activity: understand
-version: 6.3, 6.4, 6.5
+title: AEM Assets的搜尋大幅提升是什麼？
+description: 瞭解如何新增關鍵字和片語，以提升Adobe Experience Manager資產的搜尋相關性。
+topic: 內容管理
+feature: 搜尋
+role: 業務從業人員
+level: 中級
+version: 6.3, 6.4, 6.5, cloud-service
+kt: 103
+thumbnail: 16766.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7a06a9ae0c57669578e1c11fa035f80583c90dd8
 workflow-type: tm+mt
-source-wordcount: '49'
-ht-degree: 4%
+source-wordcount: '33'
+ht-degree: 9%
 
 ---
 
 
-# 使用資產中繼資料{#search-boost-asset}進行搜尋提升
+# 搜尋提升
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=12&learn=on)
-
-## 瞭解AEM Assets中的搜尋提升{#understanding-search-boosting-in-aem-assets}
-
-深入檢視AEM Assets搜尋提升功能，以及它在AEM更廣泛內容中的運作方式。
-
->[!VIDEO](https://video.tv.adobe.com/v/16770/?quality=12&learn=on)
