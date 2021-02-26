@@ -196,7 +196,7 @@ Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects
 
 4. 在`core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java`開啟`CustomComponentImpl.java`。
 
-   這是`CustomComponent`介面的實現。 `@Model`註解會將Java類別識別為Sling Model。 `@Exporter`註解可讓Java類別透過Sling Model Exporter序列化和匯出。
+   這是`CustomComponent`介面的實現。 `@Model`附註會將Java類別識別為Sling Model。 `@Exporter`註解可讓Java類別透過Sling Model Exporter序列化和匯出。
 
 5. 更新靜態變數`RESOURCE_TYPE`，以指向在上一AEM項練習中建立的元件`wknd-spa-angular/components/custom-component`。
 
