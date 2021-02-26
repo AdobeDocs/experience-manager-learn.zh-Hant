@@ -5,7 +5,7 @@ breadcrumb-title: AEM Assets 教學課程
 sub-product: 資產
 team: TM
 translation-type: tm+mt
-source-git-commit: d302444e74f8c2a548d2e08b5ec2991cc7347324
+source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 27%
@@ -59,7 +59,7 @@ ht-degree: 27%
    + [影像的智慧型標籤](metadata/image-smart-tags.md)
    + [影像的自訂智慧型標籤](metadata/custom-smart-tags.md)
    + [視訊智慧標記](metadata/video-smart-tags.md)
-   + [匯入和匯出中繼資料](metadata/metadata-import-feature-video-use.md)
+   + [匯入和匯出中繼資料](metadata/metadata-import-export.md)
 
 + 共用與散發{#sharing}
    + [下載資產](./sharing/download.md)
@@ -67,17 +67,17 @@ ht-degree: 27%
    + [品牌入口網站](./sharing/brand-portal.md)
    + 資產共用{#assets-share}
       + [資產共用共用](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
-      + [在本機AEM上設定資產共用公域](./sharing/asset-share-commons-technical-video-setup.md)
+      + [在本機設定資產共用共用AEM權](./sharing/asset-share-commons-technical-video-setup.md)
       + [Theming Asset Share Commons](./sharing/asset-share-commons-feature-video-theming.md)
    + [連線資產](./sharing/connected-assets.md)
 
 + 與創意工作流程整合{#creative-workflows}
-   + [AEM案頭應用程式](./creative-workflows/aem-desktop-app.md)
-   + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
+   + [案頭AEM應用程式](./creative-workflows/aem-desktop-app.md)
+   + [Adobe資產連結](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
-+ Adobe Asset Link{#adobe-asset-link}
-   + [存取Adobe Asset Link](./adobe-asset-link/launch-adobe-asset-link.md)
++ Adobe資產連結{#adobe-asset-link}
+   + [存取Adobe資產連結](./adobe-asset-link/launch-adobe-asset-link.md)
    + [面板概觀](./adobe-asset-link/panel-overview.md)
    + [檔案和系列](./adobe-asset-link/files-and-collections.md)
    + [下載和上傳](./adobe-asset-link/download-and-upload.md)
@@ -89,7 +89,7 @@ ht-degree: 27%
    + [資產搜尋](./adobe-asset-link/asset-search.md)
 
 + 動態媒體{#dynamic-media}
-   + [動態媒體概觀](dynamic-media/dynamic-media-overview-feature-video-use.md)
+   + [Dynamic Media概觀](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [智慧型裁切](dynamic-media/smart-crop-feature-video-use.md)
    + [體驗片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
    + [互動視訊](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
@@ -100,11 +100,11 @@ ht-degree: 27%
    + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + [檢視器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
    + [全景和垂直影像檢視器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
-   + [使用Adobe Analytics的檢視器](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + [Dynamic Media Classic案頭應用程式](dynamic-media/dynamic-media-classic-desktop-application.md)
-   + [動態媒體3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + [動態媒體智慧型裁切視訊](dynamic-media/dynamic-media-smart-crop-video.md)
-   + [動態媒體核心元件](dynamic-media/dynamic-media-core-components.md)
+   + [觀看Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
+   + [Dynamic Media經典台式機應用程式](dynamic-media/dynamic-media-classic-desktop-application.md)
+   + [Dynamic Media3D](dynamic-media/dynamic-media-3d-feature-video.md)
+   + [Dynamic Media智慧型裁切影片](dynamic-media/dynamic-media-smart-crop-video.md)
+   + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
 
 + 轉換 {#translation}
    + [源檔案轉換](translation/source-file-translation-feature-video-use.md)
