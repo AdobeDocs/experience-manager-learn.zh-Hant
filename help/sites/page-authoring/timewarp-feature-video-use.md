@@ -1,20 +1,17 @@
 ---
-title: 搭配AEM網站使用時間彎曲
-seo-title: 搭配Adobe Experience Manager Sites使用時間彎曲
+title: 使用Timewarp與AEM Sites
 description: 時間彎曲是Adobe Experience Manager Sites的一項功能，可讓作者快速檢視過去特定時間頁面的狀態。
-seo-description: 時間彎曲是Adobe Experience Manager Sites的一項功能，可讓作者快速檢視過去特定時間頁面的狀態。
-feature: timewarp
-topics: authoring
-audience: all
-doc-type: feature video
-activity: use
-version: 6.3, 6.4, 6.5
-uuid: f1bcb8ae-db14-4f3d-b52e-48f589470aec
-discoiquuid: dec419ba-233e-4ba5-9eb8-837035f4b4b8
+topic: 內容管理
+feature: 製作
+role: 業務從業人員
+level: 中級
+version: 6.3, 6.4, 6.5, cloud-service
+kt: 3307
+thumbnail: 17453.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d1578e1c6fb6208f04953454354e1ed23566e450
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '86'
 ht-degree: 1%
 
 ---
@@ -24,8 +21,8 @@ ht-degree: 1%
 
 時間彎曲是Adobe Experience Manager Sites的一項功能，可讓作者快速檢視過去特定時間頁面的狀態。
 
->[!VIDEO](https://video.tv.adobe.com/v/17453/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17453/?quality=12&learn=on)
 
-## 其他資源 {#additional-resources}
+## 更多資源{#more-resources}
 
-* [使用頁面版本——時間彎曲](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/working-with-page-versions.html#Timewarp)
+* [使用頁面版本——時間彎曲](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/page-versions.html)
