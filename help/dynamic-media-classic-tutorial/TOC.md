@@ -20,7 +20,7 @@ ht-degree: 46%
 
 # Dynamic Media Classic 簡介 {#dynamic-media-classic-tutorial}
 
-+ [Dynamic Media Classic概觀](./overview.md)
++ [Dynamic Media經典](./overview.md)
 + [資產工作流程與預覽](./main-workflow.md)
 + [確定資料夾結構和檔案命名約定](./folder-structure-filenaming.md)
 + [影像預設集](./image-presets.md)
