@@ -4,7 +4,7 @@ user-guide-description: 此教學課程可協助您更了解 Dispatcher 的運�
 version: 6.x
 sub-product: 基礎
 doc-type: tutorial
-feature: dispatcher
+feature: 'Dispatcher '
 audience: architect, developer, implementer
 activity: develop, understand
 kt: 2233
@@ -13,8 +13,8 @@ team: TM
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '37'
-ht-degree: 72%
+source-wordcount: '38'
+ht-degree: 73%
 
 ---
 
