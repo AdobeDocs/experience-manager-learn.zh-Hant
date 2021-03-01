@@ -31,7 +31,7 @@ ht-degree: 29%
    + [4 —— 定義Content Services模板](./content-services/chapter-4.md)
    + [5 —— 編寫Content Services頁面](./content-services/chapter-5.md)
    + [6 —— 公開AEM Publish中的內容以進行傳送](./content-services/chapter-6.md)
-   + [7 —— 從行動應用程式使用AEM Content Services](./content-services/chapter-7.md)
+   + [7 —— 從行動應AEM用程式使用內容服務](./content-services/chapter-7.md)
 + GraphQL {#graphql}
    + [概覽](./graphql/overview.md)
    + [1 —— 快速設定](./graphql/setup.md)
