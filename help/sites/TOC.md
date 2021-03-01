@@ -49,10 +49,10 @@ ht-degree: 17%
    + [內容片段與體驗片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + 開發 {#developing}
    + [AEM 專案原型](developing/aem-project-archetype.md)
-   + [AEM Sites快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [開始使用AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [AEM Headless 快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
-   + [AEM SPA編輯器快速入門與回應](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPA編輯器和Angular快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [開始使用編AEM輯SPA器和回應](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [開始使用編AEM輯SPA器和Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
    + [用體制發展](developing/style-system-technical-video-understand.md)
    + [樣式系統最佳實踐](developing/style-organization-style-system-understand-article.md)
@@ -63,13 +63,13 @@ ht-degree: 17%
 + 個性化 {#personalization}
    + [與Adobe Target整合](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html)
    + [設定體驗片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
-   + [搭配Adobe Target使用體驗片段](personalization/experience-fragment-target-offer-feature-video-use.md)
+   + [搭配使用體驗片段與Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [設定ContextHub](personalization/context-hub-technical-video-setup.md)
 + 單頁應用程式 {#spa-editor}
-   + [使用SPA編輯器](spa-editor/spa-editor-framework-feature-video-use.md)
+   + [使用編SPA輯器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello World教學課程](spa-editor/spa-editor-helloworld-tutorial-use.md)
-   + [AEM SPA編輯器快速入門與回應](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [AEM SPA編輯器和Angular快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [開始使用編AEM輯SPA器和回應](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [開始使用編AEM輯SPA器和Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
 + 多網站管理 {#multi-site-management}
    + [語言副本簡介](./multi-site-management/language-copy-overview.md)
    + [即時文案和藍圖](./multi-site-management/live-copy-and-blueprint.md)
@@ -91,24 +91,24 @@ ht-degree: 17%
    + [設定翻譯規則](translation/translation-rules-editor-technical-video-setup.md)
    + [翻譯增強功能](translation/translation-enhancements-feature-video-use.md)
 + Integrations {#integrations}
-   + 體驗平台啟動{#experience-platform-launch}
+   + Experience Platform Launch{#experience-platform-launch}
       + [概覽](integrations/experience-platform-launch/overview.md)
       + [建立啟動屬性](integrations/experience-platform-launch/create-launch-property.md)
-      + [使用Adobe I/O將AEM與Launch連接](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
-      + [建立Launch Cloud服務](integrations/experience-platform-launch/create-launch-cloud-service.md)
+      + [使用AEMAdobe I/O連接Launch](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
+      + [建立啟動Cloud Service](integrations/experience-platform-launch/create-launch-cloud-service.md)
       + [除錯啟動實作](integrations/experience-platform-launch/debug-launch-implementation.md)
-   + Adobe用戶端資料層{#adobe-client-data-layer}
-      + [使用Adobe用戶端資料層](integrations/adobe-client-data-layer/data-layer-overview.md)
+   + Adobe客戶端資料層{#adobe-client-data-layer}
+      + [使用Adobe客戶端資料層](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自訂Adobe用戶端資料層](integrations/adobe-client-data-layer/data-layer-customize.md)
    + 分析 {#analytics}
       + [使用Adobe Analytics收集頁面資料](integrations/analytics/collect-data-analytics.md)
       + [使用Adobe Analytics追蹤點按的元件](integrations/analytics/track-clicked-component.md)
-      + [使用分析工作區分析資料](integrations/analytics/create-analytics-workspace.md)
+      + [使用Analysis Workspace分析資料](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
       + [概覽](integrations/adobe-target/overview.md)
       + [將Target擴充功能新增至Launch屬性](integrations/adobe-target/add-target-launch-extension.md)
       + [載入並觸發Target呼叫](integrations/adobe-target/load-and-fire-target.md)
-      + [建立Adobe Target Cloud服務帳戶](integrations/adobe-target/setup-aem-target-cloud-service.md)
+      + [建立Adobe TargetCloud Service帳戶](integrations/adobe-target/setup-aem-target-cloud-service.md)
       + [將體驗片段匯出至Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
       + [使用體驗片段選件建立Target活動](integrations/adobe-target/create-target-activity.md)
       + [使用Visual Experience Composer進行個人化](integrations/adobe-target/personalization-using-vec.md)
