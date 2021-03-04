@@ -1,18 +1,21 @@
 ---
-title: AEM Forms with Marketo(Part 2)
-seo-title: AEM Forms with Marketo(Part 2)
-description: 使用AEM Forms Data Model將AEM Forms與Market整合的教學課程。
-seo-description: 使用AEM Forms Data Model將AEM Forms與Market整合的教學課程。
-feature: adaptive-forms, form-data-model
+title: AEM Forms與馬克托（下）
+seo-title: AEM Forms與馬克托（下）
+description: 教學課程，將AEM Forms與Marketo整合，使用AEM Forms表單資料模型。
+seo-description: 教學課程，將AEM Forms與Marketo整合，使用AEM Forms表單資料模型。
+feature: 「適應性Forms，表單資料模型」
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -71,7 +74,7 @@ public interface MarketoService {
 }
 ```
 
-下列程式碼是傳回用於進行REST API呼叫的access_token服務的程式碼。 此服務中的代碼訪問進行GET調用所需的配置參數。 如您所見，我們會在GET URL中傳遞client_id,client_secret以產生access_token。 接著，此access_token會傳回至呼叫應用程式。
+下列程式碼是傳回用於進行REST API呼叫的access_token服務的程式碼。 此服務中的代碼訪問進行GET調用所需的配置參數。 如您所見，我們會在GETURL中傳遞client_id,client_secret以產生access_token。 接著，此access_token會傳回至呼叫應用程式。
 
 ```java
 package com.marketoandforms.core.impl;
@@ -202,6 +205,6 @@ public class MarketoConfigurationService {
 }
 ```
 
-1. 建立並部署套裝至您的AEM伺服器。
+1. 建立並部署套裝至您的伺AEM服器。
 1. [將您的瀏覽器指向](http://localhost:4502/system/console/configMgr) configMgrand搜尋「Marketo認證服務設定」
 1. 指定您Marketo實例專屬的適當屬性
