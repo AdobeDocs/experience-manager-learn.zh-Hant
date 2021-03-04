@@ -1,26 +1,25 @@
 ---
 title: 版本
-description: 探索AEM如何建立和維護資產版本。
+description: 探索如何AEM建立和維護資產版本。
 sub-product: 資產
-feature: null
-topics: authoring, collaboration
-audience: author
-doc-type: feature video
-activity: use
+feature: 資產管理
 version: cloud-service
 kt: 4671
 thumbnail: 32052.jpg
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 8d0e6f2c4c979e6704cae08e766300baf7ef8ad0
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '19'
-ht-degree: 10%
+source-wordcount: '26'
+ht-degree: 7%
 
 ---
 
 
 # 版本
 
-探索AEM如何建立和維護資產版本。
+探索如何AEM建立和維護資產版本。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32052/?quality=12&learn=on&hidetitle=true)
