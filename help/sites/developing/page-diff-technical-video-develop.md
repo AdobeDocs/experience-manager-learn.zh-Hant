@@ -1,17 +1,20 @@
 ---
-title: 針對AEM網站中的頁面差異進行開發
+title: AEM Sites的頁面差異開發
 description: 此影片說明如何提供AEM Sites「頁面差異」功能的自訂樣式。
-feature: page-diff
+feature: 製作
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 0%
+source-wordcount: '297'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +31,7 @@ ht-degree: 0%
 >
 >此影片將自訂CSS新增至we.Retail用戶端程式庫，因此應對客戶的AEM Sites專案進行這些變更；在以下范常式式碼中：`my-project`。
 
-AEM的頁面差異透過直接載入`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`來取得OOTB CSS。
+頁AEM面差異透過直接載入`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`來取得OOTB CSS。
 
 由於直接載入CSS而非使用用戶端資料庫類別，因此我們必須為自訂樣式尋找另一個注入點，而此自訂注入點是專案的編寫clientlib。
 
@@ -122,5 +125,5 @@ body {
 ## 其他資源 {#additional-resources}
 
 * [下載we.Retail範例網站](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
-* [使用AEM用戶端程式庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [使用客AEM戶端程式庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [更少的CSS檔案](https://lesscss.org/)
