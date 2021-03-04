@@ -1,30 +1,34 @@
 ---
-title: 第7章——從行動應用程式使用AEM Content Services - Content Services
-description: 教學課程的第7章會執行Android Mobile應用程式，以使用AEM Content Services中的創作內容。
+title: 第7章——從行動應AEM用程式使用內容服務——內容服務
+description: 教學課程的第7章會執行Android Mobile應用程式，從Content Services使用製作AEM的內容。
+feature: '"內容片段、API"'
+topic: 「無頭、內容管理」
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
 
 
-# 第7章——從行動應用程式使用AEM Content Services
+# 第7章——從行動應AEM用程式使用內容服務
 
-教學課程的第7章使用原生Android Mobile應用程式來使用AEM Content Services的內容。
+教學課程的第7章使用原生Android行動應用程式來使用Content Services中AEM的內容。
 
 ## Android行動應用程式
 
-本教學課程使用&#x200B;**簡單的原生Android Mobile App**&#x200B;來使用和顯示AEM Content Services公開的「事件」內容。
+本教學課程使用&#x200B;**簡單的原生Android Mobile App**&#x200B;來使用和顯示Content Services公開的事AEM件內容。
 
 使用[Android](https://developer.android.com/)基本上不重要，而且消費性的行動應用程式可以在任何行動平台（例如iOS）的架構中編寫。
 
-Android是教學課程的使用者，因為它可在Windows、macOs和Linux上執行Android模擬器，而且其受歡迎程度也很高，而且它可以編寫為Java,AEM開發人員十分瞭解Java。
+Android是教學課程，因為它能夠在Windows、macOs和Linux上執行Android模擬器，而且其受歡迎程度也很高，而且它可以編寫成Java語言，這是開發人員十分熟悉的AEM語言。
 
-*教學課程的Android Mobile應用程式並非&#x200B;****用來指示如何建立Android Mobile應用程式或傳達Android開發最佳實務，而是用來說明如何從Mobile應用程式使用AEM Content Services。*
+*本教學課程的Android行動應用程式並非&#x200B;****要指示如何建立Android行動應用程式或傳達Android開發的最佳實務，而是要說明如何從行動應用程式使用AEMContent Services。*
 
-### AEM Content Services如何推動行動應用程式體驗
+### Content Services如AEM何推動行動應用程式體驗
 
 ![行動應用程式與內容服務的對應](assets/chapter-7/content-services-mapping.png)
 
@@ -70,32 +74,32 @@ Android是教學課程的使用者，因為它可在Windows、macOs和Linux上�
 1. 如果[!DNL WKND Mobile]應用程式未立即載入，請在模擬器的Android首頁畫面中尋找並點選&#x200B;**[!DNL WKND]**&#x200B;圖示。
    * 如果模擬器啟動，但模擬器螢幕保持黑色，請在模擬器窗口旁邊的模擬器工具窗口中按一下&#x200B;**power**&#x200B;按鈕。
    * 若要在虛擬裝置內捲動，請按住並拖曳。
-   * 若要從AEM重新整理內容，請從上方向下拉至「重新整理」圖示
+   * 若要重新整理內AEM容，請從上方向下拉，直到「重新整理」圖示
 顯示和釋放。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28341/?quality=12&learn=on)
 
 ## 行動應用程式程式碼
 
-本節會反白顯示最能互動且依賴AEM Content Services及其JSON輸出的Android Mobile應用程式程式碼。
+本節重點說明最能互動且依賴於Content Services及其JSON輸AEM出的Android行動應用程式程式碼。
 
-在載入時，行動應用程式會將`HTTP GET`設為`/content/wknd-mobile/en/api/events.model.json`，此為AEM Content Services端點，設定為提供內容以驅動行動應用程式。
+在載入時，行動應用程式會將`HTTP GET`設為`/content/wknd-mobile/en/api/events.model.json`，此為Content Services的端點，設定AEM為提供內容以驅動行動應用程式。
 
 由於事件API(`/content/wknd-mobile/en/api/events.model.json`)的可編輯範本已鎖定，因此行動應用程式可以編碼，以在JSON回應的特定位置尋找特定資訊。
 
 ### 高階程式碼流
 
 1. 開啟[!DNL WKND Mobile]應用程式會叫用`HTTP GET`請求至`/content/wknd-mobile/en/api/events.model.json`的AEM Publish，以收集要填入行動應用程式UI的內容。
-2. 從AEM接收內容後，行動應用程式的三個檢視元素、**標誌、標籤行和事件清單**&#x200B;中的每個元素都會以AEM的內容初始化。
-   * 若要將AEM內容系結至Mobile App的檢視元素，表示每個AEM元件的JSON會對應至Java POJO的物件，而Java POJO則會系結至Android檢視元素。
+2. 在從接收內容時AEM，將「行動應用」的3個檢視元素、**標誌、標籤行和事件清單**&#x200B;中的每個元素與來自的內容初始化AEM。
+   * 若要將內容系AEM結至Mobile App的檢視元素，表示每個元AEM件的JSON會對應至Java POJO，而Java POJO會系結至Android檢視元素。
       * 影像元件JSON →標誌POJO →標誌ImageView
       * 文字元件JSON → TagLine POJO → Text ImageView
       * 內容片段清單JSON → Events POJO→Events ReculerView
-   * *行動應用程式程式碼可將JSON對應至POJO，因為JSON回應較多時，已知的位置。請記住，「image」、「text」和「contentfragmentlist」的JSON索引鍵是由AEM元件的後援節點名稱所指定。 如果這些節點名稱變更，行動應用程式將會中斷，因為它不知道如何從JSON資料中搜尋必要的內容。*
+   * *行動應用程式程式碼可將JSON對應至POJO，因為JSON回應較多時，已知的位置。請記住，「image」、「text」和「contentfragmentlist」的JSON索引鍵是由「元件」的後AEM援節點名稱所指定。 如果這些節點名稱變更，行動應用程式將會中斷，因為它不知道如何從JSON資料中搜尋必要的內容。*
 
-#### 叫用AEM Content Services端點
+#### 叫用AEMContent Services端點
 
-以下是行動應用程式`MainActivity`中負責叫用AEM Content Services以收集驅動行動應用程式體驗的內容的程式碼摘要。
+以下是行動應用程式`MainActivity`中負責叫用內容服務以收集驅動行動應用程式體驗的AEM內容的程式碼摘要。
 
 ```
 protected void onCreate(Bundle savedInstanceState) {
@@ -128,11 +132,11 @@ private void initApp(final List<ViewBinder> viewBinders) {
 
 `onCreate(..)` 是行動應用程式的初始化掛接，並註冊負責剖析JSON `ViewBinders` 及將值系結至元素的3個自訂 `View` 掛接。
 
-`initApp(...)` 接著呼叫，這會使AEM Publish上的HTTP GET要求成為AEM Content Services端點，以收集內容。收到有效的JSON回應時，JSON回應會傳遞給負責剖析JSON並將其系結至行動裝置`View`元素的每個`ViewBinder`。
+`initApp(...)` 接著呼叫，以便在AEM Publish上向AEMContent Services終點提出HTTPGET要求以收集內容。收到有效的JSON回應時，JSON回應會傳遞給負責剖析JSON並將其系結至行動裝置`View`元素的每個`ViewBinder`。
 
 #### 剖析JSON回應
 
-接下來，我們將看`LogoViewBinder`，它很簡單，但強調了幾個重要的考慮。
+接下來，我們將看`LogoViewBinder`，它很簡單，但突出了幾個重要考慮事項。
 
 ```
 public class LogoViewBinder implements ViewBinder {
@@ -152,13 +156,13 @@ public class LogoViewBinder implements ViewBinder {
 }
 ```
 
-`bind(...)`的第一行透過&#x200B;**:items → root → :items**&#x200B;鍵，導覽至JSON回應，此鍵代表已新增元件的AEM版面容器。
+`bind(...)`的第一行透過&#x200B;**:items → root → :items**&#x200B;鍵，導覽至JSON回應，此鍵代表元AEM件所新增的「版面容器」。
 
 在此處會檢查名為&#x200B;**image**&#x200B;的索引鍵，此索引鍵代表Image元件（同樣，此節點名稱→JSON索引鍵是穩定的）。 如果此對象存在，則通過Jackson `ObjectMapper`庫讀取並映射到[自定義映像POJO](#image-pojo)。 下面將探索映像POJO。
 
 最後，標誌的`src`會使用[!DNL Glide]輔助程式庫載入Android ImageView。
 
-請注意，我們必須將AEM架構、主機和連接埠（透過`aemHost`）提供給AEM Publish實例，因為AEM Content Services將只提供JCR路徑(即 `/content/dam/wknd-mobile/images/wknd-logo.png`)至參考內容。
+請注意，我們必須AEM將架構、主機和連接埠（透過`aemHost`）提供至AEM Publish例項，因為AEMContent Services將僅提供JCR路徑(即 `/content/dam/wknd-mobile/images/wknd-logo.png`)至參考內容。
 
 #### 映像POJO{#image-pojo}
 
@@ -183,7 +187,7 @@ Event POJO需要從JSON物件中選取更多資料點，它比簡單影像更有
 
 ## 探索行動應用程式體驗
 
-現在您已瞭解AEM Content Services如何推動原生Mobile體驗，請使用您學到的功能來執行下列步驟，並查看您在Mobile App中所反映的變更。
+現在您已瞭解Content Services如何推動原生AEMMobile體驗，請運用您學到的知識來執行下列步驟，並查看您在Mobile應用程式中所反映的變更。
 
 在每個步驟後，拉進以重新整理行動應用程式，並驗證行動體驗的更新。
 
@@ -193,13 +197,13 @@ Event POJO需要從JSON物件中選取更多資料點，它比簡單影像更有
 
 ## 恭喜
 
-**您已完成AEM Headless教學課程！**
+**您已完成無頭教學AEM課程！**
 
-若要進一步瞭解AEM Content Services和AEM做為無頭CMS，請造訪Adobe的其他檔案與啟用教材：
+若要進一步了AEM解內容服務，並AEM以無頭CMS的形式，請造訪Adobe的其他檔案與啟用資料：
 
 * [使用內容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [AEM WCM核心元件使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
-* [AEM WCM核心元件元件庫](https://opensource.adobe.com/aem-core-wcm-components/library.html)
-* [AEM WCM核心元件GitHub專案](https://github.com/adobe/aem-core-wcm-components)
-* [AEM WCM核心元件——詢問專家](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
+* [WCMAEM核心元件使用指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
+* [WCMAEM核心元件元件庫](https://opensource.adobe.com/aem-core-wcm-components/library.html)
+* [AEMWCM核心元件GitHub專案](https://github.com/adobe/aem-core-wcm-components)
+* [AEMWCM核心元件——詢問專家](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
 * [元件導出器的代碼示例](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/bundle/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)
