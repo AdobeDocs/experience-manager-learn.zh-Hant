@@ -1,29 +1,32 @@
 ---
-title: 在AEM Forms中與服務使用者開發
-seo-title: 在AEM Forms中與服務使用者開發
-description: 本文將逐步帶您瞭解在AEM Forms中建立服務使用者的程式
-seo-description: 本文將逐步帶您瞭解在AEM Forms中建立服務使用者的程式
+title: 與服務用戶一起發展AEM Forms
+seo-title: 與服務用戶一起發展AEM Forms
+description: 本文將帶您瞭解在AEM Forms建立服務使用者的程式
+seo-description: 本文將帶您瞭解在AEM Forms建立服務使用者的程式
 uuid: 996f30df-3fc5-4232-a104-b92e1bee4713
-feature: adaptive-forms
+feature: 適用性表單
 topics: development,administration
 audience: implementer,developer
 doc-type: article
 activity: setup
 discoiquuid: 65bd4695-e110-48ba-80ec-2d36bc53ead2
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
 
 
-# 在AEM Forms中與服務使用者開發
+# 與服務用戶一起發展AEM Forms
 
-本文將逐步帶您瞭解在AEM Forms中建立服務使用者的程式
+本文將帶您瞭解在AEM Forms建立服務使用者的程式
 
-在舊版Adobe Experience Manager(AEM)中，管理資源解析程式用於後端處理，而後端處理需要存取儲存庫。 在AEM 6.3中不建議使用管理資源解析程式。而是使用在儲存庫中具有特定權限的系統用戶。
+在舊版Adobe Experience Manager(AEM)中，管理資源解析器用於後端處理，後端處理需要訪問儲存庫。 6.3中不建議使用管理資AEM源解析器。而是使用在儲存庫中具有特定權限的系統用戶。
 
 本文將逐步介紹系統用戶的建立過程和用戶映射器屬性的配置。
 
