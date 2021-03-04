@@ -1,8 +1,8 @@
 ---
 title: 編SPA輯器專案 |編輯與AngularAEM入SPA門
 description: 瞭解如何使用Adobe Experience Manager(AEM)Maven專案，做為與編輯器整合的Angular應用程式的起SPA點。
-sub-product: sites
-feature: 馬文原型
+sub-product: Sites
+feature: 編SPA輯，AEM專案原型
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -10,11 +10,14 @@ activity: develop
 audience: developer
 kt: 5309
 thumbnail: 5309-spa-angular.jpg
+topic: SPA
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 1%
+source-wordcount: '1117'
+ht-degree: 3%
 
 ---
 
