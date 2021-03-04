@@ -1,6 +1,6 @@
 ---
-title: 具有自適應表單的條形碼服務
-seo-title: 具有自適應表單的條形碼服務
+title: 使用自適應Forms的條形碼服務
+seo-title: 使用自適應Forms的條形碼服務
 description: 使用條形碼服務對條形碼進行解碼並從提取的資料中填充表單欄位
 seo-description: 使用條形碼服務對條形碼進行解碼並從提取的資料中填充表單欄位
 uuid: 42568b81-cbcd-479e-8d9a-cc0b244da4ae
@@ -11,16 +11,19 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1224de6d-7ca1-4e9d-85fe-cd675d03e262
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
 
 
-# 具有自適應表單的條形碼服務{#barcode-service-with-adaptive-forms}
+# 使用Adaptive Forms的條形碼服務{#barcode-service-with-adaptive-forms}
 
 本文將示範如何使用條形碼服務來填入最適化表單。 使用案例如下：
 
@@ -101,7 +104,7 @@ public class DecodeBarCode extends SlingSafeMethodsServlet {
 }
 ```
 
-以下代碼是Adaptive Form所引用的客戶端庫的一部分。 當使用者將附件新增至最適化表單時，就會觸發此程式碼。 代碼會對servlet進行GET調用，其路徑是在請求參數中傳遞的附件。 然後，從servlet調用接收的資料被用於填充自適應表單。
+以下代碼是Adaptive Form所引用的客戶端庫的一部分。 當使用者將附件新增至最適化表單時，就會觸發此程式碼。 代碼對servlet進行GET調用，其路徑是在請求參數中傳遞的附件。 然後，從servlet調用接收的資料被用於填充自適應表單。
 
 ```
 $(document).ready(function()
@@ -138,7 +141,7 @@ $(document).ready(function()
 
 >[!NOTE]
 >
->此套件隨附的最適化表單是使用AEM Forms 6.4建立的。如果您要在AEM Forms 6.3環境中使用此套件，請在AEM Form 6.3中建立最適化表單
+>此軟體包中包含的最適化表單是使用AEM Forms6.4構建的。如果您打算在AEM Forms6.3環境中使用此軟體包，請在6.3表單中創AEM建最適化表單
 
 第12行——自訂程式碼以取得服務解析程式。 此套件會隨附於本文章資產中。
 
@@ -146,7 +149,7 @@ $(document).ready(function()
 
 若要在您的系統上執行此程式，請依照下列步驟進行
 
-1. [下載BarcodeService.](assets/barcodeservice.zip) zip並使用套件管理器匯入AEM
+1. [下載BarcodeService.](assets/barcodeservice.zip) zipp並使AEM用套件管理器匯入
 1. [下載並安裝自訂DocumentServices套件](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [下載並安裝DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下載範例PDF表格](assets/barcode.pdf)
