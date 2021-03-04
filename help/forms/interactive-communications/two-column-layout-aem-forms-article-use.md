@@ -3,17 +3,20 @@ title: 為列印渠道檔案建立兩欄版面
 seo-title: 為列印渠道檔案建立兩欄版面
 description: 為列印頻道檔案建立2欄版面
 seo-description: 為列印頻道檔案建立2欄版面
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 314f798f7a80f9c554e5bea052f8a64ae397d0de
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 0%
+source-wordcount: '243'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +25,7 @@ ht-degree: 0%
 
 此簡短文章將反白顯示在列印頻道中建立2欄版面所需的步驟。 使用案例是產生2頁檔案，其中第1頁具有2欄版面，第2頁具有標準1欄版面。
 
-以下是使用AEM Forms Designer建立2欄版面時所涉及的高階步驟。
+以下是使用AEM Forms設計人員建立2欄版面時的高階步驟。
 
 * 在第1頁主版頁面中建立2個內容區域
 * 將2個內容區域命名為「leftcolumn」和「rightcolumn」
