@@ -1,14 +1,16 @@
 ---
-title: AEM Forms教學課程與影片
-seo-title: AEM Forms教學課程與影片
-description: AEM Forms初學者和經驗豐富的AEM Forms開發人員適用的AEM Forms資源集合
-seo-description: AEM Forms初學者和經驗豐富的AEM Forms開發人員適用的AEM Forms資源集合
+title: AEM FormsTutorials和影片
+seo-title: AEM FormsTutorials和影片
+description: 為初學者和經驗豐富的AEM Forms開發人員收集AEM Forms資源
+seo-description: 為初學者和經驗豐富的AEM Forms開發人員收集AEM Forms資源
 sub-product: 表單
+topic: 開發
+role: 開發人員
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 6%
+source-wordcount: '305'
+ht-degree: 9%
 
 ---
 
@@ -67,11 +69,11 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，以建立、管
     </a>
     <div>
       <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-    <strong>在AEM工作流程中使用表單資料模型</strong>
+    <strong>在工作流中使用表單資料AEM模型</strong>
     </a>
     </div>
     <p>
-    <em>在AEM工作流程中呼叫表單資料模型的服務</em>
+    <em>調用表單資料模型服務作為工作流中的一個步AEM驟</em>
     <p>
   </td>
 </tr>
@@ -79,8 +81,8 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，以建立、管
 
 ## 其他資源
 
-* [Experience League —— 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Sites製作檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
+* [Experience League-探AEM索](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [AEM Sites編寫檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
 * [AEM Sites開發檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites管理檔案](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
 * [AEM Sites部署檔案](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
