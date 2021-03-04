@@ -3,13 +3,11 @@ title: AEM Foundation 影片和教學課程
 seo-title: AEM Foundation 影片和教學課程
 description: 'Adobe Experience Manager Foundation 的影片和教學課程系列。 '
 seo-description: Adobe Experience Manager基金會的視訊和教學課程集
-role: 「領導者、架構師、開發人員、管理員、商業從業人員」
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 17%
+source-wordcount: '261'
+ht-degree: 18%
 
 ---
 
