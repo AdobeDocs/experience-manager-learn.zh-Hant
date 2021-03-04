@@ -1,7 +1,7 @@
 ---
 title: 使用表單資料模型預先填寫表單
 description: '使用表單資料模型的請求屬性預先填寫最適化表單 '
-feature: 適用性表單
+feature: 自適應表單
 topics: development
 audience: developer
 doc-type: article
@@ -9,14 +9,11 @@ activity: implement
 version: 6.4,6.5
 kt: 4419
 thumbnail: kt-4419.jpg
-topic: 開發
-role: 業務從業人員
-level: 中級
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 3%
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
 
