@@ -1,10 +1,12 @@
 ---
 title: 第1章——教學課程設定與下載
+seo-title: 內容服AEM務快速入門——第1章——教學課程設定
 description: 無頭教學課程AEM的第1章，說明教學課程AEM實例的基線設定。
+seo-description: 無頭教學課程AEM的第1章，說明教學課程AEM實例的基線設定。
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '17476'
+source-wordcount: '17502'
 ht-degree: 0%
 
 ---
