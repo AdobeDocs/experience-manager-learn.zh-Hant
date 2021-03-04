@@ -1,7 +1,7 @@
 ---
 title: 疑難排解籤署多份檔案解決方案
 description: 測試和故障拍攝解決方案
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6960
 thumbnail: 6960.jpg
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 0%
+source-wordcount: '394'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +28,7 @@ ht-degree: 0%
 
 當客戶服務代理填寫並提交[再融資表單](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)時，會觸發使用案例。
 
-「簽署多個表單」工作流程會在提交此表單時觸發，而客戶會收到電子郵件通知，並附上啟動表單填寫和簽署程式的連結。
+「簽署多份Forms」工作流程會觸發提交此表單的程式，而客戶會收到電子郵件通知，並附上啟動表單填寫和簽署程式的連結。
 
 ## 填寫套件中的表格
 
@@ -39,7 +42,7 @@ ht-degree: 0%
 
 ### 電子郵件通知中的連結無法運作
 
-電子郵件通知中的連結會動態產生。 如果您的AEM伺服器未在localhost:4502上執行，請在「簽署多個表單」工作流程的「儲存表單以簽署」步驟的引數中提供正確的伺服器名稱和連接埠
+電子郵件通知中的連結會動態產生。 如果您AEM的伺服器未在localhost:4502上運行，請在「簽署多個Forms」工作流的「儲存Forms要簽署」步驟的參數中提供正確的伺服器名稱和埠
 
 ### 無法簽署表格
 
