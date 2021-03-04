@@ -1,17 +1,21 @@
 ---
-title: 如何在AEM中使用專案主控
-description: Project Masters透過AEM Projects大幅簡化使用者和團隊管理。
-version: 6.4, 6.5, cloud-service
-topic: 內容管理
-feature: 專案
-level: 中級
+title: 如何使用Project Masters AEM
+description: Project Masters可大幅簡化使用者和團隊的專案AEM管理。
+version: 6.4, 6.5, Cloud Service
+feature: 專案、使用者和群組
+topics: administration, collaboration, performance
+activity: use
+audience: administrator, implementer, architect
+doc-type: article
+topic: 協作
 role: 業務從業人員
+level: 初學者
 kt: 256
 thumbnail: 17740.jpg
 translation-type: tm+mt
-source-git-commit: 2d38baad8e8351d9debbef758050b9b63d860fe9
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -30,7 +34,7 @@ ht-degree: 0%
 * Projects會自動從中央位置管理團隊會籍，並繼承任何對團隊的更新
 * 避免建立可能導致效能問題的重複ACL
 
-[!DNL Master Projects] 可在「AEM專案」下  的「Mastersfolder」 [!UICONTROL 下建立]。建立主項目後，在建立新項目時，它將作為嚮導中可用模板的選項一起顯示。
+[!DNL Master Projects] 可在「專案」下的  Mastersfolder下 AEM建立。建立主項目後，在建立新項目時，它將作為嚮導中可用模板的選項一起顯示。
 
 [!DNL Project Masters] URL（本機AEM作者例項）: [http://localhost:4502/projects.html/content/projects/masters](http://localhost:4502/projects.html/content/projects/masters)
 
@@ -38,7 +42,7 @@ ht-degree: 0%
 
 刪除主項目會導致衍生的項目無法使用。
 
-在刪除主專案之前，請確定所有衍生專案都已完成並從AEM移除。 請務必先儲存任何必要的專案資料，再移除衍生的專案。 從AEM移除所有衍生專案後，即可安全地刪除主專案。
+在刪除主項目之前，請確保已完成並從中刪除所有派生項AEM目。 請務必先儲存任何必要的專案資料，再移除衍生的專案。 從中刪除所有派生項AEM目後，可以安全地刪除主項目。
 
 ## 將[!DNL Project Masters]標籤為非活動
 
@@ -50,6 +54,6 @@ ht-degree: 0%
 
 ![專案主修人員技術檢視](assets/use-project-masters/project-masters-architecture.png)
 
-[!DNL Project Masters] 透過定義一組AEM使用者群組（擁有者、編輯者和觀察者），並允許衍生的專案參考和重複使用這些集中定義的使用者群組，來工作。
+[!DNL Project Masters] 定義一組使用者群組(擁AEM有者、編輯者和觀察者)，並允許衍生的專案參考和重複使用這些集中定義的使用者群組。
 
-如此可減少AEM中所需的使用者群組總數。 在[!DNL Project Masters]之前，每個項目都建立了3個用戶組，並附帶了ACE以強制執行權限，因此，100個項目產生了300個用戶組。 專案主管允許任意數量的專案重複使用相同的三個群組，前提是共用會籍符合專案中的業務需求。
+如此可減少中所需的使用者群組總數AEM。 在[!DNL Project Masters]之前，每個項目都建立了3個用戶組，並附帶了ACE以強制執行權限，因此，100個項目產生了300個用戶組。 專案主管允許任意數量的專案重複使用相同的三個群組，前提是共用會籍符合專案中的業務需求。
