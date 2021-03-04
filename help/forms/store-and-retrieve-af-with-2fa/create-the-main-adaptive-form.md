@@ -1,7 +1,7 @@
 ---
 title: 建立主要的最適化表單
 description: 建立最適化表單以擷取申請人資訊，並建立最適化表單以擷取儲存的最適化表單
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6552
 thumbnail: 6552.jpg
+topic: 開發
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 0%
+source-wordcount: '209'
+ht-degree: 1%
 
 ---
 
@@ -24,14 +27,14 @@ ht-degree: 0%
 
 ![主要應用表單](assets/6552.JPG)
 
-此表單與在課程中先前建立的&#x200B;**bootboxjs540,storeAFWithAttachments**&#x200B;用戶端程式庫以及在表單提交時觸發的AEM工作流程相關聯。
+此表單與在課程中先前建立的&#x200B;**bootboxjs540,storeAFWithAttachments**&#x200B;客戶端庫以及在表單提交時觸AEM發的工作流相關聯。
 
 
-* 範例表單以[自訂最適化表單範本](assets/custom-template-with-page-component.zip)為基礎，需要匯入至AEM，讓範例表單正確呈現。
+* 範例表單以[自訂最適化表單範本](assets/custom-template-with-page-component.zip)為基礎，需要匯入至範例表AEM單才能正確呈現。
 
-* 完成的[StoreAfWithAttachments Form](assets/store-af-with-attachments-form.zip)可下載並匯入您的AEM例項。
+* 您可以下載完成的[StoreAfWithAttachments Form](assets/store-af-with-attachments-form.zip)並將它匯入您的AEM實例。
 
-* 與此表單](assets/workflow-model-store-af-with-attachments.zip)關聯的[AEM工作流程需要匯入至您的AEM例項，表單才能運作。
+* 與此表單AEM](assets/workflow-model-store-af-with-attachments.zip)關聯的[工作流程必須匯入您的例AEM項，表單才能運作。
 
 
 
