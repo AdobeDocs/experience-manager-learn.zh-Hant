@@ -1,8 +1,8 @@
 ---
 title: 用體制發展
 seo-title: 用體制發展
-description: 瞭解如何使用Experience Manager的Style System建置個別樣式並重複使用核心元件。 本教學課程涵蓋使用範本編輯器的品牌專用CSS和進階原則組態擴充核心元件的樣式系統開發。
-sub-product: sites
+description: 瞭解如何使用Experience Manager的樣式系統來建置個別樣式並重複使用核心元件。 本教學課程涵蓋使用範本編輯器的品牌專用CSS和進階原則組態擴充核心元件的樣式系統開發。
+sub-product: Sites
 topics: front-end-development,responsive
 version: cloud-service
 doc-type: tutorial
@@ -11,10 +11,14 @@ audience: developer
 kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
+feature: '"核心元件，樣式系統"'
+topic: 「內容管理，開發」
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '2005'
 ht-degree: 0%
 
 ---
@@ -22,13 +26,13 @@ ht-degree: 0%
 
 # 使用樣式系統{#developing-with-the-style-system}進行開發
 
-瞭解如何使用Experience Manager的Style System建置個別樣式並重複使用核心元件。 本教學課程涵蓋使用範本編輯器的品牌專用CSS和進階原則組態擴充核心元件的樣式系統開發。
+瞭解如何使用Experience Manager的樣式系統來建置個別樣式並重複使用核心元件。 本教學課程涵蓋使用範本編輯器的品牌專用CSS和進階原則組態擴充核心元件的樣式系統開發。
 
 ## 必備條件 {#prerequisites}
 
 檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。
 
-此外，建議您檢閱[用戶端程式庫和前端工作流程](client-side-libraries.md)教學課程，以瞭解用戶端程式庫的基礎以及AEM專案中內建的各種前端工具。
+建議您檢閱[用戶端程式庫和前端工作流程](client-side-libraries.md)教學課程，以瞭解用戶端程式庫的基礎以及專案內建的各種前端工AEM具。
 
 ### Starter Project
 
@@ -45,7 +49,7 @@ ht-degree: 0%
    $ git checkout tutorial/style-system-start
    ```
 
-1. 使用您的Maven技巧，將程式碼庫部署至本機AEM實例：
+1. 使用您的Maven技巧，將程式碼AEM庫部署至本機執行個體：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -53,7 +57,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.5或6.4，請將`classic`描述檔附加至任何Maven命令。
+   > 如果使用AEM6.5或6.4，請將`classic`描述檔附加至任何Maven命令。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
@@ -63,7 +67,7 @@ ht-degree: 0%
 
 ## 目標
 
-1. 瞭解如何使用樣式系統將品牌專屬的CSS套用至AEM核心元件。
+1. 瞭解如何使用樣式系統，將特定品牌的CSS套用至核AEM心元件。
 1. 瞭解BEM記法，以及如何使用它仔細調整樣式。
 1. 使用可編輯的模板應用高級策略配置。
 
@@ -91,11 +95,11 @@ ht-degree: 0%
 
 ![下划線樣式——標題元件](assets/style-system/title-underline-style.png)
 
-### 檢查標題標籤
+### Inspect標題標籤
 
 作為前端開發人員，設定核心元件樣式的第一步是瞭解元件產生的標籤。
 
-1. 開啟新的瀏覽器，並在AEM核心元件庫網站上檢視「標題」元件：[https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html)
+1. 開啟新瀏覽器並檢視核心元件庫網站AEM上的標題元件：[https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html)
 
 1. 以下是Title元件的標籤：
 
@@ -124,7 +128,7 @@ ht-degree: 0%
 
 ### 實作底線樣式- ui.frontend
 
-接著，使用專案的&#x200B;**ui.frontend**&#x200B;模組實作底線樣式。 我們將使用與&#x200B;**ui.frontend**&#x200B;模組搭售的webpack開發伺服器，在&#x200B;*部署至AEM的本機例項之前預覽樣式*。
+接著，使用專案的&#x200B;**ui.frontend**&#x200B;模組實作底線樣式。 我們將使用與&#x200B;**ui.frontend**&#x200B;模組搭售的webpack開發伺服器，在&#x200B;*部署至本機例項之前，先預覽樣式* AEM。
 
 1. 從&#x200B;**ui.frontend**&#x200B;模組中運行以下命令，以啟動webpack dev伺服器：
 
@@ -140,7 +144,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 如果影像顯示中斷，請確定起始專案已部署至AEM的本機例項（在埠4502上執行），而使用的瀏覽器也已登入本機AEM例項。
+   > 如果影像顯示中斷，請確定啟動程式專案已部署至本機例項AEM（在埠4502上執行），而使用的瀏覽器也已登入本機例AEM項。
 
    ![Webpack開發伺服器](assets/style-system/static-webpack-server.png)
 
@@ -188,9 +192,9 @@ ht-degree: 0%
 
 ### 新增標題原則
 
-接下來，我們需要為「標題」元件新增原則，以允許內容作者選擇「底線」樣式以套用至特定元件。 這是使用AEM中的範本編輯器來完成。
+接下來，我們需要為「標題」元件新增原則，以允許內容作者選擇「底線」樣式以套用至特定元件。 這是使用範本編輯器在中完成的AEM。
 
-1. 使用您的Maven技巧，將程式碼庫部署至本機AEM實例：
+1. 使用您的Maven技巧，將程式碼庫部AEM署至本機執行個體：
 
    ```shell
    $ cd ~/code/aem-guides-wknd
@@ -223,14 +227,14 @@ ht-degree: 0%
 
 最後，作為作者，我們可以選擇將底線樣式應用到某些「標題元件」。
 
-1. 導覽至AEM Sites編輯器中的&#x200B;**La Skateparks**&#x200B;文章，網址為：[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+1. 導覽至AEM Sites編輯的&#x200B;**La Skateparks**&#x200B;文章：[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
 1. 在&#x200B;**編輯**&#x200B;模式中，選擇標題元件。 按一下&#x200B;**畫筆**&#x200B;表徵圖並選擇&#x200B;**下划線**&#x200B;樣式：
 
    ![應用下划線樣式](assets/style-system/apply-underline-style-title.png)
 
    身為作者，您應該可以開啟／關閉樣式。
 
-1. 按一下「頁面資訊&#x200B;**」圖示> 「以發佈方式檢視」，以檢查AEM編輯器外的頁面。******
+1. 按一下「頁面資訊&#x200B;**」圖示> 「以發佈方式檢視」，以檢查編輯器外的頁AEM面。******
 
    ![以已發佈狀態檢視](assets/style-system/view-as-published.png)
 
@@ -244,7 +248,7 @@ ht-degree: 0%
 
 ![報價塊樣式——文本元件](assets/style-system/quote-block-style.png)
 
-### 檢查文本元件標籤
+### Inspect文本元件標籤
 
 我們將再次檢查Text元件的標籤。
 
@@ -349,7 +353,7 @@ ht-degree: 0%
 
 接下來，為Text元件新增原則。
 
-1. 使用您的Maven技巧，將程式碼庫部署至本機AEM實例：
+1. 使用您的Maven技巧，將程式碼AEM庫部署至本機執行個體：
 
    ```shell
    $ cd ~/code/aem-guides-wknd
@@ -380,7 +384,7 @@ ht-degree: 0%
 
 ### 應用引號塊樣式
 
-1. 導覽至AEM Sites編輯器中的&#x200B;**La Skateparks**&#x200B;文章，網址為：[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+1. 導覽至AEM Sites編輯的&#x200B;**La Skateparks**&#x200B;文章：[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
 1. 在&#x200B;**編輯**&#x200B;模式中，選擇文本元件。 編輯元件以包含報價元素：
 
    ![文字元件設定](assets/style-system/configure-text-component.png)
@@ -423,11 +427,11 @@ Style System可用來建立&#x200B;**固定寬度**&#x200B;樣式，而非定位
 
 ## 恭喜！{#congratulations}
 
-恭喜，「文章頁面」幾乎已完全建立樣式，而且您使用AEM Style System獲得實際操作的經驗。
+恭喜，「文章頁面」的樣式幾乎已完全完整，您使用「樣式系統」獲得了實際AEM操作經驗。
 
 ### 後續步驟{#next-steps}
 
-瞭解建立[自訂AEM元件](custom-component.md)的端對端步驟，以顯示在Dialog中編寫的內容，並探索開發Sling Model以封裝商業邏輯，以填入元件的HTL。
+瞭解建立[自訂元件](custom-component.md)以顯示在Dialog中撰寫的內容的步驟，並探索開發Sling Model以封裝商業邏輯，以填入元件的HTL。
 
 在[GitHub](https://github.com/adobe/aem-guides-wknd)上檢視完成的程式碼，或在`tutorial/style-system-solution`的Git位置上檢視並部署程式碼。
 
