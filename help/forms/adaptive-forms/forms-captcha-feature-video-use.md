@@ -1,9 +1,9 @@
 ---
-title: 搭配AEM Adaptive Forms使用CAPTCHA
-seo-title: 搭配AEM Adaptive Forms使用CAPTCHA
-description: 新增和使用AEM Adaptive Forms的CAPTCHA。
-seo-description: 新增和使用AEM Adaptive Forms的CAPTCHA。
-feature: adaptive-forms
+title: 搭配最適化FormsAEM使用CAPTCHA
+seo-title: 搭配最適化FormsAEM使用CAPTCHA
+description: 新增並使用具備最適化FormsAEM的驗證碼。
+seo-description: 新增並使用具備最適化FormsAEM的驗證碼。
+feature: 「最適化Forms，工作流程」
 topics: integrations
 audience: developer
 doc-type: technical video
@@ -11,28 +11,31 @@ activity: setup
 version: 6.4,6.5
 uuid: bd63e207-4f4d-4f34-9ac4-7572ed26f646
 discoiquuid: 5e184e44-e385-4df7-b7ed-085239f2a642
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
 
-# 搭配AEM Adaptive Forms使用CAPTCHA{#using-captchas-with-aem-adaptive-forms}
+# 將CAPTCHA與最適AEM化Forms一起使用{#using-captchas-with-aem-adaptive-forms}
 
-新增和使用AEM Adaptive Forms的CAPTCHA。
+新增並使用具備最適化FormsAEM的驗證碼。
 
 請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)頁面，以取得此功能的即時示範連結。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
 
-*此視訊會逐步說明如何使用內建的AEM CAPTCHA服務以及Google的reCAPTCHA服務，將CAPTCHA新增至AEM Adaptive Form。*
+*這段視訊會逐步說明如何使用內建的AEMCAPTCHA服務以及Google reCAPTCHA服務，將AEMCAPTCHA新增至Adaptive Form。*
 
 >[!NOTE]
 >
->此功能僅適用於AEM 6.3以上版本。
+>此功能僅適用於AEM6.3版以上版本。
 
 >[!NOTE]
 >
@@ -57,7 +60,7 @@ ht-degree: 0%
 * 刪除現有的HMAC和主檔案。
 * 貼上從作者實例複製的HMAC和主檔案
 
-重新啟動您的AEM發佈伺服器
+重新啟AEM動發佈伺服器
 
 ## 支援材料{#supporting-materials}
 
