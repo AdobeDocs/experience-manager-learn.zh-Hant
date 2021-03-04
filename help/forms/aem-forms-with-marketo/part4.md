@@ -1,18 +1,21 @@
 ---
-title: AEM Forms with Marketo(Part 4)
-seo-title: AEM Forms with Marketo(Part 4)
-description: 使用AEM Forms Data Model將AEM Forms與Market整合的教學課程。
-seo-description: 使用AEM Forms Data Model將AEM Forms與Market整合的教學課程。
-feature: adaptive-forms, form-data-model
+title: AEM Forms與馬克托（四）
+seo-title: AEM Forms與馬克托（四）
+description: 教學課程，將AEM Forms與Marketo整合，使用AEM Forms表單資料模型。
+seo-description: 教學課程，將AEM Forms與Marketo整合，使用AEM Forms表單資料模型。
+feature: 「適應性Forms，表單資料模型」
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
@@ -21,7 +24,7 @@ ht-degree: 0%
 # 使用表單資料模型建立最適化表單
 
 下一步是建立最適化表單，並基於在前一步驟中建立的表單資料模型。
-使用者將輸入銷售線索ID，並在Marketo服務上跳出時，會呼叫依ID取得銷售線索。 然後，將服務操作的結果映射到自適應表單的適當欄位。
+使用者將輸入銷售線索ID，並在Marketo服務上跳出時，會呼叫依ID取得銷售線索。 然後將服務操作的結果映射到自適應Forms的適當欄位。
 
 1. 建立最適化表單並以「空白表單範本」為基礎，將其與先前步驟中建立的表單資料模型建立關聯。
 1. 在編輯模式中開啟表格
