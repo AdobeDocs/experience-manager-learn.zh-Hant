@@ -1,17 +1,20 @@
 ---
 title: 使用批次API生成互動式通信文檔
 description: 使用批次API產生列印渠道檔案的範例資產
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 3dc1bd3f2f7b6324c53640f01a263fa0728d439c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 0%
+source-wordcount: '421'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +29,7 @@ ht-degree: 0%
 
 ## 使用Watched資料夾產生批次
 
-* 將[互動式通訊範本](assets/Beneficiaries-confirmation.zip)匯入AEM Forms伺服器。
+* 將[互動式通訊範本](assets/Beneficiaries-confirmation.zip)匯入您的AEM Forms伺服器。
 * 導入[watched資料夾配置](assets/batch-generation-api.zip)。 這將在C驅動器中建立一個名為`batchAPI`的資料夾。
 
 **如果您正在非Windows作業系統上執行AEM Forms，請遵循下列3個步驟：**
@@ -60,6 +63,6 @@ ht-degree: 0%
 
 * 使用[軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)導入[ICTemplate](assets/ICTemplate.zip)
 * 使用[套件管理器](http://localhost:4502/crx/packmgr/index.jsp)匯入[自訂提交處理常式](assets/BatchAPICustomSubmit.zip)
-* 使用[表單與檔案介面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)匯入[最適化表單](assets/BatchGenerationAPIAF.zip)
+* 使用[Forms和文檔介面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)導入[最適化表單](assets/BatchGenerationAPIAF.zip)
 * 使用[Felix網頁主控台](http://localhost:4502/system/console/bundles)部署並啟動[自訂OSGI套件](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar)
 * [提交表單以觸發批次產生](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)
