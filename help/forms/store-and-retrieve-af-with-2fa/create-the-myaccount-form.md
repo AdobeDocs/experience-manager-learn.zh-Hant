@@ -1,7 +1,7 @@
 ---
 title: 建立MyAccountForm
 description: 建立myaccount表單，在成功驗證應用程式ID和電話號碼時擷取部分完成的表單。
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6599
 thumbnail: 6599.jpg
+topic: 開發
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 0%
+source-wordcount: '261'
+ht-degree: 1%
 
 ---
 
@@ -47,6 +50,6 @@ com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/r
 
 * MyAccountForm可從此處[下載](assets/my-account-form.zip)
 
-* 範例表單以[自訂最適化表單範本](assets/custom-template-with-page-component.zip)為基礎，需要匯入至AEM，讓範例表單正確呈現。
+* 範例表單以[自訂最適化表單範本](assets/custom-template-with-page-component.zip)為基礎，需要匯入至範例表AEM單才能正確呈現。
 
-* [與MyAccountForm](assets/custom-submit-my-account-form.zip) 提交相關聯的自訂提交處理器必須匯入AEM。
+* [與MyAccountForm](assets/custom-submit-my-account-form.zip) 提交關聯的自訂提交處理器需要匯入至AEM。
