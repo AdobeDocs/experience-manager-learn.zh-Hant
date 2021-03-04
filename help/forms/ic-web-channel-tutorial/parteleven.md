@@ -4,21 +4,18 @@ seo-title: 設定投資組合面板
 description: 這是建立您第一個互動式通訊檔案的多步驟教學課程第11部分。在本部分，我們將新增圓形圖，以顯示目前和模型的投資組合。
 seo-description: 這是建立您第一個互動式通訊檔案的多步驟教學課程第11部分。在本部分，我們將新增圓形圖，以顯示目前和模型的投資組合。
 uuid: b0132912-cb6e-4dec-8309-5125d29ad291
-feature: 互動式通訊
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 77de4e76-53ee-467c-a71c-d1d3ea15283b
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 1%
+source-wordcount: '359'
+ht-degree: 0%
 
 ---
 
