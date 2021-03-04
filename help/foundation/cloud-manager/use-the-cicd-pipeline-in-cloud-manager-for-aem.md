@@ -2,15 +2,17 @@
 title: 在Adobe雲管理器中使用CI/CD管道
 description: Adobe雲管理器提供簡單而有彈性的自助服務CI/CD管道，讓專案團隊可以快速、安全且一致地將程式碼部署AEM至AEMAMS中裝載的所有環境。 本影片系列將探討在失敗和成功案例中設定和執行Cloud Manager的CI/CD管道。
 sub-product: 雲端管理員，基礎
-feature: 管道，質量門
 topics: cicd, performance, best-practices, development, governance
 doc-type: feature video
 activity: understand
 audience: all
+topic: 架構
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
