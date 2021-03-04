@@ -1,33 +1,28 @@
 ---
-title: 在AEM Dynamic Media中使用視訊播放器
-seo-title: 在AEM Dynamic Media中使用視訊播放器
-description: AEM Dynamic Media視訊播放器過去依賴Flash執行時期來支援案頭用戶端和瀏覽器上的可調式視訊串流，現在在Flash內容串流上變得更為積極。 隨著HLS（Apple的HTTP即時串流視訊傳送通訊協定）的推出，內容現在可以串流化，而不需仰賴Flash。
-seo-description: AEM Dynamic Media視訊播放器過去依賴Flash執行時期來支援案頭用戶端和瀏覽器上的可調式視訊串流，現在在Flash內容串流上變得更為積極。 隨著HLS（Apple的HTTP即時串流視訊傳送通訊協定）的推出，內容現在可以串流化，而不需仰賴Flash。
-uuid: aac6f471-4bed-4773-890f-0dd2ceee381d
-discoiquuid: b01cc46b-ef64-4db9-b3b4-52d3f27bddf5
+title: 在Dynamic Media使用視訊播AEM放器
+description: AEMDynamic Media視訊播放器過去依賴Flash執行時期來支援案頭用戶端和瀏覽器上的可調式視訊串流，現在在快閃內容串流上變得更為積極。 隨著HLS（Apple的HTTP即時串流視訊傳送通訊協定）的推出，內容現在可以串流化，而不需仰賴Flash。
 sub-product: 動態媒體
-feature: media-player, video-profiles
-topics: videos, renditions, authoring, best-practices
-doc-type: feature video
-audience: all
-activity: use
+feature: 視訊設定檔
 version: 6.3, 6.4, 6.5
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '271'
-ht-degree: 5%
+source-wordcount: '221'
+ht-degree: 7%
 
 ---
 
 
-# 在AEM Dynamic Media中使用視訊播放器{#using-the-video-player-in-aem-dynamic-media}
+# 在Dynamic Media使AEM用視頻播放器{#using-the-video-player-in-aem-dynamic-media}
 
-AEM Dynamic Media視訊播放器過去依賴Flash執行時期來支援案頭用戶端和瀏覽器上的可調式視訊串流，現在在Flash內容串流上變得更為積極。 隨著HLS（Apple的HTTP即時串流視訊傳送通訊協定）的推出，內容現在可以串流化，而不需仰賴Flash。
+AEMDynamic Media視訊播放器過去依賴Flash執行時期來支援案頭用戶端和瀏覽器上的可調式視訊串流，現在在快閃內容串流上變得更為積極。 隨著HLS（Apple的HTTP即時串流視訊傳送通訊協定）的推出，內容現在可以串流化，而不需仰賴Flash。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
-## 快速檢視非Flash Video Player {#quick-look-into-non-flash-video-player}
+## 快速瞭解非Flash視訊播放器{#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
