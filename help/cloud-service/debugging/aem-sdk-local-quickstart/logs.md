@@ -1,39 +1,42 @@
 ---
-title: 使用記錄檔除錯AEM SDK
-description: 記錄檔是除錯AEM應用程式的前線，但需視部署的AEM應用程式中的適當登入而定。
-feature: null
+title: 使用記AEM錄除錯SDK
+description: 記錄檔是除錯應用程式的前AEM沿，但需視部署應用程式的登入程AEM式而定。
+feature: 開發人員工具
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5252
+topic: 開發
+role: 開發人員
+level: 初學者，中級
 translation-type: tm+mt
-source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 0%
+source-wordcount: '400'
+ht-degree: 3%
 
 ---
 
 
-# 使用記錄檔除錯AEM SDK
+# 使用記AEM錄除錯SDK
 
-存取AEM SDK的記錄檔時，AEM SDK本機快速入門Jar或Dispatcher Tools&#39;都能提供除錯AEM應用程式的重要深入資訊。
+存取AEMSDK記錄檔(AEMSDK本機快速入門Jar或Dispatcher Tools)可提供除錯應用程式的重要深入資訊AEM。
 
-## AEM記錄檔
+## 記AEM錄
 
 >[!VIDEO](https://video.tv.adobe.com/v/34334/?quality=12&learn=on)
 
-記錄檔是除錯AEM應用程式的前線，但需視部署的AEM應用程式中的適當登入而定。 Adobe建議將本機開發和AEM當做雲端服務開發人員記錄設定盡可能保持類似，因為它可將AEM SDK本機快速入門和AEM當作雲端服務開發人員環境的記錄可見度標準化，以減少設定繁瑣和重新部署。
+記錄檔是除錯應用程式的前AEM沿，但需視部署應用程式的登入程AEM式而定。 Adobe建議盡可能保持本AEM機開發和Cloud Service開發記錄設定的類似性，因為它可標準化AEM SDK本機快速入門和Cloud Service開發AEM環境的記錄可見度，減少設定的繁瑣和重新部署。
 
-[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)會針對您的AEM應用程式的Java封裝，設定在DEBUG層級登入，以透過Sling Logger OSGi組態進行本機開發，請參閱
+[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)會在DEBUG層級設定登入您應用程式的Java封裝，以透過Sling Logger OSGi組態，位於
 
 `ui.apps/src/main/content/jcr_root/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
 登錄到`error.log`。
 
-如果預設記錄不足以進行本端開發，則可透過AEM SDK的本端快速入門的「記錄支援」網頁主控台([/system/console/slinglog](http://localhost:4502/system/console/slinglog))來設定臨機記錄，但不建議將臨機變更持續存留至Git，除非AEM也需要這些相同的記錄設定作為雲端服務開發環境。 請記住，透過「記錄支援控制台」所做的變更會直接保存至AEM SDK的本機快速入門資料庫。
+如果預設記錄不足以進行本機開發，則可透過AEMSDK本機快速入門的「記錄支援」網頁主控台([/system/console/slinglog](http://localhost:4502/system/console/slinglog))來設定臨機記錄，但不建議將臨機變更持續存留至Git，除非Cloud Service開發環境也需要這些相同的記錄設定AEM。 請記住，透過「記錄支援控制台」所做的變更會直接保存至AEMSDK的本機快速入門資料庫。
 
 Java日誌語句可以在`error.log`檔案中查看：
 
