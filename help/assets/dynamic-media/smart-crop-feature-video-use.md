@@ -1,39 +1,34 @@
 ---
-title: 搭配AEM Assets動態媒體使用智慧裁切
-seo-title: 搭配AEM Assets動態媒體使用智慧裁切
-description: 智慧型裁切使用Adobe Sensei來消除裁切內容以進行自適應設計所耗費的時間與成本。
-seo-description: 智慧型裁切使用Adobe Sensei來消除裁切內容以進行自適應設計所耗費的時間與成本。
-uuid: 2cb27aa8-644d-4b17-8ffc-f6a99f95cfd2
-discoiquuid: e4b8534c-fa64-491f-86ec-4dbe50cd6bf7
+title: 與AEM Assets·Dynamic Media一起使用Smart Crop
+description: Smart Crop使用Adobe Sensei來消除裁切內容以進行自適應設計所需的耗時且昂貴的工作。
 sub-product: 動態媒體
-feature: smart-crop, image-profiles
-topics: images, renditions, authoring
-doc-type: feature video
-audience: all
-activity: use
+feature: 智慧型裁切、影像描述檔
 version: 6.4, 6.5
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 0%
+source-wordcount: '256'
+ht-degree: 2%
 
 ---
 
 
-# 搭配AEM Assets Dynamic Media使用智慧型裁切{#using-smart-crop-with-aem-assets-dynamic-media}
+# 搭配AEM Assets·Dynamic Media使用智慧型裁切{#using-smart-crop-with-aem-assets-dynamic-media}
 
-智慧型裁切使用Adobe Sensei來消除裁切內容以進行自適應設計所耗費的時間與成本。
+Smart Crop使用Adobe Sensei來消除裁切內容以進行自適應設計所需的耗時且昂貴的工作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21519/)
 
 >[!NOTE]
 >
->視訊會假設您的AEM例項在Dynamic Media S7模式中執行。 [如需有關使用動態媒體設定AEM的指示，請參閱這裡。](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>視訊假設您AEM的例項在Dynamic MediaS7模式下執行。 [有關與Dynamic MediaAEM一起設定的說明，請參閱這裡。](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
-## Adobe Experience Manager的Dynamic Media Smart Crop功能包括
+## Adobe Experience Manager的Dynamic Media智慧作物功能包括
 
-* AEM Asset管理員可以根據裝置寬度和高度，輕鬆建立智慧型裁切的影像設定檔。
+* 資AEM產管理員可以根據裝置寬度和高度，輕鬆建立智慧型裁切的影像設定檔。
 * 智慧型裁切可針對個別資產執行，或可針對資料夾內的所有資產執行。
 * 智慧型裁切編輯版面可調整大小，以提高可見度。
 * AEM Sites的Dynamic Media元件支援Smart Crop。
