@@ -1,22 +1,26 @@
 ---
-title: 使用AEM Experience片段和Adobe Target進行個人化
-seo-title: 使用Adobe Experience Manager(AEM)Experience Fragments和Adobe Target進行個人化
-description: 教學課程的端對端說明如何使用Adobe Experience Manager Experience Fragments和Adobe Target建立和提供個人化體驗。
-seo-description: 教學課程的端對端說明如何使用Adobe Experience Manager Experience Fragments和Adobe Target建立和提供個人化體驗。
+title: 使用體驗片段AEM和Adobe Target的個人化
+seo-title: 使用Adobe Experience Manager(AEM)體驗片段和Adobe Target的個人化
+description: 端對端教學課程，說明如何使用Adobe Experience Manager體驗片段和Adobe Target來建立和提供個人化體驗。
+seo-description: 端對端教學課程，說明如何使用Adobe Experience Manager體驗片段和Adobe Target來建立和提供個人化體驗。
+feature: 體驗片段
+topic: 個性化
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1734'
 ht-degree: 1%
 
 ---
 
 
-# 使用AEM Experience片段和Adobe Target進行個人化
+# 使用體驗片段AEM和Adobe Target的個人化
 
-透過將AEM Experience片段匯出為HTML選件的功能，您可以結合AEM的易用性和強大功能，以及Target中強大的自動智慧(AI)和機器學習(ML)功能，以大規模測試和個人化體驗。
+透過將AEMExperience片段匯出為HTML提供的功能，您可以結合Target中的易用性和強大功能AEM，以及強大的自動化智慧(AI)和機器學習(ML)功能，以大規模測試和個人化體驗。
 
-AEM將您所有的內容和資產整合在一個中心位置，以推動您的個人化策略。 AEM可讓您在單一位置輕鬆建立桌上型電腦、平板電腦和行動裝置的內容，毋需編寫程式碼。 您不需要為每個裝置建立頁面- AEM會使用您的內容自動調整每個體驗。
+將您AEM的所有內容和資產整合在一個中心位置，以推動您的個人化策略。 讓您AEM在單一位置輕鬆建立適用於桌上型電腦、平板電腦和行動裝置的內容，毋需編寫程式碼。 不需要為每個裝置建立頁面，而是使用您的內AEM容自動調整每個體驗。
 
 Target可讓您根據結合行為、情境和離線變數的基於規則和人工智慧驅動機器學習方法的組合，大規模地提供個人化體驗。  有了Target，您可以輕鬆設定並執行A/B和多變數(MVT)活動，以決定最佳選件、內容和體驗。
 
@@ -30,31 +34,31 @@ WKND網站計畫透過其網站在全美推出&#x200B;**SkateFest競賽**，並�
 
 在本練習中，需要有下列用戶參與，並執行一些可能需要管理訪問權限的任務。
 
-* **Content Producer / Content Editor** (Adobe Experience Manager)
-* **行銷人員** （Adobe Target /最佳化團隊）
+* **內容製作者／內容編輯者** (Adobe Experience Manager)
+* **行銷人員** (Adobe Target/最佳化團隊)
 
 ### 必備條件
 
 * **AEM**
-   * [AEM作者和發佈](./implementation.md#getting-aem) 例項取消分別位於localhost 4502和4503。
+   * [分AEM別在](./implementation.md#getting-aem) localhost 4502和4503上製作和發佈例項。
 * **Experience Cloud**
-   * 存取您的組織Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
-   * Experience Cloud已布建下列解決方案
+   * 存取您的組織Adobe Experience Cloud- <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * Experience Cloud配置了以下解決方案
       * [Adobe Target](https://experiencecloud.adobe.com)
 
 ### WKND網站首頁
 
-![AEM Target藍本1](assets/personalization-use-case-1/aem-target-use-case-1-4.png)
+![目AEM標方案1](assets/personalization-use-case-1/aem-target-use-case-1-4.png)
 
-1. 行銷人員與AEM內容編輯器開始WKND SkateFest促銷活動討論，並詳細說明需求。
+1. 行銷人員會與內容編輯器開始WKND SkateFestAEM促銷活動討論，並詳細說明需求。
    * ***要求***:在WKND網站首頁上針對美國各州的訪客推廣WKND SkateFest促銷活動，提供個人化內容。在「首頁轉盤」下方新增內容區塊，其中包含背景影像、文字和按鈕。
       * **背景影像**:影像應與使用者瀏覽WKND網站頁面的狀態相關。
-      * **文字**:「註冊試用版」
+      * **文字**:&quot;註冊Audition&quot;
       * **按鈕**:指向WKND SkateFest頁面的「活動詳細資訊」
       * **WKND SkateFest頁面**:包含活動詳細資訊的新頁面，包括試鏡地點、日期和時間。
-1. 根據需求，AEM內容編輯器會為內容區塊建立體驗片段，並將它匯出為選件。 為了為美國所有州提供個人化內容，內容作者可以建立一個體驗片段主變數，然後建立50個其他變數，每個州各一個。 然後，您可以手動編輯每個狀態變化與相關影像和文字的內容。 製作Experience Fragment時，內容編輯人員可以使用Asset Finder選項，快速存取AEM Assets中的所有可用資產。 當體驗片段匯出至Adobe Target時，其所有變數也會以選件的形式推送至Adobe Target。
+1. 內容編輯器會根據AEM需求為內容區塊建立體驗片段，並將它匯出為選件至Adobe Target。 為了為美國所有州提供個人化內容，內容作者可以建立一個體驗片段主變數，然後建立50個其他變數，每個州各一個。 然後，您可以手動編輯每個狀態變化與相關影像和文字的內容。 製作體驗片段時，內容編輯人員可使用「資產搜尋器」選項，快速存取AEM Assets地區的所有可用資產。 當體驗片段匯出至Adobe Target時，其所有變數也會以選件的形式推送至Adobe Target。
 
-1. 將體驗片段從AEM匯出至Adobe Target做為選件後，行銷人員可以使用這些選件在Target中建立活動。 根據WKND網站SkateFest促銷活動，行銷人員需要建立個人化體驗，並向來自每個州的WKND網站訪客提供。 若要建立「體驗定位」活動，行銷人員需要識別受眾。 我們的WKND SkateFest活動需要根據觀眾造訪WKND網站的位置，建立50個不同的觀眾。
+1. 將體驗片段從匯出AEM為選件後，行銷人員可以使用這些選件在Target中建立活動。 根據WKND網站SkateFest促銷活動，行銷人員需要建立個人化的體驗，並從每個州向WKND網站訪客提供。 若要建立「體驗定位」活動，行銷人員需要識別受眾。 我們的WKND SkateFest活動需要根據觀眾造訪WKND網站的位置，建立50個不同的觀眾。
    * [對](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) 像會定義您活動的目標，並用於任何有目標的地方。目標對象是一組定義的訪客條件。 選件可定位至特定對象（或區段）。 只有屬於該對象的訪客才會看到其目標體驗。  例如，您可以將選件傳送給由使用特定瀏覽器或來自特定地理位置的訪客所組成的觀眾。
    * [選件](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9)是促銷活動或活動期間在您的網頁上顯示的內容。 當您測試網頁時，會測量每個體驗在您所在位置使用不同選件時的成功程度。 選件可包含不同類型的內容，包括：
       * 影像
@@ -70,7 +74,7 @@ WKND網站計畫透過其網站在全美推出&#x200B;**SkateFest競賽**，並�
 
 >[!NOTE]
 >
->將體驗片段匯出至Adobe Target之前，請先發佈它。
+>將體驗片段匯出至Adobe Target之前先發佈。
 
 ## 行銷人員活動
 
@@ -80,11 +84,11 @@ WKND網站計畫透過其網站在全美推出&#x200B;**SkateFest競賽**，並�
 1. 使用您的Adobe ID登入，並確定您所在的組織正確。
 1. 在解決方案切換器中，按一下&#x200B;**Target**，然後按一下&#x200B;**launch** Adobe Target。
 
-   ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/exp-cloud-adobe-target.png)
+   ![Experience Cloud-Adobe Target](assets/personalization-use-case-1/exp-cloud-adobe-target.png)
 
-1. 導覽至&#x200B;**選件**&#x200B;標籤，並搜尋「WKND」選件。 您應該能夠查看從AEM匯出為HTML選件的「體驗片段」變數清單。 每個選件都對應一個狀態。 例如，*WKND SkateFest California*&#x200B;是提供給來自加州的WKND網站訪客的選件。
+1. 導覽至&#x200B;**選件**&#x200B;標籤，並搜尋「WKND」選件。 您應該可以查看從HTML選件匯出的「體驗片段」變AEM數清單。 每個選件都對應一個狀態。 例如，*WKND SkateFest California*&#x200B;是提供給來自加州的WKND網站訪客的選件。
 
-   ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/html-offers.png)
+   ![Experience Cloud-Adobe Target](assets/personalization-use-case-1/html-offers.png)
 
 1. 在主導覽中，按一下「觀眾」**。**
 
@@ -94,7 +98,7 @@ WKND網站計畫透過其網站在全美推出&#x200B;**SkateFest競賽**，並�
 
    **對象名稱格式：WKND-\&lt;>state *\>***
 
-   ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/audience-target-1.png)
+   ![Experience Cloud-Adobe Target](assets/personalization-use-case-1/audience-target-1.png)
 
 1. 按一下「新增規則>地理&#x200B;**」。**
 1. 按一下&#x200B;**選擇** ，然後選擇以下選項之一：
@@ -121,13 +125,13 @@ WKND網站計畫透過其網站在全美推出&#x200B;**SkateFest競賽**，並�
 
 1. 重複步驟6-9以建立其他狀態的觀眾。
 
-   ![Adobe Target - WKND觀眾](assets/personalization-use-case-1/adobe-target-audiences-50.png)
+   ![Adobe Target- WKND Audiences](assets/personalization-use-case-1/adobe-target-audiences-50.png)
 
 目前，我們已成功為美國不同州的所有WKND網站訪客建立對象，並為每個州提供對應的HTML選件。 現在，讓我們建立「體驗定位」活動，以針對WKND網站首頁的對應選件來定位對象。
 
 ### 建立具有地理定位的活動
 
-1. 從Adobe Target視窗，導覽至&#x200B;**活動**&#x200B;標籤。
+1. 從您的Adobe Target窗口，導航至&#x200B;**活動**&#x200B;頁籤。
 1. 按一下「建立活動」**，然後選取「體驗定位」**&#x200B;活動類型。****
 1. 選擇&#x200B;**Web**&#x200B;頻道，然後選擇&#x200B;**Visual Experience Composer**。
 1. 輸入&#x200B;**活動URL**，然後按一下&#x200B;**下一步**&#x200B;以開啟Visual Experience Composer。
@@ -162,7 +166,7 @@ WKND網站計畫透過其網站在全美推出&#x200B;**SkateFest競賽**，並�
    ![目標與目標——目標](assets/personalization-use-case-1/goal-metric-target.png)
 
    >[!NOTE]
-   >您也可以選擇Adobe Analytics做為報表來源。
+   >您也可以選擇Adobe Analytics做為您的報表來源。
 
 1. 將滑鼠指標暫留在目前的活動名稱上，您可將它重新命名為&#x200B;**WKND SkateFest - USA**，然後再將變更重新命名為&#x200B;**儲存並關閉**。
 1. 在「活動詳細資訊」螢幕中，確保&#x200B;**激活**&#x200B;您的活動。
@@ -187,4 +191,4 @@ WKND網站計畫透過其網站在全美推出&#x200B;**SkateFest競賽**，並�
 
 ## 摘要
 
-在本章中，內容編輯器可以建立所有內容，以支援Adobe Experience Manager中的WKND SkateFest促銷活動，並將它匯出為HTML選件，以根據使用者地理位置建立「體驗定位」。
+在本章中，內容編輯器可以建立所有內容，以支援Adobe Experience Manager的WKND SkateFest促銷活動，並將它匯出為HTML選件，以建立以使用者地理位置為基礎的體驗定位。
