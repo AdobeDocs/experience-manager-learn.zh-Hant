@@ -1,7 +1,7 @@
 ---
 title: 類型變數表單資料模型
-description: 在AEM工作流程中使用類型的變數表單資料模型。
-feature: workflow
+description: 在工作流程中使用類型變數的表單資料AEM模型。
+feature: 工作流程
 topics: development
 audience: developer
 doc-type: technical video
@@ -9,18 +9,21 @@ activity: understand
 version: 6.5
 kt: 6347
 thumbnail: 41238.jpg
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 0%
+source-wordcount: '65'
+ht-degree: 4%
 
 ---
 
 
 # 類型變數表單資料模型
 
-表單資料模型類型的變數通常用於在表單資料模型的底層資料源中插入行。 此影片說明使用AEM工作流程在資料庫中插入列所需的步驟。
+表單資料模型類型的變數通常用於在表單資料模型的底層資料源中插入行。 此視訊說明使用工作流程在資料庫中插入列所需的AEM步驟。
 
 
 
