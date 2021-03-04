@@ -1,26 +1,29 @@
 ---
-title: 在HTM5表單提交上觸發AEM工作流程
-seo-title: 在HTML5表單提交上觸發AEM工作流程
-description: 在離線模式下繼續填寫行動表單，並提交行動表單以觸發AEM工作流程
-seo-description: 在離線模式下繼續填寫行動表單，並提交行動表單以觸發AEM工作流程
-feature: mobile-forms
+title: HTM5表AEM單提交的觸發工作流程
+seo-title: HTML5表AEM單提交的觸發工作流程
+description: 在離線模式下繼續填寫行動表單，並提交行動表單以觸發工AEM作流程
+seo-description: 在離線模式下繼續填寫行動表單，並提交行動表單以觸發工AEM作流程
+feature: 行動表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 0%
+source-wordcount: '260'
+ht-degree: 1%
 
 ---
 
 
 # 處理PDF提交
 
-在本部分，我們將建立在AEM Publish上執行的簡單servlet，以處理從Acrobat/Reader提交的PDF。 此servlet會依序向AEM作者例項中執行的servlet提出HTTP POST請求，負責將提交的資料儲存為AEM Author儲存庫中的`nt:file`節點。
+在本部分，我們將建立在AEM Publish上執行的簡單servlet，以處理從Acrobat/Reader提交PDF的作業。 這個servlet接著會向在作者例項中執行的servlet提出HTTPPOST請求，負責將提交的資料儲存為AEM Author儲存庫中的AEM`nt:file`節點。
 
 以下是處理PDF提交的servlet代碼。 在此servlet中，我們對AEM Author實例中裝載在&#x200B;**/bin/startworkflow**&#x200B;上的servlet進行POST調用。 此servlet會將表單資料儲存在AEM Author的儲存庫中。
 
@@ -200,7 +203,7 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-AEM工作流程啟動程式已設定為每次在`/content/pdfsubmissions`節點下建立類型`nt:file`的新資源時都會觸發。 此工作流程會將提交的資料與xdp範本合併，以建立非互動或靜態PDF。 然後，產生的PDF會指派給使用者以進行審閱和核准。
+工作流啟AEM動程式配置為每次在`/content/pdfsubmissions`節點下建立類型`nt:file`的新資源時觸發。 此工作流程會將提交的資料與xdp範本合併，以建立非互動或靜態PDF。 然後，產生的PDF會指派給使用者以進行審閱和核准。
 
-若要將提交的資料儲存在`/content/pdfsubmissions`節點下，我們使用`GetResolver` OSGi服務，可讓我們使用`fd-service`系統使用者儲存提交的資料，此系統使用者可在每個AEM Forms安裝中使用。
+為了將提交的資料儲存在`/content/pdfsubmissions`節點下，我們使用`GetResolver` OSGi服務，使我們能夠使用`fd-service`系統用戶保存提交的資料，該系統用戶在每個AEM Forms安裝中都可用。
 
