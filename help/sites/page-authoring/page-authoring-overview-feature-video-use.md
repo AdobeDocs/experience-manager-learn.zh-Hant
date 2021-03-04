@@ -1,9 +1,9 @@
 ---
-title: 在AEM Sites中編寫頁面
-seo-title: 以下影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites中製作新頁面
-description: 以下影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites中製作新頁面
-seo-description: 以下影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites中製作新頁面
-feature: page-editor, template-editor
+title: 在AEM Sites製作頁面
+seo-title: 以下影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites製作新頁面
+description: 以下影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites製作新頁面
+seo-description: 以下影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites製作新頁面
+feature: 頁面編輯器，可編輯範本
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 4497
 thumbnail: 31828.jpg
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '185'
 ht-degree: 11%
 
 ---
@@ -22,7 +25,7 @@ ht-degree: 11%
 
 # 編寫頁面{#authoring-page-aem-sites}
 
-瞭解如何使用網站編輯器的UI在Adobe Experience Manager Sites中製作頁面。
+瞭解如何使用網站編輯器的UI在Adobe Experience Manager Sites製作頁面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31828?quality=12&learn=on)
 
