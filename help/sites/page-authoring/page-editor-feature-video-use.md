@@ -1,9 +1,9 @@
 ---
-title: 搭配AEM網站使用頁面編輯器
-seo-title: 搭配Adobe Experience Manager Sites使用頁面編輯器
-description: 以下視訊會反白顯示Adobe Experience Manager中Touch-UI Sites編輯器的幾項主要功能。
-seo-description: 以下視訊會反白顯示Adobe Experience Manager中Touch-UI Sites編輯器的幾項主要功能。
-feature: page-editor
+title: 搭配使用頁面編輯器與AEM Sites
+seo-title: 搭配使用頁面編輯器與Adobe Experience Manager Sites
+description: 以下視訊重點說明Adobe Experience ManagerTouch-UI Sites編輯器的幾項主要功能。
+seo-description: 以下視訊重點說明Adobe Experience ManagerTouch-UI Sites編輯器的幾項主要功能。
+feature: 頁面編輯器
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4248
 thumbnail: 32011.jpg
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '249'
 ht-degree: 4%
 
 ---
@@ -22,7 +25,7 @@ ht-degree: 4%
 
 # 使用頁面編輯器{#using-page-editor-with-aem-sites}
 
-AEM網站的頁面編輯器是建立和編輯網頁內容的強大工具。 頁面編輯器的工具和功能可從頁面編輯器的UI工具列存取。
+網AEM站的頁面編輯器是建立和編輯網頁內容的強大工具。 頁面編輯器的工具和功能可從頁面編輯器的UI工具列存取。
 
 以下影片反白顯示「頁面編輯器」的主要功能。
 
