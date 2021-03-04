@@ -1,32 +1,35 @@
 ---
 title: 為列印頻道建立您的第一個互動式通訊
 seo-title: 為列印頻道建立您的第一個互動式通訊
-description: 互動式通訊是AEM Forms 6.4的新手。本檔案將逐步引導您建立適用於列印頻道的互動式通訊。
-seo-description: 互動式通訊是AEM Forms 6.4的新手。本檔案將逐步引導您建立適用於列印頻道的互動式通訊。
-feature: interactive-communication
+description: 互動式通訊是AEM Forms6.4的新手。本檔案將逐步引導您建立適用於列印頻道的互動式通訊。
+seo-description: 互動式通訊是AEM Forms6.4的新手。本檔案將逐步引導您建立適用於列印頻道的互動式通訊。
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 2%
+source-wordcount: '229'
+ht-degree: 3%
 
 ---
 
 
 # 為列印頻道建立您的第一個互動式通訊
 
-互動式通訊是AEM Forms 6.4的新手。本檔案將逐步引導您建立適用於列印頻道的互動式通訊。
+互動式通訊是AEM Forms6.4的新手。本檔案將逐步引導您建立適用於列印頻道的互動式通訊。
 
 請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)頁面，以取得此功能的即時示範連結。
 
 ## 必備條件 {#prerequistes}
 
-[使用套件管理器，將與本教學課程相關的資產下載並匯入AEM。](assets/gettingstartedassets.zip)此zip檔案包含影像、檔案片段、監看的檔案夾設定和版面檔案(xdp)，做為資產套件的一部分
+[使用套件管理器，下載並匯入與本教學課程AEM相關的資產。](assets/gettingstartedassets.zip)此zip檔案包含影像、檔案片段、監看的檔案夾設定和版面檔案(xdp)，做為資產套件的一部分
 
 [下載並解壓縮此檔案。](assets/warfileandswaggerfile.zip) 此檔案包含需要部署至Tomcat的SampleRest.war檔案，以及需要用於設定資料來源的Swagger檔案。
 
