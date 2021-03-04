@@ -1,7 +1,7 @@
 ---
-title: 疑難排解AEM Assets的資產計算擴充性
-description: 以下是開發和部署AEM Assets的自訂「資產計算」工作者時，可能遇到的常見問題和錯誤以及解決方案的索引。
-feature: asset-compute
+title: 疑難排解AEM Assets的Asset compute擴充性
+description: 以下是開發和部署AEM Assets自訂Asset compute工人時可能遇到的常見問題和錯誤以及解決方案的索引。
+feature: asset compute微服務
 topics: renditions, metadata, development
 version: cloud-service
 doc-type: tutorial
@@ -9,18 +9,21 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
+topic: 整合、開發
+role: 開發人員
+level: 中級，經驗豐富的
 translation-type: tm+mt
-source-git-commit: 649d971ecaa67c0d1dd2636f3c212bfee3d13561
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1249'
 ht-degree: 0%
 
 ---
 
 
-# 疑難排解資產計算擴充性
+# 疑難排解Asset compute擴充性
 
-以下是開發和部署AEM Assets的自訂「資產計算」工作者時，可能遇到的常見問題和錯誤以及解決方案的索引。
+以下是開發和部署AEM Assets自訂Asset compute工人時可能遇到的常見問題和錯誤以及解決方案的索引。
 
 ## 開發{#develop}
 
@@ -35,14 +38,14 @@ ht-degree: 0%
 
 ## 開發工具{#development-tool}
 
-### Asset Compute專案中遺失Console.json檔案{#missing-console-json}
+### asset compute專案{#missing-console-json}中遺失Console.json檔案
 
 + __錯誤：錯__ 誤：在驗證時缺少所需檔案(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY)，位於async setupAssetCompute(.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
-+ __原因：__ 資 `console.json` 產計算項目根目錄中缺少檔案
-+ __解析度：__ 下載新 `console.json` 的Adobe I/O專案表單
-   1. 在console.adobe.io中，開啟Asset Compute專案設定為使用的Adobe I/O專案
++ __原因：__ 文 `console.json` 件在Asset compute項目的根目錄中缺失
++ __解析度：__ 下載新 `console.json` 的Adobe I/O專案
+   1. 在console.adobe.io中，開啟Adobe I/O專案，該Asset compute專案設定為使用
    1. 點選右上角的&#x200B;__Download__&#x200B;按鈕
-   1. 使用檔案名`console.json`將下載的檔案保存到資產計算項目的根目錄
+   1. 使用檔案名`console.json`將下載的檔案保存到Asset compute項目的根目錄
 
 ### manifest.yml{#incorrect-yaml-indentation}中的YAML縮排不正確
 
@@ -52,7 +55,7 @@ ht-degree: 0%
 
 ### memorySize限制設定為過低{#memorysize-limit-is-set-too-low}
 
-+ __錯誤：本__  地開發伺服器OpenWhisk錯誤：PUT https://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true傳回HTTP 400（錯誤請求）—> &quot;請求內容格式錯誤：requirement失敗：記憶體低於允許的閾值64 MB 134217728 B&quot;
++ __錯誤：本__  地開發伺服器OpenWhisk錯誤：PUThttps://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true傳回HTTP 400（錯誤請求）—> &quot;請求內容格式錯誤：requirement失敗：記憶體低於允許的閾值64 MB 134217728 B&quot;
 + __原因：__ 錯誤 `memorySize` 消息以位元組為單位報告， `manifest.yml` 已將中的工作器限制設定在允許的最小閾值以下。
 + __解析度：__  檢閱 `memorySize` 中的限制 `manifest.yml` ，並確定這些限制都大於允許的最小閾值。
 
@@ -64,7 +67,7 @@ ht-degree: 0%
 
 ### 來源檔案下拉式清單不正確{#source-files-dropdown-incorrect}
 
-資產計算開發工具可能會進入其提取過時資料的狀態，在顯示錯誤項目的&#x200B;__源檔案__&#x200B;下拉式清單中最為明顯。
+asset compute開發工具可能會進入其提取過時資料的狀態，在顯示錯誤項目的&#x200B;__來源檔案__&#x200B;下拉式清單中最為明顯。
 
 + __錯誤：來源__ 檔案下拉式清單顯示錯誤項目。
 + __原因：過__ 時的快取瀏覽器狀態會導致
@@ -72,9 +75,9 @@ ht-degree: 0%
 
 ### 遺失或無效的devToolToken查詢參數{#missing-or-invalid-devtooltoken-query-parameter}
 
-+ __錯誤：__  Asset Compute Development Tool中的「未授權」通知
++ __錯誤：__ 「未授權」通知在Asset compute開發工具中
 + __原因：__ `devToolToken` 遺失或無效
-+ __解析度：__ 關閉「資產計算開發工具」瀏覽器視窗、終止任何透過命令啟動的執行中「開發工具」 `aio app run` 程式，然後重新啟動「開發工具」(使用 `aio app run`)。
++ __解析度：__ 關閉「Asset compute開發工具」瀏覽器視窗、終止任何透過命令啟動的執行中「開發工具」 `aio app run` 程式，然後重新啟動「開發工具」(使用 `aio app run`)。
 
 ### 無法刪除源檔案{#unable-to-remove-source-files}
 
@@ -98,7 +101,7 @@ ht-degree: 0%
 
 + __錯誤：__ 失敗：轉譯&#39;rendition.xxx&#39;不如預期。
 + __原因：__ 工作者輸出與測試案例中提供的格 `rendition.<extension>` 式副本不同的格式副本。
-   + 如果預期的`rendition.<extension>`檔案建立方式與測試案例中本機產生的轉譯方式完全相同，則測試可能會失敗，因為位可能會有一些差異。 例如，如果「資產計算」工作人員使用API變更對比，而預期的結果是透過調整Adobe Photoshop CC中的對比來建立，則檔案可能會顯示相同，但位元的細微變化可能不同。
+   + 如果預期的`rendition.<extension>`檔案建立方式與測試案例中本機產生的轉譯方式完全相同，則測試可能會失敗，因為位可能會有一些差異。 例如，如果Asset compute工作者使用API更改對比，並且通過調整Adobe Photoshop CC的對比來建立預期結果，則檔案的顯示可能相同，但位中的細微變化可能不同。
 + __解析度：__ 導覽至測試以檢視轉譯輸出，並 `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`將它與測試案例中預期的轉譯檔案比較。若要建立精確的預期資產，請執行下列任一動作：
    + 使用「開發工具」產生轉譯、驗證其正確性，並將其當做預期的轉譯檔案使用
    + 或者，在`/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`驗證測試產生的檔案，驗證其正確性，並將它當做預期的轉譯檔案使用
@@ -113,7 +116,7 @@ ht-degree: 0%
 
 ### 中斷點不暫停{#breakpoints-no-pausing}
 
-+ __錯誤__:從可除錯的開發工具執行Asset Compute工具時，VS程式碼不會在中斷點暫停。
++ __錯誤__:從可除錯的開發工具執行Asset compute工具時，VS代碼不會在中斷點暫停。
 
 #### VS代碼調試器未連接{#vs-code-debugger-not-attached}
 
@@ -123,11 +126,11 @@ ht-degree: 0%
 #### VS工作器開始執行後附加的代碼調試器{#vs-code-debugger-attached-after-worker-execution-began}
 
 + __原因：在__ 點選「執行程式開發工具」之前，VS程式碼除錯程 ____ 式未附加。
-+ __解析度：__ 請檢視VS程式碼的除錯控制台（「檢視>除錯控制台」），然後從「開發工具」重新執行「資產計算工具」，以確保除錯程式已附加。
++ __解析度：__ 請檢視VS程式碼的除錯控制台（「檢視>除錯控制台」），然後從開發工具重新執行Asset compute工具，以確保除錯程式已附加。
 
 ### 調試時工作器超時{#worker-times-out-while-debugging}
 
-+ __錯誤__:除錯控制台報告「動作將超時-XXX毫秒」或 [Asset Compute Development Tool的轉譯預](./develop/development-tool.md) 覽無限期旋轉或
++ __錯誤__:除錯主控台報告「動作將逾時-XXX毫秒」或 [Asset compute開發工具的轉](./develop/development-tool.md) 譯預覽無限期旋轉或
 + __原因__:除錯期間超出manifest. [](./develop/manifest.md) ymlis中定義的工作器逾時。
 + __解析度__:暫時增加manifest. [ymlor中工作者的逾時](./develop/manifest.md) 時間，以加速除錯活動。
 
@@ -145,7 +148,7 @@ ht-degree: 0%
 
 ## Deploy{#deploy}
 
-### AEM{#custom-rendition-missing-from-asset}中資產中遺失自訂轉譯
+### {#custom-rendition-missing-from-asset}中資產中缺少的自AEM訂轉譯
 
 + __錯誤：__ 新資產和重新處理資產處理成功，但缺少自訂轉譯
 
@@ -159,10 +162,10 @@ ht-degree: 0%
 + __原因：__ 資產存在於套用自訂工作者處理設定檔的資料夾下方，但該資料夾與資產之間已套用了不使用客戶工作者的不同處理設定檔。
 + __解析度：__ 合併或協調兩個處理描述檔，並移除中間處理描述檔
 
-### AEM{#asset-processing-fails}中的資產處理失敗
+### {#asset-processing-fails}中的資AEM產處理失敗
 
 + __錯誤：資__ 產處理失敗標章顯示在資產上
 + __原因：__ 自定義工作器執行時出錯
-+ __解析度：__ 依照使用除 [錯Adobe I/O Runtime動作的](./test-debug/debug.md#aio-app-logs) 指示進行 `aio app logs`。
++ __解析度：__ 依照使用除錯Adobe I/O Runtime [活動](./test-debug/debug.md#aio-app-logs) 的指示進行 `aio app logs`。
 
 
