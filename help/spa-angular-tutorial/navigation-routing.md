@@ -1,7 +1,7 @@
 ---
 title: 新增導覽和路由 |編輯與AngularAEM入SPA門
 description: 瞭解如何使用「頁面」SPA和AEMSPA Editor SDK支援多個檢視。 動態導覽是使用Angular路由實作，並新增至現有的標題元件。
-sub-product: sites
+sub-product: Sites
 feature: 編SPA輯器
 topics: development
 doc-type: tutorial
@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 5312
 thumbnail: 5312-spa-angular.jpg
+topic: SPA
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2722'
+source-wordcount: '2725'
 ht-degree: 0%
 
 ---
