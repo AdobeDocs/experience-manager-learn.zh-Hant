@@ -1,7 +1,7 @@
 ---
 title: 整合SPA |編輯與AngularAEM入SPA門
 description: 瞭解以Angular撰寫的單頁應用程式(SPA)原始碼如何與Adobe Experience Manager()專AEM案整合。 瞭解如何使用現代化的前端工具(例如Angular的CLI工具)，針對JSON模型APISPA快AEM速開發。
-sub-product: sites
+sub-product: Sites
 feature: 編SPA輯器
 topics: development
 doc-type: tutorial
@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 5310
 thumbnail: 5310-spa-angular.jpg
+topic: SPA
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2204'
+source-wordcount: '2207'
 ht-degree: 0%
 
 ---
