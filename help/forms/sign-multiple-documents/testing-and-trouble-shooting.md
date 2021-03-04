@@ -1,7 +1,7 @@
 ---
 title: 疑難排解籤署多份檔案解決方案
 description: 測試和故障拍攝解決方案
-feature: 自適應表單
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6960
 thumbnail: 6960.jpg
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 0%
+source-wordcount: '394'
+ht-degree: 1%
 
 ---
 
