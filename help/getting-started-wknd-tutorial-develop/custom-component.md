@@ -1,8 +1,8 @@
 ---
 title: 自訂元件
 description: 涵蓋自訂逐行元件的端對端建立，以顯示撰寫的內容。 包括開發Sling Model以封裝商業邏輯以填入署名元件和對應的HTL來轉換元件。
-sub-product: sites
-feature: sling-models
+sub-product: Sites
+feature: 「核心元件、API」
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,10 +11,13 @@ audience: developer
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
+topic: 「內容管理，開發」
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3969'
 ht-degree: 0%
 
 ---
@@ -22,7 +25,7 @@ ht-degree: 0%
 
 # 自訂元件{#custom-component}
 
-本教學課程涵蓋自訂AEM Byline元件的端對端建立，以顯示在Dialog中編寫的內容，並探討開發Sling模型以封裝商業邏輯，以填入元件的HTL。
+本教學課程涵蓋自訂的AEMByline元件的端對端建立，以顯示在Dialog中編寫的內容，並探討開發Sling Model以封裝商業邏輯，以填入元件的HTL。
 
 ## 必備條件 {#prerequisites}
 
@@ -43,7 +46,7 @@ ht-degree: 0%
    $ git checkout tutorial/custom-component-start
    ```
 
-1. 使用您的Maven技巧，將程式碼庫部署至本機AEM實例：
+1. 使用您的Maven技巧，將程式碼AEM庫部署至本機執行個體：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -51,7 +54,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.5或6.4，請將`classic`描述檔附加至任何Maven命令。
+   > 如果使用AEM6.5或6.4，請將`classic`描述檔附加至任何Maven命令。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
@@ -61,7 +64,7 @@ ht-degree: 0%
 
 ## 目標
 
-1. 瞭解如何建立自訂AEM元件
+1. 瞭解如何建立自訂元AEM件
 1. 瞭解如何使用Sling Models封裝商業邏輯
 1. 瞭解如何從HTL指令碼內使用Sling Model
 
@@ -81,9 +84,9 @@ Byline元件的實作包含收集署名內容的對話方塊，以及擷取署�
 
 ## 建立Byline元件{#create-byline-component}
 
-首先，建立「同行元件」節點結構並定義對話框。 這代表AEM中的元件，並依其在JCR中的位置隱式定義元件的資源類型。
+首先，建立「同行元件」節點結構並定義對話框。 它在中表示元件，AEM並通過元件在JCR中的位置隱式定義元件的資源類型。
 
-對話方塊會顯示內容作者可提供的介面。 在此實作中，AEM WCM核心元件的&#x200B;**Image**&#x200B;元件將用來製作和轉譯Byline的影像，因此會設為我們元件的`sling:resourceSuperType`。
+對話方塊會顯示內容作者可提供的介面。 在此實作中，AEMWCM核心元件的&#x200B;**Image**&#x200B;元件將用來製作和呈現Byline的影像，因此它將設為元件的`sling:resourceSuperType`。
 
 ### 建立元件定義{#create-component-definition}
 
@@ -283,7 +286,7 @@ Byline元件的實作包含收集署名內容的對話方塊，以及擷取署�
 
 ### 部署代碼{#deploy-the-code}
 
-1. 使用您的Maven技巧，將更新的程式碼庫部署至本機AEM實例：
+1. 使用您的Maven技能，將更新的程式碼庫部AEM署至本機執行個體：
 
    ```shell
    $ cd aem-guides-wknd
@@ -292,13 +295,13 @@ Byline元件的實作包含收集署名內容的對話方塊，以及擷取署�
 
 ## 將元件添加到{#add-the-component-to-a-page}頁
 
-為了簡化工作並專注於AEM元件開發，我們會將目前狀態的Byline元件新增至「文章」頁面，以驗證`cq:Component`節點定義已部署並正確，AEM會辨識新元件定義，而元件的對話方塊適用於編寫。
+為了讓程式設計變得簡單而專注於元件開發AEM，我們會將目前狀態的Byline元件新增至文章頁面，以驗證`cq:Component`節點定義已部署並正確無誤，AEM辨識新元件定義，元件的對話方塊適用於製作。
 
-### 新增影像至AEM資產
+### 將影像新增至AEM Assets
 
-首先，將範例頭像上傳至AEM Assets，以用來在Byline元件中填入影像。
+首先，將範例頭部像片上傳至AEM Assets，以用於填入Byline元件中的影像。
 
-1. 導覽至AEM Assets中的LA Skateparks檔案夾：[http://localhost:4502/assets.html/content/dam/wknd/en/magazine/la-skateparks](http://localhost:4502/assets.html/content/dam/wknd/en/magazine/la-skateparks)。
+1. 導覽至AEM Assets的LA Skateparks資料夾：[http://localhost:4502/assets.html/content/dam/wknd/en/magazine/la-skateparks](http://localhost:4502/assets.html/content/dam/wknd/en/magazine/la-skateparks)。
 
 1. 將&#x200B;**[stacey-roswells.jpg](assets/custom-component/stacey-roswells.jpg)**&#x200B;的頭部像片上傳至資料夾。
 
@@ -306,7 +309,7 @@ Byline元件的實作包含收集署名內容的對話方塊，以及擷取署�
 
 ### 編寫元件{#author-the-component}
 
-接著，將Byline元件新增至AEM中的頁面。 由於我們通過`ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/.content.xml`定義將Byline元件添加到&#x200B;**WKND站點項目——內容**&#x200B;元件組中，所以它可自動用於&#x200B;**容器**，其&#x200B;**策略**&#x200B;允許&#x200B;**WKND站點項目——內容**&#x200B;元件群組，文章頁面的「版面容器」即為此群組。
+接著，將Byline元件新增至中的頁AEM面。 由於我們通過`ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/.content.xml`定義將Byline元件添加到&#x200B;**WKND站點項目——內容**&#x200B;元件組中，所以它可自動用於&#x200B;**容器**，其&#x200B;**策略**&#x200B;允許&#x200B;**WKND站點項目——內容**&#x200B;元件群組，文章頁面的「版面容器」即為此群組。
 
 1. 導覽至LA Skatepark文章：[http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
 
@@ -334,9 +337,9 @@ Byline元件的實作包含收集署名內容的對話方塊，以及擷取署�
 
    ![行元件填充屬性](assets/custom-component/add-properties.png)
 
-   AEM作者會透過對話方塊設定和編寫元件。 此時，在開發Byline元件時，會包含對話方塊以收集資料，但是尚未新增轉換製作內容的邏輯。 因此，只會顯示預留位置。
+   作者AEM可透過對話方塊來設定和製作元件。 此時，在開發Byline元件時，會包含對話方塊以收集資料，但是尚未新增轉換製作內容的邏輯。 因此，只會顯示預留位置。
 
-1. 儲存對話方塊後，導覽至[CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/us/en/magazine/guide-la-skateparks/jcr%3Acontent/root/container/container/byline)，並檢視元件的內容如何儲存在AEM頁面下的位元件內容節點上。
+1. 儲存對話方塊後，導覽至[CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/us/en/magazine/guide-la-skateparks/jcr%3Acontent/root/container/container/byline)，並檢視元件內容如何儲存在頁面下方的位元件內容節AEM點上。
 
    在「LA Skate Parks」（LA滑板公園）頁面下查找Byline元件內容節點，即`/content/wknd/us/en/magazine/guide-la-skateparks/jcr:content/root/container/container/byline`。
 
@@ -350,14 +353,14 @@ Byline元件的實作包含收集署名內容的對話方塊，以及擷取署�
 
 接下來，我們將建立Sling Model，做為資料模型，並代管Byline元件的商業邏輯。
 
-Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects)，可協助將資料從JCR對應至Java變數，並在AEM中進行開發時提供許多其他細節。
+Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects)，可協助將資料從JCR對應至Java變數，並在開發時提供許多其他細節AEM。
 
 ### 查看Maven依賴項{#maven-dependency}
 
-Byline Sling Model將仰賴AEM提供的數個Java API。 這些API可通過`core`模組的POM檔案中列出的`dependencies`使用。 本教學課程所使用的專案已針對AEM建立為Cloud Service。 但是它的獨特之處在於它向後與AEM 6.5/6.4相容。因此，Cloud Service和AEM 6.x的相依性都已包含在內。
+Byline Sling Model將仰賴由提供的數個Java APIAEM。 這些API可通過`core`模組的POM檔案中列出的`dependencies`使用。 本教學課程使用的專案已建立AEM為Cloud Service。 但是它的獨特之處在於它向後相容AEM6.5/6.4。因此，包括Cloud ServiceAEM和6.x的依賴關係。
 
 1. 開啟`<src>/aem-guides-wknd/core/pom.xml`下方的`pom.xml`檔案。
-1. 尋找`aem-sdk-api` - **AEM的相依性：僅限雲端服務**
+1. 查找`aem-sdk-api` - **作為僅Cloud ServiceAEM的依賴關係**
 
    ```xml
    <dependency>
@@ -366,9 +369,9 @@ Byline Sling Model將仰賴AEM提供的數個Java API。 這些API可通過`core
    </dependency>
    ```
 
-   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#building-for-the-sdk)包含AEM公開的所有公用Java API。 在建立此專案時，預設會使用`aem-sdk-api`。 該版本保存在位於項目根部`aem-guides-wknd/pom.xml`的Parent reactor pom中。
+   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#building-for-the-sdk)包含公開的所有公用Java APIAEM。 在建立此專案時，預設會使用`aem-sdk-api`。 該版本保存在位於項目根部`aem-guides-wknd/pom.xml`的Parent reactor pom中。
 
-1. 尋找`uber-jar` - **AEM 6.5/6.4 Only**&#x200B;的相依性
+1. 查找`uber-jar` - **AEM 6.5/6.4 Only**&#x200B;的相關性
 
    ```xml
    ...
@@ -380,9 +383,9 @@ Byline Sling Model將仰賴AEM提供的數個Java API。 這些API可通過`core
    ...
    ```
 
-   `uber-jar`僅在調用`classic`配置檔案時包含，即`mvn clean install -PautoInstallSinglePackage -Pclassic`。 同樣，這是本專案獨有的。 在實際專案中，如果指定的AEM版本為6.5或6.4，則從AEM Project Archetype產生`uber-jar`將是預設值。
+   `uber-jar`僅在調用`classic`配置檔案時包含，即`mvn clean install -PautoInstallSinglePackage -Pclassic`。 同樣，這是本專案獨有的。 在實際專案中，從AEMProject Archetype產生，如果指定的版本是6.5或6.4，則&lt;a0/AEM>將是預設值。`uber-jar`
 
-   [uber-jar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)包含AEM 6.x公開的所有公用Java API。該版本保存在位於項目`aem-guides-wknd/pom.xml`根部的Parent reactor pom中。
+   [uber-jar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)包含6.x公開的所AEM有公用Java API。該版本保存在位於項目`aem-guides-wknd/pom.xml`根部的Parent reactor pom中。
 
 1. 查找`core.wcm.components.core`的相關性：
 
@@ -394,7 +397,7 @@ Byline Sling Model將仰賴AEM提供的數個Java API。 這些API可通過`core
        </dependency>
    ```
 
-   這是AEM核心元件公開的所有公開Java API。 AEM Core Components是AEM外部維護的專案，因此有個別的發行週期。 因此，它是需要單獨包含的依賴項，**not**&#x200B;與`uber-jar`或`aem-sdk-api`一起包含。
+   這是核心元件公開的所有公用Java APIAEM。 核AEM心元件是在外部維護的專AEM案，因此有個別的發行週期。 因此，它是需要單獨包含的依賴項，**not**&#x200B;與`uber-jar`或`aem-sdk-api`一起包含。
 
    與uber-jar一樣，此相依性的版本會維護在位於`aem-guides-wknd/pom.xml`的Parent reactor pom檔案中。
 
@@ -503,7 +506,7 @@ Byline Sling Model將仰賴AEM提供的數個Java API。 這些API可通過`core
 
    讓我們回顧一下此注釋及其參數：
 
-   * 當`@Model`註解部署至AEM時，會將BylineImpl註冊為Sling Model。
+   * 當`@Model`註解部署至時，會將BylineImpl註冊為Sling ModelAEM。
    * `adaptables`參數指定此模型可由請求調整。
    * `adapters`參數允許在Byline介面下註冊實施類。 這可讓HTL指令碼透過介面呼叫Sling Model（而非直接執行）。 [有關適配器的詳細資訊，請參閱此處](https://sling.apache.org/documentation/bundles/models.html#specifying-an-alternate-adapter-class-since-110)。
    * `resourceType`指向Byline元件資源類型（先前建立的），如果存在多個實現，則有助於解析正確的模型。 [有關將模型類與資源類型關聯的詳細資訊，請參閱此處](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)。
@@ -838,7 +841,7 @@ public class BylineImpl implements Byline {
 
 ## 署名HTL {#byline-htl}
 
-在`ui.apps`模組中，開啟我們在先前AEM元件設定中建立的`/apps/wknd/components/byline/byline.html`。
+在`ui.apps`模組中，開啟我們在早期元件中建立的&lt;a1/AEM>。`/apps/wknd/components/byline/byline.html`
 
 ```html
 <div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html">
@@ -848,7 +851,7 @@ public class BylineImpl implements Byline {
 
 讓我們來回顧一下此HTL指令碼目前的運作方式：
 
-* `placeholderTemplate`指向「核心元件」的預留位置，該預留位置會在元件未完全設定時顯示。 如上所述，在AEM Sites Page Editor中，這會將元件標題轉譯為具有元件標題的方塊，如`cq:Component`的`jcr:title`屬性中所定義。
+* `placeholderTemplate`指向「核心元件」的預留位置，該預留位置會在元件未完全設定時顯示。 如上所述，在「AEM Sites頁面編輯器」中，如`cq:Component`的`jcr:title`屬性中所定義，將顯示為具有元件標題的框。
 
 * `data-sly-call="${placeholderTemplate.placeholder @ isEmpty=false}`會載入上述定義的`placeholderTemplate`，並以布林值（目前硬式編碼為`false`）傳入預留位置範本。 當`isEmpty`為true時，預留位置範本會呈現灰色方塊，否則不會呈現任何內容。
 
@@ -916,7 +919,7 @@ HTL從JSTL借用，並使用相同的縮短Java getter方法名稱。
 
 ### 有條件地顯示預留位置{#conditionally-displaying-the-placeholder}
 
-AEM元件的大部分HTL指令碼都採用&#x200B;**預留位置範例**，為作者提供視覺提示，指出元件的製作不正確，而且不會顯示在AEM Publish **上。**&#x200B;推動此決定的慣例是在元件支援Sling Model上實作方法，在我們的案例中：`Byline.isEmpty()`。
+「元件」的AEM大部分HTL指令碼都採用&#x200B;**預留位置範例**，為作者提供視覺提示，指出元件的製作不正確，且不會顯示在AEM Publish **上。**&#x200B;推動此決定的慣例是在元件支援Sling Model上實作方法，在我們的案例中：`Byline.isEmpty()`。
 
 `isEmpty()` 在Byline Sling Model上呼叫，結果（或其負值，透過運算子）會儲 `!` 存至名為 `hasContent`:
 
@@ -977,14 +980,14 @@ AEM元件的大部分HTL指令碼都採用&#x200B;**預留位置範例**，為�
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
    ```
 
-3. 將程式碼庫部署至本機AEM例項。 由於對POM檔案進行了重大更改，因此從項目的根目錄執行完整的Maven生成。
+3. 將程式碼庫部署至本機AEM執行個體。 由於對POM檔案進行了重大更改，因此從項目的根目錄執行完整的Maven生成。
 
    ```shell
    $ cd aem-guides-wknd/
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   如果部署至AEM 6.5/6.4，請叫用`classic`設定檔：
+   如果部署AEM至6.5/6.4，請調用`classic`配置檔案：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
@@ -1000,7 +1003,7 @@ AEM元件的大部分HTL指令碼都採用&#x200B;**預留位置範例**，為�
 
 ### 檢閱Sling Model註冊{#reviewing-the-sling-model-registration}
 
-[AEM Web Console的Sling Models Status檢視](http://localhost:4502/system/console/status-slingmodels)會顯示AEM中所有已註冊的Sling Models。 Byline Sling Model可以透過檢閱此清單來驗證是否已安裝及識別。
+[AEM Web Console的Sling Models Status檢視](http://localhost:4502/system/console/status-slingmodels)會在中顯示所有已註冊的Sling ModelsAEM。 Byline Sling Model可以透過檢閱此清單來驗證是否已安裝及識別。
 
 如果此清單中未顯示&#x200B;**BylineImpl**，則Sling Model的註解可能會發生問題，或Sling Model未新增至核心專案中已註冊的Sling Models套件(com.adobe.aem.guides.wknd.core.models)。
 
@@ -1010,7 +1013,7 @@ AEM元件的大部分HTL指令碼都採用&#x200B;**預留位置範例**，為�
 
 ## 署名樣式{#byline-styles}
 
-Byline元件需要設定樣式，以符合Byline元件的創意設計。 這將透過使用SCSS來達成，AEM透過&#x200B;**ui.frontend** Maven子專案提供支援。
+Byline元件需要設定樣式，以符合Byline元件的創意設計。 這將通過使用SCSS來實現，AEMSCSS通過&#x200B;**ui.frontend** Maven子項目提供支援。
 
 ### 新增預設樣式
 
@@ -1068,14 +1071,14 @@ Byline元件需要設定樣式，以符合Byline元件的創意設計。 這將�
 
    `main.scss` 是模組包含的樣式的主入口 `ui.frontend` 點。規則運算式`'../components/**/*.scss'`將包含位於`components/`資料夾下的所有檔案。
 
-1. 建立完整專案並部署至AEM:
+1. 建立並部署完整專案，以AEM:
 
    ```shell
    $ cd aem-guides-wknd/
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   如果使用AEM 6.4/6.5，請新增`-Pclassic`描述檔。
+   如果使用AEM6.4/6.5，請添加`-Pclassic`配置檔案。
 
    >[!TIP]
    >
@@ -1083,19 +1086,19 @@ Byline元件需要設定樣式，以符合Byline元件的創意設計。 這將�
 
 ## 將它放在一起{#putting-it-together}
 
-以下是完整編寫和樣式化的Byline元件在AEM頁面上的外觀。
+以下是完整編寫和樣式化的Byline元件在頁面上的外觀AEM。
 
 ![完成的位元件](assets/custom-component/final-byline-component.png)
 
 ## 恭喜！{#congratulations}
 
-恭喜您，您剛使用Adobe Experience Manager從頭開始建立自訂元件！
+恭喜，您剛使用Adobe Experience Manager從頭開始建立自訂元件！
 
 ### 後續步驟{#next-steps}
 
-繼續瞭解AEM元件開發，探索如何編寫Byline Java程式碼的JUnit測試，以確保一切正確開發，並實作的商業邏輯正確且完整。
+繼續瞭解元AEM件開發，探索如何編寫Byline Java程式碼的JUnit測試，以確保一切正確開發，並實作的商業邏輯正確完整。
 
-* [編寫單元測試或AEM元件](unit-testing.md)
+* [編寫單元測試或組AEM件](unit-testing.md)
 
 在[GitHub](https://github.com/adobe/aem-guides-wknd)上檢視完成的程式碼，或在`tutorial/custom-component-solution`的Git位置上檢視並部署程式碼。
 
