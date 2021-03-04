@@ -1,7 +1,7 @@
 ---
-title: 測試資產計算工作者
-description: 「資產計算」項目定義了一種模式，以便輕鬆建立和執行資產計算工作者的測試。
-feature: asset-compute
+title: 測試Asset compute工作者
+description: asset compute項目定義了一種模式，以便輕鬆建立和執行Asset compute工作者的測試。
+feature: asset compute微服務
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,24 +9,27 @@ audience: developer
 doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
+topic: 整合、開發
+role: 開發人員
+level: 中級，經驗豐富的
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
 
-# 測試資產計算工作者
+# 測試Asset compute工作者
 
-「資產計算」項目定義了一種模式，以便輕鬆建立和執行資產計算工作者的[測試。](https://docs.adobe.com/content/help/en/asset-compute/using/extend/test-custom-application.html)
+asset compute項目定義了一種模式，用於輕鬆建立和執行Asset compute工作者的[測試。](https://docs.adobe.com/content/help/en/asset-compute/using/extend/test-custom-application.html)
 
 ## 工人測驗的剖析
 
-「資產計算」工作者的測試會分割為測試套裝，而在每個測試套裝中，有一或多個測試案例會提出要測試的條件。
+asset compute工人的測試分為測試套件，而在每個測試套件中，有一或多個測試案例宣告要測試的條件。
 
-「資產計算」項目中的測試結構如下：
+asset compute項目中的測試結構如下：
 
 ```
 /actions/<worker-name>/index.js
@@ -77,7 +80,7 @@ ht-degree: 0%
        "brightness": "-0.50"
    }
    ```
-   這些是傳遞至[開發工具的「資產計算」配置檔案定義](../develop/development-tool.md)的相同鍵／值，減去`worker`鍵。
+   這些是傳入[開發工具的Asset compute配置檔案定義](../develop/development-tool.md)中的相同鍵／值，減去`worker`鍵。
 1. 將預期的[轉譯檔案](./assets/test/success-parameterized/rendition.png)新增至此測試案例，並將它命名為`rendition.png`。 此檔案表示給定輸入`file.jpg`的工作器預期輸出。
 1. 在命令行中，通過執行`aio app test`來運行項目根
    + 確保已安裝並啟動[Docker Desktop](../set-up/development-environment.md#docker)和支援Docker映像
