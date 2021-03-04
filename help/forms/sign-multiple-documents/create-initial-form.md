@@ -1,7 +1,7 @@
 ---
 title: 建立初始表單以觸發流程
 description: 建立初始表單以觸發電子郵件通知，以開始簽署程式。
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,18 +9,21 @@ activity: implement
 version: 6.4,6.5
 kt: 6892
 thumbnail: 6892.jpg
+topic: 開發
+role: 業務從業人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 3%
+source-wordcount: '174'
+ht-degree: 5%
 
 ---
 
 
 # 建立初始表單
 
-初始表單（再融資表單）會觸發&#x200B;**「簽署多個表單」** AEM工作流程，用於簽署多個表單。 您可以輸入您選擇的值，但請確定表單中已新增下列欄位。
+初始表單（再融資表單）用於通過觸發&#x200B;**「簽署多個Forms」工作流程簽署多個表AEM單。**&#x200B;您可以輸入您選擇的值，但請確定表單中已新增下列欄位。
 
 
 
@@ -34,7 +37,7 @@ ht-degree: 3%
 
 
 
-初始表單必須設定為觸發名為&#x200B;**signmultipleforms**的AEM工作流程
+初始表單必須進行設定，以觸AEM發名為&#x200B;**signmultipleforms**的工作流程
 請確定「資料檔案路徑」已設為**Data.xml**。 當范常式式碼在表單提交的裝載程式中尋找名為Data.xml的檔案時，這一點非常重要。
 
 ## 資產
