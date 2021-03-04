@@ -1,20 +1,17 @@
 ---
 title: OCR資料擷取
 description: 從政府核發的檔案擷取資料以填入表單。
-feature: 巴科德Forms
+feature: 整合
 topics: adaptive forms
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 kt: 6679
-topic: 開發
-role: 開發人員
-level: 中級
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '648'
 ht-degree: 2%
 
 ---
