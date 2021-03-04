@@ -10,10 +10,14 @@ audience: developer
 mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
+feature: 內容片段， GraphQL API
+topic: 無頭、內容管理
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1143'
 ht-degree: 1%
 
 ---
