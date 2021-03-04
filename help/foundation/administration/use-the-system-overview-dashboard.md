@@ -2,19 +2,17 @@
 title: 使用「系統概述控制面板」(位AEM於
 description: 在舊版管理AEM員中，為了取得實例的完整資訊，需要檢視數個位置AEM。 「系統概述」旨在透過單一儀表板提供執行個體的組態、硬體和健AEM康狀況的高階檢視，來解決此問題。
 version: 6.4, 6.5
+feature: null
 topics: administration, operations, monitoring
 activity: use
 audience: administrator, architect, developer, implementer
 doc-type: technical video
 contentOwner: dgordon
-topic: 管理
-role: 管理員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 1%
+source-wordcount: '142'
+ht-degree: 0%
 
 ---
 
