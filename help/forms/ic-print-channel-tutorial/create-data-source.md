@@ -1,10 +1,10 @@
 ---
-title: 在AEM Forms中建立DataSource設定
-seo-title: 在AEM Forms中建立DataSource設定
+title: 在AEM Forms建立資料源配置
+seo-title: 在AEM Forms建立資料源配置
 description: 這是建立您第一個互動式通訊檔案的多步驟教學課程第2部分。 在本部分，我們將建立一個REST支援的資料源。  以下視訊逐步說明建立資料來源的步驟。
 seo-description: 這是建立您第一個互動式通訊檔案的多步驟教學課程第2部分。 在本部分，我們將建立一個REST支援的資料源。  以下視訊逐步說明建立資料來源的步驟。
 uuid: b9d5c220-3e86-4e7d-8ea0-a7f604dde925
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,16 +13,19 @@ version: 6.4,6.5
 targetaudience: target-audience ongoing
 thumbnail: 27765.jpg
 kt: 5954
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 0%
+source-wordcount: '144'
+ht-degree: 2%
 
 ---
 
 
-# 在AEM Forms中建立DataSource組態{#creating-datasource-configuration-in-aem-forms}
+# 在AEM Forms建立資料源配置{#creating-datasource-configuration-in-aem-forms}
 
 在本部分，我們將建立一個REST支援的資料源。  以下視訊逐步說明建立資料來源的步驟。
 
