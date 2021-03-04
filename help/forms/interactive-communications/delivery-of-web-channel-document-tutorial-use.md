@@ -1,19 +1,22 @@
 ---
-title: 互動式通訊檔案的傳送- Web Channel AEM Forms
-seo-title: 互動式通訊檔案的傳送- Web Channel AEM Forms
+title: 提供互動式通訊檔案——網路頻道AEM Forms
+seo-title: 提供互動式通訊檔案——網路頻道AEM Forms
 description: 透過電子郵件中的連結傳送網路通路檔案
 seo-description: 透過電子郵件中的連結傳送網路通路檔案
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 0%
+source-wordcount: '298'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +27,7 @@ ht-degree: 0%
 
 在本文中，我們將電子郵件視為Web通路檔案的傳遞機制。 收件者會透過電子郵件取得Web頻道檔案的連結。按一下連結後，系統會要求使用者驗證，並填入Web頻道檔案中的登入使用者專屬資料。
 
-讓我們來看看以下程式碼片段。 此程式碼是GET.jsp的一部分，當使用者按一下電子郵件中連結以檢視網頁頻道檔案時，就會觸發此程式碼。 我們使用Jackrabbit UserManager取得登入的使用者。 在取得登入的使用者後，我們會取得與使用者描述檔相關聯的accountNumber屬性值。
+讓我們來看看以下程式碼片段。 此程式碼是GET.jsp的一部分，當使用者按一下電子郵件中連結上的，以檢視Web頻道檔案時，就會觸發此程式碼。 我們使用Jackrabbit UserManager取得登入的使用者。 在取得登入的使用者後，我們會取得與使用者描述檔相關聯的accountNumber屬性值。
 
 然後，我們會將accountNumber值與地圖中名為accountnumber的索引鍵建立關聯。 鍵&#x200B;**accountnumber**&#x200B;在表單資料模式中定義為「請求屬性」。 此屬性的值作為輸入參數傳遞給表單資料模態讀取服務方法。
 
