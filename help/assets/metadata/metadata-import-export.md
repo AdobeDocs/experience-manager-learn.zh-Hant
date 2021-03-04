@@ -2,16 +2,16 @@
 title: 在AEM Assets使用元資料導入和導出
 description: 瞭解如何使用Adobe Experience Manager資產的匯入和匯出中繼資料功能。 匯入和匯出功能可讓內容作者大量更新現有資產的中繼資料。
 version: 6.3, 6.4, 6.5, cloud-service
-topics: Content Management
+topic: 內容管理
 feature: 中繼資料
 role: 管理員
 level: 中級
 kt: 647, 917
 thumbnail: 22132.jpg
 translation-type: tm+mt
-source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '265'
 ht-degree: 3%
 
 ---
