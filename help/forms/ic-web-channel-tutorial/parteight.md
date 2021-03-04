@@ -4,21 +4,18 @@ seo-title: 為您的第一個互動式通信文檔配置折線圖
 description: 這是建立您第一個互動式通訊檔案的多步驟教學課程第8部分。 在本部分，我們將向帳戶進度面板添加折線圖。
 seo-description: 這是建立您第一個互動式通訊檔案的多步驟教學課程第8部分。 在本部分，我們將向帳戶進度面板添加折線圖。
 uuid: 08c3e7af-e3cb-4ee0-bdc1-d112bfa70e40
-feature: 互動式通訊
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 4292303c-3ef4-4df2-b537-fdb011412670
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 2%
+source-wordcount: '229'
+ht-degree: 0%
 
 ---
 
