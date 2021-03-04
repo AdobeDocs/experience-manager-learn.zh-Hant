@@ -2,16 +2,19 @@
 title: 瞭解在Adobe Managed Services上使用AdobeAEMIMS驗證
 description: Adobe Experience Manager公司推出對實AEM例的Admin Console支援和基於AdobeIMS(Identity Management系統)的AEMManaged Services認證。   此整合可讓AEMManaged Services客戶在單一統一的Web主控台中管理所有Experience Cloud使用者。 用戶和組可以分配給與實例關聯的產品配置AEM檔案，從而授予對特定實例的集中管AEM理訪問權。
 version: 6.4, 6.5
-feature: 身份驗證
+feature: 使用者和群組
 topics: authentication, security
 activity: understand
 audience: administrator, architect, developer, implementer
 doc-type: technical video
 kt: 781
+topic: 架構
+role: 架構師
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
