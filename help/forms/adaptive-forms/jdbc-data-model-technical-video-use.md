@@ -1,26 +1,29 @@
 ---
-title: 將基於JDBC的表單資料模型與AEM表單一起使用
-seo-title: 將基於JDBC的表單資料模型與AEM表單一起使用
+title: 基於JDBC的表單資料模型與AEM Forms
+seo-title: 基於JDBC的表單資料模型與AEM Forms
 description: 此視訊說明如何建立以JDBC資料來源為基礎的表單資料模型、以表單資料模型為基礎的最適化表單，以及如何使用表單資料模型使用「插入」操作。
 seo-description: 此視訊說明如何建立以JDBC資料來源為基礎的表單資料模型、以表單資料模型為基礎的最適化表單，以及如何使用表單資料模型使用「插入」操作。
 uuid: 5c664b16-c089-48ad-8bf6-9766d0ddc3c4
-feature: integrations
+feature: 適用性表單
 topics: form-data-model
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: 4e5f947c-b49a-423e-9139-51c0c5648318
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 0%
+source-wordcount: '175'
+ht-degree: 2%
 
 ---
 
 
-# 將基於JDBC的表單資料模型與AEM表單{#using-jdbc-based-form-data-models-with-aem-forms}一起使用
+# 使用基於JDBC的表單資料模型和AEM Forms{#using-jdbc-based-form-data-models-with-aem-forms}
 
 此視訊說明如何建立以JDBC資料來源為基礎的表單資料模型、以表單資料模型為基礎的最適化表單，以及如何使用表單資料模型使用「插入」操作。
 
@@ -28,5 +31,5 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->只要所需的資料庫驅動程式部署至AEM做為OSGi套件，就可以使用任何RDBMS資料來源。 在AEM中設定RDBMS資料來源，請參閱「與AEM Forms整合設定資料」[。](/help/forms/adaptive-forms/data-integration-technical-video-setup.md)
+>只要將所需的資料庫驅動程式部署為OSGi包，就可以使用AEM任何RDBMS資料源。 在中設定RDBMS資料源AEM在[與AEM Forms的設定資料整合中介紹。](/help/forms/adaptive-forms/data-integration-technical-video-setup.md)
 
