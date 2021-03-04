@@ -1,18 +1,21 @@
 ---
 title: 收件匣自訂
 description: 新增自訂欄，以使用Sightly範本顯示其他工作流程資料
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 0%
+source-wordcount: '296'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +28,7 @@ ht-degree: 0%
 
 ## Sightly範本
 
-Following is the sightly template. 範本中的程式碼會根據收入顯示圖示。 這些圖示是隨附於AEM的[coral ui圖示庫](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)的一部分。
+Following is the sightly template. 範本中的程式碼會根據收入顯示圖示。 這些圖示是隨附於[coral ui圖示庫](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)的一部分AEM。
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -83,7 +86,7 @@ return val;
 
 * [以管理員使用者身分登入crx](http://localhost:4502/crx/de/index.jsp)
 * [匯入高雅的範本](assets/sightly-template.zip)
-* [登入AEM網頁主控台](http://localhost:4502/system/console/bundles)
+* [登入網AEM頁主控台](http://localhost:4502/system/console/bundles)
 * [部署和啟動收件箱自定義包](assets/income-column-customization.jar)
 * [開啟您的收件匣](http://localhost:4502/aem/inbox)
 * 按一下「建立」按鈕旁的「清單檢視」，以開啟「管理控制項」
