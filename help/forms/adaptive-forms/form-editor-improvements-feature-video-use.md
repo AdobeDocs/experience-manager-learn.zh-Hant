@@ -3,7 +3,7 @@ title: AEM Forms表格編輯器的改進
 seo-title: AEM Forms表格編輯器的改進
 description: AEM6.3在本版本中提供多項新功能和增強功能，以簡化最適化表單和檔案的製作體驗。 這些增強功能有助於縮短您的上市時間，並讓商業使用者使用表單和檔案
 seo-description: AEM6.3在本版本中提供多項新功能和增強功能，以簡化最適化表單和檔案的製作體驗。 這些增強功能有助於縮短您的上市時間，並讓商業使用者使用表單和檔案
-feature: 自適應表單
+feature: 適用性表單
 topics: authoring
 audience: developer
 doc-type: technical video
@@ -11,11 +11,14 @@ activity: setup
 version: 6.3,6.4,6.5
 uuid: 9e76a2b8-f843-47b8-abf8-596c64fbcbb6
 discoiquuid: 7a7bad50-c604-4182-accb-acb85571ba78
+topic: 開發
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 0%
+source-wordcount: '237'
+ht-degree: 1%
 
 ---
 
