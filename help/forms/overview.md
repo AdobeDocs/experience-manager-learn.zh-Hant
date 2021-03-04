@@ -4,13 +4,11 @@ seo-title: AEM FormsTutorials和影片
 description: 為初學者和經驗豐富的AEM Forms開發人員收集AEM Forms資源
 seo-description: 為初學者和經驗豐富的AEM Forms開發人員收集AEM Forms資源
 sub-product: 表單
-topic: 開發
-role: 開發人員
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 9%
+source-wordcount: '303'
+ht-degree: 8%
 
 ---
 
