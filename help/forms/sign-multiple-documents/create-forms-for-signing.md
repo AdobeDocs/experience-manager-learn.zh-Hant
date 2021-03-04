@@ -1,7 +1,7 @@
 ---
-title: 建立簽署表格
+title: 為簽署建立Forms
 description: 建立需要包含在簽署套件中的表單。
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6893
 thumbnail: 6893.jpg
+topic: 開發
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 0%
+source-wordcount: '332'
+ht-degree: 1%
 
 ---
 
@@ -24,11 +27,11 @@ ht-degree: 0%
 
 * 請確定表單是以&#x200B;**SignMultipleForms**&#x200B;範本為基礎。 這可確保表單預先填入從資料庫擷取的資料。
 
-* 表單必須設定為使用Adobe Sign，而簽署者1欄位必須與「客戶電子郵件」欄位相關聯
-* 這些表單還需要與名為&#x200B;**getnextform**&#x200B;的clientLib相關聯
+* 表單必須設定為使用Adobe Sign，簽署者1欄位必須與「客戶電子郵件」欄位關聯
+* 這些表單還需要與名為&#x200B;**getnextform**&#x200B;的clientLib關聯
 * 表單必須使用「簽名步驟」元件。
 * 表單也必須使用自訂&#x200B;**簽署多個表單**&#x200B;元件。 此元件可讓您導覽至下一個要登入套件的表單。
-* 必須將表單的提交設定為觸發AEM工作流程&#x200B;**更新簽名狀態**
+* 表單的提交必須配置為觸AEM發工作流&#x200B;**更新簽名狀態**
 * 請確定「資料檔案路徑」已設為&#x200B;**Data.xml**。 當范常式式碼在表單提交的裝載程式中尋找名為Data.xml的檔案時，這一點非常重要。
 
 製作表單後，請在表單中加入&#x200B;**commenfields**&#x200B;最適化表單片段。 片段將標籤為隱藏。 此片段包含下列欄位。
