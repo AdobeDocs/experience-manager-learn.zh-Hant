@@ -1,21 +1,18 @@
 ---
 title: 簡介
 description: 簽署多種表單使用案例的影片展示
-feature: 適用性表單
+feature: 自適應表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 thumbnail: 330165.jpg
-topic: 開發
-role: 開發人員
-level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 5%
+source-wordcount: '120'
+ht-degree: 2%
 
 ---
 
