@@ -1,20 +1,16 @@
 ---
 title: 無頭入門AEM-內容服務
 description: 端對端的教學課程，說明如何使用 AEM Headless 來建立和公開內容。
-feature: '"內容片段、API"'
-topic: 「無頭、內容管理」
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 6%
+source-wordcount: '215'
+ht-degree: 9%
 
 ---
 
 
-# 無頭入門AEM-內容服務
+# AEM Headless 快速入門 - Content Services
 
 端對端教學課程，說明如何在無頭CMS案例中，使用原生行動應用AEM程式來建立和公開內容。
 
