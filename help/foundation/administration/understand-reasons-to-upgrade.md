@@ -7,13 +7,10 @@ topics: best-practices, upgrade
 audience: all
 activity: understand
 doc-type: article
-topic: 升級
-role: 「領導者、架構師、開發人員、管理員、商業從業人員」
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '3548'
+source-wordcount: '3540'
 ht-degree: 3%
 
 ---
@@ -875,7 +872,7 @@ AEM提升與其他Adobe服務整合的能力：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html" target="_blank">Adobe Stock整合</a>:</strong>
-            直接從中順暢地存取和使用Adobe Stock影AEM像。</td>
+            直接從中順暢地存取和使用Adobe Stock影像AEM。</td>
             <td> </td>
             <td> </td>
             <td> </td>
