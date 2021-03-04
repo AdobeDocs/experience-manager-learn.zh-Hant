@@ -1,7 +1,7 @@
 ---
 title: 建立客戶端庫
 description: 要擷取下一個要簽署的表單的用戶端程式庫程式碼
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,17 +9,20 @@ activity: implement
 version: 6.4,6.5
 kt: 6907
 thumbnail: 6907.jpg
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '81'
-ht-degree: 1%
+source-wordcount: '86'
+ht-degree: 5%
 
 ---
 
 # 建立客戶端庫
 
-建立自訂用戶端程式庫（簡稱clientlib），以擷取GET呼叫中傳遞這些參數的url參數。 GET呼叫是對裝載在/bin/getnextformtosign上的servlet進行的，它會傳回下一個要登入套件的表單的URL。
+建立自訂用戶端程式庫（簡稱clientlib），以擷取URL參數，並傳遞這些參數至GET呼叫。 對裝載在/bin/getnextformtosign上的servlet進行GET調用，該servlet返回要登錄包的下一個表單的URL。
 
 以下是clientlib javascript函式中使用的代碼
 
