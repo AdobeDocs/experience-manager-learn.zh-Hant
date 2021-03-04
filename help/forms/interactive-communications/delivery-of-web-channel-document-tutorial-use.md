@@ -3,20 +3,17 @@ title: 提供互動式通訊檔案——網路頻道AEM Forms
 seo-title: 提供互動式通訊檔案——網路頻道AEM Forms
 description: 透過電子郵件中的連結傳送網路通路檔案
 seo-description: 透過電子郵件中的連結傳送網路通路檔案
-feature: 互動式通訊
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 1%
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
