@@ -1,17 +1,20 @@
 ---
 title: 從單一資料檔案產生多個PDF
 seo-title: 從單一資料檔案產生多個PDF
-feature: output-service
+feature: 輸出服務
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 0%
+source-wordcount: '501'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +40,7 @@ generatePDFOutputBatch方法的簽名採用下列參數
 
 ## 使用案例詳細資訊{#use-case-details}
 
-在此使用案例中，我們將提供簡單的Web介面來上傳範本和資料(xml)檔案。 在檔案上傳完成且POST要求傳送至AEM servlet後。 此servlet提取文檔並調用OutputService的generatePDFOutputBatch方法。 產生的PDF會壓縮成zip檔，讓使用者可從網頁瀏覽器下載。
+在此使用案例中，我們將提供簡單的Web介面來上傳範本和資料(xml)檔案。 在檔案上傳完成並傳送POST要求至Servlet後AEM, 此servlet提取文檔並調用OutputService的generatePDFOutputBatch方法。 產生的PDF會壓縮成zip檔，讓使用者可從網頁瀏覽器下載。
 
 ## Servlet代碼{#servlet-code}
 
