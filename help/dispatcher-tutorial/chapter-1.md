@@ -1,12 +1,14 @@
 ---
-title: 第1章——教學課程設定與下載
-seo-title: 內容服AEM務快速入門——第1章——教學課程設定
-description: 無頭教學課程AEM的第1章，說明教學課程AEM實例的基線設定。
-seo-description: 無頭教學課程AEM的第1章，說明教學課程AEM實例的基線設定。
+title: '"Chapter 1 - Dispatcher Concepts, Patterns and Antipatterns"'
+description: 本章簡要介紹了Dispatcher的歷史和機制，並討論了它如何影響開發人員設AEM計其元件。
+feature: Dispatcher
+topic: 架構
+role: 架構師
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '17502'
+source-wordcount: '17489'
 ht-degree: 0%
 
 ---
@@ -121,7 +123,7 @@ Dispatcher模組利用托管Apache伺服器提供的功能。 HTML頁面、下�
 
 * `html` 作為「選擇器」的最後一個名稱稱為副檔名。InAEM/Sling也會部分決定轉換指令碼。
 
-* `path/suffix.ext` 是類似路徑的運算式，可以是URL的尾碼。它可用於指令碼AEM中，以進一步控制資源的呈現方式。 稍後，我們將提供有關此部分的整節。 目前，您應該已知道您可以將它當做其他參數使用。 字尾必須有副檔名。
+* `path/suffix.ext` 是類似路徑的運算式，可以是URL的尾碼。它可用於指令碼AEM中，以進一步控制資源的呈現方式。 稍後，我們將提供有關此部分的整節。 目前，您應該已經知道，您可以將它當做其他參數使用。 字尾必須有副檔名。
 
 * `?parameter=value&otherparameter=value` 是URL的查詢區段。它用於將任意參數傳遞到AEM。 無法快取含參數的URL，因此參數應限制為絕對必要的情況。
 
@@ -1331,7 +1333,7 @@ www.shiny-brand.de
   response.setHeader("Pragma: no-cache");
 ```
 
-快取控制和編目指示是正式的HTTP標頭，會傳播至上層快取層（例如CDN）並由其解譯。 `Dispatcher`標題只是Dispatcher不要快取的提示。 它可用於告知Dispatcher不要快取，同時仍允許上層快取層進行快取。 事實上，很難找到這樣的例子。 但是，我們確定有些，某處。
+快取控制和編目指示是正式的HTTP標頭，會傳播至上層快取層（例如CDN）並由其解譯。 `Dispatcher`標題只是Dispatcher不要快取的提示。 它可用於告知Dispatcher不要快取，同時仍允許上層快取層進行快取。 事實上，很難找到這樣的例子。 但是，我們確定有些地方。
 
 **引用**
 
