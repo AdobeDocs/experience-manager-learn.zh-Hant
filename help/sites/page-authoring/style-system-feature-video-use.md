@@ -1,9 +1,9 @@
 ---
-title: 搭配AEM網站使用樣式系統
-seo-title: 搭配Adobe Experience Manager、AEM Sites使用樣式系統
-description: Adobe Experience Manager的Style System可讓您以視覺化方式變更元件，毋需後端開發，讓AEM元件更能重複使用，而且內容製作更多功能更有效率。 Style System搭配AEM的核心元件、範本編輯器和互動式版面使用時，提供強大的功能，讓您快速建構豐富的體驗。
-seo-description: Adobe Experience Manager的Style System可讓您以視覺化方式變更元件，毋需後端開發，讓AEM元件更能重複使用，而且內容製作更多功能更有效率。 Style System搭配AEM的核心元件、範本編輯器和互動式版面使用時，提供強大的功能，讓您快速建構豐富的體驗。
-feature: style-system
+title: 與AEM Sites一起使用風格體系
+seo-title: 與Adobe Experience Manager、AEM Sites一起使用風格體系
+description: Adobe Experience Manager的Style System可讓您以視覺化方式變化元件，毋需後端開發，讓元件得到更好的再利用AEM，並提供更多功能和效率的內容製作。 Style System搭配核心元件、範本編輯器AEM和互動式版面使用時，可提供強大的功能，讓您快速建構多樣化體驗。
+seo-description: Adobe Experience Manager的Style System可讓您以視覺化方式變化元件，毋需後端開發，讓元件得到更好的再利用AEM，並提供更多功能和效率的內容製作。 Style System搭配核心元件、範本編輯器AEM和互動式版面使用時，可提供強大的功能，讓您快速建構多樣化體驗。
+feature: 樣式系統
 topics: authoring, front-end-development
 audience: all
 doc-type: feature video
@@ -11,18 +11,21 @@ activity: use
 version: cloud-service
 kt: 974
 thumbnail: 21750.jpg
+topic: 內容管理
+role: 業務從業人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: fc456c868bdfe2fbb71387f36432a134fbff7dbb
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 0%
+source-wordcount: '263'
+ht-degree: 1%
 
 ---
 
 
 # 使用樣式系統{#using-the-style-system-with-aem-sites}
 
-Adobe Experience Manager的Style System可讓您以視覺化方式變更元件，毋需後端開發，讓AEM元件更能重複使用，而且內容製作更多功能更有效率。 Style System搭配AEM核心元件、範本編輯器和互動式版面使用時，提供強大的功能，可快速合成豐富的體驗。
+Adobe Experience Manager的Style System可讓您以視覺化方式變化元件，毋需後端開發，讓元件得到更好的再利用AEM，並提供更多功能和效率的內容製作。 Style System搭配核心元件、範本編輯器AEM和互動式版面使用時，可提供強大的功能，讓您快速建構多樣化體驗。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21750/?quality=12&learn=on)
 
