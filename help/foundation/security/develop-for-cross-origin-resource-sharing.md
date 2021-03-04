@@ -3,17 +3,15 @@ title: 開發跨原始資源共用(CORS)功AEM能
 description: 利用CORS透過用戶端JavaScript從AEM外部網路應用程式存取內容的簡短範例。
 version: 6.3, 6,4, 6.5
 sub-product: 基礎，內容服務，網站
+feature: null
 topics: security, development, content-delivery
 activity: develop
 audience: developer
 doc-type: tutorial
-topic: 安全性
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
