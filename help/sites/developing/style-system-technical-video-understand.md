@@ -1,28 +1,31 @@
 ---
-title: 瞭解如何編寫AEM Style系統的程式碼
+title: 瞭解如何編寫樣式AEM系統的程式碼
 description: 在本影片中，我們將檢視使用樣式系統來設定Adobe Experience Manage核心標題元件樣式的CSS（或更少）和JavaScript，以及這些樣式如何套用至HTML和DOM。
-feature: style-system
+feature: 樣式系統
 topics: development, components, front-end-development
 audience: developer, implementer
 doc-type: technical video
 activity: understand
 version: 6.4, 6.5
+topic: 開發
+role: 開發人員
+level: 中級，經驗豐富的
 translation-type: tm+mt
-source-git-commit: 664d3964df796d508973067f8fa4fe5ef83c5fec
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 0%
+source-wordcount: '1151'
+ht-degree: 2%
 
 ---
 
 
 # 瞭解如何編寫樣式系統的代碼{#understanding-how-to-code-for-the-aem-style-system}
 
-在此影片中，我們將檢視CSS（或[!DNL LESS]）和JavaScript的剖析結構，這些CSS（或&lt;a0/>）和JavaScript是使用樣式系統來設定Experience Manage的核心標題元件的樣式，以及這些樣式如何套用至HTML和DOM。
+在此影片中，我們將檢視CSS（或[!DNL LESS]）和JavaScript的剖析結構，這些CSS（或）和JavaScript是使用樣式系統來設定Experience Manage的核心標題元件的樣式，以及這些樣式如何套用至HTML和DOM。
 
 >[!NOTE]
 >
->AEM Style System隨[AEM 6.3 SP1](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp1-release-notes.html) + [Feature Pack 20593](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-20593)推出。
+>Style SystemAEM推出了[AEM 6.3 SP1](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp1-release-notes.html) + [功能套件20593](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-20593)。
 >
 >視訊假設We.Retail Title元件已更新為繼承[核心元件v2.0.0+](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases)。
 
@@ -68,7 +71,7 @@ ht-degree: 0%
 }
 ```
 
-上述[!DNL LESS]是由Experience Manager以原生方式編譯為下列CSS。
+以上[!DNL LESS]是本機編譯的，可Experience Manager至下列CSS。
 
 ```css
 /* CSS */
@@ -195,7 +198,7 @@ jQuery(function ($) {
 >
 >[BEM](https://en.bem.info/)的所有其他租戶都應與一致。
 
-* 使用預處理器，例如[LESS](https://lesscss.org/)（AEM本機支援）或[SCSS](https://sass-lang.com/)（需要自訂建置系統），以允許清楚的CSS定義和重複使用性。
+* 使用預處理器(例如[LESS](https://lesscss.org/)(本機支援AEM)或[SCSS](https://sass-lang.com/)（需要自訂建置系統），以允許清楚的CSS定義和可重複使用性。
 
 * 保持選擇器的重量／特異性一致；這有助於避免和解決難以識別的CSS階層衝突。
 * 將每種樣式組織成獨立的檔案。
@@ -244,7 +247,7 @@ jQuery(function ($) {
 * Style-JavaScript應審慎使用，是少數使用案例。
 * Style-JavaScript應主要用於控制元件的DOM，以支援CSS的樣式。
 * 如果元件在頁面上出現多次，請重新評估Javascript的使用，並瞭解計算／重新繪製成本。
-* 如果Javascript在元件可能在頁面上多次顯示時，以非同步方式（透過AJAX）提取新資料／內容，請重新評估它的使用。
+* 如果Javascript在元件可能在頁面上多次顯示時，以非同步方式(AJAX透過)提取新資料／內容，請重新評估其使用。
 * 同時處理「發佈」和「編寫」體驗。
 * 盡可能重新使用style-Javascript。
    * 例如，如果元件的多種樣式需要將其影像移至背景影像，則style-JavaScript可實作一次，並附加至多個`BLOCK--MODIFIERs`。
@@ -262,7 +265,7 @@ jQuery(function ($) {
 ## 其他資源 {#additional-resources}
 
 * [樣式系統檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)
-* [建立AEM Client程式庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [建立客AEM戶端庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [BEM（塊元素修飾詞）文檔網站](https://getbem.com/)
 * [LESS檔案網站](https://lesscss.org/)
 * [jQuery網站](https://jquery.com/)
