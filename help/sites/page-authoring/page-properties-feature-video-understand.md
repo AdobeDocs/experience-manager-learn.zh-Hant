@@ -1,9 +1,9 @@
 ---
-title: 瞭解AEM網站中的頁面屬性
-seo-title: 瞭解Adobe Experience Manager Sites中的頁面屬性
-description: 以下影片介紹與Adobe Experience Manager中的頁面相關的頁面屬性中繼資料。
-seo-description: '以下影片介紹與Adobe Experience Manager中的頁面相關的頁面屬性中繼資料。 '
-feature: page-editor
+title: 瞭解AEM Sites的頁面屬性
+seo-title: 瞭解Adobe Experience Manager Sites的頁面屬性
+description: 以下視訊介紹與Adobe Experience Manager某頁面相關的頁面屬性中繼資料。
+seo-description: '以下視訊介紹與Adobe Experience Manager某頁面相關的頁面屬性中繼資料。 '
+feature: 頁面編輯器
 topics: authoring, metadata
 audience: author, marketer
 doc-type: feature video
@@ -11,18 +11,21 @@ activity: understand
 version: 6.3, 6.4, 6.5
 kt: 4321
 thumbnail: 32192.jpg
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 27%
+source-wordcount: '177'
+ht-degree: 26%
 
 ---
 
 
 # 瞭解頁面屬性{#understanding-page-properties-aem-sites}
 
-以下影片介紹與Adobe Experience Manager中的頁面相關的頁面屬性。
+以下影片介紹與Adobe Experience Manager某頁面相關的頁面屬性。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32192?quality=12&learn=on)
 
@@ -52,7 +55,7 @@ ht-degree: 27%
    * 匯出
 * 縮圖
 * 社交媒體分享
-* 雲端服務組態
+* Cloud Services配置
 * 個性化
    * ContextHub 組態
    * 定位組態
