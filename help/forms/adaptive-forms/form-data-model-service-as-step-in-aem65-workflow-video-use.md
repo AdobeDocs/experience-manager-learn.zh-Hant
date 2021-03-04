@@ -3,17 +3,20 @@ title: 在6.5工作流程中使用表單資料AEM模型服務
 seo-title: 在6.5工作流程中使用表單資料AEM模型服務
 description: AEM Forms6.5引進了在工作流程中建立變數的AEM功能。 有了這項新功能，在工作流程中使用「叫用表單資料模型服務」AEM變得十分簡單。 以下視訊將引導您瞭解在工作流程中使用「叫用表單資料模型服務」所涉AEM及的步驟。
 seo-description: AEM Forms6.5引進了在工作流程中建立變數的AEM功能。 有了這項新功能，在工作流程中使用「叫用表單資料模型服務」AEM變得十分簡單。 以下視訊將引導您瞭解在工作流程中使用「叫用表單資料模型服務」所涉AEM及的步驟。
-feature: 工作流程.
+feature: 工作流程
 topics: workflow.
 audience: developer.
 doc-type: technical video.
 activity: setup.
 version: 6.5.
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 0%
+source-wordcount: '338'
+ht-degree: 1%
 
 ---
 
