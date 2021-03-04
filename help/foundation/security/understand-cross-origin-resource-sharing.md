@@ -3,15 +3,17 @@ title: 瞭解跨原始資源共用(CORS)與
 description: Adobe Experience Manager的跨原始資源共用(CORS)可協助非AEMWeb屬性進行用戶端呼叫(AEM驗證和未驗證)，以擷取內容或直接與之互動AEM。
 version: 6.3, 6,4, 6.5
 sub-product: 基礎，內容服務，網站
-feature: null
 topics: security, development, content-delivery
 activity: understand
 audience: architect, developer
 doc-type: article
+topic: 安全性
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '920'
 ht-degree: 1%
 
 ---
