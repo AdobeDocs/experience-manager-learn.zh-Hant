@@ -1,20 +1,17 @@
 ---
 title: 實用的實用程式服務
 description: 為AEM Forms開發人員提供一些實用的公用服務
-feature: 適用性表單
+feature: 檔案服務
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開發
-role: 開發人員
-level: 中級
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 3%
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
