@@ -3,20 +3,17 @@ title: 使用監控資料夾機制產生適用於列印頻道的互動通訊檔�
 seo-title: 使用監控資料夾機制產生適用於列印頻道的互動通訊檔案
 description: 使用監看資料夾產生列印頻道檔案
 seo-description: 使用監看資料夾產生列印頻道檔案
-feature: 互動式通訊
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開發
-role: 開發人員
-level: 中級
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 1%
+source-wordcount: '483'
+ht-degree: 0%
 
 ---
 
