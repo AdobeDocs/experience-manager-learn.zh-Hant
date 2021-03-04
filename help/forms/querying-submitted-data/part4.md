@@ -1,19 +1,22 @@
 ---
-title: AEM Forms with JSON Schema and Data[Part4]
-seo-title: AEM Forms with JSON Schema and Data[Part4]
+title: AEM Forms與JSON結構描述與資料[Part4]
+seo-title: AEM Forms與JSON結構描述與資料[Part4]
 description: 多部分教學課程，可引導您逐步瞭解使用JSON結構描述建立最適化表單及查詢提交資料的相關步驟。
 seo-description: 多部分教學課程，可引導您逐步瞭解使用JSON結構描述建立最適化表單及查詢提交資料的相關步驟。
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 0%
+source-wordcount: '480'
+ht-degree: 1%
 
 ---
 
@@ -71,7 +74,7 @@ public JSONArray getData(String formName) throws SQLException, IOException {
 要在本地系統上運行此示例，請執行以下步驟
 
 1. [請確定您已遵循此處提及的所有步驟](part2.md)
-1. [使用AEM Package Manager匯入Dashboardv2.zip。](assets/dashboardv2.zip) 此套件包含所有必要的組合、組態設定、自訂提交和範例頁面，以查詢資料。
+1. [使用「套件管理器」匯入Dashboardv2AEM.zip。](assets/dashboardv2.zip) 此套件包含所有必要的組合、組態設定、自訂提交和範例頁面，以查詢資料。
 1. 使用範例json結構描述建立最適化表單
 1. 設定最適化表單以提交至「customsubmithelpx」自訂提交動作
 1. 填寫表格並送出
