@@ -11,7 +11,7 @@ doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
 translation-type: tm+mt
-source-git-commit: fcfb33f93e57d40b08e0527d38cfce8553095e65
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 建立區塊是體驗片段的子功能。 建立區塊可讓內容作者在不同的「體驗片段」變數中重複使用元件。
 
->[!VIDEO](https://video.tv.adobe.com/v/331786/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/331786/?quality=12&learn=on)
 
 >[!NOTE]
 >
