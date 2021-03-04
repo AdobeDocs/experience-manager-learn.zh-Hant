@@ -1,7 +1,7 @@
 ---
-title: 為資產計算擴充性設定本機開發環境
-description: 開發資產計算工具（即Node.js JavaScript應用程式）需要與傳統AEM開發不同的特定開發工具，從Node.js和各種npm模組到Docker Desktop和Microsoft Visual Studio程式碼。
-feature: asset-compute
+title: 設定本機開發環境以擴充Asset compute
+description: 開發Asset compute工作程式（即Node.js JavaScript應用程式）需要與傳統開發不同的特定開發工具，從Node.js和各種npm模組到Docker Desktop和Microsoft Visual Studio程式碼。
+feature: asset compute微服務
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
+topic: 整合、開發
+role: 開發人員
+level: 中級，經驗豐富的
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -20,9 +23,9 @@ ht-degree: 0%
 
 # 設定本機開發環境
 
-Adobe Asset Compute專案無法與AEM SDK提供的本機AEM執行階段整合，而且是使用其專屬的工具鏈來開發，這與AEM應用程式根據AEM Maven專案原型所需的工具鏈不同。
+AdobeAsset compute專案無法與AEMAEM SDK提供的本機執行階段整合，而且是使用其專屬的工具鏈來開發，與以Maven專案原型為基礎的應用程式所AEM需的工具AEM鏈不同。
 
-若要擴充Asset Compute microservices，必須在本機開發人員機器上安裝下列工具。
+若要擴充Asset compute微服務，必須在本機開發人員機器上安裝下列工具。
 
 ## 簡略的設定指示
 
@@ -37,7 +40,7 @@ Adobe Asset Compute專案無法與AEM SDK提供的本機AEM執行階段整合，
 
 1. [安裝Visual Studio代碼](https://code.visualstudio.com/download)
 1. [安裝Node.js 10+](../../local-development-environment/development-tools.md#node-js)
-1. 從命令行安裝所需的npm模組和Adobe I/O CLI插件：
+1. 從命令行安裝所需的npm模組和Adobe I/OCLI插件：
 
    ```
    $ npm i -g @adobe/aio-cli @openwhisk/wskdebug ngrok --unsafe-perm=true \
@@ -48,15 +51,15 @@ Adobe Asset Compute專案無法與AEM SDK提供的本機AEM執行階段整合，
 
 ## 安裝Visual Studio代碼{#vscode}
 
-[Microsoft Visual Studio ](https://code.visualstudio.com/download) Code用於開發和調試資產計算工作器。雖然可使用其他與[JavaScript相容的IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide)來開發工作器，但只有Visual Studio代碼可與[debug](../test-debug/debug.md)資產計算工作器整合。
+[Microsoft Visual Studio ](https://code.visualstudio.com/download) Code用於開發和調試Asset compute工作程式。雖然可使用其他與[JavaScript相容的IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide)來開發工作器，但只有Visual Studio代碼可與[debug](../test-debug/debug.md)Asset compute工作器整合。
 
 _Visual Studio Code 1.48.x+是進行 [](#wskdebug) wskdebutgo工作的必要項。_
 
-本教學課程假設使用Visual Studio代碼，因為它為擴展資產計算提供了最佳的開發人員體驗。
+本教學課程假設使用Visual Studio程式碼，因為它提供最佳的開發人員體驗以擴展Asset compute。
 
 ## 安裝Docker Desktop{#docker}
 
-下載並安裝最新、穩定的[Docker Desktop](https://www.docker.com/products/docker-desktop)，因為在本機安裝[test](../test-debug/test.md)和[debug](../test-debug/debug.md)資產計算項目時需要此選項。
+下載並安裝最新、穩定的[Docker Desktop](https://www.docker.com/products/docker-desktop)，因為在本機下載[test](../test-debug/test.md)和[debug](../test-debug/debug.md)Asset compute項目時需要此選項。
 
 安裝Docker Desktop後，啟動它並從命令行安裝以下Docker映像：
 
@@ -69,21 +72,21 @@ Windows電腦的開發人員應確定他們使用Linux容器來處理上述影�
 
 ## 安裝Node.js（和npm）{#node-js}
 
-資產計算工作者基於[Node.js](https://nodejs.org/)，因此需要Node.js 10+（和npm）來開發和構建。
+asset compute工作者基於[Node.js](https://nodejs.org/)，因此需要Node.js 10+（和npm）來開發和構建。
 
-+ [以與傳統AEM開發相](../../local-development-environment/development-tools.md#node-js) 同的方式安裝Node.js（和npm）。
++ [以與傳統開發相同的方](../../local-development-environment/development-tools.md#node-js) 式安裝Node.js（和npm）AEM。
 
-## 安裝Adobe I/O CLI{#aio}
+## 安裝Adobe I/OCLI{#aio}
 
-[安裝Adobe I/O CLI](../../local-development-environment/development-tools.md#aio-cli)，或 ____ aiois命令列(CLI)npm模組，以方便使用和與Adobe I/O技術互動，並用於產生和本機開發自訂的資產計算工作者。
+[安裝Adobe I/OCLI](../../local-development-environment/development-tools.md#aio-cli)，或 ____ aiois命令行(CLI)npm模組，該模組便於使用Adobe I/O技術並與其交互，並用於生成自定義Asset compute工作程式和在本地開發自定義操作程式。
 
 ```
 $ npm install -g @adobe/aio-cli
 ```
 
-## 安裝Adobe I/O CLI Asset Compute插件{#aio-asset-compute}
+## 安裝Adobe I/OCLIAsset compute插件{#aio-asset-compute}
 
-[Adobe I/O CLI Asset Compute plugin](https://github.com/adobe/aio-cli-plugin-asset-compute)
+[Adobe I/OCLIAsset compute插件](https://github.com/adobe/aio-cli-plugin-asset-compute)
 
 ```
 $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
@@ -91,7 +94,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 ## 安裝wskdebug{#wskdebug}
 
-下載並安裝[Apache OpenWhisk debug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組，以便於對資產計算工作程式的本地調試。
+下載並安裝[Apache OpenWhisk debug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組，以便對Asset compute工作者進行本地調試。
 
 _Visual Studio Code 1.48.x+是進行 [](#wskdebug) wskdebutgo工作的必要項。_
 
@@ -101,7 +104,7 @@ $ npm install -g @openwhisk/wskdebug
 
 ## 安裝ngrok{#ngrok}
 
-下載並安裝[ngrok](https://www.npmjs.com/package/ngrok) npm模組，該模組提供對本地開發電腦的公共訪問，以便於對資產計算工作程式的本地調試。
+下載並安裝[ngrok](https://www.npmjs.com/package/ngrok) npm模組，該模組提供對本地開發機器的公共訪問，以便於Asset compute工作程式的本地調試。
 
 ```
 $ npm install -g ngrok --unsafe-perm=true
