@@ -1,26 +1,23 @@
 ---
-title: 使用AEM Assets和Adobe Launch設定資產見解
-description: 在這5部影片系列中，我們逐步瞭解透過Launch By Adobe部署的Experience Manager資產分析的設定與設定。
-contentOwner: selvaraj
-feature: asset-insights
-topics: integrations, development, metadata
-audience: developer, architect, administrator
-doc-type: article
-activity: implement
+title: 透過AEM Assets和Adobe推出設定資產見解
+description: 在這5部影片系列中，我們將逐步瞭解透過Launch by Adobe部署的Experience Manager資產前瞻分析的設定與設定。
+feature: 資產 Insights
 version: 6.3, 6.4, 6.5
-redirect-form: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/analytics/asset-insights-launch-tutorial-setup.html
+topic: Integrations
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 0%
+source-wordcount: '826'
+ht-degree: 1%
 
 ---
 
 
-# 使用AEM Assets和Adobe Experience Platform Launch設定資產見解
+# 與AEM Assets和Adobe Experience Platform Launch建立資產見解
 
-在這5部影片系列中，我們逐步瞭解透過Adobe Launch部署的Experience Manager資產分析的設定與設定。
+在這5部影片系列中，我們逐步瞭解透過Adobe啟動部署的Experience Manager資產前瞻分析的設定與設定。
 
 ## 第1部分：資產前瞻分析概述{#overview}
 
@@ -39,7 +36,7 @@ ht-degree: 0%
 視訊使用的核心元件版本為2.2.2，不再是最新版本；請務必使用最新版本，然後再繼續下一節。
 
 * 下載[資產前瞻分析範例影像內容](./assets/asset-insights-launch-tutorial/aem-assets-insights-sample.zip)
-* 下載[最新的AEM WCM核心元件](https://github.com/adobe/aem-core-wcm-components/releases)
+* 下載[最新AEM的WCM核心元件](https://github.com/adobe/aem-core-wcm-components/releases)
 
 ## 第二部分：啟用範例影像元件{#sample-image-component-asset-insights}的資產前瞻分析追蹤
 
@@ -62,26 +59,26 @@ ht-degree: 0%
 >
 >*data-aem-asset-id=&#39;image.UUID&#39;*  *and data-trackable=&#39;true&#39;* 是資產印象所需的關鍵屬性。對於資產點按前瞻分析，除了&lt;img>標籤上出現的上述資料屬性外，父&lt;a>標籤必須有有效的href值。
 
-## 第3部分：Adobe Analytics — 建立報表套裝，啟用即時資料收集和AEM Assets報表{#adobe-analytics-asset-insights}
+## 第3部分：Adobe Analytics— 建立報表套裝，啟用即時資料收集和AEM Assets報表{#adobe-analytics-asset-insights}
 
-會針對資產追蹤建立包含即時資料收集的報表套裝。 AEM Assets Insights設定是使用Adobe Analytics認證來設定。
+會針對資產追蹤建立包含即時資料收集的報表套裝。 AEM Assets洞見設定是使用Adobe Analytics認證來設定。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25945/?quality=12&learn=on)
 
 >[!NOTE]
-您的Adobe Analytics報表套裝必須啟用即時資料收集和AEM資產報表。 啟用AEM Asset Reporting會保留分析變數，以追蹤資產見解。
+您的「Adobe Analytics報表套AEM裝」必須啟用即時資料收集和資產報表功能。 啟用AEM資產報告會保留分析變數，以追蹤資產見解。
 
-若為AEM Assets Insights設定，您需要下列認證
+若是AEM Assets洞察分析設定，您需要下列認證
 
 * 資料中心
 * Analytics公司名稱
 * Analytics使用者名稱
-* 共用密碼（可從&#x200B;*Adobe Analytics >管理>公司設定>網站服務*&#x200B;取得）。
+* 共用密碼(可從&#x200B;*Adobe Analytics>管理>公司設定>網站服務*&#x200B;取得)。
 * 報表套裝（請確定選取用於資產報表的正確報表套裝）
 
-## 第四部分：使用Adobe Experience Platform Launch新增Adobe Analytics擴充功能{#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
+## 第四部分：使用Adobe Experience Platform Launch添加Adobe Analytics分機{#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
 
-新增Adobe Analytics擴充功能、建立頁面載入規則以及將AEM與Launch整合至Adobe IMS技術帳戶。
+新增Adobe Analytics擴充功能、建立頁面載入規則AEM及與Launch整合與AdobeIMS技術帳戶。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25946/?quality=12&learn=on)
 
@@ -194,6 +191,6 @@ document.querySelectorAll(".cmp-image__image");
 
 ## 第五部分：測試分析追蹤與同步分析資料{#analytics-tracking-asset-insights}
 
-設定AEM Asset Reporting Sync Job Scheduler和Assets Insights報表
+設定AEM資產報表同步作業排程器和資產前瞻分析報表
 
 >[!VIDEO](https://video.tv.adobe.com/v/25947/?quality=12&learn=on)
