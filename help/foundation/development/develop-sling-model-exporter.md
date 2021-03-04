@@ -1,17 +1,20 @@
 ---
-title: 在AEM中開發Sling Model Exporator
-description: 本技術逐步介紹如何設定AEM以搭配Sling Model Exporter使用、增強使用Exporter架構以轉譯為JSON的現有Sling Model，以及如何使用Exporter選項和Jackson註解進一步自訂輸出。
+title: 開發Sling Model Exporator AEM
+description: 本技術逐步說明如何設定AEM與Sling Model Exporter搭配使用、增強使用Exporter架構以轉譯為JSON的現有Sling Model，以及如何使用Exporter選項和Jackson註解進一步自訂輸出。
 version: 6.3, 6.4, 6.5
 sub-product: 基礎，內容服務
-feature: sling-models, sling-model-exporter
+feature: API
 topics: content-delivery, development, headless
 activity: develop
 audience: developer
 doc-type: technical video
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -19,17 +22,17 @@ ht-degree: 0%
 
 # 開發Sling Model Exporator
 
-本技術逐步介紹如何設定AEM以搭配Sling Model Exporter使用、增強使用Exporter架構以轉譯為JSON的現有Sling Model，以及如何使用Exporter選項和Jackson註解進一步自訂輸出。
+本技術逐步說明如何設定AEM與Sling Model Exporter搭配使用、增強使用Exporter架構以轉譯為JSON的現有Sling Model，以及如何使用Exporter選項和Jackson註解進一步自訂輸出。
 
 Sling Model Exporter是在Sling Models v1.3.0中推出的。這項新功能可讓Sling Models新增註解，以定義Model an如何匯出為不同的Java物件，或更常見的是，序列化為不同的格式，例如JSON。
 
 Apache Sling提供Jackson JSON匯出器，以涵蓋將Sling Models匯出為JSON物件的最常見案例，以供程式化網頁消費者（例如其他web services和JavaScript應用程式）使用。
 
-## 設定AEM for Sling Model Exporter
+## 設定AEMSling Model Exporter
 
 >[!VIDEO](https://video.tv.adobe.com/v/16862/?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 是專案的功能， [!DNL Apache Sling] 不直接系結至AEM產品發行週期。[!DNL Sling Model Exporter] 相容於AEM 6.3和更新版本。
+[!DNL Sling Model Exporter] 是專案的功能， [!DNL Apache Sling] 不直接系結至產AEM品發行週期。[!DNL Sling Model Exporter] 相容於AEM6.3和更新版本。
 
 ## [!DNL Sling Model Exporter]的使用案例
 
