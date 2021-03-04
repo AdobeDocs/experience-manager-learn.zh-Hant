@@ -1,7 +1,7 @@
 ---
-title: 搭配AEM核心元件使用Adobe用戶端資料層
-description: Adobe用戶端資料層採用標準方法來收集和儲存網頁上訪客體驗的資料，然後方便存取此資料。 Adobe用戶端資料層不受平台限制，但已完全整合至核心元件，可與AEM搭配使用。
-feature: core-component
+title: 將Adobe客戶端資料層與核心組AEM件一起使用
+description: Adobe用戶端資料層引入標準方法，以收集和儲存網頁上訪客體驗的資料，然後輕鬆存取此資料。 Adobe客戶端資料層不受平台限制，但完全整合到核心元件中以便與一起使AEM用。
+feature: 核心元件
 topics: integrations
 audience: developer
 doc-type: feature video
@@ -9,24 +9,27 @@ activity: use
 version: cloud-service
 kt: 6261
 thumbnail: 41195.jpg
+topic: Integrations
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '788'
-ht-degree: 1%
+source-wordcount: '792'
+ht-degree: 2%
 
 ---
 
 
-# 搭配AEM核心元件使用Adobe用戶端資料層{#overview}
+# 將Adobe客戶端資料層AEM與核心元件{#overview}一起使用
 
-Adobe用戶端資料層採用標準方法來收集和儲存網頁上訪客體驗的資料，然後方便存取此資料。 Adobe用戶端資料層不受平台限制，但已完全整合至核心元件，可與AEM搭配使用。
+Adobe用戶端資料層引入標準方法，以收集和儲存網頁上訪客體驗的資料，然後輕鬆存取此資料。 Adobe客戶端資料層不受平台限制，但完全整合到核心元件中以便與一起使AEM用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41195?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 想要在您的AEM網站上啟用Adobe用戶端資料層嗎？ [請參閱這裡的指示](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+> 想要在您的網站上啟用Adobe用戶端資料AEM層嗎？ [請參閱這裡的指示](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
 
 ## 探索資料層
 
@@ -43,7 +46,7 @@ Adobe用戶端資料層採用標準方法來收集和儲存網頁上訪客體驗
    window.adobeDataLayer.getState();
    ```
 
-   檢查回應，以查看AEM網站上資料層的目前狀態。 您應該會看到頁面和個別元件的相關資訊。
+   Inspect回應，查看網站上資料層的目前狀AEM態。 您應該會看到頁面和個別元件的相關資訊。
 
    ![Adobe資料層回應](assets/data-layer-state-response.png)
 
@@ -166,19 +169,19 @@ Adobe用戶端資料層採用標準方法來收集和儲存網頁上訪客體驗
 
    頁面的`cmp:show`事件會在頁面最上方的每個頁面載入時觸發。 您可能會問，當頁面顯然已載入時，為何觸發事件處理常式？
 
-   這是Adobe用戶端資料層的獨特功能之一，其中，您可在&#x200B;**之前或**&#x200B;之後，在資料層初始化後，註冊事件接聽程式。 ****&#x200B;這是避免比賽條件的關鍵功能。
+   這是Adobe客戶端資料層的獨特功能之一，其中，在&#x200B;**之前或**&#x200B;之後，可以在資料層初始化後註冊事件偵聽器。 ****&#x200B;這是避免比賽條件的關鍵功能。
 
    資料層會維護依序發生的所有事件的佇列陣列。 依預設，資料層將觸發&#x200B;**past**&#x200B;中發生的事件，以及&#x200B;**future**&#x200B;中的事件回呼。 它可以篩選事件至過去或未來。 [有關更多資訊，請參閱說明檔案](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener)。
 
 
 ## 後續步驟
 
-請參閱下列教學課程，瞭解如何使用事件導向的Adobe用戶端資料層來收集頁面資料並傳送至Adobe Analytics[。](../analytics/collect-data-analytics.md)
+請參閱下列教學課程，瞭解如何使用事件導向的Adobe用戶端資料層來收集頁面資料並傳送至Adobe Analytics。[](../analytics/collect-data-analytics.md)
 
-或者，瞭解如何[使用AEM元件自訂Adobe用戶端資料層](./data-layer-customize.md)
+或者，瞭解如何[使用元件自訂Adobe用戶AEM端資料層](./data-layer-customize.md)
 
 
 ## 其他資源 {#additional-resources}
 
-* [Adobe用戶端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [使用Adobe用戶端資料層與核心元件檔案](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Adobe客戶端資料層文檔](https://github.com/adobe/adobe-client-data-layer/wiki)
+* [使用Adobe客戶端資料層和核心元件文檔](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
