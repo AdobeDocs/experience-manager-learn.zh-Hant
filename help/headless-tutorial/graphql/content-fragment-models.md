@@ -1,6 +1,6 @@
 ---
-title: 定義內容片段模型- AEM無頭入門- GraphQL
-description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 瞭解如何在AEM中建立內容模型並使用內容片段模型建立架構。 檢閱現有模型並建立新模型。 瞭解可用來定義架構的不同資料類型。
+title: 定義內容片段模型——無頭入門- GraphQL
+description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 瞭解如何使用中的內容片段模型來建立內容模型和架構AEM。 檢閱現有模型並建立新模型。 瞭解可用來定義架構的不同資料類型。
 sub-product: 資產
 topics: headless
 version: cloud-service
@@ -10,10 +10,14 @@ audience: developer
 mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
+feature: '"內容片段， GraphQL API"'
+topic: 「無頭、內容管理」
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '975'
 ht-degree: 1%
 
 ---
@@ -41,11 +45,11 @@ ht-degree: 1%
 
 上述影片提供使用內容片段模型的高階概觀。
 
-## 檢視冒險內容片段模型
+## Inspect冒險內容片段模型
 
 在上一章中，數個「冒險內容片段」已編輯並顯示在外部應用程式中。 讓我們檢視Adventure內容片段模型，以瞭解這些片段的基礎資料架構。
 
-1. 從&#x200B;**AEM Start**&#x200B;功能表導覽至&#x200B;**Tools** > **Assets** > **Content Fragment Models**。
+1. 從&#x200B;**開始AEM**&#x200B;功能表導覽至&#x200B;**工具** > **資產** > **內容片段模型**。
 
    ![導覽至內容片段模型](assets/content-fragment-models/content-fragment-model-navigation.png)
 
@@ -61,7 +65,7 @@ ht-degree: 1%
 
    ![Adventure Title Properties](assets/content-fragment-models/adventure-title-properties-tab.png)
 
-   請觀察&#x200B;**屬性名稱**&#x200B;欄位設為`adventureTitle`。 這會定義持續存留至AEM的屬性名稱。 **屬性名稱**&#x200B;還將此屬性的&#x200B;**key**&#x200B;名稱定義為資料架構的一部分。 此&#x200B;**key**&#x200B;將在內容片段資料通過GraphQL API公開時使用。
+   請觀察&#x200B;**屬性名稱**&#x200B;欄位設為`adventureTitle`。 這會定義持續存在的屬性的名AEM稱。 **屬性名稱**&#x200B;還將此屬性的&#x200B;**key**&#x200B;名稱定義為資料架構的一部分。 此&#x200B;**key**&#x200B;將在內容片段資料通過GraphQL API公開時使用。
 
    >[!CAUTION]
    >
