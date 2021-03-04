@@ -1,7 +1,7 @@
 ---
 title: 建立自訂元件 |編輯與AngularAEM入SPA門
 description: 瞭解如何建立自訂元件以搭配編輯器使AEM用SPA。 瞭解如何開發作者對話方塊和Sling Models以擴充JSON模型以填入自訂元件。
-sub-product: sites
+sub-product: Sites
 feature: 編SPA輯器
 doc-type: tutorial
 topics: development
@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 5831
 thumbnail: 5831-spa-angular.jpg
+topic: SPA
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 1fd4d31770a4eac37a88a7c6960fd51845601bee
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1510'
 ht-degree: 1%
 
 ---
