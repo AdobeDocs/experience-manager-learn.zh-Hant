@@ -1,9 +1,9 @@
 ---
-title: 使用API產生AEM Forms的記錄檔案
-seo-title: 使用API產生AEM Forms的記錄檔案
+title: 使用API與AEM Forms一起產生記錄檔案
+seo-title: 使用API與AEM Forms一起產生記錄檔案
 description: 以程式設計方式產生記錄檔案(DOR)
-seo-description: 使用API產生AEM Forms的記錄檔案
-feature: adaptive-forms
+seo-description: 使用API與AEM Forms一起產生記錄檔案
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
@@ -11,16 +11,19 @@ activity: implement
 version: 6.4,6.5
 uuid: 94ac3b13-01b4-4198-af81-e5609c80324c
 discoiquuid: ba91d9df-dc61-47d8-8e0a-e3f66cae6a87
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 1%
 
 ---
 
 
-# 使用API在AEM Forms {#using-api-to-generate-document-of-record-with-aem-forms}中產生記錄檔案
+# 使用API在AEM Forms生成記錄文檔{#using-api-to-generate-document-of-record-with-aem-forms}
 
 以程式設計方式產生記錄檔案(DOR)
 
