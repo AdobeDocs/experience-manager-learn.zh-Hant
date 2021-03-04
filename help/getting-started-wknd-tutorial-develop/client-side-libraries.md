@@ -9,14 +9,10 @@ activity: develop
 audience: developer
 kt: 4083
 thumbnail: 30359.jpg
-feature: 「核心元件，AEM專案原型」
-topic: 「內容管理，開發」
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '3301'
+source-wordcount: '3291'
 ht-degree: 1%
 
 ---
