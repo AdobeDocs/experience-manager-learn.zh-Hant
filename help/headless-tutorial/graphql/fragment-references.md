@@ -1,5 +1,5 @@
 ---
-title: 使用片段參照建立進階資料模型——開始使用AEM Headless - GraphQL
+title: 使用片段參考的進階資料模型——開始使用無AEM頭- GraphQL
 description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 瞭解如何使用「片段參考」功能建立進階資料模型，以及建立兩個不同內容片段之間的關係。 瞭解如何修改GraphQL查詢以包含參考模型中的欄位。
 sub-product: 資產
 topics: headless
@@ -10,10 +10,14 @@ audience: developer
 mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
+feature: '"內容片段， GraphQL API"'
+topic: 「無頭、內容管理」
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '857'
 ht-degree: 1%
 
 ---
@@ -41,7 +45,7 @@ ht-degree: 1%
 更新Adventure Content Fragment Model，以新增對Contributor模型的參考。
 
 1. 開啟新瀏覽器並導覽至AEM。
-1. 從&#x200B;**AEM Start**&#x200B;功能表導覽至&#x200B;**Tools** > **Assets** > **Content Fragment Models** > **WKND Site**。
+1. 從&#x200B;**開始AEM**&#x200B;功能表導覽至&#x200B;**工具** > **資產** > **內容片段模型** > **WKND網站**。
 1. 開啟&#x200B;**Adventure**&#x200B;內容片段模型
 
    ![開啟冒險內容片段模型](assets/fragment-references/adventure-content-fragment-edit.png)
@@ -91,7 +95,7 @@ ht-degree: 1%
 
 接著，對「冒險」執行查詢，並新增參考「投稿者」模型的巢狀屬性。 我們將使用GraphiQL工具快速驗證查詢的語法。
 
-1. 導覽至AEM中的GraphiQL工具：[http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html)
+1. 導航至GraphiQL工具，位於AEM:[http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html)
 
 1. 輸入以下查詢：
 
@@ -151,7 +155,7 @@ ht-degree: 1%
 
    ![Adventure Detail元件IDE](assets/fragment-references/adventure-detail-ide.png)
 
-1. 查找函式`adventureDetailQuery(_path)`。 `adventureDetailQuery(..)`函式只會包住篩選GraphQL查詢，此查詢使用AEM的`<modelName>ByPath`語法來查詢由其JCR路徑識別的單一內容片段。
+1. 查找函式`adventureDetailQuery(_path)`。 `adventureDetailQuery(..)`函式只會包住篩選GraphQL查詢，該查詢使用AEM`<modelName>ByPath`語法來查詢由其JCR路徑識別的單一內容片段。
 
 1. 更新查詢以包含有關引用的參與者的資訊：
 
@@ -201,7 +205,7 @@ ht-degree: 1%
 
    透過此更新，查詢中將包含有關`adventureContributor`、`fullName`、`occupation`和`pictureReference`的其他屬性。
 
-1. 在`function Contributor(...)`的`AdventureDetail.js`檔案中檢查嵌入的`Contributor`元件。 如果屬性存在，此元件將呈現Contributor的名稱、職業和圖片。
+1. Inspect`Contributor`元件內嵌在`AdventureDetail.js`檔案中，位於`function Contributor(...)`。 如果屬性存在，此元件將呈現Contributor的名稱、職業和圖片。
 
    `Contributor`元件在`AdventureDetail(...)` `return`方法中引用：
 
@@ -240,4 +244,4 @@ ht-degree: 1%
 
 ## 後續步驟{#next-steps}
 
-在下一章中，「使用AEM Publish環境進行生產部署」([ Production deployment using an AEM Publish environment)](./production-deployment.md)，瞭解AEM Author and Publish services，以及建議的無頭應用程式部署模式。 您將更新現有應用程式，以使用環境變數根據目標環境動態更改GraphQL端點。 您也將學習如何正確設定AEM以進行跨來源資源共用(CORS)。
+在下一章中，「使用AEM Publish環境進行生產部署」([ Production deployment using an AEM Publish environment)](./production-deployment.md)，瞭解AEM Author and Publish services，以及建議的無頭應用程式部署模式。 您將更新現有應用程式，以使用環境變數根據目標環境動態更改GraphQL端點。 您也將學習如何正確設AEM定跨原始碼資源共用(CORS)。
