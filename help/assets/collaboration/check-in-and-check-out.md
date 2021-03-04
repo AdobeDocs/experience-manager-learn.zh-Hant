@@ -1,19 +1,18 @@
 ---
 title: 登入和登出
-description: 瞭解如何使用AEM的登入和登出功能，以協助多使用者在資產上共同作業。
+description: 瞭解如何使AEM用登入和登出功能，以利多使用者共同作業資產。
 sub-product: 資產
-feature: null
-topics: authoring, collaboration
-audience: author
-doc-type: feature video
-activity: use
+feature: 資產管理
 version: cloud-service
 kt: 4542
 thumbnail: 32048.jpg
+topic: 協作
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '45'
+source-wordcount: '51'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 # 登入和登出
 
-瞭解如何使用AEM的登入和登出功能，以協助多使用者在資產上共同作業。
+瞭解如何使AEM用登入和登出功能，以利多使用者共同作業資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32048/?quality=12&learn=on&hidetitle=true)
 
