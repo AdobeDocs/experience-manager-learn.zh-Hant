@@ -2,7 +2,7 @@
 title: 自定義分配任務通知
 description: 在指派任務通知電子郵件中加入表單資料
 sub-product: 表單
-feature: workflow
+feature: 工作流程
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,11 +10,14 @@ activity: setup
 version: 6.4,6.5
 kt: 6279
 thumbnail: KT-6279.jpg
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: c7ae9a51800bb96de24ad577863989053d53da6b
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 0%
+source-wordcount: '450'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +34,7 @@ Assign Task元件用於將任務分配給工作流參與者。 將任務分配�
 
 建議的方法是建立OSGI元件，以實作[WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)的getUserMetadata方法
 
-下列程式碼會建立4個中繼資料屬性（_firstName_、_lastName_、_reason_&#x200B;和&#x200B;_amountRequested_），並從提交的資料設定其值。 例如，中繼資料屬性&#x200B;_firstName_&#x200B;的值會從提交的資料設定為名為firstName的元素的值。 下列程式碼假設最適化表單的已提交資料為xml格式。 以JSON結構描述或表單資料模型為基礎的最適化表單會產生JSON格式的資料。
+下列程式碼會建立4個中繼資料屬性（_firstName_、_lastName_、_reason_&#x200B;和&#x200B;_amountRequested_），並從提交的資料設定其值。 例如，中繼資料屬性&#x200B;_firstName_&#x200B;的值會從提交的資料設定為名為firstName的元素的值。 下列程式碼假設最適化表單的已提交資料為xml格式。 以JSON結構描述或表單資料模型為基礎的最適化Forms會產生JSON格式的資料。
 
 
 ```java
@@ -117,7 +120,7 @@ return customMetadataMap;
 
 ## 配置分配任務以使用自定義元資料屬性
 
-在OSGi元件內建並部署至AEM伺服器後，請設定如下所示的「指派工作」元件，以使用自訂中繼資料屬性。
+在OSGi元件內建並部署到伺服器AEM後，請配置如下所示的分配任務元件以使用自定義元資料屬性。
 
 
 ![任務通知](assets/task-notification.PNG)
@@ -131,7 +134,7 @@ return customMetadataMap;
 * [配置日CQ郵件服務](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
 * 將有效的電子郵件ID與[admin user](http://localhost:4502/security/users.html)關聯
 * 使用[套件管理器](http://localhost:4502/crx/packmgr/index.jsp)下載並安裝[Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip)
-* 下載[最適化表單](assets/request-travel-authorization.zip)，並從[表單和檔案ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)匯入AEM。
+* 下載[最適化表單](assets/request-travel-authorization.zip)並從AEM[表單和檔案ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)匯入。
 * 使用[Web控制台](http://localhost:4502/system/console/bundles)部署並啟動[自訂Bundle](assets/work-items-user-service-bundle.jar)
 * [預覽並送出表單](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 
