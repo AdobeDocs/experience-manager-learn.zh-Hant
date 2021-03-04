@@ -2,7 +2,7 @@
 title: 自訂元件
 description: 涵蓋自訂逐行元件的端對端建立，以顯示撰寫的內容。 包括開發Sling Model以封裝商業邏輯以填入署名元件和對應的HTL來轉換元件。
 sub-product: Sites
-feature: sling-models
+feature: 核心元件、API
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,10 +11,13 @@ audience: developer
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
+topic: 內容管理、開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '3962'
+source-wordcount: '3969'
 ht-degree: 0%
 
 ---
@@ -992,7 +995,7 @@ HTL從JSTL借用，並使用相同的縮短Java getter方法名稱。
 
 ### 查看未設定樣式的Byline元件{#reviewing-the-unstyled-byline-component}
 
-1. 部署更新後，導覽至[LA Skateparks ](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)頁面的Ultimate Guide，或您在章節中稍早新增Byline元件的任何位置。
+1. 部署更新後，導覽至[LA Skateparks ](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)頁面的Ultimate Guide，或您在章節中稍早新增Byline元件的位置。
 
 1. **image**、**name**&#x200B;和&#x200B;**職業**&#x200B;現在出現，而且我們有未設定樣式的Byline元件。
 
