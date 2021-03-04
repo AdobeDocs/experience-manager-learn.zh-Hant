@@ -1,16 +1,15 @@
 ---
 title: 如何使用收件匣AEM
 description: 收件AEM匣可促進協作，並洞悉工作和工作流程。
-version: 6.3, 6.4, 6.5, Cloud Service
-feature: 工作流程
-activity: use
-audience: author, analyst
-doc-type: feature video
+version: 6.3, 6.4, 6.5, cloud-service
 topic: 協作
+feature: 收件匣
 role: 業務從業人員
-level: 初學者
+level: 中級
+kt: 159
+thumbnail: 16827.jpg
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 1%
