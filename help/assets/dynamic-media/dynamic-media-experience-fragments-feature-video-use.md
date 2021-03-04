@@ -1,36 +1,31 @@
 ---
-title: 將體驗片段與AEM Assets動態媒體搭配使用
-seo-title: 將體驗片段與AEM Assets動態媒體搭配使用
-description: 'AEM Assets Dynamic Media透過互動式媒體檢視器，將資產熱點與體驗片段整合。 行銷人員可以使用文字、影像和連結來製作體驗片段，以填入自訂快顯視窗，並將該快顯視窗關聯至橫幅、輪播或視訊上的熱點。 '
-seo-description: 'AEM Assets Dynamic Media透過互動式媒體檢視器，將資產熱點與體驗片段整合。 行銷人員可以使用文字、影像和連結來製作體驗片段，以填入自訂快顯視窗，並將該快顯視窗關聯至橫幅、輪播或視訊上的熱點。 '
-uuid: 3a1ad864-2b63-4761-816b-e4fd1fda0232
-discoiquuid: 5e411dba-5e6c-4256-87d4-84f618aa29b5
+title: 使用體驗片段與AEM Assets·Dynamic Media
+description: AEM Assets·Dynamic Media透過互動式媒體檢視器將資產熱點與體驗片段整合。 行銷人員可以使用文字、影像和連結來製作體驗片段，以填入自訂快顯視窗，並將該快顯視窗關聯至橫幅、輪播或視訊上的熱點。
 sub-product: 動態媒體，內容服務
-feature: experience-fragments
-topics: images, videos, renditions, authoring, integrations, publishing, metadata, sharing, publishing
-doc-type: feature video
-audience: all
-activity: use
+feature: 體驗片段
 version: 6.3, 6.4, 6.5
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 0%
+source-wordcount: '158'
+ht-degree: 6%
 
 ---
 
 
-# 搭配AEM Assets動態媒體使用體驗片段{#using-experience-fragments-with-aem-assets-dynamic-media}
+# 使用體驗片段與AEM Assets·Dynamic Media{#using-experience-fragments-with-aem-assets-dynamic-media}
 
-AEM Assets Dynamic Media透過互動式媒體檢視器，將資產熱點與體驗片段整合。 行銷人員可以使用文字、影像和連結來製作體驗片段，以填入自訂快顯視窗，並將該快顯視窗關聯至橫幅、輪播或視訊上的熱點。
+AEM Assets·Dynamic Media透過互動式媒體檢視器將資產熱點與體驗片段整合。 行銷人員可以使用文字、影像和連結來製作體驗片段，以填入自訂快顯視窗，並將該快顯視窗關聯至橫幅、輪播或視訊上的熱點。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22115/?quality=9&learn=on)
 
 >[!NOTE]
 >
->將AEM Experience片段與AEM Assets動態媒體熱點搭配使用需要[AEM才能在動態媒體](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)模式中執行。
+>對AEM AssetsAEMDynamic Media熱點使用體驗片段AEM需要在Dynamic Media](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)模式下運行[。
 
-視訊中顯示的快顯體驗片段變體可做為下方的AEM套件使用。
+視訊中顯示的快顯體驗片段變體，會以下的套件AEM形式提供。
 
-下載[體驗片段動態媒體資產](assets/experience-fragmentsdynamic-mediaassets-100.zip)
+下載[體驗片段Dynamic Media資產](assets/experience-fragmentsdynamic-mediaassets-100.zip)
