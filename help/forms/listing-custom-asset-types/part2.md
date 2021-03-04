@@ -1,26 +1,29 @@
 ---
-title: 列出AEM表單中的自訂資產類型
-seo-title: 列出AEM表單中的自訂資產類型
-description: AEM Forms中列出自訂資產類型的第2部分
-seo-description: AEM Forms中列出自訂資產類型的第2部分
+title: 在AEM Forms列出自訂資產類型
+seo-title: 在AEM Forms列出自訂資產類型
+description: AEM Forms自訂資產類型清單第2部分
+seo-description: AEM Forms自訂資產類型清單第2部分
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
 
 
-# 列出AEM Forms {#listing-custom-asset-types-in-aem-forms}中的自訂資產類型
+# 列出AEM Forms的自定義資產類型{#listing-custom-asset-types-in-aem-forms}
 
 ## 建立自訂範本{#creating-custom-template}
 
@@ -74,7 +77,7 @@ ht-degree: 0%
 >
 >第11行——請將影像src變更為指向您在DAM中選擇的影像。
 >
->若要在此範本中列出最適化表單，請建立新div，並將其資料類型屬性設為&quot;guide&quot;。 您可以複製並貼上div的data-type=&quot;printForm，並將新複製的div的data-type設為&quot;guide&quot;
+>若要在此範本中列出最適化Forms，請建立新div，並將其資料類型屬性設為&quot;guide&quot;。 您可以複製並貼上div的data-type=&quot;printForm，並將新複製的div的data-type設為&quot;guide&quot;
 
 ## 配置搜索和Lister元件{#configure-search-and-lister-component}
 
