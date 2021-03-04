@@ -1,17 +1,20 @@
 ---
-title: 瞭解AEM中的Sling Model Exporter
+title: 瞭解Sling Model Exporter AEM in
 description: Apache Sling Models 1.3.0推出Sling Model Exporter，這是將Sling Model物件匯出或序列化為自訂抽象化的優雅方式。 本文並列使用Sling Models填入HTL指令碼的傳統使用案例，以及運用Sling Model Exporter架構將Sling Model序列化為JSON。
 version: 6.3, 6.4, 6.5
 sub-product: 基礎，內容服務
-feature: sling-models, sling-model-exporter
+feature: API
 topics: development, content-delivery, headless
 activity: understand
 audience: developer, architect
 doc-type: article
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 63295cbc353a796959ba2e98e3e21c188f596372
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -25,13 +28,13 @@ Apache [!DNL Sling Models] 1.3.0引入了[!DNL Sling Model Exporter]，這是一
 
 [!DNL Sling Models]的傳統使用案例是為資源或請求提供業務抽象，為HTL指令碼（或先前的JSP）提供訪問業務功能的介面。
 
-常見的模式是開發[!DNL Sling Models]，以表示AEM元件或頁面，並使用[!DNL Sling Model]物件以顯示在瀏覽器中的HTML結果為HTL指令碼提供資料。
+常見的模式是開發代表「元件」或「頁面」的AEM[!DNL Sling Models]，並使用[!DNL Sling Model]物件來傳送HTL指令碼及資料，並產生顯示在瀏覽器中的HTML結果。
 
 ### Sling Model HTTP Request Flow
 
 ![Sling Model Request Flow](./assets/understand-sling-model-exporter/sling-model-request-flow.png)
 
-1. [!DNL HTTP GET] 會在AEM中請求資源。
+1. [!DNL HTTP GET] 在中請求資源AEM。
 
    範例: `HTTP GET /content/my-resource.html`
 
@@ -55,7 +58,7 @@ Apache [!DNL Sling Model Exporter]隨附Sling提供的Jackson Exporter，可自�
 
 *此流程說明使用提供的Jackson匯出器來產生JSON輸出的流程。使用自訂出口商會遵循相同的流程，但會遵循其輸出格式。*
 
-1. AEM中的資源會提出HTTP GET請求，其選擇器和副檔名已註冊至[!DNL Sling Model]的匯出器。
+1. HTTPGET請求是針對在[!DNL Sling Model]的AEM匯出器中註冊的選擇器和副檔名的資源。
 
    範例: `HTTP GET /content/my-resource.model.json`
 
