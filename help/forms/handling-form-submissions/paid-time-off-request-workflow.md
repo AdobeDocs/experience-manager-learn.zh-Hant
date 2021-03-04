@@ -1,19 +1,22 @@
 ---
 title: 簡易付費請求工作流程
-description: 在AEM工作流程中隱藏和顯示最適化表單面板
+description: 在工作流程中隱藏和顯示最適化表AEM單面板
 uuid: 28ceb72b-24d9-488e-92af-7e85775dc682
-feature: integrations
+feature: 適用性表單
 topics: workflow
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 discoiquuid: 1c4822e6-76ce-446b-98cb-408900d68b24
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 0%
+source-wordcount: '337'
+ht-degree: 1%
 
 ---
 
@@ -23,13 +26,13 @@ ht-degree: 0%
 在本文中，我們將檢視用於請求付費休息的簡單工作流程。 業務要求如下：
 
 * 使用者A會填入最適化表單，要求暫停。
-* 表單會路由至AEM管理員使用者（在實際生活中，表單會路由至提交者的管理員）
+* 表單會路由AEM給管理員用戶（在現實生活中，表單會路由給提交者的管理員）
 * 管理員開啟表單。 管理員不能編輯提交者填寫的任何資訊。
-* 核准者區段應該會顯示給核准者（在此例中為AEM管理員使用者）。
+* 核准者區段應顯示給核准者(在此例中為管理AEM員使用者)。
 
 為滿足上述要求，我們在表單中使用名為&#x200B;**initialstep**&#x200B;的隱藏欄位，其預設值設定為「是」。提交表單時，工作流中的第一步將初始步驟的值設定為「否」。 表單有業務規則可根據初始步驟值來隱藏和顯示適當的章節。
 
-**設定表單以觸發AEM工作流程**
+**設定表單以觸發工作AEM流程**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28406?quality=9&learn=on)
 
@@ -50,7 +53,7 @@ ht-degree: 0%
 若要在您的系統上測試此工作流程，請遵循下列步驟：
 * [下載並部署DevelopingWiteServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [下載並部署SetValue自訂OSGI套件](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
-* [將與此文章相關的資產匯入AEM](assets/helpxworkflow.zip)
+* [將與本文相關的資產匯入至](assets/helpxworkflow.zip)
 * 開啟[關閉時間請求表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填寫詳細資訊並提交
 * 開啟[inbox](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html)。 您應該會看到指派的新任務。 開啟表格。 提交者的資料應為只讀，並且應顯示新的批准者部分。
