@@ -4,18 +4,21 @@ seo-title: 配置Retirement Outlook面板
 description: 這是建立您第一個互動式通訊檔案的多步驟教學課程的第10部分。 在本部分，我們將通過添加文本和圖表元件來配置Retirement Outlook面板。
 seo-description: 這是建立您第一個互動式通訊檔案的多步驟教學課程的第10部分。 在本部分，我們將通過添加文本和圖表元件來配置Retirement Outlook面板。
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: f6a9c0522219614b87c483504c9c64875f2e4286
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 0%
+source-wordcount: '383'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +27,7 @@ ht-degree: 0%
 
 * 這是建立您第一個互動式通訊檔案的多步驟教學課程的第10部分。 在本部分，我們將通過添加文本和圖表元件來配置Retirement Outlook面板。
 
-* 登入AEM Forms並導覽至「Adobe Experience Manager >表單>表單與檔案」。
+* 登入AEM Forms並導覽至「Adobe Experience Manager>Forms>Forms與檔案」。
 
 * 開啟401KStatement資料夾。
 
@@ -64,11 +67,11 @@ ht-degree: 0%
 
 * 按一下右側的「RightPanel」目標區域。 按一下「+」圖示以插入圖表元件。 我們將使用欄圖來顯示月度預估收入。 輕輕點選新插入的圖表元件。 選擇「Wrench」圖示以開啟設定屬性工作表。使用下列屬性設定圖表，如下方的螢幕擷取所示。
 
-**AEM Forms 6.4 —— 設定預估每月收入欄圖表**
+**AEM Forms6.4 —— 配置估計月收入清單**
 
 ![form64](assets/estimatedmonthlyincomechart.png)
 
-**AEM Forms 6.5 —— 設定預估每月收入欄圖表**
+**AEM Forms6.5 —— 配置估計月收入清單**
 
 ![forms65](assets/estimatedmonthlyincomechart65.PNG)
 
