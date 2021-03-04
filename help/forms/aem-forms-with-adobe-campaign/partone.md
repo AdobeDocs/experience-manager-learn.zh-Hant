@@ -1,20 +1,23 @@
 ---
 title: '產生JSON網頁Token和存取Token '
 seo-title: '產生JSON網頁Token和存取Token '
-description: 本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取Token所需的程式碼
-seo-description: 本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取Token所需的程式碼
+description: 本文說明產生JWT和存取Token所需的程式碼，以便對Adobe Campaign Standard進行REST呼叫
+seo-description: 本文說明產生JWT和存取Token所需的程式碼，以便對Adobe Campaign Standard進行REST呼叫
 uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
-feature: adaptive-forms, form-data-model
+feature: 「適應性Forms，表單資料模型」
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -22,19 +25,19 @@ ht-degree: 0%
 
 # 產生JSON Web Token和存取Token {#generating-json-web-token-and-access-token}
 
-本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取Token所需的程式碼
+本文說明產生JWT和存取Token所需的程式碼，以便對Adobe Campaign Standard進行REST呼叫
 
 ## 產生JSON Web Token {#generate-json-web-token}
 
-使用Adobe Campaign API的第一步是產生JWT。 有關如何為ACS生成JWT的代碼示例很多。 您可以遵循此[java代碼示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)生成JWT。
+使用Adobe CampaignAPI的第一步是產生JWT。 有關如何為ACS生成JWT的代碼示例很多。 您可以遵循此[java代碼示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)生成JWT。
 
-為了搭配AEM Forms使用ACS API，我們需要在OSGi套件中建立JWT。 以下代碼片段用於在此示例OSGI包中生成JWT。 有關ACS實例的詳細資訊是從OSGI配置屬性中提取的，如上所示。
+為了將ACS API與AEM Forms一起使用，我們需要在OSGi捆綁包內建立JWT。 以下代碼片段用於在此示例OSGI包中生成JWT。 有關ACS實例的詳細資訊是從OSGI配置屬性中提取的，如上所示。
 
 ![配置](assets/campaignconfiguration.gif)
 
 **A.** 此處顯示的值是虛值
 
-下列程式碼會從OSGI設定中擷取有關Adobe Campaign Server的詳細資訊。 我們建立一個從80到104行的私鑰。
+以下代碼從OSGI配置中讀取有關Adobe Campaign伺服器的詳細資訊。 我們建立一個從80到104行的私鑰。
 
 一旦取得私密金鑰，我們就會建立JSON Web Token。
 
@@ -247,4 +250,4 @@ public class CampaignServiceImpl implements CampaignService {
 
 ## 產生存取Token {#generate-access-token}
 
-然後，我們會進行POST呼叫，將產生的JWT交換為存取Token。 此存取Token隨後會以授權金鑰的形式在後續REST呼叫的HTTP標題中傳送
+然後，我們通過進行POST呼叫，將生成的JWT交換為訪問令牌。 此存取Token隨後會以授權金鑰的形式在後續REST呼叫的HTTP標題中傳送
