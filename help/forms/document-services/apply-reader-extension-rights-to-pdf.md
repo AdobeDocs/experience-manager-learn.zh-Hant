@@ -9,23 +9,26 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-feature: forms-service
+feature: 表單服務
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 0%
+source-wordcount: '395'
+ht-degree: 1%
 
 ---
 
 
-# 套用Reader擴充功能
+# 應用Reader擴展
 
-Reader Extensions可讓您控制PDF檔案的使用權限。 使用權限與Acrobat中提供但Adobe Reader中不提供的功能相關。 由Reader擴充功能控制的功能包括新增註解至檔案、填寫表格及儲存檔案的功能。 已新增使用權的PDF檔案稱為已啟用權限的檔案。 在Adobe Reader中開啟具有權限的PDF檔案的使用者，可以執行該檔案所啟用的作業。
+Reader擴充功能可讓您控制PDF檔案的使用權限。 使用權與在Acrobat可用但在Adobe Reader不可用的功能有關。 由「Reader擴充功能」控制的功能包括新增注釋至檔案、填寫表格及儲存檔案的功能。 已新增使用權的PDF檔案稱為已啟用權限的檔案。 在Adobe Reader開啟具有權限的PDF檔案的使用者，可以執行該檔案所啟用的作業。
 若要測試此功能，您可以試用此[link](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 範例名稱為「Render XDP with RE」
 
 要完成此使用案例，我們需要執行以下操作：
-* 將Reader Extensions憑證新增至「fd-service」使用者。 添加Reader Extensions憑據的步驟列在[此處](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
+* 將Reader擴展證書添加到&quot;fd-service&quot;用戶。 添加Reader擴展憑據的步驟列在[此處](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
 
 * 建立自訂OSGi服務，將使用權限套用至檔案。 完成此作業的程式碼列於下方
 
@@ -194,10 +197,10 @@ try {
 1. [下載並安裝ares.ares.core-ares Bundle](assets/ares.ares.core-ares.jar)。這有自訂服務和servlet，可套用使用權限並將pdf串流回
 1. [匯入用戶端lib和自訂提交](assets/applyaresdemo.zip)
 1. [匯入最適化表單](assets/applyaresform.zip)
-1. 將Reader擴充功能憑證新增至「fd-service」使用者
+1. 將Reader擴展證書添加到&quot;fd-service&quot;用戶
 1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
 1. 選擇適當的權限並上傳PDF檔案
-1. 按一下「送出」以取得Reader Extended PDF
+1. 按一下「送出」以取得ReaderExtended PDF
 
 
 
