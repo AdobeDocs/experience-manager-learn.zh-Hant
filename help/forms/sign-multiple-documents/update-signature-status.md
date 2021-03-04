@@ -1,7 +1,7 @@
 ---
 title: 更新資料庫中表單的簽名狀態
-description: 使用AEM工作流程更新資料庫中已簽署表格的簽名狀態
-feature: adaptive-forms
+description: 使用工作流更新資料庫中已簽名表單的簽名狀AEM態
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6888
 thumbnail: 6888.jpg
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 0%
+source-wordcount: '109'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +28,7 @@ ht-degree: 0%
 ![主工作流](assets/update-signature.PNG)
 
 「更新簽名狀態」是自訂流程步驟。
-實作自訂流程步驟的主要原因是擴充AEM工作流程。 以下是用於更新簽名狀態的自訂代碼。
+實作自訂流程步驟的主要原因是擴充工AEM作流程。 以下是用於更新簽名狀態的自訂代碼。
 此自訂程式步驟中的程式碼會參考SignMultipleForms服務。
 
 
