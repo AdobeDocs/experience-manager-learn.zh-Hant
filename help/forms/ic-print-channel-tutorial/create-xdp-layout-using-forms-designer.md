@@ -1,10 +1,10 @@
 ---
-title: 使用Forms Designer建立版面
-seo-title: 使用Forms Designer建立版面
-description: 這是多部分教學課程的第4部分，可讓您針對列印頻道建立第一個互動式通訊檔案。在本部分中，我們將檢視使用AEM Forms Designer建立的版面檔案。
-seo-description: 這是多部分教學課程的第4部分，可讓您針對列印頻道建立第一個互動式通訊檔案。在本部分中，我們將檢視使用AEM Forms Designer建立的版面檔案。
+title: 使用Forms設計人員建立版面
+seo-title: 使用Forms設計人員建立版面
+description: 本教學課程包含多部分，可協助您建立適用於列印頻道的第一個互動式通訊檔案。在本部分，我們將檢視使用AEM Forms設計人員建立的版面檔案。
+seo-description: 本教學課程包含多部分，可協助您建立適用於列印頻道的第一個互動式通訊檔案。在本部分，我們將檢視使用AEM Forms設計人員建立的版面檔案。
 uuid: 2f014c58-1ae1-40e8-a45d-7ffe9c86f693
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,20 +13,23 @@ version: 6.4,6.5
 discoiquuid: 17f4cdbb-079b-4fe3-861d-cfa0c03d30dd
 kt: 5957
 thumbnail: 37890.jpg
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 0%
+source-wordcount: '169'
+ht-degree: 2%
 
 ---
 
 
-# 使用Forms Designer {#create-layout-using-forms-designer}建立版面
+# 使用Forms設計人員{#create-layout-using-forms-designer}建立版面
 
-在本部分，我們會檢視使用AEM Forms Designer建立的版面檔案。
+在本部分，我們將看看使用AEM Forms設計師建立的佈局檔案。
 
-每個列印渠道檔案都將以使用AEM Forms Designer工具建立的範本為基礎。 通常，您會在範本中建立區段或目標區域，以保存檔案片段、影像或版面片段。 理想情況下，版面不會定義任何內容。 這會將版面配置與建議的內容分離。
+每個列印通道檔案都以使用AEM Forms設計工具建立的範本為基礎。 通常，您會在範本中建立區段或目標區域，以保存檔案片段、影像或版面片段。 理想情況下，版面不會定義任何內容。 這會將版面配置與建議的內容分離。
 
 以下影片會反白顯示在本教學課程中，版面中定義的章節或目標區域。
 
