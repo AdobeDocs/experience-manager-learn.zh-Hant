@@ -1,27 +1,30 @@
 ---
-title: 瞭解AEM中的驗證支援
-description: 'AEM支援的驗證（有時也會授權）機制的整合檢視。 '
+title: 瞭解驗證支AEM援
+description: '統一檢視所支援的驗證（偶爾也是授權）機制AEM。 '
 version: 6.3, 6.4, 6.5
-feature: authentication
+feature: 使用者和群組
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
+topic: 架構
+role: 架構師
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 703321483454435e33c0aa26d66110271fc095d8
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 0%
+source-wordcount: '144'
+ht-degree: 5%
 
 ---
 
 
-# 瞭解AEM 6.x的驗證支援
+# 瞭解6.x中的AEM驗證支援
 
-AEM支援的驗證（有時也會授權）機制的整合檢視。
+統一檢視所支援的驗證（偶爾也是授權）機制AEM。
 
-*下表說明使用者如何驗證至AEM。*
+*下表說明使用者如何驗證AEM。*
 
 <table>
     <tbody>
@@ -32,7 +35,7 @@ AEM支援的驗證（有時也會授權）機制的整合檢視。
             <td><strong>AEM 6.5</strong></td>
         </tr>
         <tr>
-            <td><strong>AEM做為標準身分提供者</strong></td>
+            <td><strong>作AEM為標準身分提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -44,7 +47,7 @@ AEM支援的驗證（有時也會授權）機制的整合檢視。
             <td>✔</td>
         </tr>
         <tr>
-            <td>表單型</td>
+            <td>Forms</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -56,7 +59,7 @@ AEM支援的驗證（有時也會授權）機制的整合檢視。
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>非AEM系統做為標準身分提供者</strong></td>
+            <td><strong>非系統AEM作為標準身分提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -93,4 +96,4 @@ AEM支援的驗證（有時也會授權）機制的整合檢視。
     </tbody>
 </table>
 
-&lt;a0/⁕>透過社群專案提供，但Adobe不直接支援。**
+⁕*透過社群專案提供，但不直接受Adobe支援。*
