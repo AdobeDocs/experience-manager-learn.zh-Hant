@@ -1,9 +1,9 @@
 ---
-title: 在AEM Forms中撰寫自訂提交
-seo-title: 在AEM Forms中撰寫自訂提交
+title: 在AEM Forms寫自訂書
+seo-title: 在AEM Forms寫自訂書
 description: 快速且簡單的方式，為最適化表單建立自訂的提交動作
 seo-description: 快速且簡單的方式，為最適化表單建立自訂的提交動作
-feature: adaptive-forms
+feature: 適用性表單
 topics: integrations
 audience: developer
 doc-type: article
@@ -11,20 +11,23 @@ activity: implement
 version: 6.3,6.4,6.5
 uuid: a26db0b9-7db4-4e80-813d-5c0438fabd1e
 discoiquuid: 28611011-2ff9-477e-b654-e62e7374096a
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 0%
+source-wordcount: '232'
+ht-degree: 1%
 
 ---
 
 
-# 在AEM Forms {#writing-a-custom-submit-in-aem-forms}中撰寫自訂提交
+# 在AEM Forms編寫自訂提交{#writing-a-custom-submit-in-aem-forms}
 
 快速且簡單的方式，為最適化表單建立自訂的提交動作
 
-本文將引導您完成建立自訂提交動作以處理最適化表單提交所需的步驟。
+本文將引導您完成建立自訂提交動作以處理最適化Forms提交所需的步驟。
 
 * 登入crx
 * 在應用程式下建立類型為&quot;sling :folder &quot;的節點。 我們將此節點稱為CustomSubmitHelpx。
