@@ -2,17 +2,15 @@
 title: 瞭解Adobe雲管理員
 description: Adobe雲管理器提供簡單但強穩的解決方案，允許輕鬆管理、查看和自助服務環AEM境。
 sub-product: 雲端管理員，基礎
+feature: 管道、項目、項目、質量門、報告
 topics: best-practices, cicd, development, operations, governance
 doc-type: feature video
 activity: understand
 audience: developer, implementer, administrator, architect
-topic: 架構
-role: 架構師
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '536'
 ht-degree: 3%
 
 ---
