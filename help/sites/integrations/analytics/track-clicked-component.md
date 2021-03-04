@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe Analytics追蹤點按的元件
-description: 使用事件導向的Adobe客戶資料層來追蹤Adobe Experience Manager網站上特定元件的點按次數。 瞭解如何使用Experience Platform Launch中的規則來監聽這些事件，並將資料傳送至具有追蹤連結信標的Adobe Analytics。
-feature: analytics
+description: 使用事件導向的Adobe用戶端資料層來追蹤Adobe Experience Manager網站上特定元件的點按次數。 瞭解如何使用Experience Platform Launch中的規則來監聽這些事件，並將資料傳送至具有追蹤連結信標的Adobe Analytics。
+feature: 分析
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: setup
 version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
+topic: Integrations
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 64c167ec1d625fdd8be1bc56f7f5e59460b8fed3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1835'
 ht-degree: 1%
 
 ---
@@ -20,11 +23,11 @@ ht-degree: 1%
 
 # 使用Adobe Analytics追蹤點按的元件
 
-使用事件導向式[Adobe Client資料層與AEM核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/data-layer/overview.html)來追蹤Adobe Experience Manager網站上特定元件的點按次數。 瞭解如何使用Experience Platform Launch中的規則來監聽點按事件、依元件篩選資料，以及將資料傳送至具有追蹤連結信標的Adobe Analytics。
+使用事件驅動[Adobe客戶端資料層與核心元件&lt;a1/AEM>來跟蹤Adobe Experience Manager站點上特定元件的按一下。 ](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/data-layer/overview.html)瞭解如何使用Experience Platform Launch中的規則來監聽點按事件、依元件篩選，以及使用追蹤連結信標將資料傳送至Adobe Analytics。
 
 ## 您將建立的
 
-WKND行銷團隊想瞭解哪些「行動呼籲(CTA)」按鈕在首頁上表現最佳。 在本教學課程中，我們將在Experience Platform Launch中新增規則，監聽&#x200B;**Teaser**&#x200B;和&#x200B;**Button**&#x200B;元件的`cmp:click`事件，並將元件ID和新事件與追蹤連結信標一起傳送至Adobe Analytics。
+WKND行銷團隊想瞭解哪些「行動呼籲(CTA)」按鈕在首頁上表現最佳。 在本教學課程中，我們將在Experience Platform Launch中新增一個規則，監聽來自&#x200B;**Teaser**&#x200B;和&#x200B;**Button**&#x200B;元件的`cmp:click`事件，並將元件ID和新事件與追蹤連結信標一起傳送至Adobe Analytics。
 
 ![您將建立的追蹤點按次數](assets/track-clicked-component/final-click-tracking-cta-analytics.png)
 
@@ -32,17 +35,17 @@ WKND行銷團隊想瞭解哪些「行動呼籲(CTA)」按鈕在首頁上表現�
 
 1. 根據`cmp:click`事件在啟動中建立事件導向規則。
 1. 依元件資源類型篩選不同事件。
-1. 設定已點按的元件ID，並傳送具有追蹤連結信標的事件Adobe Analytics。
+1. 設定已點按的元件ID，並使用追蹤連結信標傳送事件Adobe Analytics。
 
 ## 必備條件
 
-本教學課程是[使用Adobe Analytics](./collect-data-analytics.md)收集頁面資料的延續課程，並假設您已：
+本教學課程是[使用Adobe Analytics](./collect-data-analytics.md)收集頁面資料的延續課程，並假設您有：
 
-* A **啟動屬性**&#x200B;並啟用[Adobe Analytics擴充功能](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)
-* **Adobe** Analyticst/dev報表套裝ID和追蹤伺服器。請參閱以下檔案，瞭解如何建立新的報表套裝[。](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)
-* [Experience Platform ](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) Debugger瀏覽器擴充功能已設定，您的Launch屬性已載入 [https://wknd.site/us/en.](https://wknd.site/us/en.html) htmlor AEM網站，並啟用Adobe資料層。
+* 啟用[Adobe Analytics擴展](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)的&#x200B;**啟動屬性**
+* **Adobe** Analyticst/dev報表套裝ID和追蹤伺服器。請參閱以下檔案，瞭解如何建立新的報表套裝](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)。[
+* [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) 除錯瀏覽器擴充功能已設定，您的Launch屬性已載入 [https://wknd.site/us/en.](https://wknd.site/us/en.html) html或啟AEM用Adobe資料層的網站。
 
-## 檢查按鈕和摘要結構
+## Inspect按鈕與摘要架構
 
 在啟動中建立規則之前，請先檢閱按鈕和摘要](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#item)的[架構，然後在資料層實作中加以檢查。
 
@@ -84,9 +87,9 @@ WKND行銷團隊想瞭解哪些「行動呼籲(CTA)」按鈕在首頁上表現�
 
 ## 建立CTA點按規則
 
-Adobe用戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 當任何核心元件被點按時，`cmp:click`事件會透過資料層傳送。 接著建立規則以監聽`cmp:click`事件。
+Adobe客戶端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 當任何核心元件被點按時，`cmp:click`事件會透過資料層傳送。 接著建立規則以監聽`cmp:click`事件。
 
-1. 導覽至Experience Platform Launch，並進入與AEM網站整合的Web屬性。
+1. 導覽至Experience Platform Launch並進入與網站整合的WebAEM屬性。
 1. 導覽至「啟動UI」中的「**規則**」區段，然後按一下「新增規則&#x200B;**」。**
 1. 將規則命名為&#x200B;**CTA Clicked**。
 1. 按一下&#x200B;**事件** > **添加**&#x200B;以開啟&#x200B;**事件配置**&#x200B;嚮導。
@@ -146,11 +149,11 @@ Adobe用戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 當任�
 
    `event`物件是從自訂事件中呼叫的`trigger()`方法傳遞。 `component` 是從觸發點按的資料層衍生的元件 `getState` 目前狀態。
 
-1. 儲存變更並在Launch中執行[build](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html)，將程式碼提升至AEM網站上使用的[environment](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)。
+1. 儲存變更並在Launch中執行[build](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html)，將程式碼提升至您網站上使用的[環境&lt;a3/AEM>。](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)
 
    >[!NOTE]
    >
-   > 使用[Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)將內嵌代碼切換至&#x200B;**Development**&#x200B;環境，會非常有用。
+   > 使用[Adobe Experience Platform調試器](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)將嵌入代碼切換到&#x200B;**Development**&#x200B;環境非常有用。
 
 1. 導覽至[WKND網站](https://wknd.site/us/en.html)，並開啟開發人員工具以檢視主控台。 選擇&#x200B;**保留日誌**。
 
@@ -168,7 +171,7 @@ Adobe用戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 當任�
 
 ### 元件ID
 
-1. 導覽至Experience Platform Launch，並進入與AEM網站整合的Web屬性。
+1. 導覽至Experience Platform Launch並進入與網站整合的WebAEM屬性。
 1. 導覽至&#x200B;**資料元素**&#x200B;區段，然後按一下&#x200B;**新增資料元素**。
 1. 對於&#x200B;**名稱**，輸入&#x200B;**元件ID**。
 1. 對於&#x200B;**資料元素類型**，選擇&#x200B;**自定義代碼**。
@@ -244,7 +247,7 @@ Adobe用戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 當任�
    ![移除自訂程式碼動作](assets/track-clicked-component/remove-console-statements.png)
 
 1. 在「操作」(Actions)下，按一下「添加」(Add)**以添加新操作。**
-1. 將&#x200B;**Extension**&#x200B;類型設為&#x200B;**Adobe Analytics**，並將&#x200B;**Action Type**&#x200B;設為&#x200B;**Set Variables**。
+1. 將&#x200B;**擴展**&#x200B;類型設定為&#x200B;**Adobe Analytics**，並將&#x200B;**操作類型**&#x200B;設定為&#x200B;**設定變數**。
 
 1. 為&#x200B;**eVars**、**Props**&#x200B;和&#x200B;**Events**&#x200B;設定下列值：
 
@@ -252,17 +255,17 @@ Adobe用戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 當任�
    * `prop8` -  `%Component ID%`
    * `event8`
 
-   ![設定eVar Prop和事件](assets/track-clicked-component/set-evar-prop-event.png)
+   ![設定eVarProp和事件](assets/track-clicked-component/set-evar-prop-event.png)
 
    >[!NOTE]
    >
-   > 這裡使用`%Component ID%`，因為它會為所點按的CTA取得唯一識別碼。 使用`%Component ID%`的潛在缺點是，Analytics報表將包含`button-2e6d32893a`等值。 使用`%Component Title%`會提供更人性化的名稱，但值可能不是唯一的。
+   > 此處使用`%Component ID%`，因為它會為所點按的CTA取得唯一識別碼。 使用`%Component ID%`的潛在缺點是，Analytics報表將包含`button-2e6d32893a`等值。 使用`%Component Title%`會提供更人性化的名稱，但值可能不是唯一的。
 
-1. 接著，點選&#x200B;**plus**&#x200B;圖示，在&#x200B;**Adobe Analytics - Set Variables**&#x200B;右側新增其他動作：
+1. 接著，點選&#x200B;**plus**&#x200B;圖示，在&#x200B;**Adobe Analytics-設定變數**&#x200B;右側新增其他動作：
 
    ![新增其他啟動動作](assets/track-clicked-component/add-additional-launch-action.png)
 
-1. 將&#x200B;**Extension**&#x200B;類型設為&#x200B;**Adobe Analytics**，並將&#x200B;**動作類型**&#x200B;設為&#x200B;**傳送信標**。
+1. 將&#x200B;**擴展**&#x200B;類型設定為&#x200B;**Adobe Analytics**，並將&#x200B;**操作類型**&#x200B;設定為&#x200B;**發送信標**。
 1. 在&#x200B;**Tracking**&#x200B;下，將選項按鈕設為&#x200B;**`s.tl()`**。
 1. 對於&#x200B;**連結類型**，選擇&#x200B;**自定義連結**，對於&#x200B;**連結名稱**，將值設定為：**`%Component Title%: CTA Clicked`**:
 
@@ -276,17 +279,17 @@ Adobe用戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 當任�
 
    * **1.** 聽聽活 `cmp:click` 動。
    * **2.** 檢查事件是否由「按鈕」或「摘 **** 要」 **觸發**。
-   * **3.** 將Analytics變數設為，以追蹤 **元** 件ID **為eVar**、 **prop**、 **** event。
+   * **3.** 將Analytics變數設定為，以追蹤 **元** 件ID **為** **eVar**、 **prop**，以及事件Adobe。
    * **4.** 傳送Analytics追蹤連結信標(且不 **** 要將其視為頁面檢視)。
 
 1. 儲存所有變更並建立您的啟動程式庫，並升級至適當的環境。
 
 ## 驗證追蹤連結信標和分析呼叫
 
-現在，**CTA Clicked**&#x200B;規則會傳送Analytics信標，您應該可以使用Experience Platform除錯程式來查看Analytics追蹤變數。
+現在，**CTA Clicked**&#x200B;規則會傳送Analytics信標，您應該可以使用Experience Platform偵錯器來查看Analytics追蹤變數。
 
 1. 在瀏覽器中開啟[WKND站點](https://wknd.site/us/en.html)。
-1. 按一下「除錯程式」圖示![「Experience Platform Debugger」圖示](assets/track-clicked-component/experience-cloud-debugger.png)以開啟「Experience Platform Debugger」。
+1. 按一下「除錯程式」圖示![「體驗平台除錯程式」圖示](assets/track-clicked-component/experience-cloud-debugger.png)以開啟「Experience Platform除錯程式」。
 1. 請確定除錯程式正將Launch屬性對應至&#x200B;*您的*&#x200B;開發環境，如先前所述，且已勾選&#x200B;**控制台記錄**。
 1. 開啟「Analytics」功能表，並確認報表套裝已設為&#x200B;*您的*&#x200B;報表套裝。
 
@@ -296,7 +299,7 @@ Adobe用戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 當任�
 
    ![CTA按鈕，以按一下](assets/track-clicked-component/cta-button-to-click.png)
 
-1. 返回Experience Platform除錯程式，並向下捲動並展開「網路要求」**> 「您的報表套裝」*。***&#x200B;您應能找到&#x200B;**eVar**、**prop**&#x200B;和&#x200B;**event**&#x200B;集。
+1. 返回Experience Platform調試器，並向下滾動並展開&#x200B;**網路請求** > *您的報表套裝*。 您應該能夠找到&#x200B;**eVar**、**prop**&#x200B;和&#x200B;**事件**&#x200B;集。
 
    ![點按時追蹤的Analytics事件、evar和prop](assets/track-clicked-component/evar-prop-link-clicked-tracked-debugger.png)
 
@@ -310,8 +313,8 @@ Adobe用戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 當任�
 
    >[!NOTE]
    >
-   > 如果您未看到任何控制台記錄，請確定已在Experience Platform Debugger的&#x200B;**Launch**&#x200B;下勾選了&#x200B;**Console Logging**。
+   > 如果您未看到任何控制台日誌，請確定在Experience Platform調試器中的&#x200B;**Launch**&#x200B;下選中了&#x200B;**控制台日誌**。
 
 ## 恭喜！
 
-您剛才使用事件導向的Adobe Client Data Layer和Experience Platform Launch來追蹤Adobe Experience Manager網站上特定元件的點按次數。
+您剛才使用事件導向的Adobe用戶端資料層和Experience Platform Launch來追蹤Adobe Experience Manager網站上特定元件的點按次數。
