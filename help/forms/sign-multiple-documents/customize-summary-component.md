@@ -1,7 +1,7 @@
 ---
 title: 自訂摘要元件
 description: 擴充摘要步驟元件，加入導覽至封裝中下一個表單的功能。
-feature: 適用性表單
+feature: 自適應表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,14 +9,11 @@ activity: implement
 version: 6.4,6.5
 kt: 6894
 thumbnail: 6894.jpg
-topic: 開發
-role: 開發人員
-level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 2%
+source-wordcount: '178'
+ht-degree: 0%
 
 ---
 
