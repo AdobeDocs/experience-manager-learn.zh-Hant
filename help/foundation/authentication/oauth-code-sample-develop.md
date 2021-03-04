@@ -1,24 +1,27 @@
 ---
-title: 在AEM中開發OAuth示波器
-description: Adobe Experience Manager的可擴充OAuth示波器可讓使用者從用戶授權的用戶端應用程式存取資源。 下圖說明AEM內容中的請求流程。
+title: 開發OAuth示波器AEM
+description: Adobe Experience Manager的可擴充OAuth示波器可讓使用者從用戶端應用程式存取資源。 下圖說明在的上下文中的請求流AEM。
 version: 6.3, 6.4, 6.5
-feature: authentication
+feature: 使用者和群組
 topics: authentication, security
 activity: develop
 audience: developer
 doc-type: code
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: b351a57e6e5be0fe5696dc09842fa77fdd036a27
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 1%
+source-wordcount: '185'
+ht-degree: 3%
 
 ---
 
 
 # 開發OAuth示波器
 
-Adobe Experience Manager的可擴充OAuth範圍可讓使用者從用戶授權的用戶端應用程式存取資源。 下圖說明AEM內容中的請求流程。
+Adobe Experience Manager的可擴充OAuth範圍可讓使用者從用戶端應用程式存取資源。 下圖說明在的上下文中的請求流AEM。
 
 ![Oauth示波器流](./assets/oauth-code-sample-develop/oauth-scopes-flow.png)
 
@@ -28,8 +31,8 @@ AEM提供3種範圍：
 * 離線存取
 * 複寫
 
-AEM的可擴充OAuth範圍可讓您定義其他自訂範圍。 例如，您可以開發自訂範圍並將其部署至AEM，讓透過OAuth授權的行動應用程式只能閱讀，而不能寫入資產。
+可AEM擴充的OAuth範圍可讓您定義其他自訂範圍。 例如，您可以開發自訂範圍並將其部署AEM至，讓透過OAuth授權的行動應用程式只能閱讀，而不能寫入資產。
 
-OAuth是授權用戶端應用程式的偏好方法，因為它使用存取Token，而不需要提供AEM使用者的認證給該應用程式。
+OAuth是授權用戶端應用程式的偏好方法，因為它使用存取Token，而AEM非要求提供使用者認證給該應用程式。
 
 * [檢視程式碼](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/legacy/bundle/src/main/java/com/adobe/acs/samples/authentication/oauth/impl/SampleScopeWithPrivileges.java)
