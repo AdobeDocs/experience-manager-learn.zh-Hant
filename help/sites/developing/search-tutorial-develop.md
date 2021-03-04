@@ -1,23 +1,27 @@
 ---
 title: 簡易搜尋實作指南
-description: 「簡單搜尋」實作是2017年峰會實驗室AEM Search Demystified的教材。 本頁包含本實驗的資料。 如需實驗的導覽，請檢視本頁「簡報」區段中的「實驗活頁簿」。
+description: 「簡單」搜尋實作是2017年峰會實驗室搜尋解說AEM明檔案。 本頁包含本實驗的資料。 如需實驗的導覽，請檢視本頁「簡報」區段中的「實驗活頁簿」。
 topics: development, search
 audience: developer
 doc-type: tutorial
 activity: develop
 version: 6.3, 6.4, 6.5
+feature: 搜尋
+topic: 開發
+role: 開發人員
+level: 中級，經驗豐富的
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '902'
-ht-degree: 1%
+source-wordcount: '907'
+ht-degree: 2%
 
 ---
 
 
 # 簡易搜尋實作指南{#simple-search-implementation-guide}
 
-「簡單搜尋」實作是&#x200B;**Adobe Summit lab AEM Search Demystified**&#x200B;的教材。 本頁包含本實驗的資料。 如需實驗的導覽，請檢視本頁「簡報」區段中的「實驗活頁簿」。
+「簡單搜索」實施是&#x200B;**Adobe峰會實驗室的「搜AEM索演示」中的材料。**&#x200B;本頁包含本實驗的資料。 如需實驗的導覽，請檢視本頁「簡報」區段中的「實驗活頁簿」。
 
 ![搜尋架構概觀](assets/l4080/simple-search-application.png)
 
@@ -72,7 +76,7 @@ ht-degree: 1%
 ## 參考材料{#reference-materials}
 
 * [Github儲存庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/master/simple-search-guide)
-* [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
+* [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 * [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
 * [QueryBuilder API](https://docs.adobe.com/docs/en/aem/6-2/develop/search/querybuilder-api.html)
 * [AEM Chrome外掛程式](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode) ([檔案頁面](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
@@ -83,10 +87,10 @@ ht-degree: 1%
 
 1. **如何停止重新建立索引？**
 
-   可透過透過[AEM Web Console > JMX](http://localhost:4502/system/console/jmx)提供的IndexStats MBean停止重新建立索引
+   可以透過[AEM Web Console > JMX](http://localhost:4502/system/console/jmx)提供的IndexStats MBean停止重新建立索引
 
    * [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
-      * 執行`abortAndPause()`以中止重新編製索引。 這將鎖定索引以進一步重新索引，直到調用`resume()`。
+      * 執行`abortAndPause()`以中止重新建立索引。 這將鎖定索引以進一步重新索引，直到調用`resume()`。
       * 執行`resume()`將重新啟動索引過程。
    * 檔案：[https://jackrabbit.apache.org/oak/docs/query/indexing.html#async-index-mbean](https://jackrabbit.apache.org/oak/docs/query/indexing.html#async-index-mbean)
 
@@ -109,7 +113,7 @@ ht-degree: 1%
 
 3. **所有可用分析器的清單在哪裡？**
 
-   Oak公開一組lucene-provides分析器設定元素，以用於AEM。
+   Oak公開一組lucene-provides分析器配置元素，用於AEM。
 
    * [Apache Oak Analyzers檔案](http://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
       * [Tokenizers](https://cwiki.apache.org/confluence/display/solr/Tokenizers)
@@ -118,7 +122,7 @@ ht-degree: 1%
 
 4. **如何在相同查詢中搜尋頁面和資產？**
 
-   AEM 6.3的新功能是能夠在相同提供的查詢中查詢多個節點類型。 下列QueryBuilder查詢。 請注意，每個&quot;sub-query&quot;都可解析為自己的索引，因此在此範例中，`cq:Page`子查詢會解析為`/oak:index/cqPageLucene`，而`dam:Asset`子查詢會解析為`/oak:index/damAssetLucene`。
+   6.3AEM中的新功能，是能夠在同一個提供的查詢中查詢多個節點類型。 下列QueryBuilder查詢。 請注意，每個&quot;sub-query&quot;都可解析為自己的索引，因此在此範例中，`cq:Page`子查詢會解析為`/oak:index/cqPageLucene`，而`dam:Asset`子查詢會解析為`/oak:index/damAssetLucene`。
 
    ```plain
    group.p.or=true
@@ -136,11 +140,11 @@ ht-degree: 1%
    PLAN: [cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) *:* */ union [dam:Asset] as [a] /* lucene:damAssetLucene(/oak:index/damAssetLucene) *:* */
    ```
 
-   透過[QueryBuilder Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group)和[AEM Chrome外掛程式](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)探索查詢和結果。
+   透過[QueryBuilder Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group)和[AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)探索查詢和結果。
 
 5. **如何在同一查詢中搜尋多個路徑？**
 
-   AEM 6.3的新功能是能夠在同一個提供的查詢中，跨多個路徑進行查詢。 下列QueryBuilder查詢。 請注意，每個&quot;sub-query&quot;都可解析為其自己的索引。
+   6.3AEM中的新功能，是能夠在同一個提供的查詢中跨多個路徑進行查詢。 下列QueryBuilder查詢。 請注意，每個&quot;sub-query&quot;都可解析為其自己的索引。
 
    ```plain
    group.p.or=true
@@ -160,4 +164,4 @@ ht-degree: 1%
    PLAN: [cq:Page] as [a] /* traverse "/content/docs/en/6-2//*" where isdescendantnode([a], [/content/docs/en/6-2]) */ union [cq:Page] as [a] /* traverse "/content/docs/en/6-3//*" where isdescendantnode([a], [/content/docs/en/6-3]) */
    ```
 
-   透過[QueryBuilder Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group)和[AEM Chrome外掛程式](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)探索查詢和結果。
+   透過[QueryBuilder Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group)和[AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)探索查詢和結果。
