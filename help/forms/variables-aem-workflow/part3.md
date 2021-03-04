@@ -9,14 +9,11 @@ audience: developer
 doc-type: technical video
 activity: understand
 version: 6.5
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 2%
+source-wordcount: '98'
+ht-degree: 1%
 
 ---
 
