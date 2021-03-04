@@ -3,17 +3,20 @@ title: 通過合併資料生成打印渠道文檔
 seo-title: 通過合併資料生成打印渠道文檔
 description: 瞭解如何透過合併輸入串流中包含的資料來產生列印頻道檔案
 seo-description: 瞭解如何透過合併輸入串流中包含的資料來產生列印頻道檔案
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 0%
+source-wordcount: '506'
+ht-degree: 1%
 
 ---
 
@@ -65,7 +68,7 @@ public PrefillData getPrefillData(DataOptions options) throws FormsException {
 
 ### 建立WorkflowProcess實施
 
-workflowProcess實作程式碼片段如下所示。當AEM Workflow中的程式步驟與此實作相關聯時，就會執行此程式碼。 此實施需要3個進程引數，說明如下：
+如下所示，workflowProcess實施代碼片段。當「工作流」中的進程步驟與AEM此實施關聯時，將執行此代碼。 此實施需要3個進程引數，說明如下：
 
 * 配置最適化表單時指定的DataFile路徑的名稱
 * 列印渠道範本的名稱
@@ -167,16 +170,16 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
 * 請確定您已在Apache Sling Service User Mapper Service Configuration中新增下列項目
 * **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
 * [將與本文相關的資產下載並解壓縮至您的檔案系統](assets/prefillservice.zip)
-* [使用AEM套件管理員匯入下列套件](http://localhost:4502/crx/packmgr/index.jsp)
+* [使用包管理器導入以AEM下包](http://localhost:4502/crx/packmgr/index.jsp)
    1. beneficiaryconfirmationic.zip
    2. changeofbeneficiaryform.zip
    3. generatebeneficiaryworkflow.zip
-* [使用AEM Felix Web Console部署下列內容](http://localhost:4502/system/console/bundles)
+* [使用Felix Web AEM Console部署下列內容](http://localhost:4502/system/console/bundles)
 
    * GenerateIC.GenerateIC.core-1.0-SNAPSHOT.jar。 此套件包含本文提及的程式碼。
 
 * [Open ChangeOfBenertForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
-* 請確定最適化表單已設定為送出至AEM Workflow，如下所示
+* 請確定最適化表單已設定為提交至AEM工作流程，如下所示
    ![影像](assets/generateic.PNG)
 * [設定工作流程模型。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)請確定流程步驟和傳送電子郵件元件的設定符合您的環境
 * [預覽ChangeOfBenertForm。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 填寫部分詳細資訊並提交
