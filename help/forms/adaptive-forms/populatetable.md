@@ -3,20 +3,17 @@ title: '填入最適化表單表格 '
 seo-title: 填入最適化表單表格
 description: 用表單資料模型服務調用的結果填充自適應表單表
 seo-description: 用表單資料模型服務調用的結果填充自適應表單表
-feature: 適用性表單
+feature: 自適應表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開發
-role: 業務從業人員
-level: 中級
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 1%
+source-wordcount: '255'
+ht-degree: 0%
 
 ---
 
