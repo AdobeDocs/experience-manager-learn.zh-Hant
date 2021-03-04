@@ -2,16 +2,19 @@
 title: 開發OAuth示波器AEM
 description: Adobe Experience Manager的可擴充OAuth示波器可讓使用者從用戶端應用程式存取資源。 下圖說明在的上下文中的請求流AEM。
 version: 6.3, 6.4, 6.5
-feature: 身份驗證
+feature: 使用者和群組
 topics: authentication, security
 activity: develop
 audience: developer
 doc-type: code
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 1%
+source-wordcount: '185'
+ht-degree: 3%
 
 ---
 
