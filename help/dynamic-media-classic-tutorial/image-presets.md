@@ -1,16 +1,19 @@
 ---
 title: 影像預設集
-description: Dynamic Media Classic中的「影像預設集」包含建立特定大小、格式、品質和銳利化影像所需的所有設定。 影像預設集是動態調整大小的關鍵元件。 當您在Dynamic Media Classic中檢視URL時，您可以輕鬆查看是否使用影像預設集。 瞭解影像預設集、其用途以及如何建立預設集。
+description: Dynamic Media經典影像的影像預設集包含建立特定大小、格式、品質和銳利化影像所需的所有設定。 影像預設集是動態調整大小的關鍵元件。 當您查看Dynamic Media經典影像的URL時，可輕鬆查看影像預設集是否在使用中。 瞭解影像預設集、其用途以及如何建立預設集。
 sub-product: 動態媒體
-feature: image-presets
+feature: Dynamic Media經典、影像預設集
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '715'
 ht-degree: 1%
 
 ---
@@ -20,7 +23,7 @@ ht-degree: 1%
 
 「影像預設集」實質上包含建立特定大小、格式、品質和銳利化影像所需的所有設定。 影像預設集是動態調整大小的關鍵元件。
 
-如果您查看幾乎任何Dynamic Media Classic客戶的URL，可能會看到使用中的影像預設集。 只要在URL結尾處尋找$name$（任何字詞或字詞都取代為名稱）。
+如果您查看幾乎任何Dynamic Media經典影像客戶的URL，您可能會看到使用中的影像預設集。 只要在URL結尾處尋找$name$（任何字詞或字詞都取代為名稱）。
 
 「影像預設集」會縮短URL，因此您不必針對每個請求寫出數個「影像伺服」指示，而是可以編寫單一影像預設集。 例如，這兩個URL會以銳利化方式產生相同的300 x 300 JPEG影像，但第二個URL會使用影像預設集：
 
@@ -45,7 +48,7 @@ ht-degree: 1%
 
 影像預設集通常會調整影像大小，而且只要您從影像的原始大小調整影像大小，您就應該加入銳利化功能。 這是因為調整大小會導致許多像素合併並混合到較小的空間中，使影像看起來柔和模糊。 銳利化可提高影像中邊緣和高對比區域的對比度。
 
-我們預期您上傳至Dynamic Media Classic的高解析度影像，在以完整大小檢視時，不需要加以銳利化。 放大。 不過，在任何較小的尺寸上，通常都需要銳利化。
+我們預期，您上傳至Dynamic Media經典影像的高解析度影像，在完整檢視時，不需要任何銳利化功能。 放大。 不過，在任何較小的尺寸上，通常都需要銳利化。
 
 >[!TIP]
 >
@@ -59,9 +62,9 @@ ht-degree: 1%
 
 ![影像](assets/image-presets/image-presets-1.jpg)
 
-Dynamic Media Classic可讓您使用三種銳利化類型：簡單的銳利化、重新取樣模式和非銳利化遮色片。
+Dynamic Media經典影像允許三種銳利化類型：簡單的銳利化、重新取樣模式和非銳利化遮色片。
 
-進一步瞭解[Dynamic Media Classic銳利化選項](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)。
+進一步瞭解[Dynamic Media經典銳利化選項](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)。
 
 ## 其他資源
 
