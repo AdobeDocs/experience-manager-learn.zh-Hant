@@ -1,19 +1,22 @@
 ---
-title: AEM Forms with JSON Schema and Data[Part 1]
-seo-title: AEM Forms with JSON Schema and Data[Part1]
+title: AEM Forms與JSON結構描述與資料[第1部分]
+seo-title: AEM Forms與JSON結構描述與資料[Part1]
 description: 多部分教學課程，可引導您逐步瞭解使用JSON結構描述建立最適化表單及查詢提交資料的相關步驟。
 seo-description: 多部分教學課程，可引導您逐步瞭解使用JSON結構描述建立最適化表單及查詢提交資料的相關步驟。
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 0%
+source-wordcount: '299'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ ht-degree: 0%
 # 根據JSON結構描述建立最適化表單
 
 
-AEM Forms 6.3版本已推出以JSON結構描述為基礎建立最適化表單的功能。 有關使用JSON結構描述建立最適化表單的詳細資訊，請參閱[文章](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-form-json-schema-form-model.html)。
+AEM Forms6.3版推出以JSON結構描述為基礎的最適化Forms。 有關使用JSON結構描述建立最適化Forms的詳細資訊，請參閱本[文章](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-form-json-schema-form-model.html)。
 
 根據JSON結構描述建立最適化表單後，下一步是將提交的資料儲存在資料庫中。 為此，我們將使用各種資料庫廠商引進的新JSON資料類型。 為了本文的目的，我們將使用MySql 8資料庫來儲存提交的資料。
 
@@ -37,5 +40,5 @@ AEM Forms 6.3版本已推出以JSON結構描述為基礎建立最適化表單的
 ![資料儲存](assets/datastored.gif)
 
 
-[可用來建立最適化表單的範例JSON結構描述。](assets/samplejsonschemas.zip). 下載並解壓縮zip檔案，以取得JSON結構描述
+[可用來建立最適化Forms的範例JSON結構描述。](assets/samplejsonschemas.zip). 下載並解壓縮zip檔案，以取得JSON結構描述
 
