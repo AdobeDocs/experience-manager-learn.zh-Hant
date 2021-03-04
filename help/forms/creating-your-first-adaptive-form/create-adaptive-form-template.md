@@ -1,17 +1,20 @@
 ---
 title: 建立最適化表單範本
 description: 模板定義最適化表單的結構和初始內容。
-feature: adaptive-forms
+feature: 適用性表單
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 thumbnail: 37324.jpg
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b085a2c75f8e0b4860d503774ea01a108773ad09
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 0%
+source-wordcount: '138'
+ht-degree: 6%
 
 ---
 
@@ -26,7 +29,7 @@ ht-degree: 0%
 
 如需詳細資訊，請參閱[最適化表單範本檔案](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
 
-如果需要，您可以下載[最適化表單範本](assets/peak-application-template.zip)，然後使用[套件管理器](http://localhost:4502/crx/packmgr/index.jsp)匯入AEM
+如果需要，您可以下載[最適化表單範本](assets/peak-application-template.zip)，然後使AEM用[封裝管理器](http://localhost:4502/crx/packmgr/index.jsp)匯入
 
 
 
