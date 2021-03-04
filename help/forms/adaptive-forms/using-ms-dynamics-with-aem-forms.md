@@ -4,18 +4,21 @@ seo-title: 使用Microsoft Dynamics與AEM Forms
 description: 這段視訊會逐步展示AEM Forms公司如何以Microsoft Dynamics做為後端資料來源，提供互動式個人化通訊的工作流程。
 seo-description: 這段視訊會逐步展示AEM Forms公司如何以Microsoft Dynamics做為後端資料來源，提供互動式個人化通訊的工作流程。
 uuid: 33d63899-1f58-49b3-a05e-6c57b01ef911
-feature: adaptive-forms, form-data-model
+feature: 適用性表單
 topics: integrations
 audience: developer
 doc-type: feature video
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 6cb82275-55bc-4b9e-b958-75b906c6afa9
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 0%
+source-wordcount: '172'
+ht-degree: 2%
 
 ---
 
