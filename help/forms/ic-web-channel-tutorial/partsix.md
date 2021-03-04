@@ -5,17 +5,20 @@ description: 這是建立您第一個互動式通訊檔案的多步驟教學課�
 seo-description: 這是建立您第一個互動式通訊檔案的多步驟教學課程第6部分。 在本部分，我們將建立適用於網頁頻道的互動式通訊。
 uuid: a1b29c5b-a323-4bda-aa99-5fb98614b690
 discoiquuid: b44ff855-9ead-471e-8f0f-b562b88a5337
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 0%
+source-wordcount: '204'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +27,7 @@ ht-degree: 0%
 
 在本部分，我們將建立適用於網頁頻道的互動式通訊。
 
-1. 登入AEM作者例項，並導覽至「Adobe Experience Manager >表單>表單與檔案」。
+1. 登入作者AEM例項，並導覽至「Adobe Experience Manager>Forms>Forms與檔案」。
 1. 開啟401KStatment資料夾。
 1. 點選「建立」並選取「互動式通訊」。 「建立互動式通信」頁面。
 1. 輸入以下資訊
