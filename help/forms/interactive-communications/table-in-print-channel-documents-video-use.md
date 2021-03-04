@@ -2,20 +2,17 @@
 title: 在AEM Forms打印渠道文檔中使用表元件
 seo-title: 在AEM Forms打印渠道文檔中使用表元件
 description: 以下視訊將逐步介紹在Interactive Communications中使用表格元件以列印頻道檔案的步驟。
-feature: 互動式通訊
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: technical video
 activity: implement
 version: 6.4,6.5
-topic: 開發
-role: 開發人員
-level: 中級
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 2%
+source-wordcount: '277'
+ht-degree: 0%
 
 ---
 
