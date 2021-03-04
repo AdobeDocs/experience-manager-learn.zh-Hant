@@ -3,18 +3,15 @@ title: 開發Sling Model Exporator AEM
 description: 本技術逐步說明如何設定AEM與Sling Model Exporter搭配使用、增強使用Exporter架構以轉譯為JSON的現有Sling Model，以及如何使用Exporter選項和Jackson註解進一步自訂輸出。
 version: 6.3, 6.4, 6.5
 sub-product: 基礎，內容服務
-feature: API
+feature: sling-models, sling-model-exporter
 topics: content-delivery, development, headless
 activity: develop
 audience: developer
 doc-type: technical video
-topic: 開發
-role: 開發人員
-level: 中級
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
