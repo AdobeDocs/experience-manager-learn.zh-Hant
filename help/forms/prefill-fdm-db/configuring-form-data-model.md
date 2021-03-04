@@ -1,7 +1,7 @@
 ---
 title: 配置表單資料模型
 description: 基於RDBMS資料源建立表單資料模型
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
@@ -9,10 +9,13 @@ activity: implement
 version: 6.4,6.5
 kt: 5812
 thumbnail: kt-5812.jpg
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
