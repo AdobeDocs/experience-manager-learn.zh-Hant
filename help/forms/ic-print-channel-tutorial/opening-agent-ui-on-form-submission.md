@@ -1,10 +1,10 @@
 ---
-title: 在提交貼文時開啟代理UI
-seo-title: 在提交貼文時開啟代理UI
+title: 在提交POST時開啟代理UI
+seo-title: 在提交POST時開啟代理UI
 description: 這是多步驟教學課程的第11部分，以針對列印頻道建立您的第一個互動式通訊檔案。 在本部分，我們將啟動代理用戶介面，以便在表單提交時建立臨機通信。
 seo-description: 這是多步驟教學課程的第11部分，以針對列印頻道建立您的第一個互動式通訊檔案。 在本部分，我們將啟動代理用戶介面，以便在表單提交時建立臨機通信。
 uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,16 +12,19 @@ activity: implement
 version: 6.4,6.5
 kt: 6168
 thumbnail: 40122.jpg
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 824efde8d90dd77d41dce093998b4215db2532ae
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 0%
+source-wordcount: '369'
+ht-degree: 1%
 
 ---
 
 
-# 在提交貼文時開啟代理UI
+# 在提交POST時開啟代理UI
 
 在本部分，我們將啟動代理用戶介面，以便在表單提交時建立臨機通信。
 
@@ -61,7 +64,7 @@ wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").incl
 
 * [使用套件管理員匯入並安裝與本文相關的資產。](assets/launch-agent-ui.zip)
 * [登入configMgr](http://localhost:4502/system/console/configMgr)
-* 搜尋&#x200B;_Adobe Granite CSRF Filter_
+* 搜索&#x200B;_Adobe花崗岩CSRF過濾器_
 * 在排除的路徑中新增&#x200B;_/content/getprintchannel_
 * 儲存您的變更。
 * [開啟POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。請確定傳遞至FormFieldRequestParameter的字串是有效的documentId。（19號線）。
