@@ -1,7 +1,7 @@
 ---
 title: 部署範例
-description: 取得在您本機AEM Forms例項上執行的使用案例
-feature: adaptive-forms
+description: 在您當地的AEM Forms實例上運行使用案例
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6602
 thumbnail: 6602.jpg
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 1%
+source-wordcount: '375'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +27,7 @@ ht-degree: 1%
 若要讓此使用案例在您的系統上運作，請依照下列指示進行：
 
 >[!NOTE]
->假設您正在連接埠4502上執行AEM Forms。
+>假設您在4502港口運行AEM Forms。
 
 
 ## 建立資料庫
@@ -37,7 +40,7 @@ ht-degree: 1%
 
 ## 建立表單資料模型
 
-表單資料模型需要根據此資料來源建立，此資料來源稱為&#x200B;**StoreAndRetrieveAfData**。 此表單資料模型可用來擷取與應用程式ID相關的行動電話號碼。 表單資料模型可從此處下載。[](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
+表單資料模型需要根據此資料來源建立，此資料來源稱為&#x200B;**StoreAndRetrieveAfData**。 此表單資料模型可用來擷取與應用程式ID相關的行動電話號碼。 表單資料模型可從此處下載。](assets/2-Factor-Authentication-DataSource-and-FDM.zip)[
 
 ## 使用Nexmo建立開發人員帳戶
 
@@ -50,7 +53,7 @@ ht-degree: 1%
 
 ## 部署客戶端庫
 
-範例使用2個用戶端程式庫。 將這些[用戶端程式庫](assets/client-libraries.zip)匯入AEM。
+範例使用2個用戶端程式庫。 將這些[客戶端庫](assets/client-libraries.zip)導入AEM。
 
 ## 匯入自訂最適化表單範本
 
@@ -58,7 +61,7 @@ ht-degree: 1%
 
 ## 匯入範例最適化表單
 
-組成此範例的2個表單必須匯入AEM。 範例表單可從此處下載[](assets/sample-forms.zip)
+組成此範例的2個表單需要匯入AEM。 範例表單可從此處下載[](assets/sample-forms.zip)
 
 在編輯模式下開啟[MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html)。 在最適化表單的適當欄位中指定API金鑰和API密碼值。
 
