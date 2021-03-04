@@ -1,20 +1,17 @@
 ---
 title: 建立最適化表單範本
 description: 模板定義最適化表單的結構和初始內容。
-feature: 適用性表單
+feature: 自適應表單
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 thumbnail: 37324.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 6%
+source-wordcount: '134'
+ht-degree: 3%
 
 ---
 
