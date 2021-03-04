@@ -1,16 +1,19 @@
 ---
 title: 以CSV格式匯出已提交的表單資料
 description: 以CSV格式匯出已提交的最適化表單資料
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 0%
+source-wordcount: '403'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此示例僅適用於不基於模式或表單資料模型的自適應表單
+>此示例僅適用於不基於模式或表單資料模型的自適應Forms
 
 ![表結](assets/tablestructure.PNG)
 構如您所見，架構的名稱為aemformstuorial。此架構內部是表格式提交，定義了以下列
