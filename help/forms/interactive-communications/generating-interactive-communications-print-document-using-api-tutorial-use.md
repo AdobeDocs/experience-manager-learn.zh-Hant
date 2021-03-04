@@ -3,17 +3,20 @@ title: 使用監控資料夾機制產生適用於列印頻道的互動通訊檔�
 seo-title: 使用監控資料夾機制產生適用於列印頻道的互動通訊檔案
 description: 使用監看資料夾產生列印頻道檔案
 seo-description: 使用監看資料夾產生列印頻道檔案
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 0%
+source-wordcount: '487'
+ht-degree: 1%
 
 ---
 
@@ -116,7 +119,7 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
-* 使用套件管理員將下列套件匯入AEM。 此套件包含下列項目：
+* 使用包管理器將以下包AEM導入。 此套件包含下列項目：
 
 
 * [互動式通訊檔案範例](assets/retirementstatementprint.zip)
