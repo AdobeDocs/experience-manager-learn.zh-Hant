@@ -1,12 +1,14 @@
 ---
-title: 第2章——定義事件內容片段模型
-seo-title: 內容服AEM務入門——第2章——定義事件內容片段模型
-description: 無頭教學課程的第AEM2章涵蓋啟用和定義內容片段模型，用於定義標準化的資料結構和製作介面以建立事件。
-seo-description: 無頭教學課程的第AEM2章涵蓋啟用和定義內容片段模型，用於定義標準化的資料結構和製作介面以建立事件。
+title: '"第2章- Dispatcher基礎結構"'
+description: 瞭解發佈和調度器拓撲。 瞭解最常見的拓撲和設定。
+feature: Dispatcher
+topic: 架構
+role: 架構師
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1917'
+source-wordcount: '1868'
 ht-degree: 0%
 
 ---
