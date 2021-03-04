@@ -1,10 +1,14 @@
 ---
 title: 第6章——將AEM Publish上的內容公開為JSON —— 內容服務
-description: AEM Headless教學課程的第6章涵蓋確保所有必要的套件、設定和內容都位於「AEM發佈」上，以允許從「行動應用程式」使用。
+description: 「無頭教學AEM課程」的第6章涵蓋確保所有必要的套件、設定和內容都位於「AEM發佈」中，以允許從「行動應用程式」使用。
+feature: '"內容片段、API"'
+topic: 「無頭、內容管理」
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -12,18 +16,18 @@ ht-degree: 0%
 
 # 第6章——公開AEM Publish中的內容以進行傳送
 
-AEM Headless教學課程的第6章涵蓋確保所有必要的套件、設定和內容都位於「AEM發佈」上，以允許「行動應用程式」使用。
+「無頭教學AEM課程」的第6章涵蓋確保所有必要的套件、設定和內容都位於「AEM發佈」中，以允許「行動應用程式」使用。
 
-## 發佈AEM Content Services的內容
+## 發佈內容服AEM務內容
 
-透過AEM Content Services驅動「事件」的設定和內容必須發佈至AEM Publish，讓「行動應用程式」可以存取。
+為透過Content Services驅動「事件」而建立AEM的設定和內容必須發佈至AEM Publish，讓「行動應用程式」可以存取它。
 
-由於AEM Content Services是從「設定」（內容片段模型、可編輯範本）、「資產」（內容片段、影像）和「頁面」建立的，所以這些片段都會自動體驗AEM的內容管理功能，包括：
+由於AEMContent Services是從設定（內容片段模型、可編輯範本）、資產（內容片段、影像）和頁面建立的，所以這些片段都會自動享有內容AEM管理功能，包括：
 
 * 審核與處理的工作流程
-* 以及從AEM Publish的AEM Content Services端點推送和拉出內容的啟動／停用
+* 以及從AEM Publish的「內容服務」端點推送和拉出內容AEM的啟動／停用
 
-1. 確保&#x200B;**[!DNL WKND Mobile]Application Packages**（列於[Chapter 1](./chapter-1.md#wknd-mobile-application-packages)）已使用[!UICONTROL Package Manager]安裝在&#x200B;**AEM Publish**&#x200B;上。
+1. 確保&#x200B;**[!DNL WKND Mobile]Application Packages**（列於[Chapter 1](./chapter-1.md#wknd-mobile-application-packages)）已安裝在&#x200B;**AEM Publish**&#x200B;上，使用[!UICONTROL Package Manager]。
    * [http://localhost:4503/crx/packmgr](http://localhost:4503/crx/packmgr)
 
 1. 發佈&#x200B;**[!DNL WKND Mobile Events API]可編輯範本**
@@ -40,10 +44,10 @@ AEM Headless教學課程的第6章涵蓋確保所有必要的套件、設定和�
 1.點選頂端動作列中的「管理出版物」(**[!UICONTROL Manage Publication)
 1.保留預設的** Publish **動作原樣，點選頂端動作列中的**[!UICONTROL  Next ]**1.選擇** all **內容片段
 1.點選頂端動作列中的「發佈」(Publish)
-* *[!DNL Events]內容片段模型和參考事件影像將會自動與內容片段一起發佈。*]**]****[!UICONTROL 
+* *[!DNL Events]內容片段模型和參考事件影像將會自動與內容片段一起發佈。*]******
 
 1. 發佈&#x200B;**[!DNL Events API]頁面**。
-   1. 導覽至&#x200B;**[!UICONTROL AEM] > [!UICONTROL Sites] > [!DNL WKND Mobile] > [!DNL English] >[!DNL API]**
+   1. 導覽至&#x200B;**[!UICONTROL AEM] > [!UICONTROL  Sites] > [!DNL WKND Mobile] > [!DNL English] >[!DNL API]**
    1. 選擇&#x200B;**[!DNL Events]**&#x200B;頁面
    1. 點選頂端動作列中的「管理出版物」****
    1. 保留預設的&#x200B;**Publish**&#x200B;動作原樣，點選頂端動作列中的&#x200B;**[!UICONTROL Next]**
@@ -63,4 +67,4 @@ AEM Headless教學課程的第6章涵蓋確保所有必要的套件、設定和�
 
 沒有額外的套件可以安裝。 請確定本節中概述的內容和設定已發佈至AEM Publish，否則後續章節將無法運作。
 
-* [第7章——從行動應用程式使用AEM Content Services](./chapter-7.md)
+* [第7章——從行動應AEM用程式使用內容服務](./chapter-7.md)
