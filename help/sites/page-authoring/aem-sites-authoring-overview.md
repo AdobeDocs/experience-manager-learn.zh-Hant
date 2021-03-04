@@ -1,9 +1,9 @@
 ---
-title: AEM Sites中編寫簡介
-seo-title: AEM Sites中編寫簡介
-description: 以下影片提供在AEM作者環境中編寫基本概念的概觀。 它以Sites主控台為基礎。
-seo-description: 以下影片提供在AEM作者環境中編寫基本概念的概觀。 它以Sites主控台為基礎。
-feature: page-editor, template-editor
+title: AEM Sites製作概觀
+seo-title: AEM Sites製作概觀
+description: 以下影片概述在作者環境中製作的基本概AEM念。 它以Sites主控台為基礎。
+seo-description: 以下影片概述在作者環境中製作的基本概AEM念。 它以Sites主控台為基礎。
+feature: 頁面編輯器，可編輯範本
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4242
 thumbnail: 33594.jpg
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '115'
+source-wordcount: '124'
 ht-degree: 1%
 
 ---
@@ -22,7 +25,7 @@ ht-degree: 1%
 
 # 編寫概述{#authoring-overview}
 
-以下影片概述在AEM Sites的AEM作者環境中編寫基本概念。
+以下影片概述了在AEM Sites的作者環境中製作的AEM基本概念。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33594?quality=12&learn=on)
 
