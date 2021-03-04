@@ -1,8 +1,8 @@
 ---
-title: 將AEM的Dispatcher Tools設定為雲端服務開發
-description: AEM SDK的Dispatcher Tools可讓本機安裝、執行和疑難排解Dispatcher，以協助本機開發Adobe Experience Manager(AEM)專案。
+title: 將Dispatcher Tools設定為AEMCloud Service開發
+description: SDKAEM的Dispatcher Tools可讓本機安裝、執行和疑難排解Dispatcher，以協助本機開發Adobe Experience Manager(AEM)專案。
 sub-product: 基礎
-feature: dispatcher
+feature: Dispatcher，開發人員工具
 topics: development, caching, security
 version: cloud-service
 doc-type: tutorial
@@ -10,11 +10,14 @@ activity: develop
 audience: developer
 kt: 4679
 thumbnail: 30603.jpg
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1566'
-ht-degree: 1%
+source-wordcount: '1572'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +26,7 @@ ht-degree: 1%
 
 Adobe Experience Manager(AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM Publish層之間提供安全性與效能層。 Dispatcher是整體Experience Manager架構的一部分，應是本端開發設定的一部分。
 
-AEM a Cloud Service SDK包含建議的Dispatcher Tools版本，可協助在本機設定、驗證和模擬Dispatcher。 Dispatcher Tools由以下組成：
+作為AEMCloud ServiceSDK，它包含建議的Dispatcher Tools版本，可方便在本機配置、驗證和模擬Dispatcher。 Dispatcher Tools由以下組成：
 
 + 位於`.../dispatcher-sdk-x.x.x/src`的Apache HTTP Web伺服器和Dispatcher配置檔案的基準集
 + 配置驗證器CLI工具，位於`.../dispatcher-sdk-x.x.x/bin/validate`(Dispatcher SDK 2.0.29+)
@@ -40,28 +43,28 @@ AEM a Cloud Service SDK包含建議的Dispatcher Tools版本，可協助在本�
 ## 必備條件
 
 1. Windows使用者必須使用Windows 10 Professional
-1. 在本機開發機器上安裝[Experience Manager發佈快速入門Jar](./aem-runtime.md)。
-   + （可選）在本機AEM Publish服務上安裝最新[AEM參考網站](https://github.com/adobe/aem-guides-wknd/releases)。 本教程使用此網站來直觀顯示工作的Dispatcher。
+1. 在本地開發電腦上安裝[Experience Manager發佈快速啟動Jar](./aem-runtime.md)。
+   + （可選）在本機AEM Publish服務AEM上安裝最新[參考網站](https://github.com/adobe/aem-guides-wknd/releases)。 本教程使用此網站來直觀顯示工作的Dispatcher。
 1. 在本機開發機器上安裝並啟動最新版[Docker](https://www.docker.com/)(Docker Desktop 2.2.0.5+ / Docker Engine v19.03.9+)。
 
-## 下載Dispatcher Tools（做為AEM SDK的一部分）
+## 下載Dispatcher Tools(作為AEMSDK的一部分)
 
-AEM(Cloud Service SDK)或AEM SDK包含Dispatcher Tools，可用來在本機執行Apache HTTP Web伺服器並搭配Dispatcher模組進行開發，以及相容的QuickStart Jar。
+作為AEMCloud ServiceSDK(或AEMSDK)，包含Dispatcher Tools，用於在本機上使用Dispatcher模組來執行Apache HTTP Web伺服器，以進行開發，以及相容的QuickStart Jar。
 
-如果AEM已下載為Cloud Service SDK，並已下載至[設定本機AEM執行階段](./aem-runtime.md)，則不需要重新下載。
+如AEM果已下載Cloud ServiceSDK至[設定本機執AEM行階段](./aem-runtime.md)，則不需要重新下載。
 
 1. 使用您的Adobe ID登入[experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderstestModied&amp;orderby.st.sort.st.st.st.st.st.st&amp;st.sted&amp;orde.sted&amp;ord&amp;orde.s.sted&amp;ord.se.s.st.st.s.se.st.se.se.s=desc&amp;d.se.se.st.s&amp;dsc&amp;des&amp;des&amp;desc&amp;s&amp;desc&amp;s&amp;d.sy=list&amp;p.offset=0&amp;p.limit=1)
-   + 您的Adobe組織&#x200B;__必須__&#x200B;已布建AEM做為雲端服務，才能將AEM下載為雲端服務SDK
-1. 按一下最新&#x200B;__AEM SDK__&#x200B;結果列以下載
-   + 請確定下載說明中已注明AEM SDK的Dispatcher Tools v2.0.29+
+   + 您的Adobe組織&#x200B;__必須__&#x200B;布建AEM為Cloud Service，才能以AEMCloud ServiceSDK
+1. 按一下最新的&#x200B;__AEM SDK__&#x200B;結果列以下載
+   + 請確AEM定下載說明中已注明SDK的Dispatcher Tools v2.0.29+
 
-## 從AEM SDK zip解壓縮Dispatcher Tools
+## 從SDK AEM zip解壓縮Dispatcher Tools
 
 >[!TIP]
 >
 > Windows用戶在包含本地調度器工具的資料夾的路徑中不能有空格或特殊字元。 如果路徑中存在空格，則`docker_run.cmd`將失敗。
 
-Dispatcher Tools的版本與AEM SDK的版本不同。 請確定Dispatcher Tools版本是透過與AEM相符的AEM SDK版本提供，做為雲端服務版本。
+Dispatcher Tools的版本與SDK的版本不AEM同。 確保Dispatcher Tools版本是透過符合的AEMSDK版本提供，AEM作為Cloud Service版本。
 
 1. 解壓縮下載的`aem-sdk-xxx.zip`檔案
 1. 將Dispatcher Tools解壓縮到`~/aem-sdk/dispatcher`
@@ -78,11 +81,11 @@ Dispatcher Tools的版本與AEM SDK的版本不同。 請確定Dispatcher Tools�
 ## 瞭解Dispatcher配置檔案
 
 >[!TIP]
-> 從[AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype)建立的Experience Manager專案會預先填入此組Dispatcher組態檔案，因此不需要從Dispatcher Tools src資料夾複製。
+> 從[AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype)建立的Experience Manager項目已預先填入此組Dispatcher配置檔案，因此無需從Dispatcher Tools src資料夾中複製。
 
 Dispatcher Tools提供一組Apache HTTP Web伺服器和Dispatcher配置檔案，它們定義了所有環境的行為，包括本地開發。
 
-如果Experience Manager Maven專案中不存在這些檔案，這些檔案將複製到Experience Manager Maven專案至`dispatcher/src`檔案夾。
+如果這些檔案在Experience ManagerMaven項目中不存在，則這些檔案將被複製到`dispatcher/src`資料夾。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30602/?quality=12&learn=on)
 
@@ -128,7 +131,7 @@ Dispatcher Tools提供一組Apache HTTP Web伺服器和Dispatcher配置檔案，
    + Windows:`bin\docker_run out host.docker.internal:4503 8080`
    + macOS / Linux:`./bin/docker_run.sh ./out host.docker.internal:4503 8080`
 
-AEM作為雲端服務SDK的Publish Service，在埠4503上本機執行，可透過位於`http://localhost:8080`的Dispatcher取得。
+The AEM as aCloud ServiceSDK&#39;s Publish Service, unn locally on port 4503 will be available throus Dispatcher at `http://localhost:8080`.
 
 要對Experience Manager項目的Dispatcher配置運行Dispatcher Tools，只需使用項目的`dispatcher/src`資料夾生成`deployment-folder`。
 
@@ -188,7 +191,7 @@ AEM作為雲端服務SDK的Publish Service，在埠4503上本機執行，可透�
 
 ### 記錄檔存取
 
-Apache Web伺服器和AEM Dispatcher記錄檔可直接在Docker容器中存取：
+Apache Web伺服器AEM和Dispatcher日誌可直接在Docker容器中訪問：
 
 + [訪問Docker容器中的日誌](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
 + [將Docker日誌複製到本地檔案系統](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
@@ -197,13 +200,13 @@ Apache Web伺服器和AEM Dispatcher記錄檔可直接在Docker容器中存取�
 
 Dispatcher Tools版本的增加頻率比Experience Manager低，因此Dispatcher Tools在本地開發環境中所需的更新更少。
 
-建議的Dispatcher Tools版本是與AEM搭售的Cloud Service SDK，與Experience Manager搭配為雲端服務版本。 AEM的雲端服務版本可透過[Cloud Manager](https://my.cloudmanager.adobe.com/)找到。
+建議的Dispatcher Tools版本是與搭售的作為AEMCloud ServiceSDK搭售的Experience Manager，與Cloud Service版本相符。 您可AEM以透過[Cloud Manager](https://my.cloudmanager.adobe.com/)找到Cloud Service版本。
 
-+ __「雲端管理員>環境__」，依據 __AEM Releaselabel指定的環__ 境
++ __「Cloud Manager >環境__」，依「版本標籤」所指定的 __AEM環__ 境
 
-![Experience Manager版本](./assets/dispatcher-tools/aem-version.png)
+![Experience Manager版](./assets/dispatcher-tools/aem-version.png)
 
-_請注意，Dispatcher Tools版本本身與Experience Manager版本不符。_
+_請注意，Dispatcher Tools版本本身與Experience Manager版本不匹配。_
 
 ## 疑難排解
 
@@ -280,8 +283,8 @@ AH00016: Configuration Failed
 
 ## 其他資源
 
-+ [下載AEM SDK](https://experience.adobe.com/#/downloads)
-+ [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
++ [下載AEMSDK](https://experience.adobe.com/#/downloads)
++ [Adobe雲管理員](https://my.cloudmanager.adobe.com/)
 + [下載Docker](https://www.docker.com/)
 + [下載AEM參考網站(WKND)](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience Manager Dispatcher檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience Manager調度程式文檔](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
