@@ -2,19 +2,18 @@
 title: 下載
 description: 瞭解如何將資產及其轉譯下載至本機電腦，以便使用和共用。
 sub-product: 資產
-feature: null
-topics: authoring
-audience: author
-doc-type: feature video
-activity: use
+feature: 資產管理
 version: cloud-service
 kt: 4300
 thumbnail: 32194.jpg
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 5%
+source-wordcount: '42'
+ht-degree: 4%
 
 ---
 
