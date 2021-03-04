@@ -1,17 +1,19 @@
 ---
-title: 與AEM共同開發跨原始資源共用(CORS)
-description: 利用CORS透過用戶端JavaScript從外部Web應用程式存取AEM內容的簡短範例。
+title: 開發跨原始資源共用(CORS)功AEM能
+description: 利用CORS透過用戶端JavaScript從AEM外部網路應用程式存取內容的簡短範例。
 version: 6.3, 6,4, 6.5
 sub-product: 基礎，內容服務，網站
-feature: null
 topics: security, development, content-delivery
 activity: develop
 audience: developer
 doc-type: tutorial
+topic: 安全性
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: bc14783840a47fb79ddf1876aca1ef44729d097e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -19,7 +21,7 @@ ht-degree: 0%
 
 # 開發跨原始資源共用(CORS)
 
-利用[!DNL CORS]透過用戶端JavaScript從外部Web應用程式存取AEM內容的簡短範例。
+利用[!DNL CORS]透過用戶端JavaScript從AEM外部Web應用程式存取內容的簡短範例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837/?quality=12&learn=on)
 
@@ -30,7 +32,7 @@ ht-degree: 0%
 * [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12) (SimpleHTTPServer的包裝函 [[!DNL Python]式](https://docs.python.org/2/library/simplehttpserver.html))正透過連接埠8000為HTML頁面提供服務。
 * [!DNL AEM Dispatcher] 正在 [!DNL Apache HTTP Web Server] 2.4上執行，並反向代理請求 `aem-publish.local` 至 `localhost:4503`。
 
-如需詳細資訊，請參閱「瞭解AEM](./understand-cross-origin-resource-sharing.md)中的跨原始資源共用(CORS)」。[
+如需詳細資訊，請參閱](./understand-cross-origin-resource-sharing.md)中的「瞭解跨原始資源共用(CORS)AEM」。[
 
 ## www.example.com HTML和JavaScript
 
@@ -119,11 +121,11 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## 支援材料{#supporting-materials}
 
-* [AEM OSGi Configuration Factory for Cross-Origin Resource Sharing Policy](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
+* [OSGiAEM跨源資源共用策略配置工廠](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [SimpleHTTPServer for macOS](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
 * [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) （Windows/macOS/Linux相容）
 
-* [瞭解AEM中的跨原始資源共用(CORS)](./understand-cross-origin-resource-sharing.md)
+* [瞭解跨原始資源共用(CORS)，於AEM](./understand-cross-origin-resource-sharing.md)
 * [跨原始資源共用(W3C)](https://www.w3.org/TR/cors/)
 * [HTTP存取控制(Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 
