@@ -1,26 +1,29 @@
 ---
-title: 在AEM表單中使用Watched資料夾
-seo-title: 在AEM表單中使用Watched資料夾
-description: 在AEM Forms中設定及使用受監視的資料夾
-seo-description: 在AEM Forms中設定及使用受監視的資料夾
+title: 在AEM Forms使用監視資料夾
+seo-title: 在AEM Forms使用監視資料夾
+description: 在AEM Forms配置和使用監視資料夾
+seo-description: 在AEM Forms配置和使用監視資料夾
 uuid: 32c4bda2-363d-4294-925e-405a176f7f8d
-feature: output-service
+feature: 輸出服務
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: a40e2381-0dc8-4784-9b80-15e27b244035
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
 
 
-# 在AEM Forms中使用Watched資料夾{#using-watched-folders-in-aem-forms}
+# 在AEM Forms使用監視資料夾{#using-watched-folders-in-aem-forms}
 
 管理員可以設定網路資料夾（稱為「Watched Folder」），如此當使用者將檔案（例如PDF檔案）置於「Watched Folder」中時，就會啟動預先設定的工作流程、服務或指令碼操作，以處理新增的檔案。 服務執行指定的操作後，會將結果檔案保存到指定的輸出資料夾中。 如需工作流程、服務和指令碼的詳細資訊。
 
@@ -30,14 +33,14 @@ ht-degree: 0%
 
 本文將介紹利用輸出服務通過監視資料夾機制將資料與模板合併的使用案例。
 
-輸出服務是AEM檔案服務的一部分的OSGi服務。 輸出服務支援AEM Forms Designer的各種輸出格式和輸出設計功能。 輸出服務可轉換XFA範本和XML資料，以產生各種格式的列印檔案。
+輸出服務是OSGi服務，是檔案服務的一AEM部分。 輸出服務支援AEM Forms設計師的各種輸出格式和輸出設計功能。 輸出服務可轉換XFA範本和XML資料，以產生各種格式的列印檔案。
 
-若要進一步瞭解輸出服務，請按一下此處[。
-](https://helpx.adobe.com/aem-forms/6/output-service.html)要在系統上設定監視資料夾，請執行以下步驟：
+若要進一步瞭解輸出服務，請按一下此處](https://helpx.adobe.com/aem-forms/6/output-service.html)。
+[要在系統上設定監視資料夾，請執行以下步驟：
 * [下載並解壓縮zip檔案的內容](assets/outputservicewatchedfolderkt.zip)。此zip檔案包含用於建立watched資料夾的套件，以及使用watched資料夾機制測試輸出服務的範例檔案
    * Windows系統
 
-      * 使用套件管理員將outputservicewatchedfolder.zip匯入AEM
+      * 使用套件管理器將outputservicewatchedfolder.zipAEM匯入
       * 這將在您的C驅動器上建立一個名為outputservicewatchedfolder的監視資料夾。
    * 非Windows系統
       * [開啟監視資料夾的配置設定](http://localhost:4502/crx/de/index.jsp#/etc/fd/watchfolder/config/outputservice)
