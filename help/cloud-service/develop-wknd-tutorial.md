@@ -1,15 +1,19 @@
 ---
 title: 開始開發 AEM Sites - WKND 教學課程
 seo-title: 開始開發 AEM Sites - WKND 教學課程
-description: 您是AEM開發的新手嗎？ 需要進一步瞭解最佳實踐方案嗎？ 這裡就是開始！ 本多部分教學課程的目標，在於教授剛接觸AEM的開發人員如何使用最新標準和技術，在AEM中實作網站。
-seo-description: 您是AEM開發的新手嗎？ 需要進一步瞭解最佳實踐方案嗎？ 這裡就是開始！ 本多部分教學課程的目標，在於教授剛接觸AEM的開發人員如何使用最新標準和技術，在AEM中實作網站。
+description: 不熟悉開發AEM? 需要進一步瞭解最佳實踐方案嗎？ 這裡就是開始！ 本多部份教學課程的目標，是教導剛剛接觸開發人員如何AEM使用最新標準AEM和技術建置網站。
+seo-description: 不熟悉開發AEM? 需要進一步瞭解最佳實踐方案嗎？ 這裡就是開始！ 本多部份教學課程的目標，是教導剛剛接觸開發人員如何AEM使用最新標準AEM和技術建置網站。
 content-type: reference
 topic-tags: introduction
+feature: 專AEM案原型、核心元件、頁面編輯器、可編輯範本
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 7%
+source-wordcount: '366'
+ht-degree: 15%
 
 ---
 
@@ -18,28 +22,28 @@ ht-degree: 7%
 
 ## 概覽 {#overview}
 
-您是Adobe Experience Manager新手，將之發展為雲端服務嗎？ 需要複習最新的做法嗎？ 這裡就是開始！
+剛剛將Adobe Experience Manager發展成Cloud Service? 需要複習最新的做法嗎？ 這裡就是開始！
 
-本多部分教學課程的目標，在於教授剛接觸AEM的開發人員如何使用最新標準和技術，在AEM中實作網站。 希望您在本教學課程的結尾，瞭解AEM平台的基本基礎，並瞭解一些常見設計模式。
+本多部份教學課程的目標，是教導剛剛接觸開發人員如何AEM使用最新標準AEM和技術建置網站。 希望您在本教學課程的結束時，能瞭解平台的基本基礎AEM，並瞭解一些常見設計模式。
 
 ## WKND 開發人員教學課程 {#wknd-developer-tutorial}
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-教學課程旨在搭配&#x200B;**AEM做為Cloud Service**&#x200B;使用，並向後相容於&#x200B;**AEM 6.5+**&#x200B;和&#x200B;**AEM 6.4.2+**。
+此教學課程在設計上將使用 **AEM as a Cloud Service**，並向下相容於 **AEM 6.5+** 和 **AEM 6.4.2+**。
 
-**[在這裡檢視教學課程！](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
+**[在這裡檢視教學課程！](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
-## 將WKND部署至AEM做為雲端服務{#deploying-wknd-to-aem-as-a-cloud-service}
+## 將WKND部AEM署為Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
-完成WKND教學課程後，請觀賞以下影片，以取得如何將WKND專案部署至AEM做為雲端服務的概觀。
+完成WKND教學課程後，請觀賞以下影片，以瞭解如何將WKND專案部署為AEMCloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30191?quality=12&learn=on)
 
 此視訊顯示WKND網站專案的可能性：
 
 1. 來源於第三方Git儲存庫（在本例中為Github.com），但可以是任何Git儲存庫
-2. 已推送至向AEM註冊為雲端服務計畫的上游Adobe Cloud Manager Git儲存庫
-3. 透過Cloud Manager管道部署至AEM做為雲端服務環境
+2. 已推送至上游AdobeCloud Manager Git儲存庫，已以程AEM式註冊為Cloud Service程式
+3. 通過Cloud Manager管道部署到作AEM為Cloud Service環境
 
-如需如何將AEM專案部署至AEM做為雲端服務的完整概觀，請觀看有關如何[將Git與Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)整合的影片系列。
+如需如何將專案部署AEM為雲AEM端服務的完整概觀，請觀賞如何[將Git與Adobe雲端管理員](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)整合的影片系列。
