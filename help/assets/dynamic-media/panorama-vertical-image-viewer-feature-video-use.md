@@ -1,33 +1,30 @@
 ---
-title: 搭配AEM Assets動態媒體使用全景和垂直影像檢視器
-seo-title: 搭配AEM Assets動態媒體使用全景和垂直影像檢視器
-description: AEM 6.4中的Dynamic Media Viewer增強功能包括新增全景影像檢視器、全景虛擬實境影像檢視器和垂直影像檢視器。 全景檢視器提供輕鬆的方式，提供引人入勝、如臨現場的房間、房產、位置或風景體驗，毋需自訂開發。
-seo-description: AEM 6.4中的Dynamic Media Viewer增強功能包括新增全景影像檢視器、全景虛擬實境影像檢視器和垂直影像檢視器。 全景檢視器提供輕鬆的方式，提供引人入勝、如臨現場的房間、房產、位置或風景體驗，毋需自訂開發。
+title: 搭配AEM Assets·Dynamic Media使用全景和垂直影像檢視器
+description: Dynamic Media6.4版AEM的增強功能包括全景影像檢視器、全景虛擬實境影像檢視器和垂直影像檢視器。 全景檢視器提供輕鬆的方式，提供引人入勝、如臨現場的房間、房產、位置或風景體驗，毋需自訂開發。
 sub-product: 動態媒體
-feature: video-profiles, video-profiles, vr-360
-topics: videos, renditions, authoring
-doc-type: feature video
-audience: all
-activity: use
+feature: 視訊設定檔、視訊設定檔、360 VR視訊
 version: 6.4, 6.5
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 1%
+source-wordcount: '548'
+ht-degree: 2%
 
 ---
 
 
-# 搭配AEM Assets動態媒體使用全景和垂直影像檢視器{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
+# 搭配AEM Assets·Dynamic Media使用全景和垂直影像檢視器{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
-AEM 6.4中的Dynamic Media Viewer增強功能包括新增全景影像檢視器、全景虛擬實境影像檢視器和垂直影像檢視器。 全景檢視器提供輕鬆的方式，提供引人入勝、如臨現場的房間、房產、位置或風景體驗，毋需自訂開發。
+Dynamic Media6.4版AEM的增強功能包括全景影像檢視器、全景虛擬實境影像檢視器和垂直影像檢視器。 全景檢視器提供輕鬆的方式，提供引人入勝、如臨現場的房間、房產、位置或風景體驗，毋需自訂開發。
 
 >[!VIDEO](https://video.tv.adobe.com/v/24156/?quality=9&learn=on)
 
 >[!NOTE]
 >
->視訊會假設您的AEM例項在Dynamic Media S7模式中執行。 [如需有關使用動態媒體設定AEM的指示，請參閱這裡。](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>視訊假設您AEM的例項在Dynamic MediaS7模式下執行。 [有關與Dynamic MediaAEM一起設定的說明，請參閱這裡。](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## 全景與全景VR檢視器
 
@@ -51,9 +48,9 @@ AEM 6.4中的Dynamic Media Viewer增強功能包括新增全景影像檢視器�
    <td>垂直影像檢視器</td>
   </tr>
   <tr>
-   <td>動態媒體執行模式</td>
-   <td>僅限動態媒體Scene7模式</td>
-   <td>DMS7和動態媒體</td>
+   <td>Dynamic Media運行模式</td>
+   <td>Dynamic MediaScene7模式</td>
+   <td>DMS7和Dynamic Media</td>
   </tr>
   <tr>
    <td>使用案例</td>
@@ -68,9 +65,9 @@ AEM 6.4中的Dynamic Media Viewer增強功能包括新增全景影像檢視器�
  </tbody>
 </table>
 
-[在Scene7模式中設定動態媒體](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[在Scene7模式下配置Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
 
-[以混合模式配置動態媒體](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/config-dynamic.html)
+[在混合模式下配置Dynamic Media](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/config-dynamic.html)
 
 >[!NOTE]
 >
