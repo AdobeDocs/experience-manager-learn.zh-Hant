@@ -1,36 +1,39 @@
 ---
-title: 使用表單工作流程的傳送電子郵件步驟
-seo-title: 使用表單工作流程的傳送電子郵件步驟
-description: AEM Forms 6.4中已引入「傳送電子郵件」步驟。使用此步驟，我們可以建立商業程式或工作流程，讓您傳送包含或不含附件的電子郵件。 以下視訊將逐步介紹設定傳送電子郵件元件的步驟
-seo-description: AEM Forms 6.4中已引入「傳送電子郵件」步驟。使用此步驟，我們可以建立商業程式或工作流程，讓您傳送包含或不含附件的電子郵件。 以下視訊將逐步介紹設定傳送電子郵件元件的步驟
+title: 使用傳送電子郵件步驟進行Forms Workflow
+seo-title: 使用傳送電子郵件步驟進行Forms Workflow
+description: 「傳送電子郵件」步驟已於AEM Forms6.4推出。使用此步驟，我們可以建立商業程式或工作流程，讓您傳送包含或不含附件的電子郵件。 以下視訊將逐步介紹設定傳送電子郵件元件的步驟
+seo-description: 「傳送電子郵件」步驟已於AEM Forms6.4推出。使用此步驟，我們可以建立商業程式或工作流程，讓您傳送包含或不含附件的電子郵件。 以下視訊將逐步介紹設定傳送電子郵件元件的步驟
 uuid: d054ebfb-3b9b-4ca4-8355-0eb0ee7febcb
-feature: workflow
+feature: 工作流程
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: 3a11f602-2f4c-423a-baef-28824c0325a1
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
 
 
-# 使用表單工作流程的傳送電子郵件步驟{#using-send-email-step-of-forms-workflow}
+# 使用Forms Workflow{#using-send-email-step-of-forms-workflow}的「發送電子郵件」步驟
 
-AEM Forms 6.4中已引入「傳送電子郵件」步驟。使用此步驟，我們可以建立商業程式或工作流程，讓您傳送包含或不含附件的電子郵件。 以下視訊將逐步介紹設定傳送電子郵件元件的步驟。
+「傳送電子郵件」步驟已於AEM Forms6.4推出。使用此步驟，我們可以建立商業程式或工作流程，讓您傳送包含或不含附件的電子郵件。 以下視訊將逐步介紹設定傳送電子郵件元件的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21499/?quality=9&learn=on)
 
 在本文中，我們將引導您檢視下列使用案例：
 
 1. 使用者填寫「請求時間表」
-1. 在提交表單時，會觸發AEM工作流程
-1. AEM Workflow利用「傳送電子郵件」元件，以DoR作為附件傳送電子郵件
+1. 提交表單時，AEM會觸發工作流程
+1. 「工AEM作流程」利用「發送電子郵件」元件以DoR作為附件發送電子郵件
 
 在使用「傳送電子郵件」步驟之前，請務必從[configMgr](http://localhost:4502/system/console/configMgr)配置Day CQ Mail服務。 提供您環境的特定值
 
@@ -58,7 +61,7 @@ AEM Forms 6.4中已引入「傳送電子郵件」步驟。使用此步驟，我�
 
 >[!NOTE]
 >
->在AEM Forms 6.5和更新版本中，您不需要此自訂程式碼來建立中繼資料屬性。 請使用AEM Workflow中的變數功能
+>在AEM Forms6.5和更高版本中，您不需要此自訂程式碼來建立中繼資料屬性。 請使用「工作流程」中的變AEM數功能
 
 請確定「傳送電子郵件」元件的「附件」標籤已依下方螢幕擷取畫面設定
 ![「傳送電子郵件附件」標籤](assets/sendemailcomponentconfigure.jpg)「DOR.pdf」值必須符合在最適化表單的提交選項中指定的「記錄檔案路徑」中指定的值。
