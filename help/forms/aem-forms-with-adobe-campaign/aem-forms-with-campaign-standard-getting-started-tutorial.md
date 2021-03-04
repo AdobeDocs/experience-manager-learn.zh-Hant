@@ -4,20 +4,17 @@ seo-title: 開始使用AEM Forms和Adobe Campaign Standard
 description: 使用AEM Forms表單資料模型將AEM Forms與Adobe Campaign Standard整合，以擷取ACS促銷活動描述檔資訊等。
 seo-description: 使用AEM Forms表單資料模型將AEM Forms與Adobe Campaign Standard整合，以擷取ACS促銷活動描述檔資訊等。
 uuid: 56450c9b-3752-4a64-b1b3-8c78e81f5921
-feature: 「適應性Forms，表單資料模型」
+feature: adaptive-forms, form-data-model
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 89245554-7b99-4e7e-9810-52191f9ea365
-topic: 開發
-role: 開發人員
-level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '282'
 ht-degree: 0%
 
 ---
