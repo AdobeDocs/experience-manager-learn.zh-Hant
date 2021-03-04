@@ -1,29 +1,32 @@
 ---
-title: 在AEM Forms列印頻道檔案中使用表格元件
-seo-title: 在AEM Forms列印頻道檔案中使用表格元件
+title: 在AEM Forms打印渠道文檔中使用表元件
+seo-title: 在AEM Forms打印渠道文檔中使用表元件
 description: 以下視訊將逐步介紹在Interactive Communications中使用表格元件以列印頻道檔案的步驟。
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: technical video
 activity: implement
 version: 6.4,6.5
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 2%
 
 ---
 
 
-# 在AEM Forms Print Channel Document {#using-table-component-in-aem-forms-print-channel-document}中使用表格元件
+# 在AEM Forms打印渠道文檔{#using-table-component-in-aem-forms-print-channel-document}中使用表元件
 
 以下視訊將逐步介紹在Interactive Communications中使用表格元件以列印頻道檔案的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27769?quality=9&learn=on)
 
-表格用於以表格形式顯示資料。 表格中的列需要根據資料源返回的資料增長或縮小。 若要在列印頻道檔案中使用表格，我們需要使用AEM Forms Designer建立版面檔案（xdp檔案）。 在此版面檔案中，我們新增具有所需欄數的表格。 請根據您的需求，確定欄位物件類型為TextField或Numeric Field。 對於每個欄，欄位會確定資料系結已設為「使用名稱」。
+表格用於以表格形式顯示資料。 表格中的列需要根據資料源返回的資料增長或縮小。 若要在列印頻道檔案中使用表格，我們需要使用AEM Forms設計人員來建立版面檔（xdp檔案）。 在此版面檔案中，我們新增具有所需欄數的表格。 請根據您的需求，確定欄位物件類型為TextField或Numeric Field。 對於每個欄，欄位會確定資料系結已設為「使用名稱」。
 
 >[!NOTE]
 >
@@ -33,7 +36,7 @@ ht-degree: 0%
 
 * [下載資產檔案並解壓縮至您的硬碟](assets/usingtablesinprintchannel.zip)
 
-* 使用套件管理器將兩個Zip檔案匯入AEM
+* 使用套件管理器將兩個ZipAEM檔案匯入
 
 * 與本文相關的資產包含下列項目：
 
