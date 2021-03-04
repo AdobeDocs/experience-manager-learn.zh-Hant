@@ -4,20 +4,17 @@ seo-title: 在AEM Forms列出自訂資產類型
 description: AEM Forms自訂資產類型清單第2部分
 seo-description: AEM Forms自訂資產類型清單第2部分
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
-feature: 適用性表單
+feature: 自適應表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
-topic: 開發
-role: 開發人員
-level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
