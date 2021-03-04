@@ -4,16 +4,19 @@ seo-title: 與服務用戶一起發展AEM Forms
 description: 本文將帶您瞭解在AEM Forms建立服務使用者的程式
 seo-description: 本文將帶您瞭解在AEM Forms建立服務使用者的程式
 uuid: 996f30df-3fc5-4232-a104-b92e1bee4713
-feature: 自適應表單
+feature: 適用性表單
 topics: development,administration
 audience: implementer,developer
 doc-type: article
 activity: setup
 discoiquuid: 65bd4695-e110-48ba-80ec-2d36bc53ead2
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
