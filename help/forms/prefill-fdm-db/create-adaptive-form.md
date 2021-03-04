@@ -1,7 +1,7 @@
 ---
 title: 建立最適化表單
 description: 建立並設定最適化表單，以使用表單資料模型的預填服務
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 5813
 thumbnail: kt-5813.jpg
+topic: 開發
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 1%
+source-wordcount: '612'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +29,7 @@ ht-degree: 1%
 * 已設定Apache Sling Connection Pooled DataSource
 * 基於RDBMS的表單資料模型
 
-下一步是建立並配置最適化表單以使用表單資料模型。  若要搶先開始，您可以下載並匯入[範例表格。 ](assets/fdm-demo-af.zip)範例表單中有一個區段可顯示員工詳細資料，另一個區段則可列出員工的受益人。
+下一步是建立並配置最適化表單以使用表單資料模型。  若要搶先開始，您可以下載並匯入](assets/fdm-demo-af.zip)範例表格。 [範例表單中有一個區段可顯示員工詳細資料，另一個區段則可列出員工的受益人。
 
 ## 將表單與表單資料模型建立關聯
 
