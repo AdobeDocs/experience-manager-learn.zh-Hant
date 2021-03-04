@@ -9,10 +9,14 @@ audience: developer
 kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
+feature: '"APIs,AEM Project Archetype"'
+topic: 「內容管理，開發」
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3015'
+source-wordcount: '3024'
 ht-degree: 0%
 
 ---
@@ -43,7 +47,7 @@ _如果系統上同時安裝了Java 8和Java 11,VS程式碼測試執行者在執
    $ git checkout tutorial/unit-testing-start
    ```
 
-1. 使用您的Maven技巧，將程式碼庫部署至本機AEM實例：
+1. 使用您的Maven技巧，將程式碼AEM庫部署至本機執行個體：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -51,7 +55,7 @@ _如果系統上同時安裝了Java 8和Java 11,VS程式碼測試執行者在執
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.5或6.4，請將`classic`描述檔附加至任何Maven命令。
+   > 如果使用AEM6.5或6.4，請將`classic`描述檔附加至任何Maven命令。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
@@ -62,35 +66,35 @@ _如果系統上同時安裝了Java 8和Java 11,VS程式碼測試執行者在執
 ## 目標
 
 1. 瞭解單元測試的基本知識。
-1. 瞭解常用於測試AEM程式碼的架構和工具。
-1. 瞭解在撰寫單元測試時模擬AEM資源的選項。
+1. 瞭解常用於測試程式碼的架構和工AEM具。
+1. 瞭解編寫單元測試時，模AEM擬或模擬資源的選項。
 
 ## 背景 {#unit-testing-background}
 
-在本教學課程中，我們將探討如何編寫[Unit Tests](https://en.wikipedia.org/wiki/Unit_testing)，以取得我們Byline元件的[Sling Model](https://sling.apache.org/documentation/bundles/models.html)（在[建立自訂AEM元件](custom-component.md)中建立）。 單元測試是使用Java編寫的建置時測試，可驗證Java代碼的預期行為。 每個單元測試通常都很小，並根據預期結果驗證方法（或工作單元）的輸出。
+在本教學課程中，我們將探討如何編寫[Unit Tests](https://en.wikipedia.org/wiki/Unit_testing)，以取得Byline元件的[Sling Model](https://sling.apache.org/documentation/bundles/models.html)(在[Creating a custom AEM Component](custom-component.md)中建立)。 單元測試是使用Java編寫的建置時測試，可驗證Java代碼的預期行為。 每個單元測試通常都很小，並根據預期結果驗證方法（或工作單元）的輸出。
 
-我們將使用AEM最佳實務，並使用：
+我們將使用最AEM佳實務，並使用：
 
 * [JUnit 5](https://junit.org/junit5/)
 * [Mockito測試框架](https://site.mockito.org/)
 * [wcm.io Test Framework](https://wcm.io/testing/) (以 [Apache Sling Mocks為基礎](https://sling.apache.org/documentation/development/sling-mock.html))
 
-## 設備測試和Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
+## 設備測試和Adobe雲管理器{#unit-testing-and-adobe-cloud-manager}
 
-[Adobe Cloud ](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Manager將單元測試執行和程式碼 [涵蓋率](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) 報告整合至其CI/CD管道，以協助鼓勵並推廣單元測試AEM程式碼的最佳實務。
+[Adobe雲管](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) 理器將單元測試執行和 [程式碼](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) 覆蓋報告整合至其CI/CD管道，以協助鼓勵和推廣單元測試程式碼的最佳AEM實務。
 
 雖然單位測試程式碼是任何程式碼庫的最佳實務，但使用Cloud Manager時，請務必善用其程式碼品質測試和報告功能，為Cloud Manager執行單元測試。
 
-## 檢查測試Maven依賴項{#inspect-the-test-maven-dependencies}
+## Inspect測試Maven依賴項{#inspect-the-test-maven-dependencies}
 
 第一步是檢查Maven相依性，以支援編寫和執行測試。 需要4個依賴項：
 
 1. JUnit5
 1. Mockito測試框架
 1. Apache Sling Mocks
-1. AEM Mocks Test Framework(by io.wcm)
+1. Mocks AEM Test Framework(by io.wcm)
 
-在使用[AEM Maven原型](project-setup.md)的設定期間，**JUnit5**、**Mockito**&#x200B;和&#x200B;**AEM Mocks**&#x200B;測試相依性會自動新增至專案。
+在使用[AEM Maven archetype](project-setup.md)的設定期間，將&#x200B;**JUnit5**、**Mockito**&#x200B;和&#x200B;**AEMMocks**&#x200B;測試依賴項自動添加到項目中。
 
 1. 要查看這些相關性，請在&#x200B;**aem-guides-wknd/pom.xml**&#x200B;開啟父反應器POM，導航到`<dependencies>..</dependencies>`並確保已定義以下相關性：
 
@@ -280,17 +284,17 @@ public class BylineImplTest {
 * [TDD或測試驅動開發](https://en.wikipedia.org/wiki/Test-driven_development)，即在開發實施之前，逐步編寫單元測試；撰寫測試，編寫實作，讓測試通過。
 * 實作優先開發，包括先開發工作程式碼，然後撰寫測試以驗證此程式碼。
 
-在本教學課程中，使用後一種方法（因為我們已在上一章中建立了工作&#x200B;**BylineImpl.java**）。 因此，我們既要審視和瞭解其公開手段的行為，也要瞭解其實施細節。 這聽起來可能相反，因為良好的測試只應關注輸入和輸出，但是在AEM中工作時，需要瞭解各種實作考量，才能建立工作測試。
+在本教學課程中，使用後一種方法（因為我們已在上一章中建立了工作&#x200B;**BylineImpl.java**）。 因此，我們既要審視和瞭解其公開手段的行為，也要瞭解其實施細節。 這聽起來可能相反，因為良好的測試只應關注輸入和輸出，但在工作中AEM，需要瞭解各種執行考慮因素，才能構建工作測試。
 
-TDD在AEM方面需要一定的專業水準，最能被精通AEM開發與AEM程式碼單元測試的AEM開發人員採用。
+TDD在程式碼的開發AEM與單元測試方面，需要一定的專AEM業知識，並最AEM能被熟悉程式碼開發與單元測試的開發人員所AEM採用。
 
 ## 設定AEM測試內容{#setting-up-aem-test-context}
 
-大部份為AEM編寫的程式碼都仰賴JCR、Sling或AEM API，而JCR、Sling或AEM API則需要執行中AEM的內容才能正確執行。
+大部份的程式AEM碼都需仰賴JCR、Sling或AEMAPI，而API則需要執行的上下文才能正AEM確執行。
 
-由於裝置測試是在建置時執行，因此在執行中AEM例項的上下文外，就沒有此類上下文。 為方便使用，[wcm.io的AEM Mocks](https://wcm.io/testing/aem-mock/usage.html)會建立模擬內容，讓這些API對&#x200B;_大多_&#x200B;的作用就像在AEM中執行一樣。
+由於單位測試是在建置時執行，因此在執行中例項的上下AEM文外，沒有此類上下文。 為方便執行此動作，[wcm.io的AEMMocks](https://wcm.io/testing/aem-mock/usage.html)會建立模擬內容，讓這些API對&#x200B;_大多_&#x200B;的作用如同在其中執行AEM。
 
-1. 使用&#x200B;**BylineImplTest.java**&#x200B;中的&#x200B;**wcm.io**`AemContext`建立AEM內容，將它新增為以`@ExtendWith`裝飾的JUnit擴充功能至&#x200B;**BylineImplTest.java**&#x200B;檔案。 擴充功能會處理所有必要的初始化和清除工作。 為`AemContext`建立可用於所有測試方法的類別變數。
+1. 使用AEM **BylineImplTest.java**&#x200B;中的&#x200B;**wcm.io的** `AemContext`建立內容，方法是將其新增為以`@ExtendWith`裝飾的JUnit擴充功能至&#x200B;**BylineImplTest.java**&#x200B;檔案。 擴充功能會處理所有必要的初始化和清除工作。 為`AemContext`建立可用於所有測試方法的類別變數。
 
    ```java
    import org.junit.jupiter.api.extension.ExtendWith;
@@ -304,12 +308,12 @@ TDD在AEM方面需要一定的專業水準，最能被精通AEM開發與AEM程�
        private final AemContext ctx = new AemContext();
    ```
 
-   此變數`ctx`會公開模擬AEM內容，提供數個AEM和Sling抽象化：
+   此變數`ctx`會公開模擬內容，AEM提供數個AEM和Sling抽象：
 
    * BylineImpl Sling Model將會註冊至此內容
    * 在此上下文中建立模擬JCR內容結構
    * 可在此上下文中註冊自訂OSGi服務
-   * 提供多種常用的必要模擬物件和輔助工具，例如SlingHttpServletRequest物件、多種模擬Sling和AEM OSGi服務，例如ModelFactory、PageManager、Page、Template、ComponentManager、Component、TagManager、Tag等。
+   * 提供多種常用的必要模擬物件和輔助工具，例如SlingHttpServletRequest物件、多種模擬Sling和AEMOSGi服務，例如ModelFactory、PageManager、Page、Template、ComponentManager、Component、TagManager、Tag等。
       * *請注意，並非所有這些物件的方法都會實作！*
    * 而且[更多](https://wcm.io/testing/aem-mock/usage.html)!
 
@@ -325,7 +329,7 @@ TDD在AEM方面需要一定的專業水準，最能被精通AEM開發與AEM程�
    }
    ```
 
-   * **`addModelsForClasses`** 將要測試的Sling Model註冊至模擬AEM Context，以便在方法中執行個體 `@Test` 化。
+   * **`addModelsForClasses`** 將要測試的Sling Model註冊至模AEM擬內容，以便在方法中實 `@Test` 例化。
    * **`load().json`** 將資源結構載入到模擬上下文中，使代碼能夠與這些資源交互，就像它們是由真實儲存庫提供的一樣。檔案&#x200B;**`BylineImplTest.json`**&#x200B;中的資源定義將載入到&#x200B;**/content**&#x200B;下的模擬JCR上下文中。
    * **`BylineImplTest.json`** 尚未存在，因此，我們建立它並定義測試所需的JCR資源結構。
 
@@ -348,7 +352,7 @@ TDD在AEM方面需要一定的專業水準，最能被精通AEM開發與AEM程�
 
    使用單位測試時的一般規則是建立滿足每項測試所需的模擬內容、內容和程式碼的最小集。 避免在撰寫測試前先建立完整的模擬內容，因為這通常會產生不需要的文物。
 
-   現在，由於&#x200B;**BylineImplTest.json**&#x200B;的存在，當`ctx.json("/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.json", "/content")`執行時，模擬資源定義會載入路徑&#x200B;**/content的內容。**
+   現在，由於&#x200B;**BylineImplTest.json**&#x200B;的存在，當`ctx.json("/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.json", "/content")`執行時，模擬資源定義會載入路徑&#x200B;**/content的內容中。**
 
 ## 正在測試getName(){#testing-get-name}
 
@@ -459,7 +463,7 @@ TDD在AEM方面需要一定的專業水準，最能被精通AEM開發與AEM程�
 
    *testGetName()因斷言而失敗*
 
-   我們收到&#x200B;**AssertionError**，這表示測試中的斷言條件失敗，它告訴我們&#x200B;**預期值為&quot;Jane Doe&quot;**，但&#x200B;**實際值為null**。 這很有意義，因為&#x200B;**name&quot;**&#x200B;屬性尚未新增至&#x200B;**BylineImplTest.json**&#x200B;中模擬&#x200B;**/content/byline**&#x200B;資源定義，所以，讓我們新增：
+   我們收到&#x200B;**AssertionError**，這表示測試中的斷言條件失敗，它告訴我們&#x200B;**預期值為&quot;Jane Doe&quot;**，但&#x200B;**實際值為null**。 這有意義，因為&#x200B;**name&quot;**&#x200B;屬性尚未新增至&#x200B;**BylineImplTest.json**&#x200B;中模擬&#x200B;**/content/byline**&#x200B;資源定義，所以我們加入：
 
 1. 更新&#x200B;**BylineImplTest.json**&#x200B;以定義`"name": "Jane Doe".`
 
