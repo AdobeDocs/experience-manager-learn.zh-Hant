@@ -1,9 +1,9 @@
 ---
-title: AEM Sites快速入門——頁面和範本
-seo-title: AEM Sites快速入門——頁面和範本
+title: 開始使用AEM Sites-頁面和範本
+seo-title: 開始使用AEM Sites-頁面和範本
 description: 瞭解基本頁面元件與可編輯範本之間的關係。 瞭解核心元件如何加入專案，並瞭解可編輯範本的進階政策設定，以根據Adobe XD的模型建立結構良好的文章頁面範本。
-sub-product: sites
-feature: template-editor, core-components
+sub-product: Sites
+feature: '"核心元件，可編輯範本"'
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,10 +12,13 @@ audience: developer
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
+topic: 「內容管理，開發」
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3074'
+source-wordcount: '3083'
 ht-degree: 0%
 
 ---
@@ -44,7 +47,7 @@ ht-degree: 0%
    $ git checkout tutorial/pages-templates-start
    ```
 
-1. 使用您的Maven技巧，將程式碼庫部署至本機AEM實例：
+1. 使用您的Maven技巧，將程式碼AEM庫部署至本機執行個體：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -52,7 +55,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.5或6.4，請將`classic`描述檔附加至任何Maven命令。
+   > 如果使用AEM6.5或6.4，請將`classic`描述檔附加至任何Maven命令。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
@@ -62,7 +65,7 @@ ht-degree: 0%
 
 ## 目標
 
-1. 檢查在Adobe XD中建立的頁面設計，並將它對應至核心元件。
+1. Inspect在Adobe XD建立的頁面設計，並對應至核心元件。
 1. 瞭解可編輯範本的詳細資訊，以及如何使用原則來強制精細控制頁面內容。
 1. 瞭解範本和頁面的連結方式
 
@@ -72,9 +75,9 @@ ht-degree: 0%
 
 ![文章頁面設計與未設定樣式的版本](assets/pages-templates/what-you-will-build.png)
 
-## 使用Adobe XD {#adobexd}進行UI規劃
+## 使用Adobe XD{#adobexd}進行UI規劃
 
-在大多數情況下，規劃新網站都從模型和靜態設計開始。 [Adobe ](https://www.adobe.com/products/xd.html) XD是建立使用者體驗的設計工具。接下來，我們將檢查UI套件和模型，以協助規劃「文章頁面範本」的結構。
+在大多數情況下，規劃新網站都從模型和靜態設計開始。 [Adobe](https://www.adobe.com/products/xd.html) XD是建立使用體驗的設計工具。接下來，我們將檢查UI套件和模型，以協助規劃「文章頁面範本」的結構。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30214/?quality=12&learn=on)
 
@@ -90,7 +93,7 @@ ht-degree: 0%
 1. **初始內容** -定義範本將開頭的元件，內容作者可編輯和／或刪除這些元件
 1. **Policys**  —— 定義元件的行為方式以及作者將提供哪些選項的配置。
 
-接著，在AEM中建立符合模型結構的新範本。 這將發生在AEM的本機例項中。 請依照下列視訊中的步驟進行：
+接著，在中建立符合AEM模型結構的新範本。 這將發生在的本地實例AEM中。 請依照下列視訊中的步驟進行：
 
 >[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
 
@@ -122,7 +125,7 @@ ht-degree: 0%
 1. 更新「頁面根」容器的原則。 這是範本上最外層的容器。 將策略設定為&#x200B;**Page Root**。
    * 在「**容器設定**」下方，將「**版面配置**」設為「回應式格線&#x200B;**」。**
 1. 參與&#x200B;**內容容器**&#x200B;的版面模式。 從右到左拖曳控點，將容器縮小為8欄寬。
-1. 接合&#x200B;**側軌容器**&#x200B;的版面模式。 從右到左拖曳控點，將容器縮小為4欄寬。 然後，將左控點從左至右1欄拖曳至容器3欄寬，並在&#x200B;**內容容器**&#x200B;之間留有1欄間隙。
+1. 接合&#x200B;**側軌容器**&#x200B;的版面模式。 從右到左拖曳控點，將容器縮小為4欄寬。 然後，將左控點從左至右1欄拖曳至容器3欄，使容器3欄變寬，並在&#x200B;**內容容器**&#x200B;之間留有1欄間隙。
 1. 開啟行動模擬器並切換至行動中斷點。 再次接合版面模式，使&#x200B;**內容容器**&#x200B;和&#x200B;**側欄容器**&#x200B;成為頁面的全寬。 這會在行動中斷點中垂直堆疊容器。
 1. 更新&#x200B;**內容容器**&#x200B;中&#x200B;**Text**&#x200B;元件的原則。
    * 將策略設定為&#x200B;**內容文本**。
@@ -158,7 +161,7 @@ ht-degree: 0%
 
 建立全域內容（例如頁首或頁尾）時的常見做法是使用「體驗片段」[。 ](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)體驗片段，可讓使用者結合多個元件，以建立單一、可參考的元件。 體驗片段的優點是支援多網站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)。
 
-AEM Project Archetype會產生頁首和頁尾。 接著，更新「體驗片段」以符合模型。 請依照下列視訊中的步驟進行：
+「項AEM目原型」生成頁眉和頁腳。 接著，更新「體驗片段」以符合模型。 請依照下列視訊中的步驟進行：
 
 >[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
 
@@ -166,7 +169,7 @@ AEM Project Archetype會產生頁首和頁尾。 接著，更新「體驗片段�
 
 1. 下載範例內容套件&#x200B;**[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets.zip)**。
 1. 使用位於[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)的Package Manager上傳及安裝內容套件
-1. 更新「Web變數」範本，此範本是[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html)上用於體驗片段的範本
+1. 更新「Web變數」範本，此範本是[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html)中用於體驗片段的範本
    * 更新範本上的&#x200B;**Container**&#x200B;元件原則。
    * 將策略設定為&#x200B;**XF Root**。
    * 在&#x200B;**允許的元件**&#x200B;下，選擇元件組&#x200B;**WKND站點項目——結構**&#x200B;以包含&#x200B;**語言導航**、**導航**&#x200B;和&#x200B;**快速搜索**&#x200B;元件。
@@ -230,11 +233,11 @@ AEM Project Archetype會產生頁首和頁尾。 接著，更新「體驗片段�
    * 將&#x200B;**父頁**&#x200B;設定為`/content/wknd/us/en/magazine`。
    * 在&#x200B;**項目設定**&#x200B;下，選中&#x200B;**連結項目**&#x200B;並選中&#x200B;**顯示日期**。
 
-## 檢查節點結構{#node-structure}
+## Inspect節點結構{#node-structure}
 
 此時，文章頁面顯然沒有樣式。 但是，基本結構已經到位。 接著，檢查文章頁面的節點結構，以更好地瞭解範本、頁面和元件的角色。
 
-在本機AEM例項上使用CRXDE-Lite工具來檢視基礎節點結構。
+在本地實例上使用CRXDE-Lite工AEM具查看基礎節點結構。
 
 1. 開啟[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/us/en/magazine/guide-la-skateparks/jcr%3Acontent)，然後使用樹狀導覽導覽至`/content/wknd/us/en/magazine/guide-la-skateparks`。
 
@@ -244,7 +247,7 @@ AEM Project Archetype會產生頁首和頁尾。 接著，更新「體驗片段�
 
    請注意`cq:template`的值，此值指向我們先前建立的「文章頁面範本」(`/conf/wknd/settings/wcm/templates/article-page`)。
 
-   另請注意`sling:resourceType`的值，它指向`wknd/components/page`。 這是由AEM專案原型建立的頁面元件，負責根據範本呈現頁面。
+   另請注意`sling:resourceType`的值，它指向`wknd/components/page`。 這是由專案原型建立的頁面元AEM件，負責根據範本來呈現頁面。
 
 1. 展開`/content/wknd/us/en/magazine/guide-la-skateparks/jcr:content`下的`jcr:content`節點，並查看節點層次結構：
 
@@ -252,7 +255,7 @@ AEM Project Archetype會產生頁首和頁尾。 接著，更新「體驗片段�
 
    您應該能夠將每個節點鬆散地映射到已編寫的元件。 查看您是否可以透過檢查前置有`container`的節點來識別使用的不同配置容器。
 
-1. 接下來檢查位於`/apps/wknd/components/page`的頁面元件。 在CRXDE Lite中檢視元件屬性：
+1. 接下來檢查位於`/apps/wknd/components/page`的頁面元件。 在CRXDE Lite中查看元件屬性：
 
    ![頁面元件屬性](assets/pages-templates/page-component-properties.png)
 
@@ -260,13 +263,13 @@ AEM Project Archetype會產生頁首和頁尾。 接著，更新「體驗片段�
 
    `sling:resourceSuperType`屬性指向`core/wcm/components/page/v2/page`。 此屬性允許WKND的頁元件繼承核心元件頁元件的&#x200B;**all**&#x200B;功能。 這是[Proxy元件模式](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)的第一個範例。 如需詳細資訊，請參閱[這裡。](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html)。
 
-1. 檢查WKND元件中的另一個元件，`Breadcrumb`元件位於：`/apps/wknd/components/breadcrumb`。 請注意，您可以找到相同的`sling:resourceSuperType`屬性，但此時它指向`core/wcm/components/breadcrumb/v2/breadcrumb`。 這是使用Proxy元件模式來包含核心元件的另一個範例。 事實上，WKND程式碼庫中的所有元件都是AEM Core Components的proxy（我們著名的HelloWorld元件除外）。 在&#x200B;*編寫自訂程式碼之前，請盡可能*&#x200B;重複使用核心元件的功能，這是最佳實務。
+1. InspectWKND元件中的另一個元件`Breadcrumb`元件位於：`/apps/wknd/components/breadcrumb`。 請注意，您可以找到相同的`sling:resourceSuperType`屬性，但此時它指向`core/wcm/components/breadcrumb/v2/breadcrumb`。 這是使用Proxy元件模式來包含核心元件的另一個範例。 事實上，WKND程式碼庫中的所有元件都是核心元AEM件的proxy（我們著名的HelloWorld元件除外）。 在&#x200B;*編寫自訂程式碼之前，請盡可能*&#x200B;重複使用核心元件的功能，這是最佳實務。
 
-1. 接下來，使用CRXDE Lite檢查`/libs/core/wcm/components/page/v2/page`的核心元件頁面：
+1. 接下來，使用CRXDE Lite檢查`/libs/core/wcm/components/page/v2/page`的「核心元件」頁：
 
    >[!NOTE]
    >
-   > 在AEM 6.5/6.4中，核心元件位於`/apps/core/wcm/components`下。 在AEM中，「核心元件」位於`/libs`下方，並會自動更新。
+   > 在AEM6.5/6.4中，核心元件位於`/apps/core/wcm/components`下。 作AEM為Cloud Service，核心元件位於`/libs`下，並自動更新。
 
    ![「核心元件」頁](assets/pages-templates/core-page-component-properties.png)
 
@@ -310,21 +313,21 @@ AEM Project Archetype會產生頁首和頁尾。 接著，更新「體驗片段�
 
    您可以閱讀本文章](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)，進一步瞭解可編輯範本如何影響到呈現[內容頁面。
 
-1. 檢查另一個核心元件，如`/libs/core/wcm/components/breadcrumb/v2/breadcrumb`的Breadcrumb。 檢視`breadcrumb.html`指令碼，瞭解如何最終產生Breadcrumb元件的標籤。
+1. Inspect另一個核心元件，例如`/libs/core/wcm/components/breadcrumb/v2/breadcrumb`的Breadcrumb。 檢視`breadcrumb.html`指令碼，瞭解如何最終產生Breadcrumb元件的標籤。
 
 ## 將配置保存到原始碼控制{#configuration-persistence}
 
-在許多情況下，尤其是在AEM專案開始時，將設定（例如範本和相關內容原則）保留至來源控制非常有用。 這可確保所有開發人員針對相同的內容和組態進行工作，並可確保環境之間的額外一致性。 一旦項目達到一定的成熟度，管理模板的做法就可以交給一組特殊的超級用戶。
+在許多情況下，特別是在項目開始AEM時，將配置（如模板和相關內容策略）保留到源控制非常有用。 這可確保所有開發人員針對相同的內容和組態進行工作，並可確保環境之間的額外一致性。 一旦項目達到一定的成熟度，管理模板的做法就可以交給一組特殊的超級用戶。
 
-目前，我們將像對待其他程式碼一樣對待範本，並將&#x200B;**文章頁面範本**&#x200B;向下同步化為專案的一部分。 到目前為止，我們已將&#x200B;**推送**&#x200B;程式碼從AEM專案傳送至AEM的本機例項。 **文章頁面範本**&#x200B;是直接在AEM的本機例項上建立，因此我們需要將範本匯入AEM專案中。 ******ui.content**&#x200B;模組已包含在AEM專案中，以利做此特定用途。
+目前，我們將像對待其他程式碼一樣對待範本，並將&#x200B;**文章頁面範本**&#x200B;向下同步化為專案的一部分。 到目前為止，我們已將&#x200B;**pushed**&#x200B;程式碼從專案傳送AEM至本機例項AEM。 **文章頁面範本**&#x200B;是直接在本機例項上建立的AEM，因此我們需要將範本匯入至我們的專AEM案。 ****&#x200B;專案中包含&#x200B;**ui.content**&#x200B;模組，以利AEM此特定用途。
 
-接下來的幾個步驟將使用使用[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync&amp;ssr=false#overview)外掛程式的VSCode IDE進行，但可能是使用您已設定為&#x200B;**import**&#x200B;或從本機AEM例項匯入內容的任何IDE進行。
+使用[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync&amp;ssr=false#overview)外掛程式的VSCode IDE會執行後續的幾個步驟，但可能是使用您已設定為&#x200B;**import**&#x200B;的任何IDE，或從本機例項匯入內容AEM。
 
 1. 在VSCode中，開啟`aem-guides-wknd`項目。
 
 1. 展開「項目瀏覽器」中的&#x200B;**ui.content**&#x200B;模組。 展開`src`資料夾並導航到`/conf/wknd/settings/wcm/templates`。
 
-1. [!UICONTROL Right+] 按一下 `templates` 資料夾，然 **後選取「從AEM Server匯入」**:
+1. [!UICONTROL Right+按一] 下資料 `templates` 夾，然後選 **取「從伺AEM服器匯入」**:
 
    ![VSCode匯入範本](assets/pages-templates/vscode-import-templates.png)
 
@@ -336,7 +339,7 @@ AEM Project Archetype會產生頁首和頁尾。 接著，更新「體驗片段�
 
    ![VSCode導入策略](assets/pages-templates/policies-article-page-template.png)
 
-1. 檢查位於`ui.content/src/main/content/META-INF/vault/filter.xml`的`filter.xml`檔案。
+1. Inspect位於`ui.content/src/main/content/META-INF/vault/filter.xml`的`filter.xml`檔案。
 
    ```xml
    <!--ui.content filter.xml-->
@@ -359,7 +362,7 @@ AEM Project Archetype會產生頁首和頁尾。 接著，更新「體驗片段�
 
 ## 恭喜！{#congratulations}
 
-恭喜您，您剛使用Adobe Experience Manager Sites建立了新的範本和頁面。
+恭喜，您剛和Adobe Experience Manager Sites建立了新範本和頁面。
 
 ### 後續步驟{#next-steps}
 
