@@ -1,25 +1,28 @@
 ---
-title: 建立Adobe Sign Cloud設定
-description: AEM中的雲端服務設定可讓您建立AEM與其他雲端應用程式之間的整合。 以下影片將引導您完成建立雲端服務設定以整合AEM與Adobe Sign所需的步驟。
-feature: adaptive-forms
+title: 建立Adobe Sign雲端組態
+description: 中的雲端服務設AEM定可讓您建立與其他雲端應用AEM程式的整合。 以下視訊將引導您完成建立雲端服務組態以與Adobe Sign整合所需AEM的步驟。
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 38179.jpg
 kt: 6033
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 0%
+source-wordcount: '89'
+ht-degree: 4%
 
 ---
 
-# 建立Adobe Sign Cloud設定
+# 建立Adobe Sign雲端組態
 
-AEM中的雲端服務設定可讓您建立AEM與其他雲端應用程式之間的整合。
+中的雲端服務設AEM定可讓您建立與其他雲端應用AEM程式的整合。
 
-以下影片將引導您完成建立雲端服務組態以整合AEM與Adobe Sign所需的步驟
+以下視訊將引導您完成建立雲端服務組態以與Adobe Sign整AEM合所需的步驟
 
 >[!VIDEO](https://video.tv.adobe.com/v/38179/?quality=9&learn=on)
