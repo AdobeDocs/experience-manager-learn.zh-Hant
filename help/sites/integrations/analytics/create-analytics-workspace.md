@@ -1,7 +1,7 @@
 ---
-title: 使用分析工作區分析資料
-description: 瞭解如何將從Adobe Experience Manager網站擷取的資料對應至Adobe Analytics報表套裝中的量度和維度。 瞭解如何使用Adobe Analytics的「分析工作區」功能建立詳細的報告控制面板。
-feature: analytics
+title: 使用Analysis Workspace分析資料
+description: 瞭解如何將從Adobe Experience Manager網站擷取的資料對應至Adobe Analytics報表套裝中的量度和維度。 瞭解如何使用Adobe Analytics的Analysis Workspace功能建立詳細的報告資料板。
+feature: 分析
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,22 +9,25 @@ activity: setup
 version: cloud-service
 kt: 6409
 thumbnail: KT-6296.jpg
+topic: Integrations
+role: 業務從業人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 55beee99b91c44f96cd37d161bb3b4ffe38d2687
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2207'
 ht-degree: 0%
 
 ---
 
 
-# 使用分析工作區分析資料
+# 使用Analysis Workspace分析資料
 
-瞭解如何將從Adobe Experience Manager網站擷取的資料對應至Adobe Analytics報表套裝中的量度和維度。 瞭解如何使用Adobe Analytics的「分析工作區」功能建立詳細的報告控制面板。
+瞭解如何將從Adobe Experience Manager網站擷取的資料對應至Adobe Analytics報表套裝中的量度和維度。 瞭解如何使用Adobe Analytics的Analysis Workspace功能建立詳細的報告資料板。
 
 ## 您將建立的
 
-WKND行銷團隊想瞭解哪個「行動呼籲(CTA)」按鈕在首頁上表現最佳。 在本教學課程中，我們將在分析工作區中建立新專案，以視覺化方式呈現不同CTA按鈕的效能，並瞭解使用者在網站上的行為。 當使用者按一下WKND首頁上的「動作呼叫(CTA)」按鈕時，會使用Adobe Analytics擷取下列資訊。
+WKND行銷團隊想瞭解哪個「行動呼籲(CTA)」按鈕在首頁上表現最佳。 在本教學課程中，我們將在Analysis Workspace建立新專案，以視覺化方式呈現不同CTA按鈕的效能，並瞭解使用者在網站上的行為。 當使用者按一下WKND首頁上的「動作呼叫(CTA)」按鈕時，會使用Adobe Analytics擷取下列資訊。
 
 **Analytics變數**
 
@@ -38,28 +41,28 @@ WKND行銷團隊想瞭解哪個「行動呼籲(CTA)」按鈕在首頁上表現�
 * `event8` -  `CTA Button Click event`
 * `prop8` -  `CTA Button Id`
 
-![CTA按一下Adobe Analytics](assets/create-analytics-workspace/page-analytics.png)
+![CTA點擊Adobe Analytics](assets/create-analytics-workspace/page-analytics.png)
 
 ### 目標{#objective}
 
 1. 建立新的報表套裝或使用現有的報表套裝。
 1. 在報表套裝中設定[轉換變數(eVar)](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)和[成功事件（事件）](https://docs.adobe.com/help/en/analytics/admin/admin-tools/success-events/success-event.html)。
-1. 建立[分析工作區專案](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/home.html)，以利用工具分析資料，讓您快速建立、分析和分享見解。
-1. 與其他團隊成員共用分析工作區專案。
+1. 建立[Analysis Workspace專案](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/home.html)，借助可讓您快速建立、分析和分享見解的工具來分析資料。
+1. 與其他團隊成員分享Analysis Workspace專案。
 
 ## 必備條件
 
-本教學課程是[追蹤使用Adobe Analytics](./track-clicked-component.md)點按的元件的延續，並假設您有：
+本教學課程是[追蹤已點按的元件與Adobe Analytics](./track-clicked-component.md)的延續，並假設您已：
 
-* A **啟動屬性**&#x200B;並啟用[Adobe Analytics擴充功能](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)
-* **Adobe** Analyticst/dev報表套裝ID和追蹤伺服器。請參閱以下檔案，瞭解如何建立新的報表套裝[。](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)
-* [Experience Platform ](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) Debugger瀏覽器擴充功能已設定，您的Launch屬性已載入 [https://wknd.site/us/en.](https://wknd.site/us/en.html) htmlor AEM網站，並啟用Adobe資料層。
+* 啟用[Adobe Analytics擴展](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)的&#x200B;**啟動屬性**
+* **Adobe** Analyticst/dev報表套裝ID和追蹤伺服器。請參閱以下檔案，瞭解如何建立新的報表套裝](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)。[
+* [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) 除錯瀏覽器擴充功能已設定，您的Launch屬性已載入 [https://wknd.site/us/en.](https://wknd.site/us/en.html) html或啟AEM用Adobe資料層的網站。
 
 ## 轉換變數(eVar)和成功事件（事件）
 
-自訂分析轉換變數（或eVar）會放置在您網站所選網頁的Adobe程式碼中。 其主要用途是在自訂行銷報告中劃分轉換成功度量。 eVar可以是瀏覽型的，其功能與Cookie類似。 傳入eVar變數的值會跟隨使用者一段預定期間。
+「Custom Insight轉換變數」(或eVar)會置於您網站所選網頁的Adobe程式碼中。 其主要用途是在自訂行銷報告中劃分轉換成功度量。 eVar可以是瀏覽型的，其功能與Cookie類似。 傳遞至eVar變數的值會跟隨使用者一段預定期間。
 
-當eVar設為訪客的值時，Adobe會自動記住該值，直到其過期。 訪客在eVar值作用中時遇到的任何成功事件都會計入eVar值。
+當eVar設為訪客的值時，Adobe會自動記住該值，直到其過期。 訪客在作用中時遇到的任何成功事件都會計入為eVar值。
 
 eVar最適合用來測量因果，例如：
 
@@ -71,7 +74,7 @@ eVar最適合用來測量因果，例如：
 
 ### 設定eVar
 
-1. 從Adobe Experience Cloud首頁，選取您的組織並啟動Adobe Analytics。
+1. 從Adobe Experience Cloud首頁，選擇您的組織，然後啟動Adobe Analytics。
 
    ![Analytics AEP](assets/create-analytics-workspace/analytics-aep.png)
 
@@ -93,7 +96,7 @@ eVar最適合用來測量因果，例如：
 
    ![新增eVar](assets/create-analytics-workspace/add-new-evars.png)
 
-1. 請為每個eVar和&#x200B;**Save**&#x200B;儲存變更提供適當的名稱和說明。 我們將使用這些eVar在下一節中建立分析工作區專案。 因此，使用者易記的名稱可讓變數更容易被發現。
+1. 請為每個eVar和&#x200B;**Save**&#x200B;儲存變更提供適當的名稱和說明。 我們將使用這些eVar，在下一節中建立Analysis Workspace專案。 因此，使用者易記的名稱可讓變數更容易被發現。
 
    ![eVar](assets/create-analytics-workspace/evars.png)
 
@@ -103,16 +106,16 @@ eVar最適合用來測量因果，例如：
 
 1. 在&#x200B;**報表套裝管理員**&#x200B;視窗中，選取&#x200B;**報表套裝Id**，然後按一下&#x200B;**編輯設定**。
 1. 按一下「**轉換** > **成功事件**」
-1. 使用&#x200B;**新增**&#x200B;選項，建立新的自訂成功事件以追蹤CTA按鈕，然後按一下，然後&#x200B;**儲存您的變更。**
+1. 使用&#x200B;**新增**&#x200B;選項，建立新的自訂成功事件以追蹤CTA按鈕，然後按一下，然後&#x200B;**儲存**&#x200B;您的變更。
    * `Event` : `event8`
    * `Name`:`CTA Click`
    * `Type`:`Counter`
 
    ![eVar](assets/create-analytics-workspace/add-success-event.png)
 
-## 在分析工作區中建立新專案{#workspace-project}
+## 在Analysis Workspace建立新專案{#workspace-project}
 
-分析工作區是彈性的瀏覽器工具，可讓您快速建立分析並分享見解。 使用拖放介面，您可以建立分析、新增視覺化，讓資料更生動、組織資料集、與組織中的任何人共用及排程專案。
+Analysis Workspace是彈性的瀏覽器工具，可讓您快速建立分析並分享見解。 使用拖放介面，您可以建立分析、新增視覺化，讓資料更生動、組織資料集、與組織中的任何人共用及排程專案。
 
 接著，建立新的[project](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/build-workspace-project/t-freeform-project.html)以建立控制面板，分析整個網站的CTA按鈕效能。
 
@@ -120,19 +123,19 @@ eVar最適合用來測量因果，例如：
 
    ![工作區](assets/create-analytics-workspace/create-workspace.png)
 
-1. 選擇從&#x200B;**空白專案**&#x200B;開始，或選取其中一個預先建立的範本，由Adobe提供或由您的組織建立的自訂範本。 有數個範本可用，視您所考慮的分析或使用案例而定。 [進一](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) 步瞭解可用的不同範本選項。
+1. 選擇從&#x200B;**空白專案**&#x200B;開始，或選擇預先建立的範本之一，由Adobe提供或由您的組織建立的自訂範本。 有數個範本可用，視您所考慮的分析或使用案例而定。 [進一](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) 步瞭解可用的不同範本選項。
 
    在您的工作區專案中，面板、表格、視覺化和元件可從左側導軌存取。 這些是您的專案構建區塊。
 
    * **[元件](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)** -元件是維度、量度、區段或日期範圍，所有這些都可結合在自由表格中，以開始回答您的業務問題。請務必先熟悉每種元件類型，然後再深入分析。 掌握元件術語後，您就可以開始拖放，在自由表格中建立分析。
    * **[視覺化](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)** -視覺化（例如長條圖或折線圖）會加入資料上方，以視覺化方式呈現。在最左側的邊欄上，選取中間的「視覺化」圖示，以檢視可用視覺化的完整清單。
-   * **[面板](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/panels.html)** -面板是表格和視覺化的集合。您可以從工作區的左上角圖示存取面板。 當您想要根據時段、報表套裝或分析使用案例來組織專案時，面板會很有幫助。 「分析工作區」中提供下列面板類型：
+   * **[面板](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/panels.html)** -面板是表格和視覺化的集合。您可以從工作區的左上角圖示存取面板。 當您想要根據時段、報表套裝或分析使用案例來組織專案時，面板會很有幫助。 Analysis Workspace提供下列面板類型：
 
    ![範本選擇](assets/create-analytics-workspace/workspace-tools.png)
 
-### 使用分析工作區新增資料視覺化
+### 使用Analysis Workspace新增資料視覺化
 
-接著，建立表格，以建立使用者如何與WKND網站首頁上的「動作呼叫」(CTA)按鈕互動的視覺表示。 若要建立此類表示法，讓我們使用在[追蹤點按的元件與Adobe Analytics](./track-clicked-component.md)中收集的資料。 以下是使用者與WKND網站的「動作呼叫」按鈕互動所追蹤的資料快速摘要。
+接著，建立表格，以建立使用者如何與WKND網站首頁上的「動作呼叫」(CTA)按鈕互動的視覺表示。 要建立這樣的表示法，我們使用在[追蹤已點按的元件中收集的資料與Adobe Analytics](./track-clicked-component.md)。 以下是使用者與WKND網站的「動作呼叫」按鈕互動所追蹤的資料快速摘要。
 
 * `eVar5` -   `Page template`
 * `eVar6` -  `Page Id`
@@ -142,11 +145,11 @@ eVar最適合用來測量因果，例如：
 * `event8` -  `CTA Button Click event`
 * `prop8` -  `CTA Button Id`
 
-1. 將&#x200B;**Page**&#x200B;維元件拖放到自由表格上。 您現在應該可以檢視顯示表格中顯示頁面名稱(eVar9)和對應的頁面檢視（發生次數）的視覺化。
+1. 將&#x200B;**Page**&#x200B;維元件拖放到自由表格上。 您現在應該可以檢視顯示表格中顯示「頁面名稱」(eVar9)和對應的「頁面檢視」（發生次數）的視覺化。
 
-   ![頁面維度](assets/create-analytics-workspace/evar9-dimension.png)
+   ![頁面Dimension](assets/create-analytics-workspace/evar9-dimension.png)
 
-1. 將&#x200B;**CTA Click**(event8)量度拖放至發生次數量度並加以取代。 您現在可以檢視顯示頁面名稱(eVar9)的視覺化，以及頁面上的CTA點按事件對應計數。
+1. 將&#x200B;**CTA Click**(event8)量度拖放至發生次數量度並加以取代。 您現在可以檢視視覺化，顯示頁面名稱(eVar9)和頁面上的CTA點按事件對應計數。
 
    ![頁面量度- CTA點按](assets/create-analytics-workspace/evar8-cta-click.png)
 
@@ -160,7 +163,7 @@ eVar最適合用來測量因果，例如：
 
       ![eVar5量度](assets/create-analytics-workspace/evar5-metrics.png)
 
-1. 若要瞭解使用者在WKND網站頁面上與CTA按鈕互動的方式，我們需要新增按鈕ID(eVar8)量度，進一步劃分頁面範本量度。
+1. 若要瞭解使用者在WKND網站頁面上與CTA按鈕互動的方式，我們必須新增按鈕ID(eVar8)量度，進一步劃分頁面範本量度。
 
    ![eVar8](assets/create-analytics-workspace/evar8.png)
 
@@ -176,7 +179,7 @@ eVar最適合用來測量因果，例如：
 
 ### 轉換分類
 
-Analytics分類是將Analytics變數資料分類，然後在您產生報表時以不同方式顯示資料的方式。 為改善按鈕ID在「Analytics工作區」報表中的顯示方式，讓我們為按鈕ID(eVar8)建立分類變數。 分類時，您會在變數和與該變數相關的中繼資料之間建立關係。
+Analytics分類是將Analytics變數資料分類，然後在您產生報表時以不同方式顯示資料的方式。 為改善按鈕ID在「Analytics工作區」報表中的顯示方式，讓我們為按鈕ID建立分類變數(eVar8)。 分類時，您會在變數和與該變數相關的中繼資料之間建立關係。
 
 接下來，我們建立Analytics變數的分類。
 
@@ -185,7 +188,7 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 
    ![轉換分類](assets/create-analytics-workspace/conversion-classification.png)
 
-1. 從&#x200B;**選擇分類類型**&#x200B;下拉式清單中，選取變數(eVar8-Button ID)以新增分類。
+1. 從&#x200B;**選擇分類類型**&#x200B;下拉式清單中，選取變數(eVar8-按鈕ID)以新增分類。
 1. 按一下「分類」區段下方所列「分類」變數旁的箭頭，以新增「分類」。
 
    ![轉換分類類型](assets/create-analytics-workspace/select-classification-variable.png)
@@ -198,7 +201,7 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 
 ### 分類匯入工具
 
-使用匯入工具將分類上傳至Adobe Analytics。 您也可以匯出資料，以便在匯入前進行更新。 您使用匯入工具匯入的資料必須是特定格式。 Adobe提供您下載資料範本的選項，其中包含Tab分隔資料檔案中所有正確的標題詳細資訊。 您可以將新資料新增至此範本，然後使用FTP在瀏覽器中匯入資料檔案。
+使用匯入工具將分類上傳至Adobe Analytics。 您也可以匯出資料，以便在匯入前進行更新。 您使用匯入工具匯入的資料必須是特定格式。 Adobe可讓您選擇下載資料範本，並在Tab分隔的資料檔案中包含所有正確的標題詳細資訊。 您可以將新資料新增至此範本，然後使用FTP在瀏覽器中匯入資料檔案。
 
 #### 分類範本
 
@@ -217,7 +220,7 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 
 1. 按一下&#x200B;**下載**&#x200B;並將模板檔案保存到本地系統。 範本檔案是以Tab分隔的資料檔案（.tab副檔名），大部分的試算表應用程式都支援。
 1. 使用您選擇的編輯器開啟以Tab分隔的資料檔案。
-1. 在區段的步驟9中，為每個eVar9值新增按鈕ID(eVar9)和對應的按鈕名稱至以Tab分隔的檔案。
+1. 將按鈕ID(eVar9)和對應的按鈕名稱新增至區段中步驟9中每個eVar9值的Tab分隔檔案。
 
    ![關鍵值](assets/create-analytics-workspace/key-value.png)
 
@@ -225,7 +228,7 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 1. 導覽至&#x200B;**匯入檔案**&#x200B;標籤。
 1. 設定檔案匯入的目標。
    * **選擇報表套裝** :WKND網站AEM（報表套裝）
-   * **要分類的資料集** :按鈕Id（轉換變數eVar8）
+   * **要分類的資料集** :按鈕Id(轉換變數eVar8)
 1. 按一下&#x200B;**選擇檔案**&#x200B;選項從系統上傳以Tab分隔的檔案，然後按一下&#x200B;**導入檔案**
 
    ![檔案匯入工具](assets/create-analytics-workspace/file-importer.png)
@@ -236,7 +239,7 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 
 #### 以分類變數取代轉換變數
 
-1. 從Analytics工具列中，選取&#x200B;**Workspace**，並開啟我們在本教學課程的[「在分析工作區中建立新專案」區段中建立的工作區。](#workspace-project)
+1. 從Analytics工具列中，選擇&#x200B;**Workspace**，並開啟我們在本教學課程的[Create a new project inAnalysis Workspace](#workspace-project)區段中建立的工作區。
 
    ![工作區按鈕ID](assets/create-analytics-workspace/workspace-report-button-id.png)
 
@@ -266,5 +269,5 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 
 ## 恭喜！
 
-您剛學過如何將從Adobe Experience Manager網站擷取的資料對應至Adobe Analytics報表套裝中的量度和維度、對量度執行分類，並使用Adobe Analytics的分析工作區功能建立詳細的報表控制面板。
+您剛學會如何將從Adobe Experience Manager網站擷取的資料對應至Adobe Analytics報表套裝中的量度和維度、對量度執行分類，並使用Adobe Analytics的Analysis Workspace功能建立詳細的報表控制面板。
 
