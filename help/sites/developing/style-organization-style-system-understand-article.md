@@ -1,16 +1,19 @@
 ---
-title: 瞭解使用AEM Sites建立樣式系統的最佳實務
-description: 詳細說明使用Adobe Experience Manager Sites實作樣式系統的最佳實務。
-feature: style-system
+title: 與AEM Sites一起瞭解風格系統最佳實踐
+description: 詳細說明在與Adobe Experience Manager Sites一起實作時的最佳實務。
+feature: 樣式系統
 topics: development, components, front-end-development
 audience: developer
 doc-type: article
 activity: understand
 version: 6.4, 6.5
+topic: 開發
+role: 開發人員
+level: 中級，經驗豐富的
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1544'
 ht-degree: 2%
 
 ---
@@ -20,9 +23,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->請參閱[瞭解如何編寫Style System](style-system-technical-video-understand.md)的程式碼，以確保瞭解AEM Style System使用的類似BEM的慣例。
+>請在[瞭解如何編寫樣式系統的代碼中查看內容，以確保瞭解樣式系統使用的類似BEM的AEM慣例。](style-system-technical-video-understand.md)
 
-AEM Style System主要實作兩種風格：
+Style System主要實作兩種風格或AEM樣式：
 
 * **版面樣式**
 * **顯示樣式**
@@ -33,7 +36,7 @@ AEM Style System主要實作兩種風格：
 
 ## 設定組織最佳範例樣式{#style-organization-best-practices}
 
-定義AEM作者可用的樣式名稱時，最好：
+定義作者可用的樣式AEM名稱時，最好：
 
 * 使用作者所瞭解的辭彙來命名樣式
 * 將樣式選項的數量減到最少
@@ -41,17 +44,17 @@ AEM Style System主要實作兩種風格：
 * 僅公開具有特效的樣式組合
    * 如果暴露了無效的組合，請確保它們至少不會產生不良效果
 
-隨著AEM作者可使用的樣式組合數目增加，必須依據品牌標準進行QA和驗證的組合數目也會增加。 太多的選項也會混淆作者，因為可能不清楚需要哪種選項或組合才能產生所需的效果。
+隨著作者可使用的樣式組合數AEM目增加，必鬚根據品牌標準進行QA和驗證的組合數量也會增加。 太多的選項也會混淆作者，因為可能不清楚需要哪種選項或組合才能產生所需的效果。
 
 ### 樣式名稱與CSS類{#style-names-vs-css-classes}
 
-樣式名稱或呈現給AEM作者的選項，以及實作CSS類別名稱會在AEM中解耦。
+樣式名稱或提供給作者的選AEM項，以及實作的CSS類別名稱會在中解耦AEM。
 
-這可讓AEM作者清楚瞭解的辭彙表來標示「樣式」選項，但可讓CSS開發人員以未來適用的語義方式命名CSS類別。 例如：
+這可讓「樣式」選項在辭彙中加上標籤，讓作者清楚瞭解，AEM但讓CSS開發人員以適用於未來的語義方式命名CSS類別。 例如：
 
-元件必須有選項以品牌的&#x200B;**primary**&#x200B;和&#x200B;**secondary**&#x200B;顏色著色，但AEM作者知道顏色是&#x200B;**green**&#x200B;和&#x200B;**yellow**，而不是主要和次要的設計語言。
+元件必須具有以品牌的&#x200B;**primary**&#x200B;和&#x200B;**secondary**&#x200B;顏色著色的選項，但作者知道顏色為AEM **green**&#x200B;和&#x200B;**yellow**，而不是主要和次要的設計語言。
 
-AEM Style System可使用適用於作者的&#x200B;**Green**&#x200B;和&#x200B;**Yellow**&#x200B;標籤來公開這些色彩顯示樣式，同時允許CSS開發人員使用`.cmp-component--primary-color`和`.cmp-component--secondary-color`的語義命名來定義CSS中的實際樣式實作。
+樣式系AEM統可使用適合作者的&#x200B;**Green**&#x200B;和&#x200B;**Yellow**&#x200B;標籤來公開這些色彩顯示樣式，同時允許CSS開發人員使用`.cmp-component--primary-color`和`.cmp-component--secondary-color`的語義命名來定義CSS中的實際樣式實作。
 
 將&#x200B;**Green**&#x200B;的樣式名稱映射到`.cmp-component--primary-color`，將&#x200B;**Yellow**&#x200B;映射到`.cmp-component--secondary-color`。
 
@@ -93,7 +96,7 @@ CSS可以直接套用至`.cmp-teaser`（不含任何修飾元）或`.cmp-teaser-
 
 >[!NOTE]
 >
->請注意，「預設版面樣式」沒有「顯示樣式」名稱，不過，作者將可以在「AEM樣式系統」選取工具中選取「顯示」選項。
+>請注意，「預設版面樣式」沒有「顯示樣式」名稱，但是，作者可以在「樣式系統」選取工具中選取「顯AEM示」選項。
 >
 >這違反了最佳做法：
 >
@@ -117,7 +120,7 @@ CSS可以直接套用至`.cmp-teaser`（不含任何修飾元）或`.cmp-teaser-
 
 **促銷版面樣式**&#x200B;用於促銷網站上的高價值內容，並水準排版以佔用網頁上的一段空間，且必須以品牌顏色為樣式，預設的促銷版面樣式是使用黑色文字。
 
-為此，在用於Teaser元件的AEM樣式系統中配置了&#x200B;**促銷**&#x200B;的&#x200B;**版面樣式**&#x200B;和&#x200B;**顯示樣式**&#x200B;的&#x200B;**綠色**&#x200B;和&#x200B;**黃色**。
+為此，在摘要元件的樣式系統中配置了&#x200B;**促銷**&#x200B;的&#x200B;**佈局樣式**&#x200B;和&#x200B;**綠色**&#x200B;和&#x200B;**黃色**&#x200B;的&#x200B;**顯示樣式**。
 
 #### 促銷預設值
 
@@ -158,7 +161,7 @@ CSS可以直接套用至`.cmp-teaser`（不含任何修飾元）或`.cmp-teaser-
 
 **促銷右對齊**&#x200B;版面樣式是促銷樣式的變化，該樣式會反向影像和文字的位置（影像位於右側，文字位於左側）。
 
-其核心是顯示樣式的正確對齊方式，可以將它輸入AEM Style System中，做為與促銷版面樣式搭配選取的顯示樣式。 這違反了以下最佳做法：
+其核心是顯示樣式的正確對齊方式，可將它作為顯示樣式輸入「樣式系統」中，並與AEM促銷版面配置樣式一起選取。 這違反了以下最佳做法：
 
 **僅公開具有特效的樣式組合**
 
@@ -213,7 +216,7 @@ CSS可以直接套用至`.cmp-teaser`（不含任何修飾元）或`.cmp-teaser-
 
 根據元件，樣式名稱會對應至一組CSS類別，這表示為促銷版面樣式背景配色的CSS類別名稱，必須為Hero版面樣式的文字和連結加上顏色。
 
-這可透過略過CSS規則來達成，但是，這需要CSS開發人員瞭解如何在AEM上制定這些組合。
+但是，這可透過調整CSS規則來輕鬆達成，但這需要CSS開發人員瞭解這些組合的制定方AEM式。
 
 CSS，用於以主（綠色）顏色為&#x200B;**Promote**&#x200B;版面樣式的背景著色：
 
@@ -273,7 +276,7 @@ CSS，用於以主（綠色）顏色為&#x200B;**Hero**&#x200B;版面樣式的�
 ## 其他資源 {#additional-resources}
 
 * [樣式系統檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)
-* [建立AEM Client程式庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [建立客AEM戶端庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [BEM（塊元素修飾詞）文檔網站](https://getbem.com/)
 * [LESS檔案網站](https://lesscss.org/)
 * [jQuery網站](https://jquery.com/)
