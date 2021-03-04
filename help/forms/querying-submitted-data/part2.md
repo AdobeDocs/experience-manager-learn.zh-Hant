@@ -1,19 +1,22 @@
 ---
-title: AEM Forms with JSON Schema and Data[Part2]
-seo-title: AEM Forms with JSON Schema and Data[Part2]
+title: AEM Forms與JSON結構描述與資料[Part2]
+seo-title: AEM Forms與JSON結構描述與資料[Part2]
 description: 多部分教學課程，可引導您逐步瞭解使用JSON結構描述建立最適化表單及查詢提交資料的相關步驟。
 seo-description: 多部分教學課程，可引導您逐步瞭解使用JSON結構描述建立最適化表單及查詢提交資料的相關步驟。
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 0%
+source-wordcount: '376'
+ht-degree: 1%
 
 ---
 
@@ -141,7 +144,7 @@ public class HandleAdaptiveFormSubmission extends SlingAllMethodsServlet {
 
 ![connectionpool](assets/connectionpooled.gif)
 
-要使系統正常工作，請遵循以下步驟
+要使系統正常工作，請執行以下步驟
 
 * [下載並解壓縮zip檔案](assets/aemformswithjson.zip)
 * 使用JSON結構描述建立AdaptiveForm。 您可以使用本文資產中提供的JSON結構描述。 請務必正確設定表單的提交動作。 提交操作必須配置為「CustomSubmitHelpx」。
