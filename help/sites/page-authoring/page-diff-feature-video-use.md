@@ -1,9 +1,8 @@
 ---
-title: 搭配AEM網站使用頁面差異
-seo-title: 搭配AEM網站使用頁面差異
+title: 使用頁面差異與AEM Sites
+seo-title: 使用頁面差異與AEM Sites
 description: AEM Sites的頁面差異功能顯示提供快速、色彩編碼的檢視，瞭解頁面中變更的內容（版本、即時副本、啟動、語言副本）。
 seo-description: AEM Sites的頁面差異功能顯示提供快速、色彩編碼的檢視，瞭解頁面中變更的內容（版本、即時副本、啟動、語言副本）。
-feature: page-diff
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -12,10 +11,13 @@ version: 6.3, 6.4, 6.5
 uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '156'
 ht-degree: 1%
 
 ---
