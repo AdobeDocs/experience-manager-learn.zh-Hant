@@ -1,7 +1,7 @@
 ---
 title: 取得請求參數
 description: 存取表單資料模型的預填服務的請求參數
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 5815
 thumbnail: kt-5815.jpg
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 0%
+source-wordcount: '184'
+ht-degree: 4%
 
 ---
 
