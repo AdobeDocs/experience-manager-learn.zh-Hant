@@ -2,17 +2,14 @@
 title: 建立當地開發AEM環境
 description: 為Adobe Experience Manager設立地方發展指南AEM。 涵蓋本機安裝、Apache Maven、整合式開發環境和除錯／疑難排解的重要主題。 討論了使用Eclipse IDE、CRXDE-Lite、Visual Studio程式碼和IntelliJ進行開發。
 version: 6.4, 6.5
-feature: 開發人員工具
+feature: 馬文原型
 topics: development
 activity: develop
 audience: developer
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2653'
 ht-degree: 1%
 
 ---
