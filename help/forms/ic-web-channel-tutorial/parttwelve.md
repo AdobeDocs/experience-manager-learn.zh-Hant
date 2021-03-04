@@ -4,18 +4,21 @@ seo-title: 設定Web頻道檔案的傳送
 description: 這是建立您第一個互動式通訊檔案的多步驟教學課程的最後部分。 在本部分，我們將討論透過電子郵件傳送Web通路檔案的方式。
 seo-description: 這是建立您第一個互動式通訊檔案的多步驟教學課程的最後部分。 在本部分，我們將討論透過電子郵件傳送Web通路檔案的方式。
 uuid: c1066600-1abd-4401-b04f-b93c28603cc7
-feature: interactive-communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 0%
+source-wordcount: '394'
+ht-degree: 1%
 
 ---
 
@@ -33,7 +36,7 @@ ht-degree: 0%
 
 登入AEM Forms。
 
-* 導覽至「表單->資料整合」
+* 導覽至Forms->資料整合
 
 * 在編輯模式下開啟RetirementAccountStatement資料模型。
 
