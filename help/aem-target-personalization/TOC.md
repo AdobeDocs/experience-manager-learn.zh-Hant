@@ -3,19 +3,14 @@ user-guide-title: 'AEM 和 Adobe Target 快速入門 '
 user-guide-description: 端到端的教學課程，說明如何使用 Experience Manager 和 Target 來提供個人化體驗。
 product: experience manager
 version: 6.5
-sub-product: sites
-audience: author, marketer, administrator, architect, developer
-doc-type: tutorial
-feature: experience-fragments
-topics: personalization, activities, experiences, integrations, offers
-activity: develop, understand
+sub-product: Sites
 index: y
 kt: 2214
 translation-type: tm+mt
-source-git-commit: bdb62b3361f20a0d0f27f5818cb82276980755d1
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 45%
+source-wordcount: '65'
+ht-degree: 47%
 
 ---
 
