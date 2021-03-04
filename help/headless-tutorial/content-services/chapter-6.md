@@ -1,14 +1,10 @@
 ---
 title: 第6章——將AEM Publish上的內容公開為JSON —— 內容服務
 description: 「無頭教學AEM課程」的第6章涵蓋確保所有必要的套件、設定和內容都位於「AEM發佈」中，以允許從「行動應用程式」使用。
-feature: '"內容片段、API"'
-topic: 「無頭、內容管理」
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 0%
 * 審核與處理的工作流程
 * 以及從AEM Publish的「內容服務」端點推送和拉出內容AEM的啟動／停用
 
-1. 確保&#x200B;**[!DNL WKND Mobile]Application Packages**（列於[Chapter 1](./chapter-1.md#wknd-mobile-application-packages)）已安裝在&#x200B;**AEM Publish**&#x200B;上，使用[!UICONTROL Package Manager]。
+1. 確保&#x200B;**[!DNL WKND Mobile]Application Packages**（列於[Chapter 1](./chapter-1.md#wknd-mobile-application-packages)）已使用[!UICONTROL Package Manager]安裝在&#x200B;**AEM Publish**&#x200B;上。
    * [http://localhost:4503/crx/packmgr](http://localhost:4503/crx/packmgr)
 
 1. 發佈&#x200B;**[!DNL WKND Mobile Events API]可編輯範本**
