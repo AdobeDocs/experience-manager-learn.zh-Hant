@@ -1,22 +1,17 @@
 ---
-title: 使用Workflow Editor AEM
-description: 工作流在Experience Manager中實現了業務流程管理，並用於自動處理內容，以及促進需要人為決策的治理和流程。 工作流通過工作流模型定義，工作流模型由一系列步驟組成，並在工作流模型編輯器中建立和管理。
-version: 6.4, 6.5, Cloud Service
-sub-product: 基礎，網站，資產
+title: 如何在
+description: 工作流在Experience Manager中實現了業務流程管理，並用於自動處理內容，以及促進需要人為決策的管理和流程。
+version: 6.4, 6.5, cloud-service
 feature: 工作流程
-topics: governance, collaboration
-activity: use
-audience: administrator, implementer
-doc-type: feature video
-topic: 協作
-role: 開發人員
-level: 初學者
+topic: 內容管理
+level: 中級
+role: 管理員、開發人員
 kt: 657
 thumbnail: 22201.jpg
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '93'
 ht-degree: 1%
 
 ---
