@@ -1,32 +1,35 @@
 ---
 title: 使用表單資料模型建立促銷活動描述檔
 seo-title: 使用表單資料模型建立促銷活動描述檔
-description: 使用AEM Forms Data Model建立Adobe Campaign Standard描述檔的步驟
-seo-description: 使用AEM Forms Data Model建立Adobe Campaign Standard描述檔的步驟
+description: 使用Adobe Campaign Standard表單資料模型建立AEM Forms描述檔的步驟
+seo-description: 使用Adobe Campaign Standard表單資料模型建立AEM Forms描述檔的步驟
 uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: adaptive-forms, form-data-model
+feature: 輸出服務
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 2%
+source-wordcount: '452'
+ht-degree: 3%
 
 ---
 
 
 # 使用表單資料模型{#create-campaign-profile-using-form-data-model}建立促銷活動描述檔
 
-使用AEM Forms Data Model建立Adobe Campaign Standard描述檔的步驟
+使用Adobe Campaign Standard表單資料模型建立AEM Forms描述檔的步驟
 
 ## 建立自訂驗證{#create-custom-authentication}
 
-使用Swagger檔案建立「資料來源」時，AEM Forms支援下列驗證類型
+使用Swagger檔案建立資料源時，AEM Forms支援以下類型的驗證類型
 
 * 無
 * OAuth 2.0
@@ -38,9 +41,9 @@ ht-degree: 2%
 
 我們必須使用自訂驗證才能對Adobe Campaign Standard進行REST呼叫。
 
-要使用自定義身份驗證，我們必須開發一個OSGi元件，該元件實現IAuthentication介面
+要使用自定義身份驗證，我們必須開發實現IAuthentication介面的OSGi元件
 
-需要實作getAuthDetails方法。 此方法將返回AuthenticationDetails對象。 此AuthenticationDetails物件將會設定必要的HTTP標題，以便對Adobe Campaign進行REST API呼叫。
+需要實作getAuthDetails方法。 此方法將返回AuthenticationDetails對象。 此AuthenticationDetails對象將設定對Adobe Campaign進行REST API調用所需的HTTP標頭。
 
 以下是用於建立自訂驗證的程式碼。 getAuthDetails方法可完成所有工作。 我們建立AuthenticationDetails對象。 然後，我們將適當的HttpHeaders新增至此物件，並傳回此物件。
 
@@ -107,9 +110,9 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 
 ## 建立資料源{#create-data-source}
 
-第一步是建立Swagger檔案。 Swagger檔案會定義REST API，此API將用於在Adobe Campaign Standard中建立描述檔。 swagger檔案定義REST API的輸入參數和輸出參數。
+第一步是建立Swagger檔案。 Swagger檔案定義REST API，此API將用於在Adobe Campaign Standard建立描述檔。 swagger檔案定義REST API的輸入參數和輸出參數。
 
-使用swagger檔案建立資料源。 建立資料來源時，您可以指定驗證類型。 在此情況下，我們將使用自訂驗證來驗證Adobe Campaign。上列的程式碼是用來驗證Adobe Campaign。
+使用swagger檔案建立資料源。 建立資料來源時，您可以指定驗證類型。 在本例中，我們將使用自訂驗證來驗證Adobe Campaign。上面所列的程式碼是用來驗證Adobe Campaign。
 
 範例Swagger檔案會提供給您，做為資產與本文相關的一部分。**請確定您更改swagger檔案中的主機和basePath以匹配您的ACS實例**
 
@@ -131,4 +134,4 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 * 將提交動作設定為「使用表單資料模型提交」。
 * 設定資料模型以適當提交。
 * 預覽表格。 填寫欄位並送出。
-* 確認描述檔是在Adobe Campaign Standard中建立。
+* 驗證配置式是否在Adobe Campaign Standard建立。
