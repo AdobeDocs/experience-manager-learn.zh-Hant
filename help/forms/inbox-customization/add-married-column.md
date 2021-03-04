@@ -1,31 +1,34 @@
 ---
 title: 收件匣自訂
 description: 新增自訂欄以顯示其他工作流程資料
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 0%
+source-wordcount: '311'
+ht-degree: 1%
 
 ---
 
 
 # 新增自訂欄
 
-若要在收件匣中顯示工作流程資料，我們需要在工作流程中定義並填入變數。 必須將變數值設定後，才能將任務指派給使用者。 為了搶先一步，我們提供了可部署在AEM伺服器上的範例工作流程。
+若要在收件匣中顯示工作流程資料，我們需要在工作流程中定義並填入變數。 必須將變數值設定後，才能將任務指派給使用者。 為了搶先一步，我們提供了可部署在您伺服器上的範例工作AEM流程。
 
-* [登入AEM](http://localhost:4502/crx/de/index.jsp)
+* [登入AEM至](http://localhost:4502/crx/de/index.jsp)
 * [匯入審核工作流程](assets/review-workflow.zip)
 * [檢閱工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/reviewworkflow.html)
 
-此工作流定義了兩個變數（isBonded和income），其值是使用set變數元件設定的。 這些變數將會以欄的形式提供，以便新增至AEM收件匣
+此工作流定義了兩個變數（isBonded和income），其值是使用set變數元件設定的。 這些變數將作為要添加到收件箱的列AEM可用
 
 ## 建立服務
 
@@ -73,13 +76,13 @@ return isMarried(inboxItem);
 
 >[!NOTE]
 >
->您必須將AEM 6.5.5 Uber.jar加入專案中，才能使用上述程式碼
+>您必須將AEM6.5.5 Uber.jar加入專案中，才能使用上述程式碼
 
 ![uber-jar](assets/uber-jar.PNG)
 
 ## 在伺服器上測試
 
-* [登入AEM網頁主控台](http://localhost:4502/system/console/bundles)
+* [登入網AEM頁主控台](http://localhost:4502/system/console/bundles)
 * [部署和啟動收件箱自定義包](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [開啟您的收件匣](http://localhost:4502/aem/inbox)
 * 按一下&#x200B;_建立_&#x200B;按鈕旁的&#x200B;_清單檢視_&#x200B;圖示，以開啟管理控制項
