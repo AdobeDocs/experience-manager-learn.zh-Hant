@@ -3,16 +3,19 @@ title: 新增項目至選擇群組元件
 seo-title: 新增項目至選擇群組元件
 description: 動態新增項目至選擇群組元件
 seo-description: 動態新增項目至選擇群組元件
-feature: adaptive-forms
+feature: 適用性表單
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
+topic: 開發
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -21,12 +24,12 @@ ht-degree: 0%
 
 # 動態新增項目至選擇群組元件
 
-AEM Forms 6.5引入了將項目動態新增至Adaptive Forms選擇群組元件（例如CheckBox、Radio Button和Image List）的功能。
+AEM Forms6.5引入了動態添加項目到自適應Forms選擇組元件（如CheckBox、單選按鈕和影像清單）的能力。
 
 [此功能可在Samples Server上即時使用](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。搜尋「動態核取方塊」項目資訊卡，然後按一下「試用」
 
 
-您可以使用視覺編輯器以及程式碼編輯器來新增項目，視您的使用案例而定。
+您可以使用視覺編輯器以及程式碼編輯器來新增項目，視使用案例而定。
 
 **使用視覺編輯器：** 您可以從函式呼叫或服務呼叫的結果填入選擇群組的項目。例如，您可以使用REST API呼叫的回應來設定選擇群組的項目。
 
@@ -83,7 +86,7 @@ else
 **使用程式碼編輯器來新增項目**
 
 * [下載資產](assets/usingthecodeeditor.zip)
-* [開啟表單和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [開啟Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下「建立」 |檔案上傳」，並上傳您在上一步驟中下載的檔案
 * [預覽表格](http://localhost:4502/content/dam/formsanddocuments/simpleform/jcr:content?wcmmode=disabled)
 * 輸入申請人姓名並選擇要結婚的婚姻狀態
@@ -96,7 +99,7 @@ else
 * [下載資產](assets/usingthevisualeditor.zip)
 * 如果尚未安裝Tomcat。 [此處提供安裝tomcat的說明](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
 * [在Tomcat中部署SampleRest.war檔案](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
-* [開啟表單和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [開啟Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下「建立」 |檔案上傳」，並上傳您在上一步驟中下載的檔案
 * [預覽表格](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)
 * 輸入貸款金額並從欄位中輸入標籤。 這將觸發顯示貸款期間欄位的規則。
@@ -105,4 +108,4 @@ else
 * 應填入攤銷表。 使用REST呼叫提取攤銷時間表。
 
 >[!NOTE]
-> 假定tomcat在埠8080上運行，AEM在埠4502上運行
+> 假定tomcat在埠8080和端AEM口4502上運行
