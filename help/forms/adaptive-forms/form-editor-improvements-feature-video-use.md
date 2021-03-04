@@ -1,9 +1,9 @@
 ---
-title: AEM Forms中的表格編輯器改進
-seo-title: AEM Forms中的表格編輯器改進
-description: AEM 6.3在此版本中提供數種新功能和增強功能，以簡化最適化表單和檔案的製作體驗。 這些增強功能有助於縮短您的上市時間，並讓商業使用者使用表單和檔案
-seo-description: AEM 6.3在此版本中提供數種新功能和增強功能，以簡化最適化表單和檔案的製作體驗。 這些增強功能有助於縮短您的上市時間，並讓商業使用者使用表單和檔案
-feature: adaptive-forms
+title: AEM Forms表格編輯器的改進
+seo-title: AEM Forms表格編輯器的改進
+description: AEM6.3在本版本中提供多項新功能和增強功能，以簡化最適化表單和檔案的製作體驗。 這些增強功能有助於縮短您的上市時間，並讓商業使用者使用表單和檔案
+seo-description: AEM6.3在本版本中提供多項新功能和增強功能，以簡化最適化表單和檔案的製作體驗。 這些增強功能有助於縮短您的上市時間，並讓商業使用者使用表單和檔案
+feature: 適用性表單
 topics: authoring
 audience: developer
 doc-type: technical video
@@ -11,18 +11,21 @@ activity: setup
 version: 6.3,6.4,6.5
 uuid: 9e76a2b8-f843-47b8-abf8-596c64fbcbb6
 discoiquuid: 7a7bad50-c604-4182-accb-acb85571ba78
+topic: 開發
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 0%
+source-wordcount: '237'
+ht-degree: 1%
 
 ---
 
 
-# AEM Forms {#form-editor-improvements-in-aem-forms}中的表單編輯器改進
+# AEM Forms的表單編輯器改進{#form-editor-improvements-in-aem-forms}
 
-AEM 6.3在此版本中提供數種新功能和增強功能，以簡化最適化表單和檔案的製作體驗。 這些增強功能有助於縮短您的上市時間，並讓商業使用者使用表單和檔案
+AEM6.3在本版本中提供多項新功能和增強功能，以簡化最適化表單和檔案的製作體驗。 這些增強功能有助於縮短您的上市時間，並讓商業使用者使用表單和檔案
 
 >[!VIDEO](https://video.tv.adobe.com/v/19500/)
 
