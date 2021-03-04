@@ -1,16 +1,19 @@
 ---
 title: 確定資料夾結構和檔案命名約定
-description: 在實作Dynamic Media Classic時，檔案命名可能是您最重要的決定。 資料夾結構同樣重要。 瞭解為何資料夾結構和檔案名稱如此重要，並可能採取哪些方法。
+description: 在實作Dynamic Media經典時，檔案命名可能是您最重要的決定。 資料夾結構同樣重要。 瞭解為何資料夾結構和檔案名稱如此重要，並可能採取哪些方法。
 sub-product: 動態媒體
-feature: null
+feature: Dynamic Media經典
 doc-type: tutorial
 activity: develop
 topics: development, authoring, configuring, architecture
 audience: all
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: e7a02900b0582fe9b329e5f9bd568f3c54d8d63d
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -22,17 +25,17 @@ ht-degree: 0%
 
 ## 資料夾層次和檔案命名慣例
 
-檔案命名通常是您在實作Dynamic Media Classic時最重要的決定。 不過，為了瞭解其重要性，我們先來談談您的資料夾結構。
+檔案命名通常是您對實作Dynamic Media經典影像所做的最重要決定。 不過，為了瞭解其重要性，我們先來談談您的資料夾結構。
 
 ### 資料夾階層
 
-資料夾階層對您和您的公司而言，僅供組織使用— 您的Dynamic Media Classic URL只會參照資產名稱，而不會參照資料夾或路徑。 不論您在何處上傳檔案，URL都會相同。 這和大多數人為網頁組織影像和內容的方式有很大不同，但是有了Dynamic Media Classic，就沒什麼不同。
+資料夾階層對您和您的公司而言，僅針對組織用途而重要— 您的Dynamic Media經典URL只會參照資產名稱，而非資料夾或路徑。 不論您在何處上傳檔案，URL都會相同。 這和大多數人為網路組織影像和內容的方式有很大不同，但是有了Dynamic Media經典影像，就沒什麼不同。
 
-另一個重要考量是儲存在每個資料夾中的資產或資料夾數目。 如果有許多資產儲存在資料夾中，在Dynamic Media Classic中檢視資產時，效能會降低。 請勿將數千個資產儲存在資料夾中。 請改為在階層的指定分支中，開發少於500個資產或資料夾的組織階層。 這並非嚴格要求，但有助於在檢視或搜尋資產時維持可接受的回應時間。 實際上，建議是建立寬淺的階層，而非窄深的階層。
+另一個重要考量是儲存在每個資料夾中的資產或資料夾數目。 如果有許多資產儲存在資料夾中，在Dynamic Media經典中檢視資產時，效能會降低。 請勿將數千個資產儲存在資料夾中。 請改為在階層的指定分支中開發少於500個資產或資料夾的組織階層。 這並非嚴格要求，但有助於在檢視或搜尋資產時維持可接受的回應時間。 實際上，建議是建立寬淺的階層，而非窄深的階層。
 
-建立檔案夾最簡單的方式是使用FTP上傳整個檔案夾結構，並啟用「包含子檔案夾」選項&#x200B;**。**&#x200B;此選項會使Dynamic Media Classic在Dynamic Media Classic的FTP網站上重新建立資料夾結構。
+建立檔案夾最簡單的方式是使用FTP上傳整個檔案夾結構，並啟用「包含子檔案夾」選項&#x200B;**。**&#x200B;此選項會使Dynamic Media經典在Dynamic Media經典的FTP站點上重新建立資料夾結構。
 
-我們希望您在開始上傳所有檔案之前，先考慮您的檔案夾結構，因為在電腦本端組織和管理檔案和檔案夾比在Dynamic Media Classic中更容易。 例如，您只能在Dynamic Media Classic中拖放檔案，但不能拖放整個檔案夾。
+我們希望您在開始上傳所有檔案之前，先考慮您的檔案夾結構，因為在電腦本端組織和管理檔案和檔案夾比在Dynamic Media經典網路中更容易。 例如，您只能在Dynamic MediaClassic內拖放檔案，而不能拖放整個檔案夾。
 
 ### 資料夾策略
 
@@ -44,17 +47,17 @@ ht-degree: 0%
 
 ## 檔案命名慣例
 
-您選擇如何命名檔案，可能是您對Dynamic Media Classic所做的最重要的早期決定。 這是因為Dynamic Media Classic中的所有資產都必須有唯一的名稱，無論這些資產儲存在帳戶的何處。
+您選擇如何命名檔案，可能是您對Dynamic Media經典網站最重要的早期決定。 這是因為Dynamic Media經典中的所有資產都必須有唯一的名稱，不論這些資產儲存在帳戶的何處。
 
-Dynamic Media Classic中的所有URL和交易都由資產ID（資產ID）驅動，該ID是資產在資料庫中的唯一識別碼。 上傳檔案時，資產ID會以取用檔案名稱並移除副檔名的方式建立。 例如，_896649.jpg_&#x200B;取得資產&#x200B;_ID 896649_。
+Dynamic Media經典中的所有URL和交易都由資產ID驅動，資產ID是資產在資料庫中的唯一識別碼。 上傳檔案時，資產ID會以取用檔案名稱並移除副檔名的方式建立。 例如，_896649.jpg_&#x200B;取得資產&#x200B;_ID 896649_。
 
 資產ID的規則：
 
-- 在Dynamic Media Classic中，不可有兩個資產具有相同名稱，不論資產位於哪個資料夾。
+- 在Dynamic Media經典中，沒有兩個資產可以具有相同的名稱，無論資產位於哪個資料夾。
 - 名稱區分大小寫。 例如，Chair.jpg、chair.jpg和CHAIR.jpg會建立三個不同的資產ID。
 - 最佳實務是，資產ID不應包含空格或符號。 使用空格和符號會讓實作變得更困難，因為您必須對這些字元進行URL編碼。 例如，空格&quot; &quot;變為&quot;%20&quot;。
 
-您的命名慣例基本上就是您與Dynamic Media Classic整合的方式。 您通常不會將後端系統整合至Dynamic Media Classic，因為它是封閉系統。 它是被動的合作夥伴，正在等待URL格式的說明。
+您的命名慣例基本上就是您與Dynamic Media經典整合的方式。 您通常不會將後台系統整合到Dynamic Media經典，因為後台系統是封閉的。 它是被動的合作夥伴，正在等待URL格式的說明。
 
 大部份的使用者都以其內部SKU或產品ID為命名慣例，如此當呼叫網頁時，就會自動尋找具有類似名稱的影像。 如果檔案名稱與SKU或ID之間沒有連線，則您的後台系統將需要手動追蹤每個檔案名稱，而人員必須維護這些關聯。 簡而言之，IT和內容團隊都需要做許多工作。
 
