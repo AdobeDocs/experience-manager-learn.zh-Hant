@@ -1,41 +1,36 @@
 ---
-title: 瞭解使用AEM Dynamic Media進行色彩管理
-seo-title: 瞭解使用AEM Dynamic Media進行色彩管理
-description: 在此影片中，我們將探索「動態媒體色彩管理」，以及如何使用它來提供AEM Assets的色彩校正預覽功能。
-seo-description: 在此影片中，我們將探索「動態媒體色彩管理」，以及如何使用它來提供AEM Assets的色彩校正預覽功能。
-uuid: dc14d067-11a2-4662-acfd-f9f6f1d738ee
-discoiquuid: b2b9ccc9-96b5-4bea-9995-2e6b353c469d
+title: 瞭解色彩管理與AEMDynamic Media
+description: 在此影片中，我們探索「Dynamic Media色彩管理」，以及如何使用它來提供AEM Assets的色彩校正預覽功能。
 sub-product: 動態媒體
-feature: image-profiles, video-profiles
-topics: images, videos, renditions, authoring, integrations, publishing, metadata
-audience: developer, architect, administrator
-doc-type: technical video
-activity: setup
+feature: 影像描述檔、視訊描述檔
 version: 6.3, 6.4, 6.5
+topic: 內容管理
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 13%
+source-wordcount: '330'
+ht-degree: 14%
 
 ---
 
 
-# 瞭解使用AEM Dynamic Media的色彩管理{#understanding-color-management-with-aem-dynamic-media}
+# 瞭解使用AEMDynamic Media的色彩管理{#understanding-color-management-with-aem-dynamic-media}
 
-在此影片中，我們將探索「動態媒體色彩管理」，以及如何使用它來提供AEM Assets的色彩校正預覽功能。
+在此影片中，我們探索「Dynamic Media色彩管理」，以及如何使用它來提供AEM Assets的色彩校正預覽功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
 
 >[!NOTE]
 >
->[啟用Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Mediain AEM以使用此功能。
+>[啟用Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) MediainAEM以使用此功能。
 
-此功能適用於AEM 6.1和6.2版本的功能套件。
+此功能適用於6.AEM1和6.2版的功能套件。
 
 ## 色彩管理配置節點{#xml-template-for-the-color-management-configuration-node}的XML模板
 
-以下是「色彩管理」設定節點的XML範本。 此XML範本可複製至AEM開發專案，並以專案適當的設定進行設定。
+以下是「色彩管理」設定節點的XML範本。 此XML範本可複製至開發專AEM案，並以專案適當的組態來設定。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -114,8 +109,8 @@ ht-degree: 13%
 | NTSC | RGB | NTSC(1953) |
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhoto RGB |
-| PS4Default | CMYK | Photoshop 4預設CMYK |
-| PS5Default | CMYK | Photoshop 5預設CMYK |
+| PS4Default | CMYK | Photoshop4預設CMYK |
+| PS5Default | CMYK | Photoshop5預設CMYK |
 | 張紙塗布 | CMYK | 美國張紙塗布v2 |
 | 張紙未塗覆 | CMYK | 美國張紙未塗覆v2 |
 | SMPTE | RGB | SMPTE-C |
@@ -130,4 +125,4 @@ ht-degree: 13%
 
 ## 其他資源{#additional-resources}
 
-* [設定動態媒體色彩管理](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
+* [配置Dynamic Media色彩管理](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
