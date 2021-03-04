@@ -1,7 +1,7 @@
 ---
 title: 建立用戶端程式庫
 description: 建立clientlibrary以處理「儲存並退出」按鈕的點按事件
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 0%
+source-wordcount: '146'
+ht-degree: 2%
 
 ---
 
