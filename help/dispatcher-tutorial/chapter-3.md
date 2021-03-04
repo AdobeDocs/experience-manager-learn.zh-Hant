@@ -1,12 +1,14 @@
 ---
-title: 第3章——高級快取主題
-seo-title: Dispatcher AEM Cache Demystified —— 第3章——高級快取主題
-description: Dispatcher Cache解AEM析教程的第3章介紹了如何克服第2章中討論的限制。
-seo-description: Dispatcher Cache解AEM析教程的第3章介紹了如何克服第2章中討論的限制。
+title: '"第3章——高級Dispatcher快取主題"'
+description: 這是要快取的三部分系列的第3部分AEM。 前兩個部分著重於Dispatcher中的純http快取，以及存在哪些限制。 本部分討論如何克服這些限制。
+feature: Dispatcher
+topic: 架構
+role: 架構師
+level: 中級
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '6187'
+source-wordcount: '6191'
 ht-degree: 0%
 
 ---
