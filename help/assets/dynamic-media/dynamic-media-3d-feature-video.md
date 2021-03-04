@@ -1,25 +1,24 @@
 ---
-title: 搭配AEM資產使用動態媒體3D
-description: Adobe Experience Manager的動態媒體3D支援可讓您輕鬆自訂並大規模提供互動式3D架構體驗
-feature: 3d
-topics: authoring, integrations, videos, renditions, dynamic media
-audience: all
-doc-type: feature-video
-activity: use
+title: Dynamic Media3D與AEM Assets
+description: Dynamic MediaAdobe Experience Manager的3D支援可讓您輕鬆自訂並大規模提供互動式3D架構體驗
+feature: 3D資產
 version: 6.5
 kt: 5349
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 7b092963c6162d96c57a76dd4c2ba3f19ca432a1
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
 
-# 搭配AEM Assets使用Dynamic Media 3D{#using-dynamic-3d-with-aem-assets}
+# 使用Dynamic Media3D和AEM Assets{#using-dynamic-3d-with-aem-assets}
 
-Adobe Experience Manager的動態媒體3D支援可讓您輕鬆自訂並大規模提供互動式3D架構體驗。
+Dynamic MediaAdobe Experience Manager的3D支援可讓您輕鬆自訂並大規模提供互動式3D架構體驗。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35156/?quality=9&learn=on)
 
