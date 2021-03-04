@@ -1,20 +1,17 @@
 ---
 title: 從MySQL資料庫儲存和檢索表單資料
 description: 多部分教學課程，引導您逐步瞭解儲存和擷取表單資料的相關步驟
-feature: 適用性表單
+feature: 自適應表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: 開發
-role: 開發人員
-level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 4%
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
