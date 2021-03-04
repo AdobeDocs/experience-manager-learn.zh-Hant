@@ -1,7 +1,6 @@
 ---
 title: 使用Visual Experience Composer進行個人化
 description: 瞭解如何使用Visual Experience Composer建立Adobe Target活動。
-feature: targeting
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
@@ -9,11 +8,14 @@ activity: use
 version: cloud-service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
+topic: Integrations
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 0%
+source-wordcount: '521'
+ht-degree: 1%
 
 ---
 
@@ -24,9 +26,9 @@ ht-degree: 0%
 
 ## 必備條件
 
-若要在AEM網站上使用VEC，必須完成下列設定：
+若要在網站上使用AEMVEC，必須完成下列設定：
 
-1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+1. [將Adobe Target加入AEM您的網站](./add-target-launch-extension.md)
 1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
 
 ## 藍本概觀
@@ -35,7 +37,7 @@ WKND網站首頁以資訊卡的形式顯示城市周邊的本地活動或最佳�
 
 ## 使用Visual Experience Composer(VEC)建立A/B測試的步驟
 
-1. 登入[Adobe Experience Cloud](https://experience.adobe.com/)，點選&#x200B;__Target__，導覽至&#x200B;__活動__&#x200B;標籤
+1. 登入[Adobe Experience Cloud](https://experience.adobe.com/)，點選&#x200B;__目標__，導覽至&#x200B;__活動__&#x200B;標籤
 
    + 如果您在Experience Cloud儀表板上未看到&#x200B;__Target__，請確定在右上角的組織切換器中選取了正確的Adobe組織，且您的使用者已獲得[Adobe Admin Console](https://adminconsole.adobe.com/)中Target的存取權。
 
@@ -68,7 +70,7 @@ WKND網站首頁以資訊卡的形式顯示城市周邊的本地活動或最佳�
 
    ![定位](assets/targeting.png)
 
-1. 對於「目標」和設定，選擇「報告來源」作為Adobe Target，並選取「目標」量度作為「轉換」，並執行頁面檢視動作。
+1. 對於「目標」和設定，選擇「報告」來源作為「Adobe Target」，並選取「目標」量度作為「轉換」，並執行頁面檢視動作。
 
    ![目標](assets/goals.png)
 
