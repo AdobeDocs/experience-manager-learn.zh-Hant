@@ -1,29 +1,32 @@
 ---
-title: '搭配AEM Adaptive Forms使用自動化測試 '
-seo-title: '搭配AEM Adaptive Forms使用自動化測試 '
-description: 使用Calvin SDK自動測試最適化表單
-seo-description: 使用Calvin SDK自動測試最適化表單
-feature: adaptive-forms
+title: '使用自動化測試與自適AEM應Forms '
+seo-title: '使用自動化測試與自適AEM應Forms '
+description: Calvin SDK自動測試自適應Forms
+seo-description: Calvin SDK自動測試自適應Forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 uuid: 3ad4e6d6-d3b1-4e4d-9169-847f74ba06be
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
 
 
-# 將自動測試與AEM Adaptive Forms {#using-automated-tests-with-aem-adaptive-forms}搭配使用
+# 使用自動測試AEM與自適應Forms{#using-automated-tests-with-aem-adaptive-forms}
 
-使用Calvin SDK自動測試最適化表單
+Calvin SDK自動測試自適應Forms
 
-Calvin SDK是Adaptive Forms開發人員用來測試Adaptive Forms的公用API。 Calvin SDK建立在[Hobbes.js測試架構](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)之上。 Calvin SDK目前隨附於AEM Forms 6.3版。
+Calvin SDK是一個公用API，可供Adaptive Forms開發人員用來測試AdaptiveForms。 Calvin SDK建立在[Hobbes.js測試架構](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)之上。 Calvin SDK目前提供AEM Forms6.3版以上版本。
 
 在本教學課程中，您將建立下列內容：
 
@@ -33,7 +36,7 @@ Calvin SDK是Adaptive Forms開發人員用來測試Adaptive Forms的公用API。
 
 ## 開始使用{#getting-started}
 
-[使用Package ](assets/testingadaptiveformsusingcalvinsdk1.zip)Manager下載並安裝資產此套件包含範例指令碼和數種Adaptive Forms。這些Adaptive Forms是使用AEM Forms 6.3版本建立的。如果您要在AEM Forms 6.4或更新版本上測試此功能，建議您建立AEM Forms版本專屬的新表單。 範例指令碼展示可測試最適化表單的各種Calvin SDK API。 測試AEM Adaptive Forms的一般步驟為：
+[使用Package ](assets/testingadaptiveformsusingcalvinsdk1.zip)Manager下載和安裝資產此套件包含範例指令碼和數種Adaptive Forms。這些Adaptive Forms是使用AEM Forms6.3版構建的。如果您要在AEM Forms6.4或更新版本上測試此功能，建議您建立針對您的AEM Forms版本的新表格。 範例指令碼展示多種Calvin SDK API，可用來測試AdaptiveForms。 測試最適化Forms的一AEM般步驟包括：
 
 * 導覽至需要測試的表單
 * 設定欄位的值
@@ -53,7 +56,7 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 上述程式碼會建立新的測試套裝。
 
 * 在本例中，TestSuite的名稱為「 `Mortgage Form Test` 」。
-* 提供AEM中包含測試套裝之js檔案的絕對路徑。
+* 提供包含測試套AEM裝之js檔案的絕對路徑。
 * 設為&#39; `true` &#39;時的註冊參數，會讓測試UI中的測試套裝可供使用。
 
 ```javascript
@@ -67,7 +70,7 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 
 >[!NOTE]
 >
->如果您要在AEM Forms 6.4或更新版本上測試此功能，請建立新的最適化表單，並使用它進行測試。不建議使用隨套件提供的最適化表單。
+>如果您要在AEM Forms6.4或更高版本上測試此功能，請建立新的最適化表單，並使用它進行測試。不建議使用隨軟體包提供的最適化表單。
 
 測試案例可新增至測試套裝，以針對最適化表單執行。
 
