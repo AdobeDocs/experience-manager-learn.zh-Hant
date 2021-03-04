@@ -3,19 +3,17 @@ title: 使用SSL精靈AEM,
 description: Adobe Experience Manager的SSL設定精靈，讓您更輕鬆地設AEM定透過HTTPS執行的例項。
 seo-description: Adobe Experience Manager的SSL設定精靈，讓您更輕鬆地設AEM定透過HTTPS執行的例項。
 version: 6.3, 6,4, 6.5
+feature: null
 topics: security, operations
 activity: use
 audience: administrator
 doc-type: technical video
 uuid: 82a6962e-3658-427a-bfad-f5d35524f93b
 discoiquuid: 9e666741-0f76-43c9-ab79-1ef149884686
-topic: 安全性
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
