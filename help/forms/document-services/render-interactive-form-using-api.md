@@ -1,32 +1,35 @@
 ---
-title: 在AEM Forms中使用Output和Forms Services進行開發
-seo-title: 在AEM Forms中使用Output和Forms Services進行開發
-description: 在AEM Forms中使用Output and Forms Service API
-seo-description: 在AEM Forms中使用Output and Forms Service API
-feature: forms-service
+title: 以產出和Forms服務發展AEM Forms
+seo-title: 以產出和Forms服務發展AEM Forms
+description: 在AEM Forms使用輸出和Forms服務API
+seo-description: 在AEM Forms使用輸出和Forms服務API
+feature: 表單服務
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: 開發
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 0%
+source-wordcount: '352'
+ht-degree: 1%
 
 ---
 
 
-# 在AEM Forms中使用Forms Services轉換互動式PDF
+# 使用AEM Forms的Forms服務來轉換互動式PDF
 
-在AEM Forms中使用Forms Service API來轉換互動式PDF
+使用AEM Forms的Forms服務API來轉換互動式PDF
 
 在本文中，我們將檢視下列服務
 
 * FormsService —— 這項多功能服務可讓您從PDF檔案匯出／匯入資料，並借由將xml資料合併為xdp範本，產生互動式pdf
 
-AEM Forms API的正式Javadoc列在[這裡](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+AEM FormsAPI的正式Javadoc列在[這裡](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 下列程式碼片段會使用FormsService的renderPDFForm操作來轉譯互動式pdf。 申根。xdp是用於合併xml資料的範本。
 
@@ -54,12 +57,12 @@ return interactivePDF;
 
 **在系統上測試示例包**
 1. [使用Felix Web Console下載並安裝DocumentServices範例套裝](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-1. [使用AEM套件管理員下載並安裝套件](assets/downloadinteractivepdffrommobileform.zip)
+1. [使用套件管理器下載並安AEM裝套件](assets/downloadinteractivepdffrommobileform.zip)
 
 
 
 1. [登入configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜尋Adobe Granite CSRF濾鏡
+1. Adobe花崗石CSRF濾波器的研究
 1. 在排除的區段中新增下列路徑並儲存
 1. /bin/generateinteractivepdf
 1. [開啟行動表單](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
