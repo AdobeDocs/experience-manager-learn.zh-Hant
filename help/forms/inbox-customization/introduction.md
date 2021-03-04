@@ -1,26 +1,29 @@
 ---
 title: 收件匣自訂
 description: '根據工作流程資料新增欄，自訂收件匣 '
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
 kt: 5830
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 3%
+source-wordcount: '206'
+ht-degree: 5%
 
 ---
 
 # AEM 收件匣
 
-AEM Inbox整合來自各種AEM元件（包括Forms工作流程）的通知和工作。 當觸發包含「指派」任務步驟的表單工作流時，相關應用程式將作為任務列在受託人的收件箱中。
+收件AEM匣整合了來自各種元件(包括FormsAEM工作流程)的通知和工作。 當觸發包含「指派」任務步驟的表單工作流時，相關應用程式將作為任務列在受託人的收件箱中。
 「收件箱」用戶介面提供清單和日曆視圖以查看任務。 您也可以設定檢視設定。 您可以根據各種參數來篩選任務
-您可以自訂Experience Manager收件匣，以變更欄的預設標題、重新排序欄位，並根據工作流程的資料顯示其他欄位
+您可以自訂Experience Manager收件匣以變更欄的預設標題、重新排序欄位，並根據工作流程的資料顯示其他欄位
 
 
 >[!NOTE]
@@ -29,8 +32,8 @@ AEM Inbox整合來自各種AEM元件（包括Forms工作流程）的通知和工
 
 ## 欄自訂
 
-[啟動AEM收件](http://localhost:4502/aem/inbox)
-匣開啟「管理控制項」，方法是按一下「清單檢視」 _圖_ 示，然後選取「 _管_ 理控制項」，如下方的螢幕擷取畫面中所示
+[啟動收AEM件匣按一下「清單檢視」圖示，然後選取「管理控制」，以開啟「管理控制」，如下方螢幕擷取畫面中所示：](http://localhost:4502/aem/inbox)
+ __  __ 
 
 ![admin-control](assets/open-customization.png)
 
