@@ -1,7 +1,7 @@
 ---
 title: 將體驗片段匯出至Adobe Target
-description: 瞭解如何將AEM體驗片段發佈及匯出為Adobe Target選件。
-feature: experience-fragments
+description: 瞭解如何將體驗片段發AEM布及匯出為Adobe Target優惠。
+feature: 體驗片段
 topics: integrations, authoring
 audience: all
 doc-type: feature video
@@ -9,18 +9,21 @@ activity: use
 version: cloud-service
 kt: 6350
 thumbnail: 41245.jpg
+topic: Integrations
+role: 業務從業人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 1%
+source-wordcount: '198'
+ht-degree: 4%
 
 ---
 
 
-# 將體驗片段匯出至Adobe Target {#experience-fragment-target}
+# 將體驗片段匯出至Adobe Target{#experience-fragment-target}
 
-瞭解如何將AEM體驗片段匯出為Adobe Target選件。
+瞭解如何將體驗AEM片段匯出為Adobe Target優惠。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41245?quality=12&learn=on)
 
@@ -34,7 +37,7 @@ ht-degree: 1%
 
 #### 錯誤
 
-將「體驗片段」匯出至Adobe Target，但Adobe Admin Console沒有正確的權限，會導致AEM Author服務發生下列錯誤：
+將「體驗片段」匯出至Adobe Target，但沒有Adobe Admin Console的正確權限，會在AEM Author服務上造成下列錯誤：
 
     ![Target API UI錯誤](assets/error-target-offer.png)
 
@@ -44,14 +47,14 @@ ht-degree: 1%
 
 #### 解析度
 
-1. 使用Adobe Target產品設定檔的管理權限登入[管理控制台](https://adminconsole.adobe.com/)，但是AEM整合
-2. 選擇&#x200B;__產品> Adobe Target >產品描述檔__
-3. 在「__Integrations__」標籤下，選取AEM的整合為雲端服務環境（與Adobe I/O專案相同）
+1. 使用Adobe Target產品配置檔案的管理權限登錄[Admin Console](https://adminconsole.adobe.com/)，但整合AEM。
+2. 選擇&#x200B;__產品>Adobe Target>產品概要檔案__
+3. 在&#x200B;__Integrations__&#x200B;標籤下，選取您的整合作AEM為Cloud Service環境(與Adobe I/O項目相同名稱)
 4. 指派&#x200B;__Editor__&#x200B;或&#x200B;__Approver__&#x200B;角色
 
    ![目標API錯誤](assets/target-permissions.png)
 
-將正確的權限新增至Adobe Target整合應能解決此錯誤。
+將正確權限新增至您的Adobe Target整合應能解決此錯誤。
 
 ## 支援連結
 
