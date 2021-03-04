@@ -4,21 +4,18 @@ seo-title: 新增文字和影像內容至網頁頻道檔案
 description: '這是建立您第一個互動式通訊檔案的多步驟教學課程的第7部分。 在本部分，我們將新增影像和文字內容至標題面板。 '
 seo-description: '這是建立您第一個互動式通訊檔案的多步驟教學課程的第7部分。 在本部分，我們將新增影像和文字內容至標題面板。 '
 uuid: 440f8b74-3be7-4e58-a46e-4110065b7705
-feature: 互動式通訊
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 3dd64e7d-3f13-4022-bb75-c9dc1884bc19
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 2%
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
