@@ -1,18 +1,17 @@
 ---
 title: 使用置入連結資產工序
-description: 瞭解如何使用「置入連結」作業，從AEM Assets使用資產。
+description: 瞭解如何使用「置入連結」作業來使用AEM Assets的資產。
 sub-product: 資產
-feature: adobe-asset-link
-topics: authoring, collaboration, operations, sharing, metadata, images, operations
-audience: all
-doc-type: feature video
-activity: use
-version: null
+feature: Adobe資產連結
+version: cloud-service
 thumbnail: 34839.jpg
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '34'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
@@ -20,6 +19,6 @@ ht-degree: 0%
 
 # 置入連結的{#place-linked}
 
-瞭解如何使用「置入連結」作業，從AEM Assets使用資產。
+瞭解如何使用「置入連結」作業來使用AEM Assets的資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34839/?quality=12)
