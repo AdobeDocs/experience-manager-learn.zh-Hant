@@ -1,13 +1,17 @@
 ---
-title: 使用Adobe Target Visual Experience Composer進行個人化
-seo-title: 使用Adobe Target Visual Experience Composer(VEC)進行個人化
-description: 教學課程的端對端說明如何使用Adobe Target Visual Experience Composer(VEC)建立和提供個人化體驗。
-seo-description: 教學課程的端對端說明如何使用Adobe Target Visual Experience Composer(VEC)建立和提供個人化體驗。
+title: 使用Adobe Target視覺體驗撰寫器進行個人化
+seo-title: 使用Adobe Target視覺體驗撰寫器(VEC)進行個人化
+description: 教學課程的端對端說明如何使用Adobe Target視覺體驗撰寫器(VEC)來建立和提供個人化體驗。
+seo-description: 教學課程的端對端說明如何使用Adobe Target視覺體驗撰寫器(VEC)來建立和提供個人化體驗。
+feature: 體驗片段
+topic: 個性化
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 0443c8ff42e773021ff8b6e969f5c1c31eea3ae4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 2%
+source-wordcount: '615'
+ht-degree: 3%
 
 ---
 
@@ -24,32 +28,32 @@ WKND網站首頁以卡片版面的形式顯示城市周邊的當地活動或最�
 
 在本練習中，需要有下列用戶參與，並執行一些可能需要管理訪問權限的任務。
 
-* **Content Producer/Content Editor** (Adobe Experience Manager)
-* **行銷人員** （Adobe Target /最佳化團隊）
+* **內容製作者／內容編輯者** (Adobe Experience Manager)
+* **行銷人員** (Adobe Target/最佳化團隊)
 
 ### WKND網站首頁
 
-![AEM Target藍本1](assets/personalization-use-case-3/aem-target-use-case-3.png)
+![目AEM標方案1](assets/personalization-use-case-3/aem-target-use-case-3.png)
 
 ### 必備條件
 
 * **AEM**
-   * [AEM ](./implementation.md#getting-aem) publish instancerenning on 4503
-   * [AEM使用Adobe Experience Platform Launch與Adobe Target整合](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [AEM  4503上的發佈例項](./implementation.md#getting-aem) 
+   * [AEM利用Adobe Experience Platform Launch與Adobe Target整合](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * 存取您的組織Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
-   * Experience Cloud已布建[Adobe Target](https://experiencecloud.adobe.com)
+   * 存取您的組織Adobe Experience Cloud- <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * Experience Cloud已配置[Adobe Target](https://experiencecloud.adobe.com)
 
 ## 行銷人員活動
 
-1. 行銷人員會在Adobe Target中建立A/B目標活動。
-   1. 從Adobe Target視窗，導覽至&#x200B;**活動**&#x200B;標籤。
+1. 行銷人員會在Adobe Target內建立A/B目標活動。
+   1. 從您的Adobe Target窗口，導航至&#x200B;**活動**&#x200B;頁籤。
    2. 按一下「建立活動」按鈕，並選取活動類型為「**A/B測試」******
 
-      ![Adobe Target —— 建立活動](assets/personalization-use-case-2/create-ab-activity.png)
+      ![Adobe Target-建立活動](assets/personalization-use-case-2/create-ab-activity.png)
    3. 選擇&#x200B;**Web**&#x200B;頻道，然後選擇&#x200B;**Visual Experience Composer**。
    4. 輸入&#x200B;**活動URL**，然後按一下&#x200B;**下一步**以開啟Visual Experience Composer。
-      ![Adobe Target —— 建立活動](assets/personalization-use-case-2/create-activity-ab-name.png)
+      ![Adobe Target-建立活動](assets/personalization-use-case-2/create-activity-ab-name.png)
    5. 若要載入&#x200B;**Visual Experience Composer**，請啟用瀏覽器上的「允許載入不安全指令碼&#x200B;**」並重新載入頁面。**
       ![體驗定位活動](assets/personalization-use-case-1/load-unsafe-scripts.png)
    6. 請注意，WKND網站首頁在Visual Experience Composer編輯器中開啟。
