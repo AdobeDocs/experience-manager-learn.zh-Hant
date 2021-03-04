@@ -1,7 +1,7 @@
 ---
-title: 建立HTML5表格
+title: 建立HTML5Forms
 description: 建立和設定HTML5表格
-feature: mobile-forms
+feature: 行動表單
 topics: development
 audience: developer
 doc-type: article
@@ -9,27 +9,30 @@ activity: implement
 version: 6.4,6.5
 kt: 4419
 thumbnail: kt-4419.jpg
+topic: 開發
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: c60a46027cc8d71fddd41aa31dbb569e4df94823
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 0%
+source-wordcount: '491'
+ht-degree: 1%
 
 ---
 
 
 # 建立HTML5表格
 
-HTML5表單是Adobe Experience Manager的新功能，提供HTML5格式的XFA表單範本(xdp)轉換。 這項功能可讓您在不支援XFA PDF的行動裝置和案頭瀏覽器上轉換表單。 HTML5表格不僅支援XFA表格範本的現有功能，還新增了行動裝置的新功能，例如塗鴉簽名。
+HTML5表格是Adobe Experience Manager的一項新功能，提供HTML5格式的XFA表格範本(xdp)轉換功能。 這項功能可讓您在不支援XFA PDF的行動裝置和案頭瀏覽器上轉換表單。 HTML5表格不僅支援XFA表格範本的現有功能，還新增了行動裝置的新功能，例如塗鴉簽名。
 
-## 先決條件
+## 必備條件
 
-請確定您有AEM Forms的運作實例。 請依照[安裝指南](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)來安裝和設定AEM Forms
+請確定您有AEM Forms的工作實例。 請按照[安裝指南](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)安裝和配置AEM Forms
 
 ## 建立您的第一個HTML5表格
 
 1. [下載並解壓縮zip檔的內容](assets/assets.zip)。zip檔案包含xdp和資料檔案
-2. [導覽至表單和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+2. [導覽至Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 3. 按一下「建立->檔案上傳」
 4. 選擇步驟2中下載的xdp範本
 
@@ -40,7 +43,7 @@ xdp可以預覽為HTML5格式或PDF格式。 若要預覽HTML5格式的xdp，請
 * 點選新上傳的xdp，然後按一下「預覽->預覽為HTML _」。_&#x200B;您應該會看到xdp呈現為HTML5
 
 >[!NOTE]
->當您選取「預覽為PDF」(_Preview as PDF_)選項時，轉譯的PDF將不會顯示在瀏覽器中，因為AEM Forms會轉譯需要Acrobat增效模組的動態pdf。您必須下載PDF並使用Adobe Acrobat/Reader開啟它才能檢視
+>當您選取「預覽為PDF」(_Preview as PDF_)選項時，轉譯的PDF將不會顯示在瀏覽器中，因為AEM Forms會轉譯需要Acrobat外掛程式的動態PDF。您必須下載PDF並使用Adobe Acrobat/Reader開啟它才能檢視
 
 
 ## 以資料預覽
