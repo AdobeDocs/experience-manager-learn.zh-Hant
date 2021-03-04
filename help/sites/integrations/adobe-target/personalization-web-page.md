@@ -1,7 +1,6 @@
 ---
 title: 個人化完整網頁體驗
-description: 瞭解如何建立Target活動，以使用Adobe Target將AEM網站頁面重新導向至新頁面。
-feature: targeting
+description: 瞭解如何建立Target活動，使用Adobe Target將網AEM站頁面重新導向至新頁面。
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
@@ -9,29 +8,32 @@ activity: use
 version: cloud-service
 kt: 6353
 thumbnail: 6353-personalization-web-page.jpg
+topic: Integrations
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 0%
+source-wordcount: '464'
+ht-degree: 1%
 
 ---
 
 
 # 個人化完整網頁體驗{#personalization-fpe}
 
-瞭解如何建立活動，使用Adobe Target將AEM上裝載的網站頁面重新導向至新頁面。
+瞭解如何建立活動，以使用Adobe Target將您網站上代管的網AEM頁重新導向至新頁面。
 
 ## 必備條件
 
-若要個人化AEM網站的完整頁面，必須完成下列設定：
+若要個人化網站的完整AEM頁面，必須完成下列設定：
 
-1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+1. [將Adobe Target加入AEM您的網站](./add-target-launch-extension.md)
 1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
 
 ## 藍本概觀
 
-WKND網站重新設計其首頁，並想要將目前的首頁訪客重新導向至新首頁。 同時，也瞭解重新設計的首頁如何協助改善使用者參與度和收入。 身為行銷人員，您已獲指派工作來建立活動，將訪客重新導向至新首頁。 讓我們探索WKND網站首頁，並瞭解如何使用Adobe Target建立活動。
+WKND網站重新設計其首頁，並想要將目前的首頁訪客重新導向至新首頁。 同時，也瞭解重新設計的首頁如何協助改善使用者參與度和收入。 身為行銷人員，您已獲指派工作來建立活動，將訪客重新導向至新首頁。 讓我們瀏覽WKND網站首頁，並瞭解如何使用Adobe Target建立活動。
 
 ## 使用Visual Experience Composer(VEC)建立A/B測試的步驟
 
@@ -60,7 +62,7 @@ WKND網站重新設計其首頁，並想要將目前的首頁訪客重新導向�
 
    ![定位](assets/targeting.png)
 
-1. 對於「目標」和設定，選擇「報告來源」作為Adobe Target，並選取「目標」量度作為「轉換」，並執行頁面檢視動作。
+1. 對於「目標」和設定，選擇「報告」來源作為「Adobe Target」，並選取「目標」量度作為「轉換」，並執行頁面檢視動作。
 
    ![目標](assets/goals.png)
 
@@ -75,7 +77,7 @@ WKND網站重新設計其首頁，並想要將目前的首頁訪客重新導向�
 
 ## 摘要
 
-身為行銷人員，您可以建立活動，將AEM上裝載的網站頁面重新導向至使用Adobe Target的新頁面。
+身為行銷人員，您可以建立活動，將裝載於網站的頁面重新導向至使AEM用Adobe Target的新頁面。
 
 ## 支援連結
 
