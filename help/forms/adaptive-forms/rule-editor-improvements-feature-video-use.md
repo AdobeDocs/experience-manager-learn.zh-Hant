@@ -4,18 +4,21 @@ seo-title: AEM Forms規則編輯器的改進
 description: '規則編輯器可讓使用者將邏輯新增至最適AEM化Forms。 AEM 6.3以多種方式改善規則編輯器，讓技術使用者和非技術使用者都能更輕鬆快速地新增智慧。 '
 seo-description: '規則編輯器可讓使用者將邏輯新增至最適AEM化Forms。 AEM 6.3以多種方式改善規則編輯器，讓技術使用者和非技術使用者都能更輕鬆快速地新增智慧。 '
 uuid: 35e8cc7c-04cf-43b4-bbc7-41bfd909cfba
-feature: 自適應表單
+feature: 適用性表單
 topics: authoring
 audience: author
 doc-type: technical video
 activity: use
 version: 6.3,6.4,6.5.
 discoiquuid: 51750b3f-1fda-43ae-b3ed-1eede83b19d5
+topic: 管理
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 0%
+source-wordcount: '191'
+ht-degree: 2%
 
 ---
 
