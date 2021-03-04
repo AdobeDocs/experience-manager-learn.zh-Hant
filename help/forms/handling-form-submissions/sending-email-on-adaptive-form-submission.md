@@ -4,17 +4,20 @@ seo-title: 在最適化表單提交時傳送電子郵件
 description: 使用傳送電子郵件元件，在自適應表單提交時傳送確認電子郵件
 seo-description: 使用傳送電子郵件元件，在自適應表單提交時傳送確認電子郵件
 uuid: 6c9549ba-cb56-4d69-902c-45272a8fd17e
-feature: adaptive-forms
+feature: 適用性表單
 topics: authoring, integrations
 audience: developer
 doc-type: article
 activity: use
 discoiquuid: 1187357f-2f36-4a04-b708-44bb9c174fb5
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 272e43ee4aeb756a3a1fd0ce55eaca94a9553fa4
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 0%
+source-wordcount: '237'
+ht-degree: 1%
 
 ---
 
@@ -41,7 +44,7 @@ ht-degree: 0%
 
 要在伺服器上試用此功能，請遵循以下說明：
 
-* [使用套](assets/timeoffrequest.zip) 件管理員，在AEM中匯入與此文章關聯的資產。
+* [使用套](assets/timeoffrequest.zip) 件管理員匯入與此文章AEM相關的資產。
 
 * 開啟[TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)。
 
