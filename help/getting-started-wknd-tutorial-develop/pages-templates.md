@@ -3,7 +3,7 @@ title: 開始使用AEM Sites-頁面和範本
 seo-title: 開始使用AEM Sites-頁面和範本
 description: 瞭解基本頁面元件與可編輯範本之間的關係。 瞭解核心元件如何加入專案，並瞭解可編輯範本的進階政策設定，以根據Adobe XD的模型建立結構良好的文章頁面範本。
 sub-product: Sites
-feature: 範本編輯器，核心元件
+feature: 核心元件、可編輯範本
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,10 +12,13 @@ audience: developer
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
+topic: 內容管理、開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '3076'
+source-wordcount: '3083'
 ht-degree: 0%
 
 ---
