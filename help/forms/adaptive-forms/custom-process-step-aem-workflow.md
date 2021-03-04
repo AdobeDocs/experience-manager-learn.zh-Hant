@@ -3,16 +3,19 @@ title: 實施自訂流程步驟
 seo-title: 實施自訂流程步驟
 description: 使用自定義流程步驟將自適應表單附件寫入檔案系統
 seo-description: 使用自定義流程步驟將自適應表單附件寫入檔案系統
-feature: workflow
+feature: 工作流程
 topics: development
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
@@ -20,9 +23,9 @@ ht-degree: 0%
 
 # 自訂流程步驟
 
-本教學課程適用於需要實作自訂程式步驟的AEM Forms客戶。 流程步驟可以執行ECMA指令碼或調用自定義java代碼來執行操作。 本教學課程將說明實施由流程步驟執行的WorkflowProcess所需的步驟。
+本教學課程適用於需要實作自訂程式步驟的AEM Forms客戶。 流程步驟可以執行ECMA指令碼或調用自定義Java代碼來執行操作。 本教學課程將說明實施由流程步驟執行的WorkflowProcess所需的步驟。
 
-實作自訂流程步驟的主要原因是擴充AEM工作流程。 例如，如果您在工作流程模型中使用AEM Forms元件，您可能想要執行下列作業
+實作自訂流程步驟的主要原因是擴充工AEM作流程。 例如，如果您在工作流模型中使用AEM Forms元件，則可能需要執行以下操作
 
 * 將最適化表單附件保存到檔案系統
 * 控制提交的資料
@@ -31,7 +34,7 @@ ht-degree: 0%
 
 ## 建立Maven專案
 
-第一步是使用適當的Adobe Maven Archetype來建立大型專案。 詳細步驟列於此[文章](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)中。 將您的主要專案匯入Eclipse後，您就可以開始編寫第一個OSGi元件，以便用於您的程式步驟。
+第一步是使用適當的AdobeMaven Archetype建立主項目。 詳細步驟列於此[文章](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)中。 將您的主要專案匯入Eclipse後，您就可以開始編寫第一個OSGi元件，以便用於您的程式步驟。
 
 
 ### 建立實作WorkflowProcess的類別
@@ -46,7 +49,7 @@ execute方法可存取下列3個變數
 
 **MetaDataMap**:所有與工作流關聯的元資料。傳遞給流程步驟的任何流程參數都可以使用MetaDataMap對象。[API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
-在本教學課程中，我們將將新增至Adaptive Form的附件寫入AEM工作流程的檔案系統。
+在本教程中，我們將將添加到Adaptive Form的附件作為工作流的一部分寫入檔案AEM系統。
 
 要完成此使用案例，請編寫以下java類
 
@@ -109,9 +112,9 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 第13-15行——傳遞給此OSGi元件的進程參數使用&quot;,&quot;分隔符進行拆分。 隨後，attachmentPath和saveToLocation的值會從字串陣列中擷取。
 
-* attachmentPath —— 這與您在Adaptive Form中指定的位置相同，當您設定Adaptive Form的提交動作來叫用AEM Workflow時。 這是您要將附件儲存在AEM中，與工作流程裝載相關的檔案夾名稱。
+* attachmentPath —— 這與在Adaptive Form中指定的位置相同，當您配置了Adaptive Form的提交操作以調用Workflow時AEM。 這是您希望附件相對於工作流的裝載保存在AEM的資料夾的名稱。
 
-* saveToLocation —— 這是您要將附件儲存在AEM伺服器檔案系統上的位置。
+* saveToLocation —— 這是您希望附件保存在伺服器文AEM件系統上的位置。
 
 這兩個值會作為流程參數傳遞，如下面的螢幕擷取所示。
 
@@ -128,11 +131,11 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 第24-26行——獲取ResourceResolver，然後獲取指向attachmentFilePath的資源。
 
-其餘的代碼通過使用API在指向attachmentFilePath的資源的子對象中循環來建立文檔對象。 此檔案物件是AEM Forms專屬的。 然後，我們使用文檔對象的copyToFile方法來保存文檔對象。
+其餘的代碼通過使用API在指向attachmentFilePath的資源的子對象中循環來建立文檔對象。 此文檔對象特定於AEM Forms。 然後，我們使用文檔對象的copyToFile方法來保存文檔對象。
 
 >[!NOTE]
 >
->由於我們使用AEM Forms專屬的Document物件，因此您必須在您的主要專案中加入aemfd-client-sdk相依性。 群組ID為com.adobe.aemfd，物件ID為aemfd-client-sdk。
+>由於我們使用的是AEM Forms特有的Document物件，因此您必須在您的主要專案中納入aemfd-client-sdk相依性。 群組ID為com.adobe.aemfd，物件ID為aemfd-client-sdk。
 
 #### 建立和部署
 
