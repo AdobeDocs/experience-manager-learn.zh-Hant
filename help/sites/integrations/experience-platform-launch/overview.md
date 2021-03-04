@@ -1,7 +1,6 @@
 ---
-title: 整合Experience Platform Launch和AEM
+title: 整合Experience Platform LaunchAEM和
 description: Experience Platform Launch是Adobe的新一代標籤管理平台，也是部署Adobe Analytics、Target、Audience Manager和更多解決方案的最佳方式。 取得Launch的概觀，以及建議與Adobe Experience Manager的整合。
-feature: launch
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -9,16 +8,19 @@ activity: setup
 version: cloud-service
 kt: 5979
 thumbnail: 39090.jpg
+topic: Integrations
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: d1ab6e59d817ef103b76960b260b7958d1fa5953
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 10%
+source-wordcount: '142'
+ht-degree: 13%
 
 ---
 
 
-# 整合Experience Platform Launch和AEM {#overview}
+# 整合Experience Platform LaunchAEM和{#overview}
 
 Experience Platform Launch是Adobe的新一代標籤管理平台，也是部署Adobe Analytics、Target、Audience Manager和更多解決方案的最佳方式。 取得Launch的概觀，以及建議與Adobe Experience Manager的整合。
 
