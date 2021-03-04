@@ -1,18 +1,18 @@
 ---
 title: 導覽
 description: 探索導覽AEM Assets的基本概念。
-feature: Asset Management
-topics: Content Management
-role: Business Practitioner
-level: Beginner
+feature: 資產管理
+role: 業務從業人員
+level: 初學者
 version: cloud-service
 kt: 4305
 thumbnail: 32046.jpg
+topic: 內容管理
 translation-type: tm+mt
-source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '16'
-ht-degree: 12%
+source-wordcount: '23'
+ht-degree: 8%
 
 ---
 
