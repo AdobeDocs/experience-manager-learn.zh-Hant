@@ -3,16 +3,19 @@ title: 儲存自適應表單資料
 seo-title: 儲存自適應表單資料
 description: 將自適應表單資料儲存到DataBase，做為工作流程的一AEM部分
 seo-description: 將自適應表單資料儲存到DataBase，做為工作流程的一AEM部分
-feature: 自適應表單，工作流
+feature: 自適應Forms，工作流，表單資料模型
 topics: integrations
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
