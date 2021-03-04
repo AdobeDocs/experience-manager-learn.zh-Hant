@@ -1,30 +1,24 @@
 ---
-title: 使用AEM Dynamic Media瞭解資產檢視器
-seo-title: 使用AEM Dynamic Media瞭解資產檢視器
-description: AEM Dynamic Media Viewer增強功能可讓AEM作者定義並自訂將呈現給網站使用者的體驗資產。
-seo-description: AEM Dynamic Media Viewer增強功能可讓AEM作者定義並自訂將呈現給網站使用者的體驗資產。
-uuid: 5762c0a2-4371-4719-8400-849c7a11926d
-discoiquuid: a0be2cd0-4fdb-431f-a8c7-e4620b8b129b
-products: SG_EXPERIENCEMANAGER/6.3/ASSETS
-sub-product: 動態媒體
-feature: viewer-presets, image-profiles
-topics: videos, renditions, authoring
-doc-type: feature video
-audience: all
-activity: understand
+title: 瞭解資產檢視器與AEMDynamic Media
+description: Dynamic MediaAEM檢視器增強功AEM能可讓作者定義並自訂將呈現給網站使用者的體驗資產。
+sub-product: 動態媒體經典
+feature: 檢視器預設集、影像描述檔
 version: 6.3, 6.4, 6.5
+topic: 內容管理
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
 
 
-# 瞭解使用AEM Dynamic Media的資產檢視器{#understanding-the-asset-viewer-with-aem-dynamic-media}
+# 瞭解資產檢視AEM器與Dynamic Media{#understanding-the-asset-viewer-with-aem-dynamic-media}
 
-AEM Dynamic Media Viewer增強功能可讓AEM作者定義並自訂將呈現給網站使用者的體驗資產。
+Dynamic MediaAEM檢視器增強功AEM能可讓作者定義並自訂將呈現給網站使用者的體驗資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17783/?quality=9&learn=on)
 
