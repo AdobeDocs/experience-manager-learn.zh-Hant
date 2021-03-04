@@ -1,17 +1,19 @@
 ---
-title: 瞭解與AEM的跨原始資源共用(CORS)
-description: Adobe Experience Manager的跨原始資源共用(CORS)可協助非AEM網頁屬性對AEM進行用戶端呼叫（驗證和未驗證），以擷取內容或直接與AEM互動。
+title: 瞭解跨原始資源共用(CORS)與
+description: Adobe Experience Manager的跨原始資源共用(CORS)可協助非AEMWeb屬性進行用戶端呼叫(AEM驗證和未驗證)，以擷取內容或直接與之互動AEM。
 version: 6.3, 6,4, 6.5
 sub-product: 基礎，內容服務，網站
-feature: null
 topics: security, development, content-delivery
 activity: understand
 audience: architect, developer
 doc-type: article
+topic: 安全性
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: bc14783840a47fb79ddf1876aca1ef44729d097e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '920'
 ht-degree: 1%
 
 ---
@@ -19,15 +21,15 @@ ht-degree: 1%
 
 # 瞭解跨來源資源共用([!DNL CORS])
 
-Adobe Experience Manager的跨原始資源共用([!DNL CORS])可協助非AEM網頁屬性對AEM進行用戶端呼叫（驗證和未驗證），以擷取內容或直接與AEM互動。
+Adobe Experience Manager的跨原始資源共用([!DNL CORS])有助於非AEMWeb屬性進行用戶端呼叫（無論是驗證還是未驗證）AEM，以擷取內容或直接與之互動AEM。
 
-## Adobe Granite跨原始資源共用政策OSGi設定
+## AdobeGranite跨原始資源共用策略OSGi配置
 
-CORS組態在AEM中管理為OSGi組態工廠，每個原則都代表為工廠的一個例項。
+CORS組態在中以OSGi組態工廠的AEM形式管理，每個原則都代表為工廠的一個例項。
 
 * `http://<host>:<port>/system/console/configMgr > Adobe Granite Cross Origin Resource Sharing Policy`
 
-![Adobe Granite跨原始資源共用政策OSGi設定](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
+![AdobeGranite跨原始資源共用策略OSGi配置](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
 
 [!DNL Adobe Granite Cross-Origin Resource Sharing Policy] (`com.adobe.granite.cors.impl.CORSPolicyImpl`)
 
@@ -82,7 +84,7 @@ CORS組態在AEM中管理為OSGi組態工廠，每個原則都代表為工廠的
 #### [!UICONTROL 支援認證]
 
 * `"supportscredentials" <boolean>`
-* `boolean`，指示對請求的回應是否可公開給瀏覽器。 當用作對預檢請求之回應的一部分時，這表示是否可使用認證來提出實際請求。
+* `boolean`，指出對請求的回應是否可公開給瀏覽器。 當用作對預檢請求之回應的一部分時，這表示是否可使用認證來提出實際請求。
 
 ### 配置示例
 
@@ -174,6 +176,6 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 
 ## 支援材料
 
-* [AEM OSGi Configuration Factory for Cross-Origin Resource Sharing Policy](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
+* [OSGiAEM跨源資源共用策略配置工廠](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [跨原始資源共用(W3C)](https://www.w3.org/TR/cors/)
 * [HTTP存取控制(Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
