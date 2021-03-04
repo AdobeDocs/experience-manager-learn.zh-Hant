@@ -1,21 +1,18 @@
 ---
 title: 建立Adobe SignAPI應用程式
 description: Adobe SignAPI應用程式可讓您將AEM Forms與Adobe Sign整合
-feature: '"適應性Forms,Adobe Sign"'
+feature: 自適應表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 kt: 6032
 thumbnail: 38178.jpg
-topic: 開發
-role: 管理員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 2%
+source-wordcount: '83'
+ht-degree: 0%
 
 ---
 
