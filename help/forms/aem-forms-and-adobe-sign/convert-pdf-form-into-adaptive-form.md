@@ -1,18 +1,21 @@
 ---
 title: 將PDF表格轉換為最適化表格
 description: AEM FormsAutomated forms conversion服務(由Adobe Sensei提供支援)會自動將您的PDF forms轉換為適用於裝置且回應靈敏的表格。 不論您是使用非互動式PDF forms、AcroForms或XFAPDF forms,Automated forms conversion服務都可輕鬆將這些表單轉換為最適化表單。
-feature: 自適應表單
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39495.jpg
 kt: 6115
+topic: 開發
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 0%
+source-wordcount: '131'
+ht-degree: 2%
 
 ---
 
