@@ -1,20 +1,17 @@
 ---
 title: 使用批次API生成互動式通信文檔
 description: 使用批次API產生列印渠道檔案的範例資產
-feature: 互動式通訊
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
-topic: 開發
-role: 開發人員
-level: 中級
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 3%
+source-wordcount: '417'
+ht-degree: 2%
 
 ---
 
