@@ -4,20 +4,17 @@ seo-title: 在AEM Forms使用事務報告
 description: 在AEM Forms的事務報表允許您記錄自指定日期以來在AEM Forms部署中發生的所有事務。
 seo-description: 在AEM Forms的事務報表允許您記錄自指定日期以來在AEM Forms部署中發生的所有事務。
 uuid: e6133f7e-c79c-4006-89e7-3bebf7b8229e
-feature: 適用性表單
+feature: 自適應表單
 topics: developing
 audience: administrator
 doc-type: article
 activity: setup
 version: 6.4.1,6.5
 discoiquuid: 1abdf07a-b9f0-4c58-a1c6-08ae57db2014
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
