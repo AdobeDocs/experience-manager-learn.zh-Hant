@@ -1,33 +1,36 @@
 ---
-title: 使用OSGi網頁主控台除錯AEM SDK
-description: AEM SDK的本機快速入門有一個OSGi網頁主控台，可提供本機AEM執行階段中的各種資訊和介紹，這些資訊和介紹對於瞭解您的應用程式如何被AEM識別及在AEM中的功能十分有用。
-feature: null
+title: 使用AEMOSGi網頁主控台除錯SDK
+description: AEMSDK的本端快速入門有OSGi網頁主控台，可提供本端執行階段中的多種資訊和介紹，以協助您瞭解應用程式的識別方式，以及其中的功AEM能。
+feature: 開發人員工具
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5265, 5366, 5267
+topic: 開發
+role: 開發人員
+level: 初學者，中級
 translation-type: tm+mt
-source-git-commit: a3d3612713decefb5c7e1cf5b2d4d21afff0a2f5
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 0%
+source-wordcount: '399'
+ht-degree: 1%
 
 ---
 
 
-# 使用OSGi網頁主控台除錯AEM SDK
+# 使用AEMOSGi網頁主控台除錯SDK
 
-AEM SDK的本機快速入門有一個OSGi網頁主控台，可提供本機AEM執行階段中的各種資訊和介紹，這些資訊和介紹對於瞭解您的應用程式如何被AEM識別及在AEM中的功能十分有用。
+AEMSDK的本端快速入門有OSGi網頁主控台，可提供本端執行階段中的多種資訊和介紹，以協助您瞭解應用程式的識別方式，以及其中的功AEM能。
 
-AEM提供許多OSGi主控台，每個主控台都提供AEM不同層面的重要深入資訊，但是下列在除錯應用程式時通常最有用。
+提AEM供許多OSGi控制台，每個控制台都提供不同方面的關鍵見解AEM，但是，在調試應用程式時，以下通常最有用。
 
 ## 組合
 
 >[!VIDEO](https://video.tv.adobe.com/v/34335/?quality=12&learn=on)
 
-Bundles主控台是OSGi Bundles的目錄，以及部署至AEM的詳細資訊，以及啟動和停止OSGi Bundles的臨機功能。
+Bundles控制台是OSGi捆綁包的目錄，其詳細資訊已部署AEM到，並具有啟動和停止這些捆綁包的臨機功能。
 
 Bundles控制台位於：
 
@@ -44,7 +47,7 @@ Bundles控制台位於：
 
 >[!VIDEO](https://video.tv.adobe.com/v/34336/?quality=12&learn=on)
 
-Components主控台是部署至AEM的所有OSGi元件的目錄，並提供有關這些元件的所有資訊，從其定義的OSGi元件生命週期，到其可參考的OSGi服務
+元件控制台是部署到的所有OSGi元件的目錄AEM，並提供了有關它們的所有資訊，從其定義的OSGi元件生命週期到它們可參考的OSGi服務
 
 元件控制台位於：
 
@@ -59,7 +62,7 @@ Components主控台是部署至AEM的所有OSGi元件的目錄，並提供有關
 + 取得元件的PID，以便以Git建立OSGi組態
 + 識別綁定到活動OSGi配置的OSGi屬性值
 
-## Sling Models
+## Sling 模型
 
 >[!VIDEO](https://video.tv.adobe.com/v/34337/?quality=12&learn=on)
 
