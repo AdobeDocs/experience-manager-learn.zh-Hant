@@ -1,26 +1,29 @@
 ---
 title: 調試Dispatcher工具
-description: Dispatcher Tools提供容器化的Apache Web Server環境，可用來將AEM模擬為Cloud Services的AEM Publish服務的Dispatcher本機。 除錯Dispatcher Tools的記錄檔和快取內容對於確保端對端AEM應用程式以及支援快取和安全性組態正確至關重要。
-feature: dispatcher, aem-sdk
+description: Dispatcher Tools提供容器化的Apache Web Server環境，可用來模擬AEM為Cloud Services的AEM Publish服務的本機Dispatcher。 除錯Dispatcher工具的日誌和快取內容對於確保端到端應用程式和支援快取和安全配置AEM正確至關重要。
+feature: Dispatcher
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5918
+topic: 開發
+role: 開發人員
+level: 初學者，中級
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 0%
+source-wordcount: '234'
+ht-degree: 1%
 
 ---
 
 
 # 調試Dispatcher工具
 
-Dispatcher Tools提供容器化的Apache Web Server環境，可用來將AEM模擬為Cloud Services的AEM Publish服務的Dispatcher本機。
-除錯Dispatcher Tools的記錄檔和快取內容對於確保端對端AEM應用程式以及支援快取和安全性組態正確至關重要。
+Dispatcher Tools提供容器化的Apache Web Server環境，可用來模擬AEM為Cloud Services的AEM Publish服務的本機Dispatcher。
+除錯Dispatcher工具的日誌和快取內容對於確保端到端應用程式和支援快取和安全配置AEM正確至關重要。
 
 >[!NOTE]
 >
