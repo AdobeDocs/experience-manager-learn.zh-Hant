@@ -1,7 +1,7 @@
 ---
 title: 建立OSGi服務
 description: 建立OSGi服務以儲存要簽署的表格
-feature: adaptive-forms
+feature: 工作流程
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 0%
+source-wordcount: '356'
+ht-degree: 1%
 
 ---
 
@@ -132,7 +135,7 @@ public String getFormData(String guid) {
 
 ## 更新簽名狀態
 
-成功完成簽署典禮會觸發與表單關聯的AEM工作流程。 工作流的第一步是流程步驟，它會更新由guid和customer id標識的行在資料庫中的狀態。 我們也會將表單資料中已簽署的元素值設為Y，以指出表單已填入和簽署。 最適化表單將填入此資料，而xml資料中已簽署資料元素的值將用來顯示適當的訊息。 會從自訂程式步驟中叫用updateSignatureStatus程式碼。
+簽署儀式的順利完成會觸發與表AEM單相關的工作流程。 工作流的第一步是流程步驟，它會更新由guid和customer id標識的行在資料庫中的狀態。 我們也會將表單資料中已簽署的元素值設為Y，以指出表單已填入和簽署。 最適化表單將填入此資料，而xml資料中已簽署資料元素的值將用來顯示適當的訊息。 會從自訂程式步驟中叫用updateSignatureStatus程式碼。
 
 
 ```java
