@@ -2,18 +2,15 @@
 title: 開發專AEM案
 description: 一個開發教學課程，說明如何針對專案進行AEM開發。  在本教學課程中，我們將建立自訂的專案範本，可用來在內建新的專案，以管AEM理內容製作工作流程和工作。
 version: 6.3, 6.4, 6.5
-feature: '"項目，工作流"'
+feature: 專案，工作流程
 topics: collaboration, development, governance
 activity: develop
 audience: developer, implementer, administrator
 doc-type: tutorial
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '4654'
+source-wordcount: '4651'
 ht-degree: 0%
 
 ---
