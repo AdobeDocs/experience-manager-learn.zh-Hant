@@ -1,7 +1,7 @@
 ---
 title: 組合表單附件
 description: 按指定順序裝配表單附件
-feature: assembler
+feature: 組合器
 topics: development
 audience: developer
 doc-type: article
@@ -9,10 +9,13 @@ activity: implement
 version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 3e8b820939c2d39ef9a17f7d7aaef87cd9cdbbbb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -26,9 +29,9 @@ ht-degree: 0%
 
 ## 建立實作WorkflowProcess介面的OSGi元件
 
-建立實作[com.adobe.granite.workflow.exec.WorkflowProcess介面](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)的OSGi元件。 此元件中的程式碼可與AEM工作流程中的流程步驟元件相關聯。 在此元件中實現了介面com.adobe.granite.workflow.exec.WorkflowProcess的執行方法。
+建立實作[com.adobe.granite.workflow.exec.WorkflowProcess介面](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)的OSGi元件。 此元件中的代碼可以與工作流中的流程步驟元件AEM關聯。 在此元件中實現了介面com.adobe.granite.workflow.exec.WorkflowProcess的執行方法。
 
-提交最適化表單以觸發AEM工作流程時，提交的資料會儲存在裝載檔案夾下的指定檔案中。 例如，這是已提交的資料檔案。 我們需要將idcard和bankstatements標籤下指定的附件組合起來。
+提交最適化表單以觸發工作AEM流程時，提交的資料會儲存在裝載資料夾下的指定檔案中。 例如，這是已提交的資料檔案。 我們需要將idcard和bankstatements標籤下指定的附件組合起來。
 ![submitted-data](assets/submitted-data.JPG).
 
 ### 取得標籤名稱
@@ -132,11 +135,11 @@ session.save();
 
 ![有效載荷結構](assets/payload-structure.JPG)
 
-### 若要讓此功能在您的AEM伺服器上運作
+### 若要讓這項功能在您的伺服器上AEM運作
 
 * 將[組合表單附件表單](assets/assemble-form-attachments-af.zip)下載到本地系統。
-* 從[表單與檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)頁面匯入表單。
-* 下載[workflow](assets/assemble-form-attachments.zip)並使用套件管理器匯入AEM。
+* 從[Forms和文檔](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)頁導入表單。
+* 下載[workflow](assets/assemble-form-attachments.zip)並使用套件管理器匯AEM入至。
 * 下載[自訂搭售](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
 * 使用[Web控制台](http://localhost:4502/system/console/bundles)部署並啟動包
 * 將瀏覽器指向[AssembleAttachments Form](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
@@ -145,5 +148,5 @@ session.save();
 * 檢查crx](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload)中工作流程的[裝載資料夾，以取得已組合的pdf
 
 >[!NOTE]
-> 如果您已為自訂搭售啟用記錄程式，則DDX和已組合的檔案會寫入AEM安裝的資料夾。
+> 如果您已為自訂搭售啟用記錄程式，則DDX和已組合的檔案會寫入安裝的資AEM料夾。
 
