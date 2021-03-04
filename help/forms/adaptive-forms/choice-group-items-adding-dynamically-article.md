@@ -3,19 +3,16 @@ title: 新增項目至選擇群組元件
 seo-title: 新增項目至選擇群組元件
 description: 動態新增項目至選擇群組元件
 seo-description: 動態新增項目至選擇群組元件
-feature: 適用性表單
+feature: 自適應表單
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
-topic: 開發
-role: 業務從業人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
