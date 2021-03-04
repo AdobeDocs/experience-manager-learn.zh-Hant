@@ -1,7 +1,7 @@
 ---
 title: 將元SPA件對應至元AEM件 |編輯與AngularAEM入SPA門
 description: 瞭解如何使用Editor JS SDK將Angular元AEM件對應AEM至SPAAdobe Experience Manager()元件。 元件對應可讓使用者在編輯器中對元SPA件進行動AEM態更SPA新，類似於傳統的製作AEM。
-sub-product: sites
+sub-product: Sites
 feature: 編SPA輯器
 topics: development
 doc-type: tutorial
@@ -10,11 +10,14 @@ activity: develop
 audience: developer
 kt: 5311
 thumbnail: 5311-spa-angular.jpg
+topic: SPA
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 28b5522e094a41d81116acb923dc0390478e2308
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2389'
-ht-degree: 0%
+source-wordcount: '2392'
+ht-degree: 1%
 
 ---
 
