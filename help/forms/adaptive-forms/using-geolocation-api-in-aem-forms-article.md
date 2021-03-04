@@ -1,32 +1,35 @@
 ---
-title: 在最適化表單中使用Geolocation API
-seo-title: 在最適化表單中使用Geolocation API
+title: 在最適化Forms中使用Geolocation API
+seo-title: 在最適化Forms中使用Geolocation API
 description: 使用地理位置api的
 seo-description: 使用地理位置api的
 uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
-feature: adaptive-forms,
+feature: 適用性表單
 topics: integrations
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
 
 
-# 在最適化表單中使用地理位置API{#using-geolocation-api-s-in-adaptive-forms}
+# 在最適化Forms中使用地理位置API{#using-geolocation-api-s-in-adaptive-forms}
 
 請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)頁面，以取得此功能的即時示範連結。
 
 在本文中，我們將檢視如何使用Google的Geolocation API填入最適化表單的欄位。 當您要在表單中填入目前的位址欄位時，通常會使用此使用案例。
 
-在Adaptive Forms中使用Geolocation API時，會遵循下列步驟。
+依照下列步驟，在AdaptiveForms中使用Geolocation API。
 
 1. [從Google取](https://developers.google.com/maps/documentation/javascript/get-api-key) 得API Key以使用Google地圖平台。您可以取得有效期為1年的試用金鑰。
 
@@ -93,7 +96,7 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 >
 >為了進行測試，您可以在URL中搭配使用HTTP通訊協定與localhost。
 >
->對於生產伺服器，您需要為AEM伺服器啟用SSL才能取得此功能。
+>對於生產伺服器，您需要為伺服器啟用SSLAEM才能獲得此功能。
 >
 >與本文相關的範例已使用美國地址進行測試。 如果您想要在其他地理位置使用此功能，可能必須調整JSON剖析。
 
@@ -101,7 +104,7 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 
 * 安裝並啟動AEM Forms伺服器。
 
->!![NOTE] 這項功能已在AEM Forms 6.3和更新版本上測試
+>!![NOTE] 這項功能已在AEM Forms6.3及更新版本上測試
 * [取得Google API金鑰](https://developers.google.com/maps/documentation/javascript/get-api-key)。
 * [將與此文章相關的資產匯入AEM。](assets/geolocationapi.zip)
 * [在編輯模式中開啟最適化表單片段。](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
