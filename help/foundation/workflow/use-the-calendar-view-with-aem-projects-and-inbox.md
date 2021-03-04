@@ -1,28 +1,31 @@
 ---
-title: 搭配AEM專案和收件匣使用「行事歷檢視」
-seo-title: 搭配AEM專案和收件匣使用「行事歷檢視」
-description: 'AEM的「日曆檢視」會在日曆檢視中追蹤專案和工作，讓專案管理和排程更輕鬆。 使用「日曆」檢視，使用者可以整體檢視目前進行中、已規劃、即將到期和過期的專案和工作。 '
-seo-description: AEM的「日曆檢視」會在日曆檢視中追蹤專案和工作，讓專案管理和排程更輕鬆。 使用「日曆」檢視，使用者可以整體檢視目前進行中、已規劃、即將到期和過期的專案和工作。
+title: 將日曆視圖與項目和收件AEM箱一起使用
+seo-title: 將日曆視圖與項目AEM和收件箱一起使用
+description: '「日AEM歷檢視」會在日曆檢視中追蹤專案和工作，讓專案管理和排程更輕鬆。 使用「日曆」檢視，使用者可以整體檢視目前進行中、已規劃、即將到期和過期的專案和工作。 '
+seo-description: 「日AEM歷檢視」會在日曆檢視中追蹤專案和工作，讓專案管理和排程更輕鬆。 使用「日曆」檢視，使用者可以整體檢視目前進行中、已規劃、即將到期和過期的專案和工作。
 version: 6.3, 6.4, 6.5
-feature: inbox, projects, workflow
+feature: '"工作流，項目"'
 topics: governance, collaboration
 activity: use
 audience: author, analyst
 doc-type: feature video
 uuid: 3dc9999c-eddf-4e42-9aa9-87a37a47699d
 discoiquuid: 5ad21858-a4a2-486c-98dc-4f5ba46a3bc1
+topic: 協作
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
 
 
-# 搭配AEM專案和收件匣使用「行事歷檢視」
+# 將日曆視圖與項目和收件AEM箱一起使用
 
-AEM的「日曆檢視」會在日曆檢視中追蹤專案和工作，讓專案管理和排程更輕鬆。 使用「日曆」檢視，使用者可以整體檢視目前進行中、已規劃、即將到期和過期的專案和工作。
+「日AEM歷檢視」會在日曆檢視中追蹤專案和工作，讓專案管理和排程更輕鬆。 使用「日曆」檢視，使用者可以整體檢視目前進行中、已規劃、即將到期和過期的專案和工作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16804/?quality=12&learn=on)
 
