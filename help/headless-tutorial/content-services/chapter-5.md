@@ -1,10 +1,14 @@
 ---
 title: 第5章——編寫內容服務頁面——內容服務
 description: 無頭教學課程AEM的第5章涵蓋從第4章中定義的範本建立頁面。 這些頁面將充當JSON HTTP端點。
+feature: 內容片段、API
+topic: 無頭、內容管理
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '604'
 ht-degree: 0%
 
 ---
