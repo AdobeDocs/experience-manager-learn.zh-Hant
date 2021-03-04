@@ -1,7 +1,7 @@
 ---
 title: 使用表單資料模型預先填寫表單
 description: '使用表單資料模型的請求屬性預先填寫最適化表單 '
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
@@ -9,18 +9,21 @@ activity: implement
 version: 6.4,6.5
 kt: 4419
 thumbnail: kt-4419.jpg
+topic: 開發
+role: 業務從業人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: b085a2c75f8e0b4860d503774ea01a108773ad09
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 0%
+source-wordcount: '131'
+ht-degree: 3%
 
 ---
 
 
 # 使用表單資料模型預先填寫表單
 
-您將學習使用表單資料模型的request屬性來擷取資料以填入最適化表單。
+您將學習使用表單資料模型的請求屬性來擷取資料以填入最適化表單。
 在完成本課程後，您將學到以下內容。
 
 * 建立支援RDBMS的表單資料模型
@@ -35,7 +38,7 @@ ht-degree: 0%
 
 ## 必備條件
 
-* AEM Forms的工作實例
+* AEM Forms工作實例
 * 熟悉MySQL資料庫和MySQL工作台
-* 建立最適化表單的一些經驗
+* 建立適應性Forms的幾點經驗
 
