@@ -1,21 +1,18 @@
 ---
 title: 收件匣自訂
 description: '根據工作流程資料新增欄，自訂收件匣 '
-feature: 適用性表單
+feature: 自適應表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
 kt: 5830
-topic: 開發
-role: 開發人員
-level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 5%
+source-wordcount: '202'
+ht-degree: 3%
 
 ---
 
