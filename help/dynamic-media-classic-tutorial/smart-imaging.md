@@ -1,28 +1,31 @@
 ---
 title: 智慧型影像
-description: Dynamic Media Classic中的Smart Imaging可根據用戶端瀏覽器功能自動最佳化影像格式和品質，以增強影像傳送效能。 它可運用Adobe Sensei AI功能並使用現有的影像預設集來達成此目的。 進一步瞭解智慧型影像功能，以及如何運用它透過更快的頁面載入提供更佳的客戶體驗。
+description: Dynamic MediaClassic的Smart Imaging會根據用戶端瀏覽器功能自動最佳化影像格式和品質，以增強影像傳送效能。 它可運用Adobe SenseiAI功能並使用現有的影像預設集來達成此目的。 進一步瞭解智慧型影像功能，以及如何運用它透過更快的頁面載入提供更佳的客戶體驗。
 sub-product: 動態媒體
-feature: smart-crop
+feature: Dynamic Media經典
 doc-type: tutorial
 topics: development, authoring, configuring, renditions, images
 audience: all
 activity: use
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 317fb625e7af57b7ad0079014c341eab9adda376
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 1%
+source-wordcount: '702'
+ht-degree: 3%
 
 ---
 
 
 # 智慧型影像 {#smart-imaging}
 
-在您的網站或行動網站或應用程式上，客戶體驗最重要的方面之一，就是頁面載入時間。 如果頁面載入時間太長，客戶通常會放棄網站或應用程式。 影像是頁面載入時間的大部分。 Dynamic Media Classic中的Smart Imaging可根據用戶端瀏覽器功能自動最佳化影像格式和品質，以增強影像傳送效能。 它可運用Adobe Sensei AI功能並使用現有的影像預設集來達成此目的。 Smart Imaging將影像大小減少30%以上— 可加快頁面載入速度並改善客戶體驗。
+在您的網站或行動網站或應用程式上，客戶體驗最重要的方面之一，就是頁面載入時間。 如果頁面載入時間太長，客戶通常會放棄網站或應用程式。 影像是頁面載入時間的大部分。 Dynamic MediaClassic的Smart Imaging會根據用戶端瀏覽器功能自動最佳化影像格式和品質，以增強影像傳送效能。 它可運用Adobe SenseiAI功能並使用現有的影像預設集來達成此目的。 Smart Imaging將影像大小減少30%以上— 可加快頁面載入速度並改善客戶體驗。
 
-Smart Imaging也受益於與Adobe同級最佳優質服務完全整合的額外效能提升。 此服務在伺服器、網路和互連點之間找到最佳的Internet路由，該路由的延遲和／或資料包丟失率比Internet上的預設路由低。
+Smart Imaging還得益於與Adobe的同類最佳優質服務完全整合的額外效能提升。 此服務在伺服器、網路和互連點之間找到最佳的Internet路由，該路由的延遲和／或資料包丟失率比Internet上的預設路由低。
 
-進一步瞭解[智慧型影像](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html)。
+進一步瞭解[智慧型影像](https://docs.adobe.com/content/help/zh-Hant/experience-manager-64/assets/dynamic/imaging-faq.html)。
 
 ## 智慧影像的優點
 
@@ -32,7 +35,7 @@ Smart Imaging也受益於與Adobe同級最佳優質服務完全整合的額外�
 
 ## Smart Imaging的運作方式
 
-如前所述，智慧型影像運用Adobe Sensei AI功能，並搭配現有的影像預設集來自動將影像轉換為最佳的新一代影像格式，例如WebP，同時仍能維持視覺完整性。
+如前所述，智慧型影像處理運用Adobe Sensei人工智慧功能，並與現有的影像預設集搭配使用，自動將影像轉換為最佳的新一代影像格式，例如WebP，同時維持視覺精確度。
 
 進一步瞭解[智慧型影像的運作方式](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)，包括支援的影像格式（以及如果您不使用這些格式會發生什麼情況）等詳細資訊，以及它對現有使用中影像預設集的影響。
 
@@ -46,9 +49,9 @@ Smart Imaging也受益於與Adobe同級最佳優質服務完全整合的額外�
 >
 >移至智慧型影像會清除CDN中的快取。 CDN中的快取通常會在一、兩天內重新建立。
 
-Smart Imaging隨附於您現有的Dynamic Media Classic授權中。 此功能不需額外付費。 若要善用它，您必須符合兩項要求：擁有Adobe搭售的CDN和專屬網域。 然後，您必須為您的帳戶啟用它，因為它不會自動啟用。
+Smart Imaging隨附於您現有的Dynamic Media經典影像授權中。 此功能不需額外付費。 若要善用它，您必須符合兩項要求：有Adobe捆綁的CDN和專用網域。 然後，您必須為您的帳戶啟用它，因為它不會自動啟用。
 
-啟用Smart Imaging從您發送技術支援請求開始， 建立支援案例| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 支援將與您一起設定將與Smart Imaging關聯的自定義域。 您將變更與快取相關的一個參數（存留時間或TTL），並且支援會清除快取。 您也可以視需要在推送至生產環境之前，先執行選用的接移步驟。 接著，當智慧型影像開啟時，您會向客戶傳遞尺寸較小的影像，但品質與他們要求的相同。 這表示他們體驗的頁面載入時間更快— 所有這些都會自動完成，因為Adobe Sensei可協助您選擇最有效的尺寸。
+啟用Smart Imaging從您發送技術支援請求開始， 建立支援案例| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 支援將與您一起設定將與Smart Imaging關聯的自定義域。 您將變更與快取相關的一個參數（存留時間或TTL），並且支援會清除快取。 您也可以視需要在推送至生產環境之前，先執行選用的接移步驟。 接著，當智慧型影像開啟時，您會向客戶傳遞尺寸較小的影像，但品質與他們要求的相同。 這表示他們體驗的頁面載入時間更快— 所有這些都是自動完成的，因為Adobe Sensei幫助選擇最有效的尺寸。
 
 啟用Smart Imaging後，您將需要驗證它是否如預期般工作。
 
@@ -56,4 +59,4 @@ Smart Imaging隨附於您現有的Dynamic Media Classic授權中。 此功能不
 
 ## 其他資源
 
-觀看[動態媒體經典最佳化頁面效能技能產生器](https://seminars.adobeconnect.com/pzc1gw0cihpv)隨選網路研討會，以進一步瞭解智慧型影像。
+觀看[Dynamic Media經典最佳化頁面效能技能建立器](https://seminars.adobeconnect.com/pzc1gw0cihpv)隨選網路研討會，以進一步瞭解智慧型影像。
