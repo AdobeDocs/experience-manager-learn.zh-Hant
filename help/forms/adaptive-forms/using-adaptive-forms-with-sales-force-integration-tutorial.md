@@ -1,26 +1,29 @@
 ---
-title: 在AEM Forms 6.3和6.4中使用Salesforce設定DataSource
-seo-title: 在AEM Forms 6.3和6.4中使用Salesforce設定DataSource
-description: 使用表單資料模型整合AEM表單與Salesforce
-seo-description: 使用表單資料模型整合AEM表單與Salesforce
+title: 在AEM Forms6.3和6.4中使用Salesforce設定DataSource
+seo-title: 在AEM Forms6.3和6.4中使用Salesforce設定DataSource
+description: 使用表單資料模型整合AEM Forms與Salesforce
+seo-description: 使用表單資料模型整合AEM Forms與Salesforce
 uuid: 0124526d-f1a3-4f57-b090-a418a595632e
-feature: adaptive-forms, form-data-model
+feature: 「適應性Forms，表單資料模型」
 topics: integrations
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 8e314fc3-62d0-4c42-b1ff-49ee34255e83
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: cce9f5d1dae05a36b942f6b07a46c65f82eac43c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
 
 
-# 在AEM Forms 6.3和6.4{#configuring-datasource-with-salesforce-in-aem-forms-and}中使用Salesforce設定DataSource
+# 在AEM Forms6.3和6.4{#configuring-datasource-with-salesforce-in-aem-forms-and}中使用Salesforce設定DataSource
 
 ## 必備條件 {#prerequisites}
 
@@ -29,29 +32,29 @@ ht-degree: 0%
 本教學課程的先決條件：
 
 * 捲動至本頁底部，下載Swagger檔案並儲存您的硬碟。
-* 啟用SSL的AEM Forms
+* AEM Forms啟用SSL
 
-   * [在AEM 6.3上啟用SSL的正式檔案](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
-   * [在AEM 6.4上啟用SSL的正式檔案](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
+   * [在6.3上啟用SSL的AEM正式檔案](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
+   * [在6.4上啟用SSL的AEM正式檔案](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
 * 您需要有Salesforce帳戶
 * 您需要建立連線的應用程式。 建立應用程式的Salesforce官方檔案列於[這裡](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0)。
 * 為應用程式提供適當的OAuth示波器（我已選取所有可用的OAuth示波器以進行測試）
 * 提供回呼URL。 我的回呼URL是
 
-   * 如果您使用&#x200B;**AEM Forms 6.3**，回呼URL將為https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html。 在此URL中，createlead是我的表單資料模型名稱。
+   * 如果您使用&#x200B;**AEM Forms6.3**，回呼URL將為https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html。 在此URL中，createlead是我的表單資料模型名稱。
 
-   * 如果您使用** AEM Forms 6.4**，回呼URL將是[https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html](https://gbedekar-w7-1:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html)
+   * 如果您使用**AEM Forms6.4**，回呼URL將為[https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html](https://gbedekar-w7-1:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html)
 
-在此範例中，gbedekar -w7-1:6443是我的伺服器名稱，以及AEM正在執行的埠。
+在此示例中，gbedekar -w7-1:6443是我的伺服器的名稱以及運行的端AEM口。
 
-建立連線應用程式後，請注意&#x200B;**消費者金鑰和密碼金鑰**。 在AEM Forms中建立資料來源時，您需要這些工具。
+建立連線應用程式後，請注意&#x200B;**消費者金鑰和密碼金鑰**。 在AEM Forms建立資料源時，您需要這些。
 
 現在您已建立連線的應用程式，您就需要針對您在salesforce中執行的作業建立Swagger檔案。 範例Swagger檔案會隨附於可下載資產中。 此Swagger檔案允許您在Adaptive Form提交時建立「Lead」對象。 請探索此Swagger檔案。
 
-下一步是在AEM Forms中建立資料來源。 請根據您的AEM Forms版本遵循下列步驟
+下一步是在AEM Forms建立資料來源。 請依照您的AEM Forms版，依照下列步驟執行
 
-## AEM Forms 6.3 {#aem-forms}
+## AEM Forms6.3 {#aem-forms}
 
 * 使用https通訊協定登入AEM Forms
 * 輸入https://&lt;servername>:&lt;serverport> /etc/cloudservices.html，以導覽至雲端服務，例如https://gbedekar-w7-1:6443/etc/cloudservices.html
@@ -83,9 +86,9 @@ ht-degree: 0%
 
 您還必須為Lead對象配置讀寫服務。 請參閱本頁底部的螢幕擷取畫面。
 
-在建立表單資料模型後，您可以基於此模型建立自適應表單，並使用表單資料模型提交方法在SFDC中建立銷售線索。
+在建立表單資料模型後，可以基於此模型建立自適應Forms，並使用表單資料模型提交方法在SFDC中建立銷售線索。
 
-## AEM Forms 6.4 {#aem-forms-1}
+## AEM Forms6.4 {#aem-forms-1}
 
 * 建立資料來源
 
@@ -116,7 +119,7 @@ ht-degree: 0%
 
 您還必須為Lead對象配置讀寫服務。 請參閱本頁底部的螢幕擷取畫面。
 
-在建立表單資料模型後，您可以基於此模型建立自適應表單，並使用表單資料模型提交方法在SFDC中建立銷售線索。
+在建立表單資料模型後，可以基於此模型建立自適應Forms，並使用表單資料模型提交方法在SFDC中建立銷售線索。
 
 >[!NOTE]
 >
