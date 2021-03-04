@@ -4,21 +4,18 @@ seo-title: 利用匯編服務在AEM Forms
 description: 使用AEM Forms的Assembler Service來組合多個pdf檔案
 seo-description: 使用AEM Forms的Assembler Service來組合多個pdf檔案
 uuid: 7895b1a3-6f9d-4413-bb7f-692ea0380fcd
-feature: 組合器
+feature: 匯編器
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: a12f52af-7039-4452-a58d-9ad2c0096347
-topic: 開發
-role: 開發人員
-level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 3%
+source-wordcount: '225'
+ht-degree: 2%
 
 ---
 
