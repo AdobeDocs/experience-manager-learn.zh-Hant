@@ -1,7 +1,7 @@
 ---
-title: 對資產計算工作器進行調試
-description: 資產計算工作者可透過數種方式進行除錯，從簡單的除錯記錄陳述式到附加的VS程式碼（做為遠端除錯程式），再到提取從AEM以雲端服務方式啟動的Adobe I/O Runtime中啟動的記錄檔。
-feature: asset-compute
+title: 調試Asset compute工作器
+description: asset compute工作者可以通過多種方式進行調試，從簡單的調試日誌語句到附加的VS代碼作為遠程調試程式，再到提取從Cloud Service啟動的Adobe I/O Runtime激活日AEM志。
+feature: asset compute微服務
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,24 +9,27 @@ audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
+topic: 整合、開發
+role: 開發人員
+level: 中級，經驗豐富的
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
 
 
-# 對資產計算工作器進行調試
+# 調試Asset compute工作器
 
-資產計算工作者可透過數種方式進行除錯，從簡單的除錯記錄陳述式到附加的VS程式碼（做為遠端除錯程式），再到提取從AEM以雲端服務方式啟動的Adobe I/O Runtime中啟動的記錄檔。
+asset compute工作者可以通過多種方式進行調試，從簡單的調試日誌語句到附加的VS代碼作為遠程調試程式，再到提取從Cloud Service啟動的Adobe I/O Runtime激活日AEM志。
 
 ## 記錄
 
-除錯資產計算工作程式的最基本形式是在工作程式碼中使用傳統的`console.log(..)`語句。 `console` JavaScript物件是隱式的全域物件，因此不需要匯入或要求它，因為它永遠存在於所有的上下文中。
+除錯Asset compute工作程式的最基本形式是在工作程式碼中使用傳統的`console.log(..)`語句。 `console` JavaScript物件是隱式的全域物件，因此不需要匯入或要求它，因為它永遠存在於所有的上下文中。
 
-這些日誌語句根據Asset Compute工作器的執行方式進行不同的審閱：
+根據Asset compute工作者的執行方式，這些日誌語句可用於查看的方式不同：
 
 + 從`aio app run`，將列印記錄至標準輸出，並將[開發工具的](../develop/development-tool.md)啟動記錄記錄記錄檔記錄在案
    ![aio app run console.log(...)](./assets/debug/console-log__aio-app-run.png)
@@ -42,11 +45,11 @@ ht-degree: 0%
 >
 >使用Microsoft Visual Studio代碼1.48.0或更新版本，以與wskdebug相容
 
-[wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組支援將除錯程式附加至「資產計算」工作者，包括在「VS程式碼」中設定中斷點並逐步執行程式碼。
+[wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組支援將除錯程式附加至Asset compute工作，包括在VS程式碼中設定中斷點並逐步執行程式碼。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40383/?quality=12&learn=on)
 
-_使用wskdebug調試資產計算工作器的點進（無音頻）_
+_使用wskdebug調試Asset compute工作器的點進（無音頻）_
 
 1. 確保已安裝[wskdebug](../set-up/development-environment.md#wskdebug)和[ngrok](../set-up/development-environment.md#ngork) npm模組
 1. 確保[Docker Desktop和支援的Docker映像](../set-up/development-environment.md#docker)已安裝並運行
@@ -56,7 +59,7 @@ _使用wskdebug調試資產計算工作器的點進（無音頻）_
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
-1. 使用命令`npx adobe-asset-compute devtool`啟動資產計算開發工具的新實例
+1. 使用命令`npx adobe-asset-compute devtool`啟動新的Asset compute開發工具實例
 1. 在「VS程式碼」中，點選左側導覽中的「除錯」圖示
    + 如果出現提示，請點選&#x200B;__建立launch.json檔案> Node.js__&#x200B;以建立新的`launch.json`檔案。
    + 否則，請點選&#x200B;__Launch Program__&#x200B;下拉式清單右側的&#x200B;__Gear__&#x200B;圖示，以開啟編輯器中現有的`launch.json`。
@@ -84,14 +87,14 @@ _使用wskdebug調試資產計算工作器的點進（無音頻）_
 
 1. 從下拉式清單中選取新的&#x200B;__wskdebug__
 1. 點選&#x200B;__Run__&#x200B;按鈕（位於&#x200B;__wskdebug__&#x200B;下拉式清單左側）
-1. 開啟`/actions/worker/index.js`並點選行號左側以新增中斷點1。 定位至步驟6中開啟的「資產計算開發工具Web瀏覽器」窗口
+1. 開啟`/actions/worker/index.js`並點選行號左側以新增中斷點1。 導覽至在步驟6中開啟的「Asset compute開發工具Web瀏覽器」視窗
 1. 按一下&#x200B;__運行__&#x200B;按鈕以執行工作器
 1. 導覽回「VS程式碼」，導覽至`/actions/worker/index.js`並逐步執行程式碼
 1. 若要退出可除錯的開發工具，請在執行步驟6中`npx adobe-asset-compute devtool`命令的終端中點選`Ctrl-C`
 
-## 從Adobe I/O Runtime存取記錄檔{#aio-app-logs}
+## 從Adobe I/O Runtime訪問日誌{#aio-app-logs}
 
-[AEM做為雲端服務，可透過「處理分析」在Adobe I/O Runtime中直](../deploy/processing-profiles.md) 接叫用資產計算工作者，以利用這些工作者。由於這些調用不涉及本地開發，因此不能使用本地工具（如「資產計算開發工具」或wskdebug）來調試其執行。 Adobe I/O CLI可用來從Adobe I/O Runtime中特定工作區中執行的工作者擷取記錄檔。
+[作AEM為Cloud Service，您可透過「處理分析」](../deploy/processing-profiles.md) 直接在Adobe I/O Runtime叫用Asset compute工作者。由於這些調用不涉及本地開發，因此無法使用本地工具(如Asset compute開發工具或wskdebug)調試其執行。 相反，Adobe I/OCLI可用於從Adobe I/O Runtime某特定工作區中執行的工作器中提取日誌。
 
 1. 根據需要除錯的工作區，確保通過`AIO_runtime_namespace`和`AIO_runtime_auth`設定[工作區特定的環境變數](../deploy/runtime.md)。
 1. 從命令行執行`aio app logs`
