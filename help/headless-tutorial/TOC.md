@@ -4,17 +4,18 @@ user-guide-description: 端對端的教學課程，說明如何使用 AEM Headle
 breadcrumb-title: AEM Headless 教學課程
 version: cloud-service
 sub-product: 內容服務
-audience: architect, developer, implementer
 doc-type: tutorial
+feature: 內容片段，核心元件
 topics: content-delivery
+audience: architect, developer, implementer
 activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 30%
+source-wordcount: '107'
+ht-degree: 29%
 
 ---
 
