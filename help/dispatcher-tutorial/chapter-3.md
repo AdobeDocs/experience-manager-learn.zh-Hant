@@ -1,12 +1,10 @@
 ---
 title: 第3章——高級快取主題
-seo-title: AEM Dispatcher Cache Demystified - Chapter 3 - Advanced Caching Topics
-description: AEM Dispatcher Cache Demystified教學課程的第3章介紹如何克服第2章中討論的限制。
-seo-description: AEM Dispatcher Cache Demystified教學課程的第3章介紹如何克服第2章中討論的限制。
+description: Dispatcher Cache解AEM析教程的第3章介紹了如何克服第2章中討論的限制。
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '6187'
+source-wordcount: '6162'
 ht-degree: 0%
 
 ---
@@ -20,7 +18,7 @@ ht-degree: 0%
 
 ## 概覽
 
-這是AEM中快取的三部分第3部分——系列。 前兩個部分著重於Dispatcher中的純http快取，以及存在哪些限制。 本部分討論如何克服這些限制。
+這是三個部分的第3部分——系列以快取AEM。 前兩個部分著重於Dispatcher中的純http快取，以及存在哪些限制。 本部分討論如何克服這些限制。
 
 ## 一般快取
 
@@ -63,7 +61,7 @@ ht-degree: 0%
 
 #### 內容儲存庫
 
-下一級別是CRX或Oak - AEM使用的檔案資料庫。 CRX和Oak將資料分割為可在記憶體中快取的區段，以避免存取HDD的速度變慢。
+下一級是CRX或Oak —— 由使用的檔案資料庫AEM。 CRX和Oak將資料分割為可在記憶體中快取的區段，以避免存取HDD的速度變慢。
 
 #### 第三方資料
 
@@ -193,9 +191,9 @@ ht-degree: 0%
 
 <br> 
 
-在AEM世界中，一個常見的方案是在內部快取（例如，記憶體快取，其中事件可近乎即時處理）和外部TTL型快取（可能您無權存取明確失效）處使用事件型失效。
+此外，世AEM界上常見的方案是在內部快取（例如，記憶體內快取，可以在接近即時的情況下處理事件）和外部基於TTL的快取上使用基於事件的失效——在這些快取中，您可能沒有明確失效的訪問權限。
 
-在AEM世界中，您會在Publish系統中為商業物件和HTML片段提供記憶體內快取，當基礎資源變更且您將此變更事件傳播至也以事件為基礎的分派程式時，此快取會失效。 在前面，您會有例如以TTL為基礎的CDN。
+在世AEM界上，當基礎資源發生變更，而您將此變更事件傳播到調度程式，同時也基於事件工作時，Publish系統中的業務對象和HTML片段會有記憶體快取，該快取會失效。 在前面，您會有例如以TTL為基礎的CDN。
 
 在Dispatcher前面放置一層（短）的基於TTL的快取，可以有效地緩和通常在自動失效後會發生的尖峰。
 
@@ -223,7 +221,7 @@ ht-degree: 0%
 
 #### 尊重訪問控制
 
-此處描述的技巧相當強大，而且每個AEM開發人員的工具箱中都有&#x200B;_must-have_。 但別太激動，要明智地使用。 將物件儲存在快取中，並在後續請求中共用給其他使用者，實際上就是規避存取控制。 這通常不是公開網站的問題，但是當使用者需要先登入才能存取時，才會發生問題。
+此處描述的技巧相當強大，而且每個開發人員的工具箱中都有&#x200B;_must-haveAEM_。 但別太激動，要明智地使用。 將物件儲存在快取中，並在後續請求中共用給其他使用者，實際上就是規避存取控制。 這通常不是公開網站的問題，但是當使用者需要先登入才能存取時，才會發生問題。
 
 請考慮將網站主功能表的HTML標籤儲存在記憶體中快取中，以便在不同的頁面之間共用。 實際上，將部分轉譯的HTML儲存為建立導覽的最佳範例，通常很昂貴，因為它需要遍歷許多頁面。
 
@@ -245,7 +243,7 @@ ht-degree: 0%
 
 3. 尤其是在Sling中，您可以（幾乎）將每個物件彼此調整。 考慮將資源放入快取中。 下一個請求（具有不同的訪問權限）將提取該資源並將其調整到resourceResolver或會話中，以訪問他無權訪問的其他資源。
 
-4. 即使您從AEM在資源周圍建立精簡的「包裝函式」，您也不能快取該「包裝函式」-即使它是您自己的、不可變的。 包裝物件會是參照（我們之前禁止），如果我們看起來很清晰，就會產生與上一個項目中描述的相同問題。
+4. 即使您在資源周圍建立精簡的「包裝函式」AEM，也不能快取該包裝函式——即使它是您自己的、不可變的。 包裝物件會是參照（我們之前禁止），如果我們看起來很清晰，就會產生與上一個項目中描述的相同問題。
 
 5. 如果要快取，請將基本資料複製至您自己的Shallo物件，以建立您自己的物件。 您可能希望通過引用在自己的對象之間進行連結——例如，您可能希望快取對象樹。 這不錯，但只會快取您剛在相同請求中建立的物件，而不會從其他位置要求任何物件（即使是&#39;your&#39;物件的名稱空間）。 _複製_ 物件是金鑰。此外，請務必一次清除連結物件的整個結構，並避免對結構的傳入和傳出參照。
 
@@ -257,7 +255,7 @@ ht-degree: 0%
 
 本系列內容是瞭解概念並讓您建立最符合使用案例的架構。
 
-我們並未特別推廣任何工具。 但請給您提示如何評估它們。 例如，AEM有簡單的內建快取，自6.0版起就有固定的TTL。你要用嗎？ 在發佈中，事件型快取會跟隨在連結中(提示：Dispatcher)。 但對作者而言，這或許是一個不錯的選擇。 此外，Adobe ACS共用的HTTP快取也值得考慮。
+我們並未特別推廣任何工具。 但請給您提示如何評估它們。 例如，AEM自6.0版起，就有簡單的內建快取和固定的TTL。你要用嗎？ 在發佈中，事件型快取會跟隨在連結中(提示：Dispatcher)。 但對作者而言，這或許是一個不錯的選擇。 此外，AdobeACS共用的HTTP快取也值得考慮。
 
 或者，您也可以根據[Ehcache](https://www.ehcache.org)等成熟的快取架構，建立自己的快取架構。 這可用於快取Java對象和渲染的標籤（`String`對象）。
 
@@ -340,7 +338,7 @@ HTML片段快取是強大的工具。 其構想是快取記憶體內快取中，
 
 #### 自訂標籤
 
-在過去，您使用JSP做為範本引擎時，使用自訂JSP標籤來包住元件轉換程式碼是相當常見的。
+在過去，您使用JSP做為範本引擎時，使用自訂JSP標籤來包住元件轉換程式碼是很常見的。
 
 ```
 <!-- Pseudo Code -->
@@ -397,10 +395,10 @@ SDI檔案指出，您應停用以&quot;*.nocache.html&quot;結尾之URL的快取
 
 #### 引用
 
-* [docs.oracle.com —— 如何編寫自定義JSP標籤](https://docs.oracle.com/cd/E11035_01/wls100/taglib/quickstart.html)
+* [docs.oracle.com —— 如何編寫自訂JSP標籤](https://docs.oracle.com/cd/E11035_01/wls100/taglib/quickstart.html)
 * [Dominik Süß —— 建立和使用元件濾鏡](https://www.slideshare.net/connectwebex/prsentation-dominik-suess)
 * [sling.apache.org - Sling Dynamic Includes](https://sling.apache.org/documentation/bundles/dynamic-includes.html)
-* [helpx.adobe.com —— 在AEM中設定Sling Dynamic Includes](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-dynamic-include-technical-video-setup.html)
+* [helpx.adobe.com —— 設定Sling Dynamic Includes AEM in](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-dynamic-include-technical-video-setup.html)
 
 
 #### 模型快取
@@ -504,7 +502,7 @@ Cache-Control: no-cache
 
 是的，當您重建Dispatcher快取時，您會發現，Publish系統的運作方式也有很大不同，這取決於您是只請求少數幾個頁面，還是請求較多頁面。 即使所有頁面都同樣複雜，它們的編號也起到一定作用。 還記得我們說過的鏈式快取嗎？ 如果您總是要求相同數量的頁面，則很有可能是，含有原始資料的相應區塊位於硬碟快取中，或是由作業系統快取區塊。 此外，資料庫很有可能已在其主記憶體中快取了相應的段。 因此，重新轉譯的速度比您讓其他頁面立即逐出，然後從各種快取中驅逐時要快得多。
 
-快取很困難，對依賴快取的系統進行測試也是一樣。 那麼，你能做什麼來創造更準確的現實場景呢？
+快取很困難，對依賴快取的系統進行測試也是一樣。 那麼，你能做什麼讓現實生活更加精確？
 
 我們認為您必須執行多個測試，而且您必須提供多個效能指標來衡量解決方案的品質。
 
@@ -512,7 +510,7 @@ Cache-Control: no-cache
 
 現在，請對Dispatcher執行測試，而不是快取。 這是你最壞的情況。 瞭解您的系統在最糟糕的情況下，在最高負載下會變得不穩定。 您也可以視需要取出一些Dispatcher/Publish腿部，讓情況更糟。
 
-接著，對「開啟」的所有必要快取設定進行相同的測試。 緩慢地提高並行請求，以預熱快取，並查看在這些最佳情況下，系統可以承受多少費用。
+接著，對「開啟」的所有必要快取設定進行相同的測試。 緩慢地提高並行請求，以暖化快取，並查看在這些最佳情況下，系統可以承受多少費用。
 
 平均情況是，在啟用Dispatcher的情況下運行測試，但同時發生一些無效情況。 您可以通過cronjob觸碰statfiles或以不規則間隔將失效請求發送到Dispatcher來模擬此情況。 不要忘記時不時清除一些非自動失效的資源。
 
