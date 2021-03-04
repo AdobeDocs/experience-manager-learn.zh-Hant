@@ -1,8 +1,8 @@
 ---
-title: AEM Sites快速入門——元件基本資訊
-description: 透過簡單的「HelloWorld」範例，瞭解Adobe Experience Manager(AEM)Sites元件的基礎技術。 HTL、Sling Models、用戶端程式庫和作者對話方塊的主題已經探索。
-sub-product: sites
-feature: components, sling-models, htl
+title: 開始使用AEM Sites-元件基礎知識
+description: 透過簡單的「HelloWorld」AEM範例，瞭解Adobe Experience Manager()網站元件的基礎技術。 HTL、Sling Models、用戶端程式庫和作者對話方塊的主題已經探索。
+sub-product: Sites
+feature: 「核心元件，開發人員工具」
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,24 +11,27 @@ audience: developer
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
+topic: 「內容管理，開發」
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 0%
+source-wordcount: '1154'
+ht-degree: 1%
 
 ---
 
 
 # 元件基本資訊{#component-basics}
 
-在本章中，我們將透過簡單的`HelloWorld`範例來探索Adobe Experience Manager(AEM)Sites元件的基礎技術。 對現有元件進行小幅修改，涵蓋編寫、HTL、Sling Models、用戶端程式庫等主題。
+在本章中，我們將通過一個簡單的`HelloWorld`示例來探AEM索Adobe Experience Manager()Sites元件的基本技術。 對現有元件進行小幅修改，涵蓋編寫、HTL、Sling Models、用戶端程式庫等主題。
 
 ## 必備條件 {#prerequisites}
 
 檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。
 
-影片中使用的IDE是[Visual Studio代碼](https://code.visualstudio.com/)和[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)外掛程式。
+視訊中使用的IDE是[Visual Studio代碼](https://code.visualstudio.com/)和[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)外掛程式。
 
 ## 目標 {#objective}
 
@@ -38,11 +41,11 @@ ht-degree: 0%
 
 ## 您將建立的{#what-you-will-build}
 
-在本章中，您將對非常簡單的`HelloWorld`元件執行幾項修改。 在更新`HelloWorld`元件的過程中，您將瞭解AEM元件開發的主要部份。
+在本章中，您將對非常簡單的`HelloWorld`元件執行幾項修改。 在更新`HelloWorld`元件的過程中，您將瞭解元件開發的主要AEM領域。
 
 ## 第15章起始項目{#starter-project}
 
-本章以[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)產生的一般專案為基礎。 觀看以下影片並檢視[必要條件](#prerequisites)以開始使用！
+本章以[Project Archetype](https://github.com/adobe/aem-project-archetype)生AEM成的通用項目為基礎。 觀看以下影片並檢視[必要條件](#prerequisites)以開始使用！
 
 >[!NOTE]
 >
@@ -68,7 +71,7 @@ ht-degree: 0%
    $ cd aem-guides-wknd
    ```
 
-1. 使用下列命令，建立專案並部署至AEM的本機例項：
+1. 使用下列命令建立專案並將其部署AEM至本機執行個體：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -76,7 +79,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.5或6.4，請將`classic`描述檔附加至任何Maven命令。
+   > 如果使用AEM6.5或6.4，請將`classic`描述檔附加至任何Maven命令。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
@@ -86,7 +89,7 @@ ht-degree: 0%
 
 ## 元件編寫{#component-authoring}
 
-元件可視為網頁的小型模組化建置區塊。 若要重新使用元件，元件必須是可設定的。 這是透過作者對話方塊完成的。 接下來，我們將製作簡單的元件，並檢查對話方塊中的值在AEM中的保存方式。
+元件可視為網頁的小型模組化建置區塊。 若要重新使用元件，元件必須是可設定的。 這是透過作者對話方塊完成的。 接下來，我們將編寫一個簡單的元件，並檢查對話方塊中的值的保存方式AEM。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330986/?quality=12&learn=on)
 
@@ -100,7 +103,7 @@ ht-degree: 0%
 
 ## HTL（HTML範本語言）和對話方塊{#htl-dialogs}
 
-HTML範本語言或&#x200B;**[HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)**&#x200B;是AEM元件用來轉換內容的輕量級伺服器端範本語言。
+HTML範本語言或&#x200B;**[HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)**&#x200B;是元件用來轉換內容的輕量級伺服器端范AEM本語言。
 
 **對** 話框定義可為元件建立的配置。
 
@@ -112,7 +115,7 @@ HTML範本語言或&#x200B;**[HTL](https://docs.adobe.com/content/help/en/experi
 
 1. 切換到IDE並開啟項目至`ui.apps`模組。
 1. 開啟`helloworld.html`檔案並變更HTML標籤。
-1. 使用[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)等IDE工具，將檔案變更與本機AEM例項同步。
+1. 使用[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)等IDE工具，將檔案更改與本地實例同AEM步。
 1. 返回瀏覽器並觀察元件演算已變更。
 1. 開啟`.content.xml`檔案，該檔案定義`HelloWorld`元件的對話框，位置為：
 
@@ -168,11 +171,11 @@ HTML範本語言或&#x200B;**[HTL](https://docs.adobe.com/content/help/en/experi
    </div>
    ```
 
-1. 使用開發人員外掛程式或使用您的Maven技巧，將變更部署至AEM的本機例項。
+1. 將變更部署至使用開發人員外掛程式AEM或使用您Maven技能的本機例項。
 
 ## Sling 模型 {#sling-models}
 
-Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects)，可協助將資料從JCR對應至Java變數，並在AEM中進行開發時提供許多其他細節。
+Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects)，可協助將資料從JCR對應至Java變數，並在開發時提供許多其他細節AEM。
 
 接下來，我們會對`HelloWorldModel` Sling Model進行一些更新，以便在將其輸出至頁面之前，將一些商業邏輯套用至JCR中儲存的值。
 
@@ -254,7 +257,7 @@ Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.4/6.5，請使用`mvn clean install -PautoInstallBundle -Pclassic`
+   > 如果使用AEM6.4/6.5，請使用`mvn clean install -PautoInstallBundle -Pclassic`
 
 1. 更新`aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html`處的檔案`helloworld.html`，以使用`HelloWorld`模型的新建立方法：
 
@@ -277,11 +280,11 @@ Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects
    </div>
    ```
 
-1. 使用Eclipse Developer外掛程式或使用您的Maven技巧，將變更部署至AEM的本機例項。
+1. 將變更部署至使用Eclipse Developer外掛程式或AEM使用您的Maven技能的本機例項。
 
 ## 用戶端資源庫 {#client-side-libraries}
 
-用戶端程式庫（簡稱clientlibs）提供一種機制來組織和管理AEM Sites實作所需的CSS和JavaScript檔案。 用戶端程式庫是在AEM中將CSS和JavaScript納入頁面的標準方式。
+用戶端程式庫（簡稱clientlibs）提供一種機制來組織和管理AEM Sites實作所需的CSS和JavaScript檔案。 用戶端程式庫是在中的頁面上加入CSS和JavaScript的標準方AEM式。
 
 接下來，我們將為`HelloWorld`元件加入一些CSS樣式，以瞭解用戶端程式庫的基本功能。
 
@@ -350,7 +353,7 @@ Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects
        embed="[core.wcm.components.accordion.v1,core.wcm.components.tabs.v1,core.wcm.components.carousel.v1,core.wcm.components.image.v2,core.wcm.components.breadcrumb.v2,core.wcm.components.search.v1,core.wcm.components.form.text.v2,core.wcm.components.pdfviewer.v1,core.wcm.components.commons.datalayer.v1,wknd.grid,wknd.helloworld]"/>
    ```
 
-1. 使用開發人員外掛程式或使用您的Maven技巧，將變更部署至AEM的本機例項。
+1. 將變更部署至使用開發人員外掛程式AEM或使用您Maven技能的本機例項。
 
    >[!NOTE]
    >
@@ -358,7 +361,7 @@ Sling Models是註解導向的Java &quot;POJO&#39;s&quot;(Plain Old Java Objects
 
 ## 恭喜！{#congratulations}
 
-恭喜您，您剛在Adobe Experience Manager中學習了元件開發的基本知識！
+恭喜您，您剛在Adobe Experience Manager學到元件開發的基本知識！
 
 ### 後續步驟{#next-steps}
 
