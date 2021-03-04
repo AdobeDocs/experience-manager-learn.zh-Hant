@@ -1,10 +1,14 @@
 ---
 title: 第7章——從行動應AEM用程式使用內容服務——內容服務
 description: 教學課程的第7章會執行Android Mobile應用程式，從Content Services使用製作AEM的內容。
+feature: 內容片段、API
+topic: 無頭、內容管理
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
