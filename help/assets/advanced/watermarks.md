@@ -1,32 +1,31 @@
 ---
-title: AEM Assets中的浮水印
-description: AEM做為Cloud Service的浮水印功能可讓自訂影像轉譯使用任何PNG影像加上浮水印。
-feature: watermark
-topics: images
-audience: all
-doc-type: feature video
-activity: use
+title: AEM Assets水印
+description: 由於AEMCloud Service的浮水印功能允許使用任何PNG影像對自訂影像轉譯加上浮水印。
+feature: asset compute微服務
 version: cloud-service
 kt: 6357
 thumbnail: 41536.jpg
+topic: 內容管理
+role: 開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '58'
-ht-degree: 0%
+source-wordcount: '65'
+ht-degree: 1%
 
 ---
 
 
 # 浮水印
 
-AEM做為Cloud Service的浮水印功能可讓自訂影像轉譯使用任何PNG影像加上浮水印。
+由於AEMCloud Service的浮水印功能允許使用任何PNG影像對自訂影像轉譯加上浮水印。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41536/?quality=12&learn=on)
 
 ## OSGi配置
 
-您可以更新下列OSGi組態存根，並將其新增至AEM專案的`ui.config`子專案。
+可以更新下列OSGi配置存根，並將其添AEM加到項目的`ui.config`子項目中。
 
 `/apps/example/osgiconfig/config.author/com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json`
 
