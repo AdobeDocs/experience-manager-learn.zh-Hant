@@ -4,7 +4,7 @@ seo-title: 使用Watched資料夾產生列印渠道檔案
 description: 這是多步驟教學課程的第10部分，可協助您建立適用於列印頻道的第一個互動式通訊檔案。 在本部分，我們將使用受監視的資料夾機制產生列印渠道檔案。
 seo-description: 這是多步驟教學課程的第10部分，可協助您建立適用於列印頻道的第一個互動式通訊檔案。 在本部分，我們將使用受監視的資料夾機制產生列印渠道檔案。
 uuid: 9e39f4e3-1053-4839-9338-09961ac54f81
-feature: 交互通信
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,11 +12,14 @@ activity: implement
 version: 6.4,6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 0%
+source-wordcount: '383'
+ht-degree: 1%
 
 ---
 
