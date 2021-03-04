@@ -1,16 +1,20 @@
 ---
-title: 自訂Adobe Experience Manager Sites中的元件圖示
+title: 在Adobe Experience Manager Sites自訂元件圖示
 description: 「元件圖示」可讓作者使用圖示或有意義的縮寫快速識別元件。 作者現在可以找到建立其網頁體驗所需的元件，比以往更快速。
 topics: components
 audience: administrator, developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
+feature: 核心元件
+topic: 開發
+role: 業務從業人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: c85a59a8bd180d5affe2a5bf5939dabfb2776d73
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 1%
+source-wordcount: '381'
+ht-degree: 2%
 
 ---
 
@@ -48,7 +52,7 @@ ht-degree: 1%
 
 ### CoralUI圖示{#coralui-icons}
 
-AEM提供的CoralUI圖示可用於元件圖示。 若要設定CoralUI圖示，請將&#x200B;**[cq:Component]@cq:icon**&#x200B;屬性設定為所需CoralUI圖示的HTML圖示屬性值（列於[CoralUI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)中）。
+CoralUI圖示(由提供AEM)可用於元件圖示。 若要設定CoralUI圖示，請將&#x200B;**[cq:Component]@cq:icon**&#x200B;屬性設定為所需CoralUI圖示的HTML圖示屬性值（列於[CoralUI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)中）。
 
 ```plain
 /apps/.../components/content/my-component
@@ -62,7 +66,7 @@ PNG影像可用於元件圖示。 若要將PNG影像設定為元件圖示，請�
 
 PNG應具有透明背景，或背景顏色設定為&#x200B;**#707070**。
 
-PNG影像將會縮放為&#x200B;**20px x 20px**。 但是，最好將視網膜顯示器&#x200B;**40px**&#x200B;配置為&#x200B;**40px**。
+PNG影像將會縮放為&#x200B;**20px x 20px**。 但是，最好將視網膜顯示器(**40px** by **40px**)容納。
 
 ```plain
 /apps/.../components/content/my-component
