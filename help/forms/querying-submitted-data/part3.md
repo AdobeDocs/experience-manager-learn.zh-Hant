@@ -1,19 +1,22 @@
 ---
-title: AEM Forms with JSON Schema and Data[Part3]
-seo-title: AEM Forms with JSON Schema and Data[Part3]
+title: AEM Forms與JSON結構描述與資料[Part3]
+seo-title: AEM Forms與JSON結構描述與資料[Part3]
 description: 多部分教學課程，可引導您逐步瞭解使用JSON結構描述建立最適化表單及查詢提交資料的相關步驟。
 seo-description: 多部分教學課程，可引導您逐步瞭解使用JSON結構描述建立最適化表單及查詢提交資料的相關步驟。
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 0%
+source-wordcount: '287'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ ht-degree: 0%
 # 將JSON結構描述儲存在資料庫{#storing-json-schema-in-database}
 
 
-若要能夠查詢已提交的資料，我們需要儲存與已提交表單關聯的JSON結構描述。 JSON結構描述將用於查詢產生器中，以建立查詢。
+若要能夠查詢已提交的資料，我們需要儲存與已提交表單關聯的JSON結構描述。 JSON結構描述將用於查詢產生器中以建立查詢。
 
 提交最適化表單時，我們會檢查關聯的JSON結構描述是否在資料庫中。 如果JSON結構描述不存在，我們會擷取JSON結構描述並將結構描述儲存在適當的表格中。 我們也會將表單名稱與JSON結構描述關聯。 下列螢幕擷取顯示儲存JSON結構描述的表格。
 
