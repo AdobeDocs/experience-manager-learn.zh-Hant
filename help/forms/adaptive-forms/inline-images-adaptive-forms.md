@@ -1,24 +1,27 @@
 ---
-title: 在最適化表單中顯示內嵌影像
-seo-title: 在最適化表單中顯示內嵌影像
-description: 在Adaptive Forms中內嵌顯示上傳的影像
-seo-description: 在Adaptive Forms中內嵌顯示上傳的影像
-feature: adaptive-forms
+title: 在最適化Forms中顯示內嵌影像
+seo-title: 在最適化Forms中顯示內嵌影像
+description: 在Adaptive Forms中顯示內嵌的已上載影像
+seo-description: 在Adaptive Forms中顯示內嵌的已上載影像
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 0%
+source-wordcount: '243'
+ht-degree: 1%
 
 ---
 
 
-# 最適化表單中的內嵌影像
+# 最適化Forms中的內嵌影像
 
 常見的使用案例是在「最適化表單」中將上傳的影像顯示為內嵌影像。 依預設，上傳的影像會顯示為連結，而透過在最適化表單中顯示影像，可增強此體驗。 本文將引導您逐步瞭解顯示內嵌影像的相關步驟。
 
@@ -67,7 +70,7 @@ function consumeImage (file) {
 
 ### 部署在您的伺服器上
 
-* 使用AEM套件管理器，在您的AEM例項上下載並安裝[用戶端程式庫](assets/inline-image-client-library.zip)。
-* 使用AEM套件管理器，在您的AEM例項上下載並安裝[範例表單](assets/inline-image-af.zip)。
+* 使用套件管理器，在您的例項上下載並安裝[用戶端程式AEM庫&lt;a1/AEM>。](assets/inline-image-client-library.zip)
+* 使用套件管理器，在您的例項上下載並安裝[範例表AEM格&lt;a1/AEM>。](assets/inline-image-af.zip)
 * 將瀏覽器指向[新增內嵌影像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * 按一下「附加您的像片」按鈕以新增影像
