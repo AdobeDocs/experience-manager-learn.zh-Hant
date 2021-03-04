@@ -3,7 +3,7 @@ title: 瞭解Forms自動測試與AEM Forms
 seo-title: 瞭解Forms自動測試與AEM Forms
 description: AEM6.3Forms推出可讓使用者在Adaptive AEM Forms內建測試案例的功能，使用建立在hobbes.js架構上的Calvin SDK
 seo-description: AEM6.3Forms推出可讓使用者在Adaptive AEM Forms內建測試案例的功能，使用建立在hobbes.js架構上的Calvin SDK
-feature: 適用性表單
+feature: 自適應表單
 topics: development
 audience: developer
 doc-type: technical video
@@ -11,14 +11,11 @@ activity: develop
 version: 6.3,6.4,6.5
 uuid: 3cea2785-28f0-42c1-9935-3e876c28214a
 discoiquuid: a78936b4-e817-41a0-86cc-f9ac2d6dd08f
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 2%
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
