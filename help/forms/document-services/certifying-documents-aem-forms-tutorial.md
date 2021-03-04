@@ -4,19 +4,16 @@ seo-title: AEM Forms證明檔案
 description: 使用Docassurance服務來認證AEM Forms的PDF檔案
 seo-description: 使用Docassurance服務來認證AEM Forms的PDF檔案
 uuid: ecb1f9b6-bbb3-43a3-a0e0-4c04411acc9f
-feature: Document Security
+feature: 檔案安全
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開發
-role: 開發人員
-level: 中級
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
