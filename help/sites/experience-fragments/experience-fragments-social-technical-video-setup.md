@@ -1,25 +1,28 @@
 ---
-title: 使用AEM體驗片段設定社交貼文
-description: 「體驗片段」可讓行銷人員將在AEM中建立的體驗張貼至社交媒體平台。 以下影片詳細說明將體驗片段發佈至Facebook和Pinterest所需的設定和設定。
+title: 設定包含體驗片段的AEM社交貼文
+description: 體驗片段可讓行銷人員將在中建立的體驗AEM張貼至社交媒體平台。 以下影片詳細說明將體驗片段發佈至Facebook和Pinterest所需的設定和設定。
 sub-product: 網站，內容服務
-feature: experience-fragments
+feature: 體驗片段
 topics: integrations, content-delivery
 audience: administrator, implementer, developer
 doc-type: setup
 activity: use
 version: 6.3, 6.4, 6.5
+topic: 內容管理
+role: 管理員、開發人員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 0%
+source-wordcount: '175'
+ht-degree: 1%
 
 ---
 
 
 # 使用體驗片段設定社交貼文{#set-up-social-posting-with-experience-fragments}
 
-「體驗片段」可讓行銷人員將在AEM中建立的體驗張貼至社交媒體平台。 以下影片詳細說明將體驗片段發佈至Facebook和Pinterest所需的設定和設定。
+體驗片段可讓行銷人員將在中建立的體驗AEM張貼至社交媒體平台。 以下影片詳細說明將體驗片段發佈至Facebook和Pinterest所需的設定和設定。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20592/?quality=9&learn=on)
 
@@ -30,9 +33,9 @@ ht-degree: 0%
 1. AEM Author Instance正在HTTPS上執行
 2. Facebook帳戶+ Facebook開發人員應用程式
 3. Pinterest帳戶+ Pinterest開發人員應用程式
-4. [!UICONTROL AEM Cloud ] ServicesConfiguration - Facebook
-5. [!UICONTROL AEM Cloud ] ServicesConfiguration - Pinterest
-6. AEM Experience Fragment with Cloud Services for Facebook + Pinterest
+4. [!UICONTROL AEM雲端] 服務設定- Facebook
+5. [!UICONTROL AEM雲端] 服務設定- Pinterest
+6. Facebook AEM + PinterestCloud Services體驗片段
 7. 使用Facebook範本的體驗片段變異
 8. 使用Pinterest範本的體驗片段變化
 
