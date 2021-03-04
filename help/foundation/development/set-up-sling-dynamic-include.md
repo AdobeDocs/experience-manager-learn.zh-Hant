@@ -1,36 +1,39 @@
 ---
-title: 設定AEM的Sling Dynamic Include
-description: 在Apache HTTP Web Server上執行的Apache Sling Dynamic Include與AEM Dispatcher的安裝與使用視訊逐步導覽。
+title: 設定Sling Dynamic Include for AEM
+description: 在Apache HTTP Web Server上執行Apache Sling Dynamic Include搭配Dispatcher的AEM安裝與使用視訊逐步執行。
 version: 6.3, 6.4, 6.5
 sub-product: 基礎，網站
-feature: core-components, dispatcher
+feature: API
 topics: caching
 activity: develop
 audience: architect, developer
 doc-type: technical video
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 3%
+source-wordcount: '267'
+ht-degree: 6%
 
 ---
 
 
 # 設定[!DNL Sling Dynamic Include]
 
-在[!DNL Apache HTTP Web Server]上執行[AEM Dispatcher](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)時，安裝和使用[!DNL Apache Sling Dynamic Include]的視訊逐步執行。
+在[!DNL Apache HTTP Web Server]上安裝並使用[!DNL Apache Sling Dynamic Include]和[AEM Dispatcher](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)的視頻逐步執行。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040/?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 請確定本機已安裝最新版的AEM Dispatcher。
+> 確保本地安裝了最AEM新版本的Dispatcher。
 
 1. 下載並安裝[[!DNL Sling Dynamic Include] bundle](https://sling.apache.org/downloads.cgi)。
-1. 透過[!DNL OSGi Configuration Factory]位於&#x200B;**http://&lt;host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**&#x200B;的&lt;a1/>來設定[!DNL Sling Dynamic Include]。
+1. 透過[!DNL OSGi Configuration Factory]位於&#x200B;**http://&lt;host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**&#x200B;的來設定[!DNL Sling Dynamic Include]。
 
-   或者，若要新增至AEM程式碼庫，請在以下網址建立適當的&#x200B;**sling:OsgiConfig**&#x200B;節點：
+   或者，若要新增至程式AEM碼庫，請在以下網址建立適當的&#x200B;**sling:OsgiConfig**&#x200B;節點：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -54,7 +57,7 @@ ht-degree: 3%
    -->
    ```
 
-1. （可選）重複最後一個步驟，允許通過](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html)提供可編輯模板[的鎖定（初始）內容上的元件。 [!DNL SDI]其他配置的原因是，可編輯模板的鎖定內容是從`/conf`而不是`/content`提供的。
+1. （可選）重複最後一個步驟，允許通過[!DNL SDI]提供可編輯模板](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/page-templates-editable.html)的鎖定（初始）內容上的元件。 [其他配置的原因是，可編輯模板的鎖定內容是從`/conf`而不是`/content`提供的。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
