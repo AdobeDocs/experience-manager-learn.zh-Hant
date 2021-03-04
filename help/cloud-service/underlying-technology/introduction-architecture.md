@@ -1,6 +1,6 @@
 ---
-title: AEM架構堆疊簡介
-description: 以Adobe Experience Manager技術堆疊的一部分，介紹OSGi、JCR、Oak和Sling的技術。
+title: 架構堆疊AEM簡介
+description: 介紹作為Adobe Experience Manager技術堆疊的一部分的OSGi、JCR、Oak和Sling技術。
 topics: architecture
 audience: administrator, developer
 doc-type: technical video
@@ -8,17 +8,20 @@ activity: understand
 version: cloud-service
 kt: 4260
 thumbnail: 32034.jpg
+topic: 架構
+role: 架構設計人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 0%
+source-wordcount: '46'
+ht-degree: 2%
 
 ---
 
 
-# AEM架構堆疊簡介{#introduction-architecture}
+# 架構堆AEM棧{#introduction-architecture}簡介
 
-將[!DNL OSGi]、[!DNL JCR]、[!DNL Oak]和[!DNL Sling]等技術作為Adobe Experience Manager技術堆疊的一部分介紹。
+介紹作為Adobe Experience Manager技術堆棧的一部分的[!DNL OSGi]、[!DNL JCR]、[!DNL Oak]和[!DNL Sling]技術。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32034/?quality=12&learn=on)
