@@ -1,34 +1,37 @@
 ---
 title: 在AEM Forms工作流程中設定Json資料元素的值
 seo-title: 在AEM Forms工作流程中設定Json資料元素的值
-description: 當「最適化表單」在AEM Workflow中路由給不同的使用者時，將會要求根據審閱表單的人員來隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
-seo-description: 當「最適化表單」在AEM Workflow中路由給不同的使用者時，將會要求根據審閱表單的人員來隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
+description: 當「最適化表單」在「工作流程」中路由至不同的使AEM用者時，將會要求根據審閱表單的人員隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
+seo-description: 當「最適化表單」在「工作流程」中路由至不同的使AEM用者時，將會要求根據審閱表單的人員隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
 uuid: a4ea6aef-a799-49e5-9682-3fa3b7a442fb
-feature: adaptive-forms,workflow
+feature: 適用性表單
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.4
 discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 233ad7184cb48098253a78c07a3913356ac9e774
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 0%
+source-wordcount: '767'
+ht-degree: 1%
 
 ---
 
 
-# 在AEM Forms Workflow {#setting-value-of-json-data-element-in-aem-forms-workflow}中設定JSON資料元素的值
+# 在AEM Forms工作流程中設定JSON資料元素的值{#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-當「最適化表單」在AEM Workflow中路由給不同的使用者時，將會要求根據審閱表單的人員來隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
+當「最適化表單」在「工作流程」中路由至不同的使AEM用者時，將會要求根據審閱表單的人員隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
 
 ![設定json資料中的元素值](assets/capture-3.gif)
 
-在AEM Forms OSGI-我們必須編寫自訂OSGi搭售，以設定JSON資料元素的值。 本教學課程提供此套件。
+在AEM FormsOSGI-我們必須編寫自訂OSGi搭售，以設定JSON資料元素的值。 本教學課程提供此套件。
 
-我們在AEM工作流程中使用「流程步驟」。 我們將「在Json中設定元素值」OSGi套裝與此程式步驟產生關聯。
+我們在工作流中使用「流程AEM步驟」。 我們將「在Json中設定元素值」OSGi套裝與此程式步驟產生關聯。
 
 我們需要將兩個引數傳遞到設定值包。 第一個引數是元素的路徑，其值需要設定。 第二個引數是需要設定的值。
 
@@ -52,10 +55,10 @@ afData.afUnboundData.data.initialStep,N
    * 將瀏覽器指向[軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
       * 匯入並安裝SetValueOfElementInJSONDataWorkflow.zip。此套件包含與表單相關聯的範例工作流程模型和表單資料模型。
 
-* 將瀏覽器指向[表單與檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 將您的瀏覽器指向[Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下「建立」 |檔案上傳
 * 上傳TimeOffRequestForm.zip檔案
-   **此表單是使用AEM Forms 6.4建立。請確定您使用的是AEM Forms 6.4或更新版本**
+   **此表格是使用AEM Forms6.4建立的。請確定您使用的是AEM Forms6.4或更高版本**
 * 開啟[form](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
 * 填寫開始和結束日期並提交表單。
 * 前往[「收件箱」](http://localhost:4502/aem/inbox)
