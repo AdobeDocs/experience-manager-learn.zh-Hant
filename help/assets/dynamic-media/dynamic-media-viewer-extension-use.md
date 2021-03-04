@@ -1,41 +1,38 @@
 ---
-title: 搭配Adobe Analytics和Adobe Launch使用動態媒體檢視器
-seo-title: 搭配Adobe Analytics和Adobe Launch使用動態媒體檢視器
-description: Adobe Launch的Dynamic Media Viewers擴充功能以及Dynamic Media Viewers 5.13的發行，可讓Dynamic Media、Adobe Analytics和Adobe Launch的客戶在其Adobe Launch設定中使用Dynamic Media Viewers專屬的事件和資料。
-seo-description: 'Adobe Launch的Dynamic Media Viewers擴充功能以及Dynamic Media Viewers 5.13的發行，可讓Dynamic Media、Adobe Analytics和Adobe Launch的客戶在其Adobe Launch設定中使用Dynamic Media Viewers專屬的事件和資料。 '
-sub-product: 動態媒體，分析
-feature: asset-insights, media-player
-topics: images, videos, renditions, authoring, integrations, publishing
-doc-type: feature video
-audience: all
-activity: use
+title: 將Dynamic Media觀眾與Adobe Analytics及Adobe推出
+description: 適用於 Adobe Launch 的 Dynamic Media 檢視器擴充功能及 Dynamic Media 檢視器 5.13 版的發行，可讓 Dynamic Media、Adobe Analytics 和 Adobe Launch 的客戶以其 Adobe Launch 設定使用 Dynamic Media 檢視器專屬的事件和資料。
+sub-product: Dynamic Media
+feature: 資產 Insights
 version: 6.3, 6.4, 6.5
+topic: 內容管理
+role: 業務從業人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 3%
+source-wordcount: '367'
+ht-degree: 16%
 
 ---
 
 
-# 搭配Adobe Analytics和Adobe Launch使用動態媒體檢視器{#using-dynamic-media-viewers-adobe-analytics-launch}
+# 搭配使用Dynamic Media檢視器與Adobe Analytics和Adobe啟動{#using-dynamic-media-viewers-adobe-analytics-launch}
 
-對於使用Dynamic Media和Adobe Analytics的客戶，您現在可以使用Dynamic Media Viewer Extension來追蹤網站上Dynamic Media Viewer的使用情形。
+對於擁有Dynamic Media和Adobe Analytics的客戶，您現在可以使用Dynamic Media檢視器擴充功能追蹤網站上Dynamic Media檢視器的使用情況。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29308/?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 在Dynamic Media Scene7模式中執行Adobe Experience Manager，以取得此功能。 您也需要[將Adobe Experience Platform Launch與AEM實例](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)整合。
+> 以Dynamic MediaScene7模式運行Adobe Experience Manager，以獲得此功能。 您也需要[將Adobe Experience Platform Launch與您的AEM實例](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)整合。
 
-隨著Dynamic Media Viewer擴充功能的推出，Adobe Experience Manager現在針對動態媒體檢視器(5.13)所提供的資產提供進階分析支援，在「網站」頁面上使用動態媒體檢視器時，可更精細地控制事件追蹤。
+隨著Dynamic Media檢視器擴充功能的推出，Adobe Experience Manager現在針對Dynamic Media檢視器(5.13)所提供的資產提供進階分析支援，在網站頁面上使用Dynamic Media檢視器時，可更精細地控制事件追蹤。
 
-如果您已擁有AEM Assets和Sites，您可以將Launch屬性與AEM作者例項整合。 在啟動整合與您的網站建立關聯後，您就可以在啟用檢視器事件追蹤的情況下，將動態媒體元件新增至您的頁面。
+如果您已擁有AEM Assets和網站，您可以將Launch屬性與您的作AEM者例項整合。 在啟動整合與您的網站建立關聯後，您就可以在啟用檢視器事件追蹤的情況下，將動態媒體元件新增至您的頁面。
 
-對於僅限AEM Assets的客戶或Dynamic Media Classic客戶，使用者可以取得檢視器的內嵌程式碼，並將它新增至頁面。 然後，您可以手動將啟動指令碼程式庫新增至頁面，以進行檢視器事件追蹤。
+對於僅限AEM Assets的客戶或Dynamic MediaClassic客戶，使用者可以取得檢視器的內嵌程式碼，並將它新增至頁面。 然後，您可以手動將啟動指令碼程式庫新增至頁面，以進行檢視器事件追蹤。
 
-下表列出動態媒體檢視器事件及其支援的引數：
+下表列出Dynamic Media檢視器事件及其支援的引數：
 
 <table>
    <tbody>
@@ -168,6 +165,6 @@ ht-degree: 3%
 
 ## 其他資源{#additional-resources}
 
-* [將Adobe Experience Manager與Adobe Launch整合](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)
-* [在動態媒體場景7模式上執行Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+* [將Adobe Experience Manager與Adobe推出整合](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)
+* [在Dynamic MediaScene7模式下運行Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
 * [整合 Dynamic Media 檢視器以及 Adobe Analytics 和 Adobe Launch](https://helpx.adobe.com/experience-manager/6-5/assets/using/launch.html)
