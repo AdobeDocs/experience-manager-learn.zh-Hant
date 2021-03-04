@@ -1,7 +1,7 @@
 ---
 title: 擷取儲存的最適化表單
 description: Servlet，用保存的資料呈現自適應表單
-feature: 適用性表單
+feature: 自適應表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,14 +9,11 @@ activity: implement
 version: 6.4,6.5
 kt: 6553
 thumbnail: 6553.jpg
-topic: 開發
-role: 開發人員
-level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 3%
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
