@@ -1,6 +1,6 @@
 ---
-title: 從外部應用程式使用GraphQL查詢AEM —— 開始使用AEM無頭版- GraphQL
-description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 以範例WKND GraphQL React應用程式來探索AEM的GraphQL API。 瞭解此外部應用程式如何讓GraphQL呼叫AEM，以強化其體驗。 瞭解如何執行基本錯誤處理。
+title: 從外AEM部應用程式使用GraphQL進行查詢——無頭開AEM始使用- GraphQL
+description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 探索AEMGraphQL API作為示例WKND GraphQL React應用程式。 瞭解此外部應用程式如何讓GraphQL呼叫AEM以強化其體驗。 瞭解如何執行基本錯誤處理。
 sub-product: 資產
 topics: headless
 version: cloud-service
@@ -10,20 +10,24 @@ audience: developer
 mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
+feature: '"內容片段， GraphQL API"'
+topic: 「無頭、內容管理」
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
 
 
-# 從外部應用程式使用GraphQL查詢AEM
+# 從外AEM部應用程式使用GraphQL進行查詢
 
-在本章中，我們將探討如何使用AEM的GraphQL API來推動外部應用程式的使用體驗。
+在本章中，我們將探AEM討如何使用GraphQL API來推動外部應用程式的使用體驗。
 
-本教學課程使用簡單的React應用程式來查詢和顯示AEM的GraphQL API所公開的Adventure內容。 React的使用基本上不重要，而耗用的外部應用程式可以在任何平台的架構中編寫。
+本教學課程使用簡單的React應用程式來查詢和顯示GraphQL API公開的AdventureAEM內容。 React的使用基本上不重要，而耗用的外部應用程式可以在任何平台的架構中編寫。
 
 ## 必備條件
 
@@ -38,13 +42,13 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
 在本章中，我們將學習如何：
 
 * 開始並瞭解React範例應用程式的功能
-* 探索如何從外部應用程式對AEM的GraphQL端點進行呼叫
+* 探索如何從外部應用程式對AEMGraphQL端點進行呼叫
 * 定義GraphQL查詢，以依活動篩選歷險記內容片段清單
 * 更新React應用程式，提供控制項以透過GraphQL進行篩選，GraphQL是依活動列出的探險清單
 
 ## 啟動React應用程式
 
-由於本章著重於開發客戶端以使用GraphQL上的內容片段，因此必須下載WKND GraphQL React應用程式原始碼範例，並在您的本機電腦上設定](./setup.md#react-app)，而[AEM SDK則以[範例WKND的Author service](./setup.md#aem-sdk)的方式執行已安裝站點](./setup.md#wknd-site)。[
+由於本章重點介紹開發客戶端以使用GraphQL上的內容片段，因此必須在本地電腦上下載並設定[WKND GraphQL React應用程式原始碼示例，並且[AEM SDK作為Author service](./setup.md#aem-sdk)運行，並安裝了[示例WKND站點](./setup.md#wknd-site)。](./setup.md#react-app)
 
 在[Quick Setup](./setup.md)一章中，將更詳細地列出啟動React應用程式，但可遵循以下節略說明：
 
@@ -68,7 +72,7 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
 
 1. 請至[http://localhost:3000/](http://localhost:3000/)檢閱應用程式。 範例React應用程式包含兩個主要部分：
 
-   * 使用GraphQL查詢AEM中的&#x200B;__Adventure__&#x200B;內容片段，即可將家庭體驗當成WKND Adventures的索引。 在本章中，我們將修改此視圖，以支援按活動篩選冒險。
+   * 使用GraphQL查詢&#x200B;__Adventure__&#x200B;內容片段，即可將家庭體驗當成WKND AdventuresAEM的索引。 在本章中，我們將修改此視圖，以支援按活動篩選冒險。
 
       ![WKND GraphQL React應用程式——首頁體驗](./assets/graphql-and-external-app/react-home-view.png)
 
@@ -76,33 +80,33 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
 
       ![WKND GraphQL React應用程式——詳細體驗](./assets/graphql-and-external-app/react-details-view.png)
 
-1. 使用瀏覽器的開發工具和瀏覽器擴充功能（例如[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)）來檢查傳送至AEM的GraphQL查詢及其JSON回應。 此方法可用於監控GraphQL請求和響應，以確保它們得到正確表述，並且其響應如預期。
+1. 使用瀏覽器的開發工具和瀏覽器擴充功能（例如[GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm)）來檢查傳送至的GraphQL查詢及其AEMJSON回應。 此方法可用於監控GraphQL請求和響應，以確保它們得到正確表述，並且其響應如預期。
 
    ![Raw Query for adventureList](assets/graphql-and-external-app/raw-query-chrome-extension.png)
 
-   *從React應用程式傳送至AEM的GraphQL查詢*
+   *從React應用程式傳AEM送至的GraphQL查詢*
 
    ![GraphQL JSON回應](assets/graphql-and-external-app/graphql-json-response.png)
 
-   *AEM對React應用程式的JSON回應*
+   *從React應用程AEM式回應JSON*
 
    查詢和響應應與GraphiQL IDE中顯示的內容相匹配。
 
    >[!NOTE]
    >
-   > 在開發期間，React應用程式會設定為透過網頁套件開發伺服器將HTTP要求代理至AEM。 React應用程式會向`http://localhost:3000`提出要求，讓`http://localhost:4502`上執行的AEM Author服務代理這些要求。 查看檔案`src/setupProxy.js`和`env.development`以瞭解詳細資訊。
+   > 在開發期間，React應用程式會設定為透過webpack開發伺服器將HTTP要求代理至AEM。 React應用程式會向`http://localhost:3000`提出要求，讓`http://localhost:4502`上執行的AEM Author服務代理這些要求。 查看檔案`src/setupProxy.js`和`env.development`以瞭解詳細資訊。
    >
-   > 在非開發案例中，React應用程式會設定為直接向AEM提出請求。
+   > 在非開發案例中，React應用程式會直接設定為向提出請求AEM。
 
 ## 探索應用程式的GraphQL程式碼
 
 1. 在IDE中開啟檔案`src/api/useGraphQL.js`。
 
-   這是[ React Effect Hook](https://reactjs.org/docs/hooks-overview.html#effect-hook)，會監聽應用程式的`query`變更，變更時會對AEM GraphQL端點提出HTTP POST要求，並傳回JSON回應至應用程式。
+   這是[React Effect Hook](https://reactjs.org/docs/hooks-overview.html#effect-hook)，會監聽應用程式的`query`變更，變更時會向AEMGraphQL端點提出HTTPPOST請求，並傳回應用程式的JSON回應。
 
    只要React應用程式需要進行GraphQL查詢，就會叫用此自訂`useGraphQL(query)`掛接，並傳入GraphQL以傳送至AEM。
 
-   此掛接使用簡單的`fetch`模組來發出HTTP POST GraphQL請求，但其他模組（如[Apollo GraphQL客戶端](https://www.apollographql.com/docs/react/)）可以使用類似的模組。
+   此掛接使用簡單的`fetch`模組來發出HTTPPOSTGraphQL請求，但其他模組（如[Apollo GraphQL客戶端](https://www.apollographql.com/docs/react/)）可以使用類似的模組。
 
 1. 在IDE中開啟`src/components/Adventures.js`，該負責主視圖的冒險清單，並查看`useGraphQL`掛接的調用。
 
@@ -112,7 +116,7 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
    const [query, setQuery] = useState(allAdventuresQuery);
    ```
 
-   ...而且，只要`query`變數變更，就會呼叫`useGraphQL`掛接，接著針對AEM執行GraphQL查詢，將JSON傳回至`data`變數，然後用於轉譯冒險清單。
+   ...而且，只要`query`變數變更，就會呼叫`useGraphQL`掛接，接著會針對此連結執行GraphQL查詢AEM，將JSON傳回至`data`變數，然後用於轉譯探險清單。
 
    ```javascript
    const { data, errorMessage } = useGraphQL(query);
@@ -145,7 +149,7 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
 
 1. 開啟`src/components/AdventureDetail.js`，負責顯示冒險詳細體驗的React元件。 此檢視會要求特定的內容片段，使用其JCR路徑作為其唯一ID，並轉譯提供的詳細資訊。
 
-   與`Adventures.js`類似，自訂`useGraphQL` React Hook會重新用於對AEM執行GraphQL查詢。
+   與`Adventures.js`類似，自定義`useGraphQL` React Hook被重新用來對其執行GraphQL查AEM詢。
 
    內容片段的路徑是從元件的`props`頂端收集，用來指定要查詢的內容片段。
 
@@ -153,13 +157,13 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
    const contentFragmentPath = props.location.pathname.substring(props.match.url.length);
    ```
 
-   ...而GraphQL參數化查詢是使用`adventureDetailQuery(..)`函式來建構，並傳遞至`useGraphQL(query)`，該會針對AEM執行GraphQL查詢並將結果傳回至`data`變數。
+   ...而GraphQL參數化查詢是使用`adventureDetailQuery(..)`函式構建的，並傳遞給`useGraphQL(query)`，該執行GraphQL查詢AEM，並將結果返回到`data`變數。
 
    ```javascript
    const { data, errorMessage } = useGraphQL(adventureDetailQuery(contentFragmentPath));
    ```
 
-   `adventureDetailQuery(..)`函式只會包住篩選GraphQL查詢，此查詢使用AEM的`<modelName>ByPath`語法來查詢由其JCR路徑識別的單一內容片段，並傳回轉譯冒險的詳細資料所需的所有指定資料點。
+   `adventureDetailQuery(..)`函式只會包住篩選GraphQL查詢，該查詢使用AEM`<modelName>ByPath`語法來查詢由其JCR路徑識別的單一內容片段，並傳回演算探險詳細資訊所需的所有指定資料點。
 
    ```javascript
    function adventureDetailQuery(_path) {
@@ -201,7 +205,7 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
 接下來，讓我們修改React應用程式，以執行參數化、篩選GraphQL查詢，這些查詢會依探險活動限制首頁檢視。
 
 1. 在IDE中，開啟檔案：`src/components/Adventures.js`。 此檔案代表家庭體驗的歷險元件，可查詢並顯示「歷險」卡片。
-1. 檢查未使用的函式`filterQuery(activity)`，但已準備好制定GraphQL查詢，該查詢按`activity`過濾歷險。
+1. Inspect函式`filterQuery(activity)`（未使用），但已準備制定GraphQL查詢，該查詢由`activity`過濾歷險。
 
    請注意，參數`activity`會作為`adventureActivity`欄位中`filter`的一部分插入GraphQL查詢，要求該欄位的值與參數的值相符。
 
@@ -261,7 +265,7 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
    }
    ```
 
-1. 儲存變更並在網頁瀏覽器中重新載入React應用程式。 三個新按鈕會顯示在頂端，按一下按鈕會自動以相符的活動重新查詢AEM的「冒險內容片段」。
+1. 儲存變更並在網頁瀏覽器中重新載入React應用程式。 三個新按鈕會顯示在頂端，按一下按鈕會自動重新查詢冒AEM險內容片段與相符的活動。
 
    ![依活動篩選歷險](./assets/graphql-and-external-app/filter-by-activity.png)
 
@@ -271,7 +275,7 @@ _本章中的IDE螢幕截圖來自 [Visual Studio代碼](https://code.visualstud
 
 GraphQL是強式類型，因此，如果查詢無效，可以傳回有用的錯誤訊息。 接下來，讓我們模擬錯誤的查詢，以查看返回的錯誤消息。
 
-1. 重新開啟檔案`src/api/useGraphQL.js`。 檢查下列程式碼片段以查看錯誤處理：
+1. 重新開啟檔案`src/api/useGraphQL.js`。 Inspect下列程式碼片段，以查看錯誤處理：
 
    ```javascript
    //useGraphQL.js
@@ -290,7 +294,7 @@ GraphQL是強式類型，因此，如果查詢無效，可以傳回有用的錯�
        });
    ```
 
-   檢查響應以查看其是否包含`errors`對象。 如果GraphQL查詢有問題（例如基於架構的未定義欄位）,`errors`物件將由AEM傳送。 如果沒有`errors`對象，則設定並返回`data`。
+   檢查響應以查看其是否包含`errors`對象。 如果GraphQL查詢存在問題，AEM例如基於架構的未定義欄位，則`errors`對象將由發送。 如果沒有`errors`對象，則設定並返回`data`。
 
    `window.fetch`包含`.catch`陳述式，用於&#x200B;*catch*&#x200B;任何常見錯誤，例如無效的HTTP請求，或是無法與伺服器連線。
 
@@ -333,7 +337,7 @@ GraphQL是強式類型，因此，如果查詢無效，可以傳回有用的錯�
 
    GraphQL API檢測到`adventurePetPolicy`在`AdventureModel`中未定義，並返回相應的錯誤消息。
 
-1. 使用瀏覽器的開發人員工具檢查來自AEM的回應，以檢視`errors` JSON物件：
+1. Inspect使AEM用瀏覽器的開發人員工具回應`errors` JSON物件：
 
    ![錯誤JSON物件](assets/graphql-and-external-app/error-json-response.png)
 
