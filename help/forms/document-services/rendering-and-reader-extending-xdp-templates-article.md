@@ -9,12 +9,15 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-feature: forms-service
+feature: 表單服務
 discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
@@ -24,13 +27,13 @@ ht-degree: 0%
 
 常見的使用案例是將xdp轉譯為PDF，並將Reader擴充功能套用至轉譯的PDF。
 
-例如，在AEM Forms的表單入口網站中，當使用者按一下XDP時，我們可將XDP轉換為PDF，而Reader則可擴充PDF。
+例如，在AEM Forms的表單入口網站中，當使用者按一下XDP時，我們可將XDP轉換為PDF，而閱讀程式可擴充PDF。
 
 若要測試此功能，您可以試用此[link](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 範例名稱為「Render XDP with RE」
 
 要完成此使用案例，我們需要執行以下操作。
 
-* 將Reader Extensions憑證新增至「fd-service」使用者。 添加Reader Extensions憑據的步驟列在[此處](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
+* 將Reader擴展證書添加到&quot;fd-service&quot;用戶。 添加Reader擴展憑據的步驟列在[此處](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
 
 * 建立自訂OSGi服務，以呈現並套用使用權限。 完成此作業的程式碼列於下方
 
@@ -200,11 +203,11 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 若要在本機伺服器上測試此項，請依照下列步驟進行
 1. [下載並安裝DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下載並安裝AEMFormsDocumentServices套件](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-1. [使用套件管理員將與本文相關的資產下載並匯入AEM](assets/renderandextendxdp.zip)
+1. [使用套件管理員將與本文相關的資產下載AEM並匯入](assets/renderandextendxdp.zip)
    * 此套件包含範例入口網站和xdp檔案
-1. 將Reader擴充功能憑證新增至「fd-service」使用者
+1. 將Reader擴展證書添加到&quot;fd-service&quot;用戶
 1. 將瀏覽器指向[入口網頁](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
-1. 按一下pdf圖示以轉譯xdp並取得Reader Extended的pdf
+1. 按一下pdf圖示以轉譯xdp並取得PDF，此為ReaderExtended
 
 
 
