@@ -4,20 +4,17 @@ seo-title: '產生JSON網頁Token和存取Token '
 description: 本文說明產生JWT和存取Token所需的程式碼，以便對Adobe Campaign Standard進行REST呼叫
 seo-description: 本文說明產生JWT和存取Token所需的程式碼，以便對Adobe Campaign Standard進行REST呼叫
 uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
-feature: 「適應性Forms，表單資料模型」
+feature: adaptive-forms, form-data-model
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
-topic: 開發
-role: 開發人員
-level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
