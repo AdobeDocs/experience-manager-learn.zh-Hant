@@ -4,17 +4,20 @@ seo-title: 在AEM Forms6.3和6.4中使用Salesforce設定DataSource
 description: 使用表單資料模型整合AEM Forms與Salesforce
 seo-description: 使用表單資料模型整合AEM Forms與Salesforce
 uuid: 0124526d-f1a3-4f57-b090-a418a595632e
-feature: adaptive-forms, form-data-model
+feature: 最適化Forms，表單資料模型
 topics: integrations
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 8e314fc3-62d0-4c42-b1ff-49ee34255e83
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
