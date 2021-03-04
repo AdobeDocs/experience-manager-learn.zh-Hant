@@ -4,17 +4,20 @@ seo-title: 從HTML5表單提交產生PDF
 description: 從Mobile Form Submission產生PDF
 seo-description: 從Mobile Form Submission產生PDF
 uuid: 61f07029-d440-44ec-98bc-f2b5eef92b59
-feature: mobile-forms
+feature: 行動表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 816f1a75-6ceb-457b-ba18-daf229eed057
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
@@ -22,7 +25,7 @@ ht-degree: 0%
 
 # 從HTM5表單提交{#generate-pdf-from-htm-form-submission}產生PDF
 
-本文將引導您逐步瞭解從HTML5（亦即行動表單）表單提交產生pdf時所涉及的步驟。 此示範程式也將說明將影像新增至HTML5表單並將影像合併為最終pdf所需的步驟。
+本文將引導您逐步瞭解從HTML5(又稱為行動Forms)表單提交產生pdf時所涉及的步驟。 此示範程式也將說明將影像新增至HTML5表單並將影像合併為最終pdf所需的步驟。
 
 若要即時展示此功能，請造訪[範例伺服器](https://forms.enablementadobe.com/content/samples/samples.html?query=0)，並搜尋「行動表單至PDF」。
 
@@ -108,7 +111,7 @@ function readURL(input) {
 
 當我們觸發檔案元素的click事件時，會執行上述程式碼。 第5行會將上傳檔案的內容擷取為base64字串，並儲存在文字欄位中。 然後，當表單提交到我們的servlet時，會提取此值。
 
-然後，我們會在AEM中設定我們行動表單的下列屬性（進階）
+然後，我們會在
 
 * 提交URL - http://localhost:4502/bin/handlemobileformsubmission。 這是我們的servlet，它將提交的資料與xdp模板合併
 * HTML演算描述檔——請確定您選取「AddImageToMobileForm」。 這會觸發程式碼，以新增影像至表單。
