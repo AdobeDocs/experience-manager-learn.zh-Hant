@@ -2,16 +2,18 @@
 title: 使用線上修訂清除
 description: '線上修訂清理簡介。 線上修訂清除功能可減輕頻繁的離線修訂清除功能。 '
 version: 6.3, 6.4, 6.5
-feature: oak, compaction
 topics: operations, authoring, performance
 activity: use
 audience: administrator, architect, implementer
 doc-type: technical video
+topic: 管理
+role: 管理員
+level: 中級
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 0%
+source-wordcount: '77'
+ht-degree: 2%
 
 ---
 
@@ -26,5 +28,5 @@ ht-degree: 0%
 
 * [AEM [!DNL JMX MBean - SegmentRevisionGarbageCollection]](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+revision+garbage+collection%2Ctype%3DSegmentRevisionGarbageCollection)
 
-* [AEM [!DNL OSGi Configuration]  -  [!UICONTROL Oak Segment NodeStore服務]](http://localhost:4502/system/console/configMgr/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService)
+* [AEM   [!DNL OSGi Configuration]  [!UICONTROL - Oak Segment NodeStore服務]](http://localhost:4502/system/console/configMgr/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService)
 
