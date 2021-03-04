@@ -1,7 +1,7 @@
 ---
 title: 儲存表單附件
 description: 提取表單附件並儲存在CRX儲存庫的新位置。
-feature: adaptive-forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6537
 thumbnail: 6537.jpg
+topic: 開發
+role: 開發人員
+level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 0%
+source-wordcount: '191'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +25,7 @@ ht-degree: 0%
 將附件添加到最適化表單時，附件將儲存在CRX儲存庫的臨時位置。 為了使用案例，我們需要將表單附件儲存到CRX儲存庫的新位置。
 
 建立OSGi服務是為了將表單附件儲存在CRX儲存庫的新位置。 使用附件在CRX中的新位置建立新檔案映射，並返回給調用的應用程式。
-以下是發送到servlet的FileMap。 鍵是最適化表單欄位，值是附件的暫時位置。 在我們的servlet中，我們將擷取附件並將其儲存在AEM儲存庫的新位置，並使用新位置更新FileMap
+以下是發送到servlet的FileMap。 鍵是最適化表單欄位，值是附件的暫時位置。 在我們的servlet中，我們將提取附件並將其儲存在儲存庫中的新AEM位置，並使用新位置更新FileMap
 
 ```java
 {
