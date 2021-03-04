@@ -1,21 +1,18 @@
 ---
 title: SMS雙因素驗證
 description: 新增額外的安全層，協助在使用者想要執行特定活動時確認其身分
-feature: 適用性表單
+feature: 整合
 topics: adaptive forms
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 kt: 6317
-topic: 開發
-role: 開發人員
-level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 2%
+source-wordcount: '604'
+ht-degree: 1%
 
 ---
 
