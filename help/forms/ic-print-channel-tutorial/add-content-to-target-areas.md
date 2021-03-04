@@ -4,7 +4,7 @@ seo-title: 新增文字和影像內容至列印頻道檔案
 description: '這是建立您第一個互動式通訊檔案的多步驟教學課程的第7部分。 在本部分，我們將新增影像和文字內容至版面(xdp)中定義的目標區域。 '
 seo-description: '這是建立您第一個互動式通訊檔案的多步驟教學課程的第7部分。 在本部分，我們將新增影像和文字內容至版面(xdp)中定義的目標區域。 '
 uuid: f20d6974-6faf-4b90-a7ff-8aa8a620fcaa
-feature: 交互通信
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,11 +13,14 @@ version: 6.4,6.5
 discoiquuid: a79bf219-2423-4819-89fc-dcfe976e08b7
 kt: 5992
 thumbnail: 22379.jpg
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 0%
+source-wordcount: '201'
+ht-degree: 1%
 
 ---
 
