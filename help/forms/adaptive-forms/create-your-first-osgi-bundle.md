@@ -1,24 +1,27 @@
 ---
-title: 使用AEM表單建立您的第一個OSGi套件
+title: 使用表單建立您的第一個OSGiAEM套件
 description: 使用maven和eclipse建立您的第一個OSGi套件
-feature: administration
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
+topic: 開發
+role: 開發人員
+level: 初學者
 translation-type: tm+mt
-source-git-commit: 48060b4d8c4b502e0c099ae8081695f97b423037
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 1%
+source-wordcount: '835'
+ht-degree: 2%
 
 ---
 
 
 # 建立您的第一個OSGi套件
 
-OSGi套件是Java™封存檔，包含Java程式碼、資源，以及說明套件及其相依性的資訊清單。 套件是應用程式的部署單位。 本文的適用對象為想要使用AEM Forms 6.4或6.5建立OSGi服務或servlet的開發人員。若要建立您的第一個OSGi套件，請遵循下列步驟：
+OSGi套件是Java™封存檔，包含Java程式碼、資源，以及說明套件及其相依性的資訊清單。 套件是應用程式的部署單位。 本文的適用對象為想要使用AEM Forms6.4或6.5來建立OSGi服務或servlet的開發人員。若要建立您的第一個OSGi套件，請遵循下列步驟：
 
 
 ## 安裝JDK
@@ -29,7 +32,7 @@ OSGi套件是Java™封存檔，包含Java程式碼、資源，以及說明套�
 ![資料源](assets/java-home.JPG)
 
 >[!NOTE]
-> 請勿使用JDK 15。 AEM不支援它。
+> 請勿使用JDK 15。 它不受支援AEM。
 
 ### 測試您的JDK版本
 
@@ -117,7 +120,7 @@ Archetype是Maven項目的範本工具組。 原型被定義為原始圖案或�
 
 ## 建立專案
 
-一旦您編寫了OSGi服務或servlet，您就需要建立專案，以產生可使用Felix網頁主控台部署的OSGi套件。 請參閱[AEMFD用戶端SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/)，在您的Maven專案中加入適當的用戶端SDK。 您必須將AEM FD用戶端SDK加入核心專案`pom.xml`的依存性區段中，如下所示。
+一旦您編寫了OSGi服務或servlet，您就需要建立專案，以產生可使用Felix網頁主控台部署的OSGi套件。 請參閱[AEMFD用戶端SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/)，在您的Maven專案中加入適當的用戶端SDK。 您必須將AEMFD用戶端SDK加入核心專案`pom.xml`的相依性區段中，如下所示。
 
 ```xml
 <dependency>
@@ -132,4 +135,4 @@ Archetype是Maven項目的範本工具組。 原型被定義為原始圖案或�
 * 開啟&#x200B;**命令提示符窗口**
 * 導航到 `c:\aemformsbundles\learningaemforms\core`
 * 執行命令`mvn clean install`
-如果一切順利，您應在下列位置`C:\AEMFormsBundles\learningaemforms\core\target`中看到包。 此套裝現在已可使用Felix網頁主控台部署至AEM。
+如果一切順利，您應在下列位置`C:\AEMFormsBundles\learningaemforms\core\target`中看到包。 此套件現已可使用Felix網頁主控台AEM部署至。
