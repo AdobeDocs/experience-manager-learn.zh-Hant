@@ -3,14 +3,10 @@ title: 第2章——定義事件內容片段模型——內容服務
 seo-title: 內容服AEM務入門——第2章——定義事件內容片段模型
 description: 無頭教學課程的第AEM2章涵蓋啟用和定義內容片段模型，用於定義標準化的資料結構和製作介面以建立事件。
 seo-description: 無頭教學課程的第AEM2章涵蓋啟用和定義內容片段模型，用於定義標準化的資料結構和製作介面以建立事件。
-feature: '"內容片段、API"'
-topic: 「無頭、內容管理」
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '996'
 ht-degree: 6%
 
 ---
