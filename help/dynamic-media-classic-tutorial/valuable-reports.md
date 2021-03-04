@@ -1,17 +1,20 @@
 ---
 title: 管理員適用的有價報告
-description: 探索Dynamic Media Classic管理員應考慮設定的兩份重要報告。
+description: 探索兩份Dynamic Media經典管理員應考慮設定的寶貴報告。
 sub-product: 動態媒體，資產
-feature: reports
+feature: Dynamic Media經典
 doc-type: tutorial
 topics: development, authoring, configuring, reports
 audience: all
 activity: use
+topic: 內容管理
+role: 管理員
+level: 中級
 translation-type: tm+mt
-source-git-commit: ac603e55308f306305482dfdee31a591274c164a
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 0%
+source-wordcount: '344'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +25,7 @@ ht-degree: 0%
 
 ## 頻寬與儲存空間報告
 
-「頻寬與儲存空間」報告詳細說明每月影像伺服器頻寬的使用量，以及您使用Dynamic Media Classic的儲存空間。 儲存空間是合約金額，因此務必檢查並確保您的儲存空間不超出限制，以避免超額使用費用。
+「頻寬與儲存」報告詳細說明了每月映像伺服器頻寬的消耗量以及您在Dynamic Media經典伺服器上佔用的儲存。 儲存空間是合約金額，因此務必檢查並確保您的儲存空間不超出限制，以避免超額使用費。
 
 ![影像](assets/valuable-reports/reports-1.jpg)
 
@@ -40,11 +43,11 @@ _影像錯誤報表。_
 
 我們希望您在本最佳實務指南中發現內容有助於您開始使用您功能強大的多媒體解決方案，或進一步發揮其效用。
 
-若要進一步瞭解Dynamic Media Classic，請檢視下列資源：
+若要進一步瞭解Dynamic Media經典，請檢視下列資源：
 
-- [Dynamic Media Classic on Experience League —— 實現價值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Dynamic Media Classic on Experience League —— 完成更多工作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
-- [動態媒體電子報封存](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
-- [動態媒體電子報訂閱頁面](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
-- [Dynamic Media Classic檔案](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
+- [Dynamic Media經典在Experience League—實現價值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- [Dynamic Media經典Experience League版——多做吧](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- [Dynamic Media電子報檔案](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
+- [Dynamic Media電子報訂閱頁面](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
+- [Dynamic Media經典文檔](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
 - [豐富型媒體部落格文章](https://theblog.adobe.com/tag/dynamic-media)
