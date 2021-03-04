@@ -4,21 +4,18 @@ seo-title: 註冊自訂資產類型
 description: 啟用自訂資產類型以在AEMForms Portal中列出
 seo-description: 啟用自訂資產類型以在AEMForms Portal中列出
 uuid: eaf29eb0-a0f6-493e-b267-1c5c4ddbe6aa
-feature: 適用性表單
+feature: 自適應表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 discoiquuid: 99944f44-0985-4320-b437-06c5adfc60a1
-topic: 開發
-role: 開發人員
-level: 經驗豐富
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 2%
+source-wordcount: '667'
+ht-degree: 1%
 
 ---
 
