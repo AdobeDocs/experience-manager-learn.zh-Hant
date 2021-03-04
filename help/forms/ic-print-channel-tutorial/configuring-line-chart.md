@@ -4,7 +4,7 @@ seo-title: 為您的第一個互動式通信文檔配置折線圖
 description: 這是多步驟教學課程的第8部分，可協助您建立列印頻道的第一個互動式通訊檔案。 在本部分，我們將添加折線圖來顯示帳戶餘額。
 seo-description: 這是多步驟教學課程的第8部分，可協助您建立列印頻道的第一個互動式通訊檔案。 在本部分，我們將添加折線圖來顯示帳戶餘額。
 uuid: a4394874-a080-4b6a-a3eb-ffc71504919d
-feature: 互動式通訊
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,14 +13,11 @@ version: 6.4,6.5
 discoiquuid: 9110e5c6-50ee-4c3e-a779-b680ff49ef23
 kt: 5993
 thumbnail: 22386.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 2%
+source-wordcount: '171'
+ht-degree: 0%
 
 ---
 
