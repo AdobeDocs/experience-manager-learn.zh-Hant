@@ -4,21 +4,18 @@ seo-title: 安裝和配置Tomcat
 description: 這是建立第一個互動式通信文檔的多步驟教程的第1部分。在本部分，我們將安裝TOMCAT並在TOMCAT中部署sampleRest.war檔案。 此WAR檔案公開的REST端點將是我們的資料源和表單資料模型的基礎。
 seo-description: 這是建立第一個互動式通信文檔的多步驟教程的第1部分。在本部分，我們將安裝TOMCAT並在TOMCAT中部署sampleRest.war檔案。 此WAR檔案公開的REST端點將是我們的資料源和表單資料模型的基礎。
 uuid: c6d4c74c-ea16-4c63-92c9-182d087fd88c
-feature: 互動式通訊
+feature: 交互通信
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 4f400c22-6c96-4018-851c-70d988ce7c6c
-topic: 開發
-role: 開發人員
-level: 初學者
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 1%
+source-wordcount: '309'
+ht-degree: 0%
 
 ---
 
