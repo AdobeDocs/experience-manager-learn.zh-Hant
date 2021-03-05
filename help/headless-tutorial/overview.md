@@ -6,10 +6,10 @@ topic: 無頭、內容管理
 role: 開發人員
 level: 初學者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 4%
+source-wordcount: '438'
+ht-degree: 5%
 
 ---
 
@@ -19,11 +19,6 @@ ht-degree: 4%
 Adobe Experience Manager有多種選項可定義無頭端點，並將其內容傳送為JSON。 使用實際操作教學課程來探索如何使用各種選項並選擇適合您的選項。
 
 ## GraphQL AEM API教學課程
-
->[!CAUTION]
->
-> GraphQL AEM API for Content Fragments Delivery可應要求提供。
-> 請洽詢Adobe支援，以啟用API做為您的AEMCloud Service方案。
 
 內AEM容片段的GraphQL API
 支援無頭CMS藍本，其中外部用戶端應用程式使用中管理的內容來呈現體AEM驗。
