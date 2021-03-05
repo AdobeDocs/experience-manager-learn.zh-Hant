@@ -33,7 +33,6 @@ ht-degree: 5%
 ## 欄自訂
 
 [啟動收AEM件匣按一下「清單檢視」圖示，然後選取「管理控制」，以開啟「管理控制」，如下方螢幕擷取畫面中所示：](http://localhost:4502/aem/inbox)
- __  __ 
 
 ![admin-control](assets/open-customization.png)
 
