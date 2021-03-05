@@ -15,9 +15,9 @@ topic: 無頭、內容管理
 role: 開發人員
 level: 初學者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: cae6e32baa256d4c94fe317eb31cd5163cdae41f
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1027'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,10 @@ ht-degree: 1%
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
 上述影片提供使用內容片段模型的高階概觀。
+
+>[!CAUTION]
+>
+> 上面的視頻顯示建立名為`Contributors`的&#x200B;**Contributor**&#x200B;模型。 在您自己的環境中執行步驟時，請確定標題使用單一形式：`Contributor`，不含&#x200B;**s**。 內容片段模型的命名驅動了將在教程稍後執行的GraphQL API調用。
 
 ## Inspect冒險內容片段模型
 
