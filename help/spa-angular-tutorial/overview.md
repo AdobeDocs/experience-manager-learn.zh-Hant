@@ -32,12 +32,12 @@ ht-degree: 99%
 
 ## 關於
 
-此多部份教學課程的目的為教導開發人員如何實作 Angular 應用程式，以使用 AEM 的 SPA Editor 功能。在真實世界情況中，開發活動會依人員細分，常涉及&#x200B;**前端開發人員**&#x200B;和&#x200B;**後端開發人員**。我們認為任何將參與 AEM SPA Editor 專案的任一開發人員在完成此教學課程後，將獲益良多。
+此多部份教學課程的目的為教導開發人員如何實作 Angular 應用程式，以使用 AEM 的 SPA Editor 功能。在真實世界情況中，開發活動會依人員細分，通常包含&#x200B;**前端開發人員**&#x200B;和&#x200B;**後端開發人員**。我們認為任何將參與 AEM SPA Editor 專案的開發人員在完成此教學課程後，將獲益良多。
 
 此教學課程在設計上將使用 **AEM as a Cloud Service**，並向下相容於 **AEM 6.5.4+** 和 **AEM 6.4.8+**。使用以下項目實作 SPA：
 
 * [Maven AEM Project Archetype](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/archetype/overview.html)
-* [AEM SPA Editor](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
+* [AEM SPA Editor](https://docs.adobe.com/content/help/zh-Hant/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
 * [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
 * [Angular](https://angular.io/)
 
@@ -55,7 +55,7 @@ ht-degree: 99%
 
 * HTML、CSS 和 JavaScript 的基本知識
 * 對於 [Angular](https://angular.io/) 有基本的認識
-* [AEM as a Cloud Service SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、[AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) 或 [AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
+* [AEM as a Cloud Service SDK](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)、[AEM 6.5.4+](https://helpx.adobe.com/tw/experience-manager/aem-releases-updates.html#65) 或 [AEM 6.4.8+](https://helpx.adobe.com/tw/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 或更新版本)
 * [Node.js](https://nodejs.org/en/) 和 [npm](https://www.npmjs.com/)
@@ -64,13 +64,13 @@ ht-degree: 99%
 
 ## 本機開發環境 {#local-dev-environment}
 
-本機開發環境是完成此教學課程所不可或缺的條件。螢幕擷圖和影片都是使用在 Mac OS 環境上執行的 AEM as a Cloud Service SDK 擷取，並將 [Visual Studio Code](https://code.visualstudio.com/) 當做 IDE 使用。除非另有註明，否則命令和程式碼應獨立於本機作業系統。
+本機開發環境是完成此教學課程不可或缺的條件。螢幕截圖和影片都是使用在 Mac OS 環境上執行的 AEM as a Cloud Service SDK 擷取，並將 [Visual Studio Code](https://code.visualstudio.com/) 當做 IDE 使用。除非另有註明，否則命令和程式碼應不受本機作業系統的限制。
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service 的新手嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **AEM as a Cloud Service 的新手嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 >
-> **AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+> **AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
 ## 後續步驟{#next-steps}
 
@@ -78,9 +78,9 @@ ht-degree: 99%
 
 ## 向下相容性 {#compatibility}
 
-此教學課程的專案程式碼是針對 AEM as a Cloud Service 所建置。為了讓專案城是碼向下相容於 **6.5.4+** 和 **6.4.8+**，已進行數次修改。
+此教學課程的專案程式碼是針對 AEM as a Cloud Service 所建置。為了讓專案程式碼向下相容於 **6.5.4+** 和 **6.4.8+**，已進行數次修改。
 
-The [UberJar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4** 已當做相依性納入：
+The [UberJar](https://docs.adobe.com/content/help/zh-Hant/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4** 已當做相依性納入：
 
 ```xml
 <!-- Adobe AEM 6.x Dependencies -->
@@ -113,4 +113,4 @@ The [UberJar](https://docs.adobe.com/content/help/en/experience-manager-65/devel
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
 ```
 
-產生 AEM 實作的新專案時，物閉使用最新版本的 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) 並更新 `aemVersion`，以將您預期的 AEM 版本做為目標。
+產生 AEM 實作的新專案時，務必使用最新版本的 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) 並更新 `aemVersion`，以將您預期的 AEM 版本做為目標。
