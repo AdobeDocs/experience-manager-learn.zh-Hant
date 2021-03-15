@@ -13,7 +13,7 @@ topic: 整合、開發
 role: 開發人員
 level: 中級，經驗豐富的
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 53c20b9774c15b04a1c78c7c0c7b61a60996bf60
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -35,7 +35,7 @@ AdobeAsset compute專案無法與AEMAEM SDK提供的本機執行階段整合，�
 
    ```
    $ docker pull openwhisk/action-nodejs-v12:latest
-   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:latest
+   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
    ```
 
 1. [安裝Visual Studio代碼](https://code.visualstudio.com/download)
