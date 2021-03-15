@@ -16,9 +16,9 @@ topic: 內容管理、開發
 role: 開發人員
 level: 初學者
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b5b43ae8231bf23e0c53777b1e9c16bcc3fc188a
 workflow-type: tm+mt
-source-wordcount: '3083'
+source-wordcount: '3106'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/30214/?quality=12&learn=on)
 
 **下載 [WKND文章設計檔案](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)**。
+
+>[!NOTE]
+>
+> [核心元AEM件UI套件也提供](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd)做為自訂專案的起點。
 
 ## 建立文章頁面範本
 
