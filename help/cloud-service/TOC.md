@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: 雲端服務
 team: TM
 translation-type: tm+mt
-source-git-commit: 59b786d95d1428916adad37ceca4412b93463e9b
+source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 24%
+source-wordcount: '353'
+ht-degree: 23%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 24%
 + 開發{#developing}
    + 開發基本知識{#basics}
       + [AEMSDK](./developing/basics/aem-sdk.md)
-      + [當地開發環境](./developing/basics/local-development-environment.md)
+      + [本機開發環境](./developing/basics/local-development-environment.md)
       + [AEM 專案原型](./developing/basics/aem-project-archetype.md)
       + [AEM 專案結構](./developing/basics/project-structure.md)
       + [可變內容與不可變內容](./developing/basics/mutable-immutable.md)
@@ -83,6 +83,15 @@ ht-degree: 24%
 + 遷移{#migration}
    + [內容轉移工具](./migration/content-transfer-tool.md)
    + [大量匯入資產](./migration/bulk-import.md)
++ 表單{#forms}
+   + [與Salesforce整合]{#integrate-with-salesforce}
+      + [簡介](./forms/integrate-with-salesforce/introduction.md)
+      + [建立連線的應用程式](./forms/integrate-with-salesforce/create-connected-app.md)
+      + [建立Swagger檔案](./forms/integrate-with-salesforce/describe-rest-api.md)
+      + [建立資料來源](./forms/integrate-with-salesforce/create-data-source.md)
+      + [建立表單資料模型](./forms/integrate-with-salesforce/create-form-data-model.md)
+      + [測試表單提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+      + [測試點按事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset compute擴充性{#asset-compute}
    + [概覽](./asset-compute/overview.md)
    + 設定{#set-up}
@@ -111,4 +120,3 @@ ht-degree: 24%
    + [編SPA輯器(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [代號型驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
-
