@@ -1,7 +1,7 @@
 ---
 title: 建立與Salesforce連線的應用程式。
 description: Connected App可讓您將Salesforce與協力廠商應用程式(例如AEM Forms)與Salesforce整合。
-solution: Experience Manager Forms
+solution: Experience Manager, Experience Manager Forms
 type: 文件
 role: 開發人員
 level: 初學者，中級
@@ -11,7 +11,7 @@ topic: 開發
 kt: 7152
 thumbnail: 331757.jpg
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 4%
