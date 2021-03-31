@@ -1,7 +1,6 @@
 ---
 title: '在按鈕的點按事件上，在Salesforce資料庫中建立Lead物件 '
 description: 通過調用表單資料模型的後置操作建立銷售線索
-product: aem
 type: 文件
 role: 開發人員
 level: 初學者，中級
@@ -10,7 +9,7 @@ feature: 適用性表單
 topic: 開發
 kt: 7193
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 8%
