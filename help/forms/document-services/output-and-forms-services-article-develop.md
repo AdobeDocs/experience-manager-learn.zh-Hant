@@ -15,9 +15,9 @@ topic: 開發
 role: 開發人員
 level: 中級
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -29,10 +29,9 @@ ht-degree: 0%
 
 在本文中，我們將檢視下列
 
-* 輸出服務——通常，此服務用於將xml資料與xdp範本或pdf合併，以產生平面化的pdf
-* FormsService —— 這項多功能服務可讓您從PDF檔案匯出／匯入資料
+* 輸出服務——通常，此服務用於將xml資料與xdp範本或pdf合併，以產生平面化的pdf。 有關詳細資訊，請參閱輸出服務的[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)。
+* FormsService —— 這項多功能服務可讓您從PDF檔案匯出／匯入資料。 有關詳細資訊，請參閱Forms服務的[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html)。
 
-AEM FormsAPI的正式Javadoc列在[這裡](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 下列程式碼片段會從PDF檔案匯出資料
 
