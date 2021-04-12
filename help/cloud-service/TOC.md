@@ -5,7 +5,7 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: 雲端服務
 team: TM
 translation-type: tm+mt
-source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
+source-git-commit: cb4f678be79ad39110cc199b8c66349f311a431d
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 22%
@@ -85,6 +85,7 @@ ht-degree: 22%
    + [大量匯入資產](./migration/bulk-import.md)
 + 表單{#forms}
    + 建立最適化表單{#create-first-af}
+      + [簡介](./forms/create-first-af/introduction.md)
       + [建立主題](./forms/create-first-af/create-theme.md)
       + [建立範本](./forms/create-first-af/create-template.md)
       + [建立片段](./forms/create-first-af/create-fragments.md)
@@ -98,7 +99,7 @@ ht-degree: 22%
    + 建立審閱工作流{#create-aem-workflow}
       + [建立工作流程模型](./forms/create-aem-workflow/create-workflow.md)
       + [觸發工作流程](./forms/create-aem-workflow/configure-af.md)
-   + Adobe Sign與AEM Forms{forms-and-sign}
+   + Adobe Sign與AEM Forms合作{#forms-and-sign}
       + [Adobe SignAPI應用程式](./forms/forms-and-sign/create-sign-api-application.md)
       + [Adobe 簽署雲端組態](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [建立最適化表單](./forms/forms-and-sign/create-adaptive-form.md)
