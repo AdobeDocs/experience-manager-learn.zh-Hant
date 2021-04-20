@@ -1,10 +1,10 @@
 ---
 title: '探索Cloud Manager在 '
 description: 探索Cloud Manager的用途，以及它如何作為AEMCloud Service使用。
-role: 架構設計人員
-level: 初學者
-type: 教學課程
-topic: 架構
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Architecture
 kt: 6922
 thumbnail: 330545.jpg
 translation-type: tm+mt

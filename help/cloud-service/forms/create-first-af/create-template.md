@@ -2,12 +2,12 @@
 title: 建立最適化表單範本
 description: 最適化表單範本會定義最適化表單的結構和初始內容。
 solution: Experience Manager Forms
-type: 文件
-role: 開發人員
-level: 初學者，中級
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 適用性表單
-topic: 開發
+feature: Adaptive Forms
+topic: Development
 kt: 7382
 thumbnail: 332223.jpg
 translation-type: tm+mt

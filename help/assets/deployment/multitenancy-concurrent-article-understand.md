@@ -1,11 +1,11 @@
 ---
 title: 多租與並行開發
 description: 瞭解使用Adobe Experience Manager資產管理多租用戶實作的優點、挑戰和技巧。
-feature: 連線資產
+feature: Connected Assets
 version: 6.5
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -3,10 +3,10 @@ title: AEM 和 Adobe Target 快速入門
 seo-title: AEM 和 Adobe Target 快速入門
 description: 端對端教學課程，說明如何使用Adobe Experience Manager和Adobe Target來建立和提供個人化體驗。 在本教學課程中，您也將瞭解端對端流程中不同角色的相關資訊，以及他們如何彼此協作
 seo-description: 端對端教學課程，說明如何使用Adobe Experience Manager和Adobe Target來建立和提供個人化體驗。 在本教學課程中，您也將瞭解端對端流程中不同角色的相關資訊，以及他們如何彼此協作
-feature: 體驗片段
-topic: 個性化
-role: 開發人員
-level: 中級
+feature: Experience Fragments
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

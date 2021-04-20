@@ -3,7 +3,7 @@ title: 搭配使用頁面編輯器與AEM Sites
 seo-title: 搭配使用頁面編輯器與Adobe Experience Manager Sites
 description: 以下視訊重點說明Adobe Experience ManagerTouch-UI Sites編輯器的幾項主要功能。
 seo-description: 以下視訊重點說明Adobe Experience ManagerTouch-UI Sites編輯器的幾項主要功能。
-feature: 頁面編輯器
+feature: Page Editor
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4248
 thumbnail: 32011.jpg
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

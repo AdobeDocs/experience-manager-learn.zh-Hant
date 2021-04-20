@@ -1,10 +1,10 @@
 ---
 title: 智慧型影像標籤與AEM Assets
 description: 智慧型影像標籤會根AEM據影像內容自動智慧地新增中繼資料標籤至影像資產，以增強搜尋功能。
-topic: 內容管理
-feature: 智慧標記
-role: 業務從業人員
-level: 中級
+topic: Content Management
+feature: Smart Tags
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 645
 thumbnail: 17019.jpg

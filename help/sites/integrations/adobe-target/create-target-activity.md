@@ -1,7 +1,7 @@
 ---
 title: 使用體驗片段選件建立目標活動
 description: 瞭解如何使用體驗片段選件建立和測AEM試Adobe Target活動。
-feature: 體驗片段
+feature: Experience Fragments
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
@@ -10,8 +10,8 @@ version: cloud-service
 kt: 6351
 thumbnail: 41246.jpg
 topic: Integrations
-role: 業務從業人員
-level: 中級
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

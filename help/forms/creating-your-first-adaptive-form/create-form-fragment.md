@@ -1,16 +1,16 @@
 ---
 title: 建立表單片段
 description: 表AEM單提供方便的機制，只需建立面板或欄位群組等表單區段一次，即可跨最適化表單重複使用。
-feature: 適用性表單
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 kt: 5862
 thumbnail: 37325.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

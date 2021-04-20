@@ -2,10 +2,10 @@
 title: 在AEM Assets使用級聯元資料
 description: 進階的中繼資料管理可讓使用者建立階層式欄位規則，以在AEM Assets的中繼資料之間建立內容相關關係。 以下視訊示範欄位需求、可見度和情境選擇的新動態規則。 視訊還詳細說明管理員將這些規則套用至自訂中繼資料架構所需的步驟。
 version: 6.3, 6.4, 6.5, cloud-service
-topic: 內容管理
-feature: 中繼資料
-role: 業務從業人員
-level: 中級
+topic: Content Management
+feature: Metadata
+role: Business Practitioner
+level: Intermediate
 kt: 616
 thumbnail: 20702.jpg
 translation-type: tm+mt

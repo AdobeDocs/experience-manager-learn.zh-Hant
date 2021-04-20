@@ -1,15 +1,15 @@
 ---
 title: 與AEM Sites一起瞭解風格系統最佳實踐
 description: 詳細說明在與Adobe Experience Manager Sites一起實作時的最佳實務。
-feature: 樣式系統
+feature: Style System
 topics: development, components, front-end-development
 audience: developer
 doc-type: article
 activity: understand
 version: 6.4, 6.5
-topic: 開發
-role: 開發人員
-level: 中級，經驗豐富的
+topic: Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

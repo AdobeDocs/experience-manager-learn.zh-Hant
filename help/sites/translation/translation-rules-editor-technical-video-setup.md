@@ -1,15 +1,15 @@
 ---
 title: 設定轉換規則於
 description: 翻譯配置UI允許用戶管理在AEM Sites翻譯內容的規則。 此影片詳細說明如何為自訂元件建立新的轉譯規則。
-feature: 語言副本
+feature: Language Copy
 topics: localization, content-architecture
 audience: developer, administrator
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
-topic: 本土化
-role: 業務從業人員
-level: 初學者
+topic: Localization
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

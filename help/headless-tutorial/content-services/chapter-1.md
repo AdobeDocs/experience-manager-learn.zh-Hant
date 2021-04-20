@@ -3,10 +3,10 @@ title: 第1章——教學課程設定與下載——內容服務
 seo-title: 內容服AEM務快速入門——第1章——教學課程設定
 description: 無頭教學課程AEM的第1章，說明教學課程AEM實例的基線設定。
 seo-description: 無頭教學課程AEM的第1章，說明教學課程AEM實例的基線設定。
-feature: 內容片段、API
-topic: 無頭、內容管理
-role: 開發人員
-level: 初學者
+feature: Content Fragments, APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

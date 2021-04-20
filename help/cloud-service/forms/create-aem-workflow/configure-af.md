@@ -2,12 +2,12 @@
 title: 配置最適化表單以觸發工作流程
 description: 觸發Adaptive Form提交的工作流程。
 solution: Experience Manager Forms
-type: 文件
-role: 開發人員
-level: 初學者，中級
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 適用性表單
-topic: 開發
+feature: Adaptive Forms
+topic: Development
 kt: 7425
 thumbnail: 332435.pg
 translation-type: tm+mt

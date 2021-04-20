@@ -1,13 +1,13 @@
 ---
 title: AEM Assets影像的自訂智慧標籤
 description: 瞭解如何訓練AEM Assets的「智慧標籤」，將自訂詞語套用至資產。
-feature: 智慧標記
+feature: Smart Tags
 version: 6.4, 6.5, cloud-services
 kt: 795
 thumbnail: 22254.jpg
-topic: 內容管理
-role: 開發人員
-level: 中級
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

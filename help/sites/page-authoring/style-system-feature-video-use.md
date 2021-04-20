@@ -3,7 +3,7 @@ title: 與AEM Sites一起使用風格體系
 seo-title: 與Adobe Experience Manager、AEM Sites一起使用風格體系
 description: Adobe Experience Manager的Style System可讓您以視覺化方式變化元件，毋需後端開發，讓元件得到更好的再利用AEM，並提供更多功能和效率的內容製作。 Style System搭配核心元件、範本編輯器AEM和互動式版面使用時，可提供強大的功能，讓您快速建構多樣化體驗。
 seo-description: Adobe Experience Manager的Style System可讓您以視覺化方式變化元件，毋需後端開發，讓元件得到更好的再利用AEM，並提供更多功能和效率的內容製作。 Style System搭配核心元件、範本編輯器AEM和互動式版面使用時，可提供強大的功能，讓您快速建構多樣化體驗。
-feature: 樣式系統
+feature: Style System
 topics: authoring, front-end-development
 audience: all
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: use
 version: cloud-service
 kt: 974
 thumbnail: 21750.jpg
-topic: 內容管理
-role: 業務從業人員
-level: 中級
+topic: Content Management
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

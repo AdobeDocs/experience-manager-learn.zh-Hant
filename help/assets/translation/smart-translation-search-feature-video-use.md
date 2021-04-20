@@ -2,10 +2,10 @@
 title: 使用智慧翻譯搜索與AEM Assets
 description: 智慧型翻譯搜尋可自動跨內容（包括資產和頁面）AEM進行跨語言搜尋和搜尋，支援超過50種語言，並減少手動內容轉譯的需求。
 version: 6.3, 6.4, 6.5
-feature: 搜尋
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+feature: Search
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -3,16 +3,16 @@ title: 將可編輯的頁面範本與AEM Sites
 seo-title: 將可編輯的頁面範本與Adobe Experience Manager Sites
 description: 可編輯的範本可讓專業作者建立和更新頁面範本，並透過AEM Sites管理進階的政策設定。
 seo-description: 可編輯的範本可讓專業作者建立和更新頁面範本，並透過Adobe Experience Manager Sites管理進階的政策設定。
-feature: 可編輯的範本
+feature: Editable Templates
 topics: authoring
 audience: all
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 kt: 193
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

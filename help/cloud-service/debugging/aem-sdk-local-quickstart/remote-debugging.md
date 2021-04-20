@@ -1,16 +1,16 @@
 ---
 title: 遠端除AEM錯SDK
 description: SDKAEM的本機快速入門可讓您從IDE進行遠端Java除錯，讓您逐步執行即時程式碼，以了AEM解確切的執行流程。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
-topic: 開發
-role: 開發人員
-level: 初學者，中級
+topic: Development
+role: Developer
+level: Beginner, Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

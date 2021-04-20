@@ -2,9 +2,9 @@
 title: 資產共用公地中的主題
 description: Assets Share Commons的功能與技術理解材料
 version: 6.3, 6.4, 6.5
-topic: 內容管理
-role: 開發人員
-level: 中級
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

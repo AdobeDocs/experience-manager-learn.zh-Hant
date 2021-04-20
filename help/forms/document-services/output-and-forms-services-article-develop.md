@@ -4,16 +4,16 @@ seo-title: 以產出和Forms服務發展AEM Forms
 description: 在AEM Forms使用輸出和Forms服務API
 seo-description: 在AEM Forms使用輸出和Forms服務API
 uuid: be018eb5-dbe7-4101-a1a9-bee11ac97273
-feature: 輸出服務
+feature: Output Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 57f478a9-8495-469e-8a06-ce1251172fda
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt

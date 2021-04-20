@@ -2,15 +2,15 @@
 title: 瞭解內容片段和體驗片段
 description: Adobe Experience Manager的內容片段和體驗片段在表面上看似類似，但在不同的使用案例中，每個片段都扮演關鍵角色。 瞭解內容片段和體驗片段的相似性、不同性，以及各片段的使用時機和方式。
 sub-product: 資產，網站，內容服務
-feature: 內容片段、體驗片段
+feature: Content Fragments, Experience Fragments
 topics: headless
 version: 6.3, 6.4, 6.5
 doc-type: article
 activity: understand
 audience: all
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

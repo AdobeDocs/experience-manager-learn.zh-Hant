@@ -4,16 +4,16 @@ seo-title: 使用表單資料模型建立促銷活動描述檔
 description: 使用Adobe Campaign Standard表單資料模型建立AEM Forms描述檔的步驟
 seo-description: 使用Adobe Campaign Standard表單資料模型建立AEM Forms描述檔的步驟
 uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: 輸出服務
+feature: Output Service
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
-topic: 開發
-role: 開發人員
-level: 經驗豐富
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

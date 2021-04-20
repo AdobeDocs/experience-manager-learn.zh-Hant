@@ -1,7 +1,7 @@
 ---
 title: 概AEM述與Adobe Target
 description: 瞭解如何使用Adobe Experience Manager作為Cloud Service和Adobe Target來建立和提供個人化體驗。
-feature: 體驗片段、核心元件、Adobe用戶端資料層
+feature: Experience Fragments, Core Components, Adobe Client Data Layer
 topics: integrations, personalization, administration, development
 audience: all
 doc-type: feature video
@@ -10,8 +10,8 @@ version: cloud-service
 kt: 6043
 thumbnail: 41241.jpg
 topic: Integrations
-role: 業務從業人員
-level: 初學者
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

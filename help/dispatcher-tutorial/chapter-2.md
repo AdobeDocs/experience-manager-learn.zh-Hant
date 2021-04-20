@@ -2,9 +2,9 @@
 title: '"第2章- Dispatcher基礎結構"'
 description: 瞭解發佈和調度器拓撲。 瞭解最常見的拓撲和設定。
 feature: Dispatcher
-topic: 架構
-role: 架構師
-level: 初學者
+topic: Architecture
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,15 +2,15 @@
 title: 瞭解驗證支AEM援
 description: '統一檢視所支援的驗證（偶爾也是授權）機制AEM。 '
 version: 6.3, 6.4, 6.5
-feature: 使用者和群組
+feature: Users and Groups
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
-topic: 架構
-role: 架構師
-level: 經驗豐富
+topic: Architecture
+role: Architect
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

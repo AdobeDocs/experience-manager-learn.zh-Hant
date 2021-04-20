@@ -1,7 +1,7 @@
 ---
 title: 建立HTML5Forms
 description: 建立和設定HTML5表格
-feature: 行動表單
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 4419
 thumbnail: kt-4419.jpg
-topic: 開發
-role: 業務從業人員
-level: 初學者
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

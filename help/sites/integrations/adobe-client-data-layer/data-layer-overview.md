@@ -1,7 +1,7 @@
 ---
 title: 將Adobe客戶端資料層與核心組AEM件一起使用
 description: Adobe用戶端資料層引入標準方法，以收集和儲存網頁上訪客體驗的資料，然後輕鬆存取此資料。 Adobe客戶端資料層不受平台限制，但完全整合到核心元件中以便與一起使AEM用。
-feature: 核心元件
+feature: core-component
 topics: integrations
 audience: developer
 doc-type: feature video
@@ -10,8 +10,8 @@ version: cloud-service
 kt: 6261
 thumbnail: 41195.jpg
 topic: Integrations
-role: 開發人員
-level: 中級
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

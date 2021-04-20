@@ -3,7 +3,7 @@ title: 建立可重複使用的AEM Forms工作流程模型。
 seo-title: 建立可重複使用的AEM Forms工作流程模型。
 description: 獨立於自適應Forms的工作流模型。
 seo-description: 獨立於自適應Forms的工作流模型。
-feature: 工作流程
+feature: Workflow
 topics: development
 audience: developer
 doc-type: article
@@ -11,9 +11,9 @@ activity: setup
 version: 6.5
 uuid: 3a082743-3e56-42f4-a44b-24fa34165926
 discoiquuid: 9f18c314-39d1-4c82-b1bc-d905ea472451
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

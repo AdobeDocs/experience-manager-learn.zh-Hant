@@ -2,10 +2,10 @@
 title: 使用AEM體驗片段
 description: 體驗片段可讓內容作者跨通道（包括網站頁面和協力廠商系統）重複使用內容。
 sub-product: 網站，內容服務
-feature: 體驗片段
-topic: 內容管理
-role: 架構師、開發人員、管理員、商業從業人員
-level: 初學者
+feature: Experience Fragments
+topic: Content Management
+role: Architect, Developer, Administrator, Business Practitioner
+level: Beginner
 doc-type: feature video
 version: cloud-service
 kt: 194

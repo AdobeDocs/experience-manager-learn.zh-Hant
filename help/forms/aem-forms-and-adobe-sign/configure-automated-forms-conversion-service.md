@@ -1,16 +1,16 @@
 ---
 title: automated forms conversion服務
 description: automated forms conversion服務。 本文說明管理員如AEM何設定Automated forms conversion服務，以自動將其PDF forms轉換為最適化表單。 本說明適用於貴組織的AEMIT和管理員。
-feature: 適用性表單
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39493.jpg
 kt: 6114
-topic: 開發
-role: 管理員
-level: 初學者
+topic: Development
+role: Administrator
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

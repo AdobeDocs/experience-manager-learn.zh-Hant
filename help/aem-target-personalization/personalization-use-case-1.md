@@ -3,10 +3,10 @@ title: 使用體驗片段AEM和Adobe Target的個人化
 seo-title: 使用Adobe Experience Manager(AEM)體驗片段和Adobe Target的個人化
 description: 端對端教學課程，說明如何使用Adobe Experience Manager體驗片段和Adobe Target來建立和提供個人化體驗。
 seo-description: 端對端教學課程，說明如何使用Adobe Experience Manager體驗片段和Adobe Target來建立和提供個人化體驗。
-feature: 體驗片段
-topic: 個性化
-role: 開發人員
-level: 中級
+feature: Experience Fragments
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

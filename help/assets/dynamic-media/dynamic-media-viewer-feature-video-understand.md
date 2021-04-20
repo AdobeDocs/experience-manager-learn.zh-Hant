@@ -2,11 +2,11 @@
 title: 瞭解資產檢視器與AEMDynamic Media
 description: Dynamic MediaAEM檢視器增強功AEM能可讓作者定義並自訂將呈現給網站使用者的體驗資產。
 sub-product: 動態媒體經典
-feature: 檢視器預設集、影像描述檔
+feature: Viewer Presets, Image Profiles
 version: 6.3, 6.4, 6.5
-topic: 內容管理
-role: 開發人員
-level: 中級
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

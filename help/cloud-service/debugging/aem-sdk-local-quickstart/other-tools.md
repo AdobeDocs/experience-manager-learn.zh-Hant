@@ -1,16 +1,16 @@
 ---
 title: 除錯AEMSDK的其他工具
 description: 其他各種工具可協助除錯AEMSDK的本機快速入門。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
-topic: 開發
-role: 開發人員
-level: 初學者，中級
+topic: Development
+role: Developer
+level: Beginner, Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

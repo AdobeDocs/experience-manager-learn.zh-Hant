@@ -4,7 +4,7 @@ seo-title: 在提交POST時開啟代理UI
 description: 這是多步驟教學課程的第11部分，以針對列印頻道建立您的第一個互動式通訊檔案。 在本部分，我們將啟動代理用戶介面，以便在表單提交時建立臨機通信。
 seo-description: 這是多步驟教學課程的第11部分，以針對列印頻道建立您的第一個互動式通訊檔案。 在本部分，我們將啟動代理用戶介面，以便在表單提交時建立臨機通信。
 uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,9 +12,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6168
 thumbnail: 40122.jpg
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

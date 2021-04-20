@@ -3,10 +3,10 @@ title: 第3章——製作事件內容片段——內容服務
 seo-title: 開始使用AEMContent Services —— 第3章——製作事件內容片段
 description: 無頭教學課程的第AEM3章涵蓋從第2章中建立的內容片段模型建立和製作事件內容片段。
 seo-description: 無頭教學課程的第AEM3章涵蓋從第2章中建立的內容片段模型建立和製作事件內容片段。
-feature: 內容片段、API
-topic: 無頭、內容管理
-role: 開發人員
-level: 初學者
+feature: Content Fragments, APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

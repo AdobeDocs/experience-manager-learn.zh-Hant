@@ -2,14 +2,14 @@
 title: 智慧型影像
 description: Dynamic MediaClassic的Smart Imaging會根據用戶端瀏覽器功能自動最佳化影像格式和品質，以增強影像傳送效能。 它可運用Adobe SenseiAI功能並使用現有的影像預設集來達成此目的。 進一步瞭解智慧型影像功能，以及如何運用它透過更快的頁面載入提供更佳的客戶體驗。
 sub-product: 動態媒體
-feature: Dynamic Media經典
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, renditions, images
 audience: all
 activity: use
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

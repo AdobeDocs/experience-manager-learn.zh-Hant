@@ -1,7 +1,7 @@
 ---
 title: 瞭解核心元件
 description: '核心AEM元件是與Adobe Experience Manager一起使用的標準集元件。 核心元件以Adobe的最佳實務與標準建立，為任何網站實作提供基準功能集。 '
-feature: 核心元件
+feature: Core Components
 topics: authoring
 audience: all
 activity: use
@@ -9,9 +9,9 @@ doc-type: feature video
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4676
 thumbnail: 18926.jpg
-topic: 開發
-role: 業務從業人員
-level: 初學者
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

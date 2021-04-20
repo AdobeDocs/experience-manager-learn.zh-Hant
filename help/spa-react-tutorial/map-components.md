@@ -2,7 +2,7 @@
 title: 將元SPA件對應至元AEM件 |編輯與回應快AEM速入SPA門
 description: 瞭解如何使用Editor JS AEM SDK將React元件對應AEM至Adobe Experience Manager()元SPA件。 元件對應可讓使用者在編輯器中對元SPA件進行動AEM態更SPA新，類似於傳統的製作AEM。
 sub-product: Sites
-feature: 編SPA輯器
+feature: SPA Editor
 topics: development
 version: cloud-service
 activity: develop
@@ -10,8 +10,8 @@ audience: developer
 kt: 4854
 thumbnail: 4854-spa-react.jpg
 topic: SPA
-role: 開發人員
-level: 初學者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

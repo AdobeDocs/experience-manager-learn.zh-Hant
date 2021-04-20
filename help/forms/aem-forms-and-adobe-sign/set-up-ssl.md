@@ -1,7 +1,7 @@
 ---
 title: 為啟用SSL AEM
 description: 使用Adobe Experience Manager的SSL設定精靈來設定AEM透過HTTPS執行的例項。
-feature: 適用性表單
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 17993.jpg
 kt: 6046
-topic: 開發
-role: 管理員
-level: 中級
+topic: Development
+role: Administrator
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

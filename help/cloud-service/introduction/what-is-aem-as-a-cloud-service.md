@@ -1,10 +1,10 @@
 ---
 title: 什麼是AEMCloud Service?
 description: 探AEM索Cloud Service是什麼，以及它與其他Adobe Experience Manager版本有何不同。
-role: 架構設計人員
-level: 初學者
-type: 教學課程
-topic: 架構
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Architecture
 kt: 6923
 thumbnail: 330546.jpg
 translation-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe Analytics追蹤點按的元件
 description: 使用事件導向的Adobe用戶端資料層來追蹤Adobe Experience Manager網站上特定元件的點按次數。 瞭解如何使用Experience Platform Launch中的規則來監聽這些事件，並將資料傳送至具有追蹤連結信標的Adobe Analytics。
-feature: 分析
+feature: analytics
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -10,8 +10,8 @@ version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
 topic: Integrations
-role: 開發人員
-level: 中級
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

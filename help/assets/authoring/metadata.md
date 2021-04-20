@@ -1,13 +1,13 @@
 ---
 title: 中繼資料
 description: 瞭解如何存取AEM Assets的中繼資料並與之互動。
-feature: 中繼資料
-role: 業務從業人員
-level: 初學者
+feature: Metadata
+role: Business Practitioner
+level: Beginner
 version: cloud-service
 kt: 4303
 thumbnail: 32045.jpg
-topic: 內容管理
+topic: Content Management
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

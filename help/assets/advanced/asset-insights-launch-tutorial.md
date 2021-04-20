@@ -1,11 +1,11 @@
 ---
 title: 透過AEM Assets和Adobe推出設定資產見解
 description: 在這5部影片系列中，我們將逐步瞭解透過Launch by Adobe部署的Experience Manager資產前瞻分析的設定與設定。
-feature: 資產 Insights
+feature: Asset Insights
 version: 6.3, 6.4, 6.5
 topic: Integrations
-role: 開發人員
-level: 中級
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

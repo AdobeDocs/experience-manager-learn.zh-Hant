@@ -2,7 +2,7 @@
 title: 延伸元件 |編輯與回應快AEM速入SPA門
 description: 瞭解如何擴充現有核心元件以搭配編輯器使AEM用SPA。 瞭解如何將屬性和內容新增至現有元件是擴充編輯器實作功能的強大AEM技SPA巧。 瞭解如何使用委派模式來擴充Sling Models和Sling Resource Merger的功能。
 sub-product: Sites
-feature: 編SPA輯器、核心元件
+feature: SPA Editor, Core Components
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -11,8 +11,8 @@ audience: developer
 kt: 5879
 thumbnail: 5879-spa-react.jpg
 topic: SPA
-role: 開發人員
-level: 初學者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

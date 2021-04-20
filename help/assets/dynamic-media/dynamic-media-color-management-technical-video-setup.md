@@ -2,11 +2,11 @@
 title: 瞭解色彩管理與AEMDynamic Media
 description: 在此影片中，我們探索「Dynamic Media色彩管理」，以及如何使用它來提供AEM Assets的色彩校正預覽功能。
 sub-product: 動態媒體
-feature: 影像描述檔、視訊描述檔
+feature: Image Profiles, Video Profiles
 version: 6.3, 6.4, 6.5
-topic: 內容管理
-role: 開發人員
-level: 中級
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

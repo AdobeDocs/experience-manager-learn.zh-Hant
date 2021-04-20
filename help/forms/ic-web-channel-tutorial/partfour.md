@@ -4,16 +4,16 @@ seo-title: 建立Web Channel檔案範本AEM Forms
 description: 這是建立您第一個互動式通訊檔案的多步驟教學課程第4部分。 在本部分，我們將為Web頻道檔案建立範本。
 seo-description: 這是建立您第一個互動式通訊檔案的多步驟教學課程第4部分。 在本部分，我們將為Web頻道檔案建立範本。
 uuid: b4c9f68b-3091-4f87-988d-705f0296a8d8
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 95ca401b-69ea-49e2-a9ae-e144444e481e
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,16 +1,16 @@
 ---
 title: 除錯AEMSDK
 description: AEMSDK是開發人員使用的主要開發環境，並支援各種方式來除錯和部署應AEM用程式。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: null
-topic: 開發
-role: 開發人員
-level: 初學者，中級
+topic: Development
+role: Developer
+level: Beginner, Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

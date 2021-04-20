@@ -1,7 +1,7 @@
 ---
 title: 使用OTP驗證用戶
 description: 使用OTP驗證與應用程式號關聯的移動號碼。
-feature: 適用性表單
+feature: Adaptive Forms
 topics: adaptive forms
 audience: developer
 doc-type: article
@@ -9,9 +9,9 @@ activity: use
 version: 6.4,6.5
 kt: 6594
 thumbnail: 6594.jpg
-topic: 開發
-role: 開發人員
-level: 經驗豐富
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

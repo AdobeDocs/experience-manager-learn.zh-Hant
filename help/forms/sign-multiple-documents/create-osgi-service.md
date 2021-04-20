@@ -1,7 +1,7 @@
 ---
 title: 建立OSGi服務
 description: 建立OSGi服務以儲存要簽署的表格
-feature: 工作流程
+feature: Workflow
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
-topic: 開發
-role: 開發人員
-level: 經驗豐富
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -3,15 +3,15 @@ title: 以產出和Forms服務發展AEM Forms
 seo-title: 以產出和Forms服務發展AEM Forms
 description: 在AEM Forms使用輸出和Forms服務API
 seo-description: 在AEM Forms使用輸出和Forms服務API
-feature: 表單服務
+feature: Forms Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

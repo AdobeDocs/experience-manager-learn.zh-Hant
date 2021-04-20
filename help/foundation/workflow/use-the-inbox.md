@@ -2,10 +2,10 @@
 title: 如何使用收件匣AEM
 description: 收件AEM匣可促進協作，並洞悉工作和工作流程。
 version: 6.3, 6.4, 6.5, cloud-service
-topic: 協作
-feature: 收件匣
-role: 業務從業人員
-level: 中級
+topic: Collaboration
+feature: Inbox
+role: Business Practitioner
+level: Intermediate
 kt: 159
 thumbnail: 16827.jpg
 translation-type: tm+mt

@@ -1,15 +1,15 @@
 ---
 title: 瞭解如何編寫樣式AEM系統的程式碼
 description: 在本影片中，我們將檢視使用樣式系統來設定Adobe Experience Manage核心標題元件樣式的CSS（或更少）和JavaScript，以及這些樣式如何套用至HTML和DOM。
-feature: 樣式系統
+feature: Style System
 topics: development, components, front-end-development
 audience: developer, implementer
 doc-type: technical video
 activity: understand
 version: 6.4, 6.5
-topic: 開發
-role: 開發人員
-level: 中級，經驗豐富的
+topic: Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

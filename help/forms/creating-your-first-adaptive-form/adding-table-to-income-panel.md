@@ -4,7 +4,7 @@ seo-title: 將元件添加到收入面板
 description: 我們將在「收入」面板中添加一個表格。 配置表行，並使用規則編輯器計算總計。
 seo-description: 我們將在「收入」面板中添加一個表格。 配置表行，並使用規則編輯器計算總計。
 uuid: d5c98561-c559-4624-976a-7a1486da7e69
-feature: 適用性表單
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,9 +13,9 @@ version: 6.4,6.5
 thumbnail: 22198.jpg
 kt: 4211
 discoiquuid: fa483260-38ff-40d8-96a7-1de11d8b792b
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

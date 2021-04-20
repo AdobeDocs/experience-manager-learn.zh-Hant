@@ -4,16 +4,16 @@ seo-title: 配置Retirement Outlook面板
 description: 這是建立您第一個互動式通訊檔案的多步驟教學課程的第10部分。 在本部分，我們將通過添加文本和圖表元件來配置Retirement Outlook面板。
 seo-description: 這是建立您第一個互動式通訊檔案的多步驟教學課程的第10部分。 在本部分，我們將通過添加文本和圖表元件來配置Retirement Outlook面板。
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

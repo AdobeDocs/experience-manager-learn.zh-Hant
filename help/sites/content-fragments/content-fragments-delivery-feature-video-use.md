@@ -4,7 +4,7 @@ seo-title: 在Adobe Experience Manager提供內容片段
 description: 內容片段與版面無關，可直接與核心元件一起在AEM Sites使用，或以無頭方式傳送至下游通道。
 seo-description: 內容片段與版面無關，可直接與核心元件一起在AEM Sites使用，或以無頭方式傳送至下游通道。
 sub-product: 內容服務
-feature: 內容片段
+feature: Content Fragments
 topics: authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -12,9 +12,9 @@ activity: use
 version: 6.3, 6.4, 6.5
 uuid: 045473d2-5abe-4414-b91c-d369f3069ead
 discoiquuid: 912e0c41-83cf-49f7-b515-09519b6718c1
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

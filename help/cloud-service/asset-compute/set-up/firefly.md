@@ -1,7 +1,7 @@
 ---
 title: 設定Adobe專案Firefly以擴充Asset compute
 description: asset compute專案是特別定義的Adobe專案Firefly專案，因此需要在Adobe開發人員主控台中存取Adobe專案Firefly，才能設定和部署專案。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
-topic: 整合、開發
-role: 開發人員
-level: 中級，經驗豐富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

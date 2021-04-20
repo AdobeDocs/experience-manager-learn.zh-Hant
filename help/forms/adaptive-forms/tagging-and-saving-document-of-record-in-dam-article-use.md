@@ -4,16 +4,16 @@ seo-title: 在DAM中標籤和儲存AEM FormsDoR
 description: 本文將介紹AEM Forms在DAM中儲存和標籤DoR的使用AEM案例。 根據提交的表單資料來標籤檔案。
 seo-description: 本文將介紹AEM Forms在DAM中儲存和標籤DoR的使用AEM案例。 根據提交的表單資料來標籤檔案。
 uuid: b9ba13ed-52d5-4389-a7d5-bf85e58fea49
-feature: 最適化Forms，工作流程
+feature: Adaptive Forms,Workflow
 topics: developing
 audience: implementer
 doc-type: article
 activity: develop
 version: 6.4,6.5
 discoiquuid: 53961454-633b-4cd8-aef7-e64ab4e528e4
-topic: 開發
-role: 開發人員
-level: 經驗豐富
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

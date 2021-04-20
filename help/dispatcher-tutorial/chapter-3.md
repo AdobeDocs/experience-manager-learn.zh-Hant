@@ -2,9 +2,9 @@
 title: '"第3章——高級Dispatcher快取主題"'
 description: 這是要快取的三部分系列的第3部分AEM。 前兩個部分著重於Dispatcher中的純http快取，以及存在哪些限制。 本部分討論如何克服這些限制。
 feature: Dispatcher
-topic: 架構
-role: 架構師
-level: 中級
+topic: Architecture
+role: Architect
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -3,10 +3,10 @@ title: 第4章——定義內容服務模板——內容服務
 seo-title: 無頭入門AEM-第4章——定義內容服務範本
 description: 「無頭教學AEM課程」的第4章介紹「可編AEM輯範本」在「內容服務」中AEM的角色。 可編輯的範本可用來定義Content Services最終將公開AEM的JSON內容結構。
 seo-description: 「無頭教學AEM課程」的第4章介紹「可編AEM輯範本」在「內容服務」中AEM的角色。 可編輯的範本可用來定義Content Services最終將公開AEM的JSON內容結構。
-feature: 內容片段、API
-topic: 無頭、內容管理
-role: 開發人員
-level: 初學者
+feature: Content Fragments, APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

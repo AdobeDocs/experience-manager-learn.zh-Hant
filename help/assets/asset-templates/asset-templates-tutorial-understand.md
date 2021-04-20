@@ -2,9 +2,9 @@
 title: '瞭解AEM Assets的InDesign檔案和資產模板 '
 description: 本教學課程影片將逐步說明如何定義InDesign檔案，以及所有隨附的考量事項，以便用於AEM Assets的「資產範本」功能。
 version: 6.3, 6.4, 6.5
-topic: 內容管理
-role: 業務從業人員
-level: 中級
+topic: Content Management
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

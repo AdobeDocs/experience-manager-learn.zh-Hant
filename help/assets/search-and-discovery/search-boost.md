@@ -1,10 +1,10 @@
 ---
 title: AEM Assets的搜尋大幅提升是什麼？
 description: 瞭解如何新增關鍵字和片語，以提升Adobe Experience Manager資產的搜尋相關性。
-topic: 內容管理
-feature: 搜尋
-role: 業務從業人員
-level: 中級
+topic: Content Management
+feature: Search
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 103
 thumbnail: 16766.jpg

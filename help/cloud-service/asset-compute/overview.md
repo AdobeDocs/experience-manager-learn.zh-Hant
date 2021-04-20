@@ -1,7 +1,7 @@
 ---
 title: asset compute微服務AEM的擴充性，
 description: 本教學課程將逐步介紹如何建立簡單的Asset compute工作者，透過將原始資產裁切至圓形來建立資產轉譯，並套用可設定的對比度和亮度。 雖然工作者本身是基本的，但本教學課程使用它來探索如何建立、開發和部署自訂Asset compute工作者，以便與作AEM為Cloud Service一起使用。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: 整合、開發
-role: 開發人員
-level: 中級，經驗豐富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 title: 開始使用AEM Sites-元件基礎知識
 description: 透過簡單的「HelloWorld」AEM範例，瞭解Adobe Experience Manager()網站元件的基礎技術。 HTL、Sling Models、用戶端程式庫和作者對話方塊的主題已經探索。
 sub-product: Sites
-feature: 核心元件、開發人員工具
+feature: Core Components, Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,9 +11,9 @@ audience: developer
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
-topic: 內容管理、開發
-role: 開發人員
-level: 初學者
+topic: Content Management, Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

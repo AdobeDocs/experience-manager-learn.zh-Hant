@@ -2,14 +2,14 @@
 title: 基本範本簡介
 description: 瞭解Dynamic Media經典影像中的基本範本，這些範本是從影像伺服器呼叫的影像型範本，由影像和轉譯的文字組成。 範本發佈後，範本可透過URL動態變更。 您將學習如何將PhotoshopPSD上傳至Dynamic Media經典，以做為範本的基礎。 建立由影像圖層組成的簡單銷售基本範本。 新增文字圖層，並透過使用參數讓它們變數。 建構範本URL並透過網頁瀏覽器動態控制影像。
 sub-product: 動態媒體
-feature: Dynamic Media經典
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

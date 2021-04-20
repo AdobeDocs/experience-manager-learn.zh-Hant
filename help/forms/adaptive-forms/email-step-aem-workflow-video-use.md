@@ -4,16 +4,16 @@ seo-title: 使用傳送電子郵件步驟進行Forms Workflow
 description: 「傳送電子郵件」步驟已於AEM Forms6.4推出。使用此步驟，我們可以建立商業程式或工作流程，讓您傳送包含或不含附件的電子郵件。 以下視訊將逐步介紹設定傳送電子郵件元件的步驟
 seo-description: 「傳送電子郵件」步驟已於AEM Forms6.4推出。使用此步驟，我們可以建立商業程式或工作流程，讓您傳送包含或不含附件的電子郵件。 以下視訊將逐步介紹設定傳送電子郵件元件的步驟
 uuid: d054ebfb-3b9b-4ca4-8355-0eb0ee7febcb
-feature: 工作流程
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: 3a11f602-2f4c-423a-baef-28824c0325a1
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

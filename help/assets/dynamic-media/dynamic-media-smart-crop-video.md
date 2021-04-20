@@ -2,13 +2,13 @@
 title: 使用Dynamic Media智慧型裁切影片
 description: Dynamic MediaSmart Crop for視訊使用Adobe Sensei智慧追蹤視訊的興趣點，確保視訊在所有螢幕大小上呈現最佳效果。
 sub-product: 動態媒體
-feature: 智慧型裁切、視訊描述檔、檢視器預設集
+feature: Smart Crop, Video Profiles, Viewer Presets
 version: cloud-service
 kt: 5977
 thumbnail: 37958.jpg
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,13 +2,13 @@
 title: 處理設定檔
 description: 處理設定檔會定義要為資產建立的轉譯AEM為Cloud Service。
 sub-product: 資產
-feature: asset compute微服務
+feature: Asset Compute Microservices
 version: cloud-service
 kt: 4993
 thumbnail: 35597.jpg
 topic: Integrations
-role: 開發人員
-level: 初學者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

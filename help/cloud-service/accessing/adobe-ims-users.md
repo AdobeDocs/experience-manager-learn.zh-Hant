@@ -1,7 +1,7 @@
 ---
 title: AdobeIMS使用者和AEM
 description: 需要存取AEM Author服務的使用者，在Adobe的Admin Console中會被管理為AdobeIMS使用者。 瞭解哪些AdobeIMS使用者，以及如何在Admin Console中存取和管理他們。
-feature: 使用者和群組
+feature: Users and Groups
 topics: authentication
 version: cloud-service
 activity: setup
@@ -9,9 +9,9 @@ audience: administrator
 doc-type: feature video
 kt: 4997
 thumbnail: 39149.jpg
-topic: 管理、安全性
-role: 管理員
-level: 初學者
+topic: Administration, Security
+role: Administrator
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

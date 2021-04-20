@@ -2,14 +2,14 @@
 title: 影像預設集
 description: Dynamic Media經典影像的影像預設集包含建立特定大小、格式、品質和銳利化影像所需的所有設定。 影像預設集是動態調整大小的關鍵元件。 當您查看Dynamic Media經典影像的URL時，可輕鬆查看影像預設集是否在使用中。 瞭解影像預設集、其用途以及如何建立預設集。
 sub-product: 動態媒體
-feature: Dynamic Media經典、影像預設集
+feature: Dynamic Media Classic, Image Presets
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

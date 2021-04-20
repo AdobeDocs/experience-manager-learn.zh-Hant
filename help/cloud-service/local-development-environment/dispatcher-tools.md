@@ -2,7 +2,7 @@
 title: 將Dispatcher Tools設定為AEMCloud Service開發
 description: SDKAEM的Dispatcher Tools可讓本機安裝、執行和疑難排解Dispatcher，以協助本機開發Adobe Experience Manager(AEM)專案。
 sub-product: 基礎
-feature: Dispatcher，開發人員工具
+feature: Dispatcher, Developer Tools
 topics: development, caching, security
 version: cloud-service
 doc-type: tutorial
@@ -10,9 +10,9 @@ activity: develop
 audience: developer
 kt: 4679
 thumbnail: 30603.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

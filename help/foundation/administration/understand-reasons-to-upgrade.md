@@ -7,9 +7,9 @@ topics: best-practices, upgrade
 audience: all
 activity: understand
 doc-type: article
-topic: 升級
-role: 領導者、架構師、開發人員、管理員、商業從業人員
-level: 初學者
+topic: Upgrade
+role: Leader, Architect, Developer, Administrator, Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

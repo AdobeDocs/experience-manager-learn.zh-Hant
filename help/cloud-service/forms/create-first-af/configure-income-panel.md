@@ -2,12 +2,12 @@
 title: 設定收入面板
 description: 將表格元件新增至收入面板。
 solution: Experience Manager Forms
-type: 文件
-role: 開發人員
-level: 初學者，中級
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 適用性表單
-topic: 開發
+feature: Adaptive Forms
+topic: Development
 kt: 7379
 thumbnail: 332233.jpg
 translation-type: tm+mt

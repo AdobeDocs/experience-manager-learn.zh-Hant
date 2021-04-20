@@ -3,7 +3,7 @@ title: 使用編SPA輯器與AEM Sites
 seo-title: 與AEM SitesSPA一起使用Editor框架
 description: 「單頁AEM應用程式」編輯器架構可讓作者編輯「單頁應用程式」或「單頁應用程式」的內SPA容。 使用React或Angular架構的開發人員會建SPA立區域，然後將其對應SPA至元AEM件，讓作者使用熟悉的AEM Sites編輯工具。
 sub-product: 網站，內容服務
-feature: Spa編輯器
+feature: Spa Editor
 topics: authoring, single-page-applications
 audience: all
 doc-type: feature video
@@ -12,8 +12,8 @@ version: 6.4, 6.5, cloud-service
 kt: 1047
 thumbnail: 22229.jpg
 topic: SPA
-role: 開發人員
-level: 初學者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -4,9 +4,9 @@ seo-title: AEM Dispatcher Cache 教學課程
 description: 本教程的目標是幫助您更好地瞭解Dispatcher的工作方式以及如何使用它。
 seo-description: 本教程的目標是幫助您更好地瞭解Dispatcher的工作方式以及如何使用它。
 feature: Dispatcher
-topic: 架構
-role: 架構師
-level: 初學者
+topic: Architecture
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

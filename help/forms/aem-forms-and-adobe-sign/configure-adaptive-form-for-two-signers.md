@@ -1,16 +1,16 @@
 ---
 title: 與2位簽署者的租賃合約
 description: 與2位簽署者簽訂租賃合約。 視訊將說明為配置具有2位簽署者的最適化表單所需的各種步驟。
-feature: 適應性Forms,Adobe Sign
+feature: Adaptive Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39294.jpg
 kt: 6071
-topic: 開發
-role: 管理員
-level: 初學者
+topic: Development
+role: Administrator
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,10 +1,10 @@
 ---
 title: 使用Timewarp與AEM Sites
 description: 時間彎曲是Adobe Experience Manager Sites的一項功能，可讓作者快速檢視過去特定時間頁面的狀態。
-topic: 內容管理
-feature: 製作
-role: 業務從業人員
-level: 中級
+topic: Content Management
+feature: Authoring
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 3307
 thumbnail: 17453.jpg

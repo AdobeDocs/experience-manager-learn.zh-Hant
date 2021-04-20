@@ -3,15 +3,15 @@ title: 建立最適化表單時應遵循的命名慣例和最佳實務
 seo-title: 建立最適化表單時應遵循的命名慣例和最佳實務
 description: 建立最適化表單時應遵循的命名慣例和最佳實務
 seo-description: 建立最適化表單時應遵循的命名慣例和最佳實務
-feature: 適用性表單
+feature: Adaptive Forms
 topics: best-practices
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,9 +2,9 @@
 title: 使用AEM Assets和InDesign Server設定資產模板
 description: 「資產範本」可讓行銷人員建立、管理和提供數位和印刷的數位資產。 當與InDesign伺服器整合時，使用資產範本建立行銷手冊、名片、傳單、廣告和貼文卡會更輕鬆。 本節將介紹帶的InDesignAEM伺服器的配置。
 version: 6.3, 6.4, 6.5
-topic: 內容管理
-role: 開發人員
-level: 中級
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

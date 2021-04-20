@@ -2,13 +2,13 @@
 title: 自動啟動工作流程
 description: 自動啟動工作流程可在上傳或重新處理時自動叫用自訂工作流程，以擴充資產處理。
 sub-product: 資產
-feature: asset compute微服務，工作流程
+feature: Asset Compute Microservices, Workflow
 version: cloud-service
 kt: 4994
 thumbnail: 37323.jpg
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

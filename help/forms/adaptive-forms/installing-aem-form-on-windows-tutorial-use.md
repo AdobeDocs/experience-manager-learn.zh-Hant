@@ -4,16 +4,16 @@ seo-title: 在Windows上安裝AEM Forms的簡化步驟
 description: 在Windows上安裝AEM Forms快速簡單的步驟
 seo-description: 在Windows上安裝AEM Forms快速簡單的步驟
 uuid: a148b8f0-83db-47f6-89d3-c8a9961be289
-feature: 適用性表單
+feature: Adaptive Forms
 topics: administration
 audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
 discoiquuid: 1182ef4d-5838-433b-991d-e24ab805ae0e
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

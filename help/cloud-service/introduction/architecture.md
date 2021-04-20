@@ -1,10 +1,10 @@
 ---
 title: Assets as a Cloud Service 架構
 description: 探索底層的架構和重要AEM的Cloud Service。 深入探討Cloud Manager和API。
-role: 架構設計人員
-level: 初學者
-type: 教學課程
-topic: 架構
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Architecture
 kt: 6919
 thumbnail: 330542.jpg
 translation-type: tm+mt

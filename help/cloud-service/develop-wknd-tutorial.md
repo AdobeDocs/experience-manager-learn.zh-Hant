@@ -5,10 +5,10 @@ description: 不熟悉開發AEM? 需要進一步瞭解最佳實踐方案嗎？ �
 seo-description: 不熟悉開發AEM? 需要進一步瞭解最佳實踐方案嗎？ 這裡就是開始！ 本多部份教學課程的目標，是教導剛剛接觸開發人員如何AEM使用最新標準AEM和技術建置網站。
 content-type: reference
 topic-tags: introduction
-feature: 專AEM案原型、核心元件、頁面編輯器、可編輯範本
-topic: 開發
-role: 開發人員
-level: 初學者
+feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: 建立客戶端庫
 description: 要擷取下一個要簽署的表單的用戶端程式庫程式碼
-feature: 適用性表單
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6907
 thumbnail: 6907.jpg
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

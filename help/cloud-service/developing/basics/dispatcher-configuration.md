@@ -1,10 +1,10 @@
 ---
 title: 如何將現有的AMS Dispatcher配置遷移AEM為Cloud Service
 description: 將Dispatcher組態從Adobe Managed Services(AMS)移轉AEM為Cloud Service的秘訣AEM與訣竅。
-role: 架構設計人員
-level: 初學者
-type: 教學課程
-topic: 開發、移轉
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Development, Migration
 feature: Dispatcher
 kt: 6931
 thumbnail: 330556.jpg

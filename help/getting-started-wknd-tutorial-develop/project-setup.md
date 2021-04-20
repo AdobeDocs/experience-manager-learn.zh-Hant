@@ -3,7 +3,7 @@ title: 開始使用AEM Sites-專案設定
 seo-title: 開始使用AEM Sites-專案設定
 description: 涵蓋建立Maven Multi Module專案，以管理網站的程式碼和設AEM定。
 sub-product: Sites
-feature: AEM 專案原型
+feature: AEM Project Archetype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,9 +12,9 @@ audience: developer
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
-topic: 內容管理、開發
-role: 開發人員
-level: 初學者
+topic: Content Management, Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: 600d3e217b93b30cc673af85c1fd1b62ccc37eb1
 workflow-type: tm+mt

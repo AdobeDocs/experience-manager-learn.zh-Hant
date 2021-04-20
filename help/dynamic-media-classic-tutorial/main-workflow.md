@@ -2,14 +2,14 @@
 title: Dynamic Media經典主工作流程與資產預覽
 description: 瞭解Dynamic Media經典版的主要工作流程，其中包括三個步驟：建立（和上傳）、作者（和發佈）和傳送。 然後瞭解如何在Dynamic Media經典中預覽資產。
 sub-product: 動態媒體
-feature: Dynamic Media經典
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, architecture, publishing
 audience: all
 activity: use
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

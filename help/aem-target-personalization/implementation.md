@@ -3,10 +3,10 @@ title: 整合Adobe Experience Manager與Adobe Target
 seo-title: 文章涵蓋將Adobe Experience Manager(AEM)與Adobe Target整合以提供個人化內容的不同方式。
 description: 一篇文章，介紹如何為不同情景設立Adobe Experience Manager與Adobe Target。
 seo-description: 一篇文章，介紹如何為不同情景設立Adobe Experience Manager與Adobe Target。
-feature: 體驗片段
-topic: 個性化
-role: 開發人員
-level: 中級
+feature: Experience Fragments
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

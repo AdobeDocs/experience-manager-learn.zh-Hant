@@ -2,11 +2,11 @@
 title: 將Dynamic Media觀眾與Adobe Analytics及Adobe推出
 description: 適用於 Adobe Launch 的 Dynamic Media 檢視器擴充功能及 Dynamic Media 檢視器 5.13 版的發行，可讓 Dynamic Media、Adobe Analytics 和 Adobe Launch 的客戶以其 Adobe Launch 設定使用 Dynamic Media 檢視器專屬的事件和資料。
 sub-product: Dynamic Media
-feature: 資產 Insights
+feature: Asset Insights
 version: 6.3, 6.4, 6.5
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

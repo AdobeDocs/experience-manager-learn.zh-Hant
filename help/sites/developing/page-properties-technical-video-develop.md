@@ -1,9 +1,9 @@
 ---
 title: 擴充AEM網站中的頁面屬性
 description: 瞭解如何擴充Adobe Experience Manager Sites中「頁面屬性」的中繼資料欄位。 此影片詳細說明使用Sling Resource Merger的功能來達成此目的最有效的方式。
-topic: 開發
-feature: 核心元件
-role: 開發人員
+topic: Development
+feature: Core Components
+role: Developer
 version: cloud-service
 kt: 243
 thumbnail: 25173.jpg

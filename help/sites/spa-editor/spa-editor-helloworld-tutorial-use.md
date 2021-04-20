@@ -2,15 +2,15 @@
 title: 使用編輯AEM器開SPA發-Hello World教學課程
 description: SPA EditorAEM支援「單頁應用程式」或的內容內容編輯SPA。 本教學課程是與SPAEditor JS AEM SDK搭配使用的開SPA發簡介。 本教學課程將新增自訂Hello World元件，以擴充We.Retail Journal應用程式。 使用者可使用React或Angular架構完成教學課程。
 sub-product: 網站，內容服務
-feature: Spa編輯器
+feature: Spa Editor
 topics: development, single-page-applications
 audience: developer
 doc-type: tutorial
 activity: use
 version: 6.3, 6.4, 6.5
 topic: SPA
-role: 開發人員
-level: 初學者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

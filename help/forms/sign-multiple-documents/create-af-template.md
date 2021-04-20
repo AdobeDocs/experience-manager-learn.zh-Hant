@@ -1,7 +1,7 @@
 ---
 title: 建立AF模板
 description: 建立AF範本，並將其與頁面呈現元件建立關聯
-feature: 適用性表單
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6891
 thumbnail: 6891.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

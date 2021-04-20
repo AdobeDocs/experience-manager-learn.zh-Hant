@@ -1,14 +1,14 @@
 ---
 title: 將語言副本與AEM Sites
-feature: 語言副本
+feature: Language Copy
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
-topic: 本土化
-role: 業務從業人員
-level: 初學者
+topic: Localization
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

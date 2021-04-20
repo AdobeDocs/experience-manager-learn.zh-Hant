@@ -2,9 +2,9 @@
 title: 將資產目錄與商AEM務和InDesign Server一起使用
 description: AEM6.4目錄增強功能可讓您使用資產範本和InDesign Server來建AEM立目錄頁面。  使用者可以使用InDesign範本建立目錄頁面，並將產品屬性對應至可編輯的欄位，這些欄位稍後可用來建立不同產品的類似頁面。
 version: 6.3, 6.4, 6.5
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

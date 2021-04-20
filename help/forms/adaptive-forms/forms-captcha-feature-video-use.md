@@ -3,7 +3,7 @@ title: 搭配最適化FormsAEM使用CAPTCHA
 seo-title: 搭配最適化FormsAEM使用CAPTCHA
 description: 新增並使用具備最適化FormsAEM的驗證碼。
 seo-description: 新增並使用具備最適化FormsAEM的驗證碼。
-feature: 最適化Forms，工作流程
+feature: Adaptive Forms,Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
@@ -11,9 +11,9 @@ activity: setup
 version: 6.4,6.5
 uuid: bd63e207-4f4d-4f34-9ac4-7572ed26f646
 discoiquuid: 5e184e44-e385-4df7-b7ed-085239f2a642
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

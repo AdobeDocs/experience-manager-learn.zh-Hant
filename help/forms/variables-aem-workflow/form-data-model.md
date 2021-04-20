@@ -1,7 +1,7 @@
 ---
 title: 類型變數表單資料模型
 description: 在工作流程中使用類型變數的表單資料AEM模型。
-feature: 工作流程
+feature: Workflow
 topics: development
 audience: developer
 doc-type: technical video
@@ -9,9 +9,9 @@ activity: understand
 version: 6.5
 kt: 6347
 thumbnail: 41238.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

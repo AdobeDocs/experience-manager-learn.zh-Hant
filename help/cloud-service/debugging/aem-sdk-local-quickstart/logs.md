@@ -1,16 +1,16 @@
 ---
 title: 使用記AEM錄除錯SDK
 description: 記錄檔是除錯應用程式的前AEM沿，但需視部署應用程式的登入程AEM式而定。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5252
-topic: 開發
-role: 開發人員
-level: 初學者，中級
+topic: Development
+role: Developer
+level: Beginner, Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

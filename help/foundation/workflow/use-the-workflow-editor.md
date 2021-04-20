@@ -2,10 +2,10 @@
 title: 如何在
 description: 工作流在Experience Manager中實現了業務流程管理，並用於自動處理內容，以及促進需要人為決策的管理和流程。
 version: 6.4, 6.5, cloud-service
-feature: 工作流程
-topic: 內容管理
-level: 中級
-role: 管理員、開發人員
+feature: Workflow
+topic: Content Management
+level: Intermediate
+role: Administrator, Developer
 kt: 657
 thumbnail: 22201.jpg
 translation-type: tm+mt

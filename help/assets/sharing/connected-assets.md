@@ -1,11 +1,11 @@
 ---
 title: 將連接資產與AEM Sites
 description: 「連線資產」功能可讓AEM Sites作者順暢地分享托管於不同實例的數位資產AEM。
-feature: 連線資產
+feature: Connected Assets
 version: 6.5
-topic: 內容管理
-role: 開發人員
-level: 中級
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

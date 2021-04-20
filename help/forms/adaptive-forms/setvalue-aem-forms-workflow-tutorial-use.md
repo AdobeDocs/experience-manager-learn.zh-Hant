@@ -4,15 +4,15 @@ seo-title: 在AEM Forms工作流中使用setvalue
 description: AEM FormsOSGI中自適應Forms提交資料中元素值的設定
 seo-description: AEM FormsOSGI中自適應Forms提交資料中元素值的設定
 uuid: fe431e48-f05b-4b23-94d2-95d34d863984
-feature: 適用性表單
+feature: Adaptive Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 discoiquuid: dbd87302-f770-4e61-b5ad-3fc5831b4613
-topic: 開發
-role: 開發人員
-level: 經驗豐富
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

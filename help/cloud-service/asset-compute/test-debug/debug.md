@@ -1,7 +1,7 @@
 ---
 title: 調試Asset compute工作器
 description: asset compute工作者可以通過多種方式進行調試，從簡單的調試日誌語句到附加的VS代碼作為遠程調試程式，再到提取從Cloud Service啟動的Adobe I/O Runtime激活日AEM志。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
-topic: 整合、開發
-role: 開發人員
-level: 中級，經驗豐富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: 建立Asset compute專案以擴充Asset compute
 description: asset compute項目是使用Adobe I/OCLI生成的Node.js項目，符合特定結構，可將其部署到Adobe I/O Runtime，並作為Cloud Service與其AEM整合。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
-topic: 整合、開發
-role: 開發人員
-level: 中級，經驗豐富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

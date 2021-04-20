@@ -3,10 +3,10 @@ title: 如何使用體驗片段建立區塊
 description: 建置區塊是「體驗片段」的子功能，可讓您在「體驗片段」的各種變數中重複使用編寫的元件。
 sub-product: 網站，內容服務
 version: cloud-service
-feature: 體驗片段
-topic: 內容管理
-level: 初學者，中級
-role: 架構師、開發人員、管理員、商業從業人員
+feature: Experience Fragments
+topic: Content Management
+level: Beginner, Intermediate
+role: Architect, Developer, Administrator, Business Practitioner
 doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg

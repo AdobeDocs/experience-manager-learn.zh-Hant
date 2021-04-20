@@ -3,15 +3,15 @@ title: 在工作流中捕獲表單資料模型服務中的錯誤消息
 seo-title: 在工作流中捕獲表單資料模型服務中的錯誤消息
 description: 從AEM Forms6.5.1開始，我們現在可以擷取使用叫用表單資料模型服務(Form Data Model Service)所產生的錯誤訊息，做為工作流程中的AEM步驟。 工作流程.
 seo-description: 從AEM Forms6.5.1開始，我們現在可以擷取使用叫用表單資料模型服務(Form Data Model Service)所產生的錯誤訊息，做為工作流程中的AEM步驟。 工作流程.
-feature: 工作流程
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: article
 activity: setup
 version: 6.5.1,6.5.2
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

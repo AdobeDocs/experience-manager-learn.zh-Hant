@@ -2,12 +2,12 @@
 title: 設定資產面板
 description: 將Accordion版面面板新增至資產面板。
 solution: Experience Manager Forms
-type: 文件
-role: 開發人員
-level: 初學者，中級
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 適用性表單
-topic: 開發
+feature: Adaptive Forms
+topic: Development
 kt: 7380
 thumbnail: 332232.jpg
 translation-type: tm+mt

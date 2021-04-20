@@ -4,16 +4,16 @@ seo-title: 在AEM Forms工作流程中設定Json資料元素的值
 description: 當「最適化表單」在「工作流程」中路由至不同的使AEM用者時，將會要求根據審閱表單的人員隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
 seo-description: 當「最適化表單」在「工作流程」中路由至不同的使AEM用者時，將會要求根據審閱表單的人員隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
 uuid: a4ea6aef-a799-49e5-9682-3fa3b7a442fb
-feature: 適用性表單
+feature: Adaptive Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.4
 discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
-topic: 開發
-role: 開發人員
-level: 經驗豐富
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

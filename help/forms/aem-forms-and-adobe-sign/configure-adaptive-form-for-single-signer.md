@@ -1,16 +1,16 @@
 ---
 title: 單一簽署者的最適化表單
 description: 單一簽署者的最適化表單。 視訊將說明為單一簽署者設定最適化表單所需的各種步驟。
-feature: 適應性Forms,Adobe Sign
+feature: Adaptive Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39475.jpg
 kt: 6103
-topic: 開發
-role: 業務從業人員
-level: 初學者
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

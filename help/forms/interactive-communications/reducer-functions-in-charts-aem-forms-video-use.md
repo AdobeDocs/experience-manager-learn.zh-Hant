@@ -5,15 +5,15 @@ description: Reducer函式用於聚合或分組圖表中顯示的值。以下視
 seo-description: Reducer函式用於聚合或分組圖表中顯示的值。以下視頻將逐步介紹使用Reducer函式時涉及的步驟。
 uuid: e9bd8bda-48ea-4a02-95c4-02aedafdb640
 discoiquuid: 6fef8341-8fd5-4d82-9f69-2b8be7cd22db
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: technical video
 activity: use
 version: 6.4,6.5
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

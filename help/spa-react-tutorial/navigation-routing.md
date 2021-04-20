@@ -2,7 +2,7 @@
 title: 新增導覽和路由 |編輯與回應快AEM速入SPA門
 description: 瞭解使用Editor SDK對應SPA至「頁面」可支AEM援多SPA個檢視。 動態導航是使用React Router實現的，並添加到現有的Header元件中。
 sub-product: Sites
-feature: 編SPA輯器
+feature: SPA Editor
 topics: development
 version: cloud-service
 activity: develop
@@ -10,8 +10,8 @@ audience: developer
 kt: 4988
 thumbnail: 4988-spa-react.jpg
 topic: SPA
-role: 開發人員
-level: 初學者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

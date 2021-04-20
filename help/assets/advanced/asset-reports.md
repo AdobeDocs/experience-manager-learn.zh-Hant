@@ -1,10 +1,10 @@
 ---
 title: AEM Assets資產報告
 description: 'AEM Assets公司提供企業級報告框架，可通過直觀的用戶體驗為大型儲存庫進行擴展。 '
-feature: 資產報表
-topic: 管理
-role: 業務從業人員
-level: 中級
+feature: Asset Reports
+topic: Administration
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 648
 thumbnail: 22140.jpg

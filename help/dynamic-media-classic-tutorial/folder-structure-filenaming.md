@@ -2,14 +2,14 @@
 title: 確定資料夾結構和檔案命名約定
 description: 在實作Dynamic Media經典時，檔案命名可能是您最重要的決定。 資料夾結構同樣重要。 瞭解為何資料夾結構和檔案名稱如此重要，並可能採取哪些方法。
 sub-product: 動態媒體
-feature: Dynamic Media經典
+feature: Dynamic Media Classic
 doc-type: tutorial
 activity: develop
 topics: development, authoring, configuring, architecture
 audience: all
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

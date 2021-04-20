@@ -1,14 +1,14 @@
 ---
 title: 使用表單資料模型預先填寫表單
 description: '使用表單資料模型的請求屬性預先填寫最適化表單 '
-feature: 適用性表單
+feature: Adaptive Forms
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 kt: 4419
 thumbnail: 36387.jpg
-topic: 開發
+topic: Development
 role: Business Practitioner
 level: Intermediate
 translation-type: tm+mt

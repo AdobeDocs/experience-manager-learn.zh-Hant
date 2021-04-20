@@ -3,10 +3,10 @@ title: 使用Cloud Services將Adobe Experience Manager與Adobe Target整合
 seo-title: 使用舊版AEMCloud Services將Adobe Experience Manager()與Adobe Target整合
 description: 逐步逐步逐步逐步說明如何使用Cloud Service將Adobe Experience Manager()與Adobe TargetAEM整合
 seo-description: 逐步逐步逐步逐步說明如何使用Cloud Service將Adobe Experience Manager()與Adobe TargetAEM整合
-feature: 體驗片段
-topic: 個性化
-role: 開發人員
-level: 中級
+feature: Experience Fragments
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

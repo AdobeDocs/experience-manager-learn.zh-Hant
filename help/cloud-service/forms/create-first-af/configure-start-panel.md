@@ -2,12 +2,12 @@
 title: 設定開始面板
 description: 將靜態文字元件新增至開始面板。
 solution: Experience Manager Forms
-type: 文件
-role: 開發人員
-level: 初學者，中級
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 適用性表單
-topic: 開發
+feature: Adaptive Forms
+topic: Development
 kt: 7388
 thumbnail: 332235.jpg
 translation-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: 建立主要的最適化表單
 description: 建立最適化表單以擷取申請人資訊，並建立最適化表單以擷取儲存的最適化表單
-feature: 適用性表單
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6552
 thumbnail: 6552.jpg
-topic: 開發
-role: 業務從業人員
-level: 初學者
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

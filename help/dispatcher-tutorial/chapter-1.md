@@ -2,9 +2,9 @@
 title: '"Chapter 1 - Dispatcher Concepts, Patterns and Antipatterns"'
 description: 本章簡要介紹了Dispatcher的歷史和機制，並討論了它如何影響開發人員設AEM計其元件。
 feature: Dispatcher
-topic: 架構
-role: 架構師
-level: 初學者
+topic: Architecture
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

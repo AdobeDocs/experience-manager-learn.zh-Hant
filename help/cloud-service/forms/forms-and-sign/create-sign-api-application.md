@@ -2,12 +2,12 @@
 title: 建立Adobe Sign應用程式
 description: Adobe Sign應用程式是建立AEM Forms與Adobe Sign整合的第一步。
 solution: Experience Manager Forms
-type: 文件
-role: 開發人員
-level: 初學者，中級
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 適用性表單
-topic: 開發
+feature: Adaptive Forms
+topic: Development
 kt: 7427
 thumbnail: 332436.jpg
 translation-type: tm+mt

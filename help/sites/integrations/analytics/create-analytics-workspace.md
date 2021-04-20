@@ -1,7 +1,7 @@
 ---
 title: 使用Analysis Workspace分析資料
 description: 瞭解如何將從Adobe Experience Manager網站擷取的資料對應至Adobe Analytics報表套裝中的量度和維度。 瞭解如何使用Adobe Analytics的Analysis Workspace功能建立詳細的報告資料板。
-feature: 分析
+feature: analytics
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -10,8 +10,8 @@ version: cloud-service
 kt: 6409
 thumbnail: KT-6296.jpg
 topic: Integrations
-role: 業務從業人員
-level: 中級
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

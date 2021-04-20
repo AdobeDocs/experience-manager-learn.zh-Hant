@@ -3,15 +3,15 @@ title: HTM5表AEM單提交的觸發工作流程
 seo-title: HTML5表AEM單提交的觸發工作流程
 description: 在離線模式下繼續填寫行動表單，並提交行動表單以觸發工AEM作流程
 seo-description: 在離線模式下繼續填寫行動表單，並提交行動表單以觸發工AEM作流程
-feature: 行動表單
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4, 6.5
-topic: 開發
-role: 開發人員
-level: 經驗豐富
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

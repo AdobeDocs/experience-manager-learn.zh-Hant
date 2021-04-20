@@ -4,16 +4,16 @@ seo-title: 在工作流中使用表單資料模型服務
 description: 從AEM Forms6.4開始，我們現在可以在工作流程中使用表單資料AEM模型。 以下視訊逐步說明在「工作流程」中設定「表單資料模型」步驟所需AEM的步驟。
 seo-description: 從AEM Forms6.4開始，我們現在可以在工作流程中使用表單資料AEM模型。 以下視訊逐步說明在「工作流程」中設定「表單資料模型」步驟所需AEM的步驟。
 uuid: ecd5d5aa-01eb-48fb-872f-66c656ae14df.
-feature: 工作流程
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: c442f439-1e5d-4f96-85df-b818c28389ff
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

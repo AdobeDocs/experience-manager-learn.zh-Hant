@@ -3,10 +3,10 @@ title: 使用Adobe Target視覺體驗撰寫器進行個人化
 seo-title: 使用Adobe Target視覺體驗撰寫器(VEC)進行個人化
 description: 教學課程的端對端說明如何使用Adobe Target視覺體驗撰寫器(VEC)來建立和提供個人化體驗。
 seo-description: 教學課程的端對端說明如何使用Adobe Target視覺體驗撰寫器(VEC)來建立和提供個人化體驗。
-feature: 體驗片段
-topic: 個性化
-role: 開發人員
-level: 中級
+feature: Experience Fragments
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

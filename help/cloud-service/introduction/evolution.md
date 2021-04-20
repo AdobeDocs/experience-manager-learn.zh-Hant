@@ -1,10 +1,10 @@
 ---
 title: Cloud ServiceAEM的演變
 description: '探索內部部AEM署、Adobe Managed Services和AEMCloud Service的歷史AEM與差異。 '
-role: 架構設計人員
-level: 初學者
-type: 教學課程
-topic: 架構
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Architecture
 kt: 6920
 thumbnail: 330543.jpg
 translation-type: tm+mt

@@ -1,10 +1,10 @@
 ---
 title: 無AEM頭教學課程
 description: 一系列教學課程，說明如何將Adobe Experience Manager當做無頭CMS。
-feature: 內容片段、API
-topic: 無頭、內容管理
-role: 開發人員
-level: 初學者
+feature: Content Fragments, APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt

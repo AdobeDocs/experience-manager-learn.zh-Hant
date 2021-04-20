@@ -4,14 +4,14 @@ description: Local AEM Development Access TokenAEM可用來加速與Cloud Servic
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
-feature: API
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330477.jpg
-topic: 無頭、整合
-role: 開發人員
-level: 中級，經驗豐富的
+topic: Headless, Integrations
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

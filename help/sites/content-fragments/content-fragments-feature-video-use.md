@@ -2,15 +2,15 @@
 title: 在中編寫內容片段AEM
 description: '「內容片段」是內容抽象AEM，可讓文字內容獨立於其支援的頻道進行製作和管理。 '
 sub-product: 內容服務
-feature: 內容片段
+feature: Content Fragments
 topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
 version: cloud-service
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

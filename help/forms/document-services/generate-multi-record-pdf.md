@@ -1,15 +1,15 @@
 ---
 title: 從單一資料檔案產生多個PDF
 seo-title: 從單一資料檔案產生多個PDF
-feature: 輸出服務
+feature: Output Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開發
-role: 開發人員
-level: 經驗豐富
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

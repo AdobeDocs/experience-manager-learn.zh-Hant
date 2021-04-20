@@ -4,16 +4,16 @@ seo-title: 使用ACS配置檔案預填充自適應表單
 description: 使用ACS配置檔案預填充自適應Forms
 seo-description: 使用ACS配置檔案預填充自適應Forms
 uuid: 9bff6f61-96e9-40d4-a977-a80008cfbeee
-feature: 最適化Forms，表單資料模型
+feature: Adaptive Forms, Form Data Model
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: a2ffcb84-4dd8-45e5-8e2c-0da74202851b
-topic: 開發
-role: 開發人員
-level: 經驗豐富
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

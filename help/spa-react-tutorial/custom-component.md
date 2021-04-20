@@ -2,7 +2,7 @@
 title: 建立自訂元件 |編輯與回應快AEM速入SPA門
 description: 瞭解如何建立自訂元件以搭配編輯器使AEM用SPA。 瞭解如何開發作者對話方塊和Sling Models以擴充JSON模型以填入自訂元件。
 sub-product: Sites
-feature: 編SPA輯器
+feature: SPA Editor
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -11,8 +11,8 @@ audience: developer
 kt: 5878
 thumbnail: 5878-spa-react.jpg
 topic: SPA
-role: 開發人員
-level: 初學者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

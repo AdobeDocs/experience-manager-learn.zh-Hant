@@ -10,10 +10,10 @@ audience: developer
 mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
-feature: 內容片段， GraphQL API
-topic: 無頭、內容管理
-role: 開發人員
-level: 初學者
+feature: Content Fragments, GraphQL APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: cae6e32baa256d4c94fe317eb31cd5163cdae41f
 workflow-type: tm+mt

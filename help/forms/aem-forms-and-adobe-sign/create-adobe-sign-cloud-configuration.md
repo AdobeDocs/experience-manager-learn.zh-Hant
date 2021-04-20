@@ -1,16 +1,16 @@
 ---
 title: 建立Adobe Sign雲端組態
 description: 中的雲端服務設AEM定可讓您建立與其他雲端應用AEM程式的整合。 以下視訊將引導您完成建立雲端服務組態以與Adobe Sign整合所需AEM的步驟。
-feature: 適用性表單
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 38179.jpg
 kt: 6033
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: 將體驗片段匯出至Adobe Target
 description: 瞭解如何將體驗片段發AEM布及匯出為Adobe Target優惠。
-feature: 體驗片段
+feature: Experience Fragments
 topics: integrations, authoring
 audience: all
 doc-type: feature video
@@ -10,8 +10,8 @@ version: cloud-service
 kt: 6350
 thumbnail: 41245.jpg
 topic: Integrations
-role: 業務從業人員
-level: 中級
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

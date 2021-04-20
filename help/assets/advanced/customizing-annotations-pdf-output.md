@@ -1,11 +1,11 @@
 ---
 title: 在AEM Assets自定義注釋
 description: 開發人員可設定輸出為PDF時的AEM Assets格式和樣AEM式。
-feature: 協作
+feature: Collaboration
 version: 6.3, 6.4, 6.5
-topic: 協作
-role: 開發人員
-level: 中級
+topic: Collaboration
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

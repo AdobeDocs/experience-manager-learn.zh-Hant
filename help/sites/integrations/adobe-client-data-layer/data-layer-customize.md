@@ -1,7 +1,7 @@
 ---
 title: 使用元件自定義Adobe客戶端資料AEM層
 description: 瞭解如何使用自訂元件的內容來自訂Adobe用戶端資料AEM層。 瞭解如何使用核心元件AEM提供的API來擴充和自訂資料層。
-feature: Adobe客戶端資料層，核心元件
+feature: Adobe Client Data Layer, Core Component
 topics: integrations
 audience: developer
 doc-type: tutorial
@@ -10,8 +10,8 @@ version: cloud-service
 kt: 6265
 thumbnail: KT-6265.jpg
 topic: Integrations
-role: 開發人員
-level: 中級，經驗豐富的
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

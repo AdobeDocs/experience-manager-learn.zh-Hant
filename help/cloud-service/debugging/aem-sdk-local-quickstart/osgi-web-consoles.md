@@ -1,16 +1,16 @@
 ---
 title: 使用AEMOSGi網頁主控台除錯SDK
 description: AEMSDK的本端快速入門有OSGi網頁主控台，可提供本端執行階段中的多種資訊和介紹，以協助您瞭解應用程式的識別方式，以及其中的功AEM能。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5265, 5366, 5267
-topic: 開發
-role: 開發人員
-level: 初學者，中級
+topic: Development
+role: Developer
+level: Beginner, Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

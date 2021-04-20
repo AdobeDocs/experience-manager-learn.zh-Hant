@@ -1,7 +1,7 @@
 ---
 title: 將訪AEM問配置為Cloud Service
 description: '因AEM為Cloud Service是運用應用程式的雲端原生方式AEM，因此，會運用AdobeIMS(Identity Management系統)來協助管理員和一般使用者登入AEM Author服務。 瞭解AdobeIMS使用者、使用者群組和產品設定檔如何與群組和權限搭配使用，AEM以提供AEM Author的特定存取權。  '
-feature: 使用者和群組
+feature: Users and Groups
 topics: authentication
 version: cloud-service
 activity: setup
@@ -9,9 +9,9 @@ audience: administrator
 doc-type: article
 kt: 5882
 thumbnail: KT-5882.jpg
-topic: 管理、安全性
-role: 管理員
-level: 初學者
+topic: Administration, Security
+role: Administrator
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

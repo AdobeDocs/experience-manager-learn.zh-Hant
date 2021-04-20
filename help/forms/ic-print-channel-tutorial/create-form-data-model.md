@@ -4,7 +4,7 @@ seo-title: 建立表單資料模型
 description: 這是建立您第一個互動式通訊檔案的多步驟教學課程的第3部分。 在本部分，我們將建立表單資料模型。 表單資料模型可讓您設定和連接不同的資料來源。它提供直覺式的使用者介面，以建立跨連線資料來源之商業實體與服務的統一資料表示架構。以下視訊逐步說明建立表單資料模型的步驟。
 seo-description: 這是建立您第一個互動式通訊檔案的多步驟教學課程的第3部分。 在本部分，我們將建立表單資料模型。 表單資料模型可讓您設定並連線至不同的資料來源。它提供直覺式使用者介面，可跨連接的資料來源建立業務實體與服務的統一資料表示架構。 以下視訊將逐步介紹建立表單資料模型的步驟。
 uuid: 4cba42f3-860a-4bd3-b4b0-79c63195b36d
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,9 +12,9 @@ activity: implement
 version: 6.4,6.5
 kt: 5952
 thumbnail: 27763.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

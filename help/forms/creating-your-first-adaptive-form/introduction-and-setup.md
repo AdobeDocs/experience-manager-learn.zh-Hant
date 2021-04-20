@@ -4,16 +4,16 @@ seo-title: 最適化Forms快速入門
 description: '本教學課程將引導您逐步瞭解建立多標籤式最適化表單的相關步驟。 您將學習使用表格、收合式配置和規則編輯器來編寫業務規則。 '
 seo-description: '本教學課程將引導您逐步瞭解建立多標籤式最適化表單的相關步驟。 您將學習使用表格、收合式配置和規則編輯器來編寫業務規則。 '
 uuid: 6f73cb1c-94e2-4ac7-89e5-a72141a06bbe
-feature: 適用性表單
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.3,6.4,6.5
 discoiquuid: b6863d3d-8528-4a96-ae37-c8d1aa62d443
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

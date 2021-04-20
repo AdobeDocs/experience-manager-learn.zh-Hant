@@ -2,14 +2,14 @@
 title: 影像、色票、回轉和混合媒體集
 description: Dynamic Media經典最有用、最強大的功能之一，就是支援建立多媒體集，例如影像、色票、回轉和混合媒體集。 瞭解各種豐富式媒體集，以及如何在Dynamic Media經典中建立各種類型。 接著，進一步瞭解「批次集預設集」，此預設集可自動化上傳時建立多媒體集的程式。
 sub-product: 動態媒體
-feature: Dynamic Media經典、影像集、混合媒體集、旋轉集
+feature: Dynamic Media Classic, Image Sets, Mix Media Sets, Spin Sets
 doc-type: tutorial
 topics: sets, development, authoring, configuring
 audience: all
 activity: use
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

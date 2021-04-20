@@ -1,7 +1,7 @@
 ---
 title: 設定本機開發環境以擴充Asset compute
 description: 開發Asset compute工作程式（即Node.js JavaScript應用程式）需要與傳統開發不同的特定開發工具，從Node.js和各種npm模組到Docker Desktop和Microsoft Visual Studio程式碼。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
-topic: 整合、開發
-role: 開發人員
-level: 中級，經驗豐富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: 53c20b9774c15b04a1c78c7c0c7b61a60996bf60
 workflow-type: tm+mt

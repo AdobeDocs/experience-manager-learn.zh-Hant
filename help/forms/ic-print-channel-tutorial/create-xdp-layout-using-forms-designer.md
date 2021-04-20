@@ -4,7 +4,7 @@ seo-title: 使用Forms設計人員建立版面
 description: 本教學課程包含多部分，可協助您建立適用於列印頻道的第一個互動式通訊檔案。在本部分，我們將檢視使用AEM Forms設計人員建立的版面檔案。
 seo-description: 本教學課程包含多部分，可協助您建立適用於列印頻道的第一個互動式通訊檔案。在本部分，我們將檢視使用AEM Forms設計人員建立的版面檔案。
 uuid: 2f014c58-1ae1-40e8-a45d-7ffe9c86f693
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,9 +13,9 @@ version: 6.4,6.5
 discoiquuid: 17f4cdbb-079b-4fe3-861d-cfa0c03d30dd
 kt: 5957
 thumbnail: 37890.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

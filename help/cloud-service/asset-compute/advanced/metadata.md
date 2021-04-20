@@ -1,7 +1,7 @@
 ---
 title: 開發Asset compute中繼資料工作者
 description: 瞭解如何建立Asset compute中繼資料工作器，以衍生影像資產中最常用的色彩，並將色彩名稱寫回資產的中繼資料AEM。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: metadata, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: 整合、開發
-role: 開發人員
-level: 中級，經驗豐富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

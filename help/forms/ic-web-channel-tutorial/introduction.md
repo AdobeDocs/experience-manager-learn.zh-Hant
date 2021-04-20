@@ -3,15 +3,15 @@ title: 建立您第一個適用於網頁頻道的互動式通訊
 seo-title: 建立您第一個適用於網頁頻道的互動式通訊
 description: 互動式通訊是AEM Forms6.4的新手。本檔案將引導您逐步完成為網頁頻道建立互動式通訊所需的步驟。
 seo-description: 互動式通訊是AEM Forms6.4的新手。本檔案將引導您逐步完成為網頁頻道建立互動式通訊所需的步驟。
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -3,10 +3,10 @@ title: 利用Experience Platform Launch和Adobe I/O將Adobe Experience Manager�
 seo-title: 利用Experience Platform Launch和Adobe I/O將Adobe Experience Manager與Adobe Target整合
 description: 逐步走進如何利用Experience Platform Launch和Adobe I/O實現Adobe Experience Manager與Adobe Target的融合
 seo-description: 逐步走進如何利用Experience Platform Launch和Adobe I/O實現Adobe Experience Manager與Adobe Target的融合
-feature: 體驗片段
-topic: 個性化
-role: 開發人員
-level: 中級
+feature: Experience Fragments
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

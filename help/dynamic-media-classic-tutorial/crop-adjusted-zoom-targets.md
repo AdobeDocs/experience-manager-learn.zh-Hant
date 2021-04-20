@@ -2,14 +2,14 @@
 title: 裁切、調整後的影像和縮放目標
 description: Dynamic Media經典影像的主影像支援建立個別裁切版本的每個影像，以顯示詳細資訊或色票，而不需建立個別裁切版本的每個影像。 瞭解如何在Dynamic Media經典影像中裁切影像並儲存為新的主檔案或虛擬影像、儲存虛擬調整的影像並取代主資產，以及在影像上建立縮放目標以顯示反白顯示的詳細資料。
 sub-product: 動態媒體
-feature: Dynamic Media經典
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

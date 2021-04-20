@@ -4,14 +4,14 @@ description: 「大量匯入」工AEM具(Cloud Service)可讓管理員以安全�
 version: cloud-service
 doc-type: technical-video
 topics: Migration
-feature: 移轉
+feature: Migration
 activity: develop
 audience: developer
 kt: 6729
 thumbnail: 329680.jpg
-topic: 移轉
-role: 架構設計人員
-level: 初學者
+topic: Migration
+role: Architect, Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

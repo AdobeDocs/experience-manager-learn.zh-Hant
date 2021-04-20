@@ -3,7 +3,7 @@ title: 使用頁面標籤與AEM Sites
 seo-title: 使用頁面標籤與Adobe Experience Manager Sites
 description: 以下影片重點說明如何使用頁面標籤快速輕鬆地將Adobe Experience Manager網站內的內容分類。
 seo-description: 以下影片重點說明如何使用頁面標籤快速輕鬆地將Adobe Experience Manager網站內的內容分類。
-feature: 頁面編輯器
+feature: Page Editor
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4632
 thumbnail: 32150.jpg
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

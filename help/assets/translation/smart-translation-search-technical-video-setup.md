@@ -2,10 +2,10 @@
 title: 設定智慧翻譯搜索與AEM Assets
 description: 智慧型翻譯搜尋可讓使用非英文搜尋詞解析為英文內容。 要設定智AEM能翻譯搜索，必須安裝和配置Apache Oak Search Machine Translation OSGi包，以及包含翻譯規則的相關免費和開放原始碼的Apache Joshua語言包。
 version: 6.3, 6.4, 6.5
-feature: 搜尋
-topic: 內容管理
-role: 開發人員
-level: 初學者
+feature: Search
+topic: Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

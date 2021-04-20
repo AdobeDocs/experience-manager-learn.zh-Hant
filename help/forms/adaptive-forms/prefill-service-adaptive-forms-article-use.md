@@ -4,7 +4,7 @@ seo-title: 最適化Forms的預填充服務
 description: 從後端資料來源擷取資料，以預先填入可調式表單。
 seo-description: 從後端資料來源擷取資料，以預先填入可調式表單。
 sub-product: 表單
-feature: 適用性表單
+feature: Adaptive Forms
 topics: integrations
 audience: developer
 doc-type: article
@@ -12,9 +12,9 @@ activity: implement
 version: 6.4,6.5
 uuid: 26a8cba3-7921-4cbb-a182-216064e98054
 discoiquuid: 936ea5e9-f5f0-496a-9188-1a8ffd235ee5
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

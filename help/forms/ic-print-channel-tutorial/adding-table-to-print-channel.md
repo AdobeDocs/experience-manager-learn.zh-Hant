@@ -4,7 +4,7 @@ seo-title: 在稿件節中添加表
 description: 這是建立您第一個互動式通訊檔案的多步驟教學課程第9部分。在本部分，我們將新增表格至貢獻區段。
 seo-description: 這是建立您第一個互動式通訊檔案的多步驟教學課程第9部分。在本部分，我們將新增表格至貢獻區段。
 uuid: 9475e769-a3f8-4aec-9b46-e0dc182b78a0
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,9 +13,9 @@ version: 6.4,6.5
 kt: 5994
 thumbnail: 37953.jpg
 discoiquuid: 36c1f67f-b5bb-431e-893c-fd5032918dd7
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

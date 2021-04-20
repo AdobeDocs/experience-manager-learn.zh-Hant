@@ -1,7 +1,7 @@
 ---
 title: CRXDE Lite
 description: 'CRXDE Lite是典型但功能強大的工具，可用來除AEM錯Cloud Service開發人員環境。 CRXDE Lite提供一套功能，可協助除錯以檢查所有資源和屬性、控制JCR的可變部分並調查權限。 '
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: KT-5481
 thumbnail: kt-5481.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

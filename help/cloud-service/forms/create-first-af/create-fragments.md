@@ -2,12 +2,12 @@
 title: 建立最適化表單片段
 description: 片段是表單中可重複使用的部分。 例如，片段可以包含地址塊或合法文字。
 solution: Experience Manager Forms
-type: 文件
-role: 開發人員
-level: 初學者，中級
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: 適用性表單
-topic: 開發
+feature: Adaptive Forms
+topic: Development
 kt: 7383
 thumbnail: 332231.jpg
 translation-type: tm+mt

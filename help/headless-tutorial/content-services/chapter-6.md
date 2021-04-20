@@ -1,10 +1,10 @@
 ---
 title: 第6章——將AEM Publish上的內容公開為JSON —— 內容服務
 description: 「無頭教學AEM課程」的第6章涵蓋確保所有必要的套件、設定和內容都位於「AEM發佈」中，以允許從「行動應用程式」使用。
-feature: 內容片段、API
-topic: 無頭、內容管理
-role: 開發人員
-level: 初學者
+feature: Content Fragments, APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 title: 建立工作流程以檢閱提交的資料
 description: 使用AEMAEM Forms工作流元件建立工作流模型以查看提交的資料。
 sub-product: 表單
-feature: 工作流程
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,9 +10,9 @@ activity: setup
 version: 6.4,6.5
 kt: 4271
 thumbnail: 40242.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

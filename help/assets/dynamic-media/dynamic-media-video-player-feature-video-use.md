@@ -2,11 +2,11 @@
 title: 在Dynamic Media使用視訊播AEM放器
 description: AEMDynamic Media視訊播放器過去依賴Flash執行時期來支援案頭用戶端和瀏覽器上的可調式視訊串流，現在在快閃內容串流上變得更為積極。 隨著HLS（Apple的HTTP即時串流視訊傳送通訊協定）的推出，內容現在可以串流化，而不需仰賴Flash。
 sub-product: 動態媒體
-feature: 視訊設定檔
+feature: Video Profiles
 version: 6.3, 6.4, 6.5
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

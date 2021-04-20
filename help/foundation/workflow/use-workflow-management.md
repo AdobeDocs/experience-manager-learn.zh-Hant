@@ -2,10 +2,10 @@
 title: 如何管理Workflow AEM
 description: '工AEM作流程管理讓使用者更能洞察工作流程中的內容，並讓您更輕鬆地管理工作流程模型定義。 '
 version: 6.5, cloud-service
-feature: 工作流程
-topic: 內容管理
-role: 管理員
-level: 中級
+feature: Workflow
+topic: Content Management
+role: Administrator
+level: Intermediate
 kt: 2557
 thumbnail: 27848.jpg
 translation-type: tm+mt

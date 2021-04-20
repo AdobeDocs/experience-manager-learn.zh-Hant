@@ -3,14 +3,14 @@ title: 瞭解Sling Model Exporter AEM in
 description: Apache Sling Models 1.3.0推出Sling Model Exporter，這是將Sling Model物件匯出或序列化為自訂抽象化的優雅方式。 本文並列使用Sling Models填入HTL指令碼的傳統使用案例，以及運用Sling Model Exporter架構將Sling Model序列化為JSON。
 version: 6.3, 6.4, 6.5
 sub-product: 基礎，內容服務
-feature: API
+feature: APIs
 topics: development, content-delivery, headless
 activity: understand
 audience: developer, architect
 doc-type: article
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

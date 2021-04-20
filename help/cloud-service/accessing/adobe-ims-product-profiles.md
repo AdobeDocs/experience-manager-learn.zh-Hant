@@ -1,12 +1,12 @@
 ---
 title: AdobeIMS產品設定檔AEM和
 description: AdobeIMS產品設定檔讓使用者有權登入AEM Author服務，並根據他們是哪些產品設定檔的成員提供存取基準。
-feature: 使用者和群組
+feature: Users and Groups
 kt: 5000
 thumbnail: 39156.jpg
-topic: 管理、安全性
-role: 管理員
-level: 初學者
+topic: Administration, Security
+role: Administrator
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

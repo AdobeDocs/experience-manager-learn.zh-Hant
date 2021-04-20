@@ -3,7 +3,7 @@ title: 建立檔案片段
 description: '這是建立您第一個互動式通訊檔案的多步驟教學課程第5部分。 在本部分，我們將建立文檔片段以保存收件人的名稱和地址。 '
 seo-description: '這是建立您第一個互動式通訊檔案的多步驟教學課程第5部分。 在本部分，我們將建立文檔片段以保存收件人的名稱和地址。 '
 uuid: 7fd8a0f2-a921-4e70-91c9-908dae9aeab2
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,9 +12,9 @@ version: 6.4,6.5
 discoiquuid: 47d3aa97-0bff-48e0-8a65-55e5332f811b
 kt: 5958
 thumbnail: 22350.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

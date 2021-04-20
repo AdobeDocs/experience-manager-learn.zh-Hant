@@ -1,15 +1,15 @@
 ---
 title: 使用AEM Sites設定個人化的ContextHub
 description: ContextHub是儲存、控制和呈現上下文資料的架構。 ContextHub Javascript API可讓您存取商店，以視需要建立、更新和刪除資料。 因此，ContextHub代表您頁面上的資料層。 本頁說明如何將內容中樞新增至網AEM站頁面。
-feature: 內容中樞
+feature: Context Hub
 topics: personalization
 audience: developer, architect
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
-topic: 個性化
-role: 開發人員
-level: 中級
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

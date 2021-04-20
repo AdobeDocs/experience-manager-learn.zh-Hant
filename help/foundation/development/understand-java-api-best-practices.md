@@ -3,14 +3,14 @@ title: '瞭解Java API的最佳實務AEM:'
 description: 建AEM立在豐富的開放原始碼軟體堆疊上，可讓許多Java API在開發期間使用。 本文探討主要的API，以及使用它們的時機和原因。
 version: 6.2, 6.3, 6.4, 6.5
 sub-product: 基礎，資產，網站
-feature: API
+feature: APIs
 topics: best-practices, development
 activity: develop
 audience: developer
 doc-type: article
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

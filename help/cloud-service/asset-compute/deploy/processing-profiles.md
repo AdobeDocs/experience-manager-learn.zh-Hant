@@ -1,7 +1,7 @@
 ---
 title: 將Asset compute員工與處理設AEM定檔整合
 description: 作AEM為Cloud Service，可透過AEM Assets處理設定檔與部署至Adobe I/O Runtime的Asset compute員工整合。 「處理設定檔」是在「作者」服務中設定，以使用自訂工作者處理特定資產，並將工作者產生的檔案儲存為資產轉譯。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
-topic: 整合、開發
-role: 開發人員
-level: 中級，經驗豐富的
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

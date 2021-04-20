@@ -3,7 +3,7 @@ title: 搭配使用多網站管理員與AEM Sites
 seo-title: 搭配Adobe Experience Manager使用多網站管理員觸控UI介面
 description: 「即時副本概述」和「Blueprint設定管理員」是可與「多網站管理員」搭配使用的觸控UI介面。
 seo-description: 「即時副本概述」和「Blueprint設定管理員」是「觸控UI啟用」介面，可搭配使用「多網站管理員」和「Adobe Experience Manager」。
-feature: 多站點管理員
+feature: Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: use
 version: 6.3, 6.4, 6.5
 uuid: 76f295d0-78dd-429c-9129-9182b3a706a6
 discoiquuid: a0dc581e-300f-45ef-916a-1cbac0429899
-topic: 本土化
-role: 業務從業人員
-level: 初學者
+topic: Localization
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -3,15 +3,15 @@ title: AEM Forms與馬克托（四）
 seo-title: AEM Forms與馬克托（四）
 description: 教學課程，將AEM Forms與Marketo整合，使用AEM Forms表單資料模型。
 seo-description: 教學課程，將AEM Forms與Marketo整合，使用AEM Forms表單資料模型。
-feature: 最適化Forms，表單資料模型
+feature: Adaptive Forms, Form Data Model
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
-topic: 開發
-role: 開發人員
-level: 經驗豐富
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

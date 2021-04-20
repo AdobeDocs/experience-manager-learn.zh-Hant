@@ -1,16 +1,16 @@
 ---
 title: 配置轉換的最適化表單
 description: 配置轉換的最適化表單
-feature: 適用性表單
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39574.jpg
 kt: 6126
-topic: 開發
-role: 業務從業人員
-level: 初學者
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

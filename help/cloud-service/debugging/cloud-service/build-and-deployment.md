@@ -1,7 +1,7 @@
 ---
 title: 建立和部署
 description: Adobe雲端管理員可協助建立程式碼並將其部AEM署為Cloud Service。 在構建過程中的步驟中可能會發生故障，需要採取措施來解決這些故障。 本指南將逐步瞭解部署中常見的故障，以及如何最佳地處理這些故障。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 title: 整合SPA |編輯與回應快AEM速入SPA門
 description: 瞭解在React中編寫的單頁應用程SPA式()原始碼如何與Adobe Experience Manager(AEM)專案整合。 瞭解如何使用現代前端工具（例如webpack dev server），針對JSON模型APISPA快速AEM開發。
 sub-product: Sites
-feature: 編SPA輯器
+feature: SPA Editor
 topics: development
 version: cloud-service
 activity: develop
@@ -10,8 +10,8 @@ audience: developer
 kt: 4853
 thumbnail: 4853-spa-react.jpg
 topic: SPA
-role: 開發人員
-level: 初學者
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

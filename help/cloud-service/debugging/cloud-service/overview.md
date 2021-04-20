@@ -1,16 +1,16 @@
 ---
 title: 除AEM錯為Cloud Service
 description: 自助服務、可擴充的雲端基礎架構，這AEM要求開發人員瞭解如何瞭解並除錯Cloud Service的AEM各個層面，從建立和部署到取得執行應用程式的詳細AEM資訊。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5346
-topic: 開發
-role: 開發人員
-level: 初學者，中級
+topic: Development
+role: Developer
+level: Beginner, Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

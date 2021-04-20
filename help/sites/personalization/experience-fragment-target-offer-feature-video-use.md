@@ -4,7 +4,7 @@ seo-title: 在Adobe TargetAEM使用體驗片段選件
 description: Adobe Experience Manager6.4重新設計了與Target之間的個人AEM化工作流程。 現在，您可AEM以將內建的體驗以HTML選件的形式直接傳送至Adobe Target。 它可讓行銷人員跨不同通道順暢地測試和個人化內容。
 seo-description: Adobe Experience Manager6.4重新設計了與Target之間的個人AEM化工作流程。 現在，您可AEM以將內建的體驗以HTML選件的形式直接傳送至Adobe Target。 它可讓行銷人員跨不同通道順暢地測試和個人化內容。
 sub-product: 內容服務
-feature: 體驗片段
+feature: Experience Fragments
 topics: integrations, personalization
 audience: all
 doc-type: feature video
@@ -12,9 +12,9 @@ activity: setup
 version: 6.4, 6.5
 uuid: 7b91f65d-5a35-419a-8cf7-be850165dd33
 discoiquuid: 45fc8d83-73fb-42e5-9c92-ce588c085ed4
-topic: 個性化
-role: 業務從業人員
-level: 初學者
+topic: Personalization
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

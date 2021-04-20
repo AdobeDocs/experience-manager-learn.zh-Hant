@@ -1,10 +1,10 @@
 ---
 title: 如何在AEM Sites使用啟動
 description: 在AEM Sites的發佈提供建立、編寫和審閱內容的方式，以供日後發行。
-topic: 內容管理
-feature: 啟動
-level: 中級，經驗豐富的
-role: 管理員
+topic: Content Management
+feature: Launches
+level: Intermediate, Experienced
+role: Administrator
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 6970
 thumbnail: 331285.jpg

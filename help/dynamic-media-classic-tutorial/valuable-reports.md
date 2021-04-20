@@ -2,14 +2,14 @@
 title: 管理員適用的有價報告
 description: 探索兩份Dynamic Media經典管理員應考慮設定的寶貴報告。
 sub-product: 動態媒體，資產
-feature: Dynamic Media經典
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, reports
 audience: all
 activity: use
-topic: 內容管理
-role: 管理員
-level: 中級
+topic: Content Management
+role: Administrator
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

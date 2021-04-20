@@ -1,13 +1,13 @@
 ---
 title: AEM Assets水印
 description: 由於AEMCloud Service的浮水印功能允許使用任何PNG影像對自訂影像轉譯加上浮水印。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 version: cloud-service
 kt: 6357
 thumbnail: 41536.jpg
-topic: 內容管理
-role: 開發人員
-level: 中級
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

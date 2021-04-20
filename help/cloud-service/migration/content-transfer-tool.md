@@ -4,14 +4,14 @@ description: 內容傳輸工具是將內容從內部部署或AMS代管版本移�
 version: cloud-service
 doc-type: technical-video
 topics: migration
-feature: 移轉
+feature: Migration
 activity: develop
 audience: developer
 kt: 5352
 thumbnail: kt-5352.jpg
-topic: 移轉
-role: 架構設計人員
-level: 初學者
+topic: Migration
+role: Architect, Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

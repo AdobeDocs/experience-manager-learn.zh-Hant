@@ -3,15 +3,15 @@ title: 通過合併資料生成打印渠道文檔
 seo-title: 通過合併資料生成打印渠道文檔
 description: 瞭解如何透過合併輸入串流中包含的資料來產生列印頻道檔案
 seo-description: 瞭解如何透過合併輸入串流中包含的資料來產生列印頻道檔案
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開發
-role: 開發人員
-level: 中級
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

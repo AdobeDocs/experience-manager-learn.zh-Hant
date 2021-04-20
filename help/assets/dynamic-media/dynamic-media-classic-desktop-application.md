@@ -2,13 +2,13 @@
 title: 使用Dynamic Media經典台式機應用程式
 description: Adobe為Dynamic MediaClassic使用者推出案頭應用程式，不再仰賴瀏覽器中的AdobeFlash技術。
 sub-product: 動態媒體
-feature: Dynamic Media經典
+feature: Dynamic Media Classic
 version: 6.5
 kt: 5808
 thumbnail: 36645.jpg
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,11 +2,11 @@
 title: 搭配AEM Assets使用Dynamic Media360視訊和自訂視訊縮圖
 description: Dynamic Media檢視器AEM6.5版的增強功能包括支援360視訊轉換、360種媒體檢視器（video360Social和video360VR），以及選取自訂視訊縮圖的功能。
 sub-product: 動態媒體
-feature: 視訊設定檔
+feature: Video Profiles
 version: 6.3, 6.4, 6.5
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

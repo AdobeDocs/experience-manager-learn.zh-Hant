@@ -2,10 +2,10 @@
 title: 如何使用Project Masters AEM
 description: Project Masters可大幅簡化使用者和團隊的專案AEM管理。
 version: 6.4, 6.5, cloud-service
-topic: 內容管理、協作
-feature: 專案
-level: 中級
-role: 業務從業人員
+topic: Content Management, Collaboration
+feature: Projects
+level: Intermediate
+role: Business Practitioner
 kt: 256
 thumbnail: 17740.jpg
 translation-type: tm+mt

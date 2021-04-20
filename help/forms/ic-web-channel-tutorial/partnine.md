@@ -4,16 +4,16 @@ seo-title: 將表添加到帳戶餘額面板
 description: 這是建立第一個互動式通信文檔的多步驟教程的第9部分。在本部分，我們將向「帳戶餘額」面板添加一個表。
 seo-description: 這是建立第一個互動式通信文檔的多步驟教程的第9部分。在本部分，我們將向「帳戶餘額」面板添加一個表。
 uuid: 8f268c73-c543-418d-b65e-5beaf9660e42
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 28a9d88d-635b-47a2-8a78-54ddeabc4406
-topic: 開發
-role: 開發人員
-level: 初學者
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

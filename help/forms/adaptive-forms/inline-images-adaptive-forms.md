@@ -3,15 +3,15 @@ title: 在最適化Forms中顯示內嵌影像
 seo-title: 在最適化Forms中顯示內嵌影像
 description: 在Adaptive Forms中顯示內嵌的已上載影像
 seo-description: 在Adaptive Forms中顯示內嵌的已上載影像
-feature: 適用性表單
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: 開發
-role: 開發人員
-level: 經驗豐富
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

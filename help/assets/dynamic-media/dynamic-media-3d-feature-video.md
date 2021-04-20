@@ -1,12 +1,12 @@
 ---
 title: Dynamic Media3D與AEM Assets
 description: Dynamic MediaAdobe Experience Manager的3D支援可讓您輕鬆自訂並大規模提供互動式3D架構體驗
-feature: 3D資產
+feature: 3D Assets
 version: 6.5
 kt: 5349
-topic: 內容管理
-role: 業務從業人員
-level: 初學者
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
