@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: 雲端服務
 team: TM
 translation-type: tm+mt
-source-git-commit: 0c7759b59e6b6c99da3cd7e7c502445c14964e26
+source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '415'
 ht-degree: 22%
 
 ---
@@ -100,6 +100,7 @@ ht-degree: 22%
       + [建立工作流程模型](./forms/create-aem-workflow/create-workflow.md)
       + [觸發工作流程](./forms/create-aem-workflow/configure-af.md)
    + Adobe Sign與AEM Forms合作{#forms-and-sign}
+      + [簡介](./forms/forms-and-sign/introduction.md)
       + [Adobe SignAPI應用程式](./forms/forms-and-sign/create-sign-api-application.md)
       + [Adobe 簽署雲端組態](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [建立最適化表單](./forms/forms-and-sign/create-adaptive-form.md)
