@@ -6,9 +6,9 @@ user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使
 breadcrumb-title: AEM Forms 教學課程
 index: y
 translation-type: tm+mt
-source-git-commit: 1e945afddda3d7735005029952a9d7ec46828bc6
+source-git-commit: da7837d45a9d5f614a4f6527b7bfe98aaf980d4f
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '952'
 ht-degree: 6%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 6%
 
 + 調適型表單 {#adaptive-forms}
    + [在Windows上安裝AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
+   + [在Linux上安裝32位元套件](adaptive-forms/installing-aem-form-on-linux.md)
    + [最適化Forms的預填充服務](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [最適化Forms中的自訂提交](adaptive-forms/custom-submit-aem-forms-article.md)
    + [適應性Forms的驗證碼](adaptive-forms/forms-captcha-feature-video-use.md)
@@ -169,7 +170,7 @@ ht-degree: 6%
 + 列出Forms門戶中的自定義資產類型{#listing-custom-asset-types}
    + [Part1 —— 註冊自訂資產類型](listing-custom-asset-types/part1.md)
    + [Part2 —— 建立自定義模板](listing-custom-asset-types/part2.md)
-+ AEM Forms與馬克托{#aem-forms-with-marketo}
++ AEM Forms與Marketo{#aem-forms-with-marketo}
    + [第1部分——簡介](aem-forms-with-marketo/part1.md)
    + [第2部分——自訂驗證](aem-forms-with-marketo/part2.md)
    + [第3部分——資料源](aem-forms-with-marketo/part3.md)
