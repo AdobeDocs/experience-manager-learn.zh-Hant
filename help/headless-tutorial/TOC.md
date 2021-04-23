@@ -11,10 +11,10 @@ activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 30%
+source-wordcount: '117'
+ht-degree: 28%
 
 ---
 
@@ -22,6 +22,25 @@ ht-degree: 30%
 # AEM Headless 快速入門{#getting-started-with-aem-headless}
 
 + [AEM無頭概觀](./overview.md)
++ GraphQL {#graphql}
+   + [概覽](./graphql/overview.md)
+   + 視訊系列{#video-series}
+      + [1 —— 建模基本知識](./graphql/video-series/modeling-basics.md)
+      + [2 —— 進階模型](./graphql/video-series/advanced-modeling.md)
+      + [3 —— 建立GraphQL查詢](./graphql/video-series/creating-graphql-queries.md)
+   + 多步驟教學課程{#multi-step}
+      + [概覽](./graphql/multi-step/overview.md)
+      + [1 —— 快速設定](./graphql/multi-step/setup.md)
+      + [2 —— 定義內容片段模型](./graphql/multi-step/content-fragment-models.md)
+      + [3 —— 編寫內容片段](./graphql/multi-step/author-content-fragments.md)
+      + [4 —— 瞭解GraphQL API](./graphql/multi-step/explore-graphql-api.md)
+      + [5 —— 從外部應用程式查詢](./graphql/multi-step/graphql-and-external-app.md)
+      + [6 —— 使用片段參照建立進階資料模型](./graphql/multi-step/fragment-references.md)
+      + [7 —— 生產部署](./graphql/multi-step/production-deployment.md)
++ 代號型驗證{#authentication}
+   + [概覽](./authentication/overview.md)
+   + [1 —— 本機開發存取Token](./authentication/local-development-access-token.md)
+   + [2 —— 服務憑據](./authentication/service-credentials.md)
 + Content Services {#content-services}
    + [概覽](./content-services/overview.md)
    + [1 —— 教學課程設定](./content-services/chapter-1.md)
@@ -31,16 +50,3 @@ ht-degree: 30%
    + [5 —— 編寫Content Services頁面](./content-services/chapter-5.md)
    + [6 —— 公開AEM Publish中的內容以進行傳送](./content-services/chapter-6.md)
    + [7 —— 從行動應AEM用程式使用內容服務](./content-services/chapter-7.md)
-+ GraphQL {#graphql}
-   + [概覽](./graphql/overview.md)
-   + [1 —— 快速設定](./graphql/setup.md)
-   + [2 —— 定義內容片段模型](./graphql/content-fragment-models.md)
-   + [3 —— 編寫內容片段](./graphql/author-content-fragments.md)
-   + [4 —— 瞭解GraphQL API](./graphql/explore-graphql-api.md)
-   + [5 —— 從外部應用程式查詢](./graphql/graphql-and-external-app.md)
-   + [6 —— 使用片段參照建立進階資料模型](./graphql/fragment-references.md)
-   + [7 —— 生產部署](./graphql/production-deployment.md)
-+ 代號型驗證{#authentication}
-   + [概覽](./authentication/overview.md)
-   + [1 —— 本機開發存取Token](./authentication/local-development-access-token.md)
-   + [2 —— 服務憑據](./authentication/service-credentials.md)
