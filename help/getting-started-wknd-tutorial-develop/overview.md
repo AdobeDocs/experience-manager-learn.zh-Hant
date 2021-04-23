@@ -11,15 +11,15 @@ KT: 4132
 mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
-feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
-topic: Content Management, Development
+feature: 核心元件、頁面編輯器、可編輯範本、專AEM案原型
+topic: 內容管理、開發
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 25%
+source-wordcount: '510'
+ht-degree: 6%
 
 ---
 
@@ -34,40 +34,6 @@ ht-degree: 25%
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-此教學課程在設計上將使用 **AEM as a Cloud Service**，並向下相容於 **AEM 6.5.5.0+** 和 **AEM 6.4.8.1+**。網站的實作方式為：
-
-* [Maven AEM Project Archetype](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/archetype/overview.html)
-* [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
-* [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)
-* Sling 模型
-* [可編輯的範本](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
-* [樣式系統](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
-
-*預計約需 1-2 小時完成教學課程的每個部份。*
-
-## 本機開發環境 {#local-dev-environment}
-
-本機開發環境是完成此教學課程所不可或缺的條件。螢幕擷圖和影片都是使用在 Mac OS 環境上執行的 AEM as a Cloud Service SDK 擷取，並將 [Visual Studio Code](https://code.visualstudio.com/) 當做 IDE 使用。除非另有註明，否則命令和程式碼應獨立於本機作業系統。
-
-### 所需軟體
-
-本機應安裝下列程式碼：
-
-* 本AEM機&#x200B;**Author**&#x200B;例項(Cloud ServiceSDK、6.5.5+或6.4.8.1+)
-* [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
-* [Apache Maven](https://maven.apache.org/) (3.3.9 或更新版本)
-* [Node.js](https://nodejs.org/en/) （LTS —— 長期支援）
-* [npm 6+](https://www.npmjs.com/)
-* [Git](https://git-scm.com/)
-* [Visual Studio代](https://code.visualstudio.com/) 碼或相當的IDE
-   * [VSCode Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  —— 在整個教學課程中使用的工具
-
->[!NOTE]
->
-> **AEM as a Cloud Service 的新手嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
->
-> **AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
-
 ## 關於教學課程{#about-tutorial}
 
 WKND是虛構的線上雜誌和部落格，主要針對數個國際城市的夜生活、活動和活動。
@@ -80,20 +46,6 @@ WKND是虛構的線上雜誌和部落格，主要針對數個國際城市的夜�
 
 * [AEM核心元件UI套件](assets/overview/AEM-CoreComponents-UI-Kit.xd)
 * [WKND UI Kit](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND.xd)
-
-WKND名稱正合適，因為我們預期開發人員會參與&#x200B;***weekend***&#x200B;的大部分工作，以完成教學課程。
-
-### Github {#github}
-
-項目的所有代碼都可在Github上找到，位於AEMGuide repo:
-
-**[GitHub:WKND Sites Project](https://github.com/adobe/aem-guides-wknd)**
-
-此外，教學課程的每個部分都有其專屬的GitHub分支。 用戶只需檢出與上一個部件對應的分支，即可隨時開始教程。
-
->[!NOTE]
->
-> 如果您使用本教學課程的舊版，您仍可在GitHub上找到[解決方案套件](https://github.com/adobe/aem-guides-wknd/releases/tag/archetype-18.1)和[程式碼](https://github.com/adobe/aem-guides-wknd/tree/archetype-18.1)。
 
 ## 引用網站 {#reference-site}
 
@@ -111,4 +63,4 @@ WKND參考網站中的許多影像都來自[Adobe Stock](https://stock.adobe.com
 
 ## 後續步驟{#next-steps}
 
-你在等什麼！導覽至[Project Setup](project-setup.md)章節以開始教學課程，並瞭解如何使用Project Archetype產生新的Adobe Experience Manager專AEM案。
+你在等什麼！開始教學課程，並瞭解如何使用Project Archetype](./project-archetype/overview.md)產生AEM新的Adobe Experience Manager專案。[
