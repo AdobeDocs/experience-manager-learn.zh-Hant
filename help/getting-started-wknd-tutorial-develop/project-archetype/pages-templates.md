@@ -3,22 +3,19 @@ title: 開始使用AEM Sites-頁面和範本
 seo-title: 開始使用AEM Sites-頁面和範本
 description: 瞭解基本頁面元件與可編輯範本之間的關係。 瞭解核心元件如何加入專案，並瞭解可編輯範本的進階政策設定，以根據Adobe XD的模型建立結構良好的文章頁面範本。
 sub-product: Sites
-feature: 核心元件、可編輯範本
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-mini-toc-levels: 1
-kt: 4082
-thumbnail: 30214.jpg
+version: 6.4, 6.5, Cloud Service
+type: Tutorial
+feature: 核心元件、可編輯範本、頁面編輯器
 topic: 內容管理、開發
 role: Developer
 level: Beginner
+mini-toc-levels: 1
+kt: 4082
+thumbnail: 30214.jpg
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
-source-wordcount: '3104'
+source-wordcount: '3106'
 ht-degree: 0%
 
 ---
@@ -173,7 +170,7 @@ ht-degree: 0%
 
 1. 下載範例內容套件&#x200B;**[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets.zip)**。
 1. 使用位於[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)的Package Manager上傳及安裝內容套件
-1. 更新「Web變數」範本，此範本是[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html)中用於體驗片段的範本
+1. 更新「Web變數」範本，此範本是[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html)上用於體驗片段的範本
    * 更新範本上的&#x200B;**Container**&#x200B;元件原則。
    * 將策略設定為&#x200B;**XF Root**。
    * 在&#x200B;**允許的元件**&#x200B;下，選擇元件組&#x200B;**WKND站點項目——結構**&#x200B;以包含&#x200B;**語言導航**、**導航**&#x200B;和&#x200B;**快速搜索**&#x200B;元件。
