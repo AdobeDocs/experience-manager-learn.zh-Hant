@@ -11,10 +11,10 @@ activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 28%
+source-wordcount: '135'
+ht-degree: 25%
 
 ---
 
@@ -37,6 +37,15 @@ ht-degree: 28%
       + [5 —— 從外部應用程式查詢](./graphql/multi-step/graphql-and-external-app.md)
       + [6 —— 使用片段參照建立進階資料模型](./graphql/multi-step/fragment-references.md)
       + [7 —— 生產部署](./graphql/multi-step/production-deployment.md)
++ SPA Editor{#spa-editor}
+   + 遠SPA程{#remote-spa}
+      + [概覽](./spa-editor/remote-spa/overview.md)
+      + [1 —— 快速設定](./spa-editor/remote-spa/quick-setup.md)
+      + [2 —— 配置AEM](./spa-editor/remote-spa/aem-configure.md)
+      + [3 -BootstrapSPA](./spa-editor/remote-spa/spa-bootstrap.md)
+      + [4 —— 固定元件](./spa-editor/remote-spa/spa-fixed-component.md)
+      + [5 —— 容器元件](./spa-editor/remote-spa/spa-container-component.md)
+      + [6 —— 動態路由](./spa-editor/remote-spa/spa-dynamic-routes.md)
 + 代號型驗證{#authentication}
    + [概覽](./authentication/overview.md)
    + [1 —— 本機開發存取Token](./authentication/local-development-access-token.md)
