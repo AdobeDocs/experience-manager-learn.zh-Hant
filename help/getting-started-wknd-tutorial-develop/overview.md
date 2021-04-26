@@ -16,10 +16,10 @@ topic: 內容管理、開發
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 6%
+source-wordcount: '632'
+ht-degree: 4%
 
 ---
 
@@ -34,11 +34,19 @@ ht-degree: 6%
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-## 關於教學課程{#about-tutorial}
+## 啟動Sites專案的選項
 
-WKND是虛構的線上雜誌和部落格，主要針對數個國際城市的夜生活、活動和活動。
+啟動AEM Sites項目有兩種基本方法。
 
-### Adobe XDUI Kit
+**AEM Project Archetype**  —— 使用Maven範本產生最AEM小專案，AEM以傳統的開發方式。這是6.5/6.4專案AEM的建議方法，也是預AEM期大量自訂的Cloud Service專案。 本教學課程提供更深入的開AEM發。
+
+[以專案原型開始AEM教學課程](./project-archetype/overview.md)
+
+**網AEM站範本** -使用預先定義的網站范AEM本來產生網站的低碼方法。使用立即可用的元件和範本，快速啟動並執行網站。 使用主題工作流程，只使用CSS和JavaScript來套用品牌特定的樣式和自訂。 建議新專案和開發人員使用。 目前僅提供AEMCloud Service。
+
+[使用網站範本開始教學課程](./site-template/create-site.md)
+
+## Adobe XDUI Kit
 
 為了讓本教學課程更接近實際案例場景，Adobe有才幹的UX設計人員使用[Adobe XD](https://www.adobe.com/products/xd.html)為網站建立模型。 在教學課程中，各種設計會建置在完全可編寫的網AEM站中。 特別感謝為世界開發組織網站設計精美設計的&#x200B;**洛倫佐·布奧西**&#x200B;和&#x200B;**基利安·阿門多拉**。
 
@@ -63,4 +71,4 @@ WKND參考網站中的許多影像都來自[Adobe Stock](https://stock.adobe.com
 
 ## 後續步驟{#next-steps}
 
-你在等什麼！開始教學課程，並瞭解如何使用Project Archetype](./project-archetype/overview.md)產生AEM新的Adobe Experience Manager專案。[
+你在等什麼！瞭解如何使用Project Archetype](./project-archetype/overview.md)或AEM[使用Site Template](./site-template/create-site.md)建立網站，來產生新的Adobe Experience Manager專案。[
