@@ -2,20 +2,17 @@
 title: 自訂元件
 description: 涵蓋自訂逐行元件的端對端建立，以顯示撰寫的內容。 包括開發Sling Model以封裝商業邏輯以填入署名元件和對應的HTL來轉換元件。
 sub-product: Sites
+version: 6.4, 6.5, Cloud Service
+type: Tutorial
 feature: 核心元件、API
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-kt: 4072
-mini-toc-levels: 1
-thumbnail: 30181.jpg
 topic: 內容管理、開發
 role: Developer
 level: Beginner
+kt: 4072
+mini-toc-levels: 1
+thumbnail: 30181.jpg
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
 source-wordcount: '3967'
 ht-degree: 0%
