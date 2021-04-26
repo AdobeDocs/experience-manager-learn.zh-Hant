@@ -1,22 +1,20 @@
 ---
 title: 單元測試
 description: 本教學課程涵蓋Unit Test的實作，可驗證Byline元件的Sling Model（在自訂元件教學課程中建立）的行為。
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-kt: 4089
-mini-toc-levels: 1
-thumbnail: 30207.jpg
+sub-product: Sites
+version: 6.4, 6.5, Cloud Service
+type: Tutorial
 feature: API，專AEM案原型
 topic: 內容管理、開發
 role: Developer
 level: Beginner
+kt: 4089
+mini-toc-levels: 1
+thumbnail: 30207.jpg
 translation-type: tm+mt
-source-git-commit: e8c36a85bc47adbf76e614f245c3f47d7a50826e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
-source-wordcount: '3016'
+source-wordcount: '3017'
 ht-degree: 0%
 
 ---
@@ -289,7 +287,7 @@ public class BylineImplTest {
 
 在本教學課程中，使用後一種方法（因為我們已在上一章中建立了工作&#x200B;**BylineImpl.java**）。 因此，我們既要審視和瞭解其公開手段的行為，也要瞭解其實施細節。 這聽起來可能相反，因為良好的測試只應關注輸入和輸出，但在工作中AEM，需要瞭解各種執行考慮因素，才能構建工作測試。
 
-TDD在程式碼的開發AEM與單元測試方面，需要一定的專AEM業知識，並最AEM能被熟悉程式碼開發與單元測AEM試的開發人員所採用。
+TDD在程式碼的開發AEM與單元測試方面，需要一定的專AEM業知識，並最AEM能被熟悉程式碼開發與單元測試的開發人員所AEM採用。
 
 ## 設定AEM測試內容{#setting-up-aem-test-context}
 
