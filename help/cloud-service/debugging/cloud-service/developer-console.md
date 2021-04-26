@@ -1,7 +1,7 @@
 ---
 title: 開發人員主控台
 description: 因AEM為Cloud Service為每個環境提供Developer Console，該環境會顯示運行中服務的AEM各種詳細資訊，有助於調試。
-feature: Developer Tools
+feature: 開發人員工具
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,13 +9,13 @@ activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 048a37a9813e7b61ff069c4606b8d23cc6b6844f
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 1. 確保已影響Cloud Manger的Adobe組織，以及作為AEMCloud Service產品的Adobe組織在組織切換器中處於活動狀態。
 1. 開發人員必須是Cloud Manager產品&#x200B;__的「開發人員-Cloud Service」「產品設定檔」的成員。__
    + 如果此會籍不存在，開發人員將無法登入Developer Console。
-1. 開發人員必須是AEM Author和Publish服務的&#x200B;__AdministratorsAEM__ Product Profile的成員。
+1. 開發人員必須是&#x200B;__AEM Users__&#x200B;或&#x200B;__AEM Administrators__ Product Profile on AEM Author and/or Publish的成員。
    + 如果此會籍不存在， [status](#status)轉儲將逾時，並出現401未授權錯誤。
 
 ### 疑難排解Developer Console存取
