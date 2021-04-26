@@ -210,9 +210,10 @@ _如果系統上同時安裝了Java 8和Java 11,VS程式碼測試執行者在執
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
-2.但是，讓測試檔案與眾不同    設備測試檔案`Test`的尾碼`BylineImplTest.java`是一種約定，它允許我們
-1.輕鬆將它識別為_`BylineImpl.java`的測試檔案_
-2.但是，也請將測試檔案_與_&#x200B;所測試的類別區分開來，`BylineImpl.java`
+   設備測試檔案`Test`的尾碼`BylineImplTest.java`是一種約定，它允許我們
+
+   1.輕鬆將它識別為_`BylineImpl.java`的測試檔案_
+   2.但是，也請將測試檔案_與_&#x200B;所測試的類別區分開來，`BylineImpl.java`
 
 ## 檢視BylineImplTest.java {#reviewing-bylineimpltest-java}
 
