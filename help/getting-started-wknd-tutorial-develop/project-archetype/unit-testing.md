@@ -14,9 +14,9 @@ topic: 內容管理、開發
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: e8c36a85bc47adbf76e614f245c3f47d7a50826e
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3016'
 ht-degree: 0%
 
 ---
@@ -212,8 +212,10 @@ _如果系統上同時安裝了Java 8和Java 11,VS程式碼測試執行者在執
 
    設備測試檔案`Test`的尾碼`BylineImplTest.java`是一種約定，它允許我們
 
-   1.輕鬆將它識別為_`BylineImpl.java`的測試檔案_
-   2.但是，也請將測試檔案_與_&#x200B;所測試的類別區分開來，`BylineImpl.java`
+   1. 輕鬆將它識別為&#x200B;_`BylineImpl.java`的測試檔案_
+   1. 但是，請將測試檔案&#x200B;_與要測試的類_&#x200B;區分開來， `BylineImpl.java`
+
+
 
 ## 檢視BylineImplTest.java {#reviewing-bylineimpltest-java}
 
