@@ -8,10 +8,10 @@ level: Beginner
 kt: 7630
 thumbnail: kt-7630.jpg
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 6%
+source-wordcount: '694'
+ht-degree: 5%
 
 ---
 
@@ -67,35 +67,37 @@ ht-degree: 6%
 
 快速設定功能可讓您在15分鐘內使用WKND應用程SPA式和AEM編SPA輯器啟動並執行。 此加速設定會直接帶您進入教學課程的結束狀態，讓您探索在編輯器中SPA制AEM作SPA內容。
 
-+ [快速設定](./quick-setup.md)
++ [瞭解快速設定](./quick-setup.md)
 
-## 為編AEM輯器設SPA定
+## 1.為編AEM輯器設SPA定
 
 您必AEM須進行設定，才能將SPA與編AEM輯器整SPA合。 這些配置通過項目進行管理和部AEM署。 在本章中，瞭解哪些配置是必需的以及如何定義配置。
 
-+ [設定AEM](./aem-configure.md)
++ [瞭解如何為編AEM輯器設SPA定](./aem-configure.md)
 
-## BootstrapSPA
+## 2.BootstrapSPA
 
 For AEM SPA   Editor to integrate a it SPA&#39;s authoring context, must be additions to theSPA.
 
-+ [BootstrapSPA編AEM輯SPA器](./spa-bootstrap.md)
++ [瞭解如何引導SPA編AEM輯SPA器](./spa-bootstrap.md)
 
-## 可編輯的固定元件
+## 3.可編輯的固定元件
 
 首先，探索將可編輯的「固定元件」新增至SPA。 這說明開發人員如何在中放置特定的可編輯元SPA件。 雖然作者可以變更元件的內容，但無法移除元件或變更其位置、位置或大小。
 
-+ [可編輯的固定元件](./spa-fixed-component.md)
++ [瞭解可編輯的固定元件](./spa-fixed-component.md)
 
-## 可編輯的容器元件
+## 4.可編輯的容器元件
 
 接著，探索將可編輯的「容器元件」新增至SPA。 這說明開發人員如何將容器元件置於SPA。 容器元件可讓作者將允許的元件置入其中，並調整元件的版面配置。
 
-## 動態路由和可編輯的元件
++ [瞭解可編輯的容器元件](./spa-container-component.md)
+
+## 5.動態路由和可編輯的元件
 
 最後，將前一章中闡述的概念用於動態路由；根據路由參數顯示不同內容的路由。 這說明了如AEM何使用SPAEditor在以程式設計方式驅動和衍生的路由上製作內容。
 
-+ [動態路由和可編輯的元件](./spa-dynamic-routes.md)
++ [瞭解動態路由和可編輯的元件](./spa-dynamic-routes.md)
 
 ## 其他資源
 
