@@ -11,7 +11,7 @@ activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 25%
@@ -40,12 +40,12 @@ ht-degree: 25%
 + SPA Editor{#spa-editor}
    + 遠SPA程{#remote-spa}
       + [概覽](./spa-editor/remote-spa/overview.md)
-      + [1 —— 快速設定](./spa-editor/remote-spa/quick-setup.md)
-      + [2 —— 配置AEM](./spa-editor/remote-spa/aem-configure.md)
-      + [3 -BootstrapSPA](./spa-editor/remote-spa/spa-bootstrap.md)
-      + [4 —— 固定元件](./spa-editor/remote-spa/spa-fixed-component.md)
-      + [5 —— 容器元件](./spa-editor/remote-spa/spa-container-component.md)
-      + [6 —— 動態路由](./spa-editor/remote-spa/spa-dynamic-routes.md)
+      + [快速設定](./spa-editor/remote-spa/quick-setup.md)
+      + [1 —— 配置AEM](./spa-editor/remote-spa/aem-configure.md)
+      + [2 -BootstrapSPA](./spa-editor/remote-spa/spa-bootstrap.md)
+      + [3 —— 固定元件](./spa-editor/remote-spa/spa-fixed-component.md)
+      + [4 —— 容器元件](./spa-editor/remote-spa/spa-container-component.md)
+      + [5 —— 動態路由](./spa-editor/remote-spa/spa-dynamic-routes.md)
 + 代號型驗證{#authentication}
    + [概覽](./authentication/overview.md)
    + [1 —— 本機開發存取Token](./authentication/local-development-access-token.md)
