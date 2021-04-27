@@ -8,10 +8,10 @@ level: Beginner
 kt: 7629
 thumbnail: kt-7629.jpeg
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 4%
+source-wordcount: '729'
+ht-degree: 5%
 
 ---
 
@@ -75,8 +75,8 @@ SDKAEM將在[http://localhost:4502](http://localhost:4502)上啟動並自動啟�
 
 要執行快速設定，AEM將提供包含教程最終配置和內AEM容的軟體包。
 
-1. 從DemoHub Assetspod下載`wknd-app.all.x.x.x.zip`
-1. 從DemoHub Assetspod下載`wknd-app.ui.content.sample.x.x.x.zip`
+1. [下載 `wknd-app.all.x.x.x.zip`](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [下載 `wknd-app.ui.content.sample.x.x.x.zip`](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
 1. 使用AEM`admin`憑證登入SDK的Package Manager，網址為[http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)。
 1. __上__ 載步 `wknd-app.all.x.x.x.zip` 驟1中下載的
 1. 點選&#x200B;__Install__&#x200B;按鈕以取得`wknd-app.all.x.x.x.zip`項目
