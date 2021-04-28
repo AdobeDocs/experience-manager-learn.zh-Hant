@@ -1,7 +1,7 @@
 ---
 title: 設定本機執AEM行時期AEM做為Cloud Service開發
 description: 使用作為Cloud ServiceAEM SDK的Quickstart Jar的AEM本機執行階段來設定。
-feature: Developer Tools
+feature: 開發人員工具
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,19 +9,26 @@ activity: develop
 audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1657'
-ht-degree: 1%
+source-wordcount: '1734'
+ht-degree: 2%
 
 ---
 
 
 # 設定本機執AEM行階段
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_aemruntime"
+>title="本機執AEM行時期"
+>abstract="Adobe Experience Manager(AEM)可以使用本機AEM作為Cloud ServiceSDK的快速入門Jar執行。 這可讓開發人員在將自訂程式碼、組態和內容提交至來源控制項，並將它部署至Cloud Service環境之前，先進行部署AEM和測試。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載AEM為Cloud ServiceSDK"
 
 Adobe Experience Manager(AEM)可以使用作為AEMCloud ServiceSDK快速入門Jar的本機執行。 這可讓開發人員在將自訂程式碼、組態和內容提交至來源控制項，並將它部署至Cloud Service環境之前，先進行部署AEM和測試。
 
