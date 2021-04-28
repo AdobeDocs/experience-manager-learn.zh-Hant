@@ -2,7 +2,7 @@
 title: 將Dispatcher Tools設定為AEMCloud Service開發
 description: SDKAEM的Dispatcher Tools可讓本機安裝、執行和疑難排解Dispatcher，以協助本機開發Adobe Experience Manager(AEM)專案。
 sub-product: 基礎
-feature: Dispatcher, Developer Tools
+feature: Dispatcher，開發人員工具
 topics: development, caching, security
 version: cloud-service
 doc-type: tutorial
@@ -10,19 +10,26 @@ activity: develop
 audience: developer
 kt: 4679
 thumbnail: 30603.jpg
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
 
 
 # 設定本地Dispatcher工具
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_dispatcher"
+>title="Local Dispatcher Tools"
+>abstract="Dispatcher是整體Experience Manager架構的一部分，應是本端開發設定的一部分。 作為AEMCloud ServiceSDK，它包含建議的Dispatcher Tools版本，可方便在本機配置、驗證和模擬Dispatcher。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html" text="雲端中的 Dispatcher"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載AEM為Cloud ServiceSDK"
 
 Adobe Experience Manager(AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM Publish層之間提供安全性與效能層。 Dispatcher是整體Experience Manager架構的一部分，應是本端開發設定的一部分。
 
