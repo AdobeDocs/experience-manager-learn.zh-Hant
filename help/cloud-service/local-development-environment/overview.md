@@ -1,7 +1,7 @@
 ---
 title: 地方開發環AEM境以Cloud Service
 description: Adobe Experience Manager(AEM)地方開發環境概觀。
-feature: Developer Tools
+feature: 開發人員工具
 topics: development
 version: cloud-service
 doc-type: article
@@ -9,19 +9,26 @@ activity: troubleshoot
 audience: developer
 kt: 3290
 thumbnail: 32565.jpg
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '549'
 ht-degree: 2%
 
 ---
 
 
 # 地方開發環境設定
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_overview"
+>title="概覽"
+>abstract="將本機開發環境設AEM定為Cloud Service，包括開發、建立和編譯專案所需的開發工具，以及本機執行時間，讓開發人員可在本機快速驗證新功能，然後再透過Adobe雲端管理員將新功能AEM部署為Cloud Service。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="開發方針"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html" text="開發基本資訊"
 
 本教學課程將逐步介紹如何使用Cloud ServiceSDK為Adobe Experience Manager(AEM)設AEM定本機開發環境。 其中包括開發、建立和編譯專案所需的開發工具，以及本機執行時AEM間，讓開發人員可在本機快速驗證新功能，然後再透過Adobe雲端管理器將新功能部AEM署為Cloud Service。
 
