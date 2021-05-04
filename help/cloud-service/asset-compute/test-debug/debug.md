@@ -1,7 +1,7 @@
 ---
 title: 調試Asset compute工作器
 description: asset compute工作者可以通過多種方式進行調試，從簡單的調試日誌語句到附加的VS代碼作為遠程調試程式，再到提取從Cloud Service啟動的Adobe I/O Runtime激活日AEM志。
-feature: Asset Compute Microservices
+feature: asset compute微服務
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
-topic: Integrations, Development
+topic: 整合、開發
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '623'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,7 @@ _使用wskdebug調試Asset compute工作器的點進（無音頻）_
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
+
 1. 使用命令`npx adobe-asset-compute devtool`啟動新的Asset compute開發工具實例
 1. 在「VS程式碼」中，點選左側導覽中的「除錯」圖示
    + 如果出現提示，請點選&#x200B;__建立launch.json檔案> Node.js__&#x200B;以建立新的`launch.json`檔案。
