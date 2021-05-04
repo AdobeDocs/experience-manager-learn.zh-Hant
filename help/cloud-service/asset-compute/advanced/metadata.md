@@ -1,7 +1,7 @@
 ---
 title: 開發Asset compute中繼資料工作者
 description: 瞭解如何建立Asset compute中繼資料工作器，以衍生影像資產中最常用的色彩，並將色彩名稱寫回資產的中繼資料AEM。
-feature: Asset Compute Microservices
+feature: asset compute微服務
 topics: metadata, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: Integrations, Development
+topic: 整合、開發
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1439'
 ht-degree: 1%
 
 ---
@@ -205,6 +205,7 @@ function getColorName(colorsFamily, color) {
        ]
    }
    ```
+
 1. 點選「__執行__」，等待XML轉譯產生
    + 由於兩個工作者都列在描述檔定義中，因此兩個轉譯都會產生。 或者，可以刪除指向[圓形轉譯工作者](../develop/worker.md)的頂部配置檔案定義，以避免從「開發工具」中執行該定義。
 1. __轉譯__&#x200B;區段會預覽產生的轉譯。 點選`rendition.xml`以下載它，然後在VS程式碼（或您最愛的XML/文字編輯器）中開啟它以進行審核。
