@@ -8,10 +8,10 @@ level: Beginner
 kt: 7629
 thumbnail: kt-7629.jpeg
 translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: d3a237b196ac872beda6119c854a0cae29510437
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 5%
+source-wordcount: '794'
+ht-degree: 4%
 
 ---
 
@@ -32,8 +32,11 @@ ht-degree: 5%
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
++ 僅限macOS的先決條件
+   + [](https://developer.apple.com/xcode/) Xcodeor  [Xcode命令行工具](https://developer.apple.com/xcode/resources/)
 + [aem-guides-wknd.all.0.3.0.zip或更新版本](https://github.com/adobe/aem-guides-wknd/releases)
 + [aem-guides-wknd-graphql原始碼](https://github.com/adobe/aem-guides-wknd-graphql)
+
 
 本教學課程假設：
 
@@ -90,7 +93,8 @@ SDKAEM將在[http://localhost:4502](http://localhost:4502)上啟動並自動啟�
 ```
 $ mkdir -p ~/Code/wknd-app
 $ cd ~/Code/wknd-app
-$ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
+$ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd aem-guides-wknd-graphql
 $ git checkout -b feature/spa-editor
 $ git pull origin feature/spa-editor
 ```
@@ -146,6 +150,8 @@ $ npm run start
 1. 點選&#x200B;__Bali Surf Camp__&#x200B;卡並導覽至其動態路線
 1. 從位於&#x200B;__Interial__&#x200B;標題上方的容器元件新增、變更或移除元件
 1. 重新整SPA理`http://localhost:3000`上的執行，並查看所反映的變更
+
+&lt;AEMa0/>WKND應用程式首頁> Adventure ___&#x200B;下的新頁面必須&#x200B;_具有與相應冒險內容片段AEM名稱相符的頁面名稱。__&#x200B;這是因為SPA到頁AEM面的路由映射基於路由的最後一個段，即內容片段的名稱。
 
 ## 恭喜！
 
