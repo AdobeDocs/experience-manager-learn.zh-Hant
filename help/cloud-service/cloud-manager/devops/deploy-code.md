@@ -1,17 +1,17 @@
 ---
-title: 將AEM程式碼專案部署至AEM做為雲端服務
-description: 探索使用Cloud Manager將AEM程式碼專案部署至AEM做為雲端服務。
+title: 將程AEM式碼專案部署AEM為Cloud Service
+description: 探索使用Cloud Manager將AEM程式碼專AEM案部署為Cloud Service。
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
-feature: Developer Tools
+topic: 開發
+feature: 開發人員工具
 kt: 6912
 thumbnail: 330534.jpg
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,13 @@ ht-degree: 0%
 
 # 部署程式碼
 
-將Cloud Manager Git儲存庫與外部Git儲存庫整合，並將專案部署至AEM做為雲端服務
+>[!CONTEXTUALHELP]
+>id="aemcloud_devops_deploycode"
+>title="部署程式碼"
+>abstract="將Cloud Manager Git儲存庫與外部Git儲存庫整合，並將項目部署AEM為Cloud Service"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=en#cloud-manager" text="合併專案"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#how-to-use" text="使用Cloud Manager部署程式碼"
+
+將Cloud Manager Git儲存庫與外部Git儲存庫整合，並將項目部署AEM為Cloud Service
 
 >[!VIDEO](https://video.tv.adobe.com/v/330534/?quality=12&learn=on)
