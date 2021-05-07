@@ -6,11 +6,11 @@ feature: 編SPA輯器、核心元件、API、開發
 role: Developer, Architect
 level: Beginner
 kt: 7629
-thumbnail: kt-7629.jpeg
+thumbnail: 333181.jpeg
 translation-type: tm+mt
-source-git-commit: d3a237b196ac872beda6119c854a0cae29510437
+source-git-commit: e6dc028a120670d34806def36ad200ed161295e1
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '801'
 ht-degree: 4%
 
 ---
@@ -21,6 +21,10 @@ ht-degree: 4%
 快速設定是快速的逐步說明，說明如何安裝和執行WKND應用程式，並以遠端身SPA份使用編輯器來AEM制SPA作它。
 
 快速設定會直接帶您進入本教學課程的結束狀態。
+
+>[!VIDEO](https://video.tv.adobe.com/v/333181/?quality=12&learn=on)
+
+_快速設定的視訊逐步執行_
 
 ## 必備條件
 
