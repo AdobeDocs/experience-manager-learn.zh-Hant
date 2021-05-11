@@ -1,21 +1,21 @@
 ---
 title: 除錯AEMSDK的其他工具
 description: 其他各種工具可協助除錯AEMSDK的本機快速入門。
-feature: Developer Tools
+feature: 開發人員工具
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner, Intermediate
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 5fcc7eec120debf1a8ac08716154599467e66759
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 3%
+source-wordcount: '222'
+ht-degree: 4%
 
 ---
 
@@ -55,14 +55,4 @@ QueryBuilder除錯程式是網路工具，可協助您使用[QueryBuilderAEM](ht
 QueryBuilder除錯程式位於：
 
 + [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
-
-## Sling Log Tracer和AEMChrome增效模組
-
-![Sling Log Tracer和AEMChrome增效模組](./assets/other-tools/log-tracer.png)
-
-[Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html)隨附於AEMSDK的本機快速入門，可讓您深入追蹤HTTP請求，並依請求揭露深度除錯資訊。[Log Tracer OSGi配置必須配置](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1)才能啟用此功能。
-
-[AEM Google Chrome網頁瀏覽器](https://www.google.com/chrome/)的開放原始碼[ Chrome外掛程式](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)與Log Tracer整合，直接在Chrome的Dev Tools中顯示除錯資訊。
-
-_ChromeAEM增效模組是開放原始碼工具，而Adobe不提供支援。_
 
