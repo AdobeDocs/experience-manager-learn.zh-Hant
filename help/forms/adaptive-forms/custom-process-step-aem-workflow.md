@@ -3,19 +3,19 @@ title: 實施自訂流程步驟
 seo-title: 實施自訂流程步驟
 description: 使用自定義流程步驟將自適應表單附件寫入檔案系統
 seo-description: 使用自定義流程步驟將自適應表單附件寫入檔案系統
-feature: Workflow
+feature: 工作流程
 topics: development
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ## 建立Maven專案
 
-第一步是使用適當的AdobeMaven Archetype建立主項目。 詳細步驟列於此[文章](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)中。 將您的主要專案匯入Eclipse後，您就可以開始編寫第一個OSGi元件，以便用於您的程式步驟。
+第一步是使用適當的AdobeMaven Archetype建立主項目。 詳細步驟列於此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en)中。 將您的主要專案匯入Eclipse後，您就可以開始編寫第一個OSGi元件，以便用於您的程式步驟。
 
 
 ### 建立實作WorkflowProcess的類別
@@ -55,57 +55,83 @@ execute方法可存取下列3個變數
 
 讓我們來看看這個程式碼
 
-```
-@Component(property = { Constants.SERVICE_DESCRIPTION + "=Write Adaptive Form Attachments to File System",
-        Constants.SERVICE_VENDOR + "=Adobe Systems",
-        "process.label" + "=Save Adaptive Form Attachments to File System" })
+```java
+package com.learningaemforms.adobe.core;
+
+import java.io.File;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.jcr.Node;
+import javax.jcr.Session;
+
+import org.osgi.framework.Constants;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.adobe.aemfd.docmanager.Document;
+import com.adobe.granite.workflow.WorkflowException;
+import com.adobe.granite.workflow.WorkflowSession;
+import com.adobe.granite.workflow.exec.WorkItem;
+import com.adobe.granite.workflow.exec.WorkflowProcess;
+import com.adobe.granite.workflow.metadata.MetaDataMap;
+import com.day.cq.search.PredicateGroup;
+import com.day.cq.search.Query;
+import com.day.cq.search.QueryBuilder;
+import com.day.cq.search.result.Hit;
+import com.day.cq.search.result.SearchResult;
+
+@Component(property = {
+	Constants.SERVICE_DESCRIPTION + "=Write Adaptive Form Attachments to File System",
+	Constants.SERVICE_VENDOR + "=Adobe Systems",
+	"process.label" + "=Save Adaptive Form Attachments to File System"
+})
 public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
-     private static final Logger log = LoggerFactory.getLogger(WriteFormAttachmentsToFileSystem.class);
-     @Override
-    public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
-            throws WorkflowException {
-        // TODO Auto-generated method stub
-        log.debug("The string I got was ..." + processArguments.get("PROCESS_ARGS", "string").toString());
-        String[] params = processArguments.get("PROCESS_ARGS", "string").toString().split(",");
-        String attachmentsPath = params[0];
-        String saveToLocation = params[1];
-        log.debug("The seperator is" + File.separator);
-        String payloadPath = workItem.getWorkflowData().getPayload().toString();
- 
-        String attachmentsFilePath = payloadPath + "/" + attachmentsPath + "/attachments";
-        log.debug("The data file path is " + attachmentsFilePath);
- 
-        ResourceResolver resourceResolver = workflowSession.adaptTo(ResourceResolver.class);
- 
-        Resource attachmentsNode = resourceResolver.getResource(attachmentsFilePath);
-        Iterator<Resource> attachments = attachmentsNode.listChildren();
-        while (attachments.hasNext()) {
-            Resource attachment = attachments.next();
-            String attachmentPath = attachment.getPath();
-            String attachmentName = attachment.getName();
- 
-            log.debug("The attachmentPath is " + attachmentPath + " and the attachmentname is " + attachmentName);
-            com.adobe.aemfd.docmanager.Document attachmentDoc = new com.adobe.aemfd.docmanager.Document(attachmentPath,
-                    attachment.getResourceResolver());
-            try {
-                File file = new File(saveToLocation + File.separator + workItem.getId());
-                if (!file.exists()) {
-                    file.mkdirs();
-                }
- 
-                attachmentDoc.copyToFile(new File(file + File.separator + attachmentName));
- 
-                log.debug("Saved attachment" + attachmentName);
-                attachmentDoc.close();
- 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
- 
-        }
- 
-    }
+
+	private static final Logger log = LoggerFactory.getLogger(WriteFormAttachmentsToFileSystem.class);
+	@Reference
+	QueryBuilder queryBuilder;
+
+	@Override
+	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
+	throws WorkflowException {
+		// TODO Auto-generated method stub
+		log.debug("The string I got was ..." + processArguments.get("PROCESS_ARGS", "string").toString());
+		String[] params = processArguments.get("PROCESS_ARGS", "string").toString().split(",");
+		String attachmentsPath = params[0];
+		String saveToLocation = params[1];
+		log.debug("The seperator is" + File.separator);
+		String payloadPath = workItem.getWorkflowData().getPayload().toString();
+		Map<String, String> map = new HashMap<String, String> ();
+		map.put("path", payloadPath + "/" + attachmentsPath);
+		File saveLocationFolder = new File(saveToLocation);
+		if (!saveLocationFolder.exists()) {
+			saveLocationFolder.mkdirs();
+		}
+
+		map.put("type", "nt:file");
+		Query query = queryBuilder.createQuery(PredicateGroup.create(map), workflowSession.adaptTo(Session.class));
+		query.setStart(0);
+		query.setHitsPerPage(20);
+
+		SearchResult result = query.getResult();
+		log.debug("Got  " + result.getHits().size() + " attachments ");
+		Node attachmentNode = null;
+		for (Hit hit: result.getHits()) {
+			try {
+				String path = hit.getPath();
+				log.debug("The attachment title is  " + hit.getTitle() + " and the attachment path is  " + path);
+				attachmentNode = workflowSession.adaptTo(Session.class).getNode(path + "/jcr:content");
+				InputStream documentStream = attachmentNode.getProperty("jcr:data").getBinary().getStream();
+				Document attachmentDoc = new Document(documentStream);
+				attachmentDoc.copyToFile(new File(saveLocationFolder + File.separator + hit.getTitle()));
+				attachmentDoc.close();
+			} catch (Exception e) {
+				log.debug("Error saving file " + e.getMessage());
+			}
 ```
 
 第1行——定義元件的屬性。 將OSGi元件與流程步驟關聯時，將會看到process.label屬性，如下面的螢幕截圖所示。
@@ -120,18 +146,8 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 ![ProcessStep](assets/implement-process-step.gif)
 
+QueryBuilder服務用於查詢attachmentsPath資料夾下nt:file類型的節點。 其餘的程式碼會重複搜尋結果，以建立Document物件並儲存至檔案系統
 
-第19行：然後，我們構建attachmentFilePath。 附件檔案路徑類似
-
-    /var/fd/dashboard/payload/server0/2018-11-19/3EF6ENASOQTHCPLNDYVNAM7OKA_7/附件／附件
-
-* 「附件」是與工作流的裝載相關的資料夾的名稱，該裝載是在配置Adaptive Form的提交選項時指定的。
-
-   ![提交選項](assets/af-submit-options.gif)
-
-第24-26行——獲取ResourceResolver，然後獲取指向attachmentFilePath的資源。
-
-其餘的代碼通過使用API在指向attachmentFilePath的資源的子對象中循環來建立文檔對象。 此文檔對象特定於AEM Forms。 然後，我們使用文檔對象的copyToFile方法來保存文檔對象。
 
 >[!NOTE]
 >
@@ -139,7 +155,7 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 #### 建立和部署
 
-[按照此處所述構建包確](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)
+[按照此處所述構建包確](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en#build-your-project)
 [保包已部署且處於活動狀態](http://localhost:4502/system/console/bundles)
 
 建立工作流程模型。 在工作流模型中拖放流程步驟。 將流程步驟與「將最適化表單附件保存到檔案系統」關聯。
