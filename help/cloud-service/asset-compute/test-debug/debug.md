@@ -13,7 +13,7 @@ topic: 整合、開發
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 0%
@@ -59,6 +59,7 @@ _使用wskdebug調試Asset compute工作器的點進（無音頻）_
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
+
 
 1. 使用命令`npx adobe-asset-compute devtool`啟動新的Asset compute開發工具實例
 1. 在「VS程式碼」中，點選左側導覽中的「除錯」圖示
