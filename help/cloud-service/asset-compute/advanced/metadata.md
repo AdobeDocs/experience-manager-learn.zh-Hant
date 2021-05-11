@@ -13,7 +13,7 @@ topic: 整合、開發
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 1%
@@ -270,7 +270,7 @@ $ aio app deploy
 1. 定義新服務
    + __建立中繼資料轉譯__:切換至作用中
    + __端點：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/metadata-colors`
-      + 這是在[deploy](#deploy)或使用命令`aio app get-url`期間獲取的工作員的URL。 根據作為Cloud Service環境，確保URL點位於AEM正確的工作區。
+      + 這是在[deploy](#deploy)期間或使用命令`aio app get-url`獲取的工作器的URL。 根據作為Cloud Service環境，確保URL點位於AEM正確的工作區。
    + __服務參數__
       + 點選&#x200B;__新增參數__
          + 關鍵: `colorFamily`
