@@ -13,7 +13,7 @@ topic: 開發
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: d49ae402b332ba972a78cdbd8f5bf962b91c83b1
 workflow-type: tm+mt
 source-wordcount: '1734'
 ht-degree: 2%
@@ -229,7 +229,7 @@ Quickstart Jar的命名`aem-<tier>_<environment>-p<port number>.jar`指定如何
 
 或者，若要啟動AEM Publish服務，請`cd`進入包含Quickstart Jar的目錄並執行命令：
 
-`$ java -jar aem-author-p4503.jar`
+`$ java -jar aem-publish-p4503.jar`
 
 ## 從命令行啟動快速啟動Jar會立即中止{#troubleshooting-java-8}
 
@@ -246,7 +246,7 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-這是因為AEMCloud Service需要Java SDK 11，而且您所執行的版本很可能是Java 8。 若要解決此問題，請下載並安裝[OracleJava SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;fulltext=Oracle%7E+JDK%7E+111%7E+11%7E&amp;orderby=%3E=%40jcr%3E&amp;orderby=%3Econtent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)。
+這是因AEM為Cloud Service需要Java SDK 11，而且您執行的版本很可能是Java 8。 若要解決此問題，請下載並安裝[OracleJava SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;fulltext=Oracle%7E+JDK%7E+111%7E+11%7E&amp;orderby=%3E=%40jcr%3E&amp;orderby=%3Econtent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)。
 在安裝Java SDK 11後，從命令列執行下列動作，以確認其為作用中版本。
 
 在安裝Java 11 SDK後，從命令列執行命令以確認其為作用中版本：
