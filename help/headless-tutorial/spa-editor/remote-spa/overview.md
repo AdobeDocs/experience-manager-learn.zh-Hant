@@ -6,9 +6,8 @@ feature: 編SPA輯器、核心元件、API、開發
 role: Developer, Architect
 level: Beginner
 kt: 7630
-thumbnail: kt-7630.jpg
-translation-type: tm+mt
-source-git-commit: ec692af56afa83330097bb9d8db0d2f2f4fde1c1
+thumbnail: 333272.jpeg
+source-git-commit: cede0c97e0f322fe5d20d5c4f685ed10b90af1d4
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 5%
@@ -21,6 +20,8 @@ ht-degree: 5%
 歡迎使用多部分教學課程，讓開發人員可使用編輯器來擴充現有的React-based（或Next.js）SPA遠端AEM，並加AEM入可編輯SPA內容。
 
 本教學課程以[WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)為基礎，此React應用程式會透過AEMAEMGraphQL API取用內容片段內容，但不提供任何內容的內容內SPA容製作。
+
+>[!VIDEO](https://video.tv.adobe.com/v/333272/?quality=12&learn=on)
 
 ## 關於教學課程
 
