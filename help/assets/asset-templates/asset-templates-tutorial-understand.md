@@ -2,13 +2,12 @@
 title: '瞭解AEM Assets的InDesign檔案和資產模板 '
 description: 本教學課程影片將逐步說明如何定義InDesign檔案，以及所有隨附的考量事項，以便用於AEM Assets的「資產範本」功能。
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: 內容管理
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b4fa992abe22e3a546d651e465d6ffc9e415aee2
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -74,4 +73,4 @@ InDesign範本檔案與支援影像
 下載[InDesign範本檔案並支援Images](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
 * [InDesignCC試用版下載](https://creative.adobe.com/products/download/indesign)
-* [InDesign Server試用版下載](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
+* [CC Enterprise客戶可聯絡其銷售代表以申請InDesign Server試用版授權](https://www.adobe.com/products/indesignserver/faq.html)
