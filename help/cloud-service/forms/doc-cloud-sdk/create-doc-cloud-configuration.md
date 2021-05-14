@@ -7,12 +7,11 @@ role: Developer
 level: Beginner, Intermediate
 version: cloud-service
 topic: 開發
-thumbnail: 331891.jpg
-kt: 7192
-translation-type: tm+mt
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+thumbnail: 7818.jpg
+kt: 7818
+source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
-source-wordcount: '63'
+source-wordcount: '64'
 ht-degree: 3%
 
 ---
@@ -21,7 +20,11 @@ ht-degree: 3%
 
 建立自訂OSGi設定，以擷取您檔案雲端帳戶的認證
 
+
 若要建立自訂OSGi組態，我們必須先建立介面，其公用方法將代表組態中的欄位。
+
+![doc-cloud-config](assets/doc-cloud-configuration.JPG)
+
 
 建立名為DocumentCloudConfiguration的介面，並貼上下列程式碼。
 
