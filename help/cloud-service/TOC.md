@@ -4,11 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: 雲端服務
 team: TM
-translation-type: tm+mt
-source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
+source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 22%
+source-wordcount: '440'
+ht-degree: 21%
 
 ---
 
@@ -96,6 +95,14 @@ ht-degree: 22%
       + [設定資產面板](./forms/create-first-af/configure-assets-panel.md)
       + [設定開始面板](./forms/create-first-af/configure-start-panel.md)
       + [新增和設定工具列](./forms/create-first-af/add-configure-toolbar.md)
+   + Document CloudAPI和AEM FormsCS{#doc-cloud-sdk}
+      + [簡介](./forms/doc-cloud-sdk/introduction.md)
+      + [建立AdobeIO項目](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [建立OSGI設定](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [定義介面](./forms/doc-cloud-sdk/create-interface.md)
+      + [實作介面](./forms/doc-cloud-sdk/implement-interface.md)
+      + [建立JSON部件](./forms/doc-cloud-sdk/get-content-analyzer.md)
+      + [自訂流程步驟](./forms/doc-cloud-sdk/custom-process-step.md)
    + 建立審閱工作流{#create-aem-workflow}
       + [建立工作流程模型](./forms/create-aem-workflow/create-workflow.md)
       + [觸發工作流程](./forms/create-aem-workflow/configure-af.md)
