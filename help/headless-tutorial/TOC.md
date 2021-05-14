@@ -10,11 +10,10 @@ topics: content-delivery
 activity: develop, understand
 kt: 2963
 index: y
-translation-type: tm+mt
-source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
+source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 25%
+source-wordcount: '142'
+ht-degree: 23%
 
 ---
 
@@ -28,6 +27,8 @@ ht-degree: 25%
       + [1 —— 建模基本知識](./graphql/video-series/modeling-basics.md)
       + [2 —— 進階模型](./graphql/video-series/advanced-modeling.md)
       + [3 —— 建立GraphQL查詢](./graphql/video-series/creating-graphql-queries.md)
+      + [4 —— 作者與發佈架構](./graphql/video-series/author-publish-architecture.md)
+      + [5 —— 內容片段變化](./graphql/video-series/content-fragment-variations.md)
    + 多步驟教學課程{#multi-step}
       + [概覽](./graphql/multi-step/overview.md)
       + [1 —— 快速設定](./graphql/multi-step/setup.md)
