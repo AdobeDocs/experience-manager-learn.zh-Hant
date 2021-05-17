@@ -5,11 +5,10 @@ description: 'Adobe Experience Manager Foundation 的影片和教學課程系列
 seo-description: Adobe Experience Manager基金會的視訊和教學課程集
 role: Leader, Architect, Developer, Administrator, Business Practitioner
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 17%
+source-wordcount: '261'
+ht-degree: 18%
 
 ---
 
@@ -20,8 +19,9 @@ Adobe Experience Manager為AEM Sites、[!DNL Assets]和[!DNL Forms]的用戶提�
 
 ## 新增功能
 
-* **[在（視訊）中使AEM用工作流程管理](./workflow/use-workflow-management.md)**
-   *AEM可洞察執行工作流程，並簡化定義的 [!DNL Workflow] 管理。*
+* **[使用工作AEM流程（視訊）](./workflow/use-workflow.md)**
+
+   *工AEM作流程提供了協作、管理和處理內容的方AEM式。*
 
 * **[瞭解Cloud Manager forAEM（視訊）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
    *Cloud Manager可讓AEM您輕鬆管理、檢查和自助服務環AEM境。*
