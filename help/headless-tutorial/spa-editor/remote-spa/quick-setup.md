@@ -6,9 +6,8 @@ feature: 編SPA輯器、核心元件、API、開發
 role: Developer, Architect
 level: Beginner
 kt: 7629
-thumbnail: 333181.jpeg
-translation-type: tm+mt
-source-git-commit: e6dc028a120670d34806def36ad200ed161295e1
+thumbnail: 333181.jpg
+source-git-commit: 73c75f8dac85615f4ed2dfdcc2ee4d0e9e5d161a
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 4%
@@ -82,8 +81,8 @@ SDKAEM將在[http://localhost:4502](http://localhost:4502)上啟動並自動啟�
 
 要執行快速設定，AEM將提供包含教程最終配置和內AEM容的軟體包。
 
-1. [下載 `wknd-app.all.x.x.x.zip`](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [下載 `wknd-app.ui.content.sample.x.x.x.zip`](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
+1. [下載 ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [下載 ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
 1. 使用AEM`admin`憑證登入SDK的Package Manager，網址為[http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)。
 1. __上__ 載步 `wknd-app.all.x.x.x.zip` 驟1中下載的
 1. 點選&#x200B;__Install__&#x200B;按鈕以取得`wknd-app.all.x.x.x.zip`項目
