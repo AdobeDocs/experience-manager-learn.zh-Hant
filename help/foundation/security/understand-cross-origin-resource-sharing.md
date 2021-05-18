@@ -7,13 +7,12 @@ topics: security, development, content-delivery
 activity: understand
 audience: architect, developer
 doc-type: article
-topic: Security
+topic: 安全性
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 1c99c319fba5048904177fc82c43554b0cf0fc15
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '918'
 ht-degree: 1%
 
 ---
@@ -141,7 +140,8 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 ```
 /cache { 
   ...
-  /clientheaders {
+  /headers {
+      "Origin",
       "Access-Control-Allow-Origin"
       "Access-Control-Expose-Headers"
       "Access-Control-Max-Age"
@@ -155,7 +155,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 
 在對`dispatcher.any`檔案進行更改後，請記住&#x200B;**重新啟動Web伺服器應用程式**。
 
-在`/clientheaders`組態更新後，可能需要完全清除快取，以確保標頭會在下次要求時正確快取。
+在`/cache/headers`組態更新後，可能需要完全清除快取，以確保標頭會在下次要求時正確快取。
 
 ## 疑難排解CORS
 
@@ -170,7 +170,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 * 驗證請求是否遭到CORS處理常式拒絕，而非驗證、CSRF Token篩選、分派器篩選或其他安全層拒絕
    * 如果CORS處理常式以200回應，但回應上沒有`Access-Control-Allow-Origin`標題，請檢閱`com.adobe.granite.cors`中[!DNL DEBUG]下的拒絕記錄
 * 如果[!DNL CORS]請求的分發程式快取已啟用
-   * 確保`/clientheaders`配置已應用於`dispatcher.any`並且Web伺服器已成功重新啟動
+   * 確保`/cache/headers`配置已應用於`dispatcher.any`並且Web伺服器已成功重新啟動
    * 確保在任何OSGi或dispatcher.any配置更改後，快取已正確清除。
 * 如有需要，請檢查請求上是否有驗證憑證。
 
