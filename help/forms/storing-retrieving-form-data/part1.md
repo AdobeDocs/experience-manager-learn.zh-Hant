@@ -1,43 +1,42 @@
 ---
 title: 從MySQL資料庫儲存和檢索表單資料
-description: 多部分教學課程，引導您逐步瞭解儲存和擷取表單資料的相關步驟
-feature: Adaptive Forms
+description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '200'
 ht-degree: 3%
 
 ---
 
 # 配置資料源
 
-有許多方法可AEM以與外部資料庫整合。 資料庫整合最常見的標準做法之一，是透過[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling Connection Pooled DataSource組態屬性。
-第一步是下載並部署適當的[MySql驅動程式](https://mvnrepository.com/artifact/mysql/mysql-connector-java)AEM。
-建立Apache Sling Connection Pooled DataSource並提供如下螢幕擷取畫面中指定的屬性。 本教學課程資產會提供資料庫架構給您。
+AEM可透過許多方式啟用與外部資料庫的整合。 資料庫整合最常見且標準的作法之一，是透過[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling Connection Pooled DataSource設定屬性。
+第一步是在AEM中下載並部署適當的[MySql驅動程式](https://mvnrepository.com/artifact/mysql/mysql-connector-java)。
+建立Apache Sling Connection Pooled DataSource ，並依照下方螢幕擷取畫面中的指定提供屬性。 本教學課程資產會提供您資料庫結構。
 
-![資料源](assets/save-continue.PNG)
+![資料來源](assets/save-continue.PNG)
 
-資料庫有一個名為formdata的表格，其中3欄如下方的螢幕擷取畫面所示。
+資料庫有一個名為formdata的表，其中有3列，如下面螢幕抓圖所示。
 
 ![資料庫](assets/data-base-tables.PNG)
 
-建立模式的sql檔案可從此處[下載。 ](assets/form-data-db.sql)您需要使用MySql工作台導入此檔案以建立方案和表。
+建立架構的SQL檔案可從此處[下載。 ](assets/form-data-db.sql)您需要使用MySql Workbench導入此檔案，以建立架構和表。
 
 >[!NOTE]
->請確定您的資料來源&#x200B;**SaveAndContinue**&#x200B;名稱。 示例代碼使用名稱連接到資料庫。
+>請確定您為資料源命名&#x200B;**SaveAndContinue**。 范常式式碼會使用名稱連線至資料庫。
 
 | 屬性名稱 | 值 |
 ------------------------|---------------------------------------
-| 資料來源名稱 | SaveAndContinue |
+| 資料源名稱 | SaveAndContinue |
 | JDBC驅動程式類 | com.mysql.cj.jdbc.Driver |
 | JDBC連接uri | jdbc:mysql://localhost:3306/aemformstutorial |
 
