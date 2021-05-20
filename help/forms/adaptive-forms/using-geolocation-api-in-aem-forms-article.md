@@ -1,43 +1,42 @@
 ---
-title: 在最適化Forms中使用Geolocation API
-seo-title: 在最適化Forms中使用Geolocation API
+title: 在適用性Forms中使用地理位置API
+seo-title: 在適用性Forms中使用地理位置API
 description: 使用地理位置api的
 seo-description: 使用地理位置api的
 uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
-feature: Adaptive Forms
+feature: 適用性表單
 topics: integrations
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
 
-# 在最適化Forms中使用地理位置API{#using-geolocation-api-s-in-adaptive-forms}
+# 在適用性Forms中使用地理位置API{#using-geolocation-api-s-in-adaptive-forms}
 
 請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)頁面，以取得此功能的即時示範連結。
 
-在本文中，我們將檢視如何使用Google的Geolocation API填入最適化表單的欄位。 當您要在表單中填入目前的位址欄位時，通常會使用此使用案例。
+在本文中，我們將探討如何使用Google的地理位置API來填入最適化表單的欄位。 當您想要填入表單上的目前地址欄位時，通常會使用此使用案例。
 
-依照下列步驟，在AdaptiveForms中使用Geolocation API。
+請依照下列步驟，在適用性Forms中使用地理位置API。
 
-1. [從Google取](https://developers.google.com/maps/documentation/javascript/get-api-key) 得API Key以使用Google地圖平台。您可以取得有效期為1年的試用金鑰。
+1. [從Google取](https://developers.google.com/maps/documentation/javascript/get-api-key) 得API密鑰以使用Google地圖平台。您可以取得1年有效的試用金鑰。
 
-1. 最適化表單片段已建立，其中包含欄位以保存目前位址
+1. 已使用欄位建立最適化表單片段以保留目前的地址
 
-1. Geolocation API是在Adaptive Form影像物件的click事件上呼叫
+1. 適用性表單影像物件的點擊事件會叫用地理位置API
 
-1. API呼叫傳回的JSON資料已加以剖析，並已據以設定「最適化表單」欄位值。
+1. API呼叫傳回的JSON資料已剖析，且適用性表單欄位值已據此設定。
 
 ```javascript
 navigator.geolocation.getCurrentPosition(showPosition);
@@ -86,31 +85,31 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 
 ![填入地理位置api的欄位](assets/capture-4.gif)
 
-在第1行中，我們使用HTML Geolocation API來取得目前位置。 一旦獲得當前位置，我們會將當前位置傳遞至showPosition函式。
+在第1行中，我們會使用HTML地理位置API來取得目前位置。 取得目前位置後，我們會將目前位置傳遞至showPosition函式。
 
-在showPosition函式中，我們使用Google API擷取指定經緯度的位址詳細資訊。
+在showPosition函式中，我們使用Google API來擷取指定經緯度的位址詳細資料。
 
-接著會剖析API傳回的JSON，以設定「最適化表單」欄位。
+接著，API傳回的JSON會經過剖析以設定適用性表單欄位。
 
 >[!NOTE]
 >
->為了進行測試，您可以在URL中搭配使用HTTP通訊協定與localhost。
+>為了進行測試，您可以在URL中使用具有localhost的HTTP通訊協定。
 >
->對於生產伺服器，您需要為伺服器啟用SSLAEM才能獲得此功能。
+>對於生產伺服器，您需要為AEM伺服器啟用SSL才能取得此功能。
 >
->與本文相關的範例已使用美國地址進行測試。 如果您想要在其他地理位置使用此功能，可能必須調整JSON剖析。
+>與本文相關的範例已透過美國地址測試。 如果您想在其他地理位置中使用此功能，可能必須調整JSON剖析。
 
-若要將此功能連接至您的伺服器，請依照下列步驟進行
+若要將此功能連接到您的伺服器，請執行下列步驟
 
 * 安裝並啟動AEM Forms伺服器。
 
->!![NOTE] 這項功能已在AEM Forms6.3及更新版本上測試
+>!![NOTE] 此功能已在AEM Forms 6.3及更新版本上測試
 * [取得Google API金鑰](https://developers.google.com/maps/documentation/javascript/get-api-key)。
-* [將與此文章相關的資產匯入AEM。](assets/geolocationapi.zip)
+* [將與本文相關的資產匯入AEM。](assets/geolocationapi.zip)
 * [在編輯模式中開啟最適化表單片段。](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
-* 開啟「影像選擇」元件的規則編輯器。
-* 將&lt;your_api_key>取代為Google API金鑰。
+* 開啟Image Choice元件的規則編輯器。
+* 以Google API金鑰取代&lt;your_api_key>。
 * 儲存您的變更。
-* [預覽表格](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled)。
+* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled)。
 * 按一下「地理位置」圖示。
-* 您的表格應填入您目前的位置。
+* 您的表單應填入您目前的位置。
