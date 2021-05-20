@@ -1,7 +1,7 @@
 ---
 title: 儲存表單附件
-description: 提取表單附件並儲存在CRX儲存庫的新位置。
-feature: Adaptive Forms
+description: 解壓縮表單附件並儲存在CRX存放庫的新位置。
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,23 +9,22 @@ activity: implement
 version: 6.4,6.5
 kt: 6537
 thumbnail: 6537.jpg
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 2%
+source-wordcount: '189'
+ht-degree: 1%
 
 ---
 
 # 儲存表單附件
 
-將附件添加到最適化表單時，附件將儲存在CRX儲存庫的臨時位置。 為了使用案例，我們需要將表單附件儲存到CRX儲存庫的新位置。
+將附件新增至最適化表單時，附件會儲存在CRX存放庫的臨時位置。 為了讓我們的使用案例發揮作用，我們需要將表單附件儲存在CRX存放庫的新位置。
 
-建立OSGi服務是為了將表單附件儲存在CRX儲存庫的新位置。 使用附件在CRX中的新位置建立新檔案映射，並返回給調用的應用程式。
-以下是發送到servlet的FileMap。 鍵是最適化表單欄位，值是附件的暫時位置。 在我們的servlet中，我們將提取附件並將其儲存在儲存庫中的新AEM位置，並使用新位置更新FileMap
+OSGi服務的建立目的是將表單附件儲存在CRX存放庫的新位置。 系統會以CRX中附件的新位置建立新的檔案映射，並傳回至呼叫應用程式。
+以下是發送到Servlet的FileMap。 索引鍵是適用性表單欄位，值是附件的臨時位置。 在我們的servlet中，我們會擷取附件並將其儲存在AEM存放庫的新位置，並使用新位置更新FileMap
 
 ```java
 {
@@ -34,7 +33,7 @@ ht-degree: 2%
 }
 ```
 
-以下代碼從請求中提取附件並將其儲存在&#x200B;**/content/afattachments**&#x200B;資料夾下
+以下是從請求中擷取附件，並將其儲存在&#x200B;**/content/afattachments**&#x200B;資料夾下的程式碼
 
 ```java
 public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest request) {
@@ -75,7 +74,7 @@ public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest req
 }
 ```
 
-這是新的FileMap，其表單附件的更新位置
+這是新的FileMap，包含表單附件的更新位置
 
 ```java
 {
