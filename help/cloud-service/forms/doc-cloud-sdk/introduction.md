@@ -21,7 +21,7 @@ ht-degree: 5%
 
 # 簡介
 
-介紹將Adobe Experience Manager Forms作為Cloud Service和Document CloudAPI整合的使用案例。
+整合Adobe Experience Manager Forms作為Cloud Service和Document CloudAPI的使用案例簡介。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333241/?quality=12&learn=on)
 
