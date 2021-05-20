@@ -4,7 +4,7 @@ seo-title: 使用函式和程式碼編輯器
 description: 使用函式和程式碼編輯器來編寫業務規則
 seo-description: 使用函式和程式碼編輯器來編寫業務規則
 uuid: 578e91f8-0d93-4192-b7af-1579df2feaf8
-feature: Adaptive Forms
+feature: 適用性表單
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,14 +13,13 @@ version: 6.4,6.5
 discoiquuid: f480ef3e-7e38-4a6b-a223-c102787aea7f
 kt: 4270
 thumbnail: 22282.jpg
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 2%
+source-wordcount: '153'
+ht-degree: 1%
 
 ---
 
@@ -29,12 +28,12 @@ ht-degree: 2%
 
 在本部分，我們將使用自訂函式和程式碼編輯器來編寫業務規則。
 
-在本教程中，您已經安裝了[ClientLib和custom function](assets/client-libs-and-logo.zip)。
+在本教程前面，您已使用自定義函式](assets/client-libs-and-logo.zip)安裝了[ClientLib。
 
-通常用戶端程式庫包含CSS和Javascript檔案。 此用戶端程式庫包含javascript檔案，可讓函式填入下拉式清單值。
+用戶端程式庫通常包含CSS和Javascript檔案。 此用戶端程式庫包含javascript檔案，此檔案會顯示要填入下拉式清單值的函式。
 
 
-## 填入下拉式清單{#function-to-populate-drop-down-list}的函式
+## 填充下拉清單{#function-to-populate-drop-down-list}的函式
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
 
@@ -69,12 +68,12 @@ else
   }
 ```
 
-您可以取消對第1行的注釋，以在瀏覽器視窗中除錯代碼。
+您可以在瀏覽器視窗中取消註解行1以除錯程式碼。
 
-第4行——獲取當前面板
+第4行 — 獲取當前面板
 
-第5行——驗證當前面板。
+第5行 — 驗證當前面板。
 
-第9行——如果沒有錯誤，請移至下一個面板
+第9行 — 如果沒有錯誤，則移至下一個面板
 
 預覽表單並測試新啟用的功能。
