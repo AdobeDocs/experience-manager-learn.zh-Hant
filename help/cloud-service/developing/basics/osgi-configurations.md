@@ -1,24 +1,23 @@
 ---
-title: 如何在AEM中將OSGi組態當做雲端服務使用？
-description: 探索如何在AEM中將OSGi組態定義及部署為雲端服務。
+title: 如何在AEM中使用OSGi設定作為Cloud Service?
+description: 探索如何在AEM中定義和部署OSGi設定作為Cloud Service。
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
-feature: APIs
+topic: 開發
+feature: API
 kt: 6934
 thumbnail: 330559.jpg
-translation-type: tm+mt
 source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
 workflow-type: tm+mt
-source-wordcount: '41'
-ht-degree: 0%
+source-wordcount: '43'
+ht-degree: 2%
 
 ---
 
 
 # OSGi配置
 
-探索如何在AEM中將OSGi組態定義及部署為雲端服務。
+探索如何在AEM中定義和部署OSGi設定作為Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330559/?quality=12&learn=on)
