@@ -1,31 +1,30 @@
 ---
-title: 利用匯編服務在AEM Forms
-seo-title: 利用匯編服務在AEM Forms
-description: 使用AEM Forms的Assembler Service來組合多個pdf檔案
-seo-description: 使用AEM Forms的Assembler Service來組合多個pdf檔案
+title: 在AEM Forms中使用組合器服務
+seo-title: 在AEM Forms中使用組合器服務
+description: 使用AEM Forms中的組合器服務來組合多個pdf檔案
+seo-description: 使用AEM Forms中的組合器服務來組合多個pdf檔案
 uuid: 7895b1a3-6f9d-4413-bb7f-692ea0380fcd
-feature: Assembler
+feature: 組合器
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: a12f52af-7039-4452-a58d-9ad2c0096347
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '226'
 ht-degree: 3%
 
 ---
 
 
-# 使用AEM Forms的匯編服務{#using-assembler-service-in-aem-forms}
+# 在AEM Forms中使用組合器服務{#using-assembler-service-in-aem-forms}
 
-本文提供您一些資產，以示範將多個PDF檔案拖放至瀏覽器，並將組合的PDF檔案儲存至您的檔案系統。 以下是servlet的程式碼，會匯編使用瀏覽器上傳的pdf檔案。
+本文提供相關資產，展示將多個PDF檔案拖放至瀏覽器，以及將已組合的PDF檔案儲存至檔案系統的能力。 以下是servlet的程式碼，用於組合使用瀏覽器上傳的pdf檔案。
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -108,28 +107,28 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-若要讓這項功能在您的伺服器上AEM運作
+若要讓此功能在您的AEM伺服器上運作
 
-* 將[AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip)下載到您的本機系統。
-* 使用[軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)上傳和安裝軟體包
-* Download[自訂檔案服務套裝](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* 將[AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip)下載到本地系統。
+* 使用[套件管理器](http://localhost:4502/crx/packmgr/index.jsp)上傳並安裝套件
+* 下載[自定義文檔服務包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 * 下載[使用服務用戶包開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* 使用[felix web console](http://localhost:4502/system/console/bundles)部署並啟動套件
+* 使用[felix web控制台](http://localhost:4502/system/console/bundles)部署和啟動套件組合
 * 將瀏覽器指向[AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
-* 拖放PDF檔案的數個檔案
+* 拖放幾個PDF檔案
 
 >[!NOTE]
 >
->確定您的AEM Forms安裝完成。 您的所有套件都必須處於活動狀態。
+>確認AEM Forms安裝完成。 您的所有套件組合都必須處於作用中狀態。
 >
->確保已添加——如本[安裝AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)中所述，Boot delegate RSA和BuncyCastle庫
+>請務必新增 — 如本[安裝AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)中所述，引導委派RSA和BuncyCastle程式庫
 >
 >**本示範的注意事項**
 >
-> * 程式碼不處理以XFA為基礎的PDF檔案
+> * 程式碼不會處理以XFA為基礎的PDF檔案
    >
    > 
-* 請確定您只拖放PDF檔案
+* 請務必僅拖放PDF檔案
 >
 >
 
