@@ -2,10 +2,9 @@
 title: AEM Sites 教學課程
 seo-title: AEM Sites 教學課程
 description: 'Adobe Experience Manager Sites 的影片和教學課程系列。 '
-seo-description: Adobe Experience Manager Sites的視訊和教學課程
+seo-description: Adobe Experience Manager Sites的影片和教學課程系列
 sub-product: 網站，內容服務
-topic: Content Management
-translation-type: tm+mt
+topic: 內容管理
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '365'
@@ -16,31 +15,31 @@ ht-degree: 20%
 
 # 概覽 {#overview}
 
-Adobe Experience Manager(AEM)網站是領先的體驗管理平台。 本使用指南包含有關AEM Sites的許多功能和功能的影片和教學課程。
+Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使用手冊包含有關AEM Sites許多功能的影片和教學課程。
 
 ## 新增功能
 
-* **[搭配AEM Sites使用啟動（影片）](./page-authoring/launches.md)**
+* **[搭配使用啟動AEM Sites（影片）](./page-authoring/launches.md)**
 
-   *瞭解AEM Sites的「啟動」，以及如何用來準備網站內容以供未來版本使用。*
+   *了解AEM Sites的啟動次數，以及如何準備網站內容以供日後發行。*
 
-* **[使用元件自定義Adobe客戶AEM端資料層（教程）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
+* **[使用AEM元件自訂Adobe用戶端資料層（教學課程）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
-   *瞭解如何使用自訂元件的內容更新Adobe用戶端資料AEM層。*
+   *了解如何使用自訂AEM元件的內容更新Adobe用戶端資料層。*
 
-* **[無頭圖形AEMQL快速入門（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+* **[AEM Headless GraphQL快速入門（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *如何使用GraphQL AEM API來公開內容，讓原生行動應AEM用程式使用。*
+   *如何使用AEM GraphQL API公開來自AEM的內容，供原生行動應用程式使用。*
 
-* **[使用內容片段（視訊系列）](./content-fragments/content-fragments-feature-video-use.md)**
+* **[使用內容片段（影片系列）](./content-fragments/content-fragments-feature-video-use.md)**
 
-   *內容片段是可重複使用的不受頻道限制的內容片段。*
+   *內容片段是可重複使用的不受管道限制的內容片段。*
 
-* **[使用編SPA輯器（視訊）](./spa-editor/spa-editor-framework-feature-video-use.md)**
+* **[使用SPA編輯器（影片）](./spa-editor/spa-editor-framework-feature-video-use.md)**
 
-   *瞭解單AEM頁應用程式的編輯SPA功能。*
+   *了解單頁應用程式(SPA)的AEM編輯功能。*
 
-## 員工挑選
+## 員工精選
 
 <table>
 <tr>
@@ -54,7 +53,7 @@ Adobe Experience Manager(AEM)網站是領先的體驗管理平台。 本使用�
     </a>
     </div>
     <p>
-    <em>想要建置AEM Sites的開發人員快速入門手冊。</em>
+    <em>想要實作AEM Sites的開發人員的快速入門手冊。</em>
     <p>
   </td>
   <td>
@@ -67,20 +66,20 @@ Adobe Experience Manager(AEM)網站是領先的體驗管理平台。 本使用�
     </a>
     </div>
     <p>
-    <em>開發人員如何使用無頭CMS的入AEM門指南。</em>
+    <em>想要使用AEM做為無頭CMS的開發人員的快速入門手冊。</em>
     </p>
   </td>
   <td>
     <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html">
-      <img alt="編輯器快速AEM入SPA門" src="./assets/aem-wknd-spa-editor-tutorial.png" />
+      <img alt="AEM SPA Editor快速入門" src="./assets/aem-wknd-spa-editor-tutorial.png" />
     </a>
      <div>
       <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html">
-        <strong>編輯器快速AEM入SPA門</strong>
+        <strong>AEM SPA Editor快速入門</strong>
       </a>
     </div>
     <p>
-    <em>開發人員將單一頁面應用程式(SPA)與整合的入門指南AEM。</em>
+    <em>開發人員整合單頁應用程式(SPA)與AEM的快速入門手冊。</em>
     <p>
   </td>
 </tr>
@@ -88,7 +87,7 @@ Adobe Experience Manager(AEM)網站是領先的體驗管理平台。 本使用�
 
 ## 其他資源
 
-* [Experience League-探AEM索](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Sites編寫檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
 * [AEM Sites開發檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites管理檔案](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
