@@ -1,11 +1,10 @@
 ---
-title: 開始使用無AEM頭- GraphQL
-description: GraphQL APIAEM和功能概述。
+title: AEM無周邊功能快速入門 — GraphQL
+description: 概述AEM GraphQL API和功能。
 feature: 內容片段、API
-topic: 無頭、內容管理
+topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
 workflow-type: tm+mt
 source-wordcount: '118'
@@ -14,20 +13,20 @@ ht-degree: 0%
 ---
 
 
-# 開始使用無AEM頭- GraphQL
+# AEM無周邊功能快速入門 — GraphQL
 
 >[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
 
-此視訊為中實施的GraphQL API的概AEM觀。 中的GraphQL APIAEM主要設計為將內容AEM片段傳送至下游應用程式，作為無頭部署的一部分。
+此影片概略介紹如何在AEM中實作GraphQL API。 AEM中的GraphQL API主要設計為在無周邊部署作業中，將AEM內容片段傳送至下游應用程式。
 
-## 無AEM頭圖QL視頻系列
+## AEM無周邊GraphQL視訊系列
 
-透過內AEM容片段和GraphQL API與開發工具的深入介紹，了AEM解GraphQL功能。
+透過內容片段和AEM GraphQL API及開發工具的深入逐步說明，了解AEM GraphQL功能。
 
-+ [無AEM頭圖QL視頻系列](./video-series/modeling-basics.md)
++ [AEM無周邊GraphQL視訊系列](./video-series/modeling-basics.md)
 
-## 無AEM頭圖QL操作教程
+## AEM無頭式GraphQL實作教學課程
 
-建立AEM透過GraphQL API使用內容片段的React應用程式，以探索GraphQLAEM功能。
+建置可透過AEM GraphQL API使用內容片段的React應用程式，探索AEM GraphQL功能。
 
-+ [無AEM頭圖QL操作教程](./multi-step/overview.md)
++ [AEM無頭式GraphQL實作教學課程](./multi-step/overview.md)
