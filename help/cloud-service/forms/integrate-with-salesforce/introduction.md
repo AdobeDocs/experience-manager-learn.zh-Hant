@@ -1,15 +1,14 @@
 ---
-title: 將Adobe Experience Manager Forms整合為Salesforce的Cloud Service
-description: 使用整合功能，在Salesforce中建立Lead物件
+title: 將Adobe Experience Manager Forms整合為Cloud Service與Salesforce
+description: 使用整合在Salesforce中建立Lead物件
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
-topic: development
+topic: 開發
 thumbnail: 331891.jpg
 kt: 7192
-translation-type: tm+mt
 source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
 workflow-type: tm+mt
 source-wordcount: '35'
