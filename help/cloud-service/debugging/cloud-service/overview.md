@@ -1,49 +1,48 @@
 ---
-title: 除AEM錯為Cloud Service
-description: 自助服務、可擴充的雲端基礎架構，這AEM要求開發人員瞭解如何瞭解並除錯Cloud Service的AEM各個層面，從建立和部署到取得執行應用程式的詳細AEM資訊。
-feature: Developer Tools
+title: 將AEM作為Cloud Service除錯
+description: 在自助式、可擴充的雲端基礎架構上，這要求AEM開發人員了解如何了解AEM as aCloud Service的各個層面，從建立和部署到取得執行AEM應用程式的詳細資訊，並對其進行除錯。
+feature: 開發人員工具
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5346
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner, Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '311'
 ht-degree: 2%
 
 ---
 
 
-# 除AEM錯為Cloud Service
+# 將AEM作為Cloud Service除錯
 
-作AEM為Cloud Service，是運用應用程式的雲端原生方AEM式。 作AEM為Cloud Service在自助服務、可擴充的雲端基礎架構上執行，這AEM要求開發人員瞭解如何瞭解並除錯Cloud Service的AEM各個層面，從建立和部署到取得執行應用程式的詳細AEM資訊。
+AEM as aCloud Service是運用AEM應用程式的雲端原生方式。 AEM as aCloud Service在自助服務、可擴充的雲端基礎架構上執行，這要求AEM開發人員了解如何了解AEM as aCloud Service的各個層面，從建立和部署，到取得執行AEM應用程式的詳細資訊。
 
 ## 記錄檔
 
-記錄檔提供應用程式在Cloud Service中的運AEM作方式，以及部署問題的深入資訊。
+記錄檔提供應用程式在AEM as aCloud Service中運作方式的詳細資訊，以及部署問題的深入分析。
 
-[使用記AEM錄檔除錯為Cloud Service](./logs.md)
+[使用記錄檔將AEM作為Cloud Service除錯](./logs.md)
 
-## 建立和部署
+## 建置和部署
 
-Adobe雲管理器管道通過一AEM系列步驟部署應用程式，以確定作為Cloud Service部署到的代碼AEM質量和可用性。 每個步驟都可能導致失敗，因此必須瞭解如何對組建進行除錯，以判斷其根本原因，以及如何解決任何失敗。
+AdobeCloud Manager管道會透過一系列步驟來部署AEM應用程式，以決定部署至AEM作為Cloud Service時的程式碼品質和可行性。 每個步驟都可能導致失敗，因此請務必了解如何對組建進行除錯，以判斷根本原因，以及如何解決任何失敗。
 
-[除錯AEM為Cloud Service建立和部署](./build-and-deployment.md)
+[將AEM作為Cloud Service建置和部署進行偵錯](./build-and-deployment.md)
 
 ## 開發人員控制台
 
-Developer Console提供多種資訊與介紹，以AEM做為Cloud Service環境，有助於瞭解應用程式如何被識別，以及如何以Cloud ServiceAEM的方式運作。
+開發人員控制台提供AEM作為Cloud Service環境的各種資訊和介紹，這些資訊和介紹對於了解AEM如何識別應用程式以及在中作為Cloud Service的作用非常有用。
 
-[使用Developer AEM Console進行除錯作為Cloud Service](./developer-console.md)
+[使用開發人員主控台除錯AEM作為Cloud Service](./developer-console.md)
 
 ## CRXDE Lite
 
-CRXDE Lite是典型但功能強大的工具，可做為AEMCloud Service開發環境進行除錯。 CRXDE Lite提供一套功能，可協助除錯，以檢查所有資源和屬性、控制JCR的可變部分、調查權限和評估查詢。
+CRXDE Lite是傳統但功能強大的工具，可作為Cloud Service開發環境除錯AEM。 CRXDE Lite提供一套功能，有助於調試以檢查所有資源和屬性、操作JCR的可變部分、調查權限和評估查詢。
 
-[以CRXDE LiteAEM為Cloud Service進行除錯](./crxde-lite.md)
+[將AEM作為Cloud Service進行CRXDE Lite](./crxde-lite.md)
