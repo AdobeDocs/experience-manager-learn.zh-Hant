@@ -1,35 +1,34 @@
 ---
-title: 使用「系統概述控制面板」(位AEM於
-description: 在舊版管理AEM員中，為了取得實例的完整資訊，需要檢視數個位置AEM。 「系統概述」旨在透過單一儀表板提供執行個體的組態、硬體和健AEM康狀況的高階檢視，來解決此問題。
+title: 使用AEM中的「系統概述」控制面板
+description: 在舊版AEM管理員中，需要查看數個位置，才能完整了解AEM例項。 「系統概述」旨在透過從單一控制面板提供AEM執行個體的設定、硬體和健全狀態的概觀，來解決此問題。
 version: 6.4, 6.5
 topics: administration, operations, monitoring
 activity: use
 audience: administrator, architect, developer, implementer
 doc-type: technical video
 contentOwner: dgordon
-topic: Administration
+topic: 管理
 role: Administrator
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 1%
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
 
 # 使用系統概述控制面板
 
-Adobe Experience Manager(AEM)[!UICONTROL 系統概述]提供從單個儀表板查看實例配置、硬體和AEM運行狀況的高級視圖。
+Adobe Experience Manager的(AEM)[!UICONTROL 系統概觀]可讓您從單一控制面板概略檢視AEM執行個體的設定、硬體和運作狀況。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
-1. 可從以下位置訪問系統概述：**AEM開始** > **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 系統概述]**
+1. 可從以下位置訪問「系統概述」：**AEM開始** > **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 系統概述]**
 
    直接在&#x200B;**`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
-1. 按一下[!UICONTROL 下載]按鈕可導出[!UICONTROL 系統概述]中的資訊。 這些資訊也通過以下[!DNL REST]端點公開：
+1. 按一下[!UICONTROL Download]按鈕可導出[!UICONTROL System Overview]中的資訊。 此資訊也會透過下列[!DNL REST]端點公開：
 1. 以下是從[!UICONTROL 系統概述]匯出的JSON輸出範例：
 
    ```json
