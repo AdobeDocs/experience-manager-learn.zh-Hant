@@ -1,7 +1,7 @@
 ---
 title: 設定Asset compute專案的manifest.yml
-description: asset compute項目的manifest.yml描述了要部署的此項目中的所有員工。
-feature: Asset Compute Microservices
+description: asset compute項目的manifest.yml描述了此項目中要部署的所有工作。
+feature: asset compute微服務
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,12 @@ audience: developer
 doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
-topic: Integrations, Development
+topic: 整合，開發
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -23,17 +22,17 @@ ht-degree: 0%
 
 # 設定manifest.yml
 
-`manifest.yml`位於Asset compute項目的根目錄中，描述了要部署的此項目中的所有員工。
+`manifest.yml`位於Asset compute項目的根目錄中，描述了此項目中要部署的所有工作。
 
 ![manifest.yml](./assets/manifest/manifest.png)
 
 ## 預設工作器定義
 
-工人定義為`actions`下的Adobe I/O Runtime操作條目，由一組配置組成。
+背景工作定義為`actions`下的Adobe I/O Runtime動作項目，並由一組設定組成。
 
-訪問其他Adobe I/O整合的工作者必須將`annotations -> require-adobe-auth`屬性設定為`true`，因為此[通過`params.auth`對象公開工作者的Adobe I/O憑據](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 當員工呼出Adobe I/OAPI(例如Adobe Photoshop、Lightroom或Sensei API)時，通常需要此選項，而且可以依每位員工切換。
+存取其他Adobe I/O整合的背景工作必須將`annotations -> require-adobe-auth`屬性設為`true`，因為此[會透過`params.auth`物件顯示背景工作的Adobe I/O憑證](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 當工作人員向外呼叫Adobe I/OAPI(例如Adobe Photoshop、Lightroom或Sensei API)時，通常需要這個選項，並且可以根據每個工作人員切換。
 
-1. 開啟並查看自動生成的工作器`manifest.yml`。 包含多個Asset compute工作的項目必須在`actions`陣列下為每個工作者定義一個條目。
+1. 開啟並查看自動生成的工作器`manifest.yml`。 包含多個Asset compute工作的項目必須在`actions`陣列下為每個工作定義一個條目。
 
 ```yml
 packages:
@@ -52,11 +51,11 @@ packages:
 
 ## 定義限制
 
-每個員工都可以配置[limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)以用於其在Adobe I/O Runtime的執行上下文。 應根據員工要計算的資產量、比率和類型，以及所執行的工作類型，調整這些值，以提供最佳的員工規模。
+每個工作人員都可以在Adobe I/O Runtime中為其執行上下文配置[limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)。 應根據工作人員要計算的資產量、速率和類型，以及其執行的工作類型，調整這些值以為工作人員提供最佳大小調整。
 
-在設定限制之前，請查看[Adobe大小指南](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 asset compute工人在處理資產時可能會用盡記憶體，導致Adobe I/O Runtime執行死亡，因此請確保員工的大小適當，以處理所有候選資產。
+在設定限制之前，請檢閱[Adobe大小調整指南](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 asset compute背景工作在處理資產時可能會耗盡記憶體，導致Adobe I/O Runtime執行中斷，因此請確定背景工作的大小適當，以處理所有候選資產。
 
-1. 將`inputs`區段新增至新的`wknd-asset-compute`動作項目。 這允許調整Asset compute工作者的總體效能和資源分配。
+1. 將`inputs`區段新增至新的`wknd-asset-compute`動作項目。 這允許調整Asset compute工作人員的總體效能和資源分配。
 
 ```yml
 packages:
@@ -76,9 +75,9 @@ packages:
            
 ```
 
-## 完成的manifest.yml
+## 已完成manifest.yml
 
-最終`manifest.yml`看起來如下：
+最後`manifest.yml`看起來類似：
 
 ```yml
 packages:
@@ -97,7 +96,7 @@ packages:
           require-adobe-auth: true
 ```
 
-## github上的manifest.yml
+## Github上的manifest.yml
 
 最終`.manifest.yml`可在Github上取得，網址為：
 
@@ -110,20 +109,20 @@ packages:
 
 要啟動Asset compute項目的Asset compute開發工具，請執行以下操作：
 
-1. 在Asset compute項目根目錄中開啟命令行（在VS代碼中，此命令可直接在IDE中通過「終端機>新終端機」開啟），然後執行命令：
+1. 在Asset compute項目根目錄中開啟命令行（在VS代碼中，可通過「終端機」>「新終端機」直接在IDE中開啟），然後執行命令：
 
    ```
    $ aio app run
    ```
 
-1. 本機Asset compute開發工具將在您的預設Web瀏覽器中開啟，位於&#x200B;__http://localhost:9000__。
+1. 本機Asset compute開發工具將在您的預設Web瀏覽器中開啟，網址為&#x200B;__http://localhost:9000__。
 
    ![aio app run](assets/environment-variables/aio-app-run.png)
 
-1. 當開發工具初始化時，請觀看命令列輸出和Web瀏覽器中的錯誤訊息。
-1. 若要停止Asset compute開發工具，請在執行`aio app run`的視窗中點選`Ctrl-C`以終止程式。
+1. 當開發工具初始化時，查看命令行輸出和Web瀏覽器中的錯誤消息。
+1. 若要停止「Asset compute開發工具」，請在執行`aio app run`的視窗中點選`Ctrl-C`以終止程式。
 
 ## 疑難排解
 
-+ [錯誤的YAML縮排](../troubleshooting.md#incorrect-yaml-indentation)
-+ [memorySize限制設定為過低](../troubleshooting.md#memorysize-limit-is-set-too-low)
++ [YAML縮進錯誤](../troubleshooting.md#incorrect-yaml-indentation)
++ [memorySize限制設定得太低](../troubleshooting.md#memorysize-limit-is-set-too-low)
