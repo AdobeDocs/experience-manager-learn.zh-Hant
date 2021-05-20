@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe Analytics收集頁面資料
-description: 使用事件導向的Adobe用戶端資料層，收集有關使用Adobe Experience Manager建立之網站上使用者活動的資料。 瞭解如何使用Experience Platform Launch中的規則來監聽這些事件，並傳送資料至Adobe Analytics報表套裝。
-feature: analytics
+description: 使用事件導向的Adobe用戶端資料層，收集使用Adobe Experience Manager建置之網站上使用者活動的相關資料。 了解如何使用Experience Platform Launch中的規則來監聽這些事件，並將資料傳送至Adobe Analytics報表套裝。
+feature: 分析
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -12,10 +12,9 @@ thumbnail: 5332-collect-data-analytics.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2419'
+source-wordcount: '2417'
 ht-degree: 2%
 
 ---
@@ -23,64 +22,64 @@ ht-degree: 2%
 
 # 使用Adobe Analytics收集頁面資料
 
-瞭解如何使用[Adobe客戶端資料層的內置功能與核心元件&lt;a1/AEM>收集Adobe Experience Manager Sites某頁的相關資料。 ](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/data-layer/overview.html)[Experience Platform](https://www.adobe.com/experience-platform/launch.html) 啟動和 [Adobe Analytics](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html) 擴充功能將用來建立規則，以傳送頁面資料至Adobe Analytics。
+了解如何搭配AEM核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/data-layer/overview.html)使用[Adobe用戶端資料層的內建功能，收集Adobe Experience Manager Sites中某頁面的相關資料。 [Experience Platform](https://www.adobe.com/experience-platform/launch.html) Launch和Adobe Analytics [擴](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html) 充功能將用來建立規則，以將頁面資料傳送至Adobe Analytics。
 
-## 您將建立的
+## 您將建置的
 
 ![頁面資料追蹤](assets/collect-data-analytics/analytics-page-data-tracking.png)
 
-在本教學課程中，您將根據來自Adobe端資料層的事件觸發啟動規則、新增規則觸發的條件，並將頁面的&#x200B;**頁面名稱**&#x200B;和&#x200B;**頁面範本**&#x200B;傳送AEM至Adobe Analytics。
+在本教學課程中，您將根據來自Adobe用戶端資料層的事件觸發Launch規則，新增應觸發規則的條件，並將AEM頁面的&#x200B;**頁面名稱**&#x200B;和&#x200B;**頁面範本**&#x200B;傳送至Adobe Analytics。
 
-### 目標{#objective}
+### 目標 {#objective}
 
-1. 根據資料層的變更，在啟動中建立事件導向規則
-1. 在Launch中將頁面資料層屬性對應至資料元素
-1. 收集頁面資料，並使用頁面檢視信標傳送至Adobe Analytics
+1. 根據資料層變更，在Launch中建立事件導向規則
+1. 將頁面資料層屬性對應至Launch中的資料元素
+1. 收集頁面資料並透過頁面檢視信標傳送至Adobe Analytics
 
 ## 必備條件
 
-以下為必要項目：
+需要下列項目：
 
 * **Experience Platform** LaunchProperty
-* **Adobe** Analyticst/dev報表套裝ID和追蹤伺服器。請參閱以下檔案，瞭解如何建立新的報表套裝](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)。[
-* [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) 除錯瀏覽器擴充功能。本教學課程中的螢幕擷取自Chrome瀏覽器。
-* （可選）啟AEM用[Adobe客戶端資料層的站點](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 本教學課程將使用公開對應網站[https://wknd.site/us/en.html](https://wknd.site/us/en.html)，但歡迎您使用您自己的網站。
+* **Adobe** Analyticstest/dev報表套裝ID和追蹤伺服器。請參閱下列檔案，了解如何建立新的報表套裝](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)。[
+* [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser擴充功能。本教學課程中的螢幕擷取畫面是從Chrome瀏覽器擷取。
+* （選用）啟用[Adobe用戶端資料層的AEM網站](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 本教學課程將使用公開的網站[https://wknd.site/us/en.html](https://wknd.site/us/en.html)，但歡迎您使用自己的網站。
 
 >[!NOTE]
 >
-> 需要整合Launch和您網站的協AEM助嗎？ [請參閱此影片系列](../experience-platform-launch/overview.md)。
+> 需要整合Launch和您的AEM網站的協助嗎？ [請觀看此影片系列](../experience-platform-launch/overview.md)。
 
-## WKND站點的交換機啟動環境
+## 為WKND站點切換啟動環境
 
-[https://wknd.sites是以開放](https://wknd.site) 原始碼專案為基礎，為實作 [提供參](https://github.com/adobe/aem-guides-wknd) 考和教學課程的公 [](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) 開網站AEM。
+[https://wknd.site](https://wknd.site) 是以開放原始碼專案為基礎所建置的 [公開](https://github.com/adobe/aem-guides-wknd) 網站，專為AEM實作提供參考和 [](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) 教學課程。
 
-您不必設定環境AEM並安裝WKND代碼庫，而是可以使用Experience Platform調試器來&#x200B;**switch**&#x200B;將即時[https://wknd.site/](https://wknd.site/)設定為&#x200B;*您的*&#x200B;啟動屬性。 當然，如果您自己的站AEM點已啟用[Adobe客戶端資料層](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)，則可以使用它
+您不必設定AEM環境並安裝WKND程式碼基底，而是可以使用Experience Platform偵錯器來&#x200B;**switch**&#x200B;即時[https://wknd.site/](https://wknd.site/)偵錯至&#x200B;*您的* Launch屬性。 當然，如果您自己的AEM網站已啟用[Adobe用戶端資料層](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)，您就可以使用
 
-1. 登入Experience Platform Launch並[建立啟動屬性](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch.html)（如果您尚未）。
-1. 確保已建立初始的啟動[庫](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html#create-a-library)並升級到啟動[環境](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)。
-1. 從您的資料庫已發佈至的環境中複製啟動內嵌代碼。
+1. 登入Experience Platform Launch並[建立Launch屬性](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch.html)（如果尚未登入）。
+1. 請確定已建立初始的Launch [程式庫](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html#create-a-library)，並升級至Launch [environment](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)。
+1. 從您的程式庫已發佈到的環境中複製Launch內嵌程式碼。
 
-   ![複製啟動內嵌代碼](assets/collect-data-analytics/launch-environment-copy.png)
+   ![複製Launch內嵌程式碼](assets/collect-data-analytics/launch-environment-copy.png)
 
-1. 在瀏覽器中開啟新標籤，並導覽至[https://wknd.site/](https://wknd.site/)
-1. 開啟Experience Platform除錯程式瀏覽器擴充功能
+1. 在您的瀏覽器中開啟新標籤，並導覽至[https://wknd.site/](https://wknd.site/)
+1. 開啟Experience Platform偵錯器瀏覽器擴充功能
 
-   ![Experience Platform除錯程式](assets/collect-data-analytics/experience-platform-debugger-extension.png)
+   ![Experience Platform偵錯器](assets/collect-data-analytics/experience-platform-debugger-extension.png)
 
-1. 導覽至&#x200B;**Launch** > **Configuration**，並在&#x200B;**Incleted Embed Codes**&#x200B;下方，將現有的Launch內嵌代碼取代為從步驟3複製的&#x200B;*您的*&#x200B;內嵌代碼。
+1. 導覽至&#x200B;**Launch** > **Configuration**，並在&#x200B;**插入的內嵌程式碼**&#x200B;下方，將現有的Launch內嵌程式碼取代為從步驟3複製的&#x200B;*您的*&#x200B;內嵌程式碼。
 
-   ![取代內嵌代碼](assets/collect-data-analytics/platform-debugger-replace-embed.png)
+   ![取代內嵌程式碼](assets/collect-data-analytics/platform-debugger-replace-embed.png)
 
-1. 在WKND頁籤上啟用&#x200B;**控制台日誌**&#x200B;和&#x200B;**鎖定調試器。**
+1. 在WKND頁簽上啟用&#x200B;**控制台日誌記錄**&#x200B;和&#x200B;**鎖定調試器**。
 
-   ![控制台記錄](assets/collect-data-analytics/console-logging-lock-debugger.png)
+   ![主控台記錄](assets/collect-data-analytics/console-logging-lock-debugger.png)
 
 ## 驗證WKND站點上的Adobe客戶端資料層
 
-[WKND參考項目](https://github.com/adobe/aem-guides-wknd)是使用核心元件構建的AEM，預設情況下啟用[Adobe客戶端資料層](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 接著，驗證Adobe客戶端資料層是否已啟用。
+[WKND參考專案](https://github.com/adobe/aem-guides-wknd)是使用AEM核心元件建置，預設會啟用[Adobe用戶端資料層](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 接下來，驗證Adobe客戶端資料層是否已啟用。
 
 1. 導覽至[https://wknd.site](https://wknd.site)。
-1. 開啟瀏覽器的開發人員工具，並導覽至&#x200B;**Console**。 運行以下命令：
+1. 開啟瀏覽器的開發人員工具，並導覽至&#x200B;**主控台**。 執行下列命令：
 
    ```js
    adobeDataLayer.getState();
@@ -90,7 +89,7 @@ ht-degree: 2%
 
    ![Adobe資料層狀態](assets/collect-data-analytics/adobe-data-layer-state.png)
 
-1. 展開響應並檢查`page`條目。 您應看到如下的資料結構：
+1. 展開回應並檢查`page`項目。 您應會看到下列資料結構：
 
    ```json
    page-2eee4f8914:
@@ -104,28 +103,28 @@ ht-degree: 2%
        xdm:template: "/conf/wknd/settings/wcm/templates/landing-page-template"
    ```
 
-   我們將使用從資料層的[Page架構](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)、`dc:title`、`xdm:language`和`xdm:template`衍生的標準屬性，將頁面資料傳送至Adobe Analytics。
+   我們將使用衍生自資料層的[頁面結構](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)、`dc:title`、`xdm:language`和`xdm:template`的標準屬性，將頁面資料傳送至Adobe Analytics。
 
    >[!NOTE]
    >
-   > 看不到`adobeDataLayer` javascript物件？ 確保您的站點上已啟用[Adobe客戶端資料層](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+   > 沒有看見`adobeDataLayer` javascript物件？ 請確定您的網站上已啟用[Adobe用戶端資料層](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
 
-## 建立載入頁面的規則
+## 建立頁面載入規則
 
-Adobe客戶端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 載入AEM **Page**&#x200B;資料層時，會觸發事件`cmp:show`。 建立將根據`cmp:show`事件觸發的規則。
+Adobe客戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 載入AEM **Page**&#x200B;資料層時，會觸發事件`cmp:show`。 建立將根據`cmp:show`事件觸發的規則。
 
-1. 導覽至Experience Platform Launch並進入與網站整合的WebAEM屬性。
-1. 導覽至「啟動UI」中的「**規則**」區段，然後按一下「建立新規則&#x200B;**」。**
+1. 導覽至Experience Platform Launch，並導覽至與AEM網站整合的Web屬性。
+1. 導覽至Launch UI中的&#x200B;**Rules**&#x200B;區段，然後按一下&#x200B;**建立新規則**。
 
    ![建立規則](assets/collect-data-analytics/analytics-create-rule.png)
 
-1. 將規則命名為&#x200B;**已載入頁面**。
-1. 按一下&#x200B;**事件** **添加**&#x200B;以開啟&#x200B;**事件配置**&#x200B;嚮導。
+1. 將規則命名為&#x200B;**Page Loaded**。
+1. 按一下「**事件** **添加**」以開啟「**事件配置**」嚮導。
 1. 在&#x200B;**事件類型**&#x200B;下，選擇&#x200B;**自訂代碼**。
 
-   ![命名規則並新增自訂代碼事件](assets/collect-data-analytics/custom-code-event.png)
+   ![為規則命名並新增自訂程式碼事件](assets/collect-data-analytics/custom-code-event.png)
 
-1. 按一下主面板中的&#x200B;**開啟編輯器**，然後輸入下列程式碼片段：
+1. 按一下主面板中的&#x200B;**開啟編輯器** ，然後輸入下列程式碼片段：
 
    ```js
    var pageShownEventHandler = function(evt) {
@@ -156,17 +155,17 @@ Adobe客戶端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 載入
    });
    ```
 
-   上述程式碼片段將透過[將函式](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)推送至資料層來新增事件偵聽器。 觸發`cmp:show`事件時，會呼叫`pageShownEventHandler`函式。 在此函式中，添加一些例行性檢查，並使用觸發事件的元件的資料層[的最新狀態構造新的`event`。](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)
+   上述程式碼片段會透過[推送函式](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)至資料層來新增事件監聽器。 觸發`cmp:show`事件時，會呼叫`pageShownEventHandler`函式。 在此函式中，會新增一些健全性檢查，並針對觸發事件的元件，使用資料層](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)的最新[狀態來建構新的`event`。
 
-   在呼叫`trigger(event)`之後。 `trigger()` 是Launch中的保留名稱，將「觸發」啟動規則。我們將`event`物件傳遞為參數，而此參數將會在名為`event`的Launch中以另一個保留名稱公開。 Launch中的資料元素現在可以參照各種屬性，例如：`event.component['someKey']`。
+   之後呼叫`trigger(event)`。 `trigger()` 是Launch中的保留名稱，且將「觸發」Launch規則。我們會以參數形式傳遞`event`物件，而此參數將會由Launch中名為`event`的其他保留名稱公開。 Launch中的資料元素現在可以參照各種屬性，如下所示：`event.component['someKey']`。
 
 1. 儲存變更。
-1. 下一步，在&#x200B;**Actions**&#x200B;下，按一下&#x200B;**Add**&#x200B;以開啟&#x200B;**Action Configuration**&#x200B;嚮導。
-1. 在「**動作類型**」下，選擇「自訂代碼&#x200B;**」。**
+1. 下一步在&#x200B;**Actions**&#x200B;下，按一下&#x200B;**Add**&#x200B;以開啟&#x200B;**Action Configuration**&#x200B;精靈。
+1. 在「**動作類型**」下，選擇「**自訂程式碼**」。
 
-   ![自訂代碼動作類型](assets/collect-data-analytics/action-custom-code.png)
+   ![自訂程式碼動作類型](assets/collect-data-analytics/action-custom-code.png)
 
-1. 按一下主面板中的&#x200B;**開啟編輯器**，然後輸入下列程式碼片段：
+1. 按一下主面板中的&#x200B;**開啟編輯器** ，然後輸入下列程式碼片段：
 
    ```js
    console.debug("Page Loaded ");
@@ -175,36 +174,36 @@ Adobe客戶端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 載入
    console.debug("Page template: " + event.component['xdm:template']);
    ```
 
-   `event`物件是從自訂事件中呼叫的`trigger()`方法傳遞。 `component` 是自訂事件中資料層衍 `getState` 生的目前頁面。從之前的資料層公開的[頁面架構](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)中重新調用，以便看到各種鍵在包裝盒外公開。
+   `event`物件是從自訂事件中呼叫的`trigger()`方法傳遞。 `component` 是從自訂事件中的資料層 `getState` 衍生的目前頁面。回想一下資料層公開的[頁面架構](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)之前的內容，以查看現成可用的各種索引鍵。
 
-1. 儲存變更並在Launch中執行[build](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html)，將程式碼提升至您網站上使用的[環境&lt;a3/AEM>。](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)
+1. 儲存變更並在Launch中執行[build](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html)，將程式碼推廣至AEM網站上使用的[environment](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)。
 
    >[!NOTE]
    >
-   > 使用[Adobe Experience Platform調試器](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)將嵌入代碼切換到&#x200B;**Development**&#x200B;環境非常有用。
+   > 使用[Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)將內嵌程式碼切換至&#x200B;**開發**&#x200B;環境，會相當實用。
 
-1. 導覽至您的AEM網站並開啟開發人員工具以檢視主控台。 重新整理頁面，您應該會看到主控台訊息已記錄：
+1. 導覽至您的AEM網站，並開啟開發人員工具以檢視主控台。 重新整理頁面，您應該會看到主控台訊息已記錄：
 
    ![頁面載入的主控台訊息](assets/collect-data-analytics/page-show-event-console.png)
 
 ## 建立資料元素
 
-接著，建立數個資料元素，從Adobe用戶端資料層擷取不同的值。 如前一練習中所述，我們可以直接透過自訂程式碼存取資料層的屬性。 使用資料元素的好處是，可跨啟動規則重複使用這些元素。
+接著，建立數個資料元素，以從Adobe用戶端資料層擷取不同值。 如先前練習所示，我們已看到可透過自訂程式碼直接存取資料層的屬性。 使用資料元素的好處是，可在各個Launch規則中重複使用資料元素。
 
-從資料層公開的[頁面架構](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)之前叫出：
+從資料層公開的[頁面架構](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page)前面回想：
 
-資料元素將映射至`@type`、`dc:title`和`xdm:template`屬性。
+資料元素將對應至`@type`、`dc:title`和`xdm:template`屬性。
 
 ### 元件資源類型
 
-1. 導覽至Experience Platform Launch並進入與網站整合的WebAEM屬性。
+1. 導覽至Experience Platform Launch，並導覽至與AEM網站整合的Web屬性。
 1. 導覽至&#x200B;**資料元素**&#x200B;區段，然後按一下&#x200B;**建立新資料元素**。
 1. 對於&#x200B;**名稱**，輸入&#x200B;**元件資源類型**。
-1. 對於&#x200B;**資料元素類型**，選擇&#x200B;**自定義代碼**。
+1. 對於&#x200B;**資料元素類型**，請選擇&#x200B;**自訂代碼**。
 
    ![元件資源類型](assets/collect-data-analytics/component-resource-type-form.png)
 
-1. 按一下&#x200B;**開啟編輯器**，然後在自定義代碼編輯器中輸入以下內容：
+1. 按一下「**開啟編輯器**」，然後在自訂程式碼編輯器中輸入下列內容：
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('@type')) {
@@ -216,14 +215,14 @@ Adobe客戶端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 載入
 
    >[!NOTE]
    >
-   > 請記住，`event`物件已設為可用，且範圍以啟動中觸發&#x200B;**Rule**&#x200B;的事件為基礎。 在規則中「資料元素」是&#x200B;*referenced*&#x200B;之前，不會設定「資料元素」的值。 因此，在規則內使用此資料元素是安全的，例如在前一步驟&#x200B;*中建立的&#x200B;**頁面載入**規則，但*&#x200B;在其他上下文中使用則不安全。
+   > 回想一下，`event`物件已可供使用，且範圍是根據Launch中觸發&#x200B;**Rule**&#x200B;的事件而定。 在規則內的資料元素為&#x200B;*referenced*&#x200B;之前，資料元素的值不會設定。 因此，在規則內使用此資料元素是安全的，例如在前一個步驟&#x200B;*中建立的&#x200B;**Page Loaded**規則，但在其他內容中使用*&#x200B;則不安全。
 
 ### 頁面名稱
 
-1. 按一下&#x200B;**添加資料元素**。
+1. 按一下「**新增資料元素**」。
 1. 對於&#x200B;**名稱**，輸入&#x200B;**頁面名稱**。
-1. 對於&#x200B;**資料元素類型**，選擇&#x200B;**自定義代碼**。
-1. 按一下&#x200B;**開啟編輯器**，然後在自定義代碼編輯器中輸入以下內容：
+1. 對於&#x200B;**資料元素類型**，請選擇&#x200B;**自訂代碼**。
+1. 按一下「**開啟編輯器**」，然後在自訂程式碼編輯器中輸入下列內容：
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('dc:title')) {
@@ -235,10 +234,10 @@ Adobe客戶端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 載入
 
 ### 頁面範本
 
-1. 按一下&#x200B;**添加資料元素**。
-1. 對於&#x200B;**名稱**，輸入&#x200B;**頁面模板**。
-1. 對於&#x200B;**資料元素類型**，選擇&#x200B;**自定義代碼**。
-1. 按一下&#x200B;**開啟編輯器**，然後在自定義代碼編輯器中輸入以下內容：
+1. 按一下「**新增資料元素**」。
+1. 對於&#x200B;**名稱**，輸入&#x200B;**頁面範本**。
+1. 對於&#x200B;**資料元素類型**，請選擇&#x200B;**自訂代碼**。
+1. 按一下「**開啟編輯器**」，然後在自訂程式碼編輯器中輸入下列內容：
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('xdm:template')) {
@@ -254,130 +253,130 @@ Adobe客戶端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 載入
 
 ## 新增Analytics擴充功能
 
-接著，將Analytics擴充功能新增至您的Launch屬性。 我們得把這些資料傳送到某處！
+接下來，將Analytics擴充功能新增至您的Launch屬性。 我們需要將這些資料傳送到某處！
 
-1. 導覽至Experience Platform Launch並進入與網站整合的WebAEM屬性。
-1. 前往&#x200B;**Extensions** > **Catalog**
-1. 找到&#x200B;**Adobe Analytics**&#x200B;副檔名，然後按一下&#x200B;**安裝**
+1. 導覽至Experience Platform Launch，並導覽至與AEM網站整合的Web屬性。
+1. 前往&#x200B;**擴充功能** > **目錄**
+1. 找到&#x200B;**Adobe Analytics**&#x200B;擴充功能，然後按一下&#x200B;**Install**
 
-   ![Adobe Analytics分機](assets/collect-data-analytics/analytics-catalog-install.png)
+   ![Adobe Analytics擴充功能](assets/collect-data-analytics/analytics-catalog-install.png)
 
-1. 在&#x200B;**資料庫管理** > **報表套裝**&#x200B;下，輸入您要用於每個啟動環境的報表套裝ID。
+1. 在「**程式庫管理** > **報表套裝**」下方，輸入您要用於每個Launch環境的報表套裝ID。
 
    ![輸入報表套裝ID](assets/collect-data-analytics/analytics-config-reportSuite.png)
 
    >[!NOTE]
    >
-   > 在本教學課程中，您可以針對所有環境使用一個報表套裝，但在實際生活中，您會想要使用個別的報表套裝，如下圖所示
+   > 在本教學課程中，您可以針對所有環境使用一個報表套裝，但在實際情況中，您會想要使用個別的報表套裝，如下圖所示
 
    >[!TIP]
    >
-   >我們建議使用&#x200B;*「管理我的程式庫」選項*&#x200B;作為「程式庫管理」設定，因為這可讓`AppMeasurement.js`程式庫保持最新狀態。
+   >建議您使用&#x200B;*為我管理程式庫選項*&#x200B;作為「程式庫管理」設定，因為這可讓`AppMeasurement.js`程式庫更容易保持最新。
 
-1. 選中該框以啟用&#x200B;**使用Activity Map**。
+1. 核取方塊以啟用&#x200B;**使用Activity Map**。
 
    ![啟用使用Activity Map](assets/track-clicked-component/analytic-track-click.png)
 
-1. 在「**一般** > **追蹤伺服器**」下，輸入您的追蹤伺服器，例如`tmd.sc.omtrdc.net`。 如果您的網站支援`https://`，請輸入您的SSL追蹤伺服器
+1. 在&#x200B;**一般** > **追蹤伺服器**&#x200B;下，輸入您的追蹤伺服器，例如`tmd.sc.omtrdc.net`。 如果您的網站支援`https://`，請輸入SSL追蹤伺服器
 
    ![輸入追蹤伺服器](assets/collect-data-analytics/analytics-config-trackingServer.png)
 
-1. 按一下&#x200B;**保存**&#x200B;保存更改。
+1. 按一下&#x200B;**儲存**&#x200B;以儲存變更。
 
-## 新增條件至「載入頁面」規則
+## 新增條件至頁面載入規則
 
-接著，更新&#x200B;**頁面載入**&#x200B;規則，以使用&#x200B;**元件資源類型**&#x200B;資料元素，確保只有當`cmp:show`事件用於&#x200B;**Page**&#x200B;時才會觸發規則。 其他元件可以觸發`cmp:show`事件，例如，當投影片變更時，轉盤元件會觸發它。 因此，為此規則新增條件很重要。
+接下來，更新&#x200B;**Page Loaded**&#x200B;規則，以使用&#x200B;**元件資源類型**&#x200B;資料元素，確保只有在`cmp:show`事件為&#x200B;**Page**&#x200B;時才會觸發規則。 其他元件可以引發`cmp:show`事件，例如當投影片變更時，輪播元件就會引發。 因此，請務必為此規則新增條件。
 
-1. 在啟動UI中，導覽至先前建立的&#x200B;**頁面載入**&#x200B;規則。
-1. 在&#x200B;**Conditions**&#x200B;下，按一下&#x200B;**Add**&#x200B;以開啟&#x200B;**Condition Configuration**&#x200B;嚮導。
+1. 在Launch UI中，導覽至先前建立的&#x200B;**Page Loaded**&#x200B;規則。
+1. 在&#x200B;**Conditions**&#x200B;下，按一下&#x200B;**Add**&#x200B;以開啟&#x200B;**Condition Configuration**&#x200B;精靈。
 1. 對於&#x200B;**條件類型**，選擇&#x200B;**值比較**。
-1. 將表單欄位中的第一個值設為`%Component Resource Type%`。 您可以使用「資料元素」表徵圖![data-element表徵圖](assets/collect-data-analytics/cylinder-icon.png)來選擇「元件資源類型」資料元素。 ****&#x200B;將比較器設定為`Equals`。
-1. 將第二個值設定為`wknd/components/page`。
+1. 將表單欄位中的第一個值設為`%Component Resource Type%`。 您可以使用資料元素圖示![data-element圖示](assets/collect-data-analytics/cylinder-icon.png)來選取&#x200B;**元件資源類型**&#x200B;資料元素。 將比較器設定為`Equals`。
+1. 將第二個值設為`wknd/components/page`。
 
    ![頁面載入規則的條件設定](assets/collect-data-analytics/condition-configuration-page-loaded.png)
 
    >[!NOTE]
    >
-   > 您可在自訂程式碼函式中新增此條件，以監聽在教學課程之前建立的`cmp:show`事件。 不過，在UI中新增它可讓需要變更規則的其他使用者看到更多內容。 此外，我們還可使用我們的資料元素！
+   > 可以在自訂程式碼函式中新增此條件，該函式會監聽先前在教學課程中建立的`cmp:show`事件。 不過，在UI中新增該規則，可讓可能需要變更規則的其他使用者更清楚了解。 此外，我們還可以使用資料元素！
 
 1. 儲存變更。
 
 ## 設定Analytics變數並觸發頁面檢視信標
 
-目前，**Page Loaded**&#x200B;規則只會輸出控制台陳述式。 接著，使用資料元素和Analytics擴充功能，在&#x200B;**載入頁面**&#x200B;規則中，將Analytics變數設為&#x200B;**action**。 我們也將設定其他動作，以觸發&#x200B;**頁面檢視信標**，並將收集的資料傳送至Adobe Analytics。
+目前，**Page Loaded**&#x200B;規則只會輸出主控台陳述式。 接下來，使用資料元素和Analytics擴充功能，將Analytics變數設為&#x200B;**Page Loaded**&#x200B;規則中的&#x200B;**action**。 我們也會設定其他動作，以觸發&#x200B;**頁面檢視信標**，並將收集的資料傳送至Adobe Analytics。
 
-1. 在&#x200B;**Page Loaded**&#x200B;規則&#x200B;**remove**&#x200B;中&#x200B;**Core - Custom Code**&#x200B;動作（控制台語句）:
+1. 在&#x200B;**Page Loaded**&#x200B;規則&#x200B;**remove**&#x200B;中， **Core - Custom Code**&#x200B;動作（主控台陳述式）:
 
    ![移除自訂程式碼動作](assets/collect-data-analytics/remove-console-statements.png)
 
-1. 在「操作」(Actions)下，按一下「添加」(Add)**以添加新操作。**
-1. 將&#x200B;**擴展**&#x200B;類型設定為&#x200B;**Adobe Analytics**，並將&#x200B;**操作類型**&#x200B;設定為&#x200B;**設定變數**
+1. 在「動作」底下，按一下&#x200B;**Add**&#x200B;以新增動作。
+1. 將&#x200B;**Extension**&#x200B;類型設定為&#x200B;**Adobe Analytics**，並將&#x200B;**Action Type**&#x200B;設定為&#x200B;**Set Variables**
 
-   ![將動作擴充功能設為Analytics集變數](assets/collect-data-analytics/analytics-set-variables-action.png)
+   ![將動作擴充功能設為Analytics設定變數](assets/collect-data-analytics/analytics-set-variables-action.png)
 
-1. 在主面板中，選擇可用&#x200B;**eVar**，並設為「資料元素&#x200B;**頁面範本**」的值。 使用「資料元素」圖示![「資料元素」圖示](assets/collect-data-analytics/cylinder-icon.png)來選取「頁面範本」元素。****
+1. 在主面板中，選取可用的&#x200B;**eVar**，並設為資料元素&#x200B;**頁面範本**&#x200B;的值。 使用資料元素表徵圖![資料元素表徵圖](assets/collect-data-analytics/cylinder-icon.png)選擇&#x200B;**頁面模板**&#x200B;元素。
 
-   ![設為eVar頁面範本](assets/collect-data-analytics/set-evar-page-template.png)
+   ![設定為eVar頁面範本](assets/collect-data-analytics/set-evar-page-template.png)
 
-1. 向下捲動，在&#x200B;**Additional Settings**&#x200B;下，將&#x200B;**Page Name**&#x200B;設為資料元素&#x200B;**Page Name**:
+1. 向下捲動，在&#x200B;**Additional Settings**&#x200B;下，將&#x200B;**Page Name**&#x200B;設定為資料元素&#x200B;**Page Name**:
 
    ![頁面名稱環境變數集](assets/collect-data-analytics/page-name-env-variable-set.png)
 
    儲存變更。
 
-1. 接著，點選&#x200B;**plus**&#x200B;圖示，在&#x200B;**Adobe Analytics-設定變數**&#x200B;右側新增其他動作：
+1. 接下來，點選&#x200B;**加號**&#x200B;圖示，在&#x200B;**Adobe Analytics — 設定變數**&#x200B;的右側新增其他動作：
 
-   ![新增其他啟動動作](assets/collect-data-analytics/add-additional-launch-action.png)
+   ![新增其他Launch動作](assets/collect-data-analytics/add-additional-launch-action.png)
 
-1. 將&#x200B;**擴展**&#x200B;類型設定為&#x200B;**Adobe Analytics**，並將&#x200B;**操作類型**&#x200B;設定為&#x200B;**發送信標**。 由於此視為頁面檢視，請將預設追蹤設定保留為&#x200B;**`s.t()`**。
+1. 將&#x200B;**Extension**&#x200B;類型設為&#x200B;**Adobe Analytics**，並將&#x200B;**Action Type**&#x200B;設為&#x200B;**Send Beacon**。 由於這被視為頁面檢視，請將預設追蹤設為&#x200B;**`s.t()`**。
 
    ![傳送信標Adobe Analytics動作](assets/track-clicked-component/send-page-view-beacon-config.png)
 
-1. 儲存變更。**載入的頁面**&#x200B;規則現在應具備下列設定：
+1. 儲存變更。**Page Loaded**&#x200B;規則現在應具備下列設定：
 
    ![最終啟動設定](assets/collect-data-analytics/final-page-loaded-config.png)
 
-   * **1.** 聽聽活 `cmp:show` 動。
-   * **2.** 檢查事件是否由頁面觸發。
-   * **3.** 設定頁面名稱和頁 **面范** 本的 **分析變數**
-   * **4.** 傳送分析頁面檢視信標
-1. 儲存所有變更並建立您的啟動程式庫，並升級至適當的環境。
+   * **1.** 聽取事 `cmp:show` 件。
+   * **2.** 檢查頁面是否觸發事件。
+   * **3.** 為頁面名稱和 **頁面** 範本設 **定Analytics變數**
+   * **4.** 傳送Analytics頁面檢視信標
+1. 儲存所有變更並建置您的Launch程式庫，並提升至適當的環境。
 
-## 驗證頁面檢視信標和分析呼叫
+## 驗證頁面檢視信標和Analytics呼叫
 
-現在，**頁面載入**&#x200B;規則會傳送Analytics信標，您應該可以使用Experience Platform偵錯器來查看Analytics追蹤變數。
+現在，**頁面載入**&#x200B;規則會傳送Analytics信標，您應該可以使用Experience Platform偵錯器查看Analytics追蹤變數。
 
-1. 在瀏覽器中開啟[WKND站點](https://wknd.site/us/en.html)。
-1. 按一下「除錯程式」圖示![「體驗平台除錯程式」圖示](assets/collect-data-analytics/experience-cloud-debugger.png)以開啟「Experience Platform除錯程式」。
-1. 請確定除錯程式正將Launch屬性對應至&#x200B;*您的*&#x200B;開發環境，如先前所述，且已勾選&#x200B;**控制台記錄**。
-1. 開啟「Analytics」功能表，並確認報表套裝已設為&#x200B;*您的*&#x200B;報表套裝。 頁面名稱也應填入：
+1. 在瀏覽器中開啟[WKND網站](https://wknd.site/us/en.html)。
+1. 按一下Debugger圖示![Experience Platform Debugger圖示](assets/collect-data-analytics/experience-cloud-debugger.png)以開啟Experience PlatformDebugger。
+1. 如先前所述，確認Debugger將Launch屬性對應至&#x200B;*您的*&#x200B;開發環境，且已勾選&#x200B;**主控台記錄**。
+1. 開啟Analytics功能表，並確認報表套裝已設為&#x200B;*您的*&#x200B;報表套裝。 「頁面名稱」也應填入：
 
    ![Analytics標籤除錯程式](assets/collect-data-analytics/analytics-tab-debugger.png)
 
-1. 向下滾動並展開&#x200B;**網路請求**。 您應該可以找到&#x200B;**evar**&#x200B;為&#x200B;**頁面範本**&#x200B;設定的:
+1. 向下捲動並展開&#x200B;**網路請求**。 您應該能夠找到為&#x200B;**頁面範本**&#x200B;設定的&#x200B;**evar**:
 
-   ![Evar和頁面名稱設定](assets/collect-data-analytics/evar-page-name-set.png)
+   ![Evar和頁面名稱集](assets/collect-data-analytics/evar-page-name-set.png)
 
-1. 返回瀏覽器並開啟開發人員主控台。 按一下頁面頂端的&#x200B;**轉盤**。
+1. 返回瀏覽器，開啟開發人員主控台。 按一下頁面頂端的&#x200B;**轉盤**。
 
    ![點進轉盤頁面](assets/collect-data-analytics/click-carousel-page.png)
 
-1. 在瀏覽器控制台中觀察控制台語句：
+1. 在瀏覽器主控台中觀察主控台陳述式：
 
    ![不符合條件](assets/collect-data-analytics/condition-not-met.png)
 
-   這是因為轉盤確實會觸發`cmp:show`事件&#x200B;*，但*，因為我們檢查了&#x200B;**元件資源類型**，所以不會引發任何事件。
+   這是因為轉盤確實會觸發`cmp:show`事件&#x200B;*，但*，因為我們檢查了&#x200B;**元件資源類型**，所以沒有觸發任何事件。
 
    >[!NOTE]
    >
-   > 如果您未看到任何控制台日誌，請確定在Experience Platform調試器中的&#x200B;**Launch**&#x200B;下選中了&#x200B;**控制台日誌**。
+   > 如果您沒有看見任何主控台記錄，請確定已在Experience Platform偵錯器的&#x200B;**Launch**&#x200B;下勾選&#x200B;**主控台記錄**。
 
-1. 導覽至[Western Australia](https://wknd.site/us/en/magazine/western-australia.html)之類的文章頁面。 觀察頁面名稱和範本類型的變更。
+1. 導覽至[Western Australia](https://wknd.site/us/en/magazine/western-australia.html)之類的文章頁面。 觀察「頁面名稱」和「範本類型」變更。
 
 ## 恭喜！
 
-您剛才使用事件導向的Adobe用戶端資料層和Experience Platform Launch，從網站收集資料頁面資料，並AEM將其傳送至Adobe Analytics。
+您只是使用事件導向的Adobe用戶端資料層和Experience Platform Launch，從AEM網站收集資料頁面資料，並將其傳送至Adobe Analytics。
 
 ### 後續步驟
 
-請參閱下列教學課程，瞭解如何使用事件導向的Adobe用戶端資料層來[追蹤Adobe Experience Manager網站上特定元件的點按次數](track-clicked-component.md)。
+查看下列教學課程，了解如何使用事件導向的Adobe用戶端資料層[追蹤Adobe Experience Manager網站上特定元件的點按](track-clicked-component.md)。
