@@ -1,10 +1,10 @@
 ---
-title: 新增文字和影像內容至列印頻道檔案
-seo-title: 新增文字和影像內容至列印頻道檔案
-description: '這是建立您第一個互動式通訊檔案的多步驟教學課程的第7部分。 在本部分，我們將新增影像和文字內容至版面(xdp)中定義的目標區域。 '
-seo-description: '這是建立您第一個互動式通訊檔案的多步驟教學課程的第7部分。 在本部分，我們將新增影像和文字內容至版面(xdp)中定義的目標區域。 '
+title: 添加文本和影像內容以打印頻道文檔
+seo-title: 添加文本和影像內容以打印頻道文檔
+description: '這是建立第一個互動式通訊檔案的多步驟教學課程的第7部分。 在本部分，我們將將影像和文字內容新增至版面(xdp)中定義的目標區域。 '
+seo-description: '這是建立第一個互動式通訊檔案的多步驟教學課程的第7部分。 在本部分，我們將將影像和文字內容新增至版面(xdp)中定義的目標區域。 '
 uuid: f20d6974-6faf-4b90-a7ff-8aa8a620fcaa
-feature: Interactive Communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,29 +13,28 @@ version: 6.4,6.5
 discoiquuid: a79bf219-2423-4819-89fc-dcfe976e08b7
 kt: 5992
 thumbnail: 22379.jpg
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '199'
 ht-degree: 1%
 
 ---
 
 
-# 新增文字和影像內容至列印頻道檔案
+# 添加文本和影像內容以打印頻道文檔
 
-在本部分，我們將新增影像和文字內容至版面(xdp)中定義的目標區域。
+在本部分，我們將將影像和文字內容新增至版面(xdp)中定義的目標區域。
 
-既然您已編寫了第一個包含收件者名稱和地址的檔案片段，我們就必須將檔案片段新增至列印渠道檔案。
+現在，您已編寫了將保存收件人姓名和地址的第一個文檔片段，我們需要將文檔片段添加到打印渠道文檔中。
 
-您可以將各種類型的內容（例如檔案片段、影像、版面片段等）新增至列印頻道檔案。
+您可以將各種類型的內容（如文檔片段、影像、版面片段等）添加到打印渠道文檔。
 
-若要將內容新增至列印頻道檔案，請依照下列視訊進行。
+要將內容添加到打印頻道文檔，請觀看下面的視頻。
 
-視訊會逐步帶您瞭解將內容新增至列印頻道檔案中適當目標區域的步驟。
+影片會逐步帶您了解將內容新增至列印頻道檔案中適當目標區域的相關步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22379t2/?quality=9&learn=on)
 
