@@ -1,78 +1,77 @@
 ---
 title: 在AEM Forms工作流程中設定Json資料元素的值
 seo-title: 在AEM Forms工作流程中設定Json資料元素的值
-description: 當「最適化表單」在「工作流程」中路由至不同的使AEM用者時，將會要求根據審閱表單的人員隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
-seo-description: 當「最適化表單」在「工作流程」中路由至不同的使AEM用者時，將會要求根據審閱表單的人員隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
+description: 在AEM工作流程中，將適用性表單轉送給不同的使用者時，會要求根據檢閱表單的人員來隱藏或停用特定欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 可以根據此隱藏欄位的值業務規則來隱藏/停用適當的面板或欄位。
+seo-description: 在AEM工作流程中，將適用性表單轉送給不同的使用者時，會要求根據檢閱表單的人員來隱藏或停用特定欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 可以根據此隱藏欄位的值業務規則來隱藏/停用適當的面板或欄位。
 uuid: a4ea6aef-a799-49e5-9682-3fa3b7a442fb
-feature: Adaptive Forms
+feature: 適用性表單
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.4
 discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '765'
 ht-degree: 1%
 
 ---
 
 
-# 在AEM Forms工作流程中設定JSON資料元素的值{#setting-value-of-json-data-element-in-aem-forms-workflow}
+# 在AEM Forms工作流程{#setting-value-of-json-data-element-in-aem-forms-workflow}中設定JSON資料元素的值
 
-當「最適化表單」在「工作流程」中路由至不同的使AEM用者時，將會要求根據審閱表單的人員隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 根據此隱藏欄位的值商業規則，可編寫以隱藏／停用適當的面板或欄位。
+在AEM工作流程中，將適用性表單轉送給不同的使用者時，會要求根據檢閱表單的人員來隱藏或停用特定欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 可以根據此隱藏欄位的值業務規則來隱藏/停用適當的面板或欄位。
 
-![設定json資料中的元素值](assets/capture-3.gif)
+![在json資料中設定元素的值](assets/capture-3.gif)
 
-在AEM FormsOSGI-我們必須編寫自訂OSGi搭售，以設定JSON資料元素的值。 本教學課程提供此套件。
+在AEM Forms OSGI — 我們必須撰寫自訂OSGi套件組合以設定JSON資料元素的值。 此套件組合是本教學課程內容的一部分。
 
-我們在工作流中使用「流程AEM步驟」。 我們將「在Json中設定元素值」OSGi套裝與此程式步驟產生關聯。
+我們在AEM工作流程中使用「處理步驟」。 我們將「在Json中設定元素的值」OSGi套件組合與此程式步驟建立關聯。
 
-我們需要將兩個引數傳遞到設定值包。 第一個引數是元素的路徑，其值需要設定。 第二個引數是需要設定的值。
+我們需要將兩個引數傳遞至設定值套件組合。 第一個引數是需要設定其值的元素的路徑。 第二個引數是需要設定的值。
 
-例如，在上述螢幕擷取中，我們將intialStep元素的值設為&quot;N&quot;
+例如，在上方的螢幕擷取中，我們將intialStep元素的值設為「N」
 
 afData.afUnboundData.data.initialStep,N
 
-在我們的範例中，我們有一個簡單的「離開時間請求」表單。 此表單的發起者會填入其姓名和截止日期。 提交時，此表單會前往「管理員」進行審核。 當管理員開啟表格時，第一個面板上的欄位會停用。 這是因為我們已將JSON資料中初始步驟元素的值設為N。
+在我們的範例中，我們提供簡單的「請求休息時間」表單。 此表單的發起人會填入其姓名和日期。 提交後，此表單會轉給「管理員」審核。 管理員開啟表單時，第一個面板上的欄位會停用。 因為我們已將JSON資料中初始步驟元素的值設為N。
 
-根據初始步驟欄位值，我們會顯示「經理」可核准或拒絕請求的核准者面板。
+根據初始步驟欄位值，我們會顯示「管理員」可在其中批准或拒絕請求的核准者面板。
 
-請檢視針對「初始步驟」設定的規則。 我們會根據initialStep欄位的值，使用「表單資料模型」擷取使用者詳細資料，並填入適當欄位，並隱藏／停用適當的面板。
+請查看針對「初始步驟」設定的規則。 我們會根據initialStep欄位的值，使用「表單資料模型」來擷取使用者詳細資訊，並填入適當欄位並隱藏/停用適當的面板。
 
-若要在您的本機系統上部署資產：
+若要在本機系統上部署資產：
 
-* [下載並部署DevelopingWiteServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [下載並部署DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。這是自訂OSGI搭售，可讓您在提交的json資料中設定元素的值。
+* [下載並部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。這是自訂OSGI套件組合，可讓您在提交的json資料中設定元素的值。
 
 * [下載並解壓縮zip檔案的內容](assets/set-value-jsondata.zip)
-   * 將瀏覽器指向[軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-      * 匯入並安裝SetValueOfElementInJSONDataWorkflow.zip。此套件包含與表單相關聯的範例工作流程模型和表單資料模型。
+   * 將瀏覽器指向[包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+      * 導入和安裝SetValueOfElementInJSONDataWorkflow.zip。此包包含與表單關聯的示例工作流模型和表單資料模型。
 
-* 將您的瀏覽器指向[Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 按一下「建立」 |檔案上傳
+* 將瀏覽器指向[Forms和Documents](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 按一下建立 |檔案上傳
 * 上傳TimeOffRequestForm.zip檔案
-   **此表格是使用AEM Forms6.4建立的。請確定您使用的是AEM Forms6.4或更高版本**
+   **此表單是使用AEM Forms 6.4建置的。請確定您使用AEM Forms 6.4或更新版本**
 * 開啟[form](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
-* 填寫開始和結束日期並提交表單。
-* 前往[「收件箱」](http://localhost:4502/aem/inbox)
+* 填寫「開始日期」和「結束日期」並提交表單。
+* 前往[&quot;收件匣&quot;](http://localhost:4502/aem/inbox)
 * 開啟與任務關聯的表單。
 * 請注意，第一個面板中的欄位已停用。
-* 請注意，現在會顯示要核准或拒絕請求的面板。
+* 請注意，系統現在會顯示核准或拒絕請求的面板。
 
 >[!NOTE]
 >
->由於我們使用用戶配置檔案預填充最適化表單，因此請確保管理員[用戶配置檔案資訊](http://localhost:4502/security/users.html)。 請至少確定您已設定「名字」、「姓氏」和「電子郵件」欄位值。
->您可以透過啟用com.aemforms.setvalue.core.SetValueInJson [from here](http://localhost:4502/system/console/slinglog)的記錄器來啟用除錯記錄
+>由於我們使用使用者設定檔預先填入適用性表單，請確定管理員[使用者設定檔資訊](http://localhost:4502/security/users.html)。 請至少確定您已設定FirstName、LastName和Email欄位值。
+>您可以在此](http://localhost:4502/system/console/slinglog)啟用com.aemforms.setvalue.core.SetValueInJson [的記錄器，以啟用除錯記錄
 
 >[!NOTE]
 >
->OSGi套件目前支援一次設定一個元素值的功能，以設定JSON資料中的資料元素值。 如果要設定多個元素值，則需要多次使用流程步驟。
+>用於設定JSON資料中資料元素值的OSGi套件目前支援一次設定一個元素值的功能。 如果要設定多個元素值，則需要多次使用處理步驟。
 >
->請確定「最適化表單」提交選項中的「資料檔案」路徑已設為「Data.xml」。 這是因為處理步驟中的代碼在裝載資料夾下查找名為Data.xml的檔案。
+>確認適用性表單提交選項中的資料檔案路徑已設為「Data.xml」。 這是因為處理步驟中的程式碼會在裝載資料夾下尋找名為Data.xml的檔案。
