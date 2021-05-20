@@ -1,7 +1,7 @@
 ---
 title: 自訂摘要元件
-description: 擴充摘要步驟元件，加入導覽至封裝中下一個表單的功能。
-feature: Adaptive Forms
+description: 擴充摘要步驟元件，加入導覽至套件中下一個表單的功能。
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,13 +9,12 @@ activity: implement
 version: 6.4,6.5
 kt: 6894
 thumbnail: 6894.jpg
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '180'
 ht-degree: 2%
 
 ---
@@ -23,22 +22,22 @@ ht-degree: 2%
 
 # 自訂摘要步驟
 
-摘要步驟元件可用來顯示表單提交的摘要，並提供下載已簽署表單的連結。 摘要步驟通常會放在表單的最後一個面板中。
-為此使用案例，我們根據現成的「摘要」元件建立了新元件，並擴充了包含自訂clientlib的功能。
+摘要步驟元件用於顯示表單提交摘要，其中包含下載已簽署表單的連結。 摘要步驟通常會放在表單的最後一個面板中。
+為此使用案例，我們根據現成可用的「摘要」元件建立了新元件，並擴充了包含自訂clientlib的功能。
 
-此元件由標籤「簽署多個表單」來識別
+此元件由標籤「簽名多個表單」標識
 
-以下螢幕擷取畫面顯示建立的新元件，以顯示簽署儀式完成時的訊息
+下列螢幕擷取畫面顯示建立的新元件，以在簽署儀式結束時顯示訊息
 
 ![摘要元件](assets/summary.PNG)
 
-新元件是以現成可用的摘要元件為基礎。
+新元件以現成可用的摘要元件為基礎。
 ![component-prop](assets/componentprop.PNG)
 
-我們新增了一個按鈕，可導覽至下一個表單進行簽署
+我們已新增按鈕，可導覽至下一個表單以進行簽署
 ![template-code](assets/template-code.PNG)
 
-summary.jsp具有以下代碼。 它引用了類別id **getnextform**&#x200B;所標識的客戶端庫
+summary.jsp的代碼如下。 它參考類別id **getnextform**&#x200B;所識別的用戶端程式庫
 
 ```java
 <%--
@@ -51,6 +50,6 @@ summary.jsp具有以下代碼。 它引用了類別id **getnextform**&#x200B;所
 
 ## 資產
 
-自訂摘要元件可從此處下載[](assets/custom-summary-step.zip)
+自訂摘要元件可從此處[下載](assets/custom-summary-step.zip)
 
 
