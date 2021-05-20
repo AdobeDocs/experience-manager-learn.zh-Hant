@@ -1,6 +1,6 @@
 ---
 title: 建立內容分析器
-description: 建立包含REST呼叫輸入參數資訊的JSON部件。
+description: 建立JSON部件，其中包含有關REST呼叫輸入參數的資訊。
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 建立Analyzer請求
 
-建立JSON片段，定義：
+建立定義的JSON片段：
 
 + 輸入
 + 參數
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 此[表單參數的詳細資訊可在此處獲得。](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
 
-下列范常式式碼會針對所有Office 365檔案類型產生JSON片段。
+下面列出的示例代碼為所有Office 365文檔類型生成JSON片段。
 
 ```java
 package com.aemforms.doccloud.core.impl;
