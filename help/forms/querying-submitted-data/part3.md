@@ -1,32 +1,31 @@
 ---
-title: AEM Forms與JSON結構描述與資料[Part3]
-seo-title: AEM Forms與JSON結構描述與資料[Part3]
-description: 多部分教學課程，可引導您逐步瞭解使用JSON結構描述建立最適化表單及查詢提交資料的相關步驟。
-seo-description: 多部分教學課程，可引導您逐步瞭解使用JSON結構描述建立最適化表單及查詢提交資料的相關步驟。
-feature: Adaptive Forms
+title: AEM Forms搭配JSON結構描述和資料[Part3]
+seo-title: AEM Forms搭配JSON結構描述和資料[Part3]
+description: 多部分教學課程，逐步引導您完成使用JSON結構描述建立適用性表單和查詢提交資料的相關步驟。
+seo-description: 多部分教學課程，逐步引導您完成使用JSON結構描述建立適用性表單和查詢提交資料的相關步驟。
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '285'
 ht-degree: 1%
 
 ---
 
 
-# 將JSON結構描述儲存在資料庫{#storing-json-schema-in-database}
+# 在資料庫{#storing-json-schema-in-database}中儲存JSON架構
 
 
-若要能夠查詢已提交的資料，我們需要儲存與已提交表單關聯的JSON結構描述。 JSON結構描述將用於查詢產生器中以建立查詢。
+若要查詢已提交的資料，我們需要儲存與已提交表單相關聯的JSON結構描述。 JSON結構將用於查詢產生器中以建立查詢。
 
-提交最適化表單時，我們會檢查關聯的JSON結構描述是否在資料庫中。 如果JSON結構描述不存在，我們會擷取JSON結構描述並將結構描述儲存在適當的表格中。 我們也會將表單名稱與JSON結構描述關聯。 下列螢幕擷取顯示儲存JSON結構描述的表格。
+提交適用性表單時，我們會檢查相關聯的JSON結構是否在資料庫中。 如果JSON結構不存在，我們會擷取JSON結構並將結構儲存在適當的表格中。 我們也會將表單名稱與JSON結構建立關聯。 以下螢幕擷圖顯示儲存JSON結構描述的表格。
 
 ![jsonschema](assets/jsonschemas.gif)
 
@@ -108,9 +107,9 @@ public String getJSONSchema(String afPath) {
 
 >[!NOTE]
 >
->建立最適化表單時，您可以使用儲存庫中的JSON結構描述，或上傳JSON結構描述。 上述程式碼適用於這兩種情況。
+>建立適用性表單時，您可以使用存放庫中的JSON結構描述，或上傳JSON結構描述。 上述程式碼適用於上述兩種情況。
 
-讀取的模式使用標準JDBC操作儲存在資料庫中。 以下代碼將模式插入資料庫
+使用標準JDBC操作將獲取的架構儲存在資料庫中。 以下代碼將模式插入資料庫中
 
 ```java
 public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
@@ -146,12 +145,12 @@ public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
  }
 ```
 
-總結一下，我們目前已完成下列工作
+總之，我們到目前為止已完成以下工作
 
-* 根據JSON結構描述建立最適化表單
-* 如果表單是在第一次提交時，我們會將與表單關聯的JSON結構描述儲存在資料庫中。
-* 將Adaptive Form的綁定資料儲存在資料庫中。
+* 根據JSON結構建立最適化表單
+* 如果是第一次提交表單時，我們會將與表單相關聯的JSON結構儲存在資料庫中。
+* 我們將適用性表單的系結資料儲存在資料庫中。
 
-接下來的步驟是使用QueryBuilder來顯示要根據JSON結構描述進行搜尋的欄位
+接下來的步驟是使用QueryBuilder來顯示要根據JSON結構來搜尋的欄位
 
 
