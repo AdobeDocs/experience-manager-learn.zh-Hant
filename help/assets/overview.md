@@ -1,8 +1,7 @@
 ---
 title: AEM Assets 影片和教學課程
-description: Adobe Experience Manager Assets的視訊和教學課程集
-sub-product: 資產，動態媒體
-translation-type: tm+mt
+description: Adobe Experience Manager Assets的影片和教學課程系列
+sub-product: assets, dynamic media
 source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
 source-wordcount: '230'
@@ -13,31 +12,31 @@ ht-degree: 14%
 
 # 概覽 {#overview}
 
-Adobe Experience Manager Assets是AEM Platform上的數位資產管理工具，可讓使用者在網路儲存庫中建立、管理及共用其數位資產（影像、視訊、檔案和音訊剪輯）。 本使用指南包含有關AEM Assets許多功能的影片和教學課程。
+Adobe Experience Manager Assets是AEM Platform上的數位資產管理工具，可讓使用者在網頁型存放庫中建立、管理及共用其數位資產（影像、影片、檔案和音訊剪輯）。 本使用手冊包含有關AEM Assets許多功能的影片和教學課程。
 
 ## 新增功能
 
-* **[建立關聯與取消關聯（視訊）](./authoring/relate-unrelate.md)**
+* **[相關與不相關（影片）](./authoring/relate-unrelate.md)**
 
-   *瞭解如何在AEM中建立和管理資產之間的關係*
+   *了解如何在AEM中建立和管理資產之間的關係*
 
-* **[發佈資產（視訊）](./sharing/publish.md)**
+* **[發佈資產（影片）](./sharing/publish.md)**
 
-   *瞭解從AEM Author發佈資產到AEM Publish的進階和進階*
+   *了解從AEM Author發佈資產到AEM Publish的簡略說明*
 
-* **[浮水印（視訊）](./advanced/watermarks.md)**
+* **[水印（視頻）](./advanced/watermarks.md)**
 
-   *瞭解如何在AEM中以雲端服務的形式加上資產轉譯水印*
+   *了解如何在AEM as aCloud Service中為資產轉譯加上浮水印*
 
-* **[基線權限（視訊）](./configuring/baseline-permissions.md)**
+* **[基線權限（影片）](./configuring/baseline-permissions.md)**
 
-   *瞭解如何及為何重要，以基準權限設定AEM Assets*
+   *了解如何使用基線權限設定AEM Assets，以及為何這麼重要*
 
-* **[自動啟動工作流程（視訊）](./configuring/auto-start-workflows.md)**
+* **[自動開始工作流程（影片）](./configuring/auto-start-workflows.md)**
 
-   *探索如何在已上傳或重新處理的資產上自動叫用AEM工作流程*
+   *探索如何對已上傳或重新處理的資產自動叫用AEM工作流程*
 
-## 員工挑選
+## 員工精選
 
 <table>
 <td>
@@ -63,27 +62,27 @@ Adobe Experience Manager Assets是AEM Platform上的數位資產管理工具，�
       </a>
    </div>
    <p>
-      <em>深入瞭解資產的使用方式</em>
+      <em>深入了解資產的使用方式</em>
    <p>
 </td>
 <td>
    <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-   <img alt="動態媒體概觀" src="./assets/overview/dynamic-media.png" />
+   <img alt="Dynamic Media概述" src="./assets/overview/dynamic-media.png" />
    </a>
    <div>
       <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-      <strong>動態媒體概觀</strong>
+      <strong>Dynamic Media概述</strong>
       </a>
    </div>
    <p>
-      <em>使用動態媒體管理和存取媒體內容</em>
+      <em>使用Dynamic Media管理及存取媒體內容</em>
    <p>
 </td>
 </table>
 
 ## 其他資源
 
-* [Experience League —— 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Assets檔案](Https://helpx.adobe.com/tw/experience-manager/6-5/assets/user-guide.html)
 * [AEM as a Cloud Service 教學課程](/help/cloud-service/overview.md)
 * [AEM Sites 教學課程](/help/sites/overview.md)
