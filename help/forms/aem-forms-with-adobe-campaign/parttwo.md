@@ -1,41 +1,40 @@
 ---
-title: 在最適化表單提交上建立促銷活動描述檔
-seo-title: 在最適化表單提交上建立促銷活動描述檔
-description: 本文將說明在Adobe Campaign Standard建立適應性表單提交描述檔所需的步驟。 此程式使用自訂提交機制來處理最適化表單提交。
-seo-description: 本文將說明在Adobe Campaign Standard建立適應性表單提交描述檔所需的步驟。 此程式使用自訂提交機制來處理最適化表單提交。
+title: 在適用性表單提交上建立促銷活動設定檔
+seo-title: 在適用性表單提交上建立促銷活動設定檔
+description: 本文將說明在Adobe Campaign Standard中針對適用性表單提交建立設定檔所需的步驟。 此程式可運用自訂提交機制來處理最適化表單提交作業。
+seo-description: 本文將說明在Adobe Campaign Standard中針對適用性表單提交建立設定檔所需的步驟。 此程式可運用自訂提交機制來處理最適化表單提交作業。
 uuid: f3cb7b3c-1a1c-49eb-9447-a9e52c675244
-feature: Adaptive Forms, Form Data Model
+feature: 適用性Forms，表單資料模型
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 46ec4136-4898-4b01-86bb-ac638a29b242
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
 
-# 在最適化表單提交上建立促銷活動描述檔{#creating-campaign-profile-on-adaptive-form-submission}
+# 在適用性表單提交上建立促銷活動設定檔{#creating-campaign-profile-on-adaptive-form-submission}
 
-本文將說明在Adobe Campaign Standard建立適應性表單提交描述檔所需的步驟。 此程式使用自訂提交機制來處理最適化表單提交。
+本文將說明在Adobe Campaign Standard中針對適用性表單提交建立設定檔所需的步驟。 此程式可運用自訂提交機制來處理最適化表單提交作業。
 
-本教學課程將逐步說明如何針對最適化表單提交建立促銷活動描述檔。 要完成此使用案例，我們需要執行下列操作
+本教學課程將逐步說明在適用性表單提交上建立Campaign設定檔的步驟。 若要完成此使用案例，我們必須執行下列作業
 
-* 建立服AEM務(CampaignService)，以使用REST API建立Adobe Campaign Standard設定檔
+* 建立AEM Service(CampaignService)以使用REST API建立Adobe Campaign Standard設定檔
 * 建立自訂提交動作以處理最適化表單提交
 * 叫用CampaignService的createProfile方法
 
 ## 建立AEM服務{#create-aem-service}
 
-建立服AEM務以建立Adobe Campaign配置檔案。 此服AEM務將從OSGI配置中獲取Adobe Campaign證書。 一旦獲得促銷活動憑證，就會產生存取Token，並使用存取Token HTTP Post呼叫，在Adobe Campaign建立描述檔。 以下是建立描述檔的程式碼。
+建立AEM服務以建立Adobe Campaign設定檔。 此AEM服務會從OSGI設定中擷取Adobe Campaign憑證。 取得促銷活動認證後，即會產生存取權杖，並使用存取權杖HTTP Post呼叫，在Adobe Campaign中建立設定檔。 以下是建立設定檔的程式碼。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -248,11 +247,11 @@ return null;
 }
 ```
 
-## 自訂提交{#custom-submit}
+## 自定義提交{#custom-submit}
 
-建立自訂的提交處理常式，以處理Adaptive Form的提交。 在此自訂提交處理常式中，我們會呼叫CampaignService的createProfile方法。 createProfile方法接受表示需要建立的配置檔案的JSONObject。
+建立自訂提交處理常式，以處理最適化表單提交。 在此自訂提交處理常式中，我們將呼叫CampaignService的createProfile方法。 createProfile方法接受表示需要建立的配置檔案的JSONObject。
 
-若要進一步瞭解AEM Forms的自訂提交處理常式，請遵循此[link](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
+若要進一步了解AEM Forms中的自訂提交處理常式，請依照此[link](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)操作
 
 以下是自訂提交中的程式碼
 
@@ -269,11 +268,11 @@ String pkey = addNewProfile.createProfile(profile);
 
 ## 測試解決方案{#test-the-solution}
 
-一旦我們定義了服務和自訂提交動作，就可以測試我們的解決方案。 若要測試解決方案，請執行下列步驟
+定義服務和自訂提交動作後，即可測試我們的解決方案。 要測試解決方案，請執行以下步驟
 
 
-* [請確定您已依照此處所述的步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [使用包管理器導入最適化表單和自定義提交處理程式](assets/create-acs-profile-on-af-submission.zip)。此包包含配置為提交到自定義提交操作的最適化表單。
+* [請確定您已依照此處所述的步驟操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [使用套件管理器匯入最適化表單和自訂提交處理常式](assets/create-acs-profile-on-af-submission.zip)。此套件包含設定為提交至自訂提交動作的最適化表單。
 * 預覽[form](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * 填寫所有欄位並提交
 * 將在您的ACS實例中建立新配置檔案
