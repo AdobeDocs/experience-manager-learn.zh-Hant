@@ -1,30 +1,29 @@
 ---
-title: 瞭解驗證支AEM援
-description: '統一檢視所支援的驗證（偶爾也是授權）機制AEM。 '
+title: 了解AEM中的驗證支援
+description: 'AEM支援的驗證（有時也是授權）機制的整合檢視。 '
 version: 6.3, 6.4, 6.5
-feature: Users and Groups
+feature: 使用者和群組
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
-topic: Architecture
+topic: 架構
 role: Architect
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '142'
 ht-degree: 5%
 
 ---
 
 
-# 瞭解6.x中的AEM驗證支援
+# 了解AEM 6.x中的驗證支援
 
-統一檢視所支援的驗證（偶爾也是授權）機制AEM。
+AEM支援的驗證（有時也是授權）機制的整合檢視。
 
-*下表說明使用者如何驗證AEM。*
+*下表說明使用者如何驗證至AEM。*
 
 <table>
     <tbody>
@@ -35,7 +34,7 @@ ht-degree: 5%
             <td><strong>AEM 6.5</strong></td>
         </tr>
         <tr>
-            <td><strong>作AEM為標準身分提供者</strong></td>
+            <td><strong>AEM作為標準身分提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -53,13 +52,13 @@ ht-degree: 5%
             <td>✔</td>
         </tr>
         <tr>
-            <td>基於令牌（帶<a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝令牌</a>）</td>
+            <td>以代號為基礎（w/ <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝代號</a>）</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>非系統AEM作為標準身分提供者</strong></td>
+            <td><strong>非AEM系統作為標準身份提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -96,4 +95,4 @@ ht-degree: 5%
     </tbody>
 </table>
 
-⁕*透過社群專案提供，但不直接受Adobe支援。*
+⁕ *透過社群專案提供，但不直接受Adobe支援。*
