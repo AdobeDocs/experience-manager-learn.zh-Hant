@@ -12,9 +12,9 @@ thumbnail: 25907.jpg
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: 6b4b9d7039b7b1c60ed1a7e5ec4ed42250499cec
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1430'
 ht-degree: 1%
 
 ---
@@ -145,22 +145,20 @@ Adobe I/OCloud Manager增效模組可讓aio CLI透過`aio asset-compute`命令�
 
 ### 設定Adobe I/OCLI身份驗證
 
-為了讓Adobe I/OCLI與Cloud Manager通訊，必須在Adobe I/O控制台中建立Cloud Manager整合，並取得憑證才能成功驗證。
-
->[!VIDEO](https://video.tv.adobe.com/v/35094?quality=12&learn=on)
+為了讓Adobe I/OCLI與Cloud Manager通訊，必須在Adobe I/O控制台](https://github.com/adobe/aio-cli-plugin-cloudmanager)中建立[ Cloud Manager整合，並取得憑證以成功驗證。
 
 1. 登入[console.adobe.io](https://console.adobe.io)
 1. 確認您所在的組織（包括要連線的Cloud Manager產品）在Adobe組織切換器中處於作用中狀態
 1. 建立新程式或開啟現有的[Adobe I/O程式](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
    + Adobe I/O主控台程式只是整合的組織群組，根據您管理整合的方式建立或使用現有程式
-   + 如果建立新項目，如果出現提示，請選擇「空項目」（與從模板建立）
+   + 如果建立新專案，如果出現提示，請選取「空白專案」(與&quot;從模板建立&quot;)
    + Adobe I/O主控台程式是與Cloud Manager程式不同的概念
 1. 使用「開發人員 — Cloud Service」設定檔建立新的Cloud Manager API整合
 1. 取得服務帳戶(JWT)憑證，需要填入Adobe I/OCLI的[config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication)
 1. 將`config.json`檔案載入Adobe I/OCLI
-   + `$ aio config:set jwt-auth PATH_TO_CONFIG_JSON_FILE --file --json`
+   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager PATH_TO_CONFIG_JSON_FILE --file --json`
 1. 將`private.key`檔案載入Adobe I/OCLI
-   + `$ aio config:set jwt-auth.jwt_private_key PATH_TO_PRIVATE_KEY_FILE --file`
+   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
 通過Adobe I/OCLI開始[執行Cloud Manager的命令](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands)。
 
