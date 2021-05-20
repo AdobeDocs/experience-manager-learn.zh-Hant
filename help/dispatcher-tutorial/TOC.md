@@ -9,7 +9,6 @@ activity: develop, understand
 kt: 2233
 index: y
 team: TM
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
 source-wordcount: '37'
@@ -21,6 +20,6 @@ ht-degree: 72%
 # AEM Dispatcher Cache 教學課程{#dispatcher-tutorial}
 
 + [概覽](overview.md)
-+ [1 —— 概念、圖樣和反圖樣](chapter-1.md)
-+ [2 —— 基礎架構模式](chapter-2.md)
-+ [3 —— 進階快取主題](chapter-3.md)
++ [1 — 概念、模式和反模式](chapter-1.md)
++ [2 — 基礎架構模式](chapter-2.md)
++ [3 — 進階快取主題](chapter-3.md)
