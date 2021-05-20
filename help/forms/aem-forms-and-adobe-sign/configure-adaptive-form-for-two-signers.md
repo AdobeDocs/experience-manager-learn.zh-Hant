@@ -1,31 +1,30 @@
 ---
-title: 與2位簽署者的租賃合約
-description: 與2位簽署者簽訂租賃合約。 視訊將說明為配置具有2位簽署者的最適化表單所需的各種步驟。
-feature: Adaptive Forms,Adobe Sign
+title: 與2位簽署者簽訂租賃合約
+description: 與2位簽署者簽訂租賃合約。 影片說明需執行哪些步驟，才能與2位簽署者一起設定最適化表單。
+feature: 適用性Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39294.jpg
 kt: 6071
-topic: Development
+topic: 開發
 role: Administrator
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 7%
+source-wordcount: '63'
+ht-degree: 6%
 
 ---
 
-# 與2位簽署者的租賃合約
+# 與2位簽署者簽訂租賃合約
 
-視訊將說明為配置具有2位簽署者的最適化表單所需的各種步驟。
+影片說明需執行哪些步驟，才能與2位簽署者一起設定最適化表單。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39294/?quality=9&learn=on)
 
-可從下列連結下載與此視訊相關的資產
+可從下列連結下載與此影片相關的資產
 
 * [最適化表單範本](assets/tenancy-agreement-template.zip)
-* [租賃合約表](assets/rental-agreement-form.zip)
+* [租賃協定表](assets/rental-agreement-form.zip)
