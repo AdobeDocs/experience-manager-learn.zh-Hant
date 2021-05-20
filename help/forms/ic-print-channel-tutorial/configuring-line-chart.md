@@ -1,10 +1,10 @@
 ---
-title: 為您的第一個互動式通信文檔配置折線圖
-seo-title: 為您的第一個互動式通信文檔配置折線圖
-description: 這是多步驟教學課程的第8部分，可協助您建立列印頻道的第一個互動式通訊檔案。 在本部分，我們將添加折線圖來顯示帳戶餘額。
-seo-description: 這是多步驟教學課程的第8部分，可協助您建立列印頻道的第一個互動式通訊檔案。 在本部分，我們將添加折線圖來顯示帳戶餘額。
+title: 為第一個互動式通信文檔配置線圖
+seo-title: 為第一個互動式通信文檔配置線圖
+description: 這是建立打印管道第一個互動式通訊檔案的多步驟教學課程的第8部分。 在本部分，我們將添加一個折線圖來顯示帳戶餘額。
+seo-description: 這是建立打印管道第一個互動式通訊檔案的多步驟教學課程的第8部分。 在本部分，我們將添加一個折線圖來顯示帳戶餘額。
 uuid: a4394874-a080-4b6a-a3eb-ffc71504919d
-feature: Interactive Communication
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,31 +13,30 @@ version: 6.4,6.5
 discoiquuid: 9110e5c6-50ee-4c3e-a779-b680ff49ef23
 kt: 5993
 thumbnail: 22386.jpg
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 2%
+source-wordcount: '173'
+ht-degree: 1%
 
 ---
 
 
-# 為第一個互動式通信文檔{#configuring-line-chart-for-your-first-interactive-communication-document}配置折線圖
+# 配置第一個互動式通信文檔{#configuring-line-chart-for-your-first-interactive-communication-document}的線圖
 
-在本部分，我們將添加折線圖來顯示帳戶餘額。
+在本部分，我們將添加一個折線圖來顯示帳戶餘額。
 
-登入AEM Forms並導覽至「Adobe Experience Manager>Forms>Forms與檔案」。
+登入AEM Forms並導覽至「Adobe Experience Manager > Forms > Forms與檔案」。
 
-開啟401KStatementPrint檔案夾。
+開啟401KStatementPrint資料夾。
 
-以編輯模式開啟401KStatementPrint。
+在編輯模式下開啟401KStatementPrint。
 
-從AEM Forms6.4開始，使用各種圖表顯示資料十分簡單。 我們將使用折線圖來顯示每年的餘額。
+從AEM Forms 6.4開始，使用各種圖表類型可輕鬆顯示資料。 我們將使用折線圖來按年顯示餘額。
 
-以下視訊會逐步帶您瞭解新增和設定圖表元件的步驟
+以下影片會逐步帶您了解新增和設定圖表元件的步驟
 
 >[!VIDEO](https://video.tv.adobe.com/v/22386/?quality=9&learn=on)
 
