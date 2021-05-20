@@ -1,50 +1,49 @@
 ---
-title: 使用ACS配置檔案預填充自適應表單
-seo-title: 使用ACS配置檔案預填充自適應表單
-description: 使用ACS配置檔案預填充自適應Forms
-seo-description: 使用ACS配置檔案預填充自適應Forms
+title: 使用ACS設定檔預先填寫最適化表單
+seo-title: 使用ACS設定檔預先填寫最適化表單
+description: 使用ACS設定檔預先填入適用性Forms
+seo-description: 使用ACS設定檔預先填入適用性Forms
 uuid: 9bff6f61-96e9-40d4-a977-a80008cfbeee
-feature: Adaptive Forms, Form Data Model
+feature: 適用性Forms，表單資料模型
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: a2ffcb84-4dd8-45e5-8e2c-0da74202851b
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
 
-# 使用ACS配置檔案{#prefilling-adaptive-form-using-acs-profile}預填充自適應表單
+# 使用ACS設定檔{#prefilling-adaptive-form-using-acs-profile}預填最適化表單
 
-在本部分，我們將用從ACS獲取的配置檔案資訊預填充自適應表單。 AEM Forms具備預先填寫調適性表單的強大功能。
+在本部分，我們將使用從ACS獲取的配置檔案資訊預填適用性表單。 AEM Forms具備預先填寫最適化表單的強大功能。
 
-若要進一步瞭解預先填入最適化表單，請閱讀本[教學課程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
+若要進一步了解預先填寫最適化表單，請參閱本[教學課程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
 
-要通過從ACS中提取資料預填充Adaptive Form，我們假定ACS中存在與登錄用戶具有相同電子郵件的配AEM置檔案。 例如，如果登入者的電子郵件ID為csimms@adobe.com,AEM我們預期會在電子郵件為csimms@adobe.com的ACS中找到描述檔。
+若要從ACS擷取資料，以預先填入適用性表單，我們會假設ACS中有與登入AEM使用者的電子郵件相同的設定檔。 例如，如果登入AEM之人員的電子郵件ID為csimms@adobe.com，我們會在電子郵件為csimms@adobe.com的ACS中找到設定檔。
 
-使用REST API從ACS擷取描述檔資訊時，需執行下列步驟
+使用REST API從ACS擷取設定檔資訊時需執行下列步驟
 
-* 生成JWT
+* 產生JWT
 * Exchange JWT for Access Token
-* 對ACS進行REST呼叫，並透過電子郵件擷取描述檔
-* 使用描述檔資訊建立XML檔案
-* 傳回XML檔案的InputStream，由AEM Forms使用
+* 對ACS發出REST呼叫，並透過電子郵件擷取設定檔
+* 使用配置檔案資訊生成XML文檔
+* 傳回將由AEM Forms使用的XML檔案的InputStream
 
 ![prefillservice](assets/prefillserviceaf.gif)
 
 將預填服務與最適化表單關聯
 
-以下是從ACS中讀取和返回配置檔案資訊的代碼。
+以下是從ACS擷取及傳回設定檔資訊的程式碼。
 
-在第68行中，我們會擷取使用者的電子AEM郵件ID。 通過向Adobe Campaign Standard發出REST呼叫，可以獲取配置檔案詳細資訊。 從提取的配置檔案詳細資訊中，XML文檔以AEM Forms理解的方式構建。 本檔案的輸入流將返回供AEM Forms使用。
+在第68行中，我們會擷取AEM使用者的電子郵件ID。 對Adobe Campaign Standard發出REST呼叫，即可擷取設定檔詳細資料。 從擷取的設定檔詳細資訊中，XML檔案的建構方式可讓AEM Forms了解。 此檔案的輸入資料流會由AEM Forms傳回以供使用。
 
 ```java
 package aemforms.campaign.core;
@@ -236,10 +235,10 @@ return "Pre Fill Forms Using Campaign Profile";
 }
 ```
 
-若要在您的系統上運作，請依照下列指示進行：
+若要讓此程式在您的系統上正常運作，請遵循下列指示：
 
-* [請確定您已依照此處所述的步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [使用包管理器將示例AEM自適應表單導入](assets/pre-fill-af-from-campaign.zip)
-* 請確定您與電子郵件IDAEM由Adobe Campaign的設定檔共用的使用者登入。 例如，如果用戶的電子郵件ID是AEMjohndoe@adobe.com，則您需要在電子郵件為johndoe@adobe.com的ACS中擁有配置檔案。
-* [預覽表格](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled)。
+* [請確定您已依照此處所述的步驟操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [使用套件管理器將範例適用性表單匯入AEM](assets/pre-fill-af-from-campaign.zip)
+* 請務必與電子郵件ID已由Adobe Campaign中的設定檔共用的使用者登入AEM。 例如，如果AEM使用者的電子郵件ID為johndoe@adobe.com，則您必須在電子郵件為johndoe@adobe.com的ACS中擁有設定檔。
+* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled)。
 
