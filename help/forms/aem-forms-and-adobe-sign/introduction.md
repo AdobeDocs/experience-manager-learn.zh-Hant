@@ -1,38 +1,37 @@
 ---
-title: 使用AEM Forms和Adobe Sign
-description: Adobe Sign和AEM Forms可讓複雜的交易自動化，並將合法電子簽名納入流暢的數位體驗。
-feature: Adaptive Forms,Adobe Sign
+title: 將AEM Forms與Adobe Sign搭配使用
+description: Adobe Sign和AEM Forms可讓複雜的交易自動化，並納入合法的電子簽名，以提供順暢的數位體驗。
+feature: 適用性Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '163'
 ht-degree: 1%
 
 ---
 
-# 使用AEM Forms和Adobe Sign
+# 將AEM Forms與Adobe Sign搭配使用
 
-Adobe Sign為調適性表單提供電子簽名工作流程。 電子簽名可改善處理法律、銷售、薪資、人力資源管理等領域檔案的工作流程。
-AEM Forms和Adobe Sign的整合將讓您能夠：
+Adobe Sign可啟用最適化表單的電子簽名工作流程。 電子簽名改進了處理法律、銷售、工資、人力資源管理等許多領域的文檔的工作流。
+AEM Forms與Adobe Sign的整合可讓您執行下列作業
 
-* 使用Adaptive Forms捕獲資料並呈現自動生成的記錄文檔(DoR)以用於簽名
-* 根據您的PDF範本建立最適化Forms。 將資料與pdf範本合併，並為簽名呈現相同的內容
-* 使用「簽署檔案」工作流程元件傳送檔案以進行簽署
+* 使用適用性Forms來擷取資料並呈現自動產生的記錄檔案(DoR)以供簽署
+* 根據PDF範本建立最適化Forms。 將資料與PDF範本合併，並提供給簽名
+* 使用「簽署檔案」工作流程元件傳送要簽署的檔案
 
 ## 必備條件
 
-您需要以下各項才能將Adobe Sign與AEM Forms整合：
+若要整合Adobe Sign與AEM Forms，您需要下列項目：
 
 * 啟用SSL的AEM Forms伺服器
 * 有效的Adobe Sign開發人員帳戶。
-* Adobe SignAPI應用程式
-* Adobe SignAPI應用程式的認證（用戶端ID和用戶端密碼）。
+* Adobe Sign API應用程式
+* Adobe Sign API應用程式的憑證（用戶端ID和用戶端密碼）。
 
