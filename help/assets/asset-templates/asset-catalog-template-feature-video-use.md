@@ -1,31 +1,30 @@
 ---
-title: 將資產目錄與商AEM務和InDesign Server一起使用
-description: AEM6.4目錄增強功能可讓您使用資產範本和InDesign Server來建AEM立目錄頁面。  使用者可以使用InDesign範本建立目錄頁面，並將產品屬性對應至可編輯的欄位，這些欄位稍後可用來建立不同產品的類似頁面。
+title: 搭配AEM Commerce和InDesign Server使用Asset Catalog
+description: AEM 6.4目錄增強功能提供使用AEM資產範本和InDesign Server建立目錄頁面的功能。  使用者可以使用InDesign範本建立目錄頁面，並將產品屬性對應至可編輯的欄位，這些欄位稍後可用來為不同產品建立類似頁面。
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: 內容管理
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
 
 
-# 將資產目錄與商AEM務和InDesign Server一起使用{#using-asset-catalog-with-aem-commerce-and-indesign-server}
+# 搭配AEM Commerce和InDesign Server使用資產目錄{#using-asset-catalog-with-aem-commerce-and-indesign-server}
 
-AEM6.4目錄增強功能可讓您使用資產範本和InDesign Server來建AEM立目錄頁面。  使用者可以使用InDesign範本建立目錄頁面，並將產品屬性對應至可編輯的欄位，這些欄位稍後可用來建立不同產品的類似頁面。
+AEM 6.4目錄增強功能提供使用AEM資產範本和InDesign Server建立目錄頁面的功能。  使用者可以使用InDesign範本建立目錄頁面，並將產品屬性對應至可編輯的欄位，這些欄位稍後可用來為不同產品建立類似頁面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22540/)
 
 >[!NOTE]
 >
->在將\.indd檔案上載到AEM Assets之前，您的InDesign伺服器應該已運行。
+>您的InDesign伺服器應在上傳\.indd檔案至AEM Assets之前執行。
 
-* 創意使用者可以使用InDesign檔案來標籤內容。 InDesign檔案上傳到AEM Assets時，帶有標籤的內容將被標識為可編輯欄位。
-* 使用者可以使用\.indd檔案建立目錄頁面。 \.indd檔案中的標籤內容將可做為「可編輯」欄位，讓內容作者能夠修改這些欄位的內容。
-* 如果產品屬性的欄位類型符合，則可將其對應至「可編輯欄位」。
-* 您可輕鬆建立類似產品的目錄頁面。
+* 創意使用者可以使用InDesign檔案標籤內容。 InDesign檔案上傳至AEM Assets時，會識別為可編輯欄位。
+* 使用者可使用\.indd檔案建立「目錄」頁面。 \.indd檔案中的已標籤內容可作為「可編輯」欄位使用，從而使內容作者能夠修改這些欄位的內容。
+* 如果產品屬性的欄位類型相符，則可將其對應至可編輯欄位。
+* 可輕鬆建立類似產品的目錄頁面。
 * 能夠將不同的目錄頁面合併為單一PDF或\.indd檔案
