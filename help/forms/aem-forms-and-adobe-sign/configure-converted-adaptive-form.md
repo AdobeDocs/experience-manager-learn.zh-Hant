@@ -1,29 +1,28 @@
 ---
-title: 配置轉換的最適化表單
-description: 配置轉換的最適化表單
-feature: Adaptive Forms
+title: 設定轉換的最適化表單
+description: 設定轉換的最適化表單
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39574.jpg
 kt: 6126
-topic: Development
+topic: 開發
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '77'
 ht-degree: 3%
 
 ---
 
-# 配置轉換的最適化表單
+# 設定轉換的最適化表單
 
-將PDF表格轉換為最適化表格後，您通常需要提供一些有意義的標題，而且可能需要重新排列某些欄位。 此外，表單也必須設定為使用Adobe Sign整合，以提供就地簽署體驗。
+將PDF表單轉換為最適化表單後，您通常需要提供一些有意義的標題，而且您可能需要重新排列某些欄位。 表單也需要設定為使用Adobe Sign整合來就地簽署體驗。
 
-以下影片說明設定表單以提供就地簽署體驗所需的步驟
+以下影片說明為就地簽署體驗設定表單所需的步驟
 
 >[!VIDEO](https://video.tv.adobe.com/v/39574/?quality=9&learn=on)
 
