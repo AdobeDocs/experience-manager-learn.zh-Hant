@@ -1,32 +1,31 @@
 ---
-title: 通過合併資料生成打印渠道文檔
-seo-title: 通過合併資料生成打印渠道文檔
-description: 瞭解如何透過合併輸入串流中包含的資料來產生列印頻道檔案
-seo-description: 瞭解如何透過合併輸入串流中包含的資料來產生列印頻道檔案
-feature: Interactive Communication
+title: 通過合併資料生成打印通道文檔
+seo-title: 通過合併資料生成打印通道文檔
+description: 了解如何合併輸入流中包含的資料，以產生列印通道檔案
+seo-description: 了解如何合併輸入流中包含的資料，以產生列印通道檔案
+feature: 互動式通訊
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: 開發
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '504'
 ht-degree: 1%
 
 ---
 
-# 使用提交的資料產生列印渠道檔案
+# 使用提交的資料生成打印渠道文檔
 
-列印渠道檔案通常是透過表單資料模型的get服務從後端資料來源擷取資料而產生。 在某些情況下，您可能需要使用提供的資料產生列印渠道檔案。 例如——客戶填寫受益人表單的變更，而您可能想要使用提交表單的資料產生列印渠道檔案。 若要完成此使用案例，必須遵循下列步驟
+列印管道檔案通常是透過表單資料模型的get服務，從後端資料來源擷取資料而產生。 在某些情況下，您可能需要使用提供的資料產生列印管道檔案。 例如 — 客戶填寫受益表單的更改，並且您可能希望使用已提交表單中的資料生成打印渠道文檔。 若要完成此使用案例，需遵循下列步驟
 
 ## 建立預填服務
 
-服務名稱&quot;ccm-print-test&quot;將用於訪問此服務。 一旦定義了此預填充服務，您就可以在servlet或工作流進程步驟實施中訪問此服務，以生成打印渠道文檔。
+服務名「ccm-print-test」將用於訪問此服務。 定義此預填服務後，您可以在servlet或工作流進程步驟實施中訪問此服務，以生成打印通道文檔。
 
 ```java
 import java.io.InputStream;
@@ -68,15 +67,15 @@ public PrefillData getPrefillData(DataOptions options) throws FormsException {
 
 ### 建立WorkflowProcess實施
 
-如下所示，workflowProcess實施代碼片段。當「工作流」中的進程步驟與AEM此實施關聯時，將執行此代碼。 此實施需要3個進程引數，說明如下：
+如下所示，將執行workflowProcess實施代碼片段。當AEM Workflow中的進程步驟與此實施相關聯時，將執行此代碼。 此實作需要3個程式引數，說明如下：
 
-* 配置最適化表單時指定的DataFile路徑的名稱
-* 列印渠道範本的名稱
-* 產生的列印渠道檔案的名稱
+* 配置適用性表單時指定的DataFile路徑名稱
+* 打印管道模板的名稱
+* 生成的打印通道文檔的名稱
 
-第98行——由於自適應表單基於表單資料模型，因此提取駐留在afBoundData資料節點中的資料。
-第128行——設定「資料選項」服務名。 記下服務名。 它必須與先前程式碼清單第45行中傳回的名稱相符。
-第135行——使用PrintChannel物件的演算方法產生檔案
+第98行 — 由於適用性表單是以表單資料模型為基礎，因此會擷取駐留在afBoundData資料之資料節點中的資料。
+第128行 — 設定了資料選項服務名。 記下服務名稱。 它必須與先前程式碼清單第45行中傳回的名稱相符。
+第135行 — 使用PrintChannel對象的渲染方法生成文檔
 
 
 ```java
@@ -163,24 +162,24 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
             }
 ```
 
-若要在您的伺服器上測試此項，請依照下列步驟進行：
+若要在您的伺服器上測試，請執行下列步驟：
 
-* [設定Day CQ Mail服務。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) 這是傳送電子郵件時所需的，因為檔案是以附件形式產生的。
-* [部署使用服務使用者套件進行開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* 請確定您已在Apache Sling Service User Mapper Service Configuration中新增下列項目
+* [設定Day CQ Mail Service。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) 這是傳送電子郵件時所需的，因為檔案是以附件的形式產生。
+* [使用服務用戶包部署開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* 請務必在Apache Sling Service使用者對應程式服務設定中新增下列項目
 * **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
 * [將與本文相關的資產下載並解壓縮至您的檔案系統](assets/prefillservice.zip)
-* [使用包管理器導入以AEM下包](http://localhost:4502/crx/packmgr/index.jsp)
+* [使用AEM套件管理器匯入下列套件](http://localhost:4502/crx/packmgr/index.jsp)
    1. beneficiaryconfirmationic.zip
    2. changeofbeneficiaryform.zip
    3. generatebeneficiaryworkflow.zip
-* [使用Felix Web AEM Console部署下列內容](http://localhost:4502/system/console/bundles)
+* [使用AEM Felix Web Console部署下列項目](http://localhost:4502/system/console/bundles)
 
    * GenerateIC.GenerateIC.core-1.0-SNAPSHOT.jar。 此套件包含本文提及的程式碼。
 
-* [Open ChangeOfBenertForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
-* 請確定最適化表單已設定為提交至AEM工作流程，如下所示
+* [開啟ChangeOfVentairForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
+* 確認最適化表單已設定為提交至AEM Workflow，如下所示
    ![影像](assets/generateic.PNG)
-* [設定工作流程模型。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)請確定流程步驟和傳送電子郵件元件的設定符合您的環境
-* [預覽ChangeOfBenertForm。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 填寫部分詳細資訊並提交
-* 工作流程應被調用，而IC打印渠道文檔應作為附件發送給在發送電子郵件元件中指定的收件人
+* [配置工作流模型。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)請確定程式步驟和傳送電子郵件元件的設定是根據您的環境所設定
+* [預覽ChangeOfVentailForm。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 填寫一些詳細資訊並提交
+* 該工作流應被調用，IC打印通道文檔應作為附件發送到在發送電子郵件元件中指定的收件人
