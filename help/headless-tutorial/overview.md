@@ -1,63 +1,62 @@
 ---
-title: 無AEM頭教學課程
-description: 一系列教學課程，說明如何將Adobe Experience Manager當做無頭CMS。
-feature: Content Fragments, APIs
-topic: Headless, Content Management
+title: AEM Headless教學課程
+description: 有關如何使用Adobe Experience Manager as a Headless CMS的教學課程系列。
+feature: 內容片段、API
+topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 5%
+source-wordcount: '436'
+ht-degree: 4%
 
 ---
 
 
-# 無AEM頭教學課程
+# AEM Headless教學課程
 
-Adobe Experience Manager有多種選項可定義無頭端點，並將其內容傳送為JSON。 使用實際操作教學課程來探索如何使用各種選項並選擇適合您的選項。
+Adobe Experience Manager有多個選項可定義無頭端點並將其內容傳送為JSON。 使用實作教學課程，探索如何使用各種選項，並選擇適合您的選項。
 
-## GraphQL AEM API教學課程
+## AEM GraphQL API教學課程
 
-內AEM容片段的GraphQL API
-支援無頭CMS藍本，其中外部用戶端應用程式使用中管理的內容來呈現體AEM驗。
+AEM GraphQL API（適用於內容片段）
+支援無頭式CMS案例，外部用戶端應用程式會使用AEM中管理的內容來呈現體驗。
 
-現代化的內容傳送API是Javascript前端應用程式效率與效能的關鍵。 使用REST API會帶來挑戰：
+現代化的內容傳送API是基於Javascript前端應用程式效率與效能的關鍵。 使用REST API會帶來下列挑戰：
 
-* 一次提取一個對象的大量請求
-* 通常是「超量傳送」內容，這表示應用程式所接收的內容超出其需求
+* 一次擷取一個物件的請求數量很多
+* 通常是「過度傳送」內容，這表示應用程式的接收量超出其需求
 
-為克服這些挑戰，GraphQL提供了基於查詢的API，允許客戶僅查詢AEM所需的內容，並使用單個API調用接收。
+為克服這些難題，GraphQL提供了基於查詢的API，允許客戶僅查詢AEM所需的內容，並使用單一API呼叫接收。
 
-* 在[GraphQL APIsAEM快速入門教程](./graphql/overview.md)中瞭解AEM如何使用GraphQL API
+* 在[AEM GraphQL API快速入門教學課程](./graphql/overview.md)中，了解如何使用AEM GraphQL API
 
-## Token型驗證教學課程
+## Token式驗證教學課程
 
-公AEM開各種HTTP端點，這些端點可以無頭方式互動，從GraphQL、內AEM容服務到資產HTTP API。 通常，這些無頭消費者可能需要驗證AEM才能存取受保護的內容或動作。 為方便使用，支AEM援來自外部應用程式、服務或系統的HTTP要求的Token型驗證。
+AEM會公開各種HTTP端點，可以無周邊方式互動，從GraphQL、AEM Content Services到Assets HTTP API。 這些無頭消費者通常需要向AEM驗證，才能存取受保護的內容或動作。 為方便執行此作業，AEM支援來自外部應用程式、服務或系統之HTTP要求的權杖式驗證。
 
-* 從[](./authentication/overview.md)的「驗證AEM為外部應用程式教學課程的Cloud Service」中，瞭解如何透過HTTPAEM驗證為
+* 了解如何使用[從外部應用程式教學課程](./authentication/overview.md)驗證AEM作為Cloud Service中的存取權杖，透過HTTP驗證AEM
 
-## 內容AEM服務教學課程
+## AEM Content Services教學課程
 
-Content ServicesAEM運用傳統AEM的頁面來構成無頭REST API端點，而元件則定義AEM或參考要在這些端點上公開的內容。
+AEM內容服務運用傳統AEM頁面來撰寫無頭REST API端點，並定義或參照要在這些端點上公開的內容。
 
-Content AEM Services允許使用與在AEM Sites製作網頁時相同的內容抽象化來定義這些HTTP API的內容和結構。 使用「頁AEM面」和「元AEM件」可讓行銷人員快速編寫和更新可支援任何應用程式的彈性JSON API。
+AEM Content Services允許使用與在AEM Sites中製作網頁時所用的相同內容抽象化功能，來定義這些HTTP API的內容和結構。 使用AEM頁面和AEM元件，行銷人員就能快速撰寫和更新彈性的JSON API，為任何應用程式提供強大功能。
 
-* 在[開始使AEM用內容服務教學課程&lt;a1/AEM>中瞭解如何使用內容服務](./content-services/overview.md)
+* [AEM內容服務快速入門教學課程](./content-services/overview.md)中的如何使用AEM內容服務
 
-## GraphAEMQL與內AEM容服務
+## AEM GraphQL與AEM內容服務的比較
 
-|  | GraphQL AEM API | 內AEM容服務 |
+|  | AEM GraphQL API | AEM Content Services |
 |--------------------------------|:-----------------|:---------------------|
-| 架構定義 | 結構化內容片段模型 | 元AEM件 |
-| 內容 | 內容片段 | 元AEM件 |
-| 內容探索 | 按GraphQL查詢 | 依頁AEM面 |
+| 架構定義 | 結構化內容片段模型 | AEM元件 |
+| 內容 | 內容片段 | AEM元件 |
+| 內容探索 | 按GraphQL查詢 | 依AEM頁面 |
 | 傳送格式 | GraphQL JSON | AEM ComponentExporter JSON |
 
 ## 其他實用的教學課程
 
-其他AEM無頭概念教學課程包括：
+其他與無頭概念相關的AEM教學課程包括：
 
 * [AEM SPA Editor and Angular 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
 * [AEM SPA Editor and React 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
