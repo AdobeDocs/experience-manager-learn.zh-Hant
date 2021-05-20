@@ -1,32 +1,31 @@
 ---
-title: 在Dynamic Media使用視訊播AEM放器
-description: AEMDynamic Media視訊播放器過去依賴Flash執行時期來支援案頭用戶端和瀏覽器上的可調式視訊串流，現在在快閃內容串流上變得更為積極。 隨著HLS（Apple的HTTP即時串流視訊傳送通訊協定）的推出，內容現在可以串流化，而不需仰賴Flash。
-sub-product: 動態媒體
-feature: Video Profiles
+title: 在AEM Dynamic Media中使用視訊播放器
+description: AEM Dynamic Media視訊播放器過去依賴Flash執行階段來支援案頭用戶端上的最適化視訊串流，而現在則更積極採用flash內容串流。 隨著HLS（Apple的HTTP即時串流視訊傳送通訊協定）的推出，內容現在無需仰賴Flash即可串流。
+sub-product: dynamic-media
+feature: 視訊設定檔
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: 內容管理
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '218'
 ht-degree: 7%
 
 ---
 
 
-# 在Dynamic Media使AEM用視頻播放器{#using-the-video-player-in-aem-dynamic-media}
+# 在AEM Dynamic Media中使用視訊播放器{#using-the-video-player-in-aem-dynamic-media}
 
-AEMDynamic Media視訊播放器過去依賴Flash執行時期來支援案頭用戶端和瀏覽器上的可調式視訊串流，現在在快閃內容串流上變得更為積極。 隨著HLS（Apple的HTTP即時串流視訊傳送通訊協定）的推出，內容現在可以串流化，而不需仰賴Flash。
+AEM Dynamic Media視訊播放器過去依賴Flash執行階段來支援案頭用戶端上的最適化視訊串流，而現在則更積極採用flash內容串流。 隨著HLS（Apple的HTTP即時串流視訊傳送通訊協定）的推出，內容現在無需仰賴Flash即可串流。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
-## 快速瞭解非Flash視訊播放器{#quick-look-into-non-flash-video-player}
+## 快速了解非Flash視訊播放器{#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
-HLS瀏覽器支援如下：針對不支援的瀏覽器，我們會後援至漸進式視訊傳送
+針對不支援的瀏覽器，我們會回復至漸進式視訊傳送，HLS瀏覽器支援如下
 
 <table> 
  <thead> 
@@ -59,7 +58,7 @@ HLS瀏覽器支援如下：針對不支援的瀏覽器，我們會後援至漸�
   </tr>
   <tr> 
    <td> <p>桌面</p> </td>
-   <td> <p>Chrome</p> </td>
+   <td> <p>鉻黃</p> </td>
    <td> <p>HLS視訊串流</p> </td>
   </tr>
   <tr> 
