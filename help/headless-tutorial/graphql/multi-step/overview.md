@@ -1,6 +1,6 @@
 ---
-title: 開始使用無AEM頭實作教學課程- GraphQL
-description: 本端對端教學課程說明如何使用GraphQL API來建立和公開AEM內容。
+title: AEM無頭式實作教學課程快速入門 — GraphQL
+description: 端對端教學課程，說明如何使用AEM GraphQL API來建置和公開內容。
 sub-product: Sites
 topics: headless
 version: cloud-service
@@ -10,11 +10,10 @@ audience: developer
 mini-toc-levels: 1
 kt: 6678
 thumbnail: 328618.jpg
-feature: 內容片段， GraphQL API
-topic: 無頭、內容管理
+feature: 內容片段、GraphQL API
+topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
 workflow-type: tm+mt
 source-wordcount: '202'
@@ -23,26 +22,26 @@ ht-degree: 0%
 ---
 
 
-# 開始使用無AEM頭- GraphQL
+# AEM無周邊功能快速入門 — GraphQL
 
-本端對端教學課程說明如何在無頭CMS案例中，使用AEMGraphQL API建立和公開內容，並由外部應用程式使用。
+端對端教學課程，說明如何在無周邊CMS情境下，使用AEM GraphQL API建置和公開內容，並供外部應用程式使用。
 
-本教學課程探AEM討如何使用GraphQL API和無頭功能來強化外部應用程式中呈現的體驗。
+本教學課程探討如何使用AEM GraphQL API和無周邊功能，強化外部應用程式中呈現的體驗。
 
 本教學課程將涵蓋下列主題：
 
-* 建立內容片段模型，以在
-* 使用新建立的內容片段模型來製作參與者內容片段
-* 探索如何使用整合的GraphiQL開AEM發工具查詢中的內容片段。
-* 從范AEM例WKND GraphQL React應用程式使用GraphQL API
-* 使用片段參照執行進階資料模型
+* 建立內容片段模型以在AEM中建立貢獻者模型
+* 使用新建立的內容片段模型製作貢獻者內容片段
+* 探索如何使用整合的GraphiQL開發工具查詢AEM中的內容片段。
+* 從範例WKND GraphQL React應用程式中使用AEM GraphQL API
+* 使用片段參考執行進階資料模型
 
 ## 開始吧！
 
-跳AEM入[快速設定](./setup.md)一章，開始GraphQL教程！
+跳至[快速設定](./setup.md)章節，啟動AEM GraphQL教學課程！
 
 ## GitHub專案
 
-原始碼和內容包可在[AEM Guides - WKND GraphQL GitHub Project](https://github.com/adobe/aem-guides-wknd-graphql)中找到。
+[AEM指南 — WKND GraphQL GitHub專案](https://github.com/adobe/aem-guides-wknd-graphql)中提供原始碼和內容套件。
 
-如果您發現教學課程或程式碼有問題，請留下[GitHub問題](https://github.com/adobe/aem-guides-wknd-graphql/issues)。
+若您發現教學課程或程式碼的問題，請保留[ GitHub問題](https://github.com/adobe/aem-guides-wknd-graphql/issues)。
