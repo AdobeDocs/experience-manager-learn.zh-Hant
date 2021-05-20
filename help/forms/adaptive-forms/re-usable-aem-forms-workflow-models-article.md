@@ -1,9 +1,9 @@
 ---
 title: 建立可重複使用的AEM Forms工作流程模型。
 seo-title: 建立可重複使用的AEM Forms工作流程模型。
-description: 獨立於自適應Forms的工作流模型。
-seo-description: 獨立於自適應Forms的工作流模型。
-feature: Workflow
+description: 獨立於適用性Forms的工作流程模型。
+seo-description: 獨立於適用性Forms的工作流程模型。
+feature: 工作流程
 topics: development
 audience: developer
 doc-type: article
@@ -11,39 +11,38 @@ activity: setup
 version: 6.5
 uuid: 3a082743-3e56-42f4-a44b-24fa34165926
 discoiquuid: 9f18c314-39d1-4c82-b1bc-d905ea472451
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 1%
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
 
-# 建立可重複使用的AEM Forms工作流模型{#create-re-usable-aem-forms-workflow-models}
+# 建立可重複使用的AEM Forms工作流程模型{#create-re-usable-aem-forms-workflow-models}
 
-從AEM Forms6.5版開始，我們現在可以建立未系結至特定最適化表單的工作流程模型。 有了這項功能，您現在可以建立一個工作流程模型，以便在不同的調適性表單提交時呼叫。 有了這項功能，您就可以擁有一般工作流程來處理所有調適性表單提交，以供審核和核准。
+從AEM Forms 6.5版開始，我們現在可以建立不系結至特定適用性表單的工作流程模型。 透過此功能，您現在可以建立一個工作流程模型，以便在不同的最適化表單提交時叫用。 透過此功能，您可以擁有一般工作流程，處理所有最適化表單提交以供審核和核准。
 
-若要設計此類工作流程，請執行下列步驟
+要設計此類工作流，請執行以下步驟
 
-1. 登入AEM至
-1. 將瀏覽器指向[工作流程模型](http://localhost:4502/libs/cq/workflow/admin/console/content/models.html)
-1. 按一下「建立」 |建立模型以新增工作流程模型
-1. 為工作流模型提供適當的名稱和標題，然後按一下「完成」(Done)
+1. 登入AEM
+1. 將瀏覽器指向[工作流模型](http://localhost:4502/libs/cq/workflow/admin/console/content/models.html)
+1. 按一下建立 |建立模型以添加工作流模型
+1. 為工作流模型提供適當的名稱和標題，然後按一下完成
 1. 在編輯模式下開啟新建立的模型
-1. 將Assign Task元件拖放到您的工作流模型上
-1. 開啟Assign Task元件的配置屬性
-1. 「Forms」和「文檔」頁籤
-1. 選擇「類型」(Type)-「最適化表單」(Adaptive Form)或「只讀」(Read-Only Adaptive Form)。
+1. 將「分配任務」元件拖放到工作流模型中
+1. 開啟分配任務元件的配置屬性
+1. 索引標籤至Forms和檔案索引標籤
+1. 選取「類型 — 適用性表單」或「唯讀適用性表單」。
 
 有3種方式可指定表單路徑
 
-1. 以絕對路徑提供——這表示工作流程將與最適化表單緊密結合。 這不是我們想要的
-1. **提交至工作流** -這表示提交最適化表單時，工作流引擎將從提交的資料擷取表單名稱。這是需要選取的選項
-1. 可在變數中的路徑使用——這表示將從工作流程變數中挑選最適化表單
-下列螢幕擷取畫面顯示您需要選擇正確的選項，以從最適化表單中解除耦合工作流程
+1. 以絕對路徑提供 — 這表示工作流程將與最適化表單緊密結合。 這不是我們想要的
+1. **提交至工作流程**  — 這表示提交最適化表單時，工作流程引擎會從提交的資料中擷取表單名稱。這是需要選取的選項
+1. 可在變數中的路徑使用 — 這表示系統會從工作流程變數中擷取最適化表單
+以下螢幕擷取畫面顯示您需要選擇的正確選項，以從最適化表單中解除耦合工作流程
 
-![工作流模型](assets/workflomodel.PNG)
+![工作流程模型](assets/workflomodel.PNG)
