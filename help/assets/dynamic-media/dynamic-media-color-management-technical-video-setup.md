@@ -1,36 +1,35 @@
 ---
-title: 瞭解色彩管理與AEMDynamic Media
-description: 在此影片中，我們探索「Dynamic Media色彩管理」，以及如何使用它來提供AEM Assets的色彩校正預覽功能。
-sub-product: 動態媒體
-feature: Image Profiles, Video Profiles
+title: 了解AEM Dynamic Media的色彩管理
+description: 本影片將介紹Dynamic Media色彩管理，以及如何使用它來提供AEM Assets適用的色彩校正預覽功能。
+sub-product: dynamic-media
+feature: 影像設定檔、視訊設定檔
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: 內容管理
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '328'
 ht-degree: 14%
 
 ---
 
 
-# 瞭解使用AEMDynamic Media的色彩管理{#understanding-color-management-with-aem-dynamic-media}
+# 了解AEM Dynamic Media的色彩管理{#understanding-color-management-with-aem-dynamic-media}
 
-在此影片中，我們探索「Dynamic Media色彩管理」，以及如何使用它來提供AEM Assets的色彩校正預覽功能。
+本影片將介紹Dynamic Media色彩管理，以及如何使用它來提供AEM Assets適用的色彩校正預覽功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
 
 >[!NOTE]
 >
->[啟用Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) MediainAEM以使用此功能。
+>[啟用Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Media AEM以使用此功能。
 
-此功能適用於6.AEM1和6.2版的功能套件。
+AEM 6.1和6.2版本為Feature Pack提供此功能。
 
-## 色彩管理配置節點{#xml-template-for-the-color-management-configuration-node}的XML模板
+## 顏色管理配置節點{#xml-template-for-the-color-management-configuration-node}的XML模板
 
-以下是「色彩管理」設定節點的XML範本。 此XML範本可複製至開發專AEM案，並以專案適當的組態來設定。
+以下是「顏色管理」配置節點的XML模板。 此XML範本可複製至AEM開發專案，並使用適合專案的設定進行設定。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -86,43 +85,43 @@ ht-degree: 14%
 />
 ```
 
-### 預設Adobe色彩描述檔清單列於{#list-of-default-adobe-color-profiles-are-listed-below}下方
+### 預設Adobe顏色配置檔案的清單列在{#list-of-default-adobe-color-profiles-are-listed-below}下
 
 | 名稱 | 色彩空間 | 說明 |
 | ------------------- | ---------- | ------------------------------------- |
-| AdobeRGB | RGB | Adobe RGB(1998) |
+| AdobeRGB | RGB | Adobe RGB市（1998年） |
 | AppleRGB | RGB | Apple RGB |
 | CIERGB | RGB | CIE RGB |
-| CobatedFogra27 | CMYK | 塗覆FOGRA27(ISO 12647-2:2004) |
-| CobatedFogra39 | CMYK | 塗覆FOGRA39(ISO 12647-2:2004) |
+| CobatedFogra27 | CMYK | 塗層FOGRA27(ISO 12647-2:2004) |
+| CobatedFogra39 | CMYK | 塗層FOGRA39(ISO 12647-2:2004) |
 | CobatedGraCol | CMYK | 塗層GRACoL 2006(ISO 12647-2:2004) |
 | ColorMatchRGB | RGB | ColorMatch RGB |
-| EuropeISOCoated | CMYK | 歐洲ISO塗層FOGRA27 |
-| EuroscaleCoobed | CMYK | Euroscale Coopted v2 |
-| EuroscaleUncoated | CMYK | Euroscale Uncoupted v2 |
-| JapanColorCooverd | CMYK | Japan Color 2001 Coupted |
-| JapanColorSeppare | CMYK | 《日本彩色2002報》 |
-| JapanColorUncoated | CMYK | 2001年日本彩色無塗層 |
-| JapanColorWebCooved | CMYK | 日本Color 2003 Web Copted |
-| JapanWebCoapted | CMYK | Japan Web Coopted(Ad) |
-| NewsprintSNAP2007 | CMYK | 美國新聞用紙(SNAP 2007) |
-| NTSC | RGB | NTSC(1953) |
+| 歐洲ISOC已處理 | CMYK | 歐洲ISO塗層FOGRA27 |
+| EuroscaleCobated | CMYK | 塗有V2的歐洲標準 |
+| EuroscaleUncobated | CMYK | 歐洲標準無塗層v2 |
+| JapanColorCobated | CMYK | 2001年日本塗料 |
+| JapanColorSpeable | CMYK | 《2002年日本彩色報》 |
+| JapanColorUncobated | CMYK | 2001年日本顏色無塗層 |
+| JapanColorWebCobated | CMYK | 日本彩色2003網版 |
+| JapanWebCobated | CMYK | Japan Web Cobated（廣告） |
+| 新聞紙SNAP2007 | CMYK | 美國新聞紙(SNAP 2007) |
+| NTSC | RGB | NTSC（1953年） |
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhoto RGB |
-| PS4Default | CMYK | Photoshop4預設CMYK |
-| PS5Default | CMYK | Photoshop5預設CMYK |
-| 張紙塗布 | CMYK | 美國張紙塗布v2 |
-| 張紙未塗覆 | CMYK | 美國張紙未塗覆v2 |
+| PS4Default | CMYK | Photoshop 4預設CMYK |
+| PS5Default | CMYK | Photoshop 5預設CMYK |
+| 張紙塗層 | CMYK | 美國鈑金件塗層v2 |
+| 鈑金件未塗覆 | CMYK | 美國鈑金未塗層v2 |
 | SMPTE | RGB | SMPTE-C |
 | sRGB | RGB sRGB | IEC61966-2.1 |
-| UncovedFogra29 | CMYK | 未塗覆的FOGRA29(ISO 12647-2:2004) |
-| WebCoated | CMYK | 美國網衣(SWOP)v2 |
-| WebCoatedFogra28 | CMYK | 網頁塗層FOGRA28(ISO 12647-2:2004) |
-| WebCoatedGrade3 | CMYK | 塗網SWOP 2006三級紙 |
-| WebCobatedGrade5 | CMYK | 塗網SWOP 2006五級紙 |
-| WebUncoated | CMYK | U.S. Web Uncoved v2 |
+| 無塗層Fogra29 | CMYK | 無塗層FOGRA29(ISO 12647-2:2004) |
+| WebCobated | CMYK | 美國塗層網板(SWOP)v2 |
+| WebCobatedFogra28 | CMYK | Web Cobated FOGRA28(ISO 12647-2:2004) |
+| WebCobatedGrade3 | CMYK | SWOP 2006三級紙 |
+| WebCobatedGrade5 | CMYK | SWOP 2006五級紙 |
+| WebUncobated | CMYK | 美國網路未塗層v2 |
 | 寬色域RGB | RGB | 寬色域RGB |
 
 ## 其他資源{#additional-resources}
 
-* [配置Dynamic Media色彩管理](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
+* [設定Dynamic Media色彩管理](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
