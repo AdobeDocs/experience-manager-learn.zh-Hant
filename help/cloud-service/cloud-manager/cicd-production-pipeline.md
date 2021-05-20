@@ -1,7 +1,7 @@
 ---
-title: 使用Adobe雲管理器- CI/CD生產管道
-description: 'CI/CD Production Pipeline用於透過Stage建立程式碼並部署至生產環境，以縮短實現價值的時間。 CI/CD Production Pipeline配置定義將啟動管線的觸發器、控制生產部署和效能測試參數的參數。 '
-sub-product: 雲管理員
+title: 使用AdobeCloud Manager - CI/CD生產管道
+description: 'CI/CD生產管道可用來透過Stage建置程式碼並部署至生產環境，縮短創造價值的時間。 CI/CD生產管道設定會定義將啟動管道的觸發器、控制生產部署的參數以及效能測試參數。 '
+sub-product: cloud-manager
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -12,32 +12,31 @@ thumbnail: 26317.jpg
 topic: 架構
 role: Architect, Developer, Administrator
 level: Beginner
-translation-type: tm+mt
 source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '179'
+ht-degree: 2%
 
 ---
 
 
-# 使用Adobe雲管理器- CI/CD生產管道
+# 使用AdobeCloud Manager - CI/CD生產管道
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_prodpipeline"
 >title="CI/CD生產管道"
->abstract="CI/CD Production Pipeline配置定義將啟動管線的觸發器、控制生產部署和效能測試參數的參數。"
+>abstract="CI/CD生產管道設定會定義將啟動管道的觸發器、控制生產部署的參數以及效能測試參數。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-process" text="部署程式碼"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-production-phase" text="部署至生產階段"
 
 ## 設定
 
-[CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html)配置定義將啟動管線的觸發器、控制生產部署和效能測試參數的參數。
+[CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html)配置定義將啟動管道的觸發器、控制生產部署和效能測試參數的參數。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314/?quality=12&learn=on)
 
-### 管線執行
+### 管道執行
 
-[CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html)用於通過Stage構建代碼並將代碼部署到生產環境，從而縮短了實現價值的時間。
+[CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html)用於透過Stage建置程式碼並部署至生產環境，縮短創造價值的時間。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317/?quality=12&learn=on)
