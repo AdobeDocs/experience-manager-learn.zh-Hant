@@ -1,38 +1,37 @@
 ---
 title: 收件匣自訂
 description: 新增自訂欄以顯示其他工作流程資料
-feature: Adaptive Forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 1%
+source-wordcount: '309'
+ht-degree: 0%
 
 ---
 
 
 # 新增自訂欄
 
-若要在收件匣中顯示工作流程資料，我們需要在工作流程中定義並填入變數。 必須將變數值設定後，才能將任務指派給使用者。 為了搶先一步，我們提供了可部署在您伺服器上的範例工作AEM流程。
+若要在收件匣中顯示工作流程資料，我們需要定義並填入工作流程中的變數。 必須先設定變數的值，才能將任務指派給使用者。 為了搶先一步，我們提供了可部署在AEM伺服器上的範例工作流程。
 
-* [登入AEM至](http://localhost:4502/crx/de/index.jsp)
+* [登入AEM](http://localhost:4502/crx/de/index.jsp)
 * [匯入審核工作流程](assets/review-workflow.zip)
 * [檢閱工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/reviewworkflow.html)
 
-此工作流定義了兩個變數（isBonded和income），其值是使用set變數元件設定的。 這些變數將作為要添加到收件箱的列AEM可用
+此工作流程有兩個已定義的變數（isFribed和income），其值是使用設定的變數元件來設定。 這些變數將可作為欄供新增至AEM收件匣
 
 ## 建立服務
 
-對於每個需要顯示在收件箱中的列，我們需要編寫服務。 下列服務可讓我們新增欄來顯示isBringed變數的值
+對於需要在收件箱中顯示的每一列，我們都需要編寫服務。 下列服務可讓我們新增欄，以顯示isFribed變數的值
 
 ```java
 import com.adobe.cq.inbox.ui.column.Column;
@@ -76,23 +75,23 @@ return isMarried(inboxItem);
 
 >[!NOTE]
 >
->您必須將AEM6.5.5 Uber.jar加入專案中，才能使用上述程式碼
+>您必須在專案中納入AEM 6.5.5 Uber.jar，前述程式碼才能運作
 
 ![uber-jar](assets/uber-jar.PNG)
 
 ## 在伺服器上測試
 
-* [登入網AEM頁主控台](http://localhost:4502/system/console/bundles)
+* [登入AEM Web Console](http://localhost:4502/system/console/bundles)
 * [部署和啟動收件箱自定義包](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
-* [開啟您的收件匣](http://localhost:4502/aem/inbox)
-* 按一下&#x200B;_建立_&#x200B;按鈕旁的&#x200B;_清單檢視_&#x200B;圖示，以開啟管理控制項
-* 將「已婚」欄新增至「收件匣」並儲存您的變更
-* [前往FormsAndDocuments UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [選擇「檔案」(File)「從創](assets/snap-form.zip) 建菜單上載」( _Uploadfrom_ Createmenu)，導入示例 __ 格式
-* [預覽表格](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* 選擇&#x200B;_婚姻狀態_並提交表單
-   [查看收件匣](http://localhost:4502/aem/inbox)
+* [開啟收件匣](http://localhost:4502/aem/inbox)
+* 按一下&#x200B;_Create_&#x200B;按鈕旁的&#x200B;_清單檢視_&#x200B;圖示，開啟管理控制項
+* 將「已婚」列添加到「收件箱」中並保存更改
+* [轉到FormsAndDocuments UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [通過選擇「檔案」(File)「從](assets/snap-form.zip) 建立」(Createmenu)中 _的「檔案_ 上傳」(Upload __ from)來導入示例表單
+* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
+* 選擇&#x200B;_婚姻狀態_並提交表格
+   [檢視收件匣](http://localhost:4502/aem/inbox)
 
-提交表單會觸發工作流程，並指派工作給「管理員」使用者。 您應該會在「已婚」欄下看到值，如此螢幕擷取畫面中所示
+提交表單會觸發工作流程，並將任務指派給「管理員」使用者。 您應會在「已婚」欄下方看到值，如此螢幕擷取畫面所示
 
 ![已婚人士](assets/married-column.PNG)
