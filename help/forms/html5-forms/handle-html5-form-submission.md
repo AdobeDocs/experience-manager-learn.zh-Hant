@@ -1,7 +1,7 @@
 ---
 title: 處理HTML5表單提交
 description: 建立HTML5表單提交處理常式
-feature: Mobile Forms
+feature: 行動表單
 topics: development
 audience: developer
 doc-type: article
@@ -9,27 +9,26 @@ activity: implement
 version: 6.4,6.5
 kt: 5269
 thumbnail: kt-5269.jpg
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 3%
+source-wordcount: '280'
+ht-degree: 2%
 
 ---
 
 
 # 處理HTML5表單提交
 
-HTML5表格可提交至中代管的ServletAEM。 提交的資料可以作為輸入流在servlet中訪問。 若要送出HTML5表格，您必須使用AEM Forms設計人員在表格範本上新增「HTTP提交按鈕」
+HTML5表單可提交至AEM中托管的servlet。 提交的資料可在servlet中作為輸入流訪問。 若要提交HTML5表單，您需使用AEM Forms Designer在表單範本上新增「HTTP提交按鈕」
 
-## 建立您的提交處理常式
+## 建立提交處理常式
 
-可以建立一個簡單的servlet來處理HTML5表單提交。 然後，可使用下列程式碼擷取提交的資料。 本教學課程提供此[servlet](assets/html5-submit-handler.zip)。 請使用[軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)安裝[servlet](assets/html5-submit-handler.zip)
+可建立簡單的servlet以處理HTML5表單提交。 然後，可使用下列程式碼擷取提交的資料。 本[servlet](assets/html5-submit-handler.zip)已在本教學課程中提供給您。 請使用[套件管理器](http://localhost:4502/crx/packmgr/index.jsp)安裝[servlet](assets/html5-submit-handler.zip)
 
-第9行的程式碼可用來叫用J2EE程式。 如果您要使用程式碼來叫用J2EE程式，請確定您已設定[AdobeLiveCycle用戶端SDK設定](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html)。
+第9行的代碼可用於調用J2EE進程。 如果要使用代碼調用J2EE進程，請確保已配置[AdobeLiveCycle客戶端SDK配置](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html)。
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();
@@ -59,32 +58,32 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 ```
 
 
-## 設定HTML5表單的提交URL
+## 配置HTML5表單的提交URL
 
 ![submit-url](assets/submit-url.PNG)
 
-* 點選xdp並按一下「屬性&#x200B;__->_進階_」
-* 複製http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html，並將它貼在「提交URL」文字欄位中
+* 點選xdp，然後按一下「屬性&#x200B;_->_&#x200B;進階&#x200B;_」_
+* 複製http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html並貼到「提交URL」文字欄位中
 * 按一下&#x200B;_SaveAndClose_&#x200B;按鈕。
 
-### 在排除路徑中新增項目
+### 在排除路徑中新增登入項目
 
 * 導覽至[configMgr](http://localhost:4502/system/console/configMgr)。
-* 搜索&#x200B;_Adobe花崗岩CSRF過濾器_
-* 在「排除的路徑」區段中新增下列項目
+* 搜尋&#x200B;_AdobeGranite CSRF篩選器_
+* 在「排除路徑」區段中新增下列項目
 * _/content/AemFormsSamples/handlehml5formsubmission_
-* 儲存變更
+* 儲存您的變更
 
 ### 測試表單
 
 * 點選xdp範本。
-* 按一下「預覽為HTML」__
-* 在表單中輸入一些資料，然後按一下「提交」
-* 您應看到已提交的資料寫入伺服器的stdout.log檔案
+* 按一下&#x200B;_預覽_->預覽為HTML
+* 在表單中輸入一些資料，然後按一下提交
+* 您應該會看到已提交的資料寫入伺服器的stdout.log檔案中
 
 ### 其他閱讀
 
-此外，建議使用此[文章](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html)，說明如何從HTML5表單提交產生PDF。
+此外，建議您參閱[文章](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html)，以從HTML5表單提交產生PDF。
 
 
 
