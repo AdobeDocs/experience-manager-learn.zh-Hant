@@ -1,6 +1,6 @@
 ---
-title: 開發Asset compute中繼資料工作者
-description: 瞭解如何建立Asset compute中繼資料工作器，以衍生影像資產中最常用的色彩，並將色彩名稱寫回資產的中繼資料AEM。
+title: 開發Asset compute中繼資料背景工作
+description: 了解如何建立Asset compute中繼資料背景工作，該背景工作衍生影像資產中最常使用的顏色，並將顏色名稱寫回AEM中資產的中繼資料。
 feature: asset compute微服務
 topics: metadata, development
 version: cloud-service
@@ -9,10 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: 整合、開發
+topic: 整合，開發
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
 source-wordcount: '1439'
@@ -21,45 +20,45 @@ ht-degree: 1%
 ---
 
 
-# 開發Asset compute中繼資料工作者
+# 開發Asset compute中繼資料背景工作
 
-自訂Asset compute工作XMP者可產生(XML)資料，並傳回AEM至資產並儲存為中繼資料。
+自訂Asset compute背景工作可產生XMP(XML)資料，並傳回至AEM並儲存為資產上的中繼資料。
 
-常見使用案例包括：
+常見的使用案例包括：
 
-+ 與協力廠商系統的整合，例如PIM（產品資訊管理系統），在此系統中，必須擷取額外的中繼資料並儲存在資產上
-+ 與Adobe服務（例如Content and Commerce AI）整合，以運用額外的機器學習屬性來增強資產中繼資料
-+ 從資產的二進位元資料衍生資產的中繼資料，並將其儲存為資產中繼資料，AEM作為Cloud Service
++ 與協力廠商系統的整合，例如PIM（產品資訊管理系統），其中必須擷取額外中繼資料並儲存在資產上
++ 與Adobe服務（例如內容與商務AI）整合，以透過其他機器學習屬性來增強資產中繼資料
++ 從資產的二進位衍生資產的中繼資料，並將其儲存為AEM中的資產中繼資料，作為Cloud Service
 
-## 您將做的事
+## 你將做什麼
 
 >[!VIDEO](https://video.tv.adobe.com/v/327313?quality=12&learn=on)
 
-在本教學課程中，我們將建立Asset compute中繼資料工作器，以衍生影像資產中最常用的色彩，並將色彩名稱寫回資產的中繼資料AEM。 雖然工作者本身是基本的，但本教學課程會使用它來探索如何使用Asset compute工作者將中繼資料寫回AEMCloud Service中的資產。
+在本教學課程中，我們將建立Asset compute中繼資料背景工作，該背景工作衍生影像資產中最常使用的顏色，並將顏色名稱寫回AEM中資產的中繼資料。 雖然背景工作是基本的，但本教學課程會使用它來探索如何使用Asset compute背景工作將中繼資料寫回AEM中的資產，做為Cloud Service。
 
 ## asset compute元資料工作器調用的邏輯流
 
-調用Asset compute元資料工作器與生成工作器](../develop/worker.md)的[二進位格式副本的調用幾乎相同，主要區別是返回類型是XMP(XML)格式副本，其值也寫入到資產的元資料。
+asset compute元資料背景工作的調用與[生成背景工作的二進位格式副本的調用幾乎相同，主要區別是返回類型是XMP(XML)表現，其值也寫入資產的元資料。](../develop/worker.md)
 
-asset compute員工在`renditionCallback(...)`函式中實作Asset computeSDK員工API合約，其概念是：
+asset compute背景工作者會在`renditionCallback(...)`函式中實作Asset computeSDK背景工作API合約，其概念如下：
 
-+ __輸入：__ 資AEM產的原始二進位和處理描述檔參數
-+ __輸出：__ (XMPXML)轉譯會以轉譯的形式持AEM續存留至資產，以及資產的中繼資料
++ __輸入：__ AEM資產的原始二進位和處理設定檔參數
++ __輸出：__ 持續存在至AEM資產的XMP(XML)轉譯，作為轉譯和資產的中繼資料
 
-![asset compute元資料工作器邏輯流](./assets/metadata/logical-flow.png)
+![asset compute元資料工作邏輯流](./assets/metadata/logical-flow.png)
 
-1. AEM Author服務會叫用Asset compute中繼資料工作者，提供資產的&#x200B;__(1a)__&#x200B;原始二進位檔，以及&#x200B;__(1b)__&#x200B;處理設定檔中定義的任何參數。
-1. asset computeSDK協調自訂Asset compute中繼資料工作者的`renditionCallback(...)`功能，根據資產的二進位&#x200B;__(1a)__&#x200B;和任何處理描述檔參數&#x200B;__(1b)__&#x200B;來衍生XMP(XML)轉譯。
-1. asset compute工作者將XMP(XML)表示法保存到`rendition.path`。
-1. 寫入XMP至`rendition.path`的(XML)資料會透過Asset computeSDK傳輸至AEM Author Service，並以&#x200B;__(4a)__&#x200B;文字轉譯和保存至資產中繼資料節點的&#x200B;__(4b)__&#x200B;形式公開。
+1. AEM製作服務會叫用Asset compute中繼資料背景工作，提供資產的&#x200B;__(1a)__&#x200B;原始二進位檔，以及處理設定檔中定義的&#x200B;__(1b)__&#x200B;任何參數。
+1. asset computeSDK會根據資產的二進位&#x200B;__(1a)__&#x200B;和任何處理設定檔參數&#x200B;__(1b)__，協調自訂Asset compute中繼資料背景工作器的`renditionCallback(...)`函式的執行，並衍生XMP(XML)轉譯。
+1. asset compute工作器將XMP(XML)表示保存到`rendition.path`。
+1. 寫入`rendition.path`的XMP(XML)資料會透過Asset computeSDK傳輸至AEM製作服務，並以&#x200B;__(4a)__&#x200B;文字轉譯和保存至資產中繼資料節點的&#x200B;__(4b)__&#x200B;形式公開。
 
 ## 設定manifest.yml{#manifest}
 
-所有Asset compute工作者都必須在[manifest.yml](../develop/manifest.md)中註冊。
+所有Asset compute背景工作都必須在[manifest.yml](../develop/manifest.md)中註冊。
 
-開啟項目的`manifest.yml`並添加一個配置新工作器的工作器條目，在本例中為`metadata-colors`。
+開啟項目的`manifest.yml`並添加配置新工作器的工作器條目（在本例中為`metadata-colors`）。
 
-_記住 `.yml` 對空格很敏感。_
+_記住 `.yml` 會區分大小寫。_
 
 ```
 packages:
@@ -84,17 +83,17 @@ packages:
           memorySize: 512 # in MB   
 ```
 
-`function` 指向在下一步中建立的工 [作器實施](#metadata-worker)。以語義方式為工作者命名（例如，`actions/worker/index.js`可能更好地命名為`actions/rendition-circle/index.js`），如[工作者的URL](#deploy)中所示，並且還確定[工作者的測試套件資料夾名稱](#test)。
+`function` 指向在下一步驟中建立的工 [作器實施](#metadata-worker)。在語義上為工作者命名（例如，`actions/worker/index.js`可能更好地命名為`actions/rendition-circle/index.js`），因為這些名稱顯示在[工作人員的URL](#deploy)中，還確定了[工作人員的測試套裝資料夾名稱](#test)。
 
-`limits`和`require-adobe-auth`是按每個工作者單獨配置的。 在此工作器中，當代碼檢查（可能）大的二進位影像資料時，將分配`512 MB`記憶體。 其他`limits`會被移除，以使用預設值。
+`limits`和`require-adobe-auth`是按工作人員分別配置的。 在此工作器中，當代碼檢查（可能）大型二進位影像資料時，將分配記憶體的`512 MB`。 其他`limits`將被移除以使用預設值。
 
 ## 開發元資料工作器{#metadata-worker}
 
-在Asset compute項目中，為新工作者](#manifest)的`/actions/metadata-colors/index.js`路徑[定義的manifest.yml中建立新的元資料工作者JavaScript檔案
+在Asset compute專案中，為新工作人員](#manifest)，在`/actions/metadata-colors/index.js`的[定義的manifest.yml路徑，建立新的中繼資料背景工作JavaScript檔案
 
 ### 安裝npm模組
 
-安裝此Asset compute工作者將使用的額外npm模組（[@adobe/asset-compute-xmp](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions)、[get-image-colors](https://www.npmjs.com/package/get-image-colors)和[color-namer](https://www.npmjs.com/package/color-namer)）。
+安裝將用於此Asset compute背景工作的額外npm模組([@adobe/asset-compute-xmp](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions)、[get-image-colors](https://www.npmjs.com/package/get-image-colors)和[color-namer](https://www.npmjs.com/package/color-namer))。
 
 ```
 $ npm install @adobe/asset-compute-xmp
@@ -102,9 +101,9 @@ $ npm install get-image-colors
 $ npm install color-namer
 ```
 
-### 中繼資料工作程式碼
+### 中繼資料背景代碼
 
-此工作器外觀與[格式副本生成工作器](../develop/worker.md)非常相似，主要區別在於它將XMP(XML)資料寫入`rendition.path`以保存回AEM。
+此工作器的外觀與[格式副本生成工作器](../develop/worker.md)非常相似，主要區別是它將XMP(XML)資料寫入`rendition.path`以便保存回AEM。
 
 
 ```javascript
@@ -181,18 +180,18 @@ function getColorName(colorsFamily, color) {
 }
 ```
 
-## 在本機執行中繼資料工作器{#development-tool}
+## 在本地運行元資料工作器{#development-tool}
 
-在工作程式碼完成後，就可使用本機Asset compute開發工具來執行。
+工作程式碼完成後，即可使用本機Asset compute開發工具執行。
 
-由於我們的Asset compute項目包含兩個工作程式（前一個[圓轉譯](../develop/worker.md)和此`metadata-colors`工作程式），因此[Asset compute開發工具的](../develop/development-tool.md)配置檔案定義列出了兩個工作程式的執行配置檔案。 第二個配置檔案定義指向新的`metadata-colors`工作器。
+因為我們的Asset compute項目包含兩個工作（前一個[循環格式副本](../develop/worker.md)和此`metadata-colors`工作），所以[Asset compute開發工具的](../develop/development-tool.md)配置檔案定義會列出兩個工作的執行配置檔案。 第二個配置檔案定義指向新的`metadata-colors`工作器。
 
-![XML中繼資料轉譯](./assets/metadata/metadata-rendition.png)
+![XML元資料轉譯](./assets/metadata/metadata-rendition.png)
 
-1. 從Asset compute項目的根
+1. 從Asset compute專案的根目錄
 1. 執行`aio app run`以啟動Asset compute開發工具
-1. 在&#x200B;__選擇檔案……__&#x200B;下拉式清單，挑選[範例影像](../assets/samples/sample-file.jpg)進行處理
-1. 在指向`metadata-colors`工作器的第二個配置檔案定義配置中，當此工作器生成(XML)格式副本時更新XMP`"name": "rendition.xml"`。 或者，可以添加`colorsFamily`參數（支援的值`basic`、`hex`、`html`、`ntc`、`pantone`、`roygbiv`）。
+1. 在&#x200B;__選擇檔案……__&#x200B;下拉式清單，挑選[要處理的範例影像](../assets/samples/sample-file.jpg)
+1. 在指向`metadata-colors`工作器的第二個配置檔案定義配置中，當此工作器生成XMP(XML)格式副本時更新`"name": "rendition.xml"`。 或者，添加`colorsFamily`參數（支援的值`basic`、`hex`、`html`、`ntc`、`pantone`、`roygbiv`）。
 
    ```json
    {
@@ -206,13 +205,13 @@ function getColorName(colorsFamily, color) {
    }
    ```
 
-1. 點選「__執行__」，等待XML轉譯產生
-   + 由於兩個工作者都列在描述檔定義中，因此兩個轉譯都會產生。 或者，可以刪除指向[圓形轉譯工作者](../develop/worker.md)的頂部配置檔案定義，以避免從「開發工具」中執行該定義。
-1. __轉譯__&#x200B;區段會預覽產生的轉譯。 點選`rendition.xml`以下載它，然後在VS程式碼（或您最愛的XML/文字編輯器）中開啟它以進行審核。
+1. 點選&#x200B;__執行__&#x200B;並等待XML轉譯產生
+   + 由於兩個背景工作都列在設定檔定義中，因此兩個轉譯都會產生。 或者，可以刪除指向[圓形轉譯工作程式](../develop/worker.md)的頂端設定檔定義，以避免從開發工具執行它。
+1. __轉譯__&#x200B;區段會預覽產生的轉譯。 點選`rendition.xml`以下載，然後在VS Code（或您最喜愛的XML/文字編輯器）中開啟它以進行檢閱。
 
-## 測試工作者{#test}
+## 測試工作人員{#test}
 
-可使用與二進位轉譯](../test-debug/test.md)相同的Asset compute測試框架來測試元資料工作器。 [唯一的差異是測試案例中的`rendition.xxx`檔案必須是預期的XMP(XML)轉譯。
+可使用與二進位轉譯](../test-debug/test.md)相同的Asset compute測試架構來測試中繼資料背景工作。 [唯一的差異是測試案例中的`rendition.xxx`檔案必須是預期的XMP(XML)轉譯。
 
 1. 在Asset compute專案中建立下列結構：
 
@@ -224,7 +223,7 @@ function getColorName(colorsFamily, color) {
        rendition.xml
    ```
 
-2. 使用[範例檔](../assets/samples/sample-file.jpg)作為測試案例的`file.jpg`。
+2. 使用[範例檔案](../assets/samples/sample-file.jpg)作為測試案例的`file.jpg`。
 3. 將下列JSON新增至`params.json`。
 
    ```
@@ -234,20 +233,20 @@ function getColorName(colorsFamily, color) {
    }
    ```
 
-   請注意，`"fmt": "xml"`必須指示測試套裝產生`.xml`文字轉譯。
+   請注意，需要`"fmt": "xml"`指示測試套裝產生`.xml`文字型轉譯。
 
 4. 在`rendition.xml`檔案中提供預期的XML。 這可透過下列方式取得：
-   + 透過開發工具執行測試輸入檔案，並將（已驗證）的XML轉譯儲存出來。
+   + 透過開發工具執行測試輸入檔案，並儲存（已驗證）XML轉譯。
 
    ```
    <?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:wknd="https://wknd.site/assets/1.0/"><rdf:Description><wknd:colors><rdf:Seq><rdf:li>Silver</rdf:li><rdf:li>Black</rdf:li><rdf:li>Outer Space</rdf:li></rdf:Seq></wknd:colors><wknd:colorsFamily>pantone</wknd:colorsFamily></rdf:Description></rdf:RDF>
    ```
 
-5. 從Asset compute項目的根目錄執行`aio app test`以執行所有測試套件。
+5. 從Asset compute項目的根目錄執行`aio app test`以執行所有測試套裝。
 
-### 將員工部署到Adobe I/O Runtime{#deploy}
+### 將工作人員部署到Adobe I/O Runtime{#deploy}
 
-要從AEM Assets調用此新的元資料工作器，必須使用以下命令將其部署到Adobe I/O Runtime:
+若要從AEM Assets叫用此新中繼資料背景工作，必須使用命令將其部署至Adobe I/O Runtime:
 
 ```
 $ aio app deploy
@@ -255,42 +254,42 @@ $ aio app deploy
 
 ![aio app deploy](./assets/metadata/aio-app-deploy.png)
 
-請注意，這將部署項目中的所有員工。 請參閱[未加細部署指示](../deploy/runtime.md)，瞭解如何部署至「舞台(Stage)」和「生產(Production)」工作區。
+請注意，這將部署項目中的所有員工。 查看[未刪節的部署說明](../deploy/runtime.md)，了解如何部署到預備和生產工作區。
 
-### 與處AEM理描述檔整合{#processing-profile}
+### 與AEM處理設定檔整合{#processing-profile}
 
-通過建立新工AEM作器或修改調用此已部署工作器的現有自定義處理配置檔案服務來調用該工作器。
+通過建立新的或修改調用此已部署工作器的現有自定義處理配置檔案服務，從AEM中調用該工作器。
 
 ![處理設定檔](./assets/metadata/processing-profile.png)
 
-1. 以&lt;AEMa0/>管理員&lt;a1/AEM>的身分登入Cloud Service作者服務&#x200B;____
-1. 導覽至「__工具>資產>處理設定檔__」
-1. __建__ 立新的或編輯 ____ 和現有的處理描述檔
-1. 點選「__Custom__」標籤，點選「__新增__」
+1. 以&#x200B;__AEM管理員__&#x200B;登入AEM作為Cloud Service製作服務
+1. 導覽至&#x200B;__工具>資產>處理設定檔__
+1. ____ 建立新的或編輯的 ____ 現有處理設定檔
+1. 點選&#x200B;__Custom__&#x200B;標籤，然後點選&#x200B;__Add New__
 1. 定義新服務
-   + __建立中繼資料轉譯__:切換至作用中
+   + __建立中繼資料轉譯__:切換為作用中
    + __端點：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/metadata-colors`
-      + 這是在[deploy](#deploy)期間或使用命令`aio app get-url`獲取的工作器的URL。 根據作為Cloud Service環境，確保URL點位於AEM正確的工作區。
+      + 這是在[deploy](#deploy)期間或使用命令`aio app get-url`獲取的工作器的URL。 根據AEM作為Cloud Service環境，確保URL指向正確的工作區。
    + __服務參數__
       + 點選&#x200B;__新增參數__
          + 關鍵: `colorFamily`
          + 值: `pantone`
-            + 支援的值：`basic`、`hex`、`html`、`ntc`、`pantone`、`roygbiv`
+            + 支援的值：`basic`, `hex`, `html`, `ntc`, `pantone`, `roygbiv`
    + __Mime 類型__
-      + __包括：__ `image/jpeg`、 `image/png`、 `image/gif`、  `image/svg`
-         + 這些是第三方NPM模組支援的唯一用於導出顏色的MIME類型。
-      + __排除：__ `Leave blank`
-1. 點選右上角的&#x200B;__Save__
-1. 如果尚未將處理設定檔套用至AEM Assets檔案夾
+      + __包括：__ `image/jpeg`、  `image/png`、  `image/gif`、  `image/svg`
+         + 這些是用於衍生顏色的第三方npm模組支援的唯一MIME類型。
+      + __不包括：__ `Leave blank`
+1. 點選右上角的&#x200B;__儲存__
+1. 將處理設定檔套用至AEM Assets資料夾（如果尚未這麼做的話）
 
-### 更新中繼資料結構{#metadata-schema}
+### 更新元資料結構{#metadata-schema}
 
-要查看顏色元資料，請將影像元資料架構上的兩個新欄位映射到工作者填充的新元資料資料屬性。
+要查看顏色元資料，請將影像元資料結構上的兩個新欄位映射到工作人員填充的新元資料資料屬性。
 
 ![中繼資料結構](./assets/metadata/metadata-schema.png)
 
-1. 在AEM Author服務中，導覽至&#x200B;__工具>資產>中繼資料結構__
-1. 導覽至&#x200B;__default__&#x200B;並選取並編輯&#x200B;__image__，並新增唯讀表單欄位，以公開產生的色彩中繼資料
+1. 在AEM製作服務中，導覽至&#x200B;__工具>資產>中繼資料結構__
+1. 導覽至&#x200B;__default__，並選取並編輯&#x200B;__image__，並新增唯讀表單欄位以公開產生的顏色中繼資料
 1. 新增&#x200B;__單行文字__
    + __欄位標籤__: `Colors Family`
    + __映射至屬性__: `./jcr:content/metadata/wknd:colorsFamily`
@@ -298,32 +297,32 @@ $ aio app deploy
 1. 新增&#x200B;__多值文字__
    + __欄位標籤__: `Colors`
    + __映射至屬性__: `./jcr:content/metadata/wknd:colors`
-1. 點選右上角的&#x200B;__Save__
+1. 點選右上角的&#x200B;__儲存__
 
 ## 處理資產
 
 ![資產詳細內容](./assets/metadata/asset-details.png)
 
-1. 在AEM Author服務中，導覽至「__資產>檔案__」
-1. 導覽至資料夾或子資料夾，「處理設定檔」會套用至
-1. 將新影像（JPEG、PNG、GIF或SVG）上傳至檔案夾，或使用更新的「處理描述檔[」重新處理現有影像](#processing-profile)
-1. 處理完成時，請選取資產，然後點選頂端動作列中的&#x200B;__屬性__&#x200B;以顯示其中繼資料
+1. 在AEM製作服務中，導覽至「__資產>檔案__」
+1. 導覽至資料夾或子資料夾，處理設定檔便會套用至
+1. 將新影像（JPEG、PNG、GIF或SVG）上傳至資料夾，或使用更新的[處理設定檔](#processing-profile)重新處理現有影像
+1. 處理完成時，選取資產，然後點選頂端動作列中的&#x200B;__屬性__&#x200B;以顯示其中繼資料
 1. 查看從自定義Asset compute元資料工作器回寫的元資料的`Colors Family`和`Colors` [元資料欄位](#metadata-schema)。
 
-在`[dam:Asset]/jcr:content/metadata`資源上，將顏色中繼資料寫入資產的中繼資料，透過搜尋，利用這些詞語為此中繼資料建立索引，並且，如果在資源上呼叫&#x200B;__DAM中繼資料回寫__&#x200B;工作流程，甚至可將這些中繼資料回寫至資產的二進位檔案。
+在`[dam:Asset]/jcr:content/metadata`資源上，將顏色元資料寫入資產的元資料中，此元資料會透過搜尋使用這些辭彙來建立索引，以增加資產探索能力，而且如果在其上叫用&#x200B;__DAM中繼資料回寫__&#x200B;工作流程，甚至可以將這些中繼資料寫入資產的二進位檔。
 
-### AEM Assets中繼資料轉譯
+### AEM Assets中的中繼資料轉譯
 
-![AEM Assets元資料轉譯檔案](./assets/metadata/cqdam-metadata-rendition.png)
+![AEM Assets中繼資料轉譯檔案](./assets/metadata/cqdam-metadata-rendition.png)
 
-由Asset compute元XMP資料工作器生成的實際檔案也儲存為資產上的離散格式副本。 通常不會使用此檔案，而是使用應用到資產元資料節點的值，但工作器的原始XML輸出可在中使AEM用。
+由Asset compute中繼資料背景工作產生的實際XMP檔案也會儲存為資產上的離散轉譯。 通常不會使用此檔案，而是會使用套用至資產中繼資料節點的值，但背景工作的原始XML輸出可在AEM中使用。
 
-## Github上的中繼資料色彩工作程式碼
+## Github上的中繼資料色彩背景代碼
 
 最終`metadata-colors/index.js`可在Github上取得，網址為：
 
 + [aem-guides-wknd-asset-compute/actions/metadata-colors/index.js](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/actions/metadata-colors/index.js)
 
-最終`test/asset-compute/metadata-colors`測試套件可在Github上取得，網址為：
+最終`test/asset-compute/metadata-colors`測試套裝可在Github上取得，網址為：
 
-+ [aem-guides-wknd-asset-compute/test/asset-compute/metadata-colors](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/test/asset-compute/metadata-colors)
++ [aem-guides-wknd-asset-compute/test/asset-compute/metadata/colors](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/test/asset-compute/metadata-colors)
