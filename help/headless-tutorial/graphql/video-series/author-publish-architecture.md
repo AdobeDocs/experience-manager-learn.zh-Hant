@@ -1,10 +1,10 @@
 ---
-title: 使用GraphQL編寫和發佈架AEM構
-description: 瞭解使用GraphQL API時如何及何時運用AEM AuthorAEM和Publish環境。
+title: 使用AEM GraphQL製作與發佈架構
+description: 了解使用AEM GraphQL API時，如何及何時運用AEM製作和發佈環境。
 sub-product: 資產
 version: cloud-service
-topic: 無頭、內容管理
-feature: 內容片段， GraphQL API
+topic: 無頭式、內容管理
+feature: 內容片段、GraphQL API
 role: Developer
 level: Beginner
 kt: 7873
@@ -17,14 +17,14 @@ ht-degree: 0%
 ---
 
 
-# 作者與發佈架構
+# 製作與發佈架構
 
-瞭解使用GraphQL API時如何及何時運用AEM AuthorAEM和Publish環境。
+了解使用AEM GraphQL API時，如何及何時運用AEM製作和發佈環境。
 
-在本影片中，您將：
+在此影片中，您會：
 
-+ 瞭解AEM Author和Publish架構，以及內容的發佈方式
-+ 瞭解使用AEM Publish環境進行無頭傳送的最佳實務
-+ 探索作者環境如何用作應用程式的預覽
++ 了解AEM製作和發佈架構，以及內容的發佈方式
++ 了解透過AEM Publish環境傳送無頭式內容的最佳實務
++ 探索如何將製作環境用作應用程式的預覽
 
 >[!VIDEO](https://video.tv.adobe.com/v/333296/?quality=12&learn=on)
