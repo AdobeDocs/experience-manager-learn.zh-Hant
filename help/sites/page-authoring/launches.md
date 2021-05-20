@@ -1,24 +1,23 @@
 ---
-title: 如何在AEM Sites使用啟動
-description: 在AEM Sites的發佈提供建立、編寫和審閱內容的方式，以供日後發行。
-topic: Content Management
-feature: Launches
+title: 如何在AEM Sites中使用啟動
+description: AEM Sites中的啟動提供建立、製作和檢閱內容的方式，以供日後發行。
+topic: 內容管理
+feature: 啟動
 level: Intermediate, Experienced
 role: Administrator
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 6970
 thumbnail: 331285.jpg
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 4%
+source-wordcount: '68'
+ht-degree: 2%
 
 ---
 
 
 # 啟動
 
-在AEM Sites的發佈提供建立、製作和檢閱網站內容的方式，以供日後版本使用。 在建立產品期間，生產網站可以像平常一樣不斷改進和改變。
+AEM Sites中的啟動可讓您建立、製作和檢閱網站內容，以供日後發行。 在啟動期間，生產網站可能會如常不斷演化並日常變更。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331285?quality=12&learn=on)
