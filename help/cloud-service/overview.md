@@ -1,9 +1,8 @@
 ---
 title: Adobe Experience Manager as Cloud Service 教學課程
-description: Adobe Experience Manager(AEM)雲端服務教學課程的集合
-sub-product: 站點，雲端管理員，基礎，資產
+description: Adobe Experience Manager(AEM)as a Cloud Service的教學課程系列
+sub-product: sites, cloud manager, foundation，資產
 kt: 3289
-translation-type: tm+mt
 source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
 source-wordcount: '275'
@@ -14,38 +13,38 @@ ht-degree: 8%
 
 # 概覽 {#overview}
 
-Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM作為Cloud Service推出新一代的Experience Manager產品系列，以過去的投資和創新為基礎，保留並擴充所有使用案例和功能。
+Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM as aCloud Service以過去的投資和創新為基礎，推出新一代Experience Manager產品線，保留並擴充所有使用案例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
 ## 新增功能
 
-* **[代號型驗證（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
+* **[Token型驗證（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
-   *瞭解如何使用以Token為基礎的驗證，透過HTTP與AEM做為雲端服務互動*
+   *了解如何使用Token式驗證，透過HTTP與AEM作為Cloud Service互動*
 
-* **[無頭圖形QL（教程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+* **[無周邊GraphQL（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *瞭解如何使用AEM的GraphQL API來強化外部應用程式的體驗。*
+   *了解如何使用AEM GraphQL API來支援外部應用程式中的體驗。*
 
-* **[大量匯入（視訊）](./migration/bulk-import.md)**
+* **[大量匯入（影片）](./migration/bulk-import.md)**
 
-   *瞭解如何從Azure Blob儲存或Amazon S3大量匯入資產至AEM*
+   *了解如何從Azure Blob儲存或Amazon S3將資產大量匯入至AEM*
 
-* **[資產計算元資料工作器（教程）](./asset-compute/advanced/metadata.md)**
+* **[asset compute中繼資料背景工作（教學課程）](./asset-compute/advanced/metadata.md)**
 
-   *瞭解如何從資產計算工作者將資產中繼資料寫回AEM*
+   *了解如何從Asset compute背景工作將資產中繼資料寫回AEM*
 
-* **[資產計算微服務擴充性（教學課程）](./asset-compute/overview.md)**
+* **[asset compute微服務的擴充性（教學課程）](./asset-compute/overview.md)**
 
-   *瞭解如何開發資產計算工作者以產生自訂資產轉譯*
+   *了解如何開發Asset compute背景工作，以產生自訂資產轉譯*
 
-## 員工挑選
+## 員工精選
 
 <table>
    <td>
       <a href="./accessing/overview.md">
-      <img alt="將AEM的存取權設定為雲端服務" src="./assets/overview/staff-pick__accessing.png"/>
+      <img alt="將AEM的存取設定為Cloud Service" src="./assets/overview/staff-pick__accessing.png"/>
       </a>
       <div>
          <a href="./accessing/overview.md">
@@ -58,20 +57,20 @@ Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM作�
    </td>   
    <td>
       <a href="./local-development-environment/overview.md">
-      <img alt="本地開發環境設定教程" src="./assets/overview/staff-pick__local-development-environment-set-up.png"/>
+      <img alt="本機開發環境設定教學課程" src="./assets/overview/staff-pick__local-development-environment-set-up.png"/>
       </a>
       <div>
          <a href="./local-development-environment/overview.md">
-         <strong>本地開發環境設定教程</strong>
+         <strong>本機開發環境設定教學課程</strong>
          </a>
       </div>
       <p>
-         <em>讓您的本機開發機器準備好AEM做為雲端服務開發！</em>
+         <em>為AEM做好本機開發電腦的準備，做為Cloud Service開發！</em>
       <p>
    </td>   
    <td>
       <a href="./debugging/aem-sdk-local-quickstart/overview.md">
-      <img alt="除錯AEM SDK的本機快速入門" src="./assets/overview/staff-pick__debugging.png"/>
+      <img alt="對AEM SDK的本機Quickstart進行偵錯" src="./assets/overview/staff-pick__debugging.png"/>
       </a>
       <div>
          <a href="./debugging/aem-sdk-local-quickstart/overview.md">
@@ -79,12 +78,12 @@ Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM作�
          </a>
       </div>
       <p>
-         <em>探索在AEM上用來除錯應用程式的工具，將它當成Cloud Service SDK的本機快速入門。</em>
+         <em>探索在AEM上作為Cloud ServiceSDK本機Quickstart用來除錯應用程式的工具。</em>
       <p>
    </td>
 </table>
 
 ## 其他資源
 
-* [Experience League —— 探索Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [Adobe Experience Manager雲端服務檔案](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/landing/home.html)
+* [Experience League — 探索Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Adobe Experience Manager as aCloud Service檔案](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/landing/home.html)
