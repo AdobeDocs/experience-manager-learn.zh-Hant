@@ -13,16 +13,15 @@ feature: SPA Editor
 topic: SPA
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '718'
 ht-degree: 99%
 
 ---
 
 
-# 建立您在 AEM 的第一個 Angular SPA{#introduction}
+# 建立您在 AEM 的第一個 Angular SPA {#introduction}
 
 歡迎使用專為 Adobe Experience Manager (AEM) 中 **SPA Editor** 功能的新手開發人員設計的多部分教學課程。此教學課程會逐步引導您為虛擬生活風格品牌 WKND 實作 Angular 應用程式。AEM 的 SPA Editor 將用以開發和設計部署 Angular 應用程式，將 Angular 元件對應至 AEM 元件。部署至 AEM 的完成 SPA 即可使用 AEM 傳統的內嵌編輯工具動態製作。
 
