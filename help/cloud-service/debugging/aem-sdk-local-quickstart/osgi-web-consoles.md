@@ -1,78 +1,77 @@
 ---
-title: 使用AEMOSGi網頁主控台除錯SDK
-description: AEMSDK的本端快速入門有OSGi網頁主控台，可提供本端執行階段中的多種資訊和介紹，以協助您瞭解應用程式的識別方式，以及其中的功AEM能。
-feature: Developer Tools
+title: 使用OSGi Web主控台除錯AEM SDK
+description: AEM SDK的本機Quickstart有一個OSGi Web主控台，提供本機AEM執行階段的各種資訊和簡介，有助於了解應用程式如何辨識，以及在AEM中的功能。
+feature: 開發人員工具
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5265, 5366, 5267
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner, Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '396'
 ht-degree: 1%
 
 ---
 
 
-# 使用AEMOSGi網頁主控台除錯SDK
+# 使用OSGi Web主控台除錯AEM SDK
 
-AEMSDK的本端快速入門有OSGi網頁主控台，可提供本端執行階段中的多種資訊和介紹，以協助您瞭解應用程式的識別方式，以及其中的功AEM能。
+AEM SDK的本機Quickstart有一個OSGi Web主控台，提供本機AEM執行階段的各種資訊和簡介，有助於了解應用程式如何辨識，以及在AEM中的功能。
 
-提AEM供許多OSGi控制台，每個控制台都提供不同方面的關鍵見解AEM，但是，在調試應用程式時，以下通常最有用。
+AEM提供許多OSGi主控台，每個主控台都提供AEM不同層面的重要深入分析，但下列主控台在除錯應用程式時通常最有用。
 
-## 組合
+## 套件組合
 
 >[!VIDEO](https://video.tv.adobe.com/v/34335/?quality=12&learn=on)
 
-Bundles控制台是OSGi捆綁包的目錄，其詳細資訊已部署AEM到，並具有啟動和停止這些捆綁包的臨機功能。
+套件組合主控台是OSGi套件組合的目錄，以及部署至AEM的詳細資料，以及啟動和停止這些套件的臨機功能。
 
-Bundles控制台位於：
+套件組合控制台位於：
 
-+ 「工具>作業> Web Console > OSGi >組合」
++ 「工具」>「操作」>「Web控制台」>「OSGi」>「套件組合」
 + 或直接在：[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
-按一下每個套件，提供有助於除錯應用程式的詳細資訊。
+按一下每個套件，可提供有助於除錯應用程式的詳細資訊。
 
-+ 驗證OSGi捆綁包存在
-+ 驗證OSGi捆綁包是否處於活動狀態
-+ 確定OSGi捆綁包是否具有未滿足的導入，阻止其啟動
++ 驗證OSGi捆綁包
++ 驗證OSGi捆綁是否處於活動狀態
++ 確定OSGi套件組合是否具有未滿足的導入，阻止其啟動
 
 ## 元件
 
 >[!VIDEO](https://video.tv.adobe.com/v/34336/?quality=12&learn=on)
 
-元件控制台是部署到的所有OSGi元件的目錄AEM，並提供了有關它們的所有資訊，從其定義的OSGi元件生命週期到它們可參考的OSGi服務
+元件控制台是部署到AEM的所有OSGi元件的目錄，它提供了有關這些元件的所有資訊，從其定義的OSGi元件生命週期，到它們可參考的OSGi服務
 
 元件控制台位於：
 
-+ 「工具>作業> Web Console > OSGi >元件」
++ 「工具」>「操作」>「Web控制台」>「OSGi」>「元件」
 + 或直接在：[http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
 
-協助除錯活動的主要方面：
+有助於偵錯活動的主要方面：
 
-+ 驗證OSGi捆綁包存在
-+ 驗證OSGi捆綁包是否處於活動狀態
-+ 確定OSGi捆綁包是否具有未滿足的導入，阻止其啟動
-+ 取得元件的PID，以便以Git建立OSGi組態
++ 驗證OSGi捆綁包
++ 驗證OSGi捆綁是否處於活動狀態
++ 確定OSGi套件組合是否具有未滿足的導入，阻止其啟動
++ 取得元件的PID，以便在Git中為元件建立OSGi設定
 + 識別綁定到活動OSGi配置的OSGi屬性值
 
 ## Sling 模型
 
 >[!VIDEO](https://video.tv.adobe.com/v/34337/?quality=12&learn=on)
 
-Sling Models主控台位於：
+Sling模型控制台位於：
 
-+ 「工具>作業> Web Console >狀態> Sling Models」
++ 「工具」>「操作」>「Web控制台」>「狀態」>「Sling模型」
 + 或直接在：[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
 
-協助除錯活動的主要方面：
+有助於偵錯活動的主要方面：
 
-+ 驗證Sling Models會註冊至正確的資源類型
-+ 驗證Sling Models可從正確的物件（Resource或SlingHttpRequestServlet）調整
-+ 驗證Sling Model Exportorer正確註冊
++ 驗證Sling模型會註冊為正確的資源類型
++ 驗證Sling模型可從正確的物件（Resource或SlingHttpRequestServlet）調整
++ 正確註冊驗證Sling模型匯出工具
