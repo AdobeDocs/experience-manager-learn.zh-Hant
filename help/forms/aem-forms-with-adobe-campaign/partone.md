@@ -1,45 +1,44 @@
 ---
-title: '產生JSON網頁Token和存取Token '
-seo-title: '產生JSON網頁Token和存取Token '
-description: 本文說明產生JWT和存取Token所需的程式碼，以便對Adobe Campaign Standard進行REST呼叫
-seo-description: 本文說明產生JWT和存取Token所需的程式碼，以便對Adobe Campaign Standard進行REST呼叫
+title: '產生JSON網頁代號和存取代號 '
+seo-title: '產生JSON網頁代號和存取代號 '
+description: 本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取權杖所需的程式碼
+seo-description: 本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取權杖所需的程式碼
 uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
-feature: Adaptive Forms, Form Data Model
+feature: 適用性Forms，表單資料模型
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
 
 
-# 產生JSON Web Token和存取Token {#generating-json-web-token-and-access-token}
+# 產生JSON網頁代號和存取代號{#generating-json-web-token-and-access-token}
 
-本文說明產生JWT和存取Token所需的程式碼，以便對Adobe Campaign Standard進行REST呼叫
+本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取權杖所需的程式碼
 
-## 產生JSON Web Token {#generate-json-web-token}
+## 產生JSON Web代號{#generate-json-web-token}
 
-使用Adobe CampaignAPI的第一步是產生JWT。 有關如何為ACS生成JWT的代碼示例很多。 您可以遵循此[java代碼示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)生成JWT。
+使用Adobe Campaign API的第一步是產生JWT。 有關如何為ACS生成JWT的許多代碼示例。 您可以依照此[java程式碼範例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)產生JWT。
 
-為了將ACS API與AEM Forms一起使用，我們需要在OSGi捆綁包內建立JWT。 以下代碼片段用於在此示例OSGI包中生成JWT。 有關ACS實例的詳細資訊是從OSGI配置屬性中提取的，如上所示。
+若要將ACS API與AEM Forms搭配使用，我們需要在OSGi套件組合內建立JWT。 下列程式碼片段用於在此範例OSGI套件組合中產生JWT。 ACS實例的詳細資訊從OSGI配置屬性中提取，如上所示設定。
 
 ![配置](assets/campaignconfiguration.gif)
 
 **A.** 此處顯示的值是虛值
 
-以下代碼從OSGI配置中讀取有關Adobe Campaign伺服器的詳細資訊。 我們建立一個從80到104行的私鑰。
+下列程式碼會從OSGI設定中擷取Adobe Campaign伺服器的詳細資訊。 我們在80到104行建立私鑰。
 
-一旦取得私密金鑰，我們就會建立JSON Web Token。
+取得私密金鑰後，我們會建立JSON Web Token。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -248,6 +247,6 @@ public class CampaignServiceImpl implements CampaignService {
  }
 ```
 
-## 產生存取Token {#generate-access-token}
+## 生成訪問令牌{#generate-access-token}
 
-然後，我們通過進行POST呼叫，將生成的JWT交換為訪問令牌。 此存取Token隨後會以授權金鑰的形式在後續REST呼叫的HTTP標題中傳送
+然後，我們會進行POST呼叫，以交換產生的JWT作為存取權杖。 接著，此存取Token將在後續REST呼叫的HTTP標題中以授權金鑰的形式傳送
