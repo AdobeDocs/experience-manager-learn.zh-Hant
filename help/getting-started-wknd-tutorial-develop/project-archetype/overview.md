@@ -1,16 +1,15 @@
 ---
-title: 開始使用AEM Sites-專案原型
-description: 開始使用AEM Sites-專案原型。 WKND教學課程是多部份教學課程，專為Adobe Experience Manager新手開發人員所設計。 本教學課程將逐步介紹虛擬AEM生活品牌WKND的網站實作。 本教學課程涵蓋基本主題，例如專案設定、主原型、核心元件、可編輯範本、用戶端程式庫和元件開發。
+title: AEM Sites快速入門 — 專案原型
+description: AEM Sites快速入門 — 專案原型。 WKND教學課程是多部分教學課程，專為剛接觸Adobe Experience Manager的開發人員所設計。 本教學課程會逐步說明虛擬生活風格品牌WKND的AEM網站實作。 本教學課程涵蓋基本主題，例如專案設定、主要原型、核心元件、可編輯範本、用戶端程式庫和元件開發。
 sub-product: Sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
-feature: 核心元件、頁面編輯器、可編輯範本、專AEM案原型
+feature: 核心元件、頁面編輯器、可編輯的範本、AEM專案原型
 topic: 內容管理、開發
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 index: y
-translation-type: tm+mt
 source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
 source-wordcount: '502'
@@ -19,11 +18,11 @@ ht-degree: 39%
 ---
 
 
-# 開始使用AEM Sites-專案原型{#project-archetype}
+# AEM Sites快速入門 — 專案原型{#project-archetype}
 
-歡迎使用專為Adobe Experience Manager()新手開發人員所設計的多部AEM份教學課程。 本教學課程將逐步介紹WKND這AEM個虛擬生活品牌網站的實作。
+歡迎使用多部分教學課程，專為新進入Adobe Experience Manager(AEM)的開發人員所設計。 本教學課程會逐步說明WKND虛構生活風格品牌AEM網站的實作。
 
-本教學課程從使用[AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)產生新專案開始。
+本教學課程的開頭是使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)產生新專案。
 
 此教學課程在設計上將使用 **AEM as a Cloud Service**，並向下相容於 **AEM 6.5.5.0+** 和 **AEM 6.4.8.1+**。網站的實作方式為：
 
@@ -42,16 +41,16 @@ ht-degree: 39%
 
 ### 所需軟體
 
-本機應安裝下列程式碼：
+應在本機安裝下列項目：
 
-* 本AEM機&#x200B;**Author**&#x200B;例項(Cloud ServiceSDK、6.5.5+或6.4.8.1+)
+* 本機AEM **Author**&#x200B;例項(Cloud ServiceSDK、6.5.5+或6.4.8.1+)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 或更新版本)
-* [Node.js](https://nodejs.org/en/) （LTS —— 長期支援）
+* [Node.js](https://nodejs.org/en/) （LTS — 長期支援）
 * [npm 6+](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
-* [Visual Studio代](https://code.visualstudio.com/) 碼或相當的IDE
-   * [VSCode Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  —— 在整個教學課程中使用的工具
+* [Visual Studio代](https://code.visualstudio.com/) 碼或等效IDE
+   * [VSCode AEM同步](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  — 在整個教學課程中使用的工具
 
 >[!NOTE]
 >
@@ -61,12 +60,12 @@ ht-degree: 39%
 
 ## Github {#github}
 
-項目的所有代碼都可在Github上找到，位於AEMGuide repo:
+您可在AEM指南存放庫的Github上找到專案的所有程式碼：
 
-**[GitHub:WKND Sites Project](https://github.com/adobe/aem-guides-wknd)**
+**[GitHub:WKND Sites專案](https://github.com/adobe/aem-guides-wknd)**
 
-此外，教學課程的每個部分都有其專屬的GitHub分支。 用戶只需檢出與上一個部件對應的分支，即可隨時開始教程。
+此外，教學課程的每個部分在GitHub中都有各自的分支。 使用者只要勾選與上一部分對應的分支，就能隨時開始教學課程。
 
 ## 後續步驟{#next-steps}
 
-你在等什麼！導覽至[Project Setup](project-setup.md)章節以開始教學課程，並瞭解如何使用Project Archetype產生新的Adobe Experience Manager專AEM案。
+你在等什麼?!導覽至[專案設定](project-setup.md)章節，了解如何使用AEM專案原型產生新的Adobe Experience Manager專案，以啟動教學課程。
