@@ -1,9 +1,9 @@
 ---
-title: 在AEM Sites製作頁面
-seo-title: 以下影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites製作新頁面
-description: 以下影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites製作新頁面
-seo-description: 以下影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites製作新頁面
-feature: Page Editor, Editable Templates
+title: 在AEM Sites中編寫頁面
+seo-title: 下列影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites中製作新頁面
+description: 下列影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites中製作新頁面
+seo-description: 下列影片重點說明如何使用網站編輯器的UI在Adobe Experience Manager Sites中製作新頁面
+feature: 頁面編輯器，可編輯的範本
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,13 +11,12 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 4497
 thumbnail: 31828.jpg
-topic: Content Management
+topic: 內容管理
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '182'
 ht-degree: 11%
 
 ---
@@ -25,23 +24,23 @@ ht-degree: 11%
 
 # 編寫頁面{#authoring-page-aem-sites}
 
-瞭解如何使用網站編輯器的UI在Adobe Experience Manager Sites製作頁面。
+了解如何使用網站編輯器的UI在Adobe Experience Manager Sites中製作頁面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31828?quality=12&learn=on)
 
-在本影片中，涵蓋下列功能：
+此影片包含下列功能：
 
 * 根據範本建立頁面
-* 為頁面提供不同的製作模式
+* 針對頁面導入不同的製作模式
    * 編輯
    * 配置
    * 開發人員
    * Timewarp
 * 頁面編輯器功能
-   * 元件搜尋器
+   * 元件尋找器
    * 資產尋找器
-* 新增內容至現有元件
-* 新增元件至您的頁面
+* 將內容新增至現有元件
+* 將新元件新增至頁面
 * 頁面屬性
    * 發佈頁面
    * 取消發佈頁面
