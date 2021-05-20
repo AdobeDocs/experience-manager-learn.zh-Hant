@@ -1,6 +1,6 @@
 ---
-title: 調試Dispatcher工具
-description: Dispatcher Tools提供容器化的Apache Web Server環境，可用來模擬AEM為Cloud Services的AEM Publish服務的本機Dispatcher。 除錯Dispatcher工具的日誌和快取內容對於確保端到端應用程式和支援快取和安全配置AEM正確至關重要。
+title: 偵錯Dispatcher工具
+description: Dispatcher工具提供容器化的Apache Web Server環境，可用來在本機將AEM模擬為Cloud Services的AEM Publish服務的Dispatcher。 對於確保端對端AEM應用程式以及支援的快取和安全設定正確，除錯Dispatcher工具的記錄檔和快取內容可能至關重要。
 feature: Dispatcher
 topics: development
 version: cloud-service
@@ -8,38 +8,37 @@ doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5918
-topic: Development
+topic: 開發
 role: Developer
 level: Beginner, Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 1%
+source-wordcount: '231'
+ht-degree: 0%
 
 ---
 
 
-# 調試Dispatcher工具
+# 偵錯Dispatcher工具
 
-Dispatcher Tools提供容器化的Apache Web Server環境，可用來模擬AEM為Cloud Services的AEM Publish服務的本機Dispatcher。
-除錯Dispatcher工具的日誌和快取內容對於確保端到端應用程式和支援快取和安全配置AEM正確至關重要。
+Dispatcher工具提供容器化的Apache Web Server環境，可用來在本機將AEM模擬為Cloud Services的AEM Publish服務的Dispatcher。
+對於確保端對端AEM應用程式以及支援的快取和安全設定正確，除錯Dispatcher工具的記錄檔和快取內容可能至關重要。
 
 >[!NOTE]
 >
->由於Dispatcher Tools基於容器，因此每次重新啟動時，先前的日誌和快取內容都會被銷毀。
+>由於Dispatcher工具是以容器為基礎，因此每次重新啟動時，先前的記錄和快取內容都會遭到破壞。
 
-## Dispatcher Tools日誌
+## Dispatcher工具記錄檔
 
-Dispatcher Tools日誌可通過`stdout`或`bin/docker_run`命令獲得，或通過`/etc/https/logs`的Docker容器獲得更詳細的資訊。
+Dispatcher工具記錄檔可透過`stdout`或`bin/docker_run`命令使用，或透過更詳細的資訊，可在位於`/etc/https/logs`的Docker容器中使用。
 
-有關如何直接訪問Dispatcher Tools&#39; Docker容器日誌的說明，請參見[ Dispatcher logs](./logs.md#dispatcher-logs)。
+如需如何直接存取Dispatcher工具的Docker容器記錄檔的指示，請參閱[Dispatcher記錄檔](./logs.md#dispatcher-logs)。
 
-## Dispatcher Tools快取
+## Dispatcher工具快取
 
-### 訪問Docker容器中的日誌
+### 存取Docker容器中的記錄
 
-Dispatcher快取可以直接訪問` /mnt/var/www/html`的Docker容器中。
+Dispatcher快取可直接存取位於` /mnt/var/www/html`的Docker容器中。
 
 ```shell
 $ docker ps
@@ -59,7 +58,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 
 ### 將Docker日誌複製到本地檔案系統
 
-Dispatcher日誌可以從`/mnt/var/www/html`的Docker容器複製到本地檔案系統，以便使用您喜愛的工具進行檢查。 請注意，這是時間點副本，不會提供快取的即時更新。
+Dispatcher記錄檔可從`/mnt/var/www/html`的Docker容器複製到本機檔案系統，以使用您最喜愛的工具進行檢查。 請注意，這是時間點副本，不提供快取的即時更新。
 
 ```shell
 $ docker ps
