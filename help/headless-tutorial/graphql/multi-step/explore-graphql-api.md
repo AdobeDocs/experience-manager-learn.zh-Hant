@@ -1,6 +1,6 @@
 ---
-title: 探索GraphQL API —— 無頭入門AEM- GraphQL
-description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 使用AEM內建的GrapiQL IDE來探索GraphQL API。 瞭解如AEM何根據內容片段模型自動生成GraphQL模式。 使用GraphQL語法來嘗試建構基本查詢。
+title: 深入了解GraphQL API — 開始使用AEM無周邊功能 — GraphQL
+description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 使用內建的GrapiQL IDE，探索AEM GraphQL API。 了解AEM如何根據內容片段模型自動產生GraphQL架構。 使用GraphQL語法實驗建構基本查詢。
 sub-product: 資產
 topics: headless
 version: cloud-service
@@ -10,11 +10,10 @@ audience: developer
 mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
-feature: 內容片段， GraphQL API
-topic: 無頭、內容管理
+feature: 內容片段、GraphQL API
+topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
 workflow-type: tm+mt
 source-wordcount: '1141'
@@ -25,45 +24,45 @@ ht-degree: 1%
 
 # 探索GraphQL API {#explore-graphql-apis}
 
-GraphQL API提供強AEM大的查詢語言，可將內容片段的資料公開至下游應用程式。 內容片段模型定義內容片段所使用的資料架構。 每當建立或更新內容片段模型時，會將架構轉譯並新增至組成GraphQL API的「圖形」。
+AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開給下游應用程式。 內容片段模型會定義內容片段所使用的資料結構。 每當建立或更新內容片段模型時，架構就會轉譯並新增至組成GraphQL API的「圖表」中。
 
-在本章中，我們將探索一些常見的GraphQL查詢，以使用名為[GraphiQL](https://github.com/graphql/graphiql)的IDE收集內容。 GraphiQL IDE允許您快速測試和細化返回的查詢和資料。 GraphiQL還提供了對文檔的輕鬆訪問，使您能夠輕鬆瞭解和瞭解可用的方法。
+在本章中，我們將探索一些常見的GraphQL查詢，以使用名為[GraphiQL](https://github.com/graphql/graphiql)的IDE收集內容。 GraphiQL IDE允許您快速測試和調整返回的查詢和資料。 GraphiQL還可輕鬆存取說明檔案，讓您輕鬆了解和了解可用的方法。
 
 ## 必備條件 {#prerequisites}
 
-本教學課程包含多部分，假設[編寫內容片段](./author-content-fragments.md)中概述的步驟已完成。
+這是多部分教學課程，假設已完成[製作內容片段](./author-content-fragments.md)中概述的步驟。
 
-## 目標{#objectives}
+## 目標 {#objectives}
 
-* 瞭解如何使用GraphQL工具使用GraphQL語法構建查詢。
-* 瞭解如何查詢內容片段和單一內容片段的清單。
-* 瞭解如何篩選及請求特定資料屬性。
-* 瞭解如何查詢內容片段的變數。
-* 瞭解如何加入多個內容片段模型的查詢
+* 了解如何使用GraphiQL工具，使用GraphQL語法來建構查詢。
+* 了解如何查詢內容片段和單一內容片段清單。
+* 了解如何篩選及要求特定資料屬性。
+* 了解如何查詢內容片段的變異。
+* 了解如何加入多個內容片段模型的查詢
 
 ## 安裝GraphiQL工具{#install-graphiql}
 
-GraphiQL IDE是開發工具，僅在低級環境（如開發或本地實例）上需要。 因此，它不包含在AEM專案中，而是以個別的套件形式提供，可以臨機安裝。
+GraphiQL IDE是開發工具，僅在開發或本地實例等較低級別環境中需要。 因此，AEM專案中不包含此套件，而是可臨機安裝的個別套件。
 
-1. 導航至&#x200B;**[軟體分發門戶](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **作為AEMCloud Service**。
+1. 導覽至&#x200B;**[Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as aCloud Service**。
 1. 搜索「GraphiQL」(請務必在&#x200B;**GraphiQL**&#x200B;中包含&#x200B;**i**。
-1. 下載最新的&#x200B;**GraphiQL內容包v.x.x.x**
+1. 下載最新&#x200B;**GraphiQL內容包v.x.x.x**
 
-   ![下載GraphiQL軟體包](assets/explore-graphql-api/software-distribution.png)
+   ![下載GraphiQL包](assets/explore-graphql-api/software-distribution.png)
 
-   zip檔案是可直AEM接安裝的套件。
+   zip檔案是可直接安裝的AEM套件。
 
-1. 從&#x200B;**開始AEM**&#x200B;菜單導航至&#x200B;**工具** > **部署** > **軟體包**。
-1. 按一下&#x200B;**上傳包**&#x200B;並選擇在上一步中下載的包。 按一下&#x200B;**Install**&#x200B;安裝軟體包。
+1. 從&#x200B;**AEM Start**&#x200B;菜單導航至&#x200B;**Tools** > **Deployment** > **Packages**。
+1. 按一下「**上傳套件**」 ，然後選擇上一步驟中下載的套件。 按一下&#x200B;**Install**&#x200B;以安裝軟體包。
 
-   ![安裝GraphiQL軟體包](assets/explore-graphql-api/install-graphiql-package.png)
+   ![安裝GraphiQL包](assets/explore-graphql-api/install-graphiql-package.png)
 
 ## 查詢內容片段清單{#query-list-cf}
 
-常見的要求是查詢多個內容片段。
+常見的需求是查詢多個內容片段。
 
-1. 導航到位於[http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html)的GraphiQL IDE。
-1. 將下列查詢貼入左側面板（在注釋清單下方）:
+1. 導航到GraphiQL IDE([http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html))。
+1. 將下列查詢貼到左側面板（在備注清單下）:
 
    ```graphql
    {
@@ -75,21 +74,21 @@ GraphiQL IDE是開發工具，僅在低級環境（如開發或本地實例）�
    }
    ```
 
-1. 按頂部菜單中的&#x200B;**播放**&#x200B;按鈕以執行查詢。 您應該會看到上一章中「參與者」內容片段的結果：
+1. 按頂部菜單中的&#x200B;**播放**&#x200B;按鈕以執行查詢。 您應該會看到上一章中「貢獻者」內容片段的結果：
 
-   ![參與者清單結果](assets/explore-graphql-api/contributorlist-results.png)
+   ![貢獻者清單結果](assets/explore-graphql-api/contributorlist-results.png)
 
-1. 將游標置於`_path`文字下方，然後輸入&#x200B;**CTRL+Space**&#x200B;以觸發程式碼提示。 將`fullName`和`occupation`新增至查詢。
+1. 將游標置於`_path`文本下，然後輸入&#x200B;**CTRL+空格**&#x200B;以觸發代碼提示。 將`fullName`和`occupation`新增至查詢。
 
-   ![使用程式碼編輯來更新查詢](assets/explore-graphql-api/update-query-codehinting.png)
+   ![使用程式碼編輯更新查詢](assets/explore-graphql-api/update-query-codehinting.png)
 
-1. 按&#x200B;**播放**&#x200B;按鈕再次執行查詢，您應看到結果包括`fullName`和`occupation`的其他屬性。
+1. 按&#x200B;**Play**&#x200B;按鈕再次執行查詢，您應該會看到結果包含`fullName`和`occupation`的其他屬性。
 
-   ![全名和職業成績](assets/explore-graphql-api/updated-query-fullname-occupation.png)
+   ![全名和職業結果](assets/explore-graphql-api/updated-query-fullname-occupation.png)
 
-   `fullName` 屬 `occupation` 於簡單屬性。從[定義內容片段模型](./content-fragment-models.md)一章中，請回顧`fullName`和`occupation`是定義各個欄位的&#x200B;**屬性名稱**&#x200B;時使用的值。
+   `fullName` 和屬 `occupation` 性簡單。從[定義內容片段模型](./content-fragment-models.md)章節回想，`fullName`和`occupation`是定義各個欄位的&#x200B;**屬性名稱**&#x200B;時使用的值。
 
-1. `pictureReference` 並且 `biographyText` 表示更複雜的欄位。使用下列更新查詢，以傳回有關`pictureReference`和`biographyText`欄位的資料。
+1. `pictureReference` 和代 `biographyText` 表更複雜的欄位。使用下列內容更新查詢，以傳回`pictureReference`和`biographyText`欄位的相關資料。
 
    ```graphql
    {
@@ -113,11 +112,11 @@ GraphiQL IDE是開發工具，僅在低級環境（如開發或本地實例）�
    }
    ```
 
-   `biographyText` 是多行文字欄位，而GraphQL API可讓我們為結果選擇多種格 `html`式 `markdown`, `json` 例如 `plaintext`。
+   `biographyText` 是多行文字欄位，GraphQL API可讓我們為結果選擇各種格式， `html`例如 `markdown`、 `json` 或 `plaintext`。
 
-   `pictureReference` 是內容參考，而且預期是影像，因此會使用內 `ImageRef` 建物件。這可讓我們要求有關參考影像的其他資料，例如`width`和`height`。
+   `pictureReference` 是內容參考，且應為影像，因此會使用內 `ImageRef` 建物件。這可讓我們要求有關要參考之影像的其他資料，例如`width`和`height`。
 
-1. 接下來，嘗試查詢&#x200B;**Adventures**&#x200B;的清單。 執行下列查詢：
+1. 接下來，嘗試查詢&#x200B;**Adventures**&#x200B;清單。 執行下列查詢：
 
    ```graphql
    {
@@ -136,11 +135,11 @@ GraphiQL IDE是開發工具，僅在低級環境（如開發或本地實例）�
    }
    ```
 
-   您應該會看到傳回的&#x200B;**Adventures**&#x200B;清單。 在查詢中新增其他欄位，讓您可以嘗試。
+   您應該會看到傳回的&#x200B;**Adventures**&#x200B;清單。 您可以在查詢中新增其他欄位，以進行實驗。
 
 ## 篩選內容片段清單{#filter-list-cf}
 
-接下來，讓我們看看如何根據屬性值將結果篩選為內容片段的子集。
+接下來，我們將探討如何根據屬性值將結果篩選為內容片段的子集。
 
 1. 在GraphiQL UI中輸入以下查詢：
 
@@ -162,10 +161,10 @@ GraphiQL IDE是開發工具，僅在低級環境（如開發或本地實例）�
    }
    ```
 
-   上述查詢會對系統中的所有參與者執行搜索。 新增的篩選至查詢開頭，將對`occupation`欄位和字串&quot;**Photographer**&quot;執行比較。
+   上述查詢會對系統中的所有貢獻者執行搜尋。 新增的篩選器至查詢的開頭，將對`occupation`欄位和字串&quot;**Photographer**&quot;執行比較。
 
-1. 執行查詢時，預期只會傳回單一&#x200B;**Contributor**。
-1. 輸入以下查詢以查詢&#x200B;**Adventures**&#x200B;的清單，其中`adventureActivity`**not**&#x200B;等於&#x200B;**&quot;Surfing&quot;**:
+1. 執行查詢時，應該只傳回單一&#x200B;**貢獻者**。
+1. 輸入以下查詢以查詢&#x200B;**Adventures**&#x200B;清單，其中`adventureActivity`為&#x200B;**not**&#x200B;等於&#x200B;**&quot;Surfing&quot;**:
 
    ```graphql
    {
@@ -186,13 +185,13 @@ GraphiQL IDE是開發工具，僅在低級環境（如開發或本地實例）�
    }
    ```
 
-1. 執行查詢並檢查結果。 請注意，所有結果中均不包含等於&#x200B;**&quot;Surfing&quot;**&#x200B;的`adventureType`。
+1. 執行查詢並檢查結果。 請注意，所有結果中均未包含等於&#x200B;**&quot;Surfing&quot;**&#x200B;的`adventureType`。
 
-篩選和建立複雜查詢還有其他許多選項，以上只是幾個範例。
+篩選和建立複雜查詢有許多其他選項，以上只是幾個範例。
 
 ## 查詢單一內容片段{#query-single-cf}
 
-您也可以直接查詢單一內容片段。 以分AEM層方式儲存中的內容，並且片段的唯一標識符基於片段的路徑。 如果目標是傳回有關單一片段的資料，則偏好使用路徑並直接查詢模型。 使用此語法表示查詢複雜度將非常低，並產生更快的結果。
+您也可以直接查詢單一內容片段。 AEM中的內容以分層方式儲存，而片段的唯一識別碼基於片段的路徑。 如果目標是傳回關於單一片段的資料，建議您使用路徑並直接查詢模型。 使用此語法表示查詢複雜度會非常低，且會產生更快的結果。
 
 1. 在GraphiQL編輯器中輸入以下查詢：
 
@@ -210,11 +209,11 @@ GraphiQL IDE是開發工具，僅在低級環境（如開發或本地實例）�
    }
    ```
 
-1. 執行查詢並觀察&#x200B;**Stacey Roswells**&#x200B;片段的單一結果已傳回。
+1. 執行查詢並觀察&#x200B;**Stacey Roswells**&#x200B;片段的單一結果是否已傳回。
 
-   在上一練習中，您使用篩選器來縮小結果清單。 您可使用類似的語法來依路徑篩選，但是基於效能原因，上述語法較為偏好。
+   在上一個練習中，您使用篩選器來縮小結果清單。 您可以使用類似的語法來依路徑篩選，但基於效能原因，建議使用上述語法。
 
-1. 在[編寫內容片段](./author-content-fragments.md)章中，請回顧&#x200B;**摘要**&#x200B;變數是為&#x200B;**Stacey Roswells**&#x200B;所建立。 更新查詢以返回&#x200B;**Summary**&#x200B;變化：
+1. 回想一下[製作內容片段](./author-content-fragments.md)章節中，為&#x200B;**Stacey Roswells**&#x200B;建立了&#x200B;**Summary**&#x200B;變異。 更新查詢以傳回&#x200B;**Summary**&#x200B;變數：
 
    ```graphql
    {
@@ -234,13 +233,13 @@ GraphiQL IDE是開發工具，僅在低級環境（如開發或本地實例）�
    }
    ```
 
-   即使變化名為&#x200B;**Summary**，變化仍以小寫保存，因此使用`summary`。
+   即使變體名為&#x200B;**Summary**，變體仍以小寫形式保存，因此會使用`summary`。
 
 1. 執行查詢並觀察`biography`欄位包含的`html`結果要短得多。
 
 ## 查詢多個內容片段模型{#query-multiple-models}
 
-您也可以將個別查詢合併為單一查詢。 這對於將應用程式所需的HTTP請求數減到最少非常有用。 例如，應用程式的&#x200B;*首頁*&#x200B;檢視可根據&#x200B;**兩個**&#x200B;不同的內容片段模型來顯示內容。 我們可以將查詢合併為單個請求，而不是執行&#x200B;**兩個**&#x200B;單獨的查詢。
+您也可以將個別查詢合併為單一查詢。 這對於將為應用程式提供電源所需的HTTP請求數減到最少非常有用。 例如，應用程式的&#x200B;*首頁*&#x200B;檢視可根據&#x200B;**兩個**&#x200B;不同的內容片段模型來顯示內容。 我們不必執行&#x200B;**兩個**&#x200B;個別的查詢，而是可以將查詢合併為單一請求。
 
 1. 在GraphiQL編輯器中輸入以下查詢：
 
@@ -297,12 +296,12 @@ GraphiQL IDE是開發工具，僅在低級環境（如開發或本地實例）�
 
 ## 其他資源
 
-有關GraphQL查詢的更多示例，請參見：[學習搭配使用GraphQL AEM —— 範例內容與查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)。
+如需更多GraphQL查詢的範例，請參閱：[學習如何搭配AEM使用GraphQL — 範例內容與查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html)。
 
-## 恭喜！{#congratulations}
+## 恭喜！ {#congratulations}
 
-恭喜您，您剛建立並執行了多個GraphQL查詢！
+恭喜，您剛剛建立並執行了多個GraphQL查詢！
 
 ## 後續步驟{#next-steps}
 
-在下一章[從ReactAEM應用程式查詢中，您將瞭解外部應用程式如何查詢AEMGraphQL端點。 ](./graphql-and-external-app.md)修改範例WKND GraphQL React應用程式以新增篩選GraphQL查詢的外部應用程式，讓應用程式的使用者可依活動來篩選歷險。 您也會被介紹到一些基本的錯誤處理。
+在下一章[從React應用程式查詢AEM](./graphql-and-external-app.md)中，您將探索外部應用程式如何查詢AEM GraphQL端點。 修改範例WKND GraphQL React應用程式以新增篩選GraphQL查詢的外部應用程式，可讓應用程式的使用者依活動篩選歷險。 您也將了解一些基本的錯誤處理。
