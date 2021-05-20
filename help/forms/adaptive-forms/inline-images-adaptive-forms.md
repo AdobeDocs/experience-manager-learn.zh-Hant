@@ -1,33 +1,32 @@
 ---
-title: 在最適化Forms中顯示內嵌影像
-seo-title: 在最適化Forms中顯示內嵌影像
-description: 在Adaptive Forms中顯示內嵌的已上載影像
-seo-description: 在Adaptive Forms中顯示內嵌的已上載影像
-feature: Adaptive Forms
+title: 在適用性Forms中顯示內嵌影像
+seo-title: 在適用性Forms中顯示內嵌影像
+description: 在適用性Forms中內嵌顯示已上傳的影像
+seo-description: 在適用性Forms中內嵌顯示已上傳的影像
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '241'
 ht-degree: 1%
 
 ---
 
 
-# 最適化Forms中的內嵌影像
+# 適用性Forms中的內嵌影像
 
-常見的使用案例是在「最適化表單」中將上傳的影像顯示為內嵌影像。 依預設，上傳的影像會顯示為連結，而透過在最適化表單中顯示影像，可增強此體驗。 本文將引導您逐步瞭解顯示內嵌影像的相關步驟。
+常見的使用案例是在適用性表單中將上傳的影像顯示為內嵌影像。 依預設，上傳的影像會顯示為連結，而此體驗可透過在適用性表單中顯示影像來增強。 本文將引導您完成顯示內嵌影像的相關步驟。
 
-## 新增預留位置影像
+## 添加佔位符影像
 
-第一個步驟是在檔案附件元件的預留位置div前面附加預留位置。 在下方的程式碼中，檔案附件元件會以其像片上傳的CSS類別名稱來識別。 JavaScript函式是與最適化表單相關聯之用戶端程式庫的一部分。 此函式在檔案附件元件的初始化事件中被調用。
+第一步是在檔案附件元件的開頭附加預留位置div。 在下方的程式碼中，檔案附件元件是以其像片上傳的CSS類別名稱來識別。 JavaScript函式是與適用性表單相關聯之用戶端程式庫的一部分。 在初始化檔案附件元件的事件時調用此函式。
 
 ```javascript
 /**
@@ -42,7 +41,7 @@ function addTempImage(){
 
 ### 顯示內嵌影像
 
-在用戶上傳映像後，在檔案附件元件的commit事件中將調用下面列出的函式。 函式將上載的檔案對象作為參數接收。
+在用戶上載映像後，將在檔案附件元件的提交事件中調用以下列出的函式。 函式會以引數的形式接收上傳的檔案物件。
 
 ```javascript
 /**
@@ -68,9 +67,9 @@ function consumeImage (file) {
 }
 ```
 
-### 部署在您的伺服器上
+### 在伺服器上部署
 
-* 使用套件管理器，在您的例項上下載並安裝[用戶端程式AEM庫&lt;a1/AEM>。](assets/inline-image-client-library.zip)
-* 使用套件管理器，在您的例項上下載並安裝[範例表AEM格&lt;a1/AEM>。](assets/inline-image-af.zip)
-* 將瀏覽器指向[新增內嵌影像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
-* 按一下「附加您的像片」按鈕以新增影像
+* 使用AEM套件管理器，在您的AEM執行個體上下載並安裝[用戶端程式庫](assets/inline-image-client-library.zip)。
+* 使用AEM套件管理器，在您的AEM執行個體上下載並安裝[範例表單](assets/inline-image-af.zip)。
+* 將瀏覽器指向[添加內聯影像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* 按一下「附加您的照片」按鈕以添加影像
