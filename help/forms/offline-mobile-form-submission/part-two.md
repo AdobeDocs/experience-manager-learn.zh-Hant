@@ -1,21 +1,20 @@
 ---
-title: HTM5表AEM單提交的觸發工作流程
-seo-title: HTML5表AEM單提交的觸發工作流程
-description: 在離線模式下繼續填寫行動表單，並提交行動表單以觸發工AEM作流程
-seo-description: 在離線模式下繼續填寫行動表單，並提交行動表單以觸發工AEM作流程
-feature: Mobile Forms
+title: 在HTM5表單提交上觸發AEM工作流程
+seo-title: 在HTML5表單提交上觸發AEM工作流程
+description: 繼續以離線模式填寫行動表單，並提交行動表單以觸發AEM工作流程
+seo-description: 繼續以離線模式填寫行動表單，並提交行動表單以觸發AEM工作流程
+feature: 行動表單
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '258'
 ht-degree: 1%
 
 ---
@@ -23,12 +22,12 @@ ht-degree: 1%
 
 # 處理PDF提交
 
-在本部分，我們將建立在AEM Publish上執行的簡單servlet，以處理從Acrobat/Reader提交PDF的作業。 這個servlet接著會向在作者例項中執行的servlet提出HTTPPOST請求，負責將提交的資料儲存為AEM Author儲存庫中的AEM`nt:file`節點。
+在本部分，我們將建立簡單的servlet，在AEM Publish上執行，以處理從Acrobat/Reader提交的PDF。 這個Servlet接著會向AEM製作執行個體中執行的Servlet發出HTTPPOST請求，該執行個體負責將提交的資料儲存為AEM製作的存放庫中的`nt:file`節點。
 
-以下是處理PDF提交的servlet代碼。 在此servlet中，我們對AEM Author實例中裝載在&#x200B;**/bin/startworkflow**&#x200B;上的servlet進行POST調用。 此servlet會將表單資料儲存在AEM Author的儲存庫中。
+以下是處理PDF提交的Servlet的程式碼。 在此servlet中，我們會對AEM製作例項中裝載於&#x200B;**/bin/startworkflow**&#x200B;上的servlet進行POST呼叫。 此Servlet會將表單資料儲存在AEM Author的存放庫中。
 
 
-## AEM Publish servlet
+## AEM發佈servlet
 
 ```java
 package com.aemforms.handlepdfsubmission.core.servlets;
@@ -103,9 +102,9 @@ public class HandlePDFSubmission extends SlingAllMethodsServlet {
 }
 ```
 
-## AEM Author servlet
+## AEM作者Servlet
 
-下一步是將提交的資料儲存在AEM Author的儲存庫中。 裝載在`/bin/startworkflow`上的servlet會保存提交的資料。
+下一步是將提交的資料儲存在AEM Author的存放庫中。 裝載在`/bin/startworkflow`上的Servlet會儲存提交的資料。
 
 ```java
 import java.io.BufferedReader;
@@ -203,7 +202,7 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-工作流啟AEM動程式配置為每次在`/content/pdfsubmissions`節點下建立類型`nt:file`的新資源時觸發。 此工作流程會將提交的資料與xdp範本合併，以建立非互動或靜態PDF。 然後，產生的PDF會指派給使用者以進行審閱和核准。
+每次在`/content/pdfsubmissions`節點下建立`nt:file`類型的新資源時，AEM工作流啟動器都配置為觸發。 此工作流程會將提交的資料與xdp範本合併，以建立非互動式或靜態PDF。 然後，產生的PDF會指派給使用者以供審核和核准。
 
-為了將提交的資料儲存在`/content/pdfsubmissions`節點下，我們使用`GetResolver` OSGi服務，使我們能夠使用`fd-service`系統用戶保存提交的資料，該系統用戶在每個AEM Forms安裝中都可用。
+若要將提交的資料儲存在`/content/pdfsubmissions`節點下，我們可使用`GetResolver` OSGi服務，使用每個AEM Forms安裝程式都提供的`fd-service`系統使用者來儲存提交的資料。
 
