@@ -1,8 +1,8 @@
 ---
 title: 自定義分配任務通知
-description: 在指派任務通知電子郵件中加入表單資料
+description: 在指派任務通知電子郵件中包含表單資料
 sub-product: 表單
-feature: Workflow
+feature: 工作流程
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,31 +10,30 @@ activity: setup
 version: 6.4,6.5
 kt: 6279
 thumbnail: KT-6279.jpg
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 2%
+source-wordcount: '448'
+ht-degree: 1%
 
 ---
 
 
 # 自定義分配任務通知
 
-Assign Task元件用於將任務分配給工作流參與者。 將任務分配給用戶或組時，會向定義的用戶或組成員發送電子郵件通知。
-此電子郵件通知通常包含與任務相關的動態資料。 使用系統生成的[元資料屬性](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)讀取此動態資料。
-若要在電子郵件通知中包含已提交表單資料的值，我們需要建立自訂中繼資料屬性，然後在電子郵件範本中使用這些自訂中繼資料屬性
+分配任務元件用於將任務分配給工作流參與者。 將任務分配給用戶或組時，會向定義的用戶或組成員發送電子郵件通知。
+此電子郵件通知通常包含與任務相關的動態資料。 使用系統生成的[元資料屬性](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)來獲取此動態資料。
+若要將已提交表單資料的值包含在電子郵件通知中，我們需要建立自訂中繼資料屬性，然後在電子郵件範本中使用這些自訂中繼資料屬性
 
 
 
 ## 建立自訂中繼資料屬性
 
-建議的方法是建立OSGI元件，以實作[WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)的getUserMetadata方法
+建議的方法是建立OSGI元件，實作[WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)的getUserMetadata方法
 
-下列程式碼會建立4個中繼資料屬性（_firstName_、_lastName_、_reason_&#x200B;和&#x200B;_amountRequested_），並從提交的資料設定其值。 例如，中繼資料屬性&#x200B;_firstName_&#x200B;的值會從提交的資料設定為名為firstName的元素的值。 下列程式碼假設最適化表單的已提交資料為xml格式。 以JSON結構描述或表單資料模型為基礎的最適化Forms會產生JSON格式的資料。
+以下代碼建立4個元資料屬性（_firstName_、_lastName_、_reason_&#x200B;和&#x200B;_amountRequested_），並從提交的資料設定其值。 例如，中繼資料屬性&#x200B;_firstName_&#x200B;的值設為從提交資料中名為firstName的元素的值。 下列程式碼假設適用性表單的提交資料為xml格式。 以JSON結構描述或表單資料模型為基礎的適用性Forms會以JSON格式產生資料。
 
 
 ```java
@@ -116,11 +115,11 @@ return customMetadataMap;
 
 ## 在任務通知電子郵件範本中使用自訂中繼資料屬性
 
-在電子郵件範本中，您可使用下列語法加入中繼資料屬性，其中amountRequested是中繼資料屬性`${amountRequested}`
+在電子郵件範本中，您可以使用下列語法來包含中繼資料屬性，其中amountRequested是中繼資料屬性`${amountRequested}`
 
 ## 配置分配任務以使用自定義元資料屬性
 
-在OSGi元件內建並部署到伺服器AEM後，請配置如下所示的分配任務元件以使用自定義元資料屬性。
+建置OSGi元件並部署至AEM伺服器後，請設定「指派任務」元件，如下所示，以使用自訂中繼資料屬性。
 
 
 ![任務通知](assets/task-notification.PNG)
@@ -129,22 +128,22 @@ return customMetadataMap;
 
 ![自訂中繼資料屬性](assets/custom-meta-data-properties.PNG)
 
-## 若要在您的伺服器上試用
+## 在伺服器上嘗試
 
-* [配置日CQ郵件服務](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
+* [設定Day CQ Mail Service](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
 * 將有效的電子郵件ID與[admin user](http://localhost:4502/security/users.html)關聯
 * 使用[套件管理器](http://localhost:4502/crx/packmgr/index.jsp)下載並安裝[Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip)
-* 下載[最適化表單](assets/request-travel-authorization.zip)並從AEM[表單和檔案ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)匯入。
-* 使用[Web控制台](http://localhost:4502/system/console/bundles)部署並啟動[自訂Bundle](assets/work-items-user-service-bundle.jar)
-* [預覽並送出表單](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
+* 下載[適用性表單](assets/request-travel-authorization.zip)，並從[表單和檔案ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)匯入至AEM。
+* 使用[Web控制台](http://localhost:4502/system/console/bundles)部署並啟動[自訂套件組合](assets/work-items-user-service-bundle.jar)
+* [預覽並提交表單](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 
-在表單提交任務分配通知時，會傳送給與管理員用戶關聯的電子郵件ID。 以下螢幕抓圖顯示任務分配通知示例
+在表單提交任務分配通知時，將發送到與管理員用戶關聯的電子郵件ID。 以下螢幕截圖顯示任務分配通知示例
 
 ![通知](assets/task-nitification-email.png)
 
 >[!NOTE]
 >指派任務通知的電子郵件範本必須採用下列格式。
 >
-> subject=Task Assigned - `${workitem_title}`
+> subject=已分配任務 — `${workitem_title}`
 >
-> message=表示您的電子郵件範本而沒有任何新行字元的字串。
+> message=代表您的電子郵件範本且不含任何新行字元的字串。
