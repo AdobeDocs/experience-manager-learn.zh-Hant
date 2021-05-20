@@ -1,6 +1,6 @@
 ---
-title: 建立啟動Cloud Service設定
-description: 瞭解如何建立新的啟動Cloud Services設定。 然後，啟動Cloud Service設定可套用至現有的網站，而且在「作者」和「發佈」環境中都可看到啟動程式庫載入。
+title: 建立LaunchCloud Service設定
+description: 了解如何建立新的LaunchCloud Services設定。 接著，LaunchCloud Service設定便可套用至現有的Site，且在製作和發佈環境中都可看到載入Launch程式庫。
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -11,21 +11,20 @@ thumbnail: 38566.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 4%
+source-wordcount: '97'
+ht-degree: 3%
 
 ---
 
 
-# 建立啟動Cloud Service配置{#create-launch-cloud-service}
+# 建立LaunchCloud Service設定{#create-launch-cloud-service}
 
-瞭解如何在Adobe Experience Manager建立新的LaunchCloud Services設定。 然AEM後，啟動Cloud Service設定可套用至現有的網站，並且在「作者」和「發佈」環境中都能看到啟動程式庫載入。
+了解如何在Adobe Experience Manager中建立新的LaunchCloud Services設定。 AEM LaunchCloud Service設定隨後可套用至現有的Site，且在「製作」和「發佈」環境中都可看見載入Launch程式庫。
 
 >[!VIDEO](https://video.tv.adobe.com/v/38566?quality=12&learn=on)
 
 ## 後續步驟
 
-[除錯啟動實作](debug-launch-implementation.md)
+[對Launch實作除錯](debug-launch-implementation.md)
