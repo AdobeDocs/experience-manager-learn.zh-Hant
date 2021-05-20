@@ -1,30 +1,29 @@
 ---
 title: 從MySQL資料庫儲存和檢索表單資料
-description: 多部分教學課程，引導您逐步瞭解儲存和擷取表單資料的相關步驟
-feature: Adaptive Forms
+description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+topic: 開發
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '147'
 ht-degree: 2%
 
 ---
 
 # 建立用戶端程式庫
 
-用AEM戶端程式庫管理您所有的用戶端JavaScript程式碼。 在本文中，我已建立簡單的JavaScript，以使用指南橋接API擷取最適化表單資料。 一旦提取了自適應表單資料，就會對servlet進行POST調用，以插入或更新資料庫中的自適應表單資料。 函式getALLUrlParams會傳回URL中的參數。 如果URL中存在guid參數，則我們需要執行更新操作（如果不是插入操作）。其餘功能都在與。savebutton類的click事件關聯的代碼中處理。
+AEM用戶端程式庫會管理所有用戶端JavaScript程式碼。 針對本文，我已建立簡單的JavaScript，以使用指南橋接器API擷取適用性表單資料。 擷取適用性表單資料後，會對servlet發出POST呼叫，以在資料庫中插入或更新適用性表單資料。 函式getALLUrlParams會傳回URL中的參數。 如果URL中存在guid參數，則需要執行更新操作（如果不是插入操作）。其餘功能在與.savebutton類的點擊事件關聯的代碼中處理。
 
 >[!NOTE]
 >
->客戶端庫是本教學課程資產的一部分
+>用戶端程式庫是本教學課程資產的一部分
 
 ```javascript
 function getAllUrlParams(url) {
