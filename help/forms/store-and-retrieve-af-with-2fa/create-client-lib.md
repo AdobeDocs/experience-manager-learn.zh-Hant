@@ -1,7 +1,7 @@
 ---
 title: 建立用戶端程式庫
 description: 建立clientlibrary以處理「儲存並退出」按鈕的點按事件
-feature: Adaptive Forms
+feature: 適用性表單
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,22 +9,21 @@ activity: implement
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
-topic: Development
+topic: 開發
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '144'
 ht-degree: 2%
 
 ---
 
 # 建立客戶端庫
 
-建立[client lib](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html)，其中將包含在CSS類&#x200B;**savebutton**&#x200B;所標識的按鈕的click事件上調用`guideBridge` API方法`doAjaxSubmitWithFileAttachment`的代碼。  我們會將最適化表單資料`fileMap`和`mobileNumber`傳遞至位於`**/bin/storeafdatawithattachments`的端點監聽
+建立[client lib](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html)，該庫將包含用於在由CSS類&#x200B;**savebutton**&#x200B;標識的按鈕的點擊事件上調用`guideBridge` API方法`doAjaxSubmitWithFileAttachment`的代碼。  我們會將最適化表單資料`fileMap`和`mobileNumber`傳遞至`**/bin/storeafdatawithattachments`的端點監聽
 
-在儲存表單資料後，會產生唯一的應用程式ID，並在對話方塊中呈現給使用者。 關閉對話框後，用戶將進入允許他們使用唯一應用程式ID檢索保存的自適應表單的表單。
+保存表單資料後，將生成唯一的應用程式ID，並在對話框中向用戶顯示。 關閉對話方塊時，會將使用者視為表單，讓他們使用唯一的應用程式ID擷取儲存的最適化表單。
 
 ```java
 $(document).ready(function () {
@@ -70,6 +69,6 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> 我們已使用[bootbox javascript library](http://bootboxjs.com/examples.html)來顯示對話方塊
+> 我們已使用[bootbox javascript庫](http://bootboxjs.com/examples.html)來顯示對話框
 
-此示例中使用的客戶端庫可從此處[下載](assets/client-libraries.zip)
+此示例中使用的客戶端庫可以從此處[下載](assets/client-libraries.zip)
