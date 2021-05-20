@@ -1,6 +1,6 @@
 ---
 title: 實作介面的方法
-description: 使用Document CloudREST API建置介面方法以建立pdf。
+description: 實作介面方法，使用Document CloudREST API建立PDF。
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,9 +18,9 @@ ht-degree: 2%
 
 # 介面實作
 
-以下是實現介面的類的完整代碼。
+以下是實作介面的類的完整代碼。
 
-此類使用`getAccessToken`、`getJWTToken`和`GetContentAnalyser`類的靜態方法`getContentAnalyserRequest`兩種實用程式方法。
+此類使用`getAccessToken`、`getJWTToken`和`GetContentAnalyser`類的靜態方法`getContentAnalyserRequest`。
 
 
 ```java
