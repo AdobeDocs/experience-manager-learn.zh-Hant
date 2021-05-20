@@ -1,6 +1,6 @@
 ---
-title: 瞭解核心元件
-description: '核心AEM元件是與Adobe Experience Manager一起使用的標準集元件。 核心元件以Adobe的最佳實務與標準建立，為任何網站實作提供基準功能集。 '
+title: 了解核心元件
+description: 'AEM核心元件是與Adobe Experience Manager搭配使用的標準元件。 核心元件以Adobe的最佳實務和標準建置，可為任何Sites實作提供基準功能集。 '
 feature: 核心元件
 topics: authoring
 audience: all
@@ -20,15 +20,15 @@ ht-degree: 11%
 ---
 
 
-# 瞭解核心元件{#understanding-core-components}
+# 了解核心元件{#understanding-core-components}
 
 >[!CONTEXTUALHELP]
 >id="intro_core_components"
->title="將核心元件作AEM為Cloud Service"
->abstract="在此標籤中，您可以檢視有助於您建立與Cloud Service相容的現AEM代網站的內容。 要做到這一點，關鍵是使用核心元件"
+>title="AEM as aCloud Service中的核心元件簡介"
+>abstract="在此標籤中，您可以檢視有助於您建立與AEM as aCloud Service相容的現代化網站的內容。 要執行此動作，關鍵是使用核心元件"
 >additional-url="https://video.tv.adobe.com/v/18926" text="核心元件概觀"
 
-核心AEM元件是與Adobe Experience Manager一起使用的標準集元件。 核心元件以Adobe的最佳實務與標準建立，為任何網站實作提供基準功能集。
+AEM核心元件是與Adobe Experience Manager搭配使用的標準元件。 核心元件以Adobe的最佳實務和標準建置，可為任何Sites實作提供基準功能集。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18926/?quality=12&learn=on)
 
