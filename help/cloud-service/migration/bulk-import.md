@@ -1,21 +1,20 @@
 ---
-title: 將批量導入與AEM Assets
-description: 「大量匯入」工AEM具(Cloud Service)可讓管理員以安全且有效率的方式，從雲端儲存空間(Azure Blob儲存空間或AmazonS3)大量匯入資產。
+title: 搭配AEM Assets使用大量匯入
+description: AEM as aCloud Service中的「大量匯入」工具可讓管理員以安全且有效的方式，從雲端儲存空間(Azure Blob儲存空間或Amazon S3)大量匯入資產。
 version: cloud-service
 doc-type: technical-video
 topics: Migration
-feature: Migration
+feature: 移轉
 activity: develop
 audience: developer
 kt: 6729
 thumbnail: 329680.jpg
-topic: Migration
+topic: 移轉
 role: Architect, Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '78'
+source-wordcount: '75'
 ht-degree: 0%
 
 ---
@@ -23,6 +22,6 @@ ht-degree: 0%
 
 # 使用批量導入
 
-「大量匯入」工AEM具(Cloud Service)可讓管理員以安全且有效率的方式，從雲端儲存空間(Azure Blob儲存空間或AmazonS3)大量匯入資產。
+AEM as aCloud Service中的「大量匯入」工具可讓管理員以安全且有效的方式，從雲端儲存空間(Azure Blob儲存空間或Amazon S3)大量匯入資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/329680/?quality=12&learn=on)
