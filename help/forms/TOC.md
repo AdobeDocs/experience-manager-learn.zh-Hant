@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: da7837d45a9d5f614a4f6527b7bfe98aaf980d4f
+source-git-commit: c74c6f5627e69e32bbf0098d6b6bab122cace798
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '964'
 ht-degree: 6%
 
 ---
@@ -41,7 +41,10 @@ ht-degree: 6%
 + 實用整合{#some-useful-integrations}
    + [雙因素驗證](some-useful-integrations/two-factor-authentication.md)
    + [OCR資料擷取](some-useful-integrations/ocr-data-extraction.md)
-
++ 建立OSGi捆綁{#creating-your-first-osgi-bundle}
+   + [設定您的環境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
+   + [建立OSGi服務](creating-your-first-osgi-bundle/create-osgi-service.md)
+   + [建立Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
 + 調適型表單 {#adaptive-forms}
    + [在Windows上安裝AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [在Linux上安裝32位元套件](adaptive-forms/installing-aem-form-on-linux.md)
