@@ -10,10 +10,10 @@ topics: content-delivery
 activity: develop, understand
 kt: 2963
 index: y
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 21%
+source-wordcount: '182'
+ht-degree: 20%
 
 ---
 
@@ -49,6 +49,14 @@ ht-degree: 21%
       + [4 — 導航和路由](./spa-editor/react/navigation-routing.md)
       + [5 — 自訂元件](./spa-editor/react/custom-component.md)
       + [6 — 擴充元件](./spa-editor/react/extend-component.md)
+   + Angular{#angular}
+      + [概覽](./spa-editor/angular/overview.md)
+      + [1 - SPA編輯器專案](./spa-editor/angular/create-project.md)
+      + [2 — 整合SPA](./spa-editor/angular/integrate-spa.md)
+      + [3 — 對應SPA元件](./spa-editor/angular/map-components.md)
+      + [4 — 導航和路由](./spa-editor/angular/navigation-routing.md)
+      + [5 — 自訂元件](./spa-editor/angular/custom-component.md)
+      + [6 — 擴充元件](./spa-editor/angular/extend-component.md)
    + 遠程SPA{#remote-spa}
       + [概覽](./spa-editor/remote-spa/overview.md)
       + [快速設定](./spa-editor/remote-spa/quick-setup.md)
