@@ -12,15 +12,17 @@ thumbnail: 330460.jpg
 topic: 無頭式整合
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
 
 
 # 以代號為基礎的驗證以AEM作為Cloud Service
+
+AEM會公開各種HTTP端點，可以無周邊方式互動，從GraphQL、AEM Content Services到Assets HTTP API。 這些無頭消費者通常需要向AEM驗證，才能存取受保護的內容或動作。 為方便執行此作業，AEM支援來自外部應用程式、服務或系統之HTTP要求的權杖式驗證。
 
 在本教學課程中，請進一步了解外部應用程式如何使用存取權杖，以程式設計方式驗證AEM，並與作為HTTPCloud Service互動。
 
