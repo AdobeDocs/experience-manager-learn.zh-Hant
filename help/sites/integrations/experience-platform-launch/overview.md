@@ -11,10 +11,10 @@ thumbnail: 39090.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 12%
+source-wordcount: '138'
+ht-degree: 13%
 
 ---
 
@@ -32,5 +32,5 @@ Experience Platform Launch是Adobe的新一代標籤管理平台，也是部署A
 ## 其他資源 {#additional-resources}
 
 * [Experience Platform與Experience Cloud應用程式的整合](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
-* [Experience Platform Launch 使用指南](https://docs.adobe.com/content/help/en/launch/using/overview.html)
+* [Experience Platform Launch 使用指南](https://experienceleague.adobe.com/docs/launch/using/home.html)
 * [透過 Launch 在網站中實作 Experience Cloud](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/index.html)
