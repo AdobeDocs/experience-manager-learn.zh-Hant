@@ -6,9 +6,9 @@ feature: 適用性表單
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: 22437e93cbf8f36d723dc573fa327562cb51b562
+source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '843'
 ht-degree: 2%
 
 ---
@@ -116,7 +116,12 @@ Maven專案將以互動方式產生，系統會要求您提供以下數種屬性
 ## 建置專案
 
 
-編寫OSGi服務（或servlet）後，您需要建置專案，以產生可使用Felix網頁主控台部署的OSGi套件組合。 請參閱[AEMFD用戶端SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) ，將適當的用戶端SDK納入您的Maven專案。 您必須將AEM FD用戶端SDK包含在核心專案`pom.xml`的相依性區段中，如下所示。
+
+
+編寫OSGi服務（或servlet）後，您需要建置專案，以產生可使用Felix網頁主控台部署的OSGi套件組合。 請參閱[AEMFD用戶端SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk-) ，將適當的用戶端SDK納入您的Maven專案。 您必須將AEM FD用戶端SDK包含在核心專案`pom.xml`的相依性區段中，如下所示。
+
+
+
 
 
 ```xml
@@ -131,5 +136,6 @@ Maven專案將以互動方式產生，系統會要求您提供以下數種屬性
 
 * 開啟&#x200B;**命令提示窗口**
 * 導航到 `c:\aemformsbundles\learningaemforms\core`
-* 執行命令`mvn clean install`
-如果一切順利，您應會在下列位置`C:\AEMFormsBundles\learningaemforms\core\target`看到套件組合。 此套件組合現已準備就緒，可使用Felix網頁主控台部署至AEM。
+* 執行命令`mvn clean install -PautoInstallBundle`
+以上命令會建立並安裝在`http://localhost:4502`上執行的AEM伺服器中的套件組合。 此套件也可在檔案系統上使用，網址為
+   `C:\AEMFormsBundles\learningaemforms\core\target` 和可使用Felix  [web主控台部署](http://localhost:4502/system/console/bundles)
