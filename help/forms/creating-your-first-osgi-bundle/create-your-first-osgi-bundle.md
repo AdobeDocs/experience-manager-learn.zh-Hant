@@ -6,7 +6,7 @@ feature: 適用性表單
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 2%
@@ -119,6 +119,8 @@ Maven專案將以互動方式產生，系統會要求您提供以下數種屬性
 
 
 編寫OSGi服務（或servlet）後，您需要建置專案，以產生可使用Felix網頁主控台部署的OSGi套件組合。 請參閱[AEMFD用戶端SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk-) ，將適當的用戶端SDK納入您的Maven專案。 您必須將AEM FD用戶端SDK包含在核心專案`pom.xml`的相依性區段中，如下所示。
+
+
 
 
 
