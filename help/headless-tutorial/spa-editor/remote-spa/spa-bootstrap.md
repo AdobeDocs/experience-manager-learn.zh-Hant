@@ -7,9 +7,9 @@ role: Developer, Architect
 level: Beginner
 kt: 7633
 thumbnail: kt-7633.jpeg
-source-git-commit: 5dea9cf646762c0f4aff43d9e48a35ab6ebc0af8
+source-git-commit: 76b10941ca8aeb5aa15ca39d354d9f7e7fb24522
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1227'
 ht-degree: 1%
 
 ---
@@ -18,6 +18,18 @@ ht-degree: 1%
 # Bootstrap遠端SPA for SPA編輯器
 
 可編輯區域可新增至遠端SPA之前，必須先以AEM SPA編輯器JavaScript SDK及一些其他設定引導。
+
+
+## 下載WKND應用程式來源
+
+如果您尚未這麼做，請從Github.com下載WKND應用程式的原始碼，並切換包含本教學課程中所執行之SPA變更的分支。
+
+```
+$ mkdir -p ~/Code/wknd-app
+$ cd ~/Code/wknd-app
+$ git clone --branch feature/spa-editor https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd aem-guides-wknd-graphql
+```
 
 ## 新增AEM SPA Editor JS SDK npm相依性
 
