@@ -8,9 +8,9 @@ topic: 開發
 feature: 開發人員工具
 kt: 6933
 thumbnail: 330558.jpg
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: f707c8e7cce413ecdcfb5d406fd1b38f26d965c4
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '91'
 ht-degree: 3%
 
 ---
@@ -22,4 +22,6 @@ ht-degree: 3%
 
 >[!VIDEO](https://video.tv.adobe.com/v/330558/?quality=12&learn=on)
 
-_請檢閱這些指示，使用AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)設定完整的本機開發環境。_[
+_執 `license.properties` 行AEM SDK不再需要此影片中顯示的。_
+
+請檢閱這些指示，以使用AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)來[設定完整的本機開發環境。
