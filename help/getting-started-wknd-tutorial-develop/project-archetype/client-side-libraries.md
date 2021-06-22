@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '3299'
 ht-degree: 0%
@@ -130,7 +130,8 @@ ht-degree: 0%
 
    `main.scss` 是模組中所有Sass檔案的入 `ui.frontend` 口。其中將包含`_variables.scss`檔案，該檔案包含要用於專案中不同Sass檔案的一系列品牌變數。 也包含`_base.scss`檔案，並定義HTML元素的一些基本樣式。 規則運算式包含`src/main/webpack/components`下個別元件樣式的所有樣式。 另一個規則運算式包含`src/main/webpack/site/styles`下的所有檔案。
 
-1. Inspect檔案`main.ts`。 `main.ts` 包含 `main.scss` 和包含規則運算式，用於收 `.js` 集專 `.ts` 案中的任何或檔案。此入口點將被[webpack配置檔案](https://webpack.js.org/configuration/)用作整個`ui.frontend`模組的入口點。
+1. 
+   1. Inspect檔案`main.ts`。 它包含`main.scss`和規則運算式，用於收集專案中的任何`.js`或`.ts`檔案。 此入口點將被[webpack配置檔案](https://webpack.js.org/configuration/)用作整個`ui.frontend`模組的入口點。
 
 1. Inspect `src/main/webpack/site/styles`下的檔案：
 
@@ -201,7 +202,7 @@ AEM專案原型會自動設定此整合。 接下來，探索其運作方式。
    >
    >也有`npm run prod`設定檔，將縮制JS和CSS。 這是每當透過Maven觸發Webpack組建時的標準編譯。 如需[ui.frontend模組的詳細資訊，請前往此處](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)。
 
-1. Inspect `ui.frontend/dist/clientlib-site/css/site.css`下方的檔案`site.css`。 這是根據Sass源檔案編譯的CSS。
+1. Inspect `ui.frontend/dist/clientlib-site/site.css`下方的檔案`site.css`。 這是根據Sass源檔案編譯的CSS。
 
    ![分佈式網站CSS](assets/client-side-libraries/ui-frontend-dist-site-css.png)
 
@@ -233,7 +234,7 @@ AEM專案原型會自動設定此整合。 接下來，探索其運作方式。
 
 >[!CAUTION]
 >
-> 並非所有專案都需使用&#x200B;**ui.frontend**&#x200B;模組。 **ui.frontend**&#x200B;模組會增加額外的複雜性，如果不需要/想要使用這些進階前端工具(Sass、webpack、npm...)，則可能不需要。
+> 並非所有專案都需使用&#x200B;**ui.frontend**&#x200B;模組。 **ui.frontend**&#x200B;模組會增加額外的複雜性，如果不需要/不想使用這些進階前端工具(Sass、webpack、npm...)，則可能不需要它。
 
 ## 頁面和範本包含{#page-inclusion}
 
