@@ -12,7 +12,7 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '1625'
 ht-degree: 0%
@@ -54,7 +54,7 @@ ht-degree: 0%
 
    在「**允許的元件**」>「**一般**」下，選擇「**佈局容器**」元件。
 
-   在&#x200B;**允許的元件** > **WKND SPA REACT - STRUCTURE**&#x200B;下，選擇&#x200B;**標題**&#x200B;元件：
+   在&#x200B;**允許的元件** > **WKND SPA REACT - STRUCTURE**&#x200B;下，選擇&#x200B;**導航**&#x200B;元件：
 
    ![選擇導航元件](assets/navigation-routing/select-navigation-component.png)
 
