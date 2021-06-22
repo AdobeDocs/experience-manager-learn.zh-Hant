@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Assets 的影片和教學課程
 breadcrumb-title: AEM Assets 教學課程
 sub-product: 資產
 team: TM
-source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
+source-git-commit: 53312e573ca022f09faa44cbbf51c5b8b0ed90ee
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '265'
 ht-degree: 27%
 
 ---
@@ -86,6 +86,9 @@ ht-degree: 27%
    + [置入已連結](./adobe-asset-link/place-linked.md)
    + [僅限版位(FPO)](./adobe-asset-link/for-placement-only.md)
    + [資產搜尋](./adobe-asset-link/asset-search.md)
+
++ 內容自動化{#content-automation}
+   + [概覽](./content-automation/overview.md)
 
 + 動態媒體{#dynamic-media}
    + [Dynamic Media概述](dynamic-media/dynamic-media-overview-feature-video-use.md)
