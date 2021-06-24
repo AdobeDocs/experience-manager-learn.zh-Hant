@@ -71,7 +71,7 @@ ht-degree: 99%
 >
 > **AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
-## 後續步驟{#next-steps}
+## 後續步驟 {#next-steps}
 
 您還在等什麼？！請瀏覽至 [SPA Editor 專案](create-project.md)章節，開始進行此教學課程並了解如何使用 AEM Project Archetype 產生啟用 SPA Editor 的專案。
 
