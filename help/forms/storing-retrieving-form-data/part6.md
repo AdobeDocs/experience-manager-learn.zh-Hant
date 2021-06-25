@@ -2,17 +2,13 @@
 title: 從MySQL資料庫儲存和檢索表單資料
 description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
 feature: 適用性表單
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
-version: 6.3,6.4,6.5
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+version: 6.3,6.4,6.5
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '280'
 ht-degree: 3%
 
 ---
@@ -39,11 +35,10 @@ ht-degree: 3%
 * 登錄[configMgr。](http://localhost:4502/system/console/configMgr) 搜尋「Apache Sling Connection Pooled DataSource」。使用下列屬性，建立名為&#x200B;**SaveAndContinue**&#x200B;的新Apache Sling Connection Pooled Datasource項目：
 
 | 屬性名稱 | 值 |
-------------------------|---------------------------------------
+| ------------------------|---------------------------------------|
 | 資料源名稱 | SaveAndContinue |
 | JDBC驅動程式類 | com.mysql.cj.jdbc.Driver |
-| JDBC連接uri | jdbc:mysql://localhost:3306/aemformstutorial |
-
+| JDBC連接uri | jdbc:mysql:/localhost:3306/aemformation |
 
 * 開啟[適用性表單](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
 * 填寫一些詳細資訊，然後按一下「儲存並稍後繼續」按鈕。
