@@ -1,18 +1,14 @@
 ---
 title: 從MySQL資料庫儲存和檢索表單資料
 description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
-feature: 適用性表單
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
 version: 6.3,6.4,6.5
+feature: 適用性表單
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '199'
 ht-degree: 3%
 
 ---
@@ -35,9 +31,7 @@ AEM可透過許多方式啟用與外部資料庫的整合。 資料庫整合最�
 >請確定您為資料源命名&#x200B;**SaveAndContinue**。 范常式式碼會使用名稱連線至資料庫。
 
 | 屬性名稱 | 值 |
-------------------------|---------------------------------------
+| ------------------------|---------------------------------------|
 | 資料源名稱 | SaveAndContinue |
 | JDBC驅動程式類 | com.mysql.cj.jdbc.Driver |
-| JDBC連接uri | jdbc:mysql://localhost:3306/aemformstutorial |
-
-
+| JDBC連接uri | jdbc:mysql:/localhost:3306/aemformation |
