@@ -2,19 +2,15 @@
 title: 設定AEM資料來源
 description: 配置MySQL備份資料源以儲存和檢索表單資料
 feature: 適用性表單
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
-version: 6.4,6.5
-kt: 6899
-thumbnail: 6899.jpg
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+version: 6.4,6.5
+kt: 6899
+thumbnail: 6899.jpg
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '193'
 ht-degree: 3%
 
 ---
@@ -36,13 +32,11 @@ AEM可透過許多方式啟用與外部資料庫的整合。 整合資料庫最�
 >請確定您為資料源命名&#x200B;**aemformstutorial**。 范常式式碼會使用名稱連線至資料庫。
 
 | 屬性名稱 | 值 |
-------------------------|---------------------------------------
+| ------------------------|--------------------------------------- |
 | 資料源名稱 | SaveAndContinue |
 | JDBC驅動程式類 | com.mysql.cj.jdbc.Driver |
-| JDBC連接uri | jdbc:mysql://localhost:3306/aemformstutorial |
+| JDBC連接uri | jdbc:mysql:/localhost:3306/aemformation |
 
 ## 資產
 
 建立架構的SQL檔案可從此處[下載。 ](assets/sign-multiple-forms.sql)您需要使用MySql Workbench導入此檔案，以建立架構和表。
-
-
