@@ -12,9 +12,9 @@ thumbnail: 330519.jpg
 topic: 無頭式整合
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e0822ad4aaf4022a849825ef625e1c29eb6e78f3
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1828'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ function getCommandLineParams() {
 
    現在，根據透過`file`命令列參數傳入的JSON檔案（本機開發存取權杖JSON或服務憑證JSON），應用程式將衍生存取權杖。
 
-   請記住，雖然服務憑證不會過期，但JWT和對應的存取權杖會過期，且必須在過期前重新整理。 您可以使用AdobeIMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)提供的`refresh_token` [來完成此操作。
+   請記住，雖然服務憑證每365天過期，但JWT和對應的存取權杖會經常過期，且必須在過期前重新整理。 您可以使用AdobeIMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)提供的`refresh_token` [來完成此操作。
 
 1. 完成這些更改後，從AEM Developer Console下載的服務憑據JSON（為了簡單起見，將`service_token.json`保存為與此`index.js`相同的資料夾），執行將命令行參數`file`替換為`service_token.json`的應用程式，並將`propertyValue`更新為新值，以便在AEM中顯現效果。
 
