@@ -8,9 +8,9 @@ topics: development, authoring, configuring
 audience: all
 activity: use
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 裁切、調整影像和縮放目標{#crop-adjusted-zoom-targets}
+# 裁切、調整影像和縮放目標 {#crop-adjusted-zoom-targets}
 
 Dynamic Media Classic主影像概念的主要優點之一，是您可以針對許多用途重新調整影像資產的用途。 傳統上，您必須建立個別的裁切版本，以顯示詳細資訊或色票。 使用Dynamic Media Classic時，您可以在單一主版上執行相同的工作，並將這些裁切的版本儲存為新的物理檔案或不佔用儲存空間的虛擬衍生工具。
 
