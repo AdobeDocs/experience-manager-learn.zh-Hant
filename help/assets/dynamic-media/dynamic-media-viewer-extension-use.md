@@ -5,9 +5,9 @@ sub-product: Dynamic Media
 feature: 資產 Insights
 version: 6.3, 6.4, 6.5
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 16%
@@ -15,7 +15,7 @@ ht-degree: 16%
 ---
 
 
-# 將Dynamic Media檢視器與Adobe Analytics和AdobeLaunch搭配使用{#using-dynamic-media-viewers-adobe-analytics-launch}
+# 搭配使用Dynamic Media檢視器及Adobe Analytics和AdobeLaunch{#using-dynamic-media-viewers-adobe-analytics-launch}
 
 若為擁有Dynamic Media和Adobe Analytics的客戶，您現在可以使用Dynamic Media檢視器擴充功能，追蹤您網站上Dynamic Media檢視器的使用情況。
 
