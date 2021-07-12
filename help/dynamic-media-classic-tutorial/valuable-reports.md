@@ -8,9 +8,9 @@ topics: development, authoring, configuring, reports
 audience: all
 activity: use
 topic: 內容管理
-role: Administrator
+role: Admin
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# 對管理員有價值的報告{#valuable-reports}
+# 有價值的管理員報表 {#valuable-reports}
 
 在最後一章中，我們只想讓您了解兩個重要報表，如果您是管理員，您可以考慮加以設定：「頻寬和儲存」報告和「映像錯誤」報告。
 
@@ -44,8 +44,8 @@ _影像錯誤報告。_
 
 若要進一步了解Dynamic Media Classic，請參閱下列資源：
 
-- [Dynamic Media Classic on Experience League — 實現價值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Dynamic Media Classic on Experience League — 執行更多操作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- [Dynamic Media ClassicExperience League — 取得價值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- [Dynamic Media ClassicExperience League — 執行更多操作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media電子報封存](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [Dynamic Media電子報訂閱頁面](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
 - [Dynamic Media Classic檔案](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
