@@ -3,9 +3,9 @@ title: 搭配AEM Assets和InDesign Server使用資產範本
 description: AEM Assets範本可讓行銷人員建立、管理和提供數位及列印用的數位資產。 與InDesign伺服器整合時，使用資產範本可更輕鬆地製作標誌手冊、名片、傳單、廣告和明信片。
 version: 6.3, 6.4, 6.5
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
@@ -27,7 +27,7 @@ AEM Assets範本可讓行銷人員建立、管理和提供數位及列印用的�
 
 >[!VIDEO](https://video.tv.adobe.com/v/25170?quality=12&learn=on)
 
-## 技術概述{#technical-overview}
+## 技術概述 {#technical-overview}
 
 本影片較為技術性地概述AEM Assets Assert Template功能，並說明AEM如何透過InDesign協助撰寫AEM Assets和內容，以建立豐富、引人入勝的列印體驗。
 
