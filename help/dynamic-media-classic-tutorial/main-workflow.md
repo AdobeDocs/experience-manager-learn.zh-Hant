@@ -8,9 +8,9 @@ topics: development, authoring, configuring, architecture, publishing
 audience: all
 activity: use
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '2734'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Dynamic Media Classic主要工作流程和預覽資產{#main-workflow}
+# Dynamic Media Classic主要工作流程和預覽資產 {#main-workflow}
 
 Dynamic Media支援建立（和上傳）、製作（和發佈）和傳送工作流程程式。 首先，您要上傳資產，然後對這些資產執行動作，例如建立影像集，最後發佈以讓這些資產上線。 「建置」步驟對於某些工作流程為選用。 例如，如果您的目標只是動態調整影像大小和縮放，或轉換並發佈視訊以供串流使用，則沒有必要的建置步驟。
 
