@@ -9,9 +9,9 @@ version: cloud-service
 kt: 6044
 thumbnail: 41244.jpg
 topic: Integrations
-role: Administrator
+role: Admin
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 建立Adobe TargetCloud Service帳戶{#adobe-target-cloud-service}
+# 建立Adobe TargetCloud Service帳戶 {#adobe-target-cloud-service}
 
 以下影片會逐步說明如何將AEM as aCloud Service與Adobe Target連線。
 
