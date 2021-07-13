@@ -4,11 +4,11 @@ description: 進階中繼資料管理可讓使用者建立階層式欄位規則�
 version: 6.3, 6.4, 6.5, cloud-service
 topic: 內容管理
 feature: 中繼資料
-role: Business Practitioner
+role: User
 level: Intermediate
 kt: 616
 thumbnail: 20702.jpg
-source-git-commit: a414284d497a74bb1a617d205a5bb034ea5b8005
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 0%
