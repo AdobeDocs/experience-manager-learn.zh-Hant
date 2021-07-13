@@ -5,9 +5,9 @@ sub-product: dynamic-media
 feature: 影像設定檔、檢視器預設集
 version: 6.3, 6.4, 6.5
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 ---
 
 
-# 使用影像銳利化搭配AEM Dynamic Media{#using-image-sharpening-with-aem-dynamic-media}
+# 搭配AEM Dynamic Media使用影像銳利化{#using-image-sharpening-with-aem-dynamic-media}
 
 此影片說明銳利化影像對維持影像逼真度至關重要的原因，以及如何使用進階設定來製作完美影像。
 
