@@ -5,9 +5,9 @@ sub-product: dynamic-media
 feature: 視訊設定檔
 version: 6.3, 6.4, 6.5
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 7%
@@ -21,7 +21,7 @@ AEM Dynamic Media視訊播放器過去依賴Flash執行階段來支援案頭用�
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
-## 快速了解非Flash視訊播放器{#quick-look-into-non-flash-video-player}
+## 快速了解非Flash視訊播放器 {#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
