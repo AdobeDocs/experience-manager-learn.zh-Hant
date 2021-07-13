@@ -8,9 +8,9 @@ doc-type: technical video
 activity: setup
 version: 6.4, 6.5
 topic: 本土化
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 ---
 
 
-# 設定翻譯規則{#set-up-translation-rules-in-aem}
+# 設定翻譯規則 {#set-up-translation-rules-in-aem}
 
 翻譯設定UI可讓使用者管理AEM Sites中轉譯內容的規則。 此影片詳細說明如何建立自訂元件的新翻譯規則。
 
@@ -40,7 +40,7 @@ ht-degree: 3%
 
 * **[!UICONTROL AEM開始功能表]  >  [!UICONTROL 工具]  >  [!UICONTROL 一般]  >  [[!UICONTROL 翻譯設定]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
-## AEM 6.3 {#prior-to-aem}之前
+## AEM 6.3之前 {#prior-to-aem}
 
 在先前的AEM版本翻譯規則中，是透過編輯位於「翻譯」工作流程下的XML檔案來手動更新：`/etc/workflow/models/translation/translation_rules.xml`。
 
