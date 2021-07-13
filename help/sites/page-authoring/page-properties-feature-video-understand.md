@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5
 kt: 4321
 thumbnail: 32192.jpg
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 27%
@@ -22,7 +22,7 @@ ht-degree: 27%
 ---
 
 
-# 了解頁面屬性{#understanding-page-properties-aem-sites}
+# 了解頁面屬性 {#understanding-page-properties-aem-sites}
 
 以下影片介紹與Adobe Experience Manager中某個頁面相關聯的頁面屬性。
 
