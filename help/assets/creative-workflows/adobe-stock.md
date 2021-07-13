@@ -4,9 +4,9 @@ description: 'AEM可讓使用者直接從AEM搜尋、預覽、儲存及授權Ado
 feature: Adobe Stock
 version: 6.4, 6.5
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 3%
@@ -79,7 +79,7 @@ AEM 6.4.2可讓使用者直接從AEM搜尋、預覽、儲存及授權Adobe Stock
 * 若是AEM 6.4，您需要安裝[AEM Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0)，然後重新安裝cq-dam-stock-integration-content-1.0.4.zip檔案。
 * 請確定您擁有[Adobe I/O主控台](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)和Adobe Experience Manager的管理員權限，以設定整合。
 
-#### 使用Adobe控制台{#set-up-adobe-ims-configuration-using-adobe-i-o-console}設定Adobe I/OIMS設定
+#### 使用Adobe主控台設定Adobe I/OIMS設定 {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
 
 1. 在&#x200B;**工具>安全性**&#x200B;下建立AdobeIMS技術帳戶設定
 2. 選取&#x200B;*雲端解決方案*&#x200B;作為&#x200B;*Adobe Stock*，然後建立新憑證或重新使用現有憑證進行設定。
@@ -91,7 +91,7 @@ AEM 6.4.2可讓使用者直接從AEM搜尋、預覽、儲存及授權Adobe Stock
 
 ![Adobe IMS 技術帳戶](assets/screen_shot_2018-10-22at12219pm.png)
 
-#### 設定Adobe StockCloud Services{#set-up-adobe-stock-cloud-services}
+#### 設定Adobe StockCloud Services {#set-up-adobe-stock-cloud-services}
 
 1. 在「**工具>Cloud Services」下，為Adobe Stock建立新的雲端服務設定。**
 2. 選取在上節中為您的&#x200B;*Adobe Stock雲端*&#x200B;設定建立的&#x200B;*AdobeIMS設定*
