@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5
 kt: 4252
 thumbnail: 32012.jpg
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 ---
 
 
-# 了解回應式版面{#understanding-responsive-layout-with-aem-sites}
+# 了解回應式版面 {#understanding-responsive-layout-with-aem-sites}
 
 Adobe Experience Manager Sites可讓作者根據裝置寬度管理元件的寬度，以便進行回應式網站設計。 透過「版面模式」和「版面容器」，使用者可針對不同裝置建立回應式內容，並預覽一般使用者體驗，而不需離開AEM UI。
 
