@@ -8,9 +8,9 @@ topics: sets, development, authoring, configuring
 audience: all
 activity: use
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# 影像、色票、回轉和混合媒體集{#media-sets}
+# 影像、色票、回轉和混合媒體集 {#media-sets}
 
 Dynamic Media Classic集合可超越單一影像，提供更豐富的線上體驗，以進行動態調整大小和縮放。 本教學課程的本節將探討如何在Dynamic Media Classic中建立下列多媒體集：
 
