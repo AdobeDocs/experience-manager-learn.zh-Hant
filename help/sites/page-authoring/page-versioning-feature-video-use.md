@@ -9,9 +9,9 @@ version: 6.3, 6.4, 6.5, cloud-service
 kt: 4630
 thumbnail: 32151.jpg
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 建立頁面版本{#creating-page-versions-aem-sites}
+# 建立頁面版本 {#creating-page-versions-aem-sites}
 
 頁面版本設定可協助內容作者透過建立頁面版本來追蹤與頁面相關聯的變更，並提供預覽版本、還原版本以及比較版本與頁面目前版本的選項。
 
