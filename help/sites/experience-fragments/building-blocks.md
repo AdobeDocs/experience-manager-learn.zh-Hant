@@ -6,11 +6,11 @@ version: cloud-service
 feature: 體驗片段
 topic: 內容管理
 level: Beginner, Intermediate
-role: Architect, Developer, Administrator, Business Practitioner
+role: Architect, Developer, Admin, User
 doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# 具有體驗片段{#building-blocks}的建置區塊
+# 具有體驗片段的建置區塊 {#building-blocks}
 
 建置區塊是體驗片段的子功能。 建置區塊可讓內容作者在不同的體驗片段變異間重複使用元件。
 
