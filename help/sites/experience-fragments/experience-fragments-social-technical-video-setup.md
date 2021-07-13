@@ -9,9 +9,9 @@ doc-type: setup
 activity: use
 version: 6.3, 6.4, 6.5
 topic: 內容管理
-role: Administrator, Developer
+role: Admin, Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# 設定體驗片段{#set-up-social-posting-with-experience-fragments}的社交貼文
+# 使用體驗片段設定社交貼文 {#set-up-social-posting-with-experience-fragments}
 
 體驗片段可讓行銷人員將AEM中建立的體驗發佈至社交媒體平台。 以下影片詳細說明將體驗片段發佈至Facebook和Pinterest所需的設定和設定。
 
