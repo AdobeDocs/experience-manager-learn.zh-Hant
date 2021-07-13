@@ -7,9 +7,9 @@ version: cloud-service
 kt: 5977
 thumbnail: 37958.jpg
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 8%
@@ -17,7 +17,7 @@ ht-degree: 8%
 ---
 
 
-# 使用Dynamic Media智慧型裁切功能處理視訊{#using-smart-crop-video}
+# 使用Dynamic Media Smart Crop for視訊 {#using-smart-crop-video}
 
 Dynamic Media Smart Crop for video使用Adobe Sensei來智慧化地追蹤視訊的興趣點，確保視訊在所有螢幕大小上呈現最佳外觀。
 
