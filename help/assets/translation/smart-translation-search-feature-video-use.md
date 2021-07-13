@@ -4,9 +4,9 @@ description: 智慧翻譯搜尋可讓跨語言搜尋和探索在AEM內容（包�
 version: 6.3, 6.4, 6.5
 feature: 搜尋
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 1%
@@ -26,7 +26,7 @@ AEM智慧型翻譯搜尋可讓使用者使用非英文辭彙來搜尋AEM中的�
 
 此視訊假設已設定[AEM智慧翻譯搜尋](smart-translation-search-technical-video-setup.md)。
 
-## 智慧翻譯搜尋如何運作{#how-smart-translation-search-works}
+## 智慧翻譯搜尋如何運作 {#how-smart-translation-search-works}
 
 ![智慧翻譯搜尋流程圖](assets/smart-translation-search-flow.png)
 
