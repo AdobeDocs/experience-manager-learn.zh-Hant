@@ -3,9 +3,9 @@ title: '了解AEM Assets中的InDesign檔案和資產範本 '
 description: 本教學課程影片會逐步說明如何定義InDesign檔案，以及所有隨附的考量事項，以用於AEM Assets的「資產範本」功能。
 version: 6.3, 6.4, 6.5
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: b4fa992abe22e3a546d651e465d6ffc9e415aee2
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# 了解AEM Assets中的InDesign檔案和資產範本{#understanding-indesign-files-and-asset-templates-in-aem-assets}
+# 了解AEM Assets中的InDesign檔案和資產範本 {#understanding-indesign-files-and-asset-templates-in-aem-assets}
 
 本教學課程影片會逐步說明如何定義InDesign檔案，以及所有隨附的考量事項，以用於AEM Assets的「資產範本」功能。
 
-## 構建InDesign模板檔案{#constructing-the-indesign-template-file}
+## 建立InDesign範本檔案 {#constructing-the-indesign-template-file}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19293/?quality=9&learn=on)
 
@@ -49,7 +49,7 @@ ht-degree: 0%
    >
    >請記住，建構不良的InDesign檔案是造成AEM資產範本問題最常見的原因，因此請確定標籤和結構是乾淨且正確的。
 
-## 在AEM Assets中建立和編寫資產範本{#creating-and-authoring-an-asset-template-in-aem-assets}
+## 在AEM Assets中建立和編寫資產範本 {#creating-and-authoring-an-asset-template-in-aem-assets}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19294/?quality=9&learn=on)
 
