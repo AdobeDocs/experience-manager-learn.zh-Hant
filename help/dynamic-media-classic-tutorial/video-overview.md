@@ -8,9 +8,9 @@ topics: development, authoring, configuring, videos, video-profiles
 audience: all
 activity: use
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '6231'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 視訊概述{#video-overview}
+# 影片概述 {#video-overview}
 
 Dynamic Media Classic隨附上傳時的視訊自動轉換、視訊串流至案頭和行動裝置，以及根據裝置和頻寬最佳化以播放的最適化視訊集。 視頻最重要的一點是工作流程很簡單 — 它的設計讓任何人都能使用它，即使他們不太熟悉視頻技術。
 
@@ -209,7 +209,7 @@ Dynamic Media Classic不僅會為您轉換檔案，還提供簡單易用的預�
 
 ### 決定視訊的資料速率或「位元速率」
 
-計算視訊的位元速率是將視訊提供至網路時，最不容易理解的因素之一，但可能最重要，因為它會直接影響使用者體驗。 如果將比特率設定得太高，則視頻質量會很高，但效能會很差。 網際網路連線速度較慢的使用者將被迫等候，因為視訊播放時會持續暫停。 但是，如果設定得太低，品質就會受到影響。 在視訊預設集內，Dynamic Media Classic會根據您的目標頻寬，提供一系列資料。 這是一個好起點。
+計算視訊的位元速率是將視訊提供至網路時，最不明白的因素之一，但可能最重要，因為它會直接影響使用者體驗。 如果將比特率設定得太高，則視頻質量會很高，但效能會很差。 網際網路連線速度較慢的使用者將被迫等候，因為視訊播放時會持續暫停。 但是，如果設定得太低，品質就會受到影響。 在視訊預設集內，Dynamic Media Classic會根據您的目標頻寬，提供一系列資料。 這是一個好起點。
 
 但是，如果你想自己弄明白，你需要一個速率計算器。 這是視頻專業人員和愛好者常用的工具，用於估計資料在給定流或介質（如DVD）中的大小。
 
