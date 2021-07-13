@@ -3,9 +3,9 @@ title: 搭配使用來源檔案翻譯AEM Assets
 description: Adobe Experience Manager(AEM)Assets可讓您使用新的「相關資產」功能，識別共用共同屬性的資產，並將其標示為「相關」。 它也可讓使用者定義資產之間的來源/衍生關係，讓使用者能輕鬆識別資產的來源。 在衍生資產上執行翻譯工作流程會擷取來源檔案所參考的任何資產，並將其納入以進行翻譯，借此減少維護多網站的工作量。
 version: 6.3, 6.4, 6.5
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# 使用源檔案翻譯與AEM Assets {#using-source-file-translation-with-aem-assets}
+# 搭配使用來源檔案翻譯AEM Assets {#using-source-file-translation-with-aem-assets}
 
 Adobe Experience Manager(AEM)Assets可讓您使用新的「相關資產」功能，識別共用共同屬性的資產，並將其標示為「相關」。 它也可讓使用者定義資產之間的來源/衍生關係，讓使用者能輕鬆識別資產的來源。 在衍生資產上執行翻譯工作流程會擷取來源檔案所參考的任何資產，並將其納入以進行翻譯，借此減少維護多網站的工作量。
 
-## 多站點資產源檔案管理{#multisite-asset-source-file-management}
+## 多站點資產源檔案管理 {#multisite-asset-source-file-management}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18331/?quality=9&learn=on)
 
