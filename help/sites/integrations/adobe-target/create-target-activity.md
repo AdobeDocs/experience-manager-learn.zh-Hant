@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6351
 thumbnail: 41246.jpg
 topic: Integrations
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 3%
@@ -20,7 +20,7 @@ ht-degree: 3%
 ---
 
 
-# 使用體驗片段選件{#target-activity-experience-fragment}建立Adobe Target活動
+# 使用體驗片段選件建立Adobe Target活動 {#target-activity-experience-fragment}
 
 了解如何使用AEM體驗片段選件建立和測試Adobe Target活動。
 
