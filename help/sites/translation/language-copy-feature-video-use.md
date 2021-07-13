@@ -7,9 +7,9 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 topic: 本土化
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 8%
@@ -17,7 +17,7 @@ ht-degree: 8%
 ---
 
 
-# 使用語言副本{#using-language-copy}
+# 使用語言副本 {#using-language-copy}
 
 透過AEM 6.3建立語言副本精靈網站翻譯增強功能，使用者無需建立根頁面即可從主版語言建立語言副本。
 
