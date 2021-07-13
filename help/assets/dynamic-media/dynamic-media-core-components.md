@@ -6,9 +6,9 @@ feature: 核心元件，智慧型裁切，影像描述檔，影像預設集
 version: cloud-service
 kt: 6630
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 ---
 
 
-# 搭配使用Dynamic Media和AEM Sites核心元件{#dynamic-media-sites-core-components}
+# 搭配使用Dynamic Media和AEM Sites核心元件 {#dynamic-media-sites-core-components}
 
 影像元件是Experience Manager核心元件的一部分，已內建Dynamic Media支援。 影像元件可讓內容作者使用Dynamic Media的功能，例如AEM Sites頁面上的影像預設集、智慧型裁切和影像修飾元。
 
