@@ -13,9 +13,9 @@ version: 6.3, 6.4, 6.5
 uuid: 045473d2-5abe-4414-b91c-d369f3069ead
 discoiquuid: 912e0c41-83cf-49f7-b515-09519b6718c1
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 ---
 
 
-# 傳送內容片段{#delivering-content-fragments}
+# 傳送內容片段 {#delivering-content-fragments}
 
 Adobe Experience Manager(AEM)內容片段是文字型編輯內容，可能包含一些相關聯的結構化資料元素，但不含設計或版面資訊，視為純內容。 內容片段通常建立為不受管道限制的內容，以用於不同管道並加以重複使用，而管道又會將內容包裝在內容特定的體驗中。
 
@@ -35,7 +35,7 @@ Adobe Experience Manager(AEM)內容片段是文字型編輯內容，可能包含
 2. 使用AEM內容服務將內容片段顯示為JSON
 3. 使用Assets HTTP API
 
-## 在網頁中使用內容片段{#using-content-fragments-in-web-pages}
+## 在網頁中使用內容片段 {#using-content-fragments-in-web-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
 
