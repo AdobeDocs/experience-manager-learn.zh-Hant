@@ -5,9 +5,9 @@ sub-product: dynamic-media
 feature: 智慧型裁切，視訊描述檔，影像描述檔，檢視器預設集， 360 VR視訊，影像集，回轉集
 version: 6.3, 6.4, 6.5
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 ---
 
 
-# 將Dynamic Media與AEM Assets搭配使用{#understanding-aem-dynamic-media}
+# 將Dynamic Media與AEM Assets搭配使用 {#understanding-aem-dynamic-media}
 
 此多部分影片系列概述如何使用Adobe Experience Manager Dynamic Media作為內容服務服務來管理和存取媒體內容。 Dynamic Media可讓您管理和發佈動態數位體驗 — Experience Manager資產特有的功能。 我們的架構和元件套裝可讓行銷人員跨所有裝置自訂和提供互動式多媒體體驗。
 
