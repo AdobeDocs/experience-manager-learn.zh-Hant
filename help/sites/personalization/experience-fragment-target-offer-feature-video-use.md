@@ -13,11 +13,11 @@ version: 6.4, 6.5
 uuid: 7b91f65d-5a35-419a-8cf7-be850165dd33
 discoiquuid: 45fc8d83-73fb-42e5-9c92-ce588c085ed4
 topic: 個性化
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '459'
 ht-degree: 11%
 
 ---
@@ -44,7 +44,7 @@ Adobe Experience Manager 6.4會重新調整AEM和Target之間的個人化工作�
 * 若要建立個人化優惠方案，我們現在可以輕鬆運用AEM中儲存的內容。
 * 您可以建立Target活動類型，包括由Sensei支援的活動，例如自動分配、自動鎖定目標和Automated Personalization
 
-## AEM 6.3 Feature Pack和相依性{#aem-feature-packs-and-dependencies}
+## AEM 6.3 Feature Pack和相依性 {#aem-feature-packs-and-dependencies}
 
 | AEM 6.3 Feature Pack | 相依關係 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
