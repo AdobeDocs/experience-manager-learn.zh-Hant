@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5, cloud-service
 kt: 4495
 thumbnail: 31784.jpg
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 6%
@@ -22,7 +22,7 @@ ht-degree: 6%
 ---
 
 
-# AEM Sites UI和導覽{#basic-handling-aem-sites}
+# AEM Sites UI和導覽 {#basic-handling-aem-sites}
 
 以下影片概述使用AEM製作環境時的基本處理方式。 它會以Sites主控台為基礎。
 
