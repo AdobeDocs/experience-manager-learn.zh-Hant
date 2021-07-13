@@ -8,9 +8,9 @@ activity: develop
 version: 6.3, 6.4, 6.5
 feature: 核心元件
 topic: 開發
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# 自定義元件表徵圖{#developing-component-icons-in-aem-sites}
+# 自訂元件圖示 {#developing-component-icons-in-aem-sites}
 
 元件圖示可讓作者快速識別包含圖示或有意義縮寫的元件。 作者現在可以比以往更快找到建立其網頁體驗所需的元件。
 
@@ -35,7 +35,7 @@ ht-degree: 2%
    * 自訂SVG影像&#x200B;*（由開發人員設定）*
    * CoralUI圖示&#x200B;*（由開發人員設定）*
 
-## 元件表徵圖配置選項{#component-icon-configuration-options}
+## 元件圖示組態選項 {#component-icon-configuration-options}
 
 ### 縮寫 {#abbreviations}
 
@@ -49,7 +49,7 @@ ht-degree: 2%
   - abbreviation = "AL"
 ```
 
-### CoralUI圖示{#coralui-icons}
+### CoralUI圖示 {#coralui-icons}
 
 AEM提供的CoralUI圖示可用於元件圖示。 若要設定CoralUI圖示，請將&#x200B;**[cq:Component]@cq:icon**&#x200B;屬性設為所需CoralUI圖示的HTML圖示屬性值(列舉於[CoralUI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)中。
 
@@ -59,7 +59,7 @@ AEM提供的CoralUI圖示可用於元件圖示。 若要設定CoralUI圖示，�
   - cq:icon = "documentFragment"
 ```
 
-### PNG影像{#png-images}
+### PNG影像 {#png-images}
 
 PNG影像可用於元件圖示。 若要將PNG影像設定為元件圖示，請在&#x200B;**[cq:Component]**&#x200B;下方，將所需影像新增為&#x200B;**nt:file**，名為&#x200B;**cq:icon.png**。
 
@@ -74,9 +74,9 @@ PNG影像將縮放至&#x200B;**20px x 20px**。 但是，要容納視網膜顯�
      - jcr:primaryType = "nt:file"
 ```
 
-### SVG影像{#svg-images}
+### SVG影像 {#svg-images}
 
-SVG影像（基於向量）可用於元件表徵圖。 要將SVG影像配置為元件表徵圖，請在&#x200B;**[cq:Component]**&#x200B;下將所需的SVG添加為&#x200B;**nt:file**，名為&#x200B;**cq:icon.svg**。
+SVG影像（基於向量）可用於元件表徵圖。 要將SVG影像配置為元件表徵圖，請在&#x200B;**[cq:Component]**&#x200B;下將所需的SVG添加為&#x200B;**nt:file**，該&#x200B;**cq:icon.svg**。
 
 SVG影像的背景顏色應設定為&#x200B;**#707070**，大小應為&#x200B;**20px x 20px。**
 
