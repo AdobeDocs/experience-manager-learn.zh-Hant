@@ -12,9 +12,9 @@ version: 6.3, 6.4, 6.5
 uuid: 76f295d0-78dd-429c-9129-9182b3a706a6
 discoiquuid: a0dc581e-300f-45ef-916a-1cbac0429899
 topic: 本土化
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 5%
@@ -22,7 +22,7 @@ ht-degree: 5%
 ---
 
 
-# 使用多站點管理器{#using-multi-site-manager-with-aem-sites}
+# 使用多網站管理員 {#using-multi-site-manager-with-aem-sites}
 
 [!UICONTROL Live Copy概] 述和 [!UICONTROL Blueprint設定管] 理員是AEM製作介面，可搭配Adobe Experience Manager Sites的多網站管理器功能使用。
 
