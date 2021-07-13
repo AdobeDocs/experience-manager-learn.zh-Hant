@@ -3,12 +3,12 @@ title: AEM內容片段的翻譯支援
 description: 了解如何使用Adobe Experience Manager來本地化和翻譯內容片段。 與內容片段相關聯的混合媒體資產也有資格擷取及翻譯。
 feature: 內容片段，多網站管理員
 topic: 本土化
-role: Business Practitioner
+role: User
 level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 201
 thumbnail: 18131.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 2%
@@ -16,13 +16,13 @@ ht-degree: 2%
 ---
 
 
-# AEM內容片段{#translation-support-content-fragments}的翻譯支援
+# AEM內容片段的翻譯支援 {#translation-support-content-fragments}
 
 了解如何使用Adobe Experience Manager來本地化和翻譯內容片段。 與內容片段相關聯的混合媒體資產也有資格擷取及翻譯。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=12&learn=on)
 
-## 內容片段翻譯使用案例{#content-fragment-translation-use-cases}
+## 內容片段翻譯使用案例 {#content-fragment-translation-use-cases}
 
 內容片段是已辨識的內容類型，AEM會擷取以傳送至外部翻譯服務。 可立即支援數個使用案例：
 
