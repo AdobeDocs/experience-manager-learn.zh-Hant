@@ -8,9 +8,9 @@ topics: development, authoring, configuring
 audience: all
 activity: use
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '6306'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 基本模板簡介{#basic-templates}
+# 基本範本簡介 {#basic-templates}
 
 在Dynamic Media Classic術語中，範本是一份檔案，可在範本發佈後透過URL動態變更。 Dynamic Media Classic提供基本範本、從影像伺服器呼叫的影像型範本，並包含影像和轉譯的文字。
 
