@@ -12,9 +12,9 @@ uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 1%
@@ -22,11 +22,11 @@ ht-degree: 1%
 ---
 
 
-# 使用頁面差異功能{#using-page-difference-with-aem-sites}
+# 使用頁面差異功能 {#using-page-difference-with-aem-sites}
 
 AEM Sites的頁面差異功能可提供快速、色彩編碼的檢視，以了解頁面中變更的內容（版本、即時副本、啟動、語言副本）。
 
-## 比較頁面版本{#comparing-page-versions}
+## 比較頁面版本 {#comparing-page-versions}
 
 >[!VIDEO](https://video.tv.adobe.com/v/32152?quality=9&learn=on)
 
@@ -41,7 +41,7 @@ AEM Sites的頁面差異功能可提供快速、色彩編碼的檢視，以了�
 * **紅色**:已移除元件
 * **藍色**:修改的元件
 
-## 比較啟動頁面{#comparing-launch-pages}
+## 比較啟動頁面 {#comparing-launch-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17746/?quality=9&learn=on)
 
