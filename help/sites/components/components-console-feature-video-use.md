@@ -8,9 +8,9 @@ version: 6.3, 6.4, 6.5
 activity: use
 feature: 核心元件
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# 使用元件控制台{#using-the-components-console-with-aem-sites}
+# 使用元件主控台 {#using-the-components-console-with-aem-sites}
 
 元件主控台可讓開發人員和管理員集中管理Sites實作中的所有不同元件。 以下影片詳細說明「元件」主控台的功能。
 
