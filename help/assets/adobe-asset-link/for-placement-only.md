@@ -7,9 +7,9 @@ version: cloud-service
 kt: 4916
 thumbnail: 34259.jpg
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 僅限For Placement(FPO)轉譯{#for-placement-only-rendition}
+# 僅限Placement(FPO)轉譯{#for-placement-only-rendition}
 
 探索如何為AEM資產建立和使用For Placement Only(FPO)轉譯。
 
