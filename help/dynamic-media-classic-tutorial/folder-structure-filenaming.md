@@ -8,9 +8,9 @@ activity: develop
 topics: development, authoring, configuring, architecture
 audience: all
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 確定資料夾結構和檔案命名約定{#folder-structure-filenaming}
+# 確定資料夾結構和檔案命名慣例 {#folder-structure-filenaming}
 
 在您跳入並開始上傳所有內容之前，最好考慮您將使用的資料夾結構，尤其是您的檔案命名慣例。 這樣可以節省時間，並且以後必須重做任務。 最好在所有群組間協調這些決策。
 
@@ -86,6 +86,6 @@ Dynamic Media Classic中的所有URL和交易都是由資產ID驅動，資產ID�
 
 ### 命名慣例與自動化
 
-關於命名慣例重要性的最後一句。 如果您想使用集（例如影像集或色票集），可預測的命名慣例可讓您自動建立集。 任何指令碼方法（例如批次集預設集）（您將在本教學課程的個別章節中學習）都可從命名慣例中驅動。
+關於命名慣例重要性的最後一句。 如果您想要使用集（例如影像集或色票集），可預測的命名慣例可讓您自動建立集。 任何指令碼方法（例如批次集預設集）（您將在本教學課程的個別章節中學習）都可從命名慣例中驅動。
 
 替代方法是手動建立集。 雖然手動為200個影像建立影像集可能不是件大工作，但假設您有超過100,000個影像。 此時，設定建立自動化變得至關重要。
