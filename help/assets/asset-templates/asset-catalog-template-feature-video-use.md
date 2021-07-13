@@ -3,9 +3,9 @@ title: 搭配AEM Commerce和InDesign Server使用Asset Catalog
 description: AEM 6.4目錄增強功能提供使用AEM資產範本和InDesign Server建立目錄頁面的功能。  使用者可以使用InDesign範本建立目錄頁面，並將產品屬性對應至可編輯的欄位，這些欄位稍後可用來為不同產品建立類似頁面。
 version: 6.3, 6.4, 6.5
 topic: 內容管理
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 搭配AEM Commerce和InDesign Server使用資產目錄{#using-asset-catalog-with-aem-commerce-and-indesign-server}
+# 搭配AEM Commerce和InDesign Server使用Asset Catalog{#using-asset-catalog-with-aem-commerce-and-indesign-server}
 
 AEM 6.4目錄增強功能提供使用AEM資產範本和InDesign Server建立目錄頁面的功能。  使用者可以使用InDesign範本建立目錄頁面，並將產品屬性對應至可編輯的欄位，這些欄位稍後可用來為不同產品建立類似頁面。
 
