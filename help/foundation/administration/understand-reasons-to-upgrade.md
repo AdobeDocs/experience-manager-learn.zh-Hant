@@ -8,9 +8,9 @@ audience: all
 activity: understand
 doc-type: article
 topic: 升級
-role: Leader, Architect, Developer, Administrator, Business Practitioner
+role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '3541'
 ht-degree: 3%
@@ -42,7 +42,7 @@ AEM Sites推出多項功能，旨在加速網站的建立和建置：
 
 ### 流暢的體驗
 
-AEM持續提供全新且改良的工具，協助您使用AEM以外的內容，充份運用Fluid Experiences。
+AEM持續提供全新且改良的工具，協助您使用AEM以外的內容，充份運用流暢的使用體驗。
 
 + **內容** 片段支援版本比較/差異和註解。
 + **AEM Assets HTTP** API支援將 **內** 容片段直接顯示為 **JSON**。
