@@ -12,9 +12,9 @@ thumbnail: 330519.jpg
 topic: 無頭式整合
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: e0822ad4aaf4022a849825ef625e1c29eb6e78f3
+source-git-commit: b902ced3d7f7cf827d0a487bf741ff370f7c1f04
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1863'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
 
-服務憑證可能會出現類似的[本機開發存取權杖](./local-development-access-token.md) ，但有幾種主要方式不同：
+服務憑證可能會顯示類似於[本機開發存取權杖](./local-development-access-token.md) ，但有幾種主要方式不同：
 
 + 服務憑證是&#x200B;_不是_&#x200B;存取權杖，而是用於&#x200B;_取得_&#x200B;存取權杖的憑證。
 + 服務憑證會更為永久（每365天過期），除非撤銷，否則不會變更，而本機開發存取權杖會每天過期。
@@ -49,7 +49,10 @@ ht-degree: 0%
 
 __這是每個AEM作為Cloud Service環境的一次性初始化__
 
-1. 確認您是以AdobeIMS組織的管理員身分登入
+1. 請確定您登入的方式為：
+   + 您的AdobeIMS組織的管理員
+   + __Cloud Manager - Developer__ IMS產品設定檔的成員
+   + __AEM使用者__&#x200B;或&#x200B;__AEM管理員____AEM作者__&#x200B;上IMS產品設定檔的成員
 1. 登入[AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 開啟包含AEM作為Cloud Service環境的程式，以整合
 1. 點選&#x200B;__Environments__&#x200B;區段中環境旁的省略號，然後選取&#x200B;__Developer Console__
@@ -67,8 +70,10 @@ __這是每個AEM作為Cloud Service環境的一次性初始化__
 
 下載服務憑據的步驟與初始化步驟相同。 如果尚未進行初始化，則點選&#x200B;__Get Service Credentials__&#x200B;按鈕時將顯示錯誤。
 
-1. 確認您是&#x200B;__Cloud Manager - Developer__ IMS產品設定檔的成員(授與AEM Developer Console的存取權)
-   + 將AEM作為Cloud Service環境時，只需要&#x200B;__AEM管理員__&#x200B;或&#x200B;__AEM使用者__&#x200B;產品設定檔的成員資格
+1. 請確定您是以下列方式登入：
+   + __Cloud Manager - Developer__ IMS產品設定檔的成員(授與AEM Developer Console的存取權)
+      + 以沙箱AEM作為Cloud Service環境時，不需要此&#x200B;__Cloud Manager — 開發人員__&#x200B;會籍
+   + __AEM使用者__&#x200B;或&#x200B;__AEM管理員____AEM作者__&#x200B;上IMS產品設定檔的成員
 1. 登入[AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 開啟包含AEM作為Cloud Service環境的程式，以便與
 1. 點選&#x200B;__Environments__&#x200B;區段中環境旁的省略號，然後選取&#x200B;__Developer Console__
