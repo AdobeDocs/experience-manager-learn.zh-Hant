@@ -4,7 +4,7 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: 雲端服務
 team: TM
-source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
+source-git-commit: e442c6d67a02aae4c6ce9241e754c15abc920c67
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 21%
@@ -59,12 +59,12 @@ ht-degree: 21%
       + [Dispatcher設定移轉](./developing/basics/dispatcher-configuration.md)
    + AEM 專案{#aem-projects}
       + [AEM Maven專案](./developing/projects/maven-project-structure.md)
-+ OSGi服務{#osgi-services}
-   + [OSGi服務基本知識](./developing/osgi-services/basics.md)
-   + [OSGi元件生命週期](./developing/osgi-services/lifecycle.md)
-   + [OSGi配置基本介紹](./developing/osgi-services/configurations.md)
-   + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
-+ [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
+   + OSGi服務{#osgi-services}
+      + [OSGi服務基本知識](./developing/osgi-services/basics.md)
+      + [OSGi元件生命週期](./developing/osgi-services/lifecycle.md)
+      + [OSGi配置基本介紹](./developing/osgi-services/configurations.md)
+      + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
+   + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + 調試AEM{#debugging}
    + 為AEM SDK{#debugging-aem-sdk}除錯
       + [概覽](./debugging/aem-sdk-local-quickstart/overview.md)
