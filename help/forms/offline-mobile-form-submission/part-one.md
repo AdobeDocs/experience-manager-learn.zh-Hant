@@ -12,9 +12,9 @@ version: 6.4, 6.5
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -149,6 +149,6 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 ```
 
 若要檢視從部分完成的行動表單下載互動式PDF的功能，請按一下這裡[。
-](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content)下載PDF後，下一步是提交PDF以觸發AEM工作流程。 此工作流程將合併提交的PDF中的資料，並產生非互動式PDF以供審核。
+](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content)下載PDF後，下一步是提交PDF以觸發AEM工作流程。 此工作流程將合併提交的PDF中的資料，並產生非互動式PDF以供審核。
 
 針對此使用案例建立的自訂設定檔可在本教學課程資產中使用。
