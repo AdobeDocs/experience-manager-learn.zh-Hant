@@ -8,8 +8,8 @@ version: cloud-service
 feature: 文件服務
 topic: 開發
 kt: 7432
-thumbnail: 332439.jpg
-source-git-commit: 33cb3d18b744d9a8e54a87152079b42ed09212f2
+thumbnail: 334859.jpg
+source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 4%
@@ -24,3 +24,5 @@ ht-degree: 4%
 1. 從服務憑證建立JSON網站代號(JWT)，並針對存取代號交換相同的
 1. 設定AEM中技術帳戶的存取權
 1. 使用存取權杖進行HTTP呼叫
+
+>[!VIDEO](https://video.tv.adobe.com/v/334859/?quality=12&learn=on)
