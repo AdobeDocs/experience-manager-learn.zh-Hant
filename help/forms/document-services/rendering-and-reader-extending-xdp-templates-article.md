@@ -14,9 +14,9 @@ discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -28,15 +28,15 @@ ht-degree: 0%
 
 例如，在AEM Forms的表單入口網站中，當使用者按一下XDP時，我們可以將XDP轉譯為PDF，並透過閱讀器擴充PDF。
 
-若要測試此功能，您可以嘗試此[link](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。 範例名稱為「使用RE呈現XDP」
+若要測試此功能，您可以嘗試此[link](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse2)。 範例名稱為「Render and Extend XDP」
 
 若要完成此使用案例，我們必須執行下列動作。
 
-* 將Reader擴充功能憑證新增至「fd-service」使用者。 新增Reader擴充功能憑證的步驟如下： [此處](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
+* 將Reader擴充功能憑證新增至「fd-service」使用者。 新增Reader擴充功能憑證的步驟如下： [此處](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)
 
 * 建立將呈現和套用使用權限的自訂OSGi服務。 完成此作業的程式碼列於下方
 
-## 呈現XDP和應用使用權限{#render-xdp-and-apply-usage-rights}
+## 呈現XDP並套用使用權限 {#render-xdp-and-apply-usage-rights}
 
 * 第7行：我們會使用FormsService的renderPDForm，從XDP產生PDF。
 
@@ -125,7 +125,7 @@ public @interface DocSvcConfiguration {
 }
 ```
 
-## 建立Servlet以流式處理PDF {#create-servlet-to-stream-the-pdf}
+## 建立Servlet以串流PDF {#create-servlet-to-stream-the-pdf}
 
 下一步是使用GET方法建立Servlet，將Reader延伸PDF傳回給使用者。 在此情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會轉譯為動態PDF，而瀏覽器隨附的PDF檢視器不會處理動態PDF。
 
@@ -202,6 +202,8 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 若要在本機伺服器上測試，請執行下列步驟
 1. [下載並安裝DevelopingWithServiceUser套件組合](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下載並安裝AEMFormsDocumentServices套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+
+1. [下載自訂入口網站範本html](assets/render-and-extend-template.zip)
 1. [使用套件管理器將與本文相關的資產下載並匯入AEM](assets/renderandextendxdp.zip)
    * 此套件包含範例入口網站和xdp檔案
 1. 將Reader擴充功能憑證新增至「fd-service」使用者
