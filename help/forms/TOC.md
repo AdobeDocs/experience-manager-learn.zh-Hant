@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
+source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1603'
 ht-degree: 3%
 
 ---
@@ -51,6 +51,7 @@ ht-degree: 3%
    + [適用性Forms中的預填服務](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [在適用性Forms中自訂提交](adaptive-forms/custom-submit-aem-forms-article.md)
    + [適用性Forms中的驗證碼](adaptive-forms/forms-captcha-feature-video-use.md)
+   + [將最適化表單嵌入網頁](adaptive-forms/embed-af-web-page.md)
    + [在OSGI工作流程中使用XML中的設定值](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
    + [在OSGI工作流程的JSON中使用設定值](adaptive-forms/setvalue-json-data-in-aem-forms-workflow-article-use.md)
    + [在AEM Forms工作流程中傳送電子郵件元件](adaptive-forms/email-step-aem-workflow-video-use.md)
@@ -198,8 +199,8 @@ ht-degree: 3%
    + [在AEM Forms中使用輸出與Forms服務](document-services/output-and-forms-services-article-develop.md)
    + [從一個資料檔案產生多個PDF](document-services/generate-multi-record-pdf.md)
    + [在行動表單提交時產生PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [配置Reader擴展憑據](document-services/configuring-reader-extension-osgi.md)
    + [從行動表單產生互動式PDF](document-services/render-interactive-form-using-api.md)
+   + [配置Reader擴展憑據](document-services/configuring-reader-extension-osgi.md)
    + [在XDP轉譯上將使用權套用至PDF](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [將使用權套用至已上傳的PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [認證檔案](document-services/certifying-documents-aem-forms-tutorial.md)
