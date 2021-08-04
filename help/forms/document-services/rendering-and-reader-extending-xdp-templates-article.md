@@ -14,9 +14,9 @@ discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
+source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,10 @@ ht-degree: 0%
 若要完成此使用案例，我們必須執行下列動作。
 
 * 將Reader擴充功能憑證新增至「fd-service」使用者。 新增Reader擴充功能憑證的步驟如下： [此處](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)
+
+
+* 您也可以參閱[設定Reader擴充功能憑證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)上的影片
+
 
 * 建立將呈現和套用使用權限的自訂OSGi服務。 完成此作業的程式碼列於下方
 
