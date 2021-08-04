@@ -11,9 +11,9 @@ version: 6.4,6.5
 topic: 管理
 role: Admin
 level: Beginner
-source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
+source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,15 @@ DocAssurance服務可將使用權應用於PDF文檔。 若要對PDF檔案套用�
 請觀看視頻，向fd-service用戶添加憑據
 
 >[!VIDEO](https://video.tv.adobe.com/v/335849?quality=9&learn=on)
+
+
+列出pfx檔案詳細資訊的命令為。 以下命令假定您位於與pfx檔案相同的目錄中。
+
+**keytool -v -list -storetype pkcs12 -keystore  &lt;name of=&quot;&quot; your=&quot;&quot;>**
+
+例如keytool -v -list -storetype pkcs12 -keystore 1005566.pfx，其中1005566.pfx是我的pfx檔案的名稱
+
+
 
 
 
