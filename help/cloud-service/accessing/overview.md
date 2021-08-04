@@ -12,9 +12,9 @@ thumbnail: KT-5882.jpg
 topic: 管理、安全
 role: Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '603'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,11 @@ ht-degree: 1%
 >title="AdobeIMS簡介"
 >abstract="AEM as aCloud Service運用AdobeIMS(Identity Management系統)來加速其使用者（包括管理員和一般使用者）登入AEM製作服務。 了解AdobeIMS使用者、群組和產品設定檔如何與AEM群組和權限搭配使用，以提供對AEM作者服務的微調存取。"
 
-AEM as aCloud Service是運用AEM應用程式的雲端原生方式，因此可運用AdobeIMS(Identity Management系統)來便利管理員和一般使用者登入AEM製作服務。 了解AdobeIMS使用者、群組和產品設定檔如何與AEM群組和權限搭配使用，以提供對AEM作者服務的微調存取。
+AEM as aCloud Service是運用AEM應用程式的雲端原生方式，因此可運用AdobeIMS(Identity Management系統)來便利管理員和一般使用者登入AEM製作服務。
+
+![Adobe Admin Console](./assets/hero.png)
+
+了解AdobeIMS使用者、群組和產品設定檔如何與AEM群組和權限搭配使用，以提供對AEM作者服務的微調存取。
 
 ## AdobeIMS使用者
 
