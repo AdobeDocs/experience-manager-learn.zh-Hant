@@ -4,7 +4,7 @@ user-guide-description: Adobe Experience Manager Assets 的影片和教學課程
 breadcrumb-title: AEM Assets 教學課程
 sub-product: 資產
 team: TM
-source-git-commit: 53312e573ca022f09faa44cbbf51c5b8b0ed90ee
+source-git-commit: 46f270c5b26baeb546997f2191cc28801444a290
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 27%
@@ -121,4 +121,3 @@ ht-degree: 27%
 
 + 部署{#deployment}
    + [多租用戶和同時開發](deployment/multitenancy-concurrent-article-understand.md)
-
