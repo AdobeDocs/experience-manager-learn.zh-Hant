@@ -7,9 +7,9 @@ topic: 內容管理
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1029'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,13 @@ ht-degree: 1%
 Adobe Experience Manager資產可供設計人員和創意使用者在喜愛的Adobe Creative Cloud案頭應用程式中使用。
 
 適用於Adobe Creative Cloud for enterprise的Adobe資產連結擴充功能可擴充搜尋及瀏覽、排序、預覽、上傳資產、結帳、修改、登入及檢視Creative Cloud應用程式中AEM資產的中繼資料。
+
+
+## Adobe資產連結和AEM創意工作流程
+
+以下影片說明在Adobe Creative Cloud應用程式中工作、並使用Adobe資產連結直接與AEM整合的創意人員所使用的通用工作流程。
+
+>[!VIDEO](https://video.tv.adobe.com/v/335927/?quality=12&learn=on)
 
 ## Adobe資產連結功能
 
