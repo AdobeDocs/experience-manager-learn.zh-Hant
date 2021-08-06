@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager Assets Essentials的影片集�
 breadcrumb-title: AEM Assets Essentials影片
 sub-product: 資產
 team: TM
-source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
+source-git-commit: 5438fd521e08b37405f18e5fc2e7fc1f02592a78
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '42'
 ht-degree: 7%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 7%
 # AEM Assets Essentials影片 {#assets-essentials}
 
 + [概覽](overview.md)
+
++ [布建](./provisioning.md)
 
 + 基本資訊{#basics}
    + [管理](basics/managing.md)
