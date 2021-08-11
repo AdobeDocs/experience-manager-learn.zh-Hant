@@ -12,10 +12,10 @@ thumbnail: kt-5432.jpg
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e2473a1584ccf315fffe5b93cb6afaed506fdbce
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -37,11 +37,21 @@ AEM as aCloud Services不支援自訂記錄檔，但支援自訂記錄。
 
 若要讓AEM中的Java記錄檔以Cloud Service的形式提供(透過[Cloud Manager](#cloud-manager)或[Adobe I/OCLI](#aio))，必須將自訂記錄檔陳述式寫入`error.log`。 寫入自訂命名記錄（例如`example.log`）的記錄檔將無法以Cloud Service形式從AEM存取。
 
+可在應用程式的`org.apache.sling.commons.log.LogManager.factory.config~example.cfg.json`檔案中使用Sling LogManager OSGi組態屬性，將記錄寫入`error.log`。
+
+```
+{
+   ...
+   "org.apache.sling.commons.log.file": "logs/error.log"
+   ...
+}
+```
+
 ## AEM製作和發佈服務記錄檔
 
 AEM製作和發佈服務都提供AEM執行階段伺服器記錄：
 
-+ `aemerror` 是Java錯誤記錄(可在AEM SDK本 `/crx-quickstart/error.log` 機快速入門上找到)。以下是針對每種環境類型的自訂記錄器的[建議記錄層級](#log-levels):
++ `aemerror` 是Java錯誤記錄(可在AEM SDK本 `/crx-quickstart/logs/error.log` 機快速入門上找到)。以下是針對每種環境類型的自訂記錄器的[建議記錄層級](#log-levels):
    + 開發: `DEBUG`
    + 分段: `WARN`
    + 生產: `ERROR`
@@ -106,7 +116,7 @@ Environment Id Service    Name
 22295          dispatcher aemdispatcher 
 ```
 
-### 跟蹤日誌{#aio-cli-tail-logs}
+### 追蹤日誌{#aio-cli-tail-logs}
 
 Adobe I/OCLI使用[tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name)命令即時跟蹤AEM作為Cloud Service的日誌。 追蹤在AEM作為Cloud Service環境執行動作時，對於觀看即時記錄活動很實用。
 
