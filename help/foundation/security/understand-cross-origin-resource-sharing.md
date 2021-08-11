@@ -10,10 +10,10 @@ doc-type: article
 topic: 安全性
 role: Developer
 level: Intermediate
-source-git-commit: 1c99c319fba5048904177fc82c43554b0cf0fc15
+source-git-commit: 3418cd424cc82fece9e7d13de72c0d8dde346d7c
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -123,7 +123,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 />
 ```
 
-## Dispatcher快取考量事項和設定{#dispatcher-caching-concerns-and-configuration}
+## Dispatcher快取考量事項和設定 {#dispatcher-caching-concerns-and-configuration}
 
 從Dispatcher 4.1.1+回應標頭開始，可以快取。 這樣，只要請求是匿名的，就可以將[!DNL CORS]標頭與[!DNL CORS]請求的資源一起快取。
 
@@ -141,7 +141,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 /cache { 
   ...
   /headers {
-      "Origin",
+      "Origin"
       "Access-Control-Allow-Origin"
       "Access-Control-Expose-Headers"
       "Access-Control-Max-Age"
