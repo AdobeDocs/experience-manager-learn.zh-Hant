@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: 雲端服務
 team: TM
-source-git-commit: e442c6d67a02aae4c6ce9241e754c15abc920c67
+source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '478'
 ht-degree: 21%
 
 ---
@@ -110,6 +110,12 @@ ht-degree: 21%
       + [實作介面](./forms/doc-cloud-sdk/implement-interface.md)
       + [建立JSON部件](./forms/doc-cloud-sdk/get-content-analyzer.md)
       + [自訂處理步驟](./forms/doc-cloud-sdk/custom-process-step.md)
+   + Azure門戶儲存{#forms-cs-azure-portal}
+      + [簡介](./forms/forms-cs-azure-portal/introduction.md)
+      + [建立表單資料模型](./forms/forms-cs-azure-portal/create-fdm.md)
+      + [將表單資料儲存在Azure儲存中](./forms/forms-cs-azure-portal/create-af.md)
+      + [預填表單](./forms/forms-cs-azure-portal/prefill-af-storage.md)
+      + [查詢提交](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + 建立審核工作流{#create-aem-workflow}
       + [建立工作流模型](./forms/create-aem-workflow/create-workflow.md)
       + [觸發工作流程](./forms/create-aem-workflow/configure-af.md)
