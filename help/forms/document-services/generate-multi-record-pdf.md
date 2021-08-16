@@ -1,6 +1,6 @@
 ---
 title: 從一個資料檔案產生多個PDF
-seo-title: 從一個資料檔案產生多個PDF
+description: OutputService提供了多種使用表單設計和資料建立文檔的方法，以便與表單設計合併。 了解如何從包含多個個別記錄的大型xml產生多個pdf。
 feature: 輸出服務
 topics: development
 audience: developer
@@ -10,9 +10,9 @@ version: 6.4,6.5
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: fb6c21a9a88b5ebcbfb14213182a9b8cba6fe6ae
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '526'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ generatePDFOutputBatch方法的簽名採用以下參數
 
 在此使用案例中，我們將提供簡單的網頁介面，以上傳範本和資料(xml)檔案。 檔案上傳完成且POST要求傳送至AEM servlet後。 此Servlet提取文檔並調用OutputService的generatePDFOutputBatch方法。 產生的PDF會壓縮為Zip檔案，供一般使用者從網頁瀏覽器下載。
 
-## Servlet代碼{#servlet-code}
+## Servlet程式碼{#servlet-code}
 
 以下是servlet中的程式碼片段。 程式碼會從請求中擷取範本(xdp)和資料檔案(xml)。 模板檔案將保存到檔案系統。 建立了兩個映射 — templateMap和dataFileMap，它們分別包含模板和xml(data)檔案。 然後會呼叫DocumentServices服務的generateMultipleRecords方法。
 
@@ -76,7 +76,7 @@ Document zippedDocument = documentServices.generateMultiplePdfs(templateMap, dat
 ....
 ```
 
-### 介面實施代碼{#Interface-Implementation-Code}
+### 介面實作程式碼{#Interface-Implementation-Code}
 
 下列程式碼會使用OutputService的generatePDFOutputBatch產生多個pdf，並將包含pdf檔案的zip檔案傳回至呼叫servlet
 
