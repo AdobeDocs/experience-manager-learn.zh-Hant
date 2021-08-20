@@ -1,28 +1,20 @@
 ---
 title: 在DAM中標籤和儲存AEM Forms DoR
-seo-title: 在DAM中標籤和儲存AEM Forms DoR
 description: 本文將逐步說明在AEM DAM中儲存和標籤AEM Forms產生的DoR的使用案例。 文檔的標籤是根據提交的表單資料完成的。
-seo-description: 本文將逐步說明在AEM DAM中儲存和標籤AEM Forms產生的DoR的使用案例。 文檔的標籤是根據提交的表單資料完成的。
-uuid: b9ba13ed-52d5-4389-a7d5-bf85e58fea49
-feature: 適用性Forms，工作流程
-topics: developing
-audience: implementer
-doc-type: article
-activity: develop
+feature: 適用性表單
 version: 6.4,6.5
-discoiquuid: 53961454-633b-4cd8-aef7-e64ab4e528e4
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
 
 
-# 在DAM {#tagging-and-storing-aem-forms-dor-in-dam}中標籤和儲存AEM Forms DoR
+# 在DAM中標籤和儲存AEM Forms DoR {#tagging-and-storing-aem-forms-dor-in-dam}
 
 本文將逐步說明在AEM DAM中儲存和標籤AEM Forms產生的DoR的使用案例。 文檔的標籤是根據提交的表單資料完成的。
 
