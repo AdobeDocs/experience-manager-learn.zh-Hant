@@ -1,28 +1,20 @@
 ---
 title: 開始使用AEM Forms和Adobe Campaign Standard
-seo-title: 開始使用AEM Forms和Adobe Campaign Standard
 description: 使用AEM Forms表單資料模型將AEM Forms與Adobe Campaign Standard整合，以擷取ACS促銷活動設定檔資訊等。
-seo-description: 使用AEM Forms表單資料模型將AEM Forms與Adobe Campaign Standard整合，以擷取ACS促銷活動設定檔資訊等。
-uuid: 56450c9b-3752-4a64-b1b3-8c78e81f5921
 feature: 適用性Forms，表單資料模型
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: 89245554-7b99-4e7e-9810-52191f9ea365
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
 
 
-# AEM Forms和Adobe Campaign Standard快速入門{#getting-started-with-aem-forms-and-adobe-campaign-standard}
+# 開始使用AEM Forms和Adobe Campaign Standard {#getting-started-with-aem-forms-and-adobe-campaign-standard}
 
 ![formsandcampaign](assets/helpx-cards-forms.png)
 
