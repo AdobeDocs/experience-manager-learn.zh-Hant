@@ -1,17 +1,14 @@
 ---
 title: 儲存和擷取最適化表單資料
-seo-title: 儲存和擷取最適化表單資料
 description: 從資料庫儲存及擷取最適化表單資料。 此功能可讓表單填入程式儲存表單，並在稍後繼續填寫表單。
-seo-description: 從資料庫儲存及擷取最適化表單資料。 此功能可讓表單填入程式儲存表單，並在稍後繼續填寫表單。
 feature: 適用性表單
-topics: developing
-audience: developer,implementer
-doc-type: article
-activity: setup
+topic: 開發
+role: Developer
+type: Tutorial
 version: 6.3,6.4,6.5
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -29,7 +26,7 @@ ht-degree: 0%
 * [能力演示](#capability-demo)
 * [在伺服器上部署](#deploy-on-your-server)
 
-## 配置資料源{#Configure-Data-Source}
+## 配置資料源 {#Configure-Data-Source}
 
 Apache Sling Connection Pooled DataSource已設定為指向將用來儲存適用性表單資料的資料庫。 以下螢幕擷圖顯示我執行個體的設定。 可以複製並貼上以下屬性
 
@@ -211,7 +208,7 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 }
 ```
 
-## 建立OSGI服務以擷取資料{#create-osgi-service}
+## 建立OSGI服務以擷取資料 {#create-osgi-service}
 
 下列程式碼是用來擷取儲存的最適化表單資料。 簡單查詢可用來擷取與指定GUID相關聯的適用性表單資料。 然後，擷取的資料會傳回至呼叫應用程式。 在此程式碼中參考的第一個步驟中建立的相同資料來源。
 
@@ -276,7 +273,7 @@ public class AemformWithDB implements AemFormsAndDB {
 }
 ```
 
-## 建立客戶端庫{#create-client-library}
+## 建立用戶端程式庫 {#create-client-library}
 
 AEM用戶端程式庫會管理所有用戶端javascript程式碼。 針對本文，我已建立簡單的javascript，以使用指南橋接器API擷取適用性表單資料。 擷取適用性表單資料後，會對servlet發出POST呼叫，以在資料庫中插入或更新適用性表單資料。 函式getALLUrlParams會傳回URL中的參數。 當您想要更新資料時，就會使用此功能。 其餘的功能在與.savebutton類的click事件關聯的代碼中處理。 如果URL中存在guid參數，則需要執行更新操作（如果不是插入操作）。
 
@@ -404,16 +401,16 @@ $(document).ready(function()
 });
 ```
 
-## 建立最適化表單範本和頁面元件{#form-template-and-page-component}
+## 建立最適化表單範本和頁面元件 {#form-template-and-page-component}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
-### 演示能力{#capability-demo}
+### 演示能力 {#capability-demo}
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
-#### 在伺服器上部署{#deploy-on-your-server}
+#### 在伺服器上部署 {#deploy-on-your-server}
 
 若要在您的AEM Forms執行個體上測試此功能，請執行下列步驟
 
