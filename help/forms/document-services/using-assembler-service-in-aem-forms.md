@@ -1,22 +1,14 @@
 ---
 title: 在AEM Forms中使用組合器服務
-seo-title: 在AEM Forms中使用組合器服務
 description: 使用AEM Forms中的組合器服務來組合多個pdf檔案
-seo-description: 使用AEM Forms中的組合器服務來組合多個pdf檔案
-uuid: 7895b1a3-6f9d-4413-bb7f-692ea0380fcd
 feature: 組合器
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
-discoiquuid: a12f52af-7039-4452-a58d-9ad2c0096347
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '209'
 ht-degree: 3%
 
 ---
