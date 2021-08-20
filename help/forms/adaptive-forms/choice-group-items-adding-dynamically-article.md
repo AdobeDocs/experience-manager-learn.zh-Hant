@@ -1,20 +1,14 @@
 ---
 title: 將項添加到選擇組元件
-seo-title: 將項添加到選擇組元件
 description: 動態新增項目至選擇的群組元件
-seo-description: 動態新增項目至選擇的群組元件
 feature: 適用性表單
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.5
 topic: 開發
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -96,7 +90,7 @@ else
 **使用可視化編輯器來新增項目**
 
 * [下載資產](assets/usingthevisualeditor.zip)
-* 如果尚未安裝Tomcat，請安裝它。 [此處提供安裝tomcat的說明](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* 如果尚未安裝Tomcat，請安裝它。 [此處提供安裝tomcat的說明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
 * [在Tomcat中部署SampleRest.war檔案](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
 * [開啟Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下「建立」 |檔案上傳」，並上傳您在上一步下載的檔案
