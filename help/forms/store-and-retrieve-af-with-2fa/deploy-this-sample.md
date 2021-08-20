@@ -2,19 +2,16 @@
 title: 部署範例
 description: 取得在本機AEM Forms執行個體上執行的使用案例
 feature: 適用性表單
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+type: Tutorial
 version: 6.4,6.5
 kt: 6602
 thumbnail: 6602.jpg
 topic: 開發
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '371'
 ht-degree: 1%
 
 ---
@@ -48,7 +45,7 @@ ht-degree: 1%
 ## 部署以下OSGi套件組合
 
 部署具有[代碼的包，以儲存和從資料庫](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)中提取資料
-部署[DevelopingWithServiceUser套件組合](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
+部署[DevelopingWithServiceUser套件組合](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
 
 ## 部署客戶端庫
 
