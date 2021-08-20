@@ -2,19 +2,16 @@
 title: 使用OTP驗證用戶
 description: 使用OTP驗證與應用程式號碼關聯的移動號碼。
 feature: 適用性表單
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: use
+type: Tutorial
 version: 6.4,6.5
 kt: 6594
 thumbnail: 6594.jpg
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
@@ -52,11 +49,11 @@ OpenAPI規格（原稱Swagger規格）是REST API的API說明格式。 OpenAPI�
 
 ## 建立資料來源
 
-若要將AEM/AEM Forms與協力廠商應用程式整合，我們需要使用雲端服務設定中的Swagger檔案](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)，以[REST為基礎的資料來源。 完成的資料源將作為本課程資產的一部分提供給您。
+若要將AEM/AEM Forms與協力廠商應用程式整合，我們需要使用雲端服務設定中的Swagger檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)，以[REST為基礎的資料來源。 完成的資料源將作為本課程資產的一部分提供給您。
 
 ## 建立表單資料模型
 
-AEM Forms資料整合提供直覺式的使用者介面，可建立及使用[表單資料模型](https://docs.adobe.com/content/help/en/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 表單資料模型依賴資料來源來交換資料。
+AEM Forms資料整合提供直覺式的使用者介面，可建立及使用[表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 表單資料模型依賴資料來源來交換資料。
 從這裡](assets/sms-2fa-fdm.zip)下載完成的表單資料模型可以是[
 
 ![fdm](assets/2FA-fdm.PNG)
