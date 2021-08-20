@@ -1,22 +1,14 @@
 ---
 title: 搭配AEM適用性Forms使用驗證碼
-seo-title: 搭配AEM適用性Forms使用驗證碼
 description: 新增及使用CAPTCHA與AEM適用性Forms。
-seo-description: 新增及使用CAPTCHA與AEM適用性Forms。
 feature: 適用性Forms，工作流程
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.4,6.5
-uuid: bd63e207-4f4d-4f34-9ac4-7572ed26f646
-discoiquuid: 5e184e44-e385-4df7-b7ed-085239f2a642
 topic: 開發
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -26,7 +18,7 @@ ht-degree: 0%
 
 新增及使用CAPTCHA與AEM適用性Forms。
 
-請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)頁面，以取得此功能的即時示範連結。
+請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)頁面，以取得此功能的即時示範連結。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
 
@@ -42,7 +34,7 @@ ht-degree: 0%
 >
 >在製作執行個體上設定reCaptach
 >
->在製作執行個體上開啟felix [ web console](http://localhost:4502/system/console/bundles)
+>在製作執行個體上開啟Felix [Web主控台](http://localhost:4502/system/console/bundles)
 >
 >搜尋com.adobe.granite.crypto.file套件
 >
@@ -61,7 +53,7 @@ ht-degree: 0%
 
 重新啟動AEM發佈伺服器
 
-## 支援材料{#supporting-materials}
+## 支援材料 {#supporting-materials}
 
 * [Google reCAPTCHA](https://www.google.com/recaptcha)
 
