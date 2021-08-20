@@ -2,16 +2,12 @@
 title: 搭配AEM Forms和Adobe Sign使用XDP範本
 description: 搭配AEM Forms和Adobe Sign使用XDP範本。 此影片詳細說明如何運用現有XDP範本與AEM Forms和Sign整合。
 feature: 適用性表單
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 thumbnail: 39705.jpg
 kt: 6143
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 4%
