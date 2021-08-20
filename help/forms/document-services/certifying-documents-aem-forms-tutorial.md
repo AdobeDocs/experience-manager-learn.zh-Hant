@@ -1,21 +1,14 @@
 ---
 title: AEM Forms的證明檔案
-seo-title: AEM Forms的證明檔案
 description: 使用Docassurance服務驗證AEM Forms中的PDF檔案
-seo-description: 使用Docassurance服務驗證AEM Forms中的PDF檔案
-uuid: ecb1f9b6-bbb3-43a3-a0e0-4c04411acc9f
 feature: 文件安全性
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: 開發
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -31,7 +24,7 @@ ht-degree: 0%
 
 若要使用AEM Forms來驗證檔案，請遵循下列步驟
 
-## 將證書添加到信任儲存{#adding-certificate-to-trust-store}
+## 將證書添加到信任儲存 {#adding-certificate-to-trust-store}
 
 請依照下列步驟，將憑證新增至AEM中的金鑰存放區
 
