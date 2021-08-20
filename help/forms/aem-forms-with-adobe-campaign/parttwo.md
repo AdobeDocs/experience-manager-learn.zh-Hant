@@ -1,28 +1,20 @@
 ---
 title: 在適用性表單提交上建立促銷活動設定檔
-seo-title: 在適用性表單提交上建立促銷活動設定檔
 description: 本文將說明在Adobe Campaign Standard中針對適用性表單提交建立設定檔所需的步驟。 此程式可運用自訂提交機制來處理最適化表單提交作業。
-seo-description: 本文將說明在Adobe Campaign Standard中針對適用性表單提交建立設定檔所需的步驟。 此程式可運用自訂提交機制來處理最適化表單提交作業。
-uuid: f3cb7b3c-1a1c-49eb-9447-a9e52c675244
 feature: 適用性Forms，表單資料模型
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: 46ec4136-4898-4b01-86bb-ac638a29b242
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
 
-# 在適用性表單提交上建立促銷活動設定檔{#creating-campaign-profile-on-adaptive-form-submission}
+# 在適用性表單提交上建立促銷活動設定檔 {#creating-campaign-profile-on-adaptive-form-submission}
 
 本文將說明在Adobe Campaign Standard中針對適用性表單提交建立設定檔所需的步驟。 此程式可運用自訂提交機制來處理最適化表單提交作業。
 
@@ -32,7 +24,7 @@ ht-degree: 0%
 * 建立自訂提交動作以處理最適化表單提交
 * 叫用CampaignService的createProfile方法
 
-## 建立AEM服務{#create-aem-service}
+## 建立AEM服務 {#create-aem-service}
 
 建立AEM服務以建立Adobe Campaign設定檔。 此AEM服務會從OSGI設定中擷取Adobe Campaign憑證。 取得促銷活動認證後，即會產生存取權杖，並使用存取權杖HTTP Post呼叫，在Adobe Campaign中建立設定檔。 以下是建立設定檔的程式碼。
 
@@ -247,7 +239,7 @@ return null;
 }
 ```
 
-## 自定義提交{#custom-submit}
+## 自訂提交 {#custom-submit}
 
 建立自訂提交處理常式，以處理最適化表單提交。 在此自訂提交處理常式中，我們將呼叫CampaignService的createProfile方法。 createProfile方法接受表示需要建立的配置檔案的JSONObject。
 
@@ -266,7 +258,7 @@ profile.addProperty("mobilePhone",request.getParameter("phone"));
 String pkey = addNewProfile.createProfile(profile);
 ```
 
-## 測試解決方案{#test-the-solution}
+## 測試解決方案 {#test-the-solution}
 
 定義服務和自訂提交動作後，即可測試我們的解決方案。 要測試解決方案，請執行以下步驟
 
