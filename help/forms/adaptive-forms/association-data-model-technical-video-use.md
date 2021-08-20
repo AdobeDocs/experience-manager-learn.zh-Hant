@@ -1,28 +1,20 @@
 ---
 title: 搭配使用關聯資料模型與AEM Forms
-seo-title: 搭配使用關聯資料模型與AEM Forms
 description: 在表單資料模型中添加實體之間的關聯
-seo-description: 在表單資料模型中添加實體之間的關聯
-uuid: 82626632-3251-4f7b-9af1-43a9161107c2
-discoiquuid: e01e9bd4-5b47-4356-9884-6968f385bb20
 feature: 適用性Forms，表單資料模型
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.3,6.4,6.5
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 1%
+source-wordcount: '36'
+ht-degree: 2%
 
 ---
 
 
-# 搭配AEM Forms使用關聯資料模型{#using-association-data-models-with-aem-forms}
+# 搭配使用關聯資料模型與AEM Forms{#using-association-data-models-with-aem-forms}
 
 在表單資料模型中建立2個實體之間的關聯
 
