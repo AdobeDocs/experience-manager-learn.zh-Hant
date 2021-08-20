@@ -1,32 +1,24 @@
 ---
 title: '產生JSON網頁代號和存取代號 '
-seo-title: '產生JSON網頁代號和存取代號 '
 description: 本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取權杖所需的程式碼
-seo-description: 本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取權杖所需的程式碼
-uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
 feature: 適用性Forms，表單資料模型
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
 
-# 產生JSON網頁代號和存取代號{#generating-json-web-token-and-access-token}
+# 產生JSON網頁代號和存取代號 {#generating-json-web-token-and-access-token}
 
 本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取權杖所需的程式碼
 
-## 產生JSON Web代號{#generate-json-web-token}
+## 產生JSON網頁代號 {#generate-json-web-token}
 
 使用Adobe Campaign API的第一步是產生JWT。 有關如何為ACS生成JWT的許多代碼示例。 您可以依照此[java程式碼範例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)產生JWT。
 
@@ -247,6 +239,6 @@ public class CampaignServiceImpl implements CampaignService {
  }
 ```
 
-## 生成訪問令牌{#generate-access-token}
+## 產生存取權杖 {#generate-access-token}
 
 然後，我們會進行POST呼叫，以交換產生的JWT作為存取權杖。 接著，此存取Token將在後續REST呼叫的HTTP標題中以授權金鑰的形式傳送
