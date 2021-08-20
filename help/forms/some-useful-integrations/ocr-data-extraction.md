@@ -2,18 +2,14 @@
 title: OCR資料擷取
 description: 從政府核發的檔案中擷取資料以填入表單。
 feature: 條碼式Forms
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: use
 version: 6.4,6.5
 kt: 6679
 topic: 開發
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
@@ -51,11 +47,11 @@ OpenAPI規格（原稱Swagger規格）是REST API的API說明格式。 OpenAPI�
 
 ## 建立資料來源
 
-若要將AEM/AEM Forms與協力廠商應用程式整合，我們需要在雲端服務設定中[建立資料來源](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)。 請使用[swagger檔案](assets/drivers-license-swagger.zip)建立資料源。
+若要將AEM/AEM Forms與協力廠商應用程式整合，我們需要在雲端服務設定中[建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)。 請使用[swagger檔案](assets/drivers-license-swagger.zip)建立資料源。
 
 ## 建立表單資料模型
 
-AEM Forms資料整合提供直覺式的使用者介面，可建立及使用[表單資料模型](https://docs.adobe.com/content/help/en/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 將表單資料模型建立在先前步驟中建立的資料來源上。
+AEM Forms資料整合提供直覺式的使用者介面，可建立及使用[表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 將表單資料模型建立在先前步驟中建立的資料來源上。
 
 ![fdm](assets/test-dl-fdm.PNG)
 
