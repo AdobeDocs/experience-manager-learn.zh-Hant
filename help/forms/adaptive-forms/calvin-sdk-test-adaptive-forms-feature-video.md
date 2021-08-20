@@ -1,28 +1,20 @@
 ---
 title: 透過AEM Forms了解Forms自動化測試
-seo-title: 透過AEM Forms了解Forms自動化測試
 description: AEM 6.3 Forms推出了讓使用者在AEM for Adaptive Forms中，使用以hobbes.js架構建置的Calvin SDK建立測試案例的功能
-seo-description: AEM 6.3 Forms推出了讓使用者在AEM for Adaptive Forms中，使用以hobbes.js架構建置的Calvin SDK建立測試案例的功能
 feature: 適用性表單
-topics: development
-audience: developer
-doc-type: technical video
-activity: develop
 version: 6.3,6.4,6.5
-uuid: 3cea2785-28f0-42c1-9935-3e876c28214a
-discoiquuid: a78936b4-e817-41a0-86cc-f9ac2d6dd08f
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 2%
+source-wordcount: '98'
+ht-degree: 3%
 
 ---
 
 
-# 了解使用AEM Forms的Forms自動化測試{#understanding-automated-forms-testing-with-aem-forms}
+# 透過AEM Forms了解Forms自動化測試{#understanding-automated-forms-testing-with-aem-forms}
 
 AEM 6.3 Forms推出了讓使用者在AEM for Adaptive Forms中，使用以hobbes.js架構建置的Calvin SDK建立測試案例的功能。
 
@@ -37,5 +29,5 @@ AEM 6.3 Forms推出了讓使用者在AEM for Adaptive Forms中，使用以hobbes
 >**實用連結**
 >
 >* [Calvin SDK命名空間](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
->* [Hobbes.js檔案](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)
+>* [Hobbes.js檔案](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
 
