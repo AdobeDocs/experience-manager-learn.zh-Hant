@@ -1,15 +1,14 @@
 ---
 title: 了解不同類型的PDF forms和檔案
 description: PDF實際上是一系列檔案格式，本文說明對表單開發人員來說重要且相關的PDF類型。
-solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
-level: Beginner,Intermediate
-version: 6.3,6.4,6.5
-feature: 文件服務
+level: Beginner, Intermediate
+version: 6.3,6.4, 6.5
+feature: PDF 產生器
 kt: 7071
 topic: 開發
-source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 0%
