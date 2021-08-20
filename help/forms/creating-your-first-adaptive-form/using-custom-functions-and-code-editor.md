@@ -1,30 +1,22 @@
 ---
 title: 使用函式和程式碼編輯器
-seo-title: 使用函式和程式碼編輯器
 description: 使用函式和程式碼編輯器來編寫業務規則
-seo-description: 使用函式和程式碼編輯器來編寫業務規則
-uuid: 578e91f8-0d93-4192-b7af-1579df2feaf8
 feature: 適用性表單
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.4,6.5
-discoiquuid: f480ef3e-7e38-4a6b-a223-c102787aea7f
 kt: 4270
 thumbnail: 22282.jpg
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 1%
+source-wordcount: '139'
+ht-degree: 2%
 
 ---
 
 
-# 使用自訂函式和程式碼編輯器{#using-functions-and-code-editor}
+# 使用自訂函式和程式碼編輯器 {#using-functions-and-code-editor}
 
 在本部分，我們將使用自訂函式和程式碼編輯器來編寫業務規則。
 
@@ -33,15 +25,15 @@ ht-degree: 1%
 用戶端程式庫通常包含CSS和Javascript檔案。 此用戶端程式庫包含javascript檔案，此檔案會顯示要填入下拉式清單值的函式。
 
 
-## 填充下拉清單{#function-to-populate-drop-down-list}的函式
+## 要填充的函式下拉清單 {#function-to-populate-drop-down-list}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
 
-### 設定面板的摘要標題{#set-the-summary-title-of-panels}
+### 設定面板的摘要標題 {#set-the-summary-title-of-panels}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
 
-#### 驗證面板{#validate-panels-using-rule-editor}
+#### 驗證面板 {#validate-panels-using-rule-editor}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28409?quality=9&learn=on)
 
