@@ -1,22 +1,14 @@
 ---
 title: 改善AEM Forms中的表單編輯器
-seo-title: 改善AEM Forms中的表單編輯器
 description: AEM 6.3在此版本中導入了數項新功能和增強功能，以簡化最適化表單和檔案的製作體驗。 這些增強功能有助於縮短您的上市時間，並讓商務使用者能夠使用表單和檔案
-seo-description: AEM 6.3在此版本中導入了數項新功能和增強功能，以簡化最適化表單和檔案的製作體驗。 這些增強功能有助於縮短您的上市時間，並讓商務使用者能夠使用表單和檔案
 feature: 適用性表單
-topics: authoring
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.3,6.4,6.5
-uuid: 9e76a2b8-f843-47b8-abf8-596c64fbcbb6
-discoiquuid: 7a7bad50-c604-4182-accb-acb85571ba78
 topic: 開發
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '190'
 ht-degree: 1%
 
 ---
