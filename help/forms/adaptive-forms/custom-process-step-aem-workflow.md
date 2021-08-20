@@ -1,20 +1,14 @@
 ---
 title: 實作自訂程式步驟
-seo-title: 實作自訂程式步驟
 description: 使用自訂處理步驟將適用性表單附件寫入檔案系統
-seo-description: 使用自訂處理步驟將適用性表單附件寫入檔案系統
 feature: 工作流程
-topics: development
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.5
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
