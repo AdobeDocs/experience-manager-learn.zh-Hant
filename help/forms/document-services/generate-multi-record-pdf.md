@@ -2,15 +2,11 @@
 title: 從一個資料檔案產生多個PDF
 description: OutputService提供了多種使用表單設計和資料建立文檔的方法，以便與表單設計合併。 了解如何從包含多個個別記錄的大型xml產生多個pdf。
 feature: 輸出服務
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: fb6c21a9a88b5ebcbfb14213182a9b8cba6fe6ae
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 1%
