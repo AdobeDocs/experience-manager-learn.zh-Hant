@@ -1,19 +1,15 @@
 ---
 title: 壓縮檔案附件的自訂處理步驟
 description: 自訂處理步驟，將最適化表單附件新增至zip檔案，並將zip檔案儲存至工作流程變數
-feature: 工作流程
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: setup
+feature: 適用性表單
 version: 6.5
 topic: 開發
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '151'
 ht-degree: 1%
 
 ---
