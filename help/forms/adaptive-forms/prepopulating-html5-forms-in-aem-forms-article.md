@@ -1,28 +1,20 @@
 ---
 title: 使用資料屬性預先填入HTML5 Forms。
-seo-title: 使用資料屬性預先填入HTML5 Forms。
 description: 從後端來源擷取資料，填入HTML5表單。
-seo-description: 從後端來源擷取資料，填入HTML5表單。
 feature: 適用性表單
-topics: mobile-forms
-audience: developer
-doc-type: article
-activity: implement
 version: 6.3,6.4,6.5.
-uuid: 889d2cd5-fcf2-4854-928b-0c2c0db9dbc2
-discoiquuid: 3aa645c9-941e-4b27-a538-cca13574b21c
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
 
 
-# 使用資料屬性{#prepopulate-html-forms-using-data-attribute}預先填入HTML5 Forms
+# 使用資料屬性預先填入HTML5 Forms {#prepopulate-html-forms-using-data-attribute}
 
 請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)頁面，以取得此功能的即時示範連結。
 
