@@ -1,20 +1,15 @@
 ---
 title: 在適用性Forms中顯示內嵌影像
-seo-title: 在適用性Forms中顯示內嵌影像
 description: 在適用性Forms中內嵌顯示已上傳的影像
-seo-description: 在適用性Forms中內嵌顯示已上傳的影像
 feature: 適用性表單
 topics: development
-audience: developer
-doc-type: article
-activity: setup
 version: 6.3,6.4,6.5
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '240'
 ht-degree: 1%
 
 ---
@@ -23,6 +18,8 @@ ht-degree: 1%
 # 適用性Forms中的內嵌影像
 
 常見的使用案例是在適用性表單中將上傳的影像顯示為內嵌影像。 依預設，上傳的影像會顯示為連結，而此體驗可透過在適用性表單中顯示影像來增強。 本文將引導您完成顯示內嵌影像的相關步驟。
+
+[此功能的即時範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)
 
 ## 添加佔位符影像
 
