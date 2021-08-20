@@ -1,28 +1,20 @@
 ---
 title: 使用適用性Forms的條碼服務
-seo-title: 使用適用性Forms的條碼服務
-description: 使用條形碼服務來解碼條形碼並從提取的資料中填充表單欄位
-seo-description: 使用條形碼服務來解碼條形碼並從提取的資料中填充表單欄位
-uuid: 42568b81-cbcd-479e-8d9a-cc0b244da4ae
-feature: 條碼式表單
-topics: development
-audience: developer
-doc-type: article
-activity: implement
+description: 使用條碼服務來解碼條碼，並從擷取的資料填入表單欄位。
+feature: 條碼式Forms
 version: 6.4,6.5
-discoiquuid: 1224de6d-7ca1-4e9d-85fe-cd675d03e262
 topic: 開發
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
 
-# 具有適用性Forms的條碼服務{#barcode-service-with-adaptive-forms}
+# 使用適用性Forms的條碼服務{#barcode-service-with-adaptive-forms}
 
 本文將示範如何使用條碼服務填入最適化表單。 使用案例如下：
 
