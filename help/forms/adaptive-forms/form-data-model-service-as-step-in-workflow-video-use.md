@@ -1,28 +1,21 @@
 ---
 title: 在工作流程中使用表單資料模型服務
-seo-title: 在工作流程中使用表單資料模型服務
 description: 從AEM Forms 6.4開始，現在起，我們可以在AEM工作流程中使用表單資料模型。 以下影片會逐步說明在AEM工作流程中設定「表單資料模型」步驟所需的步驟。
-seo-description: 從AEM Forms 6.4開始，現在起，我們可以在AEM工作流程中使用表單資料模型。 以下影片會逐步說明在AEM工作流程中設定「表單資料模型」步驟所需的步驟。
-uuid: ecd5d5aa-01eb-48fb-872f-66c656ae14df.
 feature: 工作流程
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
+type: Tutorial
 version: 6.4,6.5
-discoiquuid: c442f439-1e5d-4f96-85df-b818c28389ff
 topic: 開發
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 1%
 
 ---
 
 
-# 在工作流程{#using-form-data-model-service-as-step-in-workflow}中使用表單資料模型服務作為步驟
+# 在工作流程中使用表單資料模型服務 {#using-form-data-model-service-as-step-in-workflow}
 
 從AEM Forms 6.4開始，現在起，我們可以在AEM工作流程中使用表單資料模型。 以下影片逐步說明在AEM工作流程中設定「表單資料模型」步驟所需的步驟
 
@@ -33,7 +26,7 @@ ht-degree: 0%
 * [下載並部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。這是設定中繼資料屬性的自訂OSGI套件組合。
 >!![NOTE]在AEM Forms 6.5及以上版本中，此功能可立即使用，如 [下所述](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* 按照[此處](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)的說明，使用SampleRest.war檔案設定tomcat。部署在Tomcat中的war檔案具有返回申請人信用分數的代碼。 評分是200到800之間的隨機數字
+* 按照[此處](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)的說明，使用SampleRest.war檔案設定tomcat。部署在Tomcat中的war檔案具有返回申請人信用分數的代碼。 評分是200到800之間的隨機數字
 
 * [使用套件管理程式將資產匯入AEM](assets/invoke-fdm-as-service-step.zip)。套件包含下列項目：
 
