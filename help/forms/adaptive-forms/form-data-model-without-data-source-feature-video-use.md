@@ -1,28 +1,20 @@
 ---
 title: 建立沒有資料來源的表單資料模型
-seo-title: 建立沒有資料來源的表單資料模型
 description: 從AEM Forms 6.4開始，我們現在可以定義表單資料模型(FDM)，而不會將其與資料來源產生關聯。 以下影片會逐步說明建立不含任何資料來源的FDM的步驟。
-seo-description: 從AEM Forms 6.4開始，我們現在可以定義表單資料模型(FDM)，而不會將其與資料來源產生關聯。 以下影片會逐步說明建立不含任何資料來源的FDM的步驟。
 feature: 工作流程
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.4,6.5
-uuid: eeb6165c-5465-4692-a3a9-8ef10780678d
-discoiquuid: 54fdce05-486b-4fb5-aed4-8552fe2040fd
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '138'
 ht-degree: 1%
 
 ---
 
 
-# 建立沒有資料源的表單資料模型{#creating-form-data-model-without-data-source}
+# 建立沒有資料來源的表單資料模型 {#creating-form-data-model-without-data-source}
 
 從AEM Forms 6.4開始，我們現在可以定義表單資料模型(FDM)，而不會將其與資料來源產生關聯。 以下影片會逐步說明建立不含任何資料來源的FDM的步驟。
 
