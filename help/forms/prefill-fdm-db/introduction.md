@@ -2,16 +2,13 @@
 title: 使用表單資料模型預填表單
 description: '使用表單資料模型的請求屬性預填最適化表單 '
 feature: 適用性表單
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
 kt: 4419
 thumbnail: 36387.jpg
 topic: 開發
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 3%
