@@ -2,16 +2,15 @@
 title: 建立最適化表單範本
 description: 範本定義適用性表單的結構和初始內容。
 feature: 適用性表單
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
+topic: 開發
+role: Developer
+level: Beginner
 kt: 5859
-thumbnail: 37324
-source-git-commit: c60a46027cc8d71fddd41aa31dbb569e4df94823
+thumbnail: 37324.jpg
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -24,7 +23,7 @@ ht-degree: 3%
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324/quality=9)
 
-如需詳細資訊，請參閱[適用性表單範本檔案](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
+如需詳細資訊，請參閱[適用性表單範本檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
 
 如有需要，您可以下載[適用性表單範本](assets/peak-application-template.zip)，並使用[套件管理器](http://localhost:4502/crx/packmgr/index.jsp)匯入至AEM
 
