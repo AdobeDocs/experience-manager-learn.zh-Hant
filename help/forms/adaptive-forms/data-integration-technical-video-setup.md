@@ -1,28 +1,20 @@
 ---
 title: 設定與AEM Forms的資料整合
-seo-title: 設定與AEM Forms的資料整合
 description: 設定與JDBC資料源的資料連接
-seo-description: 設定與JDBC資料源的資料連接
 feature: 適用性Forms，工作流程
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.4,6.5
-uuid: 267de794-4462-4421-adee-d40a469fabb3
-discoiquuid: 41864584-cb99-4c54-abda-8eb83829cb90
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '78'
 ht-degree: 1%
 
 ---
 
 
-# 設定與AEM Forms的資料整合{#set-up-data-integration-with-aem-forms}
+# 設定與AEM Forms的資料整合 {#set-up-data-integration-with-aem-forms}
 
 設定與JDBC資料源的資料連接
 
@@ -32,7 +24,7 @@ ht-degree: 1%
 >
 >必須通過AEM實例上的OSGi包來安裝MySQL JDBC驅動程式。
 
-## 支援材料{#supporting-materials}
+## 支援材料 {#supporting-materials}
 
 * [下載MySQL JDBC OSGi套件](https://dev.mysql.com/downloads/connector/j/)
 
