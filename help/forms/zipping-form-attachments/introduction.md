@@ -2,19 +2,15 @@
 title: 傳送最適化表單附件
 description: 使用傳送電子郵件元件傳送最適化表單附件
 feature: 適用性表單
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: setup
 version: 6.5
 topic: 開發
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
