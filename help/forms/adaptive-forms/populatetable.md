@@ -1,20 +1,14 @@
 ---
 title: '填入最適化表單表格 '
-seo-title: 填入最適化表單表格
 description: 將表單資料模型服務叫用的結果填入適用性表單表格
-seo-description: 將表單資料模型服務叫用的結果填入適用性表單表格
 feature: 適用性表單
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: 開發
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '240'
 ht-degree: 1%
 
 ---
