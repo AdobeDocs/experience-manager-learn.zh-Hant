@@ -1,22 +1,14 @@
 ---
 title: 在AEM Forms中使用交易報表
-seo-title: 在AEM Forms中使用交易報表
 description: AEM Forms中的交易報表可讓您保留自AEM Forms部署上指定日期以來發生的所有交易計數。
-seo-description: AEM Forms中的交易報表可讓您保留自AEM Forms部署上指定日期以來發生的所有交易計數。
-uuid: e6133f7e-c79c-4006-89e7-3bebf7b8229e
 feature: 適用性表單
-topics: developing
-audience: administrator
-doc-type: article
-activity: setup
 version: 6.4.1,6.5
-discoiquuid: 1abdf07a-b9f0-4c58-a1c6-08ae57db2014
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -26,7 +18,7 @@ ht-degree: 0%
 
 AEM Forms 6.4.1推出交易報告功能，用於擷取表單提交數量、使用檔案服務轉譯檔案以及轉譯互動式通訊（網頁和列印管道）。此功能主要適用於希望根據表單提交數量和/或檔案轉譯來授權軟體的客戶。 此功能目前僅可在AEM Forms OSGI堆疊上使用。
 
-## 啟用事務報告{#enabling-transaction-reporting}
+## 啟用事務報告 {#enabling-transaction-reporting}
 
 預設情況下，禁用事務記錄。 要啟用事務記錄，請執行以下步驟：
 
@@ -37,7 +29,7 @@ AEM Forms 6.4.1推出交易報告功能，用於擷取表單提交數量、使�
 
 啟用交易報告後，您可以提交Adaptive Forms、使用文檔服務生成文檔或呈現Interactive Communication文檔，以查看交易報告的實際運行。
 
-## 查看事務報表{#viewing-transaction-report}
+## 查看交易報告 {#viewing-transaction-report}
 
 若要檢視交易報表，請以管理員身分登入AEM Forms。 只有fd-Administrator組的成員才能查看事務報告。
 
