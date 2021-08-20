@@ -1,28 +1,20 @@
 ---
 title: 使用傳送電子郵件步驟進行Forms Workflow
-seo-title: 使用傳送電子郵件步驟進行Forms Workflow
 description: AEM Forms 6.4導入了「傳送電子郵件」步驟。使用此步驟，我們可以建立業務流程或工作流程，讓您可以傳送包含或不含附件的電子郵件。 以下影片會逐步說明設定傳送電子郵件元件的步驟
-seo-description: AEM Forms 6.4導入了「傳送電子郵件」步驟。使用此步驟，我們可以建立業務流程或工作流程，讓您可以傳送包含或不含附件的電子郵件。 以下影片會逐步說明設定傳送電子郵件元件的步驟
-uuid: d054ebfb-3b9b-4ca4-8355-0eb0ee7febcb
 feature: 工作流程
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.4,6.5
-discoiquuid: 3a11f602-2f4c-423a-baef-28824c0325a1
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
 
 
-# 使用Forms Workflow{#using-send-email-step-of-forms-workflow}的「傳送電子郵件」步驟
+# 使用傳送電子郵件步驟進行Forms Workflow {#using-send-email-step-of-forms-workflow}
 
 AEM Forms 6.4導入了「傳送電子郵件」步驟。使用此步驟，我們可以建立業務流程或工作流程，讓您可以傳送包含或不含附件的電子郵件。 以下影片會逐步說明設定傳送電子郵件元件的步驟。
 
