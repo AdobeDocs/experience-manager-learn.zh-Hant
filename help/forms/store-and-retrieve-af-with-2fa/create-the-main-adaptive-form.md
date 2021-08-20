@@ -2,9 +2,7 @@
 title: 建立主要最適化表單
 description: 建立最適化表單以擷取申請人資訊，並建立最適化表單以擷取儲存的最適化表單
 feature: 適用性表單
-topics: development
-audience: developer
-doc-type: tutorial
+type: Tutorial
 activity: implement
 version: 6.4,6.5
 kt: 6552
@@ -12,7 +10,7 @@ thumbnail: 6552.jpg
 topic: 開發
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 1%
