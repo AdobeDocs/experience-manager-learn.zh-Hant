@@ -1,20 +1,13 @@
 ---
 title: AEM Workflow[Part5]中的變數
-seo-title: AEM Workflow[Part5]中的變數
-description: 在aem工作流程中使用xml,json,arraylist,document類型的變數
-seo-description: 在aem工作流程中使用xml,json,arraylist,document類型的變數
-feature: 工作流程
-topics: development
-audience: developer
-doc-type: technical video
-activity: understand
+description: 在AEM工作流程中使用XML、JSON、ArrayList、Document類型的變數
 version: 6.5
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '108'
+source-wordcount: '92'
 ht-degree: 1%
 
 ---
