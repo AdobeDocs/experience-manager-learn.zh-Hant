@@ -2,14 +2,13 @@
 title: 如何內嵌Forms字型及輸出服務轉換
 description: 內嵌Forms字型和輸出服務轉換的步驟
 type: Troubleshooting
-product: forms
 role: Admin
-level: Developer
+level: Experienced
 version: 6.5
-feature: Forms Portal ，輸出服務
+feature: Forms服務、輸出服務
 topic: '開發  '
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 2%
