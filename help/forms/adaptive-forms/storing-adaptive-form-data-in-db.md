@@ -1,20 +1,14 @@
 ---
 title: 儲存最適化表單資料
-seo-title: 儲存最適化表單資料
 description: 將最適化表單資料儲存至DataBase，作為AEM工作流程的一部分
-seo-description: 將最適化表單資料儲存至DataBase，作為AEM工作流程的一部分
-feature: 適用性Forms，工作流程，表單資料模型
-topics: integrations
-audience: implementer
-doc-type: article
-activity: setup
+feature: 適用性Forms，表單資料模型
 version: 6.3,6.4,6.5
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
