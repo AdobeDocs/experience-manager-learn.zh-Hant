@@ -1,20 +1,14 @@
 ---
 title: 在AEM Forms與產出和Forms服務一起發展
-seo-title: 在AEM Forms與產出和Forms服務一起發展
 description: 在AEM Forms中使用輸出和Forms服務API
-seo-description: 在AEM Forms中使用輸出和Forms服務API
 feature: 表單服務
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: 開發
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '332'
 ht-degree: 1%
 
 ---
