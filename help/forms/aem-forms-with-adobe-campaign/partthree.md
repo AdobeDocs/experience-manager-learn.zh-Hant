@@ -1,27 +1,19 @@
 ---
 title: 使用ACS設定檔預先填寫最適化表單
-seo-title: 使用ACS設定檔預先填寫最適化表單
 description: 使用ACS設定檔預先填入適用性Forms
-seo-description: 使用ACS設定檔預先填入適用性Forms
-uuid: 9bff6f61-96e9-40d4-a977-a80008cfbeee
 feature: 適用性Forms，表單資料模型
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: a2ffcb84-4dd8-45e5-8e2c-0da74202851b
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
 
-# 使用ACS設定檔{#prefilling-adaptive-form-using-acs-profile}預填最適化表單
+# 使用ACS設定檔預先填寫最適化表單 {#prefilling-adaptive-form-using-acs-profile}
 
 在本部分，我們將使用從ACS獲取的配置檔案資訊預填適用性表單。 AEM Forms具備預先填寫最適化表單的強大功能。
 
