@@ -1,22 +1,14 @@
 ---
 title: 在適用性Forms中使用地理位置API
-seo-title: 在適用性Forms中使用地理位置API
-description: 使用地理位置api的
-seo-description: 使用地理位置api的
-uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
+description: 使用地理位置API填入表單上的地址欄位
 feature: 適用性表單
-topics: integrations
-audience: developer
-doc-type: article
-activity: develop
 version: 6.3,6.4,6.5
-discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
@@ -24,7 +16,7 @@ ht-degree: 0%
 
 # 在適用性Forms中使用地理位置API{#using-geolocation-api-s-in-adaptive-forms}
 
-請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0)頁面，以取得此功能的即時示範連結。
+請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)頁面，以取得此功能的即時示範連結。
 
 在本文中，我們將探討如何使用Google的地理位置API來填入最適化表單的欄位。 當您想要填入表單上的目前地址欄位時，通常會使用此使用案例。
 
