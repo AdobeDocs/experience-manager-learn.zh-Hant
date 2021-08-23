@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 個人化完整網頁體驗{#personalization-fpe}
+# 個人化完整網頁體驗 {#personalization-fpe}
 
 了解如何建立活動，使用Adobe Target將AEM上托管的網站頁面重新導向至新頁面。
 
