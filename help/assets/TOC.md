@@ -2,12 +2,12 @@
 user-guide-title: AEM Assets 影片和教學課程
 user-guide-description: Adobe Experience Manager Assets 的影片和教學課程系列。
 breadcrumb-title: AEM Assets 教學課程
-sub-product: 資產
+feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 team: TM
-source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 27%
+source-wordcount: '343'
+ht-degree: 22%
 
 ---
 
@@ -63,12 +63,18 @@ ht-degree: 27%
 + 共用和分發{#sharing}
    + [下載資產](./sharing/download.md)
    + [發佈資產](./sharing/publish.md)
-   + [品牌入口網站](./sharing/brand-portal.md)
+
+   + 品牌入口網站{#brand-portal}
+      + [品牌入口網站](./sharing/brand-portal.md)
+      + [設定AEM Brand Portal](brand-portal/configure.md)
+      + [配置Asset Sourcing](brand-portal/configure-asset-sourcing.md)
+      + [啟用轉譯下載](brand-portal/enable-renditions-download.md)
    + 資產共用{#assets-share}
       + [資產共用公域](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [在本機AEM上設定資產共用公域](./sharing/asset-share-commons-technical-video-setup.md)
       + [命名資產共用公域](./sharing/asset-share-commons-feature-video-theming.md)
    + [連線資產](./sharing/connected-assets.md)
+
 
 + 與創意工作流程整合{#creative-workflows}
    + [AEM案頭應用程式](./creative-workflows/aem-desktop-app.md)
@@ -107,6 +113,22 @@ ht-degree: 27%
    + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
    + [Dynamic Media智慧型裁切影片](dynamic-media/dynamic-media-smart-crop-video.md)
    + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
+
+   + 教學課程 {#tutorials}
+      + [建立轉盤集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
+      + [建立影像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
+      + [建立影像預設集](dynamic-media/tutorials/creating-image-presets.md)
+      + [建立智慧型裁切影像設定檔](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
+      + [建立視訊設定檔](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
+      + [處理資產](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [配置安全預覽伺服器](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
+      + [產生URL和內嵌程式碼](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
+      + [觸發匯出作業](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
+      + [使CDN快取失效](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
+      + [使用Dynamic Media核心元件](dynamic-media/tutorials/using-dm-components-on-site-page.md)
+      + [刪除Dynamic Media設定](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
+      + [在Dynamic Media Classic應用程式中下載資產](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
+      + [Dynamic Media Classic IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
 + 轉換 {#translation}
    + [源檔案翻譯](translation/source-file-translation-feature-video-use.md)
