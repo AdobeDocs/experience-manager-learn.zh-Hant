@@ -309,7 +309,7 @@ public class MyClass {
 
 ![在AEM中記錄設定](./assets/set-up-a-local-aem-development-environment/logging.png)
 
-#### 套件組處於安裝狀態{#bundle-active}
+#### 套件組合處於「已安裝」狀態 {#bundle-active}
 
 所有套件組合（不包括片段）都應處於&#x200B;**[!UICONTROL Active]**&#x200B;狀態。 如果您在[!UICONTROL Installed]狀態中看到程式碼套件組合，則需要解決問題。 多數情況下，這是相依性問題：
 
@@ -323,7 +323,7 @@ public class MyClass {
 
 在上述範例中，我們可以看到安裝在AEM例項上的版本是&#x200B;**12.2** ，與套件預期的&#x200B;**12.6**&#x200B;比較。 從中，您可以回溯工作，查看AEM上的[!DNL Maven]相依性是否符合AEM專案中的[!DNL Maven]相依性。 在上述範例中，[!DNL Core Components] **v2.2.0**&#x200B;安裝在AEM例項上，但程式碼套件組建時依賴&#x200B;**v2.2.2**，因此是相依性問題的原因。
 
-#### 驗證Sling模型註冊{#osgi-component-sling-models}
+#### 驗證Sling模型註冊 {#osgi-component-sling-models}
 
 AEM元件應一律以[!DNL Sling Model]作為備份，以封裝任何業務邏輯，並確保HTL呈現指令碼保持乾淨。 如果發生無法找到Sling模型的問題，從主控台檢查[!DNL Sling Models]可能會有所幫助：[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)。 這會告訴您是否已註冊Sling模型，以及系結的資源類型（元件路徑）。
 
