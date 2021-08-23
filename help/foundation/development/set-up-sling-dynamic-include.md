@@ -11,17 +11,17 @@ doc-type: technical video
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 6%
+source-wordcount: '261'
+ht-degree: 5%
 
 ---
 
 
 # 設定[!DNL Sling Dynamic Include]
 
-安裝和使用[!DNL Apache Sling Dynamic Include]搭配[](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)在[!DNL Apache HTTP Web Server]上執行的AEM Dispatcher的影片逐步說明。
+安裝和使用[!DNL Apache Sling Dynamic Include]搭配[](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)在[!DNL Apache HTTP Web Server]上執行的AEM Dispatcher的影片逐步說明。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040/?quality=12&learn=on)
 
@@ -150,7 +150,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->如果您使用[!DNL Sling Dynamic Includes]來提供邊緣端包含(ESI)，請務必在Dispatcher快取](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)中快取相關的[回應標題。 可能的標題包括：
+>如果您使用[!DNL Sling Dynamic Includes]來提供邊緣端包含(ESI)，請務必在Dispatcher快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)中快取相關的[回應標題。 可能的標題包括：
 >
 >* &quot;快取控制&quot;
 >* &quot;Content-Disposition&quot;
