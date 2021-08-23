@@ -12,9 +12,9 @@ thumbnail: kt-4419.jpg
 topic: 開發
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ HTML5表單是Adobe Experience Manager中的新功能，提供HTML5格式的XFA�
 
 ## 必備條件
 
-請確定您有有效的AEM Forms例項。 請依照[安裝指南](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)安裝及設定AEM Forms
+請確定您有有效的AEM Forms例項。 請依照[安裝指南](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)安裝及設定AEM Forms
 
 ## 建立您的第一個HTML5表單
 
@@ -58,7 +58,7 @@ xdp範本的進階屬性可讓您指定發佈日期、提交處理常式、表�
 
 **提交URL**  — 這是將處理HTML5表單提交的URL。我們將在下一課中介紹此內容。 若未在此指定提交URL，則會叫用預設的提交處理常式，這會將表單資料傳回至瀏覽器。
 
-**HTML呈現描述檔**  - HTML5表單的概念是描述檔，這些描述檔公開為REST端點，以啟用表單範本的行動呈現。大多數情況下，預設呈現配置檔案應足以呈現表單。 如果預設的呈現配置檔案不符合您的需要，則可以建立[自定義配置檔案](https://docs.adobe.com/content/help/en/experience-manager-64/forms/html5-forms/custom-profile.html)並與表單關聯。
+**HTML呈現描述檔**  - HTML5表單的概念是描述檔，這些描述檔公開為REST端點，以啟用表單範本的行動呈現。大多數情況下，預設呈現配置檔案應足以呈現表單。 如果預設的呈現配置檔案不符合您的需要，則可以建立[自定義配置檔案](https://experienceleague.adobe.com/docs/experience-manager-64/forms/html5-forms/custom-profile.html)並與表單關聯。
 
 **預填服務**  — 預填服務通常用於將從後端資料來源擷取的資料填入您的表單。
 
