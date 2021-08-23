@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# 在AEM Forms打印通道文檔{#using-table-component-in-aem-forms-print-channel-document}中使用表元件
+# 在AEM Forms打印通道文檔中使用表元件 {#using-table-component-in-aem-forms-print-channel-document}
 
 以下影片會逐步說明在互動式通訊中使用表格元件以列印管道檔案所需的步驟。
 
