@@ -6,9 +6,9 @@ version: 6.3, 6.4, 6.5
 topic: 內容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1767'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Brand Portal的Asset Sourcing可用來收集來自協力廠商和團隊的資產
 
 *Experience Manager作者6.5 SP2(6.5.2)或更新版本才能使用Asset Sourcing*
 
-請參閱[為Asset Sourcing啟用Experience Manager作者](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) ，了解如何在Experience Manager作者上設定Asset Sourcing的指示。
+請參閱[為Asset Sourcing啟用Experience Manager作者](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) ，了解如何在Experience Manager作者上設定Asset Sourcing的指示。
 
 ## Brand Portal 2019年2月功能與增強功能{#brand-portal-features-and-enhancements-644}
 
@@ -206,6 +206,6 @@ Brand Portal使用Adobe I/O[https://legacy-oauth.cloud.adobe.io/](https://legacy
 * [AEM製作復寫代理](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [加速下載指南](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM Assets Brand PortalAdobe檔案](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
-* [AEM Assets Dynamic MediaAdobe檔案](https://docs.adobe.com/docs/en/aem/6-3/author/assets/dynamic-media.html)
+* [AEM Assets Dynamic MediaAdobe檔案](https://experienceleague.adobe.com/docs/)
 * [下載Aspera Connect](https://downloads.asperasoft.com/connect2/)
 * [Aspera Connect測試伺服器](https://test-connect.asperasoft.com/)
