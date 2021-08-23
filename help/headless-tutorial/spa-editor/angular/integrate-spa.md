@@ -13,9 +13,9 @@ thumbnail: 5310-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2195'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 您一律可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution)上檢視完成的程式碼，或切換至分支`Angular/integrate-spa-solution`在本機檢出程式碼。
 
-## 整合方法{#integration-approach}
+## 整合方法 {#integration-approach}
 
 已在AEM專案中建立兩個模組：`ui.apps`和`ui.frontend`。
 
@@ -77,13 +77,13 @@ ht-degree: 0%
 
 *對SPA整合的高階描述。*
 
-有關前端版本編號的其他資訊，請參見[這裡](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)。
+有關前端版本編號的其他資訊，請參見[這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)。
 
-## Inspect SPA整合{#inspect-spa-integration}
+## Inspect SPA整合 {#inspect-spa-integration}
 
-接下來，檢查`ui.frontend`模組，了解[AEM專案原型](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)自動產生的SPA。
+接下來，檢查`ui.frontend`模組，了解[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)自動產生的SPA。
 
-1. 在您選擇的IDE中，開啟WKND SPA的AEM專案。 本教程將使用[Visual Studio代碼IDE](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)。
+1. 在您選擇的IDE中，開啟WKND SPA的AEM專案。 本教程將使用[Visual Studio代碼IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)。
 
    ![VSCode - AEM WKND SPA專案](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -112,7 +112,7 @@ ht-degree: 0%
    "@adobe/cq-spa-page-model-manager": "^1.1.3",
    ```
 
-   上述模組組成[AEM SPA Editor JS SDK](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-blueprint.html)，並提供功能，讓您能夠將SPA元件對應至AEM元件。
+   上述模組組成[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)，並提供功能，讓您能夠將SPA元件對應至AEM元件。
 
 5. 在`package.json`檔案中，定義了多個`scripts`:
 
@@ -132,7 +132,7 @@ ht-degree: 0%
 
    `build`  — 編譯Angular應用程式以進行生產發佈。新增`&& clientlib`負責在建置期間將編譯的SPA複製到`ui.apps`模組，作為用戶端程式庫。 npm模組[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)用於促進此操作。
 
-   有關可用指令碼的更多詳細資訊，請參見[此處](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)。
+   有關可用指令碼的更多詳細資訊，請參見[此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)。
 
 6. Inspect檔案`ui.frontend/clientlib.config.js`。 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs)使用此配置檔案來確定如何生成客戶端庫。
 
@@ -167,7 +167,7 @@ ht-degree: 0%
 
    `app.component.js` 是SPA的入口。`ModelManager` 由AEM SPA Editor JS SDK提供。它負責呼叫應用程式並將`pageModel`（JSON內容）插入。
 
-## 添加標題元件{#header-component}
+## 新增標題元件 {#header-component}
 
 接著，將新元件新增至SPA，並將變更部署至本機AEM例項以查看整合。
 
@@ -655,6 +655,6 @@ ht-degree: 0%
 
 您一律可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution)上檢視完成的程式碼，或切換至分支`Angular/integrate-spa-solution`在本機檢出程式碼。
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 [將SPA元件對應至AEM元件](map-components.md)  — 了解如何使用AEM SPA Editor JS SDK將Angular元件對應至Adobe Experience Manager(AEM)元件。元件對應可讓作者在AEM SPA編輯器中對SPA元件進行動態更新，與傳統AEM製作類似。
