@@ -1,44 +1,56 @@
 ---
 source-git-commit: facdd8295b9c4cf1eb09db4a6c8deb3e0fe33c04
 workflow-type: tm+mt
-translation-type: tm+mt
 source-wordcount: '281'
-ht-degree: 23%
+ht-degree: 100%
 
 ---
 
-# 貢獻
+# 投稿
 
-感謝您選擇貢獻！
+謝謝您的投稿！
 
-以下是在提供此專案時要遵循的一組准則。
+以下是投稿至本專案時應遵守的一組準則。
 
-## 行為准則
+## 行為準則
 
-此專案遵守 Adobe [行為準則](code-of-conduct.md)。凡是參與本專案，就必須遵守此準則。Please report unacceptable behavior to
-[Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
+此專案遵守 Adobe [行為準則](code-of-conduct.md)。凡是參與本專案，就必須遵守此準則。如發現不良行為，
+請向 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com) 回報。
 
-## 有問題嗎？
+## 有疑問嗎？
 
-從提出問題開始。 此專案的現有提交者會在專案方向上達成共識，並在問題執行緒中（視情況而定）發佈解決方案。
+開始提出問題。本專案現有提交者正努力對
+專案方向和問題串內的問題解決方法達成共識
+(若可以)。
 
-## 參與者授權合約
+## 投稿人授權合約
 
-所有第三方對本項目的捐款都必須附上簽署的捐款者授權協定。 這可授予 Adobe 在專案中重新使用您稿件的權限。[簽署我們的CLA](https://opensource.adobe.com/cla.html)。 您只需提交一次Adobe CLA，因此如果您先前已提交過一個CLA，您就可以了！
+貢獻本專案的所有協力廠商必須提供簽約投稿人的
+授權合約。這可授予 Adobe 在專案中重新使用
+您稿件的權限。[簽署我們的 CLA](https://opensource.adobe.com/cla.html)。您
+只需要提交 Adobe CLA 一次，因此如果您之前已送出 CLA，
+即可立即開始投稿！
 
-## 程式碼審核
+## 程式碼檢閱
 
-所有提交作業均應以提取請求的形式提出，且須通過專案提交者審核。閱讀 [GitHub 的提取請求文件](https://help.github.com/articles/about-pull-requests/)以了解傳送提取請求的詳細資訊。
+所有提交作業均應以提取請求的形式提出，且須通過
+專案提交者審核。閱讀 [GitHub 的提取請求文件](https://help.github.com/articles/about-pull-requests/)
+以了解傳送提取請求的詳細資訊。
 
 <!--
 Lastly, please follow the [pull request template](PULL_REQUEST_TEMPLATE.md) when
 submitting a pull request!
 -->
 
-## 從參與者到提交者
+## 從投稿人至提交人
 
-我們熱愛來自社區的貢獻！ 如果您想要超越稿件提供者，成為具備完整寫入存取權和專案發言權的提交者，則必須獲邀加入專案。 現有提交者採用內部提名程式，在發出邀請前必須達成懶惰共識（沈默是核准）。 如果您覺得自己有資格並想要更深入地參與，請自由地與現有的提交者聯絡，以便與他們討論這個問題。
+我們很歡迎社區所有人出力貢獻！如果您不只是要成為投稿人，
+還想更進一步成為提交人，以便擁有完全的撰寫存取權和專案發話權，則您必須
+受到專案的邀請。現有提交人在獲得邀請前，
+要採用內部提名序，且必須達成消極共識 
+(沉默表示核准)。如果您認為自己有資格，並且希望更深入地參與其中，
+歡迎隨時與現有的提交者進行相關對話。
 
 ## 安全性問題
 
-此問題追蹤器不應報告安全性問題。 相反地， [請向我們的安全專家提出問題](https://helpx.adobe.com/security/alertus.html)
+安全性問題不應在此問題追蹤器上通報，而是要 [向我們的安全性專家提出問題](https://helpx.adobe.com/tw/security/alertus.html)
