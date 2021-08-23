@@ -7,9 +7,9 @@ feature: 體驗片段
 topic: 個性化
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1098'
 ht-degree: 2%
 
 ---
@@ -87,7 +87,7 @@ AEM提供立即可用的與Experience Platform Launch整合。 此整合可讓AE
 
 #### 新增Target擴充功能
 
-Adobe Target擴充功能支援將Target JavaScript SDK用於現代網路`at.js`的用戶端實作。 仍在使用Target舊程式庫`mbox.js`、[的客戶應升級至at.js](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/upgrading-from-atjs-1x-to-atjs-20.html)以使用Launch。
+Adobe Target擴充功能支援將Target JavaScript SDK用於現代網路`at.js`的用戶端實作。 仍在使用Target舊程式庫`mbox.js`、[的客戶應升級至at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html)以使用Launch。
 
 Target擴充功能包含兩個主要部分：
 
@@ -137,7 +137,7 @@ Target擴充功能包含兩個主要部分：
 
 >[!NOTE]
 >
-> 授予Adobe I/O整合功能可使用適當[角色選取工作區的存取權，以允許中央團隊僅在幾個工作區](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html)中進行API導向的變更。
+> 授予Adobe I/O整合功能可使用適當[角色選取工作區的存取權，以允許中央團隊僅在幾個工作區](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html)中進行API導向的變更。
 
 1. 使用Adobe I/O的憑證在AEM中建立IMS整合。（01:12至03:55）
 2. 在Experience Platform Launch中，建立屬性。 （覆蓋[以上](#create-launch-property)）
