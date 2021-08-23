@@ -22,7 +22,7 @@ ht-degree: 1%
 ---
 
 
-# 註冊自訂資產類型{#registering-custom-asset-types}
+# 註冊自訂資產類型 {#registering-custom-asset-types}
 
 啟用自訂資產類型，以便在AEMForms入口網站中列出
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 >
 >請確定您已安裝AEM 6.3(SP1)和對應的AEM Forms Add On。 此功能僅適用於AEM Forms 6.3 SP1及更新版本
 
-## 指定基本路徑{#specify-base-path}
+## 指定基本路徑 {#specify-base-path}
 
 基本路徑是頂層存放庫路徑，包含使用者可能想在搜尋和索引標籤元件中列出的所有資產。 如果需要，用戶也可以從元件編輯對話框配置基本路徑內的特定位置，以便在特定位置上觸發搜索，而不是搜索基本路徑內的所有節點。 依預設，除非使用者從此位置內設定一組特定路徑，否則基本路徑會作為擷取資產的搜尋路徑標準。 要進行效能搜索，必須擁有此路徑的最佳值。 基礎路徑的預設值將維持為&#x200B;**_/content/dam/formsanddocuments_**，因為所有AEM Forms資產都位於&#x200B;**_/content/dam/formsanddocuments中。_**
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 ![basepath](assets/basepath.png)
 
-## 註冊自訂資產類型{#register-custom-asset-types}
+## 註冊自訂資產類型 {#register-custom-asset-types}
 
 我們已在搜尋和清單元件中新增一個索引標籤（資產清單）。 此索引標籤會列出您所設定的現成資產類型和其他資產類型。 依預設，會列出下列資產類型
 
@@ -74,7 +74,7 @@ ht-degree: 1%
    1. 新增「type」屬性，並將其值設為「videos」。 這是我們在範本中用來列出類型影片資產的值。 儲存您的變更。
 
 1. 在mp4files下建立「nt:unstructured」類型的節點。 將此節點命名為「searchcriteria」
-1. 在搜尋條件下新增一或多個篩選器。 假設，如果用戶想要有搜索篩選器來列出mime類型為&quot;video/mp4&quot;的mp4Files，可以在此處這樣做
+1. 在搜尋條件下新增一或多個篩選器。 假設，如果用戶想要有搜索篩選器來列出mime類型為&quot;video/mp4&quot;的mp4Files，您可以在此處這樣做
 1. 在節點搜索條件下建立「nt:unstructured」類型的節點。 將此節點命名為「filetypes」
 1. 將以下2個屬性添加到此「filetypes」節點
 
