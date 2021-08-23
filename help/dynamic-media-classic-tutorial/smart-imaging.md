@@ -10,10 +10,10 @@ activity: use
 topic: 內容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 3%
+source-wordcount: '693'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 智慧映像還可通過與Adobe中同級最佳的優質服務充分整合而增強效能而獲益。 此服務在伺服器、網路和互連點之間找到最佳的Internet路由，該路由的延遲和/或資料包丟失率比Internet上的預設路由低。
 
-深入了解[智慧影像](https://docs.adobe.com/content/help/zh-Hant/experience-manager-64/assets/dynamic/imaging-faq.html)。
+深入了解[智慧影像](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html)。
 
 ## 智慧影像處理優勢
 
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 如前所述，智慧影像處理利用Adobe Sensei AI功能並與現有的影像預設集搭配使用，以自動將影像轉換為最佳的新一代影像格式，例如WebP，同時維持視覺逼真度。
 
-深入了解[智慧型影像處理如何運作](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)，包括支援的影像格式（以及如果您不使用這些格式會發生什麼情況）等詳細資訊，及其對現有使用的影像預設集的影響。
+深入了解[智慧型影像處理如何運作](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)，包括支援的影像格式（以及如果您不使用這些格式會發生什麼情況）等詳細資訊，及其對現有使用的影像預設集的影響。
 
 ## 智慧影像處理的影響
 
@@ -54,7 +54,7 @@ ht-degree: 3%
 
 啟用智慧影像處理後，您將需要驗證其是否如預期般運作。
 
-您可能有其他關於智慧影像處理的問題。 我們已整理常見問題集(FAQ)的清單，提供解答。 請參閱[常見問題集](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html)。
+您可能有其他關於智慧影像處理的問題。 我們已整理常見問題集(FAQ)的清單，提供解答。 請參閱[常見問題集](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html)。
 
 ## 其他資源
 
