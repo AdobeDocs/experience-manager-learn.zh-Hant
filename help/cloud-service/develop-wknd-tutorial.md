@@ -9,10 +9,10 @@ feature: AEM專案原型，核心元件，頁面編輯器，可編輯的範本
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 14%
+source-wordcount: '362'
+ht-degree: 12%
 
 ---
 
@@ -31,9 +31,9 @@ ht-degree: 14%
 
 此教學課程在設計上將使用 **AEM as a Cloud Service**，並向下相容於 **AEM 6.5+** 和 **AEM 6.4.2+**。
 
-**[在這裡檢視教學課程！](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
+**[在這裡檢視教學課程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
-## 將WKND部署到AEM作為Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## 將WKND部署至AEM as aCloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
 完成WKND教學課程後，請觀看以下影片以概略了解如何將WKND專案部署至AEM as aCloud Service。
 
