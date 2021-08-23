@@ -1,29 +1,24 @@
 ---
 title: 使用AEM SPA編輯器開發 — Hello World教學課程
 description: AEM SPA編輯器支援在內容內編輯單頁應用程式或SPA。 本教學課程介紹要與AEM SPA Editor JS SDK搭配使用的SPA開發。 本教學課程將新增自訂Hello World元件，以擴充We.Retail Journal應用程式。 使用者可使用React或Angular架構完成本教學課程。
-sub-product: 網站，內容服務
-feature: Spa Editor
-topics: development, single-page-applications
-audience: developer
-doc-type: tutorial
-activity: use
 version: 6.3, 6.4, 6.5
 topic: SPA
+feature: SPA Editor
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3174'
+source-wordcount: '3170'
 ht-degree: 1%
 
 ---
 
 
-# 使用AEM SPA編輯器開發 — Hello World教學課程{#developing-with-the-aem-spa-editor-hello-world-tutorial}
+# 使用AEM SPA編輯器開發 — Hello World教學課程 {#developing-with-the-aem-spa-editor-hello-world-tutorial}
 
 >[!WARNING]
 >
-> 本教學課程為&#x200B;**已廢止**。 建議您遵循下列任一項：[AEM SPA Editor and ReactAngular快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)或[AEM SPA Editor and React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)快速入門
+> 本教學課程為&#x200B;**已廢止**。 建議您遵循下列任一項：[AEM SPA Editor and ReactAngular快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)或[AEM SPA Editor and React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)快速入門
 
 AEM SPA編輯器支援在內容內編輯單頁應用程式或SPA。 本教學課程介紹要與AEM SPA Editor JS SDK搭配使用的SPA開發。 本教學課程將新增自訂Hello World元件，以擴充We.Retail Journal應用程式。 使用者可使用React或Angular架構完成本教學課程。
 
@@ -79,7 +74,7 @@ $ npm --version
 
 熱門架構[React JS](https://reactjs.org/)和[Angular](https://angular.io/)可立即使用。 使用者可以透過Angular或React完成本教學課程，無論其最熟悉的架構為何。
 
-## 項目設定{#project-setup}
+## 專案設定 {#project-setup}
 
 SPA開發只有一步之遙，另一步之遙。 目標是讓SPA開發能獨立進行，且（大多）不受AEM限制。
 
@@ -149,13 +144,13 @@ SPA開發只有一步之遙，另一步之遙。 目標是讓SPA開發能獨立�
 
    ![頁面屬性功能表](assets/spa-editor-helloworld-tutorial-use/page-properties.png)
 
-1. 在最新版SPA編輯器中，[可編輯的範本](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/page-templates-editable.html)的使用方式與傳統Sites實作相同。 我們稍後將透過自訂元件重新審視此項目。
+1. 在最新版SPA編輯器中，[可編輯的範本](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/page-templates-editable.html)的使用方式與傳統Sites實施相同。 我們稍後將透過自訂元件重新審視此項目。
 
    >[!NOTE]
    >
    > 只有AEM 6.5和AEM 6.4 + **Service Pack 5**&#x200B;支援可編輯的範本。
 
-## 開發概述{#development-overview}
+## 開發概述 {#development-overview}
 
 ![概述開發](assets/spa-editor-helloworld-tutorial-use/diagramv2.png)
 
@@ -165,7 +160,7 @@ SPA開發反覆項目會獨立於AEM進行。 當SPA準備好部署至AEM時，�
 1. SPA專案的&#x200B;[**aem-clientlib-generator**](https://www.npmjs.com/package/aem-clientlib-generator)將編譯的SPA內嵌為AEM專案中的AEM Client Library。
 1. AEM專案會產生AEM套件，包括已編譯的SPA，以及任何其他支援AEM程式碼。
 
-## 建立AEM元件{#aem-component}
+## 建立AEM元件 {#aem-component}
 
 **角色：AEM開發人員**
 
@@ -298,7 +293,7 @@ SPA開發反覆項目會獨立於AEM進行。 當SPA準備好部署至AEM時，�
 
    ![部署的元件結構(CRXDE Lite)](assets/spa-editor-helloworld-tutorial-use/updated-component-withdialogs.png)
 
-## 建立Sling模型{#create-sling-model}
+## 建立Sling模型 {#create-sling-model}
 
 **角色：AEM開發人員**
 
@@ -308,7 +303,7 @@ SPA開發反覆項目會獨立於AEM進行。 當SPA準備好部署至AEM時，�
 
 >[!NOTE]
 >
->開發人員應盡可能使用[AEM核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)，這才是最佳作法。 核心元件提供「SPA就緒」的[!DNL Sling Models] JSON輸出，可讓開發人員將更多精力放在前端簡報上。
+>開發人員應盡可能使用[AEM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)，這才是最佳作法。 核心元件提供「SPA就緒」的[!DNL Sling Models] JSON輸出，可讓開發人員將更多精力放在前端簡報上。
 
 1. 在您選擇的編輯器中，開啟&#x200B;**we-retail-journal-commons**&#x200B;專案(`<src>/aem-sample-we-retail-journal/bundles/commons`)。
 1. 在包`com.adobe.cq.sample.spa.commons.impl.models`中：
@@ -430,7 +425,7 @@ SPA開發反覆項目會獨立於AEM進行。 當SPA準備好部署至AEM時，�
    com.adobe.cq.sample.spa.commons.impl.models.HelloWorld exports 'we-retail-journal/components/helloworld' with selector 'model' and extension '[Ljava.lang.String;@6480f3e5' with exporter 'jackson'
    ```
 
-## 建立React元件{#react-component}
+## 建立React元件 {#react-component}
 
 **角色：前端開發人員**
 
@@ -569,7 +564,7 @@ SPA開發反覆項目會獨立於AEM進行。 當SPA準備好部署至AEM時，�
    > **app.** jsis整合的React應用程式。程式碼不再是人類看得懂的。 `npm run build`命令已觸發最佳化組建，會輸出已編譯的JavaScript，供現代瀏覽器解譯。
 
 
-## 建立Angular元件{#angular-component}
+## 建立Angular元件 {#angular-component}
 
 **角色：前端開發人員**
 
@@ -752,7 +747,7 @@ SPA開發反覆項目會獨立於AEM進行。 當SPA準備好部署至AEM時，�
    >
    > **main.** jsis套件Angular應用程式。程式碼不再是人類看得懂的。 npm run build命令已觸發最佳化組建，會輸出已編譯的JavaScript，供現代瀏覽器解譯。
 
-## 更新模板{#template-update}
+## 更新範本 {#template-update}
 
 1. 導覽至React和/或Angular版本的可編輯範本：
 
@@ -779,7 +774,7 @@ SPA開發反覆項目會獨立於AEM進行。 當SPA準備好部署至AEM時，�
 
    ![CRXDE Lite顯示「佈局容器」中「允許的元件」的更新策略配置](assets/spa-editor-helloworld-tutorial-use/editable-template-policy.png)
 
-## 將所有內容放在一起{#putting-together}
+## 把它們放在一起 {#putting-together}
 
 1. 導覽至「Angular」或「React」頁面：
 
@@ -800,7 +795,7 @@ SPA開發反覆項目會獨立於AEM進行。 當SPA準備好部署至AEM時，�
 
    請注意，字串&quot;Hello&quot;一律會加在訊息前面。 這是`HelloWorld.java` [!DNL Sling Model]中邏輯的結果。
 
-## 後續步驟{#next-steps}
+## 後續步驟 {#next-steps}
 
 [HelloWorld元件的已完成解決方案](assets/spa-editor-helloworld-tutorial-use/aem-sample-we-retail-journal-HelloWorldSolution.zip)
 
@@ -809,7 +804,7 @@ SPA開發反覆項目會獨立於AEM進行。 當SPA準備好部署至AEM時，�
 
 ## 疑難排解 {#troubleshooting}
 
-### 無法在Eclipse {#unable-to-build-project-in-eclipse}中建立專案
+### 無法在Eclipse中建立專案 {#unable-to-build-project-in-eclipse}
 
 **錯誤：** 將專案匯入Eclipse以執行無 [!DNL We.Retail Journal] 法識別的目標時發生錯誤：
 
@@ -823,7 +818,7 @@ SPA開發反覆項目會獨立於AEM進行。 當SPA準備好部署至AEM時，�
 
 **解決方法：** 嘗試刪 `node_modules` 除react-app **下方的資料夾**。從專案的根目錄重新執行Apache Maven命令`mvn  clean install -PautoInstallSinglePackage`。
 
-### AEM {#unsatisfied-dependencies-in-aem}中未滿足的依賴項
+### AEM中未滿足的相依性 {#unsatisfied-dependencies-in-aem}
 
 ![包管理器依賴關係錯誤](assets/spa-editor-helloworld-tutorial-use/we-retail-journal-package-dependency.png)
 
