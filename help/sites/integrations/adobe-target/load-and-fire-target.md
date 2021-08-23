@@ -12,15 +12,15 @@ thumbnail: 41243.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 3%
+source-wordcount: '615'
+ht-degree: 1%
 
 ---
 
 
-# 載入並引發Target呼叫{#load-fire-target}
+# 載入及觸發Target呼叫 {#load-fire-target}
 
 了解如何使用Launch規則載入、傳遞參數至頁面請求，以及從您的網站頁面觸發Target呼叫。 網頁資訊是使用Adobe用戶端資料層來擷取並以參數形式傳遞的，該資料層可讓您收集和儲存訪客在網頁上的體驗相關資料，並且讓此資料易於存取。
 
@@ -163,5 +163,5 @@ window.targetGlobalSettings = {
 + [Adobe用戶端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [使用Adobe用戶端資料層與核心元件檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/data-layer/overview.html)
-+ [Adobe Experience Platform Debugger簡介](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
++ [使用Adobe用戶端資料層與核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Adobe Experience Platform Debugger簡介](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
