@@ -1,21 +1,17 @@
 ---
 title: 設定AEM存取權逐步說明
 description: 在AdobeAdminConsole中設定AdobeIMS使用者、使用者群組和產品設定檔的概要教學，以及如何在AEM作者中運用這些AdobeIMS抽象化功能來定義及管理特定的群組型權限。
-feature: 使用者和群組
-topics: authentication, permissions
 version: cloud-service
-activity: setup
-audience: administrator
-doc-type: technical video
-kt: 6061
-thumbnail: 39155.jpg
 topic: 管理、安全
+feature: 使用者和群組
 role: Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 6061
+thumbnail: 39155.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '120'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
