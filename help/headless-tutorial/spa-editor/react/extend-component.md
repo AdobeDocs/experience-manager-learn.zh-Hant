@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 擴展核心元件{#extend-component}
+# 擴充核心元件 {#extend-component}
 
 了解如何擴充現有的核心元件以與AEM SPA編輯器搭配使用。 了解如何擴充現有元件是自訂和擴充AEM SPA Editor實作功能的強大技術。
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 查看設定[本地開發環境](overview.md#local-dev-environment)所需的工具和說明。 在此階段，我們假設教學課程中的使用者已對AEM SPA Editor功能有完整的了解。
 
-## 具有Sling資源超類型{#sling-resource-super-type}的繼承
+## 具有Sling資源超類型的繼承 {#sling-resource-super-type}
 
 要在元件的定義上擴展現有元件集名為`sling:resourceSuperType`的屬性。  `sling:resourceSuperType`是屬 [](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties) 性，可在指向其他元件的AEM元件定義上設定。這會明確設定元件，以繼承識別為`sling:resourceSuperType`的元件的所有功能。
 
@@ -172,7 +172,7 @@ ht-degree: 0%
 
    大多數元件不需要`_cq_editConfig`。 影像元件和子體是例外。
 
-## 擴展對話框{#extend-dialog}
+## 擴展對話框 {#extend-dialog}
 
 我們的`Banner`元件需要對話方塊中的額外文字欄位來擷取`bannerText`。 由於我們使用Sling繼承，因此可以使用[Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html)的功能來覆寫或擴充對話方塊的部分。 在此範例中，對話方塊已新增一個索引標籤，以從作者擷取其他資料以填入「卡片元件」。
 
@@ -241,7 +241,7 @@ ht-degree: 0%
 
    在可以預覽對話方塊之前，我們需要實作SPA元件和`MapTo`函式。
 
-## 實作SPA元件{#implement-spa-component}
+## 實作SPA元件 {#implement-spa-component}
 
 若要搭配SPA編輯器使用Banner元件，必須建立新的SPA元件，以對應至`wknd-spa-react/components/banner`。 這將在`ui.frontend`模組中完成。
 
@@ -324,7 +324,7 @@ ht-degree: 0%
    >
    > 對話方塊可讓您儲存&#x200B;**橫幅文字**&#x200B;的值，但此值不會反映在SPA元件中。 若要啟用，我們需要擴充元件的Sling模型。
 
-## 添加Java介面{#java-interface}
+## 添加Java介面 {#java-interface}
 
 若要最終將元件對話方塊中的值公開給React元件，我們需要更新填入`Banner`元件JSON的Sling模型。 這將在`core`模組中完成，該模組包含SPA專案的所有Java程式碼。
 
@@ -349,7 +349,7 @@ ht-degree: 0%
 
    這將繼承核心元件`Image`介面中的所有方法，並添加一個新方法`getBannerText()`。
 
-## 實作Sling模型{#sling-model}
+## 實作Sling模型 {#sling-model}
 
 接下來，為`BannerModel`介面實作Sling模型。
 
@@ -462,7 +462,7 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallBundle
    ```
 
-## 將所有內容放在一起{#put-together}
+## 把它們放在一起 {#put-together}
 
 1. 返回AEM並開啟具有`Banner`元件的SPA頁面。
 1. 更新`Banner`元件以包含&#x200B;**橫幅文字**:
