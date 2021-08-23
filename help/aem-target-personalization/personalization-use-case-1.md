@@ -7,9 +7,9 @@ feature: 體驗片段
 topic: 個性化
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1728'
 ht-degree: 1%
 
 ---
@@ -58,8 +58,8 @@ WKND網站計畫通過其網站在全美宣佈&#x200B;**SkateFest挑戰**，並�
 1. AEM內容編輯器會根據需求為內容區塊建立體驗片段，並將其以選件形式匯出至Adobe Target。 若要為美國的所有州提供個人化內容，內容作者可以建立一個體驗片段主變數，然後建立50個其他變數，每個州各一個。 然後，可手動編輯每個狀態變異的內容與相關影像和文字。 編寫體驗片段時，內容編輯器可以使用「資產尋找器」選項，快速存取AEM Assets中可用的所有資產。 當體驗片段匯出至Adobe Target時，其所有變數也會以選件形式推送至Adobe Target。
 
 1. 從AEM將體驗片段匯出為Adobe Target作為選件之後，行銷人員可以使用這些選件在Target中建立活動。 根據WKND網站SkateFest行銷活動，行銷人員需要建立並提供個人化體驗給來自每個州的WKND網站訪客。 若要建立體驗鎖定目標活動，行銷人員需要識別對象。 為了進行WKND SkateFest活動，我們需要根據他們造訪WKND網站的所在位置，建立50個不同的受眾。
-   * [](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) 對象會定義活動的目標，並用於任何可使用目標的位置。Target對象是一組已定義的訪客條件。 選件可以鎖定在特定對象（或區段）。 只有屬於該對象的訪客才會看見鎖定他們的體驗。  例如，您可以將優惠方案傳送給由使用特定瀏覽器或來自特定地理位置的訪客所組成的對象。
-   * [選件](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9)是促銷活動或活動期間顯示在網頁上的內容。 當您測試網頁時，會測量每個體驗在您位置中使用不同選件的成功程度。 選件可以包含不同類型的內容，包括：
+   * [](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) 對象會定義活動的目標，並用於任何可使用目標的位置。Target對象是一組已定義的訪客條件。 選件可以鎖定在特定對象（或區段）。 只有屬於該對象的訪客才會看見鎖定他們的體驗。  例如，您可以將優惠方案傳送給由使用特定瀏覽器或來自特定地理位置的訪客所組成的對象。
+   * [選件](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9)是促銷活動或活動期間顯示在網頁上的內容。 當您測試網頁時，會測量每個體驗在您位置中使用不同選件的成功程度。 選件可以包含不同類型的內容，包括：
       * 影像
       * 文字
       * **HTML**
@@ -77,7 +77,7 @@ WKND網站計畫通過其網站在全美宣佈&#x200B;**SkateFest挑戰**，並�
 
 ## 行銷人員活動
 
-### 使用地理定位{#marketer-audience}建立對象
+### 使用地理定位建立對象 {#marketer-audience}
 
 1. 導覽至您的組織[Adobe Experience Cloud](https://experiencecloud.adobe.com/)(<https://>`<yourcompany>`.experiencecloud.adobe.com)
 1. 使用Adobe ID登入，並確定您所在的組織正確無誤。
