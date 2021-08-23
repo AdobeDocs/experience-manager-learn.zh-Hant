@@ -28,7 +28,7 @@ ht-degree: 1%
 要向「首頁」視圖添加容器元件：
 
 + 匯入AEM React可編輯元件的ResponsiveGrid元件
-+ 匯入並註冊AEM React核心元件（文字和影像）以用於容器元件
++ 匯入並註冊AEM React核心元件（文字和影像），以用於容器元件
 
 ### 在ResponsiveGrid容器元件中匯入
 
