@@ -19,7 +19,7 @@ ht-degree: 3%
 ---
 
 
-# 使用Adobe I/O{#connect-aem-launch-adobe-io}連線AEM與Launch
+# 使用AEM連線Adobe I/O與Launch {#connect-aem-launch-adobe-io}
 
 了解如何建立IMS設定，並Adobe I/O使用Launch API驗證AEM。 整合完成後，AEM就能透過Launch API通訊以存取Launch屬性。
 
