@@ -25,7 +25,7 @@ AEM和Target都是功能強大的解決方案，且功能大致重疊。 客戶�
 * 案例2 :使用可視化體驗撰寫器進行個人化
 * 案例3 :個人化完整網頁體驗
 
-## 使用AEM體驗片段{#personalization-using-aem-experience-fragment}進行個人化
+## 使用AEM體驗片段進行個人化 {#personalization-using-aem-experience-fragment}
 
 對於此案例，我們將使用AEM和Target。 顯然，這兩種產品都有各自的優點，而若要提供個人化體驗給網站的使用者，您需要&#x200B;**個人化內容(來自AEM的內容)**&#x200B;和&#x200B;**智慧方式(Target)**，才能根據特定使用者提供這些內容。
 
