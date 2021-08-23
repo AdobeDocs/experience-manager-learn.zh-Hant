@@ -1,18 +1,14 @@
 ---
 title: AEM中的翻譯增強功能
 description: AEM強大的翻譯架構可讓支援的翻譯廠商順暢地翻譯AEM內容。 了解最新的增強功能。
-feature: 多站點管理員，語言副本
-topics: localization, authoring, content-architecture
-audience: author, marketer, developer
-doc-type: feature video
-activity: use
 version: 6.3, 6.4, 6.5
 topic: 本土化
+feature: 多站點管理員，語言副本
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '340'
 ht-degree: 2%
 
 ---
