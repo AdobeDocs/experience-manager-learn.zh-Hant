@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 頁面模板{#page-templates}
+# 頁面範本 {#page-templates}
 
 >[!CAUTION]
 >
@@ -37,7 +37,7 @@ ht-degree: 0%
 1. 了解頁面範本的詳細資訊，以及如何使用原則來強制精細控制頁面內容。
 1. 了解範本和頁面的連結方式。
 
-## 您要建立的{#what-you-will-build}
+## 您將建置的 {#what-you-will-build}
 
 在本教學課程中，您將會建立新的雜誌文章頁面範本，以用來建立新雜誌文章，並與通用結構對齊。 範本將以AdobeXD中製作的設計和UI Kit為基礎。 本章僅側重於構建模板的結構或骨架。 不會實作樣式，但範本和頁面將可運作。
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 已完成的[雜誌模板解決方案](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.0.zip)可通過包管理器下載和安裝。
 
-## 使用體驗片段{#experience-fragments}更新頁首和頁尾
+## 使用體驗片段更新頁首與頁尾 {#experience-fragments}
 
 建立全域內容（例如頁首或頁尾）時，常見的作法是使用[體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 體驗片段，可讓使用者結合多個元件，以建立單一、可參考的元件。 體驗片段的優點是支援多網站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)。
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 恭喜，您剛使用Adobe Experience Manager Sites建立新範本和頁面。
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 此時，雜誌文章頁面和網站不符合WKND的品牌樣式。 請依照[Theming](theming.md)教學課程，了解更新用於將全域樣式套用至網站的CSS和Javascript前端程式碼的最佳實務。
 
