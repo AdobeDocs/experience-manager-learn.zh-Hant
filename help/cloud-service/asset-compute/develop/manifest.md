@@ -12,9 +12,9 @@ thumbnail: KT-6281.jpg
 topic: 整合，開發
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 背景工作定義為`actions`下的Adobe I/O Runtime動作項目，並由一組設定組成。
 
-存取其他Adobe I/O整合的背景工作必須將`annotations -> require-adobe-auth`屬性設為`true`，因為此[會透過`params.auth`物件顯示背景工作的Adobe I/O憑證](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 當工作人員向外呼叫Adobe I/OAPI(例如Adobe Photoshop、Lightroom或Sensei API)時，通常需要這個選項，並且可以根據每個工作人員切換。
+存取其他Adobe I/O整合的背景工作必須將`annotations -> require-adobe-auth`屬性設為`true`，因為此[會透過`params.auth`物件顯示背景工作的Adobe I/O憑證](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 當工作人員向外呼叫Adobe I/OAPI(例如Adobe Photoshop、Lightroom或Sensei API)時，通常需要這個選項，並且可以根據每個工作人員切換。
 
 1. 開啟並查看自動生成的工作器`manifest.yml`。 包含多個Asset compute工作的項目必須在`actions`陣列下為每個工作定義一個條目。
 
@@ -53,7 +53,7 @@ packages:
 
 每個工作人員都可以在Adobe I/O Runtime中為其執行上下文配置[limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)。 應根據工作人員要計算的資產量、速率和類型，以及其執行的工作類型，調整這些值以為工作人員提供最佳大小調整。
 
-在設定限制之前，請檢閱[Adobe大小調整指南](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 asset compute背景工作在處理資產時可能會耗盡記憶體，導致Adobe I/O Runtime執行中斷，因此請確定背景工作的大小適當，以處理所有候選資產。
+在設定限制之前，請檢閱[Adobe大小調整指南](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 asset compute背景工作在處理資產時可能會耗盡記憶體，導致Adobe I/O Runtime執行中斷，因此請確定背景工作的大小適當，以處理所有候選資產。
 
 1. 將`inputs`區段新增至新的`wknd-asset-compute`動作項目。 這允許調整Asset compute工作人員的總體效能和資源分配。
 
