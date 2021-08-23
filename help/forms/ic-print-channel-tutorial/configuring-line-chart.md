@@ -24,7 +24,7 @@ ht-degree: 1%
 ---
 
 
-# 配置第一個互動式通信文檔{#configuring-line-chart-for-your-first-interactive-communication-document}的線圖
+# 為第一個互動式通信文檔配置線圖 {#configuring-line-chart-for-your-first-interactive-communication-document}
 
 在本部分，我們將添加一個折線圖來顯示帳戶餘額。
 
