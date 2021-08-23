@@ -13,9 +13,9 @@ thumbnail: KT-6279.jpg
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '444'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 # 自定義分配任務通知
 
 分配任務元件用於將任務分配給工作流參與者。 將任務分配給用戶或組時，會向定義的用戶或組成員發送電子郵件通知。
-此電子郵件通知通常包含與任務相關的動態資料。 使用系統生成的[元資料屬性](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)來獲取此動態資料。
+此電子郵件通知通常包含與任務相關的動態資料。 使用系統生成的[元資料屬性](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)來獲取此動態資料。
 若要將已提交表單資料的值包含在電子郵件通知中，我們需要建立自訂中繼資料屬性，然後在電子郵件範本中使用這些自訂中繼資料屬性
 
 
@@ -130,7 +130,7 @@ return customMetadataMap;
 
 ## 在伺服器上嘗試
 
-* [設定Day CQ Mail Service](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
+* [設定Day CQ Mail Service](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
 * 將有效的電子郵件ID與[admin user](http://localhost:4502/security/users.html)關聯
 * 使用[套件管理器](http://localhost:4502/crx/packmgr/index.jsp)下載並安裝[Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip)
 * 下載[適用性表單](assets/request-travel-authorization.zip)，並從[表單和檔案ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)匯入至AEM。
