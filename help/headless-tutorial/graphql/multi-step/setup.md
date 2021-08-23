@@ -1,23 +1,18 @@
 ---
 title: 快速設定 — AEM無周邊功能快速入門 — GraphQL
 description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 安裝AEM SDK、新增範例內容，以及部署使用其GraphQL API從AEM取用內容的應用程式。 了解AEM如何提供全管道體驗。
-sub-product: Sites
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
-feature: 內容片段、GraphQL API
+feature: 內容片段， GraphQL API
 topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1830'
-ht-degree: 2%
+source-wordcount: '1829'
+ht-degree: 1%
 
 ---
 
@@ -73,7 +68,7 @@ ht-degree: 2%
 1. 幾分鐘後，AEM執行個體將完成安裝，而新的瀏覽器視窗應會在[http://localhost:4502](http://localhost:4502)開啟。
 1. 使用用戶名`admin`和密碼`admin`登錄。
 
-## 安裝示例內容和GraphQL終結點{#wknd-site-content-endpoints}
+## 安裝範例內容和GraphQL端點 {#wknd-site-content-endpoints}
 
 將安裝&#x200B;**WKND參考網站**&#x200B;中的範例內容，以加速教學課程。 WKND是虛構的生活風格品牌，通常與AEM訓練搭配使用。
 
@@ -188,7 +183,7 @@ WKND參考站點包括公開[GraphQL終結點](https://experienceleague.adobe.co
 
    ![更新巴釐島衝浪夏令營探險](assets/setup/overnight-bali-surf-camp-changes.png)
 
-## 安裝GraphiQL工具{#install-graphiql}
+## 安裝GraphiQL工具 {#install-graphiql}
 
 [](https://github.com/graphql/graphiql) GraphiQL是開發工具，僅在開發或本機執行個體等較低層級環境中需要。GraphiQL IDE允許您快速測試和調整返回的查詢和資料。 GraphiQL還可輕鬆存取說明檔案，讓您輕鬆了解和了解可用的方法。
 
@@ -214,11 +209,11 @@ WKND參考站點包括公開[GraphQL終結點](https://experienceleague.adobe.co
 
 恭喜，您現在有外部應用程式使用GraphQL的AEM內容。 歡迎在React應用程式中檢查程式碼，並繼續嘗試修改現有內容片段。
 
-## 後續步驟{#next-steps}
+## 後續步驟 {#next-steps}
 
 在下一章[定義內容片段模型](content-fragment-models.md)中，了解如何使用&#x200B;**內容片段模型**&#x200B;來建立內容模型和架構。 將審閱現有模型並建立新模型。 您也將了解可用來定義模型中結構的不同資料類型。
 
-## （額外）CORS設定{#cors-config}
+## （額外）CORS設定 {#cors-config}
 
 AEM預設為安全，會封鎖跨原始請求，防止未經授權的應用程式連線及呈現其內容。
 
