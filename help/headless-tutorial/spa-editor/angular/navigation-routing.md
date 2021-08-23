@@ -13,15 +13,15 @@ thumbnail: 5312-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2723'
+source-wordcount: '2717'
 ht-degree: 0%
 
 ---
 
 
-# 添加導航和路由{#navigation-routing}
+# 添加導航和路由 {#navigation-routing}
 
 了解如何使用AEM頁面和SPA Editor SDK支援SPA中的多個檢視。 動態導覽是使用Angular路由實作，並新增至現有的Header元件。
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## 您將建置的
 
-本章將導航菜單添加到現有`Header`元件。 導覽功能表由AEM頁面階層驅動，並使用[導覽核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
+本章將導航菜單添加到現有`Header`元件。 導覽功能表由AEM頁面階層驅動，並使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
 
 ![已實作導覽](assets/navigation-routing/final-navigation-implemented.gif)
 
@@ -69,9 +69,9 @@ ht-degree: 0%
 
 您一律可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution)上檢視完成的程式碼，或切換至分支`Angular/navigation-routing-solution`在本機檢出程式碼。
 
-## Inspect HeaderComponent更新{#inspect-header}
+## Inspect HeaderComponent更新 {#inspect-header}
 
-在前幾章中，`HeaderComponent`元件是通過`app.component.html`包含的純Angular元件。 在本章中，將從應用程式中移除`HeaderComponent`元件，並透過[範本編輯器](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)新增元件。 這可讓使用者從AEM內設定`HeaderComponent`的導覽功能表。
+在前幾章中，`HeaderComponent`元件是通過`app.component.html`包含的純Angular元件。 在本章中，將從應用程式中移除`HeaderComponent`元件，並透過[範本編輯器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)新增元件。 這可讓使用者從AEM內設定`HeaderComponent`的導覽功能表。
 
 >[!NOTE]
 >
@@ -116,9 +116,9 @@ ht-degree: 0%
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`元件將透過`sling:resourceSuperType`屬性繼承[導航核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)的所有功能。
+   AEM `Header`元件將透過`sling:resourceSuperType`屬性繼承[導航核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)的所有功能。
 
-## 將HeaderComponent添加到SPA模板{#add-header-template}
+## 將HeaderComponent新增至SPA範本 {#add-header-template}
 
 1. 開啟瀏覽器並登入AEM, [http://localhost:4502/](http://localhost:4502/)。 應已部署起始代碼庫。
 2. 導覽至&#x200B;**[!UICONTROL SPA頁面範本]**:[http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html)。
@@ -732,6 +732,6 @@ ht-degree: 0%
 
 您一律可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution)上檢視完成的程式碼，或切換至分支`Angular/navigation-routing-solution`在本機檢出程式碼。
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 [建立自訂元件](custom-component.md)  — 了解如何建立要與AEM SPA編輯器搭配使用的自訂元件。了解如何開發製作對話方塊和Sling模型，以擴充JSON模型以填入自訂元件。
