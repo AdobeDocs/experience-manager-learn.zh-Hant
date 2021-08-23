@@ -24,7 +24,7 @@ ht-degree: 1%
 ---
 
 
-# 使用Forms Designer {#create-layout-using-forms-designer}建立版面
+# 使用Forms Designer建立版面 {#create-layout-using-forms-designer}
 
 在本部分，我們會查看使用AEM Forms設計工具建立的版面檔案。
 
