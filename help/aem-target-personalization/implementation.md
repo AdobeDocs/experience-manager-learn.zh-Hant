@@ -7,7 +7,7 @@ feature: 體驗片段
 topic: 個性化
 role: Developer
 level: Intermediate
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '700'
 ht-degree: 4%
@@ -20,7 +20,7 @@ ht-degree: 4%
 在本節中，我們將討論如何針對不同的情況，與Adobe Target設定Adobe Experience Manager。 根據您的藍本和組織需求。
 
 * **新增Adobe Target JavaScript程式庫（所有案例均為必要）**
-針對AEM上托管的網站，您可以使用Launch將Target程式庫新增 [至網站](https://experienceleague.adobe.com/docs/launch/using/home.html)。Launch提供部署及管理所有必要標籤的簡單方式，以便支援相關客戶體驗。
+針對AEM上托管的網站，您可以使用Launch將Target程式庫新增 [至網站](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)。Launch提供部署及管理所有必要標籤的簡單方式，以便支援相關客戶體驗。
 * **新增Adobe TargetCloud Services（體驗片段案例的必要項目）**
 針對想要使用體驗片段選件在Adobe Target中建立活動的AEM客戶，您需要使用舊版Cloud Services將Adobe Target與AEM整合。若要將體驗片段從AEM推送至Target，做為HTML/JSON選件，並且讓選件與AEM保持同步，此整合是必要的。 
 *實施案例1需要此整合。*
