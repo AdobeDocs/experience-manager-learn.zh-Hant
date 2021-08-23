@@ -12,15 +12,15 @@ level: Beginner
 kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2003'
+source-wordcount: '1999'
 ht-degree: 0%
 
 ---
 
 
-# 使用樣式系統{#developing-with-the-style-system}開發
+# 與風格體系一起發展 {#developing-with-the-style-system}
 
 了解如何使用Experience Manager的樣式系統實作個別樣式並重複使用核心元件。 本教學課程涵蓋使用樣式系統開發，以使用品牌專屬CSS和範本編輯器的進階政策設定來擴充核心元件。
 
@@ -67,9 +67,9 @@ ht-degree: 0%
 1. 了解BEM記號，以及如何用來仔細調整樣式。
 1. 使用可編輯的模板應用高級策略配置。
 
-## 您要建立的{#what-you-will-build}
+## 您將建置的 {#what-you-will-build}
 
-在本章中，我們將使用[樣式系統功能](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)來建立「文章」頁面上使用的&#x200B;**Title**&#x200B;和&#x200B;**Text**&#x200B;元件的變體。
+在本章中，我們將使用[樣式系統功能](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)來建立「文章」頁面上使用的&#x200B;**Title**&#x200B;和&#x200B;**Text**&#x200B;元件的變體。
 
 ![標題可用樣式](assets/style-system/styles-added-title.png)
 
@@ -77,13 +77,13 @@ ht-degree: 0%
 
 ## 背景 {#background}
 
-[樣式系統](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/style-system.html)允許開發人員和模板編輯器建立元件的多個視覺變化。 然後，作者可決定在撰寫頁面時要使用哪種樣式。 在教學課程的其餘部分，我們會運用樣式系統來達成數種獨特的樣式，同時以低程式碼的方式運用核心元件。
+[樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)允許開發人員和模板編輯器建立元件的多個視覺變化。 然後，作者可決定在撰寫頁面時要使用哪種樣式。 在教學課程的其餘部分，我們會運用樣式系統來達成數種獨特的樣式，同時以低程式碼的方式運用核心元件。
 
 樣式系統的一般概念是，作者可選擇元件外觀的各種樣式。 「styles」由會插入至元件外部div的其他CSS類別作為後盾。 在用戶端程式庫中，會根據這些樣式類來新增CSS規則，以便元件變更外觀。
 
 您可以在此處](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)找到樣式系統的[詳細文檔。 此外，還有一部很棒的[技術視頻，用於了解樣式系統](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)。
 
-## 下划線樣式 — 標題{#underline-style}
+## 下划線樣式 — 標題 {#underline-style}
 
 [標題元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/title.html)已作為&#x200B;**ui.apps**&#x200B;模組的一部分，複製到`/apps/wknd/components/title`下的專案。 已在&#x200B;**ui.frontend**&#x200B;模組中實作標題元素的預設樣式(`H1`、`H2`、`H3`...)。
 
@@ -236,7 +236,7 @@ ht-degree: 0%
 
    使用瀏覽器開發人員工具驗證標題元件周圍的標籤有套用至外部div的CSS類別`cmp-title--underline`。
 
-## 引號塊樣式 — 文本{#text-component}
+## 報價塊樣式 — 文本 {#text-component}
 
 接下來，重複類似步驟，將唯一樣式應用到[文本元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)。 已將文字元件代理至`/apps/wknd/components/text`下的專案，作為&#x200B;**ui.apps**&#x200B;模組的一部分。 在&#x200B;**ui.frontend**&#x200B;中已實作段落元素的預設樣式。
 
@@ -391,7 +391,7 @@ ht-degree: 0%
 
    作為作者，您應該可以開啟/關閉樣式。
 
-## 固定寬度 — 容器（額外）{#layout-container}
+## 固定寬度 — 容器（額外） {#layout-container}
 
 容器元件可用來建立「文章頁面範本」的基本結構，並提供內容作者可在頁面上新增內容的放置區。 容器也可運用樣式系統，為內容作者提供更多配置設計選項。
 
@@ -425,7 +425,7 @@ main.container {
 
 恭喜，文章頁面幾乎已完整樣式，而且您使用AEM樣式系統獲得實作體驗。
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 了解端對端步驟，建立可顯示對話方塊中撰寫內容的[自訂AEM元件](custom-component.md)，並探索開發Sling模型以封裝填入元件HTL的商業邏輯。
 
