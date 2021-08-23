@@ -10,9 +10,9 @@ activity: use
 topic: 內容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2659'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Dynamic Media Classic主影像概念的主要優點之一，是您可以針對�
 
 在本教學課程的本節結束前，您將了解如何：
 
-- 在Dynamic Media Classic中裁切影像，並儲存為新主檔案或虛擬影像。 [了解更多](https://docs.adobe.com/help/en/dynamic-media-classic/using/master-files/cropping-image.html).
-- 儲存虛擬調整後的影像，並將其用來取代主資產。 [了解更多](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/adjusting-image.html).
-- 在影像上建立縮放目標以顯示其醒目提示。 [了解更多](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html).
+- 在Dynamic Media Classic中裁切影像，並儲存為新主檔案或虛擬影像。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html).
+- 儲存虛擬調整後的影像，並將其用來取代主資產。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html).
+- 在影像上建立縮放目標以顯示其醒目提示。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html).
 
 ## 裁切
 
@@ -45,8 +45,8 @@ Dynamic Media Classic在UI中提供一些影像編輯工具（包括裁切工具
 
 您可以從資產的「詳細資訊」頁面，或按一下&#x200B;**Edit**&#x200B;按鈕，存取Dynamic Media Classic中的裁切工具。 您可以透過兩種方式使用工具來裁切：
 
-- 拖動裁切窗口的手柄或在「大小」(Size)框中鍵入值的預設裁切模式。 了解如何[手動裁切](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop)。
-- 修剪。 透過計算不符合影像的像素數，以移除影像周圍的額外空白字元。 了解如何透過修剪](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image)裁切[。
+- 拖動裁切窗口的手柄或在「大小」(Size)框中鍵入值的預設裁切模式。 了解如何[手動裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop)。
+- 修剪。 透過計算不符合影像的像素數，以移除影像周圍的額外空白字元。 了解如何透過修剪](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image)裁切[。
 
 ### _手動裁切_
 
@@ -137,7 +137,7 @@ _主影像ASIAN_BR_MAIN的imageAdjusted視圖_
 
 決定是否要使用縮放目標的另一個因素，是您選擇的檢視器。 並非所有檢視器類型都可顯示縮放目標（例如，「彈出」檢視器不支援這些類型）。
 
-了解如何[建立縮放目標](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets)。
+了解如何[建立縮放目標](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets)。
 
 ![影像](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 
