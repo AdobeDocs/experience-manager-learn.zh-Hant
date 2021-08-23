@@ -26,7 +26,7 @@ ht-degree: 1%
 1. 使用SPA專案原型產生已啟用AEM編輯器的專案。
 2. 將入門專案部署至本機的AEM例項。
 
-## 您要建立的{#what-build}
+## 您將建置的 {#what-build}
 
 在本章中，將根據[AEM專案原型](https://github.com/adobe/aem-project-archetype)產生新的AEM專案。 AEM專案將以React SPA的簡單起點啟動。
 
@@ -229,6 +229,6 @@ ht-degree: 1%
 
 SPA很簡單。 在接下來的幾章中，將新增更多功能。
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 [整合SPA](integrate-spa.md)  — 了解SPA原始碼如何與AEM專案整合，並了解可用來快速開發SPA的工具。
