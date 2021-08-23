@@ -15,7 +15,7 @@ ht-degree: 3%
 ---
 
 
-# 擴展頁面屬性{#extending-page-properties-in-aem-sites}
+# 擴充頁面屬性 {#extending-page-properties-in-aem-sites}
 
 自訂頁面屬性的中繼資料欄位是任何Sites實作中的常見需求。 此影片詳細說明使用Sling Resource Merger功能最有效的方式。
 
