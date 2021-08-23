@@ -1,28 +1,23 @@
 ---
 title: 定義內容片段模型 — AEM無周邊功能快速入門 — GraphQL
 description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 了解如何在AEM中建立內容模型，並使用內容片段模型建立結構。 查看現有模型並建立新模型。 了解可用來定義結構的不同資料類型。
-sub-product: 資產
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
-feature: 內容片段、GraphQL API
+feature: 內容片段， GraphQL API
 topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1024'
 ht-degree: 1%
 
 ---
 
 
-# 定義內容片段模型{#content-fragment-models}
+# 定義內容片段模型 {#content-fragment-models}
 
 本章說明如何建立內容模型，並使用&#x200B;**內容片段模型**&#x200B;建立架構。 將審閱現有模型並建立新模型。 您也將了解可用來定義模型中結構的不同資料類型。
 
@@ -152,6 +147,6 @@ ht-degree: 1%
 
 恭喜，您剛建立了第一個內容片段模型！
 
-## 後續步驟{#next-steps}
+## 後續步驟 {#next-steps}
 
 在下一章[製作內容片段模型](author-content-fragments.md)中，您將根據內容片段模型建立和編輯新的內容片段。 您也會學習如何建立內容片段的變體。
