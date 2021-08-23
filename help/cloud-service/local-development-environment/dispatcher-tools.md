@@ -13,9 +13,9 @@ thumbnail: 30603.jpg
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1637'
 ht-degree: 2%
 
 ---
@@ -202,7 +202,7 @@ Dispatcher工具提供一組Apache HTTP Web伺服器和Dispatcher設定檔，可
 + [存取Docker容器中的記錄](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
 + [將Docker日誌複製到本地檔案系統](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
 
-## 何時更新Dispatcher工具{#dispatcher-tools-version}
+## 更新Dispatcher工具的時機{#dispatcher-tools-version}
 
 Dispatcher工具版本的遞增頻率比Experience Manager低，因此，Dispatcher工具在本機開發環境中需要的更新較少。
 
@@ -216,7 +216,7 @@ _請注意，Dispatcher工具版本本身將不符合Experience Manager版本。
 
 ## 疑難排解
 
-### docker_run結果為「等到host.docker.internal可用時」消息{#troubleshooting-host-docker-internal}
+### docker_run結果「等到host.docker.internal可用」消息{#troubleshooting-host-docker-internal}
 
 `host.docker.internal` 是提供給Docker包含的主機名，它解析到主機。根據docs.docker.com([macOS](https://docs.docker.com/docker-for-mac/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host), [Windows](https://docs.docker.com/docker-for-windows/networking/)):
 
@@ -293,4 +293,4 @@ AH00016: Configuration Failed
 + [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
 + [下載Docker](https://www.docker.com/)
 + [下載AEM參考網站(WKND)](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience ManagerDispatcher檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience ManagerDispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
