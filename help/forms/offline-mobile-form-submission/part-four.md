@@ -12,9 +12,9 @@ version: 6.4,6.5
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 若要讓此使用案例在您的本機系統上運作，請執行下列步驟：
 
 * 在連接埠4502上安裝AEM製作執行個體，在連接埠4503上安裝AEM發佈執行個體
-* [遵循在AEM Forms中與服務使用者一起開發中指定的指示](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html)。請務必建立服務使用者，並在您的AEM製作和發佈執行個體上部署套件組合。
+* [遵循在AEM Forms中與服務使用者一起開發中指定的指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html)。請務必建立服務使用者，並在您的AEM製作和發佈執行個體上部署套件組合。
 * [開啟osgi設 ](http://localhost:4503/system/console/configMgr)定。
 * 搜尋&#x200B;**Apache Sling Referrer Filter**。 確定已選取「允許空白」核取方塊。
 * [部署自訂AEMFormDocumentService套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。此套件組合需要部署在您的AEM Publish執行個體上。此套件包含從行動表單產生互動式PDF的程式碼。
