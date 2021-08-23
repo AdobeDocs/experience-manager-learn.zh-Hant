@@ -8,15 +8,15 @@ role: Admin
 level: Intermediate
 kt: 647, 917
 thumbnail: 22132.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '264'
 ht-degree: 3%
 
 ---
 
 
-# 在AEM Assets {#metadata-import-and-export}中使用中繼資料匯入和匯出
+# 在AEM Assets中使用中繼資料匯入和匯出 {#metadata-import-and-export}
 
 了解如何使用Adobe Experience Manager Assets的匯入和匯出中繼資料功能。 匯入和匯出功能可讓內容作者大量更新現有資產的中繼資料。
 
@@ -32,7 +32,7 @@ ht-degree: 3%
 >
 > 準備要匯入的CSV檔案時，使用「中繼資料匯出」功能，可更輕鬆地產生包含資產清單的CSV。 然後，您可以修改產生的CSV檔案，並使用「匯入」功能匯入。
 
-## 元資料CSV檔案格式{#metadata-file-format}
+## 中繼資料CSV檔案格式 {#metadata-file-format}
 
 ### 第一列
 
@@ -53,7 +53,7 @@ ht-degree: 3%
    * 錯誤：`Dc:Title {{String}}`
 
 * 屬性類型不區分大小寫
-* 支援所有有效的[JCR屬性類型](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
+* 支援所有有效的[JCR屬性類型](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
 
 * 多值屬性格式 — `<metadata property name> {{<property type : MULTI }}`
 
