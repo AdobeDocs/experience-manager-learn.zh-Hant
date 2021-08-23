@@ -9,10 +9,10 @@ thumbnail: 37958.jpg
 topic: 內容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 8%
+source-wordcount: '109'
+ht-degree: 0%
 
 ---
 
@@ -25,5 +25,5 @@ Dynamic Media Smart Crop for video使用Adobe Sensei來智慧化地追蹤視訊�
 
 >[!NOTE]
 >
->上述影片假設您的AEM服務正在Dynamic Media S7模式中執行。 [若需使用Dynamic Media設定AEM的相關指示，請參閱這裡。](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)
+>上述影片假設您的AEM服務正在Dynamic Media S7模式中執行。 [若需使用Dynamic Media設定AEM的相關指示，請參閱這裡。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)
 
