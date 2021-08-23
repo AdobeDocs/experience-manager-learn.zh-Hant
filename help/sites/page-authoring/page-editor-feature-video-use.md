@@ -14,9 +14,9 @@ thumbnail: 32011.jpg
 topic: 內容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '242'
 ht-degree: 4%
 
 ---
@@ -56,5 +56,5 @@ AEM網站的頁面編輯器是建立及編輯網頁內容的強大工具。 頁�
 
 ## 其他資源 {#additional-resources}
 
-* [編輯頁面內容檔案](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/authoring/editing-content.html)
-* [網站製作使用手冊](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/home.html)
+* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
+* [網站製作使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
