@@ -3,17 +3,13 @@ title: 在AEM中開發OAuth範圍
 description: Adobe Experience Manager的可擴充OAuth範圍允許從一般使用者授權的用戶端應用程式存取資源。 下圖說明AEM內容中的請求流程。
 version: 6.3, 6.4, 6.5
 feature: 使用者和群組
-topics: authentication, security
-activity: develop
-audience: developer
-doc-type: code
 topic: 開發
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
