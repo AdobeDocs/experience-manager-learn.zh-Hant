@@ -19,7 +19,7 @@ ht-degree: 2%
 ---
 
 
-# 製作內容和發佈變更{#author-content-publish}
+# 製作內容和發佈變更 {#author-content-publish}
 
 >[!CAUTION]
 >
@@ -37,7 +37,7 @@ ht-degree: 2%
 1. 了解如何更新網站的內容。
 1. 了解如何將變更發佈至上線網站。
 
-## 建立新頁面{#create-page}
+## 建立新頁面 {#create-page}
 
 網站通常會分割成頁面，以形成多頁體驗。 AEM以相同方式建構內容。 接下來，為網站建立新頁面。
 
@@ -60,7 +60,7 @@ ht-degree: 2%
 
 1. 在對話方塊快顯視窗中，按一下&#x200B;**開啟**&#x200B;以開啟新建立的頁面。
 
-## 編寫元件{#author-component}
+## 製作元件 {#author-component}
 
 AEM元件可視為網頁的小型模組化建置組塊。 將UI分割為邏輯區塊或元件，可讓管理更輕鬆。 要重新使用元件，元件必須是可配置的。 這可透過製作對話方塊完成。
 
@@ -96,7 +96,7 @@ AEM提供一組可供生產使用的[核心元件](https://experienceleague.adob
 
 您可以嘗試其他部分元件。 若需每個[核心元件的相關檔案，請前往此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。 若需[頁面製作的詳細影片系列，請前往此處](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html)。
 
-## 發佈更新{#publish-updates}
+## 發佈更新 {#publish-updates}
 
 AEM環境會分割為&#x200B;**Author Service**&#x200B;和&#x200B;**Publish Service**。 在本章中，我們已對&#x200B;**作者服務**&#x200B;上的網站進行數項修改。 為了讓網站訪客檢視所需變更，我們需將變更發佈至&#x200B;**發佈服務**。
 
@@ -171,6 +171,6 @@ AEM環境會分割為&#x200B;**Author Service**&#x200B;和&#x200B;**Publish Serv
 
 恭喜，您剛剛撰寫並發佈了AEM網站的變更！
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 了解如何建立和修改[頁面範本](./page-templates.md)。 了解頁面範本和頁面之間的關係。 了解如何設定頁面範本的原則，以提供精細的控管和內容的品牌一致性。  系統會根據Adobe XD的模型，建立結構良好的雜誌文章範本。
