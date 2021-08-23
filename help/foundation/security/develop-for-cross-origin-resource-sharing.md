@@ -2,18 +2,13 @@
 title: 使用AEM開發跨原始資源共用(CORS)
 description: 運用CORS以透過用戶端JavaScript從外部Web應用程式存取AEM內容的簡短範例。
 version: 6.3, 6,4, 6.5
-sub-product: 基礎，內容服務， sites
-topics: security, development, content-delivery
-activity: develop
-audience: developer
-doc-type: tutorial
-topic: 安全性
+topic: 安全、開發
 role: Developer
 level: Beginner
-feature: null
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+feature: 安全性
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -96,7 +91,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 />
 ```
 
-## Dispatcher設定{#dispatcher-configuration}
+## Dispatcher設定 {#dispatcher-configuration}
 
 若要允許快取內容上快取和提供CORS標頭，請在[/clientheaders configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)後新增至所有支援AEM Publish `dispatcher.any`檔案。
 
@@ -119,7 +114,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 在`/clientheaders`配置更新後，可能需要完全清除快取，以確保在下一個請求上正確快取標題。
 
-## 支援材料{#supporting-materials}
+## 支援材料 {#supporting-materials}
 
 * [AEM OSGi跨原始資源共用原則的設定工廠](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [適用於macOS的SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
