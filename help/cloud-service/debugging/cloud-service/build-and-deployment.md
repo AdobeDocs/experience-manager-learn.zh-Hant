@@ -12,9 +12,9 @@ thumbnail: kt-5424.jpg
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2540'
+source-wordcount: '2529'
 ht-degree: 0%
 
 ---
@@ -71,11 +71,11 @@ AdobeCloud Manager可協助程式碼建立和部署至AEM作為Cloud Service。 
 
 程式碼掃描會混合使用Java和AEM專用的最佳實務來執行靜態程式碼分析。
 
-如果程式碼中存在嚴重安全漏洞，程式碼掃描會導致建置失敗。 可以覆蓋較小的違規，但建議修正這些違規。 請注意，程式碼掃描不完善，可能導致[誤判](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/understand-test-results.html#dealing-with-false-positives)。
+如果程式碼中存在嚴重安全漏洞，程式碼掃描會導致建置失敗。 可以覆蓋較小的違規，但建議修正這些違規。 請注意，程式碼掃描不完善，可能導致[誤判](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives)。
 
 若要解決程式碼掃描問題，請透過&#x200B;**下載詳細資料**&#x200B;按鈕下載Cloud Manager提供的CSV格式報表，並檢閱任何項目。
 
-如需更多詳細資訊，請參閱AEM特定規則，請參閱Cloud Manager檔案的[自訂AEM特定程式碼掃描規則](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html)。
+如需更多詳細資訊，請參閱AEM特定規則，請參閱Cloud Manager檔案的[自訂AEM特定程式碼掃描規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html)。
 
 ## 建立影像
 
@@ -103,7 +103,7 @@ set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multip
 #### 原因2
 
 + __原因：__ AEM專案的錯誤包含相同的程式碼套件兩次，導致重複該套件中包含的任何OSGi設定。
-+ __解決方法：__ 檢閱所有專案中內嵌的所有pom.xml套件，並確定其設定 `filevault-package-maven-plugin` [](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) 已設 `<cloudManagerTarget>none</cloudManagerTarget>`為。
++ __解決方法：__ 檢閱所有專案中內嵌的所有pom.xml套件，並確定其設定 `filevault-package-maven-plugin` [](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) 已設 `<cloudManagerTarget>none</cloudManagerTarget>`為。
 
 ### 錯誤的重新指向指令碼
 
@@ -231,8 +231,8 @@ AEM as aCloud Service會在每個AEM版本中自動加入最新的核心元件�
 + __原因：__ AEM復寫服務使用者用來將內容套件部署至AEM Publish服務，無法在AEM  `/var` Publish上寫入。這會導致將內容套件部署至AEM Publish服務失敗。
 + __解決方法：__ 以下是解決此問題的方法，依優先順序列出：
    1. 如果不需要`/var`資源，請從作為應用程式一部分部署的內容包中刪除`/var`下的任何資源。
-   2. 如果需要`/var`資源，請使用[repoint](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)定義節點結構。 可透過OSGi執行模式，將重新指向指令碼鎖定在AEM製作、AEM發佈或兩者。
-   3. 如果`/var`資源僅需AEM作者，且無法使用[repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)合理建模，請將資源移至離散內容套件，而此套件僅由[embedding](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)安裝於AEM作者執行模式資料夾(`<target>/apps/example-packages/content/install.author</target>`)的`all`套件中。
+   2. 如果需要`/var`資源，請使用[repoint](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)定義節點結構。 可透過OSGi執行模式，將重新指向指令碼鎖定在AEM製作、AEM發佈或兩者。
+   3. 如果`/var`資源僅需AEM作者，且無法使用[repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)合理建模，請將資源移至離散內容套件，而此套件僅由[embedding](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)安裝於AEM作者執行模式資料夾(`<target>/apps/example-packages/content/install.author</target>`)的`all`套件中。
    4. 如本[AdobeKB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html)中所述，為`sling-distribution-importer`服務用戶提供適當的ACL。
 
 ### 建立Adobe支援案例
