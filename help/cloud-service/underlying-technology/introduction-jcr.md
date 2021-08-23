@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Java Content Repository(JCR){#introduction-jcr}簡介
+# Java Content Repository(JCR)簡介 {#introduction-jcr}
 
 介紹Adobe Experience Manager使用的Java Content Repository(JCR)。 JCR是AEM技術堆疊的基本層級，負責基礎內容的持續性、儲存、搜尋、存取控制等等！
 
