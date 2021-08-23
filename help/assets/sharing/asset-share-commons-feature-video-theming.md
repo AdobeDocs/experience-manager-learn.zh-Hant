@@ -13,7 +13,7 @@ ht-degree: 1%
 ---
 
 
-# 資產共用公域中的主題介紹{#asset-share-commons-theme}
+# 資產共用公域中的主題 {#asset-share-commons-theme}
 
 資產共用公域中主題的簡介。 影片會逐步說明如何使用自訂色彩配置建立新主題。
 
