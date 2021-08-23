@@ -1,23 +1,17 @@
 ---
 title: 搭配使用SPA編輯器和AEM Sites
-seo-title: 搭配AEM Sites使用SPA Editor架構
 description: AEM單頁應用程式編輯器架構可讓作者編輯單頁應用程式或SPA的內容。 使用React或Angular架構的開發人員會建立SPA，然後將SPA的區域對應至AEM元件，讓作者能使用熟悉的AEM Sites編輯工具。
-sub-product: 網站，內容服務
-feature: Spa Editor
-topics: authoring, single-page-applications
-audience: all
-doc-type: feature video
-activity: use
 version: 6.4, 6.5, cloud-service
-kt: 1047
-thumbnail: 22229.jpg
 topic: SPA
+feature: SPA Editor
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 1047
+thumbnail: 22229.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 8%
+source-wordcount: '277'
+ht-degree: 9%
 
 ---
 
@@ -44,5 +38,5 @@ WKND SPA實作僅支援AEM 6.4.8+、AEM 6.5.5+和AEM as aCloud Service。
 
 如需使用SPA Editor開發的詳細教學課程，請參閱：
 
-* [AEM SPA Editor and Angular 快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
-* [AEM SPA Editor and React 快速入門](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+* [AEM SPA Editor and Angular 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
+* [AEM SPA Editor and React 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
