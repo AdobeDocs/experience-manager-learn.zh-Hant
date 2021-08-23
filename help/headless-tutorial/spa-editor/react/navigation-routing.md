@@ -12,15 +12,15 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1623'
 ht-degree: 0%
 
 ---
 
 
-# 添加導航和路由{#navigation-routing}
+# 添加導航和路由 {#navigation-routing}
 
 了解如何使用SPA Editor SDK對應至AEM頁面，以支援SPA中的多個檢視。 動態導航是使用React Router和React Core Components實現的。
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## 您將建置的
 
-本章將新增導覽至AEM中的SPA。 導覽功能表將由AEM頁面階層驅動，且會使用[導覽核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
+本章將新增導覽至AEM中的SPA。 導覽功能表將由AEM頁面階層驅動，且會使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
 
 ![新增導覽](assets/navigation-routing/navigation-added.png)
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 查看設定[本地開發環境](overview.md#local-dev-environment)所需的工具和說明。 本章是[映射元件](map-components.md)章節的繼續，但是，您只需要部署至本機AEM例項的SPA啟用AEM專案，便能順利完成。
 
-## 將導航添加到模板{#add-navigation-template}
+## 將導覽新增至範本 {#add-navigation-template}
 
 1. 開啟瀏覽器並登入AEM, [http://localhost:4502/](http://localhost:4502/)。 應已部署起始代碼庫。
 1. 導覽至&#x200B;**SPA頁面範本**:[http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html)。
@@ -121,7 +121,7 @@ ht-degree: 0%
 
    請注意，在初始頁面載入後，後續導覽不會導致完整頁面重新整理，且當返回至先前造訪的頁面時，網路流量會最小化。
 
-## 階層頁面JSON模型{#hierarchy-page-json-model}
+## 階層頁面JSON模型 {#hierarchy-page-json-model}
 
 接下來，檢查可帶來SPA多檢視體驗的JSON模型。
 
@@ -208,7 +208,7 @@ ht-degree: 0%
 
 1. 直接導覽至：[http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html)。 另請注意，瀏覽器的返回按鈕可繼續運作。
 
-## Inspect React路由{#react-routing}
+## Inspect React Routing  {#react-routing}
 
 導航和路由採用[React Router](https://reactrouter.com/)實現。 React Router是React應用程式的導航元件集合。 [AEM React核心](https://github.com/adobe/aem-react-core-wcm-components-base) 元件使用React Router的功能來實 **** 施前述步驟中使用的Navigation元件。
 
