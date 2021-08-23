@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 使用可視化體驗撰寫器{#personalization-vec}進行個人化
+# 使用可視化體驗撰寫器進行個人化 {#personalization-vec}
 
 了解如何使用可視化體驗撰寫器(VEC)建立A/B測試Target活動。
 
