@@ -10,10 +10,10 @@ activity: use
 topic: 內容管理
 role: Admin
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 2%
+source-wordcount: '338'
+ht-degree: 0%
 
 ---
 
@@ -46,7 +46,7 @@ _影像錯誤報告。_
 
 - [Dynamic Media ClassicExperience League — 取得價值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
 - [Dynamic Media ClassicExperience League — 執行更多操作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
-- [Dynamic Media電子報封存](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
+- [Dynamic Media電子報封存](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [Dynamic Media電子報訂閱頁面](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
-- [Dynamic Media Classic檔案](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
+- [Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)
 - [多媒體部落格文章](https://theblog.adobe.com/tag/dynamic-media)
