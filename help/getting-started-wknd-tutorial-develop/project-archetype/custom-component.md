@@ -11,9 +11,9 @@ level: Beginner
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
-source-git-commit: 66d35a41d63d4c33f71a118e9471c5aa58dc48a7
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4106'
 ht-degree: 0%
 
 ---
@@ -381,7 +381,7 @@ Byline Sling模型將仰賴AEM提供的數個Java API。 這些API可透過`core
 
    只有叫用`classic`設定檔（即`mvn clean install -PautoInstallSinglePackage -Pclassic`）時，才會包含`uber-jar`。 同樣地，這是此專案專屬的。 在真實專案中，如果指定的AEM版本是6.5或6.4，則從AEM專案原型產生的`uber-jar`將是預設值。
 
-   [uber-jar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)包含AEM 6.x公開的所有公用Java API。版本會維護在位於專案`aem-guides-wknd/pom.xml`根目錄的Parent reactor pom中。
+   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)包含AEM 6.x公開的所有公用Java API。版本會維護在位於專案`aem-guides-wknd/pom.xml`根目錄的Parent reactor pom中。
 
 1. 查找`core.wcm.components.core`的依賴項：
 
