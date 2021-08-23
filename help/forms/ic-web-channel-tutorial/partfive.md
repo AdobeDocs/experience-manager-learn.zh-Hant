@@ -22,7 +22,7 @@ ht-degree: 1%
 ---
 
 
-# 建立文檔片段以保存收件者姓名和地址{#creating-document-fragments-to-hold-the-recipient-name-and-address}
+# 建立檔案片段以保留收件者名稱和地址 {#creating-document-fragments-to-hold-the-recipient-name-and-address}
 
 在本部分，我們將建立文檔片段以保存收件人名稱和地址。
 
