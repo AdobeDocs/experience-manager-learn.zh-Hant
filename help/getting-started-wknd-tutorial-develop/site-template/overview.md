@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# AEM Sites快速入門 — 網站範本{#site-template}
+# AEM Sites快速入門 — 網站範本 {#site-template}
 
 了解如何使用預先定義的網站範本，以低程式碼方法在Adobe Experience Manager中建立您的第一個網站。 使用現成可用的元件和範本，快速啟動網站並運作。 使用Adobe XD導向的主題工作流程，只透過CSS和JavaScript套用品牌專屬樣式和自訂。 建議用於新專案和開發人員。
 
@@ -31,6 +31,6 @@ ht-degree: 1%
 
 本教學課程中的步驟將在Adobe Experience Manager as aCloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 完成本教學課程時，建議您使用[沙箱方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)。
 
-## 後續步驟{#next-steps}
+## 後續步驟 {#next-steps}
 
 你在等什麼?!導覽至[建立網站](create-site.md)章節，了解如何使用網站範本產生新的Adobe Experience Manager專案，以啟動教學課程。
