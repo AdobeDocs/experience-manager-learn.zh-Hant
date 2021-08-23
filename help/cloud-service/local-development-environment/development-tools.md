@@ -12,9 +12,9 @@ thumbnail: 25907.jpg
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: 6b4b9d7039b7b1c60ed1a7e5ec4ed42250499cec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1428'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ Homebrew是適用於macOS、Windows和Linux的開放原始碼套件管理器。 
 
 ## 安裝Git
 
-[](https://git-scm.com/) 提供Experience Cloud Manager所使用的原始 [碼控制管理系統](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/source-code-repository.html)，因此是開發所需的。
+[](https://git-scm.com/) 提供Experience Cloud Manager所使用的原始 [碼控制管理系統](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html)，因此是開發所需的。
 
 + 使用Homebrew安裝Git
    1. 開啟終端機/命令提示字元
