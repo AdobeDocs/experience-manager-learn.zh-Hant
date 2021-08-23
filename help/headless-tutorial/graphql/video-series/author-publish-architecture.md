@@ -1,17 +1,16 @@
 ---
 title: 使用AEM GraphQL製作與發佈架構
 description: 了解使用AEM GraphQL API時，如何及何時運用AEM製作和發佈環境。
-sub-product: 資產
 version: cloud-service
 topic: 無頭式、內容管理
-feature: 內容片段、GraphQL API
+feature: 內容片段， GraphQL API
 role: Developer
 level: Beginner
 kt: 7873
 thumbnail: 333296.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '103'
 ht-degree: 0%
 
 ---
