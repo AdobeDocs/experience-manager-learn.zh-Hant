@@ -10,17 +10,17 @@ feature: 搜尋
 topic: 開發
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '899'
 ht-degree: 2%
 
 ---
 
 
-# 簡單搜尋實施指南{#simple-search-implementation-guide}
+# 簡單搜尋實作指南{#simple-search-implementation-guide}
 
-「簡單」搜尋實作是&#x200B;**AdobeSummit Lab AEM Search Demystified**&#x200B;中的資料。 本頁包含本實驗的資料。 有關實驗室的指導教程，請查看本頁的「演示」部分中的實驗室工作簿。
+「簡單」搜尋實作是&#x200B;**Adobe Summit實驗室AEM Search Demystified**&#x200B;中的資料。 本頁包含本實驗的資料。 有關實驗室的指導教程，請查看本頁的「演示」部分中的實驗室工作簿。
 
 ![搜尋架構概觀](assets/l4080/simple-search-application.png)
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 * [實驗室活頁簿](assets/l4080/l4080-lab-workbook.pdf)
 * [簡報](assets/l4080/l4080-presentation.pdf)
 
-## 書籤{#bookmarks-1}
+## 書籤 {#bookmarks-1}
 
 ### 工具 {#tools}
 
@@ -56,12 +56,12 @@ ht-degree: 2%
 
 ## 套件 {#packages}
 
-### 初始包{#initial-packages}
+### 初始包 {#initial-packages}
 
 * [標記](assets/l4080/summit-tags.zip)
 * [簡單搜索應用程式包](assets/l4080/simple.ui.apps-0.0.1-snapshot.zip)
 
-### 章節包{#chapter-packages}
+### 章節套件 {#chapter-packages}
 
 * [第1章解決方案](assets/l4080/l4080-chapter1.zip)
 * [第2章解決方案](assets/l4080/l4080-chapter2.zip)
@@ -72,15 +72,15 @@ ht-degree: 2%
 * [第6章解決方案](assets/l4080/l4080-chapter6.zip)
 * [第九章解決辦法](assets/l4080/l4080-chapter9.zip)
 
-## 參考材料{#reference-materials}
+## 參考材料 {#reference-materials}
 
 * [Github存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/master/simple-search-guide)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 * [Sling模型導出器](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
-* [QueryBuilder API](https://docs.adobe.com/docs/en/aem/6-2/develop/search/querybuilder-api.html)
+* [QueryBuilder API](https://experienceleague.adobe.com/docs/)
 * [AEM Chrome外掛程式](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode) ([檔案頁面](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
 
-## 更正和後續{#corrections-and-follow-up}
+## 更正和後續行動 {#corrections-and-follow-up}
 
 實驗室討論的更正和澄清以及與會者對後續問題的回答。
 
