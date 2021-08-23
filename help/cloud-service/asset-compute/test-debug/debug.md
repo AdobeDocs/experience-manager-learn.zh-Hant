@@ -93,7 +93,7 @@ _使用wskdebug對Asset compute工作程式進行偵錯的點進（無音訊）_
 1. 導覽回「VS程式碼」、`/actions/worker/index.js`，然後逐步執行程式碼
 1. 若要退出可除錯的開發工具，請在步驟6中執行`npx adobe-asset-compute devtool`命令的終端中點選`Ctrl-C`
 
-## 從Adobe I/O Runtime{#aio-app-logs}存取記錄
+## 從Adobe I/O Runtime存取記錄{#aio-app-logs}
 
 [AEM as aCloud Service會直接在Adobe I/O Runtime中叫用Asset compute背景工作，](../deploy/processing-profiles.md) 透過處理設定檔來運用背景工作。由於這些調用不涉及本地開發，因此無法使用本地工具(如Asset compute開發工具或wskdebug)調試它們的執行。 相反地，Adobe I/OCLI可用來從Adobe I/O Runtime中特定工作區中執行的工作器擷取記錄。
 
