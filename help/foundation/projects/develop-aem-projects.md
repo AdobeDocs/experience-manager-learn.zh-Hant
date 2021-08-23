@@ -10,9 +10,9 @@ doc-type: tutorial
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '4652'
+source-wordcount: '4585'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ AEM專案隨附數個[OOTB專案範本](https://helpx.adobe.com/experience-manag
                    - wizard = dialog used to start the workflow
 ```
 
-## 建立項目模板{#creating-project-template}
+## 建立專案範本 {#creating-project-template}
 
 由於我們將主要複製/配置節點，因此我們將使用CRXDE Lite。 在您的本機AEM例項中開啟[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)。
 
@@ -131,7 +131,7 @@ AEM專案隨附數個[OOTB專案範本](https://helpx.adobe.com/experience-manag
    1. 在名為&#x200B;**tasks**&#x200B;的authoring-project/gadgets下添加新的&#x200B;**nt:unstructured**&#x200B;節點。
    1. 為&#x200B;**cardWeight** = &quot;100&quot;、**jcr:title**=&quot;Tasks&quot;和&#x200B;**sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;的任務節點新增字串屬性。
 
-   現在，當建立新專案時，預設會顯示[工作方塊](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#Tasks)。
+   現在，當建立新專案時，預設會顯示[工作方塊](https://experienceleague.adobe.com/docs/#Tasks)。
 
    ```shell
    ../projects/templates/authoring-project
@@ -282,7 +282,7 @@ AEM專案隨附數個[OOTB專案範本](https://helpx.adobe.com/experience-manag
 
 雖然任務比參與者步驟具有一些優勢，但它們確實會帶來額外的開銷，在項目之外沒有這樣的用處。 此外，必須使用ecma指令碼對Task的所有動態行為進行編碼，這些指令碼有其自身的限制。
 
-## 使用案例要求範例{#goals-tutorial}
+## 使用案例需求範例 {#goals-tutorial}
 
 ![工作流程程式圖](./assets/develop-aem-projects/workflow-process-diagram.png)
 
@@ -623,21 +623,21 @@ task.setCurrentAssignee(projectApproverGrp);
    }
    ```
 
-## 建立「啟動工作流」嚮導{#start-workflow-wizard}
+## 建立「啟動工作流」嚮導 {#start-workflow-wizard}
 
 從專案內啟動工作流程時，您必須指定精靈以啟動工作流程。 預設嚮導：`/libs/cq/core/content/projects/workflowwizards/default_workflow`允許用戶輸入要運行的工作流的「工作流標題」、「啟動注釋」和「裝載路徑」。 下列也提供其他幾個範例：`/libs/cq/core/content/projects/workflowwizards`。
 
 建立自訂精靈的功能非常強大，因為您可以在工作流程開始之前收集重要資訊。 資料儲存為工作流元資料的一部分，工作流進程可讀取此內容並根據輸入的值動態更改行為。 我們將建立一個自定義嚮導，以根據啟動嚮導值動態分配工作流中的第一個任務。
 
-1. 在CRXDE-Lite中，我們將在`/apps/aem-guides/projects-tasks/projects`資料夾下建立一個名為「wizards」的子資料夾。 從以下位置複製預設嚮導：`/libs/cq/core/content/projects/workflowwizards/default_workflow`在新建立的嚮導資料夾下，將其更名為&#x200B;**content-approval-start**。 完整路徑現在應為：`/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`。
+1. 在CRXDE-Lite中，我們將在`/apps/aem-guides/projects-tasks/projects`資料夾下建立一個名為「wizards」的子資料夾。 從以下位置複製預設嚮導：`/libs/cq/core/content/projects/workflowwizards/default_workflow`在新建立的嚮導資料夾下，將其更名為&#x200B;**content-approval-start**。 完整路徑現在應該是：`/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`。
 
-   預設嚮導是兩列嚮導，第一列顯示選定的工作流模型的「標題」、「說明」和「縮圖」。 第二欄包含「工作流程標題」、「開始註解」和「裝載路徑」的欄位。 精靈是標準觸控式UI表單，可使用標準[Granite UI表單元件](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html)來填入欄位。
+   預設嚮導是兩列嚮導，第一列顯示選定的工作流模型的「標題」、「說明」和「縮圖」。 第二欄包含「工作流程標題」、「開始註解」和「裝載路徑」的欄位。 精靈是標準觸控式UI表單，可使用標準[Granite UI表單元件](https://experienceleague.adobe.com/docs/)來填入欄位。
 
    ![內容核准工作流程精靈](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
 1. 我們將在嚮導中添加一個附加欄位，該欄位將用於設定工作流中第一個任務的受託人(請參閱[建立工作流模型](#create-workflow-model):步驟5)。
 
-   在`../content-approval-start/jcr:content/items/column2/items`下面建立名為&#x200B;**&quot;assign&quot;**&#x200B;的`nt:unstructured`類型的新節點。 我們將使用「專案使用者選擇器」元件（以[Granite使用者選擇器元件](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/userpicker/index.html)為基礎）。 此表單欄位可讓您輕鬆將使用者和群組選取限制為僅限屬於目前專案的使用者。
+   在`../content-approval-start/jcr:content/items/column2/items`下面建立名為&#x200B;**&quot;assign&quot;**&#x200B;的`nt:unstructured`類型的新節點。 我們將使用「專案使用者選擇器」元件（以[Granite使用者選擇器元件](https://experienceleague.adobe.com/docs/)為基礎）。 此表單欄位可讓您輕鬆將使用者和群組選取限制為僅限屬於目前專案的使用者。
 
    以下是&#x200B;**assign**&#x200B;節點的XML表示：
 
@@ -657,7 +657,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. 我們還將添加一個優先順序選擇欄位，該欄位將確定工作流中第一個任務的優先順序(請參閱[建立工作流模型](#create-workflow-model):步驟5)。
 
-   在`/content-approval-start/jcr:content/items/column2/items`下面建立名為&#x200B;**priority**&#x200B;的`nt:unstructured`類型的新節點。 我們將使用[Granite UI選取元件](https://docs.adobe.com/docs/en/aem/6-2/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/select/index.html)來填入表單欄位。
+   在`/content-approval-start/jcr:content/items/column2/items`下面建立名為&#x200B;**priority**&#x200B;的`nt:unstructured`類型的新節點。 我們將使用[Granite UI選取元件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)來填入表單欄位。
 
    在&#x200B;**priority**&#x200B;節點下，我們將添加&#x200B;**nt:unstructured**&#x200B;的&#x200B;**items**&#x200B;節點。 在&#x200B;**items**&#x200B;節點下方添加3個節點，以填充「高」、「中」和「低」的選擇選項。 每個節點的類型為&#x200B;**nt:unstructured**，應該具有&#x200B;**text**&#x200B;和&#x200B;**value**&#x200B;屬性。 文字和值都應為相同值：
 
@@ -693,7 +693,7 @@ task.setCurrentAssignee(projectApproverGrp);
    </priority>
    ```
 
-1. 我們將允許工作流啟動器設定初始任務的到期日。 我們將使用[Granite UI DatePicker](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/datepicker/index.html)表單欄位來擷取此輸入。 我們也將新增含有[TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint)的隱藏欄位，以確保輸入儲存為JCR中的Date類型屬性。
+1. 我們將允許工作流啟動器設定初始任務的到期日。 我們將使用[Granite UI DatePicker](https://experienceleague.adobe.com/docs/)表單欄位來擷取此輸入。 我們也將新增含有[TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint)的隱藏欄位，以確保輸入儲存為JCR中的Date類型屬性。
 
    添加兩個&#x200B;**nt:unstructured**&#x200B;節點，其屬性如下所示：
 
@@ -717,7 +717,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. 您可以在[此處](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/projects-tasks-guide/ui.apps/src/main/content/jcr_root/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start/.content.xml)查看啟動嚮導對話框的完整代碼。
 
-## 連接工作流和項目模板{#connecting-workflow-project}
+## 連接工作流和項目模板 {#connecting-workflow-project}
 
 我們最不需要做的就是確保可從其中一個專案中啟動工作流程模型。 為此，我們需要重新訪問在此系列第1部分中建立的項目模板。
 
