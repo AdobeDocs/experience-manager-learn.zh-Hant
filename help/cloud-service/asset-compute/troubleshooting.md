@@ -14,7 +14,7 @@ role: Developer
 level: Intermediate, Experienced
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1244'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## 開發{#develop}
 
-### 傳回部分繪製/損壞的轉譯{#rendition-returned-partially-drawn-or-corrupt}
+### 傳回的轉譯部分繪製/損毀{#rendition-returned-partially-drawn-or-corrupt}
 
 + __錯誤__:轉譯會完全呈現（當影像時）或損毀且無法開啟。
 
@@ -37,28 +37,28 @@ ht-degree: 0%
 
 ## 開發工具{#development-tool}
 
-### asset compute專案{#missing-console-json}中缺少Console.json檔案
+### asset compute專案中缺少Console.json檔案{#missing-console-json}
 
-+ __錯誤：__ 錯誤：驗證時缺少必需檔案(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY)（在async setupAssetCompute中）(.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __錯誤：__ 錯誤：驗證時缺少必需檔案(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.:XX:jsYY)(非同步設定AssetCompute(.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.:XX:jsYY)
 + __原因：__  `console.json` 根目錄中缺少檔案
 + __解決方法：__ 下載新 `console.json` 的Adobe I/O專案
    1. 在console.adobe.io中，開啟Asset compute專案設定要使用的Adobe I/O專案
    1. 點選右上角的&#x200B;__下載__&#x200B;按鈕
    1. 使用檔案名`console.json`將下載的檔案儲存至Asset compute專案的根目錄
 
-### manifest.yml{#incorrect-yaml-indentation}中的YAML縮排不正確
+### manifest.yml中的YAML縮排不正確{#incorrect-yaml-indentation}
 
 + __錯誤：__ YAMLException:在行X、列Y處的映射項縮排錯誤：(通過從命令中取 `aio app run` 消)
 + __原因：__ Yaml檔案是白間隔的，可能是縮排不正確。
 + __解決方法：__ 檢閱您的 `manifest.yml` ，並確保所有縮排正確無誤。
 
-### memorySize限制設定為過低{#memorysize-limit-is-set-too-low}
+### memorySize限制設定得太低{#memorysize-limit-is-set-too-low}
 
 + __錯誤：__  本地開發伺服器OpenWhisk錯誤：PUThttps://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true返回HTTP 400(Bad Request)—> &quot;請求內容格式不正確：requirement失敗：記憶體低於允許的閾值64 MB 134217728 B」
 + __原因：__ 中 `memorySize` 的工作器限制設定在允 `manifest.yml` 許的最小閾值以下，如錯誤消息所報告的，以位元組為單位。
 + __解決方__  法：檢 `memorySize` 閱中的 `manifest.yml` 限制，並確定這些限制都大於允許的最低臨界值。
 
-### 由於缺少private.key{#missing-private-key}，開發工具無法啟動
+### 由於缺少private.key，開發工具無法啟動{#missing-private-key}
 
 + __錯誤：__ 本地開發伺服器錯誤：驗證PrivateKeyFile時缺少必需檔案…….（通過`aio app run`命令的標準輸出）
 + __原因：__ 檔 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 案 `.env` 中的值未指向 `private.key` 或 `private.key` 當前用戶無法讀取。
@@ -88,7 +88,7 @@ asset compute開發工具可能會進入其提取過時資料的狀態，在&#x2
 
 ## 測試{#test}
 
-### 測試執行期間未生成任何格式副本{#test-no-rendition-generated}
+### 測試執行期間未產生任何轉譯{#test-no-rendition-generated}
 
 + __錯誤：__ 失敗：未產生任何轉譯。
 + __原因：__ 工作程式由於意外錯誤（如JavaScript語法錯誤）而無法產生轉譯。
@@ -96,7 +96,7 @@ asset compute開發工具可能會進入其提取過時資料的狀態，在&#x2
 
    ![疑難排解 — 未產生轉譯](./assets/troubleshooting/test__no-rendition-generated.png)
 
-### 測試生成錯誤的格式副本，導致測試失敗{#tests-generates-incorrect-rendition}
+### 測試會產生錯誤的轉譯，導致測試失敗{#tests-generates-incorrect-rendition}
 
 + __錯誤：__ 失敗：格式副本&#39;rendition.xxx&#39;未如預期。
 + __原因：__ 工作器輸出的格式副本與測試案 `rendition.<extension>` 例中提供的不同。
@@ -107,7 +107,7 @@ asset compute開發工具可能會進入其提取過時資料的狀態，在&#x2
 
 ## 偵錯
 
-### 調試器未附加{#debugger-does-not-attach}
+### 除錯程式未附加{#debugger-does-not-attach}
 
 + __錯誤__:處理啟動時出錯：錯誤：無法在……連接到調試目標
 + __原因__:本地系統上未運行Docker Desktop。檢閱VS程式碼偵錯主控台（檢視>除錯主控台），確認回報此錯誤，以確認此情況。
@@ -117,23 +117,23 @@ asset compute開發工具可能會進入其提取過時資料的狀態，在&#x2
 
 + __錯誤__:從可除錯的開發工具執行Asset compute背景工作時，VS程式碼不會在中斷點暫停。
 
-#### 未附加VS代碼調試器{#vs-code-debugger-not-attached}
+#### VS程式碼除錯程式未附加{#vs-code-debugger-not-attached}
 
 + __原因：__  VS程式碼偵錯工具已停止/中斷連線。
 + __解決方法：__ 重新啟動VS Code Debugger，並透過觀看VS Code Debug Output主控台（檢視>除錯主控台）來確認其已附加
 
-#### 工作程式開始執行後附加的VS代碼調試器{#vs-code-debugger-attached-after-worker-execution-began}
+#### 工作程式開始執行後附加的VS程式碼偵錯器{#vs-code-debugger-attached-after-worker-execution-began}
 
 + __原因：__ 點選「執行中開發工具」前未附加VS程 ____ 式碼偵錯工具。
 + __解決方法：__ 檢閱VS Code的Debug Console（檢視>除錯主控台），然後從開發工具重新執行Asset compute背景工作，以確認除錯工具已附加。
 
-### 調試{#worker-times-out-while-debugging}時工作器超時
+### 調試時工作器超時{#worker-times-out-while-debugging}
 
 + __錯誤__:Debug Console報表「動作將在 — XXX毫秒內逾時」，或 [Asset compute開發工具的](./develop/development-tool.md) 轉譯預覽無限期旋轉或
 + __原因__:調試期間超過manifest. [ymlis中](./develop/manifest.md) 定義的工作超時。
 + __解決方法__:在manifest.ymlor中暫時增加工作器的逾 [時，](./develop/manifest.md) 會加速除錯活動。
 
-### 無法終止調試器進程{#cannot-terminate-debugger-process}
+### 無法終止調試程式進程{#cannot-terminate-debugger-process}
 
 + __錯誤__: `Ctrl-C` 在命令列上不會終止除錯程式(`npx adobe-asset-compute devtool`)。
 + __原因__:1.3. `@adobe/aio-cli-plugin-asset-compute` x中發生錯誤，導致無 `Ctrl-C` 法辨識為終止命令。
@@ -147,7 +147,7 @@ asset compute開發工具可能會進入其提取過時資料的狀態，在&#x2
 
 ## 部署{#deploy}
 
-### AEM{#custom-rendition-missing-from-asset}中的資產遺失自訂轉譯
+### AEM中遺失資產的自訂轉譯{#custom-rendition-missing-from-asset}
 
 + __錯誤：__ 新資產和重新處理的資產處理成功，但缺少自訂轉譯
 
@@ -161,7 +161,7 @@ asset compute開發工具可能會進入其提取過時資料的狀態，在&#x2
 + __原因：__ 資產存在於套用自訂背景工作處理設定檔的資料夾下方，但該資料夾與資產之間已套用了不使用客戶背景工作的不同處理設定檔。
 + __解決方法：__ 合併或調解兩個處理設定檔，並移除中間處理設定檔
 
-### AEM{#asset-processing-fails}中的資產處理失敗
+### AEM中的資產處理失敗{#asset-processing-fails}
 
 + __錯誤：資__ 產處理失敗徽章顯示在資產上
 + __原因：__ 自訂背景工作執行中發生錯誤
