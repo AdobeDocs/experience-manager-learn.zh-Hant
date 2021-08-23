@@ -1,13 +1,13 @@
 ---
 title: 搭配使用Dynamic Media 3D與AEM Assets
 description: Dynamic Media Adobe Experience Manager 3D支援可讓您輕鬆自訂並大規模提供互動式3D支援體驗
-feature: 3D資產
 version: 6.5
-kt: 5349
 topic: 內容管理
+feature: 3D資產
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 5349
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
