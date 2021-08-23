@@ -19,7 +19,7 @@ ht-degree: 2%
 ---
 
 
-# AEM架構堆疊{#introduction-architecture}簡介
+# AEM架構堆疊簡介 {#introduction-architecture}
 
 導入[!DNL OSGi]、[!DNL JCR]、[!DNL Oak]和[!DNL Sling]技術，作為Adobe Experience Manager技術堆棧的一部分。
 
