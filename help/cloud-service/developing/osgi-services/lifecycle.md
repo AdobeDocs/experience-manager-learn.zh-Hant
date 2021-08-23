@@ -4,11 +4,12 @@ description: 了解OSGi元件生命週期，包括如何將OSGi服務系結至�
 role: Developer
 level: Beginner
 topic: 開發
+feature: OSGI
 kt: 8228
 thumbnail: 335475.jpeg
-source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '96'
 ht-degree: 4%
 
 ---
