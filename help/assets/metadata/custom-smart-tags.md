@@ -8,9 +8,9 @@ thumbnail: 22254.jpg
 topic: 內容管理
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '151'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/22254/?quality=12&learn=on)
 
-## 為AEM 6.x{#set-up}的影像設定自訂智慧標籤
+## 為AEM 6.x的影像設定自訂智慧標籤{#set-up}
 
 >[!NOTE]
 > 影像的自訂智慧標籤會自動布建給AEM作為Cloud Service。
@@ -36,6 +36,6 @@ ht-degree: 2%
 
 ## 其他資源
 
-* AEM 6.4需要[最新Service Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)。
+* AEM 6.4需要[最新Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)。
 
 
