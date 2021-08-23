@@ -11,9 +11,9 @@ doc-type: article
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2025'
+source-wordcount: '2029'
 ht-degree: 2%
 
 ---
@@ -100,7 +100,7 @@ AEM支援多種查詢語言。 3種主要語言為[JCR-SQL2](https://docs.jboss.
 * [OOTB預測](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) 值支援常見查詢需求
 
 * 可擴充的API，允許開發自訂[查詢述詞](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)
-* JCR-SQL2和XPath可以直接通過[[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)和[JCR APIs](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)執行，分別返回結果a [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)或[JCR節點](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)。
+* JCR-SQL2和XPath可以直接通過[[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)和[JCR APIs](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html)執行，分別返回結果a [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)或[JCR節點](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)。
 
 >[!CAUTION]
 >
@@ -137,9 +137,9 @@ AEM支援多種查詢語言。 3種主要語言為[JCR-SQL2](https://docs.jboss.
 
 ## JCR API
 
-* **[JCR 2.0 JavaDocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
+* **[JCR 2.0 JavaDocs](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-[JCR(Java Content Repository)2.0 API](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)是JCR實作的規格(在AEM的案例中為[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))的一部分。 所有JCR實作都必須符合併實作這些API，因此是與AEM內容互動的最低層級API。
+[JCR(Java Content Repository)2.0 API](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)是JCR實作的規格(在AEM的案例中為[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/))的一部分。 所有JCR實作都必須符合併實作這些API，因此是與AEM內容互動的最低層級API。
 
 JCR本身是分層/樹型NoSQL資料儲存AEM用作其內容存放庫。 JCR提供大量支援的API，從內容CRUD到查詢內容。 儘管有這種健全的API，但相較於較高層級的AEM和[!DNL Sling]抽象化，仍很少有這類API更受青睞。
 
@@ -202,11 +202,11 @@ OSGi定義了所有OSGi容器必須實施和遵循的規範。 AEM OSGi實作、
 
 * AEM QueryBuilder不支援某些查詢函式，例如[sebclidations](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions)、拼字檢查和索引提示等較不常見的函式。 要使用這些函式進行查詢，建議使用JCR-SQL2。
 
-### [!DNL Sling] Servlet註冊  {#sling-servlet-registration}
+### [!DNL Sling] Servlet註冊 {#sling-servlet-registration}
 
 * [!DNL Sling] servlet註冊，首選 [OSGi DS 1.2注釋，帶@](https://sling.apache.org/documentation/the-sling-engine/servlets.html) SlingServletResourceTypesover  `@SlingServlet`
 
-### [!DNL Sling] 篩選註冊  {#sling-filter-registration}
+### [!DNL Sling] 篩選註冊 {#sling-filter-registration}
 
 * [!DNL Sling] 篩選器註冊，偏 [好使用帶@SlingServletFilterover的OSGi DS 1.2](https://sling.apache.org/documentation/the-sling-engine/filters.html) 注釋  `@SlingFilter`
 
@@ -297,7 +297,7 @@ Page page = pageManager.getContainingPage(resource);
 Page page2 = pageManager.getContainingPage("/content/path/to/page/jcr:content/or/component");
 ```
 
-#### 替代方法{#alternative-approach-1}
+#### 替代方法 {#alternative-approach-1}
 
 將資源調整為頁面需要資源本身為`cq:Page`節點。
 
@@ -325,7 +325,7 @@ String title = asset.getMetadataValue("dc:title");
 Calendar lastModified = (Calendar) asset.getMetadata("cq:lastModified");
 ```
 
-### 讀取[!DNL Sling] [!DNL Resource]屬性{#read-sling-resource-properties}
+### 讀取[!DNL Sling] [!DNL Resource]屬性 {#read-sling-resource-properties}
 
 當屬性儲存在AEM API（頁面、資產）無法直接存取的位置（屬性或相對資源）中時，可使用[!DNL Sling]資源和值圖來取得資料。
 
