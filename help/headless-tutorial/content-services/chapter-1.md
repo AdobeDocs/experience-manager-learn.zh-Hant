@@ -28,7 +28,7 @@ ht-degree: 0%
 * **AEM** Authon埠 **4502**
 * **AEM** Publishon **埠4503**
 
-## WKND移動應用程式包{#wknd-mobile-application-packages}
+## WKND行動應用程式套件{#wknd-mobile-application-packages}
 
 使用[!DNL AEM Package Manager]在&#x200B;**** AEM製作和AEM發佈上安裝下列AEM內容套件。
 
