@@ -5,9 +5,9 @@ feature: 內容片段、API
 topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ public class Image {
 若要深入了解AEM Content Services和AEM as a Headless CMS，請造訪Adobe的其他檔案和啟用資料：
 
 * [使用內容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [AEM WCM核心元件使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
+* [AEM WCM核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
 * [AEM WCM核心元件程式庫](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCM核心元件GitHub專案](https://github.com/adobe/aem-core-wcm-components)
 * [AEM WCM核心元件 — 詢問專家](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
