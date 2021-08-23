@@ -22,7 +22,7 @@ ht-degree: 1%
 ---
 
 
-# 提交至感謝頁{#submitting-to-thank-you-page}
+# 提交至感謝頁面 {#submitting-to-thank-you-page}
 
 提交至REST端點選項會將表單中填入的資料傳遞至已設定的確認頁面，作為HTTPGET請求的一部分。 您可以新增要請求的欄位名稱。 請求的格式為：
 
