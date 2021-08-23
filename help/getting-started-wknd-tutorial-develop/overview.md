@@ -68,6 +68,6 @@ WKND參考網站中的許多影像來自[Adobe Stock](https://stock.adobe.com/)�
 
 透過Adobe Stock，您可以存取超過1.4億個高品質且免版稅的影像，包括像片、圖形、視訊和範本，快速啟動您的創意專案。
 
-## 後續步驟{#next-steps}
+## 後續步驟 {#next-steps}
 
 你在等什麼?!了解如何使用AEM專案原型](./project-archetype/overview.md)或[使用網站範本](./site-template/create-site.md)建立網站，[產生新的Adobe Experience Manager專案。
