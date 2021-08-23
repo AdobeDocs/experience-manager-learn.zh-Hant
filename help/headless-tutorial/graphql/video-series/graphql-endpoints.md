@@ -1,17 +1,16 @@
 ---
 title: GraphQL端點
 description: '了解如何啟用、執行查詢，以及發佈和保護GraphQL端點。 '
-sub-product: 資產
 version: cloud-service
 topic: 無頭式、內容管理
-feature: 內容片段、GraphQL API
+feature: 內容片段， GraphQL API
 role: Developer
 level: Beginner
 kt: 7875
 thumbnail: 333339.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '76'
+source-wordcount: '75'
 ht-degree: 0%
 
 ---
