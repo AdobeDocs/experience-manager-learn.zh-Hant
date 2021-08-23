@@ -11,15 +11,15 @@ thumbnail: 41247.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '107'
 ht-degree: 2%
 
 ---
 
 
-# 將Target擴充功能新增至Launch屬性{#adobe-target-extension}
+# 將Target擴充功能新增至Launch屬性 {#adobe-target-extension}
 
 若要繼續觀看此影片，您必須已擁有[與AEM](../experience-platform-launch/overview.md)整合的Experience Platform Launch。
 
@@ -35,4 +35,4 @@ ht-degree: 2%
 
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [Adobe Experience Platform Debugger簡介](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
++ [Adobe Experience Platform Debugger簡介](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
