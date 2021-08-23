@@ -18,11 +18,11 @@ ht-degree: 1%
 ---
 
 
-# 針對頁面差異{#developing-for-page-difference}開發
+# 針對頁面差異開發 {#developing-for-page-difference}
 
 此影片說明如何為AEM Sites的「頁面差異」功能提供自訂樣式。
 
-## 自訂頁面差異樣式{#customizing-page-difference-styles}
+## 自訂頁面差異樣式 {#customizing-page-difference-styles}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18871/?quality=9&learn=on)
 
@@ -103,7 +103,7 @@ body {
 }
 ```
 
-### 透過頁面元件{#include-the-authoring-clientlib-css-via-the-page-component}包含Authoring clientlib CSS
+### 透過頁面元件包含Authoring clientlib CSS {#include-the-authoring-clientlib-css-via-the-page-component}
 
 將製作clientlibs類別直接加入專案基礎頁面`/apps/my-project/components/structure/page/customheaderlibs.html`的`</head>`標籤前，以確保載入樣式。
 
