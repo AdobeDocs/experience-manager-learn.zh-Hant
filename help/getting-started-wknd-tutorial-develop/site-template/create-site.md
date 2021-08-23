@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# 建立網站{#create-site}
+# 建立網站 {#create-site}
 
 >[!CAUTION]
 >
@@ -137,6 +137,6 @@ ht-degree: 0%
 
 恭喜，您剛建立了第一個AEM網站！
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 使用AEMAdobe Experience Manager中的頁面編輯器，更新[製作內容和發佈](author-content-publish.md)章節中網站的內容。 了解如何設定原子元件以更新內容。 了解AEM製作和發佈環境之間的差異，並了解如何將更新發佈至即時網站。
