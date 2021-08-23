@@ -87,7 +87,7 @@ packages:
 
 `limits`和`require-adobe-auth`是按工作人員分別配置的。 在此工作器中，當代碼檢查（可能）大型二進位影像資料時，將分配記憶體的`512 MB`。 其他`limits`將被移除以使用預設值。
 
-## 開發元資料工作器{#metadata-worker}
+## 開發中繼資料背景工作{#metadata-worker}
 
 在Asset compute專案中，為新工作人員](#manifest)，在`/actions/metadata-colors/index.js`的[定義的manifest.yml路徑，建立新的中繼資料背景工作JavaScript檔案
 
@@ -180,7 +180,7 @@ function getColorName(colorsFamily, color) {
 }
 ```
 
-## 在本地運行元資料工作器{#development-tool}
+## 在本機執行中繼資料背景工作{#development-tool}
 
 工作程式碼完成後，即可使用本機Asset compute開發工具執行。
 
@@ -282,7 +282,7 @@ $ aio app deploy
 1. 點選右上角的&#x200B;__儲存__
 1. 將處理設定檔套用至AEM Assets資料夾（如果尚未這麼做的話）
 
-### 更新元資料結構{#metadata-schema}
+### 更新中繼資料結構{#metadata-schema}
 
 要查看顏色元資料，請將影像元資料結構上的兩個新欄位映射到工作人員填充的新元資料資料屬性。
 
