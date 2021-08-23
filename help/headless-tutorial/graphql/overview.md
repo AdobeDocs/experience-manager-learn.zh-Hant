@@ -1,13 +1,13 @@
 ---
 title: AEM無周邊功能快速入門 — GraphQL
 description: 概述AEM GraphQL API和功能。
-feature: 內容片段、API
+feature: 內容片段、GraphQL API、API
 topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '252'
 ht-degree: 1%
 
 ---
