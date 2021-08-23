@@ -64,11 +64,11 @@ Apache Sling提供Jackson JSON匯出工具，涵蓋將Sling模型匯出為JSON�
 
 * [[!DNL Jackson Exporter] 附註](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)
 
-## 查看代碼{#view-the-code}
+## 檢視程式碼 {#view-the-code}
 
 [SampleSlingModelExporter.java](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleSlingModelExporter.java)
 
-## 支援材料{#supporting-materials}
+## 支援材料 {#supporting-materials}
 
 * [[!DNL Jackson Mapper] 功能Javadoc](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
 * [[!DNL Jackson Serialization] 功能Javadoc](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
