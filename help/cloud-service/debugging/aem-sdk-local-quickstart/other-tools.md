@@ -11,10 +11,10 @@ kt: 5251
 topic: 開發
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: 5fcc7eec120debf1a8ac08716154599467e66759
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 4%
+source-wordcount: '220'
+ht-degree: 5%
 
 ---
 
@@ -49,7 +49,7 @@ CRXDE Lite位於：
 
 ![QueryBuilder除錯程式](./assets/other-tools/query-debugger.png)
 
-QueryBuilder除錯工具是網頁型工具，可協助您使用AEM [QueryBuilder](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)語法來除錯及了解搜尋查詢。
+QueryBuilder除錯工具是網頁型工具，可協助您使用AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)語法來除錯及了解搜尋查詢。
 
 QueryBuilder Debugger位於：
 
