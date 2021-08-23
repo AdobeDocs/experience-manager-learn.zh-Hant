@@ -10,9 +10,9 @@ version: 6.4, 6.5
 topic: 個性化
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '427'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ContextHub是儲存、操控和呈現內容資料的架構。 ContextHub Javascr
 
 將ContextHub新增至您的頁面以啟用ContextHub功能並連結至ContextHub JavaScript程式庫。 ContextHub JavaScript API可讓您存取ContextHub管理的內容資料。
 
-## 將ContextHub新增至頁面元件{#adding-contexthub-to-a-page-component}
+## 將ContextHub新增至頁面元件 {#adding-contexthub-to-a-page-component}
 
 若要啟用ContextHub功能並連結至ContextHub JavaScript程式庫，請在網頁的`<head>`區段中加入`contexthub`元件。 頁面元件的HTL程式碼類似下列範例：
 
@@ -40,15 +40,15 @@ ContextHub是儲存、操控和呈現內容資料的架構。 ContextHub Javascr
 */-->
 ```
 
-## 網站設定和ContextHub區段{#site-configuration-and-contexthub-segments}
+## 網站設定和ContextHub區段 {#site-configuration-and-contexthub-segments}
 
-ContextHub包含區段引擎，可管理區段並判斷要針對目前內容解析哪些區段。 已定義數個區段。 您可以使用Javascript API來[判斷已解析的區段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)。 在[[!UICONTROL Configuration Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)下啟用您網站的ContextHub區段。
+ContextHub包含區段引擎，可管理區段並判斷要針對目前內容解析哪些區段。 已定義數個區段。 您可以使用Javascript API來[判斷已解析的區段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)。 在[[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)下啟用您網站的ContextHub區段。
 
-## 建立區段{#create-segments}
+## 建立區段 {#create-segments}
 
 建立AEM區段，作為茶匙的規則。 也就是說，它們會定義宣傳預告內的內容何時出現在網頁上。 接著，內容便可根據訪客的需求和興趣來明確鎖定目標，具體取決於其相符的區段。
 
-## 將雲配置、段路徑和ContextHub路徑分配到您的站點{#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
+## 指派雲端設定、區段路徑和ContextHub路徑至您的網站 {#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
 
 將雲端設定路徑、細分路徑和ContextHub路徑指派至您的網站根節點，以便您為對象建立個人化體驗。 使用ContextHub，您可以控制內容資料並測試您解析的區段。
 
