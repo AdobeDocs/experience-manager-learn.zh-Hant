@@ -22,7 +22,7 @@ ht-degree: 1%
 ---
 
 
-# 建立Web通道文檔模板AEM Forms {#creating-web-channel-document-template-aem-forms}
+# 建立Web渠道文檔模板AEM Forms {#creating-web-channel-document-template-aem-forms}
 
 在本部分，我們將為Web渠道文檔建立模板。
 在AEM Forms 6.4中建立Web頻道檔案範本
