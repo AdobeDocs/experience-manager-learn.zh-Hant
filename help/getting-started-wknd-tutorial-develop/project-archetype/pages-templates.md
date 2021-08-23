@@ -12,15 +12,15 @@ level: Beginner
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3106'
+source-wordcount: '3100'
 ht-degree: 0%
 
 ---
 
 
-# 頁面和範本{#pages-and-template}
+# 頁面和範本 {#pages-and-template}
 
 本章將探討基本頁面元件與可編輯範本之間的關係。 我們會根據[AdobeXD](https://www.adobe.com/products/xd.html)中的某些模型，建立未設定樣式的文章範本。 在建立範本的過程中，將介紹可編輯模板的核心元件和高級策略配置。
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 1. 了解可編輯範本的詳細資訊，以及如何使用原則來強制精細控制頁面內容。
 1. 了解範本和頁面的連結方式
 
-## 您要建立的{#what-you-will-build}
+## 您將建置的 {#what-you-will-build}
 
 在本教學課程的本節中，您將建立新的「文章頁面範本」，以用來建立新的文章頁面，並與通用結構對齊。 「文章頁面範本」將以AdobeXD中製作的設計和UI套件為基礎。 本章僅側重於構建模板的結構或骨架。 不會實作樣式，但範本和頁面將可運作。
 
@@ -157,9 +157,9 @@ ht-degree: 0%
 
    ![文章頁面範本縮圖](assets/pages-templates/article-page-template-thumbnail.png)
 
-## 使用體驗片段{#experience-fragments}更新頁首和頁尾
+## 使用體驗片段更新頁首與頁尾 {#experience-fragments}
 
-建立全域內容（例如頁首或頁尾）時，常見的作法是使用[體驗片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 體驗片段，可讓使用者結合多個元件，以建立單一、可參考的元件。 體驗片段的優點是支援多網站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)。
+建立全域內容（例如頁首或頁尾）時，常見的作法是使用[體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 體驗片段，可讓使用者結合多個元件，以建立單一、可參考的元件。 體驗片段的優點是支援多網站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)。
 
 AEM專案原型會產生頁首和頁尾。 接下來，更新體驗片段以符合模型。 請依照以下影片中的步驟操作：
 
@@ -233,7 +233,7 @@ AEM專案原型會產生頁首和頁尾。 接下來，更新體驗片段以符�
    * 將&#x200B;**上層頁面**&#x200B;設為`/content/wknd/us/en/magazine`。
    * 在「**項目設定**」下，檢查「**連結項目**」並檢查「**顯示日期**」。
 
-## Inspect節點結構{#node-structure}
+## Inspect節點結構 {#node-structure}
 
 此時，文章頁面的樣式明顯不同。 但基本結構已經到位。 接下來，檢查文章頁面的節點結構，以便更好地了解範本、頁面和元件的角色。
 
@@ -261,7 +261,7 @@ AEM專案原型會產生頁首和頁尾。 接下來，更新體驗片段以符�
 
    請注意，頁面元件下方只有2個HTL指令碼，分別為`customfooterlibs.html`和`customheaderlibs.html`。 *那麼，此元件如何呈現頁面？*
 
-   `sling:resourceSuperType`屬性指向`core/wcm/components/page/v2/page`。 此屬性可讓WKND的頁面元件繼承核心元件頁面元件的&#x200B;**all**&#x200B;功能。 這是[代理元件模式](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)的第一個示例。 如需詳細資訊，請參閱[此處。](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html)。
+   `sling:resourceSuperType`屬性指向`core/wcm/components/page/v2/page`。 此屬性可讓WKND的頁面元件繼承核心元件頁面元件的&#x200B;**all**&#x200B;功能。 這是[代理元件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)的第一個示例。 如需詳細資訊，請參閱[此處。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)。
 
 1. Inspect WKND元件中的另一個元件（`Breadcrumb`元件）位於：`/apps/wknd/components/breadcrumb`。 請注意，可以找到相同的`sling:resourceSuperType`屬性，但這次它指向`core/wcm/components/breadcrumb/v2/breadcrumb`。 這是使用Proxy元件模式來包含核心元件的另一個範例。 事實上，WKND程式碼基底中的所有元件都是AEM核心元件的代理（我們著名的HelloWorld元件除外）。 在&#x200B;*編寫自訂程式碼之前，最佳作法是盡量*&#x200B;重複使用核心元件的功能。
 
@@ -315,7 +315,7 @@ AEM專案原型會產生頁首和頁尾。 接下來，更新體驗片段以符�
 
 1. Inspect是另一個核心元件，例如位於`/libs/core/wcm/components/breadcrumb/v2/breadcrumb`的階層連結。 檢視`breadcrumb.html`指令碼，了解如何最終產生階層連結元件的標籤。
 
-## 將配置保存到原始碼控制項{#configuration-persistence}
+## 將配置保存到原始碼控制 {#configuration-persistence}
 
 在許多情況下，尤其是在AEM專案開始時，最好將設定（例如範本和相關內容原則）保留到原始碼控制。 這可確保所有開發人員針對相同的內容和設定組合工作，並可確保環境之間的額外一致性。 一旦項目達到一定的成熟程度，管理模板的做法就可以交給特定的一組電源用戶。
 
@@ -364,7 +364,7 @@ AEM專案原型會產生頁首和頁尾。 接下來，更新體驗片段以符�
 
 恭喜，您剛使用Adobe Experience Manager Sites建立新範本和頁面。
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 此時，文章頁面的樣式明顯不同。 請依照[用戶端程式庫和前端工作流程](client-side-libraries.md)教學課程，了解包含CSS和Javascript的最佳實務，以將全域樣式套用至網站並整合專用的前端組建。
 
