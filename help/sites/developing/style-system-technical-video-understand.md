@@ -28,7 +28,7 @@ ht-degree: 2%
 >
 >視訊假設We.Retail Title元件已更新，而繼承自[核心元件v2.0.0+](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases)。
 
-## 了解如何編寫樣式系統{#understanding-how-to-code-for-the-style-system}的代碼
+## 了解如何編寫樣式系統的代碼 {#understanding-how-to-code-for-the-style-system}
 
 >[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=9&learn=on)
 
@@ -151,9 +151,9 @@ jQuery(function ($) {
 });
 ```
 
-## 開發最佳實務{#development-best-practices}
+## 開發最佳實務 {#development-best-practices}
 
-### HTML最佳實務{#html-best-practices}
+### HTML最佳作法 {#html-best-practices}
 
 * HTML（透過HTL產生）應盡可能具有結構語義；避免元素的不必要分組/巢狀。
 * HTML元素應可透過BEM樣式的CSS類別定址。
@@ -187,7 +187,7 @@ jQuery(function ($) {
 
       * 現代化的影像元件通常會使用JavaScript來選取並載入使用案例（檢視區）最適當的影像。
 
-### CSS最佳實務{#css-best-practices}
+### CSS最佳作法 {#css-best-practices}
 
 >[!NOTE]
 >
@@ -239,7 +239,7 @@ jQuery(function ($) {
 
 如果是巢狀元件，這些巢狀元件元素的CSS選取器深度將超過第3級選取器。 對巢狀元件重複相同的模式，但由父元件的`BLOCK`限定範圍。 換言之，在第3層啟動巢狀元件的`BLOCK`，而巢狀元件的`ELEMENT`將在第4選取器層級啟動。
 
-### JavaScript最佳實務{#javascript-best-practices}
+### JavaScript最佳實務 {#javascript-best-practices}
 
 本節中定義的最佳實務涉及「style-JavaScript」，或專門用於以風格而非功能目的操控元件的JavaScript。
 
@@ -254,7 +254,7 @@ jQuery(function ($) {
 * 直接透過HTL評估JavaScript與顯現DOM變更在HTML中的成本。
    * 當使用style-JavaScript的元件需要伺服器端修改時，請評估此時是否可以導入JavaScript操作，以及影響/影響元件的效能和支援性。
 
-#### 效能考量事項{#performance-considerations}
+#### 效能考量 {#performance-considerations}
 
 * Style-JavaScript應保持輕薄。
 * 為避免忽隱忽現和不必要的重繪，請先透過`BLOCK--MODIFIER BLOCK`隱藏元件，並在JavaScript中的所有DOM操作完成時顯示元件。
