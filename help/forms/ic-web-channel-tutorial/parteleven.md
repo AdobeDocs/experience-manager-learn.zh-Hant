@@ -34,7 +34,7 @@ ht-degree: 0%
 
 * 我們將添加2個餅圖，以表示賬戶持有人當前和模型投資組合。
 
-## 當前資產組合{#current-asset-mix}
+## 流動資產組合 {#current-asset-mix}
 
 * 點選右側的「CurrentAssetMix」面板，然後選取「+」圖示並插入文字元件。 將預設文字變更為「目前的資產組合」。
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 * ![currentassetmix](assets/currentassetmixchart.png)
 
-## 模型資產組合{#model-asset-mix}
+## 模型資產組合 {#model-asset-mix}
 
 * 點選右側的「RecommendedAssetMix」面板，然後選取「+」圖示並插入文字元件。 將預設文字變更為「模型資產組合」。
 
