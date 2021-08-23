@@ -13,15 +13,15 @@ thumbnail: 5311-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2390'
-ht-degree: 1%
+source-wordcount: '2384'
+ht-degree: 0%
 
 ---
 
 
-# 將SPA元件對應至AEM元件{#map-components}
+# 將SPA元件對應至AEM元件 {#map-components}
 
 了解如何使用AEM SPA Editor JS SDK將Angular元件對應至Adobe Experience Manager(AEM)元件。 元件對應可讓使用者在AEM SPA編輯器中對SPA元件進行動態更新，與傳統AEM製作類似。
 
@@ -77,7 +77,7 @@ ht-degree: 1%
 
 ## Inspect the Text Component
 
-[AEM專案原型](https://github.com/adobe/aem-project-archetype)提供對應至AEM [文字元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)的`Text`元件。 這是&#x200B;**content**&#x200B;元件的範例，其會從AEM轉譯&#x200B;*content*。
+[AEM專案原型](https://github.com/adobe/aem-project-archetype)提供對應至AEM [文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`元件。 這是&#x200B;**content**&#x200B;元件的範例，其會從AEM轉譯&#x200B;*content*。
 
 讓我們查看元件的運作方式。
 
@@ -201,7 +201,7 @@ ht-degree: 1%
 
 ## 建立影像元件
 
-接下來，建立映射到AEM [影像元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)的`Image`Angular元件。 `Image`元件是&#x200B;**content**&#x200B;元件的另一個示例。
+接下來，建立映射到AEM [影像元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)的`Image`Angular元件。 `Image`元件是&#x200B;**content**&#x200B;元件的另一個示例。
 
 ### Inspect JSON
 
@@ -437,7 +437,7 @@ AEM SPA編輯器SDK會自動支援&#x200B;**版面容器**。 如名稱所示，
 
    **版面容器**&#x200B;元件具有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，且由SPA編輯器使用`:type`屬性來識別，就像`Text`和`Image`元件一樣。
 
-   SPA編輯器提供使用[Layout Mode](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新調整元件大小的相同功能。
+   SPA編輯器提供使用[Layout Mode](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新調整元件大小的相同功能。
 
 3. 返回[http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)。 新增其他&#x200B;**Image**&#x200B;元件，並嘗試使用&#x200B;**Layout**&#x200B;選項重新調整元件大小：
 
@@ -463,7 +463,7 @@ AEM SPA編輯器SDK會自動支援&#x200B;**版面容器**。 如名稱所示，
 
 您一律可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution)上檢視完成的程式碼，或切換至分支`Angular/map-components-solution`在本機檢出程式碼。
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 [導覽與路由](navigation-routing.md)  — 使用SPA Editor SDK對應至AEM頁面，可了解SPA中的多個檢視如何受到支援。動態導航是使用Angular路由器實現的，並添加到現有的標頭元件中。
 
