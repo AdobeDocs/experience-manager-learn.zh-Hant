@@ -12,15 +12,15 @@ thumbnail: 32029.jpg
 topic: 架構，效能
 role: Architect, Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 34%
+source-wordcount: '48'
+ht-degree: 31%
 
 ---
 
 
-# [!DNL Dispatcher] 簡介{#introduction-dispatcher}
+# [!DNL Dispatcher] 簡介 {#introduction-dispatcher}
 
 介紹[!DNL dispatcher]作為AEM架構一部分的功能和功能。
 
@@ -28,4 +28,4 @@ ht-degree: 34%
 
 ## 其他資源 {#additional-resources}
 
-* [[!DNL Dispatcher] 文件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
+* [[!DNL Dispatcher] 文件](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
