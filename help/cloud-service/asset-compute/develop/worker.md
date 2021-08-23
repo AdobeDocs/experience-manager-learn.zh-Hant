@@ -12,9 +12,9 @@ thumbnail: KT-6282.jpg
 topic: 整合，開發
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ asset compute背景工作者會在`renditionCallback(...)`函式中實作Asset c
 1. asset compute工作器會將新格式副本的二進位資料保存到`rendition.path`。
 1. 寫入`rendition.path`的二進位資料會透過Asset computeSDK傳輸至AEM製作服務，並以&#x200B;__(4a)__&#x200B;文字轉譯和&#x200B;__(4b)__&#x200B;保存至資產的中繼資料節點的形式公開。
 
-上圖闡述了Asset compute開發人員所關心的問題，以及Asset compute工作人員調用的邏輯流程。 有些人會了解[Asset compute執行](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html)的內部詳細資訊，但只有公開Asset computeSDK API合約才能依賴。
+上圖闡述了Asset compute開發人員所關心的問題，以及Asset compute工作人員調用的邏輯流程。 有些人會了解[Asset compute執行](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html)的內部詳細資訊，但只有公開Asset computeSDK API合約才能依賴。
 
 ## 工人解剖
 
