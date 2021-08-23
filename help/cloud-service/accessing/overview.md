@@ -1,21 +1,17 @@
 ---
 title: 將AEM的存取設定為Cloud Service
 description: 'AEM as aCloud Service是運用AEM應用程式的雲端原生方式，因此可運用AdobeIMS(Identity Management系統)來方便管理員和一般使用者登入AEM製作服務。 了解AdobeIMS使用者、使用者群組和產品設定檔如何與AEM群組和權限搭配使用，以提供AEM作者的特定存取權。  '
-feature: 使用者和群組
-topics: authentication
 version: cloud-service
-activity: setup
-audience: administrator
-doc-type: article
-kt: 5882
-thumbnail: KT-5882.jpg
 topic: 管理、安全
+feature: 使用者和群組
 role: Admin
 level: Beginner
-source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
+kt: 5882
+thumbnail: KT-5882.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '603'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
