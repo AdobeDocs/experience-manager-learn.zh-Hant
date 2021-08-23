@@ -10,9 +10,9 @@ activity: use
 topic: 內容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '6231'
+source-wordcount: '6195'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Dynamic Media Classic可辨識且可搭配許多不同的來源格式使用。 �
 
 關於Dynamic Media Classic視訊的最後一個備注，可能適用於部分客戶：並非所有公司都可能為其帳戶啟用自動轉換、串流或視訊預設集。 如果由於某些原因您無法存取串流視訊的URL，可能就是這個原因。 您仍可上傳和發佈逐步下載的視訊，並可存取所有視訊檢視器。 不過，為了充分利用Dynamic Media Classic的完整視訊功能，您需要連絡客戶經理或銷售經理，以啟用這些功能。
 
-進一步了解Dynamic Media Classic的[影片](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/quick-start-video.html)。
+進一步了解Dynamic Media Classic的[影片](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html)。
 
 ## Video 101
 
@@ -138,8 +138,8 @@ Dynamic Media Classic可辨識且可搭配許多不同的來源格式使用。 �
 
 ![影像](assets/video-overview/video-overview-2.png)
 
-1. 首先，請上傳視訊檔案至Dynamic Media Classic。 要執行此操作，請開啟Dynamic Media Classic擴充功能面板底部的&#x200B;**工具功能表**，然後選擇&#x200B;**上傳至Dynamic Media Classic >檔案至資料夾名稱**&#x200B;或&#x200B;**上傳至Dynamic Media Classic >資料夾至資料夾名稱**。 「資料夾名稱」會是您目前使用擴充功能瀏覽的任何資料夾。 視訊檔案可能很大，因此我們建議使用FTP上傳大型檔案。 在上傳作業中，選擇一或多個視訊預設集來編碼您的視訊。 上傳時，視訊可轉碼為MP4視訊。 如需使用和建立編碼預設集的詳細資訊，請參閱下方的視訊預設集主題。 了解[上傳和編碼視訊](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html)。
-2. 選取或選取並修改視訊檢視器預設集，並預覽您的視訊。 您可以選擇預先建立的檢視器預設集，或自訂您自己的預設集。 如果您要鎖定行動使用者，您不必在此處執行任何動作，因為行動平台不需要檢視器或預設集。 進一步了解[在視訊檢視器](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/previewing-videos-video-viewer.html)中預覽視訊和[新增或編輯視訊檢視器預設集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/previewing-videos-video-viewer.html#adding-or-editing-a-video-viewer-preset)。
+1. 首先，請上傳視訊檔案至Dynamic Media Classic。 要執行此操作，請開啟Dynamic Media Classic擴充功能面板底部的&#x200B;**工具功能表**，然後選擇&#x200B;**上傳至Dynamic Media Classic >檔案至資料夾名稱**&#x200B;或&#x200B;**上傳至Dynamic Media Classic >資料夾至資料夾名稱**。 「資料夾名稱」會是您目前使用擴充功能瀏覽的任何資料夾。 視訊檔案可能很大，因此我們建議使用FTP上傳大型檔案。 在上傳作業中，選擇一或多個視訊預設集來編碼您的視訊。 上傳時，視訊可轉碼為MP4視訊。 如需使用和建立編碼預設集的詳細資訊，請參閱下方的視訊預設集主題。 了解[上傳和編碼視訊](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html)。
+2. 選取或選取並修改視訊檢視器預設集，並預覽您的視訊。 您可以選擇預先建立的檢視器預設集，或自訂您自己的預設集。 如果您要鎖定行動使用者，您不必在此處執行任何動作，因為行動平台不需要檢視器或預設集。 進一步了解[在視訊檢視器](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html)中預覽視訊和[新增或編輯視訊檢視器預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html#adding-or-editing-a-video-viewer-preset)。
 3. 執行視訊發佈、取得URL及整合。 視訊工作流程與影像工作流程的此步驟主要差異在於，您將執行特殊的「視訊發佈」，而非（或可能以及）標準的「影像伺服發佈」。 案頭上的視訊檢視器整合的運作方式與影像檢視器整合完全相同，不過對於行動裝置而言則更簡單 — 您只需要視訊本身的URL。
 
 ### 關於轉碼
@@ -174,11 +174,11 @@ Dynamic Media Classic不僅會為您轉換檔案，還提供簡單易用的預�
 
 上傳視訊時，您可以從一或多個預設集中選擇，這些預設集包含透過編碼將主視訊轉換為適合網頁的格式的設定。 視訊預設集有兩種風格：適用性視訊預設集和單一編碼預設集。
 
-請參閱[可用視訊預設集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)。
+請參閱[可用視訊預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)。
 
 「適用性視訊預設集」預設為啟用，這表示可用於編碼。 如果您想使用單一編碼預設集，管理員需要啟用它，才會顯示在視訊預設集清單中。
 
-了解如何[啟動或取消啟動視訊預設集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html#activating-or-deactivating-video-encoding-presets)。
+了解如何[啟動或取消啟動視訊預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html#activating-or-deactivating-video-encoding-presets)。
 
 您可以選擇Dynamic Media Classic隨附的許多預先建立的預設集之一，或自行建立預設集；不過，預設不會選取要上傳的預設集。 換句話說，如果您未在上傳時選取「視訊預設集」，則您的視訊將不會轉換，且可能無法發佈&#x200B;**。**&#x200B;不過，您可以自行離線轉換影片，上傳和發佈也不錯。 只有在您想要Dynamic Media Classic為您進行轉換時，才需要視訊預設集。
 
@@ -240,19 +240,19 @@ Dynamic Media Classic不僅會為您轉換檔案，還提供簡單易用的預�
 11. 按一下「**儲存**」以儲存預設集。 與其他所有預設不同，此時您不需要發佈，因為預設集僅用於上傳檔案。 稍後，您必須發佈已編碼的視訊，但預設集僅供Dynamic Media Classic內部使用。
 12. 若要確認您的視訊預設集是否在上傳清單上，請前往&#x200B;**Upload**。選擇&#x200B;**工作選項**&#x200B;並展開&#x200B;**視訊選項**。 您的預設集會列在您所選播放裝置（電腦、行動裝置或平板電腦）的類別中。
 
-深入了解[新增或編輯視訊預設集](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html#adding-or-editing-a-video-encoding-preset)。
+深入了解[新增或編輯視訊預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html#adding-or-editing-a-video-encoding-preset)。
 
 ## 為視訊添加字幕
 
 在某些情況下，向視頻添加字幕會很有用 — 例如，當您需要以多種語言向觀眾提供視頻，但不想用另一種語言複製音頻或以不同語言再次錄制視頻時。 此外，添加字幕為聽力受損者提供更好的可訪問性，並使用隱藏式字幕。 Dynamic Media Classic可讓您輕鬆在影片中新增註解。
 
-了解如何[向Video](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/adding-captions-video.html)添加字幕。
+了解如何[向Video](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-captions-video.html)添加字幕。
 
 ## 新增章節標籤至您的視訊
 
 若是長篇影片，您的觀眾可能會欣賞到使用章節標籤來導覽影片的功能與便利。 Dynamic Media Classic可讓您輕鬆將章節標籤新增至您的影片。
 
-了解如何[將章節標籤新增至Video](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/adding-chapter-markers-video.html)。
+了解如何[將章節標籤新增至Video](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-chapter-markers-video.html)。
 
 ## 影片實作主題
 
@@ -262,20 +262,20 @@ Dynamic Media Classic工作流程的最後一個步驟是發佈您的影片內�
 
 ![影像](assets/video-overview/video-overview-6.jpg)
 
-了解如何[發佈您的視訊](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#publishing-video)。
+了解如何[發佈您的視訊](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#publishing-video)。
 
 執行視訊發佈後，您將能取得URL，以在網頁瀏覽器中存取您的視訊和任何現成的Dynamic Media Classic Viewer Presets。 不過，如果您自訂或建立自己的視訊檢視器預設集，您仍需要執行個別的影像伺服器發佈。
 
-- 了解如何[將URL連結至行動網站或網站](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#linking-a-video-url-to-a-mobile-site-or-a-website)。
-- 了解如何[將視訊檢視器內嵌在網頁上](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#embedding-the-video-viewer-on-a-web-page)。
+- 了解如何[將URL連結至行動網站或網站](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#linking-a-video-url-to-a-mobile-site-or-a-website)。
+- 了解如何[將視訊檢視器內嵌在網頁上](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#embedding-the-video-viewer-on-a-web-page)。
 
 您也可以使用協力廠商或自訂內建的視訊播放器來部署視訊。
 
-了解如何使用協力廠商視訊播放器](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#deploying-video-using-a-third-party-video-player)部署視訊。[
+了解如何使用協力廠商視訊播放器](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#deploying-video-using-a-third-party-video-player)部署視訊。[
 
 此外，如果還要使用視頻縮略圖（從視頻中提取的影像），則還需要運行「影像伺服器」發佈。 這是因為視訊的縮圖影像位於影像伺服器上，而視訊本身位於視訊伺服器上。 視訊縮圖可用於視訊搜尋結果、視訊播放清單中，並可作為播放視訊之前，在視訊檢視器中顯示的初始「海報框架」。
 
-深入了解[使用視訊縮圖](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#working-with-video-thumbnails)。
+深入了解[使用視訊縮圖](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#working-with-video-thumbnails)。
 
 ### 選取和自訂檢視器預設集
 
@@ -310,15 +310,15 @@ Dynamic Media Classic工作流程的最後一個步驟是發佈您的影片內�
 
 依照此方法，您就不需要使用Dynamic Media Classic手動輸入此資料。 不過，您也可以使用Dynamic Media Classic中的中繼資料預設集，以快速方式每次輸入相同資料。
 
-有關該主題的詳細資訊，請參閱[查看、添加和導出元資料](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html)。
+有關該主題的詳細資訊，請參閱[查看、添加和導出元資料](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html)。
 
 ![影像](assets/video-overview/video-overview-7.jpg)
 
 中繼資料填入後，您就能在該視訊資產的「詳細資料檢視」中看到。 關鍵字也可能存在，但它們位於「關鍵字」頁簽下。
 
-- 深入了解[新增關鍵字](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html#add-or-edit-keywords)。
-- 深入了解[視訊SEO](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html)。
-- 了解視訊SEO的[設定](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings)。
+- 深入了解[新增關鍵字](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html#add-or-edit-keywords)。
+- 深入了解[視訊SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html)。
+- 了解視訊SEO的[設定](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings)。
 
 #### 設定視訊SEO
 
