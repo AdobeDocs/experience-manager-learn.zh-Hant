@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 設定Web通道文檔{#setting-up-the-delivery-of-web-channel-document}的傳送
+# 設定Web通道檔案的傳送 {#setting-up-the-delivery-of-web-channel-document}
 
 
 在本部分，我們會透過電子郵件來查看Web通道檔案的傳送。
@@ -52,7 +52,7 @@ ht-degree: 0%
 * 請務必儲存變更。
    ![fdm](assets/requestattribute.gif)
 
-## 測試Web通道文檔{#test-email-delivery-of-web-channel-document}的電子郵件傳送
+## 測試Web通道檔案的電子郵件傳送 {#test-email-delivery-of-web-channel-document}
 
 * [使用套件管理器安裝範例資產](assets/webchanneldelivery.zip)
 * [登入crx](http://localhost:4502/crx/de/index.jsp#)
