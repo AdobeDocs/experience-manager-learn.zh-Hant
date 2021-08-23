@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/25943/?quality=12&learn=on)
 
-### 架構圖{#architecture-diagram}
+### 架構圖 {#architecture-diagram}
 
 ![架構圖](./assets/asset-insights-launch-tutorial/diagram.png)
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 * 下載[資產前瞻分析範例影像內容](./assets/asset-insights-launch-tutorial/aem-assets-insights-sample.zip)
 * 下載[最新AEM WCM核心元件](https://github.com/adobe/aem-core-wcm-components/releases)
 
-## 第2部分：為範例影像元件{#sample-image-component-asset-insights}啟用資產前瞻分析追蹤
+## 第2部分：為範例影像元件啟用資產前瞻分析追蹤 {#sample-image-component-asset-insights}
 
 增強核心元件，以及為資產分析使用代理元件（範例影像元件）。 編輯內容頁面範本原則，以啟用參考網站的範例影像元件。
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 >
 >*data-aem-asset-id=&#39;image.UUID&#39;* 和 *data-trackable=&#39;true&#39;* 為資產曝光數所需的重要屬性。若為「資產點擊前瞻分析」，除了&lt;img>標籤上出現的上述資料屬性外，父&lt;a>標籤必須具有有效的href值。
 
-## 第3部分：Adobe Analytics — 建立報表套裝，啟用即時資料收集和AEM Assets報表{#adobe-analytics-asset-insights}
+## 第3部分：Adobe Analytics — 建立報表套裝，啟用即時資料收集和AEM Assets報表 {#adobe-analytics-asset-insights}
 
 系統會為資產追蹤建立即時資料收集的報表套裝。 AEM Assets Insights設定是使用Adobe Analytics憑證設定。
 
@@ -75,7 +75,7 @@ ht-degree: 1%
 * 共用機密(可從&#x200B;*Adobe Analytics >管理員>公司設定>網站服務*&#x200B;取得)。
 * 報表套裝（請務必選取正確的報表套裝，以用於資產報表）
 
-## 第4部分：使用Adobe Experience Platform Launch新增Adobe Analytics擴充功能{#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
+## 第4部分：使用Adobe Experience Platform Launch來新增Adobe Analytics擴充功能 {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
 
 新增Adobe Analytics擴充功能、建立頁面載入規則以及整合AEM與Launch與AdobeIMS技術帳戶。
 
@@ -84,7 +84,7 @@ ht-degree: 1%
 >[!NOTE]
 請務必將所有變更從製作執行個體複製到發佈執行個體。
 
-### 規則1 :頁面追蹤器(pagetracker.js){#rule-page-tracker-pagetracker-js}
+### 規則1 :頁面追蹤器(pagetracker.js) {#rule-page-tracker-pagetracker-js}
 
 ```javascript
 //For AEM 6.3
@@ -106,7 +106,7 @@ ht-degree: 1%
 * **\&lt;code>assetAnalytics.dispatcher.init()\&lt;/code>** &lt;code>&lt;code>:呼叫，以初始化Pagetracker元件。&lt;/code>&lt;/code> 必須先叫用此ID，才能從網頁產生任何資產深入分析事件（曝光次數和/或點按次數）。
 * **\&lt;code>assetAnalytics.dispatcher.init()\&lt;/code>** &lt;code>&lt;code>:可選擇接受AppMeasurement物件 — 如果有提供，則不會嘗試建立AppMeasurement物件的新例項。&lt;/code>&lt;/code>
 
-### 規則2:影像追蹤器 — 動作1(asset-insights.js){#rule-image-tracker-action-asset-insights-js}
+### 規則2:影像追蹤器 — 動作1(asset-insights.js) {#rule-image-tracker-action-asset-insights-js}
 
 ```javascript
 /*
@@ -141,7 +141,7 @@ _satellite.notify('in assetAnalytics customInit');
 })();
 ```
 
-### 規則2:影像追蹤器 — 動作2(image-tracker.js){#rule-image-tracker-action-image-tracker-js}
+### 規則2:影像追蹤器 — 動作2(image-tracker.js) {#rule-image-tracker-action-image-tracker-js}
 
 ```javascript
 /*
@@ -165,7 +165,7 @@ document.querySelectorAll('[data-aem-asset-id]').forEach(function(element) {
 * 包含載入資產清單的Analytics變數：**contextData[&#39;c.a.assets.clickedid&#39;]**
 * 來源：**contextData[&#39;c.a.assets.source&#39;]**
 
-### 控制台調試語句{#console-debug-statements}
+### 主控台除錯陳述式 {#console-debug-statements}
 
 ```javascript
 //Launch Build Info
@@ -188,7 +188,7 @@ document.querySelectorAll(".cmp-image__image");
 
 您也可以透過下列Chrome擴充功能，將DTM切換至除錯模式：[Launch和DTM交換機](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en)。 這可讓您更輕鬆查看是否有任何與DTM部署相關的錯誤。 此外，您可以透過任何瀏覽器&#x200B;*開發人員工具 — > JS Console*&#x200B;手動將DTM切換為除錯模式，方法是新增下列程式碼片段：
 
-## 第5部分：測試分析追蹤和同步分析資料{#analytics-tracking-asset-insights}
+## 第5部分：測試Analytic追蹤和同步分析資料{#analytics-tracking-asset-insights}
 
 設定AEM Asset Reporting同步作業排程器和Assets Insights報表
 
