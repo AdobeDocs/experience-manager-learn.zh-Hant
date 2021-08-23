@@ -22,9 +22,9 @@ ht-degree: 0%
 ---
 
 
-# 列出AEM Forms中的自訂資產類型{#listing-custom-asset-types-in-aem-forms}
+# 列出AEM Forms中的自訂資產類型 {#listing-custom-asset-types-in-aem-forms}
 
-## 建立自定義模板{#creating-custom-template}
+## 建立自訂範本 {#creating-custom-template}
 
 
 為了本文的目的，我們將建立自訂範本，以在相同頁面上顯示自訂資產類型和OOTB資產類型。 若要建立自訂範本，請遵循下列指示
@@ -78,7 +78,7 @@ ht-degree: 0%
 >
 >若要在此範本中列出適用性Forms，請建立新的div，並將其資料類型屬性設為「指南」。 您可以複製並貼上div，其data-type=&quot;printForm&quot;，並將新複製div的data-type設為&quot;guide&quot;
 
-## 配置搜索和Lister元件{#configure-search-and-lister-component}
+## 配置Search和Lister元件 {#configure-search-and-lister-component}
 
 定義自訂範本後，現在必須將此自訂範本與「搜尋及清單」元件建立關聯。 將瀏覽器[指向此url ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html)。
 
