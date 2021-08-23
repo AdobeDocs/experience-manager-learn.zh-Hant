@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# 使用AEM Assets{#set-up-smart-translation-search-with-aem-assets}設定智慧翻譯搜尋
+# 使用AEM Assets設定智慧翻譯搜尋{#set-up-smart-translation-search-with-aem-assets}
 
 智慧翻譯搜尋可讓您使用非英文的搜尋辭彙來解析為英文內容。 若要設定AEM以進行智慧型翻譯搜尋，必須安裝並設定Apache Oak Search Machine Translation OSGi套件組合，以及包含翻譯規則的相關免費開放原始碼Apache Joshua語言套件。
 
@@ -96,7 +96,7 @@ ht-degree: 0%
    * 如果AEM不需要重新啟動，則與更新語言包相關的相關Apache Jackrabbit Oak Machien翻譯全文查詢詞提供者OSGi設定必須重新儲存，以便AEM處理更新的檔案。
 
 
-## 更新damAssetLucene索引{#updating-damassetlucene-index}
+## 更新damAssetLucene索引 {#updating-damassetlucene-index}
 
 為了讓[AEM智慧標籤](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)受到AEM智慧轉譯的影響，必須更新AEM `/oak   :index  /damAssetLucene`索引，以將預計標籤（「智慧標籤」的系統名稱）標示為資產匯總Lucene索引的一部分。
 
