@@ -10,9 +10,9 @@ activity: use
 topic: 內容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '6306'
+source-wordcount: '6292'
 ht-degree: 0%
 
 ---
@@ -66,8 +66,8 @@ ht-degree: 0%
 
 模板項目可能相對簡單或極其複雜，具體取決於應用程式的業務規則和需求。 基本範本是從影像伺服器呼叫的，但由於Dynamic Media Classic環境的彈性，您甚至可以在其他範本內巢狀內嵌範本，讓您建立相當複雜的影像，並可由常名的變數連結。
 
-- 深入了解[範本基礎](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/quick-start-template-basics.html)。
-- 了解如何建立[基本範本](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template)。
+- 深入了解[範本基礎](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html)。
+- 了解如何建立[基本範本](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template)。
 
 ## 建立基本範本
 
@@ -189,7 +189,7 @@ _有陰影和無陰影的圖層_
 
 陰影效果在水準或垂直方向上偏移，而輝光效果在所有方向上均勻應用。 內部效應作用在層的不透明部分的頂部，而外部效應只影響透明區域。
 
-進一步了解[添加圖層效果](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers)。
+進一步了解[添加圖層效果](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers)。
 
 ### 新增參數
 
@@ -226,7 +226,7 @@ _有陰影和無陰影的圖層_
 >
 >無法新增參數，因為您沒有看見屬性？ 只需將圖層的屬性從預設值更改（通過移動、調整大小、隱藏等）。 您現在應該會看到該屬性已公開。
 
-深入了解[範本參數](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template-parameters.html)。
+深入了解[範本參數](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html)。
 
 ## 使用文本層建立模板
 
@@ -315,7 +315,7 @@ RTF示例：
 - 您可以看到RGB值：\red56\green53\blue4  — 這是文本顏色。
 - 雖然字型大小為20，但您沒有看到數字20。 但是，您確實看到命令\fs40 — 基於一些奇怪的原因，RTF將字型測量為半點。 因此\fs40是字型大小！
 
-您有足夠的資訊來建立參數，但是影像伺服文檔中有所有RTF命令的完整引用。 請造訪[影像伺服檔案](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c)。
+您有足夠的資訊來建立參數，但是影像伺服文檔中有所有RTF命令的完整引用。 請造訪[影像伺服檔案](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c)。
 
 #### 向文本層添加參數
 
@@ -333,7 +333,7 @@ RTF示例：
 >
 >若要將參數新增至文字顏色，請分別新增紅、綠、藍的參數。 例如，如果RTF為`\red56\green53\blue46`，則為值56、53和46添加單獨的紅、綠和藍參數。 在URL中，您可以呼叫這三個項目來變更顏色：`&$red=56&$green=53&$blue=46`。
 
-了解如何[建立動態文字參數](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters)。
+了解如何[建立動態文字參數](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters)。
 
 ## 發佈和建立範本URL
 
@@ -347,7 +347,7 @@ RTF示例：
 
 您需要執行發佈，才能看到將變更即時推送至影像伺服器。 請記住需要發佈的內容：各種影像資產層、動態文本的字型以及模板本身。 與其他Dynamic Media Classic多媒體資產（如影像集和回轉集）類似，「基本範本」是人工建構，是資料庫中的行項目，使用一系列「影像伺服」命令來參照影像和字型。 因此，當您發佈範本時，只會更新影像伺服器上的資料。
 
-進一步了解[發佈範本](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/publishing-templates.html)。
+進一步了解[發佈範本](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/publishing-templates.html)。
 
 ### 範本URL建構
 
