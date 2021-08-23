@@ -53,7 +53,7 @@ $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 
 叫用`bin/docker_run`時，Dispatcher記錄檔會輸出至stdout，但Docker包含的中可以直接透過存取記錄檔。
 
-### 存取Docker容器{#dispatcher-tools-access-logs}中的記錄
+### 存取Docker容器中的記錄{#dispatcher-tools-access-logs}
 
 Dispatcher記錄檔可直接存取位於`/etc/httpd/logs`的Docker容器中。
 
