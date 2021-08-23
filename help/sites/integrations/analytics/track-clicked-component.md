@@ -1,20 +1,16 @@
 ---
 title: 使用Adobe Analytics追蹤已點按的元件
 description: 使用事件導向的Adobe用戶端資料層來追蹤Adobe Experience Manager網站上特定元件的點按次數。 了解如何使用Experience Platform Launch中的規則來監聽這些事件，並透過追蹤連結信標將資料傳送至Adobe Analytics。
-feature: 分析
-topics: integrations
-audience: administrator
-doc-type: tutorial
-activity: setup
 version: cloud-service
-kt: 6296
-thumbnail: KT-6296.jpg
 topic: Integrations
+feature: Adobe用戶端資料層
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6296
+thumbnail: KT-6296.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1814'
 ht-degree: 1%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 1%
 
 # 使用Adobe Analytics追蹤已點按的元件
 
-使用事件導向的[Adobe用戶端資料層搭配AEM核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/data-layer/overview.html)來追蹤Adobe Experience Manager網站上特定元件的點按次數。 了解如何使用Experience Platform Launch中的規則來監聽點按事件、依元件篩選資料，以及透過追蹤連結信標將資料傳送至Adobe Analytics。
+使用事件導向的[Adobe用戶端資料層搭配AEM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)來追蹤Adobe Experience Manager網站上特定元件的點按次數。 了解如何使用Experience Platform Launch中的規則來監聽點按事件、依元件篩選資料，以及透過追蹤連結信標將資料傳送至Adobe Analytics。
 
 ## 您將建置的
 
@@ -40,13 +36,13 @@ WKND行銷團隊想要了解哪個動作呼叫(CTA)按鈕在首頁上表現最�
 
 本教學課程是[使用Adobe Analytics](./collect-data-analytics.md)收集頁面資料的延續課程，並假設您擁有：
 
-* 啟用[Adobe Analytics擴充功能](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)的&#x200B;**Launch屬性**
-* **Adobe** Analyticstest/dev報表套裝ID和追蹤伺服器。請參閱下列檔案，了解如何建立新的報表套裝](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)。[
-* [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser擴充功能已設定您的Launch屬性，載 [入https://wknd.site/us/en.](https://wknd.site/us/en.html) html或AEM網站，並啟用Adobe資料層。
+* 啟用[Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)的&#x200B;**Launch屬性**
+* **Adobe** Analyticstest/dev報表套裝ID和追蹤伺服器。請參閱下列檔案，了解如何建立新的報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)。[
+* [Experience Platform](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser擴充功能已設定您的Launch屬性，載 [入https://wknd.site/us/en.](https://wknd.site/us/en.html) html或AEM網站，並啟用Adobe資料層。
 
 ## Inspect按鈕和預告結構
 
-在Launch中建立規則之前，請先檢閱按鈕和Teaser](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#item)的[架構，並在資料層實作中檢查它們。
+在Launch中建立規則之前，請先檢閱按鈕和Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)的[架構，並在資料層實作中檢查它們。
 
 1. 導覽至[https://wknd.site/us/en.html](https://wknd.site/us/en.html)
 1. 開啟瀏覽器的開發人員工具，並導覽至&#x200B;**主控台**。 執行下列命令：
@@ -82,7 +78,7 @@ WKND行銷團隊想要了解哪個動作呼叫(CTA)按鈕在首頁上表現最�
        xdm:linkURL: "/content/wknd/us/en/magazine/san-diego-surf.html"
    ```
 
-   這些項目以[元件/容器項目架構](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#item)為基礎。 我們將在Launch中建立的規則將使用此結構。
+   這些項目以[元件/容器項目架構](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)為基礎。 我們將在Launch中建立的規則將使用此結構。
 
 ## 建立CTA點按規則
 
@@ -148,11 +144,11 @@ Adobe客戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 按一�
 
    `event`物件是從自訂事件中呼叫的`trigger()`方法傳遞。 `component` 是從觸發點按的資料層衍生之元件 `getState` 的目前狀態。
 
-1. 儲存變更並在Launch中執行[build](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html)，將程式碼推廣至AEM網站上使用的[environment](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html)。
+1. 儲存變更並在Launch中執行[build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，將程式碼推廣至AEM網站上使用的[environment](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)。
 
    >[!NOTE]
    >
-   > 使用[Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)將內嵌程式碼切換至&#x200B;**開發**&#x200B;環境，會相當實用。
+   > 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)將內嵌程式碼切換至&#x200B;**開發**&#x200B;環境，會相當實用。
 
 1. 導覽至[WKND Site](https://wknd.site/us/en.html)，並開啟開發人員工具以檢視主控台。 選擇&#x200B;**保留日誌**。
 
@@ -209,7 +205,7 @@ Adobe客戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 按一�
 
 ## 新增條件至CTA已點按規則
 
-接下來，更新&#x200B;**CTA Clicked**&#x200B;規則，以確保只有在為&#x200B;**Teaser**&#x200B;或&#x200B;**Button**&#x200B;觸發`cmp:click`事件時，才會觸發規則。 由於預告的CTA在資料層中被視為個別物件，因此務必檢查父項，以確認其是否來自預告。
+接下來，更新&#x200B;**CTA Clicked**&#x200B;規則，以確保只有在為&#x200B;**Teaser**&#x200B;或&#x200B;**Button**&#x200B;觸發`cmp:click`事件時，才會觸發規則。 由於預告的CTA在資料層中被視為個別物件，因此請務必檢查父項，確認其是否來自預告。
 
 1. 在Launch UI中，導覽至先前建立的&#x200B;**CTA已點按**&#x200B;規則。
 1. 在&#x200B;**Conditions**&#x200B;下，按一下&#x200B;**Add**&#x200B;以開啟&#x200B;**Condition Configuration**&#x200B;精靈。
