@@ -1,22 +1,17 @@
 ---
 title: AEM無頭式實作教學課程快速入門 — GraphQL
 description: 端對端教學課程，說明如何使用AEM GraphQL API來建置和公開內容。
-sub-product: Sites
-topics: headless
-version: cloud-service
 doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6678
 thumbnail: 328618.jpg
-feature: 內容片段、GraphQL API
+feature: 內容片段， GraphQL API
 topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
