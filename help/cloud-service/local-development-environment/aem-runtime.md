@@ -12,9 +12,9 @@ thumbnail: 32551.jpg
 topic: 開發
 role: Developer
 level: Beginner
-source-git-commit: d49ae402b332ba972a78cdbd8f5bf962b91c83b1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1732'
 ht-degree: 2%
 
 ---
@@ -59,7 +59,7 @@ AEM as a Dispatcher SDK或AEM SDK包含用於在本機執行AEM Author和Publish
 
 1. 將下載的`aem-sdk-XXX.zip`檔案解壓縮
 
-## 設定本機AEM製作服務{#set-up-local-aem-author-service}
+## 設定本機AEM Author服務{#set-up-local-aem-author-service}
 
 本機AEM作者服務可為開發人員提供本機體驗，供數位行銷人員/內容作者共用，以建立和管理內容。  AEM Author Service的設計目的，是要同時提供製作和預覽環境，讓您能針對其執行大部分的功能開發驗證，成為本機開發程式的重要元素。
 
@@ -121,7 +121,7 @@ $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
 
-## 模擬內容分佈{#content-distribution}
+## 模擬內容分發 {#content-distribution}
 
 在真正的Cloud Service環境中，內容會透過[Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe管道，從製作服務分發至發佈服務。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution)是孤立的微服務，僅在雲端環境中可用。
 
@@ -258,4 +258,4 @@ Quickstart: aborting
 + [下載AEM SDK](https://experience.adobe.com/#/downloads)
 + [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
 + [下載Docker](https://www.docker.com/)
-+ [Experience ManagerDispatcher檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience ManagerDispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
