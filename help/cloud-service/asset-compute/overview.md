@@ -12,9 +12,9 @@ thumbnail: KT-5802.jpg
 topic: 整合，開發
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -148,7 +148,7 @@ Github上提供本教學課程的程式碼基底：
 
 ### 文件
 
-+ [asset compute服務檔案](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html)
++ [asset compute服務檔案](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
 + [asset compute開發工具讀我檔案](https://github.com/adobe/asset-compute-devtool)
 + [asset compute範例背景工作](https://github.com/adobe/asset-compute-example-workers)
 
