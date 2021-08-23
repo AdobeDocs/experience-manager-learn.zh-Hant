@@ -21,7 +21,7 @@ ht-degree: 1%
 ---
 
 
-# 在適用性表單提交時傳送電子郵件{#sending-email-on-adaptive-form-submission}
+# 在適用性表單提交時傳送電子郵件 {#sending-email-on-adaptive-form-submission}
 
 常見的動作之一，是在成功提交適用性表單時，傳送確認電子郵件給提交者。 要完成此操作，我們會選取「傳送電子郵件」作為提交動作。
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 ![SendEmail](assets/sendemailaction.gif)
 
-## 需要的配置{#configurations-needed}
+## 所需配置 {#configurations-needed}
 
 您必須設定Day CQ Mail服務。 您可將瀏覽器指向[Felix Configuration Manager](http://localhost:4502/system/console/configMgr)進行設定
 
