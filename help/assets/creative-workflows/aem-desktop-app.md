@@ -1,17 +1,17 @@
 ---
 title: AEM案頭應用程式
 description: 使用AEM案頭應用程式簡化對案頭上AEM中任何資產（任何應用程式和檔案格式）的存取。
-kt: 2551
-sub-product: 資產
-feature: Experience Manager案頭應用程式
 version: 6.5, 6.4, 6.3
 topic: 內容管理
+feature: 案頭應用程式
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 2551
+thumbnail: 28868.jpeg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 9%
+source-wordcount: '138'
+ht-degree: 4%
 
 ---
 
@@ -33,4 +33,4 @@ ht-degree: 9%
 
 ## 其他資源
 
-+ [下載最新的AEM案頭應用程式](https://docs.adobe.com/content/help/zh-Hant/experience-manager-desktop-app/using/release-notes.html)
++ [下載最新的AEM案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)
