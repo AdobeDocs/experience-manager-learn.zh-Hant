@@ -1,21 +1,16 @@
 ---
 title: 搭配AEM核心元件使用Adobe用戶端資料層
 description: Adobe用戶端資料層引進了標準方法，用於收集和儲存網頁上訪客體驗的相關資料，並且讓此資料易於存取。 Adobe用戶端資料層不受平台限制，但已完全整合至核心元件，以便與AEM搭配使用。
-feature: 核心元件
-topics: integrations
-audience: developer
-doc-type: feature video
-activity: use
-version: cloud-service
-kt: 6261
-thumbnail: 41195.jpg
 topic: Integrations
+feature: Adobe用戶端資料層、核心元件
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6261
+thumbnail: 41195.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 1%
+source-wordcount: '791'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +23,7 @@ Adobe用戶端資料層引進了標準方法，用於收集和儲存網頁上訪
 
 >[!NOTE]
 >
-> 想在AEM網站上啟用Adobe用戶端資料層嗎？ [請參閱這裡的指示](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+> 想在AEM網站上啟用Adobe用戶端資料層嗎？ [請參閱這裡的指示](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
 
 ## 探索資料層
 
@@ -183,4 +178,4 @@ Adobe用戶端資料層引進了標準方法，用於收集和儲存網頁上訪
 ## 其他資源 {#additional-resources}
 
 * [Adobe用戶端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [使用Adobe用戶端資料層與核心元件檔案](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [使用Adobe用戶端資料層與核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
