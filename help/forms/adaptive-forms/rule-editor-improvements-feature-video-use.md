@@ -22,7 +22,7 @@ ht-degree: 1%
 ---
 
 
-# AEM Forms {#rule-editor-improvements-in-aem-forms}中的規則編輯器改良
+# AEM Forms中的規則編輯器改良 {#rule-editor-improvements-in-aem-forms}
 
 規則編輯器可讓使用者將邏輯新增至AEM Adaptive Forms。 AEM 6.3以數種方式改善規則編輯器，讓技術使用者和非技術使用者都能更輕鬆快速地新增智慧。
 
