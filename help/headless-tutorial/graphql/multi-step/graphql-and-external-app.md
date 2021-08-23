@@ -1,22 +1,17 @@
 ---
 title: 使用外部應用程式的GraphQL查詢AEM — 開始使用AEM無周邊功能 — GraphQL
 description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 探索範例WKND GraphQL React應用程式的AEM GraphQL API。 了解此外部應用程式如何對AEM進行GraphQL呼叫，以強化其使用體驗。 了解如何執行基本錯誤處理。
-sub-product: 資產
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
-feature: 內容片段、GraphQL API
+feature: 內容片段， GraphQL API
 topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1403'
 ht-degree: 0%
 
 ---
@@ -348,6 +343,6 @@ GraphQL是強類型的，因此，如果查詢無效，可能會傳回有用的�
 
 恭喜！ 您已成功探索範例WKND GraphQL React應用程式的程式碼，並將其更新為使用參數化、篩選GraphQL查詢，以依活動列出歷險！ 您也有機會探索一些基本的錯誤處理。
 
-## 後續步驟{#next-steps}
+## 後續步驟 {#next-steps}
 
 在下一章中， [使用片段參考的進階資料模型](./fragment-references.md)您將了解如何使用片段參考功能來建立兩個不同內容片段之間的關係。 您也將學習如何修改GraphQL查詢以包含參考模型的欄位。
