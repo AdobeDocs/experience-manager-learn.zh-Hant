@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# 開發資源狀態{#developing-resource-statuses-in-aem-sites}
+# 開發資源狀態 {#developing-resource-statuses-in-aem-sites}
 
 Adobe Experience Manager的資源狀態API是可插拔的架構，用於在AEM各種編輯器Web UI中公開狀態訊息。
 
@@ -32,7 +32,7 @@ AEM的「頁面」、「體驗片段」和「範本」編輯器原生可使用�
 
 ![AEM編輯器資源狀態概觀](assets/sample-editor-resource-status-screenshot.png)
 
-## 資源狀態提供程式框架{#resource-status-provider-framework}
+## 資源狀態提供程式框架 {#resource-status-provider-framework}
 
 開發自訂資源狀態時，開發工作包括：
 
@@ -84,7 +84,7 @@ AEM的「頁面」、「體驗片段」和「範本」編輯器原生可使用�
    * 體驗片段編輯器類別：`cq.authoring.editor.sites.page`
    * 範本編輯器類別：`cq.authoring.editor.sites.template`
 
-## 查看代碼{#view-the-code}
+## 檢視程式碼 {#view-the-code}
 
 [請參閱GitHub上的程式碼](https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples/resourcestatus/impl/SampleEditorResourceStatusProvider.java)
 
