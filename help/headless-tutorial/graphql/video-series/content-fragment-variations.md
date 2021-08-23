@@ -1,17 +1,16 @@
 ---
 title: 內容片段變化
 description: 了解如何建立內容片段的變體，並探索一些常見的使用案例。
-sub-product: 資產
 version: cloud-service
 topic: 無頭式、內容管理
-feature: 內容片段、GraphQL API
+feature: 內容片段， GraphQL API
 role: Developer
 level: Beginner
 kt: 7874
 thumbnail: 333295.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
