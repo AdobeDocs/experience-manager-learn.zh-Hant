@@ -10,9 +10,9 @@ doc-type: article
 topic: 升級
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3541'
+source-wordcount: '3529'
 ht-degree: 3%
 
 ---
@@ -342,7 +342,7 @@ AEM能夠與其他Adobe服務整合：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://docs.adobe.com/docs/en/aem/6-5/administer/security/saml-2-0-authenticationhandler.html" target="_blank">改善SAML驗證支</a><br>
+        <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">改善SAML驗證支</a><br>
  </strong>援改善SAML重新導向、最佳化群組資訊，以及解決金鑰加密問題。 
             <br>
         </td>
@@ -953,7 +953,7 @@ AEM能夠與其他Adobe服務整合：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://docs.adobe.com/docs/zh-Hant/aem/6-5/administer/content/dynamic-media/viewer-presets.html" target="_blank">檢視器</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">檢視器</a>:</strong>
             自訂品牌的多媒體播放器和預設集，可支援不同的螢幕/裝置。</td>
             <td> </td>
             <td>✔</td>
