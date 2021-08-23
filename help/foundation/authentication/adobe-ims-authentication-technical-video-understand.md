@@ -11,7 +11,7 @@ kt: 781
 topic: 架構
 role: Architect
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Adobe Experience Manager推出AEM例項和AdobeIMS(Identity Management系統)型
 
 ** AEM 6.4 SP3及更新版本支援Adobe Managed Services客戶使用此功能。*
 
-## 最佳實務{#best-practices}
+## 最佳實務 {#best-practices}
 
 ### 在Admin Console中套用權限
 
