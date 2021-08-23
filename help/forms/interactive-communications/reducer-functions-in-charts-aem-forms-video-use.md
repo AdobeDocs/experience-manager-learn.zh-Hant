@@ -22,7 +22,7 @@ ht-degree: 2%
 ---
 
 
-# 在AEM Forms中使用減速函式 — 圖表{#using-reducer-functions-in-aem-forms-charts}
+# 在AEM Forms中使用減速器函式 — 圖表{#using-reducer-functions-in-aem-forms-charts}
 
 減速器函式用於聚合或分組圖表中顯示的值。
 
