@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# 了解樣式系統最佳實踐{#understanding-style-organization-with-the-aem-style-system}
+# 了解樣式系統最佳作法{#understanding-style-organization-with-the-aem-style-system}
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 **顯** 示樣式用於影響佈局樣式的次要變化，但它們不會更改佈局樣式的基本性質或目的。例如，主圖版面樣式可能具有顯示樣式，可將顏色配置從主品牌顏色配置更改為次品牌顏色配置。
 
-## 樣式組織最佳實務{#style-organization-best-practices}
+## 樣式組織最佳實務 {#style-organization-best-practices}
 
 定義AEM作者可用的樣式名稱時，最好：
 
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 隨著AEM作者可用的可能樣式組合數量增加，必須進行QA並根據品牌標準驗證的排列越多。 太多的選項也可能會混淆作者，因為可能不清楚需要哪個選項或組合才能產生想要的效果。
 
-### 樣式名稱與CSS類{#style-names-vs-css-classes}
+### 樣式名稱與CSS類 {#style-names-vs-css-classes}
 
 樣式名稱或向AEM作者呈現的選項，以及實作CSS類別名稱在AEM中是分離的。
 
@@ -59,13 +59,13 @@ AEM樣式系統可使用易於編寫的標籤&#x200B;**Green**&#x200B;和&#x200B
 
 如果公司的品牌顏色未來有所變更，則需要變更的只是`.cmp-component--primary-color`和`.cmp-component--secondary-color`的單一實作，以及樣式名稱。
 
-## 作為示例使用案例{#the-teaser-component-as-an-example-use-case}的預告元件
+## Teaser元件作為範例使用案例 {#the-teaser-component-as-an-example-use-case}
 
 以下是設計Teaser元件樣式的範例使用案例，以具有數種不同的版面和顯示樣式。
 
 這將探索樣式名稱（向作者公開）的組織方式，以及後備CSS類的組織方式。
 
-### 預告元件樣式配置{#component-styles-configuration}
+### Teaser元件樣式設定 {#component-styles-configuration}
 
 下圖顯示了使用案例中討論的變數的Teaser元件的[!UICONTROL Styles]配置。
 
@@ -77,13 +77,13 @@ AEM樣式系統可使用易於編寫的標籤&#x200B;**Green**&#x200B;和&#x200B
 
 ![顯示樣式組](assets/style-config.png)
 
-### 樣式選擇菜單{#style-selection-menu}
+### 樣式選取功能表 {#style-selection-menu}
 
 下圖顯示[!UICONTROL Style]功能表作者與之互動，以選取元件的適當樣式。 請注意，[!UICONTROL 樣式圖形]名稱以及樣式名稱都對作者公開。
 
 ![樣式下拉式選單](assets/style-menu.png)
 
-### 預設樣式{#default-style}
+### 預設樣式 {#default-style}
 
 預設樣式通常是元件最常使用的樣式，而預設的預設預告檢視新增至頁面時沒有樣式。
 
@@ -115,7 +115,7 @@ AEM樣式系統可使用易於編寫的標籤&#x200B;**Green**&#x200B;和&#x200B
    * 無
 * **有效的CSS類**: `.cmp-teaser--promo` 或  `.cmp-teaser--default`
 
-### 促銷樣式{#promo-style}
+### 促銷樣式 {#promo-style}
 
 **促銷版面樣式**&#x200B;用於促銷網站上的高價值內容，並水準佈置以佔用網頁上的一帶空間，且必須以品牌顏色建立樣式，預設促銷版面樣式使用黑色文字。
 
@@ -156,7 +156,7 @@ AEM樣式系統可使用易於編寫的標籤&#x200B;**Green**&#x200B;和&#x200B
    * CSS 類別: `cmp-teaser--secondary-color`
 * **有效的CSS類**:  `cmp-teaser--promo.cmp-teaser--secondary-color`
 
-### 促銷右對齊樣式{#promo-r-align}
+### 促銷右對齊樣式 {#promo-r-align}
 
 **促銷右對齊**&#x200B;版面樣式是促銷樣式的變化，該樣式會反轉影像和文字的位置（影像在右，文字在左）。
 
@@ -207,7 +207,7 @@ AEM樣式系統可使用易於編寫的標籤&#x200B;**Green**&#x200B;和&#x200B
    * CSS 類別: `cmp-teaser--secondary-color`
 * **有效的CSS類**:  `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--secondary-color`
 
-### 主圖樣式{#hero-style}
+### 英雄風格 {#hero-style}
 
 主圖版面樣式會以背景顯示元件的影像，標題和連結已覆蓋。 主圖版面樣式（如促銷版面樣式）必須可以用品牌顏色著色。
 
