@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# 向外部伺服器提交最適化表單{#submitting-adaptive-form-to-external-server}
+# 向外部伺服器提交最適化表單 {#submitting-adaptive-form-to-external-server}
 
 使用「提交至REST端點」動作，將提交的資料張貼至REST URL。 URL可以是內部（轉譯表單的伺服器）或外部伺服器。
 
