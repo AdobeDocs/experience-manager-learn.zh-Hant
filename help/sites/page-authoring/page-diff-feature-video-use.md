@@ -14,9 +14,9 @@ thumbnail: 32152.jpg
 topic: 內容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '151'
 ht-degree: 1%
 
 ---
@@ -49,4 +49,4 @@ AEM Sites的頁面差異功能可提供快速、色彩編碼的檢視，以了�
 
 ## 其他資源 {#additional-resources}
 
-* [頁面差異檔案](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/page-diff.html)
+* [頁面差異檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html)
