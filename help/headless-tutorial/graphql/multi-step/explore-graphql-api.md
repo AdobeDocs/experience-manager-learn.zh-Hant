@@ -1,28 +1,23 @@
 ---
 title: 深入了解GraphQL API — 開始使用AEM無周邊功能 — GraphQL
 description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 使用內建的GrapiQL IDE，探索AEM GraphQL API。 了解AEM如何根據內容片段模型自動產生GraphQL架構。 使用GraphQL語法實驗建構基本查詢。
-sub-product: 資產
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
-feature: 內容片段、GraphQL API
+feature: 內容片段， GraphQL API
 topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1140'
 ht-degree: 1%
 
 ---
 
 
-# 探索GraphQL API {#explore-graphql-apis}
+# 了解GraphQL API {#explore-graphql-apis}
 
 AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開給下游應用程式。 內容片段模型會定義內容片段所使用的資料結構。 每當建立或更新內容片段模型時，架構就會轉譯並新增至組成GraphQL API的「圖表」中。
 
@@ -40,7 +35,7 @@ AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開
 * 了解如何查詢內容片段的變異。
 * 了解如何加入多個內容片段模型的查詢
 
-## 安裝GraphiQL工具{#install-graphiql}
+## 安裝GraphiQL工具 {#install-graphiql}
 
 GraphiQL IDE是開發工具，僅在開發或本地實例等較低級別環境中需要。 因此，AEM專案中不包含此套件，而是可臨機安裝的個別套件。
 
@@ -57,7 +52,7 @@ GraphiQL IDE是開發工具，僅在開發或本地實例等較低級別環境�
 
    ![安裝GraphiQL包](assets/explore-graphql-api/install-graphiql-package.png)
 
-## 查詢內容片段清單{#query-list-cf}
+## 查詢內容片段清單 {#query-list-cf}
 
 常見的需求是查詢多個內容片段。
 
@@ -137,7 +132,7 @@ GraphiQL IDE是開發工具，僅在開發或本地實例等較低級別環境�
 
    您應該會看到傳回的&#x200B;**Adventures**&#x200B;清單。 您可以在查詢中新增其他欄位，以進行實驗。
 
-## 篩選內容片段清單{#filter-list-cf}
+## 篩選內容片段清單 {#filter-list-cf}
 
 接下來，我們將探討如何根據屬性值將結果篩選為內容片段的子集。
 
@@ -189,7 +184,7 @@ GraphiQL IDE是開發工具，僅在開發或本地實例等較低級別環境�
 
 篩選和建立複雜查詢有許多其他選項，以上只是幾個範例。
 
-## 查詢單一內容片段{#query-single-cf}
+## 查詢單一內容片段 {#query-single-cf}
 
 您也可以直接查詢單一內容片段。 AEM中的內容以分層方式儲存，而片段的唯一識別碼基於片段的路徑。 如果目標是傳回關於單一片段的資料，建議您使用路徑並直接查詢模型。 使用此語法表示查詢複雜度會非常低，且會產生更快的結果。
 
@@ -237,7 +232,7 @@ GraphiQL IDE是開發工具，僅在開發或本地實例等較低級別環境�
 
 1. 執行查詢並觀察`biography`欄位包含的`html`結果要短得多。
 
-## 查詢多個內容片段模型{#query-multiple-models}
+## 查詢多個內容片段模型 {#query-multiple-models}
 
 您也可以將個別查詢合併為單一查詢。 這對於將為應用程式提供電源所需的HTTP請求數減到最少非常有用。 例如，應用程式的&#x200B;*首頁*&#x200B;檢視可根據&#x200B;**兩個**&#x200B;不同的內容片段模型來顯示內容。 我們不必執行&#x200B;**兩個**&#x200B;個別的查詢，而是可以將查詢合併為單一請求。
 
@@ -302,6 +297,6 @@ GraphiQL IDE是開發工具，僅在開發或本地實例等較低級別環境�
 
 恭喜，您剛剛建立並執行了多個GraphQL查詢！
 
-## 後續步驟{#next-steps}
+## 後續步驟 {#next-steps}
 
 在下一章[從React應用程式查詢AEM](./graphql-and-external-app.md)中，您將探索外部應用程式如何查詢AEM GraphQL端點。 修改範例WKND GraphQL React應用程式以新增篩選GraphQL查詢的外部應用程式，可讓應用程式的使用者依活動篩選歷險。 您也將了解一些基本的錯誤處理。
