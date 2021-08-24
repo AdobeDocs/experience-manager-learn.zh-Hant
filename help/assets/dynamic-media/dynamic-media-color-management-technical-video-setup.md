@@ -7,9 +7,9 @@ version: 6.3, 6.4, 6.5
 topic: 內容管理
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '326'
 ht-degree: 14%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 14%
 
 >[!NOTE]
 >
->[啟用Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Media AEM以使用此功能。
+>[啟用Dynamic ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) Media AEM以使用此功能。
 
 AEM 6.1和6.2版本為Feature Pack提供此功能。
 
-## 顏色管理配置節點{#xml-template-for-the-color-management-configuration-node}的XML模板
+## 色彩管理配置節點的XML模板 {#xml-template-for-the-color-management-configuration-node}
 
 以下是「顏色管理」配置節點的XML模板。 此XML範本可複製至AEM開發專案，並使用適合專案的設定進行設定。
 
@@ -85,7 +85,7 @@ AEM 6.1和6.2版本為Feature Pack提供此功能。
 />
 ```
 
-### 預設Adobe顏色配置檔案的清單列在{#list-of-default-adobe-color-profiles-are-listed-below}下
+### 以下列出預設Adobe顏色配置檔案清單 {#list-of-default-adobe-color-profiles-are-listed-below}
 
 | 名稱 | 色彩空間 | 說明 |
 | ------------------- | ---------- | ------------------------------------- |
