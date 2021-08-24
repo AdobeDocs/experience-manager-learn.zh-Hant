@@ -7,10 +7,10 @@ version: 6.3, 6.4, 6.5
 topic: 內容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 10%
+source-wordcount: '103'
+ht-degree: 1%
 
 ---
 
@@ -27,4 +27,4 @@ AEM Assets自訂視訊縮圖可讓作者從一組產生的縮圖中選取適當�
 
 >[!NOTE]
 >
->您應在Dynamic Media](https://docs.adobe.com/docs/zh-Hant/aem/6-3/administer/content/dynamic-media/config-dynamic.html)模式中執行[AEM例項
+>您應在Dynamic Media](https://experienceleague.adobe.com/docs/)模式中執行[AEM例項
