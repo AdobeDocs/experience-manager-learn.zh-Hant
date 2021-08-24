@@ -24,7 +24,7 @@ ht-degree: 2%
 ---
 
 
-# 建立打印通道的交互通信{#create-interactive-communication-for-print-channel}
+# 為打印通道建立互動式通信 {#create-interactive-communication-for-print-channel}
 
 在本部分中，將建立用於打印的交互通信文檔通道。
 
