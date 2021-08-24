@@ -1,26 +1,22 @@
 ---
 title: 使用AEM元件自訂Adobe用戶端資料層
 description: 了解如何使用自訂AEM元件的內容來自訂Adobe用戶端資料層。 了解如何使用AEM核心元件提供的API來擴充和自訂資料層。
-feature: Adobe用戶端資料層，核心元件
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: use
 version: cloud-service
-kt: 6265
-thumbnail: KT-6265.jpg
 topic: Integrations
+feature: Adobe用戶端資料層、核心元件
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6265
+thumbnail: KT-6265.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2034'
-ht-degree: 3%
+source-wordcount: '2028'
+ht-degree: 2%
 
 ---
 
 
-# 使用AEM元件{#customize-data-layer}自訂Adobe用戶端資料層
+# 使用AEM元件自訂Adobe用戶端資料層 {#customize-data-layer}
 
 了解如何使用自訂AEM元件的內容來自訂Adobe用戶端資料層。 了解如何使用[AEM核心元件提供的API來擴充](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)和自訂資料層。
 
@@ -40,11 +36,11 @@ ht-degree: 3%
 
 完成本教學課程需要&#x200B;**本機開發環境**。 螢幕擷取畫面和影片是使用AEM作為在macOS上執行的Cloud ServiceSDK來擷取。 除非另有說明，否則命令和代碼獨立於本地作業系統。
 
-**AEM as a Cloud Service 的新手嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+**AEM as a Cloud Service 的新手嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 
-**AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+**AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
-## 下載並部署WKND參考站點{#set-up-wknd-site}
+## 下載並部署WKND參考站點 {#set-up-wknd-site}
 
 本教學課程會擴充WKND參考網站中的署名元件。 將WKND程式碼基底原地複製並安裝至本機環境。
 
@@ -85,7 +81,7 @@ ht-degree: 3%
 
    請注意，資料層中未列出署名元件。
 
-## 更新署名Sling模型{#sling-model}
+## 更新署名Sling模型 {#sling-model}
 
 若要在資料層中插入元件相關資料，必須先更新元件的Sling模型。 接下來，更新Byline的Java介面和Sling Model實作，以新增新方法`getData()`。 此方法將包含我們要插入資料層的屬性。
 
@@ -236,7 +232,7 @@ ht-degree: 3%
 
    請注意，公開的屬性與Sling模型中`HashMap`中新增的屬性相同。
 
-## 新增點按事件{#click-event}
+## 新增點按事件 {#click-event}
 
 Adobe用戶端資料層是事件驅動的，觸發動作的最常見事件之一是`cmp:click`事件。 AEM核心元件可讓您在資料元素的協助下，輕鬆註冊元件：`data-cmp-clickable`。
 
@@ -301,7 +297,7 @@ Adobe用戶端資料層是事件驅動的，觸發動作的最常見事件之一
 
    `cmp:click`事件是最容易連結的事件。 若要了解更複雜的元件並追蹤其他行為，可以新增自訂javascript以新增和註冊新事件。 旋轉切換元件就是絕佳範例，每當切換滑片時，就會觸發`cmp:show`事件。 如需詳細資訊，請參閱[原始碼](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js#L219)。
 
-## 使用DataLayerBuilder實用程式{#data-layer-builder}
+## 使用DataLayerBuilder公用程式 {#data-layer-builder}
 
 當章節中較早的Sling模型為[更新](#sling-model)時，我們選擇使用`HashMap`並手動設定每個屬性，以建立JSON字串。 此方法適用於小型一次性元件，但若是擴充AEM核心元件的元件，則可能會產生大量額外程式碼。
 
@@ -414,7 +410,7 @@ Adobe用戶端資料層是事件驅動的，觸發動作的最常見事件之一
 
    請注意，`byline`元件項目中現在有`image`物件。 這裡有更多關於DAM中資產的資訊。 另請注意，已自動填入`@type`和唯一ID（在此例中為`byline-136073cfcb`），以及指示修改元件時的`repo:modifyDate`。
 
-## 其他範例{#additional-examples}
+## 其他範例 {#additional-examples}
 
 1. 在WKND程式碼基底中檢查`ImageList`元件，即可檢視延伸資料層的另一個範例：
    * `ImageList.java`  — 模組中的Java介 `core` 面。
@@ -437,4 +433,4 @@ Adobe用戶端資料層是事件驅動的，觸發動作的最常見事件之一
 
 * [Adobe用戶端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
 * [與核心元件整合資料層](https://github.com/adobe/aem-core-wcm-components/blob/master/DATA_LAYER_INTEGRATION.md)
-* [使用Adobe用戶端資料層與核心元件檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [使用Adobe用戶端資料層與核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
