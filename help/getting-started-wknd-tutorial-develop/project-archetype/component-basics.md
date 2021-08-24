@@ -11,15 +11,15 @@ level: Beginner
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1150'
 ht-degree: 1%
 
 ---
 
 
-# 元件基本知識{#component-basics}
+# 元件基本知識 {#component-basics}
 
 本章將透過簡單的`HelloWorld`範例，探討Adobe Experience Manager(AEM)Sites元件的基礎技術。 對現有元件進行微幅修改，涵蓋製作、HTL、Sling模型、用戶端程式庫等主題。
 
@@ -35,11 +35,11 @@ ht-degree: 1%
 1. 了解如何使用對話方塊來協助編寫內容。
 1. 了解用戶端程式庫的基本知識，以包含CSS和JavaScript以支援元件。
 
-## 您要建立的{#what-you-will-build}
+## 您將建置的 {#what-you-will-build}
 
 在本章中，您將對非常簡單的`HelloWorld`元件執行幾項修改。 在更新`HelloWorld`元件的過程中，您將了解AEM元件開發的關鍵領域。
 
-## 章節入門項目{#starter-project}
+## 章節入門項目 {#starter-project}
 
 本章以[AEM專案原型](https://github.com/adobe/aem-project-archetype)產生的一般專案為基礎。 觀看以下影片並檢閱[必要條件](#prerequisites)以開始使用！
 
@@ -83,7 +83,7 @@ ht-degree: 1%
 
 1. 按照設定[本地開發環境](overview.md#local-dev-environment)的說明將項目導入首選IDE。
 
-## 元件編寫{#component-authoring}
+## 元件編寫 {#component-authoring}
 
 元件可視為網頁的小型模組化建置模組。 要重新使用元件，元件必須是可配置的。 這可透過製作對話方塊完成。 接下來，我們將製作簡單元件，並檢查對話方塊中的值如何保存在AEM中。
 
@@ -97,9 +97,9 @@ ht-degree: 1%
 1. 切換至開發人員模式，在CRXDE-Lite中檢視內容路徑，並檢查元件例項的屬性。
 1. 使用CRXDE-Lite查看位於`/apps/wknd/components/content/helloworld`的`cq:dialog`和`helloworld.html`指令碼。
 
-## HTL（HTML範本語言）和對話方塊{#htl-dialogs}
+## HTL（HTML範本語言）和對話方塊 {#htl-dialogs}
 
-HTML範本語言或&#x200B;**[HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)**&#x200B;是AEM元件用來轉譯內容的輕量型伺服器端範本語言。
+HTML範本語言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)**&#x200B;是AEM元件用來轉譯內容的輕量型伺服器端範本語言。
 
 **** 對話方塊定義可供元件使用的設定。
 
@@ -359,7 +359,7 @@ Sling模型是註解導向的Java &quot;POJO&#39;s&quot;（純舊Java物件）�
 
 恭喜，您剛剛在Adobe Experience Manager中了解元件開發的基本知識！
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 在下一章[頁面和範本](pages-templates.md)中熟悉Adobe Experience Manager頁面和範本。 了解如何將核心元件代理至專案，並了解可編輯範本的進階政策設定，以建立結構良好的文章頁面範本。
 
