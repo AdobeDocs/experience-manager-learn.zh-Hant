@@ -20,7 +20,7 @@ ht-degree: 4%
 ---
 
 
-# 製作與發佈層級{#introduction-author-publish}簡介
+# 作者和發佈階層簡介 {#introduction-author-publish}
 
 介紹Adobe Experience Manager架構中的「作者」和「發佈」階層。
 
