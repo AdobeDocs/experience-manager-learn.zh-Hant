@@ -9,9 +9,9 @@ thumbnail: 36645.jpg
 topic: 內容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ AdobeDynamic Media Classic案頭應用程式與下列作業系統相容：
 
 ## 支援材料
 
-* [AdobeDynamic Media Classic案頭應用程式檔案](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
-* [AdobeDynamic Media常見問題](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/new-ui-2020.html)
+* [AdobeDynamic Media Classic案頭應用程式檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
+* [AdobeDynamic Media常見問題](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
 * [下載 — 適用於macOS的磁碟影像檔案(.dmg)](http://download.macromedia.com/dynamic-media-classic/20.20.1/adobe-dynamic-media-classic-20.20.1.dmg)
 * [下載 — 適用於Windows的執行檔(.exe)](http://download.macromedia.com/dynamic-media-classic/20.20.1/adobe-dynamic-media-classic-20.20.1.exe)
