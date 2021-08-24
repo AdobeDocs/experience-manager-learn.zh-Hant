@@ -39,7 +39,7 @@ ht-degree: 1%
 1. 了解針對即時網站的程式碼，以便即時預覽。
 1. 了解使用GitHub動作，將編譯的CSS和JavaScript更新隨主題一併傳送的端對端工作流程。
 
-## 更新主題{#theme-update}
+## 更新主題 {#theme-update}
 
 接下來，對主題源進行更改，使網站與WKND品牌的外觀和風格相匹配。
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 下載[WKND主題](assets/theming/WKND-THEME-src.zip)的已完成樣式
 
-## 部署主題{#deploy-theme}
+## 部署主題 {#deploy-theme}
 
 使用GitHub動作將主題更新部署至AEM環境。
 
@@ -84,6 +84,6 @@ ht-degree: 1%
 
 恭喜，您剛剛剛剛建立並部署主題至AEM!
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 使用[AEM專案原型](../project-archetype/overview.md)建立網站，深入探討AEM開發，深入了解基礎技術。
