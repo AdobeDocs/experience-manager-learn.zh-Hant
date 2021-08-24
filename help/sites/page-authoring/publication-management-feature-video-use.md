@@ -1,12 +1,7 @@
 ---
 title: 使用AEM Sites發佈頁面
-seo-title: 使用Adobe Experience Manager Sites發佈頁面
 description: Adobe Experience Manager Sites提供發佈和取消發佈內容的數個選項。 本影片會探討各種方法及其功能。
-seo-description: Adobe Experience Manager Sites提供發佈和取消發佈內容的數個選項。 本影片會探討各種方法及其功能。
-topics: publishing
-audience: all
-doc-type: feature video
-activity: use
+feature-set: Experience Manager
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4322
 thumbnail: 32193.jpg
@@ -14,10 +9,10 @@ feature: 發佈
 topic: 內容管理
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 1%
+source-wordcount: '137'
+ht-degree: 2%
 
 ---
 
@@ -40,4 +35,4 @@ AEM Sites根據作者的工作流程，提供數種已發佈和取消發佈內�
 
 ## 其他資源 {#additional-resources}
 
-* [發佈頁面檔案](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/authoring/publishing-pages.html)
+* [發佈頁面檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html)
