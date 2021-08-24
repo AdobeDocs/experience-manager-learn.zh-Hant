@@ -24,7 +24,7 @@ ht-degree: 0%
 
 asset compute專案是特別定義的AdobeProject Firefly專案，因此需要在Adobe開發人員控制台中存取AdobeProject Firefly，才能加以設定和部署。
 
-## 在Adobe開發人員控制台{#set-up}中建立和設定Adobe專案Firefly
+## 在Adobe開發人員控制台中建立和設定Adobe專案Firefly{#set-up}
 
 >[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
 
@@ -52,7 +52,7 @@ _點進設定AdobeProject Firefly（無音訊）_
    + __Adobe服務> I/O事件，然__ 後點選「儲 __存已設定的API」__
    + __Adobe服務> I/O管理API，然__ 後點選「儲 __存已設定API」__
 
-## 訪問private.key{#private-key}
+## 存取private.key{#private-key}
 
 設定[Asset computeAPI整合](#set-up)時，產生新的金鑰組，並自動下載`config.zip`檔案。 此`config.zip`包含生成的公用證書和匹配的`private.key`檔案。
 
