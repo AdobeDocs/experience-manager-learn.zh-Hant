@@ -11,9 +11,9 @@ thumbnail: 5878-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1228'
 ht-degree: 1%
 
 ---
@@ -145,7 +145,7 @@ AEM元件定義為節點和屬性。 在項目中，這些節點和屬性在`ui.
    >
    > 您可以檢視核心元件定義](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)以檢視更多[對話方塊範例。 您也可以檢視其他表單欄位，例如`select`、`textarea`、`pathfield`，可在[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)的`/libs/granite/ui/components/coral/foundation/form`下方取得。
 
-   若使用傳統AEM元件，通常需要[ HTL](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)指令碼。 由於SPA會轉譯元件，因此不需要HTL指令碼。
+   若使用傳統AEM元件，通常需要[ HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hant)指令碼。 由於SPA會轉譯元件，因此不需要HTL指令碼。
 
 ## 建立Sling模型
 
@@ -395,6 +395,6 @@ Sling模型是註解導向的Java &quot;POJO&#39;s&quot;（純舊Java物件）�
 
 恭喜您，您已學會如何建立要與SPA編輯器搭配使用的自訂AEM元件。 您也了解對話方塊、JCR屬性和Sling模型如何互動以輸出JSON模型。
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 [擴充核心元件](extend-component.md)  — 了解如何擴充現有AEM核心元件以與AEM SPA編輯器搭配使用。了解如何將屬性和內容新增至現有元件，是擴充AEM SPA Editor實作功能的強大技術。
