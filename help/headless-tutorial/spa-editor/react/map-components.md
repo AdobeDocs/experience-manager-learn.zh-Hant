@@ -12,15 +12,15 @@ thumbnail: 4854-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2273'
-ht-degree: 1%
+source-wordcount: '2267'
+ht-degree: 0%
 
 ---
 
 
-# 將SPA元件對應至AEM元件{#map-components}
+# 將SPA元件對應至AEM元件 {#map-components}
 
 了解如何使用AEM SPA Editor JS SDK將React元件對應至Adobe Experience Manager(AEM)元件。 元件對應可讓使用者在AEM SPA編輯器中對SPA元件進行動態更新，與傳統AEM製作類似。
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 ## Inspect the Text Component
 
-[AEM專案原型](https://github.com/adobe/aem-project-archetype)提供對應至AEM [文字元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)的`Text`元件。 這是&#x200B;**content**&#x200B;元件的範例，其會從AEM轉譯&#x200B;*content*。
+[AEM專案原型](https://github.com/adobe/aem-project-archetype)提供對應至AEM [文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`元件。 這是&#x200B;**content**&#x200B;元件的範例，其會從AEM轉譯&#x200B;*content*。
 
 讓我們查看元件的運作方式。
 
@@ -223,7 +223,7 @@ AEM SPA編輯器SDK會自動支援&#x200B;**版面容器**。 如名稱所示，
 
    **版面容器**&#x200B;元件具有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，且由SPA編輯器使用`:type`屬性來識別，就像`Text`和`Image`元件一樣。
 
-   SPA編輯器提供使用[Layout Mode](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新調整元件大小的相同功能。
+   SPA編輯器提供使用[Layout Mode](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)重新調整元件大小的相同功能。
 
 2. 返回[http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。 新增其他&#x200B;**Image**&#x200B;元件，並嘗試使用&#x200B;**Layout**&#x200B;選項重新調整元件大小：
 
@@ -247,11 +247,11 @@ AEM SPA編輯器SDK會自動支援&#x200B;**版面容器**。 如名稱所示，
 
 恭喜您，您已了解如何將SPA元件對應至AEM元件，且已使用React核心元件。 您也可以探索&#x200B;**版面容器**&#x200B;的回應功能。
 
-### 後續步驟{#next-steps}
+### 後續步驟 {#next-steps}
 
 [導覽與路由](navigation-routing.md)  — 使用SPA Editor SDK對應至AEM頁面，可了解SPA中的多個檢視如何受到支援。動態導航是使用React Router和React Core Components實現的。
 
-## （額外練習）將配置保留到原始碼控制{#bonus-configs}
+## （額外獎勵）保留配置以進行源控制 {#bonus-configs}
 
 在許多情況下，尤其是在AEM專案開始時，最好將設定（例如範本和相關內容原則）保留到原始碼控制。 這可確保所有開發人員針對相同的內容和設定組合工作，並可確保環境之間的額外一致性。 一旦項目達到一定的成熟程度，管理模板的做法就可以交給特定的一組電源用戶。
 
@@ -286,9 +286,9 @@ AEM SPA編輯器SDK會自動支援&#x200B;**版面容器**。 如名稱所示，
 
    比較`ui.content/src/main/content/META-INF/vault/filter.xml`和`ui.apps/src/main/content/META-INF/vault/filter.xml`以了解每個模組所管理的不同節點。
 
-## （額外練習）建立自訂影像元件{#bonus-image}
+## （額外練習）建立自訂影像元件 {#bonus-image}
 
-React核心元件已提供SPA影像元件。 不過，如果您想要其他實務，請建立自己的React實作，將對應至AEM [影像元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)。 `Image`元件是&#x200B;**content**&#x200B;元件的另一個示例。
+React核心元件已提供SPA影像元件。 不過，如果您想要其他實務，請建立自己的React實作，將對應至AEM [影像元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)。 `Image`元件是&#x200B;**content**&#x200B;元件的另一個示例。
 
 ### Inspect JSON
 
