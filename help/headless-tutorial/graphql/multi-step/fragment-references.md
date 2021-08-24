@@ -1,22 +1,17 @@
 ---
 title: 使用片段參考功能進階資料模型 — AEM無周邊功能快速入門 — GraphQL
 description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 了解如何將片段參考功能用於進階資料模型，以及如何建立兩個不同內容片段之間的關係。 了解如何修改GraphQL查詢以包含參考模型的欄位。
-sub-product: 資產
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
-feature: 內容片段、GraphQL API
+feature: 內容片段， GraphQL API
 topic: 無頭式、內容管理
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '854'
 ht-degree: 1%
 
 ---
@@ -39,7 +34,7 @@ ht-degree: 1%
 * 更新內容片段模型以使用片段參考欄位
 * 建立GraphQL查詢，該查詢會從引用的模型返回欄位
 
-## 新增片段參考{#add-fragment-reference}
+## 新增片段參考 {#add-fragment-reference}
 
 更新冒險內容片段模型以新增參考至貢獻者模型。
 
@@ -241,6 +236,6 @@ ht-degree: 1%
 
 恭喜！ 您已更新現有內容片段模型，以使用&#x200B;**片段參考**&#x200B;欄位參考巢狀內容片段。 您還學習了如何修改GraphQL查詢以包括引用模型中的欄位。
 
-## 後續步驟{#next-steps}
+## 後續步驟 {#next-steps}
 
 在下一章中，[使用AEM Publish環境進行生產部署](./production-deployment.md) ，了解AEM製作和發佈服務，以及無頭應用程式的建議部署模式。 您將更新現有應用程式，以使用環境變數根據目標環境動態更改GraphQL終結點。 您也將學習如何正確設定AEM以進行跨原始資源共用(CORS)。
