@@ -5,10 +5,10 @@ description: 'Adobe Experience Manager Sites 的影片和教學課程系列。 '
 seo-description: Adobe Experience Manager Sites的影片和教學課程系列
 sub-product: 網站，內容服務
 topic: 內容管理
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 20%
+source-wordcount: '357'
+ht-degree: 16%
 
 ---
 
@@ -44,11 +44,11 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
 <table>
 <tr>
   <td>
-    <a href="https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
       <img alt="AEM Sites - WKND 教學課程快速入門" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
-      <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
     <strong>開始使用AEM Sites</strong>
     </a>
     </div>
@@ -57,11 +57,11 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
     <p>
   </td>
   <td>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html">
     <img alt="AEM Headless 快速入門" src="./assets/aem-headless-tutorial.png" />
     </a>
     <div>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html">
     <strong>AEM Headless 快速入門</strong>
     </a>
     </div>
@@ -70,11 +70,11 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
     </p>
   </td>
   <td>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
       <img alt="AEM SPA Editor快速入門" src="./assets/aem-wknd-spa-editor-tutorial.png" />
     </a>
      <div>
-      <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
         <strong>AEM SPA Editor快速入門</strong>
       </a>
     </div>
