@@ -3,14 +3,14 @@ title: 使用Adobe Analytics收集頁面資料
 description: 使用事件導向的Adobe用戶端資料層，收集使用Adobe Experience Manager建置之網站上使用者活動的相關資料。 了解如何使用Experience Platform Launch中的規則來監聽這些事件，並將資料傳送至Adobe Analytics報表套裝。
 version: cloud-service
 topic: Integrations
-feature: Adobe用戶端資料層
+feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2375'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 1%
 您不必設定AEM環境並安裝WKND程式碼基底，而是可以使用Experience Platform偵錯器來&#x200B;**switch**&#x200B;即時[https://wknd.site/](https://wknd.site/)偵錯至&#x200B;*您的* Launch屬性。 當然，如果您自己的AEM網站已啟用[Adobe用戶端資料層](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)，您就可以使用
 
 1. 登入Experience Platform Launch並[建立Launch屬性](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html)（如果尚未登入）。
-1. 請確定已建立初始的Launch [程式庫](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)，並升級至Launch [environment](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)。
+1. 請確定已建立初始的Launch [程式庫](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)，並升級至Launch [environment](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)。
 1. 從您的程式庫已發佈到的環境中複製Launch內嵌程式碼。
 
    ![複製Launch內嵌程式碼](assets/collect-data-analytics/launch-environment-copy.png)
@@ -172,7 +172,7 @@ Adobe客戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 載入A
 
    `event`物件是從自訂事件中呼叫的`trigger()`方法傳遞。 `component` 是從自訂事件中的資料層 `getState` 衍生的目前頁面。回想一下資料層公開的[頁面架構](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page)之前的內容，以查看現成可用的各種索引鍵。
 
-1. 儲存變更並在Launch中執行[build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，將程式碼推廣至AEM網站上使用的[environment](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)。
+1. 儲存變更並在Launch中執行[build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，將程式碼推廣至AEM網站上使用的[environment](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)。
 
    >[!NOTE]
    >
