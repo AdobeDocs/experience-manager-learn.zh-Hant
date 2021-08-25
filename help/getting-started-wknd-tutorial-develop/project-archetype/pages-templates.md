@@ -1,20 +1,16 @@
 ---
 title: AEM Sites快速入門 — 頁面和範本
-seo-title: AEM Sites快速入門 — 頁面和範本
 description: 了解基本頁面元件與可編輯範本之間的關係。 了解核心元件如何改寫至專案，並了解可編輯範本的進階政策設定，以根據Adobe XD的模型建立結構良好的文章頁面範本。
-sub-product: Sites
-version: 6.4, 6.5, Cloud Service
-type: Tutorial
-feature: 核心元件、可編輯的範本、頁面編輯器
-topic: 內容管理、開發
+feature: Core Components, Editable Templates, Page Editor
+topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '3100'
+source-wordcount: '3082'
 ht-degree: 0%
 
 ---
@@ -57,7 +53,7 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-您一律可以在[GitHub](https://github.com/adobe/aem-guides-wknd/tree/pages-templates/solution)上檢視完成的程式碼，或切換至分支`tutorial/pages-templates-solution`在本機檢出程式碼。
+您一律可以在[GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/pages-templates-solution)上檢視完成的程式碼，或切換至分支`tutorial/pages-templates-solution`在本機檢出程式碼。
 
 ## 目標
 
