@@ -1,23 +1,17 @@
 ---
 title: 了解AEM Sites中的頁面屬性
-seo-title: 了解Adobe Experience Manager Sites中的頁面屬性
 description: 以下影片介紹與Adobe Experience Manager中頁面相關聯的頁面屬性中繼資料。
-seo-description: '以下影片介紹與Adobe Experience Manager中頁面相關聯的頁面屬性中繼資料。 '
-feature: 頁面編輯器
-topics: authoring, metadata
-audience: author, marketer
-doc-type: feature video
-activity: understand
 version: 6.3, 6.4, 6.5
-kt: 4321
-thumbnail: 32192.jpg
-topic: 內容管理
+topic: Content Management
+feature: Page Editor
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+kt: 4321
+thumbnail: 32192.jpg
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 27%
+source-wordcount: '138'
+ht-degree: 38%
 
 ---
 
@@ -64,4 +58,5 @@ ht-degree: 27%
 
 * [編輯頁面屬性檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
 * [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [網站製作使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html&amp;topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [製作頁面的快速入門手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+
