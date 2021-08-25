@@ -1,7 +1,7 @@
 ---
 title: 整合SPA |開始使用AEM SPA編輯器和Angular
 description: 了解以Angular撰寫的單頁應用程式(SPA)原始碼如何與Adobe Experience Manager(AEM)專案整合。 了解如何使用Angular的CLI工具等現代前端工具，針對AEM JSON模型API快速開發SPA。
-sub-product: Sites
+sub-product: sites
 feature: SPA Editor
 topics: development
 doc-type: tutorial
@@ -13,9 +13,9 @@ thumbnail: 5310-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2195'
+source-wordcount: '2191'
 ht-degree: 0%
 
 ---
@@ -136,7 +136,7 @@ ht-degree: 0%
 
 6. Inspect檔案`ui.frontend/clientlib.config.js`。 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs)使用此配置檔案來確定如何生成客戶端庫。
 
-7. Inspect檔案`ui.frontend/pom.xml`。 此檔案將`ui.frontend`資料夾轉換為[Maven模組](http://maven.apache.org/guides/mini/guide-multiple-modules.html)。 `pom.xml`檔案已更新，以在Maven建置期間使用[frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin)至&#x200B;**test**&#x200B;和&#x200B;**build** SPA。
+7. Inspect檔案`ui.frontend/pom.xml`。 此檔案將`ui.frontend`資料夾轉換為[Maven模組](https://maven.apache.org/guides/mini/guide-multiple-modules.html)。 `pom.xml`檔案已更新，以在Maven建置期間使用[frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin)至&#x200B;**test**&#x200B;和&#x200B;**build** SPA。
 
 8. Inspect檔案`app.component.ts`(`ui.frontend/src/app/app.component.ts`):
 
