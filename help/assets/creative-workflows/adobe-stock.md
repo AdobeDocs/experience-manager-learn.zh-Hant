@@ -3,13 +3,13 @@ title: 搭配Adobe Stock資產使用AEM Assets
 description: 'AEM可讓使用者直接從AEM搜尋、預覽、儲存及授權Adobe Stock資產。 組織現在可以將其Adobe Stock企業計畫與AEM Assets整合，以確保授權資產現在可廣泛供其創意和行銷專案使用，同時具備AEM強大的資產管理功能。 '
 feature: Adobe Stock
 version: 6.4, 6.5
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 3%
+source-wordcount: '1037'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 AEM 6.4.2可讓使用者直接從AEM搜尋、預覽、儲存及授權Adobe Stock資產。 組織現在可以將其Adobe Stock企業計畫與AEM Assets整合，以確保授權資產現在可廣泛供其創意和行銷專案使用，同時具備AEM強大的資產管理功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/24678/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/24678/?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -72,11 +72,11 @@ AEM 6.4.2可讓使用者直接從AEM搜尋、預覽、儲存及授權Adobe Stock
 
 >[!NOTE]
 >
->整合需要[企業Adobe Stock計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)和至少部署[Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0)的AEM 6.4。 如需AEM 6.4 Service Pack詳細資訊，請參閱以下[發行說明](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)。 您也需要[Adobe I/O主控台](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)和Adobe Experience Manager的管理員權限，才能設定整合。
+>整合需要[企業Adobe Stock計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)和至少部署[Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Rosvant&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aaem%2F6-4&amp;3_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fdc%3Atiasc.orderby.sort=layout&amp;p.offset=0&amp;p.limit=24)的AEM 6.4。 如需AEM 6.4 Service Pack詳細資訊，請參閱以下[發行說明](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)。 您也需要[Adobe I/O主控台](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)和Adobe Experience Manager的管理員權限，才能設定整合。
 
 ### 安裝 {#installations}
 
-* 若是AEM 6.4，您需要安裝[AEM Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0)，然後重新安裝cq-dam-stock-integration-content-1.0.4.zip檔案。
+* 若是AEM 6.4，您需要安裝[AEM Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Rosvant&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aaem%2F6-4&amp;3_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fdc%3Atiasc.orderby.sort=layout&amp;p.offset=0&amp;p.limit=24)，然後重新安裝cq-dam-stock-integration-content-1.0.4.zip檔案。
 * 請確定您擁有[Adobe I/O主控台](https://console.adobe.io/)、[Adobe Admin Console](https://adminconsole.adobe.com/)和Adobe Experience Manager的管理員權限，以設定整合。
 
 #### 使用Adobe主控台設定Adobe I/OIMS設定 {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
@@ -106,7 +106,7 @@ AEM 6.4.2可讓使用者直接從AEM搜尋、預覽、儲存及授權Adobe Stock
 ### 其他資源
 
 * [企業股票計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
-* [AEM 6.4 Service Pack 2發行說明](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)
-* [整合AEM和Adobe Stock](https://helpx.adobe.com/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html#IntegrateAEMandAdobeStock)
+* [AEM 6.4 Service Pack 2發行說明](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/sp-release-notes.html?lang=en)
+* [整合AEM和Adobe Stock](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html)
 * [Adobe I/O主控台整合API](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
 * [Adobe Stock API檔案](https://www.adobe.io/apis/creativecloud/stock/docs.html)
