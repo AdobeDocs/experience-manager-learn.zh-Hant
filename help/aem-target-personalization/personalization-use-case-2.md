@@ -1,15 +1,15 @@
 ---
 title: 使用Adobe Target進行個人化
-seo-title: 使用Adobe Target進行個人化
+seo-title: Personalization using Adobe Target
 description: 端對端教學課程，說明如何使用Adobe Target建立和提供個人化體驗。
-seo-description: 端對端教學課程，說明如何使用Adobe Target建立和提供個人化體驗。
-feature: 體驗片段
-topic: 個性化
+seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target.
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '587'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ WKND網站重新設計了首頁，並想要將其目前的首頁訪客重新導�
    * [AEM作者和](./implementation.md#getting-aem) 發佈instancerunning分別在localhost 4502和4503上。
    * [AEM使用Adobe Experience Platform Launch與Adobe Target整合](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * 存取您的組織Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 存取您的組織Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud已布建以下解決方案
       * [Adobe Target](https://experiencecloud.adobe.com)
 
