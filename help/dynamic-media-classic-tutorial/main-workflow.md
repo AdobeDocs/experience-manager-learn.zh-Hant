@@ -7,12 +7,12 @@ doc-type: tutorial
 topics: development, authoring, configuring, architecture, publishing
 audience: all
 activity: use
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2714'
+source-wordcount: '2710'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ Dynamic Media Classic工作流程的最終產品是指向資產（無論是影�
 
 除非發生錯誤，且影像/資產的名稱與先前發佈的版本相同，否則這通常不會發生問題，但影像有問題。 例如，您不小心上傳了低解析度版本，或您的藝術總監未核准影像。 在此情況下，您會想要重新叫出原始影像，並使用相同資產ID以新版本取代。
 
-了解如何[手動清除需要更新之URL的快取](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html)。
+了解如何[手動清除需要更新之URL的快取](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/invalidate-cdn-cache-dynamic-media.html?lang=en)。
 
 >[!TIP]
 >
