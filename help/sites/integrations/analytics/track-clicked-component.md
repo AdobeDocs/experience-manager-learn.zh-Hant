@@ -3,14 +3,14 @@ title: 使用Adobe Analytics追蹤已點按的元件
 description: 使用事件導向的Adobe用戶端資料層來追蹤Adobe Experience Manager網站上特定元件的點按次數。 了解如何使用Experience Platform Launch中的規則來監聽這些事件，並透過追蹤連結信標將資料傳送至Adobe Analytics。
 version: cloud-service
 topic: Integrations
-feature: Adobe用戶端資料層
+feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 6296
 thumbnail: KT-6296.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1810'
 ht-degree: 1%
 
 ---
@@ -144,7 +144,7 @@ Adobe客戶端資料層是&#x200B;**event**&#x200B;驅動的資料層。 按一�
 
    `event`物件是從自訂事件中呼叫的`trigger()`方法傳遞。 `component` 是從觸發點按的資料層衍生之元件 `getState` 的目前狀態。
 
-1. 儲存變更並在Launch中執行[build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，將程式碼推廣至AEM網站上使用的[environment](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html)。
+1. 儲存變更並在Launch中執行[build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，將程式碼推廣至AEM網站上使用的[environment](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)。
 
    >[!NOTE]
    >
