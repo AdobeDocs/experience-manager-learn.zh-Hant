@@ -1,20 +1,20 @@
 ---
 title: AEM Sites快速入門 — 專案設定
-seo-title: AEM Sites快速入門 — 專案設定
+seo-title: Getting Started with AEM Sites - Project Setup
 description: 涵蓋建立Maven多模組專案，以管理AEM網站的程式碼和設定。
-sub-product: Sites
+sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
-feature: AEM 專案原型
-topic: 內容管理、開發
+feature: AEM Project Archetype
+topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1843'
 ht-degree: 2%
 
 ---
@@ -275,7 +275,7 @@ AEM專案原型將產生範例`.gitignore`檔案，可作為安全忽略檔案�
 
 ### Ui.apps和Ui.content模組 {#apps-content-module}
 
-**[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven模組包含`/apps`下方網站所需的所有呈現代碼。 這包括將以AEM格式儲存的CSS/JS，稱為[clientlibs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/clientlibs.html)。 這也包含用於轉譯動態HTML的[ HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hant)指令碼。 您可以將&#x200B;**ui.apps**&#x200B;模組視為JCR中結構的映射，但格式可儲存在檔案系統上並提交到原始碼控制項。 **ui.apps**&#x200B;模組僅包含程式碼。
+**[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven模組包含`/apps`下方網站所需的所有呈現代碼。 這包括將以AEM格式儲存的CSS/JS，稱為[clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)。 這也包含用於轉譯動態HTML的[ HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hant)指令碼。 您可以將&#x200B;**ui.apps**&#x200B;模組視為JCR中結構的映射，但格式可儲存在檔案系統上並提交到原始碼控制項。 **ui.apps**&#x200B;模組僅包含程式碼。
 
 若要建立此模組：
 
@@ -346,6 +346,6 @@ AEM專案原型將產生範例`.gitignore`檔案，可作為安全忽略檔案�
 
    如果埠&#x200B;**4504**&#x200B;上沒有可用的AEM執行個體，則預計會發生建置失敗。 參數`aem.port`在POM檔案中的`aem-guides-wknd/pom.xml`中定義。
 
-**[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.htm)**&#x200B;模組的結構方式與&#x200B;**ui.apps**&#x200B;模組相同。 唯一的差異是&#x200B;**ui.content**&#x200B;模組包含所謂的&#x200B;**可變**&#x200B;內容。 **** Mutablecontent主要指非代碼配置，如儲存在原始碼控制項中的模板、策略或資料夾結構，但 **** 可以直接在AEM實例上修改。有關詳細資訊，請參閱頁面和範本一章。
+**[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)**&#x200B;模組的結構方式與&#x200B;**ui.apps**&#x200B;模組相同。 唯一的差異是&#x200B;**ui.content**&#x200B;模組包含所謂的&#x200B;**可變**&#x200B;內容。 **** Mutablecontent主要指非代碼配置，如儲存在原始碼控制項中的模板、策略或資料夾結構，但 **** 可以直接在AEM實例上修改。有關詳細資訊，請參閱頁面和範本一章。
 
 用來建置&#x200B;**ui.apps**&#x200B;模組的相同Maven命令可用來建置&#x200B;**ui.content**&#x200B;模組。 歡迎在&#x200B;**ui.content**&#x200B;資料夾中重複上述步驟。
