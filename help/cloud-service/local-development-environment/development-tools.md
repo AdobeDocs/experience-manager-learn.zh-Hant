@@ -1,7 +1,7 @@
 ---
 title: 設定AEM的開發工具作為Cloud Service開發
 description: 設定本機開發機器，其中包含針對本機AEM開發所需的所有基準工具。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,12 +9,12 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1435'
 ht-degree: 1%
 
 ---
@@ -190,9 +190,9 @@ Visual Studio Code是主要建立前端代碼的前端開發人員的理想選�
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__ 是Java開發的常用IDE，支援由Adobe提  __[供的AEM](https://eclipse.adobe.com/aem/dev-tools/)__ 開發工具外掛程式，提供IDE內部GUI，用於編寫JCR內容，並將JCR內容與本機AEM執行個體同步。
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ 是Java開發的常用IDE，支援由Adobe提  __[供的AEM](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ 開發工具外掛程式，提供IDE內部GUI，用於編寫JCR內容，並將JCR內容與本機AEM執行個體同步。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [下載Eclipse](https://www.eclipse.org/ide/)
-+ [下載Eclipse開發工具](https://eclipse.adobe.com/aem/dev-tools/)
++ [下載Eclipse開發工具](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)
