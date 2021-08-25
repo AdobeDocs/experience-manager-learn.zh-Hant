@@ -1,15 +1,15 @@
 ---
 title: 使用Experience Platform Launch和Adobe I/O整合Adobe Experience Manager與Adobe Target
-seo-title: 使用Experience Platform Launch和Adobe I/O整合Adobe Experience Manager與Adobe Target
+seo-title: Integrating Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
 description: 逐步逐步說明如何使用Experience Platform Launch和Adobe I/O將Adobe Experience Manager與Adobe Target整合
-seo-description: 逐步逐步說明如何使用Experience Platform Launch和Adobe I/O將Adobe Experience Manager與Adobe Target整合
-feature: 體驗片段
-topic: 個性化
+seo-description: Step by step walk-through on how to integrate Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1064'
 ht-degree: 2%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 2%
 
 * [AEM製作和](./implementation.md#set-up-aem) 發佈localhost埠4502和4503上的instancerunning
 * **Experience Cloud**
-   * 存取您的組織Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 存取您的組織Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud已布建以下解決方案
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe I/O主控台](https://console.adobe.io)
 
       >[!NOTE]
-      >您應該有在Launch中開發、核准、發佈、管理擴充功能及管理環境的權限。 如果您因無法使用的使用者介面選項而無法完成其中任何步驟，請聯絡您的Experience Cloud管理員以要求存取權。 如需Launch權限的詳細資訊，請[參閱本檔案](https://docs.adobelaunch.com/administration/user-permissions)。
+      >您應該有在Launch中開發、核准、發佈、管理擴充功能及管理環境的權限。 如果您因無法使用的使用者介面選項而無法完成其中任何步驟，請聯絡您的Experience Cloud管理員以要求存取權。 如需Launch權限的詳細資訊，請[參閱本檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html)。
 
 
 * **瀏覽器外掛程式**
@@ -66,7 +66,7 @@ AEM提供立即可用的與Experience Platform Launch整合。 此整合可讓AE
 
 屬性是一個容器，當您將標籤部署至網站時，在其中裝入擴充功能、規則、資料元素和程式庫。
 
-1. 導覽至您的組織[Adobe Experience Cloud](https://experiencecloud.adobe.com/)(<https://>`<yourcompany>`.experiencecloud.adobe.com)
+1. 導覽至您的組織[Adobe Experience Cloud](https://experiencecloud.adobe.com/)(`https://<yourcompany>.experiencecloud.adobe.com`)
 2. 使用Adobe ID登入，並確定您所在的組織正確無誤。
 3. 在解決方案切換器中，按一下&#x200B;**Launch**，然後選取&#x200B;**Go To Launch**&#x200B;按鈕。
 
@@ -75,7 +75,7 @@ AEM提供立即可用的與Experience Platform Launch整合。 此整合可讓AE
 4. 請確定您位在正確的組織中，然後繼續建立Launch屬性。
    ![Experience Cloud — 啟動](assets/using-launch-adobe-io/launch-create-property.png)
 
-   *如需建立屬性的詳細資訊，請 [參閱產](https://docs.adobelaunch.com/administration/companies-and-properties#create-a-property) 品檔案中的建立屬性。*
+   *如需建立屬性的詳細資訊，請 [參閱產](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property) 品檔案中的建立屬性。*
 5. 按一下&#x200B;**新屬性**&#x200B;按鈕
 6. 提供屬性的名稱(例如&#x200B;*AEM Target教學課程*)
 7. 作為域，請輸入&#x200B;*localhost.com*，因為這是運行WKND演示站點的域。 雖然「*Domain*」欄位為必要欄位，但Launch屬性可用於實作它的任何網域。 此欄位的主要用途是預先填入規則產生器中的功能表選項。
