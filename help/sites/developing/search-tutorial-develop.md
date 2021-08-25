@@ -1,18 +1,14 @@
 ---
 title: 簡單搜尋實作指南
 description: 簡單搜尋實作是2017年Summit lab AEM Search Demystified的資料。 本頁包含本實驗的資料。 有關實驗室的指導教程，請查看本頁的「演示」部分中的實驗室工作簿。
-topics: development, search
-audience: developer
-doc-type: tutorial
-activity: develop
 version: 6.3, 6.4, 6.5
-feature: 搜尋
-topic: 開發
+feature: Search
+topic: Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '897'
 ht-degree: 2%
 
 ---
@@ -114,7 +110,7 @@ ht-degree: 2%
 
    Oak會公開一組lucene提供的分析器設定元素，以用於AEM。
 
-   * [Apache Oak Analyzers檔案](http://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
+   * [Apache Oak Analyzers檔案](https://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
       * [Tokenizers](https://cwiki.apache.org/confluence/display/solr/Tokenizers)
       * [濾鏡](https://cwiki.apache.org/confluence/display/solr/Filter+Descriptions)
       * [CharFilters](https://cwiki.apache.org/confluence/display/solr/CharFilterFactories)
