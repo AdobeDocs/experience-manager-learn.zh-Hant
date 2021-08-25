@@ -2,17 +2,17 @@
 title: 影像預設集
 description: Dynamic Media Classic中的影像預設集包含以特定大小、格式、品質和銳利化建立影像所需的所有設定。 影像預設集是動態調整大小的關鍵元件。 當您在Dynamic Media Classic中查看URL時，可以輕鬆查看影像預設集是否在使用中。 了解影像預設集、其為何如此實用，以及如何建立預設集。
 sub-product: dynamic-media
-feature: Dynamic Media Classic，影像預設集
+feature: Dynamic Media Classic, Image Presets
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '670'
 ht-degree: 1%
 
 ---
@@ -70,5 +70,3 @@ Dynamic Media Classic允許三種銳利化類型：簡單銳利化、重新取�
 [影像預設集指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)。用於最佳化影像品質和載入速度的設定。
 
 [影像是一切第2部分：這絕不只是模糊 — 質量與速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。討論使用影像預設集來傳送高品質、快速載入影像的部落格文章。
-
-[影像是網路研討會的一切](https://dynamicmediaseries2019.enterprise.adobeevents.com/)。_影像是所有_&#x200B;系列中所有三個網路研討會的錄影連結。 [網路研討會2](https://seminars.adobeconnect.com/p6lqaotpjnd3) 探討影像預設集。
