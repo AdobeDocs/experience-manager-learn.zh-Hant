@@ -1,14 +1,14 @@
 ---
 title: 使用Brand Portal
 description: AEM作者和AEM Assets Brand Portal整合的影片教學。
-feature: 品牌入口網站
+feature: Brand Portal
 version: 6.3, 6.4, 6.5
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1764'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Brand Portal的Asset Sourcing可用來收集來自協力廠商和團隊的資產
 
 *Experience Manager作者6.5 SP2(6.5.2)或更新版本才能使用Asset Sourcing*
 
-請參閱[為Asset Sourcing啟用Experience Manager作者](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) ，了解如何在Experience Manager作者上設定Asset Sourcing的指示。
+請參閱[為Asset Sourcing啟用Experience Manager作者](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=en) ，了解如何在Experience Manager作者上設定Asset Sourcing的指示。
 
 ## Brand Portal 2019年2月功能與增強功能{#brand-portal-features-and-enhancements-644}
 
