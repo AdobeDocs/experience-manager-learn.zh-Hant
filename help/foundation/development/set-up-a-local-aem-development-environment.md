@@ -2,16 +2,16 @@
 title: 設定本機AEM開發環境
 description: 設定Adobe Experience Manager、AEM本機開發的指南。 涵蓋本機安裝、Apache Maven、整合開發環境和除錯/疑難排解等重要主題。 討論了使用Eclipse IDE、CRXDE-Lite、Visual Studio Code和IntelliJ開發的問題。
 version: 6.4, 6.5
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
 activity: develop
 audience: developer
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2655'
+source-wordcount: '2658'
 ht-degree: 1%
 
 ---
@@ -207,12 +207,12 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ### [!DNL Eclipse] IDE
 
-**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;是Java開發中較常用的IDE之一，這在很大程度上是因為它是開放原始碼，而&#x200B;***free***! Adobe為[!DNL Eclipse]提供&#x200B;**[[!DNL AEM Developer Tools]](https://eclipse.adobe.com/aem/dev-tools/)**&#x200B;外掛程式，讓使用良好的GUI更輕鬆地開發，以便將程式碼與本機AEM例項同步。 對於剛接觸AEM的開發人員，建議使用[!DNL Eclipse] IDE，這在很大程度上是因為[!DNL AEM Developer Tools]支援GUI。
+**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)**&#x200B;是Java開發中較常用的IDE之一，這在很大程度上是因為它是開放原始碼，而&#x200B;***free***! Adobe為[!DNL Eclipse]提供&#x200B;**[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**&#x200B;外掛程式，讓使用良好的GUI更輕鬆地開發，以便將程式碼與本機AEM例項同步。 對於剛接觸AEM的開發人員，建議使用[!DNL Eclipse] IDE，這在很大程度上是因為[!DNL AEM Developer Tools]支援GUI。
 
 #### 安裝與設定
 
 1. 下載並安裝[!DNL Eclipse] IDE for [!DNL Java EE Developers]:[https://www.eclipse.org](https://www.eclipse.org/)
-1. 按照說明安裝[!DNL AEM Developer Tools]插件：[https://eclipse.adobe.com/aem/dev-tools/](https://eclipse.adobe.com/aem/dev-tools/)
+1. 按照說明安裝[!DNL AEM Developer Tools]插件：[https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html](https://eclipse.adobe.com/aem/dev-tools/)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
