@@ -2,17 +2,12 @@
 title: 了解升級的理由
 description: 針對考慮升級至最新版Adobe Experience Manager的客戶，提供主要功能的高階劃分。
 version: 6.5
-sub-product: assets, cloud manager，商務，內容服務， dynamic media, forms, foundation，螢幕， sites
-topics: best-practices, upgrade
-audience: all
-activity: understand
-doc-type: article
-topic: 升級
+topic: Upgrade
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '3529'
+source-wordcount: '3462'
 ht-degree: 3%
 
 ---
@@ -503,7 +498,7 @@ AEM能夠與其他Adobe服務整合：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/release-notes/style-system-fp.html" target="_blank">樣式系統</a>:</strong>
+            <td><strong>樣式系統： </strong>
             使用內容樣式系統定義AEM元件的視覺外觀，以增加元件的重複使用。</td>
             <td> </td>
             <td> </td>
@@ -558,7 +553,7 @@ AEM能夠與其他Adobe服務整合：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-feature-video-understand.html" target="_blank">內容片段</a>:</strong>
+            <td><strong>內容片段：</strong>
             建立並組織與簡報中分離的編輯內容，以方便重複使用。</td>
             <td> </td>
             <td> </td>
@@ -580,8 +575,8 @@ AEM能夠與其他Adobe服務整合：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/release-notes/content-services-fragments-featurepack.html" target="_blank">內容服務</a>:</strong>
-            從AEM將內容匯出為JSON，以便在不同裝置和應用程式間耗用。</td>
+            <td><strong>內容服務： </strong>
+            從AEM將內容匯出為JSON，以便在裝置和應用程式間耗用。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -635,7 +630,7 @@ AEM能夠與其他Adobe服務整合：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/aem-screens-introduction.html" target="_blank">螢幕</a>:</strong>
+            <td><strong>螢幕： </strong>
             管理數位看板和資訊站的體驗。</td>
             <td> </td>
             <td> </td>
@@ -992,8 +987,6 @@ AEM能夠與其他Adobe服務整合：
 
 以下為AEM提供之主要AEM Forms附加元件功能的矩陣。 其中部分功能是在舊版中推出，並在每個版本中新增增量增強功能。
 
-+ [AEM Forms發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/forms.html)
-
 ***✔<sup>+</sup> 此版本中功能的重大增強功能。***
 
 ***✔<sup></sup>  SP表示此功能可通過Service Pack或Feature Pack獲得。***
@@ -1148,7 +1141,7 @@ AEM能夠與其他Adobe服務整合：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/pdf/aem-forms/6-5/WorkbenchHelp.pdf" target="_blank">適用於Forms處理的工作流程(J2EE)</a>:</strong>
+            <td><strong>適用於Forms處理的工作流程(J2EE):</strong>
             運用直覺式IDE，建立複雜的表單/檔案導向工作流程。</td>
             <td></td>
             <td>✔</td>
@@ -1187,8 +1180,6 @@ AEM能夠與其他Adobe服務整合：
 ## 社群功能
 
 以下為AEM提供之主要AEM Communities附加元件功能的矩陣。 其中部分功能是在舊版中推出，並在每個版本中新增增量增強功能。
-
-+ [AEM Communities新功能摘要](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html#main-pars_text)
 
 ***✔<sup>+</sup> 此版本中功能的重大增強功能。***
 
@@ -1628,7 +1619,7 @@ AEM能夠與其他Adobe服務整合：
     </tbody>
 </table>
 
-AEM Communities透過發行版本新增[增強功能](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html)，讓組織可參與並啟用其使用者，方法如下：
+AEM Communities透過發行版本新增增強功能，讓組織可參與及讓使用者：
 
 + **@** mentionsupport（用戶生成的內容）。
 + 改善&#x200B;**Enablement**&#x200B;元件中的&#x200B;**鍵盤導覽**&#x200B;的協助工具。
