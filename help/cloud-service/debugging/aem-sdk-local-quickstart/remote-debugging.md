@@ -1,20 +1,16 @@
 ---
 title: 從遠端除錯AEM SDK
 description: AEM SDK的本機Quickstart可讓您從IDE進行遠端Java除錯，讓您逐步執行AEM中的即時程式碼，以了解確切的執行流程。
-feature: 開發人員工具
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 kt: 5251
-topic: 開發
+topic: Development
+feature: Developer Tools
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+thumbnail: 34338.jpeg
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 1%
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
@@ -45,5 +41,5 @@ $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar a
 ### 設定指示
 
 + [VS程式碼Java遠端除錯程式設定](https://code.visualstudio.com/docs/java/java-debugging)
-+ [設定IntelliJ IDEA遠程調試器](https://www.jetbrains.com/help/idea/run-debug-configuration-remote-debug.html)
++ [設定IntelliJ IDEA遠程調試器](https://www.jetbrains.com/help/idea/tutorial-remote-debug.html)
 + [Eclipse遠端除錯程式設定](https://javapapers.com/core-java/java-remote-debug-with-eclipse/)
