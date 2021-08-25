@@ -1,15 +1,15 @@
 ---
 title: 使用AEM體驗片段和Adobe Target進行個人化
-seo-title: 使用Adobe Experience Manager(AEM)體驗片段和Adobe Target進行個人化
+seo-title: Personalization using Adobe Experience Manager (AEM) Experience Fragments and Adobe Target
 description: 端對端教學課程，說明如何使用Adobe Experience Manager體驗片段和Adobe Target來建立和提供個人化體驗。
-seo-description: 端對端教學課程，說明如何使用Adobe Experience Manager體驗片段和Adobe Target來建立和提供個人化體驗。
-feature: 體驗片段
-topic: 個性化
+seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager Experience Fragments and Adobe Target.
+feature: Experience Fragments
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1692'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ WKND網站計畫通過其網站在全美宣佈&#x200B;**SkateFest挑戰**，並�
 * **AEM**
    * [AEM作者和](./implementation.md#getting-aem) 發佈instancerunning分別在localhost 4502和4503上。
 * **Experience Cloud**
-   * 存取您的組織Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * 存取您的組織Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud已布建以下解決方案
       * [Adobe Target](https://experiencecloud.adobe.com)
 
@@ -79,7 +79,7 @@ WKND網站計畫通過其網站在全美宣佈&#x200B;**SkateFest挑戰**，並�
 
 ### 使用地理定位建立對象 {#marketer-audience}
 
-1. 導覽至您的組織[Adobe Experience Cloud](https://experiencecloud.adobe.com/)(<https://>`<yourcompany>`.experiencecloud.adobe.com)
+1. 導覽至您的組織[Adobe Experience Cloud](https://experiencecloud.adobe.com/)(`<https://<yourcompany>.experiencecloud.adobe.com`)
 1. 使用Adobe ID登入，並確定您所在的組織正確無誤。
 1. 在解決方案切換器中，按一下&#x200B;**Target**，然後按一下&#x200B;**launch** Adobe Target。
 
