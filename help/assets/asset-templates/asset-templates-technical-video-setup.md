@@ -2,10 +2,10 @@
 title: 使用AEM Assets和InDesign Server設定資產範本
 description: 資產範本可讓行銷人員建立、管理及提供數位及列印用的數位資產。 與InDesign伺服器整合時，使用資產範本可更輕鬆地建立行銷手冊、名片、傳單、廣告和貼文卡。 使用AEM設定InDesign伺服器的相關說明請參閱本節。
 version: 6.3, 6.4, 6.5
-topic: 內容管理
+topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 下載InDesign Server試用版 {#download-indesign-server-trial}
 
-下載[InDesign Server試用下載網站](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
+下載[InDesign Server試用下載網站](https://www.adobe.com/devnet/premiere/sdk/cs5/indesign-server-trial-downloads.html)
 
 ## 開始InDesign Server {#starting-indesign-server}
 
