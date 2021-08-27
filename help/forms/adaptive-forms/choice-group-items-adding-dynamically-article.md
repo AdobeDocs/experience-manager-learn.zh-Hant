@@ -1,14 +1,14 @@
 ---
 title: 將項添加到選擇組元件
 description: 動態新增項目至選擇的群組元件
-feature: 適用性表單
+feature: Adaptive Forms
 version: 6.5
-topic: 開發
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 AEM Forms 6.5導入了動態新增項目至最適化Forms選擇群組元件（例如CheckBox、選項按鈕和影像清單）的功能。
 
-[此功能可在Samples Server上即時使用](https://forms.enablementadobe.com/content/samples/samples.html?query=0)。搜尋「動態核取方塊」項目卡片，然後按一下「嘗試」
+[此功能可在Samples Server上即時使用](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)。搜尋「動態核取方塊」項目卡片，然後按一下「嘗試」
 
 
 您可以根據您的使用案例，使用視覺編輯器以及程式碼編輯器來新增項目。
@@ -91,7 +91,7 @@ else
 
 * [下載資產](assets/usingthevisualeditor.zip)
 * 如果尚未安裝Tomcat，請安裝它。 [此處提供安裝tomcat的說明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
-* [在Tomcat中部署SampleRest.war檔案](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
+* [部署此zip檔案中包含的SampleRest.war檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
 * [開啟Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下「建立」 |檔案上傳」，並上傳您在上一步下載的檔案
 * [預覽表單](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)

@@ -1,20 +1,20 @@
 ---
 title: 收件匣自訂
 description: 新增自訂欄，以使用微觀範本顯示其他工作流程資料
-feature: 適用性表單
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 1%
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
@@ -81,7 +81,7 @@ return val;
 
 >[!NOTE]
 >
->本文假設您已安裝此系列中前文[的[範例工作流程](assets/review-workflow.zip)和[範例表單](assets/snap-form.zip)的](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.md)範例文章。
+>本文假設您已安裝此系列中前文[的[範例工作流程](assets/review-workflow.zip)和[範例表單](assets/snap-form.zip)的](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html)範例文章。
 
 * [以管理員使用者身分登入crx](http://localhost:4502/crx/de/index.jsp)
 * [匯入sightly範本](assets/sightly-template.zip)

@@ -1,23 +1,23 @@
 ---
 title: 配置報廢展望面板
-seo-title: 配置報廢展望面板
+seo-title: Configuring Retirement Outlook Panel
 description: 這是建立第一個互動式通訊檔案的多步驟教學課程的10部分。 在本部分中，我們將通過添加文本和圖表元件來配置Retimution Outlook面板。
-seo-description: 這是建立第一個互動式通訊檔案的多步驟教學課程的10部分。 在本部分中，我們將通過添加文本和圖表元件來配置Retimution Outlook面板。
+seo-description: This is part 10 of a multi-step tutorial for creating your first interactive communications document. In this part, we will configure Retirement Outlook Panel by adding text and chart components.
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 1%
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 1%
 
 * 按一下「資產」圖示，然後套用篩選器以顯示「檔案片段」類型的資產。 將RetirementIncomeOutlook文檔片段拖放到「左面板」目標區域。
 
-* 有關將文檔片段添加到內容區域，可以將[引用到此頁](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html)。
+* 有關將文檔片段添加到內容區域，可以將[引用到此頁](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html)。
 
 ## 添加估計月收入表 {#adding-estimated-monthly-income-chart}
 

@@ -1,21 +1,21 @@
 ---
 title: AEM Forms中的多序圖
-seo-title: AEM Forms中的多序圖
+seo-title: Multi Series Charts in AEM Forms
 description: 建立適當的表單資料模型，以在打印和Web通道文檔中建立多系列圖表。
-seo-description: 建立適當的表單資料模型，以在打印和Web通道文檔中建立多系列圖表。
-feature: 互動式通訊
+seo-description: Create appropriate Form Data Model to create multi series charts in print and web channel documents.
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 1%
+source-wordcount: '279'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +45,7 @@ AEM Forms 6.5導入了建立和設定多個系列圖表的功能。 多個系列
 
 * [使用AEM Package Manager下載並匯入MutualFundFactSheet.zip。](assets/mutualfundfactsheet.zip)
 * [將SeriesChartSampleData.json下載至硬碟。](assets/serieschartsampledata.json) 這是將用來填入圖表的範例資料。
-* [導覽至Forms和檔案。](https://helpx.adobe.com/aem/forms.html/content/dam/formsanddocuments.html)
+* [導覽至Forms和檔案。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 輕輕選擇「MutualFundGrowthFactSheet」互動式通信模板。
 * 按一下預覽 |上傳範例資料。
 * 瀏覽至本文提供的範例資料檔案。

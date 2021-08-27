@@ -1,17 +1,17 @@
 ---
 title: 部署範例
 description: 取得在本機AEM Forms執行個體上執行的使用案例
-feature: 適用性表單
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6602
 thumbnail: 6602.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '378'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,8 @@ ht-degree: 1%
 ## 部署以下OSGi套件組合
 
 部署具有[代碼的包，以儲存和從資料庫](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)中提取資料
-部署[DevelopingWithServiceUser套件組合](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
+下載並解壓縮[developing-with-service-user.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/developing-with-service-user.zip)。
+使用Felix Web主控台部署DevelopingWithServiceUser.jar檔案。
 
 ## 部署客戶端庫
 

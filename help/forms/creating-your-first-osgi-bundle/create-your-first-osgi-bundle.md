@@ -2,14 +2,14 @@
 title: 使用AEM Forms建立您的第一個OSGi套件組合
 description: 使用Maven和Eclipse建立您的第一個OSGi套件組合
 version: 6.4,6.5
-feature: 適用性表單
-topic: 開發
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 2%
+source-wordcount: '840'
+ht-degree: 1%
 
 ---
 
@@ -40,7 +40,7 @@ OSGi套件是Java™封存檔案，包含Java程式碼、資源，以及說明�
 Maven是主要用於Java專案的建置自動化工具。 請按照以下步驟在本地系統上安裝maven。
 
 * 在C驅動器中建立名為`maven`的資料夾
-* 下載[二進位zip封存](http://maven.apache.org/download.cgi)
+* 下載[二進位zip封存](https://maven.apache.org/download.cgi)
 * 將zip封存的內容解壓縮至`c:\maven`
 * 建立名為`M2_HOME`的環境變數，其值為`C:\maven\apache-maven-3.6.0`。 在我的案例中，**mvn**&#x200B;版本為3.6.0。撰寫本文時，最新的maven版本為3.6.3
 * 將`%M2_HOME%\bin`新增至路徑

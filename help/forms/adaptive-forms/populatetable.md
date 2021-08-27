@@ -1,15 +1,15 @@
 ---
 title: '填入最適化表單表格 '
 description: 將表單資料模型服務叫用的結果填入適用性表單表格
-feature: 適用性表單
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: 開發
+topic: Development
 role: User
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 1%
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -26,8 +26,8 @@ Row1會根據服務呼叫傳回的資料而設定為成長。 請注意此處指
 ## 在您的伺服器上部署
 
 [按此處指定的方](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[式安裝Tomcat部署SampleRest.war](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
-[檔案使用AEM套件管 ](assets/amortizationschedule.zip) 理器安裝資產開啟攤銷排程
+[式安裝Tomcat此zip檔案中包含的SampleRest.war檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
+[使用AEM套件管理器安裝 ](assets/amortizationschedule.zip) 資產開啟攤銷排程表
 [](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-表單輸入適當值，然後按一下計算應在您的表單中填入攤銷排程
+單輸入適當值，然後按一下計算應填入您的表單中的攤銷排程
 
