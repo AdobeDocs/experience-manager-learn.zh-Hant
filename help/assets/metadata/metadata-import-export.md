@@ -1,16 +1,16 @@
 ---
 title: 在AEM Assets中使用中繼資料匯入和匯出
 description: 了解如何使用Adobe Experience Manager Assets的匯入和匯出中繼資料功能。 匯入和匯出功能可讓內容作者大量更新現有資產的中繼資料。
-version: 6.3, 6.4, 6.5, cloud-service
-topic: 內容管理
-feature: 中繼資料
+version: 6.3, 6.4, 6.5, Cloud Service
+topic: Content Management
+feature: Metadata
 role: Admin
 level: Intermediate
 kt: 647, 917
 thumbnail: 22132.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '260'
 ht-degree: 3%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 3%
    * 錯誤：`Dc:Title {{String}}`
 
 * 屬性類型不區分大小寫
-* 支援所有有效的[JCR屬性類型](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
+* 支援所有有效的[JCR屬性類型](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
 
 * 多值屬性格式 — `<metadata property name> {{<property type : MULTI }}`
 

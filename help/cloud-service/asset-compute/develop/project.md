@@ -7,9 +7,9 @@ topic: Integrations, Development
 feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -86,7 +86,7 @@ _點進以產生Asset compute專案（無音訊）_
    + 可使用`aio app use`命令生成/更新此檔案。
    + 在此檔案中定義的變數可由命令列上的[匯出變數](../deploy/runtime.md)覆寫。
 
-如需專案結構檢閱的詳細資訊，請檢閱[AdobeProject Firefly專案的解剖](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)。
+如需專案結構檢閱的詳細資訊，請檢閱[AdobeProject Firefly專案的解剖](https://www.adobe.io/project-firefly/docs/guides/)。
 
 開發的大部分發生在開發工作實施的`/actions`資料夾中，以及為自訂Asset compute工作進行寫入測試的`/test/asset-compute`中。
 
