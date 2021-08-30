@@ -6,9 +6,9 @@ version: 6.5
 topic: Development
 role: User
 level: Beginner
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ else
 
 * [下載資產](assets/usingthevisualeditor.zip)
 * 如果尚未安裝Tomcat，請安裝它。 [此處提供安裝tomcat的說明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
-* [部署此zip檔案中包含的SampleRest.war檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
+* [在Tomcat中部署此zip檔案中包含的SampleRest.war檔案](assets/sample-rest.zip)
 * [開啟Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下「建立」 |檔案上傳」，並上傳您在上一步下載的檔案
 * [預覽表單](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)

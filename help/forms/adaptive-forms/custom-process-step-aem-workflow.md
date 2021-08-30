@@ -1,14 +1,14 @@
 ---
 title: 實作自訂程式步驟
 description: 使用自訂處理步驟將適用性表單附件寫入檔案系統
-feature: 工作流程
+feature: Workflow
 version: 6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 建立Maven專案
 
-第一步是使用適當的AdobeMaven原型來建立Maven專案。 詳細步驟列於[article](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en)中。 將maven專案匯入eclipse後，您就可以開始編寫可在處理步驟中使用的第一個OSGi元件。
+第一步是使用適當的AdobeMaven原型來建立Maven專案。 詳細步驟列於[article](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中。 將maven專案匯入eclipse後，您就可以開始編寫可在處理步驟中使用的第一個OSGi元件。
 
 
 ### 建立實施WorkflowProcess的類

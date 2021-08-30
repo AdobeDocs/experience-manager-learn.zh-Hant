@@ -6,9 +6,9 @@ version: 6.4,6.5
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ Row1會根據服務呼叫傳回的資料而設定為成長。 請注意此處指
 
 ## 在您的伺服器上部署
 
-[按此處指定的方](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[式安裝Tomcat此zip檔案中包含的SampleRest.war檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
-[使用AEM套件管理器安裝 ](assets/amortizationschedule.zip) 資產開啟攤銷排程表
+[按此處指定的](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
+[方式安裝Tomcat在您的Tomcat中部署此zip檔案中包含的SampleRest.war檔案](assets/sample-rest.zip)
+[使用AEM套件管理器安裝資 ](assets/amortizationschedule.zip) 產開啟攤銷排程表
 [](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-單輸入適當值，然後按一下計算應填入您的表單中的攤銷排程
+單輸入適當值，然後按一下計算攤銷排程應填入您的表單中
 
