@@ -1,17 +1,14 @@
 ---
 title: 開始開發 AEM Sites - WKND 教學課程
-seo-title: 開始開發 AEM Sites - WKND 教學課程
 description: 剛開發AEM? 需要重新整理最佳實務嗎？ 這是開始的地方！ 本多部分教學課程的目標是教導剛接觸AEM的開發人員如何使用最新標準和技術在AEM中實作網站。
-seo-description: 剛開發AEM? 需要重新整理最佳實務嗎？ 這是開始的地方！ 本多部分教學課程的目標是教導剛接觸AEM的開發人員如何使用最新標準和技術在AEM中實作網站。
-content-type: reference
-topic-tags: introduction
-feature: AEM專案原型，核心元件，頁面編輯器，可編輯的範本
-topic: 開發
+feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+thumbnail: 30476.jpeg
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '300'
 ht-degree: 12%
 
 ---
