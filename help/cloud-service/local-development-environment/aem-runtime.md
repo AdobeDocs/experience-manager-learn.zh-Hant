@@ -1,20 +1,16 @@
 ---
 title: 設定AEM的本機AEM執行階段作為Cloud Service開發
 description: 使用AEM作為Cloud ServiceSDK的Quickstart Jar，設定本機AEM執行階段。
-feature: 開發人員工具
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+feature: Developer Tools
+version: Cloud Service
 kt: 4678, 4677
 thumbnail: 32551.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1729'
 ht-degree: 2%
 
 ---
