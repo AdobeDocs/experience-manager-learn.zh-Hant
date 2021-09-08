@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1601'
 ht-degree: 3%
 
 ---
@@ -51,6 +51,7 @@ ht-degree: 3%
    + [在適用性Forms中自訂提交](adaptive-forms/custom-submit-aem-forms-article.md)
    + [適用性Forms中的驗證碼](adaptive-forms/forms-captcha-feature-video-use.md)
    + [將最適化表單嵌入網頁](adaptive-forms/embed-af-web-page.md)
+   + [建立字串陣列](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [在OSGI工作流程中使用XML中的設定值](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
    + [在OSGI工作流程的JSON中使用設定值](adaptive-forms/setvalue-json-data-in-aem-forms-workflow-article-use.md)
    + [在AEM Forms工作流程中傳送電子郵件元件](adaptive-forms/email-step-aem-workflow-video-use.md)
