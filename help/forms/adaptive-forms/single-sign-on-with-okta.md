@@ -1,14 +1,14 @@
 ---
 title: 使用AEM設定OKTA
 description: 了解使用okta進行單一登入的各種組態設定
-feature: 適用性表單
+feature: Adaptive Forms
 version: 6.5
-topic: 管理
+topic: Administration
 role: Admin
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 3109d406ed4788ab492a148d4eac94f7e5ad9f2d
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -75,11 +75,11 @@ ht-degree: 0%
 導覽至[configMgr](http://localhost:4502/system/console/configMgr)。
 搜尋並開啟「Apache Sling Referrer Filter」。請依照下列指定設定屬性：
 
-* **允許空白**:true
+* **允許空白**:false
 * **允許主機**:IdP的主機名稱（在您的案例中會不同）
 * **允許Regexp主機**:IdP的主機名稱（在您的情況中會不同）Sling反向連結篩選反向連結屬性螢幕擷取
 
-![反向連結篩選](assets/sling-referrer-filter.PNG)
+![反向連結篩選](assets/okta-referrer.png)
 
 #### 為OKTA整合設定DEBUG記錄
 
