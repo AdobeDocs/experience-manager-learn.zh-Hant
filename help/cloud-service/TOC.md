@@ -2,11 +2,11 @@
 user-guide-title: Adobe Experience Manager as a Cloud Service 教學課程
 user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程的系列。
 breadcrumb-title: AEM as a Cloud Service 教學課程
-sub-product: 雲端服務
+sub-product: cloud-service
 team: TM
-source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
+source-git-commit: 4c9d836881ad7cccd31c55fa5eddc24dff1200cd
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '516'
 ht-degree: 21%
 
 ---
@@ -89,6 +89,18 @@ ht-degree: 21%
 + 遷移{#migration}
    + [內容轉移工具](./migration/content-transfer-tool.md)
    + [大量匯入資產](./migration/bulk-import.md)
+   + Cloud Acceleration Manager {#cloud-acceleration-manager}
+      + [簡介](./migration/cloud-acceleration-manager/introduction.md)
+      + [Readiness and Best Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
+      + [實施階段](./migration/cloud-acceleration-manager/implementation-phase.md)
+      + [內容轉移工具](./migration/cloud-acceleration-manager/content-transfer-tool.md)
+      + [程式碼重構工具](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
+      + [Code Repository Modernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
+      + [Dispatcher 轉換工具](./migration/cloud-acceleration-manager/dispatcher-converter.md)
+      + [索引轉換器](./migration/cloud-acceleration-manager/index-converter.md)
+      + [資產工作流程移轉工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
+      + [導覽Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
+      + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + 表單{#forms}
    + 建立最適化表單{#create-first-af}
       + [簡介](./forms/create-first-af/introduction.md)
@@ -104,35 +116,37 @@ ht-degree: 21%
       + [添加和配置工具欄](./forms/create-first-af/add-configure-toolbar.md)
    + Document CloudAPI和AEM Forms CS{#doc-cloud-sdk}
       + [簡介](./forms/doc-cloud-sdk/introduction.md)
-      + [建立AdobeIO項目](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
-      + [建立OSGI設定](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [建立Adobe I/O專案](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [建立OSGi配置](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
       + [定義介面](./forms/doc-cloud-sdk/create-interface.md)
       + [實作介面](./forms/doc-cloud-sdk/implement-interface.md)
       + [建立JSON部件](./forms/doc-cloud-sdk/get-content-analyzer.md)
-      + [自訂處理步驟](./forms/doc-cloud-sdk/custom-process-step.md)
+      + [自訂程式步驟](./forms/doc-cloud-sdk/custom-process-step.md)
    + Azure門戶儲存{#forms-cs-azure-portal}
       + [簡介](./forms/forms-cs-azure-portal/introduction.md)
       + [建立表單資料模型](./forms/forms-cs-azure-portal/create-fdm.md)
       + [將表單資料儲存在Azure儲存中](./forms/forms-cs-azure-portal/create-af.md)
       + [預填表單](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [查詢提交](./forms/forms-cs-azure-portal/query-submitted-data.md)
-   + 建立審核工作流{#create-aem-workflow}
-      + [建立工作流模型](./forms/create-aem-workflow/create-workflow.md)
-      + [觸發工作流程](./forms/create-aem-workflow/configure-af.md)
-   + Adobe Sign搭配AEM Forms{#forms-and-sign}
-      + [簡介](./forms/forms-and-sign/introduction.md)
-      + [Adobe Sign API應用程式](./forms/forms-and-sign/create-sign-api-application.md)
-      + [Adobe 簽署雲端組態](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
-      + [建立最適化表單](./forms/forms-and-sign/create-adaptive-form.md)
-      + [為填寫和簽名進行配置](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-   + 與Salesforce整合{#integrate-with-salesforce}
-      + [簡介](./forms/integrate-with-salesforce/introduction.md)
-      + [建立連線的應用程式](./forms/integrate-with-salesforce/create-connected-app.md)
-      + [建立Swagger檔案](./forms/integrate-with-salesforce/describe-rest-api.md)
-      + [建立資料來源](./forms/integrate-with-salesforce/create-data-source.md)
-      + [建立表單資料模型](./forms/integrate-with-salesforce/create-form-data-model.md)
-      + [測試表單提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
-      + [測試點按事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
+
+
+      + 建立審核工作流{#create-aem-workflow}
+         + [建立工作流模型](./forms/create-aem-workflow/create-workflow.md)
+         + [觸發工作流程](./forms/create-aem-workflow/configure-af.md)
+      + Adobe Sign搭配AEM Forms{#forms-and-sign}
+         + [簡介](./forms/forms-and-sign/introduction.md)
+         + [Adobe Sign API應用程式](./forms/forms-and-sign/create-sign-api-application.md)
+         + [Adobe 簽署雲端組態](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+         + [建立最適化表單](./forms/forms-and-sign/create-adaptive-form.md)
+         + [為填寫和簽名進行配置](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+      + 與Salesforce整合{#integrate-with-salesforce}
+         + [簡介](./forms/integrate-with-salesforce/introduction.md)
+         + [建立連線的應用程式](./forms/integrate-with-salesforce/create-connected-app.md)
+         + [建立Swagger檔案](./forms/integrate-with-salesforce/describe-rest-api.md)
+         + [建立資料來源](./forms/integrate-with-salesforce/create-data-source.md)
+         + [建立表單資料模型](./forms/integrate-with-salesforce/create-form-data-model.md)
+         + [測試表單提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+         + [測試點按事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset compute擴展性{#asset-compute}
    + [概覽](./asset-compute/overview.md)
    + 設定{#set-up}
