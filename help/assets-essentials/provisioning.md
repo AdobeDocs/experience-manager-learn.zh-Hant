@@ -3,18 +3,17 @@ title: 布建Assets Essentials
 description: 了解如何使用Cloud Manager部署Assets Essentials，並布建使用者存取權。
 version: cloud-service
 feature: Assets Essentials
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
 kt: 8020
 thumbnail: 335952.jpeg
-source-git-commit: b247bb18eab3e610d40d3e01a63ba7e311fafde0
+source-git-commit: 7fde77ac287d01ce2ad4924b2b10939d8df4c3e5
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # 布建Assets Essentials
 
