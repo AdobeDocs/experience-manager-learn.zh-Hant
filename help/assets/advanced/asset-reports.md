@@ -1,24 +1,23 @@
 ---
 title: AEM Assets中的資產報表
-description: 'AEM Assets提供企業級報告架構，可透過直覺式的使用者體驗，針對大型存放庫進行擴充。 '
-feature: 資產報表
-topic: 管理
+description: AEM Assets提供企業級報告架構，可透過直覺式的使用者體驗，針對大型存放庫進行擴充。
+feature: Asset Reports
+topic: Administration
 role: User
 level: Intermediate
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 648
 thumbnail: 22140.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 8ac84d4e-59c1-4dde-a06e-a94458664ba7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 2%
+source-wordcount: '43'
+ht-degree: 0%
 
 ---
-
 
 # 資產報表{#using-reports-in-aem-assets}
 
 AEM Assets提供企業級報告架構，可透過直覺式的使用者體驗，針對大型存放庫進行擴充。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22140/?quality=12&learn=on)
-

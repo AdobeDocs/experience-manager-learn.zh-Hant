@@ -1,20 +1,20 @@
 ---
 title: 使用Analysis Workspace分析資料
 description: 了解如何將從Adobe Experience Manager網站擷取的資料對應至Adobe Analytics報表套裝中的量度和維度。 了解如何使用Adobe Analytics的Analysis Workspace功能，建立詳細的報表控制面板。
-version: cloud-service
+version: Cloud Service
 topic: Integrations
-feature: Adobe用戶端資料層
+feature: Adobe Client Data Layer
 role: User
 level: Intermediate
 kt: 6409
 thumbnail: KT-6296.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2179'
 ht-degree: 0%
 
 ---
-
 
 # 使用Analysis Workspace分析資料
 
@@ -265,4 +265,3 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 ## 恭喜！
 
 您剛學習如何將從Adobe Experience Manager網站擷取的資料對應至Adobe Analytics報表套裝中的量度和維度、對量度執行分類，以及使用Adobe Analytics的Analysis Workspace功能建立詳細的報表控制面板。
-

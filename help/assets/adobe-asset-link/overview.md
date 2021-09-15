@@ -1,15 +1,15 @@
 ---
 title: Adobe資產連結和AEM
 description: 'Adobe Experience Manager資產可供設計人員和創意使用者在喜愛的Adobe Creative Cloud案頭應用程式中使用。 適用於Adobe Creative Cloud for enterprise的Adobe資產連結擴充功能可擴充在Adobe XD、Photoshop、InDesign和Illustrator等Creative Cloud工具中，搜尋及瀏覽、排序、預覽、上傳資產、結帳、修改、登入及檢視AEM資產的中繼資料。 '
-feature: Adobe資產連結
-version: 6.4, 6.5, cloud-service
-topic: 內容管理
+feature: Adobe Asset Link
+version: 6.4, 6.5, Cloud Service
+topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '992'
 ht-degree: 1%
 
 ---

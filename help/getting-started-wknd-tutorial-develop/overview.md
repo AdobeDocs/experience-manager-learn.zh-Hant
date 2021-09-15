@@ -1,9 +1,9 @@
 ---
 title: AEM Sites - WKND 教學課程快速入門
 description: AEM Sites - WKND 教學課程快速入門. WKND教學課程是多部分教學課程，專為剛接觸Adobe Experience Manager的開發人員所設計。 本教學課程會逐步說明虛擬生活風格品牌WKND的AEM網站實作。 本教學課程涵蓋基本主題，例如專案設定、主要原型、核心元件、可編輯範本、用戶端程式庫和元件開發。
-sub-product: Sites
+sub-product: sites
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -11,17 +11,17 @@ KT: 4132
 mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
-feature: 核心元件、頁面編輯器、可編輯的範本、AEM專案原型
-topic: 內容管理、開發
+feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
+topic: Content Management, Development
 role: Developer
 level: Beginner
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '619'
 ht-degree: 4%
 
 ---
-
 
 # AEM Sites - WKND 教學課程快速入門 {#introduction}
 

@@ -1,19 +1,19 @@
 ---
 title: 搭配使用Dynamic Media和AEM Sites核心元件
 description: 了解如何搭配Adobe Experience Manager Sites使用Dynamic Media。 影像元件是Experience Manager核心元件的一部分，已內建Dynamic Media支援。 影像元件可讓內容作者使用Dynamic Media的功能，例如AEM Sites頁面上的影像預設集、智慧型裁切和影像修飾元。
-feature: 核心元件，智慧型裁切，影像描述檔，影像預設集
-version: cloud-service
-topic: 內容管理
+feature: Core Components, Smart Crop, Image Profiles, Image Presets
+version: Cloud Service
+topic: Content Management
 role: User
 level: Beginner
 kt: 6630
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 12fa3622-428a-40c1-b47f-fa55c2858896
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '141'
 ht-degree: 1%
 
 ---
-
 
 # 搭配使用Dynamic Media和AEM Sites核心元件 {#dynamic-media-sites-core-components}
 

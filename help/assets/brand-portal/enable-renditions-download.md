@@ -3,17 +3,17 @@ title: 如何在Brand Portal中啟用轉譯下載。
 description: 在Brand Portal中啟用下載轉譯的步驟
 role: Developer
 level: Beginner
-version: cloud-service
-feature: 品牌入口網站
-topic: 開發
+version: Cloud Service
+feature: Brand Portal
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 78664b38-b64a-4220-bb7a-83f09bdd441a
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 6%
+source-wordcount: '43'
+ht-degree: 0%
 
 ---
-
 
 # 在Brand Portal中啟用轉譯下載
 

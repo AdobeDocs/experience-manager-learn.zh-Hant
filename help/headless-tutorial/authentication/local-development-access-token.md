@@ -1,24 +1,24 @@
 ---
 title: 本機開發存取權杖
 description: AEM本機開發存取權杖可用來加速與AEM整合的開發，以Cloud Service以程式設計方式與AEM製作或透過HTTP發佈服務互動。
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
-feature: API
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330477.jpg
-topic: 無頭式整合
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
-
 
 # 本機開發存取權杖
 

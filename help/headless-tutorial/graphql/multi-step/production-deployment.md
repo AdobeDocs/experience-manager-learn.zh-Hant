@@ -1,21 +1,21 @@
 ---
 title: 使用AEM發佈服務進行生產部署 — 開始使用AEM無周邊功能 — GraphQL
 description: 了解AEM製作和發佈服務，以及無頭式應用程式的建議部署模式。 在本教學課程中，了解如何使用環境變數根據目標環境動態變更GraphQL端點。 了解如何正確設定AEM以進行跨原始資源共用(CORS)。
-version: cloud-service
-feature: 內容片段， GraphQL API
-topic: 無頭式、內容管理
+version: Cloud Service
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 7131
 thumbnail: KT-7131.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2367'
+source-wordcount: '2360'
 ht-degree: 1%
 
 ---
-
 
 # 使用AEM Publish服務進行生產部署
 

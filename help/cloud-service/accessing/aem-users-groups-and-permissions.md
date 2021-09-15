@@ -1,20 +1,20 @@
 ---
 title: AEM使用者、群組和權限
 description: Adobe Experience Manager以AdobeIMS使用者、使用者群組和產品設定檔為基礎，提供使用者可自訂的AEM存取權。 了解如何定義AEM群組和權限，以及這些群組和權限如何與AdobeIMS抽象化功能搭配運作，以提供順暢且可自訂的AEM存取權。
-version: cloud-service
-topic: 管理、安全
-feature: 使用者和群組
+version: Cloud Service
+topic: Administration, Security
+feature: User and Groups
 role: Admin
 level: Beginner
 kt: 6060
 thumbnail: 39151.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 7d7942ae-7e38-4abd-9900-5b8e3542f5e1
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 8%
+source-wordcount: '221'
+ht-degree: 9%
 
 ---
-
 
 # AEM使用者、群組和權限
 

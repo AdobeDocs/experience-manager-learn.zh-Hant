@@ -1,20 +1,20 @@
 ---
 title: 如何與AEM中的資產產生關連及不相關
 description: 了解如何在AEM中建立和管理資產之間的關係。
-feature: 資產管理
+feature: Asset Management
 role: User
 level: Beginner
-version: cloud-service
+version: Cloud Service
 kt: 6969
 thumbnail: 331107.jpg
-topic: 內容管理
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+topic: Content Management
+exl-id: a05f995e-11bb-4b28-9aed-3033071244f7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '37'
+source-wordcount: '33'
 ht-degree: 0%
 
 ---
-
 
 # 關聯和不關聯
 

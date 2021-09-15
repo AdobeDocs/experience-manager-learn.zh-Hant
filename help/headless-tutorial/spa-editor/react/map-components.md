@@ -1,10 +1,10 @@
 ---
 title: 將SPA元件對應至AEM元件 |開始使用AEM SPA Editor and React
 description: 了解如何使用AEM SPA Editor JS SDK將React元件對應至Adobe Experience Manager(AEM)元件。 元件對應可讓使用者在AEM SPA編輯器中對SPA元件進行動態更新，與傳統AEM製作類似。 您也將學習如何使用現成可用的AEM React核心元件。
-sub-product: Sites
+sub-product: sites
 feature: SPA Editor
 topics: development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 4854
@@ -12,13 +12,13 @@ thumbnail: 4854-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2263'
 ht-degree: 0%
 
 ---
-
 
 # 將SPA元件對應至AEM元件 {#map-components}
 
@@ -432,4 +432,3 @@ React核心元件已提供SPA影像元件。 不過，如果您想要其他實�
    ```
 
    這是擴充和實作您自己元件的簡介。
-

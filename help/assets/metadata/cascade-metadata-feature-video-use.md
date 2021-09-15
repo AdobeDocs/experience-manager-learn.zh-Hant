@@ -1,20 +1,20 @@
 ---
 title: 在AEM Assets中使用階層式中繼資料
 description: 進階中繼資料管理可讓使用者建立階層式欄位規則，以在AEM Assets中的中繼資料之間形成內容關係。 以下影片示範欄位需求、可見度和內容選擇的新動態規則。 影片也詳細說明管理員將這些規則套用至自訂中繼資料結構所需的步驟。
-version: 6.3, 6.4, 6.5, cloud-service
-topic: 內容管理
-feature: 中繼資料
+version: 6.3, 6.4, 6.5, Cloud Service
+topic: Content Management
+feature: Metadata
 role: User
 level: Intermediate
 kt: 616
 thumbnail: 20702.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 73e793e0-a20e-4954-ba1a-471b2cd85120
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
-
 
 # 在AEM Assets中使用階層式中繼資料{#using-cascading-metadata-in-aem-assets}
 

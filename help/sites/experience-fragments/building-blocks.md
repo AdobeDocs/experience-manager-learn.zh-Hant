@@ -1,22 +1,22 @@
 ---
 title: 如何使用體驗片段建置區塊
 description: 建置區塊是體驗片段的子功能，可跨體驗片段的變異重複使用製作的元件。
-sub-product: 網站，內容服務
-version: cloud-service
-feature: 體驗片段
-topic: 內容管理
+sub-product: sites, content-services
+version: Cloud Service
+feature: Experience Fragments
+topic: Content Management
 level: Beginner, Intermediate
 role: Architect, Developer, Admin, User
 doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: cc758602-3c20-4eca-9b87-f04b6dc96bfe
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 1%
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
-
 
 # 具有體驗片段的建置區塊 {#building-blocks}
 

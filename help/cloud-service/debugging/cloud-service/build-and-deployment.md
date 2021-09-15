@@ -1,24 +1,24 @@
 ---
 title: 建置和部署
 description: AdobeCloud Manager可協助程式碼建立和部署至AEM作為Cloud Service。 建置程式的步驟期間可能會發生失敗，需要採取行動加以解決。 本指南會逐步說明部署中的常見故障，以及如何以最佳方式處理這些故障。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2529'
+source-wordcount: '2526'
 ht-degree: 0%
 
 ---
-
 
 # 將AEM作為Cloud Service建置和部署進行偵錯
 

@@ -1,24 +1,24 @@
 ---
 title: 調試Asset compute工作
 description: asset compute背景工作可透過數種方式進行除錯，從簡單的除錯記錄陳述式，到附加的VS Code（作為遠端除錯工具），再到從AEM作為Cloud Service啟動的Adobe I/O Runtime中提取啟動記錄。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
-topic: 整合，開發
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
-
 
 # 調試Asset compute工作
 

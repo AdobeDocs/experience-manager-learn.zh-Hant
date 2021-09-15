@@ -1,23 +1,23 @@
 ---
 title: 除錯AEM SDK
 description: AEM SDK是開發人員使用的主要開發環境，可支援多種方式來除錯AEM和部署的應用程式。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: null
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: e27cf3de-ef89-44d7-819b-157f85f5a80f
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 1%
+source-wordcount: '209'
+ht-degree: 0%
 
 ---
-
 
 # 除錯AEM SDK
 

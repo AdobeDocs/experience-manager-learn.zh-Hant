@@ -1,9 +1,9 @@
 ---
 title: AEM SPA Editor and Angular 快速入門
 description: 建立可在 Adobe Experience Manager (AEM) 中使用 WKND SPA 編輯的第一個 Angular Single Page Application (SPA)。了解如何使用 Angular JS 框架和 AEM 的 SPA Editor 建立 SPA。此多部分教學課程會逐步引導您為虛擬生活風格品牌 WKND 實作 Angular 應用程式。教學課程涵蓋 SPA 端對端建立和 AEM 整合作業。
-sub-product: Sites
+sub-product: sites
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -13,13 +13,13 @@ feature: SPA Editor
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '698'
 ht-degree: 92%
 
 ---
-
 
 # 建立您在 AEM 的第一個 Angular SPA {#introduction}
 

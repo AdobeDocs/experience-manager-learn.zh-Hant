@@ -1,24 +1,24 @@
 ---
 title: 從外部應用程式驗證AEM作為Cloud Service
 description: 探索外部應用程式如何使用本機開發存取權杖和服務憑證，以程式設計方式驗證AEM，並透過HTTP與其互動，作為Cloud Service。
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
-feature: API
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330460.jpg
-topic: 無頭式整合
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
+exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
-
 
 # 以代號為基礎的驗證以AEM作為Cloud Service
 

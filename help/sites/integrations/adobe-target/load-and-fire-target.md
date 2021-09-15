@@ -1,24 +1,24 @@
 ---
 title: 載入及觸發Target呼叫
 description: 了解如何使用Launch規則載入、傳遞參數至頁面請求，以及從您的網站頁面觸發Target呼叫。 系統會使用Adobe用戶端資料層來擷取頁面資訊並以參數形式傳遞，此資料層可讓您收集和儲存訪客在網頁上的體驗相關資料，並讓此資料易於存取。
-feature: 核心元件，Adobe用戶端資料層
+feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 6133
 thumbnail: 41243.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '608'
 ht-degree: 1%
 
 ---
-
 
 # 載入及觸發Target呼叫 {#load-fire-target}
 

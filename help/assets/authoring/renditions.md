@@ -1,20 +1,20 @@
 ---
 title: 轉譯
 description: 了解AEM Assets中的轉譯，以及如何預覽這些轉譯。
-feature: 轉譯
+feature: Renditions
 role: User
 level: Beginner
-version: cloud-service
+version: Cloud Service
 kt: 4496
 thumbnail: 32047.jpg
-topic: 內容管理
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+topic: Content Management
+exl-id: 1df0ffd7-fe22-4eef-9428-b228ed0dcf31
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '29'
-ht-degree: 10%
+source-wordcount: '26'
+ht-degree: 7%
 
 ---
-
 
 # 轉譯
 

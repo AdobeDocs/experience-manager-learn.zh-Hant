@@ -1,11 +1,11 @@
 ---
 title: 擴充元件 |開始使用AEM SPA編輯器和Angular
 description: 了解如何擴充現有的核心元件以與AEM SPA編輯器搭配使用。 了解如何將屬性和內容新增至現有元件，是擴充AEM SPA Editor實作功能的強大技術。 了解如何使用委派模式來擴充Sling模型和Sling Resource Merger的功能。
-sub-product: Sites
-feature: SPA編輯器，核心元件
+sub-product: sites
+feature: SPA Editor, Core Components
 doc-type: tutorial
 topics: development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 5871
@@ -13,13 +13,13 @@ thumbnail: 5871-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1961'
 ht-degree: 0%
 
 ---
-
 
 # 擴充核心元件 {#extend-component}
 

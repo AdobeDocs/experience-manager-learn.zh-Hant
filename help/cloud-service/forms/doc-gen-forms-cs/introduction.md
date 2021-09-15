@@ -4,15 +4,15 @@ description: 從外部應用程式中使用文檔生成微服務。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: 文件服務
-topic: 開發
+version: Cloud Service
+feature: Document Services
+topic: Development
 kt: 7432
 thumbnail: 334859.jpg
-source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 4%
+source-wordcount: '91'
+ht-degree: 1%
 
 ---
 

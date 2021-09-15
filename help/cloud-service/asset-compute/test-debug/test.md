@@ -1,24 +1,24 @@
 ---
 title: 測試Asset compute工作
 description: asset compute項目定義了一種模式，以便輕鬆建立和執行Asset compute工作的測試。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
-topic: 整合，開發
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 04992caf-b715-4701-94a8-6257e9bd300c
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
-
 
 # 測試Asset compute工作
 

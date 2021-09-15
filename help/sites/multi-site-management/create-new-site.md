@@ -1,24 +1,24 @@
 ---
 title: 建立國家/地區網站
 description: 了解如何使用「建立網站」精靈，從現有的語言副本建立國家/地區網站。
-feature: 語言副本，多站點管理員
+feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 5849
 thumbnail: 36684.jpg
-topic: 本土化
+topic: Localization
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: db8e2169-7e67-4466-888e-ad85887f4ed1
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 2%
+source-wordcount: '40'
+ht-degree: 0%
 
 ---
-
 
 # 建立國家/地區網站 {#create-country-site}
 

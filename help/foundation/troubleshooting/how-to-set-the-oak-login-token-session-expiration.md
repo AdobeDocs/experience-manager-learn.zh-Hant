@@ -4,13 +4,14 @@ description: 設定Oak Origin代號工作階段過期逾時的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
-version: 6.5, cloud-service
-feature: 開發人員工具
-topic: 管理
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+version: 6.5, Cloud Service
+feature: Developer Tools
+topic: Administration
+exl-id: 940d3cca-6052-40b6-b4f7-c0689ad21c94
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 6%
+source-wordcount: '41'
+ht-degree: 0%
 
 ---
 

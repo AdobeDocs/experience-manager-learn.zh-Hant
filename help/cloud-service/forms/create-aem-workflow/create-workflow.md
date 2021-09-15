@@ -5,22 +5,21 @@ solution: Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: 適用性表單
-topic: 開發
+version: Cloud Service
+feature: Adaptive Forms
+topic: Development
 kt: 7424
 thumbnail: 332434.pg
-source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
+exl-id: 21139665-eef2-4582-a360-bd4b8dafaf6c
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 7%
+source-wordcount: '39'
+ht-degree: 0%
 
 ---
-
 
 # 建立AEM工作流程
 
 使用AEM Forms工作流程元件建立工作流程模型。 使用或分解元件以根據總收入變數的值來分支工作流。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332434?quality=12&learn=on)
-

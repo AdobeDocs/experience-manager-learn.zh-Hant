@@ -1,18 +1,19 @@
 ---
 title: 在Azure Blob儲存中搜尋已提交的AEM Forms資料
 description: 了解如何使用表單資料模型中繼資料服務，在Azure Blob儲存中查詢AEM Forms已提交的資料。
-feature: 適用性表單
+feature: Adaptive Forms
 type: Documentation
 role: Developer
 level: Beginner
-version: cloud-service
+version: Cloud Service
 topic: Integrations
 thumbnail: 335717.jpg
 kt: 8370
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 45738615-4f15-43b0-bdaa-8b72288925ee
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 5%
+source-wordcount: '49'
+ht-degree: 0%
 
 ---
 
@@ -21,5 +22,3 @@ ht-degree: 5%
 了解如何使用AEM Forms的中繼資料服務，在Azure Blob儲存中查詢適用性表單資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335717/?quality=12&learn=on)
-
-

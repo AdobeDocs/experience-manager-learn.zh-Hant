@@ -1,20 +1,20 @@
 ---
 title: 使用置入連結的資產操作
 description: 了解如何使用「置入連結」作業從AEM Assets使用資產。
-sub-product: 資產
-feature: Adobe資產連結
-version: cloud-service
+sub-product: assets
+feature: Adobe Asset Link
+version: Cloud Service
 thumbnail: 34839.jpg
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: b5d0d2e1-22d7-4dd9-9913-c6f4a7cc0234
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '39'
+source-wordcount: '33'
 ht-degree: 0%
 
 ---
-
 
 # 置入已連結{#place-linked}
 

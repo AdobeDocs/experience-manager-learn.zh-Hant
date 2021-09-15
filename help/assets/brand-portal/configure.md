@@ -3,17 +3,17 @@ title: 設定AEM Assets Brand Portal的步驟
 description: 設定AEM Assets Brand Portal
 role: Developer
 level: Beginner
-version: cloud-service
-feature: 品牌入口網站
-topic: 開發
+version: Cloud Service
+feature: Brand Portal
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: cb68afd1-cc5f-430a-8920-9987a3466abb
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '32'
-ht-degree: 9%
+source-wordcount: '29'
+ht-degree: 0%
 
 ---
-
 
 # 設定AEM Assets Brand Portal
 

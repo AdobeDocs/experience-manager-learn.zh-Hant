@@ -1,18 +1,18 @@
 ---
 title: 測試您對本課程理解的簡單練習
 description: 新增額外欄至表格，並新增額外屬性至搜尋准則
-feature: 適用性表單
+feature: Adaptive Forms
 type: Documentation
 role: Developer
 level: Beginner
-version: cloud-service
-topic: 整合a
+version: Cloud Service
+topic: Integrationa
 thumbnail: 335800.jpg
 kt: 8481
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '37'
-ht-degree: 5%
+source-wordcount: '34'
+ht-degree: 0%
 
 ---
 

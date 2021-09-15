@@ -1,20 +1,20 @@
 ---
 title: 使用Creative Cloud服務實現內容自動化
 description: 將Photoshop和Lightroom功能與Adobe Experience Manager Assets內容自動化搭配使用。
-version: cloud-service
-topic: 內容管理
-feature: 資產處理、轉譯
+version: Cloud Service
+topic: Content Management
+feature: Asset Processing, Renditions
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 kt: 7803
 thumbnail: 333197.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: be5ca0e7-54fb-4d19-bf7a-8985b11b3aba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '45'
+source-wordcount: '40'
 ht-degree: 0%
 
 ---
-
 
 # 使用Creative Cloud服務實現內容自動化概述
 

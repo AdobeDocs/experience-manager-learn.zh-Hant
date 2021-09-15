@@ -1,11 +1,11 @@
 ---
 title: 將SPA元件對應至AEM元件 |開始使用AEM SPA編輯器和Angular
 description: 了解如何使用AEM SPA Editor JS SDK將Angular元件對應至Adobe Experience Manager(AEM)元件。 元件對應可讓使用者在AEM SPA編輯器中對SPA元件進行動態更新，與傳統AEM製作類似。
-sub-product: Sites
+sub-product: sites
 feature: SPA Editor
 topics: development
 doc-type: tutorial
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 5311
@@ -13,13 +13,13 @@ thumbnail: 5311-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2384'
+source-wordcount: '2380'
 ht-degree: 0%
 
 ---
-
 
 # 將SPA元件對應至AEM元件 {#map-components}
 

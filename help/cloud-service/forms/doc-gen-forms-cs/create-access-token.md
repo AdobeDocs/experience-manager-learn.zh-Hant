@@ -4,15 +4,15 @@ description: 將JSON網頁代號(JWT)與AdobeIMS API交換以取得AEM存取代�
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: 文件服務
-topic: 開發
+version: Cloud Service
+feature: Document Services
+topic: Development
 kt: 8185
 thumbnail: 8185.jpg
-source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 3%
+source-wordcount: '86'
+ht-degree: 0%
 
 ---
 

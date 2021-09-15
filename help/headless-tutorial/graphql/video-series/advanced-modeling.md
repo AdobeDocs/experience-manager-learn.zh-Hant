@@ -1,20 +1,20 @@
 ---
 title: GraphQL的進階模型
 description: 了解如何在Adobe Experience Manager(AEM)中建立內容片段模型之間的關係，以及如何在GraphQL查詢中運用這些關係。
-version: cloud-service
-topic: 無頭式、內容管理
-feature: 內容片段， GraphQL API
+version: Cloud Service
+topic: Headless, Content Management
+feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
 kt: 7620
 thumbnail: 332859.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 7f17d829-544e-4cf2-bd75-b179ffb89bf5
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---
-
 
 # GraphQL的進階模型
 

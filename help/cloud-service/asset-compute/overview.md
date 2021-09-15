@@ -1,24 +1,24 @@
 ---
 title: asset computeAEM as aCloud Service的微服務擴充性
 description: 本教學課程將逐步說明如何建立簡單的Asset compute背景工作，透過將原始資產裁切至圓圈來建立資產轉譯，並套用可設定的對比度和亮度。 雖然工作程式本身是基本的，但本教學課程會使用它來探索建立、開發和部署自訂Asset compute程式，以便與AEM作為Cloud Service搭配使用。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: 整合，開發
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 575b12f9-b57f-41f7-bd39-56d242de4747
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
-
 
 # asset compute微服務的可擴充性
 

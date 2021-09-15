@@ -1,20 +1,20 @@
 ---
 title: 使用AEM Assets的影像智慧標籤
 description: 影像的智慧標籤會根據影像內容自動聰明地新增中繼資料標籤至影像資產，以增強AEM搜尋功能。
-topic: 內容管理
-feature: 智慧標記
+topic: Content Management
+feature: Smart Tags
 role: User
 level: Intermediate
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 645
 thumbnail: 17019.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 4%
+source-wordcount: '218'
+ht-degree: 3%
 
 ---
-
 
 # 影像智慧標籤
 

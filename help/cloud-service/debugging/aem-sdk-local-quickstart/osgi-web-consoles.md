@@ -1,23 +1,23 @@
 ---
 title: 使用OSGi Web主控台除錯AEM SDK
 description: AEM SDK的本機Quickstart有一個OSGi Web主控台，提供本機AEM執行階段的各種資訊和簡介，有助於了解應用程式如何辨識，以及在AEM中的功能。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5265, 5366, 5267
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 0929bc1a-376c-4e16-a540-a276fd5af164
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 1%
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
-
 
 # 使用OSGi Web主控台除錯AEM SDK
 

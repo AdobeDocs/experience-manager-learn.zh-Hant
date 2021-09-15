@@ -1,21 +1,21 @@
 ---
 title: 中繼資料設定檔
 description: 中繼資料設定檔可讓預設中繼資料自動套用至資產資料夾內的資產，有助於減輕AEM使用者管理中繼資料的負擔，並提升中繼資料的一致性。
-sub-product: 資產
-feature: 中繼資料
-version: cloud-service
+sub-product: assets
+feature: Metadata
+version: Cloud Service
 kt: 4984
 thumbnail: 33974.jpg
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 1e35da82-08e7-44c2-aec6-79d8ea74d556
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 7%
+source-wordcount: '62'
+ht-degree: 6%
 
 ---
-
 
 # 中繼資料設定檔
 

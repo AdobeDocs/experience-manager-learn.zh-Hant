@@ -1,21 +1,21 @@
 ---
 title: 下載和上傳
 description: 了解如何使用Asset Link面板，從AEM Assets下載資產檔案，以及將資產檔案上傳至。
-sub-product: 資產
-feature: Adobe資產連結
-version: 6.4, 6.5, cloud-service
+sub-product: assets
+feature: Adobe Asset Link
+version: 6.4, 6.5, Cloud Service
 kt: 4908
 thumbnail: 33885.jpg
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: dc69a95c-ab0b-4a2c-80a3-43a6a052c545
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
-
 
 # 下載和上傳 {#download-and-upload}
 

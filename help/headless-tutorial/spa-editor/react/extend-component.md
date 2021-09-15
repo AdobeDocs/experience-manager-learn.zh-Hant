@@ -1,22 +1,22 @@
 ---
 title: 擴充核心元件 |開始使用AEM SPA Editor and React
 description: 了解如何擴充現有核心元件的JSON模型以與AEM SPA編輯器搭配使用。 了解如何將屬性和內容新增至現有元件，是擴充AEM SPA Editor實作功能的強大技術。 了解如何使用委派模式來擴充Sling模型和Sling Resource Merger的功能。
-sub-product: Sites
-feature: SPA編輯器，核心元件
+sub-product: sites
+feature: SPA Editor, Core Components
 doc-type: tutorial
-version: cloud-service
+version: Cloud Service
 kt: 5879
 thumbnail: 5879-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
-
 
 # 擴充核心元件 {#extend-component}
 
@@ -495,4 +495,3 @@ ht-degree: 0%
 ## 恭喜！ {#congratulations}
 
 恭喜您，您已學會如何使用擴充AEM元件，以及Sling模型和對話方塊如何與JSON模型搭配運作。
-

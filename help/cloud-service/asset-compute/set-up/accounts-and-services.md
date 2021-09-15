@@ -1,24 +1,24 @@
 ---
 title: 設定帳戶和服務以提高Asset compute的可擴充性
 description: 開發Asset compute背景工作時，需要存取帳戶和服務，包括AEM as aCloud Service、AdobeProject Firefly，以及Microsoft或Amazon提供的雲端儲存空間。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
-topic: 整合，開發
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '627'
 ht-degree: 1%
 
 ---
-
 
 # 設定帳戶和服務
 

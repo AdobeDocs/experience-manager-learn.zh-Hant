@@ -1,20 +1,20 @@
 ---
 title: 建立GraphQL查詢
 description: 了解如何建立GraphQL查詢以從Adobe Experience Manager(AEM)傳回內容，以及如何使用GraphiQL工具來快速測試、調整和除錯查詢。
-version: cloud-service
-topic: 無頭式、內容管理
-feature: 內容片段， GraphQL API
+version: Cloud Service
+topic: Headless, Content Management
+feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
 kt: 7621
 thumbnail: 332860.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: c4f2e8f5-6acf-4efb-bdec-84d264568856
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
-
 
 # 建立GraphQL查詢
 

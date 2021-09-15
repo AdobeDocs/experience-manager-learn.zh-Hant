@@ -1,20 +1,20 @@
 ---
 title: 使用Adobe Analytics收集頁面資料
 description: 使用事件導向的Adobe用戶端資料層，收集使用Adobe Experience Manager建置之網站上使用者活動的相關資料。 了解如何使用Experience Platform Launch中的規則來監聽這些事件，並將資料傳送至Adobe Analytics報表套裝。
-version: cloud-service
+version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '2375'
 ht-degree: 1%
 
 ---
-
 
 # 使用Adobe Analytics收集頁面資料
 

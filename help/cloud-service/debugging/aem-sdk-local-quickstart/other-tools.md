@@ -1,23 +1,23 @@
 ---
 title: 用於除錯AEM SDK的其他工具
 description: 其他各種工具皆可協助您對AEM SDK的本機Quickstart進行除錯。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 11fb83e9-dbaf-46e5-8102-ae8cc716c6ba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 5%
+source-wordcount: '217'
+ht-degree: 3%
 
 ---
-
 
 # 用於除錯AEM SDK的其他工具
 
@@ -54,4 +54,3 @@ QueryBuilder除錯工具是網頁型工具，可協助您使用AEM [QueryBuilder
 QueryBuilder Debugger位於：
 
 + [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
-

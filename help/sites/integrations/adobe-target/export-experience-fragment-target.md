@@ -1,24 +1,24 @@
 ---
 title: 將體驗片段匯出至Adobe Target
 description: 了解如何發佈和匯出AEM體驗片段為Adobe Target選件。
-feature: 體驗片段
+feature: Experience Fragments
 topics: integrations, authoring
 audience: all
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 6350
 thumbnail: 41245.jpg
 topic: Integrations
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 4%
+source-wordcount: '192'
+ht-degree: 2%
 
 ---
-
 
 # 將體驗片段匯出至Adobe Target {#experience-fragment-target}
 

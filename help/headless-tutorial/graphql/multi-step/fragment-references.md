@@ -1,21 +1,21 @@
 ---
 title: 使用片段參考功能進階資料模型 — AEM無周邊功能快速入門 — GraphQL
 description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 了解如何將片段參考功能用於進階資料模型，以及如何建立兩個不同內容片段之間的關係。 了解如何修改GraphQL查詢以包含參考模型的欄位。
-version: cloud-service
+version: Cloud Service
 mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
-feature: 內容片段， GraphQL API
-topic: 無頭式、內容管理
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: d85b7ac3-42c1-4655-9394-29a797c0e1d7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '847'
 ht-degree: 1%
 
 ---
-
 
 # 使用片段參考的進階資料模型
 

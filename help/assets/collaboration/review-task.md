@@ -1,21 +1,21 @@
 ---
 title: 評論任務
 description: 探索AEM Assets的「審核工作」如何促進最常見的審核和核准工作流程。
-sub-product: 資產
-feature: 協作
-version: cloud-service
+sub-product: assets
+feature: Collaboration
+version: Cloud Service
 kt: 4670
 thumbnail: 32050.jpg
-topic: 協作
+topic: Collaboration
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: f0ce734b-c342-4005-96c7-185245a1a3d7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 11%
+source-wordcount: '32'
+ht-degree: 12%
 
 ---
-
 
 # 評論任務
 

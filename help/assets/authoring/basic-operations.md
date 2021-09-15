@@ -1,20 +1,20 @@
 ---
 title: 基本操作
 description: 了解AEM Assets的基本操作，包括如何建立資料夾，以及上傳、複製、移動和刪除資產。
-feature: 資產管理
+feature: Asset Management
 role: User
 level: Beginner
-version: cloud-service
+version: Cloud Service
 kt: 4299
 thumbnail: 32044.jpg
-topic: 內容管理
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+topic: Content Management
+exl-id: d5b25fcc-4c8d-4720-a14e-eaf768873415
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '48'
 ht-degree: 0%
 
 ---
-
 
 # 基本操作
 

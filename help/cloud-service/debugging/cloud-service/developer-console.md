@@ -1,24 +1,24 @@
 ---
 title: 開發人員主控台
 description: AEM as a Cloud Service針對每個環境提供開發人員主控台，可公開執行中AEM服務的各種詳細資訊，有助於除錯。
-feature: 開發人員工具
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 048a37a9813e7b61ff069c4606b8d23cc6b6844f
+exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1348'
 ht-degree: 0%
 
 ---
-
 
 # 使用開發人員主控台除錯AEM作為Cloud Service
 

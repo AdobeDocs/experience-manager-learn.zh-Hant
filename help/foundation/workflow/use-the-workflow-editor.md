@@ -1,20 +1,20 @@
 ---
 title: 如何在AEM中建立工作流程
 description: 工作流允許在Experience Manager中進行業務流程管理，並用於自動處理內容，以及促進需要人力決策的治理和流程。
-version: 6.4, 6.5, cloud-service
-feature: 工作流程
-topic: 內容管理
+version: 6.4, 6.5, Cloud Service
+feature: Workflow
+topic: Content Management
 level: Intermediate
 role: Admin, Developer
 kt: 657
 thumbnail: 22201.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 8ec12629-3acd-4958-b25c-0ae0b97ce244
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 1%
+source-wordcount: '87'
+ht-degree: 0%
 
 ---
-
 
 # 使用工作流程編輯器
 

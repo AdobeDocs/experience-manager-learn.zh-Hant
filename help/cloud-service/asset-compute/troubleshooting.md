@@ -1,24 +1,24 @@
 ---
 title: 疑難排解AEM Assets的Asset compute擴充性
 description: 以下是開發和部署AEM Assets的自訂Asset compute背景工作時可能遇到的常見問題和錯誤索引，以及解決方案。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, metadata, development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: 整合，開發
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1239'
 ht-degree: 0%
 
 ---
-
 
 # 疑難排解Asset compute的擴充性
 
@@ -166,5 +166,3 @@ asset compute開發工具可能會進入其提取過時資料的狀態，在&#x2
 + __錯誤：資__ 產處理失敗徽章顯示在資產上
 + __原因：__ 自訂背景工作執行中發生錯誤
 + __解決方法：__ 依照使用除錯Adobe I/O Runtime [動作](./test-debug/debug.md#aio-app-logs) 的指示 `aio app logs`操作。
-
-

@@ -1,7 +1,7 @@
 ---
 title: 快速設定 — AEM無周邊功能快速入門 — GraphQL
 description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 安裝AEM SDK、新增範例內容，以及部署使用其GraphQL API從AEM取用內容的應用程式。 了解AEM如何提供全管道體驗。
-version: cloud-service
+version: Cloud Service
 mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
@@ -9,13 +9,13 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '1814'
 ht-degree: 1%
 
 ---
-
 
 # 快速設定 {#setup}
 

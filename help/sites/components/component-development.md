@@ -1,20 +1,20 @@
 ---
 title: 元件開發於Adobe Experience Manager Sites
 description: 概述如何使用Adobe Experience Manager Sites開發元件。 包括對話方塊、Sling模型、HTL指令碼和用戶端程式庫的簡介。
-version: 6.3, 6.4, 6.5, cloud-service
-topic: 開發
-feature: Sling模型、HTL或HTML範本語言
+version: 6.3, 6.4, 6.5, Cloud Service
+topic: Development
+feature: Sling Model, HTL or HTML Template Language
 role: Developer
 level: Beginner
 kt: 4235
 thumbnail: 32547.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: ad767329-58bc-44ec-83de-2f5e3c8a30a3
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 1%
+source-wordcount: '55'
+ht-degree: 0%
 
 ---
-
 
 # 元件開發簡介
 

@@ -1,24 +1,24 @@
 ---
 title: 設定本機開發環境以擴充Asset compute
 description: 開發Asset compute背景工作（屬於Node.js JavaScript應用程式）需要與傳統AEM開發不同的特定開發工具，包括Node.js和各種npm模組，以及Docker Desktop和Microsoft Visual Studio Code。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
-topic: 整合，開發
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: fd72f3c85db8a56ec8abfd1609da53492ee54be2
+exl-id: 162e10e5-fcb0-4f16-b6d1-b951826209d9
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
-
 
 # 設定本機開發環境
 

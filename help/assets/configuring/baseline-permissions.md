@@ -1,21 +1,21 @@
 ---
 title: 基線權限
 description: 管理基線資產資料夾的使用者存取權限是控管的重要方面，並確保可正確支援這些程式。
-sub-product: 資產
-feature: 資產管理
-version: cloud-service
+sub-product: assets
+feature: Asset Management
+version: Cloud Service
 kt: 4870
 thumbnail: 37696.jpg
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: b2ac2332-4d98-4866-8688-831f0282a736
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '53'
+source-wordcount: '48'
 ht-degree: 0%
 
 ---
-
 
 # 基線權限
 

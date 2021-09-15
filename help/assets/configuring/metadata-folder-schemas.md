@@ -1,21 +1,21 @@
 ---
 title: 中繼資料資料夾結構
 description: 中繼資料資料夾結構可讓使用者管理及檢閱與資產資料夾本身相關聯的中繼資料，而非直接管理資產。
-sub-product: 資產
-feature: 中繼資料
-version: cloud-service
+sub-product: assets
+feature: Metadata
+version: Cloud Service
 kt: 4983
 thumbnail: 34071.jpg
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 81e11e51-205d-4233-a10d-551d5041075c
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 2%
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
-
 
 # 中繼資料資料夾結構
 

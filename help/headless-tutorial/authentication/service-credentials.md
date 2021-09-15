@@ -1,24 +1,24 @@
 ---
 title: 服務憑據
 description: AEM服務認證可協助外部應用程式、系統和服務以程式設計方式與AEM製作或透過HTTP發佈服務互動。
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
-feature: API
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330519.jpg
-topic: 無頭式整合
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: b902ced3d7f7cf827d0a487bf741ff370f7c1f04
+exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1860'
 ht-degree: 0%
 
 ---
-
 
 # 服務憑據
 
@@ -254,4 +254,3 @@ $ node index.js \
 ## 恭喜！
 
 現在，我們已透過本機開發存取權杖，以及生產就緒服務對服務存取權杖，以程式設計方式存取AEM作為Cloud Service!
-

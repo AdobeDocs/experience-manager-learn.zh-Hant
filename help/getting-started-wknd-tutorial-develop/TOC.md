@@ -1,7 +1,7 @@
 ---
-sub-product: Sites
+sub-product: sites
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -9,10 +9,10 @@ user-guide-title: AEM Sites - WKND 教學課程快速入門
 user-guide-description: AEM 的新開發人員的多部分教學課程。實作虛構的生活風格品牌 WKND 的 AEM 網站。
 breadcrumb-title: AEM Sites WKND 教學課程
 index: y
-source-git-commit: 3c9bff3238a057e976868c13ad185ea687600dea
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 57%
+source-wordcount: '72'
+ht-degree: 56%
 
 ---
 

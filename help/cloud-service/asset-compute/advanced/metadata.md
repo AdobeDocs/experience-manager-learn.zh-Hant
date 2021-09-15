@@ -1,24 +1,24 @@
 ---
 title: 開發Asset compute中繼資料背景工作
 description: 了解如何建立Asset compute中繼資料背景工作，該背景工作衍生影像資產中最常使用的顏色，並將顏色名稱寫回AEM中資產的中繼資料。
-feature: asset compute微服務
+feature: Asset Compute Microservices
 topics: metadata, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: 整合，開發
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+exl-id: 6ece6e82-efe9-41eb-adf8-78d9deed131e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1434'
 ht-degree: 1%
 
 ---
-
 
 # 開發Asset compute中繼資料背景工作
 

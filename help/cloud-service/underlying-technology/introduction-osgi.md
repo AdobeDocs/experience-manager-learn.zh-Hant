@@ -5,19 +5,19 @@ topics: osgi, architecture
 audience: administrator, developer
 doc-type: technical video
 activity: understand
-version: cloud-service
+version: Cloud Service
 kt: 4642
 thumbnail: 32031.jpg
-topic: 架構
+topic: Architecture
 role: Architect, Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 386b7d1f-d6aa-4c9f-95ae-d553aaeb9bf3
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 7%
+source-wordcount: '41'
+ht-degree: 4%
 
 ---
-
 
 # [!DNL OSGi] 簡介 {#introduction-osgi}
 

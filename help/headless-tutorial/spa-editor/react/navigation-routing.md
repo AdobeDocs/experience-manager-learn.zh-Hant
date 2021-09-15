@@ -1,10 +1,10 @@
 ---
 title: 添加導航和路由 |開始使用AEM SPA Editor and React
 description: 了解如何使用SPA Editor SDK對應至AEM頁面，以支援SPA中的多個檢視。 動態導航是使用React Router和React Core Components實現的。
-sub-product: Sites
+sub-product: sites
 feature: SPA Editor
 topics: development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 4988
@@ -12,13 +12,13 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
-
 
 # 添加導航和路由 {#navigation-routing}
 
@@ -329,4 +329,3 @@ ht-degree: 0%
 ## 恭喜！ {#congratulations}
 
 恭喜您，您已了解如何使用SPA Editor SDK對應至AEM頁面，以支援SPA中的多個檢視。 動態導航已使用React Router實現，並添加到`Header`元件中。
-

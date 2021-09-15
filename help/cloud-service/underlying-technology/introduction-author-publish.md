@@ -5,20 +5,20 @@ topics: publishing, architecture
 audience: administrator, developer
 doc-type: technical video
 activity: understand
-version: cloud-service
+version: Cloud Service
 kt: 4639
 thumbnail: 32033.jpg
-feature: 發佈
-topic: 架構
+feature: Publishing
+topic: Architecture
 role: Architect, Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 586d982e-0128-47a1-b945-7d99298db3fd
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 4%
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
-
 
 # 作者和發佈階層簡介 {#introduction-author-publish}
 
