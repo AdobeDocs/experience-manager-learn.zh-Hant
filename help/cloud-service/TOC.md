@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: 4c9d836881ad7cccd31c55fa5eddc24dff1200cd
+source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 21%
+source-wordcount: '560'
+ht-degree: 22%
 
 ---
 
@@ -89,6 +89,24 @@ ht-degree: 21%
 + 遷移{#migration}
    + [內容轉移工具](./migration/content-transfer-tool.md)
    + [大量匯入資產](./migration/bulk-import.md)
+
+   + 轉移至 AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
+      + [簡介](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
+      + [雙酚A和CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
+      + [AEM現代化工具](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
+      + [存放庫現代化](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
+      + [入門](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
+      + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
+      + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
+      + 內容移轉{#content-migration}
+         + [批量導入服務](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
+         + [內容轉移工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
+      + [搜尋和索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
+      + [asset compute微服務](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
+      + AEM Forms as aCloud Service{#aem-forms}
+         + [簡介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
+         + [數位註冊](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
+         + [通訊](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
    + Cloud Acceleration Manager {#cloud-acceleration-manager}
       + [簡介](./migration/cloud-acceleration-manager/introduction.md)
       + [Readiness and Best Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
