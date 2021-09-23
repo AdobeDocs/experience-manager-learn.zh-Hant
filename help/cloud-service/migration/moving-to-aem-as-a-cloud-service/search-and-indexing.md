@@ -1,6 +1,6 @@
 ---
 title: 在AEM as aCloud Service中搜尋和建立索引
-description: 了解AEM as aCloud Service的搜尋索引、如何將AEM 6索引定義轉換為與AEM as aCloud Service相容的索引，以及如何部署索引……（說明應介於60到160個字元之間）
+description: 了解AEM作為Cloud Service的搜尋索引、如何轉換AEM 6索引定義，以及如何部署索引。
 version: Cloud Service
 feature: Search
 topic: Migration, Upgrade
@@ -8,13 +8,13 @@ role: Developer
 level: Experienced
 kt: 8634
 thumbnail: 336963.jpeg
-source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
+exl-id: f752df86-27d4-4dbf-a3cb-ee97b7d9a17e
+source-git-commit: c0b8e598bd8bb968ae5e48b4033d6c3d46b71710
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '66'
 ht-degree: 0%
 
 ---
-
 
 # 搜索和索引
 
