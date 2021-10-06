@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1957'
 ht-degree: 0%
 
 ---
@@ -296,7 +296,7 @@ ht-degree: 0%
    }
    ```
 
-   初始化Sling模型時，一律會呼叫`@PostConstruct initModel()`，因此，這是初始化模型中其他方法可能使用的物件的良機。 `pageManager`是透過`@ScriptVariable`註解可供Sling模型使用的數個[Java支援的全域物件](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects)之一。 [getPage](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-)方法會進入路徑並傳回AEM [Page](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/Page.html)物件，若路徑未指向有效頁面，則傳回null。
+   初始化Sling模型時，一律會呼叫`@PostConstruct initModel()`，因此，這是初始化模型中其他方法可能使用的物件的良機。 `pageManager`是透過`@ScriptVariable`註解可供Sling模型使用的數個[Java支援的全域物件](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects)之一。 [getPage()](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-)方法取用路徑並傳回AEM [Page](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/Page.html)物件；如果路徑未指向有效頁面，則傳回null。
 
    這會初始化`cardPage`變數，其他新方法將使用該變數來傳回基礎連結頁面的相關資料。
 
