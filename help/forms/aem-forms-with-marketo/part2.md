@@ -1,18 +1,18 @@
 ---
 title: AEM Forms與Marketo（第2部分）
 description: 使用AEM Forms表單資料模型整合AEM Forms與Marketo的教學課程。
-feature: 適用性Forms，表單資料模型
+feature: Adaptive Forms, Form Data Model
 version: 6.3,6.4,6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
+source-git-commit: 020852f16de0cdb1e17e19ad989dabf37b7f61f5
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # Marketo Authentication Service
 
@@ -128,7 +128,7 @@ MarketoConfigurationService config;
 
 下方的螢幕擷取畫面顯示需要設定的設定屬性。 這些設定屬性會讀取於上述程式碼中，以取得access_token
 
-![設定](assets/marketoconfig.jfif)
+![設定](assets/configuration-settings.png)
 
 ### 設定
 

@@ -1,18 +1,18 @@
 ---
 title: AEM Forms與Marketo（第4部分）
 description: 使用AEM Forms表單資料模型整合AEM Forms與Marketo的教學課程。
-feature: 適用性Forms，表單資料模型
+feature: Adaptive Forms, Form Data Model
 version: 6.3,6.4,6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
+source-git-commit: 020852f16de0cdb1e17e19ad989dabf37b7f61f5
 workflow-type: tm+mt
-source-wordcount: '296'
-ht-degree: 0%
+source-wordcount: '317'
+ht-degree: 1%
 
 ---
-
 
 # 使用表單資料模型建立最適化表單
 
@@ -31,3 +31,10 @@ ht-degree: 0%
 以下螢幕擷圖說明規則編輯器設定
 
 ![規則編輯器](assets/ruleeditor.jfif)
+
+## 除錯
+
+如果您使用本文提供的套件組合，則可能要為以下類啟用[debug logs](http://localhost:4502/system/console/slinglog):
+
++ `com.marketoandforms.core.impl.MarketoServiceImpl`
++ `com.marketoandforms.core.MarketoConfigurationService`
