@@ -1,33 +1,32 @@
 ---
-title: 使用權限將XDP轉譯為PDF
+title: 將使用權套用至上傳的pdf
 description: 將使用權套用至pdf
 version: 6.4,6.5
-feature: Reader擴充功能
-topic: 開發
+feature: Reader Extensions
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: ea433667-81db-40f7-870d-b16630128871
+source-git-commit: f1afccdad8d819604c510421204f59e7b3dc68e4
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
-
 # 套用Reader擴充功能
 
-Reader擴充功能可讓您操控PDF檔案的使用權限。 使用權限與Acrobat中可用但Adobe Reader中無法使用的功能相關。 由「Reader擴充功能」控制的功能包括可向檔案新增註解、填寫表單及儲存檔案的功能。 已新增使用權限的PDF檔案稱為啟用權限的檔案。 在Adobe Reader中開啟啟用權限的PDF檔案的使用者可以執行為該檔案啟用的操作。
+Reader擴充功能可讓您操控PDF檔案的使用權限。 使用權限與Acrobat中可用但Adobe Reader中無法使用的功能相關。 由「Reader擴充功能」控制的功能包括可向檔案新增註解、填寫表單及儲存檔案的功能。 添加了使用權限的PDF文檔稱為啟用權限的文檔。 在Adobe Reader中開啟啟用權限的PDF文檔的用戶可以執行為該文檔啟用的操作。
 若要測試此功能，您可以嘗試此[link](https://forms.enablementadobe.com/content/forms/af/applyreaderextensions.html)。
 
 若要完成此使用案例，我們必須執行下列動作：
 * [將Reader擴充功能憑](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) 證新增 `fd-service` 至使用者。
 
-* 建立將使用權限套用至檔案的自訂OSGi服務。 完成此作業的程式碼列於下方
+## 建立自訂OSGi服務
+
+建立將使用權限套用至檔案的自訂OSGi服務。 完成此作業的程式碼列於下方
 
 ```java
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
-
 import com.adobe.aemfd.docmanager.Document;
 import com.adobe.fd.docassurance.client.api.DocAssuranceService;
 import com.adobe.fd.docassurance.client.api.ReaderExtensionOptions;
@@ -36,38 +35,47 @@ import com.adobe.fd.readerextensions.client.UsageRights;
 import com.adobe.fd.signatures.pdf.inputs.UnlockOptions;
 import com.aemforms.ares.core.ReaderExtendPDF;
 import com.mergeandfuse.getserviceuserresolver.GetResolver;
-@Component(service=ApplyUsageRights.class,immediate = true)
+@Component(service = ApplyUsageRights.class)
 public class ApplyUsageRights implements ReaderExtendPDF {
-@Reference
-DocAssuranceService docAssuranceService;
-@Reference
-GetResolver getResolver;
-@Override
-public Document applyUsageRights(Document pdfDocument,UsageRights usageRights) {
-      ReaderExtensionsOptionSpec reOptionsSpec = new ReaderExtensionsOptionSpec(usageRights, "Sample ARES");
-      UnlockOptions unlockOptions = null;
-      ReaderExtensionOptions reOptions = ReaderExtensionOptions.getInstance();
-      reOptions.setCredentialAlias("ares");
-      reOptions.setResourceResolver(getResolver.getFormsServiceResolver());
-      reOptions.setReOptions(reOptionsSpec);
-    try {
-          return docAssuranceService.secureDocument(pdfDocument, null, null, reOptions,
-          unlockOptions);
-        } catch (Exception e) {
-            e.printStackTrace();
+        @Reference
+        DocAssuranceService docAssuranceService;
+        @Reference
+        GetResolver getResolver;
+        Logger logger = LoggerFactory.getLogger(ApplyUsageRights.class);
+        @Override
+        public Document applyUsageRights(Document pdfDocument, UsageRights usageRights) {
+
+                ReaderExtensionsOptionSpec reOptionsSpec = new ReaderExtensionsOptionSpec(usageRights, "Sample ARES");
+                UnlockOptions unlockOptions = null;
+                ReaderExtensionOptions reOptions = ReaderExtensionOptions.getInstance();
+                reOptions.setCredentialAlias("ares");
+
+                reOptions.setResourceResolver(getResolver.getFormsServiceResolver());
+
+                reOptions.setReOptions(reOptionsSpec);
+                System.out.println("Applying Usage Rights");
+
+                try {
+                        Document readerExtended = docAssuranceService.secureDocument(pdfDocument, null, null, reOptions,
+                                unlockOptions);
+                        reOptions.getResourceResolver().close();
+                        return readerExtended;
+                } catch (Exception e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                }
+                return null;
         }
-    return null;
-}
 
 }
 ```
 
-## 建立Servlet以串流PDF {#create-servlet-to-stream-the-pdf}
+## 建立Servlet以流化讀取器擴展PDF
 
-下一步是使用POST方法建立Servlet，將Reader延伸PDF傳回給使用者。 在此情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會轉譯為動態PDF，而瀏覽器隨附的PDF檢視器不會處理動態PDF。
+下一步是使用POST方法建立Servlet，以將讀取器擴展PDF返回給用戶。 在這種情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會以動態PDF呈現，而隨瀏覽器提供的pdf檢視器不會處理動態PDF。
 
-以下是servlet的程式碼。 將從適用性表單的&#x200B;**customsubmit**動作叫用Servlet。
-Servlet會建立UsageRights物件，並根據使用者在適用性表單中輸入的值來設定其屬性。 然後，Servlet將調用為此目的建立的服務的**applyUsageRights**&#x200B;方法。
+以下是servlet的程式碼。 系統會從適用性表單的自訂提交動作叫用Servlet。
+Servlet會建立UsageRights物件，並根據使用者在適用性表單中輸入的值來設定其屬性。 然後，Servlet將調用為此目的建立的服務的applyUsageRights方法。
 
 ```java
 package com.aemforms.ares.core.servlets;
@@ -78,7 +86,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.StringReader;
 import java.util.Map;
-
 import javax.servlet.Servlet;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -106,6 +113,7 @@ import com.aemforms.ares.core.impl.ApplyUsageRights;
 
 public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 
+        private static final long serialVersionUID = -883724052368090823 L;
         @Reference
         ApplyUsageRights applyRights;
         Logger logger = LoggerFactory.getLogger(GetReaderExtendedPDF.class);
@@ -147,22 +155,25 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
                 for (Map.Entry < String, RequestParameter[] > pairs: requestParameterMap.entrySet()) {
                         final org.apache.sling.api.request.RequestParameter[] pArr = pairs.getValue();
                         final org.apache.sling.api.request.RequestParameter param = pArr[0];
+
                         if (!param.isFormField()) {
                                 try {
-                                        System.out.println("Got attachment!!!!" + param.getFileName());
+                                        System.out.println("Got form attachment!!!!" + param.getFileName());
                                         logger.debug("Got attachment!!!!" + param.getFileName());
                                         InputStream is = param.getInputStream();
                                         Document documentToReaderExtend = new Document(is);
                                         documentToReaderExtend = applyRights.applyUsageRights(documentToReaderExtend, usageRights);
+                                        if (logger.isDebugEnabled()) {
+                                                documentToReaderExtend.copyToFile(new File(param.getFileName().split("/")[1]));
+                                        }
 
-                                        documentToReaderExtend.copyToFile(new File(param.getFileName().split("/")[1]));
-                                        documentToReaderExtend.close();
                                         InputStream fileInputStream = documentToReaderExtend.getInputStream();
-                                        documentToReaderExtend.close();
+
                                         response.setContentType("application/pdf");
-                                        response.addHeader("Content-Disposition", "attachment; filename=AemFormsRocks.pdf");
+                                        response.addHeader("Content-Disposition", "attachment; filename=" + param.getFileName().split("/")[1]);
                                         response.setContentLength((int) fileInputStream.available());
                                         OutputStream responseOutputStream = response.getOutputStream();
+                                        documentToReaderExtend.close();
                                         int bytes;
                                         while ((bytes = fileInputStream.read()) != -1) {
                                                 responseOutputStream.write(bytes);
@@ -187,9 +198,7 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 1. [下載並安裝ares.ares.core-ares套件組合](assets/ares.ares.core-ares.jar)。這有自訂服務和servlet，可套用使用權限並將pdf串流回
 1. [匯入用戶端LIB和自訂提交](assets/applyaresdemo.zip)
 1. [匯入最適化表單](assets/applyaresform.zip)
-1. 將Reader擴充功能憑證新增至「fd-service」使用者
+1. 將Reader擴充功能憑證新增至「fd-service」使用者。 確認別名為「ares」。
 1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
 1. 選取適當的權限並上傳PDF檔案
-1. 按一下「提交」以取得Reader延伸PDF
-
-
+1. 按一下提交以取得Reader延伸PDF
