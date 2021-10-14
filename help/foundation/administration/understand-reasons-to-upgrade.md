@@ -1,21 +1,21 @@
 ---
 title: 了解升級的理由
-description: 針對考慮升級至最新版Adobe Experience Manager的客戶，提供主要功能的高階劃分。
+description: 針對考慮升級至最新版Adobe Experience Manager 6的客戶，詳盡分析主要功能。
 version: 6.5
 topic: Upgrade
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
+source-git-commit: 278433e7d9a2d524198efcebae336dca01a15259
 workflow-type: tm+mt
 source-wordcount: '3462'
 ht-degree: 3%
 
 ---
 
-
 # 了解升級的理由
 
-針對考慮升級至最新版Adobe Experience Manager的客戶，提供主要功能的高階劃分。
+針對考慮升級至最新版Adobe Experience Manager 6的客戶，詳盡分析主要功能。
 
 ## 升級至AEM 6.5的主要功能
 
@@ -37,7 +37,7 @@ AEM Sites推出多項功能，旨在加速網站的建立和建置：
 
 ### 流暢的體驗
 
-AEM持續提供全新且改良的工具，協助您使用AEM以外的內容，充份運用流暢的使用體驗。
+AEM持續提供全新且改良的工具，協助您使用AEM以外的內容，充份運用Fluid Experiences。
 
 + **內容** 片段支援版本比較/差異和註解。
 + **AEM Assets HTTP** API支援將 **內** 容片段直接顯示為 **JSON**。
@@ -61,7 +61,7 @@ AEM持續透過智慧技術建立整合，運用機器學習和人工智慧來�
 
 ### Integrations
 
-AEM能夠與其他Adobe服務整合：
+AEM可提升與其他Adobe服務整合的能力：
 
 + **體驗** 片段可支援 **以JSON匯出至** Adobe Target，以及 **從** Adobe Target **刪除體驗片段式** 選件，深化與Adobe ****&#x200B;目標的整合。
 
@@ -316,7 +316,7 @@ AEM能夠與其他Adobe服務整合：
     </tr>
     <tr>
         <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong></strong> <strong></strong></a>
-            <br> CSRFprotection跨站請求偽造保護（現成）。</td>
+            <br> CSRFprotection跨站點請求偽造保護（現成）。</td>
         <td></td>
         <td></td>
         <td>✔</td>
@@ -327,7 +327,7 @@ AEM能夠與其他Adobe服務整合：
     </tr>
     <tr>
         <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong></strong> <strong></strong></a>
-            <br> CORSsupport跨原始資源共用支援可提供更大的應用程式彈性。</td>
+            <br> CORSsupport跨原始資源共用支援，提供更大的應用程式彈性。</td>
         <td></td>
         <td></td>
         <td></td>
@@ -405,8 +405,8 @@ AEM能夠與其他Adobe服務整合：
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">AdobeIMS驗證支</a><br>
- </strong>援專屬於Adobe Managed Services(AMS)，可透過AdobeIMS(Identity Management系統)集中管理對AEM製作執行個體的存取。</td>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Adobe IMS驗證支</a><br>
+ </strong>援專屬於Adobe Managed Services(AMS)，可透過Adobe IMS(Identity Management系統)集中管理對AEM製作執行個體的存取。</td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -713,8 +713,8 @@ AEM能夠與其他Adobe服務整合：
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank"></a> 任務與 <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects-with-workflows.html" target="_blank"></a> 工作流程管理：</strong>
-            運用AEM專案，預先建立審核及核准數位資產的工作流程與任務。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank"></a> 任務 <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects-with-workflows.html" target="_blank"></a> 與工作流程管理：</strong>
+            預先建立的工作流程與工作，以利用AEM專案審核和核准數位資產。</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -847,7 +847,7 @@ AEM能夠與其他Adobe服務整合：
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe影像處理程式庫</a>:</strong>
-                <br> 用於高品質檔案操控的Photoshop和Acrobat PDF程式庫。</td>
+                <br> 用於高品質檔案操控的Photoshop和AcrobatPDF程式庫。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -906,10 +906,10 @@ AEM能夠與其他Adobe服務整合：
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets.html" target="_blank">影像</a>:</strong>
             以不同大小和格式（包括智慧型裁切）動態傳送影像。</td>
             <td> </td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔<sup>+</sup></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
         </tr>
@@ -1291,7 +1291,7 @@ AEM能夠與其他Adobe服務整合：
         </tr>
         <tr>
             <td rowspan="5">啟用</td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/catalog.html" target="_blank"></a> 目錄和 <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resource.html" target="_blank">資源管理</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/catalog.html" target="_blank"></a> 目錄 <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resource.html" target="_blank">和資源管理</a>:</strong>
             從目錄存取啟用資源。</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
@@ -1536,7 +1536,7 @@ AEM能夠與其他Adobe服務整合：
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/activities.html" target="_blank"></a> 活動 <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/notifications.html" target="_blank">與通知</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/activities.html" target="_blank"></a> 活動 <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/notifications.html" target="_blank">和通知</a>:</strong>
             檢視最近的活動資料流，並收到有關感興趣事件的通知。</td>
             <td> </td>
             <td> </td>
