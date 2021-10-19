@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
+source-git-commit: bec04e6db13b80a8b5c4caa91acb8f2e684e70e9
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 23%
+source-wordcount: '567'
+ht-degree: 22%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 23%
    + [進化](./introduction/evolution.md)
    + [架構](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
-+ 基礎技術{#underlying-technology}
++ 基礎技術 {#underlying-technology}
    + [AEM架構](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java內容儲存庫](./underlying-technology/introduction-jcr.md)
@@ -33,7 +33,7 @@ ht-degree: 23%
    + [CI/CD生產管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD非生產管道](./cloud-manager/cicd-non-production-pipeline.md)
    + [活動](./cloud-manager/activity.md)
-   + 開發操作{#devops}
+   + 開發作業{#devops}
       + [部署程式碼](./cloud-manager/devops/deploy-code.md)
       + [合併專案](./cloud-manager/devops/merge-projects.md)
       + [配置管道](./cloud-manager/devops/configure-pipelines.md)
@@ -41,7 +41,7 @@ ht-degree: 23%
       + [分析測試結果](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcher設定](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
-+ 本地開發環境設定{#local-development-environment-set-up}
++ 本機開發環境設定 {#local-development-environment-set-up}
    + [概覽](./local-development-environment/overview.md)
    + [開發工具](./local-development-environment/development-tools.md)
    + [本機AEM執行階段](./local-development-environment/aem-runtime.md)
@@ -67,15 +67,15 @@ ht-degree: 23%
    + 進階{#advanced}
       + [服務用戶](./developing/advanced/service-users.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
-+ 調試AEM{#debugging}
-   + 為AEM SDK{#debugging-aem-sdk}除錯
++ 除錯AEM{#debugging}
+   + 為AEM SDK除錯{#debugging-aem-sdk}
       + [概覽](./debugging/aem-sdk-local-quickstart/overview.md)
       + [記錄檔](./debugging/aem-sdk-local-quickstart/logs.md)
       + [遠端偵錯](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi Web控制台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + 對AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}進行調試
+   + 除錯AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [概覽](./debugging/cloud-service/overview.md)
       + [記錄檔](./debugging/cloud-service/logs.md)
       + [建置和部署](./debugging/cloud-service/build-and-deployment.md)
@@ -88,7 +88,7 @@ ht-degree: 23%
    + [Adobe IMS產品設定檔](./accessing/adobe-ims-product-profiles.md)
    + [AEM使用者、群組和權限](./accessing/aem-users-groups-and-permissions.md)
    + [設定AEM存取權逐步說明](./accessing/walk-through.md)
-+ 遷移{#migration}
++ 移轉 {#migration}
    + [內容轉移工具](./migration/content-transfer-tool.md)
    + [大量匯入資產](./migration/bulk-import.md)
 
@@ -102,11 +102,11 @@ ht-degree: 23%
       + [asset compute微服務](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
       + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
       + [搜尋和索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
-      + 內容移轉{#content-migration}
+      + 內容移轉 {#content-migration}
          + [批量導入服務](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [內容轉移工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
       + [疑難排解](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
-      + AEM Formsas a Cloud Service{#aem-forms}
+      + AEM Formsas a Cloud Service {#aem-forms}
          + [簡介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [數位註冊](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
          + [通訊](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
@@ -168,7 +168,7 @@ ht-degree: 23%
          + [建立表單資料模型](./forms/integrate-with-salesforce/create-form-data-model.md)
          + [測試表單提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
          + [測試點按事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
-+ asset compute擴展性{#asset-compute}
++ asset compute擴充性{#asset-compute}
    + [概覽](./asset-compute/overview.md)
    + 設定{#set-up}
       + [帳戶和服務設定](./asset-compute/set-up/accounts-and-services.md)
@@ -180,7 +180,7 @@ ht-degree: 23%
       + [設定manifest.yml](./asset-compute/develop/manifest.md)
       + [開發員工](./asset-compute/develop/worker.md)
       + [使用開發工具](./asset-compute/develop/development-tool.md)
-   + 測試和調試{#test-debug}
+   + 測試和除錯{#test-debug}
       + [測試工作人員](./asset-compute/test-debug/test.md)
       + [調試工作](./asset-compute/test-debug/debug.md)
    + 部署{#deploy}
@@ -189,6 +189,7 @@ ht-degree: 23%
    + 進階{#advanced}
       + [中繼資料背景工作](./asset-compute/advanced/metadata.md)
    + [疑難排解](./asset-compute/troubleshooting.md)
++ [AEM Experts系列](./aem-experts-series.md)
 + 多步驟Tutorials{#multi-step-tutorials}
    + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
