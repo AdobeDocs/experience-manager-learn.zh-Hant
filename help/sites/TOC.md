@@ -3,9 +3,9 @@ user-guide-title: AEM Sites 影片和教學課程
 user-guide-description: Adobe Experience Manager Sites 的影片和教學課程系列。
 breadcrumb-title: AEM Sites 教學課程
 feature-set: Experience Manager, Experience Manager Sites
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 5bdff2eafaa28aff722b12607b1278539072be62
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '441'
 ht-degree: 18%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 18%
 # AEM Sites 影片和教學課程 {#sites}
 
 + [概覽](overview.md)
-+ 頁面編寫{#page-authoring}
++ 頁面編寫 {#page-authoring}
    + [製作](page-authoring/aem-sites-authoring-overview.md)
    + [導覽](page-authoring/basic-handling-sites-feature-video-use.md)
    + [網站結構](page-authoring/content-hierarchy-feature-video-use.md)
@@ -64,6 +64,8 @@ ht-degree: 18%
    + [設定體驗片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [搭配使用體驗片段Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [設定ContextHub](personalization/context-hub-technical-video-setup.md)
++ SEO {#seo}
+   + [網站地圖](./seo/sitemaps.md)
 + 單頁應用程式 {#spa-editor}
    + [使用SPA編輯器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Hello World教學課程](spa-editor/spa-editor-helloworld-tutorial-use.md)
@@ -90,13 +92,13 @@ ht-degree: 18%
    + [設定翻譯規則](translation/translation-rules-editor-technical-video-setup.md)
    + [翻譯增強功能](translation/translation-enhancements-feature-video-use.md)
 + Integrations {#integrations}
-   + Experience Platform Launch{#experience-platform-launch}
+   + Experience Platform Launch {#experience-platform-launch}
       + [概覽](integrations/experience-platform-launch/overview.md)
       + [建立Launch屬性](integrations/experience-platform-launch/create-launch-property.md)
       + [使用AEM連線Adobe I/O與Launch](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
       + [建立LaunchCloud Service](integrations/experience-platform-launch/create-launch-cloud-service.md)
       + [對Launch實作除錯](integrations/experience-platform-launch/debug-launch-implementation.md)
-   + Adobe客戶端資料層{#adobe-client-data-layer}
+   + Adobe用戶端資料層 {#adobe-client-data-layer}
       + [使用Adobe用戶端資料層](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自訂Adobe用戶端資料層](integrations/adobe-client-data-layer/data-layer-customize.md)
    + 分析 {#analytics}
