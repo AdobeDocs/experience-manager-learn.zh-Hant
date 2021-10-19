@@ -6,9 +6,10 @@ feature: Forms Service
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 72a9edb3edc73cf14f13bb53355a37e707ed4c79
+kt: 9226
+source-git-commit: 2ed78bb8b122acbe69e98d63caee1115615d568f
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
@@ -20,18 +21,21 @@ ht-degree: 0%
 
 若要完成此使用案例，我們必須執行下列作業
 
-## 為xdp產生範例資料
+## 產生XDP的範例資料
 
-在AEM Forms設計工具中開啟XDP。
-按一下檔案 |表單屬性 |預覽按一下產生預覽資料按一下產生提供有意義的檔案名稱，例如&quot;form-data.xml&quot;
+* 在AEM Forms設計工具中開啟XDP。
+* 按一下檔案 |表單屬性 |預覽
+* 按一下「產生預覽資料」
+* 按一下產生
+* 提供有意義的檔案名稱，例如&quot;form-data.xml&quot;
 
 ## 從xml資料生成XSD
 
-您可以使用任何免費線上工具 [生成xsd](https://www.freeformatter.com/xsd-generator.html) 從上一步驟中產生的xml資料。
+您可以使用任何免費線上工具 [生成XSD](https://www.freeformatter.com/xsd-generator.html) 從上一步驟中產生的xml資料。
 
-## 建立最適化
+## 建立最適化表單
 
-根據上一步的xsd建立最適化表單。 將表單關聯以使用客戶端庫「irs」。 此客戶端庫具有對Servlet進行POST調用的代碼，該Servlet將PDF返回給調用應用程式。當 _下載PDF_ 已點按
+根據上一步的XSD建立最適化表單。 將表單關聯以使用客戶端庫「irs」。 此客戶端庫具有對Servlet進行POST調用的代碼，該Servlet將PDF返回給調用應用程式。當 _下載PDF_ 已點按
 
 ```javascript
 $(document).ready(function() {
@@ -72,7 +76,7 @@ $(document).ready(function() {
 
 ## 建立自訂Servlet
 
-建立自訂Servlet，將資料與xdp範本合併並傳回pdf。 完成此作業的程式碼列於下方。 自訂Servlet是 [AEMFormsDocumentServices.core-1.0-SNAPSHOT套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar))。
+建立自訂Servlet，將資料與XDP範本合併並傳回pdf。 完成此作業的程式碼列於下方。 自訂Servlet是 [AEMFormsDocumentServices.core-1.0-SNAPSHOT套件](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar))。
 
 ```java
 package com.aemformssamples.documentservices.core.servlets;
@@ -191,13 +195,16 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 在范常式式碼中，範本名稱(f8918-r14e_redo-barcode_3 2.xdp)是硬式編碼。 您可以輕鬆將範本名稱傳遞至servlet，讓此程式碼成為通用程式碼，以便對所有範本運作。
 
 
+## 在伺服器上部署示例
+
 若要在本機伺服器上測試，請執行下列步驟：
+
 1. [下載並安裝DevelopingWithServiceUser套件組合](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. 在Apache Sling Service使用者對應程式服務DevelopingWithServiceUser.core:getformsresourceresolver=fd-service中新增下列項目
 1. [下載和安裝自定義DocumentServices包](/hep/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). 這個Servlet可將資料與XDP範本合併，並將pdf串流回
 1. [匯入用戶端程式庫](assets/irs.zip)
 1. [匯入最適化表單](assets/f8918complete.zip)
-! [匯入XDP範本和結構](assets/xdp-template-and-xsd.zip)
+1. [匯入XDP範本和結構](assets/xdp-template-and-xsd.zip)
 1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. 填寫幾個表單欄位
 1. 按一下「下載PDF」以取得PDF
