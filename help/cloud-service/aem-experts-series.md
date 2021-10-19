@@ -2,9 +2,9 @@
 title: Adobe Experience Manager as a Cloud Service專家系列
 description: 了解Adobe Experience Manager(AEM)的as a Cloud Service，了解Adobe專業的工程師所打造的產品，以及提供產品的專業服務。
 sub-product: sites, cloud-manager, assets
-source-git-commit: 5b3dd38d1fa2e3c35bfa2a867f51c7295907ecc7
+source-git-commit: 1e52e29051e219c4cd5ea83e2325fdae62ff833a
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
@@ -177,6 +177,43 @@ ht-degree: 2%
       <p>
         <br/>
         了解AEM Assets的Asset compute微服務、如何取代AEM 6資產處理，以及如何延伸這些功能以產生自訂資產轉譯。
+      </p>
+   </td>   
+   <td>
+      <a href="./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video">
+      <img alt="大量匯入內容" src="./assets/experts-series/bulk-import.png"/>
+      </a>
+      <div>
+         <a href="./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video"><strong>大量匯入內容</strong></a>
+         <br/><em>與高級雲架構師Kiran Murugulla合作</em>
+      </div>
+      <p>
+        <br/>
+        了解如何使用大量匯入服務和AEM Package Manager，以安全且有效的方式將內容大量匯入至AEMas a Cloud Service。
+      </p>
+   </td> 
+    <td></td>
+  </tr>
+</table>
+
+## 需要AEM as aCloud Services的協助嗎？
+
+了解如何向專家解除AEM as a Cloud Service和AEM SDK的除錯和疑難排解！
+
+<table>
+  <tr>
+   <td>
+      <a href="./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" target="_aem-experts-series-video">
+      <img alt="疑難排解AEMas a Cloud Service" src="./assets/experts-series/troubleshooting.png"/>
+      </a>
+      <div>
+         <a href="/migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" 
+         target="_aem-experts-series-video"><strong>疑難排解AEMas a Cloud Service</strong></a>
+         <br/><em>雲架構師Kunwar Saluja</em>
+      </div>
+      <p>
+        <br/>
+        了解如何疑難排解AEMas a Cloud Service的各個方面，包括對AEM SDK和AEMas a Cloud Service進行偵錯，以及Cloud Manager建置和部署失敗。
       </p>
    </td>   
     <td></td>
