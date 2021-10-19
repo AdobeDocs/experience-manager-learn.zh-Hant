@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
+source-git-commit: 72a9edb3edc73cf14f13bb53355a37e707ed4c79
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1607'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 3%
 + [概覽](overview.md)
 + [要遵循的最佳實務](adaptive-forms/best-practices-adaptive-forms.md)
 + [使用AEM作者設定OKTA驗證](adaptive-forms/single-sign-on-with-okta.md)
-+ 建立第一個最適化表單{#creating-your-first-adaptive-form}
++ 建立第一個最適化表單 {#creating-your-first-adaptive-form}
    + [簡介和設定](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [建立最適化表單範本](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [建立表單片段](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -28,7 +28,7 @@ ht-degree: 3%
    + [將表添加到收入面板](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [設定資產面板](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [使用自訂函式和程式碼編輯器](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ 處理表單提交{#handling-af-form-submissions}
++ 處理表單提交 {#handling-af-form-submissions}
    + [建立審核工作流](handling-form-submissions/creating-a-review-workflow.md)
    + [設定最適化表單以觸發工作流程](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [顯示感謝頁面](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -40,7 +40,7 @@ ht-degree: 3%
 + 實用整合{#some-useful-integrations}
    + [雙因素驗證](some-useful-integrations/two-factor-authentication.md)
    + [OCR資料擷取](some-useful-integrations/ocr-data-extraction.md)
-+ 建立OSGi捆綁{#creating-your-first-osgi-bundle}
++ 建立OSGi捆綁包 {#creating-your-first-osgi-bundle}
    + [設定您的環境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [建立OSGi服務](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [建立Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
@@ -95,7 +95,7 @@ ht-degree: 3%
    + [設定表單資料模型](prefill-fdm-db/configuring-form-data-model.md)
    + [取得要求參數](prefill-fdm-db/get-request-parameter.md)
    + [建立最適化表單](prefill-fdm-db/create-adaptive-form.md)
-+ 自定義收件箱{#inbox-customization}
++ 自訂收件匣{#inbox-customization}
    + [簡介](inbox-customization/introduction.md)
    + [新增自訂欄](inbox-customization/add-married-column.md)
    + [使用Sightly範本](inbox-customization/use-sightly-template.md)
@@ -104,7 +104,7 @@ ht-degree: 3%
    + [郵遞區號表單附件](zipping-form-attachments/custom-process-step.md)
    + [電子郵件表單附件](zipping-form-attachments/populating-list-of-documents.md)
    + [測試解決方案](zipping-form-attachments/test.md)
-+ 儲存和檢索最適化表單{#store-and-retrieve-af-with-2fa}
++ 儲存和擷取最適化表單{#store-and-retrieve-af-with-2fa}
    + [簡介](store-and-retrieve-af-with-2fa/introduction.md)
    + [配置資料源](store-and-retrieve-af-with-2fa/configure-data-source.md)
    + [儲存表單附件](store-and-retrieve-af-with-2fa/store-form-attachments.md)
@@ -116,7 +116,7 @@ ht-degree: 3%
    + [建立主表單](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
    + [建立MyAccount表單](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
    + [部署範例](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
-+ 以CSV格式匯出已提交的資料{#export-submitted-data-csv-format}
++ 將提交的資料匯出為CSV格式{#export-submitted-data-csv-format}
    + [導出提交的資料](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 表單{#html5-forms}
    + [建立HTML5表單](html5-forms/create-html5-form.md)
@@ -146,7 +146,7 @@ ht-degree: 3%
    + [建立初始表單](sign-multiple-documents/create-initial-form.md)
    + [建立Forms以進行簽署](sign-multiple-documents/create-forms-for-signing.md)
    + [測試解決方案](sign-multiple-documents/testing-and-trouble-shooting.md)
-+ AEM Workflow{#variables-aem-workflow}中的變數
++ AEM工作流程中的變數{#variables-aem-workflow}
    + [簡介 — 工作流程中的變數](variables-aem-workflow/introduction.md)
    + [XML變數](variables-aem-workflow/part1.md)
    + [JSON變數](variables-aem-workflow/part2.md)
@@ -154,7 +154,7 @@ ht-degree: 3%
    + [ArrayList變數](variables-aem-workflow/part4.md)
    + [表單資料模型變數](variables-aem-workflow/form-data-model.md)
    + [AEM工作流程中的規則編輯器](variables-aem-workflow/part5.md)
-+ 在MySQL DB{#storing-and-retrieving-form-data}中儲存和檢索表單資料
++ 在MySQL資料庫中儲存和檢索表單資料{#storing-and-retrieving-form-data}
    + [簡介](storing-retrieving-form-data/introduction.md)
    + [配置資料源](storing-retrieving-form-data/part1.md)
    + [儲存資料的服務](storing-retrieving-form-data/part3.md)
@@ -166,7 +166,7 @@ ht-degree: 3%
    + [簡介](offline-mobile-form-submission/introduction.md)
    + [自訂設定檔](offline-mobile-form-submission/part-one.md)
    + [處理PDF提交](offline-mobile-form-submission/part-two.md)
-   + [審核PDF的工作流](offline-mobile-form-submission/part-three.md)
+   + [要審核的工作流PDF](offline-mobile-form-submission/part-three.md)
    + [在您的系統上部署](offline-mobile-form-submission/part-four.md)
 + 查詢已提交的資料{#querying-submitted-data}
    + [簡介](querying-submitted-data/introduction.md)
@@ -174,10 +174,10 @@ ht-degree: 3%
    + [儲存提交的資料](querying-submitted-data/part2.md)
    + [儲存JSON結構描述](querying-submitted-data/part3.md)
    + [查詢提交的資料](querying-submitted-data/part4.md)
-+ 列出Forms Portal{#listing-custom-asset-types}中的自訂資產類型
++ 列出Forms Portal中的自訂資產類型{#listing-custom-asset-types}
    + [第1部分 — 註冊自定義資產類型](listing-custom-asset-types/part1.md)
    + [第2部分 — 建立自定義模板](listing-custom-asset-types/part2.md)
-+ AEM Forms搭配Marketo{#aem-forms-with-marketo}
++ AEM Forms與Marketo{#aem-forms-with-marketo}
    + [第1部分 — 導言](aem-forms-with-marketo/part1.md)
    + [第2部分 — 自定義身份驗證](aem-forms-with-marketo/part2.md)
    + [第3部分 — 資料源](aem-forms-with-marketo/part3.md)
@@ -200,9 +200,10 @@ ht-degree: 3%
    + [從一個資料檔案產生多個PDF](document-services/generate-multi-record-pdf.md)
    + [在行動表單提交時產生PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [從行動表單產生互動式PDF](document-services/render-interactive-form-using-api.md)
+   + [從適用性表單產生互動式DoR](document-services/generate-interactive-dor.md)
    + [配置Reader擴展憑據](document-services/configuring-reader-extension-osgi.md)
-   + [在XDP轉譯上將使用權套用至PDF](document-services/rendering-and-reader-extending-xdp-templates-article.md)
-   + [將使用權套用至已上傳的PDF](document-services/apply-reader-extension-rights-to-pdf.md)
+   + [套用使用權限以PDFXDP轉譯](document-services/rendering-and-reader-extending-xdp-templates-article.md)
+   + [將使用權限套用至已上傳的PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [認證檔案](document-services/certifying-documents-aem-forms-tutorial.md)
    + [組合表單附件](document-services/assemble-form-attachments.md)
    + [實用工具服務](document-services/useful-utility-services.md)
@@ -229,7 +230,7 @@ ht-degree: 3%
    + [在AEM Forms打印通道文檔中使用表元件](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [使用監看資料夾生成用於打印通道的交互通信文檔](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
-+ Web通道的交互通信{#ic-web-channel-tutorial}
++ Web頻道互動式通訊 {#ic-web-channel-tutorial}
    + [簡介](ic-web-channel-tutorial/introduction.md)
    + [設定Tomcat](ic-web-channel-tutorial/partone.md)
    + [建立資料來源](ic-web-channel-tutorial/parttwo.md)
@@ -265,7 +266,7 @@ ht-degree: 3%
    + [PDFG:檢查和安裝32位程式庫及其相依性的步驟](troubleshooting/steps-to-check-and-install-32-bit-libraries-and-their-dependencies.md)
    + [PDFG:在windows server 2016上檢查資料夾權限的步驟](troubleshooting/steps-to-check-folder-permission-on-windows-server-2016.md)
    + [PDFG:在unix上啟用字串的步驟](troubleshooting/steps-to-enable-strace-on-unix-setup.md)
-   + [PDFG:安裝所需32位Microsoft Visual C++可轉散發套件的步驟](troubleshooting/steps-to-install-required-32bit-microsoft-vc-redistributables.md)
+   + [PDFG:安裝必要32位Microsoft Visual C++可轉散發套件的步驟](troubleshooting/steps-to-install-required-32bit-microsoft-vc-redistributables.md)
    + [PDFG:運行和解釋「系統就緒工具」輸出的步驟](troubleshooting/steps-to-run-and-interpret-output-of-system-readiness-tool.md)
    + [PDFG:疑難排解Acrobat特定問題的步驟](troubleshooting/steps-to-troubleshoot-acrobat-specific-issues.md)
    + [PDFG:疑難排解Windows上HtmltoPDF問題的步驟](troubleshooting/steps-to-troubleshoot-htmltopdf-issues-on-windows.md)
