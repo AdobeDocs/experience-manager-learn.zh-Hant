@@ -1,18 +1,18 @@
 ---
 title: AEM FormsTutorials和影片
-seo-title: AEM FormsTutorials和影片
+seo-title: AEM Forms Tutorials and Videos
 description: 供初學者和經驗豐富的AEM Forms開發人員使用的AEM Forms資源集合
-seo-description: 供初學者和經驗豐富的AEM Forms開發人員使用的AEM Forms資源集合
-sub-product: 表單
-topic: 開發
+seo-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers
+sub-product: forms
+topic: Development
 role: Developer
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 8%
+source-wordcount: '500'
+ht-degree: 5%
 
 ---
-
 
 # 概覽 {#overview}
 
@@ -46,7 +46,7 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
     </a>
     </div>
     <p>
-    <em>最適化表單是新一代動態且回應迅速的表單。您可以使用適用性表單來提供個人化體驗</em>
+    <em>最適化表單是新一代動態且回應迅速的表單。 您可以使用適用性表單來提供個人化體驗</em>
     <p>
   </td>
    <td>
@@ -59,7 +59,7 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
     </a>
     </div>
     <p>
-    <em>「互動式通訊」可集中處理和管理安全、個人化與互動式通信的建立、集合與傳送，例如商業信函、檔案、對帳單、利益通知、行銷郵件、帳單和歡迎套件。  </em>
+    <em>「互動式通訊」可集中處理和管理安全、個人化與互動式通信的建立、集合與傳送，例如商業信函、檔案、對帳單、利益通知、行銷郵件、帳單和歡迎套件。 </em>
     <p>
   </td>
   <td>
@@ -77,6 +77,106 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
   </td>
 </tr>
 </table>
+
+>[!TIP]
+>
+>此範例集合可示範AEM Forms的各種功能。.
+
+
+## 最適化表單範例
+
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <img alt= "卡皮奇在AEM Forms" src="./assets/captcha1.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/registerfornewsletter.html">
+    <strong>Google適用性表單驗證碼</strong>
+    </a>
+    </div>
+    <p>
+    <em> 區分人類和自動存取表單</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <img alt="預覽表單資料" src="./assets/preview.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <strong>審核表單資料</strong>
+    </a>
+    </div>
+    <p>
+    <em>提交表單之前先預覽表單資料。</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+      <img alt=" 內嵌影像" src="./assets/preview.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+        <strong>顯示內嵌影像</strong>
+      </a>
+    </div>
+    <p>
+    <em>顯示新增至表單的影像。</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+## 最適化表單和符號範例
+
+<table>
+<tr>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+      <img alt="租賃協定" src="./assets/rental-agreement.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+    <strong>租賃協定表樣本</strong>
+    </a>
+    </div>
+    <p>
+    <em>租戶與房東之間的租賃協定，由AEM Forms和Adobe Sign填寫並簽署</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <img alt="NDA協定" src="./assets/nda.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <strong>生成保密協定</strong>
+    </a>
+    </div>
+    <p>
+    <em>動態建立NDA，並使用Adobe Sign傳送以進行簽署</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+      <img alt="簽署檔案套件" src="./assets/sign.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+        <strong>文檔簽名包</strong>
+      </a>
+    </div>
+    <p>
+    <em>使用Forms和Adobe Sign順暢地簽署多份檔案</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+
+
 
 ## 其他資源
 

@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 9006
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -42,10 +42,11 @@ ht-degree: 0%
 <filter root="/content/dam/formsanddocuments-fdm/registrations" mode="replace"/>
 ```
 
-現在當您建置和部署專案時，專案將會根據雲端例項中可用的雲端服務組態，提供表單資料模型
 
->!![NOTE]
-將此雲端服務設定推送至雲端執行個體時，您必須使用AEM使用者介面手動更新Azure金鑰。任何加密的值都必須使用使用者介面在雲端執行個體中更新。
+>[!NOTE]
+
+>現在當您建置和部署專案時，專案將會根據雲端例項中可用的雲端服務組態，提供表單資料模型
+
 
 
 

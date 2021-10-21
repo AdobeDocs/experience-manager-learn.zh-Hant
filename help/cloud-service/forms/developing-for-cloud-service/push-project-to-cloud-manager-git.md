@@ -8,7 +8,7 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8851
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
@@ -16,12 +16,11 @@ ht-degree: 0%
 ---
 
 
-# 將AEM專案推送至cloud manager git代表
+# 將AEM專案推送至cloud manager git repo
 
 在上一步中，我們將AEM專案與AEM例項中建立的最適化Forms和主題同步。
-現在，我們需要將這些變更新增至本機的git存放庫，然後將本機的git存放庫推送至cloud manager git存放庫
-
-開啟命令提示符並導航至c:\cloudmanager\aem-banking-app Execute the following commands
+現在，我們需要將這些變更新增至本機的git存放庫，然後將本機的git存放庫推送至cloud manager git存放庫。
+開啟命令提示符並導航到c:\cloudmanager\aem-banking-app Execute the following commands
 
 ```
 git add .**

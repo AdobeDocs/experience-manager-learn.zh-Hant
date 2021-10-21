@@ -8,18 +8,22 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 8844
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 3%
+source-wordcount: '504'
+ht-degree: 2%
 
 ---
 
 # 安裝Cygwin
 
+
+Cygwin是與POSIX相容的寫程式和運行時環境，在Microsoft Windows上本機運行。
 安裝 [齊格溫](https://www.cygwin.com/). 我已在C:\cygwin64 folder中安裝
->[注意]
+>[!NOTE]
 > 請務必安裝zip、unzip、curl、rsync套件並安裝cygwin
+
+在c:\cloudmanager下建立名為adoberepo的資料夾。
 
 [安裝存放庫工具].(https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo).Installing)存放庫工具只是複製存放庫檔案並放入您的c:\cloudmanger\adoberepo folder中。
 
@@ -27,7 +31,12 @@ ht-degree: 3%
 
 ## 設定外部工具
 
-啟動IntelliJ按Ctrl+Alt+S鍵以啟動設定窗口選擇工具 — >外部工具，然後按一下+號並輸入以下內容（如螢幕抓圖中所示）確保通過在「組」下拉欄位中鍵入「repo」以及您建立的屬於的所有命令，建立一個稱為repo的組 **repo** 群組
+* 啟動IntelliJ
+* 按Ctrl+Alt+S鍵以啟動設定視窗。
+* 選擇「工具」 — >「外部工具」，然後按一下+號，然後輸入以下內容，如螢幕抓圖所示。
+   ![rep](assets/repo.png)
+* 請務必在「群組」下拉式欄位中輸入「repo」，並將您建立的所有命令歸屬於 **repo** 群組
+
 
 **Put命令**
 **方案**:C:\cygwin64\bin\bash
