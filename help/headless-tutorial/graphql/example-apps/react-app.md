@@ -9,10 +9,10 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
+source-git-commit: 9b1e38c8d4a0301c124c6f1607a9e4362b0e9cd1
 workflow-type: tm+mt
-source-wordcount: '994'
-ht-degree: 2%
+source-wordcount: '1007'
+ht-degree: 1%
 
 ---
 
@@ -20,6 +20,8 @@ ht-degree: 2%
 # React應用程式
 
 範例應用程式是探索Adobe Experience Manager(AEM)無頭功能的絕佳方式。 提供的React應用程式示範如何使用AEM的GraphQL API來查詢內容。 適用於JavaScript的AEM無周邊用戶端可用來執行為應用程式提供動力的GraphQL查詢。
+
+檢視 [GitHub原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
 ![React應用程式](./assets/react-screenshot.png)
 
