@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8851
-source-git-commit: d38da94bd4164163a16899b565c90b159194580a
+source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '139'
 ht-degree: 0%
 
 ---
@@ -35,10 +35,10 @@ git commit -m "My First AF"
 這會將檔案提交至本機Git存放庫的主分支
 
 ```
-git push -f bankingapp master:"My First AF"
+git push -f bankingapp master:"MyFirstAF"
 ```
 
-在上述命令中，我們會將主分支從本機的git存放庫推送至雲端管理員存放庫的My First AF分支（由封存應用程式易記名稱所識別）
+在上述命令中，我們將主分支從本機的git存放庫推送至雲端管理員存放庫的MyFirstAF分支，該分支由封存應用程式易記名稱所識別。
 
 
 
