@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: 72a9edb3edc73cf14f13bb53355a37e707ed4c79
+source-git-commit: 280ea1ec8fc5da644320753958361488872359cc
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1611'
 ht-degree: 3%
 
 ---
@@ -50,6 +50,7 @@ ht-degree: 3%
    + [適用性Forms中的預填服務](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [在適用性Forms中自訂提交](adaptive-forms/custom-submit-aem-forms-article.md)
    + [適用性Forms中的驗證碼](adaptive-forms/forms-captcha-feature-video-use.md)
+   + [一些實用的UI提示](adaptive-forms/forms-ui-tips.md)
    + [將最適化表單嵌入網頁](adaptive-forms/embed-af-web-page.md)
    + [建立字串陣列](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [在OSGI工作流程中使用XML中的設定值](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
@@ -312,7 +313,6 @@ ht-degree: 3%
    + [一般：AEM-Forms-JEE中重設 — default-password-for-users-in--JEE](troubleshooting/steps-to-reset-default-password-for-users-in-aem-forms-jee.md)
    + [一般：AEM-Forms-OSGI中重設 — default-password-for-users-in--OSGI的步驟](troubleshooting/steps-to-reset-default-password-for-users-in-aem-forms-osgi.md)
    + [一般：在群集中設定gemfire定位器並執行相關配置的步驟](troubleshooting/steps-to-set-up-gemfire-locators-in-a-cluster-and-perform-related-configuration.md)
-
 
 
 
