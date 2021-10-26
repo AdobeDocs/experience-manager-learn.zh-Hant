@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: 280ea1ec8fc5da644320753958361488872359cc
+source-git-commit: 96b78ff5056bd9c2be39fb2cf21b4f92863af089
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1618'
 ht-degree: 3%
 
 ---
@@ -50,7 +50,6 @@ ht-degree: 3%
    + [適用性Forms中的預填服務](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [在適用性Forms中自訂提交](adaptive-forms/custom-submit-aem-forms-article.md)
    + [適用性Forms中的驗證碼](adaptive-forms/forms-captcha-feature-video-use.md)
-   + [一些實用的UI提示](adaptive-forms/forms-ui-tips.md)
    + [將最適化表單嵌入網頁](adaptive-forms/embed-af-web-page.md)
    + [建立字串陣列](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [在OSGI工作流程中使用XML中的設定值](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
@@ -96,6 +95,9 @@ ht-degree: 3%
    + [設定表單資料模型](prefill-fdm-db/configuring-form-data-model.md)
    + [取得要求參數](prefill-fdm-db/get-request-parameter.md)
    + [建立最適化表單](prefill-fdm-db/create-adaptive-form.md)
++ UI提示與秘訣{#ui-tips-and-tricks}
+   + [切換密碼欄位文字](ui-tips-tricks/toggle-password.md)
+   + [空間工具欄按鈕](ui-tips-tricks/toolbar-buttons.md)
 + 自訂收件匣{#inbox-customization}
    + [簡介](inbox-customization/introduction.md)
    + [新增自訂欄](inbox-customization/add-married-column.md)
