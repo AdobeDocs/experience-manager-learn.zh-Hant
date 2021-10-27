@@ -1,20 +1,18 @@
 ---
 title: AEM FormsTutorials和影片
-seo-title: AEM Forms Tutorials and Videos
 description: 供初學者和經驗豐富的AEM Forms開發人員使用的AEM Forms資源集合
-seo-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers
 sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 5%
+source-wordcount: '516'
+ht-degree: 3%
 
 ---
 
-# 概覽 {#overview}
+# AEM FormsTutorials和影片 {#overview}
 
 Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管理、發佈和更新複雜的數位表單，同時與後端流程、業務規則和資料整合。 本使用手冊包含有關AEM Forms許多功能的影片和教學課程
 
@@ -26,7 +24,7 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
 
 * **[互動式通信文檔中的多序列圖（視頻）](./interactive-communications/multiseriescharts.md)**
 
-   *在同一圖表中繪製多個系列。多個系列圖表通常與折線圖、橫條圖、直條圖類型關聯使用。*
+   *在同一圖表中繪製多個系列。 多個系列圖表通常與折線圖、橫條圖、直條圖類型關聯使用。*
 
 * **[建立可重複使用的工作流模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
@@ -38,7 +36,7 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
 <tr>
   <td>
     <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
-      <img alt="400 x 225px" src="./assets/afhero.png" />
+      <img alt="建立第一個最適化表單" src="./assets/afhero.png" />
     </a>
     <div>
       <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
@@ -51,7 +49,7 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
   </td>
    <td>
     <a href="./ic-print-channel-tutorial/introduction.md">
-      <img alt="400 x 225px" src="./assets/correspondence-management1.png" />
+      <img alt="建立第一個打印渠道文檔" src="./assets/correspondence-management1.png" />
     </a>
     <div>
       <a href="./ic-print-channel-tutorial/introduction.md">
@@ -64,7 +62,7 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
   </td>
   <td>
     <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-      <img alt="400 x 225px" src="./assets/fdmlogo.png" />
+      <img alt="在AEM工作流程中使用表單資料模型" src="./assets/fdmlogo.png" />
     </a>
     <div>
       <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
@@ -80,7 +78,7 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
 
 >[!TIP]
 >
->此範例集合可示範AEM Forms的各種功能。.
+>此範例集合可示範AEM Forms的各種功能。
 
 
 ## 最適化表單範例
@@ -181,10 +179,10 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
 ## 其他資源
 
 * [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Sites編寫檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
-* [AEM Sites開發檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
-* [AEM Sites管理檔案](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
-* [AEM Sites部署檔案](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
+* [AEM Sites編寫檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites開發檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites管理檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites部署檔案](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
 * [AEM as a Cloud Service 教學課程](/help/cloud-service/overview.md)
 * [AEM Assets 教學課程](/help/assets/overview.md)
 * [AEM Forms 教學課程](/help/forms/overview.md)

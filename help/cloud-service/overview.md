@@ -1,19 +1,19 @@
 ---
-title: Adobe Experience Manager as Cloud Service 教學課程
+title: Adobe Experience Manager作為Cloud Service影片和Tutorials
 description: Adobe Experience Manager(AEM)as a Cloud Service的教學課程系列
-sub-product: sites, cloud manager, foundation，資產
+sub-product: sites, cloud-manager, foundation, assets
 kt: 3289
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 8%
+source-wordcount: '276'
+ht-degree: 5%
 
 ---
 
+# AEM asCloud Service影片和Tutorials {#overview}
 
-# 概覽 {#overview}
-
-Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM as aCloud Service以過去的投資和創新為基礎，推出新一代Experience Manager產品線，保留並擴充所有使用案例和功能。
+Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEMas a Cloud Service推出新一代Experience Manager產品線，以過去的投資和創新為基礎，保存並擴充所有使用案例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
@@ -21,7 +21,7 @@ Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM as 
 
 * **[Token型驗證（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
-   *了解如何使用Token式驗證，透過HTTP與AEM作為Cloud Service互動*
+   *了解如何使用Token型驗證透過HTTP與AEMas a Cloud Service互動*
 
 * **[無周邊GraphQL（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
@@ -44,7 +44,7 @@ Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM as 
 <table>
    <td>
       <a href="./accessing/overview.md">
-      <img alt="將AEM的存取設定為Cloud Service" src="./assets/overview/staff-pick__accessing.png"/>
+      <img alt="設定AEMas a Cloud Service的存取權" src="./assets/overview/staff-pick__accessing.png"/>
       </a>
       <div>
          <a href="./accessing/overview.md">
@@ -65,7 +65,7 @@ Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM as 
          </a>
       </div>
       <p>
-         <em>為AEM做好本機開發電腦的準備，做為Cloud Service開發！</em>
+         <em>為您的本機開發電腦做好準備，以進行AEMas a Cloud Service開發！</em>
       <p>
    </td>   
    <td>
@@ -78,7 +78,7 @@ Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM as 
          </a>
       </div>
       <p>
-         <em>探索在AEM上作為Cloud ServiceSDK本機Quickstart用來除錯應用程式的工具。</em>
+         <em>探索在AEMas a Cloud ServiceSDK的本機Quickstart上用於除錯應用程式的工具。</em>
       <p>
    </td>
 </table>
@@ -86,4 +86,4 @@ Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEM as 
 ## 其他資源
 
 * [Experience League — 探索Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [Adobe Experience Manager as aCloud Service檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html)
+* [Adobe Experience Manager as a Cloud Service檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html)

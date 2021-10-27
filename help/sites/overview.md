@@ -1,19 +1,17 @@
 ---
-title: AEM Sites 教學課程
-seo-title: AEM Sites 教學課程
-description: 'Adobe Experience Manager Sites 的影片和教學課程系列。 '
-seo-description: Adobe Experience Manager Sites的影片和教學課程系列
-sub-product: 網站，內容服務
-topic: 內容管理
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+title: AEM Sites 影片和教學課程
+description: Adobe Experience Manager Sites 的影片和教學課程系列。
+sub-product: sites, content-services
+topic: Content Management
+exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '345'
 ht-degree: 16%
 
 ---
 
-
-# 概覽 {#overview}
+# AEM Sites 影片和教學課程 {#overview}
 
 Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使用手冊包含有關AEM Sites許多功能的影片和教學課程。
 
@@ -88,10 +86,10 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
 ## 其他資源
 
 * [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Sites編寫檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
-* [AEM Sites開發檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
-* [AEM Sites管理檔案](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
-* [AEM Sites部署檔案](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
+* [AEM Sites編寫檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites開發檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites管理檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites部署檔案](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
 * [AEM as a Cloud Service 教學課程](/help/cloud-service/overview.md)
 * [AEM Assets 教學課程](/help/assets/overview.md)
 * [AEM Forms 教學課程](/help/forms/overview.md)

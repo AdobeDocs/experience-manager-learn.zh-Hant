@@ -1,22 +1,22 @@
 ---
 title: AEM Assets Essentials影片
 description: Adobe Experience Manager Assets Essentials的影片集合
-sub-product: 資產
-source-git-commit: 21d6df065fe61614d3bbd68ce2f20d3dc23a9cef
+sub-product: assets
+exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
-
-# 概覽
+# Assets Essentials影片
 
 ![Assets Essentials](./assets/overview/hero.png)
 
-Experience ManagerAssets Essentials提供簡化的使用者介面，以進行輕量型的資產管理與協作。
+Experience Manager Assets Essentials提供簡化的使用者介面，以進行輕量型的資產管理和協作。
 
-請觀看我們的影片，了解如何使用Assets Essentials管理您的資產，以及如何與AdobeJourney Orchestrator整合！
+請觀看這些影片，了解如何使用Assets Essentials管理您的資產，以及如何與AdobeJourney Orchestrator整合！
 
 ## 深入了解Assets Essentials
 
