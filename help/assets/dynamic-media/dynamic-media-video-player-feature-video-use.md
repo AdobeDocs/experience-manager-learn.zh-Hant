@@ -8,7 +8,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: 68c49f526146e2f2ba626dc2126fb96d4ae09854
+source-git-commit: d8738ef33940efc856e6fc00f6a57abb641598e5
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 6%
@@ -27,8 +27,9 @@ AEM Dynamic Media視訊播放器過去依賴Flash執行階段來支援案頭用�
 
 針對不支援的瀏覽器，我們會回復至漸進式視訊傳送，HLS瀏覽器支援如下
 
->!![NOTE]
-Dynamic Media Hybrid在2022年5月後將不支援Internet Explorer 11。
+>[!NOTE]
+>
+> Dynamic Media Hybrid在2022年5月後將不支援Internet Explorer 11。
 
 <table> 
  <thead> 
