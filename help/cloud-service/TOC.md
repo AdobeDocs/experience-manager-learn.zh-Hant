@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
+source-git-commit: e8b3bcaeee40b4bfd4f967f929ad664e8d168cb0
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '604'
 ht-degree: 21%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 21%
       + [Dispatcher設定移轉](./developing/basics/dispatcher-configuration.md)
    + AEM 專案{#aem-projects}
       + [AEM Maven專案](./developing/projects/maven-project-structure.md)
+      + [清除AEM Maven專案](./developing/projects/remove-samples.md)
    + OSGi服務{#osgi-services}
       + [OSGi服務基本知識](./developing/osgi-services/basics.md)
       + [OSGi元件生命週期](./developing/osgi-services/lifecycle.md)
