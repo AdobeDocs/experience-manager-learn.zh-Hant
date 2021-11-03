@@ -1,11 +1,11 @@
 ---
-feature-set: Experience Manager, Experience Manager Forms
+feature-set: Experience Manager Forms, Experience Manager
 role: Developer
 user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: 96b78ff5056bd9c2be39fb2cf21b4f92863af089
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
 source-wordcount: '1618'
 ht-degree: 3%

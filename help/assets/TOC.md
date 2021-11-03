@@ -2,9 +2,9 @@
 user-guide-title: AEM Assets 影片和教學課程
 user-guide-description: Adobe Experience Manager Assets 的影片和教學課程系列。
 breadcrumb-title: AEM Assets 教學課程
-feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
+feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 519047931bd4cbfb5dd2dd6f2b7b2871512992c5
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 22%
@@ -46,26 +46,26 @@ ht-degree: 22%
    + [集合](./search-and-discovery/collections.md)
    + [搜尋提升](./search-and-discovery/search-boost.md)
 
-+ 高級功能{#advanced}
++ 進階功能{#advanced}
    + [註解PDF輸出](./advanced/customizing-annotations-pdf-output.md)
    + [資產 Insights](./advanced/asset-insights-launch-tutorial.md)
    + [資產報表](./advanced/asset-reports.md)
    + [權限(CUG)](./advanced/closed-user-groups.md)
    + [水印](./advanced/watermarks.md)
 
-+ 高級元資料管理{#metadata}
++ 進階中繼資料管理{#metadata}
    + [階層式中繼資料](metadata/cascade-metadata-feature-video-use.md)
    + [影像智慧標籤](metadata/image-smart-tags.md)
    + [影像的自訂智慧標籤](metadata/custom-smart-tags.md)
    + [視訊智慧標記](metadata/video-smart-tags.md)
    + [匯入和匯出中繼資料](metadata/metadata-import-export.md)
 
-+ 共用和分發{#sharing}
++ 共用與發佈{#sharing}
    + [下載資產](./sharing/download.md)
    + [發佈資產](./sharing/publish.md)
 
    + 品牌入口網站{#brand-portal}
-      + [品牌入口網站](./sharing/brand-portal.md)
+      + [Brand Portal](./sharing/brand-portal.md)
       + [設定AEM Brand Portal](brand-portal/configure.md)
       + [配置Asset Sourcing](brand-portal/configure-asset-sourcing.md)
       + [啟用轉譯下載](brand-portal/enable-renditions-download.md)

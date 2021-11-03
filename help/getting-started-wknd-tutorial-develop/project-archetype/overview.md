@@ -1,28 +1,29 @@
 ---
 title: AEM Sites快速入門 — 專案原型
 description: AEM Sites快速入門 — 專案原型。 WKND教學課程是多部分教學課程，專為剛接觸Adobe Experience Manager的開發人員所設計。 本教學課程會逐步說明虛擬生活風格品牌WKND的AEM網站實作。 本教學課程涵蓋基本主題，例如專案設定、主要原型、核心元件、可編輯範本、用戶端程式庫和元件開發。
-sub-product: Sites
+sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
-feature: 核心元件、頁面編輯器、可編輯的範本、AEM專案原型
-topic: 內容管理、開發
+feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
+topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
+recommendations: disable
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 34%
+source-wordcount: '475'
+ht-degree: 35%
 
 ---
-
 
 # AEM Sites快速入門 — 專案原型 {#project-archetype}
 
 歡迎使用多部分教學課程，專為新進入Adobe Experience Manager(AEM)的開發人員所設計。 本教學課程會逐步說明WKND虛構生活風格品牌AEM網站的實作。
 
-本教學課程的開頭是使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)產生新專案。
+本教學課程的開頭為： [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 來產生新專案。
 
 此教學課程在設計上將使用 **AEM as a Cloud Service**，並向下相容於 **AEM 6.5.5.0+** 和 **AEM 6.4.8.1+**。網站的實作方式為：
 
@@ -43,13 +44,13 @@ ht-degree: 34%
 
 應在本機安裝下列項目：
 
-* 本機AEM **Author**&#x200B;例項(Cloud ServiceSDK、6.5.5+或6.4.8.1+)
+* 本機AEM **作者** 例項(Cloud ServiceSDK、6.5.5+或6.4.8.1+)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 或更新版本)
 * [Node.js](https://nodejs.org/en/) （LTS — 長期支援）
 * [npm 6+](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
-* [Visual Studio代](https://code.visualstudio.com/) 碼或等效IDE
+* [Visual Studio代碼](https://code.visualstudio.com/) 或等效IDE
    * [VSCode AEM同步](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  — 在整個教學課程中使用的工具
 
 >[!NOTE]
@@ -68,4 +69,4 @@ ht-degree: 34%
 
 ## 後續步驟 {#next-steps}
 
-你在等什麼?!導覽至[專案設定](project-setup.md)章節，了解如何使用AEM專案原型產生新的Adobe Experience Manager專案，以啟動教學課程。
+你在等什麼?!導覽至 [專案設定](project-setup.md) 章節，並了解如何使用AEM專案原型產生新的Adobe Experience Manager專案。
