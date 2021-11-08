@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
+source-git-commit: 846400cd3ac4eb1b04ece055dfcbbd677f11e88e
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1819'
 ht-degree: 1%
 
 ---
@@ -64,9 +64,9 @@ ht-degree: 1%
    $ java -jar aem-author-p4502.jar
    ```
 
-1. 提供管理員密碼作為 `admin`. 任何管理員密碼都是可接受的，但建議使用本機開發的預設密碼，以減少重新設定的需求。
+1. 提供管理員密碼作為 `admin`. 任何管理員密碼都是可接受的，但建議使用 `admin` 以減少重新設定的需求。
 1. 幾分鐘後，AEM執行個體將完成安裝，而新的瀏覽器視窗應會在 [http://localhost:4502](http://localhost:4502).
-1. 使用使用者名稱登入 `admin` 和密碼 `admin`.
+1. 使用使用者名稱登入 `admin` 和在AEM初始啟動期間選取的密碼(通常 `admin`)。
 
 ## 安裝範例內容和GraphQL端點 {#wknd-site-content-endpoints}
 
@@ -130,11 +130,11 @@ WKND參考網站包含公開 [GraphQL端點](https://experienceleague.adobe.com/
    REACT_APP_AUTHORIZATION=admin:admin
    ```
 
-   確保 `React_APP_HOST_URI` 符合您的本機AEM例項。 In this chapter we will connect the React App directly to the AEM **Author** environment. **作者** 依預設，環境需要驗證，因此我們的應用程式會以 `admin` 使用者。 這是開發期間的常見作法，因為它可讓我們快速變更AEM環境，並立即在應用程式中反映。
+   確保 `React_APP_HOST_URI` 符合您的本機AEM例項。 在本章中，我們將直接將React應用程式連結至AEM **作者** 環境。 **作者** 依預設，環境需要驗證，因此我們的應用程式會以 `admin` 使用者。 這是開發期間的常見作法，因為它可讓我們快速變更AEM環境，並立即在應用程式中反映。
 
    >[!NOTE]
    >
-   > In a production scenario the App will connect to an AEM **Publish** environment. 這在 [生產部署](production-deployment.md) 章節。
+   > 在生產案例中，應用程式會連線至AEM **發佈** 環境。 這在 [生產部署](production-deployment.md) 章節。
 
 1. 導覽至 `aem-guides-wknd-graphql/react-app` 檔案夾。 安裝並啟動應用程式：
 
@@ -172,7 +172,7 @@ WKND參考網站包含公開 [GraphQL端點](https://experienceleague.adobe.com/
 1. 按一下 **巴釐島衝浪營** 內容片段，以開啟內容片段編輯器。
 1. 修改 **標題** 和 **說明** 冒險
 
-   ![Modify content fragment](assets/setup/modify-content-fragment-bali.png)
+   ![修改內容片段](assets/setup/modify-content-fragment-bali.png)
 
 1. 按一下 **儲存** 以儲存變更。
 1. 導覽回React應用程式，網址為 [http://localhost:3000](http://localhost:3000) 並重新整理，查看您的變更：
@@ -228,13 +228,13 @@ AEM預設為安全，會封鎖跨原始請求，防止未經授權的應用程�
 1. 在頂端功能表中按一下 **OSGI** > **設定** 把所有的 [OSGi配置](http://localhost:4502/system/console/configMgr).
 1. 向下捲動頁面 **AdobeGranite跨原始資源共用**.
 1. 按一下 `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql`.
-1. The following fields have been updated:
+1. 已更新下列欄位：
    * 允許的原始項(Regex): `http://localhost:.*`
       * 允許所有本地主機連接。
    * 允許的路徑: `/content/graphql/global/endpoint.json`
       * 這是當前配置的唯一GraphQL終結點。 作為最佳做法，變革和組織振興方案的配置應盡可能限制。
    * 允許的方法： `GET`, `HEAD`, `POST`
-      * Only `POST` is required for GraphQL however the other methods can be useful when interacting with AEM in headless manner.
+      * 僅 `POST` 是GraphQL的必要項目，但其他方法在以無周邊方式與AEM互動時可能相當實用。
    * 支援的標題： **授權** 已新增，以傳遞至製作環境的基本驗證。
    * 支援憑據： `Yes`
       * 這是必要操作，因為我們的React應用程式會與AEM製作服務上受保護的GraphQL端點通訊。
