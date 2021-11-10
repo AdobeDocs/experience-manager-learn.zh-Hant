@@ -8,7 +8,7 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 84a0c78f89f78e161b460574b5927fc4aba2fe3a
+source-git-commit: 20cae7a327131927f831ae9c49fb5eebfb00f5c4
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -27,6 +27,7 @@ ht-degree: 0%
 ## 建立最適化表單
 
 使用下列結構建立最適化表單。 根面板的子面板在左側顯示為標籤。 其中一些「**標籤**」有其他子面板。 例如，「家庭」頁簽有兩個子面板，稱為「配偶」和「子項」。
+
 FormContainer下還添加了一個工具欄，其中包含「前置」和「下一步」按鈕
 
 ![工具欄間距](assets/multiple-panels.png)
@@ -61,4 +62,5 @@ window.guideBridge.setFocus(null, 'prevItemDeep', true);
 >[!VIDEO](https://video.tv.adobe.com/v/338370?quality=9&learn=on)
 
 >[!NOTE]
-> 本文所述的功能在最後一個索引標籤中無法運作。 例如，如果「位址」標籤有子面板，則此功能無法運作。
+>
+>本文所述的功能在最後一個索引標籤中無法運作。 例如，如果「位址」標籤有子面板，則此功能無法運作。
