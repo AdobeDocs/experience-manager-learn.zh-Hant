@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Assets 的影片和教學課程
 breadcrumb-title: AEM Assets 教學課程
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: cd54cfbbded4e44f4850f9dac8ab17d179e7d498
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 22%
+source-wordcount: '356'
+ht-degree: 21%
 
 ---
 
@@ -131,6 +131,11 @@ ht-degree: 22%
       + [刪除Dynamic Media設定](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [在Dynamic Media Classic應用程式中下載資產](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
+
++ Workfront整合{#workfront}
+   + 增強連接器{#enhanced-connector}
+      + [增強連接器基本概念](./workfront/enhanced-connector/basics.md)
+      + [專案資料夾](./workfront/enhanced-connector/project-folders.md)
 
 + 轉換 {#translation}
    + [源檔案翻譯](translation/source-file-translation-feature-video-use.md)
