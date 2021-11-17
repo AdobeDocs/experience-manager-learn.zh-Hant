@@ -1,37 +1,36 @@
 ---
-title: 建立網站
-seo-title: AEM Sites快速入門 — 建立網站
-description: 使用AEM Adobe Experience Manager中的「網站建立精靈」來產生新網站。 由Adobe提供的「標準網站範本」會作為新網站的起點。
-sub-product: Sites
+title: 建立網站 | AEM快速網站建立
+description: 快速建立網站時，請使用AEM Adobe Experience Manager中的「網站建立精靈」來產生新網站。 由Adobe提供的「標準網站範本」會作為新網站的起點。
+sub-product: sites
 version: Cloud Service
 type: Tutorial
-topic: 內容管理
-feature: 核心元件、頁面編輯器
+topic: Content Management
+feature: Core Components, Page Editor
 role: Developer
 level: Beginner
 kt: 7496
 thumbnail: KT-7496.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
-
 
 # 建立網站 {#create-site}
 
 >[!CAUTION]
 >
-> 此處的快速網站建立功能將於2021年下半年推出。 相關檔案可供預覽。
+> 快速網站建立工具目前是技術預覽。 除非經Adobe支援同意，否則可供測試及評估之用，且非供生產使用。
 
-本章說明如何在Adobe Experience Manager中建立新網站。 標準網站範本由Adobe提供，可作為起點。
+快速建立網站時，請使用AEM Adobe Experience Manager中的「網站建立精靈」來產生新網站。 由Adobe提供的「標準網站範本」會作為新網站的起點。
 
 ## 必備條件 {#prerequisites}
 
-本章中的步驟將在Adobe Experience Manager作為Cloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 完成本教學課程時，建議您使用[沙箱方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)。
+本章中的步驟將在Adobe Experience Manager as a Cloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 建議使用 [沙箱方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) 和 [開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) 完成本教學課程時。
 
-如需詳細資訊，請參閱[入門檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)。
+檢閱 [入門檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html) 以取得更多詳細資訊。
 
 ## 目標 {#objective}
 
@@ -41,34 +40,34 @@ ht-degree: 0%
 
 ## 登入Adobe Experience Manager Author {#author}
 
-首先，以Cloud Service環境的身分登入AEM。 AEM環境會分割為&#x200B;**Author Service**&#x200B;和&#x200B;**Publish Service**。
+首先，登入您的AEMas a Cloud Service環境。 AEM環境會分割為 **作者服務** 和 **發佈服務**.
 
-* **作者服務**  — 建立、管理及更新網站內容的位置。通常只有內部使用者可存取&#x200B;**作者服務**，且位於登入畫面後。
-* **發佈服務**  — 托管即時網站。這項服務是一般使用者會看到，且通常可公開使用。
+* **作者服務**  — 建立、管理和更新網站內容的位置。 通常只有內部使用者可存取 **作者服務** 和位於登入畫面後。
+* **發佈服務**  — 托管即時網站。 這項服務是一般使用者會看到，且通常可公開使用。
 
-大部分的教學課程將使用&#x200B;**Author Service**&#x200B;進行。
+大部分的教學課程將使用 **作者服務**.
 
-1. 導覽至Adobe Experience Cloud [https://experience.adobe.com/](https://experience.adobe.com/)。 使用您的個人帳戶或公司/學校帳戶登入。
-1. 確保在菜單中選擇了正確的組織，然後按一下&#x200B;**Experience Manager**。
+1. 導覽至Adobe Experience Cloud [https://experience.adobe.com/](https://experience.adobe.com/). 使用您的個人帳戶或公司/學校帳戶登入。
+1. 確保在菜單中選擇了正確的組織，然後按一下 **Experience Manager**.
 
    ![Experience Cloud首頁](assets/create-site/experience-cloud-home-screen.png)
 
-1. 在&#x200B;**Cloud Manager**&#x200B;下，按一下&#x200B;**Launch**。
-1. 將滑鼠指標暫留在您要使用的方案上，然後按一下&#x200B;**Cloud Manager方案**&#x200B;圖示。
+1. 在 **Cloud Manager** 按一下 **Launch**.
+1. 將滑鼠指標暫留在您要使用的方案上，然後按一下 **Cloud Manager計畫** 表徵圖。
 
    ![Cloud Manager方案圖示](assets/create-site/cloud-manager-program-icon.png)
 
-1. 在頂端功能表中，按一下「**環境**」以檢視布建的環境。
+1. 在頂端功能表中按一下 **環境** 檢視布建的環境。
 
-1. 找到您要使用的環境，然後按一下&#x200B;**製作URL**。
+1. 找到您要使用的環境，然後按一下 **作者URL**.
 
    ![存取開發作者](assets/create-site/access-dev-environment.png)
 
    >[!NOTE]
    >
-   >建議在本教學課程中使用&#x200B;**Development**&#x200B;環境。
+   >建議使用 **開發** 環境。
 
-1. 新索引標籤將啟動至AEM **作者服務**。 按一下「**使用Adobe**&#x200B;登入」，您應使用相同的Experience Cloud憑證自動登入。
+1. 新標籤將啟動至AEM **作者服務**. 按一下 **使用Adobe登入** 且您應使用相同的Experience Cloud憑證自動登入。
 
 1. 重新導向與驗證後，您現在應該會看到AEM開始畫面。
 
@@ -76,15 +75,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 存取Experience Manager時是否有問題？ 檢閱[入門檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
+> 存取Experience Manager時是否有問題？ 檢閱 [入門檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
 
 ## 下載基本網站範本
 
-網站範本提供新網站的起點。 「網站範本」包含一些基本主題、頁面範本、設定和範例內容。 開發人員能決定「網站範本」中包含的內容。 Adobe提供&#x200B;**基本網站範本**&#x200B;以加速新實作。
+網站範本提供新網站的起點。 「網站範本」包含一些基本主題、頁面範本、設定和範例內容。 開發人員能決定「網站範本」中包含的內容。 Adobe提供 **基本網站範本** 來加速新實作。
 
-1. 開啟新的瀏覽器標籤，並導覽至GitHub上的「基本網站範本」專案：[https://github.com/adobe/aem-site-template-basic](https://github.com/adobe/aem-site-template-basic)。 該項目是開源的，並授權任何人使用。
-1. 按一下「**發行版本**」並導覽至「[最新發行版本](https://github.com/adobe/aem-site-template-basic/releases/latest)」。
-1. 展開&#x200B;**Assets**&#x200B;下拉式清單，然後下載範本zip檔案：
+1. 開啟新的瀏覽器標籤，並導覽至GitHub上的「基本網站範本」專案： [https://github.com/adobe/aem-site-template-standard](https://github.com/adobe/aem-site-template-standard). 該項目是開源的，並授權任何人使用。
+1. 按一下 **版本** 並導覽至 [最新版本](https://github.com/adobe/aem-site-template-standard/releases/latest).
+1. 展開 **資產** 下拉式清單和下載範本zip檔案：
 
    ![基本網站範本Zip](assets/create-site/template-basic-zip-file.png)
 
@@ -92,38 +91,41 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 本教學課程是使用基本網站範本的&#x200B;**5.0.0**&#x200B;版本撰寫。 如果啟動新專案，一律建議使用最新版本。
+   > 本教學課程是使用版本撰寫 **1.1.0** 的下限。 啟動新專案供生產使用時，一律建議使用最新版本。
 
 ## 建立新網站
 
 接下來，使用上一練習中的「網站範本」生成新網站。
 
-1. 返回AEM環境。 從「AEM開始」畫面導覽至&#x200B;**Sites**。
-1. 在右上角按一下「**Create** > **Site(Template)**」。 這會顯示&#x200B;**建立網站精靈**。
-1. 在「**選取網站範本**」下，按一下「**匯入**」按鈕。
+1. 返回AEM環境。 從AEM開始畫面導覽至 **網站**.
+1. 在右上角按一下 **建立** > **網站（範本）**. 這會顯示 **建立站點嚮導**.
+1. 在 **選擇網站模板** 按一下 **匯入** 按鈕。
 
-   上傳從上次練習下載的&#x200B;**.zip**&#x200B;範本檔案。
+   上傳 **.zip** 從上次練習下載的範本檔案。
 
-1. 選擇&#x200B;**基本AEM站點模板**，然後按一下&#x200B;**下一步**。
+1. 選取 **基本AEM網站範本** 按一下 **下一個**.
 
    ![選擇網站模板](assets/create-site/select-site-template.png)
 
-1. 在&#x200B;**Site Details** > **Site title**&#x200B;下輸入`WKND Site`。
-1. 在&#x200B;**站點名稱**&#x200B;下，輸入`wknd`。
+1. 在 **網站詳細資訊** > **網站標題** 輸入 `WKND Site`.
+
+   在實際實作中，「WKND網站」將會取代為您的公司或組織的品牌名稱。 在本教學課程中，我們模擬為虛構的生活風格品牌「WKND」建立網站。
+
+1. 在 **網站名稱** 輸入 `wknd`.
 
    ![網站範本詳細資訊](assets/create-site/site-template-details.png)
 
    >[!NOTE]
    >
-   > 如果使用共用AEM環境，請將唯一識別碼附加至&#x200B;**網站名稱**。 例如`wknd-johndoe`。 這可確保多位使用者能完成相同的教學課程，不會有任何衝突。
+   > 如果使用共用AEM環境，請將唯一識別碼附加至 **網站名稱**. 例如 `wknd-site-johndoe`. 這可確保多位使用者能完成相同的教學課程，不會有任何衝突。
 
-1. 按一下&#x200B;**建立**&#x200B;以生成站點。 當AEM完成網站建立後，按一下&#x200B;**Success**&#x200B;對話方塊中的&#x200B;**Done**。
+1. 按一下 **建立** 來產生網站。 按一下 **完成** 在 **成功** 對話框。
 
 ## 探索新網站
 
 1. 導覽至AEM Sites主控台（如果尚未存在）。
-1. 已生成新的&#x200B;**WKND站點**。 其中將包含具有多語言階層的網站結構。
-1. 通過選擇頁面並按一下菜單欄中的&#x200B;**編輯**&#x200B;按鈕，開啟&#x200B;**英文** > **首頁**&#x200B;頁：
+1. 新 **WKND站點** 已產生。 其中將包含具有多語言階層的網站結構。
+1. 開啟 **英文** > **首頁** 頁面，方法是選取頁面並按一下 **編輯** 按鈕（在菜單欄中）:
 
    ![WKND網站階層](assets/create-site/wknd-site-starter-hierarchy.png)
 
@@ -139,4 +141,4 @@ ht-degree: 0%
 
 ### 後續步驟 {#next-steps}
 
-使用AEMAdobe Experience Manager中的頁面編輯器，更新[製作內容和發佈](author-content-publish.md)章節中網站的內容。 了解如何設定原子元件以更新內容。 了解AEM製作和發佈環境之間的差異，並了解如何將更新發佈至即時網站。
+使用AEM Adobe Experience Manager中的頁面編輯器，更新 [製作內容與發佈](author-content-publish.md) 章節。 了解如何設定原子元件以更新內容。 了解AEM製作和發佈環境之間的差異，並了解如何將更新發佈至即時網站。

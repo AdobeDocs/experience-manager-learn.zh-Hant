@@ -8,10 +8,10 @@ user-guide-title: AEM Sites - WKND 教學課程快速入門
 user-guide-description: AEM 的新開發人員的多部分教學課程。實作虛構的生活風格品牌 WKND 的 AEM 網站。
 breadcrumb-title: AEM Sites WKND 教學課程
 index: y
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 56%
+source-wordcount: '78'
+ht-degree: 50%
 
 ---
 
@@ -28,9 +28,10 @@ ht-degree: 56%
    + [5 — 樣式系統](./project-archetype/style-system.md)
    + [6 — 自訂元件](./project-archetype/custom-component.md)
    + [7 — 單元測試](./project-archetype/unit-testing.md)
-+ 網站範本 {#site-template}
++ 快速網站建立 {#site-template}
    + [概覽](./site-template/overview.md)
    + [1 — 建立網站](./site-template/create-site.md)
-   + [2 — 製作內容與發佈變更](./site-template/author-content-publish.md)
+   + [2 — 製作和發佈簡介](./site-template/author-content-publish.md)
+   + [3 — 使用Adobe XD規劃UI](./site-template/ui-planning-adobe-xd.md)
    + [3 — 頁面範本](./site-template/page-templates.md)
    + [4 — 貼明](./site-template/theming.md)

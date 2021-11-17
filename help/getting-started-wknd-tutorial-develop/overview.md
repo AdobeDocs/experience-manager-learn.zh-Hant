@@ -16,9 +16,9 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '624'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 4%
 
 [以AEM專案原型開始教學課程](./project-archetype/overview.md)
 
-**AEM網站範本**  — 使用預先定義的網站範本，以低程式碼方式產生AEM網站。 使用現成可用的元件和範本，快速啟動網站並運作。 使用命名工作流程，只對CSS和JavaScript套用品牌專屬樣式和自訂。 建議用於新專案和開發人員。 目前僅適用於AEMas a Cloud Service。
+**AEM網站範本**  — 也稱為快速網站建立，此為使用預先定義的網站範本產生AEM網站的低碼方法。 使用現成可用的元件和範本，快速啟動網站並運作。 使用命名工作流程，只對CSS和JavaScript套用品牌專屬樣式和自訂。 建議用於新專案和開發人員。 僅適用於AEMas a Cloud Service。
 
 [使用網站範本啟動教學課程](./site-template/create-site.md)
 
