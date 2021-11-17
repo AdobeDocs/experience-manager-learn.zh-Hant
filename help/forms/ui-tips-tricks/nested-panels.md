@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 458f1c2df6472be2b4704bb68eafb92b58f48a97
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,6 @@ ht-degree: 0%
 # 多個面板的導覽標籤
 
 當您的表單有左側導覽標籤，且其中一個標籤有多個面板時，您可能會想要隱藏子面板的標題，但仍可在這些標籤和子面板之間導覽
-
-[此功能以此形式上線](https://forms.enablementadobe.com/content/forms/af/testnav1.html)
-
-
-
 
 ## 建立最適化表單
 

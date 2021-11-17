@@ -1,20 +1,20 @@
 ---
 title: 使用表單資料模型預填表單
-description: '使用表單資料模型的請求屬性預填最適化表單 '
-feature: 適用性表單
+description: 使用表單資料模型的請求屬性預填最適化表單
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4419
 thumbnail: 36387.jpg
-topic: 開發
+topic: Development
 role: User
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: be519d58-1caa-42ea-97a9-7cd38ce8faca
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 3%
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
-
 
 # 使用表單資料模型預填表單
 
@@ -23,12 +23,10 @@ ht-degree: 3%
 
 * 建立RDBMS支援的表單資料模型
 * 建立2個實體之間的關聯
-* 將表單資料模型的&#x200B;_get_&#x200B;服務傳回的資料填入表格
+* 將傳回的資料填入表格 _get_ 表單資料模型服務
 * 使用表單資料模型的請求屬性
 
-
-[按一下查看功能的即](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)
-時演示以下視頻為您提供了本課程的概述
+以下影片提供課程的概觀
 >[!VIDEO](https://video.tv.adobe.com/v/36387/quality=9)
 
 ## 必備條件
@@ -36,4 +34,3 @@ ht-degree: 3%
 * AEM Forms的工作執行個體
 * 熟悉MySQL資料庫和MySQL工作台
 * 建立最適化Forms的一些經驗
-

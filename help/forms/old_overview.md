@@ -7,8 +7,8 @@ role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 6%
+source-wordcount: '516'
+ht-degree: 3%
 
 ---
 
@@ -76,6 +76,102 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
 </tr>
 </table>
 
+>[!TIP]
+>
+>此範例集合可示範AEM Forms的各種功能。
+
+
+## 最適化表單範例
+
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <img alt= "卡皮奇在AEM Forms" src="./assets/captcha1.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/registerfornewsletter.html">
+    <strong>Google適用性表單驗證碼</strong>
+    </a>
+    </div>
+    <p>
+    <em> 區分人類和自動存取表單</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <img alt="預覽表單資料" src="./assets/preview.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <strong>審核表單資料</strong>
+    </a>
+    </div>
+    <p>
+    <em>提交表單之前先預覽表單資料。</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+      <img alt=" 內嵌影像" src="./assets/preview.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+        <strong>顯示內嵌影像</strong>
+      </a>
+    </div>
+    <p>
+    <em>顯示新增至表單的影像。</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+## 最適化表單和符號範例
+
+<table>
+<tr>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+      <img alt="租賃協定" src="./assets/rental-agreement.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+    <strong>租賃協定表樣本</strong>
+    </a>
+    </div>
+    <p>
+    <em>租戶與房東之間的租賃協定，由AEM Forms和Adobe Sign填寫並簽署</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <img alt="NDA協定" src="./assets/nda1.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <strong>生成保密協定</strong>
+    </a>
+    </div>
+    <p>
+    <em>動態建立NDA，並使用Adobe Sign傳送以進行簽署</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+      <img alt="簽署檔案套件" src="./assets/sign.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+        <strong>文檔簽名包</strong>
+      </a>
+    </div>
+    <p>
+    <em>使用Forms和Adobe Sign順暢地簽署多份檔案</em>
+    <p>
+  </td>
+</tr>
+</table>
 
 
 

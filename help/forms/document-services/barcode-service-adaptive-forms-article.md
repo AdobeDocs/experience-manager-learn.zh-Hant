@@ -1,18 +1,18 @@
 ---
 title: 使用適用性Forms的條碼服務
 description: 使用條碼服務來解碼條碼，並從擷取的資料填入表單欄位。
-feature: 條碼式Forms
+feature: Barcoded Forms
 version: 6.4,6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # 使用適用性Forms的條碼服務{#barcode-service-with-adaptive-forms}
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 下列程式碼會解碼條碼，並使用解碼值填入JSON物件。 然後，Servlet會在回應呼叫應用程式時傳回JSON物件。
 
-您可以看到此功能正式運行，請訪問[示例門戶](https://forms.enablementadobe.com/content/samples/samples.html?query=0)並搜索條形碼服務演示
+
 
 ```java
 public JSONObject extractBarCode(Document pdfDocument) {
@@ -140,11 +140,10 @@ $(document).ready(function()
 
 要在您的系統上運行此程式，請執行以下步驟
 
-1. [使用封裝管理](assets/barcodeservice.zip) 器下載BarcodeService.zipand匯入至AEM
+1. [下載BarcodeService.zip](assets/barcodeservice.zip) 並使用套件管理器匯入至AEM
 1. [下載和安裝自訂DocumentServices套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [下載並安裝DevelopingWithServiceUser套件組合](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下載範例PDF表單](assets/barcode.pdf)
-1. 將瀏覽器指向[範例最適化表單](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. 將瀏覽器指向 [範例適用性表單](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
 1. 上傳提供的範例PDF
 1. 您應該會看到填入了資料的表單
-

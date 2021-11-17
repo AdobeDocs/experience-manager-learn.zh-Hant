@@ -6,31 +6,28 @@ version: 6.5
 topic: Development
 role: User
 level: Beginner
-source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
+exl-id: 8fbea634-7949-417f-a4d6-9e551fff63f3
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
-
 
 # 動態新增項目至選擇的群組元件
 
 AEM Forms 6.5導入了動態新增項目至最適化Forms選擇群組元件（例如CheckBox、選項按鈕和影像清單）的功能。
 
-[此功能可在Samples Server上即時使用](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)。搜尋「動態核取方塊」項目卡片，然後按一下「嘗試」
-
 
 您可以根據您的使用案例，使用視覺編輯器以及程式碼編輯器來新增項目。
 
-**使用視覺編輯器：** 您可以從函式呼叫或服務呼叫的結果填入選擇群組的項目。例如，您可以使用REST API呼叫的回應來設定選擇群組的項目。
+**使用視覺編輯器：** 您可以從函式呼叫或服務呼叫的結果填入選擇群組的項目。 例如，您可以使用REST API呼叫的回應來設定選擇群組的項目。
 
 在下面的螢幕截圖中，我們將Loan Periods(years)選項設定為名為getLoanPeriods的服務呼叫的結果。
 
 ![規則編輯器](assets/ruleeditor.png)
 
-**使用程式碼編輯器**:當您想要根據表單中輸入的值，以動態方式設定選擇群組中的項目時。例如，下列程式碼片段會將核取方塊的項目設定為在「適用性表單」的申請人名稱和配偶欄位中輸入的值。
+**使用程式碼編輯器**:當您想要根據表單中輸入的值，以動態方式設定選擇群組中的項目時。 例如，下列程式碼片段會將核取方塊的項目設定為在「適用性表單」的申請人名稱和配偶欄位中輸入的值。
 
 在程式碼片段中，我們會設定WorkingMembers的項目，這是核取方塊元件。 通過讀取最適化表單的applicantName和配偶文本欄位的值，動態地建立項的陣列
 

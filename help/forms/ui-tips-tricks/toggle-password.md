@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9270
-source-git-commit: 96b78ff5056bd9c2be39fb2cf21b4f92863af089
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '167'
 ht-degree: 2%
 
 ---
@@ -20,9 +20,7 @@ ht-degree: 2%
 常見的使用案例是允許填入表單切換至密碼欄位中輸入文字的可見性。
 為了完成此使用案例，我已使用 [Font Awesome Library](https://fontawesome.com/). 所需的CSS和eye.svg包含在為此示範建立的用戶端程式庫中。
 
-## 即時範例
 
-[此功能可在此測試](https://forms.enablementadobe.com/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
 
 ## 程式碼範例
 
