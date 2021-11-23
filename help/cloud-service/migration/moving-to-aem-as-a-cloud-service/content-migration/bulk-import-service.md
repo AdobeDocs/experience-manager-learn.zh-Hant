@@ -8,7 +8,7 @@ level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
-source-git-commit: 3657e7798774f9cc673ff6ccd8af1a555b1d4013
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
@@ -27,13 +27,13 @@ ht-degree: 0%
 
 大量匯入服務可用來將儲存在Azure Blob儲存體或Amazon S3儲存體中的檔案傳輸至AEM(as a Cloud Service)作為資產。
 
-### 關鍵活動
+## 關鍵活動
 
 + 上傳要匯入的檔案至您的雲端儲存空間提供者(Azure Blob儲存空間或Amazon S3)。
 + 從AEMas a Cloud Service製作服務設定並執行大量匯入服務。
 + 以一次性匯入或排程定期匯入的方式執行Bulk Service Importer 。
 
-### 其他資源
+## 其他資源
 
 + [Adobe開發人員資產擷取的即時工作階段](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=en)
 

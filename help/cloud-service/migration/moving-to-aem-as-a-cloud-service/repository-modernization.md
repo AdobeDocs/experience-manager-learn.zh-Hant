@@ -9,7 +9,7 @@ level: Experienced
 kt: 8630
 thumbnail: 336958.jpeg
 exl-id: e9bd9035-1f2d-4a34-a581-9c1ec2c7bc04
-source-git-commit: 1ddf6154d50a341d9a0fd4234392c37ced878a73
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 作為重構程式碼基底的一部分，請使用 [Repository Modernizer工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html) 將6.x程式碼基底重新建構為更現代的結構。
 
-### 關鍵活動
+## 關鍵活動
 
 * 使用 [Adobe I/ORepository Modernizer](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationrepository-modernizer) 工具來重新建構專案，以符合AEMas a Cloud Service專案的預期結構。
 * 手動調整及修正更新後程式碼基底中的任何建置錯誤。
