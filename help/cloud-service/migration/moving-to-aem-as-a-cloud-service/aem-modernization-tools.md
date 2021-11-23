@@ -8,9 +8,9 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: 3657e7798774f9cc673ff6ccd8af1a555b1d4013
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '475'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和parsys組成的現有AEM頁面，以使用可編輯範本、AEM核心WCM元件和版面容器等現代化方法。
 
-### 關鍵活動
+## 關鍵活動
 
 + 複製AEM 6.x生產環境，針對
 + 下載並安裝 [最新AEM現代化工具](https://github.com/adobe/aem-modernize-tools/releases/latest) 在AEM 6.x生產克隆上（透過封裝管理器）
@@ -50,8 +50,50 @@ AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和parsys�
    + 對現有的ExtJS或Coral2 UI型對話方塊執行「對話轉換工具」
    + 將轉換的對話方塊同步回Git存放庫
 
-### 其他資源
+## 動手練習
+
+通過這個實踐練習來嘗試你學到的東西，來運用你的知識。
+
+在嘗試動手練習之前，請確定您已觀看並了解上述影片，以及下列材料：
+
++ [對AEMas a Cloud Service有不同的思考](./introduction.md)
++ [存放庫現代化](./repository-modernization.md)
++ [可變和不可變內容](../../developing/basics/mutable-immutable.md)
++ [AEM專案結構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)
+
+此外，請確定您已完成先前的實作練習：
+
++ [BPA和CAM實作](./bpa-and-cam.md#hands-on-exercise)
+
+<table style="border-width:0">
+    <tr>
+        <td style="width:150px">
+            <a  rel="noreferrer"
+                target="_blank"
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session2-migration#bootcamp---session-2-migration-methodology"><img alt="實作練習GitHub存放庫" src="./assets/github.png"/>
+            </a>        
+        </td>
+        <td style="width:100%;margin-bottom:1rem;">
+            <div style="font-size:1.25rem;font-weight:400;">實作AEM現代化</div>
+            <p style="margin:1rem 0">
+                探索如何使用AEM現代化工具更新舊版WKND網站，以符合AEMas a Cloud Service最佳實務。
+            </p>
+            <a  rel="noreferrer"
+                target="_blank"
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session2-migration#bootcamp---session-2-migration-methodology" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">試用AEM現代化工具</span>
+            </a>
+        </td>
+    </tr>
+</table>
+
+## 其他資源
 
 + [下載AEM現代化工具](https://github.com/adobe/aem-modernize-tools/releases/latest)
 + [AEM現代化工具檔案](https://opensource.adobe.com/aem-modernize-tools/)
 + [AEM Gems -AEM現代化套件簡介](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
+
+
+
+1. 在本機Cloud ServiceSDK上部署新的wknd-legacy網站。 可從以下位置下載：
++ [Software Distribution入口網站](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.htm).
