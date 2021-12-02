@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: bbb2c352e8a4297496f248bbbc86252ac7118999
+source-git-commit: 7f9a7951b2d9bb780d5374f17bb289c38b2e2ae7
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1633'
 ht-degree: 3%
 
 ---
@@ -197,6 +197,7 @@ ht-degree: 3%
 
 + 文件服務 {#document-services}
    + [PDF forms類型](document-services/pdf-forms-and-documents.md)
+   + [在最適化表單中內嵌pdf](document-services/embed-pdf-inline.md)
    + [在AEM Forms中使用組合器服務](document-services/using-assembler-service-in-aem-forms.md)
    + [在AEM Forms中使用監看資料夾](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms中使用條碼服務](document-services/barcode-service-adaptive-forms-article.md)
