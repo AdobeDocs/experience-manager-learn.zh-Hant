@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+source-git-commit: f3f373b2bc553b0ebd570a65ddc526784e504198
 workflow-type: tm+mt
 source-wordcount: '190'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -19,8 +19,9 @@ ht-degree: 20%
 + [AEM無頭概述](./overview.md)
 + GraphQL {#graphql}
    + [概覽](./graphql/overview.md)
-   + [快速設定](./graphql/quick-setup/cloud-service.md)
-   + [快速設定本機SDK](./graphql/quick-setup/local-sdk.md)
+   + 快速設定 {#quick-setup}
+      + [雲端服務](./graphql/quick-setup/cloud-service.md)
+      + [本機SDK](./graphql/quick-setup/local-sdk.md)
    + 影片系列{#video-series}
       + [1 — 建模基本知識](./graphql/video-series/modeling-basics.md)
       + [2 — 進階模型](./graphql/video-series/advanced-modeling.md)
