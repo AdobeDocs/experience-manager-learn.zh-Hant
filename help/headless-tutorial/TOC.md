@@ -6,9 +6,9 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '190'
 ht-degree: 20%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 20%
 + [AEM無頭概述](./overview.md)
 + GraphQL {#graphql}
    + [概覽](./graphql/overview.md)
+   + [快速設定](./graphql/quick-setup/cloud-service.md)
+   + [快速設定本機SDK](./graphql/quick-setup/local-sdk.md)
    + 影片系列{#video-series}
       + [1 — 建模基本知識](./graphql/video-series/modeling-basics.md)
       + [2 — 進階模型](./graphql/video-series/advanced-modeling.md)
@@ -29,13 +31,12 @@ ht-degree: 20%
       + [7 - GraphQL持續查詢](./graphql/video-series/graphql-persisted-queries.md)
    + 多步驟教學課程{#multi-step}
       + [概覽](./graphql/multi-step/overview.md)
-      + [1 — 快速設定](./graphql/multi-step/setup.md)
-      + [2 — 定義內容片段模型](./graphql/multi-step/content-fragment-models.md)
-      + [3 — 編寫內容片段](./graphql/multi-step/author-content-fragments.md)
-      + [4 — 了解GraphQL API](./graphql/multi-step/explore-graphql-api.md)
-      + [5 — 從外部應用程式查詢](./graphql/multi-step/graphql-and-external-app.md)
-      + [6 — 使用片段參考的進階資料模型](./graphql/multi-step/fragment-references.md)
-      + [7 — 生產部署](./graphql/multi-step/production-deployment.md)
+      + [1 — 定義內容片段模型](./graphql/multi-step/content-fragment-models.md)
+      + [2 — 編寫內容片段](./graphql/multi-step/author-content-fragments.md)
+      + [3 — 探索GraphQL API](./graphql/multi-step/explore-graphql-api.md)
+      + [4 — 從外部應用程式查詢](./graphql/multi-step/graphql-and-external-app.md)
+      + [5 — 使用片段參考的進階資料模型](./graphql/multi-step/fragment-references.md)
+      + [6 — 生產部署](./graphql/multi-step/production-deployment.md)
    + 範例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)

@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
-source-git-commit: f13f32de11bda924a2d255678e58e7c982d0d004
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1075'
 ht-degree: 1%
 
 ---
@@ -162,11 +162,11 @@ _步驟的截屏_
 
 透過範例WKND React應用程式連線及使用AEM Headless GraphQL API中的內容，撰寫AEM Author服務中的內容，並了解React應用程式的體驗如何一併更新。
 
-_步驟的截屏_
+_Screencast of steps_
 >[!VIDEO](https://video.tv.adobe.com/v/339077/?quality=12&learn=on)
 
 1. 登入AEMas a Cloud Service作者服務
-1. 導覽至 __「資產」 > 「檔案」 > 「WKND」 > 「英文」 > 「Adventures」__
+1. Navigate to __Assets > Files > WKND > English > Adventures__
 1. 開啟 __南猶他騎腳踏車__ 資料夾
 1. 選取 __南猶他騎腳踏車__ 內容片段，然後選取 __編輯__ 從頂端動作列
 1. 更新內容片段的某些欄位，例如：
@@ -175,23 +175,25 @@ _步驟的截屏_
    + 困難： `Intermediate`
    + 價格: `$3500`
    + 主映像： `/content/dam/wknd/en/activities/cycling/mountain-biking.jpg`
-1. 選擇 __儲存__ 在頂端動作列中
+1. Select __Save__ in the top action bar
 1. 選擇 __快速發佈__ 從頂端動作列的 __...__
 1. 重新整理在上執行的React應用程式 [http://localhost:3000](http://localhost:3000).
 1. 在React應用程式中，選取現在更新的，並驗證對內容片段所做的內容變更。
 
 1. 在AEM製作服務中使用相同的方法：
    1. 取消發佈現有的冒險內容片段，然後確認其已從React應用程式體驗中移除
-   1. 建立並發佈新的冒險內容片段，並驗證其是否顯示在React應用程式體驗中
+   1. Create and publish a new Adventure Content Fragment, and verify it appears in the React App experience
 
    >[!TIP]
    >
    > 如果您不熟悉如何建立及發佈新內容，或不熟悉如何取消發佈現有內容片段，請觀看上方的螢幕錄影。
 
-## 恭喜！
+## Congratulations!
 
 恭喜！ 您已成功使用AEM Headless來支援React應用程式！
 
 若要詳細了解React應用程式如何從AEMas a Cloud Service取用內容，請查看 [AEM Headless教學課程](../multi-step/overview.md). 本教學課程探討AEM中內容片段的建立方式，以及此React應用程式如何以JSON取用其內容。
+
+### 後續步驟
 
 + [啟動AEM Headless教學課程](../multi-step/overview.md)
