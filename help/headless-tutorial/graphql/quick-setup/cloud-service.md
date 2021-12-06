@@ -8,13 +8,13 @@ role: Developer
 level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
+source-git-commit: 94a57490edb00da072446ee8ca07c12c413ce1ac
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1072'
 ht-degree: 1%
 
 ---
-
 
 # AEM無頭快速設定AEMas a Cloud Service
 
@@ -26,13 +26,13 @@ AEM無頭式快速設定可讓您使用WKND Site範例專案中的內容，以�
 
 + AEMas a Cloud Service沙箱環境（最好是開發）
 + 存取AEMas a Cloud Service和Cloud Manager
-   + `AEM Administrator` 存取AEMas a Cloud Service
-   + `Cloud Manager - Deployment Manager` 存取Cloud Manager
+   + __AEM管理員__ 存取AEMas a Cloud Service
+   + __Cloud Manager — 部署管理員__ 存取Cloud Manager
 + 必須在本機安裝下列工具：
    + [Node.js v10+](https://nodejs.org/en/)
    + [npm 6+](https://www.npmjs.com/)
    + [Git](https://git-scm.com/)
-   + IDE(例如 [Microsoft® Visual Studio代碼](https://code.visualstudio.com/)
+   + IDE(例如 [Microsoft® Visual Studio代碼](https://code.visualstudio.com/))
 
 ## 1.建立Cloud Manager Git存放庫
 
@@ -74,15 +74,13 @@ _步驟的截屏_
       $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup/
       ```
 
-1. 將範例專案的原始碼推送至Cloud Manager Git存放庫
+1. 將範例專案的原始碼從您本機的Git存放庫推送至Cloud Manager Git存放庫
 
-   1. 將程式碼從您本機的Git存放庫推送至Cloud Manager Git存放庫
+   ```shell
+   $ git push adobe master:main
+   ```
 
-      ```shell
-      $ git push adobe master:main
-      ```
-
-      提示輸入憑證時，請提供 __使用者名稱__ 和 __密碼__ 從Cloud Manager的 __儲存庫資訊__ 模式。
+   提示輸入憑證時，請提供 __使用者名稱__ 和 __密碼__ 從Cloud Manager的 __儲存庫資訊__ 模式。
 
 ## 3.將WKND站點部署到AEMas a Cloud Service
 
@@ -162,11 +160,11 @@ _步驟的截屏_
 
 透過範例WKND React應用程式連線及使用AEM Headless GraphQL API中的內容，撰寫AEM Author服務中的內容，並了解React應用程式的體驗如何一併更新。
 
-_Screencast of steps_
+_步驟的截屏_
 >[!VIDEO](https://video.tv.adobe.com/v/339077/?quality=12&learn=on)
 
 1. 登入AEMas a Cloud Service作者服務
-1. Navigate to __Assets > Files > WKND > English > Adventures__
+1. 導覽至 __「資產」 > 「檔案」 > 「WKND」 > 「英文」 > 「Adventures」__
 1. 開啟 __南猶他騎腳踏車__ 資料夾
 1. 選取 __南猶他騎腳踏車__ 內容片段，然後選取 __編輯__ 從頂端動作列
 1. 更新內容片段的某些欄位，例如：
@@ -175,20 +173,20 @@ _Screencast of steps_
    + 困難： `Intermediate`
    + 價格: `$3500`
    + 主映像： `/content/dam/wknd/en/activities/cycling/mountain-biking.jpg`
-1. Select __Save__ in the top action bar
+1. 選擇 __儲存__ 在頂端動作列中
 1. 選擇 __快速發佈__ 從頂端動作列的 __...__
 1. 重新整理在上執行的React應用程式 [http://localhost:3000](http://localhost:3000).
 1. 在React應用程式中，選取現在更新的，並驗證對內容片段所做的內容變更。
 
 1. 在AEM製作服務中使用相同的方法：
    1. 取消發佈現有的冒險內容片段，然後確認其已從React應用程式體驗中移除
-   1. Create and publish a new Adventure Content Fragment, and verify it appears in the React App experience
+   1. 建立並發佈新的冒險內容片段，並驗證其是否顯示在React應用程式體驗中
 
    >[!TIP]
    >
    > 如果您不熟悉如何建立及發佈新內容，或不熟悉如何取消發佈現有內容片段，請觀看上方的螢幕錄影。
 
-## Congratulations!
+## 恭喜！
 
 恭喜！ 您已成功使用AEM Headless來支援React應用程式！
 
