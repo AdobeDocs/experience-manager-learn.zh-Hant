@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: e8b3bcaeee40b4bfd4f967f929ad664e8d168cb0
+source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
 workflow-type: tm+mt
-source-wordcount: '604'
-ht-degree: 21%
+source-wordcount: '636'
+ht-degree: 20%
 
 ---
 
@@ -89,6 +89,16 @@ ht-degree: 21%
    + [Adobe IMS產品設定檔](./accessing/adobe-ims-product-profiles.md)
    + [AEM使用者、群組和權限](./accessing/aem-users-groups-and-permissions.md)
    + [設定AEM存取權逐步說明](./accessing/walk-through.md)
++ 高級網路{#networking}
+   + [概覽](./networking/advanced-networking.md)
+   + [靈活的埠輸出](./networking/flexible-port-egress.md)
+   + [專用的輸出IP地址](./networking/dedicated-egress-ip-address.md)
+   + [虛擬專用網](./networking/vpn.md)
+   + 程式碼範例{#examples}
+      + [非標準埠上的HTTP/HTTPS](./networking/examples/http-on-non-standard-ports.md)
+      + [使用DataSourcePool的SQL連接](./networking/examples/sql-datasourcepool.md)
+      + [使用Java SQL API的SQL連接](./networking/examples/sql-java-apis.md)
+      + [電子郵件服務](./networking/examples/email-service.md)
 + 移轉 {#migration}
    + [內容轉移工具](./migration/content-transfer-tool.md)
    + [大量匯入資產](./migration/bulk-import.md)
