@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: f3f373b2bc553b0ebd570a65ddc526784e504198
+source-git-commit: 922248133a12e05ea9068a0646324f2370e743e9
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 21%
+source-wordcount: '200'
+ht-degree: 20%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 21%
 
 + [AEM無頭概述](./overview.md)
 + GraphQL {#graphql}
+   + [AEM無頭開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
    + [概覽](./graphql/overview.md)
    + 快速設定 {#quick-setup}
       + [雲端服務](./graphql/quick-setup/cloud-service.md)
