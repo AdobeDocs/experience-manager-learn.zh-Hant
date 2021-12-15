@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
+source-git-commit: ba2c299baeda632d6ebeff0c6ee07de5ef29b9cb
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1259'
 ht-degree: 0%
 
 ---
-
 
 # 虛擬專用網(VPN)
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 虛擬專用網路(VPN)可讓AEMas a Cloud Service客戶將Cloud Manager程式連結至現有 [受支援](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) VPN。 這可讓AEMas a Cloud Service與客戶網路內的服務之間安全且受控的連線。
 
-Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 確保虛擬專用網路是 [適當類型的網路基礎設施](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html%3Flang%3Dja#general-vpn-considerations) 以取得AEMas a Cloud Service。
+Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 確保虛擬專用網路是 [適當類型的網路基礎設施](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#general-vpn-considerations) 以取得AEMas a Cloud Service。
 
 >[!MORELIKETHIS]
 >
@@ -58,7 +58,7 @@ Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 確保虛擬
        -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
        -H 'x-api-key: <CLIENT_ID>' \
        -H 'Authorization: Bearer <ACCESS_TOKEN>' \
-       -H 'Content-Type: application/json' 
+       -H 'Content-Type: application/json'
    ```
 
 1. 使用Cloud Manager API為Cloud Manager程式啟用虛擬專用網路 [createNetworkInfrastructure](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure) 操作。 使用適當 `region` 從Cloud Manager API取得的程式碼 `listRegions` 操作。
@@ -68,7 +68,7 @@ Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 確保虛擬
    ```shell
    $ curl -X POST https://cloudmanager.adobe.io/api/program/{programId}/networkInfrastructures \
        -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
-       -H 'x-api-key: <CLIENT_ID>' \ 
+       -H 'x-api-key: <CLIENT_ID>' \
        -H 'Authorization: Bearer <ACCESS_TOKEN>' \
        -H 'Content-Type: application/json'
        -d @./vpn-create.json
@@ -79,15 +79,15 @@ Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 確保虛擬
 [下載範例vpn-create.json](./assets/vpn-create.json)
 
    ```json
-   { 
+   {
        "kind": "vpn",
        "region": "va7",
-       "addressSpace": [ 
+       "addressSpace": [
            "10.104.182.64/26"
        ],
        "dns": {
            "resolvers": [
-               "10.151.201.22", 
+               "10.151.201.22",
                "10.151.202.22",
                "10.154.155.22"
            ]
@@ -130,7 +130,7 @@ Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 確保虛擬
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/networkInfrastructure/{networkInfrastructureId} \
        -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
-       -H 'x-api-key: <CLIENT_ID>' \ 
+       -H 'x-api-key: <CLIENT_ID>' \
        -H 'Authorization: <YOUR_BEARER_TOKEN>' \
        -H 'Content-Type: application/json'
    ```
@@ -146,7 +146,7 @@ Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 確保虛擬
    ```shell
    $ curl -X PUT https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
        -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
-       -H 'x-api-key: <CLIENT_ID>' \ 
+       -H 'x-api-key: <CLIENT_ID>' \
        -H 'Authorization: Bearer <ACCESS_TOKEN>' \
        -H 'Content-Type: application/json' \
        -d @./vpn-configure.json
@@ -241,9 +241,9 @@ AEM提供兩組對應至AEM HTTP/HTTPS代理的特殊Java™系統變數。
     <p>
         Java™程式碼範例，讓從AEMas a Cloud Service的HTTP/HTTPS連線至非標準HTTP/HTTPS埠上的外部服務。
     </p>
-</td>   
-<td></td>   
-<td></td>   
+</td>
+<td></td>
+<td></td>
 </tr>
 </table>
 
@@ -270,21 +270,21 @@ AEM提供兩組對應至AEM HTTP/HTTPS代理的特殊Java™系統變數。
       <p>
             通過配置AEM JDBC資料源池連接到外部SQL資料庫的Java™代碼示例。
       </p>
-    </td>   
+    </td>
    <td>
       <a  href="./examples/sql-java-apis.md"><img alt="使用Java API的SQL連接" src="./assets/code-examples__sql-java-api.png"/></a>
       <div><strong><a href="./examples/sql-java-apis.md">使用Java™ API的SQL連接</a></strong></div>
       <p>
             使用Java™的SQL API連接到外部SQL資料庫的Java™代碼示例。
       </p>
-    </td>   
+    </td>
    <td>
       <a  href="./examples/email-service.md"><img alt="虛擬專用網(VPN)" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">電子郵件服務</a></strong></div>
       <p>
         OSGi設定範例，使用AEM連線至外部電子郵件服務。
       </p>
-    </td>   
+    </td>
 </tr></table>
 
 ### 限制透過VPN存取AEMas a Cloud Service
@@ -300,7 +300,7 @@ AEM提供兩組對應至AEM HTTP/HTTPS代理的特殊Java™系統變數。
       <p>
             配置IP允許清單，使得只有VPN流量才能訪問AEM。
       </p>
-    </td>   
+    </td>
    <td>
       <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="AEM Publish的路徑型VPN存取限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
       <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">AEM Publish的路徑型VPN存取限制</a></strong></div>
@@ -308,5 +308,5 @@ AEM提供兩組對應至AEM HTTP/HTTPS代理的特殊Java™系統變數。
             AEM發佈上的特定路徑需要VPN存取權。
       </p>
     </td>
-   <td></td>   
+   <td></td>
 </tr></table>
