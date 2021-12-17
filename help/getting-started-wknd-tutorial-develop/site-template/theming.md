@@ -11,18 +11,14 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
 
 # 主題工作流程 {#theming}
-
->[!CAUTION]
->
-> 快速網站建立工具目前是技術預覽。 除非經Adobe支援同意，否則可供測試及評估之用，且非供生產使用。
 
 在本章中，我們將更新Adobe Experience Manager網站的主題來源，以套用品牌特定樣式。 我們將學習如何使用代理伺服器，在針對即時網站編碼時，檢視CSS和Javascript更新的預覽。 本教學課程也說明如何使用AEM Cloud Manager的前端管道，將主題更新部署至Adobe Site。
 

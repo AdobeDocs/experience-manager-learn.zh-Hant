@@ -11,18 +11,14 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 # 頁面範本 {#page-templates}
-
->[!CAUTION]
->
-> 快速網站建立工具目前是技術預覽。 除非經Adobe支援同意，否則可供測試及評估之用，且非供生產使用。
 
 在本章中，我們將探討頁面範本與頁面之間的關係。 我們會根據 [AdobeXD](https://www.adobe.com/products/xd.html). 在建立範本的過程中，會說明核心元件和進階政策設定。
 

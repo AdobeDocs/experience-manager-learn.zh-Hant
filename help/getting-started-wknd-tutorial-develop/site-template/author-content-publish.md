@@ -11,18 +11,14 @@ level: Beginner
 kt: 7497
 thumbnail: KT-7497.jpg
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1333'
 ht-degree: 2%
 
 ---
 
 # 製作和發佈簡介 {#author-content-publish}
-
->[!CAUTION]
->
-> 快速網站建立工具目前是技術預覽。 除非經Adobe支援同意，否則可供測試及評估之用，且非供生產使用。
 
 請務必了解使用者如何更新網站的內容。 在本章中，我們將採用 **內容作者** 並對上一章中產生的網站進行一些編輯更新。 在章節結尾，我們將發佈變更，以了解即時網站的更新方式。
 
