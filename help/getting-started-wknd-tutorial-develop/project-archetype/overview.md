@@ -12,10 +12,10 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 35%
+source-wordcount: '478'
+ht-degree: 34%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 35%
 
 應在本機安裝下列項目：
 
-* 本機AEM **作者** 例項(Cloud ServiceSDK、6.5.5+或6.4.8.1+)
+* [本機AEM **作者** 執行個體](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK、6.5.5+或6.4.8.1+)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 或更新版本)
 * [Node.js](https://nodejs.org/en/) （LTS — 長期支援）
@@ -65,7 +65,7 @@ ht-degree: 35%
 
 **[GitHub:WKND Sites專案](https://github.com/adobe/aem-guides-wknd)**
 
-此外，教學課程的每個部分在GitHub中都有各自的分支。 使用者只要勾選與上一部分對應的分支，就能隨時開始教學課程。
+此外，教學課程的每個部分在GitHub中都有各自的分支。 使用者只要勾選與上一個部分對應的分支，就能隨時開始教學課程。
 
 ## 後續步驟 {#next-steps}
 
