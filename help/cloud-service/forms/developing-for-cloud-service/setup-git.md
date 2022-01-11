@@ -8,7 +8,8 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 8848
-source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
+exl-id: 31487027-d528-48ea-b626-a740b94dceb8
+source-git-commit: 8d83d01fca3bfc9e6f674f7d73298b42f98a5d46
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
@@ -61,16 +62,16 @@ git config --global credential.username "gbedekar-adobe-com"
 在設定檔案中儲存密碼
 
 ```java
-git config --global user.password "bqwxfvxq2akawtqx3oztacb5wax5a7"
+git config --global user.password "XXXX"
 ```
 
 （密碼為您的cloud manager git存放庫密碼）
 
-在本機的Git存放庫中註冊cloud manager git存放庫。 以下命令關聯 **adobe** 與遠端cloud manager git存放庫。 您本可以使用任何名稱，而非 **adobe**
+在本機的Git存放庫中註冊cloud manager git存放庫。 以下命令關聯 **bankingapp** 與遠端cloud manager git存放庫。 您本可以使用任何名稱，而非 **bankingapp**
 
 
-```java
-git remote add adobe https://git.cloudmanager.adobe.com/techmarketingdemos/Program2-p24107/
+```shell
+git remote add bankingapp https://git.cloudmanager.adobe.com/<cloud-manager-repo-path>
 ```
 
 （請務必使用您的存放庫URL）
@@ -80,6 +81,3 @@ git remote add adobe https://git.cloudmanager.adobe.com/techmarketingdemos/Progr
 ```java
 git remote -v
 ```
-
-
-
