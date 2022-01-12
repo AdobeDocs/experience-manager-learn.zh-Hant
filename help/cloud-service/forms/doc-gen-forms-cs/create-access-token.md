@@ -1,15 +1,15 @@
 ---
 title: 建立存取權杖
-description: 將JSON網頁代號(JWT)與AdobeIMS API交換以取得AEM存取代號。
+description: 將JSON網頁代號(JWT)與Adobe IMS API交換以取得AEM存取代號。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
-feature: Document Services
+feature: Output Service
 topic: Development
 kt: 8185
 thumbnail: 8185.jpg
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 # Exchange JWT for Access Token
 
 
-在先前步驟中建立的JWT會與AdobeIMS API交換以取得存取權杖，之後該權杖便可用來以Cloud Service存取AEM。 若要要求存取權杖，請傳送包含JWT、client_id、client_secret的POST要求給IMS驗證服務。
+在先前步驟中建立的JWT會與Adobe IMS API交換以取得存取權杖，然後再用來存取AEMas a Cloud Service。 若要要求存取權杖，請傳送包含JWT、client_id、client_secret的POST要求給IMS驗證服務。
 
 下列程式碼用於產生存取權杖的exchange JWT
 

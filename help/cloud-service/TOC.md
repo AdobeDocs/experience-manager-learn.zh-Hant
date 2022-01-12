@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
+source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '650'
 ht-degree: 20%
 
 ---
@@ -157,14 +157,14 @@ ht-degree: 20%
       + [設定資產面板](./forms/create-first-af/configure-assets-panel.md)
       + [配置開始面板](./forms/create-first-af/configure-start-panel.md)
       + [添加和配置工具欄](./forms/create-first-af/add-configure-toolbar.md)
-   + Document CloudAPI和AEM Forms CS{#doc-cloud-sdk}
-      + [簡介](./forms/doc-cloud-sdk/introduction.md)
-      + [建立AdobeIO項目](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
-      + [建立OSGI設定](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
-      + [定義介面](./forms/doc-cloud-sdk/create-interface.md)
-      + [實作介面](./forms/doc-cloud-sdk/implement-interface.md)
-      + [建立JSON部件](./forms/doc-cloud-sdk/get-content-analyzer.md)
-      + [自訂處理步驟](./forms/doc-cloud-sdk/custom-process-step.md)
+   + AEM Forms CS中的檔案產生{#doc-gen-formscs}
+      + [簡介](./forms/doc-gen-forms-cs/introduction.md)
+      + [建立服務憑據](./forms/doc-gen-forms-cs/service-credentials.md)
+      + [建立JWT代號](./forms/doc-gen-forms-cs/create-jwt.md)
+      + [建立存取權杖](./forms/doc-gen-forms-cs/create-access-token.md)
+      + [合併資料與範本](./forms/doc-gen-forms-cs/merge-data-with-template.md)
+      + [測試解決方案](./forms/doc-gen-forms-cs/test.md)
+      + [挑戰](./forms/doc-gen-forms-cs/challenge.md)
    + Azure門戶儲存{#forms-cs-azure-portal}
       + [簡介](./forms/forms-cs-azure-portal/introduction.md)
       + [建立表單資料模型](./forms/forms-cs-azure-portal/create-fdm.md)
