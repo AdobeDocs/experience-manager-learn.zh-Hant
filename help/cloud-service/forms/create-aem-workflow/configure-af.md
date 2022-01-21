@@ -1,6 +1,6 @@
 ---
-title: 設定適用性表單以觸發工作流程
-description: 在適用性表單提交時觸發工作流程。
+title: 配置自適應表單以觸發工作流
+description: 在自適應表單提交時觸發工作流。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -11,15 +11,15 @@ topic: Development
 kt: 7425
 thumbnail: 332435.pg
 exl-id: 7e3d449f-f22e-4bf4-a20e-82f3d76004a2
-source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
+source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '26'
 ht-degree: 0%
 
 ---
 
-# 設定適用性表單以觸發工作流程
+# 配置自適應表單以觸發工作流
 
-使用AEM Forms工作流程元件建立工作流程模型。 使用「或分割」元件，根據總收入變數的值來分支工作流。
+配置自適應表單以觸發審閱工作流
 
 >[!VIDEO](https://video.tv.adobe.com/v/332435?quality=12&learn=on)

@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
+source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '656'
 ht-degree: 20%
 
 ---
@@ -20,12 +20,12 @@ ht-degree: 20%
    + [進化](./introduction/evolution.md)
    + [架構](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
-+ 基礎技術 {#underlying-technology}
-   + [AEM架構](./underlying-technology/introduction-architecture.md)
++ 底層技術 {#underlying-technology}
+   + [架AEM構](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java內容儲存庫](./underlying-technology/introduction-jcr.md)
    + [Sling](./underlying-technology/introduction-sling.md)
-   + [製作與發佈服務](./underlying-technology/introduction-author-publish.md)
+   + [作者和發佈服務](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Cloud Manager {#cloud-manager}
    + [計劃](./cloud-manager/programs.md)
@@ -33,22 +33,22 @@ ht-degree: 20%
    + [CI/CD生產管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD非生產管道](./cloud-manager/cicd-non-production-pipeline.md)
    + [活動](./cloud-manager/activity.md)
-   + 開發作業{#devops}
-      + [部署程式碼](./cloud-manager/devops/deploy-code.md)
-      + [合併專案](./cloud-manager/devops/merge-projects.md)
+   + 開發操作{#devops}
+      + [部署代碼](./cloud-manager/devops/deploy-code.md)
+      + [合併項目](./cloud-manager/devops/merge-projects.md)
       + [配置管道](./cloud-manager/devops/configure-pipelines.md)
-      + [持續整合](./cloud-manager/devops/continuous-integration.md)
-      + [分析測試結果](./cloud-manager/devops/analyze-test-results.md)
-      + [Dispatcher設定](./cloud-manager/devops/dispatcher-configurations.md)
-      + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
-+ 本機開發環境設定 {#local-development-environment-set-up}
+      + [連續整合](./cloud-manager/devops/continuous-integration.md)
+      + [分析Test結果](./cloud-manager/devops/analyze-test-results.md)
+      + [Dispatcher配置](./cloud-manager/devops/dispatcher-configurations.md)
+      + [雲管理器API](./cloud-manager/devops/cloud-manager-apis.md)
++ 本地開發環境設定 {#local-development-environment-set-up}
    + [概覽](./local-development-environment/overview.md)
    + [開發工具](./local-development-environment/development-tools.md)
-   + [本機AEM執行階段](./local-development-environment/aem-runtime.md)
-   + [本機Dispatcher工具](./local-development-environment/dispatcher-tools.md)
+   + [本地運AEM行時](./local-development-environment/aem-runtime.md)
+   + [本地調度程式工具](./local-development-environment/dispatcher-tools.md)
 + 開發{#developing}
-   + 開發基本知識{#basics}
-      + [AEM SDK](./developing/basics/aem-sdk.md)
+   + 開發基礎{#basics}
+      + [SDKAEM](./developing/basics/aem-sdk.md)
       + [本機開發環境](./developing/basics/local-development-environment.md)
       + [AEM 專案原型](./developing/basics/aem-project-archetype.md)
       + [AEM 專案結構](./developing/basics/project-structure.md)
@@ -56,164 +56,166 @@ ht-degree: 20%
       + [儲存庫結構包](./developing/basics/repository-structure-package.md)
       + [內容發佈](./developing/basics/content-publishing.md)
       + [OSGi配置](./developing/basics/osgi-configurations.md)
-      + [Dispatcher設定移轉](./developing/basics/dispatcher-configuration.md)
+      + [Dispatcher配置遷移](./developing/basics/dispatcher-configuration.md)
    + AEM 專案{#aem-projects}
-      + [AEM Maven專案](./developing/projects/maven-project-structure.md)
-      + [清除AEM Maven專案](./developing/projects/remove-samples.md)
+      + [馬文AEM項目](./developing/projects/maven-project-structure.md)
+      + [清理MavenAEM項目](./developing/projects/remove-samples.md)
    + OSGi服務{#osgi-services}
-      + [OSGi服務基本知識](./developing/osgi-services/basics.md)
+      + [OSGi服務基礎](./developing/osgi-services/basics.md)
       + [OSGi元件生命週期](./developing/osgi-services/lifecycle.md)
-      + [OSGi配置基本介紹](./developing/osgi-services/configurations.md)
+      + [OSGi配置基礎知識](./developing/osgi-services/configurations.md)
       + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
    + 進階{#advanced}
       + [服務用戶](./developing/advanced/service-users.md)
-   + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
-+ 除錯AEM{#debugging}
-   + 為AEM SDK除錯{#debugging-aem-sdk}
+   + [AEMSDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
++ 調試AEM{#debugging}
+   + 調試AEMSDK{#debugging-aem-sdk}
       + [概覽](./debugging/aem-sdk-local-quickstart/overview.md)
       + [記錄檔](./debugging/aem-sdk-local-quickstart/logs.md)
       + [遠端偵錯](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi Web控制台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + 除錯AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}
+   + 調試AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [概覽](./debugging/cloud-service/overview.md)
       + [記錄檔](./debugging/cloud-service/logs.md)
-      + [建置和部署](./debugging/cloud-service/build-and-deployment.md)
+      + [構建和部署](./debugging/cloud-service/build-and-deployment.md)
       + [開發人員控制台](./debugging/cloud-service/developer-console.md)
       + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
-+ 存取AEM{#accessing}
++ 訪AEM問{#accessing}
    + [概覽](./accessing/overview.md)
-   + [Adobe IMS使用者](./accessing/adobe-ims-users.md)
-   + [Adobe IMS使用者群組](./accessing/adobe-ims-user-groups.md)
-   + [Adobe IMS產品設定檔](./accessing/adobe-ims-product-profiles.md)
-   + [AEM使用者、群組和權限](./accessing/aem-users-groups-and-permissions.md)
-   + [設定AEM存取權逐步說明](./accessing/walk-through.md)
+   + [Adobe IMS用戶](./accessing/adobe-ims-users.md)
+   + [Adobe IMS用戶組](./accessing/adobe-ims-user-groups.md)
+   + [Adobe IMS產品配置檔案](./accessing/adobe-ims-product-profiles.md)
+   + [AEM用戶、組和權限](./accessing/aem-users-groups-and-permissions.md)
+   + [配置對AEM瀏覽的訪問](./accessing/walk-through.md)
 + 高級網路{#networking}
    + [概覽](./networking/advanced-networking.md)
-   + [靈活的埠輸出](./networking/flexible-port-egress.md)
-   + [專用的輸出IP地址](./networking/dedicated-egress-ip-address.md)
-   + [虛擬專用網](./networking/vpn.md)
-   + 程式碼範例{#examples}
-      + [在非標準埠上使用HTTP/HTTPS以實現靈活的埠輸出](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
-      + [非標準埠上的HTTP/HTTPS，用於專用的輸出IP地址/VPN](./networking/examples/http-on-non-standard-ports.md)
+   + [靈活的埠出口](./networking/flexible-port-egress.md)
+   + [專用出口IP地址](./networking/dedicated-egress-ip-address.md)
+   + [虛擬專用網路](./networking/vpn.md)
+   + 代碼示例{#examples}
+      + [非標準埠上的HTTP/HTTPS實現靈活的埠輸出](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
+      + [非標準埠上的HTTP/HTTPS，用於專用出口IP地址/VPN](./networking/examples/http-on-non-standard-ports.md)
       + [使用DataSourcePool的SQL連接](./networking/examples/sql-datasourcepool.md)
       + [使用Java SQL API的SQL連接](./networking/examples/sql-java-apis.md)
       + [電子郵件服務](./networking/examples/email-service.md)
-+ 移轉 {#migration}
++ 遷移 {#migration}
    + [內容轉移工具](./migration/content-transfer-tool.md)
-   + [大量匯入資產](./migration/bulk-import.md)
+   + [批量導入資產](./migration/bulk-import.md)
 
    + 轉移至 AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
       + [簡介](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
       + [入門](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
-      + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
+      + [雲管理器](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
       + [雙酚A和CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
-      + [AEM現代化工具](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
-      + [存放庫現代化](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
+      + [現代化AEM工具](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
+      + [儲存庫現代化](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
       + [asset compute微服務](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
-      + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
-      + [搜尋和索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
+      + [調度程式](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
+      + [搜索和索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + 內容移轉 {#content-migration}
          + [批量導入服務](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [內容轉移工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
       + [疑難排解](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Formsas a Cloud Service {#aem-forms}
          + [簡介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
-         + [數位註冊](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
-         + [通訊](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
-   + Cloud Acceleration Manager {#cloud-acceleration-manager}
+         + [數字註冊](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
+         + [通信](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
+   + 雲加速管理器 {#cloud-acceleration-manager}
       + [簡介](./migration/cloud-acceleration-manager/introduction.md)
-      + [Readiness and Best Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
+      + [就緒性和最佳做法分析器](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [實施階段](./migration/cloud-acceleration-manager/implementation-phase.md)
       + [內容轉移工具](./migration/cloud-acceleration-manager/content-transfer-tool.md)
-      + [程式碼重構工具](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
-      + [Code Repository Modernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
+      + [代碼重構工具](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
+      + [代碼儲存庫現代化器](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
       + [Dispatcher 轉換工具](./migration/cloud-acceleration-manager/dispatcher-converter.md)
       + [索引轉換器](./migration/cloud-acceleration-manager/index-converter.md)
       + [資產工作流程移轉工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
-      + [導覽Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
-      + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
+      + [導航雲加速管理器](./migration/cloud-acceleration-manager/navigating.md)
+      + [使用雲加速管理器](./migration/cloud-acceleration-manager/using.md)
 + 表單{#forms}
 
-   + 為Forms開發as a Cloud Service{#developing-for-cloud-service}
-      + [快速入門](./forms/developing-for-cloud-service/getting-started.md)
+   + Formsas a Cloud Service{#developing-for-cloud-service}
+      + [入門](./forms/developing-for-cloud-service/getting-started.md)
       + [安裝IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [設定Git](./forms/developing-for-cloud-service/setup-git.md)
-      + [與AEM同步IntelliJ](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
-      + [建立表單](./forms/developing-for-cloud-service/deploy-your-first-form.md)
-      + [包含Cloud Services和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
-      + [推送至Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
-      + [部署至開發環境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
-   + 建立最適化表單{#create-first-af}
+      + [將IntelliJ與同AEM步](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
+      + [生成表單](./forms/developing-for-cloud-service/deploy-your-first-form.md)
+      + [包括Cloud Services和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [推送到雲管理器](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [部署到開發環境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [更新Maven原型](./forms/developing-for-cloud-service/updating-project-archetype.md)
+   + 建立自適應窗體{#create-first-af}
       + [簡介](./forms/create-first-af/introduction.md)
       + [建立主題](./forms/create-first-af/create-theme.md)
       + [建立範本](./forms/create-first-af/create-template.md)
       + [建立片段](./forms/create-first-af/create-fragments.md)
-      + [建立表單](./forms/create-first-af/create-af.md)
+      + [建立窗體](./forms/create-first-af/create-af.md)
       + [配置根面板](./forms/create-first-af/configure-root-panel.md)
       + [配置人員面板](./forms/create-first-af/configure-people-panel.md)
       + [配置收入面板](./forms/create-first-af/configure-income-panel.md)
-      + [設定資產面板](./forms/create-first-af/configure-assets-panel.md)
-      + [配置開始面板](./forms/create-first-af/configure-start-panel.md)
+      + [配置資產面板](./forms/create-first-af/configure-assets-panel.md)
+      + [配置啟動面板](./forms/create-first-af/configure-start-panel.md)
       + [添加和配置工具欄](./forms/create-first-af/add-configure-toolbar.md)
-   + AEM Forms CS中的檔案產生{#doc-gen-formscs}
+   + AEM FormsCS中的文檔生成{#doc-gen-formscs}
       + [簡介](./forms/doc-gen-forms-cs/introduction.md)
       + [建立服務憑據](./forms/doc-gen-forms-cs/service-credentials.md)
-      + [建立JWT代號](./forms/doc-gen-forms-cs/create-jwt.md)
-      + [建立存取權杖](./forms/doc-gen-forms-cs/create-access-token.md)
-      + [合併資料與範本](./forms/doc-gen-forms-cs/merge-data-with-template.md)
-      + [測試解決方案](./forms/doc-gen-forms-cs/test.md)
+      + [建立JWT令牌](./forms/doc-gen-forms-cs/create-jwt.md)
+      + [建立訪問令牌](./forms/doc-gen-forms-cs/create-access-token.md)
+      + [將資料與模板合併](./forms/doc-gen-forms-cs/merge-data-with-template.md)
+      + [Test解決方案](./forms/doc-gen-forms-cs/test.md)
       + [挑戰](./forms/doc-gen-forms-cs/challenge.md)
    + Azure門戶儲存{#forms-cs-azure-portal}
       + [簡介](./forms/forms-cs-azure-portal/introduction.md)
       + [建立表單資料模型](./forms/forms-cs-azure-portal/create-fdm.md)
-      + [將表單資料儲存在Azure儲存中](./forms/forms-cs-azure-portal/create-af.md)
-      + [預填表單](./forms/forms-cs-azure-portal/prefill-af-storage.md)
+      + [在Azure儲存中儲存表單資料](./forms/forms-cs-azure-portal/create-af.md)
+      + [預填充窗體](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [查詢提交](./forms/forms-cs-azure-portal/query-submitted-data.md)
-   + 建立審核工作流{#create-aem-workflow}
+   + 建立審閱工作流{#create-aem-workflow}
+      + [外部化工作流儲存](./forms/create-aem-workflow/externalize-workflow.md)
       + [建立工作流模型](./forms/create-aem-workflow/create-workflow.md)
-      + [觸發工作流程](./forms/create-aem-workflow/configure-af.md)
-   + Adobe Sign搭配AEM Forms{#forms-and-sign}
+      + [觸發工作流](./forms/create-aem-workflow/configure-af.md)
+   + Adobe Sign與AEM Forms{#forms-and-sign}
       + [簡介](./forms/forms-and-sign/introduction.md)
-      + [Adobe Sign API應用程式](./forms/forms-and-sign/create-sign-api-application.md)
+      + [Adobe SignAPI應用程式](./forms/forms-and-sign/create-sign-api-application.md)
       + [Adobe 簽署雲端組態](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
-      + [建立最適化表單](./forms/forms-and-sign/create-adaptive-form.md)
-      + [為填寫和簽名進行配置](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+      + [建立自適應窗體](./forms/forms-and-sign/create-adaptive-form.md)
+      + [配置填充和簽名](./forms/forms-and-sign/configure-form-fill-and-sign.md)
    + 與Salesforce整合{#integrate-with-salesforce}
       + [簡介](./forms/integrate-with-salesforce/introduction.md)
-      + [建立連線的應用程式](./forms/integrate-with-salesforce/create-connected-app.md)
-      + [建立Swagger檔案](./forms/integrate-with-salesforce/describe-rest-api.md)
-      + [建立資料來源](./forms/integrate-with-salesforce/create-data-source.md)
+      + [建立連接的應用](./forms/integrate-with-salesforce/create-connected-app.md)
+      + [建立swagger檔案](./forms/integrate-with-salesforce/describe-rest-api.md)
+      + [建立資料源](./forms/integrate-with-salesforce/create-data-source.md)
       + [建立表單資料模型](./forms/integrate-with-salesforce/create-form-data-model.md)
-      + [測試表單提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
-      + [測試點按事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
-+ asset compute擴充性{#asset-compute}
+      + [Test表提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+      + [Test按一下事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
++ asset compute可擴充性{#asset-compute}
    + [概覽](./asset-compute/overview.md)
    + 設定{#set-up}
-      + [帳戶和服務設定](./asset-compute/set-up/accounts-and-services.md)
-      + [本地開發環境](./asset-compute/set-up/development-environment.md)
-      + [AdobeProject Firefly](./asset-compute/set-up/firefly.md)
+      + [帳戶和服務預配](./asset-compute/set-up/accounts-and-services.md)
+      + [地方發展環境](./asset-compute/set-up/development-environment.md)
+      + [Adobe螢火蟲計畫](./asset-compute/set-up/firefly.md)
    + 開發{#develop}
-      + [建立Asset compute專案](./asset-compute/develop/project.md)
-      + [設定環境變數](./asset-compute/develop/environment-variables.md)
-      + [設定manifest.yml](./asset-compute/develop/manifest.md)
+      + [建立Asset compute項目](./asset-compute/develop/project.md)
+      + [配置環境變數](./asset-compute/develop/environment-variables.md)
+      + [配置manifest.yml](./asset-compute/develop/manifest.md)
       + [開發員工](./asset-compute/develop/worker.md)
       + [使用開發工具](./asset-compute/develop/development-tool.md)
-   + 測試和除錯{#test-debug}
-      + [測試工作人員](./asset-compute/test-debug/test.md)
-      + [調試工作](./asset-compute/test-debug/debug.md)
+   + Test和調試{#test-debug}
+      + [Test工作人員](./asset-compute/test-debug/test.md)
+      + [調試工作進程](./asset-compute/test-debug/debug.md)
    + 部署{#deploy}
-      + [部署至Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
-      + [與AEM整合](./asset-compute/deploy/processing-profiles.md)
+      + [部署到Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
+      + [與整合AEM](./asset-compute/deploy/processing-profiles.md)
    + 進階{#advanced}
-      + [中繼資料背景工作](./asset-compute/advanced/metadata.md)
+      + [元資料工作程式](./asset-compute/advanced/metadata.md)
    + [疑難排解](./asset-compute/troubleshooting.md)
-+ [AEM Experts系列](./aem-experts-series.md)
-+ 多步驟Tutorials{#multi-step-tutorials}
++ [專AEM家系列](./aem-experts-series.md)
++ 多步Tutorials{#multi-step-tutorials}
    + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
-   + [SPA編輯器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [SPA編輯器(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [編SPA輯器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [編SPA輯器(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
-   + [基於令牌的驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
+   + [基於令牌的身份驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
