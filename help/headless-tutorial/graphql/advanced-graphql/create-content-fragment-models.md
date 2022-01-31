@@ -131,18 +131,18 @@ Adobe Experience Manager提供了一些內置的驗證方法。 這些驗證方�
 
 10. 下 **僅接受指定的影像寬度**，選擇「最大寬度」。 在 **最大（像素）** 欄位中，輸入「500」。 為 **僅接受指定的影像高度**。
 
-   這些驗證可確保添加的映像不會超過指定的值。 驗證規則現在應如下所示：
-   ![內容引用驗證規則](assets/define-content-fragment-models/content-reference-validation.png)
+    這些驗證可確保添加的映像不會超過指定的值。 驗證規則現在應如下所示：
+    ![內容引用驗證規則](assets/define-content-fragment-models/content-reference-validation.png)
 
 11. 添加 **多行文本** 並給它 **欄位標籤** 《傳記》 離開 **預設類型** 下拉清單，作為預設的「Rich Text」選項。
 
-   ![傳記選項](assets/define-content-fragment-models/biography.png)
+    ![傳記選項](assets/define-content-fragment-models/biography.png)
 
 12. 導航到 **資料類型** 頁籤，然後拖動 **枚舉** 欄位。 而不是預設 **呈現為** 選項，選擇 **下拉清單**。 輸入教師經驗級別選項的選擇，如「專家」、「高級」、「中級」。
 
 13. 接下來，拖動另一個 **枚舉** 「教師體驗級別」下的欄位，並選擇「複選框」 **呈現為** 的雙曲餘切值。 進入不同的技能，如攀岩、衝浪、騎腳踏車、滑雪和背包。 選項標籤和選項值應匹配如下：
 
-   ![技能枚舉](assets/define-content-fragment-models/skills-enum.png)
+    ![技能枚舉](assets/define-content-fragment-models/skills-enum.png)
 
 14. 最後，使用 **多行文本** 的子菜單。
 
