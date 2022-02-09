@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
+source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 20%
+source-wordcount: '674'
+ht-degree: 19%
 
 ---
 
@@ -166,6 +166,12 @@ ht-degree: 20%
       + [將資料與模板合併](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [Test解決方案](./forms/doc-gen-forms-cs/test.md)
       + [挑戰](./forms/doc-gen-forms-cs/challenge.md)
+   + 使用批處理API生成文檔{#formscs-batch-api}
+      + [簡介](./forms/formscs-batch-api/introduction.md)
+      + [配置Azure儲存](./forms/formscs-batch-api/configure-azure-storage.md)
+      + [建立USC批配置](./forms/formscs-batch-api/configure-usc-batch.md)
+      + [建立批配置](./forms/formscs-batch-api/create-batch-config.md)
+      + [執行批處理](./forms/formscs-batch-api/execute-batch-generate-documents.md)
    + Azure門戶儲存{#forms-cs-azure-portal}
       + [簡介](./forms/forms-cs-azure-portal/introduction.md)
       + [建立表單資料模型](./forms/forms-cs-azure-portal/create-fdm.md)
