@@ -5,10 +5,10 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 6f512bc35477b064a956ed35bc514166c3e9b683
+source-git-commit: 4fc95c69f3c15122f9e4b87be469f8bc15097042
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 2%
+source-wordcount: '256'
+ht-degree: 1%
 
 ---
 
@@ -16,9 +16,13 @@ ht-degree: 2%
 
 ![專AEM家系列](./imgs/masthead.png)
 
+## 簡介
+
+歡迎使用工程部的雲5系AEM列。 任何產品實施階段的主要問題之一是有足夠的代碼示例和/或這些示例、工具或API的即時演示。 此系列的目標是在5分鐘或更短時間內AEM提供有關as a Cloud Service的有用資訊。
+
 ## 第一季
 
-每個季節的長度各不相同，都按固定的時間表發放。 第1季的主題主要源於我們在與客戶和合作夥伴的日常接觸中遇到的過去請求。 訪問此頁面以獲取每週更新，或在您選擇的社交網路上關注我們。
+每個季節的長度各不相同，將按固定時間表發放。 第1季的主題主要源於我們在與客戶和合作夥伴的日常接觸中遇到的過去請求。 訪問此頁面以獲取每週更新，或在您選擇的社交網路上關注我們。
 
 <table>
   <tr>
