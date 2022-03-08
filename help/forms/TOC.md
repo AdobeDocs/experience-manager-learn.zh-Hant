@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: 15b57ec6792bc47d0041946014863b13867adf22
+source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1654'
 ht-degree: 3%
 
 ---
@@ -153,6 +153,9 @@ ht-degree: 3%
    + [建立初始窗體](sign-multiple-documents/create-initial-form.md)
    + [建立用於簽名的Forms](sign-multiple-documents/create-forms-for-signing.md)
    + [測試解決方案](sign-multiple-documents/testing-and-trouble-shooting.md)
++ 自定義工作流步驟{#custom-workflow-steps}
+   + [從xml文檔提取節點](custom-workflow-steps/extract-xml-node.md)
+   + [將文檔保存到檔案系統](custom-workflow-steps/write-payload-document.md)
 + 工作流中的AEM變數{#variables-aem-workflow}
    + [簡介 — 工作流中的變數](variables-aem-workflow/introduction.md)
    + [XML變數](variables-aem-workflow/part1.md)
