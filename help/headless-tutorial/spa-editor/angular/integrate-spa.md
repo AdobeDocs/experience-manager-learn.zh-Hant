@@ -1,6 +1,6 @@
 ---
-title: 整合SPA |開始使用AEM SPA編輯器和Angular
-description: 了解以Angular撰寫的單頁應用程式(SPA)原始碼如何與Adobe Experience Manager(AEM)專案整合。 了解如何使用Angular的CLI工具等現代前端工具，針對AEM JSON模型API快速開發SPA。
+title: 集SPA成 |編輯器和AEMAngularSPA入門
+description: 瞭解Angular中寫入的單頁應用程式(SPA)的原始碼如何與Adobe Experience Manager()項AEM目整合。 學習使用現代前端工具(如Angular的CLI工具)快速開發SPAJSON模AEM型API。
 sub-product: sites
 feature: SPA Editor
 topics: development
@@ -14,38 +14,38 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
 source-wordcount: '2191'
 ht-degree: 0%
 
 ---
 
-# 整合SPA {#integrate-spa}
+# 集SPA成 {#integrate-spa}
 
-了解以Angular撰寫的單頁應用程式(SPA)原始碼如何與Adobe Experience Manager(AEM)專案整合。 了解如何使用現代化的前端工具（例如WebPack開發伺服器），針對AEM JSON模型API快速開發SPA。
+瞭解Angular中寫入的單頁應用程式(SPA)的原始碼如何與Adobe Experience Manager()項AEM目整合。 學習使用現代前端工具（如webpack dev伺服器）快速開發SPAJSON模AEM型API。
 
 ## 目標
 
-1. 了解SPA專案如何與AEM與用戶端程式庫整合。
-2. 了解如何使用本機開發伺服器進行專屬的前端開發。
-3. 探索使用&#x200B;**proxy**&#x200B;和靜態&#x200B;**mock**&#x200B;檔案，針對AEM JSON模型API進行開發
+1. 瞭解項SPA目如何與客AEM戶端庫整合。
+2. 瞭解如何使用本地開發伺服器進行專用前端開發。
+3. 探索使用 **代理** 靜態 **嘲弄** 用於針對AEMJSON模型API開發的檔案
 
-## 您將建置的
+## 您將構建的
 
-本章將向SPA添加簡單的`Header`元件。 在建置此靜態`Header`元件的過程中，將使用數種AEM SPA開發方法。
+本章將添加一個簡單 `Header` 元件SPA。 在構建此靜態 `Header` 將採用AEM多SPA種發展方式。
 
-![AEM中的新標題](./assets/integrate-spa/final-header-component.png)
+![中的新標題AEM](./assets/integrate-spa/final-header-component.png)
 
-*擴充SPA以新增靜態元 `Header` 件*
+*擴展SPA以添加靜態 `Header` 元件*
 
 ## 必備條件
 
-查看設定[本地開發環境](overview.md#local-dev-environment)所需的工具和說明。
+查看所需的工具和設定 [地方開發環境](overview.md#local-dev-environment)。
 
-### 取得程式碼
+### 獲取代碼
 
-1. 透過Git下載本教學課程的起始點：
+1. 通過Git下載本教程的起點：
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-spa.git
@@ -53,43 +53,43 @@ ht-degree: 0%
    $ git checkout Angular/integrate-spa-start
    ```
 
-2. 使用Maven將程式碼基底部署至本機AEM例項：
+2. 使用Maven將代碼庫部署到AEM本地實例：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   如果使用[AEM 6.x](overview.md#compatibility)新增`classic`設定檔：
+   如果使用 [AEM 6.x](overview.md#compatibility) 添加 `classic` 配置檔案：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-您一律可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution)上檢視完成的程式碼，或切換至分支`Angular/integrate-spa-solution`在本機檢出程式碼。
+您始終可以在 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution) 或通過切換到分支本地檢出代碼 `Angular/integrate-spa-solution`。
 
 ## 整合方法 {#integration-approach}
 
-已在AEM專案中建立兩個模組：`ui.apps`和`ui.frontend`。
+作為項目的一部分，建立了兩AEM個模組： `ui.apps` 和 `ui.frontend`。
 
-`ui.frontend`模組是包含所有SPA原始碼的[webpack](https://webpack.js.org/)專案。 大部分的SPA開發與測試將在Webpack專案中完成。 觸發生產組建時，會使用webpack建置及編譯SPA。 編譯的成品（CSS和Javascript）會複製到`ui.apps`模組中，然後部署到AEM執行階段。
+的 `ui.frontend` 模組是 [網路包](https://webpack.js.org/) 包含所有原始碼的SPA項目。 大部分開發SPA和測試將在webpack項目中完成。 觸發生產生成時，使用SPAwebpack生成並編譯。 編譯的對象（CSS和Javascript）將複製到 `ui.apps` 模組，然後部署到運AEM行時。
 
-![ui.frontend高階架構](assets/integrate-spa/ui-frontend-architecture.png)
+![ui.front高級體系結構](assets/integrate-spa/ui-frontend-architecture.png)
 
-*對SPA整合的高階描述。*
+*整合的高級描SPA述。*
 
-有關前端版本編號的其他資訊，請參見[這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)。
+有關前端構建的其他資訊可以 [此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)。
 
-## Inspect SPA整合 {#inspect-spa-integration}
+## Inspect整SPA合 {#inspect-spa-integration}
 
-接下來，檢查`ui.frontend`模組，了解[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)自動產生的SPA。
+接下來，檢查 `ui.frontend` 模組，SPA以瞭解 [項AEM目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)。
 
-1. 在您選擇的IDE中，開啟WKND SPA的AEM專案。 本教程將使用[Visual Studio代碼IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)。
+1. 在您選擇的IDE中，開啟AEMWKND的項目SPA。 本教程將使用 [Visual Studio代碼IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)。
 
-   ![VSCode - AEM WKND SPA專案](./assets/integrate-spa/vscode-ide-openproject.png)
+   ![VSCode - AEM WKND項SPA目](./assets/integrate-spa/vscode-ide-openproject.png)
 
-2. 展開並檢查`ui.frontend`資料夾。 開啟檔案`ui.frontend/package.json`
+2. 展開並檢查 `ui.frontend` 的子菜單。 開啟檔案 `ui.frontend/package.json`
 
-3. 在`dependencies`下，應該會看到幾個與`@angular`相關的項目：
+3. 在 `dependencies` 你應該看到幾個 `@angular`:
 
    ```json
    "@angular/animations": "~9.1.11",
@@ -102,9 +102,9 @@ ht-degree: 0%
    "@angular/router": "~9.1.10",
    ```
 
-   `ui.frontend`模組是使用[AngularCLI工具](https://angular.io/cli)生成的[Angular應用程式](https://angular.io)，該工具包含路由。
+   的 `ui.frontend` 模組是 [Angular應用程式](https://angular.io) 使用 [AngularCLI工具](https://angular.io/cli) 包括路由。
 
-4. 此外，還有三個前置詞為`@adobe`的相依性：
+4. 還有三個以前置詞的依賴關係 `@adobe`:
 
    ```json
    "@adobe/cq-angular-editable-components": "^2.0.2",
@@ -112,9 +112,9 @@ ht-degree: 0%
    "@adobe/cq-spa-page-model-manager": "^1.1.3",
    ```
 
-   上述模組組成[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)，並提供功能，讓您能夠將SPA元件對應至AEM元件。
+   以上模組構成 [AEM編SPA輯器JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html) 並提供功能，使「元件」(Components)可以映射SPA到「組AEM件」(Components)。
 
-5. 在`package.json`檔案中，定義了多個`scripts`:
+5. 在 `package.json` 檔案 `scripts` 定義：
 
    ```json
    "scripts": {
@@ -126,19 +126,19 @@ ht-degree: 0%
    }
    ```
 
-   這些指令碼基於通用的[AngularCLI命令](https://angular.io/cli/build)，但已稍作修改以與較大的AEM項目一起使用。
+   這些指令碼基於常用 [AngularCLI命令](https://angular.io/cli/build) 但是稍作修改，以配合更大的項AEM目。
 
-   `start`  — 使用本機Web伺服器在本機執行Angular應用程式。已更新，以代理本機AEM例項的內容。
+   `start`  — 使用本地Web伺服器本地運行Angular應用。 已更新它以代理本地實例的AEM內容。
 
-   `build`  — 編譯Angular應用程式以進行生產發佈。新增`&& clientlib`負責在建置期間將編譯的SPA複製到`ui.apps`模組，作為用戶端程式庫。 npm模組[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)用於促進此操作。
+   `build`  — 編譯Angular應用以進行生產分發。 增加 `&& clientlib` 負責將編譯SPA到 `ui.apps` 模組，作為生成期間的客戶端庫。 npm模組 [aem-clientlib生成器](https://github.com/wcm-io-frontend/aem-clientlib-generator) 用來促進這一過程。
 
-   有關可用指令碼的更多詳細資訊，請參見[此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)。
+   可找到有關可用指令碼的詳細資訊 [這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)。
 
-6. Inspect檔案`ui.frontend/clientlib.config.js`。 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs)使用此配置檔案來確定如何生成客戶端庫。
+6. Inspect檔案 `ui.frontend/clientlib.config.js`。 此配置檔案由 [aem-clientlib生成器](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) 確定如何生成客戶端庫。
 
-7. Inspect檔案`ui.frontend/pom.xml`。 此檔案將`ui.frontend`資料夾轉換為[Maven模組](https://maven.apache.org/guides/mini/guide-multiple-modules.html)。 `pom.xml`檔案已更新，以在Maven建置期間使用[frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin)至&#x200B;**test**&#x200B;和&#x200B;**build** SPA。
+7. Inspect檔案 `ui.frontend/pom.xml`。 此檔案轉換 `ui.frontend` 資料夾 [馬文模](https://maven.apache.org/guides/mini/guide-multiple-modules.html)。 的 `pom.xml` 已更新檔案以使用 [前面的插件](https://github.com/eirslett/frontend-maven-plugin) 至 **test** 和 **構建** 在馬SPA文建造時。
 
-8. Inspect檔案`app.component.ts`(`ui.frontend/src/app/app.component.ts`):
+8. Inspect檔案 `app.component.ts` 在 `ui.frontend/src/app/app.component.ts`:
 
    ```js
    import { Constants } from '@adobe/cq-angular-editable-components';
@@ -165,19 +165,19 @@ ht-degree: 0%
    }
    ```
 
-   `app.component.js` 是SPA的入口。`ModelManager` 由AEM SPA Editor JS SDK提供。它負責呼叫應用程式並將`pageModel`（JSON內容）插入。
+   `app.component.js` 是入口SPA。 `ModelManager` 由編輯AEM器SPAJS SDK提供。 它負責呼叫和注入 `pageModel` （JSON內容）。
 
-## 新增標題元件 {#header-component}
+## 添加標題元件 {#header-component}
 
-接著，將新元件新增至SPA，並將變更部署至本機AEM例項以查看整合。
+接下來，向中添加新組SPA件，並將更改部署到本AEM地實例以查看整合。
 
-1. 開啟新的終端機視窗，並導覽至`ui.frontend`資料夾：
+1. 開啟新的終端窗口並導航到 `ui.frontend` 資料夾：
 
    ```shell
    $ cd aem-guides-wknd-spa/ui.frontend
    ```
 
-2. 全局安裝[AngularCLI](https://angular.io/cli#installing-angular-cli)這用於生成Angular元件，以及通過&#x200B;**ng**&#x200B;命令構建和提供Angular應用程式。
+2. 安裝 [AngularCLI](https://angular.io/cli#installing-angular-cli) 全局Angular元件用於生成Angular元件，以及通過 **黃** 的子菜單。
 
    ```shell
    $ npm install -g @angular/cli
@@ -185,9 +185,9 @@ ht-degree: 0%
 
    >[!CAUTION]
    >
-   > 此項目使用的&#x200B;**@angular/cli**&#x200B;版本為&#x200B;**9.1.7**。 建議保持AngularCLI版本同步。
+   > 版本 **@angular/cli** 由此項目使用 **9.1.7**。 建議保持AngularCLI版本同步。
 
-3. 從`ui.frontend`資料夾內運行AngularCLI `ng generate component`命令，建立新的`Header`元件。
+3. 新建 `Header` 通過運行AngularCLI `ng generate component` 命令 `ui.frontend` 的子菜單。
 
    ```shell
    $ ng generate component components/header
@@ -199,13 +199,13 @@ ht-degree: 0%
    UPDATE src/app/app.module.ts (1809 bytes)
    ```
 
-   這將在`ui.frontend/src/app/components/header`為新Angular頭元件建立骨架。
+   這將為位於的新Angular標題元件建立骨架 `ui.frontend/src/app/components/header`。
 
-4. 在所選IDE中開啟`aem-guides-wknd-spa`項目。 導覽至`ui.frontend/src/app/components/header`資料夾。
+4. 開啟 `aem-guides-wknd-spa` 在您選擇的IDE中執行項目。 導航到 `ui.frontend/src/app/components/header` 的子菜單。
 
-   ![IDE中的標頭元件路徑](assets/integrate-spa/header-component-path.png)
+   ![IDE中的頭元件路徑](assets/integrate-spa/header-component-path.png)
 
-5. 開啟檔案`header.component.html`並用以下內容替換內容：
+5. 開啟檔案 `header.component.html` 用下列內容替換：
 
    ```html
    <!--/* header.component.html */-->
@@ -216,18 +216,18 @@ ht-degree: 0%
    </header>
    ```
 
-   請注意，這會顯示靜態內容，因此此Angular元件不需要對預設產生的`header.component.ts`進行任何調整。
+   請注意，這將顯示靜態內容，因此此Angular元件不需要對預設生成的內容進行任何調整 `header.component.ts`。
 
-6. 在`ui.frontend/src/app/app.component.html`開啟檔案&#x200B;**app.component.html**。 新增`app-header`:
+6. 開啟檔案 **app.component.html** 在  `ui.frontend/src/app/app.component.html`。 添加 `app-header`:
 
    ```html
    <app-header></app-header>
    <router-outlet></router-outlet>
    ```
 
-   這會包含所有頁面內容上方的`header`元件。
+   這包括 `header` 元件。
 
-7. 開啟新終端機並導覽至`ui.frontend`資料夾並執行`npm run build`命令：
+7. 開啟新終端並導航到 `ui.frontend` 資料夾並運行 `npm run build` 命令：
 
    ```shell
    $ cd ui.frontend
@@ -239,11 +239,11 @@ ht-degree: 0%
    ES5 bundle generation complete.
    ```
 
-8. 導覽至`ui.apps`資料夾。 在`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular`下方，應該會看到已編譯的SPA檔案已從`ui.frontend/build`資料夾複製。
+8. 導航到 `ui.apps` 的子菜單。 在下面 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular` 您應看到已編SPA譯的檔案已從`ui.frontend/build` 的子菜單。
 
-   ![在ui.apps中產生的用戶端程式庫](assets/integrate-spa/compiled-spa-uiapps.png)
+   ![在ui.apps中生成的客戶端庫](assets/integrate-spa/compiled-spa-uiapps.png)
 
-9. 返回終端機並導覽至`ui.apps`資料夾。 執行以下Maven命令：
+9. 返回到終端並導航到 `ui.apps` 的子菜單。 執行以下Maven命令：
 
    ```shell
    $ cd ../ui.apps
@@ -257,21 +257,21 @@ ht-degree: 0%
    [INFO] ------------------------------------------------------------------------
    ```
 
-   這會將`ui.apps`套件部署至本機執行中的AEM例項。
+   這將部署 `ui.apps` 包到的本地運行實例AEM。
 
-10. 開啟瀏覽器標籤並導覽至[http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)。 您現在應該會在SPA中看到`Header`元件的內容。
+10. 開啟瀏覽器頁籤並導航到 [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)。 您現在應看到 `Header` 顯示的組SPA件。
 
-   ![初始標題實作](assets/integrate-spa/initial-header-implementation.png)
+   ![初始頭實現](assets/integrate-spa/initial-header-implementation.png)
 
-   從專案根目錄觸發Maven組建時（即`mvn clean install -PautoInstallSinglePackage`），會自動執行步驟&#x200B;**7-9**。 您現在應了解SPA和AEM用戶端程式庫之間整合的基本知識。 請注意，您仍可以編輯和新增AEM中的`Text`元件，但是`Header`元件不可編輯。
+   步驟 **7-9** 在從項目的根觸發Maven生成時自動執行(即 `mvn clean install -PautoInstallSinglePackage`)。 您現在應該瞭解與客戶端庫之間集SPA成AEM的基本知識。 請注意，您仍然可以編輯和添加 `Text` 但AEM是 `Header` 元件不可編輯。
 
 ## Webpack開發伺服器 — 代理JSON API {#proxy-json}
 
-如先前的練習所示，執行組建，並將用戶端程式庫同步至AEM的本機例項需要幾分鐘的時間。 這是最終測試可接受的選項，但不適用於大部分SPA開發。
+如前幾個練習所示，執行生成並將客戶端庫同步到本地實例需要幾AEM分鐘的時間。 這對於最終測試是可以接受的，但對於大多數開發來說並不SPA理想。
 
-[webpack開發伺服器](https://webpack.js.org/configuration/dev-server/)可用來快速開發SPA。 SPA是由AEM產生的JSON模型驅動。 在本練習中，來自AEM執行個體的JSON內容將&#x200B;**proxided**&#x200B;至由[Angular專案](https://angular.io/guide/build)設定的開發伺服器。
+A [WebPack Dev伺服器](https://webpack.js.org/configuration/dev-server/) 可用於快速開發SPA。 由生SPA成的JSON模型驅動AEM。 在本練習中，運行實例的JSON內AEM容將 **代理** 到由 [Angular項目](https://angular.io/guide/build)。
 
-1. 返回IDE，在`ui.frontend/proxy.conf.json`開啟檔案&#x200B;**proxy.conf.json**。
+1. 返回到IDE並開啟檔案 **proxy.conf.json** 在 `ui.frontend/proxy.conf.json`。
 
    ```json
    [
@@ -287,17 +287,17 @@ ht-degree: 0%
    ]
    ```
 
-   [Angular應用程式](https://angular.io/guide/build#proxying-to-a-backend-server)提供簡單的代理API請求機制。 在`context`中指定的模式通過本地AEM快速啟動`localhost:4502`進行複製。
+   的 [Angular應用](https://angular.io/guide/build#proxying-to-a-backend-server) 提供了一種簡單的代理API請求的機制。 指定的模式 `context` 都被代理 `localhost:4502`，本地快速啟AEM動。
 
-2. 在`ui.frontend/src/index.html`開啟檔案&#x200B;**index.html**。 這是開發伺服器使用的根HTML檔案。
+2. 開啟檔案 **索引.html** 在 `ui.frontend/src/index.html`。 這是開發伺服器使用的根HTML檔案。
 
-   請注意，`base href="/"`中有一個條目。 [base標籤](https://angular.io/guide/deployment#the-base-tag)對於應用程式解析相對URL而言至關重要。
+   請注意， `base href="/"`。 的 [基本標籤](https://angular.io/guide/deployment#the-base-tag) 對於應用解析相對URL至關重要。
 
    ```html
    <base href="/">
    ```
 
-3. 開啟終端機視窗，並導覽至`ui.frontend`資料夾。 運行命令`npm start`:
+3. 開啟終端窗口並導航到 `ui.frontend` 的子菜單。 運行命令 `npm start`:
 
    ```shell
    $ cd ui.frontend
@@ -313,18 +313,18 @@ ht-degree: 0%
    ℹ ｢wds｣: 404s will fallback to //index.html
    ```
 
-4. 開啟新的瀏覽器標籤（如果尚未開啟），並導覽至[http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)。
+4. 開啟新瀏覽器頁籤（如果尚未開啟）並導航到 [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)。
 
-   ![Webpack開發伺服器 — 代理json](assets/integrate-spa/webpack-dev-server-1.png)
+   ![Webpack dev伺服器 — 代理json](assets/integrate-spa/webpack-dev-server-1.png)
 
-   您應該會看到與AEM相同的內容，但未啟用任何製作功能。
+   您應該看到與中相同的內AEM容，但未啟用任何創作功能。
 
-5. 返回IDE，在`ui.frontend/src/assets`處建立名為`img`的新資料夾。
-6. 下載以下WKND標誌並添加到`img`資料夾中：
+5. 返回到IDE並建立名為 `img` 在 `ui.frontend/src/assets`。
+6. 下載並將以下WKND徽標添加到 `img` 資料夾：
 
-   ![WKND標誌](./assets/integrate-spa/wknd-logo-dk.png)
+   ![WKND徽標](./assets/integrate-spa/wknd-logo-dk.png)
 
-7. 在`ui.frontend/src/app/components/header/header.component.html`開啟&#x200B;**header.component.html**&#x200B;並包含標誌：
+7. 開啟 **header.component.html** 在 `ui.frontend/src/app/components/header/header.component.html` 並包括：
 
    ```html
    <header class="header">
@@ -336,27 +336,27 @@ ht-degree: 0%
    </header>
    ```
 
-   儲存對&#x200B;**header.component.html**&#x200B;的變更。
+   將更改保存到 **header.component.html**。
 
-8. 返回瀏覽器。 您應會立即看到應用程式的變更反映在內。
+8. 返回到瀏覽器。 您應立即看到對應用所做的更改。
 
-   ![標題中新增標誌](assets/integrate-spa/added-logo-localhost.png)
+   ![標誌已添加到標題](assets/integrate-spa/added-logo-localhost.png)
 
-   由於我們代理內容，因此您可以繼續在&#x200B;**AEM**&#x200B;中更新內容，並看到它們反映在&#x200B;**webpack開發伺服器**&#x200B;中。 請注意，內容變更只會顯示在&#x200B;**Webpack開發伺服器**&#x200B;中。
+   您可以繼續在 **AEM** 看到它們反映在 **WebPack Dev伺服器**，因為我們正在代理內容。 請注意，內容更改僅在 **WebPack Dev伺服器**。
 
-9. 停止終端中`ctrl+c`的本地Web伺服器。
+9. 停止本地Web伺服器 `ctrl+c` 在終端。
 
 ## Webpack開發伺服器 — 模擬JSON API {#mock-json}
 
-另一種快速開發的方法是使用靜態JSON檔案作為JSON模型。 借由「模擬」JSON，我們移除了對本機AEM例項的相依性。 此外，前端開發人員也能更新JSON模型，以測試功能，並推動對JSON API的變更，JSON API稍後將由後端開發人員實作。
+另一種快速開發的方法是使用靜態JSON檔案作為JSON模型。 通過「嘲弄」JSON，我們刪除了對本地實例的依AEM賴性。 它還允許前端開發人員更新JSON模型，以便test功能並驅動對JSON API的更改，這些更改隨後將由後端開發人員實施。
 
-模擬JSON的初始設定&#x200B;**需要本機AEM例項**。
+模擬JSON的初始設定 **需要本地實AEM例**。
 
-1. 在瀏覽器中，導覽至[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)。
+1. 在瀏覽器中導航到 [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)。
 
-   這是由AEM匯出的JSON，此JSON會驅動應用程式。 複製JSON輸出。
+   這是驅動應用程AEM序的JSON導出。 複製JSON輸出。
 
-2. 返回到IDE，導航到`ui.frontend/src`並添加名為&#x200B;**mocks**&#x200B;和&#x200B;**json**&#x200B;的新資料夾，以匹配以下資料夾結構：
+2. 返回到IDE，導航到 `ui.frontend/src` 添加新資料夾 **吊** 和 **jon** 匹配以下資料夾結構：
 
    ```plain
    |-- ui.frontend
@@ -365,11 +365,11 @@ ht-degree: 0%
                |-- json
    ```
 
-3. 在`ui.frontend/public/mocks/json`下方建立名為&#x200B;**en.model.json**&#x200B;的新檔案。 從&#x200B;**Step 1**&#x200B;貼上JSON輸出至此處。
+3. 建立名為 **en.model.json** 下 `ui.frontend/public/mocks/json`。 貼上JSON輸出 **步驟1** 給。
 
-   ![模擬模型Json檔案](assets/integrate-spa/mock-model-json-created.png)
+   ![模型Json檔案](assets/integrate-spa/mock-model-json-created.png)
 
-4. 在`ui.frontend`下方建立新檔案&#x200B;**proxy.mock.conf.json**。 將下列項目填入檔案：
+4. 建立新檔案 **proxy.mock.conf.json** 下 `ui.frontend`。 使用以下內容填充檔案：
 
    ```json
    [
@@ -384,13 +384,13 @@ ht-degree: 0%
    ]
    ```
 
-   此代理配置將重寫以`/content/wknd-spa-angular/us`開頭的`/mocks/json`請求，並提供對應的靜態JSON檔案，例如：
+   此代理配置將重寫以開始的請求 `/content/wknd-spa-angular/us` 與 `/mocks/json` 並提供相應的靜態JSON檔案，例如：
 
    ```plain
    /content/wknd-spa-angular/us/en.model.json -> /mocks/json/en.model.json
    ```
 
-5. 開啟檔案&#x200B;**angular.json**。 使用更新的&#x200B;**assets**&#x200B;陣列新增新的&#x200B;**dev**&#x200B;設定，以參考已建立的&#x200B;**mocks**&#x200B;資料夾。
+5. 開啟檔案 **angular.json**。 添加新 **開發** 配置已更新 **資產** 引用的陣列 **吊** 資料夾。
 
    ```json
     "dev": {
@@ -405,11 +405,11 @@ ht-degree: 0%
        },
    ```
 
-   ![AngularJSON開發資產更新資料夾](assets/integrate-spa/dev-assets-update-folder.png)
+   ![AngularJSON開發資源更新資料夾](assets/integrate-spa/dev-assets-update-folder.png)
 
-   建立專用的&#x200B;**dev**&#x200B;設定，可確保&#x200B;**mocks**&#x200B;資料夾僅在開發期間使用，且不會部署至生產組建中的AEM。
+   建立專用 **開發** 配置確保 **吊** 資料夾僅在開發過程中使用，且從不在生AEM產生成中部署到。
 
-6. 在&#x200B;**angular.json**&#x200B;檔案中，下一步更新&#x200B;**browserTarget**&#x200B;設定，以使用新的&#x200B;**dev**&#x200B;設定：
+6. 在 **angular.json** 檔案，下次更新 **瀏覽器目標** 使用新配置 **開發** 配置：
 
    ```diff
      ...
@@ -422,9 +422,9 @@ ht-degree: 0%
      ...
    ```
 
-   ![AngularJSON建置開發更新](assets/integrate-spa/angular-json-build-dev-update.png)
+   ![AngularJSON生成開發更新](assets/integrate-spa/angular-json-build-dev-update.png)
 
-7. 開啟檔案`ui.frontend/package.json`並新增新的&#x200B;**start:mock**&#x200B;命令以參考&#x200B;**proxy.mock.conf.json**&#x200B;檔案。
+7. 開啟檔案 `ui.frontend/package.json` 並添加新 **開始：模擬** 命令以引用 **proxy.mock.conf.json** 的子菜單。
 
    ```diff
        "scripts": {
@@ -437,9 +437,9 @@ ht-degree: 0%
        }
    ```
 
-   新增命令可讓您輕鬆在代理設定之間切換。
+   添加新命令可輕鬆在代理配置之間切換。
 
-8. 如果當前正在運行，請停止&#x200B;**Webpack開發伺服器**。 使用&#x200B;**start:mock**&#x200B;指令碼啟動&#x200B;**webpack開發伺服器**:
+8. 如果當前正在運行，請停止 **WebPack Dev伺服器**。 啟動 **WebPack Dev伺服器** 使用 **開始：模擬** 指令碼：
 
    ```shell
    $ npm run start:mock
@@ -448,26 +448,26 @@ ht-degree: 0%
    > ng serve --open --proxy-config ./proxy.mock.conf.json
    ```
 
-   導覽至[http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)，您應該會看到相同的SPA，但現在會從&#x200B;**mock** JSON檔案提取內容。
+   導航到 [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html) 你應該看到同SPA樣的，但內容正在從 **嘲弄** JSON檔案。
 
-9. 對先前建立的&#x200B;**en.model.json**&#x200B;檔案進行小幅變更。 更新的內容應立即反映在&#x200B;**webpack開發伺服器**&#x200B;中。
+9. 對 **en.model.json** 檔案。 更新的內容應立即反映在 **WebPack Dev伺服器**。
 
-   ![模擬模型json更新](./assets/integrate-spa/webpack-mock-model.gif)
+   ![模型json更新](./assets/integrate-spa/webpack-mock-model.gif)
 
-   能夠操控JSON模型並查看即時SPA上的效果，可協助開發人員了解JSON模型API。 它還允許前端和後端開發並行進行。
+   能夠操作JSON模型並查看即時效果可SPA以幫助開發人員瞭解JSON模型API。 它還允許前端和後端開發並行進行。
 
-## 使用Sass新增樣式
+## 添加帶粗體的樣式
 
-接著，專案將新增一些已更新的樣式。 此專案將新增[Sass](https://sass-lang.com/)支援以使用變數等一些實用功能。
+接下來，將向項目添加一些更新的樣式。 此項目將添加 [薩斯](https://sass-lang.com/) 支援一些有用的功能，如變數。
 
-1. 開啟終端窗口，如果啟動，則停止&#x200B;**Webpack開發伺服器**。 從`ui.frontend`資料夾內輸入以下命令以更新Angular應用程式以處理&#x200B;**.scss**&#x200B;檔案。
+1. 開啟終端窗口並停止 **WebPack Dev伺服器** 的子菜單。 從內部 `ui.frontend` 資料夾輸入以下命令以更新要處理的Angular應用 **.scs** 的子菜單。
 
    ```shell
    $ cd ui.frontend
    $ ng config schematics.@schematics/angular:component.styleext scss
    ```
 
-   這將更新`angular.json`檔案，並在檔案底部添加新條目：
+   這將更新 `angular.json` 檔案底部有一個新條目：
 
    ```json
    "schematics": {
@@ -477,14 +477,14 @@ ht-degree: 0%
    }
    ```
 
-2. 安裝`normalize-scss`以標準化瀏覽器間的樣式：
+2. 安裝 `normalize-scss` 要使各瀏覽器的樣式規範化，請執行以下操作：
 
    ```shell
    $ npm install normalize-scss --save
    ```
 
-3. 返回到IDE，在`ui.frontend/src`下建立名為`styles`的新資料夾。
-4. 在`ui.frontend/src/styles`下建立名為`_variables.scss`的新檔案，並填入下列變數：
+3. 返回到IDE及其下面 `ui.frontend/src` 建立名為 `styles`。
+4. 在下面建立新檔案 `ui.frontend/src/styles` 命名 `_variables.scss` 並填充以下變數：
 
    ```scss
    //_variables.scss
@@ -529,7 +529,7 @@ ht-degree: 0%
    $gutter-padding: 12px;
    ```
 
-5. 將位於`ui.frontend/src/styles.css`的檔案&#x200B;**styles.css**&#x200B;的副檔名重新命名為&#x200B;**styles.scs**。 將內容替換為：
+5. 重新命名檔案的副檔名 **樣式.css** 在 `ui.frontend/src/styles.css` 至 **樣式.scs**。 將內容替換為：
 
    ```scss
    /* styles.scss * /
@@ -558,7 +558,7 @@ ht-degree: 0%
    }
    ```
 
-6. 更新&#x200B;**angular.json**，並使用&#x200B;**styles.scs**&#x200B;重新命名&#x200B;**style.css**&#x200B;的所有參考。 應該有3個參考。
+6. 更新 **angular.json** 並重新命名所有引用 **樣式.css** 與 **樣式.scs**。 應該有3個參考。
 
    ```diff
      "styles": [
@@ -569,15 +569,15 @@ ht-degree: 0%
 
 ## 更新標題樣式
 
-接下來，使用Sass將一些品牌專屬樣式新增至&#x200B;**Header**&#x200B;元件。
+接下來，將一些特定於品牌的樣式添加到 **標題** 元件。
 
-1. 啟動&#x200B;**Webpack開發伺服器**&#x200B;以即時查看樣式更新：
+1. 啟動 **WebPack Dev伺服器** 要即時查看樣式更新：
 
    ```shell
    $ npm run start:mock
    ```
 
-2. 在`ui.frontend/src/app/components/header`下，將&#x200B;**header.component.css**&#x200B;重新命名為&#x200B;**header.component.scss**。 將下列項目填入檔案：
+2. 下 `ui.frontend/src/app/components/header` 更名 **header.component.css** 至 **header.component.scss**。 使用以下內容填充檔案：
 
    ```scss
    @import "~src/styles/variables";
@@ -612,7 +612,7 @@ ht-degree: 0%
    }
    ```
 
-3. 更新&#x200B;**header.component.js**&#x200B;以參考&#x200B;**header.component.scss**:
+3. 更新 **header.component.ts** 引用 **header.component.scss**:
 
    ```diff
    ...
@@ -625,36 +625,36 @@ ht-degree: 0%
    ...
    ```
 
-4. 返回瀏覽器和&#x200B;**Webpack開發伺服器**:
+4. 返回瀏覽器和 **WebPack Dev伺服器**:
 
-   ![樣式化標題 — webpack開發伺服器](assets/integrate-spa/styled-header.png)
+   ![樣式頭 — Webpack開發伺服器](assets/integrate-spa/styled-header.png)
 
-   您現在應該會看到已新增至&#x200B;**Header**&#x200B;元件的樣式。
+   現在，您應看到添加到 **標題** 元件。
 
-## 將SPA更新部署至AEM
+## 將更SPA新部署到AEM
 
-對&#x200B;**Header**&#x200B;所做的變更目前只能透過&#x200B;**webpack開發伺服器**&#x200B;顯示。 將更新的SPA部署至AEM以查看變更。
+對 **標題** 當前僅通過 **WebPack Dev伺服器**。 部署更新SPA的AEM以查看更改。
 
-1. 停止&#x200B;**Webpack開發伺服器**。
-2. 導覽至專案`/aem-guides-wknd-spa`的根目錄，並使用Maven將專案部署至AEM:
+1. 停止 **WebPack Dev伺服器**。
+2. 導航到項目的根 `/aem-guides-wknd-spa` 並將項目部署AEM到Maven:
 
    ```shell
    $ cd ..
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-3. 導覽至[http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)。 您應該會看到已更新的&#x200B;**Header**，並套用標誌和樣式：
+3. 導航到 [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)。 您應看到更新的 **標題** 應用了徽標和樣式：
 
-   ![更新AEM中的標題](assets/integrate-spa/final-header-component.png)
+   ![更新的標題AEM](assets/integrate-spa/final-header-component.png)
 
-   現在更新的SPA已在AEM中，製作即可繼續。
+   現在已更新SPA，創AEM作可以繼續。
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您已更新SPA並探索與AEM的整合！ 您現在知道使用&#x200B;**webpack開發伺服器**，針對AEM JSON模型API開發SPA的兩種方法。
+祝賀您，您已更新SPA並探索與的整合AEM! 您現在知道使用JSON模型SPAAPI開AEM發的兩種方法 **WebPack Dev伺服器**。
 
-您一律可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution)上檢視完成的程式碼，或切換至分支`Angular/integrate-spa-solution`在本機檢出程式碼。
+您始終可以在 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution) 或通過切換到分支本地檢出代碼 `Angular/integrate-spa-solution`。
 
 ### 後續步驟 {#next-steps}
 
-[將SPA元件對應至AEM元件](map-components.md)  — 了解如何使用AEM SPA Editor JS SDK將Angular元件對應至Adobe Experience Manager(AEM)元件。元件對應可讓作者在AEM SPA編輯器中對SPA元件進行動態更新，與傳統AEM製作類似。
+[將組SPA件映射到組AEM件](map-components.md)  — 瞭解如何使用編輯器JS SDK將Angular組AEM件映射AEM到SPAAdobe Experience Manager()元件。 元件映射使作者能夠對編輯器中SPA的元件進行AEM動態SPA更新，與傳統創AEM作類似。
