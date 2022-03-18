@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: a8e6e863a4d236babdb1e2ae978240cd51631981
+source-git-commit: 187f13c5051237915fdc8a8c0e3280dd0f0702ce
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '362'
 ht-degree: 1%
 
 ---
@@ -53,14 +53,16 @@ ht-degree: 1%
       </p>
    </td>
      <td>
-      <img alt="日誌檔案和日誌記錄" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-aem-log-files.md">
+            <img alt="日誌檔案和日誌記錄" src="./imgs/003-thumb.png"/>
+        </a>
       <div>
-         <strong>日誌檔案和日誌記錄</strong>
+         <a href="./cloud5-aem-log-files.md"><strong>日誌檔案和日誌記錄</strong></a>
          <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
       </div>
       <p>
         <br/>
-         2022年3月18日
+         這是一個關於如何訪問as a Cloud Service中的日AEM志的快速瞭解，包括如何通過用戶介面和API訪問日誌。
       </p>
    </td> 
   </tr>
