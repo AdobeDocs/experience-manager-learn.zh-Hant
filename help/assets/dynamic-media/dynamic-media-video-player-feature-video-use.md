@@ -8,9 +8,9 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: 947c280f32b013a6ade76b2f3df1152b29108c6e
+source-git-commit: 697b2c11f91899c56869a24b06c690a8e278df0c
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '246'
 ht-degree: 6%
 
 ---
@@ -30,7 +30,7 @@ HLS瀏覽器支援如下所示，對於不支援的瀏覽器，我們退回到�
 
 >[!NOTE]
 >
-> Dynamic MediaHybrid在2022年3月15日之後將不支援Internet Explorer 11上的視頻流。
+> Dynamic MediaHybrid在2022年3月15日之後將不支援Internet Explorer 11上的視頻流。 要回退到逐步播放，請升級到6.5.12。
 
 <table> 
  <thead> 
@@ -49,7 +49,9 @@ HLS瀏覽器支援如下所示，對於不支援的瀏覽器，我們退回到�
   <tr>
    <td> <p>桌面</p> </td>
    <td> <p>Internet Explorer 11+</p> </td>
-   <td> <p>HLS視頻流</p> </td>
+   <td> <p>Dynamic Media — 場景7模式：HLS視頻流</p> 
+        <p>Dynamic Media — 混合模式：漸進式下載</p>
+   </td>
   </tr>
   <tr>
    <td> <p>桌面</p> </td>
