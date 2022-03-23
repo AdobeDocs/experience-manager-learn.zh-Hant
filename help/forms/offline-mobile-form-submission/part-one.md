@@ -1,36 +1,36 @@
 ---
-title: 在HTM5表單提交上觸發AEM工作流程
-seo-title: 在HTML5表單提交上觸發AEM工作流程
-description: 繼續以離線模式填寫行動表單，並提交行動表單以觸發AEM工作流程
-seo-description: 繼續以離線模式填寫行動表單，並提交行動表單以觸發AEM工作流程
-feature: 行動表單
+title: 觸AEM發HTM5表單提交工作流 — 建立自定義配置檔案
+seo-title: Trigger AEM Workflow on HTML5 Form Submission
+description: 以離線模式繼續填寫移動表單並提交移動表單以觸發工AEM作流
+seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4, 6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
+exl-id: b6e3acee-4a07-4d00-b3a1-f7aedda21e6e
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# 建立自定義配置檔案
 
-# 建立自訂設定檔
+在此部分，我們將建立 [自定義配置檔案。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) 配置檔案負責將XDP呈現為HTML。 在框外提供預設配置檔案，將XDP呈現為HTML。 它代表了MobileForms格式副本服務的自定義版本。 您可以使用Mobile表單格式副本服務來定制MobileForms的外觀、行為和交互。 在我們的自定義配置檔案中，我們將使用引導橋API捕獲移動表單中填充的資料。 然後，此資料被發送到自定義servlet，該Servlet將生成互動式PDF並將其流回調用應用程式。
 
-在本部分，我們將建立[自訂設定檔。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) 設定檔負責將XDP轉譯為HTML。預設設定檔會立即提供，以便將XDP轉譯為HTML。 代表自訂版本的Mobile Forms轉譯服務。 您可以使用Mobile Form Rendition服務來自訂Mobile Forms的外觀、行為和互動。 在自訂設定檔中，我們將使用Guidebridge API擷取行動表單中填入的資料。 然後，此資料會傳送至自訂servlet，由servlet產生互動式PDF，並將其串流回呼叫應用程式。
-
-使用`formBridge` JavaScript API取得表單資料。 我們使用`getDataXML()`方法：
+使用 `formBridge` JavaScript API。 我們利用 `getDataXML()` 方法：
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});
 ```
 
-在成功處理常式方法中，我們會呼叫在AEM中執行的自訂servlet。 此Servlet會呈現並傳回含有行動表單資料的互動式pdf
+在成功處理程式方法中，我們調用中運行的自定義ServletAEM。 此Servlet將呈現並返回帶有移動表單中資料的互動式pdf
 
 ```javascript
 var suc = function(obj) {
@@ -61,9 +61,9 @@ var suc = function(obj) {
 }
 ```
 
-## 產生互動式PDF
+## 生成交互PDF
 
-以下是servlet程式碼，負責轉譯互動式pdf並將pdf傳回呼叫應用程式。 Servlet調用自定義DocumentServices OSGi服務的`mobileFormToInteractivePdf`方法。
+以下是Servlet代碼，負責呈現互動式pdf並將pdf返回給調用應用程式。 Servlet調用 `mobileFormToInteractivePdf` 自定義DocumentServices OSGi服務的方法。
 
 ```java
 import java.io.File;
@@ -123,9 +123,9 @@ public class GenerateInteractivePDF extends SlingAllMethodsServlet {
 }
 ```
 
-### 轉譯互動式PDF
+### 呈現互動式PDF
 
-下列程式碼會使用[Forms服務API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html)，以行動表單中的資料轉譯互動式PDF。
+以下代碼使用 [Forms服務API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) 與來自移動表單的資料進行交互PDF。
 
 ```java
 public Document mobileFormToInteractivePdf(Document xmlData,String path) {
@@ -148,7 +148,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-若要檢視從部分完成的行動表單下載互動式PDF的功能，請按一下這裡[。
-](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content)下載PDF後，下一步是提交PDF以觸發AEM工作流程。 此工作流程將合併提交的PDF中的資料，並產生非互動式PDF以供審核。
+要查看從部分完成的移動表單下載交互PDF的功能， [請按一下這裡](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content)。
+下載PDF後，下一步是提交PDF以觸發工AEM作流。 此工作流將合併已提交PDF中的資料，並生成非互動式PDF以供審閱。
 
-針對此使用案例建立的自訂設定檔可在本教學課程資產中使用。
+為此使用案例建立的自定義配置檔案可作為本教程資產的一部分使用。

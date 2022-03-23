@@ -1,45 +1,45 @@
 ---
-title: 在HTM5表單提交上觸發AEM工作流程
-seo-title: 在HTML5表單提交上觸發AEM工作流程
-description: 繼續以離線模式填寫行動表單，並提交行動表單以觸發AEM工作流程
-seo-description: 繼續以離線模式填寫行動表單，並提交行動表單以觸發AEM工作流程
-feature: 行動表單
+title: 觸AEM發HTM5表單提交工作流 — 審核和批准PDF
+seo-title: Trigger AEM Workflow on HTML5 Form Submission
+description: 以離線模式繼續填寫移動表單並提交移動表單以觸發工AEM作流
+seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a767d8f8-d75e-4472-9139-c08d804ee076
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
+# 要審閱和批准提交的PDF的工作流
 
-# 審核和批准提交的PDF的工作流
+最後一個也是最後一個步驟是創AEM建工作流，該工作流將生成靜態或非互動式PDF以供審核和批准。 將通過節點上配置的啟AEM動程式觸發工作流 `/content/pdfsubmissions`。
 
-最後也是最後一步，是建立AEM工作流程，以產生靜態或非互動式PDF以供審核和核准。 工作流程將透過在節點`/content/pdfsubmissions`上設定的AEM啟動器觸發。
-
-以下螢幕擷圖顯示工作流程中涉及的步驟。
+以下螢幕快照顯示了工作流中涉及的步驟。
 
 ![工作流程](assets/workflow.PNG)
 
-## 產生非互動式PDF工作流程步驟
+## 生成非互動式PDF工作流步驟
 
-此處指定XDP範本以及要與範本合併的資料。 要合併的資料是PDF中提交的資料。 此提交的資料儲存在節點`/content/pdfsubmissions`下。
+此處指定了XDP模板和要與模板合併的資料。 要合併的資料是來自PDF的提交資料。 此提交的資料儲存在節點下 `/content/pdfsubmissions`。
 
 ![工作流程](assets/generate-pdf1.PNG)
 
-產生的PDF會指派給名為`submittedPDF`的工作流程變數。
+生成的PDF被分配給稱為 `submittedPDF`。
 
 ![工作流程](assets/generate-pdf2.PNG)
 
-### 指派產生的PDF以進行審核和核准
+### 分配生成的PDF以供審閱和審批
 
-在此處分配任務工作流元件用於分配生成的PDF以進行審核和批准。 變數`submittedPDF`用於「分配任務」工作流元件的「Forms和文檔」頁簽中。
+此處使用分配任務工作流元件來分配生成的PDF以供審核和審批。 變數 `submittedPDF` 在「分配任務」工作流元件的「Forms和文檔」頁籤中使用。
 
 ![工作流程](assets/assign-task.PNG)
