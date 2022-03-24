@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: 7994860f6d0ea017aa48e326482bc8e77af6f555
+source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 21%
+source-wordcount: '725'
+ht-degree: 20%
 
 ---
 
@@ -172,6 +172,14 @@ ht-degree: 21%
       + [建立USC批配置](./forms/formscs-batch-api/configure-usc-batch.md)
       + [建立批配置](./forms/formscs-batch-api/create-batch-config.md)
       + [執行批處理](./forms/formscs-batch-api/execute-batch-generate-documents.md)
+   + PDF在FormsCS中的操縱{#forms-cs-assembler}
+      + [簡介](./forms/forms-cs-assembler/introduction.md)
+      + [建立服務憑據](./forms/forms-cs-assembler/service-credentials.md)
+      + [建立JWT令牌](./forms/forms-cs-assembler/create-jwt.md)
+      + [建立訪問令牌](./forms/forms-cs-assembler/create-access-token.md)
+      + [匯編PDF檔案](./forms/forms-cs-assembler/assemble-pdf-files.md)
+      + [Test解決方案](./forms/forms-cs-assembler/test.md)
+      + [挑戰](./forms/forms-cs-assembler/challenge.md)
    + Azure門戶儲存{#forms-cs-azure-portal}
       + [簡介](./forms/forms-cs-azure-portal/introduction.md)
       + [建立表單資料模型](./forms/forms-cs-azure-portal/create-fdm.md)

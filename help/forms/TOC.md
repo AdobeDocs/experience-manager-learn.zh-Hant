@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
+source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
 workflow-type: tm+mt
-source-wordcount: '1654'
+source-wordcount: '1657'
 ht-degree: 3%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 3%
    + [雙因素身份驗證](some-useful-integrations/two-factor-authentication.md)
    + [OCR資料提取](some-useful-integrations/ocr-data-extraction.md)
    + [級聯下拉清單](some-useful-integrations/geonames-org.md)
+   + [與ServiceNow整合](some-useful-integrations/service-now.md)
 + 建立OSGi捆綁包 {#creating-your-first-osgi-bundle}
    + [設定環境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [建立OSGi服務](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -210,7 +211,7 @@ ht-degree: 3%
    + [在AEM Forms使用產出和Forms服務](document-services/output-and-forms-services-article-develop.md)
    + [從一個資料檔案生成多個PDF](document-services/generate-multi-record-pdf.md)
    + [生成移動表單提交PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [從移動表單生成互動式PDF](document-services/render-interactive-form-using-api.md)
+   + [從Mobile窗體生成互動式PDF](document-services/render-interactive-form-using-api.md)
    + [從自適應表單生成互動式DoR](document-services/generate-interactive-dor.md)
    + [配置Reader擴展憑據](document-services/configuring-reader-extension-osgi.md)
    + [對XDP格式副本的PDF應用使用權限](document-services/rendering-and-reader-extending-xdp-templates-article.md)
