@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
+source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '726'
 ht-degree: 20%
 
 ---
@@ -214,7 +214,7 @@ ht-degree: 20%
    + 設定{#set-up}
       + [帳戶和服務預配](./asset-compute/set-up/accounts-and-services.md)
       + [地方發展環境](./asset-compute/set-up/development-environment.md)
-      + [Adobe螢火蟲計畫](./asset-compute/set-up/firefly.md)
+      + [應用程式生成器](./asset-compute/set-up/app-builder.md)
    + 開發{#develop}
       + [建立Asset compute項目](./asset-compute/develop/project.md)
       + [配置環境變數](./asset-compute/develop/environment-variables.md)

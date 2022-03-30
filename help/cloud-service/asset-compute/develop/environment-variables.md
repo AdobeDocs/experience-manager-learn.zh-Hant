@@ -1,6 +1,6 @@
 ---
-title: 設定環境變數以提升Asset compute擴充性
-description: 環境變數會保留在.env檔案中供本機開發使用，並用來提供本機開發所需的Adobe I/O憑證和雲端儲存空間憑證。
+title: 為Asset compute擴展性配置環境變數
+description: 環境變數在.env檔案中進行維護以用於本地開發，並用於提供本地開發所需的Adobe I/O憑據和雲儲存憑據。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -13,33 +13,33 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: c63c5c75-1deb-4c16-ba33-e2c338ef6251
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
 
-# 設定環境變數
+# 配置環境變數
 
-![圓點環境檔案](assets/environment-variables/dot-env-file.png)
+![點環境檔案](assets/environment-variables/dot-env-file.png)
 
-開始開發Asset compute背景工作之前，請確定專案已設定Adobe I/O和雲端儲存資訊。 此資訊會儲存在專案的`.env`中，而僅用於本機開發，不會儲存在Git中。 `.env`檔案提供了一種將鍵/值對公開到本地Asset compute本地開發環境的方便方法。 當[將](../deploy/runtime.md)Asset compute工作程式部署至Adobe I/O Runtime時，不會使用`.env`檔案，而是會透過環境變數傳入值的子集。 其他自訂參數和機密也可儲存在`.env`檔案中，例如第三方Web服務的開發憑證。
+在開始開發Asset compute工作人員之前，確保項目已配置Adobe I/O和雲儲存資訊。 此資訊儲存在項目的 `.env`  它只用於本地開發，而不用Git儲存。 的 `.env` 檔案提供了一種將鍵/值對暴露給本地Asset compute本地開發環境的方便方法。 當 [部署](../deploy/runtime.md) asset compute工人到Adobe I/O Runtime `.env` 不使用檔案，而是通過環境變數傳遞值的子集。 其他自定義參數和機密可以儲存在 `.env` 檔案，如第三方Web服務的開發憑據。
 
-## 參考`private.key`
+## 引用 `private.key`
 
-![私密金鑰](assets/environment-variables/private-key.png)
+![私鑰](assets/environment-variables/private-key.png)
 
-開啟`.env`檔案，取消對`ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH`鍵的注釋，並將檔案系統上的絕對路徑提供給`private.key`，該路徑與添加到您Adobe I/OFireFly項目的公共證書配對。
+開啟 `.env` 檔案，取消注釋 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 鍵，並將檔案系統上的絕對路徑提供給 `private.key` 與添加到您的Adobe I/OApp Builder項目的公共證書配對。
 
-+ 如果您的金鑰組是由Adobe I/O產生，則會隨著`config.zip`自動下載。
-+ 如果您提供公開金鑰來Adobe I/O，則您也應擁有相符的私密金鑰。
-+ 如果您沒有這些索引鍵組，您可以在下列位置產生新的索引鍵組或上傳新的公開索引鍵：
-   [https://console.adobe.com](https://console.adobe.io)  >您的Asset computeFirefly專案>在開發>服務帳戶(JWT)中的工作區。
++ 如果密鑰對是由Adobe I/O生成的，則它將作為  `config.zip`。
++ 如果您為Adobe I/O提供了公鑰，則還應擁有匹配的私鑰。
++ 如果沒有這些密鑰對，則可以生成新的密鑰對或在以下位置的底部上載新的公鑰：
+   [https://console.adobe.com](https://console.adobe.io) >您的Asset computeApp Builder項目> Workspaces @ Development > Service Account(JWT)。
 
-請記住，`private.key`檔案不應簽入Git，因為它包含機密，而應儲存在專案外的安全位置。
+記住 `private.key` 檔案不應簽入Git，因為它包含機密，而應儲存在項目外的安全位置。
 
-例如，在macOS上，這看起來可能像：
+例如，在macOS，這可能是：
 
 ```
 ...
@@ -49,21 +49,21 @@ ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=/Users/example-user/credentials/aem-guides-w
 
 ## 配置雲儲存憑據
 
-本機開發Asset compute背景工作需要存取[雲端儲存空間](../set-up/accounts-and-services.md#cloud-storage)。 `.env`檔案中提供了用於本地開發的雲儲存憑據。
+asset compute工人的地方發展需要 [雲儲存](../set-up/accounts-and-services.md#cloud-storage)。 中提供了用於本地開發的雲儲存憑據 `.env` 的子菜單。
 
-本教學課程偏好使用Azure Blob儲存，不過Amazon S3，以及`.env`檔案中對應的金鑰可改用。
+本教程傾向於使用Azure Blob儲存，但是AmazonS3及其在 `.env` 可以改用檔案。
 
 ### 使用Azure Blob儲存
 
-取消註解並填入`.env`檔案中的下列索引鍵，然後填入已布建雲端儲存空間（在Azure入口網站上找到）的值。
+取消注釋並填充以下鍵 `.env` 檔案，並用Azure門戶上找到的已設定雲儲存的值填充這些值。
 
 ![Azure Blob儲存](./assets/environment-variables/azure-portal-credentials.png)
 
-1. `AZURE_STORAGE_CONTAINER_NAME`鍵的值
-1. `AZURE_STORAGE_ACCOUNT`鍵的值
-1. `AZURE_STORAGE_KEY`鍵的值
+1. 值 `AZURE_STORAGE_CONTAINER_NAME` 鍵
+1. 值 `AZURE_STORAGE_ACCOUNT` 鍵
+1. 值 `AZURE_STORAGE_KEY` 鍵
 
-例如，這看起來可能像（僅限插圖的值）:
+例如，這可能看起來類似（僅用於插圖的值）:
 
 ```
 ...
@@ -73,17 +73,17 @@ AZURE_STORAGE_CONTAINER_NAME=asset-compute
 ...
 ```
 
-結果的`.env`檔案如下所示：
+結果 `.env` 檔案如下所示：
 
 ![Azure Blob儲存憑據](assets/environment-variables/cloud-storage-credentials.png)
 
-如果您沒有使用Microsoft Azure Blob儲存，請移除或保留這些備注（方法是加上`#`前置詞）。
+如果您未使用MicrosoftAzure Blob儲存，請刪除或保留這些注釋(通過使用 `#`)。
 
-### 使用Amazon S3雲端儲存空間{#amazon-s3}
+### 使用AmazonS3雲儲存{#amazon-s3}
 
-如果您使用Amazon S3雲端儲存空間，請取消註解，並在`.env`檔案中填入下列索引鍵。
+如果您正在使用AmazonS3雲儲存取消注釋，並在 `.env` 的子菜單。
 
-例如，這看起來可能像（僅限插圖的值）:
+例如，這可能看起來類似（僅用於插圖的值）:
 
 ```
 ...
@@ -94,24 +94,24 @@ AWS_REGION=us-east-1
 ...
 ```
 
-## 驗證專案設定
+## 驗證項目配置
 
-在配置生成的Asset compute項目後，在進行代碼更改之前驗證配置，以確保`.env`檔案中的支援服務已布建。
+一旦已配置生成的Asset compute項目，請先驗證配置，然後進行代碼更改，以確保在 `.env` 的子菜單。
 
 要啟動Asset compute項目的Asset compute開發工具，請執行以下操作：
 
-1. 在Asset compute項目根目錄中開啟命令行（在VS代碼中，可通過「終端機」>「新終端機」直接在IDE中開啟），然後執行命令：
+1. 在Asset compute項目根目錄中開啟命令行（在VS代碼中，可通過「終端」>「新終端」直接在IDE中開啟），然後執行以下命令：
 
    ```
    $ aio app run
    ```
 
-1. 本機Asset compute開發工具將在您的預設Web瀏覽器中開啟，網址為&#x200B;__http://localhost:9000__。
+1. 本地Asset compute開發工具將在預設Web瀏覽器中開啟， __http://localhost:9000__。
 
-   ![aio app run](assets/environment-variables/aio-app-run.png)
+   ![aio應用程式運行](assets/environment-variables/aio-app-run.png)
 
-1. 當開發工具初始化時，查看命令行輸出和Web瀏覽器中的錯誤消息。
-1. 若要停止「Asset compute開發工具」，請在執行`aio app run`的視窗中點選`Ctrl-C`以終止程式。
+1. 在開發工具初始化時，查看命令行輸出和Web瀏覽器中的錯誤消息。
+1. 要停止Asset compute開發工具，請點擊 `Ctrl-C` 窗口中 `aio app run` 終止進程。
 
 ## 疑難排解
 
