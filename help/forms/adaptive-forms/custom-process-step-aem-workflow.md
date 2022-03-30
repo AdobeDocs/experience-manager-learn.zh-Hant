@@ -1,50 +1,48 @@
 ---
-title: 實作自訂程式步驟
-description: 使用自訂處理步驟將適用性表單附件寫入檔案系統
+title: 實施自定義流程步驟
+description: 使用自定義進程步驟將自適應表單附件寫入檔案系統
 feature: Workflow
 version: 6.5
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
+exl-id: 879518db-3f05-4447-86e8-5802537584e5
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
 
+# 自定義流程步驟
 
-# 自訂處理步驟
+本教程適用於需要實施定制流程步驟的AEM Forms客戶。 進程步驟可以執行ECMA指令碼或調用自定義java代碼以執行操作。 本教程將介紹實施由進程步驟執行的WorkflowProcess所需的步驟。
 
-本教學課程適用於需要實作自訂程式步驟的AEM Forms客戶。 處理步驟可執行ECMA指令碼，或呼叫自訂Java程式碼以執行操作。 本教學課程將說明實作由處理步驟執行的WorkflowProcess所需的步驟。
+實現自定義流程步驟的主要原因是擴展工AEM作流。 例如，如果在工作流模型中使用AEM Forms元件，則可能需要執行以下操作
 
-實作自訂程式步驟的主要原因是擴充AEM工作流程。 例如，如果您在工作流程模型中使用AEM Forms元件，則可能要執行下列操作
+* 將自適應表單附件保存到檔案系統
+* 操縱提交的資料
 
-* 將適用性表單附件儲存至檔案系統
-* 操控提交的資料
+要完成上述使用情形，您通常會編寫一個OSGi服務，該服務由流程步驟執行。
 
-若要完成上述使用案例，您通常會撰寫由處理步驟執行的OSGi服務。
+## 建立Maven項目
 
-## 建立Maven專案
-
-第一步是使用適當的AdobeMaven原型來建立Maven專案。 詳細步驟列於[article](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中。 將maven專案匯入eclipse後，您就可以開始編寫可在處理步驟中使用的第一個OSGi元件。
+第一步是使用適當的AdobeMaven Archetype建立主項目。 詳細步驟列在本中 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)。 將主項目導入eclipse後，您就可以開始編寫可以在流程步驟中使用的第一個OSGi元件。
 
 
-### 建立實施WorkflowProcess的類
+### 建立實現WorkflowProcess的類
 
-在eclipse IDE中開啟maven專案。 展開&#x200B;**projectname** > **core**資料夾。 展開src/main/java資料夾。 您應該會看到結尾為「core」的套件。 在此包中建立實施WorkflowProcess的Java類。 您需要覆寫執行方法。 執行方法的簽名如下
-public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)擲回WorkflowException
-執行方法可存取下列3個變數
+在eclipse IDE中開啟maven項目。 展開 **項目名稱** > **核** 的子菜單。 展開src/main/java資料夾。 您應看到以「核心」結尾的包。 建立在此包中實現WorkflowProcess的Java類。 您需要覆蓋execute方法。 執行方法的簽名如下：public void execute(WorkItem workItem、WorkflowSession workflowSession、MetaDataMap processArguments)拋出WorkflowException執行方法授予對以下3個變數的訪問權
 
-**工作項**:workItem變數將授予對與工作流相關資料的訪問權。公開API檔案可在[此處取得。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**工作項**:workItem變數將授予對與工作流相關的資料的訪問權限。 公用API文檔可用 [給。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**WorkflowSession**:此workflowSession變數可讓您控制工作流程。公開API檔案可在[此處](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)取得
+**工作流會話**:此workflowSession變數將允許您控制工作流。 公用API文檔可用 [這裡](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**MetaDataMap**:與工作流程相關聯的所有中繼資料。任何傳遞到進程步驟的進程參數都可使用MetaDataMap對象。[API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
+**元資料映射**:與工作流關聯的所有元資料。 傳遞給進程步驟的任何進程參數都可使用MetaDataMap對象。[API文檔](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
-在本教學課程中，我們將將新增至適用性表單的附件寫入檔案系統，作為AEM工作流程的一部分。
+在本教程中，我們將將添加到「自適應表單」的附件作為「工作流」的一部分寫入檔案AEM系統。
 
-為了完成此使用案例，寫入了以下java類
+要完成此用例，請編寫以下java類
 
 讓我們看看這個代碼
 
@@ -127,37 +125,36 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 			}
 ```
 
-第1行 — 定義元件的屬性。 將OSGi元件與處理步驟關聯時，您會看到process.label屬性，如下方其中一個螢幕擷取畫面所示。
+行1 — 定義元件的屬性。 process.label屬性是將OSGi元件與進程步驟關聯時將看到的內容，如下面螢幕截圖之一所示。
 
-第13-15行 — 傳遞給此OSGi元件的進程參數使用「，」分隔符進行拆分。 然後，會從字串陣列中擷取attachmentPath和saveToLocation的值。
+行13-15 — 傳遞給此OSGi元件的進程參數使用「，」分隔符進行拆分。 然後，從字串陣列中提取attachmentPath和saveToLocation的值。
 
-* attachmentPath — 這與您在適用性表單中指定的位置相同，當您設定適用性表單的提交動作來叫用AEM Workflow時。 這是您要將附件儲存至AEM中，而與工作流程裝載相關的資料夾名稱。
+* attachmentPath — 這與在將Adaptive Form的提交操作配置為調用工作流時在Adaptive Form中指定的位置AEM相同。 這是您希望附件相對於工作流負載保存AEM的資料夾的名稱。
 
-* saveToLocation — 這是您希望將附件保存在AEM伺服器的檔案系統上的位置。
+* saveToLocation — 這是您希望將附件保存到伺服器文AEM件系統的位置。
 
-這兩個值會以程式引數的形式傳遞，如下方螢幕擷取所示。
+這兩個值作為進程參數傳遞，如下面的螢幕快照所示。
 
-![ProcessStep](assets/implement-process-step.gif)
+![進程步驟](assets/implement-process-step.gif)
 
-QueryBuilder服務用於查詢attachmentsPath資料夾下nt:file類型的節點。 其餘的代碼會在搜索結果中反覆顯示，以建立Document對象並將其保存到檔案系統
+QueryBuilder服務用於查詢attachmentsPath資料夾下nt:file類型的節點。 其餘的代碼通過搜索結果迭代以建立文檔對象並將其保存到檔案系統
 
 
 >[!NOTE]
 >
->由於我們使用的是AEM Forms專屬的檔案物件，因此您必須在您的Maven專案中包含aemfd-client-sdk相依性。 群組ID為com.adobe.aemfd，工件ID為aemfd-client-sdk。
+>由於我們使用的是特定於AEM Forms的Document對象，因此需要在主項目中包含aemfd-client-sdk依賴項。 組ID為com.adobe.aemfd，項目ID為aemfd-client-sdk。
 
-#### 建置和部署
+#### 構建和部署
 
-[按照此處所述構建](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en#build-your-project)
-[包確保包已部署且處於活動狀態](http://localhost:4502/system/console/bundles)
+[按此處所述構建捆綁包](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[確保已部署該捆綁包並處於活動狀態](http://localhost:4502/system/console/bundles)
 
-建立工作流模型。 在工作流模型中拖放流程步驟。 將流程步驟與「將適用性表單附件保存到檔案系統」相關聯。
+建立工作流模型。 在工作流模型中拖放流程步驟。 將流程步驟與「將自適應表單附件保存到檔案系統」關聯。
 
-提供以逗號分隔的必要處理引數。 例如，附件，c:\\scrappp\\。 第一個引數是相對於工作流程裝載儲存適用性表單附件的資料夾。 這必須與您在設定適用性表單的提交動作時指定的值相同。 第二個參數是您希望儲存附件的位置。
+提供用逗號分隔的必要進程參數。 例如，附件，c:\\scrappp\\。 第一個參數是將相對於工作流負載儲存自適應表單附件時的資料夾。 這必須與配置Adaptive Form的提交操作時指定的值相同。 第二個參數是要儲存附件的位置。
 
-建立最適化表單。 將「檔案附件」元件拖放至表單。 配置表單的提交操作，以調用在先前步驟中建立的工作流。 提供適當的附件路徑。
+建立最適化表單. 將「檔案附件」元件拖放到窗體中。 配置表單的提交操作以調用在前面步驟中建立的工作流。 提供相應的附件路徑。
 
-儲存設定。
+保存設定。
 
-預覽表單。 新增幾個附件並提交表單。 附件應會儲存至檔案系統，且位於您在工作流程中指定的位置。
-
+預覽窗體。 添加幾個附件並提交表單。 附件應保存到工作流中您指定的位置中的檔案系統。
