@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: 8631d0b23e2befa22032d0b677e0f1c7122f2cb5
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '728'
 ht-degree: 20%
 
 ---
@@ -237,6 +237,7 @@ ht-degree: 20%
    + [AEMCDN第2部分](./cloud-5/cloud5-aem-cdn-part2.md)
    + [日誌AEM檔案](./cloud-5/cloud5-aem-log-files.md)
    + [登錄令牌](./cloud-5/cloud5-getting-login-token-integrations.md)
+   + [雲調度程式](./cloud-5/cloud5-aem-dispatcher-cloud.md)
 + [專AEM家系列](./aem-experts-series.md)
 + 多步Tutorials{#multi-step-tutorials}
    + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
