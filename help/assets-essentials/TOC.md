@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager Assets Essentials的視頻集�
 breadcrumb-title: AEM Assets軟體視頻
 feature-set: Experience Manager Assets
 team: TM
-source-git-commit: 00647ec3e2cf0ead5d6f427fd12b9d0f777f6890
+source-git-commit: 225c975dc2eea8afe786f7b7c450f1101bdbe04b
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 7%
+source-wordcount: '71'
+ht-degree: 18%
 
 ---
 
@@ -26,6 +26,9 @@ ht-degree: 7%
    + [協作](basics/collaborating.md)
    + [連結共用](basics/link-sharing.md)
 
++ 設定{#configuring}
+   + [權限管理](configuring/permissions-management.md)
+
 + [Creative Cloud整合](integrations/creative-cloud.md)
 
 + Adobe Workfront整合{#workfront}
@@ -34,6 +37,6 @@ ht-degree: 7%
    + [發送文檔和連結資產](./integrations/workfront/link-send.md)
    + [版本歷史記錄](./integrations/workfront/versions.md)
 
-+ [Adobe Journey Optimizer整合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html)
++ [Adobe Journey Optimizer整合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=zh-Hant)
 
 + [文件](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html)
