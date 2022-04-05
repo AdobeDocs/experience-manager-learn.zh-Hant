@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: cc434164a4474b71f23653f33cb7e3d99c271595
+source-git-commit: b277fb0f0cfd19a8318cbf5311e2ded973c092ab
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '430'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 1%
 ## 簡介
 
 歡迎使用工程部的雲5系AEM列。 任何產品實施階段的主要問題之一是有足夠的代碼示例和/或這些示例、工具或API的即時演示。 此系列的目標是在5分鐘或更短時間內AEM提供有關as a Cloud Service的有用資訊。
+
+訪問 [建議框](https://forms.office.com/r/74P5Xz4UH0) 提交主題想法。
 
 ## 第一季
 
@@ -97,7 +99,7 @@ ht-degree: 1%
       <img alt="遷移（第1部分）" src="./imgs/coming-soon.png"/>
       <div>
          <strong>遷移（第1部分）</strong>
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+         <br/><em>Darin Kuntze &amp; James Talbot，高級雲架構師和特邀嘉賓</em>
       </div>
       <p>
         <br/>
@@ -144,7 +146,7 @@ ht-degree: 1%
         <td>
             <img alt="Adobe應用生成器" src="./imgs/coming-soon.png"/>
             <div>
-                <strong>遷移（第2部分）</strong><br/>        
+                <strong>Adobe應用生成器</strong><br/>        
                 <em>Darin Kuntze &amp; James Talbot，高級雲架構師和特邀嘉賓</em>
             </div>
             <p><br/>
