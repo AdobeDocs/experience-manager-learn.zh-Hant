@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: 6e7130cd98700bdb5e7f330ca0506fe89ea0eb94
+source-git-commit: 6ec65dca77fff2f9da47607906088e694a656f68
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 AEMas a Cloud Service提供高級聯網功能，可精確管理與as a Cloud Service程式的AEM連接。
 
 |  | [生產計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [沙箱方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
-|---------------------------------------------------|:-----------------------:|:---------------------|
+|---------------------------------------------------|:-----------------------:|:---------------------:|
 | 支援高級網路 | ✔ | ✘ |
 
 
@@ -65,4 +65,55 @@ AEMas a Cloud Service提供高級聯網功能，可精確管理與as a Cloud Ser
       </p>
     </td>   
   </tr>
+</table>
+
+## 代碼示例
+
+此集合提供了為特定使用情形而利用高級網路功能所需的配置和代碼示例。
+
+<table><tr>
+   <td>
+      <a  href="./examples/email-service.md"><img alt="虛擬專用網(VPN)" src="./assets/code-examples__email.png"/></a>
+      <div><strong><a href="./examples/email-service.md">電子郵件服務</a></strong></div>
+      <p>
+        OSGi配置示例AEM，用於連接到外部電子郵件服務。
+      </p>
+    </td>  
+    <td>
+        <a  href="./examples/http-on-non-standard-ports.md"><img alt="非標準埠上的HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+        <div><strong><a href="./examples/http-on-non-standard-ports.md">非標準埠上的HTTP/HTTPS</a></strong></div>
+        <p>
+            Java™代碼示例：在非標準HTTP/HTTPS端AEM口上將HTTP/HTTPS從as a Cloud Service連接到外部服務。
+        </p>
+    </td>
+    <td>
+      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC DataSourcePool的SQL連接" src="./assets//code-examples__sql-osgi.png"/></a>
+      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC DataSourcePool的SQL連接</a></strong></div>
+      <p>
+            通過配置JDBC資料源池連接到外部SQL資料AEM庫的Java™代碼示例。
+      </p>
+    </td>   
+    </tr><tr>
+    <td>
+      <a  href="./examples/sql-java-apis.md"><img alt="使用Java API的SQL連接" src="./assets/code-examples__sql-java-api.png"/></a>
+      <div><strong><a href="./examples/sql-java-apis.md">使用Java™ API的SQL連接</a></strong></div>
+      <p>
+            Java™代碼示例使用Java™的SQL API連接到外部SQL資料庫。
+      </p>
+    </td>   
+    <td>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="應用IP允許清單" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">應用IP允許清單</a></strong></div>
+      <p>
+            配置IP允許清單，以便只有VPN通信可以訪問AEM。
+      </p>
+    </td>
+   <td>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="基於路徑的VPN對AEM發佈的訪問限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">基於路徑的VPN對AEM發佈的訪問限制</a></strong></div>
+      <p>
+            AEM發佈上的特定路徑需要VPN訪問。
+      </p>
+    </td>
+</tr>
 </table>
