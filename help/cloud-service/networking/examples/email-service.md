@@ -1,6 +1,6 @@
 ---
 title: 電子郵件服務
-description: 了解如何設定AEMas a Cloud Service，以使用輸出埠連線電子郵件服務。
+description: 瞭解如何配置AEMas a Cloud Service以使用出口端連接電子郵件服務。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -9,37 +9,37 @@ level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
+source-git-commit: d526f362f4b03e1d872d973064b65ff8baa749d3
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
 # 電子郵件服務
 
-透過設定AEM從AEMas a Cloud Service傳送電子郵件 `DefaultMailService` 使用高級網路輸出埠。
+通過配置從AEMas a Cloud Service發送電子郵AEM件 `DefaultMailService` 使用高級網路出口端。
 
-由於（大部分）郵件服務不會透過HTTP/HTTPS執行，因此必須代理從AEMas a Cloud Service連線至郵件服務。
+由於（大多數）郵件服務不通過HTTP/HTTPS運行，因此必須代理從AEMas a Cloud Service到郵件服務的連接。
 
-+ `smtp.host` 設為OSGi環境變數時 `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` 所以它會穿過出口。
-+ `smtp.port` 設為 `portForward.portOrig` 映射到目標電子郵件服務的主機和埠的埠。 此範例使用對應： `AEM_PROXY_HOST:30002` → `smtp.sendgrid.com:465`.
++ `smtp.host` 設定為OSGi環境變數 `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` 所以它會穿過出口。
++ `smtp.port` 設定為 `portForward.portOrig` 映射到目標電子郵件服務的主機和埠的埠。 此示例使用映射： `AEM_PROXY_HOST:30002` → `smtp.sendgrid.com:465`。
 
-由於機密不得儲存在代碼中，因此最好使用以下方式提供電子郵件服務的用戶名和密碼： [機密OSGi設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)，請使用AIO CLI或Cloud Manager API進行設定。
+由於機密不能儲存在代碼中，因此最好使用以下方法提供電子郵件服務的用戶名和密碼 [秘密OSGi配置變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)，使用AIO CLI或Cloud Manager API設定。
 
-通常， [靈活的埠輸出](../flexible-port-egress.md) 用於滿足與電子郵件服務的整合，除非有必要 `allowlist` AdobeIP，在這種情況下 [專用的輸出ip地址](../dedicated-egress-ip-address.md) 可供使用。
+通常， [柔性埠出口](../flexible-port-egress.md) 用於滿足與電子郵件服務的整合，除非 `allowlist` AdobeIP，在這種情況下 [專用出口ip地址](../dedicated-egress-ip-address.md) 可使用。
 
 ## 高級網路支援
 
-下列進階網路選項支援下列程式碼範例。
+以下高級網路選項支援以下代碼示例。
 
-| 無高級網路 | [靈活的埠輸出](../flexible-port-egress.md) | [專用的輸出IP地址](../dedicated-egress-ip-address.md) | [虛擬專用網](../vpn.md) |
+| 無高級網路 | [靈活的埠出口](../flexible-port-egress.md) | [專用出口IP地址](../dedicated-egress-ip-address.md) | [虛擬專用網路](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✔ | ✔ | ✔ |
 
 ## OSGi配置
 
-此OSGi設定範例會透過下列Cloud Manager將AEM Mail OSGi服務設定為使用外部郵件服務 `portForwards` 規則 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 操作。
+此OSGi配置示例通AEM過以下Cloud Manager將Mail OSGi服務配置為使用外部郵件服務 `portForwards` 規則 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 的下界。
 
 ```json
 ...
@@ -52,6 +52,8 @@ ht-degree: 0%
 ```
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/config/com.day.cq.mailer.DefaultMailService.cfg.json`
+
+配AEM置 [預設郵件服務](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email) 按您的電子郵件提供商的要求(例如 `smtp.ssl`等)。
 
 ```json
 {
