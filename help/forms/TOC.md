@@ -5,7 +5,7 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
 workflow-type: tm+mt
 source-wordcount: '1667'
 ht-degree: 3%
@@ -173,7 +173,7 @@ ht-degree: 3%
    + [客戶庫](storing-retrieving-form-data/part4.md)
    + [最適化表單範本](storing-retrieving-form-data/part5.md)
    + [部署示例資產](storing-retrieving-form-data/part6.md)
-+ 從移動AEM表單提交觸發工作流{#offline-mobile-form-submission}
++ 從MobileAEM表單提交觸發工作流{#offline-mobile-form-submission}
    + [簡介](offline-mobile-form-submission/introduction.md)
    + [自定義配置檔案](offline-mobile-form-submission/part-one.md)
    + [處理PDF提交](offline-mobile-form-submission/part-two.md)

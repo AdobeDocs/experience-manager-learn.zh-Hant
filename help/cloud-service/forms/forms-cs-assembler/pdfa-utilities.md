@@ -8,14 +8,15 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 kt: 10105
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+exl-id: a4955104-8a87-4add-85c7-c3e3395f5f1a
+source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 4%
+source-wordcount: '102'
+ht-degree: 3%
 
 ---
 
-# 撥打POST
+# 建立和驗證PDF/A文檔
 
 PDF/A是ISO標準化的攜帶型文檔格式(PDF)版本，專門用於電子文檔的歸檔和長期保存。 PDF/A與PDF不同，它禁止不適合長期歸檔的功能，如字型連結（而不是字型嵌入）和加密。
 
@@ -131,4 +132,3 @@ public void validatePDFA(String postURL) {
   }
 }
 ```
-
