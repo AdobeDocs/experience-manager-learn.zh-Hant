@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: b277fb0f0cfd19a8318cbf5311e2ded973c092ab
+source-git-commit: 62a1deda2a4fda56edb0c3d0f34a5e804f78887b
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '460'
 ht-degree: 1%
 
 ---
@@ -96,14 +96,14 @@ ht-degree: 1%
       </p>
    </td>
      <td>
-      <img alt="遷移（第1部分）" src="./imgs/coming-soon.png"/>
+      <img alt="遷移（第1部分）" src="./imgs/006-thumb.png"/>
       <div>
          <strong>遷移（第1部分）</strong>
-         <br/><em>Darin Kuntze &amp; James Talbot，高級雲架構師和特邀嘉賓</em>
+         <br/><em>Darin Kuntze &amp; James Talbot，高級雲架構師和Applesmith博士</em>
       </div>
       <p>
         <br/>
-         2022年4月8日
+         遷移到雲的提示和技巧的第一部分（共兩部分）。 我們在第一部分的主要重點是最佳實踐和準備工作，讓您能夠做好遷移的準備。
       </p>
    </td> 
   </tr>
