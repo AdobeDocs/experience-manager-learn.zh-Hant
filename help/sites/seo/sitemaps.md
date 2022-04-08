@@ -1,6 +1,6 @@
 ---
-title: 網站地圖
-description: 了解如何為AEM Sites建立網站地圖，以協助提升您的SEO。
+title: 錫泰馬普
+description: 學習如何通過為AEM Sites建立模板來幫助提高SEO。
 version: Cloud Service
 feature: Core Components
 topic: Content Management
@@ -8,37 +8,35 @@ role: Developer
 level: Intermediate
 kt: 9165
 thumbnail: 337960.jpeg
-source-git-commit: 5bdff2eafaa28aff722b12607b1278539072be62
+exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
+source-git-commit: 71f1d32c12742cdb644dec50050d147395c3f3b6
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 3%
+source-wordcount: '152'
+ht-degree: 1%
 
 ---
 
+# 錫泰馬普
 
-# 網站地圖
-
-了解如何為AEM Sites建立網站地圖，以協助提升您的SEO。
+學習如何通過為AEM Sites建立模板來幫助提高SEO。
 
 >[!VIDEO](https://video.tv.adobe.com/v/337960/?quality=12&learn=on)
 
 ## 資源
 
-+ [AEM Sitemap檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
-+ [Apache Sling Sitemap檔案](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
-+ [AEM核心WCM元件Github](https://github.com/adobe/aem-core-wcm-components)
-   + v2.17.6中新增的Sitemap功能
-+ [Sitemap.org Sitemap檔案](https://www.sitemaps.org/protocol.html)
-+ [Sitemap.org Sitemap索引檔案檔案檔案](https://www.sitemaps.org/protocol.html#index)
-+ [Cronmaker](http://www.cronmaker.com/)
++ [站點AEM地圖文檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
++ [Apache Sling Sitemap文檔](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
++ [Sitemap.org站點地圖文檔](https://www.sitemaps.org/protocol.html)
++ [Sitemap.org Sitemap索引檔案文檔](https://www.sitemaps.org/protocol.html#index)
++ [克朗馬克](http://www.cronmaker.com/)
 
 ## 設定
 
-### org.apache.sling.sitemap.impl.SitemapScheduler~wknd.cfg.json
+### 站點地圖計畫程式OSGi配置
+
+定義 [OSGi工廠配置](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 頻率(使用 [cron表達式](http://www.cronmaker.com))將在中重新生成和緩AEM存。
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
-
-定義 [OSGi工廠配置](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 頻率(使用 [cron運算式](http://www.cronmaker.com))網站地圖會在AEM中重新產生和快取。
 
 ```json
 {
@@ -48,24 +46,24 @@ ht-degree: 3%
 }
 ```
 
-### filters.any
+### 調度程式允許篩選器規則
+
+允許對站點地圖索引和站點地圖檔案進行HTTP請求。
 
 `dispatcher/src/conf.dispatcher.d/filters/filters.any`
-
-允許Sitemap索引和Sitemap檔案的HTTP要求。
 
 ```
 ...
 
-# Allow AEM WCM Core Components sitemaps
+# Allow AEM sitemaps
 /0200 { /type "allow" /path "/content/*" /selectors '(sitemap-index|sitemap)' /extension "xml" }
 ```
 
-### rewrite.rules
+### Apache Webserver重寫規則
+
+確保 `.xml` 站點地圖HTTP請求被路由到正確的基礎AEM頁。 如果不使用URL縮短，或使用Sling映射實現URL縮短，則不需要此配置。
 
 `dispatcher/src/conf.d/rewrites/rewrite.rules`
-
-確保 `.xml` 系統會將Sitemap HTTP請求路由至正確的基礎AEM頁面。 如果未使用URL縮短，或使用Sling對應來達成URL縮短，則不需要此設定。
 
 ```
 ...
