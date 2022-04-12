@@ -1,6 +1,6 @@
 ---
-title: 非標準埠上的HTTP/HTTPS連接，可靈活輸出埠
-description: 了解如何讓AEM的HTTP/HTTPS要求as a Cloud Service到非標準埠上執行的外部Web服務，以利執行彈性埠輸出。
+title: 非標準埠上的HTTP/HTTPS連接，用於靈活的埠輸出
+description: 瞭解如何使HTTP/HTTPS請求從as a Cloud Service到AEM外部Web服務在非標準埠上運行，以用於靈活埠出口。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -8,35 +8,38 @@ role: Architect, Developer
 level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
-source-git-commit: c53277241e54c757492dbc72e53f89127af389ac
+exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
+source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
-# 非標準埠上的HTTP/HTTPS連接，可靈活輸出埠
+# 非標準埠上的HTTP/HTTPS連接，用於靈活的埠輸出
 
-非標準埠(非80/443)上的HTTP/HTTPS連線必須從AEMas a Cloud Service中代理，但不需要任何特殊 `portForwards` 規則，並可使用AEM進階網路 `AEM_PROXY_HOST` 和保留的代理埠 `AEM_HTTP_PROXY_HOST` 或 `AEM_HTTPS_PROXY_HOST` 目的地是否為HTTP/HTTPS，依不同而定。
+非標準埠（不是80/443）上的HTTP/HTTPS連接必須從as a Cloud Service中，但它們不需要任何特殊 `portForwards` 規則，並可AEM以使用 `AEM_PROXY_HOST` 和保留的代理埠 `AEM_HTTP_PROXY_HOST` 或 `AEM_HTTPS_PROXY_HOST` 取決於目標是HTTP/HTTPS。
 
 ## 高級網路支援
 
-下列進階網路選項支援下列程式碼範例。
+以下高級網路選項支援以下代碼示例。
 
-| 無高級網路 | [靈活的埠輸出](../flexible-port-egress.md) | [專用的輸出IP地址](../dedicated-egress-ip-address.md) | [虛擬專用網](../vpn.md) |
+確保 [適當](../advanced-networking.md#advanced-networking) 本教程之後，高級網路配置已設定完畢。
+
+| 無高級網路 | [靈活的埠出口](../flexible-port-egress.md) | [專用出口IP地址](../dedicated-egress-ip-address.md) | [虛擬專用網路](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✔ | ✘ | ✘ |
 
 >[!CAUTION]
 >
-> 此程式碼範例僅適用於 [靈活的埠輸出](../flexible-port-egress.md). 有類似但不同的程式碼範例可供使用 [非標準埠上專用輸出IP地址和VPN的HTTP/HTTPS連接](./http-on-non-standard-ports.md).
+> 此代碼示例僅用於 [靈活埠出口](../flexible-port-egress.md)。 類似但不同的代碼示例可用於 [非標準埠上專用出口IP地址和VPN的HTTP/HTTPS連接](./http-on-non-standard-ports.md)。
 
-## 程式碼範例
+## 代碼示例
 
-此Java™程式碼範例是OSGi服務，可在AEMas a Cloud Service中執行，以便與8080的外部Web伺服器進行HTTP連線。 與HTTPS Web伺服器的連線使用環境變數 `AEM_PROXY_HOST` 和 `AEM_HTTPS_PROXY_PORT` (預設為 `proxy.tunnel:3128` 在AEM版本&lt; 6094)中。
+此Java™代碼示例是OSGi服務的示例，該服務可以在AEMas a Cloud Service中運行，該在8080上與外部Web伺服器建立HTTP連接。 與HTTPS Web伺服器的連接使用環境變數 `AEM_PROXY_HOST` 和 `AEM_HTTPS_PROXY_PORT` (預設為 `proxy.tunnel:3128` &lt; AEM 6094)。
 
 >[!NOTE]
-> 建議 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) 用於從AEM進行HTTP/HTTPS呼叫。
+> 建議 [Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) 用於從中進行HTTP/HTTPS調AEM用。
 
 + `core/src/com/adobe/aem/wknd/examples/connections/impl/HttpExternalServiceImpl.java`
 

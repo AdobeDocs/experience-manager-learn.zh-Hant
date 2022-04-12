@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: 6ec65dca77fff2f9da47607906088e694a656f68
+source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -70,6 +70,8 @@ AEMas a Cloud Service提供高級聯網功能，可精確管理與as a Cloud Ser
 ## 代碼示例
 
 此集合提供了為特定使用情形而利用高級網路功能所需的配置和代碼示例。
+
+確保 [高級網路配置](#advanced-networking) 已在完成這些教程之前設定。
 
 <table><tr>
    <td>
