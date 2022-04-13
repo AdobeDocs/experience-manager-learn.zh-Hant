@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 8da6d5470c702620ee1121fd2688eb8756f0cebd
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,10 @@ ht-degree: 0%
 由於（大多數）郵件服務不通過HTTP/HTTPS運行，因此必須代理從AEMas a Cloud Service到郵件服務的連接。
 
 + `smtp.host` 設定為OSGi環境變數 `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` 所以它會穿過出口。
+   + `$[env:AEM_PROXY_HOST]` 是一個保留變數，AEMas a Cloud Service映射到內部 `proxy.tunnel` 主機。
+   + 不嘗試設定 `AEM_PROXY_HOST` 通過雲管理器。
 + `smtp.port` 設定為 `portForward.portOrig` 映射到目標電子郵件服務的主機和埠的埠。 此示例使用映射： `AEM_PROXY_HOST:30002` → `smtp.sendgrid.com:465`。
+   + 的 `smpt.port` 設定為 `portForward.portOrig` 埠，而不是SMTP伺服器的實際埠。 在 `smtp.port` 和 `portForward.portOrig` 埠由雲管理器建立 `portForwards` 規則（如下所示）。
 
 由於機密不能儲存在代碼中，因此最好使用以下方法提供電子郵件服務的用戶名和密碼 [秘密OSGi配置變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)，使用AIO CLI或Cloud Manager API設定。
 
@@ -61,7 +64,7 @@ ht-degree: 0%
 {
     "smtp.host": "$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
     "smtp.port": "30002",
-    "smtp.user": "$[env:EMAIL_USERNAME;default=emailapikey]",
+    "smtp.user": "$[env:EMAIL_USERNAME;default=myApiKey]",
     "smtp.password": "$[secret:EMAIL_PASSWORD]",
     "from.address": "noreply@wknd.site",
     "smtp.ssl": true,
@@ -72,8 +75,11 @@ ht-degree: 0%
 }
 ```
 
-以下 `aio CLI` 命令可用於根據每個環境設定OSGi機密：
+的 `EMAIL_USERNAME` 和 `EMAIL_PASSWORD` OSGi變數和密鑰可以按環境設定，使用以下任一方法：
 
-```shell
-$ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "apikey" --secret EMAIL_PASSWORD "password123"
-```
++ [雲管理器環境配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)
++ 或使用 `aio CLI` 命令
+
+   ```shell
+   $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "myApiKey" --secret EMAIL_PASSWORD "password123"
+   ```
