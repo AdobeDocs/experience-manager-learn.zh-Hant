@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 09dbe82eeebd598d4a5949d61a7ae14937c18b72
+source-git-commit: e9b88505ae47b32de8b198fa6fcd81e033e5d5ff
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
@@ -105,20 +105,22 @@ ht-degree: 1%
       </div>
       <p>
         <br/>
-         遷移到雲的提示和技巧的第一部分（共兩部分）。 我們在第一部分的主要重點是最佳實踐和準備工作，讓您能夠做好遷移的準備。
+         遷移到雲的技巧和技巧的第一部分（共兩部分）。 我們在第一部分的主要重點是最佳實踐和準備工作，讓您能夠做好遷移的準備。
       </p>
    </td> 
   </tr>
 <tr>
    <td>
-      <img alt="遷移（第2部分）" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-aem-content-migration-part-2.md">
+            <img alt="遷移（第2部分）" src="./imgs/007-thumb.png"/>
+        </a>
       <div>
-        <strong>遷移（第2部分）</strong>        
+        <a href="./cloud5-aem-content-migration-part-2.md"><strong>遷移（第2部分）</strong></a>     
          <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
       </div>
       <p>
         <br/>
-         2022年4月14日
+         第二部分（共兩部分）是遷移到雲的技巧和技巧。 第二部分主要是使用可用的遷移工具。
       </p>
      </td>   
      <td>
