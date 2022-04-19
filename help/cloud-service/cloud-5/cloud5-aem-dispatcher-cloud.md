@@ -8,7 +8,7 @@ kt: 10054
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342067.jpeg
-source-git-commit: cc4b565aeeaa1419138d459c2d144e944ffb0e67
+source-git-commit: 0b6e16d7263bc14c1824643b77678071694bcb7e
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Darin和James討論雲中的DispatcherAEM，包括一些最佳實踐和與AMS/On-Prem的不同之處。 它們還涉及到向雲的遷移。
 
->[!VIDEO](https://video.tv.adobe.com/v/342067/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342067/)
 
 ## 此視頻中包含的內容
 
