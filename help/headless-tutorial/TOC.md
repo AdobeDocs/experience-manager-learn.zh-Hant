@@ -6,9 +6,9 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 88797cf950dae46d0f856330df12c59a4efe6456
+source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '231'
 ht-degree: 18%
 
 ---
@@ -47,7 +47,10 @@ ht-degree: 18%
       + [4 — 永續GraphQL查詢](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 — 客戶端應用程式整合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
    + 如何 {#how-to}
-      + [使用富格文本](./graphql/how-to/rich-text.md)
+      + [富文本](./graphql/how-to/rich-text.md)
+      + [影像](./graphql/how-to/images.md)
+      + [本地化內容](./graphql/how-to/localized-content.md)
+      + [無AEM頭SDK](./graphql/how-to/aem-headless-sdk.md)
    + 示例 {#example-apps}
       + [反應](./graphql/example-apps/react-app.md)
       + [iOS·斯威夫特UI](./graphql/example-apps/ios-swiftui-app.md)
@@ -89,4 +92,4 @@ ht-degree: 18%
    + [4 — 定義Content Services模板](./content-services/chapter-4.md)
    + [5 — 創作Content Services頁](./content-services/chapter-5.md)
    + [6 — 公開AEM發佈以供交付的內容](./content-services/chapter-6.md)
-   + [7 — 使用AEMMobile應用的內容服務](./content-services/chapter-7.md)
+   + [7 — 使用移AEM動應用程式中的內容服務](./content-services/chapter-7.md)
