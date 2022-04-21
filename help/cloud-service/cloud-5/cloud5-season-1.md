@@ -5,10 +5,10 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: e9b88505ae47b32de8b198fa6fcd81e033e5d5ff
+source-git-commit: bd60205f5561cfc8d758a15e69bc26fa1d64bd4d
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 1%
+source-wordcount: '504'
+ht-degree: 0%
 
 ---
 
@@ -124,14 +124,16 @@ ht-degree: 1%
       </p>
      </td>   
      <td>
-      <img alt="調度程式驗證程式" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-aem-dispatcher-validator.md">
+            <img alt="調度程式驗證程式" src="./imgs/008-thumb.png"/>
+        </a>
       <div>
-         <strong>調度程式驗證程式</strong>
+         <a href="./cloud5-aem-dispatcher-validator.md"><strong>調度程式驗證程式</strong></a>
          <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
       </div>
       <p>
         <br/>
-         2022年4月22日
+         作為先前遷移討論的一個分支，我們將查看調度程式驗證程式及其可完成的某些任務。
       </p>
    </td>
      <td>
