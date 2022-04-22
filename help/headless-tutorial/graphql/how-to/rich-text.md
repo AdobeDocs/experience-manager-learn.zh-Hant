@@ -8,16 +8,18 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
+source-git-commit: 22d5aa7299ceacd93771bd73a6b89d1903edc561
 workflow-type: tm+mt
-source-wordcount: '1376'
+source-wordcount: '1460'
 ht-degree: 0%
 
 ---
 
 # 帶無頭的富AEM文本
 
-「多行」文本欄位是「內容片段」的資料類型，使作者能夠建立富格文本內容。 對其他內容的引用，例如影像或其他內容片段可以動態地在文本流內以行形式插入。 AEMGraphQL API提供了強大的功能，可將富格文本作為HTML、純文字檔案或純JSON返回。 JSON表示法功能強大，因為它賦予客戶端應用程式對如何呈現內容的完全控制權。
+「多行」文本欄位是「內容片段」的資料類型，使作者能夠建立富格文本內容。 對其他內容的引用，例如影像或其他內容片段可以動態地在文本流內以行形式插入。 「單行」文本欄位是應用於簡單文本元素的「內容片段」的另一資料類型。
+
+AEMGraphQL API提供了強大的功能，可將富格文本作為HTML、純文字檔案或純JSON返回。 JSON表示法功能強大，因為它賦予客戶端應用程式對如何呈現內容的完全控制權。
 
 ## 多行編輯器
 
@@ -25,13 +27,25 @@ ht-degree: 0%
 
 在內容片段編輯器中，多行文本欄位的菜單欄為作者提供了標準的富格文本格式功能，如 **粗**。 *斜體*&#x200B;和下划線。 以全屏模式開啟「多行」欄位啟用 [其他格式工具，如段落類型、查找和替換、拼寫檢查等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)。
 
+>[!NOTE]
+>
+> 無法自定義多行編輯器中的富文本插件。
+
 ## 多行文本資料類型 {#multi-line-data-type}
 
 使用 **多行文本** 定義內容片段模型以啟用富格文本創作時的資料類型。
 
 ![多行富文本資料類型](assets/rich-text/multi-line-rich-text.png)
 
-使用「多行」文本資料類型時，可以設定 **預設類型** 至：
+可以配置多行欄位的多個屬性。
+
+的 **呈現為** 屬性可設定為：
+
+* 文本區域 — 呈現單個多行欄位
+* 多個欄位 — 呈現多個多行欄位
+
+
+的 **預設類型** 可設定為：
 
 * RTF
 * Markdown
@@ -40,6 +54,8 @@ ht-degree: 0%
 的 **預設類型** 選項會直接影響編輯體驗，並確定是否存在富格文本工具。
 
 您也可以 [啟用行內引用](#insert-fragment-references) 通過檢查 **允許片段引用** 和配置 **允許的內容片段模型**。
+
+如果內容將本地化，請檢查 **可翻譯** 框。 只能本地化「富格文本」和「純文字檔案」。 請參閱 [使用本地化內容，瞭解詳細資訊](./localized-content.md)。
 
 ## 使用GraphQL API的富文本響應
 
@@ -364,10 +380,12 @@ GraphQL API使開發人員能夠建立一個查詢，該查詢包含有關插入
         _path
         _publishUrl
         width
+        __typename
       }
       ...on ArticleModel {
         _path
         author
+        __typename
       }
       
     }
@@ -444,12 +462,14 @@ GraphQL API使開發人員能夠建立一個查詢，該查詢包含有關插入
       "_references": [
         {
           "_path": "/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
-          "_publishUrl": "http://localhost:4503/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
-          "width": 1920
+          "_publishUrl": "http://publish-p123-e456.adobeaemcloud.com/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
+          "width": 1920,
+          "__typename": "ImageRef"
         },
         {
           "_path": "/content/dam/wknd/en/magazine/la-skateparks/ultimate-guide-to-la-skateparks",
           "author": "Stacey Roswells",
+          "__typename": "ArticleModel"
         }
       ]
     }
@@ -498,11 +518,11 @@ const renderReference = {
     // node contains merged properties of the in-line reference and _references object
     'ImageRef': (node) => {
         // when __typename === ImageRef
-        return <img src={node._path} alt={'in-line reference'} /> 
+        return <img src={node._publishUrl} alt={'in-line reference'} /> 
     },
-    'AdventureModel': (node) => {
-        // when __typename === AdventureModel
-        return <Link to={`/adventure:${node._path}`}>{`${node.adventureTitle}: ${node.adventurePrice}`}</Link>;
+    'ArticleModel': (node) => {
+        // when __typename === ArticleModel
+        return <Link to={`/article:${node._path}`}>{`${node.value}`}</Link>;
     }
     ...
 }
