@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
+source-git-commit: cb5b3eb77a57fa8a2918710b7dbcd1b0a58b74bd
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1671'
 ht-degree: 3%
 
 ---
@@ -173,7 +173,7 @@ ht-degree: 3%
    + [客戶庫](storing-retrieving-form-data/part4.md)
    + [最適化表單範本](storing-retrieving-form-data/part5.md)
    + [部署示例資產](storing-retrieving-form-data/part6.md)
-+ 從MobileAEM表單提交觸發工作流{#offline-mobile-form-submission}
++ 從移動AEM表單提交觸發工作流{#offline-mobile-form-submission}
    + [簡介](offline-mobile-form-submission/introduction.md)
    + [自定義配置檔案](offline-mobile-form-submission/part-one.md)
    + [處理PDF提交](offline-mobile-form-submission/part-two.md)
@@ -204,13 +204,14 @@ ht-degree: 3%
 + 文件服務 {#document-services}
    + [PDF forms類型](document-services/pdf-forms-and-documents.md)
    + [在自適應表單中嵌入pdf](document-services/embed-pdf-inline.md)
+   + [旋轉木馬元件中的PDF](document-services/display-pdf-in-carousel.md)
    + [在AEM Forms使用匯編服務](document-services/using-assembler-service-in-aem-forms.md)
    + [在AEM Forms使用監視資料夾](document-services/watched-folders-document-services-article-use.md)
    + [在AEM Forms使用條形碼服務](document-services/barcode-service-adaptive-forms-article.md)
    + [在AEM Forms使用PDFG服務](document-services/using-pdfg-in-aem-forms.md)
    + [在AEM Forms使用產出和Forms服務](document-services/output-and-forms-services-article-develop.md)
    + [從一個資料檔案生成多個PDF](document-services/generate-multi-record-pdf.md)
-   + [生成Mobile表單提交PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [生成移動表單提交PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [從Mobile窗體生成互動式PDF](document-services/render-interactive-form-using-api.md)
    + [從自適應表單生成互動式DoR](document-services/generate-interactive-dor.md)
    + [配置Reader擴展憑據](document-services/configuring-reader-extension-osgi.md)
