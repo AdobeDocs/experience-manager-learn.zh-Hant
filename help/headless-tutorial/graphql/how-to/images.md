@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
-source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
+exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
+source-git-commit: cca9ea744f938470b82b61d11269c1f9e8250bbe
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 2%
 
 ---
-
 
 # 無頭圖AEM像
 
@@ -90,7 +90,7 @@ ht-degree: 2%
 
 要在應用程式中載入引用的映像，請使用相應的欄位， `_path`。 `_authorUrl`或 `_publishUrl` 的 `adventurePrimaryImage` 作為影像的源URL。
 
-的域 `_authorUrl` 和 `_publishUrl` 由AEMas a Cloud Service使用 [外部化](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.htmli)。
+的域 `_authorUrl` 和 `_publishUrl` 由AEMas a Cloud Service使用 [外部化器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.html)。
 
 在React中，顯示AEM Publish中的影像如下所示：
 
