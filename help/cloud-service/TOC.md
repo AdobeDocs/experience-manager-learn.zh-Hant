@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: 0b6e16d7263bc14c1824643b77678071694bcb7e
+source-git-commit: 55583effd0400bac2e38756483d69f5bd114cb21
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 19%
+source-wordcount: '745'
+ht-degree: 20%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 19%
       + [記錄檔](./debugging/cloud-service/logs.md)
       + [構建和部署](./debugging/cloud-service/build-and-deployment.md)
       + [開發人員控制台](./debugging/cloud-service/developer-console.md)
-      + [儲存庫瀏覽器](./debugging/cloud-service/repository-browser.md)
+      + [存放庫瀏覽器](./debugging/cloud-service/repository-browser.md)
 + 訪AEM問{#accessing}
    + [概覽](./accessing/overview.md)
    + [Adobe IMS用戶](./accessing/adobe-ims-users.md)
@@ -142,6 +142,7 @@ ht-degree: 19%
       + [設定Git](./forms/developing-for-cloud-service/setup-git.md)
       + [將IntelliJ與同AEM步](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
       + [生成表單](./forms/developing-for-cloud-service/deploy-your-first-form.md)
+      + [啟用Forms門戶元件](./forms/developing-for-cloud-service/forms-portal-components.md)
       + [包括Cloud Services和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [推送到雲管理器](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [部署到開發環境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
@@ -246,7 +247,7 @@ ht-degree: 19%
    + [Adobe應用生成器](./cloud-5/cloud5-adobe-app-builder.md)
 + [專AEM家系列](./aem-experts-series.md)
 + 多步Tutorials{#multi-step-tutorials}
-   + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
    + [編SPA輯器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [編SPA輯器(Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
