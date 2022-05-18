@@ -1,11 +1,11 @@
 ---
 title: AEM Assets 影片和教學課程
-description: Adobe Experience Manager資產視頻和教程集
+description: 觀看我們的視頻以獲AEM得資產支援和幫助。
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: b7ff3e9abd22bb0c3d791ec3ac7da3562e849912
+source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '185'
 ht-degree: 16%
 
 ---
