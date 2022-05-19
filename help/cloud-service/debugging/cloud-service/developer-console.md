@@ -1,6 +1,6 @@
 ---
-title: 開發人員主控台
-description: AEM as a Cloud Service針對每個環境提供開發人員主控台，可公開執行中AEM服務的各種詳細資訊，有助於除錯。
+title: 開發人員控制台
+description: AEMas a Cloud Service為每個環境提供開發人員控制台，該控制台顯示運行服務的各AEM種詳細資訊，有助於調試。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -13,154 +13,156 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 751aed9b8659d6a600429efb2bf60825b6d39144
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1396'
 ht-degree: 0%
 
 ---
 
-# 使用開發人員主控台除錯AEM作為Cloud Service
+# 使用開AEM發人員控制台調試as a Cloud Service
 
-AEM as a Cloud Service針對每個環境提供開發人員主控台，可公開執行中AEM服務的各種詳細資訊，有助於除錯。
+AEMas a Cloud Service為每個環境提供開發人員控制台，該控制台顯示運行服務的各AEM種詳細資訊，有助於調試。
 
-每個AEM作為Cloud Service環境都有專屬的開發人員主控台。
+每AEM個as a Cloud Service環境都有自己的開發人員控制台。
 
-## 開發人員控制台存取
+## 開發人員控制台訪問
 
-若要存取及使用開發人員主控台，必須透過[Adobe的Admin Console](https://adminconsole.adobe.com)，為開發人員的Adobe ID授予下列權限。
+要訪問和使用開發人員控制台，必須通過以下方式將以下權限授予開發人員的Adobe ID [AdobeAdmin Console](https://adminconsole.adobe.com)。
 
-1. 確認已影響Cloud Manger和AEM作為Cloud Service產品的Adobe組織在Adobe組織切換器中處於作用中狀態。
-1. 開發人員必須是Cloud Manager產品&#x200B;__開發人員 — Cloud Service__&#x200B;產品設定檔的成員。
-   + 如果此會籍不存在，開發人員將無法登入開發人員控制台。
-1. 開發人員必須是&#x200B;__AEM Users__&#x200B;或&#x200B;__AEM Administrators__ Product Profile on AEM Author and/or Publish的成員。
-   + 如果此成員資格不存在， [status](#status)轉儲將超時，並出現401 Unauthorized錯誤。
+1. 確保在Adobe組織切換器中激活了影響雲管理AEM器和as a Cloud Service產品的Adobe組織。
+1. 開發人員必須是Cloud Manager產品的成員 __開發人員 — Cloud Service__ 產品配置檔案。
+   + 如果此成員身份不存在，開發人員將無法登錄到開發人員控制台。
+1. 開發人員必須是 __用AEM戶__ 或 __管AEM理員__ AEM作者和/或發佈上的產品配置檔案。
+   + 如果此成員身份不存在， [狀態](#status) 轉儲將超時，出現「401 Unauthed（未經授權）」錯誤。
 
-### 疑難排解開發人員控制台存取
+### 排除開發人員控制台訪問故障
 
-#### 401傾銷狀態時出現未授權錯誤
+#### 401轉儲狀態時出現未授權錯誤
 
 ![開發人員控制台 — 401未授權](./assets/developer-console/troubleshooting__401-unauthorized.png)
 
-如果系統回報401未授權錯誤，表示您的使用者尚未存在AEM中具有Cloud Service所需權限，或登入代號的使用無效或已過期。
+如果報告了轉儲任何狀態a 401未授權錯誤，則表示您的用戶尚未在as a Cloud Service中具有必要的權限，或AEM登錄令牌的使用無效或已過期。
 
 要解決401未授權問題：
 
-1. 確認您的使用者是Developer Console相關聯的AEM(Adobe產品例項)之適當Cloud ServiceIMS產品設定檔(AEM管理員或AEM使用者)的成員。
-   + 請記住，開發人員控制台可存取2個AdobeIMS產品例項；AEM作為Cloud Service製作和發佈產品例項，因此請根據需要透過開發人員控制台存取的服務層級，確定使用正確的產品設定檔。
-1. 以Cloud Service身分登入AEM（製作或發佈），並確認您的使用者和群組已正確同步至AEM。
-   + 開發人員控制台需要在對應的AEM服務層中建立您的使用者記錄，以便對該服務層進行驗證。
-1. 清除瀏覽器Cookie以及應用程式狀態（本機儲存）並重新登入開發人員控制台，確保開發人員控制台所使用的存取權杖正確且未過期。
+1. 確保您的用戶是開發人員控制台關聯的as a Cloud Service產品實例的相AEM應Adobe IMS產AEM品配置檔案（管理員或用戶）AEM的成員。
+   + 請記住，開發人員控制台訪問2個Adobe IMS產品實例；「AEMas a Cloud Service作者」和「發佈產品實例」，因此，根據需要通過開發人員控制台訪問的服務層，確保使用正確的產品配置檔案。
+1. 登錄到AEMas a Cloud Service（作者或發佈），並確保用戶和組已正確同步到AEM。
+   + 開發人員控制台要求在相應服務層中創AEM建用戶記錄，以便它驗證到該服務層。
+1. 清除瀏覽器cookie以及應用程式狀態（本地儲存），並重新登錄到Developer Console，確保Developer Console使用的訪問令牌正確且未到期。
 
-## Pod
+## 莢
 
-AEM as a Cloud Service製作和發佈服務分別由多個執行個體組成，以處理流量可變性和滾動式更新，不會造成停機。 這些例項稱為Pod。 「開發人員控制台」中的Pod選取項目會定義透過其他控制項公開的資料範圍。
+AEMas a Cloud Service作者和發佈服務分別由多個實例組成，以處理流量變異性和滾動更新，而無停機。 這些實例稱為Pod。 Developer Console中的Pod選擇定義了通過其他控制項公開的資料範圍。
 
-![開發人員主控台 — Pod](./assets/developer-console/pod.png)
+![開發人員控制台 — Pod](./assets/developer-console/pod.png)
 
-+ Pod是屬於AEM服務（製作或發佈）一部分的獨立例項
-+ Pod為暫時性，這表示AEM as aCloud Service會視需要建立及銷毀
-+ 該環境的「開發人員控制台」的Pod切換器僅會列出屬於相關AEM作為Cloud Service環境一部分的Pod。
-+ 在Pod切換器底部，方便選項可依服務類型選取Pod:
++ Pod是服務（作者或發佈）的一AEM部分的離散實例
++ 豆莢是瞬間的，AEM意味著as a Cloud Service會根據需要創造和銷毀它們
++ 僅列出屬於關聯as a Cloud Service環AEM境一部分的Pod，即該環境的Developer Console的Pod轉換器。
++ 在Pod交換機底部，便利選項允許按服務類型選擇Pod:
    + 所有作者
    + 所有發佈者
-   + 所有例項
+   + 所有實例
 
 ## 狀態
 
-狀態提供以文字或JSON輸出輸出特定AEM執行階段狀態的選項。 開發人員控制台提供與AEM SDK的本機Quickstart的OSGi Web控制台類似的資訊，其差異之處在於開發人員控制台為唯讀。
+狀態提供了以文本或AEMJSON輸出輸出特定運行時狀態的選項。 開發人員控制台提供與AEMSDK的本地快速啟動OSGi Web控制台類似的資訊，其顯著區別是開發人員控制台是只讀的。
 
 ![開發人員控制台 — 狀態](./assets/developer-console/status.png)
 
-### 套件組合
+### 捆綁
 
-套件組合會列出AEM中的所有OSGi套件組合。 此功能與[AEM SDK本機Quickstart的OSGi套件組合](http://localhost:4502/system/console/bundles)(`/system/console/bundles`)類似。
+捆綁包列出中的所有OSGi捆AEM綁包。 此功能與 [AEMSDK的本地快速啟動OSGi捆綁包](http://localhost:4502/system/console/bundles) 在 `/system/console/bundles`。
 
-套件組合有助於偵錯：
+捆綁調試幫助，方法如下：
 
-+ 列出部署至AEM as a Service的所有OSGi套件組合
-+ 列出每個OSGi捆綁的狀態；包括是否處於活動狀態
-+ 向未解析的依賴項提供詳細資訊，這些依賴項導致OSGi包變得活動
++ 列出部署到「服務」的AEM所有OSGi捆綁包
++ 列出每個OSGi捆綁包的狀態；包括活動或不活動
++ 提供未解決的依賴項的詳細資訊，使OSGi捆綁包不會變為活動
 
 ### 元件
 
-元件會列出AEM中的所有OSGi元件。 此功能與[AEM SDK本機Quickstart的OSGi元件](http://localhost:4502/system/console/components)(`/system/console/components`)類似。
+元件列出中的所有OSGi組AEM件。 此功能與 [AEMSDK的本地快速啟動的OSGi元件](http://localhost:4502/system/console/components) 在 `/system/console/components`。
 
-元件有助於偵錯：
+元件在調試中的幫助，方法是：
 
-+ 列出部署至AEM作為Cloud Service的所有OSGi元件
-+ 提供每個OSGi元件的狀態；包括活動或未滿足
-+ 向未滿足的服務引用提供詳細資訊可能導致OSGi元件變得活動
-+ 列出OSGi屬性及其與OSGi元件綁定的值
++ 列出部署到AEMas a Cloud Service的
++ 提供每個OSGi元件的狀態；包括活動或不滿足
++ 向未滿足的服務引用提供詳細資訊可能會導致OSGi元件變為活動
++ 列出綁定到OSGi元件的OSGi屬性及其值。
+   + 這將顯示通過 [OSGi環境配置變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)。
 
 ### 設定
 
-Configurations會列出所有OSGi元件的設定（OSGi屬性和值）。 此功能與[AEM SDK本機Quickstart的OSGi Configuration Manager](http://localhost:4502/system/console/configMgr)(`/system/console/configMgr`)類似。
+配置列出所有OSGi元件的配置（OSGi屬性和值）。 此功能與 [AEMSDK的本地快速啟動的OSGi Configuration Manager](http://localhost:4502/system/console/configMgr) 在 `/system/console/configMgr`。
 
-設定有助於偵錯：
+配置通過以下方式幫助調試：
 
-+ 按OSGi元件列出OSGi屬性及其值
++ 用OSGi元件列出OSGi屬性及其值
+   + 這不會顯示通過 [OSGi環境配置變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)。 請參閱 [元件](#components) 上面，表示注入值。
 + 查找和標識配置錯誤的屬性
 
-### Oak Indexes
+### 橡樹索引
 
-Oak索引提供`/oak:index`下定義之節點的傾印。 請記住，這不會顯示合併的索引，這會在修改AEM索引時發生。
+Oak索引提供在下定義的節點的轉儲 `/oak:index`。 請記住，這不會顯示合併索引，而合併索引在修改AEM索引時發生。
 
-Oak Indexes有助於偵錯：
+Oak索引通過以下方式幫助調試：
 
-+ 列出所有Oak索引定義，提供如何在AEM中執行搜尋查詢的深入分析。 請記住，此處不會反映修改為AEM索引的資訊。 此檢視僅適用於僅由AEM提供或僅由自訂程式碼提供的索引。
++ 列出所有Oak索引定義，提供有關搜索查詢在中執行方式的AEM見解。 請記住，修改為索AEM引的內容不會在此反映。 此視圖僅對僅由自定義代碼提供或僅由自AEM定義代碼提供的索引有幫助。
 
 ### OSGi服務
 
-元件列出所有OSGi服務。 此功能與[AEM SDK本機Quickstart的OSGi服務](http://localhost:4502/system/console/services)(`/system/console/services`)類似。
+元件列出所有OSGi服務。 此功能與 [SDKAEM的本地快速入門OSGi服務](http://localhost:4502/system/console/services) 在 `/system/console/services`。
 
-OSGi服務有助於偵錯：
+OSGi Services通過以下方式幫助調試：
 
-+ 列出AEM中的所有OSGi服務，及其提供的OSGi套件，以及使用該套件的所有OSGi套件
++ 列出中的所有OSGi服AEM務，以及其提供的OSGi捆綁包，以及使用它的所有OSGi捆綁包
 
 ### Sling 工作
 
-Sling作業會列出所有Sling作業佇列。 此功能與[AEM SDK本機Quickstart的](http://localhost:4502/system/console/slingevent)作業`/system/console/slingevent`相似。
+Sling Jobs列出所有Sling Jobs隊列。 此功能與 [AEMSDK的本地快速入門作業](http://localhost:4502/system/console/slingevent) 在 `/system/console/slingevent`。
 
-Sling作業有助於偵錯：
+Sling Jobs通過以下方式幫助調試：
 
-+ Sling作業佇列清單及其設定
-+ 提供作用中、佇列和已處理Sling作業數的深入分析，有助於偵錯AEM中Sling作業所執行的工作流程、暫時工作流程和其他工作的問題。
++ Sling作業隊列及其配置清單
++ 提供對活動、排隊和處理的Sling作業數量的洞見，這有助於調試工作流、臨時工作流和中Sling作業執行的其他工作的問AEM題。
 
 ## Java包
 
-Java套件可讓您檢查Java套件和版本是否可在AEM as aCloud Service中使用。 此功能與[AEM SDK的本機Quickstart相依性尋找器](http://localhost:4502/system/console/depfinder)位於`/system/console/depfinder`相同。
+Java包允許檢查Java包和版本是否可用於AEMas a Cloud Service。 此功能與 [AEMSDK的本地快速啟動依賴關係查找器](http://localhost:4502/system/console/depfinder) 在 `/system/console/depfinder`。
 
-![開發人員主控台 — Java套件](./assets/developer-console/java-packages.png)
+![開發人員控制台 — Java包](./assets/developer-console/java-packages.png)
 
-Java Packages用於疑難排解由於未解析的匯入，或指令碼（HTL、JSP等）中未解析的類別，導致套件組合無法啟動。 如果Java套件報表沒有套件組合會匯出Java套件（或版本與OSGi套件組合匯入的版本不符）:
+Java包用於難於拍攝由於未解析的導入或指令碼（HTL、JSP等）中未解析的類而未啟動的包。 如果Java包報告沒有綁定導出Java包（或版本與OSGi綁定導入的版本不匹配）:
 
-+ 確定您專案的AEM API Maven相依性版本符合環境的AEM發行版本（若可能，請將所有項目更新為最新版本）。
-+ 如果Maven專案中使用了額外的Maven相依性
-   + 判斷是否可改用AEM SDK API相依性提供的替代API。
-   + 如果需要額外的相依性，請確保它以OSGi套件組合（而非純Jar）的形式提供，並且它嵌入到您項目的代碼包(`ui.apps`)中，類似於`ui.apps`套件中嵌入核心OSGi套件的方式。
++ 確保項目的AEMAPI主依賴項版本與環境的發行版AEM本匹配（如果可能，將所有內容更新為最新版本）。
++ 如果在Maven項目中使用了額外的Maven依賴項
+   + 確定是否可以改用SDK API依賴AEM項提供的替代API。
+   + 如果需要額外的依賴關係，請確保它作為OSGi捆綁包（而不是純Jar）提供，並且它嵌入到項目的代碼包中(`ui.apps`)，與核心OSGi捆綁包嵌入到 `ui.apps` 檔案。
 
 ## Servlet
 
-Servlet可用來深入分析AEM如何解析URL至最終處理請求的Java servlet或指令碼(HTL、JSP)。 此功能與[AEM SDK本機Quickstart的Sling Servlet Resolver](http://localhost:4502/system/console/servletresolver) at `/system/console/servletresolver`相同。
+Servlet用於提供如何解析Java Servlet或AEM指令碼(HTL、JSP)的URL的洞見，這些URL最終可處理請求。 此功能與 [AEMSDK的本地快速啟動的Sling Servlet解析器](http://localhost:4502/system/console/servletresolver) 在 `/system/console/servletresolver`。
 
 ![開發人員控制台 — Servlet](./assets/developer-console/servlets.png)
 
-Servlet有助於偵錯判斷：
+Servlet有助於調試確定：
 
-+ 如何將URL分解為其可定址部分（資源、選取器、擴充功能）。
-+ URL解析的Servlet或指令碼，有助於識別格式錯誤的URL或註冊錯誤的servlet/指令碼。
++ 如何將URL分解為其可定址部分（資源、選擇器、擴展）。
++ URL解析到的Servlet或指令碼，有助於識別格式錯誤的URL或註冊錯誤的Servlet/指令碼。
 
 ## 查詢
 
-查詢有助於深入分析在AEM上執行搜尋查詢的內容及方式。 此功能與[AEM SDK的本機Quickstart的「工具」>「查詢效能」](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)控制台相同。
+查詢有助於深入瞭解在上執行搜索查詢的方式和AEM方式。 此功能與  [AEMSDK的本地快速入門工具>查詢效能 ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) 控制台。
 
-查詢只有在選取特定Pod時才有效，因為Pod會開啟該Pod的「查詢效能」Web主控台，要求開發人員必須具備登入AEM服務的存取權。
+僅當選擇特定的Pod時，查詢才起作用，因為它會開啟該Pod的Query Performance Web控制台，要求開發人員具有登錄服務的AEM權限。
 
-![開發人員控制台 — 查詢 — 說明查詢](./assets/developer-console/queries__explain-query.png)
+![開發人員控制台 — 查詢 — 解釋查詢](./assets/developer-console/queries__explain-query.png)
 
-查詢有助於偵錯：
+查詢通過以下方式幫助調試：
 
-+ 說明Oak如何解譯、分析及執行查詢。 當追蹤查詢為何緩慢，並了解查詢如何加速時，這非常重要。
-+ 列出AEM中執行的最熱門查詢，並提供「說明」功能。
-+ 列出AEM中執行最慢的查詢，並提供「說明」功能。
++ 解釋Oak如何解釋、分析和執行查詢。 在跟蹤查詢速度慢的原因以及瞭解如何加快查詢速度時，這一點非常重要。
++ 列出運行在中的最AEM常用查詢，並能夠解釋它們。
++ 列出中運行的最慢AEM查詢，並能夠解釋它們。
