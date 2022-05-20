@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 93a177b0-7852-44da-89cc-836d127be4e7
-source-git-commit: 81a15fb0182760aaac8cb58cccbfe28de7323492
+source-git-commit: b918afdddf1f047b478e0521883a633f7b0610c6
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '289'
 ht-degree: 2%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 2%
 ## 示例資產
 
 本條所提供的樣本資產包括：
+
 * 雲服務配置
 * 切換檔案以建立事件並獲取所有事件
 * 基於Swagger檔案的表單資料模型
@@ -37,8 +38,18 @@ ht-degree: 2%
 
 * 下載 [示例資產](assets/service-now.zip)
 * 將資產導入AEM到 [軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 用於此整合的swagger檔案位於 ```/conf/9957/settings/cloudconfigs/fdm``` crx儲存庫中的資料夾
 * 編輯 [CreateIncident雲服務配置](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)匹配ServiceNow實例。
-* 編輯 [GetAllIncides雲服務配置](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) 與ServiceNow實例匹配
+* 編輯 [GetAllIncides雲服務配置](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) 匹配ServiceNow實例。 您需要更改主機、用戶名和密碼以匹配ServiceNow實例憑據。
+
+## 訪問ServiceNow實例憑據
+
+* 按一下用戶配置檔案
+   ![按一下用戶配置檔案](assets/snow-1.png)
+
+* 按一下「管理實例密碼」
+* 實例詳細資訊如下所示
+   ![實例詳細資訊](assets/snow-3.png)
 
 ## Test整合
 
