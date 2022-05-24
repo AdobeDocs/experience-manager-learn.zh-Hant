@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: abb26a995ec81332bb6ae3617b1a41b60c9dab96
+source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 21%
+source-wordcount: '756'
+ht-degree: 20%
 
 ---
 
@@ -147,6 +147,7 @@ ht-degree: 21%
       + [生成表單](./forms/developing-for-cloud-service/deploy-your-first-form.md)
       + [啟用Forms門戶元件](./forms/developing-for-cloud-service/forms-portal-components.md)
       + [包括Cloud Services和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [上下文感知雲配置](./forms/developing-for-cloud-service/context-aware-fdm.md)
       + [推送到雲管理器](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [部署到開發環境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
       + [更新Maven原型](./forms/developing-for-cloud-service/updating-project-archetype.md)
