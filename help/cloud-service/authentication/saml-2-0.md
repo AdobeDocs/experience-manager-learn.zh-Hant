@@ -9,16 +9,16 @@ level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: e4cd87e5d2d78c3113ef860b9f357cfacb2c874a
+source-git-commit: f2b5adea71ec8e772385b6e0ae068369798030e0
 workflow-type: tm+mt
-source-wordcount: '2775'
+source-wordcount: '2774'
 ht-degree: 1%
 
 ---
 
 # SAML 2.0身份驗證{#saml-2-0-authentication}
 
-瞭解如何設定最終用戶用戶（而非作者）並AEM驗證其是否與您選擇的SAML 2.0相容IDP。
+瞭解如何設定最終用戶（而非作者）並AEM驗證其是否與您選擇的SAML 2.0相容的IDP。
 
 ## 什麼SAMLAEMas a Cloud Service?
 
