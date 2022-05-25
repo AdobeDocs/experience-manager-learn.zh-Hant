@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 52a2303f75c23c72e201b1f674f7f882db00710b
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1364'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 0%
 
    在中定義JSON參數 `vpn-create.json` 並提供捲曲通道 `... -d @./vpn-create.json`。
 
-[下載示例vpn-create.json](./assets/vpn-create.json)
+   [下載示例vpn-create.json](./assets/vpn-create.json)。  此檔案僅是示例。 根據上記錄的可選/必填欄位，根據需要配置檔案 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)。
 
    ```json
    {

@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 8c75e062d2de70c294f95e5c25040d8bb9badcce
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ ht-degree: 0%
 
    在中定義JSON參數 `flexible-port-egress.json` 並提供捲曲通道 `... -d @./flexible-port-egress.json`。
 
-[下載示例flexible-port-egress.json](./assets/flexible-port-egress.json)
+   [下載示例flexible-port-egress.json](./assets/flexible-port-egress.json)。 此檔案僅是示例。 根據上記錄的可選/必填欄位，根據需要配置檔案 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)。
 
    ```json
    {
