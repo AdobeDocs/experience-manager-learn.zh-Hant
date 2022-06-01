@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 52a2303f75c23c72e201b1f674f7f882db00710b
+source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -220,16 +220,16 @@ ht-degree: 0%
 
 啟用虛擬專用網路後，AEM代碼和配置可以使用它們通過VPN對外部服務進行呼叫。 外部呼叫有兩種不同的AEM處理方式：
 
-1. 在非標準埠上對外部服務的HTTP/HTTPS調用
+1. 對外部服務的HTTP/HTTPS調用
    + 包括對在標準80或443埠以外的埠上運行的服務進行的HTTP/HTTPS調用。
 1. 對外部服務的非HTTP/HTTPS調用
    + 包括任何非HTTP調用，如與Mail伺服器、SQL資料庫或在其他非HTTP/HTTPS協定上運行的服務的連接。
 
-預設情況下，標準端AEM口(80/443)上的HTTP/HTTPS請求是允許的，不需要額外的配置或注意事項。
+預設情況下，允AEM許來自標準埠(80/443)的HTTP/HTTPS請求，但如果未按如下所述正確配置，則不會使用VPN連接。
 
-### 非標準埠上的HTTP/HTTPS
+### HTTP/HTTPS
 
-從建立到非標準埠（非–80/443）的HTTP/HTTPS連接時AEM，必須通過特殊主機和埠（通過佔位符提供）進行連接。
+在建立HTTP/HTTPS連接時AEM，為了獲得專用出口IP地址或通過VPN路由，必須通過特殊主機和埠（通過佔位符提供）進行連接。
 
 提AEM供兩組映射到HTTP/HTTPS代理的AEM特殊Java™系統變數。
 
@@ -237,7 +237,7 @@ ht-degree: 0%
 
 通過代理主機/埠值配置Java™ HTTP客戶端的代理配置，應請求HTTP/HTTPSAEM外部服務。
 
-在非標準埠上對外部服務進行HTTP/HTTPS調用時，沒有相應的 `portForwards` 必須使用Cloud Manager API定義 `__enableEnvironmentAdvancedNetworkingConfiguration` 操作，因為埠轉發「規則」是「在代碼中」定義的。
+在任何埠上對外部服務進行HTTP/HTTPS調用時，沒有相應的 `portForwards` 必須使用Cloud Manager API定義 `__enableEnvironmentAdvancedNetworkingConfiguration` 操作，因為埠轉發「規則」是「在代碼中」定義的。
 
 >[!TIP]
 >
@@ -248,10 +248,10 @@ ht-degree: 0%
 <table>
 <tr>
 <td>
-    <a  href="./examples/http-on-non-standard-ports.md"><img alt="非標準埠上的HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
-    <div><strong><a href="./examples/http-on-non-standard-ports.md">非標準埠上的HTTP/HTTPS</a></strong></div>
+    <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+    <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
     <p>
-        Java™代碼示例：在非標準HTTP/HTTPS端AEM口上將HTTP/HTTPS從as a Cloud Service連接到外部服務。
+        Java™代碼示例，使用HTTP/HTTPS協AEM議將HTTP/HTTPS從as a Cloud Service連接到外部服務。
     </p>
 </td>
 <td></td>
