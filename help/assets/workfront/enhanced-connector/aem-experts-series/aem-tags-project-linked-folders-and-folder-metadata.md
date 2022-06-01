@@ -8,13 +8,13 @@ level: Beginner
 kt: 9720
 thumbnail: 340333.jpeg
 hidefromtoc: false
-source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
+exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
+source-git-commit: 485f968e6f8c508b5e81c54e03ca17996e4c1b63
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
-
 
 # 標AEM記、項目連結資料夾和資料夾元資料
 
@@ -25,3 +25,7 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/340333/?quality=12&learn=on)
 
 _A的第三部分 [關於WorkfrontExperience Manager增強連接器的四部分專家系列](./overview.md)_
+
+## 更正
+
++ __@ 4:34__ 標籤AEM語法不正確。 視頻顯示器 `we-retail:apparel/footwear`。 正確的語法是 `["we-retail:apparel/footwear"]` 通常 `["namespace:tag/childtag"]`。
