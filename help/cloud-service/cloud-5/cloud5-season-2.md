@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: abb26a995ec81332bb6ae3617b1a41b60c9dab96
+source-git-commit: 85e00a237c09867247a0b3ccffa0bf843826ee26
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '340'
 ht-degree: 1%
 
 ---
@@ -30,18 +30,20 @@ ht-degree: 1%
 每個季節的長度各不相同，將按固定時間表發放。 第2季的主題主要源於我們在與客戶和合作夥伴的日常接觸中遇到的過去要求。 訪問此頁面以獲取每週更新，或在您選擇的社交網路上關注我們。
 
 <table>
-  <tr>
-   <td>
-      <img alt="片段" src="./imgs/coming-soon.png"/>
-      <div>
-         <strong>片段</strong>        
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
-      </div>
-      <p>
-        <br/>
-         2022年6月3日
-      </p>
-     </td>   
+    <tr>
+        <td>
+            <a href="season-2/cloud5-experience-v-content-fragments.md">
+                <img alt="片段" src="./imgs/s2/000-thumb.png"/>
+            </a>
+            <div>
+                <a href="season-2/cloud5-experience-v-content-fragments.md"><strong>片段</strong></a>        
+                <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+            </div>
+            <p>
+                <br/>
+                豐富多彩地分析了經驗和內容片段之間的差異。 劇透：誰都贏。
+            </p>
+        </td>   
      <td>
          <img alt="儲存庫現代化器" src="./imgs/coming-soon.png"/>
       <div>
