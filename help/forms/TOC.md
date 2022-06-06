@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: cb5b3eb77a57fa8a2918710b7dbcd1b0a58b74bd
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1676'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # AEM Forms 影片和教學課程 {#forms}
 
-+ [概覽](overview.md)
++ [概觀](overview.md)
 + [要遵循的最佳做法](adaptive-forms/best-practices-adaptive-forms.md)
 + [與AEM作者設定OKTA身份驗證](adaptive-forms/single-sign-on-with-okta.md)
 + 建立第一個自適應窗體 {#creating-your-first-adaptive-form}
@@ -76,6 +76,7 @@ ht-degree: 3%
    + [使用表單資料模型服務調用的結果填充表](adaptive-forms/populatetable.md)
    + [捕獲工作流注釋](adaptive-forms/capturing-workflow-comments-aem-workflow-article.md)
    + [將提交的表單資料儲存在資料庫中](adaptive-forms/storing-adaptive-form-data-in-db.md)
+   + [在DB中插入表單附件](adaptive-forms/inserting-form-attachment-in-db.md)
    + [6.4工作流中的AEM表單資料模型服務](adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md)
    + [在表單資料模型服務步驟中處理錯誤消息](adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)
    + [工作流中的表單AEM資料模型服務](adaptive-forms/form-data-model-service-as-step-in-aem65-workflow-video-use.md)
@@ -212,7 +213,7 @@ ht-degree: 3%
    + [在AEM Forms使用產出和Forms服務](document-services/output-and-forms-services-article-develop.md)
    + [從一個資料檔案生成多個PDF](document-services/generate-multi-record-pdf.md)
    + [生成移動表單提交PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [從Mobile窗體生成互動式PDF](document-services/render-interactive-form-using-api.md)
+   + [從移動表單生成互動式PDF](document-services/render-interactive-form-using-api.md)
    + [從自適應表單生成互動式DoR](document-services/generate-interactive-dor.md)
    + [配置Reader擴展憑據](document-services/configuring-reader-extension-osgi.md)
    + [對XDP格式副本的PDF應用使用權限](document-services/rendering-and-reader-extending-xdp-templates-article.md)

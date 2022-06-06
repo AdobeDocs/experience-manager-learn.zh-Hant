@@ -8,9 +8,10 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 10423
-source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
+exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -24,14 +25,14 @@ ht-degree: 0%
 
 ## 建立環境變數
 
-標準環境變數可以通過雲管理器進行配置和管理。 它們被提供給運行時間環境，並可用於OSGi配置。 環境變數可以是特定於環境的值，也可以是基於正在更改的內容的環境機密。
+標準環境變數可以通過雲管理器進行配置和管理。 它們被提供給運行時間環境，並可用於OSGi配置。 [環境變數可以是特定於環境的值，也可以是基於正在更改的內容的環境機密。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
 
-[環境變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+
 
 以下螢幕抓圖顯示了定義的azure_key和azure_connection_string環境變數
 ![環境變數](assets/environment-variables.png)
 
-然後，可以在配置檔案中指定這些環境變數以在適當環境中使用。例如，如果希望所有作者實例使用這些環境變數，您將在config.author資料夾中定義配置檔案，如下所指定
+然後，可以在配置檔案中指定這些環境變數以在適當的環境中使用。例如，如果希望所有作者實例都使用這些環境變數，您將在config.author資料夾中定義配置檔案，如下所指定
 
 ## 建立配置檔案
 

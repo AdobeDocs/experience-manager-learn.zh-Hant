@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '835'
-ht-degree: 0%
+source-wordcount: '674'
+ht-degree: 1%
 
 ---
 
@@ -49,12 +49,6 @@ Maven是一個主要用於Java項目的生成自動化工具。 請按照以下�
 
 ![資料源](assets/mvn-version.JPG)
 
-## Settings.xml
-
-馬文 `settings.xml` file定義用各種方式配置Maven執行的值。 通常，它用於定義本地儲存庫位置、備用遠程儲存庫伺服器和專用儲存庫的身份驗證資訊。
-
-導航到 `C:\Users\<username>\.m2 folder`
-提取 [設定.zip](assets/settings.zip) 把檔案放在 `.m2` 的子菜單。
 
 ## 安裝Eclipse
 
@@ -68,24 +62,17 @@ Maven是一個主要用於Java項目的生成自動化工具。 請按照以下�
 * 建立名為 `aemformsbundles` 在C驅動器中
 * 開啟命令提示符並導航到 `c:\aemformsbundles`
 * 在命令提示符下運行以下命令
-* `mvn archetype:generate  -DarchetypeGroupId=com.adobe.granite.archetypes  -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=19`
 
-Maven項目將以交互方式生成，並要求您為許多屬性提供值，如：
+```java
+mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=36 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.13
+```
 
-| 屬性名稱 | 意義 | 值 |
-------------------------|---------------------------------------|---------------------
-| 組ID | groupId可唯一標識所有項目中的項目 | com.learningaemforms.adobe |
-| appsFolderName | 保存項目結構的資料夾的名稱 | 學習Aemon |
-| 項目ID | artifactId是不帶版本的jar的名稱。 如果建立了它，則可以選擇任何您想要的名稱，包含小寫字母和無奇異符號。 | 學習Aemon |
-| 版本 | 如果分發它，則可以選擇任何帶數字和點(1.0、1.1、1.0.1、...)的典型版本。 | 1.0 |
-
-按Enter鍵，接受其它屬性的預設值。
-如果一切順利，您應在命令窗口中看到生成成功消息
+成功完成後，您應在命令窗口中看到生成成功消息
 
 ## 從主項目建立eclipse項目
 
-將工作目錄更改為 `learningaemforms`。
-執行 `mvn eclipse:eclipse` 命令行中，以上命令讀取pom檔案並建立具有正確元資料的Eclipse項目，以便Eclipse瞭解項目類型、關係、類路徑等。
+* 將工作目錄更改為 `mysite`
+* 執行 `mvn eclipse:eclipse` 命令行。 該命令讀取pom檔案，並使用正確的元資料建立Eclipse項目，以便Eclipse瞭解項目類型、關係、類路徑等。
 
 ## 將項目導入eclipse
 
@@ -97,33 +84,24 @@ Maven項目將以交互方式生成，並要求您為許多屬性提供值，如
 
 按一下「下一步」
 
-選擇 `c:\aemformsbundles\learningaemform`按一下 **瀏覽** 按鈕
+選擇c:\aemformsbundles\mysite by clicking the **瀏覽** 按鈕
 
-![資料源](assets/select-mvn-project.JPG)
+![資料源](assets/mysite-eclipse-project.png)
 
 >[!NOTE]
 >您可以根據需要選擇導入相應的模組。 如果您只打算在項目中建立Java代碼，請僅選擇並導入核心模組。
 
 按一下 **完成** 啟動導入流程
 
-項目已導入到Eclipse中，您將看到 `learningaemforms.xxxx` 資料夾
+項目已導入到Eclipse中，您將看到 `mysite.xxxx` 資料夾
 
-展開 `src/main/java` 下 `learningaemforms.core` 的子菜單。 這是您將在其中寫入大部分代碼的資料夾。
+展開 `src/main/java` 下 `mysite.core` 的子菜單。 這是您將在其中寫入大部分代碼的資料夾。
 
-![資料源](assets/learning-core.JPG)
+![資料源](assets/mysite-core-project.png)
 
-## 生成項目
+## 包括AEMFD客戶端SDK
 
-
-
-
-一旦您編寫了OSGi服務或Servlet，您就需要構建項目以生成可使用Felix Web控制台部署的OSGi捆綁包。 請參考 [AEMFD客戶端SDK](https://search.maven.org/artifact/com.adobe.aemfd/aemfd-client-sdk) 在Maven項目中包含相應的客戶端SDK。 您必須將FD客戶AEM端SDK包括在 `pom.xml` 如下所示。
-
-
-
-
-
-
+您需要將AEMFD客戶端sdk包括在項目中，以利用隨AEM Forms提供的各種服務。 請參考 [AEMFD客戶端SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) 在Maven項目中包含相應的客戶端SDK。 您必須將FD客戶AEM端SDK包括在 `pom.xml` 如下所示。
 
 ```xml
 <dependency>
@@ -136,7 +114,7 @@ Maven項目將以交互方式生成，並要求您為許多屬性提供值，如
 要構建項目，請執行以下步驟：
 
 * 開啟 **命令提示符窗口**
-* 導航到 `c:\aemformsbundles\learningaemforms\core`
+* 導航到 `c:\aemformsbundles\mysite\core`
 * 執行命令 `mvn clean install -PautoInstallBundle`
 上述命令在運行於的伺服器中生成AEM並安裝捆綁包 `http://localhost:4502`。 此捆綁包也將在以下位置的檔案系統上提供
-   `C:\AEMFormsBundles\learningaemforms\core\target` 可以使用 [Felix Web控制台](http://localhost:4502/system/console/bundles)
+   `C:\AEMFormsBundles\mysite\core\target` 可以使用 [Felix Web控制台](http://localhost:4502/system/console/bundles)
