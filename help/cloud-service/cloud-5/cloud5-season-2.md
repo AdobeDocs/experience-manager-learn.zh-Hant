@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 85e00a237c09867247a0b3ccffa0bf843826ee26
+source-git-commit: 59bcd6f2501b324222de7e68f2f7c311cb595788
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '360'
 ht-degree: 1%
 
 ---
@@ -44,17 +44,19 @@ ht-degree: 1%
                 豐富多彩地分析了經驗和內容片段之間的差異。 劇透：誰都贏。
             </p>
         </td>   
-     <td>
-         <img alt="儲存庫現代化器" src="./imgs/coming-soon.png"/>
-      <div>
-         <strong>儲存庫現代化器</strong>
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
-      </div>
-      <p>
-        <br/>
-         2022年6月10日
-      </p>
-   </td>
+         <td>
+            <a href="season-2/cloud5-repo-modernizer.md">
+                 <img alt="儲存庫現代化器" src="./imgs/s2/001-thumb.png"/>
+            </a>
+            <div>
+                <a href="season-2/cloud5-repo-modernizer.md"><strong>儲存庫現代化器</strong></a> 
+               <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+            </div>
+            <p>
+                <br/>
+                快速瞭解使用儲存庫現代化器將現有項目包重構為與雲服務兼AEM容的離散包。
+            </p>
+         </td>
      <td>
             <img alt="Admin Console" src="./imgs/coming-soon.png"/>
       <div>
