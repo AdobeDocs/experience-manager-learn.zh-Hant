@@ -8,14 +8,14 @@ thumbnail: 342865.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: de4c2a3b-e5a3-4b2c-aaa0-c0f7028dd61e
-source-git-commit: 726cf83f3cabe46c12abb79288368407ebf4d525
+source-git-commit: 87d19ba3388b4a2ac3db1d2cf3838ed12dbbd2bc
 workflow-type: tm+mt
-source-wordcount: '59'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# 雲5 — 碎片
+# 雲5 — 儲存庫現代化器
 
 他們將研究儲存庫現代化器如何幫助您過渡到AEMas a Cloud Service，並對其工作原理和原因進行有益的概述。
 
