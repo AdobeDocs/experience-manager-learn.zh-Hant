@@ -10,15 +10,18 @@ hidefromtoc: true
 hide: true
 index: false
 thumbnail: kt-10427.jpg
-source-git-commit: 45061581322e23efb936e91c11be48ceac64183b
+exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
+source-git-commit: d30641b3a9565dd3b7121dfdf6b6969a2b401e92
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '834'
 ht-degree: 2%
 
 ---
 
-
 # 遍歷警告
+
+>[!TIP]
+>將此頁面加書籤以供將來參考。
 
 _遍歷警告是什麼？_
 
@@ -271,5 +274,3 @@ __更改（或建立）索AEM引__ 這樣現有查詢限制可解析為索引更
 </div>
 
 </div>
-
-
