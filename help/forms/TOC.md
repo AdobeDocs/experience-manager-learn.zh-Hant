@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
+source-git-commit: 2cb08c584cb8dce27fd74314d7eba69ef4f8a875
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1680'
 ht-degree: 3%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 3%
    + [限制對規則編輯器的訪問](adaptive-forms/restricting-rule-editor-aem-forms-technical-video-use.md)
    + [主題編輯器增強功能](adaptive-forms/theme-editor-improvements-feature-video-use.md)
    + [表單編輯器增強](adaptive-forms/form-editor-improvements-feature-video-use.md)
-   + [自適應Forms視頻的自動測試](adaptive-forms/calvin-sdk-test-adaptive-forms-feature-video.md)
+   + [自動測試自適應Forms](adaptive-forms/calvin-sdk-test-adaptive-forms-feature-video.md)
    + [自動測試自適應Forms](adaptive-forms/calvin-sdk-test-adaptive-forms-article-use.md)
    + [將LDAP與AEM Forms整合](adaptive-forms/aem-forms-workflow-with-ldap-article-use.md)
    + [在AEM Forms使用服務用戶](adaptive-forms/service-user-tutorial-develop.md)
@@ -77,6 +77,8 @@ ht-degree: 3%
    + [捕獲工作流注釋](adaptive-forms/capturing-workflow-comments-aem-workflow-article.md)
    + [將提交的表單資料儲存在資料庫中](adaptive-forms/storing-adaptive-form-data-in-db.md)
    + [在DB中插入表單附件](adaptive-forms/inserting-form-attachment-in-db.md)
+   + [修改資料源配置](adaptive-forms/modify-data-source-configuration-settings-article.md)
+   + [覆蓋表單資料模型屬性](adaptive-forms/override-fdm-values.md)
    + [6.4工作流中的AEM表單資料模型服務](adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md)
    + [在表單資料模型服務步驟中處理錯誤消息](adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)
    + [工作流中的表單AEM資料模型服務](adaptive-forms/form-data-model-service-as-step-in-aem65-workflow-video-use.md)
@@ -89,7 +91,6 @@ ht-degree: 3%
    + [基於表單資料AEM模型的DAM二值化後處理](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
    + [建立可重用的工作流模型](adaptive-forms/re-usable-aem-forms-workflow-models-article.md)
    + [自定義流程步驟工AEM作流](adaptive-forms/custom-process-step-aem-workflow.md)
-   + [修改資料源配置](adaptive-forms/modify-data-source-configuration-settings-article.md)
    + [預填充HTML5Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [使用Salesforce的表單資料模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [將項目動態添加到選擇元件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
