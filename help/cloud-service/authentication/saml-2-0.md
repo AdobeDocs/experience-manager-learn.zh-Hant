@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: f2b5adea71ec8e772385b6e0ae068369798030e0
+source-git-commit: 6d5a531f44414887e8dc6568fa6f5dcb73bfb183
 workflow-type: tm+mt
-source-wordcount: '2774'
+source-wordcount: '2815'
 ht-degree: 1%
 
 ---
@@ -399,9 +399,14 @@ AEM發佈支援單個引用者篩選器配置，因此將SAML配置要求與任�
 
 如果配置了Apache Webserver上的URL重寫(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，確保向 `.../saml_login` 端點不會意外損壞。
 
-## 啟用資料同步
+## 啟用資料同步和封裝令牌
 
-一旦SAML驗證流在AEM發佈中建立用戶，則用戶記錄必須跨AEM發佈層同步。 至 [啟用資料同步](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization)，向Adobe客戶支援發送請求(通過 [管理控制台](https://adminconsole.adobe.com) >支援)，請求啟用。
+一旦SAML驗證流在AEM發佈中建立用戶，則AEM用戶節點可跨AEM發佈服務層進行身份驗證。
+這需要 [資料同步](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization) 和 [封裝的令牌](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#sticky-sessions-and-encapsulated-tokens) 由AEM發佈服務上的Adobe支援啟用。
+
+向Adobe客戶支援發送請求(通過 [管理控制台](https://adminconsole.adobe.com) >支援)請求：
+
+> 資料同步和封裝的令牌在程式X和環境Y的AEM發佈服務上啟用。
 
 ## 部署SAML配置
 
