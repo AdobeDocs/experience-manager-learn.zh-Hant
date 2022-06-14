@@ -8,7 +8,7 @@ feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: 839152aa67ba7ab2929f2c8093bfdc873761a645
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 2%
@@ -55,7 +55,7 @@ _按一下直接生成Asset compute項目（無音頻）_
 1. 轉到Adobe I/O項目的根並點擊 __全部下載__ 在右上角。
 1. 檔案作為 `.json` 檔案以項目和工作區為前置詞，例如： `wkndAemAssetCompute-81368-Development.json`
 1. 您可以
-   + 將檔案更名為 `config.json` 並移到Asset compute工作項目的根中。 這是本教程中的方法。
+   + 將檔案更名為 `console.json` 並移到Asset compute工作項目的根中。 這是本教程中的方法。
    + 將其移入任意資料夾中，並引用您的 `.env` 帶有配置項的檔案 `ASSET_COMPUTE_INTEGRATION_FILE_PATH`。 檔案路徑可以是絕對路徑，也可以是相對於項目根路徑。 例如：
       + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=/Users/example-user/secrets/wkndAemAssetCompute-81368-Development.json`
 
