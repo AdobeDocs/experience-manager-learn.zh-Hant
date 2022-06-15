@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 59bcd6f2501b324222de7e68f2f7c311cb595788
+source-git-commit: 7985a5b36523aa090a7a9c7599e36bc1b5a9bd6f
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '375'
 ht-degree: 1%
 
 ---
@@ -57,17 +57,19 @@ ht-degree: 1%
                 快速瞭解使用儲存庫現代化器將現有項目包重構為與雲服務兼AEM容的離散包。
             </p>
          </td>
-     <td>
-            <img alt="Admin Console" src="./imgs/coming-soon.png"/>
-      <div>
-            <strong>Admin Console</strong>
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
-      </div>
-      <p>
-        <br/>
-         2022年6月16日
-      </p>
-   </td> 
+         <td>
+            <a href="season-2/cloud5-admin-console.md">
+                 <img alt="Admin Console" src="./imgs/s2/002-thumb.png"/>
+            </a>
+            <div>
+                  <a href="season-2/cloud5-admin-console.md"><strong>Admin Console</strong></a>
+               <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+            </div>
+            <p>
+            <br/>
+               Darin和James討論了一些人們應該瞭解的關於管理控制台、設定和訪問的常見事項。
+            </p>
+         </td> 
   </tr>
   <tr>
    <td>
