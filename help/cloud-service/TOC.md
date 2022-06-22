@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: 45061581322e23efb936e91c11be48ceac64183b
+source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '790'
 ht-degree: 20%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 20%
    + [進化](./introduction/evolution.md)
    + [架構](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
+   + 戰略與思想領導{#strategy}
+      + [Experience Manager — 治理和人員配置模式及原型](./introduction/experience-manager-governance-and-staffing-models.md)
+      + [如何與Adobe Experience Manager一起提高內容速度](./introduction/drive-content-velocity-for-sites.md)
+      + [使用樣式系統加快AEM內容速度](./introduction/accelerate-content-velocity-aem.md)
 + 底層技術 {#underlying-technology}
    + [架AEM構](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
