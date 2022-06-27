@@ -3,9 +3,9 @@ title: 治理和人員配置模式及原型
 description: 學習如何運行您的Adobe Experience Manager(AEM)平台並從您的努力中獲得最大價值。
 solution: Experience Manager
 exl-id: 808ab7a6-5ec5-4bbd-9a6e-cfc0b447430d
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1133'
 ht-degree: 0%
 
 ---
@@ -132,3 +132,5 @@ ht-degree: 0%
 **利用內部資源**  — 差距可能出人意料。 您可以通過採購內部團隊成員來更快地填充這些成員，而不是在組織外部進行搜索。
 
 要更深入地討論治理和人員配備模型及原型，請聽一小時的小組討論： [角色原型與角色操作框架的構建 [!DNL AEM Assets] 和 [!DNL Sites]](https://adobecustomersuccess.adobeconnect.com/p8ml5nmy0758mp4/)
+
+瞭解有關策略和思想領導的更多資訊 [客戶成功](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) 中。

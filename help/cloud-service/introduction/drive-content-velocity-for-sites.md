@@ -3,9 +3,9 @@ title: 如何與Adobe Experience Manager一起提高內容速度
 description: 瞭解內容速度及其在企業組織中的價值。 深入探討有效實施的四項原則，以及在實施過程中需要注意的缺陷。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '2805'
+source-wordcount: '2823'
 ht-degree: 0%
 
 ---
@@ -176,3 +176,5 @@ AEM Sites:基本運行和運行
 * 以單獨方式查看解決方案。 例如，將重點放在實施的技術AEM方面不會實現全部業務效益。 相反，我們建議查看業務使用案例和方案，然後重點討論體系結構和設計，因為這將提供更全面的功能AEM視圖。 Anurandha Pentareddy來自Adobe股： _「我建議的一件事是，提前為您正在實施的平台考慮您的價值目標。」_
 
 要更深入地討論內容速度，請收聽這一一小時 [面板討論](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d) 主演有T-Mobile電話公司莫妮克米斯拉希，德勤公司艾米貝格斯特倫和Adobe的阿努拉達潘特雷迪。
+
+瞭解有關策略和思想領導的更多資訊 [客戶成功](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) 中。

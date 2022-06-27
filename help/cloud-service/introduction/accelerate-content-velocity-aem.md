@@ -3,9 +3,9 @@ title: 使用樣式系統加快AEM內容速度
 description: 瞭解如何使AEM用Style Systems，使組織中的設計人員、內容作者和開發人員能夠以客戶期望的速度和規模建立和交付體驗。
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
@@ -91,3 +91,5 @@ Style SystemsAEM有四個主要優點：
 最後，Style Systems的使用更多是藝術而非科學。 正如我們所討論的那樣，您有許多最佳做法，但您在如何自定義組織設定方面將具有靈活性。
 
 有關詳細資訊，請查看 [客戶成功網路研討會](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) 威爾布里斯班和約瑟夫范布斯柯克。
+
+瞭解有關策略和思想領導的更多資訊 [客戶成功](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) 中。
