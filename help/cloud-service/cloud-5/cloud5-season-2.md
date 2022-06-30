@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: e10617d81287a291d16aed3400ef0c01266586e6
+source-git-commit: c3d3eae47c17a7efed15f14e98e2f3ded719cef0
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '407'
 ht-degree: 1%
 
 ---
@@ -84,18 +84,20 @@ ht-degree: 1%
             <br/>
                達林和詹姆斯討論了雲服務中的作業計畫和消耗AEM問題和需要注意的事項。
             </p>
+         </td> 
+         <td>
+            <a href="season-2/cloud5-repoinit.md">
+                 <img alt="回購初始值設定項（重定點）" src="./imgs/s2/004-thumb.png"/>
+            </a>
+            <div>
+                  <a href="season-2/cloud5-repoinit.md"><strong>Sling儲存庫初始值設定項</strong></a>
+               <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+            </div>
+            <p>
+            <br/>
+              瞭解使用Sling儲存庫初始值設定項（即重新點號）的功能。
+            </p>
          </td>   
-     <td>
-        <img alt="回購初始值設定項（重定點）" src="./imgs/coming-soon.png"/>
-      <div>
-        <strong>回購初始值設定項（重定點）</strong>
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
-      </div>
-      <p>
-        <br/>
-            2022年7月1日
-      </p>
-   </td>
      <td>
             <img alt="修復您的……快取" src="./imgs/coming-soon.png"/>
       <div>
