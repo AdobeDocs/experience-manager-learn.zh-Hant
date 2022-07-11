@@ -2,7 +2,7 @@
 title: Android應用 — 無AEM頭示例
 description: 示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此Android應用程式演示了如何使用的GraphQL API查詢內AEM容。
 version: Cloud Service
-mini-toc-levels: 1
+mini-toc-levels: 2
 kt: 9166
 thumbnail: KT-9166.jpg
 feature: Content Fragments, GraphQL API
@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
-source-git-commit: 0204d9aaf7b79b0745adbe749f44245716203b88
+source-git-commit: 8b2c116ceb6ab8c3a009dcec6629c2e97d815b7b
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 0%
@@ -136,7 +136,7 @@ query($slug: String!) {
         slug: {
           _expressions: [ { value: $slug } ]
         }
-  	}) {
+      }) {
     items {
       _path
       title
@@ -178,7 +178,7 @@ query($slug: String!) {
 }
 ```
 
-## 執行GraphQL永續查詢
+### 執行GraphQL永續查詢
 
 通AEM過HTTPGET執行永續查詢， [用AEM於Java的無頭客戶端](https://github.com/adobe/aem-headless-client-java) 用於執行針對永續GraphQL查詢AEM並將冒險內容載入到應用中。
 

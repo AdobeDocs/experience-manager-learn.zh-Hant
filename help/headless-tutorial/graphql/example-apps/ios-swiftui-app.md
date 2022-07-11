@@ -1,8 +1,8 @@
 ---
-title: iOSSwiftUI應用 — AEM無頭示例
+title: iOS應用 — 無AEM頭示例
 description: 示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此iOS應用程式演示了如何使用AEMGraphQL API使用永續查詢來查詢內容。
 version: Cloud Service
-mini-toc-levels: 1
+mini-toc-levels: 2
 kt: 9166
 thumbnail: KT-9166.jpg
 feature: Content Fragments, GraphQL API
@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: bcedb190fba7b6bc044da06bd36d097d553172a1
+source-git-commit: 8b2c116ceb6ab8c3a009dcec6629c2e97d815b7b
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
 
-# iOSSwiftUI應用
+# iOS應用
 
 示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此iOS應用程式演示了如何使用AEMGraphQL API使用永續查詢來查詢內容。
 
@@ -131,7 +131,7 @@ query($slug: String!) {
         slug: {
           _expressions: [ { value: $slug } ]
         }
-  	}) {
+      }) {
     items {
       _path
       title
@@ -173,7 +173,7 @@ query($slug: String!) {
 }
 ```
 
-## 執行GraphQL永續查詢
+### 執行GraphQL永續查詢
 
 通AEM過HTTPGET執行永續查詢，因此不能使用使用HTTPPOST（如Apollo）的常用GraphQL庫。 而是建立一個自定義類，該類執行對的永續查詢HTTPGET請AEM求。
 
