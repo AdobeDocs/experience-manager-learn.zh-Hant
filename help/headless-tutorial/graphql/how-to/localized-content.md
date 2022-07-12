@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
+source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -36,22 +36,22 @@ ht-degree: 0%
 | en | /content/dam/.../**恩**/.. | 英語內容 |
 | es | /content/dam/.../**es**/.. | 西班牙語內容 |
 
-## GraphQL查詢
+## GraphQL永續查詢
 
-提AEM供 `_locale` GraphQL篩選器，它按區域設定代碼自動篩選內容。 例如，查詢 [WKND參考演示項目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 會是這樣的：
+提AEM供 `_locale` GraphQL篩選器，它按區域設定代碼自動篩選內容。 例如，查詢 [WKND參考演示項目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 可以使用新的永續查詢 `wknd-shared/adventures-by-locale` 定義為：
 
 ```graphql
-{
-  adventureList(_locale: "en") {
+query($locale: String!) {
+  adventureList(_locale: $locale) {
     items {      
       _path
-      adventureTitle
+      title
     }
   }
 }
 ```
 
-的 `_locale` 篩選器需要使用 [資AEM產資料夾基礎本地化慣例](#assets-folder-structure)。
+的 `$locale` 在 `_locale` filter需要區域設定代碼(例如 `en`。 `en_us`或 `de`) [資AEM產資料夾基礎本地化慣例](#assets-folder-structure)。
 
 ## 反應示例
 
@@ -112,31 +112,26 @@ Adventures元件按區域設AEM置查詢所有冒險，並列出其標題。 這
 
 此方法可以擴展到應用程式中的其他查詢，確保所有查詢僅包括用戶的區域設定選擇指定的內容。
 
-針對的查詢AEM在自定義React掛接中執行 [useGraphQL，有關查詢GraphQL文檔的詳細AEM說明](./aem-headless-sdk.md)。
+針對的查詢AEM在自定義React掛接中執行 [getAdventuresByLocale，有關查詢GraphQL文檔的詳細AEM說明](./aem-headless-sdk.md)。
 
 ```javascript
 // src/Adventures.js
 
 import { useContext } from "react"
-import { useGraphQL } from './useGraphQL'
+import { useAdventuresByLocale } from './api/persistedQueries'
 import LocaleContext from './LocaleContext'
 
 export default function Adventures() {
     const { locale } = useContext(LocaleContext);
 
-    let {data} = useGraphQL(`{
-            adventureList(_locale: "${locale}") {
-                items {      
-                _path
-                adventureTitle
-             }
-        }
-    }`);
+    // Get data from AEM using GraphQL persisted query as defined above 
+    // The details of defining a React useEffect hook are explored in How to > AEM Headless SDK
+    let { data, error } = useAdventuresByLocale(locale);
 
     return (
         <ul>
             {data?.adventureList?.items?.map((adventure, index) => { 
-                return <li key={index}>{adventure.adventureTitle}</li>
+                return <li key={index}>{adventure.title}</li>
             })}
         </ul>
     )

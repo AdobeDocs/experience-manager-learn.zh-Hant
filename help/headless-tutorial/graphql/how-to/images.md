@@ -9,16 +9,16 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: cca9ea744f938470b82b61d11269c1f9e8250bbe
+source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 2%
+source-wordcount: '1155'
+ht-degree: 1%
 
 ---
 
 # 無頭圖AEM像
 
-影像是 [發展豐富而富有吸引力AEM的體驗](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)。 無AEM頭支援映像資產的管理及其優化交付。
+影像是 [發展豐富而富有吸引力AEM的無頭體驗](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)。 無AEM頭支援映像資產的管理及其優化交付。
 
 用於無頭內容建AEM模的內容片段，通常引用影像資源，以便在無頭體驗中顯示。 可AEM以編寫GraphQL查詢，以根據引用影像的位置為影像提供URL。
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 | ImageRef欄位 | 客戶端Web應用從AEM | 客戶端應用查詢AEM作者 | 客戶端應用查詢AEM發佈 |
 |--------------------|:------------------------------:|:-----------------------------:|:------------------------------:|
-| `_path` | ✔ | ✘ | ✘ |
+| `_path` | ✔ | ✔（應用必須在URL中指定主機） | ✔（應用必須在URL中指定主機） |
 | `_authorUrl` | ✘ | ✔ | ✘ |
 | `_publishUrl` | ✘ | ✘ | ✔ |
 
@@ -48,25 +48,28 @@ ht-degree: 2%
 
 ![內容引用影像的內容片段模型](./assets/images/content-fragment-model.jpeg)
 
-## GraphQL查詢
+## GraphQL永續查詢
 
-在GraphQL查詢中，將欄位返回為 `ImageRef` 類型，並請求相應的欄位 `_path`。 `_authorUrl`或 `_publishUrl` 應用程式所需的。
+在GraphQL查詢中，將欄位返回為 `ImageRef` 類型，並請求相應的欄位 `_path`。 `_authorUrl`或 `_publishUrl` 應用程式所需的。 例如，查詢 [WKND參考演示項目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 並在其中包括影像資產引用的影像URL `primaryImage` 欄位，可以使用新的永續查詢 `wknd-shared/adventure-image-by-path` 定義為：
 
-```javascript
-{
-  adventureByPath(_path: "/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp") {
+```graphql
+query ($path: String!) {
+  adventureByPath(_path: $path) {
     item {
-      adventurePrimaryImage {
+      title,
+      primaryImage {
         ... on ImageRef {
-          _path,
-          _authorUrl,
+          _path
+          _authorUrl
           _publishUrl
         }
       }
     }
-  }  
+  }
 }
 ```
+
+的 `$path` 在 `_path` 篩選器需要內容片段的完整路徑(例如 `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`)。
 
 ## GraphQL響應
 
@@ -78,9 +81,9 @@ ht-degree: 2%
     "adventureByPath": {
       "item": {
         "adventurePrimaryImage": {
-          "_path": "/content/dam/wknd/en/adventures/bali-surf-camp/AdobeStock_175749320.jpg",
-          "_authorUrl": "https://author-p123-e456.adobeaemcloud.com/content/dam/wknd/en/adventures/bali-surf-camp/AdobeStock_175749320.jpg",
-          "_publishUrl": "https://publish-p123-e789.adobeaemcloud.com/content/dam/wknd/en/adventures/bali-surf-camp/AdobeStock_175749320.jpg"
+          "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
+          "_authorUrl": "https://author-p123-e456.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
+          "_publishUrl": "https://publish-p123-e789.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg"
         }
       }
     }
@@ -95,7 +98,7 @@ ht-degree: 2%
 在React中，顯示AEM Publish中的影像如下所示：
 
 ```html
-<img src={ data.adventureByPath.item.adventurePrimaryImage._publishUrl } />
+<img src={ data.adventureByPath.item.primaryImage._publishUrl } />
 ```
 
 ## 影像格式副本
@@ -118,9 +121,9 @@ AEM Assets管理員使用「處理配置檔案」定義自定義格式副本。 
 
 | 格式副本名稱 | 副檔名 | 最大寬度 |
 |----------------|:---------:|----------:|
-| 大 | jpeg | 1200px |
-| 中 | jpeg | 900px |
-| 小 | jpeg | 600px |
+| 大 | jpeg | 1200像素 |
+| 中 | jpeg | 900像素 |
+| 小 | jpeg | 600像素 |
 
 上表中調用的屬性非常重要：
 
@@ -132,7 +135,7 @@ AEM Assets管理員使用「處理配置檔案」定義自定義格式副本。 
 
 #### 重新處理資產{#reprocess-assets}
 
-建立（或更新）「處理配置檔案」後，重新處理資產以生成在「處理配置檔案」中定義的新格式副本。 如果資產未與新格式副本一起處理，則新格式副本將不存在。
+建立（或更新）「處理配置檔案」後，重新處理資產以生成在「處理配置檔案」中定義的新格式副本。 在使用處理配置檔案處理資產之前，將不存在新格式副本。
 
 + 最好， [已將「處理配置檔案」分配給資料夾](../../../assets/configuring//processing-profiles.md) 因此，任何新資產都會自動生成格式副本。 現有資產必須採用下面的臨時辦法重新處理。
 
@@ -156,9 +159,9 @@ AEM Assets管理員使用「處理配置檔案」定義自定義格式副本。 
 
 | 資產網址 | 格式副本子路徑 | 格式副本名稱 | 格式副本擴展 |  | 格式副本URL |
 |-----------|:------------------:|:--------------:|--------------------:|:--:|---|
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg | /_jcr內容/格式副本/ | 大 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg/_jcr_content/renditions/large.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg | /_jcr內容/格式副本/ | 中 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg/_jcr_content/renditions/medium.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg | /_jcr內容/格式副本/ | 小 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg/_jcr_content/renditions/small.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr內容/格式副本/ | 大 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/large.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr內容/格式副本/ | 中 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/medium.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr內容/格式副本/ | 小 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/small.jpeg |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -210,7 +213,7 @@ export default function Image({ assetUrl, renditionName, renditionExtension, alt
 
 這個簡單 `App.js` 查AEM詢冒險影像，然後顯示該影像的三個格式副本：小、中和大。
 
-在自定AEM義React掛接中執行查詢 [使用Headless SDKAEM的GraphQL](./aem-headless-sdk.md#graphql-queries)。
+在自定AEM義React掛接中執行查詢 [使用無頭SDKAEM的AdventureByPath](./aem-headless-sdk.md#graphql-persisted-queries)。
 
 查詢結果和特定格式副本參數將傳遞給 [影像反應元件](#react-example-image-component)。
 
@@ -218,29 +221,14 @@ export default function Image({ assetUrl, renditionName, renditionExtension, alt
 // src/App.js
 
 import "./App.css";
-import { useGraphQL } from "./useGraphQL";
+import { useAdventureByPath } from './api/persistedQueries'
 import Image from "./Image";
 
 function App() {
 
-  // The GraphQL that returns an image
-  const adventureQuery = `{
-        adventureByPath(_path: "/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp") {
-          item {
-            adventureTitle,
-            adventurePrimaryImage {
-              ... on ImageRef {
-                _path,
-                _authorUrl,
-                _publishUrl
-              }
-            }
-          }
-        }  
-    }`;
-
-  // Get data from AEM using GraphQL
-  let { data } = useGraphQL(adventureQuery);
+  // Get data from AEM using GraphQL persisted query as defined above 
+  // The details of defining a React useEffect hook are explored in How to > AEM Headless SDK
+  let { data, error } = useAdventureByPath("/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp");
 
   // Wait for GraphQL to provide data
   if (!data) { return <></> }
@@ -251,10 +239,10 @@ function App() {
       <h2>Small rendition</h2>
       {/* Render the small rendition for the Adventure Primary Image */}
       <Image
-        assetUrl={data.adventureByPath.item.adventurePrimaryImage._publishUrl}
+        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
         renditionName="small"
         renditionExtension="jpeg"
-        alt={data.adventureByPath.item.adventureTitle}
+        alt={data.adventureByPath.item.title}
       />
 
       <hr />
@@ -262,10 +250,10 @@ function App() {
       <h2>Medium rendition</h2>
       {/* Render the medium rendition for the Adventure Primary Image */}
       <Image
-        assetUrl={data.adventureByPath.item.adventurePrimaryImage._publishUrl}
+        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
         renditionName="medium"
         renditionExtension="jpeg"
-        alt={data.adventureByPath.item.adventureTitle}
+        alt={data.adventureByPath.item.title}
       />
 
       <hr />
@@ -273,10 +261,10 @@ function App() {
       <h2>Large rendition</h2>
       {/* Render the large rendition for the Adventure Primary Image */}
       <Image
-        assetUrl={data.adventureByPath.item.adventurePrimaryImage._publishUrl}
+        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
         renditionName="large"
         renditionExtension="jpeg"
-        alt={data.adventureByPath.item.adventureTitle}
+        alt={data.adventureByPath.item.title}
       />
     </div>
   );
