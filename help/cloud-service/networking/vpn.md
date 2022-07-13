@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: 6958b1f82c609af2998d94fd868e67bf1578e848
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1264'
 ht-degree: 0%
 
 ---
@@ -229,15 +229,7 @@ ht-degree: 0%
 
 ### HTTP/HTTPS
 
-在建立HTTP/HTTPS連接時AEM，為了獲得專用出口IP地址或通過VPN路由，必須通過特殊主機和埠（通過佔位符提供）進行連接。
-
-提AEM供兩組映射到HTTP/HTTPS代理的AEM特殊Java™系統變數。
-
-|變數名稱 |使用 | Java™代碼 | OSGi配置 | Apache Web伺服器mod_proxy配置 | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | HTTP連接的代理主機 | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | HTTP連接的代理埠 | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` | HTTPS連接的代理主機 | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | HTTPS連接的代理埠 | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
-
-通過代理主機/埠值配置Java™ HTTP客戶端的代理配置，應請求HTTP/HTTPSAEM外部服務。
-
-在任何埠上對外部服務進行HTTP/HTTPS調用時，沒有相應的 `portForwards` 必須使用Cloud Manager API定義 `__enableEnvironmentAdvancedNetworkingConfiguration` 操作，因為埠轉發「規則」是「在代碼中」定義的。
+從建立HTTP/HTTPS連接時AEM，使用VPN時，HTTP/HTTPS連接會自動代AEM替。 支援HTTP/HTTPS連接不需要其他代碼或配置。
 
 >[!TIP]
 >
