@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 52587c1131620d62428ecfc464a97dce00d8a1d8
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '793'
 ht-degree: 20%
 
 ---
@@ -162,7 +162,7 @@ ht-degree: 20%
       + [建立主題](./forms/create-first-af/create-theme.md)
       + [建立範本](./forms/create-first-af/create-template.md)
       + [建立片段](./forms/create-first-af/create-fragments.md)
-      + [建立窗體](./forms/create-first-af/create-af.md)
+      + [建立表單](./forms/create-first-af/create-af.md)
       + [配置根面板](./forms/create-first-af/configure-root-panel.md)
       + [配置人員面板](./forms/create-first-af/configure-people-panel.md)
       + [配置收入面板](./forms/create-first-af/configure-income-panel.md)
@@ -262,6 +262,7 @@ ht-degree: 20%
       + [Admin Console](./cloud-5/season-2/cloud5-admin-console.md)
       + [重點](./cloud-5/season-2/cloud5-repoinit.md)
       + [Sling作業計畫程式](./cloud-5/season-2/cloud5-sling-job-scheduler.md)
+      + [修復快取](./cloud-5/season-2/cloud5-fix-your-cache.md)
 + [專AEM家系列](./aem-experts-series.md)
 + 多步Tutorials{#multi-step-tutorials}
    + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)

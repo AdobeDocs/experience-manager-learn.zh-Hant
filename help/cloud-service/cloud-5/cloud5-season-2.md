@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: c3d3eae47c17a7efed15f14e98e2f3ded719cef0
+source-git-commit: 52587c1131620d62428ecfc464a97dce00d8a1d8
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '423'
 ht-degree: 1%
 
 ---
@@ -99,14 +99,16 @@ ht-degree: 1%
             </p>
          </td>   
      <td>
-            <img alt="修復您的……快取" src="./imgs/coming-soon.png"/>
+            <a href="season-2/cloud5-fix-your-cache.md">
+               <img alt="修復快取" src="./imgs/s2/005-thumb.png"/>
+            </a>
       <div>
-         <strong>修復您的……快取</strong>
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+         <a href="season-2/cloud5-fix-your-cache.md"><strong>修復您的……快取</strong></a>
+         <br/><em>與Damian Langsweirdt和James Talbot合作，高級雲架構師</em>
       </div>
       <p>
-        <br/>
-         2022年7月15日
+         <br/>
+             瀏覽區域以優化快取並加快站點在AEMas a Cloud Service上運行。
       </p>
    </td> 
   </tr>
