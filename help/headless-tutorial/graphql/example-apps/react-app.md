@@ -1,6 +1,6 @@
 ---
-title: React應用程式 — AEM Headless範例
-description: 範例應用程式是探索Adobe Experience Manager(AEM)無頭功能的絕佳方式。 提供的React應用程式示範如何使用AEM的GraphQL API來查詢內容。 適用於JavaScript的AEM無周邊用戶端可用來執行為應用程式提供動力的GraphQL查詢。
+title: 反應應用 — 無AEM頭示例
+description: 示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此React應用程式演示了如何使用GraphQL APIAEM使用永續查詢來查詢內容。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 9166
@@ -9,221 +9,259 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 9b1e38c8d4a0301c124c6f1607a9e4362b0e9cd1
+exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
+source-git-commit: 4b8f7d9c6def8c121f3c975218b7214d271fa77f
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '912'
 ht-degree: 1%
 
 ---
 
+# 反應應用
 
-# React應用程式
+示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此React應用程式演示了如何使用GraphQL APIAEM使用永續查詢來查詢內容。 JavaScriptAEM的無頭客戶端用於執行為應用程式提供動力的GraphQL永續查詢。
 
-範例應用程式是探索Adobe Experience Manager(AEM)無頭功能的絕佳方式。 提供的React應用程式示範如何使用AEM的GraphQL API來查詢內容。 適用於JavaScript的AEM無周邊用戶端可用來執行為應用程式提供動力的GraphQL查詢。
+![使用無頭應用程式AEM反應](./assets/react-app/react-app.png)
 
-檢視 [GitHub原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
+查看 [GitHub上的原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
-![React應用程式](./assets/react-screenshot.png)
-
-提供完整的逐步教學課程 [此處](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html).
+A [全步逐步教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) 描述此React應用如何生成可用。
 
 ## 必備條件 {#prerequisites}
 
-應在本機安裝下列工具：
+應在本地安裝以下工具：
 
-* [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Cont%2Fjcr%3Alast&amp;modified by.sort=dest&amp;p.st=dest&amp;p.llep.p.p=14)
-* [Node.js v10+](https://nodejs.org/en/)
-* [npm 6+](https://www.npmjs.com/)
-* [Git](https://git-scm.com/)
++ [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3內容%2Fmetadata%2Fdc%3SoftwareType&amp;1_group.propertyvalues.operation=等於&amp;1_group.propertyvalues.0_values=軟體類型%3Atoling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;order=%40jcr%3內容%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
++ [Node.js v10+](https://nodejs.org/en/)
++ [npm 6+](https://www.npmjs.com/)
++ [蠢貨](https://git-scm.com/)
 
-## AEM需求
+## AEM要求
 
-應用程式的設計目的是連線至AEM **作者** 或 **發佈** 環境，與 [WKND參考網站](https://github.com/adobe/aem-guides-wknd/releases/latest) 已安裝。
+React應用程式可以與以下部署AEM選項配合使用。 所有部署都需要 [WKND站點v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 安裝。
 
-* [AEM as a Cloud Service ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/introduction.html)
-* [AEM 6.5.10+](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/service-pack/new-features-latest-service-pack.html?lang=zh-Hant)
++ [AEM as a Cloud Service ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
++ 本地設定使用 [AEM Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
++ [AEM6.5 SP13+快速啟動](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
 
-建議 [將WKND參考站點部署到Cloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version). 使用 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) 或 [AEM 6.5 QuickStart Jar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances) 也可使用。
+React應用程式旨在連接到 __AEM發佈__ 但是，如果在React應用程式的配置中提供了身份驗證，則它可以從AEM Author中源出內容。
 
 ## 如何使用
 
-1. 複製 `aem-guides-wknd-graphql` 存放庫：
+1. 克隆 `adobbe/aem-guides-wknd-graphql` 儲存庫：
 
    ```shell
-   git clone git@github.com:adobe/aem-guides-wknd-graphql.git
+   $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 編輯 `aem-guides-wknd/react-app/.env.development` 檔案，並確保 `REACT_APP_HOST_URI` 指向您的target AEM例項。 更新驗證方法（如果連線至製作例項）。
+1. 編輯 `aem-guides-wknd-graphql/react-app/.env.development` 檔案和設定 `REACT_APP_HOST_URI` 瞄準目標AEM。
+
+   如果連接到作者實例，請更新驗證方法。
 
    ```plain
    # Server namespace
    REACT_APP_HOST_URI=http://localhost:4503
-   REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json
+   REACT_APP_GRAPHQL_ENDPOINT=/content/_cq_graphql/wknd-shared/endpoint.json
+   
    #AUTH (Choose one method)
    # Authentication methods: 'service-token', 'dev-token', 'basic' or leave blank to use no authentication
-   ...
+   REACT_APP_AUTH_METHOD=basic
+   
+   # For Bearer auth, use DEV token (dev-token) from Cloud console
+   REACT_APP_DEV_TOKEN=dev-token
+   
+   # For Service toke auth, provide path to service token file (download file from Cloud console)
+   REACT_APP_SERVICE_TOKEN=auth/service-token.json
+   
+   # For Basic auth, use AEM ['user','pass'] pair (eg for Local AEM Author instance)
+   REACT_APP_BASIC_AUTH_USER=admin
+   REACT_APP_BASIC_AUTH_PASS=admin
    ```
 
-1. 開啟終端機並執行命令：
+1. 開啟終端並運行以下命令：
 
    ```shell
    $ cd aem-guides-wknd-graphql/react-app
    $ npm install
    $ npm start
    ```
-1. 新瀏覽器視窗應載入 [http://localhost:3000](http://localhost:3000)
-1. 應用程式中應顯示來自WKND參考網站的歷險清單。
 
-## 程式碼
+1. 新瀏覽器窗口應載入 [http://localhost:3000](http://localhost:3000)
+1. 應用程式上應顯示來自WKND參考站點的冒險清單。
 
-以下是用於支援應用程式的重要檔案和代碼的簡要摘要。 您可以在上找到完整的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql).
+## 代碼
 
-### AEM Headless Client for JavaScript
+以下是React應用程式構建方式的摘要，它如何連接到AEMHeadless以使用GraphQL持久查詢檢索內容，以及如何顯示該資料。 可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)。
 
-此 [AEM無頭用戶端](https://github.com/adobe/aem-headless-client-js) 用於執行GraphQL查詢。 AEM無頭式用戶端提供兩種執行查詢的方法， [`runQuery`](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunqueryquery-options--promiseany) 和 [`runPersistedQuery`](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany).
 
-`runQuery` 會針對AEM內容執行標準GraphQL查詢，這是最常見的查詢執行類型。
+### 永續查詢
 
-[持續查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/graphql-persisted-queries.html) 是AEM中的一項功能，可快取GraphQL查詢的結果，然後讓結果可供GET使用。 持續查詢應用於將不斷執行的通用查詢。 在此應用程式中，歷險記清單是在主畫面上執行的第一個查詢。 此查詢將非常受歡迎，因此應使用持續查詢。 `runPersistedQuery` 對持續查詢端點執行要求。
+遵循AEM無頭最佳實踐， React應用程式使用AEMGraphQL持久查詢來查詢冒險資料。 應用程式使用兩個永續查詢：
 
-`src/api/useGraphQL.js` 是 [反應效果鈎](https://reactjs.org/docs/hooks-overview.html#effect-hook) 會監聽參數的變更 `query` 和 `path`. 若 `query` 空白，則會根據 `path`. 這是建構AEM無頭式用戶端並用來擷取資料的位置。
++ `wknd/adventures-all` 永續查詢，返回帶有AEM一組刪除屬性的所有冒險。 此永續查詢驅動初始視圖的冒險清單。
+
+```
+# Retrieves a list of all adventures
+{
+    adventureList {
+        items {
+            _path
+            slug
+            title
+            price
+            tripLength
+            primaryImage {
+                ... on ImageRef {
+                _path
+                mimeType
+                width
+                height
+                }
+            }
+        }
+    }
+}
+```
+
++ `wknd/adventure-by-slug` 永續查詢，返回單個冒險 `slug` （具有完整屬性集的唯一標識冒險的自定義屬性）。 此持久查詢可支援冒險詳細資訊視圖。
+
+```
+# Retrieves an adventure Content Fragment based on it's slug
+# Example query variables: 
+# {"slug": "bali-surf-camp"} 
+# Technically returns an adventure list but since the the slug 
+# property is set to be unique in the CF Model, only a single CF is expected
+
+query($slug: String!) {
+  adventureList(filter: {
+        slug: {
+          _expressions: [ { value: $slug } ]
+        }
+  	}) {
+    items {
+      _path
+      title
+      slug
+      activity
+      adventureType
+      price
+      tripLength
+      groupSize
+      difficulty
+      price
+      primaryImage {
+        ... on ImageRef {
+          _path
+          mimeType
+          width
+          height
+        }
+      }
+      description {
+        json
+        plaintext
+      }
+      itinerary {
+        json
+        plaintext
+      }
+    }
+    _references {
+      ...on AdventureModel {
+        _path
+        slug
+        title
+        price
+        __typename
+      }
+    }
+  }
+}
+```
+
+### 執行GraphQL永續查詢
+
+通AEM過HTTPGET執行永續查詢， [用AEM於JavaScript的無頭客戶端](https://github.com/adobe/aem-headless-client-js) 是 [執行永續GraphQL查詢](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) 並AEM將冒險內容載入到應用中。
+
+每個永續查詢在 `src/api/persistedQueries.js`，它非同步調AEM用HTTPGET端點並返回冒險資料。
+
+每個函式依次調用 `aemHeadlessClient.runPersistedQuery(...)`，執行永續的GraphQL查詢。
 
 ```js
-function useGraphQL(query, path) {
-    let [data, setData] = useState(null);
-    let [errorMessage, setErrors] = useState(null);
+// src/api/persistedQueries.js
 
-    useEffect(() => {
-      // construct a new AEMHeadless client based on the graphQL endpoint
-      const sdk = new AEMHeadless({ endpoint: REACT_APP_GRAPHQL_ENDPOINT })
-
-      // if query is not null runQuery otherwise fall back to runPersistedQuery
-      const request = query ? sdk.runQuery.bind(sdk) : sdk.runPersistedQuery.bind(sdk);
-
-      request(query || path)
-        .then(({ data, errors }) => {
-          //If there are errors in the response set the error message
-          if(errors) {
-            setErrors(mapErrors(errors));
-          }
-          //If data in the response set the data as the results
-          if(data) {
-            setData(data);
-          }
-        })
-        .catch((error) => {
-          setErrors(error);
-        });
-    }, [query, path]);
-
-    return {data, errorMessage}
+/**
+ * Queries a list of all Adventures using the persisted path "wknd-shared/adventures-all"
+ * @returns {data, errors}
+ */
+export const getAllAdventures = async function() {
+    return executePersistedQuery('wknd-shared/adventures-all');
 }
-```
 
-### 冒險內容
-
-應用程式主要會顯示歷險記清單，並提供使用者點選以進入歷險記詳細資訊的選項。
-
-`Adventures.js`  — 顯示歷險記的卡片清單。  初始狀態會使用 [持續查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/graphql-persisted-queries.html) whis&#39; [預封裝](https://github.com/adobe/aem-guides-wknd/tree/master/ui.content/src/main/content/jcr_root/conf/wknd/settings/graphql/persistentQueries/adventures-all/_jcr_content) 與WKND參考網站。 端點為 `/wknd/adventures-all`. 有數個按鈕可讓使用者根據活動來試驗篩選結果：
-
-```javascript
-function filterQuery(activity) {
-  return `
-    {
-      adventureList (filter: {
-        adventureActivity: {
-          _expressions: [
-            {
-              value: "${activity}"
-            }
-          ]
-        }
-      }){
-        items {
-          _path
-        adventureTitle
-        adventurePrice
-        adventureTripLength
-        adventurePrimaryImage {
-          ... on ImageRef {
-            _path
-            mimeType
-            width
-            height
-          }
-        }
-      }
-    }
-  }
-  `;
-}
-```
-
-`AdventureDetail.js`  — 顯示「冒險」的詳細視圖。 根據從url剖析的探險程式路徑，進行graphQL查詢：
-
-```javascript
-//parse the content fragment from the url
-const contentFragmentPath = props.location.pathname.substring(props.match.url.length);
 ...
-function adventureDetailQuery(_path) {
-  return `{
-    adventureByPath (_path: "${_path}") {
-      item {
-        _path
-          adventureTitle
-          adventureActivity
-          adventureType
-          adventurePrice
-          adventureTripLength
-          adventureGroupSize
-          adventureDifficulty
-          adventurePrice
-          adventurePrimaryImage {
-            ... on ImageRef {
-              _path
-              mimeType
-              width
-              height
-            }
-          }
-          adventureDescription {
-            html
-          }
-          adventureItinerary {
-            html
-          }
-      }
+
+/**
+ * Uses the AEM Headless SDK to execute a query besed on a persistedQueryPath and optional query variables
+ * @param {*} persistedQueryPath 
+ * @param {*} queryVariables 
+ * @returns 
+ */
+ const executePersistedQuery = async function(persistedQueryPath, queryVariables) {
+
+    let data;
+    let errors;
+
+    try {
+        // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax
+        const response = await aemHeadlessClient.runPersistedQuery(persistedQueryPath, queryVariables);
+        // The GraphQL data is stored on the response's data field
+        data = response.data;
+        errors = response.errors ? mapErrors(response.errors) : undefined;
+    } catch (e) {
+        console.error(e.toJSON());
+        errors = e;
     }
-  }
-  `;
+
+    return {data, errors}; 
 }
 ```
+
+### 檢視
+
+React應用程式使用兩個視圖來呈現Web體驗中的冒險資料。
+
++ `src/components/Adventures.js`
+
+   調用 `getAllAdventures()` 從 `src/api/persistedQueries.js`  並在清單中顯示返回的冒險。
+
++ `src/components/AdventureDetail.js`
+
+   調用 `getAdventureBySlug(..)` 使用 `slug` 參數通過 `Adventures` 元件，並顯示單個冒險的詳細資訊。
+
 
 ### 環境變數
 
-數個 [環境變數](https://create-react-app.dev/docs/adding-custom-environment-variables) 供本專案用來連線至AEM環境。 預設會連線至執行中的AEM製作環境： http://localhost:4502。 如果您想要變更此行為，請更新 `.env.development` 檔案：
+幾個 [環境變數](https://create-react-app.dev/docs/adding-custom-environment-variables) 用於連接到環AEM境。 預設連接到運行於的AEM發佈 `http://localhost:4503`。 更改連AEM接更新 `.env.development` 檔案：
 
-* `REACT_APP_HOST_URI=http://localhost:4502`  — 設為AEM目標主機
-* `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json`  — 設定GraphQL端點路徑
-* `REACT_APP_AUTH_METHOD=`  — 偏好的驗證方法。 選用，依預設不使用驗證。
-   * `service-token`  — 使用雲端環境PROD的服務代號交換
-   * `dev-token`  — 搭配雲端環境，將開發代號用於本機開發
-   * `basic`  — 透過本機作者環境，在本機開發時使用使用者/傳遞
-   * 保留為空，不使用驗證方法
-* `REACT_APP_AUTHORIZATION=admin:admin`  — 設定連線至AEM製作環境時要使用的基本驗證憑證（僅限開發）。 如果連線至發佈環境，則不需要此設定。
-* `REACT_APP_DEV_TOKEN`  — 開發代號字串。 若要連線至遠端執行個體，除了基本驗證(user:pass)之外，您還可以透過雲端主控台，將承載驗證與DEV代號搭配使用
-* `REACT_APP_SERVICE_TOKEN`  — 服務令牌檔案的路徑。 若要連線至遠端執行個體，也可使用服務代號（從雲端主控台下載檔案）進行驗證
++ `REACT_APP_HOST_URI=http://localhost:4502`:設定為AEM目標主機
++ `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json`:設定GraphQL終結點路徑。 此React應用未使用此功能，因為此應用僅使用永續查詢。
++ `REACT_APP_AUTH_METHOD=`:首選的身份驗證方法。 可選，預設情況下不使用身份驗證。
+   + `service-token`:使用服務憑據在AEMas a Cloud Service上獲取訪問令牌
+   + `dev-token`:使用dev令牌在AEMas a Cloud Service上進行本地開發
+   + `basic`:與本地AEM作者一起使用用戶/通行證進行本地開發
+   + 留空以在不進行身份驗證AEM的情況下連接
++ `REACT_APP_AUTHORIZATION=admin:admin`:將基本身份驗證憑據設定為在連接到AEM作者環境時使用（僅用於開發）。 如果連接到「發佈」環境，則不需要此設定。
++ `REACT_APP_DEV_TOKEN`:開發令牌字串。 要連接到遠程實例，除基本身份驗證（用戶：pass）外，您可以在雲控制台中將持有者身份驗證與DEV令牌一起使用
++ `REACT_APP_SERVICE_TOKEN`:服務憑據檔案的路徑。 要連接到遠程實例，還可以使用服務令牌（從開發人員控制台下載檔案）進行身份驗證。
 
-### 代理API請求
+### 代理請AEM求
 
-使用Webpack開發伺服器時(`npm start`)專案需仰賴 [代理設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) 使用 `http-proxy-middleware`. 檔案的設定位置為 [src/setupProxy.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/setupProxy.js) 並需仰賴設定於的數個自訂環境變數 `.env` 和 `.env.development`.
+使用WebPack開發伺服器時(`npm start`)項目依賴於 [代理設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) 使用 `http-proxy-middleware`。 檔案配置在 [src/setupProxy.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/setupProxy.js) 並依賴於 `.env` 和 `.env.development`。
 
-如果連線至AEM製作環境，則需要設定對應的驗證方法。
+如果連接到作AEM者環境，則 [驗證方法需要配置](#environment-variables)。
 
-### CORS — 跨原始資源共用
+### 跨源資源共用(CORS)
 
-此專案仰賴在目標AEM環境上執行的CORS設定，並假設應用程式在開發模式中於http://localhost:3000上執行。 此 [COR配置](https://github.com/adobe/aem-guides-wknd/blob/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) 是 [WKND參考網站](https://github.com/adobe/aem-guides-wknd).
+此React應用程式依賴於在AEM目標環境上運行的基於CORS的配AEM置，並假定React應用程式在 `http://localhost:3000` 的下界。 的 [CORS配置](https://github.com/adobe/aem-guides-wknd/blob/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) 是 [WKND站點](https://github.com/adobe/aem-guides-wknd)。
 
-![CORS設定](assets/cross-origin-resource-sharing-configuration.png)
-
-*製作環境的範例CORS設定*
+![CORS配置](assets/react-app/cross-origin-resource-sharing-configuration.png)
