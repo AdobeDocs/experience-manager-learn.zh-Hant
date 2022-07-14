@@ -6,9 +6,9 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '221'
 ht-degree: 19%
 
 ---
@@ -36,9 +36,7 @@ ht-degree: 19%
       + [1 — 定義內容片段模型](./graphql/multi-step/content-fragment-models.md)
       + [2 — 創作內容片段](./graphql/multi-step/author-content-fragments.md)
       + [3 — 瀏覽GraphQL API](./graphql/multi-step/explore-graphql-api.md)
-      + [4 — 來自外部應用的查詢](./graphql/multi-step/graphql-and-external-app.md)
-      + [5 — 使用片段引用的高級資料建模](./graphql/multi-step/fragment-references.md)
-      + [6 — 生產部署](./graphql/multi-step/production-deployment.md)
+      + [4 — 構建反應應用](./graphql/multi-step/graphql-and-react-app.md)
    + 高級教程{#advanced-tutorial}
       + [概觀](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
       + [1 — 建立內容片段模型](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)

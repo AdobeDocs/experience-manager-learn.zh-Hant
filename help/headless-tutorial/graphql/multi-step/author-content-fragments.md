@@ -1,6 +1,6 @@
 ---
-title: 製作內容片段 — AEM無周邊功能快速入門 — GraphQL
-description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 根據內容片段模型建立和編輯新內容片段。 了解如何建立內容片段的變體。
+title: 創作內容片段 — 無頭入門AEM- GraphQL
+description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 基於內容片段模型建立和編輯新的內容片段。 瞭解如何建立內容片段的變體。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6713
@@ -10,117 +10,162 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 0%
+source-wordcount: '897'
+ht-degree: 2%
 
 ---
 
-# 製作內容片段 {#authoring-content-fragments}
+# 創作內容片段 {#authoring-content-fragments}
 
-在本章中，您將根據[新定義的貢獻者內容片段模型](./content-fragment-models.md)建立和編輯新的內容片段。 您也會學習如何建立內容片段的變體。
+在本章中，您將根據 [新定義的內容片段模型](./content-fragment-models.md)。 您還將學習如何建立內容片段的變體。
 
 ## 必備條件 {#prerequisites}
 
-這是多部分教學課程，假設[定義內容片段模型](./content-fragment-models.md)中概述的步驟已完成。
+這是一個多部分教程，並假定在 [定義內容片段模型](./content-fragment-models.md) 已完成。
 
 ## 目標 {#objectives}
 
-* 根據內容片段模型製作內容片段
-* 建立內容片段變數
+* 基於內容片段模型編寫內容片段
+* 建立內容片段變體
 
-## 內容片段製作概述 {#overview}
+## 建立資產資料夾
 
->[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
+內容片段儲存在AEM Assets的資料夾中。 要從上一章中建立的模型建立內容片段，必須建立一個資料夾來儲存它們。 資料夾上需要配置才能從特定模型建立片段。
 
-上述影片提供製作內容片段的概觀。
+1. 從「開始AEM」螢幕導航到 **資產** > **檔案**。
+
+   ![導航到資產檔案](assets/author-content-fragments/navigate-assets-files.png)
+
+1. 點擊 **建立** 在角落里敲打 **資料夾**。 在生成的對話框中輸入：
+
+   * 標題*: **我的項目**
+   * 名稱： **我的項目**
+
+   ![「建立資料夾」對話框](assets/author-content-fragments/create-folder-dialog.png)
+
+1. 選擇 **我的資料夾** 資料夾和點擊 **屬性**。
+
+   ![開啟資料夾屬性](assets/author-content-fragments/open-folder-properties.png)
+
+1. 點擊 **Cloud Services** 頁籤。 下 **雲配置** 使用路徑查找器選擇 **我的項目** 配置。 值應為 `/conf/my-project`。
+
+   ![設定雲配置](assets/author-content-fragments/set-cloud-config-my-project.png)
+
+   設定此屬性將允許使用在上一章中建立的模型建立內容片段。
+
+1. 點擊 **策略** 頁籤。 下 **允許的內容片段模型** 使用路徑查找器選擇 **人員** 和 **團隊** 模型建立時間。
+
+   ![允許的內容片段模型](assets/author-content-fragments/allowed-content-fragment-models.png)
+
+   這些策略將由任何子資料夾自動繼承，並且可以覆蓋。 請注意，您還可以按標籤允許模型，或從其他項目配置（如WKND共用）中啟用模型。 此機制提供了管理內容層次結構的強大方法。
+
+1. 點擊 **保存並關閉** 的子菜單。
+
+1. 在 **我的項目** 的子菜單。
+
+1. 建立具有以下值的另一個資料夾：
+
+   * 標題*: **英語**
+   * 名稱： **恩**
+
+   最佳做法是設定多語言支援項目。 請參閱 [有關詳細資訊，請瀏覽以下文檔頁面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html)。
+
 
 ## 建立內容片段 {#create-content-fragment}
 
-在前一章的[定義內容片段模型](./content-fragment-models.md)中，建立了&#x200B;**貢獻者**&#x200B;模型。 使用此模型製作新的內容片段。
+接下來將根據 **團隊** 和 **人員** 模型。
 
-1. 從&#x200B;**AEM Start**&#x200B;功能表導覽至&#x200B;**Assets** > **Files**。
-1. 按一下資料夾以導覽至&#x200B;**WKND Site** > **English** > **Contributors**。 此資料夾包含WKND品牌貢獻者的頭部擷取畫面清單。
+1. 從「Start(AEM開始)」螢幕點擊 **內容片段** 開啟內容片段UI。
 
-1. 按一下右上角的&#x200B;**建立**&#x200B;並選取&#x200B;**內容片段**:
+   ![內容片段UI](assets/author-content-fragments/cf-fragment-ui.png)
 
-   ![按一下建立新片段](assets/author-content-fragments/create-content-fragment-menu.png)
+1. 在左欄上 **我的項目** 點擊 **英語**。
+1. 點擊 **建立** 提到 **新內容片段** 對話框並輸入以下值：
 
-1. 選取&#x200B;**貢獻者**&#x200B;模型，然後按一下&#x200B;**下一步**。
+   * 位置: `/content/dam/my-project/en`
+   * 內容片段模型： **人員**
+   * 標題： **無名氏**
+   * 名稱: `john-doe`
 
-   ![選取貢獻者模型](assets/author-content-fragments/select-contributor-model.png)
+   ![新內容片段](assets/author-content-fragments/new-content-fragment-john-doe.png)
+1. 點擊 **建立**。
+1. 重複上述步驟以建立表示 **艾莉森·史密斯**:
 
-   這與上一章中建立的&#x200B;**貢獻者**&#x200B;模型相同。
+   * 位置: `/content/dam/my-project/en`
+   * 內容片段模型： **人員**
+   * 標題： **艾莉森·史密斯**
+   * 名稱: `alison-smith`
 
-1. 為標題輸入&#x200B;**Stacey Roswells**，然後按一下&#x200B;**Create**。
-1. 在&#x200B;**Success**&#x200B;對話方塊中，按一下&#x200B;**開啟**&#x200B;以開啟新建立的片段。
+   點擊 **建立** 建立新的「人員」片段。
 
-   ![已建立新內容片段](assets/author-content-fragments/new-content-fragment.png)
+1. 接下來，重複這些步驟以建立新 **團隊** 片段 **阿爾法隊**:
 
-   請注意，模型定義的欄位現在可供製作此內容片段例項。
+   * 位置: `/content/dam/my-project/en`
+   * 內容片段模型： **團隊**
+   * 標題： **阿爾法隊**
+   * 名稱: `team-alpha`
 
-1. 對於&#x200B;**全名**，請輸入：**Stacey Roswells**。
-1. **傳記**&#x200B;輸入簡短傳記。 需要點靈感嗎？ 歡迎重新使用此[文本檔案](assets/author-content-fragments/stacey-roswells-bio.txt)。
-1. 對於&#x200B;**圖片引用**，按一下&#x200B;**資料夾**&#x200B;表徵圖並瀏覽到&#x200B;**WKND站點** > **英文** > **貢獻者** > **stacey-roswells.jpg**。 這會評估路徑：`/content/dam/wknd/en/contributors/stacey-roswells.jpg`。
-1. 對於&#x200B;**佔領**，選擇&#x200B;**攝影師**。
+   點擊 **建立** 建立新團隊片段。
 
-   ![製作片段](assets/author-content-fragments/stacye-roswell-fragment-authored.png)
+1. 下面應該有三個內容片段 **我的項目** > **英語**:
 
-1. 按一下&#x200B;**儲存**&#x200B;以儲存變更。
+   ![新內容片段](assets/author-content-fragments/new-content-fragments.png)
 
-## 建立內容片段變數
+## 編輯人員內容片段 {#edit-person-content-fragments}
 
-所有內容片段的開頭皆為&#x200B;**主版**&#x200B;變數。 **主**&#x200B;變數可視為片段的&#x200B;*預設*&#x200B;內容，並在透過GraphQL API公開內容時自動使用。 您也可以建立內容片段的變體。 此功能為設計實作提供額外的彈性。
+接下來，使用資料填充新建立的片段。
 
-變數可用來鎖定特定通道。 例如，可以建立&#x200B;**mobile**&#x200B;變數，其中包含較少的文字量或參考通道特定影像。 變數的使用方式取決於實作。 與任何功能一樣，使用前應先謹慎規劃。
+1. 按一下旁邊的複選框 **無名氏** 點擊 **開啟**。
 
-接下來，建立新的變數，以了解可用的功能。
+   ![開啟內容片段](assets/author-content-fragments/open-fragment-for-editing.png)
 
-1. 重新開啟&#x200B;**Stacey Roswells**&#x200B;內容片段。
-1. 在左側邊欄中，按一下「建立變異」**。**
-1. 在&#x200B;**New Variation**&#x200B;強制回應中，輸入&#x200B;**Summary**&#x200B;的標題。
+1. 內容片段編輯器包含基於內容片段模型的表單。 填寫各個欄位以將內容添加到 **無名氏** 碎片。 對於配置檔案圖片，您可以在WKND共用中選擇一個影像或將您自己的影像上傳到AEM Assets。
 
-   ![新變化 — 摘要](assets/author-content-fragments/new-variation-summary.png)
+   ![內容片段編輯器](assets/author-content-fragments/content-fragment-editor-jd.png)
 
-1. 按一下&#x200B;**Berium**&#x200B;多行欄位，然後按一下&#x200B;**Expand**&#x200B;按鈕，輸入多行欄位的全螢幕視圖。
+1. 下一步，點擊 **建立變體** 左欄。 在對話框中，將類型 **備用** 的子菜單。
 
-   ![輸入全螢幕視圖](assets/author-content-fragments/enter-full-screen-view.png)
+1. 更改中的某些元素 **備用** 變異。
 
-1. 按一下右上角功能表中的&#x200B;**摘要文字** 。
+   ![備用版本](assets/author-content-fragments/alternate-variation-john-doe-fragment.png)
 
-1. 輸入&#x200B;******50**&#x200B;字的目標，然後按一下&#x200B;**開始**。
+   變體功能使作者能夠建立同一內容片段的不同版本。 這可用於提供長格式文章的摘要版本。 預設情況下，單個 **母版** 建立變體。 變體的多行文本欄位元素可以與主變體同步。
 
-   ![摘要預覽](assets/author-content-fragments/summarize-text-preview.png)
+1. 點擊 **保存並關閉** 保存對無名氏碎片的更改。
+1. 返回內容片段UI並開啟 **艾莉森·史密斯** 檔案。
+1. 重複上述步驟以填充 **艾莉森·史密斯** 內容碎片。
 
-   這將開啟總結預覽。 AEM電腦語言處理器將嘗試根據目標字數來匯總文本。 您也可以選取要移除的不同句子。
+## 編輯團隊內容片段 {#edit-team-content-fragment}
 
-1. 對總結滿意時，按一下&#x200B;**匯總**。 按一下多行文本欄位，並切換&#x200B;**Expand**&#x200B;按鈕以返回主視圖。
+1. 開啟 **阿爾法隊** 使用內容片段UI的內容片段。
+1. 填寫 **標題**。 **短名稱**, **說明**。
+1. 選擇 **無名氏** 和 **艾莉森·史密斯** 要填充的內容片段 **團隊成員** 欄位：
 
-1. 按一下&#x200B;**儲存**&#x200B;以儲存變更。
+   ![設定團隊成員](assets/author-content-fragments/select-team-members.png)
 
-## 建立其他內容片段
+   >[!NOTE]
+   >
+   >您還可以使用 **新內容片段** 按鈕
 
-重複[建立內容片段](#create-content-fragment)中概述的步驟，以建立額外的&#x200B;**貢獻者**。 這將用於下一章，作為如何查詢多個片段的範例。
+1. 點擊 **保存並關閉** 以保存對Team Alpha片段所做的更改。
 
-1. 在&#x200B;**貢獻者**&#x200B;資料夾中，按一下右上方的&#x200B;**建立**&#x200B;並選取&#x200B;**內容片段**:
-1. 選取&#x200B;**貢獻者**&#x200B;模型，然後按一下&#x200B;**下一步**。
-1. 為標題輸入&#x200B;**Jacob Wester**，然後按一下&#x200B;**Create**。
-1. 在&#x200B;**Success**&#x200B;對話方塊中，按一下&#x200B;**開啟**&#x200B;以開啟新建立的片段。
-1. 對於&#x200B;**全名**，請輸入：**雅各布·韋斯特**。
-1. **傳記**&#x200B;輸入簡短傳記。 需要點靈感嗎？ 歡迎重新使用此[文本檔案](assets/author-content-fragments/jacob-wester.txt)。
-1. 對於&#x200B;**圖片引用**，按一下&#x200B;**資料夾**&#x200B;表徵圖並瀏覽到&#x200B;**WKND站點** > **英文** > **貢獻者** > **jacob_wester.**。 這會評估路徑：`/content/dam/wknd/en/contributors/jacob_wester.jpg`。
-1. 對於&#x200B;**佔領**，選擇&#x200B;**書寫器**。
-1. 按一下&#x200B;**儲存**&#x200B;以儲存變更。 除非您想要，否則不需要建立變異！
+## 瀏覽WKND內容片段（可選） {#explore-wknd-content-fragments}
 
-   ![其他內容片段](assets/author-content-fragments/additional-content-fragment.png)
+如果 [已安裝WKND共用示例內容](./overview.md#install-sample-content) 您可以檢查冒險、文章和作者模型的內容片段，以獲得更多建立內容的想法。
 
-   您現在應該有兩個&#x200B;**貢獻者**&#x200B;片段。
+![WKND內容片段](assets/author-content-fragments/wknd-content-fragments.png)
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您剛撰寫了多個內容片段，並建立了變體。
+恭喜，您剛剛創作了多個內容片段並建立了變體。
 
 ## 後續步驟 {#next-steps}
 
-在下一章[探索GraphQL API](explore-graphql-api.md)中，您將使用內建的GrapiQL工具探索AEM GraphQL API。 了解AEM如何根據內容片段模型自動產生GraphQL架構。 您將嘗試使用GraphQL語法來建構基本查詢。
+在下一章， [瀏覽GraphQL API](explore-graphql-api.md)，您將使AEM用內置的GrapiQL工具瀏覽GraphQL API。 瞭解如AEM何基於內容片段模型自動生成GraphQL架構。 您將嘗試使用GraphQL語法構建基本查詢。
+
+## 相關文檔
+
+* [管理內容片段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)
+* [變化 - 編寫片段內容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)
