@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: 8b2c116ceb6ab8c3a009dcec6629c2e97d815b7b
+source-git-commit: 5d32899a58e591b535dab991f89a8f7467b7b435
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ![iOSSwiftUI應AEM用](./assets/ios-swiftui-app/ios-app.png)
 
-查看 [GitHub上的原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app)
+查看 [GitHub上的原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)
 
 ## 必備條件 {#prerequisites}
 
@@ -50,7 +50,7 @@ iOS應用程式設計為連接到 __AEM發佈__ 但是，如果在iOS應用程�
    git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 啟動 [Xcode](https://developer.apple.com/xcode/) 開啟資料夾 `ios-swiftui-app`
+1. 啟動 [Xcode](https://developer.apple.com/xcode/) 開啟資料夾 `ios-app`
 1. 修改檔案 `Config.xcconfig` 檔案和更新 `AEM_SCHEME` 和 `AEM_HOST` 匹配目標AEM發佈服務。
 
    ```plain
@@ -86,7 +86,7 @@ iOS應用程式設計為連接到 __AEM發佈__ 但是，如果在iOS應用程�
 
 ## 代碼
 
-以下是iOS應用程式構建方式、它如何連接到AEMHeadless以使用GraphQL永續查詢檢索內容以及如何顯示該資料的摘要。 可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app)。
+以下是iOS應用程式構建方式、它如何連接到AEMHeadless以使用GraphQL永續查詢檢索內容以及如何顯示該資料的摘要。 可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)。
 
 ### 永續查詢
 
