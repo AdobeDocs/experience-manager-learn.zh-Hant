@@ -1,29 +1,29 @@
 ---
-title: 了解AEM中的驗證支援
-description: 'AEM支援的驗證（有時也是授權）機制的整合檢視。 '
+title: 瞭解中的身份驗證支AEM持
+description: 對支援的驗證（偶爾還有授權）機制的統一視AEM圖。
 version: 6.3, 6.4, 6.5
-feature: 使用者和群組
+feature: User and Groups
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
-topic: 架構
+topic: Architecture
 role: Architect
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
+source-git-commit: 84d7230071544e7cdc63ecc0faa32c03ab337cd6
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '130'
 ht-degree: 3%
 
 ---
 
+# 瞭解6.x中的AEM身份驗證支援
 
-# 了解AEM 6.x中的驗證支援
+對支援的驗證（偶爾還有授權）機制的統一視AEM圖。
 
-AEM支援的驗證（有時也是授權）機制的整合檢視。
-
-*下表說明使用者如何驗證至AEM。*
+*下表介紹了用戶如何驗證到AEM。*
 
 <table>
     <tbody>
@@ -34,13 +34,13 @@ AEM支援的驗證（有時也是授權）機制的整合檢視。
             <td><strong>AEM 6.5</strong></td>
         </tr>
         <tr>
-            <td><strong>AEM作為標準身分提供者</strong></td>
+            <td><strong>作為AEM標準身份提供程式</strong></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>基本驗證</td>
+            <td>基本身份驗證</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -52,13 +52,13 @@ AEM支援的驗證（有時也是授權）機制的整合檢視。
             <td>✔</td>
         </tr>
         <tr>
-            <td>以代號為基礎（w/ <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝代號</a>）</td>
+            <td>基於令牌(帶 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝令牌</a>)</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>非AEM系統作為標準身份提供者</strong></td>
+            <td><strong>非系AEM統作為標準身份提供程式</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -81,7 +81,7 @@ AEM支援的驗證（有時也是授權）機制的整合檢視。
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-oauth-server-functionality-in-aem.html" target="_blank">OAuth 1.0a和2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/assets/oauth-server-functionality-in-aem-7-23-14.pdf" target="_blank">OAuth 1.0a和2.0</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
@@ -95,4 +95,4 @@ AEM支援的驗證（有時也是授權）機制的整合檢視。
     </tbody>
 </table>
 
-⁕ *透過社群專案提供，但不直接受Adobe支援。*
+⁕ *通過社區項目提供，但不直接受Adobe支援。*
