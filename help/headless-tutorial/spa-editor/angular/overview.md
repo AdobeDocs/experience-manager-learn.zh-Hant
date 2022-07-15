@@ -17,7 +17,7 @@ exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '698'
-ht-degree: 92%
+ht-degree: 94%
 
 ---
 
@@ -59,7 +59,7 @@ ht-degree: 92%
 * [Apache Maven](https://maven.apache.org/) (3.3.9 或更新版本)
 * [Node.js](https://nodejs.org/en/) 和 [npm](https://www.npmjs.com/)
 
-*雖然不一定需要，但對於[開發傳統的 AEM Sites 元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)有基本的了解也會有幫助。*
+*雖然不一定需要，但對於[開發傳統的 AEM Sites 元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)有基本的了解也會有幫助。*
 
 ## 本機開發環境 {#local-dev-environment}
 

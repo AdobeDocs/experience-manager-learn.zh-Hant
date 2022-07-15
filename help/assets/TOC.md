@@ -7,14 +7,14 @@ team: TM
 source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
 workflow-type: tm+mt
 source-wordcount: '378'
-ht-degree: 21%
+ht-degree: 23%
 
 ---
 
 
 # AEM Assets 影片和教學課程 {#assets}
 
-+ [概覽](overview.md)
++ [概觀](overview.md)
 
 + 設定{#configuring}
    + [基線資料夾](configuring/baseline-folders.md)
@@ -43,7 +43,7 @@ ht-degree: 21%
 
 + 搜索和發現{#search-and-discovery}
    + [搜尋](./search-and-discovery/search.md)
-   + [集合](./search-and-discovery/collections.md)
+   + [收藏集](./search-and-discovery/collections.md)
    + [搜尋提升](./search-and-discovery/search-boost.md)
 
 + 高級功能{#advanced}
@@ -95,7 +95,7 @@ ht-degree: 21%
    + [資產搜索](./adobe-asset-link/asset-search.md)
 
 + 內容自動化{#content-automation}
-   + [概覽](./content-automation/overview.md)
+   + [概觀](./content-automation/overview.md)
    + [創意操作](./content-automation/creative-operations.md)
    + [Photoshop行動](./content-automation/photoshop-actions.md)
 
@@ -138,7 +138,7 @@ ht-degree: 21%
       + [增強的連接器基礎](./workfront/enhanced-connector/basics.md)
       + [項目資料夾](./workfront/enhanced-connector/project-folders.md)
       + 專AEM家系列{#aem-experts-series}
-         + [概覽](./workfront/enhanced-connector/aem-experts-series/overview.md)
+         + [概觀](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [設定](./workfront/enhanced-connector/aem-experts-series/setup.md)
          + [Workfront表單AEM和元資料](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
          + [標籤、項目連結資料夾和資料夾元資料](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)

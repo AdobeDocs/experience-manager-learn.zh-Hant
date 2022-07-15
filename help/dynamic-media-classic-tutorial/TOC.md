@@ -19,13 +19,13 @@ ht-degree: 46%
 
 # Dynamic Media Classic 簡介 {#dynamic-media-classic-tutorial}
 
-+ [Dynamic Media Classic概觀](./overview.md)
-+ [資產工作流程和預覽](./main-workflow.md)
-+ [確定資料夾結構和檔案命名慣例](./folder-structure-filenaming.md)
++ [Dynamic Media Classic概述](./overview.md)
++ [資產工作流和預覽](./main-workflow.md)
++ [確定資料夾結構和檔案命名約定](./folder-structure-filenaming.md)
 + [影像預設集](./image-presets.md)
-+ [影像、色票、回轉和混合媒體集](./media-sets.md)
-+ [裁切、調整影像和縮放目標](./crop-adjusted-zoom-targets.md)
-+ [基本範本簡介](./basic-templates.md)
-+ [影片概述](./video-overview.md)
++ [影像、色板、旋轉和混合媒體集](./media-sets.md)
++ [裁剪、調整影像和縮放目標](./crop-adjusted-zoom-targets.md)
++ [基本模板簡介](./basic-templates.md)
++ [視頻概述](./video-overview.md)
 + [智慧型影像](./smart-imaging.md)
-+ [有價值的管理員報表](./valuable-reports.md)
++ [管理員的寶貴報告](./valuable-reports.md)
