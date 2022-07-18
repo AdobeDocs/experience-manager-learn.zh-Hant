@@ -4,9 +4,9 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: 52587c1131620d62428ecfc464a97dce00d8a1d8
+source-git-commit: fa85f0270e21cc9857f95c541a06e87cf26d5798
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '796'
 ht-degree: 20%
 
 ---
@@ -71,6 +71,7 @@ ht-degree: 20%
       + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
    + 進階{#advanced}
       + [服務用戶](./developing/advanced/service-users.md)
+      + [快取頁變型](./developing/advanced/variant-caching.md)
    + [AEMSDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + 調試AEM{#debugging}
    + 調試AEMSDK{#debugging-aem-sdk}
