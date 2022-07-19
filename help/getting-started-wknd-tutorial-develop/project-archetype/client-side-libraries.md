@@ -1,6 +1,6 @@
 ---
 title: 客戶端庫和前端工作流
-description: 瞭解如何使用客戶端庫或客戶端庫來部署和管理Adobe Experience Manager(AEM)站點實現的CSS和Javascript。 本教程還將介紹如何將webpack項目ui.frontend模組整合到端到端構建流程中。
+description: 瞭解如何使用客戶端庫或客戶端庫為Adobe Experience Manager()站點實現部署和管理CSSAEM和Javascript。 瞭解如何將webpack項目ui.frontend模組整合到端到端構建流程中。
 sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
@@ -11,10 +11,10 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: 1a73d7ee1f71a5bd78114398f04e98a894847957
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '2882'
-ht-degree: 0%
+source-wordcount: '2878'
+ht-degree: 1%
 
 ---
 

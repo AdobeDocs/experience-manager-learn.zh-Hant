@@ -1,6 +1,6 @@
 ---
-title: 設備測試
-description: 本教程介紹了UnitTest的實現，該實現驗證在「定制元件」教程中建立的Byline元件的Sling模型的行為。
+title: 單元測試
+description: 實現一個單位test，該單元驗證在「定制元件」教程中建立的Byline元件的Sling模型的行為。
 sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
@@ -12,16 +12,16 @@ kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '3025'
+source-wordcount: '3020'
 ht-degree: 0%
 
 ---
 
 # 設備測試 {#unit-testing}
 
-本教程介紹了一個UnitTest的實現，它驗證了在 [自定義元件](./custom-component.md) 教程。
+本教程介紹了一個單位test的實現，該單元驗證在 [自定義元件](./custom-component.md) 教程。
 
 ## 必備條件 {#prerequisites}
 
@@ -78,7 +78,7 @@ _如果系統上同時安裝了Java 8和Java 11，則VS代碼test運行程式在
 
 ## 設備測試和Adobe雲管理器 {#unit-testing-and-adobe-cloud-manager}
 
-[Adobe雲管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hant) 整合單元test執行和 [代碼覆蓋率報告](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) CI/CD管道，幫助鼓勵和推廣單元測試代碼的最佳AEM實踐。
+[Adobe雲管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) 整合單元test執行和 [代碼覆蓋率報告](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) CI/CD管道，幫助鼓勵和推廣單元測試代碼的最佳AEM實踐。
 
 雖然單元測試代碼是任何代碼庫的良好做法，但在使用Cloud Manager時，通過為Cloud Manager提供單元test來運行，利用其代碼質量測試和報告設施非常重要。
 

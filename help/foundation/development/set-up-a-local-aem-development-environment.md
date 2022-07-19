@@ -1,6 +1,6 @@
 ---
 title: 設定本地開發AEM環境
-description: Adobe Experience Manager地方開發指南AEM。 介紹本地安裝、Apache Maven、整合開發環境和調試/故障排除等重要主題。 討論了Eclipse IDE、CRXDE-Lite、Visual Studio代碼和IntelliJ開發。
+description: '瞭解如何為Experience Manager建立本地開發環境。 熟悉本地安裝、Apache Maven、整合開發環境以及調試和故障排除。 使用Eclipse IDE、CRXDE-Lite、Visual Studio代碼和IntelliJ。 '
 version: 6.4, 6.5
 feature: Developer Tools
 topics: development
@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '2582'
+source-wordcount: '2579'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Adobe Experience Manager地方開發指南AEM。 介紹本地安裝、Apache Maven、整合開發環境和調試/故障排除等重要主題。 開發 **[!DNL Eclipse IDE]。 [!DNL CRXDE Lite]。 [!DNL Visual Studio Code] 和[!DNL IntelliJ]** 中。
 
-## 概覽
+## 概觀
 
 建立地方發展環境是Adobe Experience Manager或發展的第一步AEM. 請花時間建立一個高質量的開發環境，以提高您的生產力並更快地編寫更好的代碼。 把當地的AEM發展環境分為四個方面：
 
@@ -170,7 +170,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 * [**下載**](https://code.visualstudio.com/Download) **Visual Studio代碼**
 * **[回購](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)**  — 類似FTP的JCR內容工具
 * **[美國](https://aemfed.io/)**  — 加快前AEM端工作流
-* **[同AEM步](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)**  — 社區支援* Visual Studio代碼擴展
+* **[同AEM步](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)**  — 支援的社區&#42; Visual Studio代碼擴展
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 

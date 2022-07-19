@@ -1,13 +1,13 @@
 ---
-title: AEM Sites 影片和教學課程
-description: 通過我們的AEMAdobe Experience Manager Sites視頻和教程瞭解更多資訊。
+title: AEM Sites視頻和教程
+description: 從我們的視頻和教程中瞭解Experience Manager Sites。 瞭解我們的員工選擇，以及AEM Sites的新情況。
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '348'
-ht-degree: 16%
+source-wordcount: '354'
+ht-degree: 14%
 
 ---
 
