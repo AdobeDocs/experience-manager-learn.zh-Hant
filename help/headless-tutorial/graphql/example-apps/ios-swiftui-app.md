@@ -3,14 +3,14 @@ title: iOS應用 — 無AEM頭示例
 description: 示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此iOS應用程式演示了如何使用AEMGraphQL API使用永續查詢來查詢內容。
 version: Cloud Service
 mini-toc-levels: 2
-kt: 9166
-thumbnail: KT-9166.jpg
+kt: 10587
+thumbnail: KT-10587.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: 4b8f7d9c6def8c121f3c975218b7214d271fa77f
+source-git-commit: cd7cb89f407f5e0c465544593563534472daf928
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 0%
