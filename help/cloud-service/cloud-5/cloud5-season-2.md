@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 52587c1131620d62428ecfc464a97dce00d8a1d8
+source-git-commit: c061ea9d08606052c4b2cf5b3c84d6f1df5a57fa
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '440'
 ht-degree: 1%
 
 ---
@@ -114,14 +114,16 @@ ht-degree: 1%
   </tr>
 <tr>
    <td>
-            <img alt="修復您的……重寫" src="./imgs/coming-soon.png"/>
+           <a href="season-2/cloud5-fix-your-rewrites.md">
+               <img alt="修復……重寫" src="./imgs/s2/006-thumb.png"/>
+            </a>
       <div>
-            <strong>修復您的……重寫</strong>
+            <a href="season-2/cloud5-fix-your-rewrites.md"><strong>修復您的……重寫</strong></a>
          <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
       </div>
       <p>
         <br/>
-         2022年7月22日
+         快速瞭解有助於加快您在as a Cloud Service上的重寫開發和優化的AEM內容。
       </p>
      </td>   
      <td>
