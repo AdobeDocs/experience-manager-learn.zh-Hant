@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -56,9 +56,9 @@ GraphQL API提供了AEM一種功能強大的查詢語言，可將內容片段的
 
    >[!NOTE]
    >
-   > 還可以建立全局終結點，以啟用跨項目對模型的查詢。 例如，如果要組合涉及中模型的查詢 **WKND共用** 項目和 **我的項目**。 應謹慎使用，並且僅在必要時使用，因為它可能會使環境面臨其他安全漏洞。
+   > 還可以建立全局端點，以啟用對多個配置中的模型的查詢。 應謹慎使用此選項，因為它可能會使環境暴露於其他安全漏洞，並增加管理的總體復AEM雜性。
 
-1. 現在，您應看到在您的環境中啟用了兩個GraphQL終結點（假定您安裝了WKND共用內容）。
+1. 現在，您應看到在您的環境上啟用了一個GraphQL終結點。
 
    ![已啟用grapql端點](assets/explore-graphql-api/enabled-graphql-endpoints.png)
 
@@ -76,11 +76,11 @@ GraphQL API提供了AEM一種功能強大的查詢語言，可將內容片段的
    >
    > 對於舊版AEM本的GraphiQL IDE，可能未內置。 可以在這些之後手動安裝 [說明](#install-graphiql)。
 
-1. 在右上角設定 **端點** 至 **我的項目終結點**。
+1. 在右上角，確保 **端點** 設定為 **我的項目終結點**。
 
    ![設定GraphQL終結點](assets/explore-graphql-api/set-my-project-endpoint.png)
 
-   這將將所有查詢範圍限定為在 **我的項目** 項目。 請注意，還有一個 **WKND共用**。
+這將將所有查詢範圍限定為在 **我的項目** 項目。
 
 ### 查詢內容片段清單 {#query-list-cf}
 
@@ -370,16 +370,28 @@ GraphQL API提供了AEM一種功能強大的查詢語言，可將內容片段的
 
    ![最終永續查詢](assets/explore-graphql-api/final-persisted-queries.png)
 
+
+## 發佈GraphQL終結點和永續查詢
+
+經審閱和驗證後，發佈 `GraphQL Endpoint` &amp; `Persisted Queries`
+
+1. 從「開始AEM」螢幕導航到 **工具** > **常規** > **圖形QL**。
+
+1. 按一下旁邊的複選框 **我的項目終結點** 點擊 **發佈**
+
+   ![發佈GraphQL終結點](assets/explore-graphql-api/publish-graphql-endpoint.png)
+
+1. 從「開始AEM」螢幕導航到 **工具** > **常規** > **GraphQL查詢編輯器**
+
+1. 點擊 *全團隊* 從「保留的查詢」面板，點擊 **發佈**
+
+   ![發佈永續查詢](assets/explore-graphql-api/publish-persisted-query.png)
+
+1. 重複上述步驟 `person-by-name` 查詢
+
 ## 解決方案檔案 {#solution-files}
 
 下載在前三章中建立的內容、模型和持久查詢： [教程 — 解決方案 — content.zip](assets/explore-graphql-api/tutorial-solution-content.zip)
-
-## 瀏覽WKND永續查詢（可選） {#explore-wknd-content-fragments}
-
-如果 [已安裝WKND共用示例內容](./overview.md#install-sample-content) 您可以查看並執行永續查詢，如全部冒險、按活動冒險、按路徑冒險等。
-
-![WKND永續查詢](assets/explore-graphql-api/wknd-persisted-queries.png)
-
 
 ## 其他資源
 

@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 ## 必備條件 {#prerequisites}
 
-這是一個多部分教程，假定 [作者AEM環境可用](./overview.md#prerequisites) （可選） [已安裝WKND共用示例內容](./overview.md#install-sample-content)。
+這是一個多部分教程，假定 [作者AEM環境可用](./overview.md#prerequisites)
 
 ## 目標 {#objectives}
 
@@ -39,7 +39,7 @@ ht-degree: 2%
 
 項目配置包含與特定項目關聯的所有內容片段模型，並提供組織模型的方法。 必須至少建立一個項目 **先** 建立新內容片段模型。
 
-1. 登錄AEM到 **作者** 環境。
+1. 登錄AEM到 **作者** 環境(例如 `https://author-pYYYY-eXXXX.adobeaemcloud.com/`)
 1. 從「開始AEM」螢幕導航到 **工具** > **常規** > **配置瀏覽器**。
 
    ![導航到配置瀏覽器](assets/content-fragment-models/navigate-config-browser.png)
@@ -65,7 +65,6 @@ ht-degree: 2%
 
    ![導航到內容片段模型](assets/content-fragment-models/navigate-cf-models.png)
 
-   如果安裝了 [示例內容](overview.md#install-sample-content) 然後您將看到兩個資料夾： **我的項目** 和 **WKND共用**。
 1. 導航到 **我的項目** 的子菜單。
 1. 點擊 **建立** 右上角的 **建立模型** 的子菜單。
 1. 對於 **模型標題** 輸入： **人員** 點擊 **建立**。
@@ -165,23 +164,23 @@ ht-degree: 2%
 
    ![兩種型號](assets/content-fragment-models/two-new-models.png)
 
-## InspectWKND內容片段模型（可選）
+## 發佈項目配置和內容片段模型
 
-如果 [已安裝WKND共用示例內容](./overview.md#install-sample-content) 您可以檢查Adventure、Article和Author模型，以獲得更多的資料建模技術。
+經審閱和驗證後，發佈 `Project Configuration` &amp; `Content Fragment Model`
 
-1. 從 **開AEM始** 菜單導航 **工具** > **常規** > **內容片段模型**。
+1. 從「開始AEM」螢幕導航到 **工具** > **常規** > **配置瀏覽器**。
 
-1. 導航到 **WKND共用** 資料夾，您應看到三種模型：文章，探險和作者。
+1. 按一下旁邊的複選框 **我的項目** 點擊 **發佈**
 
-1. Inspect模型，將滑鼠懸停在卡上並點擊編輯表徵圖（鉛筆）
+   ![發佈項目配置](assets/content-fragment-models/publish-project-config.png)
 
-   ![WKND型號](assets/content-fragment-models/wknd-shared-models.png)
+1. 從「開始AEM」螢幕導航到 **工具** > **常規** > **內容片段模型**。
 
-1. 開啟 **內容片段模型編輯器** 可以檢查所使用的各種資料類型。
+1. 導航到 **我的項目** 的子菜單。
 
-   >[!CAUTION]
-   >
-   > 修改模型 **後** 內容片段已建立，具有下游效果。 現有片段中的欄位值將不再被引用，GraphQL公開的資料架構將發生更改，從而影響現有應用程式。
+1. 點擊 **人員** 和 **團隊** 模型和點擊 **發佈**
+
+   ![發佈內容片段模型](assets/content-fragment-models/publish-content-fragment-model.png)
 
 ## 恭喜！ {#congratulations}
 

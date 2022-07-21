@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '819'
 ht-degree: 2%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 2%
 
    ![允許的內容片段模型](assets/author-content-fragments/allowed-content-fragment-models.png)
 
-   這些策略將由任何子資料夾自動繼承，並且可以覆蓋。 請注意，您還可以按標籤允許模型，或從其他項目配置（如WKND共用）中啟用模型。 此機制提供了管理內容層次結構的強大方法。
+   這些策略將由任何子資料夾自動繼承，並且可以覆蓋。 請注意，您還可以按標籤允許模型，或從其他項目配置中啟用模型。 此機制提供了管理內容層次結構的強大方法。
 
 1. 點擊 **保存並關閉** 的子菜單。
 
@@ -121,17 +121,9 @@ ht-degree: 2%
 
    ![開啟內容片段](assets/author-content-fragments/open-fragment-for-editing.png)
 
-1. 內容片段編輯器包含基於內容片段模型的表單。 填寫各個欄位以將內容添加到 **無名氏** 碎片。 對於配置檔案圖片，您可以在WKND共用中選擇一個影像或將您自己的影像上傳到AEM Assets。
+1. 內容片段編輯器包含基於內容片段模型的表單。 填寫各個欄位以將內容添加到 **無名氏** 碎片。 對於配置檔案圖片，將您自己的影像上傳到AEM Assets。
 
    ![內容片段編輯器](assets/author-content-fragments/content-fragment-editor-jd.png)
-
-1. 下一步，點擊 **建立變體** 左欄。 在對話框中，將類型 **備用** 的子菜單。
-
-1. 更改中的某些元素 **備用** 變異。
-
-   ![備用版本](assets/author-content-fragments/alternate-variation-john-doe-fragment.png)
-
-   變體功能使作者能夠建立同一內容片段的不同版本。 這可用於提供長格式文章的摘要版本。 預設情況下，單個 **母版** 建立變體。 變體的多行文本欄位元素可以與主變體同步。
 
 1. 點擊 **保存並關閉** 保存對無名氏碎片的更改。
 1. 返回內容片段UI並開啟 **艾莉森·史密斯** 檔案。
@@ -151,11 +143,17 @@ ht-degree: 2%
 
 1. 點擊 **保存並關閉** 以保存對Team Alpha片段所做的更改。
 
-## 瀏覽WKND內容片段（可選） {#explore-wknd-content-fragments}
+## 發佈內容片段
 
-如果 [已安裝WKND共用示例內容](./overview.md#install-sample-content) 您可以檢查冒險、文章和作者模型的內容片段，以獲得更多建立內容的想法。
+在審閱和驗證後，發佈已創作的 `Content Fragments`
 
-![WKND內容片段](assets/author-content-fragments/wknd-content-fragments.png)
+1. 從「Start(AEM開始)」螢幕點擊 **內容片段** 開啟內容片段UI。
+
+1. 在左欄上 **我的項目** 點擊 **英語**。
+
+1. 點擊內容片段旁邊的複選框，然後點擊 **發佈**
+
+   ![發佈內容片段](assets/author-content-fragments/publish-content-fragment.png)
 
 ## 恭喜！ {#congratulations}
 
