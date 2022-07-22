@@ -9,14 +9,14 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: 3a9615177acb5475d9b2b4ef22907c11e7da2bf7
+source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 2%
 
 ---
 
-# 設定本地運AEM行時
+# 設定本地運AEM行時 {#set-up-local-aem-runtime}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
@@ -210,7 +210,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 1. 建立專用於包含「示例」內容的內容包，以幫助開發，並以Git維護。 應通過SDK升級保AEM留的任何內容將保留到此包中，並在升級SDK後重新AEM部署。
 1. 使用 [橡樹升級](https://jackrabbit.apache.org/oak/docs/migration.html) 和 `includepaths` 指令，將內容從以前的AEMSDK儲存庫複製到新AEM的SDK儲存庫。
-1. 使用先前AEMSDK上的包管理器和內容包備AEM份任何內容，並在新SDK上重新安AEM裝它們。
+1. 使用先前AEMSDK上的包管理器和內容包備AEM份任何內容，然後在新SDK上重新安AEM裝它們。
 
 請記住，使用以上方法在SDK升級之AEM間維護代碼表示開發反模式。 非一次性代碼應源於開發IDE，並通過部署流AEM入SDK。
 
