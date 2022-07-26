@@ -8,13 +8,14 @@ role: Leader, Architect, Admin, Developer
 level: Beginner
 kt: 10718
 thumbnail: KT-10718.jpeg
-source-git-commit: 1c4ebdf78dd7107c7587b50e7476ea4b7ca3e812
+mini-toc-levels: 1
+exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
+source-git-commit: 4a902d838c99b3452581066ee568876ad16ec1a3
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 8%
 
 ---
-
 
 # AEMas a Cloud Service與Adobe Experience Cloud
 
@@ -105,7 +106,7 @@ Adobe Experience Platform標籤(以前是Adobe啟動，DTM)與之無縫整合AEM
 + [Experience Platform標籤使用手冊](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
 + [Experience Platform標籤教程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
 
-## AEM Forms
+### AEM Forms
 
 + [Experience Platform標籤使用手冊](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
 + [Experience Platform標籤教程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
@@ -115,7 +116,7 @@ Adobe Experience Platform標籤(以前是Adobe啟動，DTM)與之無縫整合AEM
 
 Adobe WorkfrontAEM與Cloud Service的整合優化了數字資產建立、協作和生命週期管理的流程。
 
-## AEM Assets
+### AEM Assets
 
 + [配置Workfront增強的連接器](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
 + [Workfront增強連接器視頻](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
