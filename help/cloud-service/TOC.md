@@ -133,7 +133,7 @@ ht-degree: 20%
          + [簡介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [數字註冊](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
          + [通信](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
-   + 雲加速管理器 {#cloud-acceleration-manager}
+   + Cloud Acceleration Manager {#cloud-acceleration-manager}
       + [簡介](./migration/cloud-acceleration-manager/introduction.md)
       + [就緒性和最佳做法分析器](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [實施階段](./migration/cloud-acceleration-manager/implementation-phase.md)
