@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 410eb23534e083940bf716194576e099d22ca205
+source-git-commit: 93d50e79853429f420803c28807ee8018d0ff78f
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '298'
 ht-degree: 2%
 
 ---
@@ -46,15 +46,11 @@ ht-degree: 2%
 
 ### 環AEM境
 
-完成本教程需要Adobe Experience Manager環境。 可以使用下列任一項(螢幕截圖從as a Cloud Service環境AEM中記錄):
-
-* AEMas a Cloud Service環境：
-   * [訪問AEMas a Cloud Service和雲管理器](/help/cloud-service/accessing/overview.md)
-      * **管AEM理員** 訪問AEMas a Cloud Service
+要完成本教程，建AEM議管理員訪AEM問as a Cloud Service環境。  如果您沒有訪問AEMas a Cloud Service環境的權限， [本地AEMas a Cloud Service快速啟動SDK](/help/cloud-service/local-development-environment/aem-runtime.md)。 但是，必須注意，某些產品UI螢幕（如「內容片段」導航）將不同。
 
 ## 開始吧！
 
-1. 開始教程 [定義內容片段模型](content-fragment-models.md)。
+開始教程 [定義內容片段模型](content-fragment-models.md)。
 
 ## GitHub項目
 
