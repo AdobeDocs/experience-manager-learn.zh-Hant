@@ -10,10 +10,10 @@ kt: 10718
 thumbnail: KT-10718.jpeg
 mini-toc-levels: 1
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: 4a902d838c99b3452581066ee568876ad16ec1a3
+source-git-commit: fda7b74e7659daf61a9f5478d6bfabe439b923ae
 workflow-type: tm+mt
-source-wordcount: '902'
-ht-degree: 8%
+source-wordcount: '873'
+ht-degree: 9%
 
 ---
 
@@ -81,12 +81,9 @@ Adobe Campaign Classic與AEMas a Cloud Service的整合，使您可以直接在A
 
 ### AEM Sites
 
-+ [配置Adobe Campaign Classic整合](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/campaignonpremise.html)
-   + __文檔連結AEM到6.5，但as a Cloud Service上的步驟相同__
-+ [整合AEM Sites與Adobe Campaign Classic](https://github.com/adobe/aem-core-email-components/wiki/Integrating-AEM-with-ACC)
-+ [從AEM Sites發郵件給Adobe Campaign Classic](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/aem-adobe-campaign/campaign.html)
++ [與Adobe Campaign Classic整合](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-campaign-classic.html#configure-user)
++ [建立Adobe Experience Manager通訊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/creating-newsletter.html)
 + [電AEM子郵件核心元件文檔](https://github.com/adobe/aem-core-email-components#aem-email-core-components)
-
 
 ## Adobe Commerce
 
