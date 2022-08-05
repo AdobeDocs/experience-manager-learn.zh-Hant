@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '238'
+ht-degree: 19%
 
 ---
 
@@ -44,15 +44,27 @@ ht-degree: 0%
       + [3 — 瀏覽AEMGraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4 — 永續GraphQL查詢](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 — 客戶端應用程式整合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
-   + 如何 {#how-to}
-      + [富文本](./graphql/how-to/rich-text.md)
-      + [影像](./graphql/how-to/images.md)
-      + [本地化內容](./graphql/how-to/localized-content.md)
-      + [無AEM頭SDK](./graphql/how-to/aem-headless-sdk.md)
++ 部署{#deployments}
+   + [概覽](./graphql/deployment/overview.md)
+   + [單頁應用](./graphql/deployment/spa.md)
+   + [Web元件](./graphql/deployment/web-component.md)
+   + [行動](./graphql/deployment/mobile.md)
+   + [伺服器到伺服器](./graphql/deployment/server-to-server.md)
+   + 設定{#configurations}
+      + [AEM主機](./graphql/deployment/configurations/aem-hosts.md)
+      + [CORS](./graphql/deployment/configurations/cors.md)
+      + [調度器篩選器](./graphql/deployment/configurations/dispatcher-filters.md)
++ 如何 {#how-to}
+   + [富文本](./graphql/how-to/rich-text.md)
+   + [影像](./graphql/how-to/images.md)
+   + [本地化內容](./graphql/how-to/localized-content.md)
+   + [無AEM頭SDK](./graphql/how-to/aem-headless-sdk.md)
    + 範例 {#example-apps}
       + [反應](./graphql/example-apps/react-app.md)
+      + [Web元件](./graphql/example-apps/web-component.md)
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
+      + [伺服器到伺服器](./graphql/example-apps/server-to-server-app.md)
 + 編SPA輯器{#spa-editor}
    + 反應{#react}
       + [概觀](./spa-editor/react/overview.md)
