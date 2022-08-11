@@ -3,10 +3,10 @@ user-guide-title: AEM Sites 影片和教學課程
 user-guide-description: Adobe Experience Manager Sites 的影片和教學課程系列。
 breadcrumb-title: AEM Sites 教學課程
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 6f930acd0b51c1f398be7a84efa99944dd3ce704
+source-git-commit: ce9966d48689cd153f5de9d20240644d96d10adf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '439'
+ht-degree: 19%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 0%
 + 元件 {#components}
    + [元件開發](components/component-development.md)
    + [核心元件](components/core-components-feature-video-understand.md)
+   + [Web優化映像交付](components/web-optimized-image-delivery.md)
    + [元件主控台](components/components-console-feature-video-use.md)
 + 內容片段 {#content-fragments}
    + [創作內容片段](content-fragments/content-fragments-feature-video-use.md)
