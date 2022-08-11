@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: 819188cabb784a2bbfa097dc4c47f75e38231b53
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1848'
 ht-degree: 3%
 
 ---
@@ -332,3 +332,11 @@ Maven將在您構建和安裝代碼包時建立目標資料夾。 目標資料�
 ## 疑難排解
 
 如果您在使用「項目原型」生成項目時AEM遇到問題，請參閱 [已知問題](https://github.com/adobe/aem-project-archetype#known-issues) 和開啟清單 [問題](https://github.com/adobe/aem-project-archetype/issues)。
+
+## 再次祝賀！ {#congratulations-bonus}
+
+恭喜你，翻閱獎金材料。
+
+### 後續步驟 {#next-steps-bonus}
+
+通過簡單易懂的功能，瞭解Adobe Experience Manager(AEM)站點元件的底層技術 `HelloWorld` 示例 [元件基礎](component-basics.md) 教程。
