@@ -6,9 +6,9 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 18a414b847a7353eebcfad4bcc125920258948b3
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '245'
 ht-degree: 19%
 
 ---
@@ -90,6 +90,8 @@ ht-degree: 19%
       + [3 — 固定元件](./spa-editor/remote-spa/spa-fixed-component.md)
       + [4 — 容器元件](./spa-editor/remote-spa/spa-container-component.md)
       + [5 — 動態路由](./spa-editor/remote-spa/spa-dynamic-routes.md)
+   + 如何{#how-to}
+      + [反AEM應可編輯元件v2](./spa-editor/how-to/react-core-components-v2.md)
 + 基於令牌的身份驗證 {#authentication}
    + [概觀](./authentication/overview.md)
    + [1 — 本地開發訪問令牌](./authentication/local-development-access-token.md)
