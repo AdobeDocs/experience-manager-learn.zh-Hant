@@ -7,9 +7,9 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -162,23 +162,10 @@ Adobe Experience Manager(AEM)有多個選項來定義無頭端點和將其內容
     <p>
   </td>
 </tr>
-<tr>
-  <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html">
-      <img alt="反應 — 無頭" src="./assets/angular-spa-editor.png" />
-    </a>
-    <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html">
-    <strong>Angular — 編SPA輯器</strong>
-    </a>
-    </div>
-    <p>
-    <em>使用編AEM輯SPA器管理完整的Angular應用體驗。</em>
-    <p>
-  </td>
+<tr>  
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
-    <img alt="Angular — 內容服務" src="./assets/android.png" />
+    <img alt="Andriod — 內容服務" src="./assets/android.png" />
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
@@ -202,5 +189,6 @@ Adobe Experience Manager(AEM)有多個選項來定義無頭端點和將其內容
     <em>使用開發人員和服務令牌生成Node.js應用以進行身份驗證。</em>
     <p>
   </td>
+  <td></td>
 </tr>
 </table>

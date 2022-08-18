@@ -3,10 +3,10 @@ user-guide-title: AEM Sites 影片和教學課程
 user-guide-description: Adobe Experience Manager Sites 的影片和教學課程系列。
 breadcrumb-title: AEM Sites 教學課程
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: ce9966d48689cd153f5de9d20240644d96d10adf
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 19%
+source-wordcount: '404'
+ht-degree: 21%
 
 ---
 
@@ -51,7 +51,6 @@ ht-degree: 19%
    + [AEM Sites入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)
    + [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [開始編輯AEM和SPA反應](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
-   + [編輯器AEM和SPAAngular入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
    + [擴展頁面屬性](developing/page-properties-technical-video-develop.md)
    + [以體制發展](developing/style-system-technical-video-understand.md)
    + [樣式系統最佳實踐](developing/style-organization-style-system-understand-article.md)
@@ -68,9 +67,7 @@ ht-degree: 19%
    + [錫泰馬普](./seo/sitemaps.md)
 + 單頁應用程式 {#spa-editor}
    + [使用編SPA輯器](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [Hello World教程](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [開始編輯AEM和SPA反應](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
-   + [編輯器AEM和SPAAngular入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
 + 多網站管理 {#multi-site-management}
    + [語言副本簡介](./multi-site-management/language-copy-overview.md)
    + [即時拷貝和藍圖](./multi-site-management/live-copy-and-blueprint.md)

@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '612'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 # 無AEM頭部SPA署
 
 
-無AEM頭單頁應用(SPA)部署涉及基於JavaScript的應用程式，這些應用程式使用React、Vue或Angular等框架構建，這些框架以無頭方式使用和與AEM內容交互。
+無AEM頭單頁應用(SPA)部署涉及使用React或Vue等框架構建的基於JavaScript的應用程式，這些框架以無頭方式使用和與AEM內容交互。
 
 以無SPA頭方式AEM交互的部署涉及托管SPA和通過Web瀏覽器訪問。
 

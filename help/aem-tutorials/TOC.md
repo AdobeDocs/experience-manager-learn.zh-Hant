@@ -2,10 +2,10 @@
 doc-type: tutorial
 user-guide-title: AEM 教學課程
 index: y
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '120'
+ht-degree: 29%
 
 ---
 
@@ -22,7 +22,6 @@ ht-degree: 0%
 + 多步Tutorials {#multi}
    + [AEM Sites入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [開始編輯AEM和SPA反應](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [編輯器AEM和SPAAngular入門](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM 和 Adobe Target 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [AEM 6.xDynamic Media Classic教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html)
    + [6AEM.x Dispatcher快取教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)
