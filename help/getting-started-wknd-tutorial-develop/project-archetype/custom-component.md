@@ -12,7 +12,7 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: 79d41d833ab0659f26f988678e124daa18b857f3
 workflow-type: tm+mt
 source-wordcount: '4138'
 ht-degree: 0%
@@ -447,7 +447,7 @@ Byline Sling模型將依賴於提供的幾個Java APIAEM。 通過 `dependencies
        導入org.osgi.annotation.versioning.Version;
        「」
    
-   只要對此包中的檔案進行更改， [包版本必須在語義上進行調整](https://semver.org/)。 否則，馬文項目 [bnd-baseline-maven插件](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) 將檢測無效的包版本並中斷生成。 幸運的是，在失敗時，Maven插件會報告無效的Java包版本以及它應該是的版本。 剛剛更新 `@Version("...")` 違反Java包的聲明 `package-info.java` 到插件建議的版本進行修復。
+只要對此包中的檔案進行更改， [包版本必須在語義上進行調整](https://semver.org/)。 否則，馬文項目 [bnd-baseline-maven插件](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) 將檢測無效的包版本並中斷生成。 幸運的是，在失敗時，Maven插件會報告無效的Java包版本以及它應該是的版本。 只需更新 `@Version("...")` 違反Java包的聲明 `package-info.java` 到插件建議的版本進行修復。
 
 ### Byline實現 {#byline-implementation}
 

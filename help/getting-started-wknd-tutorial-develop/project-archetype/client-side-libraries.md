@@ -11,7 +11,7 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
 source-wordcount: '2878'
 ht-degree: 1%
@@ -333,7 +333,7 @@ ht-degree: 1%
 
 ### Webpack DevServer — 靜態標籤 {#webpack-dev-static}
 
-在前幾個練習中，我們可以更新 **ui.frontend** 模組，並通過構建過程，最終看到這些變AEM化。 接下來，我們將看到一種利用 [WebPack-Dev伺服器](https://webpack.js.org/configuration/dev-server/) 快速發展我們的前端風格 **靜態** HTML。
+在前幾個練習中，我們可以更新 **ui.frontend** 模組，並通過構建過程，最終看到這些變AEM化。 接下來，我們將看到一種技術 [WebPack-Dev伺服器](https://webpack.js.org/configuration/dev-server/) 快速發展我們的前端風格 **靜態** HTML。
 
 如果大多數樣式和前端代碼將由可能無法輕鬆訪問環境的專用前端開發人員執行，則此技術非常AEM方便。 該技術還允許FED直接對HTML進行修改，然後可將該修改交給開發者AEM以作為元件實施。
 
@@ -389,9 +389,9 @@ ht-degree: 1%
 
 [**美國**](https://aemfed.io/) 是一種開源命令行工具，可用於加快前端開發。 它由  [Aemon](https://www.npmjs.com/package/aemsync)。 [瀏覽器同步](https://www.npmjs.com/package/browser-sync) 和 [Sling日誌跟蹤器](https://sling.apache.org/documentation/bundles/log-tracers.html)。
 
-高級別 **美國** 是用於偵聽 **ui.apps** 模組，並自動將它們直接同步到運行的AEM實例。 根據這些變化，本地瀏覽器將自動刷新，從而加快前端開發。 它還與Sling Log跟蹤器配合使用，可自動在終端中直接顯示任何伺服器端錯誤。
+高級別 **美國** 是用於偵聽 **ui.apps** 模組，並將它們直接同步到正在運行的AEM實例。 根據這些變化，本地瀏覽器將自動刷新，從而加快前端開發。 它還與Sling Log跟蹤器配合使用，可自動在終端中直接顯示任何伺服器端錯誤。
 
-如果你在 **ui.apps** 模組，修改HTL指令碼並建立自定義元件， **美國** 可以成為非常強大的工具。 [可在此處找到完整文檔。](https://github.com/abmaonline/aemfed)。
+如果你在 **ui.apps** 模組，修改HTL指令碼並建立自定義元件， **美國** 可以成為非常強大的工具。 [可在此處找到完整文檔](https://github.com/abmaonline/aemfed)。
 
 ### 調試客戶端庫 {#debugging-clientlibs}
 

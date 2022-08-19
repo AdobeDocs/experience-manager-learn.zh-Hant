@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: 819188cabb784a2bbfa097dc4c47f75e38231b53
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '1847'
 ht-degree: 3%
 
 ---
@@ -256,7 +256,7 @@ Maven將在您構建和安裝代碼包時建立目標資料夾。 目標資料�
 
 的 **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven模組包含下面站點所需的所有呈現代碼 `/apps`。 這包括將以名為的格式儲存AEM的CSS/JS [客戶端](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)。 這還包括 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hant) 用於呈現動態HTML的指令碼。 你可以想到 **ui.apps** 模組作為指向JCR中結構的映射，但格式可以儲存在檔案系統上並提交到原始碼控制。 的 **ui.apps** 模組僅包含代碼。
 
-要生成此模組，請執行以下操作：
+要僅構建此模組，請執行以下操作：
 
 1. 從命令行。 導航到 `ui.apps` 資料夾 `aem-guides-wknd`):
 

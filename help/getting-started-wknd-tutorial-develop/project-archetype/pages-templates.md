@@ -9,7 +9,7 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
 source-wordcount: '3081'
 ht-degree: 0%
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
 
-以下視頻的高級步驟：
+以上視頻的高級步驟：
 
 ### 結構配置
 
@@ -161,7 +161,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
 
-以下視頻的高級步驟：
+以上視頻的高級步驟：
 
 1. 下載示例內容包 **[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets-1.1.zip)**。
 1. 使用Package Manager上載和安裝內容包 [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)
@@ -207,7 +207,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/330993/?quality=12&learn=on)
 
-以下視頻的高級步驟：
+以上視頻的高級步驟：
 
 1. 導航至「站點」控制台，位於 [http://localhost:4502/sites.html/content/wknd/us/en/magazine](http://localhost:4502/sites.html/content/wknd/us/en/magazine)。
 1. 在下面建立新頁 **WKND** > **美國** > **EN** > **雜誌**。
@@ -257,7 +257,7 @@ ht-degree: 0%
 
    請注意，只有2個HTL指令碼， `customfooterlibs.html` 和 `customheaderlibs.html` 頁面元件下。 *那麼，這個元件如何呈現頁面？*
 
-   的 `sling:resourceSuperType` 屬性點 `core/wcm/components/page/v2/page`。 此屬性允許WKND的頁元件繼承 **全部** 功能。 這是第一個例子 [代理元件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)。 可以找到更多資訊 [給。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)。
+   的 `sling:resourceSuperType` 屬性點 `core/wcm/components/page/v2/page`。 此屬性允許WKND的頁元件繼承 **全部** 功能。 這是第一個例子 [代理元件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)。 可以找到更多資訊 [這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)。
 
 1. InspectWKND元件中的另一個元件， `Breadcrumb` 元件位於： `/apps/wknd/components/breadcrumb`。 注意 `sling:resourceSuperType` 可以找到屬性，但這次它指向 `core/wcm/components/breadcrumb/v2/breadcrumb`。 這是使用代理元件模式包括核心元件的另一個示例。 事實上，WKND代碼庫中的所有元件都是核心元件的代AEM理（我們著名的HelloWorld元件除外）。 最好嘗試並盡可能重複使用核心元件的功能 *先* 編寫自定義代碼。
 
