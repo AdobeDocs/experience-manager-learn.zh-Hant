@@ -1,33 +1,33 @@
 ---
-title: 使用AEM Sites了解回應式版面
-seo-title: 使用AEM Sites了解回應式版面
-description: AEM可讓您使用「配置容器」元件，為頁面建立回應式配置。 透過「回應式版面」，內容作者可以為不同裝置建立回應式內容，並在AEM中預覽一般使用者體驗。
-seo-description: 涵蓋為不同裝置製作回應式版面的步驟
-feature: 頁面編輯器，可編輯的範本
+title: 瞭解響應式佈局，與AEM Sites
+seo-title: Understanding Responsive Layout with AEM Sites
+description: 使AEM用「佈局容器」元件可以為頁面設定響應的佈局。 通過響應版式，內容作者可以為不同設備建立響應內容並在中預覽最終用戶體AEM驗。
+seo-description: Covers the steps to author responsive layout for different devices
+feature: Page Editor, Editable Templates
 topics: authoring, responsive
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 kt: 4252
 thumbnail: 32012.jpg
-topic: 內容管理
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: c125c0e0-1ed2-463e-bd34-767d009479eb
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '110'
 ht-degree: 1%
 
 ---
 
+# 瞭解響應佈局 {#understanding-responsive-layout-with-aem-sites}
 
-# 了解回應式版面 {#understanding-responsive-layout-with-aem-sites}
-
-Adobe Experience Manager Sites可讓作者根據裝置寬度管理元件的寬度，以便進行回應式網站設計。 透過「版面模式」和「版面容器」，使用者可針對不同裝置建立回應式內容，並預覽一般使用者體驗，而不需離開AEM UI。
+Adobe Experience Manager Sites允許作者基於設備寬度管理元件的寬度以便於響應性的站點設計。 使用佈局模式和佈局容器，用戶可以為不同設備建立響應內容並預覽最終用戶體驗，而無需離開AEMUI。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32012?quality=12&learn=on)
 
 ## 其他資源 {#additional-resources}
 
-* [回應式版面檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)
+* [響應版式文檔](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)

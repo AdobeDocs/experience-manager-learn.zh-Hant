@@ -1,26 +1,26 @@
 ---
-title: AEM Forms與Marketo（第2部分）
-description: 使用AEM Forms表單資料模型整合AEM Forms與Marketo的教學課程。
+title: AEM Forms與Marketo（下）
+description: 使用AEM Forms表單資料模型將Marketo與AEM Forms整合的教程。
 feature: Adaptive Forms, Form Data Model
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: 020852f16de0cdb1e17e19ad989dabf37b7f61f5
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
 
 ---
 
-# Marketo Authentication Service
+# Marketo認證服務
 
-Marketo的REST API是使用2條腿的OAuth 2.0驗證。我們需要建立自訂驗證，以針對Marketo進行驗證。 此自訂驗證通常會寫入OSGI套件組合中。 下列程式碼顯示本教學課程中使用的自訂驗證器。
+Marketo的REST API使用2腿OAuth 2.0進行驗證。我們需要建立自定義身份驗證以針對Marketo進行身份驗證。 此自定義身份驗證通常寫入OSGI捆綁包中。 以下代碼顯示了本教程中使用的自定義驗證器。
 
-## 自訂驗證服務
+## 自定義身份驗證服務
 
-下列程式碼會建立AuthenticationDetails物件，其具有針對Marketo進行驗證所需的access_token
+以下代碼建立AuthenticationDetails對象，該對象具有針對Marketo進行身份驗證所需的access_token
 
 ```java
 package com.marketoandforms.core;
@@ -52,13 +52,13 @@ MarketoService marketoService;
 }
 ```
 
-MarketoAuthenticationService會實作IAuthentication介面。 此介面是AEM Forms用戶端SDK的一部分。 服務會取得存取權杖，並將權杖插入AuthenticationDetails的HttpHeader中。 填入AuthenticationDetails對象的HttpHeaders後，AuthenticationDetails對象將返回到表單資料模型的真實層。
+MarketoAuthenticationService實現IAuthentication介面。 此介面是AEM Forms客戶端SDK的一部分。 服務獲取訪問令牌，並將令牌插入AuthenticationDetails的HttpHeader中。 一旦填充了AuthenticationDetails對象的HttpHeaders,AuthenticationDetails對象將返回到窗體資料模型的Dermis層。
 
-請注意getAuthenticationType方法傳回的字串。 在配置資料源時將使用此字串。
+請注意方法getAuthenticationType返回的字串。 在配置資料源時將使用此字串。
 
-### 取得存取權杖
+### 獲取訪問令牌
 
-簡單介面是使用一個傳回access_token的方法來定義。 實施此介面的類的代碼將在頁面的下半部列出。
+使用一種返回access_token的方法定義簡單介面。 實現此介面的類的代碼將在頁面的下方進一步列出。
 
 ```java
 package com.marketoandforms.core;
@@ -67,7 +67,7 @@ public interface MarketoService {
 }
 ```
 
-下列程式碼為服務的，會傳回用於進行REST API呼叫的access_token。 此服務中的程式碼會存取進行GET呼叫所需的設定參數。 如您所見，我們會在GETURL中傳遞client_id、client_secret以產生access_token。 然後，此access_token會傳回至呼叫應用程式。
+以下代碼是返回在進行REST API調用時使用的access_token的服務的代碼。 此服務中的代碼訪問進行GET調用所需的配置參數。 正如您所看到的，我們將在GETURL中傳遞client_id,client_secret以生成access_token。 然後，此access_token將返回給調用的應用程式。
 
 ```java
 package com.marketoandforms.core.impl;
@@ -126,13 +126,13 @@ MarketoConfigurationService config;
 }
 ```
 
-下方的螢幕擷取畫面顯示需要設定的設定屬性。 這些設定屬性會讀取於上述程式碼中，以取得access_token
+下面的螢幕抓圖顯示了需要設定的配置屬性。 這些配置屬性在上面列出的代碼中讀取，以獲取access_token
 
-![設定](assets/configuration-settings.png)
+![config](assets/configuration-settings.png)
 
 ### 設定
 
-下列程式碼用於建立設定屬性。 這些屬性是您的Marketo例項專屬的
+以下代碼用於建立配置屬性。 這些屬性特定於您的Marketo實例
 
 ```java
 package com.marketoandforms.core;
@@ -198,6 +198,6 @@ public class MarketoConfigurationService {
 }
 ```
 
-1. 建置套件並部署至您的AEM伺服器。
-1. [將瀏覽器指向](http://localhost:4502/system/console/configMgr) configMgrand搜尋「Marketo憑證服務設定」
-1. 指定您Marketo例項專屬的適當屬性
+1. 將捆綁包構建並部署到您的服AEM務器上。
+1. [將瀏覽器指向configMgr](http://localhost:4502/system/console/configMgr) 並搜索「Marketo憑據服務配置」
+1. 指定特定於您的Marketo實例的相應屬性

@@ -1,43 +1,43 @@
 ---
-title: 使用AEM開發跨原始資源共用(CORS)
-description: 運用CORS以透過用戶端JavaScript從外部Web應用程式存取AEM內容的簡短範例。
-version: 6.3, 6,4, 6.5
+title: 開發跨源資源共用(CORS)AEM
+description: 利用CORS通過客戶端JavaScript從AEM外部Web應用程式訪問內容的一個簡短示例。
+version: 6,4, 6.5
 topic: Security, Development
 role: Developer
 level: Beginner
 feature: Security
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
 
 ---
 
+# 跨源資源共用(CORS)開發
 
-# 跨原始資源共用(CORS)開發
-
-透過用戶端JavaScript運用[!DNL CORS]從外部Web應用程式存取AEM內容的簡短範例。
+利用的一個簡短示例 [!DNL CORS] 通過AEM客戶端JavaScript從外部Web應用程式訪問內容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837/?quality=12&learn=on)
 
-此影片中：
+在此視頻中：
 
-* **www.example.** commaps透過  `/etc/hosts`
-* **aem-publish.** localmaps透過localhost  `/etc/hosts`
-* SimpleHTTPServer（[[!DNL Python]的SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)的包裝函式）正在通過埠8000為HTML頁提供服務。
-   * _Mac App Store中已不再提供。使用類似的方法，例如[Jeeves](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)。_
-* [!DNL AEM Dispatcher] 在2.4 [!DNL Apache HTTP Web Server] 上執行，且會向反向代理 `aem-publish.local` 請求 `localhost:4503`。
+* **www.example.com** 通過映射到本地主機 `/etc/hosts`
+* **aem.publish.local** 通過映射到本地主機 `/etc/hosts`
+* SimpleHTTPServer(用於 [[!DNL Python]&#39;s SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html))正在通過埠8000為HTML頁提供服務。
+   * _Mac·App Store不再提供。 使用類似 [吉夫斯](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)。_
+* [!DNL AEM Dispatcher] 正在運行 [!DNL Apache HTTP Web Server] 2.4和反向代理請求 `aem-publish.local` 至 `localhost:4503`。
 
-如需詳細資訊，請檢閱AEM](./understand-cross-origin-resource-sharing.md)中的[了解跨原始資源共用(CORS)。
+有關詳細資訊，請查看 [理解中的跨源資源共AEM享](./understand-cross-origin-resource-sharing.md)。
 
-## www.example.com HTML和JavaScript
+## www.example.comHTML和JavaScript
 
-此網頁的邏輯是
+此網頁具有邏輯
 
-1. 按一下按鈕時
-1. 對`http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`發出[!DNL AJAX GET]要求
-1. 從JSON回應中擷取`jcr:title`
-1. 將`jcr:title`插入DOM
+1. 按一下按鈕
+1. 製作 [!DNL AJAX GET] 請求 `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
+1. 檢索 `jcr:title` 形成JSON響應
+1. 彈出 `jcr:title` 進入DOM
 
 ```xml
 <html>
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 ## OSGi工廠配置
 
-[!DNL Cross-Origin Resource Sharing]的OSGi配置工廠可通過以下方式獲得：
+OSGi配置工廠 [!DNL Cross-Origin Resource Sharing] 可通過以下途徑獲得：
 
 * `http://<host>:<port>/system/console/configMgr > [!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]`
 
@@ -92,9 +92,9 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 />
 ```
 
-## Dispatcher設定 {#dispatcher-configuration}
+## 調度程式配置 {#dispatcher-configuration}
 
-若要允許快取內容上快取和提供CORS標頭，請在[/clientheaders configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)後新增至所有支援AEM Publish `dispatcher.any`檔案。
+要允許快取內容上的CORS標頭並提供服務，請添加以下內容 [/clieader配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) 到所有支援AEM發佈 `dispatcher.any` 的子菜單。
 
 ```
 /cache { 
@@ -111,17 +111,16 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 }
 ```
 
-**對檔案進行更改** 後，重新啟動Web伺服器應 `dispatcher.any` 用程式。
+**重新啟動Web伺服器應用程式** 對 `dispatcher.any` 的子菜單。
 
-在`/clientheaders`配置更新後，可能需要完全清除快取，以確保在下一個請求上正確快取標題。
+可能需要完全清除快取，以確保在下次請求後，標頭被適當快取 `/clientheaders` 配置更新。
 
-## 支援材料 {#supporting-materials}
+## 支撐材料 {#supporting-materials}
 
-* [AEM OSGi跨原始資源共用原則的設定工廠](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
-* [macOS適用的Jeeves](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)
-* [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) （與Windows/macOS/Linux相容）
+* [OSGiAEM跨源資源共用策略配置工廠](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
+* [吉夫斯為macOS](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)
+* [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) (Windows/macOS/Linux相容)
 
-* [了解AEM中的跨原始資源共用(CORS)](./understand-cross-origin-resource-sharing.md)
-* [跨原始資源共用(W3C)](https://www.w3.org/TR/cors/)
-* [HTTP存取控制(Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
-
+* [理解中的跨源資源共AEM享](./understand-cross-origin-resource-sharing.md)
+* [跨源資源共用(W3C)](https://www.w3.org/TR/cors/)
+* [HTTP訪問控制(Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)

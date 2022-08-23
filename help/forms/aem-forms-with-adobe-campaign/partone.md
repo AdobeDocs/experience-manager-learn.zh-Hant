@@ -1,36 +1,36 @@
 ---
-title: '產生JSON網頁代號和存取代號 '
-description: 本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取權杖所需的程式碼
-feature: 適用性Forms，表單資料模型
-version: 6.3,6.4,6.5
-topic: 開發
+title: 生成JSON Web令牌和訪問令牌
+description: 本文說明生成JWT所需的代碼和向Adobe Campaign Standard進行REST調用所需的訪問令牌
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a5e5aad4-064f-4638-a53a-88dfb1d27c8f
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
 
+# 生成JSON Web令牌和訪問令牌 {#generating-json-web-token-and-access-token}
 
-# 產生JSON網頁代號和存取代號 {#generating-json-web-token-and-access-token}
+本文說明生成JWT所需的代碼和向Adobe Campaign Standard進行REST調用所需的訪問令牌
 
-本文說明產生對Adobe Campaign Standard進行REST呼叫所需的JWT和存取權杖所需的程式碼
+## 生成JSON Web令牌 {#generate-json-web-token}
 
-## 產生JSON網頁代號 {#generate-json-web-token}
+使用Adobe CampaignAPI的第一步是生成JWT。 有關如何為ACS生成JWT的代碼示例很多。 你可以按此操作 [java代碼示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) 生成JWT。
 
-使用Adobe Campaign API的第一步是產生JWT。 有關如何為ACS生成JWT的許多代碼示例。 您可以依照此[java程式碼範例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java)產生JWT。
-
-若要將ACS API與AEM Forms搭配使用，我們需要在OSGi套件組合內建立JWT。 下列程式碼片段用於在此範例OSGI套件組合中產生JWT。 ACS實例的詳細資訊從OSGI配置屬性中提取，如上所示設定。
+為了將ACS API與AEM Forms配合使用，我們需要在OSGi捆綁包內建立JWT。 以下代碼段用於在此示例OSGI包中生成JWT。 有關ACS實例的詳細資訊從如上所示設定的OSGI配置屬性中提取。
 
 ![配置](assets/campaignconfiguration.gif)
 
-**A.** 此處顯示的值是虛值
+**答：** 此處顯示的值是虛值
 
-下列程式碼會從OSGI設定中擷取Adobe Campaign伺服器的詳細資訊。 我們在80到104行建立私鑰。
+以下代碼從OSGI配置中獲取有關Adobe Campaign伺服器的詳細資訊。 我們建立從80到104的私鑰。
 
-取得私密金鑰後，我們會建立JSON Web Token。
+一旦擁有私鑰，我們將建立JSON Web令牌。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -239,6 +239,6 @@ public class CampaignServiceImpl implements CampaignService {
  }
 ```
 
-## 產生存取權杖 {#generate-access-token}
+## 生成訪問令牌 {#generate-access-token}
 
-然後，我們會進行POST呼叫，以交換產生的JWT作為存取權杖。 接著，此存取Token將在後續REST呼叫的HTTP標題中以授權金鑰的形式傳送
+然後，通過進行POST調用，將生成的JWT交換為訪問令牌。 此訪問令牌隨後將作為HTTP頭中的授權密鑰發送，用於後續的REST調用

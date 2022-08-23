@@ -1,31 +1,31 @@
 ---
-title: AEM Forms搭配JSON結構描述和資料[Part3]
-seo-title: AEM Forms搭配JSON結構描述和資料[Part3]
-description: 多部分教學課程，逐步引導您完成使用JSON結構描述建立適用性表單和查詢提交資料的相關步驟。
-seo-description: 多部分教學課程，逐步引導您完成使用JSON結構描述建立適用性表單和查詢提交資料的相關步驟。
-feature: 適用性表單
+title: AEM Forms，帶JSON架構和資料[Part3]
+seo-title: AEM Forms with JSON Schema and Data[Part3]
+description: 多部分教程，引導您完成建立帶JSON架構的自適應表單和查詢提交資料所涉及的步驟。
+seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
-topic: 開發
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 412eea77-3cf4-43bb-9d2f-ae860cd9d3be
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 1%
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
+# 將JSON架構儲存在資料庫中 {#storing-json-schema-in-database}
 
-# 將JSON結構描述儲存在資料庫中 {#storing-json-schema-in-database}
 
+要能夠查詢已提交的資料，我們需要儲存與已提交表單關聯的JSON架構。 JSON架構將用於查詢生成器中以生成查詢。
 
-若要查詢已提交的資料，我們需要儲存與已提交表單相關聯的JSON結構描述。 JSON結構將用於查詢產生器中以建立查詢。
-
-提交適用性表單時，我們會檢查相關聯的JSON結構是否在資料庫中。 如果JSON結構不存在，我們會擷取JSON結構並將結構儲存在適當的表格中。 我們也會將表單名稱與JSON結構建立關聯。 以下螢幕擷圖顯示儲存JSON結構描述的表格。
+提交自適應表單時，我們會檢查關聯的JSON架構是否在資料庫中。 如果JSON架構不存在，我們將獲取JSON架構並將該架構儲存在相應的表中。 我們還將表單名稱與JSON架構關聯。 以下螢幕快照顯示JSON架構的儲存表。
 
 ![jsonschema](assets/jsonschemas.gif)
 
@@ -107,9 +107,9 @@ public String getJSONSchema(String afPath) {
 
 >[!NOTE]
 >
->建立適用性表單時，您可以使用存放庫中的JSON結構描述，或上傳JSON結構描述。 上述程式碼適用於上述兩種情況。
+>建立自適應表單時，您可以使用儲存庫中的JSON架構或上載JSON架構。 上述代碼適用於這兩種情況。
 
-使用標準JDBC操作將獲取的架構儲存在資料庫中。 以下代碼將模式插入資料庫中
+獲取的模式使用標準JDBC操作儲存在資料庫中。 以下代碼將架構插入資料庫中
 
 ```java
 public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
@@ -145,12 +145,10 @@ public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
  }
 ```
 
-總之，我們到目前為止已完成以下工作
+總之，我們到目前為止已經完成了以下工作
 
-* 根據JSON結構建立最適化表單
-* 如果是第一次提交表單時，我們會將與表單相關聯的JSON結構儲存在資料庫中。
-* 我們將適用性表單的系結資料儲存在資料庫中。
+* 基於JSON架構建立自適應表單
+* 如果首次提交表單時，我們將與表單關聯的JSON架構儲存在資料庫中。
+* 將Adaptive Form的綁定資料儲存到資料庫中。
 
-接下來的步驟是使用QueryBuilder來顯示要根據JSON結構來搜尋的欄位
-
-
+下一步是使用QueryBuilder顯示要基於JSON架構搜索的欄位

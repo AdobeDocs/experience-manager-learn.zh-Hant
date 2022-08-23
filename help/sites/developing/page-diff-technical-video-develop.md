@@ -1,44 +1,44 @@
 ---
-title: 在AEM Sites中針對頁面差異開發
-description: 此影片說明如何為AEM Sites的「頁面差異」功能提供自訂樣式。
-feature: 製作
+title: AEM Sites版頁差的開發
+description: 此視頻顯示如何為AEM站點的「頁面差異」功能提供自定義樣式。
+feature: Authoring
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
-version: 6.3, 6.4, 6.5
-topic: 開發
+version: 6.4, 6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 7d600b16-bbb3-4f21-ae33-4df59b1bb39d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 1%
+source-wordcount: '293'
+ht-degree: 0%
 
 ---
 
+# 為頁差開發 {#developing-for-page-difference}
 
-# 針對頁面差異開發 {#developing-for-page-difference}
+此視頻顯示如何為AEM站點的「頁面差異」功能提供自定義樣式。
 
-此影片說明如何為AEM Sites的「頁面差異」功能提供自訂樣式。
-
-## 自訂頁面差異樣式 {#customizing-page-difference-styles}
+## 自定義頁面差異樣式 {#customizing-page-difference-styles}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18871/?quality=9&learn=on)
 
 >[!NOTE]
 >
->此影片會將自訂CSS新增至we.Retail用戶端資料庫，因此應對自訂者的AEM Sites專案進行這些變更；在下列范常式式碼中：`my-project`。
+>此視頻將自定義CSS添加到we.Retail客戶端庫中，在該庫中應對定制者的AEM Sites項目進行這些更改；在下面的示例代碼中： `my-project`。
 
-AEM頁面差異會透過直接載入`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`來取得OOTB CSS。
+頁AEM差通過直接載入的 `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`。
 
-由於CSS的直接載入，而不是使用用戶端程式庫類別，因此我們必須為自訂樣式找到另一個插入點，而此自訂插入點是專案的製作clientlib。
+由於CSS的直接載入而不是使用客戶端庫類別，因此我們必須為自定義樣式找到另一個注入點，而此自定義注入點是項目的創作客戶端庫。
 
-這樣的好處是，允許這些自訂樣式覆寫是租用戶專用的。
+這的好處是允許這些自定義樣式替代成為特定租戶。
 
-### 準備編寫clientlib {#prepare-the-authoring-clientlib}
+### 準備創作客戶端庫 {#prepare-the-authoring-clientlib}
 
-確保`/apps/my-project/clientlib/authoring.`處的項目存在`authoring` clientlib
+確保 `authoring` 客戶端庫 `/apps/my-project/clientlib/authoring.`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -47,9 +47,9 @@ AEM頁面差異會透過直接載入`/libs/cq/gui/components/common/admin/diffse
         categories="[my-project.authoring]"/>
 ```
 
-### 提供自訂CSS {#provide-the-custom-css}
+### 提供自定義CSS {#provide-the-custom-css}
 
-新增至專案的`authoring` clientlib a `css.txt` ，此檔案指向將提供覆寫樣式的較少檔案。 [](https://lesscss.org/) Less是偏好使用的選項，因為它有許多便利的功能，包括此範例中採用的類別包裝。
+添加到項目 `authoring` 客戶端庫 `css.txt` 指向將提供覆蓋樣式的較少檔案。 [少](https://lesscss.org/) 由於它具有許多方便的功能，包括本例中利用的類包裝。
 
 ```shell
 base=./css
@@ -57,7 +57,7 @@ base=./css
 htmldiff.less
 ```
 
-在`/apps/my-project/clientlibs/authoring/css/htmldiff.less`處建立包含樣式覆蓋的`less`檔案，並根據需要提供覆蓋樣式。
+建立 `less` 包含樣式替代的檔案 `/apps/my-project/clientlibs/authoring/css/htmldiff.less`，並根據需要提供覆蓋樣式。
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -103,11 +103,11 @@ body {
 }
 ```
 
-### 透過頁面元件包含Authoring clientlib CSS {#include-the-authoring-clientlib-css-via-the-page-component}
+### 通過頁面元件包括創作客戶端庫CSS {#include-the-authoring-clientlib-css-via-the-page-component}
 
-將製作clientlibs類別直接加入專案基礎頁面`/apps/my-project/components/structure/page/customheaderlibs.html`的`</head>`標籤前，以確保載入樣式。
+在項目的基頁中包括創作客戶端類別 `/apps/my-project/components/structure/page/customheaderlibs.html` 在 `</head>` 標籤以確保載入樣式。
 
-這些樣式應限制為[!UICONTROL Edit]和[!UICONTROL preview] WCM模式。
+這些樣式應限於 [!UICONTROL 編輯] 和 [!UICONTROL 預覽] WCM模式。
 
 ```xml
 <head>
@@ -117,12 +117,12 @@ body {
 </head>
 ```
 
-套用上述樣式之比較頁面的結尾結果看起來會像這樣（已新增HTML且元件已變更）。
+應用了上述樣式的比較頁的結束結果將如下所示(添加了HTML並更改了元件)。
 
-![頁面差異](assets/page-diff.png)
+![頁差](assets/page-diff.png)
 
 ## 其他資源 {#additional-resources}
 
-* [下載we.Retail範例網站](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
-* [使用AEM用戶端程式庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
-* [較少的CSS檔案](https://lesscss.org/)
+* [下載we.Retail示例網站](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
+* [使用客AEM戶端庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [更少CSS文檔](https://lesscss.org/)

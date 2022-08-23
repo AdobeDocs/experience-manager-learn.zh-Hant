@@ -1,46 +1,46 @@
 ---
-title: 儲存和擷取最適化表單資料
-description: 從資料庫儲存及擷取最適化表單資料。 此功能可讓表單填入程式儲存表單，並在稍後繼續填寫表單。
-feature: 適用性表單
-topic: 開發
+title: 保存和檢索自適應表單資料
+description: 從資料庫中保存和檢索自適應表單資料。 此功能允許填表人員保存表單，並在以後繼續填表。
+feature: Adaptive Forms
+topic: Development
 role: Developer
 type: Tutorial
-version: 6.3,6.4,6.5
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+version: 6.4,6.5
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
 
 
-# 儲存和擷取最適化表單資料
+# 保存和檢索自適應表單資料
 
-本文將引導您完成從資料庫儲存和擷取適用性表單資料的相關步驟。 MySQL資料庫用於儲存適用性表單資料。 在高層面上，以下是實現使用案例的步驟：
+本文將引導您完成保存和從資料庫中檢索自適應表單資料所涉及的步驟。 MySQL資料庫用於儲存Adaptive Form資料。 在高級別上，以下是實現使用情形的步驟：
 
 * [配置資料源](#Configure-Data-Source)
-* [建立Servlet以將資料寫入資料庫](#create-servlet)
-* [建立OSGI服務以擷取儲存的資料](#create-osgi-service)
-* [建立用戶端程式庫](#create-client-library)
-* [建立最適化表單範本和頁面元件](#form-template-and-page-component)
+* [建立Servlet將資料寫入資料庫](#create-servlet)
+* [建立OSGI服務以提取儲存的資料](#create-osgi-service)
+* [建立客戶端庫](#create-client-library)
+* [建立自適應表單模板和頁面元件](#form-template-and-page-component)
 * [能力演示](#capability-demo)
 * [在伺服器上部署](#deploy-on-your-server)
 
 ## 配置資料源 {#Configure-Data-Source}
 
-Apache Sling Connection Pooled DataSource已設定為指向將用來儲存適用性表單資料的資料庫。 以下螢幕擷圖顯示我執行個體的設定。 可以複製並貼上以下屬性
+Apache Sling連接池化資料源配置為指向將用於儲存自適應表單資料的資料庫。 以下螢幕快照顯示了我實例的配置。 可以複製和貼上以下屬性
 
-* 資料源名稱：aemformation — 這是我的代碼中使用的名稱。
+* 資料源名稱：aemformstuvial — 這是在我的代碼中使用的名稱。
 
 * JDBC驅動程式類：com.mysql.jdbc.Driver
 
 * JDBC連接URL:jdbc:mysql://localhost:3306/aemformstutorial
 
-![connectionpool](assets/storingdata.PNG)
+![連接池](assets/storingdata.PNG)
 
 ### 建立Servlet {#create-servlet}
 
-以下是插入/更新資料庫中適用性表單資料的servlet程式碼。 Apache Sling Connection Pooled DataSource是使用AEM ConfigMgr來設定，第26行會參照相同的DataSource。 其餘的程式相當簡單明瞭。 代碼會在資料庫中插入新行或更新現有行。 儲存的適用性表單資料與GUID相關聯。 然後會使用相同的GUID來更新表單資料。
+以下是插入/更新資料庫中Adaptive Form資料的Servlet的代碼。 Apache Sling連接池化資料源是使用AEMConfigMgr配置的，行26中引用了該資料源。 其餘的代碼相當簡單。 代碼在資料庫中插入新行或更新現有行。 儲存的Adaptive Form資料與GUID關聯。 然後使用相同的GUID更新表單資料。
 
 ```java
 package com.techmarketing.core.servlets;
@@ -208,9 +208,9 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 }
 ```
 
-## 建立OSGI服務以擷取資料 {#create-osgi-service}
+## 建立OSGI服務以提取資料 {#create-osgi-service}
 
-下列程式碼是用來擷取儲存的最適化表單資料。 簡單查詢可用來擷取與指定GUID相關聯的適用性表單資料。 然後，擷取的資料會傳回至呼叫應用程式。 在此程式碼中參考的第一個步驟中建立的相同資料來源。
+編寫以下代碼以獲取儲存的Adaptive Form資料。 簡單查詢用於提取與給定GUID關聯的自適應表單資料。 然後將所獲取的資料返回給調用應用程式。 在此代碼中引用的第一步中建立的相同資料源。
 
 ```java
 package com.techmarketing.core.impl;
@@ -273,9 +273,9 @@ public class AemformWithDB implements AemFormsAndDB {
 }
 ```
 
-## 建立用戶端程式庫 {#create-client-library}
+## 建立客戶端庫 {#create-client-library}
 
-AEM用戶端程式庫會管理所有用戶端javascript程式碼。 針對本文，我已建立簡單的javascript，以使用指南橋接器API擷取適用性表單資料。 擷取適用性表單資料後，會對servlet發出POST呼叫，以在資料庫中插入或更新適用性表單資料。 函式getALLUrlParams會傳回URL中的參數。 當您想要更新資料時，就會使用此功能。 其餘的功能在與.savebutton類的click事件關聯的代碼中處理。 如果URL中存在guid參數，則需要執行更新操作（如果不是插入操作）。
+客AEM戶端庫管理所有客戶端Javascript代碼。 在本文中，我建立了一個簡單的javascript，用指南橋API獲取Adaptive Form資料。 一旦讀取了自適應表單資料，就會對servlet進行POST調用，以在資料庫中插入或更新自適應表單資料。 函式getALLUrlParams返回URL中的參數。 當您要更新資料時，將使用此選項。 其餘功能在與.savebutton類的click事件關聯的代碼中處理。 如果URL中存在guid參數，則我們需要執行更新操作（如果不是插入操作）。
 
 ```javascript
 function getAllUrlParams(url) {
@@ -401,7 +401,7 @@ $(document).ready(function()
 });
 ```
 
-## 建立最適化表單範本和頁面元件 {#form-template-and-page-component}
+## 建立自適應表單模板和頁面元件 {#form-template-and-page-component}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
@@ -412,15 +412,15 @@ $(document).ready(function()
 
 #### 在伺服器上部署 {#deploy-on-your-server}
 
-若要在您的AEM Forms執行個體上測試此功能，請執行下列步驟
+要在AEM Forms實例上test此功能，請執行以下步驟
 
-* [下載DemoAssets.zip並解壓至您的本機系統](assets/demoassets.zip)
-* 使用Felix Web主控台部署並啟動techmarketingdemos.jar和mysqldriver.jar套件組合。
-***使用MYSQL Workbench匯入aemformation.sql。 這將在資料庫中建立必要的架構和表
-* 使用AEM封裝管理器匯入StoreAndRetrieve.zip。 此套件包含適用性表單範本、頁面元件用戶端庫，以及範例適用性表單和資料來源設定。
-* 登入configMgr。 搜尋「Apache Sling Connection Pooled DataSource」。 開啟與修改關聯的資料來源項目，並輸入您資料庫例項專屬的使用者名稱和密碼。
-* 開啟最適化表單
+* [將DemoAssets.zip下載並解壓縮到您的本地系統](assets/demoassets.zip)
+* 使用Felix Web控制台部署和啟動techmarketingdemos.jar和mysqldriver.jar捆綁包。
+***使用MYSQL Workbench導入aemforstufor.sql。 這將在資料庫中建立必要的架構和表
+* 使用包管理器導AEM入StoreAndRetrieve.zip。 此包包含Adaptive Form模板、頁元件客戶端庫以及示例自適應表單和資料源配置。
+* 登錄到configMgr。 搜索「Apache Sling連接池化資料源」。 開啟與Aemformsturial關聯的資料源條目，並輸入特定於資料庫實例的用戶名和密碼。
+* 開啟自適應窗體
 * 填寫一些詳細資訊，然後按一下「保存並稍後繼續」按鈕
-* 您應該會傳回內含GUID的URL。
-* 複製URL並貼到新的瀏覽器標籤中
-* 適用性表單應填入上一步的資料**
+* 您應返回GUID為的URL。
+* 複製URL並將其貼上到新瀏覽器頁籤中
+* 應使用上一步**中的資料填充自適應表單

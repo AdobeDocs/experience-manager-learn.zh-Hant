@@ -1,7 +1,7 @@
 ---
-title: 在AEM Assets中使用階層式中繼資料
-description: 進階中繼資料管理可讓使用者建立階層式欄位規則，以在AEM Assets中的中繼資料之間形成內容關係。 以下影片示範欄位需求、可見度和內容選擇的新動態規則。 影片也詳細說明管理員將這些規則套用至自訂中繼資料結構所需的步驟。
-version: 6.3, 6.4, 6.5, Cloud Service
+title: 在AEM Assets使用級聯元資料
+description: 高級元資料管理允許用戶建立級聯欄位規則以在AEM Assets的元資料之間形成上下文關係。 以下視頻演示了欄位要求、可見性和上下文選擇的新動態規則。 該視頻還詳細介紹了管理員將這些規則應用於自定義元資料架構所需的步驟。
+version: 6.4, 6.5, Cloud Service
 topic: Content Management
 feature: Metadata
 role: User
@@ -9,23 +9,23 @@ level: Intermediate
 kt: 616
 thumbnail: 20702.jpg
 exl-id: 73e793e0-a20e-4954-ba1a-471b2cd85120
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# 在AEM Assets中使用階層式中繼資料{#using-cascading-metadata-in-aem-assets}
+# 在AEM Assets使用級聯元資料{#using-cascading-metadata-in-aem-assets}
 
-進階中繼資料管理可讓使用者建立階層式欄位規則，以在AEM Assets中的中繼資料之間形成內容關係。 以下影片示範欄位需求、可見度和內容選擇的新動態規則。 影片也詳細說明管理員將這些規則套用至自訂中繼資料結構所需的步驟。
+高級元資料管理允許用戶建立級聯欄位規則以在AEM Assets的元資料之間形成上下文關係。 以下視頻演示了欄位要求、可見性和上下文選擇的新動態規則。 該視頻還詳細介紹了管理員將這些規則應用於自定義元資料架構所需的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20702/?quality=12&learn=on)
 
-有三個動態規則集可為指定的中繼資料欄位啟用：
+可為給定元資料欄位啟用三個動態規則集：
 
-1. **要求** :欄位可以根據其他下拉式欄位的值，以動態方式標示為必要欄位。
+1. **要求** :可以根據另一個下拉清單欄位的值動態地將欄位標籤為必需。
 
-2. **可見度** :欄位一律可視或僅可視（根據其他下拉式欄位的值）。
+2. **可見性** :欄位始終可見，或只能根據另一個下拉欄位的值可見。
 
-3. **選擇** :（僅適用於下拉式欄位）根據其他下拉式欄位目前選取的值，篩選顯示給使用者的選擇。
+3. **選擇** :（僅適用於下拉欄位）根據另一個下拉欄位的當前選定值篩選顯示給用戶的選擇。

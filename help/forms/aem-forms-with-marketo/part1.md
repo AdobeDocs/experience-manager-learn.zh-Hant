@@ -1,56 +1,56 @@
 ---
-title: AEM Forms與Marketo（第1部分）
-description: 使用AEM Forms表單資料模型整合AEM Forms與Marketo的教學課程。
-feature: 適用性Forms，表單資料模型
-version: 6.3,6.4,6.5
-topic: 開發
+title: AEM Forms與Marketo（上）
+description: 使用AEM Forms表單資料模型將Marketo與AEM Forms整合的教程。
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 45047852-4fdb-4702-8a99-faaad7213b61
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
-
 # AEM Forms與Marketo
 
-Marketo是Adobe的一部分，提供行銷自動化軟體，著重於帳戶型行銷，包括電子郵件、行動裝置、社交、數位廣告、網頁管理和分析。
+Marketo是Adobe的一部分，它提供以基於客戶的營銷為重點的營銷自動化軟體，包括電子郵件、移動、社交、數字廣告、Web管理和分析。
 
-我們現在可以使用AEM Forms的表單資料模型，將AEM Form與Marketo緊密整合。
+利用AEM Forms的表單資料模型，我們現在可以與AEMMarketo無縫整合。
 
-[深入了解表單資料模型](https://helpx.adobe.com/experience-manager/6-5/forms/using/data-integration.html)
+[瞭解有關表單資料模型的詳細資訊](https://helpx.adobe.com/experience-manager/6-5/forms/using/data-integration.html)
 
-Marketo會公開REST API，允許遠端執行系統的許多功能。 從建立程式到大量銷售機會匯入，有許多選項可允許對Marketo例項進行微調控制。 使用表單資料模型，將AEM Forms與Marketo整合相當簡單。
+Marketo公開了一個REST API，它允許遠程執行系統的許多功能。 從建立程式到批量導入，有許多選項允許對Marketo實例進行細粒度控制。 使用表單資料模型將AEM Forms與Marketo整合起來非常簡單。
 
-本教學課程將逐步引導您完成使用表單資料模型整合AEM Forms與Marketo的相關步驟。 完成本教學課程後，您會擁有OSGi套件組合，針對Marketo進行自訂驗證。 您也將使用提供的Swagger檔案來設定資料來源。
+本教程將引導您完成使用表單資料模型將AEM Forms與Marketo整合所涉及的步驟。 完成本教程後，您將擁有一個OSGi捆綁包，該捆綁包將針對Marketo進行自定義身份驗證。 您還將使用提供的交換器檔案配置資料源。
 
-若要開始，強烈建議您熟悉「先決條件」區段中列出的下列主題。
+要開始，強烈建議您熟悉「先決條件」部分中列出的以下主題。
 
 ## 必備條件
 
-1. [已安裝AEM Forms Add的AEM伺服器套件](/help/forms/adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
-1. 本機AEM開發環境
+1. [安裝了AEMAEM FormsAdd的伺服器](/help/forms/adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
+1. 地方發AEM展環境
 1. 熟悉表單資料模型
 1. Swagger檔案的基本知識
-1. 建立適用性Forms
+1. 建立自適應Forms
 
-**用戶端密碼ID和用戶端密碼金鑰**
+**客戶端密鑰ID和客戶端密鑰**
 
-Marketo與AEM Forms整合的第一步，是取得使用API進行REST呼叫所需的API憑證。 您需要下列項目
+將Marketo與AEM Forms整合的第一步是獲取使用API進行REST調用所需的API憑據。 您需要以下
 
-1. client_id
-1. client_secret
-1. identity_endpoint
+1. 客戶端ID
+1. 客戶端密鑰
+1. 標識端點
 1. 驗證URL。
 
-[請參閱Marketo官方檔案，取得上述屬性。](https://developers.marketo.com/rest-api/) 或者，您也可以聯絡Marketo執行個體的管理員。
+[請按照Marketo官方檔案獲取上述物業。](https://developers.marketo.com/rest-api/) 或者，您也可以聯繫您的Marketo實例的管理員。
 
 **開始之前**
 
-[下載並解壓縮與本文相關的資產。](assets/aemformsandmarketo.zip) zip檔案包含下列項目：
+[下載並解壓縮與本文相關的資產。](assets/aemformsandmarketo.zip) zip檔案包含以下內容：
 
-1. BlankTemplatePackage.zip — 此為最適化表單範本。 使用套件管理器匯入此項目。
-1. marketo.json — 此為將用於設定資料來源的Swagger檔案。
-1. MarketoAndForms.MarketoAndForms.core-1.0-SNAPSHOT.jar — 此為執行自訂驗證的套件組合。 如果您無法完成教學課程，或您的套件無法如預期般運作，歡迎使用此功能。
+1. BlankTemplatePackage.zip — 這是自適應表單模板。 使用包管理器導入此項。
+1. marketo.json — 這是將用於配置資料源的swagger檔案。
+1. MarketoAndForms.MarketoAndForms.core-1.0-SNAPSHOT.jar — 這是執行自定義身份驗證的捆綁包。 如果您無法完成本教程或您的捆綁包未按預期工作，則可以使用此功能。

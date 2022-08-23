@@ -1,28 +1,28 @@
 ---
-title: 在AEM Assets中自訂註解
-description: AEM Assets格式和樣式。
-feature: 協作
-version: 6.3, 6.4, 6.5
-topic: 協作
+title: 自定義AEM Assets注釋
+description: AEM Assets格式和樣式，當開發人員可以配置輸出到PDFAEM時。
+feature: Collaboration
+version: 6.4, 6.5
+topic: Collaboration
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 972737dd-8ca6-47b4-a4ec-b73355c09cec
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '60'
 ht-degree: 0%
 
 ---
 
+# 自定義AEM Assets注釋{#using-annotations-in-aem-assets}
 
-# 在AEM Assets中自訂註解{#using-annotations-in-aem-assets}
+支AEM持將注釋的輸出自定義為PDF。
 
-AEM支援將注釋的輸出自訂為PDF。
+## PDF注釋sling:OsgiConfig定義
 
-## PDF註解sling:OsgiConfig定義
+要自定義PDF批注，請建立 **sling:OsgiConfig** 項目下AEM的節點
 
-若要自訂PDF註解，請在AEM專案的下方建立&#x200B;**sling:OsgiConfig**&#x200B;節點
-
-`/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` 並視需要調整值：
+`/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` 並根據需要調整值：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

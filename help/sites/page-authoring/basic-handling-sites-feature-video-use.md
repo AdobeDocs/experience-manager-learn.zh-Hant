@@ -1,56 +1,56 @@
 ---
-title: AEM Sites中的基本處理
+title: AEM Sites基本處理
 seo-title: Create a new page in Adobe Experience Manager Sites
-description: 以下影片概述使用AEM製作環境時的基本處理方式。 它會以Sites主控台為基礎。
+description: 以下視頻概述了使用作者環境時的基AEM本處理。 它以站點控制台為基礎。
 seo-description: The following video provides an overview of basic handling when using the AEM author environment. It uses the Sites console as a basis.
 feature: Page Editor, Editable Templates
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 kt: 4495
 thumbnail: 31784.jpg
 topic: Content Management
 role: User
 level: Beginner
 exl-id: 896d378c-c20e-4343-b592-277f4c71065e
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 7%
 
 ---
 
-# AEM Sites UI和導覽 {#basic-handling-aem-sites}
+# AEM SitesUI和導航 {#basic-handling-aem-sites}
 
-以下影片概述使用AEM製作環境時的基本處理方式。 它會以Sites主控台為基礎。
+以下視頻概述了使用作者環境時的基AEM本處理。 它以站點控制台為基礎。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31784?quality=12&learn=on)
 
-此影片包含下列功能：
+在此視頻中，包括以下功能：
 
-* 觸控式UI
-* 全域導覽面板包含：
-   * 導航 — 用羅盤表示
+* 啟用觸摸的UI
+* 「全局導航」面板由：
+   * 導航 — 由羅盤表示
 
-      | 主控台 | 用途 |
+      | 主控台 | 目的 |
       |---|---|
-      | 資產 | 這些主控台可讓您匯入和管理數位資產，例如影像、視訊、檔案和音訊檔案。 然後，在相同AEM例項上執行的任何網站都可以使用這些資產 | 社群 | 此主控台可讓您建立和管理社群網站，以利參與和啟用 | 商務 | 這可讓您管理與您的商務網站相關的產品、產品目錄和訂單 |
-      | 體驗片段 | 體驗片段是獨立的體驗，可在各管道間重複使用，且有變數，因此可避免重複複製和貼上體驗或體驗的某些部分 |
-      | Forms | 此主控台可讓您建立、管理和處理表單和檔案 |
-      | 個性化 | 此主控台提供工具架構，用於編寫目標內容及呈現個人化體驗 |
-      | 專案 | 專案主控台可讓您直接存取您的專案。 專案是虛擬控制面板。 它們可用來建立團隊，然後讓該團隊存取資源、工作流程和任務，讓人們能夠按照共同的目標工作 |
-      | 網站 | 「網站」主控台可讓您建立、檢視及管理AEM執行個體上執行的網站。 您可以透過這些主控台建立、編輯、複製、移動和刪除網站頁面、啟動工作流程及發佈頁面 |
+      | Assets | 這些控制台使您能夠導入和管理數字資產，如影像、視頻、文檔和音頻檔案。 然後，在同一實例上運行的任何網站都可以使用這些AEM資產 | 社群 | 此控制台允許您建立和管理社區站點以進行參與和啟用 | 商務 | 這允許您管理與您的Commerce站點相關的產品、產品目錄和訂單 |
+      | 體驗片段 | 體驗片段是一種獨立體驗，可跨渠道重複使用，並有各種變化，避免了反複複製和貼上體驗或部分體驗的麻煩 |
+      | Forms | 此控制台允許您建立、管理和處理表單和文檔 |
+      | 個人化 | 此控制台提供了一個工具框架，用於創作目標內容和呈現個性化體驗 |
+      | 專案 | 「項目」控制台可讓您直接訪問項目。 項目是虛擬儀表板。 它們可用於構建團隊，然後讓該團隊訪問資源、工作流和任務，從而允許人們按照共同的目標工作 |
+      | Sites | 通過「站點」控制台，您可以建立、查看和管理實例上運行的AEM網站。 通過這些控制台，您可以建立、編輯、複製、移動和刪除網站頁面、啟動工作流和發佈頁面 |
 
    * 工具 — 用錘子表示
-* Omni Search
+* 全向搜索
 * 解決方案切換器
 * 說明
 * 通知
-* 使用者屬性
-* 邊欄選取器
-* AEM網站主控台檢視
+* 用戶屬性
+* 軌道選擇器
+* 站AEM點控制台視圖
    * 清單檢視
    * 欄檢視
    * 卡片檢視
@@ -62,5 +62,5 @@ ht-degree: 7%
 
 ## 其他資源 {#additional-resources}
 
-* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [編輯頁面內容文檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
 * [製作頁面的快速入門手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)

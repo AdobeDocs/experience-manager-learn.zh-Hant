@@ -1,23 +1,23 @@
 ---
 title: 從MySQL資料庫儲存和檢索表單資料
-description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
-feature: 適用性表單
+description: 多部分教程，引導您完成儲存和檢索表單資料所涉及的步驟
+feature: Adaptive Forms
 type: Tutorial
-version: 6.3,6.4,6.5
-topic: 開發
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 9cce47e7-07b4-43c3-8746-197620855c3f
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 4%
+source-wordcount: '93'
+ht-degree: 1%
 
 ---
 
+# 建立OSGi服務以提取資料
 
-# 建立OSGi服務以擷取資料
-
-下列程式碼是用來儲存及擷取儲存的最適化表單資料。 簡單查詢可用來擷取與指定GUID相關聯的適用性表單資料。 然後，擷取的資料會傳回至呼叫應用程式。 此程式碼會參照先前步驟中建立的相同資料來源
+編寫以下代碼以儲存和讀取儲存的Adaptive Form資料。 簡單查詢用於提取與給定GUID關聯的自適應表單資料。 然後將所獲取的資料返回給調用應用程式。 在此代碼中引用在前一步中建立的同一資料源
 
 
 ```java

@@ -1,47 +1,47 @@
 ---
-title: AEM Forms搭配JSON結構描述和資料[Part4]
-seo-title: AEM Forms搭配JSON結構描述和資料[Part4]
-description: 多部分教學課程，逐步引導您完成使用JSON結構描述建立適用性表單和查詢提交資料的相關步驟。
-seo-description: 多部分教學課程，逐步引導您完成使用JSON結構描述建立適用性表單和查詢提交資料的相關步驟。
-feature: 適用性表單
+title: AEM Forms，帶JSON架構和資料[Part4]
+seo-title: AEM Forms with JSON Schema and Data[Part4]
+description: 多部分教程，引導您完成建立帶JSON架構的自適應表單和查詢提交資料所涉及的步驟。
+seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
-topic: 開發
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a8d8118d-f4a1-483f-83b4-77190f6a42a4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
 
+# 查詢已提交資料
 
-# 查詢已提交的資料
 
+下一步是查詢提交的資料並以表格形式顯示結果。 要完成此任務，我們將使用以下軟體
 
-下一步是查詢提交的資料，並以表格方式顯示結果。 為此，我們將使用下列軟體
+[查詢生成器](https://querybuilder.js.org/)  — 用於建立查詢的UI元件
 
-[QueryBuilder](https://querybuilder.js.org/)  — 用於建立查詢的UI元件
+[資料表](https://datatables.net/) — 以表格形式顯示查詢結果。
 
-[資料表](https://datatables.net/) — 以表格方式顯示查詢結果。
+生成以下UI以啟用查詢已提交的資料。 只有JSON架構中標籤為必需的元素才可用於查詢。 在下面的螢幕截圖中，我們正在查詢所有提交，其中deliverypref是SMS。
 
-已建立下列UI，以啟用查詢已提交的資料。 只有JSON結構中標示為必要的元素可供查詢。 在下方的螢幕擷取中，我們會查詢所有傳送首頁為SMS的提交。
-
-查詢提交資料的範例UI不會使用QueryBuilder中提供的所有進階功能。 你被鼓勵自己試試。
+用於查詢已提交資料的示例UI不使用QueryBuilder中提供的所有高級功能。 我們鼓勵你自己試試。
 
 ![querybuilder](assets/querybuilderui.gif)
 
 >[!NOTE]
 >
->本教學課程的目前版本不支援查詢多欄。
+>本教程的當前版本不支援查詢多列。
 
-選擇表單以執行查詢時，會對&#x200B;**/bin/getdatakeysfromschema**&#x200B;進行GET呼叫。 此GET呼叫會傳回與表單結構相關聯的必要欄位。 接著，必填欄位會填入QueryBuilder下拉式清單中，供您建立查詢。
+當您選擇表單以執行查詢時，將調用GET **/bin/getdatakeysfromschema**。 此GET調用返回與表單架構關聯的必填欄位。 然後，將在QueryBuilder的下拉清單中填入所需欄位，以便生成查詢。
 
-以下代碼段對JSONSchemaOperations服務的getRequiredColumnsFromSchema方法進行調用。 我們會將架構的屬性和必要元素傳遞至此方法呼叫。 此函式呼叫傳回的陣列隨後將用來填入查詢產生器下拉式清單
+以下代碼段調用JSONSchemaOperations服務的getRequiredColumnsFromSchema方法。 我們將架構的屬性和所需元素傳遞給此方法調用。 此函式調用返回的陣列隨後用於填充查詢生成器下拉清單
 
 ```java
 public JSONArray getData(String formName) throws SQLException, IOException {
@@ -64,19 +64,18 @@ public JSONArray getData(String formName) throws SQLException, IOException {
  }
 ```
 
-按一下GetResult按鈕時，會對&#x200B;**&quot;/bin/querydata&quot;**&#x200B;發出Get呼叫。 我們會透過查詢參數將QueryBuilder UI建立的查詢傳遞至servlet。 然後，Servlet將此查詢按摩為SQL查詢，以用於查詢資料庫。 例如，如果您正在搜索以檢索名為「Mouse」的所有產品，則查詢生成器的查詢字串將為$.productname = &#39;Mouse&#39;。 然後，此查詢將轉換為以下內容
+按一下GetResult按鈕時，將調用Get **&quot;/bin/querydata&quot;**。 通過查詢參數將QueryBuilder UI生成的查詢傳遞給Servlet。 然後，Servlet將此查詢按摩到可用於查詢資料庫的SQL查詢中。 例如，如果您正在搜索以檢索名為「Mouse」的所有產品，則Query Builder查詢字串將為$.productname = &#39;Mouse&#39;。 然後，此查詢將轉換為以下
 
-從aemformswithjson中選取* 。  JSON_EXTRACT(formsubmissions.formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;的表單提交
+選擇 &#42; 從aemformswithjson中。  formsmissions，其中JSON_EXTRACT(formsmissions .formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;
 
-然後會傳回此查詢的結果，以填入UI中的表格。
+然後返回此查詢的結果以填充UI中的表。
 
 要使此示例在本地系統上運行，請執行以下步驟
 
-1. [請確定您已遵循此處提及的所有步驟](part2.md)
-1. [使用AEM Package Manager匯入Dashboardv2.zip。](assets/dashboardv2.zip) 此套件包含所有必要的套件組合、組態設定、自訂提交及查詢資料的範例頁面。
-1. 使用範例json結構描述建立最適化表單
-1. 設定適用性表單以提交至「customsubmithelpx」自訂提交動作
-1. 填寫表格並提交
-1. 將瀏覽器指向[dashboard.html](http://localhost:4502/content/AemForms/dashboard.html)
-1. 選取表單並執行簡單查詢
-
+1. [確保已執行此處提到的所有步驟](part2.md)
+1. [使用包管理器導入Dashboardv2.zipAEM。](assets/dashboardv2.zip) 此包包含查詢資料所需的所有捆綁包、配置設定、自定義提交和示例頁。
+1. 使用示例json架構建立自適應表單
+1. 將Adaptive Form配置為提交到「customsubmithelpx」自定義提交操作
+1. 填寫表單並提交
+1. 將瀏覽器指向 [dashboard.html](http://localhost:4502/content/AemForms/dashboard.html)
+1. 選擇表單並執行簡單查詢

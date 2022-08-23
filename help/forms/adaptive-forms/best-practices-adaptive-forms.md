@@ -1,43 +1,42 @@
 ---
-title: 建立最適化表單時應遵循的命名慣例和最佳實務
-description: 建立最適化表單時應遵循的命名慣例和最佳實務
-feature: 適用性表單
-version: 6.3,6.4,6.5
-topic: 開發
+title: 建立自適應表單時要遵循的命名約定和最佳做法
+description: 建立自適應表單時要遵循的命名約定和最佳做法
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: fbfc74d7-ba7c-495a-9e3b-63166a3025ab
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 2%
+source-wordcount: '287'
+ht-degree: 1%
 
 ---
 
 # 最佳作法
 
-Adobe Experience Manager(AEM)表單可協助您將複雜的交易轉換為簡單、令人愉悅的數位體驗。 以下檔案說明開發適用性Forms時需要遵循的一些其他最佳實務。 本文檔應與[本文檔](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)一起使用
+Adobe Experience Manager(AEM)表格可幫助您將複雜事務轉換為簡單、令人愉快的數字型驗。 以下檔案介紹了在開發適應性Forms時需要遵循的一些其他最佳做法。 本文檔將與 [此文檔](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)
 
-## 命名慣例
+## 命名約定
 
 * **面板**
-   * 面板名稱是以大寫字元開頭的駝峰式大小寫。
+   * 面板名稱是以大寫字元開頭的駝峰大寫。
 
-* **表單欄位**
-   * 欄位名稱是以小寫字元開頭的駝峰式大小寫。
-   * 請勿使用數字啟動欄位名稱
-   * 請勿在名稱中加上破折號「 — 」。 這些等同於程式碼中的減號，並將在程式碼中當作運算子。
-   * 名稱可包含字母、數字、底線和美元符號。
+* **窗體域**
+   * 欄位名稱是以小寫字元開頭的駝峰大寫。
+   * 不使用數字開始欄位名
+   * 不要在名稱中包含短划線「 — 」。 這些將等同於代碼中的減號，並將在代碼中充當運算子。
+   * 名稱可以包含字母、數字、下划線和美元符號。
    * 名稱必須以字母開頭
    * 名稱區分大小寫
-   * 保留的字詞（如JavaScript關鍵字）不能用作名稱。 請留意其他AF專屬保留字，例如   為&quot;panel&quot;、&quot;name&quot;。
-   * 請勿在名稱中加上破折號「 — 」
-* **開發Forms**
-   * 開發大型表單時，應考量表單片段。 啟用延遲載入表單片段以加快載入速度   times
-   * **DataModel**
-      * 建議將適用性表單與適當的資料模型關聯
-   * **物件事件**
-      * 與對象的可見性相關的代碼應始終放置在該對象的可見性事件中。
+   * 保留字（如JavaScript關鍵字）不能用作名稱。 注意其他特定於AF的保留字，如「panel」、「name」。
+   * 不要在名稱中包含短划線「 — 」
+* **發展Forms**
+   * 在開發大型形體時，應考慮形體碎片。 啟用表單片段的延遲載入，以加快載入時間
+   * **資料模型**
+      * 建議將自適應表單與相應的資料模型關聯
+   * **對象事件**
+      * 與對象的可見性相關的代碼應始終放置在對象的可見性事件中。
    * **指令碼**
-      * 如果您在適用性表單中撰寫的程式碼延伸超過5行可見，您必須將程式碼移至用戶端程式庫。 最好將函式新增至用戶端程式庫，然後新增適當的jsdoc標籤，讓函式可在適用性表單規則編輯器中顯示。
-
-
+      * 如果您在自適應表單中編寫的代碼超過5個可見行，則必須將代碼移到客戶端庫。 理想情況下，將函式添加到客戶端庫，然後添加相應的jsdoc標籤，以允許在「自適應表單」規則編輯器中顯示該函式。

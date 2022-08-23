@@ -3,12 +3,12 @@ title: 在Dynamic Media使用視頻播AEM放器
 description: AEMDynamic Media視頻播放器過去依賴Flash運行時支援案頭客戶端上的自適應視頻流，而瀏覽器在基於快閃記憶體的內容流處理方面變得更加積極。 隨著HLS(Apple的HTTP即時流視頻傳輸協定)的推出，現在無需依賴快閃記憶體就可以流式傳輸內容。
 sub-product: dynamic-media
 feature: Video Profiles
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: 2f8f76b3f7a340784584f967deeea39684bf630e
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 5%

@@ -1,47 +1,47 @@
 ---
-title: 在Adobe Experience Manager Sites中自訂元件圖示
-description: 元件圖示可讓作者快速識別包含圖示或有意義縮寫的元件。 作者現在可以比以往更快找到建立其網頁體驗所需的元件。
+title: 在Adobe Experience Manager Sites自定義元件表徵圖
+description: 元件表徵圖允許作者使用表徵圖或有意義的縮寫快速識別元件。 作者現在可以找到構建其Web體驗所需的元件，其速度比以往任何時候都快。
 topics: components
 audience: administrator, developer
 doc-type: technical video
 activity: develop
-version: 6.3, 6.4, 6.5
-feature: 核心元件
-topic: 開發
+version: 6.4, 6.5
+feature: Core Components
+topic: Development
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 2%
+source-wordcount: '375'
+ht-degree: 1%
 
 ---
 
+# 自定義元件表徵圖 {#developing-component-icons-in-aem-sites}
 
-# 自訂元件圖示 {#developing-component-icons-in-aem-sites}
-
-元件圖示可讓作者快速識別包含圖示或有意義縮寫的元件。 作者現在可以比以往更快找到建立其網頁體驗所需的元件。
+元件表徵圖允許作者使用表徵圖或有意義的縮寫快速識別元件。 作者現在可以找到構建其Web體驗所需的元件，其速度比以往任何時候都快。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16778/?quality=9&learn=on)
 
-元件瀏覽器現在會以一致的灰色主題顯示，並顯示：
+元件瀏覽器現在以一致的灰色主題顯示，顯示：
 
 * **[!UICONTROL 元件群組]**
 * **[!UICONTROL 元件標題]**
 * **[!UICONTROL 元件說明]**
-* **[!UICONTROL 元件圖示]**
-   * 元件標題的前兩個字母&#x200B;*（預設）*
-   * 自訂PNG影像&#x200B;*（由開發人員設定）*
-   * 自訂SVG影像&#x200B;*（由開發人員設定）*
-   * CoralUI圖示&#x200B;*（由開發人員設定）*
+* **[!UICONTROL 元件表徵圖]**
+   * 元件標題的前兩個字母 *（預設）*
+   * 自定義PNG影像 *（由開發人員配置）*
+   * 自定義SVG影像 *（由開發人員配置）*
+   * CoralUI表徵圖 *（由開發人員配置）*
 
-## 元件圖示組態選項 {#component-icon-configuration-options}
+## 元件表徵圖配置選項 {#component-icon-configuration-options}
 
-### 縮寫 {#abbreviations}
+### 縮略語 {#abbreviations}
 
-依預設，元件標題的前2個字元(**[cq:Component]@jcr:title**)會作為縮寫。 例如，如果&#x200B;**[cq:Component]@jcr:title=Article List**，縮寫將顯示為&quot;**Ar**&quot;。
+預設情況下，元件標題的前2個字元(**[cq：元件]@jcr：標題**)用作縮寫。 例如，如果 **[cq：元件]@jcr:title=文章清單** 縮寫將顯示為&quot;**阿爾**。
 
-縮寫可透過&#x200B;**[cq:Component]@abbreviation**&#x200B;屬性自訂。 雖然此值可以接受2個以上的字元，但建議將縮寫限制為2個字元，以避免任何視覺干擾。
+可通過 **[cq：元件]@abbreviation** 屬性。 雖然此值可以接受2個以上的字元，但建議將縮寫限制為2個字元，以避免任何視覺干擾。
 
 ```plain
 /apps/.../components/content/my-component
@@ -49,9 +49,9 @@ ht-degree: 2%
   - abbreviation = "AL"
 ```
 
-### CoralUI圖示 {#coralui-icons}
+### CoralUI表徵圖 {#coralui-icons}
 
-AEM提供的CoralUI圖示可用於元件圖示。 若要設定CoralUI圖示，請將&#x200B;**[cq:Component]@cq:icon**&#x200B;屬性設為所需CoralUI圖示的HTML圖示屬性值(列舉於[CoralUI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)中。
+由提供的CoralUI圖AEM標可用於元件表徵圖。 要配置CoralUI表徵圖，請設定 **[cq：元件]@cq：表徵圖** 屬性到所需CoralUI表徵圖的HTML表徵圖屬性值(在 [CoralUI文檔](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)。
 
 ```plain
 /apps/.../components/content/my-component
@@ -61,11 +61,11 @@ AEM提供的CoralUI圖示可用於元件圖示。 若要設定CoralUI圖示，�
 
 ### PNG影像 {#png-images}
 
-PNG影像可用於元件圖示。 若要將PNG影像設定為元件圖示，請在&#x200B;**[cq:Component]**&#x200B;下方，將所需影像新增為&#x200B;**nt:file**，名為&#x200B;**cq:icon.png**。
+PNG影像可用於元件表徵圖。 要將PNG影像配置為元件表徵圖，請將所需影像添加為 **nt：檔案** 命名 **cq：表徵圖.png** 下 **[cq：元件]**。
 
-PNG應具有透明背景，或背景顏色設定為&#x200B;**#707070**。
+PNG應具有透明背景或背景顏色設定為 **#707070**。
 
-PNG影像將縮放至&#x200B;**20px x 20px**。 但是，要容納視網膜顯示器&#x200B;**40px**&#x200B;而使用&#x200B;**40px**&#x200B;可能較為可取。
+PNG影像將縮放到 **20px x 20px**。 但是要適應視網膜顯示 **40px** 按 **40px** 也許更可取。
 
 ```plain
 /apps/.../components/content/my-component
@@ -76,9 +76,9 @@ PNG影像將縮放至&#x200B;**20px x 20px**。 但是，要容納視網膜顯�
 
 ### SVG影像 {#svg-images}
 
-SVG影像（基於向量）可用於元件表徵圖。 要將SVG影像配置為元件表徵圖，請在&#x200B;**[cq:Component]**&#x200B;下將所需的SVG添加為&#x200B;**nt:file**，該&#x200B;**cq:icon.svg**。
+SVG影像（基於向量）可用於元件表徵圖。 要將SVG影像配置為元件表徵圖，請將所需SVG添加為 **nt：檔案** 命名 **cq：表徵圖.svg** 下 **[cq：元件]**。
 
-SVG影像的背景顏色應設定為&#x200B;**#707070**，大小應為&#x200B;**20px x 20px。**
+SVG影像的背景顏色應設定為 **#707070** 和 **20px,20px。**
 
 ```plain
 /apps/.../components/content/my-component
@@ -89,4 +89,4 @@ SVG影像的背景顏色應設定為&#x200B;**#707070**，大小應為&#x200B;**
 
 ## 其他資源 {#additional-resources}
 
-* [可用的CoralUI圖示](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)
+* [可用的CoralUI表徵圖](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)
