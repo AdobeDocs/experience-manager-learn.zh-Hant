@@ -1,13 +1,13 @@
 ---
 title: 開發跨源資源共用(CORS)AEM
 description: 利用CORS通過客戶端JavaScript從AEM外部Web應用程式訪問內容的一個簡短示例。
-version: 6,4, 6.5
+version: 6.4, 6.5
 topic: Security, Development
 role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
