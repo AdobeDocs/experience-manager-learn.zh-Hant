@@ -2,12 +2,12 @@
 title: 使用資料屬性預填充HTML5Forms。
 description: 通過從後端源讀取資料來填充HTML5表單。
 feature: Adaptive Forms
-version: 6.4,6.5.
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: ab0f5282-383b-4be6-9c57-cded6ab37528
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: d7b1ab815d9c8a0d0342f7b57d1efb08fb39a26a
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
@@ -33,7 +33,7 @@ slingRequest.setAttribute（&quot;data&quot;，內容）;
 
 要實現此使用情形，您需要建立自定義配置檔案。 有關建立自定義配置檔案的詳細資訊，請在 [AEM Forms文檔](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html)。
 
-建立自定義配置檔案後，將建立一個JSP檔案，該檔案通過調用後端系統來獲取資料。 讀取資料後，將使用slingRequest.setAttribute(&quot;data&quot;, content);預填充表單
+建立自定義配置檔案後，將建立一個JSP檔案，該檔案將通過調用後端系統來獲取資料。 讀取資料後，將使用slingRequest.setAttribute(&quot;data&quot;, content);預填充表單
 
 在呈現XDP時，您還可以將一些參數傳遞到xdp，並根據參數的值可以從後端系統獲取資料。
 
