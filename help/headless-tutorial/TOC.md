@@ -6,9 +6,9 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
+source-git-commit: efb15b8eda84c68614e2fba9e4adc7680cb080f1
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '246'
 ht-degree: 19%
 
 ---
@@ -75,6 +75,14 @@ ht-degree: 19%
       + [4 — 導航和路由](./spa-editor/react/navigation-routing.md)
       + [5 — 自訂元件](./spa-editor/react/custom-component.md)
       + [6 — 擴充元件](./spa-editor/react/extend-component.md)
+   + Angular{#angular}
+      + [總覽](./spa-editor/angular/overview.md)
+      + [1 - SPA編輯器專案](./spa-editor/angular/create-project.md)
+      + [2 — 整合SPA](./spa-editor/angular/integrate-spa.md)
+      + [3 — 對應SPA元件](./spa-editor/angular/map-components.md)
+      + [4 — 導航和路由](./spa-editor/angular/navigation-routing.md)
+      + [5 — 自訂元件](./spa-editor/angular/custom-component.md)
+      + [6 — 擴充元件](./spa-editor/angular/extend-component.md)
    + 遠端SPA{#remote-spa}
       + [總覽](./spa-editor/remote-spa/overview.md)
       + [快速設定](./spa-editor/remote-spa/quick-setup.md)
