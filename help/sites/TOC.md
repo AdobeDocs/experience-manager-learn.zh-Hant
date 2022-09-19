@@ -3,10 +3,10 @@ user-guide-title: AEM Sites 影片和教學課程
 user-guide-description: Adobe Experience Manager Sites 的影片和教學課程系列。
 breadcrumb-title: AEM Sites 教學課程
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 552e5fbeb5dafc6d82763d5c3b31cc6d17131739
+source-git-commit: 798b366a5add2831bf60a8d89968bad16e48802c
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 21%
+source-wordcount: '434'
+ht-degree: 20%
 
 ---
 
@@ -48,6 +48,8 @@ ht-degree: 21%
    + [使用體驗片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [建置區塊](experience-fragments/building-blocks.md)
    + [內容片段與體驗片段的比較](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + 專家建議 {#expert-advice}
+      + [內容片段提示](content-fragments/expert-advice/content-fragments.md)
 + 開發 {#developing}
    + [AEM 專案原型](developing/aem-project-archetype.md)
    + [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
@@ -113,3 +115,8 @@ ht-degree: 21%
       + [使用體驗片段選件建立Target活動](integrations/adobe-target/create-target-activity.md)
       + [使用可視化體驗撰寫器進行個人化](integrations/adobe-target/personalization-using-vec.md)
       + [個人化完整網頁體驗](integrations/adobe-target/personalization-web-page.md)
++ 專家資源 {#expert-resources}
+   + [AEM Sites成熟度評估](expert-resources/maturity-assessment.md)
+   + [網站維護](expert-resources/site-maintenance.md)
+   + [AEM Champion秘訣與技巧：工作階段1](expert-resources/champion-tips-1.md)
+   + [AEM Champion秘訣與技巧：會議2](expert-resources/champion-tips-2.md)
