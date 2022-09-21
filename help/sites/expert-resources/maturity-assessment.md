@@ -3,7 +3,7 @@ title: 網站階層、分類法和標籤提示
 description: 網站階層、分類法和標籤提示最佳作法
 hide: true
 hidefromtoc: true
-source-git-commit: 6f4d811e796b34985fa9d5af335239948e59c1ef
+source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -34,3 +34,4 @@ AEM成熟度評估主要針對內部部署和受管理的服務實施。 每個A
 建議的AEM成熟度評估領域：設計與架構、產品管理與策略、數位資產管理與交付、分析、測試與安全性。
 
 向AEM Champion Greg Dimeris提供巨大的簡介，用於從多個Experience League文章及他自己的最佳做法中聚合此資訊！
+
