@@ -8,10 +8,10 @@ user-guide-title: AEM Sites - WKND 教學課程快速入門
 user-guide-description: AEM 的新開發人員的多部分教學課程。 實作虛構的生活風格品牌 WKND 的 AEM 網站。啟用前端管道，以加快開發至部署的週期。
 breadcrumb-title: AEM Sites WKND 教學課程
 index: y
-source-git-commit: 96e1c95b7cd672aa5d4f79707735abc86dae7b8a
+source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '108'
+ht-degree: 37%
 
 ---
 
@@ -37,5 +37,8 @@ ht-degree: 0%
    + [5 — 貼明](./site-template/theming.md)
 + 啟用前端管道 — DevOps{#enable-frontend-pipeline-devops}
    + [總覽](./enable-frontend-pipeline/overview.md)
-
+   + [1 — 檢閱完整堆疊專案](./enable-frontend-pipeline/review-uifrontend-module.md)
+   + [2 — 更新專案以使用前端管道](./enable-frontend-pipeline/update-project.md)
+   + [3 — 使用前端管道進行部署](./enable-frontend-pipeline/create-frontend-pipeline.md)
+   + [4 — 考量事項](./enable-frontend-pipeline/considerations.md)
 
