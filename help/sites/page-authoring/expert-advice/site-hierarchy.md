@@ -1,11 +1,24 @@
 ---
 title: 網站階層、分類法和標籤提示
-description: 網站階層、分類法和標籤提示最佳作法
+seo-title: Overview of Authoring in AEM Sites
+description: 以下影片概述AEM製作環境中製作的基本概念。 它會以Sites主控台為基礎。
+seo-description: The following video provides an overview of basic concepts of authoring in an AEM author environment. It uses the Sites console as a basis.
+feature: Page Editor, Editable Templates
+topics: authoring, publishing
+audience: author, marketer
+doc-type: feature video
+activity: use
+version: 6.4, 6.5, Cloud Service
+kt: 4242
+thumbnail: 33594.jpg
+topic: Content Management
+role: User
+level: Beginner
 hide: true
 hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
@@ -16,8 +29,6 @@ ht-degree: 0%
 中繼資料和標籤是提升AEM效率的關鍵。 用戶、領導者和管理層認識到需要整體戰略，但他們發現這很難取得進展。 通常，知識會分散在用戶之間，使整體策略變得困難，並使調整更成問題。
 
 中繼資料和標籤之間有何差異？ 在推動您的策略時，要考慮哪些業務方面？
-
-可以找到更密集的摘要 [此處](https://adobe.sharepoint.com/:w:/r/sites/ACSSuccessServices/_layouts/15/Doc.aspx?sourcedoc=%7BFE5E873A-A3B6-4F40-BF22-A2C9F1269802%7D&amp;file=AEM_TagTaxonomyAndMetadata_BestPractice_en%20(2).docx&amp;action=default&amp;mobileredirect=true).
 
 ## 中繼資料的用途為何？
 

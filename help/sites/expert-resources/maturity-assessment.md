@@ -1,11 +1,12 @@
 ---
-title: 網站階層、分類法和標籤提示
-description: 網站階層、分類法和標籤提示最佳作法
-hide: true
-hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+title: 您的AEM Sites成熟度評估
+seo-title: AEM Sites Maturity Assessment
+description: 此檢查清單提供評估AEM Sites執行個體的成熟度時，您和您的團隊應回答的關鍵問題概觀
+seo-description: This checklist provides an overview of key questions you and your team should be answering when evaluating the maturity of your AEM Sites instance
+audience: author, marketer, developer
+source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
