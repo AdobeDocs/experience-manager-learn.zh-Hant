@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: 164741ce5ae7d00f904365589438c2eaaf1e05db
+source-git-commit: 5277b7a6ceba4473ab2808f980c8faa5bf69c757
 workflow-type: tm+mt
-source-wordcount: '1695'
+source-wordcount: '1701'
 ht-degree: 3%
 
 ---
@@ -155,11 +155,12 @@ ht-degree: 3%
    + [建立客戶端庫](sign-multiple-documents/create-client-lib.md)
    + [建立表單範本](sign-multiple-documents/create-af-template.md)
    + [建立初始表單](sign-multiple-documents/create-initial-form.md)
-   + [建立Forms以進行簽署](sign-multiple-documents/create-forms-for-signing.md)
+   + [建立簽名表單](sign-multiple-documents/create-forms-for-signing.md)
    + [測試解決方案](sign-multiple-documents/testing-and-trouble-shooting.md)
 + 自訂工作流程步驟{#custom-workflow-steps}
    + [從xml文檔中提取節點](custom-workflow-steps/extract-xml-node.md)
    + [將文檔保存到檔案系統](custom-workflow-steps/write-payload-document.md)
+   + [將提交的資料儲存在字串變數中](custom-workflow-steps/save-submitted-data-in-string-variable.md)
 + AEM工作流程中的變數{#variables-aem-workflow}
    + [簡介 — 工作流程中的變數](variables-aem-workflow/introduction.md)
    + [XML變數](variables-aem-workflow/part1.md)
