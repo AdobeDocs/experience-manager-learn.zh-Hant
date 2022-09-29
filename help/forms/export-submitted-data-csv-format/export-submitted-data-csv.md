@@ -1,17 +1,18 @@
 ---
 title: 將提交的表單資料匯出為CSV格式
 description: 將提交的最適化表單資料匯出為CSV格式
-feature: 適用性表單
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 6cd892e4-82c5-4201-8b6a-40c2ae71afa9
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -24,17 +25,19 @@ ht-degree: 0%
 >
 >此範例僅適用於不以結構或表單資料模型為基礎的適用性Forms
 
-![表](assets/tablestructure.PNG)
-結構由於您可以看到架構的名稱是aemformsturation。此架構內是表格式提交，定義了以下列
+![表格結構](assets/tablestructure.PNG)
+如您所見，架構的名稱為aemformstutorial。此架構內是表格式提交，已定義以下列
 
-* 表單資料：此欄將保留已提交的表單資料
-* formname:此列將包含提交的表單的名稱
+* 表單資料：此欄包含已提交的表單資料
+* formname:此列包含提交的表單的名稱
 * id:這是主要金鑰，設為自動遞增
 
 表格名稱和兩欄名稱會以OSGi設定屬性的形式公開，如下方螢幕擷取所示：
 ![osgi-configuration](assets/configuration.PNG)
-程式碼會讀取這些值，並建構適當的SQL查詢以執行。 例如，將根據上述值執行下列查詢
-**從formname=timeoffrequestform**的aemformstutorial.formsubmissions中選擇表單資料
+程式碼會讀取這些值，並建構適當的SQL查詢以執行。 例如，會根據上述值執行下列查詢
+
+`SELECT formdata FROM aemformstutorial.formsubmissions where formname=timeoffrequestform`
+
 在上述查詢中，表單名稱(timeoffrequestform)會以請求參數的形式傳遞至servlet。
 
 ## **建立OSGi服務**
@@ -43,7 +46,7 @@ ht-degree: 0%
 
 * 第37行：我們正在存取Apache Sling Connection Pooled DataSource。
 
-* 第89行：這是服務的入口點。方法`getCSVFile(..)`以formName作為輸入參數，並獲取與給定表單名稱相關的提交資料。
+* 第89行：這是服務的入口點。方法 `getCSVFile(..)` 會以formName作為輸入參數，並擷取與指定表單名稱相關的已提交資料。
 
 >[!NOTE]
 >
@@ -263,7 +266,7 @@ public @interface StoreAndExportConfiguration {
 
 ## Servlet
 
-以下是調用服務`getCSVFile(..)`方法的Servlet代碼。 服務返回StringBuffer對象，然後將該對象流化回調用應用程式
+以下是叫用 `getCSVFile(..)` 服務的方法。 服務返回StringBuffer對象，然後將該對象流化回調用應用程式
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -305,6 +308,6 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 
 ### 在伺服器上部署
 
-* 使用MySQL Workbench將[SQL檔案](assets/formsubmissions.sql)導入MySQL Server。 這會建立稱為&#x200B;**aemformstutorial**&#x200B;的架構，並建立名為&#x200B;**formsubmissions**&#x200B;的表，其中包含一些範例資料。
-* 使用Felix Web控制台部署[OSGi Bundle](assets/store-export.jar)
-* [取得TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)。您應將CSV檔案串流傳回給您。
+* 匯入 [SQL檔案](assets/formsubmissions.sql) 使用MySQL Workbench進入MySQL Server。 這會建立以下架構： **修飾** 表名 **提交** 包含一些範例資料。
+* 部署 [OSGi套件](assets/store-export.jar) 使用Felix網路主控台
+* [獲取TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform). 您應將CSV檔案串流傳回給您。

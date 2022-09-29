@@ -1,8 +1,6 @@
 ---
-title: 保存並恢復信函
-seo-title: Save and resume letters
-description: 瞭解如何保存和檢索草稿字母
-seo-description: Learn how to save and retrieve draft letters
+title: 儲存及擷取草稿信函
+description: 了解如何儲存和擷取草稿信函
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -13,16 +11,17 @@ topic: Development
 role: Developer
 level: Intermediate
 kt: 10208
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+exl-id: dc6f64a0-7059-4392-9c29-e66bdef4fd4d
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
 
-# 保存草稿
+# 儲存及擷取草稿信函
 
-以下代碼用於保存字母實例。 字母實例的元資料儲存在 _冰草_ 的子菜單。 生成並返回唯一字串(draftID)。 此唯一字串隨後用於檢索已保存的字母實例。
+以下程式碼用於儲存信函例項。 信函例項的中繼資料儲存在 _icdrafts_ 表格。 系統會產生唯一字串(draftID)並傳回。 然後，此唯一字串將用於擷取儲存的信函例項。
 
 ```java
 public String save(CCRDocumentInstance letterToSave) throws CCRDocumentException {
@@ -68,10 +67,10 @@ public String save(CCRDocumentInstance letterToSave) throws CCRDocumentException
 }
 ```
 
-## 獲取信件
+## 獲取信函
 
-寫入了以下代碼以獲取已保存的草稿信函。
-要載入已保存的字母實例，需要提供draftID。 基於此draftID，我們查詢資料庫以獲取關於該字母的其他元資料。 同一draftID用於通過從檔案系統中讀取相應的xml來建立字母資料。 然後構建並返回CCRDocumentInstance對象。
+已編寫下列程式碼來擷取儲存的草稿信函。
+若要載入儲存的信函例項，您需要提供draftID。 我們會根據此draftID查詢資料庫，以取得關於信函的其他中繼資料。 從檔案系統讀取適當的xml，以建立信函資料時會使用相同的draftID。 然後會建構並傳回CCRDocumentInstance物件。
 
 
 ```java
@@ -102,74 +101,73 @@ public CCRDocumentInstance get(String draftID) throws CCRDocumentException {
 
 ### 更新信函
 
-以下代碼用於更新已保存的信件實例。 更新的字母資料使用字母ID寫入檔案系統。
+以下代碼用於更新保存的信函實例。 更新的信函資料會使用信函ID寫入檔案系統。
 
 ```java
 public void update(CCRDocumentInstance letterInstanceToUpdate) throws CCRDocumentException {
-		Document icData = letterInstanceToUpdate.getData();
-		String draftID = letterInstanceToUpdate.getId();
-		log.debug("updating letter instance with draft id =  "+draftID);
-		try
-			{
-				icData.copyToFile(new File(draftID+".xml"));
-			} 
-		catch (IOException e)
-			{
-				log.debug("Error updating "+e.getMessage());;
-			}
-		
-	}
+        Document icData = letterInstanceToUpdate.getData();
+        String draftID = letterInstanceToUpdate.getId();
+        log.debug("updating letter instance with draft id =  "+draftID);
+        try
+            {
+                icData.copyToFile(new File(draftID+".xml"));
+            } 
+        catch (IOException e)
+            {
+                log.debug("Error updating "+e.getMessage());;
+            }
+        
+    }
 ```
 
-### 獲取所有已保存的信件
+### 獲取所有已保存的信函
 
-AEM Forms不提供任何現成的用戶介面來列出已保存的字母。 對於本文，我使用自適應表單以表格格式列出保存的字母實例。
-您可以自定義查詢以獲取已保存的字母實例。 在此示例中，我正在查詢由&quot;admin&quot;保存的字母實例。
+AEM Forms不會提供任何現成的使用者介面，以列出儲存的信函。 針對本文，我會使用最適化表單，以表格格式列出儲存的信函例項。
+您可以自訂查詢，以擷取儲存的信函例項。 在此範例中，我由「管理員」查詢已儲存的信函例項。
 
 ```java
-	public List < CCRDocumentInstance > getAll(String arg0, Date arg1, Date arg2, Map < String, Object > arg3) throws CCRDocumentException {
-	  String selectStatement = "Select * from aemformstutorial.icdrafts where owner = 'admin'";
-	  Connection connection = getConnection();
-	  Statement statement = null;
-	  String documentID = "";
-	  List < CCRDocumentInstance > listOfDrafts = new ArrayList < CCRDocumentInstance > ();
-	  String draftID;
-	  String savedInstanceName = "";
-	  try {
-	    statement = connection.createStatement();
-	    ResultSet rs = statement.executeQuery(selectStatement);
-	    while (rs.next()) {
-	      documentID = rs.getString("documentID");
-	      draftID = rs.getString("draftID");
-	      savedInstanceName = rs.getString("name");
-	      Document draftData = new Document(new File(draftID + ".xml"));
-	      CCRDocumentInstance draftLetter = new CCRDocumentInstance(draftData, savedInstanceName, documentID, CCRDocumentInstance.Status.DRAFT);
-	      listOfDrafts.add(draftLetter);
-	    }
-	  } catch (SQLException e) {
-	    log.debug("The error is " + e.getMessage());
-	  } finally {
-	    if (statement != null) {
-	      try {
-	        statement.close();
-	      } catch (SQLException e) {
-	        log.debug("error in closing statement" + e.getMessage());
-	      }
-	    }
-	    if (connection != null) {
-	      try {
-	        connection.close();
-	      } catch (SQLException e) {
-	        log.debug("error in closing connection" + e.getMessage());
-	      }
-	    }
-	  }
+    public List < CCRDocumentInstance > getAll(String arg0, Date arg1, Date arg2, Map < String, Object > arg3) throws CCRDocumentException {
+      String selectStatement = "Select * from aemformstutorial.icdrafts where owner = 'admin'";
+      Connection connection = getConnection();
+      Statement statement = null;
+      String documentID = "";
+      List < CCRDocumentInstance > listOfDrafts = new ArrayList < CCRDocumentInstance > ();
+      String draftID;
+      String savedInstanceName = "";
+      try {
+        statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(selectStatement);
+        while (rs.next()) {
+          documentID = rs.getString("documentID");
+          draftID = rs.getString("draftID");
+          savedInstanceName = rs.getString("name");
+          Document draftData = new Document(new File(draftID + ".xml"));
+          CCRDocumentInstance draftLetter = new CCRDocumentInstance(draftData, savedInstanceName, documentID, CCRDocumentInstance.Status.DRAFT);
+          listOfDrafts.add(draftLetter);
+        }
+      } catch (SQLException e) {
+        log.debug("The error is " + e.getMessage());
+      } finally {
+        if (statement != null) {
+          try {
+            statement.close();
+          } catch (SQLException e) {
+            log.debug("error in closing statement" + e.getMessage());
+          }
+        }
+        if (connection != null) {
+          try {
+            connection.close();
+          } catch (SQLException e) {
+            log.debug("error in closing connection" + e.getMessage());
+          }
+        }
+      }
 
-	  return listOfDrafts;
-	}
+      return listOfDrafts;
+    }
 ```
 
-### Eclipse項目
+### Eclipse專案
 
-具有示例實現的Eclipse項目可以 [從此處下載](assets/icdrafts-eclipse-project.zip)
-
+包含範例實作的eclipse專案可以是 [從此處下載](assets/icdrafts-eclipse-project.zip)

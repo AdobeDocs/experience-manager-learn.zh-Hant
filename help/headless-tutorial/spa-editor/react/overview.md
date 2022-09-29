@@ -1,6 +1,6 @@
 ---
 title: AEM SPA Editor and React 快速入門
-description: 建立可在Adobe Experience Manager AEM中使用WKND SPA編輯的第一個React Single Page Application(SPA)。 了解如何使用React JS架構搭配AEM SPA編輯器建立SPA。 本多部分教學課程將逐步說明虛擬生活風格品牌WKND的React應用程式實作。 教學課程涵蓋 SPA 端對端建立和 AEM 整合作業。
+description: 建立您的第一個 React 單頁應用程式 (SPA)，該應用程式可在 Adobe Experience Manager (AEM) 中使用 WKND SPA 進行編輯。了解如何使用 React JS 框架和 AEM 的 SPA 編輯器建立 SPA。此多部分教學課程會逐步引導您為虛擬生活風格品牌 WKND 實作 React 應用程式。教學課程涵蓋 SPA 端對端建立和 AEM 整合作業。
 sub-product: sites
 topics: development
 version: Cloud Service
@@ -14,16 +14,16 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 60%
+source-wordcount: '465'
+ht-degree: 73%
 
 ---
 
 # 在AEM中建立第一個React SPA {#overview}
 
-歡迎使用專為 Adobe Experience Manager (AEM) 中 **SPA Editor** 功能的新手開發人員設計的多部分教學課程。本教學課程將逐步說明虛擬生活風格品牌WKND的React應用程式實作。 React應用程式將開發並設計為搭配AEM SPA Editor進行部署，此編輯器會將React元件對應至AEM元件。 部署至 AEM 的完成 SPA 即可使用 AEM 傳統的內嵌編輯工具動態製作。
+歡迎使用專為 Adobe Experience Manager (AEM) 中 **SPA Editor** 功能的新手開發人員設計的多部分教學課程。本教學課程將逐步說明虛擬生活風格品牌WKND的React應用程式實作。 React應用程式經過開發並設計，可與AEM SPA Editor一起部署，後者會將React元件對應至AEM元件。 部署至 AEM 的完成 SPA 即可使用 AEM 傳統的內嵌編輯工具動態製作。
 
 ![實作的最終 SPA](assets/wknd-spa-implementation.png)
 
@@ -44,7 +44,7 @@ ht-degree: 60%
 開始進行此教學課程前，您需要具備以下條件：
 
 * HTML、CSS 和 JavaScript 的基本知識
-* 基本熟悉[React](https://reactjs.org/tutorial/tutorial.html)
+* 基本熟悉 [React](https://reactjs.org/tutorial/tutorial.html)
 
 *雖然不一定需要，但對於[開發傳統的 AEM Sites 元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)有基本的了解也會有幫助。*
 
@@ -67,4 +67,4 @@ ht-degree: 60%
 
 ## 後續步驟 {#next-steps}
 
-你在等什麼?!導覽至[建立專案](create-project.md)章節，了解如何使用AEM專案原型產生已啟用SPA編輯器的專案，以啟動教學課程。
+你在等什麼?!導覽至 [建立專案](create-project.md) 章節，並了解如何使用AEM專案原型產生已啟用SPA編輯器的專案。

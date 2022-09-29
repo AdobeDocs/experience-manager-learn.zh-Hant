@@ -10,9 +10,10 @@ role: Developer
 level: Beginner
 kt: 9371
 thumbnail: 338680.jpg
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+exl-id: 3155e0fa-56b7-4a52-8eef-fee488e95f68
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -35,7 +36,7 @@ ht-degree: 0%
 
 ## 您將建置的 {#what-you-will-build}
 
-在本章中，將檢查兩個Adobe XD檔案，一個用於 [標準網站範本](https://github.com/adobe/aem-site-template-standard) 和另一個為擬議的WKND地點。 此
+在本章中，會檢查兩個Adobe XD檔案，其中一個是 [標準網站範本](https://github.com/adobe/aem-site-template-standard) 和另一個為擬議的WKND地點。 此
 
 ## 標準網站範本UI套件 {#standard-site-template-uikit}
 
@@ -64,6 +65,6 @@ ht-degree: 0%
 
 ### 後續步驟 {#next-steps}
 
-在下一章中，將根據WKND文章設計建立新的頁面模板。
+在下一章中，會根據WKND文章設計建立新的頁面範本。
 
-了解如何建立和修改 [頁面範本](./page-templates.md). 了解頁面範本和頁面之間的關係。 了解如何設定頁面範本的原則，以提供精細的控管和內容的品牌一致性。  系統會根據Adobe XD的模型，建立結構良好的雜誌文章範本。
+了解如何建立和修改 [頁面範本](./page-templates.md). 了解頁面範本和頁面之間的關係。 了解如何設定頁面範本的原則，以提供精細的控管和內容的品牌一致性。  系統會根據Adobe XD的模型建立結構良好的「雜誌文章」範本。

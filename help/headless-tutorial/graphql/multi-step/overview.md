@@ -1,6 +1,6 @@
 ---
-title: 無頭操作AEM教程入門 — GraphQL
-description: 一個端到端教程，演示如何使用AEMGraphQL API構建和公開內容。
+title: AEM無頭式實作教學課程快速入門 — GraphQL
+description: 端對端教學課程，說明如何使用AEM GraphQL API來建置和公開內容。
 doc-type: tutorial
 mini-toc-levels: 1
 kt: 6678
@@ -10,50 +10,50 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 93d50e79853429f420803c28807ee8018d0ff78f
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 2%
+source-wordcount: '297'
+ht-degree: 3%
 
 ---
 
-# 無頭入門AEM- GraphQL
+# AEM無周邊功能快速入門 — GraphQL
 
-一個端到端教程，演示如何在無頭CMS方案中使用AEMGraphQL API構建和公開內容，並由外部應用使用。
+端對端教學課程，說明如何在無周邊CMS情境下，使用AEM GraphQL API建置和公開內容，並供外部應用程式使用。
 
-本教程探AEM討如何使用GraphQL API和無頭功能來為在外部應用中呈現的體驗提供動力。
+本教學課程探討如何使用AEM GraphQL API和無周邊功能，強化外部應用程式中呈現的體驗。
 
-本教程將介紹以下主題：
+本教學課程將涵蓋下列主題：
 
-* 新建項目配置
-* 建立新內容片段模型以對資料建模
-* 根據先前製作的模型建立新內容片段。
-* 瞭解如何使用整合AEM的GraphiQL開發工具查詢中的內容片段。
-* 將GraphQL查詢儲存或保留到
-* 從示例React應用中使用永續GraphQL查詢
+* 建立新的項目配置
+* 建立新內容片段模型以建立資料模型
+* 根據先前建立的模型建立新內容片段。
+* 探索如何使用整合的GraphiQL開發工具查詢AEM中的內容片段。
+* 若要儲存或保留GraphQL查詢至AEM
+* 從範例React應用程式中使用持續的GraphQL查詢
 
 
 ## 必備條件 {#prerequisites}
 
-以下內容需要學習本教程：
+請遵循本教學課程，並遵循下列步驟：
 
 * 基本HTML和JavaScript技能
-* 必須本地安裝以下工具：
+* 必須在本機安裝下列工具：
    * [Node.js v10+](https://nodejs.org/en/)
    * [npm 6+](https://www.npmjs.com/)
-   * [蠢貨](https://git-scm.com/)
-   * IDE(例如， [Microsoft® Visual Studio代碼](https://code.visualstudio.com/))
+   * [Git](https://git-scm.com/)
+   * IDE(例如 [Microsoft® Visual Studio代碼](https://code.visualstudio.com/))
 
-### 環AEM境
+### AEM環境
 
-要完成本教程，建AEM議管理員訪AEM問as a Cloud Service環境。  如果您沒有訪問AEMas a Cloud Service環境的權限， [本地AEMas a Cloud Service快速啟動SDK](/help/cloud-service/local-development-environment/aem-runtime.md)。 但是，必須注意，某些產品UI螢幕（如「內容片段」導航）將不同。
+若要完成本教學課程，建議AEM管理員存取AEMas a Cloud Service環境。  如果您沒有AEMas a Cloud Service環境的存取權，可以使用 [本機AEMas a Cloud ServiceQuickstart SDK](/help/cloud-service/local-development-environment/aem-runtime.md). 不過，請務必注意，某些產品UI畫面（例如「內容片段」導覽）不同。
 
 ## 開始吧！
 
-開始教程 [定義內容片段模型](content-fragment-models.md)。
+以開始本教學課程 [定義內容片段模型](content-fragment-models.md).
 
-## GitHub項目
+## GitHub專案
 
-原始碼和內容包在 [參考AEM線 — WKND GraphQL GitHub項目](https://github.com/adobe/aem-guides-wknd-graphql)。
+原始碼和內容套件可在 [AEM指南 — WKND GraphQL GitHub專案](https://github.com/adobe/aem-guides-wknd-graphql).
 
-如果您發現教程或代碼有問題，請留下 [GitHub問題](https://github.com/adobe/aem-guides-wknd-graphql/issues)。
+若您發現本教學課程或程式碼的問題，請保留 [GitHub問題](https://github.com/adobe/aem-guides-wknd-graphql/issues).

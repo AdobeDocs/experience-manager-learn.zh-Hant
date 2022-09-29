@@ -1,5 +1,5 @@
 ---
-title: AEM服務憑證
+title: AEM Forms服務憑證
 description: 從AEM Developer Console下載服務憑證。
 type: Documentation
 role: Developer
@@ -9,17 +9,17 @@ feature: Adaptive Forms
 topic: Development
 kt: 8192
 thumbnail: 330519.jpg
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+exl-id: 74cb8c30-4c41-426c-a1b5-fc595a3167c8
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
 
+# AEM Forms服務憑證
 
-# 服務憑據
-
-與AEM as aCloud Service的整合必須能夠安全地驗證AEM。 AEM Developer Console會產生服務憑證，這些憑證供外部應用程式、系統和服務使用，以程式設計方式與AEM製作或透過HTTP發佈服務互動。
+與AEMas a Cloud Service的整合必須能夠安全地驗證AEM。 AEM Developer Console會產生服務憑證，這些憑證供外部應用程式、系統和服務使用，以程式設計方式與AEM製作或透過HTTP發佈服務互動。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
 

@@ -1,25 +1,25 @@
 ---
-title: 資產共用空間中的主題
-description: 功能和技術理解資料共用共用共用
+title: 資產共用公域中的主題
+description: 功能與技術了解的資料資產共用公域
 version: 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '112'
 ht-degree: 1%
 
 ---
 
-# 資產共用空間中的主題 {#asset-share-commons-theme}
+# 資產共用公域中的主題 {#asset-share-commons-theme}
 
-資產共用下域中的主題簡介 視頻通過自定義顏色方案來瀏覽建立新主題的過程。
+資產共用公域中主題的簡介。 影片會逐步說明如何使用自訂色彩配置建立新主題。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20572/?quality=9&learn=on)
 
-在此視頻中，將基於資產共用共用深暗主題建立新主題。 該配色方案將與自定義徽標相匹配，使網站具有一致的外觀。
+此影片會根據「資產共用公域深色」主題建立新主題。 色彩配置將符合自訂標誌，讓網站呈現一致的外觀與風格。
 
 ## 主題變數
 
@@ -72,9 +72,9 @@ ht-degree: 1%
 @msgWarningBackgroundColor: @yellow;
 ```
 
-下載 [自定義客戶端庫主題](assets/asc-theme-demo.zip)
+下載 [自訂用戶端程式庫主題](assets/asc-theme-demo.zip)
 
 ## 其他資源{#additional-resources}
 
-* [資產共用共用下載](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
-* [ACSAEM Commons 3.11.0+版本下載](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
+* [資產共用公域發行下載](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
+* [ACS AEM Commons 3.11.0+版本下載](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)

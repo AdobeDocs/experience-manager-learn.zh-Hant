@@ -2,18 +2,18 @@
 title: 搭配AEM Assets Dynamic Media使用全景和垂直影像檢視器
 description: AEM 6.4中的Dynamic Media檢視器增強功能包括新增全景影像檢視器、全景虛擬現實影像檢視器和垂直影像檢視器。 全景查看器提供一種簡單的方式，讓您無需任何自訂開發，即可享受房間、屬性、位置或景觀的精彩、沈浸式體驗。
 sub-product: dynamic-media
-feature: 視訊設定檔、視訊設定檔、 360 VR視訊
+feature: Video Profiles, Video Profiles, 360 VR Video
 version: 6.4, 6.5
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '533'
 ht-degree: 2%
 
 ---
-
 
 # 搭配AEM Assets Dynamic Media使用全景和垂直影像檢視器{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
@@ -27,7 +27,7 @@ AEM 6.4中的Dynamic Media檢視器增強功能包括新增全景影像檢視器
 
 ## 全景和全景VR檢視器
 
-根據影像的長寬比或關鍵字將影像視為全景。 依預設，長寬比為2的影像會視為全景影像。 如果全景影像檢視器預設集滿足上述條件，就可用於影像預覽。 在公司的DMS7設定中，可借由在/conf/global/settings/cloudconfigs/dmscene7/jcr:content指定雙重屬性s7PanoramicAR來修改全景影像外觀比例標準。 關鍵字儲存在資產中繼資料節點的dc:keyword屬性中。 如果關鍵字包含下列任一組合：
+根據影像的長寬比或關鍵字將影像視為全景。 預設情況下，長寬比為2的影像被視為全景影像。 如果全景影像檢視器預設集滿足上述條件，就可用於影像預覽。 在公司的DMS7設定中，可借由在/conf/global/settings/cloudconfigs/dmscene7/jcr:content指定雙重屬性s7PanoramicAR來修改全景影像外觀比例標準。 關鍵字儲存在資產中繼資料節點的dc:keyword屬性中。 如果關鍵字包含下列任一組合：
 
 * 等矩形，
 * 球面+全景，

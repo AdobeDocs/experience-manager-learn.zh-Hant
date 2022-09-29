@@ -1,13 +1,14 @@
 ---
-title: 在AEM FormsCS中使用批處理API生成文檔
-description: 配置和觸發批處理操作以生成文檔。
+title: 在AEM Forms CS中使用批次API產生檔案
+description: 配置並觸發批操作以生成文檔。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+exl-id: 165e2884-4399-4970-81ff-1f2f8b041a10
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
@@ -16,18 +17,14 @@ ht-degree: 0%
 
 # 簡介
 
-批請求是指一次生成數以十計、數以百計或數以千計的類似文檔。 示例：財務公司可生成信用卡對帳單以發送給其所有客戶。
-批處理API（非同步API）適用於計畫的高吞吐量多文檔生成使用情形。 這些API以批次形式生成文檔。 例如，每月生成電話單、信用卡對帳單和福利對帳單。
+批次請求是一次產生數以萬計、數以百計或千計類似檔案的位置。 範例：財務公司可以生成信用卡報表，發送給所有客戶。
+批次API（非同步API）適用於排程的高吞吐量多檔案產生使用案例。 這些API會以批次產生檔案。 例如，每月生成電話賬單、信用卡對帳單和福利對帳單。
 
-要使用AEM FormsCS批處理操作API，需要以下配置
+若要使用AEM Forms CS批次作業API，需進行下列設定
 
 1. 配置Azure儲存帳戶
-1. 建立Azure儲存支援的雲配置
+1. 建立Azure儲存備份雲配置
 1. 建立批資料儲存配置
-1. 執行批處理API
+1. 執行批次API
 
-建議您熟悉 [API文檔](https://experienceleague.corp.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=en) 開始使用本教程。
-
-
-
-
+建議您先熟悉 [API檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=en) 開始使用本教學課程之前。

@@ -1,52 +1,52 @@
 ---
-title: 在自適應Forms Workflow中捕獲工作流注釋
-description: 在工作流中捕獲工作流AEM注釋
+title: 在最適化Forms Workflow中擷取工作流程註解
+description: 在AEM Workflow中擷取工作流程註解
 feature: Workflow
 version: 6.4
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 5c250bbb-bac6-427d-8aca-1fbb1229e02c
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
 
-# 在自適應Forms Workflow中捕獲工作流注釋{#capturing-workflow-comments-in-adaptive-forms-workflow}
+# 在最適化Forms Workflow中擷取工作流程註解{#capturing-workflow-comments-in-adaptive-forms-workflow}
 
->[僅適用於AEM Forms6.4。在AEM Forms6.5中，請使用變數功能實現此使用情形]
+>[僅適用於AEM Forms 6.4。在AEM Forms 6.5中，請使用變數功能來達成此使用案例]
 
-常見請求是將任務審閱者輸入的注釋包含在電子郵件中。 在AEM Forms6.4中，沒有現成的機制來捕獲用戶輸入的注釋並將這些注釋包含在電子郵件中。
+常見的請求是將任務審閱者輸入的注釋包含在電子郵件中。 在AEM Forms 6.4中，沒有立即可用的機制可擷取使用者輸入的留言，並將這些留言納入電子郵件中。
 
-為滿足此要求，提供了一個示例OSGi捆綁包，可用於捕獲注釋並將這些注釋儲存為工作流元資料屬性。
+為滿足此需求，提供了範例OSGi套件組合，可用來擷取註解，並將這些註解儲存為工作流程中繼資料屬性。
 
-以下螢幕快照顯示了如何在 [工AEM作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) 以捕獲注釋並將其儲存為元資料屬性。 「捕獲工作流注釋」是需要在進程步驟中使用的java類的名稱。 您需要傳遞將保存注釋的元資料屬性名稱。 在下面的螢幕快照中，managerComments是用於儲存注釋的元資料屬性。
+以下螢幕擷圖顯示如何在 [AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) 擷取註解，並將其儲存為中繼資料屬性。 「捕獲工作流注釋」是需要在流程步驟中使用的java類的名稱。 您必須傳遞包含註解的中繼資料屬性名稱。 在下面的螢幕截圖中，managerComments是將儲存注釋的元資料屬性。
 
-![工作流注釋1](assets/workflowcomments1.gif)
+![workflowcomments1](assets/workflowcomments1.gif)
 
-要在系統上test此功能，請執行以下步驟：
-* [確保將工作流中的流程步驟配置為使用「捕獲工作流注釋」](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
+要在您的系統上測試此功能，請執行以下步驟：
+* [確保將工作流中的進程步驟配置為使用捕獲工作流注釋](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
 
-* [部署Developingwithserviceuser捆綁包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [部署Developmentwithserviceuser套件組合](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [部署SetValue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 此捆綁包包含用於捕獲注釋並將其儲存為元資料屬性的示例代碼
+* [部署SetValue捆綁包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 此套件包含擷取註解的范常式式碼，並將其儲存為中繼資料屬性
 
-* [將與本文相關的資產下載並解壓縮到您的檔案系統](assets/capturecomments.zip) 這些資產包含工作流模型和示例自適應表單。
+* [將與本文相關的資產下載並解壓縮至您的檔案系統](assets/capturecomments.zip) 資產包含工作流程模型和範例最適化表單。
 
-* 使用包管理器將2個ZIPAEM檔案導入
+* 使用封裝管理程式將2個zip檔案匯入AEM
 
-* [通過瀏覽到此URL預覽表單](http://localhost:4502/content/dam/formsanddocuments/capturecomments/jcr:content?wcmmode=disabled)
+* [瀏覽至此URL以預覽表單](http://localhost:4502/content/dam/formsanddocuments/capturecomments/jcr:content?wcmmode=disabled)
 
-* 填寫表單域並提交表單
+* 填寫表單欄位並提交表單
 
-* [檢查收件箱AEM](http://localhost:4502/aem/inbox)
+* [檢查AEM收件匣](http://localhost:4502/aem/inbox)
 
-* 從收件箱開啟任務並提交表單。 請在出現提示時輸入一些注釋。
+* 從收件箱中開啟任務並提交表單。 請在出現提示時輸入一些注釋。
 
-注釋將儲存在元資料屬性crx中名為managerComments。 檢查注釋以管理員身份登錄到crx。 工作流實例儲存在以下路徑中
+註解會儲存在稱為的中繼資料屬性中 `managerComments` 在AEM存放庫中。 若要以管理員身分檢查註解登入crx。 工作流實例儲存在以下路徑中：
 
-/var/workflow/instances/server0
+`/var/workflow/instances/server0`
 
-選擇相應的工作流實例並檢查元資料節點中的屬性managerComments。
+選取適當的工作流程例項，並在中繼資料節點中檢查屬性managerComments。

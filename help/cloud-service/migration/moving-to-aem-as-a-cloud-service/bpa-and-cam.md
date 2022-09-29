@@ -9,9 +9,9 @@ level: Experienced
 kt: 8627
 thumbnail: 336957.jpeg
 exl-id: f8289dd4-b293-4b8f-b14d-daec091728c0
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '427'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 ## 關鍵活動
 
-+ 複製生產6.x環境。 當您移轉內容和重構程式碼時，複製生產環境對於測試各種工具和變更非常有用。
++ 複製生產6.x環境。 當您移轉內容和重構程式碼時，複製生產環境對於測試各種工具和變更非常有價值。
 + 從下載最新的BPA工具 [Software Distribution入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) 並安裝在AEM 6.x複製環境中。
 + 使用BPA工具產生可上傳至Cloud Acceleration Manager(CAM)的報表。 CAM可透過 [https://experience.adobe.com/](https://experience.adobe.com/) > **Experience Manager** > **Cloud Acceleration Manager**.
 + 使用CAM提供對當前代碼庫和環境進行哪些更新的指導，以便轉到AEMas a Cloud Service。

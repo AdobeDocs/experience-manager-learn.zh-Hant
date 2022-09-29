@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '425'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 若要完成此使用案例，我們必須執行下列動作。
 
-* 將Reader擴充功能憑證新增至「fd-service」使用者。 列出新增Reader擴充功能憑證的步驟 [此處](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)
+* 將Reader擴充功能憑證新增至「fd-service」使用者。 列出新增Reader擴充功能憑證的步驟 [此處](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=zh-Hant)
 
 
 * 您也可以參閱 [配置Reader擴展憑據](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
 
 
-* 建立將呈現和套用使用權限的自訂OSGi服務。 完成此作業的程式碼列於下方
+* 建立可轉譯及套用使用權限的自訂OSGi服務。 完成此作業的程式碼列於下方
 
 ## 呈現XDP並套用使用權限 {#render-xdp-and-apply-usage-rights}
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
 以下螢幕擷圖顯示公開的設定屬性。 大部分的常見使用權限會透過此設定公開。
 
-![](assets/configurationproperties.gif)
+![配置屬性](assets/configurationproperties.gif)
 
 下列程式碼會顯示用來建置OSGi組態設定的程式碼
 
@@ -122,7 +122,7 @@ public @interface DocSvcConfiguration {
 
 ## 建立Servlet以串流PDF {#create-servlet-to-stream-the-pdf}
 
-下一步是使用GET方法建立servlet，將讀取器擴展PDF返回給用戶。 在這種情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會以動態PDF呈現，而隨瀏覽器提供的pdf檢視器不會處理動態PDF。
+下一步是使用GET方法建立servlet，將讀取器擴展PDF返回給用戶。 在這種情況下，會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會以動態PDF呈現，而隨瀏覽器提供的pdf檢視器不會處理動態PDF。
 
 以下是servlet的程式碼。 我們會將CRX存放庫中XDP的路徑傳遞至此servlet。
 

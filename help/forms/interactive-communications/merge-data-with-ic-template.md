@@ -1,20 +1,19 @@
 ---
 title: 通過合併資料生成打印通道文檔
-seo-title: 通過合併資料生成打印通道文檔
 description: 了解如何合併輸入流中包含的資料，以產生列印通道檔案
-seo-description: 了解如何合併輸入流中包含的資料，以產生列印通道檔案
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '479'
 ht-degree: 1%
 
 ---
@@ -25,7 +24,7 @@ ht-degree: 1%
 
 ## 建立預填服務
 
-服務名「ccm-print-test」將用於訪問此服務。 定義此預填服務後，您可以在servlet或工作流進程步驟實施中訪問此服務，以生成打印通道文檔。
+服務名稱「ccm-print-test」用於訪問此服務。 定義此預填服務後，您可以在servlet或工作流進程步驟實施中訪問此服務，以生成打印通道文檔。
 
 ```java
 import java.io.InputStream;
@@ -67,7 +66,7 @@ public PrefillData getPrefillData(DataOptions options) throws FormsException {
 
 ### 建立WorkflowProcess實施
 
-如下所示，將執行workflowProcess實施代碼片段。當AEM Workflow中的進程步驟與此實施相關聯時，將執行此代碼。 此實作需要3個程式引數，說明如下：
+如下所示，workflowProcess實作代碼片段。當AEM Workflow中的處理步驟與此實作相關聯時，就會執行此代碼。 此實作需要3個程式引數，說明如下：
 
 * 配置適用性表單時指定的DataFile路徑名稱
 * 打印管道模板的名稱

@@ -11,9 +11,9 @@ level: Beginner
 kt: 7497
 thumbnail: KT-7497.jpg
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
-source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1330'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 2%
 
 1. 選擇 **文章頁面** 範本，按一下 **下一個**.
 
-   AEM中的頁面是根據頁面範本建立。 如需深入探索頁面範本，請參閱 [頁面範本](page-templates.md) 章節。
+   AEM中的頁面是根據頁面範本建立。 如需詳細探索頁面範本，請參閱 [頁面範本](page-templates.md) 章節。
 
 1. 在 **屬性** 輸入 **標題** 《你好世界》
 1. 設定 **名稱** 為 `hello-world` 按一下 **建立**.
@@ -59,7 +59,7 @@ ht-degree: 2%
 
 AEM元件可視為網頁的小型模組化建置組塊。 將UI分割為邏輯區塊或元件，可讓管理更輕鬆。 要重新使用元件，元件必須是可配置的。 這可透過製作對話方塊完成。
 
-AEM提供 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 生產就緒即可使用。 此 **核心元件** 範圍包括基本元素，如 [文字](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) 和 [影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 更複雜的UI元素，例如 [輪播](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html).
+AEM提供 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 生產就緒即可使用。 此 **核心元件** 範圍包括基本元素，如 [文字](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) 和 [影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 更複雜的UI元素，例如 [輪播](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html).
 
 接下來，使用AEM頁面編輯器編寫一些元件。
 
@@ -87,7 +87,7 @@ AEM提供 [核心元件](https://experienceleague.adobe.com/docs/experience-mana
 
    ![將資產新增至對話方塊](assets/author-content-publish/add-asset-dialog.png)
 
-1. 請注意，頁面上有元件，例如 **標題**, **導覽**, **搜尋** 已修正。 這些區域是「頁面範本」的一部分，無法在個別頁面上修改。 下一章將詳細探討此內容。
+1. 請注意，頁面上有元件，例如 **標題**, **導覽**, **搜尋** 已修正。 這些區域是「頁面範本」的一部分，無法在個別頁面上修改。 在下一章中會詳細探討此內容。
 
 您可以嘗試其他部分元件。 關於每個 [您可以在此處找到核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). 關於 [您可以在此處找到頁面編寫](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html).
 

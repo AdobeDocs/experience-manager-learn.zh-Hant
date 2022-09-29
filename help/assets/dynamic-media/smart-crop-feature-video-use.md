@@ -2,18 +2,18 @@
 title: 搭配AEM Assets Dynamic Media使用智慧型裁切
 description: 智慧型裁切會使用Adobe Sensei來消除為回應式設計而裁切內容所耗時且成本高昂的工作。
 sub-product: dynamic-media
-feature: 智慧型裁切、影像描述檔
+feature: Smart Crop, Image Profiles
 version: 6.4, 6.5
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '245'
 ht-degree: 2%
 
 ---
-
 
 # 搭配AEM Assets Dynamic Media使用智慧型裁切{#using-smart-crop-with-aem-assets-dynamic-media}
 

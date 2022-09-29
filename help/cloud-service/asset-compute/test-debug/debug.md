@@ -1,6 +1,6 @@
 ---
 title: 調試Asset compute工作
-description: asset compute背景工作可透過數種方式進行除錯，從簡單的除錯記錄陳述式，到附加的VS Code（作為遠端除錯工具），再到從AEM作為Cloud Service啟動的Adobe I/O Runtime中提取啟動記錄。
+description: asset compute背景工作可透過數種方式進行除錯，從簡單的除錯記錄陳述式，到附加的VS Code（作為遠端除錯工具），再到從起始自AEM as a Cloud Service的Adobe I/O Runtime中提取啟用記錄。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -13,58 +13,58 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
 
 # 調試Asset compute工作
 
-asset compute背景工作可透過數種方式進行除錯，從簡單的除錯記錄陳述式，到附加的VS Code（作為遠端除錯工具），再到從AEM作為Cloud Service啟動的Adobe I/O Runtime中提取啟動記錄。
+asset compute背景工作可透過數種方式進行除錯，從簡單的除錯記錄陳述式，到附加的VS Code（作為遠端除錯工具），再到從起始自AEM as a Cloud Service的Adobe I/O Runtime中提取啟用記錄。
 
 ## 記錄
 
-調試Asset compute工作的最基本形式在工作程式代碼中使用傳統的`console.log(..)`語句。 `console` JavaScript物件是隱式的全域物件，因此不需要匯入或要求它，因為它一律存在於所有內容中。
+調試Asset compute工作的最基本形式使用傳統 `console.log(..)` 語句。 此 `console` JavaScript物件是隱式的全域物件，因此不需要匯入或要求它，因為它一律存在於所有內容中。
 
 根據Asset compute工作程式的執行方式，這些日誌陳述式可用於查看的方式不同：
 
-+ 從`aio app run`，記錄打印到標準輸出，以及[開發工具的](../develop/development-tool.md)激活日誌
++ 從 `aio app run`，記錄打印到標準輸出， [開發工具](../develop/development-tool.md) 啟動記錄
    ![aio app run console.log(...)](./assets/debug/console-log__aio-app-run.png)
-+ 從`aio app test`，將日誌打印到`/build/test-results/test-worker/test.log`
++ 從 `aio app test`，將打印到 `/build/test-results/test-worker/test.log`
    ![aio app test console.log(...)](./assets/debug/console-log__aio-app-test.png)
-+ 使用`wskdebug`，記錄陳述式會列印至VS程式碼除錯主控台（檢視>除錯主控台），標準輸出
++ 使用 `wskdebug`，記錄陳述式會列印至VS程式碼除錯主控台（檢視>除錯主控台），標準輸出
    ![wskdebug console.log(...)](./assets/debug/console-log__wskdebug.png)
-+ 使用`aio app logs`，日誌語句打印到激活日誌輸出
++ 使用 `aio app logs`，日誌語句打印到激活日誌輸出
 
 ## 透過附加偵錯工具進行遠端除錯
 
 >[!WARNING]
 >
->使用Microsoft Visual Studio Code 1.48.0或更高版本，以與wskdebug相容
+>使用Microsoft Visual Studio Code 1.48.0或更新版本，以與wskdebug相容
 
-[wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組支援將調試器附加到Asset compute工作，包括在VS代碼中設定斷點並逐步執行代碼的功能。
+此 [wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組支援將除錯程式附加至Asset compute背景工作，包括在VS程式碼中設定中斷點，以及逐步執行程式碼的功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40383/?quality=12&learn=on)
 
 _使用wskdebug對Asset compute工作程式進行偵錯的點進（無音訊）_
 
-1. 確保已安裝[wskdebug](../set-up/development-environment.md#wskdebug)和[ngrok](../set-up/development-environment.md#ngork) npm模組
-1. 確保[Docker Desktop和支援的Docker映像](../set-up/development-environment.md#docker)已安裝並正在運行
+1. 確保 [wskdebug](../set-up/development-environment.md#wskdebug) 和 [恩格羅克](../set-up/development-environment.md#ngork) 已安裝npm模組
+1. 確保 [Docker Desktop和支援的Docker映像](../set-up/development-environment.md#docker) 已安裝且正在執行
 1. 關閉「開發工具」的任何作用中執行個體。
-1. 使用`aio app deploy`部署最新代碼，並記錄已部署的操作名稱（`[...]`之間的名稱）。 這將用於更新步驟8中的`launch.json`。
+1. 使用部署最新程式碼 `aio app deploy`  並記錄已部署的動作名稱(名稱介於 `[...]`)。 這可用來更新 `launch.json` 中。
 
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
 
 
-1. 使用命令`npx adobe-asset-compute devtool`啟動Asset compute開發工具的新實例
+1. 使用命令啟動Asset compute開發工具的新實例 `npx adobe-asset-compute devtool`
 1. 在VS程式碼中，點選左側導覽中的「除錯」圖示
-   + 如果出現提示，請點選&#x200B;__建立launch.json檔案> Node.js__&#x200B;以建立新的`launch.json`檔案。
-   + 否則，點選&#x200B;__Launch Program__&#x200B;下拉式清單右側的&#x200B;__Gear__&#x200B;圖示，以開啟編輯器中現有的`launch.json`。
-1. 將下列JSON物件設定新增至`configurations`陣列：
+   + 如果出現提示，請點選 __建立launch.json檔案> Node.js__ 建立新 `launch.json` 檔案。
+   + 否則，點選 __齒輪__ 表徵圖 __啟動計畫__ 下拉式清單以開啟現有 `launch.json` 編輯里。
+1. 將下列JSON物件設定新增至 `configurations` 陣列：
 
    ```json
    {
@@ -86,22 +86,22 @@ _使用wskdebug對Asset compute工作程式進行偵錯的點進（無音訊）_
    }
    ```
 
-1. 從下拉式清單中選取新的&#x200B;__wskdebug__
-1. 點選&#x200B;__wskdebug__&#x200B;左側的綠色&#x200B;__執行__&#x200B;按鈕
-1. 開啟`/actions/worker/index.js` ，點選行號左側以新增中斷點1。 導覽至在步驟6中開啟的Asset compute開發工具Web瀏覽器視窗
-1. 點選&#x200B;__Run__&#x200B;按鈕以執行工作器
-1. 導覽回「VS程式碼」、`/actions/worker/index.js`，然後逐步執行程式碼
-1. 若要退出可除錯的開發工具，請在步驟6中執行`npx adobe-asset-compute devtool`命令的終端中點選`Ctrl-C`
+1. 選取新 __wskdebug__ 從下拉式清單
+1. 點選綠色 __執行__ 按鈕 __wskdebug__ 下拉式清單
+1. 開啟 `/actions/worker/index.js` 並點選行號左側以添加斷點1。 導覽至在步驟6中開啟的Asset compute開發工具Web瀏覽器視窗
+1. 點選 __執行__ 執行工作人員的按鈕
+1. 導覽回「VS程式碼」，然後導覽至 `/actions/worker/index.js` 並逐步執行程式碼
+1. 若要退出「可除錯的開發工具」，請點選 `Ctrl-C` 在航站樓里 `npx adobe-asset-compute devtool` 步驟6中的命令
 
 ## 從Adobe I/O Runtime存取記錄{#aio-app-logs}
 
-[AEM as aCloud Service會直接在Adobe I/O Runtime中叫用Asset compute背景工作，](../deploy/processing-profiles.md) 透過處理設定檔來運用背景工作。由於這些調用不涉及本地開發，因此無法使用本地工具(如Asset compute開發工具或wskdebug)調試它們的執行。 相反地，Adobe I/OCLI可用來從Adobe I/O Runtime中特定工作區中執行的工作器擷取記錄。
+[AEMas a Cloud Service透過處理設定檔運用Asset compute背景工作](../deploy/processing-profiles.md) 直接在Adobe I/O Runtime叫用。 由於這些調用不涉及本地開發，因此無法使用本地工具(如Asset compute開發工具或wskdebug)調試它們的執行。 相反地，Adobe I/OCLI可用來從Adobe I/O Runtime中特定工作區中執行的工作器擷取記錄。
 
-1. 根據需要偵錯的工作區，確認[工作區特定環境變數](../deploy/runtime.md)是透過`AIO_runtime_namespace`和`AIO_runtime_auth`設定。
-1. 從命令行執行`aio app logs`
-   + 如果工作區發生大量流量，請透過`--limit`標幟展開啟用記錄的數量：
+1. 確保 [工作區專用環境變數](../deploy/runtime.md) 透過 `AIO_runtime_namespace` 和 `AIO_runtime_auth`，根據需要偵錯的工作區。
+1. 從命令行執行 `aio app logs`
+   + 如果工作區發生大量流量，請透過 `--limit` 標幟：
       `$ aio app logs --limit=25`
-1. 將返回最近的（直到提供的`--limit`）激活日誌作為要查看的命令的輸出。
+1. 最近(截至提供的 `--limit`)激活日誌將作為命令的輸出返回以供查看。
 
    ![aio應用程式記錄](./assets/debug/aio-app-logs.png)
 

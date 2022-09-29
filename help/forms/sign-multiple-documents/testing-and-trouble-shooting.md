@@ -1,33 +1,33 @@
 ---
 title: 疑難排解籤署多份檔案解決方案
 description: 測試和疑難排解
-feature: 適用性表單
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6960
 thumbnail: 6960.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 99cba29e-4ae3-4160-a4c7-a5b6579618c0
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 1%
+source-wordcount: '388'
+ht-degree: 0%
 
 ---
-
 
 # 測試和疑難排解
 
 
 ## 預覽再融資表單
 
-當客戶服務代理填寫並提交[再融資表單](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)時，就會觸發使用案例。
+客戶服務代理填寫並提交時，會觸發使用案例 [再融資](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled).
 
 「簽署多個Forms」工作流程會在提交此表單時觸發，而客戶會收到包含連結的電子郵件通知，以開始表單填寫和簽署程式。
 
 ## 在套件中填寫表單
 
-系統會呈現客戶以填寫並簽署套件中的第一個表單。 成功簽署表單時，客戶可導覽至套件中的下一個表單。 填寫並簽署所有表單後，客戶將看到「**AllDone**」表單。
+系統會呈現客戶以填寫並簽署套件中的第一個表單。 成功簽署表單時，客戶可導覽至套件中的下一個表單。 填妥所有表單並簽署後，客戶就會看到「**AllDone**」。
 
 ## 疑難排解
 
@@ -49,15 +49,4 @@ ht-degree: 1%
 
 ### 未看到AllDone表單
 
-當包中沒有其他要登錄的表單時，AllDone表單將顯示給用戶。如果您沒有看到AllDone表單，請檢查作為&#x200B;**getnextform**&#x200B;客戶端庫一部分的GetNextFormToSign.js檔案第33行中使用的URL。
-
-
-
-
-
-
-
-
-
-
-
+當包中沒有其他要登錄的表單時，將向用戶顯示AllDone表單。如果您沒有看到AllDone表單，請檢查GetNextFormToSign.js檔案第33行中使用的URL，該檔案是 **getnextform** 客戶端庫。

@@ -1,26 +1,27 @@
 ---
 title: 建立Servlet
 description: 建立Servlet以處理儲存表單資料的POST請求
-feature: 適用性表單
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6539
 thumbnail: 6539.pg
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a24ea445-3997-4324-99c4-926b17c8d2ac
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 3%
+source-wordcount: '80'
+ht-degree: 0%
 
 ---
 
 # 建立Servlet
 
-下一步是建立Servlet，以呼叫自訂OSGi服務的適當方法。 Servlet可存取最適化表單資料、檔案附件資訊。 Servlet將返回唯一的應用程式ID，該ID可用於檢索部分完成的最適化表單。
+下一步是建立Servlet，呼叫自訂OSGi服務的適當方法。 Servlet可存取最適化表單資料、檔案附件資訊。 Servlet會傳回唯一的應用程式ID，可用來擷取部分完成的最適化表單。
 
-當使用者按一下適用性表單上的「儲存並退出」按鈕時，將會叫用此Servlet
+當使用者按一下適用性表單上的「儲存並退出」按鈕時，就會叫用此Servlet
 
 ```java
 package com.techmarketing.core.servlets;

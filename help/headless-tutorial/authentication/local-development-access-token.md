@@ -1,6 +1,6 @@
 ---
 title: 本機開發存取權杖
-description: AEM本機開發存取權杖可用來加速與AEM整合的開發，以Cloud Service以程式設計方式與AEM製作或透過HTTP發佈服務互動。
+description: AEM本機開發存取Token可用來加速與AEMas a Cloud Service的整合開發，以程式設計方式與AEM製作或透過HTTP發佈服務互動。
 version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
@@ -13,16 +13,16 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
 
 # 本機開發存取權杖
 
-建置整合的開發人員需要以程式化方式存取AEM as aCloud Service，需要以簡單、快速的方式取得AEM的暫存存取權杖，以利進行本機開發活動。 為了滿足此需求，AEM開發人員控制台可讓開發人員自行產生暫時存取權杖，以供以程式設計方式存取AEM。
+建置整合功能(需要程式化存取AEM as a Cloud Service)的開發人員需要透過簡單、快速的方式取得AEM的暫時存取權杖，以利進行本機開發活動。 為了滿足此需求，AEM開發人員控制台可讓開發人員自行產生暫時存取權杖，以供以程式設計方式存取AEM。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330477/?quality=12&learn=on)
 
@@ -32,17 +32,17 @@ ht-degree: 0%
 
 本機開發存取權杖提供AEM製作和發佈服務的存取權，以產生權杖的使用者身分及其權限。 儘管這是開發權杖，但請勿共用此權杖，或將其儲存在原始碼控制項中。
 
-1. 在[AdobeAdminConsole](https://adminconsole.adobe.com/)中，確定您（開發人員）是以下成員：
-   + __Cloud Manager — 開__ 發人員IMS產品設定檔(授予AEM開發人員控制台的存取權)
-   + AEM環境服務的&#x200B;__AEM管理員__&#x200B;或&#x200B;__AEM使用者__ IMS產品設定檔，存取權杖會與
-   + 將AEM作為Cloud Service環境時，只需要&#x200B;__AEM管理員__&#x200B;或&#x200B;__AEM使用者__&#x200B;產品設定檔的成員資格
-1. 登入[AdobeCloud Manager](https://my.cloudmanager.adobe.com)
-1. 開啟包含AEM作為Cloud Service環境的程式，以便與
-1. 點選&#x200B;__Environments__&#x200B;區段中環境旁的&#x200B;__刪節號__，然後選取&#x200B;__Developer Console__
-1. 點選&#x200B;__整合__&#x200B;標籤
-1. 點選「__取得本機開發代號__」按鈕
-1. 點選左上角的&#x200B;__下載按鈕__&#x200B;以下載包含`accessToken`值的JSON檔案，並將JSON檔案儲存至開發電腦上的安全位置。
-   + 這是您24小時以來的開發人員存取權杖，以AEM作為Cloud Service環境。
+1. 在 [AdobeAdminConsole](https://adminconsole.adobe.com/) 確保您（開發人員）是以下成員：
+   + __Cloud Manager — 開發人員__ IMS產品設定檔(授予AEM Developer Console的存取權)
+   + 其中 __AEM管理員__ 或 __AEM使用者__ AEM環境服務的IMS產品設定檔存取權杖會與
+   + 沙箱AEMas a Cloud Service環境只需要 __AEM管理員__ 或 __AEM使用者__ 產品設定檔
+1. 登入 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
+1. 開啟包含AEMas a Cloud Service環境的程式以與
+1. 點選 __省略號__ 環境旁邊 __環境__ 部分，然後選擇 __開發人員控制台__
+1. 點選 __整合__ 標籤
+1. 點選 __取得本機開發代號__ 按鈕
+1. 點選 __下載按鈕__ 的JSON檔案(包含 `accessToken` 值，並將JSON檔案儲存至開發電腦上的安全位置。
+   + 這是您24小時前到AEMas a Cloud Service環境的開發人員存取權杖。
 
 ![AEM開發人員主控台 — 整合 — 取得本機開發代號](./assets/local-development-access-token/developer-console.png)
 
@@ -52,21 +52,21 @@ ht-degree: 0%
 
 1. 從AEM Developer Console下載暫時的本機開發存取權杖
    + 本機開發存取權杖每24小時就會過期，因此開發人員每天都需要下載新的存取權杖
-1. 正在開發外部應用程式，以程式設計方式與AEM作為Cloud Service互動
+1. 正在開發以程式設計方式與AEM as a Cloud Service互動的外部應用程式
 1. 外部應用程式讀取本機開發存取權杖
-1. 外部應用程式會將HTTP要求建構為AEM作為Cloud Service，並將本機開發存取權杖新增為HTTP要求的授權標題中的承載權杖
-1. AEM as aCloud Service會接收HTTP要求、驗證要求、執行HTTP要求所要求的工作，並將HTTP回應傳回外部應用程式
+1. 外部應用程式會建構AEMas a Cloud Service的HTTP要求，並將本機開發存取權杖新增為HTTP要求的授權標題中的承載權杖
+1. AEMas a Cloud Service會接收HTTP要求、驗證要求，並執行HTTP要求所要求的工作，並將HTTP回應傳回外部應用程式
 
 ### 範例外部應用程式
 
-我們將建立簡單的外部JavaScript應用程式，以說明如何使用本機開發人員存取權杖，以程式設計方式透過HTTPS以Cloud Service方式存取AEM。 這說明&#x200B;_any_&#x200B;應用程式或系統如何使用存取權杖，以程式方式驗證AEM作為Cloud Service，並存取AEM。 在[下一節](./service-credentials.md)中，我們將更新此應用程式代碼以支援產生供生產使用的令牌的方法。
+我們將建立簡單的外部JavaScript應用程式，以說明如何使用本機開發人員存取權杖，透過HTTPS以程式設計方式存取AEMas a Cloud Service。 這說明如何 _any_ 在AEM外部執行的應用程式或系統（不論是架構或語言）可使用存取權杖，以程式設計方式驗證AEM，並存取as a Cloud Service。 在 [下一節](./service-credentials.md) 我們將更新此應用程式程式碼，以支援產生供生產使用之代號的方法。
 
 此範例應用程式從命令列執行，並透過下列流程使用AEM Assets HTTP API更新AEM資產中繼資料：
 
 1. 從命令行讀取參數(`getCommandLineParams()`)
-1. 獲取用於驗證AEM作為Cloud Service的訪問令牌(`getAccessToken(...)`)
-1. 列出命令列參數(`listAssetsByFolder(...)`)中指定之AEM資產資料夾中的所有資產
-1. 使用命令列參數(`updateMetadata(...)`)中指定的值更新列出的資產的中繼資料
+1. 取得用來驗證AEMas a Cloud Service的存取權杖(`getAccessToken(...)`)
+1. 列出命令列參數中指定之AEM資產資料夾中的所有資產(`listAssetsByFolder(...)`)
+1. 使用命令列參數中指定的值更新列出資產的中繼資料(`updateMetadata(...)`)
 
 以程式設計方式使用存取權杖來驗證AEM中的關鍵元素，是將授權HTTP要求標題新增至對AEM提出的所有HTTP要求，格式如下：
 
@@ -74,12 +74,12 @@ ht-degree: 0%
 
 ## 運行外部應用程式
 
-1. 請確定已在本地開發電腦上安裝[Node.js](/help/cloud-service/local-development-environment/development-tools.md?lang=en#node-js)，該電腦將用於運行外部應用程式
-1. 下載並解壓縮[範例外部應用程式](./assets/aem-guides_token-authentication-external-application.zip)
-1. 從命令行，在此項目的資料夾中，運行`npm install`
-1. 將下載的本機開發存取權杖](#download-local-development-access-token)複製到專案根目錄中名為`local_development_token.json`的檔案[
+1. 確保 [Node.js](/help/cloud-service/local-development-environment/development-tools.md?lang=en#node-js) 安裝在本機開發電腦上，用來執行外部應用程式
+1. 下載並解壓縮 [範例外部應用程式](./assets/aem-guides_token-authentication-external-application.zip)
+1. 從命令行，在此項目的資料夾中，運行 `npm install`
+1. 複製 [已下載本機開發存取權杖](#download-local-development-access-token) 檔案名為 `local_development_token.json` 在項目根目錄中
    + 但請記住，絕不要向Git提交任何憑證！
-1. 開啟`index.js`並查看外部應用程式代碼和注釋。
+1. 開啟 `index.js` 並查看外部應用程式代碼和注釋。
 
    ```javascript
    const fetch = require('node-fetch');
@@ -210,7 +210,7 @@ ht-degree: 0%
    }
    ```
 
-   查看`listAssetsByFolder(...)`和`updateMetadata(...)`中的`fetch(..)`調用，並注意`headers`以值`Bearer ACCESS_TOKEN`定義`Authorization` HTTP請求標題。 這是從外部應用程式產生的HTTP要求以AEM作為Cloud Service進行驗證的方式。
+   檢閱 `fetch(..)` 調用 `listAssetsByFolder(...)` 和 `updateMetadata(...)`，和通知 `headers` 定義 `Authorization` 值為的HTTP要求標題 `Bearer ACCESS_TOKEN`. 這是從外部應用程式產生的HTTP要求如何驗證AEMas a Cloud Service。
 
    ```javascript
    ...
@@ -223,7 +223,7 @@ ht-degree: 0%
    })...
    ```
 
-   任何以AEM為Cloud Service的HTTP要求，都必須在授權標題中設定承載存取權杖。 請記住，每個AEM作為Cloud Service環境都需要其自己的存取權杖。 開發的訪問令牌在Stage或Production上無法工作，Stage在Development或Production上無法工作，而Production在Development或Stage上無法工作！
+   對AEMas a Cloud Service的任何HTTP要求，都必須在授權標題中設定Bearer存取權杖。 請記住，每個AEMas a Cloud Service環境都需有各自的存取權杖。 開發的訪問令牌在Stage或Production上無法工作，Stage的在Development或Production上不工作，而Production的在Development或Stage上不工作！
 
 1. 使用命令行，從項目的根執行應用程式，並傳遞以下參數：
 
@@ -238,10 +238,10 @@ ht-degree: 0%
 
    會傳入下列參數：
 
-   + `aem`:應用程式將與之互動的AEMCloud Service環境的配置和主機名稱(例如 `https://author-p1234-e5678.adobeaemcloud.com`)。
-   + `folder`:資產將以更新的資產資料夾路 `propertyValue`徑；請勿新增首 `/content/dam` 碼(例如 `/wknd/en/adventures/napa-wine-tasting`)
-   + `propertyName`:要更新的資產屬性名稱，相對 `[dam:Asset]/jcr:content` 於(例如 `metadata/dc:rights`)。
-   + `propertyValue`:要將設定為的 `propertyName` 值；含有空格的值需以( `"` 例如)封裝 `"WKND Limited Use"`)
+   + `aem`:應用程式將與之互動之AEMas a Cloud Service環境的配置和主機名稱(例如 `https://author-p1234-e5678.adobeaemcloud.com`)。
+   + `folder`:資產已更新為的資產資料夾路徑 `propertyValue`;請勿新增 `/content/dam` 前置詞(如 `/wknd/en/adventures/napa-wine-tasting`)
+   + `propertyName`:要更新的資產屬性名稱，相對於 `[dam:Asset]/jcr:content` (例如 `metadata/dc:rights`)。
+   + `propertyValue`:設定 `propertyName` 至；包含空格的值需要以 `"` (例如 `"WKND Limited Use"`)
    + `file`:從AEM開發人員控制台下載的JSON檔案的相對檔案路徑。
 
    已更新每個資產的應用程式結果輸出成功執行：
@@ -256,19 +256,19 @@ ht-degree: 0%
 
 ### 驗證AEM中的中繼資料更新
 
-以Cloud Service環境的身分登入AEM ，確認中繼資料已更新（確認已存取傳入`aem`命令列參數的相同主機）。
+登入AEMas a Cloud Service環境，確認中繼資料已更新（確認傳入的主機相同） `aem` 命令列參數)。
 
-1. 以外部應用程式與之互動的Cloud Service環境登入AEM（使用`aem`命令列參數中提供的相同主機）
-1. 導覽至&#x200B;__Assets__ > __Files__
-1. 導覽至`folder`命令列參數所指定的資產資料夾，例如&#x200B;__WKND__ > __English__ > __Adventures__ > __Napa品酒會__
-1. 開啟資料夾中任何（非內容片段）資產的&#x200B;__屬性__
-1. 點選&#x200B;__進階__&#x200B;標籤
-1. 查看更新屬性的值，例如&#x200B;__Copyright__，該值映射到更新的`metadata/dc:rights` JCR屬性，該屬性反映`propertyValue`參數中提供的值，例如&#x200B;__WKND Limited Use__
+1. 登入外部應用程式與之互動的AEMas a Cloud Service環境(使用 `aem` 命令行參數)
+1. 導覽至 __資產__ > __檔案__
+1. 導覽至 `folder` 命令行參數，例如 __WKND__ > __英文__ > __冒險__ > __納帕品酒會__
+1. 開啟 __屬性__ （非內容片段）資產
+1. 點選 __進階__ 標籤
+1. 檢閱已更新屬性的值，例如 __版權__ 已對應至已更新 `metadata/dc:rights` JCR屬性，反映 `propertyValue` 參數，例如 __WKND有限使用__
 
 ![WKND有限使用元資料更新](./assets/local-development-access-token/asset-metadata.png)
 
 ## 後續步驟
 
-現在，我們已使用本機開發Token以程式設計方式存取AEM作為Cloud Service，因此需要更新應用程式以使用服務憑證來處理，因此此應用程式可用於生產環境。
+現在我們已使用本機開發Token以程式設計方式存取AEMas a Cloud Service，因此需要更新應用程式以使用服務憑證來處理，讓此應用程式可在生產環境中使用。
 
 + [如何使用服務憑證](./service-credentials.md)

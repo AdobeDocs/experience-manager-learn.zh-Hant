@@ -13,24 +13,24 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '154'
+ht-degree: 3%
 
 ---
 
 # 為Web通道建立您的第一個互動式通訊
 
-互動式通訊是AEM Forms 6.4的新功能。本檔案將引導您完成為列印管道建立互動式通訊所需的步驟。
+互動式通訊是AEM Forms 6.4的新功能。本檔案會逐步引導您了解為列印管道建立互動式通訊所需的步驟。
 
 ## 必備條件 {#prerequistes}
 
-[使用套件管理器，將本教學課程相關的資產下載並匯入AEM。](assets/gettingstartedassets.zip). 此zip檔案包含本教學課程中將使用的影像和檔案片段
+[使用套件管理器，將本教學課程相關的資產下載並匯入AEM。](assets/gettingstartedassets.zip). 此zip檔案包含本教學課程中使用的影像和檔案片段
 
 [下載並解壓縮此檔案。](assets/warfileandswaggerfile.zip) 此檔案包含需要部署到Tomcat上的SampleRest.war檔案和需要用於配置資料源的Swagger檔案。
 
-完成本教學課程後，您將學到下列內容：
+完成本教學課程時，您已學到下列內容：
 
 * 建立資料來源
 * 建立表單資料模型

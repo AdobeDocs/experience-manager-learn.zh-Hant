@@ -1,20 +1,20 @@
 ---
 title: 建立OSGi服務
 description: 建立OSGi服務以儲存要簽名的表單
-feature: 工作流程
+feature: Workflow
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 49e7bd65-33fb-44d4-aaa2-50832dffffb0
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 1%
+source-wordcount: '350'
+ht-degree: 0%
 
 ---
-
 
 # 建立OSGi服務
 
@@ -130,7 +130,7 @@ public String getFormData(String guid) {
 
 ## 更新簽名狀態
 
-成功完成簽署儀式會觸發與表單相關聯的AEM工作流程。 工作流程的第一步是程式步驟，用於更新資料庫中guid和客戶ID所識別列的狀態。 我們也會將表單資料中有符號元素的值設為Y，以指出表單已填入和有符號。 適用性表單將填入此資料，且xml資料中已簽署資料元素的值將用來顯示適當的訊息。 從自定義進程步驟中調用updateSignatureStatus代碼。
+成功完成簽署儀式會觸發與表單相關聯的AEM工作流程。 工作流程的第一步是程式步驟，會針對guid和客戶id所識別的列更新資料庫中的狀態。 我們也會將表單資料中有符號元素的值設為Y，以指出表單已填入和有符號。 適用性表單會填入此資料，而xml資料中已簽署資料元素的值會用來顯示適當的訊息。 從自定義進程步驟中調用updateSignatureStatus代碼。
 
 
 ```java
@@ -164,7 +164,7 @@ public void updateSignatureStatus(String formData, String guid) {
 
 ## 取得下一個表格以簽署
 
-下列程式碼用於取得下一個表單，以簽署狀態為0的指定customerID。 如果sql查詢未傳回任何列，我們會傳回字串&#x200B;**&quot;AllDone&quot;**，指出沒有其他表單可用於簽署指定客戶ID。
+下列程式碼用於取得下一個表單，以簽署狀態為0的指定customerID。 如果sql查詢未返回任何行，則我們將返回字串 **&quot;AllDone&quot;** 這表示指定客戶id不再有要簽署的表單。
 
 ```java
 @Override
@@ -202,6 +202,6 @@ public String getNextFormToSign(int customerID) {
 
 
 
-## 資產
+## Assets
 
-從這裡](assets/sign-multiple-forms.jar)下載與上述服務搭配的OSGi套件組合可以是[
+與上述服務搭配的OSGi套件可以 [從此處下載](assets/sign-multiple-forms.jar)

@@ -1,26 +1,26 @@
 ---
 title: 在AEM Forms工作流程中設定Json資料元素的值
-description: 在AEM工作流程中，將適用性表單轉送給不同的使用者時，會要求根據檢閱表單的人員來隱藏或停用特定欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 可以根據此隱藏欄位的值業務規則來隱藏/停用適當的面板或欄位。
-feature: 適用性表單
+description: 在AEM工作流程中，將適用性表單轉送給不同的使用者時，需要根據檢閱表單的人員，隱藏或停用特定欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 可以根據此隱藏欄位的值業務規則來隱藏/停用適當的面板或欄位。
+feature: Adaptive Forms
 version: 6.4
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: fbe6d341-7941-46f5-bcd8-58b99396d351
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '685'
 ht-degree: 1%
 
 ---
 
-
 # 在AEM Forms工作流程中設定JSON資料元素的值 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-在AEM工作流程中，將適用性表單轉送給不同的使用者時，會要求根據檢閱表單的人員來隱藏或停用特定欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 可以根據此隱藏欄位的值業務規則來隱藏/停用適當的面板或欄位。
+在AEM工作流程中，將適用性表單轉送給不同的使用者時，需要根據檢閱表單的人員，隱藏或停用特定欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 可以根據此隱藏欄位的值業務規則來隱藏/停用適當的面板或欄位。
 
 ![在json資料中設定元素的值](assets/capture-3.gif)
 
-在AEM Forms OSGI — 我們必須撰寫自訂OSGi套件組合以設定JSON資料元素的值。 此套件組合是本教學課程內容的一部分。
+在AEM Forms OSGi中 — 我們必須建立自訂OSGi套件組合以設定JSON資料元素的值。 此套件組合是本教學課程內容的一部分。
 
 我們在AEM工作流程中使用「處理步驟」。 我們將「在Json中設定元素的值」OSGi套件組合與此程式步驟建立關聯。
 
@@ -40,27 +40,27 @@ afData.afUnboundData.data.initialStep,N
 
 * [下載並部署DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下載並部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。這是自訂OSGI套件組合，可讓您在提交的json資料中設定元素的值。
+* [下載並部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 這是自訂OSGI套件組合，可讓您在提交的json資料中設定元素的值。
 
 * [下載並解壓縮zip檔案的內容](assets/set-value-jsondata.zip)
-   * 將瀏覽器指向[包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+   * 將瀏覽器指向 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
       * 導入和安裝SetValueOfElementInJSONDataWorkflow.zip。此包包含與表單關聯的示例工作流模型和表單資料模型。
 
-* 將瀏覽器指向[Forms和Documents](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 將瀏覽器指向 [Forms與檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下建立 |檔案上傳
 * 上傳TimeOffRequestForm.zip檔案
    **此表單是使用AEM Forms 6.4建置的。請確定您使用AEM Forms 6.4或更新版本**
-* 開啟[form](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
+* 開啟 [表單](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
 * 填寫「開始日期」和「結束日期」並提交表單。
-* 前往[&quot;收件匣&quot;](http://localhost:4502/aem/inbox)
+* 前往 [&quot;收件箱&quot;](http://localhost:4502/aem/inbox)
 * 開啟與任務關聯的表單。
 * 請注意，第一個面板中的欄位已停用。
 * 請注意，系統現在會顯示核准或拒絕請求的面板。
 
 >[!NOTE]
 >
->由於我們使用使用者設定檔預先填入適用性表單，請確定管理員[使用者設定檔資訊](http://localhost:4502/security/users.html)。 請至少確定您已設定FirstName、LastName和Email欄位值。
->您可以在此](http://localhost:4502/system/console/slinglog)啟用com.aemforms.setvalue.core.SetValueInJson [的記錄器，以啟用除錯記錄
+>由於我們使用使用者設定檔預先填入適用性表單，請確定管理員 [使用者設定檔資訊 ](http://localhost:4502/security/users.html). 請至少確定您已設定FirstName、LastName和Email欄位值。
+>您可以為com.aemforms.setvalue.core.SetValueInJson啟用記錄器，以啟用除錯記錄 [從這裡](http://localhost:4502/system/console/slinglog)
 
 >[!NOTE]
 >

@@ -4,7 +4,7 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: bc222867c937b7d498e7b56bebc0aac18289ad03
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 20%
@@ -214,7 +214,7 @@ ht-degree: 20%
    + 與Microsoft Power Automate整合{#forms-cs-and-power-automate}
       + [設定整合](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
       + [剖析已提交的表單資料](./forms/forms-cs-and-power-automate/send-email-notification.md)
-      + [將DoR作為電子郵件附件發送](./forms/forms-cs-and-power-automate/send-DoR-email-attachment.md)
+      + [將DoR作為電子郵件附件發送](./forms/forms-cs-and-power-automate/send-dor-email-attachment.md)
       + [從提交的資料中擷取表單附件](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
    + 與Microsoft Dynamics整合{#formscs-dynamics-crm}
       + [建立Dynamics應用程式](./forms/formscs-dynamics-crm/create-dynamics-account.md)
@@ -272,9 +272,9 @@ ht-degree: 20%
       + [Sling作業排程器](./cloud-5/season-2/cloud5-sling-job-scheduler.md)
       + [修正快取](./cloud-5/season-2/cloud5-fix-your-cache.md)
       + [修正您的重新寫入](./cloud-5/season-2/cloud5-fix-your-rewrites.md)
-      + [Cloud Manager — 體驗稽核](./cloud-5/season-2/cloud5-MoCM-experience-audit.md)
-      + [Cloud Manager — 單元測試](./cloud-5/season-2/cloud5-MoCM-unit-tests.md)
-      + [Cloud Manager — 功能測試](./cloud-5/season-2/cloud5-MoCM-functional-tests.md)
+      + [Cloud Manager — 體驗稽核](./cloud-5/season-2/cloud5-mocm-experience-audit.md)
+      + [Cloud Manager — 單元測試](./cloud-5/season-2/cloud5-mocm-unit-tests.md)
+      + [Cloud Manager — 功能測試](./cloud-5/season-2/cloud5-mocm-functional-tests.md)
 + [AEM Experts系列](./aem-experts-series.md)
 + 多步驟Tutorials{#multi-step-tutorials}
    + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)

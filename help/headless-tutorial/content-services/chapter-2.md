@@ -8,9 +8,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: cfb7ed39ecb85998192ba854b34161f7e1dba19a
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '962'
 ht-degree: 7%
 
 ---
@@ -84,7 +84,7 @@ AEM內容片段模型會定義內容結構，供AEM作者用來範本建立原�
 
 ![建立內容片段模型](assets/chapter-2/design-to-model-mapping.png)
 
-透過對應，我們可以定義內容片段，以用於收集並最終公開事件資料。
+透過對應，我們可以定義用於收集及最終公開事件資料的內容片段。
 
 ## 建立內容片段模型
 
@@ -173,7 +173,7 @@ AEM內容片段模型會定義內容結構，供AEM作者用來範本建立原�
 
 >[!NOTE]
 >
->此 **[!UICONTROL 屬性名稱]** 表示 **both** 將儲存此值的JCR屬性名稱，以及JSON檔案中的索引鍵。 這應該是在內容片段模型期間不會變更的語義名稱。
+>此 **[!UICONTROL 屬性名稱]** 表示 **both** 儲存此值的JCR屬性名稱，以及JSON檔案中的索引鍵。 這應該是在內容片段模型期間不會變更的語義名稱。
 
 完成內容片段模型的建立後，您最後應會得到如下的定義：
 

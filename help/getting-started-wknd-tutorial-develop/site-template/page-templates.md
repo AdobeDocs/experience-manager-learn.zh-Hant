@@ -1,6 +1,6 @@
 ---
 title: 頁面範本
-description: 了解如何建立和修改頁面範本。 了解頁面範本和頁面之間的關係。 了解如何設定頁面範本的原則，以提供精細的控管和內容的品牌一致性。  系統會根據Adobe XD的模型，建立結構良好的雜誌文章範本。
+description: 了解如何建立和修改頁面範本。 了解頁面範本和頁面之間的關係。 了解如何設定頁面範本的原則，以提供精細的控管和內容的品牌一致性。  系統會根據Adobe XD的模型建立結構良好的「雜誌文章」範本。
 sub-product: sites
 version: Cloud Service
 type: Tutorial
@@ -11,9 +11,9 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
-source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ## 您將建置的 {#what-you-will-build}
 
-在本教學課程中，您將會建立新的雜誌文章頁面範本，以用來建立新雜誌文章，並與通用結構對齊。 範本將以AdobeXD中製作的設計和UI Kit為基礎。 本章僅側重於構建模板的結構或骨架。 不會實作樣式，但範本和頁面將可運作。
+在本教學課程中，您將會建立新的雜誌文章頁面範本，以用來建立新雜誌文章，並與通用結構對齊。 範本以AdobeXD中製作的設計和UI套件為基礎。 本章僅側重於構建模板的結構或骨架。 未實作樣式，但範本和頁面可運作。
 
 ## 建立雜誌文章頁面範本
 
@@ -42,8 +42,8 @@ ht-degree: 0%
 
 共有3個主要區域 [頁面範本](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html):
 
-1. **結構**  — 定義屬於範本一部分的元件。 內容作者將無法編輯這些內容。
-1. **初始內容**  — 定義範本要開頭的元件，內容作者可以編輯和/或刪除這些元件
+1. **結構**  — 定義屬於範本一部分的元件。 內容作者無法編輯這些內容。
+1. **初始內容**  — 定義範本開頭的元件，內容作者可以編輯和/或刪除這些元件
 1. **原則**  — 定義元件行為設定，以及作者可使用的選項。
 
 接下來，在AEM中建立符合模型結構的新範本。 這會發生在AEM的本機例項中。 請依照以下影片中的步驟操作：

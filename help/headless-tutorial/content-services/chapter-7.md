@@ -1,103 +1,103 @@
 ---
-title: 第7章 — 從AEMMobile應用程式使用內容服務 — 內容服務
-description: 本教程的第7章將運行AndroidMobile應用程式，以從內容服務中AEM使用創作內容。
+title: 第7章 — 從行動應用程式使用AEM內容服務 — 內容服務
+description: 教學課程的第7章會執行Android行動應用程式，從AEM Content Services使用製作內容。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
 
-# 第7章 — 從AEMMobile應用使用內容服務
+# 第7章 — 從行動應用程式使用AEM內容服務
 
-本教程的第7章使用本機AndroidMobile應用程式從內容服務中AEM消費內容。
+本教學課程的第7章使用原生Android行動應用程式來使用AEM內容服務中的內容。
 
-## 安卓Mobile應用
+## Android行動應用程式
 
-本教程使用 **簡單本機AndroidMobile應用** 以使用和顯示Content Services公開的事AEM件內容。
+本教學課程使用 **簡單原生Android行動應用程式** 來使用和顯示AEM Content Services公開的事件內容。
 
-使用 [安卓](https://developer.android.com/) 這種技術在很大程度上並不重要，而且消費性移動應用可以在任何框架中編寫，適用於任何移動平台，比如iOS。
+使用 [Android](https://developer.android.com/) 基本上不重要，且耗用的行動應用程式可在任何行動平台(例如iOS)的任何架構中編寫。
 
-Android用於教程，是因為它能夠在Windows、macOs和Linux上運行Android模擬器，其流行性以及它可以以Java語言編寫，開發人員對這種語言有很好的了AEM解。
+Android可用來進行教學課程，因為能夠在Windows、macOs和Linux上執行Android模擬器，其普及程度，而且可以以Java的形式撰寫，這是AEM開發人員非常了解的語言。
 
-*本教程的AndroidMobile應用&#x200B;**不**旨在指導如何構建AndroidMobile應用或傳達Android開發最佳實踐，而是說明如何從AEMMobile應用程式使用內容服務。*
+*本教學課程的Android行動應用程式為&#x200B;**not**旨在指示如何建置Android行動應用程式或傳達Android開發最佳實務，而非說明如何從行動應用程式使用AEM內容服務。*
 
-### Content Services如AEM何推動Mobile應用體驗
+### AEM Content Services如何推動行動應用程式體驗
 
-![MobileApp到內容服務映射](assets/chapter-7/content-services-mapping.png)
+![行動應用程式與內容服務的對應](assets/chapter-7/content-services-mapping.png)
 
-1. 的 **標誌** 定義 [!DNL Events API] 頁 **影像元件**。
-1. 的 **標籤行** 定義 [!DNL Events API] 頁 **文本元件**。
-1. 此 **事件清單** 源於通過配置的 **內容片段清單元件**。
+1. 此 **標誌** 由定義 [!DNL Events API] page&#39;s **影像元件**.
+1. 此 **標籤行** 定義於 [!DNL Events API] page&#39;s **文字元件**.
+1. 此 **事件清單** 衍生自事件內容片段的序列化，透過設定 **內容片段清單元件**.
 
-## Mobile應用演示
+## 行動應用程式示範
 
 >[!VIDEO](https://video.tv.adobe.com/v/28345/?quality=12&learn=on)
 
-### 配置Mobile應用程式以使用非本地主機
+### 為非本地主機使用配置行動應用
 
-如果未在上運行AEM發佈 **http://localhost:4503** 主機和埠可在Mobile應用中更新 [!DNL Settings] 指向屬性AEM發佈主機/埠。
+如果未在上執行AEM Publish **http://localhost:4503** 可在行動應用程式的 [!DNL Settings] 指向屬性AEM Publish主機/連接埠。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28344/?quality=12&learn=on)
 
-## 本地運行Mobile應用
+## 在本機執行行動應用程式
 
-1. 下載並安裝 [安卓工作室](https://developer.android.com/studio/install) 安裝Android模擬程式。
-1. **下載** 安卓 [!DNL APK] 檔案 [GitHub >資產> wknd-mobile.x.x.xapk](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
-1. 開啟 **安卓工作室**
-   * 在Android Studio的初始啟動時，將提示安裝 [!DNL Android SDK] 會出現。 接受預設值並完成安裝。
-1. 開啟Android Studio並選擇 **配置檔案或調試APK**
-1. 選擇APK檔案(**wknd-mobile.x.x.x.apk**)在步驟2中下載，然後按一下 **確定**
-   * 如果系統提示 **建立新資料夾**&#x200B;或 **使用現有**&#x200B;選中 **使用現有**。
-1. 在Android Studio的初始發佈時，按一下右鍵 **wknd-mobile.x.x.x** 在「項目」清單中，然後選擇 **開啟模組設定**。
-   * 下 **「模組」>「wknd-mobile.x.x.x」>「依賴項」頁籤**&#x200B;選中 **Android API 29平台**。 按一下「OK（確定）」關閉並保存更改。
-   * 如果不這樣做，則在嘗試啟動模擬器時將出現「請選擇Android SDK」錯誤。
-1. 開啟 **AVD管理器** 通過 **「工具」>「AVD管理器」** 或點擊 **AVD管理器** 的雙曲餘切值。
-1. 在 **AVD管理器** 窗口，按一下 **+建立虛擬設備……** 的子菜單。
-   1. 在左側，選擇 **電話** 的子菜單。
-   1. 選擇 **像素2**。
-   1. 按一下 **下一個** 按鈕
-   1. 選擇 **問** 與 **API級別29**。
-      * 在AVD Manager初始啟動後，將要求您下載版本控制的API。 按一下「Q」版本旁邊的「Download（下載）」連結，然後完成下載和安裝。
-   1. 按一下 **下一個** 按鈕
-   1. 按一下 **完成** 按鈕
-1. 關閉 **AVD管理器** 的子菜單。
-1. 在頂部菜單欄中，選擇 **wknd-mobile.x.x.x** 從 **運行/編輯配置** 下拉。
-1. 點擊 **運行** 按鈕 **運行/編輯配置**
-1. 在彈出窗口中，選擇新建立的 **[!DNL Pixel 2 API 29]** 虛擬設備和分路 **確定**
-1. 如果 [!DNL WKND Mobile] 應用不會立即載入、查找和點擊 **[!DNL WKND]** 表徵圖。
-   * 如果模擬器啟動，但模擬器的螢幕保持黑色，請點擊 **電** 按鈕。
-   * 要在虛擬設備內滾動，請按一下並按住並拖動。
-   * 要從中刷新內AEM容，請從頂部向下拉，直到顯示「刷新」表徵圖，然後釋放。
+1. 下載並安裝 [Android Studio](https://developer.android.com/studio/install) 安裝Android模擬器。
+1. **下載** Android [!DNL APK] 檔案 [GitHub >資產> wknd-mobile.x.x.xapk](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
+1. 開啟 **Android Studio**
+   * 初次啟動Android Studio時，系統會提示安裝 [!DNL Android SDK] 會出現。 接受預設值並完成安裝。
+1. 開啟Android Studio並選取 **設定檔或除錯APK**
+1. 選取APK檔案(**wknd-mobile.x.x.x.apk**)下載，然後按一下 **確定**
+   * 如果系統提示 **建立新資料夾**，或 **使用現有**，選取 **使用現有**.
+1. 在Android Studio初次啟動時，以滑鼠右鍵按一下 **wknd-mobile.x.x.x** 在「項目」清單中，然後選擇 **開啟模組設定**.
+   * 在 **「模組」>「 wknd-mobile.x.x.x」>「相依性」標籤**，選取 **Android API 29平台**. 點選「確定」以關閉並儲存變更。
+   * 若未這麼做，當您嘗試啟動模擬器時，會出現「請選取Android SDK」錯誤。
+1. 開啟 **AVD管理員** 選取 **工具> AVD管理器** 或點選 **AVD管理員** 圖示。
+1. 在 **AVD管理員** 按一下 **+建立虛擬設備……** 如果尚未註冊設備。
+   1. 在左側，選取 **電話** 類別。
+   1. 選取 **像素2**.
+   1. 按一下 **下一個** 按鈕。
+   1. 選擇 **Q** with **API層級29**.
+      * 首次啟動AVD管理器時，系統會要求您下載版本控制API。 按一下「Q」版本旁的「下載」連結，然後完成下載和安裝。
+   1. 按一下 **下一個** 按鈕。
+   1. 按一下 **完成** 按鈕。
+1. 關閉 **AVD管理員** 窗口。
+1. 在頂端功能表列中選取 **wknd-mobile.x.x.x** 從 **運行/編輯配置** 下拉。
+1. 點選 **執行** 按鈕 **運行/編輯配置**
+1. 在快顯視窗中，選取新建立的 **[!DNL Pixel 2 API 29]** 虛擬裝置和點選 **確定**
+1. 若 [!DNL WKND Mobile] 應用程式不會立即載入、尋找及點選 **[!DNL WKND]** 圖示。
+   * 如果模擬器啟動，但模擬器的螢幕保持黑色，請點選 **功率** 按鈕（位於模擬器窗口旁）。
+   * 若要在虛擬裝置內捲動，請按一下並按住並拖曳。
+   * 若要從AEM重新整理內容，請從上方下拉至「重新整理」圖示顯示，然後發行。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28341/?quality=12&learn=on)
 
-## Mobile應用代碼
+## 行動應用程式程式碼
 
-本節重點介紹最能交互並依賴於內容服務及其AEMJSON輸出的AndroidMobile應用程式碼。
+本節重點說明最互動且依賴AEM Content Services的Android行動應用程式程式碼及其JSON輸出。
 
-載入後，Mobile應用 `HTTP GET` 至 `/content/wknd-mobile/en/api/events.model.json` Content Services端AEM點配置為提供驅動Mobile應用的內容。
+載入時，行動應用程式會 `HTTP GET` to `/content/wknd-mobile/en/api/events.model.json` 即AEM Content Services端點，設定為提供內容以驅動行動應用程式。
 
-因為事件API的可編輯模板(`/content/wknd-mobile/en/api/events.model.json`)已鎖定，可對Mobile應用進行編碼，以在JSON響應中的特定位置查找特定資訊。
+因為事件API的可編輯範本(`/content/wknd-mobile/en/api/events.model.json`)已鎖定，則行動應用程式可以編碼，以在JSON回應中的特定位置中尋找特定資訊。
 
-### 高級代碼流
+### 高階程式碼流量
 
-1. 開啟 [!DNL WKND Mobile] 應用調用 `HTTP GET` 請求AEM發佈時間： `/content/wknd-mobile/en/api/events.model.json` 收集要填充Mobile應用的UI的內容。
-2. 在從中收到內容AEM後，Mobile應用的三個視圖元素 **徽標、標籤行和事件清單**，已使用中的內容初始AEM化。
-   * 要將內容綁定到AEMMobile應用的視圖元素，表示每個元件的JSON是映AEM射到Java POJO的對象，而Java POJO又綁定到Android View元素。
-      * 影像元件JSON →徽標POJO →徽標ImageView
-      * 文本元件JSON → TagLine POJO →文本ImageView
-      * 內容片段清單JSON →事件POJO →事件回收器視圖
-   * *Mobile應用代碼能夠將JSON映射到POJO，因為較大JSON響應中的已知位置。 請記住，「image」、「text」和「contentfragmentlist」的JSON鍵由後備元件的節AEM點名稱指定。 如果這些節點名稱更改，則Mobile應用將中斷，因為它不知道如何從JSON資料中源出所需內容。*
+1. 開啟 [!DNL WKND Mobile] 應用調用 `HTTP GET` 請求AEM發佈於 `/content/wknd-mobile/en/api/events.model.json` 收集要填入行動應用程式UI的內容。
+2. 從AEM收到內容後，行動應用程式的三個檢視元素中的每個元素， **標誌、標籤行和事件清單**，會以AEM中的內容初始化。
+   * 若要將AEM內容系結至行動應用程式的檢視元素，代表每個AEM元件的JSON會對應至Java POJO，而Java POJO又會系結至Android檢視元素。
+      * 影像元件JSON →標誌POJO →標誌ImageView
+      * 文字元件JSON → TagLine POJO →文字ImageView
+      * 內容片段清單JSON →事件POJO →事件回收器檢視
+   * *行動應用程式程式碼可將JSON對應至POJO，因為較大JSON回應內的已知位置。 請記住， 「image」、「text」和「contentfragmentlist」的JSON索引鍵是由後備AEM元件的節點名稱指定。 如果這些節點名稱變更，行動應用程式將會中斷，因為它不知道如何從JSON資料取得必要的內容。*
 
-#### 調用AEMContent Services端點
+#### 叫用AEM Content Services端點
 
-以下是Mobile應用程式中代碼的摘要 `MainActivity` 負責調AEM用Content Services收集驅動Mobile應用體驗的內容。
+以下是行動應用程式中程式碼的精餾程式 `MainActivity` 負責叫用AEM Content Services以收集推動行動應用程式體驗的內容。
 
 ```
 protected void onCreate(Bundle savedInstanceState) {
@@ -128,13 +128,13 @@ private void initApp(final List<ViewBinder> viewBinders) {
 }
 ```
 
-`onCreate(..)` 是Mobile應用的初始化掛接，並註冊3個自定義 `ViewBinders` 負責分析JSON並將值綁定到 `View` 元素。
+`onCreate(..)` 是行動應用程式的初始化連結，並註冊3個自訂 `ViewBinders` 負責剖析JSON並將值系結至 `View` 元素。
 
-`initApp(...)` 然後調用該命令，使HTTPGET請求到AEMAEM發佈上的Content Services終點以收集內容。 在收到有效的JSON響應時，JSON響應將傳遞給每個 `ViewBinder` 負責解析JSON並將其綁定到移動 `View` 元素。
+`initApp(...)` 接著會被呼叫，這會向AEM Publish上的AEM Content Services端點提出HTTPGET要求，以收集內容。 收到有效的JSON回應時，JSON回應會傳遞至每個 `ViewBinder` 負責剖析JSON並將其系結至行動裝置 `View` 元素。
 
-#### 分析JSON響應
+#### 剖析JSON回應
 
-下面我們將看 `LogoViewBinder`，這很簡單，但是也強調了幾個重要考慮。
+接下來，我們將查看 `LogoViewBinder`，此方法相當簡單，但會強調數個重要考量。
 
 ```
 public class LogoViewBinder implements ViewBinder {
@@ -154,17 +154,17 @@ public class LogoViewBinder implements ViewBinder {
 }
 ```
 
-第一行 `bind(...)` 通過鍵向下導航JSON響應 **:items →根→:item** 表示已添AEM加到的元件的佈局容器。
+第一行 `bind(...)` 透過索引鍵向下導覽JSON回應 **:items →根→:items** 代表元件所新增的AEM Layout Container。
 
-從此處對名為 **影像**，它表示映像元件(同樣，此節點名→ JSON鍵是穩定的)。 如果此對象存在，則它讀取並映射到 [自定義映像POJO](#image-pojo) 通過傑克森 `ObjectMapper` 的下界。 下面將探索Image POJO。
+在此會檢查名為 **影像**，代表影像元件(同樣地，此節點名稱→ JSON金鑰為穩定)。 如果此物件存在，則會讀取並對應至 [自訂影像POJO](#image-pojo) 通過傑克森 `ObjectMapper` 程式庫。 以下探討影像POJO。
 
-最後，標識 `src` 使用 [!DNL Glide] 幫助程式庫。
+最後，標誌 `src` 會使用 [!DNL Glide] 協助程式庫。
 
-請注意，我們必須提AEM供架構、主機和埠(通過 `aemHost`)到AEM發佈實例，AEM因為Content Services將僅提供JCR路徑(即 `/content/dam/wknd-mobile/images/wknd-logo.png`)。
+請注意，我們必須提供AEM結構、主機和連接埠(透過 `aemHost`)以AEM Content Services形式發佈至AEM Publish例項只會提供JCR路徑(ie. `/content/dam/wknd-mobile/images/wknd-logo.png`)到參考的內容。
 
 #### 影像POJO{#image-pojo}
 
-可選， [Jackson對象映射器](https://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html) 或Gson等其他庫提供的類似功能，可幫助將複雜的JSON結構映射到Java POJO，而無需直接處理本機JSON對象本身。 在這個簡單的例子中，我們 `src` 按鈕 `image` JSON對象，到 `src` 直接通過 `@JSONProperty` 注釋。
+若為選用項目，請使用 [Jackson ObjectMapper](https://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html) 或其他程式庫（例如Gson）提供的類似功能，可協助將複雜的JSON結構對應至Java POJO，而不需直接處理原生JSON物件本身。 在這個簡單的案例中，我們會將 `src` 鍵 `image` JSON物件，至 `src` 屬性(透過 `@JSONProperty` 註解。
 
 ```
 package com.adobe.aem.guides.wknd.mobile.android.models;
@@ -181,26 +181,26 @@ public class Image {
 }
 ```
 
-Event POJO需要從JSON對象中選擇更多資料點，它比簡單映像更有益，我們只希望 `src`。
+事件POJO需要從JSON物件中選取更多資料點，這項技術的優點多於簡單影像，我們只想要 `src`.
 
-## 瀏覽Mobile應用體驗
+## 探索行動應用程式體驗
 
-現在，您已瞭解了AEMContent Services如何推動Mobile本機體驗，請使用您學到的知識執行以下步驟並查看您在Mobile應用中所反映的更改。
+現在您已了解AEM Content Services如何促進原生行動體驗，運用您所學到的內容執行下列步驟，並查看行動應用程式中反映的變更。
 
-在每個步驟之後，請拉出以刷新Mobile應用並驗證對移動體驗的更新。
+在每個步驟後，提取並重新整理行動應用程式，並驗證行動體驗的更新。
 
-1. 建立和發佈 **新 [!DNL Event] 內容片段**
+1. 建立和發佈 **new [!DNL Event] 內容片段**
 1. 取消發佈 **現有 [!DNL Event] 內容片段**
-1. 將更新發佈到 **標籤行**
+1. 將更新發佈至 **標籤行**
 
 ## 恭喜
 
-**您已完成無頭AEM教程！**
+**您已完成AEM Headless教學課程！**
 
-要瞭解有關內容服AEM務和作為無AEM頭CMS的更多資訊，請訪問Adobe的其他文檔和支援資料：
+若要深入了解AEM Content Services和AEM as a Headless CMS，請造訪Adobe的其他檔案和啟用資料：
 
 * [使用內容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [WCMAEM核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
-* [WCMAEM核心元件庫](https://opensource.adobe.com/aem-core-wcm-components/library.html)
-* [WCMAEM核心元件GitHub項目](https://github.com/adobe/aem-core-wcm-components)
+* [AEM WCM核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [AEM WCM核心元件程式庫](https://opensource.adobe.com/aem-core-wcm-components/library.html)
+* [AEM WCM核心元件GitHub專案](https://github.com/adobe/aem-core-wcm-components)
 * [元件導出器的代碼示例](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)

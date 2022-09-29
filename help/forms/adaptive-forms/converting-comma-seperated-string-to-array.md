@@ -7,21 +7,21 @@ topic: Development
 role: Developer
 level: Intermediate
 kt: 8507
-source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
+exl-id: 9ad69407-2413-416f-9cec-43f88989b31d
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
-
 # 將逗號分隔字串轉換為字串陣列 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-當您的表單以表單資料模型為基礎，而表單資料模型以字串陣列作為輸入參數，您需要控制提交的最適化表單資料以插入字串陣列。 例如，如果您已將核取方塊欄位綁定到類型字串陣列的表單資料模型元素，則來自核取方塊欄位的資料將採用逗號分隔字串格式。 下列范常式式碼顯示如何以字串陣列取代以逗號分隔的字串。
+當您的表單以表單資料模型為基礎，而表單資料模型以字串陣列作為輸入參數，您需要控制提交的最適化表單資料以插入字串陣列。 例如，如果您已將核取方塊欄位綁定到類型字串陣列的表單資料模型元素，則來自核取方塊欄位的資料會以逗號分隔字串格式。 下列范常式式碼顯示如何以字串陣列取代以逗號分隔的字串。
 
 ## 建立處理步驟
 
-當我們希望工作流程執行特定邏輯時，AEM工作流程會使用處理步驟。 處理步驟可與ECMA指令碼或OSGi服務相關聯。 我們的自訂處理步驟將執行OSGi服務
+當我們希望工作流程執行特定邏輯時，AEM工作流程會使用處理步驟。 處理步驟可與ECMA指令碼或OSGi服務相關聯。 我們的自訂程式步驟會執行OSGi服務。
 
 提交的資料格式如下。 businessUnits元素的值是以逗號分隔的字串，需要轉換為字串的陣列。
 
@@ -140,4 +140,4 @@ public class CreateStringArray implements WorkflowProcess {
 }
 ```
 
-範例套件組合可從此處[下載](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)
+範例套件可以是 [從此處下載](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)

@@ -1,37 +1,34 @@
 ---
 title: 建立主要最適化表單
 description: 建立最適化表單以擷取申請人資訊，並建立最適化表單以擷取儲存的最適化表單
-feature: 適用性表單
+feature: Adaptive Forms
 type: Tutorial
 activity: implement
 version: 6.4,6.5
 kt: 6552
 thumbnail: 6552.jpg
-topic: 開發
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 73de0ac4-ada6-4b8e-90a8-33b976032135
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 1%
+source-wordcount: '201'
+ht-degree: 0%
 
 ---
 
-
 # 建立主要最適化表單
 
-表單&#x200B;**StoreAFWithAttachments**&#x200B;是主要的最適化表單。 此最適化表單是使用案例的入口點。 在此表單中，會擷取使用者詳細資訊，包括行動電話號碼。 此表單也能新增一些附件。 按一下「儲存並退出」按鈕時，執行伺服器端程式碼，將表單資料儲存在資料庫中，並產生唯一的應用程式ID，並呈現給使用者以供安全保管。 此應用程式ID將用於擷取與應用程式相關聯的行動電話號碼。
+表單 **StoreAFWithAttachments** 是主要的最適化表單。 此最適化表單是使用案例的入口點。 在此表單中，會擷取使用者詳細資訊，包括行動電話號碼。 此表單也能新增一些附件。 當按一下「儲存並退出」按鈕時，執行伺服器端程式碼以將表單資料儲存在資料庫中，並產生唯一的應用程式ID並呈現給使用者以供安全保管。 此應用程式ID可用來擷取與應用程式相關聯的行動電話號碼。
 
 ![主要申請表](assets/6552.JPG)
 
-此表單與課程前建立的&#x200B;**bootboxjs540,storeAFWithAttachments**&#x200B;客戶端庫以及在表單提交時觸發的AEM工作流相關聯。
+此表單與 **bootboxjs540,storeAFWithAttachments** 在課程中先前建立的用戶端程式庫，以及在提交表單時觸發的AEM工作流程。
 
 
-* 範例表單以[自訂最適化表單範本](assets/custom-template-with-page-component.zip)為基礎，需要匯入至AEM，範例表單才能正確轉譯。
+* 範例表單以 [自訂最適化表單範本](assets/custom-template-with-page-component.zip) 需要匯入至AEM，範例表單才能正確轉譯。
 
-* 已完成的[StoreAfWithAttachments表單](assets/store-af-with-attachments-form.zip)可下載並匯入至您的AEM執行個體。
+* 已完成 [StoreAfWithAttachments表單](assets/store-af-with-attachments-form.zip) 可下載並匯入您的AEM例項。
 
-* 需要將與此表單](assets/workflow-model-store-af-with-attachments.zip)相關聯的[AEM工作流程匯入至您的AEM例項，表單才能運作。
-
-
-
+* 此 [與此表單關聯的AEM工作流程](assets/workflow-model-store-af-with-attachments.zip) 必須匯入AEM例項，表單才能運作。

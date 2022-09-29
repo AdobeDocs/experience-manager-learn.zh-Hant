@@ -1,6 +1,6 @@
 ---
-title: 將富文本與無AEM頭
-description: 瞭解如何使用帶有Adobe Experience Manager內容片段的多行富文本編輯器編寫內容並嵌入引用內容，以及GraphQL API如何將富文本作為JSON傳遞，供無頭應用程式使用。
+title: 搭配AEM Headless使用RTF
+description: 了解如何使用多行RTF編輯器搭配Adobe Experience Manager內容片段來編寫內容及內嵌參考內容，以及AEM GraphQL API如何將RTF傳遞為JSON，供無周邊應用程式使用。
 version: Cloud Service
 doc-type: article
 kt: 9985
@@ -8,66 +8,66 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1464'
 ht-degree: 0%
 
 ---
 
-# 帶無頭的富AEM文本
+# RTF文字(含AEM Headless)
 
-多行文本欄位是內容片段的資料類型，使作者能夠建立富格文本內容。 對其他內容的引用，例如影像或其他內容片段可以動態地在文本流內以行形式插入。 「單行」文本欄位是應用於簡單文本元素的「內容片段」的另一種資料類型。
+多行文字欄位是內容片段的資料類型，可讓作者建立RTF內容。 其他內容的參考，例如影像或其他內容片段，可在文字流程內以動態方式串聯插入。 單行文字欄位是內容片段的其他資料類型，應用於簡單文字元素。
 
-AEMGraphQL API提供了強大的功能，可將富格文本作為HTML、純文字檔案或純JSON返回。 JSON表示法功能強大，因為它賦予客戶端應用程式對如何呈現內容的完全控制權。
+AEM GraphQL API提供強大的功能，可將RTF文字以HTML、純文字或純JSON形式傳回。 JSON表示法功能強大，因為它可讓用戶端應用程式完全控制如何呈現內容。
 
 ## 多行編輯器
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104/?quality=12&learn=on)
 
-在內容片段編輯器中，多行文本欄位的菜單欄為作者提供了標準的富格文本格式功能，如 **粗**。 *斜體*&#x200B;和下划線。 以全屏模式開啟多行欄位啟用 [其他格式工具，如段落類型、查找和替換、拼寫檢查等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)。
+在內容片段編輯器中，多行文字欄位的功能表列可為作者提供標準RTF格式功能，例如 **粗體**, *斜體*，和底線。 以全螢幕模式開啟多行欄位，可啟用 [其他格式工具，如段落類型、尋找和取代、拼字檢查等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
 >[!NOTE]
 >
-> 無法自定義多行編輯器中的富文本插件。
+> 無法自訂多行編輯器中的RTF外掛程式。
 
 ## 多行文本資料類型 {#multi-line-data-type}
 
-使用 **多行文本** 定義內容片段模型以啟用富格文本創作時的資料類型。
+使用 **多行文本** 定義內容片段模型時的資料類型，以啟用RTF編寫。
 
-![多行富文本資料類型](assets/rich-text/multi-line-rich-text.png)
+![多行RTF資料類型](assets/rich-text/multi-line-rich-text.png)
 
-可以配置多行欄位的多個屬性。
+可配置多行欄位的多個屬性。
 
-的 **呈現為** 屬性可設定為：
+此 **呈現為** 屬性可設為：
 
-* 文本區域 — 呈現單個多行欄位
-* 多個欄位 — 呈現多個多行欄位
+* 文字區域 — 轉譯單一多行欄位
+* 多欄位 — 轉譯多個多行欄位
 
 
-的 **預設類型** 可設定為：
+此 **預設類型** 可設為：
 
 * RTF
 * Markdown
 * 純文字
 
-的 **預設類型** 選項會直接影響編輯體驗，並確定是否存在富格文本工具。
+此 **預設類型** 選項會直接影響編輯體驗，並決定是否存在rtf工具。
 
-您也可以 [啟用行內引用](#insert-fragment-references) 通過檢查 **允許片段引用** 和配置 **允許的內容片段模型**。
+您也可以 [啟用行內引用](#insert-fragment-references) 至其他內容片段，方法是檢查 **允許片段參考** 和配置 **允許的內容片段模型**.
 
-檢查 **可翻譯** 框中，選擇「 CSV文本」。 只能本地化「富格文本」和「純文字檔案」。 請參閱 [使用本地化內容，瞭解詳細資訊](./localized-content.md)。
+檢查 **可翻譯** 框中，以便本地化內容。 只有RTF和純文字才能本地化。 請參閱 [使用本地化內容以取得詳細資訊](./localized-content.md).
 
-## 使用GraphQL API的富文本響應
+## 使用GraphQL API的RTF回應
 
-建立GraphQL查詢時，開發人員可以從 `html`。 `plaintext`。 `markdown`, `json` 從多行欄位中。
+建立GraphQL查詢時，開發人員可以從 `html`, `plaintext`, `markdown`，和 `json` 從多行欄位。
 
-開發人員可以 [JSON預覽](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) 在「內容片段」編輯器中，顯示可使用GraphQL API返回的當前內容片段的所有值。
+開發人員可使用 [JSON預覽](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) 在「內容片段」編輯器中，顯示目前內容片段的所有值，這些值可使用GraphQL API傳回。
 
-## GraphQL永續查詢
+## GraphQL持續查詢
 
-選擇 `json` 多行欄位的響應格式在處理富文本內容時提供了最大的靈活性。 富文本內容作為JSON節點類型的陣列傳遞，這些JSON節點類型可以基於客戶端平台進行唯一處理。
+選取 `json` 處理RTF內容時，多行欄位的回應格式提供最大的彈性。 RTF內容會以JSON節點類型的陣列傳送，可根據用戶端平台加以唯一處理。
 
-下面是名為的多行欄位的JSON響應類型 `main` 包含段落：&quot;*這是一段&#x200B;**重要**內容。*&quot;其中&quot;重要&quot;標籤為 **粗**。
+以下是多行欄位的JSON回應類型，名稱為 `main` 包含段落：&quot;*這是段落，包括&#x200B;**重要**內容。*&quot;其中&quot;important&quot;標籤為 **粗體**.
 
 ```graphql
 query ($path: String!) {
@@ -83,7 +83,7 @@ query ($path: String!) {
 }
 ```
 
-的 `$path` 在 `_path` 篩選器需要內容片段的完整路徑(例如 `/content/dam/wknd/en/magazine/sample-article`)。
+此 `$path` 變數 `_path` 篩選器需要內容片段的完整路徑(例如 `/content/dam/wknd/en/magazine/sample-article`)。
 
 **GraphQL響應：**
 
@@ -125,13 +125,13 @@ query ($path: String!) {
 }
 ```
 
-### 其他示例
+### 其他範例
 
-下面是名為的多行欄位的幾種響應類型示例 `main` 包含段落：「這是一段話，其中包括 **重要** 內容。」 其中，&quot;importent&quot;標籤為 **粗**。
+以下是多行欄位的幾個回應類型範例，名為 `main` 包含段落：「這段話包括 **重要** 內容。」 其中「重要」標示為 **粗體**.
 
-+++HTML示例
++++HTML範例
 
-**GraphQL永續查詢：**
+**GraphQL持續查詢：**
 
 ```graphql
 query ($path: String!) {
@@ -166,9 +166,9 @@ query ($path: String!) {
 
 +++
 
-+++Markdown示例
++++Markdown範例
 
-**GraphQL永續查詢：**
+**GraphQL持續查詢：**
 
 ```graphql
 query ($path: String!) {
@@ -203,9 +203,9 @@ query ($path: String!) {
 
 +++
 
-+++明文示例
++++純文字範例
 
-**GraphQL永續查詢：**
+**GraphQL持續查詢：**
 
 ```graphql
 query ($path: String!) {
@@ -238,16 +238,16 @@ query ($path: String!) {
 }
 ```
 
-的 `plaintext` render選項會刪除任何格式。
+此 `plaintext` 呈現選項會移除任何格式。
 
 +++
 
 
-## 呈現JSON富文本響應 {#render-multiline-json-richtext}
+## 轉譯RTF JSON回應 {#render-multiline-json-richtext}
 
-多行欄位的富文本JSON響應被構造為分層樹。 每個對象或節點表示富格文本的不同HTML塊。
+多行欄位的RTF JSON回應會結構化為階層樹狀結構。 每個物件或節點代表RTF的不同HTML區塊。
 
-下面是多行文本欄位的示例JSON響應。 觀察每個對象或節點都包括 `nodeType` 它表示來自富格文本的HTML塊，如 `paragraph`。 `link`, `text`。 每個節點（可選）包含 `content` 是包含當前節點的任何子級的子陣列。
+以下是多行文字欄位的範例JSON回應。 請注意，每個物件或節點都包含 `nodeType` 它代表來自RTF的HTML區塊，如 `paragraph`, `link`，和 `text`. 每個節點可選地包含 `content` 是包含當前節點的任何子項的子陣列。
 
 ```json
 "json": [// root "content" or child nodes
@@ -279,9 +279,9 @@ query ($path: String!) {
 ]
 ```
 
-渲染多行的最簡單方法 `json` 響應是處理響應中的每個對象或節點，然後處理當前節點的任何子項。 遞歸函式可用於遍歷JSON樹。
+呈現多行的最簡單方法 `json` 回應是在回應中處理每個物件或節點，然後處理目前節點的任何子項。 遞歸函式可用於遍歷JSON樹。
 
-下面是示例代碼，說明了遞歸遍歷方法。 示例基於JavaScript，並使用React [JSX](https://reactjs.org/docs/introducing-jsx.html)但是，寫程式概念可以應用於任何語言。
+以下是說明遞歸遍歷方法的示例代碼。 這些範例以JavaScript為基礎，並使用React的 [JSX](https://reactjs.org/docs/introducing-jsx.html)，但程式設計概念可套用至任何語言。
 
 ```javascript
 // renderNodeList - renders a list of nodes
@@ -298,7 +298,7 @@ function renderNodeList(childNodes) {
 }
 ```
 
-`renderNodeList` 是一個遞歸函式，它 `childNodes`。 然後，將陣列中的每個節點傳遞給函式 `renderNode`，然後調用 `renderNodeList` 的下界。
+`renderNodeList` 是遞歸函式，取用 `childNodes`. 然後，陣列中的每個節點都會傳遞至函式 `renderNode`，接著呼叫 `renderNodeList` 如果節點有子項。
 
 ```javascript
 // renderNode - renders an individual node
@@ -312,7 +312,7 @@ function renderNode(node) {
 }
 ```
 
-的 `renderNode` 函式需要名為 `node`。 節點可以具有子級，子級使用 `renderNodeList` 函式。 最後， `nodeMap` 用於根據節點的內容來呈現其內容 `nodeType`。
+此 `renderNode` 函式需要單個名為 `node`. 節點可以具有子項，這些子項使用 `renderNodeList` 函式。 最後， `nodeMap` 用於根據節點的內容來呈現節點的內容 `nodeType`.
 
 ```javascript
 // nodeMap - object literal that maps a JSX response based on a given key (nodeType)
@@ -327,43 +327,43 @@ const nodeMap = {
 }
 ```
 
-的 `nodeMap` 是用作映射的JavaScript對象文本。 每個&quot;鍵&quot;代表不同的 `nodeType`。 參數 `node` 和 `children` 可以傳遞到呈現節點的結果函式。 本示例中使用的返回類型是JSX，但該方法可以適用於生成表示HTML內容的字串文本。
+此 `nodeMap` 是作為映射使用的JavaScript物件常值。 每個「金鑰」代表不同的 `nodeType`. 的參數 `node` 和 `children` 可傳遞至呈現節點的結果函式。 此範例中使用的傳回類型為JSX，但方法可適應來建立代表HTML內容的字串常值。
 
-### 完整代碼示例
+### 完整程式碼範例
 
-在 [WKND GraphQL React示例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)。
+可在 [WKND GraphQL React範例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
-* [renderRichText.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/utils/renderRichText.js)  — 可重用的實用程式，可公開函式 `mapJsonRichText`。 此實用程式可由要將RT JSON響應呈現為React JSX的元件使用。
-* [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js)  — 生成包含富格文本的GraphQL請求的示例元件。 元件使用 `mapJsonRichText` 用於呈現富格文本和任何引用的實用程式。
+* [renderRichText.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/utils/renderRichText.js)  — 可重複使用的公用程式，可公開函式 `mapJsonRichText`. 若要將RTF JSON回應轉譯為React JSX，元件可使用此公用程式。
+* [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js)  — 提出包含RTF文字之GraphQL請求的元件範例。 元件使用 `mapJsonRichText` 用於呈現RTF和任何引用的實用程式。
 
 
-## 將行內引用添加到富格文本 {#insert-fragment-references}
+## 將內嵌參考新增至RTF {#insert-fragment-references}
 
-Mutline欄位允許作者在富文本流中插入來自AEM Assets的影像或其他數字資產。
+「多重連結」欄位可讓作者在RTF流程中插入來自AEM Assets的影像或其他數位資產。
 
 ![插入影像](assets/rich-text/insert-image.png)
 
-上面的螢幕快照使用 **插入資產** 按鈕
+上方的螢幕擷圖描繪插入多行欄位中的影像，使用 **插入資產** 按鈕。
 
-也可以使用 **插入內容片段** 按鈕
+其他內容片段的參考也可以連結或插入多行欄位，使用 **插入內容片段** 按鈕。
 
-![插入內容片段引用](assets/rich-text/insert-contentfragment.png)
+![插入內容片段參考](assets/rich-text/insert-contentfragment.png)
 
-上面的螢幕快照描述了插入到多行欄位的另一個內容片段「LA Skate Parks終極指南」。 可插入欄位的內容片段的類型由 **允許的內容片段模型** 配置 [多行資料類型](#multi-line-data-type) 的子菜單。
+上面的螢幕截圖描述了插入多行欄位的另一個內容片段 — LA Skate Parks的Ultimate指南。 可插入欄位的內容片段類型由 **允許的內容片段模型** 設定 [多行資料類型](#multi-line-data-type) （在內容片段模型中）。
 
-## 使用GraphQL查詢聯機引用
+## 使用GraphQL查詢線上參考
 
-GraphQL API使開發人員能夠建立查詢，該查詢包含關於插入多行欄位中的任何引用的附加屬性。 JSON響應包含單獨 `_references` 列出這些額外屬性的對象。 JSON響應使開發人員能夠完全控制如何呈現引用或連結，而不必處理有主見的HTML。
+GraphQL API可讓開發人員建立查詢，查詢中包含與插入多行欄位中之任何參照相關的其他屬性。 JSON回應包含個別 `_references` 列出這些額外屬性的物件。 JSON回應可讓開發人員完全掌控如何轉譯參考或連結，而不必處理確信的HTML。
 
-例如，您可能希望：
+例如，您可能想要：
 
-* 包括自定義路由邏輯，用於在實施單頁應用程式時管理到其他內容片段的連結，如使用React Router或Next.js
-* 使用AEM發佈環境的絕對路徑渲染聯機影像 `src` 值。
-* 確定如何使用其他自定義屬性呈現對另一個內容片段的嵌入引用。
+* 包括自訂路由邏輯，用於在實作單頁應用程式時（例如使用React Router或Next.js）管理連結至其他內容片段
+* 使用AEM發佈環境的絕對路徑，以 `src` 值。
+* 決定如何使用其他自訂屬性呈現內嵌參考至其他內容片段。
 
-使用 `json` 返回類型並包括 `_references` 構造GraphQL查詢時的對象：
+使用 `json` 傳回類型並包含 `_references` 對象：
 
-**GraphQL永續查詢：**
+**GraphQL持續查詢：**
 
 ```graphql
 query ($path: String!) {
@@ -393,9 +393,9 @@ query ($path: String!) {
 }
 ```
 
-在上述查詢中， `main` 欄位返回為JSON。 的 `_references` 對象包括用於處理任何類型的引用的片段 `ImageRef` 或類型 `ArticleModel`。
+在上述查詢中， `main` 欄位會以JSON傳回。 此 `_references` 物件包含用於處理任何類型參考的片段 `ImageRef` 或類型 `ArticleModel`.
 
-**JSON響應：**
+**JSON回應：**
 
 ```json
 {
@@ -477,13 +477,13 @@ query ($path: String!) {
 }
 ```
 
-JSON響應包括引用插入到富格文本中的位置，其中 `"nodeType": "reference"`。 的 `_references` 然後，對象包括請求的附加屬性的每個引用。 例如， `ImageRef` 返回 `width` 文章中引用的影像。
+JSON回應會包含參考插入RTF中的位置，其中包含 `"nodeType": "reference"`. 此 `_references` 然後，對象將包括請求的附加屬性的每個引用。 例如， `ImageRef` 傳回 `width` 中所引用的影像。
 
-## 在富格文本中呈現行內引用
+## 以RTF格式呈現內嵌參考
 
-要渲染線內參照，請使用中介紹的遞歸方法 [呈現多行JSON響應](#render-multiline-json-richtext) 可以展開。
+要渲染線內參照，遞歸方法在 [轉譯多行JSON回應](#render-multiline-json-richtext) 可以展開。
 
-位置 `nodeMap` 是呈現JSON節點的映射。
+其中 `nodeMap` 是轉譯JSON節點的地圖。
 
 ```javascript
 const nodeMap = {
@@ -509,9 +509,9 @@ const nodeMap = {
     }
 ```
 
-高級別方法是， `nodeType` 等於 `reference` 在多行JSON響應中。 然後，可以調用包含 `_references` 在GraphQL響應中返回的對象。
+高級方法是在 `nodeType` 等於 `reference` 在多行JSON回應中。 接著，可以呼叫自訂轉譯函式，其中包含 `_references` GraphQL回應中傳回的物件。
 
-然後，可以將串聯參考路徑與中相應條目進行比較 `_references` 對象和另一個自定義映射 `renderReference` 可以叫。
+然後，可將線上參考路徑與 `_references` 物件和其他自訂地圖 `renderReference` 可呼叫。
 
 ```javascript
 const renderReference = {
@@ -528,19 +528,19 @@ const renderReference = {
 }
 ```
 
-的 `__typename` 的 `_references` 對象可用於將不同的參考型別映射到不同的呈現函式。
+此 `__typename` 的 `_references` 物件可用來將不同的參考類型對應至不同的轉譯函式。
 
-### 完整代碼示例
+### 完整程式碼範例
 
-有關編寫自定義引用呈現器的完整示例，請參見 [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) 作為 [WKND GraphQL React示例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)。
+在中可以找到撰寫自訂參照轉譯器的完整範例，如 [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) 作為 [WKND GraphQL React範例](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
-## 端到端示例
+## 端對端範例
 
 >[!VIDEO](https://video.tv.adobe.com/v/342105/?quality=12&learn=on)
 
-上面的視頻顯示了一個端到端示例：
+前面的影片示範端對端範例：
 
-1. 更新內容片段模型的多行文本欄位以允許片段引用
-1. 使用內容片段編輯器在多行文本欄位中包括影像和對另一個片段的引用。
-1. 建立GraphQL查詢，該查詢將多行文本響應作為JSON和任何 `_references` 。
-1. 編寫呈SPA現RTF響應的行內引用的React。
+1. 更新內容片段模型的多行文字欄位以允許片段參考
+1. 使用內容片段編輯器在多行文字欄位中包含影像和參考另一個片段。
+1. 建立GraphQL查詢，其中包含多行文字回應(JSON和任何 `_references` 已使用。
+1. 撰寫可轉譯RTF回應之內嵌參考的React SPA。
