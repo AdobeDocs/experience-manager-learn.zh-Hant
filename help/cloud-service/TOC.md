@@ -4,10 +4,10 @@ user-guide-description: Adobe Experience Manager as a Cloud Service 教學課程
 breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: cloud-service
 team: TM
-source-git-commit: aea43a705b3959f8be26238d32b816b3953e153e
+source-git-commit: bc222867c937b7d498e7b56bebc0aac18289ad03
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '830'
+ht-degree: 20%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 0%
       + [配置管道](./cloud-manager/devops/configure-pipelines.md)
       + [持續整合](./cloud-manager/devops/continuous-integration.md)
       + [分析測試結果](./cloud-manager/devops/analyze-test-results.md)
-      + [Dispatcher設定](./cloud-manager/devops/dispatcher-configurations.md)
+      + [Dispatcher 設定](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
 + 本機開發環境設定 {#local-development-environment-set-up}
    + [總覽](./local-development-environment/overview.md)
@@ -117,7 +117,7 @@ ht-degree: 0%
 
    + 轉移至 AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
       + [簡介](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
-      + [入門](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
+      + [上線](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
       + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
       + [雙酚A和CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [AEM現代化工具](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
@@ -128,6 +128,7 @@ ht-degree: 0%
       + 內容移轉 {#content-migration}
          + [批量導入服務](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [內容轉移工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
+         + [常見問題集](./migration/moving-to-aem-as-a-cloud-service/content-migration/faq.md)
       + [疑難排解](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Formsas a Cloud Service {#aem-forms}
          + [簡介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
