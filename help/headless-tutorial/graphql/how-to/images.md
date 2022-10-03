@@ -1,6 +1,6 @@
 ---
-title: 使用帶頭的圖AEM像
-description: 瞭解如何請求影像內容引用URL，以及將自定義格式副本與「AEM無頭」一起使用。
+title: 搭配AEM Headless使用影像
+description: 了解如何要求影像內容參考URL，以及搭配AEM Headless使用自訂轉譯。
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -9,48 +9,53 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: 332ad831b6c49e8599aa2181caf978d5626c1aba
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1171'
 ht-degree: 1%
 
 ---
 
-# 無頭圖AEM像
+# 具有AEM無頭的影像 {#images-with-aem-headless}
 
-影像是 [發展豐富而富有吸引力AEM的無頭體驗](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)。 無AEM頭支援映像資產的管理及其優化交付。
+影像是 [開發豐富、引人入勝的AEM無頭體驗](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless支援影像資產的管理及其最佳化傳送。
 
-用於無頭內容建AEM模的內容片段，通常引用影像資源，以便在無頭體驗中顯示。 可AEM以編寫GraphQL查詢，以根據引用影像的位置為影像提供URL。
+AEM無頭內容模型中使用的內容片段，通常會參考用於無頭體驗中顯示的影像資產。 AEM GraphQL查詢可以撰寫，以根據影像的參考位置，提供影像的URL。
 
-的 `ImageRef` 類型具有三個內容引用的URL選項：
+此 `ImageRef` 類型有三個內容參考的URL選項：
 
-+ `_path` 是中引用的路AEM徑，且不包AEM括源（主機名）
-+ `_authorUrl` 是AEM作者上影像資產的完整URL
-   + [AEM作者](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 可用於提供無頭應用程式的預覽體驗。
++ `_path` 是AEM中的參考路徑，且不包含AEM來源（主機名稱）
++ `_authorUrl` 是AEM Author上影像資產的完整URL
+   + [AEM作者](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 可用來提供無頭應用程式的預覽體驗。
 + `_publishUrl` 是AEM發佈上影像資產的完整URL
-   + [AEM發佈](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 通常是無頭應用程式的生產部署顯示映像的位置。
+   + [AEM發佈](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 通常是無頭應用程式的生產部署顯示影像的位置。
 
-根據以下條件，最好使用這些欄位：
+根據下列條件，最好使用欄位：
 
-| ImageRef欄位 | 客戶端Web應用從AEM | 客戶端應用查詢AEM作者 | 客戶端應用查詢AEM發佈 |
+| ImageRef欄位 | 由AEM提供的用戶端網頁應用程式 | 用戶端應用程式查詢AEM作者 | 用戶端應用程式查詢AEM發佈 |
 |--------------------|:------------------------------:|:-----------------------------:|:------------------------------:|
 | `_path` | ✔ | ✔（應用必須在URL中指定主機） | ✔（應用必須在URL中指定主機） |
 | `_authorUrl` | ✘ | ✔ | ✘ |
 | `_publishUrl` | ✘ | ✘ | ✔ |
 
-使用 `_authorUrl` 和 `_publishUrl` 應與用AEM於源GraphQL響應的GraphQL終結點對齊。
+使用 `_authorUrl` 和 `_publishUrl` 應與用來源化GraphQL回應的AEM GraphQL端點一致。
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_learn_headless_graphql_images"
+>title="使用影像"
+>abstract="了解AEM Headless如何支援影像資產的管理及其最佳化的傳送。"
 
 ## 內容片段模型
 
-確保包含影像引用的「內容片段」欄位是 __內容引用__ 資料類型。
+確保包含影像參考的「內容片段」欄位為 __內容參考__ 資料類型。
 
-在 [內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)，通過選擇欄位並檢查 __屬性__ 的上界。
+欄位類型會在 [內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)，方法是選取欄位並檢查 __屬性__ 標籤。
 
-![內容引用影像的內容片段模型](./assets/images/content-fragment-model.jpeg)
+![內容參考影像的內容片段模型](./assets/images/content-fragment-model.jpeg)
 
-## GraphQL永續查詢
+## GraphQL持續查詢
 
-在GraphQL查詢中，將欄位返回為 `ImageRef` 類型，並請求相應的欄位 `_path`。 `_authorUrl`或 `_publishUrl` 應用程式所需的。 例如，查詢 [WKND參考演示項目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 並在其中包括影像資產引用的影像URL `primaryImage` 欄位，可以使用新的永續查詢 `wknd-shared/adventure-image-by-path` 定義為：
+在GraphQL查詢中，將欄位傳回為 `ImageRef` 類型，並請求適當的欄位 `_path`, `_authorUrl`，或 `_publishUrl` 應用程式所需。 例如，在 [WKND參考示範專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 並在其中納入影像資產參考的影像URL `primaryImage` 欄位，可使用新的持續查詢完成 `wknd-shared/adventure-image-by-path` 定義為：
 
 ```graphql
 query ($path: String!) {
@@ -69,11 +74,11 @@ query ($path: String!) {
 }
 ```
 
-的 `$path` 在 `_path` 篩選器需要內容片段的完整路徑(例如 `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`)。
+此 `$path` 變數 `_path` 篩選器需要內容片段的完整路徑(例如 `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`)。
 
-## GraphQL響應
+## GraphQL回應
 
-生成的JSON響應包含包含映像資產的URls的請求欄位。
+產生的JSON回應包含要求的欄位，其中包含影像資產的URL。
 
 ```json
 {
@@ -91,102 +96,102 @@ query ($path: String!) {
 }
 ```
 
-要在應用程式中載入引用的映像，請使用相應的欄位， `_path`。 `_authorUrl`或 `_publishUrl` 的 `adventurePrimaryImage` 作為影像的源URL。
+若要在您的應用程式中載入參考的影像，請使用適當欄位， `_path`, `_authorUrl`，或 `_publishUrl` 的 `adventurePrimaryImage` 作為影像的來源URL。
 
-的域 `_authorUrl` 和 `_publishUrl` 由AEMas a Cloud Service使用 [外部化器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.html)。
+的網域 `_authorUrl` 和 `_publishUrl` 由AEMas a Cloud Service自動定義，使用 [外置器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.html).
 
-在React中，顯示AEM Publish中的影像如下所示：
+在React中，顯示AEM Publish的影像看起來類似：
 
 ```html
 <img src={ data.adventureByPath.item.primaryImage._publishUrl } />
 ```
 
-## 影像格式副本
+## 影像轉譯
 
-映像資產支援可定製 [格式](../../../assets/authoring/renditions.md)，是原始資產的替代表。 自定義格式副本有助於優化無頭體驗。 與請求原始影像資產（通常是大型高解析度檔案）不同，優化的格式副本可由無頭應用程式請求。
+影像資產支援可自訂 [轉譯](../../../assets/authoring/renditions.md)，為原始資產的替代表示法。 自訂轉譯有助於最佳化無頭式體驗。 無頭應用程式可以請求最佳化的轉譯，而不是請求原始影像資產（通常是大型高解析度檔案）。
 
-### 建立格式副本
+### 建立轉譯
 
-AEM Assets管理員使用「處理配置檔案」定義自定義格式副本。 然後，「處理配置檔案」可以直接應用於特定資料夾樹或資產，以便為這些資產生成格式副本。
+AEM Assets管理員會使用處理設定檔來定義自訂轉譯。 接著，處理設定檔便可直接套用至特定資料夾樹狀結構或資產，以產生這些資產的轉譯。
 
 #### 處理設定檔
 
-資產格式副本規範在中定義 [處理配置檔案](../../../assets/configuring//processing-profiles.md) 由AEM Assets管理人負責。
+資產轉譯規格定義於 [處理設定檔](../../../assets/configuring//processing-profiles.md) 由AEM Assets管理員撰寫。
 
-建立或更新「處理配置檔案」，並添加無頭應用程式所需的影像大小的格式副本定義。 格式副本可以命名為任何內容，但應在語義上命名。
+建立或更新處理設定檔，並為無頭應用程式所需的影像大小新增轉譯定義。 轉譯可以命名任何名稱，但應在語義上命名。
 
-![無AEM頭優化格式副本](./assets/images/processing-profiles.jpg)
+![AEM無頭最佳化轉譯](./assets/images/processing-profiles.jpg)
 
-在此示例中，將建立三個格式副本：
+在此範例中，會建立三個轉譯：
 
-| 格式副本名稱 | 副檔名 | 最大寬度 |
+| 轉譯名稱 | 副檔名 | 最大寬度 |
 |----------------|:---------:|----------:|
-| 大 | jpeg | 1200像素 |
-| 中 | jpeg | 900像素 |
-| 小 | jpeg | 600像素 |
+| 大 | jpeg | 1200 px |
+| 中 | jpeg | 900 px |
+| 小 | jpeg | 600 px |
 
-上表中調用的屬性非常重要：
+上表中調出的屬性非常重要：
 
-+ __格式副本名稱__ 用於請求格式副本。
-+ __擴展__ 是用於請求 __格式副本名稱__。
-+ __最大寬度__ 用於根據在無頭應用程式中的使用情況通知開發人員應該使用哪些格式副本。
++ __轉譯名稱__ 用於要求轉譯。
++ __擴充功能__ 是用來要求 __轉譯名稱__.
++ __最大寬度__ 會用來通知開發人員應根據其在無頭應用程式中的使用，來使用哪個轉譯。
 
-格式副本定義取決於無頭應用程式的需要，因此請確保為使用案例定義最佳格式副本集，並在使用方式方面以語義命名。
+轉譯定義視無頭式應用程式的需求而定，因此請務必為使用案例定義最佳轉譯集，並在語義上為其命名，以說明其使用方式。
 
 #### 重新處理資產{#reprocess-assets}
 
-建立（或更新）「處理配置檔案」後，重新處理資產以生成在「處理配置檔案」中定義的新格式副本。 在使用處理配置檔案處理資產之前，將不存在新格式副本。
+在建立（或更新）「處理設定檔」後，重新處理資產以產生「處理設定檔」中定義的新轉譯。 在使用處理設定檔處理資產之前，將不會存在新轉譯。
 
-+ 最好， [已將「處理配置檔案」分配給資料夾](../../../assets/configuring//processing-profiles.md) 因此，任何新資產都會自動生成格式副本。 現有資產必須採用下面的臨時辦法重新處理。
++ 最好， [將處理設定檔指派給資料夾](../../../assets/configuring//processing-profiles.md) 因此，任何上傳至該資料夾的新資產都會自動產生轉譯。 必須使用下方的臨時方法重新處理現有資產。
 
-+ 或者，通過選擇資料夾或資產，選擇 __重新處理資產__，然後選擇新的「處理配置檔案」名稱。
++ 或者，您可以隨選選取資料夾或資產，然後選取 __重新處理資產__，並選取新的處理設定檔名稱。
 
-   ![臨時重新處理資產](./assets/images/ad-hoc-reprocess-assets.jpg)
+   ![臨機重新處理資產](./assets/images/ad-hoc-reprocess-assets.jpg)
 
-#### 查看格式副本
+#### 檢閱轉譯
 
-格式副本可通過 [開啟資產的格式副本視圖](../../../assets/authoring/renditions.md)，並在格式副本欄中選擇新格式副本以進行預覽。 如果缺少格式副本， [確保使用處理配置檔案處理資產](#reprocess-assets)。
+轉譯可透過驗證 [開啟資產的轉譯檢視](../../../assets/authoring/renditions.md)，以及選取新轉譯以在轉譯邊欄中預覽。 如果缺少轉譯， [確保資產是使用處理設定檔進行處理](#reprocess-assets).
 
-![查看格式副本](./assets/images/review-renditions.jpg)
+![檢閱轉譯](./assets/images/review-renditions.jpg)
 
 #### 發佈資產
 
-確保具有新格式副本的資產 [（重新發佈）](../../../assets/sharing/publish.md) 因此，新格式副本可在AEM Publish（AEM發佈）上訪問。
+確認含有新轉譯的資產為 [（重新發佈）](../../../assets/sharing/publish.md) 以便在AEM Publish上存取新轉譯。
 
-### 訪問格式副本
+### 存取轉譯
 
-通過附加 __格式副本名稱__ 和 __格式副本擴展__ 在「處理配置檔案」中定義到資產的URL。
+轉譯可透過附加 __轉譯名稱__ 和 __轉譯擴充功能__ 在處理設定檔中定義至資產的URL。
 
-| 資產網址 | 格式副本子路徑 | 格式副本名稱 | 格式副本擴展 |  | 格式副本URL |
+| 資產網址 | 轉譯子路徑 | 轉譯名稱 | 轉譯擴充功能 |  | 轉譯URL |
 |-----------|:------------------:|:--------------:|--------------------:|:--:|---|
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr內容/格式副本/ | 大 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/large.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr內容/格式副本/ | 中 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/medium.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr內容/格式副本/ | 小 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/small.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | 大 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/large.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | 中 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/medium.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | 小 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/small.jpeg |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### GraphQL查詢{#renditions-graphl-query}
 
-AEMGraphQL確實需要額外語法來請求影像格式副本。 但 [影像查詢](#images-graphql-query) 以常規方式，並以代碼形式指定所需的格式副本。 重要的是 [確保無頭應用程式使用的影像資產具有同名格式副本](#reprocess-assets)。
+AEM GraphQL要求影像轉譯時不需要額外語法。 而是 [查詢影像](#images-graphql-query) 以通常的方式，並以程式碼指定所需的轉譯。 這很重要 [確保無頭應用程式使用的影像資產具有相同名稱的轉譯](#reprocess-assets).
 
-### 反應示例
+### React範例
 
-讓我們建立一個簡單的「反應」應用程式，該應用程式顯示單個影像資產的三個格式副本：小、中和大。
+讓我們建立簡單的React應用程式，顯示單一影像資產的三種轉譯（小型、中型和大型）。
 
-![影像資產格式副本反應示例](./assets/images/react-example-renditions.jpg)
+![影像資產轉譯React範例](./assets/images/react-example-renditions.jpg)
 
 #### 建立影像元件{#react-example-image-component}
 
-建立呈現影像的「反應」元件。 此元件接受四個屬性：
+建立可轉譯影像的React元件。 此元件接受四個屬性：
 
-+ `assetUrl`:通過GraphQL查詢的響應提供的影像資產URL。
-+ `renditionName`:要載入的格式副本的名稱。
-+ `renditionExtension`:要載入的格式副本的擴展。
-+ `alt`:影像的Alt文本；輔助功能非常重要！
++ `assetUrl`:透過GraphQL查詢的回應提供的影像資產URL。
++ `renditionName`:要載入的轉譯名稱。
++ `renditionExtension`:要載入的轉譯擴充功能。
++ `alt`:影像的替代文字；無障礙非常重要！
 
-此元件構建 [格式副本URL，使用中概述的格式 __訪問格式副本__](#access-renditions)。 安 `onError` 處理程式設定為在格式副本丟失時顯示原始資產。
+此元件構建 [格式副本URL，使用 __存取轉譯__](#access-renditions). 安 `onError` 處理常式設為在遺失轉譯時顯示原始資產。
 
-此示例使用原始資產url作為 `onError` 處理程式，在該事件中缺少格式副本。
+此範例使用原始資產URL做為 `onError` 處理常式中，會遺失轉譯。
 
 ```javascript
 // src/Image.js
@@ -211,11 +216,11 @@ export default function Image({ assetUrl, renditionName, renditionExtension, alt
 
 #### 定義 `App.js`{#app-js}
 
-這個簡單 `App.js` 查AEM詢冒險影像，然後顯示該影像的三個格式副本：小、中和大。
+這個簡單 `App.js` 查詢AEM以取得冒險影像，然後顯示該影像的三個轉譯：小、中、大。
 
-在自定AEM義React掛接中執行查詢 [使用無頭SDKAEM的AdventureByPath](./aem-headless-sdk.md#graphql-persisted-queries)。
+在自訂React鈎點中執行AEM查詢 [使用AEM Headless SDK的useAdventureByPath](./aem-headless-sdk.md#graphql-persisted-queries).
 
-查詢結果和特定格式副本參數將傳遞給 [影像反應元件](#react-example-image-component)。
+查詢的結果和特定的轉譯參數會傳遞至 [影像React元件](#react-example-image-component).
 
 ```javascript
 // src/App.js
