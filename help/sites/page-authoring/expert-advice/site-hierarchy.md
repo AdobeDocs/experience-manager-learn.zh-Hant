@@ -1,24 +1,12 @@
 ---
-title: 網站階層、分類法和標籤提示
-seo-title: Overview of Authoring in AEM Sites
-description: 以下影片概述AEM製作環境中製作的基本概念。 它會以Sites主控台為基礎。
-seo-description: The following video provides an overview of basic concepts of authoring in an AEM author environment. It uses the Sites console as a basis.
-feature: Page Editor, Editable Templates
-topics: authoring, publishing
+title: 網站階層、分類和標籤指南
+seo-title: AEM Sites Site Hierarchy, Taxonomy, and Tagging Guide
+description: AEM Sites中繼資料、標籤、分類和階層的完整概述。 使用本指南可確保您的內容策略一致且符合下列最佳實務
+seo-description: A full overview of AEM Sites metadata, tagging, taxonomy, and hierarchy. Use this guide to ensure your content strategy is consistent and following best practices
 audience: author, marketer
-doc-type: feature video
-activity: use
-version: 6.4, 6.5, Cloud Service
-kt: 4242
-thumbnail: 33594.jpg
-topic: Content Management
-role: User
-level: Beginner
-hide: true
-hidefromtoc: true
-source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
+source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2034'
 ht-degree: 0%
 
 ---

@@ -1,11 +1,12 @@
 ---
-title: 網站維護提示與秘訣
-description: 網站維護提示與秘訣
-hide: true
-hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+title: 您的例行網站維護指南
+seo-title: Your Routine Site Maintenance Guide
+description: 無論您是管理員、作者或開發人員，網站維護都會接觸到AEM Sites例項的各個層面。 使用本指南來確保您的策略已設定好以獲得成功。
+seo-description: Whether you're an admin, author, or developer, site maintenance touches every aspect of your AEM Sites instance. Use this guide to ensure your strategy is set up for success.
+audience: author, marketer, developer
+source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1094'
 ht-degree: 1%
 
 ---
