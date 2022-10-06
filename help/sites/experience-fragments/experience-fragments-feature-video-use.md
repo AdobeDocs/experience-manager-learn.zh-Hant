@@ -10,8 +10,9 @@ doc-type: feature video
 version: Cloud Service
 kt: 194
 thumbnail: 331785.jpg
+last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: db76980966ece967af23c1e6423c5773c851f469
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 2%
@@ -24,7 +25,7 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/331785/?quality=12&learn=on)
 
-體驗片段是一組經過分組的元件，組合後會建立體驗。 例如，可以結合&#x200B;*Title*、*Image*、*Description*&#x200B;和&#x200B;*動作呼叫按鈕*&#x200B;來形成預告體驗。
+體驗片段是一組經過分組的元件，組合後會建立體驗。 例如， *標題*, *影像*, *說明*，和 *呼叫動作按鈕* 可以結合以形成預告體驗。
 
 透過體驗片段，行銷人員可以：
 
