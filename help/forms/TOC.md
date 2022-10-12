@@ -5,9 +5,9 @@ user-guide-title: AEM Forms 影片和教學課程
 user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使用的 AEM Forms 資源系列。
 breadcrumb-title: AEM Forms 教學課程
 index: y
-source-git-commit: 747d1823ce1bc6670d1e80abcf6483ac921c0a01
+source-git-commit: 7238a211663edcf36e8812826ece3242502329b9
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1714'
 ht-degree: 3%
 
 ---
@@ -215,6 +215,7 @@ ht-degree: 3%
    + [在AEM Forms中使用PDFG服務](document-services/using-pdfg-in-aem-forms.md)
    + [在AEM Forms中使用輸出與Forms服務](document-services/output-and-forms-services-article-develop.md)
    + [在輸出服務中使用xdp片段](document-services/using-fragments-in-output-service.md)
+   + [ECMA指令碼，以產生包含片段的PDF](document-services/using-fragments-in-output-service-watched-folder.md)
    + [從一個資料檔案產生多個PDF](document-services/generate-multi-record-pdf.md)
    + [在行動表單提交時產生PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [從行動表單產生互動式PDF](document-services/render-interactive-form-using-api.md)
