@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '292'
 ht-degree: 3%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 3%
 
 本教學課程探討如何使用AEM GraphQL API和無周邊功能，強化外部應用程式中呈現的體驗。
 
-本教學課程將涵蓋下列主題：
+本教學課程涵蓋下列主題：
 
-* 建立新的項目配置
-* 建立新內容片段模型以建立資料模型
-* 根據先前建立的模型建立新內容片段。
+* 建立專案設定
+* 建立內容片段模型以建立資料模型
+* 根據先前建立的模型建立內容片段。
 * 探索如何使用整合的GraphiQL開發工具查詢AEM中的內容片段。
 * 若要儲存或保留GraphQL查詢至AEM
 * 從範例React應用程式中使用持續的GraphQL查詢
@@ -39,14 +39,14 @@ ht-degree: 3%
 
 * 基本HTML和JavaScript技能
 * 必須在本機安裝下列工具：
-   * [Node.js v10+](https://nodejs.org/en/)
+   * [Node.js v14+](https://nodejs.org/en/)
    * [npm 6+](https://www.npmjs.com/)
    * [Git](https://git-scm.com/)
    * IDE(例如 [Microsoft® Visual Studio代碼](https://code.visualstudio.com/))
 
 ### AEM環境
 
-若要完成本教學課程，建議AEM管理員存取AEMas a Cloud Service環境。  如果您沒有AEMas a Cloud Service環境的存取權，可以使用 [本機AEMas a Cloud ServiceQuickstart SDK](/help/cloud-service/local-development-environment/aem-runtime.md). 不過，請務必注意，某些產品UI畫面（例如「內容片段」導覽）不同。
+若要完成本教學課程，建議AEM管理員存取AEMas a Cloud Service環境。 如果您沒有AEMas a Cloud Service環境的存取權，可以使用 [本機AEMas a Cloud ServiceQuickstart SDK](/help/cloud-service/local-development-environment/aem-runtime.md). 不過，請務必注意，某些產品UI畫面（例如「內容片段」導覽）不同。
 
 ## 開始吧！
 

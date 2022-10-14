@@ -10,16 +10,16 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '810'
 ht-degree: 2%
 
 ---
 
 # 製作內容片段 {#authoring-content-fragments}
 
-在本章中，您將根據 [新定義的內容片段模型](./content-fragment-models.md). 您也會學習如何建立內容片段的變體。
+在本章中，您會根據 [新定義的內容片段模型](./content-fragment-models.md). 您也了解如何建立內容片段的變體。
 
 ## 必備條件 {#prerequisites}
 
@@ -38,7 +38,7 @@ ht-degree: 2%
 
    ![導覽至資產檔案](assets/author-content-fragments/navigate-assets-files.png)
 
-1. 點選 **建立** 在角落里，點一下 **資料夾**. 在產生的對話方塊中輸入：
+1. 點選 **建立** 在右上角，點選 **資料夾**. 在產生的對話方塊中，輸入：
 
    * 標題*: **我的專案**
    * 名稱： **my-project**
@@ -49,17 +49,17 @@ ht-degree: 2%
 
    ![開啟資料夾屬性](assets/author-content-fragments/open-folder-properties.png)
 
-1. 點選 **Cloud Services** 標籤。 在 **雲端設定** 使用路徑查找器來選擇 **我的專案** 設定。 值應為 `/conf/my-project`.
+1. 點選 **Cloud Services** 標籤。 在「雲配置」頁簽下，使用路徑查找器來選擇 **我的專案** 設定。 值應為 `/conf/my-project`.
 
    ![設定雲端設定](assets/author-content-fragments/set-cloud-config-my-project.png)
 
    設定此屬性可讓您使用在前一章中建立的模型來建立內容片段。
 
-1. 點選 **原則** 標籤。 在 **允許的內容片段模型** 使用路徑查找器來選擇 **人員** 和 **團隊** 先前建立的模型。
+1. 點選 **原則** 頁簽 **允許的內容片段模型** 欄位使用路徑尋找器來選取 **人員** 和 **團隊** 先前建立的模型。
 
    ![允許的內容片段模型](assets/author-content-fragments/allowed-content-fragment-models.png)
 
-   這些策略由任何子資料夾自動繼承，並且可以覆蓋。 請注意，您也可以依標籤允許模型，或從其他專案設定啟用模型。 此機制提供管理內容階層的強大方式。
+   這些策略會自動由任何子資料夾繼承，並且可以覆蓋。 您也可以依標籤允許模型，或從其他專案設定啟用模型。 此機制提供管理內容階層的強大方式。
 
 1. 點選 **儲存並關閉** 保存對資料夾屬性的更改。
 
@@ -77,11 +77,11 @@ ht-degree: 2%
 
 接下來會根據 **團隊** 和 **人員** 模型。
 
-1. 從「 AEM Start Screen 」點選 **內容片段** 開啟內容片段UI。
+1. 從「 AEM開始」畫面，點選 **內容片段** 開啟內容片段UI。
 
    ![內容片段UI](assets/author-content-fragments/cf-fragment-ui.png)
 
-1. 在左側邊欄中展開 **我的專案** 點選 **英文**.
+1. 在左側邊欄中，展開 **我的專案** 點選 **英文**.
 1. 點選 **建立** 提起 **新內容片段** 對話框，然後輸入以下值：
 
    * 位置: `/content/dam/my-project/en`
@@ -98,18 +98,18 @@ ht-degree: 2%
    * 標題： **艾莉森·史密斯**
    * 名稱: `alison-smith`
 
-   點選 **建立** 來建立新的人員片段。
+   點選 **建立** 以建立「人員」片段。
 
-1. 接下來，重複步驟以建立新 **團隊** 片段表示 **A隊**:
+1. 接下來，重複步驟以建立 **團隊** 片段表示 **A隊**:
 
    * 位置: `/content/dam/my-project/en`
    * 內容片段模型： **團隊**
    * 標題： **A隊**
    * 名稱: `team-alpha`
 
-   點選 **建立** 建立新團隊片段。
+   點選 **建立** 來建立團隊片段。
 
-1. 現在應該有三個內容片段位於下方 **我的專案** > **英文**:
+1. 下方應該有三個內容片段 **我的專案** > **英文**:
 
    ![新內容片段](assets/author-content-fragments/new-content-fragments.png)
 
@@ -147,17 +147,16 @@ ht-degree: 2%
 
 審核完成後，發佈作者 `Content Fragments`
 
-1. 從「 AEM Start Screen 」點選 **內容片段** 開啟內容片段UI。
+1. 從「 AEM開始」畫面，點選 **內容片段** 開啟內容片段UI。
 
-1. 在左側邊欄中展開 **我的專案** 點選 **英文**.
+1. 在左側邊欄中，展開 **我的專案** 點選 **英文**.
 
-1. 點選內容片段旁的核取方塊，然後點選 **發佈**
-
+1. 點選內容片段旁的核取方塊，然後點選 **發佈**.
    ![發佈內容片段](assets/author-content-fragments/publish-content-fragment.png)
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您剛撰寫了多個內容片段，並建立了變體。
+恭喜，您撰寫了多個內容片段，並建立了變體。
 
 ## 後續步驟 {#next-steps}
 
