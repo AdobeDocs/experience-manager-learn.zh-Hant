@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: kt-11245
-source-git-commit: 061077fb6cd8ac7b760aa30b884ced6d4d3c3b20
+source-git-commit: 8944a4feaefbc4cf0db52011a0d49b22341780c0
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,6 @@ mvn clean install -pAutoInstallSinglePackage
 
 如果一切順利，則會將套件與協力廠商套件一併安裝至您的AEM執行個體。 您可以使用 [felix web console](http://localhost:4502/system/console/bundles). 協力廠商套件組合位於 `crx` 存放庫，如下所示
 ![協力廠商](assets/custom-bundle1.png)
-![協力廠商](assets/custom-bundle1.png)
+
 
 
