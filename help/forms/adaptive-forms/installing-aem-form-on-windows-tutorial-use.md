@@ -1,6 +1,6 @@
 ---
 title: 在Windows上安裝AEM Forms的簡化步驟
-description: 在Windows上安裝AEM Forms快速而簡單的步驟
+description: 在windows上快速輕鬆安裝AEM Forms
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -8,9 +8,9 @@ topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
-source-git-commit: 5c53919dd038c0992e1fe5dd85053f26c03c5111
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '578'
 ht-degree: 5%
 
 ---
@@ -19,70 +19,71 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->如果要使AEM用AEM Forms，請勿按兩下「快速啟動」(Quick Start)jar。
+>如果您要使用AEM Forms，請勿連按兩下AEM快速入門Jar。
 >
->另外，確保「AEM Forms安裝」資料夾路徑中沒有空格。
+>此外，請確定AEM Forms安裝資料夾路徑中沒有空格。
 >
->例如，不要在c:\jack and jill\AEM Forms folder中安裝AEM Forms
+>例如，請勿在c:\jack and jill\AEM Forms folder中安裝AEM Forms
 
 >[!NOTE]
 >
->如果要安裝AEM Forms6.5，請確保已安裝以下32位MicrosoftVisual C++可再分發版。
+>如果您要安裝AEM Forms 6.5，請確定您已安裝下列32位元Microsoft Visual C++可轉散發套件。
 >
->* MicrosoftVisual C++ 2008可再發行
->* MicrosoftVisual C++ 2010可再發行
->* MicrosoftVisual C++ 2012可再發行
->* MicrosoftVisual C++ 2013可再發行版（截至6.5）
+>* Microsoft Visual C++ 2008可再發行
+>* Microsoft Visual C++ 2010可再發行
+>* Microsoft Visual C++ 2012可再發行
+>* Microsoft Visual C++ 2013可再發行（截至6.5日）
 
 
-儘管我們建議 [正式檔案](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) 安裝AEM Forms。 可以按照以下步驟在Windows環境中安裝和配置AEM Forms:
+雖然我們建議遵循 [官方檔案](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) 安裝AEM Forms。 可依照下列步驟，在Windows環境上安裝和設定AEM Forms:
 
-* 確保安裝了相應的JDK
-   * AEM 6.2：您需要：OracleSE 8 JDK 1.8.x（64位）
+* 請確定您已安裝適當的JDK
+   * AEM 6.2您需要：OracleSE 8 JDK 1.8.x（64位）
 * 
-   * AEM 6.3AEM和6.4:OracleSE 8 JDK 1.8.x（64位）
-* AEM 6.5需要JDK 8或JDK 11
-* [正式JDK要求](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=zh-Hant) 此處列出
-* 確保JAVA_HOME設定為指向已安裝的JDK。
-   * 要在窗口中建立JAVA_HOME變數，請執行以下步驟：
+   * AEM 6.3和AEM 6.4，您需要：OracleSE 8 JDK 1.8.x（64位）
+* AEM 6.5您需要JDK 8或JDK 11
+* [官方JDK需求](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=zh-Hant) 此處列出
+* 請確定JAVA_HOME已設定為指向已安裝的JDK。
+   * 要在windows中建立JAVA_HOME變數，請執行以下步驟：
       * 按一下右鍵「My Computer（我的電腦）」並選擇「Properties（屬性）」
-      * 在「高級」頁籤上，選擇「環境變數」，然後建立一個名為JAVA_HOME的新系統變數。
-      * 將變數值設定為指向系統上安裝的JDK。 例如c:\program files\java\jdk1.8.0_25
+      * 在「高級」頁簽上，選擇「環境變數」並建立名為JAVA_HOME的新系統變數。
+      * 設定變數值，以指向系統上安裝的JDK。 例如c:\program files\java\jdk1.8.0_25
 
 * 在C驅動器上建立名為AEMForms的資料夾
-* 找到AEMQuickStart.Jar並將其移到AEMForms資料夾
+* 找到AEMQuickStart.Jar並將其移入AEMForms資料夾
 * 將license.properties檔案複製到此AEMForms資料夾
-* 建立名為「StartAemForms.bat」的批處理檔案，其內容如下：
-   * java -d64 -Xmx2048M -jar AEM6.5_Quickstart.jar -gui。 此處AEM_6.5_Quickstart.jar是我的快速啟動AEMjar的名稱。
-   * 您可以將jar更名為任何名稱，但請確保該名稱反映在批處理檔案中。 將批處理檔案保存在AEMForms資料夾中。
+* 建立名為「StartAemForms.bat」的批次檔案，其中包含下列內容：
+   * `java -d64 -Xmx2048M -jar AEM_6.5_Quickstart.jar -gui`
+      * 其中AEM_6.5_Quickstart.jar是我的AEM Quickstart Jar的名稱。
+   * 您可以將jar重新命名為任何名稱，但請確定該名稱反映在批次檔案中。 將批處理檔案保存在AEMForms資料夾中。
 
-* 開啟新的命令提示符，然後導航到 _c:\aemforms_。
+* 開啟新的命令提示符，然後導覽至 _c:\aemforms_.
 
 * 從命令提示符執行StartAemForms.bat檔案。
 
-* 您應該得到一個小對話框，指示啟動的進度。
+* 您應該會看到一個小對話框，指明啟動的進度。
 
-* 啟動完成後，開啟sling.properties檔案。 此地址位於c:\AEMForms\crx-quickstart\conf folder。
+* 啟動完成後，開啟sling.properties檔案。 這位於c:\AEMForms\crx-quickstart\conf folder。
 
-* 將以下2行複製到檔案底部
-   * **sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa。&#42;** **sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.boncycastle。&#42;**
-* 文檔服務要工作，需要這兩個屬性
-* 保存sling.properties檔案
-* [下載相應的表單載入包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)
-* 使用 [包管理器。](http://localhost:4502/crx/packmgr/index.jsp)
-* 安裝了添加到軟體包後，需要執行以下步驟
+* 將下列2行複製到檔案底部
+   * **sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa。&#42;** **sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.buncycastle。&#42;**
+* 檔案服務必須有這兩個屬性才能運作
+* 儲存sling.properties檔案
+* [下載適當的表單addon套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)
+* 使用安裝Forms附加套件 [套件管理器。](http://localhost:4502/crx/packmgr/index.jsp)
+* 安裝到軟體包後，需要執行下列步驟
 
-       * **確保所有捆綁包都處於活動狀態。 （除AEMFD簽名包外）。**
-       * **所有捆綁包通常需要5分鐘或更長時間才能進入活動狀態。**
+       * **確認所有套件組合都處於作用中狀態。 （AEMFD簽名包除外）。**
+       * **所有套件通常需要5分鐘或更長時間才能進入作用中狀態。**
    
-   * **所有捆綁包都處於活動狀態（除AEMFD簽名捆綁包外）後，重新啟動系統以完成AEM Forms安裝**
+   * **所有套件組合都生效後（AEMFD簽名套件組合除外），請重新啟動系統以完成AEM Forms安裝**
 
 ## sun.util.calendar包到允許的清單
 
-1. 在您的中開啟Felix Web控制台 [瀏覽器窗口](http://localhost:4502/system/console/configMgr)
+1. 在您的 [瀏覽器視窗](http://localhost:4502/system/console/configMgr)
 2. 搜索並開啟反序列化防火牆配置： `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
-3. 添加 `sun.util.calendar` 的 `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
+3. 新增 `sun.util.calendar` 作為新條目 `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
 4. 儲存變更。
 
-恭喜你！!! 您現在已在系統上安裝並配置了AEM Forms。
-根據您的需要，您可以配置  [Reader擴展](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=en) 或 [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-64/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=zh-Hant) 在伺服器上
+恭喜!!! 您現在已在系統上安裝並設定AEM Forms。
+視您的需求而定，您可以設定  [Reader擴充功能](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=en) 或 [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-64/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=zh-Hant) 伺服器

@@ -10,7 +10,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 2%
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->本教學課程使用版本 **27** 原型。 使用 **最新** 原型版本，以產生新專案。
+>本教學課程使用版本 **39** 原型。 使用 **最新** 原型版本，以產生新專案。
 
 1. 開啟命令行終端並輸入以下Maven命令：
 
@@ -50,7 +50,7 @@ ht-degree: 2%
    mvn -B archetype:generate \
     -D archetypeGroupId=com.adobe.aem \
     -D archetypeArtifactId=aem-project-archetype \
-    -D archetypeVersion=27 \
+    -D archetypeVersion=39 \
     -D appTitle="WKND SPA React" \
     -D appId="wknd-spa-react" \
     -D artifactId="aem-guides-wknd-spa.react" \
@@ -71,18 +71,20 @@ ht-degree: 2%
 
    ```plain
    |--- aem-guides-wknd-spa.react/
+       |--- LICENSE
+       |--- README.md
        |--- all/
+       |--- archetype.properties
        |--- core/
+       |--- dispatcher/
+       |--- it.tests/
+       |--- pom.xml
        |--- ui.apps/
        |--- ui.apps.structure/
        |--- ui.config/
        |--- ui.content/
        |--- ui.frontend/
        |--- ui.tests /
-       |--- it.tests/
-       |--- dispatcher/
-       |--- pom.xml
-       |--- README.md
        |--- .gitignore
    ```
 

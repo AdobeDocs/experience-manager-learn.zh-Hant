@@ -13,9 +13,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '2256'
+source-wordcount: '2257'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ ht-degree: 0%
 
    為避免潛在的XSS攻擊，RTF會透過逸出 `DOMPurify` 使用之前 [危險的SetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) 來呈現內容。 回想 `richText` 和 `text` 屬性。
 
-1. 接下來，請查看 `TextEditConfig` 在第29行：
+1. 下一個，開啟 `ui.frontend/src/components/import-components.js` 看看 `TextEditConfig` 在第86行：
 
    ```js
    const TextEditConfig = {
@@ -126,10 +126,10 @@ ht-degree: 0%
 
    上述程式碼負責決定何時在AEM製作環境中呈現預留位置。 若 `isEmpty` 方法傳回 **true** 然後呈現佔位符。
 
-1. 最後，請查看 `MapTo` ~62號線呼叫：
+1. 最後，請查看 `MapTo` ~94號線呼叫：
 
    ```js
-   export default MapTo('wknd-spa-react/components/text')(Text, TextEditConfig);
+   export default MapTo('wknd-spa-react/components/text')(LazyTextComponent, TextEditConfig);
    ```
 
    `MapTo` 由AEM SPA Editor JS SDK提供(`@adobe/aem-react-editable-components`)。 路徑 `wknd-spa-react/components/text` 代表 `sling:resourceType` 的AEM元件。 此路徑符合 `:type` 由先前觀察到的JSON模型公開。 `MapTo` 負責剖析JSON模型回應，並將正確值傳入 `props` 至SPA元件。

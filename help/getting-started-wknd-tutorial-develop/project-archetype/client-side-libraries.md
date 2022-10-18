@@ -1,6 +1,6 @@
 ---
 title: 用戶端程式庫和前端工作流程
-description: 了解如何使用用戶端資料庫或clientlib來部署及管理Adobe Experience Manager(AEM)Sites實作的CSS和JavaScript。 了解如何將ui.frontend模組（Webpack專案）整合至端對端建置程式。
+description: 了解如何使用Client資料庫或clientlibs來部署及管理Adobe Experience Manager(AEM)Sites實作的CSS和Javascript。 了解如何將ui.frontend模組（Webpack專案）整合至端對端建置程式。
 sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
@@ -11,7 +11,7 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '2825'
 ht-degree: 1%
