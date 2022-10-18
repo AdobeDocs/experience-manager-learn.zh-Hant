@@ -8,7 +8,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30c882da3a89820b5e11bc2902bb92dd0629efe9
 workflow-type: tm+mt
 source-wordcount: '962'
 ht-degree: 7%
@@ -55,7 +55,7 @@ AEM內容片段模型會定義內容結構，供AEM作者用來範本建立原�
    >此配置更改不可從 [!UICONTROL AEM設定] 網頁UI。 若要還原此設定：
    >    
    >    1. 開啟 [CRXDE Lite](http://localhost:4502/crx/de)
-   >    1. 導航到 `/conf/wknd-mobile/settings/dam/cfm`
+   >    1. 瀏覽到 `/conf/wknd-mobile/settings/dam/cfm`
    >    1. 刪除 `models` 節點
 
    >    
@@ -78,7 +78,7 @@ AEM內容片段模型會定義內容結構，供AEM作者用來範本建立原�
 
 ## 了解要建立的內容片段模型
 
-在定義「內容片段」模型之前，請先檢閱我們將帶來的體驗，以確保擷取所有必要的資料點。 為此，我們將審核行動應用程式設計，並將設計元素對應至要收集的內容。
+在定義內容片段模型之前，請先檢閱我們將帶來的體驗，確保擷取了所有必要的資料點。 為此，我們將審核行動應用程式設計，並將設計元素對應至要收集的內容。
 
 我們可依下列方式劃分定義事件的資料點：
 
