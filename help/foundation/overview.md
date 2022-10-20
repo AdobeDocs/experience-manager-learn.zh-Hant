@@ -1,85 +1,100 @@
 ---
-title: AEM Foundation 影片和教學課程
-description: 觀看我們的視頻和教程，以獲取Adobe Experience Manager基金會的幫助。
+title: AEM Foundation影片和教學課程
+description: 觀看影片和教學課程，以取得Adobe Experience Manager Foundation的協助。
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 13%
+ht-degree: 0%
 
 ---
 
-# AEM Foundation 影片和教學課程 {#overview}
+# AEM Foundation影片和教學課程 {#overview}
 
-Adobe Experience Manager為AEM Sites、資產和Forms的用戶提供了一組通用功能。
+Adobe Experience Manager提供AEM Sites、Assets和Forms使用者可用的通用功能集。
 
-## 新增功能
+<div id="whats-new-section">
 
-* **[使用工AEM作流（視頻）](./workflow/use-workflow.md)**
+## 新功能
 
-   *工AEM作流提供了協作、管理和處理中內容的方AEM法。*
+* **[使用工作流程AEM（影片）](./workflow/use-workflow.md)**
 
-* **[瞭解Cloud ManagerAEM for（視頻）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   *Cloud ManagerAEM可輕鬆管理、檢查和自助服AEM務環境。*
+   *AEM工作流程提供協同作業、管理及處理AEM內容的方式。*
 
-* **[設定公用密鑰和專用密鑰以與Adobe I/O一起使用（教程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *瞭解如何使用 [!DNL openssl] 與Adobe I/OAEM合作。*
+* **[了解Cloud Manager for AEM（影片）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
+   *AEM適用的Cloud Manager可讓您輕鬆管理、檢查及自助服務AEM環境。*
 
-* **[使用Cloud Manager CI/CD管道（視頻）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   *瞭解如何使用Cloud Manager的CI/CD管道來確保安全一致的部署。*
+* **[設定公開金鑰和私密金鑰以搭配Adobe I/O使用（教學課程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
+   *了解如何使用 [!DNL openssl] 可搭配AEM和Adobe I/O使用。*
 
-## 員工挑選
+* **[使用Cloud Manager CI/CD管道（影片）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
+   *了解如何使用Cloud Manager的CI/CD管道，確保安全且一致的部署。*
+
+</div>
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
+
+## 員工精選
 
 <table>
 <tr>
   <td>
     <a href="./cloud-manager/understand-cloud-manager-for-aem.md">
-    <img alt="瞭解雲管理AEM器" src="./cloud-manager/assets/understand-cloud-manager-for-aem/thumbnail.png" />
+    <img alt="了解Cloud Manager for AEM" src="./cloud-manager/assets/understand-cloud-manager-for-aem/thumbnail.png" />
     </a>
     <div>
      <a href="./cloud-manager/understand-cloud-manager-for-aem.md">
-    <strong>瞭解雲管理AEM器</strong>
+    <strong>了解Cloud Manager for AEM</strong>
     </a>
     </div>
     <p>
-    <em>Cloud Manager for提AEM供簡單而強健的解決方案，可輕鬆管理、檢查和自助服AEM務環境。</em>
+    <em>AEM適用的Cloud Manager提供簡單而強大的解決方案，可輕鬆管理、檢查及自助服務AEM環境。</em>
     <p>
   </td>
    <td>
     <a href="./development/set-up-sling-dynamic-include.md">
-    <img alt="設定吊具動態包括(SDI)" src="./development/assets/set-up-sling-dynamic-include/thumbnail.png" />
+    <img alt="設定Sling Dynamic Include(SDI)" src="./development/assets/set-up-sling-dynamic-include/thumbnail.png" />
     </a>
      <div>
      <a href="./development/set-up-sling-dynamic-include.md">
-    <strong>設定吊具動態包括(SDI)</strong>
+    <strong>設定Sling Dynamic Include(SDI)</strong>
     </a>
     </div>
     <p>
-    <em>探討如何設定Sling Dynamic Include(SDI)並允許動態元件始終AEM為新內容提供服務。</em>
+    <em>探索如何設定Sling Dynamic Include(SDI)，並允許動態AEM元件一律提供最新內容。</em>
     <p>
   </td>
   <td>
     <a href="./administration/understand-reasons-to-upgrade.md">
-    <img alt="瞭解升級的理AEM由" src="./administration/assets/understand-reasons-to-upgrade/thumbnail.png" />
+    <img alt="了解升級AEM的理由" src="./administration/assets/understand-reasons-to-upgrade/thumbnail.png" />
     </a>
     <div>
     <a href="./administration/understand-reasons-to-upgrade.md">
-    <strong>瞭解升級的原AEM因</strong>
+    <strong>了解升級AEM的理由</strong>
     </a>
     </div>
     <p>
-    <em>在考慮升級到最新版本時，需要瞭解的關鍵功能的高級細分AEM。</em>
+    <em>考慮升級至最新版AEM時，詳細列出需了解的重要功能。</em>
     </p>
   </td>
 </tr>
 </table>
 
+</div>
+
 ## 其他資源
 
-* [Experience League — 瀏覽AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM as a Cloud Service 教學課程](/help/cloud-service/overview.md)
-* [AEM Sites 影片和教學課程](/help/sites/overview.md)
-* [AEM Assets 影片和教學課程](/help/assets/overview.md)
-* [AEM Forms 影片和教學課程](/help/forms/overview.md)
+* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [AEMas a Cloud Service教學課程](/help/cloud-service/overview.md)
+* [AEM Sites影片和教學課程](/help/sites/overview.md)
+* [AEM Assets影片和教學課程](/help/assets/overview.md)
+* [AEM Forms影片和教學課程](/help/forms/overview.md)
