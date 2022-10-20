@@ -10,9 +10,9 @@ kt: 9165
 thumbnail: 337960.jpeg
 last-substantial-update: 2022-11-03T00:00:00Z
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 835657082c0c6bf7b2822b53ef2b99039d77f249
+source-git-commit: f4d4bcc836123ba4320710c3024e03a82a36cfb9
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '228'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 5%
 
 ### 絕對Sitemap URL
 
-AEM Sitemap支援絕對URL，方法是使用 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). 若要這麼做，請在AEM服務上建立對應節點，以產生網站地圖。
+AEM Sitemap支援絕對URL，方法是使用 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). 若要這麼做，請在AEM服務上建立對應節點，以產生網站地圖（通常為AEM發佈服務）。
 
 的Sling對應節點定義範例 `https://wknd.com` 可在下定義 `/etc/map/https` 如下所示：
 
