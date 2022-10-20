@@ -17,7 +17,7 @@ exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '465'
-ht-degree: 73%
+ht-degree: 74%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 73%
 * HTML、CSS 和 JavaScript 的基本知識
 * 基本熟悉 [React](https://reactjs.org/tutorial/tutorial.html)
 
-*雖然不一定需要，但對於[開發傳統的 AEM Sites 元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)有基本的了解也會有幫助。*
+*雖然不一定需要，但對於[開發傳統的 AEM Sites 元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)有基本的了解也會有幫助。*
 
 ## 本機開發環境 {#local-dev-environment}
 

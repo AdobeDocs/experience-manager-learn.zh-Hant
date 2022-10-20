@@ -52,7 +52,7 @@ ht-degree: 20%
 
 + 開發 {#developing}
    + [AEM 專案原型](developing/aem-project-archetype.md)
-   + [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)
    + [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
