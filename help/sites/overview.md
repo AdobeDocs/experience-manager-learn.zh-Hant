@@ -4,21 +4,21 @@ description: 從我們的影片和教學課程了解Experience Manager Sites。 
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 5dbad9101ce73c2e0370592336d37338e45825ef
+source-git-commit: d6366d1e3f4d575eb78b8af38a59a7fb9413f43d
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 14%
+ht-degree: 12%
 
 ---
 
-# AEM Sites 影片和教學課程 {#overview}
+# AEM Sites影片和教學課程 {#overview}
 
 Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使用手冊包含有關AEM Sites許多功能的影片和教學課程。
 
 
 <div id="whats-new-section">
 
-## 新增功能
+## 新功能
 
 * **[搭配使用啟動AEM Sites（影片）](./page-authoring/launches.md)**
 
