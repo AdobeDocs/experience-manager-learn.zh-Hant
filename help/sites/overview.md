@@ -4,10 +4,10 @@ description: 從我們的影片和教學課程了解Experience Manager Sites。 
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: d6366d1e3f4d575eb78b8af38a59a7fb9413f43d
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 12%
+source-wordcount: '345'
+ht-degree: 8%
 
 ---
 
@@ -101,12 +101,11 @@ Adobe Experience Manager(AEM)Sites是領先業界的體驗管理平台。 本使
 
 ## 其他資源
 
-* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Sites編寫檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
 * [AEM Sites開發檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [AEM Sites管理檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
 * [AEM Sites部署檔案](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEM as a Cloud Service 教學課程](/help/cloud-service/overview.md)
-* [AEM Assets 教學課程](/help/assets/overview.md)
-* [AEM Forms 教學課程](/help/forms/overview.md)
-* [AEM Foundation 教學課程](/help/foundation/overview.md)
+* [AEMas a Cloud Service教學課程](/help/cloud-service/overview.md)
+* [AEM Assets教學課程](/help/assets/overview.md)
+* [AEM Forms教學課程](/help/forms/overview.md)
+* [AEM Foundation教學課程](/help/foundation/overview.md)

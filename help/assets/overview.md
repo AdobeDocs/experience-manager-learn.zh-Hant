@@ -3,10 +3,10 @@ title: AEM Assets影片和教學課程
 description: 觀看影片以取得AEM Asset支援和協助。
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 3%
+source-wordcount: '185'
+ht-degree: 4%
 
 ---
 
@@ -18,11 +18,11 @@ Adobe Experience Manager(AEM)Assets是AEM Platform上的數位資產管理工具
 >id="aemcloud_assets_overview"
 >title="AEM Assets"
 >abstract="了解如何快速尋找及編輯您需要的資產。"
->additional-url="https://video.tv.adobe.com/v/336196" text="AEM Assets"
+>additional-url="https://video.tv.adobe.com/v/336196" text="AEM Assets逐步說明"
 
-## AEM Assets
+## AEM Assets逐步說明
 
-觀看AEM Assets的端對端逐步介紹，了解AEM Assets的特點，以及如何使用它來達成您組織的業務目標。
+了解AEM Assets是什麼，以及如何使用它來達成您組織的業務目標。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336196/?quality=12&learn=on)
 
@@ -83,7 +83,6 @@ Adobe Experience Manager(AEM)Assets是AEM Platform上的數位資產管理工具
 
 ## 其他資源
 
-* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Assets 檔案](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
 * [AEMas a Cloud Service教學課程](/help/cloud-service/overview.md)
 * [AEM Sites教學課程](/help/sites/overview.md)

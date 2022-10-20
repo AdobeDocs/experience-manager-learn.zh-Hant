@@ -4,9 +4,9 @@ description: 觀看影片和教學課程，以取得Adobe Experience Manager Fou
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,6 @@ Adobe Experience Manager提供AEM Sites、Assets和Forms使用者可用的通用
 
 ## 其他資源
 
-* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEMas a Cloud Service教學課程](/help/cloud-service/overview.md)
 * [AEM Sites影片和教學課程](/help/sites/overview.md)
 * [AEM Assets影片和教學課程](/help/assets/overview.md)

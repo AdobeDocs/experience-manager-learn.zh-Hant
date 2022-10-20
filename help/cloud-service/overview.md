@@ -1,17 +1,17 @@
 ---
-title: Adobe Experience Manager as Cloud Service影片和教學課程
+title: Adobe Experience Manager as a Cloud Service影片和教學課程
 description: Adobe Experience Manager(AEM)as a Cloud Service的教學課程系列
 sub-product: sites, cloud-manager, foundation, assets
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '267'
 ht-degree: 7%
 
 ---
 
-# AEM asCloud Service影片和教學課程 {#overview}
+# AEMas a Cloud Service影片和教學課程 {#overview}
 
 Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEMas a Cloud Service推出新一代Experience Manager產品線，以過去的投資和創新為基礎，保存並擴充所有使用案例和功能。
 
@@ -100,5 +100,4 @@ Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEMas a
 
 ## 其他資源
 
-* [Experience League — 探索Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [Adobe Experience Manager as a Cloud Service檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html)
