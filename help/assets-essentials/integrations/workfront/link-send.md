@@ -8,13 +8,14 @@ role: User
 level: Beginner
 kt: 8220
 thumbnail: 336255.jpeg
-source-git-commit: 2edcaa0e10121f75ac3081eb00e8c1419400a205
+last-substantial-update: 2022-10-14T00:00:00Z
+exl-id: e1ec3560-2c74-47ac-ba8a-f05412b6b3e5
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
-
 
 # 傳送檔案和連結資產
 

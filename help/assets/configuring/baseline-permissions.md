@@ -9,8 +9,9 @@ thumbnail: 37696.jpg
 topic: Content Management
 role: User
 level: Beginner
+last-substantial-update: 2021-09-15T00:00:00Z
 exl-id: b2ac2332-4d98-4866-8688-831f0282a736
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 0%
@@ -19,6 +20,6 @@ ht-degree: 0%
 
 # 基線權限
 
-在[基線資產資料夾](./baseline-folders.md)上管理使用者存取是控管的重要方面，並確保可正確支援這些程式。
+管理 [基線資產資料夾](./baseline-folders.md) 是治理的一個關鍵方面，並確保可正確支援這些流程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37696/?quality=12&learn=on&hidetitle=true)
