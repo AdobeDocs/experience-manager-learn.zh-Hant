@@ -3,9 +3,9 @@ user-guide-title: AEM Sites 影片和教學課程
 user-guide-description: Adobe Experience Manager Sites 的影片和教學課程系列。
 breadcrumb-title: AEM Sites 教學課程
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 8343ce6e3c9f144dddfc9f5bc80b436542f5be02
+source-git-commit: d1e105a4083b34e7a3f220a59d4608ef39d39032
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '436'
 ht-degree: 20%
 
 ---
@@ -93,6 +93,8 @@ ht-degree: 20%
    + [設定翻譯規則](translation/translation-rules-editor-technical-video-setup.md)
    + [翻譯增強功能](translation/translation-enhancements-feature-video-use.md)
 + Integrations {#integrations}
+   + Experience Platform {#experience-platform}
+      + [生成FPID](integrations/platform/fpid.md)
    + Experience Platform Launch {#experience-platform-launch}
       + [總覽](integrations/experience-platform-launch/overview.md)
       + [建立Launch屬性](integrations/experience-platform-launch/create-launch-property.md)
