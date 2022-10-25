@@ -1,22 +1,23 @@
 ---
-title: 什麼是AEM作為Cloud Service?
-description: 探索何謂AEM as a Cloud Service，以及其與其他Adobe Experience Manager版本有何不同。
+title: 什麼是AEMas a Cloud Service?
+description: 探索什麼是AEMas a Cloud Service，以及它與其他Adobe Experience Manager版本有何不同。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
-topic: 架構
+topic: Architecture
 kt: 6923
 thumbnail: 330546.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+last-substantial-update: 2022-01-01T00:00:00Z
+exl-id: 8aa97bdf-6a0b-4140-8183-a8f77212992d
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 1%
+source-wordcount: '52'
+ht-degree: 0%
 
 ---
 
+# 什麼是AEMas a Cloud Service?
 
-# 什麼是AEM作為Cloud Service?
-
-探索何謂AEM as a Cloud Service，以及其與其他Adobe Experience Manager版本有何不同。
+探索什麼是AEMas a Cloud Service，以及它與其他Adobe Experience Manager版本有何不同。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330546/?quality=12&learn=on)

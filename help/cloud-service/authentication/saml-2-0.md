@@ -1,6 +1,6 @@
 ---
-title: SAML 2.0在AEMas a Cloud Service
-description: 瞭解如何在as a Cloud Service發佈服務上配置SAML 2.0AEM身份驗證。
+title: AEM as a Cloud Service上的SAML 2.0
+description: 了解如何在AEMas a Cloud Service發佈服務上設定SAML 2.0驗證。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -8,89 +8,90 @@ role: Architect, Developer
 level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
+last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: 6d5a531f44414887e8dc6568fa6f5dcb73bfb183
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '2815'
 ht-degree: 1%
 
 ---
 
-# SAML 2.0身份驗證{#saml-2-0-authentication}
+# SAML 2.0驗證{#saml-2-0-authentication}
 
-瞭解如何設定最終用戶（而非作者）並AEM驗證其是否與您選擇的SAML 2.0相容的IDP。
+了解如何針對您選擇的SAML 2.0相容IDP，設定和驗證一般使用者(而非AEM作者)。
 
-## 什麼SAMLAEMas a Cloud Service?
+## 什麼AEM適用的SAMLas a Cloud Service?
 
-SAML 2.0與AEM發佈（或預覽）整合，允許基於Web體驗的最終用戶向非AdobeIDP（身份提供程式）進AEM行身份驗證，並以指定的授權用戶AEM身份訪問。
+SAML 2.0與AEM Publish（或預覽）的整合，可讓AEM型網頁體驗的一般使用者驗證非AdobeIDP（身分提供者），並以具名的授權使用者身分存取AEM。
 
 |  | AEM 作者 | AEM 發佈 |
 |-----------------------|:----------:|:-----------:|
 | SAML 2.0支援 | ✘ | ✔ |
 
-+++ 瞭解SAML 2.0流，具AEM體
++++ 使用AEM了解SAML 2.0流程
 
-AEM發佈SAML整合的典型流如下：
+AEM Publish SAML整合的一般流程如下：
 
-1. 用戶向AEM發出請求發佈指示需要身份驗證。
+1. 使用者向AEM發佈請求表示需要驗證。
    + 用戶請求受CUG/ACL保護的資源。
    + 用戶請求受身份驗證要求約束的資源。
-   + 用戶跟蹤到登AEM錄終結點的連結(即 `/system/sling/login`)。
-1. 向IDPAEM發出AuthnRequest ，請求IDP啟動身份驗證過程。
-1. 用戶驗證到IDP。
-   + IDP提示用戶獲取憑據。
-   + 用戶已經通過IDP驗證，無需提供進一步的憑據。
-1. IDP生成包含用戶資料的SAML斷言，並使用IDP的私有證書對其簽名。
-1. IDP通過HTTPPOST，通過用戶的Web瀏覽器，將SAML斷言發送到AEM發佈。
-1. AEM Publish接收SAML斷言，並使用IDP公共證書驗證SAML斷言的完整性和真實性。
-1. AEM發佈基於AEMSAML 2.0 OSGi配置和SAML聲明的內容來管理用戶記錄。
+   + 使用者會依循AEM登入端點的連結(即 `/system/sling/login`)明確要求登入動作。
+1. AEM向IDP提出AuthnRequest，要求IDP開始驗證程式。
+1. 使用者向IDP驗證。
+   + IDP會提示使用者取得認證。
+   + 使用者已獲得IDP的驗證，不需要提供進一步的認證。
+1. IDP會產生包含使用者資料的SAML聲明，並使用IDP的私人憑證簽署。
+1. IDP會透過HTTPPOST，透過使用者的網頁瀏覽器，將SAML斷言傳送至AEM Publish。
+1. AEM Publish會收到SAML聲明，並使用IDP公開憑證來驗證SAML聲明的完整性和真實性。
+1. AEM Publish會根據SAML 2.0 OSGi設定和SAML斷言的內容來管理AEM使用者記錄。
    + 建立用戶
-   + 同步用戶屬性
-   + 更新AEM用戶組成員
-1. AEM發佈設定AEM `login-token` HTTP響應上的cookie，用於驗證後續對AEM發佈的請求。
-1. AEM發佈將用戶重定向到AEM發佈上的URL，如 `saml_request_path` 餅乾。
+   + 同步使用者屬性
+   + 更新AEM使用者群組成員資格
+1. AEM Publish會設定AEM `login-token` HTTP回應上的cookie，用於驗證後續對AEM Publish的要求。
+1. AEM發佈會依 `saml_request_path` cookie。
 
 +++
 
-## 配置瀏覽
+## 配置逐步說明
 
 >[!VIDEO](https://video.tv.adobe.com/v/343040/?quality=12&learn=on)
 
-該視頻介紹了如何設定SAML 2.0與AEMas a Cloud Service發佈服務的整合，以及使用Okta作為IDP。
+這部影片會逐步說明如何設定與AEMas a Cloud Service發佈服務的SAML 2.0整合，以及使用Okta做為IDP。
 
 ## 必備條件
 
-設定SAML 2.0身份驗證時，需要以下內容：
+設定SAML 2.0驗證時，需要下列項目：
 
-+ 部署管理器對雲管理器的訪問
-+ 管AEM理員訪問AEMas a Cloud Service環境
-+ 管理員對IDP的訪問
-+ （可選）訪問用於加密SAML負載的公共/專用密鑰對
++ Deployment Manager對Cloud Manager的訪問
++ AEM管理員對AEMas a Cloud Service環境的存取
++ 管理員訪問IDP
++ （可選）存取用於加密SAML裝載的公開/私用金鑰組
 
-SAML 2.0僅支援對AEM發佈或預覽進行身份驗證。 要管理AEM作者使用和IDP的身份驗證， [將IDP與Adobe IMS整合。](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html)。
+SAML 2.0僅支援驗證AEM發佈或預覽的使用。 若要使用和IDP管理AEM作者的驗證， [整合IDP與Adobe IMS。](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html).
 
 
-## 在上安裝IDP公共證AEM書
+## 在AEM上安裝IDP公開憑證
 
-IDP的公共證書將添加到全AEM局信任儲存，用於驗證由IDP發送的SAML斷言是否有效。
+IDP的公開憑證會新增至AEM Global Trust Store，並用來驗證IDP傳送的SAML聲明是否有效。
 
-+++SAML斷言簽名流
++++SAML斷言簽署流程
 
-![SAML 2.0 - IDP SAML斷言簽名](./assets/saml-2-0/idp-signing-diagram.png)
+![SAML 2.0 - IDP SAML聲明簽署](./assets/saml-2-0/idp-signing-diagram.png)
 
-1. 用戶驗證到IDP。
-1. IDP生成包含用戶資料的SAML斷言。
-1. IDP使用IDP的私有證書籤署SAML聲明。
-1. IDP啟動客戶端HTTPPOST到AEM發佈的SAML終結點(`.../saml_login`)，其中包含簽名的SAML斷言。
-1. AEM發佈接收包含已簽名的SAML斷言的HTTPPOST，可以使用IDP公共證書驗證簽名。
+1. 使用者向IDP驗證。
+1. IDP會產生包含使用者資料的SAML斷言。
+1. IDP使用IDP的私人證書籤署SAML聲明。
+1. IDP會向AEM Publish的SAML端點(`.../saml_login`)，包含簽署的SAML斷言。
+1. AEM Publish會收到包含已簽署SAML斷言的HTTPPOST，可使用IDP公開憑證來驗證簽名。
 
 +++
 
-![將IDP公共證書添加到全局信任儲存](./assets/saml-2-0/global-trust-store.png)
+![將IDP公開憑證新增至全球信託存放區](./assets/saml-2-0/global-trust-store.png)
 
-1. 獲取 __公共證書__ 檔案。 此證書AEM允許驗證IDP提供的AEMSAML斷言。
+1. 取得 __公開憑證__ IDP的檔案。 此憑證可讓AEM驗證IDP提供給AEM的SAML斷言。
 
-   證書採用PEM格式，應類似於：
+   憑證為PEM格式，應類似：
 
    ```
    -----BEGIN CERTIFICATE-----
@@ -100,75 +101,75 @@ IDP的公共證書將添加到全AEM局信任儲存，用於驗證由IDP發送�
    -----END CERTIFICATE-----
    ```
 
-1. 以管理員身份登錄到AEM作AEM者。
-1. 導航到 __「工具」>「安全性」>「信任儲存」__。
-1. 建立或開啟全局信任儲存。 如果建立全局信任儲存，請將密碼儲存到某個安全位置。
-1. 展開 __從CER檔案添加證書__。
-1. 選擇 __選擇證書檔案__，並上載IDP提供的證書檔案。
-1. 離開 __將證書映射到用戶__ 空白。
-1. 選擇 __提交__。
-1. 新添加的證書顯示在 __從CRT檔案添加證書__ 的子菜單。
-1. 記錄 __別名__，因為在 [SAML 2.0身份驗證處理程式OSGi配置](#saml-2-0-authentication-handler-osgi-configuration)。
-1. 選擇 __保存並關閉__。
+1. 以AEM管理員身分登入AEM Author。
+1. 導覽至 __「工具」>「安全性」>「信任儲存」__.
+1. 建立或開啟全局信任儲存。 如果建立全局信任儲存，請將密碼儲存在安全的某個位置。
+1. 展開 __從CER檔案添加證書__.
+1. 選擇 __選擇證書檔案__，並上傳IDP提供的憑證檔案。
+1. 離開 __將憑證對應至使用者__ 空白。
+1. 選擇 __提交__.
+1. 新新增的憑證會顯示在 __從CRT檔案添加證書__ 區段。
+1. 請注意 __別名__，因為此值用於 [SAML 2.0驗證處理常式OSGi設定](#saml-2-0-authentication-handler-osgi-configuration).
+1. 選擇 __儲存並關閉__.
 
-全局信任儲存在AEM作者上配置了IDP的公共證書，但由於SAML僅在AEM發佈上使用，因此必須將全局信任儲存複製到AEM發佈，以便IDP公共證書可在此訪問。
+全域信任存放區是在AEM作者上使用IDP的公開憑證來設定，但由於SAML僅用於AEM發佈，因此必須將全域信任存放區複製到AEM Publish,IDP公開憑證才能在該處存取。
 
-![將全局信任儲存複製到AEM發佈](./assets/saml-2-0/global-trust-store-replicate.png)
+![將全域信任存放區復寫至AEM Publish](./assets/saml-2-0/global-trust-store-replicate.png)
 
-1. 導航到 __工具>部署>包__。
-1. 建立包
+1. 導覽至 __工具>部署>套件__.
+1. 建立套件
    + 包名稱： `Global Trust Store`
    + 版本: `1.0.0`
    + 群組: `com.your.company`
-1. 編輯新 __全局信任儲存__ 檔案。
-1. 選擇 __篩選器__ 頁籤，並為根路徑添加篩選器 `/etc/truststore`。
-1. 選擇 __完成__ 然後 __保存__。
-1. 選擇 __生成__ 按鈕 __全局信任儲存__ 檔案。
-1. 生成後，選擇 __更多__ > __複製__ 激活全局信任儲存節點(`/etc/truststore`)到AEM發佈。
+1. 編輯新 __全局信任儲存__ 包。
+1. 選取 __篩選器__ 頁簽，並為根路徑添加篩選器 `/etc/truststore`.
+1. 選擇 __完成__ 然後 __儲存__.
+1. 選取 __建置__ 按鈕 __全局信任儲存__ 包。
+1. 建置後，選擇 __更多__ > __複製__ 激活全局信任儲存節點(`/etc/truststore`)發佈。
 
-## 安裝AEM公鑰/私鑰對{#install-aem-public-private-key-pair}
+## 安裝AEM公開/私密金鑰組{#install-aem-public-private-key-pair}
 
-_可選AEM安裝公共/私鑰對_
+_安裝AEM公開/私密金鑰組為選用_
 
-AEM發佈可配置為對AuthnRequests（到IDP）進行簽名，並對SAML斷言(到AEM)進行加密。 這是通過為AEM發佈提供一個私鑰來實現的，並且它與IDP匹配公共密鑰。
+AEM Publish可設定為簽署AuthnRequests（對IDP），以及加密SAML聲明(對AEM)。 這是透過為AEM Publish提供私密金鑰來達成，且與IDP相符的公開金鑰。
 
-+++ 瞭解AuthnRequest簽名流（可選）
++++ 了解AuthnRequest簽署流程（選用）
 
-AuthnRequest（AEM Publish向IDP發出的啟動登錄過程的請求）可以由AEM Publish簽名。 為此，AEM Publish使用私鑰簽名AuthnRequest，然後IDP使用公鑰驗證簽名。 這保證IDP AuthnRequest是由AEM Publish發起和請求的，而不是惡意第三方。
+AEM Publish可簽署AuthnRequest（發起登入程式的AEM Publish向IDP提出的請求）。 為此，AEM Publish會使用私密金鑰簽署AuthnRequest，讓IDP使用公開金鑰驗證簽名。 這可保證IDP AuthnRequest是由AEM Publish所啟動、要求，而非惡意第三方。
 
-![SAML 2.0 - SP授權請求籤名](./assets/saml-2-0/sp-authnrequest-signing-diagram.png)
+![SAML 2.0 - SP AuthnRequest簽名](./assets/saml-2-0/sp-authnrequest-signing-diagram.png)
 
-1. 用戶向AEM發佈發出HTTP請求，導致向IDP發出SAML驗證請求。
-1. AEM發佈生成發送到IDP的SAML請求。
-1. AEM發佈使用私鑰對SAML請AEM求籤名。
-1. AEM發佈啟動AuthnRequest,HTTP客戶端重定向到包含簽名的SAML請求的IDP。
-1. IDP接收AuthnRequest，並使用公鑰驗證簽AEM名，保證AEM Publish啟動了AuthnRequest。
-1. 然後，AEM Publish使用IDP公共證書驗證解密的SAML斷言的完整性和真實性。
+1. 使用者向AEM Publish發出HTTP要求，導致向IDP發出SAML驗證要求。
+1. AEM Publish會產生SAML要求，以傳送至IDP。
+1. AEM Publish使用AEM私密金鑰簽署SAML請求。
+1. AEM Publish會起始AuthnRequest，此為包含已簽署SAML要求的HTTP用戶端重新導向至IDP。
+1. IDP會收到AuthnRequest，並使用AEM公開金鑰驗證簽名，以保證AEM Publish已起始AuthnRequest。
+1. 然後，AEM Publish會使用IDP公開憑證，驗證解密後SAML斷言的完整性和真實性。
 
 +++
 
-+++ 瞭解SAML斷言加密流（可選）
++++ 了解SAML斷言加密流程（選用）
 
-IDP和AEM發佈之間的所有HTTP通信都應通過HTTPS進行，因此預設情況下是安全的。 但是，在需要HTTPS提供的保密性之外，SAML斷言可以根據需要進行加密。 為此，IDP使用私鑰對SAML斷言資料進行加密，AEM發佈使用私鑰對SAML斷言進行解密。
+IDP與AEM Publish之間的所有HTTP通訊都應透過HTTPS，因此預設為安全。 但是，如有需要，除了HTTPS提供的機密性外，還需要額外的機密性，SAML斷言就可以加密。 為此，IDP會使用私密金鑰加密SAML斷言資料，而AEM Publish會使用私密金鑰解密SAML斷言。
 
 ![SAML 2.0 - SP SAML斷言加密](./assets/saml-2-0/sp-samlrequest-encryption-diagram.png)
 
-1. 用戶驗證到IDP。
-1. IDP生成包含用戶資料的SAML斷言，並使用IDP的私有證書對其簽名。
-1. 然後，IDP使用公鑰對SAML斷言AEM進行加密，這需要AEM私鑰才能解密。
-1. 加密的SAML斷言通過用戶的Web瀏覽器發送到AEM發佈。
-1. AEM Publish接收SAML斷言，並使用私鑰對其AEM解密。
-1. IDP提示用戶進行身份驗證。
+1. 使用者向IDP驗證。
+1. IDP會產生包含使用者資料的SAML聲明，並使用IDP的私人憑證簽署。
+1. IDP接著會使用AEM公開金鑰加密SAML斷言，而這需要AEM私密金鑰解密。
+1. 加密的SAML斷言會透過使用者的網頁瀏覽器傳送至AEM Publish。
+1. AEM Publish會接收SAML斷言，並使用AEM私密金鑰解密。
+1. IDP會提示使用者進行驗證。
 
 +++
 
-AuthnRequest簽名和SAML斷言加密都是可選的，但是，使用 [SAML 2.0身份驗證處理程式OSGi配置屬性 `useEncryption`](#saml-20-authenticationsaml-2-0-authentication)，表示不能同時使用或兩者都不能使用。
+AuthnRequest簽名和SAML斷言加密都是選用的，不過都已啟用，使用 [SAML 2.0驗證處理常式OSGi配置屬性 `useEncryption`](#saml-20-authenticationsaml-2-0-authentication)，表示不能同時使用或兩者皆不使用。
 
-![AEM驗證服務密鑰儲存](./assets/saml-2-0/authentication-service-key-store.png)
+![AEM authentication-service金鑰存放區](./assets/saml-2-0/authentication-service-key-store.png)
 
-1. 獲取用於對AuthnRequest進行簽名和加密SAML斷言的公鑰、私鑰（PKCS#8以DER格式）和證書鏈檔案（這可能是公鑰）。 密鑰通常由IT組織的安全團隊提供。
+1. 取得用來簽署AuthnRequest及加密SAML斷言的公開金鑰、私密金鑰（PKCS#8,DER格式）和憑證鏈式檔案（可能是公開金鑰）。 金鑰通常由IT組織的安全團隊提供。
 
-   + 可以使用 __門__:
+   + 可使用 __openssl__:
 
    ```
    $ openssl req -x509 -sha256 -days 365 -newkey rsa:4096 -keyout aem-private.key -out aem-public.crt
@@ -180,73 +181,73 @@ AuthnRequest簽名和SAML斷言加密都是可選的，但是，使用 [SAML 2.0
    $ openssl pkcs8 -topk8 -inform der -nocrypt -in aem-private.der -outform der -out aem-private-pkcs8.der
    ```
 
-1. 將公鑰上載到IDP。
-   + 使用 `openssl` 以上方法，公鑰為 `aem-public.crt` 的子菜單。
-1. 以管理員身份登錄到AEM作AEM者，以上載私鑰。
-1. 導航到 __「工具」>「安全性」>「信任儲存」__，然後選擇 __認證服務__ 用戶，然後選擇 __屬性__ 按鈕。
-1. 導航到 __工具>安全>用戶__，然後選擇 __認證服務__ 用戶，然後選擇 __屬性__ 按鈕。
-1. 選擇 __密鑰庫__ 頁籤。
-1. 建立或開啟密鑰庫。 如果建立密鑰庫，請確保口令安全。
-1. 選擇 __從DER檔案添加私鑰__，並將私鑰和鏈檔案添加到AEM:
-   + __別名__:提供一個有意義的名稱，通常是國內流離失所者的名稱。
-   + __私鑰檔案__:上載私鑰檔案（PKCS#8的DER格式）。
+1. 將公開金鑰上傳至IDP。
+   + 使用 `openssl` 方法，公開金鑰為 `aem-public.crt` 檔案。
+1. 以AEM管理員身分登入AEM Author，以上傳私密金鑰。
+1. 導覽至 __「工具」>「安全性」>「信任儲存」__，然後選取 __authentication-service__ 用戶，然後選擇 __屬性__ 從頂端動作列。
+1. 導覽至 __「工具」>「安全性」>「使用者」__，然後選取 __authentication-service__ 用戶，然後選擇 __屬性__ 從頂端動作列。
+1. 選取 __金鑰存放區__ 標籤。
+1. 建立或開啟金鑰存放區。 如果建立金鑰存放區，請確保密碼安全。
+1. 選擇 __從DER檔案添加私鑰__，並將私密金鑰和連結檔案新增至AEM:
+   + __別名__:提供有意義的名稱，通常是國內流離失所者的名稱。
+   + __私密金鑰檔案__:上傳私密金鑰檔案（DER格式的PKCS#8）。
       + 使用 `openssl` 方法，這是 `aem-private-pkcs8.der` 檔案
-   + __選擇證書鏈檔案__:上載隨附的鏈檔案（這可能是公鑰）。
+   + __選擇證書鏈檔案__:上傳隨附的連結檔案（可能是公開金鑰）。
       + 使用 `openssl` 方法，這是 `aem-public.crt` 檔案
    + 選擇 __提交__
-1. 新添加的證書顯示在 __從CRT檔案添加證書__ 的子菜單。
-   + 記錄 __別名__ 在 [SAML 2.0身份驗證處理程式OSGi配置](#saml-20-authentication-handler-osgi-configuration)
-1. 選擇 __保存並關閉__。
-1. 選擇 __認證服務__ 用戶，然後選擇 __激活__ 按鈕。
+1. 新新增的憑證會顯示在 __從CRT檔案添加證書__ 區段。
+   + 請注意 __別名__ 因為此 [SAML 2.0驗證處理常式OSGi設定](#saml-20-authentication-handler-osgi-configuration)
+1. 選擇 __儲存並關閉__.
+1. 選擇 __authentication-service__ 用戶，然後選擇 __啟動__ 從頂端動作列。
 
-## 配置SAML 2.0身份驗證處理程式{#configure-saml-2-0-authentication-handler}
+## 配置SAML 2.0驗證處理程式{#configure-saml-2-0-authentication-handler}
 
-通AEM過 __Adobe花崗岩SAML 2.0身份驗證處理程式__ OSGi配置。
-該配置是OSGi工廠配置，這意味著單個AEMas a Cloud Service發佈服務可能具有多個覆蓋儲存庫離散資源樹的SAML配置；這對於多站點部署非常AEM有用。
+AEM SAML設定是透過 __AdobeGranite SAML 2.0驗證處理常式__ OSGi配置。
+設定是OSGi工廠設定，這表示單一AEMas a Cloud Service發佈服務可能有多個SAML設定，涵蓋存放庫的個別資源樹狀結構；這對於多網站AEM部署很實用。
 
-+++ SAML 2.0身份驗證處理程式OSGi配置辭彙表
++++ SAML 2.0驗證處理常式OSGi設定字彙表
 
-### Adobe花崗岩SAML 2.0身份驗證處理程式OSGi配置{#configure-saml-2-0-authentication-handler-osgi-configuration}
+### AdobeGranite SAML 2.0驗證處理常式OSGi設定{#configure-saml-2-0-authentication-handler-osgi-configuration}
 
 |  | OSGi屬性 | 必要 | 值格式 | 預設值 | 說明 |
 |-----------------------------------|-------------------------------|:--------:|:---------------------:|---------------------------|-------------|
-| 路徑 | `path` | ✔ | 字串陣列 | `/` | 此驗AEM證處理程式用於的路徑。 |
-| IDP URL | `idpUrl` | ✔ | 字串 |  | 發送SAML驗證請求的IDP URL。 |
-| IDP證書別名 | `idpCertAlias` | ✔ | 字串 |  | 在全局信任儲存中找到的IDP證AEM書的別名 |
-| IDP HTTP重定向 | `idpHttpRedirect` | ✘ | 布林值 | `false` | 指示HTTP是否重定向到IDP URL，而不是發送AuthnRequest。 設定為 `true` IDP啟動的身份驗證。 |
-| IDP標識符 | `idpIdentifier` | ✘ | 字串 |  | 唯一IDP Id可確保AEM用戶和組的唯一性。 如果為空，則 `serviceProviderEntityId` 的雙曲餘切值。 |
-| 斷言使用者服務URL | `assertionConsumerServiceURL` | ✘ | 字串 |  | 的 `AssertionConsumerServiceURL` AuthnRequest中的URL屬性，指定 `<Response>` 必須將消息發送AEM至。 |
-| SP實體ID | `serviceProviderEntityId` | ✔ | 字串 |  | 對國內流離失所AEM者唯一地確定；通常是AEM主機名。 |
-| SP加密 | `useEncryption` | ✘ | 布林值 | `true` | 指示IDP是否加密SAML斷言。 需要 `spPrivateKeyAlias` 和 `keyStorePassword` 來設定。 |
-| SP私鑰別名 | `spPrivateKeyAlias` | ✘ | 字串 |  | 中私鑰的別名 `authentication-service` 用戶密鑰儲存。 如果 `useEncryption` 設定為 `true`。 |
-| SP密鑰儲存密碼 | `keyStorePassword` | ✘ | 字串 |  | 「authentication-service」用戶密鑰儲存的密碼。 如果 `useEncryption` 設定為 `true`。 |
-| 預設重定向 | `defaultRedirectUrl` | ✘ | 字串 | `/` | 成功驗證後的預設重定向URL。 可以是相對於主AEM機(例如， `/content/wknd/us/en/html`)。 |
-| 用戶ID屬性 | `userIDAttribute` | ✘ | 字串 | `uid` | 包含用戶ID的SAML斷言屬性的名AEM稱。 留空以使用 `Subject:NameId`。 |
-| 自動建立用AEM戶 | `createUser` | ✘ | 布林值 | `true` | 指示是否AEM在成功驗證時建立用戶。 |
-| AEM用戶中間路徑 | `userIntermediatePath` | ✘ | 字串 |  | 創AEM建用戶時，此值用作中間路徑(例如， `/home/users/<userIntermediatePath>/jane@wknd.com`)。 需要 `createUser` 設定為 `true`。 |
-| AEM用戶屬性 | `synchronizeAttributes` | ✘ | 字串陣列 |  | 要在用戶上儲存的SAML屬性映AEM射清單，格式為 `[ "saml-attribute-name=path/relative/to/user/node" ]` (例如， `[ "firstName=profile/givenName" ]`)。 查看 [本機屬性的完整列AEM表](#aem-user-attributes)。 |
-| 將用戶添加到AEM組 | `addGroupMemberships` | ✘ | 布林值 | `true` | 指示成功AEM驗證後是否將用戶自AEM動添加到用戶組。 |
-| AEM組成員屬性 | `groupMembershipAttribute` | ✘ | 字串 | `groupMembership` | SAML斷言屬性的名稱，該屬性包含應AEM將用戶添加到的用戶組清單。 需要 `addGroupMemberships` 設定為 `true`。 |
-| 預設AEM組 | `defaultGroups` | ✘ | 字串陣列 |  | 始終向AEM添加經過身份驗證的用戶組清單(例如， `[ "wknd-user" ]`)。 需要 `addGroupMemberships` 設定為 `true`。 |
-| 名稱IDPolicy格式 | `nameIdFormat` | ✘ | 字串 | `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` | 要在AuthnRequest消息中發送的NameIDPolicy格式參數的值。 |
-| 儲存SAML響應 | `storeSAMLResponse` | ✘ | 布林值 | `false` | 指示 `samlResponse` 值儲存在AEM `cq:User` 的下界。 |
-| 處理註銷 | `handleLogout` | ✘ | 布林值 | `false` | 指示此SAML驗證處理程式是否處理註銷請求。 需要 `logoutUrl` 來設定。 |
-| 註銷URL | `logoutUrl` | ✘ | 字串 |  | 將SAML註銷請求發送到的IDP的URL。 如果 `handleLogout` 設定為 `true`。 |
-| 時鐘容差 | `clockTolerance` | ✘ | 整數 | `60` | 驗證AEMSAML斷言時IDP和(SP)時鐘偏差容限。 |
-| 摘要方法 | `digestMethod` | ✘ | 字串 | `http://www.w3.org/2001/04/xmlenc#sha256` | IDP在簽名SAML消息時使用的摘要算法。 |
-| 簽名方法 | `signatureMethod` | ✘ | 字串 | `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` | IDP在簽名SAML消息時使用的簽名算法。 |
-| 標識同步類型 | `identitySyncType` | ✘ | `default` 或 `idp` | `default` | 不更改 `from` 預設AEM為as a Cloud Service。 |
-| 服務排名 | `service.ranking` | ✘ | 整數 | `5002` | 對於相同的配置，更高級別的配置是首選的 `path`。 |
+| 路徑 | `path` | ✔ | 字串陣列 | `/` | AEM路徑此驗證處理常式用於。 |
+| IDP URL | `idpUrl` | ✔ | 字串 |  | 傳送SAML驗證請求的IDP URL。 |
+| IDP憑證別名 | `idpCertAlias` | ✔ | 字串 |  | AEM全域信任存放區中找到的IDP憑證別名 |
+| IDP HTTP重新導向 | `idpHttpRedirect` | ✘ | 布林值 | `false` | 指出是否有HTTP重新導向至IDP URL，而非傳送AuthnRequest。 設為 `true` IDP啟動的驗證。 |
+| IDP識別碼 | `idpIdentifier` | ✘ | 字串 |  | 唯一IDP ID，可確保AEM使用者和群組的獨特性。 如果空白，則 `serviceProviderEntityId` 的值。 |
+| 斷言使用者服務URL | `assertionConsumerServiceURL` | ✘ | 字串 |  | 此 `AssertionConsumerServiceURL` AuthnRequest中的URL屬性，指定 `<Response>` 訊息必須傳送至AEM。 |
+| SP實體ID | `serviceProviderEntityId` | ✔ | 字串 |  | 為IDP唯一識別AEM;通常是AEM主機名稱。 |
+| SP加密 | `useEncryption` | ✘ | 布林值 | `true` | 指出IDP是否加密SAML斷言。 需要 `spPrivateKeyAlias` 和 `keyStorePassword` 設定。 |
+| SP私鑰別名 | `spPrivateKeyAlias` | ✘ | 字串 |  | 中私密金鑰的別名 `authentication-service` 使用者的金鑰存放區。 若 `useEncryption` 設為 `true`. |
+| SP密鑰儲存密碼 | `keyStorePassword` | ✘ | 字串 |  | 「authentication-service」用戶密鑰儲存的密碼。 若 `useEncryption` 設為 `true`. |
+| 預設重新導向 | `defaultRedirectUrl` | ✘ | 字串 | `/` | 成功驗證後的預設重新導向URL。 可相對於AEM主機(例如 `/content/wknd/us/en/html`)。 |
+| 使用者Id屬性 | `userIDAttribute` | ✘ | 字串 | `uid` | 包含AEM使用者使用者ID的SAML斷言屬性名稱。 保留為空以使用 `Subject:NameId`. |
+| 自動建立AEM使用者 | `createUser` | ✘ | 布林值 | `true` | 指出AEM使用者是否在成功驗證時建立。 |
+| AEM使用者中繼路徑 | `userIntermediatePath` | ✘ | 字串 |  | 建立AEM使用者時，此值會作為中間路徑(例如 `/home/users/<userIntermediatePath>/jane@wknd.com`)。 需要 `createUser` 設為 `true`. |
+| AEM使用者屬性 | `synchronizeAttributes` | ✘ | 字串陣列 |  | 要在AEM使用者上儲存的SAML屬性對應清單，格式為 `[ "saml-attribute-name=path/relative/to/user/node" ]` (例如， `[ "firstName=profile/givenName" ]`)。 請參閱 [原生AEM屬性的完整清單](#aem-user-attributes). |
+| 新增使用者至AEM群組 | `addGroupMemberships` | ✘ | 布林值 | `true` | 指出AEM使用者在成功驗證後是否自動新增至AEM使用者群組。 |
+| AEM群組成員資格屬性 | `groupMembershipAttribute` | ✘ | 字串 | `groupMembership` | SAML斷言屬性的名稱，包含應新增使用者的AEM使用者群組清單。 需要 `addGroupMemberships` 設為 `true`. |
+| 預設AEM群組 | `defaultGroups` | ✘ | 字串陣列 |  | 已驗證的使用者一律會新增至AEM使用者群組清單(例如 `[ "wknd-user" ]`)。 需要 `addGroupMemberships` 設為 `true`. |
+| NameIDPolicy格式 | `nameIdFormat` | ✘ | 字串 | `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` | 要在AuthnRequest消息中發送的NameIDPolicy格式參數的值。 |
+| 儲存SAML回應 | `storeSAMLResponse` | ✘ | 布林值 | `false` | 指出 `samlResponse` 值儲存在AEM上 `cq:User` 節點。 |
+| 處理註銷 | `handleLogout` | ✘ | 布林值 | `false` | 指示註銷請求是否由此SAML驗證處理程式處理。 需要 `logoutUrl` 設定。 |
+| 註銷URL | `logoutUrl` | ✘ | 字串 |  | 傳送SAML登出請求的IDP URL。 若 `handleLogout` 設為 `true`. |
+| 時鐘容限 | `clockTolerance` | ✘ | 整數 | `60` | 驗證SAML斷言時，IDP和AEM(SP)時鐘偏差容限。 |
+| 摘要方法 | `digestMethod` | ✘ | 字串 | `http://www.w3.org/2001/04/xmlenc#sha256` | IDP在簽署SAML訊息時使用的摘要演算法。 |
+| 簽名方法 | `signatureMethod` | ✘ | 字串 | `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` | IDP在簽署SAML訊息時使用的簽名演算法。 |
+| 身分同步類型 | `identitySyncType` | ✘ | `default` 或 `idp` | `default` | 請勿變更 `from` 預設為AEMas a Cloud Service。 |
+| 服務排名 | `service.ranking` | ✘ | 整數 | `5002` | 同樣，建議使用更高的排名配置 `path`. |
 
-### AEM用戶屬性{#aem-user-attributes}
+### AEM使用者屬性{#aem-user-attributes}
 
-使AEM用以下用戶屬性，可通過 `synchronizeAttributes` AdobeGranite SAML 2.0身份驗證處理程式OSGi配置中的屬性。  任何IDP屬性都可以與任何用戶屬AEM性同步，但映射到使AEM用屬性屬性（如下所列）則AEM允許自然使用它們。
+AEM使用下列使用者屬性，可透過 `synchronizeAttributes` AdobeGranite SAML 2.0 Authentication Handler OSGi設定中的屬性。  任何IDP屬性皆可同步至任何AEM使用者屬性，但對應至AEM使用屬性（如下所列）可讓AEM自然使用。
 
-| 用戶屬性 | 相對屬性路徑 `rep:User` 節點 |
+| 使用者屬性 | 相對屬性路徑來自 `rep:User` 節點 |
 |--------------------------------|--------------------------|
-| 標題(例如， `Mrs`) | `profile/title` |
-| 給定名稱（即名） | `profile/givenName` |
-| 姓（即姓氏） | `profile/familyName` |
+| 標題(例如 `Mrs`) | `profile/title` |
+| 指定名稱（即名字） | `profile/givenName` |
+| 姓氏（即姓氏） | `profile/familyName` |
 | 職務 | `profile/jobTitle` |
 | 電子郵件地址 | `profile/email` |
 | 街道地址 | `profile/street` |
@@ -258,10 +259,10 @@ AuthnRequest簽名和SAML斷言加密都是可選的，但是，使用 [SAML 2.0
 
 +++
 
-1. 在項目中建立OSGi配置檔案，地址為 `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json` 在IDE中開啟。
-   + 更改 `/wknd-examples/` 到 `/<project name>/`
-   + 位於 `~` 檔案名中應唯一標識此配置，因此它可能是IDP的名稱，如 `...~okta.cfg.json`。 值應為帶連字元的字母數字。
-1. 將以下JSON貼上到 `com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json` 檔案，並更新 `wknd` 根據需要引用。
+1. 在您的專案中建立OSGi設定檔案，網址為 `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json` 在IDE中開啟。
+   + 變更 `/wknd-examples/` 至 `/<project name>/`
+   + 之後的識別碼 `~` 檔案名稱中應唯一識別此設定，因此可能是IDP的名稱，例如 `...~okta.cfg.json`. 值應為英數字元，帶有連字型大小。
+1. 將下列JSON貼入 `com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json` 檔案，並更新 `wknd` 視需要參考。
 
    ```json
    {
@@ -283,19 +284,19 @@ AuthnRequest簽名和SAML斷言加密都是可選的，但是，使用 [SAML 2.0
    }
    ```
 
-1. 根據項目要求更新值。 查看 __SAML 2.0身份驗證處理程式OSGi配置辭彙表__ 上面是配置屬性說明
-1. 建議但不必使用OSGi環境變數和機密，當值可能與發行週期不同步時，或當類似環境類型/服務層之間的值不同時，則應使用OSGi。 可使用 `$[env:..;default=the-default-value]"` 語法如上所示。
+1. 視專案需要更新值。 請參閱 __SAML 2.0驗證處理常式OSGi設定字彙表__ 設定屬性說明的上方
+1. 建議使用OSGi環境變數和機密，當值可能與發行週期不同步，或當類似環境類型/服務層之間的值不同時，則建議使用，但不是必要。 預設值可使用 `$[env:..;default=the-default-value]"` 語法，如上所示。
 
-每個環境的OSGi配置(`config.publish.dev`。 `config.publish.stage`, `config.publish.prod`如果SAML配置在不同環境之間不同，則可以使用特定屬性定義。
+每個環境的OSGi配置(`config.publish.dev`, `config.publish.stage`，和 `config.publish.prod`)，則當SAML組態因環境而異時，可以使用特定屬性來定義。
 
 ### 使用加密
 
-當 [加密AuthnRequest和SAML斷言](#encrypting-the-authnrequest-and-saml-assertion)，需要以下屬性： `useEncryption`。 `spPrivateKeyAlias`, `keyStorePassword`。 的 `keyStorePassword` 包含密碼，因此值不能儲存在OSGi配置檔案中，而是使用 [機密配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)
+當 [加密AuthnRequest和SAML聲明](#encrypting-the-authnrequest-and-saml-assertion)，需要下列屬性： `useEncryption`, `spPrivateKeyAlias`，和 `keyStorePassword`. 此 `keyStorePassword` 包含密碼，因此值不得儲存在OSGi設定檔案中，而是使用 [密碼配置值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)
 
 +++（可選）更新OSGi配置以使用加密
 
 1. 開啟 `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json` 在IDE中。
-1. 添加三個屬性 `useEncryption`。 `spPrivateKeyAlias`, `keyStorePassword` 如下所示。
+1. 新增三個屬性 `useEncryption`, `spPrivateKeyAlias`，和 `keyStorePassword` 如下所示。
 
    ```json
    {
@@ -319,21 +320,21 @@ AuthnRequest簽名和SAML斷言加密都是可選的，但是，使用 [SAML 2.0
    }
    ```
 
-1. 加密所需的三個OSGi配置屬性包括：
+1. 加密所需的三個OSGi配置屬性是：
 
-+ `useEncryption` 設定為 `true`
-+ `spPrivateKeyAlias` 包含SAML整合所使用的私鑰的密鑰庫條目別名。
-+ `keyStorePassword` 包含 [OSGi密碼配置變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values) 包含 `authentication-service` 用戶密鑰庫的口令。
++ `useEncryption` 設為 `true`
++ `spPrivateKeyAlias` 包含SAML整合所使用之私密金鑰的金鑰存放區項目別名。
++ `keyStorePassword` 包含 [OSGi密碼組態變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values) 包含 `authentication-service` 用戶密鑰庫的密碼。
 
 +++
 
-## 配置引用篩選器
+## 設定反向連結篩選
 
-在SAML驗證過程中，IDP將啟動客戶端HTTPPOST到AEM發佈的 `.../saml_login` 終點。 如果IDP和AEM Publish存在於不同的來源，則AEM Publish的 __引用篩選器__ 通過OSGi配置進行配置，以允許來自IDP源的HTTP POST。
+在SAML驗證程式期間，IDP會為AEM Publish的發起用戶端HTTPPOST `.../saml_login` 終點。 如果IDP和AEM Publish位於不同的來源，則AEM Publish的 __反向連結篩選__ 是透過OSGi設定來設定，以允許來自IDP來源的HTTP POST。
 
-1. 在項目中建立（或編輯）OSGi配置檔案 `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/org.apache.sling.security.impl.ReferrerFilter.cfg.json`。
-   + 更改 `/wknd-examples/` 到 `/<project name>/`
-1. 確保 `allow.empty` 值設定為 `true`，也請參見Wiki頁。 `allow.hosts` (或者如果你願意， `allow.hosts.regexp`)包含IDP的來源， `filter.methods` 包括 `POST`。 OSGi配置應類似於：
+1. 在您的專案中建立（或編輯）OSGi設定檔案，位置為 `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/org.apache.sling.security.impl.ReferrerFilter.cfg.json`.
+   + 變更 `/wknd-examples/` 至 `/<project name>/`
+1. 確保 `allow.empty` 值設為 `true`, `allow.hosts` (或者，如果你願意， `allow.hosts.regexp`)包含IDP的來源，以及 `filter.methods` 包括 `POST`. OSGi設定應類似於：
 
    ```json
    {
@@ -349,22 +350,22 @@ AuthnRequest簽名和SAML斷言加密都是可選的，但是，使用 [SAML 2.0
    }
    ```
 
-AEM發佈支援單個引用者篩選器配置，因此將SAML配置要求與任何現有配置合併。
+AEM Publish支援單一反向連結篩選器設定，因此可將SAML設定需求與任何現有設定合併。
 
-每個環境的OSGi配置(`config.publish.dev`。 `config.publish.stage`, `config.publish.prod`)，如果 `allow.hosts` 或 `allow.hosts.regex`)因環境而異。
+每個環境的OSGi配置(`config.publish.dev`, `config.publish.stage`，和 `config.publish.prod`)，則可以使用特定屬性來定義 `allow.hosts` (或 `allow.hosts.regex`)因環境而異。
 
-## 配置跨源資源共用(CORS)
+## 設定跨原始資源共用(CORS)
 
-在SAML驗證過程中，IDP將啟動客戶端HTTPPOST到AEM發佈的 `.../saml_login` 終點。 如果IDP和AEM發佈存在於不同的主機/域上，則AEM發佈的 __CRoss-Origin資源共用(CORS)__ 必須配置為允許IDP的主機/域的HTTP POST。
+在SAML驗證程式期間，IDP會為AEM Publish的發起用戶端HTTPPOST `.../saml_login` 終點。 如果IDP和AEM Publish存在於不同的主機/網域上，則AEM Publish的 __CRoss-Origin資源共用(CORS)__ 必須設定為允許來自IDP主機/網域的HTTP POST。
 
-此HTTPPOST請求 `Origin` 標頭的值通常與AEM發佈主機不同，因此需要CORS配置。
+此HTTPPOST請求的 `Origin` 標題的值通常與AEM發佈主機不同，因此需要CORS設定。
 
-在本地SDK上測試SAML驗AEM證時(`localhost:4503`), IDP可以設定 `Origin` 標題 `null`。 如果是，請添加 `"null"` 到 `alloworigin` 清單框。
+在本機AEM SDK上測試SAML驗證時(`localhost:4503`),IDP可將 `Origin` 標題至 `null`. 如果是，請新增 `"null"` 到 `alloworigin` 清單。
 
-1. 在項目中建立OSGi配置檔案，地址為 `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~saml.cfg.json`
-   + 更改 `/wknd-examples/` 到項目名稱
-   + 位於 `~` 檔案名中應唯一標識此配置，因此它可能是IDP的名稱，如 `...CORSPolicyImpl~okta.cfg.json`。 值應為帶連字元的字母數字。
-1. 將以下JSON貼上到 `com.adobe.granite.cors.impl.CORSPolicyImpl~...cfg.json` 的子菜單。
+1. 在您的專案中建立OSGi設定檔案，網址為 `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~saml.cfg.json`
+   + 變更 `/wknd-examples/` 至專案名稱
+   + 之後的識別碼 `~` 檔案名稱中應唯一識別此設定，因此可能是IDP的名稱，例如 `...CORSPolicyImpl~okta.cfg.json`. 值應為英數字元，帶有連字型大小。
+1. 將下列JSON貼入 `com.adobe.granite.cors.impl.CORSPolicyImpl~...cfg.json` 檔案。
 
 ```json
 {
@@ -381,14 +382,14 @@ AEM發佈支援單個引用者篩選器配置，因此將SAML配置要求與任�
 }
 ```
 
-每個環境的OSGi配置(`config.publish.dev`。 `config.publish.stage`, `config.publish.prod`)，如果 `alloworigin` 和 `allowedpaths` 不同的環境。
+每個環境的OSGi配置(`config.publish.dev`, `config.publish.stage`，和 `config.publish.prod`)，則可以使用特定屬性來定義 `alloworigin` 和 `allowedpaths` 因環境而異。
 
-## 配置AEMDispatcher以允許SAML HTTP POST
+## 設定AEM Dispatcher以允許SAML HTTP POST
 
-成功驗證IDP後，IDP將協調HTTPPOST，返回注AEM冊 `/saml_login` 端點（在IDP中配置）。 此HTTPPOST到 `/saml_login` 在Dispatcher中預設被阻止，因此必須使用以下Dispatcher規則明確允許：
+IDP在成功驗證IDP後，將協調HTTPPOST，返回AEM註冊 `/saml_login` 端點（在IDP中設定）。 此HTTPPOST `/saml_login` 在Dispatcher預設會封鎖，因此必須使用下列Dispatcher規則明確允許：
 
 1. 開啟 `dispatcher/src/conf.dispatcher.d/filters/filters.any` 在IDE中。
-1. 在檔案底部添加HTTP POST到以結尾的URL的允許規則 `/saml_login`。
+1. 新增至檔案底部，此為結尾為的HTTP POST至URL的允許規則 `/saml_login`.
 
 ```
 ...
@@ -397,20 +398,20 @@ AEM發佈支援單個引用者篩選器配置，因此將SAML配置要求與任�
 /0190 { /type "allow" /method "POST" /url "*/saml_login" }
 ```
 
-如果配置了Apache Webserver上的URL重寫(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，確保向 `.../saml_login` 端點不會意外損壞。
+如果已配置Apache Webserver上的URL重寫(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，請確定 `.../saml_login` 端點不會意外損壞。
 
-## 啟用資料同步和封裝令牌
+## 啟用資料同步並封裝Token
 
-一旦SAML驗證流在AEM發佈中建立用戶，則AEM用戶節點可跨AEM發佈服務層進行身份驗證。
-這需要 [資料同步](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization) 和 [封裝的令牌](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#sticky-sessions-and-encapsulated-tokens) 由AEM發佈服務上的Adobe支援啟用。
+一旦SAML驗證流程在AEM Publish中建立使用者，AEM使用者節點就能在AEM Publish服務層級進行驗證。
+這需要 [資料同步](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization) 和 [封裝的Token](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#sticky-sessions-and-encapsulated-tokens) Adobe支援啟用。
 
-向Adobe客戶支援發送請求(通過 [管理控制台](https://adminconsole.adobe.com) >支援)請求：
+傳送要求給Adobe客戶支援(透過 [AdminConsole](https://adminconsole.adobe.com) >支援)請求：
 
-> 資料同步和封裝的令牌在程式X和環境Y的AEM發佈服務上啟用。
+> 針對Program X和環境Y，在AEM Publish服務上啟用資料同步和封裝的Token。
 
-## 部署SAML配置
+## 部署SAML設定
 
-OSGi配置必須提交到Git，並且必須使用雲管理AEM器部署到as a Cloud Service。
+OSGi設定必須提交至Git，並使用Cloud Manager部署至AEMas a Cloud Service。
 
 ```
 $ git remote -v            
@@ -421,4 +422,4 @@ $ git commit -m "SAML 2.0 configurations"
 $ git push adobe saml-auth:develop
 ```
 
-部署目標Cloud Manager Git分支(在本示例中， `develop`)，使用完整堆棧部署管道。
+部署目標Cloud Manager Git分支(在此範例中， `develop`)，使用完整堆棧部署管道。

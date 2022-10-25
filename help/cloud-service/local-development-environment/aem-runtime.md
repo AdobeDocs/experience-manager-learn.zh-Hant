@@ -8,8 +8,9 @@ thumbnail: 32551.jpg
 topic: Development
 role: Developer
 level: Beginner
+last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '1800'
 ht-degree: 2%
@@ -22,7 +23,7 @@ ht-degree: 2%
 >id="aemcloud_localdev_aemruntime"
 >title="本機AEM執行階段"
 >abstract="Adobe Experience Manager(AEM)可透過AEMas a Cloud Service SDK的Quickstart Jar在本機執行。 這可讓開發人員在將自訂程式碼、設定和內容提交至原始碼控制項之前，先進行部署和測試，然後將其部署至AEMas a Cloud Service環境。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEMas a Cloud ServiceSDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載AEMas a Cloud ServiceSDK"
 
 Adobe Experience Manager(AEM)可透過AEMas a Cloud Service SDK的Quickstart Jar在本機執行。 這可讓開發人員在將自訂程式碼、設定和內容提交至原始碼控制項之前，先進行部署和測試，然後將其部署至AEMas a Cloud Service環境。
@@ -119,7 +120,7 @@ $ java -jar aem-publish-p4503.jar
 
 ## 在發行前模式中設定本機AEM服務
 
-本機AEM執行階段可在 [預發行模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html) 可讓開發人員根據AEM as a Cloud Service的下一版功能進行建置。 若要啟用發行前版本，請將 `-r prerelease` 本機AEM執行階段首次開始的引數。 這可與本機AEM製作和AEM發佈服務搭配使用。
+本機AEM執行階段可在 [預發行模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=zh-Hant) 可讓開發人員根據AEM as a Cloud Service的下一版功能進行建置。 若要啟用發行前版本，請將 `-r prerelease` 本機AEM執行階段首次開始的引數。 這可與本機AEM製作和AEM發佈服務搭配使用。
 
 ```shell
 # For AEM Author service in prerelease mode
