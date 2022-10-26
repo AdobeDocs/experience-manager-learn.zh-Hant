@@ -9,7 +9,7 @@ level: Beginner
 last-substantial-update: 2022-10-20T00:00:00Z
 kt: 11336
 thumbnail: kt-11336.jpeg
-source-git-commit: d1e105a4083b34e7a3f220a59d4608ef39d39032
+source-git-commit: aeeed85ec05de9538b78edee67db4d632cffaaab
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 0%
@@ -42,7 +42,7 @@ AEM Publish服務會在CDN和AEM Dispatcher快取中，盡可能快取請求，�
 1. 如果無法從CDN或AEM Dispatcher快取提供網頁，請求便會送達AEM Publish服務，而AEM Publish服務會產生請求的網頁。
 1. 然後網頁會傳回至網頁瀏覽器，填入無法提供請求的快取。 若使用AEM,CDN和AEM Dispatcher快取點擊率將會高於90%。
 1. 網頁包含JavaScript，可對AEM Publish服務中的自訂FPID servlet發出不可執行的非同步XHR(AJAX)要求。 由於這是無法執行的請求（因為是隨機查詢參數和快取控制標題），因此CDN或AEM Dispatcher不會快取請求，且一律會到達AEM Publish服務以產生回應。
-1. AEM Publish服務中的自訂FPID servlet會處理請求、在找不到現有FPID Cookie時產生新的FPID，或延長任何現有FPID Cookie的使用時間。 Servlet也會傳回回應內文中的FPID，供用戶端JavaScript使用。 幸運的是，自訂FPID servlet邏輯輕量型，可防止此要求影響AEM Publish服務效能。
+1. AEM Publish服務中的自訂FPID servlet會處理請求、在找不到現有FPID Cookie時產生新的FPID，或延長任何現有FPID Cookie的使用期限。 Servlet也會傳回回應內文中的FPID，供用戶端JavaScript使用。 幸運的是，自訂FPID servlet邏輯輕量型，可防止此要求影響AEM Publish服務效能。
 1. XHR要求的回應會在回應內文中，傳回具有FPID Cookie和FPID作為JSON的瀏覽器，供Platform Web SDK使用。
 
 ## 程式碼範例
@@ -62,7 +62,9 @@ AEM Publish服務會在CDN和AEM Dispatcher快取中，盡可能快取請求，�
 + 如果FPID Cookie不存在，請產生新的FPID Cookie，並儲存要寫入回應的值。
 
 然後，Servlet會將FPID以JSON物件的形式寫入回應： `{ fpid: "<FPID VALUE>" }`.
-請務必在內文中提供FPID給用戶端，因為FPID Cookie已標籤 `HttpOnly`，表示只有伺服器可讀取其值，而用戶端JavaScript則無法讀取。
+
+請務必在內文中為用戶端提供FPID，因為已標籤FPID Cookie `HttpOnly`，表示只有伺服器可讀取其值，而用戶端JavaScript則無法讀取。
+
 回應內文的FPID值可用來使用Platform Web SDK參數化呼叫。
 
 以下是AEM servlet端點的范常式式碼(可透過 `HTTP GET /bin/aep/fpid`)產生或重新整理FPID Cookie，並將FPID傳回為JSON。
