@@ -6,9 +6,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
-source-git-commit: 332ad831b6c49e8599aa2181caf978d5626c1aba
+source-git-commit: 129dedd4cd6973d5d576bed5f714ce62152923de
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '268'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ AEM GraphQL內容片段API支援無周邊CMS情境，讓外部用戶端應用程
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_overview"
->title="開始使用AEM Headless"
+>title="AEM無周邊功能快速入門 — GraphQL"
 >abstract="了解如何使用GraphQL傳送內容片段。"
 >additional-url="https://video.tv.adobe.com/v/328618" text="AEM中的GraphQL概觀"
 
