@@ -1,15 +1,12 @@
 ---
 user-guide-title: AEM Dispatcher Cache 教學課程
 user-guide-description: 此教學課程可協助您更了解 Dispatcher 的運作方式，以及您如何使用。
+sub-product: Experience Manager
 version: 6.4, 6.5
-sub-product: foundation
-doc-type: tutorial
-audience: architect, developer, implementer
-activity: develop, understand
 kt: 2233
 index: y
 team: TM
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 75%

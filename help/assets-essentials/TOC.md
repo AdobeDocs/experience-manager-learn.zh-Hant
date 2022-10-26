@@ -1,23 +1,25 @@
 ---
-user-guide-title: AEM Assets軟體視頻
-user-guide-description: Adobe Experience Manager Assets Essentials的視頻集。
-breadcrumb-title: AEM Assets軟體視頻
+user-guide-title: AEM Assets Essentials影片
+user-guide-description: Adobe Experience Manager Assets Essentials的影片集合。
+breadcrumb-title: AEM Assets Essentials影片
+sub-product: Experience Manager Assets
+version: Cloud Service
 feature-set: Experience Manager Assets
 team: TM
-source-git-commit: a5d3a5b06bb3228c4409c6f39a4376561a84ead3
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '73'
+ht-degree: 21%
 
 ---
 
 
-# AEM Assets軟體視頻 {#assets-essentials}
+# AEM Assets Essentials影片 {#assets-essentials}
 
-+ [概覽](overview.md)
++ [總覽](overview.md)
 
-+ [設定](./provisioning.md)
-+ [入門](./getting-started.md)
++ [佈建](./provisioning.md)
++ [快速入門](./getting-started.md)
 
 + 基本資訊{#basics}
    + [管理](basics/managing.md)
@@ -34,10 +36,10 @@ ht-degree: 0%
 
 + Adobe Workfront整合{#workfront}
    + [設定](./integrations/workfront/configure.md)
-   + [映射元資料](./integrations/workfront/map-metadata.md)
-   + [發送文檔和連結資產](./integrations/workfront/link-send.md)
-   + [版本歷史記錄](./integrations/workfront/versions.md)
+   + [對應中繼資料](./integrations/workfront/map-metadata.md)
+   + [傳送檔案和連結資產](./integrations/workfront/link-send.md)
+   + [版本記錄](./integrations/workfront/versions.md)
 
-+ [Adobe Journey Optimizer整合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=zh-Hant)
++ [Adobe Journey Optimizer整合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html)
 
 + [文件](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html)

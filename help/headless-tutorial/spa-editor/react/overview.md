@@ -1,7 +1,6 @@
 ---
 title: AEM SPA Editor and React 快速入門
 description: 建立您的第一個 React 單頁應用程式 (SPA)，該應用程式可在 Adobe Experience Manager (AEM) 中使用 WKND SPA 進行編輯。了解如何使用 React JS 框架和 AEM 的 SPA 編輯器建立 SPA。此多部分教學課程會逐步引導您為虛擬生活風格品牌 WKND 實作 React 應用程式。教學課程涵蓋 SPA 端對端建立和 AEM 整合作業。
-sub-product: sites
 topics: development
 version: Cloud Service
 doc-type: tutorial
@@ -14,7 +13,8 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+last-substantial-update: 2022-08-25T00:00:00Z
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 74%

@@ -1,7 +1,6 @@
 ---
 title: 建立自訂天氣元件 |開始使用AEM SPA Editor and React
 description: 了解如何建立要與AEM SPA編輯器搭配使用的自訂天氣元件。 了解如何開發製作對話方塊和Sling模型，以擴充JSON模型以填入自訂元件。 使用開放天氣API和反應開放天氣元件。
-sub-product: sites
 feature: SPA Editor
 doc-type: tutorial
 topics: development
@@ -12,7 +11,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 1%

@@ -1,7 +1,6 @@
 ---
 title: 為標準AEM專案原型啟用前端管道
 description: 了解如何為標準AEM專案啟用前端管道，以更快部署靜態資源，例如CSS、JavaScript、字型、圖示。 同時將前端開發與AEM上的全堆疊後端開發分開。
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -12,7 +11,9 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: disable
-source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
+thumbnail: 53409343.jpg
+last-substantial-update: 2022-09-23T00:00:00Z
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 1%

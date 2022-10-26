@@ -1,7 +1,6 @@
 ---
 title: 添加導航和路由 |開始使用AEM SPA編輯器和Angular
 description: 了解如何使用AEM頁面和SPA Editor SDK支援SPA中的多個檢視。 動態導覽是使用Angular路由實作，並新增至現有的Header元件。
-sub-product: sites
 feature: SPA Editor
 topics: development
 doc-type: tutorial
@@ -14,7 +13,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '2712'
 ht-degree: 0%
@@ -702,7 +701,7 @@ ht-degree: 0%
 
    >[!CAUTION]
    >
-   > angular專案已啟用一些非常嚴格的連結規則。 如果Maven組建失敗，請檢查錯誤並尋找 **在列出的檔案中找到Lint錯誤。**. 修正Linter發現的任何問題，並重新執行Maven命令。
+   > angular專案已啟用一些非常嚴格的連結規則。 如果Maven組建失敗，請檢查錯誤並尋找 **在列出的檔案中找到Lint錯誤。**。修正Linter發現的任何問題，並重新執行Maven命令。
 
 2. 導覽至AEM中的SPA首頁： [http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html) 並開啟瀏覽器的開發人員工具。 以下螢幕擷取畫面是從Google Chrome瀏覽器擷取。
 

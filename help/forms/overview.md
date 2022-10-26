@@ -1,11 +1,10 @@
 ---
 title: AEM Forms教學課程和影片
 description: 瀏覽我們的AEM Forms影片和教學課程，並提供資源和檔案來回答您的問題。
-sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%

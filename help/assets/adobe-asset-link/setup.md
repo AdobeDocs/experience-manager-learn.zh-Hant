@@ -1,14 +1,15 @@
 ---
 title: Adobe資產連結設定
 description: 了解如何免費設定Adobe資產連結，將您的Creative Cloud應用程式(包括Photoshop、Illustrator、InDesign和XD)連接至Adobe Experience Manager Assets。
-sub-product: assets
 feature: Adobe Asset Link
 version: Cloud Service
 topic: Content Management
 role: Admin, User
 level: Beginner
+kt: 9401
 thumbnail: 338824.jpg
-source-git-commit: a5c128d92f4a4625279b6ef76c61f1afb6ed45d5
+exl-id: a62e936f-c231-474d-9671-58815b2cb652
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%

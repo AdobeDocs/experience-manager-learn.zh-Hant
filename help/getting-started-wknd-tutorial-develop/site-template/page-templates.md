@@ -1,7 +1,6 @@
 ---
 title: 頁面範本
 description: 了解如何建立和修改頁面範本。 了解頁面範本和頁面之間的關係。 了解如何設定頁面範本的原則，以提供精細的控管和內容的品牌一致性。  系統會根據Adobe XD的模型建立結構良好的「雜誌文章」範本。
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -11,7 +10,7 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%

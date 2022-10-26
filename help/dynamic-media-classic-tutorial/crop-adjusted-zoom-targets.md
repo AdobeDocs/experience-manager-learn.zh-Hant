@@ -1,22 +1,21 @@
 ---
 title: 裁切、調整影像和縮放目標
-description: Dynamic Media Classic的主影像支援為每個影像建立個別的裁切版本，以顯示詳細資訊或色票，而無須為每個影像建立個別的裁切版本。 了解如何在Dynamic Media Classic中裁切影像，並儲存為新的主檔案或虛擬影像、儲存虛擬調整後的影像，以取代主資產，以及在影像上建立縮放目標，以顯示反白顯示的詳細資料。
-sub-product: dynamic-media
+description: Dynamic Media Classic的主影像支援為每個影像建立個別的裁切版本，以顯示詳細資訊或色票，而無須為每個影像建立個別的裁切版本。 了解如何在Dynamic Media Classic中裁切影像，並儲存為新主檔案或虛擬影像、儲存虛擬調整後的影像，以取代主資產，以及在影像上建立縮放目標，以顯示反白顯示的詳細資料。
 feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: 內容管理
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: a1d83c77-a9e4-4ed1-9b00-65fb002164c0
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
-source-wordcount: '2659'
+source-wordcount: '2653'
 ht-degree: 0%
 
 ---
-
 
 # 裁切、調整影像和縮放目標 {#crop-adjusted-zoom-targets}
 
@@ -30,7 +29,7 @@ Dynamic Media Classic主影像概念的主要優點之一，是您可以針對�
 
 ## 裁切
 
-Dynamic Media Classic在UI中提供一些影像編輯工具（包括裁切工具），非常方便。 您可能想要在Dynamic Media Classic中裁切主影像，原因有很多。 例如：
+Dynamic Media Classic在UI中提供一些影像編輯工具，包括裁切工具。 您可能因為多種原因想在Dynamic Media Classic內裁切主影像。 例如：
 
 - 您無法存取原始檔案。 您想要以不同的裁切或外觀比例來顯示影像，但電腦上沒有原始檔案，或正在家中工作。 在此情況下，您可以前往Dynamic Media Classic、尋找影像、裁切影像並儲存，或儲存為新版本。
 - 移除多餘的空白。 照片中的白色空間太大，這讓產品看起來很小。 您希望縮圖影像盡可能填滿畫布。
@@ -43,16 +42,16 @@ Dynamic Media Classic在UI中提供一些影像編輯工具（包括裁切工具
 
 ### 使用裁切工具
 
-您可以從資產的「詳細資訊」頁面，或按一下&#x200B;**Edit**&#x200B;按鈕，存取Dynamic Media Classic中的裁切工具。 您可以透過兩種方式使用工具來裁切：
+您可以從資產的「詳細資料」頁面，或按一下 **編輯** 按鈕。 您可以透過兩種方式使用工具來裁切：
 
-- 拖動裁切窗口的手柄或在「大小」(Size)框中鍵入值的預設裁切模式。 了解如何[手動裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop)。
-- 修剪。 透過計算不符合影像的像素數，以移除影像周圍的額外空白字元。 了解如何透過修剪](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image)裁切[。
+- 拖動裁切窗口的手柄或在「大小」(Size)框中鍵入值的預設裁切模式。 了解如何 [手動裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop).
+- 修剪。 透過計算不符合影像的像素數，以移除影像周圍的額外空白字元。 了解如何 [裁切方法](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
 
 ### _手動裁切_
 
 儲存手動裁切的版本時，影像似乎會永久裁切；Dynamic Media Classic實際上是透過新增內部URL修飾元來裁切影像來隱藏像素。 當您發佈時，每個人都會看到影像已裁切，不過您可以返回裁切編輯器，並在稍後點移除裁切。
 
-然後，您可以選擇另存為新主映像還是另存為主映像的附加視圖。 新主檔案是新的物理檔案（如TIFF或JPEG），佔用儲存空間。 另一個視圖是不佔用伺服器空間的虛擬映像。 我們不建議您選擇「取代原稿」，因為這會覆寫您的主稿，並將裁切設為永久性。 如果您儲存為新主版或其他檢視，則必須選擇新的資產ID。 如同其他資產ID，這在Dynamic Media Classic中必須是唯一的名稱。
+然後，您可以選擇另存為新主映像還是另存為主映像的附加視圖。 新主檔案是佔用儲存空間的新物理檔案(如TIFF或JPEG)。 另一個視圖是不佔用伺服器空間的虛擬映像。 我們不建議您選擇「取代原稿」，因為這會覆寫您的主稿，並將裁切設為永久性。 如果您儲存為新主版或其他檢視，則必須選擇新的資產ID。 如同其他資產ID，這在Dynamic Media Classic中必須是唯一的名稱。
 
 ### _修剪裁切_
 
@@ -66,19 +65,19 @@ Dynamic Media Classic在UI中提供一些影像編輯工具（包括裁切工具
 
 >[!NOTE]
 >
->修剪不會在影像周圍建立透明度。 為此，您需要在影像上嵌入剪裁路徑，並使用&#x200B;**「從剪輯路徑建立遮罩」**&#x200B;上傳選項。
+>修剪不會在影像周圍建立透明度。 為此，您需要在影像上嵌入剪裁路徑，並使用 **從剪輯路徑建立蒙版** 上傳選項。
 >
->此外，要在使用&#x200B;**Save**&#x200B;選項後將影像還原為原始狀態，請在「裁切編輯器」螢幕中顯示影像，並選擇&#x200B;**Reset**&#x200B;按鈕。
+>此外，若要在您使用 **儲存** 選項，在「裁切編輯器」螢幕中顯示影像並選擇 **重設** 按鈕。
 
 ### _上傳時裁切_
 
-如前所述，您也可以在上傳影像時選擇裁切影像。 要在上載時使用修剪裁切，請按一下&#x200B;**作業選項**&#x200B;按鈕，然後在「裁剪選項」下，選擇&#x200B;**修剪**。
+如前所述，您也可以在上傳影像時選擇裁切影像。 若要在上傳時使用修剪裁切，請按一下 **作業選項** 按鈕，然後在「裁切選項」下，選擇 **修剪**.
 
 Dynamic Media Classic會記住此選項，以供下次上傳。 雖然您可能希望它裁切此上傳的影像，但您可能不希望在每次上傳時都裁切這些影像。 另一個選項是設定特殊的排程FTP上傳工作，並將裁切選項放在該處。 這樣，只有在需要裁切影像時，才會執行工作。
 
 >[!IMPORTANT]
 >
->如果您為上傳設定裁切，Dynamic Media Classic會放置Cookie，以便下次記住該設定。 在下次上傳前，請按一下&#x200B;**重設為公司預設值**&#x200B;按鈕，以清除上次上傳遺留的任何裁切選項；否則，您可能會意外裁切下一批影像。
+>如果您為上傳設定裁切，Dynamic Media Classic會放置Cookie來記住下次該設定。 根據最佳實務，請按一下 **重置為公司預設值** 按鈕，以清除上次上傳遺留的任何裁切選項；否則，您可能會意外裁切下一批影像。
 
 ### 依URL裁切
 
@@ -86,8 +85,8 @@ Dynamic Media Classic會記住此選項，以供下次上傳。 雖然您可能�
 
 每當您使用裁切工具時，都會在底部的欄位中看到URL值。 您可以取用這些值，並直接將它們套用至影像，作為URL修飾元。
 
-![](assets/crop-adjusted-zoom-targets/cropping-by-url.png)
-_裁切編輯器底部的imageCrop命令修飾元_
+![影像](assets/crop-adjusted-zoom-targets/cropping-by-url.png)
+_裁切編輯器底部的裁切命令修飾元_
 
 ![影像](assets/crop-adjusted-zoom-targets/uncropped-cropped.png)
 
@@ -97,22 +96,22 @@ _裁切編輯器底部的imageCrop命令修飾元_
 
 「影像預設集」有一個欄位，您可以在其中新增額外的「影像伺服」命令。 若要將上述的相同裁切功能新增至您的影像預設集，請編輯預設集並貼上或在「URL修飾元」欄位中輸入值，然後儲存並發佈。
 
-![](assets/crop-adjusted-zoom-targets/cropping-in-image-preset.jpg)
-_imageAdd crop命令（或任何命令）至影像預設集的URL修飾元。_
+![影像](assets/crop-adjusted-zoom-targets/cropping-in-image-preset.jpg)
+_將裁切命令（或任何命令）新增至影像預設集的URL修飾元。_
 
 裁切現在會是該影像預設集的一部分，且每次使用時都會自動套用。 當然，這種方法取決於需要相同裁切量的所有影像。 如果您的影像並非都以相同方式拍攝，則此方法不適用。
 
 ## 調整後的影像
 
-使用「裁切」工具時，您可以選擇&#x200B;**另存為主版的「其他視圖」**。 儲存後，會建立新類型的Dynamic Media Classic資產 — 調整後的影像。 調整後的影像（又稱為導數）是虛擬影像。 這其實根本不是一幅畫；它是指向物理主映像的資料庫引用（如別名或快捷方式）。
+使用裁切工具時，您可以選擇 **另存為主視圖的其他視圖**. 儲存後，會建立新類型的Dynamic Media Classic資產 — 調整後的影像。 調整後的影像（又稱為導數）是虛擬影像。 這其實根本不是一幅畫；它是指向物理主映像的資料庫引用（如別名或快捷方式）。
 
-### 真的影像能站起來嗎`?`
+### 真實的影像，請站起來`?`
 
 您能判斷哪個是主版，哪個是調整後的影像嗎？
 
 ![影像](assets/crop-adjusted-zoom-targets/real-image-stand-up.png)
 
-查看Dynamic Media Classic並查看SBR_MAIN2的「調整後影像」資產類型時，您應該無從得知。
+在查看Dynamic Media Classic並查看SBR_MAIN2的「調整後影像」資產類型之前，您應該無從得知。
 
 調整後的映像不使用磁碟空間，因為它只作為行項存在於資料庫中。 它還與原始資產永久相連；如果刪除原始影像，也會刪除調整後的影像。 它可能包含整個未裁切的影像，或只是影像的一部分（裁切）。
 
@@ -120,14 +119,14 @@ _imageAdd crop命令（或任何命令）至影像預設集的URL修飾元。_
 
 您通常會使用裁切工具建立調整後的影像；但也可以使用其他影像編輯器（「調整」和「銳利化」工具）來建立它們。
 
-調整後的影像需要唯一的資產ID。 發佈時（您必須像發佈任何其他資產一樣發佈），它們會如同任何其他影像，並會透過其資產ID在URL上呼叫。 在「詳細資訊」頁面上，您可以在&#x200B;**Build &amp; Deviratives**&#x200B;標籤下查看與主影像關聯的已調整影像。
+調整後的影像需要唯一的資產ID。 發佈時（您必須像發佈任何其他資產一樣發佈），它們會如同任何其他影像，並會透過其資產ID在URL上呼叫。 在「詳細資訊」頁面上，您可以在 **建置和衍生工具** 標籤。
 
-![](assets/crop-adjusted-zoom-targets/derivatives.jpg)
-_主影像ASIAN_BR_MAIN的imageAdjusted視圖_
+![影像](assets/crop-adjusted-zoom-targets/derivatives.jpg)
+_主映像ASIAN_BR_MAIN的調整視圖_
 
 ## 縮放目標
 
-在影像的&#x200B;**Edit**&#x200B;功能表和&#x200B;**Details**&#x200B;頁面上也可找到縮放目標。 它們可讓您設定「熱點」，突顯縮放影像的特定銷售功能。 縮放檢視器不會借由裁切大型主版來建立個別影像，而是可在影像上方提供詳細資訊，以及您建立的短標籤。
+也可在 **編輯** 菜單和 **詳細資料** 頁面。 它們可讓您設定「熱點」，突顯縮放影像的特定銷售功能。 縮放檢視器不會借由裁切大型主版來建立個別影像，而是可在影像上方提供詳細資訊，以及您建立的短標籤。
 
 ![影像](assets/crop-adjusted-zoom-targets/arm-with-watch.jpg)
 
@@ -137,7 +136,7 @@ _主影像ASIAN_BR_MAIN的imageAdjusted視圖_
 
 決定是否要使用縮放目標的另一個因素，是您選擇的檢視器。 並非所有檢視器類型都可顯示縮放目標（例如，「彈出」檢視器不支援這些類型）。
 
-了解如何[建立縮放目標](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets)。
+了解如何 [建立縮放目標](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets).
 
 ![影像](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 
@@ -145,25 +144,25 @@ _主影像ASIAN_BR_MAIN的imageAdjusted視圖_
 
 以下是在Dynamic Media Classic中建立目標的工作流程。
 
-1. 瀏覽到影像，按一下&#x200B;**Edit**&#x200B;按鈕，然後選擇&#x200B;**Zoom Targets**。
+1. 瀏覽至影像，按一下 **編輯** 按鈕，然後選擇 **縮放目標**.
 2. 將載入縮放目標編輯器。 您會在中間看到您的影像、頂端的一些按鈕，以及右側的空白目標面板。 在左下方，您會看到已選取的檢視器預設集。 預設值為「Zoom1-Guided」。
 3. 用滑鼠移動紅色框，然後按一下以建立新目標。
 
    - 紅框是目標區域。 當使用者點按該目標時，它會放大到方塊內的區域。
-   - 目標大小由檢視器預設集內的檢視大小決定。 這會決定主縮放影像的大小。 請參閱下方的&#x200B;_設定檢視大小_。
+   - 目標大小由檢視器預設集內的檢視大小決定。 這會決定主縮放影像的大小。 請參閱 _設定檢視大小_，下方。
 
 4. 您會看到您剛建立的目標會變成藍色，在右側會看到該目標的縮圖版本，以及預設名稱&quot;target-0&quot;。
-5. 要更名目標，請按一下其縮略圖，鍵入新的&#x200B;**名稱**，然後按一下&#x200B;**Enter**&#x200B;或&#x200B;**Tab** — 如果按一下離開，則不會保存您的名稱。
+5. 若要重新命名目標，請按一下其縮圖，輸入新 **名稱**，然後按一下 **輸入** 或 **標籤**  — 如果按一下「離開」，則不會保存您的名稱。
 6. 選取目標時，框周圍會有綠色虛線，您可以調整其大小並移動它。 拖動角來調整大小，或拖動目標框來移動。
 
    - 這會在預設的自訂縮放檢視器內載入影像。 確認檢視器預設集支援縮放目標 — 一般而言，所有具有「 — Guided」字詞的標準預設集都是為搭配縮放目標而設計。 若要使用目標，請將滑鼠移到目標縮圖（或熱點圖示）上以查看標籤，然後按一下以查看檢視器放大到該功能。
-   - 如同您在Dynamic Media Classic中執行的所有其他工作，您必須發佈，讓縮放目標在網路上上線。 如果您已使用支援目標的檢視器，則會立即顯示（快取清除後）。 不過，如果您沒有使用啟用縮放目標的檢視器，這些檢視器將保持隱藏狀態。
+   - 就像您在Dynamic Media Classic中執行的所有其他工作一樣，您必須發佈，讓縮放目標在網路上上線。 如果您已使用支援目標的檢視器，則會立即顯示（快取清除後）。 不過，如果您沒有使用啟用縮放目標的檢視器，這些檢視器將保持隱藏狀態。
 
       ![影像](assets/crop-adjusted-zoom-targets/zoom-target-green-box.jpg)
 
-7. 此外，如果需要刪除目標，請按一下其縮圖來選擇它，然後按&#x200B;**刪除目標**&#x200B;按鈕或按鍵盤上的DELETE鍵。
+7. 此外，如果需要移除目標，請按一下其縮圖以選取目標，然後按 **刪除Target** 按鈕或按鍵盤上的DELETE鍵。
 8. 繼續按一下，新增新目標、重新命名和/或重新調整大小。
-9. 完成後，按一下&#x200B;**Save**&#x200B;按鈕，然後按一下&#x200B;**Preview**。
+9. 完成後，按一下 **儲存** 按鈕，然後 **預覽**.
 
 ### 在縮放檢視器預設集中設定檢視大小
 
@@ -183,7 +182,7 @@ _主影像ASIAN_BR_MAIN的imageAdjusted視圖_
 
 若要設定檢視大小，請建立或編輯支援縮放目標的檢視器預設集。
 
-1. 在「檢視器預設集」中，前往「**縮放設定**」選項。
+1. 在「檢視器預設集」中，前往 **縮放設定** 選項。
 2. 設定寬度和高度。
 3. 儲存預設集，然後關閉。 如果您想在即時網站上使用該預設集，之後也必須發佈。
 4. 進入「縮放目標」工具，在左下方選擇您編輯的預設集。 您會立即看到新的檢視大小反映在您的目標中。

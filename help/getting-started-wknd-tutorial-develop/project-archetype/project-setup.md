@@ -1,7 +1,6 @@
 ---
 title: 開始使用AEM Sites — 專案設定
 description: 建立Maven多模組專案以管理Experience Manager網站的程式碼和設定。
-sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
 feature: AEM Project Archetype
@@ -12,7 +11,7 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1838'
 ht-degree: 3%

@@ -1,10 +1,9 @@
 ---
 title: 在AEM中設定體驗片段和Adobe Target整合
-seo-title: 在AEM中設定體驗片段和Adobe Target整合
-description: Adobe Experience Manager 6.4會重新調整AEM和Target之間的個人化工作流程。 現在，在AEM中建立的體驗可以以HTML選件的形式直接傳遞至Adobe Target。 它可讓行銷人員在不同管道間順暢地測試及個人化內容。
-seo-description: Adobe Experience Manager 6.4會重新調整AEM和Target之間的個人化工作流程。 現在，在AEM中建立的體驗可以以HTML選件的形式直接傳遞至Adobe Target。 它可讓行銷人員在不同管道間順暢地測試及個人化內容。
-sub-product: content-services
-feature: 體驗片段
+seo-title: Set Up Experience Fragments and Adobe Target Integration in AEM
+description: Adobe Experience Manager 6.4會重新調整AEM和Target之間的個人化工作流程。 現在，在AEM中建立的體驗可以直接以HTML選件的形式傳送至Adobe Target。 它可讓行銷人員在不同管道間順暢地測試及個人化內容。
+seo-description: Adobe Experience Manager 6.4 reimagines the personalization workflow between AEM and Target. Experiences created within AEM can now be delivered directly to Adobe Target as HTML Offers. It allows Marketers to seamlessly test and personalize content across different channels.
+feature: Experience Fragments
 topics: integrations
 audience: administrator, developer
 doc-type: technical video
@@ -12,20 +11,20 @@ activity: setup
 version: 6.4, 6.5
 uuid: 05fd477d-0c1a-42c0-ab92-2bca86602e2e
 discoiquuid: 16cb0b92-9398-4fd2-b8c3-f4b7675ef72c
-topic: 個性化
+topic: Personalization
 role: Admin, Developer
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 9c139a36-e3c5-407e-af5d-b4fb8860f5a2
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '220'
 ht-degree: 2%
 
 ---
 
-
 # 設定體驗片段及Adobe Target整合{#set-up-experience-fragments-and-adobe-target-integration}
 
-Adobe Experience Manager 6.4會重新調整AEM和Target之間的個人化工作流程。 現在，在AEM中建立的體驗可以以HTML選件的形式直接傳遞至Adobe Target。 它可讓行銷人員在不同管道間順暢地測試及個人化內容。
+Adobe Experience Manager 6.4會重新調整AEM和Target之間的個人化工作流程。 現在，在AEM中建立的體驗可以直接以HTML選件的形式傳送至Adobe Target。 它可讓行銷人員在不同管道間順暢地測試及個人化內容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22380/?quality=9&learn=on)
 

@@ -1,7 +1,6 @@
 ---
 title: 基本範本簡介
 description: 了解Dynamic Media Classic中的基本範本，這是從影像伺服器呼叫的影像型範本，由影像和轉譯的文字組成。 範本發佈後，可透過URL動態變更範本。 您將學習如何將PhotoshopPSD上傳至Dynamic Media Classic，以作為範本的基礎。 建立由影像層組成的簡單銷售基本範本。 新增文字層，並透過使用參數使其變數。 建立範本URL並透過網頁瀏覽器動態操控影像。
-sub-product: dynamic-media
 feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
@@ -11,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: d4e16b45-0095-44b4-8c16-89adc15e0cf9
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '6260'
 ht-degree: 0%

@@ -1,7 +1,6 @@
 ---
 title: AEM SPA Editor and Angular 快速入門
 description: 建立可在 Adobe Experience Manager (AEM) 中使用 WKND SPA 編輯的第一個 Angular Single Page Application (SPA)。
-sub-product: sites
 topics: development
 version: Cloud Service
 doc-type: tutorial
@@ -14,10 +13,10 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '645'
-ht-degree: 87%
+ht-degree: 88%
 
 ---
 
@@ -35,7 +34,7 @@ ht-degree: 87%
 
 此教學課程在設計上將使用 **AEM as a Cloud Service**，並向下相容於 **AEM 6.5.4+** 和 **AEM 6.4.8+**。使用以下項目實作 SPA：
 
-* [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
 * [AEM SPA Editor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Angular](https://angular.io/)
@@ -59,7 +58,7 @@ ht-degree: 87%
 * [Apache Maven](https://maven.apache.org/) (3.3.9 或更新版本)
 * [Node.js](https://nodejs.org/en/) 和 [npm](https://www.npmjs.com/)
 
-*雖然不一定需要，但對於[開發傳統的 AEM Sites 元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)有基本的了解也會有幫助。*
+*雖然不一定需要，但對於[開發傳統的 AEM Sites 元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)有基本的了解也會有幫助。*
 
 ## 本機開發環境 {#local-dev-environment}
 

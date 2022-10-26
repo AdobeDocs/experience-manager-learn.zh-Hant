@@ -1,7 +1,6 @@
 ---
 title: 整合SPA |開始使用AEM SPA Editor and React
 description: 了解在React中撰寫的單頁應用程式(SPA)原始碼如何與Adobe Experience Manager(AEM)專案整合。 了解如何使用現代化的前端工具（例如WebPack開發伺服器），針對AEM JSON模型API快速開發SPA。
-sub-product: sites
 feature: SPA Editor
 version: Cloud Service
 kt: 4853
@@ -10,7 +9,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1835'
 ht-degree: 0%

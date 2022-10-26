@@ -1,7 +1,6 @@
 ---
 title: 製作和發佈簡介 | AEM快速網站建立
 description: 使用AEMAdobe Experience Manager中的頁面編輯器來更新網站的內容。 了解如何使用元件來加速編寫。 了解AEM製作和發佈環境之間的差異，並了解如何將變更發佈至即時網站。
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -11,7 +10,7 @@ level: Beginner
 kt: 7497
 thumbnail: KT-7497.jpg
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1330'
 ht-degree: 2%

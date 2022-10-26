@@ -1,7 +1,6 @@
 ---
 title: 檢閱完整堆疊專案的ui.frontend模組
 description: 檢閱基於Maven的完整堆疊AEM Sites專案的前端開發、部署和傳送生命週期。
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -12,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: disable
-source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%

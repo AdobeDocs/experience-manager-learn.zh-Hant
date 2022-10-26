@@ -1,7 +1,6 @@
 ---
 title: 影片總覽
 description: Dynamic Media Classic提供上傳時的視訊自動轉換、視訊串流至案頭和行動裝置，以及根據裝置和頻寬最佳化以播放的最適化視訊集。 進一步了解Dynamic Media Classic中的影片，並取得影片概念和術語的入門課程。 接著深入探討如何上傳和編碼視訊、選擇視訊預設集以進行上傳、新增或編輯視訊預設集、在視訊檢視器中預覽視訊、將視訊部署至網頁和行動網站、為視訊新增字幕和章節標籤，以及將視訊檢視器發佈至案頭和行動使用者。
-sub-product: dynamic-media
 feature: Dynamic Media Classic, Video Profiles, Viewer Presets
 doc-type: tutorial
 topics: development, authoring, configuring, videos, video-profiles
@@ -11,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: dfbf316f-3922-4bc7-b3f3-2a5bbdeb7063
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '6118'
 ht-degree: 0%

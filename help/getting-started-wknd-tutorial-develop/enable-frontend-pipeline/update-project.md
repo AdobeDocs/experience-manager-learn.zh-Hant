@@ -1,7 +1,6 @@
 ---
 title: 更新全堆疊AEM專案以使用前端管道
 description: 了解如何更新完整堆疊的AEM專案，以針對前端管道啟用，因此只會建置和部署前端成品。
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -12,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: disable
-source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 0%
