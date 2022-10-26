@@ -1,6 +1,6 @@
 ---
-title: 瞭解中的身份驗證支AEM持
-description: 對支援的驗證（偶爾還有授權）機制的統一視AEM圖。
+title: 了解AEM中的驗證支援
+description: AEM支援的驗證（有時也是授權）機制的整合檢視。
 version: 6.4, 6.5
 feature: User and Groups
 topics: authentication, security
@@ -12,18 +12,20 @@ topic: Architecture
 role: Architect
 level: Experienced
 exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+last-substantial-update: 2022-09-10T00:00:00Z
+thumbnail: KT-406.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 3%
+ht-degree: 9%
 
 ---
 
-# 瞭解6.x中的AEM身份驗證支援
+# 了解AEM 6.x中的驗證支援
 
-對支援的驗證（偶爾還有授權）機制的統一視AEM圖。
+AEM支援的驗證（有時也是授權）機制的整合檢視。
 
-*下表介紹了用戶如何驗證到AEM。*
+*下表說明使用者如何驗證至AEM。*
 
 <table>
     <tbody>
@@ -34,13 +36,13 @@ ht-degree: 3%
             <td><strong>AEM 6.5</strong></td>
         </tr>
         <tr>
-            <td><strong>作為AEM標準身份提供程式</strong></td>
+            <td><strong>AEM作為標準身分提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>基本身份驗證</td>
+            <td>基本驗證</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -52,13 +54,13 @@ ht-degree: 3%
             <td>✔</td>
         </tr>
         <tr>
-            <td>基於令牌(帶 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝令牌</a>)</td>
+            <td>代號型(包含 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝的代號</a>)</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>非系AEM統作為標準身份提供程式</strong></td>
+            <td><strong>非AEM系統作為標準身份提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -75,7 +77,7 @@ ht-degree: 3%
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html" target="_blank">SAML 2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html?lang=zh-Hant" target="_blank">SAML 2.0</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
@@ -95,4 +97,4 @@ ht-degree: 3%
     </tbody>
 </table>
 
-⁕ *通過社區項目提供，但不直接受Adobe支援。*
+⁕ *透過社群專案提供，但不直接由Adobe支援。*
