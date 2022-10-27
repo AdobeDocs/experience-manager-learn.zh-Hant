@@ -9,10 +9,10 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 129dedd4cd6973d5d576bed5f714ce62152923de
+source-git-commit: 3a7c04dfe465c1eff29ba6b4e4b7e24f047e5b42
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 1%
+source-wordcount: '1182'
+ht-degree: 0%
 
 ---
 
@@ -116,31 +116,31 @@ AEM Assets管理員會使用處理設定檔來定義自訂轉譯。 接著，處
 
 #### 處理設定檔
 
-資產轉譯規格定義於 [處理設定檔](../../../assets/configuring//processing-profiles.md) 由AEM Assets管理員撰寫。
+資產轉譯規格定義於 [處理設定檔](../../../assets/configuring/processing-profiles.md) 由AEM Assets管理員撰寫。
 
 建立或更新處理設定檔，並為無頭應用程式所需的影像大小新增轉譯定義。 轉譯可以命名任何名稱，但應在語義上命名。
 
-![AEM無頭最佳化轉譯](./assets/images/processing-profiles.jpg)
+![AEM無頭最佳化轉譯](./assets/images/processing-profiles.png)
 
 在此範例中，會建立三個轉譯：
 
 | 轉譯名稱 | 副檔名 | 最大寬度 |
-|----------------|:---------:|----------:|
-| 大 | jpeg | 1200 px |
-| 中 | jpeg | 900 px |
-| 小 | jpeg | 600 px |
+|-----------------------|:---------:|----------:|
+| web優化 — large | webp | 1200 px |
+| web優化媒體 | webp | 900 px |
+| web優化 — 小 | webp | 600 px |
 
 上表中調出的屬性非常重要：
 
 + __轉譯名稱__ 用於要求轉譯。
-+ __擴充功能__ 是用來要求 __轉譯名稱__.
++ __擴充功能__ 是用來要求 __轉譯名稱__. 偏好 `webp` 轉譯，如此會針對網頁傳送最佳化。
 + __最大寬度__ 會用來通知開發人員應根據其在無頭應用程式中的使用，來使用哪個轉譯。
 
 轉譯定義視無頭式應用程式的需求而定，因此請務必為使用案例定義最佳轉譯集，並在語義上為其命名，以說明其使用方式。
 
 #### 重新處理資產{#reprocess-assets}
 
-在建立（或更新）「處理設定檔」後，重新處理資產以產生「處理設定檔」中定義的新轉譯。 在使用處理設定檔處理資產之前，將不會存在新轉譯。
+在建立（或更新）「處理設定檔」後，重新處理資產以產生「處理設定檔」中定義的新轉譯。 在使用處理設定檔處理資產之前，新轉譯不存在。
 
 + 最好， [將處理設定檔指派給資料夾](../../../assets/configuring//processing-profiles.md) 因此，任何上傳至該資料夾的新資產都會自動產生轉譯。 必須使用下方的臨時方法重新處理現有資產。
 
@@ -152,7 +152,7 @@ AEM Assets管理員會使用處理設定檔來定義自訂轉譯。 接著，處
 
 轉譯可透過驗證 [開啟資產的轉譯檢視](../../../assets/authoring/renditions.md)，以及選取新轉譯以在轉譯邊欄中預覽。 如果缺少轉譯， [確保資產是使用處理設定檔進行處理](#reprocess-assets).
 
-![檢閱轉譯](./assets/images/review-renditions.jpg)
+![檢閱轉譯](./assets/images/review-renditions.png)
 
 #### 發佈資產
 
@@ -164,9 +164,9 @@ AEM Assets管理員會使用處理設定檔來定義自訂轉譯。 接著，處
 
 | 資產網址 | 轉譯子路徑 | 轉譯名稱 | 轉譯擴充功能 |  | 轉譯URL |
 |-----------|:------------------:|:--------------:|--------------------:|:--:|---|
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | 大 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/large.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | 中 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/medium.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | 小 | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/small.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web優化 — large | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-large.webp |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web優化媒體 | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-medium.webp |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web優化 — 小 | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-small.webp |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -176,7 +176,7 @@ AEM GraphQL要求影像轉譯時不需要額外語法。 而是 [查詢影像](#
 
 ### React範例
 
-讓我們建立簡單的React應用程式，顯示單一影像資產的三種轉譯（小型、中型和大型）。
+讓我們建立一個簡單的React應用程式，顯示單一影像資產的三種轉譯項目：Web最佳化 — 小型、Web最佳化 — 中型和Web最佳化 — 大型。
 
 ![影像資產轉譯React範例](./assets/images/react-example-renditions.jpg)
 
@@ -216,7 +216,7 @@ export default function Image({ assetUrl, renditionName, renditionExtension, alt
 
 #### 定義 `App.js`{#app-js}
 
-這個簡單 `App.js` 查詢AEM以取得冒險影像，然後顯示該影像的三個轉譯：小、中、大。
+這個簡單 `App.js` 查詢AEM以取得冒險影像，然後顯示該影像的三個轉譯：web優化 — 小型、web優化 — 中型和web優化 — 大型。
 
 在自訂React鈎點中執行AEM查詢 [使用AEM Headless SDK的useAdventureByPath](./aem-headless-sdk.md#graphql-persisted-queries).
 
@@ -242,33 +242,33 @@ function App() {
     <div className="app">
       
       <h2>Small rendition</h2>
-      {/* Render the small rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-small rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="small"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-small"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
 
       <hr />
 
       <h2>Medium rendition</h2>
-      {/* Render the medium rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-medium rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="medium"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-medium"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
 
       <hr />
 
       <h2>Large rendition</h2>
-      {/* Render the large rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-large rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="large"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-large"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
     </div>
