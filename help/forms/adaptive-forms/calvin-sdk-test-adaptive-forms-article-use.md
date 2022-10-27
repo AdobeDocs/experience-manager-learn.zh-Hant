@@ -1,6 +1,6 @@
 ---
-title: 使用自動TestAEM和自適應Forms
-description: Calvin SDK在自適應Forms自動測試中的應用
+title: 搭配AEM適用性Forms使用自動化測試
+description: 使用Calvin SDK自動測試適用性Forms
 feature: Adaptive Forms
 doc-type: article
 activity: develop
@@ -9,35 +9,36 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 5a1364f3-e81c-4c92-8972-4fdc24aecab1
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+last-substantial-update: 2020-09-10T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 1%
 
 ---
 
-# 使用自動TestAEM和自適應Forms {#using-automated-tests-with-aem-adaptive-forms}
+# 搭配AEM適用性Forms使用自動化測試 {#using-automated-tests-with-aem-adaptive-forms}
 
-Calvin SDK在自適應Forms自動測試中的應用
+使用Calvin SDK自動測試適用性Forms
 
-Calvin SDK是一個實用API，供適應性Forms開發者test適應性Forms. Calvin SDK是在 [霍布斯.js測試框架](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。 Calvin SDK在AEM Forms6.3以後提供。
+Calvin SDK是一個公用程式API，供適用性Forms開發人員測試適用性Forms。 Calvin SDK是在 [Hobbes.js測試架構](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html). Calvin SDK隨AEM Forms 6.3起提供。
 
-在本教程中，您將建立以下內容：
+在本教學課程中，您將建立下列內容：
 
-* Test套件
-* Test套件將包含一個或多個test案例
-* Test案例將包含一個或多個操作
+* 測試套裝
+* 測試套裝將包含一或多個測試案例
+* 測試案例將包含一或多個動作
 
-## 入門 {#getting-started}
+## 快速入門 {#getting-started}
 
-[使用包管理器下載並安裝資產](assets/testingadaptiveformsusingcalvinsdk1.zip)軟體包包含示例指令碼和幾個自適應Forms。這些自適應Forms是使用AEM Forms6.3版構建的。 如果要在AEM Forms6.4或更高版本上測試此功能，建議建立特定於您的AEM Forms版本的新表單。 示例指令碼演示了各種Calvin SDK API，可用於testAdaptiveForms。 測試自適應Forms的AEM一般步驟是：
+[使用封裝管理程式下載及安裝資產](assets/testingadaptiveformsusingcalvinsdk1.zip)此套件包含範例指令碼和數個適用性Forms。這些適用性Forms是使用AEM Forms 6.3版本建置。 如果您要在AEM Forms 6.4或更新版本上測試，建議您建立AEM Forms版本專屬的新表單。 示例指令碼演示了可用於測試適用性Forms的各種Calvin SDK API。 測試AEM適用性Forms的一般步驟為：
 
-* 導航到需要測試的窗體
+* 導覽至需要測試的表單
 * 設定欄位的值
-* 提交自適應表單
-* 檢查錯誤消息
+* 提交最適化表單
+* 檢查錯誤訊息
 
-軟體包中的示例指令碼演示了上述所有操作。
+套件中的範例指令碼會示範上述所有動作。
 讓我們來探索 `mortgageForm.js`
 
 ```javascript
@@ -47,11 +48,11 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 })
 ```
 
-上面的代碼會建立新的Test套件。
+上述程式碼會建立新的測試套裝。
 
-* 本例中TestSuite的名稱為「 `Mortgage Form Test` 「 」。
-* 提供了包含test套件AEM的js檔案的絕對路徑。
-* 設定為「時的寄存器參數 `true` &#39;，使Test套件在測試UI中可用。
+* 此例中的TestSuite名稱為「 `Mortgage Form Test` &#39;。
+* 提供AEM中包含測試套裝之js檔案的絕對路徑。
+* 設定為「時的註冊參數 `true` &#39;，可讓測試UI中的測試套裝可用。
 
 ```javascript
 .addTestCase(new hobs.TestCase("Calculate amount to borrow")
@@ -64,26 +65,26 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 
 >[!NOTE]
 >
->如果您正在AEM Forms6.4或更高版本上測試此功能，請建立一個新的自適應表單，並使用它進行測試。不建議使用隨軟體包提供的自適應表單。
+>如果您要在AEM Forms 6.4或更新版本上測試此功能，請建立新的適用性表單並使用它進行測試。不建議使用隨套件提供的適用性表單。
 
-Test案例可以添加到test套件中，以針對自適應表單執行。
+可將測試案例新增至要針對適用性表單執行的測試套裝。
 
-* 要將test案例添加到test套件，請使用 `addTestCase` TestSuite對象的方法。
-* 的 `addTestCase` 方法將TestCase對象作為參數。
-* 要建立TestCase，請使用 `hobs.TestCase(..)` 的雙曲餘切值。
-* 注：第一個參數是將出現在UI中的Test事例的名稱。
-* 建立test案例後，可以將操作添加到test案例。
-* 包括 `navigateTo`。 `asserts.isTrue` 可以作為操作添加到test案例。
+* 若要新增測試案例至測試套裝，請使用 `addTestCase` 方法。
+* 此 `addTestCase` 方法以TestCase物件為參數。
+* 要建立TestCase，請使用 `hobs.TestCase(..)` 方法。
+* 注意：第一個參數是將出現在UI中的測試案例名稱。
+* 建立測試案例後，您就可以將動作新增至您的測試案例。
+* 動作包括 `navigateTo`, `asserts.isTrue` 可新增為測試案例的動作。
 
-## 運行自動test {#running-the-automated-tests}
+## 執行自動化測試 {#running-the-automated-tests}
 
-[Openthetestsuite](http://localhost:4502/libs/granite/testing/hobbes.html)展開Test套件並運行test。 如果所有操作都成功運行，您將看到以下輸出。
+[Openthetestsuite](http://localhost:4502/libs/granite/testing/hobbes.html)展開測試套裝並執行測試。 如果所有項目都成功執行，您會看到下列輸出。
 
-![卡文斯](assets/calvinimage.png)
+![calvinsdk](assets/calvinimage.png)
 
-## 試用示例test套件 {#try-out-the-sample-test-suites}
+## 請試用範例測試套裝 {#try-out-the-sample-test-suites}
 
-作為樣品包的一部分，還有另外三間test套房。 您可以通過在客戶端庫的js.txt檔案中包含相應的檔案來嘗試這些檔案，如下所示：
+作為範例套件的一部分，另有三個測試套裝。 您可以在clientlibrary的js.txt檔案中加入適當的檔案，以嘗試使用，如下所示：
 
 ```javascript
 #base=.

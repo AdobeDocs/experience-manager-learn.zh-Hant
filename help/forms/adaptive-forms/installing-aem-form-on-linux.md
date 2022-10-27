@@ -1,20 +1,21 @@
 ---
 title: 在Linux上安裝AEM Forms
 description: 了解如何安裝32位元程式庫，以便AEM Forms在Linux安裝上運作。
-feature: 適用性表單
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4, 6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
 kt: 7593
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: b9809561-e9bd-4c67-bc18-5cab3e4aa138
+last-substantial-update: 2019-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
-
 
 # 安裝32位版共用程式庫
 
@@ -35,13 +36,12 @@ ht-degree: 0%
 * libXext（X11通訊協定的常用擴充功能的程式庫）
 * libXinerama(X11擴充功能，支援將案頭擴展到多個顯示器。 Cinerama是一個使用多台放映機的寬屏電影格式，它的名字是雙關語。 libXinerama是與RandR擴展介面的庫)
 * libXrandr（Xinerama擴展現在已基本過時 — 它已被RandR擴展替換）
-* libXrender（X呈現擴展客戶端庫）
-nss-softokn-freebl（網路安全服務的Freebl庫）
+* libXrender（X呈現擴展客戶端庫）nss-softokn-freebl（用於網路安全服務的Freebl庫）
 * zlib（通用、無專利、無損資料壓縮庫）
 
 從Red Hat Enterprise Linux 6開始，32位版本的庫的副檔名為。686，而64位版本的庫的副檔名為.x86_64。 例如expat.i686。 在RHEL 6之前，32位元版本的副檔名為.i386。 安裝32位版本之前，請確定已安裝最新的64位版本。 如果64位元版本的程式庫早於所安裝的32位元版本，您會收到下列錯誤：
 
-0m錯誤：受保護的多庫版本：libsepol-2.5-10.el7.x86_64 != libsepol-2.5-6.el7.i686 [0mError:發現多庫版本問題。]
+0m錯誤：受保護的多庫版本：libsepol-2.5-10.el7.x86_64 != libsepol-2.5-6.el7.i686 [0m錯誤：發現多庫版本問題。]
 
 ## 首次安裝
 
@@ -69,60 +69,29 @@ nss-softokn-freebl（網路安全服務的Freebl庫）
 
 ## Symlinks
 
-此外，您還需要建立libcurl.so、libcrypto.so和libssl.so符號連結，分別指向libcurl、libcrypto和libssl庫的最新32位版本。 您可以在/usr/lib/中找到檔案
-ln -s /usr/lib/libcurl.so.4.5.0 /usr/lib/libcurl.so
-ln -s /usr/lib/libcrypto.so.1.1.1c /usr/lib/libcrypto.so
-ln -s /usr/lib/libssl.so.1.1.1c /usr/lib/libssl.so
+此外，您還需要建立libcurl.so、libcrypto.so和libssl.so符號連結，分別指向libcurl、libcrypto和libssl庫的最新32位版本。 您可以在/usr/lib/ ln -s /usr/lib/libcurl.so.4.5.0 /usr/lib/libcurl.so ln -s /usr/lib/libcrypto.so.1.1.1c /usr/lib/libcrypto.so ln -s /usr/lib/libssl.so.1.1.1c /usr/lib/libssl.so中找到檔案
 
 ## 更新現有系統
 
-在更新期間，x86_64和i686體系結構之間可能存在衝突，例如：
-錯誤：事務檢查錯誤：
-從glibc-2.28-72.el8.i686安裝的檔案/lib/ld-2.28.so與包glibc32-2.28-42.1.el8.x86_64的檔案衝突
+在更新期間，x86_64和i686體系結構之間可能存在衝突，例如：錯誤：事務檢查錯誤：從glibc-2.28-72.el8.i686安裝的檔案/lib/ld-2.28.so與包glibc32-2.28-42.1.el8.x86_64的檔案衝突
 
-如果您遇到此問題，請先卸載違規包，如下所示：
-yum remove glibc32-2.28-42.1.el8.x86_64
+如果您遇到此問題，請先卸載違規包，如下所示：yum remove glibc32-2.28-42.1.el8.x86_64
 
-所有說明和完成，您希望x86_64和i686版本完全相同，例如從此輸出到命令：
-yom info glibc
+所有說明和完成，您希望x86_64和i686版本完全相同，例如從此輸出到命令：yom info glibc
 
-上次元資料過期檢查：0:41:33年1月18日星期六美國東部標準時間上午11:37:08時。
-已安裝的軟體包
-名稱：glibc
-版本：2.28
-版本：72.el8
-架構：i686
-大小：13米
-來源：glibc-2.28-72.el8.src.rpm
-存放庫：@System
-從存放庫：BaseOS
-摘要：GNU libc庫
-URL :http://www.gnu.org/software/glibc/
-授權：LGPLv2+和LGPLv2+，帶有異常，GPLv2+和GPLv2+帶有異常，BSD和內網以及ISC和公共域以及GFDL
-說明：glibc套件包含所使用的標準程式庫：系統上的多個程式。 為了節省磁碟空間和：記憶體，為了讓升級更輕鬆，常見的系統程式碼為：在一個地方保持，並在各方案之間共用。 此特定套件：包含最重要的共用程式庫集：標準C :程式庫和標準數學程式庫。 若沒有這兩個資料庫，即為：Linux系統無法運行。
+上次元資料過期檢查：0:41:33年前於2020年1月18日週六11:37:東部標準時間上午08點。
+已安裝的軟體包名稱：glibc版本：2.28版：72.el8架構：i686大小：13M來源：glibc-2.28-72.el8.src.rpm儲存庫：@System從存放庫：BaseOS摘要：GNU libc庫URL :http://www.gnu.org/software/glibc/授權：LGPLv2+和LGPLv2+（帶有例外）以及GPLv2+和GPLv2+（帶有例外）以及BSD和內網、ISC和公共域和GFDL描述：glibc套件包含所使用的標準程式庫：系統上的多個程式。 為了節省磁碟空間和：記憶體，為了讓升級更輕鬆，常見的系統程式碼為：在一個地方保持，並在各方案之間共用。 此特定套件：包含最重要的共用程式庫集：標準C :程式庫和標準數學程式庫。 若沒有這兩個資料庫，即為：Linux系統無法運行。
 
-名稱：glibc
-版本：2.28
-版本：72.el8
-架構：x86_64
-大小：15米
-來源：glibc-2.28-72.el8.src.rpm
-存放庫：@System
-從存放庫：BaseOS
-摘要：GNU libc庫
-URL :http://www.gnu.org/software/glibc/
-授權：LGPLv2+和LGPLv2+，帶有異常，GPLv2+和GPLv2+帶有異常，BSD和內網以及ISC和公共域以及GFDL
-說明：glibc套件包含所使用的標準程式庫：系統上的多個程式。 為了節省磁碟空間和：記憶體，為了讓升級更輕鬆，常見的系統程式碼為：在一個地方保持，並在各方案之間共用。 此特定套件：包含最重要的共用程式庫集：標準C :程式庫和標準數學程式庫。 若沒有這兩個資料庫，即為：Linux系統無法運行。
+名稱：glibc版本：2.28版：72.el8架構：x86_64大小：15 M來源：glibc-2.28-72.el8.src.rpm儲存庫：@System從存放庫：BaseOS摘要：GNU libc庫URL :http://www.gnu.org/software/glibc/授權：LGPLv2+和LGPLv2+（帶有例外）以及GPLv2+和GPLv2+（帶有例外）以及BSD和內網、ISC和公共域和GFDL描述：glibc套件包含所使用的標準程式庫：系統上的多個程式。 為了節省磁碟空間和：記憶體，為了讓升級更輕鬆，常見的系統程式碼為：在一個地方保持，並在各方案之間共用。 此特定套件：包含最重要的共用程式庫集：標準C :程式庫和標準數學程式庫。 若沒有這兩個資料庫，即為：Linux系統無法運行。
 
 ## 一些有用的yum命令
 
-已安裝
-yum search [part_of_package_name]
-yum whatprovids [package_name]
-yum install [package_name]
-yum reinstall [package name]
-yum info [package_name]
-yum deplist [package_name]
-yum remove [package_name]
-yum check-update [package_name]
-yum update [package_name]
+已安裝yum搜索 [part_of_package_name]
+yum whatprovides [package_name]
+yum安裝 [package_name]
+yom重新安裝 [package_name]
+yup資訊 [package_name]
+yum deplis [package_name]
+刪除 [package_name]
+yum檢查更新 [package_name]
+yum更新 [package_name]

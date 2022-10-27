@@ -1,19 +1,20 @@
 ---
 title: 傳送最適化表單附件
 description: 使用傳送電子郵件元件傳送最適化表單附件
-feature: 適用性表單
+feature: Adaptive Forms
 version: 6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: bd9e1fc1-2fc7-452c-9a4a-2e16f6821760
+last-substantial-update: 2020-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 2%
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
-
 
 # 簡介
 
@@ -24,7 +25,7 @@ ht-degree: 2%
 
 ## 以zip檔案傳送表單附件
 
-為完成使用案例，編寫了自訂工作流程處理步驟。 在此自訂程式步驟中，會建立一個zip檔案，其中包含表單附件，並儲存在&#x200B;*zipped_attachments.zip*&#x200B;檔案的裝載資料夾下
+為完成使用案例，編寫了自訂工作流程處理步驟。 在此自訂程式中，會將ZIP檔案（其中已建立表單附件，並儲存在名為的檔案的裝載資料夾下） *zipped_attachments.zip*
 
 ![send-form-attachments](assets/send-form-attachments.JPG)
 
@@ -33,6 +34,3 @@ ht-degree: 2%
 為了完成此使用案例，編寫了自訂工作流程處理步驟。 在此自訂處理步驟中，我們會填入「檔案的ArrayList 」類型和「字串的ArrayList 」類型的工作流變數。
 
 ![send-list-of-documents](assets/send-list-of-documents.JPG)
-
-
-

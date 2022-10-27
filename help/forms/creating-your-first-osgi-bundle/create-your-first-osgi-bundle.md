@@ -7,7 +7,8 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+last-substantial-update: 2021-04-23T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 1%
@@ -64,7 +65,7 @@ Maven是主要用於Java專案的建置自動化工具。 請按照以下步驟�
 * 在命令提示符下運行以下命令
 
 ```java
-mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=36 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.13
+mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=36 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.14
 ```
 
 成功完成時，您應該會在命令視窗中看到組建成功訊息
@@ -114,7 +115,7 @@ Launch **Eclipse**
 若要建置專案，請依照下列步驟操作：
 
 * 開啟 **命令提示窗口**
-* 導航到 `c:\aemformsbundles\mysite\core`
+* 瀏覽到 `c:\aemformsbundles\mysite\core`
 * 執行命令 `mvn clean install -PautoInstallBundle`
 上述命令會建置套件並安裝於上執行的AEM伺服器中 `http://localhost:4502`. 此套件也可在以下位置的檔案系統上使用：
    `C:\AEMFormsBundles\mysite\core\target` 可透過 [Felix Web Console](http://localhost:4502/system/console/bundles)

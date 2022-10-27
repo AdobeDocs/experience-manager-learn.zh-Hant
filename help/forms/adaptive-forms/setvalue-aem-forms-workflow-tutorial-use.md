@@ -1,17 +1,18 @@
 ---
 title: 在AEM Forms工作流程中使用setvalue
 description: 在AEM Forms OSGI中設定適用性Forms中元素的值已提交資料
-feature: 適用性表單
-topic: 開發
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 3919efee-6998-48e8-85d7-91b6943d23f9
+last-substantial-update: 2020-01-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 1%
+source-wordcount: '528'
+ht-degree: 0%
 
 ---
-
 
 # 在AEM Forms工作流程中使用setvalue
 
@@ -38,18 +39,18 @@ LiveCycle過去有設定值元件，可讓您設定XML元素的值。
 
 * [部署Developmentwithserviceuser套件組合](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [部署範例套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。這是自訂OSGI套件組合，可讓您在提交的xml資料中設定元素的值
+* [部署示例包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 這是自訂OSGI套件組合，可讓您在提交的xml資料中設定元素的值
 
 * [下載並解壓縮zip檔案的內容](assets/setvalueassets.zip)
-* 將瀏覽器指向[包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 將瀏覽器指向 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
 * 匯入並安裝setValueWorkflow.zip。 這裡有範例工作流程模型。
-* 將瀏覽器指向[Forms和Documents](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 將瀏覽器指向 [Forms與檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下建立 |檔案上傳
 * 上傳TimeOfRequestForm.zip
-* 開啟[TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
+* 開啟 [TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
 * 填寫3個必填欄位並提交
 * 以「管理員」身分登入AEM（如果尚未登入）
-* 前往[&quot;AEM收件匣&quot;](http://localhost:4502/aem/inbox)
+* 前往 [&quot;AEM收件匣&quot;](http://localhost:4502/aem/inbox)
 * 開啟「審核時間請求」表單
 * 請注意，第一個面板中的欄位已停用。 這是因為表單由審核者開啟。 此外，請注意要核准或拒絕請求的面板現在已顯示
 

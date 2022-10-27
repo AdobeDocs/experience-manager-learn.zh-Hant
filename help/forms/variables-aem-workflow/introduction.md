@@ -2,17 +2,18 @@
 title: AEM工作流程中的變數
 description: 在aem工作流程中使用xml,json,arraylist,document類型的變數
 version: 6.5
-feature: 適用性表單
-topic: 開發
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: e84b70a0-c51b-4fe3-80e8-f3156931297a
+last-substantial-update: 2020-01-26T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 10%
+source-wordcount: '109'
+ht-degree: 8%
 
 ---
-
 
 # AEM工作流程中的變數
 
@@ -21,8 +22,8 @@ ht-degree: 10%
 變數可為下列類型
 
 * 長整數
-* 雙精準數
-* 布林值 (Boolean)
+* 雙精度
+* 布林值
 * 字串
 * 日期
 * JSON

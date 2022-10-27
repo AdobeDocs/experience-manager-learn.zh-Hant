@@ -7,7 +7,8 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 72728ed7-80a2-48b5-ae7f-d744db8a524d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+last-substantial-update: 2021-04-23T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
@@ -74,7 +75,7 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 若要建置專案，請依照下列步驟操作：
 
 * 開啟 **命令提示窗口**
-* 導航到 `c:\aemformsbundles\mysite\core`
+* 瀏覽到 `c:\aemformsbundles\mysite\core`
 * 執行命令 `mvn clean install -PautoInstallBundle`
 * 上述命令會自動建置套件組合，並部署至localhost:4502上執行的AEM執行個體
 

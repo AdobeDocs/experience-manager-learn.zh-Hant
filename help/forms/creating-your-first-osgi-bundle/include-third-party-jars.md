@@ -6,10 +6,11 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Beginner
-kt: kt-11245
-source-git-commit: 8944a4feaefbc4cf0db52011a0d49b22341780c0
+kt: 11245
+last-substantial-update: 2022-10-15T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -30,7 +31,7 @@ ht-degree: 0%
 </dependency>
 ```
 
-如果您的OSGi套件組合位於您的檔案系統上，相依性將如下所示
+如果您的OSGi套件組合位於檔案系統上，請建立名為 **localjar** 在專案的基本目錄(C:\aemformsbundles\AEMFormsProcessStep\localjar)下，相依性會如下所示
 
 ```java
 <dependency>

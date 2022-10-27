@@ -1,24 +1,25 @@
 ---
 title: 使用監視資料夾機制生成用於打印通道的交互通信文檔
-seo-title: 使用監視資料夾機制生成用於打印通道的交互通信文檔
+seo-title: Generating Interactive Communications Document for print channel using watch folder mechanism
 description: 使用監看資料夾生成打印通道文檔
-seo-description: 使用監看資料夾生成打印通道文檔
-feature: 互動式通訊
+seo-description: Use watched folder to generate print channel documents
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: f5ab4801-cde5-426d-bfe4-ce0a985e25e8
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 1%
+source-wordcount: '463'
+ht-degree: 0%
 
 ---
-
 
 # 使用監視資料夾機制生成用於打印通道的交互通信文檔
 
@@ -112,9 +113,9 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **若要在您的本地系統上測試此功能，請按照以下說明操作：**
 
-* 如本[文章所述，設定Tomcat。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成示例資料的war檔案。
-* 按照本[文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md)中所述設定服務，即系統用戶。
-請確保此系統用戶具有以下節點的讀取權限。 若要將權限登錄給[user admin](https://localhost:4502/useradmin)並搜索系統用戶「data」，並通過將按鈕切換到權限頁簽，為以下節點授予讀取權限
+* 按照以下說明安裝Tomcat [文章。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成示例資料的war檔案。
+* 設定服務，即系統用戶，如下所述 [文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
+請確保此系統用戶具有以下節點的讀取權限。 將權限登入 [使用者管理員](https://localhost:4502/useradmin) 並搜索系統用戶「data」，並通過將按鈕顯示到「權限」頁簽，為以下節點授予讀取權限
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
@@ -145,11 +146,10 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 * 將accountnumbers.xml拖放到C:\RenderPrintChannel\input folder中。
 
-* 產生的PDF檔案會依照ecma指令碼中的指定寫入saveLocation。
+* 生成的PDF檔案將按照ecma指令碼中的指定寫入saveLocation。
 
 >[!NOTE]
 >
 >如果您打算在非windows作業系統上使用，請導覽至
 >
 >/etc/fd/watchfolder /config/PrintChannelDocument ，並根據您的首選項更改folderPath
-

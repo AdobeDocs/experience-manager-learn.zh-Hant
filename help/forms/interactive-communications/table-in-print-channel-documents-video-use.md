@@ -1,23 +1,24 @@
 ---
 title: 在AEM Forms打印通道文檔中使用表元件
-seo-title: 在AEM Forms打印通道文檔中使用表元件
+seo-title: Using Table Component in AEM Forms Print Channel Document
 description: 以下影片會逐步說明在互動式通訊中使用表格元件以列印管道檔案所需的步驟。
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: technical video
 activity: implement
 version: 6.4,6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 54afd047-c6e6-4557-9336-39420f30df88
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 1%
+source-wordcount: '267'
+ht-degree: 0%
 
 ---
-
 
 # 在AEM Forms打印通道文檔中使用表元件 {#using-table-component-in-aem-forms-print-channel-document}
 
@@ -46,10 +47,9 @@ ht-degree: 1%
    * 互動式通信文檔
    * sampleretirementaccountdata.json
 
-* 在[編輯模式](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)中開啟互動式通信文檔。
+* 在中開啟互動式通訊檔案 [編輯模式](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html).
 
 * 將TableDemo版面片段新增至貢獻區段。
 * 將表格儲存格系結至適當的「表單資料模型」元素，如影片所示
 
 * 預覽互動式通訊檔案，其中包含提供給您的範例json資料檔案
-

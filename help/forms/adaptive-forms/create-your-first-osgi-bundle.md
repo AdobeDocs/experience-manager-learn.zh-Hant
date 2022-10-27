@@ -10,7 +10,8 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+last-substantial-update: 2021-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 1%
@@ -131,6 +132,6 @@ Launch **Eclipse**
 若要建置專案，請依照下列步驟操作：
 
 * 開啟 **命令提示窗口**
-* 導航到 `c:\aemformsbundles\learningaemforms\core`
+* 瀏覽到 `c:\aemformsbundles\learningaemforms\core`
 * 執行命令 `mvn clean install`
 如果一切順利，您應該會在下列位置看到套件組合 `C:\AEMFormsBundles\learningaemforms\core\target`. 此套件組合現已準備就緒，可使用Felix網頁主控台部署至AEM。

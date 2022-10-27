@@ -1,34 +1,35 @@
 ---
-title: 在DAM中標籤和儲存AEM FormsDoR
-description: 本文將介紹AEM Forms在DAM中生成的DoR的儲存和標籤的使用AEM實例。 文檔的標籤是基於提交的表單資料完成的。
+title: 在DAM中標籤和儲存AEM Forms DoR
+description: 本文將逐步說明在AEM DAM中儲存和標籤AEM Forms產生的DoR的使用案例。 文檔的標籤是根據提交的表單資料完成的。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
-source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
+last-substantial-update: 2019-03-20T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 0%
 
 ---
 
-# 在DAM中標籤和儲存AEM FormsDoR {#tagging-and-storing-aem-forms-dor-in-dam}
+# 在DAM中標籤和儲存AEM Forms DoR {#tagging-and-storing-aem-forms-dor-in-dam}
 
-本文將介紹AEM Forms在DAM中生成的DoR的儲存和標籤的使用AEM實例。 文檔的標籤是基於提交的表單資料完成的。
+本文將逐步說明在AEM DAM中儲存和標籤AEM Forms產生的DoR的使用案例。 文檔的標籤是根據提交的表單資料完成的。
 
-客戶的一個常見要求是在DAM中儲存並標籤AEM Forms生成的記錄文檔(DoR)AEM。 文檔的標籤必須基於自適應Forms提交的資料。 例如，如果提交資料中的雇傭狀態為「已退休」，則我們要用「已退休」標籤文檔，並將文檔儲存在DAM中。
+客戶的常見要求是，在AEM DAM中儲存並標籤AEM Forms產生的記錄檔(DoR)。 檔案的標籤必須以最適化Forms提交的資料為基礎。 例如，如果提交資料中的雇傭狀態為「已淘汰」，我們想使用「已淘汰」標籤標籤檔案，並將檔案儲存在DAM中。
 
 使用案例如下：
 
-* 用戶填寫自適應表單。 在自適應表單中，捕獲用戶的婚姻狀態(ex Single)和就業狀態(ex Retiled)。
-* 在提交表單時，AEM將觸發工作流。 此工作流將文檔標籤為婚姻狀態（單一）和雇傭狀態（已退休），並將文檔儲存在DAM中。
-* 一旦文檔儲存在DAM中，管理員就應能通過這些標籤搜索文檔。 例如，在「單個」(Single)或「已退休」(Retired)上搜索將獲取相應的DoR。
+* 使用者填寫最適化表單。 在最適化表單中，會擷取使用者的婚姻狀態（前單身）和就業狀態（前退休）。
+* 提交表單時，會觸發AEM工作流程。 此工作流程會以婚姻狀態（單一）和雇傭狀態（已淘汰）來標籤檔案，並將檔案儲存在DAM中。
+* 將檔案儲存在DAM中後，管理員應該就能透過這些標籤來搜尋檔案。 例如，在Single或Refired上搜尋會擷取適當的DoR。
 
-為了滿足此使用情形，編寫了自定義流程步驟。 在此步驟中，我們將從提交的資料中提取相應資料元素的值。 然後，我們使用此值構造標籤磁貼。 例如，如果婚姻狀態元素的值為「單一」，則標籤標題將變為**Peak:EmploymentStatus/Single。 **使用TagManager API，我們找到標籤並將標籤應用到DoR。
+為了滿足此使用案例的要求，已編寫自定義流程步驟。 在此步驟中，我們會從提交的資料中擷取適當資料元素的值。 接著，我們使用此值來建構標籤圖磚。 例如，如果婚姻狀態元素的值為「Single」，則標籤標題會變成**Peak:EmploymentStatus/Single。 **我們會使用TagManager API找到標籤，並將標籤套用至DoR。
 
-以下是在DAM中標籤和儲存記錄文檔的完整代AEM碼。
+以下是在AEM DAM中標籤和儲存記錄檔案的完整程式碼。
 
 ```java
 package com.aemforms.setvalue.core;
@@ -155,27 +156,27 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 }
 ```
 
-要使此示例在您的系統上工作，請按照以下步驟操作：
-* [部署Developingwithserviceuser捆綁包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+若要讓此範例在您的系統上運作，請遵循下列步驟：
+* [部署Developmentwithserviceuser套件組合](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下載並部署setvalue包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 這是自定義OSGI捆綁包，它從提交的表單資料中設定標籤。
+* [下載並部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 這是自訂OSGI套件組合，會從提交的表單資料設定標籤。
 
-* [下載示例自適應窗體](assets/tag-and-store-in-dam-adaptive-form.zip)
+* [下載範例最適化表單](assets/tag-and-store-in-dam-adaptive-form.zip)
 
-* [轉到Forms和文檔](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [前往Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* 按一下建立 |檔案上傳並上載標籤和儲存在資料庫中 — adaptive-form.zip
+* 按一下建立 |檔案上傳及上傳tag-and-store-in-dam-adaptive-form.zip
 
-* [導入文章資產](assets/tag-and-store-in-dam-assets.zip) 使用包AEM管理器
-* 開啟 [預覽模式下的示例窗體](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled)。 **填寫所有欄位** 並提交表格。
-* [導航到DAM中的「峰值」資料夾](http://localhost:4502/assets.html/content/dam/Peak)。 您應在「峰值」資料夾中看到「DoR」。 檢查文檔的屬性。 應適當標籤。
-恭喜你！! 您已成功在系統上安裝示例
+* [匯入文章資產](assets/tag-and-store-in-dam-assets.zip) 使用AEM套件管理器
+* 開啟 [預覽模式的範例表單](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **填寫所有欄位** 並提交表格。
+* [導覽至DAM中的「尖峰」資料夾](http://localhost:4502/assets.html/content/dam/Peak). 您應該會在Peak資料夾中看到DoR。 檢查文檔的屬性。 應適當標籤。
+恭喜!! 您已成功在系統上安裝示例
 
-* 讓我們來探索 [工作流](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) 在提交表單時觸發。
-* 工作流的第一步是通過將申請人姓名和居住縣連接起來來建立唯一的檔案名。
-* 工作流的第二步傳遞了需要標籤的標籤層次結構和表單域元素。 該處理步驟從提交的資料中提取值並構建需要標籤文檔的標籤標題。
-* 如果要將DoR儲存在DAM中的其他資料夾中，請使用下面螢幕快照中指定的配置屬性指定資料夾位置。
+* 讓我們來探索 [工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) 表單提交時觸發。
+* 工作流程的第一步是串連申請人名稱和居住縣，以建立唯一的檔案名稱。
+* 工作流程的第二步會傳遞標籤階層以及需要標籤的表單欄位元素。 處理步驟從提交的資料中提取值，並構建需要標籤文檔的標籤標題。
+* 如果要將DoR儲存在DAM中的其他資料夾中，可使用下面螢幕截圖中指定的配置屬性指定資料夾位置。
 
-另外兩個參數特定於DoR和資料檔案路徑，如在「自適應表單」提交選項中指定的。 請確保在此處指定的值與在「自適應表單」提交選項中指定的值匹配。
+其他兩個參數則專屬於「適用性表單提交」選項中指定的「DoR」和「資料檔案路徑」。 請確定您在此處指定的值與您在適用性表單提交選項中指定的值相符。
 
-![標籤多爾](assets/tag_dor_service_configuration.gif)
+![標籤或](assets/tag_dor_service_configuration.gif)

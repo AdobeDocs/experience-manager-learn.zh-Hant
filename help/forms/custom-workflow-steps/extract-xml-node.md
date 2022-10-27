@@ -1,6 +1,6 @@
 ---
 title: 從提交的資料xml中提取節點
-description: 將駐留在負載資料夾下的寫入文檔添加到檔案系統的自定義過程步驟
+description: 將駐留在裝載資料夾下的寫入文檔添加到檔案系統的自定義過程步驟
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -8,18 +8,19 @@ role: Developer
 level: Beginner
 kt: kt-9860
 exl-id: 5282034f-275a-479d-aacb-fc5387da793d
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+last-substantial-update: 2020-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
 # 從提交的資料xml中提取節點
 
-此自定義流程步驟是通過從另一個xml文檔中提取節點來建立新xml文檔。 如果要將已提交的資料與xdp模板合併以生成pdf，則需要使用此功能。 例如，在提交自適應表單時，需要與xdp模板合併的資料位於資料元素內。 在這種情況下，您需要通過提取相應的資料元素來建立另一個xml文檔。
+此自定義進程步驟是通過從另一個xml文檔中提取節點來建立新xml文檔。 當您想要將提交的資料與xdp範本合併，以產生pdf時，需要使用此功能。 例如，當您提交最適化表單時，需要與xdp範本合併的資料位於資料元素內。 在這種情況下，您需要通過提取適當的資料元素來建立另一個xml文檔。
 
-以下螢幕抓圖顯示了需要傳遞到自定義進程步驟的參數
+下列螢幕擷取畫面顯示您需要傳遞至自訂程式步驟的引數
 ![過程步驟](assets/create-xml-process-step.png)
 以下是參數
 * Data.xml — 要從中提取節點的xml檔案
@@ -27,7 +28,7 @@ ht-degree: 0%
 * /afData/afUnboundData/data — 要提取的節點
 
 
-下面的螢幕抓圖顯示在負載資料夾下建立的datamerge.xml
-![建立xml](assets/create-xml.png)
+下列螢幕擷取畫面會顯示正在裝載資料夾下建立的datamerge.xml
+![create-xml](assets/create-xml.png)
 
-[可從此處下載自定義捆綁包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
+[自訂套件可從此處下載](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)

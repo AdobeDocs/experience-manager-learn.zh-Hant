@@ -1,18 +1,19 @@
 ---
 title: 修改資料源配置設定。
 description: 修改「資料來源組態設定」中的主機名稱和其他設定。
-feature: 適用性表單
+feature: Adaptive Forms
 version: 6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 6c63787c-e511-4764-9a03-2c85c394bcc0
+last-substantial-update: 2019-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 2%
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
-
 
 # 能夠修改資料源配置設定{#ability-to-modify-data-source-configuration-settings}
 
@@ -24,7 +25,6 @@ ht-degree: 2%
 
 **AEM 6.4中的資料來源設定**
 
-![64DataSource ](assets/64release.gif)
-**ConfigurationAEM 6.5及更高版本中的可編輯資料來源設定**
-![ 65DataSource Configuration](assets/modifiabledatasource.jfif)
-
+![64DataSource配置](assets/64release.gif)
+**AEM 6.5及更新版本中可編輯的資料來源設定**
+![65DataSource配置](assets/modifiabledatasource.jfif)

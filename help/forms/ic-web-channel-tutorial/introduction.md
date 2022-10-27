@@ -13,7 +13,8 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 3%
@@ -26,7 +27,7 @@ ht-degree: 3%
 
 ## 必備條件 {#prerequistes}
 
-[使用套件管理器，將本教學課程相關的資產下載並匯入AEM。](assets/gettingstartedassets.zip). 此zip檔案包含本教學課程中使用的影像和檔案片段
+[使用套件管理器，將本教學課程相關的資產下載並匯入AEM。](assets/gettingstartedassets.zip)。此zip檔案包含本教學課程中使用的影像和檔案片段
 
 [下載並解壓縮此檔案。](assets/warfileandswaggerfile.zip) 此檔案包含需要部署到Tomcat上的SampleRest.war檔案和需要用於配置資料源的Swagger檔案。
 

@@ -1,21 +1,22 @@
 ---
 title: 從MySQL資料庫儲存和檢索含附件的表單資料
 description: 多部分教學課程，逐步引導您完成儲存和擷取含附件的表單資料的步驟
-feature: 適用性表單
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6593
 thumbnail: 327122.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: b278652f-6c09-4abc-b92e-20bfaf2e791a
+last-substantial-update: 2020-11-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 3%
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
-
 
 # 使用2FA儲存和擷取最適化表單資料
 
@@ -25,7 +26,7 @@ ht-degree: 3%
 
 * 對Servlet進行POST呼叫。 此Servlet將資料儲存在資料庫中，並將表單附件儲存在CRX儲存庫中。 資料庫中儲存的資料與GUID相關聯。
 
-* 如果想用儲存的資料填入適用性表單，請擷取與GUID相關的資料，並使用&#x200B;**request.setAttribute**&#x200B;方法填入適用性表單。
+* 若想使用儲存的資料填入適用性表單，請擷取與GUID相關的資料，並使用 **request.setAttribute** 方法。
 
 ## 使用案例的展示
 

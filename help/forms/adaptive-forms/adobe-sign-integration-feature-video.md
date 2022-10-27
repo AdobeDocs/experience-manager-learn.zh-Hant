@@ -13,10 +13,11 @@ targetaudience: target-audience advanced
 index: y
 internal: n
 snippet: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+last-substantial-update: 2020-10-20T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 3%
+source-wordcount: '80'
+ht-degree: 0%
 
 ---
 
@@ -33,4 +34,4 @@ ht-degree: 3%
 >
 >此功能僅適用於AEM 6.3以上版本。
 
-請造訪[AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#formsandsign)頁面，以取得此功能的即時示範連結。
+請造訪 [AEM Forms樣本](https://forms.enablementadobe.com/content/samples/samples.html?query=0#formsandsign) 頁面，取得此功能的即時示範連結。

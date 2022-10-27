@@ -7,7 +7,8 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 7e5dcc6e-fe56-49af-97e3-7dfaa9c8738f
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+last-substantial-update: 2019-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%
@@ -42,12 +43,13 @@ ht-degree: 0%
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * 複製HMAC和主檔案
+>
 開啟 [felix web console](http://localhost:4502/system/console/bundles) 在您的發佈例項上。 搜尋com.adobe.granite.crypto.file套件組合。 請注意套件ID
 導覽至發佈執行個體之檔案系統上的套件ID
 * &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * 刪除現有的HMAC和主檔案。
 * 貼上從製作例項複製的HMAC和主檔案
-
+>
 重新啟動AEM發佈伺服器
 
 ## 支援材料 {#supporting-materials}

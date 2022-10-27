@@ -1,6 +1,6 @@
 ---
-title: 在自適應Forms中顯示內嵌影像
-description: 在Adaptive Forms中內聯顯示上載的影像
+title: 在適用性Forms中顯示內嵌影像
+description: 在適用性Forms中內嵌顯示已上傳的影像
 feature: Adaptive Forms
 topics: development
 version: 6.4,6.5
@@ -8,20 +8,21 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 4a69513d-992c-435a-a520-feb9085820e7
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+last-substantial-update: 2020-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
-# 自適應Forms中的內嵌影像
+# 適用性Forms中的內嵌影像
 
-常見的使用情形是在「自適應表單」中將上載的影像顯示為內嵌影像。 預設情況下，上載的影像顯示為連結，通過以自適應格式顯示影像可以增強此體驗。 本文將引導您瞭解顯示內嵌影像所涉及的步驟。
+常見的使用案例是在適用性表單中將上傳的影像顯示為內嵌影像。 依預設，上傳的影像會顯示為連結，而此體驗可透過在適用性表單中顯示影像來增強。 本文將引導您完成顯示內嵌影像的相關步驟。
 
 ## 添加佔位符影像
 
-第一步是將佔位符div預置到檔案附件元件。 在檔案附件元件下面的代碼中，檔案附件元件由照片上載的CSS類名標識。 JavaScript函式是與自適應表單關聯的客戶端庫的一部分。 在初始化檔案附件元件時調用此函式。
+第一步是在檔案附件元件的開頭附加預留位置div。 在下方的程式碼中，檔案附件元件是以其像片上傳的CSS類別名稱來識別。 JavaScript函式是與適用性表單相關聯之用戶端程式庫的一部分。 在初始化檔案附件元件的事件時調用此函式。
 
 ```javascript
 /**
@@ -36,7 +37,7 @@ function addTempImage(){
 
 ### 顯示內嵌影像
 
-在用戶上載映像後，在檔案附件元件的提交事件中調用下面列出的函式。 函式將上載的檔案對象作為參數接收。
+在用戶上載映像後，將在檔案附件元件的提交事件中調用以下列出的函式。 函式會以引數的形式接收上傳的檔案物件。
 
 ```javascript
 /**
@@ -64,7 +65,7 @@ function consumeImage (file) {
 
 ### 在伺服器上部署
 
-* 下載並安裝 [客戶端庫](assets/inline-image-client-library.zip) 在實例AEM上使AEM用包管理器。
-* 下載並安裝 [樣式](assets/inline-image-af.zip) 使用包管AEM理器在您AEM的實例上。
-* 將瀏覽器指向 [添加內聯映像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
-* 按一下「Attach your photo」按鈕添加影像
+* 下載並安裝 [用戶庫](assets/inline-image-client-library.zip) 在AEM例項上使用AEM套件管理器。
+* 下載並安裝 [範例表單](assets/inline-image-af.zip) 在您的AEM例項上使用AEM套件管理器。
+* 將瀏覽器指向 [新增內嵌影像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* 按一下「附加您的照片」按鈕以添加影像
