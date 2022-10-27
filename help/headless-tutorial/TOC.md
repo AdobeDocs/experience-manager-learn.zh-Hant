@@ -2,14 +2,15 @@
 user-guide-title: AEM Headless 快速入門
 user-guide-description: 端對端的教學課程，說明如何使用 AEM Headless 來建立和公開內容。
 breadcrumb-title: AEM Headless 教學課程
-version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
+sub-product: Experience Manager Sites
+version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: 680ed62141b853daf104a827067ca6d5a209796d
+source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 19%
+source-wordcount: '268'
+ht-degree: 18%
 
 ---
 
@@ -107,7 +108,9 @@ ht-degree: 19%
    + [6 — 公開AEM發佈中的內容以供傳送](./content-services/chapter-6.md)
    + [7 — 從行動應用程式使用AEM內容服務](./content-services/chapter-7.md)
 + 程式碼範例 {#code-samples}
-   + [React應用程式](./graphql/code-samples/react-app.md)
-   + [Angular應用程式](./graphql/code-samples/angular-app.md)
-   + [反應元件](./graphql/code-samples/react-component.md)
-   + [JavaScript篩選器](./graphql/code-samples/javascript-filter.md)
+   + [篩選React應用程式](./graphql/code-samples/filtering-react-app.md)
+   + [篩選Angular應用程式](./graphql/code-samples/filtering-angular-app.md)
+   + [篩選Vue應用程式](./graphql/code-samples/filtering-vue-app.md)
+   + [使用jQuery和Handlebars進行篩選](./graphql/code-samples/filtering-jquery-handlebars.md)
+   + [基本React應用程式](./graphql/code-samples/basic-react-app.md)
+   + [基本Next.js應用程式](./graphql/code-samples/basic-nextjs-app.md)
