@@ -7,9 +7,9 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
+source-git-commit: a21b78456354c18ad137e69a5d18258d652169b1
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '271'
 ht-degree: 18%
 
 ---
@@ -109,6 +109,7 @@ ht-degree: 18%
    + [7 — 從行動應用程式使用AEM內容服務](./content-services/chapter-7.md)
 + 程式碼範例 {#code-samples}
    + [篩選React應用程式](./graphql/code-samples/filtering-react-app.md)
+   + [篩選預設應用程式](./graphql/code-samples/filtering-preact-app.md)
    + [篩選Angular應用程式](./graphql/code-samples/filtering-angular-app.md)
    + [篩選Vue應用程式](./graphql/code-samples/filtering-vue-app.md)
    + [使用jQuery和Handlebars進行篩選](./graphql/code-samples/filtering-jquery-handlebars.md)
