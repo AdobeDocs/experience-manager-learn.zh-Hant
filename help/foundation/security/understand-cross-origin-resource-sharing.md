@@ -2,7 +2,7 @@
 title: 了解使用AEM的跨原始資源共用(CORS)
 description: Adobe Experience Manager的跨原始資源共用(CORS)方便了非AEM Web屬性向AEM進行用戶端呼叫（驗證和未驗證），以擷取內容或直接與AEM互動。
 version: 6.4, 6.5
-sub-product: foundation, content-services, sites
+sub-product: Experience Manager, Experience Manager Sites
 topics: security, development, content-delivery
 activity: understand
 audience: architect, developer
@@ -11,7 +11,7 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 1%
@@ -129,7 +129,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 
 一般而言，在Dispatcher快取內容時，相同的考量可套用至Dispatcher快取CORS回應標題。 下表定義 [!DNL CORS] 標題(因此 [!DNL CORS] 請求)。
 
-| 可快取 | 環境 | 驗證狀態 | 說明 |
+| 可快取 | 環境 | 驗證狀態 | 解釋 |
 |-----------|-------------|-----------------------|-------------|
 | 否 | AEM 發佈 | 已驗證 | AEM Author上的Dispatcher快取限於靜態、非製作的資產。 這樣就很難且不切實際地在AEM作者上快取大部分資源，包括HTTP回應標題。 |
 | 否 | AEM 發佈 | 已驗證 | 避免在已驗證的請求上快取CORS標題。 這符合未快取已驗證請求的一般指引，因為很難判斷要求使用者的驗證/授權狀態將如何影響傳送的資源。 |

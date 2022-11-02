@@ -1,7 +1,7 @@
 ---
 title: 使用AEM體驗片段
 description: 體驗片段可讓內容作者在各管道（包括Sites頁面和協力廠商系統）重複使用內容。
-sub-product: sites, content-services
+sub-product: Experience Manager Sites
 feature: Experience Fragments
 topic: Content Management
 role: Architect, Developer, Admin, User
@@ -12,7 +12,7 @@ kt: 194
 thumbnail: 331785.jpg
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
-source-git-commit: db76980966ece967af23c1e6423c5773c851f469
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 2%

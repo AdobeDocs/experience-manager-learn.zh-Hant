@@ -1,7 +1,7 @@
 ---
 title: 僅限Placement(FPO)轉譯
 description: Adobe Experience Manager資產現在可供設計人員和創意使用者在喜愛的Adobe Creative Cloud案頭應用程式中使用。 Adobe Creative Cloud企業版的Adobe資產連結擴充功能可擴充搜尋和瀏覽、排序、預覽、上傳資產、結帳、修改、簽入及檢視AEM資產的中繼資料，這些功能可在Adobe Photoshop、InDesign和Illustrator等Creative Cloud工具中使用。
-sub-product: assets
+sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: Cloud Service
 kt: 4916
@@ -10,7 +10,7 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: 940608db-6e84-441a-b031-e8cf52459597
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%

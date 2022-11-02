@@ -2,7 +2,6 @@
 title: Dynamic Media Classic最佳實務教學課程
 description: Dynamic Media Classic是客戶建立、撰寫和傳送多媒體內容的中心。 本最佳實務教學課程旨在協助Dynamic Media Classic的目前和新使用者，更全面了解他們可以透過Adobe運用這項功能強大的多媒體解決方案做些什麼。 在本教學課程中，您將了解Dynamic Media Classic的功能，並簡要了解其核心功能和使用者介面。
 doc-type: tutorial
-topics: best-practices, development, authoring, configuring
 audience: all
 activity: develop, use
 feature: Dynamic Media Classic
@@ -10,7 +9,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 975b85af-ca6a-419e-ab2a-6e1781bfee4a
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 0%
