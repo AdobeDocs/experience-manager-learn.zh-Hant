@@ -9,7 +9,7 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 565d81a4-2918-44ea-a3e9-ed79f246f08a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 * 確認表單是以 **SignMultipleForms** 範本。 這可確保表單已預先填入從資料庫擷取的資料。
 
-* 表單必須設定為使用Adobe Sign，且signer1欄位必須與客戶電子郵件欄位相關聯
+* 表單必須設定為使用Acrobat Sign，且signer1欄位必須與客戶電子郵件欄位相關聯
 * 表單也需要與名為 **getnextform**
 * 表單需要使用簽名步驟元件。
 * 表單也必須使用自訂 **簽署多個表單** 元件。 此元件可讓您導覽至下一個表單以登入套件。

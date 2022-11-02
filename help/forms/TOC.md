@@ -7,7 +7,7 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 3%
@@ -136,11 +136,11 @@ ht-degree: 3%
 + HTML5 表單{#html5-forms}
    + [建立HTML5表單](html5-forms/create-html5-form.md)
    + [處理HTML5表單提交](html5-forms/handle-html5-form-submission.md)
-+ AEM Forms和Adobe Sign{#forms-and-sign}
++ AEM Forms和Acrobat Sign{#forms-and-sign}
    + [簡介](aem-forms-and-adobe-sign/introduction.md)
    + [設定SSL](aem-forms-and-adobe-sign/set-up-ssl.md)
-   + [建立Adobe Sign API應用程式](aem-forms-and-adobe-sign/create-adobe-sign-api-application.md)
-   + [建立Adobe Sign雲端設定](aem-forms-and-adobe-sign/create-adobe-sign-cloud-configuration.md)
+   + [建立Acrobat Sign API應用程式](aem-forms-and-adobe-sign/create-adobe-sign-api-application.md)
+   + [建立Acrobat Sign雲端設定](aem-forms-and-adobe-sign/create-adobe-sign-cloud-configuration.md)
    + [建立工作流以發送要簽名的文檔](aem-forms-and-adobe-sign/create-workflow-to-send-document-for-signing.md)
    + [建立和設定最適化表單](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [為單一簽署者設定最適化表單](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
@@ -148,7 +148,7 @@ ht-degree: 3%
    + [設定Automated forms conversion服務](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [將PDF表單轉換為最適化表單](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [設定轉換的最適化表單](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
-   + [搭配Adobe Sign使用XDP範本](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
+   + [搭配Acrobat Sign使用XDP範本](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
 + 簽署多個Forms{#sign-multiple-documents}
    + [簡介](sign-multiple-documents/introduction.md)
    + [配置資料源](sign-multiple-documents/configure-data-source.md)

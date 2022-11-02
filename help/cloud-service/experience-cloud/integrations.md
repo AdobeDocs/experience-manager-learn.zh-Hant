@@ -11,7 +11,7 @@ thumbnail: KT-10718.png
 last-substantial-update: 2022-10-02T00:00:00Z
 mini-toc-levels: 1
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 9%
@@ -45,7 +45,7 @@ ht-degree: 9%
 
 ## Adobe Acrobat Sign
 
-Adobe Acrobat Sign(前身為Adobe Sign)改善法律、銷售、薪資、HR和其他領域的檔案處理工作流程，以啟用AEM Forms最適化表單的電子簽名工作流程。
+Adobe Acrobat Sign(前身為Acrobat Sign)改善法律、銷售、薪資、HR和其他領域的檔案處理工作流程，以啟用AEM Forms最適化表單的電子簽名工作流程。
 
 ### AEM Forms
 

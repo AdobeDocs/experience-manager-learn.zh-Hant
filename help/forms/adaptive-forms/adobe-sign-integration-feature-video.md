@@ -1,7 +1,7 @@
 ---
-title: 將Adobe Sign與AEM Forms搭配使用
-description: 將Adobe Sign與AEM Forms搭配使用
-feature: Adobe Sign
+title: 將Acrobat Sign與AEM Forms搭配使用
+description: 將Acrobat Sign與AEM Forms搭配使用
+feature: Acrobat Sign
 role: Admin
 level: Beginner
 uuid: cbccea0f-969c-445d-9390-a236bb1fd2c4
@@ -14,7 +14,7 @@ index: y
 internal: n
 snippet: y
 last-substantial-update: 2020-10-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
@@ -22,13 +22,13 @@ ht-degree: 0%
 ---
 
 
-# 將Adobe Sign與AEM Forms搭配使用{#using-adobe-sign-with-aem-forms}
+# 將Acrobat Sign與AEM Forms搭配使用{#using-adobe-sign-with-aem-forms}
 
-將Adobe Sign與AEM Forms搭配使用
+將Acrobat Sign與AEM Forms搭配使用
 
 >[!VIDEO](https://video.tv.adobe.com/v/18696?quality=9&learn=on)
 
-*此影片會逐步說明設定Adobe Sign雲端服務以及將多個簽名欄位新增至AEM最適化表單的程式。*
+*此影片會逐步說明設定Acrobat Sign雲端服務以及將多個簽名欄位新增至AEM最適化表單的程式。*
 
 >[!NOTE]
 >

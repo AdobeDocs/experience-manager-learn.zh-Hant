@@ -4,7 +4,7 @@ description: 供初學者和經驗豐富的AEM Forms開發人員使用的AEM For
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 3%
@@ -140,7 +140,7 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
     </a>
     </div>
     <p>
-    <em>租戶與房東之間的租賃協定，由AEM Forms和Adobe Sign填寫並簽署</em>
+    <em>租戶與房東之間的租賃協定，由AEM Forms和Acrobat Sign填寫並簽署</em>
     <p>
   </td>
   <td>
@@ -153,7 +153,7 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
     </a>
     </div>
     <p>
-    <em>動態建立NDA，並使用Adobe Sign傳送以進行簽署</em>
+    <em>動態建立NDA，並使用Acrobat Sign傳送以進行簽署</em>
     </p>
   </td>
   <td>
@@ -166,7 +166,7 @@ Adobe Experience Manager(AEM)提供簡單易用的解決方案，可建立、管
       </a>
     </div>
     <p>
-    <em>使用Forms和Adobe Sign順暢地簽署多份檔案</em>
+    <em>使用Forms和Acrobat Sign順暢地簽署多份檔案</em>
     <p>
   </td>
 </tr>

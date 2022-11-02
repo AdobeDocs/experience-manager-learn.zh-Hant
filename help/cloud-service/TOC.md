@@ -5,7 +5,7 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager
 version: Cloud Service
 team: TM
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 20%
@@ -206,10 +206,10 @@ ht-degree: 20%
       + [將工作流儲存外部化](./forms/create-aem-workflow/externalize-workflow.md)
       + [建立工作流模型](./forms/create-aem-workflow/create-workflow.md)
       + [觸發工作流程](./forms/create-aem-workflow/configure-af.md)
-   + Adobe Sign搭配AEM Forms{#forms-and-sign}
+   + Acrobat Sign搭配AEM Forms{#forms-and-sign}
       + [簡介](./forms/forms-and-sign/introduction.md)
-      + [Adobe Sign API應用程式](./forms/forms-and-sign/create-sign-api-application.md)
-      + [Adobe 簽署雲端組態](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+      + [Acrobat Sign API應用程式](./forms/forms-and-sign/create-sign-api-application.md)
+      + [Acrobat Sign雲端設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [建立最適化表單](./forms/forms-and-sign/create-adaptive-form.md)
       + [為填寫和簽名進行配置](./forms/forms-and-sign/configure-form-fill-and-sign.md)
    + 與Microsoft Power Automate整合{#forms-cs-and-power-automate}

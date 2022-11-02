@@ -8,7 +8,7 @@ role: User
 level: Beginner
 exl-id: a2d21f2e-3dbb-454f-8a02-101dc3af9b1e
 last-substantial-update: 2020-02-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
@@ -34,5 +34,5 @@ AEM 6.3在此版本中導入了數項新功能和增強功能，以簡化最適�
 * [鍵盤快速鍵可加快內容製作體驗](https://helpx.adobe.com/aem-forms/6-3/keyboard-shortcuts.html#AdaptiveFormEditor)
 * [支援JSON結構以建立最適化表單](https://helpx.adobe.com/aem-forms/6-3/adaptive-form-json-schema-form-model.html)
 * [最適化表單中的CAPTCHA](https://helpx.adobe.com/aem-forms/6-3/captcha-adaptive-forms.html)
-* [增強Adobe Sign整合](https://helpx.adobe.com/aem-forms/6-3/working-with-adobe-sign.html)
+* [增強Acrobat Sign整合](https://helpx.adobe.com/aem-forms/6-3/working-with-adobe-sign.html)
 * [非同步提交表單](https://helpx.adobe.com/aem-forms/6-3/asynchronous-submissions-adaptive-forms.html)
