@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
+source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1725'
 ht-degree: 3%
 
 ---
@@ -110,6 +110,7 @@ ht-degree: 3%
    + [空間工具欄按鈕](ui-tips-tricks/toolbar-buttons.md)
    + [使用巢狀面板導覽標籤](ui-tips-tricks/nested-panels.md)
    + [將圖示新增至導覽標籤](ui-tips-tricks/active-complete.md)
+   + [自動完成欄位](ui-tips-tricks/auto-complete.md)
 + 自訂收件匣{#inbox-customization}
    + [簡介](inbox-customization/introduction.md)
    + [新增自訂欄](inbox-customization/add-married-column.md)
