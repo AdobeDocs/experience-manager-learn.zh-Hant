@@ -9,7 +9,7 @@ level: Beginner
 kt: 11245
 last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
-source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
+source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -56,7 +56,7 @@ ht-degree: 0%
 * 開啟命令提示符。 在我的案例中，導覽至您專案的資料夾(c:\aemformsbundles\AEMFormsProcessStep)。 執行以下命令
 
 ```java
-mvn clean install -pAutoInstallSinglePackage
+mvn clean install -PautoInstallSinglePackage
 ```
 
 如果一切順利，則會將套件與協力廠商套件一併安裝至您的AEM執行個體。 您可以使用 [felix web console](http://localhost:4502/system/console/bundles). 協力廠商套件組合位於 `crx` 存放庫，如下所示

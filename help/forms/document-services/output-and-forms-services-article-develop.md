@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 46df7b13401ee3497c871eac3b8158148c2e6a04
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,8 @@ ht-degree: 0%
 
 在本文中，我們將審視以下內容
 
-* 輸出服務 — 通常，此服務用於將xml資料與xdp範本合併，或以pdf產生平面化的pdf。 如需更多詳細資訊，請參閱[javado](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) （輸出服務）。
-* FormsService — 這項服務用途廣泛，可讓您從匯出檔案匯入資料，並匯入PDF檔案。 如需更多詳細資訊，請參閱 [javado](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html) Forms局。
+* 輸出服務 — 通常，此服務用於將xml資料與xdp範本合併，或以pdf產生平面化的pdf。 如需更多詳細資訊，請參閱 [javado](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) （輸出服務）。
+* FormsService — 這項服務用途廣泛，可讓您從匯出檔案匯入資料，並匯入PDF檔案。 如需更多詳細資訊，請參閱 [javado](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) Forms局。
 
 
 下列程式碼片段會從PDF檔案匯出資料
