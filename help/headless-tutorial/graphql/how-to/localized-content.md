@@ -1,6 +1,6 @@
 ---
-title: 將本地化內容與無AEM頭
-description: 瞭解如何使用GraphQL查詢AEM本地化內容。
+title: 搭配AEM Headless使用本地化內容
+description: 了解如何使用GraphQL查詢AEM中的本地化內容。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless
@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: 4fa84b0461cbdf2e25336259c4128be5585b8787
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
@@ -16,29 +16,29 @@ ht-degree: 0%
 ---
 
 
-# 帶無頭的本地化AEM內容
+# 使用AEM Headless進行本地化內容
 
-提AEM供 [翻譯整合框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) 用於無頭內容，允許輕鬆翻譯內容片段和支援資產以跨語言環境使用。 這是用於翻譯其他內容的同AEM一框架，如頁面、體驗片段、資產和Forms。 一次 [已翻譯無頭內容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html)已發佈，可供無頭應用程式使用。
+AEM提供 [翻譯整合架構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) 針對無頭內容，可輕鬆翻譯內容片段和支援資產，以便跨地區設定使用。 這是用來轉譯其他AEM內容(例如頁面、體驗片段、資產和Forms)的相同架構。 一次 [無頭內容已翻譯](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html)，且已發佈，可供無頭應用程式使用。
 
 ## 資產資料夾結構{#assets-folder-structure}
 
-確保中的本地化內容AEM片段 [推薦定位結構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html#recommended-structure)。
+請確定AEM中的本地化內容片段遵循 [推薦的定位結構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html#recommended-structure).
 
-![本地化AEM資產資料夾](./assets/localized-content/asset-folders.jpg)
+![本地化的AEM資產資料夾](./assets/localized-content/asset-folders.jpg)
 
-區域設定資料夾必須是同級資料夾，而資料夾名稱（而不是標題）必須是有效的 [ISO 639-1代碼](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 表示資料夾中包含的內容的區域設定。
+區域設定資料夾必須是同級資料夾，而資料夾名稱（而非標題）必須是有效的 [ISO 639-1代碼](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 表示資料夾中所含內容的地區設定。
 
-區域設定代碼也是用於篩選GraphQL查詢返回的內容片段的值。
+地區代碼也是用於篩選GraphQL查詢返回的內容片段的值。
 
-| 區域設定代碼 | AEM路徑 | 內容區域設定 |
+| 地區代碼 | AEM路徑 | 內容地區 |
 |--------------------------------|----------|----------|
-| de | /content/dam/.../**德**/.. | 德國內容 |
-| en | /content/dam/.../**恩**/.. | 英語內容 |
-| es | /content/dam/.../**es**/.. | 西班牙語內容 |
+| de | /content/dam/.../**de**/.. | 德文內容 |
+| en | /content/dam/.../**en**/.. | 英文內容 |
+| es | /content/dam/.../**es**/.. | 西班牙文內容 |
 
-## GraphQL永續查詢
+## GraphQL持續查詢
 
-提AEM供 `_locale` GraphQL篩選器，它按區域設定代碼自動篩選內容。 例如，查詢 [WKND參考演示項目](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 可以使用新的永續查詢 `wknd-shared/adventures-by-locale` 定義為：
+AEM提供 `_locale` GraphQL篩選器，可依地區設定代碼自動篩選內容。 例如，查詢 [WKND參考示範專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 可對新的持續查詢完成 `wknd-shared/adventures-by-locale` 定義為：
 
 ```graphql
 query($locale: String!) {
@@ -51,19 +51,19 @@ query($locale: String!) {
 }
 ```
 
-的 `$locale` 在 `_locale` filter需要區域設定代碼(例如 `en`。 `en_us`或 `de`) [資AEM產資料夾基礎本地化慣例](#assets-folder-structure)。
+此 `$locale` 變數 `_locale` 篩選器需要地區代碼(例如 `en`, `en_us`，或 `de`) [AEM資產資料夾基礎本地化慣例](#assets-folder-structure).
 
-## 反應示例
+## React範例
 
-讓我們建立一個簡單的React應用程式，該應用程式控制根據區域設定選擇器從AEM中查詢的Adventure內容 `_locale` 的子菜單。
+讓我們建立一個簡單的React應用程式，可根據使用的地區設定選取器，控制要從AEM中查詢的Adventure內容 `_locale` 篩選。
 
-當 __英語__ 在區域設定選擇器中選擇，然後在下面的「英語冒險內容片段」 `/content/dam/wknd/en` 返回， __西班牙語__ 選中，然後在下面選擇「西班牙文內容片段」 `/content/dam/wknd/es`等等。
+當 __英文__ 在地區選取器中選取，然後選取下方的英文冒險內容片段 `/content/dam/wknd/en` 傳回時 __西班牙文__ ，然後選取下方的西班牙文內容片段 `/content/dam/wknd/es`、等等。
 
-![本地化的React示例應用](./assets/localized-content/react-example.png)
+![本地化React範例應用程式](./assets/localized-content/react-example.png)
 
 ### 建立 `LocaleContext`{#locale-context}
 
-首先，建立 [反應上下文](https://reactjs.org/docs/context.html) 允許在React應用程式的元件中使用區域設定。
+首先，建立 [React內容](https://reactjs.org/docs/context.html) 允許在React應用程式的元件中使用地區設定。
 
 ```javascript
 // src/LocaleContext.js
@@ -80,11 +80,11 @@ const LocaleContext = React.createContext({
 export default LocaleContext;
 ```
 
-### 建立 `LocaleSwitcher` 反應組分{#locale-switcher}
+### 建立 `LocaleSwitcher` 反應元件{#locale-switcher}
 
-接下來，建立一個區域設定切換器React元件，該元件 [區域設定上下文](#locale-context) 值。
+接下來，建立設定為 [LocaleContext的](#locale-context) 值。
 
-此區域設定值用於驅動GraphQL查詢，確保它們僅返回與所選區域設定匹配的內容。
+此區域設定值用於驅動GraphQL查詢，確保它們只返回與所選區域設定匹配的內容。
 
 ```javascript
 // src/LocaleSwitcher.js
@@ -106,13 +106,13 @@ export default function LocaleSwitcher() {
 }
 ```
 
-### 使用 `_locale` 濾波器{#adventures}
+### 使用 `_locale` 篩選{#adventures}
 
-Adventures元件按區域設AEM置查詢所有冒險，並列出其標題。 這是通過使用 `_locale` 的子菜單。
+歷險元件會依地區設定查詢AEM的所有歷險，並列出其標題。 這是透過將React內容中儲存的地區設定值傳遞至查詢來達成的，方法是使用 `_locale` 篩選。
 
-此方法可以擴展到應用程式中的其他查詢，確保所有查詢僅包括用戶的區域設定選擇指定的內容。
+此方法可擴展到應用程式中的其他查詢，確保所有查詢僅包括由用戶的區域設定選擇指定的內容。
 
-針對的查詢AEM在自定義React掛接中執行 [getAdventuresByLocale，有關查詢GraphQL文檔的詳細AEM說明](./aem-headless-sdk.md)。
+對AEM的查詢會在自訂React鈎點中執行 [getAdventuresByLocale，如需查詢AEM GraphQL檔案的詳細說明](./aem-headless-sdk.md).
 
 ```javascript
 // src/Adventures.js
@@ -140,7 +140,7 @@ export default function Adventures() {
 
 ### 定義 `App.js`{#app-js}
 
-最後，將React應用程式與 `LanguageContext.Provider` 和設定區域設定值。 這允許其它反應元件， [區域設定切換器](#locale-switcher), [冒險](#adventures) 共用區域設定選擇狀態。
+最後，將React應用程式包裝在中，將其與 `LanguageContext.Provider` 和設定地區設定值。 這可讓其他React元件， [地區切換器](#locale-switcher)，和 [冒險](#adventures) 共用區域設定選擇狀態。
 
 ```javascript
 // src/App.js
