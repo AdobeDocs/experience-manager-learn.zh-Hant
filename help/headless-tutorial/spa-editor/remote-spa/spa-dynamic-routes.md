@@ -7,11 +7,13 @@ role: Developer, Architect
 level: Beginner
 kt: 7636
 thumbnail: kt-7636.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '916'
-ht-degree: 0%
+source-wordcount: '901'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +23,7 @@ ht-degree: 0%
 
 ![動態路由和可編輯的元件](./assets/spa-dynamic-routes/intro.png)
 
-Adventure Detail SPA路由定義為 `/adventure:path` where `path` 是WKND探險（內容片段）的路徑，可顯示相關詳細資訊。
+Adventure Detail SPA路由定義為 `/adventure/:slug` where `slug` 是「冒險內容片段」上的唯一識別碼屬性。
 
 ## 將SPA URL對應至AEM頁面
 
@@ -34,8 +36,8 @@ Adventure Detail SPA路由定義為 `/adventure:path` where `path` 是WKND探險
 | 遠程SPA路由 | AEM頁面路徑 |
 |------------------------------------|--------------------------------------------|
 | / | /content/wknd-app/us/en/home |
-| /adventure:/content/dam/wknd/en/adventures/bali-surf-camp/__巴釐島衝浪營__ | /content/wknd-app/us/en/home/adventure/__巴釐島衝浪營__ |
-| /adventure:/content/dam/wknd/en/adventures/beervana-portland/__貝爾瓦納 — 波特蘭__ | /content/wknd-app/us/en/home/adventure/__貝爾瓦納因波特蘭__ |
+| /adventure/__巴釐島衝浪營__ | /content/wknd-app/us/en/home/adventure/__巴釐島衝浪營__ |
+| /adventure/__貝爾瓦納 — 波特蘭__ | /content/wknd-app/us/en/home/adventure/__貝爾瓦納因波特蘭__ |
 
 因此，根據此對應，我們必須在以下位置建立兩個新AEM頁面：
 
@@ -84,52 +86,51 @@ Adventure Detail SPA路由定義為 `/adventure:path` where `path` 是WKND探險
 
 ## 更新WKND應用程式
 
-我們把 `<AEMResponsiveGrid...>` 在 [最後一章](./spa-container-component.md)，進入 `AdventureDetail` SPA元件，建立可編輯的容器。
+我們把 `<ResponsiveGrid...>` 在 [最後一章](./spa-container-component.md)，進入 `AdventureDetail` SPA元件，建立可編輯的容器。
 
-### 放置AEMResponsiveGrid SPA元件
+### 放置ResponsiveGrid SPA元件
 
-將 `<AEMResponsiveGrid...>` 在 `AdventureDetail` 元件會在該路由中建立可編輯的容器。 訣竅在於，多條路線都使用 `AdventureDetail` 要呈現的元件，我們必須動態調整  `<AEMResponsiveGrid...>'s pagePath` 屬性。 此 `pagePath` 必須衍生，以根據路由的例項顯示的歷程，指向對應的AEM頁面。
+將 `<ResponsiveGrid...>` 在 `AdventureDetail` 元件會在該路由中建立可編輯的容器。 訣竅在於，多條路線都使用 `AdventureDetail` 要呈現的元件，我們必須動態調整  `<ResponsiveGrid...>'s pagePath` 屬性。 此 `pagePath` 必須衍生，以根據路由的例項顯示的歷程，指向對應的AEM頁面。
 
-1. 開啟和編輯 `react-app/src/components/AdventureDetail.js`
-1. 在前面新增下列行 `AdventureDetail(..)'s` 秒 `return(..)` 語句，該語句從內容片段路徑派生冒險名。
-
-   ```
-   ...
-   // Get the last segment of the Adventure Content Fragment path to used to generate the pagePath for the AEMResponsiveGrid
-   const adventureName = _path.split('/').pop();
-   ...
-   ```
-
-1. 匯入 `AEMResponsiveGrid` 元件並放在上面 `<h2>Itinerary</h2>` 元件。
-1. 在 `<AEMResponsiveGrid...>` 元件
-   + `pagePath = '/content/wknd-app/us/en/home/adventure/${adventureName}'`
+1. 開啟和編輯 `react-app-/src/components/AdventureDetail.js`
+1. 匯入 `ResponsiveGrid` 元件並放在上面 `<h2>Itinerary</h2>` 元件。
+1. 在 `<ResponsiveGrid...>` 元件。 請注意 `pagePath` 屬性會新增目前的 `slug` 會根據上述定義的對應，對應至探險頁面。
+   + `pagePath = '/content/wknd-app/us/en/home/adventure/${slug}'`
    + `itemPath = 'root/responsivegrid'`
 
-   這會指示 `AEMResponsiveGrid` 從AEM資源擷取其內容的元件：
+   這會指示 `ResponsiveGrid` 從AEM資源擷取其內容的元件：
 
-   + `/content/wknd-app/us/en/home/adventure/${adventureName}/jcr:content/root/responsivegrid`
+   + `/content/wknd-app/us/en/home/adventure/${slug}/jcr:content/root/responsivegrid`
 
 
 更新 `AdventureDetail.js` 填入下列行：
 
-```
+```javascript
 ...
-import AEMResponsiveGrid from '../components/aem/AEMResponsiveGrid';
+import { ResponsiveGrid } from '@adobe/aem-react-editable-components';
 ...
 
-function AdventureDetail(props) {
+function AdventureDetailRender(props) {
     ...
-    // Get the last segment of the Adventure Content Fragment path to used to generate the pagePath for the AEMResponsiveGrid
-    const adventureName = _path.split('/').pop();
+    // Get the slug from the React route parameter, this will be used to specify the AEM Page to store/read editable content from
+    const { slug } = useParams();
 
     return(
         ...
-        <AEMResponsiveGrid 
-            pagePath={`/content/wknd-app/us/en/home/adventure/${adventureName}`}
-            itemPath="root/responsivegrid"/>
-            
-        <h2>Itinerary</h2>
-        ...
+        // Pass the slug in
+        function AdventureDetailRender({ title, primaryImage, activity, adventureType, tripLength, 
+                groupSize, difficulty, price, description, itinerary, references, slug }) {
+            ...
+            return (
+                ...
+                <ResponsiveGrid 
+                    pagePath={`/content/wknd-app/us/en/home/adventure/${slug}`}
+                    itemPath="root/responsivegrid"/>
+                    
+                <h2>Itinerary</h2>
+                ...
+            )
+        }
     )
 }
 ```
@@ -140,7 +141,7 @@ function AdventureDetail(props) {
 
 ## 在AEM中製作容器
 
-使用 `<AEMResponsiveGrid...>` 就位，及其 `pagePath` 我們會嘗試在其中編寫內容，以根據轉譯的冒險動態設定。
+使用 `<ResponsiveGrid...>` 就位，及其 `pagePath` 我們會嘗試在其中編寫內容，以根據轉譯的冒險動態設定。
 
 1. 登入AEM作者
 1. 導覽至 __網站> WKND應用程式>我們>結束__
@@ -169,7 +170,7 @@ function AdventureDetail(props) {
 
 ## 恭喜！
 
-恭喜！ 您已在SPA中新增動態路由的製作功能！
+恭喜！您已在SPA中新增動態路由的製作功能！
 
 + 將AEM React可編輯元件的ResponsiveGrid元件新增至動態路由
 + 建立AEM頁面，以支援SPA（Bali Surf Camp和Beervana，在Portland）中編寫兩條特定路線

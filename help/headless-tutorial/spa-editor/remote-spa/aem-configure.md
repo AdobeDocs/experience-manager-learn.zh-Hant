@@ -7,10 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7631
 thumbnail: kt-7631.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1246'
 ht-degree: 1%
 
 ---
@@ -26,26 +28,34 @@ ht-degree: 1%
 + 定義SPA至AEM URL對應的子專案
 + OSGi配置資料夾
 
+## 從GitHub下載基本專案
+
+下載 `aem-guides-wknd-graphql` 來自Github.com的專案。 這將包含本專案中使用的一些基線檔案。
+
+```
+$ mkdir -p ~/Code
+$ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd remote-spa-tutorial
+```
+
 ## 建立AEM專案
 
-建立AEM專案，以管理設定和基準內容。
+建立AEM專案，以管理設定和基準內容。 此專案將在複製的內產生 `aem-guides-wknd-graphql` 專案的 `remote-spa-tutorial` 檔案夾。
 
 _請一律使用 [AEM原型](https://github.com/adobe/aem-project-archetype)._
 
-
 ```
-$ mkdir -p ~/Code/wknd-app
-$ cd ~/Code/wknd-app
+$ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial
 $ mvn -B archetype:generate \
  -D archetypeGroupId=com.adobe.aem \
  -D archetypeArtifactId=aem-project-archetype \
- -D archetypeVersion=27 \
+ -D archetypeVersion=39 \
  -D aemVersion=cloud \
  -D appTitle="WKND App" \
  -D appId="wknd-app" \
  -D groupId="com.adobe.aem.guides.wkndapp" \
  -D frontendModule="react"
-$ mv ~/Code/wknd-app/wknd-app ~/Code/wknd-app/com.adobe.aem.guides.wknd-app
+$ mv ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/wknd-app ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app
 ```
 
 _最後一個命令只需更名AEM專案資料夾，如此即可清楚知道是AEM專案，不要與遠端SPA混淆__
@@ -67,7 +77,7 @@ AEM專案原型會產生下列元素，用以設定AEM以與SPA整合。
 
 由於SPA是遠端SPA，因此假設它是在AEM專案外部開發及管理。 若要避免衝突，請移除 `ui.frontend` 從部署中部署專案。 若 `ui.frontend` 「 」專案中未移除兩個SPA，此為「 」中提供的預設SPA `ui.frontend` 專案和遠端SPA會同時在AEM SPA編輯器中載入。
 
-1. 開啟AEM專案(`~/Code/wknd-app/com.adobe.aem.guides.wknd-app`)
+1. 開啟AEM專案(`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app`)
 1. 開啟根 `pom.xml`
 1. 註解 `<module>ui.frontend</module` 從 `<modules>` 清單
 
@@ -125,7 +135,7 @@ AEM專案原型會產生下列元素，用以設定AEM以與SPA整合。
 對應可透過 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html#root-level-mappings-1) 在 `/etc/map`.
 
 1. 在IDE中，開啟 `ui.content` 子項目
-1. 導航到  `src/main/content/jcr_root`
+1. 瀏覽到  `src/main/content/jcr_root`
 1. 建立資料夾 `etc`
 1. 在 `etc`，建立資料夾 `map`
 1. 在 `map`，建立資料夾 `http`
