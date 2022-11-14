@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b74dc2693071313a80ccaaea839b8e2087c9edaa
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1161'
 ht-degree: 3%
 
 ---
@@ -79,7 +79,7 @@ Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 請確保專
 
    等待15分鐘，讓Cloud Manager計畫配置網路基礎架構。
 
-1. 檢查環境是否已完成 __專用輸出IP地址__ 使用Cloud Manager API進行設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 從上一步的createNetworkInfrastructure HTTP請求中傳回。
+1. 檢查程式是否已完成 __專用輸出IP地址__ 使用Cloud Manager API進行設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 從上一步的createNetworkInfrastructure HTTP請求中傳回。
 
    __getNetworkInfrastructure HTTP請求__
 
@@ -91,11 +91,11 @@ Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 請確保專
        -H 'Content-Type: application/json'
    ```
 
-   確認HTTP回應包含 __狀態__ of __就緒__. 如果尚未準備好，請每隔幾分鐘重新檢查一次狀態。
+   確認HTTP回應包含 __狀態__ of __就緒__. 如果尚未就緒，請每隔幾分鐘重新檢查狀態。
 
 ## 按環境配置專用的輸出IP地址代理
 
-1. 啟用並設定 __專用輸出IP地址__ 使用Cloud Manager API在每個AEMas a Cloud Service環境上進行設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
+1. 設定 __專用輸出IP地址__ 使用Cloud Manager API在每個AEMas a Cloud Service環境上進行設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。
 
    __enableEnvironmentAdvancedNetworkingConfiguration HTTP請求__
 
@@ -164,6 +164,8 @@ Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 請確保專
    ```
 
    主機名不能是 `pinged`，因為這是進步 _not_ 和入口。
+
+   請注意 __專用輸出IP地址__ 共用給方案中所有AEMas a Cloud Service環境。
 
 1. 現在，您可以在自訂AEM程式碼和設定中使用專屬的輸出IP位址。 使用專用輸出IP位址時，所連線的外部服務AEMas a Cloud Service通常會設定為僅允許來自此專用IP位址的流量。
 
