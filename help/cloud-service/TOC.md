@@ -5,17 +5,17 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 0c381c166f55178e219ebd27c6641298491aa8f6
+source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 20%
+source-wordcount: '841'
+ht-degree: 19%
 
 ---
 
 
 # Adobe Experience Manager as a Cloud Service 教學課程 {#cloud-service}
 
-+ [總覽](./overview.md)
++ [概觀](./overview.md)
 + AEM as a Cloud Service 簡介{#introduction}
    + [什麼是AEMas a Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [進化](./introduction/evolution.md)
@@ -48,7 +48,7 @@ ht-degree: 20%
       + [Dispatcher 設定](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager API](./cloud-manager/devops/cloud-manager-apis.md)
 + 本機開發環境設定 {#local-development-environment-set-up}
-   + [總覽](./local-development-environment/overview.md)
+   + [概觀](./local-development-environment/overview.md)
    + [開發工具](./local-development-environment/development-tools.md)
    + [本機AEM執行階段](./local-development-environment/aem-runtime.md)
    + [本機Dispatcher工具](./local-development-environment/dispatcher-tools.md)
@@ -77,32 +77,34 @@ ht-degree: 20%
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + 除錯AEM{#debugging}
    + 為AEM SDK除錯{#debugging-aem-sdk}
-      + [總覽](./debugging/aem-sdk-local-quickstart/overview.md)
+      + [概觀](./debugging/aem-sdk-local-quickstart/overview.md)
       + [記錄檔](./debugging/aem-sdk-local-quickstart/logs.md)
       + [遠端偵錯](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi Web控制台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
    + 除錯AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}
-      + [總覽](./debugging/cloud-service/overview.md)
+      + [概觀](./debugging/cloud-service/overview.md)
       + [記錄檔](./debugging/cloud-service/logs.md)
       + [建置和部署](./debugging/cloud-service/build-and-deployment.md)
       + [開發人員控制台](./debugging/cloud-service/developer-console.md)
       + [存放庫瀏覽器](./debugging/cloud-service/repository-browser.md)
       + 風險{#risks}
          + [若干警告](./debugging/cloud-service/risks/traversals.md)
++ 內容傳送{#content-delivery}
+   + [URL重新導向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html)
 + 存取AEM{#accessing}
-   + [總覽](./accessing/overview.md)
+   + [概觀](./accessing/overview.md)
    + [Adobe IMS使用者](./accessing/adobe-ims-users.md)
    + [Adobe IMS使用者群組](./accessing/adobe-ims-user-groups.md)
    + [Adobe IMS產品設定檔](./accessing/adobe-ims-product-profiles.md)
    + [AEM使用者、群組和權限](./accessing/aem-users-groups-and-permissions.md)
    + [設定AEM存取權逐步說明](./accessing/walk-through.md)
 + 驗證{#authentication}
-   + [總覽](./authentication/authentication.md)
+   + [概觀](./authentication/authentication.md)
    + [SAML 2.0](./authentication/saml-2-0.md)
 + 高級網路{#networking}
-   + [總覽](./networking/advanced-networking.md)
+   + [概觀](./networking/advanced-networking.md)
    + [靈活的埠輸出](./networking/flexible-port-egress.md)
    + [專用的輸出IP地址](./networking/dedicated-egress-ip-address.md)
    + [虛擬專用網](./networking/vpn.md)
@@ -231,7 +233,7 @@ ht-degree: 20%
       + [測試表單提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [測試點按事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset compute擴充性{#asset-compute}
-   + [總覽](./asset-compute/overview.md)
+   + [概觀](./asset-compute/overview.md)
    + 設定{#set-up}
       + [帳戶和服務設定](./asset-compute/set-up/accounts-and-services.md)
       + [本地開發環境](./asset-compute/set-up/development-environment.md)

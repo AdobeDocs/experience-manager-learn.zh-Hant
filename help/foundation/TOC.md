@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation 教學課程
 user-guide-description: Adobe Experience Manager Foundation 的影片和教學課程系列。
 sub-product: Experience Manager
 index: y
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '222'
 ht-degree: 14%
 
 ---
@@ -14,12 +14,13 @@ ht-degree: 14%
 
 # AEM Foundation 影片和教學課程 {#foundation}
 
-+ [總覽](./overview.md)
++ [概觀](./overview.md)
 + 管理 {#administration}
    + [了解升級AEM的理由](./administration/understand-reasons-to-upgrade.md)
    + [使用oak-run.jar管理索引](./administration/use-oak-run-jar-to-manage-indexes.md)
    + [使用線上修訂清除](./administration/use-online-revision-clean-up.md)
    + [使用系統概述控制面板](./administration/use-the-system-overview-dashboard.md)
+   + [URL重新導向](./administration/url-redirection.md)
 + 驗證 {#authentication}
    + [OAuth驗證](authentication/oauth-code-sample-develop.md)
    + [設定公開/私密金鑰以與Adobe I/O搭配使用](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
