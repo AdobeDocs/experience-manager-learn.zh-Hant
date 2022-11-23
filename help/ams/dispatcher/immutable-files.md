@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '826'
 ht-degree: 1%
 
 ---
@@ -311,3 +311,5 @@ $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_w
 
 請注意，我們只變更了變更所需的片段，並運用基線組態檔隨附的現有包含和程式碼。  我們只需要勾勒出我們需要改變的要素。  讓事情變得簡單多了，而且讓我們能夠維護更少的代碼
 </div>
+
+[Next -> Dispatcher健康狀況檢查](./health-check.md)
