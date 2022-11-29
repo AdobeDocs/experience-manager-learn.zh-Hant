@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: fad7630d2d91d03b98a3982f73a689ef48700319
+source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1741'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 # AEM Forms 影片和教學課程 {#forms}
 
-+ [總覽](overview.md)
++ [概觀](overview.md)
 + [要遵循的最佳實務](adaptive-forms/best-practices-adaptive-forms.md)
 + [使用AEM作者設定OKTA驗證](adaptive-forms/single-sign-on-with-okta.md)
 + 建立第一個最適化表單 {#creating-your-first-adaptive-form}
@@ -167,6 +167,10 @@ ht-degree: 3%
    + [從xml文檔中提取節點](custom-workflow-steps/extract-xml-node.md)
    + [將文檔保存到檔案系統](custom-workflow-steps/write-payload-document.md)
    + [將提交的資料儲存在字串變數中](custom-workflow-steps/save-submitted-data-in-string-variable.md)
++ 自訂工作流程元件{#custom-workflow-component}
+   + [簡介](custom-workflow-component/introduction.md)
+   + [編寫java代碼](custom-workflow-component/custom-process-step-aem-workflow.md)
+   + [建立工作流程元件](custom-workflow-component/custom-workflow-component.md)
 + AEM工作流程中的變數{#variables-aem-workflow}
    + [簡介 — 工作流程中的變數](variables-aem-workflow/introduction.md)
    + [XML變數](variables-aem-workflow/part1.md)
