@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
+source-git-commit: df3afc60f765c18915eca3bb2d3556379383fafc
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1139'
 ht-degree: 1%
 
 ---
@@ -209,3 +209,5 @@ CSE可在負載平衡器設定中設定5個不同的指令碼，以變更將Disp
 此指令碼在使用時會檢查並記錄其正在播放的任何執行個體，但無論AEM是否傳回錯誤，都只會傳回正常。
 
 > `Note:` 當健康狀況檢查未如需要運作，且允許覆寫將AEM例項保留在負載平衡器時，就會使用此指令碼。
+
+[下一個 — > GIT符號連結](./git-symlinks.md)
