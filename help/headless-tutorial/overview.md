@@ -1,20 +1,20 @@
 ---
-title: AEM無頭Tutorials
-description: 有關如何使用Adobe Experience Manager as a Headless CMS的教學課程系列。
+title: TutorialsAEM中的無頭
+description: Adobe Experience Manager的Headless CMS教學課程系列。 依API、架構和範例應用程式探索教學課程。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
+source-git-commit: 567f0ae80d79796fc50994d31a64fb0ca79879f6
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 0%
+source-wordcount: '524'
+ht-degree: 1%
 
 ---
 
-# AEM無頭Tutorials{#aem-headless-tutorials}
+# TutorialsAEM中的無頭{#aem-headless-tutorials}
 
 Adobe Experience Manager(AEM)有多個選項可定義無頭端點，並將其內容傳送為JSON。 使用實作教學課程，探索如何使用各種選項，並選擇適合您的選項。
 
@@ -36,9 +36,7 @@ Adobe Experience Manager(AEM)有多個選項可定義無頭端點，並將其內
       <img alt="GraphQL API" src="./assets/graphql-icon.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
-    <strong>GraphQL API</strong>
-    </a>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html"><strong>GraphQL API</strong></a>
     </div>
     <p>
     <em>了解應用程式如何使用AEM GraphQL API來查詢內容。</em>
@@ -102,7 +100,7 @@ Adobe Experience Manager(AEM)有多個選項可定義無頭端點，並將其內
     </a>
     </div>
     <p>
-    <em>由AEM GraphQL API提供技術支援的Android™應用程式。</em>
+    <em>採用AEM GraphQL API技術的Android™應用程式。</em>
     </p>
   </td>
   <td>
@@ -137,7 +135,7 @@ Adobe Experience Manager(AEM)有多個選項可定義無頭端點，並將其內
     </a>
     </div>
     <p>
-    <em>在純無周邊情境下，使用GraphQL建立React JS應用程式。</em>
+    <em>以純無頭情境，使用GraphQL建立React JS應用程式。</em>
     <p>
   </td>
   <td>
