@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
+source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '866'
 ht-degree: 19%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 19%
    + [製作與發佈服務](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Cloud Manager {#cloud-manager}
-   + [計劃](./cloud-manager/programs.md)
+   + [程序](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
    + [CI/CD生產管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD非生產管道](./cloud-manager/cicd-non-production-pipeline.md)
@@ -53,6 +53,18 @@ ht-degree: 19%
    + [本機AEM執行階段](./local-development-environment/aem-runtime.md)
    + [本機Dispatcher工具](./local-development-environment/dispatcher-tools.md)
 + 開發{#developing}
+   + 擴充性{#extensibility}
+      + 內容片段主控台{#content-fragments}
+         + [概觀](./developing/extensibility/content-fragments/overview.md)
+         + [擴充功能註冊](./developing/extensibility/content-fragments/extension-registration.md)
+         + [標題功能表](./developing/extensibility/content-fragments/header-menu.md)
+         + [動作列](./developing/extensibility/content-fragments/action-bar.md)
+         + [模型](./developing/extensibility/content-fragments/modal.md)
+         + [Adobe I/O Runtime行動](./developing/extensibility/content-fragments/runtime-action.md)
+         + [測試](./developing/extensibility/content-fragments/test.md)
+         + [部署](./developing/extensibility/content-fragments/deploy.md)
+         + 範例擴充功能{#example-extensions}
+            + [大量屬性更新擴充功能](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
    + 開發基本知識{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本機開發環境](./developing/basics/local-development-environment.md)
@@ -146,7 +158,7 @@ ht-degree: 19%
       + [Code Repository Modernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
       + [Dispatcher 轉換工具](./migration/cloud-acceleration-manager/dispatcher-converter.md)
       + [索引轉換器](./migration/cloud-acceleration-manager/index-converter.md)
-      + [資產工作流程移轉工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
+      + [資產工作流程移轉 工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [導覽Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + 表單{#forms}
