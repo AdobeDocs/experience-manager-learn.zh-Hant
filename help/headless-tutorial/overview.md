@@ -7,9 +7,9 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 567f0ae80d79796fc50994d31a64fb0ca79879f6
+source-git-commit: 758fa40240b12f5bfa83ac5c0300b71f41e2326d
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '503'
 ht-degree: 1%
 
 ---
@@ -21,11 +21,6 @@ Adobe Experience Manager(AEM)有多個選項可定義無頭端點，並將其內
 >[!TIP]
 >
 >本教學課程系列專為偏好使用 **學習**. 如果您偏好從頭開始學習概念，請查看 [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). 這套教學課程和歷程相輔相成。
-
->[!CONTEXTUALHELP]
->id="aemcloud_sites_trial_admin_content_fragments_edit_inline_content"
->title="編輯行內內容"
->abstract="了解如何使用無頭功能集，直接在參考的頁面中編輯內容。"
 
 ## Tutorials（依API）
 

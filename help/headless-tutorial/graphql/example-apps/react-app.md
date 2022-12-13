@@ -11,27 +11,22 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-11-09T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: c5f94b12a9af50bc4e7db693d6560d120ab8bf3b
+source-git-commit: 758fa40240b12f5bfa83ac5c0300b71f41e2326d
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '919'
 ht-degree: 3%
 
 ---
 
 # React應用程式{#react-app}
 
-範例應用程式是探索Adobe Experience Manager(AEM)無頭功能的絕佳方式。 此React應用程式示範如何使用持續查詢，使用AEM GraphQL API來查詢內容。 適用於JavaScript的AEM無周邊用戶端可用來執行為應用程式提供動力的GraphQL持續查詢。
+範例應用程式是探索Adobe Experience Manager(AEM)無頭功能的絕佳方式。 此React應用程式示範如何使用持續查詢，使用AEM GraphQL API來查詢內容。 適用於JavaScript的AEM無頭式用戶端可用來執行支援應用程式的GraphQL持續查詢。
 
 ![使用AEM Headless反應應用程式](./assets/react-app/react-app.png)
 
 檢視 [GitHub原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
 A [完整的逐步教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) 說明此React應用程式的建置可用性。
-
->[!CONTEXTUALHELP]
->id="aemcloud_sites_trial_admin_content_fragments_react_app"
->title="自訂範例React應用程式中的內容"
->abstract="我們已設定現代化的React應用程式，您可借此了解如何使用無頭功能集來自訂內容。"
 
 ## 必備條件 {#prerequisites}
 
@@ -96,12 +91,12 @@ React應用程式設計為連線至 __AEM發佈__ 環境，但若React應用程�
 
 ## 程式碼
 
-以下是如何建置React應用程式、如何連接至AEM無周邊以使用GraphQL持續查詢擷取內容，以及如何呈現該資料的摘要。 您可以在上找到完整的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
+以下是如何建置React應用程式、如何連線至AEM Headless以使用GraphQL持續查詢擷取內容的摘要，以及如何呈現該資料的摘要。 您可以在上找到完整的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
 
 ### 持續查詢
 
-遵循AEM無周邊最佳實務，React應用程式使用AEM GraphQL持續查詢來查詢冒險資料。 應用程式使用兩個持續的查詢：
+遵循AEM無頭式最佳實務，React應用程式使用AEM GraphQL持續存在的查詢來查詢冒險資料。 應用程式使用兩個持續的查詢：
 
 + `wknd/adventures-all` 持續查詢，會傳回AEM中具有一組縮略屬性的所有歷險。 這個持續的查詢會驅動初始檢視的探險清單。
 
