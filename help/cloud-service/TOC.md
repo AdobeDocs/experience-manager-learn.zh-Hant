@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: 79804ac1ec18f8ac4815bd5ee6f309ef85110cb9
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '868'
 ht-degree: 19%
 
 ---
@@ -85,6 +85,7 @@ ht-degree: 19%
       + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
    + 進階{#advanced}
       + [服務用戶](./developing/advanced/service-users.md)
+      + [客戶命名空間](./developing/advanced/custom-namespaces.md)
       + [快取頁面變體](./developing/advanced/variant-caching.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + 除錯AEM{#debugging}
@@ -129,7 +130,6 @@ ht-degree: 19%
 + 移轉 {#migration}
    + [內容轉移工具](./migration/content-transfer-tool.md)
    + [大量匯入資產](./migration/bulk-import.md)
-
    + 轉移至 AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
       + [簡介](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
       + [上線](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
