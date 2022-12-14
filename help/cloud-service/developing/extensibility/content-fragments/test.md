@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -78,7 +78,10 @@ AEM內容片段主控台擴充功能可針對擴充功能所屬Adobe組織中的
 
 1. AEM內容片段主控台會載入本機版本的擴充功能，並插入其中以進行測試，而只要本機App Builder應用程式執行，就會熱重新載入變更。
 
-請記住，使用此方法時，開發中的擴充功能只會影響您的體驗，而AEM內容片段主控台的所有其他使用者都不會插入擴充功能來存取它。
+>[!IMPORTANT]
+>
+>請記住，使用此方法時，開發中的擴充功能只會影響您的體驗，而AEM內容片段主控台的所有其他使用者都不會插入擴充功能來存取它。
+
 
 ## 測試階段組建
 

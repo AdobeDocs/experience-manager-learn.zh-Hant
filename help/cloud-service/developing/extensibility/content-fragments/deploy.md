@@ -9,9 +9,9 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Adobe Developer主控台工作區與AEMas a Cloud Service環境類型沒有任�
 1. 選擇 __提交以進行核准__
 1. 填妥並提交表單，視需要更新欄位。
 
-+ 需要表徵圖。 如果您沒有圖示，則可使用 [此表徵圖](./assets/deploy/icon.png).
+請注意，需要圖示。 如果您沒有圖示，則可使用 [此表徵圖](./assets/deploy/icon.png).
 
 ### 核准部署請求
 

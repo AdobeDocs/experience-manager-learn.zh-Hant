@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -55,15 +55,15 @@ function App(props) {
 `ExtensionRegistration.js` 必須透過擴充功能的索引路徑立即載入，並執行擴充功能的註冊點，定義：
 
 1. 擴充功能類型；a [標題功能表](./header-menu.md) 或 [動作列](./action-bar.md) 按鈕。
-   + [標題功能表](./header-menu.md) 擴充功能會以 `headerMenu` 屬性 `methods`.
-   + [動作列](./action-bar.md) 擴充功能會以 `actionBar` 屬性 `methods`.
+   + [標題功能表](./header-menu.md#extension-registration) 擴充功能會以 `headerMenu` 屬性 `methods`.
+   + [動作列](./action-bar.md#extension-registration) 擴充功能會以 `actionBar` 屬性 `methods`.
 1. 擴充功能按鈕的定義，位於 `getButton()` 函式。 此函式會傳回包含欄位的物件：
    + `id` 是按鈕的唯一ID
    + `label` 是AEM內容片段控制台中擴充功能按鈕的標籤
    + `icon` 是AEM內容片段控制台中擴充功能按鈕的圖示。 圖示是 [React Spectrum](https://spectrum.adobe.com/page/icons/) 表徵圖名稱，並刪除空格。
 1. 按鈕的點按處理常式，定義於 `onClick()` 函式。
-   + [標題功能表](./header-menu.md) 擴充功能不會將參數傳遞至點按處理常式。
-   + [動作列](./action-bar.md) 擴充功能提供 `selections` 參數。
+   + [標題功能表](./header-menu.md#extension-registration) 擴充功能不會將參數傳遞至點按處理常式。
+   + [動作列](./action-bar.md#extension-registration) 擴充功能提供 `selections` 參數。
 
 ### 標題功能表擴充功能
 
