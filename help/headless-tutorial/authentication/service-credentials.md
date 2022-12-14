@@ -1,6 +1,6 @@
 ---
-title: AEM開發人員控制台服務憑證
-description: AEM服務認證可協助外部應用程式、系統和服務以程式設計方式與AEM製作或透過HTTP發佈服務互動。
+title: 服務憑據
+description: 了解如何使用可促進外部應用程式、系統和服務，以程式設計方式與作者或透過HTTP發佈服務互動的服務憑證。
 version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
@@ -13,16 +13,16 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1895'
 ht-degree: 0%
 
 ---
 
 # 服務憑據
 
-與AEMas a Cloud Service的整合必須能夠安全地驗證AEM。 AEM Developer Console授與服務憑證的存取權，這些憑證可協助外部應用程式、系統和服務以程式設計方式與AEM製作或透過HTTP發佈服務互動。
+與Adobe Experience Manager(AEM)as a Cloud Service的整合必須能夠安全地驗證AEM服務。 AEM Developer Console授與服務憑證的存取權，這些憑證可協助外部應用程式、系統和服務以程式設計方式與AEM製作或透過HTTP發佈服務互動。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 + AEMas a Cloud Service環境的服務憑證對應至單一AEM技術帳戶使用者，而本機開發存取權杖會驗證為產生存取權杖的AEM使用者。
 + AEMas a Cloud Service環境有一個服務憑證，會對應至一個技術帳戶AEM使用者。 服務憑證無法用來驗證不同技術帳戶AEM使用者的相同AEMas a Cloud Service環境。
 
-服務憑證及其產生的存取權杖，以及本機開發存取權杖，都應保持為機密，因為這三個權杖皆可用來存取其各自的AEMas a Cloud Service環境
+服務憑證及其產生的存取權杖，以及本機開發存取權杖，都應保持機密。 因為這三者皆可用來取得，所以可存取其各自的AEMas a Cloud Service環境。
 
 ## 生成服務憑據
 
@@ -81,13 +81,14 @@ __這是每個AEMas a Cloud Service環境的一次性初始化__
 1. 點選 __整合__ 標籤
 1. 點選 __獲取服務憑據__ 按鈕
 1. 點選左上角的下載按鈕，下載包含「服務憑證」值的JSON檔案，並將檔案儲存至安全位置。
-   + _如果服務憑證遭到破壞，請立即聯絡Adobe支援，要求撤銷這些憑證_
+
++ _如果服務憑證遭到破壞，請立即聯絡Adobe支援以撤銷_
 
 ## 安裝服務憑據
 
-服務憑證提供產生JWT所需的詳細資訊，JWT會交換以取得存取權杖，以便透過AEMas a Cloud Service驗證。 服務憑證必須儲存在安全位置，外部應用程式、系統或服務可使用它來存取AEM。 每個客戶管理服務憑證的方式和位置都是唯一的。
+服務憑證提供產生JWT所需的詳細資訊，JWT會交換以取得存取權杖，以便透過AEMas a Cloud Service驗證。 服務憑證必須儲存在安全位置，外部應用程式、系統或服務可使用該位置來存取AEM。 每個客戶管理服務憑證的方式和位置都是唯一的。
 
-為了簡單起見，本教學課程會透過命令列傳遞中的服務憑證，但請與IT安全團隊合作，了解如何根據貴組織的安全性准則儲存和存取這些憑證。
+為了簡單起見，本教學課程會透過命令列傳遞中的服務憑證。 不過，請與您的IT安全性團隊合作，了解如何根據貴組織的安全性准則儲存及存取這些憑證。
 
 1. 複製 [已下載服務憑證JSON](#download-service-credentials) 檔案名為 `service_token.json` 在項目根目錄中
    + 但請記住，絕不要向Git提交任何憑證！
@@ -110,15 +111,18 @@ __這是每個AEMas a Cloud Service環境的一次性初始化__
 
 ### 外部應用程式的更新
 
-若要使用服務憑證存取AEMas a Cloud Service，外部應用程式必須以3種方式更新：
+若要使用服務憑證存取AEMas a Cloud Service，外部應用程式必須以三種方式更新：
 
 1. 閱讀服務憑據
-   + 為了簡單起見，我們會從下載的JSON檔案中閱讀這些檔案，但在實際使用案例中，服務憑證必須依照貴組織的安全性准則安全地儲存
+
++ 為了簡單起見，我們從下載的JSON檔案中讀取了這些檔案，但在實際使用案例中，服務憑證必須依照貴組織的安全性准則安全地儲存
+
 1. 從服務憑證產生JWT
 1. 將JWT交換為存取權杖
-   + 存取服務憑證時，我們的外部應用程式會在存取AEMas a Cloud Service時使用此存取權杖，而非本機開發存取權杖
 
-在本教學課程中，Adobe `@adobe/jwt-auth` npm模組用於兩者，(1)從服務憑證產生JWT，以及(2)以單一函式呼叫將其交換為存取權杖。 如果您的應用程式不是以JavaScript為基礎，請檢閱 [其他語言的范常式式碼](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md) 以了解如何從服務憑證建立JWT，並與Adobe IMS交換以取得存取權杖。
++ 存取服務憑證時，我們的外部應用程式會在存取AEMas a Cloud Service時使用此存取權杖，而非本機開發存取權杖
+
+在本教學課程中，Adobe `@adobe/jwt-auth` npm模組用於兩者，(1)從服務憑證產生JWT，以及(2)以單一函式呼叫將其交換為存取權杖。 如果您的應用程式不是以JavaScript為基礎，請檢閱 [其他語言的范常式式碼](https://developer.adobe.com/developer-console/docs/guides/) 以了解如何從服務憑證建立JWT，並與Adobe IMS交換以取得存取權杖。
 
 ## 閱讀服務憑據
 
@@ -141,64 +145,64 @@ function getCommandLineParams() {
 
 ## 建立JWT並交換存取權杖
 
-讀取服務憑證後，系統會使用這些憑證產生JWT，然後與Adobe IMS API交換以取得存取權杖，接著再用來存取AEMas a Cloud Service。
+讀取服務憑證後，系統會使用這些憑證產生JWT，然後與Adobe IMS API交換以取得存取權杖。 然後，此存取權杖便可用來存取AEMas a Cloud Service。
 
-此範例應用程式以Node.js為基礎，因此最好使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模組，以方便(1)產生JWT，以及(20)與Adobe IMS交換。 如果您的應用程式是使用其他語言開發的，請查看 [適當的程式碼範例](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md) 了解如何使用其他程式設計語言，向Adobe IMS建構HTTP要求。
+此範例應用程式以Node.js為基礎，因此最好使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模組，以方便(1)產生JWT，以及(20)與Adobe IMS交換。 如果您的應用程式是使用其他語言開發的，請查看 [適當的程式碼範例](https://developer.adobe.com/developer-console/docs/guides/) 了解如何使用其他程式設計語言，向Adobe IMS建構HTTP要求。
 
 1. 更新 `getAccessToken(..)` 檢查JSON檔案內容，並判斷其代表本機開發存取權杖或服務憑證。 這可借由檢查 `.accessToken` 屬性，僅存在於本機開發存取權杖JSON。
 
-   若已提供服務憑證，應用程式會產生JWT並與Adobe IMS交換JWT以取得存取權杖。 我們將使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)&#39;s `auth(...)` 函式，兩者會產生JWT，並在單一函式呼叫中交換JWT以取得存取權杖。  參數 `auth(..)` 是 [JSON物件，由特定資訊組成](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) 可從服務憑證JSON取得，如下文的程式碼中所述。
+   若已提供服務憑證，應用程式會產生JWT並與Adobe IMS交換JWT以取得存取權杖。 我們使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)&#39;s `auth(...)` 函式，兩者會產生JWT，並在單一函式呼叫中以存取權杖的形式交換。 參數 `auth(..)` 方法是 [JSON物件，由特定資訊組成](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) 可從服務憑證JSON取得，如下文的程式碼中所述。
 
-   ```javascript
-    async function getAccessToken(developerConsoleCredentials) {
-   
-        if (developerConsoleCredentials.accessToken) {
-            // This is a Local Development access token
-            return developerConsoleCredentials.accessToken;
-        } else {
-            // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
-            let serviceCredentials = developerConsoleCredentials.integration;
-   
-            // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
-            // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
-            let { access_token } = await auth({
-                clientId: serviceCredentials.technicalAccount.clientId, // Client Id
-                technicalAccountId: serviceCredentials.id,              // Technical Account Id
-                orgId: serviceCredentials.org,                          // Adobe IMS Org Id
-                clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
-                privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
-                metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
-                ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
-            });
-   
-            return access_token;
-        }
-    }
-   ```
+```javascript
+ async function getAccessToken(developerConsoleCredentials) {
 
-   現在，會根據透過傳入的JSON檔案（本機開發存取權杖JSON或服務憑證JSON）而定 `file` 命令列參數，應用程式將衍生存取權杖。
+     if (developerConsoleCredentials.accessToken) {
+         // This is a Local Development access token
+         return developerConsoleCredentials.accessToken;
+     } else {
+         // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
+         let serviceCredentials = developerConsoleCredentials.integration;
 
-   請記住，雖然服務憑證每365天過期，但JWT和對應的存取權杖會經常過期，且必須在過期前重新整理。 您可以使用 `refresh_token` [由Adobe IMS提供。](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens).
+         // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
+         // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
+         let { access_token } = await auth({
+             clientId: serviceCredentials.technicalAccount.clientId, // Client Id
+             technicalAccountId: serviceCredentials.id,              // Technical Account Id
+             orgId: serviceCredentials.org,                          // Adobe IMS Org Id
+             clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
+             privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
+             metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
+             ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
+         });
 
-1. 完成這些變更後，從AEM開發人員控制台下載的服務憑證JSON(並為了簡單起見，另存新檔 `service_token.json` 與此資料夾相同 `index.js`)，執行替換命令行參數的應用程式 `file` with `service_token.json`，並更新 `propertyValue` 新值，以便在AEM中顯現效果。
+         return access_token;
+     }
+ }
+```
+
+    現在，根據透過&#39;file&#39;命令列參數傳入的JSON檔案（本機開發存取權杖JSON或服務憑證JSON），應用程式將衍生存取權杖。
+    
+    請記住，雖然服務憑證每365天過期，但JWT和對應的存取權杖會經常過期，且必須在過期前重新整理。 您可以使用「refresh_token」[由Adobe IMS提供](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)來完成此操作。
+
+1. 完成這些變更後，服務憑證JSON便從AEM開發人員控制台下載，且為簡單起見，另存新檔 `service_token.json` 與此資料夾 `index.js`. 現在，讓我們執行替換命令行參數的應用程式 `file` with `service_token.json`，以及更新 `propertyValue` 新值，以便在AEM中顯現效果。
 
    ```shell
    $ node index.js \
        aem=https://author-p1234-e5678.adobeaemcloud.com \
-       folder=/wknd/en/adventures/napa-wine-tasting \
+       folder=/wknd-shared/en/adventures/napa-wine-tasting \
        propertyName=metadata/dc:rights \
        propertyValue="WKND Restricted Use" \
        file=service_token.json
    ```
 
-   輸出至終端的內容如下：
+   輸出到終端的內容如下：
 
    ```shell
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting.json
-   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
-   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
-   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
-   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting.json
+   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
+   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
+   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
+   403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
    ```
 
    此 __403 — 禁止__ 行，表示對AEMas a Cloud Service的HTTP API呼叫中發生錯誤。 嘗試更新資產的中繼資料時，會發生這些403禁止錯誤。
@@ -220,32 +224,32 @@ function getCommandLineParams() {
 1. 導覽至 __群組__ ，然後新增 __DAM使用者__ 群組（以寫入資產的方式存取）
 1. 點選 __儲存並關閉__
 
-在AEM中擁有技術帳戶權限以擁有資產的寫入權限後，請重新執行應用程式：
+在AEM中允許技術帳戶擁有資產寫入權限的情況下，重新執行應用程式：
 
 ```shell
 $ node index.js \
     aem=https://author-p1234-e5678.adobeaemcloud.com \
-    folder=/wknd/en/adventures/napa-wine-tasting \
+    folder=/wknd-shared/en/adventures/napa-wine-tasting \
     propertyName=metadata/dc:rights \
     propertyValue="WKND Restricted Use" \
     file=service_token.json
 ```
 
-輸出至終端的內容如下：
+輸出到終端的內容如下：
 
 ```
-200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting.json
-200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
-200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
-200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
-200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
+200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting.json
+200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
+200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
+200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
+200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
 ```
 
 ## 驗證變更
 
 1. 登入已更新的AEMas a Cloud Service環境(使用 `aem` 命令行參數)
 1. 導覽至 __資產__ > __檔案__
-1. 導覽至 `folder` 命令行參數，例如 __WKND__ > __英文__ > __冒險__ > __納帕品酒會__
+1. 導覽至 `folder` 命令列參數，例如 __WKND__ > __英文__ > __冒險__ > __納帕品酒會__
 1. 開啟 __屬性__ 針對資料夾中的任何資產
 1. 導覽至 __進階__ 標籤
 1. 檢閱已更新屬性的值，例如 __版權__ 已對應至已更新 `metadata/dc:rights` JCR屬性，現在會反映 `propertyValue` 參數，例如 __WKND限制使用__

@@ -13,9 +13,9 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 0%
 
 本機開發存取權杖提供AEM製作和發佈服務的存取權，以產生權杖的使用者身分及其權限。 儘管這是開發權杖，但請勿共用此權杖，或將其儲存在原始碼控制項中。
 
-1. 在 [AdobeAdminConsole](https://adminconsole.adobe.com/) 確保您（開發人員）是以下成員：
+1. 在 [Adobe Admin Console](https://adminconsole.adobe.com/) 確保您（開發人員）是以下成員：
    + __Cloud Manager — 開發人員__ IMS產品設定檔(授予AEM Developer Console的存取權)
-   + 其中 __AEM管理員__ 或 __AEM使用者__ AEM環境服務的IMS產品設定檔存取權杖會與
+   + 其中 __AEM管理員__ 或 __AEM使用者__ AEM環境服務的IMS產品設定檔存取權杖已與
    + 沙箱AEMas a Cloud Service環境只需要 __AEM管理員__ 或 __AEM使用者__ 產品設定檔
 1. 登入 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 開啟包含AEMas a Cloud Service環境的程式以與
@@ -59,14 +59,14 @@ ht-degree: 0%
 
 ### 範例外部應用程式
 
-我們將建立簡單的外部JavaScript應用程式，以說明如何使用本機開發人員存取權杖，透過HTTPS以程式設計方式存取AEMas a Cloud Service。 這說明如何 _any_ 在AEM外部執行的應用程式或系統（不論是架構或語言）可使用存取權杖，以程式設計方式驗證AEM，並存取as a Cloud Service。 在 [下一節](./service-credentials.md) 我們將更新此應用程式程式碼，以支援產生供生產使用之代號的方法。
+我們將建立簡單的外部JavaScript應用程式，以說明如何使用本機開發人員存取權杖，透過HTTPS以程式設計方式存取AEMas a Cloud Service。 這說明如何 _any_ 在AEM外部執行的應用程式或系統（不論是架構或語言）可使用存取權杖，以程式設計方式驗證AEM，並存取as a Cloud Service。 在 [下一節](./service-credentials.md)，我們將更新此應用程式程式碼，以支援產生代號以供生產使用的方法。
 
 此範例應用程式從命令列執行，並透過下列流程使用AEM Assets HTTP API更新AEM資產中繼資料：
 
 1. 從命令行讀取參數(`getCommandLineParams()`)
 1. 取得用來驗證AEMas a Cloud Service的存取權杖(`getAccessToken(...)`)
-1. 列出命令列參數中指定之AEM資產資料夾中的所有資產(`listAssetsByFolder(...)`)
-1. 使用命令列參數中指定的值更新列出資產的中繼資料(`updateMetadata(...)`)
+1. 列出在命令列參數中指定之AEM資產資料夾中的所有資產(`listAssetsByFolder(...)`)
+1. 使用命令列參數中指定的值更新列出的資產的中繼資料(`updateMetadata(...)`)
 
 以程式設計方式使用存取權杖來驗證AEM中的關鍵元素，是將授權HTTP要求標題新增至對AEM提出的所有HTTP要求，格式如下：
 
@@ -96,7 +96,7 @@ ht-degree: 0%
    * Application entry point function
    */
    (async () => {
-       console.log('Example usage: node index.js aem=https://author-p1234-e5678.adobeaemcloud.com propertyName=metadata/dc:rights "propertyValue=WKND Limited Use" folder=/wknd/en/adventures/napa-wine-tasting file=credentials-file.json' );
+       console.log('Example usage: node index.js aem=https://author-p1234-e5678.adobeaemcloud.com propertyName=metadata/dc:rights "propertyValue=WKND Limited Use" folder=/wknd-shared/en/adventures/napa-wine-tasting file=credentials-file.json' );
    
        // Parse the command line parameters
        params = getCommandLineParams();
@@ -173,7 +173,7 @@ ht-degree: 0%
    * - aem = The AEM as a Cloud Service hostname to connect to.
    *              Example: https://author-p12345-e67890.adobeaemcloud.com
    * - folder = The asset folder to update assets in. Note that the Assets HTTP API do NOT use the JCR `/content/dam` path prefix.
-   *              Example: '/wknd/en/adventures/napa-wine-tasting'
+   *              Example: '/wknd-shared/en/adventures/napa-wine-tasting'
    * - propertyName = The asset property name to update. Note this is relative to the [dam:Asset]/jcr:content node of the asset.
    *              Example: metadata/dc:rights
    * - propertyValue = The value to update the asset property (specified by propertyName) with.
@@ -223,14 +223,14 @@ ht-degree: 0%
    })...
    ```
 
-   對AEMas a Cloud Service的任何HTTP要求，都必須在授權標題中設定Bearer存取權杖。 請記住，每個AEMas a Cloud Service環境都需有各自的存取權杖。 開發的訪問令牌在Stage或Production上無法工作，Stage的在Development或Production上不工作，而Production的在Development或Stage上不工作！
+   對AEMas a Cloud Service的任何HTTP要求，都必須在授權標題中設定Bearer存取權杖。 請記住，每個AEMas a Cloud Service環境都需有其專屬的存取權杖。 開發的存取權杖無法用於預備或生產，預備的不適用於開發或生產，而生產的不適用於開發或預備！
 
 1. 使用命令行，從項目的根執行應用程式，並傳遞以下參數：
 
    ```shell
    $ node index.js \
        aem=https://author-p1234-e5678.adobeaemcloud.com \
-       folder=/wknd/en/adventures/napa-wine-tasting \
+       folder=/wknd-shared/en/adventures/napa-wine-tasting \
        propertyName=metadata/dc:rights \
        propertyValue="WKND Limited Use" \
        file=local_development_token.json
@@ -238,8 +238,8 @@ ht-degree: 0%
 
    會傳入下列參數：
 
-   + `aem`:應用程式將與之互動之AEMas a Cloud Service環境的配置和主機名稱(例如 `https://author-p1234-e5678.adobeaemcloud.com`)。
-   + `folder`:資產已更新為的資產資料夾路徑 `propertyValue`;請勿新增 `/content/dam` 前置詞(如 `/wknd/en/adventures/napa-wine-tasting`)
+   + `aem`:應用程式與之互動的AEMas a Cloud Service環境的配置和主機名稱(例如 `https://author-p1234-e5678.adobeaemcloud.com`)。
+   + `folder`:資產已更新為的資產資料夾路徑 `propertyValue`;請勿新增 `/content/dam` 前置詞(如 `/wknd-shared/en/adventures/napa-wine-tasting`)
    + `propertyName`:要更新的資產屬性名稱，相對於 `[dam:Asset]/jcr:content` (例如 `metadata/dc:rights`)。
    + `propertyValue`:設定 `propertyName` 至；包含空格的值需要以 `"` (例如 `"WKND Limited Use"`)
    + `file`:從AEM開發人員控制台下載的JSON檔案的相對檔案路徑。
@@ -247,11 +247,11 @@ ht-degree: 0%
    已更新每個資產的應用程式結果輸出成功執行：
 
    ```shell
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
    ```
 
 ### 驗證AEM中的中繼資料更新
@@ -260,7 +260,7 @@ ht-degree: 0%
 
 1. 登入外部應用程式與之互動的AEMas a Cloud Service環境(使用 `aem` 命令行參數)
 1. 導覽至 __資產__ > __檔案__
-1. 導覽至 `folder` 命令行參數，例如 __WKND__ > __英文__ > __冒險__ > __納帕品酒會__
+1. 導覽至 `folder` 命令列參數，例如 __WKND__ > __英文__ > __冒險__ > __納帕品酒會__
 1. 開啟 __屬性__ （非內容片段）資產
 1. 點選 __進階__ 標籤
 1. 檢閱已更新屬性的值，例如 __版權__ 已對應至已更新 `metadata/dc:rights` JCR屬性，反映 `propertyValue` 參數，例如 __WKND有限使用__
@@ -269,6 +269,6 @@ ht-degree: 0%
 
 ## 後續步驟
 
-現在我們已使用本機開發Token以程式設計方式存取AEMas a Cloud Service，因此需要更新應用程式以使用服務憑證來處理，讓此應用程式可在生產環境中使用。
+現在，我們已使用本機開發代號，以程式設計方式存取AEM as a Cloud Service。 接下來，我們需要更新應用程式以使用服務憑證來處理，因此此應用程式可用於生產環境。
 
 + [如何使用服務憑證](./service-credentials.md)
