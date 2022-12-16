@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
+source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1754'
 ht-degree: 3%
 
 ---
@@ -214,6 +214,13 @@ ht-degree: 3%
    + [第2部分 — 在表單提交時建立ACS配置檔案](aem-forms-with-adobe-campaign/parttwo.md)
    + [第3部分 — 使用ACS配置檔案資訊預填表單](aem-forms-with-adobe-campaign/partthree.md)
    + [Part4 — 使用表單資料模型建立ACS配置檔案](aem-forms-with-adobe-campaign/partfour.md)
+
++ 歡迎套件 {#welcome-kit}
+   + [簡介](welcome-kit/introduction.md)
+   + [建立歡迎套件元件](welcome-kit/create-welcomekit-component.md)
+   + [建立工作流程元件](welcome-kit/create-workflow-component.md)
+   + [測試解決方案](welcome-kit/testing-the-solution.md)
+
 
 + 文件服務 {#document-services}
    + [PDF forms類型](document-services/pdf-forms-and-documents.md)
