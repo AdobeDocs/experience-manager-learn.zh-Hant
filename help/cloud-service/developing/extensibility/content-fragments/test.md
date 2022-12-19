@@ -9,9 +9,9 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
+source-git-commit: 56e2cbadaceb9961de28454bfbed56a98df34c44
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -66,10 +66,12 @@ AEM內容片段主控台擴充功能可針對擴充功能所屬Adobe組織中的
    + `&devMode=true`
    + `&ext=<LOCAL APPLICATION URL>`，通常 `&ext=https://localhost:9080`.
 
+   新增上述兩個查詢參數(`devMode` 和 `ext`)作為 __first__ 內容片段控制台使用雜湊路由(`#/@wknd/aem/...`)，因此在 `#` 將無法運作。
+
    測試URL應該如下所示：
 
    ```
-   https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin&devMode=true&ext=https://localhost:9080
+   https://experience.adobe.com/?devMode=true&ext=https://localhost:9080&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
 1. 將測試URL複製並貼到您的瀏覽器中。
@@ -112,10 +114,12 @@ AEM內容片段主控台擴充功能可針對擴充功能所屬Adobe組織中的
    + `&devMode=true`
    + `&ext=<DEPLOYED APPLICATION URL>`
 
+   新增上述兩個查詢參數(`devMode` 和 `ext`)作為 __first__ 內容片段控制台使用雜湊路由(`#/@wknd/aem/...`)，因此在 `#` 將無法運作。
+
    測試URL應該如下所示：
 
    ```
-   https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin&devMode=true&ext=https://98765-123aquarat.adobeio-static.net/index.html
+   https://experience.adobe.com/?devMode=true&ext=https://98765-123aquarat.adobeio-static.net/index.html&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
 1. 將測試URL複製並貼到您的瀏覽器中。
