@@ -9,7 +9,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: c34c27955dbc084620ac4dd811ba4051ea83f447
 workflow-type: tm+mt
 source-wordcount: '1835'
 ht-degree: 0%
@@ -344,7 +344,7 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 可用�
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您已更新SPA並探索與AEM的整合！ 您知道如何使用，針對AEM JSON模型API開發SPA **webpack-dev-server**.
+恭喜，您已更新SPA並探索與AEM的整合！ 您現在知道如何使用，針對AEM JSON模型API開發SPA **webpack-dev-server**.
 
 ### 後續步驟 {#next-steps}
 
