@@ -9,7 +9,7 @@ level: Beginner
 kt: 11604
 thumbnail: KT-11604.png
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: 8b683fdcea05859151b929389f7673075c359141
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 1. 提交表單會將選取的內容片段清單，以及AEM主機傳送至 [自訂Adobe I/O Runtime動作](#adobe-io-runtime-action).
 1. 此 [Adobe I/O Runtime行動](#adobe-io-runtime-action) 驗證輸入，並向AEM提出HTTPPUT請求，以更新選取的內容片段。
 1. 每個內容片段的一系列HTTPPUT，以更新指定的屬性。
-1. AEM as a Cloud Service會持續將屬性更新保存至內容片段，並傳回對Adobe I/O Runtime動作的失敗回應。
+1. AEM as a Cloud Service會持續將屬性更新保留至內容片段，並傳回Adobe I/O Runtime動作的成功或失敗回應。
 1. 強制回應視窗會收到Adobe I/O Runtime動作的回應，並顯示成功大量更新的清單。
 
 此影片會檢閱範例大量屬性更新擴充功能、其運作方式及開發方式。
@@ -147,7 +147,7 @@ function ExtensionRegistration() {
 重要的是，任何從擴充功能與AEM的互動應委派給 [AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，這是在中運行的獨立無伺服器進程 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 使用Adobe I/O Runtime動作來與AEM通訊，是為了避免跨原始資源共用(CORS)連線問題。
 
-提交「大量屬性更新」表單時，會自訂 `onSubmitHandler()` 叫用Adobe I/O Runtime動作，傳遞目前的AEM主機（網域）和使用者的AEM存取權杖，進而呼叫 [AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/content-fragments-api.html) 更新內容片段。
+提交「大量屬性更新」表單時，會自訂 `onSubmitHandler()` 叫用Adobe I/O Runtime動作，傳遞目前的AEM主機（網域）和使用者的AEM存取權杖，進而呼叫 [AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 更新內容片段。
 
 收到來自Adobe I/O Runtime動作的回應時，會更新強制回應視窗，以顯示大量屬性更新操作的結果。
 

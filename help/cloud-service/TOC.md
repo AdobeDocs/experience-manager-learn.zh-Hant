@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 9fd2240cace83c27083f8209e9cec21640718989
+source-git-commit: 8b683fdcea05859151b929389f7673075c359141
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '874'
 ht-degree: 19%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 19%
    + [製作與發佈服務](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Cloud Manager {#cloud-manager}
-   + [程序](./cloud-manager/programs.md)
+   + [計畫](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
    + [CI/CD生產管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD非生產管道](./cloud-manager/cicd-non-production-pipeline.md)
@@ -65,6 +65,7 @@ ht-degree: 19%
          + [部署](./developing/extensibility/content-fragments/deploy.md)
          + 範例擴充功能{#example-extensions}
             + [大量屬性更新擴充功能](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
+            + [影像產生與上傳至AEM](./developing/extensibility/content-fragments/example-extensions/image-generation-and-image-upload.md)
    + 開發基本知識{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本機開發環境](./developing/basics/local-development-environment.md)
