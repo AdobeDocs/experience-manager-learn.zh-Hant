@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: 56e2cbadaceb9961de28454bfbed56a98df34c44
+source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 AEM內容片段主控台擴充功能可針對擴充功能所屬Adobe組織中的任何AEMas a Cloud Service環境進行測試。
 
 測試擴充功能需透過精心編製的URL完成，該URL會指示AEM內容片段主控台載入擴充功能。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3412877/?quality=12&learn=on)
 
 ## AEM內容片段主控台URL
 
