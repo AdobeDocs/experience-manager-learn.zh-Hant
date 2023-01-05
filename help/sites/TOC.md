@@ -5,9 +5,9 @@ breadcrumb-title: AEM Sites 教學課程
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: c82965636ddeef7dc165e0bea079c99f1a16e0ca
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 20%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 20%
 
 # AEM Sites 影片和教學課程 {#sites}
 
-+ [總覽](overview.md)
++ [概觀](overview.md)
 + 頁面編寫 {#page-authoring}
    + [製作](page-authoring/aem-sites-authoring-overview.md)
    + [導覽](page-authoring/basic-handling-sites-feature-video-use.md)
@@ -58,13 +58,14 @@ ht-degree: 20%
    + [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
+   + [回應式中斷點](developing/responsive-breakpoints.md)
    + [與風格體系一起發展](developing/style-system-technical-video-understand.md)
    + [樣式系統最佳作法](developing/style-organization-style-system-understand-article.md)
    + [針對頁面差異開發](developing/page-diff-technical-video-develop.md)
    + [實作簡單搜尋](developing/search-tutorial-develop.md)
    + [社交媒體分享](developing/social-media-sharing-technical-video-use.md)
    + [自訂元件圖示](developing/component-icons-technical-video-develop.md)
-+ 個性化 {#personalization}
++ 個人化 {#personalization}
    + [與Adobe Target整合](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html)
    + [設定體驗片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [搭配使用體驗片段Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
@@ -94,11 +95,11 @@ ht-degree: 20%
    + [使用語言副本](translation/language-copy-feature-video-use.md)
    + [設定翻譯規則](translation/translation-rules-editor-technical-video-setup.md)
    + [翻譯增強功能](translation/translation-enhancements-feature-video-use.md)
-+ Integrations {#integrations}
++ 整合 {#integrations}
    + Experience Platform {#experience-platform}
       + [生成FPID](integrations/platform/fpid.md)
    + Experience Platform Launch {#experience-platform-launch}
-      + [總覽](integrations/experience-platform-launch/overview.md)
+      + [概觀](integrations/experience-platform-launch/overview.md)
       + [建立Launch屬性](integrations/experience-platform-launch/create-launch-property.md)
       + [使用AEM連線Adobe I/O與Launch](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
       + [建立LaunchCloud Service](integrations/experience-platform-launch/create-launch-cloud-service.md)
@@ -111,7 +112,7 @@ ht-degree: 20%
       + [使用Adobe Analytics追蹤已點按的元件](integrations/analytics/track-clicked-component.md)
       + [使用Analysis Workspace分析資料](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
-      + [總覽](integrations/adobe-target/overview.md)
+      + [概觀](integrations/adobe-target/overview.md)
       + [將Target擴充功能新增至Launch屬性](integrations/adobe-target/add-target-launch-extension.md)
       + [載入及觸發Target呼叫](integrations/adobe-target/load-and-fire-target.md)
       + [建立Adobe TargetCloud Service帳戶](integrations/adobe-target/setup-aem-target-cloud-service.md)
