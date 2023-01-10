@@ -16,7 +16,7 @@ ht-degree: 46%
 
 # AEM 和 Target 快速入門 {#aem-target-tutorial}
 
-+ [總覽](./overview.md)
++ [概觀](./overview.md)
 + [使用AEM體驗片段進行個人化](./personalization-use-case-1.md)
 + [使用可視化體驗撰寫器進行個人化](./personalization-use-case-3.md)
 + [個人化完整網頁體驗](./personalization-use-case-2.md)

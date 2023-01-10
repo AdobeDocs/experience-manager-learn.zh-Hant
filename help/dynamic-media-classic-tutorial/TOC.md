@@ -22,6 +22,6 @@ ht-degree: 49%
 + [影像、色票、回轉和混合媒體集](./media-sets.md)
 + [裁切、調整影像和縮放目標](./crop-adjusted-zoom-targets.md)
 + [基本範本簡介](./basic-templates.md)
-+ [影片總覽](./video-overview.md)
++ [影片概觀](./video-overview.md)
 + [智慧型影像](./smart-imaging.md)
 + [有價值的管理員報表](./valuable-reports.md)

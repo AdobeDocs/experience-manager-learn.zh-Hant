@@ -19,7 +19,7 @@ ht-degree: 46%
 
 + [WKND教學課程概述](overview.md)
 + 專案原型 {#project-archetype}
-   + [總覽](./project-archetype/overview.md)
+   + [概觀](./project-archetype/overview.md)
    + [1 — 專案設定](./project-archetype/project-setup.md)
    + [2 — 元件基本知識](./project-archetype/component-basics.md)
    + [3 — 頁面和範本](./project-archetype/pages-templates.md)
@@ -28,14 +28,14 @@ ht-degree: 46%
    + [6 — 自訂元件](./project-archetype/custom-component.md)
    + [7 — 單元測試](./project-archetype/unit-testing.md)
 + 快速網站建立 {#site-template}
-   + [總覽](./site-template/overview.md)
+   + [概觀](./site-template/overview.md)
    + [1 — 建立網站](./site-template/create-site.md)
    + [2 — 製作和發佈簡介](./site-template/author-content-publish.md)
    + [3 — 使用Adobe XD規劃UI](./site-template/ui-planning-adobe-xd.md)
    + [4 — 頁面範本](./site-template/page-templates.md)
    + [5 — 貼明](./site-template/theming.md)
 + 啟用前端管道 — DevOps{#enable-frontend-pipeline-devops}
-   + [總覽](./enable-frontend-pipeline/overview.md)
+   + [概觀](./enable-frontend-pipeline/overview.md)
    + [1 — 檢閱完整堆疊專案](./enable-frontend-pipeline/review-uifrontend-module.md)
    + [2 — 更新專案以使用前端管道](./enable-frontend-pipeline/update-project.md)
    + [3 — 使用前端管道進行部署](./enable-frontend-pipeline/create-frontend-pipeline.md)

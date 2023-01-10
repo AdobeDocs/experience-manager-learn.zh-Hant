@@ -16,7 +16,7 @@ ht-degree: 23%
 
 # AEM Assets 影片和教學課程 {#assets}
 
-+ [總覽](overview.md)
++ [概觀](overview.md)
 
 + 設定{#configuring}
    + [基線資料夾](configuring/baseline-folders.md)
@@ -97,11 +97,11 @@ ht-degree: 23%
    + [資產搜尋](./adobe-asset-link/asset-search.md)
 
 + 內容自動化{#content-automation}
-   + [總覽](./content-automation/overview.md)
+   + [概觀](./content-automation/overview.md)
    + [創意操作](./content-automation/creative-operations.md)
    + [Photoshop動作](./content-automation/photoshop-actions.md)
 
-+ 動態媒體{#dynamic-media}
++ Dynamic Media{#dynamic-media}
    + [Dynamic Media概述](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [智慧型裁切](dynamic-media/smart-crop-feature-video-use.md)
    + [體驗片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
@@ -140,7 +140,7 @@ ht-degree: 23%
       + [增強連接器基本概念](./workfront/enhanced-connector/basics.md)
       + [專案資料夾](./workfront/enhanced-connector/project-folders.md)
       + AEM Experts系列{#aem-experts-series}
-         + [總覽](./workfront/enhanced-connector/aem-experts-series/overview.md)
+         + [概觀](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [設定](./workfront/enhanced-connector/aem-experts-series/setup.md)
          + [Workfront表單與AEM中繼資料](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
          + [標籤、專案連結資料夾和資料夾中繼資料](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)
