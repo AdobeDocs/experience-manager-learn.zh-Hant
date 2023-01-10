@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 8f17e98c56c78824e8850402e3b79b3d47901c0b
+source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1776'
 ht-degree: 3%
 
 ---
@@ -100,6 +100,11 @@ ht-degree: 3%
    + [預先填入HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [使用Salesforce的表單資料模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [動態新增項目至Choice元件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
++ 選取並組合DAM資料夾內容{#select-dam-folder-content}
+   + [簡介](display-and-assemble-dam-folder-contents/introduction.md)
+   + [填充選擇組](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
+   + [組合選取的資產](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
+   + [在本機部署資產](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
 + 使用表單資料模型預先填寫最適化表單{#prefill-fdm-db}
    + [簡介](prefill-fdm-db/introduction.md)
    + [建立資料庫表](prefill-fdm-db/create-database-tables.md)
