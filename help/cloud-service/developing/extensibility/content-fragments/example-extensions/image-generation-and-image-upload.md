@@ -9,15 +9,15 @@ level: Beginner
 kt: 11649
 thumbnail: KT-11649.png
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: 8b683fdcea05859151b929389f7673075c359141
+source-git-commit: d902eb9a8d497a43c8d4ca63767f81a35eadf139
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
 
 
-# 產生數位影像，上傳至AEM範例擴充功能
+# OpenAI型數位影像產生，上傳至AEM範例擴充功能
 
 ![數位影像產生](./assets/digital-image-generation/screenshot.png){align="center"}
 
@@ -43,6 +43,10 @@ ht-degree: 1%
 1. 接下來，它會在預先定義的路徑下，起始從App Builder執行階段到AEM DAM的影像上傳。
 1. AEMas a Cloud Service會將影像儲存至DAM，並傳回對Adobe I/O Runtime動作的成功或失敗回應。 成功的上傳回應會使用Adobe I/O Runtime動作對AEM的其他HTTP要求，來更新所選內容片段的影像屬性值。
 1. 強制回應視窗會接收來自Adobe I/O Runtime動作的回應，並提供新產生之上傳影像的AEM資產詳細資訊連結。
+
+此影片會檢閱使用OpenAI或DALL.E 2擴充功能產生影像的範例、運作方式及開發方式。 視訊有章節標籤，例如 __功能示範、設定和技術程式碼__ 來快速觀察相關內容。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3413093/?quality=12&learn=on)
 
 
 ## App Builder擴充功能應用程式
