@@ -1,5 +1,5 @@
 ---
-title: 透過內容片段主控台擴充功能產生以OpenAI為基礎的影像
+title: 透過自訂內容片段主控台擴充功能產生OpenAI影像
 description: 範例AEM內容片段主控台擴充功能，可使用OpenAI或DALL-E 2從自然語言說明產生數位影像，並將產生的影像上傳至AEM，並將其與內容片段建立關聯。
 feature: Developer Tools
 version: Cloud Service
@@ -9,15 +9,15 @@ level: Beginner
 kt: 11649
 thumbnail: KT-11649.png
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: d902eb9a8d497a43c8d4ca63767f81a35eadf139
+source-git-commit: 06c09affd427a4818f5a916a84490f9ed09d372c
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1313'
 ht-degree: 1%
 
 ---
 
 
-# OpenAI型數位影像產生，上傳至AEM範例擴充功能
+# AEM使用OpenAI產生影像資產
 
 ![數位影像產生](./assets/digital-image-generation/screenshot.png){align="center"}
 
