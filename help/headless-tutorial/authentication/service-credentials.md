@@ -12,10 +12,11 @@ thumbnail: 330519.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
+last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
+source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1931'
 ht-degree: 0%
 
 ---
@@ -28,10 +29,11 @@ ht-degree: 0%
 
 服務憑據可能顯示類似 [本機開發存取權杖](./local-development-access-token.md) 但在幾個關鍵方面卻有所不同：
 
++ 服務憑據與技術帳戶相關聯。 一個技術帳戶可以有多個服務憑據。
 + 服務憑據為 _not_ 存取權杖，而非用來 _取得_ 存取權杖。
-+ 服務憑證會更為永久（每365天過期），除非撤銷，否則不會變更，而本機開發存取權杖會每天過期。
++ 服務憑證會更為永久（其憑證每365天過期），除非撤銷，否則不會變更，但本機開發存取權杖會每天過期。
 + AEMas a Cloud Service環境的服務憑證對應至單一AEM技術帳戶使用者，而本機開發存取權杖會驗證為產生存取權杖的AEM使用者。
-+ AEMas a Cloud Service環境有一個服務憑證，會對應至一個技術帳戶AEM使用者。 服務憑證無法用來驗證不同技術帳戶AEM使用者的相同AEMas a Cloud Service環境。
++ AEMas a Cloud Service環境最多可以有10個技術帳戶，每個帳戶都有其自己的服務憑證，每個帳戶都對應至個別的技術帳戶AEM使用者。
 
 服務憑證及其產生的存取權杖，以及本機開發存取權杖，都應保持機密。 因為這三者皆可用來取得，所以可存取其各自的AEMas a Cloud Service環境。
 
@@ -39,27 +41,27 @@ ht-degree: 0%
 
 服務憑證產生分為兩個步驟：
 
-1. Adobe IMS組織管理員的一次性服務憑證初始化
-1. 下載及使用服務憑證JSON
+1. 由Adobe IMS組織管理員建立一次性技術帳戶
+1. 下載及使用技術帳戶的服務憑證JSON
 
-### 服務憑據初始化
+### 建立技術帳戶
 
-與本機開發存取權杖不同，服務憑證需要 _一次性初始化_ 由您的Adobe組織IMS管理員下載。
+與本機開發存取權杖不同，服務憑證需先由Adobe組織IMS管理員建立技術帳戶，才能下載。 應為需要程式化存取AEM的每個用戶端建立獨立技術帳戶。
 
-![初始化服務憑據](assets/service-credentials/initialize-service-credentials.png)
+![建立技術帳戶](assets/service-credentials/initialize-service-credentials.png)
 
-__這是每個AEMas a Cloud Service環境的一次性初始化__
+技術帳戶建立一次，但隨著時間推移，可用於管理與技術帳戶相關聯的服務憑證的私密金鑰也可管理。 例如，必須在當前私鑰過期之前生成新的私鑰/服務憑據，以便用戶能夠不間斷地訪問服務憑據。
 
-1. 請確定您登入的方式為：
-   + 您的Adobe IMS組織管理員
-   + 會員 __Cloud Manager — 開發人員__ IMS產品設定檔
-   + 會員 __AEM使用者__ 或 __AEM管理員__ IMS產品設定檔位於 __AEM作者__
+1. 請確定您是以下列方式登入：
+   + __Adobe IMS組織的管理員__
+   + 會員 __AEM管理員__ IMS產品設定檔位於 __AEM作者__
 1. 登入 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 開啟包含AEMas a Cloud Service環境的程式，以整合以
 1. 點選 __環境__ 部分，然後選擇 __開發人員控制台__
 1. 點選 __整合__ 標籤
-1. 點選 __獲取服務憑據__ 按鈕
-1. 服務憑證會初始化，並顯示為JSON
+1. 點選 __技術帳戶__ 標籤
+1. 點選 __建立新技術帳戶__ 按鈕
+1. 技術帳戶的服務憑證會初始化，並顯示為JSON
 
 ![AEM開發人員主控台 — 整合 — 取得服務憑證](./assets/service-credentials/developer-console.png)
 
@@ -69,20 +71,20 @@ __這是每個AEMas a Cloud Service環境的一次性初始化__
 
 ![下載服務憑據](assets/service-credentials/download-service-credentials.png)
 
-下載服務憑據的步驟與初始化步驟相同。 如果尚未進行初始化，則點選 __獲取服務憑據__ 按鈕。
+下載服務憑證遵循與初始化類似的步驟。
 
 1. 請確定您是以下列方式登入：
-   + 會員 __Cloud Manager — 開發人員__ IMS產品設定檔(可授予AEM Developer Console的存取權)
-      + 沙箱AEMas a Cloud Service環境不需要  __Cloud Manager — 開發人員__ 會籍
-   + 會員 __AEM使用者__ 或 __AEM管理員__ IMS產品設定檔位於 __AEM作者__
+   + __Adobe IMS組織的管理員__
+   + 會員 __AEM管理員__ IMS產品設定檔位於 __AEM作者__
 1. 登入 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 開啟包含AEMas a Cloud Service環境的程式以與
 1. 點選 __環境__ 部分，然後選擇 __開發人員控制台__
 1. 點選 __整合__ 標籤
-1. 點選 __獲取服務憑據__ 按鈕
-1. 點選左上角的下載按鈕，下載包含「服務憑證」值的JSON檔案，並將檔案儲存至安全位置。
-
-+ _如果服務憑證遭到破壞，請立即聯絡Adobe支援以撤銷_
+1. 點選 __技術帳戶__ 標籤
+1. 展開 __技術帳戶__ 使用
+1. 展開 __私密金鑰__ 將下載其服務憑據，並確認狀態為 __作用中__
+1. 點選 __...__ > __檢視__ 與 __私密金鑰__，其中顯示服務憑證JSON
+1. 點選左上角的下載按鈕，下載包含「服務憑證」值的JSON檔案，並將檔案儲存至安全位置
 
 ## 安裝服務憑據
 
@@ -91,7 +93,7 @@ __這是每個AEMas a Cloud Service環境的一次性初始化__
 為了簡單起見，本教學課程會透過命令列傳遞中的服務憑證。 不過，請與您的IT安全性團隊合作，了解如何根據貴組織的安全性准則儲存及存取這些憑證。
 
 1. 複製 [已下載服務憑證JSON](#download-service-credentials) 檔案名為 `service_token.json` 在項目根目錄中
-   + 但請記住，絕不要向Git提交任何憑證！
+   + 記住，永遠不要提交 _任何憑據_ Git!
 
 ## 使用服務憑據
 
@@ -115,18 +117,18 @@ __這是每個AEMas a Cloud Service環境的一次性初始化__
 
 1. 閱讀服務憑據
 
-+ 為了簡單起見，我們從下載的JSON檔案中讀取了這些檔案，但在實際使用案例中，服務憑證必須依照貴組織的安全性准則安全地儲存
++ 為了簡單起見，服務憑證會從下載的JSON檔案中讀取，但在實際使用案例中，服務憑證必須依照貴組織的安全性准則安全地儲存
 
 1. 從服務憑證產生JWT
 1. 將JWT交換為存取權杖
 
-+ 存取服務憑證時，我們的外部應用程式會在存取AEMas a Cloud Service時使用此存取權杖，而非本機開發存取權杖
++ 存取AEMas a Cloud Service時，外部應用程式會使用此存取權杖，而非本機開發存取權杖
 
 在本教學課程中，Adobe `@adobe/jwt-auth` npm模組用於兩者，(1)從服務憑證產生JWT，以及(2)以單一函式呼叫將其交換為存取權杖。 如果您的應用程式不是以JavaScript為基礎，請檢閱 [其他語言的范常式式碼](https://developer.adobe.com/developer-console/docs/guides/) 以了解如何從服務憑證建立JWT，並與Adobe IMS交換以取得存取權杖。
 
 ## 閱讀服務憑據
 
-檢閱 `getCommandLineParams()` 並查看，我們可以使用本機開發存取權杖JSON中用來讀取的相同程式碼，在服務憑證JSON檔案中讀取。
+檢閱 `getCommandLineParams()` 請參閱使用本機開發存取權杖JSON中用來讀取的相同程式碼來讀取服務憑證JSON檔案的方式。
 
 ```javascript
 function getCommandLineParams() {
@@ -151,7 +153,7 @@ function getCommandLineParams() {
 
 1. 更新 `getAccessToken(..)` 檢查JSON檔案內容，並判斷其代表本機開發存取權杖或服務憑證。 這可借由檢查 `.accessToken` 屬性，僅存在於本機開發存取權杖JSON。
 
-   若已提供服務憑證，應用程式會產生JWT並與Adobe IMS交換JWT以取得存取權杖。 我們使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)&#39;s `auth(...)` 函式，兩者會產生JWT，並在單一函式呼叫中以存取權杖的形式交換。 參數 `auth(..)` 方法是 [JSON物件，由特定資訊組成](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) 可從服務憑證JSON取得，如下文的程式碼中所述。
+   若已提供服務憑證，應用程式會產生JWT並與Adobe IMS交換JWT以取得存取權杖。 使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)&#39;s `auth(...)` 函式，其產生JWT並在單一函式呼叫中將其交換為存取權杖。 參數 `auth(..)` 方法是 [JSON物件，由特定資訊組成](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) 可從服務憑證JSON取得，如下文的程式碼中所述。
 
 ```javascript
  async function getAccessToken(developerConsoleCredentials) {
@@ -211,7 +213,7 @@ function getCommandLineParams() {
 
 ## 在AEM中設定存取權
 
-服務憑證衍生的存取權杖使用的技術帳戶是AEM使用者，其成員是貢獻者AEM使用者群組的成員。
+服務憑證衍生的存取權杖使用的是具有 __貢獻者__ AEM使用者群組。
 
 ![服務憑證 — 技術帳戶AEM使用者](./assets/service-credentials/technical-account-user.png)
 

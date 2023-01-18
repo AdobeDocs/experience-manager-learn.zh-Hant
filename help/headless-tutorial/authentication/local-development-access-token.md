@@ -12,10 +12,11 @@ thumbnail: 330477.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
+last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
+source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -40,6 +41,7 @@ ht-degree: 0%
 1. 開啟包含AEMas a Cloud Service環境的程式以與
 1. 點選 __省略號__ 環境旁邊 __環境__ 部分，然後選擇 __開發人員控制台__
 1. 點選 __整合__ 標籤
+1. 點選 __本機代號__ 標籤
 1. 點選 __取得本機開發代號__ 按鈕
 1. 點選 __下載按鈕__ 的JSON檔案(包含 `accessToken` 值，並將JSON檔案儲存至開發電腦上的安全位置。
    + 這是您24小時前到AEMas a Cloud Service環境的開發人員存取權杖。
