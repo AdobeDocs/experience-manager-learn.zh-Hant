@@ -1,5 +1,5 @@
 ---
-title: 選取並下載DAM資料夾內容
+title: 在本機部署資產
 description: 在您的本機AEM執行個體上部署教學課程資產
 feature: Adaptive Forms
 version: 6.5
@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---

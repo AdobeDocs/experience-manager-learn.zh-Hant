@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1161'
 ht-degree: 1%
 
 ---
@@ -146,7 +146,7 @@ Apache Web Server非常可擴展，當模組包含許多配置檔案時，最好
 
 #### 客戶端標題目錄
 
-此目錄可包含 `_clientheaders.any` 您建立的檔案，其中包含當請求傳入時，您要傳遞至AEM的用戶端標題清單。  本節的更多詳細資訊如下 [此處](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
+此目錄可包含 `_clientheaders.any` 您建立的檔案，其中包含當請求傳入時，您要傳遞至AEM的用戶端標題清單。  本節的更多詳細資訊包括 [此處](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en)
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 

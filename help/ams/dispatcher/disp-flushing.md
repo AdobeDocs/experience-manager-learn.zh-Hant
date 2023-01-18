@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
-source-wordcount: '2225'
+source-wordcount: '2223'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 ## 伺服器陣列檔案設定
 
-以下是完整組態選項集的說明檔案： [https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache)
+以下是完整組態選項集的說明檔案： [https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en)
 
 我們將重點介紹其中與快取刷新相關的幾項
 
@@ -187,29 +187,29 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 ```
 /publishflushfarm {  
-	/virtualhosts {
-		"flush"
-	}
-	/cache {
-		/docroot "${PUBLISH_DOCROOT}"
-		/statfileslevel "${DEFAULT_STAT_LEVEL}"
-		/rules {
-			$include "/etc/httpd/conf.dispatcher.d/cache/ams_publish_cache.any"
-		}
-		/invalidate {
-			/0000 {
-				/glob "*"
-				/type "allow"
-			}
-		}
-		/allowedClients {
-			/0000 {
-				/glob "*.*.*.*"
-				/type "deny"
-			}
-			$include "/etc/httpd/conf.dispatcher.d/cache/ams_publish_invalidate_allowed.any"
-		}
-	}
+    /virtualhosts {
+        "flush"
+    }
+    /cache {
+        /docroot "${PUBLISH_DOCROOT}"
+        /statfileslevel "${DEFAULT_STAT_LEVEL}"
+        /rules {
+            $include "/etc/httpd/conf.dispatcher.d/cache/ams_publish_cache.any"
+        }
+        /invalidate {
+            /0000 {
+                /glob "*"
+                /type "allow"
+            }
+        }
+        /allowedClients {
+            /0000 {
+                /glob "*.*.*.*"
+                /type "deny"
+            }
+            $include "/etc/httpd/conf.dispatcher.d/cache/ams_publish_invalidate_allowed.any"
+        }
+    }
 }
 ```
 

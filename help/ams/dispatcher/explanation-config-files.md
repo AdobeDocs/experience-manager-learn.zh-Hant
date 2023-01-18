@@ -7,7 +7,7 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
 source-wordcount: '1705'
 ht-degree: 0%
@@ -251,7 +251,7 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 FILENAME_farm.any檔案 `/etc/httpd/conf.dispatcher.d/available_farms/` 目錄被symlinked到 `/etc/httpd/conf.dispatcher.d/enabled_farms/` 用於運行配置的目錄。
 
-伺服器陣列檔案的子包含基於 [農場的頂級部分](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-farms-farms) 如快取、clientheaders、篩選器、轉譯和vhosts。
+伺服器陣列檔案的子包含基於 [農場的頂級部分](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms) 如快取、clientheaders、篩選器、轉譯和vhosts。
 
 此 `FILENAME_farm.any` 檔案將根據需要包含在伺服器陣列檔案中的位置，為每個檔案提供include陳述式。  以下是 `FILENAME_farm.any` 檔案作為良好參考：
 
