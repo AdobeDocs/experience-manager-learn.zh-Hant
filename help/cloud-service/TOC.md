@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 3a77f99de25ad6dab37d4ee12b31f12b94f0ec73
+source-git-commit: 0990fc230e2a36841380b5b0c6cd94dca24614fa
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '884'
 ht-degree: 19%
 
 ---
@@ -54,6 +54,8 @@ ht-degree: 19%
    + [本機Dispatcher工具](./local-development-environment/dispatcher-tools.md)
 + 開發{#developing}
    + 擴充性{#extensibility}
+      + App Builder{#app-builder}
+         + [產生存取權杖](./developing/extensibility/app-builder/jwt-auth.md)
       + 內容片段主控台{#content-fragments}
          + [概觀](./developing/extensibility/content-fragments/overview.md)
          + [Adobe Developer Console專案](./developing/extensibility/content-fragments/adobe-developer-console-project.md)
@@ -76,7 +78,7 @@ ht-degree: 19%
       + [可變內容與不可變內容](./developing/basics/mutable-immutable.md)
       + [儲存庫結構包](./developing/basics/repository-structure-package.md)
       + [內容發佈](./developing/basics/content-publishing.md)
-      + [OSGi配置](./developing/basics/osgi-configurations.md)
+      + [OSGi 設定](./developing/basics/osgi-configurations.md)
       + [Dispatcher設定移轉](./developing/basics/dispatcher-configuration.md)
    + AEM 專案{#aem-projects}
       + [AEM Maven專案](./developing/projects/maven-project-structure.md)
