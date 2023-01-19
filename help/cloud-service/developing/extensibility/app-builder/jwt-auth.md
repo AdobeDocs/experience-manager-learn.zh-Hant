@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 kt: 11743
 last-substantial-update: 2023-01-17T00:00:00Z
-source-git-commit: 0990fc230e2a36841380b5b0c6cd94dca24614fa
+source-git-commit: de2788d8f3971a47fca53e35ee84cbbaa0137140
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '436'
 ht-degree: 1%
 
 ---
@@ -70,14 +70,14 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 
 1. 開啟 `Terminal`
 1. `$ base64 -i /path/to/private.key | pbcopy`
-
-base64輸出會自動複製剪貼簿
+1. base64輸出會自動複製剪貼簿
 
 >[!TAB Windows]
 
 1. 開啟 `Command Prompt`
 1. `$ certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
-1. 複製 `encoded-private.key` 到剪貼簿
+1. `$ findstr /v CERTIFICATE C:\path\to\encoded-private.key`
+1. 將base64輸出複製到剪貼簿
 
 >[!TAB Linux®]
 
@@ -87,14 +87,14 @@ base64輸出會自動複製剪貼簿
 
 >[!ENDTABS]
 
-例如，下列值可新增至 `JWT_PRIVATE_KEY` 鍵 `.env`:
+例如，下列base64編碼的私密金鑰可新增至 `JWT_PRIVATE_KEY` 鍵 `.env`:
 
 ```
 ...
 JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 ```
 
-## 擴充功能設定
+## 輸入映射
 
 在 `.env` 檔案，則必須對應至AppBuilder動作輸入，才能在動作本身中讀取。 若要這麼做，請為 `ext.config.yaml` 動作 `inputs` 格式中： `INPUT_NAME=$ENV_KEY`.
 
@@ -130,7 +130,7 @@ runtimeManifest:
 在下定義的鍵 `inputs` 在 `params` 物件。
 
 
-## 將JWT憑證轉換為存取Token
+## 存取Token的JWT憑證
 
 在「應用程式產生器」動作中，可在 `params` 對象，可由 [`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth) 來產生存取權杖，如此便可存取其他AdobeAPI和服務。
 
