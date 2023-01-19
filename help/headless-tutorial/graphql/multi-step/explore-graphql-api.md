@@ -1,6 +1,6 @@
 ---
-title: 深入了解GraphQL API — 開始使用AEM無周邊功能 — GraphQL
-description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 使用內建的GrapiQL IDE，探索AEM GraphQL API。 了解AEM如何根據內容片段模型自動產生GraphQL架構。 使用GraphQL語法實驗建構基本查詢。
+title: 探索GraphQL API -AEM Headless快速入門 — GraphQL
+description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 使用內建的GrapiQL IDE，探索AEM GraphQL API。 了解AEM如何根據內容片段模型自動產生GraphQL結構。 使用GraphQL語法實驗建構基本查詢。
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6714
@@ -10,16 +10,16 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: 25c289b093297e870c52028a759d05628d77f634
+source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
 workflow-type: tm+mt
-source-wordcount: '1535'
-ht-degree: 0%
+source-wordcount: '1454'
+ht-degree: 1%
 
 ---
 
-# 了解GraphQL API {#explore-graphql-apis}
+# 探索GraphQL API {#explore-graphql-apis}
 
-AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開給下游應用程式。 內容片段模型會定義內容片段所使用的資料結構。 每當建立或更新內容片段模型時，架構就會轉譯並新增至組成GraphQL API的「圖表」中。
+AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開給下游應用程式。 內容片段模型會定義內容片段所使用的資料結構。 每當建立或更新內容片段模型時，結構都會翻譯並新增至組成GraphQL API的「圖表」中。
 
 在本章中，我們將探索一些常見的GraphQL查詢，以使用名為的IDE收集內容 [GraphiQL](https://github.com/graphql/graphiql). GraphiQL IDE允許您快速測試和調整返回的查詢和資料。 此外，您也可輕鬆存取說明檔案，輕鬆學習和了解可用的方法。
 
@@ -37,7 +37,7 @@ AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開
 
 ## 啟用GraphQL端點 {#enable-graphql-endpoint}
 
-必須配置GraphQL端點，以啟用內容片段的GraphQL API查詢。
+必須設定GraphQL端點，才能啟用內容片段的GraphQL API查詢。
 
 1. 從AEM開始畫面導覽至 **工具** > **一般** > **GraphQL**.
 
@@ -46,19 +46,19 @@ AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開
 1. 點選 **建立** 在右上角的產生對話方塊中，輸入下列值：
 
    * 名稱*: **我的專案端點**.
-   * 使用…… *提供的GraphQL架構： **我的專案**
+   * 使用…… *提供的GraphQL結構： **我的專案**
 
    ![建立GraphQL端點](assets/explore-graphql-api/create-graphql-endpoint.png)
 
    點選 **建立** 來儲存端點。
 
-   根據項目配置建立的GraphQL端點僅對屬於該項目的模型啟用查詢。 在此情況下，針對 **人員** 和 **團隊** 可使用模型。
+   根據專案設定建立的GraphQL端點只會針對屬於該專案的模型啟用查詢。 在此情況下，針對 **人員** 和 **團隊** 可使用模型。
 
    >[!NOTE]
    >
    > 也可以建立全局端點，以啟用對多個配置中的模型的查詢。 這項操作應謹慎使用，因為它可能會使環境暴露於其他安全漏洞，並增加管理AEM的整體複雜性。
 
-1. 現在，您應該會看到環境中已啟用一個GraphQL端點。
+1. 您現在應該會看到環境中已啟用一個GraphQL端點。
 
    ![啟用的graphql端點](assets/explore-graphql-api/enabled-graphql-endpoints.png)
 
@@ -66,7 +66,7 @@ AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開
 
 此 [GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 工具可讓開發人員針對目前AEM環境的內容建立和測試查詢。 GraphiQL工具還使用戶能夠 **保留或儲存** 查詢，以供生產設定中的客戶端應用程式使用。
 
-接下來，使用內建的GraphiQL IDE，探索AEM GraphQL API的強大功能。
+接下來，使用內建的GraphiQL IDE探索AEM GraphQL API的強大功能。
 
 1. 從AEM開始畫面導覽至 **工具** > **一般** > **GraphQL查詢編輯器**.
 
@@ -111,7 +111,7 @@ AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開
 
    ![短名和說明結果](assets/explore-graphql-api/updated-query-shortname-description.png)
 
-   此 `shortname` 是簡單的屬性， `description` 是多行文本欄位，而GraphQL API允許我們為結果選擇各種格式，如 `html`, `markdown`, `json`，或 `plaintext`.
+   此 `shortname` 是簡單的屬性， `description` 是多行文字欄位，而GraphQL API可讓我們為結果選擇各種格式，例如 `html`, `markdown`, `json`，或 `plaintext`.
 
 ### 查詢巢狀片段
 
@@ -174,7 +174,7 @@ AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開
    }
    ```
 
-   對巢狀片段進行查詢的功能，是AEM GraphQL API的強大功能。 在這個簡單的示例中，嵌套只有兩個層深。 不過，可以進一步巢狀內嵌片段。 例如，如果 **地址** 與 **人員** 可以在單一查詢中傳回所有三個模型的資料。
+   對巢狀片段進行查詢的功能是AEM GraphQL API的強大功能。 在這個簡單的示例中，嵌套只有兩個層深。 不過，可以進一步巢狀內嵌片段。 例如，如果 **地址** 與 **人員** 可以在單一查詢中傳回所有三個模型的資料。
 
 ### 篩選內容片段清單 {#filter-list-cf}
 
@@ -371,7 +371,7 @@ AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開
    ![最終持續查詢](assets/explore-graphql-api/final-persisted-queries.png)
 
 
-## 發佈GraphQL端點和持續查詢
+## 發佈GraphQL端點與持續查詢
 
 審核後，發佈 `GraphQL Endpoint` &amp; `Persisted Queries`
 
@@ -395,29 +395,17 @@ AEM的GraphQL API提供強大的查詢語言，可將內容片段的資料公開
 
 ## 其他資源
 
-如需GraphQL查詢的詳細資訊，請前往 [學習如何搭配AEM使用GraphQL — 範例內容與查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+如需GraphQL查詢的詳細資訊，請參閱 [學習如何搭配AEM使用GraphQL — 範例內容與查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您建立並執行了多個GraphQL查詢！
+恭喜，您已建立並執行數個GraphQL查詢！
 
 ## 後續步驟 {#next-steps}
 
-在下一章中， [建置React應用程式](./graphql-and-react-app.md)，您可以了解外部應用程式如何查詢AEM GraphQL端點，並使用這兩個持續查詢。 在GraphQL查詢執行期間，您也會受到一些基本錯誤處理的介紹。
+在下一章中， [建置React應用程式](./graphql-and-react-app.md)，您可以探索外部應用程式如何查詢AEM GraphQL端點，以及使用這兩個持續的查詢。 在GraphQL查詢執行期間，您也會受到一些基本錯誤處理的介紹。
 
 ## 安裝GraphiQL工具（可選） {#install-graphiql}
 
-在中，需要手動安裝AEM(6.X.X)GraphiQL IDE工具的某些版本，請使用以下說明：
+在中，需要手動安裝AEM(6.X.X)GraphiQL IDE工具的某些版本，請使用 [此處的說明](../how-to/install-graphiql-aem-6-5.md).
 
-1. 導覽至 **[Software Distribution入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEMas a Cloud Service**.
-1. 搜尋「GraphiQL」(請務必包含 **i** in **GraphiQL**.
-1. 下載最新 **GraphiQL內容包v.x.x.x**
-
-   ![下載GraphiQL包](assets/explore-graphql-api/software-distribution.png)
-
-   zip檔案是可直接安裝的AEM套件。
-
-1. 從AEM開始功能表導覽至 **工具** > **部署** > **套件**.
-1. 按一下 **上傳套件** 並選擇在上一步下載的包。 按一下 **安裝** 安裝套件。
-
-   ![安裝GraphiQL包](assets/explore-graphql-api/install-graphiql-package.png)

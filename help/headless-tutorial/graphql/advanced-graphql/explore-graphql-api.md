@@ -1,13 +1,13 @@
 ---
-title: 深入了解AEM GraphQL API - AEM無周邊部署 — GraphQL的進階概念
-description: 使用GraphiQL IDE發送GraphQL查詢。 了解使用篩選器、變數和指令的進階查詢。 查詢片段和內容參考，包括多行文字欄位的參考。
+title: 探索AEM GraphQL API - AEM Headless的進階概念 — GraphQL
+description: 使用GraphiQL IDE傳送GraphQL查詢。 了解使用篩選器、變數和指令的進階查詢。 查詢片段和內容參考，包括多行文字欄位的參考。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # 探索AEM GraphQL API
 
-AEM中的GraphQL API可讓您公開內容片段資料給下游應用程式。 在基本教學課程中 [多步驟GraphQL教學課程](../multi-step/explore-graphql-api.md)，則可以使用GraphiQL資源管理器來測試和調整GraphQL查詢。
+AEM中的GraphQL API可讓您公開內容片段資料給下游應用程式。 在基本教學課程中 [多步驟GraphQL教學課程](../multi-step/explore-graphql-api.md)，則會使用GraphiQL Explorer測試和調整GraphQL查詢。
 
 在本章中，您可以使用GraphiQL資源管理器定義更高級的查詢，以收集您在 [上一章](../advanced-graphql/author-content-fragments.md).
 
@@ -47,7 +47,7 @@ AEM中的GraphQL API可讓您公開內容片段資料給下游應用程式。 �
 
 >[!IMPORTANT]
 >
->在中，需要手動安裝AEM(6.X.X)GraphiQL Explorer（也稱為GraphiQL IDE）工具，請遵循 [此處的說明](../multi-step/explore-graphql-api.md#install-the-graphiql-tool-optional).
+>在中，需要手動安裝AEM(6.X.X)GraphiQL Explorer（也稱為GraphiQL IDE）工具，請遵循 [此處的說明](../how-to/install-graphiql-aem-6-5.md).
 
 1. 在右上角，確認端點已設為 **WKND共用端點**. 變更 _端點_ 此處的下拉式清單值顯示現有 _持續查詢_ 在左上角。
 
@@ -348,7 +348,7 @@ AEM GraphQL API可讓您在多行文字欄位中查詢內容和片段參考。 �
 
 ## 使用指令進行查詢
 
-有時，在開發客戶端應用程式時，您需要有條件地更改查詢的結構。 在這種情況下，AEM GraphQL API允許您使用GraphQL指令，以便根據提供的條件更改查詢的行為。 有關GraphQL指令的詳細資訊，請參見 [GraphQL檔案](https://graphql.org/learn/queries/#directives).
+有時，在開發客戶端應用程式時，您需要有條件地更改查詢的結構。 在此情況下，AEM GraphQL API可讓您使用GraphQL指示，以根據提供的條件變更查詢的行為。 如需GraphQL指示的詳細資訊，請參閱 [GraphQL檔案](https://graphql.org/learn/queries/#directives).
 
 在 [上一節](#query-rte-reference)，您已學習如何在多行文字欄位中查詢內嵌參考。 內容是從 `description` 在 `plaintext` 格式。 接下來，將展開該查詢，並使用指令有條件地檢索 `description` 在 `json` 格式。
 
