@@ -12,9 +12,9 @@ level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 thumbnail: aem-local-dev-env.jpg
-source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
+source-git-commit: 2b188cbe0ba968b553a20629b89edf5ed377f300
 workflow-type: tm+mt
-source-wordcount: '2538'
+source-wordcount: '2603'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 設定Adobe Experience Manager、AEM本機開發的指南。 涵蓋本機安裝、Apache Maven、整合開發環境和除錯/疑難排解等重要主題。 開發方式 **Eclipse IDE、CRXDE Lite、Visual Studio代碼和IntelliJ** 中的所有參數。
 
-## 總覽
+## 概觀
 
 設定本機開發環境是為Adobe Experience Manager或AEM開發時的第一步。 請花時間設定品質開發環境，以提高生產力並更快撰寫更好的程式碼。 我們可將AEM的本地開發環境分為四個方面：
 
@@ -45,37 +45,46 @@ ht-degree: 1%
 1. 確認已安裝Java™。
    * 偏好 [Java™ JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) 適用於AEM 6.5+
    * [Java™ JDK 8](https://www.oracle.com/java/technologies/downloads/) 適用於AEM 6.5之前的版本
-2. 取得 [AEM QuickStart Jar和 [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html).
-3. 在電腦上建立資料夾結構，如下所示：
+1. 取得 [AEM QuickStart Jar和 [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html).
+1. 在電腦上建立資料夾結構，如下所示：
 
-   ```plain
-   ~/aem-sdk
-       /author
-       /publish
-   ```
+```plain
+~/aem-sdk
+    /author
+    /publish
+```
 
-4. 重新命名 [!DNL QuickStart] JAR到 ***aem-author-p4502.jar*** 把它放在下面 `/author` 目錄。 新增 ***[!DNL license.properties]*** 檔案 `/author` 目錄。
-5. 製作 [!DNL QuickStart] JAR，請將其重新命名為 ***aem-publish-p4503.jar*** 把它放在下面 `/publish` 目錄。 新增 ***[!DNL license.properties]*** 檔案 `/publish` 目錄。
+1. 重新命名 [!DNL QuickStart] JAR到 ***aem-author-p4502.jar*** 把它放在下面 `/author` 目錄。 新增 ***[!DNL license.properties]*** 檔案 `/author` 目錄。
 
-   ```plain
-   ~/aem-sdk
-       /author
-           + aem-author-p4502.jar
-           + license.properties
-       /publish
-           + aem-publish-p4503.jar
-           + license.properties
-   ```
+1. 製作 [!DNL QuickStart] JAR，請將其重新命名為 ***aem-publish-p4503.jar*** 把它放在下面 `/publish` 目錄。 新增 ***[!DNL license.properties]*** 檔案 `/publish` 目錄。
 
-6. 按兩下 ***aem-author-p4502.jar*** 安裝檔案 **作者** 例項。 這會啟動製作執行個體，在連接埠上執行 **4502** 在本地電腦上。
+```plain
+~/aem-sdk
+    /author
+        + aem-author-p4502.jar
+        + license.properties
+    /publish
+        + aem-publish-p4503.jar
+        + license.properties
+```
 
-   按兩下 ***aem-publish-p4503.jar*** 安裝檔案 **發佈** 例項。 這會啟動在連接埠上執行的發佈執行個體 **4503** 在本地電腦上。
+1. 按兩下 ***aem-author-p4502.jar*** 安裝檔案 **作者** 例項。 這會啟動製作執行個體，在連接埠上執行 **4502** 在本地電腦上。
 
-   >[!NOTE]
-   >
-   >視您的開發機器硬體而定，要同時使用 **製作和發佈** 執行個體同時執行。 您很少需要在本機設定上同時執行兩者。
+按兩下 ***aem-publish-p4503.jar*** 安裝檔案 **發佈** 例項。 這會啟動在連接埠上執行的發佈執行個體 **4503** 在本地電腦上。
 
-   如需詳細資訊，請參閱 [部署和維護AEM例項](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html).
+>[!NOTE]
+>
+>視您的開發機器硬體而定，要同時使用 **製作和發佈** 執行個體同時執行。 您很少需要在本機設定上同時執行兩者。
+
+### 使用命令列
+
+按兩下JAR檔案的替代方法是從命令列啟動AEM或建立指令碼(`.bat` 或 `.sh`)，取決於您的本機作業系統版本。 以下是範例命令的範例：
+
+```shell
+$ java -Xmx2048M -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=30303 -jar aem-author-p4502.jar -gui -r"author,localdev"
+```
+
+這裡， `-X` 是JVM選項和 `-D` 是其他框架屬性，如需詳細資訊，請參閱 [部署和維護AEM例項](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html) 和 [快速入門檔案提供的其他選項](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html#further-options-available-from-the-quickstart-file).
 
 ## 安裝Apache Maven
 
@@ -94,18 +103,18 @@ ht-degree: 1%
    * [!DNL macOS] 使用者可使用 [荷姆布魯](https://brew.sh/)
 3. 確認 **[!DNL Maven]** 是借由開啟新的命令列終端並執行下列程式來安裝：
 
-   ```shell
-   $ mvn --version
-   Apache Maven 3.3.9
-   Maven home: /Library/apache-maven-3.3.9
-   Java version: 1.8.0_111, vendor: Oracle Corporation
-   Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre
-   Default locale: en_US, platform encoding: UTF-8
-   ```
+```shell
+$ mvn --version
+Apache Maven 3.3.9
+Maven home: /Library/apache-maven-3.3.9
+Java version: 1.8.0_111, vendor: Oracle Corporation
+Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre
+Default locale: en_US, platform encoding: UTF-8
+```
 
-   >[!NOTE]
-   >
-   > 在過去， `adobe-public` 需要Maven配置檔案來指出 `nexus.adobe.com` 下載AEM成品。 所有AEM成品現在可透過Maven Central和 `adobe-public` 不需要設定檔。
+>[!NOTE]
+>
+> 在過去， `adobe-public` 需要Maven配置檔案來指出 `nexus.adobe.com` 下載AEM成品。 所有AEM成品現在可透過Maven Central和 `adobe-public` 不需要設定檔。
 
 ## 設定整合的開發環境
 
@@ -133,7 +142,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 #### 安裝與設定
 
-1. 下載並安裝 [!DNL Eclipse] IDE [!DNL Java™™™™™™™™ EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
+1. 下載並安裝 [!DNL Eclipse] IDE [!DNL Java™ EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
 1. 依照指示安裝 [!DNL AEM Developer Tools] 外掛程式： [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
