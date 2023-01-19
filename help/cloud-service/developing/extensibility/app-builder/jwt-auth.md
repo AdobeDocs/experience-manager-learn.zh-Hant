@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 kt: 11743
 last-substantial-update: 2023-01-17T00:00:00Z
-source-git-commit: de2788d8f3971a47fca53e35ee84cbbaa0137140
+source-git-commit: 643a9844f19aa1bd153661540ec7f7398a35118e
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '469'
 ht-degree: 1%
 
 ---
@@ -69,21 +69,24 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 >[!TAB macOS]
 
 1. 開啟 `Terminal`
-1. `$ base64 -i /path/to/private.key | pbcopy`
+1. 運行命令 `base64 -i /path/to/private.key | pbcopy`
 1. base64輸出會自動複製剪貼簿
+1. 貼入 `.env` 作為對應索引鍵的值
 
 >[!TAB Windows]
 
 1. 開啟 `Command Prompt`
-1. `$ certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
-1. `$ findstr /v CERTIFICATE C:\path\to\encoded-private.key`
+1. 運行命令 `certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
+1. 運行命令 `findstr /v CERTIFICATE C:\path\to\encoded-private.key`
 1. 將base64輸出複製到剪貼簿
+1. 貼入 `.env` 作為對應索引鍵的值
 
 >[!TAB Linux®]
 
 1. 開放終端
-1. `$ base64 private.key`
+1. 運行命令 `base64 private.key`
 1. 將base64輸出複製到剪貼簿
+1. 貼入 `.env` 作為對應索引鍵的值
 
 >[!ENDTABS]
 
