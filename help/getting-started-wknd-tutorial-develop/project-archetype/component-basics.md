@@ -12,9 +12,9 @@ kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1151'
 ht-degree: 1%
 
 ---
@@ -35,9 +35,9 @@ ht-degree: 1%
 1. 了解如何使用對話方塊來協助編寫內容。
 1. 了解用戶端程式庫的基本知識，以包含CSS和JavaScript以支援元件。
 
-## 您將建置的 {#what-you-will-build}
+## 您要建置的內容 {#what-build}
 
-在本章中，您將對非常簡單的 `HelloWorld` 元件。 在更新 `HelloWorld` 元件將會說明AEM元件開發的重要方面。
+在本章中，您對簡單 `HelloWorld` 元件。 更新 `HelloWorld` 元件，您便可了解AEM元件開發的關鍵領域。
 
 ## 章節入門項目 {#starter-project}
 
@@ -45,11 +45,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 如果成功完成上一章，則可以重新使用項目，並跳過簽出入門項目的步驟。
+> 如果成功完成上一章，則可以重複使用項目，並跳過簽出起始項目的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330985/?quality=12&learn=on)
 
-開啟新的命令行終端機，並執行以下操作。
+開啟新的命令列終端機，並執行下列動作。
 
 1. 在空目錄中，複製 [aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) 存放庫：
 
@@ -85,7 +85,7 @@ ht-degree: 1%
 
 ## 元件編寫 {#component-authoring}
 
-元件可視為網頁的小型模組化建置模組。 要重新使用元件，元件必須是可配置的。 這可透過製作對話方塊完成。 接下來，我們將製作簡單元件，並檢查對話方塊中的值如何保存在AEM中。
+元件可視為網頁的小型模組化建置模組。 要重複使用元件，元件必須可配置。 這可透過製作對話方塊完成。 接下來，我們製作一個簡單元件，並檢查對話方塊中的值如何保存在AEM中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330986/?quality=12&learn=on)
 
@@ -95,22 +95,22 @@ ht-degree: 1%
 1. 新增 **Hello World元件** 新建立的頁面。
 1. 開啟元件的對話方塊，然後輸入一些文字。 儲存變更以查看頁面上顯示的訊息。
 1. 切換至開發人員模式，在CRXDE-Lite中檢視內容路徑，並檢查元件例項的屬性。
-1. 使用CRXDE-Lite檢視 `cq:dialog` 和 `helloworld.html` 位於 `/apps/wknd/components/content/helloworld`.
+1. 使用CRXDE-Lite檢視 `cq:dialog` 和 `helloworld.html` 指令碼 `/apps/wknd/components/content/helloworld`.
 
 ## HTL(HTML範本語言)和對話方塊 {#htl-dialogs}
 
-HTML範本語言或 **[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)** 是輕量型的伺服器端範本語言，AEM元件用來轉譯內容。
+HTML範本語言或 **[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)** 是輕量型的伺服器端範本語言，AEM元件用來轉譯內容。
 
 **對話方塊** 定義可為元件建立的可用配置。
 
-接下來，我們將更新 `HelloWorld` HTL指令碼可在文字訊息之前顯示其他問候語。
+接下來，我們將更新 `HelloWorld` HTL指令碼可在文字訊息之前顯示額外問候語。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330987/?quality=12&learn=on)
 
 以下是上述影片中執行的高階步驟。
 
 1. 切換到IDE並開啟項目到 `ui.apps` 模組。
-1. 開啟 `helloworld.html` 檔案，並對HTML標籤進行更改。
+1. 開啟 `helloworld.html` 檔案，並更新HTML標籤。
 1. 使用IDE工具，如 [VSCode AEM同步](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) 將檔案變更同步至本機AEM例項。
 1. 返回瀏覽器，並觀察元件呈現已變更。
 1. 開啟 `.content.xml` 定義 `HelloWorld` 元件位置：
@@ -119,7 +119,7 @@ HTML範本語言或 **[HTL](https://experienceleague.adobe.com/docs/experience-m
    <code>/aem-guides-wknd/ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/.content.xml
    ```
 
-1. 更新對話方塊以新增其他文字欄位，名為 **標題** 名稱為 `./title`:
+1. 更新對話方塊以新增額外的文字欄位，名稱為 **標題** 名稱為 `./title`:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -152,7 +152,7 @@ HTML範本語言或 **[HTL](https://experienceleague.adobe.com/docs/experience-m
    </jcr:root>
    ```
 
-1. 重新開啟檔案 `helloworld.html`，代表負責轉譯的主要HTL指令碼 `HelloWorld` 元件，位於：
+1. 重新開啟檔案 `helloworld.html`，代表負責轉譯的主要HTL指令碼 `HelloWorld` 元件（來自以下路徑）:
 
    ```plain
        <code>/aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/helloworld.html
@@ -171,9 +171,9 @@ HTML範本語言或 **[HTL](https://experienceleague.adobe.com/docs/experience-m
 
 ## Sling 模型 {#sling-models}
 
-Sling模型是註解導向的Java &quot;POJO&#39;s&quot;（純舊Java物件），可方便將資料從JCR對應至Java變數，並在以AEM進行開發時提供許多其他細節。
+Sling模型是註解導向的Java™ &quot;POJOs&quot;(純舊Java™物件)，可方便將資料從JCR對應至Java™變數。 在AEM環境下開發時，這些規則也提供其他幾項細節。
 
-接下來，我們會對 `HelloWorldModel` Sling Model ，以便在將某些商業邏輯輸出至頁面之前，先對JCR中儲存的值套用這些邏輯。
+接下來，我們將對 `HelloWorldModel` Sling Model ，以便在將某些商業邏輯輸出至頁面之前，先對JCR中儲存的值套用這些邏輯。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330988/?quality=12&learn=on)
 
@@ -199,7 +199,7 @@ Sling模型是註解導向的Java &quot;POJO&#39;s&quot;（純舊Java物件）�
       ...
    ```
 
-1. 將下列行新增至 `HelloWorldModel` 類以映射元件的JCR屬性的值 `title` 和 `text` 至Java變數：
+1. 將下列行新增至 `HelloWorldModel` 類以映射元件的JCR屬性的值 `title` 和 `text` 至Java™變數：
 
    ```java
    ...
@@ -253,7 +253,7 @@ Sling模型是註解導向的Java &quot;POJO&#39;s&quot;（純舊Java物件）�
 
    >[!NOTE]
    >
-   > 若使用AEM 6.4/6.5，請使用 `mvn clean install -PautoInstallBundle -Pclassic`
+   > 若AEM 6.4/6.5使用 `mvn clean install -PautoInstallBundle -Pclassic`
 
 1. 更新檔案 `helloworld.html` at `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html` 若要使用 `HelloWorld` 模型：
 
@@ -280,9 +280,9 @@ Sling模型是註解導向的Java &quot;POJO&#39;s&quot;（純舊Java物件）�
 
 ## 用戶端資源庫 {#client-side-libraries}
 
-用戶端資料庫（簡稱clientlibs）提供一種機制，可組織及管理AEM Sites實作所需的CSS和JavaScript檔案。 用戶端程式庫是在AEM的頁面上包含CSS和JavaScript的標準方式。
+用戶端程式庫、 `clientlibs` 簡而言之，提供組織及管理AEM Sites實作所需CSS和JavaScript檔案的機制。 用戶端程式庫是在AEM的頁面上包含CSS和JavaScript的標準方式。
 
-此 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模組是去耦 [webpack](https://webpack.js.org/) 整合至建置程式的專案。 這可讓使用熱門前端程式庫，例如Sass、LESS和TypeScript。 此 `ui.frontend` 模組將更深入地探索 [用戶端程式庫章節](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
+此 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模組是去耦 [webpack](https://webpack.js.org/) 整合至建置程式的專案。 這可讓使用熱門前端程式庫，例如Sass、LESS和TypeScript。 此 `ui.frontend` 模組會在 [用戶端程式庫章節](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
 
 接下來，更新 `HelloWorld` 元件。
 
@@ -290,13 +290,16 @@ Sling模型是註解導向的Java &quot;POJO&#39;s&quot;（純舊Java物件）�
 
 以下是上述影片中執行的高階步驟。
 
-1. 開啟終端機視窗並導覽至 `ui.frontend` 目錄和
+1. 開啟終端機視窗並導覽至 `ui.frontend` 目錄
 
-1. 在 `ui.frontend` 目錄運行 `npm run watch` 命令：
+1. 在 `ui.frontend` 目錄運行 `npm install npm-run-all --save-dev` 安裝命令 [npm-run-all](https://www.npmjs.com/package/npm-run-all) 節點模組。 此步驟為 **原型39產生的AEM專案上所需**，在即將推出的原型版本中，此為非必要項目。
+
+1. 接下來，執行 `npm run watch` 命令：
 
    ```shell
    $ npm run watch
    ```
+
 1. 切換到IDE並開啟項目到 `ui.frontend` 模組。
 1. 開啟檔案 `ui.frontend/src/main/webpack/components/_helloworld.scss`.
 1. 更新檔案以顯示紅色標題：
@@ -330,7 +333,7 @@ Sling模型是註解導向的Java &quot;POJO&#39;s&quot;（純舊Java物件）�
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您剛剛在Adobe Experience Manager中了解元件開發的基本知識！
+恭喜，您已了解Adobe Experience Manager元件開發的基本知識！
 
 ### 後續步驟 {#next-steps}
 

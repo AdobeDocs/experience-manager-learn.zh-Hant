@@ -11,10 +11,10 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 39%
+source-wordcount: '476'
+ht-degree: 35%
 
 ---
 
@@ -24,12 +24,12 @@ ht-degree: 39%
 
 本教學課程的開頭為： [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant) 來產生新專案。
 
-本教學課程旨在搭配 **AEMas a Cloud Service** 而且回溯相容於 **AEM 6.5.10+**. 網站的實作方式為：
+本教學課程旨在搭配 **AEMas a Cloud Service** 而且回溯相容於 **AEM 6.5.14+**. 網站的實作方式為：
 
-* [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)
-* Sling 模型
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)
+* [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 * [可編輯的範本](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
 * [樣式系統](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
@@ -37,14 +37,14 @@ ht-degree: 39%
 
 ## 本機開發環境 {#local-dev-environment}
 
-本機開發環境是完成此教學課程不可或缺的條件。螢幕截圖和影片都是使用在 Mac OS 環境上執行的 AEM as a Cloud Service SDK 擷取，並將 [Visual Studio Code](https://code.visualstudio.com/) 當做 IDE 使用。除非另有註明，否則命令和程式碼應不受本機作業系統的限制。
+本機開發環境是完成此教學課程不可或缺的條件。螢幕擷取畫面和影片是使用在macOS環境中執行的AEMas a Cloud ServiceSDK來擷取，並搭配 [Visual Studio代碼](https://code.visualstudio.com/) 作為IDE。 除非另有註明，否則命令和程式碼應不受本機作業系統的限制。
 
 ### 所需軟體
 
 應在本機安裝下列項目：
 
-* [本機AEM **作者** 執行個體](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK,6.5.10+)
-* [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
+* [本機AEM **作者** 執行個體](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK或6.5.14+)
+* [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 或更新版本)
 * [Node.js](https://nodejs.org/en/) （LTS — 長期支援）
 * [npm 6+](https://www.npmjs.com/)
@@ -58,9 +58,9 @@ ht-degree: 39%
 >
 > **AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
-## Github {#github}
+## GitHub {#github}
 
-您可在AEM指南存放庫的Github上找到專案的所有程式碼：
+您可在AEM指南存放庫的GitHub上找到本教學課程的程式碼：
 
 **[GitHub:WKND Sites專案](https://github.com/adobe/aem-guides-wknd)**
 
@@ -68,4 +68,4 @@ ht-degree: 39%
 
 ## 後續步驟 {#next-steps}
 
-你在等什麼?!導覽至 [專案設定](project-setup.md) 章節，並了解如何使用AEM專案原型產生新的Adobe Experience Manager專案。
+你在等什麼？ 導覽至 [專案設定](project-setup.md) 章節，並了解如何使用AEM專案原型產生新的Adobe Experience Manager專案。
