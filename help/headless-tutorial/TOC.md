@@ -7,9 +7,9 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
+source-git-commit: c96b8c9761ff9477fda40d641db5021994b32754
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '281'
 ht-degree: 20%
 
 ---
@@ -113,5 +113,8 @@ ht-degree: 20%
    + [篩選Angular應用程式](./graphql/code-samples/filtering-angular-app.md)
    + [篩選Vue應用程式](./graphql/code-samples/filtering-vue-app.md)
    + [使用jQuery和Handlebars進行篩選](./graphql/code-samples/filtering-jquery-handlebars.md)
+   + [篩選SvelteKit應用程式](./graphql/code-samples/filtering-sveltekit-app.md)
+   + [篩選ExpressJS和Pug應用程式](./graphql/code-samples/filtering-express-pug-app.md)
    + [基本React應用程式](./graphql/code-samples/basic-react-app.md)
    + [基本Next.js應用程式](./graphql/code-samples/basic-nextjs-app.md)
+
