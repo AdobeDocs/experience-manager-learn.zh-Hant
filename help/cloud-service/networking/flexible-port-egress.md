@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 6ae98ce749f8a485bdaa4c6c6232e52d8d6246b3
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 4%
+source-wordcount: '1133'
+ht-degree: 5%
 
 ---
 
@@ -53,6 +53,8 @@ Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 請確保專
 首先，在AEMas a Cloud Service上啟用彈性的埠輸出。
 
 1. 首先，使用Cloud Manager API確定中的「進階網路」設定區域 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 此 `region name` 必要，才能進行後續的Cloud Manager API呼叫。 通常會使用生產環境所在的地區。
+
+   在中找出AEMas a Cloud Service環境的地區 [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [環境的詳細資訊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中顯示的地區名稱可以是 [映射至地區代碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 用於Cloud Manager API。
 
    __listRegions HTTP要求__
 
@@ -227,7 +229,7 @@ AEM提供兩組對應至AEM HTTP/HTTPS代理的特殊Java™系統變數。
       </p>
     </td>   
    <td>
-      <a  href="./examples/email-service.md"><img alt="虛擬專用網(VPN)" src="./assets/code-examples__email.png"/></a>
+      <a  href="./examples/email-service.md"><img alt="虛擬私人網路 (VPN)" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">電子郵件服務</a></strong></div>
       <p>
         OSGi設定範例，使用AEM連線至外部電子郵件服務。

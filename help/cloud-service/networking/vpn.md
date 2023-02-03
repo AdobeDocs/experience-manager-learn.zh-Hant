@@ -1,5 +1,5 @@
 ---
-title: 虛擬專用網(VPN)
+title: 虛擬私人網路 (VPN)
 description: 了解如何將AEMas a Cloud Service與您的VPN連接，以在AEM與內部服務之間建立安全的通訊通道。
 version: Cloud Service
 feature: Security
@@ -9,14 +9,14 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 6ae98ce749f8a485bdaa4c6c6232e52d8d6246b3
 workflow-type: tm+mt
-source-wordcount: '1261'
-ht-degree: 3%
+source-wordcount: '1318'
+ht-degree: 5%
 
 ---
 
-# 虛擬專用網(VPN)
+# 虛擬私人網路 (VPN)
 
 了解如何將AEMas a Cloud Service與您的VPN連接，以在AEM與內部服務之間建立安全的通訊通道。
 
@@ -58,6 +58,8 @@ Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 確保虛擬
 首先，在AEMas a Cloud Service上啟用虛擬專用網路。
 
 1. 首先，使用Cloud Manager API確定需要進階網路的地區 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 操作。 此 `region name` 必要，才能進行後續的Cloud Manager API呼叫。 通常會使用生產環境所在的地區。
+
+   在中找出AEMas a Cloud Service環境的地區 [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [環境的詳細資訊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中顯示的地區名稱可以是 [映射至地區代碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 用於Cloud Manager API。
 
    __listRegions HTTP要求__
 
@@ -283,7 +285,7 @@ Cloud Manager程式只能有 __單一__ 網路基礎結構類型。 確保虛擬
       </p>
     </td>
    <td>
-      <a  href="./examples/email-service.md"><img alt="虛擬專用網(VPN)" src="./assets/code-examples__email.png"/></a>
+      <a  href="./examples/email-service.md"><img alt="虛擬私人網路 (VPN)" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">電子郵件服務</a></strong></div>
       <p>
         OSGi設定範例，使用AEM連線至外部電子郵件服務。
