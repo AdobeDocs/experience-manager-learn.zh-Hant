@@ -1,6 +1,6 @@
 ---
 title: 透過自訂內容片段主控台擴充功能產生OpenAI影像
-description: 範例AEM內容片段主控台擴充功能，可使用OpenAI或DALL-E 2從自然語言說明產生數位影像，並將產生的影像上傳至AEM，並將其與內容片段建立關聯。
+description: 了解如何使用OpenAI或DALL-E 2從自然語言說明產生數位影像，並使用自訂內容片段主控台擴充功能將產生的影像上傳至AEM。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,9 +10,9 @@ kt: 11649
 thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: a298dbd27dfda00c80d2098199eb418200af0233
+source-git-commit: 5f0464d7bb8ffde9a9b3bd7fd67dc0e341970a6f
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1399'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,11 @@ ht-degree: 1%
 
 # AEM使用OpenAI產生影像資產
 
-![數位影像產生](./assets/digital-image-generation/screenshot.png){align="center"}
+了解如何使用OpenAI或DALL.E 2產生影像，並將其上傳至AEM DAM以了解內容速度。
 
-此範例AEM內容片段主控台擴充功能是 [動作列](../action-bar.md) 從使用的自然語言輸入產生數字影像的擴充功能 [OpenAI API](https://openai.com/api/) 或 [DALL.E 2](https://openai.com/dall-e-2/). 產生的影像會上傳至AEM DAM，而選取的內容片段的影像屬性會更新，以參照這個從DAM新產生的上傳影像。
+![數位影像產生](./assets/digital-image-generation/screenshot.png){width="500" zoomable="yes"}
+
+此範例AEM內容片段主控台擴充功能是 [動作列](../action-bar.md) 從使用自然語言輸入生成數字影像的擴展 [OpenAI API](https://openai.com/api/) 或 [DALL.E 2](https://openai.com/dall-e-2/). 產生的影像會上傳至AEM DAM，而選取的內容片段的影像屬性會更新，以參照這個從DAM新產生的上傳影像。
 
 在此範例中，您會學到：
 
@@ -108,6 +110,12 @@ ht-degree: 1%
 1. 在Node.js程式庫下安裝
    1. [OpenAI Node.js程式庫](https://github.com/openai/openai-node#installation)  — 輕鬆叫用OpenAI API
    1. [AEM上傳](https://github.com/adobe/aem-upload#install)  — 將影像上傳至AEM-CS例項。
+
+
+>[!TIP]
+>
+>在以下章節中，您將了解重要的React和Adobe I/O Runtime動作JavaScript檔案。 若要參考，請參考 `web-src` 和  `actions` 提供AppBuilder專案的資料夾，請參閱 [adobe-appbuilder-cfc-ext-image-generation-code-zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
+
 
 ## 應用程式路由{#app-routes}
 
@@ -198,7 +206,7 @@ function ExtensionRegistration() {
 1. 影像產生作業的回應，提供新產生、上傳之影像的AEM資產詳細資訊連結。
 
 重要的是，任何從擴充功能與AEM的互動應委派給 [AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，這是在中運行的獨立無伺服器進程 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
-使用Adobe I/O Runtime動作來與AEM通訊，是為了避免跨原始資源共用(CORS)連線問題。
+使用Adobe I/O Runtime動作來與AEM通訊，是為了避免跨來源資源共用(CORS)連線問題。
 
 當 _產生影像_ 表單已提交，自訂 `onSubmitHandler()` 叫用Adobe I/O Runtime動作，傳遞影像說明、目前的AEM主機（網域）和使用者的AEM存取權杖。 然後，此動作會呼叫OpenAI的 [影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) API，使用提交的影像說明產生影像。 下次使用 [AEM上傳](https://github.com/adobe/aem-upload) 節點模組 `DirectBinaryUpload` 類別會將產生的影像上傳至AEM，最後使用 [AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 更新內容片段。
 
@@ -458,6 +466,11 @@ export default function GenerateImageModal() {
   }
 }
 ```
+
+>[!NOTE]
+>
+>在 `buildAssetDetailsURL()` 函式， `aemAssetdetailsURL` 變數值假設 [統一殼層](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview) 啟用。 如果您已停用「統一殼層」，則需要移除 `/ui#/aem` 從變數值。
+
 
 ## Adobe I/O Runtime行動
 
