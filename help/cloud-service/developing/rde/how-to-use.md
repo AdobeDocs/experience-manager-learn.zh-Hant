@@ -9,10 +9,10 @@ level: Beginner
 jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 674407637c475ea9b70ecbc81f9e9bfece0fe9df
+source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 0%
+source-wordcount: '186'
+ht-degree: 1%
 
 ---
 
@@ -33,9 +33,12 @@ ht-degree: 0%
 
 ## 其他資源
 
-
 [RDE命令文檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#rde-cli-commands)
 
 [Adobe I/O Runtime CLI外掛程式，用於與AEM Rapid Development Environments互動](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [AEM專案設定](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html)
+
+## 下一步
+
+了解 [使用RDE的開發/部署生命週期](./development-life-cycle.md) 以速度提供功能。

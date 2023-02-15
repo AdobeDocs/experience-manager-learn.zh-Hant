@@ -9,9 +9,9 @@ level: Beginner
 jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 674407637c475ea9b70ecbc81f9e9bfece0fe9df
+source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '202'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,6 @@ ht-degree: 2%
 
 ## 其他資源
 
-
 [在計畫文檔中啟用RDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#enabling-rde-in-a-program)
 
 設定 [Adobe I/O Runtime Extensible CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 也稱為 `aio CLI`
@@ -42,3 +41,7 @@ ht-degree: 2%
 [Adobe I/O Runtime CLI外掛程式，用於與AEM Rapid Development Environments互動](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [Cloud Manager AIO CLI增效模組](https://github.com/adobe/aio-cli-plugin-cloudmanager)
+
+## 下一步
+
+學習 [如何使用](./how-to-use.md) 從您喜愛的整合開發環境(IDE)部署代碼和內容，以縮短開發週期。
