@@ -9,9 +9,9 @@ level: Beginner
 jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 81e1e2bf0382f6a577c1037dcd0d58ebc73366cd
+source-git-commit: 65d54f0137786c7e8ac9ac962c424dd20bf5f3dd
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '492'
 ht-degree: 2%
 
 ---
@@ -45,19 +45,19 @@ ht-degree: 2%
 
 安裝Adobe I/O Runtime Extensible CLI(也稱為 `aio CLI` 從命令列執行下列命令。
 
-    &#39;shell
-    $ npm install -g @adobe/aio-cli
-    &quot;
+```shell
+$ npm install -g @adobe/aio-cli
+```
 
 ### AEM外掛程式
 
 請使用 `aio cli`&#39;s `plugins:install` 命令。
 
-    &#39;shell
-    $ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
-    
-    $ aio plugins:install @adobe/aio-cli-plugin-aem-rde
-    &quot;
+```shell
+$ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
+
+$ aio plugins:install @adobe/aio-cli-plugin-aem-rde
+```
 
 Cloud Manager外掛程式可讓開發人員從命令列與Cloud Manager互動。
 
@@ -91,23 +91,23 @@ AEM RDE外掛程式可讓開發人員從本機電腦部署程式碼和內容。
 
 您可以執行下列命令以驗證目前的設定值。
 
-    &#39;shell
-    $ aio config:list
-    &quot;
+```shell
+$ aio config:list
+```
 
 此外，若要切換或了解您目前登入的組織，可使用以下命令。
 
-    &#39;shell
-    $ aio,
-    &quot;
+```shell
+$ aio where
+```
 
 ## 驗證RDE訪問
 
 請執行下列命令，以確認AEM RDE外掛程式的安裝和設定。
 
-    &#39;shell
-    $ aio aem:rde:狀態
-    &quot;
+```shell
+$ aio aem:rde:status
+```
 
 RDE狀態資訊的顯示方式與環境狀態、 _您的AEM專案_ 製作和發佈服務上的套件和設定。
 
