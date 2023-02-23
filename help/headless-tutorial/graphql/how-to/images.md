@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 3a7c04dfe465c1eff29ba6b4e4b7e24f047e5b42
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 影像是 [開發豐富、引人入勝的AEM無頭體驗](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless支援影像資產的管理及其最佳化傳送。
 
-AEM無頭內容模型中使用的內容片段，通常會參考用於無頭體驗中顯示的影像資產。 AEM GraphQL查詢可以撰寫，以根據影像的參考位置，提供影像的URL。
+AEM無頭內容模型中使用的內容片段，通常會參考用於無頭體驗中顯示的影像資產。 AEM GraphQL查詢可以撰寫，以根據影像參考的位置，提供影像的URL。
 
 此 `ImageRef` 類型有三個內容參考的URL選項：
 
@@ -38,7 +38,7 @@ AEM無頭內容模型中使用的內容片段，通常會參考用於無頭體�
 | `_authorUrl` | ✘ | ✔ | ✘ |
 | `_publishUrl` | ✘ | ✘ | ✔ |
 
-使用 `_authorUrl` 和 `_publishUrl` 應與用來源化GraphQL回應的AEM GraphQL端點一致。
+使用 `_authorUrl` 和 `_publishUrl` 應與用來來源GraphQL回應的AEM GraphQL端點一致。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
@@ -55,7 +55,7 @@ AEM無頭內容模型中使用的內容片段，通常會參考用於無頭體�
 
 ## GraphQL持續查詢
 
-在GraphQL查詢中，將欄位傳回為 `ImageRef` 類型，並請求適當的欄位 `_path`, `_authorUrl`，或 `_publishUrl` 應用程式所需。 例如，在 [WKND參考示範專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 並在其中納入影像資產參考的影像URL `primaryImage` 欄位，可使用新的持續查詢完成 `wknd-shared/adventure-image-by-path` 定義為：
+在GraphQL查詢中，將欄位傳回為 `ImageRef` 類型，並請求適當的欄位 `_path`, `_authorUrl`，或 `_publishUrl` 應用程式所需。 例如，在 [WKND Site項目](https://github.com/adobe/aem-guides-wknd) 並在其中納入影像資產參考的影像URL `primaryImage` 欄位，可使用新的持續查詢完成 `wknd-shared/adventure-image-by-path` 定義為：
 
 ```graphql
 query ($path: String!) {

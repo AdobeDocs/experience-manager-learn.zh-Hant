@@ -10,16 +10,16 @@ level: Beginner
 kt: 10721
 thumbnail: KT-10721.jpg
 last-substantial-update: 2022-10-03T00:00:00Z
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
 
 # Next.js應用程式
 
-範例應用程式是探索Adobe Experience Manager(AEM)無頭功能的絕佳方式。 此Next.js應用程式示範如何使用持續查詢，使用AEM GraphQL API來查詢內容。 適用於JavaScript的AEM無周邊用戶端可用來執行為應用程式提供動力的GraphQL持續查詢。
+範例應用程式是探索Adobe Experience Manager(AEM)無頭功能的絕佳方式。 此Next.js應用程式示範如何使用持續查詢，使用AEM GraphQL API來查詢內容。 適用於JavaScript的AEM無頭式用戶端可用來執行支援應用程式的GraphQL持續查詢。
 
 ![具有AEM Headless的Next.js應用程式](./assets/next-js/next-js.png)
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## AEM需求
 
-Next.js應用程式可搭配下列AEM部署選項使用。 所有部署都需要 [WKND共用v2.1.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest), [WKND Site v2.1.0+](https://github.com/adobe/aem-guides-wknd/releases/latest)，或 [參考示範附加元件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/overview.html) 安裝在AEMas a Cloud Service環境中。
+Next.js應用程式可搭配下列AEM部署選項使用。 所有部署都需要 [WKND共用v2.1.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) 或 [WKND Site v2.1.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 安裝在AEMas a Cloud Service環境中。
 
 此範例Next.js應用程式的設計目的為連線至 __AEM發佈__ 服務。
 
@@ -90,14 +90,6 @@ Next.js的設計是連線至 __AEM發佈__ 服務，以及存取未受保護的�
    ...
    ```
 
-   使用時 [參考示範附加元件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/overview.html)，請使用 `aem-demo-assets` GraphQL API端點。
-
-   ```plain
-   ...
-   NEXT_PUBLIC_AEM_GRAPHQL_ENDPOINT=aem-demo-assets
-   ...
-   ```
-
 1. 開啟命令提示字元，然後使用下列命令啟動Next.js應用程式：
 
    ```shell
@@ -111,11 +103,11 @@ Next.js的設計是連線至 __AEM發佈__ 服務，以及存取未受保護的�
 
 ## 程式碼
 
-以下是如何建置Next.js應用程式、如何連線至AEM無周邊以使用GraphQL持續查詢擷取內容，以及如何呈現該資料的摘要。 您可以在上找到完整的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/next-js).
+以下是如何建置Next.js應用程式、如何連線至AEM Headless以使用GraphQL持續查詢擷取內容的摘要，以及如何呈現該資料。 您可以在上找到完整的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/next-js).
 
 ### 持續查詢
 
-遵循AEM無周邊最佳實務，Next.js應用程式使用AEM GraphQL持續查詢來查詢冒險資料。 應用程式使用兩個持續的查詢：
+遵循AEM無頭式最佳實務，Next.js應用程式使用AEM GraphQL持續存在的查詢來查詢冒險資料。 應用程式使用兩個持續的查詢：
 
 + `wknd/adventures-all` 持續查詢，會傳回AEM中具有一組縮略屬性的所有歷險。 這個持續的查詢會驅動初始檢視的探險清單。
 
@@ -202,7 +194,7 @@ query($slug: String!) {
 
 AEM持續查詢會透過HTTPGET執行，因此， [AEM JavaScript適用的無頭式用戶端](https://github.com/adobe/aem-headless-client-js) 用於 [執行持續的GraphQL查詢](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) 來抵御AEM，並將冒險內容載入應用程式中。
 
-每個保存的查詢在 `src/lib//aem-headless-client.js`，會呼叫AEM GraphQL端點並傳回冒險資料。
+每個保存的查詢在 `src/lib//aem-headless-client.js`，這會呼叫AEM GraphQL端點，並傳回冒險資料。
 
 每個函式依次調用 `aemHeadlessClient.runPersistedQuery(...)`，執行持續的GraphQL查詢。
 
@@ -247,7 +239,7 @@ Next.js應用程式使用兩個頁面來呈現冒險資料。
 
    A [Next.js動態路由](https://nextjs.org/docs/routing/dynamic-routes) 顯示單一冒險的詳細資訊。 此動態路由會使用 [Next.js的getStaticProps()](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) 透過呼叫 `getAdventureBySlug(..)` 使用 `slug` 參數是透過 `adventures/index.js` 頁面。
 
-   動態路由可透過以下項目預先擷取所有歷險的詳細資訊： [Next.js的getStaticPaths()](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) 並根據GraphQL查詢返回的歷險清單填入所有可能的路由排列  `getAdventurePaths()`
+   動態路由可透過以下項目預先擷取所有歷險的詳細資訊： [Next.js的getStaticPaths()](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) 並根據GraphQL查詢傳回的歷險完整清單填入所有可能的路由排列  `getAdventurePaths()`
 
    使用 `getStaticPaths()` 和 `getStaticProps(..)` 允許靜態網站產生這些Next.js頁面。
 

@@ -1,6 +1,6 @@
 ---
 title: 搭配AEM Headless使用本地化內容
-description: 了解如何使用GraphQL查詢AEM中的本地化內容。
+description: 了解如何使用GraphQL來查詢AEM的本地化內容。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless
@@ -8,10 +8,10 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: 4fa84b0461cbdf2e25336259c4128be5585b8787
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 0%
+source-wordcount: '508'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +28,7 @@ AEM提供 [翻譯整合架構](https://experienceleague.adobe.com/docs/experienc
 
 區域設定資料夾必須是同級資料夾，而資料夾名稱（而非標題）必須是有效的 [ISO 639-1代碼](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 表示資料夾中所含內容的地區設定。
 
-地區代碼也是用於篩選GraphQL查詢返回的內容片段的值。
+地區代碼也是用來篩選GraphQL查詢傳回的內容片段的值。
 
 | 地區代碼 | AEM路徑 | 內容地區 |
 |--------------------------------|----------|----------|
@@ -38,7 +38,7 @@ AEM提供 [翻譯整合架構](https://experienceleague.adobe.com/docs/experienc
 
 ## GraphQL持續查詢
 
-AEM提供 `_locale` GraphQL篩選器，可依地區設定代碼自動篩選內容。 例如，查詢 [WKND參考示範專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) 可對新的持續查詢完成 `wknd-shared/adventures-by-locale` 定義為：
+AEM提供 `_locale` GraphQL篩選器，會依地區設定代碼自動篩選內容。 例如，查詢 [WKND Site項目](https://github.com/adobe/aem-guides-wknd) 可對新的持續查詢完成 `wknd-shared/adventures-by-locale` 定義為：
 
 ```graphql
 query($locale: String!) {
