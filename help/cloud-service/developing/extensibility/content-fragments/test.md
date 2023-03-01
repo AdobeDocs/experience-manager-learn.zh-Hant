@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
+source-git-commit: 1a4ee470a650aacc5412fbd27062ca14ccdb1967
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -95,7 +95,9 @@ AEM內容片段主控台擴充功能可針對擴充功能所屬Adobe組織中的
    ```shell
    $ aio app use -w Stage
    ```
+
    將任何變更合併至 `.env` 和 `.aio`.
+
 1. 部署更新的擴充功能App Builder應用程式。 如果未登入，請執行 `aio login` 第一個。
 
    ```shell
