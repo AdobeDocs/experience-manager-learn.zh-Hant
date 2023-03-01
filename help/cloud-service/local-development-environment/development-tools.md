@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: e82c30e7f1a1fe04fd43ee639d74788f9bf100f6
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1502'
 ht-degree: 2%
 
 ---
@@ -121,6 +121,7 @@ Apache Maven是開放原始碼的Java命令列工具，用來建置從AEM Projec
 
 + 從AEM as a Cloud Services服務追蹤記錄
 + 從CLI管理Cloud Manager管道
++ 部署至 [AEM快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
 
 ### 安裝Adobe I/OCLI
 
@@ -134,13 +135,7 @@ Adobe I/OCloud Manager增效模組可讓aio CLI透過 `aio cloudmanager` 命令�
 
 1. 執行 `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` 安裝 [aio Cloud Manager外掛程式](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
-### 設定Adobe I/OCLIAsset compute插件{#aio-asset-compute}
-
-Adobe I/OCloud Manager增效模組可讓aio CLI透過 `aio asset-compute` 命令。
-
-1. 執行 `aio plugins:install @adobe/aio-cli-plugin-asset-compute` 安裝 [aioAsset compute外掛程式](https://github.com/adobe/aio-cli-plugin-asset-compute).
-
-### 設定Adobe I/OCLI身份驗證
+#### 設定Adobe I/OCLI身份驗證
 
 為了讓Adobe I/OCLI與Cloud Manager通訊， [必須在Cloud Manager主控台中建立Cloud Manager整合Adobe I/O](https://github.com/adobe/aio-cli-plugin-cloudmanager)必須取得和憑證才能成功驗證。
 
@@ -158,6 +153,19 @@ Adobe I/OCloud Manager增效模組可讓aio CLI透過 `aio asset-compute` 命令
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
 開始 [執行命令](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) (透過Adobe I/OCLI)取得Cloud Manager的說明。
+
+### 設定AEM Rapid Development Environment外掛程式{#rde}
+
+AEM Rapid Development Environment外掛程式可讓aio CLI與AEMas a Cloud Service互動 [快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html) 透過 `aio aem:rde` 命令。
+
+1. 執行 `aio plugins:install @adobe/aio-cli-plugin-aem-rde` 安裝 [AEM Rapid Development Environments外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde).
+
+### 設定Adobe I/OCLIAsset compute插件{#aio-asset-compute}
+
+Adobe I/OCloud Manager增效模組可讓aio CLI透過 `aio asset-compute` 命令。
+
+1. 執行 `aio plugins:install @adobe/aio-cli-plugin-asset-compute` 安裝 [aioAsset compute外掛程式](https://github.com/adobe/aio-cli-plugin-asset-compute).
+
 
 ## 設定開發IDE
 
