@@ -3,7 +3,7 @@ title: 治理和人員配置模式與原型
 description: 了解如何運作您的Adobe Experience Manager(AEM)平台，並從工作中獲得最大價值。
 solution: Experience Manager
 exl-id: 808ab7a6-5ec5-4bbd-9a6e-cfc0b447430d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: dcd69c7444eae0f8c86464c1963bff35e6f11238
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 0%
@@ -90,7 +90,7 @@ ht-degree: 0%
 
    * CSS開發 — 會建立體驗成品，不過會重新調整元件的用途以使用新樣式。
    * 後端開發 — 建立新元件或可擴充核心元件。 如果操作正確，此角色不應有多個人，除非需要執行大型動畫任務。
-   * 發行管理 — 監督程式碼部署，並擔任目前的客戶成功工程師。
+   * 發行管理 — 監督程式碼部署，並擔任目前的Adobe客戶團隊。
    * 產品擁有者 — 與BU合作，將技術和戰略願景結合起來；建立維護任務和增強功能，並擔任解決方案的業務所有者。
    * 管理員作者 — 更新CSS外觀，並為更新和套用內容的作者提供指引。 此角色適用於工作流程設定，並建立內容作者要套用的指引檔案。 注意：在6.5版中，Adobe建議使用可編輯的範本。
    * 內容作者 — 套用內容、分層所有權，並在CSM出現時提供通訊問題和疑慮。
