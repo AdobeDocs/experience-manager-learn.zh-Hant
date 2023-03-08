@@ -10,10 +10,10 @@ kt: 10436
 thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
-source-git-commit: ad9aa172d37741207dabcbc705efaa851fd17e7c
+source-git-commit: 171daf292355203b903a6c29bebad9216dfd95b7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '151'
+ht-degree: 3%
 
 ---
 
@@ -26,6 +26,8 @@ AEM as a Cloud Service支援多種驗證選項，且會依服務類型而異。
 | [Adobe IMS](../accessing/overview.md) | ✔ | ✘ |
 | · [透過Adobe IMS的SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✘ |
 | [SAML 2.0](./saml-2-0.md) | ✘ | ✔ |
+| [單一登入(SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
+| [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
 | [Token驗證](../../headless-tutorial/authentication/overview.md) | ✔ | ✔ |
 
 ## 驗證選項
