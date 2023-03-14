@@ -1,5 +1,5 @@
 ---
-title: 使用Analytics報告已提交的表單資料欄位
+title: 使用Adobe Analytics報告已提交的表單資料欄位
 description: 將AEM Forms CS與Adobe Analytics整合，以報告表單資料欄位
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
+source-git-commit: 439167be96959baea54f50a221c6d26f8fab78b2
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 建立適當的資料元素
 
-在標籤屬性中，我們新增了兩個新資料元素（ApplicationsStateOfResidence和validationError）。
+在「標籤」屬性中，我們新增了兩個新資料元素（ApplicationsStateOfResidence和validationError）。
 ![適用性表單](assets/data_elements.png)
 
 ## ApplicantStateOfResidence
