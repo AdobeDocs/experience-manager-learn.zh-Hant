@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 1a7b4c9c4575407467856d795ad3b6dde8e10532
+source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 19%
+source-wordcount: '910'
+ht-degree: 20%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 19%
    + [製作與發佈服務](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Cloud Manager {#cloud-manager}
-   + [計畫](./cloud-manager/programs.md)
+   + [方案](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
    + [CI/CD生產管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD非生產管道](./cloud-manager/cicd-non-production-pipeline.md)
@@ -104,7 +104,7 @@ ht-degree: 19%
       + [記錄檔](./debugging/aem-sdk-local-quickstart/logs.md)
       + [遠端偵錯](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi Web控制台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
-      + [Dispatcher工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
+      + [Dispatcher 工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
    + 除錯AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [概觀](./debugging/cloud-service/overview.md)
@@ -196,6 +196,11 @@ ht-degree: 19%
       + [設定資產面板](./forms/create-first-af/configure-assets-panel.md)
       + [配置開始面板](./forms/create-first-af/configure-start-panel.md)
       + [添加和配置工具欄](./forms/create-first-af/add-configure-toolbar.md)
+      + AEM Forms與Analytics{#forms-and-analytics}
+         + [簡介](./forms/form-data-analytics/introduction.md)
+         + [建立資料元素](./forms/form-data-analytics/data-elements.md)
+         + [建立規則](./forms/form-data-analytics/rules.md)
+         + [測試解決方案](./forms/form-data-analytics/test.md)
    + AEM Forms CS中的檔案產生{#doc-gen-formscs}
       + [簡介](./forms/doc-gen-forms-cs/introduction.md)
       + [建立服務憑據](./forms/doc-gen-forms-cs/service-credentials.md)
