@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
+source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%
@@ -22,7 +22,9 @@ ht-degree: 1%
 
 ## 報表套裝
 
-Adobe Analytics中擷取的表單資料會以環圈格式（依州提交）呈現
+在Adobe Analytics中擷取的表單資料會以環圈格式呈現
+
+**各州提交**
 
 ![應用程式bystate](assets/donut.png)
 

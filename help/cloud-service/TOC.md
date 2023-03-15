@@ -5,7 +5,7 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
+source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 20%
@@ -51,7 +51,7 @@ ht-degree: 20%
    + [概觀](./local-development-environment/overview.md)
    + [開發工具](./local-development-environment/development-tools.md)
    + [本機AEM執行階段](./local-development-environment/aem-runtime.md)
-   + [本機Dispatcher工具](./local-development-environment/dispatcher-tools.md)
+   + [本機 Dispatcher 工具](./local-development-environment/dispatcher-tools.md)
 + 開發{#developing}
    + 擴充性{#extensibility}
       + App Builder{#app-builder}
@@ -70,7 +70,7 @@ ht-degree: 20%
          + 範例擴充功能{#example-extensions}
             + [大量屬性更新](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
             + [AEM使用OpenAI產生影像資產](./developing/extensibility/content-fragments/example-extensions/image-generation-and-image-upload.md)
-   + 開發基本知識{#basics}
+   + 開發基本概念{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本機開發環境](./developing/basics/local-development-environment.md)
       + [AEM 專案原型](./developing/basics/aem-project-archetype.md)
@@ -196,11 +196,11 @@ ht-degree: 20%
       + [設定資產面板](./forms/create-first-af/configure-assets-panel.md)
       + [配置開始面板](./forms/create-first-af/configure-start-panel.md)
       + [添加和配置工具欄](./forms/create-first-af/add-configure-toolbar.md)
-      + AEM Forms與Analytics{#forms-and-analytics}
-         + [簡介](./forms/form-data-analytics/introduction.md)
-         + [建立資料元素](./forms/form-data-analytics/data-elements.md)
-         + [建立規則](./forms/form-data-analytics/rules.md)
-         + [測試解決方案](./forms/form-data-analytics/test.md)
+   + AEM Forms與Analytics{#forms-and-analytics}
+      + [簡介](./forms/form-data-analytics/introduction.md)
+      + [建立資料元素](./forms/form-data-analytics/data-elements.md)
+      + [建立規則](./forms/form-data-analytics/rules.md)
+      + [測試解決方案](./forms/form-data-analytics/test.md)
    + AEM Forms CS中的檔案產生{#doc-gen-formscs}
       + [簡介](./forms/doc-gen-forms-cs/introduction.md)
       + [建立服務憑據](./forms/doc-gen-forms-cs/service-credentials.md)

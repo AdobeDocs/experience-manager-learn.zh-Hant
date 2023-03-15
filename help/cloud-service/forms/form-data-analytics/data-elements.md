@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 439167be96959baea54f50a221c6d26f8fab78b2
+source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
@@ -19,6 +19,7 @@ ht-degree: 0%
 # 建立適當的資料元素
 
 在「標籤」屬性中，我們新增了兩個新資料元素（ApplicationsStateOfResidence和validationError）。
+
 ![適用性表單](assets/data_elements.png)
 
 ## ApplicantStateOfResidence
