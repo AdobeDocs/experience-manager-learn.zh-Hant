@@ -8,12 +8,12 @@ role: Developer
 level: Beginner
 kt: 4679
 thumbnail: 30603.jpg
-last-substantial-update: 2022-09-01T00:00:00Z
+last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: 370e15fdd96f1c33bc50ee72066381bec40d82c3
+source-git-commit: eb31c5fb79e01e1c363fc153355e8d92d1a54021
 workflow-type: tm+mt
-source-wordcount: '1593'
-ht-degree: 3%
+source-wordcount: '1612'
+ht-degree: 9%
 
 ---
 
@@ -21,14 +21,14 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_dispatcher"
->title="本機Dispatcher工具"
->abstract="Dispatcher是整體Experience Manager架構的必要部分，且應是本機開發設定的一部分。 AEMas a Cloud ServiceSDK包含建議的Dispatcher工具版本，有助於在本機設定、驗證和模擬Dispatcher。"
+>title="本機 Dispatcher 工具"
+>abstract="Dispatcher 是整個 Experience Manager 架構的組成部分，應該是本機開發設定的一部分。AEM as a Cloud Service SDK 包括建議的 Dispatcher 工具版本，該版本有助於在本機設定、驗證和模擬 Dispatcher。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="雲端中的 Dispatcher"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載AEMas a Cloud ServiceSDK"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載 AEM as a Cloud Service SDK"
 
-Adobe Experience Manager(AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM Publish層級之間提供安全性和效能層。 Dispatcher是整體Experience Manager架構的必要部分，且應是本機開發設定的一部分。
+Adobe Experience Manager(AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM Publish層級之間提供安全性和效能層。 Dispatcher 是整個 Experience Manager 架構的組成部分，應該是本機開發設定的一部分。
 
-AEMas a Cloud ServiceSDK包含建議的Dispatcher工具版本，有助於在本機設定、驗證和模擬Dispatcher。 Dispatcher工具由下列部分組成：
+AEM as a Cloud Service SDK 包括建議的 Dispatcher 工具版本，該版本有助於在本機設定、驗證和模擬 Dispatcher。Dispatcher工具由下列部分組成：
 
 + Apache HTTP Web伺服器和Dispatcher組態檔的基準集，位於 `.../dispatcher-sdk-x.x.x/src`
 + 配置驗證器CLI工具，位於 `.../dispatcher-sdk-x.x.x/bin/validate`
@@ -81,7 +81,7 @@ Dispatcher工具的版本與AEM SDK的版本不同。 請確定Dispatcher工具�
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
 
-*此影片說明用途使用macOS。 可以使用等效的Windows/Linux命令來獲得類似的結果*
+*此影片說明用途使用macOS。 可以使用等效的Windows/Linux命令來獲得類似的結果。*
 
 ## 了解Dispatcher設定檔
 
@@ -187,6 +187,11 @@ Dispatcher工具版本的遞增頻率比Experience Manager低，因此，Dispatc
 ## 如何更新Apache和Dispatcher設定的基準集
 
 AEM Apache和Dispatcher設定的基準集會定期增強，並隨as a Cloud ServiceSDK版本一併發行。 最佳實務是將基線設定增強功能併入您的AEM專案，並避免 [本機驗證](#validate-configurations) 和Cloud Manager管道故障。 使用 `update_maven.sh` 指令碼 `.../dispatcher-sdk-x.x.x/bin` 檔案夾。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3416744/?quality=12&learn=on)
+
+*此影片說明用途使用macOS。 可以使用等效的Windows/Linux命令來獲得類似的結果。*
+
 
 假設您過去是使用 [AEM專案原型](https://github.com/adobe/aem-project-archetype)，則基準Apache和Dispatcher設定為最新。 使用這些基線配置時，將重複使用並複製檔案(如 `*.vhost`, `*.conf`, `*.farm` 和 `*.any` 從 `dispatcher/src/conf.d` 和 `dispatcher/src/conf.dispatcher.d` 資料夾。 您的本機Dispatcher驗證和Cloud Manager管道運作正常。
 
