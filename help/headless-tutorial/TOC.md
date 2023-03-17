@@ -7,9 +7,9 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: c96b8c9761ff9477fda40d641db5021994b32754
+source-git-commit: ea7cd118d9cba97d2b497f6659f74d2fe8331c66
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '282'
 ht-degree: 20%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 20%
       + [4 — 持續保存的GraphQL查詢](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 — 客戶端應用程式整合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
 + 部署{#deployments}
-   + [概覽](./graphql/deployment/overview.md)
+   + [概觀](./graphql/deployment/overview.md)
    + [單頁應用程式](./graphql/deployment/spa.md)
    + [Web元件](./graphql/deployment/web-component.md)
    + [行動](./graphql/deployment/mobile.md)
@@ -59,6 +59,7 @@ ht-degree: 20%
    + [RTF文字](./graphql/how-to/rich-text.md)
    + [影像](./graphql/how-to/images.md)
    + [本地化內容](./graphql/how-to/localized-content.md)
+   + [預覽](./graphql/how-to/preview.md)
    + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + [在AEM 6.5上安裝GraphiQL](./graphql/how-to/install-graphiql-aem-6-5.md)
    + 範例 {#example-apps}
