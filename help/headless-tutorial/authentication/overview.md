@@ -13,16 +13,16 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 8fc36698f06fea0eaaf818867c7e713453e0452d
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
 
 # 以代號為基礎的驗證以AEMas a Cloud Service
 
-AEM會公開各種HTTP端點，可以無周邊方式互動，從GraphQL、AEM Content Services到Assets HTTP API。 這些無頭消費者通常需要向AEM驗證，才能存取受保護的內容或動作。 為方便執行此作業，AEM支援來自外部應用程式、服務或系統之HTTP要求的權杖式驗證。
+AEM會公開各種可無頭式互動的HTTP端點，從GraphQL、AEM內容服務到資產HTTP API。 這些無頭消費者通常需要向AEM驗證，才能存取受保護的內容或動作。 為方便執行此作業，AEM支援來自外部應用程式、服務或系統之HTTP要求的權杖式驗證。
 
 在本教學課程中，請妥善探索外部應用程式如何以程式設計方式，使用存取權杖，透過HTTP驗證AEMas a Cloud Service並與其互動。
 
@@ -75,5 +75,5 @@ Node.js應用程式的執行流程如下：
 
 + [下載範例應用程式](./assets/aem-guides_token-authentication-external-application.zip)
 + 建立和交換JWT的其他代碼示例
-   + [Node.js、Java、Python、C#.NET和PHP程式碼範例](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md)
+   + [Node.js、Java、Python、C#.NET和PHP程式碼範例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)
    + [JavaScript/Axios型程式碼範例](https://github.com/adobe/aemcs-api-client-lib)

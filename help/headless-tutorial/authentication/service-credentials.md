@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
+source-git-commit: 1401710c19ae6ee6a2822ae06286bef4f92cda45
 workflow-type: tm+mt
-source-wordcount: '1931'
+source-wordcount: '1937'
 ht-degree: 0%
 
 ---
@@ -124,7 +124,7 @@ ht-degree: 0%
 
 + 存取AEMas a Cloud Service時，外部應用程式會使用此存取權杖，而非本機開發存取權杖
 
-在本教學課程中，Adobe `@adobe/jwt-auth` npm模組用於兩者，(1)從服務憑證產生JWT，以及(2)以單一函式呼叫將其交換為存取權杖。 如果您的應用程式不是以JavaScript為基礎，請檢閱 [其他語言的范常式式碼](https://developer.adobe.com/developer-console/docs/guides/) 以了解如何從服務憑證建立JWT，並與Adobe IMS交換以取得存取權杖。
+在本教學課程中，Adobe `@adobe/jwt-auth` npm模組用於兩者，(1)從服務憑證產生JWT，以及(2)以單一函式呼叫將其交換為存取權杖。 如果您的應用程式不是以JavaScript為基礎，請檢閱 [其他語言的范常式式碼](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) 以了解如何從服務憑證建立JWT，並與Adobe IMS交換以取得存取權杖。
 
 ## 閱讀服務憑據
 
@@ -149,7 +149,7 @@ function getCommandLineParams() {
 
 讀取服務憑證後，系統會使用這些憑證產生JWT，然後與Adobe IMS API交換以取得存取權杖。 然後，此存取權杖便可用來存取AEMas a Cloud Service。
 
-此範例應用程式以Node.js為基礎，因此最好使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模組，以方便(1)產生JWT，以及(20)與Adobe IMS交換。 如果您的應用程式是使用其他語言開發的，請查看 [適當的程式碼範例](https://developer.adobe.com/developer-console/docs/guides/) 了解如何使用其他程式設計語言，向Adobe IMS建構HTTP要求。
+此範例應用程式以Node.js為基礎，因此最好使用 [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模組，以方便(1)產生JWT，以及(20)與Adobe IMS交換。 如果您的應用程式是使用其他語言開發的，請查看 [適當的程式碼範例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) 了解如何使用其他程式設計語言，向Adobe IMS建構HTTP要求。
 
 1. 更新 `getAccessToken(..)` 檢查JSON檔案內容，並判斷其代表本機開發存取權杖或服務憑證。 這可借由檢查 `.accessToken` 屬性，僅存在於本機開發存取權杖JSON。
 
