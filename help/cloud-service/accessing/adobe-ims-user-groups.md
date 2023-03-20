@@ -1,6 +1,6 @@
 ---
-title: Adobe IMS用戶組AEM和
-description: Adobe IMS用戶組建立暴露在其中的用戶的邏輯集AEM，在這些邏輯集中，可以利用用戶來定義對用戶的微調AEM權限。
+title: Adobe IMS使用者群組和AEM
+description: Adobe IMS使用者群組會建立對AEM公開的使用者邏輯集，以便用來定義AEM使用者的微調權限。
 version: Cloud Service
 topic: Administration, Security
 feature: User and Groups
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 ---
 
-# Adobe IMS用戶組 {#adobe-ims-user-groups}
+# Adobe IMS使用者群組 {#adobe-ims-user-groups}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_usergroups"
->title="Adobe IMS用戶組"
->abstract="Adobe IMS用戶組建立暴露在其中的用戶的邏輯集AEM，在這些邏輯集中，可以利用用戶來定義對用戶的微調AEM權限。"
+>title="Adobe IMS使用者群組"
+>abstract="Adobe IMS使用者群組會建立對AEM公開的使用者邏輯集，以便用來定義AEM使用者的微調權限。"
 
- Adobe IMS用戶組建立暴露在其中的用戶的邏輯集AEM，在這些邏輯集中，可以利用用戶來定義對用戶的微調AEM權限。
+ Adobe IMS使用者群組會建立對AEM公開的使用者邏輯集，以便用來定義AEM使用者的微調權限。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39150/?quality=12&learn=on)

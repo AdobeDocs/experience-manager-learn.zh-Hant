@@ -1,6 +1,6 @@
 ---
-title: 配置雲管理器管道
-description: 在管道上配AEM置管道並瀏覽不同類型的管道。
+title: 配置Cloud Manager管道
+description: 在AEM上設定管道並探索不同類型的管道。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -21,9 +21,9 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_configurepipeline"
 >title="配置管道"
->abstract="瀏覽Cloud Manager中不同類型的管道以及如何為成功的項目配置它們。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#config-pipeline-video" text="在雲管理器中配置管道"
+>abstract="探索Cloud Manager中不同類型的管道，以及如何為成功的專案進行設定。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#config-pipeline-video" text="在Cloud Manager中設定管道"
 
-瀏覽Cloud Manager中不同類型的管道以及如何為成功的項目配置它們。
+探索Cloud Manager中不同類型的管道，以及如何為成功的專案進行設定。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330539/?quality=12&learn=on)

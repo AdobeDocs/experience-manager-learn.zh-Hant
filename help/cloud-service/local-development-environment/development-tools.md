@@ -13,7 +13,7 @@ exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 source-git-commit: e82c30e7f1a1fe04fd43ee639d74788f9bf100f6
 workflow-type: tm+mt
 source-wordcount: '1502'
-ht-degree: 2%
+ht-degree: 7%
 
 ---
 
@@ -22,11 +22,11 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_devtools"
 >title="設定開發工具"
->abstract="Adobe Experience Manager(AEM)開發作業需要在開發人員電腦上安裝及設定一套簡單的開發工具。 這些工具包括Java、Maven、Adobe I/OCLI、開發IDE等。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="開發准則"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html" text="開發基本知識"
+>abstract="展開 Adobe Experience Manager (AEM) 的開發作業前，開發人員的電腦上需先安裝與設定一套簡單的開發工具。這些工具包括 Java、Maven、Adobe I/O CLI、開發 IDE 等。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="開發指導方針"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=zh-Hant" text="開發基本概念"
 
-Adobe Experience Manager(AEM)開發作業需要在開發人員電腦上安裝及設定一套簡單的開發工具。 這些工具可支援AEM專案的開發與建置。
+展開 Adobe Experience Manager (AEM) 的開發作業前，開發人員的電腦上需先安裝與設定一套簡單的開發工具。這些工具可支援AEM專案的開發與建置。
 
 請注意 `~` 用作用戶目錄的簡稱。 在Windows中，這等同於 `%HOMEPATH%`.
 

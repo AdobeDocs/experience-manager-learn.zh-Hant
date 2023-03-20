@@ -1,6 +1,6 @@
 ---
-title: 使用與Cloud Manager的連AEM續整合
-description: 使用Adobe雲管理器瞭解最佳實踐和持續整合。
+title: 持續與AEM Cloud Manager整合
+description: 使用Analytics Cloud Manager了解最佳實務和持續整合Adobe。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -16,14 +16,14 @@ ht-degree: 6%
 
 ---
 
-# 連續整合和雲管理器 {#continuous-integration-and-cloud-manager}
+# 持續整合與Cloud Manager {#continuous-integration-and-cloud-manager}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_cicd"
->title="連續整合和雲管理器"
->abstract="使用Adobe雲管理器瞭解最佳實踐和持續整合。"
+>title="持續整合與Cloud Manager"
+>abstract="使用Analytics Cloud Manager了解最佳實務和持續整合Adobe。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#non-production-pipelines" text="設定 CI-CD 管線"
 
-使用Adobe雲管理器瞭解最佳實踐和持續整合。
+使用Analytics Cloud Manager了解最佳實務和持續整合Adobe。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330536/?quality=12&learn=on)

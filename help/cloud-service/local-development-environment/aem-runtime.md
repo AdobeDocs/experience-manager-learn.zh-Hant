@@ -13,7 +13,7 @@ exl-id: 19f72254-2087-450b-909d-2d90c9821486
 source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '1800'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 2%
 >id="aemcloud_localdev_aemruntime"
 >title="本機AEM執行階段"
 >abstract="Adobe Experience Manager(AEM)可透過AEMas a Cloud Service SDK的Quickstart Jar在本機執行。 這可讓開發人員在將自訂程式碼、設定和內容提交至原始碼控制項之前，先進行部署和測試，然後將其部署至AEMas a Cloud Service環境。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEMas a Cloud ServiceSDK"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載AEMas a Cloud ServiceSDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載 AEM as a Cloud Service SDK"
 
 Adobe Experience Manager(AEM)可透過AEMas a Cloud Service SDK的Quickstart Jar在本機執行。 這可讓開發人員在將自訂程式碼、設定和內容提交至原始碼控制項之前，先進行部署和測試，然後將其部署至AEMas a Cloud Service環境。
 
@@ -100,7 +100,7 @@ $ java -jar aem-author-p4502.jar
    您 *不能* 將AEM啟動為Cloud Service快速入門Jar [按兩下](#troubleshooting-double-click).
 1. 在存取本機AEM發佈服務 [http://localhost:4503](http://localhost:4503) 在網頁瀏覽器中
 
-窗口：
+Windows:
 
 ```shell
 $ mkdir -p c:\Users\<My User>\aem-sdk\publish
