@@ -9,7 +9,7 @@ level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
 workflow-type: tm+mt
 source-wordcount: '2371'
 ht-degree: 1%
@@ -43,11 +43,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 需要整合Launch和您的AEM網站的協助嗎？ [請觀看此影片系列](../experience-platform-launch/overview.md).
+> 需要整合Launch和您的AEM網站的協助嗎？ [請觀看此影片系列](../experience-platform/data-collection/tags/overview.md).
 
 ## 為WKND站點切換啟動環境
 
-[https://wknd.site](https://wknd.site) 是以 [開放原始碼專案](https://github.com/adobe/aem-guides-wknd) 設計為參考， [教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) AEM實作。
+[https://wknd.site](https://wknd.site) 是以 [開放原始碼專案](https://github.com/adobe/aem-guides-wknd) 設計為參考， [教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant) AEM實作。
 
 您不必設定AEM環境並安裝WKND程式碼基底，而是可以使用Experience Platform偵錯器，以 **開關** 現場 [https://wknd.site/](https://wknd.site/) to *您的* 啟動屬性。 當然，如果您的AEM網站已具備 [Adobe用戶端資料層已啟用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
 

@@ -5,10 +5,10 @@ breadcrumb-title: AEM Sites 教學課程
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: c82965636ddeef7dc165e0bea079c99f1a16e0ca
+source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 20%
+source-wordcount: '441'
+ht-degree: 22%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 20%
    + [可編輯的範本](page-authoring/template-editor-feature-video-use.md)
    + [樣式系統](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
-   + [啟動](page-authoring/launches.md)
+   + [Launch](page-authoring/launches.md)
    + 專家建議 {#expert-advice}
       + [網站階層提示](page-authoring/expert-advice/site-hierarchy.md)
 + 元件 {#components}
@@ -43,7 +43,7 @@ ht-degree: 20%
    + [元件主控台](components/components-console-feature-video-use.md)
 + 內容片段 {#content-fragments}
    + [內容片段主控台](content-fragments/content-fragments-console.md)
-   + [製作內容片段](content-fragments/content-fragments-feature-video-use.md)
+   + [編寫內容片段](content-fragments/content-fragments-feature-video-use.md)
    + [傳送內容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [轉譯內容片段](content-fragments/content-fragments-translation-feature-video-use.md)
    + [內容片段與體驗片段的比較](content-fragments/understand-content-fragments-and-experience-fragments.md)
@@ -98,12 +98,12 @@ ht-degree: 20%
 + 整合 {#integrations}
    + Experience Platform {#experience-platform}
       + [生成FPID](integrations/platform/fpid.md)
-   + Experience Platform Launch {#experience-platform-launch}
-      + [概觀](integrations/experience-platform-launch/overview.md)
-      + [建立Launch屬性](integrations/experience-platform-launch/create-launch-property.md)
-      + [使用AEM連線Adobe I/O與Launch](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
-      + [建立LaunchCloud Service](integrations/experience-platform-launch/create-launch-cloud-service.md)
-      + [對Launch實作除錯](integrations/experience-platform-launch/debug-launch-implementation.md)
+   + Experience Platform資料收集標籤(Launch) {#experience-platform-data-collection-tags}
+      + [概觀](integrations/experience-platform/data-collection/tags/overview.md)
+      + [建立標籤屬性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
+      + [使用開發人員控制台連線AEM與標籤](integrations/experience-platform/data-collection/tags/connect-aem-tags-using-developer-console.md)
+      + [建立AEM LaunchCloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [為標籤(Launch)實作除錯](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe用戶端資料層 {#adobe-client-data-layer}
       + [使用Adobe用戶端資料層](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自訂Adobe用戶端資料層](integrations/adobe-client-data-layer/data-layer-customize.md)
