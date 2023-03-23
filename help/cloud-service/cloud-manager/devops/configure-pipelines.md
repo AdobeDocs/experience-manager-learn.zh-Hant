@@ -12,18 +12,18 @@ exl-id: 05e3f987-e9bf-4b61-93b4-62b43619969e
 source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
 source-wordcount: '71'
-ht-degree: 0%
+ht-degree: 77%
 
 ---
 
-# 配置管道 {#configure-pipelines}
+# 設定管道 {#configure-pipelines}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_configurepipeline"
->title="配置管道"
->abstract="探索Cloud Manager中不同類型的管道，以及如何為成功的專案進行設定。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#config-pipeline-video" text="在Cloud Manager中設定管道"
+>title="設定管道"
+>abstract="探索 Cloud Manager 中的不同管道類型，以及如何針對成功的專案設定這些管道。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#config-pipeline-video" text="Cloud Manager 中的管道設定"
 
-探索Cloud Manager中不同類型的管道，以及如何為成功的專案進行設定。
+探索 Cloud Manager 中的不同管道類型，以及如何針對成功的專案設定這些管道。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330539/?quality=12&learn=on)

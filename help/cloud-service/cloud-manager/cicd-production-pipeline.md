@@ -1,6 +1,6 @@
 ---
 title: 使用AdobeCloud Manager - CI/CD生產管道
-description: CI/CD生產管道可用來透過Stage建置程式碼並部署至生產環境，縮短創造價值的時間。 CI/CD生產管道設定會定義將啟動管道的觸發器、控制生產部署的參數以及效能測試參數。
+description: CI/CD生產管道可用來透過Stage建置程式碼並部署至生產環境，縮短創造價值的時間。 CI/CD 生產管道設定會定義起始管道的觸發條件、控制生產部署的參數以及效能測試參數。
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -15,7 +15,7 @@ exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '177'
-ht-degree: 5%
+ht-degree: 49%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 5%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_prodpipeline"
->title="CI/CD生產管道"
->abstract="CI/CD生產管道設定會定義將啟動管道的觸發器、控制生產部署的參數以及效能測試參數。"
+>title="CI/CD 生產管道"
+>abstract="CI/CD 生產管道設定會定義起始管道的觸發條件、控制生產部署的參數以及效能測試參數。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-process" text="部署程式碼"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-production-phase" text="部署至生產階段"
 

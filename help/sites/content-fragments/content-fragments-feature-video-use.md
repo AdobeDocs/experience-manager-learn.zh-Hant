@@ -14,11 +14,11 @@ exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '383'
-ht-degree: 5%
+ht-degree: 15%
 
 ---
 
-# 製作內容片段 {#authoring-content-fragments}
+# 編寫內容片段 {#authoring-content-fragments}
 
 內容片段是AEM中的內容抽象概念，可讓您獨立於其支援的管道，製作和管理文字內容。
 
@@ -27,14 +27,14 @@ AEM內容片段是文字型編輯內容，可能包含一些與設計或版面�
 此影片系列涵蓋AEM中內容片段的製作生命週期。 關於 [您可以在此處找到傳遞內容片段](content-fragments-delivery-feature-video-use.md).
 
 1. 啟用和定義內容片段模型
-2. 製作內容片段
+2. 編寫內容片段
 3. 下載內容片段
 4. 編輯功能
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_admin_content_fragments"
 >title="管理片段"
->abstract="了解內容片段可如何讓您設計、建立、組織及使用不受頁面影響的內容。"
+>abstract="了解內容片段如何讓您設計、建立、規劃和使用每頁自主的內容。"
 
 ## 定義內容片段模型 {#defining-content-fragment-models}
 
@@ -77,7 +77,7 @@ AEM內容片段可從AEM Author下載為包含變體、元素和中繼資料的Z
 ## 其他資源 {#additional-resources}
 
 * [傳送內容片段](content-fragments-delivery-feature-video-use.md)
-* [AEM WCM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [AEM WCM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [AEM WCM核心內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 若要從影片系列下載並安裝以下套件，請在AEM 6.4+執行個體上執行最終狀態：

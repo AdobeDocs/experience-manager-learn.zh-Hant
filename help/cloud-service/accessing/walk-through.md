@@ -1,5 +1,5 @@
 ---
-title: 設定AEM存取權逐步說明
+title: AEM 存取權設定逐步說明
 description: 在AdminConsole中設定Adobe IMS使用者、使用者群組和產品設定檔的概要教學，以及如何在AEM作者中運用這些Adobe IMS抽象化功能來定義和管理特定群組型權限。
 version: Cloud Service
 topic: Administration, Security
@@ -12,16 +12,16 @@ exl-id: 0ca50fa4-0b2a-4e6d-becb-7a91fc6b4166
 source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
 source-wordcount: '115'
-ht-degree: 0%
+ht-degree: 42%
 
 ---
 
-# 設定AEM存取權逐步說明 {#configuring-access-to-aem-walkthrough}
+# AEM 存取權設定逐步說明 {#configuring-access-to-aem-walkthrough}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_aem_walkthrough"
->title="設定AEM存取權逐步說明"
->abstract="在Adobe Admin Console中設定Adobe IMS使用者、使用者群組和產品設定檔的概要教學，以及如何在AEM作者中運用這些Adobe IMS抽象化功能來定義及管理特定的群組型權限。"
+>title="AEM 存取權設定逐步說明"
+>abstract="簡短地逐步說明在 Adobe Admin Console 中設定 Adobe IMS 使用者、使用者群組和產品設定檔，以及如何在 AEM 作者中利用這些 Adobe IMS 抽象化功能來定義和管理特定的群組型權限。"
 
 在AdminConsole中設定Adobe IMS使用者、使用者群組和產品設定檔的概要教學，以及如何在AEM作者中運用這些Adobe IMS抽象化功能來定義和管理特定群組型權限。
 

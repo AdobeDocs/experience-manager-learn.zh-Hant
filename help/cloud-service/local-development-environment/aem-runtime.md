@@ -13,7 +13,7 @@ exl-id: 19f72254-2087-450b-909d-2d90c9821486
 source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '1800'
-ht-degree: 3%
+ht-degree: 9%
 
 ---
 
@@ -21,12 +21,12 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
->title="本機AEM執行階段"
->abstract="Adobe Experience Manager(AEM)可透過AEMas a Cloud Service SDK的Quickstart Jar在本機執行。 這可讓開發人員在將自訂程式碼、設定和內容提交至原始碼控制項之前，先進行部署和測試，然後將其部署至AEMas a Cloud Service環境。"
+>title="本機 AEM 執行階段"
+>abstract="Adobe Experience Manager (AEM) 可透過 AEM as a Cloud Service  SDK 的 Quickstart Jar 在本機上執行。如此一來，開發人員就能在將自訂程式碼、設定和內容送交來源控制項前，先行部署和測試，然後再部署至 AEM as a Cloud Service 環境。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載 AEM as a Cloud Service SDK"
 
-Adobe Experience Manager(AEM)可透過AEMas a Cloud Service SDK的Quickstart Jar在本機執行。 這可讓開發人員在將自訂程式碼、設定和內容提交至原始碼控制項之前，先進行部署和測試，然後將其部署至AEMas a Cloud Service環境。
+Adobe Experience Manager (AEM) 可透過 AEM as a Cloud Service  SDK 的 Quickstart Jar 在本機上執行。如此一來，開發人員就能在將自訂程式碼、設定和內容送交來源控制項前，先行部署和測試，然後再部署至 AEM as a Cloud Service 環境。
 
 請注意 `~` 用作用戶目錄的簡稱。 在Windows中，這等同於 `%HOMEPATH%`.
 

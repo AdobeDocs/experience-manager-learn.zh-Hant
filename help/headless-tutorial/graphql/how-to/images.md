@@ -12,11 +12,11 @@ exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
 source-wordcount: '1174'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# 具有AEM無頭的影像 {#images-with-aem-headless}
+# 影像與 AEM Headless {#images-with-aem-headless}
 
 影像是 [開發豐富、引人入勝的AEM無頭體驗](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless支援影像資產的管理及其最佳化傳送。
 
@@ -42,8 +42,8 @@ AEM無頭內容模型中使用的內容片段，通常會參考用於無頭體�
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
->title="具有AEM無頭的影像"
->abstract="了解AEM Headless如何支援影像資產的管理及其最佳化的傳送。"
+>title="影像與 AEM Headless"
+>abstract="了解 AEM Headless 如何支援影像資產的管理及其最佳化傳遞。"
 
 ## 內容片段模型
 
