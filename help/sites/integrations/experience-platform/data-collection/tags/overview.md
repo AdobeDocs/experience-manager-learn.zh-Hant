@@ -13,9 +13,9 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-10T00:00:00Z
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '336'
 ht-degree: 1%
 
 ---
@@ -31,21 +31,28 @@ ht-degree: 1%
 
 標籤是Adobe Experience Platform新一代的標籤管理技術。 標籤提供部署Adobe Analytics、Target、Audience Manager和其他解決方案的最簡單方式。 取得標籤的概觀，並建議與Adobe Experience Manager整合。
 
->[!VIDEO](https://video.tv.adobe.com/v/39090?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
 
 
 ## 必備條件
 
-整合Experience Platform資料收集標籤時，需要下列項目
+整合Experience Platform資料收集標籤時，需要下列項目。
 
-+ AEM管理員對AEMas a Cloud Service環境的存取
-+ 參考網站，如 [WKND](https://github.com/adobe/aem-guides-wknd) 部署到
++ AEM管理員AEMas a Cloud Service環境存取權
++ 參考網站，如 [WKND](https://github.com/adobe/aem-guides-wknd) 部署在它上。
++ 存取Adobe Experience Platform資料收集解決方案
 + 系統管理員存取 [Adobe Developer Console](https://developer.adobe.com/developer-console/)
 
 
+## 高階步驟
+
++ 在Adobe Experience Platform資料收集中，建立標籤屬性並加以編輯 _新增規則_. 然後 _新增程式庫_，選取新增的規則，核准並發佈。
++ 使用現有（或新）IMS設定連線AEM和標籤
++ 在AEM中，建立Launch雲端服務設定，然後將其套用至現有網站，最後驗證「標籤」屬性，以及其程式庫已載入已發佈或製作網站。
+
 ## 後續步驟
 
-[建立標籤(Launch)屬性](create-tag-property.md)
+[建立標籤屬性](create-tag-property.md)
 
 ## 其他資源 {#additional-resources}
 

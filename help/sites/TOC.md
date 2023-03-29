@@ -5,7 +5,7 @@ breadcrumb-title: AEM Sites 教學課程
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 22%
@@ -17,7 +17,7 @@ ht-degree: 22%
 
 + [概觀](overview.md)
 + 頁面編寫 {#page-authoring}
-   + [製作](page-authoring/aem-sites-authoring-overview.md)
+   + [編寫](page-authoring/aem-sites-authoring-overview.md)
    + [導覽](page-authoring/basic-handling-sites-feature-video-use.md)
    + [網站結構](page-authoring/content-hierarchy-feature-video-use.md)
    + [頁面建立](page-authoring/creating-page-feature-video-use.md)
@@ -101,7 +101,7 @@ ht-degree: 22%
    + Experience Platform資料收集標籤(Launch) {#experience-platform-data-collection-tags}
       + [概觀](integrations/experience-platform/data-collection/tags/overview.md)
       + [建立標籤屬性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
-      + [使用開發人員控制台連線AEM與標籤](integrations/experience-platform/data-collection/tags/connect-aem-tags-using-developer-console.md)
+      + [使用IMS連線AEM和標籤屬性](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
       + [建立AEM LaunchCloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [為標籤(Launch)實作除錯](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe用戶端資料層 {#adobe-client-data-layer}
