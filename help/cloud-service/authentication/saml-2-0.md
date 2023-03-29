@@ -10,9 +10,9 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 5522a22cc3ac12ce54297ee9f30570c29cfd5ce7
 workflow-type: tm+mt
-source-wordcount: '2815'
+source-wordcount: '2961'
 ht-degree: 1%
 
 ---
@@ -116,7 +116,7 @@ IDP的公開憑證會新增至AEM Global Trust Store，並用來驗證IDP傳送�
 
 ![將全域信任存放區復寫至AEM Publish](./assets/saml-2-0/global-trust-store-replicate.png)
 
-1. 導覽至 __工具>部署>套件__.
+1. 導覽至&#x200B;__工具 > 部署 > 套件__。
 1. 建立套件
    + 包名稱： `Global Trust Store`
    + 版本: `1.0.0`
@@ -126,6 +126,21 @@ IDP的公開憑證會新增至AEM Global Trust Store，並用來驗證IDP傳送�
 1. 選擇 __完成__ 然後 __儲存__.
 1. 選取 __建置__ 按鈕 __全局信任儲存__ 包。
 1. 建置後，選擇 __更多__ > __複製__ 激活全局信任儲存節點(`/etc/truststore`)發佈。
+
+## 建立authentication-service密鑰庫{#authentication-service-keystore}
+
+_當 [SAML 2.0驗證處理常式OSGi配置屬性 `handleLogout` 設為 `true`](#saml-20-authenticationsaml-2-0-authentication) 或 [AuthnRequest簽名/SAML斷言加密](#install-aem-public-private-key-pair) 必填_
+
+1. 以AEM管理員身分登入AEM Author，以上傳私密金鑰。
+1. 導覽至 __「工具」>「安全性」>「信任儲存」__，然後選取 __authentication-service__ 用戶，然後選擇 __屬性__ 從頂端動作列。
+1. 導覽至 __「工具」>「安全性」>「使用者」__，然後選取 __authentication-service__ 用戶，然後選擇 __屬性__ 從頂端動作列。
+1. 選取 __金鑰存放區__ 標籤。
+1. 建立或開啟金鑰存放區。 如果建立金鑰存放區，請確保密碼安全。
+   + A [此金鑰存放區中安裝了公用/私用金鑰存放區](#install-aem-public-private-key-pair) 僅當需要AuthnRequest簽名/SAML斷言加密時。
+   + 如果此SAML整合支援登出，但不支援AuthnRequest簽署/SAML斷言，則空金鑰存放區就足夠了。
+1. 選擇 __儲存並關閉__.
+1. 選擇 __authentication-service__ 用戶，然後選擇 __啟動__ 從頂端動作列。
+
 
 ## 安裝AEM公開/私密金鑰組{#install-aem-public-private-key-pair}
 
