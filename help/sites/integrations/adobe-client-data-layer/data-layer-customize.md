@@ -10,10 +10,10 @@ kt: 6265
 thumbnail: KT-6265.jpg
 last-substantial-update: 2022-09-20T00:00:00Z
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: 99b3ecf7823ff9a116c47c88abc901f8878bbd7a
 workflow-type: tm+mt
-source-wordcount: '2016'
-ht-degree: 2%
+source-wordcount: '2008'
+ht-degree: 3%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 2%
 
 了解如何使用自訂AEM元件的內容來自訂Adobe用戶端資料層。 了解如何使用 [AEM要擴充的核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html) 和自訂資料層。
 
-## 您將建置的
+## 您要建置的
 
 ![署名資料層](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
-在本教學課程中，您將探討如何更新WKND以擴充Adobe用戶端資料層 [署名元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/custom-component.html). 這是自訂元件，本教學課程中的經驗教訓可套用至其他自訂元件。
+在本教學課程中，我們將探討各種選項，透過更新WKND來擴充Adobe用戶端資料層 [署名元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html). 此 _署名_ 元件是 **自訂元件** 本教學課程中的和教訓可套用至其他自訂元件。
 
 ### 目標 {#objective}
 
@@ -61,7 +61,7 @@ A **本地開發環境** 是完成本教學課程的必要項目。 螢幕擷取
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.5和最新的Service Pack，請新增 `classic` 配置檔案到Maven命令：
+   > 若為AEM 6.5和最新的Service Pack，請新增 `classic` 配置檔案到Maven命令：
    >
    > `mvn clean install -PautoInstallSinglePackage -Pclassic`
 
@@ -76,7 +76,7 @@ A **本地開發環境** 是完成本教學課程的必要項目。 螢幕擷取
    window.adobeDataLayer.getState();
    ```
 
-   Inspect回應，可查看AEM網站上資料層的目前狀態。 您應該會看到頁面和個別元件的相關資訊。
+   若要查看AEM網站上資料層的目前狀態，請檢查回應。 您應該會看到頁面和個別元件的相關資訊。
 
    ![Adobe資料層回應](assets/data-layer-state-response.png)
 
@@ -84,14 +84,14 @@ A **本地開發環境** 是完成本教學課程的必要項目。 螢幕擷取
 
 ## 更新署名Sling模型 {#sling-model}
 
-若要在資料層中插入元件相關資料，必須先更新元件的Sling模型。 接下來，更新Byline的Java介面和Sling Model實作，以新增方法 `getData()`. 此方法將包含我們要插入資料層的屬性。
+若要在資料層中插入元件相關資料，請先更新元件的Sling模型。 接下來，更新Byline的Java™介面和Sling模型實作，以使用新方法 `getData()`. 此方法包含要插入資料層的屬性。
 
-1. 在所選IDE中，開啟 `aem-guides-wknd` 專案。 導覽至 `core` 模組。
+1. 開啟 `aem-guides-wknd` 專案。 導覽至 `core` 模組。
 1. 開啟檔案 `Byline.java` at `core/src/main/java/com/adobe/aem/guides/wknd/core/models/Byline.java`.
 
    ![署名Java介面](assets/adobe-client-data-layer/byline-java-interface.png)
 
-1. 將新方法新增至介面：
+1. 將下列方法新增至介面：
 
    ```java
    public interface Byline {
@@ -104,9 +104,7 @@ A **本地開發環境** 是完成本教學課程的必要項目。 螢幕擷取
    }
    ```
 
-1. 開啟檔案 `BylineImpl.java` at `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`.
-
-   這是 `Byline` 介面，並以Sling模型實作。
+1. 開啟檔案 `BylineImpl.java` at `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`. 這是 `Byline` 介面，並以Sling模型實作。
 
 1. 將下列匯入陳述式新增至檔案的開頭：
 
@@ -119,7 +117,7 @@ A **本地開發環境** 是完成本教學課程的必要項目。 螢幕擷取
    import com.adobe.cq.wcm.core.components.util.ComponentUtils;
    ```
 
-   此 `fasterxml.jackson` API可用來序列化要公開為JSON的資料。 此 `ComponentUtils` 的AEM核心元件，以檢查資料層是否已啟用。
+   此 `fasterxml.jackson` API可用來序列化要以JSON形式公開的資料。 此 `ComponentUtils` 的AEM核心元件，以檢查資料層是否已啟用。
 
 1. 新增未實作的方法 `getData()` to `BylineImple.java`:
 
@@ -160,7 +158,7 @@ A **本地開發環境** 是完成本教學課程的必要項目。 螢幕擷取
    }
    ```
 
-   在上述方法中， `HashMap` 可用來擷取要公開為JSON的屬性。 請注意，現有方法如 `getName()` 和 `getOccupations()` 中所有規則的URL區段。 `@type` 代表元件的唯一資源類型，這可讓用戶端根據元件類型輕鬆識別事件和/或觸發器。
+   在上述方法中， `HashMap` 可用來擷取要以JSON公開的屬性。 請注意，現有方法如 `getName()` 和 `getOccupations()` 中所有規則的URL區段。 此 `@type` 代表元件的唯一資源類型，可讓用戶端根據元件類型輕鬆識別事件和/或觸發器。
 
    此 `ObjectMapper` 可用來序列化屬性並傳回JSON字串。 然後，此JSON字串可插入資料層。
 
@@ -173,11 +171,11 @@ A **本地開發環境** 是完成本教學課程的必要項目。 螢幕擷取
 
 ## 更新署名HTL {#htl}
 
-接下來，更新 `Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/block-statements.html?lang=en#htl). HTL(HTML範本語言)是用來轉譯元件HTML的範本。
+接下來，更新 `Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en). HTL(HTML範本語言)是用來轉譯元件HTML的範本。
 
-特殊資料屬性 `data-cmp-data-layer` 在每個AEM元件上，用來公開其資料層。  AEM核心元件提供的JavaScript會尋找此資料屬性，其值會填入由署名Sling模型傳回的JSON字串 `getData()` 方法，並將值插入Adobe用戶端資料層。
+特殊資料屬性 `data-cmp-data-layer` 在每個AEM元件上，用來公開其資料層。 AEM核心元件提供的JavaScript會尋找此資料屬性。 此資料屬性的值會填入由署名Sling模型傳回的JSON字串 `getData()` 方法，並插入至Adobe用戶端資料層。
 
-1. 在IDE中，開啟 `aem-guides-wknd` 專案。 導覽至 `ui.apps` 模組。
+1. 開啟 `aem-guides-wknd` 項目到IDE中。 導覽至 `ui.apps` 模組。
 1. 開啟檔案 `byline.html` at `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`.
 
    ![署名HTML](assets/adobe-client-data-layer/byline-html-template.png)
@@ -193,7 +191,7 @@ A **本地開發環境** 是完成本教學課程的必要項目。 螢幕擷取
        ...
    ```
 
-   的值 `data-cmp-data-layer` 設為 `"${byline.data}"` where `byline` 是先前更新的Sling模型。 `.data` 是在HTL中呼叫Java Getter方法的標準標籤法 `getData()` 執行。
+   的值 `data-cmp-data-layer` 設為 `"${byline.data}"` where `byline` 是先前更新的Sling模型。 `.data` 是在HTL中呼叫Java™ Getter方法的標準標籤法 `getData()` 執行。
 
 1. 開啟終端窗口。 只建置和部署 `ui.apps` 模組使用Maven技能：
 
@@ -237,7 +235,7 @@ A **本地開發環境** 是完成本教學課程的必要項目。 螢幕擷取
 
 Adobe用戶端資料層由事件驅動，觸發動作的最常見事件之一是 `cmp:click` 事件。 AEM核心元件可讓您在資料元素的協助下，輕鬆註冊元件： `data-cmp-clickable`.
 
-可點按的元素通常是CTA按鈕或導覽連結。 很可惜，署名元件沒有這些，但我們會以任何方式註冊，因為這可能是其他自訂元件的常見情況。
+可點按的元素通常是CTA按鈕或導覽連結。 很可惜，署名元件沒有這些，但我們將以任何方式註冊，因為這可能是其他自訂元件的常見情況。
 
 1. 開啟 `ui.apps` 模組
 1. 開啟檔案 `byline.html` at `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`.
@@ -258,9 +256,9 @@ Adobe用戶端資料層由事件驅動，觸發動作的最常見事件之一是
    $ mvn clean install -PautoInstallPackage
    ```
 
-1. 返回瀏覽器，並重新開啟已新增Byline元件的頁面： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
+1. 返回瀏覽器，然後重新開啟頁面並新增署名元件： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
 
-   若要測試事件，我們將使用開發人員主控台手動新增一些JavaScript。 請參閱 [搭配AEM核心元件使用Adobe用戶端資料層](data-layer-overview.md) 如何做的視頻。
+   為了測試事件，我們將使用開發人員主控台手動新增一些JavaScript。 請參閱 [搭配AEM核心元件使用Adobe用戶端資料層](data-layer-overview.md) 如何做的視頻。
 
 1. 開啟瀏覽器的開發人員工具，並在 **主控台**:
 
@@ -296,7 +294,7 @@ Adobe用戶端資料層由事件驅動，觸發動作的最常見事件之一是
 
    您應該會看到主控台訊息 `Byline Clicked!` 署名。
 
-   此 `cmp:click` 事件是最容易勾搭的。 若要了解更複雜的元件並追蹤其他行為，可以新增自訂javascript以新增和註冊新事件。 輪播元件就是絕佳的範例，它會觸發 `cmp:show` 切換投影片時的事件。 請參閱 [詳細資訊的原始碼](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js#L219).
+   此 `cmp:click` 事件是最容易勾搭的。 若要了解更複雜的元件並追蹤其他行為，您可以新增自訂JavaScript以新增和註冊新事件。 輪播元件就是絕佳的範例，它會觸發 `cmp:show` 切換投影片時的事件。 請參閱 [詳細資訊的原始碼](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js).
 
 ## 使用DataLayerBuilder公用程式 {#data-layer-builder}
 
@@ -351,7 +349,7 @@ Sling模型是 [更新](#sling-model) 在章節前面，我們選擇使用 `Hash
    }
    ```
 
-   署名元件會重複使用影像核心元件的部分，以顯示代表作者的影像。 在上述程式碼片段中， [DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) 用於擴充 `Image` 元件。 這會以所使用影像的所有相關資料預先填入JSON物件。 它也會執行一些常式功能，例如設定 `@type` 和元件的唯一識別碼。 請注意，方法非常小！
+   署名元件會重新使用影像核心元件的部分，以顯示代表作者的影像。 在上述程式碼片段中， [DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) 用於擴充 `Image` 元件。 這會以所使用影像的所有相關資料預先填入JSON物件。 它也會執行一些常式功能，例如設定 `@type` 和元件的唯一識別碼。 請注意，方法很小！
 
    唯一的屬性會將 `withTitle` 會以 `getName()`.
 
@@ -382,7 +380,7 @@ Sling模型是 [更新](#sling-model) 在章節前面，我們選擇使用 `Hash
    $ mvn clean install -PautoInstallPackage
    ```
 
-1. 返回瀏覽器，並重新開啟已新增Byline元件的頁面： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
+1. 返回瀏覽器，然後重新開啟頁面並新增署名元件： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
 1. 開啟瀏覽器的開發人員工具，並在 **主控台**:
 
    ```js
@@ -409,7 +407,7 @@ Sling模型是 [更新](#sling-model) 在章節前面，我們選擇使用 `Hash
        repo:modifyDate: "2019-10-18T20:17:24Z"
    ```
 
-   請注意，現在有 `image` 物件 `byline` 元件項目。 這裡有更多關於DAM中資產的資訊。 另請注意， `@type` 和唯一id(在此例中為 `byline-136073cfcb`)，以及 `repo:modifyDate` 表示元件修改的時間。
+   請注意，現在有 `image` 物件 `byline` 元件項目。 這裡有更多關於DAM中資產的資訊。 另請注意， `@type` 和唯一id(在此例中為 `byline-136073cfcb`)，且 `repo:modifyDate` 指出元件的修改時間。
 
 ## 其他範例 {#additional-examples}
 
@@ -424,7 +422,7 @@ Sling模型是 [更新](#sling-model) 在章節前面，我們選擇使用 `Hash
 
    >[!NOTE]
    >
-   > 如果針對在整個實施中重複使用的物件建立進階資料層，建議將資料層元素擷取至其自己的資料層專用的Java物件。 例如，商務核心元件已新增 `ProductData` 和 `CategoryData` 因為這些可用於商務實施中的許多元件。 檢閱 [aem-cif-core-components repo中的程式碼](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) 以取得更多詳細資訊。
+   > 如果要針對在整個實施中重複使用的物件建立進階資料層，建議將資料層元素擷取至其專屬於資料層的Java™物件中。 例如，商務核心元件已新增 `ProductData` 和 `CategoryData` 因為這些可用於商務實施中的許多元件。 檢閱 [aem-cif-core-components repo中的程式碼](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) 以取得更多詳細資訊。
 
 ## 恭喜！ {#congratulations}
 
@@ -433,5 +431,5 @@ Sling模型是 [更新](#sling-model) 在章節前面，我們選擇使用 `Hash
 ## 其他資源 {#additional-resources}
 
 * [Adobe用戶端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [與核心元件整合資料層](https://github.com/adobe/aem-core-wcm-components/blob/master/DATA_LAYER_INTEGRATION.md)
+* [與核心元件整合資料層](https://github.com/adobe/aem-core-wcm-components/blob/main/DATA_LAYER_INTEGRATION.md)
 * [使用Adobe用戶端資料層與核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
