@@ -5,10 +5,10 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
+source-git-commit: 9917b16248ef1f0a9c86f03a024c634636b2304e
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 20%
+source-wordcount: '913'
+ht-degree: 22%
 
 ---
 
@@ -36,8 +36,8 @@ ht-degree: 20%
 + Cloud Manager {#cloud-manager}
    + [方案](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
-   + [CI/CD生產管道](./cloud-manager/cicd-production-pipeline.md)
-   + [CI/CD非生產管道](./cloud-manager/cicd-non-production-pipeline.md)
+   + [CI/CD 生產管道](./cloud-manager/cicd-production-pipeline.md)
+   + [CI/CD 非生產管道](./cloud-manager/cicd-non-production-pipeline.md)
    + [活動](./cloud-manager/activity.md)
    + 開發作業{#devops}
       + [部署程式碼](./cloud-manager/devops/deploy-code.md)
@@ -50,7 +50,7 @@ ht-degree: 20%
 + 本機開發環境設定 {#local-development-environment-set-up}
    + [概觀](./local-development-environment/overview.md)
    + [開發工具](./local-development-environment/development-tools.md)
-   + [本機AEM執行階段](./local-development-environment/aem-runtime.md)
+   + [本機 AEM 執行階段](./local-development-environment/aem-runtime.md)
    + [本機 Dispatcher 工具](./local-development-environment/dispatcher-tools.md)
 + 開發{#developing}
    + 擴充性{#extensibility}
@@ -89,6 +89,7 @@ ht-degree: 20%
       + [OSGi配置基本介紹](./developing/osgi-services/configurations.md)
       + [使用OCD的OSGi配置](./developing/osgi-services/configurations-ocd.md)
    + 進階{#advanced}
+      + [網頁最佳化影像API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
       + [服務用戶](./developing/advanced/service-users.md)
       + [自訂命名空間](./developing/advanced/custom-namespaces.md)
       + [快取頁面變體](./developing/advanced/variant-caching.md)
@@ -122,7 +123,7 @@ ht-degree: 20%
    + [Adobe IMS使用者群組](./accessing/adobe-ims-user-groups.md)
    + [Adobe IMS產品設定檔](./accessing/adobe-ims-product-profiles.md)
    + [AEM使用者、群組和權限](./accessing/aem-users-groups-and-permissions.md)
-   + [設定AEM存取權逐步說明](./accessing/walk-through.md)
+   + [AEM 存取權設定逐步說明](./accessing/walk-through.md)
 + 驗證{#authentication}
    + [概觀](./authentication/authentication.md)
    + [SAML 2.0](./authentication/saml-2-0.md)
@@ -171,7 +172,7 @@ ht-degree: 20%
       + [資產工作流程移轉 工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [導覽Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
-+ 表單{#forms}
++ Forms{#forms}
    + 為Forms開發as a Cloud Service{#developing-for-cloud-service}
       + [快速入門](./forms/developing-for-cloud-service/getting-started.md)
       + [安裝IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
