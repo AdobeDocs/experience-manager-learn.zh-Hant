@@ -3,6 +3,7 @@ title: 為標籤實作除錯
 description: 介紹調試「標籤」實施的一些常用工具和技術。 了解如何使用瀏覽器的開發人員主控台和Experience Platform偵錯工具擴充功能，識別及疑難排解標籤實作的重大問題。
 topics: integrations
 audience: administrator
+solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
 version: Cloud Service
@@ -12,9 +13,9 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

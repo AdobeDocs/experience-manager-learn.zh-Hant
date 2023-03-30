@@ -3,6 +3,7 @@ title: 整合Experience Platform資料收集標籤(Launch)和AEM
 description: 「Experience Platform資料收集」中的標籤是Adobe的新一代標籤管理解決方案，也是部署Adobe Analytics、Target、Audience Manager和其他解決方案的最佳方式。 概略了解標籤（先前稱為Launch），以及建議的與Adobe Experience Manager整合。
 topics: integrations
 audience: administrator
+solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
 version: Cloud Service
@@ -13,7 +14,7 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-10T00:00:00Z
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 1%

@@ -3,6 +3,7 @@ title: 在AEM中建立LaunchCloud Service設定
 description: 了解如何在AEM中建立LaunchCloud Service設定。 接著，LaunchCloud Service設定便可套用至現有的網站，且在製作和發佈環境中都可看見載入標籤程式庫。
 topics: integrations
 audience: administrator
+solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
 version: Cloud Service
@@ -12,7 +13,7 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
