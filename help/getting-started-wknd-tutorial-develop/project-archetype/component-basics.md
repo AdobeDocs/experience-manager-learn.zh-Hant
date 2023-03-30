@@ -12,9 +12,9 @@ kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1152'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 1. 了解如何使用對話方塊來協助編寫內容。
 1. 了解用戶端程式庫的基本知識，以包含CSS和JavaScript以支援元件。
 
-## 您要建置的內容 {#what-build}
+## 您要建置的 {#what-build}
 
 在本章中，您對簡單 `HelloWorld` 元件。 更新 `HelloWorld` 元件，您便可了解AEM元件開發的關鍵領域。
 

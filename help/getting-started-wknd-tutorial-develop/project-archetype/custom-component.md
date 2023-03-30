@@ -11,9 +11,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
 workflow-type: tm+mt
-source-wordcount: '4065'
+source-wordcount: '4066'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 0%
 1. 了解如何使用Sling模型封裝商業邏輯
 1. 了解如何從HTL指令碼使用Sling模型
 
-## 您要建置的內容 {#what-build}
+## 您要建置的 {#what-build}
 
 在WKND教學課程的這一部分中，會建立署名元件，以顯示有關文章貢獻者的撰寫資訊。
 

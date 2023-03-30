@@ -10,9 +10,9 @@ kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
 recommendations: noDisplay, noCatalog
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
 workflow-type: tm+mt
-source-wordcount: '3039'
+source-wordcount: '3040'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 0%
 1. 了解可編輯範本的詳細資訊，以及如何使用原則來強制精細控制頁面內容。
 1. 了解範本和頁面的連結方式
 
-## 您要建置的內容 {#what-build}
+## 您要建置的 {#what-build}
 
 在本教學課程的本節中，您會建立新的「文章頁面範本」，以用來建立文章頁面並與通用結構對齊。 「文章頁面範本」以Adobe XD中產生的設計和UI套件為基礎。 本章僅側重於構建模板的結構或骨架。 未實作樣式，但範本和頁面可運作。
 

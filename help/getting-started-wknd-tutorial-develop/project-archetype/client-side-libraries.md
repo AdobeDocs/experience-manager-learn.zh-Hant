@@ -11,9 +11,9 @@ kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
 workflow-type: tm+mt
-source-wordcount: '2798'
+source-wordcount: '2799'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 1%
 1. 了解如何使用 `ui.frontend` 模組和webpack開發伺服器，用於專用前端開發。
 1. 了解將編譯的CSS和JavaScript傳遞至Sites實作的端對端工作流程。
 
-## 您要建置的內容 {#what-build}
+## 您要建置的 {#what-build}
 
 在本章中，您為WKND網站和文章頁面範本新增了一些基線樣式，讓實作更接近 [UI設計模型](assets/pages-templates/wknd-article-design.xd). 您可以使用進階前端工作流程，將Webpack專案整合至AEM用戶端程式庫。
 
