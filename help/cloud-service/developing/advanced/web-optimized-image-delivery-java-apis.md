@@ -1,5 +1,5 @@
 ---
-title: Web優化的交付Java&Trade;API
+title: Web優化的影像傳送Java&trade;API
 description: 了解如何使用AEM as a Cloud Service的網頁最佳化影像傳送Java&trade;開發高效能網頁體驗的API。
 version: Cloud Service
 feature: APIs, Sling Model, OSGI, HTL or HTML Template Language
@@ -10,15 +10,15 @@ doc-type: Code Sample
 last-substantial-update: 2023-03-30T00:00:00Z
 jira: KT-13014
 thumbnail: KT-13014.jpeg
-source-git-commit: 9917b16248ef1f0a9c86f03a024c634636b2304e
+source-git-commit: 14d89d1a3c424de044df4f6d74546788256fa383
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '849'
 ht-degree: 1%
 
 ---
 
 
-# 網頁最佳化傳送Java™ API
+# 網頁最佳化影像傳送Java™ API
 
 了解如何使用AEM as a Cloud Service的網頁最佳化影像傳送Java™ API來開發高效能的網頁體驗。
 
@@ -30,34 +30,38 @@ AEMas a Cloud Service支援 [網頁最佳化的影像傳送](https://experiencel
 
 本文探討如何在自訂元件中使用網頁最佳化影像Java™ API，讓程式碼可在AEM as a Cloud Service和AEM SDK上同時運作。
 
-## API
+## Java™ API
 
 此 [AssetDelivery API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html) 是OSGi服務，可為影像資產產生網頁最佳化的傳送URL。 `AssetDelivery.getDeliveryURL(...)` 允許的選項 [這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html#can-i-use-web-optimized-image-delivery-with-my-own-component%3F).
 
 此 `AssetDelivery` 只有在AEM as a Cloud Service中執行時，才能滿足OSGi服務。 在AEM SDK上， `AssetDelivery` OSGi服務返回 `null`. 在AEMas a Cloud Service上執行時，最好有條件地使用網頁最佳化URL，並在AEM SDK上使用後援影像URL。 通常，資產的Web轉譯就足以提供後援。
 
 
-### OSGi服務
+### OSGi服務中的API使用
 
 將`AssetDelivery` 參考在自訂OSGi服務中為選用，因此自訂OSGi服務在AEM SDK上仍可使用。
 
 ```java
+import com.adobe.cq.wcm.spi.AssetDelivery;
+...
 @Reference(cardinality = ReferenceCardinality.OPTIONAL)
 private volatile AssetDelivery assetDelivery;
 ```
 
-### Sling模型
+### Sling模型中的API使用
 
 將`AssetDelivery` 以自訂Sling模型中選用的方式參考，讓自訂Sling模型可在AEM SDK上使用。
 
 ```java
+import com.adobe.cq.wcm.spi.AssetDelivery;
+...
 @OSGiService(injectionStrategy = InjectionStrategy.OPTIONAL)
 private AssetDelivery assetDelivery;
 ```
 
-### 有條件地使用AssetDelivery
+### API的條件式使用
 
-有條件地傳回網頁最佳化影像URL或後援URL(根據 `AssetDelivery` 服務可用。 在AEM SDK上執行程式碼時，條件式使用可提供不間斷的體驗。
+有條件地傳回網頁最佳化影像URL或根據 `AssetDelivery` OSGi服務的可用性。 條件式使用可讓程式碼在AEM SDK上執行程式碼時運作。
 
 ```java
 if (assetDelivery != null ) {
@@ -78,15 +82,19 @@ if (assetDelivery != null ) {
 
 ![AEMas a Cloud Service上的Web最佳化影像](./assets/web-optimized-image-delivery-java-apis/cloud-service.png)
 
+_AEM as a Cloud Service支援AssetDelivery API，因此會使用網頁最佳化的webp轉譯_
+
 當程式碼在AEM SDK上執行時，會使用最不佳的靜態Web轉譯，讓元件可在本機開發期間運作。
 
-![AEM as a Cloud Service上最佳化的後援影像](./assets/web-optimized-image-delivery-java-apis/aem-sdk.png)
+![AEM SDK上最佳化的網頁後援影像](./assets/web-optimized-image-delivery-java-apis/aem-sdk.png)
+
+_AEM SDK不支援AssetDelivery API，因此會使用備援靜態Web轉譯(PNG或JPEG)_
 
 實作分為三個邏輯部分：
 
 1. 此 `WebOptimizedImage` OSGi服務可作為AEM提供之「智慧代理」 `AssetDelivery` 可處理AEMas a Cloud Service和AEM SDK中執行之OSGi服務。
 2. 此 `ExampleWebOptimizedImages` Sling Model提供收集要顯示之影像資產清單及其Web最佳化URL的商業邏輯。
-3. 此 `example-web-optimized-images` AEM元件，實作HTL以顯示網頁最佳化影像清單。
+3. 此 `example-web-optimized-images` AEM元件會實作HTL以顯示網頁最佳化影像清單。
 
 下列范常式式碼可在您的程式碼基底中複製，並視需要更新。
 
