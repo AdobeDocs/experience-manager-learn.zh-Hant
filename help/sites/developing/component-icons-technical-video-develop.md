@@ -11,7 +11,7 @@ topic: Development
 role: User
 level: Intermediate
 exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 元件圖示可讓作者快速識別包含圖示或有意義縮寫的元件。 作者現在可以比以往更快找到建立其網頁體驗所需的元件。
 
->[!VIDEO](https://video.tv.adobe.com/v/16778/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16778?quality=12&learn=on)
 
 元件瀏覽器現在會以一致的灰色主題顯示，並顯示：
 

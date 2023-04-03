@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Dynamic Media概述
 
->[!VIDEO](https://video.tv.adobe.com/v/27144/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## Dynamic Media與AEM Sites及任何其他CMS
 
->[!VIDEO](https://video.tv.adobe.com/v/27145/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 ## Dynamic Media以建立混合媒體收集和自訂檢視器
 
->[!VIDEO](https://video.tv.adobe.com/v/27146/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 ## Dynamic Media影像預設集
 
->[!VIDEO](https://video.tv.adobe.com/v/27320/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
 此影片說明如何建立影像預設集，以及什麼是影像預設集，這是一系列影像伺服器引數的URL縮短程式，只要URL要求，就會在影像上運作。 了解擴充和編輯影像預設集的重要技巧。
 
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 ## Dynamic Media進階URL修飾元
 
->[!VIDEO](https://video.tv.adobe.com/v/27319/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
 本影片說明如何運用來源檔案本身的功能調整影像大小以外的用途：背景透明度、內建剪裁路徑，以及以變數形式裁切和文字（使用Dynamic Media的URL修飾元）。
 
@@ -88,7 +88,7 @@ ht-degree: 0%
 
 ## Dynamic Media控制JPEG檔案大小（以千位元組為單位）
 
->[!VIDEO](https://video.tv.adobe.com/v/27404/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
 
 >[!NOTE]
@@ -99,7 +99,7 @@ ht-degree: 0%
 
 ## 將CC隱藏式字幕新增至Dynamic Media影片
 
->[!VIDEO](https://video.tv.adobe.com/v/28074/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 借由附加複製URL以指向其他隱藏式字幕檔案檔案web.VTTsidecar檔案（包含任何視訊的CC資訊），輕鬆將隱藏式字幕新增至Dynamic Media視訊。
 

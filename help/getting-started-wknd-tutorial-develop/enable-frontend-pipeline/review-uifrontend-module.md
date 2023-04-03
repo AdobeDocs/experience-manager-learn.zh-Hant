@@ -11,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%
@@ -36,7 +36,7 @@ ht-degree: 0%
 >
 >此影片說明並示範兩者的前端流程 **完整堆疊和快速建立網站** 專案，概述前端資源建置、部署和傳送模型的細微差異。
 
->[!VIDEO](https://video.tv.adobe.com/v/3409344/)
+>[!VIDEO](https://video.tv.adobe.com/v/3409344?quality=12&learn=on)
 
 ## 必備條件 {#prerequisites}
 

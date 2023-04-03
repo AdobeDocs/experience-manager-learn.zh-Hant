@@ -14,7 +14,7 @@ role: Architect, Developer
 level: Beginner
 last-substantial-update: 2022-10-05T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 AEMas a Cloud Service中的「大量匯入」工具可讓管理員以安全且有效的方式，從雲端儲存體(Azure Blob儲存體或Amazon S3)大量匯入資產。
 
->[!VIDEO](https://video.tv.adobe.com/v/329680/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
 
 ## 排程大量匯入
 

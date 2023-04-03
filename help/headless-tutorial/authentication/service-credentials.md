@@ -14,7 +14,7 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 1401710c19ae6ee6a2822ae06286bef4f92cda45
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1937'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 與Adobe Experience Manager(AEM)as a Cloud Service的整合必須能夠安全地驗證AEM服務。 AEM Developer Console授與服務憑證的存取權，這些憑證可協助外部應用程式、系統和服務以程式設計方式與AEM製作或透過HTTP發佈服務互動。
 
->[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
 服務憑據可能顯示類似 [本機開發存取權杖](./local-development-access-token.md) 但在幾個關鍵方面卻有所不同：
 

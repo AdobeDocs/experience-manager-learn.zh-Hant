@@ -5,17 +5,17 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '502'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # 雲5
 
 ![AEM Experts系列](./imgs/masthead-s2.png)
->[!VIDEO](https://video.tv.adobe.com/v/346567)
+>[!VIDEO](https://video.tv.adobe.com/v/346567?quality=12&learn=on)
 
 ## 簡介
 
@@ -46,7 +46,7 @@ ht-degree: 0%
         </td>   
          <td>
             <a href="season-2/cloud5-repo-modernizer.md">
-                 <img alt="Repository Modernizer" src="./imgs/s2/001-thumb.png"/>
+                 <img alt="存放庫現代化工具" src="./imgs/s2/001-thumb.png"/>
             </a>
             <div>
                 <a href="season-2/cloud5-repo-modernizer.md"><strong>Repository Modernizer</strong></a> 

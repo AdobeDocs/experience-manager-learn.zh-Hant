@@ -1,20 +1,21 @@
 ---
-title: automated forms conversion服務
-description: automated forms conversion服務。 本文說明AEM管理員如何設定Automated forms conversion服務，以自動將其PDF forms轉換為最適化表單。 本說明適用於貴組織的IT和AEM管理員。
-feature: 適用性表單
+title: 自動化表單轉換服務
+description: 自動化表單轉換服務. 本文說明AEM管理員如何設定Automated forms conversion服務，以自動將其PDF forms轉換為最適化表單。 本說明適用於貴組織的IT和AEM管理員。
+feature: Adaptive Forms
 thumbnail: 39493.jpg
 kt: 6114
-topic: 開發
+topic: Development
 role: Admin
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 0715a2cc-c042-4ddc-85a1-7720f420351b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 1%
+source-wordcount: '253'
+ht-degree: 5%
 
 ---
 
-# automated forms conversion服務
+# 自動化表單轉換服務
 
 本文說明AEM管理員如何設定Automated forms conversion服務，以自動將其PDF forms轉換為最適化表單。 本說明適用於貴組織的IT和AEM管理員。 提供的資訊基於以下假設：閱讀本幫助的任何人都熟悉以下技術：
 
@@ -36,5 +37,4 @@ ht-degree: 1%
 
 * 影片說明將本機AEM Forms執行個體連線至Adobe雲端上的Automated forms conversion服務所需的步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/39493/?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/39493?quality=12&learn=on)

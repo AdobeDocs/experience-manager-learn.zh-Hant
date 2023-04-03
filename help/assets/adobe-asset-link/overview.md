@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 1%
@@ -50,7 +50,7 @@ Adobe Experience Manager資產可供設計人員和創意使用者在喜愛的Ad
 
 Adobe資產連結提供Adobe資產連結和AEM之間的InDesign直接連結支援。 有了InDesign直接連結支援，您可以放置(__置入已連結__ 或 __位置副本__)或透過「InDesign資產連結」面板，從AEM將數位資產拖放至Adobe中。 此外，也推出*For Placement Only+(FPO)轉譯。
 
->[!VIDEO](https://video.tv.adobe.com/v/28988/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28988?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -95,4 +95,4 @@ Adobe資產連結驗證如何在AdobeIdentity Management服務(IMS)和Adobe Expe
 
 ## 其他資源
 
-+ [Adobe資產連結網站](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
++ [Adobe資產連結網站](https://www.adobe.com/tw/creativecloud/business/enterprise/adobe-asset-link.html)

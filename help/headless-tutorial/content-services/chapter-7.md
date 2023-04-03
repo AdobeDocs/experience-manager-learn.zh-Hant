@@ -6,7 +6,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 0%
@@ -37,13 +37,13 @@ Android可用來進行教學課程，因為能夠在Windows、macOs和Linux上�
 
 ## 行動應用程式示範
 
->[!VIDEO](https://video.tv.adobe.com/v/28345/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28345?quality=12&learn=on)
 
 ### 為非本地主機使用配置行動應用
 
 如果未在上執行AEM Publish **http://localhost:4503** 可在行動應用程式的 [!DNL Settings] 指向屬性AEM Publish主機/連接埠。
 
->[!VIDEO](https://video.tv.adobe.com/v/28344/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28344?quality=12&learn=on)
 
 ## 在本機執行行動應用程式
 
@@ -75,7 +75,7 @@ Android可用來進行教學課程，因為能夠在Windows、macOs和Linux上�
    * 若要在虛擬裝置內捲動，請按一下並按住並拖曳。
    * 若要從AEM重新整理內容，請從上方下拉至「重新整理」圖示顯示，然後發行。
 
->[!VIDEO](https://video.tv.adobe.com/v/28341/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28341?quality=12&learn=on)
 
 ## 行動應用程式程式碼
 
@@ -185,7 +185,7 @@ public class Image {
 
 ## 探索行動應用程式體驗
 
-現在您已了解AEM Content Services如何促進原生行動體驗，運用您所學到的內容執行下列步驟，並查看行動應用程式中反映的變更。
+現在您已了解AEM Content Services如何促進原生行動體驗，運用您所學到的知識執行下列步驟，並查看行動應用程式中反映的變更。
 
 在每個步驟後，提取並重新整理行動應用程式，並驗證行動體驗的更新。
 

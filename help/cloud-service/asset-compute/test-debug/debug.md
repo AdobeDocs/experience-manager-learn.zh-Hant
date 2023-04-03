@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 0%
@@ -46,7 +46,7 @@ asset compute背景工作可透過數種方式進行除錯，從簡單的除錯�
 
 此 [wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm模組支援將除錯程式附加至Asset compute背景工作，包括在VS程式碼中設定中斷點，以及逐步執行程式碼的功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/40383/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40383?quality=12&learn=on)
 
 _使用wskdebug對Asset compute工作程式進行偵錯的點進（無音訊）_
 

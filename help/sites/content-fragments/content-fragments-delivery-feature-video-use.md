@@ -15,10 +15,10 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '548'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Manager(AEM)內容片段是文字型編輯內容，可能包含
 
 ## 在網頁中使用內容片段 {#using-content-fragments-in-web-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
 
 內容片段可在AEM Sites頁面上使用，或透過AEM WCM核心元件以類似方式使用體驗片段。 [內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
 
@@ -44,7 +44,7 @@ Adobe Experience Manager(AEM)內容片段是文字型編輯內容，可能包含
 
 ## 將內容片段顯示為JSON {#exposing-content-fragments-as-json}
 
->[!VIDEO](https://video.tv.adobe.com/v/22448/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22448?quality=12&learn=on)
 
 AEM Content Services可方便建立AEM頁面式HTTP端點，將內容轉譯為標準化JSON格式。
 
@@ -55,7 +55,7 @@ AEM Content Services可方便建立AEM頁面式HTTP端點，將內容轉譯為�
 
 ## 使用Assets HTTP API
 
->[!VIDEO](https://video.tv.adobe.com/v/26390/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26390?quality=12&learn=on)
 
 AEM 6.5率先推出，現在透過資產HTTP API增強了對內容片段的支援。 這可讓開發人員針對內容片段執行建立、讀取、更新和刪除(CRUD)作業。
 
@@ -68,7 +68,7 @@ AEM 6.5率先推出，現在透過資產HTTP API增強了對內容片段的支�
 
 透過Web頻道傳送內容片段的方法透過搭配AEM Sites使用內容片段元件相當簡單明瞭。
 
-### 無頭
+### Headless
 
 以JSON形式顯示內容片段有兩個選項，可在無頭使用案例中支援第三方管道：
 
@@ -78,8 +78,8 @@ AEM 6.5率先推出，現在透過資產HTTP API增強了對內容片段的支�
 
 ## 其他資源 {#additional-resources}
 
-* [製作內容片段](content-fragments-feature-video-use.md)
-* [AEM WCM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [編寫內容片段](content-fragments-feature-video-use.md)
+* [AEM WCM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [AEM WCM核心內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 若要從影片系列下載並安裝以下套件，請在AEM 6.4+執行個體上執行最終狀態：\

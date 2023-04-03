@@ -12,7 +12,7 @@ topic: Architecture
 role: Architect, Developer
 level: Beginner
 exl-id: 1e419597-3f60-4110-bafd-a4acb0fad7a0
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
@@ -23,4 +23,4 @@ ht-degree: 0%
 
 介紹Adobe Experience Manager使用的Java Content Repository(JCR)。 JCR是AEM技術堆疊的基本層級，負責基礎內容的持續性、儲存、搜尋、存取控制等等！
 
->[!VIDEO](https://video.tv.adobe.com/v/32030/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32030?quality=12&learn=on)

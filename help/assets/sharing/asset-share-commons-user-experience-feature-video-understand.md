@@ -7,7 +7,7 @@ role: User
 level: Intermediate
 last-substantial-update: 2022-06-20T00:00:00Z
 exl-id: 500a9b10-462a-4f41-9b07-67138955cc3d
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 1%
@@ -20,13 +20,13 @@ ht-degree: 1%
 
 ## 使用者體驗
 
->[!VIDEO](https://video.tv.adobe.com/v/20497/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20497?quality=12&learn=on)
 
 影片提供資產共用公域的使用者體驗的概要逐步說明。 此檢閱接觸到「搜尋」頁面、「資產詳細資料」頁面的功能，以及「下載」、「共用」和「新增至購物車」等數個動作。
 
 ## 製作體驗
 
->[!VIDEO](https://video.tv.adobe.com/v/20498/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20498?quality=12&learn=on)
 
 本影片概要介紹Asset Share Commons中的基本元件編寫功能，讓您了解製作能力的等級。
 

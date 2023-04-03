@@ -13,7 +13,7 @@ topic: Architecture, Performance
 role: Architect, Developer
 level: Beginner
 exl-id: 06954993-c8bb-47f3-8ab6-76d6b1b8e8b0
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 31%
@@ -22,9 +22,9 @@ ht-degree: 31%
 
 # [!DNL Dispatcher] 簡介 {#introduction-dispatcher}
 
-介紹[!DNL dispatcher]作為AEM架構一部分的功能和功能。
+介紹 [!DNL dispatcher] 做為AEM架構的一部分。
 
->[!VIDEO](https://video.tv.adobe.com/v/32029/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32029?quality=12&learn=on)
 
 ## 其他資源 {#additional-resources}
 

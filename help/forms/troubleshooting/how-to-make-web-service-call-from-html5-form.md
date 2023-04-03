@@ -1,17 +1,18 @@
 ---
 title: 如何從HTML5表單進行Web服務呼叫
-description: 從HTML5表單配置web服務的步驟
+description: 從「HTML5」表單配置web服務的步驟
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 行動表單
-topic: '開發  '
+feature: Mobile Forms
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 28fa5597-bab5-4fb9-8d30-e9fd41820749
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 6%
+source-wordcount: '41'
+ht-degree: 0%
 
 ---
 
@@ -19,4 +20,4 @@ ht-degree: 6%
 
 *此影片會逐步說明從HTML5表單進行Web服務呼叫的程式。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335505?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335505?quality=12&learn=on)

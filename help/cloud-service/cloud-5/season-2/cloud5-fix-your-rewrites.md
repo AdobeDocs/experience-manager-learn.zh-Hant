@@ -1,26 +1,27 @@
 ---
-title: 雲5 — 修復您的……重寫
-description: 優化重寫並加快站點速度的一些簡單提示
+title: 雲端5 — 修正您的……重寫
+description: 提供一些簡單提示，用於最佳化重寫並加快網站速度
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
 thumbnail: 343600.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 87d19ba3388b4a2ac3db1d2cf3838ed12dbbd2bc
+exl-id: 38580af1-e5ad-431a-b41d-634fb136ce64
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '67'
+ht-degree: 10%
 
 ---
 
-# 雲5 — 修復您的……重寫
+# 雲端5 — 修正您的……重寫
 
-第二部分，我們將探討一些您可以看到的內容，這些內容將加快您對as a Cloud Service的重寫開發和優AEM化。
+系列第二部分，我們將探討一些您可了解的事項，以加快重新寫入程式開發及最佳化AEMas a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/343600)
+>[!VIDEO](https://video.tv.adobe.com/v/343600?quality=12&learn=on)
 
-## 此視頻中包含的內容
+## 此影片所涵蓋的內容
 
 + mod_rewrite概述
-+ [mod_rewrite文檔](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
++ [mod_rewrite檔案](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)

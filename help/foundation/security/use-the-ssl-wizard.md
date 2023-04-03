@@ -1,6 +1,6 @@
 ---
-title: 在中使用SSL向AEM導
-description: Adobe Experience Manager的SSL設定嚮導，使設定通過HTTPSAEM運行的實例更加容易。
+title: 在AEM中使用SSL精靈
+description: Adobe Experience Manager的SSL設定精靈，讓設定AEM執行個體透過HTTPS執行變得更輕鬆。
 seo-description: Adobe Experience Manager's SSL setup wizard to make it easier to set up an AEM instance to run over HTTPS.
 version: 6.4, 6.5
 topics: security, operations
@@ -13,42 +13,42 @@ topic: Security
 role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
-source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
 
 ---
 
-# 在中使用SSL向AEM導
+# 在AEM中使用SSL精靈
 
-Adobe Experience Manager的SSL設定嚮導，使設定通過HTTPSAEM運行的實例更加容易。
+Adobe Experience Manager的SSL設定精靈，讓設定AEM執行個體透過HTTPS執行變得更輕鬆。
 
->[!VIDEO](https://video.tv.adobe.com/v/17993/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
 
-開啟 __SSL配置嚮導__ 可以通過導航直接開啟 __AEM作者>工具>安全> SSL配置__。
+開啟 __SSL配置嚮導__ 可導覽至 __AEM製作>工具>安全性> SSL設定__.
 
 >[!NOTE]
 >
->對於受管環境，IT部門最好提供CA信任的證書和密鑰。
+>對於托管環境，IT部門最好提供CA信任的證書和密鑰。
 >
->自簽名證書僅用於開發目的。
+>自簽名證書僅用於開發用途。
 
-## 私鑰和自簽名證書下載
+## 私密金鑰和自簽名證書下載
 
-以下zip包含 [!DNL DER] 和 [!DNL CRT] 在localhost上設定AEMSSL所需的檔案，僅用於本地開發。
+下列zip包含 [!DNL DER] 和 [!DNL CRT] 在localhost上設定AEM SSL所需，且僅用於本機開發用途的檔案。
 
-的 [!DNL DER] 和 [!DNL CERT] 檔案是為方便起見而提供的，使用下面「生成私鑰」和「自簽名證書」部分中介紹的步驟生成。
+此 [!DNL DER] 和 [!DNL CERT] 提供檔案是為了方便，並使用以下產生私密金鑰和自簽名憑證一節中概述的步驟產生。
 
-如果需要，證書密碼短語為 **管理員**。
+如有需要，憑證密碼片語為 **管理員**.
 
-localhost — 私鑰和自簽名證書.zip（2028年7月到期）
+localhost — 私密金鑰和自行簽署的certificate.zip（2028年7月到期）
 
-[下載證書檔案](assets/use-the-ssl-wizard/certificate.zip)
+[下載憑證檔案](assets/use-the-ssl-wizard/certificate.zip)
 
 ## 私鑰和自簽名證書生成
 
-上述視頻描述了使用自簽名證書的作者實AEM例上SSL的設定和配置。 以下命令使用 [[!DNL OpenSSL]](https://www.openssl.org/) 可以生成要在嚮導步驟2中使用的私鑰和證書。
+上述影片說明使用自行簽署憑證之AEM製作執行個體上SSL的設定和設定。 以下命令使用 [[!DNL OpenSSL]](https://www.openssl.org/) 可產生要在精靈的步驟2中使用的私密金鑰和憑證。
 
 ```shell
 ### Create Private Key

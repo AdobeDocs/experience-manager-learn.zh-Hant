@@ -2,13 +2,14 @@
 title: AEM Workflow[Part3]中的變數
 description: 在AEM工作流程中使用XML、JSON、ArrayList、Document類型的變數
 version: 6.5
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 849bfe6c-6b7f-44d0-85bc-5df0287a9bca
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 1%
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
@@ -19,4 +20,4 @@ ht-degree: 1%
 
 此影片將強調說明如何使用檔案類型變數來儲存產生的DoR，然後在AEM工作流程的傳送電子郵件步驟中使用檔案變數。
 
->[!VIDEO](https://video.tv.adobe.com/v/26452)
+>[!VIDEO](https://video.tv.adobe.com/v/26452?quality=12&learn=on)

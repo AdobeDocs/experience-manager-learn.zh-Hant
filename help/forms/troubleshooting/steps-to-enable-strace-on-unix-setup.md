@@ -1,23 +1,23 @@
 ---
 title: 啟用字串跟蹤的步驟（Unix設定）
-description: '設定字串記錄以疑難排解PDF產生器問題 '
+description: 設定字串記錄以疑難排解PDF產生器問題
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-feature: PDF 產生器
-topic: '管理  '
+feature: PDF Generator
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: e7a3f63e-549a-493c-a8f1-cb0bca2c07e0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 7%
+source-wordcount: '39'
+ht-degree: 0%
 
 ---
-
 
 # 在Unix設定中啟用字串追蹤的步驟
 
 *此影片會逐步說明在AEM Forms PDFG的Unix設定中啟用字串追蹤的步驟。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335525?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335525?quality=12&learn=on)

@@ -11,7 +11,7 @@ doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
 exl-id: cc758602-3c20-4eca-9b87-f04b6dc96bfe
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 建置區塊是體驗片段的子功能。 建置區塊可讓內容作者在不同的體驗片段變異間重複使用元件。
 
->[!VIDEO](https://video.tv.adobe.com/v/331786/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/331786?quality=12&learn=on)
 
 >[!NOTE]
 >

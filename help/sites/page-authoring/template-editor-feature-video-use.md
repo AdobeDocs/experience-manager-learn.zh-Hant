@@ -1,7 +1,7 @@
 ---
-title: 將可編輯頁面模板與AEM Sites
+title: 使用可編輯的頁面範本搭配AEM Sites
 seo-title: Using Editable Page Templates with Adobe Experience Manager Sites
-description: 可編輯的模板允許專業的作者建立和更新頁面模板，並使用AEM Sites管理高級策略配置。
+description: 可編輯的範本可讓專業作者使用AEM Sites建立和更新頁面範本，以及管理進階政策設定。
 seo-description: Editable templates allow specialized authors to create and update page templates and manage advanced policy configurations with Adobe Experience Manager Sites.
 feature: Editable Templates
 topics: authoring
@@ -14,33 +14,33 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 2213d1f2-37ed-4897-a68d-04ef423395a3
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# 使用可編輯頁模板{#using-template-editor-with-aem-sites}
+# 使用可編輯的頁面範本{#using-template-editor-with-aem-sites}
 
-可編輯的模板允許專業的作者使用Adobe Experience Manager(AEM)站點建立和更新頁面模板並管理高級策略配置。
+可編輯的範本可讓專業作者使用Adobe Experience Manager(AEM)Sites建立和更新頁面範本，以及管理進階政策設定。
 
->[!VIDEO](https://video.tv.adobe.com/v/326784/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326784?quality=12&learn=on)
 
-可編輯模板是建立新AEM Sites的建議。
+可編輯的範本是建置新AEM Sites的建議。
 
-**一致的作者經驗**  — 將AEM Sites創作中的增強功能轉移到模板編輯中，包括串聯佈局模式和內容樹面板。
+**一致的作者體驗** -AEM Sites製作的增強功能會轉至範本編輯，包括內嵌版面模式和內容樹面板。
 
-**高級策略配置**  — 以下將重點介紹可編輯模板中提供的一些高級策略配置：
+**高級策略配置**  — 以下將重點介紹一些可編輯模板提供的高級策略配置：
 
-* **佈局容器**  — 能夠配置允許的元件、管理資產的拖放映射和響應網格列。
-* **文本元件**  — 能夠使用新的UI配置富格文本編輯器插件，並跨模板重新使用RTE策略。
-* **影像元件**  — 能夠開啟/關閉裁剪、使用新UI上載案頭檔案和跨模板重新使用映像策略等功能。
+* **版面容器**  — 可設定「允許的元件」、「管理資產的拖放對應」和「回應式格線」欄。
+* **文字元件**  — 可使用新UI設定RTF編輯器外掛程式，並在各範本間重複使用RTE原則。
+* **影像元件**  — 能夠開啟/關閉功能，例如裁切、使用新UI上傳案頭檔案，以及跨範本重複使用影像原則。
 
-可編輯模板位於 **工具** `>` **常規** `>` **模板**。\
-可編輯模板URL(AEM本地實例): [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
+可編輯的範本位於 **工具** `>` **一般** `>` **範本**.\
+可編輯的範本URL(本機AEM例項): [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 ## 其他資源 {#additional-resources}
 
-* [可編輯頁面模板 — 文檔](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
-* [建立頁面模板 — 文檔](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)
+* [可編輯的頁面範本 — 檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
+* [建立頁面範本 — 檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)

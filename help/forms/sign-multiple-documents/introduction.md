@@ -9,7 +9,7 @@ role: Developer
 level: Experienced
 exl-id: 0260d4b6-8615-4d78-a920-b36766a0f8e9
 last-substantial-update: 2021-07-07T00:00:00Z
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 無論您是申請抵押貸款還是開立新銀行賬戶，都需要填寫並簽署多份表格。 AEM Forms與Acrobat Sign的整合可輕鬆填寫及簽署多份表單。
 以下影片會逐步帶您了解籤署多份表單的使用案例。
 
->[!VIDEO](https://video.tv.adobe.com/v/330165?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330165?quality=12&learn=on)
 
 ## 必備條件
 

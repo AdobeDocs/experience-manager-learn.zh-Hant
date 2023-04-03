@@ -11,7 +11,7 @@ kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 接下來，在AEM中建立符合模型結構的新範本。 這會發生在AEM的本機例項中。 請依照以下影片中的步驟操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/332915/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332915?quality=12&learn=on)
 
 您可以使用下列縮圖來識別範本（或上傳您自己的範本！）
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 網站範本會產生「頁首」和「頁尾」。 接下來，更新體驗片段以符合模型。 請依照以下影片中的步驟操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/332916/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
 
 以下是影片的高階步驟：
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 接下來，使用「雜誌文章頁面」範本建立新頁面。 製作頁面內容以符合網站模型。 請依照以下影片中的步驟操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/332917/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
 
 使用 [提供的文字](./assets/page-templates/la-skateparks-copy.txt) 填入文章本體。
 

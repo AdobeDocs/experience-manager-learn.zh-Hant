@@ -1,5 +1,5 @@
 ---
-title: AEM無周邊的進階概念 — GraphQL
+title: AEM無頭的進階概念 — GraphQL
 description: 端對端教學課程，說明Adobe Experience Manager(AEM)GraphQL API的進階概念。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: ee6f65fba8db5ae30cc14aacdefbeba39803527b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # AEM Headless的進階概念
 
-本端對端教學課程將繼續 [基本教學課程](../multi-step/overview.md) 涵蓋Adobe Experience Manager(AEM)無周邊和GraphQL的基礎知識。 進階教學課程將深入說明如何使用內容片段模型、內容片段和AEM GraphQL持續查詢，包括在用戶端應用程式中使用GraphQL持續查詢。
+本端對端教學課程將繼續 [基本教學課程](../multi-step/overview.md) 涵蓋了Adobe Experience Manager(AEM)Headless和GraphQL的基本面。 進階教學課程說明使用內容片段模型、內容片段和AEM GraphQL持續查詢的深入層面，包括在用戶端應用程式中使用GraphQL持續查詢。
 
 ## 必備條件
 
@@ -36,19 +36,19 @@ ht-degree: 0%
 
 * 使用驗證規則和更進階的資料類型（例如索引標籤預留位置、巢狀片段參考、JSON物件以及日期和時間資料類型），建立內容片段模型。
 * 使用巢狀內容和片段參考時製作內容片段，以及設定內容片段製作控管的資料夾原則。
-* 使用含變數和指令的GraphQL查詢，探索AEM GraphQL API功能。
-* 在AEM中使用參數保留GraphQL查詢，並了解如何將快取控制參數與持續查詢搭配使用。
-* 使用AEM無周邊JavaScript SDK將持續查詢的請求整合至範例WKND GraphQL React應用程式中。
+* 使用具有變數和指令的GraphQL查詢，探索AEM GraphQL API功能。
+* 將GraphQL查詢與AEM中的參數保留，並了解如何將快取控制參數與持續查詢搭配使用。
+* 使用AEM Headless JavaScript SDK將持續查詢的請求整合至範例WKND GraphQL React應用程式中。
 
 ## AEM無頭式概觀
 
-以下影片提供本教學課程所涵蓋概念的概觀概觀。 本教學課程包括使用更進階的資料類型定義內容片段模型、巢狀內容片段，以及在AEM中保留GraphQL查詢。
+以下影片提供本教學課程所涵蓋概念的概觀概觀。 本教學課程包括使用更進階的資料類型定義內容片段模型、巢狀內容片段，以及在AEM中持續保存GraphQL查詢。
 
->[!VIDEO](https://video.tv.adobe.com/v/340035/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340035?quality=12&learn=on)
 
 >[!CAUTION]
 >
->此影片(2:25)提及如何透過封裝管理器安裝GraphQL查詢編輯器，以探索GraphQL查詢。 但在較新版本的AEM中，作為Cloud Service的內建 **GraphiQL資源管理器** 因此，不需要安裝包。 請參閱 [使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 以取得更多資訊。
+>此影片(2:25)提及如何透過Package Manager安裝GraphiQL查詢編輯器，以探索GraphQL查詢。 但在較新版本的AEM中，作為Cloud Service的內建 **GraphiQL資源管理器** 因此，不需要安裝包。 請參閱 [使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 以取得更多資訊。
 
 
 ## 專案設定
@@ -58,7 +58,7 @@ WKND Site專案擁有所有必要的設定，因此您可以在完成 [快速設
 
 ### 檢閱現有設定
 
-在AEM中啟動任何新專案的第一步，是建立其設定（以工作區的形式）和建立GraphQL API端點。 若要檢閱或建立設定，請導覽至 **工具** > **一般** > **配置瀏覽器**.
+在AEM中啟動任何新專案的第一步，是建立其設定（以工作區形式）和建立GraphQL API端點。 若要檢閱或建立設定，請導覽至 **工具** > **一般** > **配置瀏覽器**.
 
 ![導覽至設定瀏覽器](assets/overview/create-configuration.png)
 
@@ -66,7 +66,7 @@ WKND Site專案擁有所有必要的設定，因此您可以在完成 [快速設
 
 ![查看WKND共用配置](assets/overview/review-wknd-shared-configuration.png)
 
-### 查看GraphQL API端點
+### 檢閱GraphQL API端點
 
 接下來，您必須設定API端點以將GraphQL查詢傳送至。 若要檢閱現有端點或建立端點，請導覽至 **工具** > **一般** > **GraphQL**.
 
@@ -115,7 +115,7 @@ WKND Site專案擁有所有必要的設定，因此您可以在完成 [快速設
 在AEM中建立專案時，以下是最佳作法：
 
 * 資料夾階層應結合本地化和翻譯來建立模型。 換言之，語言資料夾應巢狀內嵌在配置資料夾中，以便輕鬆轉譯這些配置資料夾中的內容。
-* 資料夾階層應保持平直和簡單明瞭。 請避免稍後移動或重新命名資料夾和片段，尤其是發佈以供即時使用之後，因為它會變更可能影響片段參考和GraphQL查詢的路徑。
+* 資料夾階層應保持平直和簡單明瞭。 請避免稍後移動或重新命名資料夾和片段，尤其是發佈以供即時使用後，因為它會變更可能影響片段參考和GraphQL查詢的路徑。
 
 ## 入門和解決方案套件
 
@@ -125,7 +125,7 @@ WKND Site專案擁有所有必要的設定，因此您可以在完成 [快速設
 * [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) 包含章節1至4的已完成解決方案，包括新的內容片段模型、內容片段和持續存在的GraphQL查詢。 適用於想直接跳至 [客戶端應用程式整合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md) 章節。
 
 
-此 [React應用程式 — 進階教學課程 — WKND Adventures](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) 專案可供檢閱及探索範例應用程式。 此範例應用程式會叫用保存的GraphQL查詢，從AEM擷取內容，並轉譯為沈浸式體驗。
+此 [React應用程式 — 進階教學課程 — WKND Adventures](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) 專案可供檢閱及探索範例應用程式。 此範例應用程式會叫用持續的GraphQL查詢，從AEM擷取內容，並轉譯為沈浸式體驗。
 
 ## 快速入門
 

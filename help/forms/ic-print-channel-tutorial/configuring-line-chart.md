@@ -1,10 +1,10 @@
 ---
 title: 為第一個互動式通信文檔配置線圖
-seo-title: 為第一個互動式通信文檔配置線圖
+seo-title: Configuring line chart for your first interactive communication document
 description: 這是建立打印管道第一個互動式通訊檔案的多步驟教學課程的第8部分。 在本部分，我們將添加一個折線圖來顯示帳戶餘額。
-seo-description: 這是建立打印管道第一個互動式通訊檔案的多步驟教學課程的第8部分。 在本部分，我們將添加一個折線圖來顯示帳戶餘額。
+seo-description: This is part 8 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will add a Line chart to display the account balance.
 uuid: a4394874-a080-4b6a-a3eb-ffc71504919d
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,16 +13,16 @@ version: 6.4,6.5
 discoiquuid: 9110e5c6-50ee-4c3e-a779-b680ff49ef23
 kt: 5993
 thumbnail: 22386.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 86a955e2-2463-4973-8d3c-4c694db8c787
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 1%
+source-wordcount: '130'
+ht-degree: 0%
 
 ---
-
 
 # 為第一個互動式通信文檔配置線圖 {#configuring-line-chart-for-your-first-interactive-communication-document}
 
@@ -38,5 +38,4 @@ ht-degree: 1%
 
 以下影片會逐步帶您了解新增和設定圖表元件的步驟
 
->[!VIDEO](https://video.tv.adobe.com/v/22386/?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/22386?quality=12&learn=on)

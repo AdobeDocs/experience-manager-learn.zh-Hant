@@ -1,8 +1,8 @@
 ---
-title: 在AEM Assets使用搜索
-description: 在這些視頻中，我們查看了中引入的對Assets搜索的一些增AEM強。 作者可以通過更新相應的元資料屬性來增強關鍵字搜索結果中的某些資產。 我們還將看一些Assets OmniSearch謂語的高級配置。
+title: 在AEM Assets中使用搜尋
+description: 在這些影片中，我們將了解AEM中推出的Assets搜尋增強功能。 作者可以更新個別中繼資料屬性，以提升關鍵字搜尋結果中的特定資產。 我們也會查看Assets OmniSearch述詞的一些進階設定。
 version: 6.4, 6.5
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -10,16 +10,16 @@ ht-degree: 0%
 ---
 
 
-# 在AEM Assets使用搜索{#using-search-in-aem-assets}
+# 在AEM Assets中使用搜尋{#using-search-in-aem-assets}
 
-在這些視頻中，我們查看了中引入的對Assets搜索的一些增AEM強。 作者可以通過更新相應的元資料屬性來增強關鍵字搜索結果中的某些資產。 我們還將看一些Assets OmniSearch謂語的高級配置。
+在這些影片中，我們將了解AEM中推出的Assets搜尋增強功能。 作者可以更新個別中繼資料屬性，以提升關鍵字搜尋結果中的特定資產。 我們也會查看Assets OmniSearch述詞的一些進階設定。
 
-## 使用資產元資料搜索提升 {#search-boost-asset}
+## 使用資產中繼資料提升搜尋 {#search-boost-asset}
 
->[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16766?quality=12&learn=on)
 
-## 多值和標籤搜索謂語的高級配置 {#multi-value-tag-predicates}
+## 多值和標籤搜尋述詞的進階設定 {#multi-value-tag-predicates}
 
-的 **多值搜索謂語** 可在搜索結果中輕鬆匹配文本。 還對標籤謂語進行了一些增強，以便更高效地過濾資產搜索結果。
+此 **多值搜索謂詞** 可供搜尋結果中輕鬆進行文字比對。 也對「標籤述詞」進行了數項增強，以更有效篩選資產搜尋結果。
 
->[!VIDEO](https://video.tv.adobe.com/v/16457/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16457?quality=12&learn=on)

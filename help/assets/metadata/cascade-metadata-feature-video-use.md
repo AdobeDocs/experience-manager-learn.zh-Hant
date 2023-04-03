@@ -10,7 +10,7 @@ kt: 616
 thumbnail: 20702.jpg
 last-substantial-update: 2022-06-08T00:00:00Z
 exl-id: 73e793e0-a20e-4954-ba1a-471b2cd85120
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 進階中繼資料管理可讓使用者建立階層式欄位規則，以在AEM Assets中的中繼資料之間形成內容關係。 以下影片示範欄位需求、可見度和內容選擇的新動態規則。 影片也詳細說明管理員將這些規則套用至自訂中繼資料結構所需的步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/20702/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20702?quality=12&learn=on)
 
 有三個動態規則集可為指定的中繼資料欄位啟用：
 

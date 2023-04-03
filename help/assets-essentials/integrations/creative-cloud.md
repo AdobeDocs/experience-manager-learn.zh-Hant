@@ -10,7 +10,7 @@ kt: 7918
 thumbnail: 336069.jpeg
 last-substantial-update: 2022-10-12T00:00:00Z
 exl-id: 74eb8b3c-b521-4fd1-9859-43c06f754005
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%
@@ -24,4 +24,4 @@ ht-degree: 0%
 + 來自Assets Essentials的檔案，可透過Creative Cloud程式庫順暢地存取
 + 來自Creative Cloud程式庫的檔案要共用至Assets Essentials
 
->[!VIDEO](https://video.tv.adobe.com/v/336069/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336069?quality=12&learn=on)

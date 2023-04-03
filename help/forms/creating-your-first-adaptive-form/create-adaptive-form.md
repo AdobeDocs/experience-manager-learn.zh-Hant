@@ -1,19 +1,19 @@
 ---
 title: 建立最適化表單
 description: 在第1部分，我們將建立適用性表單，並使用適當的按鈕新增和配置工具列。
-feature: 適用性表單
+feature: Adaptive Forms
 kt: 4208
 thumbnail: 22173.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: de3a0444-64ae-45a1-8329-aafa6f5add49
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 6%
+source-wordcount: '47'
+ht-degree: 0%
 
 ---
-
 
 # 建立最適化表單 {#creating-adaptive-form}
 
@@ -21,4 +21,4 @@ ht-degree: 6%
 
 **建立第一個最適化表單**
 
->[!VIDEO](https://video.tv.adobe.com/v/22173/quality=9)
+>[!VIDEO](https://video.tv.adobe.com/v/22173?quality=12&learn=on)

@@ -1,23 +1,23 @@
 ---
-title: Designer預覽PDF已禁用 — 如何啟用預覽PDF
-description: 在Designer中配置PDF預覽的步驟
+title: 設計器預覽PDF已禁用 — 如何啟用預覽PDF
+description: 在設計工具中設定PDF預覽的步驟
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 設計工具
-topic: 開發
+feature: Designer
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 0d5fb8d1-5aa2-40c7-b1c9-e4b5319e8d36
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 2%
+source-wordcount: '33'
+ht-degree: 0%
 
 ---
-
 
 # 如何啟用預覽PDF
 
 *此影片會逐步說明在Designer中啟用預覽PDF的步驟。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335500?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335500?quality=12&learn=on)

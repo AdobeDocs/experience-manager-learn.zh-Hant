@@ -1,45 +1,45 @@
 ---
-title: 中的翻譯增強功AEM能
-description: 強AEM健的翻譯框AEM架允許受支援的翻譯供應商無縫翻譯內容。 瞭解最新的增強功能。
+title: AEM中的翻譯增強功能
+description: AEM強大的翻譯架構可讓支援的翻譯廠商順暢地翻譯AEM內容。 了解最新的增強功能。
 version: 6.4, 6.5
 topic: Localization
 feature: Multi Site Manager, Language Copy
 role: User
 level: Beginner
 exl-id: 21633308-ffe4-4023-affe-59269504da69
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '334'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
-# 使用多站點管理器的翻譯增強功能 {#translation-enhancements}
+# 多網站管理員的翻譯增強功能 {#translation-enhancements}
 
-強AEM健的翻譯框AEM架允許受支援的翻譯供應商無縫翻譯內容。
+AEM強大的翻譯架構可讓支援的翻譯廠商順暢地翻譯AEM內容。
 
-## 6.5中的AEM翻譯增強功能
+## AEM 6.5中的翻譯增強功能
 
->[!VIDEO](https://video.tv.adobe.com/v/27405?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27405?quality=12&learn=on)
 
-AEM 6.5翻譯增強功能包括：
+AEM 6.5轉譯增強功能包括：
 
-**自動審批翻譯作業**:轉換作業中的批准標誌是二進位屬性。 它不會推動或整合開箱即用的審核和批准工作流。 要使翻譯作業中的步驟數保持最小，預設情況下，在 [!UICONTROL 高級屬性] 的子菜單。 如果您的組織需要批准翻譯作業，則可以取消選中「自動批准」選項 [!UICONTROL 高級屬性] 的子菜單。
+**自動核准翻譯工作**:翻譯工作中的核准標幟是二進位屬性。 它不會推動或整合現成可用的審核和核准工作流程。 為了將翻譯工作中的步驟數保持在最小，預設情況下，它設定為「自動核准」 [!UICONTROL 進階屬性] 翻譯項目。 如果貴組織需要核准翻譯工作，您可以取消勾選 [!UICONTROL 進階屬性] 翻譯項目。
 
-**自動刪除翻譯啟動**:現在，可以在翻譯啟動升級後自動刪除翻譯啟動，而不是在啟動管理之後手動刪除這些啟動。
+**自動刪除翻譯啟動**:現在，您可以在翻譯啟動升級後，自動刪除翻譯啟動，而不必在啟動管理員中手動刪除翻譯啟動。
 
-**導出JSON格式的翻譯對象**:6.AEM4和早期版本支援翻譯對象的XML和XLIFF格式。 現在，您可以使用系統控制台將導出格式配置為JSON格式 [!UICONTROL 配置管理器]。 查找 [!UICONTROL 翻譯平台配置]，然後可以選擇導出格式為JSON。
+**匯出JSON格式的翻譯物件**:AEM 6.4及舊版支援翻譯物件的XML和XLIFF格式。 您現在可以使用系統主控台，將匯出格式設定為JSON格式 [!UICONTROL 設定管理員]. 尋找 [!UICONTROL 翻譯平台配置]，然後您可以選取匯出格式為JSON。
 
-**更新AEM翻譯記憶庫(TMS)中的翻譯內容**:沒有訪問權AEM限的本地作者可以更新已被接收回AEMTM（翻譯記憶庫，TMS）中的已翻譯內容，並通過將翻譯作業從TMS重新發送到TMS來更新AEM中的翻譯AEM，以及將翻譯作業從TMS重重新
+**更新翻譯記憶體(TMS)中的翻譯AEM內容**:無權存取AEM的本機作者可以直接在TM（翻譯記憶庫，TMS）中對已內嵌回AEM的翻譯內容進行更新，並透過從TMS重新傳送翻譯工作到AEM來更新AEM中的翻譯
 
-## 6.AEM4中的翻譯增強
+## AEM 6.4中的翻譯增強功能
 
->[!VIDEO](https://video.tv.adobe.com/v/21309?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21309?quality=12&learn=on)
 
-現在，作者可以直接從「站點」管理員或「項目」管理員快速輕鬆地建立多語言翻譯項目，設定這些項目以自動升級啟動，甚至設定計畫以實現自動化。
+作者現在可以直接從網站管理員或專案管理員快速輕鬆建立多語言翻譯專案、設定這些專案以自動促銷啟動，甚至設定自動化排程。
 
 ## 其他資源 {#additional-resources}
 
-* [翻譯多語言站點的內容](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/translation.html)
+* [翻譯多語言網站的內容](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/translation.html)
 * [https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html)
-* [翻譯最佳做法](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-bp.html)
+* [翻譯最佳實務](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-bp.html)

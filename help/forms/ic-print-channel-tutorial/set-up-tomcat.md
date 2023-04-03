@@ -15,7 +15,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: faa9ca2d-6cfa-4abf-be5e-3e549202853a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 在本部分，我們安裝了TOMCAT，並在TOMCAT中部署了sampleRest.war檔案。 此WAR檔案公開的REST端點是資料源和表單資料模型的基礎。
 
->[!VIDEO](https://video.tv.adobe.com/v/37815/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37815?quality=12&learn=on)
 
 要設定tomcat，請按照以下說明操作：
 
@@ -46,4 +46,4 @@ ht-degree: 0%
 恭喜!!!。 您已設定tomcat並部署了SampleRest.war檔案。
 
 以下影片說明在Tomcat中部署範例應用程式
->[!VIDEO](https://video.tv.adobe.com/v/37815)
+>[!VIDEO](https://video.tv.adobe.com/v/37815?quality=12&learn=on)

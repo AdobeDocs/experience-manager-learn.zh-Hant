@@ -9,7 +9,7 @@ role: Developer
 level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 使用案例的展示
 
->[!VIDEO](https://video.tv.adobe.com/v/340344?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
 
 在本教學課程中，我已使用 [Geonames REST API](http://api.geonames.org/) 來展示此功能。
 有許多組織提供這類服務，只要他們有記錄完善的REST API，您就可以透過資料整合功能，輕鬆與AEM Forms整合

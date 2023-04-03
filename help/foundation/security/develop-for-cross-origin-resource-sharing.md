@@ -7,7 +7,7 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 1c8f8d8aeee60c06c9d0d496fd86717ab8fe8295
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 利用的簡短範例 [!DNL CORS] 透過用戶端JavaScript從外部Web應用程式存取AEM內容。
 
->[!VIDEO](https://video.tv.adobe.com/v/18837/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
 此影片中：
 

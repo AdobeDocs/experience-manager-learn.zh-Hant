@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 5%
@@ -19,11 +19,11 @@ ht-degree: 5%
 
 AEM Dynamic Media視訊播放器過去依賴Flash執行階段來支援案頭用戶端上的最適化視訊串流，而現在則更積極採用flash內容串流。 隨著HLS(Apple的HTTP即時串流視訊傳送通訊協定)的推出，內容現在可以串流化，而不需依賴Flash。
 
->[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
 
 ## 快速了解非Flash視訊播放器 {#quick-look-into-non-flash-video-player}
 
->[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17429?quality=12&learn=on)
 
 針對不支援的瀏覽器，我們會回復至漸進式視訊傳送，HLS瀏覽器支援如下
 

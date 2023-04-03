@@ -1,5 +1,5 @@
 ---
-title: 建立內容片段模型 — AEM無周邊的進階概念 — GraphQL
+title: 建立內容片段模型 — AEM無頭的進階概念 — GraphQL
 description: 在Adobe Experience Manager(AEM)無標題的進階概念章節中，了解如何借由新增索引標籤預留位置、日期和時間、JSON物件、片段參考和內容參考來編輯內容片段模型。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1989'
 ht-degree: 1%
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 ## 目標 {#objectives}
 
-* 建立內容片段模型。
+* 建立內容片段模型.
 * 將索引標籤預留位置、日期和時間、JSON物件、片段參考和內容參考新增至模型。
 * 將驗證新增至內容參考。
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 以下影片簡要介紹內容片段模型，以及這些模型在本教學課程中的使用方式。
 
->[!VIDEO](https://video.tv.adobe.com/v/340037/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340037?quality=12&learn=on)
 
 ## 建立內容片段模型 {#create-models}
 
@@ -217,7 +217,7 @@ Adobe Experience Manager隨附一些內建驗證方法。 這些驗證方法可�
 
 1. 選擇 **儲存** 確認變更並關閉內容片段模型編輯器。
 
-## 最佳作法 {#best-practices}
+## 最佳做法 {#best-practices}
 
 有幾項與建立內容片段模型相關的最佳實務：
 
@@ -236,4 +236,4 @@ Adobe Experience Manager隨附一些內建驗證方法。 這些驗證方法可�
 本系列的下一章將介紹 [製作內容片段](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md) 從本章中建立的模型。 了解如何使用本章介紹的資料類型和建立資料夾原則，以限制可在資產資料夾中建立的內容片段模型。
 
 雖然本教學課程為選用項目，但請務必在實際生產環境中發佈所有內容。 如需AEM中製作和發佈環境的檢閱，請參閱
-[AEM無周邊和GraphQL影片系列](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).
+[AEM無頭和GraphQL影片系列](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).

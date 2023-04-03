@@ -8,7 +8,7 @@ level: Beginner
 exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
 thumbnail: 328618.jpg
 last-substantial-update: 2022-07-20T00:00:00Z
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 11%
@@ -26,7 +26,7 @@ AEM GraphQL API for內容片段支援無頭CMS案例，供外部用戶端應用�
 
 為克服這些難題，GraphQL提供以查詢為基礎的API，讓用戶端只能查詢AEM所需的內容，並透過單一API呼叫接收。
 
->[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328618?quality=12&learn=on)
 
 此影片概述在AEM中實作的GraphQL API。 AEM中的GraphQL API主要設計為在無頭部署作業中，將AEM內容片段傳送至下游應用程式。
 

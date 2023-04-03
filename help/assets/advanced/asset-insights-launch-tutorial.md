@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-04T00:00:00Z
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 資產前瞻分析概述。 安裝核心元件、範例影像元件和其他內容套件，讓您的環境準備就緒。
 
->[!VIDEO](https://video.tv.adobe.com/v/25943/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25943?quality=12&learn=on)
 
 ### 架構圖 {#architecture-diagram}
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 增強核心元件，以及為資產分析使用代理元件（範例影像元件）。 編輯內容頁面範本原則，以啟用參考網站的範例影像元件。
 
->[!VIDEO](https://video.tv.adobe.com/v/25944/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25944?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 系統會為資產追蹤建立即時資料收集的報表套裝。 AEM Assets Insights設定是使用Adobe Analytics憑證設定。
 
->[!VIDEO](https://video.tv.adobe.com/v/25945/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25945?quality=12&learn=on)
 
 >[!NOTE]
 您必須為Adobe Analytics報表套裝啟用即時資料收集和AEM資產報表。 啟用AEM Asset Reporting會保留分析變數，以追蹤資產分析。
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 新增Adobe Analytics擴充功能、建立頁面載入規則以及整合AEM與Launch與Adobe IMS技術帳戶。
 
->[!VIDEO](https://video.tv.adobe.com/v/25946/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
 請務必將所有變更從製作執行個體複製到發佈執行個體。
@@ -193,4 +193,4 @@ document.querySelectorAll(".cmp-image__image");
 
 設定AEM Asset Reporting同步作業排程器和Assets Insights報表
 
->[!VIDEO](https://video.tv.adobe.com/v/25947/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25947?quality=12&learn=on)

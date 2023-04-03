@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 exl-id: 3e51767b-3571-4af7-8f01-5b6c5c74734c
 last-substantial-update: 2021-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # 將Microsoft Dynamics與AEM Forms搭配使用{#using-microsoft-dynamics-with-aem-forms}
 
-AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列項目為現成可用支援。 不過，只要很少自訂，您也可以整合其他資料來源。
+AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列項目是現成可用的支援。 不過，只要很少自訂，您也可以整合其他資料來源。
 
 關係資料庫 — MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS。
 1. AEM使用者設定檔
@@ -27,7 +27,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 
 此影片會逐步說明AEM Forms如何以Microsoft Dynamics作為後端資料來源，提供互動式個人化通訊的工作流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/20971?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20971?quality=12&learn=on)
 
 >[!NOTE]
 >

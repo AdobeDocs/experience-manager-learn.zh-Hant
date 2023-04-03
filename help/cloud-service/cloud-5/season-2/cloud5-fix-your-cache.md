@@ -1,26 +1,27 @@
 ---
-title: 雲5 — 修復您的……快取
-description: 優化快取和加快站點速度的一些簡單提示
+title: 雲端5 — 修正您的……快取
+description: 提供一些簡單提示，用於優化快取並加快站點速度
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
 thumbnail: 343475.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 87d19ba3388b4a2ac3db1d2cf3838ed12dbbd2bc
+exl-id: 591ed430-80b3-49fa-b52f-0d07a2e5ac0e
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '70'
+ht-degree: 11%
 
 ---
 
-# 雲5 — 修復您的……快取
+# 雲端5 — 修正您的……快取
 
-在兩季的第二集中，我們探索了一些可以讓您快速快取的AEMas a Cloud Service。
+在第二季的兩部分中，我們將探討一些您可了解的事項，以加速快取AEMas a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/343475)
+>[!VIDEO](https://video.tv.adobe.com/v/343475?quality=12&learn=on)
 
-## 此視頻中包含的內容
+## 此影片所涵蓋的內容
 
-+ [快取和內容傳遞](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html)
++ [快取與內容傳送](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html)
 + [Google燈塔](https://developers.google.com/web/tools/lighthouse)

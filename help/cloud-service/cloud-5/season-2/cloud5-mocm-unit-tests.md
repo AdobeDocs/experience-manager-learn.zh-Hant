@@ -7,7 +7,7 @@ level: Intermediate
 thumbnail: 343623.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 在軟體開發中，單元測試是一個經常被忽視的步驟，是每個開發人員都應完成的非常重要的活動。 AEM以原生方式提供許多預設品質檢查，但無法測試您可能已自訂或更改的所有項目。
 
->[!VIDEO](https://video.tv.adobe.com/v/343623)
+>[!VIDEO](https://video.tv.adobe.com/v/343623?quality=12&learn=on)
 
 ## 此影片所涵蓋的內容
 

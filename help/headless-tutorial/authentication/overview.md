@@ -13,7 +13,7 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: 8fc36698f06fea0eaaf818867c7e713453e0452d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '641'
 ht-degree: 0%
@@ -26,7 +26,7 @@ AEM會公開各種可無頭式互動的HTTP端點，從GraphQL、AEM內容服務
 
 在本教學課程中，請妥善探索外部應用程式如何以程式設計方式，使用存取權杖，透過HTTP驗證AEMas a Cloud Service並與其互動。
 
->[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
 
 ## 先決條件
 

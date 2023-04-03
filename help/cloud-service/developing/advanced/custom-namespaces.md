@@ -9,10 +9,10 @@ level: Intermediate
 kt: 11618
 thumbnail: 3412319.jpg
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 1a4ee470a650aacc5412fbd27062ca14ccdb1967
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '230'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 自訂命名空間可在中管理 [Sling存放庫初始化（重新指向）](https://sling.apache.org/documentation/bundles/repository-initialization.html) 指令碼，並以OSGi設定的形式部署至AEMas a Cloud Service，然後新增至您的 [AEM專案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant) `ui.config` 專案。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412319/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
 
 ## 資源
 

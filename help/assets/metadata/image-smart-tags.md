@@ -10,7 +10,7 @@ kt: 645
 thumbnail: 17019.jpg
 last-substantial-update: 2022-06-09T00:00:00Z
 exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 3%
@@ -21,14 +21,14 @@ ht-degree: 3%
 
 AEM Assets的影像智慧標籤可自動將衍生中繼資料標籤新增至影像資產，進而增強AEM Assets的搜尋，更輕鬆快速地尋找正確的影像，改善製作體驗。
 
->[!VIDEO](https://video.tv.adobe.com/v/17019/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17019?quality=12&learn=on)
 
 ## 為AEM 6.x設定{#set-up}
 
 >[!NOTE]
 > 影像的智慧標籤會自動布建以供AEMas a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/17023/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17023?quality=12&learn=on)
 
 使用智慧內容服務之前，請確定下列項目以建立Adobe I/O上的整合：
 

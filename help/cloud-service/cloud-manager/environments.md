@@ -12,7 +12,7 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: f4311522-b8fb-4375-9ecc-73e0207a63b2
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
@@ -23,4 +23,4 @@ ht-degree: 0%
 
 [Cloud Manager環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) 由AEM Author、AEM Publish和Dispatcher服務組成。 不同的環境支援角色，且可使用不同的CI/CD管道參與。 Cloud Manager環境通常有一個生產環境、一個階段環境和一個開發環境。
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/?quality=12&learn=on&hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)

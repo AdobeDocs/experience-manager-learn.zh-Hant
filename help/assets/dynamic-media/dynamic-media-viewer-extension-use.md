@@ -7,23 +7,23 @@ version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 9d807f4c-999c-45e6-a9db-6c1776bddda1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '360'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
-
 
 # 搭配使用Dynamic Media檢視器及Adobe Analytics和AdobeLaunch{#using-dynamic-media-viewers-adobe-analytics-launch}
 
 若為擁有Dynamic Media和Adobe Analytics的客戶，您現在可以使用Dynamic Media檢視器擴充功能，追蹤您網站上Dynamic Media檢視器的使用情況。
 
->[!VIDEO](https://video.tv.adobe.com/v/29308/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29308?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 針對此功能，以Dynamic Media Scene7模式執行Adobe Experience Manager。 您也需要[將Adobe Experience Platform Launch與您的AEM例項](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)整合。
+> 針對此功能，以Dynamic Media Scene7模式執行Adobe Experience Manager。 您也需要 [將Adobe Experience Platform Launch與AEM例項整合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
 
 隨著Dynamic Media檢視器擴充功能的推出，Adobe Experience Manager現在為Dynamic Media檢視器(5.13)提供的資產提供進階分析支援，讓您在網站頁面上使用Dynamic Media檢視器時，能更精細地控制事件追蹤。
 
@@ -165,5 +165,5 @@ ht-degree: 15%
 ## 其他資源{#additional-resources}
 
 * [將Adobe Experience Manager與AdobeLaunch整合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-* [在Dynamic Media Scene7模式中執行Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=en)
+* [在Dynamic Media Scene7模式中執行Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=zh-Hant)
 * [整合 Dynamic Media 檢視器以及 Adobe Analytics 和 Adobe Launch](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html)

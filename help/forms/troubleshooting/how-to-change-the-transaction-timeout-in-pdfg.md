@@ -1,23 +1,23 @@
 ---
 title: 如何更改PDFG服務中應用伺服器的事務超時
-description: 為PDF產生器增加或減少應用程式伺服器的交易逾時的步驟
+description: 為PDF生成器增加或減少應用程式伺服器事務超時的步驟
 type: Troubleshooting
 role: Admin
 level: Beginner
 version: 6.5
-feature: PDF 產生器
-topic: 管理
+feature: PDF Generator
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: ec190f18-1ab8-4fac-adec-3b64caee290a
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 4%
+source-wordcount: '59'
+ht-degree: 0%
 
 ---
-
 
 # 如何更改PDFG服務中應用伺服器的事務超時
 
 *此影片說明在Forms PDFG服務中變更應用程式伺服器的交易逾時程式。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335555?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335555?quality=12&learn=on)

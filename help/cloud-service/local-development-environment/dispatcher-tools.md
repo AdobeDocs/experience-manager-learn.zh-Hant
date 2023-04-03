@@ -10,7 +10,7 @@ kt: 4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: eb31c5fb79e01e1c363fc153355e8d92d1a54021
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 9%
@@ -79,7 +79,7 @@ Dispatcher工具的版本與AEM SDK的版本不同。 請確定Dispatcher工具�
 
 下面發出的所有命令都假定當前工作目錄包含展開的Dispatcher工具內容。
 
->[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30601?quality=12&learn=on)
 
 *此影片說明用途使用macOS。 可以使用等效的Windows/Linux命令來獲得類似的結果。*
 
@@ -188,7 +188,7 @@ Dispatcher工具版本的遞增頻率比Experience Manager低，因此，Dispatc
 
 AEM Apache和Dispatcher設定的基準集會定期增強，並隨as a Cloud ServiceSDK版本一併發行。 最佳實務是將基線設定增強功能併入您的AEM專案，並避免 [本機驗證](#validate-configurations) 和Cloud Manager管道故障。 使用 `update_maven.sh` 指令碼 `.../dispatcher-sdk-x.x.x/bin` 檔案夾。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416744/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416744?quality=12&learn=on)
 
 *此影片說明用途使用macOS。 可以使用等效的Windows/Linux命令來獲得類似的結果。*
 

@@ -10,7 +10,7 @@ kt: 11604
 thumbnail: KT-11604.png
 doc-type: article
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: a298dbd27dfda00c80d2098199eb418200af0233
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 此影片會檢閱範例大量屬性更新擴充功能、其運作方式及開發方式。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412296/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
 ## App Builder擴充功能應用程式
 

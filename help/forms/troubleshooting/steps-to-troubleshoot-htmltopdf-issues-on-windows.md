@@ -5,20 +5,19 @@ type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 'PDF 產生器 '
-topic: '開發   '
+feature: PDF Generator
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 10b32182-3095-45f5-9edf-3cc4804713ab
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 6%
+source-wordcount: '40'
+ht-degree: 0%
 
 ---
-
-
 
 # 疑難排解Windows設定中HtmltoPDF特定問題的步驟
 
 *此影片會逐步說明疑難排解Windows設定中HtmltoPDF的特定問題。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335545?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335545?quality=12&learn=on)

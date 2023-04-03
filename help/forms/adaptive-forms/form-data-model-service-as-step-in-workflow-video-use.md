@@ -9,7 +9,7 @@ role: Developer
 level: Intermediate
 exl-id: 0c77a853-fa71-46ac-8626-99bc69d6222d
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 從AEM Forms 6.4開始，現在起，我們可以在AEM工作流程中使用表單資料模型。 以下影片逐步說明在AEM工作流程中設定「表單資料模型」步驟所需的步驟
 
 
->[!VIDEO](https://video.tv.adobe.com/v/21719/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)
 
 若要在您的伺服器上測試此功能，請依照下列指示操作
 * [下載並部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 這是設定中繼資料屬性的自訂OSGI套件組合。

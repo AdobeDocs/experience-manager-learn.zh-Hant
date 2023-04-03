@@ -9,20 +9,20 @@ kt: 7630
 thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '618'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
-# 總覽
+# 概觀
 
 歡迎使用多部分教學課程，協助開發人員運用AEM SPA編輯器擴充現有的React型（或Next.js）Remote SPA內容，同時提供可編輯的AEM內容。
 
-本教學課程以 [WKND GraphQL應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)，此應用程式會透過AEM GraphQL API使用AEM內容片段內容，但不提供SPA內容的任何內容內寫。
+本教學課程以 [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)，此應用程式會透過AEM GraphQL API使用AEM內容片段內容，但不提供SPA內容的任何內容內容編寫。
 
->[!VIDEO](https://video.tv.adobe.com/v/333272/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## 關於教學課程
 

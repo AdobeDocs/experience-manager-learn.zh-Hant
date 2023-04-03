@@ -8,7 +8,7 @@ level: Experienced
 kt: 8919
 thumbnail: 336970.jpeg
 exl-id: c51ce8e3-e83c-4f8b-a835-70335ed3a5b9
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 了解「內容轉移工具」如何協助您將內容從AEM 6.3+移轉至AEMas a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336970/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336970?quality=12&learn=on)
 
 ## 使用內容轉移工具
 
@@ -46,7 +46,7 @@ ht-degree: 2%
 在嘗試動手練習之前，請確定您已觀看並了解上述影片，以及下列材料：
 
 + [AEM 現代化工具](../aem-modernization-tools.md)
-+ [入門](../onboarding.md)
++ [上線](../onboarding.md)
 + [Cloud Manager](../cloud-manager.md)
 
 此外，請確定您已完成先前的實作練習：

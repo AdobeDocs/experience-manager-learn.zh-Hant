@@ -1,10 +1,10 @@
 ---
 title: 在提交POST時開啟代理程式UI
-seo-title: 在提交POST時開啟代理程式UI
+seo-title: Opening Agent UI On POST Submission
 description: 這是建立打印管道第一個互動式通訊檔案的多步驟教學課程的11部分。 在本部分，我們將啟動代理ui介面，以在表單提交時建立臨機通信。
-seo-description: 這是建立打印管道第一個互動式通訊檔案的多步驟教學課程的11部分。 在本部分，我們將啟動代理ui介面，以在表單提交時建立臨機通信。
+seo-description: This is part 11 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will launch the agent ui interface for creating ad-hoc correspondence on form submission.
 uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,16 +12,16 @@ activity: implement
 version: 6.4,6.5
 kt: 6168
 thumbnail: 40122.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 509b4d0d-9f3c-46cb-8ef7-07e831775086
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
-
 
 # 在提交POST時開啟代理程式UI
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 以下影片顯示使用案例
 
->[!VIDEO](https://video.tv.adobe.com/v/40122/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40122?quality=12&learn=on)
 
 ```java
 String accountNumber = request.getParameter("accountnumber"))
@@ -63,14 +63,13 @@ wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").incl
 
 * [使用套件管理器匯入及安裝與本文相關的資產。](assets/launch-agent-ui.zip)
 * [登入configMgr](http://localhost:4502/system/console/configMgr)
-* 搜尋&#x200B;_AdobeGranite CSRF篩選器_
-* 在排除的路徑中新增&#x200B;_/content/getprintchannel_
+* 搜尋 _AdobeGranite CSRF篩選器_
+* 新增 _/content/getprintchannel_ 在排除的路徑中
 * 儲存您的變更。
-* [開啟POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。請確定傳遞至FormFieldRequestParameter的字串是有效的documentId。（19號線）。
-* [開啟網](http://localhost:4502/content/OpenPrintChannel.html) 頁，輸入帳號並提交表單。
+* [開啟POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp). 請確定傳遞至FormFieldRequestParameter的字串是有效的documentId。（19號線）。
+* [開啟網頁](http://localhost:4502/content/OpenPrintChannel.html) 並輸入帳號並提交表格。
 * 代理UI介面應會開啟，其中會預先填入表單中輸入之帳號的特定資料。
 
 >[!NOTE]
 >
 >請確定您的表單資料模型的Get操作輸入參數系結至稱為「accountnumber」的請求屬性，以便運作。 如果將綁定值的名稱更改為任何其他名稱，請確保在POST.jsp的第25行上反映該更改
-

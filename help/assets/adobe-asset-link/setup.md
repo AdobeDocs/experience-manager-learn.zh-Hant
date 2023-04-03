@@ -9,7 +9,7 @@ level: Beginner
 kt: 9401
 thumbnail: 338824.jpg
 exl-id: a62e936f-c231-474d-9671-58815b2cb652
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -24,17 +24,17 @@ ht-degree: 0%
 
 了解如何設定Adobe資產連結以供AEMas a Cloud Service、設定使用者權益和AEMas a Cloud Service，以及如何安裝和使用Adobe資產連結。
 
->[!VIDEO](https://video.tv.adobe.com/v/338824/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338824?quality=12&learn=on)
 
 ## Managed Services和內部部署的資產連結設定
 
 了解如何為在Adobe Managed Services或內部部署中執行的AEM 6設定Adobe資產連結、設定使用者權益和AEMas a Cloud Service，以及如何安裝和使用Adobe資產連結。
 
->[!VIDEO](https://video.tv.adobe.com/v/338823/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338823?quality=12&learn=on)
 
 
 ## 網域信任的資產連結設定
 
 了解網域信任是什麼、將Adobe資產連結與Experience Manager Assets搭配使用有何意義，以及如何設定網域信任。
 
->[!VIDEO](https://video.tv.adobe.com/v/338825/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338825?quality=12&learn=on)

@@ -14,7 +14,7 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 建置整合功能(需要程式化存取AEM as a Cloud Service)的開發人員需要透過簡單、快速的方式取得AEM的暫時存取權杖，以利進行本機開發活動。 為了滿足此需求，AEM開發人員控制台可讓開發人員自行產生暫時存取權杖，以供以程式設計方式存取AEM。
 
->[!VIDEO](https://video.tv.adobe.com/v/330477/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330477?quality=12&learn=on)
 
 ## 產生本機開發存取權杖
 

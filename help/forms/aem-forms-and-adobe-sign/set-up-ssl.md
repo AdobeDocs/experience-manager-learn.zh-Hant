@@ -9,7 +9,7 @@ topic: Development
 role: Admin
 level: Intermediate
 exl-id: e94cde31-e589-4b71-b5de-bcd898393b8a
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 將AEM Forms與Acrobat Sign整合的先決條件之一，是您的AEM執行個體必須設定為使用SSL。 Adobe Experience Manager的SSL設定精靈，讓設定AEM執行個體透過HTTPS執行變得更輕鬆。
 以下影片說明使用精靈設定SSL所需的步驟
 
->[!VIDEO](https://video.tv.adobe.com/v/17993/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)

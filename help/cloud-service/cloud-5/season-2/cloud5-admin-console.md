@@ -1,26 +1,27 @@
 ---
-title: 雲5 -Admin Console
-description: Adobe Admin Console和它的內AEM涵
+title: Cloud 5 -Admin Console
+description: Adobe Admin Console及其與AEM的契合
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
 thumbnail: 342866.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 726cf83f3cabe46c12abb79288368407ebf4d525
+exl-id: eec1764e-1234-4b4c-993f-6584717e3c9e
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 6%
 
 ---
 
-# 雲5 -Admin Console
+# Cloud 5 -Admin Console
 
-有沒有想過為什麼每個項目在Admin ConsoleAEM的背景下都做什麼？ 該團隊試圖解釋一些人們應該瞭解的關於資源調配和訪問的常見問題。
+有沒有想過為什麼每個項目在Admin Console內的AEM內容中會做什麼？ 團隊會嘗試說明一些人們應該了解的關於布建和存取的常見事項。
 
->[!VIDEO](https://video.tv.adobe.com/v/342866)
+>[!VIDEO](https://video.tv.adobe.com/v/342866?quality=12&learn=on)
 
-## 此視頻中包含的內容
+## 此影片所涵蓋的內容
 
-+ [瞭解Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
-+ [Admin Console概述](https://helpx.adobe.com/enterprise/using/admin-console.html)
++ [了解Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
++ [Admin Console概述](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)

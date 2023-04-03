@@ -1,10 +1,10 @@
 ---
 title: 為打印通道建立互動式通信
-seo-title: 為打印通道建立互動式通信
+seo-title: Create Interactive Communication For Print Channel
 description: 這是多部分教程的6部分，用於為打印通道建立第一個互動式通信文檔。 在本部分中，將建立用於打印的交互通信文檔通道。
-seo-description: 這是多部分教程的6部分，用於為打印通道建立第一個互動式通信文檔。 在本部分中，將建立用於打印的交互通信文檔通道。
+seo-description: This is part 6 of multipart tutorial for creating your first interactive communication document for the print channel. In this part, Interactive Communication Document for Print channel is created.
 uuid: 25318a2a-be9d-47d8-806b-d99c8e1c6a74
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,16 +13,16 @@ version: 6.4,6.5
 discoiquuid: 6e3f9c8c-8ec4-4084-bf35-1c97a5b463f1
 kt: 5972
 thumbnail: 37888.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: d4355f72-aefa-4ab3-ba7e-ebd7f7b536f0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 2%
+source-wordcount: '71'
+ht-degree: 0%
 
 ---
-
 
 # 為打印通道建立互動式通信 {#create-interactive-communication-for-print-channel}
 
@@ -30,4 +30,4 @@ ht-degree: 2%
 
 在定義和配置資料源和表單資料模型後，我們現在將建立用於打印通道的互動式通信
 
->[!VIDEO](https://video.tv.adobe.com/v/37888/?quality=9)
+>[!VIDEO](https://video.tv.adobe.com/v/37888?quality=12&learn=on)

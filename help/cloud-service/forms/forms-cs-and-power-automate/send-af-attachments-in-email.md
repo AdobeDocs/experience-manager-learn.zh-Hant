@@ -9,9 +9,9 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 11077
-source-git-commit: aea43a705b3959f8be26238d32b816b3953e153e
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '72'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 提取表單附件，並以電子郵件傳送附件，讓工作流程自動化。
 以下影片說明從提交的資料建立附件所需的步驟。
->[!VIDEO](https://video.tv.adobe.com/v/3409017/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409017?quality=12&learn=on)
 
 以下是您需要在剖析JSON結構步驟中使用的附件物件結構
 

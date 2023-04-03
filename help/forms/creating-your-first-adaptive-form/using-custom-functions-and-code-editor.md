@@ -1,41 +1,41 @@
 ---
 title: 使用函式和程式碼編輯器
 description: 使用函式和程式碼編輯器來編寫業務規則
-feature: 適用性表單
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4270
 thumbnail: 22282.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 7b2a4075-bfdf-49f3-b507-34d86193bf64
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 2%
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
-
 
 # 使用自訂函式和程式碼編輯器 {#using-functions-and-code-editor}
 
 在本部分，我們將使用自訂函式和程式碼編輯器來編寫業務規則。
 
-在本教程前面，您已使用自定義函式](assets/client-libs-and-logo.zip)安裝了[ClientLib。
+您已安裝 [具有自定義函式的ClientLib](assets/client-libs-and-logo.zip) 本教學課程的前面部分。
 
 用戶端程式庫通常包含CSS和Javascript檔案。 此用戶端程式庫包含javascript檔案，此檔案會顯示要填入下拉式清單值的函式。
 
 
 ## 要填充的函式下拉清單 {#function-to-populate-drop-down-list}
 
->[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22282?quality=12&learn=on)
 
 ### 設定面板的摘要標題 {#set-the-summary-title-of-panels}
 
->[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
 
 #### 驗證面板 {#validate-panels-using-rule-editor}
 
->[!VIDEO](https://video.tv.adobe.com/v/28409?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28409?quality=12&learn=on)
 
 以下是用於驗證面板欄位的程式碼
 

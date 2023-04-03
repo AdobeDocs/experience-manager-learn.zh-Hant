@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 1%
@@ -26,11 +26,11 @@ ht-degree: 1%
 
 Adobe Experience Manager的樣式系統不需進行後端開發，即可進行元件的視覺化變異，讓您能更妥善地重複使用AEM元件，以及更多功能和效率的內容製作。 樣式系統可與AEM核心元件、範本編輯器和回應式版面搭配使用時，提供強大的功能，可快速撰寫豐富的體驗。
 
->[!VIDEO](https://video.tv.adobe.com/v/21750/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21750?quality=12&learn=on)
 
 此影片示範如何運用樣式系統，僅使用CSS，為單一元件建立大幅不同的視覺外觀。
 
-顯示的樣式由[WKND應用程式](https://github.com/adobe/aem-guides-wknd)提供。 這些樣式定義為CSS，不需要變更元件的後端邏輯、HTL指令碼或Sling模型。
+顯示的樣式由 [WKND應用程式](https://github.com/adobe/aem-guides-wknd). 這些樣式定義為CSS，不需要變更元件的後端邏輯、HTL指令碼或Sling模型。
 
 ## 其他資源 {#additional-resources}
 

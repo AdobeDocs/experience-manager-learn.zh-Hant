@@ -4,28 +4,28 @@ description: Adobe Experience Manager(AEM)as a Cloud Service的教學課程系�
 sub-product: Experience Manager as a Cloud Service
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: 757749305a017d682322b2c2e024c2fbb3604fc2
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '267'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
 # AEMas a Cloud Service影片和教學課程 {#overview}
 
-Adobe Experience Manager (AEM) 現在能以 Cloud Service 形式使用。AEMas a Cloud Service推出新一代Experience Manager產品線，以過去的投資和創新為基礎，保存並擴充所有使用案例和功能。
+Adobe Experience Manager (AEM) 現在能以雲端服務形式使用。AEMas a Cloud Service推出新一代Experience Manager產品線，以過去的投資和創新為基礎，保存並擴充所有使用案例和功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
 <div id="whats-new-section">
 
-## 新功能
+## 新增功能
 
 * **[Token型驗證（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
    *了解如何使用Token型驗證透過HTTP與AEMas a Cloud Service互動*
 
-* **[無周邊GraphQL（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+* **[無頭式GraphQL（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
    *了解如何使用AEM GraphQL API來支援外部應用程式中的體驗。*
 

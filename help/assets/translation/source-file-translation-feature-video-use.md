@@ -8,7 +8,7 @@ level: Intermediate
 last-substantial-update: 2022-09-02T00:00:00Z
 thumbnail: 18331.jpg
 exl-id: 19155d51-18a7-42ca-9a73-1b5fa1355d58
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Adobe Experience Manager(AEM)Assets可讓您使用新的「相關資產」功能
 
 ## 多站點資產源檔案管理 {#multisite-asset-source-file-management}
 
->[!VIDEO](https://video.tv.adobe.com/v/18331/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18331?quality=12&learn=on)
 
 相關資產可協助使用者透過共用特徵、屬性來管理更好的跨連結資產，並簡化工作流程：
 

@@ -13,7 +13,7 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 097216b7-b345-4fcb-bab3-e660d74252a6
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 42%
@@ -30,7 +30,7 @@ ht-degree: 42%
 
 AEM核心元件是與Adobe Experience Manager搭配使用的標準元件。 核心元件以Adobe的最佳實務和標準建置，可為任何Sites實作提供基準功能集。
 
->[!VIDEO](https://video.tv.adobe.com/v/18926/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18926?quality=12&learn=on)
 
 ## 其他資源 {#additional-resources}
 

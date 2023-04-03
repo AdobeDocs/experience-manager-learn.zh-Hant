@@ -10,7 +10,7 @@ role: User
 level: Beginner
 last-substantial-update: 2021-09-15T00:00:00Z
 exl-id: b2ac2332-4d98-4866-8688-831f0282a736
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 管理 [基線資產資料夾](./baseline-folders.md) 是治理的一個關鍵方面，並確保可正確支援這些流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/37696/?quality=12&learn=on&hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/37696?quality=12&learn=on)

@@ -7,7 +7,7 @@ version: Cloud Service
 topic: Development
 index: y
 exl-id: 2df133dc-8c9d-445c-895b-d2fb43cbd39e
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
@@ -18,4 +18,4 @@ ht-degree: 0%
 
 此影片會逐步說明在提交作業操作參數期間觸發Dynamic Media中匯出作業的步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/335454?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335454?quality=12&learn=on)

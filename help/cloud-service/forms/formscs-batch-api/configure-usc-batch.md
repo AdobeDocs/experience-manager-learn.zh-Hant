@@ -1,6 +1,6 @@
 ---
-title: 配置批資料配置。
-description: 配置批資料配置。
+title: 配置批處理資料配置。
+description: 配置批處理資料配置。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -8,15 +8,16 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 kt: 9667
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+exl-id: 521084fc-d70b-4a89-8e17-714820341e21
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
-# 批資料配置
+# 批次資料設定
 
-批處理資料配置可幫助您為批處理API配置特定的Blob儲存實例。 它允許您指定客戶擁有的MicrosoftAzure Blob儲存中的輸入和輸出位置。
+批次資料設定可協助您為批次API設定Blob儲存的特定例項。 它可讓您在客戶擁有的Microsoft Azure Blob儲存體中指定輸入和輸出位置。
 
->[!VIDEO](https://video.tv.adobe.com/v/340128/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340128?quality=12&learn=on)

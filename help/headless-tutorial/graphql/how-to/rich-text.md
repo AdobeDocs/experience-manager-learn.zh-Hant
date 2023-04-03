@@ -1,6 +1,6 @@
 ---
 title: 搭配AEM Headless使用RTF
-description: 了解如何使用多行RTF編輯器搭配Adobe Experience Manager內容片段來編寫內容及內嵌參考內容，以及AEM GraphQL API如何將RTF傳遞為JSON，供無周邊應用程式使用。
+description: 了解如何使用多行RTF編輯器搭配Adobe Experience Manager內容片段來編寫內容及內嵌參考內容，以及AEM GraphQL API如何以JSON形式傳送RTF，供無頭應用程式使用。
 version: Cloud Service
 doc-type: article
 kt: 9985
@@ -8,7 +8,7 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1464'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 多行文字欄位是內容片段的資料類型，可讓作者建立RTF內容。 其他內容的參考，例如影像或其他內容片段，可在文字流程內以動態方式串聯插入。 單行文字欄位是內容片段的其他資料類型，應用於簡單文字元素。
 
-AEM GraphQL API提供強大的功能，可將RTF文字以HTML、純文字或純JSON形式傳回。 JSON表示法功能強大，因為它可讓用戶端應用程式完全控制如何呈現內容。
+AEM GraphQL API提供強大的功能，可傳回RTFHTML、純文字或純JSON格式。 JSON表示法功能強大，因為它可讓用戶端應用程式完全控制如何呈現內容。
 
 ## 多行編輯器
 
->[!VIDEO](https://video.tv.adobe.com/v/342104/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342104?quality=12&learn=on)
 
 在內容片段編輯器中，多行文字欄位的功能表列可為作者提供標準RTF格式功能，例如 **粗體**, *斜體*，和底線。 以全螢幕模式開啟多行欄位，可啟用 [其他格式工具，如段落類型、尋找和取代、拼字檢查等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
@@ -59,9 +59,9 @@ AEM GraphQL API提供強大的功能，可將RTF文字以HTML、純文字或純J
 
 ## 使用GraphQL API的RTF回應
 
-建立GraphQL查詢時，開發人員可以從 `html`, `plaintext`, `markdown`，和 `json` 從多行欄位。
+建立GraphQL查詢時，開發人員可從 `html`, `plaintext`, `markdown`，和 `json` 從多行欄位。
 
-開發人員可使用 [JSON預覽](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) 在「內容片段」編輯器中，顯示目前內容片段的所有值，這些值可使用GraphQL API傳回。
+開發人員可使用 [JSON預覽](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) 在「內容片段」編輯器中，顯示目前「內容片段」的所有值，這些值可使用GraphQL API傳回。
 
 ## GraphQL持續查詢
 
@@ -85,7 +85,7 @@ query ($path: String!) {
 
 此 `$path` 變數 `_path` 篩選器需要內容片段的完整路徑(例如 `/content/dam/wknd/en/magazine/sample-article`)。
 
-**GraphQL響應：**
+**GraphQL回應：**
 
 ```json
 {
@@ -147,7 +147,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL響應：**
+**GraphQL回應：**
 
 ```json
 {
@@ -184,7 +184,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL響應：**
+**GraphQL回應：**
 
 ```json
 {
@@ -221,7 +221,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL響應：**
+**GraphQL回應：**
 
 ```json
 {
@@ -351,9 +351,9 @@ const nodeMap = {
 
 上面的螢幕截圖描述了插入多行欄位的另一個內容片段 — LA Skate Parks的Ultimate指南。 可插入欄位的內容片段類型由 **允許的內容片段模型** 設定 [多行資料類型](#multi-line-data-type) （在內容片段模型中）。
 
-## 使用GraphQL查詢線上參考
+## 使用GraphQL查詢行內參考
 
-GraphQL API可讓開發人員建立查詢，查詢中包含與插入多行欄位中之任何參照相關的其他屬性。 JSON回應包含個別 `_references` 列出這些額外屬性的物件。 JSON回應可讓開發人員完全掌控如何轉譯參考或連結，而不必處理確信的HTML。
+GraphQL API可讓開發人員建立查詢，其中包含與插入多行欄位中之任何參照相關的其他屬性。 JSON回應包含個別 `_references` 列出這些額外屬性的物件。 JSON回應可讓開發人員完全掌控如何轉譯參考或連結，而不必處理確信的HTML。
 
 例如，您可能想要：
 
@@ -361,7 +361,7 @@ GraphQL API可讓開發人員建立查詢，查詢中包含與插入多行欄位
 * 使用AEM發佈環境的絕對路徑，以 `src` 值。
 * 決定如何使用其他自訂屬性呈現內嵌參考至其他內容片段。
 
-使用 `json` 傳回類型並包含 `_references` 對象：
+使用 `json` 傳回類型並包含 `_references` 物件，當您建構GraphQL查詢時：
 
 **GraphQL持續查詢：**
 
@@ -509,7 +509,7 @@ const nodeMap = {
     }
 ```
 
-高級方法是在 `nodeType` 等於 `reference` 在多行JSON回應中。 接著，可以呼叫自訂轉譯函式，其中包含 `_references` GraphQL回應中傳回的物件。
+高級方法是在 `nodeType` 等於 `reference` 在多行JSON回應中。 接著，可以呼叫自訂轉譯函式，其中包含 `_references` 在GraphQL回應中傳回的物件。
 
 然後，可將線上參考路徑與 `_references` 物件和其他自訂地圖 `renderReference` 可呼叫。
 
@@ -536,11 +536,11 @@ const renderReference = {
 
 ## 端對端範例
 
->[!VIDEO](https://video.tv.adobe.com/v/342105/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342105?quality=12&learn=on)
 
 前面的影片示範端對端範例：
 
 1. 更新內容片段模型的多行文字欄位以允許片段參考
 1. 使用內容片段編輯器在多行文字欄位中包含影像和參考另一個片段。
-1. 建立GraphQL查詢，其中包含多行文字回應(JSON和任何 `_references` 已使用。
+1. 建立GraphQL查詢，其中包含多行文字回應作為JSON和任何 `_references` 已使用。
 1. 撰寫可轉譯RTF回應之內嵌參考的React SPA。

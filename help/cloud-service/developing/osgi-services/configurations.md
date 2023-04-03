@@ -3,23 +3,23 @@ title: OSGi配置屬性
 description: 了解OSGi設定屬性的基本知識，以及如何在OSGi服務中使用這些屬性。
 role: Developer
 level: Beginner
-topic: 開發
+topic: Development
 feature: OSGI
 kt: 8268
 thumbnail: 335729.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 096b0a95-7039-4570-b567-ba316bfc8709
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 2%
+source-wordcount: '75'
+ht-degree: 1%
 
 ---
-
 
 # OSGi配置屬性
 
 了解使用OSGi設定索引鍵/值組來定義OSGi設定資料並將其公開給OSGi服務的低階方法。
 
->[!VIDEO](https://video.tv.adobe.com/v/335729/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335729?quality=12&learn=on)
 
 ## 資源
 

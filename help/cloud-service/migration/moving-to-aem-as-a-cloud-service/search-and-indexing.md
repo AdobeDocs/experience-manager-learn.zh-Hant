@@ -9,10 +9,10 @@ level: Experienced
 kt: 8634
 thumbnail: 336963.jpeg
 exl-id: f752df86-27d4-4dbf-a3cb-ee97b7d9a17e
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 了解AEM as a Cloud Service的搜尋索引、如何將AEM 6索引定義轉換為與AEMas a Cloud Service相容，以及如何將索引部署至AEM as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336963/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336963?quality=12&learn=on)
 
 ## 索引轉換工具
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 ## 關鍵活動
 
 + 使用 [Adobe I/O工作流遷移程式](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) 工具來移轉資產處理工作流程，以使用Asset compute微服務。
-+ 設定 [本地開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) 並部署自定義索引。 確保更新的索引為最新。
++ 設定 [本地開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant) 並部署自定義索引。 確保更新的索引為最新。
 + 將更新的程式碼基底部署至AEMas a Cloud Service開發環境，並繼續驗證。
 + 如果修改現成可用的索引 **一律** 從最新發行版本上執行的AEMas a Cloud Service環境複製最新索引定義。 修改複製的索引定義以符合您的需求。
 

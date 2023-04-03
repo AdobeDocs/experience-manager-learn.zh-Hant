@@ -9,10 +9,10 @@ level: Experienced
 kt: 8635
 thumbnail: 336990.jpeg
 exl-id: 327e8663-086b-4b31-b159-a0cf30480b45
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '323'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 了解AEM Assets as a Cloud Service的asset compute微服務可如何讓您自動且有效率地產生資產的任何轉譯，取代傳統AEM工作流程的這個角色。
 
->[!VIDEO](https://video.tv.adobe.com/v/336990/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
 
 ## 工作流程移轉工具
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 ## 關鍵活動
 
 + 使用 [Adobe I/O工作流遷移程式](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator) 工具來移轉資產處理工作流程，以使用Asset compute微服務。
-+ 設定 [本地開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) 並部署更新的工作流程。 複雜的工作流程可能需要手動調整。
++ 設定 [本地開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant) 並部署更新的工作流程。 複雜的工作流程可能需要手動調整。
 + 繼續使用AEM SDK在本機開發環境中反覆查詢，直到更新的工作流程符合功能比對。
 + 將更新的程式碼基底部署至AEMas a Cloud Service開發環境，並繼續驗證。
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 在嘗試動手練習之前，請確定您已觀看並了解上述影片，以及下列材料：
 
 + [對AEMas a Cloud Service有不同的思考](./introduction.md)
-+ [入門](./onboarding.md)
++ [上線](./onboarding.md)
 
 此外，請確定您已完成先前的實作練習：
 

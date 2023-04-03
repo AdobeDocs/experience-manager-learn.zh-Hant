@@ -10,7 +10,7 @@ kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
 recommendations: noDisplay, noCatalog
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '3040'
 ht-degree: 0%
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 規劃新網站通常從模型和靜態設計開始。 [Adobe XD](https://helpx.adobe.com/support/xd.html) 是建立使用者體驗的設計工具。 接下來，我們來檢查UI套件和模型，以協助規劃文章頁面範本的結構。
 
->[!VIDEO](https://video.tv.adobe.com/v/30214/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
 
 **下載 [WKND文章設計檔案](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)**.
 
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 接下來，在AEM中建立符合模型結構的範本。 這會發生在AEM的本機例項中。 請依照以下影片中的步驟操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330991?quality=12&learn=on)
 
 上述影片的高階步驟：
 
@@ -160,7 +160,7 @@ ht-degree: 0%
 
 AEM專案原型會產生頁首和頁尾。 接下來，更新體驗片段以符合模型。 請依照以下影片中的步驟操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330992?quality=12&learn=on)
 
 上述影片的高階步驟：
 
@@ -206,7 +206,7 @@ AEM專案原型會產生頁首和頁尾。 接下來，更新體驗片段以符�
 
 接下來，使用「文章頁面」範本建立頁面。 製作頁面內容以符合網站模型。 請依照以下影片中的步驟操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/330993/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330993?quality=12&learn=on)
 
 上述影片的高階步驟：
 

@@ -8,7 +8,7 @@ level: Beginner
 last-substantial-update: 2022-09-01T00:00:00Z
 thumbnail: 25170.jpg
 exl-id: 45e0f3d5-db56-44e7-ad68-4d60991a6d77
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -23,7 +23,7 @@ AEM Assets範本可讓行銷人員建立、管理和提供數位及列印用的�
 >
 >有關配置InDesign Server的步驟，請查看 [使用InDesign Server設定資產範本](asset-templates-technical-video-setup.md).
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此影片會逐步說明如何使用Adobe InDesign、Adobe InDesign Server和AEM Assets，在AEM中產生可直接列印的資產。
 
@@ -33,4 +33,4 @@ AEM Assets範本可讓行銷人員建立、管理和提供數位及列印用的�
 
 本影片較為技術性地概述AEM Assets Assert Template功能，並說明AEM如何透過InDesign協助撰寫AEM Assets和內容，以建立豐富、引人入勝的列印體驗。
 
->[!VIDEO](https://video.tv.adobe.com/v/17071/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17071?quality=12&learn=on)

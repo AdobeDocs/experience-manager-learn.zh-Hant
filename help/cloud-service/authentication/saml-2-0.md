@@ -10,7 +10,7 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: 5522a22cc3ac12ce54297ee9f30570c29cfd5ce7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '2961'
 ht-degree: 1%
@@ -55,7 +55,7 @@ AEM Publish SAML整合的一般流程如下：
 
 ## 配置逐步說明
 
->[!VIDEO](https://video.tv.adobe.com/v/343040/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
 
 這部影片會逐步說明如何設定與AEMas a Cloud Service發佈服務的SAML 2.0整合，以及使用Okta做為IDP。
 

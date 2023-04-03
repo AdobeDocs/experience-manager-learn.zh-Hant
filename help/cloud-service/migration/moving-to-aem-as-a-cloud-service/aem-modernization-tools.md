@@ -8,10 +8,10 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '446'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -22,19 +22,19 @@ ht-degree: 5%
 
 ## 多功能一體轉換器
 
->[!VIDEO](https://video.tv.adobe.com/v/338802/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338802?quality=12&learn=on)
 
 ## 頁面轉換
 
->[!VIDEO](https://video.tv.adobe.com/v/338799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338799?quality=12&learn=on)
 
 ## 元件轉換
 
->[!VIDEO](https://video.tv.adobe.com/v/338788/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338788?quality=12&learn=on)
 
 ## 策略導入
 
->[!VIDEO](https://video.tv.adobe.com/v/338797/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338797?quality=12&learn=on)
 
 ## 使用AEM現代化工具
 
@@ -104,4 +104,4 @@ AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和parsys�
 + [AEM Gems -AEM現代化套件簡介](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
 
 1. 在本機AEM SDK上部署新近更新的wknd-legacy網站。 AEM ASK可在以下位置下載：
-   + [Software Distribution入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).
+   + [Software Distribution 入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).

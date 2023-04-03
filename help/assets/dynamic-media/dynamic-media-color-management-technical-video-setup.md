@@ -7,7 +7,7 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 17%
@@ -18,7 +18,7 @@ ht-degree: 17%
 
 本影片將介紹Dynamic Media色彩管理，以及如何使用它來提供AEM Assets適用的色彩校正預覽功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -91,8 +91,8 @@ AEM 6.1和6.2版本為Feature Pack提供此功能。
 | AdobeRGB | RGB | Adobe RGB市（1998年） |
 | AppleRGB | RGB | AppleRGB |
 | CIERGB | RGB | CIERGB |
-| CobatedFogra27 | CMYK | 塗層FOGRA27(ISO 12647-2:2004) |
-| CobatedFogra39 | CMYK | 塗層FOGRA39(ISO 12647-2:2004) |
+| CoatedFogra27 | CMYK | 塗層FOGRA27(ISO 12647-2:2004) |
+| CoatedFogra39 | CMYK | 塗層FOGRA39(ISO 12647-2:2004) |
 | CobatedGraCol | CMYK | 塗層GRACoL 2006(ISO 12647-2:2004) |
 | ColorMatchRGB | RGB | ColorMatchRGB |
 | 歐洲ISOC已處理 | CMYK | 歐洲ISO塗層FOGRA27 |
@@ -103,7 +103,7 @@ AEM 6.1和6.2版本為Feature Pack提供此功能。
 | JapanColorUncobated | CMYK | 2001年日本顏色無塗層 |
 | JapanColorWebCobated | CMYK | 日本彩色2003網版 |
 | JapanWebCobated | CMYK | Japan Web Cobated（廣告） |
-| 新聞紙SNAP2007 | CMYK | 美國新聞紙(SNAP 2007) |
+| NewsprintSNAP2007 | CMYK | 美國新聞紙(SNAP 2007) |
 | NTSC | RGB | NTSC（1953年） |
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhotoRGB |
@@ -113,11 +113,11 @@ AEM 6.1和6.2版本為Feature Pack提供此功能。
 | 鈑金件未塗覆 | CMYK | 美國鈑金未塗層v2 |
 | SMPTE | RGB | SMPTE-C |
 | sRGB | RGBsRGB | IEC61966-2.1 |
-| 無塗層Fogra29 | CMYK | 無塗層FOGRA29(ISO 12647-2:2004) |
+| UncoatedFogra29 | CMYK | 無塗層FOGRA29(ISO 12647-2:2004) |
 | WebCobated | CMYK | 美國塗層網板(SWOP)v2 |
-| WebCobatedFogra28 | CMYK | Web Cobated FOGRA28(ISO 12647-2:2004) |
-| WebCobatedGrade3 | CMYK | SWOP 2006三級紙 |
-| WebCobatedGrade5 | CMYK | SWOP 2006五級紙 |
+| WebCoatedFogra28 | CMYK | Web Cobated FOGRA28(ISO 12647-2:2004) |
+| WebCoatedGrade3 | CMYK | SWOP 2006三級紙 |
+| WebCoatedGrade5 | CMYK | SWOP 2006五級紙 |
 | WebUncobated | CMYK | 美國網路未塗層v2 |
 | 寬色域RGB | RGB | 寬色域RGB |
 

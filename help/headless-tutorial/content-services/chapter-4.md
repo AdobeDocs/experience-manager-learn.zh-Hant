@@ -6,7 +6,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: ece0bf0d-c4af-4962-9c00-f2849c2d8f6f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 0%
@@ -89,7 +89,7 @@ AEM可編輯的範本可用來定義所存取的HTTP端點，以將事件內容�
 1. 不過，請確保 **配置容器** is **鎖定** 以防止新增其他元件，或移除這三個元件。
 1. 點選 **[!UICONTROL 頁面資訊] > [!UICONTROL 在管理中檢視]** 返回 [!DNL WKND Mobile] 範本清單。 選取新建立的 **[!DNL Events API]** 範本和點選 **[!UICONTROL 啟用]** 在頂端動作列。
 
->[!VIDEO](https://video.tv.adobe.com/v/28342/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28342?quality=12&learn=on)
 
 >[!NOTE]
 >

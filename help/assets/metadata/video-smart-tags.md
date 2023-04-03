@@ -10,7 +10,7 @@ role: User
 level: Beginner
 last-substantial-update: 2022-06-11T00:00:00Z
 exl-id: 24d62f81-a6a6-4cfd-b529-b071539a2c1d
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Experience Manager Assets運用Adobe Sensei，以描述視訊關鍵元素的關鍵字來智慧化地標籤視訊資產，讓AEM使用者能透過關鍵字搜尋輕鬆找到這些資產。
 
->[!VIDEO](https://video.tv.adobe.com/v/327005/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327005?quality=12&learn=on)
