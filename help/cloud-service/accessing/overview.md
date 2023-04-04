@@ -10,10 +10,10 @@ kt: 5882
 thumbnail: KT-5882.jpg
 last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 27%
+source-wordcount: '626'
+ht-degree: 26%
 
 ---
 
@@ -33,6 +33,11 @@ AEM as a Cloud Service是運用AEM應用程式的雲端原生方式，因此可�
 ## Adobe IMS使用者
 
 需要存取AEM作者服務的使用者管理方式為 [Adobe IMS使用者](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html) in [Adobe的AdminConsole](https://adminconsole.adobe.com). 了解何謂 Adobe IMS 使用者，以及如何在 Admin Console 中對其進行存取和管理。
+
+>[!NOTE]
+>
+>從AdminConsole刪除IMS使用者後，系統不會從AEM自動刪除該使用者，但一旦AEM工作階段（代號）過期，他們就無法登入AEM。
+
 
 [了解Adobe IMS使用者](./adobe-ims-users.md)
 

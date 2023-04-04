@@ -4,9 +4,9 @@ description: 觀看影片和教學課程，以取得Adobe Experience Manager Fou
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Manager提供AEM Sites、Assets和Forms使用者可用的通用
 
 <div id="whats-new-section">
 
-## 新功能
+## 新增功能
 
 * **[使用工作流程AEM（影片）](./workflow/use-workflow.md)**
 
@@ -25,9 +25,6 @@ Adobe Experience Manager提供AEM Sites、Assets和Forms使用者可用的通用
 
 * **[了解Cloud Manager for AEM（影片）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
    *AEM適用的Cloud Manager可讓您輕鬆管理、檢查及自助服務AEM環境。*
-
-* **[設定公開金鑰和私密金鑰以搭配Adobe I/O使用（教學課程）](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *了解如何使用 [!DNL openssl] 可搭配AEM和Adobe I/O使用。*
 
 * **[使用Cloud Manager CI/CD管道（影片）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *了解如何使用Cloud Manager的CI/CD管道，確保安全且一致的部署。*

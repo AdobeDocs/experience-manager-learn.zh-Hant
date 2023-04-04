@@ -10,10 +10,10 @@ kt: 9165
 thumbnail: 337960.jpeg
 last-substantial-update: 2022-10-03T00:00:00Z
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 5%
+source-wordcount: '263'
+ht-degree: 4%
 
 ---
 
@@ -21,33 +21,15 @@ ht-degree: 5%
 
 了解如何為AEM Sites建立網站地圖，以協助提升您的SEO。
 
+>[!WARNING]
+>
+>此影片示範如何在Sitemap中使用相對URL。 網站地圖 [應使用絕對URL](https://sitemaps.org/protocol.html). 請參閱 [配置](#absolute-sitemap-urls) 如何啟用絕對URL，以下影片不會說明此問題。
+
 >[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
-
-## 資源
-
-+ [AEM Sitemap檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
-+ [Apache Sling Sitemap檔案](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
-+ [Sitemap.org Sitemap檔案](https://www.sitemaps.org/protocol.html)
-+ [Sitemap.org Sitemap索引檔案檔案檔案](https://www.sitemaps.org/protocol.html#index)
-+ [Cronmaker](http://www.cronmaker.com/)
 
 ## 設定
 
-### Sitemap排程器OSGi設定
-
-定義 [OSGi工廠配置](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 頻率(使用 [cron運算式](http://www.cronmaker.com))網站地圖會在AEM中重新產生和快取。
-
-`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
-
-```json
-{
-  "scheduler.name": "WKND Sitemaps",
-  "scheduler.expression": "0 0 2 1/1 * ? *",
-  "searchPath": "/content/wknd"
-}
-```
-
-### 絕對Sitemap URL
+### 絕對Sitemap URL{#absolute-sitemap-urls}
 
 AEM Sitemap支援絕對URL，方法是使用 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). 若要這麼做，請在AEM服務上建立對應節點，以產生網站地圖（通常為AEM發佈服務）。
 
@@ -63,6 +45,20 @@ AEM Sitemap支援絕對URL，方法是使用 [Sling對應](https://sling.apache.
 
 ![Sitemap絕對URL設定](../assets/sitemaps/sitemaps-absolute-urls.jpg)
 
+
+### Sitemap排程器OSGi設定
+
+定義 [OSGi工廠配置](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 頻率(使用 [cron運算式](http://www.cronmaker.com))網站地圖會在AEM中重新產生和快取。
+
+`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
+
+```json
+{
+  "scheduler.name": "WKND Sitemaps",
+  "scheduler.expression": "0 0 2 1/1 * ? *",
+  "searchPath": "/content/wknd"
+}
+```
 
 ### Dispatcher允許篩選規則
 
@@ -88,3 +84,11 @@ AEM Sitemap支援絕對URL，方法是使用 [Sling對應](https://sling.apache.
 RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg|.xml)$
 RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 ```
+
+## 資源
+
++ [AEM Sitemap檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
++ [Apache Sling Sitemap檔案](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
++ [Sitemap.org Sitemap檔案](https://www.sitemaps.org/protocol.html)
++ [Sitemap.org Sitemap索引檔案檔案檔案](https://www.sitemaps.org/protocol.html#index)
++ [Cronmaker](http://www.cronmaker.com/)
