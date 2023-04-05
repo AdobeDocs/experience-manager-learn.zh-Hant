@@ -8,9 +8,9 @@ role: Developer
 level: Beginner, Intermediate
 thumbnail: 34338.jpeg
 exl-id: beac60c6-11ae-4d0c-a055-cd3d05aeb126
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 45e7c58efd1d89537752fe7f890c0e80f7be7d67
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,13 @@ AEM SDK的本機Quickstart可讓您從IDE進行遠端Java除錯，讓您逐步�
 若要將遠端除錯程式連線至AEM,AEM SDK的本機Quickstart必須以特定參數啟動(`-agentlib:...`)允許IDE連接到它。
 
 ```
-$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar aem-author-p4502.jar   
+$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar aem-author-p4502.jar   
 ```
 
++ AEM SDK僅支援Java 11
 + `address` 指定AEM監聽遠程調試連接，並可更改為本地開發電腦上的任何可用埠。
 + 最後一個參數(例如 `aem-author-p4502.jar`)是AEM SKD Quickstart Jar。 這可以是AEM Author服務(`aem-author-p4502.jar`)或AEM發佈服務(`aem-publish-p4503.jar`)。
+
 
 ## IDE設定說明
 
