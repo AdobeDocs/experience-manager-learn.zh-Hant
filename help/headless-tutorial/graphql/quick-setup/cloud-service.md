@@ -9,10 +9,10 @@ level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 2%
+source-wordcount: '1081'
+ht-degree: 1%
 
 ---
 
@@ -29,8 +29,7 @@ AEM Headless快速設定可讓您使用WKND Site範例專案中的內容，以�
    + __AEM管理員__ 存取AEMas a Cloud Service
    + __Cloud Manager — 部署管理員__ 存取Cloud Manager
 + 必須在本機安裝下列工具：
-   + [Node.js v10+](https://nodejs.org/en/)
-   + [npm 6+](https://www.npmjs.com/)
+   + [Node.js v18](https://nodejs.org/en/)
    + [Git](https://git-scm.com/)
    + IDE(例如 [Microsoft® Visual Studio代碼](https://code.visualstudio.com/))
 

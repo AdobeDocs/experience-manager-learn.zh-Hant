@@ -7,10 +7,10 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: ea7cd118d9cba97d2b497f6659f74d2fe8331c66
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 20%
+ht-degree: 19%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 20%
    + [概觀](./graphql/overview.md)
    + 快速設定 {#quick-setup}
       + [雲端服務](./graphql/quick-setup/cloud-service.md)
-      + [本機 SDK](./graphql/quick-setup/local-sdk.md)
+      + [AEM SDK](./graphql/quick-setup/local-sdk.md)
    + 影片系列{#video-series}
       + [1 — 建模基本知識](./graphql/video-series/modeling-basics.md)
       + [2 — 進階模型](./graphql/video-series/advanced-modeling.md)

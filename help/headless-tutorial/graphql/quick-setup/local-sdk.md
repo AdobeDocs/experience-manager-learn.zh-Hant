@@ -1,5 +1,5 @@
 ---
-title: AEM使用本機SDK的無頭快速設定
+title: AEM無頭快速設定(使用本機AEM SDK)
 description: 開始使用Adobe Experience Manager(AEM)和GraphQL。 安裝AEM SDK、新增範例內容，以及部署使用其GraphQL API從AEM取用內容的應用程式。 了解AEM如何提供全管道體驗。
 version: Cloud Service
 mini-toc-levels: 1
@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: f63ed212a5a8a6689b25bd0bc9438c605a129729
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 1%
 
 ---
 
-# AEM使用本機SDK的無頭快速設定 {#setup}
+# AEM無頭快速設定(使用本機AEM SDK) {#setup}
 
 AEM Headless快速設定可讓您使用WKND Site範例專案中的內容，以及透過AEM Headless GraphQL API取用內容的範例React應用程式(SPA)，來與AEM Headless進行實際操作。 本指南使用 [AEMas a Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
 
@@ -26,7 +26,7 @@ AEM Headless快速設定可讓您使用WKND Site範例專案中的內容，以�
 應在本機安裝下列工具：
 
 * [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atoling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Cont%2Fjcr%3Alast&amp;modified by.sort=dest&amp;p.st=dest&amp;p.llep.p.p=14)
-* [Node.js v14.x](https://nodejs.org/en/)
+* [Node.js v18](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
 
 ## 1.安裝AEM SDK {#aem-sdk}
@@ -39,7 +39,7 @@ AEM Headless快速設定可讓您使用WKND Site範例專案中的內容，以�
 
 1. 導覽至 **[Software Distribution入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)** > **AEMas a Cloud Service** 並下載 **AEM SDK**.
 
-   ![Software Distribution入口網站](assets/quick-setup/aem-sdk/downloads__aem-sdk.png)
+   ![Software Distribution 入口網站](assets/quick-setup/aem-sdk/downloads__aem-sdk.png)
 
 1. 解壓縮下載並複製Quickstart Jar(`aem-sdk-quickstart-XXX.jar`)，即 `~/aem-sdk/author`.
 1. 將jar檔案重新命名為 `aem-author-p4502.jar`.

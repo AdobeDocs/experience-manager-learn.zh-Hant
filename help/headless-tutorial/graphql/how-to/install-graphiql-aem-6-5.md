@@ -1,6 +1,6 @@
 ---
-title: 在AEM 6.5.X上安裝GraphiQL IDE
-description: 了解如何在AEM 6.5.X版上安裝和配置GraphiQL IDE
+title: 在AEM 6.5上安裝GraphiQL IDE
+description: 了解如何在AEM 6.5上安裝和配置GraphiQL IDE
 version: 6.5
 topic: Headless
 feature: GraphQL API
@@ -8,21 +8,21 @@ role: Developer
 level: Intermediate
 kt: 11614
 thumbnail: KT-10253.jpeg
-source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '210'
 ht-degree: 3%
 
 ---
 
 
-# 在AEM 6.5.X上安裝GraphiQL IDE
+# 在AEM 6.5上安裝GraphiQL IDE
 
-在AEM 6.5中，需要手動安裝GraphiQL IDE工具，請遵循以下步驟安裝和配置。
+在AEM 6.5中，必須手動安裝GraphiQL IDE工具。
 
 1. 導覽至 **[Software Distribution入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEMas a Cloud Service**.
-1. 搜尋「GraphiQL」(請務必包含 **i** in **GraphiQL**.
-1. 下載最新 **GraphiQL內容包v.x.x.x**
+1. 搜尋「GraphiQL」(請務必包含 **i** in **GraphiQL**)。
+1. 下載最新 **GraphiQL內容包v.x.x.x**.
 
    ![下載GraphiQL包](assets/graphiql/software-distribution.png)
 
@@ -39,7 +39,8 @@ ht-degree: 3%
 
 1. 導覽至 **Web控制台配置** UI >搜尋 **CSRF濾鏡** 組態(例如<http://localhost:4502/system/console/configMgr/com.adobe.granite.csrf.impl.CSRFFilter)>
 1. 在 `Excluded Paths` 屬性名稱欄位更新， WKND GraphQL端點路徑 `/content/cq:graphql/wknd-shared/endpoint`.
-   ![排除路徑屬性值變更](assets/graphiql/exclude-paths-value-change.png)
+
+![排除路徑屬性值變更](assets/graphiql/exclude-paths-value-change.png)
 
 1. 使用 `//HOST:PORT/content/graphiql.html`，然後確認您可以建構新查詢或執行現有查詢。 (例如 <http://localhost:4502/content/graphiql.html>)
 

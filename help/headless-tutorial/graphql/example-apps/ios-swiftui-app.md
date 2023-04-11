@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
 source-wordcount: '981'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 應在本機安裝下列工具：
 
-+ [Xcode 9.3+](https://developer.apple.com/xcode/) (需要macOS)
++ [Xcode](https://developer.apple.com/xcode/) (需要macOS)
 + [Git](https://git-scm.com/)
 
 ## AEM需求
@@ -37,7 +37,7 @@ ht-degree: 1%
 iOS應用程式可搭配下列AEM部署選項使用。 所有部署都需要 [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 安裝。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 使用 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
++ 使用 [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)
 + [AEM 6.5 SP13+快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
 
 iOS應用程式的設計目的，是連線至 __AEM發佈__ 環境，但若iOS應用程式的設定中提供驗證，則可從AEM Author取得內容。
@@ -86,11 +86,11 @@ iOS應用程式的設計目的，是連線至 __AEM發佈__ 環境，但若iOS�
 
 ## 程式碼
 
-以下是如何建置iOS應用程式、如何連線至AEM無周邊以使用GraphQL持續查詢擷取內容，以及如何呈現該資料的摘要。 您可以在上找到完整的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
+以下是如何建置iOS應用程式、如何連線至AEM Headless以使用GraphQL持續查詢擷取內容的摘要，以及如何呈現該資料的摘要。 您可以在上找到完整的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
 
 ### 持續查詢
 
-依照AEM無周邊最佳實務，iOS應用程式會使用AEM GraphQL持續查詢來查詢冒險資料。 應用程式使用兩個持續的查詢：
+遵循AEM無頭式最佳實務，iOS應用程式使用AEM GraphQL持續存在的查詢來查詢冒險資料。 應用程式使用兩個持續的查詢：
 
 + `wknd/adventures-all` 持續查詢，會傳回AEM中具有一組縮略屬性的所有歷險。 這個持續的查詢會驅動初始檢視的探險清單。
 
@@ -268,7 +268,7 @@ SwiftUI用於應用程式中的各種視圖。 Apple提供的快速入門教學�
 
 ### 遠端影像
 
-由冒險內容片段參考的影像由AEM提供。 此iOS應用程式使用路徑 `_path` 欄位（在GraphQL回應中），並將 `AEM_SCHEME` 和 `AEM_HOST` 來建立完全限定的URL。
+由冒險內容片段參考的影像由AEM提供。 此iOS應用程式使用路徑 `_path` 欄位(在GraphQL回應中)，並在前置詞中加上 `AEM_SCHEME` 和 `AEM_HOST` 來建立完全限定的URL。
 
 如果在AEM上連線至需要授權的受保護資源，也必須將憑證新增至影像要求。
 
@@ -324,5 +324,5 @@ SwiftUI-native可使用類似的方法 [AsyncImage](https://developer.apple.com/
 
 ## 其他資源
 
-+ [AEM Headless - GraphQL教學課程快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [AEM Headless快速入門 — GraphQL教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
 + [SwiftUI清單和導航教程](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)
