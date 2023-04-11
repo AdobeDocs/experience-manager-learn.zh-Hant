@@ -9,10 +9,10 @@ kt: 7630
 thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 0fff8b53e3dffb835e070444b55a72f0b0cc3d14
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 9%
+source-wordcount: '614'
+ht-degree: 8%
 
 ---
 
@@ -37,15 +37,14 @@ ht-degree: 9%
 
 ## 最新程式碼
 
-+ 若需了解本教學課程程式碼的起點，請參閱 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa) 在 `remote-spa-tutorial` 檔案夾。
++ 若需了解本教學課程程式碼的起點，請參閱 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa-tutorial) 在 `remote-spa-tutorial` 檔案夾。
 
 ## 必備條件
 
 本教學課程需要下列項目：
 
 + [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en)
-+ [Node.js v16+](https://nodejs.org/en/)
-+ [npm v8+](https://www.npmjs.com/)
++ [Node.js v18](https://nodejs.org/en/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
