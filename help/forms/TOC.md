@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
+source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
 workflow-type: tm+mt
-source-wordcount: '1784'
-ht-degree: 3%
+source-wordcount: '1806'
+ht-degree: 4%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 3%
    + [建立OSGi服務](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [建立Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
    + [包括第三方套件組合](creating-your-first-osgi-bundle/include-third-party-jars.md)
-+ 調適型表單 {#adaptive-forms}
++ 最適化表單 {#adaptive-forms}
    + [在Windows上安裝AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [在Linux上安裝32位元套件](adaptive-forms/installing-aem-form-on-linux.md)
    + [適用性Forms中的預填服務](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
@@ -152,7 +152,7 @@ ht-degree: 3%
    + [建立和設定最適化表單](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [為單一簽署者設定最適化表單](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [為兩個簽署者設定最適化表單](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
-   + [設定Automated forms conversion服務](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
+   + [設定自動表單轉換服務](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [將PDF表單轉換為最適化表單](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [設定轉換的最適化表單](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [搭配Acrobat Sign使用XDP範本](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
@@ -230,7 +230,12 @@ ht-degree: 3%
    + [建立工作流程元件](welcome-kit/create-workflow-component.md)
    + [測試解決方案](welcome-kit/testing-the-solution.md)
 
-
++ 使用Forms和Acrobat Sign React App {#react-ic-sign}
+   + [簡介](react-ic-sign/introduction.md)
+   + [生成IC文檔](react-ic-sign/create-ic-document.md)
+   + [Acrobat Sign API包裝函式](react-ic-sign/wrapper-sign-api.md)
+   + [生成簽名介面工具集](react-ic-sign/create-servlet-to-expose-endpoint.md)
+   + [部署範例資產](react-ic-sign/deploy-assets-on-your-server.md)
 + 文件服務 {#document-services}
    + [PDF forms類型](document-services/pdf-forms-and-documents.md)
    + [在最適化表單中內嵌pdf](document-services/embed-pdf-inline.md)
