@@ -8,10 +8,10 @@ role: Developer, Architect
 level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
-source-git-commit: 6f1000db880c3126a01fa0b74abdb39ffc38a227
+source-git-commit: cc78e59fe70686e909928e407899fcf629a651b9
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 1%
 # 跨原始資源共用(CORS)
 
 Adobe Experience Manager as a Cloud Service的跨原始資源共用(CORS)有助於非AEM Web屬性對AEM GraphQL API進行瀏覽器式用戶端呼叫。
+
+以下文章說明如何設定 _單原點_ 透過CORS存取特定的AEM無頭端點集。 單一來源表示僅有單一非AEM網域存取AEM，例如連線至https://www.example.com的https://app.example.com 。 由於快取問題，使用此方法可能無法存取多原始碼。
 
 >[!TIP]
 >
@@ -63,7 +65,6 @@ AEM CORS OSGi設定工廠定義接受CORS HTTP要求的允許條件。
     "https://spa.external.com/"
   ],
   "alloworiginregexp":[
-    "http://localhost:.*"
   ],
   "allowedpaths": [
     "/graphql/execute.json.*",
