@@ -7,7 +7,7 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
+source-git-commit: cc085af90b9b8ea0e650546c251fbf14cc222989
 workflow-type: tm+mt
 source-wordcount: '1705'
 ht-degree: 0%
@@ -36,7 +36,7 @@ ht-degree: 0%
 | 檔案名`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules` 檔案儲存 `mod_rewrite` 明確包含和使用的規則 `vhost` 檔案 |
 | 檔案名`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules` 檔案從內部包含 `*.vhost` 檔案。 它包含IP規則運算式或允許拒絕規則，以允許IP列入白名單。 如果您試圖根據IP地址限制查看虛擬主機，將生成其中一個檔案，並將其從 `*.vhost` 檔案 |
 
-## 包含在「conf.modules.d/」中的檔案
+## conf.dispatcher.d/中包含的檔案
 
 | 檔案 | 檔案目標 | 說明 |
 | --- | --- | --- |
