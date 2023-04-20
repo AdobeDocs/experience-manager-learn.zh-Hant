@@ -1,6 +1,6 @@
 ---
-title: 搭配AEM Headless使用影像
-description: 了解如何要求影像內容參考URL，以及搭配AEM Headless使用自訂轉譯。
+title: 搭配AEM Headless使用最佳化影像
+description: 了解如何使用AEM Headless要求最佳化的影像URL。
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -8,37 +8,32 @@ role: Developer
 level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
+last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
+source-git-commit: 2096c207ce14985b550b055ea0f51451544c085c
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 3%
+source-wordcount: '918'
+ht-degree: 5%
 
 ---
 
-# 影像與 AEM Headless {#images-with-aem-headless}
+# 使用AEM Headless最佳化影像 {#images-with-aem-headless}
 
 影像是 [開發豐富、引人入勝的AEM無頭體驗](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless支援影像資產的管理及其最佳化傳送。
 
 AEM無頭內容模型中使用的內容片段，通常會參考用於無頭體驗中顯示的影像資產。 AEM GraphQL查詢可以撰寫，以根據影像參考的位置，提供影像的URL。
 
-此 `ImageRef` 類型有三個內容參考的URL選項：
+此 `ImageRef` 類型有四個內容參考的URL選項：
 
 + `_path` 是AEM中的參考路徑，且不包含AEM來源（主機名稱）
++ `_dynamicUrl` 是偏好網頁最佳化影像資產的完整URL。
+   + 此 `_dynamicUrl` 不包含AEM來源，因此網域（AEM作者或AEM發佈服務）必須由用戶端應用程式提供。
 + `_authorUrl` 是AEM Author上影像資產的完整URL
    + [AEM作者](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 可用來提供無頭應用程式的預覽體驗。
 + `_publishUrl` 是AEM發佈上影像資產的完整URL
    + [AEM發佈](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 通常是無頭應用程式的生產部署顯示影像的位置。
 
-根據下列條件，最好使用欄位：
-
-| ImageRef欄位 | 由AEM提供的用戶端網頁應用程式 | 用戶端應用程式查詢AEM作者 | 用戶端應用程式查詢AEM發佈 |
-|--------------------|:------------------------------:|:-----------------------------:|:------------------------------:|
-| `_path` | ✔ | ✔（應用必須在URL中指定主機） | ✔（應用必須在URL中指定主機） |
-| `_authorUrl` | ✘ | ✔ | ✘ |
-| `_publishUrl` | ✘ | ✘ | ✔ |
-
-使用 `_authorUrl` 和 `_publishUrl` 應與用來來源GraphQL回應的AEM GraphQL端點一致。
+此 `_dynamicUrl` 是用於影像資產的偏好URL，應取代的使用 `_path`, `_authorUrl`，和 `_publishUrl` 盡可能。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
@@ -55,18 +50,20 @@ AEM無頭內容模型中使用的內容片段，通常會參考用於無頭體�
 
 ## GraphQL持續查詢
 
-在GraphQL查詢中，將欄位傳回為 `ImageRef` 類型，並請求適當的欄位 `_path`, `_authorUrl`，或 `_publishUrl` 應用程式所需。 例如，在 [WKND Site項目](https://github.com/adobe/aem-guides-wknd) 並在其中納入影像資產參考的影像URL `primaryImage` 欄位，可使用新的持續查詢完成 `wknd-shared/adventure-image-by-path` 定義為：
+在GraphQL查詢中，將欄位傳回為 `ImageRef` 類型，並要求 `_dynamicUrl` 欄位。 例如，在 [WKND Site項目](https://github.com/adobe/aem-guides-wknd) 並在其中納入影像資產參考的影像URL `primaryImage` 欄位，可使用新的持續查詢完成 `wknd-shared/adventure-image-by-path` 定義為：
 
 ```graphql
-query ($path: String!) {
-  adventureByPath(_path: $path) {
+query($path: String!, $assetTransform: AssetTransform!) {
+  adventureByPath(
+    _path: $path
+    _assetTransform: $assetTransform
+  ) {
     item {
-      title,
+      _path
+      title
       primaryImage {
         ... on ImageRef {
-          _path
-          _authorUrl
-          _publishUrl
+          _dynamicUrl
         }
       }
     }
@@ -74,21 +71,44 @@ query ($path: String!) {
 }
 ```
 
+### 查詢變數
+
+```json
+{ 
+  "path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
+  "assetTransform": { "format": "JPG", "quality": 80, "preferWebp": true}
+}
+```
+
 此 `$path` 變數 `_path` 篩選器需要內容片段的完整路徑(例如 `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`)。
+
+此 `_assetTransform` 定義 `_dynamicUrl` 被建構以最佳化提供的影像轉譯。 Web最佳化影像URL也可透過變更URL的查詢參數在用戶端上調整。
+
+| GraphQL參數 | URL 參數 | 說明 | 必要 | GraphQL變數值 | URL參數值 | 範例GraphQL變數 | 範例URL參數 |
+|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:---|:--|
+| `format` | `format` | 影像資產的格式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | N/A | `{ format: JPG }` | N/A |
+| `seoName` | N/A | URL中的檔案區段名稱。 若未提供，則會使用影像資產名稱。 | ✘ | 字母數字， `-`，或 `_` | N/A | `{ seoName: "bali-surf-camp" }` | N/A |
+| `crop` | `crop` | 從影像中擷取的裁切影格必須在影像大小內 | ✘ | 在原始影像維的邊界內定義裁切區域的正整數 | 數字座標的逗號分隔字串 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `{ crop: { xOrigin: 10, yOrigin: 20, width: 300, height: 400} }` | `?crop=10,20,300,400` |
+| `size` | `size` | 輸出影像的大小（包括高度和寬度）（像素）。 | ✘ | 正整數 | 順序中的逗號分隔正整數 `<WIDTH>,<HEIGHT>` | `{ size: { width: 1200, height: 800 } }` | `?size=1200,800` |
+| `rotation` | `rotate` | 影像的旋轉度。 | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `{ rotation: R90 }` | `?rotate=90` |
+| `flip` | `flip` | 翻轉影像。 | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `{ flip: horizontal }` | `?flip=h` |
+| `quality` | `quality` | 影像品質（以原始品質的百分比表示）。 | ✘ | 1-100 | 1-100 | `{ quality: 80 }` | `?quality=80` |
+| `width` | `width` | 輸出影像的寬度（像素）。 當 `size` 提供 `width` 會忽略。 | ✘ | 正整數 | 正整數 | `{ width: 1600 }` | `?width=1600` |
+| `preferWebP` | `preferwebp` | 若 `true` 和AEM會提供WebP（若瀏覽器支援），無論 `format`. | ✘ | `true`, `false` | `true`, `false` | `{ preferWebp: true }` | `?preferwebp=true` |
 
 ## GraphQL回應
 
-產生的JSON回應包含要求的欄位，其中包含影像資產的URL。
+產生的JSON回應包含要求的欄位，其中包含影像資產的網頁最佳化URL。
 
 ```json
 {
   "data": {
     "adventureByPath": {
       "item": {
-        "adventurePrimaryImage": {
-          "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
-          "_authorUrl": "https://author-p123-e456.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
-          "_publishUrl": "https://publish-p123-e789.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg"
+        "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
+        "title": "Bali Surf Camp",
+        "primaryImage": {
+          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--a38886f7-4537-4791-aa20-3f6ef0ac3fcd/adobestock_175749320.jpg?preferwebp=true&quality=80"
         }
       }
     }
@@ -96,181 +116,139 @@ query ($path: String!) {
 }
 ```
 
-若要在您的應用程式中載入參考的影像，請使用適當欄位， `_path`, `_authorUrl`，或 `_publishUrl` 的 `adventurePrimaryImage` 作為影像的來源URL。
+若要載入應用程式中參考影像的Web最佳化影像，請使用 `_dynamicUrl` 的 `primaryImage` 作為影像的來源URL。
 
-的網域 `_authorUrl` 和 `_publishUrl` 由AEMas a Cloud Service自動定義，使用 [外置器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.html).
+在React中，從AEM Publish顯示網頁最佳化影像看起來類似：
 
-在React中，顯示AEM Publish的影像看起來類似：
-
-```html
-<img src={ data.adventureByPath.item.primaryImage._publishUrl } />
+```jsx
+const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
+...
+let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
+...
+<img src={dynamicUrl} alt={data.adventureByPath.item.title}/>
 ```
 
-## 影像轉譯
+記住， `_dynamicUrl` 不包含AEM網域，因此您必須提供影像URL所需的來源才能解析。
 
-影像資產支援可自訂 [轉譯](../../../assets/authoring/renditions.md)，為原始資產的替代表示法。 自訂轉譯有助於最佳化無頭式體驗。 無頭應用程式可以請求最佳化的轉譯，而不是請求原始影像資產（通常是大型高解析度檔案）。
+### 回應式URL
 
-### 建立轉譯
+上述範例顯示使用單一大小的影像，但在網頁體驗中，通常需要回應式影像集。 回應式影像可使用 [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 或 [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 下列程式碼片段示範如何使用 `_dynamicUrl` 作為基礎，並附加不同寬度參數，以支援不同的回應式檢視。 不僅 `width` 查詢參數可供使用，但用戶端可新增其他查詢參數，以根據影像資產的需求進一步最佳化影像資產。
 
-AEM Assets管理員會使用處理設定檔來定義自訂轉譯。 接著，處理設定檔便可直接套用至特定資料夾樹狀結構或資產，以產生這些資產的轉譯。
-
-#### 處理設定檔
-
-資產轉譯規格定義於 [處理設定檔](../../../assets/configuring/processing-profiles.md) 由AEM Assets管理員撰寫。
-
-建立或更新處理設定檔，並為無頭應用程式所需的影像大小新增轉譯定義。 轉譯可以命名任何名稱，但應在語義上命名。
-
-![AEM無頭最佳化轉譯](./assets/images/processing-profiles.png)
-
-在此範例中，會建立三個轉譯：
-
-| 轉譯名稱 | 副檔名 | 最大寬度 |
-|-----------------------|:---------:|----------:|
-| web優化 — large | webp | 1200 px |
-| web優化媒體 | webp | 900 px |
-| web優化 — 小 | webp | 600 px |
-
-上表中調出的屬性非常重要：
-
-+ __轉譯名稱__ 用於要求轉譯。
-+ __擴充功能__ 是用來要求 __轉譯名稱__. 偏好 `webp` 轉譯，如此會針對網頁傳送最佳化。
-+ __最大寬度__ 會用來通知開發人員應根據其在無頭應用程式中的使用，來使用哪個轉譯。
-
-轉譯定義視無頭式應用程式的需求而定，因此請務必為使用案例定義最佳轉譯集，並在語義上為其命名，以說明其使用方式。
-
-#### 重新處理資產{#reprocess-assets}
-
-在建立（或更新）「處理設定檔」後，重新處理資產以產生「處理設定檔」中定義的新轉譯。 在使用處理設定檔處理資產之前，新轉譯不存在。
-
-+ 最好， [將處理設定檔指派給資料夾](../../../assets/configuring//processing-profiles.md) 因此，任何上傳至該資料夾的新資產都會自動產生轉譯。 必須使用下方的臨時方法重新處理現有資產。
-
-+ 或者，您可以隨選選取資料夾或資產，然後選取 __重新處理資產__，並選取新的處理設定檔名稱。
-
-   ![臨機重新處理資產](./assets/images/ad-hoc-reprocess-assets.jpg)
-
-#### 檢閱轉譯
-
-轉譯可透過驗證 [開啟資產的轉譯檢視](../../../assets/authoring/renditions.md)，以及選取新轉譯以在轉譯邊欄中預覽。 如果缺少轉譯， [確保資產是使用處理設定檔進行處理](#reprocess-assets).
-
-![檢閱轉譯](./assets/images/review-renditions.png)
-
-#### 發佈資產
-
-確認含有新轉譯的資產為 [（重新發佈）](../../../assets/sharing/publish.md) 以便在AEM Publish上存取新轉譯。
-
-### 存取轉譯
-
-轉譯可透過附加 __轉譯名稱__ 和 __轉譯擴充功能__ 在處理設定檔中定義至資產的URL。
-
-| 資產網址 | 轉譯子路徑 | 轉譯名稱 | 轉譯擴充功能 |  | 轉譯URL |
-|-----------|:------------------:|:--------------:|--------------------:|:--:|---|
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web優化 — large | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-large.webp |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web優化媒體 | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-medium.webp |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web優化 — 小 | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-small.webp |
-
-{style="table-layout:auto"}
-
-### GraphQL查詢{#renditions-graphl-query}
-
-AEM GraphQL要求影像轉譯時不需要額外語法。 而是 [查詢影像](#images-graphql-query) 以通常的方式，並以程式碼指定所需的轉譯。 這很重要 [確保無頭應用程式使用的影像資產具有相同名稱的轉譯](#reprocess-assets).
+```javascript
+const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
+...
+// Read the data from GraphQL response
+let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
+let alt = data.adventureByPath.item.title;
+...
+{/*-- Example img srcset --*/}
+document.body.innerHTML=`<img>
+    alt="${alt}"
+    src="${${dynamicUrl}&width=1000}"
+    srcset="`
+      ${dynamicUrl}&width=1000 1000w,
+      ${dynamicUrl}&width=1600 1600w,
+      ${dynamicUrl}&width=2000 2000w,
+      `"
+    sizes="calc(100vw - 10rem)"/>`;
+...
+{/*-- Example picture --*/}
+document.body.innerHTML=`<picture>
+      <source srcset="${dynamicUrl}&width=2600" media="(min-width: 2001px)"/>
+      <source srcset="${dynamicUrl}&width=2000" media="(min-width: 1000px)"/>
+      <img src="${dynamicUrl}&width=400" alt="${alt}"/>
+    </picture>`;
+```
 
 ### React範例
 
-讓我們建立一個簡單的React應用程式，顯示單一影像資產的三種轉譯項目：Web最佳化 — 小型、Web最佳化 — 中型和Web最佳化 — 大型。
+讓我們建立簡單的React應用程式，在之後顯示Web最佳化影像 [回應式影像模式](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/). 回應式影像有兩個主要模式：
 
-![影像資產轉譯React範例](./assets/images/react-example-renditions.jpg)
++ [具有srcset的Img元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 提高效能
++ [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 設計控制
 
-#### 建立影像元件{#react-example-image-component}
+#### 具有srcset的Img元素
 
-建立可轉譯影像的React元件。 此元件接受四個屬性：
+>[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
-+ `assetUrl`:透過GraphQL查詢的回應提供的影像資產URL。
-+ `renditionName`:要載入的轉譯名稱。
-+ `renditionExtension`:要載入的轉譯擴充功能。
-+ `alt`:影像的替代文字；無障礙非常重要！
+[具有srcset的Img元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 搭配使用 `sizes` 屬性來針對不同的螢幕大小提供不同的影像資產。 針對不同的螢幕大小提供不同的影像資產時，Img srcsets很有用。
 
-此元件構建 [格式副本URL，使用 __存取轉譯__](#access-renditions). 安 `onError` 處理常式設為在遺失轉譯時顯示原始資產。
+#### 圖片元素
 
-此範例使用原始資產URL做為 `onError` 處理常式中，會遺失轉譯。
+[圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 搭配多個 `source` 元素，針對不同的螢幕大小提供不同的影像資產。 針對不同的螢幕大小提供不同的影像轉譯時，圖片元素很實用。
 
-```javascript
-// src/Image.js
+>[!VIDEO](https://video.tv.adobe.com/v/3418555/?quality=12&learn=on)
 
-export default function Image({ assetUrl, renditionName, renditionExtension, alt }) {
-  // Construct the rendition Url in the format:
-  //   <ASSET URL>/_jcr_content/renditions<RENDITION NAME>.<RENDITION EXTENSION>
-  const renditionUrl = `${assetUrl}/_jcr_content/renditions/${renditionName}.${renditionExtension}`;
+#### 范常式式碼
 
-  // Load the original image asset in the event the named rendition is missing
-  const handleOnError = (e) => { e.target.src = assetUrl; }
-
-  return (
-    <>
-      <img src={renditionUrl} 
-            alt={alt} 
-            onError={handleOnError}/>
-    </>
-  );
-}
-```
-
-#### 定義 `App.js`{#app-js}
-
-這個簡單 `App.js` 查詢AEM以取得冒險影像，然後顯示該影像的三個轉譯：web優化 — 小型、web優化 — 中型和web優化 — 大型。
+這個簡單的React應用程式使用 [AEM Headless SDK](./aem-headless-sdk.md) 查詢AEM無頭API以取得冒險內容，並使用 [帶有srcset的img元素](#img-element-with-srcset) 和 [圖片元素](#picture-element). 此 `srcset` 和 `sources` 使用自訂 `setParams` 函式，將網頁最佳化的傳送查詢參數附加至 `_dynamicUrl` ，因此請根據web用戶端需求變更傳送的影像轉譯。
 
 在自訂React鈎點中執行AEM查詢 [使用AEM Headless SDK的useAdventureByPath](./aem-headless-sdk.md#graphql-persisted-queries).
-
-查詢的結果和特定的轉譯參數會傳遞至 [影像React元件](#react-example-image-component).
 
 ```javascript
 // src/App.js
 
 import "./App.css";
 import { useAdventureByPath } from './api/persistedQueries'
-import Image from "./Image";
+
+const AEM_HOST = process.env.AEM_HOST;
 
 function App() {
 
+  /**
+   * Update the dynamic URL with client-specific query parameters
+   * @param {*} dynamicUrl the base dynamic URL for the web-optimized image
+   * @param {*} params the AEM web-optimized image query parameters
+   * @returns the dynamic URL with the query parameters
+   */
+  function setParams(dynamicUrl, params) {
+    let url = new URL(dynamicUrl);
+    Object.keys(params).forEach(key => {
+      url.searchParams.set(key, params[key]);
+    });
+    return url.toString();
+  }
+
   // Get data from AEM using GraphQL persisted query as defined above 
   // The details of defining a React useEffect hook are explored in How to > AEM Headless SDK
-  let { data, error } = useAdventureByPath("/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp");
+  // The 2nd parameter define the base GraphQL query parameters used to request the web-optimized image
+  let { data, error } = useAdventureByPath(
+        "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp", 
+        { assetTransform: { format: "JPG", preferWebp: true } }
+      );
 
-  // Wait for GraphQL to provide data
+  // Wait for AEM Headless APIs to provide data
   if (!data) { return <></> }
 
   return (
     <div className="app">
       
-      <h2>Small rendition</h2>
-      {/* Render the web-optimized-small rendition for the Adventure Primary Image */}
-      <Image
-        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="web-optimized-small"
-        renditionExtension="webp"
-        alt={data.adventureByPath.item.title}
-      />
+      <h1>Web-optimized images</h1>
 
-      <hr />
+      {/* Render the web-optimized image img with srcset for the Adventure Primary Image */}
+      <h2>Img srcset</h2>
 
-      <h2>Medium rendition</h2>
-      {/* Render the web-optimized-medium rendition for the Adventure Primary Image */}
-      <Image
-        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="web-optimized-medium"
-        renditionExtension="webp"
-        alt={data.adventureByPath.item.title}
-      />
+      <img
+        alt={alt}
+        src={setParams(dynamicUrl, { width: 1000 })}
+        srcSet={
+            `${setParams(dynamicUrl, { width: 1000 })} 1000w,
+             ${setParams(dynamicUrl, { width: 1600 })} 1600w,
+             ${setParams(dynamicUrl, { width: 2000 })} 2000w`
+        }
+        sizes="calc(100vw - 10rem)"/>
 
-      <hr />
+       {/* Render the web-optimized picture for the Adventure Primary Image */}
+        <h2>Picture element</h2>
 
-      <h2>Large rendition</h2>
-      {/* Render the web-optimized-large rendition for the Adventure Primary Image */}
-      <Image
-        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="web-optimized-large"
-        renditionExtension="webp"
-        alt={data.adventureByPath.item.title}
-      />
+        <picture>
+          {/* When viewport width is greater than 2001px */}
+          <source srcSet={setParams(dynamicUrl, { width : 2600 })} media="(min-width: 2001px)"/>        
+          {/* When viewport width is between 1000px and 2000px */}
+          <source srcSet={setParams(dynamicUrl, { width : 2000})} media="(min-width: 1000px)"/>
+          {/* When viewport width is less than 799px */}
+          <img src={setParams(dynamicUrl, { width : 400, crop: "550,300,400,400" })} alt={alt}/>
+        </picture>
     </div>
   );
 }
