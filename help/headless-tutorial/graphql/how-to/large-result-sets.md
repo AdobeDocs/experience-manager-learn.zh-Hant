@@ -10,9 +10,9 @@ doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
 jira: KT-13102
 thumbnail: 3418381.jpeg
-source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
+source-git-commit: 9eb706e49f12a3ebd5222e733f540db4cf2c8748
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '841'
 ht-degree: 1%
 
 ---
@@ -34,9 +34,11 @@ AEM Headless支援 [偏移/限制](#list-query) 和 [游標分頁](#paginated-qu
 
 使用大型資料集時，可使用偏移和限制以及以游標為基礎的分頁功能來擷取資料的特定子集。 但是，這兩種技術之間有一些差異，在某些情況下，它們可能使一種更合適。
 
-### 清單查詢
+### 偏移/限制
 
 清單查詢，使用 `limit` 和 `offset` 提供簡單明瞭的方法，指定起點(`offset`)和要擷取的記錄數(`limit`)。 此方法允許從完整結果集內的任何位置選擇結果子集，例如跳到特定結果頁。 雖然易於實施，但在處理大結果時可能會很慢而且效率低下，因為檢索許多記錄需要掃描以前的所有記錄。 此方法在偏移值較高時也可能導致效能問題，因為可能需要擷取和捨棄許多結果。
+
+#### GraphQL查詢
 
 ```graphql
 # Retrieves a list of Adventures sorted price descending, and title ascending if there is the prices are the same.
@@ -51,7 +53,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
   }
 ```
 
-#### 查詢變數
+##### 查詢變數
 
 ```json
 {
@@ -60,7 +62,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 }
 ```
 
-### 清單回應
+#### GraphQL回應
 
 產生的JSON回應包含第2、第3、第4和第5個最昂貴的歷險。 結果中的前兩次冒險價格相同(`4500` 所以 [清單查詢](#list-queries) 指定價格相同的冒險，然後按標題升序排序。)
 
@@ -99,10 +101,11 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 
 基於游標的分頁在編頁查詢中可用，涉及使用游標（對特定記錄的引用）來檢索下一組結果。 此方法更有效率，因為它避免了掃描所有先前記錄以擷取所需資料子集的需要。 編頁查詢非常適合於從開始、到中間的某個點或到結尾的大結果集迭代。 清單查詢，使用 `limit` 和 `offset` 提供簡單明瞭的方法，指定起點(`offset`)和要擷取的記錄數(`limit`)。 此方法允許從完整結果集內的任何位置選擇結果子集，例如跳到特定結果頁。 雖然易於實施，但在處理大結果時可能會很慢而且效率低下，因為檢索許多記錄需要掃描以前的所有記錄。 此方法在偏移值較高時也可能導致效能問題，因為可能需要擷取和捨棄許多結果。
 
+#### GraphQL查詢
 
 ```graphql
 # Retrieves the most expensive Adventures (sorted by title ascending if there is the prices are the same)
-query adventuresByPaginated($first:Int!, $after:String) {
+query adventuresByPaginated($first:Int, $after:String) {
  adventurePaginated(first: $first, after: $after, sort: "price DESC, title ASC") {
        edges {
           cursor
@@ -120,7 +123,7 @@ query adventuresByPaginated($first:Int!, $after:String) {
   }
 ```
 
-#### 查詢變數
+##### 查詢變數
 
 ```json
 {
@@ -128,7 +131,7 @@ query adventuresByPaginated($first:Int!, $after:String) {
 }
 ```
 
-### 編頁回應
+#### GraphQL回應
 
 產生的JSON回應包含第2、第3、第4和第5個最昂貴的歷險。 結果中的前兩次冒險價格相同(`4500` 所以 [清單查詢](#list-queries) 指定價格相同的冒險，然後按標題升序排序。)
 
@@ -171,11 +174,11 @@ query adventuresByPaginated($first:Int!, $after:String) {
 }
 ```
 
-### 下一組編頁結果
+#### 下一組編頁結果
 
 下一組結果可使用 `after` 參數和 `endCursor` 值。 如果沒有其他要擷取的結果， `hasNextPage` is `false`.
 
-#### 查詢變數
+##### 查詢變數
 
 ```json
 {
