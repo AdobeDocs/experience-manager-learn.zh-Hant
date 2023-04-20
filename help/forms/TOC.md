@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+source-git-commit: edba74f5ff5611687c05812de184243997ee7a35
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1809'
 ht-degree: 4%
 
 ---
@@ -284,6 +284,7 @@ ht-degree: 4%
    + [打印渠道文檔中的兩列佈局](interactive-communications/two-column-layout-aem-forms-article-use.md)
    + [在AEM Forms打印通道文檔中使用表元件](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [使用監看資料夾生成用於打印通道的交互通信文檔](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+   + [自訂文字編輯器](interactive-communications/customize-text-editor.md)
 
 + Web頻道互動式通訊 {#ic-web-channel-tutorial}
    + [簡介](ic-web-channel-tutorial/introduction.md)
