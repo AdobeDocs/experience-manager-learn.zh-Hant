@@ -10,7 +10,7 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 09f9530cab0ec651b7c37c8c078631c79e8cfe4a
+source-git-commit: 97a311e043d3903070cd249d993036b5d88a21dd
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 5%
@@ -141,7 +141,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 
 記住， `_dynamicUrl` 不包含AEM網域，因此您必須提供影像URL所需的來源才能解析。
 
-### 回應式URL
+## 回應式URL
 
 上述範例顯示使用單一大小的影像，但在網頁體驗中，通常需要回應式影像集。 回應式影像可使用 [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 或 [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 下列程式碼片段示範如何使用 `_dynamicUrl` 作為基礎，並附加不同寬度參數，以支援不同的回應式檢視。 不僅 `width` 查詢參數可供使用，但用戶端可新增其他查詢參數，以根據影像資產的需求進一步最佳化影像資產。
 
@@ -155,7 +155,7 @@ let alt = data.adventureByPath.item.title;
 {/*-- Example img srcset --*/}
 document.body.innerHTML=`<img>
     alt="${alt}"
-    src="${${dynamicUrl}&width=1000}"
+    src="${dynamicUrl}&width=1000}"
     srcset="`
       ${dynamicUrl}&width=1000 1000w,
       ${dynamicUrl}&width=1600 1600w,
@@ -171,26 +171,26 @@ document.body.innerHTML=`<picture>
     </picture>`;
 ```
 
-### React範例
+## React範例
 
 讓我們建立簡單的React應用程式，在之後顯示Web最佳化影像 [回應式影像模式](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/). 回應式影像有兩個主要模式：
 
 + [具有srcset的Img元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 提高效能
 + [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 設計控制
 
-#### 具有srcset的Img元素
+### 具有srcset的Img元素
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
 [具有srcset的Img元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 搭配使用 `sizes` 屬性來針對不同的螢幕大小提供不同的影像資產。 針對不同的螢幕大小提供不同的影像資產時，Img srcsets很有用。
 
-#### 圖片元素
+### 圖片元素
 
 [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 搭配多個 `source` 元素，針對不同的螢幕大小提供不同的影像資產。 針對不同的螢幕大小提供不同的影像轉譯時，圖片元素很實用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418555/?quality=12&learn=on)
 
-#### 范常式式碼
+### 范常式式碼
 
 這個簡單的React應用程式使用 [AEM Headless SDK](./aem-headless-sdk.md) 查詢AEM無頭API以取得冒險內容，並使用 [帶有srcset的img元素](#img-element-with-srcset) 和 [圖片元素](#picture-element). 此 `srcset` 和 `sources` 使用自訂 `setParams` 函式，將網頁最佳化的傳送查詢參數附加至 `_dynamicUrl` ，因此請根據web用戶端需求變更傳送的影像轉譯。
 
