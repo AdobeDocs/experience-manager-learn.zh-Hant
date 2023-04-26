@@ -8,9 +8,9 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 117b67bd185ce5af9c83bd0c343010fab6cd0982
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1465'
 ht-degree: 0%
 
 ---
@@ -367,7 +367,7 @@ GraphQL API可讓開發人員建立查詢，其中包含與插入多行欄位中
 
 ```graphql
 query ($path: String!) {
-  articleByPath(_path: $path)
+  articleByPath(_path: $path, _assetTransform: { format: JPG, preferWebp: true })
   {
     item {
       _path
@@ -377,17 +377,14 @@ query ($path: String!) {
     }
     _references {
       ...on ImageRef {
-        _path
-        _publishUrl
-        width
+        _dynamicUrl
         __typename
       }
       ...on ArticleModel {
         _path
         author
         __typename
-      }
-      
+      }  
     }
   }
 }
@@ -461,9 +458,7 @@ query ($path: String!) {
       },
       "_references": [
         {
-          "_path": "/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
-          "_publishUrl": "http://publish-p123-e456.adobeaemcloud.com/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
-          "width": 1920,
+          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--dd42d814-88ec-4c4d-b5ef-e3dc4bc0cb42/sport-climbing.jpg?preferwebp=true",
           "__typename": "ImageRef"
         },
         {
@@ -477,7 +472,7 @@ query ($path: String!) {
 }
 ```
 
-JSON回應會包含參考插入RTF中的位置，其中包含 `"nodeType": "reference"`. 此 `_references` 然後，對象將包括請求的附加屬性的每個引用。 例如， `ImageRef` 傳回 `width` 中所引用的影像。
+JSON回應會包含參考插入RTF中的位置，其中包含 `"nodeType": "reference"`. 此 `_references` 然後，物件會包含每個參考。
 
 ## 以RTF格式呈現內嵌參考
 
@@ -493,12 +488,12 @@ const nodeMap = {
             let reference;
             
             // asset reference
-            if(node.data.path) {
+            if (node.data.path) {
                 // find reference based on path
                 reference = references.find( ref => ref._path === node.data.path);
             }
             // Fragment Reference
-            if(node.data.href) {
+            if (node.data.href) {
                 // find in-line reference within _references array based on href and _path properties
                 reference = references.find( ref => ref._path === node.data.href);
             }
@@ -518,7 +513,7 @@ const renderReference = {
     // node contains merged properties of the in-line reference and _references object
     'ImageRef': (node) => {
         // when __typename === ImageRef
-        return <img src={node._publishUrl} alt={'in-line reference'} /> 
+        return <img src={node._dynamicUrl} alt={'in-line reference'} /> 
     },
     'ArticleModel': (node) => {
         // when __typename === ArticleModel
@@ -538,9 +533,14 @@ const renderReference = {
 
 >[!VIDEO](https://video.tv.adobe.com/v/342105?quality=12&learn=on)
 
+>[!NOTE]
+>
+> 上述影片使用 `_publishUrl` 來呈現影像參考。 相反， `_dynamicUrl` 如 [網頁最佳化影像作法](./images.md);
+
+
 前面的影片示範端對端範例：
 
 1. 更新內容片段模型的多行文字欄位以允許片段參考
-1. 使用內容片段編輯器在多行文字欄位中包含影像和參考另一個片段。
-1. 建立GraphQL查詢，其中包含多行文字回應作為JSON和任何 `_references` 已使用。
-1. 撰寫可轉譯RTF回應之內嵌參考的React SPA。
+2. 使用內容片段編輯器在多行文字欄位中包含影像和參考另一個片段。
+3. 建立GraphQL查詢，其中包含多行文字回應作為JSON和任何 `_references` 已使用。
+4. 撰寫可轉譯RTF回應之內嵌參考的React SPA。
