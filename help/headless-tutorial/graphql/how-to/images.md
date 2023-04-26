@@ -10,9 +10,9 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 71b2dc0e8ebec1157694ae55118f2426558566e3
+source-git-commit: ec2609ed256ebe6cdd7935f3e8d476c1ff53b500
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '932'
 ht-degree: 5%
 
 ---
@@ -58,10 +58,15 @@ AEM無頭內容模型中使用的內容片段，通常會參考用於無頭體�
 在GraphQL查詢中，將欄位傳回為 `ImageRef` 類型，並要求 `_dynamicUrl` 欄位。 例如，在 [WKND Site項目](https://github.com/adobe/aem-guides-wknd) 並在其中納入影像資產參考的影像URL `primaryImage` 欄位，可使用新的持續查詢完成 `wknd-shared/adventure-image-by-path` 定義為：
 
 ```graphql {highlight="11"}
-query($path: String!, $assetTransform: AssetTransform!) {
+query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int, $imageQuality: Int) {
   adventureByPath(
     _path: $path
-    _assetTransform: $assetTransform
+    _assetTransform: {
+      format: $imageFormat
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+    }
   ) {
     item {
       _path
@@ -81,7 +86,8 @@ query($path: String!, $assetTransform: AssetTransform!) {
 ```json
 { 
   "path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
-  "assetTransform": { "format": "JPG", "quality": 80, "preferWebp": true}
+  "imageFormat": "JPG",
+  "imageWidth": 1000,
 }
 ```
 
@@ -89,17 +95,17 @@ query($path: String!, $assetTransform: AssetTransform!) {
 
 此 `_assetTransform` 定義 `_dynamicUrl` 被建構以最佳化提供的影像轉譯。 Web最佳化影像URL也可透過變更URL的查詢參數在用戶端上調整。
 
-| GraphQL參數 | URL 參數 | 說明 | 必要 | GraphQL變數值 | URL參數值 | 範例GraphQL變數 | 範例URL參數 |
-|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:---|:--|
-| `format` | `format` | 影像資產的格式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | N/A | `{ format: JPG }` | N/A |
-| `seoName` | N/A | URL中的檔案區段名稱。 若未提供，則會使用影像資產名稱。 | ✘ | 字母數字， `-`，或 `_` | N/A | `{ seoName: "bali-surf-camp" }` | N/A |
-| `crop` | `crop` | 從影像中擷取的裁切影格必須在影像大小內 | ✘ | 在原始影像維的邊界內定義裁切區域的正整數 | 數字座標的逗號分隔字串 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `{ crop: { xOrigin: 10, yOrigin: 20, width: 300, height: 400} }` | `?crop=10,20,300,400` |
-| `size` | `size` | 輸出影像的大小（包括高度和寬度）（像素）。 | ✘ | 正整數 | 順序中的逗號分隔正整數 `<WIDTH>,<HEIGHT>` | `{ size: { width: 1200, height: 800 } }` | `?size=1200,800` |
-| `rotation` | `rotate` | 影像的旋轉度。 | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `{ rotation: R90 }` | `?rotate=90` |
-| `flip` | `flip` | 翻轉影像。 | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `{ flip: horizontal }` | `?flip=h` |
-| `quality` | `quality` | 影像品質（以原始品質的百分比表示）。 | ✘ | 1-100 | 1-100 | `{ quality: 80 }` | `?quality=80` |
-| `width` | `width` | 輸出影像的寬度（像素）。 當 `size` 提供 `width` 會忽略。 | ✘ | 正整數 | 正整數 | `{ width: 1600 }` | `?width=1600` |
-| `preferWebP` | `preferwebp` | 若 `true` 和AEM會提供WebP（若瀏覽器支援），無論 `format`. | ✘ | `true`, `false` | `true`, `false` | `{ preferWebp: true }` | `?preferwebp=true` |
+| GraphQL參數 | URL 參數 | 說明 | 必要 | GraphQL變數值 | URL參數值 | 範例URL參數 |
+|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
+| `format` | `format` | 影像資產的格式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | N/A | N/A |
+| `seoName` | N/A | URL中的檔案區段名稱。 若未提供，則會使用影像資產名稱。 | ✘ | 字母數字， `-`，或 `_` | N/A | N/A |
+| `crop` | `crop` | 從影像中擷取的裁切影格必須在影像大小內 | ✘ | 在原始影像維的邊界內定義裁切區域的正整數 | 數字座標的逗號分隔字串 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
+| `size` | `size` | 輸出影像的大小（包括高度和寬度）（像素）。 | ✘ | 正整數 | 順序中的逗號分隔正整數 `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
+| `rotation` | `rotate` | 影像的旋轉度。 | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `?rotate=90` |
+| `flip` | `flip` | 翻轉影像。 | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `?flip=h` |
+| `quality` | `quality` | 影像品質（以原始品質的百分比表示）。 | ✘ | 1-100 | 1-100 | `?quality=80` |
+| `width` | `width` | 輸出影像的寬度（像素）。 當 `size` 提供 `width` 會忽略。 | ✘ | 正整數 | 正整數 | `?width=1600` |
+| `preferWebP` | `preferwebp` | 若 `true` 和AEM會提供WebP（若瀏覽器支援），無論 `format`. | ✘ | `true`, `false` | `true`, `false` | `?preferwebp=true` |
 
 ## GraphQL回應
 
@@ -113,7 +119,7 @@ query($path: String!, $assetTransform: AssetTransform!) {
         "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
         "title": "Bali Surf Camp",
         "primaryImage": {
-          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--a38886f7-4537-4791-aa20-3f6ef0ac3fcd/adobestock_175749320.jpg?preferwebp=true&quality=80"
+          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--a38886f7-4537-4791-aa20-3f6ef0ac3fcd/adobestock_175749320.jpg?preferwebp=true&width=1000&quality=80"
         }
       }
     }
@@ -219,7 +225,7 @@ function App() {
   // The 2nd parameter define the base GraphQL query parameters used to request the web-optimized image
   let { data, error } = useAdventureByPath(
         "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp", 
-        { assetTransform: { format: "JPG", preferWebp: true } }
+        { imageFormat: "JPG" }
       );
 
   // Wait for AEM Headless APIs to provide data
