@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
-source-git-commit: 3f129fb4fc53e55d118802d3a0e566a9a9bcb9a2
+source-git-commit: 1597fd87e11a27292b2b8897cf58c1670488b632
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1150'
 ht-degree: 1%
 
 ---
@@ -59,9 +59,9 @@ ht-degree: 1%
 
 此 [XDM系統概觀](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) 是了解XDM結構和欄位群組、類型、類別和資料類型等相關概念的絕佳資源。 讓您全面了解XDM資料模型，以及如何建立和管理XDM結構，以標準化整個企業的資料。 深入了解XDM架構，以及其如何讓您的資料收集和管理程式受益。
 
-## 建立DataStream -Experience Platform
+## 建立資料流 — Experience Platform
 
-DataStream會指示Platform Edge Network將收集的資料傳送至何處。 例如，可將其傳送至Experience Platform、Analytics或Adobe Target。
+資料流會指示Platform Edge Network將收集的資料傳送至何處。 例如，可將其傳送至Experience Platform、Analytics或Adobe Target。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418895?quality=12&learn=on)
@@ -196,7 +196,7 @@ DataStream會指示Platform Edge Network將收集的資料傳送至何處。 例
 
 ## 摘要
 
-做得好！您已完成使用Adobe Experience Platform(Experience Platform)Web SDK設定AEM，以收集和內嵌來自網站的資料。 透過此基礎，您現在可以探索進一步的可能性，以增強和整合Analytics、Target、Customer Journey Analytics(CJA)等產品，並為客戶建立豐富且個人化的體驗。 不斷學習和探索，充分發揮Adobe Experience Cloud的潛能。
+做得好！您已使用Experience PlatformWeb SDK完成AEM的設定，以收集和擷取來自網站的資料。 透過此基礎，您現在可以探索進一步的可能性，以增強和整合Analytics、Target、Customer Journey Analytics(CJA)等產品，並為客戶建立豐富且個人化的體驗。 不斷學習和探索，充分發揮Adobe Experience Cloud的潛能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418900?quality=12&learn=on)
 
