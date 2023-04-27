@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 1011c700a33b932c3c0a766727fc1d90bf2940f4
+source-git-commit: fc6c225f30132baec6245955318c7ca180d3ad62
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '934'
 ht-degree: 22%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 22%
 # Adobe Experience Manager as a Cloud Service 教學課程 {#cloud-service}
 
 + [概觀](./overview.md)
++ [AEM試用版](./aem-trials/index.md)
 + AEM as a Cloud Service 簡介{#introduction}
    + [什麼是AEMas a Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [進化](./introduction/evolution.md)
