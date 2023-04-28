@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
-source-git-commit: 1597fd87e11a27292b2b8897cf58c1670488b632
+exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
+source-git-commit: 63afa03de70d6f8f695d552018344d53a5cec6f5
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1315'
 ht-degree: 1%
 
 ---
-
 
 # 整合Experience PlatformWeb SDK
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 您也會了解如何收集和傳送 [WKND — 範例Adobe Experience Manager專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) pageview中的資料 [Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html).
 
-完成此設定後，您可以繼續實作Experience Platform和相關應用程式，例如 [Real-time Customer Data Platform(Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html), [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html) 和 [Adobe Journey Optimizer(AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html). 通過標準化Web和客戶資料來促進更好的客戶參與。
+完成此設定後，您便已實作了堅實的基礎。 此外，您已準備好使用下列應用程式來推進Experience Platform實作： [Real-time Customer Data Platform(Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html), [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)，和 [Adobe Journey Optimizer(AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html). 進階實作可協助透過標準化網頁和客戶資料，促進更佳的客戶參與。
 
 ## 必備條件
 
@@ -52,6 +52,8 @@ ht-degree: 1%
 
 體驗資料模型(XDM)結構可協助您將客戶體驗資料標準化。 若要收集 **WKND頁面檢視** 資料、建立XDM結構，並使用Adobe提供的欄位群組 `AEP Web SDK ExperienceEvent` 用於網頁資料收集。
 
+有一些通用的和特定的行業，例如零售、金融服務、醫療保健等，一系列參考資料模型，請參見 [產業資料模型概觀](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html) 以取得更多資訊。
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418894?quality=12&learn=on)
 
@@ -76,8 +78,14 @@ ht-degree: 1%
 + 資料元素：使用WKND網站的Adobe用戶端資料層擷取頁面名稱、網站區域和主機名稱的自訂程式碼類型資料元素。 此外，XDM物件類型資料元素也符合先前新建立的WKND XDM架構內建 [建立XDM結構](#create-xdm-schema---experience-platform) 步驟。
 + 規則：每當使用Adobe端資料層觸發來造訪WKND網頁時，將資料傳送至Platform Edge Network `cmp:show` 事件。
 
+建置和發佈標籤程式庫時，使用 **發佈流程**，您可以使用 **新增所有已變更的資源** 按鈕。 選取所有資源，例如資料元素、規則和標籤擴充功能，而非識別和挑選個別資源。 此外，在開發階段期間，您只能將程式庫發佈至 _開發_ 環境，然後驗證並提升至 _階段_ 或 _生產_ 環境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418896?quality=12&learn=on)
+
+
+>[!TIP]
+>
+>影片中顯示的資料元素和規則事件程式碼可供您參考， **展開下方的折疊式功能表元素**. 不過，如果您未使用Adobe用戶端資料層，則必須修改下列程式碼，但定義資料元素並在規則定義中使用這些元素的概念仍適用。
 
 
 +++ 資料元素和規則事件程式碼
@@ -207,4 +215,3 @@ ht-degree: 1%
 + [Adobe Experience Platform Web SDK和邊緣網路概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [資料收集教學課程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
-
