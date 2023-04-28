@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: edba74f5ff5611687c05812de184243997ee7a35
+source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1808'
 ht-degree: 4%
 
 ---
@@ -231,11 +231,11 @@ ht-degree: 4%
    + [測試解決方案](welcome-kit/testing-the-solution.md)
 
 + 使用Forms和Acrobat Sign React App {#react-ic-sign}
-   + [簡介](react-ic-sign/introduction.md)
-   + [生成IC文檔](react-ic-sign/create-ic-document.md)
-   + [Acrobat Sign API包裝函式](react-ic-sign/wrapper-sign-api.md)
-   + [生成簽名介面工具集](react-ic-sign/create-servlet-to-expose-endpoint.md)
-   + [部署範例資產](react-ic-sign/deploy-assets-on-your-server.md)
+   + [1 — 導言](react-ic-sign/introduction.md)
+   + [2 — 生成文檔](react-ic-sign/create-ic-document.md)
+   + [3-Acrobat Sign API包裝函式](react-ic-sign/wrapper-sign-api.md)
+   + [4 — 生成符號介面工具集](react-ic-sign/create-servlet-to-expose-endpoint.md)
+   + [5 — 部署範例資產](react-ic-sign/deploy-assets-on-your-server.md)
 + 文件服務 {#document-services}
    + [PDF forms類型](document-services/pdf-forms-and-documents.md)
    + [在最適化表單中內嵌pdf](document-services/embed-pdf-inline.md)

@@ -8,14 +8,15 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+exl-id: d970d58b-77a4-4012-9e72-b97d60ef028a
+source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 0%
+source-wordcount: '70'
+ht-degree: 2%
 
 ---
 
-# 建立Servlet
+# 建立Acrobat Sign Web表單URL
 
 已編寫下列程式碼以公開POST端點。 此端點會從提交的資料中提取icTemplateName，並傳回供一般使用者簽署的Acrobat Sign Web表單URL。
 
@@ -85,3 +86,8 @@ public class GetWidgetUrl extends SlingAllMethodsServlet {
 
 }
 ```
+
+## 後續步驟
+
+[在本機系統上部署教學課程資產](./deploy-assets-on-your-server.md)
+
