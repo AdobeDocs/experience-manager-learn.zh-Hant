@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 0%
+source-wordcount: '363'
+ht-degree: 1%
 
 ---
 
@@ -201,3 +201,8 @@ public class MarketoConfigurationService {
 1. 建置套件並部署至您的AEM伺服器。
 1. [將瀏覽器指向configMgr](http://localhost:4502/system/console/configMgr) 並搜尋「Marketo憑證服務設定」
 1. 指定您Marketo例項專屬的適當屬性
+
+## 後續步驟
+
+[建立基於RESTful服務的資料源](./part3.md)
+

@@ -8,10 +8,10 @@ role: Developer
 level: Beginner
 exl-id: 8c90fe1c-0c83-4287-9766-08d806b8815a
 last-substantial-update: 2020-02-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 2%
+source-wordcount: '213'
+ht-degree: 3%
 
 ---
 
@@ -34,3 +34,7 @@ ht-degree: 2%
 * [下載client-libs-and-logo](assets/client-libs-and-logo.zip) 和 [getting-started-fragment](assets/getting-started-fragment.zip) 硬碟上。
 
 * 將zip檔案匯入AEM，使用 [封裝管理員 ](http://localhost:4502/crx/packmgr/index.jsp)
+
+## 後續步驟
+
+[建立最適化表單範本](./create-adaptive-form-template.md)

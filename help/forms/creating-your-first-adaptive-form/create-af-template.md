@@ -7,10 +7,10 @@ role: Developer
 level: Beginner
 kt: 5859
 thumbnail: 37324.jpg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 3%
+source-wordcount: '135'
+ht-degree: 8%
 
 ---
 
@@ -28,5 +28,8 @@ ht-degree: 3%
 如有需要，您可以下載 [適用性表單範本](assets/peak-application-template.zip) 並使用匯入至AEM [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
 
 
+## 後續步驟
+
+[建立最適化表單片段](./create-form-fragment.md)
 
 

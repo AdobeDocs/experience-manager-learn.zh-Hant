@@ -8,9 +8,9 @@ role: Developer
 level: Experienced
 exl-id: 45047852-4fdb-4702-8a99-faaad7213b61
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -55,3 +55,7 @@ Marketo與AEM Forms整合的第一步，是取得使用API進行REST呼叫所需
 1. BlankTemplatePackage.zip — 此為最適化表單範本。 使用套件管理器匯入此項目。
 1. marketo.json — 此為用來設定資料來源的Swagger檔案。
 1. MarketoAndForms.MarketoAndForms.core-1.0-SNAPSHOT.jar — 此為執行自訂驗證的套件組合。 如果您無法完成教學課程，或您的套件無法如預期般運作，歡迎使用此功能。
+
+## 後續步驟
+
+[建立自訂驗證](./part2.md)

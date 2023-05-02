@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '386'
 ht-degree: 1%
 
 ---
@@ -49,3 +49,8 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 1. 選擇所列的唯一服務，然後按一下測試服務
 1. 提供有效的leadId，然後按一下測試。 如果一切順利，您應該會傳回潛在客戶詳細資訊，如下方螢幕擷取畫面所示
    ![測試結果](assets/testresults.jfif)
+
+## 後續步驟
+
+[整合起來進行測試](./part4.md)
+

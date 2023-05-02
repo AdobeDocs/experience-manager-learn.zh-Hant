@@ -8,9 +8,9 @@ role: Developer
 level: Experienced
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 149d2c8c-bf44-4318-bba8-bec7e25da01b
-source-git-commit: 00257efe045eb85fb192bbb47f8e178cf909eb86
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -143,3 +143,8 @@ QueryBuilder服務用於查詢attachmentsPath資料夾下nt:file類型的節點�
 
 [依照此處所述建立套件組合](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 [確保已部署並處於活動狀態](http://localhost:4502/system/console/bundles)
+
+## 後續步驟
+
+建立 [自訂工作流程元件](./custom-workflow-component.md)
+

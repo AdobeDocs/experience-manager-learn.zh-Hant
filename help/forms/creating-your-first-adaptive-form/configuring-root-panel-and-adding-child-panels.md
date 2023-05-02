@@ -9,16 +9,23 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: a68c41b8-3e80-4b25-a933-9ceb8aee1e01
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '58'
-ht-degree: 0%
+source-wordcount: '73'
+ht-degree: 2%
 
 ---
 
 # 將子面板新增至根面板 {#adding-child-panels-to-root-panel}
 
-將子面板添加到根面板時，請 **請確定您處於編輯模式。 編輯按鈕位於瀏覽器的右上方。**
+將子面板新增至根面板。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28536?quality=12&learn=on)
+
+>[!NOTE]
+>將子面板添加到根面板時，請 **請確定您處於編輯模式。 編輯按鈕位於瀏覽器的右上方。**
+
+## 後續步驟
+
+[將元件新增至人員面板](./adding-components-to-people-panel.md)

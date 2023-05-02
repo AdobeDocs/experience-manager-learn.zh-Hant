@@ -8,9 +8,9 @@ role: Developer
 level: Experienced
 exl-id: e028837b-13d8-4058-ac25-ed095f49524c
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
@@ -38,3 +38,7 @@ ACS有一套豐富的API，可讓ACS與我們選擇的技術交互。 在本教�
 * [建立本文所述的服務用戶](/help/forms/adaptive-forms/service-user-tutorial-develop.md). 請務必部署與文章相關聯的OSGi套件組合。
 * 將ACS私密金鑰儲存在etc/key/campaign/private.key中。 您必須在etc/key下建立名為campaign的資料夾。
 * [提供對服務使用者「資料」之促銷活動資料夾的讀取存取權。](http://localhost:4502/useradmin)
+
+## 後續步驟
+
+[產生JWT和存取權杖](partone.md)
