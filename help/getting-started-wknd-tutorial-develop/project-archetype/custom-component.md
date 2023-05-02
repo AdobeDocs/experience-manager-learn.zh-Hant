@@ -11,9 +11,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: 434f56e143bc0f969723de48abd26d49a308af9b
 workflow-type: tm+mt
-source-wordcount: '4066'
+source-wordcount: '4061'
 ht-degree: 0%
 
 ---
@@ -439,13 +439,13 @@ Byline Sling模型需仰賴AEM提供的數個Java™ API。 這些API可透過 `
 
    自WKND源的Java™包以來 `com.adobe.aem.guides.wknd.core.models` 聲明版本 `1.0.0`，且新增了非中斷的公用介面和方法，版本必須增加至 `1.1.0`. 在開啟檔案 `core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java` 和更新 `@Version("1.0.0")` to `@Version("2.1.0")`.
 
-       &quot;
-       @Version(&quot;2.1.0&quot;)
-       package com.adobe.aem.guides.wknd.core.models;
-       
-       import org.osgi.annotation.versioning.Version;
-       &quot;
+   ```
+   @Version("2.1.0")
+   package com.adobe.aem.guides.wknd.core.models;
    
+   import org.osgi.annotation.versioning.Version;
+   ```
+
 每當對此包中的檔案進行更改時， [包版本必須在語義上調整](https://semver.org/). 如果沒有，馬文項目 [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) 檢測無效的包版本並中斷生成。 幸好，失敗時，Maven外掛程式會報告無效的Java™套件版本，以及應該的版本。 更新 `@Version("...")` 違反Java™包的 `package-info.java` 外掛程式建議的版本修正。
 
 ### 署名實作 {#byline-implementation}
