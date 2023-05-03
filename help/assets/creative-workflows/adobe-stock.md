@@ -2,15 +2,15 @@
 title: 搭配Adobe Stock資產使用AEM Assets
 description: AEM可讓使用者直接從AEM搜尋、預覽、儲存及授權Adobe Stock資產。 組織現在可以將其Adobe Stock企業計畫與AEM Assets整合，以確保授權資產現在可廣泛供其創意和行銷專案使用，同時具備AEM強大的資產管理功能。
 feature: Adobe Stock
-version: 6.4, 6.5
+version: 6.5
 topic: Content Management
 role: User
 level: Beginner
 last-substantial-update: 2022-06-26T00:00:00Z
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '975'
 ht-degree: 3%
 
 ---
@@ -107,7 +107,7 @@ AEM 6.4.2可讓使用者直接從AEM搜尋、預覽、儲存及授權Adobe Stock
 ### 其他資源
 
 * [企業股票計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
-* [AEM 6.4 Service Pack 2發行說明](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/sp-release-notes.html?lang=zh-Hant)
+* [AEM 6.4 Service Pack 2發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 * [整合AEM和Adobe Stock](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html)
 * [Adobe I/O主控台整合API](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
 * [Adobe Stock API檔案](https://www.adobe.io/apis/creativecloud/stock/docs.html)

@@ -6,7 +6,7 @@ topics: development
 audience: developer
 doc-type: article
 activity: implement
-version: 6.4,6.5
+version: 6.5
 kt: 4419
 thumbnail: kt-4419.jpg
 topic: Development
@@ -14,7 +14,7 @@ role: User
 level: Beginner
 exl-id: 67a01c41-d284-4518-adb5-21702e22ccfa
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -59,6 +59,6 @@ xdp範本的進階屬性可讓您指定發佈日期、提交處理常式、表�
 
 **提交URL**  — 這是處理HTML5表單提交的URL。 我們將在下一課中介紹此內容。 若未在此指定提交URL，則會叫用預設的提交處理常式，這會將表單資料傳回至瀏覽器。
 
-**HTML呈現配置檔案** - HTML5表單具有「設定檔」的概念，這些設定檔公開為REST端點，以啟用表單範本的行動轉譯。 大多數情況下，預設的呈現配置檔案應足以呈現表單。 如果預設的呈現配置檔案不滿足您的需求，則 [自訂設定檔](https://experienceleague.adobe.com/docs/experience-manager-64/forms/html5-forms/custom-profile.html) 可以建立表單並與表單關聯。
+**HTML呈現配置檔案** - HTML5表單具有「設定檔」的概念，這些設定檔公開為REST端點，以啟用表單範本的行動轉譯。 大多數情況下，預設的呈現配置檔案應足以呈現表單。 如果預設的呈現配置檔案不滿足您的需求，則 [自訂設定檔](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/custom-profile.html) 可以建立表單並與表單關聯。
 
 **預填服務**  — 預填服務通常用於將從後端資料來源擷取的資料填入表單中。

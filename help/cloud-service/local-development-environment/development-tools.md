@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1498'
 ht-degree: 7%
 
 ---
@@ -195,9 +195,9 @@ Visual Studio Code是主要建立前端代碼的前端開發人員的理想選�
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__ 是Java開發的常用IDE，並支援  __[AEM開發人員工具](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ 由Adobe提供的插件，提供用於創作的IDE內GUI，並將JCR內容與本地AEM實例同步。
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ 是Java開發的常用IDE，並支援  __[AEM開發人員工具](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)__ 由Adobe提供的插件，提供用於創作的IDE內GUI，並將JCR內容與本地AEM實例同步。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [下載Eclipse](https://www.eclipse.org/ide/)
-+ [下載Eclipse開發工具](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)
++ [下載Eclipse開發工具](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)

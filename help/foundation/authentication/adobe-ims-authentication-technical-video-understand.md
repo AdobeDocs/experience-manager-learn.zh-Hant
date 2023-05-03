@@ -14,7 +14,7 @@ level: Experienced
 exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
-source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 3%
@@ -50,4 +50,4 @@ Adobe Experience Manager推出AEM例項和Managed Services上AEMAdobeIdentity Ma
 
 ### 在Adobe Experience Manager中套用權限
 
-在Adobe Experience Manager中，從Adobe IMS同步的使用者群組應以新增至的辭彙表示 [AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security.html)，此設定已預先設定適當權限，以在AEM中執行特定任務集。 從Adobe IMS同步的使用者不應直接新增至 [AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security.html).
+在Adobe Experience Manager中，從Adobe IMS同步的使用者群組應以新增至的辭彙表示 [AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)，此設定已預先設定適當權限，以在AEM中執行特定任務集。 從Adobe IMS同步的使用者不應直接新增至 [AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).

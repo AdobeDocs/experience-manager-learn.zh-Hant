@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 10900
 thumbnail: kt-10900.jpeg
-source-git-commit: f02d5e01388ee61228254951b05c37c336423348
+exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 1%
 
 ---
-
 
 # 如何使用AEM React Editable Components v2
 
@@ -33,7 +33,7 @@ AEM提供 [AEM React可編輯元件v2](https://www.npmjs.com/package/@adobe/aem-
 
 ## AEM頁面
 
-AEM React可編輯的元件可與SPA Editor或Remote SPA React應用程式搭配使用。 填入可編輯React元件的內容必須透過延伸 [SPA頁面元件](https://experienceleague.adobe.com/docs/experience-manager-64/developing/headless/spas/spa-page-component.html). AEM元件（對應至可編輯的React元件）必須實作AEM [元件導出器框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)  — 例如 [AEM核心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
+AEM React可編輯的元件可與SPA Editor或Remote SPA React應用程式搭配使用。 填入可編輯React元件的內容必須透過延伸 [SPA頁面元件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html). AEM元件（對應至可編輯的React元件）必須實作AEM [元件導出器框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)  — 例如 [AEM核心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
 
 ## 相依性
@@ -231,6 +231,3 @@ const EditableEmbedding = (props) => {
 // Export as default the mapped EditableEmbedding
 export default MapTo("wknd-examples/components/embedding")(EditableEmbedding);
 ```
-
-
-

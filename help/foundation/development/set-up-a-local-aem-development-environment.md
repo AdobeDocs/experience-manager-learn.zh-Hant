@@ -1,7 +1,7 @@
 ---
 title: 設定本機AEM開發環境
 description: 了解如何為Experience Manager設定本機開發環境。 熟悉本機安裝、Apache Maven、整合開發環境，以及除錯和疑難排解。 使用Eclipse IDE、CRXDE-Lite、Visual Studio代碼和IntelliJ。
-version: 6.4, 6.5
+version: 6.5
 feature: Developer Tools
 topics: development
 activity: develop
@@ -12,7 +12,7 @@ level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 thumbnail: aem-local-dev-env.jpg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '2603'
 ht-degree: 1%
@@ -138,7 +138,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ### [!DNL Eclipse] IDE
 
-此 **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** 是Java™開發中較常用的IDE之一，主要是因為它是開放原始碼， ***免費***! Adobe提供外掛程式， **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**, [!DNL Eclipse] 使用好的GUI更輕鬆地開發，以便將代碼與本地AEM實例同步。 此 [!DNL Eclipse] 對於剛接觸AEM的開發人員，建議使用IDE，這在很大程度上是因為 [!DNL AEM Developer Tools].
+此 **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** 是Java™開發中較常用的IDE之一，主要是因為它是開放原始碼， ***免費***! Adobe提供外掛程式， **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)**, [!DNL Eclipse] 使用好的GUI更輕鬆地開發，以便將代碼與本地AEM實例同步。 此 [!DNL Eclipse] 對於剛接觸AEM的開發人員，建議使用IDE，這在很大程度上是因為 [!DNL AEM Developer Tools].
 
 #### 安裝與設定
 
@@ -194,7 +194,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ### [!DNL CRXDE Lite]
 
-[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html) 是AEM存放庫的瀏覽器檢視。 [!DNL CRXDE Lite] 內嵌於AEM中，可讓開發人員執行標準開發工作，例如編輯檔案、定義元件、對話方塊和範本。 [!DNL CRXDE Lite] is ***not*** 旨在成為完整的開發環境，但作為偵錯工具有效。 [!DNL CRXDE Lite] 在擴充或只是了解程式碼基底以外的產品程式碼時，此功能相當實用。 [!DNL CRXDE Lite] 提供存放庫的強大檢視，以及有效測試及管理權限的方法。
+[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/developing-with-crxde-lite.html) 是AEM存放庫的瀏覽器檢視。 [!DNL CRXDE Lite] 內嵌於AEM中，可讓開發人員執行標準開發工作，例如編輯檔案、定義元件、對話方塊和範本。 [!DNL CRXDE Lite] is ***not*** 旨在成為完整的開發環境，但作為偵錯工具有效。 [!DNL CRXDE Lite] 在擴充或只是了解程式碼基底以外的產品程式碼時，此功能相當實用。 [!DNL CRXDE Lite] 提供存放庫的強大檢視，以及有效測試及管理權限的方法。
 
 [!DNL CRXDE Lite] 應與其他IDE一起用於測試和調試代碼，但絕不作為主要開發工具。 它的語法支援有限，沒有自動完成功能，與原始碼控制管理系統的整合有限。
 

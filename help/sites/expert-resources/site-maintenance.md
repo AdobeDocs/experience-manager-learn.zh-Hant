@@ -4,13 +4,13 @@ seo-title: Your Routine Site Maintenance Guide
 description: 無論您是管理員、作者或開發人員，網站維護都會接觸到AEM Sites例項的各個層面。 使用本指南來確保您的策略已設定好以獲得成功。
 seo-description: Whether you're an admin, author, or developer, site maintenance touches every aspect of your AEM Sites instance. Use this guide to ensure your strategy is set up for success.
 audience: author, marketer, developer
-source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
+exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '1094'
-ht-degree: 1%
+source-wordcount: '1084'
+ht-degree: 2%
 
 ---
-
 
 # 網站維護提示與秘訣
 
@@ -44,23 +44,23 @@ ht-degree: 1%
 
 每個對儲存庫的更新都會建立新的內容修訂。 因此，每次更新時，存放庫的大小都會增加。 為避免儲存庫增長失控，需要清理舊修訂版本以釋放磁碟資源。
 
-#### [Lucene二進位檔清除](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/operations-dashboard.html?lang=en#automated-maintenance-tasks)
+#### [Lucene二進位檔清除](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-dashboard.html#automated-maintenance-tasks)
 
 清除lucene二進位檔，並減少執行中的資料存放區大小需求。
 
-#### [資料儲存垃圾](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/data-store-garbage-collection.html?lang=en)
+#### [資料儲存垃圾](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html)
 
 刪除AEM中的資產時，可能會從節點階層中移除對基礎資料存放區記錄的參考，但資料存放區記錄本身仍會保留。 此未引用的資料儲存記錄會變成「垃圾」，不需要保留。 在存在許多未引用資產的情況下，將這些資產去除、保留空間、優化備份和檔案系統維護效能是有益的。
 
-#### [工作流程清除](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/workflows-administering.html?lang=en)
+#### [工作流程清除](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/workflows-administering.html)
 
 將工作流實例數減到最少會提高工作流引擎的效能，因此您可以定期從儲存庫中清除已完成或正在運行的工作流實例。
 
-#### [審核日誌維護](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/operations-audit-log.html?lang=en)
+#### [審核日誌維護](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html)
 
 符合稽核記錄資格的AEM事件會產生許多封存資料。 由於複製、資產上傳和其他系統活動，此資料可能會隨著時間而快速增長。
 
-#### [安全性](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en)
+#### [安全性](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=zh-Hant)
 
 確保密切遵循安全性檢查清單最佳實務，以確保最安全的AEM例項。
 
@@ -76,11 +76,11 @@ ht-degree: 1%
 
 樣式系統可讓核心元件（甚至自訂元件）的外觀和風格有所改變，供作者自行決定，以建立全新的外觀元件。 這些風格變化通常只涉及前端設計師和知識淵博的作者（通常稱為「超級作者」）
 
-### [啟動](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/launches/overview.html?lang=en)
+### [Launch](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/launches/overview.html?lang=en)
 
 啟動可讓新促銷、銷售或網站的工作完成，而不會影響目前部署的頁面。 此外，作者可以排程自動上線，不需出席或監督，讓作者今天即可完成下週（或下季）的工作，而不需在頁面開發上線的前一天匆忙上線 — 這真的是時代的禮物！)
 
-### [內容片段](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments.html?lang=en)
+### [內容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
 
 內容片段是可自訂的「區塊」資訊，可輕鬆在整個網站上重複使用。 如果需要更改，只需更改原始塊，更新就會顯示在使用它的所有位置 — 立即！
 

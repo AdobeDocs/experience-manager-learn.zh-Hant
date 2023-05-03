@@ -3,15 +3,15 @@ title: 在Windows上安裝AEM Forms的簡化步驟
 description: 在windows上快速輕鬆安裝AEM Forms
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: 6.5
 topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '574'
 ht-degree: 5%
 
 ---
@@ -70,7 +70,7 @@ ht-degree: 5%
    * **sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa。&#42;** **sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.buncycastle。&#42;**
 * 檔案服務必須有這兩個屬性才能運作
 * 儲存sling.properties檔案
-* [下載適當的表單addon套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)
+* [下載適當的表單addon套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)
 * 使用安裝Forms附加套件 [套件管理器。](http://localhost:4502/crx/packmgr/index.jsp)
 * 安裝到軟體包後，需要執行下列步驟
 
@@ -87,4 +87,4 @@ ht-degree: 5%
 4. 儲存變更。
 
 恭喜!!! 您現在已在系統上安裝並設定AEM Forms。
-視您的需求而定，您可以設定  [Reader擴充功能](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=en) 或 [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-64/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=zh-Hant) 伺服器
+視您的需求而定，您可以設定  [Reader擴充功能](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) 或 [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) 伺服器

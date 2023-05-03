@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%
@@ -78,7 +78,7 @@ WKND Site專案擁有所有必要的設定，因此您可以在完成 [快速設
 
 >[!NOTE]
 >
-> 儲存端點後，您會看到關於造訪安全性控制台的強制回應視窗，如果您想要設定端點的存取權，可讓您調整安全性設定。 不過，安全性權限本身不在本教學課程的討論範圍內。 如需詳細資訊，請參閱 [AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security.html).
+> 儲存端點後，您會看到關於造訪安全性控制台的強制回應視窗，如果您想要設定端點的存取權，可讓您調整安全性設定。 不過，安全性權限本身不在本教學課程的討論範圍內。 如需詳細資訊，請參閱 [AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
 
 ### 查看WKND內容結構和語言根資料夾
 
