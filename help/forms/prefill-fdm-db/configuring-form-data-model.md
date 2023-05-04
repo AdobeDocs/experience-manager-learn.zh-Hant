@@ -9,9 +9,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 5fa4638f-9faa-40e0-a20d-fdde3dbb528a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -85,3 +85,7 @@ ht-degree: 0%
 * 提供有效的empID，然後按一下 _測試_
 * 您應該會得到如下方螢幕擷取畫面所示的結果
 * ![test-fdm](assets/test-form-data-model.png)
+
+## 後續步驟
+
+[從URL獲取empID](./get-request-parameter.md)

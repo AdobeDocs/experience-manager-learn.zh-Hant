@@ -7,7 +7,7 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 3%
@@ -45,10 +45,10 @@ ht-degree: 3%
    + [階層式下拉式清單](some-useful-integrations/geonames-org.md)
    + [與ServiceNow整合](some-useful-integrations/service-now.md)
 + 建立OSGi捆綁包 {#creating-your-first-osgi-bundle}
-   + [設定您的環境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
-   + [建立OSGi服務](creating-your-first-osgi-bundle/create-osgi-service.md)
-   + [建立Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
-   + [包括第三方套件組合](creating-your-first-osgi-bundle/include-third-party-jars.md)
+   + [1 — 設定您的環境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
+   + [2 — 建立OSGi服務](creating-your-first-osgi-bundle/create-osgi-service.md)
+   + [3 — 建立Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
+   + [4 — 包括第三方套件組合](creating-your-first-osgi-bundle/include-third-party-jars.md)
 + 最適化表單 {#adaptive-forms}
    + [在Windows上安裝AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [在Linux上安裝32位元套件](adaptive-forms/installing-aem-form-on-linux.md)
@@ -101,16 +101,16 @@ ht-degree: 3%
    + [使用Salesforce的表單資料模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [動態新增項目至Choice元件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
 + 選取並組合DAM資料夾內容{#select-dam-folder-content}
-   + [簡介](display-and-assemble-dam-folder-contents/introduction.md)
-   + [填充選擇組](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
-   + [組合選取的資產](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
-   + [在本機部署資產](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
+   + [1 — 導言](display-and-assemble-dam-folder-contents/introduction.md)
+   + [2 — 填充選擇組](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
+   + [3 — 組合選取的資產](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
+   + [4 — 在本機部署資產](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
 + 使用表單資料模型預先填寫最適化表單{#prefill-fdm-db}
-   + [簡介](prefill-fdm-db/introduction.md)
-   + [建立資料庫表](prefill-fdm-db/create-database-tables.md)
-   + [設定表單資料模型](prefill-fdm-db/configuring-form-data-model.md)
-   + [取得要求參數](prefill-fdm-db/get-request-parameter.md)
-   + [建立最適化表單](prefill-fdm-db/create-adaptive-form.md)
+   + [1 — 導言](prefill-fdm-db/introduction.md)
+   + [2 — 建立資料庫表](prefill-fdm-db/create-database-tables.md)
+   + [3 — 設定表單資料模型](prefill-fdm-db/configuring-form-data-model.md)
+   + [4 — 取得要求參數](prefill-fdm-db/get-request-parameter.md)
+   + [5 — 建立最適化表單](prefill-fdm-db/create-adaptive-form.md)
 + UI提示與秘訣{#ui-tips-and-tricks}
    + [切換密碼欄位文字](ui-tips-tricks/toggle-password.md)
    + [空間工具欄按鈕](ui-tips-tricks/toolbar-buttons.md)
@@ -118,14 +118,14 @@ ht-degree: 3%
    + [將圖示新增至導覽標籤](ui-tips-tricks/active-complete.md)
    + [自動完成欄位](ui-tips-tricks/auto-complete.md)
 + 自訂收件匣{#inbox-customization}
-   + [簡介](inbox-customization/introduction.md)
-   + [新增自訂欄](inbox-customization/add-married-column.md)
-   + [使用Sightly範本](inbox-customization/use-sightly-template.md)
+   + [1 — 導言](inbox-customization/introduction.md)
+   + [2 — 新增自訂欄](inbox-customization/add-married-column.md)
+   + [3 — 使用微型範本](inbox-customization/use-sightly-template.md)
 + 電子郵件表單附件{#zipping-form-attachments}
-   + [簡介](zipping-form-attachments/introduction.md)
-   + [郵遞區號表單附件](zipping-form-attachments/custom-process-step.md)
-   + [電子郵件表單附件](zipping-form-attachments/populating-list-of-documents.md)
-   + [測試解決方案](zipping-form-attachments/test.md)
+   + [1 — 導言](zipping-form-attachments/introduction.md)
+   + [2 — 郵遞區號表單附件](zipping-form-attachments/custom-process-step.md)
+   + [3 — 電子郵件表單附件](zipping-form-attachments/populating-list-of-documents.md)
+   + [4 — 測試解決方案](zipping-form-attachments/test.md)
 + 儲存和擷取最適化表單{#store-and-retrieve-af-with-2fa}
    + [簡介](store-and-retrieve-af-with-2fa/introduction.md)
    + [配置資料源](store-and-retrieve-af-with-2fa/configure-data-source.md)

@@ -7,9 +7,10 @@ topic: Development
 role: User
 level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
-source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
+exl-id: 29f56d13-c2e2-4bc2-bfdc-664c848dd851
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -113,3 +114,7 @@ function getDAMFolderAssets(damFolder) {
 ![set-options](assets/set-options-newsletter.png)
 
 我們正在叫用名為 **getDAMFolderAssets** 並傳遞DAM資料夾資產的路徑以在表單中列出。
+
+## 後續步驟
+
+[組合選取的資產](./assemble-selected-newsletters.md)

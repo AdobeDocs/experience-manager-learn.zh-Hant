@@ -1,31 +1,31 @@
 ---
 title: 填入清單變數的自訂程式步驟
 description: 填入文檔和字串類型清單變數的自定義流程步驟
-feature: 工作流程
-topic: 開發
+feature: Workflow
+topic: Development
 version: 6.5
 role: Developer
 level: Beginner
 kt: kt-8063
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '167'
 ht-degree: 1%
 
 ---
 
-
 # 自訂處理步驟
 
 
-已實作自訂程式步驟，以填入「陣列清單」工作流程變數。 如果您不熟悉如何建立OSGi套件組合，請[遵循以下指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+已實作自訂程式步驟，以使用附件和附件名稱填入「陣列清單」類型的工作流程變數。 然後，此變數會用於「傳送電子郵件」工作流程元件。 如果您不熟悉如何建立OSGi捆綁包，請 [遵循這些指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
 自訂程式步驟中的程式碼會執行下列動作
 
 * 在裝載資料夾下查詢所有適用性表單附件。 資料夾名稱會作為程式引數傳遞至程式步驟。
 
-* 填入`listOfDocuments`工作流程變數
-* 填入`attachmentNames`工作流程變數
+* 填入 `listOfDocuments` 工作流程變數
+* 填入 `attachmentNames` 工作流程變數
 * 設定工作流程變數的值(`no_of_attachments`)
 
 ```java
@@ -112,6 +112,10 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 >[!NOTE]
 >
 > 請務必在工作流程中定義下列變數，讓程式碼正常運作
-> *listOfDocuments* - ArrayList of Documents類型的變數
-> *attachmentNames* — 字串ArrayList類型的變數
-> *no_of_attachments* — 雙精度型變數
+> *listOfDocuments*  — 文檔類型的變數ArrayList of Documents
+> *attachmentNames*  — 字串類型的變數ArrayList
+> *no_of_attachments*  — 雙重類型變數
+
+## 後續步驟
+
+[在本地系統上測試解決方案](./test.md)

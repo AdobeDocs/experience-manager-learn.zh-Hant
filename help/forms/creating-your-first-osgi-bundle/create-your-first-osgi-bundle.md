@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
 last-substantial-update: 2021-04-23T00:00:00Z
-source-git-commit: 381812397fa7d15f6ee34ef85ddf0aa0acc0af42
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '672'
 ht-degree: 1%
 
 ---
@@ -119,3 +119,8 @@ Launch **Eclipse**
 * 執行命令 `mvn clean install -PautoInstallBundle`
 上述命令會建置套件並安裝於上執行的AEM伺服器中 `http://localhost:4502`. 此套件也可在以下位置的檔案系統上使用：
    `C:\AEMFormsBundles\mysite\core\target` 可透過 [Felix Web Console](http://localhost:4502/system/console/bundles)
+
+## 後續步驟
+
+[建立OSGi服務](./create-osgi-service.md)
+
