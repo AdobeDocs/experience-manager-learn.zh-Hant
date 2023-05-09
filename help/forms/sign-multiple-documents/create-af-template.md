@@ -13,10 +13,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: c6e0fb92-28c1-4025-85ef-b99bad46f07a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 0%
+source-wordcount: '120'
+ht-degree: 2%
 
 ---
 
@@ -30,6 +30,10 @@ ht-degree: 0%
 [您可以依照本文所述，了解建立最適化表單範本和頁面元件的程式](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en#storing-and-retrieving-form-data)
 
 
-## 資產
+## Assets
 
 本教學課程中使用的範本和頁面元件可以是 [從此處下載](assets/sign-multiple-forms-template.zip)
+
+## 後續步驟
+
+[選取要由使用者簽署的表單](./create-initial-form.md)

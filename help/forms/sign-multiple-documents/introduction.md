@@ -9,10 +9,10 @@ role: Developer
 level: Experienced
 exl-id: 0260d4b6-8615-4d78-a920-b36766a0f8e9
 last-substantial-update: 2021-07-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 2%
+source-wordcount: '125'
+ht-degree: 4%
 
 ---
 
@@ -33,3 +33,7 @@ ht-degree: 2%
 * AEM/AEM Forms的相關經驗
 
 依照本教學課程並安裝資產，前提是您有可簽署多個表單的有效解決方案。
+
+## 後續步驟
+
+[配置資料庫備份的資料源 ](./configure-data-source.md)

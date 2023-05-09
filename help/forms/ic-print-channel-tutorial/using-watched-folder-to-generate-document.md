@@ -1,10 +1,10 @@
 ---
 title: 使用觀看的資料夾產生列印管道檔案
-seo-title: 使用觀看的資料夾產生列印管道檔案
+seo-title: Generating Print Channel Documents Using Watched Folder
 description: 這是建立打印管道第一個互動式通訊檔案的多步驟教學課程的10部分。 在本部分，我們將使用觀看的資料夾機制生成打印渠道文檔。
-seo-description: 這是建立打印管道第一個互動式通訊檔案的多步驟教學課程的10部分。 在本部分，我們將使用觀看的資料夾機制生成打印渠道文檔。
+seo-description: This is part 10 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will generate print channel documents using the watched folder mechanism.
 uuid: 9e39f4e3-1053-4839-9338-09961ac54f81
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,16 +12,16 @@ activity: implement
 version: 6.4,6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 9bb05c94-2a7b-4149-b567-186eb08b1c66
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
-
 
 # 使用觀看的資料夾產生列印管道檔案
 
@@ -31,11 +31,11 @@ ht-degree: 0%
 
 在AEM中設定觀看資料夾時，會關聯將檔案放入觀看資料夾時執行的ECMA指令碼或java程式碼。 本文將重點介紹ECMA指令碼，該指令碼將生成打印通道文檔並將其保存到檔案系統中。
 
-觀看的資料夾設定和ECMA指令碼是您在本教學課程[開頭匯入的資產的一部分](introduction.md)
+監看的資料夾設定和ECMA指令碼是您在匯入的 [本教學課程的開始](introduction.md)
 
 拖放至監看資料夾的輸入檔案具有下列結構。 ECMA指令碼讀取帳號，並為每個帳戶生成打印渠道文檔。
 
-有關生成文檔的ECMA指令碼的詳細資訊，請[參閱本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+有關生成文檔的ECMA指令碼的詳細資訊， [請參閱本文章](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 ```xml
 <accountnumbers>
@@ -78,6 +78,6 @@ ht-degree: 0%
 
 * 按照ECMA指令碼中的指定，在保存位置檢查pdf檔案。
 
+## 後續步驟
 
-
-
+[在表單提交時開啟代理ui](./opening-agent-ui-on-form-submission.md)

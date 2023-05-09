@@ -14,13 +14,13 @@ discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: 0dd8a430-9a4e-4dc7-ad75-6ad2490430f2
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 0%
+source-wordcount: '349'
+ht-degree: 1%
 
 ---
-
 
 # 配置報廢展望面板{#configuring-retirement-outlook-panel}
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 * 選取「鉛筆」圖示以編輯預設文字。
 
-* 將預設文本替換為「**Your Retimeting Incement Outlook」**
+* 將預設文字取代為「**你的退休收入前景」**
 
 **配置RightPanel目標區域**
 
@@ -54,13 +54,13 @@ ht-degree: 0%
 
 * 選取「鉛筆」圖示以編輯預設文字。
 
-* 將預設文本替換為「**估計每月退休收入」**
+* 將預設文字取代為「**月退休收入估計」**
 
 ## 添加退休收入展望文檔片段 {#add-retirement-income-outlook-document-fragment}
 
 * 按一下「資產」圖示，然後套用篩選器以顯示「檔案片段」類型的資產。 將RetirementIncomeOutlook文檔片段拖放到「左面板」目標區域。
 
-* 有關將文檔片段添加到內容區域，可以將[引用到此頁](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html)。
+* 您可以參考 [到本頁](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) 新增檔案片段至內容區域時。
 
 ## 添加估計月收入表 {#adding-estimated-monthly-income-chart}
 
@@ -74,6 +74,6 @@ ht-degree: 0%
 
 ![forms65](assets/estimatedmonthlyincomechart65.PNG)
 
+## 後續步驟
 
-
-
+[配置餅圖](./parteleven.md)

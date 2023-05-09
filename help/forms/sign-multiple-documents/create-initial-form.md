@@ -1,24 +1,24 @@
 ---
 title: 建立初始表單以觸發流程
 description: 建立初始表單以觸發電子郵件通知以啟動簽名過程。
-feature: 適用性表單
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: 開發
+topic: Development
 role: User
 level: Intermediate
 kt: 6892
 thumbnail: 6892.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: d7c55dc8-d886-4629-bb50-d927308d12e3
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '177'
 ht-degree: 5%
 
 ---
 
-
 # 建立初始表單
 
-初始表單（再融資表單）用於通過觸發&#x200B;**Sign Multiple Forms** AEM工作流來簽署多個表單。 您可以輸入您選擇的值，但請確定已將下列欄位新增至表單中。
+初始表單（再融資表單）用於通過觸發 **簽署多個Forms** AEM工作流程。 您可以輸入您選擇的值，但請確定已將下列欄位新增至表單中。
 
 | 欄位類型 | 名稱 | 用途 | 隱藏 | 預設值 |
 | ------------------------|---------------------------------------|--------------------|--------|----------------- |
@@ -28,14 +28,13 @@ ht-degree: 5%
 | TextField | customerEmail | 要發送通知的客戶電子郵件 | N |
 | CheckBox | formsToSign | 項目會識別套件中的表單 | N |
 
-需要設定初始表單，以觸發名為&#x200B;**signmultipleforms**的AEM工作流程
-請確定「資料檔案路徑」已設為**Data.xml**。 當范常式式碼在表單提交程式的裝載中尋找名為Data.xml的檔案時，這是很重要的。
+需要設定初始表單，以觸發名為的AEM工作流程 **多重表單**
+確認資料檔案路徑已設為 **Data.xml**. 當范常式式碼在表單提交程式的裝載中尋找名為Data.xml的檔案時，這是很重要的。
 
-## 資產
+## Assets
 
-初始表單（再融資表單）可從此處下載[](assets/refinance-form.zip)
+初始表單（再融資表單）可以是 [從此處下載](assets/refinance-form.zip)
 
+## 後續步驟
 
-
-
-
+[建立要用於簽名的表單](./create-forms-for-signing.md)

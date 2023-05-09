@@ -1,20 +1,20 @@
 ---
 title: 自訂摘要元件
 description: 擴充摘要步驟元件，加入導覽至套件中下一個表單的功能。
-feature: 適用性表單
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6894
 thumbnail: 6894.jpg
-topic: 開發
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: fb68579d-241c-414d-92f4-13194f4d1923
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 2%
+source-wordcount: '185'
+ht-degree: 1%
 
 ---
-
 
 # 自訂摘要步驟
 
@@ -31,9 +31,9 @@ ht-degree: 2%
 ![component-prop](assets/componentprop.PNG)
 
 我們已新增按鈕，可導覽至下一個表單以進行簽署
-![template-code](assets/template-code.PNG)
+![範本代碼](assets/template-code.PNG)
 
-summary.jsp的代碼如下。 它參考類別id **getnextform**&#x200B;所識別的用戶端程式庫
+summary.jsp的代碼如下。 它參考類別id所識別的用戶端程式庫 **getnextform**
 
 ```java
 <%--
@@ -44,8 +44,10 @@ summary.jsp的代碼如下。 它參考類別id **getnextform**&#x200B;所識別
 <ui:includeClientLib categories="getnextform"/>
 ```
 
-## 資產
+## Assets
 
-自訂摘要元件可從此處[下載](assets/custom-summary-step.zip)
+自訂摘要元件可以是 [從此處下載](assets/custom-summary-step.zip)
 
+## 後續步驟
 
+[取得下一份申請表](./create-client-lib.md)

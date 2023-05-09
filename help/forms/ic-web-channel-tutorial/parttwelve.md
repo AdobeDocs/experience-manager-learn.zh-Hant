@@ -1,26 +1,26 @@
 ---
 title: 設定Web通道檔案的傳送
-seo-title: 設定Web通道檔案的傳送
+seo-title: Setting up the delivery of web channel document
 description: 這是建立第一個互動式通訊檔案的多步驟教學課程的最終部分。 在本部分，我們會透過電子郵件來查看Web通道檔案的傳送。
-seo-description: 這是建立第一個互動式通訊檔案的多步驟教學課程的最終部分。 在本部分，我們會透過電子郵件來查看Web通道檔案的傳送。
+seo-description: This is the final part of a multistep tutorial for creating your first interactive communications document. In this part, we look at the delivery of web channel document via email.
 uuid: c1066600-1abd-4401-b04f-b93c28603cc7
-feature: 互動式通訊
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
-topic: 開發
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 510d1782-59b9-41a6-a071-a16170f2cd06
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
-
 
 # 設定Web通道檔案的傳送 {#setting-up-the-delivery-of-web-channel-document}
 
@@ -73,4 +73,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->請查看crx中的&#x200B;**/apps/AEMForms/fetchad/GET.jsp**&#x200B;檔案。 請確保String變數webChannelDocument指向有效的通信文檔路徑。
+>請看 **/apps/AEMForms/fetchad/GET.jsp** 檔案。 請確保String變數webChannelDocument指向有效的通信文檔路徑。
+
+## 後續步驟
+
+[設定電子郵件傳送](../interactive-communications/delivery-of-web-channel-document-tutorial-use.md)

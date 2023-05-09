@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
 source-wordcount: '1804'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -127,17 +127,17 @@ ht-degree: 3%
    + [3 — 電子郵件表單附件](zipping-form-attachments/populating-list-of-documents.md)
    + [4 — 測試解決方案](zipping-form-attachments/test.md)
 + 儲存和擷取最適化表單{#store-and-retrieve-af-with-2fa}
-   + [簡介](store-and-retrieve-af-with-2fa/introduction.md)
-   + [配置資料源](store-and-retrieve-af-with-2fa/configure-data-source.md)
-   + [儲存表單附件](store-and-retrieve-af-with-2fa/store-form-attachments.md)
-   + [儲存表單資料](store-and-retrieve-af-with-2fa/store-form-data.md)
-   + [建立Servlet](store-and-retrieve-af-with-2fa/create-servlet.md)
-   + [使用儲存的資料轉譯表單](store-and-retrieve-af-with-2fa/retrieve-saved-form.md)
-   + [建立客戶端庫](store-and-retrieve-af-with-2fa/create-client-lib.md)
-   + [與OTP服務整合](store-and-retrieve-af-with-2fa/verify-users-with-otp.md)
-   + [建立主表單](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
-   + [建立MyAccount表單](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
-   + [部署範例](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
+   + [1 — 導言](store-and-retrieve-af-with-2fa/introduction.md)
+   + [2 — 設定資料來源](store-and-retrieve-af-with-2fa/configure-data-source.md)
+   + [3 — 儲存表單附件](store-and-retrieve-af-with-2fa/store-form-attachments.md)
+   + [4 — 儲存表單資料](store-and-retrieve-af-with-2fa/store-form-data.md)
+   + [5 — 建立Servlet](store-and-retrieve-af-with-2fa/create-servlet.md)
+   + [6 — 使用儲存的資料轉譯表單](store-and-retrieve-af-with-2fa/retrieve-saved-form.md)
+   + [7 — 建立客戶端庫](store-and-retrieve-af-with-2fa/create-client-lib.md)
+   + [8 — 與OTP服務整合](store-and-retrieve-af-with-2fa/verify-users-with-otp.md)
+   + [9 — 建立主表單](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
+   + [10 — 建立MyAccount表單](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
+   + [11 — 部署範例](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
 + 將提交的資料匯出為CSV格式{#export-submitted-data-csv-format}
    + [導出提交的資料](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 表單{#html5-forms}
@@ -157,17 +157,17 @@ ht-degree: 3%
    + [設定轉換的最適化表單](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [搭配Acrobat Sign使用XDP範本](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
 + 簽署多個Forms{#sign-multiple-documents}
-   + [簡介](sign-multiple-documents/introduction.md)
-   + [配置資料源](sign-multiple-documents/configure-data-source.md)
-   + [建立OSGi服務](sign-multiple-documents/create-osgi-service.md)
-   + [建立主要工作流程](sign-multiple-documents/create-main-workflow.md)
-   + [更新簽名狀態工作流](sign-multiple-documents/update-signature-status.md)
-   + [自訂摘要元件](sign-multiple-documents/customize-summary-component.md)
-   + [建立客戶端庫](sign-multiple-documents/create-client-lib.md)
-   + [建立表單範本](sign-multiple-documents/create-af-template.md)
-   + [建立初始表單](sign-multiple-documents/create-initial-form.md)
-   + [建立簽名表單](sign-multiple-documents/create-forms-for-signing.md)
-   + [測試解決方案](sign-multiple-documents/testing-and-trouble-shooting.md)
+   + [1 — 導言](sign-multiple-documents/introduction.md)
+   + [2 — 配置資料源](sign-multiple-documents/configure-data-source.md)
+   + [3 — 建立OSGi服務](sign-multiple-documents/create-osgi-service.md)
+   + [4 — 建立主要工作流程](sign-multiple-documents/create-main-workflow.md)
+   + [5 — 更新簽名狀態工作流](sign-multiple-documents/update-signature-status.md)
+   + [6 — 自訂摘要元件](sign-multiple-documents/customize-summary-component.md)
+   + [7 — 建立客戶端庫](sign-multiple-documents/create-client-lib.md)
+   + [8 — 建立表單範本](sign-multiple-documents/create-af-template.md)
+   + [9 — 建立初始表單](sign-multiple-documents/create-initial-form.md)
+   + [10 — 建立簽署表單](sign-multiple-documents/create-forms-for-signing.md)
+   + [11 — 測試解決方案](sign-multiple-documents/testing-and-trouble-shooting.md)
 + 自訂工作流程步驟{#custom-workflow-steps}
    + [從xml文檔中提取節點](custom-workflow-steps/extract-xml-node.md)
    + [將文檔保存到檔案系統](custom-workflow-steps/write-payload-document.md)
@@ -185,9 +185,9 @@ ht-degree: 3%
    + [表單資料模型變數](variables-aem-workflow/form-data-model.md)
    + [AEM工作流程中的規則編輯器](variables-aem-workflow/part5.md)
 + 審核表單資料{#review-form-data}
-   + [簡介](review-form-data/introduction.md)
-   + [建立元件 ](review-form-data/create-component.md)
-   + [部署資產](review-form-data/deploy-on-your-system.md)
+   + [1 — 導言](review-form-data/introduction.md)
+   + [2 — 建立元件](review-form-data/create-component.md)
+   + [3 — 部署資產](review-form-data/deploy-on-your-system.md)
 + 在MySQL資料庫中儲存和檢索表單資料{#storing-and-retrieving-form-data}
    + [簡介](storing-retrieving-form-data/introduction.md)
    + [配置資料源](storing-retrieving-form-data/part1.md)
@@ -260,18 +260,18 @@ ht-degree: 3%
    + [實用工具服務](document-services/useful-utility-services.md)
 + 用於打印通道的互動式通信
 {#ic-print-channel-tutorial}
-   + [簡介](ic-print-channel-tutorial/introduction.md)
-   + [設定Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
-   + [建立資料來源](ic-print-channel-tutorial/create-data-source.md)
-   + [建立表單資料模型](ic-print-channel-tutorial/create-form-data-model.md)
-   + [使用Forms Designer建立XDP版面](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
-   + [建立文檔片段](ic-print-channel-tutorial/create-document-fragment.md)
-   + [建立打印渠道文檔](ic-print-channel-tutorial/create-print-channel-document.md)
-   + [新增內容至目標區域](ic-print-channel-tutorial/add-content-to-target-areas.md)
-   + [配置折線圖](ic-print-channel-tutorial/configuring-line-chart.md)
-   + [添加表以打印通道](ic-print-channel-tutorial/adding-table-to-print-channel.md)
-   + [使用監看資料夾生成文檔](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
-   + [在表單提交時開啟代理程式UI](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
+   + [1 — 導言](ic-print-channel-tutorial/introduction.md)
+   + [2 — 設定Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
+   + [3 — 建立資料來源](ic-print-channel-tutorial/create-data-source.md)
+   + [4 — 建立表單資料模型](ic-print-channel-tutorial/create-form-data-model.md)
+   + [5 — 使用Forms Designer建立XDP版面](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
+   + [6 — 建立檔案片段](ic-print-channel-tutorial/create-document-fragment.md)
+   + [7 — 建立打印渠道文檔](ic-print-channel-tutorial/create-print-channel-document.md)
+   + [8 — 新增內容至目標區域](ic-print-channel-tutorial/add-content-to-target-areas.md)
+   + [9 — 設定折線圖](ic-print-channel-tutorial/configuring-line-chart.md)
+   + [10 — 新增表格至列印管道](ic-print-channel-tutorial/adding-table-to-print-channel.md)
+   + [11 — 使用監看資料夾產生檔案](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
+   + [12 — 在表單提交時開啟代理程式UI](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
 + 保存和檢索草稿信函 {#store-retrieve-letters}
    + [簡介](store-retrieve-letters/introduction.md)
    + [實施](store-retrieve-letters/save-draft-letters.md)
@@ -287,19 +287,19 @@ ht-degree: 3%
    + [自訂文字編輯器](interactive-communications/customize-text-editor.md)
 
 + Web頻道互動式通訊 {#ic-web-channel-tutorial}
-   + [簡介](ic-web-channel-tutorial/introduction.md)
-   + [設定Tomcat](ic-web-channel-tutorial/partone.md)
-   + [建立資料來源](ic-web-channel-tutorial/parttwo.md)
-   + [建立表單資料模型](ic-web-channel-tutorial/partthree.md)
-   + [建立Web渠道文檔模板](ic-web-channel-tutorial/partfour.md)
-   + [建立檔案片段](ic-web-channel-tutorial/partfive.md)
-   + [建立互動式通信文檔](ic-web-channel-tutorial/partsix.md)
-   + [新增文字和影像](ic-web-channel-tutorial/partseven.md)
-   + [設定折線圖](ic-web-channel-tutorial/parteight.md)
-   + [配置表](ic-web-channel-tutorial/partnine.md)
-   + [配置列圖](ic-web-channel-tutorial/partten.md)
-   + [配置餅圖](ic-web-channel-tutorial/parteleven.md)
-   + [傳送Web頻道檔案](ic-web-channel-tutorial/parttwelve.md)
+   + [1 — 導言](ic-web-channel-tutorial/introduction.md)
+   + [2 — 設定Tomcat](ic-web-channel-tutorial/partone.md)
+   + [3 — 建立資料來源](ic-web-channel-tutorial/parttwo.md)
+   + [4 — 建立表單資料模型](ic-web-channel-tutorial/partthree.md)
+   + [5 — 建立Web渠道文檔模板](ic-web-channel-tutorial/partfour.md)
+   + [6 — 建立檔案片段](ic-web-channel-tutorial/partfive.md)
+   + [7 — 建立互動式通信文檔](ic-web-channel-tutorial/partsix.md)
+   + [8 — 新增文字和影像](ic-web-channel-tutorial/partseven.md)
+   + [9 — 設定折線圖](ic-web-channel-tutorial/parteight.md)
+   + [10 — 配置表](ic-web-channel-tutorial/partnine.md)
+   + [11 — 設定欄圖](ic-web-channel-tutorial/partten.md)
+   + [12 — 配置圓形圖](ic-web-channel-tutorial/parteleven.md)
+   + [13 — 傳送Web頻道檔案](ic-web-channel-tutorial/parttwelve.md)
    + [Web頻道檔案的電子郵件傳送](interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
 
 + 疑難排解 {#troubleshooting}

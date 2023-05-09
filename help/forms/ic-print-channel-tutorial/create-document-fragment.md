@@ -16,9 +16,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 2fe3f950-bc2a-4e91-8d91-00438691727a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -38,3 +38,7 @@ RTF編輯器的直覺性足以讓商務使用者製作文字和插入表單資�
 >[!NOTE]
 >
 >請確定您插入檔案片段的表單資料模型元素是根元素的後代。 例如，在此使用案例中，請確保所選用戶對象的元素是餘額對象的子項
+
+## 後續步驟
+
+[建立打印通道文檔](./create-print-channel-document.md)

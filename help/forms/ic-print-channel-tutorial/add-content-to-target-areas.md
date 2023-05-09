@@ -17,10 +17,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 49080c16-617f-4840-8bb4-7b080fa291c4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 0%
+source-wordcount: '159'
+ht-degree: 1%
 
 ---
 
@@ -37,3 +37,7 @@ ht-degree: 0%
 影片會逐步帶您了解將內容新增至列印頻道檔案中適當目標區域的相關步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22379?quality=12&learn=on)
+
+## 後續步驟
+
+[設定折線圖](./configuring-line-chart.md)

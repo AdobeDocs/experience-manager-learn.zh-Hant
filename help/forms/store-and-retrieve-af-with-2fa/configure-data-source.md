@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: a87ff428-15f7-43c9-ad03-707eab6216a9
-source-git-commit: 30c882da3a89820b5e11bc2902bb92dd0629efe9
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -57,3 +57,7 @@ AEM可透過許多方式啟用與外部資料庫的整合。 資料庫整合最�
 ![get-service](assets/get-service.JPG)
 
 此表單資料模型將用於 **MyAccountForm** 以擷取與應用程式id相關聯的電話號碼。
+
+## 後續步驟
+
+[編寫代碼以保存表單附件](./store-form-attachments.md)

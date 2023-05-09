@@ -10,23 +10,23 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 2bd9fe63-8f42-4b89-95a0-13ade49bc31b
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 0%
+source-wordcount: '75'
+ht-degree: 2%
 
 ---
 
 # 儲存表單資料
 
-下一步是建立一個服務，以在資料庫中插入新行，以儲存自適應表單資料和相關的附件。
-下面的螢幕抓圖顯示資料庫中的一行。
+下一步是建立服務，在資料庫中插入新的列，以儲存最適化表單資料和相關的attachmentsinfo。
+下列螢幕擷取畫面顯示資料庫中的一列。
 
 
-![示例行](assets/sample-row.JPG)
+![範例列](assets/sample-row.JPG)
 
 
-以下代碼在資料庫中插入一行，其中包含相應的資料
+下列程式碼會在資料庫中插入含有適當資料的新列
 
 ```java
 public String storeFormData(String formData, String attachmentsInfo, String telephoneNumber) {
@@ -69,3 +69,8 @@ public String storeFormData(String formData, String attachmentsInfo, String tele
     return randomUUIDString;
 }
 ```
+
+## 後續步驟
+
+[實作儲存並退出](./create-servlet.md)
+
