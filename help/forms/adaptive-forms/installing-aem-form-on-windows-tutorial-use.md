@@ -9,7 +9,7 @@ role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+source-git-commit: 757c8ad251d058bbe48cc3cd354fec533ec4e968
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 5%
@@ -40,10 +40,9 @@ ht-degree: 5%
 
 * 請確定您已安裝適當的JDK
    * AEM 6.2您需要：OracleSE 8 JDK 1.8.x（64位）
-* 
    * AEM 6.3和AEM 6.4，您需要：OracleSE 8 JDK 1.8.x（64位）
-* AEM 6.5您需要JDK 8或JDK 11
-* [官方JDK需求](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=zh-Hant) 此處列出
+   * AEM 6.5您需要JDK 8或JDK 11
+   * [官方JDK需求](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=zh-Hant) 此處列出
 * 請確定JAVA_HOME已設定為指向已安裝的JDK。
    * 要在windows中建立JAVA_HOME變數，請執行以下步驟：
       * 按一下右鍵「My Computer（我的電腦）」並選擇「Properties（屬性）」
@@ -71,20 +70,20 @@ ht-degree: 5%
 * 檔案服務必須有這兩個屬性才能運作
 * 儲存sling.properties檔案
 * [下載適當的表單addon套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)
-* 使用安裝Forms附加套件 [套件管理器。](http://localhost:4502/crx/packmgr/index.jsp)
+* 使用安裝Forms附加套件 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp).
 * 安裝到軟體包後，需要執行下列步驟
 
-       * **確認所有套件組合都處於作用中狀態。 （AEMFD簽名包除外）。**
-       * **所有套件通常需要5分鐘或更長時間才能進入作用中狀態。**
-   
+   * **請確定所有套件都處於作用中狀態。 （AEMFD簽名包除外）。**
+   * **所有套件通常需要5分鐘或更久的時間才能進入作用中狀態。**
+
    * **所有套件組合都生效後（AEMFD簽名套件組合除外），請重新啟動系統以完成AEM Forms安裝**
 
 ## sun.util.calendar包到允許的清單
 
 1. 在您的 [瀏覽器視窗](http://localhost:4502/system/console/configMgr)
-2. 搜索並開啟反序列化防火牆配置： `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
-3. 新增 `sun.util.calendar` 作為新條目 `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
-4. 儲存變更。
+1. 搜索並開啟反序列化防火牆配置： `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
+1. 新增 `sun.util.calendar` 作為新條目 `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
+1. 儲存變更。
 
 恭喜!!! 您現在已在系統上安裝並設定AEM Forms。
 視您的需求而定，您可以設定  [Reader擴充功能](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) 或 [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) 伺服器
