@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
+source-git-commit: 31d6b75f481bbc1a716974b2188a0f4f460c1df6
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '953'
 ht-degree: 22%
 
 ---
@@ -319,3 +319,8 @@ ht-degree: 22%
    + [SPA編輯器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [基於令牌的驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
++ 專家資源 {#expert-resources}
+   + AEM冠軍 {#aem-champions}
+      + [Cloud Manager入門手冊](./expert-resources/onboarding-playbook.md)
+      + [Cloud Manager環境類型](./expert-resources/environment-types.md)
+      + [Cloud Manager UI](./expert-resources/cloud-manager-ui.md)
