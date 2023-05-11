@@ -5,7 +5,7 @@ breadcrumb-title: AEM as a Cloud Service 教學課程
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 31d6b75f481bbc1a716974b2188a0f4f460c1df6
+source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 22%
@@ -287,32 +287,7 @@ ht-degree: 22%
    + 進階{#advanced}
       + [中繼資料背景工作](./asset-compute/advanced/metadata.md)
    + [疑難排解](./asset-compute/troubleshooting.md)
-+ 雲5{#cloud-5}
-   + [簡介](./cloud-5/cloud5-introduction.md)
-   + [第1季](./cloud-5/cloud5-season-1.md)
-   + [第2季](./cloud-5/cloud5-season-2.md)
-   + [AEM CDN第1部分](./cloud-5/cloud5-aem-cdn-part1.md)
-   + [AEM CDN第2部分](./cloud-5/cloud5-aem-cdn-part2.md)
-   + [AEM記錄檔](./cloud-5/cloud5-aem-log-files.md)
-   + [登入Token](./cloud-5/cloud5-getting-login-token-integrations.md)
-   + [雲端Dispatcher](./cloud-5/cloud5-aem-dispatcher-cloud.md)
-   + [移轉1](./cloud-5/cloud5-aem-content-migration-part-1.md)
-   + [移轉2](./cloud-5/cloud5-aem-content-migration-part-2.md)
-   + [Dispatcher驗證器](./cloud-5/cloud5-aem-dispatcher-validator.md)
-   + [搜尋和索引](./cloud-5/cloud5-aem-search-and-indexing.md)
-   + [Adobe應用程式產生器](./cloud-5/cloud5-adobe-app-builder.md)
-   + 第2季{#season-2}
-      + [片段](./cloud-5/season-2/cloud5-experience-v-content-fragments.md)
-      + [Repo Modernizer](./cloud-5/season-2/cloud5-repo-modernizer.md)
-      + [Admin Console](./cloud-5/season-2/cloud5-admin-console.md)
-      + [重點](./cloud-5/season-2/cloud5-repoinit.md)
-      + [Sling作業排程器](./cloud-5/season-2/cloud5-sling-job-scheduler.md)
-      + [修正快取](./cloud-5/season-2/cloud5-fix-your-cache.md)
-      + [修正您的重新寫入](./cloud-5/season-2/cloud5-fix-your-rewrites.md)
-      + [Cloud Manager — 體驗稽核](./cloud-5/season-2/cloud5-mocm-experience-audit.md)
-      + [Cloud Manager — 單元測試](./cloud-5/season-2/cloud5-mocm-unit-tests.md)
-      + [Cloud Manager — 功能測試](./cloud-5/season-2/cloud5-mocm-functional-tests.md)
-+ [AEM Experts系列](./aem-experts-series.md)
+
 + 多步驟Tutorials{#multi-step-tutorials}
    + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
@@ -321,6 +296,32 @@ ht-degree: 22%
    + [基於令牌的驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
 + 專家資源 {#expert-resources}
    + AEM冠軍 {#aem-champions}
-      + [Cloud Manager入門手冊](./expert-resources/onboarding-playbook.md)
-      + [Cloud Manager環境類型](./expert-resources/environment-types.md)
-      + [Cloud Manager UI](./expert-resources/cloud-manager-ui.md)
+      + [Cloud Manager入門手冊](./expert-resources/aem-champions/onboarding-playbook.md)
+      + [Cloud Manager環境類型](./expert-resources/aem-champions/environment-types.md)
+      + [Cloud Manager UI](./expert-resources/aem-champions/cloud-manager-ui.md)
+   + [AEM Experts系列](./expert-resources/expert-series/aem-experts-series.md)
+   + 雲5{#cloud-5}
+      + [簡介](./expert-resources/cloud-5/cloud5-introduction.md)
+      + [第1季](./expert-resources/cloud-5/cloud5-season-1.md)
+      + [第2季](./expert-resources/cloud-5/cloud5-season-2.md)
+      + [AEM CDN第1部分](./expert-resources/cloud-5/cloud5-aem-cdn-part1.md)
+      + [AEM CDN第2部分](./expert-resources/cloud-5/cloud5-aem-cdn-part2.md)
+      + [AEM記錄檔](./expert-resources/cloud-5/cloud5-aem-log-files.md)
+      + [登入Token](./expert-resources/cloud-5/cloud5-getting-login-token-integrations.md)
+      + [雲端Dispatcher](./expert-resources/cloud-5/cloud5-aem-dispatcher-cloud.md)
+      + [移轉1](./expert-resources/cloud-5/cloud5-aem-content-migration-part-1.md)
+      + [移轉2](./expert-resources/cloud-5/cloud5-aem-content-migration-part-2.md)
+      + [Dispatcher驗證器](./expert-resources/cloud-5/cloud5-aem-dispatcher-validator.md)
+      + [搜尋和索引](./expert-resources/cloud-5/cloud5-aem-search-and-indexing.md)
+      + [Adobe應用程式產生器](./expert-resources/cloud-5/cloud5-adobe-app-builder.md)
+      + 第2季{#season-2}
+         + [片段](./expert-resources/cloud-5/season-2/cloud5-experience-v-content-fragments.md)
+         + [Repo Modernizer](./expert-resources/cloud-5/season-2/cloud5-repo-modernizer.md)
+         + [Admin Console](./expert-resources/cloud-5/season-2/cloud5-admin-console.md)
+         + [重點](./expert-resources/cloud-5/season-2/cloud5-repoinit.md)
+         + [Sling作業排程器](./expert-resources/cloud-5/season-2/cloud5-sling-job-scheduler.md)
+         + [修正快取](./expert-resources/cloud-5/season-2/cloud5-fix-your-cache.md)
+         + [修正您的重新寫入](./expert-resources/cloud-5/season-2/cloud5-fix-your-rewrites.md)
+         + [Cloud Manager — 體驗稽核](./expert-resources/cloud-5/season-2/cloud5-mocm-experience-audit.md)
+         + [Cloud Manager — 單元測試](./expert-resources/cloud-5/season-2/cloud5-mocm-unit-tests.md)
+         + [Cloud Manager — 功能測試](./expert-resources/cloud-5/season-2/cloud5-mocm-functional-tests.md)
