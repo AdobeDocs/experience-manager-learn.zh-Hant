@@ -7,9 +7,9 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 * 複製URL至影像和回應式檢視器
 * URL的智慧型裁切變體
 
-## Dynamic Media與AEM Sites及任何其他CMS
+## 與AEM Sites搭配使用
 
 >[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
@@ -48,7 +48,7 @@ ht-degree: 0%
 * 使用影像預設集在本機下載
 * 建立和發佈互動式橫幅
 
-## Dynamic Media以建立混合媒體收集和自訂檢視器
+## 建立混合媒體集合
 
 >[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 * 從回轉集、視訊和像片建立混合媒體集
 * 編輯和使用自訂混合媒體檢視器
 
-## Dynamic Media影像預設集
+## 影像預設集
 
 >[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 * 一律使用銳利化
 * 「URL修飾詞」欄位，以新增額外命令來調整影像預設集的大小
 
-## Dynamic Media進階URL修飾元
+## 進階URL修飾元
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
@@ -86,7 +86,7 @@ ht-degree: 0%
 * 裁切至影像路徑
 * 從Photoshop檔案建立文字範本
 
-## Dynamic Media控制JPEG檔案大小（以千位元組為單位）
+## JPEG檔案大小管理
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
@@ -97,13 +97,13 @@ ht-degree: 0%
 
 使用2個命令調整jpeg壓縮設定，使jpeg影像質量與生成的檔案大小（以千位元組為單位）保持平衡，以提高頁面載入速度。 QLT通過調整jpeg壓縮質量設定來定義影像質量。 JPEG大小命令允許您指定使用壓縮需要達到的檔案大小。
 
-## 將CC隱藏式字幕新增至Dynamic Media影片
+## 隱藏式字幕
 
 >[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 借由附加複製URL以指向其他隱藏式字幕檔案檔案web.VTTsidecar檔案（包含任何視訊的CC資訊），輕鬆將隱藏式字幕新增至Dynamic Media視訊。
 
-## 搭配AEM Dynamic Media使用影像銳利化
+## 影像銳利化
 
 此影片說明銳利化影像對維持影像逼真度至關重要的原因，以及如何使用進階設定來製作完美影像。
 

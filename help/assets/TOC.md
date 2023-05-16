@@ -6,10 +6,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 8bb7771effc95c70a9ddeffb1c54a1c2282e06dd
+source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 22%
+source-wordcount: '395'
+ht-degree: 25%
 
 ---
 
@@ -22,14 +22,14 @@ ht-degree: 22%
    + [基線資料夾](configuring/baseline-folders.md)
    + [基線權限](configuring/baseline-permissions.md)
    + [標記](configuring/tagging.md)
-   + [中繼資料結構](configuring/metadata-schemas.md)
+   + [中繼資料結構描述](configuring/metadata-schemas.md)
    + [中繼資料設定檔](configuring/metadata-profiles.md)
    + [中繼資料資料夾結構](configuring/metadata-folder-schemas.md)
    + [Assets管理員搜尋邊欄](configuring/assets-admin-search-rail.md)
    + [處理設定檔](configuring/processing-profiles.md)
    + [自動開始工作流程](configuring/auto-start-workflows.md)
 
-+ 製作{#authoring}
++ 編寫 {#authoring}
    + [導覽](./authoring/navigation.md)
    + [基本操作](./authoring/basic-operations.md)
    + [中繼資料](./authoring/metadata.md)
@@ -76,15 +76,15 @@ ht-degree: 22%
       + [在本機AEM上設定資產共用公域](./sharing/asset-share-commons-technical-video-setup.md)
       + [命名資產共用公域](./sharing/asset-share-commons-feature-video-theming.md)
       + [資產共用共用公域資產套件](./sharing/asset-share/asset-share-commons-asset-kits.md)
-   + [連線資產](./sharing/connected-assets.md)
+   + [連接的資產](./sharing/connected-assets.md)
 
 
 + 與創意工作流程整合{#creative-workflows}
    + [AEM案頭應用程式](./creative-workflows/aem-desktop-app.md)
-   + [Adobe資產連結](./creative-workflows/adobe-asset-link.md)
+   + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
-+ Adobe資產連結{#adobe-asset-link}
++ Adobe Asset Link{#adobe-asset-link}
    + [設定](./adobe-asset-link/setup.md)
    + [存取Adobe資產連結](./adobe-asset-link/launch-adobe-asset-link.md)
    + [面板概述](./adobe-asset-link/panel-overview.md)
@@ -104,21 +104,26 @@ ht-degree: 22%
 
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media概述](dynamic-media/dynamic-media-overview-feature-video-use.md)
-   + [智慧型裁切](dynamic-media/smart-crop-feature-video-use.md)
-   + [體驗片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
-   + [互動視訊](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
-   + [視訊播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
-   + [360段視頻](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
-   + [自訂影片縮圖](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
-   + [影像銳利化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
-   + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + [檢視器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
-   + [全景和垂直影像檢視器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
-   + [具有Adobe Analytics的檢視器](dynamic-media/dynamic-media-viewer-extension-use.md)
+   + [影像修飾元和智慧型影像](dynamic-media/dynamic-media-snapshot.md)
+   + 影像 {#images}
+      + [智慧型裁切](dynamic-media/smart-crop-feature-video-use.md)
+      + [影像銳利化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
+      + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
+   + 搭配AEM Sites使用 {#dm-with-aem-sites}
+      + [體驗片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+      + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
+   + 影片 {#video}
+      + [互動視訊](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
+      + [視訊播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
+      + [360段視頻](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
+      + [自訂影片縮圖](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
+      + [Dynamic Media智慧型裁切影片](dynamic-media/dynamic-media-smart-crop-video.md)
+   + 檢視器 {#viewers}
+      + [檢視器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
+      + [全景和垂直影像檢視器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
+      + [具有Adobe Analytics的檢視器](dynamic-media/dynamic-media-viewer-extension-use.md)
    + [Dynamic Media Classic案頭應用程式](dynamic-media/dynamic-media-classic-desktop-application.md)
    + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + [Dynamic Media智慧型裁切影片](dynamic-media/dynamic-media-smart-crop-video.md)
-   + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
 
    + 教學課程 {#tutorials}
       + [建立轉盤集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
