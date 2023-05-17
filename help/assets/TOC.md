@@ -6,9 +6,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
+source-git-commit: a864f4f19135f7d6fb345a76f1d5c7dc3ee9a9dc
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '394'
 ht-degree: 25%
 
 ---
@@ -104,14 +104,12 @@ ht-degree: 25%
 
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media概述](dynamic-media/dynamic-media-overview-feature-video-use.md)
-   + [影像修飾元和智慧型影像](dynamic-media/dynamic-media-snapshot.md)
+   + [Dynamic Media Classic案頭應用程式](dynamic-media/dynamic-media-classic-desktop-application.md)
    + 影像 {#images}
+      + [Dynamic Media快照](dynamic-media/dynamic-media-snapshot.md)
       + [智慧型裁切](dynamic-media/smart-crop-feature-video-use.md)
       + [影像銳利化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + 搭配AEM Sites使用 {#dm-with-aem-sites}
-      + [體驗片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
-      + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
    + 影片 {#video}
       + [互動視訊](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
       + [視訊播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
@@ -122,9 +120,11 @@ ht-degree: 25%
       + [檢視器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [全景和垂直影像檢視器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
       + [具有Adobe Analytics的檢視器](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + [Dynamic Media Classic案頭應用程式](dynamic-media/dynamic-media-classic-desktop-application.md)
-   + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-
+   + 3D {#3d}
+      + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
+   + 搭配AEM Sites使用 {#dm-with-aem-sites}
+      + [體驗片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+      + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
    + 教學課程 {#tutorials}
       + [建立轉盤集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [建立影像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
@@ -140,6 +140,7 @@ ht-degree: 25%
       + [刪除Dynamic Media設定](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [在Dynamic Media Classic應用程式中下載資產](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
+
 
 + Workfront整合{#workfront}
    + 增強連接器{#enhanced-connector}
