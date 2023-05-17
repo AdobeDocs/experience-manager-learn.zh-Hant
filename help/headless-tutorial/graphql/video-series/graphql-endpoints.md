@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 kt: 7875
 thumbnail: 333339.jpg
+last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 190623cc-8959-46b3-95de-e7d01bf5acdb
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 93b85ed46a3d94555e5c805ec2c4f893afc3d50b
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '55'
 ht-degree: 0%
 
 ---
@@ -24,8 +25,6 @@ ht-degree: 0%
 
 + 了解如何啟用GraphQL端點
 + 了解如何對端點執行GraphQL查詢
-+ 了解如何發佈及保護GraphQL端點
++ 了解如何發佈GraphQL端點
 
 >[!VIDEO](https://video.tv.adobe.com/v/333339?quality=12&learn=on)
-
-_下載 [Postman集合](./assets/aem-headless-video-series.postman_collection.json) 用於AEM無頭影片系列。_
