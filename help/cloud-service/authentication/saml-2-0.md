@@ -10,10 +10,10 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: d049eb78e2302aa97de0d228b65fba842ad38b74
+source-git-commit: f6a9e7b32d876a8cd5ce7bf6a2e13aeb5faaf35b
 workflow-type: tm+mt
-source-wordcount: '2943'
-ht-degree: 1%
+source-wordcount: '3123'
+ht-degree: 2%
 
 ---
 
@@ -138,8 +138,21 @@ _當 [SAML 2.0驗證處理常式OSGi配置屬性 `handleLogout` 設為 `true`](#
    + A [此金鑰存放區中安裝了公用/私用金鑰存放區](#install-aem-public-private-key-pair) 僅當需要AuthnRequest簽名/SAML斷言加密時。
    + 如果此SAML整合支援登出，但不支援AuthnRequest簽署/SAML斷言，則空金鑰存放區就足夠了。
 1. 選擇 __儲存並關閉__.
-1. 選擇 __authentication-service__ 用戶，然後選擇 __啟動__ 從頂端動作列。
+1. 建立包含已更新的 __authentication-service__ 使用者。
 
+   _使用以下臨時解決方法（使用包）:_
+
+   1. 導覽至&#x200B;__工具 > 部署 > 套件__。
+   1. 建立套件
+      + 包名稱： `Authentication Service`
+      + 版本: `1.0.0`
+      + 群組: `com.your.company`
+   1. 編輯新 __驗證服務密鑰儲存__ 包。
+   1. 選取 __篩選器__ 頁簽，並為根路徑添加篩選器 `/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`.
+      + 此 `<AUTHENTICATION SERVICE UUID>` 可導覽至 __「工具」>「安全性」>「使用者」__，然後選取 __authentication-service__ 使用者。 UUID是URL的最後一部分。
+   1. 選擇 __完成__ 然後 __儲存__.
+   1. 選取 __建置__ 按鈕 __驗證服務密鑰儲存__ 包。
+   1. 建置後，選擇 __更多__ > __複製__ 啟用AEM Publish的Authentication Service金鑰存放區。
 
 ## 安裝AEM公開/私密金鑰組{#install-aem-public-private-key-pair}
 
@@ -212,7 +225,21 @@ AuthnRequest簽名和SAML斷言加密都是選用的，不過都已啟用，使�
 1. 新新增的憑證會顯示在 __從CRT檔案添加證書__ 區段。
    + 請注意 __別名__ 因為此 [SAML 2.0驗證處理常式OSGi設定](#saml-20-authentication-handler-osgi-configuration)
 1. 選擇 __儲存並關閉__.
-1. 選擇 __authentication-service__ 用戶，然後選擇 __啟動__ 從頂端動作列。
+1. 建立包含已更新的 __authentication-service__ 使用者。
+
+   _使用以下臨時解決方法（使用包）:_
+
+   1. 導覽至&#x200B;__工具 > 部署 > 套件__。
+   1. 建立套件
+      + 包名稱： `Authentication Service`
+      + 版本: `1.0.0`
+      + 群組: `com.your.company`
+   1. 編輯新 __驗證服務密鑰儲存__ 包。
+   1. 選取 __篩選器__ 頁簽，並為根路徑添加篩選器 `/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`.
+      + 此 `<AUTHENTICATION SERVICE UUID>` 可導覽至 __「工具」>「安全性」>「使用者」__，然後選取 __authentication-service__ 使用者。 UUID是URL的最後一部分。
+   1. 選擇 __完成__ 然後 __儲存__.
+   1. 選取 __建置__ 按鈕 __驗證服務密鑰儲存__ 包。
+   1. 建置後，選擇 __更多__ > __複製__ 啟用AEM Publish的Authentication Service金鑰存放區。
 
 ## 配置SAML 2.0驗證處理程式{#configure-saml-2-0-authentication-handler}
 
