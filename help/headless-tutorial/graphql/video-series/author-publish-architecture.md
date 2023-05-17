@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 kt: 7873
 thumbnail: 333296.jpg
+last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 7d5f5edb-10e7-43ec-a4e7-4cee8ddba685
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: de3724281bc34ebf0c24b2bb5e76b71bcc4ad5a0
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
@@ -24,8 +25,5 @@ ht-degree: 0%
 
 + 了解AEM製作和發佈架構，以及內容的發佈方式
 + 了解透過AEM Publish環境傳送無頭式內容的最佳實務
-+ 探索如何將製作環境用作應用程式的預覽
-
++ 
 >[!VIDEO](https://video.tv.adobe.com/v/333296?quality=12&learn=on)
-
-_下載 [Postman集合](./assets/aem-headless-video-series.postman_collection.json) 用於AEM無頭影片系列。_
