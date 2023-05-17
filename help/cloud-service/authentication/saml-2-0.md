@@ -10,9 +10,9 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: d049eb78e2302aa97de0d228b65fba842ad38b74
 workflow-type: tm+mt
-source-wordcount: '2961'
+source-wordcount: '2943'
 ht-degree: 1%
 
 ---
@@ -132,7 +132,6 @@ IDP的公開憑證會新增至AEM Global Trust Store，並用來驗證IDP傳送�
 _當 [SAML 2.0驗證處理常式OSGi配置屬性 `handleLogout` 設為 `true`](#saml-20-authenticationsaml-2-0-authentication) 或 [AuthnRequest簽名/SAML斷言加密](#install-aem-public-private-key-pair) 必填_
 
 1. 以AEM管理員身分登入AEM Author，以上傳私密金鑰。
-1. 導覽至 __「工具」>「安全性」>「信任儲存」__，然後選取 __authentication-service__ 用戶，然後選擇 __屬性__ 從頂端動作列。
 1. 導覽至 __「工具」>「安全性」>「使用者」__，然後選取 __authentication-service__ 用戶，然後選擇 __屬性__ 從頂端動作列。
 1. 選取 __金鑰存放區__ 標籤。
 1. 建立或開啟金鑰存放區。 如果建立金鑰存放區，請確保密碼安全。
