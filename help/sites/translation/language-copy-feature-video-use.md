@@ -1,6 +1,6 @@
 ---
-title: 搭配使用語言副本AEM Sites
-description: 透過AEM建立語言副本精靈網站翻譯增強功能，使用者無需建立根頁面即可從主版語言建立語言副本。
+title: 將語言副本與AEM Sites
+description: 使用AEM「建立語言複製嚮導」站點翻譯增強功能，用戶可以從母語言建立語言副本，而無需建立根頁。
 feature: Language Copy
 topics: localization, authoring, content-architecture
 audience: all
@@ -20,11 +20,11 @@ ht-degree: 5%
 
 # 使用語言副本 {#using-language-copy}
 
-透過AEM 6.3建立語言副本精靈網站翻譯增強功能，使用者無需建立根頁面即可從主版語言建立語言副本。
+使用AEM6.3建立語言複製嚮導站點翻譯增強功能，用戶可以從母語言建立語言副本，而無需建立根頁。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17116?quality=12&learn=on)
 
 ## 其他資源 {#additional-resources}
 
-* [語言副本嚮導文檔](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-wizard.html)
+* [語言複製嚮導文檔](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-wizard.html)
 * [MSM 最佳做法](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-best-practices.html)

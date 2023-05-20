@@ -15,14 +15,14 @@ level: Experienced
 exl-id: b6e3acee-4a07-4d00-b3a1-f7aedda21e6e
 source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---
 
 # 建立自定義配置檔案
 
-在此部分，我們將建立 [自定義配置檔案。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) 配置檔案負責將XDP呈現為HTML。 在框外提供預設配置檔案，將XDP呈現為HTML。 它代表了MobileForms格式副本服務的自定義版本。 您可以使用Mobile表單格式副本服務來定制MobileForms的外觀、行為和交互。 在我們的自定義配置檔案中，我們將使用引導橋API捕獲移動表單中填充的資料。 然後，此資料被發送到自定義servlet，該Servlet將生成互動式PDF並將其流回調用應用程式。
+在此部分，我們將建立 [自定義配置檔案。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) 配置檔案負責將XDP呈現為HTML。 在框外提供預設配置檔案，將XDP呈現為HTML。 它代表移動Forms格式副本服務的自定義版本。 您可以使用移動表單格式副本服務來自定義移動Forms的外觀、行為和交互。 在我們的自定義配置檔案中，我們將使用引導橋API捕獲移動表單中填充的資料。 然後，此資料被發送到自定義servlet，該Servlet將生成互動式PDF並將其流回調用應用程式。
 
 使用 `formBridge` JavaScript API。 我們利用 `getDataXML()` 方法：
 

@@ -1,6 +1,6 @@
 ---
 title: 導覽
-description: 探索導覽AEM Assets的基本知識。
+description: 探索AEM Assets的導航基礎。
 feature: Asset Management
 role: User
 level: Beginner
@@ -19,6 +19,6 @@ ht-degree: 12%
 
 # 導覽
 
-探索導覽AEM Assets的基本知識。
+探索AEM Assets的導航基礎。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32046?quality=12&learn=on)

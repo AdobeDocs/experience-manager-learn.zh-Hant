@@ -1,6 +1,6 @@
 ---
-title: 搭配AEM Forms使用服務資料模型
-description: AEM Adaptive Forms的規則編輯器可善用在「表單資料模型」中建立的服務。
+title: 使用服務資料模型與AEM Forms
+description: 自適AEM應Forms的規則編輯器可以利用在表單資料模型中建立的服務。
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 搭配AEM Forms使用服務資料模型{#using-service-data-models-with-aem-forms}
+# 使用服務資料模型與AEM Forms{#using-service-data-models-with-aem-forms}
 
-AEM Adaptive Forms的規則編輯器可善用在「表單資料模型」中建立的服務。
+自適AEM應Forms的規則編輯器可以利用在表單資料模型中建立的服務。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17739?quality=12&learn=on)

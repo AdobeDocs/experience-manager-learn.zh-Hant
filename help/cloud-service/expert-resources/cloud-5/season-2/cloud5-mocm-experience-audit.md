@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 - Cloud Manager之謎 — 體驗稽核
-description: 檢查Cloud Manager並深入探討Experience Audit功能
+title: 雲5 — 雲管理器之謎 — 體驗審計
+description: 檢查雲管理器並深入瞭解體驗審核功能
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ---
 
-# Cloud 5 - Cloud Manager之謎 — 體驗稽核
+# 雲5 — 雲管理器之謎 — 體驗審計
 
-在三個部分系列的其中一部分，我們將探索Cloud Manager的基本概念，並詳細探討Experience Audit功能。
+在三部分系列的一部分，我們探討了Cloud Manager的基本知識，並深入瞭解體驗審核功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343620?quality=12&learn=on)
 
-## 此影片所涵蓋的內容
+## 此視頻中包含的內容
 
-+ Cloud Manager概述
-+ 介面熟悉
++ 雲管理器概述
++ 介面熟悉化

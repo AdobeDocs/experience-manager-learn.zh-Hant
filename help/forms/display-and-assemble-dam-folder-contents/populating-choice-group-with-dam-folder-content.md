@@ -1,6 +1,6 @@
 ---
-title: 新增DAM資料夾項目至選擇的群組元件
-description: 動態新增項目至選擇的群組元件
+title: 將DAM資料夾項添加到選擇的組元件
+description: 動態將項添加到選擇組元件
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 ---
 
-# 動態新增項目至選擇的群組元件
+# 將項動態添加到選擇組元件
 
-AEM Forms 6.5導入了動態新增項目至最適化Forms選擇群組元件（例如CheckBox、選項按鈕和影像清單）的功能。 在本文中，我們將說明使用DAM資料夾內容填入選擇群組元件的使用案例。 在螢幕擷取畫面中，3個檔案位於名為newsletter的資料夾中。每次將新新聞稿新增至資料夾時，選擇群組元件就會更新，以自動列出其內容。 使用者可以選取一或多個要下載的電子報。
+AEM Forms6.5引入了將項目動態添加到自適應Forms選擇組元件（如CheckBox、單選按鈕和影像清單）的功能。 在本文中，我們將看到在選擇組元件中填充DAM資料夾內容的使用情形。 在螢幕抓圖中，3個檔案位於名為swelter的資料夾中。每次將新新聞簡報添加到資料夾時，選擇組元件都會更新以自動列出其內容。 用戶可以選擇要下載的一個或多個新聞稿。
 
 ![規則編輯器](assets/newsletters-download.png)
 
-## 建立Servlet以傳回DAM資料夾內容
+## 建立Servlet以返回DAM資料夾內容
 
-編寫下列程式碼以傳回JSON格式的DAM資料夾內容。
+已編寫以下代碼以JSON格式返回DAM資料夾內容。
 
 ```java
 package com.newsletters.core.servlets;
@@ -82,9 +82,9 @@ public class ListFolderContent extends SlingSafeMethodsServlet {
 }
 ```
 
-## 使用JavaScript函式建立用戶端程式庫
+## 使用JavaScript函式建立客戶端庫
 
-會從JavaScript函式叫用Servlet。 函式返回一個陣列對象，該對象將用於填充選擇組元件
+從JavaScript函式調用Servlet。 該函式返回將用於填充選擇組元件的陣列對象
 
 ```javascript
 /**
@@ -108,13 +108,13 @@ function getDAMFolderAssets(damFolder) {
 }
 ```
 
-## 建立最適化表單
+## 建立自適應窗體
 
-建立最適化表單並將表單與用戶端程式庫建立關聯 **listfolderassets**. 將核取方塊元件新增至表單。 使用規則編輯器填入核取方塊的選項，如螢幕擷取畫面所示
-![set-options](assets/set-options-newsletter.png)
+建立自適應表單並將表單與客戶端庫關聯 **清單資料夾資產**。 將複選框元件添加到窗體。 使用規則編輯器填充螢幕抓圖中顯示的複選框選項
+![設定選項](assets/set-options-newsletter.png)
 
-我們正在叫用名為 **getDAMFolderAssets** 並傳遞DAM資料夾資產的路徑以在表單中列出。
+我們正在調用名為Javascript的函式 **getDAMFolderAssets** 並將DAM資料夾的資產路徑以表格形式列出。
 
 ## 後續步驟
 
-[組合選取的資產](./assemble-selected-newsletters.md)
+[裝配選定資產](./assemble-selected-newsletters.md)

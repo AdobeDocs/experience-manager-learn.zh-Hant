@@ -1,6 +1,6 @@
 ---
 title: 簡介
-description: 多表格標誌使用案例視頻演示
+description: 標誌多表格用例的視頻演示
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 330165.jpg
@@ -18,8 +18,8 @@ ht-degree: 4%
 
 # 簡介
 
-無論您是申請抵押貸款還是開立新銀行賬戶，都需要填寫並簽署多份表格。 AEM Forms與Acrobat Sign的整合可輕鬆填寫及簽署多份表單。
-以下影片會逐步帶您了解籤署多份表單的使用案例。
+無論您是申請抵押貸款，還是開立新的銀行帳戶，都需要填寫並簽署多份表格。 AEM Forms和Acrobat Sign的融合使填寫和簽署多個表格變得容易。
+以下視頻將引導您了解籤名多個表單的使用情形。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330165?quality=12&learn=on)
 
@@ -27,13 +27,13 @@ ht-degree: 4%
 
 本課程假設如下：
 
-* 您可以存取AEM 6.4或6.5伺服器，且已安裝並設定Forms Add套件
-* AEM已設定Acrobat Sign
+* 您可以訪問安裝AEM並配置了「Forms添加」軟體包的6.4或6.5伺服器
+* AEM配置為Acrobat Sign
 * 訪問SMTP伺服器
-* AEM/AEM Forms的相關經驗
+* 關於AEM/AEM Forms
 
-依照本教學課程並安裝資產，前提是您有可簽署多個表單的有效解決方案。
+通過遵循本教程並安裝所提供的資產，您將獲得一個可以簽署多個表單的有效解決方案。
 
 ## 後續步驟
 
-[配置資料庫備份的資料源 ](./configure-data-source.md)
+[配置資料庫支援的資料源 ](./configure-data-source.md)

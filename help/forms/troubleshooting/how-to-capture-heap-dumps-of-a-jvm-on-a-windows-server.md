@@ -1,6 +1,6 @@
 ---
-title: 如何在Windows伺服器上捕獲JVM的堆轉儲
-description: 在windows伺服器上捕獲正在運行的Java進程的堆轉儲
+title: 如何捕獲Windows伺服器上JVM的堆轉儲
+description: 捕獲在Windows伺服器上運行的Java進程的堆轉儲
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何在Windows伺服器上捕獲JVM的堆轉儲
+# 如何捕獲Windows伺服器上JVM的堆轉儲
 
-*此視頻將逐步介紹捕獲windows伺服器上JVM的堆轉儲的步驟。*
+*此視頻將介紹捕獲Windows伺服器上JVM的堆轉儲的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335490?quality=12&learn=on)

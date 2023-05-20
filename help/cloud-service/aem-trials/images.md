@@ -1,6 +1,6 @@
 ---
-title: AEM Trials影像索引
-description: 此檔案包含AEM試用行銷資料中所使用影像的參考。
+title: 試AEM用影像索引
+description: 此檔案包含對試用營銷材料中使AEM用的影像的引用。
 index: false
 hidefromtoc: true
 hide: true
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 ---
 
-# AEM Trials影像索引
+# 試AEM用影像索引
 
-影像檔案必須放入 `assets` 檔案旁邊的資料夾。
+映像檔案必須放入 `assets` 檔案旁邊的資料夾。
 
-每個要發佈的影像檔案都應使用以下語法從此檔案連結：
+每個要發佈的影像檔案應使用以下語法從此檔案連結：
 
-![試用電子郵件影像個人帳戶](./assets/select-personal-account.png)
+![試用就緒電子郵件映像個人帳戶](./assets/select-personal-account.png)
 ![Slack電子郵件影像](./assets/Slack-email-image.png)

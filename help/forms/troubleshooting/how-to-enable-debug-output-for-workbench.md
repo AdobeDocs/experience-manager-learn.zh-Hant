@@ -1,6 +1,6 @@
 ---
-title: 如何為Workbench啟用除錯輸出
-description: 擷取Workbench除錯記錄的步驟
+title: 如何啟用Workbench的調試輸出
+description: 捕獲Workbench調試日誌的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何為Workbench啟用除錯輸出
+# 如何啟用Workbench的調試輸出
 
-*此影片會逐步說明為Workbench啟用除錯輸出的程式。*
+*此視頻將通過該過程為Workbench啟用調試輸出。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335497?quality=12&learn=on)

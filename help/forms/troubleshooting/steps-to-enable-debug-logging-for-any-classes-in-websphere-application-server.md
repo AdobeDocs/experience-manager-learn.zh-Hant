@@ -1,6 +1,6 @@
 ---
 title: 為WebSphere應用程式伺服器中的任何類啟用調試日誌記錄的步驟
-description: 針對與WebSphere應用程式伺服器相關的疑難排解問題，設定除錯記錄
+description: 為與WebSphere應用程式伺服器相關的疑難解答問題配置調試日誌
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # 為Websphere應用程式伺服器中的任何類啟用調試日誌記錄的步驟
 
-*此影片會逐步說明為Websphere應用程式伺服器中的任何類別啟用除錯記錄的步驟。*
+*此視頻將介紹在Websphere應用程式伺服器中為任何類啟用調試日誌記錄的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335523?quality=12&learn=on)

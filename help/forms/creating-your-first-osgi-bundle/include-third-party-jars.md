@@ -1,6 +1,6 @@
 ---
 title: 包括第三方罐
-description: 了解如何在AEM專案中使用協力廠商Jar檔案
+description: 學習在項目中使用第三方jar文AEM件
 version: 6.4,6.5
 feature: Adaptive Forms
 topic: Development
@@ -9,19 +9,20 @@ level: Beginner
 kt: 11245
 last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
-source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
+exl-id: e8841c63-3159-4f13-89a1-d8592af514e3
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
 
 ---
 
-# 在您的AEM專案中包含協力廠商套件組合
+# 在項目中包括第三方捆綁AEM包
 
-在本文中，我們將逐步說明將第三方OSGi套件組合包含在您的AEM專案中的步驟。為了本文的目的，我們將包含 [jsch-0.1.55.jar](https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar) 在AEM專案中。  如果OSGi可在maven存放庫中使用，則專案的POM.xml檔案中會包含套件組合的相依性。
+在本文中，我們將介紹將第三方OSGi捆綁包AEM包括在您的項目中涉及的步驟。為了本文的目的，我們將包括 [jsch-0.1.55.jar](https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar) 我們的AEM計畫。  如果OSGi在主儲存庫中可用，則在項目的POM.xml檔案中包括捆綁的依賴關係。
 
 >[!NOTE]
-> 假定第三方jar是OSGi套件
+> 假定第三方jar是OSGi捆綁包
 
 ```java
 <!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
@@ -32,7 +33,7 @@ ht-degree: 0%
 </dependency>
 ```
 
-如果您的OSGi套件組合位於檔案系統上，請建立名為 **localjar** 在專案的基本目錄(C:\aemformsbundles\AEMFormsProcessStep\localjar)下，相依性會如下所示
+如果OSGi捆綁包位於檔案系統上，請建立名為 **本地jar** 在項目的基目錄(C:\aemformsbundles\AEMFormsProcessStep\localjar)下，依賴項將類似於此
 
 ```java
 <dependency>
@@ -46,21 +47,18 @@ ht-degree: 0%
 
 ## 建立資料夾結構
 
-我們將此套件組合新增至AEM專案 **AEMFormsProcessStep** 居住在 **c:\aemformsbundles** 資料夾
+我們正在將此捆綁包添加到我們的AEM項目 **AEMFormsProcessStep** 住在 **c:\aemformsbundles** 資料夾
 
-* 開啟 **filter.xml** 從C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault folder of your project Make a note of the root attribute of the filter element。
+* 開啟 **filter.xml** 從C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault folder of your project Make a note of the root attribute of the filter element
 
-* 建立下列資料夾結構C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\jcr_root\apps\AEMFormsProcessStep-vendor-packages\application\install
-* 此 **apps/AEMFormsProcessStep-vendor-packages** 是filter.xml中的根屬性值
-* 更新專案POM.xml的相依性區段
-* 開啟命令提示符。 在我的案例中，導覽至您專案的資料夾(c:\aemformsbundles\AEMFormsProcessStep)。 執行以下命令
+* 建立以下資料夾結構C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\jcr_root\apps\AEMFormsProcessStep-vendor-packages\application\install
+* 的 **apps/AEMFormsProcessStep供應商軟體包** 是filter.xml中的根屬性值
+* 更新項目POM.xml的依賴項部分
+* 開啟命令提示符。 在我的情況下，導航到項目的資料夾(c:\aemformsbundles\AEMFormsProcessStep)。 執行以下命令
 
 ```java
 mvn clean install -PautoInstallSinglePackage
 ```
 
-如果一切順利，則會將套件與協力廠商套件一併安裝至您的AEM執行個體。 您可以使用 [felix web console](http://localhost:4502/system/console/bundles). 協力廠商套件組合位於 `crx` 存放庫，如下所示
-![協力廠商](assets/custom-bundle1.png)
-
-
-
+如果一切順利，則軟體包隨第三方捆綁一起安裝到您的實AEM例中。 可以使用 [felix Web控制台](http://localhost:4502/system/console/bundles)。 第三方捆綁包位於的/apps資料夾中 `crx` 儲存庫，如下所示
+![第三方](assets/custom-bundle1.png)

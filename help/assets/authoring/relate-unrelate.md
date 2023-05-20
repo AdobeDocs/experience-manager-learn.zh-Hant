@@ -1,6 +1,6 @@
 ---
-title: 如何與AEM中的資產產生關連及不相關
-description: 了解如何在AEM中建立和管理資產之間的關係。
+title: 如何與位於中國的資AEM產
+description: 瞭解如何在中建立和管理資產之間的關AEM系。
 feature: Asset Management
 role: User
 level: Beginner
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 關聯和不關聯
+# 關聯和取消關聯
 
-了解如何在AEM中建立和管理資產之間的關係。
+瞭解如何在中建立和管理資產之間的關AEM系。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331107?quality=12&learn=on)

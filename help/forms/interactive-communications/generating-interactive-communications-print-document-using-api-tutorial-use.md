@@ -1,7 +1,7 @@
 ---
-title: 使用監視資料夾機制生成用於打印通道的交互通信文檔
+title: 使用監視資料夾機制為打印通道生成互動式通信文檔
 seo-title: Generating Interactive Communications Document for print channel using watch folder mechanism
-description: 使用監看資料夾生成打印通道文檔
+description: 使用監視資料夾生成打印渠道文檔
 seo-description: Use watched folder to generate print channel documents
 feature: Interactive Communication
 topics: development
@@ -21,15 +21,15 @@ ht-degree: 0%
 
 ---
 
-# 使用監視資料夾機制生成用於打印通道的交互通信文檔
+# 使用監視資料夾機制為打印通道生成互動式通信文檔
 
-在設計並測試打印渠道文檔後，通常需要通過發出REST調用來生成文檔，或使用監看資料夾機制生成打印文檔。
+設計並測試打印渠道文檔後，通常需要通過進行REST調用來生成文檔，或使用監視資料夾機制生成打印文檔。
 
-本文說明了使用觀看資料夾機制產生列印通道檔案的使用案例。
+本文介紹了利用監視資料夾機制生成打印通道文檔的使用案例。
 
-將檔案拖放到監看資料夾時，會執行與監看資料夾相關聯的指令碼。 本指令碼將在以下文章中說明。
+將檔案放入監視資料夾時，將執行與監視資料夾關聯的指令碼。 下面的文章對此指令碼進行了說明。
 
-拖放至已觀看資料夾的檔案具有下列結構。 該代碼將為XML文檔中列出的所有帳號生成語句。
+被丟棄到受監視資料夾的檔案具有以下結構。 代碼將為XML文檔中列出的所有帳號生成語句。
 
 &lt;accountnumbers>
 
@@ -43,25 +43,25 @@ ht-degree: 0%
 
 &lt;/accountnumbers>
 
-下列程式碼執行下列動作：
+以下代碼列出如下：
 
 第1行 — InteractiveCommunicationsDocument的路徑
 
-第15-20行：從XML文檔獲取帳戶號清單，並將其放入監視資料夾中
+第15-20行：從XML文檔中獲取已放入監視資料夾的帳號清單
 
 第24 -25行：獲取與文檔關聯的PrintChannelService和Print Channel。
 
-第30行：將accountnumber作為關鍵元素傳遞至「表單資料模型」。
+第30行：將帳號作為關鍵元素傳遞到表單資料模型。
 
 第32-36行：為要生成的文檔設定資料選項。
 
-第38行：呈現文檔。
+38號線：呈現文檔。
 
-第39-40行 — 將生成的文檔保存到檔案系統。
+行39-40 — 將生成的文檔保存到檔案系統。
 
-「表單資料模型」的REST端點需要一個ID作為輸入參數。 如下方螢幕擷取所示，此id會對應至名為accountnumber的請求屬性。
+表單資料模型的REST端點需要ID作為輸入參數。 此id映射到名為accountnumber的請求屬性，如下面的螢幕快照所示。
 
-![requestattribute](assets/requestattributeprintchannel.gif)
+![requestation（請求屬性）](assets/requestattributeprintchannel.gif)
 
 ```java
 var interactiveCommunicationsDocument = "/content/forms/af/retirementstatementprint/channels/print/";
@@ -111,26 +111,26 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-**若要在您的本地系統上測試此功能，請按照以下說明操作：**
+**要在本地系統上test此功能，請按照以下說明操作：**
 
-* 按照以下說明安裝Tomcat [文章。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成示例資料的war檔案。
-* 設定服務，即系統用戶，如下所述 [文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
-請確保此系統用戶具有以下節點的讀取權限。 將權限登入 [使用者管理員](https://localhost:4502/useradmin) 並搜索系統用戶「data」，並通過將按鈕顯示到「權限」頁簽，為以下節點授予讀取權限
+* 按照本中所述設定Tomcat [文章。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat具有生成示例資料的war檔案。
+* 設定服務（即系統用戶），如本中所述 [文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。
+確保此系統用戶對以下節點具有讀取權限。 將權限登錄到 [用戶管理員](https://localhost:4502/useradmin) 並搜索系統用戶「資料」，並通過在「權限」頁籤上開啟頁籤，為以下節點授予讀取權限
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
-   * /content/forms/af
-* 使用套件管理器將下列套件匯入AEM。 此套件包含下列項目：
+   * /內容/表單/af
+* 使用包管理器將以AEM下包導入。 此包包含以下內容：
 
 
-* [互動式通訊檔案範例](assets/retirementstatementprint.zip)
-* [觀看資料夾指令碼](assets/printchanneldocumentusingwatchedfolder.zip)
+* [互動式通信文檔示例](assets/retirementstatementprint.zip)
+* [受監視資料夾指令碼](assets/printchanneldocumentusingwatchedfolder.zip)
 * [資料來源組態](assets/datasource.zip)
 
 * 開啟/etc/fd/watchfolder/scripts/PrintPDF.ecma檔案。 確保第1行中的interactiveCommunicationsDocument的路徑指向要打印的正確文檔
 
-* 按照第2行上的首選項修改saveLocation
+* 根據第2行上的首選項修改saveLocation
 
-* 建立accountnumbers.xml檔案，其內容如下
+* 建立具有以下內容的accountnumbers.xml檔案
 
 ```xml
 <accountnumbers>
@@ -144,12 +144,12 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-* 將accountnumbers.xml拖放到C:\RenderPrintChannel\input folder中。
+* 將accountnumbers.xml放入C:\RenderPrintChannel\input folder目錄中。
 
-* 生成的PDF檔案將按照ecma指令碼中的指定寫入saveLocation。
+* 生成的PDF檔案將寫入ecma指令碼中指定的saveLocation。
 
 >[!NOTE]
 >
->如果您打算在非windows作業系統上使用，請導覽至
+>如果您計畫在非Windows作業系統上使用此選項，請導航至
 >
->/etc/fd/watchfolder /config/PrintChannelDocument ，並根據您的首選項更改folderPath
+>/etc/fd/watchfolder /config/PrintChannelDocument並根據您的首選項更改folderPath

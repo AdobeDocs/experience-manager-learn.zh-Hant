@@ -1,6 +1,6 @@
 ---
-title: AEM Assets中的資產報表
-description: AEM Assets提供企業級報告架構，可透過直覺式的使用者體驗，針對大型存放庫進行擴充。
+title: AEM Assets資產報導
+description: AEM Assets提供了企業級報告框架，可通過直觀的用戶體驗擴展到大型儲存庫。
 feature: Asset Reports
 topic: Administration
 role: User
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 資產報表{#using-reports-in-aem-assets}
 
-AEM Assets提供企業級報告架構，可透過直覺式的使用者體驗，針對大型存放庫進行擴充。
+AEM Assets提供了企業級報告框架，可通過直觀的用戶體驗擴展到大型儲存庫。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22140?quality=12&learn=on)

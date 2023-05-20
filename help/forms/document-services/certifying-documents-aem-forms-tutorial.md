@@ -1,6 +1,6 @@
 ---
-title: AEM Forms的證明檔案
-description: 使用Docassurance服務來驗證AEM Forms中的PDF檔案
+title: AEM Forms證明檔案
+description: 使用代理保險服務證明AEM Forms的PDF文檔
 feature: Document Security
 version: 6.4,6.5
 topic: Development
@@ -15,53 +15,53 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms的證明檔案
+# AEM Forms證明檔案
 
-認證文檔為PDF文檔和表單接收者提供對其真實性和完整性的附加保證。
+認證文檔向PDF文檔和表單收件人提供對其真實性和完整性的附加保證。
 
-若要驗證檔案，您可以在案頭或AEM Forms檔案服務中使用Acrobat DC，作為伺服器上自動化程式的一部分。
+要驗證文檔，您可以在案頭或AEM Forms文檔服務上使用Acrobat DC作為伺服器上自動化流程的一部分。
 
-本文提供您使用AEM Forms Document Services來認證PDF檔案的OSGI套件組合範例。範例中使用的程式碼為 [可用此處](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+本文提供OSGI捆綁包示例，以使用AEM Forms文檔服務驗證pdf文檔。示例中使用的代碼是 [此處](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
-若要使用AEM Forms來驗證檔案，請遵循下列步驟
+要驗證使用AEM Forms的文檔，需要執行以下步驟
 
-## 將證書添加到信任儲存 {#adding-certificate-to-trust-store}
+## 正在向信任儲存添加證書 {#adding-certificate-to-trust-store}
 
-請依照下列步驟，將憑證新增至AEM中的金鑰存放區
+請按照以下步驟將證書添加到密鑰庫AEM
 
 * [初始化全局信任儲存](http://localhost:4502/libs/granite/security/content/truststore.html)
-* [搜索fd-service](http://localhost:4502/security/users.html) 使用者
-* **您必須捲動結果頁面以載入所有使用者，才能尋找fd-service使用者**
+* [搜索fd-service](http://localhost:4502/security/users.html) 用戶
+* **您必須滾動結果頁以載入所有用戶以查找fd-service用戶**
 * 按兩下fd-service用戶以開啟用戶設定窗口
-* 按一下「從密鑰庫檔案添加私鑰」。指定證書特有的別名和密碼
-   ![新增憑證](assets/adding-certificate-keystore.PNG)
-* 儲存您的變更
+* 按一下「從密鑰庫檔案添加私鑰」。指定特定於證書的別名和口令
+   ![添加證書](assets/adding-certificate-keystore.PNG)
+* 保存更改
 
 ## 建立OSGI服務
 
-您可以撰寫自己的OSGi套件組合，並使用AEM Forms用戶端SDK實作服務以認證PDF檔案。 以下連結對於編寫您自己的OSGi套件會很實用
+您可以編寫自己的OSGi捆綁包，並使用AEM Forms客戶端SDK實現一項服務來驗證PDF文檔。 以下連結對編寫您自己的OSGi捆綁包非常有用
 
 * [建立第一個OSGi捆綁包](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)
-* [使用檔案服務API](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+* [使用文檔服務API](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
-或者，您也可以使用本教學課程資產中包含的範例套件組合。
+或者，可以將包含的示例捆綁包用作本教程資產的一部分。
 
 >[!NOTE]
 >
->範例套件組合使用名為「ares」的別名來驗證檔案。 因此，使用此捆綁包時，請確保您的別名稱為「ares」
+>示例捆綁包使用名為「ares」的別名來驗證文檔。 因此，使用此捆綁包時，請確保您的別名稱為「ares」
 
-## 在本機系統上測試樣本
+## 在本地系統上測試示例
 
-* 下載並安裝 [自訂檔案服務套件](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* 下載並安裝 [使用服務用戶包進行開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* [請務必在Apache Sling Service使用者對應程式服務中新增下列項目](http://localhost:4502/system/console/configMgr)
+* 下載並安裝 [自定義文檔服務包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* 下載並安裝 [使用服務用戶包開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [確保已在Apache Sling服務用戶映射器服務中添加以下條目](http://localhost:4502/system/console/configMgr)
 
-   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** 如下方螢幕擷取所示
-   ![User-Mapper](assets/user-mapper-service.PNG)
-* [匯入範例最適化表單](assets/certify-pdf-af.zip)
-* [匯入和安裝自訂提交](assets/custom-submit-certify.zip)
-* [開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/certifypdf/jcr:content?wcmmode=disabled)
-* 上傳需要認證的PDF檔案
-   **可選**  — 指定要用於驗證文檔的簽名欄位
+   **DevegingWithServiceUser.core:getformsresourceresolver=fd-service** 如下面的螢幕截圖所示
+   ![用戶映射器](assets/user-mapper-service.PNG)
+* [導入示例自適應窗體](assets/certify-pdf-af.zip)
+* [導入並安裝自定義提交](assets/custom-submit-certify.zip)
+* [開啟自適應窗體](http://localhost:4502/content/dam/formsanddocuments/certifypdf/jcr:content?wcmmode=disabled)
+* 上傳需要認證的PDF文檔
+   **可選**  — 指定要在驗證文檔時使用的簽名欄位
 * 按一下提交。
-* 認證PDF應傳回給您。
+* 應將認證PDF退還給您。

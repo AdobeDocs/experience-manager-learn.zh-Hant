@@ -1,6 +1,6 @@
 ---
-title: 將AEM程式碼專案部署至AEMas a Cloud Service
-description: 探索如何使用Cloud Manager將AEM程式碼專案部署至AEMas a Cloud Service。
+title: 將代AEM碼項目部署到AEMas a Cloud Service
+description: 使用雲管AEM理器瀏覽將代AEM碼項目部署到as a Cloud Service。
 role: Developer
 level: Beginner
 type: Tutorial

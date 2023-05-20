@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe XD規劃UI | AEM快速網站建立
-description: 了解如何使用Adobe XD UI Kit來設計和加速您的Adobe Experience Manager Sites實作。
+title: UI規劃與Adobe XD |快AEM速站點建立
+description: 瞭解如何使用Adobe XDUI套件來設計和加速您的Adobe Experience Manager Sites實施。
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -18,53 +18,53 @@ ht-degree: 1%
 
 ---
 
-# 使用Adobe XD規劃UI {#ui-planning-adobe-xd}
+# UI規劃與Adobe XD {#ui-planning-adobe-xd}
 
-在大多數情況下，規劃新網站的開始會是模型和靜態設計。 [Adobe XD](https://www.adobe.com/products/xd.html) 是同級最佳的設計工具，用於建置使用者體驗。 Adobe建議使用Adobe XD或其他工具，透過使用UI模型來規劃Sites實作。
+在大多數情況下，新網站的規劃都從模型和靜態設計開始。 [Adobe XD](https://www.adobe.com/products/xd.html) 是構建用戶體驗的一流設計工具。 Adobe建議使用Adobe XD或其他工具使用UI模型來規劃站點實施。
 
 ## 必備條件 {#prerequisites}
 
-此為多部分教學課程，假設已完成上一章所述的步驟。 本章只是監看和學習部分，不需要採取任何動作即可繼續後續章節。
+這是一個多部分教程，假定上一章中概述的步驟已完成。 本章僅是觀察和學習部分，無需執行任何操作即可繼續後續章節。
 
-隨附您所需的影片 [Adobe XD](https://www.adobe.com/products/xd/pricing/free-trial.html) 已安裝， a [免費試用](https://www.adobe.com/products/xd/pricing/free-trial.html).
+要跟進您需要的視頻 [Adobe XD](https://www.adobe.com/products/xd/pricing/free-trial.html) 已安裝，a [免費試用](https://www.adobe.com/products/xd/pricing/free-trial.html)。
 
 ## 目標
 
-1. 檢閱由 [標準網站範本](https://github.com/adobe/aem-site-template-standard) 和WKND設計團隊。
-1. 了解如何使用UI套件來對應和規劃AEM Sites實作。
-1. 了解如何將Adobe XD中建立的UI設計轉讓給前端開發人員，以進行實作。
+1. 查看由提供的UI工具包 [標準站點模板](https://github.com/adobe/aem-site-template-standard) 和WKND設計團隊。
+1. 瞭解如何使用UI工具包來映射和規劃AEM Sites實施。
+1. 瞭解如何將在Adobe XD建立的UI設計交給前端開發人員進行實施。
 
-## 您將建置的 {#what-you-will-build}
+## 您將構建的 {#what-you-will-build}
 
-在本章中，會檢查兩個Adobe XD檔案，其中一個是 [標準網站範本](https://github.com/adobe/aem-site-template-standard) 和另一個為擬議的WKND地點。  
+在本章中，檢查了Adobe XD的兩個檔案，一個 [標準站點模板](https://github.com/adobe/aem-site-template-standard) 還有一個是WKND基地。  
 
-## 標準網站範本UI套件 {#standard-site-template-uikit}
+## 標準站點模板UI套件 {#standard-site-template-uikit}
 
 >[!VIDEO](https://video.tv.adobe.com/v/338680?quality=12&learn=on)
 
-高階步驟：
+高級步驟：
 
-1. 下載 [標準網站範本XD檔案](https://github.com/adobe/aem-site-template-standard/raw/main/files/wireframe.xd).
-1. InspectAdobe XD中的UI Kit。
+1. 下載 [標準站點模板XD檔案](https://github.com/adobe/aem-site-template-standard/raw/main/files/wireframe.xd)。
+1. InspectAdobe XD的UI Kit。
 1. 模擬將設計交給前端開發人員。
 
-## WKND UI Kit {#wknd-ui-kit}
+## WKND UI套件 {#wknd-ui-kit}
 
 >[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
 
-高階步驟：
+高級步驟：
 
-1. 下載 [WKND文章XD檔案](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd).
-1. Inspect WKND文章範本的設計。
+1. 下載 [WKND文XD件](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)。
+1. InspectWKND文章模板的設計。
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您已了解如何使用Adobe XD UI Kit來對應和規劃AEM Sites實作。
+祝賀您，您已瞭解了如何使用Adobe XDUI套件來映射和規劃AEM Sites實施。
 
-其他 [提供UI套件](https://www.adobe.com/products/xd/features/ui-kits.html) 以檢查並下載。
+其他 [UI工具包可用](https://www.adobe.com/products/xd/features/ui-kits.html) 檢查並下載。
 
 ### 後續步驟 {#next-steps}
 
-在下一章中，會根據WKND文章設計建立新的頁面範本。
+在下一章中，將根據WKND文章設計建立新的頁面模板。
 
-了解如何建立和修改 [頁面範本](./page-templates.md). 了解頁面範本和頁面之間的關係。 了解如何設定頁面範本的原則，以提供精細的控管和內容的品牌一致性。  系統會根據Adobe XD的模型建立結構良好的「雜誌文章」範本。
+瞭解如何建立和修改 [頁面模板](./page-templates.md)。 瞭解頁面模板與頁面之間的關係。 瞭解如何配置頁面模板的策略以為內容提供精細的治理和品牌一致性。  基於Adobe XD的模型，建立了結構精良的雜誌文章模板。

@@ -1,5 +1,5 @@
 ---
-title: 檢查Windows Server2016中資料夾權限的步驟
+title: 在Windows Server2016中檢查資料夾權限的步驟
 description: 確保PDFG用戶在Windows Server 2016中具有所需的資料夾權限
 type: Troubleshooting
 role: Admin
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 檢查Windows Server 2016中AEM Forms PDFG資料夾權限的步驟
+# 在Windows Server 2016中檢查AEM FormsPDFG的資料夾權限的步驟
 
-*此影片會逐步說明檢查Windows Server 2016中「資料夾權限」的其他步驟。*
+*此視頻將介紹檢查Windows Server 2016中的資料夾權限的其他步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335519?quality=12&learn=on)

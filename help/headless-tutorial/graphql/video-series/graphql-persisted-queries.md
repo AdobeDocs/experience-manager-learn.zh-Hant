@@ -1,6 +1,6 @@
 ---
 title: GraphQL 持續性查詢
-description: 了解如何在AEM中啟用、建立、更新及執行持續查詢。
+description: 瞭解如何在中啟用、建立、更新和執行永續查AEM詢。
 version: Cloud Service
 topic: Headless, Content Management
 feature: GraphQL API
@@ -19,12 +19,12 @@ ht-degree: 10%
 
 # GraphQL 持續性查詢
 
-了解如何在AEM中啟用、建立、更新及執行持續查詢。
+瞭解如何在中啟用、建立、更新和執行永續查AEM詢。
 
-在此影片中，您會：
+在此視頻中，您將：
 
-+ 了解如何啟用GraphQL持續查詢
-+ 了解如何建立、更新及執行GraphQL查詢
-+ 了解持續查詢優於用戶端查詢的優點
++ 瞭解如何啟用GraphQL永續查詢
++ 瞭解如何建立、更新和執行GraphQL查詢
++ 瞭解永續查詢相對於客戶端查詢的好處
 
 >[!VIDEO](https://video.tv.adobe.com/v/333429?quality=12&learn=on)

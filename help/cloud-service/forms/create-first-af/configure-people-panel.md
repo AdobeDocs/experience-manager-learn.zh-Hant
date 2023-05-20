@@ -1,6 +1,6 @@
 ---
 title: 配置人員面板
-description: 新增配偶詳細資訊片段，以設定「人員」面板。
+description: 通過添加配偶詳細資訊片段來配置人員面板。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 配置人員面板
 
-將配偶詳細資訊片段新增至「人員」面板。
+將配偶詳細資訊片段添加到「人員」面板。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332234?quality=12&learn=on)

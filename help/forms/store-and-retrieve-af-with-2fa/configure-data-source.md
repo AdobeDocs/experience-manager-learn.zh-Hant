@@ -19,44 +19,44 @@ ht-degree: 1%
 
 # 配置資料源
 
-AEM可透過許多方式啟用與外部資料庫的整合。 資料庫整合最常見的標準實務之一，就是透過 [configMgr](http://localhost:4502/system/console/configMgr).
-第一步是下載並部署適當的 [MySQL驅動程式](https://mvnrepository.com/artifact/mysql/mysql-connector-java) 到AEM。
-然後，設定資料庫專屬的Sling Connection Pooled DataSource屬性。 以下螢幕擷取畫面顯示本教學課程所使用的設定。 本教學課程資產會提供您資料庫結構。
+支援與外部資料AEM庫整合的方法有很多。 資料庫整合最常見的標準做法之一是使用Apache Sling連接池化資料源配置屬性， [configMgr](http://localhost:4502/system/console/configMgr)。
+第一步是下載並部署相應的 [MySQL驅動程式](https://mvnrepository.com/artifact/mysql/mysql-connector-java) 到AEM。
+然後，設定特定於資料庫的Sling連接池化資料源屬性。 以下螢幕快照顯示了本教程使用的設定。 本教程資源中將提供資料庫模式。
 
-![資料來源](assets/data-source.JPG)
+![資料源](assets/data-source.JPG)
 
 
 * JDBC驅動程式類： `com.mysql.cj.jdbc.Driver`
 * JDBC連接URI: `jdbc:mysql://localhost:3306/aemformstutorial`
 
 >[!NOTE]
->請確定您的資料源名稱 `StoreAndRetrieveAfData` 因為這是OSGi服務中使用的名稱。
+>請確保為資料源命名 `StoreAndRetrieveAfData` 因為這是OSGi服務中使用的名稱。
 
 
 ## 建立資料庫
 
 
-以下資料庫用於此使用案例。 資料庫有一個名為 `formdatawithattachments` 4欄，如下方螢幕擷取所示。
+以下資料庫用於此使用案例。 資料庫有一個名為 `formdatawithattachments` 螢幕截圖中顯示的4列。
 ![資料庫](assets/table-schema.JPG)
 
-* 欄 **afdata** 會保留最適化表單資料。
-* 欄 **attachmentsInfo** 將保存有關表單附件的資訊。
-* 欄 **電話號碼** 會保留填寫表格的人的手機號碼。
+* 列 **afdata** 將保存自適應表單資料。
+* 列 **附件資訊** 將保存有關表單附件的資訊。
+* 列 **電話號碼** 將保存填寫表格的人的手機號碼。
 
 請通過導入 [資料庫模式](assets/data-base-schema.sql)
-使用MySQL Workbench。
+使用MySQL工作台。
 
 ## 建立表單資料模型
 
-建立表單資料模型，並以前一步驟中建立的資料來源為基礎。
-設定 **get** 此表單資料模型的服務，如下方螢幕擷取所示。
-請確定您未在 **get** 服務。
+建立表單資料模型，並基於上一步中建立的資料源。
+配置 **得** 以下螢幕抓圖所示的此表單資料模型的服務。
+確保未在 **得** 服務。
 
-其目的 **get** 服務是擷取與應用程式id相關聯的電話號碼。
+此目的 **得** 服務是獲取與應用程式ID關聯的電話號碼。
 
-![get-service](assets/get-service.JPG)
+![獲取服務](assets/get-service.JPG)
 
-此表單資料模型將用於 **MyAccountForm** 以擷取與應用程式id相關聯的電話號碼。
+此表單資料模型將用於 **我的帳戶表單** 獲取與應用程式ID關聯的電話號碼。
 
 ## 後續步驟
 

@@ -1,6 +1,6 @@
 ---
-title: 階層式下拉式清單
-description: 根據上一個下拉式清單選取項目填入下拉式清單。
+title: 級聯下拉清單
+description: 根據上一個下拉清單選擇填充下拉清單。
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 9724
@@ -16,71 +16,71 @@ ht-degree: 0%
 
 ---
 
-# 階層式下拉式清單
+# 級聯下拉清單
 
-級聯下拉清單是一系列相依的DropDownList控制項，其中一個DropDownList控制項取決於父項或前一個DropDownList控制項。 DropDownList控制項中的項根據用戶從另一個DropDownList控制項中選擇的項來填充。
+級聯下拉清單是一系列從屬的DropDownList控制項，其中一個DropDownList控制項依賴於父級或以前的DropDownList控制項。 DropDownList控制項中的項是根據用戶從另一個DropDownList控制項中選擇的項來填充的。
 
-## 使用案例的展示
+## 演示使用案例
 
 >[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
 
-在本教學課程中，我已使用 [Geonames REST API](http://api.geonames.org/) 來展示此功能。
-有許多組織提供這類服務，只要他們有記錄完善的REST API，您就可以透過資料整合功能，輕鬆與AEM Forms整合
+在本教程中，我使用 [Geonames REST API](http://api.geonames.org/) 來證明這種能力。
+有許多組織提供此類服務，只要他們有詳細的REST API文檔，您就可以使用資料整合功能輕鬆與AEM Forms整合
 
-請依照下列步驟，在AEM Forms中實作階層式下拉式清單
+按照以下步驟在AEM Forms實施級聯下拉清單
 
 ## 建立開發人員帳戶
 
-使用建立開發人員帳戶 [蓋納梅斯](https://www.geonames.org/login). 記下使用者名稱。 需要此使用者名稱，才能叫用geonames.org的REST API。
+建立開發人員帳戶 [吉奧納梅斯](https://www.geonames.org/login)。 記下用戶名。 調用geonames.org的REST API時需要此用戶名。
 
 ## 建立Swagger/OpenAPI檔案
 
-OpenAPI規格（原稱Swagger規格）是REST API的API說明格式。 OpenAPI檔案可讓您描述整個API，包括：
+OpenAPI規範（以前稱為Swagger規範）是REST API的API說明格式。 OpenAPI檔案允許您描述整個API，包括：
 
-* 每個端點上的可用端點(/users)和操作(GET/users、POST/users)
+* 可用端點(/users)和每個端點上的操作(GET/users、POST/users)
 * 操作參數每個操作的輸入和輸出身份驗證方法
-* 聯絡資訊、授權、使用條款和其他資訊。
-* API規格可以用YAML或JSON編寫。 該格式便於人和機器學習和閱讀。
+* 聯繫資訊、許可證、使用條款和其他資訊。
+* API規範可以用YAML或JSON編寫。 該格式易於學習，對人和機器都易讀。
 
-若要建立您的第一個swagger/OpenAPI檔案，請遵循 [OpenAPI檔案](https://swagger.io/docs/specification/2-0/basic-structure/)
+要建立第一個swagger/OpenAPI檔案，請按照 [OpenAPI文檔](https://swagger.io/docs/specification/2-0/basic-structure/)
 
 >[!NOTE]
-> AEM Forms支援OpenAPI規格2.0版(FKA Swagger)。
+> AEM Forms支援OpenAPI規範2.0版(FKA Swagger)。
 
-使用 [swagger編輯器](https://editor.swagger.io/) 建立swagger檔案，以說明擷取國家/地區或州的所有國家/地區和子項元素的作業。 可以使用JSON或YAML格式建立Swagger檔案。 已完成的Swagger檔案可從 [此處](assets/swagger-files.zip)
-Swagger檔案說明下列REST API
-* [取得所有國家/地區](http://api.geonames.org/countryInfoJSON?username=yourusername)
+使用 [斯瓦格編輯器](https://editor.swagger.io/) 建立swagger檔案，以描述讀取國家/地區或州的所有國家/地區和子元素的操作。 可以使用JSON或YAML格式建立swagger檔案。 已完成的交換器檔案可從 [這裡](assets/swagger-files.zip)
+交換器檔案描述以下REST API
+* [獲取所有國家/地區](http://api.geonames.org/countryInfoJSON?username=yourusername)
 * [獲取Geoname對象的子項](http://api.geonames.org/childrenJSON?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
 
-## 建立資料來源
+## 建立資料源
 
-若要將AEM/AEM Forms與協力廠商應用程式整合，我們需要 [建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) 在雲端服務設定中。 請使用 [swagger檔案](assets/swagger-files.zip) 來建立資料來源。
-您需要建立2個資料來源（一個用來擷取所有國家/地區，其他則用來取得子元素）
+要將AEM/AEM Forms與第三方應用程式整合，我們需要 [建立資料源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) 在雲服務配置中。 請使用 [swagger檔案](assets/swagger-files.zip) 建立資料源。
+您需要建立2個資料源（一個用於讀取所有國家/地區，另一個用於獲取子元素）
 
 
 ## 建立表單資料模型
 
-AEM Forms資料整合提供直覺式的使用者介面，讓您建立及使用 [表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). 將表單資料模型建立在先前步驟中建立的資料來源上。 具有2個資料源的表單資料模型
+AEM Forms資料整合提供直觀的用戶介面，用於建立和使用 [表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 將表單資料模型基於在前一步中建立的資料源。 具有2個資料源的表單資料模型
 
-![fdm](assets/geonames-fdm.png)
+![fd](assets/geonames-fdm.png)
 
 
-## 建立最適化表單
+## 建立自適應窗體
 
-將表單資料模型的GET叫用與最適化表單整合，以填入下拉式清單。
-建立具有2個下拉式清單的最適化表單。 一個列出國家，一個列出各州/省，具體取決於所選國家。
+將表單資料模型的GET調用與自適應表單整合，以填充下拉清單。
+建立包含2個下拉清單的自適應窗體。 一個列出國家，一個列出根據選定國家而定的州/省。
 
-### 填入國家/地區下拉式清單
+### 填充國家/地區下拉清單
 
-首次初始化表單時，會填入國家/地區清單。 下列螢幕擷取畫面顯示設定為填入國家/地區下拉式清單選項的規則編輯器。 您必須提供使用者名稱及地名帳戶，才能順利運作。
-![get-countries](assets/get-countries-rule-editor.png)
+在首次初始化表單時填充國家清單。 以下螢幕抓圖顯示了配置為填充國家（地區）下拉清單選項的規則編輯器。 您必須向用戶名提供geonames帳戶才能使此帳戶正常工作。
+![get國家](assets/get-countries-rule-editor.png)
 
-#### 填入州/省下拉式清單
+#### 填充「省/市/自治區」下拉清單
 
-我們需要根據所選國家填入州/省下拉清單。 下列螢幕擷取畫面會顯示規則編輯器設定
-![state-province-options](assets/state-province-options.png)
+我們需要根據所選的國家/地區填充「省/市/自治區」下拉清單。 以下螢幕抓圖顯示規則編輯器配置
+![省/自治區選項](assets/state-province-options.png)
 
 ### 練習
 
-在表格中新增2個名為「縣市」的下拉式清單，以根據所選國家/地區和州/省列出縣和市。
-![練習](assets/cascading-drop-down-exercise.png)
+在表格中添加2個名為「縣和市」的下拉清單，根據選定的國家和省列出縣和市。
+![練](assets/cascading-drop-down-exercise.png)

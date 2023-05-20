@@ -1,7 +1,7 @@
 ---
-title: 在AEM Forms第2部分中建立DataSource設定
+title: 在AEM Forms第2部分中建立資料源配置
 seo-title: Creating DataSource Configuration in AEM Forms
-description: 這是建立第一個互動式通訊檔案的多步驟教學課程的第2部分。 在本部分，我們將建立一個REST支援的資料源。  以下影片會逐步說明建立資料來源的步驟。
+description: 這是建立第一個互動式通信文檔的多步驟教程的第2部分。 在此部分，我們將建立一個REST支援的資料源。  以下視頻通過建立資料源的步驟。
 seo-description: This is part 2 of multistep tutorial for creating your first interactive communications document. In this part, we will create a REST backed data source.  The following video walks thru the steps to create the data source.
 uuid: f20abc8d-3512-4a48-9688-524a0dfe732c
 feature: Interactive Communication
@@ -22,13 +22,13 @@ ht-degree: 5%
 
 ---
 
-# 在AEM Forms中建立DataSource設定{#creating-datasource-configuration-in-aem-forms}
+# 在AEM Forms建立資料源配置{#creating-datasource-configuration-in-aem-forms}
 
-在本部分，我們將建立一個REST支援的資料源。  以下影片會逐步說明建立資料來源的步驟。
+在此部分，我們將建立一個REST支援的資料源。  以下視頻通過建立資料源的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22344?quality=12&learn=on)
 
-請使用隨附於本教學課程相關資產的Swagger檔案。 資產可在 [簡介](introduction.md) 的上限。
+請使用提供給您的swagger檔案作為與本教程相關的資產的一部分。 資產可於 [簡介](introduction.md) 本教程的內容。
 
 ## 後續步驟
 

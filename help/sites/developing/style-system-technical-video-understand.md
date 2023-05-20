@@ -1,6 +1,6 @@
 ---
-title: 了解如何為AEM樣式系統編碼
-description: 在此影片中，我們將了解使用樣式系統來設定Adobe Experience Manager核心標題元件樣式的CSS（或LESS）和JavaScript，以及這些樣式如何套用至HTML和DOM。
+title: 瞭解如何為樣式系AEM統編碼
+description: 在此視頻中，我們將瞭解CSS（或LESS）和JavaScript的結構，以及這些樣式如何應用於HTML和DOM。
 feature: Style System
 version: 6.4, 6.5
 topic: Development
@@ -14,26 +14,26 @@ ht-degree: 0%
 
 ---
 
-# 了解如何編寫樣式系統的代碼{#understanding-how-to-code-for-the-aem-style-system}
+# 瞭解如何為樣式系統編碼{#understanding-how-to-code-for-the-aem-style-system}
 
-在此影片中，我們將審視CSS(或 [!DNL LESS])和JavaScript，以及這些樣式如何套用至HTML和DOM，來設定使用樣式系統來設定Experience Manager核心標題元件的樣式。
+在此視頻中，我們將瞭解CSS(或 [!DNL LESS])和JavaScript，它們用於使用樣式系統對Experience Manage的核心標題元件進行樣式化，以及這些樣式如何應用於HTML和DOM。
 
 
-## 了解如何編寫樣式系統的代碼 {#understanding-how-to-code-for-the-style-system}
+## 瞭解如何為樣式系統編碼 {#understanding-how-to-code-for-the-style-system}
 
 >[!VIDEO](https://video.tv.adobe.com/v/21538?quality=12&learn=on)
 
-提供的AEM套件(**technical-review.sites.style-system-1.0.0.zip**)會安裝範例標題樣式、We.Retail配置容器和標題元件的範例原則，以及範例頁面。
+提供的AEM包(**technical review.sites.style-system-1.0.0.zip**)安裝示例標題樣式、We.Retail Layout Container和Title元件的示例策略以及示例頁。
 
 [technical-review.sites.style-system-1.0.0.zip](assets/technical-review.sites.style-system-1.0.0.zip)
 
 ### CSS {#the-css}
 
-以下是 [!DNL LESS] 在以下位置找到的示例樣式的定義：
+以下是 [!DNL LESS] 在以下位置找到示例樣式的定義：
 
 * `/apps/demo/sites/style-system/clientlib-example/components/titles/styles/example.less`
 
-對於偏好CSS的使用者，此程式碼片段下方為此的CSS [!DNL LESS] 編譯為。
+對於喜歡CSS的用戶，此代碼段下面是此代碼段的CSS [!DNL LESS] 編譯到。
 
 ```css
 /* LESS */
@@ -61,7 +61,7 @@ ht-degree: 0%
 }
 ```
 
-上述 [!DNL LESS] 由Experience Manager以原生方式編譯為下列CSS。
+以上 [!DNL LESS] 由Experience Manager本機編譯到以下CSS。
 
 ```css
 /* CSS */
@@ -88,11 +88,11 @@ ht-degree: 0%
 
 ### JavaScript {#example-javascript}
 
-將範例樣式套用至標題元件時，下列JavaScript會收集並插入目前頁面的上次修改日期和時間。
+當將示例樣式應用到標題元件時，以下JavaScript將收集並彈出當前頁面的上次修改日期和時間，並將其放在標題文本下。
 
-jQuery的使用是可選的，也是使用的命名慣例。
+jQuery的使用是可選的，也是使用的命名約定。
 
-以下是 [!DNL LESS] 在以下位置找到的示例樣式的定義：
+以下是 [!DNL LESS] 在以下位置找到示例樣式的定義：
 
 * `/apps/demo/sites/style-system/clientlib-example/components/titles/styles/js/title.js`
 
@@ -142,14 +142,14 @@ jQuery(function ($) {
 });
 ```
 
-## 開發最佳實務 {#development-best-practices}
+## 制定最佳做法 {#development-best-practices}
 
-### HTML最佳實務 {#html-best-practices}
+### HTML最佳做法 {#html-best-practices}
 
-* HTML（透過HTL產生）應盡可能具有結構語義；避免元素的不必要分組/巢狀。
-* HTML元素應可透過BEM樣式的CSS類別定址。
+* HTML（通過HTL生成）應盡可能具有結構語義；避免元素的不必要的分組/嵌套。
+* HTML元素應通過BEM樣式的CSS類可定址。
 
-**好**  — 元件中的所有元素都可透過BEM記號定址：
+**好**  — 元件中的所有元素都可通過邊界元表示法定址：
 
 ```html
 <!-- Good practice -->
@@ -160,7 +160,7 @@ jQuery(function ($) {
 </div>
 ```
 
-**壞**  — 清單和清單元素只能依元素名稱定址：
+**壞**  — 清單和清單元素只能按元素名稱定址：
 
 ```html
 <!-- Bad practice -->
@@ -171,91 +171,91 @@ jQuery(function ($) {
 </div>
 ```
 
-* 公開更多資料並隱藏它比公開太少的資料要好，這些資料需要未來的後端開發才能公開它。
+* 暴露更多資料和隱藏資料比暴露太少的資料更好，因為太少的資料需要將來的後端開發才能公開。
 
-   * 實作可供作者切換的內容有助於保持此HTML精簡，讓作者能夠選取要寫入HTML的內容元素。 將影像寫入HTML時，可能不會用於所有樣式時，可能特別重要。
-   * 此規則的例外情況是，昂貴的資源（例如影像）預設會公開，因為CSS隱藏的事件影像在此情況下會不必要地擷取。
+   * 實施可作者的內容切換有助於保持此HTML的精簡，從而作者能夠選擇將哪些內容元素寫入HTML。 在將影像寫入HTML時，不能用於所有樣式時，可能特別重要。
+   * 此規則的例外情況是，預設情況下，昂貴的資源（例如，影像）會被暴露，因為CSS隱藏的事件影像會被不必要地提取。
 
-      * 現代化的影像元件通常會使用JavaScript來選取並載入使用案例（檢視區）最適當的影像。
+      * 現代映像元件通常使用JavaScript來選擇並載入最適合用例（視區）的映像。
 
-### CSS最佳作法 {#css-best-practices}
+### CSS最佳做法 {#css-best-practices}
 
 >[!NOTE]
 >
->風格體系使得技術上與 [BEM](https://en.bem.info/)，在 `BLOCK` 和 `BLOCK--MODIFIER` 不會套用至相同的元素，如所指定 [BEM](https://en.bem.info/).
+>風格系統使得技術與 [邊界元](https://en.bem.info/)中 `BLOCK` 和 `BLOCK--MODIFIER` 未應用於指定的同一元素 [邊界元](https://en.bem.info/)。
 >
->相反地，由於產品限制， `BLOCK--MODIFIER` 會套用至的父項 `BLOCK` 元素。
+>相反，由於產品約束， `BLOCK--MODIFIER` 應用於 `BLOCK` 的子菜單。
 >
->其他租戶 [BEM](https://en.bem.info/) 應與一致。
+>所有其他租戶 [邊界元](https://en.bem.info/) 應與一致。
 
-* 使用前置處理器，例如 [較少](https://lesscss.org/) (由AEM原生支援)或 [SCSS](https://sass-lang.com/) （需要自訂建置系統），以允許清除CSS定義和重新可用性。
+* 使用預處理器，如 [減](https://lesscss.org/) (由本AEM機支援)或 [SCSS](https://sass-lang.com/) （需要自定義生成系統），以允許清除CSS定義和重新使用。
 
-* 保持選擇器重量/特異性一致；這有助於避免和解決難以識別的CSS階層衝突。
-* 將每個樣式組織為離散檔案。
-   * 可使用LESS/SCSS組合這些檔案 `@imports` 或者，如果需要原始CSS，可透過「HTML用戶端程式庫」檔案包含，或自訂前端資產建置系統。
+* 保持選擇器重量/特異性一致；這有助於避免和解決難以識別的CSS級聯衝突。
+* 將每個樣式組織成一個離散檔案。
+   * 這些檔案可以使用LESS/SCSS組合 `@imports` 或者，如果需要原始CSS，請通過HTML客戶端庫檔案包含或自定義前端資產構建系統。
 * 避免混合許多複雜的樣式。
-   * 一次可套用至元件的樣式越多，排列的變化就越多。 這可能會變得難以維護/QA/確保品牌一致性。
-* 請一律使用CSS類別（遵循BEM標籤法）來定義CSS規則。
-   * 如果絕對需要選取不含CSS類的元素（即裸元素），請在CSS定義中將其移到較高的位置，以清楚表明這些元素的特異性比與該類型的元素（具有可選的CSS類）的任何衝突低。
-* 避免使用樣式 `BLOCK--MODIFIER` 直接在回應式格線上。 更改此元素的顯示可能會影響響應網格的呈現和功能，因此，當更改響應網格的行為時，只有在此級別上的樣式。
-* 使用應用樣式範圍 `BLOCK--MODIFIER`. 此 `BLOCK__ELEMENT--MODIFIERS` 可用於元件，但由於 `BLOCK` 代表元件，元件是已設定樣式的元件，樣式是「已定義」且範圍是透過 `BLOCK--MODIFIER`.
+   * 一次可以應用於元件的樣式越多，排列的變化就越多。 這可能會變得難以維護/QA/確保品牌協調。
+* 始終使用CSS類（遵循BEM符號）定義CSS規則。
+   * 如果絕對需要選擇沒有CSS類的元素（即裸元素），請在CSS定義中將其移到更高位置，以明確它們與確實具有可選CSS類的此類元素的衝突相比具有更低的特異性。
+* 避免造型 `BLOCK--MODIFIER` 直接連接到響應網格。 更改此元素的顯示可能會影響響應網格的渲染和功能，因此只有當意圖更改響應網格的行為時，才會在此級別上使用樣式。
+* 使用 `BLOCK--MODIFIER`。 的 `BLOCK__ELEMENT--MODIFIERS` 可在元件中使用，但 `BLOCK` 表示「元件」，「元件」是樣式，「樣式」是「定義的」，範圍通過 `BLOCK--MODIFIER`。
 
-範例CSS選取器結構應如下：
+CSS選擇器結構示例應如下所示：
 
 <table> 
  <tbody> 
   <tr> 
-   <td valign="bottom"><p>第一級選擇器</p> <p>塊 — 修飾符</p> </td> 
-   <td valign="bottom"><p>第2級選擇器</p> <p>區塊</p> </td> 
-   <td valign="bottom"><p>第3級選擇器</p> <p>BLOCK__ELEMENT</p> </td> 
+   <td valign="bottom"><p>第1級選擇器</p> <p>塊 — 修飾符</p> </td> 
+   <td valign="bottom"><p>第2級選擇器</p> <p>阻止</p> </td> 
+   <td valign="bottom"><p>3級選擇器</p> <p>塊_元素</p> </td> 
    <td> </td> 
-   <td valign="middle">有效的CSS選取器</td> 
+   <td valign="middle">有效的CSS選擇器</td> 
   </tr> 
   <tr> 
-   <td valign="middle"><span class="code">.cmp-list-dark</span></td> 
+   <td valign="middle"><span class="code">.cmp-list — 深色</span></td> 
    <td valign="middle"><span class="code">.cmp-list</span></td> 
-   <td valign="middle"><span class="code">.cmp-list__item</span></td> 
+   <td valign="middle"><span class="code">.cmp-list_item</span></td> 
    <td valign="middle">→</td> 
-   <td><p><span class="code">.cmp-list-dark</span></p> <p><span class="code"> .cmp-list</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-list__item { </span></strong></p> <p><strong> 顏色：藍色；</strong></p> <p><strong> }</strong></p> </td> 
+   <td><p><span class="code">.cmp-list — 深色</span></p> <p><span class="code"> .cmp-list</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-list_item { </span></strong></p> <p><strong> 顏色：藍色；</strong></p> <p><strong> }</strong></p> </td> 
   </tr> 
   <tr> 
-   <td valign="middle"><span class="code">.cmp-image—hero</span></td> 
+   <td valign="middle"><span class="code">.cmp影像 — 英雄</span></td> 
    <td valign="middle"><span class="code">.cmp-image</span></td> 
-   <td valign="middle"><span class="code">.cmp-image__caption</span></td> 
+   <td valign="middle"><span class="code">.cmp-image_caption</span></td> 
    <td valign="middle">→</td> 
-   <td valign="middle"><p><span class="code">.cmp-image—hero</span></p> <p><span class="code"> .cmp-image</span></p> <p><span class="code"> .cmp-image__caption {</span></p> <p><span class="code"> 顏色：紅色；</span></p> <p><span class="code"> }</span></p> </td> 
+   <td valign="middle"><p><span class="code">.cmp影像 — 英雄</span></p> <p><span class="code"> .cmp-image</span></p> <p><span class="code"> .cmp-image_caption {</span></p> <p><span class="code"> 顏色：紅色；</span></p> <p><span class="code"> }</span></p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-如果是巢狀元件，這些巢狀元件元素的CSS選取器深度將超過第3級選取器。 對巢狀元件重複相同的模式，但由父元件限定範圍 `BLOCK`. 換句話說，啟動巢狀元件的 `BLOCK` 在第3層，且巢狀元件的 `ELEMENT` 位於第4個選取器層級。
+對於嵌套元件，這些嵌套的「元件」元素的CSS選擇器深度將超過第3級選擇器。 對嵌套元件重複相同的模式，但由父元件的 `BLOCK`。 換句話說，啟動嵌套元件 `BLOCK` 在第3級，嵌套的元件 `ELEMENT` 位於第4個選擇器級別。
 
-### JavaScript最佳實務 {#javascript-best-practices}
+### JavaScript最佳做法 {#javascript-best-practices}
 
-本節中定義的最佳實務涉及「style-JavaScript」，或專門用於以風格而非功能目的操控元件的JavaScript。
+本節中定義的最佳做法與「style-JavaScript」或JavaScript有關，JavaScript專門用於操作元件以進行風格操作，而不是用於功能目的。
 
-* Style-JavaScript應審慎使用，且為少數使用案例。
-* Style-JavaScript主要用於控制元件的DOM，以支援CSS的樣式。
-* 如果元件在頁面上出現多次，請重新評估Javascript的使用，並了解計算/重新繪製成本。
-* 如果元件在頁面上出現多次，Javascript以非同步方式(透過AJAX)提取新資料/內容，請重新評估使用。
-* 同時處理發佈和製作體驗。
-* 盡可能重複使用style-Javascript。
-   * 例如，如果元件的多個樣式要求將其影像移至背景影像，則style-JavaScript可實作一次，並附加至多個 `BLOCK--MODIFIERs`.
-* 盡可能將style-JavaScript與功能JavaScript分開。
-* 直接透過HTL評估HTML中JavaScript與顯現這些DOM變更的成本。
-   * 當使用style-JavaScript的元件需要伺服器端修改時，請評估此時是否可以導入JavaScript操作，以及影響/影響元件的效能和支援性。
+* Style-JavaScript應當使用得當，而且是少數使用案例。
+* Style-JavaScript應主要用於操作元件的DOM以支援CSS的樣式。
+* 如果元件在頁面上出現多次，請重新評估Javascript的使用，並瞭解計算/重新繪製成本。
+* 如果Javascript在元件可能多次出現在頁面上時非同步(通過AJAX)導入新資料/內容，請重新評估Javascript的使用。
+* 處理發佈和創作體驗。
+* 請盡可能重新使用style-Javascript。
+   * 例如，如果元件的多個樣式要求將其影像移動到背景影像，則style-JavaScript可以實現一次並附加到多個 `BLOCK--MODIFIERs`。
+* 盡可能將style-JavaScript與功能性的JavaScript分開。
+* 評估JavaScript的成本與通過HTL直接在HTML中表示這些DOM更改的成本。
+   * 當使用style-JavaScript的元件需要伺服器端修改時，請評估此時是否可以引入JavaScript操作，以及該元件的效能和支援性會受到哪些影響/影響。
 
-#### 效能考量 {#performance-considerations}
+#### 效能注意事項 {#performance-considerations}
 
-* Style-JavaScript應保持輕薄。
-* 為了避免閃爍和不必要的重繪，最初通過 `BLOCK--MODIFIER BLOCK`，並在JavaScript中的所有DOM操作完成時顯示。
-* style-JavaScript操作的效能類似於附加到和修改DOMReady上元素的基本jQuery外掛程式。
-* 確保請求已壓縮，且CSS和JavaScript已縮制。
+* Style-JavaScript應保持輕巧和精簡。
+* 為避免閃爍和不必要的重繪，最初將元件隱藏在 `BLOCK--MODIFIER BLOCK`，並在JavaScript中的所有DOM操作完成時顯示。
+* style-JavaScript操作的效能類似於附加到DOMReady上的元素並修改這些元素的基本jQuery插件。
+* 確保對請求進行壓縮，並且CSS和JavaScript被微型化。
 
 ## 其他資源 {#additional-resources}
 
 * [樣式系統文檔](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)
-* [建立AEM Client程式庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
-* [BEM（區塊元素修飾詞）檔案網站](https://getbem.com/)
+* [建立客AEM戶端庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [BEM（塊元素修改量）文檔網站](https://getbem.com/)
 * [LESS文檔網站](https://lesscss.org/)
 * [jQuery網站](https://jquery.com/)

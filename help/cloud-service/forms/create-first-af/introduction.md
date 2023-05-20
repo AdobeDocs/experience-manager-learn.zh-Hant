@@ -1,6 +1,6 @@
 ---
-title: 建立第一個最適化表單
-description: 建立第一個最適化表單課程簡介影片
+title: 建立第一個自適應窗體
+description: 建立第一個自適應表單課程簡介視頻
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ---
 
-# 簡介影片
+# 簡介視頻
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/332571?quality=12&learn=on)

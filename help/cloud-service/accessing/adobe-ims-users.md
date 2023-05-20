@@ -1,5 +1,5 @@
 ---
-title: Adobe IMS使用者和AEM
+title: Adobe IMS用戶和AEM
 description: 在 Adobe 的 Admin Console 中會將需要存取 AEM 作者服務的使用者當成 Adobe IMS 使用者管理。了解何謂 Adobe IMS 使用者，以及如何在 Admin Console 中對其進行存取和管理。
 version: Cloud Service
 topic: Administration, Security
@@ -16,7 +16,7 @@ ht-degree: 73%
 
 ---
 
-# Adobe IMS使用者 {#adobe-ims-users}
+# Adobe IMS用戶 {#adobe-ims-users}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_users"
@@ -25,11 +25,11 @@ ht-degree: 73%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#how-to-set-up" text="在 Admin Console 中建立使用者"
 >additional-url="https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="Adobe Admin Console 身分識別概觀"
 
-需要存取AEM作者服務的使用者管理方式為 [Adobe IMS使用者](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html) in [AdobeAdmin Console](https://adminconsole.adobe.com). 了解何謂 Adobe IMS 使用者，以及如何在 Admin Console 中對其進行存取和管理。
+需要訪問AEM作者服務的用戶被管理為 [Adobe IMS用戶](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html) 在 [AdobeAdmin Console](https://adminconsole.adobe.com)。 了解何謂 Adobe IMS 使用者，以及如何在 Admin Console 中對其進行存取和管理。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39149?quality=12&learn=on)
 
 ## 其他資源
 
-+ [Admin Console檔案中的使用者入門](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#onboarding-users-in-admin-console)
-+ [Adobe Admin Console Identity概述檔案](https://helpx.adobe.com/tw/enterprise/using/identity.html)
++ [在Admin Console文檔中登錄用戶](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#onboarding-users-in-admin-console)
++ [Adobe Admin Console身份概述文檔](https://helpx.adobe.com/tw/enterprise/using/identity.html)

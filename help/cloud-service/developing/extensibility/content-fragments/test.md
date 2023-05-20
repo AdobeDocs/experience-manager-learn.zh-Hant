@@ -1,6 +1,6 @@
 ---
-title: 測試AEM內容片段主控台擴充功能
-description: 了解如何先測試AEM內容片段主控台擴充功能再部署至生產環境。
+title: 測試內AEM容片段控制台擴展
+description: 瞭解如何在部署到生AEM產之前test內容片段控制台擴展。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,47 +9,47 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
 
 ---
 
+# Test擴展
 
-# 測試擴充功能
+可AEM以針對擴展所屬的Adobe組AEM織中的任何as a Cloud Service環境測試內容片段控制台擴展。
 
-AEM內容片段主控台擴充功能可針對擴充功能所屬Adobe組織中的任何AEMas a Cloud Service環境進行測試。
-
-測試擴充功能需透過精心編製的URL完成，該URL會指示AEM內容片段主控台載入擴充功能。
+通過精心編製的URL測試擴展，該URL指示AEMContent Fragment控制台載入擴展。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412877?quality=12&learn=on)
 
-## AEM內容片段主控台URL
+## 內AEM容片段控制台URL
 
-![AEM內容片段主控台URL](./assets/test/content-fragment-console-url.png){align="center"}
+![內AEM容片段控制台URL](./assets/test/content-fragment-console-url.png){align="center"}
 
-若要建立將非生產擴充功能載入至AEM內容片段控制台的URL，必須收集所需AEM內容片段控制台的URL。 導覽至AEMas a Cloud Service環境以測試擴充功能，並複製其AEM內容片段主控台的URL。
+要建立將非生產擴展裝載到內容片段控制台AEM的URL，必須收集所AEM需內容片段控制台的URL。 導航到AEMas a Cloud Service環境以test其副檔名，並複製其內容片段控AEM制台的URL。
 
-1. 登入所需的AEMas a Cloud Service環境。
+1. 登錄到所需的AEMas a Cloud Service環境。
 
-   + 將AEM開發環境用於 [測試開發組建](#testing-development-builds)
-   + 請使用AEM Stage或QA開發環境，以 [測試階段建置](#testing-stage-builds)
+   + 使用AEM開發環境 [測試開發](#testing-development-builds)
+   + 使用階段AEM或QA開發環境 [測試階段構建](#testing-stage-builds)
 
-1. 選取 __內容片段__ 表徵圖。
-1. 等候AEM內容片段主控台在瀏覽器中載入。
-1. 從瀏覽器的位址列複製AEM內容片段主控台的URL，它應該類似：
+1. 選擇 __內容片段__ 表徵圖
+1. 等待內容AEM片段控制台在瀏覽器中載入。
+1. 從瀏AEM覽器的地址欄複製內容片段控制台的URL，它應類似於：
 
    ```
    https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
-在建立用於開發和測試的URL時，以下將使用此URL。
+此URL用於生成用於開發和階段測試的URL。
 
-## 測試本機開發組建
+## Test地方發展建設
 
-1. 開啟命令列至擴充功能專案的根目錄。
-1. 以本機應用程式產生器應用程式執行AEM內容片段主控台擴充功能
+1. 開啟擴展項目根目錄的命令行。
+1. 以本AEM地App Builder應用程式運行內容片段控制台擴展
 
    ```shell
    $ aio app run
@@ -62,43 +62,43 @@ AEM內容片段主控台擴充功能可針對擴充功能所屬Adobe組織中的
      -> https://experience.adobe.com/?devMode=true#/custom-apps/?localDevUrl=https://localhost:9080
    ```
 
-請注意本機應用程式URL，如上所示 `-> https://localhost:9080`
+請注意上面所示的本地應用程式URL `-> https://localhost:9080`
 
-1. 將下列兩個查詢參數新增至 [AEM內容片段主控台的URL](#aem-content-fragment-console-url)
+1. 將以下兩個查詢參數添加到 [內AEM容片段控制台的URL](#aem-content-fragment-console-url)
    + `&devMode=true`
-   + `&ext=<LOCAL APPLICATION URL>`，通常 `&ext=https://localhost:9080`.
+   + `&ext=<LOCAL APPLICATION URL>`通常 `&ext=https://localhost:9080`。
 
-   新增上述兩個查詢參數(`devMode` 和 `ext`)作為 __first__ 內容片段控制台使用雜湊路由(`#/@wknd/aem/...`)，因此在 `#` 將無法運作。
+   添加上述兩個查詢參數(`devMode` 和 `ext`) __第一__ 查詢URL中的參數，因為內容片段控制台使用散列路由(`#/@wknd/aem/...`)，因此在 `#` 不會奏效。
 
-   測試URL應該如下所示：
+   testURL應該如下所示：
 
    ```
    https://experience.adobe.com/?devMode=true&ext=https://localhost:9080&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
-1. 將測試URL複製並貼到您的瀏覽器中。
+1. 將testURL複製並貼上到瀏覽器中。
 
-   + 您可能必須開始，然後定期 [接受HTTPS憑證](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users) 本機應用程式的主機(`https://localhost:9080`)。
+   + 你可能得先開始，然後定期 [接受HTTPS證書](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users) 本地應用程式的主機(`https://localhost:9080`)。
 
-1. AEM內容片段主控台會載入本機版本的擴充功能，並插入其中以進行測試，而只要本機App Builder應用程式執行，就會熱重新載入變更。
+1. 內容AEM片段控制台載入時，將擴展的本地版本注入到其中以進行測試，並在本地App Builder應用程式運行期間熱重新載入更改。
 
 >[!IMPORTANT]
 >
->請記住，使用此方法時，開發中的擴充功能只會影響您的體驗，而AEM內容片段主控台的所有其他使用者都不會插入擴充功能來存取它。
+>請記住，使用此方法時，開發中的擴展僅影響您的體驗，而Content Fragment控制台的所有其他用戶都無需注入擴展AEM即可訪問它。
 
 
-## 測試階段組建
+## Test階段生成
 
-1. 開啟命令列至擴充功能專案的根目錄。
+1. 開啟擴展項目根目錄的命令行。
 1. 確保舞台工作區處於活動狀態（或用於測試的任何工作區）。
 
    ```shell
    $ aio app use -w Stage
    ```
 
-   將任何變更合併至 `.env` 和 `.aio`.
+   將任何更改合併到 `.env` 和 `.aio`。
 
-1. 部署更新的擴充功能App Builder應用程式。 如果未登入，請執行 `aio login` 第一個。
+1. 部署已更新的擴展應用程式生成器應用程式。 如果未登錄，則運行 `aio login` 。
 
    ```shell
    $ aio app deploy
@@ -114,25 +114,22 @@ AEM內容片段主控台擴充功能可針對擴充功能所屬Adobe組織中的
    Successful deployment 🏄
    ```
 
-1. 將下列兩個查詢參數新增至 [AEM內容片段主控台的URL](#aem-content-fragment-console-url)
+1. 將以下兩個查詢參數添加到 [內AEM容片段控制台的URL](#aem-content-fragment-console-url)
    + `&devMode=true`
    + `&ext=<DEPLOYED APPLICATION URL>`
 
-   新增上述兩個查詢參數(`devMode` 和 `ext`)作為 __first__ 內容片段控制台使用雜湊路由(`#/@wknd/aem/...`)，因此在 `#` 將無法運作。
+   添加上述兩個查詢參數(`devMode` 和 `ext`) __第一__ 查詢URL中的參數，因為內容片段控制台使用散列路由(`#/@wknd/aem/...`)，因此在 `#` 不會奏效。
 
-   測試URL應該如下所示：
+   testURL應該如下所示：
 
    ```
    https://experience.adobe.com/?devMode=true&ext=https://98765-123aquarat.adobeio-static.net/index.html&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
-1. 將測試URL複製並貼到您的瀏覽器中。
-1. AEM內容片段主控台會插入部署至中Stage Workspace的擴充功能版本。 此階段URL可以與QA或業務使用者共用以進行測試。
+1. 將testURL複製並貼上到瀏覽器中。
+1. 內AEM容片段控制台將部署到中的Stage工作區的擴展的版本插入。 此階段URL可以共用給QA或業務用戶以進行測試。
 
-請記住，使用此方法時，當使用精巧的階段URL存取時，階段擴充功能只會插入到AEM內容片段主控台。
+請記住，使用此方法時，只有在使用工藝階段URLAEM訪問時，才會在「內容片段控制台」上注入階段擴展。
 
-1. 已部署的擴充功能可透過執行來更新 `aio app deploy` 這些變更會在使用測試URL時自動反映。
-1. 若要移除要測試的擴充功能，請執行 `aio app undeploy`.
-
-
-
+1. 可通過運行來更新已部署的擴展 `aio app deploy` 同樣，使用testURL時，這些更改會自動反映。
+1. 要刪除測試擴展，請運行 `aio app undeploy`。

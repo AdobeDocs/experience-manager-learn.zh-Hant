@@ -1,6 +1,6 @@
 ---
-title: 內容片段主控台影片
-description: 了解AEM內容片段主控台，輕鬆管理和編寫內容片段！
+title: 內容片段控制台視頻
+description: 瞭解使管AEM理和創作內容片段變得輕鬆的內容片段控制台！
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -16,13 +16,13 @@ ht-degree: 7%
 ---
 
 
-# 內容片段主控台影片
+# 內容片段控制台視頻
 
-![AEM內容片段編輯器](./assets/main.png)
+![內AEM容片段編輯器](./assets/main.png)
 
-Adobe Experience Manager的內容片段主控台讓管理和編寫內容片段變得輕鬆！ 了解如何使用這些影片充分運用內容片段主控台。
+Adobe Experience Manager的內容片段控制台使管理和創作內容片段變得簡單！ 瞭解如何利用這些視頻充分利用內容片段控制台。
 
-檢閱 [檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html)  以取得內容片段主控台及其功能的完整詳細資訊。
+查看 [文檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html)  瞭解內容片段控制台及其功能的完整詳細資訊。
 
 ## 影片
 
@@ -49,12 +49,12 @@ Adobe Experience Manager的內容片段主控台讓管理和編寫內容片段�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./basics/content-fragments-console.md" title="概觀">概觀</a>
             </p>
-            <p class="is-size-6">內容片段主控台的簡要概述。</p>
+            <p class="is-size-6">內容片段控制台的簡要概述。</p>
             <a href="./basics/content-fragments-console.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">觀看影片</span>
+                has-text-weight-bold">觀看視頻</span>
             </a>
           </div>
         </div>
@@ -66,10 +66,10 @@ Adobe Experience Manager的內容片段主控台讓管理和編寫內容片段�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./search/fast-filtering.md" title="快速篩選"
+            <a href="./search/fast-filtering.md" title="快速過濾"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="快速篩選">
+                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="快速過濾">
             </a>
           </figure>
         </div>
@@ -78,14 +78,14 @@ Adobe Experience Manager的內容片段主控台讓管理和編寫內容片段�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./search/fast-filtering.md" title="快速篩選">快速篩選</a>
+              <a href="./search/fast-filtering.md" title="快速過濾">快速過濾</a>
             </p>
-            <p class="is-size-6">使用內嵌篩選功能快速找到內容片段。</p>
+            <p class="is-size-6">使用內聯篩選快速查找內容片段。</p>
             <a href="./search/fast-filtering.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">觀看影片</span>
+                has-text-weight-bold">觀看視頻</span>
             </a>
           </div>
         </div>
@@ -97,10 +97,10 @@ Adobe Experience Manager的內容片段主控台讓管理和編寫內容片段�
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./editor/new-editor-toggle.md" title="新編輯器切換"
+            <a href="./editor/new-editor-toggle.md" title="新建編輯器切換"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="新編輯器切換">
+                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="新建編輯器切換">
             </a>
           </figure>
         </div>
@@ -109,14 +109,14 @@ Adobe Experience Manager的內容片段主控台讓管理和編寫內容片段�
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/new-editor-toggle.md" title="新編輯器切換">新編輯器切換</a>
+              <a href="./editor/new-editor-toggle.md" title="新建編輯器切換">新建編輯器切換</a>
             </p>
-            <p class="is-size-6">從傳統版順暢地轉換為新的編輯器。</p>
+            <p class="is-size-6">從經典到新編輯的無縫過渡。</p>
             <a href="./editor/new-editor-toggle.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">觀看影片</span>
+                has-text-weight-bold">觀看視頻</span>
             </a>
           </div>
         </div>
@@ -132,7 +132,7 @@ Adobe Experience Manager的內容片段主控台讓管理和編寫內容片段�
               content references" tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3419313?format=jpeg"
-                alt="非資產內容參考">
+                alt="非資產內容引用">
             </a>
           </figure>
         </div>
@@ -142,14 +142,14 @@ Adobe Experience Manager的內容片段主控台讓管理和編寫內容片段�
               class="is-size-6">1分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./editor/non-asset-content-references.md" title="Non-asset
-                content references">非資產內容參考</a>
+                content references">非資產內容引用</a>
             </p>
-            <p class="is-size-6">將體驗片段和頁面併入您的內容片段。</p>
+            <p class="is-size-6">將體驗片段和頁面合併到內容片段中。</p>
             <a href="./editor/non-asset-content-references.md"
               class="spectrum-Button spectrum-Button--outline
               spectrum-Button--primary spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">觀看影片</span>
+                has-text-weight-bold">觀看視頻</span>
             </a>
           </div>
         </div>
@@ -176,12 +176,12 @@ Adobe Experience Manager的內容片段主控台讓管理和編寫內容片段�
               <a href="./editor/rte-variant-compare.md" title="RTE variant
                 compare">RTE變體比較</a>
             </p>
-            <p class="is-size-6">輕鬆對齊各頻道的RTF內容。</p>
+            <p class="is-size-6">輕鬆地跨渠道對齊您的富文本內容。</p>
             <a href="./editor/rte-variant-compare.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">觀看影片</span>
+                has-text-weight-bold">觀看視頻</span>
             </a>
           </div>
         </div>
@@ -208,12 +208,12 @@ Adobe Experience Manager的內容片段主控台讓管理和編寫內容片段�
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./editor/language-copies.md" title="語言副本">語言副本</a>
             </p>
-            <p class="is-size-6">輕鬆管理您的內容片段語言副本</p>
+            <p class="is-size-6">輕鬆管理內容片段語言副本</p>
             <a href="./editor/language-copies.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">觀看影片</span>
+                has-text-weight-bold">觀看視頻</span>
             </a>
           </div>
         </div>

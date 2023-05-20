@@ -1,6 +1,6 @@
 ---
 title: AEM 專案原型
-description: AEM專案原型會建立基於最佳實務的簡化Adobe Experience Manager專案，作為您專屬AEM專案的起點。
+description: 「項AEM目原型」將建立一個基於最佳做法的最小的Adobe Experience Manager項目，作為您自己項目的AEM起點。
 feature: AEM Project Archetype
 topics: development
 audience: developer
@@ -22,11 +22,11 @@ ht-degree: 22%
 
 # [!DNL AEM Project Archetype] {#aem-project-archetype}
 
-AEM專案包含實作的所有程式碼和設定。 此 [!DNL AEM Project Archetype] 會建立以最佳作法為基礎的簡化Adobe Experience Manager專案，作為您專屬AEM專案的起點。
+項AEM目包含實施的所有代碼和配置。 的 [!DNL AEM Project Archetype] 建立一個基於最佳做法的最小Adobe Experience Manager項目，作為您自己項目的AEM起點。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32550?quality=12&learn=on)
 
 ## 其他資源 {#additional-resources}
 
-* [GitHub專案](https://github.com/adobe/aem-project-archetype)
-* [AEM專案原型檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
+* [GitHub項目](https://github.com/adobe/aem-project-archetype)
+* [項AEM目原型文檔](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)

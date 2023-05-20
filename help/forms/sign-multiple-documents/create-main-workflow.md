@@ -1,6 +1,6 @@
 ---
-title: 建立主工作流以觸發簽名過程
-description: 建立工作流程以將表單儲存在資料庫中以進行簽名
+title: 建立主工作流以觸發簽名進程
+description: 建立工作流以在資料庫中儲存用於簽名的表單
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 6887.jpg
@@ -16,17 +16,17 @@ ht-degree: 1%
 
 ---
 
-# 建立主要工作流程
+# 建立主工作流
 
-主要工作流程會在使用者提交初始表單時觸發(**RecoundForm**)。 以下是工作流程的流程
+用戶提交初始表單時觸發主工作流(**再融資表單**)。 以下是工作流的流
 
-![主要工作流程](assets/main-workflow.PNG)
+![主工作流](assets/main-workflow.PNG)
 
-**儲存Forms以簽署** 是自訂程式步驟。
+**商店Forms將簽名** 是自定義流程步驟。
 
-實作自訂程式步驟的動機是擴充AEM工作流程。 下列程式碼會實作自訂處理步驟。 程式碼會擷取要簽署的表單名稱，並將提交的表單資料傳遞至 `insertData` 方法。 此 `insertData` 方法接著會在資料來源所識別的資料庫中插入列 **修飾**.
+實施自定義流程步驟的動機是擴展工AEM作流。 以下代碼實現自定義進程步驟。 代碼提取要簽名的表單的名稱，並將提交的表單資料傳遞給 `insertData` 方法。 的 `insertData` 然後，在資料庫中插入由資料源標識的行 **雄獅**。
 
-此自訂程式步驟中的程式碼會參考 `SignMultipleForms` 服務。
+此自定義進程步驟中的代碼引用 `SignMultipleForms` 服務。
 
 
 
@@ -117,11 +117,11 @@ public class StoreFormsToSignWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-本文中使用的「簽署多個Forms」工作流程可以 [從此處下載](assets/sign-multiple-forms-workflows.zip)
+本文中使用的「簽名多個Forms」工作流可以 [從此處下載](assets/sign-multiple-forms-workflows.zip)
 
 >[!NOTE]
-> 請務必設定Day CQ Mail Service ，以傳送電子郵件通知。 上述套件中也提供電子郵件範本。
+> 請確保配置第CQ天郵件服務以發送電子郵件通知。 上述軟體包中還提供了電子郵件模板。
 
 ## 後續步驟
 
-[在文檔簽名時更新簽名狀態](./update-signature-status.md)
+[更新文檔簽名時的簽名狀態](./update-signature-status.md)

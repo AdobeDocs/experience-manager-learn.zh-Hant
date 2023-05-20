@@ -1,6 +1,6 @@
 ---
-title: 使用「位置複製」資產工序
-description: 了解如何使用Place Copy操作從AEM Assets使用資產。
+title: 使用「放置複製」資產工序
+description: 瞭解如何使用「放置複製」操作使用AEM Assets的資產。
 sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: Cloud Service
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 位置副本 {#place-copy}
+# 放置副本 {#place-copy}
 
-了解如何使用Place Copy操作從AEM Assets使用資產。
+瞭解如何使用「放置複製」操作使用AEM Assets的資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34049?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
 title: 如何調整Workbench記憶體參數
-description: 調整Workbench記憶體參數的步驟
+description: 調整工作台記憶體參數的步驟
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何調整Workbench記憶體參數
 
-*此影片會逐步說明調整Workbench記憶體參數的程式。*
+*此視頻將完成調整Workbench記憶體參數的過程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335509?quality=12&learn=on)

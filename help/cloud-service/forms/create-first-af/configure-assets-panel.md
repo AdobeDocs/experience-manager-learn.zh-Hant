@@ -1,6 +1,6 @@
 ---
-title: 設定資產面板
-description: 將折疊式功能表配置面板新增至資產面板。
+title: 配置資產面板
+description: 將折疊面板佈局面板添加到資產面板。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 設定資產面板
+# 配置資產面板
 
-使用可重複的面板，使用折疊式功能表配置來擷取申請人的資產。
+使用帶折疊面板佈局的可重複面板捕獲申請人的資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336473?quality=12&learn=on)

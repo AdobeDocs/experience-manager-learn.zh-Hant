@@ -1,6 +1,6 @@
 ---
-title: 雲端5 — 修正您的……快取
-description: 提供一些簡單提示，用於優化快取並加快站點速度
+title: 雲5 — 修復您的……快取
+description: 優化快取和加快站點速度的一些簡單提示
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 11%
 
 ---
 
-# 雲端5 — 修正您的……快取
+# 雲5 — 修復您的……快取
 
-在第二季的兩部分中，我們將探討一些您可了解的事項，以加速快取AEMas a Cloud Service。
+在兩季的第二集中，我們探索了一些可以讓您快速快取的AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343475?quality=12&learn=on)
 
-## 此影片所涵蓋的內容
+## 此視頻中包含的內容
 
-+ [快取與內容傳送](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html)
++ [快取和內容傳遞](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html)
 + [Google燈塔](https://developers.google.com/web/tools/lighthouse)

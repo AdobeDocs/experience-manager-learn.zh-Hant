@@ -1,6 +1,6 @@
 ---
-title: 建立用戶端程式庫
-description: 建立clientlibrary以處理「儲存並退出」按鈕的點按事件
+title: 建立客戶端庫
+description: 建立客戶端庫以處理「保存並退出」按鈕的按一下事件
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -19,9 +19,9 @@ ht-degree: 6%
 
 # 建立客戶端庫
 
-建立 [客戶端庫](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) 其中包括調用方法的代碼 `doAjaxSubmitWithFileAttachment` 的 `guideBridge` CSS類別所識別之按鈕的點按事件上的API **保存按鈕**.  我們傳遞最適化表單資料， `fileMap`，和 `mobileNumber` 到端點偵聽(在 `**/bin/storeafdatawithattachments`
+建立 [客戶端庫](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) 將包括調用該方法的代碼 `doAjaxSubmitWithFileAttachment` 的 `guideBridge` CSS類標識的按鈕的按一下事件上的API **保存按鈕**。  我們通過自適應表格資料， `fileMap`的 `mobileNumber` 到終結點的偵聽 `**/bin/storeafdatawithattachments`
 
-保存表單資料後，將生成唯一的應用程式ID，並在對話框中向用戶顯示。 關閉對話方塊時，會將使用者視為表單，讓他們使用唯一的應用程式ID擷取儲存的最適化表單。
+在保存表單資料後，生成唯一的應用程式ID並在對話框中向用戶顯示。 取消對話框後，用戶將轉為允許他們使用唯一應用程式ID檢索已保存的自適應表單的表單。
 
 ```java
 $(document).ready(function () {
@@ -67,9 +67,9 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> 我們用過 [引導盒javascript庫](http://bootboxjs.com/examples.html) 顯示對話框
+> 我們用了 [book javascript庫](http://bootboxjs.com/examples.html) 對話框
 
-此範例中使用的用戶端程式庫可以 [從此處下載](assets/client-libraries.zip)
+此示例中使用的客戶端庫可以 [從此處下載](assets/client-libraries.zip)
 
 ## 後續步驟
 

@@ -1,6 +1,6 @@
 ---
-title: 如何從說明功能表收集Workbench記錄檔
-description: 從「說明」功能表收集Workbench記錄的步驟
+title: 如何從「幫助」菜單收集Workbench日誌
+description: 從「幫助」菜單收集Workbench日誌的步驟
 type: Troubleshooting
 role: Developer
 level: Beginner
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 從說明功能表收集Workbench記錄
+# 正在從「幫助」菜單收集Workbench日誌
 
-*此影片會逐步說明從說明功能表收集Workbench記錄的程式。*
+*此視頻將通過「幫助」菜單收集Workbench日誌。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335501?quality=12&learn=on)

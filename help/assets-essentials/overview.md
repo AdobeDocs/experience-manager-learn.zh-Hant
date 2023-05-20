@@ -1,6 +1,6 @@
 ---
-title: AEM Assets Essentials影片
-description: Adobe Experience Manager Assets Essentials的影片集合
+title: AEM Assets軟體視頻
+description: Adobe Experience Manager Assets Essentials的視頻集
 recommendations: disable
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: aem-assets-essentials-videos.jpg
@@ -12,28 +12,28 @@ ht-degree: 14%
 
 ---
 
-# Assets Essentials影片
+# Assets Essentials視頻
 
 ![Assets Essentials](./assets/overview/hero.png)
 
-Experience Manager Assets Essentials提供簡化的使用者介面，以進行輕量型的資產管理和協作。
+Experience Manager Assets軟體包為輕量級資產管理和協作提供了簡化的用戶介面。
 
-請觀看這些影片，了解如何使用Assets Essentials管理您的資產，以及如何與AdobeJourney Orchestrator整合！
+查看這些視頻，瞭解如何使用Assets Essentials管理您的資產，以及如何與AdobeJourney Orchestrator整合！
 
-## 深入了解Assets Essentials
+## 瞭解有關Assets Essentials的詳細資訊
 
 <table>
 <td>
    <a href="./basics/managing.md">
-   <img alt="開始使用Assets Essentials" src="./assets/overview/getting-started.png" />
+   <img alt="Assets Essentials入門" src="./assets/overview/getting-started.png" />
    </a>
    <div>
       <a href="./basics/managing.md">
-      <strong>開始使用Assets Essentials</strong>
+      <strong>Assets Essentials入門</strong>
       </a>
    </div>
    <p>
-      <em>了解Assets Essentials的基本概念！</em>
+      <em>學習Assets Essentials的基本知識！</em>
    </p>
 </td>
 <td>
@@ -42,11 +42,11 @@ Experience Manager Assets Essentials提供簡化的使用者介面，以進行�
    </a>
    <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
-      <strong>Assets Essentials檔案</strong>
+      <strong>Assets Essentials文檔</strong>
       </a>
    </div>
    <p>
-      <em>查看Assets Essentials產品檔案！</em>
+      <em>查看Assets Essentials產品文檔！</em>
    <p>
 </td>
 <td>
@@ -59,7 +59,7 @@ Experience Manager Assets Essentials提供簡化的使用者介面，以進行�
       </a>
    </div>
    <p>
-      <em>了解Assets Essentials如何與Adobe Journey Optimizer整合！</em>
+      <em>瞭解Assets Essentials如何與Adobe Journey Optimizer整合！</em>
    <p>
 </td>
 </table>

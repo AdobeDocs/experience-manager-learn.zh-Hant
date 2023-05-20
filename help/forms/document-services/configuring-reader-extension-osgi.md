@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms OSGi中設定Reader擴充功能
-description: 將Reader擴充功能憑證新增至AEM Forms OSGi中的信任存放區
+title: 在AEM FormsOSGi中配置Reader擴展
+description: 將Reader擴展憑據添加到AEM FormsOSGi中的信任儲存
 feature: Reader Extensions
 audience: developer
 type: Tutorial
@@ -19,28 +19,28 @@ ht-degree: 0%
 
 # 添加Reader擴展憑據{#configuring-reader-extension-osgi}
 
-DocAssurance服務可以將使用權應用於PDF文檔。 要將使用權應用於PDF文檔，請配置證書。
+DocAssurance服務可以將使用權限應用於PDF文檔。 要對PDF文檔應用使用權限，請配置證書。
 
 ## 為fd-service用戶建立密鑰庫
 
-讀取器擴展證書與fd服務用戶相關聯。 要向fd-service用戶添加憑據，請執行以下步驟。 如果已為fd-service用戶建立密鑰庫，請跳過此部分
+讀取器擴展證書與fd-service用戶相關聯。 要向fd-service用戶添加憑據，請執行以下步驟。 如果已為fd-service用戶建立密鑰庫，請跳過此部分
 
-* 以管理員身分登入您的AEM Author例項
-* 轉到「工具」 — 「安全」 — 「用戶」
-* 向下捲動使用者清單，直到找到fd-service使用者帳戶為止
+* 以管理員身份登錄到AEM作者實例
+* 轉到工具 — 安全 — 用戶
+* 向下滾動用戶清單，直到找到fd-service用戶帳戶
 * 按一下fd-service用戶
-* 按一下金鑰存放區索引標籤
-* 按一下建立KeyStore
-* 設定KeyStore訪問密碼並保存您的設定以建立KeyStore密碼
+* 按一下密鑰庫頁籤
+* 按一下建立密鑰儲存
+* 設定KeyStore訪問密碼並保存設定以建立KeyStore密碼
 
-### 將憑據添加到fd-service用戶密鑰庫
+### 向fd-service用戶密鑰庫添加憑據
 
-請觀看視頻，向fd-service用戶添加憑據
+請按照視頻將憑據添加到fd-service用戶
 
 >[!VIDEO](https://video.tv.adobe.com/v/335849?quality=12&learn=on)
 
 
-列出pfx檔案詳細資訊的命令為。 以下命令假定您位於與pfx檔案相同的目錄中。
+列出pfx檔案詳細資訊的命令是。 以下命令假定您與pfx檔案位於同一目錄中。
 
 **keytool -v -list -storetype pkcs12 -keystore &lt;name of=&quot;&quot; your=&quot;&quot; pfx=&quot;&quot; file=&quot;&quot;>**
 

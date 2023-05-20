@@ -1,36 +1,33 @@
 ---
-title: 在本機部署資產
-description: 在您的本機AEM執行個體上部署教學課程資產
+title: 在本地部署資產
+description: 在本地實例上部署教程資AEM產
 feature: Adaptive Forms
 version: 6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
+exl-id: d23b51ba-1efb-4505-b5b3-44a02177e467
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
-# 在您的系統上部署
+# 在系統上部署
 
-請依照下列步驟操作，讓此使用案例在您的本機AEM執行個體上運作。
+請按照下面列出的步驟，使此用例在您的本地實例上AEM工作。
 
-* [部署DevelopingWithServiceUser套件組合](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) 包含在zip檔案中。
+* [部署DevelopingWithServiceUser捆綁包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) 包含在zip檔案中。
 
-* 在Apache Sling Service使用者對應程式服務中新增下列項目 **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** 使用 [configMgr](http://localhost:4502/system/console/configMgr).
+* 在Apache Sling服務用戶映射器服務中添加以下條目 **DevegingWithServiceUser.core:getformsresourceresolver=fd-service** 使用 [configMgr](http://localhost:4502/system/console/configMgr)。
 
-* [部署電子報套件組合](assets/Newsletters.core-1.0.0-SNAPSHOT.jar). 此套件包含的程式碼會列出資料夾內容，並組合選取的電子報。
+* [部署新聞稿捆綁包](assets/Newsletters.core-1.0.0-SNAPSHOT.jar)。 此捆綁包包含用於列出資料夾內容和匯編所選新聞稿的代碼。
 
-* [使用套件管理器匯入套件](assets/newsletter.zip). 此套件包含用來測試解決方案的用戶端程式庫和範例pdf檔案。
+* [使用包管理器導入包](assets/newsletter.zip)。 此軟體包包含客戶端庫和示例pdf檔案以test解決方案。
 
-* [匯入範例最適化表單](assets/sample-adaptive-form.zip). 此表單將列出可選擇的電子報。
+* [導入示例自適應窗體](assets/sample-adaptive-form.zip)。 此表單將列出可選擇的新聞稿。
 
-* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/downloadarchivednewsletters/jcr:content?wcmmode=disabled).
-選擇要下載的電子報。所選電子報將合併為一個pdf並返回給您。
-
-
-
-
+* [預覽窗體](http://localhost:4502/content/dam/formsanddocuments/downloadarchivednewsletters/jcr:content?wcmmode=disabled)。
+選擇要下載的幾份新聞稿。所選新聞稿將合併成一個pdf並返回給您。

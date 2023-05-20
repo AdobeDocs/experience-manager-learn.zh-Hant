@@ -1,6 +1,6 @@
 ---
-title: 建立與Salesforce連接的應用程式。
-description: 連線應用程式可讓您將Salesforce與協力廠商應用程式(例如AEM Forms)與Salesforce整合。
+title: 建立Salesforce連接的應用。
+description: Connected App允許您將Salesforce與第三方應用程式(如AEM Forms)與Salesforce整合。
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 ---
 
-# 建立連線的應用程式
+# 建立已連接的應用
 
-連線的應用程式是一個架構，可讓外部應用程式透過API和標準通訊協定（例如SAML、OAuth和OpenID Connect）與Salesforce整合。 連接的應用使用這些協定來驗證、授權和為外部應用提供單一登錄(SSO)。
+連接的應用程式是一個框架，它使外部應用程式能夠使用API和標準協定（如SAML、OAuth和OpenID Connect）與Salesforce整合。 連接的應用使用這些協定對外部應用進行身份驗證、授權和提供單一登錄(SSO)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331757?quality=12&learn=on)
 
 >[!NOTE]
->請務必在[Salesforce開發人員版](https://developer.salesforce.com/signup)中建立帳戶，因為REST API預設會在開發人員版中啟用。
+>請確保在 [Salesforce開發人員版](https://developer.salesforce.com/signup) 因為REST API在開發人員版中預設啟用。

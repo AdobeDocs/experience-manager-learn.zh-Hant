@@ -1,6 +1,6 @@
 ---
-title: Java Content Repository(JCR)簡介
-description: 介紹Adobe Experience Manager使用的JCR(Java Content Repository)。 JCR是AEM技術堆疊的基本層級，負責基礎內容的持續性、儲存、搜尋、存取控制等等！
+title: Java內容儲存庫(JCR)簡介
+description: Adobe Experience Manager使用的JCR（Java內容儲存庫）簡介。 JCR是技術堆棧的基本級AEM別，負責底層內容持久性、儲存、搜索、訪問控制等！
 topics: jcr, architecture
 audience: administrator, developer
 doc-type: technical video
@@ -19,8 +19,8 @@ ht-degree: 0%
 
 ---
 
-# Java Content Repository(JCR)簡介 {#introduction-jcr}
+# Java內容儲存庫(JCR)簡介 {#introduction-jcr}
 
-介紹Adobe Experience Manager使用的Java Content Repository(JCR)。 JCR是AEM技術堆疊的基本層級，負責基礎內容的持續性、儲存、搜尋、存取控制等等！
+Adobe Experience Manager使用的Java內容儲存庫(JCR)簡介。 JCR是技術堆棧的基本級AEM別，負責底層內容持久性、儲存、搜索、訪問控制等！
 
 >[!VIDEO](https://video.tv.adobe.com/v/32030?quality=12&learn=on)

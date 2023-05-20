@@ -1,6 +1,6 @@
 ---
-title: 搭配AEM Dynamic Media使用互動式視訊
-description: AEM Assets現在能建立互動式視訊，讓使用者可將視訊分割為較小的區段或結合小型區段來建立大型區段，讓使用者能建立動作呼叫的關聯。
+title: 將互動式視頻與AEMDynamic Media
+description: AEM Assets現在能夠建立互動式視頻，用戶可以將視頻分割成較小的片段或組合小片段來建立較大的片段，從而允許用戶關聯行動呼叫。
 feature: Video Profiles, Viewer Presets, Mixed Media Sets
 version: 6.4, 6.5
 topic: Content Management
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# 搭配AEM Dynamic Media使用互動式視訊{#using-interactive-video-with-aem-dynamic-media}
+# 將互動式視頻與AEMDynamic Media{#using-interactive-video-with-aem-dynamic-media}
 
-AEM Assets現在能建立互動式視訊，讓使用者可將視訊分割為較小的區段或結合小型區段來建立大型區段，讓使用者能建立動作呼叫的關聯。
+AEM Assets現在能夠建立互動式視頻，用戶可以將視頻分割成較小的片段或組合小片段來建立較大的片段，從而允許用戶關聯行動呼叫。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16516?quality=12&learn=on)

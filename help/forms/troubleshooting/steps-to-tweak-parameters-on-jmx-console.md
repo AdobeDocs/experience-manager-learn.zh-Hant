@@ -1,5 +1,5 @@
 ---
-title: 在JMX主控台上調整參數的步驟
+title: 在JMX控制台上調整參數的步驟
 description: 配置JMX控制台參數
 type: Troubleshooting
 role: Developer
@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# 在JMX主控台上調整參數的步驟
+# 在JMX控制台上調整參數的步驟
 
-*此影片會逐步說明在JMX主控台上調整參數的步驟。*
+*此視頻將介紹在JMX控制台上調整參數的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335554?quality=12&learn=on)

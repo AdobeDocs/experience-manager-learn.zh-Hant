@@ -1,7 +1,7 @@
 ---
-title: 第1章 — 設定和下載教學課程 — 內容服務
+title: 第1章 — 教程設定和下載 — 內容服務
 seo-title: Getting Started with AEM Content Services - Chapter 1 -  Tutorial Set up
-description: AEM Headless教學課程的第1章，說明本教學課程的AEM例項的基線設定。
+description: Headless教程的第AEM1章，介紹教程實例AEM的基線設定。
 seo-description: Chapter 1 of the AEM Headless tutorial the baseline setup for the AEM instance for the tutorial.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
@@ -11,43 +11,43 @@ exl-id: f24a75f6-9062-498c-b782-7d9011aa0bcf
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '411'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 教學課程設定
+# 教程設定
 
-一律建議使用最新版AEM和AEM WCM核心元件。
+始終建議使用最AEM新版AEM本和WCM核心元件。
 
 * AEM 6.5 或更新版本
-* AEM WCM核心元件2.4.0或更新版本
-   * 包含在 [下方的WKND Mobile AEM應用程式內容套件](#wknd-mobile-application-packages)
+* AEMWCM核心元件2.4.0或更高版本
+   * 包含在 [下面的WKND移AEM動應用程式內容包](#wknd-mobile-application-packages)
 
-開始本教學課程之前，請確定下列AEM例項 [安裝並運行](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install):
+在啟動本教程之前，請確保以AEM下實例 [安裝並運行](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install):
 
-* **AEM作者** on **埠4502**
-* **AEM發佈** on **埠4503**
+* **AEM作者** 上 **埠4502**
+* **AEM發佈** 上 **埠4503**
 
-## WKND行動應用程式套件{#wknd-mobile-application-packages}
+## WKND移動應用程式套件{#wknd-mobile-application-packages}
 
-在上安裝下列AEM內容套件 **both** AEM製作與AEM發佈，使用 [!DNL AEM Package Manager].
+在上安AEM裝以下內容包 **兩者** AEM作者和AEM發佈，使用 [!DNL AEM Package Manager]。
 
 * [ui.apps:GitHub >資產> com.adobe.aem.guides.wknd-mobile.ui.apps-x.x.x.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
    * [!DNL WKND Mobile Empty Template Type]
-   * [!DNL WKND Mobile] AEM WCM核心元件的Proxy元件
-   * [!DNL WKND Mobile] AEM Content Services頁面的CSS（適用於次要樣式）
+   * [!DNL WKND Mobile] WCM核心元件AEM的代理元件
+   * [!DNL WKND Mobile] Content ServicesAEM頁面的CSS（用於次要樣式）
 * [ui.content:GitHub > com.adobe.aem.guides.wknd-mobile.ui.content-x.x.x.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
-   * [!DNL WKND Mobile] 網站結構
+   * [!DNL WKND Mobile] 站點結構
    * [!DNL WKND Mobile] DAM資料夾結構
    * [!DNL WKND Mobile] 影像資產
 
-在 [第7章](./chapter-7.md) 我們將運行 [!DNL WKND Mobile] 使用的Android行動應用程式 [Android Studio](https://developer.android.com/studio) 和提供的APK（Android應用程式套件）:
+在 [第七章](./chapter-7.md) 我們會 [!DNL WKND Mobile] Android Mobile App使用 [安卓工作室](https://developer.android.com/studio) 以及提供的APK（Android應用程式套件）:
 
 * [[!DNL Android Mobile App: GitHub > Assets > wknd-mobile.x.x.x.apk]](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
 
-## 章節AEM內容套件
+## 章AEM內容包
 
-這組內容包將建立相關章節和前面所有章節中描述的內容和配置。 這些套件為選用，但可加快建立內容的速度。
+這組內容包建立相關章節和前面所有章節中描述的內容和配置。 這些包是可選的，但可加快內容建立。
 
 * [第二章內容：GitHub >資產> com.adobe.aem.guides.wknd-mobile.content.chapter-2.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
 * [第三章內容：GitHub >資產> com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
@@ -56,13 +56,13 @@ ht-degree: 0%
 
 ## 原始碼
 
-AEM專案和 [!DNL Android Mobile App] 在 [[!DNL AEM Guides - WKND Mobile GitHub Project]](https://github.com/adobe/aem-guides-wknd-mobile). 不需要為本教學課程建立或修改原始碼，提供原始碼是為了讓教學課程所有方面的建立完全透明。
+項目和AEM的原始碼 [!DNL Android Mobile App] 在 [[!DNL AEM Guides - WKND Mobile GitHub Project]](https://github.com/adobe/aem-guides-wknd-mobile)。 本教程不需要構建或修改原始碼，它的提供允許在構建教程的所有方面方面實現完全透明。
 
-若您發現本教學課程或程式碼的問題，請保留 [GitHub問題](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+如果您發現教程或代碼有問題，請留下 [GitHub問題](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
 
 ## 跳到結尾
 
-為了跳到教學課程的結尾，請 [com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) 內容套件可安裝在 **both** AEM作者和AEM發佈。 請注意，內容和設定不會顯示為「AEM作者」中已發佈，但由於進行手動部署，所有必要的內容和設定都可在AEM Publish上使用，允許 [!DNL WKND Mobile App] 來存取內容。
+要跳到本教程的結尾， [com.adobe.aem.guides.wknd-mobile content-chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) 內容包可以安裝在 **兩者** AEM作者和AEM發佈。 請注意，內容和配置不會像在AEM Author中發佈的那樣顯示，但是，由於手動部署，AEM Publish上提供了所有必需的內容和配置，允許 [!DNL WKND Mobile App] 的子菜單。
 
 
 ## 下一步

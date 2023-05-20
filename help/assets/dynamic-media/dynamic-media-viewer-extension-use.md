@@ -1,5 +1,5 @@
 ---
-title: 搭配使用Dynamic Media檢視器及Adobe Analytics和AdobeLaunch
+title: 將Dynamic Media觀眾與Adobe Analytics和Adobe發佈結合使用
 description: 適用於 Adobe Launch 的 Dynamic Media 檢視器擴充功能及 Dynamic Media 檢視器 5.13 版的發行，可讓 Dynamic Media、Adobe Analytics 和 Adobe Launch 的客戶以其 Adobe Launch 設定使用 Dynamic Media 檢視器專屬的事件和資料。
 sub-product: Dynamic Media
 feature: Asset Insights
@@ -15,32 +15,32 @@ ht-degree: 18%
 
 ---
 
-# 搭配使用Dynamic Media檢視器及Adobe Analytics和AdobeLaunch{#using-dynamic-media-viewers-adobe-analytics-launch}
+# 將Dynamic Media觀眾與Adobe Analytics和Adobe發佈結合使用{#using-dynamic-media-viewers-adobe-analytics-launch}
 
-若為擁有Dynamic Media和Adobe Analytics的客戶，您現在可以使用Dynamic Media檢視器擴充功能，追蹤您網站上Dynamic Media檢視器的使用情況。
+對於Dynamic Media和Adobe Analytics的客戶，您現在可以使用Dynamic Media查看器分機在您的網站上跟蹤Dynamic Media查看器的使用情況。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29308?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 針對此功能，以Dynamic Media Scene7模式執行Adobe Experience Manager。 您也需要 [將Adobe Experience Platform Launch與AEM例項整合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
+> 在Dynamic MediaScene7模式下運行Adobe Experience Manager以獲取此功能。 你還需要 [將Adobe Experience Platform Launch與你的實AEM例整合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)。
 
-隨著Dynamic Media檢視器擴充功能的推出，Adobe Experience Manager現在為Dynamic Media檢視器(5.13)提供的資產提供進階分析支援，讓您在網站頁面上使用Dynamic Media檢視器時，能更精細地控制事件追蹤。
+隨著Dynamic Media查看器擴展的推出，Adobe Experience Manager現在為與Dynamic Media查看器(5.13)一起提供的資產提供高級分析支援，在站點頁面上使用Dynamic Media查看器時，可更精確地控制事件跟蹤。
 
-如果您已有AEM Assets和Sites，則可將Launch屬性與AEM作者例項整合。 將launch整合與網站建立關聯後，您就可以在啟用檢視器的事件追蹤的情況下，將動態媒體元件新增至頁面。
+如果您已經擁有AEM Assets和站點，則可以將Launch屬性與作者實AEM例整合。 一旦您的啟動整合與您的網站相關聯，您就可以在啟用了查看者事件跟蹤的情況下將動態媒體元件添加到您的頁面。
 
-若為僅限AEM Assets的客戶或Dynamic Media Classic客戶，使用者可以取得檢視器的內嵌程式碼，並將其新增至頁面。 接著，您就可以手動將Launch指令碼程式庫新增至頁面，以便進行檢視器事件追蹤。
+對於只有AEM Assets的客戶或Dynamic Media Classic客戶，用戶可以獲取查看者的嵌入代碼並將其添加到頁面。 然後，可以將啟動指令碼庫手動添加到頁面中以進行查看器事件跟蹤。
 
-下表列出Dynamic Media檢視器事件及其支援的引數：
+下表列出了Dynamic Media查看器事件及其支援的參數：
 
 <table>
    <tbody>
       <tr>
-         <td>檢視器事件名稱</td>
-         <td>引數參考</td>
+         <td>查看器事件名稱</td>
+         <td>參數引用</td>
       </tr>
       <tr>
-         <td> 常見 </td>
+         <td> 通用 </td>
          <td> %event.detail.dm.objID% </td>
       </tr>
       <tr>
@@ -69,11 +69,11 @@ ht-degree: 18%
       </tr>
       <tr>
          <td> HREF </td>
-         <td> %event.detail.dm.HREF.rolver% </td>
+         <td> %event.detail.dm.HREF.roupler% </td>
       </tr>
       <tr>
          <td> 項目 </td>
-         <td> %event.detail.dm.ITEM.rolver% </td>
+         <td> %event.detail.dm.ITEM.roupler% </td>
       </tr>
       <tr>
          <td> 載入 </td>
@@ -100,7 +100,7 @@ ht-degree: 18%
          <td> %event.detail.dm.LOAD.viewerversion% </td>
       </tr>
       <tr>
-         <td> 中繼資料 </td>
+         <td> 元資料 </td>
          <td> %event.detail.dm.METADATA.length% </td>
       </tr>
       <tr>
@@ -128,7 +128,7 @@ ht-degree: 18%
          <td> %event.detail.dm.PLAY.timestamp% </td>
       </tr>
       <tr>
-         <td> 回轉 </td>
+         <td> 自旋 </td>
          <td> %event.detail.dm.SPIN.framenumber% </td>
       </tr>
       <tr>
@@ -140,7 +140,7 @@ ht-degree: 18%
          <td> %event.detail.dm.SWAP.asset% </td>
       </tr>
       <tr>
-         <td> 色票 </td>
+         <td> 色板 </td>
          <td> %event.detail.dm.SWATCH.frame% </td>
       </tr>
       <tr>
@@ -164,6 +164,6 @@ ht-degree: 18%
 
 ## 其他資源{#additional-resources}
 
-* [將Adobe Experience Manager與AdobeLaunch整合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-* [在Dynamic Media Scene7模式中執行Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=zh-Hant)
+* [將Adobe Experience Manager與Adobe發佈整合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
+* [在Dynamic MediaAdobe Experience Manager模式下運行Scene7](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=zh-Hant)
 * [整合 Dynamic Media 檢視器以及 Adobe Analytics 和 Adobe Launch](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html)

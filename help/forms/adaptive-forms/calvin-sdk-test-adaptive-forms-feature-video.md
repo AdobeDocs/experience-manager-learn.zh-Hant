@@ -1,6 +1,6 @@
 ---
-title: 透過AEM Forms了解Forms自動化測試
-description: AEM 6.3 Forms推出了讓使用者在AEM for Adaptive Forms中，使用以hobbes.js架構建置的Calvin SDK建立測試案例的功能
+title: 瞭解Forms自動化測試與AEM Forms
+description: AEM6.3Forms介紹了使用構建在hobbes.js框架AEM之上的Calvin SDK在Adaptive Forms內建立test案例的功能
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,20 +15,20 @@ ht-degree: 7%
 
 ---
 
-# 透過AEM Forms了解Forms自動化測試{#understanding-automated-forms-testing-with-aem-forms}
+# 瞭解Forms自動化測試與AEM Forms{#understanding-automated-forms-testing-with-aem-forms}
 
-AEM 6.3 Forms推出了讓使用者在AEM for Adaptive Forms中，使用以hobbes.js架構建置的Calvin SDK建立測試案例的功能。
+6AEM.3Forms介紹了使用Calvin SDK在hobbes.js框架上構建的功能，讓用AEM戶在Adaptive Forms內建立test案例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/19700?quality=12&learn=on)
 
 >[!NOTE]
 >
->AEM 6.3之後提供適用性Forms自動化測試功能
+>自適應Forms自動測試功能AEM在6.3以後提供
 
 >[!NOTE]
 >
->**實用連結**
+>**有用連結**
 >
 >* [Calvin SDK命名空間](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
->* [Hobbes.js檔案](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
+>* [Hobbes.js文檔](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
 

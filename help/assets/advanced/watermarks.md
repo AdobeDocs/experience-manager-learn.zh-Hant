@@ -1,6 +1,6 @@
 ---
-title: AEM Assets中的水印
-description: AEM as a Cloud Service的浮水印功能允許使用任何PNG影像對自訂影像轉譯加上水印。
+title: AEM Assets水印
+description: AEMas a Cloud Service的水印功能允許使用任何PNG影像對自定義影像格式副本進行加水印。
 feature: Asset Compute Microservices
 version: Cloud Service
 kt: 6357
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 水印
 
-AEM as a Cloud Service的浮水印功能允許使用任何PNG影像對自訂影像轉譯加上水印。
+AEMas a Cloud Service的水印功能允許使用任何PNG影像對自定義影像格式副本進行加水印。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41536?quality=12&learn=on)

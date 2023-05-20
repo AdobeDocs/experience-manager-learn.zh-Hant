@@ -1,6 +1,6 @@
 ---
-title: 設定AEM Assets Brand Portal的步驟
-description: 設定AEM Assets Brand Portal
+title: 配置AEM Assets Brand Portal的步驟
+description: 配置AEM Assets Brand Portal
 role: Developer
 level: Beginner
 version: Cloud Service
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 設定AEM Assets Brand Portal
+# 配置AEM Assets Brand Portal
 
-*此影片會逐步說明設定AEM Assets Brand Portal的步驟。*
+*此視頻將介紹配置AEM Assets Brand Portal的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335448?quality=12&learn=on)

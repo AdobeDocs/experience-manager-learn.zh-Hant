@@ -1,6 +1,6 @@
 ---
 title: 中繼資料
-description: 了解如何存取AEM Assets中的中繼資料並與之互動。
+description: 瞭解如何訪問和與AEM Assets的元資料交互。
 feature: Metadata
 role: User
 level: Beginner
@@ -19,6 +19,6 @@ ht-degree: 8%
 
 # 中繼資料
 
-了解如何存取AEM Assets中的中繼資料並與之互動。
+瞭解如何訪問和與AEM Assets的元資料交互。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32045?quality=12&learn=on)

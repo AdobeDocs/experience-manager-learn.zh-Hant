@@ -1,6 +1,6 @@
 ---
-title: 整合SPA |開始使用AEM SPA Editor and React
-description: 了解在React中撰寫的單頁應用程式(SPA)原始碼如何與Adobe Experience Manager(AEM)專案整合。 了解如何使用現代化的前端工具（例如WebPack開發伺服器），針對AEM JSON模型API快速開發SPA。
+title: 集SPA成 |從編輯器AEM開始SPA並反應
+description: 瞭解在React中寫入的單頁應用程式(SPA)的原始碼如何與Adobe Experience Manager()項AEM目整合。 學習使用現代前端工具（如webpack dev伺服器）快速開發SPAJSON模AEM型API。
 feature: SPA Editor
 version: Cloud Service
 kt: 4853
@@ -18,54 +18,54 @@ ht-degree: 0%
 
 # 整合SPA {#developer-workflow}
 
-了解在React中撰寫的單頁應用程式(SPA)原始碼如何與Adobe Experience Manager(AEM)專案整合。 了解如何使用現代化的前端工具（例如WebPack開發伺服器），針對AEM JSON模型API快速開發SPA。
+瞭解在React中寫入的單頁應用程式(SPA)的原始碼如何與Adobe Experience Manager()項AEM目整合。 學習使用現代前端工具（如webpack dev伺服器）快速開發SPAJSON模AEM型API。
 
 ## 目標
 
-1. 了解SPA專案如何與AEM與用戶端程式庫整合。
-2. 了解如何使用Webpack開發伺服器進行專屬的前端開發。
-3. 探索 **代理** 靜態 **模擬** 針對AEM JSON模型API進行開發的檔案。
+1. 瞭解項SPA目如何與客AEM戶端庫整合。
+2. 瞭解如何使用Webpack開發伺服器進行專用前端開發。
+3. 探索使用 **代理** 靜態 **嘲弄** 用於針對AEMJSON模型API進行開發的檔案。
 
-## 您將建置的
+## 您將構建的
 
-在本章中，您將對SPA進行幾項小幅變更，以了解其與AEM的整合方式。
-本章將添加一個簡單 `Header` 元件至SPA。 在建立這個 **靜態** `Header` 元件採用數種AEM SPA開發方法。
+在本章中，您將對進行幾SPA個小的更改，以瞭解它是如何與整合AEM的。
+本章將添加一個簡單 `Header` 元件SPA。 在構建過程中 **靜態** `Header` 採用多種AEM開SPA發方法。
 
-![AEM中的新標題](./assets/integrate-spa/final-header-component.png)
+![中的新標題AEM](./assets/integrate-spa/final-header-component.png)
 
-*擴充SPA以新增靜態 `Header` 元件*
+*擴展SPA以添加靜態 `Header` 元件*
 
 ## 必備條件
 
-檢閱設定 [本地開發環境](overview.md#local-dev-environment). 本章是 [建立專案](create-project.md) 不過，後續所需的章節是可運作的SPA啟用AEM專案。
+查看所需的工具和設定 [地方開發環境](overview.md#local-dev-environment)。 本章是 [建立項目](create-project.md) 但是，後續的所有需要都是啟用工作SPA的項AEM目。
 
 ## 整合方法 {#integration-approach}
 
-已在AEM專案中建立兩個模組： `ui.apps` 和 `ui.frontend`.
+作為項目的一部分，建立了兩AEM個模組： `ui.apps` 和 `ui.frontend`。
 
-此 `ui.frontend` 模組是 [webpack](https://webpack.js.org/) 包含所有SPA原始碼的專案。 大部分的SPA開發和測試都是在Webpack專案中完成。 觸發生產組建時，會使用webpack建置及編譯SPA。 編譯的成品（CSS和Javascript）會複製到 `ui.apps` 模組，然後部署至AEM執行階段。
+的 `ui.frontend` 模組是 [網路包](https://webpack.js.org/) 包含所有原始碼的SPA項目。 大部分開SPA發和測試都在webpack項目中完成。 觸發生產生成時，使用SPAwebpack生成並編譯。 編譯的對象（CSS和Javascript）將複製到 `ui.apps` 模組，然後部署到運AEM行時。
 
-![ui.frontend高階架構](assets/integrate-spa/ui-frontend-architecture.png)
+![ui.front高級體系結構](assets/integrate-spa/ui-frontend-architecture.png)
 
-*對SPA整合的高階描述。*
+*整合的高級描SPA述。*
 
-有關前端版本編號的其他資訊可以是 [此處找到](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
+有關前端構建的其他資訊可以 [此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)。
 
-## Inspect SPA整合 {#inspect-spa-integration}
+## Inspect整SPA合 {#inspect-spa-integration}
 
-接下來，檢查 `ui.frontend` 模組，了解由 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
+接下來，檢查 `ui.frontend` 模組，SPA以瞭解 [項AEM目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)。
 
-1. 在您選擇的IDE中，開啟AEM專案。 本教學課程將使用 [Visual Studio代碼IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
+1. 在您選擇的IDE中開啟AEM項目。 本教程將使用 [Visual Studio代碼IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)。
 
-   ![VSCode - AEM WKND SPA專案](./assets/integrate-spa/vscode-ide-openproject.png)
+   ![VSCode - AEM WKND項SPA目](./assets/integrate-spa/vscode-ide-openproject.png)
 
-1. 展開並檢查 `ui.frontend` 檔案夾。 開啟檔案 `ui.frontend/package.json`
+1. 展開並檢查 `ui.frontend` 的子菜單。 開啟檔案 `ui.frontend/package.json`
 
-1. 在 `dependencies` 您應會看到數個與 `react` 包括 `react-scripts`
+1. 在 `dependencies` 你應該看到幾個 `react` 包括 `react-scripts`
 
-   此 `ui.frontend` 是根據 [建立React應用程式](https://create-react-app.dev/) 或CRA。 此 `react-scripts` 版本會指出使用的CRA版本。
+   的 `ui.frontend` 是基於 [建立React應用](https://create-react-app.dev/) 或者簡稱CRA。 的 `react-scripts` 版本指示使用的CRA版本。
 
-1. 還有數個以為首碼的相依性 `@adobe`:
+1. 還有幾個以前置詞的依賴項 `@adobe`:
 
    ```json
    "@adobe/aem-react-editable-components": "~1.1.2",
@@ -75,11 +75,11 @@ ht-degree: 0%
    "@adobe/aem-core-components-react-spa": "1.1.7",
    ```
 
-   上述模組構成 [AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html) 並提供功能，以便將SPA元件對應至AEM元件。
+   以上模組構成 [AEM編SPA輯器JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html) 並提供功能，使「元件」(Components)可以映射SPA到「組AEM件」(Components)。
 
-   也包括 [AEM WCM元件 — React核心實作](https://github.com/adobe/aem-react-core-wcm-components-base) 和 [AEM WCM元件 — Spa編輯器 — React Core實作](https://github.com/adobe/aem-react-core-wcm-components-spa). 這些是一組可重複使用的UI元件，會對應至現成可用的AEM元件。 這些設計可依原樣使用，並設定符合專案需求的樣式。
+   還包括 [WCMAEM元件 — 反應核心實施](https://github.com/adobe/aem-react-core-wcm-components-base) 和 [WCMAEM元件 — Spa編輯器 — React Core實施](https://github.com/adobe/aem-react-core-wcm-components-spa)。 這些是一組可重用的UI元件，它們映射到出廠設AEM備。 這些設計旨在按原樣使用，並按照項目的需要設計樣式。
 
-1. 在 `package.json` 檔案有數個 `scripts` 已定義：
+1. 在 `package.json` 檔案有幾個 `scripts` 定義：
 
    ```json
    "scripts": {
@@ -90,17 +90,17 @@ ht-degree: 0%
    }
    ```
 
-   這些是製作的標準建置指令碼 [可用](https://create-react-app.dev/docs/available-scripts) 建立React應用程式。
+   這些是標準生成指令碼 [可用](https://create-react-app.dev/docs/available-scripts) 按鈕
 
-   唯一的差異是 `&& clientlib` 到 `build` 指令碼。 此額外指示負責將編譯的SPA複製至 `ui.apps` 模組做為建置期間的用戶端程式庫。
+   唯一的區別是 `&& clientlib` 到 `build` 的下界。 此額外指令負責將編譯後SPA的 `ui.apps` 模組，作為生成期間的客戶端庫。
 
-   npm模組 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) 可方便執行。
+   npm模組 [aem-clientlib生成器](https://github.com/wcm-io-frontend/aem-clientlib-generator) 用來促進這一過程。
 
-1. Inspect檔案 `ui.frontend/clientlib.config.js`. 此配置檔案由 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) 以決定如何產生用戶端程式庫。
+1. Inspect檔案 `ui.frontend/clientlib.config.js`。 此配置檔案由 [aem-clientlib生成器](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) 確定如何生成客戶端庫。
 
-1. Inspect檔案 `ui.frontend/pom.xml`. 此檔案會轉換 `ui.frontend` 資料夾 [Maven模組](https://maven.apache.org/guides/mini/guide-multiple-modules.html). 此 `pom.xml` 檔案已更新，以使用 [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) to **測試** 和 **建置** SPA。
+1. Inspect檔案 `ui.frontend/pom.xml`。 此檔案轉換 `ui.frontend` 資料夾 [馬文模](https://maven.apache.org/guides/mini/guide-multiple-modules.html)。 的 `pom.xml` 已更新檔案以使用 [前面的插件](https://github.com/eirslett/frontend-maven-plugin) 至 **test** 和 **構建** 在馬SPA文建造時。
 
-1. Inspect檔案 `index.js` at `ui.frontend/src/index.js`:
+1. Inspect檔案 `index.js` 在 `ui.frontend/src/index.js`:
 
    ```js
    //ui.frontend/src/index.js
@@ -125,20 +125,20 @@ ht-degree: 0%
    });
    ```
 
-   `index.js` 是SPA的入口。 `ModelManager` 由AEM SPA Editor JS SDK提供。 它負責呼叫和注入 `pageModel` （JSON內容）放入應用程式中。
+   `index.js` 是入口SPA。 `ModelManager` 由編輯AEM器SPAJS SDK提供。 它負責呼叫和注入 `pageModel` （JSON內容）。
 
-1. Inspect檔案 `import-components.js` at `ui.frontend/src/components/import-components.js`. 此檔案會立即匯入 **React核心元件** 並讓項目可供使用。 我們將在下一章中檢查AEM內容與SPA元件的對應。
+1. Inspect檔案 `import-components.js` 在 `ui.frontend/src/components/import-components.js`。 此檔案將從框外導入 **反應核心元件** 讓它們能被項目使用。 我們將在下一章中檢AEM查內SPA容到元件的映射。
 
-## 新增靜態SPA元件 {#static-spa-component}
+## 添加靜態組SPA件 {#static-spa-component}
 
-接著，將新元件新增至SPA，並將變更部署至本機AEM例項。 這是一項簡單的變更，只是為了說明SPA的更新方式。
+接下來，將新元件添加SPA到並將更改部署到本地AEM實例。 這是一個簡單的改變，只是說明如何SPA更新。
 
-1. 在 `ui.frontend` 模組下方 `ui.frontend/src/components` 建立名為 `Header`.
-1. 建立名為 `Header.js` 在下面 `Header` 檔案夾。
+1. 在 `ui.frontend` 模組下 `ui.frontend/src/components` 建立名為 `Header`。
+1. 建立名為 `Header.js` 在下面 `Header` 的子菜單。
 
-   ![標題資料夾和檔案](assets/create-project/header-folder-js.png)
+   ![頭資料夾和檔案](assets/create-project/header-folder-js.png)
 
-1. 填入 `Header.js` 並搭配下列項目：
+1. 填充 `Header.js` 下面列出：
 
    ```js
    //Header.js
@@ -158,10 +158,10 @@ ht-degree: 0%
    }
    ```
 
-   以上是將輸出靜態文字字串的標準React元件。
+   上面是一個標準的React元件，它將輸出靜態文本字串。
 
-1. 開啟檔案 `ui.frontend/src/App.js`. 這是應用程式入口點。
-1. 對 `App.js` 納入靜態 `Header`:
+1. 開啟檔案 `ui.frontend/src/App.js`。 這是應用程式入口點。
+1. 進行以下更新 `App.js` 包含靜態 `Header`:
 
    ```diff
      import { Page, withModel } from '@adobe/aem-react-editable-components';
@@ -179,7 +179,7 @@ ht-degree: 0%
         </div>
    ```
 
-1. 開啟新終端機並導覽至 `ui.frontend` 資料夾和執行 `npm run build` 命令：
+1. 開啟新終端並導航到 `ui.frontend` 資料夾並運行 `npm run build` 命令：
 
    ```shell
    $ cd aem-guides-wknd-spa
@@ -196,11 +196,11 @@ ht-degree: 0%
    451 B              build/static/css/main.e57bbe8a.chunk.css
    ```
 
-1. 導覽至 `ui.apps` 檔案夾。 下方 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` 您應該會看到已編譯的SPA檔案已從`ui.frontend/build` 檔案夾。
+1. 導航到 `ui.apps` 的子菜單。 在下面 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` 您應看到已編SPA譯的檔案已從`ui.frontend/build` 的子菜單。
 
-   ![在ui.apps中產生的用戶端程式庫](./assets/integrate-spa/compiled-spa-uiapps.png)
+   ![在ui.apps中生成的客戶端庫](./assets/integrate-spa/compiled-spa-uiapps.png)
 
-1. 返回終端並導覽至 `ui.apps` 檔案夾。 執行以下Maven命令：
+1. 返回到終端並導航到 `ui.apps` 的子菜單。 執行以下Maven命令：
 
    ```shell
    $ cd ../ui.apps
@@ -214,31 +214,31 @@ ht-degree: 0%
    [INFO] ------------------------------------------------------------------------
    ```
 
-   這會部署 `ui.apps` 套件至本機執行中的AEM例項。
+   這將部署 `ui.apps` 包到的本地運行實例AEM。
 
-1. 開啟瀏覽器標籤並導覽至 [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). 您現在應該會看到 `Header` 元件。
+1. 開啟瀏覽器頁籤並導航到 [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。 您現在應看到 `Header` 顯示的組SPA件。
 
-   ![初始標題實作](./assets/integrate-spa/initial-header-implementation.png)
+   ![初始頭實現](./assets/integrate-spa/initial-header-implementation.png)
 
-   從專案根目錄觸發Maven組建時，上述步驟會自動執行(即 `mvn clean install -PautoInstallSinglePackage`)。 您現在應了解SPA和AEM用戶端程式庫之間整合的基本知識。 請注意，您仍可以編輯和新增 `Text` AEM中靜態下方的元件 `Header` 元件。
+   當從項目的根觸發Maven生成時(即 `mvn clean install -PautoInstallSinglePackage`)。 您現在應該瞭解與客戶端庫之間集SPA成AEM的基本知識。 請注意，您仍然可以編輯和添加 `Text` 靜AEM態下 `Header` 元件。
 
 ## Webpack開發伺服器 — 代理JSON API {#proxy-json}
 
-如先前的練習所示，執行組建，並將用戶端程式庫同步至AEM的本機例項需要幾分鐘的時間。 這是最終測試可接受的選項，但不適用於大部分SPA開發。
+如前幾個練習所示，執行生成並將客戶端庫同步到本地實例需要幾AEM分鐘的時間。 這對於最終測試是可以接受的，但對於大多數開發來說並不SPA理想。
 
-A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 可用來快速開發SPA。 SPA是由AEM產生的JSON模型驅動。 在本練習中，來自執行中AEM例項的JSON內容為 **代理** 進入開發伺服器。
+A [WebPack-Dev伺服器](https://webpack.js.org/configuration/dev-server/) 可用於快速開發SPA。 由生SPA成的JSON模型驅動AEM。 在本練習中，運行實例的JSON內AEM容是 **代理** 進入開發伺服器。
 
-1. 返回到IDE並開啟檔案 `ui.frontend/package.json`.
+1. 返回到IDE並開啟檔案 `ui.frontend/package.json`。
 
-   尋找如下所示的行：
+   查找類似以下行：
 
    ```json
    "proxy": "http://localhost:4502",
    ```
 
-   此 [建立React應用程式](https://create-react-app.dev/docs/proxying-api-requests-in-development) 提供簡單的代理API請求機制。 所有未知請求都會透過 `localhost:4502`，即本機AEM快速入門。
+   的 [建立React應用](https://create-react-app.dev/docs/proxying-api-requests-in-development) 提供了一種簡單的代理API請求的機制。 所有未知請求都通過代理 `localhost:4502`，本地快速啟AEM動。
 
-1. 開啟終端機視窗並導覽至 `ui.frontend` 檔案夾。 運行命令 `npm start`:
+1. 開啟終端窗口並導航到 `ui.frontend` 的子菜單。 運行命令 `npm start`:
 
    ```shell
    $ cd ui.frontend
@@ -255,18 +255,18 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 可用�
    To create a production build, use npm run build.
    ```
 
-1. 開啟新的瀏覽器標籤（如果尚未開啟）並導覽至 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html).
+1. 開啟新瀏覽器頁籤（如果尚未開啟）並導航到 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html)。
 
-   ![Webpack開發伺服器 — 代理json](./assets/integrate-spa/webpack-dev-server-1.png)
+   ![Webpack dev伺服器 — 代理json](./assets/integrate-spa/webpack-dev-server-1.png)
 
-   您應該會看到與AEM相同的內容，但未啟用任何製作功能。
+   您應該看到與中相同的內AEM容，但未啟用任何創作功能。
 
    >[!NOTE]
    >
-   > 由於AEM的安全性需求，您需要在相同的瀏覽器中，但位在不同的索引標籤中，登入本機AEM例項(http://localhost:4502)。
+   > 由於安全要求，AEM您需要登錄到同一瀏覽器AEM中但位於其他頁籤中的本地實例(http://localhost:4502)。
 
-1. 返回到IDE並建立名為的檔案 `Header.css` 在 `src/components/Header` 檔案夾。
-1. 填入 `Header.css` 並搭配下列項目：
+1. 返回到IDE並建立名為 `Header.css` 的 `src/components/Header` 的子菜單。
+1. 填充 `Header.css` 下面列出：
 
    ```css
    .Header {
@@ -294,7 +294,7 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 可用�
 
    ![VSCode IDE](assets/integrate-spa/header-css-update.png)
 
-1. 重新開啟 `Header.js` 並新增下列行以供參考 `Header.css`:
+1. 重新開啟 `Header.js` 並添加以下行以供參考 `Header.css`:
 
    ```diff
      //Header.js
@@ -304,9 +304,9 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 可用�
 
    儲存變更。
 
-1. 導覽至 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) ，以查看自動反映的樣式更改。
+1. 導航到 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) 來查看自動反映的樣式更改。
 
-1. 開啟檔案 `Page.css` at `ui.frontend/src/components/Page`. 進行下列變更以修正邊框間距：
+1. 開啟檔案 `Page.css` 在 `ui.frontend/src/components/Page`。 進行以下更改以修復填充：
 
    ```css
    .page {
@@ -317,56 +317,56 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 可用�
    }
    ```
 
-1. 返回瀏覽器時間： [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html). 您應會立即看到應用程式的變更反映在內。
+1. 返回到瀏覽器，位於 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html)。 您應立即看到對應用所做的更改。
 
-   ![新增至標題的樣式](assets/integrate-spa/added-logo-localhost.png)
+   ![添加到頁眉的樣式](assets/integrate-spa/added-logo-localhost.png)
 
-   您可以繼續在AEM中更新內容，並查看 **webpack-dev-server**，因為我們代理內容。
+   您可以繼續在中更新內容AEM，並在中查看 **WebPack-Dev伺服器**，因為我們正在代理內容。
 
-1. 使用停止Webpack開發伺服器 `ctrl+c` 在終端機。
+1. 停止Webpack Dev伺服器 `ctrl+c` 在終端。
 
-## 將SPA更新部署至AEM
+## 將更SPA新部署到AEM
 
-對 `Header` 目前僅可透過 **webpack-dev-server**. 將更新的SPA部署至AEM以查看變更。
+對 `Header` 當前僅通過 **WebPack-Dev伺服器**。 部署更新SPA的AEM以查看更改。
 
-1. 導覽至專案的根目錄(`aem-guides-wknd-spa`)，並使用Maven將專案部署至AEM:
+1. 導航到項目的根(`aem-guides-wknd-spa`)並將項目部署AEM到Maven :
 
    ```shell
    $ cd ..
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-2. 導覽至 [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). 您應會看到更新 `Header` 和樣式。
+2. 導航到 [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。 您應看到更新的 `Header` 的子菜單。
 
-   ![更新AEM中的標題](assets/integrate-spa/final-header-component.png)
+   ![更新的標題AEM](assets/integrate-spa/final-header-component.png)
 
-   現在更新的SPA已在AEM中，製作即可繼續。
+   現在已更新SPA，創AEM作可以繼續。
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您已更新SPA並探索與AEM的整合！ 您現在知道如何使用，針對AEM JSON模型API開發SPA **webpack-dev-server**.
+祝賀您，您已更新SPA並探索與的整合AEM! 您現在知道如SPA何使AEM用JSON模型API **WebPack-Dev伺服器**。
 
 ### 後續步驟 {#next-steps}
 
-[將SPA元件對應至AEM元件](map-components.md)  — 了解如何使用AEM SPA Editor JS SDK將React元件對應至Adobe Experience Manager(AEM)元件。 元件對應可讓使用者在AEM SPA編輯器中對SPA元件進行動態更新，與傳統AEM製作類似。
+[將組SPA件映射到組AEM件](map-components.md)  — 瞭解如何使用Editor JS SDK將React元件映射AEM到Adobe Experience Manager(AEMSPA)元件。 元件映射使用戶能夠對編輯器SPA中的元件進行AEM動SPA態更新，與傳AEM統創作類似。
 
-## （額外獎勵）Webpack開發伺服器 — 模擬JSON API {#mock-json}
+## （額外）Webpack開發伺服器 — 模擬JSON API {#mock-json}
 
-另一種快速開發的方法是使用靜態JSON檔案作為JSON模型。 借由「模擬」JSON，我們移除了對本機AEM例項的相依性。 此外，前端開發人員也能更新JSON模型，以測試功能，並推動對JSON API的變更，JSON API稍後將由後端開發人員實作。
+另一種快速開發的方法是使用靜態JSON檔案作為JSON模型。 通過「嘲弄」JSON，我們刪除了對本地實例的依AEM賴性。 它還允許前端開發人員更新JSON模型，以便test功能並驅動對JSON API的更改，這些更改隨後將由後端開發人員實施。
 
-模擬JSON的初始設定可 **需要本機AEM例項**.
+模擬JSON的初始設定 **需要本地實AEM例**。
 
-1. 返回IDE並導航到 `ui.frontend/public` 並添加名為 `mock-content`.
-1. 建立名為 `mock.model.json` 在 `ui.frontend/public/mock-content`.
-1. 在瀏覽器中導覽至 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json).
+1. 返回到IDE並導航到 `ui.frontend/public` 並添加名為 `mock-content`。
+1. 建立名為 `mock.model.json` 下 `ui.frontend/public/mock-content`。
+1. 在瀏覽器中導航到 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)。
 
-   這是由AEM匯出的JSON，此JSON會驅動應用程式。 複製JSON輸出。
+   這是驅動應用程AEM序的JSON導出。 複製JSON輸出。
 
-1. 將上一步的JSON輸出貼到檔案中 `mock.model.json`.
+1. 貼上檔案上一步的JSON輸出 `mock.model.json`。
 
-   ![模擬模型Json檔案](./assets/integrate-spa/mock-model-json-created.png)
+   ![模型Json檔案](./assets/integrate-spa/mock-model-json-created.png)
 
-1. 開啟檔案 `index.html` at `ui.frontend/public/index.html`. 更新AEM頁面模型的中繼資料屬性以指向變數 `%REACT_APP_PAGE_MODEL_PATH%`:
+1. 開啟檔案 `index.html` 在 `ui.frontend/public/index.html`。 更新頁面模型的AEM元資料屬性以指向變數 `%REACT_APP_PAGE_MODEL_PATH%`:
 
    ```html
        <!-- AEM page model -->
@@ -376,9 +376,9 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 可用�
        />
    ```
 
-   將變數用於 `cq:pagemodel_root_url` 可讓您在proxy和模擬json模型之間切換。
+   將變數用於 `cq:pagemodel_root_url` 將使代理和mock json模型之間的切換更加容易。
 
-1. 開啟檔案 `ui.frontend/.env.development` 並進行下列更新，以註解的先前值 `REACT_APP_PAGE_MODEL_PATH` 和 `REACT_APP_API_HOST`:
+1. 開啟檔案 `ui.frontend/.env.development` 並進行以下更新以注釋掉以前的值 `REACT_APP_PAGE_MODEL_PATH` 和 `REACT_APP_API_HOST`:
 
    ```diff
    + PUBLIC_URL=/
@@ -393,22 +393,22 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 可用�
    REACT_APP_ROOT=/content/wknd-spa-react/us/en/home.html
    ```
 
-1. 如果目前執行中，請停止 **webpack-dev-server**. 啟動 **webpack-dev-server** 從終端：
+1. 如果當前正在運行，請停止 **WebPack-Dev伺服器**。 啟動 **WebPack-Dev伺服器** 從終端：
 
    ```shell
    $ cd ui.frontend
    $ npm start
    ```
 
-   導覽至 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) 而且您應會看到SPA中使用的相同內容 **代理** json。
+   導航到 [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) 您應該看到SPA與 **代理** json。
 
-1. 對 `mock.model.json` 檔案。 您應會看到更新的內容立即反映在 **webpack-dev-server**.
+1. 對 `mock.model.json` 檔案。 您應看到更新的內容立即反映在 **WebPack-Dev伺服器**。
 
-   ![模擬模型json更新](./assets/integrate-spa/webpack-mock-model.gif)
+   ![模型json更新](./assets/integrate-spa/webpack-mock-model.gif)
 
-能夠操控JSON模型並查看即時SPA上的效果，可協助開發人員了解JSON模型API。 它還允許前端和後端開發並行進行。
+能夠操作JSON模型並查看即時效果可SPA以幫助開發人員瞭解JSON模型API。 它還允許前端和後端開發並行進行。
 
-您現在可以切換使用JSON內容的位置，方法是切換 `env.development` 檔案：
+現在，您可以通過切換JSON內容中的條目來切換使用位置 `env.development` 檔案：
 
 ```plain
 # JSON API via proxy to AEM

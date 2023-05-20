@@ -1,6 +1,6 @@
 ---
-title: AEMas a Cloud Service中的周遊警告
-description: 了解如何減輕AEMas a Cloud Service中的周遊警告。
+title: as a Cloud Service中的遍歷警AEM告
+description: 瞭解如何在AEMas a Cloud Service中緩解遍歷警告。
 topics: Migration
 feature: Migration
 role: Architect, Developer
@@ -21,20 +21,20 @@ ht-degree: 8%
 # 遍歷警告
 
 >[!TIP]
->將此頁面加入書籤，以供日後參考。
+>將此頁面加書籤以供將來參考。
 
 _遍歷警告是什麼？_
 
-遍歷警告為 __aemerror__ 記錄陳述式，指出AEM Publish服務上執行的查詢效能不佳。 遍歷警告通常以兩種方式出現在AEM中：
+遍歷警告為 __Aem錯誤__ 指示正在AEM發佈服務上執行效能差查詢的日誌語句。 遍歷警告通常以兩種AEM方式顯示：
 
-1. __慢速查詢__ 不使用索引，導致回應時間緩慢。
-1. __查詢失敗__，扔 `RuntimeNodeTraversalException`，導致體驗損毀。
+1. __慢速查詢__ 不使用索引，導致響應時間較慢。
+1. __查詢失敗__，那個 `RuntimeNodeTraversalException`導致體驗破裂。
 
-取消勾選允許周遊警告，會降低AEM效能，並可能導致使用者體驗損毀。
+允許未選中遍歷警告會降AEM低效能，並可能導致用戶體驗崩潰。
 
 ## 如何解決遍歷警告
 
-可使用三個簡單步驟來處理降低遍歷警告：分析、調整和驗證。 在確定最佳調整之前，需要多次調整和驗證。
+可以通過三個簡單步驟來降低遍歷警告：分析、調整和驗證。 在確定最佳調整之前，需要多次調整和驗證。
 
 <div class="columns is-multiline">
 
@@ -51,7 +51,7 @@ _遍歷警告是什麼？_
        <div class="card-content is-padded-small">
            <div class="content">
                 <p class="headline is-size-5 has-text-weight-bold">分析問題</p>
-               <p class="is-size-6">識別並了解正在遍歷的查詢。</p>
+               <p class="is-size-6">確定並瞭解正在遍歷的查詢。</p>
                <a href="#analyze" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">分析</span>
                </a>
@@ -72,8 +72,8 @@ _遍歷警告是什麼？_
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-                <p class="headline is-size-5 has-text-weight-bold">調整程式碼或設定</p>
-               <p class="is-size-6">更新查詢和索引以避免查詢周遊。</p>
+                <p class="headline is-size-5 has-text-weight-bold">調整代碼或配置</p>
+               <p class="is-size-6">更新查詢和索引以避免查詢遍歷。</p>
                <a href="#adjust" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">調整</span>
                </a>
@@ -95,7 +95,7 @@ _遍歷警告是什麼？_
        <div class="card-content is-padded-small">
            <div class="content">
                 <p class="headline is-size-5 has-text-weight-bold">驗證調整是否有效</p>                       
-               <p class="is-size-6">驗證對查詢和索引的更改將刪除遍歷。</p>
+               <p class="is-size-6">驗證對查詢和索引的更改是否刪除遍歷。</p>
                <a href="#verify" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">驗證</span>
                </a>
@@ -106,13 +106,13 @@ _遍歷警告是什麼？_
 
 </div>
 
-## 1.分析{#analyze}
+## 1。分析{#analyze}
 
-首先，找出哪些AEM Publish服務顯示周遊警告。 要執行此操作，請從Cloud Manager, [下載發佈服務的 `aemerror` 記錄](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"} 從所有環境（開發、預備和生產） __三天__.
+首先，確定哪些AEM發佈服務顯示遍歷警告。 為此，從雲管理器， [下載發佈服務&#39; `aemerror` 日誌](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"} 從所有環境（開發、階段和生產） __三天__。
 
-![下載AEMas a Cloud Service記錄檔](./assets/traversals/download-logs.jpg)
+![下載AEMas a Cloud Service日誌](./assets/traversals/download-logs.jpg)
 
-開啟日誌檔案，並搜索Java™類 `org.apache.jackrabbit.oak.plugins.index.Cursors$TraversingCursor`. 包含遍歷警告的日誌包含一系列看起來類似以下語句：
+開啟日誌檔案並搜索Java™類 `org.apache.jackrabbit.oak.plugins.index.Cursors$TraversingCursor`。 包含遍歷警告的日誌包含一系列語句，這些語句看起來類似於：
 
 ```log
 24.05.2022 14:18:46.146 [cm-p123-e456-aem-author-9876-edcba] *WARN* [192.150.10.214 [1653401908419] GET /content/wknd/us/en/example.html HTTP/1.1] 
@@ -123,9 +123,9 @@ called by apps.wknd.components.search.example__002e__jsp._jspService;
 consider creating an index or changing the query
 ```
 
-根據查詢執行的上下文，日誌語句可能包含有關查詢發起者的有用資訊：
+根據查詢執行的上下文，日誌語句可能包含有關查詢發起方的有用資訊：
 
-+ 與查詢執行相關聯的HTTP要求URL
++ 與查詢執行關聯的HTTP請求URL
 
    + 範例: `GET /content/wknd/us/en/example.html HTTP/1.1`
 
@@ -141,7 +141,7 @@ consider creating an index or changing the query
 
    + 範例:  `apps.wknd.components.search.example__002e__jsp._jspService` → `/apps/wknd/components/search/example.html`
 
-__查詢失敗__ 後跟a `RuntimeNodeTraversalException` 語句，類似於：
+__查詢失敗__ 後跟一個 `RuntimeNodeTraversalException` 語句，類似於：
 
 ```log
 24.05.2022 14:18:47.240 [cm-p123-e456-aem-author-9876-edcba] *WARN* [192.150.10.214 [1653401908419] GET /content/wknd/us/en/example.html HTTP/1.1] 
@@ -153,36 +153,36 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
 
 ## 2.調整{#adjust}
 
-一旦發現違規查詢及其調用代碼，就必須進行調整。 可進行兩種調整以緩解遍歷警告：
+一旦發現違規查詢及其調用代碼，必須進行調整。 可以進行兩種類型的調整以緩解遍歷警告：
 
 ### 調整查詢
 
-__更改查詢__ 將解析的查詢限制添加到現有索引限制。 如果可能，則更改查詢而不是更改索引。
+__更改查詢__ 將解析為現有索引限制的新查詢限制添加到。 如果可能，請更改查詢，而不是更改索引。
 
-+ [了解如何調整查詢效能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [瞭解如何調整查詢效能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 
 ### 調整索引
 
-__變更（或建立）AEM索引__ 這樣，現有查詢限制可解析為索引更新。
+__更改（或建立）索AEM引__ 這樣現有查詢限制可解析為索引更新。
 
-+ [了解如何調整現有索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
-+ [了解如何建立索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target="_blank"}
++ [瞭解如何調整現有索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [瞭解如何建立索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target="_blank"}
 
 ## 3.驗證{#verify}
 
-必須驗證對查詢、索引或兩者所做的調整，以確保它們可緩解遍歷警告。
+必須驗證對查詢、索引或兩者所做的調整，以確保它們能減輕遍歷警告。
 
-![說明查詢](./assets/traversals/verify.gif)
+![解釋查詢](./assets/traversals/verify.gif)
 
-如果 [查詢調整](#adjust-the-query) ，可透過開發人員控制台在AEMas a Cloud Service上直接測試查詢 [說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. 說明查詢會針對AEM製作服務執行，但由於製作和發佈服務的索引定義相同，因此就足以驗證AEM製作服務的查詢。
+如果 [對查詢的調整](#adjust-the-query) 通過Developer Console在AEMas a Cloud Service上直接測試查詢 [解釋查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}。 解釋查詢針對AEM Author服務運行，但是，由於索引定義在Author和Publish服務中相同，因此對AEM Author服務驗證查詢就足夠了。
 
-若 [對指數的調整](#adjust-the-index) 建立時，必須將索引部署至AEMas a Cloud Service。 部署索引調整後，開發人員控制台 [說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} 可用來執行及進一步調整查詢。
+如果 [對索引的調整](#adjust-the-index) 建立，必須將索引部署到AEMas a Cloud Service。 部署索引調整後，Developer Console [解釋查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} 可用於執行和進一步調整查詢。
 
-最終，所有變更（查詢和程式碼）都會提交至Git，並透過Cloud Manager部署至AEMas a Cloud Service。 部署後，會重新測試與原始遍歷警告相關聯的代碼路徑，並驗證遍歷警告不再出現在 `aemerror` 記錄檔。
+最終，所有更改（查詢和代碼）都提交到Git，並使用雲管理器AEM部署到as a Cloud Service。 部署後，將test與原始遍歷警告相關的代碼路徑進行重新測試，並驗證遍歷警告是否不再出現在 `aemerror` 日誌。
 
 ## 其他資源
 
-查看這些其他有用的資源，以了解AEM索引、搜尋和周遊警告。
+檢查這些其它有用資源，以了AEM解索引、搜索和遍歷警告。
 
 <div class="columns is-multiline">
 
@@ -191,13 +191,13 @@ __變更（或建立）AEM索引__ 這樣，現有查詢限制可解析為索引
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜尋與索引" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 — 搜尋與索引"></a>
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="雲5 — 搜索和索引" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="雲5 — 搜索和索引"></a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜尋與索引">Cloud 5 — 搜尋與索引</a></p>
-               <p class="is-size-6">Cloud 5團隊會展示AEM as a Cloud Service上搜尋和索引的內容和外觀。</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="雲5 — 搜索和索引">雲5 — 搜索和索引</a></p>
+               <p class="is-size-6">「雲5」團隊展示了在as a Cloud Service上搜索和索引的內AEM容。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">深入了解</span>
                </a>
@@ -219,8 +219,8 @@ __變更（或建立）AEM索引__ 這樣，現有查詢限制可解析為索引
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="內容搜尋與索引">內容搜尋和索引檔案</a></p>
-               <p class="is-size-6">了解如何在AEMas a Cloud Service中建立和管理索引。</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="內容搜尋與索引">內容搜索和索引文檔</a></p>
+               <p class="is-size-6">瞭解如何在as a Cloud Service中建立和管理索AEM引。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">深入了解</span>
                </a>
@@ -234,15 +234,15 @@ __變更（或建立）AEM索引__ 這樣，現有查詢限制可解析為索引
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="更新Oak索引" tabindex="-1">
-                   <img class="is-bordered-r-small" src="./assets/traversals/resources--aem-experts-series.png" alt="更新Oak索引">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="更新您的Oak索引" tabindex="-1">
+                   <img class="is-bordered-r-small" src="./assets/traversals/resources--aem-experts-series.png" alt="更新您的Oak索引">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="更新Oak索引">更新Oak索引</a></p>
-               <p class="is-size-6">了解如何將AEM 6 Oak索引定義轉換為與AEMas a Cloud Service相容，並持續維護索引。</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="更新您的Oak索引">更新您的Oak索引</a></p>
+               <p class="is-size-6">瞭解如何將AEM6個Oak索引定義轉換為AEMas a Cloud Service相容，並保持索引向前。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">深入了解</span>
                </a>
@@ -256,15 +256,15 @@ __變更（或建立）AEM索引__ 這樣，現有查詢限制可解析為索引
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="索引定義檔案" tabindex="-1">
-                   <img class="is-bordered-r-small" src="./assets/traversals/resources--oak-docs.png" alt="索引定義檔案">
+               <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="索引定義文檔" tabindex="-1">
+                   <img class="is-bordered-r-small" src="./assets/traversals/resources--oak-docs.png" alt="索引定義文檔">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="索引定義檔案">Lucene索引文檔</a></p>
-               <p class="has-ellipsis is-size-6">Apache Oak Jackrabbit Lucene索引參考可記錄所有支援的Lucene索引設定。</p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="索引定義文檔">Lucene索引文檔</a></p>
+               <p class="has-ellipsis is-size-6">Apache Oak Jackrabbit Lucene索引引用，它記錄了所有支援的Lucene索引配置。</p>
                <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">深入了解</span>
                </a>

@@ -1,6 +1,6 @@
 ---
-title: 開始使用Assets Essentials
-description: 了解如何存取Assets Essentials並探索其使用者介面的主要層面。
+title: Assets Essentials入門
+description: 瞭解如何訪問Assets Essentials並探索其用戶介面的主要方面。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 開始使用Assets Essentials
+# Assets Essentials入門
 
-了解如何存取Assets Essentials並探索其使用者介面的主要功能。
+瞭解如何訪問Assets Essentials並瞭解其用戶介面的主要功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336005?quality=12&learn=on)

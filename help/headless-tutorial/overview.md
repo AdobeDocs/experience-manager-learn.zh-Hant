@@ -1,6 +1,6 @@
 ---
-title: TutorialsAEM中的無頭
-description: Adobe Experience Manager的Headless CMS教學課程系列。 依API、架構和範例應用程式探索教學課程。
+title: Tutorials無頭AEM
+description: Adobe Experience Manager的無頭CMS教程集合。 通過API、框架和示例應用程式瀏覽教程。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
@@ -10,19 +10,19 @@ exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
 source-git-commit: 758fa40240b12f5bfa83ac5c0300b71f41e2326d
 workflow-type: tm+mt
 source-wordcount: '503'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
-# TutorialsAEM中的無頭{#aem-headless-tutorials}
+# Tutorials無頭AEM{#aem-headless-tutorials}
 
-Adobe Experience Manager(AEM)有多個選項可定義無頭端點，並將其內容傳送為JSON。 使用實作教學課程，探索如何使用各種選項，並選擇適合您的選項。
+Adobe Experience Manager(AEM)有多個選項來定義無頭端點和將其內容作為JSON提供。 使用實踐教程，瞭解如何使用各種選項並選擇適合您的選項。
 
 >[!TIP]
 >
->本教學課程系列專為偏好使用 **學習**. 如果您偏好從頭開始學習概念，請查看 [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). 這套教學課程和歷程相輔相成。
+>本教程集合是為那些喜歡 **學習**。 如果你更喜歡從頭開始學習概念，請查看 [無AEM頭開發者之旅](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html)。 這組教程和旅程相輔相成。
 
-## Tutorials（依API）
+## 按APITutorials
 
 <table>
 <tr>
@@ -34,20 +34,20 @@ Adobe Experience Manager(AEM)有多個選項可定義無頭端點，並將其內
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html"><strong>GraphQL API</strong></a>
     </div>
     <p>
-    <em>了解應用程式如何使用AEM GraphQL API來查詢內容。</em>
+    <em>瞭解應用程式如何AEM使用GraphQLAPI查詢內容。</em>
     <p>
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
-    <img alt="基於令牌的驗證" src="./assets/token-auth-icon.png" />
+    <img alt="基於令牌的身份驗證" src="./assets/token-auth-icon.png" />
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
-    <strong>Token驗證</strong>
+    <strong>令牌驗證</strong>
     </a>
     </div>
     <p>
-    <em>了解應用程式如何安全地使用AEM進行驗證。</em>
+    <em>瞭解應用程式如何安全地驗證AEM。</em>
     </p>
   </td>
   <td>
@@ -60,110 +60,110 @@ Adobe Experience Manager(AEM)有多個選項可定義無頭端點，並將其內
       </a>
     </div>
     <p>
-    <em>了解應用程式如何使用REST API來使用內容。</em>
+    <em>瞭解應用程式如何使用REST API來使用內容。</em>
     <p>
   </td>
 </tr>
 </table>
 
-## 範例應用程式
+## 示例應用程式
 
-範例應用程式是探索Adobe Experience Manager(AEM)無頭功能的絕佳方式。 下載並安裝這些完成的範例，以便立即開始使用。
+示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 下載並安裝這些完成的示例，以便立即開始。
 
 <table>
 <tr>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
-      <img alt="iOS範例" src="./assets/ios-example.png" />
+      <img alt="iOS示例" src="./assets/ios-example.png" />
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
-    <strong>iOS SwiftUI範例</strong>
+    <strong>iOSSwiftUI示例</strong>
     </a>
     </div>
     <p>
-    <em>採用AEM GraphQL API技術的iOS應用程式。</em>
+    <em>由iOSAPIAEM支援的GraphQL應用程式</em>
     <p>
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
-    <img alt="Android範例" src="./assets/android-example.png" />
+    <img alt="Android示例" src="./assets/android-example.png" />
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
-    <strong>Android™範例</strong>
+    <strong>Android™示例</strong>
     </a>
     </div>
     <p>
-    <em>採用AEM GraphQL API技術的Android™應用程式。</em>
+    <em>由GraphQLAPI支援的Android™AEM應用程式。</em>
     </p>
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
-      <img alt="React範例" src="./assets/react-example.png" />
+      <img alt="反應示例" src="./assets/react-example.png" />
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
-        <strong>React範例</strong>
+        <strong>反應示例</strong>
       </a>
     </div>
     <p>
-    <em>採用AEM GraphQL API技術的React應用程式。</em>
+    <em>由GraphQLAPI支援的AEMReact應用程式。</em>
     <p>
   </td>
 </tr>
 </table>
 
-## Tutorials（依架構）
+## Tutorials
 
-根據所使用的技術，瀏覽下列教學課程。 了解AEM如何超越純粹無頭的使用案例，提供內容製作和體驗管理選項。
+根據使用的技術瀏覽以下教程。 瞭解AEM如何超越純粹的無頭使用情形，提供上下文內創作和體驗管理選項。
 
 <table>
 <tr>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html">
-      <img alt="React — 無頭" src="./assets/react-headless.png" />
+      <img alt="反應 — 無頭" src="./assets/react-headless.png" />
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
-    <strong>React — 無頭</strong>
+    <strong>反應 — 無頭</strong>
     </a>
     </div>
     <p>
-    <em>以純無頭情境，使用GraphQL建立React JS應用程式。</em>
+    <em>在純無頭場景中使用GraphQL構建React JS應用。</em>
     <p>
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
-    <img alt="React — 遠端編輯器" src="./assets/react-remote.png" />
+    <img alt="反應 — 遠程編輯器" src="./assets/react-remote.png" />
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
-    <strong>React — 遠端編輯器</strong>
+    <strong>反應 — 遠程編輯器</strong>
     </a>
     </div>
     <p>
-    <em>在內容中製作遠端托管React應用程式的一部分。</em>
+    <em>在上下文中編寫遠程托管的React應用程式的一部分。</em>
     </p>
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-      <img alt="React - SPA Editor" src="./assets/react-spa-editor.png" />
+      <img alt="反應 — 編SPA輯器" src="./assets/react-spa-editor.png" />
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-        <strong>React - SPA Editor</strong>
+        <strong>反應 — 編SPA輯器</strong>
       </a>
     </div>
     <p>
-    <em>使用AEM SPA編輯器管理完整的React應用程式體驗。</em>
+    <em>使用編AEM輯器SPA管理完整的React應用體驗。</em>
     <p>
   </td>
 </tr>
 <tr>  
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
-    <img alt="Android — 內容服務" src="./assets/android.png" />
+    <img alt="Andriod — 內容服務" src="./assets/android.png" />
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
@@ -171,20 +171,20 @@ Adobe Experience Manager(AEM)有多個選項可定義無頭端點，並將其內
     </a>
     </div>
     <p>
-    <em>使用內容服務和REST為行動Android™應用程式提供強大功能。</em>
+    <em>使用Content Services和REST為移動Android™應用程式提供電源。</em>
     </p>
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
-      <img alt="Node.js — 驗證" src="./assets/node-js.png" />
+      <img alt="Node.js — 身份驗證" src="./assets/node-js.png" />
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
-        <strong>Node.js — 驗證</strong>
+        <strong>Node.js — 身份驗證</strong>
       </a>
     </div>
     <p>
-    <em>使用開發人員和服務代號建立Node.js應用程式以進行驗證。</em>
+    <em>使用開發人員和服務令牌生成Node.js應用以進行身份驗證。</em>
     <p>
   </td>
   <td></td>

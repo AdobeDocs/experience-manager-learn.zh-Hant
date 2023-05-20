@@ -1,6 +1,6 @@
 ---
-title: 使用批處理API生成互動式通信文檔
-description: 使用批次API產生列印管道檔案的範例資產
+title: 使用批處理API生成交互通信文檔
+description: 使用批API生成打印通道文檔的樣例資產
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -19,50 +19,50 @@ ht-degree: 2%
 
 ---
 
-# 批次API
+# 批處理API
 
-您可以使用批次API從範本產生多個互動式通訊。 範本是互動式通訊，不含任何資料。 批次API將資料與範本結合，以產生互動式通訊。 API在大量生產互動式通訊中很有用。 例如，電話單、多個客戶的信用卡對帳單。
+可以使用批處理API從模板生成多個交互通信。 該模板是沒有任何資料的互動式通信。 批處理API將資料與模板組合以生成互動式通信。 該API在互動式通信的批量生產中是有用的。 例如，電話帳單、多個客戶的信用卡對帳單。
 
-[進一步了解批次產生API](https://experienceleague.adobe.com/docs/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html)
+[瞭解有關批處理生成API的詳細資訊](https://experienceleague.adobe.com/docs/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html)
 
-本文提供使用批次API產生互動式通訊檔案的範例資產。
+本文提供了使用Batch API生成Interactive Communications文檔的示例資產。
 
-## 使用監看資料夾批次產生
+## 使用監視資料夾生成批
 
-* 匯入 [互動式通訊範本](assets/Beneficiaries-confirmation.zip) 進入您的AEM Forms伺服器。
-* 匯入 [監視資料夾配置](assets/batch-generation-api.zip). 這會建立名為 `batchAPI` 在C驅動器中。
+* 導入 [互動式通信模板](assets/Beneficiaries-confirmation.zip) 你的AEM Forms伺服器。
+* 導入 [監視資料夾配置](assets/batch-generation-api.zip)。 這將建立名為 `batchAPI` 在C盤上。
 
-**如果您在非windows作業系統上執行AEM Forms，請遵循下列3個步驟：**
+**如果您在非Windows作業系統上運行AEM Forms，請執行以下三個步驟：**
 
-1. [開啟已觀看的資料夾](http://localhost:4502/libs/fd/core/WatchfolderUI/content/UI.html)
+1. [開啟受監視的資料夾](http://localhost:4502/libs/fd/core/WatchfolderUI/content/UI.html)
 2. 選擇BatchAPIWatchedFolder，然後按一下編輯。
-3. 變更路徑以符合您的作業系統。
+3. 更改路徑以匹配您的作業系統。
 
 ![路徑](assets/watched-folder-batch-api-basic.PNG)
 
-* 下載並擷取 [zip檔案](assets/jsonfile.zip). zip檔案包含名為的資料夾 `jsonfile` 包含 `beneficiaries.json` 檔案。 此檔案具有生成3個文檔的資料。
+* 下載並解壓縮 [zip檔案](assets/jsonfile.zip)。 zip檔案包含名為 `jsonfile` 包含 `beneficiaries.json` 的子菜單。 此檔案具有生成3個文檔的資料。
 
-* 放置 `jsonfile` 資料夾放入監看資料夾的輸入資料夾中。
-* 擷取資料夾以進行處理後，檢查已監看資料夾的結果資料夾。 您應會看到3個PDF檔案產生
+* 刪除 `jsonfile` 資料夾。
+* 一旦拾取該資料夾進行處理，請檢查監視資料夾的結果資料夾。 您應看到生成的3個PDF檔案
 
 ## 使用REST請求生成批
 
-您可以叫用 [批次API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) 通過REST請求。 您可以公開其他應用程式的REST端點，以叫用API來產生檔案。
-提供的範例資產會公開REST端點，以產生互動式通訊檔案。 Servlet接受以下參數：
+您可以調用 [批處理API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) 通過REST請求。 您可以為其他應用程式公開REST端點以調用API來生成文檔。
+提供的示例資產公開了用於生成Interactive Communication文檔的REST終結點。 Servlet接受以下參數：
 
-* fileName — 資料檔案在檔案系統上的位置。
+* fileName — 檔案系統上資料檔案的位置。
 * templatePath - IC模板路徑
-* saveLocation — 在檔案系統上保存生成文檔的位置
+* saveLocation — 用於在檔案系統上保存生成的文檔的位置
 * channelType — 打印、Web或兩者
-* recordId — 設定互動式通訊名稱之元素的JSON路徑
+* recordId — 用於設定交互通信名稱的元素的JSON路徑
 
-以下螢幕截圖顯示參數及其值
-![範例要求](assets/generate-ic-batch-servlet.PNG)
+以下螢幕快照顯示參數及其值
+![示例請求](assets/generate-ic-batch-servlet.PNG)
 
-## 在伺服器上部署範例資產
+## 在伺服器上部署示例資產
 
-* 匯入 [ICT模板](assets/ICTemplate.zip) 使用 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* 匯入 [自訂提交處理常式](assets/BatchAPICustomSubmit.zip) 使用 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* 匯入 [適用性表單](assets/BatchGenerationAPIAF.zip) 使用 [Forms和檔案介面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 部署並啟動 [自訂OSGI套件組合](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) 使用 [Felix Web Console](http://localhost:4502/system/console/bundles)
-* [提交表單以觸發批生成](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)
+* 導入 [ICT模板](assets/ICTemplate.zip) 使用 [軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 導入 [自定義提交處理程式](assets/BatchAPICustomSubmit.zip) 使用 [軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 導入 [自適應窗體](assets/BatchGenerationAPIAF.zip) 使用 [Forms和文檔介面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 部署和啟動 [自定義OSGI捆綁包](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) 使用 [Felix Web控制台](http://localhost:4502/system/console/bundles)
+* [通過提交表單觸發批生成](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)

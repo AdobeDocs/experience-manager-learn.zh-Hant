@@ -1,5 +1,5 @@
 ---
-title: Adobe IMS產品設定檔與AEM
+title: Adobe IMS產品配置檔案AEM和
 description: Adobe IMS 產品設定檔能提供使用者登入 AEM 作者服務的權限，並根據使用者所屬的產品設定檔提供存取基準。
 topic: Administration, Security
 feature: User and Groups
@@ -16,7 +16,7 @@ ht-degree: 80%
 
 ---
 
-# Adobe IMS產品設定檔 {#adobe-ims-product-profiles}
+# Adobe IMS產品配置檔案 {#adobe-ims-product-profiles}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_productprofiles"
@@ -30,4 +30,4 @@ Adobe IMS 產品設定檔能提供使用者登入 AEM 作者服務的權限，�
 
 ## 其他資源
 
-+ [管理Admin Console檔案中的產品與使用者存取](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)
++ [在Admin Console文檔中管理產品和用戶訪問](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)

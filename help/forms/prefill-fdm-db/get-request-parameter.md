@@ -1,6 +1,6 @@
 ---
-title: 取得要求參數
-description: 在表單資料模型的預填服務中存取請求參數
+title: 獲取請求參數
+description: 訪問表單資料模型的預填充服務的請求參數
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 5815
@@ -16,24 +16,24 @@ ht-degree: 3%
 
 ---
 
-# 取得要求參數
+# 獲取請求參數
 
 ## 獲取empID參數
 
-下一步是從URL中存取empID參數。 然後，empID請求參數的值會傳遞至 **_get_** 表單資料模型的服務操作。
-為了本課程的目的，我們建立並提供了以下內容
+下一步是從url訪問empID參數。 然後，將empID請求參數的值傳遞給 **_得_** 服務操作表單資料模型。
+為了在本課程中學習，我們建立並提供了以下內容
 
-* 已呼叫適用性表單範本 **_FDMDemo_**
-* 已呼叫頁面元件 **_fdmdemo_**
-* 已將自定義jsp與頁面元件一起包含
-* 將最適化表單範本與頁面元件相關聯
+* 已調用自適應表單模板 **_FDMemo_**
+* 已調用頁面元件 **_fdmdemo_**
+* 將自定義jsp與頁面元件一起包含
+* 將自適應表單模板與頁面元件關聯
 
-通過執行此操作，我們在自訂jsp中的程式碼只有在根據此自訂範本呈現適用性表單時才會執行
+通過執行此操作，只有在呈現基於此自定義模板的自適應表單時，才會執行自定義jsp中的代碼
 
-* [匯入套件](assets/template-page-component.zip) 使用 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+* [導入包](assets/template-page-component.zip) 使用 [軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 * [開啟fdmrequest.jsp](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
-* 取消註解備注的行。
-* 儲存您的變更
+* 取消注釋注釋注釋行。
+* 保存更改
 
 ```java
 if(request.getParameter("empID")!=null)
@@ -45,12 +45,12 @@ if(request.getParameter("empID")!=null)
     }
 ```
 
-empID的值與paraMap中名為empID的鍵相關聯。 此對應會傳遞至slingRequest
+empID的值與paraMap中名為empID的鍵相關聯。 然後，此映射將傳遞給slingRequest
 
 >[!NOTE]
 >
->鍵empID必須與新實體獲取服務的綁定值匹配
+>密鑰empID必須與新實體獲取服務的綁定值匹配
 
 ## 後續步驟
 
-[根據表單資料模型建立最適化表單](./create-adaptive-form.md)
+[基於表單資料模型建立自適應表單](./create-adaptive-form.md)

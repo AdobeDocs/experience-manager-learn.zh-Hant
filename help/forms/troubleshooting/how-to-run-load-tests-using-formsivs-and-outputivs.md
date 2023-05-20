@@ -1,6 +1,6 @@
 ---
-title: 如何使用OOTB FormsIVS和OutputIVS範例從UI執行負載測試
-description: 使用FormsIVS和OutputIVS配置負載測試
+title: 如何使用OOTB FormsIVS和OutputIVS示例從UI運行負載test
+description: 使用FormsIVS和OutputIVS配置負載test
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何使用FormsIVS和OutputIVS執行負載測試
+# 如何使用FormsIVS和OutputIVS運行負載test
 
-*此影片會逐步說明如何使用FormsIVS和OutputIVS範例，從UI執行負載測試。*
+*此視頻通過使用FormsIVS和OutputIVS示例從UI運行負載test的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335507?quality=12&learn=on)

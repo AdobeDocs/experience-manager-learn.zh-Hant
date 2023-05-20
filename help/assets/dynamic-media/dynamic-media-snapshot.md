@@ -1,6 +1,6 @@
 ---
-title: 使用快照探索Dynamic Media映像
-description: Dynamic Media Snapshot是視覺化的示範工具，旨在說明Dynamic Media在最佳化和動態影像傳送方面的強大功能。
+title: 使用快照瀏覽Dynamic Media映像
+description: Dynamic Media快照是一個直觀的演示工具，旨在展示Dynamic Media在優化和動態影像傳輸方面的威力。
 feature: Smart Services, Image Sets, Image Profiles
 version: Cloud Service
 kt: 13269
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 # Dynamic Media快照 {#snapshot}
 
-Dynamic Media Snapshot是視覺化的示範工具，旨在說明Dynamic Media在最佳化和動態影像傳送方面的強大功能。 透過測試影像或Dynamic Media URL實驗，以視覺化方式觀察各種Dynamic Media影像修飾元的輸出，並針對檔案大小（透過WebP和AVIF傳送）、網路和裝置像素比例(DPR)最佳化智慧影像。
+Dynamic Media快照是一個直觀的演示工具，旨在展示Dynamic Media在優化和動態影像傳輸方面的威力。 對test影像或Dynamic MediaURL進行實驗，以直觀地觀察各種Dynamic Media影像修飾符的輸出，並對檔案大小（使用WebP和AVIF傳遞）、網路和設備像素比(DPR)進行智慧成像優化。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419421/?learn=on)
 

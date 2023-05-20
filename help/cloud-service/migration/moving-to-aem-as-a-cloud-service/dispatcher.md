@@ -1,6 +1,6 @@
 ---
-title: 在移至AEM時設定Dispatcheras a Cloud Service
-description: 了解AEM Dispatcher for AEMas a Cloud Service、Dispatcher轉換工具的重大變更，以及如何使用Dispatcher工具SDK。
+title: 在移動到AEMas a Cloud Service
+description: 瞭解對Dispatcher for AEMas a Cloud Service、Dispatcher轉換工AEM具以及如何使用Dispatcher Tools SDK的顯著更改。
 version: Cloud Service
 feature: Dispatcher
 topic: Migration, Upgrade
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 # Dispatcher
 
-了解AEM Dispatcher for AEMas a Cloud Service，著重於Dispatcher for AEM 6、Dispatcher轉換工具以及如何使用Dispatcher工具SDK的重大變更。
+了AEM解Dispatcher for AEMfergie，重點介紹Dispatcher for AEM 6 、 Dispatcher轉換工具以及如何使用Dispatcher Tools SDK的顯著更改。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336962?quality=12&learn=on)
 
@@ -27,40 +27,40 @@ ht-degree: 6%
 
 ![Dispatcher 轉換工具](./assets/dispatcher-converter-diagram.png)
 
-作為重構程式碼基底的一部分，請使用 [AEM Dispatcher轉換工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/dispatcher-transformation-utility-tools.html) 將現有的內部部署或Adobe Managed Services Dispatcher設定重新調整為AEMas a Cloud Service相容的Dispatcher設定。
+作為重構代碼庫的一部分，使用 [調度AEM器轉換器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/dispatcher-transformation-utility-tools.html) 將現有的本地或Adobe Managed Services Dispatcher配置重構為AEMas a Cloud Service相容的Dispatcher配置。
 
 ## 關鍵活動
 
-+ 使用 [Adobe I/ODispatcher轉換工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#aio-aem-migrationdispatcher-converter) 移轉現有Dispatcher設定。
-+ 從 [AEM專案原型](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud) 作為最佳實務。
-+ [設定本機Dispatcher工具](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) 驗證dispatcher，然後再於Cloud Service環境中進行測試。
++ 使用 [Adobe I/O調度器轉換器工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#aio-aem-migrationdispatcher-converter) 遷移現有Dispatcher配置。
++ 從 [項AEM目原型](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud) 作為最佳實踐。
++ [設定本地Dispatcher工具](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) 在Cloud Service環境中進行測試之前驗證調度程式。
 
 ## 動手練習
 
-通過這個實踐練習來嘗試你學到的東西，來運用你的知識。
+通過嘗試通過實際操作所學到的知識來應用您的知識。
 
-在嘗試動手練習之前，請確定您已觀看並了解上述影片，以及下列材料：
+在嘗試動手練習之前，請確保您已觀看並瞭解上面的視頻，以及以下資料：
 
 + [AEM 現代化工具](./aem-modernization-tools.md)
 + [上線](./onboarding.md)
 + [Cloud Manager](./cloud-manager.md)
 
-此外，請確定您已完成先前的實作練習：
+另外，確保您已完成以前的動手練習：
 
-+ [Cloud Manager實作練習](./cloud-manager.md#hands-on-exercise)
++ [Cloud Manager的動手練習](./cloud-manager.md#hands-on-exercise)
 
 <table style="border-width:0">
     <tr>
         <td style="width:150px">
             <a  rel="noreferrer"
                 target="_blank"
-                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session5-dispatcher#cloud-acceleration-bootcamp---session-5-dispatcher"><img alt="實作練習GitHub存放庫" src="./assets/github.png"/>
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session5-dispatcher#cloud-acceleration-bootcamp---session-5-dispatcher"><img alt="實際練習GitHub儲存庫" src="./assets/github.png"/>
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
-            <div style="font-size:1.25rem;font-weight:400;">Dispatcher工具的實作</div>
+            <div style="font-size:1.25rem;font-weight:400;">Dispatcher Tools的操作</div>
             <p style="margin:1rem 0">
-                探索如何使用AEM SDK的Dispatcher工具來驗證Dispatcher設定，以及使用Docker在本機執行AEM Dispatcher。
+                使用SDK的AEMDispatcher Tools進行瀏覽，以驗證Dispatcher配置，並使用Docker在本AEM地運行Dispatcher。
             </p>
             <a  rel="noreferrer"
                 target="_blank"

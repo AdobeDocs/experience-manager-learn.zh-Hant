@@ -1,7 +1,7 @@
 ---
-title: 在圖中使用減速函式
+title: 在圖表中使用減速器函式
 seo-title: Using Reducer Functions in AEM Forms - Charts
-description: 減速器函式用於聚合或分組圖表中顯示的值。以下視頻將介紹使用減速器函式涉及的步驟。
+description: Reducer函式用於聚合或分組圖表中顯示的值。以下視頻將介紹使用Reducer函式涉及的步驟。
 seo-description: Reducer functions are used to aggregate or group values that are displayed in the chart.The following video walks through the steps involved in using reducer functions.
 uuid: e9bd8bda-48ea-4a02-95c4-02aedafdb640
 discoiquuid: 6fef8341-8fd5-4d82-9f69-2b8be7cd22db
@@ -25,10 +25,10 @@ ht-degree: 0%
 
 # 在AEM Forms中使用減速器函式 — 圖表{#using-reducer-functions-in-aem-forms-charts}
 
-減速器函式用於聚合或分組圖表中顯示的值。
+Reducer函式用於聚合或分組圖表中顯示的值。
 
 
-例如，我們可以使用減速器函式來顯示每個類別的事務處理數，或從下面顯示的示例資料中顯示每個類別的最高費用
+例如，我們可以使用減速器功能來顯示每個類別的事務處理數，或顯示下面顯示的示例資料中每個類別的最高費用
 
 ```json
 [{
@@ -62,6 +62,6 @@ ht-degree: 0%
 ]
 ```
 
-以下影片會逐步介紹使用減速器功能的步驟。
+以下視頻介紹了使用減速器功能所涉及的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21368?quality=12&learn=on)

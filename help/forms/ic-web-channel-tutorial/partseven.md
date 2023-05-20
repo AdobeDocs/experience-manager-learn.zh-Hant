@@ -1,7 +1,7 @@
 ---
-title: 將文字和影像內容新增至Web頻道檔案
+title: 將文本和影像內容添加到Web頻道文檔
 seo-title: Adding text and image content to web channel document
-description: 這是建立第一個互動式通訊檔案的多步驟教學課程的第7部分。 在本部分，我們將將影像和文字內容新增至頁首面板。
+description: 這是建立第一個互動式通信文檔的多步教程的7部分。 在此部分，我們將向標題面板添加影像和文本內容。
 seo-description: This is part 7 of a multi-step tutorial for creating your first interactive communications document. In this part, we will add images and text content to the header panel.
 uuid: 440f8b74-3be7-4e58-a46e-4110065b7705
 feature: Interactive Communication
@@ -22,20 +22,20 @@ ht-degree: 1%
 
 ---
 
-# 將文字和影像內容新增至Web頻道檔案
+# 將文本和影像內容添加到Web頻道文檔
 
-在本部分，我們將將影像和文字內容新增至頁首面板。
+在此部分，我們將向標題面板添加影像和文本內容。
 
-現在，您已編寫了包含收件者姓名和地址的第一個檔案片段，因此我們需要將檔案片段新增至Web頻道檔案。
+既然您已經創作了第一個包含收件人名稱和地址的文檔片段，我們需要將該文檔片段添加到Web渠道文檔。
 
-您可以將各種類型的內容（如檔案片段、影像、版面片段等）新增至網頁頻道檔案。
+您可以將各種類型的內容（如文檔片段、影像、佈局片段等）添加到Web頻道文檔。
 
-若要將內容新增至網頁頻道檔案，請觀看以下影片。
+要將內容添加到Web頻道文檔，請按照下面的視頻操作。
 
-影片會逐步帶您了解將內容新增至Web頻道檔案中適當目標區域的相關步驟。
+視頻將引導您完成將內容添加到Web頻道文檔中相應目標區域中涉及的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22359?quality=12&learn=on)
 
 ## 後續步驟
 
-[設定折線圖](./parteight.md)
+[配置折線圖](./parteight.md)

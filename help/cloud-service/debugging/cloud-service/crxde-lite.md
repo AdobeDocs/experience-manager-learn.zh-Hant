@@ -1,6 +1,6 @@
 ---
 title: CRXDE Lite
-description: CRXDE Lite是傳統但功能強大的工具，可作為Cloud Service開發人員環境除錯AEM。 CRXDE Lite提供一套功能，可協助偵錯以檢查所有資源和屬性、控制JCR的可變部分及調查權限。
+description: CRXDE Lite是調試as a Cloud Service開發人員環境的經典但功AEM能強大的工具。 CRXDE Lite提供了一套功能，可幫助調試以檢查所有資源和屬性、操作JCR的可變部分和調查權限。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -20,66 +20,66 @@ ht-degree: 0%
 
 ---
 
-# 將AEM作為Cloud Service進行CRXDE Lite
+# 使用AEMCRXDE Lite調試as a Cloud Service
 
-CRXDE Lite __僅__&#x200B;適用於AEM作為Cloud Service開發環境(以及本機AEM SDK)。
+CRXDE Lite __僅__ 可在AEMas a Cloud Service開發環境(以及本地AEMSDK)上使用。
 
-## 存取AEM作者的CRXDE Lite
+## 訪問AEM作者的CRXDE Lite
 
-CRXDE Lite __僅__&#x200B;可在AEM作為Cloud Service開發環境存取，且&#x200B;__不__&#x200B;可在預備或生產環境中存取。
+CRXDE Lite __僅__ 可在AEMas a Cloud Service開發環境中訪問， __不__ 在Stage或Production環境中提供。
 
-若要存取AEM作者的CRXDE Lite:
+要訪問AEM作者的CRXDE Lite:
 
-1. 以Cloud ServiceAEM作者服務身分登入AEM。
-1. 導覽至「工具>一般>CRXDE Lite」
+1. 登錄到AEMas a Cloud ServiceAEM作者服務。
+1. 導航到「工具」>「常規」>「CRXDE Lite」
 
-這會使用用來登入AEM作者的憑證和權限開啟CRXDE Lite。
+這將使用登錄AEM作者時使用的憑據和權限開啟CRXDE Lite。
 
-## 為內容除錯
+## 調試內容
 
-CRXDE Lite可直接存取JCR。 透過CRXDE Lite顯示的內容受授予使用者的權限限制，這表示根據您的存取權限，您可能無法查看或修改JCR中的所有內容。
+CRXDE Lite可直接訪問JCR。 通過CRXDE Lite可見的內容受授予用戶的權限限制，這意味著您可能無法根據您的訪問權限查看或修改JCR中的所有內容。
 
-請注意，`/apps`、`/libs`和`/oak:index`不可變，這表示任何使用者無法在執行階段變更它們。 JCR中的這些位置只能透過程式碼部署加以修改。
+請注意 `/apps`。 `/libs` 和 `/oak:index` 是不可變的，這意味著任何用戶在運行時不能更改它們。 JCR中的這些位置只能通過代碼部署進行修改。
 
-+ 使用左側導航窗格導航和操作JCR結構
-+ 在左側導航窗格中選擇節點時，會在底部窗格中顯示節點屬性。
++ 使用左導航窗格導航和操作JCR結構
++ 在左側導航窗格中選擇一個節點，將在底部窗格中顯示節點屬性。
    + 可以從窗格中添加、刪除或更改屬性
-+ 按兩下左側導覽中的檔案節點，在右上方窗格中開啟檔案的內容
-+ 點選左上角的「全部儲存」按鈕以持續變更，或點選「全部儲存」旁的向下箭頭以還原任何未儲存的變更。
++ 按兩下左導航中的檔案節點，在右上窗格中開啟檔案的內容
++ 按一下左上角的「Save All（全部保存）」按鈕以保持更改，或按一下「Save All to Revert any unsaved changes（全部保存以還原所有未保存的更改）」旁邊的下箭頭。
 
-![CRXDE Lite — 除錯內容](./assets/crxde-lite/debugging-content.png)
+![CRXDE Lite — 調試內容](./assets/crxde-lite/debugging-content.png)
 
-在AEM中以Cloud Service開發環境的形式，透過CRXDE Lite在執行階段變更可變動內容，必須謹慎執行。
-透過CRXDE Lite直接對AEM所做的任何變更都可能難以追蹤及控管。 視情況確定透過CRXDE Lite所做的變更會回到AEM專案的可變動內容套件(`ui.content`)並提交至Git，以確保問題已解決。 理想情況下，所有應用程式內容變更都源自程式碼基底，並透過部署流入AEM，而非透過CRXDE Lite直接對AEM進行變更。
+在as a Cloud Service開發環境中通過CRXDE Lite對AEM可變內容在運行時進行更改必須小心。
+任何通過CRXDE Lite直接AEM進行的更改都可能難以跟蹤和管理。 確保通過CRXDE Lite進行的更改返回到項目AEM的可變內容包(`ui.content`)並承諾Git，以確保問題得到解決。 理想情況下，所有應用程式內容更改都源於代碼庫並通過部署AEM流入，而不是直接通過CRXDE Lite進行AEM更改。
 
 ### 調試訪問控制
 
-CRXDE Lite提供了測試和評估特定用戶或組（也稱為主體）的特定節點上的訪問控制的方法。
+CRXDE Lite提供了test和評估特定用戶或組（又稱主體）的特定節點上的訪問控制的方法。
 
-若要存取CRXDE Lite中的「測試存取控制」主控台，請導覽至：
+要在CRXDE Lite中訪問Test訪問控制控制台，請導航到：
 
-+ CRXDE Lite>工具>測試存取控制……
++ CRXDE Lite>工具>Test訪問控制……
 
-![CRXDE Lite — 測試存取控制](./assets/crxde-lite/permissions__test-access-control.png)
+![CRXDE Lite-Test訪問控制](./assets/crxde-lite/permissions__test-access-control.png)
 
-1. 使用「路徑」欄位，選擇要評估的JCR路徑
-1. 使用「承擔者」(Principal)欄位，選擇要根據此路徑評估的用戶或組
-1. 點選「測試」按鈕
+1. 使用「路徑」欄位，選擇要計算的JCR路徑
+1. 使用「承擔者」(Principal)欄位，選擇用戶或組以根據
+1. 點擊Test按鈕
 
 結果顯示如下：
 
-+ ____ Path重申已評估的路徑
-+ ____ Principal重申已評估路徑的用戶或組
-+ ____ 原則會列出所選主要屬於的所有主要。
-   + 這有助於了解可透過繼承提供權限的傳遞式群組成員資格
-+ __Path的權__ 限列出所選主體在評估路徑上擁有的所有JCR權限
++ __路徑__ 重申已評估的路徑
++ __主__ 重申已評估路徑的用戶或組
++ __承擔者__ 列出選定承擔者所屬的所有承擔者。
+   + 這有助於瞭解可通過繼承提供權限的傳遞組成員資格
++ __路徑上的權限__ 列出所選主體在評估路徑上擁有的所有JCR權限
 
 ### 不支援的調試活動
 
-以下是可在CRXDE Lite中執行&#x200B;__not__&#x200B;的偵錯活動。
+以下是可以 __不__ 在CRXDE Lite中執行。
 
-### 對OSGi配置進行調試
+### 調試OSGi配置
 
-無法透過CRXDE Lite檢閱已部署的OSGi設定。 AEM專案的`ui.apps`程式碼套件中會維護OSGi設定，但部署至AEM做為Cloud Service環境時，OSGi設定資源不會持續保存至JCR，因此無法透過CRXDE Lite顯示。`/apps/example/config.xxx`
+無法通過CRXDE Lite查看部署的OSGi配置。 OSGi配置在項AEM目中維護 `ui.apps` 代碼包位於 `/apps/example/config.xxx`但是，在部署到AEMas a Cloud Service環境時，OSGi配置資源不會保留到JCR，因此無法通過CRXDE Lite看到。
 
-請改為使用[開發人員控制台>配置](./developer-console.md#configurations)來查看已部署的OSGi配置。
+而是使用 [開發人員控制台>配置](./developer-console.md#configurations) 查看已部署的OSGi配置。

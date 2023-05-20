@@ -1,6 +1,6 @@
 ---
 title: AEM as a Cloud Service 入門
-description: 了解如何開始使用AEMas a Cloud Service，從合約階段開始，一直到使用Cloud Manager設定環境。
+description: 瞭解從合同階AEM段開始到使用雲管理器設定環境的as a Cloud Service的入門資訊。
 version: Cloud Service
 feature: Onboarding
 topic: Migration, Upgrade
@@ -18,52 +18,52 @@ ht-degree: 8%
 
 # AEM as a Cloud Service 入門
 
-了解如何從合約階段開始，直到使用Cloud Manager設定環境，逐步上線至AEMas a Cloud Service。
+從合同階段AEM開始，通過使用雲管理器設定環境，瞭解如何開始as a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336959?quality=12&learn=on)
 
-## Cloud Manager和Admin Console
+## 雲管理器和管理控制台
 
-![入門高階圖表](assets/onboarding-diagram.png)
+![登錄高級圖](assets/onboarding-diagram.png)
 
-入門的重要環節是建立AEMas a Cloud Service程式，並使用Adobe Cloud Manager布建各種環境。 此 [Admin Console](https://adminconsole.adobe.com/) 可用來指派角色，以及為組織中的使用者提供對AEM環境的存取權。
+入門的一個關鍵部分是建立AEMas a Cloud Service的程式，並使用Adobe雲管理器配置各種環境。 的 [Admin Console](https://adminconsole.adobe.com/) 用於為組織中的用戶分配角色並提供對環境的訪AEM問權。
 
-## 關鍵活動
+## 主要活動
 
-+ 系統管理員使用 [Admin Console](https://adminconsole.adobe.com/) 要為 [Cloud Manager — 業務擁有者](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) 產品設定檔。
-+ 分配給業務所有者產品配置檔案的用戶使用的自助功能包括 [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hant) to [建立方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html) 和 [新增環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
-+ 使用 [Admin Console](https://adminconsole.adobe.com/) 將開發人員和使用者指派給不同的 [Cloud Manager角色](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) 和授與各種AEM環境的權限。
++ 系統管理員使用 [Admin Console](https://adminconsole.adobe.com/) 將一個或多個用戶分配給 [雲管理器 — 業務所有者](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) 產品配置檔案。
++ 分配給業務所有者產品配置檔案的用戶使用的自助功能 [雲管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hant) 至 [建立程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html) 和 [添加環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
++ 使用 [Admin Console](https://adminconsole.adobe.com/) 將開發人員和用戶分配給不同的 [雲管理器角色](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) 並授予各種環AEM境許可。
 
 ## 動手練習
 
-通過這個實踐練習來嘗試你學到的東西，來運用你的知識。
+通過嘗試通過實際操作所學到的知識來應用您的知識。
 
-在嘗試動手練習之前，請確定您已觀看並了解上述影片，以及下列材料：
+在嘗試動手練習之前，請確保您已觀看並瞭解上面的視頻，以及以下資料：
 
-+ [對AEMas a Cloud Service有不同的思考](./introduction.md)
++ [對as a Cloud Service的不AEM同思考](./introduction.md)
 + [Cloud Manager](./cloud-manager.md)
 
-此外，請確定您已完成先前的實作練習：
+另外，確保您已完成以前的動手練習：
 
-+ [AEM現代化工具實作練習](./aem-modernization-tools.md#hands-on-exercise)
++ [現AEM代化工具動手練習](./aem-modernization-tools.md#hands-on-exercise)
 
 <table style="border-width:0">
     <tr>
         <td style="width:150px">
             <a  rel="noreferrer"
                 target="_blank"
-                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session3-onboarding#bootcamp---session-3-on-boarding"><img alt="實作練習GitHub存放庫" src="./assets/github.png"/>
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session3-onboarding#bootcamp---session-3-on-boarding"><img alt="實際練習GitHub儲存庫" src="./assets/github.png"/>
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
-            <div style="font-size:1.25rem;font-weight:400;">上線操作</div>
+            <div style="font-size:1.25rem;font-weight:400;">上門操作</div>
             <p style="margin:1rem 0">
-                探索AEMas a Cloud Service入門程式，以及如何將AEM應用程式部署至AEM SDK。
+                探AEM索as a Cloud Service的登錄過程以及如何將應AEM用程式部署AEM到SDK。
             </p>
             <a  rel="noreferrer"
                 target="_blank"
                 href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session3-onboarding#bootcamp---session-3-on-boarding" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">試用入門</span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">試用</span>
             </a>
         </td>
     </tr>

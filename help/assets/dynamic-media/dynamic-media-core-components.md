@@ -1,6 +1,6 @@
 ---
-title: 搭配使用Dynamic Media和AEM Sites核心元件
-description: 了解如何搭配Adobe Experience Manager Sites使用Dynamic Media。 影像元件是Experience Manager核心元件的一部分，已內建Dynamic Media支援。 影像元件可讓內容作者使用Dynamic Media的功能，例如AEM Sites頁面上的影像預設集、智慧型裁切和影像修飾元。
+title: 將Dynamic Media與AEM Sites核心元件配合使用
+description: 學習如何將Dynamic Media與Adobe Experience Manager Sites一起使用。 映像元件是Experience Manager核心元件的一部分，它內置了對Dynamic Media的支援。 「影像」元件允許內容作者在AEM Sites頁面上使用Dynamic Media的功能，如「影像預設」、「智慧裁剪」和「影像修飾符」。
 feature: Core Components, Smart Crop, Image Profiles, Image Presets
 version: Cloud Service
 topic: Content Management
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 ---
 
-# 搭配使用Dynamic Media和AEM Sites核心元件 {#dynamic-media-sites-core-components}
+# 將Dynamic Media與AEM Sites核心元件配合使用 {#dynamic-media-sites-core-components}
 
-影像元件是Experience Manager核心元件的一部分，已內建Dynamic Media支援。 影像元件可讓內容作者使用Dynamic Media的功能，例如AEM Sites頁面上的影像預設集、智慧型裁切和影像修飾元。
+映像元件是Experience Manager核心元件的一部分，它內置了對Dynamic Media的支援。 「影像」元件允許內容作者在AEM Sites頁面上使用Dynamic Media的功能，如「影像預設」、「智慧裁剪」和「影像修飾符」。
 
 >[!VIDEO](https://video.tv.adobe.com/v/329331?quality=12&learn=on)
 
 ## 其他資源
 
-* [影像核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=en#dynamic-media)
-* [Dynamic Media命令參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=en#image-serving-api)
+* [映像核心元件文檔](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=en#dynamic-media)
+* [Dynamic Media指揮參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=en#image-serving-api)

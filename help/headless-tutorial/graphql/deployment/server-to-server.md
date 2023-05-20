@@ -8,13 +8,13 @@ role: Developer, Architect
 level: Intermediate
 kt: 10798
 thumbnail: kt-10798.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+exl-id: d4ae08d9-dc43-4414-ab75-26853186a301
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
 
 ---
-
 
 # AEM無頭伺服器到伺服器部署
 
@@ -34,9 +34,9 @@ ht-degree: 1%
 
 ## 授權要求
 
-對GraphQL API的授權請AEM求通常在伺服器到伺服器應用的上下文中發生，因為其他應用類型(如 [單頁應用](./spa.md)。 [移動](./mobile.md)或 [Web元件](./web-component.md)，通常使用授權，因為很難保護憑據。
+對GraphQLAEM API的授權請求通常在伺服器到伺服器應用的上下文中發生，因為其他應用類型(如 [單頁應用](./spa.md)。 [移動](./mobile.md)或 [Web元件](./web-component.md)，通常使用授權，因為很難保護憑據。
 
-授權請求到AEMas a Cloud Service時，使用 [基於服務憑據的令牌身份驗證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html)。 要瞭解有關向as a Cloud Service驗證請求的詳細信AEM息，請查看 [基於令牌的身份驗證教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)。 本教程探討使用 [AEM AssetsHTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html) 但是，同樣的概念和方法適用於與AEMHeadless GraphQL API交互的應用。
+授權請求到AEMas a Cloud Service時，使用 [基於服務憑據的令牌身份驗證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html)。 要瞭解有關向as a Cloud Service驗證請求的詳細信AEM息，請查看 [基於令牌的身份驗證教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)。 本教程探討使用 [AEM AssetsHTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html) 但與HeadlessGraphQLAPI交互的應用同樣適用AEM於這些概念和方法。
 
 ## 伺服器到伺服器應用示例
 
@@ -56,7 +56,7 @@ Adobe提供了Node.js中編碼的伺服器到伺服器應用示例。
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/server-to-server-app.md" title="伺服器到伺服器應用">伺服器到伺服器應用</a></p>
-                   <p class="is-size-6">以Node.js編寫的伺服器到伺服器應用示例，它使用來自無頭GraphQL APIAEM的內容。</p>
+                   <p class="is-size-6">以Node.js編寫的伺服器到伺服器應用示例，它使用來自無頭GraphQLAPIAEM的內容。</p>
                    <a href="../example-apps/server-to-server-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                    </a>

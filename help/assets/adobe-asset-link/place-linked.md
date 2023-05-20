@@ -1,6 +1,6 @@
 ---
-title: 使用置入連結的資產操作
-description: 了解如何使用「置入連結」作業從AEM Assets使用資產。
+title: 使用放置連結的資產工序
+description: 瞭解如何使用「位置連結」操作使用AEM Assets的資產。
 sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: Cloud Service
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 置入已連結{#place-linked}
+# 連結位置{#place-linked}
 
-了解如何使用「置入連結」作業從AEM Assets使用資產。
+瞭解如何使用「位置連結」操作使用AEM Assets的資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34839?quality=12&learn=on)

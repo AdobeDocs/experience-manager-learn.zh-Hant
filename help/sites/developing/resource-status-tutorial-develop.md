@@ -1,6 +1,6 @@
 ---
 title: 發展AEM Sites的資源地位
-description: 'Adobe Experience Manager的資源狀態API是一個可插入框架，用於在各種編輯器Web UI中AEM顯示狀態消息。 '
+description: Adobe Experience Manager的資源狀態API是一個可插入框架，用於在各種編輯器Web UI中AEM顯示狀態消息。
 topics: development
 audience: developer
 doc-type: tutorial

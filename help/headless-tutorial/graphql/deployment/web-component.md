@@ -8,13 +8,13 @@ role: Developer, Architect
 level: Intermediate
 kt: 10797
 thumbnail: kt-10797.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 2%
 
 ---
-
 
 # 無AEM頭Web元件部署
 
@@ -49,7 +49,7 @@ Adobe提供了Web元件示例。
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/web-component.md" title="Web元件">Web元件</a></p>
-                   <p class="is-size-6">以純JavaScript編寫的Web元件示例，它使用來自AEMHeadless GraphQL API的內容。</p>
+                   <p class="is-size-6">以純JavaScript編寫的Web元件示例，它使用來自無頭GraphQLAPIAEM的內容。</p>
                    <a href="../example-apps/web-component.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                    </a>

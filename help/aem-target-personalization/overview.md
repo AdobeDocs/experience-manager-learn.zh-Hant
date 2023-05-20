@@ -1,6 +1,6 @@
 ---
 title: AEM 和 Adobe Target 快速入門
-description: 端對端教學課程，說明如何使用Adobe Experience Manager和Adobe Target建立和提供個人化體驗。 在本教學課程中，您還將了解端到端流程中涉及的不同角色，以及它們如何相互協作
+description: 一個端到端教程，介紹如何使用Adobe Experience Manager和Adobe Target建立和提供個性化體驗。 在本教程中，您還將瞭解端到端流程中涉及的不同角色以及它們如何相互協作
 feature: Experience Fragments
 topic: Personalization
 role: Developer
@@ -15,72 +15,72 @@ ht-degree: 1%
 
 # AEM 和 Adobe Target 快速入門 {#getting-started-with-aem-target}
 
-AEM和Target都是功能強大的解決方案，且功能大致重疊。 客戶有時難以了解搭配使用這些產品來提供個人化體驗的方式與時機。 為了為每位使用者提供最佳化的體驗，您組織內的不同團隊應密切合作，並定義由誰負責。
+而AEMTarget都是功能看似重疊的強大解決方案。 客戶有時難以理解如何和何時結合使用這些產品來提供個性化體驗。 為了為每個最終用戶提供優化的體驗，您組織內的不同團隊應密切協作並定義誰負責什麼。
 
-在本教學課程中，我們會說明AEM和Target的三種不同案例，協助您了解哪些項目最適合您的組織，以及不同團隊的協作方式。
+在本教程中，我們介紹了三種不同的AEM「目標」方案，這有助於您瞭解哪些方案最適合您的組織以及不同團隊的協作方式。
 
-* 案例1 :使用AEM體驗片段進行個人化
-* 案例2 :使用可視化體驗撰寫器進行個人化
-* 案例3 :個人化完整網頁體驗
+* 方案1 :使用體驗AEM片段個性化
+* 方案2 :使用Visual Experience Composer實現個性化
+* 方案3 :全網頁體驗的個性化
 
-## 使用AEM體驗片段進行個人化 {#personalization-using-aem-experience-fragment}
+## 使用體驗AEM片段個性化 {#personalization-using-aem-experience-fragment}
 
-對於此案例，我們將使用AEM和Target。 顯然，這兩種產品都有各自的優點，而若要為網站的使用者提供個人化體驗，您需要 **個人化內容(來自AEM的內容)** 和 **智慧型方式(Target)** 根據特定使用者提供這些內容。
+對於此方案，我們將使用AEM和Target。 顯然，這兩種產品都有各自的優勢，在向您的站點用戶提供個性化體驗時，您需要 **個性化內容(內容AEM)** 和 **智慧路徑（目標）** 根據特定用戶提供這些內容。
 
-AEM可協助您建立個人化內容，將所有內容和資產整合在集中位置，助您推行個人化策略。 AEM可讓您輕鬆在單一位置建立案頭、平板電腦和行動裝置的內容，而無需編寫程式碼。 不需要為每個裝置建立頁面，AEM會使用您的內容自動調整每個體驗。 您也可以按一下按鈕，將內容從AEM匯出至Adobe Target作為選件。
+幫AEM助您建立個性化內容，將您的所有內容和資產集中到一個中心位置，以推動您的個性化策略。 AEM讓您在不編寫代碼的情況下，在一個位置輕鬆建立台式機、平板電腦和移動設備的內容。 無需為每個設備建立頁面 — 可自AEM動使用內容調整每個體驗。 您還可以通過按鈕將內AEM容作為優惠導出到Adobe Target。
 
-我們現在以Target中AEM優惠方案的形式提供個人化內容。 Target可讓您根據結合了行為、情境和離線變數之規則型和AI導向機器學習方法的組合，大規模提供這些選件。  透過Target，您可以輕鬆設定和執行A/B和多變數(MVT)活動，以決定最佳選件、內容和體驗。
+我們現在有個性化內容，形式為來自目標AEM的優惠。 Target允許您基於基於規則和人工智慧驅動的機器學習方法的組合在規模上提供這些服務，這些方法結合了行為、上下文和離線變數。  使用「目標」，您可以輕鬆設定和運行A/B和多變數(MVT)活動，以確定最佳服務、內容和體驗。
 
-**體驗片段** 代表將內容/體驗建立者連結至使用Target推動業務成果的個人化專業人員的一大步。
+**體驗片段** 代表了將內容/體驗建立者與使用Target推動業務成果的個性化專業人員聯繫起來的巨大進步。
 
-* AEM內容編輯器作者將個人化內容視為體驗片段及其變數
-* AEM將體驗片段HTML匯出至Target &#x200B;
-* Target&#x200B;使用AEM體驗片段標籤作為活動中的選件
-* Target提供體驗片段HTML, AEM提供參考影像
+* 內AEM容編輯器作者個性化內容Experience Fragments及其變體
+* 將AEM經驗片段HTML導出到目&#x200B;標
+* 目標&#x200B;將AEM體驗片段標籤用作活動中的優惠
+* 目標提供體驗片段HTML,AEM提供引用的映像
 
-   ![使用體驗片段圖表進行個人化](assets/personalization-use-case-1/use-case-1-diagram.png)
+   ![使用體驗片段圖實現個性化](assets/personalization-use-case-1/use-case-1-diagram.png)
 
-**若要實作此案例，您必須：**
+**要實施此方案，您需要：**
 
-* [使用Launch和Adobe I/O整合AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
-* [AEM和Adobe Target使用舊版Cloud Services](./implementation.md#integrating-aem-target-options)
+* [使用AEM發射和Adobe I/O整合和Adobe Target](./implementation.md#integrating-aem-target-options)
+* [和AEMAdobe Target使用傳統Cloud Services](./implementation.md#integrating-aem-target-options)
 
-***實作上述整合後，讓您探索 [情節詳細](./personalization-use-case-1.md).***
+***實施上述整合後，讓我們瞭解 [方案詳細資訊](./personalization-use-case-1.md)。***
 
-## 使用可視化體驗撰寫器進行個人化
+## 使用Visual Experience Composer實現個性化
 
-行銷人員可以在其網站上快速變更，而不需變更任何程式碼，即可使用Adobe Target可視化體驗撰寫器(VEC)執行測試。 VEC是WYSIWYG（您看到的是您獲得的）使用者介面，可讓您輕鬆建立和測試網站內容中的個人化體驗和選件。 您可以拖放、切換及修改網頁（或選件）或行動網頁的版面與內容，借此建立Target活動的體驗和選件。
+營銷人員可以在其網站上快速更改test，而無需更改任何代碼以使用Adobe TargetVisual Experience Composer(VEC)運行操作。 VEC是WYSIWYG（您看到的是您獲得的）用戶介面，它使您能夠輕鬆建立和test站點上下文中的個性化體驗和優惠。 您可以通過拖放、交換和修改網頁（或優惠）或移動網頁的佈局和內容來為目標活動建立體驗和優惠。
 
-VEC是Adobe Target的其中一項主要功能。 VEC可讓行銷人員和設計人員使用視覺化介面來建立和變更內容。 無需直接編輯程式碼，便可做出許多設計選擇。 您也可以使用撰寫器中可用的編輯選項來編輯HTML和JavaScript。
+VEC是Adobe Target的主要特徵之一。 VEC允許營銷人員和設計人員使用可視介面建立和更改內容。 無需直接編輯代碼即可做出許多設計選擇。 也可以使用HTML器中提供的編輯選項來編輯JavaScript。
 
-* 內容駐留在AEM中，而內容編輯器會建立和管理網站頁面
-* Target使用AEM托管的網站頁面執行測試和個人化
-* Target提供個人化內容
-* 使用Adobe Target VEC建立新內容
-* 同時套用至AEM托管網站和非AEM托管網站
+* 內容駐留AEM在中，內容編輯器建立和管理網站頁
+* 目標使AEM用托管網站頁運行test和個性化
+* 目標提供個性化內容
+* 使用Adobe TargetVEC建立網路新內容
+* 適用於托AEM管站點和非托AEM管站點
 
-   ![使用可視化體驗撰寫器圖表進行個人化](assets/personalization-use-case-3/use-case-diagram-3.png)
+   ![使用Visual Experience Composer圖實現個性化](assets/personalization-use-case-3/use-case-diagram-3.png)
 
-**若要實作此案例，您必須：**
+**要實施此方案，您需要：**
 
-* [使用Launch和Adobe I/O整合AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
+* [使用AEM發射和Adobe I/O整合和Adobe Target](./implementation.md#integrating-aem-target-options)
 
-***實作上述整合後，可讓您探索 [情節詳細。](./personalization-use-case-3.md)***
+***在實施上述整合後，讓我們 [方案。](./personalization-use-case-3.md)***
 
-## 個人化完整網頁體驗
+## 全網頁體驗的個性化
 
-將Adobe Experience Manager與Adobe Target整合可協助您為網站使用者提供個人化體驗。 此外，它也可協助您更清楚了解哪些版本的網站內容在指定的測試期間最能改善您的轉換。 例如，A/B測試會比較兩個或更多版本的網站內容，以找出最能提升轉換率、銷售額或您識別的其他量度的版本。 行銷人員可在Adobe Target中建立活動，以了解使用者與您網站內容的互動方式，以及其對您網站量度的影響。
+將Adobe Experience Manager與Adobe Target整合，可幫助您為網站用戶提供個性化體驗。 此外，它還有助於您更好地瞭解哪些版本的網站內容在指定的test期內最能改進轉換。 例如，A/Btest會比較網站內容的兩個或兩個以上版本，以查看哪個版本能最有效地提升您所識別的轉換、銷售或其他指標。 營銷人員可以在Adobe Target內建立活動，以瞭解用戶如何與您的站點內容交互以及它如何影響您的站點指標。
 
-* 內容駐留在AEM中，而內容編輯器會建立和管理網站頁面
-* Target使用AEM托管的網站頁面執行測試和個人化
-* Target提供個人化內容
-* 此處未建立新內容
-* 同時套用至AEM和非AEM網站
+* 內容駐留AEM在中，內容編輯器建立和管理網站頁
+* 目標使AEM用托管網站頁運行test和個性化
+* 目標提供個性化內容
+* 此處未建立任何新內容
+* 同時應AEM用於非站AEM點
 
-   ![圖表](assets/personalization-use-case-2/use-case-2-diagram.png)
+   ![圖](assets/personalization-use-case-2/use-case-2-diagram.png)
 
-**若要實作此案例，您必須：**
+**要實施此方案，您需要：**
 
-* [使用Launch和Adobe I/O整合AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
+* [使用AEM發射和Adobe I/O整合和Adobe Target](./implementation.md#integrating-aem-target-options)
 
-***實作上述整合後，可讓您探索 [情節詳細。](./personalization-use-case-2.md)***
+***在實施上述整合後，讓我們 [方案。](./personalization-use-case-2.md)***

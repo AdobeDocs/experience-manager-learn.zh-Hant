@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Forms建立您的第一個OSGi套件組合
-description: 使用Maven和Eclipse建立您的第一個OSGi套件組合
+title: 與AEM Forms建立第一個OSGi捆綁包
+description: 使用Maven和Eclipse構建您的第一個OSGi捆綁包
 version: 6.4,6.5
 feature: Adaptive Forms
 topic: Development
@@ -15,94 +15,94 @@ ht-degree: 1%
 
 ---
 
-# 建立您的第一個OSGi套件組合
+# 建立第一個OSGi捆綁包
 
-OSGi套件是Java™封存檔案，包含Java程式碼、資源，以及說明套件及其相依性的資訊清單。 套件是應用程式的部署單位。 本文適用於想使用AEM Forms 6.4或6.5建立OSGi服務或servlet的開發人員。若要建立您的第一個OSGi套件組合，請遵循下列步驟：
+OSGi捆綁包是Java™存檔檔案，包含Java代碼、資源，以及描述捆綁包及其依賴項的清單。 該捆綁包是應用程式的部署單位。 本文旨在為希望使用AEM Forms6.4或6.5建立OSGi服務或Servlet的開發人員提供幫助。要構建第一個OSGi捆綁包，請執行以下步驟：
 
 
 ## 安裝JDK
 
-安裝支援的JDK版本。 我已使用JDK1.8。請確定您已新增 **JAVA_HOME** ，並指向JDK安裝的根資料夾。
+安裝支援的JDK版本。 我使用了JDK1.8。確保已添加 **JAVA_HOME** 中，並指向JDK安裝的根資料夾。
 將%JAVA_HOME%/bin添加到路徑
 
-![資料來源](assets/java-home.JPG)
+![資料源](assets/java-home.JPG)
 
 >[!NOTE]
-> 請勿使用JDK 15。 AEM不支援此功能。
+> 請勿使用JDK 15。 不支援AEM。
 
-### 測試您的JDK版本
+### TestJDK版本
 
-開啟新的命令提示窗口，然後鍵入： `java -version`. 您應該會回傳 `JAVA_HOME` 變數
+開啟新的命令提示符窗口並鍵入： `java -version`。 應返回由 `JAVA_HOME` 變數
 
-![資料來源](assets/java-version.JPG)
+![資料源](assets/java-version.JPG)
 
 ## 安裝Maven
 
-Maven是主要用於Java專案的建置自動化工具。 請按照以下步驟在本地系統上安裝maven。
+Maven是一個主要用於Java項目的生成自動化工具。 請按照以下步驟在本地系統上安裝maven。
 
 * 建立名為 `maven` 在C驅動器中
-* 下載 [二進位zip封存](https://maven.apache.org/download.cgi)
-* 將zip封存的內容解壓縮至 `c:\maven`
-* 建立環境變數，稱為 `M2_HOME` 值為 `C:\maven\apache-maven-3.6.0`. 就我而言， **mvn** 版本為3.6.0。撰寫本文時，最新的maven版本為3.6.3
-* 新增 `%M2_HOME%\bin` 到
-* 儲存您的變更
-* 開啟新的命令提示字元並輸入 `mvn -version`. 您應會看到 **mvn** 如下方螢幕擷取所示的版本
+* 下載 [二進位zip存檔](https://maven.apache.org/download.cgi)
+* 將ZIP存檔的內容解壓到 `c:\maven`
+* 建立名為 `M2_HOME` 值為 `C:\maven\apache-maven-3.6.0`。 就我而言， **mvn** 版本為3.6.0。在撰寫本文時，最新版本為3.6.3
+* 添加 `%M2_HOME%\bin` 你的路
+* 保存更改
+* 開啟新的命令提示符並鍵入 `mvn -version`。 您應該看到 **mvn** 下面螢幕截圖中所示的版本
 
-![資料來源](assets/mvn-version.JPG)
+![資料源](assets/mvn-version.JPG)
 
 
 ## 安裝Eclipse
 
-安裝最新版本的 [eclipe](https://www.eclipse.org/downloads/)
+安裝最新版本 [日](https://www.eclipse.org/downloads/)
 
-## 建立您的第一個專案
+## 建立第一個項目
 
-原型是Maven專案範本工具包。 原型被定義為原始模式或模型，從中產生所有同類的事物。 我們正嘗試提供系統，提供一致的方式來產生Maven專案，這個名稱就適合了。 原型可協助作者為使用者建立Maven專案範本，並提供使用者參數化版本專案範本的方法。
-若要建立您的第一個Maven專案，請依照下列步驟操作：
+原型是Maven項目的模板工具包。 原型被定義為原始圖案或模型，從中可以製造所有同類的事物。 我們試圖提供一個系統，提供生成Maven項目的一致方法，這個名稱與此相符。 原型幫助作者為用戶建立Maven項目模板，並為用戶提供生成這些項目模板參數化版本的方法。
+要建立第一個主項目，請執行以下步驟：
 
 * 建立名為 `aemformsbundles` 在C驅動器中
-* 開啟命令提示字元並導覽至 `c:\aemformsbundles`
+* 開啟命令提示符並導航到 `c:\aemformsbundles`
 * 在命令提示符下運行以下命令
 
 ```java
 mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=36 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.13
 ```
 
-成功完成時，您應該會在命令視窗中看到組建成功訊息
+成功完成後，您應在命令窗口中看到生成成功消息
 
-## 從Maven專案建立Eclipse專案
+## 從主項目建立eclipse項目
 
-* 將工作目錄變更為 `mysite`
-* 執行 `mvn eclipse:eclipse` 從命令列。 該命令讀取您的pom檔案，並使用正確的元資料建立Eclipse項目，以便Eclipse了解項目類型、關係、類路徑等。
+* 將工作目錄更改為 `mysite`
+* 執行 `mvn eclipse:eclipse` 命令行。 該命令讀取pom檔案，並使用正確的元資料建立Eclipse項目，以便Eclipse瞭解項目類型、關係、類路徑等。
 
-## 將專案匯入eclipse
+## 將項目導入eclipse
 
-Launch **Eclipse**
+啟動 **日蝕**
 
-前往 **檔案 — >導入** 選取 **現有Maven專案** 如下所示
+轉到 **檔案 — >導入** 選擇 **現有Maven項目** 如圖所示
 
-![資料來源](assets/import-mvn-project.JPG)
+![資料源](assets/import-mvn-project.JPG)
 
-按「下一步」
+按一下「下一步」
 
-選取c:\aemformsbundles\mysite by clicking the **瀏覽** 按鈕
+選擇c:\aemformsbundles\mysite by clicking the **瀏覽** 按鈕
 
-![資料來源](assets/mysite-eclipse-project.png)
+![資料源](assets/mysite-eclipse-project.png)
 
 >[!NOTE]
->您可以視需要選取匯入適當的模組。 只有在您打算在專案中建立Java程式碼時，才選取並匯入核心模組。
+>您可以根據需要選擇導入相應的模組。 如果您只打算在項目中建立Java代碼，請僅選擇並導入核心模組。
 
-按一下 **完成** 啟動導入過程
+按一下 **完成** 啟動導入流程
 
-專案已匯入Eclipse，而您會看到 `mysite.xxxx` 資料夾
+項目已導入到Eclipse中，您會看到 `mysite.xxxx` 資料夾
 
-展開 `src/main/java` 在 `mysite.core` 檔案夾。 這是您編寫大部分程式碼的資料夾。
+展開 `src/main/java` 下 `mysite.core` 的子菜單。 這是您正在其中寫入大部分代碼的資料夾。
 
-![資料來源](assets/mysite-core-project.png)
+![資料源](assets/mysite-core-project.png)
 
-## 包含AEMFD用戶端SDK
+## 包括AEMFD客戶端SDK
 
-您必須將AEMFD用戶端sdk納入您的專案中，以利用AEM Forms隨附的各種服務。 請參閱 [AEMFD用戶端SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) 將適當的用戶端SDK納入您的Maven專案。 您必須將AEM FD用戶端SDK包含在 `pom.xml` 核心專案，如下所示。
+您需要將AEMFD客戶端sdk包括在項目中，以利用隨AEM Forms提供的各種服務。 請參考 [AEMFD客戶端SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) 在Maven項目中包含相應的客戶端SDK。 您必須在AEM的「依賴項」部分包含FD客戶端SDK `pom.xml` 如下所示。
 
 ```xml
 <dependency>
@@ -112,13 +112,13 @@ Launch **Eclipse**
 </dependency>
 ```
 
-若要建置專案，請依照下列步驟操作：
+要構建項目，請執行以下步驟：
 
-* 開啟 **命令提示窗口**
+* 開啟 **命令提示符窗口**
 * 瀏覽到 `c:\aemformsbundles\mysite\core`
 * 執行命令 `mvn clean install -PautoInstallBundle`
-上述命令會建置套件並安裝於上執行的AEM伺服器中 `http://localhost:4502`. 此套件也可在以下位置的檔案系統上使用：
-   `C:\AEMFormsBundles\mysite\core\target` 可透過 [Felix Web Console](http://localhost:4502/system/console/bundles)
+上述命令在運行於的伺服器中生成AEM並安裝捆綁包 `http://localhost:4502`。 此捆綁包也可在以下位置的檔案系統上使用：
+   `C:\AEMFormsBundles\mysite\core\target` 可以使用 [Felix Web控制台](http://localhost:4502/system/console/bundles)
 
 ## 後續步驟
 

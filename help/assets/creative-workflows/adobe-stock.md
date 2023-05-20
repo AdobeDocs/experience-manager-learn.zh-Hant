@@ -1,6 +1,6 @@
 ---
-title: 搭配Adobe Stock資產使用AEM Assets
-description: AEM可讓使用者直接從AEM搜尋、預覽、儲存及授權Adobe Stock資產。 組織現在可以將其Adobe Stock企業計畫與AEM Assets整合，以確保授權資產現在可廣泛供其創意和行銷專案使用，同時具備AEM強大的資產管理功能。
+title: 將Adobe Stock資產與AEM Assets
+description: 使用AEM戶能夠直接從中搜索、預覽、保存和許可Adobe Stock資AEM產。 企業現在可以將其Adobe Stock企業計畫與AEM Assets整合，以確保獲得許可的資產現在能夠廣泛用於其創意和營銷項目，並具備強大的資產管理AEM能力。
 feature: Adobe Stock
 version: 6.5
 topic: Content Management
@@ -15,99 +15,99 @@ ht-degree: 3%
 
 ---
 
-# 將Adobe Stock與AEM Assets搭配使用{#using-adobe-stock-assets-with-aem-assets}
+# 將Adobe Stock與AEM Assets{#using-adobe-stock-assets-with-aem-assets}
 
-AEM 6.4.2可讓使用者直接從AEM搜尋、預覽、儲存及授權Adobe Stock資產。 組織現在可以將其Adobe Stock企業計畫與AEM Assets整合，以確保授權資產現在可廣泛供其創意和行銷專案使用，同時具備AEM強大的資產管理功能。
+AEM 6.4.2使用戶能夠直接從中搜索、預覽、保存和許可Adobe Stock資AEM產。 企業現在可以將其Adobe Stock企業計畫與AEM Assets整合，以確保獲得許可的資產現在能夠廣泛用於其創意和營銷項目，並具備強大的資產管理AEM能力。
 
 >[!VIDEO](https://video.tv.adobe.com/v/24678?quality=12&learn=on)
 
 >[!NOTE]
 >
->整合需要 [企業Adobe Stock計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) 和AEM 6.4，至少部署了Service Pack 2。 如需AEM 6.4 Service Pack的詳細資訊，請參閱下列 [發行說明](https://helpx.adobe.com/tw/experience-manager/6-4/release-notes/sp-release-notes.html).
+>整合需要 [企業Adobe Stock計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) 和AEM6.4 ，並且至少部署了Service Pack 2。 有AEM關6.4 Service Pack的詳細資訊，請參閱 [發行說明](https://helpx.adobe.com/tw/experience-manager/6-4/release-notes/sp-release-notes.html)。
 
-Adobe Stock和AEM Assets整合可讓內容作者和行銷人員輕鬆授權及使用stock資產，以用於創意或行銷用途。 您可以使用Omni Search、將位置篩選條件新增為Adobe Stock，或瀏覽AEM Assets主導覽列，然後按一下「搜尋Adobe Stock Coral UI圖示」 ，以執行Stock資產搜尋。
+Adobe Stock和AEM Assets的整合使內容作者和營銷人員能夠輕鬆地許可和使用股票資產，用於創意或營銷目的。 您可以使用Omni Search執行股票資產搜索，方法是將位置篩選器添加為Adobe Stock，或者通過瀏覽AEM Assets主導航並按一下搜索Adobe Stock珊瑚UI表徵圖。
 
 ## 功能
 
-### 搜尋並儲存
+### 搜索和保存
 
-* 執行Adobe Stock資產搜尋，而不需離開AEM工作區。
-* 儲存Adobe Stock資產以供預覽，不需授權資產。
-* 能將Adobe Stock資產授權並儲存至AEM Assets
-* 可在AEM Assets UI中從Adobe Stock搜尋類似資產
-* 在Adobe Stock網站的AEM Assets內，從Stock Search檢視選取的資產
-* 授權資產檔案會標示藍色授權徽章，以方便識別
+* 執行Adobe Stock資產搜索，而不離開AEM工作區。
+* 保存Adobe Stock資產以供預覽，而不授予資產許可。
+* 將Adobe Stock資產許可和保存到AEM Assets
+* 能夠在AEM Assets用戶介面內從Adobe Stock搜索類似資產
+* 在Adobe Stock網站上查看AEM Assets內股票搜索中的選定資產
+* 授權資產檔案用藍色授權標籤標籤，以便輕鬆識別
 
 ### 資產中繼資料
 
-* 授權資產會儲存在AEM Assets中。 資產屬性會在個別的資產中繼資料標籤下包含庫存中繼資料
-* 能將授權參考新增至資產中繼資料
+* 授權資產儲存在AEM Assets。 資產屬性包含單獨的資產元資料頁籤下的庫存元資料
+* 能夠將許可證引用添加到資產元資料
 
-### 資產庫存設定檔
+### 資產庫存配置檔案
 
-* 使用者可以在下方選取Adobe Stock設定檔 *「用戶」>「我的首選項」>「庫存配置」*
-* 可以將強制和選用參考新增至「資產授權」視窗。
-* 根據地區為「資產授權」窗口選擇語言首選項的功能。
+* 用戶可以在下面選擇Adobe Stock配置檔案 *「用戶」>「我的首選項」>「庫存配置」*
+* 可以將必備和可選引用添加到「資產許可」窗口。
+* 能夠根據區域為「資產許可」窗口選擇語言首選項。
 
 ### 篩選
 
-* 使用者可以根據資產類型、方向和檢視類似項目來篩選庫存資產
+* 用戶可以根據「資產類型」、「方向」和「查看相似」篩選庫存資產
 * 資產類型包括照片、插圖、向量、視頻、模板、3D、高級、編輯
 * 方向包括水準、垂直和方形。
-* 檢視類似篩選器需要Adobe Stock檔案號
+* 查看類似篩選器需要Adobe Stock檔案號
 
 ### 存取控制
 
-* 設定Adobe Stock雲端服務設定時，管理員可向特定使用者/群組提供授權Stock資產的權限。
-* 如果特定使用者/群組沒有授權庫存資產的權限， *庫存資產搜尋/資產授權* 功能會停用。
+* 管理員可向某些用戶/組提供權限，以在設定Adobe Stock雲服務配置時許可股票資產。
+* 如果特定用戶/組沒有許可股票資產的權限， *庫存資產搜索/資產許可* 功能將被禁用。
 
-## 使用AEM Assets設定Adobe Stock{#set-up-adobe-stock-with-aem-assets}
+## 建立Adobe Stock和AEM Assets{#set-up-adobe-stock-with-aem-assets}
 
-AEM 6.4.2可讓使用者直接從AEM搜尋、預覽、儲存及授權Adobe Stock資產。 本影片說明如何使用Adobe主控台，透過AEM Assets設定Adobe I/O庫存。
+AEM 6.4.2使用戶能夠直接從中搜索、預覽、保存和許可Adobe Stock資AEM產。 此視頻介紹如何使用Adobe控制台與AEM Assets建立Adobe I/O庫。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25043?quality=12&learn=on)
 
 >[!NOTE]
 >
->針對Adobe Stock雲端服務設定，您必須選取生產環境和授權資產路徑點 `/content/dam`. 「環境」欄位現在已在AEM中移除。
+>對於Adobe Stock雲服務配置，您必須選擇生產環境和許可資產路徑點到 `/content/dam`。 現在，中刪除了環境字AEM段。
 
 >[!NOTE]
 >
->整合需要 [企業Adobe Stock計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) 和AEM 6.4，至少 [Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Rosvant&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aaem%2F6-4&amp;3_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fdc%3Atiasc&amp;orderby.sort=layout&amp;p.offset=0&amp;p.limit=24) 已部署。 如需AEM 6.4 Service Pack的詳細資訊，請參閱下列 [發行說明](https://helpx.adobe.com/tw/experience-manager/6-4/release-notes/sp-release-notes.html). 您還需要管理員權限才能 [Adobe I/O主控台](https://console.adobe.io/), [Adobe Admin Console](https://adminconsole.adobe.com/) 和Adobe Experience Manager來設定整合。
+>整合需要 [企業Adobe Stock計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) 及AEM6.4，且 [Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=。%2Fjcr%3內容%2Fmetadata%2Fdc%3Rasion&amp;2_group.propertyvalues.operation=等於&amp;2_group.propertyvalues.0_values=目標版本%3Aem%2F6-4&amp;3_group.propertyvalues.property=。%2fjcr%3內容%2fmetadata%2fdc%3軟體類型&amp;3_group.propertyvalues.operation=等於&amp;3_group.propertyvalues.0_values=軟體類型%3服務和累積修復&amp;orderby=%40jcr%3內容%2ftle元資料%2fdc%3Atiorder.sort=asc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) 已部署。 有AEM關6.4 Service Pack的詳細資訊，請參閱 [發行說明](https://helpx.adobe.com/tw/experience-manager/6-4/release-notes/sp-release-notes.html)。 您還需要管理員權限才能 [Adobe I/O控制台](https://console.adobe.io/)。 [Adobe Admin Console](https://adminconsole.adobe.com/) 和Adobe Experience Manager組建一體化。
 
 ### 安裝 {#installations}
 
-* 若為AEM 6.4，您必須安裝 [AEM Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3Rosvant&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3Aaem%2F6-4&amp;3_group.propertyvalues.property=。%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderby=%40jcr%3Acontent%2Fdc%3Atiasc&amp;orderby.sort=layout&amp;p.offset=0&amp;p.limit=24) 然後重新安裝cq-dam-stock-integration-content-1.0.4.zip檔案。
-* 請確定您擁有 [Adobe I/O主控台](https://console.adobe.io/), [Adobe Admin Console](https://adminconsole.adobe.com/) 和Adobe Experience Manager來設定整合。
+* 對AEM於6.4，需要安裝 [AEM Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=。%2Fjcr%3內容%2Fmetadata%2Fdc%3Rasion&amp;2_group.propertyvalues.operation=等於&amp;2_group.propertyvalues.0_values=目標版本%3Aem%2F6-4&amp;3_group.propertyvalues.property=。%2fjcr%3內容%2fmetadata%2fdc%3軟體類型&amp;3_group.propertyvalues.operation=等於&amp;3_group.propertyvalues.0_values=軟體類型%3服務和累積修復&amp;orderby=%40jcr%3內容%2ftle元資料%2fdc%3Atiorder.sort=asc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) 然後重新安裝cq-dam-stock-integration-content-1.0.4.zip檔案。
+* 確保您對 [Adobe I/O控制台](https://console.adobe.io/)。 [Adobe Admin Console](https://adminconsole.adobe.com/) 和Adobe Experience Manager組建一體化。
 
-#### 使用Adobe I/O主控台設定Adobe IMS設定 {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
+#### 使用Adobe I/O控制台設定Adobe IMS配置 {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
 
-1. 在下方建立Adobe IMS技術帳戶設定 **工具>安全性**
-2. 選取 *雲端解決方案* as *Adobe Stock* 並建立新憑證或重新使用現有憑證進行設定。
-3. 導覽至Adobe I/O主控台，並建立新的服務帳戶整合 *Adobe Stock*.
-4. 從步驟2上傳憑證至您的Adobe Stock服務帳戶整合。
-5. 選擇所需的Adobe Stock設定檔設定並完成服務整合。
-6. 使用整合詳細資訊來完成Adobe IMS技術帳戶設定
-7. 請確定您可以使用Adobe IMS技術帳戶接收存取權杖。
+1. 在下建立Adobe IMS技術帳戶配置 **「工具」>「安全性」**
+2. 選擇 *雲解決方案* 如 *Adobe Stock* 建立新證書或重新使用現有證書進行配置。
+3. 導航到Adobe I/O控制台，然後為建立新的服務帳戶整合 *Adobe Stock*。
+4. 將證書從步驟2上載到您的Adobe Stock服務帳戶整合。
+5. 選擇所需的Adobe Stock配置檔案配置並完成服務整合。
+6. 使用整合詳細資訊完成Adobe IMS技術帳戶配置
+7. 確保可以使用Adobe IMS技術帳戶接收訪問令牌。
 
 ![Adobe IMS 技術帳戶](assets/screen_shot_2018-10-22at12219pm.png)
 
 #### 設定Adobe StockCloud Services {#set-up-adobe-stock-cloud-services}
 
-1. 為Adobe Stock建立新的雲端服務設定，位於 **工具>Cloud Services。**
-2. 選取 *Adobe IMS設定* 在上節中為 *Adobe Stock Cloud* 配置
+1. 為Adobe Stock建立新的雲服務配置 **工具>Cloud Services。**
+2. 選擇 *Adobe IMS配置* 建立的 *Adobe Stock雲* 配置
 
-3. 請務必選取 **環境** 作為PROD。
-4. **授權資產路徑** 可指向下的任何目錄 `/content/dam`.
-5. 選擇您的地區並完成設定。
-6. 您也可以將使用者/群組新增至您的Adobe Stock雲端服務，以啟用特定使用者或群組的存取權。
+3. 確保您選擇 **環境** 作為PROD。
+4. **授權資產路徑** 可以指向位於 `/content/dam`。
+5. 選擇區域設定並完成設定。
+6. 您還可以將用戶/組添加到Adobe Stock雲服務，以啟用特定用戶或組的訪問。
 
-![Adobe資產庫存設定](assets/screen_shot_2018-10-22at12425pm.png)
+![Adobe資產庫存配置](assets/screen_shot_2018-10-22at12425pm.png)
 
 ### 其他資源
 
-* [企業股票計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
-* [AEM 6.4 Service Pack 2發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
-* [整合AEM和Adobe Stock](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html)
-* [Adobe I/O主控台整合API](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
-* [Adobe Stock API檔案](https://www.adobe.io/apis/creativecloud/stock/docs.html)
+* [企業庫存計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
+* [《 AEM 6.4 Service Pack 2發行說明》](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+* [整合AEM與Adobe Stock](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html)
+* [Adobe I/O控制台整合API](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
+* [Adobe StockAPI文檔](https://www.adobe.io/apis/creativecloud/stock/docs.html)

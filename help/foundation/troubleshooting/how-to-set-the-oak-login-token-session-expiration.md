@@ -1,6 +1,6 @@
 ---
-title: 如何設定Oak登入代號工作階段過期
-description: 設定Oak Origin代號工作階段過期逾時的步驟
+title: 如何設定Oak登錄令牌會話過期
+description: 設定Oak源令牌會話過期超時的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何設定Oak登入代號工作階段過期
+# 如何設定Oak登錄令牌會話過期
 
-*此影片會逐步說明設定Oak登入代號工作階段過期的步驟。*
+*此視頻將介紹設定Oak登錄令牌會話過期的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335468?quality=12&learn=on)

@@ -1,5 +1,5 @@
 ---
-title: 將Adobe Experience Manager Forms整合為Cloud Service與Document Cloud
+title: 將Adobe Experience Manager Forms作為Cloud Service與Document Cloud
 description: 使用PDFREST API建立Document Cloud
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -19,6 +19,6 @@ ht-degree: 2%
 
 # 簡介
 
-整合Adobe Experience Manager Formsas a Cloud Service和Document CloudAPI的使用案例簡介。
+整合Adobe Experience Manager Formsas a Cloud Service和Document CloudAPI的使用案例介紹。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333241?quality=12&learn=on)

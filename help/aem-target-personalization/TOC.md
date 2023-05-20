@@ -17,10 +17,10 @@ ht-degree: 46%
 # AEM 和 Target 快速入門 {#aem-target-tutorial}
 
 + [概觀](./overview.md)
-+ [使用AEM體驗片段進行個人化](./personalization-use-case-1.md)
-+ [使用可視化體驗撰寫器進行個人化](./personalization-use-case-3.md)
-+ [個人化完整網頁體驗](./personalization-use-case-2.md)
++ [使用體驗AEM片段個性化](./personalization-use-case-1.md)
++ [使用Visual Experience Composer實現個性化](./personalization-use-case-3.md)
++ [全網頁體驗的個性化](./personalization-use-case-2.md)
 + 實施 {#aem-target-implementation}
    + [簡介](./implementation.md)
-   + [AEM和Adobe Target，使用Launch和Adobe I/O](./using-launch-adobe-io.md)
-   + [AEM和Adobe Target使用舊版Cloud Services](./using-aem-cloud-services.md)
+   + [和AEMAdobe Target使用發射和Adobe I/O](./using-launch-adobe-io.md)
+   + [和AEMAdobe Target使用傳統Cloud Services](./using-aem-cloud-services.md)

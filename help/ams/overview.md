@@ -1,21 +1,22 @@
 ---
-title: Adobe Experience Manager Managed Services教學課程
-description: Adobe Experience Manager(AEM)Managed Services的教學課程系列
+title: Adobe Experience ManagerManaged Services教程
+description: Adobe Experience Manager(AEMManaged Services)
 sub-product: Adobe Managed Services
-source-git-commit: 3bc3a0f38d97c9dbe4428686a46d281d7567f627
+exl-id: 4c893ed2-fe0c-4f92-b5fc-c1dc38dd95d4
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '38'
-ht-degree: 18%
+ht-degree: 13%
 
 ---
 
-# AEM Managed Services教學課程 {#overview}
+# Managed Services教程 {#overview}
 
-AEM Managed Services為……
+AEMManaged Services...
 
 <div id="whats-new-section">
 
-## 新功能
+## 新增功能
 
 </div>
 
@@ -31,4 +32,4 @@ AEM Managed Services為……
 
 ## 其他資源
 
-* [Adobe Experience Manager 6.5檔案](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
+* [Adobe Experience Manager6.5文檔](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)

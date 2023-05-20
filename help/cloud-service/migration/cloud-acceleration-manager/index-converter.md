@@ -1,6 +1,6 @@
 ---
 title: 索引轉換器
-description: 了解Index Converter如何自動將現有AEM索引定義轉換為與AEMas a Cloud Service相容。
+description: 瞭解索引轉換器如何自動將現有AEM索引定義轉換為AEMas a Cloud Service相容。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -18,6 +18,6 @@ ht-degree: 9%
 
 # 索引轉換器
 
-了解Index Converter如何自動將現有AEM索引定義轉換為與AEMas a Cloud Service相容。
+瞭解索引轉換器如何自動將現有AEM索引定義轉換為AEMas a Cloud Service相容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336696?quality=12&learn=on)

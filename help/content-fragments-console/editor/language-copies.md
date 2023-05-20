@@ -1,6 +1,6 @@
 ---
 title: 語言副本 — 內容片段編輯器
-description: 了解AEM內容片段UI如何使用快速篩選功能輕鬆找到內容片段。 透過此功能，您可輕鬆快速地尋找特定內容片段。
+description: 瞭解內AEM容片段UI如何使用快速篩選輕鬆查找內容片段。 利用此功能，查找特定內容片段變得快速而輕鬆。
 version: Cloud Service
 role: User
 level: Beginner
@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # 語言副本
 
-了解AEM內容片段編輯器如何使用快速篩選輕鬆找到內容片段。 透過此功能，您可輕鬆快速地尋找特定內容片段。
+瞭解內AEM容片段編輯器如何使用快速篩選輕鬆查找內容片段。 利用此功能，查找特定內容片段變得快速而輕鬆。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419311/?learn=on)

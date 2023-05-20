@@ -1,6 +1,6 @@
 ---
-title: 使用Dynamic Media Smart Crop for視訊
-description: Dynamic Media Smart Crop for video使用Adobe Sensei來智慧化地追蹤視訊的興趣點，確保視訊在所有螢幕大小上呈現最佳外觀。
+title: 使用Dynamic MediaSmart Crop進行視頻
+description: Dynamic MediaSmart Crop for video使用Adobe Sensei智慧跟蹤視頻中的關注點，確保視頻在所有螢幕尺寸上都盡其所能。
 feature: Smart Crop, Video Profiles, Viewer Presets
 version: Cloud Service
 kt: 5977
@@ -16,12 +16,12 @@ ht-degree: 0%
 
 ---
 
-# 使用Dynamic Media Smart Crop for視訊 {#using-smart-crop-video}
+# 使用Dynamic MediaSmart Crop進行視頻 {#using-smart-crop-video}
 
-Dynamic Media Smart Crop for video使用Adobe Sensei來智慧化地追蹤視訊的興趣點，確保視訊在所有螢幕大小上呈現最佳外觀。
+Dynamic MediaSmart Crop for video使用Adobe Sensei智慧跟蹤視頻中的關注點，確保視頻在所有螢幕尺寸上都盡其所能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37958?quality=12&learn=on)
 
 >[!NOTE]
 >
->上述影片假設您的AEM服務正在Dynamic Media S7模式中執行。 [若需使用Dynamic Media設定AEM的相關指示，請參閱這裡。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)
+>上述視頻假定您AEM的服務在Dynamic MediaS7模式下運行。 [有關與Dynamic MediaAEM建立關係的說明，請參閱。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)

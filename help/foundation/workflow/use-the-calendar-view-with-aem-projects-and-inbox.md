@@ -1,7 +1,7 @@
 ---
-title: 使用日曆檢視搭配AEM專案和收件匣
+title: 將日曆視圖與項目AEM和收件箱一起使用
 seo-title: Use Calendar View with AEM Projects and Inbox
-description: AEM日曆檢視會在日曆檢視中追蹤專案和任務，以更輕鬆進行專案管理和排程。 透過「日曆」檢視，使用者可全面掌握目前進行中、已規劃、即將到期及過期的專案和工作。
+description: 日AEM歷視圖跟蹤日曆視圖中的項目和任務，以便更輕鬆地進行項目管理和計畫。 使用「日曆」視圖，用戶可以全面查看當前正在進行、計畫、即將到期和過期的項目和任務。
 seo-description: AEM's Calendar View tracks projects and tasks in a calendar view for easier project management and scheduling. With Calendar view, user would have an overall visibility over projects and tasks that are currently in progress, planned, due soon and past due.
 version: 6.4, 6.5
 feature: Workflow, Projects
@@ -22,16 +22,16 @@ ht-degree: 0%
 ---
 
 
-# 使用日曆檢視搭配AEM專案和收件匣
+# 將日曆視圖與項目AEM和收件箱一起使用
 
-AEM日曆檢視會在日曆檢視中追蹤專案和任務，以更輕鬆進行專案管理和排程。 透過「日曆」檢視，使用者可全面掌握目前進行中、已規劃、即將到期及過期的專案和工作。
+日AEM歷視圖跟蹤日曆視圖中的項目和任務，以便更輕鬆地進行項目管理和計畫。 使用「日曆」視圖，用戶可以全面查看當前正在進行、計畫、即將到期和過期的項目和任務。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16804?quality=12&learn=on)
 
-日曆檢視可協助您透過下列功能，更妥善地管理專案和工作：
+日曆視圖通過以下功能幫助更好地管理項目和任務：
 
-* 使用者可以查看指派給他的專案清單，並可讓您從日曆檢視導覽至專案。 管理員可以查看所有專案。
-* 可自訂的日期範圍功能，可監控特定時間範圍內專案的進度。
-* 使用者可將專案或任務標幟為已完成、延遲或準時。
-* 使用者可在日曆檢視中新增說明至專案。
-* 使用者可將優先順序層級新增至專案和工作。
+* 用戶可以查看分配給他的項目清單，並允許您從日曆視圖導航到項目。 管理員可以查看所有項目。
+* 可自定義的日期範圍功能，可在特定時間範圍內監視項目進度。
+* 用戶可以將項目或任務標籤為完成、延遲或按時完成。
+* 用戶可以在日曆視圖中向項目添加說明。
+* 用戶可以將優先順序添加到項目和任務。

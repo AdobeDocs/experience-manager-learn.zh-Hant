@@ -1,6 +1,6 @@
 ---
-title: 使用brand portal設定資產來源補充。
-description: 使用Brand Portal設定資產來源補充的步驟
+title: 使用品牌門戶配置資產來源補充。
+description: 使用Brand Portal配置資產來源補充的步驟
 role: Developer
 level: Beginner
 version: Cloud Service
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 使用Brand Portal設定資產來源
+# 配置資產來源補充Brand Portal
 
-*此影片會逐步說明如何使用Brand Portal設定資產來源補充。*
+*此視頻介紹了與Brand Portal一起配置資產來源的過程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335451?quality=12&learn=on)

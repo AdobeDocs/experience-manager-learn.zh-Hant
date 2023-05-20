@@ -1,6 +1,6 @@
 ---
-title: 安裝所需的最適化表單react程式庫
-description: 將所需的相依性新增至您的react專案
+title: 安裝所需的自適應表單反應庫
+description: 將所需的依賴項添加到您的反應項目
 feature: Adaptive Forms
 version: 6.5
 kt: 13285
@@ -15,14 +15,14 @@ ht-degree: 1%
 ---
 
 
-# 安裝所需的相依性
+# 安裝所需的依賴項
 
-若要開始在react專案中使用無頭式最適化表單，請在react專案中安裝下列相依性
+要開始在反應項目中使用無頭自適應表單，請在反應項目中安裝以下依賴項
 
-* @aemforms/af-react-components
-* @aemforms/af-react-renderer
+* @aemforms/af反應元件
+* @aemforms/af react-renderer
 
-更新package.json以包含下列相依性。 撰寫時0.22.41為最新版本
+更新package.json以包含以下依賴關係。 寫0.22.41時是當前版本
 
 ```json
 "@aemforms/af-react-components": "^0.22.41",
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 ## 設定代理
 
-跨原始資源共用(CORS)是一種安全機制，可限制網頁瀏覽器向應用程式托管網域以外的不同網域提出請求。 當您嘗試從托管於不同網域的API擷取資料時，可能會發生CORS錯誤。 透過設定代理，您可以略過CORS限制，並從React應用程式向API提出要求。 我已在src資料夾中名為setUpProxy.js的檔案中使用下列程式碼。 **請確定您變更目標以指向您的發佈例項。**
+跨源資源共用(CORS)是一種安全機制，它限制Web瀏覽器向應用程式所托管的域以外的域發出請求。 當您嘗試從承載在不同域上的API中獲取資料時，可能會出現CORS錯誤。 通過設定代理，您可以繞過CORS限制，從React應用程式向API發出請求。 我在src資料夾中名為setUpProxy.js的檔案中使用了以下代碼。 **確保更改目標以指向發佈實例。**
 
 ```
 const { createProxyMiddleware } = require('http-proxy-middleware');
@@ -51,8 +51,8 @@ module.exports = function(app) {
 };
 ```
 
-您也需要安裝並新增 **http-proxy-middleware** 模組。
+您還需要安裝和添加 **http代理中間件** 模組。
 
 ## 後續步驟
 
-[擷取要內嵌的表單](./fetch-the-form.md)
+[提取要嵌入的表單](./fetch-the-form.md)

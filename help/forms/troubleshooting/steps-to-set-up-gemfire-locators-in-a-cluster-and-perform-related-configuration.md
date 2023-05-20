@@ -1,6 +1,6 @@
 ---
 title: 在群集中設定gemfire定位器並執行相關配置的步驟
-description: 配置群集中的gemfire定位器
+description: 在群集中配置gemfire定位器
 type: Troubleshooting
 role: Admin
 level: Experienced
@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # 在群集中設定gemfire定位器並執行相關配置的步驟
 
-*此視頻將逐步介紹在群集中設定gemfire定位器並執行相關配置的步驟。*
+*此視頻將介紹在群集中設定gemfire定位器並執行相關配置的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335544?quality=12&learn=on)

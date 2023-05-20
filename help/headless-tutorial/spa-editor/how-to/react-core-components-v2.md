@@ -1,6 +1,6 @@
 ---
-title: 如何使用AEM React Editable Components v2
-description: 了解如何使用AEM React Editable Components v2為React應用程式提供強大功能。
+title: 如何使用AEMReact Editable Components v2
+description: 瞭解如何使AEM用React Editable Components v2為React應用程式提供電源。
 version: Cloud Service
 topic: Headless
 feature: SPA Editor
@@ -16,31 +16,31 @@ ht-degree: 1%
 
 ---
 
-# 如何使用AEM React Editable Components v2
+# 如何使用AEMReact Editable Components v2
 
-AEM提供 [AEM React可編輯元件v2](https://www.npmjs.com/package/@adobe/aem-react-editable-components)，此元件為以Node.js為基礎的SDK，可建立React元件，支援使用AEM SPA編輯器進行內容內部元件編輯。
+AEM [反AEM應可編輯元件v2](https://www.npmjs.com/package/@adobe/aem-react-editable-components)，一個基於Node.js的SDK，允許建立React元件，支援使用編輯器進行上下文元件編AEMSPA輯。
 
 + [npm模組](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-+ [Github專案](https://github.com/adobe/aem-react-editable-components)
-+ [Adobe檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html)
++ [吉圖布項目](https://github.com/adobe/aem-react-editable-components)
++ [Adobe文檔](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html)
 
 
-如需AEM React Editable Components v2的更多詳細資訊和程式碼範例，請檢閱技術檔案：
+有關React Editable Components v2的詳細信AEM息和代碼示例，請查看技術文檔：
 
-+ [與AEM檔案整合](https://github.com/adobe/aem-react-editable-components/tree/master/src/core)
-+ [可編輯的元件檔案](https://github.com/adobe/aem-react-editable-components/tree/master/src/components)
-+ [Helpers文檔](https://github.com/adobe/aem-react-editable-components/tree/master/src/api)
++ [與文檔集AEM成](https://github.com/adobe/aem-react-editable-components/tree/master/src/core)
++ [可編輯的元件文檔](https://github.com/adobe/aem-react-editable-components/tree/master/src/components)
++ [幫助程式文檔](https://github.com/adobe/aem-react-editable-components/tree/master/src/api)
 
-## AEM頁面
+## AEM頁
 
-AEM React可編輯的元件可與SPA Editor或Remote SPA React應用程式搭配使用。 填入可編輯React元件的內容必須透過延伸 [SPA頁面元件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html). AEM元件（對應至可編輯的React元件）必須實作AEM [元件導出器框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)  — 例如 [AEM核心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
+React Editable ComponentsAEM可與Editor或Remote SPAReact Apps一起使用。 填充可編輯的React元件的內容必須通過擴展AEM了 [頁SPA面元件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html)。 映AEM射到可編輯React元件的元件必須實AEM施 [元件導出器框架](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)  — 例如 [核AEM心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 
 ## 相依性
 
-確認React應用程式在Node.js 14+上執行。
+確保React應用在Node.js 14+上運行。
 
-React應用程式使用AEM React Editable Components v2的最小相依性集為： `@adobe/aem-react-editable-components`, `@adobe/aem-spa-component-mapping`，和  `@adobe/aem-spa-page-model-manager`.
+React應用使用React Editable Components v2AEM的最小依賴關係集為： `@adobe/aem-react-editable-components`。 `@adobe/aem-spa-component-mapping`,  `@adobe/aem-spa-page-model-manager`。
 
 
 + `package.json`
@@ -60,16 +60,16 @@ React應用程式使用AEM React Editable Components v2的最小相依性集為�
 
 >[!WARNING]
 >
-> [AEM React Core WCM Components Base](https://github.com/adobe/aem-react-core-wcm-components-base) 和 [AEM React Core WCM Components SPA](https://github.com/adobe/aem-react-core-wcm-components-spa) 與AEM React Editable Components v2不相容。
+> [反AEM應核心WCM元件基](https://github.com/adobe/aem-react-core-wcm-components-base) 和 [反AEM應核心WCM組SPA件](https://github.com/adobe/aem-react-core-wcm-components-spa) 與React Editable Components v2AEM不相容。
 
-## SPA Editor
+## 編SPA輯器
 
-將AEM React可編輯元件與SPA編輯器型React應用程式搭配使用時，AEM `ModelManager` SDK，如同SDK:
+將React Editable Components與AEM基於編輯器的React SPAApp一起使用時，AEM `ModelManager` SDK，作為SDK:
 
-1. 從AEM擷取內容
-1. 將AEM內容填入「反應可食用」元件
+1. 從中檢索內AEM容
+1. 使用內容填充反應可食AEM用元件
 
-將React應用程式與初始化的ModelManager包裝，然後呈現React應用程式。 React應用程式應包含一個例項 `<Page>` 從 `@adobe/aem-react-editable-components`. 此 `<Page>` 元件具有邏輯，可根據 `.model.json` 由AEM提供。
+將React應用程式套件裝為已初始化的ModelManager，並呈現React應用程式。 React應用應包含 `<Page>` 從導出的元件 `@adobe/aem-react-editable-components`。 的 `<Page>` 元件具有邏輯，可基於 `.model.json` 由提供AEM。
 
 + `src/index.js`
 
@@ -97,11 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-此 `<Page>` 會以AEM頁面的表示方式，透過 `pageModel` 由提供 `ModelManager`. 此 `<Page>` 元件動態為 `pageModel` 通過匹配 `resourceType` 使用React元件，該元件通過 `MapTo(..)`.
+的 `<Page>` 作為頁面AEM的表示形式傳遞為JSON，通過 `pageModel` 由 `ModelManager`。 的 `<Page>` 元件動態建立對象的反應元件 `pageModel` 通過匹配 `resourceType` 與通過註冊到資源類型的Reacte元件 `MapTo(..)`。
 
 ## 可編輯的元件
 
-此 `<Page>` 會透過，以JSON的形式傳遞AEM頁面的表示 `ModelManager`. 此 `<Page>` 元件會比對JS物件的，以動態方式為JSON中的每個物件建立React元件 `resourceType` 值，此元件會透過元件的 `MapTo(..)` 調用。 例如，以下項目將用來實例化例項
+的 `<Page>` 將頁AEM的表示形式作為JSON傳遞 `ModelManager`。 的 `<Page>` 然後，通過匹配JS對象的 `resourceType` 值與通過元件的 `MapTo(..)` 調用。 例如，以下內容將用於實例化實例
 
 + `HTTP GET /content/.../home.model.json`
 
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ...
 ```
 
-AEM提供的上述JSON可用來動態實例化和填入可編輯的React元件。
+提供的上述JSON可AEM用於動態實例化和填充可編輯的React元件。
 
 ```javascript
 import React from "react";
@@ -170,12 +170,12 @@ const EditableExample = (props) => {
 export default MapTo("wknd-examples/components/example")(EditableExample);
 ```
 
-## 內嵌元件
+## 嵌入元件
 
-可編輯的元件可以重複使用並嵌入到彼此中。 將一個可編輯的元件嵌入另一個元件時，有兩項主要考量：
+可編輯的元件可以重複使用並相互嵌入。 將一個可編輯元件嵌入另一個元件時，需要考慮以下兩個關鍵因素：
 
-1. 內嵌元件的AEM JSON內容必須包含內容，才能符合內嵌元件。 若要這麼做，請為AEM元件建立對話方塊，以收集必要的資料。
-1. React元件的「不可編輯」例項必須內嵌，而非包住「可編輯」例項的 `<EditableComponent>`. 原因在於，如果內嵌元件具有 `<EditableComponent>` 包裝函式，SPA編輯器會嘗試使用編輯chrome（藍色暫留方塊）來包裝內部元件，而非使用外部內嵌元件。
+1. 嵌入元件的AEMJSON內容必須包含滿足嵌入元件的內容。 為此，請為收集所需資料AEM的元件建立對話框。
+1. 必須嵌入React元件的「不可編輯」實例，而不是包含「可編輯」實例的 `<EditableComponent>`。 原因是，如果嵌入的元件 `<EditableComponent>` 包裝器，SPA編輯器嘗試用編輯chrome（藍色懸停框）而不是外部嵌入元件來為內部元件著裝。
 
 + `HTTP GET /content/.../home.model.json`
 
@@ -192,7 +192,7 @@ export default MapTo("wknd-examples/components/example")(EditableExample);
 ...
 ```
 
-AEM提供的上述JSON可用來動態具現化和填入可編輯的React元件，此元件內嵌另一個React元件。
+提供的上述JSON可AEM用於動態實例化和填充可編輯的React元件，該元件嵌入另一個React元件。
 
 
 ```javascript

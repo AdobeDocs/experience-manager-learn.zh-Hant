@@ -1,6 +1,6 @@
 ---
 title: 建立Servlet
-description: 建立Servlet以處理儲存表單資料的POST請求
+description: 建立Servlet以處理保存表單資料的POST請求
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -19,9 +19,9 @@ ht-degree: 2%
 
 # 建立Servlet
 
-下一步是建立Servlet，呼叫自訂OSGi服務的適當方法。 Servlet可存取最適化表單資料、檔案附件資訊。 Servlet會傳回唯一的應用程式ID，可用來擷取部分完成的最適化表單。
+下一步是建立一個Servlet，它調用我們自定義OSGi服務的適當方法。 Servlet具有對自適應表單資料、檔案附件資訊的訪問權限。 Servlet返回唯一的應用程式ID，該應用程式ID可用於檢索部分完成的自適應表單。
 
-當使用者按一下適用性表單上的「儲存並退出」按鈕時，就會叫用此Servlet
+當用戶按一下自適應窗體上的「保存並退出」按鈕時，將調用此servlet
 
 ```java
 package com.techmarketing.core.servlets;
@@ -81,4 +81,4 @@ public class StoreDataInDBWithAttachmentsInfo extends SlingAllMethodsServlet {
 
 ## 後續步驟
 
-[使用儲存的表單資料轉譯表單](./retrieve-saved-form.md)
+[使用已保存的表單資料呈現表單](./retrieve-saved-form.md)

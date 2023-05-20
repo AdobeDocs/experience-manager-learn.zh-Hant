@@ -1,6 +1,6 @@
 ---
 title: 處理HTML5表單提交
-description: 建立HTML5表單提交處理常式
+description: 建立HTML5表單提交處理程式
 feature: Mobile Forms
 topics: development
 audience: developer
@@ -23,13 +23,13 @@ ht-degree: 1%
 
 # 處理HTML5表單提交
 
-HTML5表單可提交至AEM中托管的servlet。 提交的資料可在servlet中作為輸入流訪問。 若要提交HTML5表單，您需使用AEM Forms Designer在表單範本上新增「HTTP提交按鈕」
+HTML5表單可提交到中托管的ServletAEM。 提交的資料可以作為輸入流在Servlet中訪問。 要提交HTML5表單，您需要使用AEM Forms設計器在表單模板中添加「HTTP提交按鈕」
 
-## 建立提交處理常式
+## 建立提交處理程式
 
-可以建立簡單的servlet來處理HTML5表單提交。 然後，可使用下列程式碼擷取提交的資料。 此 [servlet](assets/html5-submit-handler.zip) 供您在本教學課程中使用。 請安裝 [servlet](assets/html5-submit-handler.zip) 使用 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+可以建立一個簡單的servlet來處理HTML5表單提交。 然後，可以使用以下代碼提取提交的資料。 此 [servlet](assets/html5-submit-handler.zip) 將作為本教程的一部分提供給您。 請安裝 [servlet](assets/html5-submit-handler.zip) 使用 [軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
 
-第9行的代碼可用於調用J2EE進程。 請確定您已設定 [AdobeLiveCycle用戶端SDK設定](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) 如果要使用代碼調用J2EE進程。
+第9行的代碼可用於調用J2EE進程。 請確保已配置 [AdobeLiveCycle客戶端SDK配置](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) 如果要使用代碼調用J2EE進程。
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();
@@ -61,27 +61,27 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 ## 配置HTML5表單的提交URL
 
-![submit-url](assets/submit-url.PNG)
+![提交url](assets/submit-url.PNG)
 
-* 點選xdp並按一下 _屬性_->_進階_
-* 複製http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html並貼到「提交URL」文字欄位中
-* 按一下 _SaveAndClose_ 按鈕。
+* 點擊xdp並按一下 _屬性_->_高級_
+* 複製http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html並將其貼上到「提交URL」文本欄位
+* 按一下 _保存並關閉_ 按鈕
 
-### 在排除路徑中新增登入項目
+### 在排除路徑中添加條目
 
-* 導覽至 [configMgr](http://localhost:4502/system/console/configMgr).
-* 搜尋 _AdobeGranite CSRF篩選器_
-* 在「排除路徑」區段中新增下列項目
+* 導航到 [configMgr](http://localhost:4502/system/console/configMgr)。
+* 搜索 _Adobe花崗岩CSRF濾池_
+* 在「排除的路徑」部分添加以下條目
 * _/content/AemFormsSamples/handlehml5formsubmission_
-* 儲存您的變更
+* 保存更改
 
-### 測試表單
+### Test窗體
 
-* 點選xdp範本。
+* 點擊xdp模板。
 * 按一下 _預覽_->預覽為HTML
 * 在表單中輸入一些資料，然後按一下提交
-* 您應該會看到已提交的資料寫入伺服器的stdout.log檔案中
+* 您應看到已提交的資料寫入伺服器的stdout.log檔案
 
 ### 其他閱讀
 
-此 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) 建議您從HTML5表單提交產生PDF。
+此 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) 還建議從HTML5表單提交生成PDF。

@@ -1,6 +1,6 @@
 ---
-title: 使用Azure儲存的資料預填適用性表單
-description: 了解如何使用AEM Forms的預填服務，從Azure Blob儲存體填入最適化表單。
+title: 使用Azure儲存中的資料預填自適應表單
+description: 瞭解如何使用AEM表單的預填充服務從Azure Blob儲存中填充自適應表單。
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 使用Azure儲存空間中的資料預填適用性表單
+# 使用Azure儲存中的資料預填自適應表單
 
-了解如何使用AEM Forms的預填服務，從Azure Blob儲存體填入最適化表單。
+瞭解如何使用AEM表單的預填充服務從Azure Blob儲存中填充自適應表單。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335714?quality=12&learn=on)

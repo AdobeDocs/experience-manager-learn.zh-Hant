@@ -1,6 +1,6 @@
 ---
-title: 建立最適化表單範本
-description: 最適化表單範本定義最適化表單的結構和初始內容。
+title: 建立自適應表單模板
+description: 自適應表單模板定義自適應表單的結構和初始內容。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 建立最適化表單範本
+# 建立自適應表單模板
 
-適用性表單範本是專用的AEM頁面範本，具有用於建立適用性表單的特定屬性和內容結構。 範本已預先設定配置、樣式和基本初始內容結構。 每個最適化表單都以範本為基礎。
+自適應表單模板是專AEM門的頁面模板，具有某些用於建立自適應表單的屬性和內容結構。 模板具有預配置的佈局、樣式和基本的初始內容結構。 每個自適應表單都基於模板。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332223?quality=12&learn=on)

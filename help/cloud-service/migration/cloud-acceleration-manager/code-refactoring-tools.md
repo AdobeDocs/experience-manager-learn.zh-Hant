@@ -1,6 +1,6 @@
 ---
 title: 程式碼重構工具
-description: 了解AEM程式碼重構工具如何協助將現有AEM專案的轉換自動化，使其as a Cloud Service相容。
+description: 瞭解AEM代碼重構工具如何幫助自動將現有項AEM目轉換為as a Cloud ServiceAEM相容。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -18,6 +18,6 @@ ht-degree: 12%
 
 # 程式碼重構工具
 
-了解AEM程式碼重構工具如何協助將現有AEM專案的轉換自動化，使其as a Cloud Service相容。
+瞭解AEM代碼重構工具如何幫助自動將現有項AEM目轉換為as a Cloud ServiceAEM相容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336693?quality=12&learn=on)

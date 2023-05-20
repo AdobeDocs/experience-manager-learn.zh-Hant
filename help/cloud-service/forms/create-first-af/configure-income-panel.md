@@ -1,6 +1,6 @@
 ---
 title: 配置收入面板
-description: 向收入面板添加表元件。
+description: 將表元件添加到收入面板。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 配置收入面板
 
-在收入面板中添加表部分以捕獲申請人的收入來源。
+將表部分添加到收入小組，以獲取申請人的收入來源。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332233?quality=12&learn=on)

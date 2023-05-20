@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 9839
-source-git-commit: cfbc9078abf790034ec485dd3a5efbfcb9723eaa
+exl-id: de900e83-19aa-4404-a792-af2c6a58eeef
+source-git-commit: 3d182fb9b9002f9eb71d1e276ca77edd3277cdad
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
@@ -21,4 +22,3 @@ ht-degree: 0%
 以下視頻將引導您完成建立雲服務配置以與MicrosoftDynamics連接的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340758?quality=12&learn=on)
-

@@ -1,6 +1,6 @@
 ---
-title: 非資產內容參考 — 內容片段編輯器
-description: 了解「內容片段內容」欄位如何支援參考各種類型的AEM內容，例如體驗片段和頁面。
+title: 非資產內容引用 — 內容片段編輯器
+description: 瞭解「內容片段內容」欄位如何支援引用AEM各種類型的內容，如「體驗片段」和「頁面」。
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# 非資產內容參考
+# 非資產內容引用
 
-了解「內容片段內容」欄位如何支援參考各種類型的AEM內容，例如體驗片段和頁面。
+瞭解「內容片段內容」欄位如何支援引用AEM各種類型的內容，如「體驗片段」和「頁面」。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419313/?learn=on)

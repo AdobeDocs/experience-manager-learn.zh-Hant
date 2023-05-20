@@ -1,6 +1,6 @@
 ---
-title: 建立自訂流程步驟
-description: 使用Document Cloud將Word、Excel附件轉換為PDF的自訂處理步驟。
+title: 建立自定義流程步驟
+description: 使用PDF將Word、Excel附件轉換為Document Cloud的自定義流程步驟。
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -17,11 +17,10 @@ ht-degree: 0%
 
 ---
 
-# 自訂處理步驟
+# 自定義流程步驟
 
-以下是自訂處理步驟的完整程式碼，該程式碼會以轉換的pdf來轉換和取代原生檔案。
-此自定義步驟將搜索資料夾名稱下的所有附件，該資料夾名稱作為工作流中的進程參數提供。
-此自訂程式步驟使用自訂DocumentCloudSDKService的方法來建立PDF。
+以下是自定義流程步驟的完整代碼，該代碼將轉換本機檔案並用轉換的pdf檔案替換。此自定義步驟將搜索作為工作流進程參數提供的資料夾名稱下的所有附件。
+此自定義進程步驟使用自定義DocumentCloudSDKService的方法建立PDF。
 
 
 ```java

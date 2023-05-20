@@ -1,6 +1,6 @@
 ---
-title: 為AEM Forms OSGi例項啟用SSL的步驟
-description: 在AEM Forms OSGI上設定SSL以透過HTTPS存取AEM
+title: 為AEM FormsOSGi實例啟用SSL的步驟
+description: 在AEM FormsOSGI上配置SSL以通過HTTPSAEM訪問
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 為AEM Forms OSGi例項啟用SSL的步驟
+# 為AEM FormsOSGi實例啟用SSL的步驟
 
-*此影片會逐步說明為AEM Forms OSGi執行個體啟用SSL的步驟。*
+*此視頻將介紹為AEM FormsOSGi實例啟用SSL的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335524?quality=12&learn=on)

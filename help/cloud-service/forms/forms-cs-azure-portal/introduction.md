@@ -1,6 +1,6 @@
 ---
-title: 將Adobe Experience Manager Forms整合為Cloud Service與Azure儲存
-description: 了解如何將AEM Forms提交資料儲存至Azure儲存帳戶。
+title: 將Adobe Experience Manager Forms作為Cloud Service與Azure儲存整合
+description: 瞭解如何將AEM Forms提交資料儲存到Azure儲存帳戶。
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -19,6 +19,6 @@ ht-degree: 2%
 
 # 簡介
 
-了解如何將AEM Formsas a Cloud Service提交資料儲存至Azure儲存帳戶。
+瞭解如何將AEM Formsas a Cloud Service提交資料儲存到Azure儲存帳戶。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336028?quality=12&learn=on)

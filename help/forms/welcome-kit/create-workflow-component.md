@@ -1,28 +1,29 @@
 ---
-title: 建立歡迎套件工作流程流程
-description: 根據已提交的表單資料，建立AEM網站頁面並附上下載資產的連結。
+title: 建立歡迎套件工作流進程
+description: 建立一個站AEM點頁面，其中包含基於已提交表單資料下載資產的連結。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
+exl-id: ba9e80af-aecd-4558-a236-798c823e695c
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
-# 工作流程元件
+# 工作流元件
 
-工作流元件捕獲與列出資產（如頁面模板、元件資源類型和用於儲存生成的頁面的基本資料夾）的頁面相關的資訊。
+工作流元件捕獲與列出資產的頁面相關的資訊，如頁面模板、元件資源類型和用於儲存生成的頁面的基本資料夾。
 
-![工作流程元件](assets/workflow-component.png)
+![工作流元件](assets/workflow-component.png)
 
-## 工作流程程式實作
+## 工作流進程實現
 
-以下java代碼與工作流元件相關聯。 該代碼建立歡迎套件頁，從工作流變數（submitterName和documentsSelected）中提取值。 然後，這些值會設為頁面中所用元件的屬性。 程式碼也會設定工作流程程式變數的值 **welcomekiturl**.
+以下Java代碼與工作流元件關聯。 代碼建立歡迎套件頁，從工作流變數（submitterName和documentsSelected）中提取值。 然後，這些值將設定為頁面中使用的元件的屬性。 代碼還設定工作流進程變數的值 **歡迎基特url**。
 
 ```java
 package com.welcomekit.core.workflowprocess;
@@ -161,7 +162,3 @@ public class CreatePage implements WorkflowProcess {
   }
 }
 ```
-
-
-
-

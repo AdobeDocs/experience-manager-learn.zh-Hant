@@ -1,6 +1,6 @@
 ---
-title: AEM內容片段控制台標題功能表擴充功能
-description: 了解如何建立AEM內容片段控制台標題功能表擴充功能。
+title: 內AEM容片段控制台標題菜單擴展
+description: 瞭解如何建立內AEM容片段控制台標題菜單擴展。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,30 +9,30 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+exl-id: 92d6e98e-24d0-4229-9d30-850f6b72ab43
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
 
 ---
 
+# 標題菜單擴展
 
-# 標題功能表擴充功能
+![標題菜單擴展](./assets/header-menu/header-menu.png){align="center"}
 
-![標題功能表擴充功能](./assets/header-menu/header-menu.png){align="center"}
+包含標題菜單的擴展，將按鈕引入內容片段控制台AEM的標題，在 __不__ 已選擇內容片段。 因為標題菜單擴展按鈕僅在未選擇內容片段時才顯示，所以它們通常不會對現有內容片段執行任何操作。 通常，標題菜單擴展：
 
-包含標題功能表的擴充功能，會在AEM內容片段控制台的標題上引入按鈕，此按鈕會在 __no__ 已選取內容片段。 因為標題功能表擴充按鈕只有在未選取內容片段時才會顯示，因此通常不會對現有內容片段採取任何動作。 標題功能表通常會延伸：
++ 使用自定義邏輯（如建立一組通過內容引用連結的內容片段）建立新的內容片段。
++ 對以寫程式方式選擇的一組內容片段執行操作，例如導出上週建立的所有內容片段。
 
-+ 使用自訂邏輯建立新的內容片段，例如建立透過內容參考連結的一組內容片段。
-+ 以程式設計方式選取的一組內容片段採取行動，例如匯出上週建立的所有內容片段。
+## 分機註冊
 
-## 擴充功能註冊
+`ExtensionRegistration.js` 是擴展的入口AEM點，並定義：
 
-`ExtensionRegistration.js` 是AEM擴充功能的進入點，並定義：
-
-1. 擴充功能類型；在中，會顯示標題功能表按鈕。
-1. 擴充功能按鈕的定義，位於 `getButton()` 函式。
-1. 按鈕的點擊處理常式，位於 `onClick()` 函式。
+1. 擴展類型；中。
+1. 擴展按鈕的定義，在 `getButton()` 的子菜單。
+1. 在 `onClick()` 的子菜單。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -70,12 +70,12 @@ function ExtensionRegistration() {
 
 ![模型](./assets/modal/modal.png)
 
-AEM內容片段控制台標題功能表擴充功能可能需要：
+內AEM容片段控制台標題菜單擴展可能需要：
 
-+ 來自用戶的額外輸入，以執行所需的操作。
-+ 提供使用者動作結果的詳細資訊的功能。
++ 用戶執行所需動作的附加輸入。
++ 提供有關操作結果的用戶詳細資訊的能力。
 
-為支援這些需求，AEM內容片段主控台擴充功能允許自訂強制回應視窗，以React應用程式的形式呈現。
+為支援這些要求，內AEM容片段控制台擴展允許以React應用程式形式呈現的自定義模式。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -103,27 +103,27 @@ function ExtensionRegistration() {
 ">
   <div class="is-flex is-padded-small is-padded-big-mobile">
     <div>
-      <p class="has-text-weight-bold is-size-36 is-size-27-touch is-margin-bottom-big has-text-blackest">跳到建立強制回應視窗</p>
-      <p class="has-text-blackest">了解如何建立強制回應視窗，當您按一下標題功能表擴充按鈕時，就會顯示此視窗。</p>
+      <p class="has-text-weight-bold is-size-36 is-size-27-touch is-margin-bottom-big has-text-blackest">跳至建立模式</p>
+      <p class="has-text-blackest">瞭解如何建立按一下標題菜單擴展按鈕時顯示的模式。</p>
       <div class="has-align-start is-margin-top-big">
         <a href="./modal.md" target="_blank" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-          <span class="spectrum-Button-label has-no-wrap has-text-weight-bold" title="了解如何建立強制回應視窗">了解如何建立強制回應視窗</span>
+          <span class="spectrum-Button-label has-no-wrap has-text-weight-bold" title="學習構建模式">學習構建模式</span>
         </a>
       </div>
     </div>
   </div>
 </div>
 
-## 無強制回應
+## 無模式
 
-AEM內容片段控制台標題功能表擴充功能有時不需要與使用者進一步互動，例如：
+有時，AEM Content Fragment控制台標題菜單擴展不需要與用戶進行進一步交互，例如：
 
-+ 叫用不需要使用者輸入的後端程式，例如匯入或匯出。
-+ 開啟新網頁，例如內容指引的內部檔案。
++ 調用不需要用戶輸入的後端進程，如導入或導出。
++ 開啟新網頁，如內容指南的內部文檔。
 
-在這些情況下，AEM內容片段控制台擴充功能不需要 [模態](#modal)，並可直接在標題功能表按鈕的 `onClick` 處理常式。
+在這些情況下，AEM內容片段控制台擴展不需要 [模態](#modal)，並可以直接在標題菜單按鈕的 `onClick` 處理程式。
 
-AEM內容片段控制台擴充功能允許進度指標在執行工作時覆蓋AEM內容片段控制台，使使用者無法執行進一步動作。 進度指示器的使用是可選的，但對於將同步工作的進度傳達給用戶非常有用。
+內AEM容片段控制台擴展允許進度指示器在執行工作時覆蓋AEM內容片段控制台，從而阻止用戶執行進一步的操作。 進度指示器的使用是可選的，但對於將同步工作的進度告知用戶非常有用。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 

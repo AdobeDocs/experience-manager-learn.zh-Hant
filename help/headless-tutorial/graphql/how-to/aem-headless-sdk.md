@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Headless SDK
-description: 了解如何使用AEM Headless SDK進行GraphQL查詢。
+title: 使用無AEM頭SDK
+description: 瞭解如何使用無頭SDK進行GraphQLAEM查詢。
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -16,11 +16,11 @@ ht-degree: 10%
 
 ---
 
-# AEM Headless SDK
+# 無AEM頭SDK
 
-AEM Headless SDK是一組程式庫，供用戶端使用，以透過HTTP快速輕鬆地與AEM Headless API互動。
+Headless AEM SDK是一組庫，客戶端可以使用這些庫通過HTTP快速而輕AEM松地與Headless API交互。
 
-AEM Headless SDK適用於各種平台：
+Headless AEM SDK適用於各種平台：
 
 + [適用於用戶端瀏覽器的 AEM Headless SDK (JavaScript)](https://github.com/adobe/aem-headless-client-js)
 + [適用於伺服器端/Node.js 的 AEM Headless SDK (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
@@ -28,25 +28,25 @@ AEM Headless SDK適用於各種平台：
 
 ## 持續性 GraphQL 查詢
 
-使用持續查詢使用GraphQL查詢AEM(相對於 [用戶端定義的GraphQL查詢](#graphl-queries))可讓開發人員在AEM中保留查詢（但不保留其結果），然後要求依名稱執行查詢。 持續查詢與SQL資料庫中儲存過程的概念類似。
+使用AEM永續查詢查詢使用GraphQL(與 [客戶端定義的GraphQL查詢](#graphl-queries))允許開發人員在中保留查詢(但不AEM是查詢結果)，然後請求按名稱執行查詢。 永續查詢與SQL資料庫中儲存過程的概念類似。
 
-持續查詢比用戶端定義的GraphQL查詢更具效能，因為持續查詢是使用HTTPGET執行，可在CDN和AEM Dispatcher層級快取。 持續存在的查詢也有效、定義API，並解除開發人員了解每個內容片段模型詳細資訊的需求。
+永續查詢比客戶端定義的GraphQL查詢效能更高，因為永續查詢是使用HTTPGET執行的，HTTP在CDN和Dispatcher層可進行緩AEM存。 永續查詢也有效，定義API，並解除開發人員瞭解每個內容片段模型的詳細資訊的必要性。
 
-### 程式碼範例{#persisted-graphql-queries-code-examples}
+### 代碼示例{#persisted-graphql-queries-code-examples}
 
-以下是如何對AEM執行GraphQL持續查詢的程式碼範例。
+下面是如何對執行GraphQL永續查詢的代碼示AEM例。
 
-+++ JavaScript範例
++++ JavaScript示例
 
-安裝 [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) 執行 `npm install` 命令（來自Node.js專案的根目錄）。
+安裝 [@adobe/aem無頭客戶端 — js](https://github.com/adobe/aem-headless-client-js) 通過運行 `npm install` 命令。
 
 ```
 $ npm i @adobe/aem-headless-client-js
 ```
 
-此程式碼範例說明如何使用 [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm模組使用 `async/await` 語法。 適用於JavaScript的AEM Headless SDK也支援 [Promise語法](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client).
+此代碼示例說明如AEM何使用 [@adobe/aem無頭客戶端 — js](https://github.com/adobe/aem-headless-client-js) npm模組 `async/await` 語法。 JavaScriptAEM的無頭SDK也支援 [Promise語法](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client)。
 
-此代碼假設具有名稱的持續查詢 `wknd/adventureNames` 已在AEM作者上建立，並發佈至AEM發佈。
+此代碼假定具有名稱的永續查詢 `wknd/adventureNames` 已在AEM作者上建立並發佈到AEM發佈。
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';
@@ -87,22 +87,22 @@ let { data, errors } = executePersistedQuery('wknd-shared/adventures-by-slug', {
 
 +++
 
-+++ React useEffect(...) 範例
++++ 反應useEffect(..) 示例
 
-安裝 [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) 執行 `npm install` 命令。
+安裝 [@adobe/aem無頭客戶端 — js](https://github.com/adobe/aem-headless-client-js) 通過運行 `npm install` 命令。
 
 ```
 $ npm i @adobe/aem-headless-client-js
 ```
 
-此程式碼範例說明如何使用 [React useEffect(...) 鈎](https://reactjs.org/docs/hooks-effect.html) 以執行對AEM GraphQL的非同步呼叫。
+此代碼示例說明如何使用 [反應useEffect(..) 鈎](https://reactjs.org/docs/hooks-effect.html) 執行對GraphQL的非同步AEM呼叫。
 
-使用 `useEffect` 在React中進行非同步GraphQL呼叫很實用，因為：
+使用 `useEffect` 在React中使非同步GraphQL呼叫非常有用，因為：
 
-1. 它為對AEM的非同步呼叫提供同步包裝。
-1. 這會減少不必要的請求AEM。
+1. 它為對的非同步調用提供同步包AEM裝。
+1. 它減少了不必要的AEM需求。
 
-此代碼假設具有名稱的持續查詢 `wknd-shared/adventure-by-slug` 已在AEM Author上建立，並使用GraphiQL發佈至AEM Publish。
+此代碼假定具有名稱的永續查詢 `wknd-shared/adventure-by-slug` 已在AEM作者上建立，並已使用GraphiQL發佈到AEM發佈。
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';
@@ -185,7 +185,7 @@ export function useAdventureBySlug(slug) {
 }
 ```
 
-叫用自訂React `useEffect` 從React元件的其他位置連結。
+調用自定義反應 `useEffect` 從React元件的其他位置掛接。
 
 ```javascript
 import useAdventureBySlug from '...';
@@ -193,7 +193,7 @@ import useAdventureBySlug from '...';
 let { data, errors } = useAdventureBySlug('bali-surf-camp');
 ```
 
-新增 `useEffect` 可為React應用程式使用的每個持續查詢建立鈎點。
+新建 `useEffect` 可以為React應用程式使用的每個永續查詢建立掛接。
 
 +++
 
@@ -201,11 +201,11 @@ let { data, errors } = useAdventureBySlug('bali-surf-camp');
 
 ## GraphQL查詢
 
-AEM支援用戶端定義的GraphQL查詢，但使用AEM是最佳作法 [持續GraphQL查詢](#persisted-graphql-queries).
+支AEM持客戶端定義的GraphQL查詢，但AEM是最好使用 [永續GraphQL查詢](#persisted-graphql-queries)。
 
 ## Webpack 5+
 
-AEM Headless JS SDK具有下列相依性： `util` 預設不包含在Webpack 5+中。 如果您使用Webpack 5+，並收到下列錯誤：
+無AEM頭JS SDK依賴於 `util` 預設情況下，Webpack 5+中未包含此內容。 如果使用Webpack 5+，並收到以下錯誤：
 
 ```
 Compiled with problems:
@@ -222,7 +222,7 @@ If you don't want to include a polyfill, you can use an empty module like this:
     resolve.fallback: { "util": false }
 ```
 
-新增下列項目 `devDependencies` 至 `package.json` 檔案：
+添加以下內容 `devDependencies` 到 `package.json` 檔案：
 
 ```json
   "devDependencies": {
@@ -236,4 +236,4 @@ If you don't want to include a polyfill, you can use an empty module like this:
   },
 ```
 
-然後執行 `npm install` 以安裝相依性。
+然後運行 `npm install` 安裝依賴項。

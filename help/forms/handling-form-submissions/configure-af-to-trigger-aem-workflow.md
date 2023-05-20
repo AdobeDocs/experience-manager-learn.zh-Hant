@@ -1,6 +1,6 @@
 ---
-title: 設定最適化表單以觸發AEM工作流程
-description: 了解設定適用性表單以觸發AEM工作流程的各種選項
+title: 配置自適應表單以觸發工AEM作流
+description: 瞭解在配置自適應表單以觸發工作流中的各種AEM選項
 feature: Workflow
 topics: integrations
 audience: developer
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# 設定最適化表單以觸發AEM工作流程
+# 配置自適應表單以觸發工AEM作流
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28316?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
 title: 使用Assets Essentials
-description: 了解如何在Assets Essentials中下載資產。
+description: 瞭解如何在Assets Essentials下載資產。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 使用Assets Essentials
 
-了解如何在Assets Essentials中篩選、搜尋和下載資產。
+瞭解如何在Assets Essentials篩選、搜索和下載資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335861?quality=12&learn=on)

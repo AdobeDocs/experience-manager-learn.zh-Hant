@@ -1,6 +1,6 @@
 ---
-title: AEM Forms與Marketo（第4部分）
-description: 使用AEM Forms表單資料模型整合AEM Forms與Marketo的教學課程。
+title: AEM Forms與Marketo（四）
+description: 使用AEM Forms表單資料模型將Marketo與AEM Forms整合的教程。
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -14,27 +14,27 @@ ht-degree: 1%
 
 ---
 
-# 使用表單資料模型建立最適化表單
+# 使用表單資料模型建立自適應表單
 
-下一步是建立最適化表單，並以先前步驟中建立的表單資料模型為基礎。
-使用者輸入銷售機會ID，並在Tab鍵出Marketo服務時，會叫用依ID取得銷售機會。 然後，服務操作的結果將映射到自適應Forms的適當欄位。
+下一步是建立一個自適應表單，並將其基於在前一步中建立的表單資料模型。
+用戶輸入銷售線索ID，並在開啟Marketo服務時調用按ID獲取銷售線索。 然後將服務操作的結果映射到自適應Forms的適當欄位。
 
-1. 建立最適化表單並以「空白表單範本」為基礎，將其與先前步驟中建立的表單資料模型建立關聯。
-1. 在編輯模式中開啟表單
-1. 將TextField元件和面板元件拖放至最適化表單。 將TextField元件的標題設定為「Enter Lead Id」，並將其名稱設定為「LeadId」
-1. 將2個TextField元件拖放至「面板」元件
-1. 將2個文本欄位元件的名稱和標題設定為FirstName和LastName
-1. 將「最小值為1」和「最大值為–1」設定為可重複元件。 由於Marketo服務傳回銷售機會物件陣列，且您需要可重複的元件來顯示結果，因此此為必要項目。 但是，在此情況下，我們只返回一個Lead對象，因為我們正在按其ID搜索Lead對象。
+1. 建立一個自適應表單並將其基於「空白表單模板」，將其與在前一步中建立的表單資料模型相關聯。
+1. 在編輯模式下開啟窗體
+1. 將TextField元件和面板元件拖放到「自適應表單」中。 將TextField元件的標題「輸入潛在顧客標識」設定為「潛在顧客標識」
+1. 將2個TextField元件拖放到「面板」元件上
+1. 將兩個文本欄位元件的名稱和標題設定為FirstName和LastName
+1. 將「Panel（面板）」元件設定為可重複元件，方法是將「Minimum（最小）」設定為1，將「Maximum（最大）」設定為–1。 這是必需的，因為Marketo服務返回一組Lead對象，並且您需要一個可重複的元件來顯示結果。 但是，在這種情況下，我們只返回一個Lead對象，因為我們正在按其ID搜索Lead對象。
 1. 在LeadId欄位上建立規則，如下圖所示
-1. 預覽表單，在LeadID欄位中輸入有效的Lead ID，然後將標籤選出。 名字和姓氏欄位應填入服務呼叫的結果。
+1. 預覽表單，並在LeadID欄位和標籤輸出中輸入有效的Lead Id。 「名」和「姓」欄位應填入服務調用的結果。
 
-以下螢幕擷圖說明規則編輯器設定
+以下螢幕快照說明了規則編輯器設定
 
 ![規則編輯器](assets/ruleeditor.jfif)
 
 ## 偵錯
 
-如果您使用本文隨附的套件組合，則可能要啟用 [偵錯記錄](http://localhost:4502/system/console/slinglog) 對於以下類：
+如果您使用本文章提供的捆綁包，則可能需要啟用 [調試日誌](http://localhost:4502/system/console/slinglog) 為以下類：
 
 + `com.marketoandforms.core.impl.MarketoServiceImpl`
 + `com.marketoandforms.core.MarketoConfigurationService`

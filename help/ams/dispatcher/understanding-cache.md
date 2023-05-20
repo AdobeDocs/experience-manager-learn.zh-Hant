@@ -1,26 +1,26 @@
 ---
-title: Dispatcher了解快取
-description: 了解Dispatcher模組如何運作其快取。
+title: 調度程式對快取的理解
+description: 瞭解Dispatcher模組如何操作其快取。
 topic: Administration, Performance
 version: 6.5
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 1%
 
 ---
 
-
-# 了解快取
+# 瞭解快取
 
 [目錄](./overview.md)
 
-[&lt; — 上一個：組態檔說明](./explanation-config-files.md)
+[&lt; — 上一個：配置檔案的說明](./explanation-config-files.md)
 
-本檔案將說明Dispatcher快取的發生方式，以及如何設定
+本文檔將說明Dispatcher快取的發生方式以及如何配置
 
 ## 快取目錄
 
@@ -31,19 +31,19 @@ ht-degree: 1%
 - 發佈者
    - `/mnt/var/www/html`
 
-當每個請求周遊Dispatcher時，請求會遵循已設定的規則，以保留本機快取版本，以回應符合條件的項目
+當每個請求遍歷Dispatcher時，請求將遵循配置的規則，以保留本地快取的版本以響應符合條件的項
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
 
-我們刻意將已發佈的工作量與製作工作量分開，因為當Apache在DocumentRoot中尋找檔案時，它不知道它來自哪個AEM執行個體。 因此，即使您已在製作伺服器陣列中停用快取，如果作者的DocumentRoot與發佈者相同，則會在有檔案時從快取中提供檔案。 這表示您會從已發佈的快取中提供作者檔案，並為訪客提供非常糟糕的混合比對體驗。
+我們故意將發佈的工作負載與作者工作負載分開，因為當Apache在DocumentRoot中查找檔案時，它不知道它來AEM自哪個實例。 因此，即使在作者群中禁用了快取，如果作者的DocumentRoot與發佈者相同，則當存在時，它將從快取中提供檔案。 這意味著您將從已發佈的快取中為作者提供檔案，並為您的訪問者提供非常糟糕的混合匹配體驗。
 
-為不同的已發佈內容保留不同的DocumentRoot目錄也是一個非常糟糕的主意。 您必須建立多個重新快取的項目，這些項目在客戶端等站點之間沒有差別，並且必須為您設定的每個DocumentRoot設定一個複製刷新代理。 每次頁面啟動時，增加頭頂的排清量。 請仰賴檔案的命名空間及其完整快取路徑，並避免發佈網站出現多個DocumentRoot。
+為不同的已發佈內容保留單獨的DocumentRoot目錄也是一個非常糟糕的主意。 您必須建立多個重新快取的項目，這些項目在客戶端等站點之間並無差異，並且必須為您設定的每個DocumentRoot設定複製刷新代理。 增加每次頁激活時頭上的刷新量。 依靠檔案的命名空間及其完整快取路徑，並避免發佈站點出現多個DocumentRoot。
 </div>
 
-## 組態檔
+## 配置檔案
 
-Dispatcher會控制 `/cache {` 任何伺服器陣列檔案的區段。 
-在AMS基線設定場中，您會找到包含的項目，如下所示：
+Dispatcher控制在 `/cache {` 檔案欄。 
+在AMS基線配置場中，您將發現我們的包括，如下所示：
 
 
 ```
@@ -54,17 +54,17 @@ Dispatcher會控制 `/cache {` 任何伺服器陣列檔案的區段。 
 ```
 
 
-建立快取或不快取的規則時，請參閱本檔案 [此處](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+建立要快取或不要快取的規則時，請參閱文檔 [這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
 
 
 ## 快取作者
 
-我們已看到許多實作中，使用者未快取作者內容。 
-他們在效能和對作者的回應能力方面都未取得重大提升。
+我們看到許多實施中，人們不快取作者內容。 
+他們在表現和對作者的反應方面都錯過了巨大的提升。
 
-讓我們說說在將製作伺服器陣列設定為正確快取時所採用的策略。
+讓我們討論一下將作者群配置為正確快取時採用的策略。
 
-以下是基本作者 `/cache {` 作者群檔案的區段：
+這是一個基本作者 `/cache {` 作者群檔案部分：
 
 
 ```
@@ -91,11 +91,11 @@ Dispatcher會控制 `/cache {` 任何伺服器陣列檔案的區段。 
 }
 ```
 
-此處需注意的重要事項為 `/docroot` 已設為作者的快取目錄。
+這裡需要注意的是 `/docroot` 設定為作者的快取目錄。
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
 
-請確定您的 `DocumentRoot` 在作者的 `.vhost` 檔案與伺服器陣列匹配 `/docroot` 參數
+確保 `DocumentRoot` 在作者的 `.vhost` 檔案與場匹配 `/docroot` 參數
 </div>
 
 快取規則包括語句包括檔案 `/etc/httpd/conf.dispatcher.d/cache/ams_author_cache.any` 其中包含以下規則：
@@ -131,52 +131,52 @@ Dispatcher會控制 `/cache {` 任何伺服器陣列檔案的區段。 
 }
 ```
 
-在製作案例中，內容會隨著時間和目的而變更。 您只想快取不會經常變更的項目。
-我們有快取規則 `/libs` 因為它們是基準AEM安裝的一部分，在您安裝Service Pack、Cumulative Fix Pack、升級或Hotfix前，這些變更都會發生。 因此，快取這些元素很有意義，而且使用網站的使用者的製作體驗確實有巨大的好處。
+在作者方案中，內容會隨時而有意地發生更改。 您只希望快取不會經常更改的項目。
+我們有規則要快取 `/libs` 因為它們是基準安裝的一AEM部分，在您安裝了Service Pack 、 Cumulative Fix Pack 、 Upgrade或Hotfix之前，它們會發生更改。 所以快取這些元素是意義重大的並且真正具有巨大的好處是作者對使用網站的最終用戶的體驗。
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
 
-請記住，這些規則也會快取 <b>`/apps`</b> 這是自訂應用程式程式碼所在的位置。 如果您要在此執行個體上開發程式碼，則儲存檔案時會非常困惑，而且由於提供快取副本，因此UI中沒有反映。 其意圖是，如果您將程式碼部署至AEM中，也不常使用，部分部署步驟應是清除製作快取。 同樣的好處是讓您的可快取程式碼對一般使用者執行得更快。
+請記住，這些規則還快取 <b>`/apps`</b> 這是自定義應用程式碼所在的位置。 如果您正在此實例上開發代碼，則保存檔案時會非常混亂，並且由於檔案提供了快取副本而看不到UI中是否有反映。 此處的意圖是，如果您也將代碼部署到該代碼AEM中，則不會頻繁，而部署步驟的一部分應是清除作者快取。 同樣，它的好處是讓您的可快取代碼能夠更快地為最終用戶運行。
 </div>
 
 
-## ServeOnStale(AKA Serve on Stale / SOS)
+## ServeOnStale(AKA Serve on Stale/SOS)
 
-這是Dispatcher功能的其中一項。 如果發佈者正在載入中，或已停止回應，通常會擲回502或503 http回應代碼。 如果發生此情況並啟用此功能，即使不是新復本，系統仍會指示Dispatcher將任何內容仍保留在快取中的內容，以盡量提供。 如果您有，最好提供某個功能，而不只是顯示沒有功能的錯誤訊息。
+這是Dispatcher的一個特點。 如果發佈伺服器已載入或已無響應，則通常會拋出502或503 http響應代碼。 如果發生這種情況並啟用此功能，將指示Dispatcher仍為快取中的任何內容提供服務，以盡最大努力，即使它不是新副本。 如果您有功能，則最好提供服務，而不是只顯示不提供功能的錯誤消息。
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
 
-請記住，如果發佈者轉譯器有通訊端逾時或500錯誤訊息，則此功能不會觸發。 如果AEM無法連線，此功能就不會執行任何作業
+請記住，如果發佈者呈現器有套接字超時或500錯誤消息，則此功能將不會觸發。 如果AEM僅無法訪問，此功能將不執行任何操作
 </div>
 
-此設定可在任何伺服器陣列中設定，但只有將其套用至發佈伺服器陣列檔案才可行。 以下是在伺服器陣列檔案中啟用功能的語法範例：
+此設定可以在任何場中設定，但只有將其應用於發佈場檔案才有意義。 下面是在場檔案中啟用的功能的語法示例：
 
 ```
 /cache { 
     /serveStaleOnError "1"
 ```
 
-## 使用查詢參數/引數快取頁面
+## 使用查詢參數/參數快取頁
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
 
-Dispatcher模組的一般行為之一，是如果請求在URI中有查詢參數（通常如下所示） `/content/page.html?myquery=value`)會略過快取檔案，然後直接前往AEM例項。 它認為此請求是動態頁面，不應進行快取。 這可能會對快取效率造成不良影響。
+Dispatcher模組的一種正常行為是，如果請求在URI中具有查詢參數（通常顯示如下） `/content/page.html?myquery=value`)將跳過快取檔案並直接轉到實AEM例。 它正在考慮此請求是動態頁，不應快取。 這會對快取效率造成不良影響。
 </div>
 <br/>
 
-看這個 [文章](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner) 顯示重要查詢參數對網站效能的影響。
+查看 [文章](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner) 顯示查詢參數對站點效能的重要程度。
 
-依預設，您要設定 `ignoreUrlParams` 規則允許 `*`.  這表示會忽略所有查詢參數，並允許快取所有頁面，而無論使用什麼參數。
+預設情況下，您要設定 `ignoreUrlParams` 規則允許 `*`。  意味著忽略所有查詢參數，並允許快取所有頁，而不考慮使用的參數。
 
-以下是某人建立社交媒體深層連結參考機制的範例，該機制會使用URI中的引數參考來了解該人員來自何處。
+這裡有一個示例，其中某人構建了社交媒體深度連結引用機制，該機制使用URI中的參數引用來瞭解此人來自何處。
 
-<b>可忽略的範例：</b>
+<b>可忽略的示例：</b>
 
 - https://www.we-retail.com/home.html?reference=android
 - https://www.we-retail.com/home.html?reference=facebook
 
-頁面可100%快取，但無法快取，因為引數存在。 
-設定 `ignoreUrlParams` 作為允許清單有助於修正此問題：
+該頁面是100%可快取的，但不快取，因為存在參數。 
+配置 `ignoreUrlParams` 作為允許清單，將有助於解決此問題：
 
 ```
 /cache { 
@@ -185,16 +185,16 @@ Dispatcher模組的一般行為之一，是如果請求在URI中有查詢參數�
     }
 ```
 
-現在，當Dispatcher看到請求時，會忽略請求具有 `query` 參數 `?` 參考並仍對頁面進行快取
+現在，當調度程式看到請求時，它將忽略請求具有 `query` 參數 `?` 引用並仍然快取頁面
 
-<b>動態範例：</b>
+<b>動態示例：</b>
 
 - https://www.we-retail.com/search.html?q=fruit
 - https://www.we-retail.com/search.html?q=vegetables
 
-請記住，如果您的查詢參數會對頁面進行變更，並將其呈現為輸出，則您必須將其從忽略的清單中移除，並讓頁面重新取消可快取。  例如，使用查詢參數的搜尋頁面會變更呈現的原始html。
+請記住，如果確實有使頁面更改的查詢參數將呈現輸出，則您需要將它們從忽略的清單中刪除，並使頁面再次取消可快取。  例如，使用查詢參數的搜索頁會更改呈現的原始html。
 
-以下是每個搜尋的html來源：
+下面是每個搜索的html源：
 
 `/search.html?q=fruit`:
 
@@ -234,10 +234,10 @@ Dispatcher模組的一般行為之一，是如果請求在URI中有查詢參數�
 </html>
 ```
 
-如果您造訪 `/search.html?q=fruit` 首先，它會快取顯示結果的html。
+如果您訪問 `/search.html?q=fruit` 首先，它會將html快取，並顯示結果。
 
-然後您造訪 `/search.html?q=vegetables` 第二，它將顯示出水果的結果。
-這是因為 `q` 會忽略。  若要避免此問題，您必須記下根據查詢參數而產生不同HTML的頁面，並拒絕這些頁面的快取。
+然後你去 `/search.html?q=vegetables` 第二，它會顯示水果的效果。
+這是因為 `q` 正在忽略快取。  要避免此問題，您需要注意根據查詢參數呈現不同HTML的頁面，並拒絕這些頁面的快取。
 
 範例:
 
@@ -249,27 +249,27 @@ Dispatcher模組的一般行為之一，是如果請求在URI中有查詢參數�
     }
 ```
 
-透過Javascript使用查詢參數的頁面仍會完全忽略此設定中的參數。  因為他們不會在休息時變更html檔案。  他們可使用javascript在本機瀏覽器上即時更新瀏覽器。  這表示如果您使用javascript查詢參數，就很可能會在頁面快取時忽略此參數。  允許該頁面快取，並享受效能提升！
+通過Javascript使用查詢參數的頁面仍將完全忽略此設定中的參數。  因為它們不會在靜止時更改html檔案。  它們使用javascript在本地瀏覽器上即時更新瀏覽器域。  這意味著如果使用Javascript查詢參數，很可能會忽略此參數進行頁面快取。  允許該頁快取並享受效能提升！
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
 
-要跟蹤這些頁面，確實需要一些維護，但值得獲得效能提升。  您可以要求CSE在您的網站上執行報表流量，提供過去90天內使用查詢參數的所有頁面清單，供您分析，並確定您知道要查看哪些頁面以及不要忽略哪些查詢參數
+跟蹤這些頁面確實需要一些維護，但非常值得獲得效能提升。  您可以要求CSE在您的網站上運行報告流量，以向您提供一個清單，列出過去90天內使用查詢參數進行分析並確保您知道要查看哪些頁面以及哪些查詢參數不能忽略
 </div>
 <br/>
 
-## 快取回應標題
+## 快取響應標頭
 
-很明顯，Dispatcher會快取 `.html` 頁面和clientlib(即 `.js`, `.css`)，但您知道它也可以將特定回應標題與檔案中具有相同名稱但 `.h` 副檔名。 這不僅可讓內容的下一個回應，也可讓快取中隨附的回應標題。
+很明顯，調度程式快取 `.html` 頁和客戶端(即 `.js`。 `.css`)，但您是否知道，它還可以將特定響應標頭與同名檔案中的內容一起快取 `.h` 檔案副檔名。 這不僅允許對內容進行下一次響應，還允許從快取中對應隨之進行的響應標頭。
 
-AEM可處理不只是UTF-8編碼
+可AEM以處理不止UTF-8編碼
 
-有時，項目會有特殊標頭，可協助控制快取TTL的編碼詳細資訊，以及上次修改的時間戳記。
+有時，項目具有特殊的標頭，可幫助控制快取TTL的編碼詳細資訊和上次修改的時間戳。
 
-預設會移除快取時的這些值，而Apache httpd webserver將自行執行處理資產的工作，使用其一般的檔案處理方法，這類方法通常僅限根據副檔名進行mime類型猜測。
+預設情況下，快取時這些值會被刪除，Apache httpd webserver將使用其常規的檔案處理方法來處理資產，這通常僅限於基於檔案副檔名的mime類型猜測。
 
-如果您有Dispatcher快取資產和所需的標題，則可以公開適當的體驗，並向用戶端瀏覽器保證所有詳細資訊。
+如果Dispatcher快取了資產和所需的標頭，則您可以公開適當的體驗，並確保將所有詳細資訊都提供給客戶端瀏覽器。
 
-以下是具有要指定快取之標題的伺服器陣列範例：
+下面是具有指定要快取的標頭的場示例：
 
 ```
 /cache { 
@@ -285,51 +285,51 @@ AEM可處理不只是UTF-8編碼
 ```
 
 
-在範例中，CDN已設定AEM以提供CDN尋找的標題，以知道何時使其快取失效。 這表示AEM現在可以根據標題適當指定哪些檔案失效。
+在示例中，它們AEM已配置為提供CDN查找的報頭，以確定何時使其快取失效。 這意味著AEM現在可以根據報頭正確指示哪些檔案被無效。
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
 
-請記住，您無法使用規則運算式或全域比對。 這是要快取的標題的常值清單。 只將要快取的常值標題清單中放入。
+請記住，不能使用規則運算式或全局匹配。 它是要快取的標頭的文字清單。 只將文本標題清單放入您希望其快取。
 </div>
 
 
-## 自動使寬限期無效
+## 自動失效寬限期
 
-在AEM系統中，如果作者有大量活動，但執行了多次頁面啟動，您可能會遇到競爭條件，導致重複無效判定。 重複的排清請求是不必要的，您可以建置一些容限，在寬限期清除前不重複排清。
+在AEM具有大量來自作者的活動且沒有頁面激活的系統上，您可以具有重複無效發生的競爭條件。 重複刷新請求是不必要的，您可以構建某種容限，在寬限期清除之前不重複刷新。
 
-### 其運作方式的範例：
+### 此操作的示例：
 
-如果您有5個要使之無效的請求 `/content/exampleco/en/` 都發生在3秒內。
+如果您有5個要求失效 `/content/exampleco/en/` 都在3秒內發生。
 
-使用此功能，將快取目錄無效 `/content/exampleco/en/` 5次
+通過此功能，將使快取目錄無效 `/content/exampleco/en/` 5倍
 
-若開啟此功能，且將設為5秒，將會使快取目錄失效 `/content/exampleco/en/` <b>once</b>
+啟用此功能並將其設定為5秒，將使快取目錄失效 `/content/exampleco/en/` <b>一次</b>
 
-以下是此功能針對5秒寬限期所設定的範例語法：
+以下是為5秒寬限期配置此功能的示例語法：
 
 ```
 /cache { 
     /gracePeriod "5"
 ```
 
-## TTL型失效
+## 基於TTL的無效
 
-Dispatcher模組的較新功能為 `Time To Live (TTL)` 快取項目的失效選項。 快取項目時，會尋找快取控制標題是否存在，並在快取目錄中產生同名的檔案，並 `.ttl` 擴充功能。
+Dispatcher模組的一個較新功能是 `Time To Live (TTL)` 快取項的基於無效選項。 當項被快取時，它會查找是否存在快取控制標頭，並在快取目錄中生成具有相同名稱和 `.ttl` 擴展。
 
-以下是伺服器陣列設定檔案中所設定功能的範例：
+下面是在場配置檔案中配置的功能的示例：
 
 ```
 /cache { 
     /enableTTL "1"
 ```
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-請記住，AEM仍需設定為傳送TTL標頭，Dispatcher才能執行。 切換此功能只會讓Dispatcher知道何時要移除AEM已傳送快取控制標題的檔案。 如果AEM未開始傳送TTL標頭，Dispatcher就不會在此執行任何特殊動作。
+<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注：</b>
+請記住，仍AEM需要配置為發送TTL報頭，以便Dispatcher執行這些報頭。 切換此功能僅使Dispatcher知道何時刪除已發送快取控AEM制標頭的檔案。 如AEM果不開始發送TTL標頭，則Dispatcher將不會在此處執行任何特殊操作。
 </div>
 
-## 快取篩選規則
+## 快取篩選器規則
 
-以下是要在發佈者上快取的元素之基線設定的範例：
+下面是發佈伺服器上要快取哪些元素的基線配置示例：
 
 ```
 /cache{ 
@@ -343,8 +343,8 @@ Dispatcher模組的較新功能為 `Time To Live (TTL)` 快取項目的失效選
     }
 ```
 
-我們希望讓已發佈的網站盡可能貪婪，並快取所有內容。
+我們希望使發佈的站點盡可能貪婪，並將所有內容都快取。
 
-如果快取時有中斷體驗的元素，您可以新增規則以移除快取該項目的選項。 如上例所示，csrf權杖不應進行快取且已排除。 有關編寫這些規則的更多詳情，請參見 [此處](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+如果有元素在快取時中斷體驗，則可以添加規則以刪除用於快取該項的選項。 如上例所示，csrf令牌不應被快取並已被排除。 有關編寫這些規則的詳細資訊，請參閱 [這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
 
-[Next ->使用和了解變數](./variables.md)
+[下一個 — >使用和瞭解變數](./variables.md)

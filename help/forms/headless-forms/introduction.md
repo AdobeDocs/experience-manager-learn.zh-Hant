@@ -1,6 +1,6 @@
 ---
-title: 在SPA中使用無頭式最適化表單
-description: 在SPA中實作無頭式聯絡人表單
+title: 使用無頭自適應形SPA式
+description: 在中實施無頭聯繫我SPA們
 feature: Adaptive Forms
 version: 6.5
 kt: 13285
@@ -15,24 +15,24 @@ ht-degree: 2%
 ---
 
 
-# 內嵌無頭式最適化表單
+# 嵌入無頭自適應形式
 
-本文將說明在您的SPA網站內嵌無頭式最適化表單的基本概念。 本文假設您有現有的單頁應用程式，且想要內嵌在AEM Forms 6.5.16中使用核心元件編寫的最適化表單。
-在單頁應用程式中加入表單，可讓使用者順暢地輸入和提交資料，而無需重新整理頁面。 這增強了應用程式的交互性和效率。
+本文將介紹在您的Spa網站中嵌入無頭自適應表單的基本內容。 本文假定您擁有現有的單頁應用程式，並希望使用核心元件嵌入在AEM Forms6.5.16創作的自適應表單。
+在單頁應用中包括表單允許用戶無縫地輸入和提交資料，而無需刷新頁面。 這增強了應用程式的交互性和效率。
 
-以下螢幕擷圖顯示內嵌於SPA中的聯絡人表單
+以下螢幕快照顯示嵌入在中的聯繫人表SPA單
 
-![contact-us-form](./assets/contact-us-form.png)
+![接觸 — u形式](./assets/contact-us-form.png)
 
 ## 必備條件
 
-* React體驗
+* 反應體驗
 
-* 執行中的AEM Forms 6.5.16
+* 運行AEM Forms實例6.5.16
 
-* [在您的製作和發佈執行個體上啟用無頭式表單](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=en)
+* [在作者和發佈實例上啟用無頭表單](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=en)
 
 ## 後續步驟
 
-[安裝相依性](./install-af-react-libraries.md)
+[安裝依賴項](./install-af-react-libraries.md)
 

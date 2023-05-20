@@ -1,6 +1,6 @@
 ---
-title: 建立自訂OSGi設定
-description: 自訂OSGi設定，以擷取檔案雲的特定詳細資訊
+title: 建立自定義OSGi配置
+description: 自定義OSGi配置以捕獲文檔雲特定的詳細資訊
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -19,15 +19,15 @@ ht-degree: 1%
 
 # 簡介
 
-建立自訂OSGi設定以擷取您檔案雲端帳戶的憑證
+建立自定義OSGi配置以捕獲文檔雲帳戶的憑據
 
 
-若要建立自訂OSGi設定，我們必須先建立介面，其公用方法將代表設定中的欄位。
+要建立自定義OSGi配置，我們需要首先建立一個介面，其公共方法將代表配置中的欄位。
 
 ![doc-cloud-config](assets/doc-cloud-configuration.JPG)
 
 
-建立名為DocumentCloudConfiguration的介面，並將下列程式碼貼入其中。
+建立名為DocumentCloudConfiguration的介面，並在其中貼上以下代碼。
 
 ```java
 package com.aemforms.doccloud.core;

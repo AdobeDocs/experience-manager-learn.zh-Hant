@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms中使用PDFG
-description: 展示使用AEM Forms建立PDF的拖放功能
+title: PDFG在AEM Forms的應用
+description: 演示拖放功能以使用AEM Forms建立PDF
 feature: PDF Generator
 version: 6.4,6.5
 topic: Development
@@ -15,28 +15,28 @@ ht-degree: 2%
 
 ---
 
-# 在AEM Forms中使用PDFG{#using-pdfg-in-aem-forms}
+# PDFG在AEM Forms的應用{#using-pdfg-in-aem-forms}
 
-展示使用AEM Forms建立PDF的拖放功能
+演示拖放功能以使用AEM Forms建立PDF
 
-PDFG代表PDF產生。 這表示您可以將各種檔案格式轉換為PDF。 最常見的是Microsoft Office文檔。 PDFG自6.1起即為AEM Forms的一部分。
-[此處列出了PDFG API的javadoc](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)
+PDFG代表PDF生成。 這意味著您可以將各種檔案格式轉換為PDF。 最常見的是Microsoft辦公室的檔案。 PDFG公司自6.1歲起一直是AEM Forms的一部分。
+[此處列出了PDFG API的Javadoc](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)
 
-與本文關聯的資產可讓您將MS office文檔或JPG檔案拖放到HTML頁的拖放區。 刪除文檔後，它調用PDFG服務，將文檔轉換為PDF，並將其保存在AEM Server的檔案系統中。
+與此文章關聯的資產將允許您將MS office文檔或JPG檔案拖放到HTML頁的放置區域。 文檔一旦被刪除，就調用PDFG服務，將文檔轉換為PDF，並保存在伺服器的檔案系AEM統中。
 
-若要安裝示範資產，請執行下列步驟
+要安裝演示資產，請執行以下步驟
 
-1. 依照本檔案所述設定PDFG [此處](https://helpx.adobe.com/tw/experience-manager/6-4/forms/using/install-configure-pdf-generator.html).
-1. 請遵循與您的AEM Forms版本相關的適當檔案。
-1. [使用套件管理器匯入和安裝與本文相關的資產。](assets/createpdfgdemov2.zip)
-1. [導覽至post.jsp](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) 在CRX中
+1. 配置本文檔中提到的PDFG [這裡](https://helpx.adobe.com/tw/experience-manager/6-4/forms/using/install-configure-pdf-generator.html)。
+1. 請按照與您的AEM Forms版本相關的相應文檔進行操作。
+1. [使用包管理器導入和安裝與本文相關的資產。](assets/createpdfgdemov2.zip)
+1. [導航到post.jsp](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) 在CRX中
 1. 根據您的首選項更改保存位置（第9行）
-1. 儲存您的變更。
-1. 開啟 [html頁面](http://localhost:4502/content/DocumentServices/CreatePDFG.html) 來拖放要轉換的檔案。
-1. 將字檔或jpg放置到放置區。
-1. 輸入文檔被轉換為PDF，並保存在點4中指定的相同位置。
+1. 保存更改。
+1. 開啟 [html頁面](http://localhost:4502/content/DocumentServices/CreatePDFG.html) 用於拖放要轉換的檔案。
+1. 將單詞檔案或jpg放入放置區域。
+1. 將輸入文檔轉換為PDF，並保存在點4中指定的同一位置。
 
-下列程式碼片段顯示PDFG服務將檔案轉換為PDF的使用方式
+以下代碼段顯示PDFG服務將檔案轉換為PDF的用法
 
 ```java
 com.adobe.pdfg.service.api.GeneratePDFService pdfService = sling.getService(com.adobe.pdfg.service.api.GeneratePDFService.class);

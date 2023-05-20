@@ -1,6 +1,6 @@
 ---
-title: 將提交的資料儲存在字串變數中
-description: 自訂處理步驟，擷取系結資料並儲存至字串類型的工作流程變數中
+title: 將提交的資料保存在字串變數中
+description: 自定義流程步驟，提取綁定資料並將其保存在字串類型的工作流變數中
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -9,27 +9,28 @@ level: Beginner
 kt: 11199
 last-substantial-update: 2022-10-02T00:00:00Z
 thumbnail: string-variable.jpg
-source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
+exl-id: 65dcbfbb-7eb5-4fa3-aeb3-587c59ee2fe9
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
-# 擷取系結資料並儲存至字串變數
+# 提取綁定資料並將其保存在字串變數中
 
-此功能可讓您將提交的資料納入電子郵件內文。 自訂處理步驟會擷取 **綁定資料** 填入資料的字串類型變數。 然後，您可以使用此字串變數將資料插入電子郵件範本中。
-下列螢幕擷取畫面顯示您需要傳遞至自訂程式步驟的引數
+此功能允許您將提交的資料包含在電子郵件正文中。 自定義流程步驟提取 **綁定資料** 從自適應表單提交中，用資料填充字串類型的變數。 然後，您可以使用此字串變數將資料插入電子郵件模板中。
+以下螢幕抓圖顯示了需要傳遞到自定義進程步驟的參數
 ![過程步驟](assets/save-submitted-data-string.png)
 
 以下是參數
 
-* `data.xml`  — 具有已提交資料的檔案。 如果格式為json，則檔案名稱可以是data.json
+* `data.xml`  — 包含已提交資料的檔案。 如果格式為json，則檔案的名稱可以是data.json
 
-自訂處理步驟接著會擷取系結的資料，並將其儲存在工作流程中定義的submittedDataString變數中
+然後，自定義進程步驟將提取綁定資料並將其儲存在工作流中定義的submittedDataString變數中
 
 
-[自訂套件可從此處下載](assets/AEMFormsProcessStep.core-1.0.0-SNAPSHOT.jar)
+[可從此處下載自定義捆綁包](assets/AEMFormsProcessStep.core-1.0.0-SNAPSHOT.jar)
 
 ```java
 package AEMFormsProcessStep.core;

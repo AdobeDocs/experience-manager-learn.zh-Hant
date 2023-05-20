@@ -1,58 +1,58 @@
 ---
-title: 什麼是「The Dispatcher」
-description: 了解Dispatcher的實質。
+title: 什麼是「調度員」
+description: 瞭解Dispatcher實際是什麼。
 version: 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 829ad9733b4326c79b9b574b13b1d4c691abf877
+exl-id: 96c8dd09-e0a7-4abc-b04b-a805aaa67502
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 2%
 
 ---
 
-
-# 什麼是「The Dispatcher」
+# 什麼是「調度員」
 
 [目錄](./overview.md)
 
-從AEM Dispatcher的基本說明開始。
+從Dispatcher的基本說明開始AEM。
 
 ## Apache Web Server
 
 從在Linux伺服器上安裝基本的Apache Web Server開始。
 
-Apache伺服器作用的基本說明：
+Apache伺服器所做操作的基本說明：
 
 - 遵循簡單規則，從其靜態文檔目錄(`DocumentRoot`)
-- 儲存在預設位置(`/var/www/html`)符合要求，並在要求用戶端的瀏覽器中轉譯
+- 儲存在預設位置的檔案(`/var/www/html`)在請求客戶端的瀏覽器中匹配並呈現
 
 
 
 
-## AEM特定模組檔案(`mod_dispatcher.so`)
+## AEM特定模組檔案`mod_dispatcher.so`)
 
-然後，將外掛程式新增至名為Dispatcher模組的Apache Web Server
+然後向名為Dispatcher模組的Apache Web伺服器添加插件
 
-AdobeAEM Dispatcher模組作用的基本說明：
+AdobeDispatcher模組執行的AEM基本說明：
 
-- 擴大預設檔案處理程式
-- 篩除不當請求/保護AEM軟體/端點
-- 如果存在多個轉譯器，則負載平衡
-- 允許有效快取目錄/支援對停滯的檔案進行刷新
-- 它是所有AMS安裝的前門，並將網站和資產提供給用戶端的瀏覽器
-- 它會以比AEM伺服器自行完成更快的速度快取請求，以重新提供
+- 增加預設檔案處理程式
+- 過濾壞請求/保護軟AEM肋/端點
+- 如果存在多個呈現器，則負載平衡
+- 允許使用活動快取目錄/支援刷新停滯的檔案
+- 它是所有AMS安裝的前門，它將網站和資產傳送到客戶端瀏覽器
+- 它以遠快於伺服器自行完成的速AEM率快取重新服務請求
 - 更多……
 
-## 網路流量工作流程
+## Web通信工作流
 
-了解為了建立基本Dispatcher伺服器而將哪些片段安裝在一起，可讓您了解Adobe管理員服務設定的基本Web流量工作流程。
-這應可協助您了解其在系統鏈中所扮演的角色，這些系統會將內容提供給AEM內容的訪客。
+瞭解為構建基本的Dispatcher伺服器而安裝了哪些部件，使我們能夠讓您瞭解Adobe管理器服務配置的基本Web通信工作流。
+這應該有助於您瞭解它在為內容訪問者提供內容的系統鏈中所扮演的角色AEM。
 
-<b>提供已快取的內容</b>
+<b>為已快取的內容提供服務</b>
 
 ```
 End User's Browser request 
@@ -63,7 +63,7 @@ End User's Browser request
                     → End User
 ```
 
-<b>從AEM提供新內容</b>
+<b>從中提供新內AEM容</b>
 
 ```
 End User's Browser request 
@@ -76,7 +76,7 @@ End User's Browser request
                             → End User
 ```
 
-<b>內容發佈/變更</b>
+<b>內容發佈/更改</b>
 
 ```
 AEM Author User activates content 

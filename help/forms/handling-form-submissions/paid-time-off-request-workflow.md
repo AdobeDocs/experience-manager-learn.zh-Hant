@@ -1,6 +1,6 @@
 ---
-title: 簡單的付費請求工作流程
-description: 在AEM工作流程中隱藏和顯示最適化表單面板
+title: 簡單付費請求工作流
+description: 在工作流中隱藏和顯示自適應表單面AEM板
 uuid: 28ceb72b-24d9-488e-92af-7e85775dc682
 feature: Adaptive Forms
 topics: workflow
@@ -21,41 +21,41 @@ ht-degree: 0%
 
 ---
 
-# 簡單的付費請求工作流程
+# 簡單付費請求工作流
 
-在本文中，我們會審視用於要求付費時間休假的簡單工作流程。 業務要求如下：
+在本文中，我們看到一個用於請求帶薪休假的簡單工作流。 業務要求如下：
 
-* 使用者A需要借由填入最適化表單來暫停。
-* 表單會轉寄給AEM管理員使用者（在實際中會轉寄給提交者的管理員）
-* 管理員會開啟表單。 管理員不應編輯提交者填寫的任何資訊。
-* 核准者區段應該會顯示給核准者(在此例中是AEM管理員使用者)。
+* 用戶A通過填寫自適應表單請求超時。
+* 表單被路由到AEM管理員用戶（在現實生活中它被路由到提交者的管理員）
+* 管理員開啟窗體。 管理員不能編輯提交者填寫的任何資訊。
+* 批准者部分應對批准者可見(在本例中是管理AEM員用戶)。
 
-為達到上述要求，我們使用名為的隱藏欄位 **初始化步驟** 在窗體中，其預設值設定為「是」。提交窗體時，工作流的第一步將初始步驟的值設定為「否」。 表單具有業務規則，可根據初始步驟值來隱藏和顯示適當的部分。
+為了達到上述要求，我們使用一個叫做 **初始步長** 在表單中，其預設值設定為「是」。提交表單時，工作流中的第一步將初始步驟的值設定為「否」。 表單具有業務規則以根據初始步驟值隱藏和顯示相應的節。
 
-**設定表單以觸發AEM工作流程**
+**將表單配置為觸發工AEM作流**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28406?quality=12&learn=on)
 
-**工作流程逐步說明**
+**工作流**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28407?quality=12&learn=on)
 
-**「提交者」的「關閉時間請求」表單視圖**
+**提交者對「暫停請求」表單的視圖**
 
-![初始化步驟](assets/initialstep.gif)
+![初始步長](assets/initialstep.gif)
 
-**表單的核准者檢視**
+**表單的批准者視圖**
 
-![approverview](assets/approversview.gif)
+![批准視圖](assets/approversview.gif)
 
-在核准者檢視中，核准者無法編輯已提交的資料。 還有一個僅用於「批准者」的新部分。
+在批准者視圖中，批准者無法編輯提交的資料。 還有一個新節僅用於批准者。
 
-若要在您的系統上測試此工作流程，請遵循下列步驟：
+要在您的系統上test此工作流，請執行以下步驟：
 * [下載並部署DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* [下載並部署SetValue自訂OSGI套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
-* [將與本文相關的資產匯入AEM](assets/helpxworkflow.zip)
+* [下載並部署SetValue自定義OSGI捆綁包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
+* [將與本條相關的資產導入AEM](assets/helpxworkflow.zip)
 * 開啟 [請求時間表](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填寫詳細資訊並提交
-* 開啟 [收件匣](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). 您應該會看到已指派新任務。 開啟表單。 提交者的資料應為唯讀狀態，且應顯示新的核准者區段。
-* 探索 [工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
-* 探索程式步驟。 這是將初始步驟的值設定為否的步驟。
+* 開啟 [收件箱](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html)。 您應看到已分配的新任務。 開啟窗體。 提交者的資料應為只讀，並且新批准者部分應可見。
+* 瀏覽 [工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
+* 瀏覽流程步驟。 這是將初始步驟的值設定為「否」的步驟。

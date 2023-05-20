@@ -1,6 +1,6 @@
 ---
 title: 使用Brand Portal
-description: AEM作者和AEM Assets Brand Portal整合的影片教學。
+description: AEM作者和AEM Assets Brand Portal整合的視頻瀏覽。
 feature: Brand Portal
 version: 6.4, 6.5
 topic: Content Management
@@ -15,198 +15,198 @@ ht-degree: 2%
 
 ---
 
-# 將Brand Portal與AEM Assets搭配使用{#using-brand-portal-with-aem-assets}
+# 將Brand Portal與AEM Assets{#using-brand-portal-with-aem-assets}
 
-Adobe Experience Manager(AEM)Assets Brand Portal整合的影片指南。
+Adobe Experience Manager(AEMAssets Brand Portal)整合視頻指南
 
-## Brand Portal 2019年9月功能與增強功能
+## Brand Portal2019年9月功能和增強
 
-Brand Portal 2019年9月推出的Asset Sourcing最為引人注目，可提升內容速度，並可讓Experience Manager作者與第三方創意人員及貢獻者輕鬆快速地交換資產。
+Brand Portal在2019年9月最引人注目地推出了「資產採購」，它提高了內容速度，允許Experience Manager作者與第三方創意人和貢獻者之間輕鬆、快速地交換資產。
 
-### Brand Portal Asset Sourcing{#asset-sourcing}
+### Brand Portal資產來源{#asset-sourcing}
 
-Brand Portal的Asset Sourcing可用來收集來自協力廠商和團隊的資產，順暢地將資產同步回Experience Manager作者，以供審核及使用。
+Brand Portal的資產來源補充用於從第三方機構和團隊收集資產，並無縫地將這些資產同步回Experience Manager作者以供審閱和使用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29365?quality=12&learn=on)
 
-*Experience Manager作者6.5 SP2(6.5.2)或更新版本才能使用Asset Sourcing*
+*Experience Manager作者6.5 SP2(6.5.2)或更高版本才能使用資產來源補充*
 
-檢閱 [為Asset Sourcing啟用Experience Manager作者](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=zh-Hant) 以取得在Experience Manager作者上設定Asset Sourcing的相關說明。
+審閱 [啟用資產來源補充的Experience Manager作者](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=zh-Hant) 有關如何配置和設定Experience Manager作者上的資產來源補充的說明。
 
-## Brand Portal 2019年2月功能與增強功能{#brand-portal-features-and-enhancements-644}
+## Brand Portal2019年2月功能和增強{#brand-portal-features-and-enhancements-644}
 
 >[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
 
-Brand Portal 2019年2月發行版本著重於文字搜尋和主要客戶請求的增強功能。
+Brand Portal2019年2月發佈的版本側重於對文本搜索和頂級客戶請求的增強。
 
-### 搜尋增強功能
+### 搜索增強
 
-Brand Portal增強了篩選窗格中針對屬性述詞的搜尋功能，並提供部分文字搜尋。 若要允許部分文字搜尋，您必須在搜尋表單的「屬性述詞」中啟用「部分搜尋」。
+Brand Portal在篩選窗格中對屬性謂語進行部分文本搜索，以增強搜索。 要允許部分文本搜索，您需要在搜索表單中啟用屬性謂語中的部分搜索。
 
-請閱讀以深入了解部分文字搜尋和萬用字元搜尋。
+閱讀以瞭解有關部分文本搜索和通配符搜索的詳細資訊。
 
-#### 部分片語搜尋
+#### 部分短語搜索
 
-您現在可以在篩選窗格中，僅指定所搜尋片語的一個部分（即一兩個字），以搜尋資產。
+現在，您可以通過在篩選窗格中僅指定搜索短語的一個部分來搜索資產。
 
-**使用案例** :如果您不確定搜尋的片語中出現的字詞的確切組合，部分片語搜尋將有所幫助。
+**用例** :如果您不確定搜索的短語中出現的單詞的確切組合，則部分短語搜索會有所幫助。
 
-例如，如果您在Brand Portal中的搜尋表單使用「屬性述詞」來進行資產標題的部分搜尋，則指定詞語camp會傳回標題片語中包含camp字詞的所有資產。
+例如，如果您在Brand Portal的搜索表單使用屬性謂詞對資產標題進行部分搜索，則指定術語camp將返回標題短語中帶有詞camp的所有資產。
 
 #### 通配符搜索
 
-Brand Portal允許在搜尋查詢中使用星號(*)，以及搜尋片語中單字的一部分。
+Brand Portal允許在搜索查詢中使用星號(*)，並在搜索短語中使用單詞的一部分。
 
-**使用案例** ：如果您不確定搜尋片語中發生的確切字詞，可以使用萬用字元搜尋來填滿搜尋查詢中的間隙。
+**用例** ：如果您不確定搜索短語中出現的確切字詞，則可以使用通配符搜索來填補搜索查詢中的空白。
 
-例如，如果Brand Portal中的搜尋表單使用「屬性述詞」對資產標題進行部分搜尋，指定climb*會傳回標題片語中所有字詞開頭為climb字元的資產。
+例如，如果Brand Portal的搜索表單使用屬性謂詞對資產標題進行部分搜索，則指定clim*將返回所有具有以字元在其標題短語中爬升開頭的詞的資產。
 
-同樣地，指定：
+同樣，指定：
 
-* \*climb會傳回標題片語中字元會翻的所有資產。
-* \*climb\*會傳回所有包含字元在標題片語中攀爬的資產。
+* \*climb返回其標題短語中單詞以字元結尾的所有資產。
+* \*climb\*返回所有具有片語的資產，這些片語的標題短語中包含字元。
 
 #### 啟用資料夾階層
 
-管理員現在可以設定資料夾在登入時如何顯示給非管理員使用者（編輯者、檢視者和訪客使用者）。
-[啟用資料夾階層](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) 設定會新增至「一般設定」中的「管理工具」面板。 如果設定為：
+管理員現在可以配置在登錄時向非管理員用戶（編輯器、查看器和來賓用戶）顯示資料夾的方式。
+[啟用資料夾層次結構](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) 配置將添加到「常規設定」(General Settings)中的「管理工具」(admin tools)面板中。 如果配置為：
 
-* 啟用後，非管理員使用者可看到從根資料夾開始的資料夾樹狀結構。 因此，會授予他們類似管理員的導覽體驗。
-* 停用時，登錄頁面上只會顯示共用資料夾。
+* 啟用後，從根資料夾開始的資料夾樹對非管理員用戶可見。 因此，為他們提供類似於管理員的導航體驗。
+* 已禁用，登錄頁上只顯示共用資料夾。
 
-[啟用資料夾階層](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) 功能（若已啟用），有助於區分從不同階層共用之相同名稱的資料夾。 現在，非管理員使用者登入時可以看到共用資料夾的虛擬上層（和上階）資料夾。
+[啟用資料夾層次結構](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) 功能（啟用後）有助於區分具有不同層次共用的相同名稱的資料夾。 登錄時，非管理員用戶現在可以查看共用資料夾的虛擬父資料夾（和上級資料夾）。
 
-共用資料夾在虛擬資料夾中的各目錄內組織。 您可以使用鎖表徵圖識別這些虛擬資料夾。
+共用資料夾在虛擬資料夾中的各個目錄內組織。 您可以使用鎖定表徵圖識別這些虛擬資料夾。
 
-請注意，虛擬資料夾的預設縮圖是第一個共用資料夾的縮圖影像。
+請注意，虛擬資料夾的預設縮略圖是第一個共用資料夾的縮略圖。
 
-### Dynamic Media影片轉譯支援
+### Dynamic Media視頻格式副本支援
 
-AEM製作執行個體位於Dynamic Media混合模式的使用者，除了原始視訊檔案，還可以預覽和下載動態媒體轉譯。
+AEM Author實例處於Dynamic Media混合模式的用戶除了可以預覽原始視頻檔案外，還可以預覽和下載動態媒體格式副本。
 
-若要允許在特定租用戶帳戶上預覽和下載動態媒體轉譯，管理員需要從管理工具面板在視訊設定中指定Dynamic Media設定(視訊服務URL（DM — 閘道URL）和註冊ID，以擷取動態視訊)。
+要允許預覽和下載特定租戶帳戶上的動態媒體格式副本，管理員需要從管理工具面板中在「視頻配置」中指定「Dynamic Media配置」(視頻服務URL(DM-Gateway URL)和註冊ID以獲取動態視頻)。
 
-Dynamic Media影片可在下列位置預覽：
+Dynamic Media視頻可以在以下位置預覽：
 
-* 資產詳細資訊頁面
-* 資產的卡片檢視
-* 連結共用預覽頁面
+* 資產詳細資訊頁
+* 資產的卡視圖
+* 連結共用預覽頁
 
-Dynamic Media視訊編碼可從以下位置下載：
+Dynamic Media視頻編碼可從以下網址下載：
 
 * Brand Portal
 * 共用連結
 
-### 排程發佈至Brand Portal
+### 計畫發佈到Brand Portal
 
-資產（和資料夾）發佈工作流程來源 [AEM(6.4.2.0)](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) 可以排程日後的日期、時間來製作Brand Portal的例項。
+資產（和資料夾）發佈工作流 [AEM(6.4.2.0)](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) 可以安排到Brand Portal的作者實例的日期、時間。
 
-同樣地，您也可以排程從Brand Portal中取消發佈工作流程，在稍後（時間）從入口網站移除已發佈的資產。
+同樣，可以在以後（時間）通過安排「從Brand Portal取消發佈」工作流從門戶中刪除已發佈的資產。
 
-### URL中可設定的租用戶別名
+### URL中的可配置租戶別名
 
-組織可在URL中加上替代首碼，以取得自訂的入口網站URL。 若要在現有入口URL中取得租用戶名稱的別名，組織需要聯絡Adobe支援。
+組織可以通過在URL中設定備用前置詞來自定義其門戶URL。 要獲取其現有門戶URL中租戶名稱的別名，組織需要與Adobe支援部門聯繫。
 
-請注意，只能自訂Brand Portal URL的首碼，不能自訂整個URL。
-例如，具有現有網域的組織 `wknd.brand-portal.adobe.com` 可 `wkndinc.brand-portal.adobe.com` 依要求建立。
+請注意，只能自定義Brand PortalURL的前置詞，而不能自定義整個URL。
+例如，具有現有域的組織 `wknd.brand-portal.adobe.com` 能 `wkndinc.brand-portal.adobe.com` 已根據請求建立。
 
-不過，AEM Author例項可以 [已配置](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) 僅包含租用戶id URL，而不包含租用戶別名（替代）URL。
+但是，AEM作者實例可以 [配置](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) 僅具有租戶ID URL，而不具有租戶別名（備用）URL。
 
-**使用案例** :組織可透過自訂入口網站URL來滿足其品牌需求，而不需堅持由Adobe提供的URL。
+**用例** :組織可以通過自定義門戶URL來滿足其品牌需求，而不是堅持Adobe提供的URL。
 
-## Brand Portal 2018年12月功能與增強功能{#brand-portal-features-and-enhancements-642}
+## Brand Portal2018年12月功能和增強{#brand-portal-features-and-enhancements-642}
 
 >[!VIDEO](https://video.tv.adobe.com/v/23707?quality=12&learn=on)
 
 ### 訪客存取
 
-AEM Brand Portal可讓訪客存取入口網站。 來賓用戶不需要憑據進入門戶，並且可以訪問和下載所有公共資料夾和集合。 訪客使用者可將資產新增至其簡易方塊（私人系列）並下載相同的資產。 他們也可以檢視智慧標籤搜尋和搜尋管理員設定的述詞。 來賓工作階段不允許使用者建立集合和儲存的搜尋，或進一步共用，存取資料夾和集合設定，以及以連結形式共用資產。
+AEM品牌門戶允許來賓訪問門戶。 來賓用戶不需要憑據即可進入門戶，並且可以訪問和下載所有公共資料夾和集合。 來賓用戶可以將資產添加到其燈箱（私人收藏）中並下載相同的資產。 它們還可以查看管理員設定的智慧標籤搜索和搜索謂詞。 來賓會話不允許用戶建立集合和保存的搜索或進一步共用它們、訪問資料夾和集合設定以及將資產作為連結共用。
 
 ### 加速下載
 
-Brand Portal使用者可善用Aspera的快速下載功能，將速度提升至25倍，無論其在全球的位置為何，都能享有順暢的下載體驗。 若要從Brand Portal或共用連結更快下載資產，使用者必須在下載對話方塊中選取「啟用下載加速」選項，前提是組織已啟用下載加速功能。
+Brand Portal用戶可以利用基於Aspera的快速下載，使下載速度提高25倍，無論他們在全球的位置如何，都能享受無縫的下載體驗。 要更快地從Brand Portal或共用連結下載資產，用戶需要在下載對話框中選擇「啟用下載加速」選項，前提是其組織上啟用了下載加速。
 
-* [從Brand Portal加速下載的指南](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
-* [Aspera Connect測試伺服器](https://test-connect.asperasoft.com/)
+* [加速從Brand Portal下載的指南](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
+* [Aspera連接Test伺服器](https://test-connect.asperasoft.com/)
 
-### 使用者登入報表
+### 用戶登錄報告
 
-推出新報表以追蹤使用者登入。 「使用者登入」報表有助於讓組織稽核及檢查委派的管理員和其他Brand Portal使用者。
+已引入一個新報告來跟蹤用戶登錄。 「用戶登錄」報告有助於使組織能夠審核和檢查委派的管理員和Brand Portal的其他用戶。
 
-報表會記錄每個使用者的顯示名稱、電子郵件ID、角色（管理員、檢視器、編輯器、訪客）、群組、上次登入、活動狀態和登入計數。
+報告記錄每個用戶的顯示名稱、電子郵件ID、personas(admin、viewer、editor、guest)、組、上次登錄、活動狀態和登錄計數。
 
-### 存取原始轉譯
+### 訪問原始格式副本
 
-管理員可限制使用者存取原始影像檔案(jpeg、tiff、png、bmp、gif、pjpeg、x-portable-anymap、x-portable-bitmap、x-portable-graymap、x-portable-pixmap、x-rgb、x-xbitmap、x-xpixmap、x-icon、image/photoshop、image/x-photoshop、psd、image/vnd.adobe.photoshop)，並允許使用者存取從Brand Portal或共用連結下載的低解析度轉譯。 您可以在使用者群組層級，從管理工具面板的使用者角色頁面的群組標籤控制此存取。
+管理員可以限制用戶訪問原始影像檔案(jpeg、tiff、png、bmp、gif、pjpeg、x-portable-anymap、x-portable-bitmap、x-portable-graymap、x-rgb、x-xbitmap、x-xpixmap、x-icon、image/x-photoshop、psd、image/vnd.adobe.photoshop)，並允許訪問從Brand Portal或共用連結。 此訪問可以在管理員工具面板的「用戶角色」頁的「組」頁籤的用戶組級別進行控制。
 
 ### 新配置
 
-新增6項新設定供管理員啟用/停用特定租戶的下列功能：
+為管理員添加了六種新配置，以在特定租戶上啟用/禁用以下功能：
 
 * 允許訪客存取
-* 允許使用者要求存取Brand Portal
+* 允許用戶請求訪問Brand Portal
 * 允許管理員從Brand Portal刪除資產
-* 允許建立公用集合
-* 允許建立公用智慧型集合
+* 允許建立公共集合
+* 允許建立公共智慧集合
 * 允許下載加速
 
 ### 其他增強功能
 
-* *卡片和清單檢視上的資料夾階層路徑*  — 讓使用者知道儲存在Brand Portal例項中的資料夾位置。 幫助用戶區分不同資料夾層次結構中具有相同名稱的資料夾。
-* *概述選項*  — 透過選取資產/資料夾，然後從工具列選取「概觀」選項，提供與資產/資料夾相關的非管理員使用者中繼資料。 目前，顯示標題、建立日期和路徑
+* *卡和清單視圖上的資料夾層次結構路徑*  — 使用戶能夠知道儲存在Brand Portal實例中的資料夾的位置。 幫助用戶區分不同資料夾層次結構中具有相同名稱的資料夾。
+* *概述選項*  — 通過選擇資產/資料夾，然後從工具欄中選擇概述選項，提供非管理員用戶關於資產/資料夾的元資料。 當前，顯示標題、建立日期和路徑
 
-### Adobe I/O主機UI以設定oAuth整合
+### Adobe I/O主機UI以配置身份驗證整合
 
-Brand Portal使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) 介面以建立JWT應用程式，可啟用設定oAuth整合以允許AEM Assets與Brand Portal整合。 之前，設定OAuth整合的UI托管於 `https://marketing.adobe.com/developer/`. 若要進一步了解如何整合AEM Assets與Brand Portal，以便將資產和集合發佈至Brand Portal，請參閱 [設定AEM Assets與Brand Portal的整合](https://helpx.adobe.com/tw/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
+Brand Portal使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) 介面，用於建立JWT應用程式，它允許配置oAuth整合，以允許AEM Assets與Brand Portal整合。 以前，用於配置OAuth整合的UI托管在 `https://marketing.adobe.com/developer/`。 要瞭解有關將AEM Assets與Brand Portal整合以向Brand Portal發佈資產和收藏的更多資訊，請參閱 [配置AEM Assets與Brand Portal的整合](https://helpx.adobe.com/tw/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)。
 
-## Brand Portal 2018年2月功能與增強功能{#brand-portal-features-and-enhancements-632}
+## Brand Portal2018年2月功能和增強{#brand-portal-features-and-enhancements-632}
 
-新功能增強的功能，主要針對將Brand Portal與AEM協調。
+新功能增強，旨在使Brand Portal與AEM一致。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
 
-### 導覽改善
+### 導航改進
 
-* 符合AEM且使用Coral3 UI的升級使用者介面。
-* 透過新的Adobe標誌，快速輕鬆存取管理工具。
-* 透過覆蓋圖導覽產品
-* 從子資料夾快速導覽至父資料夾。
-* 導覽至管理工具和內容的Omnisearch選項。
-* 卡片檢視、清單檢視和欄檢視可協助您輕鬆瀏覽巢狀資料夾。
-* 清單檢視中的資產排序不再受限於畫面上顯示的資產數量。 資料夾中的所有資產都會排序。
+* 已升級的用戶介面，它與AEM對齊並使用Coral3 UI。
+* 通過新的Adobe徽標快速方便地訪問管理工具。
+* 通過覆蓋的產品導航
+* 從子資料夾快速導航到父資料夾。
+* 導航到管理工具和內容的Omnisearch選項。
+* 「卡視圖」、「清單」視圖和「列視圖」可幫助您輕鬆瀏覽嵌套的資料夾。
+* 「清單視圖」中的資產排序不再限於螢幕上顯示的資產數。 資料夾中的所有資產都會排序。
 
-### 搜尋改善
+### 搜索改進
 
-* Omnisearch功能可讓您快速搜尋Brand Portal內的資產和檔案。
-* Omnisearch也提供在特定資料夾或位置中搜尋資產的選項
-* 自動關鍵字建議可讓搜尋更輕鬆
-* 使用其他篩選器改善您的Omnisearch。 將搜尋結果儲存至智慧型集合的選項，供您稍後重新造訪搜尋。
-* 支援智慧標籤資產搜尋
-* AEM智慧標籤資產可從AEM共用至Brand Portal，並在Brand Portal內使用智慧標籤進行資產搜尋。
+* Omnisearch功能允許您快速搜索Brand Portal內的資產和檔案。
+* Omnisearch還提供了一個選項，用於搜索特定資料夾或位置內的資產
+* 自動關鍵字建議，使搜索更容易
+* 使用其他篩選器改進Omnisearch。 將搜索結果保存到智慧收藏中，以便您稍後重新訪問搜索。
+* 支援智慧標籤資產搜索
+* 可AEM以將智慧標籤資AEM產從Brand Portal共用，並在Brand Portal內使用智慧標籤進行資產搜索。
 
-### 檔案共用改善
+### 檔案共用改進
 
-* 使用者可以使用連結共用選項來共用資產。
-* 共用資產時，使用者會設定每個資產的到期日。 讓使用者對共用的資產有更多控制權。
-* 具有資產共用連結的外部使用者可以下載影像並檢視其屬性。
-* 系統會為下載的資產資料夾保留原始的巢狀資料夾階層。
+* 用戶可以使用連結共用選項共用資產。
+* 共用資產時，用戶將設定每個資產的到期日期。 為用戶提供對共用資產的更多控制。
+* 具有資產共用連結的外部用戶可以下載映像並查看其屬性。
+* 原始嵌套資料夾層次結構將保留用於下載的資產資料夾。
 
-### 報告和管理功能
+### 報告和管理能力
 
-* 來自AEM Assets的中繼資料結構現在可從AEM發佈至Brand Portal。
-* 管理員可以建立和管理三種報表類型：下載、過期和發佈的資產
-* 可設定需要納入報表的欄。
-* 在Brand Portal中建立資產的影像預設集。
-* 可修改「管理員搜尋邊欄表單」或「搜尋Forms」以包含其他篩選選項。
-* 更新並預覽您品牌的自訂壁紙
-* 使用狀況報表，了解使用者人數、已使用的儲存空間和資產總計。
+* 現在，可以從AEM Assets發佈元資料架構AEM到Brand Portal。
+* 管理員可以建立和管理三種類型的報告 — 下載、過期和發佈的資產
+* 能夠配置需要包括在報告中的列。
+* 為Brand Portal內的資產建立影像預設。
+* 能夠修改管理員搜索欄表單或搜索Forms以包括其他篩選選項。
+* 更新和預覽品牌的自定義壁紙
+* 使用情況報告，用於瞭解用戶數、已用儲存空間和總資產。
 
 ## 其他資源{#additional-resources}
 
-* [Brand Portal的新增功能](https://helpx.adobe.com/tw/experience-manager/brand-portal/using/whats-new.html)
-* [AEM製作復寫代理](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
+* [Brand Portal有什麼新聞嗎](https://helpx.adobe.com/tw/experience-manager/brand-portal/using/whats-new.html)
+* [AEM作者複製代理](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [加速下載指南](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
-* [AEM Assets Brand PortalAdobe檔案](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
-* [AEM Assets Dynamic MediaAdobe檔案](https://experienceleague.adobe.com/docs/)
-* [下載Aspera Connect](https://downloads.asperasoft.com/connect2/)
-* [Aspera Connect測試伺服器](https://test-connect.asperasoft.com/)
+* [AEM Assets Brand PortalAdobe文檔](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
+* [AEM AssetsDynamic MediaAdobe](https://experienceleague.adobe.com/docs/)
+* [下載Aspera連接](https://downloads.asperasoft.com/connect2/)
+* [Aspera連接Test伺服器](https://test-connect.asperasoft.com/)

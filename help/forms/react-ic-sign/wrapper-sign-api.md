@@ -1,6 +1,6 @@
 ---
-title: 建立要呈現給使用者的網頁表單以供簽署
-description: 建立AEM套件組合以公開使用案例所需的Acrobat簽署方法。
+title: 建立要呈現給用戶以進行簽名的Web表單
+description: 創AEM建捆綁包以公開使用案例所需的Acrobat符號方法。
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -16,19 +16,19 @@ ht-degree: 0%
 
 ---
 
-# 為Acrobat Sign REST API建立包裝函式
+# 為Acrobat SignREST API建立包裝
 
-已開發自訂AEM套件組合，以建立Web表單並傳回給一般使用者
+已開AEM發自定義捆綁包以建立Web表單並將其返回給最終用戶
 
-* [建立臨時文檔](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument). 透過此呼叫上傳的檔案稱為暫時檔案，因為上傳後7天內都可用。 傳回的暫時性檔案ID可用於需要參考已上傳檔案的API呼叫。 暫時性檔案請求是多部分請求，由三個部分組成：檔案名、mime類型和檔案流。 在此請求中，一次只能上傳一個檔案。
-* [建立網路表單](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widget/createWidget).這是用於建立新Web表單的主端點。 Web表單以「活動」狀態建立，以立即托管Web表單。
-* [檢索網路表單](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widget/getWidget).檢索用戶的Web表單。 然後，此Web表單將呈現給調用應用程式以簽名文檔。
+* [建立臨時文檔](https://secure.na1.echosign.com/public/docs/restapi/v6#!/tranientDocuments/createTranientDocument)。 通過此調用上載的文檔稱為暫時文檔，因為它在上載後僅可用7天。 返回的臨時文檔ID可用於需要引用上載檔案的API調用。 臨時文檔請求是由三部分組成的多部分請求 — 檔案名、mime類型和檔案流。 在此請求中，一次只能上載一個檔案。
+* [建立Web窗體](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget).這是用於建立新Web表單的主終結點。 Web表單是以「活動」狀態建立的，以立即托管Web表單。
+* [檢索Web表單](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets).檢索用戶的Web窗體。 然後，將此Web表單呈現給調用應用程式以簽名文檔。
 
-## 建立Acrobat Sign OSGi設定
+## 建立Acrobat SignOSGi配置
 
-Acrobat Sign REST API需要與整合金鑰相關聯的整合金鑰和電子郵件。 這兩個值會以OSGi設定屬性的形式提供，如下所示
+Acrobat SignREST API需要與整合密鑰關聯的整合密鑰和電子郵件。 這兩個值作為OSGi配置屬性提供，如下所示
 
-![登入設定](assets/sign-configuration.png)
+![登錄配置](assets/sign-configuration.png)
 
 ```java
 package com.acrobatsign.core.configuration;
@@ -82,7 +82,7 @@ public class AcrobatSignConfigurationService {
 
 ## 獲取臨時文檔ID
 
-編寫了以下代碼以建立臨時文檔
+已編寫以下代碼以建立臨時文檔
 
 ```java
 public String getTransientDocumentID(Document documentForSigning) throws IOException {
@@ -110,7 +110,7 @@ public String getTransientDocumentID(Document documentForSigning) throws IOExcep
 }
 ```
 
-## 取得Widget ID
+## 獲取小部件ID
 
 ```java
 public String getWidgetID(String transientDocumentID) {
@@ -159,7 +159,7 @@ public String getWidgetID(String transientDocumentID) {
 }
 ```
 
-## 獲取介面工具集URL
+## 獲取小部件URL
 
 ```java
 public String getWidgetURL(String widgetId) throws ClientProtocolException, IOException {
@@ -198,4 +198,4 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
 
 ## 後續步驟
 
-[產生Acrobat Sign Widget URL](./create-servlet-to-expose-endpoint.md)
+[生成Acrobat Sign小部件URL](./create-servlet-to-expose-endpoint.md)

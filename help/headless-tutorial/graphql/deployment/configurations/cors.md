@@ -1,6 +1,6 @@
 ---
-title: AEM GraphQL的CORS設定
-description: 了解如何設定跨原始資源共用(CORS)以與AEM GraphQL搭配使用。
+title: GraphQL的CORS配AEM置
+description: 瞭解如何配置跨源資源共用(CORS)以與AEMGraphQL一起使用。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -8,54 +8,54 @@ role: Developer, Architect
 level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
-source-git-commit: cc78e59fe70686e909928e407899fcf629a651b9
+exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '619'
+ht-degree: 1%
 
 ---
 
+# 跨源資源共用(CORS)
 
-# 跨原始資源共用(CORS)
+Adobe Experience Manager as a Cloud Service的跨源資源共用(CORS)方便了非AEMweb屬性，可以對GraphQLAPI進行基於瀏覽器的客AEM戶端調用。
 
-Adobe Experience Manager as a Cloud Service的跨原始資源共用(CORS)有助於非AEM Web屬性對AEM GraphQL API進行瀏覽器式用戶端呼叫。
-
-以下文章說明如何設定 _單原點_ 透過CORS存取特定的AEM無頭端點集。 單一來源表示僅有單一非AEM網域存取AEM，例如連線至https://www.example.com的https://app.example.com 。 由於快取問題，使用此方法可能無法存取多原始碼。
+以下文章介紹如何配置 _單原點_ 通過CORS訪問特定AEM的無頭端點集。 單原點表示只有單個非AEM域訪AEM問，例如，https://app.example.com連接到https://www.example.com。 由於快取問題，使用此方法時，多源訪問可能無效。
 
 >[!TIP]
 >
-> 以下是範例設定。 請確定您根據專案需求進行調整。
+> 以下配置是示例。 確保根據項目要求調整它們。
 
-## CORS需求
+## CORS要求
 
-當連線至AEM GraphQL API的用戶端未從與AEM相同的來源（亦稱為主機或網域）提供時，以瀏覽器為基礎的連線至AEM API需要CORS。
+當連接到的客戶端未從與相同的源（也稱為主機或域）提供服務AEM時，基於瀏覽器的到GraphQLAPI的連接需要CORSAEM。
 
-| 用戶端類型 | [單頁應用程式(SPA)](../spa.md) | [Web元件/JS](../web-component.md) | [行動](../mobile.md) | [伺服器對伺服器](../server-to-server.md) |
+| 客戶端類型 | [單頁應用(SPA)](../spa.md) | [Web元件/JS](../web-component.md) | [行動](../mobile.md) | [伺服器到伺服器](../server-to-server.md) |
 |----------------------------:|:---------------------:|:-------------:|:---------:|:----------------:|
-| 需要CORS設定 | ✔ | ✔ | ✘ | ✘ |
+| 需要CORS配置 | ✔ | ✔ | ✘ | ✘ |
 
 ## OSGi配置
 
-AEM CORS OSGi設定工廠定義接受CORS HTTP要求的允許條件。
+CORS OSGi配AEM置工廠定義了接受CORS HTTP請求的允許條件。
 
-| 客戶端連接到 | AEM 作者 | AEM 發佈 | AEM預覽 |
+| 客戶端連接到 | AEM 作者 | AEM 發佈 | 預AEM覽 |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
-| 需要CORS OSGi設定 | ✔ | ✔ | ✔ |
+| 需要CORS OSGi配置 | ✔ | ✔ | ✔ |
 
 
-以下範例定義AEM Publish的OSGi設定(`../config.publish/..`)，但可以新增至 [任何支援的運行模式資料夾](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#runmode-resolution).
+下面的示例定義AEM發佈的OSGi配置(`../config.publish/..`)，但可以添加到 [任何受支援的運行模式資料夾](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#runmode-resolution)。
 
-關鍵配置屬性為：
+關鍵配置屬性包括：
 
-+ `alloworigin` 和/或 `alloworiginregexp` 指定連接到AEM web的客戶端運行的原始項。
-+ `allowedpaths` 指定從指定的原點允許的URL路徑模式。
-   + 若要支援AEM GraphQL持續查詢，請新增下列模式： `/graphql/execute.json.*`
-   + 若要支援體驗片段，請新增下列模式： `/content/experience-fragments/.*`
-+ `supportedmethods` 指定CORS要求允許的HTTP方法。 新增 `GET`，以支援AEM GraphQL持續查詢（和體驗片段）。
++ `alloworigin` 和/或 `alloworiginregexp` 指定客戶端連接到WebAEM的源。
++ `allowedpaths` 指定從指定的源允許的URL路徑模式。
+   + 要支援AEMGraphQL永續查詢，請添加以下模式： `/graphql/execute.json.*`
+   + 要支援體驗片段，請添加以下模式： `/content/experience-fragments/.*`
++ `supportedmethods` 指定CORS請求允許的HTTP方法。 添加 `GET`，以支援AEMGraphQL永續查詢（和經驗片段）。
 
-[深入了解CORS OSGi設定。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
+[瞭解有關CORS OSGi配置的詳細資訊。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
 
-此範例設定支援使用AEM GraphQL持續查詢。 若要使用用戶端定義的GraphQL查詢，請在 `allowedpaths` 和 `POST` to `supportedmethods`.
+此示例配置支援使用AEMGraphQL永續查詢。 要使用客戶端定義的GraphQL查詢，請在 `allowedpaths` 和 `POST` 至 `supportedmethods`。
 
 + `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~graphql.cfg.json`
 
@@ -89,14 +89,14 @@ AEM CORS OSGi設定工廠定義接受CORS HTTP要求的允許條件。
 }
 ```
 
-### 授權AEM GraphQL API請求
+### 授權AEM的GraphQLAPI請求
 
-存取需要授權的AEM GraphQL API時（通常是AEM製作或AEM發佈上的受保護內容），請確定CORS OSGi設定有其他值：
+當訪問AEM需要授權的GraphQLAPI（通常為AEM作者或AEM發佈上的受保護內容）時，確保CORS OSGi配置具有以下附加值：
 
-+ `supportedheaders` 另外還有清單 `"Authorization"`
-+ `supportscredentials` 設為 `true`
++ `supportedheaders` 還有 `"Authorization"`
++ `supportscredentials` 設定為 `true`
 
-需要CORS設定的AEM GraphQL API的授權請求不尋常，因為這些請求通常發生在 [伺服器對伺服器應用程式](../server-to-server.md) 因此，不需要CORS設定。 需要CORS設定的瀏覽器型應用程式，例如 [單頁應用程式](../spa.md) 或 [Web元件](../web-component.md)，通常會使用授權，因為認證很難保護。
+對需要CORS配AEM置的GraphQLAPI的授權請求是不尋常的，因為通常在 [伺服器到伺服器應用](../server-to-server.md) 因此，不需要CORS配置。 需要CORS配置的基於瀏覽器的應用，如 [單頁應用](../spa.md) 或 [Web元件](../web-component.md)，通常使用授權，因為很難保護憑據。
 
 例如，這兩個設定在 `CORSPolicyImpl` OSGi工廠配置：
 
@@ -120,21 +120,21 @@ AEM CORS OSGi設定工廠定義接受CORS HTTP要求的允許條件。
 }
 ```
 
-#### 範例OSGi設定
+#### OSGi配置示例
 
-+ [在WKND項目中可找到OSGi配置的示例。](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json)
++ [OSGi配置的示例可在WKND項目中找到。](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json)
 
 ## Dispatcher 設定
 
-AEM發佈（和預覽）服務的Dispatcher必須設定為支援CORS。
+必須將AEM發佈（和預覽）服務的Dispatcher配置為支援CORS。
 
-| 客戶端連接到 | AEM 作者 | AEM 發佈 | AEM預覽 |
+| 客戶端連接到 | AEM 作者 | AEM 發佈 | 預AEM覽 |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
-| 需要Dispatcher CORS設定 | ✘ | ✔ | ✔ |
+| 需要Dispatcher CORS配置 | ✘ | ✔ | ✔ |
 
-### 允許HTTP要求上的CORS標題
+### 允許HTTP請求上的CORS標頭
 
-更新 `clientheaders.any` 允許HTTP要求標題的檔案 `Origin`,  `Access-Control-Request-Method`，和 `Access-Control-Request-Headers` 以傳遞至AEM，允許HTTP要求由 [AEM CORS設定](#osgi-configuration).
+更新 `clientheaders.any` 允許HTTP請求標頭的檔案 `Origin`。  `Access-Control-Request-Method`, `Access-Control-Request-Headers` 傳遞到AEM，允許HTTP請求由 [AEM CORS配置](#osgi-configuration)。
 
 `dispatcher/src/conf.dispatcher.d/clientheaders/clientheaders.any`
 
@@ -149,14 +149,14 @@ AEM發佈（和預覽）服務的Dispatcher必須設定為支援CORS。
 $include "./default_clientheaders.any"
 ```
 
-#### Dispatcher設定範例
+#### Dispatcher配置示例
 
-+ [Dispatcher的範例 _用戶頭_ 可在WKND項目中找到配置。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/clientheaders/clientheaders.any#L10-L12)
++ [Dispatcher的示例 _客戶端標頭_ 可在WKND項目中找到配置。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/clientheaders/clientheaders.any#L10-L12)
 
 
-### 傳送CORS HTTP回應標題
+### 傳遞CORS HTTP響應標頭
 
-將Dispatcher伺服器陣列設定為快取 **CORS HTTP回應標題** 以確保在從Dispatcher快取提供AEM GraphQL持續查詢時納入，方法是新增 `Access-Control-...` 標題至快取標題清單。
+將Dispatcher場配置為快取 **CORS HTTP響應標頭** 通過添加Dispatcher快取，確保在從Dispatcher緩AEM存中提供GraphQL永續查詢時包括這些查詢 `Access-Control-...` 標題到快取標題清單。
 
 + `dispatcher/src/conf.dispatcher.d/available_farms/wknd.farm`
 
@@ -182,6 +182,6 @@ $include "./default_clientheaders.any"
 }
 ```
 
-#### Dispatcher設定範例
+#### Dispatcher配置示例
 
-+ [Dispatcher的範例 _CORS HTTP回應標題_ 可在WKND項目中找到配置。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/available_farms/wknd.farm#L109-L114)
++ [Dispatcher的示例 _CORS HTTP響應標頭_ 可在WKND項目中找到配置。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/available_farms/wknd.farm#L109-L114)

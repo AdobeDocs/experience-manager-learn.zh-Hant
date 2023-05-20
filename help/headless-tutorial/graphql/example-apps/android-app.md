@@ -1,6 +1,6 @@
 ---
 title: Android應用 — 無AEM頭示例
-description: 示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此Android應用程式演示了如何使用的GraphQL API查詢內AEM容。
+description: 示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此Android應用程式演示了如何使用的GraphQLAPI查詢內AEM容。
 version: Cloud Service
 mini-toc-levels: 2
 kt: 10588
@@ -13,13 +13,13 @@ exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
 source-git-commit: 985d52f02025dc9cb2b9c70ead4a88af07c63f29
 workflow-type: tm+mt
 source-wordcount: '765'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
 # Android應用
 
-示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此Android應用程式演示了如何使用的GraphQL API查詢內AEM容。 的 [用AEM於Java的無頭客戶端](https://github.com/adobe/aem-headless-client-java) 用於執行GraphQL查詢並將資料映射到Java對象以為應用程式提供電源。
+示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此Android應用程式演示了如何使用的GraphQLAPI查詢內AEM容。 的 [用AEM於Java的無頭客戶端](https://github.com/adobe/aem-headless-client-java) 用於執行GraphQL查詢並將資料映射到Java對象以為應用程式提供電源。
 
 ![帶無頭的Android Java應AEM用](./assets/android-java-app/android-app.png)
 
@@ -31,14 +31,14 @@ ht-degree: 0%
 應在本地安裝以下工具：
 
 + [安卓工作室](https://developer.android.com/studio)
-+ [蠢貨](https://git-scm.com/)
++ [Git](https://git-scm.com/)
 
 ## AEM要求
 
 Android應用程式可與以下部AEM署選項配合使用。 所有部署都需要 [WKND站點v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 安裝。
 
-+ [AEM as a Cloud Service ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 本地設定使用 [AEM Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
++ 本地設定使用 [AEM Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)
 + [AEM6.5 SP13+快速啟動](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
 
 Android應用程式設計為連接到 __AEM發佈__ 但是，如果Android應用程式的配置中提供了身份驗證，則它可以從AEM Author中源出內容。
@@ -60,7 +60,7 @@ Android應用程式設計為連接到 __AEM發佈__ 但是，如果Android應用
 
    __基本身份驗證__
 
-   的 `contentApi.user` 和 `contentApi.password` 驗證本AEM地用戶對WKND GraphQL內容的訪問權限。
+   的 `contentApi.user` 和 `contentApi.password` 驗證本地AEM用戶對WKNDGraphQL內容的訪問權限。
 
    ```plain
    contentApi.endpoint=http://10.0.2.2:4502
@@ -234,5 +234,5 @@ Android應用程式使用兩個視圖來呈現移動體驗中的冒險資料。
 
 ## 其他資源
 
-+ [無頭入門AEM- GraphQL教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [無頭入門AEM-GraphQL教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
 + [用AEM於Java的無頭客戶端](https://github.com/adobe/aem-headless-client-java)

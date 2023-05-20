@@ -1,6 +1,6 @@
 ---
 title: OSGi簡介
-description: 介紹Java應用程式的動態模組化架構OSGi，此架構是Adobe Experience Manager的基礎。
+description: OSGi是Java應用的動態模組化體系結構，是Adobe Experience Manager的基礎。
 topics: osgi, architecture
 audience: administrator, developer
 doc-type: technical video
@@ -21,6 +21,6 @@ ht-degree: 4%
 
 # [!DNL OSGi] 簡介 {#introduction-osgi}
 
-簡介 [!DNL OSGi]，動態模組化架構 [!DNL Java] 應用程式是Adobe Experience Manager的基礎。
+介紹 [!DNL OSGi]，動態模組化體系結構 [!DNL Java] 申請是Adobe Experience Manager的基礎。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32031?quality=12&learn=on)

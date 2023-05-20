@@ -1,6 +1,6 @@
 ---
-title: 疑難排解Unix設定（WebKit轉換）上HtmltoPDF特定問題的步驟
-description: 在UNIX設定中使用Webkit疑難排解HtmltoPDF問題。
+title: 在Unix安裝程式（WebKit轉換）上排除HtmltoPDF特定問題的步驟
+description: 使用UNIX安裝程式上的Webkit診斷HtmltoPDF問題。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 疑難排解Unix設定（WebKit轉換）上HtmltoPDF特定問題的步驟
+# 在Unix安裝程式（WebKit轉換）上排除HtmltoPDF特定問題的步驟
 
-*本影片會逐步說明Unix設定（WebKit轉換）上HtmltoPDF特定問題的疑難排解程式。*
+*此視頻介紹Unix安裝程式（WebKit轉換）上HtmltoPDF特定問題的故障排除過程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335548?quality=12&learn=on)

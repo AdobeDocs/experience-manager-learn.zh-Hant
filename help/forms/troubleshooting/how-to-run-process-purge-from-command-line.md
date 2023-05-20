@@ -1,6 +1,6 @@
 ---
 title: 如何從命令行運行進程清除工具
-description: 從命令行運行流程清除工具以從作業管理器表中刪除記錄的步驟
+description: 從命令行運行進程清除工具以從作業管理器表中刪除記錄的步驟
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # 如何從命令行運行進程清除工具
 
-*此視訊會逐步說明從命令列執行處理清除工具的步驟。*
+*此視頻通過命令行執行運行進程清除工具的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335508?quality=12&learn=on)

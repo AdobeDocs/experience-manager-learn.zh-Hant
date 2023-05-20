@@ -1,6 +1,6 @@
 ---
-title: 建立複雜的影像清單元件 — AEM Headless第一個教學課程
-description: 了解如何使用內容片段、內容參考和影像。
+title: 構建複雜的映像清單元件 — AEM無頭第一教程
+description: 瞭解如何使用內容片段、內容引用和影像。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
@@ -18,29 +18,29 @@ ht-degree: 2%
 ---
 
 
-# 建立複雜元件
+# 構建複雜元件
 
-歡迎使用本教學課程章節，其中我們將探索如何建立複雜的影像清單元件，以轉譯內容片段、巢狀內容片段參考和參考的影像資產。 我們將使用通用編輯器讓React應用程式可編輯，以進一步操作。
+歡迎使用本教程章，我們將在其中探討如何建立呈現內容片段、嵌套內容片段引用和引用的影像資產的複雜影像清單元件。 我們將通過使用通用編輯器使React應用程式可編輯來進一步改進。
 
-Adobe Experience Manager(AEM)中的內容片段提供結構化的內容管理方法。 我們會運用內容片段來填入影像清單元件、處理巢狀參照並顯示參考的影像資產。
+Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來管理內容。 我們利用內容片段來填充我們的影像清單元件，處理嵌套引用並顯示引用的影像資產。
 
-在本教學課程中，我們將引導您建立影像清單元件、處理巢狀參照、轉譯參考影像資產，以及整合通用編輯器。 您將學習如何設定相依性、設計元件結構、擷取和剖析內容片段，以及使用通用編輯器讓應用程式可編輯。
+在本教程中，我們將指導您完成以下操作：構建「影像清單」元件、處理嵌套引用、渲染引用的影像資產以及整合通用編輯器。 您將學習如何設定依賴項、設計元件結構、檢索和分析內容片段，以及使用通用編輯器使應用程式可編輯。
 
-在本教學課程章節結束前，您將擁有功能完整且可編輯的影像清單元件。 您將具備在React應用程式中建立動態元件的相關知識和技能，並透過通用編輯器提升內容製作體驗。 讓我們開始建立可編輯的影像清單元件！
+在本教程的末尾，您將擁有一個功能完全且可編輯的「影像清單」元件。 您將具備在React應用中建立動態元件的知識和技能，從而增強通用編輯器的內容創作體驗。 讓我們開始構建可編輯的映像清單元件！
 
 ## 建立影像清單
 
-1. 我們現在必須建立一些選件片段和影像清單元件。  導覽至內容片段主控台。
+1. 現在，我們必須建立一些提供片段和影像清單元件。  導航到內容片段控制台。
 
    ![create-imagelist-fragment](./assets/3/create-imagelist-fragment.png)
 
-   我們想要建立類型的片段 `imagelist` （型號） `imagelist`)，我們給它標題 `imagelist`.
+   我們要建立類型的片段 `imagelist` （型號） `imagelist`)，我們給它標題 `imagelist`。
 
-   在內容片段編輯器中，我們有機會選取要包含或建立片段。  選取建立片段。
+   在內容片段編輯器中，我們有機會選擇要包括或建立片段的片段。  選擇建立片段。
 
-   我們的模型類型是「影像清單」(Image List)。  為片段提供標題和名稱。
+   我們的模型類型是「影像清單」。  為片段指定標題和名稱。
 
-1. 由於影像清單是包含其他片段參考的容器類型片段，因此可以直接從編輯器建立新選件。  建立選件片段、包含和影像說明及文章。  您可以從下方剪下並貼上文字。  我們使用片段的標題作為卡片的標題。
+1. 由於影像清單是包括對其他片段的引用的容器類型片段，因此可以直接從編輯器建立新的提供。  建立聘用片段、包括和影像描述及文章。  可以從下面剪切和貼上文本。  我們使用片段的標題作為卡的標題。
 
    __Article1__
 
@@ -190,7 +190,7 @@ Adobe Experience Manager(AEM)中的內容片段提供結構化的內容管理方
    Eu facilisis sed odio morbi quis. Consequat semper viverra nam libero justo laoreet sit amet. Eget mi proin sed libero enim sed faucibus. Vitae tempus quam pellentesque nec nam aliquam sem. Justo donec enim diam vulputate ut pharetra sit. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Mauris pellentesque pulvinar pellentesque habitant morbi. Iaculis at erat pellentesque adipiscing. Libero id faucibus nisl tincidunt eget nullam non nisi est. Interdum consectetur libero id faucibus nisl tincidunt. Volutpat odio facilisis mauris sit amet massa. Tristique senectus et netus et malesuada fames ac turpis egestas. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Sapien et ligula ullamcorper malesuada proin libero. Interdum consectetur libero id faucibus nisl tincidunt.
    ```
 
-1. 現在回到查詢編輯器，並擷取這個新元件。  請注意，我們參考 `OfferModel` 在查詢和中繼資料中，我們會用於卡片的標題。
+1. 讓我們返回查詢編輯器並獲取此新元件。  請注意，我們正在參考 `OfferModel` 在查詢和元資料中，我們將使用這些元資料作為卡的標題。
 
    ```graphql
    query imageList {
@@ -226,7 +226,7 @@ Adobe Experience Manager(AEM)中的內容片段提供結構化的內容管理方
    }
    ```
 
-1. 現在，將這個連接到我們的應用。  在 `home.js`，我們會參考新查詢。 以上 `useEffect()` 我們將 `list` 和 `setList`.
+1. 現在將此連接到我們的應用。  在 `home.js`，我們將引用新查詢。 上 `useEffect()` 我們將 `list` 和 `setList`。
 
    ```javascript
    const [list, setList] = useState({});
@@ -246,13 +246,13 @@ Adobe Experience Manager(AEM)中的內容片段提供結構化的內容管理方
    });
    ```
 
-   現在，將這個新增至應用程式的DOM。
+   現在，讓我們將此添加到我們應用的DOM中。
 
    ```javascript
    <div>{list.cards && <ImageList content={list.cards} />}</div>
    ```
 
-   讓我們看一下影像元件。  在影像清單中，我們會重複播放每個選件。
+   讓我們看一下我們的影像化元件。  在影像清單中，我們對每項服務都進行了循環。
 
    ```javascript
    {content.items && content.items.map((items) => (
@@ -260,7 +260,7 @@ Adobe Experience Manager(AEM)中的內容片段提供結構化的內容管理方
    ))}
    ```
 
-   在卡片元件中，我們會呈現每個卡片。
+   在卡元件中，我們呈現每張卡。
 
    ```javascript
    const Cards = ({ content }) => {
@@ -279,9 +279,9 @@ Adobe Experience Manager(AEM)中的內容片段提供結構化的內容管理方
    };
    ```
 
-   另請注意，我們會參考影像元件並傳遞動態URL。
+   另外，請注意，我們正在引用影像元件並將其傳遞為動態URL。
 
-   在影像元件中，我們使用動態URL來建立多個URL的來源集。
+   在影像元件中，我們使用動態URL建立具有多個URL的源集。
 
    ```javascript
    const srcset = [
@@ -294,13 +294,13 @@ Adobe Experience Manager(AEM)中的內容片段提供結構化的內容管理方
 
 ## 啟用通用編輯器
 
-1. 新增 `<meta />` 至應用程式。  開啟 `App.js` 並在檔案頂端插入匯入。
+1. 添加 `<meta />` 到應用。  開啟 `App.js` 並在檔案頂部插入導入。
 
    ```javascript
    import { Helmet } from 'react-helmet';
    ```
 
-   而在應用程式內傳回新增下列程式碼：
+   在應用程式返回中添加以下代碼：
 
    ```javascript
    <Helmet>
@@ -310,13 +310,13 @@ Adobe Experience Manager(AEM)中的內容片段提供結構化的內容管理方
 
    >[!TIP]
    >
-   > 我們使用頭盔庫，根據 `.env` 檔案，但您可以將此程式碼硬式編碼至 `index.html`.
+   > 我們使用Heart庫，根據 `.env` 檔案，但您可以將其硬編碼到 `index.html`。
 
-1. 現在來更新卡片，以識別用於編輯每個卡片的片段和資料類型。
+1. 現在，讓我們更新為卡，以標識用於編輯每張卡的片段和資料類型。
 
-   內 `<div className='card' key={card._path}>`
+   在 `<div className='card' key={card._path}>`
 
-   新增
+   添加
 
    ```javascript
    itemID={`urn:aemconnection:${card._path}/jcr:content/data/master`} itemfilter='cf' itemType='reference' itemScope
@@ -328,21 +328,21 @@ Adobe Experience Manager(AEM)中的內容片段提供結構化的內容管理方
    <div className='card' key={card._path} itemID={`urn:aemconnection:${card._path}/jcr:content/data/master`} itemfilter='cf' itemType='reference' itemScope>
    ```
 
-1. 現在識別可編輯的內容。
+1. 現在確定可編輯的內容。
 
-   至 `<h3 />` 新增：
+   到 `<h3 />` 添加：
 
    ```javascript
    itemProp="_metadata" itemType="text"
    ```
 
-   敬我們的 `<div />` 新增：
+   敬我們 `<div />` 添加：
 
    ```javascript
    itemProp="description" itemType="richtext"
    ```
 
-   卡片的最終代碼：
+   卡的最終代碼：
 
    ```javascript
    const Cards = ({ content }) => {
@@ -361,7 +361,7 @@ Adobe Experience Manager(AEM)中的內容片段提供結構化的內容管理方
    };
    ```
 
-的最終程式碼 `home.js`:
+最終代碼 `home.js`:
 
 ```javascript
 import React, { useContext, useEffect, useState } from 'react';
@@ -421,4 +421,4 @@ export default Home;
 
 ## 恭喜！
 
-您已成功建立AEM無頭體驗，此體驗由AEM無頭API提供完全支援，且可使用通用編輯器編輯。
+您已成功建立了無AEM頭體驗，該體驗完全由無AEM頭API提供支援，並且可通過通用編輯器編輯。

@@ -1,6 +1,6 @@
 ---
-title: 製作和發佈簡介 | AEM快速網站建立
-description: 使用AEMAdobe Experience Manager中的頁面編輯器來更新網站的內容。 了解如何使用元件來加速編寫。 了解AEM製作和發佈環境之間的差異，並了解如何將變更發佈至即時網站。
+title: 創作和發佈簡介 |快AEM速站點建立
+description: 使用Adobe Experience Manager的頁面編AEM輯器更新網站的內容。 瞭解如何使用元件來方便創作。 瞭解AEM作者與發佈環境之間的區別，並瞭解如何將更改發佈到即時網站。
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -18,161 +18,161 @@ ht-degree: 2%
 
 ---
 
-# 製作和發佈簡介 {#author-content-publish}
+# 創作和發佈簡介 {#author-content-publish}
 
-請務必了解使用者如何更新網站的內容。 在本章中，我們將採用 **內容作者** 並對上一章中產生的網站進行一些編輯更新。 在章節結尾，我們將發佈變更，以了解即時網站的更新方式。
+瞭解用戶將如何更新網站的內容非常重要。 在本章中，我們將採用 **內容作者** 對上一章中生成的站點進行編輯更新。 在本章的末尾，我們將發佈這些更改以瞭解即時網站的更新方式。
 
 ## 必備條件 {#prerequisites}
 
-此為多部分教學課程，假設要執行 [建立網站](./create-site.md) 章節已完成。
+這是一個多部分教程，並假定在 [建立站點](./create-site.md) 一章已經完成。
 
 ## 目標 {#objective}
 
-1. 了解 **頁面** 和 **元件** 在AEM Sites。
-1. 了解如何更新網站的內容。
-1. 了解如何將變更發佈至上線網站。
+1. 瞭解 **頁面** 和 **元件** 在AEM Sites。
+1. 瞭解如何更新網站的內容。
+1. 瞭解如何將更改發佈到即時網站。
 
 ## 建立新頁面 {#create-page}
 
-網站通常會分割成頁面，以形成多頁體驗。 AEM以相同方式建構內容。 接下來，為網站建立新頁面。
+通常，網站會被分成多個頁面，形成多頁體驗。 結AEM構內容相同。 接下來，為站點建立新頁。
 
-1. 登入AEM **作者** 上一章中使用的服務。
-1. 在AEM Start畫面中按一下 **網站** > **WKND站點** > **英文** > **文章**
-1. 在右上角按一下 **建立** > **頁面**.
+1. 登錄到AEM **作者** 上一章中使用的服務。
+1. 在「Start(開AEM始)」螢幕中按一下 **站點** > **WKND站點** > **英語** > **文章**
+1. 在右上角按一下 **建立** > **頁面**。
 
    ![建立頁面](assets/author-content-publish/create-page-button.png)
 
-   這會顯示 **建立頁面** 嚮導。
+   這將提出 **建立頁** 的子菜單。
 
-1. 選擇 **文章頁面** 範本，按一下 **下一個**.
+1. 選擇 **文章頁** 按一下 **下一個**。
 
-   AEM中的頁面是根據頁面範本建立。 如需詳細探索頁面範本，請參閱 [頁面範本](page-templates.md) 章節。
+   中的頁AEM面基於頁面模板建立。 在中詳細探討了頁面模板 [頁面模板](page-templates.md) 一章。
 
-1. 在 **屬性** 輸入 **標題** 《你好世界》
-1. 設定 **名稱** 為 `hello-world` 按一下 **建立**.
+1. 下 **屬性** 輸入 **標題** &quot;你好世界&quot;
+1. 設定 **名稱** 要 `hello-world` 按一下 **建立**。
 
-   ![初始頁面屬性](assets/author-content-publish/initial-page-properties.png)
+   ![初始頁屬性](assets/author-content-publish/initial-page-properties.png)
 
-1. 在對話方塊快顯視窗中按一下 **開啟** 開啟新建立的頁面。
+1. 在對話框彈出式窗口中按一下 **開啟** 開啟新建立的頁面。
 
-## 製作元件 {#author-component}
+## 建立元件 {#author-component}
 
-AEM元件可視為網頁的小型模組化建置組塊。 將UI分割為邏輯區塊或元件，可讓管理更輕鬆。 要重新使用元件，元件必須是可配置的。 這可透過製作對話方塊完成。
+組AEM件可以視為網頁的小模組構建塊。 通過將UI分為邏輯塊或元件，可使管理更輕鬆。 為了重新使用元件，元件必須是可配置的。 這是通過作者對話框完成的。
 
-AEM提供 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 生產就緒即可使用。 此 **核心元件** 範圍包括基本元素，如 [文字](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) 和 [影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 更複雜的UI元素，例如 [輪播](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html).
+AEM提供 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 生產準備使用。 的 **核心元件** 範圍，如 [文本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) 和 [影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 到更複雜的UI元素，如 [旋轉木馬](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)。
 
-接下來，使用AEM頁面編輯器編寫一些元件。
+接下來，使用「頁面編輯器」編寫AEM一些元件。
 
-1. 導覽至 **《你好世界》** 頁面。
-1. 確保您位於 **編輯** 模式，然後在左側邊欄中按一下 **元件** 表徵圖。
+1. 導航到 **《你好世界》** 的子菜單。
+1. 確保您在 **編輯** 模式，在左側滑軌中按一下 **元件** 表徵圖
 
-   ![頁面編輯器側邊欄](assets/author-content-publish/page-editor-siderail.png)
+   ![頁面編輯器側欄](assets/author-content-publish/page-editor-siderail.png)
 
-   這會開啟元件程式庫，並列出可在頁面上使用的可用元件。
+   這將開啟「元件」庫，並列出可在頁面上使用的可用元件。
 
-1. 向下捲動並 **拖放** a **文字(v2)** 元件（位於頁面的主要可編輯區域）。
+1. 向下滾動並 **拖放** a **文本(v2)** 上的元件。
 
-   ![拖曳+拖放文字元件](assets/author-content-publish/drag-drop-text-cmp.png)
+   ![拖放文本元件](assets/author-content-publish/drag-drop-text-cmp.png)
 
-1. 按一下 **文字** 要突出顯示的元件，然後按一下 **扳手** 圖示 ![扳手圖示](assets/author-content-publish/wrench-icon.png) 以開啟元件的對話方塊。 輸入一些文字並將更改保存到對話框。
+1. 按一下 **文本** 要加亮的元件，然後按一下 **扳** 表徵圖 ![扳手錶徵圖](assets/author-content-publish/wrench-icon.png) 開啟「元件」對話框。 輸入一些文本並將更改保存到對話框。
 
    ![RTF元件](assets/author-content-publish/rich-text-populated-component.png)
 
-   此 **文字** 元件現在應會在頁面上顯示rtf。
+   的 **文本** 元件現在應在頁面上顯示富格文本。
 
-1. 重複上述步驟，除了拖曳 **影像(v2)** 元件。 開啟 **影像** 元件的對話框。
+1. 重複上述步驟，但拖動 **影像(v2)** 上的元件。 開啟 **影像** 對話框。
 
-1. 在左側邊欄中，切換至 **資產尋找器** 按一下 **資產** 圖示 ![資產圖示](assets/author-content-publish/asset-icon.png).
-1. **拖放** 將影像放入元件的對話方塊中，然後按一下 **完成** 以儲存變更。
+1. 在左滑軌中，切換到 **資產查找器** 按一下 **資產** 表徵圖 ![資產表徵圖](assets/author-content-publish/asset-icon.png)。
+1. **拖放** 將影像放入「元件」對話框，然後按一下 **完成** 的子菜單。
 
-   ![將資產新增至對話方塊](assets/author-content-publish/add-asset-dialog.png)
+   ![將資產添加到對話框](assets/author-content-publish/add-asset-dialog.png)
 
-1. 請注意，頁面上有元件，例如 **標題**, **導覽**, **搜尋** 已修正。 這些區域是「頁面範本」的一部分，無法在個別頁面上修改。 在下一章中會詳細探討此內容。
+1. 請注意頁面上有元件，如 **標題**。 **導航**。 **搜索** 已修復。 這些區域配置為頁面模板的一部分，無法在單個頁面上進行修改。 在下一章中將對此進行更多探討。
 
-您可以嘗試其他部分元件。 關於每個 [您可以在此處找到核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). 關於 [您可以在此處找到頁面編寫](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html).
+您可以自由地嘗試其它部分。 關於每個 [可在此處找到核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。 詳細視頻系列關於 [可在此處找到頁面創作](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html)。
 
 ## 發佈更新 {#publish-updates}
 
-AEM環境會分割為 **作者服務** 和 **發佈服務**. 在本章中，我們已對上的網站進行數項修改 **作者服務**. 為了讓網站訪客檢視將變更發佈至 **發佈服務**.
+環AEM境在 **作者服務** 和 **發佈服務**。 在本章中，我們對上面的站點進行了幾次修改 **作者服務**。 為了讓站點訪問者查看所做更改，我們需要將更改發佈到 **發佈服務**。
 
-![高階圖](assets/author-content-publish/author-publish-high-level-flow.png)
+![高級圖](assets/author-content-publish/author-publish-high-level-flow.png)
 
-*從製作到發佈的高階內容流程*
+*從作者到發佈的高級內容流*
 
-**1.** 內容作者會更新網站內容。 可預覽、審核和核准更新，以便上線推播。
+**1.** 內容作者對網站內容進行更新。 可以預覽、查看和批准更新以即時推送。
 
-**2.** 內容已發佈。 可依需要執行發佈，或排程日期。
+**2.** 內容已發佈。 可以按需執行發佈，也可以計畫將來的日期。
 
-**3.** 網站訪客會看到發佈服務上反映的變更。
+**3.** 站點訪問者將看到「發佈」服務上反映的更改。
 
-### 發佈變更
+### 發佈更改
 
-接下來，我們發佈變更。
+接下來，我們發佈更改。
 
-1. 從AEM開始畫面導覽至 **網站** ，然後選取 **WKND站點**.
-1. 按一下 **管理出版物** 的下限。
+1. 從「開始AEM」螢幕導航到 **站點** 的 **WKND站點**。
+1. 按一下 **管理發布** 的子菜單。
 
-   ![管理發佈](assets/author-content-publish/click-manage-publiciation.png)
+   ![管理出版物](assets/author-content-publish/click-manage-publiciation.png)
 
-   由於這是一個全新的網站，因此我們要發佈所有頁面，並且可以使用「管理出版物」精靈來確切定義需要發佈的內容。
+   由於此網站是全新的網站，因此我們希望發佈所有頁面，並可以使用「管理發布」嚮導精確定義需要發佈的內容。
 
-1. 在 **選項** 將預設設定保留為 **發佈** 並排程 **現在**. 按一下&#x200B;**下一步**。
-1. 在 **範圍**，請選取 **WKND站點** 按一下 **包括子項設定**. 在對話方塊中，核取 **包括子項**. 取消勾選其餘的方塊，以確保發佈整個網站。
+1. 下 **選項** 將預設設定保留為 **發佈** 並安排 **現在**。 按一下&#x200B;**下一步**。
+1. 下 **範圍**，選擇 **WKND站點** 按一下 **包括子項設定**。 在對話框中，選中 **包括子項**。 取消選中其餘框以確保發佈整個站點。
 
    ![更新發佈範圍](assets/author-content-publish/update-scope-publish.png)
 
-1. 按一下 **發佈的參考** 按鈕。 在對話方塊中，確認已勾選所有項目。 這包括 **標準網站範本** 和「網站範本」產生的數個設定。 按一下 **完成** 以更新。
+1. 按一下 **已發佈引用** 按鈕 在對話框中，驗證是否檢查了所有內容。 這包括 **標準站點模板** 以及由站點模板生成的幾個配置。 按一下 **完成** 的子菜單。
 
-   ![發佈參考](assets/author-content-publish/publish-references.png)
+   ![發佈引用](assets/author-content-publish/publish-references.png)
 
-1. 最後，勾選旁邊的方塊 **WKND站點** 按一下 **下一個** 在右上角。
-1. 在 **工作流程** 步驟，輸入 **工作流程標題**. 這可以是任何文字，日後在稽核軌跡中會很實用。 輸入「初始發佈」，然後按一下 **發佈**.
+1. 最後，選中旁邊的框 **WKND站點** 按一下 **下一個** 在右上角。
+1. 在 **工作流** 步驟，輸入 **工作流標題**。 這可以是任何文本，並且以後可以作為審計線索的一部分。 輸入「初始發佈」，然後按一下 **發佈**。
 
-![工作流程步驟初始發佈](assets/author-content-publish/workflow-step-publish.png)
+![工作流步驟初始發佈](assets/author-content-publish/workflow-step-publish.png)
 
-## 檢視已發佈的內容 {#publish}
+## 查看已發佈的內容 {#publish}
 
-接著，導覽至發佈服務以檢視變更。
+接下來，導航到「發佈」服務以查看更改。
 
-1. 若要取得發佈服務的URL，可以復製作者URL並取代 `author` word `publish`. 例如：
+1. 獲取發佈服務URL的一種簡單方法是復製作者URL並替換 `author` 單詞 `publish`。 例如：
 
    * **作者 URL** - `https://author-pYYYY-eXXXX.adobeaemcloud.com/`
    * **發佈URL** - `https://publish-pYYYY-eXXXX.adobeaemcloud.com/`
 
-1. 新增 `/content/wknd.html` 至發佈URL，使最終URL看起來類似： `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd.html`.
+1. 添加 `/content/wknd.html` 到「發佈」URL，以便最終URL如下所示： `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd.html`。
 
    >[!NOTE]
    >
-   > 變更 `wknd.html` 若要比對網站名稱，在 [網站建立](create-site.md).
+   > 更改 `wknd.html` 匹配站點名稱(如果在 [站點建立](create-site.md)。
 
-1. 導覽至「發佈URL」後，您應該會看到網站，而沒有任何AEM編寫功能。
+1. 導航到「發佈URL」，您應該看到該網站，而不需要任何創AEM作功能。
 
-   ![已發佈網站](assets/author-content-publish/publish-url-update.png)
+   ![已發佈站點](assets/author-content-publish/publish-url-update.png)
 
-1. 使用 **導覽** 功能表 **文章** > **《你好世界》** 導覽至先前建立的「您好世界」頁面。
-1. 返回 **AEM Author Service** 並在頁面編輯器中進行其他內容變更。
-1. 按一下 **頁面屬性** 圖示> **發佈頁面**
+1. 使用 **導航** 菜單 **文章** > **《你好世界》** 導航到先前建立的「Hello World」頁。
+1. 返回到 **AEM作者服務** 並在頁面編輯器中進行一些其他內容更改。
+1. 通過按一下 **頁面屬性** 表徵圖 **發佈頁面**
 
    ![發佈直接](assets/author-content-publish/page-editor-publish.png)
 
-1. 返回 **AEM Publish Service** 來檢視變更。 很可能 **not** 立即查看更新。 這是因為 **AEM Publish Service** 包括 [透過Apache Web伺服器和CDN進行快取](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html). 依預設，快取HTML內容約5分鐘。
+1. 返回到 **AEM發佈服務** 的子菜單。 你很可能 **不** 立即查看更新。 這是因為 **AEM發佈服務** 包括 [通過Apache Web伺服器和CDN進行快取](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html)。 預設情況下，HTML內容將快取約5分鐘。
 
-1. 若要略過快取以用於測試/除錯用途，只需新增查詢參數，如 `?nocache=true`. URL看起來會像 `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`. 有關可用快取策略和配置的詳細資訊 [可在此處找到](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html).
+1. 要繞過快取以進行測試/調試，只需添加查詢參數，如 `?nocache=true`。 該URL看起來 `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`。 有關快取策略和可用配置的詳細資訊 [可在此處找到](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html)。
 
-1. 您也可以在Cloud Manager中找到發佈服務的URL。 導覽至 **Cloud Manager計畫** > **環境** > **環境**.
+1. 您還可以在雲管理器中找到發佈服務的URL。 導航到 **雲管理器程式** > **環境** > **環境**。
 
-   ![檢視發佈服務](assets/author-content-publish/view-environment-segments.png)
+   ![查看發佈服務](assets/author-content-publish/view-environment-segments.png)
 
-   在 **環境區段** 您可以找到連結 **作者** 和 **發佈** 服務。
+   下 **環境段** 可以找到指向 **作者** 和 **發佈** 服務。
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您剛剛撰寫並發佈了AEM網站的變更！
+祝賀您，您剛剛撰寫並發佈了對網站的AEM更改！
 
 ### 後續步驟 {#next-steps}
 
-在實際實作中，規劃網站時通常會先建立模型和UI設計， 了解如何使用Adobe XD UI Kit來設計和加速Adobe Experience Manager Sites實作，於 [使用Adobe XD規劃UI](./ui-planning-adobe-xd.md).
+在現實實施規劃中，通常在建立站點之前先使用帶有無形模組和UI設計的站點。 瞭解如何使用Adobe XDUI套件來設計和加速您的Adobe Experience Manager Sites實施 [UI規劃與Adobe XD](./ui-planning-adobe-xd.md)。
 
-想繼續探索AEM Sites功能嗎？ 隨時跳進 [頁面範本](./page-templates.md) 了解頁面範本和頁面之間的關係。
+想繼續探索AEM Sites的能力嗎？ 你可以直接跳到 [頁面模板](./page-templates.md) 瞭解頁面模板和頁面之間的關係。
 
 

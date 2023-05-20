@@ -1,6 +1,6 @@
 ---
-title: 使用AEMas a Cloud Service快取頁面變體
-description: 了解如何設定和使用AEM as a cloud service以支援快取頁面變體。
+title: 快取具有AEMas a Cloud Service的頁變型
+description: 瞭解如何設定和使用雲服AEM務以支援快取頁面變型。
 role: Architect, Developer
 topic: Development
 feature: CDN Cache, Dispatcher
@@ -12,57 +12,57 @@ ht-degree: 1%
 
 ---
 
-# 快取頁面變體
+# 快取頁變型
 
-了解如何設定和使用AEM as a cloud service以支援快取頁面變體。
+瞭解如何設定和使用雲服AEM務以支援快取頁面變型。
 
-## 範例使用案例
+## 示例使用案例
 
-+ 任何根據使用者的地理位置以及含有動態內容之頁面的快取，提供不同服務組合和對應定價選項的服務提供者，都應在CDN和Dispatcher進行管理。
++ 任何基於用戶的地理位置和具有動態內容的頁面的快取而提供不同的服務組合和相應定價選項的服務提供商都應在CDN和Dispatcher處進行管理。
 
-+ 零售客戶在全國各地都有商店，而每家商店都會根據其所在位置提供不同的優惠方案，且含有動態內容的頁面快取應在CDN和Dispatcher中管理。
++ 零售客戶在全國範圍內擁有商店，每個商店都根據其所在位置提供不同的服務，並且應在CDN和Dispatcher處管理包含動態內容的頁面快取。
 
 ## 解決方案概覽
 
-+ 識別變體索引鍵及其可能具有的值數。 在我們的範例中，我們依美國各州而異，因此最大數為50。 這個小到不會造成CDN的變體限制問題。 [查看變型限制部分](#variant-limitations).
++ 標識變型鍵及其可能具有的值數。 在我們的示例中，我們因美國州而異，因此最大數為50。 這個小到不會導致CDN的變型限制問題。 [查看變型限制部分](#variant-limitations)。
 
-+ AEM程式碼必須設定cookie __&quot;x-aem-variant&quot;__ 訪客的偏好狀態(例如 `Set-Cookie: x-aem-variant=NY`)填入初始HTTP要求的對應HTTP回應。
++ 代AEM碼必須設定cookie __&quot;x-aem變數&quot;__ 訪問者的首選狀態(如 `Set-Cookie: x-aem-variant=NY`)的HTTP請求的相應HTTP響應。
 
-+ 訪客的後續請求會傳送該Cookie(例如 `"Cookie: x-aem-variant=NY"`)，且Cookie會在CDN層級轉換為預先定義的標題(即 `x-aem-variant:NY`)，此資訊會傳遞至dispatcher。
++ 訪問者的後續請求將發送該cookie(例如 `"Cookie: x-aem-variant=NY"`)，並在CDN級別將cookie轉換為預定義的標頭(即 `x-aem-variant:NY`)。
 
-+ Apache重寫規則會修改請求路徑，將頁首值加入頁面URL中，成為Apache Sling選擇器(例如 `/page.variant=NY.html`). 這可讓AEM Publish根據選取器來提供不同內容，而Dispatcher可針對每個變體快取一個頁面。
++ Apache重寫規則修改請求路徑以將頭值作為Apache Sling選擇器(例如， `/page.variant=NY.html`). 這允許AEM發佈根據選擇器為不同內容提供服務，而調度程式則為每個變數快取一頁。
 
-+ AEM Dispatcher傳送的回應必須包含HTTP回應標題 `Vary: x-aem-variant`. 這會指示CDN針對不同的標題值儲存不同的快取副本。
++ Dispatcher發送的響AEM應必須包含HTTP響應標頭 `Vary: x-aem-variant`。 這指示CDN儲存不同標頭值的不同快取副本。
 
 >[!TIP]
 >
->每當Cookie設定時(例如 Set-Cookie:x-aem-variant=NY)回應不應可快取(應具有快取控制：專用或快取控制：無快取)
+>每次設定Cookie(例如 集餅乾：x-aem-variant=NY)響應不應可快取(應具有Cache-Control:專用或快取控制：無快取)
 
-## HTTP要求流程
+## HTTP請求流
 
-![變體快取請求流](./assets/variant-cache-request-flow.png)
+![變型快取請求流](./assets/variant-cache-request-flow.png)
 
 >[!NOTE]
 >
->以上的初始HTTP要求流程必須在請求使用變體的任何內容之前進行。
+>上面的初始HTTP請求流必須在請求使用變型的任何內容之前進行。
 
 ## 使用狀況
 
-1. 為了演示此功能，我們將使用 [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)的實作範例。
+1. 要演示該功能，我們將使用 [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)以實施為例，
 
-1. 實作 [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) 在AEM中設定 `x-aem-variant` HTTP回應上的cookie，具有變體值。
+1. 實施 [SlingServlet過濾器](https://sling.apache.org/documentation/the-sling-engine/filters.html) AEM設定 `x-aem-variant` HTTP響應上的cookie，帶變數值。
 
-1. AEM CDN自動轉換 `x-aem-variant` 將cookie移入相同名稱的HTTP標題中。
+1. AEMCDN自動轉換 `x-aem-variant` Cookie到同名的HTTP標頭。
 
-1. 將Apache Web伺服器mod_rewrite規則新增至 `dispatcher` 專案，此專案會修改請求路徑以包含變體選取器。
+1. 將Apache Web伺服器mod_rewrite規則添加到 `dispatcher` 項目，它修改請求路徑以包括變型選擇器。
 
-1. 使用Cloud Manager部署篩選和重寫規則。
+1. 使用雲管理器部署篩選器和重寫規則。
 
-1. 測試整體請求流程。
+1. Test整個請求流。
 
 ## 程式碼範例
 
-+ 要設定的範例SlingServletFilter `x-aem-variant` cookie與AEM中的值。
++ 要設定的示例SlingServletFilter `x-aem-variant` 包含值的cookieAEM。
 
    ```
    package com.adobe.aem.guides.wknd.core.servlets.filters;
@@ -119,7 +119,7 @@ ht-degree: 1%
    }
    ```
 
-+ 中的重寫規則範例 __dispatcher/src/conf.d/rewrite.rules__ 檔案，在Git中以原始碼管理，並使用Cloud Manager進行部署。
++ 中的「重寫」規則示例 __dispatcher/src/conf.d/rewrite.rules__ 檔案，該檔案在Git中作為原始碼管理，並使用Cloud Manager進行部署。
 
    ```
    ...
@@ -131,12 +131,12 @@ ht-degree: 1%
    ...
    ```
 
-## 變體限制
+## 變型限制
 
-+ AEM CDN最多可管理200個變體。 這表示 `x-aem-variant` 標題最多可以有200個不重複值。 如需詳細資訊，請檢閱 [CDN設定限制](https://docs.fastly.com/en/guides/resource-limits).
++ AEMCDN最多可管理200種變體。 這意味著 `x-aem-variant` 頭最多可以有200個唯一值。 有關詳細資訊，請查看 [CDN配置限制](https://docs.fastly.com/en/guides/resource-limits)。
 
-+ 請務必小心，以確保您選擇的變體金鑰不會超過此數字。  例如，使用者ID不是好索引鍵，因為大部分網站都很容易超過200個值，而一個國家/地區若少於200個州，則較適合該國家/地區。
++ 必須小心，確保所選的變型密鑰不超過此數。  例如，用戶ID不是一個好的密鑰，因為它對於大多數網站來說很容易超過200個值，而如果一個國家/地區的州數少於200個，則它更適合。
 
 >[!NOTE]
 >
->當變體超過200個時，CDN會以「太多變體」回應來回應，而非以頁面內容回應。
+>當變型超過200時，CDN將用「變型太多」響應來響應，而不是頁面內容。

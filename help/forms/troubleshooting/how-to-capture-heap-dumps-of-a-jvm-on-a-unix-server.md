@@ -1,6 +1,6 @@
 ---
-title: 如何捕獲Unix伺服器上JVM的堆轉儲
-description: 在unix伺服器上捕獲正在運行的Java進程的堆轉儲
+title: 如何捕獲UNIX伺服器上JVM的堆轉儲
+description: 捕獲在unix伺服器上運行的Java進程的堆轉儲
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何捕獲Unix伺服器上JVM的堆轉儲
+# 如何捕獲UNIX伺服器上JVM的堆轉儲
 
-*此視訊會逐步說明擷取UNIX伺服器上JVM的堆放轉儲的步驟。*
+*此視頻將介紹在unix伺服器上捕獲JVM的堆轉儲的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335489?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
 title: Creative Cloud和Assets Essentials
-description: 了解Assets Essentials如何與Adobe Creative Cloud整合。
+description: 瞭解Assets Essentials如何與Adobe Creative Cloud整合。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # Creative Cloud和Assets Essentials
 
-了解如何整合Assets Essentials與Adobe Creative Cloud Libraries，讓您：
+瞭解如何將Assets Essentials與Adobe Creative Cloud圖書館整合，從而：
 
-+ 來自Assets Essentials的檔案，可透過Creative Cloud程式庫順暢地存取
-+ 來自Creative Cloud程式庫的檔案要共用至Assets Essentials
++ 通過Creative Cloud庫無縫訪問Assets Essentials的檔案
++ 將從Creative Cloud庫共用到Assets Essentials的檔案
 
 >[!VIDEO](https://video.tv.adobe.com/v/336069?quality=12&learn=on)

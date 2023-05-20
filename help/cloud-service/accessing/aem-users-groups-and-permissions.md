@@ -1,5 +1,5 @@
 ---
-title: AEM使用者、群組和權限
+title: AEM用戶、組和權限
 description: Adobe Experience Manager 以 Adobe IMS 使用者、使用者群組和產品設定檔為建置基礎，以提供使用者可自訂的 AEM 存取權。了解如何定義 AEM 群組和權限，以及 AEM 群組和權限如何與 Adobe IMS 抽象化功能搭配運作，以提供順暢且可自訂的 AEM 存取權。
 version: Cloud Service
 topic: Administration, Security
@@ -16,7 +16,7 @@ ht-degree: 90%
 
 ---
 
-# AEM使用者、群組和權限 {#aem-users-groups-and-permissions}
+# AEM用戶、組和權限 {#aem-users-groups-and-permissions}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_aem_users_groups"

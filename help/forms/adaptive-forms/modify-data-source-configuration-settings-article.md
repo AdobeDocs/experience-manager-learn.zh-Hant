@@ -1,6 +1,6 @@
 ---
 title: 修改資料源配置設定。
-description: 修改「資料來源組態設定」中的主機名稱和其他設定。
+description: 修改資料源配置設定中的主機名和其他設定。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -17,14 +17,14 @@ ht-degree: 0%
 
 # 能夠修改資料源配置設定{#ability-to-modify-data-source-configuration-settings}
 
-在AEM Forms 6.4版之前，一旦設定了資料來源，您便無法變更RESTful服務的配置、主機、基本路徑。 如果您想要針對不同的環境測試您的資料來源，就會出現問題。
+在AEM Forms6.4版之前，一旦配置了資料源，您就無法更改REST風格服務的方案、主機、基本路徑。 如果您想針對不同的環境test資料源，則這會有問題。
 
-隨著AEM Forms 6.5的發行，您現在可以輕鬆變更上述屬性。 有了這項新功能，您現在可以根據開發環境建立表單資料模型，一旦您滿意結果，即可變更屬性以指向不同環境。
+隨著AEM Forms6.5的發佈，您現在可以輕鬆地更改上述屬性。 利用此新功能，您現在可以針對開發環境建立表單資料模型，一旦您對結果感到滿意，就可以更改屬性以指向其他環境。
 
-以下螢幕擷取畫面顯示AEM Forms 6.4和Forms 6.5中的資料來源組態設定
+下面的螢幕截圖顯示了AEM Forms6.4和Forms6.5中的資料源配置設定
 
-**AEM 6.4中的資料來源設定**
+**6.4中的AEM資料源配置**
 
-![64DataSource配置](assets/64release.gif)
-**AEM 6.5及更新版本中可編輯的資料來源設定**
-![65DataSource配置](assets/modifiabledatasource.jfif)
+![64資料源配置](assets/64release.gif)
+**6.5及更高版本AEM的可編輯資料源配置**
+![65資料源配置](assets/modifiabledatasource.jfif)

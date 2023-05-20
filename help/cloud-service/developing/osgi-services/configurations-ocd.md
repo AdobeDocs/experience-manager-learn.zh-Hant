@@ -1,6 +1,6 @@
 ---
 title: OSGi配置作為ObjectClassDefinition對象
-description: 了解如何在OSGi服務中建立ObjectClassDefinitions並將其指定為OSGi配置表示
+description: 瞭解如何在OSGi服務中建立ObjectClassDefinitions並將其指定為OSGi配置表示
 role: Developer
 level: Beginner
 topic: Development
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # OSGi配置作為ObjectClassDefinition對象
 
-了解如何在OSGi服務中建立ObjectClassDefinitions並將其指定為OSGi配置表示。
+瞭解如何在OSGi服務中建立ObjectClassDefinitions並將其指定為OSGi配置表示。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335730?quality=12&learn=on)
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 + [@AttributeDefinition JavaDocs](https://javadoc.io/static/com.adobe.aem/aem-sdk-api/2021.7.5658.20210723T140305Z-210600/org/osgi/service/metatype/annotations/AttributeDefinition.html)
 + [@Activate JavaDocs](https://javadoc.io/static/com.adobe.aem/aem-sdk-api/2021.7.5658.20210723T140305Z-210600/org/osgi/service/component/annotations/Activate.html)
 
-## 程式碼
+## 代碼
 
 ### ActivitiesImpl.java
 

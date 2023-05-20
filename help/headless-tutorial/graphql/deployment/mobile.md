@@ -8,13 +8,13 @@ role: Developer, Architect
 level: Intermediate
 kt: 10796
 thumbnail: KT-10796.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+exl-id: 1f536079-b3ce-4807-be88-804378e75d37
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 2%
 
 ---
-
 
 # 無AEM頭移動部署
 
@@ -50,7 +50,7 @@ Adobe提供了iOS和Android™移動應用示例。
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/ios-swiftui-app.md" title="iOS應用">iOS應用</a></p>
-                   <p class="is-size-6">以SwiftUI編寫的iOS應用程式示例，該應用程式使用AEM來自Headless GraphQL API的內容。</p>
+                   <p class="is-size-6">用SwiftUI編寫的iOS應用程式示例，它使用來自無AEM頭GraphQLAPI的內容。</p>
                    <a href="../example-apps/ios-swiftui-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                    </a>
@@ -71,7 +71,7 @@ Adobe提供了iOS和Android™移動應用示例。
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/android-app.md" title="Android™應用">Android™應用</a></p>
-                   <p class="is-size-6">Java™ Android™應用程式示例，它使用來自無AEM頭GraphQL API的內容。</p>
+                   <p class="is-size-6">Java™ Android™應用程式示例，它消耗來自無頭GraphQLAPIAEM的內容。</p>
                    <a href="../example-apps/android-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">查看示例</span>
                    </a>
@@ -80,5 +80,3 @@ Adobe提供了iOS和Android™移動應用示例。
        </div>
     </div>
 </div>
-
-

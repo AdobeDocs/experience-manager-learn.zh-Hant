@@ -1,6 +1,6 @@
 ---
-title: 使用OSGi Web主控台除錯AEM SDK
-description: AEM SDK的本機Quickstart有一個OSGi Web主控台，提供本機AEM執行階段的各種資訊和簡介，有助於了解應用程式如何辨識，以及在AEM中的功能。
+title: 使用AEMOSGi Web控制台調試SDK
+description: SDKAEM的本地快速啟動具有OSGi Web控制台，該控制台在本地運行時提供各種資訊和介紹，這些資訊和介紹對於瞭解應用程式如何被識別以及其中的功AEM能非常有用。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -19,59 +19,59 @@ ht-degree: 0%
 
 ---
 
-# 使用OSGi Web主控台除錯AEM SDK
+# 使用AEMOSGi Web控制台調試SDK
 
-AEM SDK的本機Quickstart有一個OSGi Web主控台，提供本機AEM執行階段的各種資訊和簡介，有助於了解應用程式如何辨識，以及在AEM中的功能。
+SDKAEM的本地快速啟動具有OSGi Web控制台，該控制台在本地運行時提供各種資訊和介紹，這些資訊和介紹對於瞭解應用程式如何被識別以及其中的功AEM能非常有用。
 
-AEM提供許多OSGi主控台，每個主控台都提供AEM不同層面的重要深入分析，但下列主控台在除錯應用程式時通常最有用。
+提AEM供了許多OSGi控制台，每個控制台都提供了對不同方面的關鍵AEM見解，但是，以下內容通常在調試應用程式時最有用。
 
-## 套件組合
+## 捆綁
 
 >[!VIDEO](https://video.tv.adobe.com/v/34335?quality=12&learn=on)
 
-套件組合主控台是OSGi套件組合的目錄，以及部署至AEM的詳細資料，以及啟動和停止這些套件的臨機功能。
+Bundles控制台是OSGi捆綁包的目錄及其詳細資訊，AEM並具有啟動和停止這些捆綁包的臨時功能。
 
-套件組合控制台位於：
+Bundles控制台位於：
 
-+ 「工具」>「操作」>「Web控制台」>「OSGi」>「套件組合」
++ 「工具」>「操作」>「Web控制台」>「OSGi」>「捆綁包」
 + 或直接在： [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
-按一下每個套件，可提供有助於除錯應用程式的詳細資訊。
+按一下每個包，提供有助於調試應用程式的詳細資訊。
 
-+ 驗證OSGi捆綁包
++ 驗證OSGi捆綁包存在
 + 驗證OSGi捆綁是否處於活動狀態
-+ 確定OSGi套件組合是否具有未滿足的導入，阻止其啟動
++ 確定OSGi捆綁是否具有未滿足的導入阻止其啟動
 
 ## 元件
 
 >[!VIDEO](https://video.tv.adobe.com/v/34336?quality=12&learn=on)
 
-元件控制台是部署到AEM的所有OSGi元件的目錄，它提供了有關這些元件的所有資訊，從其定義的OSGi元件生命週期，到它們可參考的OSGi服務
+「元件」控制台是部署到的所有OSGi元件的目錄AEM，並提供了有關它們的所有資訊，從它們定義的OSGi元件生命週期到它們可能引用的OSGi服務
 
 元件控制台位於：
 
 + 「工具」>「操作」>「Web控制台」>「OSGi」>「元件」
 + 或直接在： [http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
 
-有助於偵錯活動的主要方面：
+幫助執行調試活動的關鍵方面：
 
-+ 驗證OSGi捆綁包
++ 驗證OSGi捆綁包存在
 + 驗證OSGi捆綁是否處於活動狀態
-+ 確定OSGi套件組合是否具有未滿足的導入，阻止其啟動
-+ 取得元件的PID，以便在Git中為元件建立OSGi設定
-+ 識別綁定到活動OSGi配置的OSGi屬性值
++ 確定OSGi捆綁是否具有未滿足的導入阻止其啟動
++ 獲取元件的PID，以便以Git為元件建立OSGi配置
++ 標識綁定到活動OSGi配置的OSGi屬性值
 
 ## Sling 模型
 
 >[!VIDEO](https://video.tv.adobe.com/v/34337?quality=12&learn=on)
 
-Sling模型控制台位於：
+Sling Models控制台位於：
 
 + 「工具」>「操作」>「Web控制台」>「狀態」>「Sling模型」
 + 或直接在： [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
 
-有助於偵錯活動的主要方面：
+幫助執行調試活動的關鍵方面：
 
-+ 驗證Sling模型會註冊為正確的資源類型
-+ 驗證Sling模型可從正確的物件（Resource或SlingHttpRequestServlet）調整
-+ 正確註冊驗證Sling模型匯出工具
++ 驗證Sling模型已註冊到正確的資源類型
++ 驗證Sling模型可從正確的對象（Resource或SlingHttpRequestServlet）中調整
++ 驗證Sling模型導出程式已正確註冊

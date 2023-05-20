@@ -1,6 +1,6 @@
 ---
-title: 了解AEM中的驗證支援
-description: AEM支援的驗證（有時也是授權）機制的整合檢視。
+title: 瞭解中的身份驗證支AEM持
+description: 對支援的驗證（偶爾還有授權）機制的統一視AEM圖。
 version: 6.4, 6.5
 feature: User and Groups
 topics: authentication, security
@@ -21,11 +21,11 @@ ht-degree: 9%
 
 ---
 
-# 了解AEM 6.x中的驗證支援
+# 瞭解6.x中的AEM身份驗證支援
 
-AEM支援的驗證（有時也是授權）機制的整合檢視。
+對支援的驗證（偶爾還有授權）機制的統一視AEM圖。
 
-*下表說明使用者如何驗證至AEM。*
+*下表介紹了用戶如何驗證到AEM。*
 
 <table>
     <tbody>
@@ -36,13 +36,13 @@ AEM支援的驗證（有時也是授權）機制的整合檢視。
             <td><strong>AEM 6.5</strong></td>
         </tr>
         <tr>
-            <td><strong>AEM作為標準身分提供者</strong></td>
+            <td><strong>作為AEM標準身份提供程式</strong></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>基本驗證</td>
+            <td>基本身份驗證</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -54,13 +54,13 @@ AEM支援的驗證（有時也是授權）機制的整合檢視。
             <td>✔</td>
         </tr>
         <tr>
-            <td>代號型(包含 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝的代號</a>)</td>
+            <td>基於令牌(帶 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝令牌</a>)</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>非AEM系統作為標準身份提供者</strong></td>
+            <td><strong>非系AEM統作為標準身份提供程式</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -97,4 +97,4 @@ AEM支援的驗證（有時也是授權）機制的整合檢視。
     </tbody>
 </table>
 
-⁕ *透過社群專案提供，但不直接由Adobe支援。*
+⁕ *通過社區項目提供，但不直接受Adobe支援。*

@@ -18,18 +18,18 @@ ht-degree: 1%
 
 # 建立資料庫表
 
-表單資料模型可以以RDBMS、RESTfull、SOAP或OData來源為基礎。 本課程的重點在於使用RDBMS資料來源支援的表單資料模型預先填入最適化表單。 本教程使用了MYSQL資料庫。 我們建立了以下兩個表格來演示使用案例
+表單資料模型可以基於RDBMS、RESTfull、SOAP或OData源。 本課程的重點是使用RDBMS資料源支援的表單資料模型預歸檔自適應表單。 本教程使用了MYSQL資料庫。 我們建立了以下兩個表來演示使用案例
 
-* **內惠爾** 表 — 此表儲存新資訊
+* **新白** 表 — 此表儲存新資訊
 
-   ![內惠爾](assets/newhire-table.png)
+   ![新白](assets/newhire-table.png)
 
 
-* **受益人** 表 — 這家店的受益者是新的
+* **受益人** 表 — 此商店的受益人
 
    ![受益人](assets/beneficiaries-table.png)
 
-您可以匯入 [sql檔案](assets/db-schema.sql) 使用MySQL Workbench建立包含某些範例資料的表格。
+可以導入 [sql檔案](assets/db-schema.sql) 使用MySQL Workbench建立包含一些示例資料的表。
 
 ## 後續步驟
 

@@ -1,6 +1,6 @@
 ---
-title: 具有單一簽署者的最適化表單
-description: 單一簽署者的最適化表單。 影片說明與單一簽署者一起設定最適化表單所需的各種步驟。
+title: 具有單個簽名者的自適應表單
+description: 具有單個簽名者的自適應表單。 視頻說明了配置具有單個簽名者的自適應表單所需的各種步驟。
 feature: Adaptive Forms,Acrobat Sign
 thumbnail: 39475.jpg
 kt: 6103
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ---
 
-# 具有單一簽署者的最適化表單
+# 具有單個簽名者的自適應表單
 
 
-影片說明與單一簽署者一起設定最適化表單所需的各種步驟。
+視頻說明了配置具有單個簽名者的自適應表單所需的各種步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39475?quality=12&learn=on)
 
-可從下列連結下載與此影片相關的資產
+與此視頻相關的資產可以從以下連結下載
 
-* [更改受益表 ](assets/change-of-beneficiary-form.zip)
+* [更改受益人表單 ](assets/change-of-beneficiary-form.zip)

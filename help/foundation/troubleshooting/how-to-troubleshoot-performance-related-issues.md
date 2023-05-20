@@ -1,5 +1,5 @@
 ---
-title: 如何疑難排解AEM中的效能相關問題
+title: 如何解決與效能相關的問題AEM
 description: 調查與效能相關問題的步驟
 type: Troubleshooting
 role: Admin
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何疑難排解AEM中的效能相關問題
+# 如何解決與效能相關的問題AEM
 
-*本影片會逐步說明在AEM中疑難排解效能相關問題的步驟。*
+*此視頻將介紹中與效能相關的問題的故障排除AEM步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335472?quality=12&learn=on)

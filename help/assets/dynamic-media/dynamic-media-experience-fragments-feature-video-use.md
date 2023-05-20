@@ -1,6 +1,6 @@
 ---
-title: 搭配AEM Assets Dynamic Media使用體驗片段
-description: AEM Assets Dynamic Media透過互動式媒體檢視器整合資產熱點與體驗片段。 行銷人員可以使用文字、影像和連結來製作體驗片段，以填入自訂快顯視窗，並將該快顯視窗與橫幅、輪播或影片上的熱點建立關聯。
+title: 使用經驗片段與AEM AssetsDynamic Media
+description: AEM AssetsDynamic Media通過互動媒體觀眾將資產熱點與體驗片段整合在一起。 營銷人員可以使用文本、影像和連結來創作體驗片段，以填充自定義彈出式窗口並將該彈出式窗口與橫幅、彩帶或視頻上的熱點相關聯。
 sub-product: Experience Manager Assets, Experience Manager Sites
 feature: Experience Fragments
 version: 6.4, 6.5
@@ -15,16 +15,16 @@ ht-degree: 0%
 
 ---
 
-# 搭配AEM Assets Dynamic Media使用體驗片段{#using-experience-fragments-with-aem-assets-dynamic-media}
+# 使用經驗片段與AEM AssetsDynamic Media{#using-experience-fragments-with-aem-assets-dynamic-media}
 
-AEM Assets Dynamic Media透過互動式媒體檢視器整合資產熱點與體驗片段。 行銷人員可以使用文字、影像和連結來製作體驗片段，以填入自訂快顯視窗，並將該快顯視窗與橫幅、輪播或影片上的熱點建立關聯。
+AEM AssetsDynamic Media通過互動媒體觀眾將資產熱點與體驗片段整合在一起。 營銷人員可以使用文本、影像和連結來創作體驗片段，以填充自定義彈出式窗口並將該彈出式窗口與橫幅、彩帶或視頻上的熱點相關聯。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22115?quality=12&learn=on)
 
 >[!NOTE]
 >
->若要將AEM體驗片段與AEM Assets Dynamic Media熱點搭配使用， [AEM將在Dynamic Media中執行](https://experienceleague.adobe.com/docs/) 模式。
+>在AEM AssetsAEMDynamic Media熱點使用經驗片段需要 [在AEMDynamic Media](https://experienceleague.adobe.com/docs/) 的子菜單。
 
-影片中顯示的快顯體驗片段變體可作為下方的AEM套件使用。
+視頻中顯示的彈出式體驗片段變體可作為下AEM面的包使用。
 
-下載 [體驗片段Dynamic Media Assets](assets/experience-fragmentsdynamic-mediaassets-100.zip)
+下載 [Dynamic Media資產](assets/experience-fragmentsdynamic-mediaassets-100.zip)

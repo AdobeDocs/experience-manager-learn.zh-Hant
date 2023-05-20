@@ -15,7 +15,7 @@ exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
 source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
 workflow-type: tm+mt
 source-wordcount: '314'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,7 @@ AdobeCloud Manager管道通過AEM一系列步驟部署應用程式，以確定�
 
 [使用開AEM發人員控制台調試as a Cloud Service](./developer-console.md)
 
-## 儲存庫瀏覽器
+## 存放庫瀏覽器
 
 儲存庫瀏覽器是一種功能強大的工具，可AEM以查看基礎資料儲存，從而輕鬆調試AEMas a Cloud Service環境。 儲存庫瀏覽器支援生產、階段和開發以及作者、AEM發佈和預覽服務上的資源和屬性的只讀視圖。
 

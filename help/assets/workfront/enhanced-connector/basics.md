@@ -1,6 +1,6 @@
 ---
-title: Workfront Enhanced Connector基本介紹
-description: 了解Adobe Workfront和Experience Manager Assets增強連接器的基本概念。
+title: Workfront增強連接器基礎
+description: 瞭解Adobe Workfront和Experience Manager Assets增強連接器的基本知識。
 version: Cloud Service
 topic: Content Management, Integrations
 role: Admin, User
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 ---
 
-# Workfront enhanced connector基本知識
+# Workfront增強連接器基礎
 
-了解Adobe Workfront和Experience ManagerAssetsenchand Connector的基本概念，包括如何：
+瞭解Adobe Workfront和Experience Manager裝配式連接器的基本知識，包括如何：
 
 + 連結資產和資料夾
-+ 定義中繼資料對應
-+ 將資產傳送至AEM
++ 定義元資料映射
++ 將資產發送至AEM
 + 版本資產
 + 自動發佈資產
 

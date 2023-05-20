@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Dynamic Media建立影像預設集
-description: 使用Dynamic Media設定影像預設集
+title: 使用Dynamic Media建立圖AEM像預設
+description: 使用Dynamic Media配置影像預設
 role: Developer
 level: Intermediate
 version: Cloud Service
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 使用AEM Dynamic Media建立影像預設集
+# 使用Dynamic Media建立圖AEM像預設
 
-此影片會逐步說明在Dynamic Media中建立影像預設集的步驟。
+此視頻將在Dynamic Media完成建立影像預設的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335459?quality=12&learn=on)

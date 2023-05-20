@@ -1,6 +1,6 @@
 ---
 title: 使用Cloud Acceleration Manager的工具
-description: 提供使用Cloud Acceleration Manager工具的詳細說明。
+description: 介紹了使用Cloud Acceleration Manager工具的逐步瀏覽。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 使用Cloud Acceleration Manager的工具
 
-提供使用Cloud Acceleration Manager工具的詳細說明。
+介紹了使用Cloud Acceleration Manager工具的逐步瀏覽。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336699?quality=12&learn=on)

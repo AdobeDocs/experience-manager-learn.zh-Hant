@@ -1,6 +1,6 @@
 ---
 title: 快速開發環境
-description: 了解AEM快速開發環境、其功能，以及如何協助加快開發至部署週期。
+description: 瞭解快速AEM開發環境、它們是什麼以及它們如何幫助加快部署週期的開發。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,17 +9,17 @@ level: Beginner
 jira: KT-11860
 thumbnail: KT-11860.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: 8fc6d0ef-8753-480b-a504-e7943de8883c
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 11%
 
 ---
 
-
 # 快速開發環境
 
-了解AEMas a Cloud Service中的快速開發環境(RDE)。
+瞭解快速開發環境(RDE)在AEMas a Cloud Service。
 
 此視頻大綱：
 
@@ -30,11 +30,11 @@ ht-degree: 11%
 
 ## 下一步
 
-學習 [如何設定](./how-to-setup.md) AEMas a Cloud Service中的RDE。
+學習 [如何設定](./how-to-setup.md) 和RDE，在AEMas a Cloud Service。
 
 ## 其他資源
 
-[RDE檔案簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
+[RDE文檔簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
 
 [Cloud Manager CI/CD 管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
 

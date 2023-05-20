@@ -12,7 +12,7 @@ exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '386'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 建立環境變數
 
-標準環境變數可以通過雲管理器進行配置和管理。 它們被提供給運行時間環境，並可用於OSGi配置。 [環境變數可以是特定於環境的值，也可以是基於正在更改的內容的環境機密。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+可以透過 Cloud Manager 設定和管理標準環境變數。它們提供給執行階段環境並且可以在 OSGi 設定中使用。[環境變數可以是特定環境的值或環境祕密，具體取決於變更的內容。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
 
 
 

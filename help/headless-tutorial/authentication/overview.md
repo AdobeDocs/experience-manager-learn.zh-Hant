@@ -1,6 +1,6 @@
 ---
-title: 從外部應用程式驗證AEMas a Cloud Service
-description: 探索外部應用程式如何使用本機開發存取權杖和服務憑證，以程式設計方式驗證AEMas a Cloud Service，並透過HTTP與其互動。
+title: 與外部應AEM用程式as a Cloud Service驗證
+description: 瀏覽外部應用程式如何使用本地開發訪問令牌和服AEM務憑據通過HTTP以寫程式方式驗證as a Cloud Service並與其交互。
 version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
@@ -20,60 +20,60 @@ ht-degree: 0%
 
 ---
 
-# 以代號為基礎的驗證以AEMas a Cloud Service
+# 基於令牌的對AEMas a Cloud Service的驗證
 
-AEM會公開各種可無頭式互動的HTTP端點，從GraphQL、AEM內容服務到資產HTTP API。 這些無頭消費者通常需要向AEM驗證，才能存取受保護的內容或動作。 為方便執行此作業，AEM支援來自外部應用程式、服務或系統之HTTP要求的權杖式驗證。
+公AEM開了各種HTTP端點，這些端點可以無頭方式交互，從GraphQL、內容服AEM務到資產HTTP API。 通常，這些無頭用戶可能需要驗證AEM才能訪問受保護的內容或操作。 為了方便這一點，AEM支援對來自外部應用程式、服務或系統的HTTP請求進行基於令牌的驗證。
 
-在本教學課程中，請妥善探索外部應用程式如何以程式設計方式，使用存取權杖，透過HTTP驗證AEMas a Cloud Service並與其互動。
+在本教程中，請詳細瞭解外部應用程式如何通過訪問令牌通過HTTP以寫程式方式驗證AEM並與as a Cloud Service交互。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
 
 ## 先決條件
 
-遵循本教學課程之前，請確定已具備下列條件：
+在繼續學習本教程之前，請確保已執行以下操作：
 
-1. 存取am AEMas a Cloud Service環境（最好是開發環境或沙箱方案）
-1. AEMas a Cloud Service環境之作者服務AEM管理員產品設定檔的成員資格
-1. 加入或存取您的Adobe IMS組織管理員(他們必須執行一次性初始化 [服務憑據](./service-credentials.md))
-1. 最新 [WKND站點](https://github.com/adobe/aem-guides-wknd) 部署至您的Cloud Service環境
+1. 對as a Cloud ServiceAEM環境（最好是開發環境或沙盒程式）的訪問
+1. as a Cloud Service環境AEM的作者服務管理員產品配AEM置檔案中的成員
+1. Adobe IMS組織管理員的成員身份或訪問權限(他們必須執行一次性初始化 [服務憑據](./service-credentials.md))
+1. 最新 [WKND站點](https://github.com/adobe/aem-guides-wknd) 部署到您的Cloud Service環境
 
 ## 外部應用程式概述
 
-本教學課程使用 [簡單Node.js應用程式](./assets/aem-guides_token-authentication-external-application.zip) 從命令列執行，在AEM as a Cloud Service上使用更新資產中繼資料 [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html).
+本教程使用 [簡單Node.js應用程式](./assets/aem-guides_token-authentication-external-application.zip) 從命令行運行，以在AEMas a Cloud Service上 [資產HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html)。
 
-Node.js應用程式的執行流程如下：
+Node.js應用程式的執行流如下：
 
 ![外部應用程式](./assets/overview/external-application.png)
 
 1. 從命令行調用Node.js應用程式
 1. 命令行參數定義：
-   + 要連線至的AEMas a Cloud Service製作服務主機(`aem`)
-   + 資產已更新的AEM資產資料夾(`folder`)
+   + 要連AEM接到的as a Cloud Service作者服務主機(`aem`)
+   + 更新AEM其資產的資產資料夾(`folder`)
    + 要更新的元資料屬性和值(`propertyName` 和 `propertyValue`)
-   + 檔案的本機路徑，提供存取AEMas a Cloud Service所需的憑證(`file`)
-1. 用來驗證AEM的存取權杖，衍生自透過命令列參數提供的JSON檔案 `file`
+   + 提供訪問as a Cloud Service所需憑據的檔案的本地路AEM徑(`file`)
+1. 用於驗證的訪問令牌AEM是從通過命令行參數提供的JSON檔案派生的 `file`
 
-   a.若JSON檔案中提供非本機開發使用的服務憑證(`file`)，則會從Adobe IMS API擷取存取權杖
-1. 應用程式會使用存取權杖來存取AEM，並列出命令列參數中指定之資料夾中的所有資產 `folder`
+   a.如果JSON檔案中提供了用於非本地開發的服務憑據(`file`)，訪問令牌從Adobe IMS API中檢索
+1. 應用程式使用訪問令牌訪問AEM並列出命令行參數中指定的資料夾中的所有資產 `folder`
 1. 對於資料夾中的每個資產，應用程式會根據命令行參數中指定的屬性名稱和值更新其元資料 `propertyName` 和 `propertyValue`
 
 雖然此示例應用程式是Node.js，但這些交互可以使用不同的寫程式語言開發，並從其他外部系統執行。
 
-## 本機開發存取權杖
+## 本地開發訪問令牌
 
-本機開發存取權杖是針對特定AEMas a Cloud Service環境產生，並提供作者和發佈服務的存取權。  這些存取權杖為暫時性的，僅用於開發透過HTTP與AEM互動的外部應用程式或系統時。 與其讓開發人員必須取得及管理妥善的服務憑證，他們可以快速且輕鬆地自行產生暫時存取權杖，以便開發其整合。
+為特定as a Cloud Service環境生成本地開發訪AEM問令牌，並提供對作者和發佈服務的訪問。  這些訪問令牌是臨時的，僅用於開發通過HTTP與之交互的外部應用程式或AEM系統。 與開發人員不必獲得和管理惡意服務憑據相比，他們可以快速而輕鬆地自行生成臨時訪問令牌，以便開發其整合。
 
-+ [如何使用本機開發存取權杖](./local-development-access-token.md)
++ [如何使用本地開發訪問令牌](./local-development-access-token.md)
 
 ## 服務憑據
 
-服務憑證是用於任何非開發案例（最明顯的是生產案例）的合用憑證，可協助外部應用程式或系統透過HTTP驗證AEMas a Cloud Service並與之互動的能力。 服務憑證本身不會傳送至AEM進行驗證，而是外部應用程式會使用這些憑證來產生JWT，並與Adobe IMS的API交換 _for_ 存取權杖，接著可用來驗證AEM as a Cloud Service的HTTP要求。
+服務憑據是任何非開發方案（最明顯是生產方案）中使用的合適憑據，它有助於外部應用程式或系統通過HTTP驗證到as a Cloud Service並與其交互AEM的能力。 服務憑據本身不會發送AEM到進行身份驗證，而是外部應用程式使用這些憑據生成JWT，該JWT與Adobe IMS的API交換 _為_ 訪問令牌，然後可用於驗證HTTP請求到AEMas a Cloud Service。
 
-+ [如何使用服務憑證](./service-credentials.md)
++ [如何使用服務憑據](./service-credentials.md)
 
 ## 其他資源
 
-+ [下載範例應用程式](./assets/aem-guides_token-authentication-external-application.zip)
-+ 建立和交換JWT的其他代碼示例
-   + [Node.js、Java、Python、C#.NET和PHP程式碼範例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)
-   + [JavaScript/Axios型程式碼範例](https://github.com/adobe/aemcs-api-client-lib)
++ [下載示例應用程式](./assets/aem-guides_token-authentication-external-application.zip)
++ JWT建立和交換的其他代碼樣例
+   + [Node.js、Java、Python、C#.NET和PHP代碼示例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)
+   + [基於JavaScript/Axios的代碼示例](https://github.com/adobe/aemcs-api-client-lib)

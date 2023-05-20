@@ -1,6 +1,6 @@
 ---
-title: 擴充元件 |開始使用AEM SPA編輯器和Angular
-description: 了解如何擴充現有的核心元件以與AEM SPA編輯器搭配使用。 了解如何將屬性和內容新增至現有元件，是擴充AEM SPA Editor實作功能的強大技術。 了解如何使用委派模式來擴充Sling模型和Sling Resource Merger的功能。
+title: 擴展元件 |編輯器和AEMAngularSPA入門
+description: 瞭解如何擴展要與編輯器一起使用的現有核AEM心組SPA件。 瞭解如何將屬性和內容添加到現有元件是擴展編輯器實現功能的AEM強SPA大技術。 學習使用委託模式來擴展Sling模型和Sling資源合併的功能。
 feature: SPA Editor, Core Components
 doc-type: tutorial
 topics: development
@@ -20,33 +20,33 @@ ht-degree: 1%
 
 ---
 
-# 擴充核心元件 {#extend-component}
+# 擴展核心元件 {#extend-component}
 
-了解如何擴充現有的核心元件以與AEM SPA編輯器搭配使用。 了解如何擴充現有元件是自訂和擴充AEM SPA Editor實作功能的強大技術。
+瞭解如何擴展要與編輯器一起使用的現有核AEM心組SPA件。 瞭解如何擴展現有元件是定制和擴展編輯器實現功能的AEM強SPA大技術。
 
 ## 目標
 
-1. 使用其他屬性和內容擴充現有的核心元件。
-2. 使用了解元件繼承的基本內容 `sling:resourceSuperType`.
-3. 了解如何使用 [委派模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 以重複使用現有邏輯和功能。
+1. 使用附加屬性和內容擴展現有核心元件。
+2. 使用 `sling:resourceSuperType`。
+3. 瞭解如何使用 [委託模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 用於重新使用現有邏輯和功能。
 
-## 您將建置的
+## 您將構建的
 
-在本章中，新增 `Card` 元件。 此 `Card` 元件延伸 [影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 新增其他內容欄位，例如「標題」和「呼叫動作」按鈕，以針對SPA內的其他內容執行預告角色。
+在本章中， `Card` 元件。 的 `Card` 元件擴展 [影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 添加「標題」和「呼叫操作」按鈕等附加內容欄位，以對中的其他內容執行預告角SPA色。
 
-![卡元件的最終製作](assets/extend-component/final-authoring-card.png)
+![卡元件的最終創作](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> 在實際實作中，僅使用 [Teaser元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html) 而非延伸 [影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 做 `Card` 元件（視專案需求而定）。 建議一律使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 盡可能直接。
+> 在實際實施中，僅使用 [預告元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html) 比 [影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 做 `Card` 元件，具體取決於項目要求。 始終建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 直接確認。
 
 ## 必備條件
 
-檢閱設定 [本地開發環境](overview.md#local-dev-environment).
+查看所需的工具和設定 [地方開發環境](overview.md#local-dev-environment)。
 
-### 取得程式碼
+### 獲取代碼
 
-1. 透過Git下載本教學課程的起始點：
+1. 通過Git下載本教程的起點：
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-spa.git
@@ -54,32 +54,32 @@ ht-degree: 1%
    $ git checkout Angular/extend-component-start
    ```
 
-2. 使用Maven將程式碼基底部署至本機AEM例項：
+2. 使用Maven將代碼庫部署到AEM本地實例：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   若使用 [AEM 6.x](overview.md#compatibility) 新增 `classic` 設定檔：
+   如果使用 [AEM 6.x](overview.md#compatibility) 添加 `classic` 配置檔案：
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. 安裝傳統 [WKND參考網站](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0). 提供的影像 [WKND參考網站](https://github.com/adobe/aem-guides-wknd/releases/latest) 在WKND SPA上重複使用。 可使用 [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
+3. 為傳統 [WKND參考站點](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0)。 提供的影像 [WKND參考站點](https://github.com/adobe/aem-guides-wknd/releases/latest) 在WKND上重SPA用。 可以使用 [包管AEM理器](http://localhost:4502/crx/packmgr/index.jsp)。
 
    ![包管理器安裝wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
-您一律可以在上檢視完成的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) 或切換到分支以本地簽出代碼 `Angular/extend-component-solution`.
+您始終可以在 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) 或通過切換到分支本地檢出代碼 `Angular/extend-component-solution`。
 
-## Inspect初始卡實作
+## Inspect初始卡實施
 
-章節啟動程式代碼已提供初始卡元件。 Inspect是卡片實作的起點。
+章起始代碼提供了初始卡元件。 Inspect是卡實施的起點。
 
-1. 在所選IDE中，開啟 `ui.apps` 模組。
-2. 導覽至 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/card` 和檢視 `.content.xml` 檔案。
+1. 在您選擇的IDE中，開啟 `ui.apps` 中。
+2. 導航到 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/card` 查看 `.content.xml` 的子菜單。
 
-   ![卡元件AEM定義開始](assets/extend-component/aem-card-cmp-start-definition.png)
+   ![卡元件定AEM義開始](assets/extend-component/aem-card-cmp-start-definition.png)
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -90,7 +90,7 @@ ht-degree: 1%
        componentGroup="WKND SPA Angular - Content"/>
    ```
 
-   屬性 `sling:resourceSuperType` 指向 `wknd-spa-angular/components/image` 表示 `Card` 元件繼承WKND SPA Image元件的功能。
+   屬性 `sling:resourceSuperType` 指向 `wknd-spa-angular/components/image` 表明 `Card` 元件繼承WKND映像元件SPA的功能。
 
 3. Inspect檔案 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image/.content.xml`:
 
@@ -103,19 +103,19 @@ ht-degree: 1%
        componentGroup="WKND SPA Angular - Content"/>
    ```
 
-   請注意， `sling:resourceSuperType` 指向 `core/wcm/components/image/v2/image`. 這表示WKND SPA Image元件繼承核心元件映像的功能。
+   請注意 `sling:resourceSuperType` 指向 `core/wcm/components/image/v2/image`。 這表示WKND映像SPA元件繼承了核心元件映像的功能。
 
-   也稱為 [代理模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Sling資源繼承是功能強大的設計模式，可讓子元件視需要繼承功能和延伸/覆寫行為。 Sling繼承支援多種層級的繼承，因此最終新 `Card` 元件繼承核心元件映像的功能。
+   也稱為 [代理模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Sling資源繼承是一種功能強大的設計模式，它允許子元件在需要時繼承功能和擴展/覆蓋行為。 Sling繼承支援多級繼承，因此最終新繼承 `Card` 元件繼承核心元件映像的功能。
 
-   許多開發團隊努力成為DRY（別重複）。 Sling繼承讓AEM成為可能。
+   許多開發團隊都努力成為DRY。（不要重複自己）。 Sling繼承使這成為可能AEM。
 
-4. 在 `card` 資料夾，開啟檔案 `_cq_dialog/.content.xml`.
+4. 在 `card` 資料夾，開啟檔案 `_cq_dialog/.content.xml`。
 
-   此檔案是 `Card` 元件。 如果使用Sling繼承，則可使用 [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) 覆蓋或擴展對話框的部分。 在此範例中，對話方塊已新增一個索引標籤，以從作者擷取其他資料以填入「卡片元件」。
+   此檔案是 `Card` 元件。 如果使用Sling繼承，則可能使用 [Sling資源合併](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) 以覆蓋或延伸對話框的部分。 在此示例中，新頁籤已添加到對話框中，以從作者捕獲其他資料來填充卡元件。
 
-   屬性，如 `sling:orderBefore` 允許開發人員選擇插入新索引標籤或表單欄位的位置。 在此情況下， `Text` 標籤 `asset` 標籤。 若要充分利用Sling Resource Merger，請務必了解 [影像元件對話方塊](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml).
+   類似屬性 `sling:orderBefore` 允許開發人員選擇插入新頁籤或表單域的位置。 在這個例子中， `Text` 的子菜單。 `asset` 頁籤。 為了充分利用Sling資源合併，必須瞭解原始的對話節點結構。 [「影像元件」對話框](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml)。
 
-5. 在 `card` 資料夾，開啟檔案 `_cq_editConfig.xml`. 此檔案會指定AEM製作UI中的拖放行為。 擴充影像元件時，資源類型必須符合元件本身。 檢閱 `<parameters>` 節點：
+5. 在 `card` 資料夾，開啟檔案 `_cq_editConfig.xml`。 此檔案指定創作UI中的拖放AEM行為。 在擴展映像元件時，資源類型與元件本身匹配是非常重要的。 查看 `<parameters>` 節點：
 
    ```xml
    <parameters
@@ -126,21 +126,21 @@ ht-degree: 1%
        imageRotate=""/>
    ```
 
-   大部分元件不需要 `cq:editConfig`、影像元件的子代為例外。
+   大多數元件不需要 `cq:editConfig`、「影像」元件的「影像」和「子代」是例外。
 
-6. 在IDE交換機中， `ui.frontend` 模組，導覽至 `ui.frontend/src/app/components/card`:
+6. 在IDE交換機中， `ui.frontend` 模組，導航 `ui.frontend/src/app/components/card`:
 
-   ![Angular元件開始](assets/extend-component/angular-card-component-start.png)
+   ![Angular元件啟動](assets/extend-component/angular-card-component-start.png)
 
-7. Inspect檔案 `card.component.ts`.
+7. Inspect檔案 `card.component.ts`。
 
-   元件已運作完成，以對應至AEM `Card` 使用標準的元件 `MapTo` 函式。
+   元件已被抽出以映射到AEM `Card` 使用標準的元件 `MapTo` 的子菜單。
 
    ```js
    MapTo('wknd-spa-angular/components/card')(CardComponent, CardEditConfig);
    ```
 
-   回顧三個 `@Input` 類中的參數 `src`, `alt`，和 `title`. 這些是對應至AEM元件的Angular元件中預期的JSON值。
+   查看三個 `@Input` 類中的參數 `src`。 `alt`, `title`。 這些值應為映射到AEMAngular元件的元件中的JSON值。
 
 8. 開啟檔案 `card.component.html`:
 
@@ -150,78 +150,78 @@ ht-degree: 1%
    </div>
    ```
 
-   在此示例中，我們選擇重複使用現有的Angular影像元件 `app-image` 只是通過 `@Input` 參數 `card.component.ts`. 在稍後的教學課程中，會新增並顯示其他屬性。
+   在此示例中，我們選擇重新使用現有Angular映像元件 `app-image` 通過 `@Input` 參數 `card.component.ts`。 在本教程的後面部分，將添加並顯示其他屬性。
 
 ## 更新模板策略
 
-使用此初始 `Card` 實作會檢閱AEM SPA編輯器中的功能。 若要查看初始 `Card` 元件需要更新模板策略。
+使用此初始 `Card` 實現在編輯器中查看AEM功SPA能。 查看初始 `Card` 元件需要更新到模板策略。
 
-1. 將入門程式碼部署至AEM的本機執行個體（如果尚未部署）:
+1. 將啟動程式碼部署到AEM的本地實例(如果尚未：
 
    ```shell
    $ cd aem-guides-wknd-spa
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-2. 導覽至SPA頁面範本，網址為 [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html).
-3. 更新「配置容器」的策略以添加新 `Card` 元件作為允許的元件：
+2. 導航到SPA頁面模板 [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html)。
+3. 更新佈局容器的策略以添加新 `Card` 元件：
 
    ![更新佈局容器策略](assets/extend-component/card-component-allowed.png)
 
-   儲存對原則的變更，並觀察 `Card` 元件作為允許的元件：
+   保存對策略的更改，並觀察 `Card` 元件：
 
    ![卡元件作為允許的元件](assets/extend-component/card-component-allowed-layout-container.png)
 
-## 製作初始卡片元件
+## 建立初始卡元件
 
-接下來，編寫 `Card` 元件(使用AEM SPA編輯器)。
+接下來，編寫 `Card` 元件，使AEM用編SPA輯器。
 
-1. 導覽至 [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html).
+1. 導航到 [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)。
 2. 在 `Edit` 模式，添加 `Card` 元件 `Layout Container`:
 
    ![插入新元件](assets/extend-component/insert-custom-component.png)
 
-3. 從資產尋找器將影像拖放至 `Card` 元件：
+3. 將影像從Asset Finder拖放到 `Card` 元件：
 
-   ![新增影像](assets/extend-component/card-add-image.png)
+   ![添加影像](assets/extend-component/card-add-image.png)
 
-4. 開啟 `Card` 元件對話方塊，並注意新增 **文字** 標籤。
-5. 在 **文字** 標籤：
+4. 開啟 `Card` 元件對話框，並注意 **文本** 頁籤。
+5. 在 **文本** 頁籤：
 
-   ![「文本元件」頁簽](assets/extend-component/card-component-text.png)
+   ![「文本元件」頁籤](assets/extend-component/card-component-text.png)
 
-   **卡路徑**  — 在SPA首頁下方選擇頁面。
+   **卡路徑**  — 在首頁下面選SPA擇頁。
 
-   **CTA文字** - 「了解詳情」
+   **CTA文本** - 「閱讀更多」
 
    **卡片標題**  — 留空
 
-   **從連結的頁面取得標題**  — 勾選「 」核取方塊以指出「true」。
+   **從連結頁面獲取標題**  — 選中複選框以指示true。
 
-6. 更新 **資產中繼資料** 索引標籤，以新增 **替代文字** 和 **註解**.
+6. 更新 **資產元資料** 頁籤，為 **備選文本** 和 **標題**。
 
-   目前，在更新對話方塊後，不會顯示其他變更。 若要將新欄位公開給Angular元件，我們需要更新 `Card` 元件。
+   更新對話框後，當前未顯示其他更改。 要將新欄位顯示給Angular元件，我們需要更新 `Card` 元件。
 
-7. 開啟新標籤並導覽至 [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card). Inspect下方的內容節點 `/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid` 查找 `Card` 元件內容。
+7. 開啟新標籤並導航到 [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card)。 Inspect下面的內容節點 `/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid` 來查找 `Card` 元件內容。
 
    ![CRXDE-Lite元件屬性](assets/extend-component/crxde-lite-properties.png)
 
-   觀察屬性 `cardPath`, `ctaText`, `titleFromPage` 會由對話方塊保存。
+   觀察屬性 `cardPath`。 `ctaText`。 `titleFromPage` 對話框保留。
 
-## 更新Card Sling模型
+## 更新卡吊具型號
 
-若要最終將值從元件對話方塊公開給Angular元件，我們需要更新填入JSON的Sling模型 `Card` 元件。 我們還有機會實施兩個業務邏輯：
+要最終將元件對話框中的值暴露給Angular元件，我們需要更新填充JSON的Sling模型 `Card` 元件。 我們還有機會實施兩個業務邏輯：
 
-* 若 `titleFromPage` to **true**，傳回指定之頁面的標題 `cardPath` 否則，傳回 `cardTitle` 文本欄位。
-* 傳回指定之頁面的上次修改日期 `cardPath`.
+* 如果 `titleFromPage` 至 **真**，返回由指定的頁面標題 `cardPath` 否則返回 `cardTitle` 文本欄位。
+* 返回指定頁面的上次修改日期 `cardPath`。
 
-返回您選擇的IDE並開啟 `core` 模組。
+返回到您選擇的IDE並開啟 `core` 中。
 
-1. 開啟檔案 `Card.java` at `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/Card.java`.
+1. 開啟檔案 `Card.java` 在 `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/Card.java`。
 
-   請注意， `Card` 當前擴展的 `com.adobe.cq.wcm.core.components.models.Image` 因此會繼承 `Image` 介面。 此 `Image` 介面已擴展 `ComponentExporter` 介面，可將Sling模型匯出為JSON並由SPA編輯器對應。 因此，我們不需要明確延伸 `ComponentExporter` 介面，就像我們在 [自訂元件章節](custom-component.md).
+   觀察 `Card` 當前擴展的介面 `com.adobe.cq.wcm.core.components.models.Image` 因此繼承了 `Image` 。 的 `Image` 介面已擴展 `ComponentExporter` 介面，允許Sling Model導出為JSON並由編輯器SPA映射。 因此我們不需要顯式地 `ComponentExporter` 就像我們在 [「自定義元件」一章](custom-component.md)。
 
-2. 將下列方法新增至介面：
+2. 將以下方法添加到介面：
 
    ```java
    @ProviderType
@@ -259,13 +259,13 @@ ht-degree: 1%
    }
    ```
 
-   這些方法會透過JSON模型API公開，並傳遞至Angular元件。
+   這些方法通過JSON模型API公開，並傳遞給Angular元件。
 
-3. 開啟 `CardImpl.java`. 這是 `Card.java` 介面。 為加速本教學課程，我們已部分研究此實作。  請注意， `@Model` 和 `@Exporter` 註解，以確保Sling模型能透過Sling模型匯出工具序列化為JSON。
+3. 開啟 `CardImpl.java`. 這是 `Card.java` 。 本實現已部分完成，以加速本教程。  注意 `@Model` 和 `@Exporter` 注釋，以確保Sling Model能夠通過Sling Model導出器序列化為JSON。
 
-   `CardImpl.java` 也會使用 [Sling模型的委派模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 避免從影像核心元件重寫邏輯。
+   `CardImpl.java` 也使用 [吊具模型委託模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 避免從影像核心元件中重寫邏輯。
 
-4. 請觀察下列行：
+4. 觀察以下行：
 
    ```java
    @Self
@@ -273,7 +273,7 @@ ht-degree: 1%
    private Image image;
    ```
 
-   以上附註會將名為的影像物件實例化 `image` 根據 `sling:resourceSuperType` 繼承 `Card` 元件。
+   上述注釋實例化名為 `image` 基於 `sling:resourceSuperType` 繼承 `Card` 元件。
 
    ```java
    @Override
@@ -282,9 +282,9 @@ ht-degree: 1%
    }
    ```
 
-   接著，您就可以直接使用 `image` 物件以實作由定義的方法 `Image` 介面，而無須自行編寫邏輯。 此技術用於 `getSrc()`, `getAlt()`，和 `getTitle()`.
+   這樣，就可以簡單地使用 `image` 實現由定義的方法的對象 `Image` 介面，而無需自己編寫邏輯。 此技術用於 `getSrc()`。 `getAlt()`, `getTitle()`。
 
-5. 接下來，實作 `initModel()` 啟動專用變數的方法 `cardPage` 根據 `cardPath`
+5. 接下來，實施 `initModel()` 啟動私有變數的方法 `cardPage` 基於 `cardPath`
 
    ```java
    @PostConstruct
@@ -295,11 +295,11 @@ ht-degree: 1%
    }
    ```
 
-   此 `@PostConstruct initModel()` 會在Sling模型初始化時呼叫，因此這是初始化物件的良機，可供模型中的其他方法使用。 此 `pageManager` 是數個 [Java™備份的全局對象](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html) 透過 `@ScriptVariable` 註解。 此 [getPage](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) 方法傳入路徑並傳回AEM [頁面](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) 物件或null（如果路徑未指向有效頁面）。
+   的 `@PostConstruct initModel()` 當初始化Sling模型時調用，因此，初始化模型中其他方法可能使用的對象是很好的機會。 的 `pageManager` 是幾個 [Java™支援的全局對象](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html) 通過 `@ScriptVariable` 注釋。 的 [getPage](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) 方法在路徑中取值並返AEM回 [頁面](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) 如果路徑未指向有效頁，則為object或null。
 
-   這會初始化 `cardPage` 變數，其他新方法會使用此變數來傳回基礎連結頁面的相關資料。
+   這初始化 `cardPage` 變數，用於返回有關基礎連結頁的資料的其他新方法使用。
 
-6. 檢閱已對應至已儲存製作對話方塊之JCR屬性的全域變數。 此 `@ValueMapValue` 批注用於自動執行映射。
+6. 查看已映射到保存作者對話框的JCR屬性的全局變數。 的 `@ValueMapValue` 注釋用於自動執行映射。
 
    ```java
    @ValueMapValue
@@ -315,9 +315,9 @@ ht-degree: 1%
    private String cardTitle;
    ```
 
-   這些變數可用來實作 `Card.java` 介面。
+   這些變數用於實現 `Card.java` 。
 
-7. 實作 `Card.java` 介面：
+7. 實施中定義的其他方法 `Card.java` 介面：
 
    ```java
    @Override
@@ -352,18 +352,18 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   > 您可以檢視 [在此處完成CardImpl.java](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/extend-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CardImpl.java).
+   > 您可以查看 [在此處完成CardImpl.java](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/extend-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CardImpl.java)。
 
-8. 開啟終端機視窗，並只將更新部署至 `core` 使用Maven的模組 `autoInstallBundle` 從 `core` 目錄。
+8. 開啟終端窗口，並只部署到 `core` 模組使用Maven `autoInstallBundle` 從 `core` 的子菜單。
 
    ```shell
    $ cd core/
    $ mvn clean install -PautoInstallBundle
    ```
 
-   若使用 [AEM 6.x](overview.md#compatibility) 新增 `classic` 設定檔。
+   如果使用 [AEM 6.x](overview.md#compatibility) 添加 `classic` 檔案。
 
-9. 請在下列網址檢視JSON模型回應： [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) 並搜尋 `wknd-spa-angular/components/card`:
+9. 查看JSON模型響應： [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) 搜索 `wknd-spa-angular/components/card`:
 
    ```json
    "card": {
@@ -378,13 +378,13 @@ ht-degree: 1%
    }
    ```
 
-   請注意，在中更新方法之後，JSON模型會以其他索引鍵/值組更新 `CardImpl` Sling模型。
+   請注意，在更新中的方法後，JSON模型將使用附加的鍵/值對進行更新 `CardImpl` 吊帶模型。
 
 ## 更新Angular元件
 
-現在，JSON模型中已填入 `ctaLinkURL`, `ctaText`, `cardTitle`，和 `cardLastModified` 我們可以更新Angular元件以顯示這些。
+現在，JSON模型已填充新屬性 `ctaLinkURL`。 `ctaText`。 `cardTitle`, `cardLastModified` 我們可以更新Angular元件以顯示這些元件。
 
-1. 返回到IDE並開啟 `ui.frontend` 模組。 （可選）從新的終端窗口啟動Webpack開發伺服器，以即時查看更改：
+1. 返回到IDE並開啟 `ui.frontend` 中。 （可選）從新終端窗口啟動webpack dev伺服器，以即時查看更改：
 
    ```shell
    $ cd ui.frontend
@@ -392,7 +392,7 @@ ht-degree: 1%
    $ npm start
    ```
 
-2. 開啟 `card.component.ts` at `ui.frontend/src/app/components/card/card.component.ts`. 新增其他 `@Input` 用於捕獲新模型的注釋：
+2. 開啟 `card.component.ts` 在 `ui.frontend/src/app/components/card/card.component.ts`。 添加附加 `@Input` 要捕獲新模型的注釋：
 
    ```diff
    export class CardComponent implements OnInit {
@@ -406,7 +406,7 @@ ht-degree: 1%
    +    @Input() ctaText: string;
    ```
 
-3. 新增方法，以檢查動作呼叫是否就緒，並根據 `cardLastModified` 輸入：
+3. 添加方法，用於檢查「操作調用」是否就緒，並根據 `cardLastModified` 輸入：
 
    ```js
    export class CardComponent implements OnInit {
@@ -427,7 +427,7 @@ ht-degree: 1%
    }
    ```
 
-4. 開啟 `card.component.html` 並新增下列標籤以顯示標題、動作呼叫和上次修改日期：
+4. 開啟 `card.component.html` 並添加以下標注以顯示標題、操作要求和上次修改日期：
 
    ```html
    <div class="card"  *ngIf="hasContent">
@@ -446,29 +446,29 @@ ht-degree: 1%
    </div>
    ```
 
-   已在新增Sass規則 `card.component.scss` 設定標題樣式、呼叫動作和上次修改日期。
+   已在添加Sass規則 `card.component.scss` 設定標題樣式、操作呼叫和上次修改日期。
 
    >[!NOTE]
    >
-   > 您可以檢視已完成的 [Angular卡元件代碼在此處](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card).
+   > 您可以查看已完成的 [Angular卡元件代碼](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card)。
 
-5. 使用Maven從專案的根目錄部署完整變更至AEM:
+5. 使用Maven將項AEM目根目錄的完整更改部署為：
 
    ```shell
    $ cd aem-guides-wknd-spa
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-6. 導覽至 [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html) 若要查看更新的元件：
+6. 導航到 [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html) 要查看更新的元件：
 
-   ![更新AEM中的卡片元件](assets/extend-component/updated-card-in-aem.png)
+   ![中更新的卡組AEM件](assets/extend-component/updated-card-in-aem.png)
 
-7. 您應該可以重新編寫現有內容，以建立類似下列的頁面：
+7. 您應該能夠重新創作現有內容，以建立類似以下內容的頁面：
 
-   ![卡元件的最終製作](assets/extend-component/final-authoring-card.png)
+   ![卡元件的最終創作](assets/extend-component/final-authoring-card.png)
 
 ## 恭喜！ {#congratulations}
 
-恭喜您，您已學會如何擴充AEM元件，以及Sling模型和對話方塊如何與JSON模型搭配運作。
+恭喜，您學習了如何擴展組AEM件，以及Sling模型和對話如何與JSON模型配合工作。
 
-您一律可以在上檢視完成的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) 或切換到分支以本地簽出代碼 `Angular/extend-component-solution`.
+您始終可以在 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) 或通過切換到分支本地檢出代碼 `Angular/extend-component-solution`。

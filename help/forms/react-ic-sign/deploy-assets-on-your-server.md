@@ -1,6 +1,6 @@
 ---
-title: 在伺服器上部署範例資產
-description: 取得在本機伺服器上運作的使用案例
+title: 在伺服器上部署示例資產
+description: 獲取在本地伺服器上工作的使用案例
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -8,7 +8,8 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+exl-id: 44f4261b-d6fe-42ad-a3aa-2a36ca897b5e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 0%
@@ -17,21 +18,21 @@ ht-degree: 0%
 
 # 部署資產
 
-下列資產/設定已部署在AEM Forms發佈伺服器上。
+在AEM Forms發佈伺服器上部署了以下資產/配置。
 
-* [Adobe Sign包裝套件組合](assets/AcrobatSign.core-1.0.0-SNAPSHOT.jar)
+* [Adobe Sign包裝包](assets/AcrobatSign.core-1.0.0-SNAPSHOT.jar)
 
-* [互動式通訊範本範例](assets/waiver-interactive-communication.zip)
-* [部署DevelopingWithServiceUser套件組合](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
-* 使用OSGi configMgr在Apache Sling Service使用者對應程式服務中新增下列項目
-   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
-* [您可從此處下載範例React應用程式程式碼](assets/src.zip)
+* [互動式通信模板示例](assets/waiver-interactive-communication.zip)
+* [部署DevelopingWithServiceUser捆綁包](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
+* 使用OSGi configMgr在Apache Sling服務用戶映射器服務中添加以下條目
+   **DevegingWithServiceUser.core:getformsresourceresolver=fd-service**
+* [可以從此處下載示例React App代碼](assets/src.zip)
 
 
 
-範例react應用程式需部署在您的本機環境
+需要在您的本地環境中部署示例反應應用
 
-您必須變更端點URL以符合您的環境。 開啟EmergencyContact.js檔案，並在擷取方法中變更URL
+您必須更改終結點URL以匹配您的環境。 開啟EmercyContact.js檔案並更改讀取方法中的URL
 
 ```javascript
  const getWebForm=async()=>
@@ -48,9 +49,6 @@ ht-degree: 0%
  
 ```
 
-若要啟用從REACT應用程式對AEM端點進行POST呼叫，您必須在AdobeGranite跨原始資源共用原則設定的「允許的原始項」欄位中指定適當的實體
+要啟用從REACT應用對終AEM點進行POST調用，您需要在Adobe花崗岩跨源資源共用策略配置的「允許的源」欄位中指定相應的元素
 
 ![cors設定](assets/cors-settings.png)
-
-
-

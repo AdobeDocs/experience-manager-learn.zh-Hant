@@ -1,6 +1,6 @@
 ---
-title: 搭配AEM Dynamic Media使用自訂視訊縮圖
-description: AEM Assets自訂視訊縮圖可讓作者從一組產生的縮圖中選取適當的縮圖。 可輕鬆自訂為視訊產生的縮圖數目。
+title: 將自定義視頻縮略圖與AEMDynamic Media
+description: AEM Assets定制視頻縮略圖使作者能夠從一組生成的縮略圖中選擇適當的縮略圖。 可輕鬆自定義為視頻生成的縮略圖數。
 feature: Video Profiles
 version: 6.4, 6.5
 topic: Content Management
@@ -14,16 +14,16 @@ ht-degree: 0%
 
 ---
 
-# 搭配AEM Dynamic Media使用自訂視訊縮圖{#using-custom-video-thumbnail-with-aem-dynamic-media}
+# 將自定義視頻縮略圖與AEMDynamic Media{#using-custom-video-thumbnail-with-aem-dynamic-media}
 
-AEM Assets自訂視訊縮圖可讓作者從一組產生的縮圖中選取適當的縮圖。 可輕鬆自訂為視訊產生的縮圖數目。
+AEM Assets定制視頻縮略圖使作者能夠從一組生成的縮略圖中選擇適當的縮略圖。 可輕鬆自定義為視頻生成的縮略圖數。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16467?quality=12&learn=on)
 
-## 自訂視訊縮圖
+## 自定義視頻縮略圖
 
 >[!VIDEO](https://video.tv.adobe.com/v/18867?quality=12&learn=on)
 
 >[!NOTE]
 >
->您應執行 [AEM例項在Dynamic Media](https://experienceleague.adobe.com/docs/) 模式
+>你應該 [AEMDynamic Media](https://experienceleague.adobe.com/docs/) 模式

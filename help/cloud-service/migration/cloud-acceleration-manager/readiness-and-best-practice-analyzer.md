@@ -1,6 +1,6 @@
 ---
-title: Readiness and Best Practice Analyzer
-description: 了解Best Practice Analyzer如何幫助您的應用程式準備好，以便移動到Experience Manageras a Cloud Service
+title: 就緒性和最佳做法分析器
+description: 瞭解最佳做法分析器如何幫助您的應用程式準備好移動到Experience Manageras a Cloud Service
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# Readiness and Best Practice Analyzer
+# 就緒性和最佳做法分析器
 
-了解Best Practice Analyzer如何協助您從AEM內部部署或Adobe Managed Services移轉至Experience Manageras a Cloud Service。
+瞭解Best Practice Analyzer如何幫助您準備從AEM上門或Adobe Managed Services遷移到Experience Manageras a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336690?quality=12&learn=on)

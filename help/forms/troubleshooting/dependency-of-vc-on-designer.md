@@ -1,6 +1,6 @@
 ---
-title: 如何在Designer中疑難排解C++程式庫的相依性問題
-description: 為Designer安裝所需的C++庫
+title: 如何在Designer中解決C++語句的依賴關係問題
+description: 為設計器安裝所需的C++清單
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何在Designer中疑難排解C++程式庫的相依性問題
+# 如何在Designer中解決C++語句的依賴關係問題
 
-*本影片會逐步說明在Designer中疑難排解C++程式庫的相依性問題。*
+*此視頻將介紹Designer中C++語句的相關性問題疑難解答步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335576?quality=12&learn=on)

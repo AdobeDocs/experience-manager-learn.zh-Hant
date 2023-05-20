@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 - Sling作業排程器
-description: AEM雲端作業排程
+title: 雲5 - Sling作業計畫程式
+description: 雲AEM中的作業調度
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ---
 
-# Cloud 5 - Sling作業排程器
+# 雲5 - Sling作業計畫程式
 
-作業計畫和耗用量與非群集AEM部署不同。 此影片顯示執行這些工作時需要注意的一些問題和事項。
+作業計畫和消耗與非群集部署不AEM同。 此視頻顯示了運行這些任務時需要注意的一些捕獲和事項。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343473?quality=12&learn=on)
 
-## 此影片所涵蓋的內容
+## 此視頻中包含的內容
 
 + 雲中作業概覽
-+ 作業使用者和排程器程式碼範例
++ 作業使用者和調度程式碼示例

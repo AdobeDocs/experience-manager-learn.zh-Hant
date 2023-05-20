@@ -1,6 +1,6 @@
 ---
-title: 如何在Brand Portal中啟用轉譯下載。
-description: 在Brand Portal中啟用下載轉譯的步驟
+title: 如何在Brand Portal中啟用下載格式副本。
+description: 啟用下載Brand Portal格式副本的步驟
 role: Developer
 level: Beginner
 version: Cloud Service
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 在Brand Portal中啟用轉譯下載
+# 在Brand Portal啟用格式副本下載
 
-*此影片會逐步說明在Brand Portal中啟用轉譯下載的步驟。*
+*此視頻將介紹在Brand Portal下載格式副本的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335449?quality=12&learn=on)

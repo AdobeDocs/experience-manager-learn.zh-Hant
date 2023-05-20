@@ -1,6 +1,6 @@
 ---
-title: 新編輯器切換 — 內容片段編輯器
-description: 了解「新編輯器」切換按鈕，可讓您輕鬆在預設的「新內容片段編輯器」和傳統編輯器之間切換。
+title: 新建編輯器切換 — 內容片段編輯器
+description: 瞭解「新建編輯器」切換功能，使您可以輕鬆地在預設的「新建內容片段」編輯器和經典編輯器之間切換。
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# 新編輯器切換
+# 新建編輯器切換
 
-了解全新編輯器切換功能可讓您輕鬆在預設的全新內容片段編輯器與傳統編輯器之間切換。
+瞭解「新建編輯器」切換如何讓您輕鬆在預設的新內容片段編輯器和經典編輯器之間切換。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419312/?learn=on)

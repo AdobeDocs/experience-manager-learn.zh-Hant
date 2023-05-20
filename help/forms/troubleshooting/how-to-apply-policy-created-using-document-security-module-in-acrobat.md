@@ -1,5 +1,5 @@
 ---
-title: 如何套用在Acrobat中使用檔案安全性模組建立的原則
+title: 如何應用使用文檔安全模組建立的策略在Acrobat
 description: 配置Acrobat以使用文檔安全性將策略應用於文檔
 type: Troubleshooting
 role: Developer
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何套用在Acrobat中使用檔案安全性模組建立的原則
+# 如何應用使用文檔安全模組建立的策略在Acrobat
 
-*此影片會逐步說明如何套用在Acrobat中使用檔案安全性模組建立的原則。*
+*此視頻介紹了應用使用Acrobat文檔安全模組建立的策略的過程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335486?quality=12&learn=on)

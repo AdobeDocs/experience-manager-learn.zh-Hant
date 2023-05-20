@@ -1,6 +1,6 @@
 ---
 title: 從HTM5表單提交生成PDF
-description: 從行動表單提交產生PDF
+description: 從移動表單提交生成PDF
 feature: Mobile Forms
 version: 6.4,6.5
 topic: Development
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 # 從HTM5表單提交生成PDF {#generate-pdf-from-htm-form-submission}
 
-本文將逐步引導您完成從HTML5(亦稱為Mobile Forms)表單提交產生pdf時所涉及的步驟。 本示範也將說明將影像新增至HTML5表單，並將影像合併為最終pdf所需的步驟。
+本文將引導您完成從HTML5(亦稱移動Forms)表單提交中生成pdf所涉及的步驟。 本演示還將說明將影像添加到HTML5窗體並將影像合併到最終pdf中所需的步驟。
 
 
-若要將提交的資料合併至xdp範本，我們會執行下列作業
+要將提交的資料合併到xdp模板中，我們將執行以下操作
 
-編寫Servlet以處理HTML5表單提交
+編寫Servlet來處理HTML5表單提交
 
-* 此Servlet內可取得已提交資料的保留
-* 將此資料與xdp範本合併，以產生pdf
-* 將pdf串流回呼叫應用程式
+* 在此Servlet中獲取已提交資料
+* 將此資料與xdp模板合併以生成pdf
+* 將pdf流回調用應用程式
 
-以下是從請求中擷取已提交資料的Servlet程式碼。 接著，會呼叫自訂documentServices .mobileFormToPDF方法以取得PDF。
+以下是從請求中提取已提交資料的Servlet代碼。 然後，它調用自定義documentServices .mobileFormToPDF方法以獲取pdf。
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -66,9 +66,9 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
  }
 ```
 
-若要新增影像至行動表單，並以我們已使用下列項目的pdf顯示該影像
+要將影像添加到移動表單並在pdf中顯示該影像，我們使用了以下內容
 
-XDP範本 — 在xdp範本中，我們新增了名為btnAddImage的影像欄位和按鈕。 下列程式碼會處理自訂設定檔中btnAddImage的click事件。 如您所見，我們會觸發檔案1點按事件。 xdp中不需要編碼即可完成此使用案例
+XDP模板 — 在xdp模板中，我們添加了一個名為btnAddImage的影像欄位和按鈕。 以下代碼處理我們的自定義配置檔案中btnAddImage的click事件。 正如您所看到的，我們觸發了檔案1 click事件。 xdp中不需要編碼即可完成此使用情形
 
 ```javascript
 $(".btnAddImage").click(function(){
@@ -78,9 +78,9 @@ $("#file1").click();
 });
 ```
 
-[自訂設定檔](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). 使用自訂設定檔可讓您更輕鬆操控行動表單的HTMLDOM物件。 將隱藏的檔案元素添加到HTML.jsp。 當使用者按一下「新增您的像片」時，就會觸發檔案元素的點按事件。 這可讓使用者瀏覽並選取要附加的像片。 然後使用javascript FileReader物件來取得影像的base64編碼字串。 base64影像字串以表單形式儲存在文本欄位中。 提交表單時，我們會擷取此值，並將其插入XML的img元素中。 然後，此XML會用來與xdp合併，以產生最終的pdf。
+[自定義配置檔案](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。 使用自定義配置檔案，可以更輕鬆地操作移動表單的HTMLDOM對象。 隱藏檔案元素將添加到HTML.jsp中。 當用戶按一下「添加照片」時，我們將觸發檔案元素的按一下事件。 這允許用戶瀏覽並選擇要附加的照片。 然後使用javascript FileReader對象獲取影像的base64編碼字串。 base64影像字串以窗體形式儲存在文本欄位中。 提交表單時，我們提取此值並將其插入XML的img元素中。 然後，此XML將用於與xdp合併以生成最終pdf。
 
-本文所使用的自訂設定檔已隨本文資產提供給您。
+已將用於此文章的自定義配置檔案作為本文資產的一部分提供給您。
 
 ```javascript
 function readURL(input) {
@@ -100,23 +100,23 @@ function readURL(input) {
         }
 ```
 
-上述程式碼會在觸發檔案元素的click事件時執行。 第5行會擷取上傳檔案的內容為base64字串，並儲存在文字欄位中。 表單提交至我們的servlet時，就會擷取此值。
+在觸發檔案元素的click事件時執行上述代碼。 第5行將上傳檔案的內容提取為base64字串，並儲存在文本欄位中。 然後，當表單提交到我們的servlet時，將提取此值。
 
-接著，我們會在AEM中設定行動表單的下列屬性（進階）
+然後，我們將配置我們的移動表單的以下屬性（高級）AEM
 
-* 提交URL - http://localhost:4502/bin/handlemobileformsubmission。 這是我們的Servlet，將提交的資料與xdp範本合併
-* HTML呈現設定檔 — 請務必選取「AddImageToMobileForm」。 這會觸發程式碼，將影像新增至表單。
+* 提交URL - http://localhost:4502/bin/handlemobileformsubmission。 這是我們的Servlet，它將提交的資料與xdp模板合併
+* HTML呈現配置檔案 — 確保選擇「AddImageToMobileForm」。 這將觸發向表單添加影像的代碼。
 
-若要在您自己的伺服器上測試此功能，請執行下列步驟：
+要在您自己的伺服器上test此功能，請執行以下步驟：
 
-* [部署AemFormsDocumentServices套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* [部署AemFormsDocumentServices捆綁包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 
-* [使用服務用戶包部署開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [部署使用服務用戶包進行開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下載並安裝與此文章相關聯的套件。](assets/pdf-from-mobile-form-submission.zip)
+* [下載並安裝與此文章關聯的包。](assets/pdf-from-mobile-form-submission.zip)
 
-* 檢視的屬性頁面，以確定提交URL和HTML呈現設定檔已正確設定  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
+* 通過查看URL的屬性頁，確保正確設定提交URL和HTML呈現配置檔案  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
 
-* [以html預覽XDP](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
+* [將XDP以html格式預覽](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 
-* 新增影像至表單並提交。 你應該把影像PDF回來。
+* 將影像添加到表單並提交。 你應該把PDF帶回來。

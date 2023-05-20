@@ -1,6 +1,6 @@
 ---
-title: 將適用性Forms/HTML5表單內嵌在網頁中
-description: 將適用性Forms或HTML5表單內嵌至非AEM網頁所需的設定步驟。
+title: 在網頁中嵌入自適應Forms/HTML5表單
+description: 在非網頁中嵌入自適應Forms或HTML5表單所需AEM的配置步驟。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.5
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ---
 
-# 將最適化表單或HTML5表單嵌入網頁
+# 在網頁中嵌入自適應表單或HTML5表單
 
-內嵌的最適化表單功能齊全，使用者無需離開頁面即可填寫及提交表單。 可協助使用者停留在網頁上其他元素的內容中，並同時與表單互動。
+嵌入式自適應表單功能齊全，用戶無需離開頁面即可填寫和提交表單。 它幫助用戶保持在網頁上其他元素的上下文中並同時與表單交互。
 
-以下影片說明在網頁中內嵌適用性或HTML5表單所需的步驟。
-請參閱 [檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html) 最佳必要條件、最佳實務等。
+以下視頻說明了在網頁中嵌入Adaptive或HTML5表單所需的步驟。
+請參閱 [文檔](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html) 最佳先決條件、最佳做法等。
 >[!VIDEO](https://video.tv.adobe.com/v/335893?quality=12&learn=on)
 
-您可以下載影片中使用的範例檔案 [從這裡](assets/embedding-af-web-page.zip)
+您可以下載視頻中使用的示例檔案 [從這裡](assets/embedding-af-web-page.zip)
 
-以下是用來擷取適用性表單並將表單嵌入類別名稱所識別容器的程式碼 **右**
+下面是用於提取自適應表單並將表單嵌入由類名標識的容器中的代碼 **右**
 
 ```javascript
 $(document).ready(function(){

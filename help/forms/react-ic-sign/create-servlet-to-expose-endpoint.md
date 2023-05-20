@@ -1,6 +1,6 @@
 ---
-title: 公開可叫用以傳回Web表單URL的端點
-description: 建立AEM servlet以傳回Web表單URL
+title: 公開可調用以返回Web表單URL的終結點
+description: 創AEM建Servlet以返回Web表單URL
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -16,9 +16,9 @@ ht-degree: 2%
 
 ---
 
-# 建立Acrobat Sign Web表單URL
+# 建立Acrobat SignWeb表單URL
 
-已編寫下列程式碼以公開POST端點。 此端點會從提交的資料中提取icTemplateName，並傳回供一般使用者簽署的Acrobat Sign Web表單URL。
+編寫以下代碼以公開POST終結點。 此終結點從提交的資料中提取icTemplateName，並返回供最終用戶簽名的Acrobat SignWeb表單URL。
 
 
 ```java
@@ -89,5 +89,5 @@ public class GetWidgetUrl extends SlingAllMethodsServlet {
 
 ## 後續步驟
 
-[在本機系統上部署教學課程資產](./deploy-assets-on-your-server.md)
+[在本地系統上部署教程資源](./deploy-assets-on-your-server.md)
 

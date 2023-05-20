@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Dynamic Media建立轉盤集
-description: 使用Dynamic Media設定轉盤集
+title: 建立帶有AEMDynamic Media的旋轉木馬集
+description: 配置旋轉木馬集(使用Dynamic Media)
 version: Cloud Service
 role: Developer
 level: Intermediate
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# 使用AEM Dynamic Media建立轉盤集
+# 建立帶有AEMDynamic Media的旋轉木馬集
 
-此影片會逐步說明如何使用AEM Dynamic Media建立轉盤集。
+這段視頻介紹了製作一套帶有Dynamic Media的旋轉AEM木馬。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335380?quality=12&learn=on)

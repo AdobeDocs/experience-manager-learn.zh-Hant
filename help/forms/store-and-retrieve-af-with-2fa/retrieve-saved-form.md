@@ -1,6 +1,6 @@
 ---
-title: 擷取儲存的最適化表單
-description: 使用儲存的資料轉譯最適化表單的Servlet
+title: 檢索保存的自適應表單
+description: 用已保存資料呈現自適應表單的Servlet
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -19,8 +19,8 @@ ht-degree: 1%
 
 # 檢索保存的表單
 
-下一步是建立Servlet，以便使用儲存的資料及其附件呈現最適化表單。
-在驗證OTP代碼後，將執行以下Servlet代碼。 從資料庫中擷取與唯一應用程式ID相關聯的適用性表單資料及其檔案附件映射。 請求物件會填入儲存的最適化表單資料和檔案附件對應。 然後，請求會轉送，呈現預先填入原始資料及其附件的「storeafwithattachments」表單。
+下一步是建立一個Servlet，該Servlet將使用保存的資料及其附件來呈現自適應表單。
+在驗證OTP代碼後執行以下Servlet代碼。 從資料庫讀取與唯一應用程式ID相關聯的自適應表單資料及其檔案附件映射。 該請求對象填充有保存的自適應表單資料和檔案附件映射。 然後轉發該請求，以呈現預填充原始資料及其附件的「儲存附件」表單。
 
 ```java
 package store.and.fetch.core.servlets;

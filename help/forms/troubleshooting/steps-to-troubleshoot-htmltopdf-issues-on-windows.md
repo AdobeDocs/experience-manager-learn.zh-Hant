@@ -1,6 +1,6 @@
 ---
-title: 疑難排解Windows設定中HtmltoPDF特定問題的步驟
-description: 疑難排解Windows上的HtmltoPDF問題
+title: 排除Windows安裝程式上HtmltoPDF特定問題的步驟
+description: Windows上的HtmltoPDF問題疑難解答
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 疑難排解Windows設定中HtmltoPDF特定問題的步驟
+# 排除Windows安裝程式上HtmltoPDF特定問題的步驟
 
-*此影片會逐步說明疑難排解Windows設定中HtmltoPDF的特定問題。*
+*此視頻將介紹Windows安裝程式上HtmltoPDF特定問題的疑難解答過程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335545?quality=12&learn=on)

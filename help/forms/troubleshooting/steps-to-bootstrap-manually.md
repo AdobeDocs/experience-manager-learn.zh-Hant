@@ -1,6 +1,6 @@
 ---
 title: 手動引導的步驟
-description: 如果資料庫初始化不正常，手動引導資料庫的步驟
+description: 如果資料庫初始化不工作，則手動引導資料庫的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如果資料庫初始化無法正常工作，手動引導的步驟
+# 如果資料庫初始化不工作，則手動引導的步驟
 
-*如果資料庫初始化無法正常運作，此影片會逐步引導程式以手動引導。*
+*如果資料庫初始化不工作，則此視頻將引導過程手動完成。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335515?quality=12&learn=on)

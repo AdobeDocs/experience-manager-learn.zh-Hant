@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms中使用組合器服務
-description: 使用AEM Forms中的組合器服務來組合多個pdf檔案
+title: 在AEM Forms使用匯編服務
+description: 使用AEM Forms的匯編服務匯編多個pdf檔案
 feature: Assembler
 version: 6.4,6.5
 topic: Development
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 ---
 
-# 在AEM Forms中使用組合器服務{#using-assembler-service-in-aem-forms}
+# 在AEM Forms使用匯編服務{#using-assembler-service-in-aem-forms}
 
-本文提供相關資產，展示將多個PDF檔案拖放至瀏覽器，以及將已組合的pdf檔案儲存至檔案系統的能力。 以下是servlet的程式碼，用於組合使用瀏覽器上傳的pdf檔案。
+本文為您提供了一些資源，用於演示將多個PDF檔案拖放到瀏覽器中並將已裝配的pdf檔案保存到檔案系統的能力。 以下是Servlet的代碼，它匯編了使用瀏覽器上載的pdf檔案。
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -100,27 +100,27 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-若要讓此功能在您的AEM伺服器上運作
+使此功能在伺服器上AEM工作
 
-* 下載 [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) 到本地系統。
-* 使用上傳並安裝套件 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* 下載[自訂檔案服務套件](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* 下載 [使用服務用戶包進行開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* 使用部署和啟動套件組合 [felix web console](http://localhost:4502/system/console/bundles)
+* 下載 [裝配多個檔案.zip](assets/assemble-multiple-files.zip) 到本地系統。
+* 使用 [軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+* 下載[自定義文檔服務包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* 下載 [使用服務用戶包開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* 使用 [felix Web控制台](http://localhost:4502/system/console/bundles)
 * 將瀏覽器指向 [AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
-* 拖放幾個PDF檔案
+* 拖放兩個檔案PDF檔案
 
 >[!NOTE]
 >
->確認AEM Forms安裝完成。 您的所有套件組合都必須處於作用中狀態。
+>確保AEM Forms安裝完成。 您的所有捆綁包都需要處於活動狀態。
 >
->請確保已添加 — 引導委派RSA和BouncyCastle庫，如本文所述 [安裝AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>確保已添加 — 如本中所述，引導委託RSA和BouncyCastle庫 [安裝AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
 >
->**本示範的注意事項**
+>**本演示的注意事項**
 >
-> * 程式碼不會處理XFA型PDF檔案
+> * 代碼不處理基於XFA的PDF文檔
 >
-> * 請務必僅拖放PDF檔案
+> * 確保僅拖放PDF檔案
 >
 >
 

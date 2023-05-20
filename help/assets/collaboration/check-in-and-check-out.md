@@ -1,6 +1,6 @@
 ---
 title: 簽入和簽出
-description: 了解如何使用AEM簽入和簽出功能，以促進多使用者對資產的共同作業。
+description: 瞭解如何使AEM用簽入和簽出功能，以方便多用戶在資產上協作。
 feature: Asset Management
 version: Cloud Service
 kt: 4542
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 簽入和簽出
 
-了解如何使用AEM簽入和簽出功能，以促進多使用者對資產的共同作業。
+瞭解如何使AEM用簽入和簽出功能，以方便多用戶在資產上協作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32048?quality=12&learn=on)

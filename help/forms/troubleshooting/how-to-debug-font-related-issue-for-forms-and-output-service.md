@@ -1,6 +1,6 @@
 ---
-title: 如何對Forms和輸出服務轉換的字型相關問題進行除錯
-description: 對Forms和輸出服務的字型相關問題進行除錯的步驟
+title: 如何調試與Forms和輸出服務轉換相關的字型問題
+description: 調試與Forms和輸出服務相關的字型問題的步驟
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何擷取抵押品以偵錯Forms和輸出服務轉換的字型相關問題
+# 如何捕獲抵押品以調試與Forms和輸出服務轉換相關的字型問題
 
-*此影片會逐步說明取得抵押品以偵錯Forms和輸出服務轉換的字型相關問題。*
+*此視頻將介紹獲取抵押品的過程，以調試與Forms和輸出服務轉換相關的字型問題。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335487?quality=12&learn=on)

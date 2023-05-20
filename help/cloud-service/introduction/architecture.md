@@ -1,6 +1,6 @@
 ---
 title: Assets as a Cloud Service 架構
-description: 探索基礎架構和AEMas a Cloud Service的重要部分。 深入探討Cloud Manager和API。
+description: 探索底層體系結構和重要的AEMas a Cloud Service。 深入訪問雲管理器和API。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -18,6 +18,6 @@ ht-degree: 25%
 
 # Assets as a Cloud Service 架構
 
-探索基礎架構和AEMas a Cloud Service的重要部分。 深入探討Cloud Manager和API。
+探索底層體系結構和重要的AEMas a Cloud Service。 深入訪問雲管理器和API。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330542?quality=12&learn=on)

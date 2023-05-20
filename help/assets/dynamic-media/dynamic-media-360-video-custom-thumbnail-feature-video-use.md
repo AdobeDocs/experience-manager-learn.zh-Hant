@@ -1,6 +1,6 @@
 ---
-title: 搭配AEM Assets使用Dynamic Media 360影片和自訂影片縮圖
-description: AEM 6.5中的Dynamic Media檢視器增強功能包括新增對360視訊轉譯、360媒體檢視器（video360Social和video360VR）的支援，以及選取自訂視訊縮圖的功能。
+title: 將Dynamic Media360視頻和自定義視頻縮略圖與AEM Assets
+description: Dynamic Media觀眾在AEM6.5中的增強功能包括對360個視頻渲染、360個媒體觀看者（video360Social和video360VR）以及選擇自定義視頻縮略圖的能力的增加。
 feature: Video Profiles
 version: 6.4, 6.5
 topic: Content Management
@@ -14,41 +14,41 @@ ht-degree: 4%
 
 ---
 
-# 搭配AEM Assets使用Dynamic Media 360影片和自訂影片縮圖
+# 將Dynamic Media360視頻和自定義視頻縮略圖與AEM Assets
 
-AEM 6.5中的Dynamic Media檢視器增強功能包括新增對360視訊轉譯、360媒體檢視器（video360Social和video360VR）的支援，以及選取自訂視訊縮圖的功能。
+Dynamic Media觀眾在AEM6.5中的增強功能包括對360個視頻渲染、360個媒體觀看者（video360Social和video360VR）以及選擇自定義視頻縮略圖的能力的增加。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26391?quality=12&learn=on)
 
 >[!NOTE]
 >
->視訊假設您的AEM例項在Dynamic Media S7模式下執行。  [若需使用Dynamic Media設定AEM的相關指示，請參閱此處](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). 上傳影片時，如果長寬比為2:1，依預設，Dynamic Media會將影片處理為360影片。 即寬高比為2:1。
+>視頻假設AEM您的實例在Dynamic MediaS7模式下運行。  [有關與Dynamic MediaAEM建立關係的說明，請參閱](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)。 在上傳視頻時，預設情況下，如果視頻的長寬比為2:1,Dynamic Media會將視頻處理為360視頻。 即寬高比為2:1。
 
 >[!NOTE]
 >
->Dynamic Media 360媒體元件僅支援360個影片。
+>Dynamic Media360媒體元件僅支援360個視頻。
 
-## Dynamic Media 360影片
+## Dynamic Media360個視頻
 
-360度的視頻，也稱為球形視頻，其中記錄了每個方向的視圖，同時使用全向攝像機拍攝，或者收集攝像機。 在平面顯示器上播放期間，使用者可控制觀看方向，而行動裝置上的播放通常採用內建的陀螺控制。  它可讓您超越單一攝影的限制。 行銷人員可透過360部影片，為使用者提供引人入勝的體驗。  我們開始吧。 在公司的DMS7設定中，可借由在/conf/global/settings/cloudconfigs/dmscene7/jcr:content指定雙重屬性s7PanoramicAR來修改全景影像外觀比例標準。
+360度視頻，又稱球形視頻，是錄像，在錄像中，每個方向的視圖都同時被記錄，使用全向攝像機拍攝，或者採集攝像機。 在平面顯示器上回放期間，用戶對觀看方向有控制，在移動設備上回放通常利用內置的陀螺儀控制。  它讓你超越了單一攝影的極限。 營銷人員可以通過360個視頻為用戶提供令人著迷的體驗。  開始吧。 通過在/conf/global/settings/cloudconfigs/dmscene7/jcr:content處指定雙屬性s7PanoramicAR，可以在公司的DMS7配置中修改全景影像縱橫比標準。
 
-## Dynamic Media 360影片
+## Dynamic Media360個視頻
 
-Dynamic Media影片現在支援為影片選取自訂縮圖的功能。 使用者可以從AEM Assets選取現有資產，或選取視訊影格作為縮圖。
+Dynamic Media視頻現在支援為您的視頻選擇自定義縮略圖。 用戶可以從AEM Assets選擇現有資產或選擇視頻幀作為縮略圖。
 
-## 動態360媒體檢視器
+## 動態360媒體查看器
 
 <table> 
  <tbody>
    <tr>
       <td> </td>
-      <td>**Video360Social檢視器**</td>
+      <td>**Video360Social Viewer**</td>
       <td>**Video360VR查看器**</td>
    </tr>
    <tr>
-      <td>Dynamic Media執行模式</td>
-      <td>Dynamic Media Scene7模式</td>
-      <td>Dynamic Media Scene7模式<br>
+      <td>Dynamic Media運行模式</td>
+      <td>Dynamic MediaScene7模式</td>
+      <td>Dynamic MediaScene7模式<br>
          <br>
       </td>
    </tr>
@@ -68,7 +68,7 @@ Dynamic Media影片現在支援為影片選取自訂縮圖的功能。 使用者
       <td>是</td>
    </tr>
    <tr>
-      <td>視訊播放</td>
+      <td>視頻播放</td>
       <td>是</td>
       <td>是</td>
    </tr>
@@ -76,13 +76,13 @@ Dynamic Media影片現在支援為影片選取自訂縮圖的功能。 使用者
       <td>視點導航</td>
       <td>
          <ul>
-            <li>滑鼠拖曳（案頭系統上）</li>
-            <li>滑動（觸控裝置）</li>
+            <li>滑鼠拖動（在案頭系統上）</li>
+            <li>輕掃（觸摸設備）</li>
          </ul>
       </td>
       <td>
          <ul>
-            <li>已禁用滑鼠和拖動選項</li>
+            <li>禁用滑鼠和拖動選項</li>
             <li>使用內置陀螺儀</li>
          </ul>
       </td>
@@ -93,7 +93,7 @@ Dynamic Media影片現在支援為影片選取自訂縮圖的功能。 使用者
       <td>是</td>
    </tr>
    <tr>
-      <td>社交分享選項</td>
+      <td>社交共用選項</td>
       <td>是</td>
       <td>否</td>
    </tr>
@@ -102,4 +102,4 @@ Dynamic Media影片現在支援為影片選取自訂縮圖的功能。 使用者
 
 ## 其他資源{#additional-resources}
 
-[在Scene7模式中設定Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[在Scene7模式下配置Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)

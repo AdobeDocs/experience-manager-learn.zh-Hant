@@ -1,6 +1,6 @@
 ---
-title: 開始開發 AEM Sites - WKND 教學課程
-description: 剛開發AEM? 需要重新整理最佳實務嗎？ 這是開始的地方！ 本多部分教學課程的目標是教導剛接觸AEM的開發人員如何使用最新標準和技術在AEM中實作網站。
+title: 開發 AEM Sites 快速入門 - WKND 教學課程
+description: 第一次開發 AEM？需要複習最佳做法？這是開始的地方！這個由多個部分組成的教學課程的目標是指導 AEM 新手開發人員如何使用最新的標準和技術在 AEM 中實作網站。
 feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
 topic: Development
 role: Developer
@@ -9,18 +9,18 @@ thumbnail: 30476.jpeg
 source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
 source-wordcount: '300'
-ht-degree: 12%
+ht-degree: 56%
 
 ---
 
 
-# 開始開發 AEM Sites - WKND 教學課程{#getting-started-developing-aem-sites-wknd-tutorial}
+# 開發 AEM Sites 快速入門 - WKND 教學課程{#getting-started-developing-aem-sites-wknd-tutorial}
 
-## 概覽 {#overview}
+## 概觀 {#overview}
 
-剛開始將Adobe Experience Manager發展為Cloud Service? 需要重新整理最新實務嗎？ 這是開始的地方！
+第一次開發 Adobe Experience Manager as a Cloud Service？需要複習最新做法？這是開始的地方！
 
-本多部分教學課程的目標是教導剛接觸AEM的開發人員如何使用最新標準和技術在AEM中實作網站。 希望在本教學課程結束時，您能了解AEM平台的基本基礎，並了解一些常見設計模式的知識。
+這個由多個部分組成的教學課程的目標是指導 AEM 新手開發人員如何使用最新的標準和技術在 AEM 中實作網站。希望在本教學課程結束時，您將了解 AEM 平台的基本知識和一些常見設計模式的知識。
 
 ## WKND 開發人員教學課程 {#wknd-developer-tutorial}
 
@@ -28,18 +28,18 @@ ht-degree: 12%
 
 此教學課程在設計上將使用 **AEM as a Cloud Service**，並向下相容於 **AEM 6.5+** 和 **AEM 6.4.2+**。
 
-**[在這裡檢視教學課程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
+**[在此查看教程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)**
 
-## 將WKND部署至AEM as aCloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## 將WKND部署到AEMas a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
-完成WKND教學課程後，請觀看以下影片以概略了解如何將WKND專案部署至AEM as aCloud Service。
+完成WKND教程後，請觀看以下視頻，瞭解如何將WKND項目部署到AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30191?quality=12&learn=on)
 
-此影片說明WKND Site專案如何：
+該視頻顯示WKND站點項目可以是：
 
-1. 來源為第三方Git存放庫（在此例中為Github.com），但可以是任何Git存放庫
-2. 推送至以AEM as a Adobe方案註冊的上游Cloud Manager Git存放庫
-3. 透過Cloud Manager管道部署至AEM作為Cloud Service環境
+1. 來源於第三方Git儲存庫，在本例中為Github.com，但可以是任何Git儲存庫
+2. 已推送到在as a Cloud Service程式中註冊的上游AdobeCloud Manager Git存AEM儲庫
+3. 通過Cloud Manager管道部署到AEMas a Cloud Service環境
 
-如需如何將AEM專案部署至AEM as a Cloud Service的完整概述，請觀看有關如何[整合Git與AdobeCloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)的影片系列。
+有關如何將項目部署為雲AEM服務AEM的完整概述，請觀看視頻系列，瞭解如何 [將Git與Adobe雲管理器整合](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)。

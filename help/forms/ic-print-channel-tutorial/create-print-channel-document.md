@@ -1,7 +1,7 @@
 ---
 title: 為打印通道建立互動式通信
 seo-title: Create Interactive Communication For Print Channel
-description: 這是多部分教程的6部分，用於為打印通道建立第一個互動式通信文檔。 在本部分中，將建立用於打印的交互通信文檔通道。
+description: 這是為打印通道建立第一個互動式通信文檔的多部分教程的6部分。 在此部分，將建立用於打印通道的互動式通信文檔。
 seo-description: This is part 6 of multipart tutorial for creating your first interactive communication document for the print channel. In this part, Interactive Communication Document for Print channel is created.
 uuid: 25318a2a-be9d-47d8-806b-d99c8e1c6a74
 feature: Interactive Communication
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 # 為打印通道建立互動式通信 {#create-interactive-communication-for-print-channel}
 
-在本部分中，將建立用於打印的交互通信文檔通道。
+在此部分，將建立用於打印通道的互動式通信文檔。
 
 在定義和配置資料源和表單資料模型後，我們現在將建立用於打印通道的互動式通信
 
@@ -34,4 +34,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-[將內容新增至目標區域](./add-content-to-target-areas.md)
+[將內容添加到目標區域](./add-content-to-target-areas.md)

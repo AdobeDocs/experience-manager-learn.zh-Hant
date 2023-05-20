@@ -1,6 +1,6 @@
 ---
-title: 執行和解讀AEM Forms PDFG系統整備工具輸出的步驟
-description: 解釋PDF生成器整備實用程式的結果。
+title: 運行和解釋AEM FormsPDFG系統準備工具輸出的步驟
+description: 解釋PDF生成器就緒性實用程式的結果。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 執行和解讀AEM Forms PDFG系統整備工具輸出的步驟
+# 運行和解釋AEM FormsPDFG系統準備工具輸出的步驟
 
-*此影片會逐步說明AEM Forms PDFG系統整備工具(SRT)的執行和解譯輸出程式。*
+*該視頻通過AEM FormsPDFG系統準備工具(SRT)的運行和輸出解譯過程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335543?quality=12&learn=on)

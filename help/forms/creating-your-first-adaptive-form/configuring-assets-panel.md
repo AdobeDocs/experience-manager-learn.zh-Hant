@@ -1,6 +1,6 @@
 ---
-title: 新增元件至資產區段
-description: 為「資產」面板設定折疊式功能表配置。折疊式功能表配置為新增可重複區段提供更好的一般使用者體驗。
+title: 將元件添加到「資產」部分
+description: 為「資產」面板配置折疊佈局。折疊佈局為添加可重複節提供了更好的最終用戶體驗。
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4212
@@ -16,11 +16,11 @@ ht-degree: 3%
 
 ---
 
-# 新增元件至「資產」面板 {#adding-components-to-assets-section}
+# 將元件添加到「資產」面板 {#adding-components-to-assets-section}
 
-為「資產」面板設定折疊式功能表配置。折疊式功能表配置為新增可重複區段提供更好的一般使用者體驗。
+為「資產」面板配置折疊佈局。折疊佈局為添加可重複節提供了更好的最終用戶體驗。
 
-**設定資產面板**
+**配置資產面板**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22200?quality=12&learn=on)
 
@@ -29,4 +29,4 @@ ht-degree: 3%
 
 ## 後續步驟
 
-[使用自訂函式填入下拉式清單](./using-custom-functions-and-code-editor.md)
+[使用自定義函式填充下拉清單](./using-custom-functions-and-code-editor.md)

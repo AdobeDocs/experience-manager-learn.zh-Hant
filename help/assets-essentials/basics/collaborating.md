@@ -1,6 +1,6 @@
 ---
-title: 在Assets Essentials中協作
-description: 了解如何使用註解、註解和工作，在資產管理內進行共同作業。
+title: Assets Essentials合作
+description: 瞭解如何使用注釋、注釋和任務在資產管理內部進行協作。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 在Assets Essentials中協作
+# Assets Essentials合作
 
-了解如何使用註解、註解和工作，進行資產管理共同作業。
+瞭解如何使用注釋、注釋和任務在資產管理方面進行協作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335856?quality=12&learn=on)

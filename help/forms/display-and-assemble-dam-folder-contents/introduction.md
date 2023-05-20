@@ -1,6 +1,6 @@
 ---
-title: 選取並下載DAM資料夾內容
-description: 使用DAM資料夾內容填入核取方塊元件，並允許使用者下載選取的內容的教學課程。
+title: 選擇並下載DAM資料夾內容
+description: 用DAM資料夾內容填充複選框元件並允許用戶下載選定內容的教程。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -17,17 +17,17 @@ ht-degree: 3%
 
 # 簡介
 
-常見的使用案例是使用核取方塊元件列出DAM資料夾內容（pdf檔案、word檔案等），並允許使用者選取要下載的檔案。 選定的檔案將組合為一個檔案，用戶可以下載。
+常見的使用情形是使用複選框元件列出DAM資料夾內容（pdf檔案、word文檔等），並允許用戶選擇要下載的檔案。 所選檔案將裝配到用戶可以下載的一個檔案中。
 
-![使用案例](assets/newsletters-download1.png)
+![用例](assets/newsletters-download1.png)
 
 ## 必備條件
 
-您需要下列項目：
+您需要以下功能：
 
-* 已安裝表單附加套件的AEM工作執行個體
+* 已安裝窗體AEM附件包的工作實例
 
-* [根據本文檔設定的開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+* [根據本檔案設定的開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 
 ## 後續步驟
 

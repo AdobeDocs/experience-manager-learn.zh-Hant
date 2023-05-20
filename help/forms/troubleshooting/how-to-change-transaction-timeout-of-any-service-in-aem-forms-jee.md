@@ -1,6 +1,6 @@
 ---
-title: 如何在AEM Forms JEE中變更服務的交易逾時
-description: 在AEM Forms JEE中增加或減少服務的交易逾時的步驟
+title: 如何更改AEM FormsJEE中服務的事務超時
+description: 增加或減少AEM FormsJEE中服務的事務超時的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何在AEM Forms JEE中變更服務的交易逾時
+# 如何更改AEM FormsJEE中服務的事務超時
 
-*此影片會逐步說明在AEM Forms JEE中變更服務的交易逾時步驟。*
+*此視頻將介紹在AEM FormsJEE中更改服務事務超時的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335495?quality=12&learn=on)

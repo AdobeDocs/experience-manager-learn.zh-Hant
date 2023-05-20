@@ -60,7 +60,7 @@ asset compute項目及其所包含的工作程式必須通過Adobe I/OCLI部署�
 1. 使用與目標工作區（階段或生產）對應的值設定環境變數
    + 兩個必需變數是 `AIO_runtime_namespace` 和 `AIO_runtime_auth` 並通過Workspace在Adobe I/O開發人員控制台中按工作區獲取 __全部下載__ 的子菜單。
 
-![Adobe開發人員控制台 — AIO運行時命名空間和身份驗證](./assets/runtime/stage-auth-namespace.png)
+![Adobe Developer控制台 — AIO運行時命名空間和身份驗證](./assets/runtime/stage-auth-namespace.png)
 
 可通過從命令行發出導出命令來設定這些鍵的值：
 
