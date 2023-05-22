@@ -11,7 +11,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 481b8877e252b885da307fcf4d96f8a50f026fa6
 workflow-type: tm+mt
 source-wordcount: '4571'
 ht-degree: 0%
@@ -154,7 +154,7 @@ ht-degree: 0%
    1. 添加其他 **nt：非結構化** 節點將批准者標籤為角色節點的子節點。
    1. 添加字串屬性 **jcr：標題** = &quot;**批准者**&quot; **卷類** =&quot;**所有者**&quot; **羅勒**=&quot;**批准者**。
       1. 批准者節點的名稱以及jcr:title和roleid可以是任何字串值（只要roleid是唯一的）。
-      1. **卷類** 根據 [3個OOTB角色](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User項目中的角色): **所有者**。 **編輯器**, **觀察**。
+      1. **卷類** 根據 [3個OOTB角色](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User%20Roles%20in%20a%20Project): **所有者**。 **編輯器**, **觀察**。
       1. 通常，如果自定義角色更像管理角色，則角色類可以 **所有者；** 如果它是比較具體的創作角色，如攝影師或設計師，則 **編輯器** roleclass應該足夠。 兩者之間的巨大差異 **所有者** 和 **編輯器** 項目所有者可以更新項目屬性並向項目添加新用戶。
 
    ```shell
