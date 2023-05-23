@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 5%
@@ -19,6 +19,8 @@ ht-degree: 5%
 ---
 
 # AEM Headless - GraphQL 快速入門
+
+{{aem-headless-trials-promo}}
 
 一個端到端教程，演示如何在無頭CMS方案中使用AEMGraphQLAPI構建和公開內容，並讓外部應用使用這些內容。
 
