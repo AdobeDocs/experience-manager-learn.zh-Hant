@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1822'
 ht-degree: 2%
 
 ---
@@ -230,10 +230,12 @@ ht-degree: 2%
    + [建立歡迎套件元件](welcome-kit/create-welcomekit-component.md)
    + [建立工作流程元件](welcome-kit/create-workflow-component.md)
    + [測試解決方案](welcome-kit/testing-the-solution.md)
-+ 在您的SPA中內嵌最適化表單 {#embed-form-spa}
++ Headless Forms API {#embed-form-spa}
    + [1 — 簡介](headless-forms/introduction.md)
    + [2 — 安裝相依性](headless-forms/install-af-react-libraries.md)
    + [3 — 擷取表單](headless-forms/fetch-the-form.md)
+   + [4 — 選取要填寫的表單](headless-forms/select-form-from-drop-down-list.md)
+   + [5 — 以卡片格式顯示表單](headless-forms/display-forms-card-view.md)
 
 + 使用Forms和Acrobat Sign的React應用程式 {#react-ic-sign}
    + [1 — 簡介](react-ic-sign/introduction.md)
