@@ -1,6 +1,6 @@
 ---
-title: 用於填充清單變數的自定義進程步驟
-description: 用於填充文檔和字串類型的清單變數的自定義進程步驟
+title: 填入清單變數的自訂流程步驟
+description: 填入檔案和字串型別清單變數的自訂流程步驟
 feature: Workflow
 topic: Development
 version: 6.5
@@ -15,18 +15,18 @@ ht-degree: 1%
 
 ---
 
-# 自定義流程步驟
+# 自訂流程步驟
 
 
-實現了自定義流程步驟，用附件和附件名稱填充「陣列清單」類型的工作流變數。 此變數隨後將用於「發送電子郵件」工作流元件。 如果您不熟悉建立OSGi捆綁包，請 [按照這些說明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+已實作自訂程式步驟，以使用附件和附件名稱填入「陣列清單」型別的工作流程變數。 然後，此變數會用於傳送電子郵件工作流程元件中。 如果您不熟悉如何建立OSGi套件，請 [請依照下列指示操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
-自定義流程步驟中的代碼執行以下操作
+自訂流程步驟中的程式碼會執行下列動作
 
-* 查詢有效負載資料夾下的所有自適應表單附件。 資料夾名稱作為進程參數傳遞給進程步驟。
+* 查詢有效負載資料夾下的所有最適化表單附件。 資料夾名稱會作為流程引數傳遞給流程步驟。
 
-* 填充 `listOfDocuments` 工作流變數
-* 填充 `attachmentNames` 工作流變數
-* 設定工作流變數的值(`no_of_attachments`)
+* 填入 `listOfDocuments` 工作流程變數
+* 填入 `attachmentNames` 工作流程變數
+* 設定工作流程變數的值(`no_of_attachments`)
 
 ```java
  package com.aemforms.formattachments.core;
@@ -111,11 +111,11 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> 請確保在工作流中定義了以下變數，以便代碼工作
-> *文檔清單*  — 文檔ArrayList類型的變數
-> *附件名稱*  — 字串ArrayList類型的變數
-> *no_of_attachments*  — 雙變數類型
+> 請確定您的工作流程中已定義下列變數，程式碼才能運作
+> *listOfDocuments*  — 檔案型別ArrayList的變數
+> *attachmentName*  — 字串ArrayList型別的變數
+> *no_of_attachments* - Double型別的變數
 
 ## 後續步驟
 
-[Test本地系統上的解決方案](./test.md)
+[在本機系統上測試解決方案](./test.md)

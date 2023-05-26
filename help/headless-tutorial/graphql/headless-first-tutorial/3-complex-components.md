@@ -1,6 +1,6 @@
 ---
-title: 構建複雜的映像清單元件 — AEM無頭第一教程
-description: 瞭解如何使用內容片段、內容引用和影像。
+title: 建立複雜的影像清單元件 — AEM Headless第一個教學課程
+description: 瞭解如何使用內容片段、內容參考和影像。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
@@ -18,29 +18,29 @@ ht-degree: 2%
 ---
 
 
-# 構建複雜元件
+# 建置複雜元件
 
-歡迎使用本教程章，我們將在其中探討如何建立呈現內容片段、嵌套內容片段引用和引用的影像資產的複雜影像清單元件。 我們將通過使用通用編輯器使React應用程式可編輯來進一步改進。
+歡迎使用本教學課程章節，我們將探索如何建立複雜的「影像清單」元件，以轉譯內容片段、巢狀內容片段參考和參照的影像資產。 我們將使用Universal Editor讓React應用程式可編輯，以更進一步操作。
 
-Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來管理內容。 我們利用內容片段來填充我們的影像清單元件，處理嵌套引用並顯示引用的影像資產。
+Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化方法。 我們會運用內容片段來填入影像清單元件、處理巢狀參考並顯示參考的影像資產。
 
-在本教程中，我們將指導您完成以下操作：構建「影像清單」元件、處理嵌套引用、渲染引用的影像資產以及整合通用編輯器。 您將學習如何設定依賴項、設計元件結構、檢索和分析內容片段，以及使用通用編輯器使應用程式可編輯。
+在本教學課程中，我們將引導您建立影像清單元件、處理巢狀參照、演算參照的影像資產以及整合通用編輯器。 您將瞭解如何設定相依性、設計元件結構、擷取和分析內容片段，以及使用通用編輯器使應用程式可編輯。
 
-在本教程的末尾，您將擁有一個功能完全且可編輯的「影像清單」元件。 您將具備在React應用中建立動態元件的知識和技能，從而增強通用編輯器的內容創作體驗。 讓我們開始構建可編輯的映像清單元件！
+在本教學課程章節結束時，您將擁有功能齊全且可編輯的「影像清單」元件。 您將具備在React應用程式中建立動態元件所需的知識和技能，能透過Universal Editor增強內容製作體驗。 讓我們開始建置可編輯的影像清單元件！
 
 ## 建立影像清單
 
-1. 現在，我們必須建立一些提供片段和影像清單元件。  導航到內容片段控制台。
+1. 我們現在必須建立一些選件片段和影像清單元件。  導覽至內容片段主控台。
 
    ![create-imagelist-fragment](./assets/3/create-imagelist-fragment.png)
 
-   我們要建立類型的片段 `imagelist` （型號） `imagelist`)，我們給它標題 `imagelist`。
+   我們要建立型別的片段 `imagelist` (模型為 `imagelist`)，我們將賦予其標題 `imagelist`.
 
-   在內容片段編輯器中，我們有機會選擇要包括或建立片段的片段。  選擇建立片段。
+   在內容片段編輯器中，我們有機會選取要包含或建立片段的片段。  選取「建立片段」。
 
-   我們的模型類型是「影像清單」。  為片段指定標題和名稱。
+   我們的模型型別為「影像清單」。  為片段提供標題和名稱。
 
-1. 由於影像清單是包括對其他片段的引用的容器類型片段，因此可以直接從編輯器建立新的提供。  建立聘用片段、包括和影像描述及文章。  可以從下面剪切和貼上文本。  我們使用片段的標題作為卡的標題。
+1. 由於影像清單是包含其他片段參照的容器型別片段，因此可以直接從編輯器建立新選件。  建立選件片段、包含和影像說明及文章。  您可以從下方剪下並貼上文字。  我們使用片段的標題作為卡片的標題。
 
    __Article1__
 
@@ -81,7 +81,7 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
    Like a faint torch, a striking green hue shines through the tent fabric, disappearing just as quickly. The sound of zippers does its best to penetrate the ocean's roar, as we curiously peek our heads out into the freezing wind. Moments after, we sprint out in sweatpants, cameras in hand to document the fabled phenomenon the past week's cloud layer has prevented us from seeing; the Aurora Borealis. It starts with only the faintest streaks of green and blue, seemingly appearing out of thin air, only to vanish before our eyes have had a chance to adjust to the dark. Every pulse becoming more radiant, and before we know it we are gazing in awe at the dancing curtains, shifting colors under starry skies. After a week of battling the elements, it's as if Mother Nature has decided to treat us with just a taste of the breathtaking beauty she is capable of, as if we have finally proven ourselves worthy. With our jaws still open, we watch on as the mesmerizing curtains of emerald green are veiled in a dark cloud layer, and the winds once again take hold of the bay. The exhibition is over for now, but these islands will stay in our minds forever. See you next time, Lofoten, may the forces of life yet again gravitate us towards your majestic shores, because in the hardship of finding what we came for, something else has emerged, a yearning for the undisturbed, the unknown and the truly magical. It's waiting for you no matter where you are in the world.
    ```
 
-   __第2條__
+   __Article 2__
 
    _標題_
 
@@ -124,7 +124,7 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
    Then there's the surf. A pointbreak breaking for 300 meters down a shallow coral shelf, producing immaculate almond-shaped barrels, grinding down the reef at a barely makeable speed. Even though many of the waves race past me on my struggling backhand, the few that I make it to the end of are some of the best I've ever experienced, and I have a hard time containing my excitement, hooting and hollering to Sofia on the cliffs, with her Canon 5D in hand. The line-up out back is an eclectic mix of old salty men on oversized gun surfboards, young semi-pros with stickered boards, girlfriends on longboards and hippies with dreadlocks and big smiles. Nothing of the notorious localism I have read about online, even though I quickly learn to respect the noticeable pecking order, letting the obviously more skilled crowd get the biggest set waves. There are still plenty of action for everyone, and a friendly smile opens up even the grumpiest old-timer. After the sun has set, the same faces are seen around campfires and tailgate barbeques all over the campground, where many seem to have gotten stuck for the season, ignoring distant calls of civilization urging them to return to normal lives. As the stars come out, we set up our cameras for timelapses, hoping to capture some of the magic that is happening above us, all the while our heads turn heavy from the five hours in the water and the beverages that followed.
    ```
 
-   __第3條__
+   __Article 3__
 
    _標題_
 
@@ -157,7 +157,7 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
    Fast forward 5000 years, and although human ingenuity, competition and spirit for invention has further evolved this once crude way of transportation, the principles remain the same. We designed our now countless different models of wooden planks to float on top of powder snow, crafted metal edges to cut through ice, we shaved off every superfluous gram we could find to help us on our journeys, to reach farther, higher and steeper. And today, when in many places, multi-billion dollar corporations charge us big money to ride down over-crowded slopes, many of us are returning to the original way of skiing. Exchanging lift queues for solitude, quantity for quality, and apres-ski beer for trail mix, a new generation of skiers are rediscovering the virtue of earning one's turns, the silence of the mountains, and how far into the unknown a little off-season cardio training can get you.
    ```
 
-   __第4條__
+   __Article 4__
 
    _標題_
 
@@ -190,7 +190,7 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
    Eu facilisis sed odio morbi quis. Consequat semper viverra nam libero justo laoreet sit amet. Eget mi proin sed libero enim sed faucibus. Vitae tempus quam pellentesque nec nam aliquam sem. Justo donec enim diam vulputate ut pharetra sit. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Mauris pellentesque pulvinar pellentesque habitant morbi. Iaculis at erat pellentesque adipiscing. Libero id faucibus nisl tincidunt eget nullam non nisi est. Interdum consectetur libero id faucibus nisl tincidunt. Volutpat odio facilisis mauris sit amet massa. Tristique senectus et netus et malesuada fames ac turpis egestas. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Sapien et ligula ullamcorper malesuada proin libero. Interdum consectetur libero id faucibus nisl tincidunt.
    ```
 
-1. 讓我們返回查詢編輯器並獲取此新元件。  請注意，我們正在參考 `OfferModel` 在查詢和元資料中，我們將使用這些元資料作為卡的標題。
+1. 讓我們返回查詢編輯器並擷取此新元件。  請注意，我們正在參照 `OfferModel` 以及中繼資料中，用於卡片標題。
 
    ```graphql
    query imageList {
@@ -226,13 +226,13 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
    }
    ```
 
-1. 現在將此連接到我們的應用。  在 `home.js`，我們將引用新查詢。 上 `useEffect()` 我們將 `list` 和 `setList`。
+1. 現在將此連線至我們的應用程式。  在我們的 `home.js`，請參考我們的新查詢。 以上 `useEffect()` 我們將設定 `list` 和 `setList`.
 
    ```javascript
    const [list, setList] = useState({});
    ```
 
-   內 `useEffect()` imagelist查詢的新請求。
+   內部 `useEffect()` imagelist查詢的新請求。
 
    ```javascript
    sdk.runPersistedQuery('pure-headless/imagelist')
@@ -246,13 +246,13 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
    });
    ```
 
-   現在，讓我們將此添加到我們應用的DOM中。
+   現在，讓我們將此專案新增至應用程式的DOM。
 
    ```javascript
    <div>{list.cards && <ImageList content={list.cards} />}</div>
    ```
 
-   讓我們看一下我們的影像化元件。  在影像清單中，我們對每項服務都進行了循環。
+   讓我們來看看我們的imagelist元件。  在imagelist中，我們會重複執行每個選件。
 
    ```javascript
    {content.items && content.items.map((items) => (
@@ -260,7 +260,7 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
    ))}
    ```
 
-   在卡元件中，我們呈現每張卡。
+   在卡片元件中，我們會轉譯每個卡片。
 
    ```javascript
    const Cards = ({ content }) => {
@@ -279,9 +279,9 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
    };
    ```
 
-   另外，請注意，我們正在引用影像元件並將其傳遞為動態URL。
+   另請注意，我們參考了影像元件，並將其傳遞至動態URL。
 
-   在影像元件中，我們使用動態URL建立具有多個URL的源集。
+   在影像元件中，我們使用動態URL來建立具有多個URL的來源集。
 
    ```javascript
    const srcset = [
@@ -294,13 +294,13 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
 
 ## 啟用通用編輯器
 
-1. 添加 `<meta />` 到應用。  開啟 `App.js` 並在檔案頂部插入導入。
+1. 新增 `<meta />` 至應用程式。  開啟 `App.js` ，並在檔案頂端插入匯入。
 
    ```javascript
    import { Helmet } from 'react-helmet';
    ```
 
-   在應用程式返回中添加以下代碼：
+   而應用程式內傳回下列程式碼：
 
    ```javascript
    <Helmet>
@@ -310,13 +310,13 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
 
    >[!TIP]
    >
-   > 我們使用Heart庫，根據 `.env` 檔案，但您可以將其硬編碼到 `index.html`。
+   > 我們使用Helmet程式庫，根據 `.env` 檔案，不過您可以將此檔案硬式編碼至 `index.html`.
 
-1. 現在，讓我們更新為卡，以標識用於編輯每張卡的片段和資料類型。
+1. 現在讓我們更新資訊卡，以識別片段和資料型別，以便編輯每個資訊卡。
 
-   在 `<div className='card' key={card._path}>`
+   範圍 `<div className='card' key={card._path}>`
 
-   添加
+   新增
 
    ```javascript
    itemID={`urn:aemconnection:${card._path}/jcr:content/data/master`} itemfilter='cf' itemType='reference' itemScope
@@ -328,21 +328,21 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
    <div className='card' key={card._path} itemID={`urn:aemconnection:${card._path}/jcr:content/data/master`} itemfilter='cf' itemType='reference' itemScope>
    ```
 
-1. 現在確定可編輯的內容。
+1. 現在確定哪些是可編輯的。
 
-   到 `<h3 />` 添加：
+   至 `<h3 />` 新增：
 
    ```javascript
    itemProp="_metadata" itemType="text"
    ```
 
-   敬我們 `<div />` 添加：
+   敬我們的 `<div />` 新增：
 
    ```javascript
    itemProp="description" itemType="richtext"
    ```
 
-   卡的最終代碼：
+   卡片的最終程式碼：
 
    ```javascript
    const Cards = ({ content }) => {
@@ -361,7 +361,7 @@ Adobe Experience Manager(AEM)的內容片段提供了一種結構化的方法來
    };
    ```
 
-最終代碼 `home.js`:
+的最終程式碼 `home.js`：
 
 ```javascript
 import React, { useContext, useEffect, useState } from 'react';
@@ -421,4 +421,4 @@ export default Home;
 
 ## 恭喜！
 
-您已成功建立了無AEM頭體驗，該體驗完全由無AEM頭API提供支援，並且可通過通用編輯器編輯。
+您已成功建立AEM Headless體驗，該體驗完全由AEM Headless API提供技術支援，並可使用通用編輯器進行編輯。

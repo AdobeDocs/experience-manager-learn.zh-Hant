@@ -1,6 +1,6 @@
 ---
-title: 雲5 — 體驗與內容片段
-description: A與Take討論體驗片段和內容片段之間的區別
+title: 雲端5 — 體驗與內容片段
+description: 體驗片段與內容片段之間的差異為何？
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,14 +15,14 @@ ht-degree: 3%
 
 ---
 
-# 雲5 — 碎片
+# 雲端5 — 片段
 
-「version」將介紹體驗片段和內容片段之間的區別
+「與」說明體驗片段與內容片段之間的差異
 
 >[!VIDEO](https://video.tv.adobe.com/v/342864?quality=12&learn=on)
 
-## 此視頻中包含的內容
+## 本影片涵蓋的內容
 
 + [使用內容片段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments.html)
 + [使用體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)
-+ [體驗片段文檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/experience-fragments.html)
++ [體驗片段檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/experience-fragments.html)

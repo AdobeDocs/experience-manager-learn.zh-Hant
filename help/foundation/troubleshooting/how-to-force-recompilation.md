@@ -1,6 +1,6 @@
 ---
-title: 如何強制重新編譯所有Sling指令碼jsps、java和
-description: 強制重新編譯JSP的步驟
+title: 如何強制重新編譯所有Sling指令碼jsps、Java和Sightly
+description: 強制重新編譯jsp的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何強制重新編譯所有Sling指令碼jsps、java和
+# 如何強制重新編譯所有Sling指令碼jsps、Java和Sightly
 
-*此視頻將逐步完成強制重新編譯所有Sling指令碼jsps、java和稍微。*
+*本影片逐步解說強制重新編譯所有Sling指令碼jsps、Java和Sightly的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335464?quality=12&learn=on)

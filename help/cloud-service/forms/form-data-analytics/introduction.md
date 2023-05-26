@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Analytics提交的表單資料欄位報告
-description: 將AEM FormsCS與Adobe Analytics整合以報告表單資料欄位
+title: 使用Adobe Analytics提交表單資料欄位的相關報告
+description: 將AEM Forms CS與Adobe Analytics整合以報告表單資料欄位
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -19,18 +19,18 @@ ht-degree: 0%
 
 # 使用Adobe Analytics報告表單資料欄位值和表單欄位驗證錯誤
 
-瞭解如何使用標籤和Adobe Analytics在自適應表單上實施分析。 本示例將指導您完成配置和實施步驟，以生成關於訪問者如何與表單交互的有見地的報告。
+瞭解如何使用Tags和Adobe Analytics在最適化表單上實施Analytics。 此範例將引導您完成設定和實作步驟，以製作有關訪客如何與您的表單互動的深入報表。
 
 ## 必備條件
 
-要充分利用本教程，建議您滿足以下先決條件：
+若要充分運用本教學課程，建議您符合下列先決條件：
 
-* AEM FormsCS的一些經驗
-* 訪問Adobe標籤
-* 訪問Adobe Analytics
+* AEM Forms CS的部分使用體驗
+* 存取Adobe標籤
+* 存取Adobe Analytics
 
 
 
-本教程使用在AEM Forms中構建的簡單自適應表單，並測量提交的表單中的居住值狀態以及生成驗證錯誤的欄位。
+本教學課程使用AEM Forms內建的簡單最適化表單，並測量居住狀態值的表單提交以及產生驗證錯誤的欄位。
 
-![自適應形式](assets/use-case.png)
+![Adaptive-form](assets/use-case.png)

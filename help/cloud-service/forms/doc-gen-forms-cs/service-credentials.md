@@ -1,6 +1,6 @@
 ---
-title: AEM Forms服務憑據
-description: 從Developer Console下載服AEM務憑據。
+title: AEM Forms服務認證
+description: 從AEM開發人員控制檯下載服務認證。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -17,10 +17,10 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms服務憑據
+# AEM Forms服務認證
 
-與AEMas a Cloud Service的整合必須能夠安全地驗證到AEM。 AEM Developer Console生成服務憑據，外部應用程式、系統和服務使用這些憑據以寫程式方式與AEM作者或通過HTTP發佈服務交互。
+與AEMas a Cloud Service的整合必須能夠安全地向AEM進行驗證。 AEM開發人員控制檯會產生服務憑證，外部應用程式、系統和服務會使用這些憑證，以程式設計方式透過HTTP與AEM作者或發佈服務互動。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
-下載的服務憑據檔案儲存為在提供的eclipse中名為service_token.json的資源檔案。 service_token檔案中的值用於生成JWT並將JWT交換為訪問令牌。 實用程式類GetServiceCredentials用於從service_token.json資源檔案中提取屬性值。
+下載的服務認證檔案會儲存為所提供eclipse中名為service_token.json的資源檔案。 service_token檔案中的值用於產生JWT並將JWT交換為存取權杖。 公用程式類別GetServiceCredentials是用來從service_token.json資源檔案擷取屬性值。

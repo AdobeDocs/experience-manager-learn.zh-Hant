@@ -1,6 +1,6 @@
 ---
-title: 如何捕獲要使用的網路日誌/工具
-description: 捕獲網路日誌以排除與網路相關的問題的步驟
+title: 如何擷取網路記錄/要使用的工具
+description: 擷取網路記錄以疑難排解網路相關問題的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何捕獲要使用的網路日誌/工具
+# 如何擷取網路記錄/要使用的工具
 
-*此視頻將介紹捕獲要使用的網路日誌/工具的步驟。*
+*此影片會逐步說明擷取網路記錄/要使用的工具的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335491?quality=12&learn=on)

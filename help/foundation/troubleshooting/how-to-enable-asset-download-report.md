@@ -1,6 +1,6 @@
 ---
 title: 如何啟用資產下載報告
-description: 啟用資產下載報告的步驟
+description: 啟用資產下載報表的步驟
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何啟用資產下載報告
+# 如何啟用資產下載報表
 
-*此視頻將介紹啟用資產下載報告的步驟。*
+*本影片將逐步說明啟用資產下載報告的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335463?quality=12&learn=on)

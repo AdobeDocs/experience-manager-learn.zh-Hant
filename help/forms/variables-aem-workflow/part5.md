@@ -1,6 +1,6 @@
 ---
-title: 工作AEM流中的變數[Part5]
-description: 在工作流中使用XML、JSON、ArrayList和Document類型的變AEM量
+title: AEM工作流程中的變數[第5部分]
+description: 在AEM工作流程中使用XML、JSON、ArrayList、檔案型別的變數
 version: 6.5
 topic: Development
 role: Developer
@@ -13,10 +13,10 @@ ht-degree: 0%
 
 ---
 
-# 工作流中的規則編AEM輯器
+# AEM Workflow中的規則編輯器
 
-「或分解」元件用於在工作流中進AEM行路由。 在6.AEM5版之前，您必須編寫ECMA或自定義代碼以啟用條件路由。 在AEM6.5中，我們現在能夠使用規則編輯器建立業務規則，以確定要執行的路由。
+「Or分割」元件是用來在AEM Workflow中進行路由。 在AEM 6.5版本之前，您必須撰寫ECMA或自訂程式碼以啟用條件式路由。 在AEM 6.5中，現在可以使用規則編輯器建立商業規則，以決定要執行的路徑。
 
-以下視頻將演示使用規則編輯器在工作流中執行條件處AEM理
+以下影片將示範如何使用規則編輯器在AEM工作流程中進行條件式處理
 
 >[!VIDEO](https://video.tv.adobe.com/v/26362?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 執行批配置
-description: 通過執行批來啟動文檔生成過程
+title: 執行批次設定
+description: 透過執行批次來啟動檔案產生流程
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,18 +16,18 @@ ht-degree: 0%
 
 ---
 
-# 執行批配置
+# 執行批次設定
 
-要運行批處理，請向以下API發出POST請求
+若要執行批次，請向以下API發出POST請求
 
 ```xml
 <baseURL>/confi/<configName>/execution
 ```
 
-此API要求一個空json對象作為請求體中的參數。
-此API返回由標識的響應標頭中的唯一URL **位置** 按鈕
-對此唯一URL的GET請求將告訴您批執行的狀態
+此API預期空白json物件為要求內文中的引數。
+此API會在由所識別的回應標頭中傳回唯一的URL **位置** 金鑰。
+對此唯一URL的GET請求將告知您批次執行的狀態
 
-以下視頻演示了批配置的觸發
+以下影片示範批次設定的觸發
 
 >[!VIDEO](https://video.tv.adobe.com/v/340242?quality=12&learn=on)

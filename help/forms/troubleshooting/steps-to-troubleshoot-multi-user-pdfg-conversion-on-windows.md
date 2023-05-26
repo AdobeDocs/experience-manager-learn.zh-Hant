@@ -1,6 +1,6 @@
 ---
-title: 在Windows設定中診斷多用戶PDFG轉換問題的步驟
-description: 對Windows安裝程式上的多個用戶PDF生成器問題進行故障排除。
+title: 在Windows設定中疑難排解多使用者PDFG轉換問題的步驟
+description: 疑難排解Windows安裝程式上的多個使用者PDF產生器問題。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 在Windows設定中診斷多用戶PDFG轉換問題的步驟
+# 在Windows設定中疑難排解多使用者PDFG轉換問題的步驟
 
-*此視頻介紹了在Windows設定中排除多用戶PDFG轉換問題的過程。*
+*此影片說明疑難排解Windows安裝程式上的多使用者PDFG轉換問題的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335550?quality=12&learn=on)

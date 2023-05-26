@@ -1,6 +1,6 @@
 ---
-title: 自定義AEM Assets注釋
-description: AEM Assets格式和樣式，當開發人員可以配置輸出到PDFAEM時。
+title: 在AEM Assets中自訂註解
+description: 輸出為PDF時的AEM Assets格式和樣式可由AEM開發人員設定。
 feature: Collaboration
 version: 6.4, 6.5
 topic: Collaboration
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 ---
 
-# 自定義AEM Assets注釋{#using-annotations-in-aem-assets}
+# 在AEM Assets中自訂註解{#using-annotations-in-aem-assets}
 
-支AEM持將注釋的輸出自定義為PDF。
+AEM支援自訂註解的輸出至PDF。
 
-## PDF注釋sling:OsgiConfig定義
+## PDF註解sling：OsgiConfig定義
 
-要自定義PDF批注，請建立 **sling:OsgiConfig** 項目下AEM的節點
+若要自訂PDF註解，請建立 **sling：OsgiConfig** 節點(在您的AEM專案中)
 
-`/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` 並根據需要調整值：
+`/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` 並視需要調整值：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

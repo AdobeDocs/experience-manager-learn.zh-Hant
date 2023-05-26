@@ -1,6 +1,6 @@
 ---
-title: 與AEM Assets建立智慧翻譯搜索
-description: 智慧翻譯搜索允許使用非英文搜索詞來解析英文內容。 要設定智慧AEM翻譯搜索，必須安裝和配置Apache Oak Search Machine Translation OSGi捆綁包，以及包含翻譯規則的相關免費和開源的Apache Joshua語言包。
+title: 使用AEM Assets設定智慧型翻譯搜尋
+description: 智慧型翻譯搜尋允許使用非英文搜尋辭彙來解析成英文內容。 若要設定AEM以進行智慧型翻譯搜尋，必須安裝並設定Apache Oak Search Machine Translation OSGi套件組合，以及包含翻譯規則的相關免費開放原始碼Apache Joshua語言套件。
 version: 6.4, 6.5
 feature: Search
 topic: Content Management
@@ -14,30 +14,30 @@ ht-degree: 0%
 
 ---
 
-# 與AEM Assets建立智慧翻譯搜索{#set-up-smart-translation-search-with-aem-assets}
+# 使用AEM Assets設定智慧型翻譯搜尋{#set-up-smart-translation-search-with-aem-assets}
 
-智慧翻譯搜索允許使用非英文搜索詞來解析英文內容。 要設定智慧AEM翻譯搜索，必須安裝和配置Apache Oak Search Machine Translation OSGi捆綁包，以及包含翻譯規則的相關免費和開源的Apache Joshua語言包。
+智慧型翻譯搜尋允許使用非英文搜尋辭彙來解析成英文內容。 若要設定AEM以進行智慧型翻譯搜尋，必須安裝並設定Apache Oak Search Machine Translation OSGi套件組合，以及包含翻譯規則的相關免費開放原始碼Apache Joshua語言套件。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21291?quality=12&learn=on)
 
 >[!NOTE]
 >
->必須在每個需要智慧翻譯的實AEM例上設定智慧翻譯搜索。
+>必須在需要智慧型翻譯搜尋的每個AEM執行個體上設定它。
 
-1. 下載並安裝Oak Search Machine Translation OSGi捆綁包
-   * [下載Oak Search Machine翻譯OSGi捆綁包](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.apache.jackrabbit%22%20AND%20a%3A%22oak-search-mt%22) 對應橡AEM木版。
-   * 將下載的Oak Search Machine Translation OSGi捆綁包安裝AEM到 [ `/system/console/bundles`](http://localhost:4502/system/console/bundles)。
+1. 下載並安裝Oak Search Machine Translation OSGi套件
+   * [下載Oak Search Machine Translation OSGi套件](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.apache.jackrabbit%22%20AND%20a%3A%22oak-search-mt%22) 對應至AEM Oak版本。
+   * 透過將下載的Oak Search Machine Translation OSGi套件組合安裝到AEM中 [ `/system/console/bundles`](http://localhost:4502/system/console/bundles).
 
-2. 下載和更新Apache Joshua語言包
-   * 下載並解壓縮所需 [Apache Joshua語言包](https://cwiki.apache.org/confluence/display/JOSHUA/Language+Packs)。
-   * 編輯 `joshua.config` 檔案並注釋掉以下2行開頭：
+2. 下載並更新Apache Joshua語言套件
+   * 下載並解壓縮所需的 [Apache Joshua語言套件](https://cwiki.apache.org/confluence/display/JOSHUA/Language+Packs).
+   * 編輯 `joshua.config` 檔案，並註釋掉以下列開頭的2行：
 
       ```
       feature-function = LanguageModel ...
       ```
 
-   * 確定並記錄語言包的模型資料夾的大小，因為這會影響所需的額外堆AEM空間量。
-   * 移動已解壓的Apache Joshua語言包資料夾(使用 `joshua.config` 編輯：
+   * 判斷並記錄語言套件模型資料夾的大小，因為這會影響AEM所需的額外棧積空間量。
+   * 移動解壓縮的Apache Joshua語言套件資料夾(使用 `joshua.config` 編輯)
 
       ```
       .../crx-quickstart/opt/<source_language-target_language>
@@ -49,58 +49,58 @@ ht-degree: 0%
        .../crx-quickstart/opt/es-en
       ```
 
-3. 使用更AEM新的堆記憶體分配重新啟動
-   * 停AEM止
-   * 確定新的所需堆大小AEM
+3. 使用更新的棧積記憶體配置重新啟動AEM
+   * 停止AEM
+   * 決定AEM所需的新棧積大小
 
-      * 預語AEM言 — 缺少堆大小+模型目錄大小捨入到最接近的2GB
-      * 例如：如果預語言包AEM安裝需要8GB的堆才能運行，而語言包的模型資料夾未壓縮3.8GB，則新堆大小為：
+      * AEM缺乏語言前的棧積大小+模型目錄的大小四捨五入到最接近的2GB
+      * 例如：如果預先安裝語言套件時，AEM安裝需要8GB的棧積才能執行，而語言套件的模型資料夾為3.8GB未壓縮，則新的棧積大小為：
 
-         原始 `8GB` +( `3.75GB` 四捨五入到最接近的 `2GB`，即 `4GB`)，共 `12GB`
-   * 驗證電腦是否具有此數量的額外可用記憶體。
-   * 更新AEM啟動指令碼以適應新堆大小
+         原始 `8GB` + ( `3.75GB` 四捨五入到最接近的值 `2GB`，亦即 `4GB`)，總共 `12GB`
+   * 驗證電腦是否有此數量的額外可用記憶體。
+   * 更新AEM啟動指令碼以調整新的棧積大小
 
-      * 前。 `java -Xmx12g -jar cq-author-p4502.jar`
-   * 以增加AEM的堆大小重新啟動。
+      * 例如： `java -Xmx12g -jar cq-author-p4502.jar`
+   * 以增加的棧積大小重新啟動AEM。
 
    >[!NOTE]
    >
-   >語言包所需的堆空間可能會增大，尤其是當使用多語言包時。
+   >語言套件所需的棧積空間可能會變得很大，尤其是使用多個語言套件時。
    >
    >
-   >總是確保 **實例有足夠的記憶體** 以適應已分配堆空間的增加。
+   >一律確定 **執行個體有足夠的記憶體** 以因應配置棧積空間的增加。
    >
    >
-   >的 **必須始終計算基堆以支援可接受的效能，而不需要任何語言包** 已安裝。
+   >此 **必須一律計算基礎棧積以支援可接受的效能，而不使用任何語言套件** 已安裝。
 
-4. 通過Apache Jackrabbit Oak機器翻譯全文查詢術語提供程式OSGi配置註冊語言包
+4. 透過Apache Jackrabbit Oak機器翻譯全文查詢條款提供者OSGi設定註冊語言套件
 
-   * 對於每個語言包， [建立新的Apache Jackrabbit Oak機器翻譯全文查詢術語提供程式OSGi配置](http://localhost:4502/system/console/configMgr/org.apache.jackrabbit.oak.plugins.index.mt.MTFulltextQueryTermsProviderFactory) 通過AEMWeb控制台的配置管理器。
+   * 對於每個語言套件， [建立新的Apache Jackrabbit Oak機器翻譯全文查詢條款提供者OSGi設定](http://localhost:4502/system/console/configMgr/org.apache.jackrabbit.oak.plugins.index.mt.MTFulltextQueryTermsProviderFactory) 透過AEM Web主控台的Configuration Manager。
 
-      * `Joshua Config Path` 是joshua.config檔案的絕對路徑。 進AEM程必須能夠讀取語言包資料夾中的所有檔案。
-      * `Node types` 是候選節點類型，其全文搜索將與此語言包進行翻譯。
-      * `Minimum score` 是要使用的已翻譯術語的最小置信度分數。
+      * `Joshua Config Path` 是joshua.config檔案的絕對路徑。 AEM程式必須能夠讀取語言套件資料夾中的所有檔案。
+      * `Node types` 是全文檢索搜尋將使用此語言套件進行翻譯的候選節點型別。
+      * `Minimum score` 是要使用的翻譯辭彙的最低信賴分數。
 
-         * 例如，hombre（西班牙語中&quot;man&quot;）可翻譯成英語單詞&quot;man&quot;，置信分數為 `0.9` 並翻譯成&quot;human&quot;這個詞，並帶有信心分數 `0.2`。 將最小分數調整為 `0.3`，將&quot;hombre&quot;與&quot;man&quot;的翻譯保留，但將&quot;hombre&quot;與&quot;human&quot;的翻譯作為該翻譯分數 `0.2` 小於 `0.3`。
+         * 例如，hombre （西班牙文中的「man」）可翻譯成英文單詞「man」，其信賴分數為 `0.9` 加上信賴分數，即可翻譯成human這個英文單字 `0.2`. 將最低分數調整為 `0.3`，會保留「hombre」到「man」的翻譯，但捨棄「hombre」到「human」的翻譯，因為此翻譯分數為 `0.2` 小於的最低分數 `0.3`.
 
-5. 對資產執行全文搜索
-   * 因為：Asset是重新註冊此語言包的節點類型，我們必須使用全文搜索搜索來搜索AEM Assets以驗證這一點。
-   * 定位至「AEM資產」並開啟Omnisearch。 以已安裝語言包的語言搜索術語。
-   * 根據需要，調整OSGi配置中的最小分數以確保結果的準確性。
+5. 對資產執行全文搜尋
+   * 由於dam：Asset是此語言套件再次註冊的節點型別，我們必須使用全文搜尋來搜尋AEM Assets以驗證此功能。
+   * 導覽至「AEM >資產」，然後開啟Omnisearch。 以已安裝語言套件的語言搜尋字詞。
+   * 如有需要，請調整OSGi設定中的最低分數，以確保結果的準確性。
 
-6. 正在更新語言包
-   * Apache Joshua語言包由Apache Joshua項目維護完整，其更新或更正是Apache Joshua項目的酌處權。
-   * 如果更新了語言包，則為了在中安裝更新AEM，必須執行上述步驟2 - 4，根據需要調整堆大小。
+6. 更新語言套件
+   * Apache Joshua語言套件是由Apache Joshua專案所維護，其更新或更正由Apache Joshua專案自行決定。
+   * 如果更新了語言套件，為了在AEM中安裝更新，必須執行上述步驟2到4，視需要調整棧積大小。
 
-      * 請注意，將解壓縮的語言包移動到crx-quickstart/opt資料夾時，在複製到新檔案之前，請移動任何現有的語言包資料夾。
-   * 如AEM果不需要重新啟動，則必須重新保存與更新語言包相關的相關Apache Jackrabbit Oak Machien翻譯全文查詢術語提供程式OSGi配置，以便AEM處理更新檔案。
+      * 請注意，將解壓縮的語言套件移動到crx-quickstart/opt資料夾時，請先移動任何現有的語言套件資料夾，然後再複製成新的語言套件。
+   * 如果AEM不需要重新啟動，則必須重新儲存與更新語言套件相關的相關Apache Jackrabbit Oak Machine翻譯全文查詢條款提供者OSGi設定，以便AEM處理更新的檔案。
 
 
 ## 更新damAssetLucene索引 {#updating-damassetlucene-index}
 
-為了 [智AEM能標籤](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html) 受智慧翻譯AEM的影響AEM, `/oak   :index  /damAssetLucene` 必須更新索引以將預測標籤（「智慧標籤」的系統名稱）標籤為資產的聚合Lucene索引的一部分。
+為了 [AEM智慧標籤](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html) 將受AEM Smart Translation、AEM影響 `/oak   :index  /damAssetLucene` 必須更新索引，才能將predictedTags （「智慧標籤」的系統名稱）標示為資產彙總Lucene索引的一部分。
 
-下 `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predicatedTags`，確保配置如下：
+下 `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predicatedTags`，請確定設定如下：
 
 ```xml
  <damAssetLucene jcr:primaryType="oak:QueryIndexDefinition">
@@ -120,7 +120,7 @@ ht-degree: 0%
 
 ## 其他資源{#additional-resources}
 
-* [Apache Oak搜索機器翻譯OSGi捆綁包](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.apache.jackrabbit%22%20AND%20a%3A%22oak-search-mt%22)
-* [Apache Joshua語言包](https://cwiki.apache.org/confluence/display/JOSHUA/Language+Packs)
-* [智AEM能標籤](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)
-* [查詢和索引的最佳做法](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/best-practices-for-queries-and-indexing.html)
+* [Apache Oak Search Machine Translation OSGi套件](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.apache.jackrabbit%22%20AND%20a%3A%22oak-search-mt%22)
+* [Apache Joshua語言套件](https://cwiki.apache.org/confluence/display/JOSHUA/Language+Packs)
+* [AEM智慧標籤](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)
+* [查詢和建立索引的最佳實務](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/best-practices-for-queries-and-indexing.html)

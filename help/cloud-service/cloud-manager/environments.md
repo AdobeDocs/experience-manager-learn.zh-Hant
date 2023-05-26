@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe雲管理器 — 環境
-description: 雲管理器環境由AEM作者、AEM發佈和Dispatcher服務組成。 不同的環境支援角色，並可以使用不同的CI/CD管道進行參與。 Cloud Manager環境通常具有一個生產環境、一個階段環境和一個開發環境。
+title: 使用Adobe Cloud Manager — 環境
+description: Cloud Manager環境由AEM作者、AEM發佈和Dispatcher服務組成。 不同的環境支援角色，並可使用不同的CI/CD管道與其互動。 Cloud Manager環境通常有一個生產環境、一個中繼環境和一個開發環境。
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -19,8 +19,8 @@ ht-degree: 0%
 
 ---
 
-# 使用Adobe雲管理器 — 環境
+# 使用Adobe Cloud Manager — 環境
 
-[雲管理器環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) 由AEM作者、AEM發佈和Dispatcher服務組成。 不同的環境支援角色，並可以使用不同的CI/CD管道進行參與。 Cloud Manager環境通常具有一個生產環境、一個階段環境和一個開發環境。
+[Cloud Manager環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) 由AEM Author、AEM Publish和Dispatcher服務組成。 不同的環境支援角色，並可使用不同的CI/CD管道與其互動。 Cloud Manager環境通常有一個生產環境、一個中繼環境和一個開發環境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)

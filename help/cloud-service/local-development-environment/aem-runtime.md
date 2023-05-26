@@ -1,6 +1,6 @@
 ---
-title: 設定本地運AEM行時以AEM進行as a Cloud Service開發
-description: 使用as a Cloud ServiceSDK的AEM快速啟動AEMJar設定本地運行時。
+title: 為AEMas a Cloud Service開發設定本機AEM執行階段
+description: 使用AEMas a Cloud ServiceSDK的Quickstart Jar設定本機AEM執行階段。
 feature: Developer Tools
 version: Cloud Service
 kt: 4678, 4677
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 ---
 
-# 設定本地運AEM行時 {#set-up-local-aem-runtime}
+# 設定本機AEM執行階段 {#set-up-local-aem-runtime}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
@@ -28,46 +28,46 @@ ht-degree: 9%
 
 Adobe Experience Manager (AEM) 可透過 AEM as a Cloud Service  SDK 的 Quickstart Jar 在本機上執行。如此一來，開發人員就能在將自訂程式碼、設定和內容送交來源控制項前，先行部署和測試，然後再部署至 AEM as a Cloud Service 環境。
 
-請注意 `~` 用作用戶目錄的簡寫。 在Windows中，這相當於 `%HOMEPATH%`。
+請注意 `~` 用作使用者目錄的簡寫。 在Windows中，這相當於 `%HOMEPATH%`.
 
 ## 安裝Java
 
 Experience Manager是Java應用程式，因此需要Java SDK支援開發工具。
 
-1. [下載並安裝最新的Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3內容%2Fmetadata%2Fdc%3SoftwareType&amp;1_group.propertyvalues.operation=等於&amp;1_group.propertyvalues.0_values=軟體類型%3Atoling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;order=%40jcr%3內容%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-1. 通過運行以下命令驗證Java 11 SDK是否已安裝：
+1. [下載並安裝最新的Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=limit&amp;p.limit=0&amp;p.limit=144)
+1. 執行命令以確認是否已安裝Java 11 SDK：
    + Windows:`java -version`
-   + macOS/Linux: `java --version`
+   + macOS / Linux： `java --version`
 
 ![Java](./assets/aem-runtime/java.png)
 
 ## 下載AEMas a Cloud ServiceSDK
 
-as a Cloud ServiceAEMSDK(或AEMSDK)包含用於運行AEM Author和本地發佈以供開發的Quickstart Jar以及Dispatcher Tools的相容版本。
+AEMas a Cloud ServiceSDK (或AEM SDK)包含用於在本機執行AEM製作和發佈以進行開發的Quickstart Jar，以及相容版本的Dispatcher工具。
 
-1. 登錄到 [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) 你的Adobe ID
-   + 請注意，您的Adobe組織 __必須__ 已設定AEMas a Cloud Service以下載AEMas a Cloud ServiceSDK。
-1. 導航到 __AEMas a Cloud Service__ 頁籤
-1. 排序依據 __發佈日期__ 在 __降序__ 訂單
-1. 按一下最新 __SDKAEM__ 結果行
-1. 查看並接受EULA，並點擊 __下載__ 按鈕
+1. 登入 [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) 使用您的Adobe ID
+   + 請注意，您的Adobe組織 __必須__ 布建AEMas a Cloud Service以下載AEMas a Cloud ServiceSDK。
+1. 導覽至 __AEMas a Cloud Service__ 標籤
+1. 排序方式 __發佈日期__ 在 __降序__ 訂購
+1. 按一下最新的 __AEM SDK__ 結果列
+1. 檢閱並接受EULA，然後點選 __下載__ 按鈕
 
-## 從AEMSDK zip解壓快速啟動Jar
+## 從AEM SDK zip解壓縮Quickstart Jar
 
-1. 解壓縮下載的 `aem-sdk-XXX.zip` 檔案
+1. 將下載的解壓縮 `aem-sdk-XXX.zip` 檔案
 
-## 設定本地AEM作者服務{#set-up-local-aem-author-service}
+## 設定本機AEM作者服務{#set-up-local-aem-author-service}
 
-本地AEM作者服務為開發商提供本地體驗數字營銷者/內容作者將分享以建立和管理內容。  AEM Author Service既是創作環境，也是預覽環境，它允許對功能開發執行大多數驗證，因此它是本地開發流程的一個重要元素。
+本機AEM作者服務為開發人員提供本機體驗，數位行銷人員/內容作者將分享該體驗，以建立和管理內容。  AEM Author Service在設計上既是製作環境，又是預覽環境，可讓您針對此環境執行大多數功能開發驗證，使其成為本機開發流程的重要元素。
 
 1. 建立資料夾 `~/aem-sdk/author`
-1. 複製 __快速啟動JAR__ 檔案  `~/aem-sdk/author` 將其更名為 `aem-author-p4502.jar`
-1. 通過從命令行執行以下命令來啟動本地AEM作者服務：
+1. 複製 __快速入門JAR__ 檔案至  `~/aem-sdk/author` 並將其重新命名為 `aem-author-p4502.jar`
+1. 從命令列執行下列動作，啟動本機AEM Author Service：
    + `java -jar aem-author-p4502.jar`
-      + 將管理員密碼提供為 `admin`。 任何管理員密碼都是可接受的，但建議使用本地開發的預設密碼來減少重新配置的需要。
+      + 提供管理員密碼作為 `admin`. 可接受任何管理員密碼，但建議使用預設的本機開發，以減少重新設定的需求。
 
-   你 *不能* 以「Cloud Service快AEM速啟動Jar」的身份啟動 [按兩下](#troubleshooting-double-click)。
-1. 訪問本地AEM作者服務，地址為 [http://localhost:4502](http://localhost:4502) 在Web瀏覽器中
+   您 *無法* 啟動AEM作為Cloud Service快速入門Jar [按兩下](#troubleshooting-double-click).
+1. 存取本機AEM作者服務，網址為 [http://localhost:4502](http://localhost:4502) 在網頁瀏覽器中
 
 Windows:
 
@@ -78,7 +78,7 @@ $ cd c:\Users\<My User>\aem-sdk\author
 $ java -jar aem-author-p4502.jar
 ```
 
-macOS/Linux:
+macOS / Linux：
 
 ```shell
 $ mkdir -p ~/aem-sdk/author
@@ -87,18 +87,18 @@ $ cd ~/aem-sdk/author
 $ java -jar aem-author-p4502.jar
 ```
 
-## 設定本地AEM發佈服務
+## 設定本機AEM Publish服務
 
-本地AEM發佈服務為開發人員提供本地體驗，最終用戶AEM將擁有本地體驗，例如瀏覽上門的網AEM站。 本地AEM發佈服務與SDK整合AEM時非常重要 [調度程式工具](./dispatcher-tools.md) 並允許開發人員抽煙test並微調最終面向最終用戶的體驗。
+本機AEM Publish Service為開發人員提供AEM的本機體驗使用者將擁有的體驗，例如瀏覽存放在AEM上的網站。 本機AEM Publish服務非常重要，因為它與AEM SDK的 [Dispatcher工具](./dispatcher-tools.md) 可讓開發人員自行測試並微調面向最終使用者的體驗。
 
 1. 建立資料夾 `~/aem-sdk/publish`
-1. 複製 __快速啟動JAR__ 檔案  `~/aem-sdk/publish` 將其更名為 `aem-publish-p4503.jar`
-1. 通過從命令行執行以下命令來啟動本地AEM發佈服務：
+1. 複製 __快速入門JAR__ 檔案至  `~/aem-sdk/publish` 並將其重新命名為 `aem-publish-p4503.jar`
+1. 從命令列執行下列動作，啟動本機AEM Publish Service：
    + `java -jar aem-publish-p4503.jar`
-      + 將管理員密碼提供為 `admin`。 任何管理員密碼都是可接受的，但建議使用本地開發的預設密碼來減少重新配置的需要。
+      + 提供管理員密碼作為 `admin`. 可接受任何管理員密碼，但建議使用預設的本機開發，以減少重新設定的需求。
 
-   你 *不能* 以「Cloud Service快AEM速啟動Jar」的身份啟動 [按兩下](#troubleshooting-double-click)。
-1. 訪問本地AEM發佈服務，地址為 [http://localhost:4503](http://localhost:4503) 在Web瀏覽器中
+   您 *無法* 啟動AEM作為Cloud Service快速入門Jar [按兩下](#troubleshooting-double-click).
+1. 存取本機AEM Publish Service，網址為 [http://localhost:4503](http://localhost:4503) 在網頁瀏覽器中
 
 Windows:
 
@@ -109,7 +109,7 @@ $ cd c:\Users\<My User>\aem-sdk\publish
 $ java -jar aem-publish-p4503.jar
 ```
 
-macOS/Linux:
+macOS / Linux：
 
 ```shell
 $ mkdir -p ~/aem-sdk/publish
@@ -118,9 +118,9 @@ $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
 
-## 在預發行模AEM式下設定本地服務
+## 在發行前模式下設定本機AEM服務
 
-可以AEM在中啟動本地運行時 [預釋放模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=zh-Hant) 允許開發人員根據AEMas a Cloud Service的下一版功能進行構建。 通過 `-r prerelease` 本地運行時AEM的第一個啟動的參數。 這可以與本地AEM Author和AEM Publish服務一起使用。
+本機AEM執行階段可以啟動 [發行前模式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=zh-Hant) 允許開發人員針對AEMas a Cloud Service的下一版本功能進行建置。 透過傳遞以下專案來啟用發行前： `-r prerelease` 引數在本機AEM執行階段第一個開頭。 這可同時用於本機AEM Author和AEM Publish服務。
 
 ```shell
 # For AEM Author service in prerelease mode
@@ -130,112 +130,112 @@ $ java -jar aem-author-p4502.jar -r prerelease
 $ java -jar aem-publish-p4503.jar -r prerelease
 ```
 
-## 模擬內容分發 {#content-distribution}
+## 模擬內容發佈 {#content-distribution}
 
-在真正的Cloud Service環境中，使用 [Sling內容分發](https://sling.apache.org/documentation/bundles/content-distribution.html) 和Adobe管道。 的 [Adobe管線](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution) 是僅在雲環境中可用的孤立微服務。
+在真實的Cloud Service環境中，內容會使用從Author Service散發到Publish Service [Sling內容發佈](https://sling.apache.org/documentation/bundles/content-distribution.html) 和Adobe管道。 此 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution) 是僅可用於雲端環境的獨立微服務。
 
-在開發過程中，最好使用本地作者和發佈服務來模擬內容的分發。 這可以通過啟用舊式複製代理來實現。
+在開發期間，可能最好使用本機Author和Publish服務來模擬內容的分發。 這可透過啟用舊版復寫代理程式來達成。
 
 >[!NOTE]
 >
-> 複製代理僅可在本地Quickstart JAR中使用，並僅提供內容分發的模擬。
+> 復寫代理程式僅可用於本機Quickstart JAR，且僅提供內容散佈的模擬。
 
-1. 登錄到 **作者** 服務並導航 [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html)。
-1. 按一下 **預設代理（發佈）** 開啟預設複製代理。
-1. 按一下 **編輯** 開啟代理的配置。
-1. 在 **設定** 頁籤，更新以下欄位：
+1. 登入 **作者** 服務並導覽至 [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
+1. 按一下 **預設代理程式（發佈）** 以開啟預設的復寫代理。
+1. 按一下 **編輯** 以開啟代理程式的設定。
+1. 在 **設定** 索引標籤中，更新下列欄位：
 
-   + **已啟用**  — 檢查真
-   + **代理用戶ID**  — 將此欄位留空
+   + **已啟用**  — 檢查true
+   + **代理使用者ID**  — 將此欄位留空
 
-   ![複製代理配置 — 設定](assets/aem-runtime/settings-config.png)
+   ![復寫代理程式組態 — 設定](assets/aem-runtime/settings-config.png)
 
-1. 在 **運輸** 頁籤，更新以下欄位：
+1. 在 **傳輸** 索引標籤中，更新下列欄位：
 
    + **URI** - `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
-   + **用戶** - `admin`
+   + **使用者** - `admin`
    + **密碼** - `admin`
 
-   ![複製代理配置 — 傳輸](assets/aem-runtime/transport-config.png)
+   ![復寫代理程式設定 — 傳輸](assets/aem-runtime/transport-config.png)
 
-1. 按一下 **確定** 保存配置並啟用 **預設** 複製代理。
-1. 現在，您可以對「作者」服務上的內容進行更改，並將其發佈到「發佈」服務。
+1. 按一下 **確定** 以儲存設定並啟用 **預設** 復寫代理程式。
+1. 您現在可以變更Author服務的內容，並將其發佈到Publish服務。
 
 ![發佈頁面](assets/aem-runtime/publish-page-changes.png)
 
-## 快速啟動Jar啟動模式
+## 快速入門Jar啟動模式
 
-快速啟動罐的命名， `aem-<tier>_<environment>-p<port number>.jar` 指定啟動方式。 一旦AEM在特定層、作者或發佈中啟動，就不能將其更改為備用層。 為此， `crx-Quickstart` 必須刪除在第一次運行期間生成的資料夾，並且必須再次運行Quickstart Jar。 環境和埠可以更改，但需要停止/啟動本地實AEM例。
+快速入門Jar的命名， `aem-<tier>_<environment>-p<port number>.jar` 指定其啟動方式。 AEM在特定層級、作者或發佈中啟動後，即無法變更為替代層級。 若要這麼做， `crx-Quickstart` 必須刪除第一次執行期間產生的資料夾，並且必須再次執行Quickstart Jar。 環境和連線埠可以變更，但是它們需要停止/啟動本機AEM執行個體。
 
-不斷變化的環境， `dev`。 `stage` 和 `prod`，對於開發人員來說非常有用，可確保由正確定義和解決特定於環境的配AEM置。 建議主要在預設情況下進行本地開發 `dev` 環境運行模式。
+不斷變化的環境， `dev`， `stage` 和 `prod`對於開發人員來說，這有助於確保環境特定的設定可由AEM正確定義和解析。 建議主要針對預設值執行本機開發 `dev` 環境執行模式。
 
-可用排列如下：
+可用的排列如下：
 
-| 快速啟動Jar檔案名 | 模式說明 |
+| 快速入門Jar檔案名稱 | 模式說明 |
 |------------------------------|-----------------------------------------------------------------------------|
-| `aem-author-p4502.jar` | 作為作者在埠4502上以開發運行模式運行 |
-| `aem-author_dev-p4502.jar` | 作為Author在埠4502上以開發運行模式運行(與 `aem-author-p4502.jar`) |
-| `aem-author_stage-p4502.jar` | 在埠4502的「暫存」運行模式中作為作者 |
-| `aem-author_prod-p4502.jar` | 作為作者在埠4502上的生產運行模式 |
-| `aem-publish-p4503.jar` | 在埠4503上以開發運行模式發佈 |
-| `aem-publish_dev-p4503.jar` | 在埠4503上以開發運行模式發佈(與 `aem-publish-p4503.jar`) |
-| `aem-publish_stage-p4503.jar` | 在埠4503上以暫存運行模式發佈 |
-| `aem-publish_prod-p4503.jar` | 在埠4503上以生產運行模式發佈 |
+| `aem-author-p4502.jar` | 在連線埠4502上以開發執行模式中的作者身分 |
+| `aem-author_dev-p4502.jar` | 作為作者在開發執行模式下，於連線埠4502上執行(與 `aem-author-p4502.jar`) |
+| `aem-author_stage-p4502.jar` | 在連線埠4502上以作者身分在中繼執行模式下 |
+| `aem-author_prod-p4502.jar` | 作為作者在連線埠4502上處於生產執行模式 |
+| `aem-publish-p4503.jar` | 在連線埠4503上以開發執行模式發佈 |
+| `aem-publish_dev-p4503.jar` | 在連線埠4503上以開發執行模式發佈(與 `aem-publish-p4503.jar`) |
+| `aem-publish_stage-p4503.jar` | 在連線埠4503上以測試執行模式發佈時 |
+| `aem-publish_prod-p4503.jar` | 在連線埠4503上以生產執行模式發佈時 |
 
-請注意，埠號可以是本地開發電腦上的任何可用埠，但是按慣例：
+請注意，連線埠號碼可以是本機開發機器上任何可用的連線埠，但依照慣例：
 
-+ 埠 __4502__ 用於 __本地AEM作者服務__
-+ 埠 __4503__ 用於 __本地AEM發佈服務__
++ 連線埠 __4502__ 用於 __本機AEM作者服務__
++ 連線埠 __4503__ 用於 __本機AEM Publish服務__
 
-更改這些設定可能需要對AEMSDK配置進行調整
+若要變更這些專案，可能需要調整AEM SDK設定
 
-## 停止本地運AEM行時
+## 停止本機AEM執行階段
 
-為了停止本地運行AEM時（AEM Author或Publish服務），開啟用於啟動運行時的命令行窗AEM口，然後點擊 `Ctrl-C`。 等待關AEM閉。 關閉過程完成後，命令行提示可用。
+若要停止本機AEM執行階段（AEM製作或發佈服務），請開啟用來啟動AEM執行階段的命令列視窗，然後點選 `Ctrl-C`. 等待AEM關閉。 當關機程式完成時，可以使用命令列提示。
 
-## 可選本AEM地運行時設定任務
+## 選擇性本機AEM執行階段設定工作
 
-+ __OSGi配置環境變數和秘密變數__ 是 [為本地運行AEM時特別設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development)而不是使用aio CLI管理它們。
++ __OSGi設定環境變數和密碼變數__ 是 [為AEM本機執行階段特別設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development)，而不使用aio CLI管理它們。
 
-## 何時更新快速啟動Jar
+## 何時更新快速入門Jar
 
-至少每AEM月在每月最後一個星期四(即as a Cloud Service的「功能發佈」的發佈節目)上更新SDKAEM，或在之後不久更新SDK。
+每個月的最後一個星期四或之後不久，至少每月更新AEM SDK，這是AEMas a Cloud Service「功能發行」的發行節奏。
 
 >[!WARNING]
 >
-> 將Quickstart Jar更新為新版本需要替換整個本地開發環境，從而導致本地儲存庫中的所有代碼、配置和內AEM容丟失。 確保任何不應銷毀的代碼、配置或內容安全提交到Git，或從本地實例導出為AEM包AEM。
+> 將快速入門Jar更新為新版本需要取代整個本機開發環境，導致遺失本機AEM存放庫中的所有程式碼、設定和內容。 確保任何不應損毀的程式碼、設定或內容已安全地提交至Git，或從本機AEM執行個體匯出為AEM套件。
 
-### 如何避免升級SDK時的內AEM容丟失
+### 升級AEM SDK時如何避免內容遺失
 
-升級AEMSDK將有效地建立全新的運行AEM時，包括新的儲存庫，這意味著對先前SDK的儲存庫所做的AEM任何更改都將丟失。 以下是可行的策略，可幫助在SDK升級之AEM間保留內容，並可以單獨或協調使用：
+升級AEM SDK實際上會建立全新的AEM執行階段，包括新的存放庫，這表示對先前AEM SDK的存放庫所做的任何變更都會遺失。 以下是協助在AEM SDK升級之間儲存內容的可行策略，可單獨或一致使用：
 
-1. 建立專用於包含「示例」內容的內容包，以幫助開發，並以Git維護。 應通過SDK升級保AEM留的任何內容將保留到此包中，並在升級SDK後重新AEM部署。
-1. 使用 [橡樹升級](https://jackrabbit.apache.org/oak/docs/migration.html) 和 `includepaths` 指令，將內容從以前的AEMSDK儲存庫複製到新AEM的SDK儲存庫。
-1. 使用先前AEMSDK上的包管理器和內容包備AEM份任何內容，並在新SDK上重新安AEM裝它們。
+1. 建立專用於包含「範例」內容的內容套件，以協助開發並在Git中維護它。 任何應透過AEM SDK升級儲存的內容將儲存在此套件中，並在升級AEM SDK後重新部署。
+1. 使用 [oak-upgrade](https://jackrabbit.apache.org/oak/docs/migration.html) 使用 `includepaths` 指示詞，可將先前AEM SDK存放庫中的內容複製到新的AEM SDK存放庫。
+1. 使用舊版AEM SDK上的AEM Package Manager和內容套件備份任何內容，並在新的AEM SDK上重新安裝它們。
 
-請記住，使用以上方法在SDK升級之AEM間維護代碼表示開發反模式。 非一次性代碼應源於開發IDE，並通過部署流AEM入SDK。
+請記住，在AEM SDK升級之間使用上述方法來維護程式碼，表示開發反模式。 非一次性程式碼應源自於開發IDE，並透過部署流入AEM SDK。
 
 ## 疑難排解
 
-### 按兩下Quickstart Jar檔案將導致錯誤{#troubleshooting-double-click}
+### 連按兩下Quickstart Jar檔案會導致錯誤{#troubleshooting-double-click}
 
-按兩下快速啟動Jar啟動時，將顯示錯誤模式，阻止本AEM地啟動。
+按兩下「快速入門Jar 」以開始時，會顯示錯誤強制回應視窗，防止AEM在本機啟動。
 
-![疑難解答 — 按兩下Quickstart Jar檔案](./assets/aem-runtime/troubleshooting__double-click.png)
+![疑難排解 — 按兩下Quickstart Jar檔案](./assets/aem-runtime/troubleshooting__double-click.png)
 
-這是因為AEMas a Cloud Service快速啟動Jar不支援按兩下快速啟動Jar以在本地AEM啟動。 而必須從該命令行運行Jar檔案。
+這是因為AEMas a Cloud Service快速入門Jar不支援按兩下Quickstart Jar以在本機啟動AEM。 而是必須從該命令列執行Jar檔案。
 
-要啟動AEM作者服務， `cd` 進入包含快速啟動Jar的目錄並執行命令：
+若要啟動AEM Author服務， `cd` 進入包含Quickstart Jar的目錄並執行命令：
 
 `$ java -jar aem-author-p4502.jar`
 
-或者，啟動AEM發佈服務， `cd` 進入包含快速啟動Jar的目錄並執行命令：
+或者，若要啟動AEM發佈服務， `cd` 進入包含Quickstart Jar的目錄並執行命令：
 
 `$ java -jar aem-publish-p4503.jar`
 
-### 從命令行啟動快速啟動Jar會立即中止{#troubleshooting-java-8}
+### 從命令列啟動「快速入門Jar」會立即中止{#troubleshooting-java-8}
 
-從命令行啟動Quickstart Jar時，進程會立即中止，AEM服務不會啟動，出現以下錯誤：
+從命令列啟動「快速入門Jar」時，程式會立即中止且AEM服務不會啟動，並出現以下錯誤：
 
 ```shell
 ➜  ~/aem-sdk/author: java -jar aem-author-p4502.jar
@@ -248,17 +248,17 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-這是因為AEMas a Cloud Service需要Java SDK 11，而您正在運行的版本很可能是Java 8。 要解決此問題，請下載並安裝 [OracleJava SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3內容%2Fmetadata%2Fdc%3SoftwareType&amp;1_group.propertyvalues.operation=等於&amp;1_group.propertyvalues.0_values=軟體類型%3Atoling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;order=%40jcr%3內容%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)。
-安裝Java SDK 11後，從命令行執行以下命令來驗證它是活動版本。
+這是因為AEMas a Cloud Service需要Java SDK 11，而您執行的是其他版本，很可能是Java 8。 若要解決此問題，請下載並安裝 [oracleJava SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=limit&amp;p.limit=0&amp;p.limit=144).
+安裝Java SDK 11後，從命令列執行下列動作，確認其為作用中版本。
 
-安裝Java 11 SDK後，通過從命令行運行命令來驗證它是活動版本：
+安裝Java 11 SDK後，從命令列執行命令，確認其為作用中版本：
 
 + Windows: `java -version`
-+ macOS/Linux: `java --version`
++ macOS / Linux： `java --version`
 
 ## 其他資源
 
-+ [下載AEMSDK](https://experience.adobe.com/#/downloads)
-+ [Adobe雲管理器](https://my.cloudmanager.adobe.com/)
++ [下載AEM SDK](https://experience.adobe.com/#/downloads)
++ [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
 + [下載Docker](https://www.docker.com/)
-+ [Experience Manager調度程式文檔](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
++ [Experience ManagerDispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)

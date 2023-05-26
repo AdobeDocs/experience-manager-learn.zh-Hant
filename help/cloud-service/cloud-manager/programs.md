@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe雲管理器 — 程式
-description: Cloud Manager程式表示支援AEM業務計畫邏輯集的一組環境，通常對應於購買的服務級別協定(SLA)。 例如，一個方案可以代表支援AEM全球公共網站的資源，而另一個方案則代表一個內部中央資料庫。
+title: 使用Adobe Cloud Manager — 計畫
+description: Cloud Manager計畫代表支援邏輯業務計畫集合的AEM環境集合，通常會對應到已購買的服務等級協定(SLA)。 例如，一個計畫可能代表AEM資源以支援全球公共網站，而另一個計畫代表內部中央DAM。
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -19,8 +19,8 @@ ht-degree: 0%
 
 ---
 
-# 使用Adobe雲管理器 — 程式
+# 使用Adobe Cloud Manager — 計畫
 
-雲管理器 **程式** 表示支援AEM邏輯業務計畫集的一組環境，通常對應於購買的服務級別協定(SLA)。 例如，一個方案可以代表支援AEM全球公共網站的資源，而另一個方案則代表一個內部中央資料庫。
+Cloud Manager **計畫** 代表支援邏輯業務計畫集合的AEM環境集合，通常會對應到已購買的服務等級協定(SLA)。 例如，一個計畫可能代表AEM資源以支援全球公共網站，而另一個計畫代表內部中央DAM。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)

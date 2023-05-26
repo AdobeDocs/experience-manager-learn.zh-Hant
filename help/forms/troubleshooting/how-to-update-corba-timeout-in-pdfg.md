@@ -1,6 +1,6 @@
 ---
-title: 如何更新PDFG中的CORBA超時以緩解事務回滾問題？
-description: 在AEM FormsPDF生成器中配置CORBA超時以解決與事務回滾相關的問題
+title: 如何更新PDFG中的CORBA逾時來緩解交易復原問題？
+description: 在AEM FormsPDF產生器中設定CORBA逾時，以解決與交易復原相關的問題
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何在PDFG中更新CORBA超時以緩解事務回滾問題
+# 如何更新PDFG中的CORBA逾時來緩解交易復原問題
 
-*該視頻描述了在FormsPDFG中更新CORBA超時以緩解事務回滾問題的過程。*
+*此影片說明在Forms PDFG中更新CORBA逾時以緩解交易復原問題的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335512?quality=12&learn=on)

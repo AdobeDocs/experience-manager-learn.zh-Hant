@@ -1,6 +1,6 @@
 ---
-title: Cloud Manager在Cloud Manager中的重要性探AEM討
-description: 瞭解Cloud Manager的用途及其與AEMas a Cloud Service的協作。
+title: 探索Cloud Manager在AEM中的重要性
+description: 探索Cloud Manager的用途以及它如何搭配AEMas a Cloud Service使用。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 雲管理器和AEMas a Cloud Service
+# Cloud Manager和AEMas a Cloud Service
 
-瞭解Cloud Manager的用途及其與AEMas a Cloud Service的協作。
+探索Cloud Manager的用途以及它如何搭配AEMas a Cloud Service使用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330545?quality=12&learn=on)

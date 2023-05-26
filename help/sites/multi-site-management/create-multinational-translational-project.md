@@ -1,7 +1,7 @@
 ---
-title: 建立多語言翻譯項目
+title: 建立多語言翻譯專案
 seo-title: Create a multilingual Translation Project
-description: 瞭解如何從項目控制台建立、編輯和管理語言副本的多語言翻譯AEM項目
+description: 瞭解如何從AEM專案主控台為您的語言副本建立、編輯和管理多語言翻譯專案
 seo-description: Learn how to create, edit and manage a multi-language translation project for your Language Copy from AEM's Project console
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
@@ -22,8 +22,8 @@ ht-degree: 0%
 
 ---
 
-# 建立多語言翻譯項目 {#create-multi-language-translation-projects}
+# 建立多語言翻譯專案 {#create-multi-language-translation-projects}
 
-瞭解如何從項目控制台建立、編輯和管理語言副本的多語言翻譯AEM項目
+瞭解如何從AEM專案主控台為您的語言副本建立、編輯和管理多語言翻譯專案
 
 >[!VIDEO](https://video.tv.adobe.com/v/36485?quality=12&learn=on)

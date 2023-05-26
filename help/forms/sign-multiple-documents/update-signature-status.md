@@ -1,6 +1,6 @@
 ---
-title: 更新資料庫中表單的簽名狀態
-description: 使用工作流更新資料庫中籤名表單的簽名狀AEM態
+title: 更新資料庫中表單的簽章狀態
+description: 使用AEM工作流程更新資料庫中已簽署表單的簽名狀態
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6888
@@ -18,13 +18,13 @@ ht-degree: 2%
 
 # 更新簽名狀態
 
-當用戶完成簽名儀式時，將觸發UpdateSignatureStatus工作流。 以下是工作流的流
+當使用者完成簽署儀式時，就會觸發UpdateSignatureStatus工作流程。 以下是工作流程的流程
 
-![主工作流](assets/update-signature.PNG)
+![主要工作流程](assets/update-signature.PNG)
 
-「更新簽名狀態」是自定義進程步驟。
-實施自定義流程步驟的主要原因是擴展工AEM作流。 以下是用於更新簽名狀態的自定義代碼。
-此自定義進程步驟中的代碼引用SignMultipleForms服務。
+更新簽章狀態為自訂程式步驟。
+實作自訂流程步驟的主要原因是為了擴充AEM Workflow。 以下是用來更新簽名狀態的自訂程式碼。
+此自訂流程步驟中的程式碼會參照SignMultipleForms服務。
 
 
 ```java
@@ -70,8 +70,8 @@ public class UpdateSignatureStatusWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-更新簽名狀態工作流可以 [從此處下載](assets/update-signature-status-workflow.zip)
+更新簽名狀態工作流程可以是 [已從此處下載](assets/update-signature-status-workflow.zip)
 
 ## 後續步驟
 
-[自定義摘要步驟以顯示下一個用於簽名的表單](./customize-summary-component.md)
+[自訂摘要步驟以顯示下一個要簽署的表單](./customize-summary-component.md)

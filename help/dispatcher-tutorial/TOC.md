@@ -19,4 +19,4 @@ ht-degree: 75%
 + [概觀](overview.md)
 + [1 — 概念、模式和反模式](chapter-1.md)
 + [2 — 基礎架構模式](chapter-2.md)
-+ [3 — 高級快取主題](chapter-3.md)
++ [3 — 進階快取主題](chapter-3.md)

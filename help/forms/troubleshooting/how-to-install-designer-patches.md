@@ -1,6 +1,6 @@
 ---
-title: 如何安裝設計器修補程式
-description: 本文將引導您完成安裝AEM Forms設計器修補程式的步驟
+title: 如何安裝設計工具修補程式
+description: 本文將逐步引導您安裝AEM Forms Designer修補程式的步驟
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何安裝設計器修補程式
+# 如何安裝設計工具修補程式
 
-*此視頻將介紹安裝Designer修補程式的過程。*
+*本影片將逐步說明安裝Designer修補程式的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335504?quality=12&learn=on)

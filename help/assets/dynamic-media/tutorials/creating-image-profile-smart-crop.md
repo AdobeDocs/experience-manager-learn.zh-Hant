@@ -1,6 +1,6 @@
 ---
-title: 在Dynamic Media建立智慧作物影像配置AEM檔案
-description: 在Dynamic Media配置智慧裁剪
+title: 在AEM Dynamic Media中建立智慧型裁切影像設定檔
+description: 在Dynamic Media中設定智慧型裁切
 version: Cloud Service
 role: Developer
 level: Intermediate
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# 在Dynamic Media建立智慧作物影像配置AEM檔案
+# 在AEM Dynamic Media中建立智慧型裁切影像設定檔
 
-此視頻在Dynamic Media完成建立Smart Crop Image Profile的步AEM驟。
+本影片逐步說明在AEM Dynamic Media中建立智慧型裁切影像設定檔的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335460?quality=12&learn=on)

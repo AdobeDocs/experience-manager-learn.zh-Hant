@@ -1,7 +1,7 @@
 ---
-title: 第2章 — 定義事件內容片段模型 — Content Services
+title: 第2章 — 定義事件內容片段模型 — 內容服務
 seo-title: Getting Started with AEM Content Services - Chapter 2 - Defining Event Content Fragment Models
-description: 《無頭教程》AEM第2章介紹了啟用和定義內容片段模型，用於定義用於建立事件的標準化資料結構和創作介面。
+description: AEM Headless教學課程的第2章涵蓋啟用和定義內容片段模型，用於定義標準化的資料結構和用於建立事件的製作介面。
 seo-description: Chapter 2 of the AEM Headless tutorial covers enabling and defining Content Fragment Models used to define a normalized data structure and authoring interface for creating Events.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
@@ -17,102 +17,102 @@ ht-degree: 7%
 
 # 第2章 — 使用內容片段模型
 
-內AEM容片段模型定義內容架構，可用於模板由作者建立原始內AEM容。 這種方法類似於腳手架或基於形式的創作。 內容片段的關鍵概念是創作的內容與演示無關，這意味著它用於多渠道使用，在多渠道使用中，無論是單頁應用程式還是移動應用程式，都控制內容向用戶顯示的方式。
+AEM內容片段模型會定義內容結構描述，這些結構描述可用來將AEM作者建立原始內容的過程製作成範本。 此方法類似於支架或表單式編寫。 內容片段的主要概念是所編寫的內容與呈現方式無關，這表示其旨在用於多管道使用，其中消費應用程式(不論是AEM、單頁應用程式或行動應用程式)會控制向使用者顯示內容的方式。
 
-內容片段的主要關注點是確保：
+內容片段的主要問題是確保：
 
-1. 從作者處收集正確的內容
-2. 該內容可以以結構化、易於理解的格式公開給消費的應用。
+1. 系統會從作者處收集正確的內容
+2. 內容能以結構化、容易理解的格式向使用者應用程式公開。
 
-本章介紹啟用和定義用於定義標準化資料結構和創作介面以建模和建立「事件」的內容片段模型。
+本章涵蓋啟用和定義內容片段模型，這些模型用於定義標準化資料結構和撰寫介面，以便建模和建立「事件」。
 
 ## 啟用內容片段模型
 
-內容片段模型 **必須** 通過 **[AEM [!UICONTROL 配置瀏覽器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)**。
+內容片段模型 **必須** 啟用方式： **[AEM [!UICONTROL 設定瀏覽器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)**.
 
-如果內容片段模型是 **不** 為配置啟用， **[!UICONTROL 建立] > [!UICONTROL 內容片段]** 按鈕將不顯示相關配AEM置。
+如果內容片段模型為 **not** 已為設定啟用， **[!UICONTROL 建立] > [!UICONTROL 內容片段]** 按鈕不會針對相關AEM設定顯示。
 
 >[!NOTE]
 >
->AEM配置表示 [上下文感知租戶配置](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) 儲存 `/conf`。 通AEM常，配置與在AEM Sites管理的特定網站或負責子集內容（資產、頁面等）的業務部門相關 的上AEM界。
+>AEM設定代表一組 [內容感知租使用者設定](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) 儲存於 `/conf`. AEM設定通常會與AEM Sites中管理的特定網站或負責內容子集（資產、頁面等）的業務單位建立關聯。 在AEM中。
 >
->為了使配置影響內容層次結構，必須通過 `cq:conf` 內容層次結構上的屬性。 (這是為 [!DNL WKND Mobile] 配置 **步驟5** )。
+>為了讓設定影響內容階層，必須透過 `cq:conf` 內容階層上的屬性。 (這是透過下列專案達成： [!DNL WKND Mobile] 中的設定 **步驟5** 下)。
 >
->當 `global` 使用配置，配置適用於所有內容， `cq:conf` 不需要設定。
+>當 `global` 會使用設定，而設定會套用至所有內容，並且 `cq:conf` 不需要設定。
 >
->查看 [[!UICONTROL 配置瀏覽器] 文檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html) 的子菜單。
+>請參閱 [[!UICONTROL 設定瀏覽器] 檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html) 以取得詳細資訊。
 
-1. 以具有相應權限修改相關配置的用戶身份登錄到AEM Author。
-   * 對於本教程， **管理員** 可以使用用戶。
-1. 導航到 **[!UICONTROL 工具] > [!UICONTROL 常規] > [!UICONTROL 配置瀏覽器]**
-1. 點擊 **資料夾表徵圖** 下 **[!DNL WKND Mobile]** ，然後點擊 **[!UICONTROL 編輯] 按鈕** 左上角。
-1. 選擇 **[!UICONTROL 內容片段模型]**，然後點擊 **[!UICONTROL 保存並關閉]** 右上角。
+1. 以具有適當許可權的使用者身分登入AEM作者，以修改相關設定。
+   * 在本教學課程中， **管理員** 使用者可以使用。
+1. 導覽至 **[!UICONTROL 工具] > [!UICONTROL 一般] > [!UICONTROL 設定瀏覽器]**
+1. 點選 **資料夾圖示** 旁邊 **[!DNL WKND Mobile]** 以選取，然後點選 **[!UICONTROL 編輯] 按鈕** 左上角。
+1. 選取 **[!UICONTROL 內容片段模型]**，然後點選 **[!UICONTROL 儲存並關閉]** 右上角。
 
-   這將啟用具有以下功能的資產資料夾內容樹上的內容片段模型 [!DNL WKND Mobile] 已應用配置。
+   這會在具有下列專案的資產資料夾內容樹上啟用內容片段模型： [!DNL WKND Mobile] 設定已套用。
 
    >[!NOTE]
    >
-   >此配置更改不可從 [!UICONTROL 配AEM置] Web UI。 要撤消此配置：
+   >此設定變更無法從 [!UICONTROL AEM設定] Web UI。 若要還原此設定：
    >    
    >    1. 開啟 [CRXDE Lite](http://localhost:4502/crx/de)
    >    1. 瀏覽到 `/conf/wknd-mobile/settings/dam/cfm`
    >    1. 刪除 `models` 節點
 
    >    
-   >在此配置下建立的任何現有內容片段模型都將被刪除，並且它們的定義將儲存在 `/conf/wknd-mobile/settings/dam/cfm/models`。
+   >任何在此設定下建立的現有內容片段模型都會刪除，且其定義會儲存在 `/conf/wknd-mobile/settings/dam/cfm/models`.
 
-1. 應用 **[!DNL WKND Mobile]** 配置 **[!DNL WKND Mobile]資產資料夾** 允許在該資產資料夾層次結構中建立內容片段模型的內容片段：
+1. 套用 **[!DNL WKND Mobile]** 的設定 **[!DNL WKND Mobile]資產資料夾** 若要允許在該資產資料夾階層中建立內容片段模型的內容片段：
 
-   1. 導航到 **[!UICONTROL AEM] > [!UICONTROL 資產] > [!UICONTROL 檔案]**
-   1. 選擇 **[!UICONTROL WKND移動] 資料夾**
-   1. 點擊 **[!UICONTROL 屬性]** 按鈕 [!UICONTROL 資料夾屬性]
-   1. 在 [!UICONTROL 資料夾屬性]，按一下 **[!UICONTROL Cloud Services]** 頁籤
-   1. 驗證 **[!UICONTROL 雲配置]** 欄位設定為 **/conf/wknd mobile**
-   1. 點擊 **[!UICONTROL 保存並關閉]** 在右上角保留更改
+   1. 導覽至 **[!UICONTROL AEM] > [!UICONTROL 資產] > [!UICONTROL 檔案]**
+   1. 選取 **[!UICONTROL WKND Mobile] 資料夾**
+   1. 點選 **[!UICONTROL 屬性]** 按鈕以開啟 [!UICONTROL 資料夾屬性]
+   1. 在 [!UICONTROL 資料夾屬性]，點選 **[!UICONTROL Cloud Services]** 標籤
+   1. 驗證 **[!UICONTROL 雲端設定]** 欄位已設為 **/conf/wknd-mobile**
+   1. 點選 **[!UICONTROL 儲存並關閉]** 以保留變更
 
 >[!VIDEO](https://video.tv.adobe.com/v/28336?quality=12&learn=on)
 
 >[!WARNING]
 >
-> __內容片段模型__ 從 __工具>資產__ 至 __「工具」>「常規」__。
+> __內容片段模型__ 已移動自 __「工具」>「資產」__ 至 __「工具」>「一般」__.
 
 ## 瞭解要建立的內容片段模型
 
-在定義內容片段模型之前，讓我們回顧一下我們將帶來的體驗，以確保捕獲所有必要的資料點。 為此，我們將回顧移動應用程式設計並將設計元素映射到要收集的內容。
+在定義內容片段模式之前，請先檢閱我們將要推動的體驗，以確保擷取所有必要的資料點。 為此，我們將檢閱行動應用程式設計，並將設計元素對應至要收集的內容。
 
-我們可以按如下方式細分定義Event的資料點：
+我們可以劃分定義事件的資料點，如下所示：
 
 ![建立內容片段模型](assets/chapter-2/design-to-model-mapping.png)
 
-利用映射，我們可以定義用於收集並最終公開事件資料的內容片段。
+透過對應，我們可以定義用來收集並最終公開事件資料的內容片段。
 
 ## 建立內容片段模型
 
-1. 導航到 **[!UICONTROL 工具] > [!UICONTROL 常規] > [!UICONTROL 內容片段模型]**。
-1. 點擊 **[!DNL WKND Mobile]** 開啟。
-1. 點擊 **[!UICONTROL 建立]** 開啟「內容片段模型建立」嚮導。
-1. 輸入 **[!DNL Event]** 的 **[!UICONTROL 模型標題]** *（說明是可選的）* 點擊 **[!UICONTROL 建立]** 來保存。
+1. 導覽至 **[!UICONTROL 工具] > [!UICONTROL 一般] > [!UICONTROL 內容片段模型]**.
+1. 點選 **[!DNL WKND Mobile]** 資料夾開啟。
+1. 點選 **[!UICONTROL 建立]** 以開啟內容片段模式建立精靈。
+1. 輸入 **[!DNL Event]** 作為 **[!UICONTROL 模型標題]** *（說明為選用）* 並點選 **[!UICONTROL 建立]** 以儲存。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28337?quality=12&learn=on)
 
 ## 定義內容片段模型的結構
 
-1. 導航到 **[!UICONTROL 工具] > [!UICONTROL 常規] > [!UICONTROL 內容片段模型] >[!DNL WKND]**。
-1. 選擇 **[!DNL Event]** 內容片段模型和點擊 **[!UICONTROL 編輯]** 按鈕。
-1. 從 **[!UICONTROL 資料類型] 頁籤** 右邊，拖動 **[!UICONTROL 單行文本輸入]** 到左下拉區域以定義 **[!DNL Question]** 的子菜單。
-1. 確保新 **[!UICONTROL 單行文本輸入]** 的 **[!UICONTROL 屬性] 頁籤** 的下界。 按如下方式填充「屬性」欄位：
+1. 導覽至 **[!UICONTROL 工具] > [!UICONTROL 一般] > [!UICONTROL 內容片段模型] >[!DNL WKND]**.
+1. 選取 **[!DNL Event]** 內容片段模型並點選 **[!UICONTROL 編輯]** 在頂端動作列中。
+1. 從 **[!UICONTROL 資料型別] 標籤** 在右側，拖曳 **[!UICONTROL 單行文字輸入]** 放入左側放置區以定義 **[!DNL Question]** 欄位。
+1. 確定新的 **[!UICONTROL 單行文字輸入]** 左側選取「 」，且 **[!UICONTROL 屬性] 標籤** ，即會在右側選取。 依照以下方式填入「屬性」欄位：
 
    * [!UICONTROL 呈現為] : `textfield`
    * [!UICONTROL 欄位標籤] : `Event Title`
    * [!UICONTROL 屬性名稱] : `eventTitle`
-   * [!UICONTROL 最大長度] :25
-   * [!UICONTROL 必需] : `Yes`
+   * [!UICONTROL 最大長度] ：25
+   * [!UICONTROL 必填] ： `Yes`
 
-使用下面定義的輸入定義重複這些步驟，以建立「事件內容片段模型」的其餘部分。
+使用下列定義的輸入定義重複這些步驟，以建立其餘的事件內容片段模式。
 
 >[!NOTE]
 >
-> 的 **屬性名稱** 欄位必須完全匹配，因為Android應用程式被寫程式為關閉這些名稱。
+> 此 **屬性名稱** 欄位必須完全相符，因為Android應用程式的程式設計會關閉這些名稱。
 
 ### 事件說明
 
@@ -126,14 +126,14 @@ ht-degree: 7%
 * [!UICONTROL 資料類型] : `Date and time`
 * [!UICONTROL 欄位標籤] : `Event Date and Time`
 * [!UICONTROL 屬性名稱] : `eventDateAndTime`
-* [!UICONTROL 必需] : `Yes`
+* [!UICONTROL 必填] ： `Yes`
 
 ### 事件類型
 
 * [!UICONTROL 資料類型] : `Enumeration`
 * [!UICONTROL 欄位標籤] : `Event Type`
 * [!UICONTROL 屬性名稱] : `eventType`
-* [!UICONTROL 選項] : `Art,Music,Performance,Photography`
+* [!UICONTROL 選項] ： `Art,Music,Performance,Photography`
 
 ### 票價
 
@@ -141,8 +141,8 @@ ht-degree: 7%
 * [!UICONTROL 呈現為] : `numberfield`
 * [!UICONTROL 欄位標籤] : `Ticket Price`
 * [!UICONTROL 屬性名稱] : `eventPrice`
-* [!UICONTROL 類型] : `Integer`
-* [!UICONTROL 必需] : `Yes`
+* [!UICONTROL 型別] ： `Integer`
+* [!UICONTROL 必填] ： `Yes`
 
 ### 事件影像
 
@@ -151,7 +151,7 @@ ht-degree: 7%
 * [!UICONTROL 欄位標籤] : `Event Image`
 * [!UICONTROL 屬性名稱] : `eventImage`
 * [!UICONTROL 根路徑] : `/content/dam/wknd-mobile/images`
-* [!UICONTROL 必需] : `Yes`
+* [!UICONTROL 必填] ： `Yes`
 
 ### 地點名稱
 
@@ -159,29 +159,29 @@ ht-degree: 7%
 * [!UICONTROL 呈現為] : `textfield`
 * [!UICONTROL 欄位標籤] : `Venue Name`
 * [!UICONTROL 屬性名稱] : `venueName`
-* [!UICONTROL 最大長度] :20
-* [!UICONTROL 必需] : `Yes`
+* [!UICONTROL 最大長度] ：20
+* [!UICONTROL 必填] ： `Yes`
 
-### 韋納城
+### 地點城市
 
 * [!UICONTROL 資料類型] : `Enumeration`
 * [!UICONTROL 欄位標籤] : `Venue City`
 * [!UICONTROL 屬性名稱] : `venueCity`
-* [!UICONTROL 選項] : `Basel,London,Los Angeles,Paris,New York,Tokyo`
+* [!UICONTROL 選項] ： `Basel,London,Los Angeles,Paris,New York,Tokyo`
 
 >[!VIDEO](https://video.tv.adobe.com/v/28335?quality=12&learn=on)
 
 >[!NOTE]
 >
->的 **[!UICONTROL 屬性名稱]** 表示 **兩者** 儲存此值的JCR屬性名稱以及JSON檔案中的鍵。 這應該是一個在內容片段模型的生命期內不會改變的語義名稱。
+>此 **[!UICONTROL 屬性名稱]** 表示 **兩者** 儲存此值的JCR屬性名稱以及JSON檔案中的索引鍵。 這應該是一個語意名稱，不會在內容片段模式的生命週期中變更。
 
-完成內容片段模型的建立後，您最終應該有一個如下定義：
+完成內容片段模型的建立後，您應該會有如下的定義：
 
 
 ![事件內容片段模型](assets/chapter-2/event-content-fragment-model.png)
 
 ## 下一步
 
-（可選）安裝 [com.adobe.aem.guides.wknd-mobile content-2.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) 通過 [包管AEM理器](http://localhost:4502/crx/packmgr/index.jsp)。 此軟體包包含本教程中概述的配置和內容。
+或者，您也可以安裝 [com.adobe.aem.guides.wknd-mobile.content.chapter-2.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) AEM Author上的內容套件，透過 [AEM封裝管理員](http://localhost:4502/crx/packmgr/index.jsp). 此套件包含本教學課程中概述的設定和內容。
 
-* [第3章 — 創作事件內容片段](./chapter-3.md)
+* [第3章 — 編寫事件內容片段](./chapter-3.md)

@@ -1,6 +1,6 @@
 ---
-title: 設定Assets Essentials
-description: 瞭解如何使用雲管理器部署Assets Essentials並設定用戶訪問權限。
+title: 布建Assets Essentials
+description: 瞭解如何使用Cloud Manager部署Assets Essentials以及布建使用者存取權。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 設定Assets Essentials
+# 布建Assets Essentials
 
-瞭解如何使用雲管理器部署Assets Essentials並設定用戶訪問權限。
+瞭解如何使用Cloud Manager部署Assets Essentials以及布建使用者存取權。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335952?quality=12&learn=on)

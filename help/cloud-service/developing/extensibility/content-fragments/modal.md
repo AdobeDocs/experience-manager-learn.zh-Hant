@@ -1,6 +1,6 @@
 ---
-title: 內AEM容片段控制台擴展模式
-description: 瞭解如何建立內容AEM片段控制台擴展模式。
+title: AEM內容片段主控台擴充功能模組
+description: 瞭解如何建立AEM內容片段主控台擴充功能模組。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -17,26 +17,26 @@ ht-degree: 0%
 
 ---
 
-# 擴展模式
+# 擴充功能模組
 
-![內AEM容片段擴展模式](./assets/modal/modal.png){align="center"}
+![AEM內容片段擴充功能模組](./assets/modal/modal.png){align="center"}
 
-內AEM容片段擴展模式提供了將自定義UI附AEM加到內容片段擴展的方法 [操作欄](./action-bar.md) 或 [標題菜單](./header-menu.md) 按鈕。
+AEM內容片段擴充功能模式提供一種將自訂UI附加至AEM內容片段擴充功能(不論是 [動作列](./action-bar.md) 或 [頁首功能表](./header-menu.md) 按鈕。
 
-模組是React應用程式，基於 [反應光譜](https://react-spectrum.adobe.com/react-spectrum/)，並且可以建立擴展所需的任何自定義UI，包括但不限於：
+模式是React應用程式，根據 [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)，和可以建立擴充功能所需的任何自訂UI，包括但不限於：
 
-+ 確認對話框
++ 確認對話方塊
 + [輸入表單](https://react-spectrum.adobe.com/react-spectrum/#forms)
-+ [進展指標](https://react-spectrum.adobe.com/react-spectrum/#status)
++ [進度指示器](https://react-spectrum.adobe.com/react-spectrum/#status)
 + [結果摘要](https://react-spectrum.adobe.com/react-spectrum/#collections)
-+ 錯誤消息
-+ ...甚至是全面、多視圖的React應用程式！
++ 錯誤訊息
++ ...或是完整的多重檢視React應用程式！
 
-## 模式路由
+## 強制回應路由
 
-模式體驗由在以下位置定義的擴展App Builder React應用定義 `web-src` 的子菜單。 與任何React應用一樣，完整的體驗是使用 [反應路由](https://reactrouter.com/en/main/components/routes) 呈現 [反應元件](https://reactjs.org/docs/components-and-props.html)。
+強制回應體驗是由下定義的擴充功能App Builder React應用程式所定義。 `web-src` 資料夾。 和任何React應用程式一樣，完整體驗也是使用來編排 [React路由](https://reactrouter.com/en/main/components/routes) 該轉譯器 [React元件](https://reactjs.org/docs/components-and-props.html).
 
-至少需要一條路由才能生成初始模態視圖。 在 [擴展註冊](#extension-registration)`s `onClick(..)` 函式，如下所示。
+產生初始模組檢視至少需要一條路線。 系統會叫用此初始路由 [延伸註冊](#extension-registration)的 `onClick(..)` 函式，如下所示。
 
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/App.js`
@@ -76,16 +76,16 @@ function App(props) {
 }
 ```
 
-## 分機註冊
+## 擴充功能註冊
 
-要開啟模式，請調用 `guestConnection.host.modal.showUrl(..)` 是由分機 `onClick(..)` 的子菜單。 `showUrl(..)` 傳遞的JavaScript對象具有鍵/值：
+若要開啟強制回應視窗，請呼叫 `guestConnection.host.modal.showUrl(..)` 由擴充功能的 `onClick(..)` 函式。 `showUrl(..)` 會傳遞一個具有索引鍵/值的JavaScript物件：
 
-+ `title` 提供顯示給用戶的模式標題的名稱
-+ `url` 是調用 [反應路由](#modal-routes) 負責模型的初始視圖。
++ `title` 提供顯示給使用者的強制回應視窗標題名稱
++ `url` 是叫用 [React路由](#modal-routes) 負責強制回應視窗的初始檢視。
 
-當務之急是 `url` 已傳遞 `guestConnection.host.modal.showUrl(..)` 解析為在擴展中佈線，否則在模式中不顯示任何內容。
+當務之急是 `url` 傳遞至 `guestConnection.host.modal.showUrl(..)` 解析成擴充功能中的路由，否則強制回應視窗中不會顯示任何內容。
 
-查看 [標題菜單](./header-menu.md#modal) 和 [操作欄](./action-bar.md#modal) 文檔，瞭解如何建立模式URL。
+檢閱 [頁首功能表](./header-menu.md#modal) 和 [動作列](./action-bar.md#modal) 有關如何建立模組URL的檔案。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -106,13 +106,13 @@ function ExtensionRegistration() {
 }...
 ```
 
-## 模態分量
+## 模組元件
 
-每條分機路線， [那不是 `index` 路線](./extension-registration.md#app-routes)，映射到可在擴展模式中呈現的「反應」(React)元件。
+每個延伸路徑， [這不是 `index` 路由](./extension-registration.md#app-routes)，對應至可在擴充功能強制回應視窗中呈現的React元件。
 
-模式可以由任意數量的「反應」路由組成，從簡單的單路由模式到複雜的多路由模式。
+強制回應可由任意數量的React路徑組成，從簡單的單路徑強制回應到複雜的多路徑強制回應。
 
-下面說明了簡單的單路由模式，但此模式視圖可能包含調用其他路由或行為的「反應」連結。
+以下說明一個簡單的單路徑強制回應，不過此強制回應檢視可能包含叫用其他路徑或行為的React連結。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/MyModal.js`
 
@@ -182,11 +182,11 @@ export default function MyModal() {
 }
 ```
 
-## 關閉模式
+## 關閉強制回應視窗
 
-![「內AEM容片段擴展模式關閉」按鈕](./assets/modal/close.png){align="center"}
+![AEM內容片段擴充功能強制關閉按鈕](./assets/modal/close.png){align="center"}
 
-模型必須提供自己的封閉控制。 通過調用 `guestConnection.host.modal.close()`。
+模組必須提供自己的嚴密控制。 這是透過叫用完成的 `guestConnection.host.modal.close()`.
 
 ```javascript
 <ButtonGroup align="end">

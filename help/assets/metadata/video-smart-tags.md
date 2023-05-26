@@ -1,6 +1,6 @@
 ---
-title: AEM Assets的視頻智慧標籤
-description: Experience Manager Assets公司利用Adobe Sensei公司智慧地使用描述視頻關鍵要素的關鍵字來標籤視頻資產，使用戶能夠使用關鍵字搜索輕鬆地發現AEM這些關鍵要素。
+title: AEM Assets中的影片智慧標籤
+description: Experience Manager Assets運用Adobe Sensei提供的技術，聰明地使用可描述影片關鍵元素的關鍵字來標籤影片資產，讓AEM使用者能透過關鍵字搜尋輕鬆找到影片。
 feature: Smart Tags
 version: Cloud Service
 kt: 6445
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 視頻智慧標籤
+# 視訊智慧標籤
 
-Experience Manager Assets公司利用Adobe Sensei公司智慧地使用描述視頻關鍵要素的關鍵字來標籤視頻資產，使用戶能夠使用關鍵字搜索輕鬆地發現AEM這些關鍵要素。
+Experience Manager Assets運用Adobe Sensei提供的技術，聰明地使用可描述影片關鍵元素的關鍵字來標籤影片資產，讓AEM使用者能透過關鍵字搜尋輕鬆找到影片。
 
 >[!VIDEO](https://video.tv.adobe.com/v/327005?quality=12&learn=on)

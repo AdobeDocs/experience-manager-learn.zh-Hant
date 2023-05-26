@@ -7,9 +7,9 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '133'
 ht-degree: 2%
 
 ---
@@ -17,11 +17,8 @@ ht-degree: 2%
 
 # 內嵌Headless最適化表單
 
-此 [教學課程將涵蓋各種Headless API](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) 讓您列出、顯示及提交表單。
-
-本文將介紹各種Headless API，這些API可讓您以Headless方式列出、顯示和提交調適型表單。
-
-本文假設您有現有的單頁應用程式，並且想要在spa網站中列出和顯示Headless調適型表單。
+本文將介紹在spa網站中內嵌Headless最適化表單的基本概念。 本文假設您有現有的單頁應用程式，且想要使用核心元件內嵌在AEM Forms 6.5.16中編寫的最適化表單。
+在單頁應用程式中加入表單，使用者就能順暢地輸入及提交資料，而不需要重新整理頁面。 如此可增強應用程式的互動性和效率。
 
 下列熒幕擷圖顯示內嵌在SPA中的聯絡我們表單
 

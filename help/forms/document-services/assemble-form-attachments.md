@@ -1,6 +1,6 @@
 ---
-title: 裝配表單附件
-description: 按指定順序裝配表單附件
+title: 組合表單附件
+description: 以指定順序組裝表單附件
 feature: Assembler
 version: 6.4,6.5
 kt: 6406
@@ -17,26 +17,26 @@ ht-degree: 0%
 
 ---
 
-# 裝配表單附件
+# 組合表單附件
 
-本文提供資產以按指定順序裝配自適應表單附件。 表單附件需要採用pdf格式才能使用此示例代碼。 以下是使用案例。
-填寫自適應表單的用戶將一個或多個pdf文檔附加到表單。
-在提交表單時，將表單附件匯編為生成一個pdf。 您可以指定附件的裝配順序以生成最終pdf。
+本文提供資產，以依指定順序組合最適化表單附件。 表單附件必須是PDF格式，此範常式式碼才能運作。 以下為使用案例。
+使用者填寫最適化表單時，會將一或多個pdf檔案附加到表單中。
+在表單提交時，組合表單附件以產生一個PDF。 您可以指定組裝附件以產生最終pdf的順序。
 
-## 建立實現WorkflowProcess介面的OSGi元件
+## 建立實作WorkflowProcess介面的OSGi元件
 
-建立實現 [com.adobe.granite.workflow.exec.WorkflowProcess介面](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)。 此元件中的代碼可以與工作流中的流程步驟元件AEM關聯。 在該元件中實現了介面com.adobe.granite.workflow.exec.WorkflowProcess的執行方法。
+建立實作的OSGi元件 [com.adobe.granite.workflow.exec.WorkflowProcess介面](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html). 此元件中的程式碼可與AEM工作流程中的程式步驟元件相關聯。 在此元件中實作介面com.adobe.granite.workflow.exec.WorkflowProcess的執行方法。
 
-當提交自適應表單以觸發工AEM作流時，提交的資料將儲存在負載資料夾下的指定檔案中。 例如，這是已提交的資料檔案。 我們需要將IDCARD和銀行對帳單標籤下指定的附件組合起來。
-![提交資料](assets/submitted-data.JPG)。
+提交最適化表單以觸發AEM工作流程時，提交的資料會儲存在有效負載資料夾下的指定檔案中。 例如，這是提交的資料檔案。 我們需要組合idcard和bankstatements標籤下指定的附件。
+![submit-data](assets/submitted-data.JPG).
 
-### 獲取標籤名稱
+### 取得標籤名稱
 
-附件的順序在工作流中指定為進程步驟參數，如下面螢幕抓圖所示。 在此，我們將收集添加到現場身份證的附件，然後是銀行對帳單
+附件的順序指定為工作流程中的程式步驟引數，如下面的熒幕擷取所示。 我們在這裡組合新增到欄位資訊卡中的附件，後面接著銀行帳單
 
-![過程步驟](assets/process-step.JPG)
+![process-step](assets/process-step.JPG)
 
-以下代碼段從進程參數中提取附件名稱
+下列程式碼片段會從程式引數中擷取附件名稱
 
 ```java
 String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(",");
@@ -44,13 +44,13 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### 從附件名稱建立DDX
 
-然後我們需要建立 [文檔說明XML(DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf) 匯編程式服務用於匯編文檔的文檔。 以下是從進程參數建立的DDX。 NoForms元素允許您在裝配基於XFA的文檔之前展平它們。 請注意，PDF源元素按在進程參數中指定的正確順序排列。
+然後我們需要建立 [檔案描述XML (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf) Assembler服務用來組裝檔案的檔案。 以下是從處理序引數建立的DDX。 NoForms元素可讓您在組裝以XFA為基礎的檔案之前將其平面化。 請注意，PDF來源元素的順序與流程引數中指定的順序一致。
 
 ![ddx-xml](assets/ddx.PNG)
 
-### 建立文檔映射
+### 建立檔案地圖
 
-然後，我們將建立一個文檔映射，其中附件名稱為鍵，附件為值。 查詢生成器服務用於查詢有效負載路徑下的附件並生成文檔映射。 匯編器服務要匯編最終的pdf檔案，需要此文檔圖和DDX。
+然後，我們會以附件名稱作為索引鍵，以附件作為值來建立檔案地圖。 查詢產生器服務用於查詢裝載路徑下的附件，並建置檔案地圖。 組裝服務需要這份檔案地圖以及DDX來組裝最終pdf。
 
 ```java
 public Map<String, Object> createMapOfDocuments(String payloadPath,WorkflowSession workflowSession )
@@ -85,10 +85,10 @@ return mapOfDocuments;
 }
 ```
 
-### 使用AssemblerService匯編文檔
+### 使用AssemblerService來組裝檔案
 
-建立DDX和文檔映射後，下一步是使用AssemblerService來匯編文檔。
-以下代碼匯編並返回匯編的pdf。
+建立DDX和檔案結構圖後，下一步就是使用AssemblerService來組裝檔案。
+下列程式碼會組合併傳回組合的pdf。
 
 ```java
 private com.adobe.aemfd.docmanager.Document assembleDocuments(Map<String, Object> mapOfDocuments, com.adobe.aemfd.docmanager.Document ddxDocument)
@@ -110,10 +110,10 @@ private com.adobe.aemfd.docmanager.Document assembleDocuments(Map<String, Object
 }
 ```
 
-### 將已裝配的pdf保存到負載資料夾下
+### 將組合好的pdf儲存在有效負載資料夾下
 
-最後一步是將已裝配的pdf保存到負載資料夾下。 然後，可以在工作流的後續步驟中訪問此pdf，以便進一步處理。
-以下代碼段用於將檔案保存在負載資料夾下
+最後一步是將組裝的pdf儲存在有效負載資料夾下。 然後，您可以在工作流程的後續步驟中存取此PDF以進行進一步處理。
+下列程式碼片段已用來將檔案儲存在裝載資料夾下
 
 ```java
 Session session = workflowSession.adaptTo(Session.class);
@@ -127,21 +127,21 @@ log.debug("Saved !!!!!!");
 session.save();
 ```
 
-以下是裝配和儲存表單附件後的負載資料夾結構。
+以下是組裝及儲存表單附件後的裝載資料夾結構。
 
-![有效載荷結構](assets/payload-structure.JPG)
+![payload-structure](assets/payload-structure.JPG)
 
-### 使此功能在伺服器上AEM工作
+### 若要讓此功能在您的AEM伺服器上運作
 
-* 下載 [裝配表單附件窗體](assets/assemble-form-attachments-af.zip) 到本地系統。
-* 從[Forms與文檔](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) 的子菜單。
-* 下載 [工作流](assets/assemble-form-attachments.zip) 並使用包管AEM理器導入。
-* 下載 [定制捆綁](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
-* 使用 [Web控制台](http://localhost:4502/system/console/bundles)
-* 將瀏覽器指向 [裝配附件窗體](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
-* 在「ID文檔」中添加附件，並將幾個PDF文檔添加到銀行對帳單部分
-* 提交表單以觸發工作流
-* 檢查工作流 [crx中的有效負載資料夾](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) 對於已裝配的pdf
+* 下載 [組合表單附件表單](assets/assemble-form-attachments-af.zip) 至您的本機系統。
+* 從匯入表單[Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) 頁面。
+* 下載 [工作流程](assets/assemble-form-attachments.zip) 並使用封裝管理程式匯入至AEM。
+* 下載 [自訂組合](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
+* 使用部署及啟動套件組合 [網頁主控台](http://localhost:4502/system/console/bundles)
+* 將瀏覽器指向 [組合附件表單](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
+* 在ID檔案中新增附件，並將幾份pdf檔案新增至銀行對帳單區段
+* 提交表單以觸發工作流程
+* 檢查工作流程的 [crx中的裝載資料夾](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) 針對組合的pdf
 
 >[!NOTE]
-> 如果已為自定義捆綁包啟用記錄器，則DDX和已裝配的檔案將寫入安裝的文AEM件夾。
+> 如果您為自訂套件組合啟用了記錄器，則DDX和組裝的檔案會寫入AEM安裝的資料夾。

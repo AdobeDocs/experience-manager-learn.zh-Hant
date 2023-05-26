@@ -1,6 +1,6 @@
 ---
 title: Dispatcher 簡介
-description: 介紹作為體系結構一部分的調度程式的功能和AEM特性。
+description: 介紹AEM架構中Dispatcher的功能和特性。
 feature: Dispatcher
 topics: architecture
 audience: administrator, developer
@@ -22,7 +22,7 @@ ht-degree: 31%
 
 # [!DNL Dispatcher] 簡介 {#introduction-dispatcher}
 
-介紹 [!DNL dispatcher] 作為建築的一AEM部分。
+的功能與特性簡介 [!DNL dispatcher] 做為AEM架構的一部分。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32029?quality=12&learn=on)
 

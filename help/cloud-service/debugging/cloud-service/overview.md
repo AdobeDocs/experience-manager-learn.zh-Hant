@@ -1,6 +1,6 @@
 ---
-title: 調試AEMas a Cloud Service
-description: 這要求開發人員瞭解並調試as a Cloud Service的各個方面AEM，從構建和部署到獲取運行應用程式的詳細資訊，都需要AEM具備自助服務、可擴展的雲基礎架構AEM。
+title: 偵錯AEMas a Cloud Service
+description: 在自助式、可擴充的雲端基礎結構上，這要求AEM開發人員瞭解如何瞭解和偵錯AEMas a Cloud Service的各個層面，從建置和部署到取得執行AEM應用程式的詳細資訊。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -19,30 +19,30 @@ ht-degree: 1%
 
 ---
 
-# 調試AEMas a Cloud Service
+# 偵錯AEMas a Cloud Service
 
-AEMas a Cloud Service是利用應用程式的雲本機AEM方式。 AEMas a Cloud Service運行在自助服務、可擴展的雲基礎架構上，這AEM要求開發人員瞭解和調試as a Cloud Service的各個方面AEM，從構建和部署到獲取運行應用程式的詳細AEM資訊。
+AEMas a Cloud Service是雲端原生運用AEM應用程式的方式。 AEMas a Cloud Service在自助式、可擴充的雲端基礎結構上執行，這要求AEM開發人員瞭解如何瞭解和偵錯AEMas a Cloud Service的各個層面，從建立和部署到取得執行AEM應用程式的詳細資訊。
 
 ## 記錄檔
 
-日誌提供了as a Cloud Service中應用程式運行AEM情況的詳細資訊，以及對部署問題的洞見。
+記錄檔會提供您應用程式在AEMas a Cloud Service中如何運作的詳細資訊，以及部署問題的深入分析。
 
-[使用日AEM志調試as a Cloud Service](./logs.md)
+[使用記錄檔對AEMas a Cloud Service除錯](./logs.md)
 
-## 構建和部署
+## 建置和部署
 
-AdobeCloud Manager管道通過AEM一系列步驟部署應用程式，以確定在部署到as a Cloud Service時的代碼質量和可AEM行性。 每個步驟都可能導致失敗，因此瞭解如何調試生成以確定故障的根本原因以及如何解決任何故障非常重要。
+Adobe Cloud Manager管道透過一系列步驟部署AEM應用程式，以確定部署到AEMas a Cloud Service時的計畫碼品質和可行性。 每個步驟都可能導致失敗，因此請務必瞭解如何對組建進行偵錯，以便確定失敗的根本原因，以及如何解決任何失敗。
 
-[調試AEMas a Cloud Service生成和部署](./build-and-deployment.md)
+[偵錯AEMas a Cloud Service建置和部署](./build-and-deployment.md)
 
 ## 開發人員控制台
 
-開發人員控制台在as a Cloud Service環境中提供了各種資訊和介AEM紹，這些資訊和介紹對於瞭解您的應用程式如何被識別以及在as a Cloud Service內部的功AEM能非常有用。
+開發人員控制檯提供AEMas a Cloud Service環境的各種資訊和簡介，有助於瞭解如何在AEMas a Cloud Service中辨識和執行您的應用程式。
 
-[使用開AEM發人員控制台調試as a Cloud Service](./developer-console.md)
+[使用開發人員控制檯除錯AEMas a Cloud Service](./developer-console.md)
 
 ## 存放庫瀏覽器
 
-儲存庫瀏覽器是一種功能強大的工具，可AEM以查看基礎資料儲存，從而輕鬆調試AEMas a Cloud Service環境。 儲存庫瀏覽器支援生產、階段和開發以及作者、AEM發佈和預覽服務上的資源和屬性的只讀視圖。
+存放庫瀏覽器是功能強大的工具，可提供AEM基礎資料存放區的可見度，允許輕鬆偵錯AEMas a Cloud Service環境。 存放庫瀏覽器支援生產、暫存和開發以及作者、發佈和預覽服務上AEM的資源和屬性的唯讀檢視。
 
-[使用儲存AEM庫瀏覽器調試as a Cloud Service](./repository-browser.md)
+[使用存放庫瀏覽器偵錯AEMas a Cloud Service](./repository-browser.md)

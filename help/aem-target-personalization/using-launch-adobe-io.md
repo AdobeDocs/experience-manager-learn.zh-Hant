@@ -1,7 +1,7 @@
 ---
-title: 利用Experience Platform Launch和Adobe I/O將Adobe Experience Manager與Adobe Target整合
+title: 使用Experience Platform Launch和Adobe I/O整合Adobe Experience Manager與Adobe Target
 seo-title: Integrating Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
-description: 逐步走進如何利用Experience Platform Launch和Adobe I/O將Adobe Experience Manager與Adobe Target融合
+description: 逐步說明如何使用Experience Platform Launch和Adobe I/O將Adobe Experience Manager與Adobe Target整合
 seo-description: Step by step walk-through on how to integrate Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
 feature: Experience Fragments
 topic: Personalization
@@ -15,121 +15,121 @@ ht-degree: 2%
 
 ---
 
-# 通過Adobe I/O控制台使用Adobe Experience Platform Launch
+# 透過Adobe I/O控制檯使用Adobe Experience Platform Launch
 
 ## 必備條件
 
-* [AEM作者和發佈實例](./implementation.md#set-up-aem) 分別運行在localhost埠4502和4503上
+* [AEM作者和發佈執行個體](./implementation.md#set-up-aem) 分別在localhost連線埠4502和4503上執行
 * **Experience Cloud**
-   * 訪問您的組織Adobe Experience Cloud。 `https://<yourcompany>.experiencecloud.adobe.com`
-   * Experience Cloud配置了以下解決方案
+   * 存取您的組織Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
+   * 布建了下列解決方案的Experience Cloud
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
-      * [Adobe I/O控制台](https://console.adobe.io)
+      * [Adobe I/O主控台](https://console.adobe.io)
 
       >[!NOTE]
-      >您應有權在啟動中開發、批准、發佈、管理擴展和管理環境。 如果由於用戶介面選項不可用而無法完成這些步驟，請聯繫您的Experience Cloud管理員以請求訪問。 有關啟動權限的詳細資訊， [請參閱文檔](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html)。
+      >您應具有在Launch中開發、核准、發佈、管理擴充功能及管理環境的許可權。 如果您因無法使用的使用者介面選項而無法完成其中任何步驟，請聯絡您的Experience Cloud管理員以請求存取權。 如需Launch許可權的詳細資訊， [請參閱檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
 
 
-* **瀏覽器插件**
-   * Adobe Experience Cloud調試器([鉻](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj))
-   * 啟動和DTM交換機([鉻](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk))
+* **瀏覽器外掛程式**
+   * Adobe Experience Cloud Debugger ([鉻黃](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj))
+   * Launch與DTM交換器([鉻黃](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk))
 
-## 涉及的用戶
+## 相關使用者
 
-對於此整合，需要參與以下受眾，要執行某些任務，您可能需要管理訪問權限。
+進行這項整合時，需要涉及下列對象，而若要執行某些工作，您可能需要管理存取權。
 
 * 開發人員
-* 管AEM理
+* AEM管理員
 * Experience Cloud管理員
 
 ## 簡介
 
-提AEM供與Experience Platform Launch的現成整合。 此整合使管AEM理員能夠通過易於使用的介面輕鬆配置Experience Platform Launch，從而減少了配置這兩種工具時的工作量和錯誤數量。 只要在Experience Platform Launch中添加Adobe Target分機，就能幫助我們在網頁上AEM使用Adobe Target的所有功能。
+AEM提供與Experience Platform Launch的現成整合。 此整合可讓AEM管理員透過易於使用的介面輕鬆設定Experience Platform Launch，進而在設定這兩個工具時減少工作量和錯誤次數。 此外，只要將Adobe Target擴充功能新增至Experience Platform Launch，就能協助我們在AEM網頁上使用Adobe Target的所有功能。
 
 在本節中，我們將介紹以下整合步驟：
 
 * 啟動
-   * 建立啟動屬性
-   * 添加目標擴展
+   * 建立Launch屬性
+   * 新增Target擴充功能
    * 建立資料元素
    * 建立頁面規則
-   * 安裝環境
-   * 生成和發佈
+   * 設定環境
+   * 建置和發佈
 * AEM
    * 建立Cloud Service
    * 建立
 
 ### 啟動
 
-#### 建立啟動屬性
+#### 建立Launch屬性
 
-屬性是在將標籤部署到站點時用擴展、規則、資料元素和庫填充的容器。
+屬性是一個容器，當您將標籤部署至網站時，在其中裝入擴充功能、規則、資料元素和程式庫。
 
-1. 導航到您的組織 [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`https://<yourcompany>.experiencecloud.adobe.com`)
-2. 使用您的Adobe ID登錄，並確保您所在的組織正確。
-3. 在解決方案切換器中，按一下 **啟動** ，然後選擇 **轉到啟動** 按鈕
+1. 導覽至您的組織 [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`https://<yourcompany>.experiencecloud.adobe.com`)
+2. 使用您的Adobe ID登入，並確認您隸屬於正確的組織。
+3. 在解決方案切換器中，按一下 **Launch** 然後選取 **前往Launch** 按鈕。
 
    ![Experience Cloud — 啟動](assets/using-launch-adobe-io/exc-cloud-launch.png)
 
-4. 確保您位於正確的組織中，然後繼續建立Launch屬性。
+4. 請確認您隸屬於正確的組織，然後繼續建立Launch屬性。
    ![Experience Cloud — 啟動](assets/using-launch-adobe-io/launch-create-property.png)
 
-   *有關建立屬性的詳細資訊，請參見 [建立屬性](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property) 中。*
-5. 按一下 **新建屬性** 按鈕
-6. 為屬性提供名稱(例如， *目AEM標教程*)
-7. 作為域，輸入 *localhost.com* 因為這是運行WKND演示站點的域。 儘管「*域*&#39;欄位是必填項， Launch屬性將在實施該屬性的任何域上工作。 此欄位的主要用途是在規則生成器中預填充菜單選項。
-8. 按一下 **保存** 按鈕
+   *如需建立屬性的詳細資訊，請參閱 [建立屬性](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property) 產品檔案內。*
+5. 按一下 **新增屬性** 按鈕
+6. 提供屬性的名稱(例如， *AEM Target教學*)
+7. 網域請輸入 *localhost.com* 因為這是執行WKND示範網站的網域。 雖然「*網域*「欄位」為必填欄位，則Launch屬性可在實施該屬性的任何網域上運作。 此欄位的主要用途是在規則產生器中預先填入功能表選項。
+8. 按一下 **儲存** 按鈕。
 
-   ![啟動 — 新建屬性](assets/using-launch-adobe-io/exc-launch-property.png)
+   ![Launch — 新屬性](assets/using-launch-adobe-io/exc-launch-property.png)
 
-9. 開啟剛建立的屬性，然後按一下「擴展」頁籤。
+9. 開啟您剛建立的屬性，然後按一下「擴充功能」標籤。
 
-#### 添加目標擴展
+#### 新增Target擴充功能
 
-Adobe Target擴展支援使用Target JavaScript SDK在現代Web上的客戶端實現， `at.js`。 仍在使用目標舊庫的客戶， `mbox.js`。 [應升級到at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html) 以使用啟動。
+Adobe Target擴充功能支援將Target JavaScript SDK用於現代網路的使用者端實作。 `at.js`. 仍在使用Target舊程式庫的客戶， `mbox.js`， [應升級至at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html) 以使用Launch。
 
-目標擴展由兩個主要部分組成：
+Target擴充功能包含兩個主要部分：
 
-* 管理核心庫設定的擴展配置
-* 執行以下操作的規則操作：
-   * 載入目標(at.js)
-   * 將參數添加到所有框
-   * 將參數添加到全局框
-   * 火災全球郵箱
+* 管理核心程式庫設定的擴充功能設定
+* 規則動作，可執行下列操作：
+   * 載入Target (at.js)
+   * 新增引數至所有Mbox
+   * 將引數新增至全域mbox
+   * 引發全域mbox
 
-1. 下 **擴展**，您可以看到已為Launch屬性安裝的擴展的清單。 ([Experience Platform Launch核心擴展](https://exchange.adobe.com/experiencecloud.details.100223.adobe-launch-core-extension.html) 預設安裝)
-2. 按一下 **擴展目錄** 選項，並在篩選器中搜索目標。
-3. 選擇Adobe Targetat.js的最新版本，然後按一下 **安裝** 的雙曲餘切值。
-   ![啟動 — 新建屬性](assets/using-launch-adobe-io/launch-target-extension.png)
+1. 下 **擴充功能**，即可檢視已針對Launch屬性安裝的擴充功能清單。 ([Experience Platform Launch核心擴充功能](https://exchange.adobe.com/experiencecloud.details.100223.adobe-launch-core-extension.html) 預設為安裝)
+2. 按一下 **擴充功能目錄** 選項，並在篩選器中搜尋Target。
+3. 選取最新版Adobe Target at.js並按一下 **安裝** 選項。
+   ![Launch — 新增屬性](assets/using-launch-adobe-io/launch-target-extension.png)
 
-4. 按一下 **配置** 按鈕，您可以注意到已導入目標帳戶憑據的配置窗口以及此擴展的at.js版本。
-   ![目標 — 擴展配置](assets/using-launch-adobe-io/launch-target-extension-2.png)
+4. 按一下 **設定** 按鈕，此時您可以注意到已匯入Target帳戶憑證的設定視窗，以及此擴充功能的at.js版本。
+   ![Target — 擴充功能設定](assets/using-launch-adobe-io/launch-target-extension-2.png)
 
-   當通過非同步Launch嵌入代碼部署Target時，應在Launch嵌入代碼之前在頁面上硬編碼預隱藏代碼段，以管理內容閃爍。 我們稍後會再瞭解那個預先隱藏的狙擊手。 您可以下載預隱藏的代碼段 [這裡](assets/using-launch-adobe-io/prehiding.js)
+   透過非同步Launch內嵌程式碼部署Target時，您應在頁面上於Launch內嵌程式碼之前對預先隱藏的程式碼片段進行硬式編碼，以便管理內容閃爍問題。 我們稍後會進一步瞭解預先隱藏的Snipper。 您可以下載預先隱藏的程式碼片段 [此處](assets/using-launch-adobe-io/prehiding.js)
 
-5. 按一下 **保存** 要完成將目標擴展添加到Launch屬性，您現在應能看到在 **已安裝** 的子菜單。
+5. 按一下 **儲存** 若要完成將Target擴充功能新增至Launch屬性，您現在應該能夠看到Target擴充功能列於 **已安裝** 擴充功能清單。
 
-6. 重複上述步驟以搜索「Experience CloudID服務」擴展並安裝它。
-   ![擴展 — Experience CloudID服務](assets/using-launch-adobe-io/launch-extension-experience-cloud.png)
+6. 重複上述步驟以搜尋「Experience CloudID服務」擴充功能並加以安裝。
+   ![擴充功能 — Experience CloudID服務](assets/using-launch-adobe-io/launch-extension-experience-cloud.png)
 
-#### 安裝環境
+#### 設定環境
 
-1. 按一下 **環境** 的子菜單。您可以看到為站點屬性建立的環境清單。 預設情況下，我們為開發、轉移和生產分別建立了一個實例。
+1. 按一下 **環境** 標籤中，即可檢視針對網站屬性建立的環境清單。 依預設，我們針對開發、測試和生產各建立一個例項。
 
-![資料元素 — 頁名](assets/using-launch-adobe-io/launch-environment-setup.png)
+![資料元素 — 頁面名稱](assets/using-launch-adobe-io/launch-environment-setup.png)
 
-#### 生成和發佈
+#### 建置和發佈
 
-1. 按一下 **發佈** 頁籤，然後建立庫以構建和將更改（資料元素、規則）部署到開發環境。
+1. 按一下 **發佈** 標籤中，接著建立程式庫，以建置變更（資料元素、規則）並將其部署至開發環境。
    >[!VIDEO](https://video.tv.adobe.com/v/28412?quality=12&learn=on)
-2. 將更改從「開發」發佈到「暫存」環境。
+2. 將您從開發環境所做的變更發佈到測試環境。
    >[!VIDEO](https://video.tv.adobe.com/v/28419?quality=12&learn=on)
-3. 運行 **「生成暫存」選項**。
-4. 生成完成後，運行 **批准發佈**，將更改從暫存環境移到生產環境。
-   ![暫存到生產](assets/using-launch-adobe-io/build-staging.png)
-5. 最後，運行 **生成並發佈到生產** 按鈕。
-   ![生成並發佈到生產](assets/using-launch-adobe-io/build-and-publish.png)
+3. 執行 **為測試環境建置選項**.
+4. 建置完成後，請執行 **核准以發佈**，可將您的變更從測試環境移至生產環境。
+   ![暫存至生產](assets/using-launch-adobe-io/build-staging.png)
+5. 最後，執行 **建置並發佈至生產環境** 將變更推送至生產環境的選項。
+   ![建置並發佈至生產環境](assets/using-launch-adobe-io/build-and-publish.png)
 
 ### Adobe Experience Manager
 
@@ -137,16 +137,16 @@ Adobe Target擴展支援使用Target JavaScript SDK在現代Web上的客戶端�
 
 >[!NOTE]
 >
-> 授予Adobe I/O整合對選擇工作區的訪問權限，並使用相應的 [角色，允許中心團隊僅在幾個工作區中進行API驅動的更改](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html)。
+> 授予Adobe I/O整合使用適當專案選取工作區的存取權 [角色，允許中央團隊僅在少數幾個工作區中進行API導向的變更](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html).
 
-1. 使用來自Adobe I/O的憑AEM據建立IMS整合。（01:12至03:55）
-2. 在Experience Platform Launch中，建立屬性。 （覆蓋） [上](#create-launch-property))
-3. 使用步驟1中的IMS整合，建立Experience Platform Launch整合以導入Launch屬性。
-4. 在中AEM，使用瀏覽器配置將Experience Platform Launch整合映射到站點。 （05:28至06:14）
+1. 使用來自Adobe I/O的憑證在AEM中建立IMS整合。（01:12到03:55）
+2. 在Experience Platform Launch中建立屬性。 (涵蓋 [以上](#create-launch-property))
+3. 使用步驟1中的IMS整合，建立Experience Platform Launch整合以匯入您的Launch屬性。
+4. 在AEM中，使用瀏覽器設定將Experience Platform Launch整合對應至網站。 （05:28至06:14）
 5. 手動驗證整合。 （06:15至06:33）
-6. 使用Launch/DTM瀏覽器插件。 （06:34至06:50）
-7. 使用Adobe Experience Cloud調試器瀏覽器插件。 （06:51至07:22）
+6. 使用Launch/DTM瀏覽器外掛程式。 （06:34至06:50）
+7. 使用Adobe Experience Cloud Debugger瀏覽器外掛程式 （06:51至07:22）
 
-此時，您已成功整合 [AEMAdobe Target用Adobe Experience Platform Launch](./using-aem-cloud-services.md#integrating-aem-target-options) 詳情載於備選案文1。
+此時，您已成功整合 [使用Adobe Experience Platform Launch的AEM與Adobe Target](./using-aem-cloud-services.md#integrating-aem-target-options) 如選項1所詳述。
 
-使用AEM體驗片段可支援個性化活動，讓您繼續下一章，並使用舊式雲服務AEM與Adobe Target整合。
+若要使用AEM體驗片段選件來強化您的個人化活動，請前往下一章，並使用舊版雲端服務整合AEM與Adobe Target。

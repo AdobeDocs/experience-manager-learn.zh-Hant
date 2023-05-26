@@ -1,6 +1,6 @@
 ---
-title: 利用快速開發環境開發生命週期
-description: 瞭解使用快速開發環境和RDE的關鍵優勢時新開發生命週期的外觀。
+title: 使用快速開發環境的開發生命週期
+description: 瞭解使用快速開發環境的全新開發生命週期看起來如何，以及RDE的主要優點。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -17,31 +17,31 @@ ht-degree: 5%
 
 ---
 
-# 利用快速開發環境開發生命週期
+# 使用快速開發環境的開發生命週期
 
-瞭解使用RDE的開發/部署生命週期，以及它如何以速度提供價值。
+瞭解使用RDE的開發/部署生命週期，以及它如何快速提供價值。
 
-以下視頻探討了基於RDE的從部署到開發的生命週期。 該視頻概述了用於有效使用RDE的關鍵子任務和開發流程。
+以下影片探討了RDE開發至部署的生命週期。 影片概述重要子任務和開發流程，以有效使用RDE。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415492?quality=12&learn=on)
 
 
-## RDE的優勢
+## RDE的優點
 
-RDE的主要好處是保持發展勢頭。
+RDE的主要優點，可保持開發勢頭。
 
 - 加快開發週期
 - 減少停機時間
 - 更好的測試
-- 改進協作
-- 提高生產效率
+- 改善共同作業
+- 提高生產力
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415493?quality=12&learn=on)
 
 ## 其他資源
 
-[多個開發者協作方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#multiple-developers-collaborating-on-the-same-rde)
+[多位開發人員共同作業案例](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#multiple-developers-collaborating-on-the-same-rde)
 
-[本地開發環境設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)
+[本機開發環境設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)
 
-[使用Adobe雲管理器 — CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)
+[使用AdobeCloud Manager - CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)

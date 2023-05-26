@@ -1,6 +1,6 @@
 ---
-title: 使用函式和代碼編輯器
-description: 使用函式和代碼編輯器編寫業務規則
+title: 使用函式和程式碼編輯器
+description: 使用函式和程式碼編輯器編寫商業規則
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4270
@@ -16,16 +16,16 @@ ht-degree: 0%
 
 ---
 
-# 使用自定義函式和代碼編輯器 {#using-functions-and-code-editor}
+# 使用自訂函式和程式碼編輯器 {#using-functions-and-code-editor}
 
-在本部分，我們將使用自定義函式和代碼編輯器來編寫業務規則。
+在本部分中，我們將使用自訂函式和程式碼編輯器來編寫商業規則。
 
-您已經安裝了 [具有自定義函式的ClientLib](assets/client-libs-and-logo.zip) 在本教程的前面部分。
+您已安裝 [具有自訂函式的ClientLib](assets/client-libs-and-logo.zip) 在本教學課程的前面部分。
 
-通常，客戶端庫由CSS和Javascript檔案組成。 此客戶端庫包含Javascript檔案，它顯示用於填充下拉清單值的函式。
+通常使用者端資料庫會包含CSS和Javascript檔案。 此使用者端程式庫包含JavaScript檔案，此檔案會顯示一個函式以填入下拉式清單值。
 
 
-## 填充下拉清單的函式 {#function-to-populate-drop-down-list}
+## 要填入下拉式清單的函式 {#function-to-populate-drop-down-list}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=12&learn=on)
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/28409?quality=12&learn=on)
 
-以下是用於驗證面板欄位的代碼
+以下是用來驗證面板欄位的程式碼
 
 ```javascript
 //debugger;
@@ -60,12 +60,12 @@ else
   }
 ```
 
-您可以取消注釋行1以在瀏覽器窗口中調試代碼。
+您可以取消註解第1行，以在瀏覽器視窗中偵錯程式碼。
 
-行4 — 獲取當前面板
+第4行 — 取得目前的面板
 
-第5行 — 驗證當前面板。
+第5行 — 驗證目前的面板。
 
 第9行 — 如果沒有錯誤，則移至下一個面板
 
-預覽表單並test新啟用的功能。
+預覽表單，並測試新啟用的功能。

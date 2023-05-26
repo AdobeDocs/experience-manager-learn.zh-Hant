@@ -1,6 +1,6 @@
 ---
-title: 從MySQL資料庫儲存和檢索表單資料 — 部署
-description: 多部分教程，引導您完成儲存和檢索表單資料所涉及的步驟
+title: 儲存和擷取MySQL資料庫的表單資料 — 部署
+description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
 feature: Adaptive Forms
 topic: Development
 role: Developer
@@ -14,34 +14,34 @@ ht-degree: 2%
 
 ---
 
-# 在您的伺服器上部署此
+# 將此部署在您的伺服器上
 
 >[!NOTE]
 >
->以下是在您的系統上運行此程式所必需的
+>若要讓此專案在您的系統上執行，需要下列專案
 >
->* AEM Forms（6.3或更高版本）
+>* AEM Forms （6.3版或更新版本）
 >* MySql資料庫
 
 
-要在AEM Forms實例上test此功能，請執行以下步驟
+若要在您的AEM Forms執行個體上測試此功能，請遵循下列步驟
 
-* 下載和部署 [MySql驅動程式Jar](assets/mysqldriver.jar) 使用 [felix Web控制台](http://localhost:4502/system/console/bundles)
-* 下載和部署 [OSGi束](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) 使用 [felix Web控制台](http://localhost:4502/system/console/bundles)
-* 下載並安裝 [包含客戶端庫、自適應表單模板和自定義頁面元件的包](assets/store-and-fetch-af-with-data.zip) 使用 [軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* 導入 [示例自適應窗體](assets/sample-adaptive-form.zip) 使用 [FormsAndDocuments介面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 下載並部署 [MySql驅動程式Jar](assets/mysqldriver.jar) 檔案使用 [felix web主控台](http://localhost:4502/system/console/bundles)
+* 下載並部署 [OSGi套裝](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) 使用 [felix web主控台](http://localhost:4502/system/console/bundles)
+* 下載並安裝 [包含使用者端程式庫、最適化表單範本和自訂頁面元件的套件](assets/store-and-fetch-af-with-data.zip) 使用 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+* 匯入 [最適化表單範例](assets/sample-adaptive-form.zip) 使用 [FormsAndDocuments介面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* 導入 [form-data-db-sql](assets/form-data-db.sql) 使用MySql Workbench。 這將在資料庫中建立必要的架構和表，以便本教程能夠運行。
-* 登錄到 [configMgr。](http://localhost:4502/system/console/configMgr) 搜索「Apache Sling連接池化資料源」。 建立名為的新Apache Sling連接池資料源條目 **保存並繼續** 使用以下屬性：
+* 匯入 [form-data-db.sql](assets/form-data-db.sql) 使用MySql Workbench。 這會在您的資料庫中建立必要的綱要和表格，讓本教學課程可順利運作。
+* 登入 [configMgr。](http://localhost:4502/system/console/configMgr) 搜尋「Apache Sling Connection Pooled DataSource」。 建立新的Apache Sling Connection Pooled Datasource專案，稱為 **SaveAndContent** 使用下列屬性：
 
 | 屬性名稱 | 值 |
 | ------------------------|---------------------------------------|
-| 資料源名稱 | 保存並繼續 |
-| JDBC驅動程式類 | com.mysql.cj.jdbc.Driver |
-| JDBC連接URI | jdbc:mysql://localhost:3306/aemformational |
+| 資料來源名稱 | SaveAndContent |
+| JDBC驅動程式類別 | com.mysql.cj.jdbc.Driver |
+| JDBC連線URI | jdbc:mysql://localhost：3306/aemformstutorial |
 
-* 開啟 [自適應窗體](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
-* 填寫一些詳細資訊，然後按一下「保存並稍後繼續」按鈕。
-* 您應返回GUID為的URL。
-* 複製URL並將其貼上到新的瀏覽器頁籤中。 **確保URL末尾沒有空格。**
-* 應使用上一步中的資料填充自適應表單。
+* 開啟 [最適化表單](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
+* 填寫一些詳細資訊，然後按一下「儲存並稍後繼續」按鈕。
+* 您應可取回含有GUID的URL。
+* 複製URL並將其貼到新的瀏覽器標籤中。 **請確定URL結尾沒有空格。**
+* 最適化表單應填入上一步驟的資料。

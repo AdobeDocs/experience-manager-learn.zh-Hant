@@ -1,6 +1,6 @@
 ---
-title: 上下文感知配置覆蓋對表單資料模型的支援
-description: 設定表單資料模型以根據環境與不同的端點通信。
+title: 表單資料模型的內容感知設定覆寫支援
+description: 設定表單資料模型，根據環境與不同端點通訊。
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -16,12 +16,12 @@ ht-degree: 10%
 
 ---
 
-# 上下文感知雲配置
+# 內容感知雲端設定
 
-在本地環境中建立雲配置並成功測試時，您希望在上游環境中使用相同的雲配置，但不必更改端點、密鑰/密碼或用戶名。 為了實現此使用案例，AEM Forms在Cloud Service上引入了定義上下文感知雲配置的能力。
-例如，Azure儲存帳戶雲配置可以在開發、階段和生產環境中使用不同的連接字串和密鑰來重複使用。
+當您在本機環境中建立雲端設定並在成功測試時，您會想要在上游環境中使用相同的雲端設定，但無須變更端點、秘密金鑰/密碼和/或使用者名稱。 為了達成此使用案例，Cloud Service上的AEM Forms引進了定義上下文感知雲端設定的功能。
+例如，Azure儲存體帳戶雲端設定可透過對使用不同的連線字串和金鑰，在開發、暫存和生產環境中重複使用。
 
-建立上下文感知雲配置需要執行以下步驟
+需要以下步驟來建立內容感知雲端設定
 
 ## 建立環境變數
 
@@ -29,14 +29,14 @@ ht-degree: 10%
 
 
 
-以下螢幕抓圖顯示了定義的azure_key和azure_connection_string環境變數
-![環境變數](assets/environment-variables.png)
+以下熒幕擷取畫面顯示定義的azure_key和azure_connection_string環境變數
+![environment_variable](assets/environment-variables.png)
 
-然後，可以在配置檔案中指定這些環境變數以在適當的環境中使用。例如，如果希望所有作者實例都使用這些環境變數，您將在config.author資料夾中定義配置檔案，如下所指定
+這些環境變數隨後可以在要用於適當環境的設定檔案中指定。例如，如果您希望所有作者執行個體都使用這些環境變數，您將在config.author資料夾中定義設定檔案，如下所示
 
-## 建立配置檔案
+## 建立設定檔
 
-在IntelliJ中開啟項目。 導航到config.author並建立名為
+在IntelliJ中開啟您的專案。 導覽至config.author並建立名為的檔案
 
 ```java
 org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integrationTest.cfg.json
@@ -44,7 +44,7 @@ org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integr
 
 ![config.author](assets/config-author.png)
 
-將以下文本複製到上一步中建立的檔案中。 此檔案中的代碼正在用環境變數覆蓋accountName和accountKey屬性的值 **azure_connection_string** 和 **azure密鑰**。
+將下列文字複製到您在上一步建立的檔案中。 此檔案中的程式碼正在使用環境變數覆寫accountName和accountKey屬性的值 **azure_connection_string** 和 **azure_key**.
 
 ```json
 {
@@ -60,10 +60,10 @@ org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integr
 
 >[!NOTE]
 >
->此配置將應用於雲服務實例中的所有作者環境。 要將配置應用於發佈環境，您必須將同一配置檔案放在intelliJ項目的config.publish資料夾中
+>此設定將套用至您的雲端服務執行個體中的所有作者環境。 若要將設定套用至發佈環境，您必須將相同的設定檔案置於intelliJ專案的config.publish資料夾中
 >[!NOTE]
-> 請確保正在被覆蓋的屬性是雲配置的有效屬性。 導航到雲配置以查找要覆蓋的屬性，如下所示。
+> 請確定被覆寫的屬性是雲端設定的有效屬性。 導覽至雲端設定，以尋找您要覆寫的屬性，如下所示。
 
-![雲配置屬性](assets/cloud-config-properties.png)
+![cloud-config-property](assets/cloud-config-properties.png)
 
-對於基於REST的雲配置，通常需要為serviceEndPoint、userName和password屬性建立環境變數。
+對於具有基本驗證的REST雲端設定，您通常想要為serviceEndPoint、userName和密碼屬性建立環境變數。

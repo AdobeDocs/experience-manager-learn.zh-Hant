@@ -1,6 +1,6 @@
 ---
-title: 將XDP模板與AEM Forms和Acrobat Sign一起使用
-description: 將XDP模板與AEM Forms和Acrobat Sign一起使用。 詳細利用現有XDP模板與AEM Forms和Sign整合的視頻。
+title: 搭配AEM Forms和Acrobat Sign使用XDP範本
+description: 搭配AEM Forms和Acrobat Sign使用XDP範本。 此影片詳細說明如何運用AEM Forms和Sign整合的現有XDP範本。
 feature: Adaptive Forms
 thumbnail: 39705.jpg
 kt: 6143
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ---
 
-# 將XDP模板與AEM Forms和Acrobat Sign一起使用
+# 搭配AEM Forms和Acrobat Sign使用XDP範本
 
-利用現有的XDP模板與AEM Forms和Sign整合。
+透過AEM Forms和Sign整合，善用現有的XDP範本。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39705?quality=12&learn=on)
 
-與此視頻相關的資產可以從以下連結下載
+可從下列連結下載與此影片相關的資產
 
-* [NDA模板](assets/nda-agreement-xdp-template.zip)
-* [自適應窗體](assets/nda-agreement-af-with-xdp-template.zip)
+* [NDA範本](assets/nda-agreement-xdp-template.zip)
+* [最適化表單](assets/nda-agreement-af-with-xdp-template.zip)

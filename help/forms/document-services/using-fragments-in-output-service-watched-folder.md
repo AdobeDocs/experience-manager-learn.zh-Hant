@@ -1,6 +1,6 @@
 ---
-title: 在帶監視資料夾的輸出服務中使用片段
-description: 生成包含駐留在crx儲存庫中的片段的PDF文檔
+title: 在具有watched資料夾的輸出服務中使用片段
+description: 產生片段位於crx存放庫中的pdf檔案
 feature: Output Service
 version: 6.4,6.5
 topic: Development
@@ -16,25 +16,25 @@ ht-degree: 0%
 
 ---
 
-# 使用ECMA指令碼生成帶片段的pdf文檔{#developing-with-output-and-forms-services-in-aem-forms}
+# 使用ECMA指令碼產生含片段的pdf檔案{#developing-with-output-and-forms-services-in-aem-forms}
 
 
-在本文中，我們將使用輸出服務使用xdp片段生成pdf檔案。 主xdp和片段駐留在crx儲存庫中。 在中模擬檔案系統資料夾結構非常重要AEM。 例如，如果在xdp的片段資料夾中使用片段，則必須建立一個名為 **碎片** 下AEM。 基本資料夾將包含基xdp模板。 例如，如果檔案系統上具有以下結構
-* c:\xdptemplates - This will contain your base xdp template
-* c:\xdptemplates\fragments - This folder will contain fragments and the main template will reference the fragment as shown below
-   ![片段 — xdp](assets/survey-fragment.png)。
-* 資料夾xdpdocuments將包含您的基本模板和 **碎片** 資料夾
+在本文中，我們將使用輸出服務來產生使用xdp片段的pdf檔案。 主要xdp和片段位於crx存放庫中。 請務必在AEM中模擬檔案系統資料夾結構。 例如，如果您在xdp的片段資料夾中使用片段，您必須建立一個名為的資料夾 **片段** 在AEM的基本資料夾底下。 基底資料夾將包含您的基底xdp範本。 例如，如果您的檔案系統上有下列結構
+* c：\xdptemplates — 這將包含您的基本xdp範本
+* c：\xdptemplates\fragments — 此資料夾將包含片段，而主要範本將參考片段，如下所示
+   ![fragment-xdp](assets/survey-fragment.png).
+* 資料夾xdpdocuments將包含您的基礎範本和片段 **片段** 資料夾
 
-可以使用 [窗體和文檔ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+您可以使用建立所需的結構 [表單和檔案ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-下面是使用2個片段的示例xdp的資料夾結構
-![窗體&amp;文檔](assets/fragment-folder-structure-ui.png)
-
-
-* 輸出服務 — 通常，此服務用於將xml資料與xdp模板或pdf合併，以生成拼合的pdf。 有關詳細資訊，請參閱 [javadox](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 的子菜單。 在此示例中，我們使用駐留在crx儲存庫中的片段。
+以下是使用2個片段的範例xdp的資料夾結構
+![forms&amp;document](assets/fragment-folder-structure-ui.png)
 
 
-以下ECMA指令碼已使用生成PDF。 請注意代碼中ResourceResolver和ResourceResolverHelper的使用。 需要ResourceReolver，因為此代碼在任何用戶上下文之外運行。
+* 輸出服務 — 此服務通常用於合併xml資料與xdp範本或pdf，以產生平面化pdf。 如需詳細資訊，請參閱 [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 用於Output服務 在此範例中，我們使用crx存放庫中的片段。
+
+
+下列ECMA指令碼已用於產生PDF。 請注意程式碼中使用ResourceResolver和ResourceResolverHelper。 需要ResourceReolver，因為此程式碼在任何使用者內容之外執行。
 
 ```java
 var inputMap = processorContext.getInputMap();
@@ -64,13 +64,13 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
  });
 ```
 
-**test系統上的示例包**
-* [部署DevelopingWithServiceUSer捆綁包](assets/DevelopingWithServiceUser.jar)
-* 添加條目 **DevegingWithServiceUser.core:getformsresourceresolver=fd-service** 如下螢幕快照所示，在用戶映射器服務修正中
-   ![用戶映射器修正](assets/user-mapper-service-amendment.png)
-* [下載並導入示例xdp檔案和ECMA指令碼](assets/watched-folder-fragments-ecma.zip)。
-這將在c:/fragments和outputservice資料夾中建立受監視的資料夾結構
+**在您的系統上測試範例套件的方式**
+* [部署DevelopingWithServiceUSer套件](assets/DevelopingWithServiceUser.jar)
+* 新增專案 **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service** 使用者對應程式服務修正中，如下方熒幕擷圖所示
+   ![使用者對應程式修正](assets/user-mapper-service-amendment.png)
+* [下載並匯入範例xdp檔案和ECMA指令碼](assets/watched-folder-fragments-ecma.zip).
+這會在c：/fragmentsandoutputservice資料夾中建立watched資料夾結構
 
-* [提取示例資料檔案](assets/usingFragmentsSampleData.zip) 並將其放在監視資料夾的安裝資料夾中(c:\fragmentsandoutputservice\install)
+* [擷取範例資料檔案](assets/usingFragmentsSampleData.zip) 並將其放置在監視資料夾的安裝資料夾中(c：\fragmentsandoutputservice\install)
 
-* 檢查監視資料夾配置的結果資料夾以查找生成的pdf檔案
+* 檢查watched資料夾設定的結果資料夾，找出產生的pdf檔案

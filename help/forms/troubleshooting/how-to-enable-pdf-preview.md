@@ -1,6 +1,6 @@
 ---
-title: 設計器預覽PDF已禁用 — 如何啟用預覽PDF
-description: 在設計器中配置PDF預覽的步驟
+title: Designer預覽PDF已停用 — 如何啟用預覽PDF
+description: 在Designer中設定PDF預覽的步驟
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何啟用預覽PDF
 
-*此視頻將在設計器中完成啟用預覽PDF的步驟。*
+*本影片逐步說明在Designer中啟用預覽PDF的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335500?quality=12&learn=on)

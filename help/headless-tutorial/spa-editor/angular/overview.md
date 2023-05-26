@@ -22,7 +22,7 @@ ht-degree: 89%
 
 # 建立您在 AEM 的第一個 Angular SPA {#introduction}
 
-歡迎使用專為 Adobe Experience Manager (AEM) 中 **SPA Editor** 功能的新手開發人員設計的多部分教學課程。此教學課程會逐步引導您為虛擬生活風格品牌 WKND 實作 Angular 應用程式。angular應用程式是開發並設計為與編AEM輯器一起部SPA署的，該編輯器將Angular元件映射AEM到元件。 部署至 AEM 的完成 SPA 即可使用 AEM 傳統的內嵌編輯工具動態製作。
+歡迎使用專為 Adobe Experience Manager (AEM) 中 **SPA Editor** 功能的新手開發人員設計的多部分教學課程。此教學課程會逐步引導您為虛擬生活風格品牌 WKND 實作 Angular 應用程式。angular應用程式是以AEM SPA Editor開發並設計來部署，可將Angular元件對應至AEM元件。 部署至 AEM 的完成 SPA 即可使用 AEM 傳統的內嵌編輯工具動態製作。
 
 ![實作的最終 SPA](assets/wknd-spa-implementation.png)
 
@@ -30,7 +30,7 @@ ht-degree: 89%
 
 ## 關於
 
-此多部份教學課程的目的為教導開發人員如何實作 Angular 應用程式，以使用 AEM 的 SPA Editor 功能。在真實世界情況中，開發活動會依人員細分，通常包含&#x200B;**前端開發人員**&#x200B;和&#x200B;**後端開發人員**。我們認為，對於參與編輯器項目的任何開發AEM人員來SPA說，完成本教程是有益的。
+此多部份教學課程的目的為教導開發人員如何實作 Angular 應用程式，以使用 AEM 的 SPA Editor 功能。在真實世界情況中，開發活動會依人員細分，通常包含&#x200B;**前端開發人員**&#x200B;和&#x200B;**後端開發人員**。我們認為任何參與AEM SPA Editor專案的開發人員完成本教學課程都會有助益。
 
 此教學課程在設計上將使用 **AEM as a Cloud Service**，並向下相容於 **AEM 6.5.4+** 和 **AEM 6.4.8+**。使用以下項目實作 SPA：
 

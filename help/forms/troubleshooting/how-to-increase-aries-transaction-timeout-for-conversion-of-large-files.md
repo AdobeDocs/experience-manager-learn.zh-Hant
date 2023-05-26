@@ -1,6 +1,6 @@
 ---
-title: 如何增加"aries.transaction.timeout"來解決與大檔案轉換相關的問題
-description: 增加「aries.transaction.timeout」以轉換大檔案的步驟
+title: 如何增加"aries.transaction.timeout"以解決與大型檔案轉換相關的問題
+description: 針對大型檔案的轉換增加「aries.transaction.timeout」的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何增加&quot;aries.transaction.timeout&quot;來解決與大檔案轉換相關的問題
+# 如何增加&quot;aries.transaction.timeout&quot;以解決與大型檔案轉換相關的問題
 
-*此視頻通過增加&quot;aries.transaction.timeout&quot;來解決與大檔案轉換相關的問題。*
+*此影片逐步解說增加「aries.transaction.timeout」的程式，以解決與大型檔案轉換相關的問題。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335502?quality=12&learn=on)

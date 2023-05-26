@@ -1,6 +1,6 @@
 ---
-title: 將Forms與Microsoft電力整合自動化
-description: 在自適應表單提交上觸發電源自動流
+title: 將Forms與Microsoft power automate整合
+description: 在最適化表單提交上觸發Power Automate流程
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# FormsCS和Microsoft電源自動化
+# Forms CS和Microsoft Power Automate
 
-調用您的功能，自動執行自適應表單提交。 以下視頻顯示了配置和整合FormsCS與Microsoft電源自動化所需的步驟。
+在最適化表單提交上叫用您的Power Automate流程。 以下影片說明設定和整合Forms CS與Microsoft Power Automate所需的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/345675?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 在自適應Forms中內聯顯示DAM影像
-description: 在自適應Forms中內聯顯示DAM影像
+title: 在最適化Forms中顯示內嵌的DAM影像
+description: 在最適化Forms中顯示內嵌的DAM影像
 feature: Adaptive Forms
 topics: development
 version: 6.4,6.5
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 ---
 
-# 自適應Forms顯示DAM影像
+# 在最適化Forms中顯示DAM影像
 
-通用用例是以「自適應表單」內聯顯示駐留在crx儲存庫中的影像。
+常見的使用案例是以最適化表單內嵌顯示crx存放庫中的影像。
 
-## 添加佔位符影像
+## 新增預留位置影像
 
-第一步是將佔位符div預置到面板元件。 在面板元件下面的代碼中，由照片上載的CSS類名標識。 JavaScript函式是與自適應表單關聯的客戶端庫的一部分。 在初始化檔案附件元件時調用此函式。
+第一個步驟是在面板元件前面加上預留位置div。 在下面的程式碼中，面板元件由其CSS類別名稱photo-upload識別。 JavaScript函式是與最適化表單相關聯的使用者端資料庫的一部分。 此函式是在檔案附件元件的初始化事件中呼叫。
 
 ```javascript
 /**
@@ -38,7 +38,7 @@ function addPlaceholderDiv(){
 
 ### 顯示內嵌影像
 
-用戶選擇影像後，隱藏欄位ImageName將填充選定的影像名稱。 然後，此影像名稱將傳遞給damURLToFile函式，該函式調用createFile函式將URL轉換為FileReader.readAsDataURL()的Blob。
+使用者選取影像後，隱藏欄位ImageName會填入選取的影像名稱。 然後，此影像名稱會傳遞至damURLToFile函式，該函式會呼叫createFile函式，將URL轉換為FileReader.readAsDataURL()的Blob。
 
 ```javascript
 /**
@@ -81,10 +81,10 @@ async function createFile(imageName){
   }
 ```
 
-### 在伺服器上部署
+### 在您的伺服器上部署
 
-* 下載並安裝 [客戶端庫和示例影像](assets/InlineDAMImage.zip) 在實例AEM上使AEM用包管理器。
-* 下載並安裝 [樣式](assets/FieldInspectionForm.zip) 使用包管AEM理器在您AEM的實例上。
-* 將瀏覽器指向 [檔案檢查表單](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
-* 選取一個夾具
-* 您應看到窗體中顯示的影像
+* 下載並安裝 [使用者端資料庫和範例影像](assets/InlineDAMImage.zip) 使用AEM Package Manager的AEM執行個體上。
+* 下載並安裝 [範例表單](assets/FieldInspectionForm.zip) 使用AEM套件管理員在您電腦上的AEM執行個體。
+* 將瀏覽器指向 [FielInspectionForm](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
+* 選取其中一個夾具
+* 您應該會看到表單中顯示的影像

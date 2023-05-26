@@ -1,6 +1,6 @@
 ---
-title: 獲取整合的登錄令牌
-description: 有關如何獲取用於Cloud Service整合的登錄令牌的深入指南，以及用於此操作的一些使用案例。
+title: 取得整合的登入權杖
+description: 有關如何取得Cloud Service整合的登入權杖的深入指南，以及用於此操作的一些使用案例。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,20 +15,20 @@ ht-degree: 0%
 
 ---
 
-# 獲取整合的登錄令牌
+# 取得整合的登入權杖
 
-有關如何獲取用於Cloud Service整合的登錄令牌的深入指南，以及用於此操作的一些使用案例。
+有關如何取得Cloud Service整合的登入權杖的深入指南，以及用於此操作的一些使用案例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/341277?quality=12&learn=on)
 
-## 此視頻中包含的內容
+## 本影片涵蓋的內容
 
-+ 系統整合商預設訪問方法
-   + 本地訪問令牌
-   + 服務帳戶令牌
-+ 開發人員控制台「整合」
-   + 用於訪問json的正確配置檔案
++ 系統整合商預設存取方法
+   + 本機存取權杖
+   + 服務帳戶Token
++ 開發人員主控台「整合」
+   + 存取json的適當設定檔
 + 技術帳戶驗證
-+ 生成的令牌的簡單使用
++ 產生的權杖的簡單用法
 
-有關本主題的更詳細的瞭解，可參考有關 [基於令牌的身份驗證](/help/headless-tutorial/authentication/overview.md)。
+如需有關本主題的詳細資訊，請參閱以下教學課程： [權杖型驗證](/help/headless-tutorial/authentication/overview.md).

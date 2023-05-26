@@ -1,6 +1,6 @@
 ---
-title: 將DoR作為電子郵件附件發送
-description: 將電子郵件通知以DoR作為電子郵件附件發送給提交者
+title: 將DoR作為電子郵件附件傳送
+description: 以DoR作為電子郵件附件傳送電子郵件通知給提交者
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 將DoR作為電子郵件附件發送
+# 將DoR作為電子郵件附件傳送
 
-解壓DoR並以電子郵件附件形式在Power中發送，以自動化工作流。
-以下視頻說明了從提交的資料中提取DoR所需的步驟
+在Power Automate工作流程中擷取DoR並作為電子郵件附件傳送。
+以下影片說明從提交的資料中擷取DoR所需的步驟
 >[!VIDEO](https://video.tv.adobe.com/v/346731?quality=12&learn=on)

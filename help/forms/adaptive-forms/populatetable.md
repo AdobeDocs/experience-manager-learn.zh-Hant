@@ -1,6 +1,6 @@
 ---
-title: 填充自適應表單表
-description: 使用表單資料模型服務調用的結果填充自適應表單表
+title: 填入最適化表單表格
+description: 將表單資料模型服務叫用的結果填入最適化表單表格中
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,19 +15,19 @@ ht-degree: 0%
 
 ---
 
-# 使用表單資料模型服務調用的結果填充自適應表單表
+# 將表單資料模型服務引動的結果填入最適化表單表格中
 
-[此處托管即時表單](https://forms.enablementadobe.com/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-本文通過從表單資料模型服務調用中提取資料來研究如何填充自適應表單表。 我們將在一個表中建立一個攤銷時間表，列出按期償還的每筆抵押貸款。 攤銷結果由我們的表單資料模型返回。 如螢幕快照所示，在「計算」按鈕的按一下事件上調用「表單資料模型」的服務。 服務調用的輸入和輸出參數被適當地映射，如螢幕抓圖所示。 輸出映射到Row1的列
-![克拉克文](assets/amortization.PNG)
+[即時表單託管於此處](https://forms.enablementadobe.com/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
+在本文中，我們將透過從表單資料模型服務引動中擷取資料，來瞭解如何填入調適型表單表格。 我們將在表格中建立分期付款排程，該表格會列出一段時間內按揭的每筆定期付款。 攤銷結果由我們的表單資料模型傳回。 會在計算按鈕的點選事件上叫用表單資料模型的服務，如熒幕擷圖所示。 如熒幕擷取畫面所示，服務叫用的輸入和輸出引數已適當對應。 輸出對應至Row1的欄
+![clickevent](assets/amortization.PNG)
 
-根據服務呼叫返回的資料，將行1配置為增長。 請注意此處指定的重複設定。 值–1表示表中行數不限
-![行1](assets/rowconfiguration.PNG)
+Row1會設定為依據服務呼叫傳回的資料而成長。 請注意此處指定的重複設定。 值–1表示表格中的列數不受限制
+![Row1](assets/rowconfiguration.PNG)
 
-## 在您的伺服器上部署此
+## 將此部署在您的伺服器上
 
-[按此處指定的方式安裝Tomcat](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[部署Tomcat中此zip檔案中包含的SampleRest.war檔案](assets/sample-rest.zip)
-[安裝資產 ](assets/amortizationschedule.zip) 使用包AEM管理器
-[開啟攤銷計畫表](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-輸入相應的值，然後按一下計算應在窗體中填寫攤銷計畫
+[依照此處指定的方式安裝Tomcat](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
+[部署您的Tomcat中此zip檔案所包含的SampleRest.war檔案](assets/sample-rest.zip)
+[安裝資產 ](assets/amortizationschedule.zip) 使用AEM封裝管理員
+[開啟分期付款排程表單](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
+輸入適當的值，然後按一下「計算攤銷排程」，即應填入您的表單中

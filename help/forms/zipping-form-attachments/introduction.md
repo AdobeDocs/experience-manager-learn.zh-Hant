@@ -1,6 +1,6 @@
 ---
-title: 發送自適應表單附件
-description: 使用發送電子郵件元件發送自適應表單附件
+title: 傳送最適化表單附件
+description: 使用傳送電子郵件元件傳送最適化表單附件
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -20,21 +20,21 @@ ht-degree: 2%
 
 
 
-常見用例是使用工作流中的發送電子郵件元件來發送自適應表單AEM附件。
-客戶通常會使用發送電子郵件元件將表單附件壓縮或將附件作為單個檔案發送。
+常見的使用案例是使用AEM工作流程中的「傳送電子郵件」元件來傳送最適化表單附件。
+客戶通常會壓縮表單附件，或使用傳送電子郵件元件以個別檔案的形式傳送附件。
 
-## 在zip檔案中發送表單附件
+## 以zip檔案傳送表單附件
 
-為了完成使用情形，編寫了自定義工作流進程步驟。 在此自定義流程步驟中，在有效負載資料夾下建立並儲存了表單附件的zip檔案，該檔案名為 *zipped_attachments.zip*
+為了完成使用案例，已撰寫自訂工作流程處理步驟。 在此自訂流程步驟中，將含有表單附件的zip檔案建立並儲存在名為的檔案的裝載資料夾下 *zipped_attachments.zip*
 
-![發送表單附件](assets/send-form-attachments.JPG)
+![傳送表單附件](assets/send-form-attachments.JPG)
 
-## 單獨發送表單附件
+## 個別傳送表單附件
 
-為完成此使用情形，編寫了自定義工作流進程步驟。 在此自定義流程步驟中，我們將填充ArrayList of Documents和ArrayList of Strings類型的工作流變數。
+為了完成此使用案例，已撰寫自訂工作流程處理步驟。 在此自訂程式步驟中，我們會填入ArrayList of Documents和ArrayList of Strings型別的工作流程變數。
 
-![文檔發送清單](assets/send-list-of-documents.JPG)
+![send-list-of-documents](assets/send-list-of-documents.JPG)
 
 ## 後續步驟
 
-[Zip表單附件](./custom-process-step.md)
+[壓縮表單附件](./custom-process-step.md)

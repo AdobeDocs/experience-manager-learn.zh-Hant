@@ -1,6 +1,6 @@
 ---
-title: 地方發展環AEM境as a Cloud Service
-description: Adobe Experience Manager(AEM)地方發展環境概述。
+title: AEMas a Cloud Service的本機開發環境
+description: Adobe Experience Manager (AEM)本機開發環境概觀。
 feature: Developer Tools
 version: Cloud Service
 doc-type: article
@@ -18,7 +18,7 @@ ht-degree: 14%
 
 ---
 
-# 建立地方發展環境 {#local-development-environment-set-up}
+# 本機開發環境設定 {#local-development-environment-set-up}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_overview"
@@ -27,66 +27,66 @@ ht-degree: 14%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="開發準則"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=zh-Hant" text="開發基本概念"
 
-本教程將介紹如何使用as a Cloud ServiceSDK為Adobe Experience Manager(AEM)設定本AEM地開發環境。 包括開發、構建和編譯項目所需的開發工具AEM，以及允許開發人員在本地快速驗證新功能後，再通過Adobe雲管理器將新功能部署到AEMas a Cloud Service的本地運行時間。
+本教學課程會逐步引導您使用AEM as a Cloud Service SDK為Adobe Experience Manager (AEM)設定本機開發環境。 其中包括開發、建置和編譯AEM專案所需的開發工具，以及本機執行時間，讓開發人員在透過Adobe Cloud Manager將新功能部署到AEMas a Cloud Service之前，可以快速在本機驗證這些功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32565?quality=12&learn=on)
 
-![AEMas a Cloud Service地方開發環境技術](./assets/overview/aem-sdk-technology-stack.png)
+![AEMas a Cloud Service本機開發環境技術棧疊](./assets/overview/aem-sdk-technology-stack.png)
 
-本地開發環境AEM可分為三個邏輯組：
+AEM的本機開發環境可分成三個邏輯群組：
 
-+ 的 __項AEM目__ 包含自定義應用程式的自定義代碼、配置和AEM內容。
-+ 的 __本地運AEM行時__ 本地運行AEM Author和Publish服務的本地版本。
-+ 的 __本地調度程式運行時__ 運行Apache HTTP Web Server和Dispatcher的本地版本。
++ 此 __AEM專案__ 包含自訂AEM應用程式的自訂程式碼、設定和內容。
++ 此 __本機AEM執行階段__ 會在本機執行AEM作者和發佈服務的本機版本。
++ 此 __本機Dispatcher執行階段__ 會執行本機版本的Apache HTTP Web Server和Dispatcher。
 
-本教程將介紹如何安裝和設定上圖中突出顯示的項目，為開發提供一個穩定的本地開發AEM環境。
+本教學課程會逐步解說如何安裝和設定上圖中醒目提示的專案，為AEM開發提供穩定的本機開發環境。
 
 ## 檔案系統組織
 
-本教程按如下方式建立AEM了as a Cloud ServiceSDK對象和AEM項目代碼的位置：
+本教學課程建立AEMas a Cloud ServiceSDK成品和AEM專案程式碼的位置，如下所示：
 
-+ `~/aem-sdk` 是包含as a Cloud ServiceSDK提供的各種工具的組織AEM資料夾
++ `~/aem-sdk` 是包含AEMas a Cloud ServiceSDK所提供各種工具的組織資料夾
 + `~/aem-sdk/author` 包含AEM作者服務
-+ `~/aem-sdk/publish` 包含AEM發佈服務
-+ `~/aem-sdk/dispatcher` 包含Dispatcher Tools
-+ `~/code/<project name>` 包含自定AEM義項目原始碼
++ `~/aem-sdk/publish` 包含AEM Publish服務
++ `~/aem-sdk/dispatcher` 包含Dispatcher工具
++ `~/code/<project name>` 包含自訂AEM專案原始碼
 
-請注意 `~` 是用戶目錄的縮寫。 在Windows中，這相當於 `%HOMEPATH%`;
+請注意 `~` 是使用者目錄的縮寫。 在Windows中，這相當於 `%HOMEPATH%`；
 
-## 項目開發工AEM具
+## AEM專案的開發工具
 
-項AEM目是自定義代碼庫，包含通過Cloud Manager部署到as a Cloud Service的代碼、配置和內AEM容。 基線項目結構通過 [馬文AEM原型計畫](https://github.com/adobe/aem-project-archetype)。
+AEM專案是自訂程式碼基底，包含透過Cloud Manager部署到AEMas a Cloud Service的程式碼、設定和內容。 基準線專案結構是透過 [AEM專案Maven原型](https://github.com/adobe/aem-project-archetype).
 
-本教程的本節介紹如何：
+教學課程的這個區段會示範如何：
 
 + 安裝 [!DNL Java]
 + 安裝 [!DNL Node.js] （和npm）
 + 安裝 [!DNL Maven]
 + 安裝 [!DNL Git]
 
-[設定項目開發工AEM具](./development-tools.md)
+[設定AEM專案的開發工具](./development-tools.md)
 
 ## 本機 AEM 執行階段
 
-AEMas a Cloud ServiceSDK [!DNL QuickStart Jar] 運行本地版本的AEM。 的 [!DNL QuickStart Jar] 可用於本地運行AEM作者服務或AEM發佈服務。 請注意，當 [!DNL QuickStart Jar] 提供本地開發經驗，但並非AEMas a Cloud Service中提供的所有功能 [!DNL QuickStart Jar]。
+AEMas a Cloud ServiceSDK提供 [!DNL QuickStart Jar] 執行本機版本的AEM。 此 [!DNL QuickStart Jar] 可用於在本機執行AEM作者服務或AEM發佈服務。 請注意，雖然 [!DNL QuickStart Jar] 提供本機開發體驗，並非所有AEMas a Cloud Service可用功能都包含在 [!DNL QuickStart Jar].
 
-本教程的本節介紹如何：
+教學課程的這個區段會示範如何：
 
 + 安裝 [!DNL Java]
-+ 下載AEMSDK
-+ 運行 [!DNL AEM Author Service]
-+ 運行 [!DNL AEM Publish Service]
++ 下載AEM SDK
++ 執行 [!DNL AEM Author Service]
++ 執行 [!DNL AEM Publish Service]
 
-[設定本地運行AEM時](./aem-runtime.md)
+[設定本機AEM執行階段](./aem-runtime.md)
 
-## 本地 [!DNL Dispatcher] 運行時
+## 本機 [!DNL Dispatcher] 執行階段
 
-AEMas a Cloud ServiceSDK的Dispatcher Tools提供了設定本地 [!DNL Dispatcher] 運行時。 [!DNL Dispatcher] 工具是 [!DNL Docker]基於，並提供命令行工具以便傳輸 [!DNL Apache HTTP] Web伺服器和 [!DNL Dispatcher] 將配置檔案轉換為相容格式並將其部署到 [!DNL Dispatcher] 在 [!DNL Docker] 容器。
+AEMas a Cloud ServiceSDK的Dispatcher工具提供設定本機 [!DNL Dispatcher] 執行階段。 [!DNL Dispatcher] 工具為 [!DNL Docker]-based並提供命令列工具以傳輸 [!DNL Apache HTTP] Web伺服器和 [!DNL Dispatcher] 設定檔案為相容的格式並將其部署到 [!DNL Dispatcher] 在中執行 [!DNL Docker] 容器。
 
-本教程的本節介紹如何：
+教學課程的這個區段會示範如何：
 
-+ 下載AEMSDK
++ 下載AEM SDK
 + 安裝 [!DNL Dispatcher] 工具
-+ 運行本地 [!DNL Dispatcher] 運行時
++ 執行本機 [!DNL Dispatcher] 執行階段
 
-[設定本地 [!DNL Dispatcher] 運行時](./dispatcher-tools.md)
+[設定本機 [!DNL Dispatcher] 執行階段](./dispatcher-tools.md)

@@ -1,7 +1,7 @@
 ---
-title: 為打印通道建立第一個互動式通信
+title: 為列印頻道建立您的第一個互動式通訊
 seo-title: Creating your first interactive communication for the print channel
-description: 互動通信是AEM Forms6.4的新產品。本文檔將引導您完成為打印通道建立互動式通信所需的步驟。
+description: 互動式通訊是AEM Forms 6.4的新功能。本檔案將引導您完成為列印頻道建立互動式通訊所需的步驟。
 seo-description: Interactive Communications is new to AEM Forms 6.4. This document will walk you through the steps needed to create an interactive communication for the print channel.
 feature: Interactive Communication
 topics: development
@@ -21,23 +21,23 @@ ht-degree: 4%
 
 ---
 
-# 為打印通道建立第一個互動式通信
+# 為列印頻道建立您的第一個互動式通訊
 
-互動通信是AEM Forms6.4的新產品。本文檔將引導您完成為打印通道建立互動式通信所需的步驟。
+互動式通訊是AEM Forms 6.4的新功能。本檔案將引導您完成為列印頻道建立互動式通訊所需的步驟。
 
 ## 必備條件 {#prerequistes}
 
-[使用包管理器下載並導入與本教程AEM相關的資產。](assets/gettingstartedassets.zip)此zip檔案包含作為資產包一部分的影像、文檔片段、受監視的資料夾配置和佈局檔案(xdp)
+[使用封裝管理程式，將本教學課程的相關資產下載並匯入至AEM。](assets/gettingstartedassets.zip)此zip檔案包含影像、檔案片段、觀察資料夾設定和配置檔案(xdp)作為資產封裝的一部分
 
-[下載並解壓縮此檔案。](assets/warfileandswaggerfile.zip) 此檔案包含需要部署到Tomcat的SampleRest.war檔案和需要用於配置資料源的swagger檔案。
+[下載並解壓縮此檔案。](assets/warfileandswaggerfile.zip) 此檔案包含需要部署至Tomcat的SampleRest.war檔案，以及需要用來設定資料來源的Swagger檔案。
 
-完成本教程後，您將學習到以下內容：
+完成本教學課程後，您將瞭解下列內容：
 
-* 建立資料源
+* 建立資料來源
 * 建立表單資料模型
-* 建立文檔片段
-* 配置表和圖表
-* 使用「監視資料夾」在批處理模式下生成文檔
+* 建立檔案片段
+* 設定表格和圖表
+* 使用Watched資料夾以批次模式產生檔案
 
 
 ## 後續步驟

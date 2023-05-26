@@ -1,6 +1,6 @@
 ---
-title: 設定資產模板，包括AEM Assets和InDesign Server
-description: 資產模板使營銷人員能夠建立、管理和交付用於數字和打印的數字資產。 與InDesign伺服器整合後，使用資產模板建立營銷手冊、名片、傳單、廣告和明信片將會更加輕鬆。 本節將介AEM紹InDesign伺服器配置。
+title: 使用AEM Assets和InDesign Server設定資產範本
+description: 資產範本可讓行銷人員建立、管理和提供數位資產和列印資產。 與InDesign伺服器整合時，資產範本可讓您輕鬆建立行銷手冊、名片、傳單、廣告和明信片。 本節將說明使用AEM設定InDesign伺服器的相關資訊。
 version: 6.4, 6.5
 topic: Content Management
 role: Developer
@@ -13,21 +13,21 @@ ht-degree: 0%
 
 ---
 
-# 設定資產模板，包括AEM Assets和InDesign Server{#set-up-asset-templates-with-aem-assets-and-indesign-server}
+# 使用AEM Assets和InDesign Server設定資產範本{#set-up-asset-templates-with-aem-assets-and-indesign-server}
 
-資產模板使營銷人員能夠建立、管理和交付用於數字和打印的數字資產。 與InDesign伺服器整合後，使用資產模板建立營銷手冊、名片、傳單、廣告和明信片將會更加輕鬆。 本節將介AEM紹InDesign伺服器配置。
+資產範本可讓行銷人員建立、管理和提供數位資產和列印資產。 與InDesign伺服器整合時，資產範本可讓您輕鬆建立行銷手冊、名片、傳單、廣告和明信片。 本節將說明使用AEM設定InDesign伺服器的相關資訊。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17069?quality=12&learn=on)
 
 >[!NOTE]
 >
->AEM **必須** 在上載INDD模板時連接到正在運行的InDesign伺服器。 INDD檔案的初始處理部分需要InDesign伺服器。
+>AEM **必須** 上傳INDD範本時連線至執行中的InDesign伺服器。 INDD檔案上的部分初始處理需要InDesign伺服器。
 
 ## 下載InDesign Server試用版 {#download-indesign-server-trial}
 
 下載 [InDesign Server試用下載網站](https://www.adobeprerelease.com/)
 
-## 啟動InDesign Server {#starting-indesign-server}
+## 起始InDesign Server {#starting-indesign-server}
 
 ```shell
 # macOS command

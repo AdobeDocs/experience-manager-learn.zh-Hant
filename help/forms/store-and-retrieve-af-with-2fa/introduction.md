@@ -1,6 +1,6 @@
 ---
-title: 從MySQL資料庫中儲存和檢索帶附件的表單資料
-description: 多部分教程，引導您完成儲存和檢索帶有附件的表單資料所涉及的步驟
+title: 從MySQL資料庫儲存和擷取含有附件的表單資料
+description: 多部分教學課程，逐步引導您完成儲存和擷取含有附件的表單資料的步驟
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -18,30 +18,30 @@ ht-degree: 2%
 
 ---
 
-# 基於2FA的自適應表單資料儲存與檢索
+# 使用2FA儲存及擷取最適化表單資料
 
-本教程將引導您完成使用2FA保存和檢索帶附件的自適應表單資料所涉及的步驟。 本教程使用MySQL資料庫儲存Adaptive Form資料。 只要在中部署了特定於資料庫的驅動程式，您選擇的資料庫就可以用於儲存數AEM據。 在高級別上，需要採取以下步驟來實現使用情形：
+本教學課程將逐步引導您完成使用2FA儲存和擷取含有附件的最適化表單資料的步驟。 本教學課程使用MySQL資料庫來儲存最適化表單資料。 只要您已在AEM中部署資料庫特定驅動程式，就可以使用您選擇的資料庫來儲存資料。 概略來說，若要完成使用案例，必須執行下列步驟：
 
-* 使用GuideBridge API訪問Adaptive Form資料
+* 使用GuideBridge API存取最適化表單資料
 
-* 對servlet進行POST調用。 此Servlet將資料儲存在資料庫中，並將表單附件儲存在CRX儲存庫中。 資料庫中儲存的資料與GUID關聯。
+* 對servlet進行POST呼叫。 此servlet會將資料儲存在資料庫中，並將表單附件儲存在CRX存放庫中。 資料庫中儲存的資料會與GUID相關聯。
 
-* 當要用儲存的資料填充自適應表單時，請檢索與GUID關聯的資料，並使用 **request.setAttribute** 的雙曲餘切值。
+* 當您想要使用儲存的資料填入調適型表單時，您會擷取與GUID相關聯的資料，並使用 **request.setAttribute** 方法。
 
-## 演示使用案例
+## 使用案例示範
 
 >[!VIDEO](https://video.tv.adobe.com/v/327122?quality=12&learn=on)
 
 ## 必備條件
 
-預計此內容的受眾將在以下領域獲得一些經驗：
+此內容的對象應具有下列領域的一些經驗：
 
-* 自適應窗體
+* 最適化表單
 * 表單資料模式
 * OSGi服務/元件
-* 客AEM戶端庫
+* AEM使用者端資料庫
 
 
 ## 後續步驟
 
-[配置資料源](./configure-data-source.md)
+[設定資料來源](./configure-data-source.md)

@@ -1,6 +1,6 @@
 ---
 title: 建立即時副本
-description: 瞭解如何使用「建立即時複製」嚮導從藍圖中為站點建立即時複製。
+description: 瞭解如何使用建立即時副本精靈，從Blueprint為您的網站建立即時副本。
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 # 建立即時副本 {#create-livecopy}
 
-瞭解如何使用「建立即時複製」嚮導從藍圖為站點建立即時複製。
+瞭解如何使用建立即時副本精靈，從Blueprint為您的網站建立即時副本。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36677?quality=12&learn=on)

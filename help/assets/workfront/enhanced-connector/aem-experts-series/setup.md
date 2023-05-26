@@ -1,6 +1,6 @@
 ---
-title: 用於增強型連接器的Workfront的初始AEM設定和配置
-description: 瞭解如何設定和配置Workfront以Experience Manager增強型連接器，從而釋放AEM Assets和Workfront的聯合電源。
+title: AEM增強型聯結器Workfront的初始設定和設定
+description: 瞭解如何設定和設定Workfront以增強Experience Manager聯結器，解鎖AEM Assets和Workfront的結合功能。
 version: Cloud Service
 topic: Content Management, Integrations
 role: Admin, Architect, Developer
@@ -17,12 +17,12 @@ ht-degree: 0%
 
 ---
 
-# 初始設定和配置
+# 初始設定
 
-![專AEM家系列](./assets/banner.png)
+![AEM Experts系列](./assets/banner.png)
 
-瞭解如何設定和配置Workfront以Experience Manager增強型連接器，從而釋放AEM Assets和Workfront的聯合電源。
+瞭解如何設定和設定Workfront以增強Experience Manager聯結器，解鎖AEM Assets和Workfront的結合功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340331?quality=12&learn=on)
 
-_這是 [關於WorkfrontExperience Manager增強連接器的四部分專家系列](./overview.md)_
+_這是其中一部分 [Workfront for Experience Manager增強型聯結器的四部分專家系列](./overview.md)_

@@ -1,6 +1,6 @@
 ---
 title: 建立歡迎套件
-description: 建立一個站AEM點頁面，其中包含基於已提交表單資料下載資產的連結。
+description: 建立AEM網站頁面，包含根據提交的表單資料下載資產的連結。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -17,12 +17,12 @@ ht-degree: 0%
 
 # 歡迎套件
 
-本教程將幫助您組合一個頁AEM面，其中包含根據已提交的表單資料下載各種資產的連結。 您可以使用示例代碼生成歡迎套件，以允許新客戶下載相關文檔或生成包含連結的頁AEM面，以下載請求的文檔。
+本教學課程可協助您整合AEM頁面，以及根據提交的表單資料下載各種資產的連結。 您可以使用範常式式碼產生歡迎套件，讓新客戶下載相關檔案，或產生含有下載請求檔案連結的AEM頁面。
 
 ## 必備條件
 
-您需要以下功能：
+您將需要下列專案：
 
-安裝了Form Add-onAEM軟體包的Core元件的工作實例
+已安裝核心元件且表單附加元件套件已安裝的AEM運作中例項
 
-[根據本檔案設定的開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[根據此檔案設定的開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)

@@ -1,6 +1,6 @@
 ---
-title: 保存並檢索草稿字母
-description: 瞭解如何保存和檢索草稿字母
+title: 儲存和擷取草稿信件
+description: 瞭解如何儲存和擷取草稿信件
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 ---
 
-# 保存並檢索草稿字母
+# 儲存和擷取草稿信件
 
-以下代碼用於保存字母實例。 字母實例的元資料儲存在 _冰草_ 的子菜單。 生成並返回唯一字串(draftID)。 此唯一字串隨後用於檢索已保存的字母實例。
+下列程式碼可用來儲存信件例項。 信件例項的中繼資料會儲存在 _草稿_ 表格。 產生並傳回唯一字串(draftID)。 然後會使用此唯一字串來擷取儲存的信件例項。
 
 ```java
 public String save(CCRDocumentInstance letterToSave) throws CCRDocumentException {
@@ -67,10 +67,10 @@ public String save(CCRDocumentInstance letterToSave) throws CCRDocumentException
 }
 ```
 
-## 獲取信件
+## 取得字母
 
-寫入了以下代碼以獲取已保存的草稿信函。
-要載入已保存的字母實例，需要提供draftID。 基於此draftID，我們查詢資料庫以獲取關於該字母的其他元資料。 同一draftID用於通過從檔案系統中讀取相應的xml來建立字母資料。 然後構建並返回CCRDocumentInstance對象。
+下列程式碼是用來擷取儲存的草稿字母。
+若要載入已儲存的信件例項，您需要提供draftID。 根據此draftID，我們查詢資料庫以取得信件的其他中繼資料。 從檔案系統讀取適當的xml，使用相同的draftID來建立信件資料。 接著會建構並傳回CCRDocumentInstance物件。
 
 
 ```java
@@ -99,9 +99,9 @@ public CCRDocumentInstance get(String draftID) throws CCRDocumentException {
 }
 ```
 
-### 更新信函
+### 更新字母
 
-以下代碼用於更新已保存的信件實例。 更新的字母資料使用字母ID寫入檔案系統。
+下列程式碼已用於更新已儲存的信件例項。 更新後的信件資料會使用信件ID寫入檔案系統。
 
 ```java
 public void update(CCRDocumentInstance letterInstanceToUpdate) throws CCRDocumentException {
@@ -120,10 +120,10 @@ public void update(CCRDocumentInstance letterInstanceToUpdate) throws CCRDocumen
     }
 ```
 
-### 獲取所有已保存的信件
+### 取得所有儲存的字母
 
-AEM Forms不提供任何現成的用戶介面來列出已保存的字母。 對於本文，我使用自適應表單以表格格式列出保存的字母實例。
-您可以自定義查詢以獲取已保存的字母實例。 在此示例中，我正在查詢由&quot;admin&quot;保存的字母實例。
+AEM Forms未提供任何立即可用的使用者介面來列出儲存的字母。 對於本文，我使用最適化表單以表格格式列出儲存的信件例項。
+您可以自訂查詢以擷取儲存的信件例項。 在此範例中，我正在查詢由「管理員」儲存的信件例項。
 
 ```java
     public List < CCRDocumentInstance > getAll(String arg0, Date arg1, Date arg2, Map < String, Object > arg3) throws CCRDocumentException {
@@ -168,6 +168,6 @@ AEM Forms不提供任何現成的用戶介面來列出已保存的字母。 對�
     }
 ```
 
-### Eclipse項目
+### Eclipse專案
 
-具有示例實現的Eclipse項目可以 [從此處下載](assets/icdrafts-eclipse-project.zip)
+實作範例的eclipse專案可以是 [已從此處下載](assets/icdrafts-eclipse-project.zip)

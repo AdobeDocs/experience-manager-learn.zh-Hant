@@ -1,6 +1,6 @@
 ---
-title: 將關聯資料模型與AEM Forms
-description: 在表單資料模型中添加實體之間的關聯
+title: 將關聯資料模型用於AEM Forms
+description: 在表單資料模型中新增實體之間的關聯
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 將關聯資料模型與AEM Forms{#using-association-data-models-with-aem-forms}
+# 將關聯資料模型用於AEM Forms{#using-association-data-models-with-aem-forms}
 
-在窗體資料模型中建立2個實體之間的關聯
+在表單資料模型中建立2個實體之間的關聯
 
 >[!VIDEO](https://video.tv.adobe.com/v/17737?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 將子面板添加到根面板
-description: 將根面板佈局配置為「左側的頁籤」，並將子面板添加到根面板。
+title: 新增子面板至根面板
+description: 將根面板配置設定為「左側索引標籤」，並將子面板新增至根面板。
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 28536.jpg
@@ -16,16 +16,16 @@ ht-degree: 2%
 
 ---
 
-# 將子面板添加到根面板 {#adding-child-panels-to-root-panel}
+# 新增子面板至根面板 {#adding-child-panels-to-root-panel}
 
-將子面板添加到根面板。
+將子面板新增至根面板。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28536?quality=12&learn=on)
 
 >[!NOTE]
->將子面板添加到根面板時，請 **確保您處於編輯模式。 編輯按鈕位於瀏覽器的右上方。**
+>將子面板新增至根面板時，請 **請確定您處於編輯模式。 編輯按鈕位於瀏覽器的右上角。**
 
 ## 後續步驟
 
-[向人員面板添加元件](./adding-components-to-people-panel.md)
+[將元件新增至People面板](./adding-components-to-people-panel.md)

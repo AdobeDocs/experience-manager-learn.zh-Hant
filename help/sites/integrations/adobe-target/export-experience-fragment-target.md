@@ -1,6 +1,6 @@
 ---
-title: 將經驗片段導出到Adobe Target
-description: 瞭解如何按Adobe Target提供的AEM方式發佈和導出體驗片段。
+title: 將體驗片段匯出至Adobe Target
+description: 瞭解如何將AEM體驗片段發佈和匯出為Adobe Target選件。
 feature: Experience Fragments
 topics: integrations, authoring
 audience: all
@@ -20,42 +20,42 @@ ht-degree: 3%
 
 ---
 
-# 向Adobe Target出口經驗 {#experience-fragment-target}
+# 將體驗片段匯出至Adobe Target {#experience-fragment-target}
 
-瞭解如何按Adobe TargetAEM提供的方式導出體驗片段。
+瞭解如何將AEM體驗片段匯出為Adobe Target選件。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41245?quality=12&learn=on)
 
 ## 後續步驟
 
-+ [使用體驗片段優惠建立目標活動](./create-target-activity.md)
++ [使用體驗片段選件建立Target活動](./create-target-activity.md)
 
 ## 疑難排解
 
-### 將體驗片段導出到目標失敗
+### 將體驗片段匯出至目標失敗
 
 #### 錯誤
 
-將體驗片段導出到Adobe Target時，在Adobe Admin Console沒有正確權限，導致AEM作者服務出現以下錯誤：
+在沒有Adobe Admin Console中的正確許可權的情況下將體驗片段匯出到Adobe Target，會在AEM Author服務上導致以下錯誤：
 
-    ![目標API UI錯誤](assets/error-target-offer.png)
+    ![Target API UI錯誤](assets/error-target-offer.png)
 
-...以及以下日誌消息 `aemerror` 日誌：
+...和以下日誌訊息 `aemerror` 記錄：
 
-    ![目標API控制台錯誤](assets/target-console-error.png)
+    ![Target API主控台錯誤](assets/target-console-error.png)
 
 #### 解析度
 
-1. 登錄到 [Admin Console](https://adminconsole.adobe.com/) 已使用Adobe Target產品配置檔案的管理權AEM限
-2. 選擇 __產品>Adobe Target>產品概要__
-3. 下 __整合__ 頁籤，選擇AEMas a Cloud Service環境的整合(與Adobe I/O項目同名)
-4. 分配 __編輯器__ 或 __批准者__ 角色
+1. 登入 [Admin Console](https://adminconsole.adobe.com/) 已使用Adobe Target產品設定檔的管理許可權，但AEM整合
+2. 選取 __產品> Adobe Target >產品描述檔__
+3. 下 __整合__ 索引標籤中，為您的AEMas a Cloud Service環境選取整合(與Adobe I/O專案相同的名稱)
+4. 指派 __編輯者__ 或 __核准者__ 角色
 
-   ![目標API錯誤](assets/target-permissions.png)
+   ![Target API錯誤](assets/target-permissions.png)
 
-向您的Adobe Target整合添加正確權限應解決此錯誤。
+新增正確許可權至您的Adobe Target整合應可解決此錯誤。
 
 ## 支援連結
 
-+ [Adobe Experience Cloud調試器 — Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
-+ [Adobe Experience Cloud調試器 — Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

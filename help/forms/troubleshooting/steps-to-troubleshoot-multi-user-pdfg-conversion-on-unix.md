@@ -1,6 +1,6 @@
 ---
-title: 在Unix設定上排除多用戶PDFG轉換問題的步驟
-description: 對UNIX安裝程式上的多個用戶PDF生成器問題進行故障排除。
+title: 疑難排解Unix設定中的多使用者PDFG轉換問題的步驟
+description: 疑難排解UNIX安裝程式上的多個使用者PDF產生器問題。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# 在Unix設定上排除多用戶PDFG轉換問題的步驟
+# 疑難排解Unix設定中的多使用者PDFG轉換問題的步驟
 
-*此視頻介紹了在Unix安裝程式上排除多用戶PDFG轉換問題的過程。*
+*此影片說明疑難排解Unix設定中的多使用者PDFG轉換問題的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335549?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 篩選Angular應用
-description: 一個簡單的Angular應用，可過濾使用內容片段建模的WKND冒險。
+title: 篩選Angular應用程式
+description: 此簡單Angular應用程式會篩選使用內容片段模組化的WKND冒險。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -19,13 +19,13 @@ ht-degree: 1%
 
 ---
 
-# 篩選Angular應用
+# 篩選Angular應用程式
 
-探AEM索無頭GraphQLAPI使用 [Angular](https://angular.io/) 的子菜單。 此Angular應用建立可按活動類型篩選的WKND冒險清單。
+探索AEM Headless GraphQL API使用 [angular](https://angular.io/) 應用程式。 此Angular應用程式會建立可依活動型別篩選的WKND冒險清單。
 
-此代碼演示使用Adobe [用AEM於JavaScript的無頭客戶端](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) 調用來自Angular的永續GraphQL查詢。 此應用使用 `wknd-shared/adventures-all` 永續查詢以收集所有冒險，並導出可用活動類型清單。 當用戶選擇「活動類型」時，所選類型將傳遞給 `wknd-shared/adventures-by-activity` 永續查詢並僅檢索指定活動類型的冒險的冒險詳細資訊。
+此程式碼使用Adobe的 [適用於JavaScript的AEM Headless使用者端](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) 從Angular叫用持續性GraphQL查詢。 此應用程式使用 `wknd-shared/adventures-all` 持續查詢以收集所有冒險活動，並衍生可用活動型別清單。 當使用者選擇活動型別時，選擇的型別傳遞到 `wknd-shared/adventures-by-activity` 持久查詢並擷取冒險詳細資料，只針對指定活動型別的那些冒險。
 
-此代碼：
+此程式碼：
 
-+ 連接到AEM發佈服務，不需要身份驗證
-+ 使用WKND的永續查詢： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-activity`
++ 連線到AEM Publish服務，且不需要驗證
++ 使用WKND的持續查詢： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-activity`

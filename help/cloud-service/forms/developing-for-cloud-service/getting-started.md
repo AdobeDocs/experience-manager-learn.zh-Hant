@@ -16,21 +16,21 @@ ht-degree: 0%
 
 ---
 
-# 安裝所需軟體
+# 安裝必要的軟體
 
-本教程將指導您完成建立AEM Forms項目、使AEM Forms項目與您的本地實例同AEM步（使用IntelliJ和回購工具）所需的步驟。 您還將瞭解如何將項目添加到本地git儲存庫並將本地git儲存庫推送到雲管理器儲存庫。
-
-
+本教學課程將引導您完成建立AEM Forms專案所需的步驟，以及使用IntelliJ和repo工具將AEM Forms專案與本機AEM執行個體同步。 您還將瞭解如何將專案新增到本機Git存放庫並將本機Git存放庫推送到Cloud Manager存放庫。
 
 
-本教程將參考此資料夾結構。
 
-* [安裝JDK 11](https://www.oracle.com/java/technologies/downloads/#java11-windows)。 我已下載jdk-11.0.6_windows-x64_bin.zip
-* [馬文](https://maven.apache.org/guides/getting-started/windows-prerequisites.html).例如，如果您在c:\maven folder中安裝了Maven，則需要建立一個名為M2_HOME的環境變數，其值為C:\maven\apache-maven-3.6.0。然後將M2_HOME\bin添加到路徑並保存設定。
 
-## 使用項目原型創AEM建Maven項目
+本教學課程日後將參考此資料夾結構。
 
-* 建立名為 **雲管理器**（您可以在c驅動器中提供任何名稱）
-* 開啟命令提示符窗口並導航到 **c:\cloudmanager**
-* 複製和貼上 [文本檔案](assets/creating-maven-project.txt) 命令提示符窗口中。 您可能必鬚根據 [最新版本](https://github.com/adobe/aem-project-archetype/releases)。 最新版本是30歲，
-* 按Enter鍵執行命令。如果一切正常，您應看到生成成功消息。
+* [安裝JDK 11](https://www.oracle.com/java/technologies/downloads/#java11-windows). 我已下載jdk-11.0.6_windows-x64_bin.zip
+* [Maven](https://maven.apache.org/guides/getting-started/windows-prerequisites.html)例如，如果您已將Maven安裝在c：\maven資料夾中，則需要使用值C:\maven\apache-maven-3.6.0建立名為M2_HOME的環境變數。然後將M2_HOME\bin新增至路徑並儲存您的設定。
+
+## 使用AEM專案原型建立Maven專案
+
+* 建立名為的資料夾 **cloudmanager**（您可以為其指定任何名稱）
+* 開啟命令提示視窗並瀏覽至 **c：\cloudmanager**
+* 複製並貼上內容 [文字檔](assets/creating-maven-project.txt) 在命令提示字元視窗中。 您可能必須變更DarchetypeVersion=30，視 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 撰寫本文時，最新版本是30版。
+* 按Enter鍵執行命令。如果一切順利，您應該會看到建置成功訊息。

@@ -1,6 +1,6 @@
 ---
-title: 如何從HTML5窗體中調用Web服務
-description: 從HTML5窗體配置Web服務的步驟
+title: 如何從HTML5表單進行Web服務呼叫
+description: 從HTML5表單設定Web服務的步驟
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何從HTML5窗體中調用Web服務
+# 如何從HTML5表單進行Web服務呼叫
 
-*該視頻通過HTML5窗體進行Web服務調用。*
+*本影片將逐步說明從HTML5表單進行Web服務呼叫的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335505?quality=12&learn=on)

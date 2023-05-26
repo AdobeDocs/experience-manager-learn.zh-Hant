@@ -1,6 +1,6 @@
 ---
-title: 建立Azure儲存帳戶
-description: 為批處理API建立和配置Azure儲存帳戶。
+title: 建立Azure儲存體帳戶
+description: 為批次API建立和設定Azure儲存體帳戶。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 簡介
 
-Azure儲存帳戶包含所有Azure儲存資料對象，包括blob、檔案共用、隊列、表和磁碟。 儲存帳戶為您的Azure儲存資料提供了唯一的命名空間，該命名空間可通過HTTP或HTTPS從世界上的任何位置訪問。 您的儲存帳戶中的資料具有持久性、高可用性、安全性和大規模擴展性。
-以下視頻將引導您完成配置Azure儲存帳戶的過程。
+Azure儲存體帳戶包含您的所有Azure儲存體資料物件，包括blob、檔案共用、佇列、表格和磁碟。 儲存體帳戶為您的Azure儲存體資料提供獨特的名稱空間，可透過HTTP或HTTPS從全球任何地方存取。 儲存帳戶中的資料經久耐用、高可用性、安全，並可大規模擴充。
+以下影片會逐步帶您完成設定Azure儲存體帳戶的程式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340127?quality=12&learn=on)

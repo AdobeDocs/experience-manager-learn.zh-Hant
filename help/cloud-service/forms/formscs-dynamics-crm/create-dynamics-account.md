@@ -1,6 +1,6 @@
 ---
-title: 建立和配置動態帳戶。
-description: 使用Azure Active Directory建立和配置動態帳戶
+title: 建立和設定Dynamics帳戶。
+description: 使用Azure Active Directory建立和設定動態帳戶
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,14 +16,14 @@ ht-degree: 0%
 
 ---
 
-# 建立和配置Dynamics帳戶
+# 建立和設定Dynamics帳戶
 
-[登錄](https://dynamics.microsoft.com/en-us/) 你的Microsoft動力賬戶。 可以建立 [免費試用帳戶](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) 如果你沒有Dynamics帳戶。
+[登入](https://dynamics.microsoft.com/en-us/) 至您的Microsoft Dynamics帳戶。 您可以建立 [免費試用帳戶](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) 如果您沒有Dynamics帳戶。
 
 >[!NOTE]
->替換下面URI中的伺服器和埠號以獲取重試URI。 使用Azure Active Directory配置應用程式時，需要此重試URI。
->https://[伺服器]:[埠]/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
+>取代下列URI中的伺服器和連線埠號碼，以取得重試URI。 使用Azure Active Directory設定應用程式時，您將需要此重試URI。
+>https://[伺服器]：[連線埠]/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
-以下視頻將引導您完成向Azure Active Directory註冊MicrosoftDynamics的步驟。
+以下影片會逐步引導您完成向Azure Active Directory註冊Microsoft Dynamics的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340743?quality=12&learn=on)

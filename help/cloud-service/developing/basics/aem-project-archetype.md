@@ -1,6 +1,6 @@
 ---
-title: 如何使用MavenAEM項目原型AEM建立項目
-description: 探索如何使用MavenAEM項目原型創AEM建新應用程式項目，以便與最佳做法保持一致並加快開AEM發。
+title: 如何使用AEM Maven專案原型建立AEM專案
+description: 探索如何使用AEM Maven專案原型建立新的AEM應用程式專案，以符合最佳實務並加快AEM開發的開始。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 使用AEM項目原型創AEM建項目
+# 使用AEM專案原型建立AEM專案
 
-探索如何使用MavenAEM項目原型創AEM建新應用程式項目，以便與最佳做法保持一致並加快開AEM發。
+探索如何使用AEM Maven專案原型建立新的AEM應用程式專案，以符合最佳實務並加快AEM開發的開始。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330551?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 瞭解中的身份驗證支AEM持
-description: 對支援的驗證（偶爾還有授權）機制的統一視AEM圖。
+title: 瞭解AEM中的驗證支援
+description: AEM支援的驗證（有時是授權）機制的整合檢視。
 version: 6.4, 6.5
 feature: User and Groups
 topics: authentication, security
@@ -21,11 +21,11 @@ ht-degree: 9%
 
 ---
 
-# 瞭解6.x中的AEM身份驗證支援
+# 瞭解AEM 6.x中的驗證支援
 
-對支援的驗證（偶爾還有授權）機制的統一視AEM圖。
+AEM支援的驗證（有時是授權）機制的整合檢視。
 
-*下表介紹了用戶如何驗證到AEM。*
+*下表說明使用者如何在AEM中進行驗證。*
 
 <table>
     <tbody>
@@ -36,31 +36,31 @@ ht-degree: 9%
             <td><strong>AEM 6.5</strong></td>
         </tr>
         <tr>
-            <td><strong>作為AEM標準身份提供程式</strong></td>
+            <td><strong>AEM作為標準身分提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>基本身份驗證</td>
+            <td>基本驗證</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td>Forms</td>
+            <td>Forms型</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td>基於令牌(帶 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝令牌</a>)</td>
+            <td>權杖型(含 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝權杖</a>)</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>非系AEM統作為標準身份提供程式</strong></td>
+            <td><strong>非AEM系統作為標準身分提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -97,4 +97,4 @@ ht-degree: 9%
     </tbody>
 </table>
 
-⁕ *通過社區項目提供，但不直接受Adobe支援。*
+⁕URL *透過社群專案提供，但Adobe不直接支援。*

@@ -1,7 +1,7 @@
 ---
-title: 將多站點管理器與AEM Sites
+title: 搭配AEM Sites使用多網站管理員
 seo-title: Using Multi Site Manager Touch UI Interfaces with Adobe Experience Manager
-description: Live Copy概述和Bluinet Configuration Manager是「啟用觸摸UI」的介面，用於使用多站點管理器。
+description: Live Copy概述和Blueprint Configuration Manager是啟用Touch UI的介面，可搭配多站點管理員使用。
 seo-description: Live Copy Overview and Blueprint Configuration Manager are Touch UI Enabled interfaces for working with Multi Site Manager with Adobe Experience Manager.
 feature: Multi Site Manager
 topics: localization, authoring, content-architecture
@@ -22,21 +22,21 @@ ht-degree: 11%
 
 ---
 
-# 使用多站點管理器 {#using-multi-site-manager-with-aem-sites}
+# 使用多站點管理員 {#using-multi-site-manager-with-aem-sites}
 
-Live Copy概述和Bluinet Configuration Manager是AEM Author介面，用於使用 [多站點管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html) 在Adobe Experience Manager Sites。
+Live Copy概觀和Blueprint Configuration Manager是用於使用的AEM作者介面 [多網站管理員](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html) 在Adobe Experience Manager Sites中。
 
 ## 即時副本綜覽 {#live-copy-overview}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17054?quality=12&learn=on)
 
-*Live Copy Overview是一個Touch UI介面，用於管理即時拷貝及其各自的藍圖。 此功能在6.3AEM中引入，取代了經典UI藍圖控制中心。*
+*Live Copy概述是觸控式UI介面，用於管理即時副本及其各自的Blueprint。 AEM 6.3中引入的這項功能取代了傳統UI Blueprint控制中心。*
 
-## 藍圖配置管理器 — 觸摸UI {#blueprint-config-mgr}
+## Blueprint Configuration Manager — 觸控式UI {#blueprint-config-mgr}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17056?quality=12&learn=on)
 
-*AEM6.3引入了Touch UI介面，用於管理藍圖配置，以在多站點管理器中使用。*
+*AEM 6.3引進了觸控式UI介面來管理藍圖設定，以用於Multi Site Manager。*
 
 ## 其他資源 {#additional-resources}
 

@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ---
 
-# AEM Formsas a Cloud Service — 轉AEM到CS
+# AEM Formsas a Cloud Service — 移至AEM CS
 
 瞭解AEM Formsas a Cloud Service支援的使用案例和功能。
 

@@ -1,6 +1,6 @@
 ---
-title: 與服務用戶一起發展AEM Forms
-description: 本文介紹在AEM Forms建立服務用戶的過程
+title: 使用AEM Forms中的服務使用者進行開發
+description: 本文會逐步帶您瞭解在AEM Forms中建立服務使用者的程式
 feature: Adaptive Forms
 topic: Development
 role: Developer
@@ -14,47 +14,47 @@ ht-degree: 0%
 
 ---
 
-# 與服務用戶一起發展AEM Forms
+# 使用AEM Forms中的服務使用者進行開發
 
-本文介紹在AEM Forms建立服務用戶的過程
+本文會逐步帶您瞭解在AEM Forms中建立服務使用者的程式
 
-在以前的Adobe Experience Manager(AEM)版本中，管理資源解析器用於後端處理，需要訪問儲存庫。 6.3中不建議使用管理資源解AEM析程式。而是使用儲存庫中具有特定權限的系統用戶。
+在舊版Adobe Experience Manager (AEM)中，管理資源解析器用於需要存取存放庫的後端處理。 AEM 6.3已棄用管理資源解析器。而是使用存放庫中具有特定許可權的系統使用者。
 
-瞭解有關 [建立和使用服務用戶AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html)。
+進一步瞭解 [在AEM中建立和使用服務使用者](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
 
-本文介紹了系統用戶的建立和用戶映射器屬性的配置。
+本文會逐步說明如何建立系統使用者及設定使用者對應程式屬性。
 
-1. 導航到 [http://localhost:4502/crx/explorer/index.jsp](http://localhost:4502/crx/explorer/index.jsp)
-1. 登錄為「 admin 」
-1. 按一下「 User Administration 」
-1. 按一下「 Create System User 」（建立系統用戶）
-1. 將用戶ID類型設定為「 data 」，然後按一下綠色表徵圖以完成建立系統用戶的過程
+1. 導覽至 [http://localhost:4502/crx/explorer/index.jsp](http://localhost:4502/crx/explorer/index.jsp)
+1. 以「管理員」身分登入
+1. 按一下「使用者管理」
+1. 按一下「建立系統使用者」
+1. 將使用者ID型別設定為「 data 」，然後按一下綠色圖示以完成建立系統使用者的程式
 1. [開啟configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜索 _Apache Sling服務用戶映射器服務_ 並按一下以開啟屬性
-1. 按一下 *+* 表徵圖（加號）以添加以下服務映射
+1. 搜尋 _Apache Sling服務使用者對應程式服務_ 並按一下以開啟屬性
+1. 按一下 *+* 圖示（加號）以新增以下服務對應
 
    * DevelopingWithServiceUser.core:getresourceresolver=data
    * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 
-1. 按一下「保存」
+1. 按一下「儲存」
 
-在上述配置設定中，DevelopingWithServiceUser.core是捆綁包的符號名稱。 getresourceresolver是子服務名。data是在前一步驟中建立的系統用戶。
+在上述組態設定中，DevelopingWithServiceUser.core是套件的符號名稱。 getresourceresolver是子服務名稱。data是在先前步驟中建立的系統使用者。
 
-還可以代表fd-service用戶獲取資源解析器。 此服務用戶用於文檔服務。 例如，如果要驗證/應用使用權限等，我們將使用fd-service用戶的資源解析程式來執行這些操作
+我們也可以代表fd-service使用者取得資源解析程式。 此服務使用者用於檔案服務。 例如，如果您想要驗證/套用使用許可權等，我們會使用fd-service使用者的資源解析程式來執行作業
 
-1. [下載並解壓縮與此文章關聯的zip檔案。](assets/developingwithserviceuser.zip)
-1. 導航到 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
-1. 上載並啟動OSGi捆綁包
-1. 確保捆綁包處於活動狀態
-1. 您現在已成功建立 *系統用戶* 還部署了 *服務用戶捆綁*。
+1. [下載並解壓縮與本文相關的zip檔案。](assets/developingwithserviceuser.zip)
+1. 導覽至 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
+1. 上傳和啟動OSGi套件組合
+1. 確保套件組合處於作用中狀態
+1. 您現在已成功建立 *系統使用者* 並部署 *服務使用者套件*.
 
-   要提供對/content的訪問，請為系統用戶(「 data 」)授予對內容節點的讀取權限。
+   若要提供/content的存取權，請授予系統使用者（&#39;資料&#39;）內容節點上的讀取許可權。
 
-   1. 導航到 [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
-   1. 搜索用戶「資料」。 這是您在前一步中建立的系統用戶。
-   1. 按兩下用戶，然後按一下「權限」頁籤
-   1. 為「內容」資料夾授予「讀取」訪問權限。
-   1. 要使用服務用戶訪問/content資料夾，請使用以下代碼
+   1. 瀏覽至 [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
+   1. 搜尋使用者「 data 」。 這是您在先前步驟中建立的相同系統使用者。
+   1. 連按兩下使用者，然後按一下「許可權」標籤
+   1. 將&#39;read&#39;存取權授予&#39;content&#39;資料夾。
+   1. 若要使用服務使用者來存取/content資料夾，請使用下列程式碼
 
 
 
@@ -68,7 +68,7 @@ resourceResolver = aemDemoListings.getServiceResolver();
 Resource contentResource = resourceResolver.getResource("/content/forms/af/sandbox/abc.pdf");
 ```
 
-如果要訪問捆綁包中的/content/dam/data.json檔案，將使用以下代碼。 此代碼假定您已為/content/dam/節點上的「data」用戶授予讀取權限
+如果您想要存取套件中的/content/dam/data.json檔案，請使用下列程式碼。 此程式碼假設您已授予/content/dam/節點上「資料」使用者的讀取許可權
 
 ```java
 @Reference
@@ -93,7 +93,7 @@ try {
 }
 ```
 
-實施的完整代碼如下
+實作的完整程式碼如下
 
 ```java
 package com.mergeandfuse.getserviceuserresolver.impl;

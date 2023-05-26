@@ -1,6 +1,6 @@
 ---
-title: 如何在AEM FormsJEE中添加用戶和組
-description: 在AEM FormsJEE中添加用戶和組的步驟
+title: 如何在AEM Forms JEE中新增使用者和群組
+description: AEM Forms JEE中新增使用者和群組的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何在AEMJEE中添加用戶和組
+# 如何在AEM JEE中新增使用者和群組
 
-*此視頻將介紹在「用戶管理」中添加用戶和組的過程。*
+*此影片會逐步說明在「使用者管理」中新增使用者和群組的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335485?quality=12&learn=on)

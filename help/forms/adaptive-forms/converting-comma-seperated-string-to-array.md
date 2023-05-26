@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms工作流中將逗號分隔的字串轉換為字串陣列
-description: 當表單資料模型具有字串陣列作為輸入參數之一時，您需要在調用表單資料模型的提交操作之前，按照自適應表單的提交操作生成的資料。
+title: 在AEM Forms Workflow中將逗號分隔字串轉換為字串陣列
+description: 當您的表單資料模型具有作為輸入引數之一的字串陣列時，您需要先對從調適型表單的提交動作產生的資料進行按摩，然後再叫用表單資料模型的提交動作。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -16,30 +16,30 @@ ht-degree: 0%
 
 ---
 
-# 將逗號分隔的字串轉換為字串陣列 {#setting-value-of-json-data-element-in-aem-forms-workflow}
+# 將逗號分隔字串轉換為字串陣列 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-當表單基於表單資料模型，該資料模型將字串陣列作為輸入參數，則需要處理提交的自適應表單資料以插入字串陣列。 例如，如果已將複選框欄位綁定到類型字串陣列的表單資料模型元素，則複選框欄位中的資料採用逗號分隔的字串格式。 下面列出的示例代碼說明如何用字串陣列替換逗號分隔的字串。
+當您的表單是以具有作為輸入引數的字串陣列的表單資料模型為基礎時，您需要操作提交的最適化表單資料以插入字串陣列。 例如，如果您將核取方塊欄位繫結至字串陣列型別的表單資料模型元素，則核取方塊欄位的資料會以逗號分隔的字串格式顯示。 下列範常式式碼會示範如何以字串陣列取代逗號分隔的字串。
 
 ## 建立流程步驟
 
-當希望工作流執行某AEM個邏輯時，在工作流中使用進程步驟。 該處理步驟可以與ECMA指令碼或OSGi服務相關聯。 我們的自定義進程步驟執行OSGi服務。
+當我們想要工作流程執行特定邏輯時，AEM工作流程會使用程式步驟。 處理步驟可以與ECMA指令碼或OSGi服務相關聯。 我們的自訂流程步驟會執行OSGi服務。
 
-已提交的資料採用以下格式。 businessUnits元素的值是逗號分隔的字串，需要將其轉換為字串陣列。
+提交的資料採用以下格式。 businessUnits元素的值是以逗號分隔的字串，需要轉換為字串陣列。
 
-![提交資料](assets/submitted-data-string.png)
+![submit-data](assets/submitted-data-string.png)
 
-與表單資料模型關聯的其餘端點的輸入資料需要字串陣列，如此螢幕抓圖所示。 流程步驟中的自定義代碼將提交的資料轉換為正確的格式。
+與表單資料模型相關聯之rest端點的輸入資料預期的是如本熒幕擷取畫面所示的字串陣列。 處理步驟中的自訂程式碼會將提交的資料轉換為正確的格式。
 
-![fdm字串陣列](assets/string-array-fdm.png)
+![fdm-string-array](assets/string-array-fdm.png)
 
-我們將JSON對象路徑和元素名稱傳遞到進程步驟。 處理步驟中的代碼將元素的逗號分隔值替換為字串陣列。
-![過程步驟](assets/create-string-array.png)
+我們會將JSON物件路徑和元素名稱傳遞至程式步驟。 處理步驟中的程式碼會將元素的逗號分隔值取代為字串陣列。
+![process-step](assets/create-string-array.png)
 
 >[!NOTE]
 >
->確保自適應表單的提交選項中的資料檔案路徑設定為「Data.xml」。 這是因為進程步驟中的代碼在負載資料夾下查找名為Data.xml的檔案。
+>請確定最適化表單提交選項中的資料檔案路徑已設為「Data.xml」。 這是因為程式步驟中的程式碼會在裝載資料夾下尋找名為Data.xml的檔案。
 
-## 處理步驟代碼
+## 處理步驟程式碼
 
 ```java
 import java.io.BufferedReader;
@@ -141,4 +141,4 @@ public class CreateStringArray implements WorkflowProcess {
 }
 ```
 
-示例包可以是 [從此處下載](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)
+範例組合可以是 [已從此處下載](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)

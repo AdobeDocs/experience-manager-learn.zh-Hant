@@ -1,6 +1,6 @@
 ---
 title: 內容片段預覽
-description: 瞭解如何對所有作者使用內容片段預覽，以快速瞭解內容更改如何影響您的無AEM頭體驗。
+description: 瞭解如何使用內容片段預覽來預覽所有作者，以快速瞭解內容變更如何影響您的AEM Headless體驗。
 version: Cloud Service
 feature: Content Fragments
 topic: Headless, Content Management, Development
@@ -20,64 +20,64 @@ ht-degree: 0%
 
 # 內容片段預覽
 
-無AEM頭應用程式支援整合創作預覽。 預覽體驗將AEM作者的內容片段編輯器與您的自定義應用（可通過HTTP定址）連結起來，允許在呈現正在預覽的內容片段的應用中進行深度連結。
+AEM Headless應用程式支援整合式撰寫預覽。 預覽體驗可將AEM作者的內容片段編輯器連結至您的自訂應用程式（可透過HTTP定址），允許應用程式中的深層連結，以產生正在預覽的內容片段。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
 
-要使用內容片段預覽，必須滿足以下幾個條件：
+若要使用內容片段預覽，必須符合幾個條件：
 
-1. 必須將應用部署到作者可訪問的URL
-1. 必須將應用配置為連接到AEM作者服務（而不是AEM發佈服務）
-1. 應用必須使用可使用的URL或路由設計 [內容片段路徑或ID](#url-expressions) 選擇要在應用程式體驗中顯示以進行預覽的內容片段。
+1. 應用程式必須部署至作者可存取的URL
+1. 應用程式必須設定為連線至AEM作者服務（而非AEM Publish服務）
+1. 應用程式在設計時必須搭配可使用的URL或路由 [內容片段路徑或ID](#url-expressions) 以選取要在應用程式體驗中預覽而顯示的內容片段。
 
 ## 預覽URL
 
-預覽URL，使用 [URL表達式](#url-expressions)，在內容片段模型的屬性上設定。
+預覽URL，使用 [URL運算式](#url-expressions)，是在內容片段模型的屬性上設定。
 
 ![內容片段模型預覽URL](./assets/preview/cf-model-preview-url.png)
 
-1. 以管理員身份登錄到AEM作者服務
-1. 導航到 __「工具」>「常規」>「內容片段模型」__
-1. 選擇 __內容片段模型__ 選擇 __屬性__ 按鈕。
-1. 使用 [URL表達式](#url-expressions)
-   + 預覽URL必須指向連接到AEM Author服務的應用的部署。
+1. 以管理員身分登入AEM Author服務
+1. 導覽至 __「工具」>「一般」>「內容片段模型」__
+1. 選取 __內容片段模型__ 並選取 __屬性__ 形成頂端動作列。
+1. 使用以下專案輸入內容片段模型的預覽URL [URL運算式](#url-expressions)
+   + 預覽URL必須指向連線到AEM Author服務的應用程式部署。
 
-### URL表達式
+### URL運算式
 
-每個內容片段模型都可以設定預覽URL。 使用下表中列出的URL表達式，可以按內容片段參數化預覽URL。 可以在單個預覽URL中使用多個URL表達式。
+每個內容片段模式都可以設定預覽URL。 您可以使用下表所列的URL運算式，針對每個內容片段引數化預覽URL。 可在單一預覽URL中使用多個URL運算式。
 
-|  | URL表達式 | 值 |
+|  | URL運算式 | 值 |
 | --------------------------------------- | ----------------------------------- | ----------- |
 | 內容片段路徑 | `${contentFragment.path}` | `/content/dam/wknd-shared/en/adventures/surf-camp-bali/surf-camp-bali` |
 | 內容片段ID | `${contentFragment.id}` | `12c34567-8901-2aa3-45b6-d7890aa1c23c` |
-| 內容片段變體 | `${contentFragment.variation}` | `main` |
+| 內容片段變數 | `${contentFragment.variation}` | `main` |
 | 內容片段模型路徑 | `${contentFragment.model.path}` | `/conf/wknd-shared/settings/dam/cfm/models/adventure` |
 | 內容片段模型名稱 | `${contentFragment.model.name}` | `adventure` |
 
-預覽URL示例：
+預覽URL範例：
 
-+ 上的預覽URL __冒險__ 模型看起來 `https://preview.app.wknd.site/adventure${contentFragment.path}` 決心要 `https://preview.app.wknd.site/adventure/content/dam/wknd-shared/en/adventures/surf-camp-bali/surf-camp-bali`
-+ 上的預覽URL __文章__ 模型看起來 `https://preview.news.wknd.site/${contentFragment.model.name}/${contentFragment.id}.html?variation=${contentFragment.variation}` 解析 `https://preview.news.wknd.site/article/99c34317-1901-2ab3-35b6-d7890aa1c23c.html?variation=main`
++ 上的預覽URL __冒險__ 模型可能顯示為 `https://preview.app.wknd.site/adventure${contentFragment.path}` 解析為 `https://preview.app.wknd.site/adventure/content/dam/wknd-shared/en/adventures/surf-camp-bali/surf-camp-bali`
++ 上的預覽URL __文章__ 模型可能顯示為 `https://preview.news.wknd.site/${contentFragment.model.name}/${contentFragment.id}.html?variation=${contentFragment.variation}` 解析的 `https://preview.news.wknd.site/article/99c34317-1901-2ab3-35b6-d7890aa1c23c.html?variation=main`
 
-## 應用內預覽
+## 應用程式內預覽
 
-使用配置的內容片段模型的任何內容片段都有一個「預覽」按鈕。 「預覽」按鈕開啟內容片段模型的預覽URL，並將開啟的內容片段的值彈出到 [URL表達式](#url-expressions)。
+使用已設定內容片段模式的任何內容片段都有「預覽」按鈕。 「預覽」按鈕會開啟內容片段模型的預覽URL，並將開啟的內容片段的值插入 [URL運算式](#url-expressions).
 
 ![預覽按鈕](./assets/preview/preview-button.png)
 
-在預覽應用中的內容片段更改時執行硬刷新（清除瀏覽器的本地快取）。
+預覽應用程式中的內容片段變更時，執行硬重新整理（清除瀏覽器的本機快取）。
 
-## 反應示例
+## React範例
 
-讓我們來瀏覽WKND應用程式，它是一個簡單的React應用程式，顯示使用無頭AEMGraphQLAEM API的冒險經歷。
+讓我們來探索WKND應用程式，這是一個簡單的React應用程式，可顯示使用AEM Headless GraphQL API的AEM冒險。
 
-示例代碼在 [吉圖布網](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/preview-tutorial)。
+範常式式碼位於 [Github.com](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/preview-tutorial).
 
 ## URL和路由
 
-用於預覽內容片段的URL或路由必須是可組合的 [URL表達式](#url-expressions)。 在WKND應用的此啟用預覽的版本中，通過 `AdventureDetail` 綁定到路由的元件 `/adventure<CONTENT FRAGMENT PATH>`。 因此，WKND Adventure模型的預覽URL必須設定為 `https://preview.app.wknd.site:3000/adventure${contentFragment.path}` 來解析這條路線。
+用於預覽內容片段的URL或路由必須使用來組合 [URL運算式](#url-expressions). 在這個啟用預覽的WKND應用程式版本中，冒險內容片段會透過 `AdventureDetail` 繫結至繞線的元件 `/adventure<CONTENT FRAGMENT PATH>`. 因此，WKND Adventure模型的預覽URL必須設定為 `https://preview.app.wknd.site:3000/adventure${contentFragment.path}` 以解析此路由。
 
-僅當應用程式具有可定址的路由時，才能使用內容片段預覽 [URL表達式](#url-expressions) 以可預覽的方式在應用中呈現該內容片段。
+內容片段預覽僅適用於應用程式具有可定址路由（可填入）的情況 [URL運算式](#url-expressions) 以可預覽的方式在應用程式中呈現內容片段。
 
 + `src/App.js`
 
@@ -106,9 +106,9 @@ function App() {
 export default App;
 ```
 
-### 顯示創作的內容
+### 顯示編寫的內容
 
-的 `AdventureDetail` 元件只解析通過 `${contentFragment.path}` [URL表達式](#url-expressions)，並使用它收集和呈現WKND冒險。
+此 `AdventureDetail` 元件只會剖析內容片段路徑，透過以下方式插入預覽URL： `${contentFragment.path}` [URL運算式](#url-expressions)，並用來收集及轉譯WKND Adventure。
 
 + `src/components/AdventureDetail.js`
 

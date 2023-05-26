@@ -1,6 +1,6 @@
 ---
-title: 在雲中使用Dispatcher
-description: Darin和James討論雲中的DispatcherAEM，包括一些最佳實踐和與AMS/On-Prem的不同之處。 它們還涉及到向雲的遷移。
+title: 在雲端中使用Dispatcher
+description: Darin和James討論AEM雲端中的Dispatcher，包括一些最佳實務和與AMS/內部部署的差異。 此外，他們也會談到移轉至雲端的問題。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -17,15 +17,15 @@ ht-degree: 2%
 ---
 
 
-# 在雲中使用Dispatcher
+# 在雲端中使用Dispatcher
 
-Darin和James討論雲中的DispatcherAEM，包括一些最佳實踐和與AMS/On-Prem的不同之處。 它們還涉及到向雲的遷移。
+Darin和James討論AEM雲端中的Dispatcher，包括一些最佳實務和與AMS/內部部署的差異。 此外，他們也會談到移轉至雲端的問題。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342067?quality=12&learn=on)
 
-## 此視頻中包含的內容
+## 本影片涵蓋的內容
 
-+ 在雲服務環境中部署調度程式檔案
-   + [遷移文檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
++ 在雲端服務環境中部署Dispatcher檔案
+   + [移轉檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
    + [部落格](https://medium.com/adobetech/migrating-a-dispatcher-configuration-from-managed-services-to-aem-as-a-cloud-service-fa8a80d242ee)
 + [移轉工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration)

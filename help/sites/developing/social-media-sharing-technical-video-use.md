@@ -1,6 +1,6 @@
 ---
-title: 利用社交媒體共用AEM Sites
-description: 瀏覽設定和使用社交媒體共用元件。
+title: 在AEM Sites中使用社群媒體共用
+description: 探索設定及使用社群媒體分享元件。
 feature: Core Components
 topics: integrations
 audience: developer, implementer
@@ -18,31 +18,31 @@ ht-degree: 3%
 
 ---
 
-# 使用社交媒體共用 {#using-social-media-sharing-in-aem-sites}
+# 使用社群媒體分享 {#using-social-media-sharing-in-aem-sites}
 
-瀏覽設定和使用社交媒體共用元件。
+探索設定及使用社群媒體分享元件。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18897?quality=12&learn=on)
 
-此視頻探討了社交媒體共用元件的以下功能( [核AEM心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html))使用 [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) 示例網站。
+本影片會探討以下社群媒體分享元件的功能（的一部分） [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html))使用 [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) 範例網站。
 
-* 0:00 — 添加和配置社交媒體共用元件
-* 1:00 — 共用到Facebook
-* 3:10 — 與Pinterest共用
-* 6:25 — 在產品頁面上使用社交媒體共用元件
+* 0:00 — 新增和設定社群媒體分享元件
+* 1:00 — 共用至Facebook
+* 3:10 — 共用至Pinterest
+* 6:25 — 在產品頁面上使用社群媒體分享元件
 
 ## 外部化程式設定 {#externalizer-setup}
 
-![第CQ天連結外部化程式](assets/externalizer.png)
+![Day CQ連結外部化器](assets/externalizer.png)
 
 [http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl)
 
-[外AEM部化](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) 應在AEM Author和AEM Publish上設定，以將發佈運行模式映射到用於訪問AEM Publish的可公開訪問的域。
+[AEM外部化程式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) 應同時在AEM Author和AEM Publish上設定，以將發佈執行模式對應到用於存取AEM Publish的公開可存取網域。
 
-在此視頻中，我們使用 `/etc/hosts` 到 *www.example.com* 要解析為localhost，請使用 [基本AEMDispatcher配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) 允許www.example.com在AEM發佈前顯示。
+在這段影片中，我們使用 `/etc/hosts` 到欺騙 *www.example.com* 解析為localhost，並使用 [基本AEM Dispatcher設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) 以允許www.example.com作為AEM Publish的前端。
 
-## 支撐材料 {#supporting-materials}
+## 支援材料 {#supporting-materials}
 
-* [下載核AEM心元件](https://github.com/adobe/aem-core-wcm-components/releases)
+* [下載AEM核心元件](https://github.com/adobe/aem-core-wcm-components/releases)
 * [下載We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
 * [安裝 Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)

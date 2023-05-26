@@ -1,7 +1,7 @@
 ---
-title: AEM Sites基本處理
+title: AEM Sites中的基本處理
 seo-title: Create a new page in Adobe Experience Manager Sites
-description: 以下視頻概述了使用作者環境時的基AEM本處理。 它以站點控制台為基礎。
+description: 以下影片提供使用AEM製作環境時基本處理的概觀。 它使用Sites主控台作為基礎。
 seo-description: The following video provides an overview of basic handling when using the AEM author environment. It uses the Sites console as a basis.
 feature: Page Editor, Editable Templates
 topics: authoring, publishing
@@ -22,35 +22,35 @@ ht-degree: 9%
 
 ---
 
-# AEM SitesUI和導航 {#basic-handling-aem-sites}
+# AEM Sites UI和導覽 {#basic-handling-aem-sites}
 
-以下視頻概述了使用作者環境時的基AEM本處理。 它以站點控制台為基礎。
+以下影片提供使用AEM製作環境時基本處理的概觀。 它使用Sites主控台作為基礎。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31784?quality=12&learn=on)
 
-在此視頻中，包括以下功能：
+本影片涵蓋下列功能或特色：
 
-* 啟用觸摸的UI
-* 「全局導航」面板由：
-   * 導航 — 由羅盤表示
+* 觸控式UI
+* 「全域導覽」面板包含：
+   * 導覽 — 以指南針表示
 
       | 主控台 | 用途 |
       |---|---|
-      | Assets | 這些控制台使您能夠導入和管理數字資產，如影像、視頻、文檔和音頻檔案。 然後，在同一實例上運行的任何網站都可以使用這些AEM資產 | 社群 | 此控制台允許您建立和管理社區站點以進行參與和啟用 | 商務 | 這允許您管理與您的Commerce站點相關的產品、產品目錄和訂單 |
-      | 體驗片段 | 體驗片段是一種獨立體驗，可跨渠道重複使用，並有各種變化，避免了反複複製和貼上體驗或部分體驗的麻煩 |
-      | Forms | 此控制台允許您建立、管理和處理表單和文檔 |
-      | 個人化 | 此控制台提供了一個工具框架，用於創作目標內容和呈現個性化體驗 |
-      | 專案 | 「項目」控制台可讓您直接訪問項目。 項目是虛擬儀表板。 它們可用於構建團隊，然後讓該團隊訪問資源、工作流和任務，從而允許人們按照共同的目標工作 |
-      | Sites | 通過「站點」控制台，您可以建立、查看和管理實例上運行的AEM網站。 通過這些控制台，您可以建立、編輯、複製、移動和刪除網站頁面、啟動工作流和發佈頁面 |
+      | Assets | 這些主控台可讓您匯入和管理數位資產，例如影像、影片、檔案和音訊檔案。 然後這些資產便可由同一AEM執行個體上執行的任何網站使用 | 社群 | 此主控台可讓您建立和管理社群網站，以進行參與和啟用 | 商務 | 這可讓您管理與您的商務網站相關的產品、產品目錄和訂單 |
+      | 體驗片段 | 體驗片段是獨立的體驗，可以跨管道重複使用，也可以有變數，省去重複複製和貼上體驗或體驗片段的麻煩 |
+      | Forms | 此主控台可讓您建立、管理及處理您的表單和檔案 |
+      | 個人化 | 此主控台提供工具架構，用於製作目標內容和呈現個人化體驗 |
+      | 專案 | 「專案」主控台可讓您直接存取專案。 專案是虛擬儀表板。 它們可用於建立團隊，然後授予該團隊存取資源、工作流程和任務的許可權，允許人員致力於共同目標 |
+      | Sites | Sites主控台可讓您建立、檢視及管理在AEM執行個體上執行的網站。 透過這些主控台，您可以建立、編輯、複製、移動和刪除網站頁面、開始工作流程及發佈頁面 |
 
-   * 工具 — 用錘子表示
-* 全向搜索
+   * 工具 — 以槌子表示
+* 全域搜尋
 * 解決方案切換器
 * 說明
 * 通知
 * 使用者屬性
 * 邊欄選擇器
-* 站AEM點控制台視圖
+* AEM網站主控台檢視
    * 清單檢視
    * 欄檢視
    * 卡片檢視
@@ -62,5 +62,5 @@ ht-degree: 9%
 
 ## 其他資源 {#additional-resources}
 
-* [編輯頁面內容文檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
 * [製作頁面的快速入門手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)

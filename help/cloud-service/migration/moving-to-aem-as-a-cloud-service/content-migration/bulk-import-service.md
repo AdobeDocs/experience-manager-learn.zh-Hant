@@ -1,6 +1,6 @@
 ---
-title: 使用批量導入服務進行內容遷移
-description: 瞭解AEM如何將Cloud Services批量導入服務用於從非源導入AEM資產。
+title: 使用大量匯入服務的內容移轉
+description: 瞭解如何使用AEM as aCloud Services的大量匯入服務從非AEM來源匯入資產。
 version: Cloud Service
 topic: Migration, Upgrade
 role: Developer
@@ -15,26 +15,26 @@ ht-degree: 0%
 
 ---
 
-# 批量導入服務
+# 大量匯入服務
 
-瞭解AEM如何將Cloud Services批量導入服務用於從非源導入AEM資產。
+瞭解如何使用AEM as aCloud Services的大量匯入服務從非AEM來源匯入資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336969?quality=12&learn=on)
 
-## 使用批量導入服務
+## 使用大量匯入服務
 
-![批量導入服務生命週期](../assets/bulk-import-service.png)
+![大量匯入服務生命週期](../assets/bulk-import-service.png)
 
-批量導入服務用於將儲存在Azure Blob儲存或AmazonS3儲存中的檔案作為資AEM產傳輸到as a Cloud Service。
+大量匯入服務用於將儲存在Azure Blob儲存空間或Amazon S3儲存空間的檔案以資產形式傳輸到AEMas a Cloud Service。
 
-## 主要活動
+## 重要活動
 
-+ 將要導入的檔案上載到雲儲存提供程式(Azure Blob儲存或AmazonS3)。
-+ 從as a Cloud Service作者服務配置並運行批量AEM導入服務。
-+ 將批量服務導入程式作為一次性導入或計畫定期導入。
++ 上傳要匯入的檔案至您的雲端儲存提供者(Azure Blob儲存或Amazon S3)。
++ 從AEMas a Cloud Service製作服務設定並執行大量匯入服務。
++ 執行Bulk Service Importer作為一次性匯入，或排程定期匯入。
 
 ## 其他資源
 
-+ [批量導入服務配置選項](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#configure-bulk-ingestor-tool)
-+ [Adobe Developers Live資產消化會議](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html)
++ [大量匯入服務組態選項](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#configure-bulk-ingestor-tool)
++ [有關資產擷取的Adobe Developers Live工作階段](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html)
 

@@ -1,6 +1,6 @@
 ---
-title: 雲加速管理器的實施階段
-description: 查看並瞭解主要實施階段或使用Cloud Acceleration Manager轉AEM到as a Cloud Service。
+title: Cloud Acceleration Manager的實作階段
+description: 檢閱並瞭解主要的實作階段或使用Cloud Acceleration Manager移至AEMas a Cloud Service。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 雲加速管理器的實施階段
+# Cloud Acceleration Manager的實作階段
 
-查看並瞭解主要實施階段或使用Cloud Acceleration Manager轉AEM到as a Cloud Service。
+檢閱並瞭解主要的實作階段或使用Cloud Acceleration Manager移至AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336691?quality=12&learn=on)

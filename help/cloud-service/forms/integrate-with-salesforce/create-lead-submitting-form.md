@@ -1,6 +1,6 @@
 ---
-title: 使用表單資料模型的提交操作提交表單
-description: 通過在提交表單時建立Lead對象，建立自適應表單以testSalesforce整合
+title: 使用表單資料模型的提交動作提交表單
+description: 建立最適化表單，透過在表單提交上建立Lead物件來測試Salesforce整合
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# Test從表單提交生成潛在顧客
+# 從表單提交測試銷售機會開發
 
-基於Sales Force表單資料模型建立自適應表單，並通過提交表單test在Salesforce中建立潛在顧客
+根據Sales Force表單資料模型建立最適化表單，並透過提交表單來測試Salesforce中銷售機會的建立
 
 >[!VIDEO](https://video.tv.adobe.com/v/331758?quality=12&learn=on)

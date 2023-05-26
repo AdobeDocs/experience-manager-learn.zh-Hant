@@ -1,6 +1,6 @@
 ---
-title: 從HTM5表單提交生成PDF
-description: 從移動表單提交生成PDF
+title: 從HTM5表單提交產生PDF
+description: 從行動表單提交產生PDF
 feature: Mobile Forms
 version: 6.4,6.5
 topic: Development
@@ -15,20 +15,20 @@ ht-degree: 0%
 
 ---
 
-# 從HTM5表單提交生成PDF {#generate-pdf-from-htm-form-submission}
+# 從HTM5表單提交產生PDF {#generate-pdf-from-htm-form-submission}
 
-本文將引導您完成從HTML5(亦稱移動Forms)表單提交中生成pdf所涉及的步驟。 本演示還將說明將影像添加到HTML5窗體並將影像合併到最終pdf中所需的步驟。
+本文將逐步引導您完成從HTML5 (亦稱為Mobile Forms)表單提交產生PDF的步驟。 此示範也將說明將影像新增到HTML5表單以及將影像合併到最終pdf所需的步驟。
 
 
-要將提交的資料合併到xdp模板中，我們將執行以下操作
+若要將提交的資料合併至xdp範本，請執行下列動作
 
-編寫Servlet來處理HTML5表單提交
+撰寫Servlet以處理HTML5表單提交
 
-* 在此Servlet中獲取已提交資料
-* 將此資料與xdp模板合併以生成pdf
-* 將pdf流回調用應用程式
+* 在此servlet內取得提交的資料
+* 將此資料與xdp範本合併以產生pdf
+* 將pdf串流回呼叫應用程式
 
-以下是從請求中提取已提交資料的Servlet代碼。 然後，它調用自定義documentServices .mobileFormToPDF方法以獲取pdf。
+以下是從請求中擷取已提交資料的servlet程式碼。 然後它會呼叫自訂documentServices .mobileFormToPDF方法來取得pdf。
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -66,9 +66,9 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
  }
 ```
 
-要將影像添加到移動表單並在pdf中顯示該影像，我們使用了以下內容
+若要新增影像至行動表單，並在PDF中顯示該影像，我們使用了下列專案
 
-XDP模板 — 在xdp模板中，我們添加了一個名為btnAddImage的影像欄位和按鈕。 以下代碼處理我們的自定義配置檔案中btnAddImage的click事件。 正如您所看到的，我們觸發了檔案1 click事件。 xdp中不需要編碼即可完成此使用情形
+XDP範本 — 在xdp範本中，我們新增了影像欄位和名為btnAddImage的按鈕。 下列程式碼會處理自訂設定檔中btnAddImage的click事件。 如您所見，我們觸發file1點選事件。 xdp中不需要編碼即可完成此使用案例
 
 ```javascript
 $(".btnAddImage").click(function(){
@@ -78,9 +78,9 @@ $("#file1").click();
 });
 ```
 
-[自定義配置檔案](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。 使用自定義配置檔案，可以更輕鬆地操作移動表單的HTMLDOM對象。 隱藏檔案元素將添加到HTML.jsp中。 當用戶按一下「添加照片」時，我們將觸發檔案元素的按一下事件。 這允許用戶瀏覽並選擇要附加的照片。 然後使用javascript FileReader對象獲取影像的base64編碼字串。 base64影像字串以窗體形式儲存在文本欄位中。 提交表單時，我們提取此值並將其插入XML的img元素中。 然後，此XML將用於與xdp合併以生成最終pdf。
+[自訂設定檔](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). 使用自訂設定檔可讓您更輕鬆地操控行動表單的HTMLDOM物件。 隱藏的檔案元素會新增至HTML.jsp。 當使用者點選「新增您的像片」時，我們會觸發檔案元素的點選事件。 這可讓使用者瀏覽並選取要附加的照片。 然後使用javascript FileReader物件來取得影像的base64編碼字串。 base64影像字串會儲存在表單的文字欄位中。 提交表單時，我們會擷取此值，並將其插入XML的img元素中。 然後使用此XML與xdp合併，以產生最終pdf。
 
-已將用於此文章的自定義配置檔案作為本文資產的一部分提供給您。
+用於本文的自訂設定檔已可供您使用作為本文資產的一部分。
 
 ```javascript
 function readURL(input) {
@@ -100,23 +100,23 @@ function readURL(input) {
         }
 ```
 
-在觸發檔案元素的click事件時執行上述代碼。 第5行將上傳檔案的內容提取為base64字串，並儲存在文本欄位中。 然後，當表單提交到我們的servlet時，將提取此值。
+當我們觸發檔案元素的點選事件時，就會執行上述程式碼。 第5行：我們將上傳檔案的內容擷取為base64字串，並儲存在文字欄位中。 然後在表單提交至我們的servlet時擷取此值。
 
-然後，我們將配置我們的移動表單的以下屬性（高級）AEM
+接著，我們會在AEM中設定行動表單的下列屬性（進階）
 
-* 提交URL - http://localhost:4502/bin/handlemobileformsubmission。 這是我們的Servlet，它將提交的資料與xdp模板合併
-* HTML呈現配置檔案 — 確保選擇「AddImageToMobileForm」。 這將觸發向表單添加影像的代碼。
+* 提交URL - http://localhost:4502/bin/handlemobileformsubmission。 這是我們的servlet，會將提交的資料與xdp範本合併
+* HTML演算設定檔 — 請務必選取「AddImageToMobileForm」。 這會觸發程式碼，將影像新增至表單。
 
-要在您自己的伺服器上test此功能，請執行以下步驟：
+若要在您自己的伺服器上測試此功能，請遵循下列步驟：
 
-* [部署AemFormsDocumentServices捆綁包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* [部署AemFormsDocumentServices套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 
-* [部署使用服務用戶包進行開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [部署使用服務進行開發的使用者套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下載並安裝與此文章關聯的包。](assets/pdf-from-mobile-form-submission.zip)
+* [下載並安裝與本文相關的套件。](assets/pdf-from-mobile-form-submission.zip)
 
-* 通過查看URL的屬性頁，確保正確設定提交URL和HTML呈現配置檔案  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
+* 檢視的屬性頁面，確定已正確設定提交URL和HTML轉譯器設定檔  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
 
-* [將XDP以html格式預覽](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
+* [以html預覽XDP](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 
-* 將影像添加到表單並提交。 你應該把PDF帶回來。
+* 將影像新增至表單並提交。 您應該要取回包含影像的PDF。

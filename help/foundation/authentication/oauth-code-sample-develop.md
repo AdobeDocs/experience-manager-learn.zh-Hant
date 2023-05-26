@@ -1,6 +1,6 @@
 ---
-title: 在中開發OAuth范AEM圍
-description: Adobe Experience Manager的可擴展OAuth作用域允許從最終用戶授權的客戶端應用程式訪問資源。 下圖說明了在的上下文中的請求AEM流。
+title: 在AEM中開發OAuth範圍
+description: Adobe Experience Manager的可擴充OAuth範圍允許一般使用者授權的使用者端應用程式資源的存取控制。 下圖說明AEM內容中的請求流程。
 version: 6.4, 6.5
 feature: User and Groups
 topic: Development
@@ -16,18 +16,18 @@ ht-degree: 1%
 
 # 開發OAuth範圍
 
-Adobe Experience Manager的可擴展OAuth作用域允許對最終用戶授權的客戶端應用程式的資源進行訪問控制。 下圖說明了在的上下文中的請求AEM流。
+Adobe Experience Manager的可擴充OAuth範圍允許一般使用者授權的使用者端應用程式資源的存取控制。 下圖說明AEM內容中的請求流程。
 
-![Oauth作用域流](./assets/oauth-code-sample-develop/oauth-scopes-flow.png)
+![Oauth範圍流程](./assets/oauth-code-sample-develop/oauth-scopes-flow.png)
 
 AEM提供三個範圍：
 
 * 設定檔
-* 離線訪問
+* 離線存取
 * 複寫
 
-可擴AEM展的OAuth作用域允許定義其他自定義作用域。 例如，可以開發並部署自定義範圍，AEM以允許通過OAuth授權的移動應用僅限於讀取，而不能寫入資產。
+AEM可延伸的OAuth範圍允許定義其他自訂範圍。 例如，您可以開發自訂範圍並部署至AEM，將透過OAuth授權的行動應用程式限製為讀取而非寫入資產。
 
-OAuth是授權客戶端應用程式的首選方法，因為它使用訪問令牌，而AEM不是要求向該應用程式提供用戶憑據。
+OAuth是授權使用者端應用程式的偏好方法，因為它使用存取權杖，而不是要求向該應用程式提供AEM使用者的認證。
 
-* [查看代碼](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/legacy/bundle/src/main/java/com/adobe/acs/samples/authentication/oauth/impl/SampleScopeWithPrivileges.java)
+* [檢視程式碼](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/legacy/bundle/src/main/java/com/adobe/acs/samples/authentication/oauth/impl/SampleScopeWithPrivileges.java)

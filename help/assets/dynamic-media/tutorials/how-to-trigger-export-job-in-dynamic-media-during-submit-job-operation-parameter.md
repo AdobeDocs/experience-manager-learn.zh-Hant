@@ -1,6 +1,6 @@
 ---
-title: 在Dynamic Media觸發出口作AEM業
-description: 在Dynamic Media提交任務工序期間觸發導出任務的步驟。
+title: 在AEM Dynamic Media中觸發匯出作業
+description: 在Dynamic Media中執行送出工作作業期間觸發匯出工作的步驟。
 role: Developer
 level: Intermediate
 version: Cloud Service
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# 在Dynamic Media觸發出口作AEM業
+# 在AEM Dynamic Media中觸發匯出作業
 
-此視頻在提交作業工序參數期間完成觸發Dynamic Media導出作業的步驟。
+此影片會逐步說明在提交工作作業引數期間在Dynamic Media中觸發匯出工作的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335454?quality=12&learn=on)

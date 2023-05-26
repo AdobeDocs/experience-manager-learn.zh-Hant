@@ -1,6 +1,6 @@
 ---
-title: AEM Forms
-description: 建立適當的表單資料模型以在打印文檔和Web渠道文檔中建立多系列圖表。
+title: AEM Forms中的多系列圖表
+description: 建立適當的表單資料模型，以在列印和Web Channel檔案中建立多系列圖表。
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -21,28 +21,28 @@ ht-degree: 0%
 
 # 多系列圖表
 
-AEM Forms6.5引入了建立和配置多個系列圖表的能力。 多個系列圖表通常與折線圖、條形圖、柱形圖類型關聯使用。 下圖是多系列圖的一個很好的示例。 圖表顯示了3隻不同共同基金在一段時間內的1萬美元增長。 要能夠在AEM Forms建立和使用此類圖表，您需要建立相應的表單資料模型。
+AEM Forms 6.5匯入了建立及設定多系列圖表的功能。 多系列圖表通常與折線圖、橫條圖、直條圖型別關聯使用。 下列圖表是多系列圖表的良好範例。 圖表顯示3個不同共同基金在一段時間內以$10,000美元的速度增長。 若要能夠在AEM Forms中建立和使用這類圖表，您必須建立適當的表單資料模型。
 
-![多系列圖](assets/seriescharts.jfif)
+![多系列圖表](assets/seriescharts.jfif)
 
-要在AEM Forms建立多系列圖表，您需要建立具有必要實體和實體間關聯的適當表單資料模型。 以下螢幕抓圖將加亮圖元和3個圖元之間的關聯。 在最高一級，我們有一個實體，稱為&quot;組織&quot;，它與基金實體有一對多的聯繫。 基金實體與業績實體有一對多的聯繫。
+若要在AEM Forms中建立多系列圖表，您需要建立適當的表單資料模型，其中包含必要的實體和實體之間的關聯。 下列熒幕擷圖會反白顯示實體與3個實體之間的關聯。 在最上層，我們有一個稱為「組織」的實體，它與Fund實體有一對多關聯。 Fund實體則與Performance實體具有一對多關聯。
 
-![窗體資料模型](assets/formdatamodel.jfif)
+![表單資料模型](assets/formdatamodel.jfif)
 
-## 為多系列圖建立表單資料模型
+## 建立多系列圖表的表單資料模型
 
 >[!VIDEO](https://video.tv.adobe.com/v/26352?quality=12&learn=on)
 
-### 配置折線圖
+### 設定折線圖
 
 >[!VIDEO](https://video.tv.adobe.com/v/26353?quality=12&learn=on)
 
-要在系統上test此功能，請執行以下步驟
+若要在您的系統上測試此專案，請遵循下列步驟
 
-* [使用包管理器下載並導AEM入MutualFundFactSheet.zip。](assets/mutualfundfactsheet.zip)
-* [將SeriesChartSampleData.json下載到硬碟。](assets/serieschartsampledata.json) 這是用於填充圖表的示例資料。
-* [導航到「Forms」和「文檔」。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 輕輕選擇「MutualFundGrowthFactSheet」互動式通信模板。
-* 按一下預覽 |打印通道 |上載示例資料。
-* 瀏覽到作為本文一部分提供的示例資料檔案。
-* 預覽「MutualFundGrowthFactSheet」互動式通信的打印渠道，以及上一步下載的示例資料。
+* [使用AEM Package Manager下載並匯入MutualFundFactSheet.zip。](assets/mutualfundfactsheet.zip)
+* [將SeriesChartSampleData.json下載至您的硬碟。](assets/serieschartsampledata.json) 這是用來填入圖表的範例資料。
+* [導覽至Forms和檔案。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 輕輕選取「MutualFundGrowthFactSheet」互動式通訊範本。
+* 按一下預覽 |列印頻道 |上傳範例資料。
+* 瀏覽至本文提供的範例資料檔案。
+* 使用在上一步中下載的範例資料，預覽「MutualFundGrowthFactSheet」互動式通訊的列印管道。

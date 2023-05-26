@@ -1,6 +1,6 @@
 ---
-title: 具有自適應Forms的條形碼服務
-description: 使用條形碼服務對條形碼進行解碼並從提取的資料填充表單域。
+title: 條碼服務搭配最適化Forms
+description: 使用條碼服務將條碼解碼，並從擷取的資料填入表單欄位。
 feature: Barcoded Forms
 version: 6.4,6.5
 topic: Development
@@ -15,16 +15,16 @@ ht-degree: 0%
 
 ---
 
-# 具有自適應Forms的條形碼服務{#barcode-service-with-adaptive-forms}
+# 條碼服務搭配最適化Forms{#barcode-service-with-adaptive-forms}
 
-本文將演示使用條形碼服務填充自適應表單。 使用案例如下：
+本文將示範如何使用條碼服務填入調適型表單。 使用案例如下：
 
-1. 用戶將PDF添加為條形碼作為自適應表單附件
-1. 附件的路徑將發送到servlet
-1. Servlet解碼條形碼並以JSON格式返回資料
-1. 然後使用解碼資料填充自適應格式
+1. 使用者新增帶有條碼的PDF作為最適化表單附件
+1. 附件的路徑已傳送至servlet
+1. 此servlet將條碼解碼，並傳回JSON格式的資料
+1. 最適化表單接著會使用解碼的資料填入
 
-以下代碼對條形碼進行解碼，並使用解碼值填充JSON對象。 然後，servlet在對調用應用程式的響應中返回JSON對象。
+下列程式碼會解碼條碼，並使用解碼的值填入JSON物件。 然後，servlet會在回應呼叫的應用程式時傳回JSON物件。
 
 
 
@@ -54,7 +54,7 @@ public JSONObject extractBarCode(Document pdfDocument) {
  }
 ```
 
-以下是servlet代碼。 當用戶向自適應表單中添加附件時，將調用此servlet。 Servlet將JSON對象返回給調用的應用程式。 然後調用應用程式使用從JSON對象提取的值填充自適應表單。
+以下是servlet程式碼。 當使用者將附件新增到最適化表單時，會呼叫此servlet。 此servlet會將JSON物件傳回呼叫的應用程式。 然後，呼叫應用程式會使用從JSON物件擷取的值填入調適型表單。
 
 ```java
 @Component(service = Servlet.class, property = {
@@ -94,7 +94,7 @@ public class DecodeBarCode extends SlingSafeMethodsServlet {
 }
 ```
 
-以下代碼是Adaptive Form引用的客戶端庫的一部分。 當用戶將附件添加到自適應表單時，將觸發此代碼。 該代碼對請求參數中傳遞的附件路徑進行GET調用。 然後使用從servlet調用接收的資料來填充自適應表單。
+下列程式碼為最適化表單所參考的使用者端程式庫的一部分。 當使用者將附件新增到最適化表單時，就會觸發此程式碼。 程式碼會對servlet進行GET呼叫，並在要求引數中傳遞附件的路徑。 接著會使用從servlet呼叫收到的資料填入最適化表單。
 
 ```javascript
 $(document).ready(function()
@@ -131,18 +131,18 @@ $(document).ready(function()
 
 >[!NOTE]
 >
->此軟體包中包含的自適應表單是使用AEM Forms6.4構建的。如果您打算在AEM Forms6.3環境中使用此包，請在表單6.3中創AEM建自適應表單
+>此套件隨附的最適化表單是使用AEM Forms 6.4建置。如果您打算在AEM Forms 6.3環境中使用此套件，請在AEM Form 6.3中建立最適化表單
 
-第12行 — 獲取服務解析程式的自定義代碼。 此捆綁包作為本文章資產的一部分包含。
+第12行 — 取得服務解析程式的自訂程式碼。 此套件組合已包含在此文章資產中。
 
-第23行 — 調用DocumentServices extractBarCode方法以獲取填充有已解碼資料的JSON對象
+第23行 — 呼叫DocumentServices extractBarCode方法，以取得填入已解碼資料的JSON物件
 
-要在您的系統上運行此程式，請執行以下步驟：
+若要讓此程式在您的系統上執行，請遵循下列步驟：
 
-1. [下載BarcodeService.zip](assets/barcodeservice.zip) 並使用包AEM管理器導入
-1. [下載並安裝自定義DocumentServices包](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-1. [下載並安裝DevelopingWithServiceUser捆綁包](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [下載示例PDF表](assets/barcode.pdf)
-1. 將瀏覽器指向 [樣本自適應格式](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
-1. 上載提供的示例PDF
-1. 您應看到填充了資料的表單
+1. [下載BarcodeService.zip](assets/barcodeservice.zip) 並使用封裝管理程式匯入至AEM
+1. [下載並安裝自訂DocumentServices套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+1. [下載並安裝DevelopingWithServiceUser套裝](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. [下載範例PDF表單](assets/barcode.pdf)
+1. 將瀏覽器指向 [最適化表單範例](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. 上傳提供的範例PDF
+1. 您應該會看到已填入資料的表單

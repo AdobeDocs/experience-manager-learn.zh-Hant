@@ -1,6 +1,6 @@
 ---
-title: 基線權限
-description: 在基準資產資料夾上管理用戶訪問是治理中的一個關鍵方面，並確保可以正確支援流程。
+title: 基線許可權
+description: 管理基線資產資料夾的使用者存取權是治理的重要方面，並確保可正確支援該流程。
 feature: Asset Management
 version: Cloud Service
 kt: 4870
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 基線權限
+# 基線許可權
 
-管理用戶對 [基線資產資料夾](./baseline-folders.md) 是治理中的一個關鍵方面，並確保流程得到正確支援。
+管理使用者對的存取權 [基線資產資料夾](./baseline-folders.md) 是控管中的重要一環，能確保這些程式受到適當支援。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37696?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 將元件添加到「人員」面板
-description: 通過添加配偶詳細資訊片段來配置人員面板。 如果申請人婚姻狀態已結婚，則建立規則以顯示配偶詳細資訊片段。
+title: 將元件新增至「人物」面板
+description: 新增配偶詳細資料片段以設定「人員」面板。 系統會建立規則，在應徵者婚姻狀況為已婚時顯示配偶詳細資料片段。
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4210
@@ -16,22 +16,22 @@ ht-degree: 2%
 
 ---
 
-# 將元件添加到「人員」面板 {#adding-components-to-people-panel}
+# 將元件新增至「人物」面板 {#adding-components-to-people-panel}
 
-通過添加配偶詳細資訊片段來配置人員面板。 如果申請人婚姻狀態已結婚，則建立規則以顯示配偶詳細資訊片段。
+新增配偶詳細資料片段以設定「人員」面板。 系統會建立規則，在應徵者婚姻狀況為已婚時顯示配偶詳細資料片段。
 
-**在AEM Forms6.3和6.4中配置人員面板**
+**在AEM Forms 6.3和6.4中設定People面板**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22193?quality=12&learn=on)
 
-**在AEM Forms6.5及更高版本中配置人員面板**
+**在AEM Forms 6.5及更高版本中設定People面板**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28385?quality=12&learn=on)
 
-**配偶詳細資訊規則**
+**配偶詳細資料規則**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22195?quality=12&learn=on)
 
 ## 後續步驟
 
-[向收入面板添加表和其他元件](./adding-table-to-income-panel.md)
+[新增表格和其他元件至收入面板](./adding-table-to-income-panel.md)

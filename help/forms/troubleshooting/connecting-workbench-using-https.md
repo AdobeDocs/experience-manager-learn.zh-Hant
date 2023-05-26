@@ -1,6 +1,6 @@
 ---
-title: 使用HTTPS將Workbench連接到AEM Forms伺服器的步驟
-description: 本文介紹通過SSL（使用HTTPS）將Workbench連接到AEM Forms伺服器的步驟
+title: 使用HTTPS將Workbench連線至AEM Forms伺服器的步驟
+description: 本文說明透過SSL （使用HTTPS）將Workbench連線至AEM Forms伺服器的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 使用HTTPS將Workbench連接到AEM Forms伺服器的步驟
+# 使用HTTPS將Workbench連線至AEM Forms伺服器的步驟
 
-*此視頻通過使用HTTPS將Workbench連接到AEM Forms伺服器的步驟進行介紹。*
+*本影片逐步解說使用HTTPS將Workbench連線至AEM Forms伺服器的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335482?quality=12&learn=on)

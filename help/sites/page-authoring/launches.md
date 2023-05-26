@@ -1,6 +1,6 @@
 ---
-title: 如何在AEM Sites使用啟動
-description: 在AEM Sites發佈的內容提供了建立、編寫和審閱內容以供將來發佈的方法。
+title: 如何在AEM Sites中使用啟動
+description: AEM Sites中的啟動提供一種建立、編寫和檢閱內容以供未來發行的方法。
 topic: Content Management
 feature: Launches
 level: Intermediate, Experienced
@@ -18,6 +18,6 @@ ht-degree: 1%
 
 # Launch
 
-在AEM Sites發佈時，提供了建立、編寫和查看網站內容以供將來發佈的方法。 在啟動過程中，生產網站可以繼續發展並像平常那樣日復一日地改變。
+AEM Sites中的啟動提供一種建立、編寫和檢閱網站內容以供未來發行的方式。 在建立啟動期間，生產網站可以繼續如常進化並每天變更。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331285?quality=12&learn=on)

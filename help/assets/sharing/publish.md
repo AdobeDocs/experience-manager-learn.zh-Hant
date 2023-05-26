@@ -1,6 +1,6 @@
 ---
-title: 如何使用發佈資AEM產
-description: 瞭解如何將資產及其格式副本從AEM Author發佈到AEM Publish。
+title: 如何使用AEM發佈資產
+description: 瞭解如何將資產及其轉譯從AEM Author發佈到AEM Publish。
 feature: Asset Management
 version: Cloud Service
 kt: 330932
@@ -19,8 +19,8 @@ ht-degree: 2%
 
 # 發佈
 
-瞭解如何將資產及其格式副本從AEM Author發佈到AEM Publish。
+瞭解如何將資產及其轉譯從AEM Author發佈到AEM Publish。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330932?quality=12&learn=on)
 
-_確保在發佈資產之前，您的AEM Assets部署擁有AEM發佈服務。_
+_在發佈資產之前，請確定AEM Assets部署具有AEM Publish服務授權。_

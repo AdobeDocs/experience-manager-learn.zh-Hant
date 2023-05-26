@@ -1,5 +1,5 @@
 ---
-title: Test您的理解
+title: 測試您的理解
 description: 完成練習
 type: Documentation
 role: Developer
@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # 練習
 
-修改代碼以將模板的URL作為POST請求參數之一傳遞。
+修改程式碼，將範本的URL當作POST要求引數之一傳遞。
 
-中的代碼 `DocumentGeneration.java` 必須修改才能傳遞模板的URL。
+中的程式碼 `DocumentGeneration.java` 必須修改才能傳遞範本的URL。

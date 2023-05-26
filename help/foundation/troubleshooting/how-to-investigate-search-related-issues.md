@@ -1,6 +1,6 @@
 ---
-title: 如何查找與搜索相關的問AEM題
-description: 調查與搜索相關問題的步驟
+title: 如何調查AEM中的搜尋相關問題
+description: 調查與搜尋相關問題的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何查找與搜索相關的問AEM題
+# 如何調查AEM中的搜尋相關問題
 
-*此視頻將介紹調查中與搜索相關問題的步驟AEM。*
+*本影片逐步解說在AEM中調查搜尋相關問題的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335467?quality=12&learn=on)

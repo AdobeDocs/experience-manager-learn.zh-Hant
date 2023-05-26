@@ -1,6 +1,6 @@
 ---
-title: 使用調用DDX操作在FormsCS中PDF操作
-description: 使用調用DDX匯編PDF檔案。
+title: 使用叫用DDX操作在Forms CS中操控PDF
+description: 使用呼叫DDX組合PDF檔案。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -18,9 +18,9 @@ ht-degree: 1%
 
 # 簡介
 
-在本課程中，我們將使用FormsCS對PDF文檔進行PDF處理和歸檔。 要從外部應用程式使用這些微服務，請執行以下步驟：
+在本課程中，我們將使用Forms CS的PDF操作和PDF檔案封存。 若要從外部應用程式使用這些微服務，需執行下列步驟：
 
-1. 生成技術帳戶的服AEM務憑據
-1. 從服務憑據建立JSON Web令牌(JWT)，並為訪問令牌交換該憑據
-1. 配置中技術帳戶的訪問權AEM限
-1. 使用訪問令牌進行HTTP調用以處理PDF檔案/生成和驗證PDF/A檔案
+1. 產生AEM技術帳戶的服務認證
+1. 從服務憑證建立JSON Web權杖(JWT)，並將相同的權杖交換為存取權杖
+1. 設定AEM中技術帳戶的存取權
+1. 使用存取權杖進行HTTP呼叫以操控PDF檔案/產生和驗證PDF/A檔案

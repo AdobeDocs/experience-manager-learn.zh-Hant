@@ -1,6 +1,6 @@
 ---
-title: 代碼儲存庫現代化器
-description: 瞭解核心儲存庫現代化器如何自動更新AEM現有Maven項目，使其AEMas a Cloud Service相容。
+title: 程式碼存放庫現代化工具
+description: 瞭解核心Repository Modernizer如何自動地將現有AEM Maven專案更新為相容於AEMas a Cloud Service。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 代碼儲存庫現代化器
+# 程式碼存放庫現代化工具
 
-瞭解核心儲存庫現代化器如何自動更新AEM現有Maven項目，使其AEMas a Cloud Service相容。
+瞭解核心Repository Modernizer如何自動地將現有AEM Maven專案更新為相容於AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336694?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 以CSV格式導出已提交表單資料
-description: 以CSV格式導出提交的自適應表單資料
+title: 將提交的表單資料匯出為CSV格式
+description: 將提交的最適化表單資料匯出為CSV格式
 feature: Adaptive Forms
 topics: development
 audience: developer
@@ -20,38 +20,38 @@ ht-degree: 0%
 
 # 簡介
 
-客戶通常希望以CSV格式導出提交的表單資料。 本文將重點介紹以CSV格式導出表單資料所需的步驟。 本文假定表單提交儲存在RDBMS表中。 以下螢幕快照詳細說明了儲存表單提交所需的最小表結構。
+客戶通常希望將提交的表單資料匯出為CSV格式。 本文將重點說明以CSV格式匯出表單資料所需的步驟。 本文假設提交的表單儲存在RDBMS表格中。 以下熒幕擷圖詳細說明儲存表單提交內容所需的最低表格結構。
 
 >[!NOTE]
 >
->此示例僅與不基於模式或表單資料模型的自適應Forms一起使用
+>此範例僅適用於最適化Forms，而非根據結構描述或表單資料模型
 
-![表結構](assets/tablestructure.PNG)
-正如您所看到的，架構的名稱是aemformstual。在此架構內部是表formsubmications，定義了以下列
+![表格結構](assets/tablestructure.PNG)
+如您所見，結構描述名稱為aemformstutorial。在此結構描述內部，是formsubmissions表格，其中定義了下列欄
 
-* 格式資料：此列保存已提交的表單資料
-* formname（格式名稱）:此列保存已提交表單的名稱
-* id:這是主鍵，設定為自動增量
+* formdata：此欄包含提交的formdata
+* formname：此欄包含提交的表單名稱
+* id：這是主索引鍵，並設為自動增加
 
-表名和兩列名以OSGi配置屬性的形式顯示，如下圖所示：
-![OSGI配置](assets/configuration.PNG)
-代碼讀取這些值並構造要執行的相應SQL查詢。 例如，根據上述值執行以下查詢
+表格名稱和兩欄名稱會顯示為OSGi設定屬性，如下面的熒幕擷圖所示：
+![osgi-configure](assets/configuration.PNG)
+程式碼會讀取這些值，並建構要執行的適當SQL查詢。 例如，系統會根據上述值執行下列查詢
 
 `SELECT formdata FROM aemformstutorial.formsubmissions where formname=timeoffrequestform`
 
-在上述查詢中，表單(timeoffrequestform)的名稱作為請求參數傳遞給servlet。
+在上述查詢中，表單(timeoffrequestform)的名稱會作為請求引數傳遞給servlet。
 
 ## **建立OSGi服務**
 
-建立以下OSGI服務以導出CSV格式的已提交資料。
+已建立下列OSGI服務，以將提交的資料匯出為CSV格式。
 
-* 37號線：我們正在訪問Apache Sling連接池資料源。
+* 第37行：我們正在存取Apache Sling Connection Pooled DataSource。
 
-* 89號線：這是服務的入口點。方法 `getCSVFile(..)` 以formName作為輸入參數並提取與給定表單名稱相關的已提交資料。
+* 第89行：這是服務的進入點。方法 `getCSVFile(..)` 採用formName作為輸入引數，並擷取與給定表單名稱相關的已提交資料。
 
 >[!NOTE]
 >
->該代碼假定您已在Felix Web Console中定義了名為「aemformatiol」的連接池DataSource。該代碼還假定您在名為Aemformational的資料庫中具有架構
+>此程式碼假設您已在Felix Web Console中定義名為「aemformstutorial」的連線集區DataSource。此程式碼也假設您在資料庫中有一個名為aemformstutorial的結構描述
 
 ```java
 package com.aemforms.storeandexport.core;
@@ -242,9 +242,9 @@ public class StoreAndExportImpl implements StoreAndExport {
 }
 ```
 
-## 配置服務
+## 設定服務
 
-我們將以下三個屬性作為OSGI配置屬性公開。 SQL查詢是通過在運行時讀取這些值來構建的。
+我們已將下列三個屬性公開為OSGI設定屬性。 SQL查詢的建構方式是在執行階段讀取這些值。
 
 ```java
 package com.aemforms.storeandexport.core;
@@ -267,7 +267,7 @@ public @interface StoreAndExportConfiguration {
 
 ## Servlet
 
-以下是調用 `getCSVFile(..)` 服務的方法。 服務返回StringBuffer對象，然後將其流式傳輸回調用應用程式
+以下為叫用 `getCSVFile(..)` 服務的方法。 此服務會傳回StringBuffer物件，然後串流回呼叫的應用程式
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -307,8 +307,8 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 }
 ```
 
-### 在伺服器上部署
+### 在您的伺服器上部署
 
-* 導入 [SQL檔案](assets/formsubmissions.sql) 使用MySQL Workbench進入MySQL Server。 這將建立名為 **雄獅** 調用 **提交** 一些樣本資料。
-* 部署 [OSGi捆綁包](assets/store-export.jar) 使用Felix網路控制台
-* [獲取TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)。 您應該將CSV檔案流傳回您。
+* 匯入 [SQL檔案](assets/formsubmissions.sql) 使用MySQL Workbench進入MySQL伺服器。 這會建立名為的結構描述 **aemformstutorial** 和資料表已呼叫 **formsubmitments** 包含一些範例資料。
+* 部署 [OSGi套件](assets/store-export.jar) 使用Felix Web主控台
+* [若要取得TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform). 您應該要將CSV檔案串流傳回給您。

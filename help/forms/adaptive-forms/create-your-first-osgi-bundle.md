@@ -1,6 +1,6 @@
 ---
-title: 使用表單建立第一個OSGi捆綁包AEM
-description: 使用maven和eclipse構建您的第一個OSGi捆綁包
+title: 使用AEM表單建立您的第一個OSGi套件組合
+description: 使用maven和eclipse建立您的第一個OSGi套件組合
 feature: Adaptive Forms
 topics: development
 audience: developer
@@ -19,107 +19,107 @@ ht-degree: 1%
 ---
 
 
-# 建立第一個OSGi捆綁包
+# 建立您的第一個OSGi套件
 
-OSGi捆綁包是Java™存檔檔案，包含Java代碼、資源，以及描述捆綁包及其依賴項的清單。 該捆綁包是應用程式的部署單位。 本文旨在為希望使用AEM Forms6.4或6.5建立OSGi服務或Servlet的開發人員提供幫助。要構建第一個OSGi捆綁包，請執行以下步驟：
+OSGi套件組合是一個Java™封存檔案，其中包含Java程式碼、資源以及說明套件組合及其相依性的資訊清單。 此套件組合是應用程式的部署單位。 本文章適用於想使用AEM Forms 6.4或6.5建立OSGi服務或servlet的開發人員。若要建置您的第一個OSGi套件，請遵循下列步驟：
 
 
 ## 安裝JDK
 
-安裝支援的JDK版本。 我使用了JDK1.8。確保已添加 **JAVA_HOME** 中，並指向JDK安裝的根資料夾。
-將%JAVA_HOME%/bin添加到路徑
+安裝支援的JDK版本。 我已使用JDK1.8。確定您已新增 **JAVA_HOME** ，且指向JDK安裝的根資料夾。
+將%JAVA_HOME%/bin新增至路徑
 
-![資料源](assets/java-home.JPG)
+![data-source](assets/java-home.JPG)
 
 >[!NOTE]
-> 請勿使用JDK 15。 不支援AEM。
+> 請勿使用JDK 15。 AEM不支援。
 
-### TestJDK版本
+### 測試您的JDK版本
 
-開啟新的命令提示符窗口並鍵入： `java -version`。 應返回由 `JAVA_HOME` 變數
+開啟新的命令提示字元視窗並輸入： `java -version`. 您應該取回由所識別的JDK版本 `JAVA_HOME` 變數
 
-![資料源](assets/java-version.JPG)
+![data-source](assets/java-version.JPG)
 
 ## 安裝Maven
 
-Maven是一個主要用於Java項目的生成自動化工具。 請按照以下步驟在本地系統上安裝maven。
+Maven是主要用於Java專案的組建自動化工具。 請依照下列步驟在本機系統上安裝maven。
 
-* 建立名為 `maven` 在C驅動器中
-* 下載 [二進位zip存檔](http://maven.apache.org/download.cgi)
-* 將ZIP存檔的內容解壓到 `c:\maven`
-* 建立名為 `M2_HOME` 值為 `C:\maven\apache-maven-3.6.0`。 就我而言， **mvn** 版本為3.6.0。在撰寫本文時，最新版本為3.6.3
-* 添加 `%M2_HOME%\bin` 你的路
-* 保存更改
-* 開啟新的命令提示符並鍵入 `mvn -version`。 您應該看到 **mvn** 下面螢幕截圖中所示的版本
+* 建立名為的資料夾 `maven` 在您的C磁碟機中
+* 下載 [二進位zip封存](http://maven.apache.org/download.cgi)
+* 將zip封存的內容解壓縮至 `c:\maven`
+* 建立名為的環境變數 `M2_HOME` 具有值 `C:\maven\apache-maven-3.6.0`. 以我為例， **mvn** 版本是3.6.0。在撰寫本文時，最新的maven版本為3.6.3
+* 新增 `%M2_HOME%\bin` 至您的路徑
+* 儲存您的變更
+* 開啟新的命令提示字元並輸入 `mvn -version`. 您應該會看到 **mvn** 下列熒幕擷圖所示的版本
 
-![資料源](assets/mvn-version.JPG)
+![data-source](assets/mvn-version.JPG)
 
 ## Settings.xml
 
-馬文 `settings.xml` file定義用各種方式配置Maven執行的值。 通常，它用於定義本地儲存庫位置、備用遠程儲存庫伺服器和專用儲存庫的身份驗證資訊。
+Maven `settings.xml` file會定義以各種方式設定Maven執行的值。 最常見的是用來定義本機存放庫位置、替代遠端存放庫伺服器，以及私有存放庫的驗證資訊。
 
-導航到 `C:\Users\<username>\.m2 folder`
-提取 [設定.zip](assets/settings.zip) 把檔案放在 `.m2` 的子菜單。
+導覽至 `C:\Users\<username>\.m2 folder`
+擷取以下專案的內容： [settings.zip](assets/settings.zip) 檔案並放入 `.m2` 資料夾。
 
 ## 安裝Eclipse
 
-安裝最新版本 [日](https://www.eclipse.org/downloads/)
+安裝最新版本的 [eclipse](https://www.eclipse.org/downloads/)
 
-## 建立第一個項目
+## 建立您的第一個專案
 
-原型是Maven項目的模板工具包。 原型被定義為原始圖案或模型，從中可以製造所有同類的事物。 我們試圖提供一個系統，提供生成Maven項目的一致方法，這個名稱與此相符。 原型幫助作者為用戶建立Maven項目模板，並為用戶提供生成這些項目模板參數化版本的方法。
-要建立第一個主項目，請執行以下步驟：
+Archetype是Maven專案範本工具組。 原型被定義為原始陣列或模型，其他所有同類物件都來自此原始陣列或模型。 此名稱適合我們嘗試提供的系統，提供產生Maven專案的一致方法。 Archetype可幫助作者為使用者建立Maven專案範本，並提供使用者產生這些專案範本引數化版本的方法。
+若要建立您的第一個maven專案，請遵循以下步驟：
 
-* 建立名為 `aemformsbundles` 在C驅動器中
-* 開啟命令提示符並導航到 `c:\aemformsbundles`
-* 在命令提示符下運行以下命令
+* 建立名為的新資料夾 `aemformsbundles` 在您的C磁碟機中
+* 開啟命令提示字元並瀏覽至 `c:\aemformsbundles`
+* 在命令提示字元中執行以下命令
 * `mvn archetype:generate  -DarchetypeGroupId=com.adobe.granite.archetypes  -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=19`
 
-Maven項目是以交互方式生成的，系統會要求您為許多屬性(如
+Maven專案會以互動方式產生，並且系統會要求您提供多個屬性的值，例如
 
-| 屬性名稱 | 意義 | 值 |
+| 屬性名稱 | 重要性 | 值 |
 |------------------------|---------------------------------------|---------------------|
-| 組ID | groupId可唯一標識所有項目中的項目 | com.learningaemforms.adobe |
-| appsFolderName | 保存項目結構的資料夾的名稱 | 學習Aemon |
-| 項目ID | artifactId是不帶版本的jar的名稱。 如果建立了它，則可以選擇任何您想要的名稱，包含小寫字母和無奇異符號。 | 學習Aemon |
-| 版本 | 如果分發它，則可以選擇任何帶數字和點(1.0、1.1、1.0.1、...)的典型版本。 | 1.0 |
+| groupId | groupId可唯一識別所有專案中的專案 | com.learningaemforms.adobe |
+| 應用程式資料夾名稱 | 儲存專案結構的資料夾名稱 | 學習表單 |
+| artifactId | artifactId是不含版本的jar的名稱。 如果您已建立它，則可使用小寫字母且不含奇怪符號來選擇任何您想要的名稱。 | 學習表單 |
+| 版本 | 如果您將其散佈，則可以選擇任何具有數字和點(1.0、1.1、1.0.1、...)的典型版本。 | 1.0 |
 
-按Enter鍵，接受其它屬性的預設值。
-如果一切順利，您應在命令窗口中看到生成成功消息
+按下Enter鍵，接受其他屬性的預設值。
+如果一切順利，您應該會在命令視窗中看到組建成功訊息
 
-## 從主項目建立eclipse項目
+## 從您的maven專案建立eclipse專案
 
-將工作目錄更改為 `learningaemforms`。
-正在執行 `mvn eclipse:eclipse` 命令行中，以上命令讀取pom檔案並建立具有正確元資料的Eclipse項目，以便Eclipse瞭解項目類型、關係、類路徑等。
+將工作目錄變更為 `learningaemforms`.
+執行中 `mvn eclipse:eclipse` 從命令列上述命令會讀取您的pom檔案，並使用正確的中繼資料建立Eclipse專案，以便Eclipse瞭解專案型別、關係、類別路徑等。
 
-## 將項目導入eclipse
+## 將專案匯入eclipse
 
-啟動 **日蝕**
+Launch **Eclipse**
 
-轉到 **檔案 — >導入** 選擇 **現有Maven項目** 如圖所示
+前往 **檔案 — >匯入** 並選取 **現有Maven專案** 如下所示
 
-![資料源](assets/import-mvn-project.JPG)
+![data-source](assets/import-mvn-project.JPG)
 
-按一下「下一步」
+按「下一步」
 
-選擇 `c:\aemformsbundles\learningaemform`按一下 **瀏覽** 按鈕
+選取 `c:\aemformsbundles\learningaemform`s ，只要按一下 **瀏覽** 按鈕
 
-![資料源](assets/select-mvn-project.JPG)
+![data-source](assets/select-mvn-project.JPG)
 
 >[!NOTE]
->您可以根據需要選擇導入相應的模組。 如果您只打算在項目中建立Java代碼，請僅選擇並導入核心模組。
+>您可以視需要選擇匯入適當的模組。 如果您只打算在專案中建立Java程式碼，請僅選取並匯入核心模組。
 
-按一下 **完成** 啟動導入流程
+按一下 **完成** 以開始匯入程式
 
-項目已導入到Eclipse中，您會看到 `learningaemforms.xxxx` 資料夾
+專案已匯入至Eclipse，您會看到許多 `learningaemforms.xxxx` 資料夾
 
-展開 `src/main/java` 下 `learningaemforms.core` 的子菜單。 這是您正在其中寫入大部分代碼的資料夾。
+展開 `src/main/java` 在 `learningaemforms.core` 資料夾。 這是您撰寫大部分程式碼的資料夾。
 
-![資料源](assets/learning-core.JPG)
+![data-source](assets/learning-core.JPG)
 
-## 生成項目
+## 建置您的專案
 
-一旦編寫了OSGi服務或Servlet，就需要構建項目以生成可使用Felix Web控制台部署的OSGi捆綁包。 請參考 [AEMFD客戶端SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) 在Maven項目中包含相應的客戶端SDK。 必須將AEMFD客戶端SDK包含在 `pom.xml` 如下所示。
+撰寫OSGi服務或servlet後，您需要建置專案以產生可使用Felix Web主控台部署的OSGi套件。 請參考 [AEMFD使用者端SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) 以在您的Maven專案中包含適當的使用者端SDK。 您必須在的相依性區段中包含AEM FD使用者端SDK `pom.xml` ，如下所示。
 
 ```xml
 <dependency>
@@ -129,9 +129,9 @@ Maven項目是以交互方式生成的，系統會要求您為許多屬性(如
 </dependency>
 ```
 
-要構建項目，請執行以下步驟：
+若要建置您的專案，請遵循下列步驟：
 
-* 開啟 **命令提示符窗口**
+* 開啟 **命令提示視窗**
 * 瀏覽到 `c:\aemformsbundles\learningaemforms\core`
 * 執行命令 `mvn clean install`
-如果一切順利，您應在以下位置看到捆綁 `C:\AEMFormsBundles\learningaemforms\core\target`。 此捆綁包現已準備好使用Felix AEM Web控制台部署到。
+如果一切順利，您應該會在下列位置看到套件組合 `C:\AEMFormsBundles\learningaemforms\core\target`. 此套件組合現在已可使用Felix Web主控台部署至AEM。

@@ -1,6 +1,6 @@
 ---
-title: 瞭解Adobe雲管理器
-description: Adobe雲管理器提供簡單而強健的解決方案，允許輕鬆管理、引言和自AEM助服務。
+title: 瞭解Adobe Cloud Manager
+description: Adobe Cloud Manager提供簡單但強大的解決方案，可輕鬆管理、內部審查和自助服務AEM環境。
 sub-product: Experience Manager Cloud Manager, Experience Manager
 topics: best-practices, cicd, development, operations, governance
 doc-type: feature video
@@ -19,62 +19,62 @@ ht-degree: 16%
 
 ---
 
-# 瞭解Adobe雲管理器
+# 瞭解Adobe Cloud Manager
 
-Adobe雲管理器提供簡單而強健的解決方案，允許輕鬆管理、引言和自AEM助服務。
+Adobe Cloud Manager提供簡單但強大的解決方案，可輕鬆管理、內部審查和自助服務AEM環境。
 
-## 雲管理器概述
+## Cloud Manager總覽
 
-此視頻系列探討了Cloud Manager的關鍵功能，包括AEM:
+本影片系列會探索AEM適用的Cloud Manager的主要功能，包括：
 
 * [方案](#programs)
 * [環境](#environments)
 * [報告](#reports)
 * [CI/CD 生產管道](#cicd-production-pipeline)
-* [CI/CD非生產管道](#cicd-non-production-pipeline)
+* [CI/CD非生產用管道](#cicd-non-production-pipeline)
 * [活動](#activity)
 
-有關完整概述，請查看 [《 Cloud Manager使用手冊》](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)。
+如需完整概述，請檢閱 [Cloud Manager使用手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html).
 
 ## 方案 {#programs}
 
-[雲管理器程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html) 表示支援AEM邏輯業務計畫集的一組環境，通常對應於購買的服務級別協定(SLA)。 例如，一個方案可以代表支援AEM全球公共網站的資源，而另一個方案則代表一個內部中央資料庫。
+[Cloud Manager計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html) 代表支援邏輯業務計畫集合的AEM環境集合，通常會對應到已購買的服務等級協定(SLA)。 例如，一個計畫可能代表AEM資源以支援全球公共網站，而另一個計畫代表內部中央DAM。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)
 
 ## 環境 {#environments}
 
-[雲管理器環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/managing-environments.html) 由AEM Author、AEM Publish和Dispatcher實例組成。 不同的環境支援角色，並可以使用不同的CI/CD管道（如下所述）。 Cloud Manager環境通常具有一個生產環境和一個階段環境。
+[Cloud Manager環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/managing-environments.html) 由AEM Author、AEM Publish和Dispatcher執行個體組成。 不同的環境支援角色，並可使用不同的CI/CD管道參與（如下所述）。 Cloud Manager環境通常有一個生產環境和一個中繼環境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)
 
 ## 報告 {#reports}
 
-[雲管理器報告](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html) 通過一組圖表來查看程式的環境AEM和實例，這些圖表報告並跟蹤每個實例的各種AEM度量。
+[Cloud Manager報表](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html) 透過報告及追蹤每個AEM執行個體的各種量度的一組圖表，提供計畫環境和AEM執行個體的檢視。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26315?quality=12&learn=on)
 
 ## CI/CD 生產管道 {#cicd-production-pipeline}
 
-*[在Adobe雲管理器中使用CI/CD管道](./use-the-cicd-pipeline-in-cloud-manager-for-aem.md) 視頻系列深入瞭解生產管道的執行，包括對失敗和成功部署的探索。*
+*[在Adobe Cloud Manager中使用CI/CD管道](./use-the-cicd-pipeline-in-cloud-manager-for-aem.md) 影片系列提供生產管道執行的深入探討，包括探索失敗和成功的部署。*
 
 >[!NOTE]
 >
-> 在這些視頻中，已加快了生成、test和部署時間，以縮短視頻的時間。 完整的管道執行通常需要45分鐘或更長時間（包括強制性的30分鐘效能測試），具體取決於項目大小、實例數和UATAEM進程數。
+> 透過這些影片，組建、測試和部署時間都已加快，以縮短影片播放時間。 根據專案大小、AEM執行個體數量和UAT流程，完整的管道執行通常需要45分鐘或更長時間（包括強制性的30分鐘效能測試）。
 
 ### 設定
 
-的 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) 配置定義啟動管道的觸發器以及控制生產部署和效能test參數的參數。
+此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) 設定會定義起始管道的觸發條件，以及控制生產部署和效能測試引數的引數。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### 管道執行
 
-的 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) 用於通過Stage構建和部署代碼到生產環境，從而縮短價值實現時間。
+此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) 用於透過Stage建置計畫碼並將計畫碼部署到生產環境，減少實現價值的時間。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)
 
-## CI/CD非生產管道 {#cicd-non-production-pipeline}
+## CI/CD非生產用管道 {#cicd-non-production-pipeline}
 
 [CI/CD 非生產用管道分成兩種類別：程式碼品質管道以及部署管道。](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html)程式碼品質管道會從 Git 分支輸入所有程式碼，以建置並根據 Cloud Manager 的程式碼品質掃描加以評估。部署管道會支援將程式碼從 Git 存放庫自動部署到任何非生產環境，這指的是任何已佈建的 AEM 環境 (非預備或生產環境)。
 
@@ -82,8 +82,8 @@ Adobe雲管理器提供簡單而強健的解決方案，允許輕鬆管理、引
 
 ## 活動 {#activity}
 
-Cloud Manager提供對計畫活動的整合視圖，列出所有CI/CD管道執行，包括生產和非生產，允許查看過去和當前活動，並可以查看任何活動的詳細資訊。
+Cloud Manager提供計畫活動的整合式檢視，列出所有CI/CD管道執行，包括生產和非生產，允許檢視過去和現在的活動，並可以檢視任何活動的詳細資訊。
 
-Cloud Manager還以每用戶級別與 [Adobe Experience Cloud通知](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/notifications.html)提供對所關心事件和行動的全面瞭解。
+Cloud Manager也可在每個使用者層級與整合 [Adobe Experience Cloud通知](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/notifications.html)，全方位檢視感興趣的事件和動作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)

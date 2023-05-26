@@ -1,5 +1,5 @@
 ---
-title: 如何探討索引中的相關問AEM題
+title: 如何調查AEM中與索引相關的問題
 description: 調查索引相關問題的步驟
 type: Troubleshooting
 role: Admin
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何探討索引中的相關問AEM題
+# 如何調查AEM中與索引相關的問題
 
-*此視頻介紹了調查中索引相關問題的步驟AEM。*
+*本影片逐步解說在AEM中調查索引相關問題的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335465?quality=12&learn=on)

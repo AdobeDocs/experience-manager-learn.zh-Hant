@@ -1,6 +1,6 @@
 ---
-title: 在自適應表單提交上建立市場活動配置檔案
-description: 本文將介紹在Adobe Campaign Standard自適應表單提交中建立配置檔案所需的步驟。 此過程利用自定義提交機制來處理自適應表單提交。
+title: 在最適化表單提交時建立Campaign設定檔
+description: 本文會說明在Adobe Campaign Standard中建立最適化表單提交設定檔所需的步驟。 此程式會使用自訂提交機制來處理最適化表單提交。
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -14,19 +14,19 @@ ht-degree: 0%
 
 ---
 
-# 在自適應表單提交上建立市場活動配置檔案 {#creating-campaign-profile-on-adaptive-form-submission}
+# 在最適化表單提交時建立Campaign設定檔 {#creating-campaign-profile-on-adaptive-form-submission}
 
-本文將介紹在Adobe Campaign Standard自適應表單提交中建立配置檔案所需的步驟。 此過程利用自定義提交機制來處理自適應表單提交。
+本文會說明在Adobe Campaign Standard中建立最適化表單提交設定檔所需的步驟。 此程式會使用自訂提交機制來處理最適化表單提交。
 
-本教程將介紹在自適應表單提交上建立市場活動配置檔案的步驟。 要完成此使用情形，我們需要執行以下操作
+本教學課程將逐步解說在提交最適化表單時建立Campaign設定檔的步驟。 若要完成此使用案例，我們需要執行下列動作
 
-* 建立服AEM務(CampaignService)以使用REST API建立Adobe Campaign Standard配置檔案
-* 建立自定義提交操作以處理Adaptive Form提交
-* 調用CampaignService的createProfile方法
+* 建立AEM服務(CampaignService)以使用REST API建立Adobe Campaign Standard設定檔
+* 建立自訂提交動作以處理最適化表單提交
+* 叫用CampaignService的createProfile方法
 
-## 建立服AEM務 {#create-aem-service}
+## 建立AEM服務 {#create-aem-service}
 
-建立AEM服務以建立Adobe Campaign配置檔案。 此服AEM務將從OSGI配置獲取Adobe Campaign憑據。 一旦獲得了市場活動憑據，就生成訪問令牌，並使用訪問令牌HTTP後調用在Adobe Campaign建立配置檔案。 以下是建立配置檔案的代碼。
+建立AEM服務以建立Adobe Campaign設定檔。 此AEM服務將從OSGI設定擷取Adobe Campaign認證。 取得行銷活動認證後，系統會產生存取權杖，並使用存取權杖執行HTTP Post呼叫以在Adobe Campaign中建立設定檔。 以下是建立設定檔的程式碼。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -239,13 +239,13 @@ return null;
 }
 ```
 
-## 自定義提交 {#custom-submit}
+## 自訂提交 {#custom-submit}
 
-建立自定義提交處理程式以處理Adaptive Form提交。 在此自定義提交處理程式中，我們將調用CampaignService的createProfile方法。 createProfile方法接受表示需要建立的配置檔案的JSONObject。
+建立自訂提交處理常式來處理最適化表單提交。 在此自訂提交處理常式中，我們將呼叫CampaignService的createProfile方法。 createProfile方法接受代表需要建立之設定檔的JSONObject。
 
-要瞭解有關AEM Forms自定義提交處理程式的詳細資訊，請遵循以下操作 [連結](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
+若要進一步瞭解AEM Forms中的自訂提交處理常式，請遵循以下步驟 [連結](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
 
-以下是自定義提交中的代碼
+以下是自訂提交中的程式碼
 
 ```java
 aemforms.campaign.core.CampaignService addNewProfile = sling.getService(aemforms.campaign.core.CampaignService.class);
@@ -258,17 +258,17 @@ profile.addProperty("mobilePhone",request.getParameter("phone"));
 String pkey = addNewProfile.createProfile(profile);
 ```
 
-## Test解決方案 {#test-the-solution}
+## 測試解決方案 {#test-the-solution}
 
-定義服務和自定義提交操作後，我們準備test解決方案。 要test解決方案，請執行以下步驟
+定義好服務和自訂提交動作後，我們就可以測試解決方案了。 若要測試解決方案，請執行以下步驟
 
 
-* [確保您已按照此處所述的步驟操作](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [使用包管理器導入自適應表單和自定義提交處理程式](assets/create-acs-profile-on-af-submission.zip).此包包含配置為提交到自定義提交操作的自適應表單。
-* 預覽 [表格](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
+* [請確定您已依照此處所述的步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [使用封裝管理程式匯入最適化表單和自訂提交處理常式](assets/create-acs-profile-on-af-submission.zip).此套件包含已設定為提交至自訂提交動作的最適化表單。
+* 預覽 [表單](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * 填寫所有欄位並提交
-* 在ACS實例中建立新配置檔案
+* 在您的ACS執行個體中建立新的設定檔
 
 ## 後續步驟
 
-[使用ACS配置檔案資訊預填充自適應表單](./partthree.md)
+[使用ACS設定檔資訊預先填寫最適化表單](./partthree.md)

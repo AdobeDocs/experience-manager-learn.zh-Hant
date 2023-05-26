@@ -1,6 +1,6 @@
 ---
-title: 整合Experience Platform資料收集標籤（啟動）AEM和
-description: Experience Platform資料收集中的標籤是Adobe的下一代標籤管理解決方案，也是部署Adobe Analytics、目標、Audience Manager和更多解決方案的最佳方式。 獲取標籤（以前稱為Launch）和建議與Adobe Experience Manager整合的概述。
+title: 整合Experience Platform資料收集標籤(Launch)和AEM
+description: Experience Platform Data Collection中的標籤是Adobe的下一代標籤管理解決方案，也是部署Adobe Analytics、Target、Audience Manager和更多解決方案的最佳方式。 取得標籤（先前稱為Launch）的概觀，以及與Adobe Experience Manager整合的建議。
 topics: integrations
 audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
@@ -20,35 +20,35 @@ ht-degree: 1%
 
 ---
 
-# 整合Experience Platform資料收集標AEM簽 {#overview}
+# 整合Experience Platform資料收集標籤和AEM {#overview}
 
-瞭解如何整合Experience Platform _資料收集標籤_ （前稱Launch）與Adobe Experience Manager。
+瞭解如何整合Experience Platform _資料收集標籤_ （先前稱為Launch）與Adobe Experience Manager。
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，在產品文檔中已進行了一些術語更改。 請參閱以下內容 [文檔](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) 的下一頁。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，產品檔案中出現了幾項術語變更。 請參閱下列內容 [檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) 以取得術語變更的彙整參考資料。
 
 
-標籤是Adobe Experience Platform的下一代標籤管理技術。 標籤提供了部署Adobe Analytics、目標、Audience Manager和更多解決方案的最簡單方法。 獲取標籤的概述以及建議與Adobe Experience Manager的整合。
+標籤是Adobe Experience Platform的下一代標籤管理技術。 標籤提供部署Adobe Analytics、Target、Audience Manager和更多解決方案的最簡單方式。 取得標籤概觀，並取得建議的Adobe Experience Manager整合。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
 
 
 ## 必備條件
 
-整合Experience Platform資料收集標籤時，需要執行以下操作。
+整合Experience Platform資料收集標籤時，需要下列專案。
 
-+ AEM管理員訪AEM問as a Cloud Service
-+ 參考站點，如 [WKND](https://github.com/adobe/aem-guides-wknd) 部署在它上。
-+ 訪問Adobe Experience Platform資料收集解決方案
-+ 系統管理員對 [Adobe Developer控制台](https://developer.adobe.com/developer-console/)
++ AEM管理員對AEMas a Cloud Service環境的存取權
++ 引用網站，例如 [WKND](https://github.com/adobe/aem-guides-wknd) 已部署至其中。
++ 存取Adobe Experience Platform資料收集解決方案
++ 系統管理員的存取權 [Adobe Developer主控台](https://developer.adobe.com/developer-console/)
 
 
-## 高級步驟
+## 高階步驟
 
-+ 在Adobe Experience Platform資料收集中，建立Tag屬性並將其編輯為 _添加規則_。 然後 _添加庫_，選擇新添加的規則，批准並發佈它。
-+ 使用AEM現有（或新）IMS配置連接和標籤
-+ 在中AEM，建立啟動雲服務配置，然後將其應用於現有站點，最後驗證「標籤」屬性及其庫是否已載入到已發佈或作者站點上。
++ 在Adobe Experience Platform資料彙集中建立Tag屬性並編輯為 _新增規則_. 則 _新增程式庫_，選取新新增的規則、核准並發佈。
++ 使用現有（或新的） IMS設定連線AEM和標籤
++ 在AEM中，建立Launch雲端服務設定，然後將其套用至現有網站，最後確認Tags屬性及其程式庫已載入已發佈或作者網站。
 
 ## 後續步驟
 
@@ -57,5 +57,5 @@ ht-degree: 1%
 ## 其他資源 {#additional-resources}
 
 + [Experience Platform與Experience Cloud應用程式的整合](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
-+ [標籤概述](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [在帶標籤的網站中實現Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)
++ [標籤總覽](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
++ [在具有標籤的網站中實作Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)

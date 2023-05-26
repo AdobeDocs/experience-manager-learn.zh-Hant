@@ -1,6 +1,6 @@
 ---
-title: 工作流中的AEM變數
-description: 在工作流中使用xml,json,arraylist,document類型的變數
+title: AEM Workflow中的變數
+description: 在aem工作流程中使用xml、json、arraylist、document型別的變數
 version: 6.5
 feature: Adaptive Forms
 topic: Development
@@ -15,11 +15,11 @@ ht-degree: 8%
 
 ---
 
-# 工作流中的AEM變數
+# AEM Workflow中的變數
 
-從6.AEM5開始，您現在可以在工作流中建立和使AEM用變數。 在此功能之前，工作流作者通常使用工作流元資料映射建立密鑰。 這意味著編寫一些自定義代碼以建立和填充這些鍵。 使用此新功能工作流，作者現在可以輕鬆建立變數，並在工作流中的任何位置使用這些變數。
+從AEM 6.5開始，您現在可以在AEM Workflow中建立和使用變數。 在此功能之前，工作流程作者通常會使用工作流程中繼資料對應建立索引鍵。 這表示要撰寫一些自訂程式碼來建立和填入這些金鑰。 透過此新功能工作流程，作者現在可以輕鬆建立變數，並在工作流程中的任何地方使用這些變數。
 
-變數可以是以下類型
+變數可以是下列型別
 
 * 長整數
 * 雙精度
@@ -29,13 +29,13 @@ ht-degree: 8%
 * JSON
 * XML
 * 陣列清單
-* 表單資料模型
+* FormDataModel
 * 文件
 
 ## 教學課程
 
 * [XML變數](part1.md)
-* [JSON變數](part2.md)
-* [文檔變數](part3.md)
+* [json變數](part2.md)
+* [檔案變數](part3.md)
 * [ArrayList變數](part4.md)
-* [工作流中的規則編AEM輯器](part5.md)
+* [AEM Workflow中的規則編輯器](part5.md)

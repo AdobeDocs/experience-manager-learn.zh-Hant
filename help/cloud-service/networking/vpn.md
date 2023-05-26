@@ -1,6 +1,6 @@
 ---
 title: 虛擬私人網路 (VPN)
-description: 瞭解如何將AEMas a Cloud Service與VPN連接，以在與內部服務之間建立安AEM全通信通道。
+description: 瞭解如何將AEMas a Cloud Service與您的VPN連線，以建立AEM與內部服務之間的安全通訊通道。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -18,50 +18,50 @@ ht-degree: 5%
 
 # 虛擬私人網路 (VPN)
 
-瞭解如何將AEMas a Cloud Service與VPN連接，以在與內部服務之間建立安AEM全通信通道。
+瞭解如何將AEMas a Cloud Service與您的VPN連線，以建立AEM與內部服務之間的安全通訊通道。
 
-## 什麼是虛擬專用網路？
+## 什麼是虛擬私人網路？
 
-虛擬專用網(VPN)允許AEMas a Cloud Service客戶連接 **環AEM境** Cloud Manager程式中的 [支援](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) VPN。 這允許在客戶網路內的AEMas a Cloud Service和服務之間進行安全和受控的連接。
+虛擬私人網路(VPN)可讓AEMas a Cloud Service的客戶連線 **AEM環境** 在Cloud Manager計畫內到現有的、 [支援](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) VPN。 如此一來，AEMas a Cloud Service與客戶網路內的服務之間就能建立安全且受控制的連線。
 
-雲管理器程式只能 __單__ 網路基礎架構類型。 確保虛擬專用網路是 [適當類型的網路基礎架構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#general-vpn-considerations) 執行AEM以下命令之前為as a Cloud Service。
+Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確定虛擬私人網路最多 [適當型別的網路基礎結構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#general-vpn-considerations) 的AEMas a Cloud Service。
 
 >[!NOTE]
 >
->請注意，不支援將生成環境從雲管理器連接到VPN。 如果必須從專用儲存庫訪問二進位對象，則必須設定具有公共Internet上可用URL的安全且受密碼保護的儲存庫 [此處描述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories)。
+>請注意，不支援將組建環境從Cloud Manager連線至VPN。 如果您必須從私人存放庫存取二進位成品，則必須使用公開網際網路上可用的URL來設定安全且受密碼保護的存放庫 [如此處所述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
 
 >[!MORELIKETHIS]
 >
-> 閱讀AEMas a Cloud Service [高級網路配置文檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) 的子菜單。
+> 閱讀AEMas a Cloud Service [進階網路設定檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) 以取得虛擬私人網路的詳細資訊。
 
 ## 必備條件
 
-設定虛擬專用網路時，需要執行以下操作：
+設定虛擬私人網路時需要下列專案：
 
-+ Adobe帳戶 [雲管理器業務所有者權限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ 訪問 [Cloud Manager API的驗證憑據](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
-   + 組織標識（又稱IMS組織標識）
-   + 客戶端ID（又稱API密鑰）
-   + 訪問令牌（又稱持有者令牌）
-+ 雲管理器程式ID
-+ 雲管理器環境ID
-+ 一個虛擬專用網路，可訪問所有必需的連接參數。
++ Adobe帳戶 [Cloud Manager企業所有者許可權](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
++ 存取 [Cloud Manager API的驗證認證](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
+   + 組織ID （亦稱為IMS組織ID）
+   + 使用者端ID （亦稱為API金鑰）
+   + 存取權杖（亦稱為持有人權杖）
++ Cloud Manager計畫ID
++ Cloud Manager環境ID
++ 虛擬私人網路，可存取所有必要的連線引數。
 
-有關詳細資訊，請觀看以下步驟，瞭解如何設定、配置和獲取Cloud Manger API憑據，以及如何使用這些憑據進行Cloud Manager API調用。
+如需更多詳細資訊，請觀看以下逐步解說，瞭解如何設定、設定和取得Cloud Manager API認證，以及如何使用它們進行Cloud Manager API呼叫。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
-本教程使用 `curl` 來配置Cloud Manager API。 提供的 `curl` 命令採用Linux/macOS語法。 如果使用Windows命令提示符，請替換 `\` 換行符 `^`。
+本教學課程使用 `curl` 以進行Cloud Manager API設定。 提供的 `curl` 命令會採用Linux/macOS語法。 如果使用Windows命令提示字元，請將 `\` 換行字元 `^`.
 
-## 按程式啟用虛擬專用網路
+## 為每個程式啟用虛擬私人網路
 
-從啟用as a Cloud Service上的虛擬專用網路開始AEM。
+首先在AEMas a Cloud Service上啟用「虛擬私人網路」。
 
-1. 首先，使用Cloud Manager API確定高級網路所需的區域 [清單區域](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 的下界。 的 `region name` 需要進行後續的Cloud Manager API調用。 通常，使用生產環境所在的區域。
+1. 首先，使用Cloud Manager API判斷需要進階網路的地區 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 此 `region name` 進行後續Cloud Manager API呼叫所必需。 通常會使用生產環境所在的區域。
 
-   查找AEM您的as a Cloud Service環境的區域 [雲管理器](https://my.cloudmanager.adobe.com) 下 [環境詳細資訊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment)。 在雲管理器中顯示的區域名稱可以是 [映射到區域代碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 在雲管理器API中使用。
+   尋找您的AEMas a Cloud Service環境所在地區 [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [環境的詳細資訊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中顯示的區域名稱可以是 [已對應至地區代碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 用於Cloud Manager API。
 
-   __listRegions HTTP請求__
+   __listRegions HTTP要求__
 
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/regions \
@@ -71,9 +71,9 @@ ht-degree: 5%
        -H 'Content-Type: application/json'
    ```
 
-1. 使用Cloud Manager API為Cloud Manager程式啟用虛擬專用網路 [建立網路基礎架構](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 的下界。 使用適當 `region` 從Cloud Manager API獲取的代碼 `listRegions` 的下界。
+1. 使用Cloud Manager API為Cloud Manager計畫啟用虛擬私人網路 [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 使用適當的 `region` 從Cloud Manager API取得的程式碼 `listRegions` 作業。
 
-   __createNetworkInfrastructure HTTP請求__
+   __createNetworkInfrastructure HTTP要求__
 
    ```shell
    $ curl -X POST https://cloudmanager.adobe.io/api/program/{programId}/networkInfrastructures \
@@ -84,9 +84,9 @@ ht-degree: 5%
        -d @./vpn-create.json
    ```
 
-   在中定義JSON參數 `vpn-create.json` 並提供捲曲通道 `... -d @./vpn-create.json`。
+   在中定義JSON引數 `vpn-create.json` 並提供給curl，透過 `... -d @./vpn-create.json`.
 
-   [下載示例vpn-create.json](./assets/vpn-create.json)。  此檔案僅是示例。 根據上記錄的可選/必填欄位，根據需要配置檔案 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)。
+   [下載範例vpn-create.json](./assets/vpn-create.json).  此檔案只是一個範例。 根據以下網址記錄的選用/必填欄位，視需要設定您的檔案： [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
@@ -135,11 +135,11 @@ ht-degree: 5%
    }
    ```
 
-   等待45-60分鐘，Cloud Manager計畫才能預配網路基礎架構。
+   等待45到60分鐘，讓Cloud Manager計畫布建網路基礎結構。
 
-1. 檢查環境是否已完成 __虛擬專用網路__ 使用Cloud Manager API進行配置 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 操作，使用 `id` 從上一步的createNetworkInfrastructure HTTP請求返回。
+1. 檢查環境是否已完成 __虛擬私人網路__ 使用雲端管理員API進行設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 作業，使用 `id` 從上一步驟中的createNetworkInfrastructure HTTP要求傳回。
 
-   __getNetworkInfrastructure HTTP請求__
+   __getNetworkInfrastructure HTTP要求__
 
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/networkInfrastructure/{networkInfrastructureId} \
@@ -149,13 +149,13 @@ ht-degree: 5%
        -H 'Content-Type: application/json'
    ```
 
-   驗證HTTP響應是否包含 __狀態__ 共 __就緒__。 如果尚未準備好，請每隔幾分鐘重新檢查一次狀態。
+   確認HTTP回應包含 __狀態__ 之 __就緒__. 如果尚未準備就緒，請每隔幾分鐘重新檢查一次狀態。
 
-## 按環境配置虛擬專用網路代理
+## 為每個環境設定虛擬私人網路代理
 
-1. 啟用和配置 __虛擬專用網路__ 在每個AEMas a Cloud Service環境上使用Cloud Manager API進行配置 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 的下界。
+1. 啟用並設定 __虛擬私人網路__ 使用Cloud Manager API在每個AEMas a Cloud Service環境中進行設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。
 
-   __enableEnvironmentAdvancedNetworkingConfiguration HTTP請求__
+   __enableEnvironmentAdvancedNetworkingConfiguration HTTP要求__
 
    ```shell
    $ curl -X PUT https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
@@ -166,9 +166,9 @@ ht-degree: 5%
        -d @./vpn-configure.json
    ```
 
-   在中定義JSON參數 `vpn-configure.json` 並提供捲曲通道 `... -d @./vpn-configure.json`。
+   在中定義JSON引數 `vpn-configure.json` 並提供給curl，透過 `... -d @./vpn-configure.json`.
 
-[下載示例vpn-configure.json](./assets/vpn-configure.json)
+[下載範例vpn-configure.json](./assets/vpn-configure.json)
 
    ```json
    {
@@ -191,20 +191,20 @@ ht-degree: 5%
    }
    ```
 
-   `nonProxyHosts` 聲明一組主機，其埠80或443應通過預設共用IP地址範圍而不是專用出口IP路由。 `nonProxyHosts` 當通過共用IP的流量通過Adobe可以進一步自動優化時，該方法可能有用。
+   `nonProxyHosts` 宣告應透過預設共用IP位址範圍而不是專用輸出IP路由連線埠80或443的一組主機。 `nonProxyHosts` 當Adobe可進一步自動最佳化通過共用IP的流量時，這可能很有用。
 
-   每個 `portForwards` 映射，高級網路定義以下轉發規則：
+   針對每個 `portForwards` 對應，進階網路會定義下列轉送規則：
 
-   | 代理主機 | 代理埠 |  | 外部主機 | 外部埠 |
+   | Proxy主機 | Proxy連線埠 |  | 外部主機 | 外部連線埠 |
    |---------------------------------|----------|----------------|------------------|----------|
    | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-   如AEM果 __僅__ 需要HTTP/HTTPS連接到外部服務，請 `portForwards` 陣列為空，因為這些規則僅對非HTTP/HTTPS請求是必需的。
+   如果您的AEM部署 __僅限__ 需要外部服務的HTTP/HTTPS連線，請將 `portForwards` 陣列空白，因為只有非HTTP/HTTPS請求才需要這些規則。
 
 
-1. 對於每個環境，使用Cloud Manager API驗證VPN路由規則是否有效 [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 的下界。
+1. 對於每個環境，使用Cloud Manager API的 [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。
 
-   __getEnvironmentAdvancedNetworkingConfiguration HTTP請求__
+   __getEnvironmentAdvancedNetworkingConfiguration HTTP要求__
 
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
@@ -214,30 +214,30 @@ ht-degree: 5%
        -H 'Content-Type: application/json'
    ```
 
-1. 可使用Cloud Manager API更新虛擬專用網路代理配置 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 的下界。 記住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 操作，因此必須為此操作的每次調用提供所有規則。
+1. 可使用Cloud Manager API的虛擬私人網路Proxy設定 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 記住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 作業，因此每次呼叫此作業時，都必須提供所有規則。
 
-1. 現在，您可以在自定義代碼和配置中使用虛擬專AEM用網出口配置。
+1. 現在您可以在自訂AEM程式碼和設定中使用虛擬私人網路輸出設定。
 
-## 通過虛擬專用網路連接到外部服務
+## 透過虛擬私人網路連線到外部服務
 
-啟用虛擬專用網路後，AEM代碼和配置可以使用它們通過VPN對外部服務進行呼叫。 外部呼叫有兩種不同的AEM處理方式：
+啟用「虛擬私人網路」後，AEM程式碼和設定便可使用它們透過VPN呼叫外部服務。 AEM會針對兩種風格的外部呼叫採取不同的處理方式：
 
-1. 對外部服務的HTTP/HTTPS調用
-   + 包括對在標準80或443埠以外的埠上運行的服務進行的HTTP/HTTPS調用。
-1. 對外部服務的非HTTP/HTTPS調用
-   + 包括任何非HTTP調用，如與Mail伺服器、SQL資料庫或在其他非HTTP/HTTPS協定上運行的服務的連接。
+1. 對外部服務的HTTP/HTTPS呼叫
+   + 包含對標準80或443連線埠以外的連線埠上執行的服務發出的HTTP/HTTPS呼叫。
+1. 對外部服務的非HTTP/HTTPS呼叫
+   + 包含任何非HTTP呼叫，例如與Mail伺服器、SQL資料庫或在其他非HTTP/HTTPS通訊協定上執行的服務的連線。
 
-預設情況下，允AEM許來自標準埠(80/443)的HTTP/HTTPS請求，但如果未按如下所述正確配置，則不會使用VPN連接。
+預設允許來自標準連線埠(80/443)上AEM的HTTP/HTTPS請求，但如果未正確設定，則不會使用VPN連線，如下所述。
 
 ### HTTP/HTTPS
 
-從建立HTTP/HTTPS連接時AEM，使用VPN時，HTTP/HTTPS連接會自動代AEM替。 支援HTTP/HTTPS連接不需要其他代碼或配置。
+從AEM建立HTTP/HTTPS連線時，使用VPN時，會自動從AEM代理HTTP/HTTPS連線。 不需要其他程式碼或設定即可支援HTTP/HTTPS連線。
 
 >[!TIP]
 >
-> 請參AEM閱as a Cloud Service的虛擬專用網路文檔 [全套路由規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn-traffic-routing)。
+> 請參閱AEMas a Cloud Service的虛擬私人網路檔案，以瞭解 [完整的路由規則集](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn-traffic-routing).
 
-#### 代碼示例
+#### 程式碼範例
 
 <table>
 <tr>
@@ -245,7 +245,7 @@ ht-degree: 5%
     <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
     <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
     <p>
-        Java™代碼示例，使用HTTP/HTTPS協AEM議將HTTP/HTTPS從as a Cloud Service連接到外部服務。
+        Java™程式碼範例使用HTTP/HTTPS通訊協定，使從AEM的HTTP/HTTPS連線as a Cloud Service到外部服務。
     </p>
 </td>
 <td></td>
@@ -253,65 +253,65 @@ ht-degree: 5%
 </tr>
 </table>
 
-### 非HTTP/HTTPS連接代碼示例
+### 非HTTP/HTTPS連執行緒式碼範例
 
-建立非HTTP/HTTPS連接時(例如 SQL 、 SMTP等),AEM必須通過提供的特殊主機名建立連AEM接。
+建立非HTTP/HTTPS連線時(例如 AEM SQL、SMTP等)，必須透過AEM提供的特殊主機名稱建立連線。
 
-|變數名稱 |使用 | Java™代碼 | OSGi配置 | | - | - | - | - | | `AEM_PROXY_HOST` |非HTTP/HTTPS連接的代理主機 | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
+|變數名稱 |使用 | Java™程式碼 | OSGi設定 | | - | - | - | - | | `AEM_PROXY_HOST` |非HTTP/HTTPS連線的Proxy主機 | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
-然後，通過 `AEM_PROXY_HOST` 和映射的埠(`portForwards.portOrig`),AEM然後路由到映射的外部主機名(`portForwards.name`)和埠(`portForwards.portDest`)。
+然後，會透過呼叫外部服務的連線。 `AEM_PROXY_HOST` 和對應的連線埠(`portForwards.portOrig`)，則AEM會路由至對應的外部主機名稱(`portForwards.name`)和連線埠(`portForwards.portDest`)。
 
-| 代理主機 | 代理埠 |  | 外部主機 | 外部埠 |
+| Proxy主機 | Proxy連線埠 |  | 外部主機 | 外部連線埠 |
 |---------------------------------|----------|----------------|------------------|----------|
 | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
 
-#### 代碼示例
+#### 程式碼範例
 
 <table><tr>
    <td>
-      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC DataSourcePool的SQL連接" src="./assets//code-examples__sql-osgi.png"/></a>
-      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC DataSourcePool的SQL連接</a></strong></div>
+      <a  href="./examples/sql-datasourcepool.md"><img alt="使用JDBC DataSourcePool的SQL連線" src="./assets//code-examples__sql-osgi.png"/></a>
+      <div><strong><a href="./examples/sql-datasourcepool.md">使用JDBC DataSourcePool的SQL連線</a></strong></div>
       <p>
-            通過配置JDBC資料源池連接到外部SQL資料AEM庫的Java™代碼示例。
+            Java™程式碼範例透過設定AEM JDBC資料來源集區來連線到外部SQL資料庫。
       </p>
     </td>
    <td>
-      <a  href="./examples/sql-java-apis.md"><img alt="使用Java API的SQL連接" src="./assets/code-examples__sql-java-api.png"/></a>
-      <div><strong><a href="./examples/sql-java-apis.md">使用Java™ API的SQL連接</a></strong></div>
+      <a  href="./examples/sql-java-apis.md"><img alt="使用Java API的SQL連線" src="./assets/code-examples__sql-java-api.png"/></a>
+      <div><strong><a href="./examples/sql-java-apis.md">使用Java™ API的SQL連線</a></strong></div>
       <p>
-            Java™代碼示例使用Java™的SQL API連接到外部SQL資料庫。
+            使用Java™的SQL API連線至外部SQL資料庫的Java™程式碼範例。
       </p>
     </td>
    <td>
       <a  href="./examples/email-service.md"><img alt="虛擬私人網路 (VPN)" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">電子郵件服務</a></strong></div>
       <p>
-        OSGi配置示例AEM，用於連接到外部電子郵件服務。
+        使用AEM連線至外部電子郵件服務的OSGi設定範例。
       </p>
     </td>
 </tr></table>
 
-### 限制通過VPNAEM訪問as a Cloud Service
+### 限制透過VPN存取AEMas a Cloud Service
 
-虛擬專用網路配置限制對AEMVPN的as a Cloud Service環境的訪問。
+虛擬私人網路設定會限制VPN對AEMas a Cloud Service環境的存取。
 
-#### 配置示例
+#### 設定範例
 
 <table><tr>
    <td>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="應用IP允許清單" src="./assets/code_examples__vpn-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">應用IP允許清單</a></strong></div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="套用IP允許清單" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">套用IP允許清單</a></strong></div>
       <p>
-            配置IP允許清單，以便只有VPN通信可以訪問AEM。
+            設定IP允許清單，以便只有VPN流量可以存取AEM。
       </p>
     </td>
    <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="基於路徑的VPN對AEM發佈的訪問限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">基於路徑的VPN對AEM發佈的訪問限制</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="AEM Publish的路徑型VPN存取限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">AEM Publish的路徑型VPN存取限制</a></strong></div>
       <p>
-            AEM發佈上的特定路徑需要VPN訪問。
+            AEM Publish上的特定路徑需要VPN存取。
       </p>
     </td>
    <td></td>

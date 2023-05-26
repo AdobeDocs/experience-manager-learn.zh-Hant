@@ -1,6 +1,6 @@
 ---
 title: 建立OSGi服務
-description: 建立OSGi服務以儲存要簽名的表單
+description: 建立OSGi服務以儲存要簽署的表單
 feature: Workflow
 version: 6.4,6.5
 thumbnail: 6886.jpg
@@ -18,11 +18,11 @@ ht-degree: 1%
 
 # 建立OSGi服務
 
-已編寫以下代碼以儲存需要簽名的表單。 每個要簽名的表單都與唯一GUID和客戶ID關聯。 因此，一個或多個表單可以與同一客戶ID關聯，但將具有分配給表單的唯一GUID。
+下列程式碼是用來儲存需要簽署的表單。 每個要簽署的表單都與唯一的GUID和客戶ID相關聯。 因此，一或多個表單可以與相同的客戶ID建立關聯，但會將唯一的GUID指派給表單。
 
 ## 介面
 
-以下是使用的介面聲明
+以下是使用的介面宣告
 
 ```java
 package com.aem.forms.signmultipleforms;
@@ -41,7 +41,7 @@ public interface SignMultipleForms
 
 ## 插入資料
 
-插入資料方法在資料庫中插入由資料源標識的行。 資料庫中的每一行都對應於一個表單，並由GUID和客戶ID唯一標識。 表單資料和表單URL也儲存在此行中。 狀態列用於指示表單是否已填充和簽名。 值0表示尚未簽名表單。
+insert data方法會在資料來源所識別的資料庫中插入列。 資料庫中的每一列都與表單相對應，並由GUID和客戶ID唯一識別。 表單資料和表單URL也儲存在此列中。 狀態列用於指示表單是否已填寫和簽署。 0值表示表單尚未簽署。
 
 ```java
 @Override
@@ -101,9 +101,9 @@ log.debug(e.getMessage());
 ```
 
 
-## 獲取表單資料
+## 取得表單資料
 
-以下代碼用於獲取與給定GUID關聯的自適應表單資料。 然後使用表單資料來預填充自適應表單。
+下列程式碼用於擷取與特定GUID關聯的最適化表單資料。 然後，表單資料會用於預先填入最適化表單。
 
 ```java
 @Override
@@ -128,9 +128,9 @@ public String getFormData(String guid) {
 }
 ```
 
-## 更新簽名狀態
+## 更新簽章狀態
 
-簽署儀式的成功完成觸發了與AEM表單關聯的工作流。 工作流中的第一步是一個流程步驟，該流程步驟將更新由guid和客戶id標識的行在資料庫中的狀態。 我們還將表單資料中帶符號元素的值設定為Y，以指示表單已填充和簽名。 自適應表單被填充有該資料，並且xml資料中帶符號資料元素的值被用於顯示適當的消息。 從自定義進程步驟調用updateSignatureStatus代碼。
+成功完成簽署儀式會觸發與表單相關聯的AEM工作流程。 工作流程的第一步是處理步驟，它會更新資料庫中由guid和客戶id所識別之列的狀態。 我們也會將formdata中帶正負號的元素的值設為Y，表示表單已填寫並簽署。 最適化表單會填入此資料，而xml資料中已簽署資料元素的值會用來顯示適當的訊息。 會從自訂程式步驟叫用updateSignatureStatus程式碼。
 
 
 ```java
@@ -162,9 +162,9 @@ public void updateSignatureStatus(String formData, String guid) {
 }
 ```
 
-## 獲取下一個表單以簽名
+## 取得下一個要簽署的表單
 
-以下代碼用於獲取下一個用於為狀態為0的給定customerID簽名的表單。 如果sql查詢未返回任何行，則我們返回字串 **&quot;全部完成&quot;** 這表示沒有更多用於為給定客戶id簽名的表單。
+下列程式碼已用於取得狀態為0之指定customerID的下一個簽署表單。 如果sql查詢未傳回任何列，我們會傳回字串 **&quot;AllDone&quot;** 這表示指定的客戶id已沒有任何可供簽署的表單。
 
 ```java
 @Override
@@ -204,8 +204,8 @@ public String getNextFormToSign(int customerID) {
 
 ## Assets
 
-OSGi捆綁包與上述服務可 [從此處下載](assets/sign-multiple-forms.jar)
+包含上述服務的OSGi套件組合可以是 [已從此處下載](assets/sign-multiple-forms.jar)
 
 ## 後續步驟
 
-[建立主工作流以處理初始表單提交](./create-main-workflow.md)
+[建立主要工作流程以處理初始表單提交](./create-main-workflow.md)

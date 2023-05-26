@@ -1,6 +1,6 @@
 ---
-title: 生成JSON Web令牌和訪問令牌
-description: 本文說明生成JWT所需的代碼和向Adobe Campaign Standard進行REST調用所需的訪問令牌
+title: 產生JSON Web權杖和存取權杖
+description: 本文說明產生JWT所需的程式碼，以及對Adobe Campaign Standard進行REST呼叫所需的存取權杖
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -14,23 +14,23 @@ ht-degree: 0%
 
 ---
 
-# 生成JSON Web令牌和訪問令牌 {#generating-json-web-token-and-access-token}
+# 產生JSON Web權杖和存取權杖 {#generating-json-web-token-and-access-token}
 
-本文說明生成JWT所需的代碼和向Adobe Campaign Standard進行REST調用所需的訪問令牌
+本文說明產生JWT所需的程式碼，以及對Adobe Campaign Standard進行REST呼叫所需的存取權杖
 
-## 生成JSON Web令牌 {#generate-json-web-token}
+## 產生JSON Web權杖 {#generate-json-web-token}
 
-使用Adobe CampaignAPI的第一步是生成JWT。 有關如何為ACS生成JWT的代碼示例很多。 你可以按此操作 [java代碼示例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) 生成JWT。
+使用Adobe Campaign API的第一步是產生JWT。 有關如何為ACS產生JWT的程式碼範例很多。 您可以依照此步驟 [Java程式碼範例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) 以產生JWT。
 
-為了將ACS API與AEM Forms配合使用，我們需要在OSGi捆綁包內建立JWT。 以下代碼段用於在此示例OSGI包中生成JWT。 有關ACS實例的詳細資訊從如上所示設定的OSGI配置屬性中提取。
+為了將ACS API與AEM Forms搭配使用，我們需要在OSGi套件組合內建立JWT。 下列程式碼片段用於在此範例OSGI套件組合中產生JWT。 有關ACS執行個體的詳細資訊會從OSGI設定屬性中擷取，設定如上所示。
 
-![配置](assets/campaignconfiguration.gif)
+![設定](assets/campaignconfiguration.gif)
 
-**答：** 此處顯示的值是虛值
+**答：** 此處顯示的值為虛設值
 
-以下代碼從OSGI配置中獲取有關Adobe Campaign伺服器的詳細資訊。 我們建立從80到104的私鑰。
+下列程式碼會從OSGI設定中擷取Adobe Campaign伺服器的詳細資訊。 我們會建立第80到104行的私密金鑰。
 
-一旦擁有私鑰，我們將建立JSON Web令牌。
+取得私密金鑰後，我們會建立JSON Web Token。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -239,10 +239,10 @@ public class CampaignServiceImpl implements CampaignService {
  }
 ```
 
-## 生成訪問令牌 {#generate-access-token}
+## 產生存取Token {#generate-access-token}
 
-然後，通過進行POST調用，將生成的JWT交換為訪問令牌。 此訪問令牌隨後將作為HTTP頭中的授權密鑰發送，用於後續的REST調用
+然後，我們會進行POST呼叫，將產生的JWT交換為存取權杖。 然後，此存取權杖將作為授權金鑰在HTTP標頭中傳送，以供後續REST呼叫使用
 
 ## 後續步驟
 
-[在提交表單時在ACS中建立配置檔案](./parttwo.md)
+[在ACS中針對表單提交建立設定檔](./parttwo.md)

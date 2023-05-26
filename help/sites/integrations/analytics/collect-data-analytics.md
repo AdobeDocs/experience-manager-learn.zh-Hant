@@ -9,7 +9,7 @@ level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: 6a5e62a2a897adc421585e79c5f36f6aa759feaa
+source-git-commit: 5a8d3983a22df4e273034c8d8441b31e6bc764ba
 workflow-type: tm+mt
 source-wordcount: '2447'
 ht-degree: 2%
@@ -134,7 +134,7 @@ Adobe使用者端資料層是 **事件** 驅動資料層。 載入AEM Page資料
       // defensive coding to avoid a null pointer exception
       if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
          //trigger the Tag Rule and pass event
-         console.log("cmp:show event: " + evt.eventInfo.path);
+         console.debug("cmp:show event: " + evt.eventInfo.path);
          var event = {
             //include the path of the component that triggered the event
             path: evt.eventInfo.path,
@@ -171,10 +171,10 @@ Adobe使用者端資料層是 **事件** 驅動資料層。 載入AEM Page資料
 1. 按一下 **開啟編輯器** 在主面板中，輸入下列程式碼片段：
 
    ```js
-   console.log("Page Loaded ");
-   console.log("Page name: " + event.component['dc:title']);
-   console.log("Page type: " + event.component['@type']);
-   console.log("Page template: " + event.component['xdm:template']);
+   console.debug("Page Loaded ");
+   console.debug("Page name: " + event.component['dc:title']);
+   console.debug("Page type: " + event.component['@type']);
+   console.debug("Page template: " + event.component['xdm:template']);
    ```
 
    此 `event` 物件傳遞自 `trigger()` 在自訂事件中呼叫的方法。 此處 `component` 是從資料層衍生的目前頁面 `getState` 在自訂事件中。

@@ -1,6 +1,6 @@
 ---
-title: 在Azure儲存中儲存自適應表單資料
-description: 建立並配置Adaptive Form以在Azure儲存中儲存資料
+title: 將最適化表單資料儲存在Azure儲存體
+description: 建立並設定最適化表單，以將資料儲存在Azure儲存體中
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# 建立Azure儲存支援的表單資料模型
+# 建立Azure儲存體支援的表單資料模型
 
 建立Azure Blob儲存後端表單資料模型。
 

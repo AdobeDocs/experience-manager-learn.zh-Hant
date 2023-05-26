@@ -1,6 +1,6 @@
 ---
-title: 內AEM容片段控制台操作欄擴展
-description: 瞭解如何建立內AEM容片段控制台操作欄擴展。
+title: AEM內容片段主控台動作列擴充功能
+description: 瞭解如何建立AEM內容片段主控台動作列擴充功能。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -17,22 +17,22 @@ ht-degree: 0%
 
 ---
 
-# 操作欄擴展
+# 動作列擴充功能
 
-![操作欄擴展](./assets/action-bar/action-bar.png){align="center"}
+![動作列擴充功能](./assets/action-bar/action-bar.png){align="center"}
 
-包含操作欄的擴展，將按鈕引入內容片段控制台AEM的操作，該操作在 __1或更多__ 已選擇內容片段。 因為操作欄擴展按鈕僅在至少選擇一個內容片段時才顯示，所以它們通常對所選內容片段執行操作。 示例包括：
+包含動作列的擴充功能會為AEM內容片段控制檯的動作引入按鈕，該控制檯會在以下情況下顯示 __1個或更多__ 已選取內容片段。 由於動作列擴充功能按鈕只會在選取至少一個內容片段時顯示，因此通常會依選取的內容片段執行。 範例包括：
 
-+ 在所選內容片段上調用業務流程或工作流。
-+ 更新或更改所選內容片段的資料。
++ 在選取的內容片段上叫用業務流程或工作流程。
++ 更新或變更所選內容片段的資料。
 
-## 分機註冊
+## 擴充功能註冊
 
-`ExtensionRegistration.js` 是擴展的入口AEM點，並定義：
+`ExtensionRegistration.js` 是AEM擴充功能的進入點，並定義：
 
-1. 擴展類型；中。
-1. 擴展按鈕的定義，在 `getButton()` 的子菜單。
-1. 在 `onClick()` 的子菜單。
+1. 擴充功能型別；若為動作列按鈕。
+1. 擴充功能按鈕的定義，在 `getButton()` 函式。
+1. 按鈕的點選處理常式，位於 `onClick()` 函式。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -72,12 +72,12 @@ function ExtensionRegistration() {
 
 ![模型](./assets/modal/modal.png)
 
-內AEM容片段控制台操作欄擴展可能需要：
+AEM內容片段主控台動作列擴充功能可能需要：
 
-+ 用戶執行所需動作的附加輸入。
-+ 提供有關操作結果的用戶詳細資訊的能力。
++ 來自使用者的其他輸入，以執行所需的動作。
++ 能夠向使用者提供有關動作結果的詳細資訊。
 
-為支援這些要求，內AEM容片段控制台擴展允許以React應用程式形式呈現的自定義模式。
+為了支援這些需求，AEM內容片段主控台擴充功能允許自訂強制回應視窗，以呈現為React應用程式。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -113,26 +113,26 @@ function ExtensionRegistration() {
 ">
   <div class="is-flex is-padded-small is-padded-big-mobile">
     <div>
-      <p class="has-text-weight-bold is-size-36 is-size-27-touch is-margin-bottom-big has-text-blackest">跳至建立模式</p>
-      <p class="has-text-blackest">瞭解如何建立按一下操作欄擴展按鈕時顯示的模式。</p>
+      <p class="has-text-weight-bold is-size-36 is-size-27-touch is-margin-bottom-big has-text-blackest">跳至建立強制回應視窗</p>
+      <p class="has-text-blackest">瞭解如何建立按一下動作列擴充功能按鈕時顯示的強制回應視窗。</p>
       <div class="has-align-start is-margin-top-big">
         <a href="./modal.md" target="_blank" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-          <span class="spectrum-Button-label has-no-wrap has-text-weight-bold" title="學習構建模式">學習構建模式</span>
+          <span class="spectrum-Button-label has-no-wrap has-text-weight-bold" title="瞭解如何建立強制回應視窗">瞭解如何建立強制回應視窗</span>
         </a>
       </div>
     </div>
   </div>
 </div>
 
-## 無模式
+## 無強制回應視窗
 
-有時，AEM Content Fragment控制台操作欄擴展不需要與用戶進行進一步交互，例如：
+有時，AEM內容片段控制檯動作列擴充功能不需要與使用者進一步互動，例如：
 
-+ 調用不需要用戶輸入的後端進程，如導入或導出。
++ 叫用不需要使用者輸入的後端程式，例如匯入或匯出。
 
-在這些情況下，AEM內容片段控制台擴展不需要 [模態](#modal)，並直接在操作欄按鈕的 `onClick` 處理程式。
+在這些情況下，AEM內容片段主控台擴充功能不需要 [強制回應](#modal)，並直接在動作列按鈕的 `onClick` 處理常式。
 
-內AEM容片段控制台擴展允許進度指示符在執行工作AEM時覆蓋內容片段控制台，從而阻止用戶執行進一步的操作。 進度指示器的使用是可選的，但對於將同步工作的進度告知用戶非常有用。
+AEM內容片段主控台擴充功能允許進度指示器在工作執行時覆蓋AEM內容片段主控台，封鎖使用者執行進一步動作。 進度指示器的使用是選用的，但對於將同步工作的進度傳達給使用者很有用。
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 

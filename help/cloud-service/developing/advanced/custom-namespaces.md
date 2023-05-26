@@ -1,6 +1,6 @@
 ---
-title: 自定義命名空間
-description: 瞭解如何定義自定義命名空間並將其部署到AEMas a Cloud Service。
+title: 自訂名稱空間
+description: 瞭解如何定義自訂名稱空間並將其部署到AEMas a Cloud Service。
 version: Cloud Service
 topic: Development, Content Management
 feature: Metadata
@@ -17,34 +17,34 @@ ht-degree: 6%
 
 ---
 
-# 自定義命名空間
+# 自訂名稱空間
 
-瞭解如何定義和部署自定義 [命名空間](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/4.5_Namespaces.html) 到AEMas a Cloud Service。
+瞭解如何定義和部署自訂 [名稱空間](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/4.5_Namespaces.html) 至AEMas a Cloud Service。
 
-自定義命名空間是JCR屬性的可選部分，該屬性位於 `:`。 AEM使用多個命名空間，如：
+自訂名稱空間是JCR屬性在之前的選用部分。 `:`. AEM使用幾個名稱空間，例如：
 
-+ `jcr` 用於JCR系統屬性
-+ `cq` (AEM前稱Adobe CQ)
-+ `dam` 特定AEM於DAM資產的屬性
-+ `dc` Dublin Core屬性
++ `jcr` JCR系統屬性
++ `cq` for AEM (先前稱為Adobe CQ)屬性
++ `dam` DAM資產專用的AEM屬性
++ `dc` 都柏林核心屬性
 
-...和其他很多。
+...和其他許多專案。
 
-命名空間可用於表示屬性的範圍和意圖。 建立自定義命名空間（通常是您的公司名稱）有助於明確標識特定於您的實施的節點或AEM屬性，並包含特定於您的業務的資料。
+名稱空間可用來表示屬性的範圍和意圖。 建立自訂名稱空間（通常是您的公司名稱）有助於清楚識別AEM實作特有的節點或屬性，並包含您的企業專屬的資料。
 
-在中管理自定義命名空間 [Sling Repository初始化（重點）](https://sling.apache.org/documentation/bundles/repository-initialization.html) 指令碼，並將其部AEM署到as a Cloud Service的OSGi配置中 — 並添加到 [項AEM目](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant) `ui.config` 項目。
+自訂名稱空間的管理位置 [Sling存放庫初始化(repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) 指令碼，並部署至AEMas a Cloud Service做為OSGi設定 — 並新增至 [AEM專案的](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant) `ui.config` 專案。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
 
 ## 資源
 
-+ [Sling Repository Initialization（重點）文檔](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)
++ [Sling存放庫初始化(repoinit)檔案](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)
 
-## 代碼
+## 程式碼
 
-以下代碼用於配置 `wknd` 命名空間。
+下列程式碼可用來設定 `wknd` 名稱空間。
 
-### RepositoryInitializer OSGi配置
+### RepositoryInitializer OSGi設定
 
 `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config/org.apache.sling.jcr.repoinit.RepositoryInitializer~wknd-examples-namespaces.cfg.json`
 
@@ -57,4 +57,4 @@ ht-degree: 6%
 }
 ```
 
-這允許使用 `wknd` 命名空間，在 `register namespace` 指AEM示。 有關更高級的指令碼定義，請查看 [Sling Repository Initialization（重點）文檔](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)。
+這可讓自訂屬性使用 `wknd` 名稱空間，表示為 `register namespace` 指示，用於AEM。 如需更進階的指令碼定義，請檢閱 [Sling存放庫初始化(repoinit)檔案](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).

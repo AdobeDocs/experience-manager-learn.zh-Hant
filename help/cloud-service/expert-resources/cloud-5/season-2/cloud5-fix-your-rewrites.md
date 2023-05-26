@@ -1,6 +1,6 @@
 ---
-title: 雲5 — 修復您的……重寫
-description: 優化重寫並加快站點速度的一些簡單提示
+title: Cloud 5 — 修正您的……重寫
+description: 提供一些簡單的秘訣，協助您最佳化重寫作業，並加快網站速度
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 10%
 
 ---
 
-# 雲5 — 修復您的……重寫
+# Cloud 5 — 修正您的……重寫
 
-第二部分，我們將探討一些您可以看到的內容，這些內容將加快您對as a Cloud Service的重寫開發和優AEM化。
+在系列的第二部分，我們探索一些您可以瞭解的事項，以加快您在AEMas a Cloud Service上的重寫開發和最佳化。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343600?quality=12&learn=on)
 
-## 此視頻中包含的內容
+## 本影片涵蓋的內容
 
-+ mod_rewrite概述
-+ [mod_rewrite文檔](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
++ mod_rewrite概觀
++ [mod_rewrite檔案](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)

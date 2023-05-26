@@ -1,6 +1,6 @@
 ---
-title: 建立歡迎套件工作流進程
-description: 建立一個站AEM點頁面，其中包含基於已提交表單資料下載資產的連結。
+title: 建立歡迎套件工作流程程式
+description: 建立AEM網站頁面，包含根據提交的表單資料下載資產的連結。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 ---
 
-# 工作流元件
+# 工作流程元件
 
-工作流元件捕獲與列出資產的頁面相關的資訊，如頁面模板、元件資源類型和用於儲存生成的頁面的基本資料夾。
+工作流程元件會擷取和列出資產的頁面相關的資訊，例如頁面範本、元件資源型別以及用於儲存產生頁面的基本資料夾。
 
-![工作流元件](assets/workflow-component.png)
+![workflow-component](assets/workflow-component.png)
 
-## 工作流進程實現
+## 工作流程程式實作
 
-以下Java代碼與工作流元件關聯。 代碼建立歡迎套件頁，從工作流變數（submitterName和documentsSelected）中提取值。 然後，這些值將設定為頁面中使用的元件的屬性。 代碼還設定工作流進程變數的值 **歡迎基特url**。
+以下Java程式碼與工作流程元件相關聯。 程式碼會建立歡迎套件頁面，從工作流程變數（submitterName和documentsSelected）擷取值。 然後，這些值會設定為頁面中所使用元件的屬性。 程式碼也會設定工作流程處理變數的值 **welcomekiturl**.
 
 ```java
 package com.welcomekit.core.workflowprocess;

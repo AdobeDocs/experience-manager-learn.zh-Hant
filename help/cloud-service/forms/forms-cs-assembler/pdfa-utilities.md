@@ -1,6 +1,6 @@
 ---
 title: 將PDF轉換為PDF/A。
-description: 使用HTTP端點在FormsCA中建立和驗證PDF/A檔案
+description: 使用HTTP端點在Forms CA中建立和驗證PDF/A檔案
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,13 +16,13 @@ ht-degree: 3%
 
 ---
 
-# 建立和驗證PDF/A文檔
+# 建立和驗證PDF/A檔案
 
-PDF/A是ISO標準化的攜帶型文檔格式(PDF)版本，專門用於電子文檔的歸檔和長期保存。 PDF/A與PDF不同，它禁止不適合長期歸檔的功能，如字型連結（而不是字型嵌入）和加密。
+PDF/A是可攜式檔案格式(PDF)的ISO標準化版本，專門用於電子檔案的封存和長期儲存。 PDF/A與PDF的區別在於禁止不適合長期封存的功能，例如字型連結（與字型內嵌相反）和加密。
 
 ## 轉化為 PDF/A
 
-以下代碼用於將PDF轉換為PDF/A
+下列程式碼已用於將PDF轉換為PDF/A
 
 ```java
 package com.aemformscs.documentservices;
@@ -92,9 +92,9 @@ public class PDFAUtilities {
 }
 ```
 
-## 驗證PDF/A
+## 驗證PDF
 
-以下代碼用於驗證給定的PDF/A符合性PDF。
+下列程式碼可用來驗證給定PDF是否符合PDF/A規範。
 
 ```java
 public void validatePDFA(String postURL) {

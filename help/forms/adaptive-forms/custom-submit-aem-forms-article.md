@@ -1,6 +1,6 @@
 ---
-title: 在AEM Forms撰寫自定義提交
-description: 快速、簡便地為自適應表單建立您自己的自定義提交操作
+title: 在AEM Forms中撰寫自訂提交
+description: 快速輕鬆建立您自己的Adaptive Form自訂提交動作
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,22 +15,22 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms撰寫自定義提交 {#writing-a-custom-submit-in-aem-forms}
+# 在AEM Forms中撰寫自訂提交 {#writing-a-custom-submit-in-aem-forms}
 
-快速、簡便地為自適應表單建立您自己的自定義提交操作
+快速輕鬆建立您自己的Adaptive Form自訂提交動作
 
-本文將引導您完成建立自定義提交操作以處理自適應Forms提交所需的步驟。
+本文將逐步引導您完成建立自訂提交動作以處理Adaptive Forms提交所需的步驟。
 
-* 登錄到crx
-* 在應用下建立「sling :folder 」類型的節點。 我們將此節點命名為CustomSubmitHelpx。
-* 保存新建立的節點。
-* 將以下兩個屬性添加到新建立的節點
+* 登入crx
+* 在應用程式下建立「sling：folder」型別的節點。 讓我們呼叫此節點CustomSubmitHelpx。
+* 儲存新建立的節點。
+* 將下列兩個屬性新增至新建立的節點
 * 屬性名稱 |屬性值
 * guideComponentType | fd/af/components/guidesubmittype
-* guideDataModel | xfa,xsd,basic
-* jcr：說明 |自定義提交幫助
-* 保存更改
-* 在CustomSubmitHelpx節點下建立一個名為post.POST.jsp的新檔案。提交自適應表單時，將調用此JSP。 您可以根據需要在此檔案中編寫JSP代碼。 以下代碼將請求轉發到servlet。
+* guideDataModel | xfa、xsd、basic
+* jcr：description |自訂提交說明
+* 儲存變更
+* 在CustomSubmitHelpx節點下建立名為post.submit.jsp的新檔案。提交最適化表單時，會呼叫此POST。 您可以視需要在此檔案中撰寫JSP程式碼。 以下程式碼會將請求轉送給servlet。
 
 ```java
 <%
@@ -47,8 +47,8 @@ ht-degree: 0%
 %>
 ```
 
-* 在CustomSubmitHelpx節點下建立名為addfields .jsp的檔案。 此檔案將允許您訪問已簽名的文檔。
-* 將以下代碼添加到此檔案
+* 在CustomSubmitHelpx節點下建立名為addfields .jsp的檔案。 此檔案可讓您存取已簽署的檔案。
+* 將下列程式碼新增至此檔案
 
 ```java
     <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -60,8 +60,8 @@ ht-degree: 0%
     <input type="hidden" id="useSignedPdf" name="_useSignedPdf" value=""/>;
 ```
 
-* 保存更改
+* 儲存您的變更
 
-現在，您將開始在自適應表單的提交操作中看到「CustomSubmitHelpx」，如此影像所示。
+現在您會開始在最適化表單的提交動作中看到「CustomSubmitHelpx」，如下圖所示。
 
-![自定義提交的自適應表單](assets/capture-2.gif)
+![具有自訂提交的最適化表單](assets/capture-2.gif)

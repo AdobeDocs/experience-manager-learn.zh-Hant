@@ -1,6 +1,6 @@
 ---
-title: 建立和配置Odata Source
-description: 建立並配置雲服務配置以與MicrosoftDynamics連接。
+title: 建立和設定Odata來源
+description: 建立並設定雲端服務設定以與Microsoft Dynamics連線。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ---
 
-# 建立和配置MicrosoftDynamics的雲服務
+# 為Microsoft Dynamics建立和設定雲端服務
 
 
-以下視頻將引導您完成建立雲服務配置以與MicrosoftDynamics連接的步驟。
+以下影片將逐步說明建立雲端服務設定以與Microsoft Dynamics連線的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340758?quality=12&learn=on)

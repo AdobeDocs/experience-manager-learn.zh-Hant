@@ -2,7 +2,6 @@
 user-guide-title: AEM內容片段主控台影片
 user-guide-description: Adobe Experience Manager內容片段主控台的影片集合。
 breadcrumb-title: AEM內容片段主控台影片
-solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Cloud Service
 feature-set: Experience Manager Sites
@@ -10,7 +9,7 @@ feature: Content Fragments
 topic: Content Management
 role: User
 team: TM
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: cf37733d0fd22d560c8021eb25e6df273c1a16f7
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 21%

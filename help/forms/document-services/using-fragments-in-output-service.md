@@ -1,6 +1,6 @@
 ---
 title: 在輸出服務中使用片段
-description: 生成包含駐留在crx儲存庫中的片段的PDF文檔
+description: 產生片段位於crx存放庫中的pdf檔案
 feature: Output Service
 version: 6.4,6.5
 topic: Development
@@ -15,25 +15,25 @@ ht-degree: 0%
 
 ---
 
-# 使用片段生成PDF文檔{#developing-with-output-and-forms-services-in-aem-forms}
+# 使用片段產生pdf檔案{#developing-with-output-and-forms-services-in-aem-forms}
 
 
-在本文中，我們將使用輸出服務使用xdp片段生成pdf檔案。 主xdp和片段駐留在crx儲存庫中。 在中模擬檔案系統資料夾結構非常重要AEM。 例如，如果在xdp的片段資料夾中使用片段，則必須建立一個名為 **碎片** 下AEM。 基本資料夾將包含基xdp模板。 例如，如果檔案系統上具有以下結構
-* c:\xdptemplates - This will contain your base xdp template
-* c:\xdptemplates\fragments - This folder will contain fragments and the main template will reference the fragment as shown below
-   ![片段 — xdp](assets/survey-fragment.png)。
-* 資料夾xdpdocuments將包含您的基本模板和 **碎片** 資料夾
+在本文中，我們將使用輸出服務來產生使用xdp片段的pdf檔案。 主要xdp和片段位於crx存放庫中。 請務必在AEM中模擬檔案系統資料夾結構。 例如，如果您在xdp的片段資料夾中使用片段，您必須建立一個名為的資料夾 **片段** 在AEM的基本資料夾底下。 基底資料夾將包含您的基底xdp範本。 例如，如果您的檔案系統上有下列結構
+* c：\xdptemplates — 這將包含您的基本xdp範本
+* c：\xdptemplates\fragments — 此資料夾將包含片段，而主要範本將參考片段，如下所示
+   ![fragment-xdp](assets/survey-fragment.png).
+* 資料夾xdpdocuments將包含您的基礎範本和片段 **片段** 資料夾
 
-可以使用 [窗體和文檔ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+您可以使用建立所需的結構 [表單和檔案ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-下面是使用2個片段的示例xdp的資料夾結構
-![窗體&amp;文檔](assets/fragment-folder-structure-ui.png)
-
-
-* 輸出服務 — 通常，此服務用於將xml資料與xdp模板或pdf合併，以生成拼合的pdf。 有關詳細資訊，請參閱 [javadox](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 的子菜單。 在此示例中，我們使用駐留在crx儲存庫中的片段。
+以下是使用2個片段的範例xdp的資料夾結構
+![forms&amp;document](assets/fragment-folder-structure-ui.png)
 
 
-以下代碼用於在PDF檔案中包括片段
+* 輸出服務 — 此服務通常用於合併xml資料與xdp範本或pdf，以產生平面化pdf。 如需詳細資訊，請參閱 [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 用於Output服務 在此範例中，我們使用crx存放庫中的片段。
+
+
+下列程式碼用於在PDF檔案中包含片段
 
 ```java
 System.out.println("I am in using fragments POST.jsp");
@@ -63,25 +63,25 @@ generatedDocument.copyToFile(new java.io.File(filePath));
 out.println("Document genreated and saved to " + filePath);
 ```
 
-**test系統上的示例包**
+**在您的系統上測試範例套件的方式**
 
-* [將示例xdp檔案下載並導入到AEM](assets/xdp-templates-fragments.zip)
-* [使用包管理器下載並安裝AEM包](assets/using-fragments-assets.zip)
-* [可以從此處下載示例xdp和片段](assets/xdptemplates.zip)
+* [下載範例xdp檔案並將其匯入AEM](assets/xdp-templates-fragments.zip)
+* [使用AEM封裝管理員下載並安裝封裝](assets/using-fragments-assets.zip)
+* [範例xdp和片段可以從這裡下載](assets/xdptemplates.zip)
 
-**安裝軟體包後，必須允許在AdobeGranite CSRF過濾器中列出以下URL。**
+**安裝套件後，您必須在AdobeGranite CSRF篩選中允許列出下列URL。**
 
-1. 請按照下面所述的步驟列出上述路徑。
-1. [登錄到configMgr](http://localhost:4502/system/console/configMgr)
-1. Adobe花崗岩CSRF濾波器的研究
-1. 在排除的節中添加以下路徑並保存
+1. 請依照下列步驟將上述路徑加入允許清單。
+1. [登入configMgr](http://localhost:4502/system/console/configMgr)
+1. 搜尋AdobeGranite CSRF篩選器
+1. 在排除的區段中新增以下路徑並儲存
 1. /content/AemFormsSamples/usingfragments
 
-test示例代碼有多種方法。 最快捷最簡單的方法是使用Postman應用。 Postman允許您向伺服器發出POST請求。 在系統上安裝Postman應用。
-啟動應用並輸入以下URL以test導出資料API
+測試範常式式碼的方法有很多種。 最快捷、最輕鬆的方式就是使用Postman應用程式。 Postman可讓您向伺服器發出POST請求。 在您的系統上安裝Postman app。
+啟動應用程式並輸入以下URL以測試匯出資料API
 
-確保從下拉清單http://localhost:4502/content/AemFormsSamples/usingfragments.html中選擇了「POST」，確保將「授權」指定為「基本授權」。 指定服AEM務器用戶名和密碼導航到「正文」頁籤並指定請求參數，如下圖所示
-![出口](assets/using-fragment-postman.png)
-然後按一下「發送」按鈕
+確定您已從下拉式清單中選取「POST」 http://localhost:4502/content/AemFormsSamples/usingfragments.html請務必將「授權」指定為「基本驗證」。 指定AEM伺服器使用者名稱和密碼瀏覽至「內文」標籤，然後指定要求引數，如下圖所示
+![匯出](assets/using-fragment-postman.png)
+然後按一下傳送按鈕
 
-[您可以導入此郵遞員集合以testAPI](assets/usingfragments.postman_collection.json)
+[您可以匯入此Postman集合來測試API](assets/usingfragments.postman_collection.json)

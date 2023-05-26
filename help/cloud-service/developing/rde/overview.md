@@ -1,6 +1,6 @@
 ---
 title: 快速開發環境
-description: 瞭解快速AEM開發環境、它們是什麼以及它們如何幫助加快部署週期的開發。
+description: 瞭解AEM快速開發環境、它們是什麼，以及它們如何有助於加快開發到部署週期。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -19,22 +19,22 @@ ht-degree: 11%
 
 # 快速開發環境
 
-瞭解快速開發環境(RDE)在AEMas a Cloud Service。
+瞭解AEMas a Cloud Service中的快速開發環境(RDE)。
 
-此視頻大綱：
+此影片大綱：
 
-- 什麼是RDE?
-- 它們如何幫助加快部署週期的開發？
+- 什麼是RDE？
+- 它們如何有助於加快開發到部署週期？
 
 >[!VIDEO](https://video.tv.adobe.com/v/3414128?quality=12&learn=on)
 
 ## 下一步
 
-學習 [如何設定](./how-to-setup.md) 和RDE，在AEMas a Cloud Service。
+瞭解 [如何設定](./how-to-setup.md) AEMas a Cloud Service的RDE。
 
 ## 其他資源
 
-[RDE文檔簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
+[RDE檔案簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
 
 [Cloud Manager CI/CD 管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
 

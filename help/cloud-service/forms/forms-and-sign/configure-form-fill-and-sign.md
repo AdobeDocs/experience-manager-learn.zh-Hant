@@ -1,6 +1,6 @@
 ---
-title: 為用戶配置自適應表單以填寫和簽名
-description: 在此方案中，表單填充者和簽名者是同一個人。
+title: 設定最適化表單以供使用者填寫和簽署
+description: 在此案例中，表單填寫者和簽署者是同一個人。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 ---
 
-# 為填充和簽名方案配置自適應表單
+# 針對填寫和簽名情境設定最適化表單
 
 
-在此視頻中，我們將表單配置為表單填充者和簽名者是同一人
+在本影片中，我們將設定表單填寫者和簽署者是同一個人的表單
 
 >[!VIDEO](https://video.tv.adobe.com/v/332439?quality=12&learn=on)

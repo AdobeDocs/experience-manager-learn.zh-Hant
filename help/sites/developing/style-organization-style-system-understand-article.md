@@ -1,6 +1,6 @@
 ---
-title: 瞭解與AEM Sites的風格系統最佳做法
-description: 在與Adobe Experience Manager Sites一起實施風格系統時，詳細介紹最佳做法。
+title: 透過AEM Sites瞭解樣式系統最佳實務
+description: 說明使用Adobe Experience Manager Sites實作樣式系統最佳作法的詳細文章。
 feature: Style System
 topics: development, components, front-end-development
 audience: developer
@@ -18,206 +18,206 @@ ht-degree: 2%
 
 ---
 
-# 瞭解樣式系統最佳做法{#understanding-style-organization-with-the-aem-style-system}
+# 瞭解樣式系統最佳實務{#understanding-style-organization-with-the-aem-style-system}
 
 >[!NOTE]
 >
->請查看以下內容： [瞭解如何為樣式系統編碼](style-system-technical-video-understand.md)，以確保瞭解樣式系統使用的BEMAEM類約定。
+>請在以下位置檢閱內容： [瞭解如何為樣式系統編寫程式碼](style-system-technical-video-understand.md)，以確保瞭解AEM樣式系統所使用的類似BEM的慣例。
 
-為Style System實施了兩種主要風格AEM或樣式：
+針對「AEM樣式系統」實作有兩種主要風格或樣式：
 
-* **佈局樣式**
+* **配置樣式**
 * **顯示樣式**
 
-**佈局樣式** 影響「元件」的許多元素，以建立元件的明確定義和可識別的格式副本（設計和佈局），通常與特定的可重用品牌概念相協調。 例如，預告元件可以以傳統的基於卡的佈局、水準提升樣式或以Hero佈局的形式呈現在影像上。
+**配置樣式** 會影響元件的許多元素，以建立元件的明確定義和可識別的轉譯（設計和配置），通常會對齊特定的可重複使用的Brand概念。 例如，Teaser元件可能能夠以傳統卡片式版面配置、水準促銷樣式或作為主圖版面配置，在影像上覆蓋文字。
 
-**顯示樣式** 但是，它們不會更改佈局樣式的基本性質或意圖。 例如，Hero佈局樣式可能具有將顏色方案從主品牌顏色方案更改為輔助品牌顏色方案的顯示樣式。
+**顯示樣式** 可用來影響版面樣式的細微變化，但是它們不會改變版面樣式的基本性質或意圖。 例如，Hero版面配置樣式可能具有顯示樣式，可將色彩配置從主要品牌色彩配置變更為次要品牌色彩配置。
 
-## 風格組織最佳實踐 {#style-organization-best-practices}
+## 樣式組織最佳實務 {#style-organization-best-practices}
 
-定義可供作者使用的樣AEM式名稱時，最好：
+定義可供AEM作者使用的樣式名稱時，最好：
 
-* 使用作者理解的辭彙的名稱樣式
-* 最小化樣式選項的數量
+* 使用作者能理解的辭彙為樣式命名
+* 最小化樣式選項的數目
 * 僅公開品牌標準允許的樣式選項和組合
-* 僅顯示有效的樣式組合
-   * 如果暴露無效組合，請確保它們至少不會產生不良影響
+* 僅公開具有效果的樣式組合
+   * 如果暴露無效組合，請確定它們至少不會產生不良影響
 
-隨著作者可用的樣式組合數量AEM的增加，必須按品牌標準進行QA和驗證的組合數量會越多。 太多的選項也可能讓作者感到困惑，因為不清楚需要哪種選項或組合才能產生期望的效果。
+隨著AEM作者可用的可能樣式組合數量增加，存在更多必須經過QA驗證且符合品牌標準的排列。 太多選項也會讓作者感到困惑，因為可能不知道需要哪個選項或組合才能產生想要的效果。
 
-### 樣式名稱與CSS類 {#style-names-vs-css-classes}
+### 樣式名稱與CSS類別的比較 {#style-names-vs-css-classes}
 
-樣式名稱，或向作者提AEM供的選項，以及實現CSS類名在中AEM解耦。
+樣式名稱，或呈現給AEM作者的選項，以及實作CSS類別名稱在AEM中是分離的。
 
-這樣，Style選項就可以用辭彙來標籤，並且作者AEM可以清楚地理解，但CSS開發人員可以以將來證明的語義方式命名CSS類。 例如：
+這可讓樣式選項以清楚的辭彙標示，並供AEM作者理解，但可讓CSS開發人員以未來的校訂語意方式命名CSS類別。 例如：
 
-元件必須具有選項，以便與品牌 **主** 和 **次** 但是，作AEM者知道顏色 **綠** 和 **黃**，而不是主、輔的設計語言。
+元件必須具備可用品牌顏色設定的選項 **主要** 和 **次要** 不過，AEM作者知道這些顏色為 **綠色** 和 **黃色**，而非主要和次要的設計語言。
 
-樣式系AEM統可以使用對作者友好的標籤來公開這些著色顯示樣式 **綠色** 和 **黃色**，同時允許CSS開發人員使用 `.cmp-component--primary-color` 和 `.cmp-component--secondary-color` 定義CSS中的實際樣式實現。
+AEM樣式系統可使用作者友善的標籤來公開這些著色顯示樣式 **綠色** 和 **黃色**，同時允許CSS開發人員使用 `.cmp-component--primary-color` 和 `.cmp-component--secondary-color` 以定義CSS中的實際樣式實施。
 
-樣式名稱 **綠色** 映射到 `.cmp-component--primary-color`, **黃色** 至 `.cmp-component--secondary-color`。
+的樣式名稱 **綠色** 已對應 `.cmp-component--primary-color`、和 **黃色** 至 `.cmp-component--secondary-color`.
 
-如果公司的品牌顏色在未來發生變化，那麼需要改變的就是 `.cmp-component--primary-color` 和 `.cmp-component--secondary-color`和樣式名稱。
+如果公司的品牌色彩在未來有所變更，只需對進行單一實作即可 `.cmp-component--primary-color` 和 `.cmp-component--secondary-color`，以及樣式名稱。
 
-## Teaser元件作為示例用例 {#the-teaser-component-as-an-example-use-case}
+## Teaser元件作為範例使用案例 {#the-teaser-component-as-an-example-use-case}
 
-下面是一個示例用例，用於定義Teaser元件，使其具有多種不同的「佈局」和「顯示」樣式。
+以下範例使用案例來設定Teaser元件的樣式，使其具有數種不同的「配置」和「顯示」樣式。
 
-這將探討Style名稱（向作者公開）以及備用CSS類的組織方式。
+這將會探索樣式名稱（向作者公開）以及支援CSS類別的組織方式。
 
-### 預告元件樣式配置 {#component-styles-configuration}
+### Teaser元件樣式設定 {#component-styles-configuration}
 
-下圖顯示 [!UICONTROL 樣式] 用於Teaser元件的配置，用於使用案例中討論的變體。
+下圖顯示 [!UICONTROL 樣式] 針對使用案例中討論的變異的Teaser元件設定。
 
-的 [!UICONTROL 樣式組] 名稱、佈局和顯示（按偶發方式）與「顯示樣式」和「佈局樣式」的一般概念相匹配。
+此 [!UICONTROL 樣式群組] 名稱、版面配置及顯示（依偶然情況）與本文中用來將樣式型別概念分類的顯示樣式及版面樣式的一般概念相符。
 
-的 [!UICONTROL 樣式組] 名稱和 [!UICONTROL 樣式組] 應根據元件使用案例和特定於項目的元件樣式約定進行定制。
+此 [!UICONTROL 樣式群組] 名稱與數量 [!UICONTROL 樣式群組] 應針對元件使用案例和專案特定的元件樣式慣例量身打造。
 
-例如， **顯示** 樣式組名稱可以命名 **顏色**。
+例如， **顯示** 樣式群組名稱可能已被命名 **顏色**.
 
-![顯示樣式組](assets/style-config.png)
+![顯示樣式群組](assets/style-config.png)
 
-### 樣式選擇菜單 {#style-selection-menu}
+### 樣式選取功能表 {#style-selection-menu}
 
-下圖顯示 [!UICONTROL 樣式] 菜單作者與交互，以為元件選擇適當的樣式。 注意 [!UICONTROL 樣式Grpi] 名稱以及「樣式」名稱都向作者公開。
+下圖顯示 [!UICONTROL 樣式] 功能表作者可與互動，為元件選取適當的樣式。 請注意 [!UICONTROL 樣式群組] 名稱以及樣式名稱都會向作者公開。
 
-![樣式下拉菜單](assets/style-menu.png)
+![樣式下拉式功能表](assets/style-menu.png)
 
 ### 預設樣式 {#default-style}
 
-預設樣式通常是元件最常用的樣式，添加到頁面時是預告的預設未樣式視圖。
+預設樣式通常是元件最常用的樣式，以及新增到頁面時預設的Teaser未樣式檢視。
 
-根據預設樣式的通用性，CSS可以直接應用於 `.cmp-teaser` （沒有修改量）或 `.cmp-teaser--default`。
+根據預設樣式的通用性，CSS可以直接套用在 `.cmp-teaser` （不含任何修飾元）或 `.cmp-teaser--default`.
 
-如果預設樣式規則應用於所有變體的頻率比不適用於所有變體的頻率更高，則最好使用 `.cmp-teaser` 作為預設樣式的CSS類，因為所有變體都應隱式繼承它們，假設遵循BEM類約定。 否則，應通過預設修改量應用，如 `.cmp-teaser--default`而這又需要添加到 [元件的樣式配置的預設CSS類](#component-styles-configuration) 欄位，否則，必須在每個變體中覆蓋這些樣式規則。
+如果預設樣式規則套用頻率高於不套用至所有變數，最好使用 `.cmp-teaser` 作為預設樣式的CSS類別，因為所有變數都應該隱含地繼承它們，假設遵循BEM之類的約定。 如果沒有，則應透過預設修飾元套用，例如 `.cmp-teaser--default`，則需要將其新增至 [元件的樣式設定的預設CSS類別](#component-styles-configuration) 欄位，否則必須在每個變數中覆寫這些樣式規則。
 
-甚至可以將「命名」樣式指定為預設樣式，例如，Hero樣式 `(.cmp-teaser--hero)` 定義，但更清楚的是 `.cmp-teaser` 或 `.cmp-teaser--default` CSS類實現。
+您甚至可以指派「已命名」的樣式作為預設樣式，例如Hero樣式 `(.cmp-teaser--hero)` 定義如下，但更清楚的是要對 `.cmp-teaser` 或 `.cmp-teaser--default` CSS類別實作。
 
 >[!NOTE]
 >
->請注意，「預設佈局」樣式沒有「顯示」樣式名稱，但作者可以在「樣式系統」(Style System)選取工具中選AEM擇「顯示」(Display)選項。
+>請注意，預設配置樣式沒有「顯示」樣式名稱，但作者可以在「AEM樣式系統」選取工具中選取「顯示」選項。
 >
->這違反了最佳做法：
+>這違反了最佳實務：
 >
->**僅顯示有效的樣式組合**
+>**僅公開具有效果的樣式組合**
 >
->如果作者選擇的「顯示」樣式 **綠色** 什麼也不會發生。
+>如果作者選取「顯示」樣式 **綠色** 什麼都不會發生。
 >
->在此使用情形中，我們將承認此違規，因為所有其他佈局樣式必須使用品牌顏色才能著色。
+>在此使用案例中，我們將承認此違規，因為所有其他版面樣式都必須可使用品牌顏色上色。
 >
->在 **促銷（右對齊）** 下面的部分將介紹如何防止不需要的樣式組合。
+>在 **促銷（靠右對齊）** 下節將說明如何防止不想要的樣式組合。
 
 ![預設樣式](assets/default.png)
 
-* **佈局樣式**
+* **配置樣式**
    * 預設
 * **顯示樣式**
    * 無
-* **有效的CSS類**: `.cmp-teaser--promo` 或 `.cmp-teaser--default`
+* **有效的CSS類別**： `.cmp-teaser--promo` 或 `.cmp-teaser--default`
 
 ### 促銷樣式 {#promo-style}
 
-的 **促銷版式樣式** 用於在站點上提升高價值內容，並水準放置以佔用網頁上的一段空間，且必須按品牌顏色顯示樣式，預設的Promo佈局樣式使用黑色文本。
+此 **促銷配置樣式** 用於促銷網站上的高價值內容，且會水準配置以佔用網頁上的一連串空間，且必須可依品牌顏色樣式（預設的「促銷」配置樣式使用黑色文字）。
 
-實現這個， **佈局樣式** 共 **促銷** 和 **顯示樣式** 共 **綠色** 和 **黃色** 在Style System中AEM為預激元件配置。
+達成此目的， **配置樣式** 之 **促銷** 和 **顯示樣式** 之 **綠色** 和 **黃色** 已在AEM樣式系統中為Teaser元件設定。
 
-#### 促銷預設值
+#### 促銷預設
 
-![promo defact（促銷預設）](assets/promo-default.png)
+![促銷預設](assets/promo-default.png)
 
-* **佈局樣式**
+* **配置樣式**
    * 樣式名稱： **促銷**
    * CSS 類別: `cmp-teaser--promo`
 * **顯示樣式**
    * 無
-* **有效的CSS類**: `.cmp-teaser--promo`
+* **有效的CSS類別**： `.cmp-teaser--promo`
 
-#### 促銷主要
+#### 主要促銷
 
-![促銷](assets/promo-primary.png)
+![主要促銷](assets/promo-primary.png)
 
-* **佈局樣式**
+* **配置樣式**
    * 樣式名稱： **促銷**
    * CSS 類別: `cmp-teaser--promo`
 * **顯示樣式**
    * 樣式名稱： **綠色**
    * CSS 類別: `cmp-teaser--primary-color`
-* **有效的CSS類**: `cmp-teaser--promo.cmp-teaser--primary-color`
+* **有效的CSS類別**： `cmp-teaser--promo.cmp-teaser--primary-color`
 
-#### 促銷輔助
+#### 次要促銷
 
-![促銷輔助](assets/promo-secondary.png)
+![次要促銷](assets/promo-secondary.png)
 
-* **佈局樣式**
+* **配置樣式**
    * 樣式名稱： **促銷**
    * CSS 類別: `cmp-teaser--promo`
 * **顯示樣式**
    * 樣式名稱： **黃色**
    * CSS 類別: `cmp-teaser--secondary-color`
-* **有效的CSS類**: `cmp-teaser--promo.cmp-teaser--secondary-color`
+* **有效的CSS類別**： `cmp-teaser--promo.cmp-teaser--secondary-color`
 
 ### 促銷右對齊樣式 {#promo-r-align}
 
-的 **促銷右對齊** 佈局樣式是Promo樣式的變體，該樣式會反轉影像和文本（影像在右側，文本在左側）的位置。
+此 **促銷活動靠右對齊** 版面配置樣式是「促銷」樣式的變數，樣式會翻轉影像和文字（影像在右，文字在左）的位置。
 
-右對齊的核心是顯示樣式，它可以作為與促銷佈局樣式一起選擇的顯示樣式AEM輸入到「樣式系統」中。 這違反了以下最佳做法：
+正確的對齊方式位於其核心，是顯示樣式，可將其作為「顯示樣式」輸入到「AEM樣式系統」中，該顯示樣式與「促銷」版面配置樣式一起選取。 這違反下列最佳實務：
 
-**僅顯示有效的樣式組合**
+**僅公開具有效果的樣式組合**
 
-..已經在 [預設樣式](#default-style)。
+..已經違反了 [預設樣式](#default-style).
 
-因為右對齊只影響促銷版式樣式，而不影響其它2種佈局樣式：預設和英雄，我們可以建立新的佈局樣式Promo（右對齊），該樣式包括CSS類，該類將Promo佈局樣式內容右對齊： `cmp -teaser--alternate`。
+由於正確對齊方式只會影響「促銷」版面樣式，而不會影響其他2種版面樣式：預設和主圖，因此我們可以建立新的版面樣式「促銷」（靠右對齊），其中包含將「促銷」版面樣式內容靠右對齊的CSS類別： `cmp -teaser--alternate`.
 
-將多種樣式組合到單個「樣式」條目中還有助於減少可用樣式和樣式排列的數量，這最好能將其降至最低。
+將多個樣式組合成單一樣式專案，也有助於減少可用樣式和樣式排列的數目，這是最理想的作法。
 
-注意CSS類的名稱， `cmp-teaser--alternate`，不必與「右對齊」的對作者友好的術語匹配。
+注意CSS類別的名稱， `cmp-teaser--alternate`，不必符合作者易記的「right aligned」命名法。
 
-#### 促銷右對齊預設
+#### 促銷右對齊預設值
 
-![右對齊](assets/promo-alternate-default.png)
+![促銷活動靠右對齊](assets/promo-alternate-default.png)
 
-* **佈局樣式**
-   * 樣式名稱： **促銷（右對齊）**
+* **配置樣式**
+   * 樣式名稱： **促銷（靠右對齊）**
    * CSS 類別: `cmp-teaser--promo cmp-teaser--alternate`
 * **顯示樣式**
    * 無
-* **有效的CSS類**: `.cmp-teaser--promo.cmp-teaser--alternate`
+* **有效的CSS類別**： `.cmp-teaser--promo.cmp-teaser--alternate`
 
-#### 促銷右對齊主
+#### 主要促銷活動靠右對齊
 
-![促銷右對齊主](assets/promo-alternate-primary.png)
+![主要促銷活動靠右對齊](assets/promo-alternate-primary.png)
 
-* **佈局樣式**
-   * 樣式名稱： **促銷（右對齊）**
+* **配置樣式**
+   * 樣式名稱： **促銷（靠右對齊）**
    * CSS 類別: `cmp-teaser--promo cmp-teaser--alternate`
 * **顯示樣式**
    * 樣式名稱： **綠色**
    * CSS 類別: `cmp-teaser--primary-color`
-* **有效的CSS類**: `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--primary-color`
+* **有效的CSS類別**： `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--primary-color`
 
-#### 促銷右對齊輔助
+#### 促銷右對齊次要
 
-![促銷右對齊輔助](assets/promo-alternate-secondary.png)
+![促銷右對齊次要](assets/promo-alternate-secondary.png)
 
-* **佈局樣式**
-   * 樣式名稱： **促銷（右對齊）**
+* **配置樣式**
+   * 樣式名稱： **促銷（靠右對齊）**
    * CSS 類別: `cmp-teaser--promo cmp-teaser--alternate`
 * **顯示樣式**
    * 樣式名稱： **黃色**
    * CSS 類別: `cmp-teaser--secondary-color`
-* **有效的CSS類**: `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--secondary-color`
+* **有效的CSS類別**： `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--secondary-color`
 
-### 英雄風格 {#hero-style}
+### 英雄樣式 {#hero-style}
 
-「英雄」佈局樣式將元件的影像顯示為背景，標題和連結已疊加。 Hero版式樣式與Promo版式樣式一樣，必須具有品牌顏色。
+主圖版面配置樣式會將元件的影像顯示為背景，並覆蓋標題和連結。 主圖版面配置樣式（如促銷版面配置樣式）必須可搭配品牌色彩上色。
 
-要用品牌顏色對Hero佈局樣式進行顏色調整，可以利用與促銷佈局樣式相同的顯示樣式。
+若要使用品牌色彩為主圖版面樣式著色，可運用與促銷版面樣式相同的顯示樣式。
 
-每個元件，樣式名稱都映射到單個CSS類集，這意味著為促銷佈局樣式的背景添加顏色的CSS類名稱必須為Hero佈局樣式的文本和連結添加顏色。
+每個元件，樣式名稱會對應至單一CSS類別集，這表示使Promo配置樣式背景著色的CSS類別名稱，必須使Hero配置樣式的文字和連結著色。
 
-這可以通過對CSS規則進行範圍界定來實現，但這確實需要CSS開發人員瞭解這些排列在上是如何實施AEM的。
+只要設定CSS規則的範圍，就基本上可以實現這一點，不過，這確實需要CSS開發人員瞭解這些排列如何在AEM上實作。
 
-著色背景的CSS **提升** 主（綠色）顏色的佈局樣式：
+用於為背景著色的CSS **提升** 主要（綠色）色彩的版面配置樣式：
 
 ```css
 .cmp-teaser--promo.cmp-teaser--primary--color {
@@ -227,7 +227,7 @@ ht-degree: 2%
 }
 ```
 
-用於為 **英雄** 主（綠色）顏色的佈局樣式：
+用於為文字著色的CSS **Hero** 主要（綠色）色彩的版面配置樣式：
 
 ```css
 .cmp-teaser--hero.cmp-teaser--primary--color {
@@ -237,45 +237,45 @@ ht-degree: 2%
 }
 ```
 
-#### 英雄預設
+#### Hero預設
 
-![《英雄風格》](assets/hero.png)
+![英雄樣式](assets/hero.png)
 
-* **佈局樣式**
-   * 樣式名稱： **英雄**
+* **配置樣式**
+   * 樣式名稱： **Hero**
    * CSS 類別: `cmp-teaser--hero`
 * **顯示樣式**
    * 無
-* **有效的CSS類**: `.cmp-teaser--hero`
+* **有效的CSS類別**： `.cmp-teaser--hero`
 
-#### 英雄初級
+#### 主要英雄
 
-![英雄初級](assets/hero-primary.png)
+![主要英雄](assets/hero-primary.png)
 
-* **佈局樣式**
+* **配置樣式**
    * 樣式名稱： **促銷**
    * CSS 類別: `cmp-teaser--hero`
 * **顯示樣式**
    * 樣式名稱： **綠色**
    * CSS 類別: `cmp-teaser--primary-color`
-* **有效的CSS類**: `cmp-teaser--hero.cmp-teaser--primary-color`
+* **有效的CSS類別**： `cmp-teaser--hero.cmp-teaser--primary-color`
 
-#### 英雄二級
+#### Hero次要
 
-![英雄二級](assets/hero-secondary.png)
+![Hero次要](assets/hero-secondary.png)
 
-* **佈局樣式**
+* **配置樣式**
    * 樣式名稱： **促銷**
    * CSS 類別: `cmp-teaser--hero`
 * **顯示樣式**
    * 樣式名稱： **黃色**
    * CSS 類別: `cmp-teaser--secondary-color`
-* **有效的CSS類**: `cmp-teaser--hero.cmp-teaser--secondary-color`
+* **有效的CSS類別**： `cmp-teaser--hero.cmp-teaser--secondary-color`
 
 ## 其他資源 {#additional-resources}
 
-* [樣式系統文檔](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)
-* [建立客AEM戶端庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
-* [BEM（塊元素修改量）文檔網站](https://getbem.com/)
-* [LESS文檔網站](https://lesscss.org/)
+* [樣式系統檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)
+* [建立AEM使用者端資料庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [BEM （區塊元素修飾元）檔案網站](https://getbem.com/)
+* [較少說明檔案網站](https://lesscss.org/)
 * [jQuery網站](https://jquery.com/)

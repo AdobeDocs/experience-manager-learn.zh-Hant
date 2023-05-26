@@ -1,6 +1,6 @@
 ---
-title: 使用jQuery和Handlebar進行篩選
-description: 使用篩選WKND冒險項以顯示的jQuery和Handlebar的JavaScript實現。。
+title: 使用jQuery和Handlebars篩選
+description: 使用jQuery和Handlebars的JavaScript實作，該實作會篩選要顯示的WKND Adventures。.
 version: Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -20,13 +20,13 @@ ht-degree: 0%
 
 ---
 
-# 使用jQuery和Handlebar進行篩選
+# 使用jQuery和Handlebars篩選
 
-探AEM索無頭GraphQLAPI使用使用JavaScript應用篩選資料的功能 [j查詢](https://jquery.com/) 和 [車把](https://handlebarsjs.com/)。 此應用建立可按活動類型篩選的WKND冒險清單。
+探索AEM Headless GraphQL API使用下列JavaScript應用程式篩選資料的能力： [jQuery](https://jquery.com/) 和 [Handlebars](https://handlebarsjs.com/). 此應用程式會建立可依活動型別篩選的WKND冒險清單。
 
-此代碼演示使用Adobe [用AEM於JavaScript的無頭客戶端](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) 調用永續的GraphQL查詢。 此應用使用 `wknd-shared/adventures-all` 永續查詢以收集所有冒險，並導出可用活動類型清單。 當用戶選擇「活動類型」時，所選類型將傳遞給 `wknd-shared/adventures-by-activity` 永續查詢並僅檢索指定活動類型的冒險的冒險詳細資訊。
+此程式碼使用Adobe的 [適用於JavaScript的AEM Headless使用者端](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) 以叫用持續的GraphQL查詢。 此應用程式使用 `wknd-shared/adventures-all` 持續查詢以收集所有冒險活動，並衍生可用活動型別清單。 當使用者選擇活動型別時，選擇的型別傳遞到 `wknd-shared/adventures-by-activity` 持久查詢並擷取冒險詳細資料，只針對指定活動型別的那些冒險。
 
-此代碼：
+此程式碼：
 
-+ 連接到AEM發佈服務，不需要身份驗證
-+ 使用WKND的永續查詢： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-activity`
++ 連線到AEM Publish服務，且不需要驗證
++ 使用WKND的持續查詢： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-activity`

@@ -1,6 +1,6 @@
 ---
-title: 建立自適應表單以使用建立的Acrobat SignCloud Services配置
-description: 建立與Acrobat Sign一起使用的自適應窗體
+title: 建立最適化表單以使用已建立的Acrobat Sign Cloud Services設定
+description: 建立最適化表單以用於Acrobat Sign
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 ---
 
-# 具有Acrobat Sign的自適應形式
+# 搭配Acrobat Sign的最適化表單
 
 
-建立自適應表單以使用Acrobat Sign雲配置
+建立最適化表單以使用Acrobat Sign雲端設定
 
 >[!VIDEO](https://video.tv.adobe.com/v/332438?quality=12&learn=on)

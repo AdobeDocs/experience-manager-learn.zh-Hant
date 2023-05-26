@@ -1,6 +1,6 @@
 ---
-title: 使用和瞭解Dispatcher配置AEM中的變數
-description: 瞭解如何在Apache和Dispatcher模組配置檔案中使用變數將其帶到下一級別。
+title: 在您的AEM Dispatcher設定中使用和瞭解變數
+description: 瞭解如何在Apache和Dispatcher模組設定檔案中使用變數，以將其帶往下一個層級。
 version: 6.5
 topic: Administration, Development
 feature: Dispatcher
@@ -15,34 +15,34 @@ ht-degree: 1%
 
 ---
 
-# 使用和瞭解變數
+# 使用及瞭解變數
 
 [目錄](./overview.md)
 
-[&lt; — 上一個：瞭解快取](./understanding-cache.md)
+[&lt; — 上一步：瞭解快取](./understanding-cache.md)
 
-本文檔將介紹如何在Apache Web伺服器和Dispatcher模組配置檔案中利用變數的功能。
+本檔案將說明如何在Apache Web Server和Dispatcher模組設定檔案中運用變數的強大功能。
 
 ## 變數
 
-Apache支援變數，自Dispather模組4.1.9版以來，它也支援這些變數！
+Apache支援變數，而自從4.1.9版的Dispather模組以來，也支援這些變數！
 
-我們可以利用這些工具做很多有用的事情，比如：
+我們可以善用這些來做許多有用的事，例如：
 
-- 確保所有特定於環境的內容不在配置中內聯，而是被解壓，以確保從開發中的配置檔案在具有相同功能輸出的產品中工作。
-- 切換不可變檔案AMS提供的功能和更改日誌級別，但不允許您更改。
-- 根據變數(如 `RUNMODE` 和 `ENV_TYPE`
-- 匹配 `DocumentRoot``s和 `VirtualHost` Apache配置和模組配置之間的DNS名稱。
+- 請確定環境特定的任何內容並非內嵌在設定中，而是擷取出來，以確保來自開發環境的設定檔案在產品中使用相同的功能輸出。
+- 切換功能並變更AMS所提供且不允許您變更的不可變檔案的記錄層級。
+- 根據下列變數變更包含以使用 `RUNMODE` 和 `ENV_TYPE`
+- 符合 `DocumentRoot`的和 `VirtualHost` Apache設定和模組設定之間的DNS名稱。
 
 ## 使用基線變數
 
-由於AMS基線檔案是只讀的和不可變的，因此可以切換和開啟這些檔案，並通過編輯它們使用的變數來配置這些功能。
+由於AMS基準檔案是唯讀且不可變的，因此有些功能可以切換或開啟，也可以透過編輯它們使用的變數來設定。
 
 ### 基線變數
 
-AMS預設變數在檔案中聲明 `/etc/httpd/conf.d/variables/ootb.vars`。  此檔案不可編輯，但存在以確保變數不具有空值。  先包括後包括，而不包括 `/etc/httpd/conf.d/variables/ams_default.vars`。  您可以編輯該檔案以更改這些變數的值，甚至可以在您自己的檔案中包含相同的變數名稱和值！
+AMS預設變數會在檔案中宣告 `/etc/httpd/conf.d/variables/ootb.vars`.  此檔案不可編輯，但存在以確保變數沒有null值。  先包含後包含，而非包含 `/etc/httpd/conf.d/variables/ams_default.vars`.  您可以編輯該檔案以變更這些變數的值，甚至可以在您自己的檔案中包含相同的變數名稱和值！
 
-下面是檔案內容的示例 `/etc/httpd/conf.d/variables/ams_default.vars`:
+以下是檔案內容的範例 `/etc/httpd/conf.d/variables/ams_default.vars`：
 
 ```
 Define DISP_LOG_LEVEL info
@@ -52,11 +52,11 @@ Define AUTHOR_FORCE_SSL 1
 Define PUBLISH_FORCE_SSL 0
 ```
 
-### 示例1 — 強制SSL
+### 範例1 — 強制SSL
 
-上面顯示的變數 `AUHOR_FORCE_SSL`或 `PUBLISH_FORCE_SSL` 可以設定為1以啟用重寫規則，這些規則在http請求進入時強制最終用戶重定向到https
+以上所示的變數 `AUHOR_FORCE_SSL`，或 `PUBLISH_FORCE_SSL` 可設為1以啟用重寫規則，強制一般使用者在收到http請求時重新導向至https
 
-以下是允許此切換工作的配置檔案語法：
+以下是允許此切換運作的設定檔案語法：
 
 ```
 </VirtualHost *:80> 
@@ -69,13 +69,13 @@ Define PUBLISH_FORCE_SSL 0
 </VirtualHost>
 ```
 
-正如您所看到的，重寫規則包括哪些代碼可以重定向最終用戶瀏覽器，但設定為1的變數允許使用或不使用檔案
+如您所見，重寫規則包括的程式碼可重新導向一般使用者瀏覽器，但設定為1的變數可允許使用或不使用檔案
 
-### 示例2 — 日誌記錄級別
+### 範例2 — 記錄層級
 
-變數 `DISP_LOG_LEVEL` 可用於設定實際在運行配置中使用的日誌級別的所需內容。
+變數 `DISP_LOG_LEVEL` 可用於設定您想要讓實際用於執行組態中的記錄層級使用的專案。
 
-以下是ams基線配置檔案中存在的語法示例：
+以下是ams基準線組態檔案中的語法範例：
 
 ```
 <IfModule disp_apache2.c> 
@@ -84,23 +84,23 @@ Define PUBLISH_FORCE_SSL 0
 </IfModule>
 ```
 
-如果需要提高Dispatcher日誌記錄級別，只需更新 `ams_default.vars` 變數 `DISP_LOG_LEVEL` 到你想要的水準。
+如果您需要增加Dispatcher記錄層級，只需更新 `ams_default.vars` 變數 `DISP_LOG_LEVEL` 達到您想要的層級。
 
-示例值可以是整數或字：
+範例值可以是整數或單字：
 
 | 記錄層級 | 整數值 | Word值 |
 | --- | --- | --- |
-| 跟蹤 | 4 | 痕跡 |
+| Trace | 4 | trace |
 | 偵錯 | 3 | 偵錯 |
 | 資訊 | 2 | 資訊 |
 | 警告 | 1 | 警告 |
 | 錯誤 | 0 | 錯誤 |
 
-### 示例3 — 白名單
+### 範例3 — 白名單
 
-變數 `AUTHOR_WHITELIST_ENABLED` 和 `PUBLISH_WHITELIST_ENABLED` 可以設定為1以參與重寫規則，這些規則包括允許或禁止基於IP地址的最終用戶通信的規則。  切換此功能需要與建立白名單規則檔案相結合，以便其包含。
+變數 `AUTHOR_WHITELIST_ENABLED` 和 `PUBLISH_WHITELIST_ENABLED` 可設為1以參與重寫規則，這些規則包括根據IP位址允許或不允許一般使用者流量的規則。  在上切換此功能時，需要結合建立白名單規則檔案並加以納入。
 
-下面是一些語法示例，說明變數如何啟用包含白名單檔案和白名單檔案示例
+以下提供一些語法範例，說明變數如何啟用包含白名單檔案和白名單檔案的範例
 
 `sample.vhost`:
 
@@ -122,15 +122,15 @@ Define PUBLISH_FORCE_SSL 0
 </RequireAny>
 ```
 
-如您所見 `sample_whitelist.rules` 強制實施IP限制，但切換變數允許其包含在 `sample.vhost`
+如您所見 `sample_whitelist.rules` 會強制執行IP限制，但切換變數可將其納入 `sample.vhost`
 
-## 將變數放在何處
+## 變數的放置位置
 
-### Web伺服器啟動參數
+### 網頁伺服器啟動引數
 
-AMS將將伺服器/拓撲特定變數放在檔案內的Apache進程的啟動參數中 `/etc/sysconfig/httpd`
+AMS會將伺服器/拓撲特定變數放在Apache處理序的啟動引數中檔案內 `/etc/sysconfig/httpd`
 
-此檔案具有預定義的變數，如下所示：
+此檔案有預先定義的變數，如下所示：
 
 ```
 AUTHOR_IP="10.43.0.59" 
@@ -143,18 +143,18 @@ ENV_TYPE='dev'
 RUNMODE='sites'
 ```
 
-這些不是您可以更改的，但是在配置檔案中很有用
+您無法變更這些設定，但可在設定檔案中妥善運用
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意:</b>
 
-由於此檔案僅在服務啟動時包含。  需要重新啟動服務以提取更改。  表示重新載入是不夠的，而是需要重新啟動
+因為只有在服務啟動時才會包含此檔案。  需要重新啟動服務才能取得變更。  這表示重新載入是不夠的，而是需要重新啟動
 </div>
 
 ### 變數檔案(`.vars`)
 
-代碼提供的自定義變數應位於 `.vars` 目錄中的檔案 `/etc/httpd/conf.d/variables/`
+您的程式碼提供的自訂變數應在 `.vars` 目錄中的檔案 `/etc/httpd/conf.d/variables/`
 
-這些檔案可以包含您想要的任何自定義變數，在以下示例檔案中可以看到一些語法示例
+這些檔案可以有您想要的任何自訂變數，以下範例檔案中可以看到一些語法範例
 
 `/etc/httpd/conf.d/variables/weretail_domains_dev.vars`:
 
@@ -177,42 +177,42 @@ Define WERETAIL_DOMAIN www.weretail.com
 Define WERETAIL_ALT_DOMAIN www..weretail.net
 ```
 
-建立自己的變數檔案時，根據變數檔案的內容命名它們，並遵循手冊中提供的命名標準 [這裡](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention)。  在上例中，您可以看到變數檔案將不同的DNS條目作為要在配置檔案中使用的變數進行承載。
+建立您自己的變數時，檔案會根據其內容進行命名，並遵循手冊中提供的命名標準 [此處](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention).  在上述範例中，您可以看到變數檔案裝載不同的DNS專案作為變數，以用於設定檔案中。
 
 ## 使用變數
 
-既然已在變數檔案中定義了變數，您就想知道如何在其他配置檔案中正確使用這些變數。
+現在您已在變數檔案中定義變數，接下來您將想知道如何在其他設定檔案中正確使用變數。
 
-我們舉個例子 `.vars` 檔案，說明正確的使用案例。
+我們將使用範例 `.vars` 以上檔案，以說明適當的使用案例。
 
-我們希望全局包括所有基於環境的變數，我們將建立該檔案 `/etc/httpd/conf.d/000_load_env_vars.conf`
+我們想要將所有基於環境的變數包含到全域，以便建立檔案 `/etc/httpd/conf.d/000_load_env_vars.conf`
 
 ```
 IncludeOptional /etc/httpd/conf.d/variables/*_${ENV_TYPE}.vars
 IncludeOptional /etc/httpd/conf.d/variables/*_${RUNMODE}.vars
 ```
 
-我們知道，httpd服務啟動時，它會將AMS在 `/etc/sysconfig/httpd` 並且具有 `ENV_TYPE` 和 `RUNMODE`
+我們知道httpd服務啟動時會拉入AMS在中設定的變數 `/etc/sysconfig/httpd` 且變數集為 `ENV_TYPE` 和 `RUNMODE`
 
-當此全局 `.conf` 檔案被拉入，因為檔案的包含順序 `conf.d` 是檔案名中的字母數字載入順序均值為000，將確保在目錄中的其他檔案之前載入。
+當這個全域 `.conf` 提取檔案時，系統會提早提取該檔案，因為檔案的包含順序為 `conf.d` 檔案名稱中的字母數字載入順序表示為000，可確保先於目錄中的其他檔案載入。
 
-include語句還在檔案名中使用變數。  這可以根據 `ENV_TYPE` 和 `RUNMODE` 變數。
+include陳述式也在檔案名稱中使用變數。  這可以根據中的值來變更它將實際載入的檔案 `ENV_TYPE` 和 `RUNMODE` 變數。
 
-如果 `ENV_TYPE` 值 `dev` 則使用的檔案為：
+如果 `ENV_TYPE` 值為 `dev` 則要使用的檔案為：
 
 `/etc/httpd/conf.d/variables/weretail_domains_dev.vars`
 
-如果 `ENV_TYPE` 值 `stage` 則使用的檔案為：
+如果 `ENV_TYPE` 值為 `stage` 則要使用的檔案為：
 
 `/etc/httpd/conf.d/variables/weretail_domains_stage.vars`
 
-如果 `RUNMODE` 值 `preview` 則使用的檔案為：
+如果 `RUNMODE` 值為 `preview` 則要使用的檔案為：
 
 `/etc/httpd/conf.d/variables/weretail_domains_preview.vars`
 
-當該檔案被包括時，它將允許我們使用儲存在其中的變數名稱。
+包含該檔案後，我們將可使用儲存在中的變數名稱。
 
-在 `/etc/httpd/conf.d/available_vhosts/weretail.vhost` 檔案我們可以替換僅適用於dev的常規語法：
+在我們的 `/etc/httpd/conf.d/available_vhosts/weretail.vhost` 檔案我們可以置換僅適用於dev的一般語法：
 
 ```
 <VirtualHost *:80> 
@@ -220,7 +220,7 @@ include語句還在檔案名中使用變數。  這可以根據 `ENV_TYPE` 和 
  ServerAlias dev.weretail.net
 ```
 
-使用使用變數功能用於dev、stage和prod的較新語法：
+對於使用變數強大功能來進行dev、stage和prod的新語法：
 
 ```
 <VirtualHost *:80> 
@@ -228,45 +228,45 @@ include語句還在檔案名中使用變數。  這可以根據 `ENV_TYPE` 和 
  ServerAlias ${WERETAIL_ALT_DOMAIN}
 ```
 
-在 `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` 檔案我們可以替換僅適用於dev的常規語法：
+在我們的 `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` 檔案我們可以置換僅適用於dev的一般語法：
 
 ```
 "dev.weretail.com" 
 "dev.weretail.net"
 ```
 
-使用使用變數功能用於dev、stage和prod的較新語法：
+對於使用變數強大功能來進行dev、stage和prod的新語法：
 
 ```
 "${WERETAIL_DOMAIN}" 
 "${WERETAIL_ALT_DOMAIN}"
 ```
 
-這些變數在個性化運行設定時具有大量的重複使用量，而不必為每個環境部署不同的檔案。  實際上，您可以使用變數來模板化配置檔案，並包括基於變數的檔案。
+這些變數會重複使用很多，以個人化執行中的設定，而不需要為每個環境部署不同的檔案。  您基本上是使用變數將設定檔案範本化，並根據變數包含檔案。
 
-## 查看變數值
+## 檢視變數值
 
-有時，在使用變數時，我們必須進行搜索，以查看配置檔案中的值。  通過在伺服器上運行以下命令，可以查看已解析的變數：
+有時在使用變數時，我們必須搜尋以檢視設定檔案中的值。  您可以在伺服器上執行下列命令，以檢視已解析的變數：
 
 ```
 source /etc/sysconfig/httpd;/sbin/httpd -S | grep Define | grep "="
 ```
 
-變數在編譯的Apache配置中的查找方式：
+變數在編譯後的Apache設定中的外觀如何：
 
 ```
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_CONFIG | grep -v "#"
 ```
 
-變數在編譯的Dispatcher配置中的查找方式：
+變數在編譯的Dispatcher設定中的外觀如何：
 
 ```
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY
 ```
 
-從命令的輸出中，您將看到配置檔案中變數與已編譯輸出之間的差異。
+從命令輸出中，您會看到設定檔案中的變數與編譯輸出的差異。
 
-配置示例
+設定範例
 
 `/etc/httpd/conf.d/enabled_vhosts/aem_publish.vhost`:
 
@@ -275,20 +275,20 @@ $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY
 	DocumentRoot	${PUBLISH_DOCROOT} 
 ```
 
-現在運行命令查看已編譯的輸出
+現在執行命令以檢視編譯後的輸出
 
-已編譯的Apache配置：
+編譯的Apache設定：
 
 ```
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_CONFIG | grep DocumentRoot
 DocumentRoot /mnt/var/www/html
 ```
 
-已編譯的Dispatcher配置：
+編譯的Dispatcher設定：
 
 ```
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY | grep docroot
 /docroot "/mnt/var/www/html"
 ```
 
-[下一個 — >法拉盛](./disp-flushing.md)
+[下一個 — >排清](./disp-flushing.md)

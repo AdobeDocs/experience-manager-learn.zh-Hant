@@ -1,6 +1,6 @@
 ---
-title: 建立和配置Dynamics支援的表單資料模型
-description: 建立並配置表單資料模型以與MicrosoftDynamics中的實體交互。
+title: 建立和設定Dynamics支援的表單資料模型
+description: 建立並設定表單資料模型，以與Microsoft Dynamics中的實體互動。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ---
 
-# 建立和配置表單資料模型
+# 建立及設定表單資料模型
 
 
-以下視頻將引導您完成建立和配置表單資料模型的步驟。
+以下影片將逐步說明建立和設定表單資料模型的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340790?quality=12&learn=on)

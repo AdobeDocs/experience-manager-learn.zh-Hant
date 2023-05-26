@@ -1,6 +1,6 @@
 ---
-title: AEM FormsCS中的文檔生成微服務
-description: 從外部應用程式使用文檔生成微服務。
+title: AEM Forms CS中的檔案產生微服務
+description: 使用外部應用程式的檔案產生微服務。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -19,11 +19,11 @@ ht-degree: 1%
 
 # 簡介
 
-在本課程中，我們將使用文檔生成微服務通過將資料與XDP模板合併來生成pdf。 要從外部應用程式使用這些微服務，請執行以下步驟：
+在本課程中，我們將使用檔案產生微服務，透過將資料與XDP範本合併來產生PDF。 若要從外部應用程式使用這些微服務，需執行下列步驟：
 
-1. 生成技術帳戶的服AEM務憑據
-1. 從服務憑據建立JSON Web令牌(JWT)，並為訪問令牌交換該憑據
-1. 配置中技術帳戶的訪問權AEM限
-1. 使用訪問令牌進行HTTP調用
+1. 產生AEM技術帳戶的服務認證
+1. 從服務憑證建立JSON Web權杖(JWT)，並將相同的權杖交換為存取權杖
+1. 設定AEM中技術帳戶的存取權
+1. 使用存取權杖進行HTTP呼叫
 
 >[!VIDEO](https://video.tv.adobe.com/v/334859?quality=12&learn=on)

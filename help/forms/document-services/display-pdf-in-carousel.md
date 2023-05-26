@@ -1,6 +1,6 @@
 ---
-title: 顯示多個PDF文檔
-description: 以自適應形式循環查看多個pdf文檔。
+title: 顯示多個pdf檔案
+description: 在最適化表單中循環瀏覽多個pdf檔案。
 version: 6.5
 feature: Adaptive Forms
 topic: Development
@@ -16,41 +16,41 @@ ht-degree: 4%
 
 ---
 
-# 在旋轉傳送器中顯示多個PDF文檔
+# 以傳送方式顯示多個pdf檔案
 
-常見的使用情形是在提交表單之前，將多個PDF文檔顯示到表單填充器中以進行審閱。
+常見的使用案例是在提交表單前，將多個PDF檔案顯示給表單填寫工具以供稽核。
 
-要完成此使用案例，我們利用 [Adobe PDF嵌入式API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)。
+為了完成此使用案例，我們利用 [Adobe PDF內嵌API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
 
-[在此可體驗此示例的現場演示。](https://forms.enablementadobe.com/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
+[您可以在這裡體驗此範例的即時示範。](https://forms.enablementadobe.com/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
 
-執行了以下步驟以完成整合
+已執行下列步驟以完成整合
 
-## 建立自定義元件以顯示多個PDF文檔
+## 建立自訂元件以顯示多個PDF檔案
 
-已建立自定義元件（pdf — 旋轉盤）以循環使用pdf文檔
+已建立自訂元件(pdf-carousel)來循環pdf檔案
 
 ## 用戶端資源庫
 
-已建立客戶端庫以使用Adobe PDF嵌入API顯示PDF。 要顯示的PDF在pdf — 旋轉傳送元件中指定。
+已建立使用者端資料庫，以使用Adobe PDF Embed API顯示PDF。 要顯示的PDF會在pdf轉盤元件中指定。
 
-## 建立自適應窗體
+## 建立最適化表單
 
-建立基於某些標籤的自適應表單（此示例有3個標籤）在前兩個標籤中添加一些自適應表單元件在第三個標籤中添加pdf轉盤元件配置pdf轉盤元件，如下面的螢幕快照所示
-![pdf旋轉](assets/pdf-carousel-af-component.png)
+使用某些標籤建立最適化表單（此範例有3個標籤）在前兩個標籤中新增一些最適化表單元件在第三個標籤中新增pdf轉盤元件設定pdf轉盤元件，如以下熒幕擷圖所示
+![pdf-carousel](assets/pdf-carousel-af-component.png)
 
-**嵌入PDFAPI密鑰**  — 這是可用於嵌入pdf的鍵。 此密鑰僅與localhost一起使用。 您可以建立 [你自己的鑰匙](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) 並與其他域關聯。
+**內嵌PDFAPI金鑰**  — 這是可用來內嵌pdf的金鑰。 此金鑰僅適用於localhost。 您可以建立 [您自己的金鑰](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) 並將其與其他網域相關聯。
 
-**指定PDF文檔**  — 在此處，您可以指定要在旋轉傳送器中顯示的pdf文檔。
+**指定PDF檔案**  — 您可在此處指定要在轉盤中顯示的pdf檔案。
 
 
-## 在伺服器上部署示例
+## 在您的伺服器上部署範例
 
-要在本地伺服器上test此項，請執行以下步驟：
+若要在本機伺服器上測試此專案，請遵循下列步驟：
 
-1. [導入客戶端庫](assets/pdf-carousel-client-lib.zip) 進入本地實AEM例 [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-1. [導入pdf旋轉傳送元件](assets/pdf-carousel-component.zip) 進入本地實AEM例 [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-1. [導入自適應窗體 ](assets/adaptive-form-pdf-carousel.zip) 進入本地實AEM例 [使用包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-1. [導入要顯示的示例pdf](assets/pdf-carousel-sample-documents.zip) 進入本地實AEM例 [使用assets檔案上載連結](http://localhost:4502/assets.html/content/dam)
-1. [預覽自適應窗體](http://localhost:4502/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
-1. 頁籤。 在旋轉木馬元件中應看到三個PDF文檔。
+1. [匯入使用者端資源庫](assets/pdf-carousel-client-lib.zip) 至您的本機AEM執行個體 [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+1. [匯入pdf轉盤元件](assets/pdf-carousel-component.zip) 至您的本機AEM執行個體 [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+1. [匯入最適化表單 ](assets/adaptive-form-pdf-carousel.zip) 至您的本機AEM執行個體 [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+1. [匯入範例pdf以顯示](assets/pdf-carousel-sample-documents.zip) 至您的本機AEM執行個體 [使用資產檔案上傳連結](http://localhost:4502/assets.html/content/dam)
+1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
+1. 按Tab鍵至「要檢閱的檔案」標籤。 您應該會在轉盤元件中看到三份PDF檔案。

@@ -1,6 +1,6 @@
 ---
-title: 為AEM FormsOSGi中的任何類啟用調試日誌記錄的步驟
-description: 配置調試日誌以排除AEM FormsOSGi故障
+title: 在AEM Forms OSGi中啟用任何類別的偵錯記錄步驟
+description: 設定除錯記錄以疑難排解AEM Forms OSGi
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 為AEM FormsOSGi中的任何類啟用調試日誌記錄的步驟
+# 在AEM Forms OSGi中啟用任何類別的偵錯記錄步驟
 
-*此視頻將介紹在AEM FormsOSGi中為任何類啟用調試日誌記錄的步驟。*
+*本影片逐步解說在AEM Forms OSGi中啟用任何類別偵錯記錄的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335521?quality=12&learn=on)

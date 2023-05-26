@@ -1,6 +1,6 @@
 ---
-title: 雲5 - REPOINIT
-description: 使用REPOINIT初始化回AEM購
+title: Cloud 5 - REPOINIT
+description: 使用REPOINIT初始化AEM存放庫
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ---
 
-# 雲5 - REPOINIT
+# Cloud 5 - REPOINIT
 
-開始使用REPOINIT — 或Sling儲存庫初始值設定項。 瞭解幾種技巧，以釋放使用此工具的動力及其一些使用案例。
+開始使用REPOINIT — 或Sling存放庫初始設定式。 瞭解一些技巧以釋放使用此工具的強大功能及其部分使用案例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343474?quality=12&learn=on)
 
-## 此視頻中包含的內容
+## 本影片涵蓋的內容
 
-+ REPOINIT概述
++ REPOINIT概觀
 + [REPOINIT語法](https://sling.apache.org/documentation/bundles/repository-initialization.html#appendix-a-repoinit-syntax-parser-test-scenarios-1)

@@ -1,7 +1,7 @@
 ---
-title: 為打印渠道文檔建立兩列佈局
+title: 為列印管道檔案建立兩個欄配置
 seo-title: Creating two column layouts for print channel documents
-description: 為打印渠道文檔建立2列佈局
+description: 為列印管道檔案建立2欄版面配置
 seo-description: Create 2 column layouts for print channel document
 feature: Interactive Communication
 topics: development
@@ -21,26 +21,26 @@ ht-degree: 0%
 
 ---
 
-# 打印渠道文檔中的兩列佈局
+# Print Channel檔案中的兩欄版面
 
-此簡短文章將重點介紹在打印通道中建立2列佈局所需的步驟。 用例是生成2頁文檔，頁1具有2列佈局，頁2具有標準1列佈局。
+本簡短文章將強調在列印管道中建立2欄版面所需的步驟。 使用案例是產生2頁檔案，其中第1頁具有2欄配置，而第2頁具有標準1欄配置。
 
-以下是使用AEM Forms設計器建立2列佈局時涉及的高級步驟。
+以下是使用AEM Forms Designer建立2個欄配置的相關高階步驟。
 
-* 在第1頁母版頁中建立2個內容區域
+* 在頁面1主版頁面中建立2個內容區域
 * 將2個內容區域命名為「leftcolumn」和「rightcolumn」
-* 使用一個內容區域建立第二個母版頁（這是預設值）
-* 選擇「分頁」頁籤（無標題子表單）（第1頁）和（無標題子表單）（第2頁），並設定如下螢幕抓圖所示的屬性。
+* 建立一個具有一個內容區域的第二個主版頁面（此為預設值）
+* 選取「分頁」標籤（無標題子表單） （第1頁）和（無標題子表單） （第2頁），並設定屬性，如下列熒幕擷取畫面所示。
 
 ![page1](assets/untitledsubform_paginationproperties.gif)
 
 ![page2](assets/untitled_subformpage2.gif)
 
-設定分頁屬性後，我們可以在（無標題子表單）（第1頁）下添加子表單或目標區域。
+設定分頁屬性後，我們就可以在（未命名的子表單） （第1頁）底下新增子表單或目標區域。
 
-然後，我們可以將這些子窗體或目標區域添加文檔片段。 當左欄已滿時，內容將流向右欄。
+然後，我們可以將檔案片段新增到這些子表單或目標區域。 當左欄已滿時，內容將流向右欄。
 
-要在本地伺服器上test此項，請下載與本文相關的資產。 向下滾動到此頁的底部
+若要在本機伺服器上測試此專案，請下載與本文相關的資產。 向下捲動至此頁面底部
 
-* [使用包管理器下載並安裝示例打印通道文檔](assets/print-channel-with-two-column-layout.zip)
-* [預覽打印渠道文檔](http://localhost:4502/content/dam/formsanddocuments/2columnlayout/jcr:content?channel=print&amp;mode=preview&amp;dataRef=service%3A%2F%2FFnDTestData&amp;wcmmode=disabled)
+* [使用封裝管理程式下載並安裝範例Print Channel檔案](assets/print-channel-with-two-column-layout.zip)
+* [預覽Print Channel檔案](http://localhost:4502/content/dam/formsanddocuments/2columnlayout/jcr:content?channel=print&amp;mode=preview&amp;dataRef=service%3A%2F%2FFnDTestData&amp;wcmmode=disabled)

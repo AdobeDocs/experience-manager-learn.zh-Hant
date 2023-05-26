@@ -1,6 +1,6 @@
 ---
-title: OSGi配置屬性
-description: 瞭解OSGi配置屬性的基本知識，以及如何在OSGi服務中使用這些屬性。
+title: OSGi設定屬性
+description: 瞭解OSGi設定屬性的基本知識，以及如何在OSGi服務中使用這些屬性。
 role: Developer
 level: Beginner
 topic: Development
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 ---
 
-# OSGi配置屬性
+# OSGi設定屬性
 
-瞭解使用OSGi配置密鑰/值對定義OSGi配置資料並將其公開給OSGi服務的低級方法。
+瞭解使用OSGi設定索引鍵/值配對來定義及公開OSGi設定資料給OSGi服務的低階方法。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335729?quality=12&learn=on)
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 + [@Component JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/service/component/annotations/Component.html)
 + [@Activate JavaDocs](https://javadoc.io/static/com.adobe.aem/aem-sdk-api/2021.7.5658.20210723T140305Z-210600/org/osgi/service/component/annotations/Activate.html)
 
-## 代碼
+## 程式碼
 
 ### ActivitiesImpl.java
 

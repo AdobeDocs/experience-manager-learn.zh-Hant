@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe雲管理器 — 活動
-description: Cloud Manager可提供對計畫活動的整合視圖，列出所有CI/CD管道執行，包括生產和非生產。 這允許用戶查看當前正在進行的任何管道並查看以前的部署。
+title: 使用AdobeCloud Manager — 活動
+description: Cloud Manager會提供方案活動的合併檢視，列出所有CI/CD管道執行，包括生產和非生產。 這可讓使用者檢視目前進行中的任何管道，並檢閱之前的部署。
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 ---
 
-# 使用Adobe雲管理器 — 活動
+# 使用AdobeCloud Manager — 活動
 
-Cloud Manager可提供對計畫活動的整合視圖，列出所有CI/CD管道執行，包括生產和非生產。 這允許用戶查看當前正在進行的任何管道並查看以前的部署。
+Cloud Manager會提供方案活動的合併檢視，列出所有CI/CD管道執行，包括生產和非生產。 這可讓使用者檢視目前進行中的任何管道，並檢閱之前的部署。
 
-Cloud Manager還以每用戶級別與 [Adobe Experience Cloud通知](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/notifications.html)提供對所關心事件和行動的全面瞭解。
+Cloud Manager也可在每個使用者層級與整合 [Adobe Experience Cloud通知](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/notifications.html)，全方位檢視感興趣的事件和動作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)

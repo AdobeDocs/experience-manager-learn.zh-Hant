@@ -1,6 +1,6 @@
 ---
-title: 在Unix安裝程式上排除OpenOffice特定問題的步驟
-description: 在UNIX安裝程式上排除OpenOffice問題與PDF生成器問題的故障。
+title: 針對Unix設定中的OpenOffice特定問題進行疑難排解的步驟
+description: 疑難排解UNIX安裝程式上的PDF產生器問題的OpenOffice問題。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 在Unix安裝程式上排除OpenOffice特定故障的步驟
+# 疑難排解Unix安裝程式上OpenOffice特定失敗的步驟
 
-*此視頻介紹了在AEM FormsPDFG的Unix安裝程式上診斷OpenOffice特定故障的過程。*
+*此影片會逐步解說針對AEM Forms PDFG的Unix設定，疑難排解OpenOffice特定失敗的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335551?quality=12&learn=on)

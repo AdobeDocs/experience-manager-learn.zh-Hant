@@ -1,6 +1,6 @@
 ---
-title: 為標準項目原型啟用前AEM端管線
-description: 瞭解如何為標準項目啟用前端管線AEM，以加快靜態資源（如CSS、JavaScript、字型、表徵圖）的部署。 同時將前端開發與全堆棧後端開發分離AEM。
+title: 為標準AEM專案原型啟用前端管道
+description: 瞭解如何為標準AEM專案啟用前端管道，以更快部署靜態資源，例如CSS、JavaScript、字型、圖示。 此外也會將前端開發與AEM上的完整棧疊後端開發分開。
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -21,21 +21,21 @@ ht-degree: 1%
 
 ---
 
-# 為標準項目原型啟用前AEM端管線{#enable-front-end-pipeline-standard-aem-project}
+# 為標準AEM專案原型啟用前端管道{#enable-front-end-pipeline-standard-aem-project}
 
-瞭解如何啟用 [WKNDAEM站點項目](https://github.com/adobe/aem-guides-wknd) (又稱標AEM準項目) [項AEM目原型](https://github.com/adobe/aem-project-archetype) 使用前端管道部署前端資源（如CSS、JavaScript、字型和表徵圖），以加快開發到部署的週期。 將前端開發與全堆棧後端開發分離AEM。 您還可以瞭解這些前端資源 __不__ 從儲存庫提AEM供，但從CDN提供，這改變了交付模式。
+瞭解如何啟用 [AEM WKND網站專案](https://github.com/adobe/aem-guides-wknd) (亦稱為標準AEM專案)建立方式 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 使用前端管道部署CSS、JavaScript、字型和圖示等前端資源，以加快開發到部署的週期。 在AEM上將前端開發與完整棧疊後端開發分開。 您也會瞭解這些前端資源是如何 __not__ 從AEM存放庫提供，但從CDN提供，傳遞正規化的變更。
 
 
-在Adobe雲管理器中建立新的前端管道，該管道僅構建和部署 `ui.frontend` 內置CDN的對象，並通知其AEM位置。 在網AEM頁的HTML生成過程中， `<link>` 和 `<script>` 標籤，請參閱中的此對象位置 `href` 屬性值。
+在Adobe Cloud Manager中建立了新的前端管道，只會建置和部署 `ui.frontend` 內建CDN的成品，並通知AEM其位置。 在網頁HTML產生期間的AEM上， `<link>` 和 `<script>` 標籤中，請參考此成品在 `href` 屬性值。
 
-但是，在WKND站點項AEM目轉換後，前端開發人員可以與具有自己部署管道的任何全堆棧後端開發分開工作，並與之並行AEM。
+不過，在WKND Sites AEM專案轉換後，前端開發人員可以獨立於AEM上任何完整棧疊後端開發工作，並且與其平行，後者有自己的部署管道。
 
 >[!IMPORTANT]
 >
->通常，前端管線與 [快AEM速建立站點](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/overview.html?lang=en)，有相關教程 [AEM Sites入門 — 快速站點建立](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html) 瞭解更多。 因此，在本教程和相關視頻中，您遇到了對它的引用，這是為了確保能夠消除細微的差別，並且有一些直接或間接的比較來解釋關鍵概念。
+>一般而言，前端管道通常與 [AEM快速網站建立](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/overview.html?lang=en)，請參閱相關教學課程 [AEM Sites快速入門 — 快速網站建立](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html) 以進一步瞭解。 因此，在本教學課程和相關影片中，您會看到參考資料，以確保找出細微的差異，並以直接或間接的比較方式說明重要概念。
 
 
-相關 [多步教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html) 使用「快速站AEM點建立」功能，在WKND中為虛擬生活方式品牌實施一個站點。 審閱 [主題工作流](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html) 瞭解前端管線工作方式也很有幫助。
+相關 [多步驟教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html) 使用「快速網站建立」功能，逐步為虛擬生活風格品牌WKND實作AEM網站。 檢閱 [主題設定工作流程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html) 瞭解前端管道的工作方式也很有幫助。
 
 ## 前端管道的概述、優點和注意事項
 
@@ -44,16 +44,16 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->這僅適用於AEMas a Cloud Service，而不適用於基於AMS的Adobe雲管理器部署。
+>這僅適用於AEMas a Cloud Service，不適用於以AMS為基礎的AdobeCloud Manager部署。
 
 ## 必備條件
 
-本教程中的部署步驟在Adobe雲管理器中進行，確保 __部署管理器__ 角色，請參閱雲管理 [角色定義](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions)。
+本教學課程中的部署步驟會在AdobeCloud Manager中進行，請確定您已 __部署管理員__ 角色，請參閱雲端管理 [角色定義](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions).
 
-確保使用 [沙盒程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) 和 [開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html) 完成本教程時。
+請務必使用 [沙箱計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) 和 [開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html) 完成本教學課程時。
 
 ## 後續步驟 {#next-steps}
 
-逐步教程將介紹 [WKNDAEM站點項目](https://github.com/adobe/aem-guides-wknd) 轉換，以啟用前端管線。
+逐步教學課程會逐步解說 [AEM WKND網站專案](https://github.com/adobe/aem-guides-wknd) 轉換，以便為前端管道啟用它。
 
-你在等什麼？ 導航至 [查看完整堆棧項目](review-uifrontend-module.md) 並結合標準AEM Sites項目回顧了前端開發生命週期。
+您還在等什麼？ 導覽至「 」，開始進行教學課程 [檢閱完整棧疊專案](review-uifrontend-module.md) 在標準AEM Sites專案的情境下，章節並回顧前端開發生命週期。

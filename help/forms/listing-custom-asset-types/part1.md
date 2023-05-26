@@ -1,7 +1,7 @@
 ---
-title: 註冊自定義資產類型
+title: 註冊自訂資產型別
 seo-title: Registering Custom Asset Types
-description: 啟用AEMForms門戶中列出的自定義資產類型
+description: 啟用自訂資產型別，以便在AEMForms入口網站中列出
 seo-description: Enabling custom asset types for listing in AEMForms Portal
 uuid: eaf29eb0-a0f6-493e-b267-1c5c4ddbe6aa
 feature: Adaptive Forms
@@ -23,73 +23,73 @@ ht-degree: 2%
 
 ---
 
-# 註冊自定義資產類型 {#registering-custom-asset-types}
+# 註冊自訂資產型別 {#registering-custom-asset-types}
 
-啟用AEMForms門戶中列出的自定義資產類型
+啟用自訂資產型別，以便在AEMForms入口網站中列出
 
 >[!NOTE]
 >
->確保安裝了AEMSP1的6.3和相應的AEM Forms載入程式。 此功能僅適用於AEM Forms6.3 SP1及更高版本
+>請確定您已安裝含SP1的AEM 6.3及對應的AEM Forms附加元件。 此功能僅適用於AEM Forms 6.3 SP1及更高版本
 
 ## 指定基本路徑 {#specify-base-path}
 
-基本路徑是包含用戶可能希望在search &amp; lister元件中列出的所有資產的頂級儲存庫路徑。 如果需要，用戶還可以配置來自元件編輯對話框的基本路徑內的特定位置，從而在特定位置上觸發搜索，而不是搜索基本路徑內的所有節點。 預設情況下，基本路徑用作獲取資產的搜索路徑標準，除非用戶從此位置配置一組特定路徑。 為了進行效能搜索，必須使此路徑具有最佳值。 基本路徑的預設值將保持為 **_/content/dam/formsanddocuments_** 因為AEM Forms的所有資產 **_/content/dam/formsanddocuments。_**
+基本路徑是頂層存放庫路徑，包含使用者可能想要列在「搜尋與清單程式」元件中的所有資產。 如有需要，使用者也可以從元件編輯對話方塊設定基本路徑內的特定位置，以便在特定位置觸發搜尋，而不是搜尋基本路徑內的所有節點。 根據預設，除非使用者在此位置中設定一組特定路徑，否則會使用基本路徑作為擷取資產的搜尋路徑條件。 必須有此路徑的最佳值，才能進行效能搜尋。 基底路徑的預設值將保持為 **_/content/dam/formsanddocuments_** 因為所有AEM Forms資產都位於 **_/content/dam/formsanddocuments._**
 
-配置基本路徑的步驟
+設定基本路徑的步驟
 
-1. 登錄到crx
-1. 導航到 **/libs/fd/fp/extensions/querybuilder/basepath**
+1. 登入crx
+1. 導覽至 **/libs/fd/fp/extensions/querybuilder/basepath**
 
-1. 按一下工具欄中的「覆蓋節點」
-1. 確保覆蓋位置為「/apps/」
+1. 按一下工具列中的「覆蓋節點」
+1. 確認覆蓋位置為&quot;/apps/&quot;
 1. 按一下確定
 1. 按一下「儲存」
-1. 導航至在以下位置建立的新結構 **/apps/fd/fp/extensions/querybuilder/basepath**
+1. 導覽至建立的新結構 **/apps/fd/fp/extensions/querybuilder/basepath**
 
-1. 將path屬性的值更改為 **&quot;/content/dam&quot;**
+1. 將path屬性的值變更為 **「/content/dam」**
 1. 按一下「儲存」
 
-通過指定路徑屬性 **&quot;/content/dam&quot;** 您基本上是在將基本路徑設定為/content/dam。 這可以通過開啟Search和Lister元件來驗證。
+透過指定路徑屬性至 **「/content/dam」** 您基本上是將基本路徑設定為/content/dam。 這可透過開啟「搜尋並製表器」元件來驗證。
 
-![基本路徑](assets/basepath.png)
+![basepath](assets/basepath.png)
 
-## 註冊自定義資產類型 {#register-custom-asset-types}
+## 註冊自訂資產型別 {#register-custom-asset-types}
 
-我們在搜索和線索元件中添加了一個新頁籤（資產清單）。 此頁籤將列出您配置的現有資產類型和附加資產類型。 預設情況下，將列出以下資產類型
+我們已在搜尋和清單產生器元件中新增索引標籤（資產清單）。 此索引標籤會列出現成可用的資產型別以及您設定的其他資產型別。 依預設，會列出以下資產型別
 
 1. 最適化表單
-1. 表單模板
+1. 表單範本
 1. PDF forms
-1. 文檔(靜態PDF)
+1. 檔案(靜態PDF)
 
-**註冊自定義資產類型的步驟**
+**註冊自訂資產型別的步驟**
 
-1. 建立的覆蓋節點 **/libs/fd/fp/extensions/querybuilder/assettypes**
+1. 建立覆蓋節點，屬於 **/libs/fd/fp/extensions/querybuilder/assettypes**
 
-1. 將覆蓋位置設定為「/apps」
-1. 導航至在以下位置建立的新結構 `/apps/fd/fp/extensions/querybuilder/assettypes`
+1. 將覆蓋位置設為「/apps」
+1. 導覽至建立的新結構 `/apps/fd/fp/extensions/querybuilder/assettypes`
 
-1. 在此位置下，為要註冊的類型建立一個「nt:antrograbled」節點，將節點命名為 **mp4files。 將以下兩個屬性添加到此mp4files節點**
+1. 在此位置下，為要註冊的型別建立「nt：unstructured」節點，為節點命名 **mp4files。 將下列兩個屬性新增至此mp4files節點**
 
-   1. 添加jcr:title屬性以指定資產類型的顯示名稱。 將jcr:title的值設定為「Mp4檔案」。
-   1. 添加&quot;type&quot;屬性並將其值設定為&quot;videos&quot;。 這是我們在模板中用於列出類型視頻資產的值。 保存更改。
+   1. 新增jcr：title屬性以指定資產型別的顯示名稱。 將jcr：title的值設為&quot;Mp4檔案&quot;。
+   1. 新增「type」屬性並將其值設為「video」。 這是我們在範本中用來列出影片型別資產的值。 儲存您的變更。
 
-1. 在mp4files下建立「nt:antrograbled」類型的節點。 將此節點命名為&quot;searchcriteria&quot;
-1. 根據搜索條件添加一個或多個篩選器。 假設用戶希望有一個搜索過濾器來列出mime類型為&quot;video/mp4&quot;的mp4Files，您可以在此處這樣做
-1. 在節點搜索條件下建立「nt:antrogized」類型的節點。 將此節點命名為「檔案類型」
-1. 將以下2個屬性添加到此「檔案類型」節點
+1. 在mp4files下建立「nt：unstructured」型別的節點。 將此節點命名為「searchcriteria」
+1. 在搜尋條件下新增一或多個篩選器。 假設，如果使用者想要使用搜尋篩選器來列出mime型別為「video/mp4」的mp4檔案，您可以在這裡這樣做
+1. 在節點搜尋條件下建立「nt：unstructured」型別的節點。 將此節點命名為「filetypes」
+1. 將下列2個屬性新增至此「檔案型別」節點
 
    1. 名稱: ./jcr:content/metadata/dc:format
-   1. 值：視頻/mp4
+   1. 值： video/mp4
 
-1. 這意味著具有dc:format等於video/mp4屬性的資產被視為資產類型「Mp4視頻」。 您可以使用「jcr:content/metadata」節點上列出的任何屬性作為搜索條件
+1. 這表示屬性dc：format等於video/mp4的資產會被視為資產型別「Mp4影片」。 您可以使用「jcr：content/metadata」節點中列出的任何屬性作為搜尋條件
 
-1. **確保保存您的工作**
+1. **請務必儲存您的工作**
 
-執行上述步驟後，新資產類型（Mp4檔案）將開始顯示在Search and Lister元件的資產類型下拉清單中，如下所示
+執行上述步驟後，新的資產型別（Mp4檔案）將開始顯示在「搜尋和製表器」元件的資產型別下拉式清單中，如下所示
 
 ![mp4files](assets/mp4files.png)
 
-[如果在使此程式工作時遇到問題，可以導入以下程式包。](assets/assettypeskt1.zip) 包定義了兩種自定義資產類型。 Mp4檔案和Word文檔。 建議你看看 **/apps/fd/fp/extensions/querybuilder/assettypes**
+[如果您無法讓此功能運作，可以匯入下列套件。](assets/assettypeskt1.zip) 套件已定義兩種自訂資產型別。 Mp4檔案和Worddocuments。 建議您檢視 **/apps/fd/fp/extensions/querybuilder/assettypes**
 
-[安裝客戶門戶包](assets/customportalpage.zip)。 此包包含示例門戶頁。 本教程第2部分使用了本頁
+[安裝customeportal套件](assets/customportalpage.zip). 此套件包含範例入口網站頁面。 本教學課程的第2部分將使用此頁面

@@ -1,6 +1,6 @@
 ---
-title: 使用對話框建立自定義工作流元件
-description: 本教程將指導您完成建立自定義工作流元件所涉及的步驟。
+title: 使用對話方塊建立自訂工作流程元件
+description: 本教學課程將逐步引導您完成建立自訂工作流程元件所涉及的步驟。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -15,18 +15,18 @@ ht-degree: 3%
 
 ---
 
-# 建立自定義工作流元件
+# 建立自訂工作流程元件
 
-本教程將指導您完成建立自定義工作流元件所涉及的步驟。
+本教學課程將逐步引導您完成建立自訂工作流程元件所涉及的步驟。
 
 ## 必備條件
 
-您需要以下功能：
+您將需要下列專案：
 
-* 已安裝窗體AEM附件包的工作實例
+* 已安裝表單附加元件套件的AEM有效執行個體
 
-* [根據本檔案設定的開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+* [根據此檔案設定的開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 
 ## 後續步驟
 
-寫 [通過實現WorkflowProcess介面的自定義Java代碼](./custom-process-step-aem-workflow.md)
+撰寫您的 [實作WorkflowProcess介面以自訂Java程式碼](./custom-process-step-aem-workflow.md)

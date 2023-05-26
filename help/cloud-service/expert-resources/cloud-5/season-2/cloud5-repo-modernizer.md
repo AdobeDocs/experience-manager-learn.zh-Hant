@@ -1,6 +1,6 @@
 ---
-title: 雲5 — 儲存庫現代化器
-description: 儲存AEM庫現代化及其工作方式
+title: Cloud 5 — 儲存庫現代化工具
+description: AEM存放庫現代化及其運作方式
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -15,13 +15,13 @@ ht-degree: 3%
 
 ---
 
-# 雲5 — 儲存庫現代化器
+# Cloud 5 — 儲存庫現代化工具
 
-他們將研究儲存庫現代化器如何幫助您過渡到AEMas a Cloud Service，並對其工作原理和原因進行有益的概述。
+夥計們將研究存放庫現代化工具如何幫助您過渡到AEMas a Cloud Service，並提供其工作方式和原因的有用概覽。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342865?quality=12&learn=on)
 
-## 此視頻中包含的內容
+## 本影片涵蓋的內容
 
 + [AIO CLI](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration)
 + [存放庫現代化工具](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer)

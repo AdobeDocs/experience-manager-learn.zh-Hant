@@ -1,6 +1,6 @@
 ---
-title: Workflow[AEMPart4]中的變數
-description: 在工作流中使用XML、JSON、ArrayList和Document類型的變AEM量
+title: AEM工作流程中的變數[第4部分]
+description: 在AEM工作流程中使用XML、JSON、ArrayList、檔案型別的變數
 version: 6.5
 topic: Development
 role: Developer
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 ---
 
-# 工作流中的ArrayListAEM變數
+# AEM工作流程中的ArrayList變數
 
-在AEM Forms6.5中引入了ArrayList類型的變數。使用ArrayList變數的常見用例是定義要在AssignTask中使用的自定義路由。
+AEM Forms 6.5已匯入ArrayList型別的變數。使用ArrayList變數的常見使用案例是定義要在AssignTask中使用的自訂路由。
 
-要在工作流中使用ArrayList變AEM量，需要建立自適應表單，該表單在提交的資料中生成重複元素。 通常的做法是定義包含陣列元素的架構。 為本文的目的，我建立了一個包含陣列元素的簡單JSON架構。 使用案例是員工填寫費用報表。 在費用報表中，我們將捕獲提交者的經理名稱和經理的經理姓名。 管理器的名稱儲存在名為managerchain的陣列中。 下面的螢幕快照顯示了支出報表表單和Adaptive Forms提交中的資料。
+若要在AEM Workflow中使用ArrayList變數，您需要建立最適化表單，該表單會在提交的資料中產生重複元素。 常見做法是定義包含陣列元素的結構描述。 出於本文的目的，我建立了一個包含陣列元素的簡單JSON結構描述。 使用案例是員工填寫費用報表。 在費用報表中，我們會擷取提交者的經理名稱和經理名稱。 管理員的名稱儲存在稱為managerchain的陣列中。 以下熒幕擷圖顯示費用報表表單，以及最適化Forms提交中的資料。
 
-![支出報表](assets/expensereport.jpg)
+![費用報表](assets/expensereport.jpg)
 
-以下是自適應表單提交中的資料。 自適應表單基於JSON架構，綁定到架構的資料儲存在afBoundData元素的資料元素下。 管理器鏈是一個陣列，我們需要用管理器鏈陣列內對象的名稱元素填充ArrayList。
+以下是來自最適化表單提交的資料。 最適化表單是以JSON結構描述為基礎，繫結至結構描述的資料會儲存在afBoundData元素的資料元素下。 Managerchain是一個陣列，我們需要在Managerchain陣列內填入ArrayList中物件的name元素。
 
 ```json
 {
@@ -62,21 +62,21 @@ ht-degree: 0%
 }
 ```
 
-要初始化子類型字串的ArrayList變數，可以使用JSON點符號或XPath映射模式。 以下螢幕快照顯示您使用JSON點符號填充名為CustomRoutes的ArrayList變數。 確保指向陣列對象中的元素，如下面的螢幕快照所示。 我們正在用managerchain陣列對象的名稱填充CustomRoutes ArrayList。
-然後，CustomRoutes ArrayList用於填充AssignTask元件中的路由
-![自定義路由](assets/arraylist.jpg)
-一旦CustomRoutes ArrayList變數用已提交資料中的值初始化，AssignTask元件的Routes就會使用CustomRoutes變數填充。 下面的螢幕快照顯示了AssignTask中的自定義路由
-![任務](assets/customactions.jpg)
+若要初始化子型別字串的ArrayList變數，您可以使用JSON點標籤法或XPath對應模式。 下列熒幕擷圖顯示您使用JSON點標籤法填入名為CustomRoutes的ArrayList變數。 請確定您指向陣列物件中的元素，如下方熒幕擷圖所示。 我們正在使用managerchain陣列物件的名稱填入CustomRoutes ArrayList。
+然後會使用CustomRoutes ArrayList來填入AssignTask元件中的路由
+![自訂路由](assets/arraylist.jpg)
+使用提交資料中的值初始化CustomRoutes ArrayList變數後，就會使用CustomRoutes變數填入AssignTask元件的Routes。 下面的熒幕擷圖顯示AssignTask中的自訂路由
+![工作分派](assets/customactions.jpg)
 
-要在系統上test此工作流，請執行以下步驟
+若要在您的系統上測試此工作流程，請遵循下列步驟
 
-* 下載ArrayListVariable.zip檔案並將其保存到檔案系統
-* [導入ZIP檔案](assets/arraylistvariable.zip) 使用包管AEM理器
+* 下載ArrayListVariable.zip檔案並儲存至您的檔案系統
+* [匯入zip檔案](assets/arraylistvariable.zip) 使用AEM封裝管理員
 * [開啟TravelExpenseReport表單](http://localhost:4502/content/dam/formsanddocuments/helpx/travelexpensereport/jcr:content?wcmmode=disabled)
-* 輸入兩個費用和兩個經理的姓名
+* 輸入一些費用和2位經理的姓名
 * 按一下提交按鈕
-* [開啟收件箱](http://localhost:4502/aem/inbox)
-* 您應看到標題為「分配給費用管理員」的新任務
+* [開啟您的收件匣](http://localhost:4502/aem/inbox)
+* 您應該會看到名為「指派給費用管理員」的新任務
 * 開啟與任務關聯的表單
-* 您應看到兩個具有管理器名稱的自定義路由
-   [瀏覽ReviewExpenseReportWorkflow。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) 此工作流使用ArrayList變數、JSON類型變數、或拆分元件中的規則編輯器
+* 您應該會看到兩個具有管理員名稱的自訂路由
+   [探索ReviewExpenseReportWorkflow。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) 此工作流程使用Or-Split元件中的ArrayList變數、JSON型別變數、規則編輯器

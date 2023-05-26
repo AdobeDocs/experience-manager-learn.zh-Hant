@@ -1,6 +1,6 @@
 ---
-title: 建立自適應窗體
-description: 建立自適應表單，並將其基於建立的模板。
+title: 建立最適化表單
+description: 建立最適化表單，並以建立的範本為基礎。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -20,6 +20,6 @@ ht-degree: 13%
 
 # 建立最適化表單
 
-建立自適應表單，並將其與建立的主題關聯。
+建立最適化表單，並將其與建立的主題建立關聯。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332237?quality=12&learn=on)

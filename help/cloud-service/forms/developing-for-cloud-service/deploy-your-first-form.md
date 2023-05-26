@@ -1,6 +1,6 @@
 ---
-title: 將表單和主題同步到項AEM目
-description: 將AEM Forms資產同步到項AEM目
+title: 將您的表單和主題同步至AEM專案
+description: 將AEM Forms資產同步至AEM專案
 solution: Experience Manager
 role: Developer
 level: Beginner, Intermediate
@@ -15,16 +15,16 @@ ht-degree: 0%
 
 ---
 
-# 將自適應Forms與項AEM目同步
+# 將最適化Forms與AEM專案同步
 
 ## 建立主題
 
-要開始，在名為BankingApplication的資料夾中建立了名為BankingApplication的主題。 建議您在名為BankingApplication的資料夾中建立主題
+為了開始使用，在名為BankingApplication的資料夾中建立了一個名為BankingApplication的主題。 建議您在名為BankingApplication的資料夾中建立主題
 
-## 建立自適應Forms
+## 建立最適化Forms
 
-建立兩個名為（FormTemplates和BankingApplication）的資料夾。可以隨意將任意數量的xdp模板添加到FormTemplates資料夾，並使用BankingApplication主題在BankingApplication資料夾中至少建立一個表單。
+建立兩個名為（FormTemplates和BankingApplication）的資料夾。您可以新增任意數量的xdp範本至FormTemplates資料夾，並使用BankingApplication主題在BankingApplication資料夾中建立至少一個表單。
 
-要使用IntelliJ和Repo工AEM具將這些資產同步到項目中，請觀看以下視頻
+若要使用IntelliJ和Repo工具將這些資產同步到您的AEM專案，請觀看以下影片
 
 >[!VIDEO](https://video.tv.adobe.com/v/336937?quality=12&learn=on)

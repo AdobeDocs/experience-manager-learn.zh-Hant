@@ -1,6 +1,6 @@
 ---
-title: 使用日AEM志調試SDK
-description: 日誌充當調試應用程式的前AEM沿，但取決於在已部署的應用程式中進行充分的AEM日誌記錄。
+title: 使用記錄檔偵錯AEM SDK
+description: 記錄檔是AEM應用程式偵錯作業的最前線，但部署的AEM應用程式必須有充足的登入次數。
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -19,43 +19,43 @@ ht-degree: 2%
 
 ---
 
-# 使用日AEM志調試SDK
+# 使用記錄檔偵錯AEM SDK
 
-訪問AEMSDK的日誌AEM（SDK本地快速啟動Jar或Dispatcher Tools）可提供調試應用程式的關鍵AEM見解。
+存取AEM SDK的記錄(AEM SDK本機快速入門Jar或Dispatcher工具)可以提供AEM應用程式偵錯的重要深入分析。
 
-## 日AEM志
+## AEM記錄
 
 >[!VIDEO](https://video.tv.adobe.com/v/34334?quality=12&learn=on)
 
-日誌充當調試應用程式的前AEM沿，但取決於在已部署的應用程式中進行充分的AEM日誌記錄。 Adobe建議盡可能保持AEM本地開發和as a Cloud Service開發日誌配置的相似性，因為它使AEMSDK的本地快速啟動和as a Cloud Service的開發環境的日誌可見性正常化AEM，從而減少配置的扭曲和重新部署。
+記錄檔是AEM應用程式偵錯作業的最前線，但部署的AEM應用程式必須有充足的登入次數。 Adobe建議儘可能保持本機開發和AEMas a Cloud Service開發記錄設定，因為它在AEM SDK的本機Quickstart和AEMas a Cloud Service的開發環境中將記錄可見性標準化，並減少設定迂迴和重新部署。
 
-的 [項AEM目原型](https://github.com/adobe/aem-project-archetype) 配置在DEBUG級別為應用程式AEM的Java包進行日誌記錄，以便通過位於以下位置的Sling Logger OSGi配置進行本地開發
+此 [AEM專案原型](https://github.com/adobe/aem-project-archetype) AEM透過Sling Logger OSGi設定(位於
 
 `ui.apps/src/main/content/jcr_root/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
-登錄到 `error.log`。
+哪些記錄到 `error.log`.
 
-如果預設日誌記錄不足以進行本地開發，則可以通過AEMSDK的本地快速啟動日誌支援Web控制台配置即席日誌記錄，位於([/system/console/slinglog](http://localhost:4502/system/console/slinglog))，但建議不要將臨時更改保留到Git，除非在as a Cloud Service的開發環境中也需要這些AEM相同的日誌配置。 請記住，通過日誌支援控制台所做的更改會直接保留AEM到SDK的本地快速啟動儲存庫。
+如果預設記錄不足以用於本機開發，則可透過AEM SDK的本機Quickstart的Log Support Web主控台([/system/console/slinglog](http://localhost:4502/system/console/slinglog))，不過不建議將臨機變更保留至Git，除非AEMas a Cloud Service開發環境也需要相同的記錄設定。 請記住，透過記錄支援主控台的變更會直接儲存至AEM SDK的本機Quickstart存放庫。
 
-Java日誌語句可在 `error.log` 檔案：
+Java記錄陳述式可以在 `error.log` 檔案：
 
 ```
 $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 ```
 
-通常，&quot;跟蹤&quot; `error.log` 將輸出流傳輸到終端。
+通常「追蹤」以下專案會很實用： `error.log` 將其輸出串流到終端機。
 
 + macOS/Linux
    + `$ tail -f ~/aem-sdk/author/crx-quickstart/logs/error.log`
-+ Windows需要 [第三方尾部應用](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command) 或 [Powershell的Get-Content命令](https://stackoverflow.com/a/46444596/133936)。
++ Windows需要 [第三方尾部應用程式](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command) 或使用 [Powershell的Get-Content命令](https://stackoverflow.com/a/46444596/133936).
 
-## 調度程式日誌
+## Dispatcher記錄
 
-將調度程式日誌輸出到stdout `bin/docker_run` 調用，但日誌可以直接訪問Docker包含中的日誌。
+Dispatcher記錄會輸出到stdout，當 `bin/docker_run` 會叫用，但可直接透過在Docker包含中存取記錄。
 
-### 訪問Docker容器中的日誌{#dispatcher-tools-access-logs}
+### 存取Docker容器中的日誌{#dispatcher-tools-access-logs}
 
-Dispatcher日誌可以直接訪問Docker容器中的 `/etc/httpd/logs`。
+Dispatcher記錄可直接存取Docker容器中的 `/etc/httpd/logs`.
 
 ```shell
 $ docker ps
@@ -75,12 +75,12 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-_的 `<CONTAINER ID>` 在 `docker exec -it <CONTAINER ID> /bin/sh` 必須替換為從 `docker ps` 的子菜單。_
+_此 `<CONTAINER ID>` 在 `docker exec -it <CONTAINER ID> /bin/sh` 必須替換為以下清單中的目標Docker容器ID： `docker ps` 命令。_
 
 
-### 將Docker日誌複製到本地檔案系統{#dispatcher-tools-copy-logs}
+### 將Docker日誌複製到本機檔案系統{#dispatcher-tools-copy-logs}
 
-可以從Docker容器中複製調度程式日誌，位於 `/etc/httpd/logs` 到本地檔案系統，以便使用您喜愛的日誌分析工具進行檢查。 請注意，這是一個時間點拷貝，不提供對日誌的即時更新。
+可以從Docker容器複製排程程式日誌，位置為 `/etc/httpd/logs` 至本機檔案系統以使用您最喜愛的記錄分析工具進行檢查。 請注意，這是時間點復本，不會提供記錄檔的即時更新。
 
 ```shell
 $ docker ps
@@ -95,4 +95,4 @@ $ ls
     dispatcher.log          healthcheck_access_log  httpd_access.log        httpd_error.log
 ```
 
-_的 `<CONTAINER_ID>` 在 `docker cp <CONTAINER_ID>:/var/log/apache2 ./` 必須替換為從 `docker ps` 的子菜單。_
+_此 `<CONTAINER_ID>` 在 `docker cp <CONTAINER_ID>:/var/log/apache2 ./` 必須替換為以下清單中的目標Docker容器ID： `docker ps` 命令。_

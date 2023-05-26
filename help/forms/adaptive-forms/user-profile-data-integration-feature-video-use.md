@@ -1,6 +1,6 @@
 ---
-title: 使用用戶配置檔案資料與AEM Forms
-description: 將用戶AEM簡檔資訊與自適應Forms
+title: 透過AEM Forms使用使用者設定檔資料整合
+description: 整合AEM使用者設定檔資訊與最適化Forms
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,19 +15,19 @@ ht-degree: 0%
 
 ---
 
-# 使用用戶配置檔案資料與AEM Forms{#using-user-profile-data-integration-with-aem-forms}
+# 透過AEM Forms使用使用者設定檔資料整合{#using-user-profile-data-integration-with-aem-forms}
 
-AEM Forms資料整合允許您配置和連接到不同的資料源。 支援開箱即用。 但是，只需少量自定義，您也可以整合其他資料源。
+AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列為支援的現成可用功能。 不過，只需少量自訂，您也可以整合其他資料來源。
 
-關係資料庫 — MySQL、MicrosoftSQL Server、IBMDB2和OracleRDBMS
+關聯式資料庫 — MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS
 
-1. AEM用戶配置檔案
-1. REST風格的Web服務
-1. 基於SOAP的Web服務
-1. OData服務本文將重點介紹將用戶AEM簡檔資訊與AdaptiveForms整合。
+1. AEM使用者設定檔
+1. RESTful Web服務
+1. 以SOAP為基礎的網站服務
+1. OData服務本文將重點說明如何整合AEM使用者設定檔資訊與Adaptive Forms。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17432?quality=12&learn=on)
 
 >[!NOTE]
 >
->此功能僅在AEM6.3後可用。
+>此功能僅適用於AEM 6.3以後版本。

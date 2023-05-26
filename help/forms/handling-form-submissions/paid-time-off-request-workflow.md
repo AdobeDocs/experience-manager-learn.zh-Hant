@@ -1,6 +1,6 @@
 ---
-title: 簡單付費請求工作流
-description: 在工作流中隱藏和顯示自適應表單面AEM板
+title: 簡易付費休假請求工作流程
+description: 在AEM Workflow中隱藏和顯示最適化表單面板
 uuid: 28ceb72b-24d9-488e-92af-7e85775dc682
 feature: Adaptive Forms
 topics: workflow
@@ -21,41 +21,41 @@ ht-degree: 0%
 
 ---
 
-# 簡單付費請求工作流
+# 簡易付費休假請求工作流程
 
-在本文中，我們看到一個用於請求帶薪休假的簡單工作流。 業務要求如下：
+在本文中，我們將討論用於要求付費休假的簡單工作流程。 業務需求如下：
 
-* 用戶A通過填寫自適應表單請求超時。
-* 表單被路由到AEM管理員用戶（在現實生活中它被路由到提交者的管理員）
-* 管理員開啟窗體。 管理員不能編輯提交者填寫的任何資訊。
-* 批准者部分應對批准者可見(在本例中是管理AEM員用戶)。
+* 使用者A透過填寫最適化表單來要求休假。
+* 表單會路由傳送給AEM管理員使用者（在實際情況中，它會路由傳送給提交者的管理員）
+* 管理員會開啟表單。 管理員應該無法編輯提交者填入的任何資訊。
+* 核准者區段應該對核准者可見(在此情況下，核准者是AEM管理員使用者)。
 
-為了達到上述要求，我們使用一個叫做 **初始步長** 在表單中，其預設值設定為「是」。提交表單時，工作流中的第一步將初始步驟的值設定為「否」。 表單具有業務規則以根據初始步驟值隱藏和顯示相應的節。
+為了達到上述要求，我們使用隱藏欄位，稱為 **initialstep** ，其預設值設為「是」。提交表單時，工作流程中的第一個步驟會將initialstep的值設為「否」。 表單具有商業規則，可根據初始步驟值隱藏和顯示適當的區段。
 
-**將表單配置為觸發工AEM作流**
+**設定表單以觸發AEM Workflow**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28406?quality=12&learn=on)
 
-**工作流**
+**工作流程逐步說明**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28407?quality=12&learn=on)
 
-**提交者對「暫停請求」表單的視圖**
+**提交者的休假請求表單檢視**
 
-![初始步長](assets/initialstep.gif)
+![initialstep](assets/initialstep.gif)
 
-**表單的批准者視圖**
+**表單的核准者檢視**
 
-![批准視圖](assets/approversview.gif)
+![approverview](assets/approversview.gif)
 
-在批准者視圖中，批准者無法編輯提交的資料。 還有一個新節僅用於批准者。
+在核准者檢視中，核准者無法編輯提交的資料。 還有一個新區段僅供核准者使用。
 
-要在您的系統上test此工作流，請執行以下步驟：
-* [下載並部署DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* [下載並部署SetValue自定義OSGI捆綁包](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
-* [將與本條相關的資產導入AEM](assets/helpxworkflow.zip)
-* 開啟 [請求時間表](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
-* 填寫詳細資訊並提交
-* 開啟 [收件箱](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html)。 您應看到已分配的新任務。 開啟窗體。 提交者的資料應為只讀，並且新批准者部分應可見。
-* 瀏覽 [工作流模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
-* 瀏覽流程步驟。 這是將初始步驟的值設定為「否」的步驟。
+若要在您的系統上測試此工作流程，請遵循下列步驟：
+* [下載並部署DevelopingWidthServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [下載和部署SetValue自訂OSGI套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
+* [將與本文相關的資產匯入AEM](assets/helpxworkflow.zip)
+* 開啟 [休假要求表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* 填寫詳細資料並提交
+* 開啟 [收件匣](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). 您應該會看到指派的新任務。 開啟表單。 提交者的資料應為唯讀，且應會顯示新的核准者區段。
+* 探索 [工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
+* 探索程式步驟。 此步驟會將initialstep的值設為「否」。

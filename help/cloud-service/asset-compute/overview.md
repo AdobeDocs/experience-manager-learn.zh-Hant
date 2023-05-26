@@ -1,6 +1,6 @@
 ---
-title: asset computeas a Cloud Service的微服務擴展AEM性
-description: 本教程介紹如何建立一個簡單的Asset compute工作人員，該工作人員通過將原始資產裁剪到圓來建立資產格式副本，並應用可配置的對比度和亮度。 雖然工作人員本身是基本的，但本教程使用它來探索建立、開發和部署自定義Asset compute工作人員，以便與as a Cloud ServiceAEM一起使用。
+title: AEMas a Cloud Service的Asset compute微服務擴充性
+description: 本教學課程將逐步解說如何建立簡易的Asset compute背景工作，此背景工作程式會將原始資產裁切成圓圈來建立資產轉譯，並套用可設定的對比和亮度。 雖然背景工作程式本身是基礎工作，但本教學課程會使用它來探索建立、開發和部署自訂Asset compute背景工作，以與AEMas a Cloud Service搭配使用。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -21,143 +21,143 @@ ht-degree: 0%
 
 ---
 
-# asset compute微服務可擴充性
+# asset compute微服務擴充性
 
-因AEM為Cloud Service的Asset computemicroservices支援開發和部署自定義工作程式，這些工作程式用於讀取和操作儲存在（最常見）中的資產的二進位數AEM據，以建立自定義資產格式副本。
+AEM as a Cloud Service的Asset compute微服務支援開發及部署自訂背景工作，用於讀取和操控儲存在AEM中資產的二進位資料，最常用來建立自訂資產轉譯。
 
-而在AEM6.x中，自定AEM義工作流進程用於讀取、轉換和回寫資產格式副本，而在as a Cloud Service的AEMAsset compute工作人員則滿足此需求。
+在AEM 6.x中，自訂AEM Workflow程式用於讀取、轉換和回寫資產轉譯，而在AEMas a Cloud ServiceAsset compute背景工作則可滿足此需求。
 
-## 你將做什麼
+## 您將要執行的動作
 
 >[!VIDEO](https://video.tv.adobe.com/v/40965?quality=12&learn=on)
 
-本教程介紹如何建立一個簡單的Asset compute工作人員，該工作人員通過將原始資產裁剪到圓來建立資產格式副本，並應用可配置的對比度和亮度。 雖然工作人員本身是基本的，但本教程使用它來探索建立、開發和部署自定義Asset compute工作人員，以便與as a Cloud ServiceAEM一起使用。
+本教學課程將逐步解說如何建立簡易的Asset compute背景工作，此背景工作程式會將原始資產裁切成圓圈來建立資產轉譯，並套用可設定的對比和亮度。 雖然背景工作程式本身是基礎工作，但本教學課程會使用它來探索建立、開發和部署自訂Asset compute背景工作，以與AEMas a Cloud Service搭配使用。
 
 ### 目標 {#objective}
 
-1. 設定和設定必要的帳戶和服務以構建和部署Asset compute工作人員
-1. 建立和配置Asset compute項目
-1. 開發生成自定義格式副本的Asset compute工作人員
-1. 編寫test，並瞭解如何調試自定義Asset compute工作人員
-1. 部署Asset compute工作人員，並通過處理配置文AEM件整合其as a Cloud Service作者服務
+1. 布建和設定必要的帳戶和服務，以建置和部署Asset compute工作者
+1. 建立及設定Asset compute專案
+1. 開發可產生自訂轉譯的Asset compute背景工作
+1. 編寫測試，並瞭解如何對自訂Asset compute背景工作進行偵錯
+1. 部署Asset compute背景工作，並透過處理設定檔將其整合AEMas a Cloud Service作者服務
 
 ## 設定
 
-瞭解如何正確準備擴展Asset compute工作人員，瞭解哪些服務和帳戶必須配置和配置，以及本地安裝的軟體進行開發。
+瞭解如何正確準備擴充Asset compute工作者，並瞭解必須布建和設定哪些服務和帳戶，以及本機安裝哪些軟體以供開發。
 
-### 帳戶和服務預配{#accounts-and-services}
+### 帳戶和服務布建{#accounts-and-services}
 
-以下帳戶和服務需要設定和訪問，以完成教程、AEMas a Cloud Service開發環境或沙盒程式、對App Builder和MicrosoftAzure Blob儲存的訪問。
+若要完成本教學課程、AEMas a Cloud Service開發環境或沙箱程式、存取App Builder和Microsoft Azure Blob儲存空間，下列帳戶和服務需要布建和存取。
 
-+ [提供帳戶和服務](./set-up/accounts-and-services.md)
++ [布建帳戶和服務](./set-up/accounts-and-services.md)
 
-### 地方發展環境
+### 本機開發環境
 
-地方開發Asset compute項目需要一個特定的開發工具集，不同於傳統開發AEM，包括：MicrosoftVisual Studio代碼、Docker Desktop、Node.js和支援npm模組。
+asset compute專案的本機開發需要特定的開發人員工具集，不同於傳統的AEM開發，包括：Microsoft Visual Studio Code、Docker Desktop、Node.js和支援的npm模組。
 
-+ [設定本地開發環境](./set-up/development-environment.md)
++ [設定本機開發環境](./set-up/development-environment.md)
 
-### 應用程式生成器
+### App Builder
 
-asset compute項目是特別定義的App Builder項目，因此需要訪問Adobe Developer控制台中的App Builder才能設定和部署這些項目。
+asset compute專案是特別定義的App Builder專案，因此需要在Adobe Developer主控台中存取App Builder，才能設定和部署這些專案。
 
-+ [設定應用生成器](./set-up/app-builder.md)
++ [設定App Builder](./set-up/app-builder.md)
 
 ## 開發
 
-瞭解如何建立和配置Asset compute項目，然後開發生成定制資產格式副本的定製工作人員。
+瞭解如何建立和設定Asset compute專案，然後開發自訂背景工作，以產生定製的資產轉譯。
 
-### 建立新Asset compute項目
+### 建立新的Asset compute專案
 
-asset compute項目包含一個或多個Asset compute工作程式，使用互動式Adobe I/OCLI生成。 asset compute項目是特殊結構化的App Builder項目，而Node.js項目是。
+asset compute專案包含一或多個Asset compute背景工作，並使用互動式Adobe I/OCLI產生。 asset compute專案是特別結構化的App Builder專案，而這類專案又是Node.js專案。
 
-+ [建立新Asset compute項目](./develop/project.md)
++ [建立新的Asset compute專案](./develop/project.md)
 
-### 配置環境變數
+### 設定環境變數
 
-在中維護環境變數 `.env` 檔案用於本地開發，用於提供本地開發所需的Adobe I/O憑據和雲儲存憑據。
+環境變數會保留在 `.env` 檔案供本機開發使用，用於提供本機開發所需的Adobe I/O憑證和雲端儲存空間憑證。
 
-+ [配置環境變數](./develop/environment-variables.md)
++ [設定環境變數](./develop/environment-variables.md)
 
-### 配置manifest.yml
+### 設定manifest.yml
 
-asset compute項目包含清單，這些清單定義了項目中所有Asset compute工作人員，以及在部署到Adobe I/O Runtime執行時可用的資源。
+asset compute專案包含的資訊清單會定義專案內包含的所有Asset compute背景工作，以及這些背景工作部署到Adobe I/O Runtime執行時可用的資源。
 
-+ [配置manifest.yml](./develop/manifest.md)
++ [設定manifest.yml](./develop/manifest.md)
 
-### 開發員工
+### 開發背景工作
 
-開發Asset compute工作程式是擴展Asset compute微服務的核心，因為該工作程式包含生成或協調生成的資產格式副本的自定義代碼。
+開發Asset compute背景工作是擴充Asset compute微服務的核心，因為背景工作包含產生或協調產生結果資產轉譯的自訂程式碼。
 
-+ [開發Asset compute工](./develop/worker.md)
++ [開發Asset compute背景工作](./develop/worker.md)
 
 ### 使用Asset compute開發工具
 
-asset compute開發工具提供本地Web線束，用於部署、執行和預覽工作人員生成的格式副本，支援快速、迭代的Asset compute工作人員開發。
+「Asset compute開發工具」提供本機Web配線，用於部署、執行和預覽工作者產生的轉譯，支援快速和反複的Asset compute工作者開發。
 
 + [使用Asset compute開發工具](./develop/development-tool.md)
 
-## Test和調試
+## 測試和偵錯
 
-瞭解如何test自定義Asset compute工作程式以確保對其操作有信心，並調試Asset compute工作程式以瞭解和排除如何執行自定義代碼的問題。
+瞭解如何測試自訂Asset compute背景工作以對他們的操作有信心，並偵錯Asset compute背景工作以瞭解自訂計畫碼的執行方式並對其進行疑難排解。
 
-### Test工作人員
+### 測試背景工作
 
-asset compute為員工建立test套件提供了一個test框架，使定義test能夠確保正確的行為變得容易。
+asset compute提供測試架構，可建立適用於員工的測試套裝，進而定義可輕鬆確保正確行為的測試。
 
-+ [Test工作人員](./test-debug/test.md)
++ [測試背景工作](./test-debug/test.md)
 
-### 調試工作進程
+### 對背景工作進行偵錯
 
-asset compute工作人員提供不同級別的傳統調試 `console.log(..)` 輸出到整合 __VS代碼__ 和  __wskdebug__，允許開發人員在即時執行工作代碼時逐步完成。
+asset compute背景工作提供來自傳統背景的各種偵錯層級 `console.log(..)` 輸出，與整合 __VS程式碼__ 和  __wskdebug__，可讓開發人員在執行背景工作程式碼時即時執行程式碼。
 
-+ [調試工作進程](./test-debug/debug.md)
++ [對背景工作進行偵錯](./test-debug/debug.md)
 
 ## 部署
 
-瞭解如何將自定義Asset compute工作AEM人員與as a Cloud Service整合，方法是首先將他們部署到Adobe I/O Runtime，然AEM後通過AEM Assets的「處理配置檔案」從as a Cloud Service作者調用。
+瞭解如何將自訂Asset compute背景工作與AEMas a Cloud Service整合，方法是先將自訂背景工作部署到Adobe I/O Runtime，然後透過AEM Assets的處理設定檔從AEMas a Cloud Service作者叫用。
 
-### 部署到Adobe I/O Runtime
+### 部署至Adobe I/O Runtime
 
-asset compute工人必須部署到Adobe I/O Runtime，才能與as a Cloud ServiceAEM配合使用。
+asset compute背景工作必須部署至Adobe I/O Runtime，才能與AEMas a Cloud Service搭配使用。
 
-+ [使用處理配置檔案](./deploy/runtime.md)
++ [使用處理設定檔](./deploy/runtime.md)
 
-### 通過處理配置文AEM件整合員工
+### 透過AEM處理設定檔整合背景工作
 
-一旦部署到Adobe I/O Runtime,Asset compute工人可以通過以下方式AEM在as a Cloud Service註冊 [資產處理配置檔案](../../assets/configuring/processing-profiles.md)。 處理配置檔案則應用於應用於其中資產的資產資料夾。
+部署至Adobe I/O Runtime後，Asset compute背景工作可以透過以下方式在AEMas a Cloud Service中註冊： [資產處理設定檔](../../assets/configuring/processing-profiles.md). 處理設定檔依次套用至套用至其中資產的資產資料夾。
 
-+ [與處理配AEM置檔案整合](./deploy/processing-profiles.md)
++ [與AEM處理設定檔整合](./deploy/processing-profiles.md)
 
 ## 進階
 
-這些簡述教程基於前幾章中建立的基礎知識，處理更高級的使用案例。
+這些簡短的教學課程會以先前章節中建立的基礎學習為基礎，處理更進階的使用案例。
 
-+ [開發Asset compute元資料工作程式](./advanced/metadata.md) 能將元資料寫回
++ [開發Asset compute中繼資料背景工作](./advanced/metadata.md) 可以將中繼資料寫回
 
-## 吉圖布上的哥德巴斯
+## Github上的程式碼基底
 
-本教程的代碼庫可在Github上找到，網址為：
+此教學課程的程式碼基底可在Github上取得，網址為：
 
-+ [adobe/aem參考線 — wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @主分支
++ [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @主分支
 
-原始碼不包含必需的 `.env` 或 `config.json` 的子菜單。 必須使用 [帳戶和服務](#accounts-and-services) 的下界。
+原始程式碼未包含必要的 `.env` 或 `config.json` 檔案。 您必須使用下列專案新增及設定這些專案： [帳戶和服務](#accounts-and-services) 資訊。
 
 ## 其他資源
 
-以下是各種Adobe資源，它們提供了進一步的資訊和有用的API和SDK，以用於開發Asset compute工作程式。
+下列各種Adobe資源可提供進一步資訊，以及用於開發Asset compute工作者的實用API和SDK。
 
 ### 文件
 
-+ [asset compute服務文檔](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
-+ [asset compute開發工具自述檔案](https://github.com/adobe/asset-compute-devtool)
-+ [asset compute示例工作人員](https://github.com/adobe/asset-compute-example-workers)
++ [asset compute服務檔案](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
++ [asset compute開發工具readme](https://github.com/adobe/asset-compute-devtool)
++ [asset compute範例背景工作](https://github.com/adobe/asset-compute-example-workers)
 
 ### API和SDK
 
-+ [asset computeSDK](https://github.com/adobe/asset-compute-sdk)
-   + [asset compute公地](https://github.com/adobe/asset-compute-commons)
++ [ASSET COMPUTESDK](https://github.com/adobe/asset-compute-sdk)
+   + [asset compute Commons](https://github.com/adobe/asset-compute-commons)
    + [asset computeXMP](https://github.com/adobe/asset-compute-xmp#readme)
-+ [Adobe雲Blobstore包裝庫](https://github.com/adobe/node-cloud-blobstore-wrapper)
-+ [Adobe節點獲取重試庫](https://github.com/adobe/node-fetch-retry)
-+ [asset compute示例工作人員](https://github.com/adobe/asset-compute-example-workers)
++ [Adobe雲端Blobstore包裝函式庫](https://github.com/adobe/node-cloud-blobstore-wrapper)
++ [Adobe節點擷取重試程式庫](https://github.com/adobe/node-fetch-retry)
++ [asset compute範例背景工作](https://github.com/adobe/asset-compute-example-workers)

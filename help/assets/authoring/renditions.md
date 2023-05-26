@@ -1,6 +1,6 @@
 ---
 title: 轉譯
-description: 瞭解AEM Assets的格式副本，以及如何預覽它們。
+description: 瞭解AEM Assets中的轉譯以及如何加以預覽。
 feature: Renditions
 role: User
 level: Beginner
@@ -19,6 +19,6 @@ ht-degree: 7%
 
 # 轉譯
 
-瞭解AEM Assets的格式副本，以及如何預覽它們。
+瞭解AEM Assets中的轉譯以及如何加以預覽。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32047?quality=12&learn=on)

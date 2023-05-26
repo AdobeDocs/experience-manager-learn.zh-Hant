@@ -1,6 +1,6 @@
 ---
 title: 儲存表單資料
-description: 將表單資料與新附件映射一起儲存在資料庫中
+description: 將表單資料連同新的附件對應儲存在資料庫中
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -19,14 +19,14 @@ ht-degree: 2%
 
 # 儲存表單資料
 
-下一步是建立一個服務，以在資料庫中插入新行，以儲存自適應表單資料和相關的附件。
-下面的螢幕抓圖顯示資料庫中的一行。
+下一步是建立服務，在資料庫中插入新列，以儲存最適化表單資料和相關附件資訊。
+下列熒幕擷圖顯示資料庫中的一列。
 
 
-![示例行](assets/sample-row.JPG)
+![範例列](assets/sample-row.JPG)
 
 
-以下代碼在資料庫中插入一行，其中包含相應的資料
+下列程式碼會在資料庫中插入含有適當資料的新列
 
 ```java
 public String storeFormData(String formData, String attachmentsInfo, String telephoneNumber) {
@@ -72,5 +72,5 @@ public String storeFormData(String formData, String attachmentsInfo, String tele
 
 ## 後續步驟
 
-[實施保存並退出](./create-servlet.md)
+[實作儲存並退出](./create-servlet.md)
 

@@ -1,6 +1,6 @@
 ---
-title: Workfront的高級設定和工作流AEM，增強連接器
-description: 瞭解Workfront的高級設定，以AEM及如何在中配置高級工作流和啟動程式，以管AEM理資料在與AEMWorkfront之間的同步。
+title: AEM增強型聯結器Workfront的進階設定和工作流程
+description: 瞭解AEM增強型聯結器Workfront的進階設定，以及如何在AEM中設定進階工作流程和啟動器，以管理AEM與Workfront之間的資料同步。
 version: Cloud Service
 topic: Content Management, Integrations
 role: Admin, Architect, Developer
@@ -17,12 +17,12 @@ ht-degree: 0%
 
 ---
 
-# 高級設定和工作流
+# 進階設定和工作流程
 
-![專AEM家系列](./assets/banner.png)
+![AEM Experts系列](./assets/banner.png)
 
-瞭解Workfront的高級設定，以AEM及如何在中配置高級工作流和啟動程式，以管AEM理資料在與AEMWorkfront之間的同步。
+瞭解AEM增強型聯結器Workfront的進階設定，以及如何在AEM中設定進階工作流程和啟動器，以管理AEM與Workfront之間的資料同步。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340397?quality=12&learn=on)
 
-_A的第四部分 [關於WorkfrontExperience Manager增強連接器的四部分專家系列](./overview.md)_
+_a的第四部分 [Workfront for Experience Manager增強型聯結器的四部分專家系列](./overview.md)_

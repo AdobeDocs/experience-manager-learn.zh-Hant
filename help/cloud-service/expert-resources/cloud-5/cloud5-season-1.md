@@ -1,6 +1,6 @@
 ---
-title: 雲5 — 第一季
-description: 瞭解Adobe Experience Manager(AEM)as a Cloud Service於Adobe自己的專家工程師和提供該工程師的專家服務。
+title: Cloud 5 — 第1季
+description: 瞭解Adobe Experience Manager (AEM)as a Cloud Service於Adobe自己的專業工程師來建置它，以及瞭解提供它的專業服務。
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
@@ -12,74 +12,74 @@ ht-degree: 0%
 
 ---
 
-# 雲5
+# Cloud 5
 
-![專AEM家系列](./imgs/masthead.png)
+![AEM Experts系列](./imgs/masthead.png)
 
 ## 簡介
 
-歡迎使用工程部的雲5系AEM列。 任何產品實施階段的主要問題之一是有足夠的代碼示例和/或這些示例、工具或API的即時演示。 此系列的目標是在5分鐘或更短時間內AEM提供有關as a Cloud Service的有用資訊。
+歡迎使用AEM Engineering的Cloud 5系列。 任何產品實作階段的主要問題之一，就是這些範例、工具或API的程式碼範例和/或即時示範是否足夠。 此系列的目標是在5分鐘或更短時間內提供關於AEMas a Cloud Service的有用資訊。
 
-訪問 [建議框](https://forms.office.com/r/74P5Xz4UH0) 提交主題想法。
+造訪 [建議方塊](https://forms.office.com/r/74P5Xz4UH0) 用於提交主題概念。
 
-## 第一季
+## 第1季
 
-每個季節的長度各不相同，按固定時間表發放。 第1季的主題主要源於我們在與客戶和合作夥伴的日常接觸中遇到的過去請求。 訪問此頁面以獲取每週更新，或在您選擇的社交網路上關注我們。
+每一季的長度各異，且會依固定排程發行。 第1季的主題主要來自我們在與客戶和合作夥伴的日常互動中遇到的過去請求。 請造訪此頁面，瞭解每週更新或前往您選擇的社交網路關注我們。
 
 <table>
   <tr>
    <td>
       <a href="./cloud5-aem-cdn-part1.md">
-      <img alt="AEMCDN第1部分" src="./imgs/001-thumb.png"/>
+      <img alt="AEM CDN第1部分" src="./imgs/001-thumb.png"/>
       </a>
       <div>
-         <a href="./cloud5-aem-cdn-part1.md"><strong>AEMCDN深潛（第1部分）</strong></a>         
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+         <a href="./cloud5-aem-cdn-part1.md"><strong>AEM CDN深入探討（第1部分）</strong></a>         
+         <br/><em>資深雲端架構師Darin Kuntze與James Talbot</em>
       </div>
       <p>
         <br/>
-         第1部分是了AEM解as a Cloud Service的CDN以及如何在實施中使用它。
+         第1部分說明AEMas a Cloud Service的CDN，以及如何在實施中使用。
       </p>
      </td>   
      <td>
       <a href="./cloud5-aem-cdn-part2.md">
-         <img alt="AEMCDN第2部分" src="./imgs/002-thumb.png"/>
+         <img alt="AEM CDN第2部分" src="./imgs/002-thumb.png"/>
       </a>
       <div>
-         <a href="./cloud5-aem-cdn-part2.md"><strong>AEMCDN深潛（第2部分）</strong></a>
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+         <a href="./cloud5-aem-cdn-part2.md"><strong>AEM CDN深入探討（第2部分）</strong></a>
+         <br/><em>資深雲端架構師Darin Kuntze與James Talbot</em>
       </div>
       <p>
         <br/>
-         第2部分是我們對AEMas a Cloud ServiceCDN的展望。 我們回答了一些關於您在新CDN中獲得哪些功能的更常見問題和誤解。
+         第2部分延續我們對AEMas a Cloud ServiceCDN的看法。 我們針對您在新CDN中獲得哪些功能的一些常見問題和神話，提供解答。
       </p>
    </td>
      <td>
         <a href="./cloud5-aem-log-files.md">
-            <img alt="日誌檔案和日誌記錄" src="./imgs/003-thumb.png"/>
+            <img alt="記錄檔與記錄" src="./imgs/003-thumb.png"/>
         </a>
       <div>
-         <a href="./cloud5-aem-log-files.md"><strong>日誌檔案和日誌記錄</strong></a>
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+         <a href="./cloud5-aem-log-files.md"><strong>記錄檔與記錄</strong></a>
+         <br/><em>資深雲端架構師Darin Kuntze與James Talbot</em>
       </div>
       <p>
         <br/>
-         這是一個關於如何訪問as a Cloud Service中的日AEM志的快速瞭解，包括如何通過用戶介面和API訪問日誌。
+         以下快速說明如何存取AEMas a Cloud Service的記錄，包括如何透過使用者介面及從API存取記錄。
       </p>
    </td> 
   </tr>
   <tr>
    <td>
         <a href="./cloud5-getting-login-token-integrations.md">
-            <img alt="訪問令牌" src="./imgs/004-thumb.png"/>
+            <img alt="存取Token" src="./imgs/004-thumb.png"/>
         </a>
       <div>
-        <a href="./cloud5-getting-login-token-integrations.md"><strong>與訪問令牌整合</strong></a>        
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+        <a href="./cloud5-getting-login-token-integrations.md"><strong>與Access Token整合</strong></a>        
+         <br/><em>資深雲端架構師Darin Kuntze與James Talbot</em>
       </div>
       <p>
         <br/>
-         快速概述並演示與登錄令牌交互以在雲服務環境中執行整合工作。
+         與登入權杖互動以在雲端服務環境中進行整合工作的快速概述和示範。
       </p>
      </td>   
      <td>
@@ -87,80 +87,80 @@ ht-degree: 0%
       <img alt="雲端中的 Dispatcher" src="./imgs/005-thumb.png"/>
        </a>  
       <div>
-        <a href="./cloud5-aem-dispatcher-cloud.md"><strong>雲中的調度程式</strong></a>
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+        <a href="./cloud5-aem-dispatcher-cloud.md"><strong>雲端中的Dispatcher</strong></a>
+         <br/><em>資深雲端架構師Darin Kuntze與James Talbot</em>
       </div>
       <p>
         <br/>
-        Darin和James討論雲中的DispatcherAEM，包括一些最佳實踐和與AMS/On-Prem的不同之處。 
+        Darin和James討論AEM雲端中的Dispatcher，包括一些最佳實務和與AMS/內部部署的差異。 
       </p>
    </td>
      <td>
         <a href="./cloud5-aem-content-migration-part-1.md">
-            <img alt="遷移（第1部分）" src="./imgs/006-thumb.png"/>
+            <img alt="移轉（第1部分）" src="./imgs/006-thumb.png"/>
         </a>
       <div>
-         <a href="./cloud5-aem-content-migration-part-1.md"><strong>遷移（第1部分）</strong></a>
-         <br/><em>Darin Kuntze &amp; James Talbot，高級雲架構師和Applesmith博士</em>
+         <a href="./cloud5-aem-content-migration-part-1.md"><strong>移轉（第1部分）</strong></a>
+         <br/><em>與Darin Kuntze和James Talbot，資深雲端架構師與Applesmith博士</em>
       </div>
       <p>
         <br/>
-         遷移到雲的技巧和技巧的第一部分（共兩部分）。 我們在第一部分的主要重點是最佳實踐和準備工作，讓您能夠做好遷移的準備。
+         移轉至雲端的秘訣和訣竅中的第一部分（兩部分之一）。 我們第一部分的主要重點是讓您做好遷移準備的最佳實務和準備工作。
       </p>
    </td> 
   </tr>
 <tr>
    <td>
         <a href="./cloud5-aem-content-migration-part-2.md">
-            <img alt="遷移（第2部分）" src="./imgs/007-thumb.png"/>
+            <img alt="移轉（第2部分）" src="./imgs/007-thumb.png"/>
         </a>
       <div>
-        <a href="./cloud5-aem-content-migration-part-2.md"><strong>遷移（第2部分）</strong></a>     
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+        <a href="./cloud5-aem-content-migration-part-2.md"><strong>移轉（第2部分）</strong></a>     
+         <br/><em>資深雲端架構師Darin Kuntze與James Talbot</em>
       </div>
       <p>
         <br/>
-         第二部分（共兩部分）是遷移到雲的技巧和技巧。 第二部分主要是使用可用的遷移工具。
+         移轉至雲端的秘訣與技巧，共分為第二部分（共2部分）。 第二部分主要說明如何使用可用的移轉工具。
       </p>
      </td>   
      <td>
         <a href="./cloud5-aem-dispatcher-validator.md">
-            <img alt="調度程式驗證程式" src="./imgs/008-thumb.png"/>
+            <img alt="Dispatcher驗證器" src="./imgs/008-thumb.png"/>
         </a>
       <div>
-         <a href="./cloud5-aem-dispatcher-validator.md"><strong>調度程式驗證程式</strong></a>
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+         <a href="./cloud5-aem-dispatcher-validator.md"><strong>Dispatcher驗證器</strong></a>
+         <br/><em>資深雲端架構師Darin Kuntze與James Talbot</em>
       </div>
       <p>
         <br/>
-         作為先前遷移討論的一個分支，我們將查看調度程式驗證程式及其可完成的某些任務。
+         作為先前移轉討論的分支，我們將瞭解Dispatcher驗證器及其可以完成的一些任務。
       </p>
    </td>
      <td>
         <a href="./cloud5-aem-search-and-indexing.md">
-            <img alt="索引和搜索提示" src="./imgs/009-thumb.png"/>
+            <img alt="索引和搜尋提示" src="./imgs/009-thumb.png"/>
         </a>
       <div>
-         <a href="./cloud5-aem-search-and-indexing.md"><strong>索引和搜索提示</strong></a>
-         <br/><em>與Darin Kuntze和James Talbot合作，高級雲架構師</em>
+         <a href="./cloud5-aem-search-and-indexing.md"><strong>索引和搜尋提示</strong></a>
+         <br/><em>資深雲端架構師Darin Kuntze與James Talbot</em>
       </div>
       <p>
         <br/>
-         對於索引和搜索等複雜項目，團隊會向您展示一些在優化開發時間和解決問題之前輕鬆取得的成功。
+         對於像索引和搜尋這樣複雜的專案，團隊會向您展示一些可以讓您最佳化開發時間並在問題發生之前解決這些問題的簡單方法。
       </p>
    </td> 
   </tr>
     <tr>
         <td>
             <a href="./cloud5-adobe-app-builder.md">
-                <img alt="Adobe應用生成器" src="./imgs/010-thumb.png"/>
+                <img alt="AdobeApp Builder" src="./imgs/010-thumb.png"/>
             </a>
             <div>
-                <a href="./cloud5-adobe-app-builder.md"><strong>Adobe應用生成器</strong></a><br/>        
-                <em>高級雲架構師和阿莫·阿南德</em>
+                <a href="./cloud5-adobe-app-builder.md"><strong>AdobeApp Builder</strong></a><br/>        
+                <em>與Darin Kuntze和James Talbot，資深雲端架構師和Amol Anand</em>
             </div>
             <p><br/>
-                請查看一些您可以使用AdobeApp Builder執行的很酷的操作，並瞭解有關雲中自定義項未來的新資訊。
+                快來看看您可以使用AdobeApp Builder做的一些很酷的事情，並瞭解關於雲端中自訂的未來的一些新東西。
             </p>
         </td>
         <td></td>

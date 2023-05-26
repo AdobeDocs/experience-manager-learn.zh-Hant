@@ -1,6 +1,6 @@
 ---
-title: 捕獲所需資訊以排除DDX相關問題的步驟
-description: 捕獲所需的詳細資訊以排除與匯編器相關的問題
+title: 擷取必要資訊以疑難排解DDX相關問題的步驟
+description: 擷取疑難排解組合器相關問題的所需詳細資訊
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 排除DDX相關問題的步驟
+# 疑難排解DDX相關問題的步驟
 
-*此視頻將介紹捕獲所需資訊的步驟，以解決Forms匯編器服務中與DDX相關的問題。*
+*本影片逐步解說在Forms Assembler服務中擷取疑難排解DDX相關問題所需資訊的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335517?quality=12&learn=on)

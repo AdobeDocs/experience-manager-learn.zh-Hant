@@ -1,6 +1,6 @@
 ---
-title: 使用「放置複製」資產工序
-description: 瞭解如何使用「放置複製」操作使用AEM Assets的資產。
+title: 使用置入複製資產作業
+description: 瞭解如何使用「置入副本」操作從AEM Assets使用資產。
 sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: Cloud Service
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 放置副本 {#place-copy}
+# 置入副本 {#place-copy}
 
-瞭解如何使用「放置複製」操作使用AEM Assets的資產。
+瞭解如何使用「置入副本」操作從AEM Assets使用資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34049?quality=12&learn=on)

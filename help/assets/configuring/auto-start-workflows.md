@@ -1,6 +1,6 @@
 ---
-title: 自動啟動工作流
-description: 自動啟動工作流通過在上載或重新處理時自動調用自定義工作流來擴展資產處理。
+title: 自動開始工作流程
+description: 自動開始工作流程會在上傳或重新處理時自動叫用自訂工作流程，藉此擴充資產處理作業。
 feature: Asset Compute Microservices, Workflow
 version: Cloud Service
 kt: 4994
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 自動啟動工作流
+# 自動開始工作流程
 
-自動啟動工作流通過在上載或重新處AEM理時自動調用自定義工作流來擴展as a Cloud Service中的資產處理。
+自動開始工作流程會在上傳或重新處理時自動叫用自訂工作流程，延伸AEMas a Cloud Service的資產處理作業。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37323?quality=12&learn=on)

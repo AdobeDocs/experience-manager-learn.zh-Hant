@@ -2,13 +2,12 @@
 user-guide-title: AEM Sites - WKND 教學課程快速入門
 user-guide-description: AEM 的新開發人員的多部分教學課程。 實作虛構的生活風格品牌 WKND 的 AEM 網站。啟用前端管道來加快開發到部署的週期。
 breadcrumb-title: AEM Sites WKND 教學課程
-solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Cloud Service
 activity: develop
 audience: developer
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 46%

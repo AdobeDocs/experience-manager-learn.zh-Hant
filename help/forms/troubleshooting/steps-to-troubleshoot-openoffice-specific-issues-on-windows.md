@@ -1,6 +1,6 @@
 ---
-title: 排除Windows安裝程式上OpenOffice特定故障的步驟
-description: 在Windows安裝程式上解決PDF生成器問題的OpenOffice問題。
+title: 在Windows安裝程式上疑難排解OpenOffice特定失敗的步驟
+description: 疑難排解Windows安裝程式上的PDF產生器問題的OpenOffice問題。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 在Windows安裝中為AEM FormsPDFG轉換排除OpenOffice特定故障的步驟
+# 在AEM Forms PDFG轉換的Windows設定上疑難排解OpenOffice特定失敗的步驟
 
-*此視頻將介紹在Windows安裝程式上診斷OpenOffice特定故障的過程。*
+*此影片會逐步解說疑難排解Windows安裝程式上的OpenOffice特定失敗的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335481?quality=12&learn=on)

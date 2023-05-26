@@ -1,6 +1,6 @@
 ---
-title: 將資料與XDP模板合併
-description: 使用必要參數向終點發出POST請求
+title: 將資料與XDP範本合併
+description: 使用必要的引數向端點發出POST要求
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -17,12 +17,12 @@ ht-degree: 0%
 
 ---
 
-# 撥打POST
+# 進行POST呼叫
 
 
-下一步是使用必要的參數對端點進行HTTPPOST調用。 模板和資料檔案作為資源檔案提供。 生成的pdf的屬性通過請求中選項的參數指定。屬性embedFonts用於在生成的pdf中嵌入自定義字型。[請按照本文檔將自定義字型部署到您的Forms雲實例。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en) 屬性在options.json資源檔案中指定。 因為，端點具有基於令牌的身份驗證，因此我們會在請求標頭中傳遞訪問令牌。
+下一步是使用必要的引數向端點進行HTTPPOST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定的。embedFonts屬性用於將自訂字型嵌入產生的pdf中。[請依照此檔案將自訂字型部署至您的Forms雲端例項。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en) 屬性是在options.json資源檔案中指定。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
 
-以下代碼用於通過將資料與模板合併來生成pdf
+下列程式碼用於將資料與範本合併，以產生pdf
 
 ```java
 public class DocumentGeneration

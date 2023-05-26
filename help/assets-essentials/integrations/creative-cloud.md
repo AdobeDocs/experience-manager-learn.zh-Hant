@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # Creative Cloud和Assets Essentials
 
-瞭解如何將Assets Essentials與Adobe Creative Cloud圖書館整合，從而：
+瞭解如何將Assets Essentials與Adobe Creative Cloud Libraries整合，允許：
 
-+ 通過Creative Cloud庫無縫訪問Assets Essentials的檔案
-+ 將從Creative Cloud庫共用到Assets Essentials的檔案
++ 透過Creative Cloud程式庫無縫存取Assets Essentials的檔案
++ 要共用至Assets Essentials的Creative Cloud資料庫中的檔案
 
 >[!VIDEO](https://video.tv.adobe.com/v/336069?quality=12&learn=on)

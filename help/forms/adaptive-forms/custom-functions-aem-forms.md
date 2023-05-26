@@ -1,6 +1,6 @@
 ---
-title: AEM Forms自定義函式
-description: 在自適應表單中建立和使用自定義函式
+title: AEM Forms中的自訂函式
+description: 在最適化表單中建立和使用自訂函式
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -16,28 +16,28 @@ ht-degree: 0%
 
 ---
 
-# 自定義函式
+# 自訂函式
 
-AEM Forms6.5引入了定義JavaScript函式的功能，這些函式可用於使用規則編輯器定義複雜業務規則。
-AEM Forms提供了許多此類自定義函式，但您需要定義自己的自定義函式並跨多個表單使用它們。
+AEM Forms 6.5匯入定義JavaScript函式的功能，這些函式可用於使用規則編輯器定義複雜的商業規則。
+AEM Forms提供許多現成的這類自訂函式，但您需要定義自己的自訂函式，並在多個表單中使用它們。
 
-要定義第一個自定義函式，請執行以下步驟：
-* [登錄到crx](http://localhost:4502/crx/de/index.jsp#/apps/experience-league/clientlibs)
-* 在名為「體驗聯盟」的應用下建立新資料夾（此資料夾名稱可以是您選擇的名稱）
-* 保存更改。
-* 在「體驗聯盟」資料夾下，建立一個名為clientlibs的cq:ClientLibraryFolder類型的新節點。
-* 選擇新建立的客戶端資料夾，並添加allowProxy和類別屬性，如螢幕抓圖所示，並保存您所做的更改。
+若要定義您的第一個自訂函式，請遵循下列步驟：
+* [登入crx](http://localhost:4502/crx/de/index.jsp#/apps/experience-league/clientlibs)
+* 在應用程式下建立名為experience-league的新資料夾（此資料夾名稱可以是您選擇的名稱）
+* 儲存您的變更。
+* 在experience-league資料夾底下，建立名為clientlibs的cq：ClientLibraryFolder型別的新節點。
+* 選取新建立的clientlibs資料夾，然後新增allowProxy和類別屬性（如熒幕擷取畫面中所示），並儲存變更。
 
-![客戶端庫](assets/custom-functions.png)
-* 建立名為 **j** 下 **客戶端** 資料夾
-* 建立名為 **函式.js** 下 **j** 資料夾
-* 建立名為 **js.txt** 下 **客戶端** 的子菜單。 保存更改。
-* 資料夾結構應與下面的螢幕抓圖類似。
+![client-lib](assets/custom-functions.png)
+* 建立名為的資料夾 **js** 在 **clientlibs** 資料夾
+* 建立名為的檔案 **函式.js** 在 **js** 資料夾
+* 建立名為的檔案 **js.txt** 在 **clientlibs** 資料夾。 儲存您的變更。
+* 您的資料夾結構應該看起來像下面的熒幕擷取畫面。
 
 ![規則編輯器](assets/folder-structure.png)
 
 * 按兩下functions.js以開啟編輯器。
-將以下代碼複製到functions.js中並保存您所做的更改。
+將下列程式碼複製到functions.js中並儲存變更。
 
 ```javascript
 /**
@@ -71,24 +71,24 @@ function convertUTC(strUTCString)
 }
 ```
 
-請 [參考jsdoc ](https://jsdoc.app/index.html)的子菜單。
-上述代碼具有兩個功能：
-**getCountyNamesList**  — 返回字串陣列
-**convertUTC**  — 將UTC時間戳轉換為本地時區
+請 [請參閱jsdoc ](https://jsdoc.app/index.html)以取得註釋javascript函式的詳細資訊。
+上述程式碼有兩個功能：
+**getCountyNamesList**  — 傳回字串陣列
+**convertUTC**  — 將UTC時間戳記轉換為當地時區
 
-開啟js.txt並貼上以下代碼並保存更改。
+開啟js.txt並貼上下列程式碼並儲存變更。
 
 ```javascript
 #base=js
 functions.js
 ```
 
-行#base=js指定JavaScript檔案所在的目錄。
-下面的行指示JavaScript檔案相對於基位置的位置。
+#base=js行指定JavaScript檔案所在的目錄。
+以下各行表示JavaScript檔案相對於基底位置的位置。
 
-如果您在建立自定義函式時遇到問題，請隨時 [下載並安裝此包](assets/custom-functions.zip) 你AEM的。
+如果您在建立自訂函式時遇到問題，請隨時 [下載並安裝此套件](assets/custom-functions.zip) 在您的AEM執行個體中。
 
-## 使用自定義函式
+## 使用自訂函式
 
-以下視頻將引導您完成在自適應表單的規則編輯器中使用自定義函式涉及的步驟
+以下影片會逐步帶您瞭解在最適化表單的規則編輯器中使用自訂函式的相關步驟
 >[!VIDEO](https://video.tv.adobe.com/v/340305?quality=12&learn=on)

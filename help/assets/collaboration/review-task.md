@@ -1,6 +1,6 @@
 ---
 title: 評論任務
-description: 瞭解AEM Assets的「審閱任務」如何促進最常見的審閱和批准工作流。
+description: 探索AEM Assets的稽核任務如何協助進行最常見的稽核和核准工作流程。
 sub-product: Experience Manager Assets
 feature: Collaboration
 version: Cloud Service
@@ -19,6 +19,6 @@ ht-degree: 12%
 
 # 評論任務
 
-瞭解AEM Assets的「審閱任務」如何促進最常見的審閱和批准工作流。
+探索AEM Assets的稽核任務如何協助進行最常見的稽核和核准工作流程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32050?quality=12&learn=on)

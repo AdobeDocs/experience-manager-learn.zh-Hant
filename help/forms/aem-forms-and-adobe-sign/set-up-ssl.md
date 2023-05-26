@@ -1,6 +1,6 @@
 ---
-title: 為啟用SSL AEM
-description: 使用Adobe Experience Manager的SSL設定嚮導設AEM置通過HTTPS運行的實例。
+title: 為AEM啟用SSL
+description: 使用Adobe Experience Manager的SSL設定精靈來設定要透過HTTPS執行的AEM執行個體。
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 17993.jpg
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ---
 
-# 為啟用SSL AEM
+# 為AEM啟用SSL
 
-將AEM Forms與Acrobat Sign整合的先決條件之一是將AEM您的實例配置為使用SSL。 Adobe Experience Manager的SSL設定嚮導，使設定通過HTTPSAEM運行的實例更加容易。
-以下視頻說明了使用嚮導配置SSL所需的步驟
+將AEM Forms與Acrobat Sign整合的先決條件之一是將您的AEM執行個體設定為使用SSL。 Adobe Experience Manager的SSL設定精靈，讓您更輕鬆地設定AEM執行個體以透過HTTPS執行。
+以下影片說明使用精靈設定SSL所需的步驟
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)

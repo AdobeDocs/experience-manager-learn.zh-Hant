@@ -1,6 +1,6 @@
 ---
-title: 配置AEM資料源
-description: 配置MySQL支援的資料源以儲存和檢索表單資料
+title: 設定AEM資料來源
+description: 設定MySQL支援的資料來源以儲存和擷取表單資料
 feature: Adaptive Forms
 topic: Development
 role: Developer
@@ -16,32 +16,32 @@ ht-degree: 2%
 
 ---
 
-# 配置資料源
+# 設定資料來源
 
-有多種方法可AEM以與外部資料庫整合。 整合資料庫的最常見方法之一是使用Apache Sling連接池化資料源配置屬性 [configMgr](http://localhost:4502/system/console/configMgr)。
-第一步是下載並部署相應的 [MySql驅動程式](https://mvnrepository.com/artifact/mysql/mysql-connector-java) 的上AEM界。
-建立Apache Sling連接池化資料源，並提供如下螢幕抓圖中指定的屬性。 本教程資源中將提供資料庫模式。
+AEM有許多方式可用來與外部資料庫整合。 整合資料庫的最常見方式之一，是透過使用Apache Sling Connection Pooled DataSource [configMgr](http://localhost:4502/system/console/configMgr).
+第一步是下載並部署適當的 [MySql驅動程式](https://mvnrepository.com/artifact/mysql/mysql-connector-java) 在AEM中。
+建立Apache Sling Connection Pooled DataSource並提供以下熒幕擷取畫面中指定的屬性。 資料庫結構描述會作為本教學課程資產的一部分提供給您。
 
-![資料源](assets/data-source.PNG)
+![data-source](assets/data-source.PNG)
 
-資料庫有一個名為formdata的表，其中有3列，如下面的螢幕抓圖所示。
+資料庫有一個名為formdata的表格，包含3欄，如下面的熒幕擷取畫面所示。
 
 ![資料庫](assets/data-base.PNG)
 
 
 >[!NOTE]
->請確保為資料源命名 **雄獅**。 示例代碼使用名稱連接到資料庫。
+>請務必為您的資料來源命名 **aemformstutorial**. 範常式式碼會使用名稱來連線至資料庫。
 
 | 屬性名稱 | 值 |
 | ------------------------|--------------------------------------- |
-| 資料源名稱 | 保存並繼續 |
-| JDBC驅動程式類 | com.mysql.cj.jdbc.Driver |
-| JDBC連接URI | jdbc:mysql://localhost:3306/aemformational |
+| 資料來源名稱 | SaveAndContent |
+| JDBC驅動程式類別 | com.mysql.cj.jdbc.Driver |
+| JDBC連線URI | jdbc:mysql://localhost：3306/aemformstutorial |
 
 ## Assets
 
-要建立架構的SQL檔案可以是 [從此處下載](assets/sign-multiple-forms.sql)。 您需要使用MySql工作台導入此檔案以建立方案和表。
+建立結構描述的SQL檔案可以是 [已從此處下載](assets/sign-multiple-forms.sql). 您必須使用MySql Workbench匯入此檔案，才能建立結構描述和表格。
 
 ## 後續步驟
 
-[建立OSGi服務以在資料庫中儲存和讀取資料](./create-osgi-service.md)
+[建立OSGi服務以儲存和擷取資料庫中的資料](./create-osgi-service.md)

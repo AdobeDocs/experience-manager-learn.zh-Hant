@@ -1,6 +1,6 @@
 ---
-title: 瞭解資產查看器與AEMDynamic Media
-description: AEMDynamic Media觀看器的增強功AEM能使作者能夠定義和自定義向網站用戶展示資產的方式。
+title: 透過AEM Dynamic Media瞭解資產檢視器
+description: AEM Dynamic Media Viewer增強功能可讓AEM作者定義並自訂向網站使用者呈現資產的方式。
 sub-product: Experience Manager Assets
 feature: Viewer Presets, Image Profiles
 version: 6.4, 6.5
@@ -15,16 +15,16 @@ ht-degree: 0%
 
 ---
 
-# 瞭解資產查看器與AEMDynamic Media{#understanding-the-asset-viewer-with-aem-dynamic-media}
+# 透過AEM Dynamic Media瞭解資產檢視器{#understanding-the-asset-viewer-with-aem-dynamic-media}
 
-AEMDynamic Media觀看器的增強功AEM能使作者能夠定義和自定義向網站用戶展示資產的方式。
+AEM Dynamic Media Viewer增強功能可讓AEM作者定義並自訂向網站使用者呈現資產的方式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17783?quality=12&learn=on)
 
-一些主要增強功能包括：
+一些主要的增強功能包括：
 
-* 直觀地從查看器預設中選擇查看器元素並自定義設定，而無需瞭解查看器元件。
-* 用於修改者解釋查看器設定和參數的有用工具提示。
-* 顯示/隱藏CSS選項以更改高級CSS。 能夠導入自定義CSS。
-* 熱點按鈕的OOTB庫使新按鈕的開發最小化。
-* 用於視網膜顯示器的高像素按鈕圖稿渲染功能。
+* 從檢視器預設集中直覺地選擇檢視器元素並自訂設定，而不需要知道檢視器元件。
+* 說明檢視器設定和引數的修飾詞實用工具提示。
+* 顯示/隱藏CSS選項以進行進階CSS變更。 匯入自訂CSS的功能。
+* 熱點按鈕的OOTB相簿，可最小化新按鈕的開發。
+* 高畫素按鈕圖稿演算功能適用於視網膜顯示器。

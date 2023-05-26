@@ -1,6 +1,6 @@
 ---
-title: 影像、色板、旋轉和混合媒體集
-description: Dynamic Media Classic最有用、最強大的能力之一是支援建立像Image、Swatch、Spin和Mixed Media Sets這樣的富媒體集。 瞭解每個富媒體集是什麼以及如何在Dynamic Media Classic建立每種類型。 然後瞭解有關「批集預設」的更多資訊，該預設可自動執行上載時建立富媒體集的過程。
+title: 影像、色票、迴轉和混合媒體集
+description: Dynamic Media Classic最有用且功能強大的功能之一，是支援建立豐富的媒體集，例如影像、色票、迴轉和混合媒體集。 瞭解每個多媒體集是什麼，以及如何在Dynamic Media Classic中建立每個型別。 然後深入瞭解批次集預設集，它會在上傳時自動建立多媒體集的程式。
 feature: Dynamic Media Classic, Image Sets, Mixed Media Sets, Spin Sets
 topic: Content Management
 role: User
@@ -13,124 +13,124 @@ ht-degree: 1%
 
 ---
 
-# 影像、色板、旋轉和混合媒體集 {#media-sets}
+# 影像、色票、迴轉和混合媒體集 {#media-sets}
 
-Dynamic Media Classic的集合可以超越單幅影像，實現動態調整和縮放，從而提供更豐富的線上體驗。 本教程的本節將探討如何在Dynamic Media Classic建立以下富媒體集：
+Dynamic Media Classic集合超越了單一影像以動態調整大小和縮放，提供更豐富的線上體驗。 教學課程的此章節將探索如何在Dynamic Media Classic中建立下列多媒體集：
 
 - 影像集
-- 色板集
+- 色票集
 - 迴轉集
 - 混合媒體集
 
-還將說明如何使用「批集預設」通過上載自動建立集。
+它也會說明如何使用批次集預設集，透過上傳來自動建立集合。
 
-## 你一直想知道的關於場景的一切
+## 您一直想要瞭解的關於集合的一切
 
-除了基本的動態調整和縮放，集合可能是應用最廣泛的Dynamic Media Classic子產品。 集實質上是「虛擬」資產，它不包含任何實際影像，但是由一組與其他影像和/或視頻的關係組成。 集合最吸引人的地方是，它們是可以「現成」的微型應用。 也就是說，每個設定查看器都包含其自己的邏輯和介面，因此您只需在站點上呼叫它們即可。 此外，它們只要求您跟蹤每個集的單個資產ID，而不必親自管理所有成員資產和關係。
+在基本動態調整大小和縮放功能之前，集合可能是使用最廣泛的Dynamic Media Classic子產品。 集合本質上是不包含實際影像的「虛擬」資產，但包含與其他影像和/或視訊的一組關係。 套裝的主要吸引力在於，它們是「現成可用」的迷你應用程式。 也就是說，每個已設定的檢視器都有其專屬的邏輯和介面，您只需在網站上呼叫檢視器即可。 此外，它們只需要您追蹤每個集的單一資產ID，而不需要親自管理所有成員資產和關係。
 
-在建立集時，該集將作為單獨的資產進行管理，在從URL提供服務之前，必須將其標籤為發佈和發佈。 其所有成員資產也必須公佈。
+當您建立資產集時，該資產集會作為個別資產進行管理，必須先將其標籤為發佈並發佈，然後才能從URL提供服務。 也必須發佈其所有成員資產。
 
-### 集類型
+### 集合型別
 
-讓我們瞭解您可以在Dynamic Media Classic建立的四種類型集：影像、色板、旋轉和混合媒體集。
+讓我們瞭解您可以在Dynamic Media Classic中建立的四種型別集：影像、色票、迴轉和混合媒體集。
 
 ## 影像集
 
-這是最常見的集類型。 通常，您會將其用於同一項目的替代視圖。 它包含通過按一下該影像的關聯縮覽圖載入到查看器中的多個影像。
+這是最常見的集合型別。 您通常會將其用於相同專案的替代檢視。 它由多個影像組成，您可以按一下該影像的相關縮圖，將這些影像載入檢視器。
 
 ![影像](assets/media-sets/image-set-1.jpg)
 
-_影像集示例_
+_影像集範例_
 
 上述影像集的URL可能顯示為：
 
 ![影像](assets/media-sets/image-set-url-1.png)
 
-- 瞭解有關使用 [快速啟動映像集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/quick-start-image-sets.html)。
-- 瞭解如何 [建立映像集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set)。
+- 進一步瞭解影像集，使用 [影像集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/quick-start-image-sets.html).
+- 瞭解如何 [建立影像集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set).
 
-### 色板集
+### 色票集
 
-此類型的集通常用於顯示同一項目的彩色視圖。 它由成對的影像和顏色色板組成。
+此型別的集通常用於顯示相同專案的彩色檢視。 它由影像和色票配對組成。
 
-「色板」和「影像集」之間的主要區別是，「色板集」使用不同的影像作為可點擊的色板，而「影像集」使用原始影像的可點擊的縮覽圖版本。
+「色票」和「影像集」的主要差異在於「色票集」使用不同的影像作為可點按的色票，而「影像集」則使用原始影像的縮圖（可點按）版本。
 
-色板集不著色影像（常見的誤解）。 只是換用影像，與在「影像集」中完全相同。 迷你色板影像可以是使用Photoshop創作的，每種顏色可以單獨拍攝，或者Dynamic Media Classic的裁剪工具可以用來從彩色影像中製作一個色板。
+色票集不會為影像上色（常見的誤解）。 這些影像隻會進行交換，完全等同於影像集。 您可以透過Photoshop製作迷你色票影像，或是分別拍攝每種顏色，或是使用Dynamic Media Classic中的裁切工具從其中一個彩色影像中製作色票。
 
 ![影像](assets/media-sets/image-set-2.jpg)
 
-_樣本集示例_
+_色票集範例_
 
-上述色板集的URL可能顯示為：
+上述色票集的URL可能顯示為：
 
 ![影像](assets/media-sets/image-set_url.png)
 
-- 瞭解有關使用 [快速開始色板集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html)。
-- 瞭解如何 [建立色板集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set)。
+- 進一步瞭解使用的色票集 [色票集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html).
+- 瞭解如何 [建立色票集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set).
 
 ### 迴轉集
 
-此集通常用於顯示項目的360度視圖。 與斯沃琪集一樣，旋轉集也不使用3D魔術 — 真正的工作是從各個方面建立一幅影像的許多照片。 觀看者只是允許您在影像之間切換，如停止動畫。
+此集通常用於顯示專案的360度檢視。 像色票集一樣，迴轉集不使用3D魔術，真正的工作是從各個角度建立許多影像的像片。 檢視器可讓您像停止動畫一樣在影像之間切換。
 
-「旋轉集」(Spin Sets)可以沿單個軸沿一個方向旋轉，或者如果交替建立為2D旋轉集(Spin Sets) — 在多個軸上旋轉。 例如，汽車可以在所有車輪都在地面時進行旋轉，然後也可以在汽車後輪上「翻轉」並旋轉。 對於正確設定的2D旋轉集，每個軸的每行影像數應相同。 換句話說，如果在兩個軸上旋轉，則需要的影像數是單角度旋轉的兩倍。
+「迴轉集」可以沿著單一軸在一個方向迴轉，或者如果交替建立為「2D迴轉集」 — 在多個軸上迴轉。 例如，汽車可以在所有輪子都位於地面時旋轉，然後可以「翻轉」到其後輪上並旋轉。 若已正確設定2D迴轉集，每個軸的每列影像數應相同。 換言之，如果您在兩軸上旋轉，則需要兩倍於單一角度旋轉的影像。
 
 ![影像](assets/media-sets/image-set-3.png)
 
-_旋轉集示例_
+_迴轉集範例_
 
-上述旋轉集的URL可能顯示為：
+上述迴轉集的URL可能顯示為：
 
 ![影像](assets/media-sets/spin-set.png)
 
-- 瞭解有關旋轉集的詳細資訊 [快速啟動到旋轉集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html)。
-- 瞭解如何 [建立旋轉集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set)。
+- 進一步瞭解迴轉集，使用 [快速啟動迴轉集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html).
+- 瞭解如何 [建立迴轉集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set).
 
 ## 混合媒體集
 
-這是組合集。 它允許您將以前的任何集合，並將視頻添加到單個查看器中。 在此工作流中，您首先建立任何元件集，然後將它們組合到一個混合媒體集中。
+這是組合集。 它可讓您合併任何先前的集合，以及將視訊新增至單一檢視器。 在此工作流程中，您會先建立任何元件集，然後將它們組裝成混合媒體集。
 
 ![影像](assets/media-sets/image-set-4.png)
 
-_混合媒體集示例_
+_混合媒體集範例_
 
 上述混合媒體集的URL可能顯示為：
 
 ![影像](assets/media-sets/image-set-url-1.png)
 
-- 瞭解有關混合媒體集的詳細資訊 [快速啟動混合媒體集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html)。
+- 進一步瞭解混合媒體集和 [混合媒體集的快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html).
 
-- 瞭解如何 [建立混合媒體集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set)。
+- 瞭解如何 [建立混合媒體集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set).
 
-要在網站上顯示縮放影像、集合或視頻，請在Dynamic Media Classic「查看器」中將其稱為。 Dynamic Media Classic公司包括富媒體資產的觀眾，如斯沃琪集，旋轉集，視頻等。
+若要在網站上顯示縮放、集合或視訊的影像，請在Dynamic Media Classic「檢視器」中將其稱為。 Dynamic Media Classic包含豐富媒體資產的檢視器，例如色票集、迴轉集、影片和許多其他資產。
 
-瞭解有關 [AEM Assets和Dynamic Media Classic觀眾](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html)。
+進一步瞭解 [AEM Assets和Dynamic Media Classic的檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html).
 
 ## 批次集預設集
 
-到目前為止，我們一直在討論如何使用「Dynamic Media Classic構建」功能手動構建集。 但是，只要您有標準化的命名約定，就可以使用批集預設自動建立映像集和旋轉集。
+到目前為止，我們一直在討論如何使用Dynamic Media Classic建置功能手動建置集合。 不過，只要您有標準化的命名慣例，就可以使用「批次集預設集」來自動建立影像集和迴轉集。
 
-每個預設都是一組唯一命名的、自包含的指令，這些指令定義了如何使用與定義的命名約定相匹配的影像來構造集合。 在預設中，首先為要在集合中分組的資產定義命名約定。 然後可以建立「批集預設」以引用這些影像。
+每個預設集都是一組唯一命名、獨立的指示，定義如何使用符合所定義命名慣例的影像來建構該集合。 在預設集中，您首先會為要分組到一組中的資產定義命名慣例。 然後可以建立批次集預設集來參考這些影像。
 
-雖然您可以自己建立預設(可在 **設定>應用程式設定>批集預設** )，作為最佳做法，您應讓咨詢團隊或技術支援為您設定。 原因如下：
+雖然您可以自行建立預設集(可在 **設定>應用模組設定>批次集預設集** )，最佳作法是請諮詢團隊或技術支援人員為您設定。 原因如下：
 
-- 批集預設設定可能很複雜 — 它們由規則運算式提供支援，除非您是開發人員，否則此語法可能不熟悉或令人困惑。
-- 建立後，預設情況下會開啟它們。 沒有「撤消」功能。 如果您開始上載數千個影像，並且您的預設配置不正確，則最終可能會出現數百或數千個必須手動查找和刪除的損壞集。
+- 批次集預設集可能設定複雜 — 它們由規則運算式提供支援，除非您是開發人員，否則此語法可能不熟悉或令人困惑。
+- 建立後，預設會開啟。 沒有「還原」功能。 如果您開始上傳數千個影像，而預設集設定不正確，您最終可能會發現成百上千個損毀的集合，您必須手動尋找並刪除。
 
-先前建議了一種簡單的命名約定，它很容易構建成批集預設。 但是，由於預設非常靈活，它們可以處理複雜的命名策略。 簡言之，屬於某個集的映像應通過某個通用名稱捆綁在一起 — 通常是SKU號或產品ID。 在Dynamic Media Classic，您可以為要用於預設的所有影像指定預設的命名約定，也可以建立多個預設，每個預設具有不同的命名規則。
+先前建議使用簡單的命名慣例，這樣可以很輕鬆地建置到批次集預設集中。 不過，由於預設集非常靈活，因此可以處理複雜的命名策略。 簡而言之，屬於同一個影像集的影像應透過一些通用名稱繫結在一起，通常是SKU編號或產品ID。 在Dynamic Media Classic中，您可以為所有要用於預設集的影像指定預設命名慣例，也可以建立多個預設集，每個預設集都有不同的命名規則。
 
-「批集預設」僅在上載時應用；映像上傳後無法運行。 因此，在開始載入所有影像之前，必須規劃命名約定並獲取一個預設。
+批次集預設集只會在上傳時套用；它們無法在影像上傳後執行。 因此，在開始載入所有影像之前，請務必規劃您的命名慣例，並建置預設集。
 
-建立預設後，公司管理員可以選擇它們是活動的還是非活動的。 活動，表示它們將顯示在上載頁面的 **作業選項**，而非活動預設將保持隱藏。
+建立預設集後，公司管理員可以選擇預設集是作用中或非作用中。 「啟用」表示它們會出現在上傳頁面的下方 **工作選項**，非作用中的預設集仍會保持隱藏。
 
-瞭解如何 [建立批集預設](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset)。
+瞭解如何 [建立批次集預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset).
 
-### 在上載時使用批集預設
+### 在上傳時使用批次集預設集
 
-建立批集預設後，在上載時如何使用這些預設：
+以下說明建立批次集預設集後，如何在上傳時使用批次集預設集：
 
-1. 按一下 **上載** 選擇 **從案頭** 或 **通過FTP**。
-2. 按一下 **作業選項**。
-3. 開啟 **批集預設** 選項，然後選中或取消選中預設以將其用於上載。
-4. 上載完成後，在資料夾中查找完成的集。
+1. 按一下 **上傳** 並選擇 **從案頭** 或 **透過FTP**.
+2. 按一下 **工作選項**.
+3. 開啟 **批次集預設集** 選項，然後核取或取消核取預設集以在上傳時使用。
+4. 上傳完成後，請在您的資料夾中檢視完成的集合。
 
-瞭解有關 [批集預設](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets)。
+進一步瞭解 [批次集預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets).

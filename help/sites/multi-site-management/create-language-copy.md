@@ -1,6 +1,6 @@
 ---
 title: 建立語言副本
-description: 使用「建立語言複製」嚮導瀏覽AEM如何為站點建立語言複製。
+description: 探索如何使用「建立語言副本」精靈為您的AEM網站建立語言副本。
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 # 建立語言副本 {#create-language-copy}
 
-使用「建立語言複製」嚮導瀏覽AEM如何為站點建立語言複製。
+探索如何使用「建立語言副本」精靈為您的AEM網站建立語言副本。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36483?quality=12&learn=on)

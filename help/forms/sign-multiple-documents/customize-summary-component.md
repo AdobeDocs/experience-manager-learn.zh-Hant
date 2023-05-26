@@ -1,6 +1,6 @@
 ---
-title: 自定義摘要元件
-description: 擴展摘要步驟元件以包括導航到包中下一個表單的功能。
+title: 自訂摘要元件
+description: 擴充摘要步驟元件，以包含導覽至套件中下一個表單的功能。
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6894
@@ -16,24 +16,24 @@ ht-degree: 1%
 
 ---
 
-# 自定義摘要步驟
+# 自訂摘要步驟
 
-摘要步驟元件用於顯示表單提交的摘要，其中包含下載簽名表單的連結。 摘要步驟通常放置在窗體的最後一個面板中。
-為了使用此使用情形，我們基於現成的「摘要」元件建立了一個新元件，並擴展了包含自定義客戶端庫的功能。
+摘要步驟元件用於顯示表單提交的摘要，以及下載已簽署表單的連結。 摘要步驟通常放置在表單的最後一個面板中。
+針對此使用案例，我們已根據現成可用的摘要元件建立新元件，並擴充包含自訂clientlib的功能。
 
-此元件由標籤「標籤多個表單」標識
+此元件以「簽署多個表單」標籤識別
 
-下面的螢幕抓圖顯示了為在簽署儀式完成時顯示消息而建立的新元件
+以下熒幕擷取畫面顯示所建立的新元件，用於在簽署儀式完成時顯示訊息
 
 ![摘要元件](assets/summary.PNG)
 
-新元件基於現成的摘要元件。
-![元件](assets/componentprop.PNG)
+新元件以現成可用的摘要元件為基礎。
+![component-prop](assets/componentprop.PNG)
 
-我們已添加一個按鈕，以導航到下一個表單進行簽名
-![模板代碼](assets/template-code.PNG)
+我們已新增按鈕，可瀏覽至下一個要簽署的表單
+![範本程式碼](assets/template-code.PNG)
 
-summary.jsp具有以下代碼。 它引用了由類別ID標識的客戶端庫 **getnexform**
+summary.jsp包含下列程式碼。 其參考了類別ID所識別的使用者端程式庫 **getnextform**
 
 ```java
 <%--
@@ -46,8 +46,8 @@ summary.jsp具有以下代碼。 它引用了由類別ID標識的客戶端庫 **
 
 ## Assets
 
-自定義摘要元件可以 [從此處下載](assets/custom-summary-step.zip)
+自訂摘要元件可以是 [已從此處下載](assets/custom-summary-step.zip)
 
 ## 後續步驟
 
-[獲取下一個用於簽名的表單](./create-client-lib.md)
+[取得下一個要簽署的表單](./create-client-lib.md)

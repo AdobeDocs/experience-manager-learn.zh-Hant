@@ -1,7 +1,7 @@
 ---
-title: Adobe Experience Manager與Adobe Target
+title: 將Adobe Experience Manager與Adobe Target整合
 seo-title: An article covering different ways to integrate Adobe Experience Manager(AEM) with Adobe Target for delivering personalized content.
-description: 一篇文章，介紹如何與Adobe Target建立Adobe Experience Manager，以應對不同的情景。
+description: 本文章說明如何針對不同案例使用Adobe Target設定Adobe Experience Manager。
 seo-description: An article covering how to set up Adobe Experience Manager with Adobe Target for different scenarios.
 feature: Experience Fragments
 topic: Personalization
@@ -15,70 +15,70 @@ ht-degree: 4%
 
 ---
 
-# Adobe Experience Manager與Adobe Target
+# 將Adobe Experience Manager與Adobe Target整合
 
-在本節中，我們將討論如何針對不同情形與Adobe Target建立Adobe Experience Manager。 根據您的方案和組織要求。
+在本節中，我們將討論如何針對不同案例使用Adobe Target設定Adobe Experience Manager。 根據您的案例和組織需求。
 
-* **添加Adobe TargetJavaScript庫（所有方案都需要）**
-對於上承載的站AEM點，可以使用 [啟動](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)。 Launch提供了部署和管理所有必要標籤的簡單方法，以便為相關客戶體驗提供動力。
-* **添加Adobe TargetCloud Services（「體驗片段」方案需要）**
-對於AEM希望使用體驗片段產品在Adobe Target內建立活動的客戶，您需要將Adobe Target與使用舊式Cloud ServicesAEM進行整合。 此整合是將體驗片段作為HTML/AEMJSON提供的推送到目標，並與之保持同步所需的AEM整合。 
-*實施方案1需要此整合。*
+* **新增Adobe Target JavaScript程式庫（所有案例都需要）**
+對於在AEM上託管的網站，您可以使用將Target程式庫新增至您的網站， [Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html). Launch可讓您透過簡單的方式部署及管理所有必要的標籤，以便支援相關客戶體驗。
+* **新增Adobe TargetCloud Services（體驗片段案例所需）**
+對於想要使用體驗片段選件在Adobe Target中建立活動的AEM客戶，您需要使用舊版Cloud Services將Adobe Target與AEM整合。 從AEM以HTML/JSON選件的形式將體驗片段推送到Target，以及保持選件與AEM同步時，需要這項整合。 
+*實作案例1需要此整合。*
 
 ## 必備條件
 
-* **Adobe Experience ManagerAEM({#aem}**
-   * AEM 6.5(*建議使用最新的Service Pack*)
-   * 下載AEMWKND參考站點包
+* **Adobe Experience Manager (AEM){#aem}**
+   * AEM 6.5 (*建議使用最新的Service Pack*)
+   * 下載AEM WKND參考網站套件
       * [aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip)
       * [aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip)
       * [核心元件](https://github.com/adobe/aem-core-wcm-components/releases/download/core.wcm.components.reactor-2.5.0/core.wcm.components.all-2.5.0.zip)
-      * [數字資料層](assets/implementation/digital-data-layer.zip)
+      * [數位資料層](assets/implementation/digital-data-layer.zip)
 
 * **Experience Cloud**
-   * 訪問您的組織Adobe Experience Cloud。 `https://<yourcompany>.experiencecloud.adobe.com`
-   * Experience Cloud配置了以下解決方案
+   * 存取您的組織Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
+   * 布建了下列解決方案的Experience Cloud
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
-      * [Adobe I/O控制台](https://console.adobe.io)
+      * [Adobe I/O主控台](https://console.adobe.io)
 
 * **環境**
-   * Java 1.8或Java 11(AEM僅限6.5+)
+   * Java 1.8或Java 11 (僅限AEM 6.5+)
    * Apache Maven (3.3.9 或更新版本)
-   * 鉻
+   * 鉻黃
 
 >[!NOTE]
 >
-> 客戶需要提供Experience Platform Launch和Adobe I/O [Adobe支援](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) 或聯繫您的系統管理員
+> 客戶需要布建以下Experience Platform Launch和Adobe I/O： [Adobe支援](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) 或聯絡您的系統管理員
 
 ### 設定AEM{#set-up-aem}
 
-完成AEM本教程需要編寫和發佈實例。 作者實例正在運行 `http://localhost:4502` 發佈運行的實例 `http://localhost:4503`。 有關詳細資訊，請參閱： [設定本地開發AEM環境](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/local-aem-dev-environment-article-setup.html)。
+完成本教學課程需要AEM作者和發佈執行個體。 我們已在執行作者執行個體 `http://localhost:4502` 和在上執行的發佈執行個體 `http://localhost:4503`. 如需詳細資訊，請參閱： [設定本機AEM開發環境](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/local-aem-dev-environment-article-setup.html).
 
-#### 設定AEM作者和發佈實例
+#### 設定AEM作者和發佈執行個體
 
-1. 獲取副本 [快AEM速啟動Jar和許可證。](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingtheSoftware)
-2. 在電腦上建立資料夾結構，如下所示：
+1. 取得 [AEM Quickstart Jar和授權。](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingtheSoftware)
+2. 在電腦上建立檔案夾結構，如下所示：
    ![資料夾結構](assets/implementation/aem-setup-1.png)
-3. 將快速啟動jar更名為 `aem-author-p4502.jar` 放在下面 `/author` 的子菜單。 添加 `license.properties` 檔案下方 `/author` 的子菜單。
-   ![AEM作者實例](assets/implementation/aem-setup-author.png)
-4. 製作快速啟動jar的副本，將其更名為 `aem-publish-p4503.jar` 放在下面 `/publish` 的子菜單。 添加副本 `license.properties` 檔案下方 `/publish` 的子菜單。
-   ![AEM發佈實例](assets/implementation/aem-setup-publish.png)
-5. 按兩下 `aem-author-p4502.jar` 檔案以安裝作者實例。 這將啟動在本地電腦上的埠4502上運行的作者實例。
-6. 使用下面的憑據登錄，成功登錄後，您將被定向到「主AEM頁」螢幕。
-用戶名： **管理員**
+3. 將快速入門jar重新命名為 `aem-author-p4502.jar` 並將其放在 `/author` 目錄。 新增 `license.properties` 檔案於 `/author` 目錄。
+   ![AEM作者例項](assets/implementation/aem-setup-author.png)
+4. 複製Quickstart jar，將其重新命名為 `aem-publish-p4503.jar` 並將其放在 `/publish` 目錄。 新增 `license.properties` 檔案於 `/publish` 目錄。
+   ![AEM發佈執行個體](assets/implementation/aem-setup-publish.png)
+5. 按兩下 `aem-author-p4502.jar` 檔案安裝Author例項。 這會啟動編寫執行個體，在本機電腦的連線埠4502上執行。
+6. 使用下列憑證登入，系統會在您成功登入後，將您導向至AEM首頁畫面。
+使用者名稱： **管理員**
 密碼： **管理員**
-   ![AEM發佈實例](assets/implementation/aem-author-home-page.png)
-7. 按兩下 `aem-publish-p4503.jar` 檔案以安裝發佈實例。 您可以注意到瀏覽器中為發佈實例開啟的一個新頁籤，該頁籤在埠4503上運行並顯示WeRetail首頁。 本教程使用的是WKND參考站點，讓我們在作者實例上安裝軟體包。
-8. 在Web瀏覽器中導航到AEM作者，網址為： `http://localhost:4502`。 在「開始AEM」螢幕上，導航至 *[工具>部署>包](http://localhost:4502/crx/packmgr/index.jsp)*。
-9. 下載和上載包AEM(上面列於 *[先決條件> AEM](#aem)*)
+   ![AEM發佈執行個體](assets/implementation/aem-author-home-page.png)
+7. 按兩下 `aem-publish-p4503.jar` 檔案以安裝發佈執行個體。 您會發現瀏覽器中針對您的發佈執行個體開啟了一個新索引標籤，在連線埠4503上執行並顯示WeRetail首頁。 我們在本教學課程中使用WKND參考網站，並在作者執行個體上安裝套件。
+8. 在網頁瀏覽器中導覽至AEM作者，網址為 `http://localhost:4502`. 在AEM開始畫面上，導覽至 *[「工具>部署>套件」](http://localhost:4502/crx/packmgr/index.jsp)*.
+9. 下載並上傳AEM的套件(列於上方的 *[先決條件> AEM](#aem)*)
    * [aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip)
    * [aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip)
    * [core.wcm.components.all-2.5.0.zip](https://github.com/adobe/aem-core-wcm-components/releases/download/core.wcm.components.reactor-2.5.0/core.wcm.components.all-2.5.0.zip)
    * [digital-data-layer.zip](assets/implementation/digital-data-layer.zip)
 
    >[!VIDEO](https://video.tv.adobe.com/v/28377?quality=12&learn=on)
-10. 在AEM Author上安裝包後，在包管理器中選擇每個上載AEM的包，然後選擇 **更多>複製** 以確保將包部署到AEM發佈。
-11. 此時，您已成功安裝了WKND參考站點和本教程所需的所有其他軟體包。
+10. 在AEM作者上安裝套件後，請在AEM套件管理器中選取每個上傳的套件，然後選取 **更多>復寫** 以確保套件部署至AEM Publish。
+11. 此時，您已成功安裝WKND參考網站及本教學課程所需的所有其他套件。
 
-[下一章](./using-launch-adobe-io.md):在下一章中，您將與Launch整合AEM。
+[下一章節](./using-launch-adobe-io.md)：在下一章中，您將整合Launch與AEM。

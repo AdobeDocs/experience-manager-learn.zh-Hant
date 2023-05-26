@@ -1,6 +1,6 @@
 ---
-title: 安裝所需的32位MicrosoftVisual C++可再分發表的步驟
-description: 檢查和安裝所需的32位MicrosoftVisual C++可再分發表的步驟
+title: 安裝必要32位元Microsoft Visual C++可轉散發軟體的步驟
+description: 檢查及安裝必要32位元Microsoft Visual C++可轉散發軟體的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 檢查和安裝所需的32位MicrosoftVisual C++可再分發表的步驟
+# 檢查及安裝必要32位元Microsoft Visual C++可轉散發軟體的步驟
 
-*此視頻將介紹檢查和安裝所需的32位MicrosoftVisual C++可再發行版的過程。*
+*本影片將逐步說明檢查及安裝必要的32位元Microsoft Visual C++可轉散發套件。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335520?quality=12&learn=on)

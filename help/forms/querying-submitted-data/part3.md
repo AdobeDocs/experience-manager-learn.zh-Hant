@@ -1,7 +1,7 @@
 ---
-title: AEM Forms，帶JSON架構和資料[Part3]
+title: 具有JSON結構描述和資料的AEM Forms[Part3]
 seo-title: AEM Forms with JSON Schema and Data[Part3]
-description: 多部分教程，引導您完成建立帶JSON架構的自適應表單和查詢提交資料所涉及的步驟。
+description: 多部分教學課程將逐步引導您完成使用JSON結構描述建立調適型表單和查詢已提交資料的相關步驟。
 seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
@@ -20,12 +20,12 @@ ht-degree: 0%
 
 ---
 
-# 將JSON架構儲存在資料庫中 {#storing-json-schema-in-database}
+# 將JSON結構描述儲存在資料庫中 {#storing-json-schema-in-database}
 
 
-要能夠查詢已提交的資料，我們需要儲存與已提交表單關聯的JSON架構。 查詢生成器中使用JSON架構來生成查詢。
+為了能夠查詢提交的資料，我們需要儲存與提交的表單相關聯的JSON結構描述。 JSON結構描述用於查詢產生器，以建立查詢。
 
-提交自適應表單時，我們會檢查關聯的JSON架構是否在資料庫中。 如果JSON架構不存在，我們將獲取JSON架構並將該架構儲存在相應的表中。 我們還將表單名稱與JSON架構關聯。 以下螢幕快照顯示JSON架構的儲存表。
+提交最適化表單時，我們會檢查關聯的JSON結構描述是否位於資料庫中。 如果JSON結構描述不存在，我們會擷取JSON結構描述並將結構描述儲存在適當的表格中。 我們也會將表單名稱與JSON結構描述建立關聯。 下列熒幕擷圖顯示JSON結構描述儲存位置的表格。
 
 ![jsonschema](assets/jsonschemas.gif)
 
@@ -107,9 +107,9 @@ public String getJSONSchema(String afPath) {
 
 >[!NOTE]
 >
->建立自適應表單時，您可以使用儲存庫中的JSON架構或上載JSON架構。 上述代碼適用於這兩種情況。
+>建立最適化表單時，您可以使用存放庫中的JSON結構描述或上傳JSON結構描述。 上述程式碼適用於兩種情況。
 
-獲取的模式使用標準JDBC操作儲存在資料庫中。 以下代碼將架構插入資料庫中
+擷取的綱要會使用標準JDBC作業儲存在資料庫中。 下列程式碼會將結構描述插入資料庫中
 
 ```java
 public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
@@ -145,10 +145,10 @@ public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
  }
 ```
 
-總之，我們到目前為止已經完成了以下工作
+總結一下，我們目前已完成下列工作
 
-* 基於JSON架構建立自適應表單
-* 如果首次提交表單時，我們將與表單關聯的JSON架構儲存在資料庫中。
-* 將Adaptive Form的綁定資料儲存到資料庫中。
+* 根據JSON結構描述建立最適化表單
+* 如果表單是第一次提交，我們會儲存與表單相關聯的JSON結構描述於資料庫中。
+* 我們會將最適化表單的繫結資料儲存在資料庫中。
 
-下一步是使用QueryBuilder顯示要基於JSON架構搜索的欄位
+後續步驟會是使用QueryBuilder顯示根據JSON結構描述搜尋的欄位

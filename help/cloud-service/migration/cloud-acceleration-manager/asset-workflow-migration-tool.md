@@ -1,6 +1,6 @@
 ---
 title: 資產工作流程移轉工具
-description: 瞭解資產工作流遷移工具如何幫助將您現有的AEM Assets工作流遷移AEM到as a Cloud Service。
+description: 瞭解資產工作流程移轉工具如何協助您將現有AEM Assets工作流程移轉至AEMas a Cloud Service。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -18,6 +18,6 @@ ht-degree: 16%
 
 # 資產工作流程移轉工具
 
-瞭解資產工作流遷移工具如何幫助將您現有的AEM Assets工作流遷移AEM到as a Cloud Service。
+瞭解資產工作流程移轉工具如何協助您將現有AEM Assets工作流程移轉至AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336697?quality=12&learn=on)

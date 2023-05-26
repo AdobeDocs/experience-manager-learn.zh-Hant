@@ -1,5 +1,5 @@
 ---
-title: Test你對Forms會員的理解
+title: 測試您對Forms組合器的瞭解
 description: 完成練習
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 # 練習
 
-## 匯編PDF檔案
+## 組合PDF檔案
 
-修改 `assemble2pdfs.ddx` 檔案來裝配3個PDF檔案。
+修改 `assemble2pdfs.ddx` 檔案組合3個PDF檔案。
 
-您將將第三個pdf放置在resources/pdfiles資料夾下。
+您將第三個pdf放在resources/pdf資料夾下。

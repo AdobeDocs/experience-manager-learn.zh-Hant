@@ -1,6 +1,6 @@
 ---
-title: 配置批資料配置
-description: 配置批資料配置
+title: 設定批次資料設定
+description: 設定批次資料設定
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,25 +16,25 @@ ht-degree: 0%
 
 ---
 
-# 建立批配置
+# 建立批次設定
 
-要使用批處理API，請建立批配置並基於該配置執行運行。 以下視頻顯示了使用API建立批配置的演示
+若要使用批次API，請建立批次設定，並根據該設定執行執行。 以下影片示範如何使用API建立批次組態
 
 >[!NOTE]
->請確保用AEM戶屬於 ```forms-users``` 進行API調用的組。
+>請確定AEM使用者屬於 ```forms-users``` 群組進行API呼叫。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/340241?quality=12&learn=on)
 
-## 建立批配置
+## 建立批次設定
 
-以下是用於建立批配置的POST終結點
+以下是建立批次設定的POST端點
 
 ```xml
 <baseURL>/config
 ```
 
-以下是建立批處理配置時需要指定的最小配置。 這需要作為JSON對象在HTTP請求正文中傳遞
+以下是在建立批次設定時需要指定的最小設定。 這必須在HTTP要求內文中傳遞為JSON物件
 
 ```
 {
@@ -48,13 +48,13 @@ ht-degree: 0%
 }
 ```
 
-## 驗證批配置
+## 驗證批次設定
 
-要驗證批配置的建立是否成功，可以對以下終結點進行GET請求調用
+若要驗證批次設定是否成功建立，您可以對以下端點進行GET請求呼叫
 
 
 ```xml
 <baseURL>/config/monthlystatements
 ```
 
-您只需在HTTP請求正文中傳遞空JSON對象
+您只需在HTTP請求內文中傳遞空白的JSON物件即可

@@ -1,6 +1,6 @@
 ---
-title: ChampionAEM Tips and Tricks — 雲管理員入門手冊
-description: 查看Cloud Manager的這些提示以及由冠軍和專家Rakesh PasupuletiAEM提供的入門手冊。
+title: AEM Champion秘訣與技巧 — Cloud Manager入門行動手冊
+description: 檢視AEM冠軍和專家Rakesh Pasuleti的Cloud Manager入門和入門行動手冊的這些提示。
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -17,18 +17,18 @@ ht-degree: 5%
 ---
 
 
-# ChampionAEM Tips and Tricks — 雲管理員入門手冊
+# AEM Champion秘訣與技巧 — Cloud Manager入門行動手冊
 
-入門手冊將幫助您作為新管理員和開發人員負責AEMas a Cloud Service。 在可下載的電子錶格中，我們將指導您瞭解在開始登機之旅時，應在工作的頭三週進行的活動。
+入門行動手冊將幫助您作為AEMas a Cloud Service的新管理員和開發人員負責。 在可下載的試算表中，我們將引導您瞭解您開始入門歷程後頭三週應該完成的活動。
 
 >[!TIP]
 >
->下載 [就在這裡。](./assets/AEM-Cloud-Manager-Onboarding-Playbook.xlsx)
+>下載 [在此處入門行動手冊。](./assets/AEM-Cloud-Manager-Onboarding-Playbook.xlsx)
 
-看看你的技術領導拉克什·帕蘇普萊蒂的這些提示。 拉克什是Adobe Experience Manager的冠軍，他分享了如何運用拼板遊戲的想法。
+檢視您的技術負責人Rakesh Pasupuleti提供的這些秘訣。 Rakesh是Adobe Experience Manager達人，他分享了關於如何使用入門教戰手冊的想法。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419299?quality=12&learn=on)
 
 ## 其他資源 {#additional-resources}
 
-* [AEMas a Cloud Service登機](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html)  — 新系統管理員的逐步指南，用於初始配置雲資源並根據其工作職責為用戶分配角色，以便團隊的每個成員都能夠登錄並訪問其新的AEMas a Cloud Service資源
+* [AEMas a Cloud Service入門歷程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html)  — 新系統管理員的逐步指南，用於最初布建雲端資源，並根據使用者的工作職責為其指派角色，以便團隊的每個成員都能夠登入並存取其新的AEMas a Cloud Service資源

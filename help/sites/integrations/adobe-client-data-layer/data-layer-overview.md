@@ -1,6 +1,6 @@
 ---
-title: 將Adobe客戶端資料層與核AEM心元件一起使用
-description: Adobe客戶端資料層引入了一種標準方法來收集和儲存有關訪問者體驗的資料，然後使訪問這些資料變得容易。 Adobe客戶端資料層與平台無關，但完全整合到核心元件中，供使用AEM。
+title: 搭配AEM核心元件使用Adobe Client Data Layer
+description: Adobe Client Data Layer匯入了標準方法，用以收集和儲存訪客在網頁上的體驗資料，然後讓這項資料易於存取。 Adobe Client Data Layer不受平台限制，但已完全整合至核心元件，以與AEM搭配使用。
 topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
@@ -16,36 +16,36 @@ ht-degree: 0%
 
 ---
 
-# 將Adobe客戶端資料層與核AEM心元件一起使用 {#overview}
+# 搭配AEM核心元件使用Adobe Client Data Layer {#overview}
 
-Adobe客戶端資料層引入了一種標準方法來收集和儲存有關訪問者體驗的資料，然後使訪問這些資料變得容易。 Adobe客戶端資料層與平台無關，但完全整合到核心元件中，供使用AEM。
+Adobe Client Data Layer匯入了標準方法，用以收集和儲存訪客在網頁上的體驗資料，然後讓這項資料易於存取。 Adobe Client Data Layer不受平台限制，但已完全整合至核心元件，以與AEM搭配使用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41195?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 是否要在您的站點上啟用Adobe客戶端數AEM據層？ [請參閱此處的說明](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+> 想要在您的AEM網站上啟用Adobe使用者端資料層？ [請參閱此處的指示](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
 
-## 瀏覽資料層
+## 探索資料層
 
-您只需使用瀏覽器的開發人員工具和即時功能即可瞭解Adobe客戶端資料層的內置功能 [WKND參考站點](https://wknd.site/us/en.html)。
+只要使用瀏覽器和即時開發工具，您就能瞭解Adobe使用者端資料層的內建功能 [WKND參考網站](https://wknd.site/us/en.html).
 
 >[!NOTE]
 >
-> 下面是從Chrome瀏覽器拍攝的螢幕截圖。
+> 以下熒幕擷取畫面是從Chrome瀏覽器擷取的。
 
-1. 導航到 [https://wknd.site/us/en.html](https://wknd.site/us/en.html)
-1. 開啟開發人員工具，在 **控制台**:
+1. 導覽至 [https://wknd.site/us/en.html](https://wknd.site/us/en.html)
+1. 開啟您的開發人員工具，然後在 **主控台**：
 
    ```js
    window.adobeDataLayer.getState();
    ```
 
-   要查看站點上資料層的當前狀態，請AEM檢查響應。 您應看到有關頁面和各個元件的資訊。
+   若要檢視AEM網站上資料層的目前狀態，請檢查回應。 您應該會看到頁面和個別元件的相關資訊。
 
-   ![Adobe資料層響應](assets/data-layer-state-response.png)
+   ![Adobe資料層回應](assets/data-layer-state-response.png)
 
-1. 在控制台中輸入以下命令，將資料對象推送到資料層：
+1. 在主控台中輸入下列內容，將資料物件推送至資料層：
 
    ```js
    window.adobeDataLayer.push({
@@ -58,20 +58,20 @@ Adobe客戶端資料層引入了一種標準方法來收集和儲存有關訪問
    });
    ```
 
-1. 運行命令 `adobeDataLayer.getState()` 找到 `training-data`。
-1. 接下來添加路徑參數以僅返回元件的特定狀態：
+1. 執行命令 `adobeDataLayer.getState()` 再次檢查並找到專案 `training-data`.
+1. 接下來，新增路徑引數以僅傳回元件的特定狀態：
 
    ```js
    window.adobeDataLayer.getState('component.training-data');
    ```
 
-   ![僅返回單個元件資料條目](assets/return-just-single-component.png)
+   ![只傳回單一元件資料專案](assets/return-just-single-component.png)
 
 ## 使用事件
 
-根據來自資料層的事件觸發任何自定義代碼是一種最佳做法。 接下來，瀏覽註冊和收聽不同的事件。
+最佳實務是根據資料層的事件觸發任何自訂程式碼。 接下來，探索註冊和聆聽不同事件的方式。
 
-1. 在控制台中輸入以下幫助方法：
+1. 在主控台中輸入下列helper方法：
 
    ```js
    function getDataObjectHelper(event, filter) {
@@ -90,13 +90,13 @@ Adobe客戶端資料層引入了一種標準方法來收集和儲存有關訪問
    }
    ```
 
-   上述代碼檢查 `event` 對象和使用 `adobeDataLayer.getState` 方法，獲取觸發事件的對象的當前狀態。 然後helper方法檢查 `filter` 只有當 `dataObject` 滿足返回的篩選條件。
+   上述程式碼會檢查 `event` 物件並使用 `adobeDataLayer.getState` 方法以取得觸發事件的物件目前狀態。 接著helper方法會檢查 `filter` 且僅當目前 `dataObject` 符合傳回的篩選條件。
 
    >[!CAUTION]
    >
-   > 很重要 **不** 在本練習中刷新瀏覽器，否則控制台JavaScript將丟失。
+   > 這很重要 **not** 以在本練習中重新整理瀏覽器，否則主控台JavaScript會遺失。
 
-1. 接下來，輸入在 **預告** 元件顯示在 **旋轉木馬**。
+1. 接下來，輸入事件處理常式，當 **Teaser** 元件會顯示在 **輪播**.
 
    ```js
    function teaserShownHandler(event) {
@@ -108,9 +108,9 @@ Adobe客戶端資料層引入了一種標準方法來收集和儲存有關訪問
    }
    ```
 
-   的 `teaserShownHandler` 函式調用 `getDataObjectHelper` 函式並傳遞篩選器 `wknd/components/teaser` 的 `@type` 以篩選由其他元件觸發的事件。
+   此 `teaserShownHandler` 函式呼叫 `getDataObjectHelper` 函式並傳遞篩選條件： `wknd/components/teaser` 作為 `@type` 以篩選掉由其他元件觸發的事件。
 
-1. 接下來，將事件偵聽器推送到資料層以偵聽 `cmp:show` 的子菜單。
+1. 接下來，將事件接聽程式推播至資料層，以接聽 `cmp:show` 事件。
 
    ```js
    window.adobeDataLayer.push(function (dl) {
@@ -118,13 +118,13 @@ Adobe客戶端資料層引入了一種標準方法來收集和儲存有關訪問
    });
    ```
 
-   的 `cmp:show` 事件由許多不同的元件觸發，例如，在 **旋轉木馬**，或在 **頁籤** 元件。
+   此 `cmp:show` 事件是由許多不同元件觸發，例如當新幻燈片顯示在 **輪播**，或當在「 」中選取新標籤時 **標籤** 元件。
 
-1. 在頁面上，切換旋轉軸幻燈片並觀察控制台語句：
+1. 在頁面上，切換輪播投影片並觀察主控台陳述式：
 
-   ![切換旋轉傳送器並查看事件偵聽器](assets/teaser-console-slides.png)
+   ![切換輪播並檢視事件接聽程式](assets/teaser-console-slides.png)
 
-1. 停止收聽 `cmp:show` 事件，從資料層中刪除事件偵聽器
+1. 停止接聽 `cmp:show` 事件，從資料層移除事件監聽器
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -133,9 +133,9 @@ Adobe客戶端資料層引入了一種標準方法來收集和儲存有關訪問
    });
    ```
 
-1. 返回到頁面並切換旋轉拉片。 請注意沒有記錄更多語句，並且事件未被收聽。
+1. 返回頁面並切換輪播幻燈片。 請注意，不會再記錄任何陳述式，且事件也不會被監聽。
 
-1. 接下來，建立在觸發頁面顯示事件時調用的事件處理程式：
+1. 接下來，建立觸發頁面顯示事件時所呼叫的事件處理常式：
 
    ```js
    function pageShownHandler(event) {
@@ -147,9 +147,9 @@ Adobe客戶端資料層引入了一種標準方法來收集和儲存有關訪問
    }
    ```
 
-   注意資源類型 `wknd/components/page` 用於篩選事件。
+   請注意，資源型別 `wknd/components/page` 用於篩選事件。
 
-1. 接下來，將事件偵聽器推送到資料層以偵聽 `cmp:show` 事件，調用 `pageShownHandler`。
+1. 接下來，將事件接聽程式推播至資料層，以接聽 `cmp:show` 事件，呼叫 `pageShownHandler`.
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -158,23 +158,23 @@ Adobe客戶端資料層引入了一種標準方法來收集和儲存有關訪問
    });
    ```
 
-1. 您應立即看到已觸發的控制台語句，其中包含頁資料：
+1. 您應該會立即看到隨頁面資料引發的主控台陳述式：
 
    ![頁面顯示資料](assets/page-show-console-data.png)
 
-   的 `cmp:show` 頁面的事件在頁面頂部的每個頁面載入時觸發。 您可能會問，當頁面顯然已載入時，為什麼觸發了事件處理程式？
+   此 `cmp:show` 頁面事件會在頁面頂端的每次頁面載入時觸發。 您可能會問，當頁面明確已載入時，為何觸發事件處理常式？
 
-   Adobe客戶端資料層的一個獨特功能是，您可以註冊事件偵聽器 **先** 或 **後** 資料層已初始化，這有助於避免競爭條件。
+   Adobe Client Data Layer的獨特功能之一，是您可以註冊事件接聽程式 **早於** 或 **晚於** 資料層已初始化，這有助於避免競爭條件。
 
-   資料層維護按順序發生的所有事件的隊列陣列。 預設情況下，資料層將觸發在 **過去** 和 **未來**。 可以過濾過去或將來的事件。 [有關詳細資訊，請參閱文檔](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener)。
+   Data Layer會維護已依序發生之所有事件的佇列陣列。 根據預設，Data Layer會針對下列位置中發生的事件觸發事件回呼： **過去** 和中的事件 **未來**. 您可以篩選過去或未來的事件。 [如需詳細資訊，請參閱檔案](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
 
 
 ## 後續步驟
 
-有兩種選擇可以繼續學習，第一種，檢查 [收集頁資料併發送到Adobe Analytics](../analytics/collect-data-analytics.md) 演示Adobe客戶端資料層使用的教程。 第二個選擇是，學習如何 [使用元件自定義Adobe客戶端數AEM據層](./data-layer-customize.md)
+有兩個選項可持續學習，第一個選項是檢視 [收集頁面資料並將其傳送至Adobe Analytics](../analytics/collect-data-analytics.md) 示範如何使用Adobe使用者端資料層的教學課程。 第二個選項是，學習如何 [使用AEM元件自訂Adobe使用者端資料層](./data-layer-customize.md)
 
 
 ## 其他資源 {#additional-resources}
 
-* [Adobe客戶端資料層文檔](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [使用Adobe客戶端資料層和核心元件文檔](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Adobe使用者端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
+* [使用Adobe使用者端資料層和核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)

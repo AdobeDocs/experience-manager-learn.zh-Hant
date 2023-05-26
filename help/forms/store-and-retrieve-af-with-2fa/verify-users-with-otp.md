@@ -1,6 +1,6 @@
 ---
-title: 使用OTP驗證用戶
-description: 使用OTP驗證與應用程式號關聯的移動號碼。
+title: 使用OTP驗證使用者
+description: 使用OTP驗證與應用程式號碼關聯的行動電話號碼。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -17,43 +17,43 @@ ht-degree: 0%
 
 ---
 
-# 使用OTP驗證用戶
+# 使用OTP驗證使用者
 
-SMS雙因素驗證（雙因素驗證）是一種安全驗證過程，通過用戶登錄網站、軟體或應用程式來觸發該過程。 在登錄過程中，用戶被自動地發送SMS到其包含唯一數字代碼的移動號碼。
+SMS雙因素驗證(Dual Factor Authentication)是一種安全性驗證程式，透過使用者登入網站、軟體或應用程式來觸發。 在登入程式中，使用者會自動傳送SMS至包含唯一數字代碼的行動電話號碼。
 
-有許多組織提供此服務，只要他們有詳細的REST API文檔，您就可以使用AEM Forms的資料整合功能輕鬆整合AEM Forms。 在本教程中，我使用 [內克莫](https://developer.nexmo.com/verify/overview) 演示SMS 2FA使用案例。
+有許多組織提供此服務，只要他們妥善記錄REST API，您就可以使用AEM Forms的資料整合功能，輕鬆整合AEM Forms。 在本教學課程中，我使用 [Nexmo](https://developer.nexmo.com/verify/overview) 示範SMS 2FA使用案例。
 
-按照以下步驟使用Nexmo Verify服務與AEM Forms一起實施SMS 2FA。
+依照下列步驟，使用Nexmo Verify服務透過AEM Forms實作SMS 2FA。
 
 ## 建立開發人員帳戶
 
-建立開發人員帳戶 [內克莫](https://dashboard.nexmo.com/sign-in)。 記下API密鑰和API密鑰。 調用Nexmo服務的REST API時需要這些密鑰。
+建立開發人員帳戶，使用 [Nexmo](https://dashboard.nexmo.com/sign-in). 記下API金鑰和API秘密金鑰。 呼叫Nexmo服務的REST API時需要這些金鑰。
 
 ## 建立Swagger/OpenAPI檔案
 
-OpenAPI規範（以前稱為Swagger規範）是REST API的API說明格式。 OpenAPI檔案允許您描述整個API，包括：
+OpenAPI Specification （前身為Swagger Specification）是REST API的API說明格式。 OpenAPI檔案可讓您說明整個API，包括：
 
-* 可用端點(/users)和每個端點上的操作(GET/users、POST/users)
-* 操作參數每個操作的輸入和輸出身份驗證方法
-* 聯繫資訊、許可證、使用條款和其他資訊。
-* API規範可以用YAML或JSON編寫。 該格式易於學習，對人和機器都易讀。
+* 每個端點的可用端點(/users)和操作(GET/users、POST/users)
+* 作業引數每個作業的輸入和輸出驗證方法
+* 聯絡資訊、授權、使用條款及其他資訊。
+* API規格可以用YAML或JSON撰寫。 該格式簡單易學，且可供人類和機器讀取。
 
-要建立第一個swagger/OpenAPI檔案，請按照 [OpenAPI文檔](https://swagger.io/docs/specification/2-0/basic-structure/)
+若要建立您的第一個swagger/OpenAPI檔案，請遵循 [OpenAPI檔案](https://swagger.io/docs/specification/2-0/basic-structure/)
 
 >[!NOTE]
-> AEM Forms支援OpenAPI規範2.0版(fka Swagger)。
+> AEM Forms支援OpenAPI規格2.0版(fka Swagger)。
 
-使用 [斯瓦格編輯器](https://editor.swagger.io/) 建立swagger檔案，以描述使用SMS發送和驗證OTP代碼的操作。 可以使用JSON或YAML格式建立swagger檔案。 已完成的交換器檔案可從 [這裡](assets/two-factore-authentication-swagger.zip)
+使用 [swagger編輯器](https://editor.swagger.io/) 建立您的swagger檔案，以說明傳送及驗證使用簡訊傳送之OTP代碼的作業。 Swagger檔案可以採用JSON或YAML格式建立。 完整的swagger檔案可從以下網址下載： [此處](assets/two-factore-authentication-swagger.zip)
 
-## 建立資料源
+## 建立資料來源
 
-要將AEM/AEM Forms與第三方應用程式整合，我們需要 [使用swagger檔案的基於REST的資料源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) 在雲服務配置中。 已完成的資料源將作為本課程資產的一部分提供給您。
+若要將AEM/AEM Forms與協力廠商應用程式整合，我們需要 [使用swagger檔案的REST型資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) 在雲端服務設定中。 完成的資料來源會作為本課程資產的一部分提供給您。
 
 ## 建立表單資料模型
 
-AEM Forms資料整合提供直觀的用戶介面，用於建立和使用 [表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 表單資料模型依賴於資料源來交換資料。
-完成的表單資料模型可以 [從此處下載](assets/sms-2fa-fdm.zip)
+AEM Forms資料整合提供直覺式使用者介面，用於建立和使用 [表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). 表單資料模型仰賴資料來源交換資料。
+完成的表單資料模型可以是 [已從此處下載](assets/sms-2fa-fdm.zip)
 
-![fd](assets/2FA-fdm.PNG)
+![fdm](assets/2FA-fdm.PNG)
 
-[建立主窗體](./create-the-main-adaptive-form.md)
+[建立主要表單](./create-the-main-adaptive-form.md)

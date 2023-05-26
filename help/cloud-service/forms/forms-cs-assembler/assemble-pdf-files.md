@@ -1,6 +1,6 @@
 ---
-title: 使用調用DDX操作匯編PDF檔案
-description: 發出POST請求以調用具有必要參數的DDX端點
+title: 使用呼叫DDX操作組合PDF檔案
+description: 發出POST要求，以使用必要的引數叫用DDX端點
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 ---
 
-# 撥打POST
+# 進行POST呼叫
 
 
-下一步是使用必要的參數對端點進行HTTPPOST調用。 DDX和pdf檔案作為資源檔案提供。 端點具有基於令牌的身份驗證，我們在請求標頭中傳遞訪問令牌。
-使用匯編器服務時，使用名為「文檔說明XML」(DDX)的基於XML的語言來描述所需的輸出。 DDX是聲明性標籤語言，其元素表示文檔的構建塊。以下DDX用於合併在PDF源元素中標識的兩個pdf文檔。
+下一步是使用必要的引數向端點進行HTTPPOST呼叫。 DDX和pdf檔案會以資源檔案的形式提供。 端點具有權杖型驗證，我們會在請求標頭中傳遞存取權杖。
+使用Assembler服務時，請使用名為Document Description XML (DDX)的XML語言來說明您想要的輸出。 DDX是一種宣告式標籤語言，其元素代表檔案的建置區塊。以下DDX用於合併PDF來源元素中識別的兩個pdf檔案。
 
 ```xml
 <DDX xmlns="http://ns.adobe.com/DDX/1.0/">
@@ -31,7 +31,7 @@ ht-degree: 0%
 </DDX>
 ```
 
-以下代碼用於組合pdf檔案
+下列程式碼用於合併pdf檔案
 
 ```java
 package com.aemformscs.documentservices;

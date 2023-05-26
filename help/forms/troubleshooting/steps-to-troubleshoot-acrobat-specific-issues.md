@@ -1,6 +1,6 @@
 ---
-title: 排除Windows安裝程式上Acrobat特定問題的步驟
-description: 對Windows安裝程式上的Acrobat特定問題進行故障排除
+title: 針對Windows安裝程式上的Acrobat特定問題進行疑難排解的步驟
+description: 疑難排解Windows安裝程式上的Acrobat特定問題
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 排除Windows安裝程式上Acrobat特定問題的步驟
+# 針對Windows安裝程式上的Acrobat特定問題進行疑難排解的步驟
 
-*此視頻介紹了在AEM FormsPDFG的Windows設定中排除Acrobat特定問題的過程。*
+*本影片將逐步解說針對AEM Forms PDFG的Windows設定，疑難排解Acrobat特定問題的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335480?quality=12&learn=on)

@@ -1,5 +1,5 @@
 ---
-title: OSGi服務開發基礎
+title: OSGi服務開發基本知識
 description: 瞭解開發OSGi服務的基本知識
 role: Developer
 level: Beginner
@@ -21,7 +21,7 @@ ht-degree: 1%
 瞭解OSGi服務開發的基本知識，包括：
 
 + 如何將Java POJO轉換為OSGi服務
-+ 如何將OSGi服務綁定到Java介面
++ 如何將OSGi服務繫結至Java介面
 
 >[!VIDEO](https://video.tv.adobe.com/v/335476?quality=12&learn=on)
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 + [@ProviderType JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/annotation/versioning/ProviderType.html)
 + [@Version JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/annotation/versioning/Version.html)
 
-## 代碼
+## 程式碼
 
 ### Activities.java
 

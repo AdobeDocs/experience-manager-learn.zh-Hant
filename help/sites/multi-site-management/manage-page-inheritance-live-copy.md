@@ -1,6 +1,6 @@
 ---
-title: 管理頁面上的Live Copy繼承
-description: 瞭解如何在頁面級別管理即時副本與其藍圖之間的繼承
+title: 管理頁面上的即時副本繼承
+description: 瞭解如何在頁面層級管理即時副本與其Blueprint之間的繼承情形
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ---
 
-# 管理頁面上的Live Copy繼承 {#manage-live-copy-page}
+# 管理頁面上的即時副本繼承 {#manage-live-copy-page}
 
-瞭解如何在頁面級別管理即時副本與其藍圖之間的繼承。
+瞭解如何在頁面層級管理即時副本與其Blueprint之間的繼承情形。
 >[!VIDEO](https://video.tv.adobe.com/v/36679?quality=12&learn=on)

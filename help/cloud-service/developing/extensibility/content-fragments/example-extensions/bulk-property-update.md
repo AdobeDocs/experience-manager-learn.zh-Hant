@@ -1,6 +1,6 @@
 ---
-title: Bulk屬性更新示例AEMContent Fragment Console擴展
-description: 批量更AEM新內容片段屬性的示例內容片段控制台擴展。
+title: 大量屬性更新範例AEM內容片段主控台擴充功能
+description: 大量更新內容片段屬性的AEM內容片段主控台擴充功能範例。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -18,61 +18,61 @@ ht-degree: 0%
 
 ---
 
-# 批量屬性更新示例擴展
+# 大量屬性更新範例擴充功能
 
-![批量屬性更新](./assets/bulk-property-update/screenshot.png){align="center"}
+![大量屬性更新](./assets/bulk-property-update/screenshot.png){align="center"}
 
-此示例AEM內容片段控制台擴展是 [操作欄](../action-bar.md) 批量將內容片段屬性更新為公共值的擴展。
+此範例AEM內容片段控制檯擴充功能為 [動作列](../action-bar.md) 將內容片段屬性大量更新為通用值的擴充功能。
 
-示例擴展的功能流如下：
+範例擴充功能的功能流程如下：
 
-![Adobe I/O Runtime動作流](./assets/bulk-property-update/flow.png){align="center"}
+![Adobe I/O Runtime動作流程](./assets/bulk-property-update/flow.png){align="center"}
 
-1. 選擇「內容片段」，然後按一下 [操作欄](#extension-registration) 開啟 [模態](#modal)。
-1. 的 [模態](#modal) 顯示使用 [反應光譜](https://react-spectrum.adobe.com/react-spectrum/)。
-1. 提交表單將選定內容片段的清單和主AEM機發送到 [自定義Adobe I/O Runtime操作](#adobe-io-runtime-action)。
-1. 的 [Adobe I/O Runtime行動](#adobe-io-runtime-action) 驗證輸入並發出HTTPPUT請求AEM以更新所選內容片段。
-1. 每個內容片段的一系列HTTPPUT以更新指定的屬性。
-1. AEMas a Cloud Service將屬性更新保留到內容片段，並返回對Adobe I/O Runtime操作的成功或失敗響應。
-1. 該模式從Adobe I/O Runtime操作接收到響應，並顯示成功批量更新的清單。
+1. 選取內容片段，然後按一下 [動作列](#extension-registration) 開啟 [強制回應](#modal).
+1. 此 [強制回應](#modal) 顯示使用建立的自訂輸入表單 [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/).
+1. 提交表單會將所選內容片段的清單和AEM主機傳送至 [自訂Adobe I/O Runtime動作](#adobe-io-runtime-action).
+1. 此 [Adobe I/O Runtime動作](#adobe-io-runtime-action) 驗證輸入並向AEM發出HTTPPUT請求以更新所選的內容片段。
+1. 每個內容片段的一系列HTTPPUT可更新指定的屬性。
+1. AEMas a Cloud Service會儲存內容片段的屬性更新，並針對Adobe I/O Runtime動作傳回成功或失敗回應。
+1. 強制回應視窗收到來自Adobe I/O Runtime動作的回應，並顯示成功的大量更新清單。
 
-此視頻將回顧示例批量屬性更新擴展、其工作方式和開發方式。
+本影片將檢閱大量屬性更新擴充功能的範例、運作方式和開發方式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
-## 應用程式生成器擴展應用
+## App Builder擴充功能應用程式
 
-此示例使用現有的Adobe Developer控制台項目，並在初始化App Builder應用時使用以下選項，通過 `aio app init`。
+此範例使用現有的Adobe Developer Console專案，並在透過初始化App Builder應用程式時使用以下選項 `aio app init`.
 
-+ 您要搜索哪些模板？: `All Extension Points`
-+ 選擇要安裝的模板：` @adobe/aem-cf-admin-ui-ext-tpl`
-+ 您想為您的分機命名什麼？: `Bulk property update`
-+ 請提供您的分機的簡短說明： `An example action bar extension that bulk updates a single property one or more content fragments.`
-+ 您想從哪個版本開始： `0.0.1`
-+ 您接下來想做什麼？
++ 您要搜尋哪些範本？： `All Extension Points`
++ 選擇要安裝的範本：` @adobe/aem-cf-admin-ui-ext-tpl`
++ 您要將擴充功能取什麼名稱？： `Bulk property update`
++ 請提供擴充功能的簡短說明： `An example action bar extension that bulk updates a single property one or more content fragments.`
++ 您想要從哪個版本開始？： `0.0.1`
++ 您接下來想要做什麼？
    + `Add a custom button to Action Bar`
-      + 請提供按鈕的標籤名稱： `Bulk property update`
-      + 是否需要為按鈕顯示模式？ `y`
+      + 請提供按鈕的標簽名稱： `Bulk property update`
+      + 您是否需要顯示按鈕的強制回應視窗？ `y`
    + `Add server-side handler`
-      + Adobe I/O Runtime允許您按需調用無伺服器代碼。 您要如何命名此操作？: `generic`
+      + Adobe I/O Runtime可讓您隨選叫用無伺服器程式碼。 您要如何命名此動作？： `generic`
 
-生成的App Builder擴展應用將按如下所述更新。
+產生的App Builder擴充功能應用程式已更新，如下所述。
 
-## 應用路由{#app-routes}
+## 應用程式路由{#app-routes}
 
-的 `src/aem-cf-console-admin-1/web-src/src/components/App.js` 包含 [反應路由器](https://reactrouter.com/en/main)。
+此 `src/aem-cf-console-admin-1/web-src/src/components/App.js` 包含 [React路由器](https://reactrouter.com/en/main).
 
-路由有兩組邏輯：
+路由的邏輯集合有兩種：
 
-1. 第一條路由將請求映射到 `index.html`，調用負責 [擴展註冊](#extension-registration)。
+1. 第一個路由會將請求對應至 `index.html`，會叫用負責以下專案的React元件： [延伸註冊](#extension-registration).
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
    ```
 
-1. 第二組路由將URL映射為表示擴展模式內容的「反應」元件。 的 `:selection` param表示分隔的清單內容片段路徑。
+1. 第二組路由會將URL對應至轉譯擴充功能強制回應內容的React元件。 此 `:selection` param代表分隔的清單內容片段路徑。
 
-   如果擴展具有多個按鈕以調用離散操作，則每個按鈕 [擴展註冊](#extension-registration) 映射到此處定義的路由。
+   如果擴充功能有多個按鈕可叫用分散式動作，則每個 [延伸註冊](#extension-registration) 對應至此處定義的路由。
 
    ```javascript
    <Route
@@ -81,13 +81,13 @@ ht-degree: 0%
        />
    ```
 
-## 分機註冊
+## 擴充功能註冊
 
-`ExtensionRegistration.js`，映射到 `index.html` 路由，是擴展的入AEM口點並定義：
+`ExtensionRegistration.js`，對應至 `index.html` route是AEM擴充功能的入口點，並定義：
 
-1. 擴展按鈕的位置顯示在創作AEM體驗中(`actionBar` 或 `headerMenu`)
-1. 擴展按鈕的定義 `getButton()` 函式
-1. 在 `onClick()` 函式
+1. 擴充功能按鈕的位置會顯示在AEM編寫體驗中(`actionBar` 或 `headerMenu`)
+1. 中的擴充功能按鈕定義 `getButton()` 函式
+1. 按鈕的點選處理常式，位於 `onClick()` 函式
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -137,20 +137,20 @@ function ExtensionRegistration() {
 
 ## 模型
 
-擴展的每條路由，如中定義 [`App.js`](#app-routes)，映射到在擴展模式中呈現的「反應」(React)元件。
+擴充功能的每個路由，如 [`App.js`](#app-routes)，對應至會在擴充功能強制回應中轉譯的React元件。
 
-在此示例應用中，有一個模式React元件(`BulkPropertyUpdateModal.js`)有三個狀態：
+在此範例應用程式中，有一個強制回應元件(`BulkPropertyUpdateModal.js`)有三個狀態：
 
-1. 正在載入，指示用戶必須等待
-1. 批量屬性更新表單，允許用戶指定要更新的屬性名稱和值
-1. 批量屬性更新操作的響應，列出已更新的內容片段和無法更新的內容片段
+1. 正在載入，表示使用者必須等待
+1. 允許使用者指定要更新的屬性名稱和值的「大量屬性更新」表單
+1. 大量屬性更新操作的回應，列出已更新的內容片段和無法更新的內容片段
 
-重要的是，與擴展AEM的任何互動都應委託 [AppBuilderAdobe I/O Runtime操作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，是在中運行的獨立無伺服器進程 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)。
-使用Adobe I/O Runtime的操作與AEM其進行通信是為了避免跨源資源共用(CORS)連接問題。
+重要的是，擴充功能與AEM的任何互動都應委派給 [AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，是在中執行的獨立無伺服器程式 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
+使用Adobe I/O Runtime動作與AEM通訊是為了避免跨原始資源共用(CORS)連線問題。
 
-提交「批量屬性更新」表單時，將自定義 `onSubmitHandler()` 調用Adobe I/O Runtime操作，傳AEM遞當前主機（域）和用AEM戶的訪問令牌，然後調用 [內AEM容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 更新內容片段。
+提交大量屬性更新表單時，自訂 `onSubmitHandler()` 叫用Adobe I/O Runtime動作，傳遞目前的AEM主機（網域）和使用者的AEM存取權杖，然後呼叫 [AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 以更新內容片段。
 
-當接收到來自Adobe I/O Runtime操作的響應時，更新模式以顯示批量屬性更新操作的結果。
+收到Adobe I/O Runtime動作的回應時，強制回應視窗會更新，以顯示大量屬性更新作業的結果。
 
 + `src/aem-cf-console-admin-1/web-src/src/components/BulkPropertyUpdateModal.js`
 
@@ -407,16 +407,16 @@ export default function BulkPropertyUpdateModal() {
 ```
 
 
-## Adobe I/O Runtime行動
+## Adobe I/O Runtime動作
 
-擴展應AEM用生成器應用可以定義或使用0或許多Adobe I/O Runtime操作。
-Adobe運行時操作應是需要與或其他AdobeWeb服AEM務交互的負責工作。
+AEM擴充功能App Builder應用程式可以定義或使用0個或多個Adobe I/O Runtime動作。
+Adobe執行階段動作應負責需要與AEM或其他AdobeWeb服務互動的工作。
 
-在此示例應用中，Adobe I/O Runtime操作 — 使用預設名稱 `generic`  — 負責：
+在此範例應用程式中，Adobe I/O Runtime動作 — 使用預設名稱 `generic`  — 負責：
 
-1. 向內容片段API發出一AEM系列HTTP請求以更新內容片段。
-1. 收集這些HTTP請求的響應，將它們歸類為成功和失敗
-1. 返回成功和失敗清單以供模式顯示(`BulkPropertyUpdateModal.js`)
+1. 向AEM內容片段API提出一系列HTTP請求以更新內容片段。
+1. 收集這些HTTP請求的回應，將其歸類為成功和失敗
+1. 傳回成功和失敗清單以供強制回應視窗顯示(`BulkPropertyUpdateModal.js`)
 
 + `src/aem-cf-console-admin-1/actions/generic/index.js`
 

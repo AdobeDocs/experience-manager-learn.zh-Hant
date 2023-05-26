@@ -1,6 +1,6 @@
 ---
 title: GraphQL端點
-description: 瞭解如何啟用、執行查詢以及發佈和保護GraphQL端點。
+description: 瞭解如何啟用、執行查詢，以及發佈和保護GraphQL端點。
 version: Cloud Service
 topic: Headless, Content Management
 feature: Content Fragments, GraphQL API
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # GraphQL端點
 
-瞭解如何啟用、執行查詢以及發佈和保護GraphQL端點。
+瞭解如何啟用、執行查詢，以及發佈和保護GraphQL端點。
 
-在此視頻中，您將：
+在本影片中，您將：
 
 + 瞭解如何啟用GraphQL端點
 + 瞭解如何對端點執行GraphQL查詢

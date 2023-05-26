@@ -1,6 +1,6 @@
 ---
-title: 從Maven項目中刪AEM除示例
-description: 瞭解如何清除和刪除由項目原型生AEM成的項目中AEM的示例代碼。
+title: 從AEM Maven專案移除範例
+description: 瞭解如何從AEM專案原型產生的AEM專案中清除和移除範常式式碼。
 version: Cloud Service
 topic: Development
 feature: AEM Project Archetype
@@ -16,20 +16,20 @@ ht-degree: 6%
 
 ---
 
-# 從Maven項目中刪AEM除示例
+# 從AEM Maven專案中移除範例
 
-瞭解如何清除和刪除由項目原型生成AEM的項目中生成AEM的示例代碼。
+瞭解如何從AEM專案原型產生的AEM專案中清理及移除產生的範常式式碼。
 
 >[!VIDEO](https://video.tv.adobe.com/v/337263?quality=12&learn=on)
 
 
 ## 資源
 
-+ [馬文AEM計畫原型](https://github.com/adobe/aem-project-archetype)
++ [AEM Maven專案原型](https://github.com/adobe/aem-project-archetype)
 
 ## 命令
 
-可以執行以下命令以從Maven項目中刪除生成的AEM示例檔案：
+可以執行以下命令以從AEM Maven專案中移除產生的範例檔案：
 
 ```
 rm -rf core/src/main/java/com/adobe/aem/wknd/examples/core/filters \
@@ -45,13 +45,13 @@ rm -rf ui.frontend/src/main/webpack/components/_helloworld.css
 
 ## 編輯
 
-刪除 `<div class="helloworld" ...></div>` 從：
+移除 `<div class="helloworld" ...></div>` 從：
 
 ```
 ui.frontend/src/main/webpack/static/index.html
 ```
 
-刪除 `<helloworld>` 元件實例定義自：
+移除 `<helloworld>` 元件實體定義來源：
 
 ```
 ui.content/src/main/content/jcr_root/content/wknd-examples/us/en/.content.xml

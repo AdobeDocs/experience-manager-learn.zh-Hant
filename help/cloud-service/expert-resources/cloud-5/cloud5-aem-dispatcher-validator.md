@@ -1,6 +1,6 @@
 ---
-title: 雲5調度程AEM序驗證程式
-description: 本集更深入地介紹調度程式驗證程式及其提供的細微差別。
+title: Cloud 5 AEM Dispatcher Validator
+description: 本集更集中說明Dispatcher驗證器及其提供的細微差別。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -16,15 +16,15 @@ ht-degree: 2%
 
 ---
 
-# 雲5調度程AEM序驗證程式
+# Cloud 5 AEM Dispatcher Validator
 
-有關如何在開發工作流中使用調度程式驗證程式的AEM快速示例。
+如何在AEM開發工作流程中使用Dispatcher驗證器的快速範例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342358?quality=12&learn=on)
 
-## 此視頻中包含的內容
+## 本影片涵蓋的內容
 
-+ 調度程式和SDK概述
++ Dispatcher和SDK概觀
 + [Dispatcher 工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html)
-+ 排除錯誤
-+ 使用調度程式日誌和運行模式進行調試
++ 疑難排解錯誤
++ 使用Dispatcher記錄和執行模式進行偵錯

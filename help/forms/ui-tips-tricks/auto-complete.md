@@ -1,6 +1,6 @@
 ---
-title: 自動完成功能，在AEM Forms
-description: 允許用戶利用搜索和篩選，在鍵入時快速查找並從預先填充的值清單中進行選擇。
+title: AEM Forms中的自動完成功能
+description: 可讓使用者利用搜尋和篩選功能，在輸入時快速尋找並選取預先填入的值清單。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.5
@@ -17,20 +17,20 @@ ht-degree: 0%
 
 ---
 
-# 實施自動完成
+# 實作自動完成
 
-使用jquery的自動完AEM成功能在表單中實現自動完成功能。
-本文中包括的示例使用各種資料源（靜態陣列、從REST API響應填充的動態陣列）來填充建議，當用戶開始在文本欄位中鍵入內容時。
+使用jquery的自動完成功能，在AEM表單中實作自動完成功能。
+本文包含的範例使用各種資料來源（靜態陣列、從REST API回應填入的動態陣列）在使用者開始輸入文字欄位時填入建議。
 
-用於完成自動完成功能的代碼與欄位的初始化事件相關聯。
+用來完成自動完成功能的程式碼與欄位的初始化事件相關聯。
 
 ## 提供地址建議
 
-![國家建議](assets/auto-complete2.png)
+![country-suggestions](assets/auto-complete2.png)
 
 
 
-以下是用於提供街道地址建議的代碼
+以下是用來提供街道地址建議的代碼
 
 ```javascript
 $(".streetAddress input").autocomplete({
@@ -63,11 +63,11 @@ $(".streetAddress input").autocomplete({
 
 
 
-## emoji表情符的建議
+## 使用emoji的建議
 
-![國家建議](assets/auto-complete3.png)
+![country-suggestions](assets/auto-complete3.png)
 
-以下代碼用於在建議清單中顯示emoji的
+下列程式碼用於顯示建議清單中的表情符號
 
 ```javascript
 var values=["Wolf \u{1F98A}", "Lion \u{1F981}","Puppy \u{1F436}","Giraffe \u{1F992}","Frog \u{1F438}"];
@@ -78,8 +78,8 @@ minLength: 1, source: values, delay: 0
 );
 ```
 
-的 [可以下載示例表單](assets/auto-complete-form.zip) 從這裡。 請確保使用代碼編輯器為代碼提供您自己的用戶名/API密鑰，以成功進行REST調用。
+此 [可下載範例表單](assets/auto-complete-form.zip) 從這裡。 請務必使用程式碼的程式碼編輯器提供您自己的使用者名稱/API金鑰，以成功執行REST呼叫。
 
 >[!NOTE]
 >
-> 要自動完成工作，請確保您的表單使用以下客戶端庫 **cq.jquery.ui**。 此客戶端庫隨附AEM。
+> 若要讓自動完成生效，請確認您的表單使用下列使用者端程式庫 **cq.jquery.ui**. 此使用者端程式庫隨附AEM。

@@ -7,10 +7,10 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 0%
+source-wordcount: '173'
+ht-degree: 1%
 
 ---
 
@@ -28,10 +28,6 @@ ht-degree: 0%
 "@aemforms/af-react-components": "^0.22.41",
 "@aemforms/af-react-renderer": "^0.22.41",
 ```
-
->[!NOTE]
->
->在本教學課程中，下拉式清單和卡片版面配置是使用建立的 [材質UI程式庫](https://mui.com/). 您必須下載適當的資料UI套件，程式碼才能在您的系統上運作。
 
 ## 設定Proxy
 

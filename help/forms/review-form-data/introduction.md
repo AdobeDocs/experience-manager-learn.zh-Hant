@@ -1,6 +1,6 @@
 ---
-title: 在提交之前查看表單資料
-description: 用於建立摘要元件以在提交之前查看表單資料的教程。
+title: 提交前先檢閱表單資料
+description: 有關建立摘要元件的教學課程，用於在提交前稽核表單資料。
 feature: Adaptive Forms
 topics: development
 doc-type: tutorial
@@ -18,18 +18,18 @@ ht-degree: 2%
 
 ---
 
-# 在提交前審閱表單資料
+# 提交前先檢閱表單資料
 
-多部分教程，用於指導您完成在提交表單之前建立用於查看和編輯表單資料的摘要元件的步驟。
+多部分教學課程，逐步引導您完成建立摘要元件的步驟，以在提交表單前檢閱和編輯表單資料。
 
-![查看表單資料](assets/review-form-data.png)
+![review-form-data](assets/review-form-data.png)
 
-要學習本教程，建議您安裝以下程式：
+若要依照本教學課程操作，建議您安裝下列專案：
 
-* AEM 6.5或更高版本
+* AEM 6.5或更新版本，搭配適當的表單附加元件套件
 
-此外，還建議您在開發人員和AEM Forms方面有一AEM定的經驗。
+我們也建議您最好在AEM和AEM Forms方面擁有一定程度的開發人員經驗。
 
 ## 後續步驟
 
-[使用自定義元件匯總資料](./create-component.md)
+[使用自訂元件摘要資料](./create-component.md)

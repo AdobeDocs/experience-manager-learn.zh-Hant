@@ -1,6 +1,6 @@
 ---
-title: 設定帳戶和服務以實現Asset compute擴展
-description: 開發Asset compute員工需要訪問客戶和服務，AEM包括Microsoft或Amazon提供的as a Cloud Service、應用構建器和雲儲存。
+title: 設定Asset compute擴充性的帳戶和服務
+description: 開發Asset compute工作者需要存取帳戶和服務，包括AEMas a Cloud Service、App Builder，以及Microsoft或Amazon提供的雲端儲存空間。
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -22,72 +22,72 @@ ht-degree: 1%
 
 # 設定帳戶和服務
 
-本教程要求提供以下服務並通過學習者的Adobe ID訪問。
+本教學課程需要布建下列服務，並可透過學習者的Adobe ID存取。
 
-所有Adobe服務都必須通過同一Adobe組織(使用您的Adobe ID)訪問。
+所有Adobe服務都必須透過相同的Adobe組織，使用您的Adobe ID進行存取。
 
 + [AEM as a Cloud Service ](#aem-as-a-cloud-service)
-+ [應用程式生成器](#app-builder)
-   + 資源調配可能需要2 - 10天
-+ 雲儲存
-   + [Azure Blob儲存](https://azure.microsoft.com/en-us/services/storage/blobs/)
-   + 或 [AmazonS3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card)
++ [App Builder](#app-builder)
+   + 布建可能需要2到10天的時間
++ 雲端儲存空間
+   + [Azure Blob儲存體](https://azure.microsoft.com/en-us/services/storage/blobs/)
+   + 或 [Amazon S3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card)
 
 >[!WARNING]
 >
->在繼續完成本教程之前，請確保您可以訪問上述所有服務。
+>繼續閱讀本教學課程之前，請先確認您具備上述所有服務的存取權。
 > 
-> 查看下面有關如何設定和提供所需服務的章節。
+> 請檢閱以下章節，瞭解如何設定及布建必要的服務。
 
 ## AEM as a Cloud Service {#aem-as-a-cloud-service}
 
-要配置AEM AssetsAEM處理配置檔案以調用自定義Asset compute工作程式，需要訪問as a Cloud Service環境。
+需要存取AEMas a Cloud Service環境，才能設定AEM Assets處理設定檔以叫用自訂Asset compute背景工作。
 
-理想的情況是，可使用沙盒程式或非沙盒開發環境。
+理想情況下，沙箱計畫或非沙箱開發環境可供使用。
 
-請注意，本AEM地SDK不足以完成本教程，因為本地AEMSDK無法與Asset compute的微服務通信，而是需AEM要真正的as a Cloud Service環境。
+請注意，本機AEM SDK並不足以完成本教學課程，因為本機AEM SDK無法與Asset compute微服務通訊，而是需要真正的AEMas a Cloud Service環境。
 
-## 應用程式生成器{#app-builder}
+## App Builder{#app-builder}
 
-的 [應用程式生成器](https://developer.adobe.com/app-builder/) 框架用於構建和部署自定義操作到Adobe無伺服器平台Adobe I/O Runtime。 AEMAsset compute項目是專門構建的App Builder項目，它通過處理配置檔案與AEM Assets整合，並提供訪問和處理資產二進位檔案的能力。
+此 [App Builder](https://developer.adobe.com/app-builder/) framework可用來建置自訂動作並將其部署到Adobe的無伺服器平台Adobe I/O Runtime。 AEMAsset compute專案是特別建立的App Builder專案，可透過處理設定檔與AEM Assets整合，並提供存取及處理資產二進位檔的能力。
 
-要獲得對App Builder的訪問權限，請註冊預覽。
+若要存取App Builder，請註冊預覽。
 
-1. [註冊App Builder試用版](https://developer.adobe.com/app-builder/trial/)。
-1. 請大約等待2 - 10天，直到通過電子郵件通知您已配置您，然後繼續本教程。
-   + 如果您不確定是否已設定，請繼續執行後續步驟，如果您無法建立 __應用程式生成器__ 項目 [Adobe Developer控制台](https://developer.adobe.com/console/) 您尚未設定。
+1. [註冊App Builder試用版](https://developer.adobe.com/app-builder/trial/).
+1. 請等候約2 - 10天，直到透過電子郵件通知您已布建完成，再繼續本教學課程。
+   + 如果您不確定是否已布建，請繼續進行後續步驟，如果您無法建立 __App Builder__ 專案位置 [Adobe Developer主控台](https://developer.adobe.com/console/) 您尚未布建。
 
-## 雲儲存
+## 雲端儲存空間
 
-本地開發Asset compute項目需要雲儲存。
+asset compute專案的本機開發需要雲端儲存空間。
 
-將Asset compute工作程式部署到Adobe I/O Runtime供as a Cloud Service直接使用AEM時，不嚴格要求此雲儲存，因AEM為提供從中讀取資產和寫入格式副本的雲儲存。
+將Asset compute背景工作部署到Adobe I/O Runtime以供AEMas a Cloud Service直接使用時，此雲端儲存空間並非絕對必要，因為AEM會提供用來讀取資產並寫入轉譯的雲端儲存空間。
 
-### MicrosoftAzure Blob儲存{#azure-blob-storage}
+### Microsoft Azure Blob儲存體{#azure-blob-storage}
 
-如果您尚未訪問MicrosoftAzure Blob儲存，請註冊 [免費12個月帳戶](https://azure.microsoft.com/en-us/free/)。
+如果您還沒有Microsoft Azure Blob儲存體的存取權，請註冊 [12個月免費帳戶](https://azure.microsoft.com/en-us/free/).
 
-本教程將使用Azure Blob儲存 [AmazonS3](#amazon-s3) 可以同時使用本教程中的少量變體。
+不過，本教學課程將使用Azure Blob儲存體 [Amazon S3](#amazon-s3) 也只能用於教學課程的微幅變化。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40377?quality=12&learn=on)
 
-_按一下直接設定Azure Blob儲存（無音頻）_
+_布建Azure Blob Storage的點進（無音訊）_
 
-1. 登錄到 [MicrosoftAzure帳戶](https://azure.microsoft.com/en-us/account/)。
-1. 導航到 __儲存帳戶__ Azure服務部分
-1. 點擊 __+添加__ 建立新的Blob儲存帳戶
-1. 新建 __資源組__ 例如： `aem-as-a-cloud-service`
-1. 提供 __儲存帳戶名__，例如： `aemguideswkndassetcomput`
-   + 的 __儲存帳戶名__  用於 [配置雲儲存](../develop/environment-variables.md) 本地Asset compute開發工具
-   + 的 __訪問密鑰__ 與儲存帳戶關聯時也需要 [配置雲儲存](../develop/environment-variables.md)。
-1. 將其它所有內容保留為預設，然後點擊 __審閱+建立__ 按鈕
-   + （可選）選擇 __位置__ 離你很近。
-1. 查看設定請求是否正確，然後點擊 __建立__ 按鈕
+1. 登入您的 [Microsoft Azure帳戶](https://azure.microsoft.com/en-us/account/).
+1. 導覽至 __儲存體帳戶__ Azure服務區段
+1. 點選 __+新增__ 建立新的Blob儲存體帳戶的方式
+1. 建立新的 __資源群組__ 如有需要，例如： `aem-as-a-cloud-service`
+1. 提供 __儲存體帳戶名稱__&#x200B;例如： `aemguideswkndassetcomput`
+   + 此 __儲存體帳戶名稱__  用於 [設定雲端儲存空間](../develop/environment-variables.md) 在本機Asset compute開發工具中
+   + 此 __存取金鑰__ 在以下情況下，也需要與儲存體帳戶相關聯： [設定雲端儲存空間](../develop/environment-variables.md).
+1. 保留其他專案為預設值，然後點選 __檢閱+建立__ 按鈕
+   + 或者，選取 __位置__ 靠近您。
+1. 檢閱布建請求以瞭解正確性，然後點選 __建立__ 按鈕（若已滿足）
 
-### AmazonS3{#amazon-s3}
+### Amazon S3{#amazon-s3}
 
-使用 [MicrosoftAzure Blob儲存](#azure-blob-storage) 不過，建議您完成本教程 [AmazonS3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card) 也可用。
+使用 [Microsoft Azure Blob儲存體](#azure-blob-storage) 不過，建議您完成本教學課程 [Amazon S3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card) 也可以使用。
 
-如果使用AmazonS3儲存，請在 [配置項目的環境變數](../develop/environment-variables.md#amazon-s3)。
+如果使用Amazon S3儲存空間，請在以下情況下指定Amazon S3雲端儲存空間認證： [設定專案的環境變數](../develop/environment-variables.md#amazon-s3).
 
-如果您需要特別為本教程預配雲儲存，建議使用 [Azure Blob儲存](#azure-blob-storage)。
+如果您需要針對本教學課程布建雲端儲存空間，建議使用 [Azure Blob儲存體](#azure-blob-storage).

@@ -1,6 +1,6 @@
 ---
-title: 配置雲管理器管道
-description: 在管道上配AEM置管道並瀏覽不同類型的管道。
+title: 設定Cloud Manager管道
+description: 在AEM上設定管道並探索不同型別的管道。
 role: Developer
 level: Beginner
 type: Tutorial

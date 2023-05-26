@@ -1,6 +1,6 @@
 ---
-title: 發展AEM Sites的資源地位
-description: Adobe Experience Manager的資源狀態API是一個可插入框架，用於在各種編輯器Web UI中AEM顯示狀態消息。
+title: 在AEM Sites中開發資源狀態
+description: Adobe Experience Manager的資源狀態API是可插拔架構，可在AEM各種編輯器網頁UI中公開狀態訊息。
 topics: development
 audience: developer
 doc-type: tutorial
@@ -16,46 +16,46 @@ ht-degree: 2%
 
 # 開發資源狀態 {#developing-resource-statuses-in-aem-sites}
 
-Adobe Experience Manager的資源狀態API是一個可插入框架，用於在各種編輯器Web UI中AEM顯示狀態消息。
+Adobe Experience Manager的資源狀態API是可插拔架構，可在AEM各種編輯器網頁UI中公開狀態訊息。
 
 ## 概觀 {#overview}
 
-編輯器資源狀態框架提供了伺服器端和客戶端API，用於以標準和統一的方式顯示和與編輯器狀態交互。
+編輯器資源狀態架構提供伺服器端和使用者端API，以標準且統一的方式顯示編輯器狀態並與編輯器狀態互動。
 
-編輯器狀態欄在的「頁面」、「體驗片段」和「模板」編輯器中本機可AEM用。
+編輯器狀態列原本可在AEM的頁面、體驗片段和範本編輯器中使用。
 
-自定義資源狀態提供程式的示例使用案例有：
+自訂資源狀態提供者的範例使用案例包括：
 
-* 在計畫激活後2小時內通知作者
-* 通知作者過去15分鐘內已激活頁面
-* 通知作者在過去5分鐘內編輯了頁面，由誰編輯
+* 在頁面處於排程啟動後的2小時內時通知作者
+* 通知作者在過去15分鐘內啟用了頁面
+* 通知作者某個頁面在過去5分鐘內經過編輯，以及編輯者
 
-![AEM編輯器資源狀態概述](assets/sample-editor-resource-status-screenshot.png)
+![AEM編輯器資源狀態概觀](assets/sample-editor-resource-status-screenshot.png)
 
-## 資源狀態提供程式框架 {#resource-status-provider-framework}
+## 資源狀態提供者架構 {#resource-status-provider-framework}
 
-在開發自定義資源狀態時，開發工作包括：
+開發自訂資源狀態時，開發工作由以下部分組成：
 
-1. ResourceStatusProvider實現，負責確定是否需要狀態，以及有關狀態的基本資訊：標題、消息、優先順序、變型、表徵圖和可用操作。
-2. （可選）實現任何可用操作的功能的GraniteUI JavaScript。
+1. ResourceStatusProvider實作，負責判斷是否需要狀態，以及有關狀態的基本資訊：標題、訊息、優先順序、變體、圖示和可用動作。
+2. 可選擇實作任何可用動作功能的GraniteUI JavaScript。
 
-   ![資源狀態體系](assets/sample-editor-resource-status-application-architecture.png)
+   ![資源狀態架構](assets/sample-editor-resource-status-application-architecture.png)
 
-3. 作為「頁面」、「體驗片段」和「模板」編輯器的一部分提供的狀態資源通過資源「」指定類型[!DNL statusType]」屬性。
+3. 作為頁面、體驗片段和範本編輯器的一部分提供的狀態資源會透過資源獲得型別»[!DNL statusType]」屬性。
 
    * 頁面編輯器： `editor`
    * 體驗片段編輯器： `editor`
    * 範本編輯器: `template-editor`
 
-4. 狀態資源 `statusType` 與註冊匹配 `CompositeStatusType` 已配置OSGi `name` 屬性。
+4. 狀態資源的 `statusType` 符合已註冊的 `CompositeStatusType` OSGi已設定 `name` 屬性。
 
-   對於所有匹配， `CompositeStatusType's` 類型被收集，並用於收集 `ResourceStatusProvider` 具有此類型的實現，通過 `ResourceStatusProvider.getType()`。
+   對於所有相符專案， `CompositeStatusType's` 型別會被收集並用來收集 `ResourceStatusProvider` 具有此型別的實作，透過 `ResourceStatusProvider.getType()`.
 
-5. 匹配 `ResourceStatusProvider` 已通過 `resource` ，並確定 `resource` 具有要顯示的狀態。 如果需要狀態，則此實施將負責構建0或許多 `ResourceStatuses` 返回，每個都表示要顯示的狀態。
+5. 相符專案 `ResourceStatusProvider` 傳遞給 `resource` 在編輯器中，並決定 `resource` 具有要顯示的狀態。 如果需要狀態，則此實作負責建置0或許多 `ResourceStatuses` 要傳回，每個代表要顯示的狀態。
 
-   通常， `ResourceStatusProvider` 返回0或1 `ResourceStatus` 每 `resource`。
+   通常， `ResourceStatusProvider` 傳回0或1 `ResourceStatus` 每 `resource`.
 
-6. ResourceStatus是可由客戶實現的介面，或幫助 `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` 可用於構造狀態。 狀態包括：
+6. ResourceStatus是可由客戶實作的介面，或是 `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` 可用來建構狀態。 狀態包含：
 
    * 標題
    * 訊息
@@ -65,7 +65,7 @@ Adobe Experience Manager的資源狀態API是一個可插入框架，用於在�
    * 動作
    * 資料
 
-7. （可選）如果 `Actions` 為 `ResourceStatus` 對象，支援客戶端需要將功能綁定到狀態欄中的操作連結。
+7. 選擇性，如果 `Actions` 提供給 `ResourceStatus` 物件，需要支援clientlibs才能將功能繫結到狀態列中的動作連結。
 
    ```js
    (function(jQuery, document) {
@@ -78,17 +78,17 @@ Adobe Experience Manager的資源狀態API是一個可插入框架，用於在�
    })(jQuery, document);
    ```
 
-8. 任何支援這些操作的JavaScript或CSS都必須通過每個編輯器各自的客戶端庫進行代理，以確保前端代碼在編輯器中可用。
+8. 任何支援動作的JavaScript或CSS必須透過每個編輯器的個別使用者端程式庫進行代理，以確保編輯器中可使用前端程式碼。
 
    * 頁面編輯器類別： `cq.authoring.editor.sites.page`
    * 體驗片段編輯器類別： `cq.authoring.editor.sites.page`
-   * 模板編輯器類別： `cq.authoring.editor.sites.template`
+   * 範本編輯器類別： `cq.authoring.editor.sites.template`
 
-## 查看代碼 {#view-the-code}
+## 檢視程式碼 {#view-the-code}
 
-[查看GitHub上的代碼](https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples/resourcestatus/impl/SampleEditorResourceStatusProvider.java)
+[檢視GitHub上的程式碼](https://github.com/Adobe-Consulting-Services/acs-aem-samples/tree/master/bundle/src/main/java/com/adobe/acs/samples/resourcestatus/impl/SampleEditorResourceStatusProvider.java)
 
 ## 其他資源 {#additional-resources}
 
-* [`com.adobe.granite.resourcestatus` Java文檔](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/resourcestatus/package-summary.html)
-* [`com.day.cq.wcm.commons.status.EditorResourceStatus` Java文檔](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/status/EditorResourceStatus.html)
+* [`com.adobe.granite.resourcestatus` JavaDocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/resourcestatus/package-summary.html)
+* [`com.day.cq.wcm.commons.status.EditorResourceStatus` JavaDocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/status/EditorResourceStatus.html)

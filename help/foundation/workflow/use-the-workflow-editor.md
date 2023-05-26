@@ -1,6 +1,6 @@
 ---
-title: 如何在中建立工作AEM流
-description: 工作流支援Experience Manager中的業務流程管理，並用於內容的自動處理以及方便需要人為決策的治理和流程。
+title: 如何在AEM中建立工作流程
+description: 工作流程可啟用Experience Manager的業務程式管理，並用於自動處理內容，以及促進需要人為決策的治理和流程。
 version: 6.4, 6.5, Cloud Service
 feature: Workflow
 topic: Content Management
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 使用工作流編輯器
+# 使用工作流程編輯器
 
-工作流支援Experience Manager中的業務流程管理，並用於內容的自動處理以及方便需要人為決策的治理和流程。 工作流通過由一系列步驟組成的工作流模型定義，並在 [!UICONTROL 工作流模型編輯器]。
+工作流程可啟用Experience Manager的業務程式管理，並用於自動處理內容，以及促進需要人為決策的治理和流程。 工作流程是透過「工作流程模型」來定義，這些模型由一系列步驟組成，並在中建立和管理 [!UICONTROL 工作流程模型編輯器].
 
 >[!VIDEO](https://video.tv.adobe.com/v/22201?quality=12&learn=on)

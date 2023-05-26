@@ -1,6 +1,6 @@
 ---
-title: 調試Dispatcher工具
-description: Dispatcher Tools提供了集裝箱化的Apache Web Server環境，可用AEM於本地模擬Cloud Services的AEM發佈服務的Dispatcher。 調試Dispatcher Tools的日誌和快取內容對於確保端到端應用程式以及支援快取和安全配置AEM是正確的至關重要。
+title: 偵錯Dispatcher工具
+description: Dispatcher工具提供容器化的Apache Web Server環境，可用於在本機模擬AEM作為Cloud Services的AEM Publish服務的Dispatcher。 偵錯Dispatcher工具的記錄和快取內容對於確保端對端AEM應用程式以及支援的快取和安全設定正確無誤至關重要。
 feature: Dispatcher
 kt: 5918
 topic: Development
@@ -14,27 +14,27 @@ ht-degree: 0%
 
 ---
 
-# 調試Dispatcher工具
+# 偵錯Dispatcher工具
 
-Dispatcher Tools提供了集裝箱化的Apache Web Server環境，可用AEM於本地模擬Cloud Services的AEM發佈服務的Dispatcher。
+Dispatcher工具提供容器化的Apache Web Server環境，可用於在本機模擬AEM作為Cloud Services的AEM Publish服務的Dispatcher。
 
-調試Dispatcher Tools的日誌和快取內容對於確保端到端應用程式以及支援快取和安全配置AEM是正確的至關重要。
+偵錯Dispatcher工具的記錄和快取內容對於確保端對端AEM應用程式以及支援的快取和安全設定正確無誤至關重要。
 
 >[!NOTE]
 >
->由於Dispatcher Tools基於容器，因此每次重新啟動它時，先前的日誌和快取內容都會被銷毀。
+>由於Dispatcher工具是以容器為基礎，每次重新啟動時，先前的記錄和快取內容都會遭到破壞。
 
-## Dispatcher Tools日誌
+## Dispatcher工具記錄
 
-Dispatcher Tools日誌可通過 `stdout` 或 `bin/docker_run` 命令，或提供更多詳細資訊，可在Docker容器 `/etc/https/logs`。
+Dispatcher工具記錄可透過 `stdout` 或 `bin/docker_run` 命令或提供更多詳細資訊，可在Docker容器中找到，網址為 `/etc/https/logs`.
 
-請參閱 [調度程式日誌](./logs.md#dispatcher-logs) 有關如何直接訪問Dispatcher Tools&#39; Docker容器日誌的說明。
+另請參閱 [Dispatcher記錄](./logs.md#dispatcher-logs) 有關如何直接存取Dispatcher工具的Docker容器記錄檔的說明。
 
-## Dispatcher Tools快取
+## Dispatcher工具快取
 
-### 訪問Docker容器中的日誌
+### 存取Docker容器中的日誌
 
-Dispatcher快取可以直接訪問Docker容器中的 ` /mnt/var/www/html`。
+Dispatcher快取可以直接在Docker容器中存取，網址為 ` /mnt/var/www/html`.
 
 ```shell
 $ docker ps
@@ -52,9 +52,9 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-### 將Docker日誌複製到本地檔案系統
+### 將Docker日誌複製到本機檔案系統
 
-可以從Docker容器中複製調度程式日誌，位於 `/mnt/var/www/html` 到本地檔案系統，以便使用您喜愛的工具進行檢查。 請注意，這是一個時間點拷貝，不會向快取提供即時更新。
+可以從Docker容器複製排程程式日誌，位置為 `/mnt/var/www/html` 至本機檔案系統以使用您最喜愛的工具進行檢查。 請注意，這是時間點復本，不會提供快取的即時更新。
 
 ```shell
 $ docker ps

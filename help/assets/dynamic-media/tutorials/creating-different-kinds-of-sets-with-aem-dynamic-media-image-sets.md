@@ -1,6 +1,6 @@
 ---
-title: 使用AEMDynamic Media
-description: 配置映像集(使用Dynamic Media)
+title: 使用AEM Dynamic Media建立影像集
+description: 使用Dynamic Media設定影像集
 role: Developer
 level: Intermediate
 version: Cloud Service
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 使用AEMDynamic Media
+# 使用AEM Dynamic Media建立影像集
 
-此視頻將介紹與Dynamic Media一起建立影像集的AEM過程。
+本影片將逐步說明使用AEM Dynamic Media建立影像集的程式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335581?quality=12&learn=on)

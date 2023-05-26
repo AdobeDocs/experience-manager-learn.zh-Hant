@@ -1,6 +1,6 @@
 ---
-title: 啟用字串跟蹤的步驟（Unix設定）
-description: 配置字串日誌以排除PDF生成器問題
+title: 啟用字串追蹤的步驟（Unix設定）
+description: 設定Strace記錄檔以疑難排解PDF產生器問題
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 在Unix安裝程式中啟用字串跟蹤的步驟
+# 在Unix設定中啟用字串追蹤的步驟
 
-*此視頻將完成在AEM FormsPDFG的Unix設定中啟用字串跟蹤的步驟。*
+*本影片逐步解說在AEM Forms PDFG的Unix設定中啟用字串追蹤的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335525?quality=12&learn=on)

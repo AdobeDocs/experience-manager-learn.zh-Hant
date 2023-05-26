@@ -1,7 +1,7 @@
 ---
-title: AEM FormsJSON架構和資料[第1部分]
+title: 具有JSON結構描述和資料的AEM Forms[第1部分]
 seo-title: AEM Forms with JSON Schema and Data[Part1]
-description: 多部分教程，引導您完成建立帶JSON架構的自適應表單和查詢提交資料所涉及的步驟。
+description: 多部分教學課程將逐步引導您完成使用JSON結構描述建立調適型表單和查詢已提交資料的相關步驟。
 seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
@@ -20,23 +20,23 @@ ht-degree: 0%
 
 ---
 
-# 基於JSON架構建立自適應表單
+# 根據JSON結構描述建立最適化表單
 
 
-在AEM Forms6.3版中引入了基於JSON架構建立自適應Forms的功能。 有關使用JSON架構建立自適應Forms的詳細資訊將在本章中詳細說明 [文章](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html)。
+AEM Forms 6.3版中引進了根據JSON結構描述建立最適化Forms的功能。 有關使用JSON結構描述建立最適化Forms的詳細資訊，請參閱本節 [文章](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html).
 
-在基於JSON架構建立自適應表單後，下一步是將提交的資料儲存在資料庫中。 為此，我們將使用各種資料庫供應商引入的新JSON資料類型。 為了本文的目的，我們將使用MySql 8資料庫來儲存提交的資料。
+一旦您根據JSON結構描述建立了調適型表單，下一步就是將提交的資料儲存在資料庫中。 為此，我們將使用各種資料庫廠商推出的新JSON資料型別。 就本文而言，我們將使用MySql 8資料庫來儲存提交的資料。
 
-MySql 8資料庫用於本文。 MySQL引入了一種名為 [JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)。 這使儲存和查詢JSON對象變得更容易。 我們將提交的資料儲存在資料庫中的JSON類型列中。
+本文使用了MySql 8資料庫。 MySQL匯入了名為的新資料型別 [JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html). 這可讓您更輕鬆地儲存和查詢JSON物件。 我們會將提交的資料儲存在資料庫中型別為JSON的欄中。
 
-以下螢幕抓圖顯示以JSON資料類型儲存的已提交表單資料。 列&quot;formdata&quot;的類型為JSON。 我們還將與資料關聯的表單的名稱儲存在清單單名稱中
+以下熒幕擷圖顯示以JSON資料型別儲存的已提交表單資料。 「formdata」欄的型別為JSON。 我們還將與資料相關聯的表單名稱儲存在欄表單名稱中
 
 >[!NOTE]
 >
->請確保您的json架構檔案已正確命名。 例如，需要以下格式命名 &lt;name>schema.json。 因此，您的架構檔案可以是mortgage.schema.json或credit.schema.json。
+>請確定您的json結構描述檔案已適當命名。 例如，它需要以下列格式命名 &lt;name>schema.json. 因此您的結構描述檔案可以是mortgage.schema.json或credit.schema.json。
 
 
 ![資料儲存](assets/datastored.gif)
 
 
-[可用於建立自適應Forms的示例JSON架構。](assets/samplejsonschemas.zip)。下載並解壓縮zip檔案以獲取JSON架構
+[可用來建立最適化Forms的JSON結構描述範例。](assets/samplejsonschemas.zip)。下載並解壓縮zip檔案以取得JSON結構描述

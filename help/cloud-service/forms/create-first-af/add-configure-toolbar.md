@@ -1,6 +1,6 @@
 ---
-title: 添加和配置工具欄
-description: 增加在表單面板之間導航的功能。
+title: 新增和設定工具列
+description: 新增在表單面板之間導覽的功能。
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 添加和配置工具欄
+# 新增和設定工具列
 
-工具欄通常在窗體容器級別添加。 工具欄可包含按鈕，用於導航到窗體的下一個和以前的面板、提交窗體、保存窗體資料等。
+工具列通常新增在表單容器層級。 工具列可以包含按鈕，用於瀏覽表單的下一個和上一個面板、提交表單、儲存表單資料等。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332236?quality=12&learn=on)

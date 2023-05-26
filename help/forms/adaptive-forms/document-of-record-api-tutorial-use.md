@@ -1,6 +1,6 @@
 ---
-title: 使用API與AEM Forms生成記錄文檔
-description: 以寫程式方式生成記錄文檔(DOR)
+title: 透過AEM Forms使用API產生記錄檔案
+description: 以程式設計方式產生記錄檔案(DOR)
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 ---
 
-# 使用API生成AEM Forms的記錄文檔 {#using-api-to-generate-document-of-record-with-aem-forms}
+# 在AEM Forms中使用API產生記錄檔案 {#using-api-to-generate-document-of-record-with-aem-forms}
 
-以寫程式方式生成記錄文檔(DOR)
+以程式設計方式產生記錄檔案(DOR)
 
-本文說明了 `com.adobe.aemds.guide.addon.dor.DoRService API` 生成 **記錄文檔** 以寫程式方式。 [記錄文檔](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) 是自適應表單中捕獲的資料的PDF版本。
+本文說明如何使用 `com.adobe.aemds.guide.addon.dor.DoRService API` 以產生 **記錄檔案** 以程式設計方式。 [記錄檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) 是在最適化表單中擷取的資料的PDF版本。
 
-1. 以下是代碼段。 第一行是DOR服務。
+1. 以下是程式碼片段。 第一行取得DOR服務。
 1. 設定DoROptions。
-1. 調用DoRService的呈現方法，並將DoROptions對象傳遞到呈現方法
+1. 叫用DoRService的轉譯方法，並將DoROptions物件傳遞至轉譯方法
 
 ```java
 String dataXml = request.getParameter("data");
@@ -62,23 +62,23 @@ writer.endObject();
 session.save();
 ```
 
-要在本地系統上嘗試此操作，請執行以下步驟
+若要在本機系統上嘗試此方法，請遵循下列步驟
 
-1. [使用包管理器下載並安裝文章資產](assets/dor-with-api.zip)
-1. 確保已安裝並啟動作為 [建立服務用戶項目](service-user-tutorial-develop.md)
-1. [登錄到configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜索Apache Sling服務用戶映射器服務
-1. 確保輸入以下條目 _DevegingWithServiceUser.core:getformsresourceresolver=fd-service_ 在「服務映射」部分中
-1. [開啟窗體](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
-1. 填寫表單，然後按一下「查看PDF」
-1. 您應該在瀏覽器的新頁籤中看到DOR
+1. [使用封裝管理程式下載並安裝文章資產](assets/dor-with-api.zip)
+1. 請確定您已安裝並啟動作為一部分提供的DevelopingWithServiceUser套裝 [建立服務使用者文章](service-user-tutorial-develop.md)
+1. [登入configMgr](http://localhost:4502/system/console/configMgr)
+1. 搜尋Apache Sling服務使用者對應程式服務
+1. 請確定您有以下專案 _DevelopingWithServiceUser.core：getformsresourceresolver=fd-service_ 在「服務對應」段落中
+1. [開啟表單](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
+1. 填寫表單並按一下「檢視PDF」
+1. 您應該會在瀏覽器的新索引標籤中看到DOR
 
 
-**故障排除提示**
+**疑難排解提示**
 
-PDF不顯示在新瀏覽器頁籤中：
+PDF不會顯示在新的瀏覽器標籤中：
 
-1. 確保未在瀏覽器中阻止彈出窗口
-1. 確保以管理員身AEM份啟動伺服器（至少在Windows上）
-1. 確保「DevelopingWithServiceUser」捆綁包位於 *活動狀態*
-1. [確保系統用戶](http://localhost:4502/useradmin) 「fd-service」對以下節點具有讀取、修改和建立權限 `/content/usergenerated/content/aemformsenablement`
+1. 請確定您未封鎖瀏覽器中的快顯視窗
+1. 請確定您是以管理員身分啟動AEM伺服器（至少在Windows上）
+1. 請確定&#39;DevelopingWithServiceUser&#39;套件組合位於 *作用中狀態*
+1. [確定系統使用者](http://localhost:4502/useradmin) &#39; fd-service&#39;擁有下列節點上的「讀取」、「修改」和「建立」許可權 `/content/usergenerated/content/aemformsenablement`

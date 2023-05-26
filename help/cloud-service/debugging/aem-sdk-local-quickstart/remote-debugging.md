@@ -1,6 +1,6 @@
 ---
-title: 遠程調試AEMSDK
-description: SDKAEM的本地快速啟動允許從IDE進行遠程Java調試，使您可以在中逐步執行即時代碼，以了AEM解確切的執行流。
+title: 遠端偵錯AEM SDK
+description: AEM SDK的本機Quickstart允許從IDE進行遠端Java偵錯，讓您逐步完成AEM中的即時程式碼執行，以瞭解確切的執行流程。
 kt: 5251
 topic: Development
 feature: Developer Tools
@@ -15,33 +15,33 @@ ht-degree: 0%
 
 ---
 
-# 遠程調試AEMSDK
+# 遠端偵錯AEM SDK
 
 >[!VIDEO](https://video.tv.adobe.com/v/34338?quality=12&learn=on)
 
-SDKAEM的本地快速啟動允許從IDE進行遠程Java調試，使您可以在中逐步執行即時代碼，以了AEM解確切的執行流。
+AEM SDK的本機Quickstart允許從IDE進行遠端Java偵錯，讓您逐步完成AEM中的即時程式碼執行，以瞭解確切的執行流程。
 
-要將遠程調試器連AEM接到，AEM必須使用特定參數啟動SDK的本地快速啟動(`-agentlib:...`)允許IDE連接到它。
+若要將遠端偵錯工具連線至AEM，AEM SDK的本機Quickstart必須使用特定引數啟動(`-agentlib:...`)，允許IDE連線到它。
 
 ```
 $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar aem-author-p4502.jar   
 ```
 
 + AEM SDK僅支援Java 11
-+ `address` 指定監聽AEM遠程調試連接的埠，並可以更改為本地開發電腦上的任何可用埠。
-+ 最後一個參數(例如 `aem-author-p4502.jar`)是AEMSKD快速啟動Jar。 這可以是AEM作者服務(`aem-author-p4502.jar`)或AEM發佈服務(`aem-publish-p4503.jar`)。
++ `address` 指定AEM接聽遠端偵錯連線的連線埠，並可變更為本機開發電腦上的任何可用連線埠。
++ 最後一個引數(例如 `aem-author-p4502.jar`)是AEM SKD Quickstart Jar。 這可以是AEM Author服務(`aem-author-p4502.jar`)或AEM Publish服務(`aem-publish-p4503.jar`)。
 
 
-## IDE設定說明
+## IDE設定指示
 
-大多數Java IDE都支援遠程調試Java程式，但每個IDE的確切設定步驟各不相同。 請查看IDE的遠程調試設定說明以瞭解具體步驟。 通常，IDE配置需要：
+大多數Java IDE都支援遠端偵錯Java程式，但每個IDE的正確設定步驟有所不同。 請檢閱IDE的遠端偵錯設定指示，以取得確切步驟。 通常IDE配置需要：
 
-+ 主機AEMSDK的本地快速啟動正在偵聽， `localhost`。
-+ 埠AEM SDK的本地快速啟動正在偵聽遠程調試連接，該連接由 `address` 參數AEM。
-+ 有時，必須指定為遠程調試提供原始碼的Maven項目；這是您的OSGi捆綁銷售項目。
++ 主機AEM SDK的本機Quickstart正在接聽，也就是 `localhost`.
++ 連線埠AEM SDK的本機Quickstart正在接聽遠端偵錯連線，該連線是由 `address` 引數(啟動AEM SDK的本機快速入門時)。
++ 有時候，您必須指定提供原始程式碼給遠端偵錯的Maven專案；這是您的OSGi套件maven專案專案。
 
-### 設定說明
+### 設定指示
 
-+ [VS代碼Java遠程調試器設定](https://code.visualstudio.com/docs/java/java-debugging)
-+ [設定IntelliJ IDEA遠程調試器](https://www.jetbrains.com/help/idea/tutorial-remote-debug.html)
-+ [設定Eclipse遠程調試器](https://javapapers.com/core-java/java-remote-debug-with-eclipse/)
++ [VS程式碼Java遠端偵錯工具設定](https://code.visualstudio.com/docs/java/java-debugging)
++ [IntelliJ IDEA遠端偵錯工具設定](https://www.jetbrains.com/help/idea/tutorial-remote-debug.html)
++ [Eclipse遠端偵錯工具設定](https://javapapers.com/core-java/java-remote-debug-with-eclipse/)

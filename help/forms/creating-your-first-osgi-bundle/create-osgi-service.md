@@ -1,6 +1,6 @@
 ---
-title: 與AEM Forms建立您的第一個OSGi服務
-description: 與AEM Forms建立第一項OSGi服務
+title: 使用AEM Forms建立您的第一個OSGi服務
+description: 使用AEM Forms建立您的第一個OSGi服務
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -17,13 +17,13 @@ ht-degree: 2%
 
 # OSGi服務
 
-OSGi服務是Java類或服務介面，以及作為名稱/值對的許多服務屬性。 所述服務屬性區別於提供具有相同服務介面的服務的不同服務提供商。
+OSGi服務是Java類別或服務介面，以及許多作為名稱/值配對的服務屬性。 服務屬性會區分使用相同服務介面提供服務的不同服務提供者。
 
-OSGi服務由其服務介面語義定義並作為服務對象實現。 服務的功能由服務實現的介面定義。 因此，不同的應用可以實現相同的服務。 服務介面允許捆綁介面（而非實現）進行交互。 應指定服務介面，並盡可能少地提供實現詳細資訊。
+OSGi服務由其服務介面在語義上定義，並實作為服務物件。 服務的功能由其實作的介面定義。 因此，不同的應用程式可以實作相同的服務。 服務介面允許套件組合透過繫結介面進行互動，而不是實作。 指定服務介面時，應儘可能提供較少的實作詳細資料。
 
 ## 定義介面
 
-一種簡單的介面，可將資料與 <span class="x x-first x-last">XDP</span> 的下界。
+只有一個方法的簡單介面，可將資料與 <span class="x x-first x-last">XDP</span> 範本。
 
 ```java
 package com.mysite.samples;
@@ -37,9 +37,9 @@ public interface MyfirstInterface
  
 ```
 
-## 實現介面
+## 實作介面
 
-建立名為 `com.mysite.samples.impl` 以保存介面的實現。
+建立名為的新封裝 `com.mysite.samples.impl` 以儲存介面的實作。
 
 ```java
 package com.mysite.samples.impl;
@@ -77,39 +77,39 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 }
 ```
 
-注釋 `@Component(...)` 聯機10將此Java類標籤為OSGi元件，並將其註冊為OSGi服務。
+註解 `@Component(...)` 第10行會將此Java類別標籤為OSGi元件，並將其註冊為OSGi服務。
 
-的 `@Reference` 注釋是OSGi聲明性服務的一部分，並用於注入 [輸出服務](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 變數 `outputService`。
+此 `@Reference` annotation是OSGi宣告式服務的一部分，用於插入 [Outputservice](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 至變數 `outputService`.
 
 
-## 構建和部署捆綁包
+## 建置和部署套件組合
 
-* 開啟 **命令提示符窗口**
+* 開啟 **命令提示視窗**
 * 瀏覽到 `c:\aemformsbundles\mysite\core`
 * 執行命令 `mvn clean install -PautoInstallBundle`
-* 以上命令將自動生成捆綁包並將其部署到在localhost:4502AEM上運行的實例
+* 上述命令會自動建置套件組合，並將其部署至在localhost：4502上執行的AEM執行個體
 
-此捆綁包也將位於以下位置 `C:\AEMFormsBundles\mysite\core\target`。 此捆綁包也可以部署AEM到 [Felix網路控制台。](http://localhost:4502/system/console/bundles)
+此套件組合也可在下列位置使用 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用將套件組合部署至AEM [Felix網頁主控台。](http://localhost:4502/system/console/bundles)
 
 ## 使用服務
 
-現在，您可以在JSP頁中使用該服務。 以下代碼段顯示如何獲取對服務的訪問權限和使用由服務實現的方法
+您現在可以在JSP頁面中使用服務。 下列程式碼片段示範如何存取您的服務並使用服務實作的方法
 
 ```java
 MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.mysite.samples.MyFirstAEMFormsService.class);
 com.adobe.aemfd.docmanager.Document generatedDocument = myFirstAEMFormsService.mergeDataWithXDPTemplate(xdp_or_pdf_template,xmlDocument);
 ```
 
-包含JSP頁的示例包可以是 [從此處下載](assets/learning_aem_forms.zip)
+包含JSP頁面的範例封裝可以是 [已從此處下載](assets/learning_aem_forms.zip)
 
-[完整的捆綁包可供下載](assets/mysite.core-1.0.0-SNAPSHOT.jar)
+[完整的套件組合可供下載](assets/mysite.core-1.0.0-SNAPSHOT.jar)
 
-## Test包
+## 測試套件
 
-使用 [軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
+使用將套件匯入並安裝至AEM [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
 
-使用郵遞員進行POST調用並提供如下螢幕抓圖所示的輸入參數
-![郵差](assets/test-service-postman.JPG)
+使用Postman進行POST呼叫並提供輸入引數，如下方熒幕擷取畫面所示
+![郵遞員](assets/test-service-postman.JPG)
 
 ## 後續步驟
 

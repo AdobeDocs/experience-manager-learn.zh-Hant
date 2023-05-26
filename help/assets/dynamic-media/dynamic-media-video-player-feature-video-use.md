@@ -1,6 +1,6 @@
 ---
-title: 在Dynamic Media使用視頻播AEM放器
-description: AEMDynamic Media視頻播放器過去依賴Flash運行時支援案頭客戶端上的自適應視頻流，而瀏覽器在基於快閃記憶體的內容流處理方面變得更加積極。 隨著HLS(Apple的HTTP即時流視頻傳輸協定)的推出，現在無需依賴快閃記憶體就可以流式傳輸內容。
+title: 在AEM Dynamic Media中使用視訊播放器
+description: AEM Dynamic Media視訊播放器過去仰賴Flash執行階段在案頭使用者端和瀏覽器上支援最適化視訊串流，現在對flash型內容串流攻擊性更強。 隨著HLS (Apple的HTTP即時串流視訊傳送通訊協定)的推出，內容現在可以串流處理，而不需依賴Flash。
 feature: Video Profiles
 version: 6.4, 6.5
 topic: Content Management
@@ -15,28 +15,28 @@ ht-degree: 5%
 ---
 
 
-# 在Dynamic Media使用視頻播AEM放器{#using-the-video-player-in-aem-dynamic-media}
+# 在AEM Dynamic Media中使用視訊播放器{#using-the-video-player-in-aem-dynamic-media}
 
-AEMDynamic Media視頻播放器過去依賴Flash運行時支援案頭客戶端上的自適應視頻流，而瀏覽器在基於快閃記憶體的內容流處理方面變得更加積極。 隨著HLS(Apple的HTTP即時流視頻傳輸協定)的推出，現在無需依賴快閃記憶體就可以流式傳輸內容。
+AEM Dynamic Media視訊播放器過去仰賴Flash執行階段在案頭使用者端和瀏覽器上支援最適化視訊串流，現在對flash型內容串流攻擊性更強。 隨著HLS (Apple的HTTP即時串流視訊傳送通訊協定)的推出，內容現在可以串流處理，而不需依賴Flash。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
 
-## 快速查看非Flash視頻播放器 {#quick-look-into-non-flash-video-player}
+## 快速瀏覽非Flash視訊播放器 {#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429?quality=12&learn=on)
 
-HLS瀏覽器支援如下所示，對於不支援的瀏覽器，我們退回到漸進式視頻傳輸
+HLS瀏覽器支援如下，對於不支援的瀏覽器，我們會退回漸進式視訊傳送
 
 >[!NOTE]
 >
-> Dynamic MediaHybrid自2022年3月15日起不支援Internet Explorer 11上的視頻流。 請升級到6.5.12或更高版本，然後返回到IE 11上的逐步播放。
+> 自2022年3月15日起，Dynamic Media Hybrid不支援Internet Explorer 11上的視訊串流。 請升級至6.5.12或更新版本，以便回復到IE 11上的漸進式播放。
 
 <table> 
  <thead> 
   <tr> 
    <th> <p>裝置</p> </th>
    <th> <p>瀏覽器</p> </th>
-   <th > <p>視頻播放模式</p> </th>
+   <th > <p>視訊播放模式</p> </th>
   </tr>
  </thead>
  <tbody>
@@ -48,59 +48,59 @@ HLS瀏覽器支援如下所示，對於不支援的瀏覽器，我們退回到�
   <tr>
    <td> <p>桌面</p> </td>
    <td> <p>Internet Explorer 11+</p> </td>
-   <td> <p>Dynamic Media — 場景7模式：HLS視頻流</p> 
+   <td> <p>Dynamic Media - Scene 7模式： HLS視訊串流</p> 
         <p>Dynamic Media — 混合模式：漸進式下載</p>
    </td>
   </tr>
   <tr>
    <td> <p>桌面</p> </td>
-   <td> <p>火狐23-44</p> </td>
+   <td> <p>Firefox 23-44</p> </td>
    <td> <p>漸進式下載</p> </td>
   </tr>
   <tr> 
    <td> <p>桌面</p> </td>
-   <td> <p>Firefox 45或更高版本</p> </td>
-   <td> <p>HLS視頻流</p> </td>
+   <td> <p>Firefox 45或更新版本</p> </td>
+   <td> <p>HLS視訊串流</p> </td>
   </tr>
   <tr> 
    <td> <p>桌面</p> </td>
-   <td> <p>鉻</p> </td>
-   <td> <p>HLS視頻流</p> </td>
+   <td> <p>鉻黃</p> </td>
+   <td> <p>HLS視訊串流</p> </td>
   </tr>
   <tr> 
    <td> <p>桌面</p> </td>
-   <td> <p>薩法里(Mac)</p> </td>
-   <td> <p>HLS視頻流</p> </td>
+   <td> <p>Safari (Mac)</p> </td>
+   <td> <p>HLS視訊串流</p> </td>
   </tr>
   <tr> 
    <td> <p>行動</p> </td>
-   <td> <p>Chrome（Android 6或更早版本）</p> </td>
+   <td> <p>Chrome （Android 6或更舊版本）</p> </td>
    <td> <p>漸進式下載</p> </td>
   </tr>
   <tr> 
    <td> <p>行動</p> </td>
-   <td> <p>Chrome（Android 7或更高版本）</p> </td>
-   <td> <p>HLS視頻流</p> </td>
+   <td> <p>Chrome （Android 7或更新版本）</p> </td>
+   <td> <p>HLS視訊串流</p> </td>
   </tr>
   <tr> 
    <td> <p>行動</p> </td>
-   <td> <p>Android（預設瀏覽器）</p> </td>
+   <td> <p>Android （預設瀏覽器）</p> </td>
    <td> <p>漸進式下載</p> </td>
   </tr>
   <tr> 
    <td> <p>行動</p> </td>
-   <td> <p>薩法里(iOS)</p> </td>
-   <td> <p>HLS視頻流</p> </td>
+   <td> <p>Safari (iOS)</p> </td>
+   <td> <p>HLS視訊串流</p> </td>
   </tr>
   <tr> 
    <td> <p>行動</p> </td>
-   <td> <p>克羅姆語(iOS)</p> </td>
-   <td> <p>HLS視頻流</p> </td>
+   <td> <p>Chrome (iOS)</p> </td>
+   <td> <p>HLS視訊串流</p> </td>
   </tr>
   <tr> 
    <td> <p>行動</p> </td>
    <td> <p>Blackberry</p> </td>
-   <td> <p>HLS視頻流</p> </td>
+   <td> <p>HLS視訊串流</p> </td>
   </tr>
  </tbody>
 </table>

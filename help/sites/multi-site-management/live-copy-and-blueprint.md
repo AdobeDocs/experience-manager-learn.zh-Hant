@@ -1,6 +1,6 @@
 ---
-title: 理解即時拷貝與藍圖的關係
-description: 以下視頻說明了即時拷貝與它在AEM Sites的藍圖的關係。
+title: 瞭解即時副本與其Blueprint之間的關係
+description: 以下影片說明即時副本如何與其AEM Sites中的Blueprint相關聯。
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 ---
 
-# 即時拷貝和藍色打印 {#livecopy-blueprint}
+# Live Copy和Blue Print {#livecopy-blueprint}
 
-瞭解即時拷貝與其在AEM Sites的藍圖之間的關係。
+瞭解AEM Sites中即時副本與其Blueprint之間的關係。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36676?quality=12&learn=on)

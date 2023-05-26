@@ -1,6 +1,6 @@
 ---
-title: 如何捕獲Windows伺服器上JVM的堆轉儲
-description: 捕獲在Windows伺服器上運行的Java進程的堆轉儲
+title: 如何在Windows伺服器上擷取JVM的棧積傾印
+description: 擷取在Windows伺服器上執行Java處理序的棧積傾印
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何捕獲Windows伺服器上JVM的堆轉儲
+# 如何在Windows伺服器上擷取JVM的棧積傾印
 
-*此視頻將介紹捕獲Windows伺服器上JVM的堆轉儲的步驟。*
+*此影片逐步解說在Windows伺服器上擷取JVM棧積傾印的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335490?quality=12&learn=on)

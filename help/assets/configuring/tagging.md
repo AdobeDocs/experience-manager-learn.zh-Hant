@@ -1,6 +1,6 @@
 ---
 title: 標記
-description: 標籤是跨Assets資料夾層次結構管理資產的一個不可或缺的工具。 建立標籤分類對於允許用戶在中發現和組織資產和資產至關重要AEM。
+description: 標籤是用於跨資產資料夾階層管理資產的必要工具。 建立標籤分類法對於允許使用者在AEM中探索和整理資產至關重要。
 feature: Asset Management
 version: Cloud Service
 kt: 4871
@@ -19,6 +19,6 @@ ht-degree: 3%
 
 # 標記
 
-標籤是跨Assets資料夾層次結構管理資產的一個不可或缺的工具。 建立標籤分類對於允許用戶在中發現和組織資產和資產至關重要AEM。
+標籤是用於跨資產資料夾階層管理資產的必要工具。 建立標籤分類法對於允許使用者在AEM中探索和整理資產至關重要。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34073?quality=12&learn=on)

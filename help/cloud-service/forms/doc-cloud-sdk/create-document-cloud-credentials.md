@@ -1,6 +1,6 @@
 ---
-title: 建立AdobeIO項目
-description: 在Adobe Developer控制台中建立新項目
+title: 建立AdobeIO專案
+description: 在Adobe Developer Console中建立新專案
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 ---
 
-# 建立Adobe I/O項目
+# 建立Adobe I/O專案
 
 1. 建立整合的第一步是建立 [Adobe ID](https://account.adobe.com/)
-1. 轉到 [Adobe Developer控制台](https://console.adobe.io/home)
-1. 使用步驟1中建立的Adobe ID登錄
-1. 建立新項目
+1. 前往 [Adobe Developer主控台](https://console.adobe.io/home)
+1. 使用您在步驟1建立的Adobe ID登入
+1. 建立新專案
 
-請按照視頻建立Adobe I/O項目。
+請依照影片內容建立您的Adobe I/O專案。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333220?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: Test解決方案
-description: 運行Main.java以test解決方案
+title: 測試解決方案
+description: 執行Main.java以測試解決方案
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -15,27 +15,27 @@ ht-degree: 0%
 
 ---
 
-# 導入Eclipse項目
+# 匯入Eclipse專案
 
 下載並解壓縮 [zip檔案](./assets/aem-forms-cs-doc-gen.zip)
 
-啟動Eclipse並將項目導入Eclipse項目資源資料夾中包含以下檔案：
+啟動Eclipse並將專案匯入Eclipse專案包含資源資料夾中的下列檔案：
 
-* DataFile1、DataFile2和DataFile3 — 要與模板合併的示例xml資料檔案，以生成最終PDF檔案
-* custom_fonts.xdp - XDP模板。
-* service_token.json — 您必須用帳戶特定憑據替換此檔案的內容
-* options.json — 此檔案中指定的選項用於設定API生成的PDF檔案的屬性
+* DataFile1、DataFile2和DataFile3 — 要與範本合併以產生最終PDF檔案的範例xml資料檔案
+* custom_fonts.xdp - XDP範本。
+* service_token.json — 您必須以帳戶特定的認證取代此檔案的內容
+* options.json — 此檔案中指定的選項用於設定API產生的PDF檔案的屬性
 
-![資源檔案](./assets/resource-files.png)
+![resources-file](./assets/resource-files.png)
 
-## Test解決方案
+## 測試解決方案
 
-* 在項目的service_token.json資源檔案中複製並貼上您的服務憑據。
-* 開啟DocumentGeneration.java檔案，並指定要在其中保存生成的PDF檔案的資料夾
-* 開啟Main.java。 設定變數postURL的值以指向實例。
-* 將Main.java作為Java應用程式運行
+* 將您的服務認證複製並貼到專案的service_token.json資源檔案中。
+* 開啟DocumentGeneration.java檔案，並指定要儲存產生的PDF檔案的資料夾
+* 開啟Main.java。 設定變數postURL的值以指向您的執行個體。
+* 以Java應用程式執行Main.java
 
 >[!NOTE]
-> 第一次運行java程式時，將會出現HTTP 403錯誤。 為了過去，確保 [對技術帳戶用戶的適當權AEM限](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)。
+> 第一次執行Java程式時，您會收到HTTP 403錯誤。 若要通過此程式，請務必提供 [AEM中技術帳戶使用者的適當許可權](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
 
-**AEM Forms用戶** 就是我在本課程中所扮演的角色。
+**AEM Forms使用者** 是我在此課程中使用的角色。

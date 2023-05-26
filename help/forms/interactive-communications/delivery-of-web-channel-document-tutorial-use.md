@@ -1,6 +1,6 @@
 ---
-title: 交付互動式通信文檔 — Web渠道AEM Forms
-description: 通過電子郵件中的連結傳送Web渠道文檔
+title: 互動式通訊檔案的傳送 — Web Channel AEM Forms
+description: 透過電子郵件中的連結傳遞Web Channel檔案
 feature: Interactive Communication
 audience: developer
 activity: implement
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ---
 
-# Web渠道文檔的電子郵件傳遞
+# Web Channel檔案的電子郵件傳送
 
-定義並測試Web渠道交互通信文檔後，您需要一個傳遞機制將Web渠道文檔傳遞給收件人。
+定義並測試Web Channel互動式通訊檔案後，您需要一種傳遞機制來將Web Channel檔案傳遞給收件者。
 
-本文將電子郵件作為Web渠道文檔的傳遞機制來進行研究。 收件人將通過電子郵件獲取指向Web通道文檔的連結。按一下該連結時，將要求用戶進行身份驗證，並且Web通道文檔將填充特定於登錄用戶的資料。
+在本文中，我們將電子郵件視為Web Channel檔案的傳送機制。 收件者將透過電子郵件取得指向Web Channel檔案的連結。按一下連結時，系統會要求使用者進行驗證，且Web Channel檔案會填入特定於登入使用者的資料。
 
-讓我們看一下以下代碼段。 此代碼是GET.jsp的一部分，當用戶按一下電子郵件中的連結以查看Web渠道文檔時，該代碼將觸發。 我們使用jackrabbit UserManager獲取登錄用戶。 獲得登錄用戶後，我們將獲取與用戶配置檔案關聯的accountNumber屬性的值。
+讓我們來看看下列程式碼片段。 此程式碼是GET.jsp的一部分，當使用者按一下電子郵件中連結的「 」以檢視Web Channel檔案時會觸發此程式碼。 我們會使用jackrabbit UserManager取得登入使用者。 取得登入使用者後，就會取得與使用者設定檔相關聯的accountNumber屬性值。
 
-然後，我們將accountNumber值與映射中名為accountnumber的鍵關聯。 鍵 **帳號** 在表單資料模式中定義為「請求屬性」。 此屬性的值將作為輸入參數傳遞給表單資料模式讀取服務方法。
+然後，我們會將accountNumber值與對應中稱為accountnumber的索引鍵建立關聯。 金鑰 **accountnumber** 在表單資料強制回應視窗中定義為請求屬性。 此屬性的值會作為輸入引數傳遞至表單資料模組讀取服務方法。
 
-第7行：我們將根據互動式通信文檔url標識的資源類型將接收的請求發送到另一個servlet。 由第二servlet返回的響應包括在第一servlet的響應中。
+第7行：我們將根據互動式通訊檔案URL所識別的資源型別，將收到的請求傳送給另一個servlet。 此第二個servlet傳回的回應會包含在第一個servlet的回應中。
 
 ```java
 org.apache.jackrabbit.api.security.user.UserManager um = ((org.apache.jackrabbit.api.JackrabbitSession) session).getUserManager();
@@ -39,12 +39,12 @@ CustomParameterRequest wrapperRequest = new CustomParameterRequest(slingRequest,
 wrapperRequest.getRequestDispatcher("/content/forms/af/401kstatement/irastatement/channels/web.html").include(wrapperRequest, response);
 ```
 
-![包括方法方法](assets/includemethod.jpg)
+![包含方法方法](assets/includemethod.jpg)
 
-第7行代碼的可視表示
+第7行代碼的視覺化表示法
 
-![請求參數配置](assets/requestparameter.png)
+![要求引數設定](assets/requestparameter.png)
 
-為表單資料模式的讀取服務定義的請求屬性
+為表單資料強制回應視窗的讀取服務定義的請求屬性
 
-[示例包AEM](assets/webchanneldelivery.zip)。
+[範例AEM套件](assets/webchanneldelivery.zip).

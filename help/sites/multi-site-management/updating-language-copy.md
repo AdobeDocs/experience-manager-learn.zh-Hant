@@ -1,6 +1,6 @@
 ---
-title: 使用啟動更新語言副本
-description: 瞭解如何借助啟動幫助更新、審閱和批准語言副本中的更改。
+title: 使用Launch更新語言副本
+description: 瞭解如何透過Launch更新、稽核及核准語言副本中的變更。
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 ---
 
-# 使用啟動更新語言副本 {#update-language-copy-launch}
+# 使用Launch更新語言副本 {#update-language-copy-launch}
 
-瞭解如何借助啟動幫助更新、審閱和批准語言副本中的更改。
+瞭解如何透過Launch更新、稽核及核准語言副本中的變更。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36683?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: Web元件/JS — 無AEM頭示例
-description: 示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此Web元件/JS應用程式演示了如何使用永續查詢使用AEMGraphQLAPI查詢內容。
+title: Web元件/JS - AEM Headless範例
+description: 範例應用程式是探索Adobe Experience Manager (AEM)的Headless功能的絕佳方式。 此Web元件/JS應用程式示範了如何使用AEM GraphQL API透過持續性查詢來查詢內容。
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -16,54 +16,54 @@ ht-degree: 5%
 
 ---
 
-# Web元件
+# 網頁元件
 
-示例應用程式是探索Adobe Experience Manager()無頭功能的極AEM好方法。 此Web元件應用程式演示了如何使用永續查詢AEM使用GraphQLAPI查詢內容，並呈現一部分UI（使用純JavaScript代碼完成）。
+範例應用程式是探索Adobe Experience Manager (AEM)的Headless功能的絕佳方式。 此Web元件應用程式示範了如何使用AEM GraphQL API透過持續查詢來查詢內容，以及如何演算部分UI，使用純JavaScript程式碼完成。
 
-![帶無頭的Web組AEM件](./assets/web-component/web-component.png)
+![具有AEM Headless的網頁元件](./assets/web-component/web-component.png)
 
-查看 [GitHub上的原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component)
+檢視 [GitHub上的原始程式碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component)
 
 ## 必備條件 {#prerequisites}
 
-應在本地安裝以下工具：
+下列工具應安裝在本機：
 
-+ [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3內容%2Fmetadata%2Fdc%3SoftwareType&amp;1_group.propertyvalues.operation=等於&amp;1_group.propertyvalues.0_values=軟體類型%3Atoling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;order=%40jcr%3內容%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (如果連接到AEM本地6.5或AEMSDK)
-+ [節點.js v18](https://nodejs.org/en/)
++ [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=limit&amp;p.limit=0&amp;p.limit=144) (如果連線到本機AEM 6.5或AEM SDK)
++ [Node.js v18](https://nodejs.org/en/)
 + [Git](https://git-scm.com/)
 
-## AEM要求
+## AEM需求
 
-Web元件可以使用以下部AEM署選項。
+Web元件可與下列AEM部署選項搭配使用。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 本地設定使用 [AEM Cloud ServiceSDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)
-+ [AEM6.5 SP13+快速啟動](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
++ 本機設定，使用 [AEM CLOUD SERVICE SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)
++ [AEM 6.5 SP13+快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
 
-所有部署都需要 `tutorial-solution-content.zip` 從 [解決方案檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html#solution-files) 必須安裝 [部署配置](../deployment/web-component.md) 。
+所有部署都需要 `tutorial-solution-content.zip` 從 [解決方案檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html#solution-files) 安裝及必要 [部署設定](../deployment/web-component.md) 都會執行。
 
 
 >[!IMPORTANT]
 >
->Web元件設計為連接到 __AEM發佈__ 但是，如果Web元件中提供了身份驗證，則它可以從AEM Author中源出內容 [`person.js`](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/web-component/src/person.js#L11) 的子菜單。
+>Web元件的設計是要連線至 __AEM發佈__ 不過，如果網頁元件的中提供驗證，則它可以從AEM Author取得內容 [`person.js`](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/web-component/src/person.js#L11) 檔案。
 
-## 如何使用
+## 使用方式
 
-1. 克隆 `adobe/aem-guides-wknd-graphql` 儲存庫：
+1. 原地複製 `adobe/aem-guides-wknd-graphql` 存放庫：
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. 導航到 `web-component` 的子目錄。
+1. 導覽至 `web-component` 子目錄。
 
    ```shell
    $ cd aem-guides-wknd-graphql/web-component
    ```
 
-1. 編輯 `.../src/person.js` 要包括連接詳細AEM資訊的檔案：
+1. 編輯 `.../src/person.js` 檔案以包含AEM連線詳細資料：
 
-   在 `aemHeadlessService` 對象，更新 `aemHost` 指向AEM發佈服務。
+   在 `aemHeadlessService` 物件，更新 `aemHost` 指向您的AEM Publish服務。
 
    ```plain
    # AEM Server namespace
@@ -76,7 +76,7 @@ Web元件可以使用以下部AEM署選項。
    queryParamName=name
    ```
 
-   如果連接到AEM作者服務，請在 `aemCredentials` 對象，提供本地AEM用戶憑據。
+   如果連線到AEM Author服務，請在 `aemCredentials` 物件，提供本機AEM使用者認證。
 
    ```plain
    # For Basic auth, use AEM ['user','pass'] pair (for example, when connecting to local AEM Author instance)
@@ -84,23 +84,23 @@ Web元件可以使用以下部AEM署選項。
    password=admin
    ```
 
-1. 開啟終端並運行命令 `aem-guides-wknd-graphql/web-component`:
+1. 開啟終端機並執行命令 `aem-guides-wknd-graphql/web-component`：
 
    ```shell
    $ npm install
    $ npm start
    ```
 
-1. 新的瀏覽器窗口將開啟靜態HTML頁，該頁在 [http://localhost:8080](http://localhost:8080)。
-1. 的 _人員資訊_ Web元件顯示在網頁上。
+1. 新的瀏覽器視窗會開啟靜態HTML頁面，其中嵌入Web元件： [http://localhost:8080](http://localhost:8080).
+1. 此 _個人資訊_ 網頁元件會顯示在網頁上。
 
-## 代碼
+## 程式碼
 
-以下是Web元件的構建方式、它如何連接到AEMHeadless以使用GraphQL永續查詢檢索內容以及如何顯示該資料的摘要。 可在 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component)。
+以下摘要說明如何建立Web元件、如何連線至AEM Headless以使用GraphQL持續查詢擷取內容，以及資料如何呈現。 完整的程式碼可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
 
-### Web元件HTML標籤
+### 網頁元件HTML標籤
 
-可重用的Web元件（又稱自定義元素） `<person-info>` 添加到 `../src/assets/aem-headless.html` HTML。 它支援 `host` 和 `query-param-value` 屬性，以驅動元件的行為。 的 `host` 屬性的值覆蓋 `aemHost` 值 `aemHeadlessService` 對象 `person.js`, `query-param-value` 用於選擇要呈現的人員。
+可重複使用的Web元件（亦稱為自訂元素） `<person-info>` 新增至 `../src/assets/aem-headless.html` HTML頁面。 它支援 `host` 和 `query-param-value` 屬性來驅動元件的行為。 此 `host` 屬性的值覆寫 `aemHost` 值自 `aemHeadlessService` 中的物件 `person.js`、和 `query-param-value` 用於選取要呈現的人員。
 
 ```html
     <person-info 
@@ -109,13 +109,13 @@ Web元件可以使用以下部AEM署選項。
     </person-info>
 ```
 
-### Web元件實現
+### Web元件實施
 
-的 `person.js` 定義Web元件功能，下面是其中的關鍵亮點。
+此 `person.js` 會定義網頁元件功能，以下是其中的重要焦點。
 
-#### PersonInfo元素實現
+#### PersonInfo元素實作
 
-的 `<person-info>` custom element的類對象使用 `connectedCallback()` 生命週期方法、附加陰影根、讀取GraphQL永續查詢和DOM操作以建立自定義元素的內部陰影DOM結構。
+此 `<person-info>` 自訂元素的類別物件會使用 `connectedCallback()` 生命週期方法、附加陰影根目錄、擷取GraphQL持續查詢，以及使用DOM操作來建立自訂元素的內部陰影DOM結構。
 
 ```javascript
 // Create a Class for our Custom Element (person-info)
@@ -181,10 +181,10 @@ class PersonInfo extends HTMLElement {
     customElements.define("person-info", PersonInfo);
 ```
 
-### 跨源資源共用(CORS)
+### 跨原始資源共用(CORS)
 
-此Web元件依賴於在AEM目標環境上運行的基於CORS的AEM配置，並假定主機頁在 `http://localhost:8080` 在開發模式中，下面是本地AEM Author服務的CORS OSGi配置示例。
+此Web元件仰賴在目標AEM環境中執行的AEM型CORS設定，並假設主機頁面執行於 `http://localhost:8080` 在開發模式及以下為本機AEM Author服務的CORS OSGi設定範例。
 
-請查看 [部署配置](../deployment/web-component.md) 為各自的服AEM務。
+請檢閱 [部署設定](../deployment/web-component.md) 適用於個別AEM服務。
 
-![CORS配置](assets/react-app/cross-origin-resource-sharing-configuration.png)
+![CORS設定](assets/react-app/cross-origin-resource-sharing-configuration.png)

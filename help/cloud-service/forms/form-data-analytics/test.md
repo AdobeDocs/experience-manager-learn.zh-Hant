@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Analytics提交的表單資料欄位報告
-description: 將AEM FormsCS與Adobe Analytics整合以報告表單資料欄位
+title: 使用Adobe Analytics提交表單資料欄位的相關報告
+description: 將AEM Forms CS與Adobe Analytics整合以報告表單資料欄位
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -17,41 +17,41 @@ ht-degree: 1%
 
 ---
 
-# Test您的解決方案
+# 測試您的解決方案
 
-使用多個表單值組合預覽和提交表單。 允許幾到30分鐘在Adobe Analytics報告中查看資料。 要使用的資料集在報告中顯示的時間早於資料集到eVars。
+使用多種表單值組合，預覽及提交您的表單。 請等數到30分鐘，在Adobe Analytics報表中檢視您的資料。 設定為Prop的資料比設定為eVar的資料更早出現在報表中。
 
 ## 報表套裝
 
-在Adobe Analytics捕獲的表格資料以甜圈形式呈現
+Adobe Analytics中擷取的表單資料會以環形圖格式呈現
 
-**各國提交**
+**依州的提交內容**
 
-![應用程式bystate](assets/donut.png)
+![applicantsbystate](assets/donut.png)
 
 欄位驗證錯誤
 
-![欄位驗證錯誤](assets/donut-field-validation.png)
+![field-validation-error](assets/donut-field-validation.png)
 
 ## 偵錯
 
-確保自適應表單使用的配置容器與包含Adobe啟動配置的容器相同。
+確認最適化表單使用的設定容器與包含Adobe啟動設定的設定容器相同。
 
-要確認表單正在向Adobe Analytics發送資料，請執行以下操作
+若要確認表單正在將資料傳送至Adobe Analytics，請執行下列動作
 
-* 在瀏覽器中開啟「開發人員工具」。
-* 在「控制台」面板中輸入以下文本。
+* 在瀏覽器中開啟開發人員工具。
+* 在Console面板的下列文字中輸入。
 
 ```javascript
 _satellite.setDebug(true)
 ```
 
-在保持控制台窗口開啟的同時與表單交互。 你應該看到這樣的
+與表單互動，同時保持主控台視窗開啟。 您應該會看到類似這樣的內容
 
-![控制台調試](assets/debug.png)
+![console-debug](assets/debug.png)
 
-## 使用Adobe Experience Platform調試器
+## 使用Adobe Experience Platform Debugger
 
-添加 [AEP調試器擴展](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) 瀏覽器（需要您登錄才能獲取更多調試資訊）
+新增 [AEP偵錯工具擴充功能](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) （您必須登入）才能取得更多偵錯資訊
 
-![平台調試器](assets/platform-debugger.png)
+![platform-debugger](assets/platform-debugger.png)

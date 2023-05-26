@@ -1,6 +1,6 @@
 ---
-title: 如何在unix伺服器上捕獲JVM的線程轉儲
-description: 在unix伺服器上捕獲Java進程的線程轉儲的步驟
+title: 如何在unix伺服器上擷取JVM的對話串傾印
+description: 在Unix伺服器上擷取Java處理序的對話串傾印的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何在unix伺服器上捕獲JVM的線程轉儲
+# 如何在unix伺服器上擷取JVM的對話串傾印
 
-*此視頻將介紹在unix伺服器上捕獲JVM的堆轉儲的步驟。*
+*此影片逐步解說在unix伺服器上擷取JVM棧積傾印的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335492?quality=12&learn=on)

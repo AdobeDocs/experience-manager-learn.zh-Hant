@@ -1,6 +1,6 @@
 ---
-title: 如何捕獲Windows伺服器上JVM的線程轉儲
-description: 在Windows伺服器上捕獲Java進程的線程轉儲的步驟
+title: 如何在Windows伺服器上擷取JVM的執行緒傾印
+description: 在Windows伺服器上擷取Java處理序的執行緒傾印的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 如何捕獲Windows伺服器上JVM的線程轉儲
+# 如何在Windows伺服器上擷取JVM的執行緒傾印
 
-*此視頻將介紹捕獲Windows伺服器上JVM的堆轉儲的步驟。*
+*此影片逐步解說在Windows伺服器上擷取JVM棧積傾印的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335493?quality=12&learn=on)

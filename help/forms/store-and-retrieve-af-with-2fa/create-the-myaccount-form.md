@@ -1,6 +1,6 @@
 ---
 title: 建立MyAccountForm
-description: 建立myaccount表單以在成功驗證應用程式ID和電話號碼時檢索部分完成的表單。
+description: 建立myaccount表單以在成功驗證應用程式ID和電話號碼時擷取部分完成的表單。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -19,36 +19,36 @@ ht-degree: 0%
 
 # 建立MyAccountForm
 
-窗體 **我的帳戶表單** 在用戶驗證了應用程式ID和與應用程式ID相關聯的移動號碼之後，使用該格式來檢索部分完成的自適應格式。
+表單 **我的帳戶表單** 用於在使用者驗證應用程式id以及與應用程式id相關聯的行動電話號碼後，擷取部分完成的最適化表單。
 
-![我的帳戶表](assets/6599.JPG)
+![我的帳戶表單](assets/6599.JPG)
 
-當用戶輸入應用程式ID並按一下 **提取應用程式** 按鈕，使用表單資料模型的「獲取」操作從資料庫中獲取與應用程式id關聯的移動號碼。
+當使用者輸入應用程式ID並按一下 **FetchApplication** 按鈕，會使用表單資料模型的「取得」操作，從資料庫擷取與應用程式id關聯的行動裝置號碼。
 
-此表單利用表單資料模型的POST調用來使用OTP驗證移動號碼。 使用以下代碼成功驗證移動號碼時，將觸發表單的提交操作。 我們正在觸發名為的提交按鈕的按一下事件 **提交表單**。
+此表單會使用表單資料模型的POST引動來使用OTP驗證行動電話號碼。 使用下列程式碼成功驗證行動電話號碼時，會觸發表單的提交動作。 我們正在觸發提交按鈕的點選事件，按鈕名稱為 **submitForm**.
 
 >[!NOTE]
-> 您需要提供特定於您的API密鑰和API密碼值 [內克莫](https://dashboard.nexmo.com/) 帳戶在MyAccountForm的相應欄位中
+> 您需要提供API金鑰和特定於您的 [Nexmo](https://dashboard.nexmo.com/) 在MyAccountForm的適當欄位中的帳戶
 
-![觸發提交](assets/trigger-submit.JPG)
+![trigger-submit](assets/trigger-submit.JPG)
 
 
 
-此表單與將表單提交轉發到裝載在上的Servlet的自定義提交操作關聯 **/bin/renderaf**
+此表單與自訂提交動作相關聯，該自訂提交動作會將表單提交轉送至所掛載的servlet **/bin/renderaf**
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/renderaf",null,null);
 ```
 
-Servlet中裝載的代碼 **/bin/renderaf** 轉發請求，以呈現預填有已保存資料的帶附件的自適應表單。
+掛載在servlet中的程式碼 **/bin/renderaf** 轉寄要求以轉譯已儲存資料預先填入的storeafwithattachments最適化表單。
 
 
-* MyAccountForm可以是 [從此處下載](assets/my-account-form.zip)
+* 我的帳戶表單可以是 [已從此處下載](assets/my-account-form.zip)
 
-* 示例表單基於 [自定義自適應表單模板](assets/custom-template-with-page-component.zip) 要正確呈現樣AEM式，需要導入到。
+* 範例表單是根據 [自訂自適應表單範本](assets/custom-template-with-page-component.zip) 這些資料需要匯入至AEM，範例表單才能正確呈現。
 
-* [自定義提交處理程式](assets/custom-submit-my-account-form.zip) 需要將與MyAccountForm提交關聯的檔案導入AEM。
+* [自訂提交處理常式](assets/custom-submit-my-account-form.zip) 與MyAccountForm提交相關聯的專案需要匯入至AEM。
 
 ## 後續步驟
 
-[通過部署示例資產test解決方案](./deploy-this-sample.md)
+[部署範例資產以測試解決方案](./deploy-this-sample.md)

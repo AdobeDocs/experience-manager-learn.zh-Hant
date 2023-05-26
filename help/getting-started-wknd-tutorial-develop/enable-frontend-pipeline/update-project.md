@@ -1,6 +1,6 @@
 ---
-title: 更新全堆棧AEM項目以使用前端管線
-description: 瞭解如何更新全堆棧項AEM目，以便為前端管道啟用它，以便它只生成和部署前端對象。
+title: 更新完整棧疊AEM專案以使用前端管道
+description: 瞭解如何更新完整棧疊AEM專案以將其用於前端管道，因此它只會建置和部署前端成品。
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -19,30 +19,30 @@ ht-degree: 0%
 
 ---
 
-# 更新全堆棧AEM項目以使用前端管線 {#update-project-enable-frontend-pipeline}
+# 更新完整棧疊AEM專案以使用前端管道 {#update-project-enable-frontend-pipeline}
 
-在本章中，我們將對 __WKND站點項目__ 使用前端管線來部署JavaScript和CSS，而不是要求執行完整的完整堆棧管線。 這可以使前端和後端偽像的開發和部署生命週期解耦，從而實現更快速、更迭的整體開發過程。
+在本章中，我們對 __WKND網站專案__ 使用前端管道來部署JavaScript和CSS，而不需要完整的完整棧疊管道執行。 如此一來，前端和後端成品的開發和部署生命週期便能脫鉤，讓整體開發程式得以更快速、重複地進行。
 
 ## 目標 {#objectives}
 
-* 更新全堆棧項目以使用前端管線
+* 更新完整棧疊專案以使用前端管道
 
-## 完整堆棧項目中配置更改概AEM述
+## 完整棧疊AEM專案的設定變更概觀
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## 必備條件 {#prerequisites}
 
-這是一個多部分教程，假定您已查看 [「ui.frontend」模組](./review-uifrontend-module.md)。
+此教學課程包含多個部分，並假設您已檢閱 [&#39;ui.frontend&#39;模組](./review-uifrontend-module.md).
 
 
-## 對全堆棧項目的更AEM改
+## 完整棧疊AEM專案的變更
 
-為test運行部署有三個與項目相關的配置更改和樣式更改，因此WKND項目中總共有四個特定更改，以使其適用於前端管道合同。
+有三個與專案相關的設定變更和一個樣式變更要針對測試回合部署，因此在WKND專案中總共有四個特定變更，以便為前端管道合約啟用它。
 
-1. 刪除 `ui.frontend` 從全堆棧生成週期生成的模組
+1. 移除 `ui.frontend` 完整棧疊建置週期的模組
 
-   * 在中，WKND站點項目的根 `pom.xml` 注釋 `<module>ui.frontend</module>` 子模組條目。
+   * 在中，WKND Sites專案的根 `pom.xml` 註解 `<module>ui.frontend</module>` 子模組專案。
 
    ```xml
        ...
@@ -56,7 +56,7 @@ ht-degree: 0%
        ...
    ```
 
-   * 和來自的注釋相關依賴項 `ui.apps/pom.xml`
+   * 和註解相關的相依性 `ui.apps/pom.xml`
 
    ```xml
        ...
@@ -75,9 +75,9 @@ ht-degree: 0%
        ...
    ```
 
-1. 準備 `ui.frontend` 用於前端管道合同的模組，方法是添加兩個新的webpack配置檔案。
+1. 準備 `ui.frontend` 前端管道合約的模組，透過新增兩個新的webpack設定檔案完成。
 
-   * 複製現有 `webpack.common.js` 如 `webpack.theme.common.js`，更改 `output` 物業及 `MiniCssExtractPlugin`。 `CopyWebpackPlugin` 插件配置參數如下：
+   * 複製現有 `webpack.common.js` 作為 `webpack.theme.common.js`，並變更 `output` 屬性和 `MiniCssExtractPlugin`， `CopyWebpackPlugin` 外掛程式設定引數如下：
 
    ```javascript
    ...
@@ -99,7 +99,7 @@ ht-degree: 0%
    ...
    ```
 
-   * 複製現有 `webpack.prod.js` 如 `webpack.theme.prod.js`，並更改 `common` 變數到上述檔案的位置
+   * 複製現有 `webpack.prod.js` 作為 `webpack.theme.prod.js`，並變更 `common` 變數在上述檔案中的位置為
 
    ```javascript
    ...
@@ -109,14 +109,14 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >以上兩個「webpack」配置更改的輸出檔案和資料夾名稱不同，因此我們可以輕鬆地區分客戶端庫（完整堆棧）和主題生成（前端）管道前端對象。
+   >上述兩個「webpack」設定變更將擁有不同的輸出檔案和資料夾名稱，因此我們可以輕鬆區分clientlib （完整棧疊）和產生的佈景主題（前端）管道前端成品。
    >
-   >如您所猜測，也可以跳過上述更改以使用現有Webpack配置，但需要進行以下更改。
+   >如您所知，上述變更也可以略過以使用現有的Webpack設定，但需要以下變更。
    >
-   >你要如何命名或組織它們，取決於你。
+   >您可以自行命名或組織這些物件。
 
 
-   * 在 `package.json` 檔案，確保  `name` 屬性值與 `/conf` 的下界。 在 `scripts` 屬性a `build` 指令碼指示如何從此模組構建前端檔案。
+   * 在 `package.json` 檔案，確認  `name` 屬性值與的網站名稱相同。 `/conf` 節點。 在 `scripts` 屬性， a `build` 指令碼，說明如何從此模組建置前端檔案。
 
    ```javascript
        {
@@ -132,9 +132,9 @@ ht-degree: 0%
        }
    ```
 
-1. 準備 `ui.content` 通過添加兩個Sling配置實現前端管線模組。
+1. 準備 `ui.content` 前端管道的模組，方法是新增兩個Sling設定。
 
-   * 在以下位置建立檔案 `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig`  — 這包括所有 `ui.frontend` 模組在 `dist` 資料夾。
+   * 建立檔案於 `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig`  — 這包括 `ui.frontend` 模組產生於 `dist` 資料夾使用webpack建置程式。
 
    ```xml
    ...
@@ -157,10 +157,10 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >    查看完整 [HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml) 的 __WKNDAEM站點項目__。
+   >    檢視完整內容 [HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml) 在 __AEM WKND網站專案__.
 
 
-   * 第二 `com.adobe.aem.wcm.site.manager.config.SiteConfig` 和 `themePackageName` 值與 `package.json` 和 `name` 屬性值和 `siteTemplatePath` 指向 `/libs/wcm/core/site-templates/aem-site-template-stub-2.0.0` 存根路徑值。
+   * 第二個 `com.adobe.aem.wcm.site.manager.config.SiteConfig` 使用 `themePackageName` 值與 `package.json` 和 `name` 屬性值和 `siteTemplatePath` 指向 `/libs/wcm/core/site-templates/aem-site-template-stub-2.0.0` 存根路徑值。
 
    ```xml
    ...
@@ -175,35 +175,35 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >    請參閱，完整 [站點配置](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.aem.wcm.site.manager.config.SiteConfig/.content.xml) 的 __WKNDAEM站點項目__。
+   >    請參閱，完整 [Siteconfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.aem.wcm.site.manager.config.SiteConfig/.content.xml) 在 __AEM WKND網站專案__.
 
-1. 通過前端管道進行部署以進行test運行時，主題或樣式會發生更改，我們正在更改 `text-color` Adobe為紅色（或者您可以自行選擇） `ui.frontend/src/main/webpack/base/sass/_variables.scss`。
+1. 主題或樣式變更為了透過測試回合的前端管道部署，我們正在變更 `text-color` Adobe為紅色（或者您也可以自行挑選），方法是更新 `ui.frontend/src/main/webpack/base/sass/_variables.scss`.
 
    ```css
        $black:     #a40606;
        ...
    ```
 
-最後，將這些更改推送到程式的AdobeGit儲存庫。
+最後，將這些變更推送至您程式的AdobeGit存放庫。
 
 
 >[!AVAILABILITY]
 >
-> 這些更改可在GitHub中 [__前端管道__](https://github.com/adobe/aem-guides-wknd/tree/feature/frontend-pipeline) 分支 __WKNDAEM站點項目__。
+> 這些變更可在GitHub的 [__前端管道__](https://github.com/adobe/aem-guides-wknd/tree/feature/frontend-pipeline) 的分支 __AEM WKND網站專案__.
 
 
-## 警告 —  _啟用前端管線_ 按鈕
+## 注意 —  _啟用前端管道_ 按鈕
 
-的 [軌道選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) `s [站點](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) 選項 **啟用前端管線** 按鈕。 按一下 **啟用前端管線** 按鈕將覆蓋上面的內容 **吊具配置**，確保 **不按一下** 通過Cloud Manager管道執行部署上述更改後，此按鈕。
+此 [邊欄選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) 的 [網站](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) 選項會顯示 **啟用前端管道** 按鈕時，選擇您的網站根或網站頁面。 按一下 **啟用前端管道** 按鈕將會覆寫上述 **Sling設定**，請確定 **您沒有按一下** 透過Cloud Manager管道執行部署上述變更後使用此按鈕。
 
-![「啟用前端管道」按鈕](assets/enable-front-end-Pipeline-button.png)
+![啟用前端管道按鈕](assets/enable-front-end-Pipeline-button.png)
 
-如果錯誤地按一下了它，則必須重新運行管道以確保恢復前端管道合同和更改。
+如果錯誤地點選它，您必須重新執行管道以確保前端管道合約和變更恢復。
 
 ## 恭喜！ {#congratulations}
 
-祝賀您，您已更新WKND站點項目，以啟用該項目，以滿足前端管道合同。
+恭喜，您已更新WKND Sites專案，以便為前端管道合約啟用它。
 
 ## 後續步驟 {#next-steps}
 
-在下一章， [使用前端管道部署](create-frontend-pipeline.md)，您將建立並運行前端管線，並驗證我們 __搬走__ 基於「/etc.clientlibs」的前端資源交付。
+在下一章中， [使用前端管道部署](create-frontend-pipeline.md)，您將建立和執行前端管道，並驗證如何 __已移開__ 從「/etc.clientlibs」型前端資源傳送。

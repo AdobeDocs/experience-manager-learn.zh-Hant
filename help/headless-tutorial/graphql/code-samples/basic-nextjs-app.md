@@ -1,6 +1,6 @@
 ---
-title: 基本Next.js應用
-description: 一個基本的Next.js應用，顯示WKND冒險及其詳細資訊清單
+title: 基本Next.js應用程式
+description: 顯示WKND冒險及其詳細資訊清單的基本Next.js應用程式
 version: Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -20,17 +20,17 @@ ht-degree: 0%
 
 ---
 
-# 基本Next.js應用
+# 基本Next.js應用程式
 
-此 [Next.js](https://nextjs.org/) app演示了如何使用GraphQLAPIAEM使用永續查詢來查詢內容。 此應用程式將可過濾WKND冒險項，在選擇冒險項時，將顯示冒險項的完整詳細資訊。
+此 [Next.js](https://nextjs.org/) 應用程式示範如何使用AEM GraphQL API透過持續性查詢來查詢內容。 此應用程式會呈現WKND Adventures的可篩選內容，並在選取冒險後顯示該冒險的完整詳細資訊。
 
-此代碼：
+此程式碼：
 
-+ 連接到AEM發佈服務，不需要身份驗證
-+ 使用WKND的永續查詢： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-slug`
++ 連線到AEM Publish服務，且不需要驗證
++ 使用WKND的持續查詢： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-slug`
 
-要更深入地查看此Next.js應用是如何構建的，請查看 [示例Next.js應用文檔](../example-apps/next-js.md)。
+如需如何建立此Next.js應用程式的深入檢視，請檢閱 [Next.js應用程式檔案範例](../example-apps/next-js.md).
 
 >[!IMPORTANT]
 >
-> Codesandbox.io不支援在嵌入式IDE中編輯Next.js應用程式。 要編輯此代碼示例， [直接在codesandbox.io上開啟Next.js應用](https://codesandbox.io/s/wknd-next-js-app-u8x5f8)。
+> Codesandbox.io不支援在內嵌IDE中編輯Next.js應用程式。 若要編輯此程式碼範例， [直接在codesandbox.io上開啟Next.js應用程式](https://codesandbox.io/s/wknd-next-js-app-u8x5f8).

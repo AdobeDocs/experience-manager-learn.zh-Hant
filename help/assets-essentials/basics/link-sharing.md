@@ -1,6 +1,6 @@
 ---
-title: Assets Essentials公共鏈路共用
-description: 瞭解Assets Essentials的共用連結如何允許用戶與內部和外部利益相關方共用資產，同時最大限度地降低共用錯誤資產的風險……（說明應介於60到160個字元之間）
+title: Assets Essentials公開連結共用
+description: 瞭解Assets Essentials的共用連結如何讓使用者與內部和外部利害關係人共用資產，同時儘量降低共用錯誤資產的風險…… （說明應該介於60到160個字元之間）
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 公共連結共用
+# 公開連結共用
 
-瞭解Assets Essentials的共用連結如何允許用戶與內部和外部利益相關方共用資產，同時最大限度地降低共用錯誤資產或資訊的風險。
+瞭解Assets Essentials的共用連結如何讓使用者與內部和外部利害關係人共用資產，同時儘量降低共用錯誤資產或資訊的風險。
 
 >[!VIDEO](https://video.tv.adobe.com/v/341025?quality=12&learn=on)

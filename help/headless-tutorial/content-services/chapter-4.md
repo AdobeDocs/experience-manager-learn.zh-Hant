@@ -1,6 +1,6 @@
 ---
-title: 第4章 — 定義Content Services模板 — Content Services
-description: 「無頭」教AEM程的第4章介紹AEM了Content Services上下文中可編輯模AEM板的角色。 可編輯模板用於定義JSON內容結構Content Services最AEM終公開的內容。
+title: 第4章 — 定義Content Services範本 — 內容服務
+description: AEM Headless教學課程的第4章涵蓋AEM Content Services內容中AEM可編輯範本的角色。 可編輯的範本可用來定義AEM Content Services最終公開的JSON內容結構。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
@@ -13,90 +13,90 @@ ht-degree: 0%
 
 ---
 
-# 第4章 — 定義Content Services模板
+# 第4章 — 定義內容服務範本
 
-「無頭」教AEM程的第4章介紹AEM了Content Services上下文中可編輯模AEM板的角色。 可編輯模板用於定義Content Services通過啟用Content Services的組AEM成向客戶端公開的JSON內容結AEM構。
+AEM Headless教學課程的第4章涵蓋AEM Content Services內容中AEM可編輯範本的角色。 可編輯的範本可用來定義AEM Content Services透過啟用Content Services的AEM元件的組合向使用者端公開的JSON內容結構。
 
-## 瞭解模板在Content Services中AEM的角色
+## 瞭解範本在AEM Content Services中的角色
 
-可編AEM輯模板用於定義訪問的HTTP端點，以將事件內容顯示為JSON。
+AEM可編輯範本用於定義存取的HTTP端點，以將事件內容公開為JSON。
 
-傳統AEM上，可編輯模板用於定義網頁，但此用法只是慣例。 可編輯模板可用於合成 **任何** 內容集；訪問該內容的方式：作為瀏覽器中的HTML,JavaScript(AEMSPA Editor)或Mobile App使用的JSON是請求該頁的方式的函式。
+傳統上，AEM可編輯範本是用來定義網頁，不過這僅是慣例。 可編輯的範本可用於撰寫 **任何** 內容集；內容的存取方式：瀏覽器中的HTML、JavaScript (AEM SPA Editor)使用的JSON或行動應用程式，是該頁面請求方式的函式。
 
-在AEMContent Services中，可編輯模板用於定義JSON資料的顯示方式。
+在AEM Content Services中，可編輯的範本可用來定義JSON資料的公開方式。
 
-對於 [!DNL WKND Mobile] 應用程式，我們將建立一個用於驅動單個API終結點的可編輯模板。 雖然此示例簡單地說明了「無頭」的概念，但您可以建立多個頁面（或端點），每個頁面都會顯示不同的內容集，以建立更複雜、組織更好的API。
+對於 [!DNL WKND Mobile] 應用程式，我們將建立單一可編輯的範本，用來驅動單一API端點。 雖然此範例只是簡單說明AEM Headless的概念，但您可以建立多個頁面（或端點），每個頁面都會公開不同的內容集，以建立更複雜、更有組織的API。
 
 ## 瞭解API端點
 
-瞭解如何構成我們的API端點，並瞭解應向我們公開哪些內容 [!DNL WKND Mobile] 應用，讓我們重溫設計。
+瞭解如何撰寫我們的API端點，以及應向我們的網站公開哪些內容 [!DNL WKND Mobile] 應用程式，讓我們重新審視設計。
 
-![事件API頁分解](./assets/chapter-4/design-to-component-mapping.png)
+![事件API頁面分解](./assets/chapter-4/design-to-component-mapping.png)
 
-正如我們所看到的，我們有三組邏輯內容要提供給移動應用。
+如我們所見，我們有三個邏輯內容集可提供給行動應用程式。
 
-1. 的 **標識**
-2. 的 **標籤行**
-3. 清單 **事件**
+1. 此 **標誌**
+2. 此 **標籤行**
+3. 以下專案的清單： **事件**
 
-為此，我們可以將這些要求映射AEM到元件(在我們的例子中為AEMWCM核心元件)，以便將必需內容顯示為JSON。
+為此，我們可以將這些需求對應至AEM元件(在此例中為AEM WCM核心元件)，以便以JSON格式公開必要內容。
 
-1. 的 **標識** 通過 **影像元件**
-2. 的 **標籤行** 通過 **文本元件**
-3. 清單 **事件** 通過 **內容片段清單元件** 反過來，引用一組事件內容片段。
+1. 此 **標誌** 是透過 **影像元件**
+2. 此 **標籤行** 是透過 **文字元件**
+3. 以下專案的清單： **事件** 是透過 **內容片段清單元件** 這進而會參考一組事件內容片段。
 
 >[!NOTE]
 >
->要支AEM持Content Service的JSON頁面和元件導出，頁面和元件必須 **衍生自AEMWCM核心元件**。
+>若要支援AEM Content Service的頁面和元件JSON匯出，頁面和元件必須 **衍生自AEM WCM Core Components**.
 >
->[AEMWCM核心元件](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components) 具有內置功能，可支援導出的頁和元件的規範化JSON架構。 本教程中使用的所有WKND Mobile元件（頁面、影像、文本和內容片段清單）都源自AEMWCM核心元件。
+>[AEM WCM Core Components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components) 具有內建功能，可支援已匯出頁面和元件的標準化JSON架構。 本教學課程中使用的所有WKND Mobile元件（頁面、影像、文字和內容片段清單）衍生自AEM WCM核心元件。
 
-## 定義事件API模板
+## 定義事件API範本
 
-1. 導航到 **[!UICONTROL 工具] > [!UICONTROL 常規] > [!UICONTROL 模板] >[!DNL WKND Mobile]**。
+1. 導覽至 **[!UICONTROL 工具] > [!UICONTROL 一般] > [!UICONTROL 範本] >[!DNL WKND Mobile]**.
 
-1. 建立 **[!DNL Events API]** 模板：
+1. 建立 **[!DNL Events API]** 範本：
 
-   1. 點擊 **[!UICONTROL 建立]** 的子菜單。
-   1. 選擇 **[!DNL WKND Mobile - Empty Page]** 模板
-   1. 點擊 **[!UICONTROL 下一個]** 的子菜單。
-   1. 輸入 **[!DNL Events API]** 的 [!UICONTROL 模板標題] 場
-   1. 點擊 **[!UICONTROL 建立]** 的子菜單。
-   1. 點擊 **[!UICONTROL 開啟]** 開啟新模板進行編輯
+   1. 點選 **[!UICONTROL 建立]** 在頂端動作列中
+   1. 選取 **[!DNL WKND Mobile - Empty Page]** 範本
+   1. 點選 **[!UICONTROL 下一個]** 在頂端動作列中
+   1. 輸入 **[!DNL Events API]** 在 [!UICONTROL 範本標題] 欄位
+   1. 點選 **[!UICONTROL 建立]** 在頂端動作列中
+   1. 點選 **[!UICONTROL 開啟]** 開啟新範本以進行編輯
 
-1. 首先，我們允許需要的三AEM個已標識的元件通過編輯 [!UICONTROL 策略] 根 [!UICONTROL 佈局容器]。 確保 **[!UICONTROL 結構]** 模式處於活動狀態，選擇 **[!DNL Layout Container \[Root\]]**，然後按一下 **[!UICONTROL 策略]** 按鈕
-1. 下 **[!UICONTROL 屬性] > [!UICONTROL 允許的元件]** 搜索 **[!DNL WKND Mobile]**。 允許以下元件 [!DNL WKND Mobile] 元件組，以便在 [!DNL Events] API頁。
+1. 首先，我們允許三個已識別的AEM元件，以透過編輯以下專案為內容建模： [!UICONTROL 原則] 根目錄的 [!UICONTROL 配置容器]. 確保 **[!UICONTROL 結構]** 模式為作用中，選取 **[!DNL Layout Container \[Root\]]**，然後點選 **[!UICONTROL 原則]** 按鈕。
+1. 下 **[!UICONTROL 屬性] > [!UICONTROL 允許的元件]** 搜尋 **[!DNL WKND Mobile]**. 允許以下元件來自 [!DNL WKND Mobile] 元件群組，以便用於 [!DNL Events] API頁面。
 
    * **[!DNL WKND Mobile > Image]**
 
-      * 應用的徽標
+      * 應用程式的標誌
    * **[!DNL WKND Mobile > Text]**
 
-      * 應用的介紹性文本
+      * 應用程式的簡介文字
    * **[!DNL WKND Mobile > Content Fragment List]**
 
-      * 可在應用中顯示的事件類別清單
+      * 可在應用程式中顯示的事件類別清單
 
 
 
-1. 點擊 **[!UICONTROL 完成]** 完成時在右上角選中標籤。
-1. **刷新** 瀏覽器窗口，以查看新 [!UICONTROL 允許的元件] 清單。
-1. 從左滑軌的「元件查找器」中，拖動以下「元件AEM」：
-   1. **[!DNL Image]** 標識
-   2. **[!DNL Text]** 標籤行
-   3. **[!DNL Content Fragment List]** 活動
-1. **對於上述每個元件**，選擇它們，然後按 **解鎖** 按鈕
-1. 但是，確保 **佈局容器** 是 **鎖定** 以防止添加其他元件或刪除這三個元件。
-1. 點擊 **[!UICONTROL 頁面資訊] > [!UICONTROL 在管理中查看]** 返回 [!DNL WKND Mobile] 模板清單。 選擇新建立的 **[!DNL Events API]** 模板和點擊 **[!UICONTROL 啟用]** 按鈕。
+1. 點選 **[!UICONTROL 完成]** 完成時，右上角的check-mark 。
+1. **重新整理** 要新檢視的瀏覽器視窗 [!UICONTROL 允許的元件] 清單中找到。
+1. 從左側欄中的「元件」尋找器，拖曳下列AEM元件：
+   1. **[!DNL Image]** （代表標誌）
+   2. **[!DNL Text]** （標籤行）
+   3. **[!DNL Content Fragment List]** 事件
+1. **針對上述每個元件**，選擇並按下 **解鎖** 按鈕。
+1. 不過，請確保 **配置容器** 是 **已鎖定** 以防止新增其他元件，或防止移除這三個元件。
+1. 點選 **[!UICONTROL 頁面資訊] > [!UICONTROL 在管理員中檢視]** 以返回 [!DNL WKND Mobile] 範本清單。 選取新建立的 **[!DNL Events API]** 範本並點選 **[!UICONTROL 啟用]** 在頂端動作列中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28342?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 請注意，用於曲面內容的元件將添加到「模板」(Template)本身並被鎖定。 這允許作者編輯預定義的元件，但不能任意添加或刪除元件，因為更改API本身可能會打破JSON結構的假設並破壞使用的應用。 所有API都需要穩定。
+> 請注意，用來表面內容的元件會新增至範本本身，並加以鎖定。 這是為了讓作者可編輯預先定義的元件，但不可任意新增或移除元件，因為變更API本身可能會破壞JSON結構的假設，並破壞耗用應用程式。 所有API都必須穩定。
 
 ## 後續步驟
 
-（可選）安裝 [com.adobe.aem.guides.wknd-mobile content-4.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) 通過 [包管AEM理器](http://localhost:4502/crx/packmgr/index.jsp)。 此軟體包包含本教程及前面各章中概述的配置和內容。
+或者，您也可以安裝 [com.adobe.aem.guides.wknd-mobile.content.chapter-4.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) AEM Author上的內容套件，透過 [AEM封裝管理員](http://localhost:4502/crx/packmgr/index.jsp). 此套件包含本教學課程及先前章節中概述的設定和內容。
 
-* [第5章 — 創作Content Services頁](./chapter-5.md)
+* [第5章 — 編寫Content Services頁面](./chapter-5.md)

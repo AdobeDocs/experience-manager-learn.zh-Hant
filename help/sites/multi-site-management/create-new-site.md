@@ -1,6 +1,6 @@
 ---
 title: 建立國家/地區網站
-description: 瞭解如何使用「建立站點」嚮導從現有語言副本建立國家/地區站點。
+description: 瞭解如何使用建立網站精靈，從現有的語言副本建立國家/地區網站。
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 # 建立國家/地區網站 {#create-country-site}
 
-瞭解如何使用「建立站點」嚮導從現有語言副本建立國家/地區站點。
+瞭解如何使用建立網站精靈，從現有的語言副本建立國家/地區網站。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36684?quality=12&learn=on)

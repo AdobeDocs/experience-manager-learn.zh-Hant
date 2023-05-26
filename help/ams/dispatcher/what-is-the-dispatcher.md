@@ -1,6 +1,6 @@
 ---
-title: 什麼是「調度員」
-description: 瞭解Dispatcher實際是什麼。
+title: 什麼是「Dispatcher」
+description: 瞭解Dispatcher的實質。
 version: 6.5
 topic: Administration
 feature: Dispatcher
@@ -15,44 +15,44 @@ ht-degree: 2%
 
 ---
 
-# 什麼是「調度員」
+# 什麼是「Dispatcher」
 
 [目錄](./overview.md)
 
-從Dispatcher的基本說明開始AEM。
+從要求AEM Dispatcher的基本說明開始。
 
 ## Apache Web Server
 
-從在Linux伺服器上安裝基本的Apache Web Server開始。
+從Linux伺服器上的基本Apache Web Server安裝開始。
 
-Apache伺服器所做操作的基本說明：
+Apache伺服器功能的基本說明：
 
-- 遵循簡單規則，從其靜態文檔目錄(`DocumentRoot`)
-- 儲存在預設位置的檔案(`/var/www/html`)在請求客戶端的瀏覽器中匹配並呈現
-
-
+- 遵循簡單規則，從其靜態檔案目錄(`DocumentRoot`)
+- 儲存在預設位置的檔案(`/var/www/html`)會根據請求進行比對，並在請求使用者端的瀏覽器中呈現
 
 
-## AEM特定模組檔案`mod_dispatcher.so`)
 
-然後向名為Dispatcher模組的Apache Web伺服器添加插件
 
-AdobeDispatcher模組執行的AEM基本說明：
+## AEM特定模組檔案(`mod_dispatcher.so`)
 
-- 增加預設檔案處理程式
-- 過濾壞請求/保護軟AEM肋/端點
-- 如果存在多個呈現器，則負載平衡
-- 允許使用活動快取目錄/支援刷新停滯的檔案
-- 它是所有AMS安裝的前門，它將網站和資產傳送到客戶端瀏覽器
-- 它以遠快於伺服器自行完成的速AEM率快取重新服務請求
-- 更多……
+然後將稱為Dispatcher模組的外掛程式新增至Apache Web Server
 
-## Web通信工作流
+AdobeAEM Dispatcher模組功能的基本說明：
 
-瞭解為構建基本的Dispatcher伺服器而安裝了哪些部件，使我們能夠讓您瞭解Adobe管理器服務配置的基本Web通信工作流。
-這應該有助於您瞭解它在為內容訪問者提供內容的系統鏈中所扮演的角色AEM。
+- 增加預設檔案處理常式
+- 篩選出不良請求/保護AEM軟腹部/端點
+- 如果存在多個轉譯器，則為負載平衡
+- 允許使用動態快取目錄/支援排清停滯檔案
+- 它是所有AMS安裝的前門，並為使用者端的瀏覽器提供網站和資產
+- 它會快取要求，以比AEM伺服器自行完成快得多的速度重新提供服務
+- 更多內容……
 
-<b>為已快取的內容提供服務</b>
+## 網站流量工作流程
+
+瞭解哪些片段會一起安裝在一起以建置基本Dispatcher伺服器，我們就能讓您瞭解Adobe管理員服務設定的基本網路流量工作流程。
+這應該有助於您瞭解它在向AEM內容的訪客提供內容的系統鏈中扮演什麼角色。
+
+<b>提供已快取的內容</b>
 
 ```
 End User's Browser request 
@@ -63,7 +63,7 @@ End User's Browser request
                     → End User
 ```
 
-<b>從中提供新內AEM容</b>
+<b>從AEM提供最新內容</b>
 
 ```
 End User's Browser request 
@@ -76,7 +76,7 @@ End User's Browser request
                             → End User
 ```
 
-<b>內容發佈/更改</b>
+<b>內容發佈/變更</b>
 
 ```
 AEM Author User activates content 
@@ -86,4 +86,4 @@ AEM Author User activates content
             * Next request for that content will request fresh copy from publisher *
 ```
 
-[下一步 — >基本檔案佈局](./basic-file-layout.md)
+[下一個 — >基本檔案配置](./basic-file-layout.md)

@@ -1,7 +1,7 @@
 ---
-title: 在AEM Forms打印渠道文檔中使用表元件
+title: 在AEM Forms Print Channel檔案中使用表格元件
 seo-title: Using Table Component in AEM Forms Print Channel Document
-description: 以下視頻將介紹在Interactive Communications中使用表元件打印渠道文檔所需的步驟。
+description: 以下影片會逐步解說在Interactive Communications中為列印頻道檔案使用表格元件所需的步驟。
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -20,36 +20,36 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms打印渠道文檔中使用表元件 {#using-table-component-in-aem-forms-print-channel-document}
+# 在AEM Forms Print Channel檔案中使用表格元件 {#using-table-component-in-aem-forms-print-channel-document}
 
-以下視頻將介紹在Interactive Communications中使用表元件打印渠道文檔所需的步驟。
+以下影片會逐步解說在Interactive Communications中為列印頻道檔案使用表格元件所需的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27769?quality=12&learn=on)
 
-表用於以表格方式顯示資料。 表中的行需要根據資料源返回的資料增長或收縮。 要使用打印通道文檔中的表，需要使用AEM Forms設計器建立佈局檔案（xdp檔案）。 在此佈局檔案中，我們將添加具有所需列數的表。 根據您的要求，確保列欄位對象類型為「文本欄位」或「數字欄位」。 對於每列，欄位確保資料綁定設定為「使用名稱」。
+表格可用來以表格方式顯示資料。 表格中的列需要根據資料來源傳回的資料而增加或縮小。 若要在列印管道檔案中使用表格，我們需要使用AEM Forms Designer建立版面檔案（xdp檔案）。 在此配置檔案中，我們新增具有所需欄數的表格。 視您的需求而定，確定欄欄位物件型別為TextField或Numeric Field。 對於每個欄，欄位會確定資料繫結已設定為「使用名稱」。
 
 >[!NOTE]
 >
->要使表動態，請確保已將行標籤為重複。
+>若要讓表格成為動態表格，請確定您已將「列」標示為重複。
 
-**在您自己的伺服器上嘗試**
+**在您自己的伺服器上試用**
 
-* [將資產檔案下載並解壓縮到硬碟](assets/usingtablesinprintchannel.zip)
+* [將資產檔案下載並解壓縮至您的硬碟](assets/usingtablesinprintchannel.zip)
 
-* 使用包管理器將兩個ZIP文AEM件導入
+* 使用封裝管理員將兩個zip檔案匯入AEM
 
-* 與本條相關的資產包括：
+* 與本文相關的資產包括以下專案：
 
    * 布局片段
 
-   * 表單資料模式
+   * 表單資料強制回應視窗
 
-   * 互動式通信文檔
+   * 互動式通訊檔案
    * sampleretirementaccountdata.json
 
-* 在中開啟互動式通信文檔 [編輯模式](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)。
+* 在中開啟互動式通訊檔案 [編輯模式](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html).
 
-* 將TableDemo佈局片段添加到「貢獻」部分。
-* 將表單元格綁定到視頻中顯示的相應表單資料模型元素
+* 將TableDemo版面片段新增至貢獻區段。
+* 將表格儲存格繫結至適當的表單資料模型元素，如影片所示
 
-* 預覽提供給您的示例json資料檔案的互動式通信文檔
+* 使用提供給您的範例json資料檔案預覽互動式通訊檔案

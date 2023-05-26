@@ -1,6 +1,6 @@
 ---
-title: 使用帶無頭的優化AEM影像
-description: 瞭解如何使用無頭功能請求優化的AEM影像URL。
+title: 搭配AEM Headless使用最佳化的影像
+description: 瞭解如何使用AEM Headless請求最佳化的影像URL。
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -17,27 +17,27 @@ ht-degree: 5%
 
 ---
 
-# 使用無頭優AEM化影像 {#images-with-aem-headless}
+# 使用AEM Headless最佳化影像 {#images-with-aem-headless}
 
-影像是 [發展豐富而富有吸引力AEM的無頭體驗](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)。 無AEM頭支援映像資產的管理及其優化交付。
+影像是 [開發豐富、極具吸引力的AEM Headless體驗](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless支援管理影像資產及其最佳化傳送。
 
-用於無頭內容建AEM模的內容片段，通常引用影像資源，以便在無頭體驗中顯示。 可以AEM編寫GraphQL查詢，以根據引用影像的位置為影像提供URL。
+AEM Headless內容模型中使用的內容片段，通常會參考要在Headless體驗中顯示的影像資產。 可以寫入AEM GraphQL查詢，以根據影像的參考來源提供URL給影像。
 
-的 `ImageRef` 類型有四個內容引用的URL選項：
+此 `ImageRef` type有四個URL選項供內容參照使用：
 
-+ `_path` 是中引用的路AEM徑，且不包AEM括源（主機名）
-+ `_dynamicUrl` 是首選Web優化映像資產的完整URL。
-   + 的 `_dynamicUrl` 不包含源AEM，因此域（AEM作者或AEM發佈服務）必須由客戶端應用程式提供。
++ `_path` 是AEM中的參照路徑，不包含AEM來源（主機名稱）
++ `_dynamicUrl` 是偏好、網頁最佳化影像資產的完整URL。
+   + 此 `_dynamicUrl` 不包含AEM來源，因此網域（AEM作者或AEM發佈服務）必須由使用者端應用程式提供。
 + `_authorUrl` 是AEM作者上影像資產的完整URL
-   + [AEM作者](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 可用於提供無頭應用程式的預覽體驗。
+   + [AEM作者](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 可用來提供headless應用程式的預覽體驗。
 + `_publishUrl` 是AEM發佈上影像資產的完整URL
-   + [AEM發佈](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 通常是無頭應用程式的生產部署顯示映像的位置。
+   + [AEM發佈](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 通常是Headless應用程式的生產部署顯示影像的位置。
 
-的 `_dynamicUrl` 是用於影像資產的首選URL，應替代 `_path`。 `_authorUrl`, `_publishUrl` 盡可能。
+此 `_dynamicUrl` 是用於影像資產的慣用URL，應取代使用 `_path`， `_authorUrl`、和 `_publishUrl` 儘可能使用。
 
-|  | AEM as a Cloud Service  | AEMas a Cloud Service | SDKAEM | AEM 6.5 |
+|  | AEM as a Cloud Service  | AEMAS A CLOUD SERVICERDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
-| 是否支援Web優化映像？ | ✔ | ✔ | ✘ | ✘ |
+| 支援Web最佳化的影像？ | ✔ | ✔ | ✘ | ✘ |
 
 
 >[!CONTEXTUALHELP]
@@ -47,15 +47,15 @@ ht-degree: 5%
 
 ## 內容片段模型
 
-確保包含影像引用的「內容片段」欄位是 __內容引用__ 資料類型。
+確保包含影像參考的內容片段欄位屬於 __內容參考__ 資料型別。
 
-在 [內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)，通過選擇欄位並檢查 __屬性__ 的上界。
+您可在下列欄位型別中進行檢閱： [內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)，方法是選取欄位，然後檢查 __屬性__ 標籤在右側。
 
-![內容引用影像的內容片段模型](./assets/images/content-fragment-model.jpeg)
+![含有影像內容參照的內容片段模型](./assets/images/content-fragment-model.jpeg)
 
-## GraphQL永續查詢
+## GraphQL持續查詢
 
-在GraphQL查詢中，將欄位返回為 `ImageRef` 類型，並請求 `_dynamicUrl` 的子菜單。 例如，查詢 [WKND站點項目](https://github.com/adobe/aem-guides-wknd) 並在其中包括影像資產引用的影像URL `primaryImage` 欄位，可以使用新的永續查詢 `wknd-shared/adventure-image-by-path` 定義為：
+在GraphQL查詢中，將欄位傳回為 `ImageRef` 型別並要求 `_dynamicUrl` 欄位。 例如，查詢以下位置中的冒險活動： [wknd網站專案](https://github.com/adobe/aem-guides-wknd) 並將影像資產參考的影像URL加入其 `primaryImage` 欄位，可使用新的持續查詢完成 `wknd-shared/adventure-image-by-path` 定義為：
 
 ```graphql {highlight="11"}
 query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int, $imageQuality: Int) {
@@ -91,25 +91,25 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 }
 ```
 
-的 `$path` 在 `_path` 篩選器需要內容片段的完整路徑(例如 `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`)。
+此 `$path` 變數用於 `_path` 篩選器需要內容片段的完整路徑(例如 `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`)。
 
-的 `_assetTransform` 定義 `_dynamicUrl` 構造為優化所提供的影像再現。 還可以通過更改URL的查詢參數在客戶端上調整Web優化影像URL。
+此 `_assetTransform` 定義如何 `_dynamicUrl` 旨在最佳化提供的影像轉譯。 您也可以變更URL的查詢引數，在使用者端上調整Web最佳化的影像URL。
 
-| GraphQL參數 | URL 參數 | 說明 | 必要 | GraphQL變數值 | URL參數值 | 示例URL參數 |
+| GraphQL引數 | URL 參數 | 說明 | 必要 | GraphQL變數值 | URL引數值 | 範例URL引數 |
 |:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | N/A | 影像資源的格式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | N/A | N/A |
-| `seoName` | N/A | URL中檔案段的名稱。 如果未提供，則使用影像資產名稱。 | ✘ | 字母數字， `-`或 `_` | N/A | N/A |
-| `crop` | `crop` | 從影像中提取的裁剪幀必須在影像的大小內 | ✘ | 在原始影像維的邊界內定義裁剪區域的正整數 | 數字坐標的逗號分隔字串 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
-| `size` | `size` | 輸出影像（高度和寬度）的大小（以像素為單位）。 | ✘ | 正整數 | 按順序以逗號分隔的正整數 `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
-| `rotation` | `rotate` | 影像的旋轉（度）。 | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `?rotate=90` |
+| `format` | N/A | 影像資產的格式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | N/A | N/A |
+| `seoName` | N/A | URL中的檔案區段名稱。 若未提供，則會使用影像資產名稱。 | ✘ | 英數字元， `-`，或 `_` | N/A | N/A |
+| `crop` | `crop` | 裁切框架從影像中取出，必須在影像大小範圍內 | ✘ | 定義原始影像尺寸範圍內裁切區域的正整數 | 數字座標的逗號分隔字串 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
+| `size` | `size` | 輸出影像的大小（高度和寬度），以畫素為單位。 | ✘ | 正整數 | 以逗號分隔的正整數，順序為 `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
+| `rotation` | `rotate` | 影像的旋轉（以度為單位）。 | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `?rotate=90` |
 | `flip` | `flip` | 翻轉影像。 | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `?flip=h` |
-| `quality` | `quality` | 影像質量（原始質量的百分比）。 | ✘ | 1-100 | 1-100 | `?quality=80` |
-| `width` | `width` | 輸出影像的寬度（以像素為單位）。 當 `size` 提供 `width` 忽略。 | ✘ | 正整數 | 正整數 | `?width=1600` |
-| `preferWebP` | `preferwebp` | 如果 `true` 並AEM在瀏覽器支援的情況下為WebP提供服務 `format`。 | ✘ | `true`、`false` | `true`、`false` | `?preferwebp=true` |
+| `quality` | `quality` | 影像品質，以原始品質的百分比表示。 | ✘ | 1-100 | 1-100 | `?quality=80` |
+| `width` | `width` | 輸出影像的寬度（畫素）。 時間 `size` 已提供 `width` 會忽略。 | ✘ | 正整數 | 正整數 | `?width=1600` |
+| `preferWebP` | `preferwebp` | 若 `true` 和AEM會在瀏覽器支援的情況下提供WebP，不論 `format`. | ✘ | `true`、`false` | `true`、`false` | `?preferwebp=true` |
 
-## GraphQL響應
+## GraphQL回應
 
-生成的JSON響應包含請求的欄位，其中包含到影像資產的Web優化URL。
+產生的JSON回應包含要求的欄位，其中包含影像資產的網頁最佳化URL。
 
 ```json {highlight="8"}
 {
@@ -127,9 +127,9 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 }
 ```
 
-要載入應用程式中引用的映像的Web優化映像，請使用 `_dynamicUrl` 的 `primaryImage` 作為影像的源URL。
+若要載入應用程式中參照影像的Web最佳化影像，請使用 `_dynamicUrl` 的 `primaryImage` 做為影像的來源URL。
 
-在React中，顯示AEM Publish中的Web優化影像如下所示：
+在React中，從AEM Publish顯示網頁最佳化影像的外觀如下：
 
 ```jsx
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
@@ -139,11 +139,11 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 <img src={dynamicUrl} alt={data.adventureByPath.item.title}/>
 ```
 
-記住， `_dynamicUrl` 不包括域AEM，因此必須提供要解析的影像URL的所需原點。
+請記住， `_dynamicUrl` 不包含AEM網域，因此您必須提供所需的原點供影像URL解析。
 
-## 響應URL
+## 回應式URL
 
-上例顯示使用單一大小的影像，但是在Web體驗中，通常需要響應影像集。 可使用 [img srsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 或 [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)。 以下代碼段顯示如何使用 `_dynamicUrl` 作為基礎，並附加不同的寬度參數，以為不同的響應視圖提供動力。 不僅 `width` 使用查詢參數，但客戶端可以添加其他查詢參數，根據其需要進一步優化影像資產。
+上述範例顯示使用單一大小的影像，不過在網頁體驗中，通常需要回應式影像集。 回應式影像可透過以下方式實作： [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 或 [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 下列程式碼片段會示範如何使用 `_dynamicUrl` 為基礎，並附加不同的寬度引數，以支援不同的回應式檢視。 不只可以 `width` 查詢引數可供使用，但使用者端可新增其他查詢引數，以根據其需求進一步最佳化影像資產。
 
 ```javascript
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
@@ -171,30 +171,30 @@ document.body.innerHTML=`<picture>
     </picture>`;
 ```
 
-## 反應示例
+## React範例
 
-讓我們建立一個簡單的React應用程式，在後續顯示Web優化影像 [響應影像模式](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/)。 響應影像有兩種主要模式：
+讓我們建立簡單的React應用程式，以下顯示網頁最佳化的影像 [回應式影像模式](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/). 回應式影像有兩種主要模式：
 
-+ [帶srcset的IMG元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 提高效能
-+ [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 設計控制
++ [具有srcset的Img元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 提升效能
++ [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 設計控制項
 
-### 帶srcset的IMG元素
+### 具有srcset的Img元素
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
-[帶曲線集的IMG元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 與 `sizes` 屬性，以針對不同的螢幕大小提供不同的影像資產。 當為不同的螢幕大小提供不同的影像資產時，IMG srcsets非常有用。
+[具有srcset的Img元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 搭配 `sizes` 屬性以為不同的熒幕大小提供不同的影像資產。 針對不同的熒幕大小提供不同的影像資產時，影像畫面集相當實用。
 
 ### 圖片元素
 
-[圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 與多個 `source` 元素，以針對不同螢幕大小提供不同的影像資源。 當為不同螢幕大小提供不同的影像呈現時，圖片元素非常有用。
+[圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) 與多個一起使用 `source` 元素，針對不同的熒幕大小提供不同的影像資產。 為不同的熒幕大小提供不同的影像轉譯時，圖片元素會很有用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418555/?quality=12&learn=on)
 
-### 示例代碼
+### 範常式式碼
 
-此簡單的React應用使用 [無AEM頭SDK](./aem-headless-sdk.md) 查詢AEMAdventure內容的無頭API，並使用 [帶srcset的img元素](#img-element-with-srcset) 和 [畫素](#picture-element)。 的 `srcset` 和 `sources` 使用自定義 `setParams` 函式，將web優化的傳遞查詢參數附加到 `_dynamicUrl` 因此，根據Web客戶端的需要更改所傳送的影像格式副本。
+這個簡單的React應用程式會使用 [AEM Headless SDK](./aem-headless-sdk.md) 查詢AEM Headless API以取得Adventure內容，並使用以下方法顯示網頁最佳化的影像： [具有srcset的img元素](#img-element-with-srcset) 和 [圖片元素](#picture-element). 此 `srcset` 和 `sources` 使用自訂 `setParams` 函式以將Web最佳化的傳遞查詢引數附加至 `_dynamicUrl` 的影像轉譯，因此請根據Web使用者端的需求變更傳送的影像轉譯。
 
-在自定AEM義React掛接中執行查詢 [使用無頭SDKAEM的AdventureByPath](./aem-headless-sdk.md#graphql-persisted-queries)。
+在自訂React勾點中執行針對AEM的查詢 [使用AEM Headless SDK的useAdventureByPath](./aem-headless-sdk.md#graphql-persisted-queries).
 
 ```javascript
 // src/App.js

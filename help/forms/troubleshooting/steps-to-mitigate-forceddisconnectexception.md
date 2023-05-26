@@ -1,6 +1,6 @@
 ---
-title: 正在獲取ForcedDisconnectException。 可能的原因和緩解問題的步驟。
-description: 解決異常「ForcedDisconnectException — 此成員已被強制從分佈式系統中退出」的步驟。
+title: 取得ForcedDisconnectException。 減輕問題的可能原因和步驟。
+description: 解決例外狀況「ForcedDisconnectException — 此成員已被強制退出分散式系統」的步驟。
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 緩解ForcedDisconnectException的步驟
+# 降低ForcedDisconnectException的步驟
 
-*此視頻將介紹緩解ForcedDisconnectException的可能原因和步驟*
+*此影片逐步說明降低ForcedDisconnectException的可能原因和步驟*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335483?quality=12&learn=on)

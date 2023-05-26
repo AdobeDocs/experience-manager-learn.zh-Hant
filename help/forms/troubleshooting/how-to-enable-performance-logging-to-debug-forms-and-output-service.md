@@ -1,6 +1,6 @@
 ---
-title: 如何啟用AEM Forms的效能日誌記錄以調試與Forms和輸出服務相關的問題
-description: 啟用效能日誌記錄以調試與Forms或輸出服務相關的問題的步驟
+title: 如何在AEM Forms中啟用效能記錄，以偵錯與Forms和輸出服務相關的問題
+description: 啟用效能記錄以偵錯Forms或輸出服務相關問題的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何啟用AEM Forms的效能日誌記錄以調試與Forms和輸出服務相關的問題
+# 如何在AEM Forms中啟用效能記錄，以偵錯與Forms和輸出服務相關的問題
 
-*此視頻將瀏覽以啟用AEM Forms的效能日誌記錄以調試與Forms和輸出服務相關的問題。*
+*本影片逐步解說在AEM Forms中啟用效能記錄，以偵錯與Forms和輸出服務相關的問題。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335499?quality=12&learn=on)

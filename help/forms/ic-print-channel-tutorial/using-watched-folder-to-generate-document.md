@@ -1,7 +1,7 @@
 ---
-title: 使用監視資料夾生成打印渠道文檔
+title: 使用Watched資料夾產生列印管道檔案
 seo-title: Generating Print Channel Documents Using Watched Folder
-description: 這是為打印通道建立第一個互動式通信文檔的多步驟教程的第10部分。 在本部分，我們將使用監視資料夾機制生成打印渠道文檔。
+description: 這是多步驟教學課程的第10部分，說明如何為列印頻道建立您的第一個互動式通訊檔案。 在本部分中，我們將使用watched資料夾機制產生列印管道檔案。
 seo-description: This is part 10 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will generate print channel documents using the watched folder mechanism.
 uuid: 9e39f4e3-1053-4839-9338-09961ac54f81
 feature: Interactive Communication
@@ -23,19 +23,19 @@ ht-degree: 0%
 
 ---
 
-# 使用監視資料夾生成打印渠道文檔
+# 使用Watched資料夾產生列印管道檔案
 
-在本部分，我們將使用監視資料夾機制生成打印渠道文檔。
+在本部分中，我們將使用watched資料夾機制產生列印管道檔案。
 
-在建立和測試打印渠道文檔後，我們需要一種機制以批處理模式或按需生成這些文檔。 通常，這些類型的文檔是以批處理模式生成的，最常見的機制是使用監視資料夾。
+在建立及測試您的列印管道檔案後，我們需要一種機制，以批次模式或依需求產生這些檔案。 通常，這些型別的檔案會以批次模式產生，最常見的機制是使用watched資料夾。
 
-在中配置監視資料夾時AEM，會關聯在檔案被放入監視資料夾時執行的ECMA指令碼或java代碼。 本文將重點介紹ECMA指令碼，該指令碼將生成打印通道文檔並將其保存到檔案系統。
+當您在AEM中設定Watched資料夾時，您會建立ECMA指令碼或Java程式碼的關聯，當檔案被放入Watched資料夾時就會執行。 在本文中，我們將重點介紹ECMA指令碼，它會產生列印通道檔案並將其儲存至檔案系統。
 
-監視的資料夾配置和ECMA指令碼是您在 [本教程開始](introduction.md)
+watched資料夾設定和ECMA指令碼是您於匯入的資產的一部分 [本教學課程的開頭](introduction.md)
 
-掉到監視資料夾中的輸入檔案具有以下結構。 ECMA指令碼讀取帳戶號並為每個帳戶生成打印通道文檔。
+放入watched資料夾的輸入檔案具有下列結構。 ECMA指令碼會讀取帳號，並產生每個帳號的列印管道檔案。
 
-有關生成文檔的ECMA指令碼的詳細資訊， [請參閱本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+如需有關產生檔案的ECMA指令碼的詳細資訊， [請參閱本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 ```xml
 <accountnumbers>
@@ -50,18 +50,18 @@ ht-degree: 0%
 </accountnumbers>
 ```
 
-要使用監視資料夾機制生成打印通道文檔，請執行以下步驟：
+若要使用watched資料夾機制產生列印管道檔案，請遵循下列步驟：
 
-* [按照本文檔中提及的步驟操作](/help/forms/adaptive-forms/service-user-tutorial-develop.md)
+* [請依照本檔案提及的步驟操作](/help/forms/adaptive-forms/service-user-tutorial-develop.md)
 
-* 登錄到crx並導航到/etc/fd/watchfolder/scripts/PrintPDF.ecma
+* 登入crx並導覽至/etc/fd/watchfolder/scripts/PrintPDF.ecma
 
-* 確保interactiveCommunicationsDocument的路徑指向要打印的正確文檔。（第1行）
-* 記下saveLocation（第2行）。您可以根據需要更改它。
-* 確保表單資料模型的輸入參數綁定到請求屬性，其綁定值設定為「accountnumber」。 請參閱下面的螢幕截圖。
+* 請確定interactiveCommunicationsDocument的路徑指向您要列印的正確檔案。（第1行）
+* 記下saveLocation （第2行）。您可以視需要加以變更。
+* 請確定表單資料模型的輸入引數已繫結至要求屬性，且其繫結值已設為「accountnumber」。 請參閱下面的熒幕擷圖。
    ![請求](assets/requestattributeprintchannel.gif)
 
-* 建立具有以下內容的accountnumbers.xml檔案
+* 建立包含以下內容的accountnumbers.xml檔案
 
 ```xml
 <accountnumbers>
@@ -74,10 +74,10 @@ ht-degree: 0%
 </accountnumbers>
 ```
 
-* 將xml檔案放入C:\RenderPrintChannel\input
+* 將xml檔案拖放到C:\RenderPrintChannel\input中
 
-* 按照ECMA指令碼中指定的方式，在保存位置檢查pdf檔案。
+* 依照ECMA指令碼中的指定，檢查儲存位置中的pdf檔案。
 
 ## 後續步驟
 
-[在提交表單時開啟代理UI](./opening-agent-ui-on-form-submission.md)
+[在表單提交時開啟代理程式ui](./opening-agent-ui-on-form-submission.md)

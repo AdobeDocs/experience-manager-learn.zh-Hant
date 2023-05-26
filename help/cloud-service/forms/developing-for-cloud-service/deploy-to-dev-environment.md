@@ -1,6 +1,6 @@
 ---
-title: 部署到開發環境
-description: 從雲管理器儲存庫分支部署代碼
+title: 部署至開發環境
+description: 從您的Cloud Manager存放庫分支部署計畫碼
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -16,27 +16,27 @@ ht-degree: 0%
 
 ---
 
-# 部署到開發環境
+# 部署至開發環境
 
-在上一步中，我們將主分支從本地Git儲存庫推送到雲管理器儲存庫的MyFirstAF分支。
+在上一步中，我們將主分支從本機Git存放庫推送到Cloud Manager存放庫的MyFirstAF分支。
 
-下一步是將代碼部署到開發環境中。
-登錄到雲管理器並選擇您的程式
+下一步是將程式碼部署到開發環境。
+登入cloud manager並選取您的計畫
 
-選擇部署到開發人員，如下所示
+選取「部署至開發」，如下所示
 
 
 ![第一步](assets/deploy-first-step1.png)
 
 
-如所示選擇部署管道
+選取部署管道，如下所示
 ![第一步](assets/deploy1.png)
 
-選擇原始碼和相應的Git分支
+選取原始程式碼和適當的Git分支
 ![第一步](assets/deploy2.png)
-確保更新更改
+請務必更新變更
 
-運行管線
-![運行管道](assets/run-pipeline.png)
+執行管道
+![執行管道](assets/run-pipeline.png)
 
-部署代碼後，您應看到雲服務實例中的更改，即AEM Forms。
+部署程式碼後，您應該會在AEM Forms的雲端服務執行個體中看到變更。

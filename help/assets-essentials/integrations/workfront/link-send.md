@@ -1,6 +1,6 @@
 ---
-title: 發送Workfront文檔並連結Assets Essentials資產
-description: 瞭解如何將Workfront檔案發送到Assets Essentials，並將Assets Essentials資產與Workfront連結。
+title: 傳送Workfront檔案和連結Assets Essentials資產
+description: 瞭解如何將Workfront檔案傳送至Assets Essentials，並將Assets Essentials資產連結至Workfront。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management, Integrations
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 發送文檔和連結資產
+# 傳送檔案和連結資產
 
-瞭解如何將Workfront檔案發送到Assets Essentials，並將Assets Essentials資產與Workfront連結。
+瞭解如何將Workfront檔案傳送至Assets Essentials，並將Assets Essentials資產連結至Workfront。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336255?quality=12&learn=on)

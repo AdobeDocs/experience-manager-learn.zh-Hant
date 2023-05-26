@@ -21,9 +21,9 @@ ht-degree: 76%
 
 ---
 
-# 建立您的第SPA一個反AEM應 {#overview}
+# 在AEM中建立您的第一個React SPA {#overview}
 
-歡迎使用專為 Adobe Experience Manager (AEM) 中 **SPA Editor** 功能的新手開發人員設計的多部分教學課程。本教程將介紹虛擬生活方式品牌WKND的React應用程式的實施。 React應用程式開發並設計為與編輯器AEM一起部SPA署，該編輯器將React元件映射到AEM元件。 部署至 AEM 的完成 SPA 即可使用 AEM 傳統的內嵌編輯工具動態製作。
+歡迎使用專為 Adobe Experience Manager (AEM) 中 **SPA Editor** 功能的新手開發人員設計的多部分教學課程。本教學課程會逐步引導您為虛擬生活風格品牌WKND實作React應用程式。 React應用程式是使用AEM SPA Editor開發並設計來部署，可將React元件對應至AEM元件。 部署至 AEM 的完成 SPA 即可使用 AEM 傳統的內嵌編輯工具動態製作。
 
 ![實作的最終 SPA](assets/wknd-spa-implementation.png)
 
@@ -44,7 +44,7 @@ ht-degree: 76%
 開始進行此教學課程前，您需要具備以下條件：
 
 * HTML、CSS 和 JavaScript 的基本知識
-* 基本熟悉 [反應](https://reactjs.org/tutorial/tutorial.html)
+* 基本熟悉 [React](https://reactjs.org/tutorial/tutorial.html)
 
 *雖然不一定需要，但對於[開發傳統的 AEM Sites 元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)有基本的了解也會有幫助。*
 
@@ -52,7 +52,7 @@ ht-degree: 76%
 
 本機開發環境是完成此教學課程不可或缺的條件。螢幕截圖和影片都是使用在 Mac OS 環境上執行的 AEM as a Cloud Service SDK 擷取，並將 [Visual Studio Code](https://code.visualstudio.com/) 當做 IDE 使用。除非另有註明，否則命令和程式碼應不受本機作業系統的限制。
 
-### 所需軟體
+### 必要的軟體
 
 * [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html)、[AEM 6.5.4+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en#aem-65) 或 [AEM 6.4.8+](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en#aem-64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
@@ -67,4 +67,4 @@ ht-degree: 76%
 
 ## 後續步驟 {#next-steps}
 
-你在等什麼！導航至 [建立項目](create-project.md) 並瞭解如何使用「項目原型」SPA生成啟用編輯器AEM的項目。
+您還在等什麼?!導覽至「 」，開始進行教學課程 [建立專案](create-project.md) 章節，並瞭解如何使用SPA專案原型產生啟用AEM編輯器的專案。

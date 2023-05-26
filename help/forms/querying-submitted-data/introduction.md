@@ -1,7 +1,7 @@
 ---
-title: AEM FormsJSON架構和資料
+title: 具有JSON結構描述和資料的AEM Forms
 seo-title: AEM Forms with JSON Schema and Data
-description: 多部分教程，引導您完成建立帶JSON架構的自適應表單和查詢提交資料所涉及的步驟。
+description: 多部分教學課程將逐步引導您完成使用JSON結構描述建立調適型表單和查詢已提交資料的相關步驟。
 seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
@@ -21,16 +21,16 @@ ht-degree: 0%
 
 ---
 
-# AEM FormsJSON架構和資料
+# 具有JSON結構描述和資料的AEM Forms
 
-多部分教程，引導您完成建立帶JSON架構的自適應表單和查詢提交資料所涉及的步驟。
+多部分教學課程將逐步引導您完成使用JSON結構描述建立調適型表單和查詢已提交資料的相關步驟。
 
-要學習本教程，建議您安裝以下程式
+若要依照本教學課程操作，建議您安裝下列專案
 
-* AEM 6.3或更高版本
+* AEM 6.3或更新版本，搭配適當的Forms附加元件套件
 
 * MySQL 8資料庫
 
-* MySQL 8工作台
+* MySQL 8維護作業
 
-此外，還建議您在與AEM Forms方面有一定AEM的經驗。 您還應熟悉安裝MySQL資料庫和MySQL工作台
+此外，建議您最好也對AEM和AEM Forms有一定的經驗。 您也應熟悉安裝MySQL DB和MySQL Workbench

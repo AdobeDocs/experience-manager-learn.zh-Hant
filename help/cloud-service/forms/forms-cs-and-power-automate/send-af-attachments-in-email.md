@@ -1,6 +1,6 @@
 ---
-title: 在電子郵件中發送表單附件
-description: 使用自動化工作流提取併發送電子郵件中提交的表單附件
+title: 以電子郵件傳送表單附件
+description: 使用Power Automate工作流程在電子郵件中擷取和傳送提交的表單附件
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 ---
 
-# 從提交的表單資料中提取表單附件
+# 從提交的表單資料中擷取表單附件
 
-在Power中提取表單附件並在電子郵件中發送附件，使工作流自動化。
-以下視頻說明了從提交的資料中建立附件所需的步驟。
+在power automate工作流程中擷取表單附件並以電子郵件傳送附件。
+以下影片說明從提交的資料形成附件所需的步驟。
 >[!VIDEO](https://video.tv.adobe.com/v/3409017?quality=12&learn=on)
 
-以下是在「分析JSON架構」步驟中需要使用的附件對象架構
+以下是您需要在「剖析JSON結構描述」步驟中使用的附件物件結構描述
 
 ```json
 {

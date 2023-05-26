@@ -1,6 +1,6 @@
 ---
-title: 如何調整Workbench效能參數
-description: 調整工作台效能參數的步驟
+title: 如何調整Workbench效能引數
+description: 調整Workbench效能引數的步驟
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何調整Workbench效能參數
+# 如何調整Workbench效能引數
 
-*此視頻將完成調整Workbench效能參數的過程。*
+*本影片逐步解說調整Workbench效能引數的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335511?quality=12&learn=on)

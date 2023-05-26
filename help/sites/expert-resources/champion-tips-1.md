@@ -1,7 +1,7 @@
 ---
-title: Champion提AEM示和技巧 — 可編輯模板1
+title: AEM Champion秘訣與技巧 — 可編輯範本1
 seo-title: AEM Champion Tips and Tricks - Editable Templates 1
-description: 請查看這些快速提示，瞭解AEM Sites的可編輯模AEM板（由Champion和專家Greg Dimeris提供）。 今天在你的例子裡試試。
+description: 檢視這些快速提示，瞭解AEM Champion和專家Greg Dimeris在AEM Sites中可編輯的範本。 立即在您的執行個體中試用。
 seo-description: Check out these quick tips for Editable Templates in AEM Sites by AEM Champion and expert, Greg Dimeris. Try them out in your instance today.
 audience: author, marketer
 exl-id: d5967fb5-c151-478e-a554-41e235de3f83
@@ -12,6 +12,6 @@ ht-degree: 0%
 
 ---
 
-# AEM冠軍技巧和技巧：可編輯模板
+# AEM Champion秘訣與技巧：可編輯的範本
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409424?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-title: 建立自適應窗體
-description: 在Part1中，我們將建立「自適應表單」(Adaptive Form)，使用相應的按鈕添加和配置工具欄。
+title: 建立最適化表單
+description: 在第1部分中，我們將建立最適化表單、新增並設定包含適當按鈕的工具列。
 feature: Adaptive Forms
 kt: 4208
 thumbnail: 22173.jpg
@@ -15,14 +15,14 @@ ht-degree: 3%
 
 ---
 
-# 建立自適應窗體 {#creating-adaptive-form}
+# 建立最適化表單 {#creating-adaptive-form}
 
-我們將根據上一課中建立的模板建立自適應表單，並使用相應的按鈕配置工具欄。
+我們將根據先前課程中建立的範本建立最適化表單，並使用適當的按鈕設定工具列。
 
-**建立第一個自適應窗體**
+**建立第一個最適化表單**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22173?quality=12&learn=on)
 
 ## 後續步驟
 
-[將子面板添加到根面板](./configuring-root-panel-and-adding-child-panels.md)
+[將子面板新增至根面板](./configuring-root-panel-and-adding-child-panels.md)

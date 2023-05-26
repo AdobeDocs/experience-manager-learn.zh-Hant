@@ -1,6 +1,6 @@
 ---
-title: 為Dynamic Media處AEM理資產
-description: 對已啟用Dynamic Media的資產運行DAM更新資產工作流的步驟。
+title: 處理AEM Dynamic Media的資產
+description: 在已啟用Dynamic Media的資產上執行DAM更新資產工作流程的步驟。
 role: Developer
 level: Intermediate
 version: 6.5
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ---
 
-# 為Dynamic Media處AEM理資產
+# 處理AEM Dynamic Media的資產
 
-此視頻將在啟用Dynamic Media的資產上運行DAM更新資產工作流。
+本影片會逐步解說在啟用Dynamic Media的資產上執行DAM更新資產工作流程的過程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335456?quality=12&learn=on)

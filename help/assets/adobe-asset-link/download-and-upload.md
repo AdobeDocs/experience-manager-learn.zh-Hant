@@ -1,6 +1,6 @@
 ---
-title: 下載和上載
-description: 瞭解如何使用「資產連結」面板從AEM Assets下載資產檔案並將其上載到新加坡。
+title: 下載和上傳
+description: 瞭解如何使用Asset Link面板，從AEM Assets下載資產檔案並將檔案上傳到其中。
 feature: Adobe Asset Link
 version: 6.4, 6.5, Cloud Service
 kt: 4908
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 下載和上載 {#download-and-upload}
+# 下載和上傳 {#download-and-upload}
 
-瞭解如何使用「資產連結」面板從AEM Assets下載資產檔案並將其上載到新加坡。
+瞭解如何使用Asset Link面板，從AEM Assets下載資產檔案並將檔案上傳到其中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33885?quality=12&learn=on)

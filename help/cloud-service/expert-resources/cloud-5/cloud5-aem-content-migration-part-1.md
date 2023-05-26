@@ -1,6 +1,6 @@
 ---
-title: 遷移到雲 — 第1部分
-description: Darin和James討論遷移到雲AEM，並演示一些技術和最佳實踐。
+title: 移轉至雲端 — 第1部分
+description: Darin和James討論移轉至AEM Cloud並示範一些技巧和最佳實務。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -16,17 +16,17 @@ ht-degree: 5%
 
 ---
 
-# 遷移到雲 — 第1部分
+# 移轉至雲端 — 第1部分
 
-Darin和James討論雲中的DispatcherAEM，包括一些最佳實踐和與AMS/On-Prem的不同之處。 它們還涉及到向雲的遷移。 特邀嘉賓雲專家， [阿普萊斯米特博士](https://twitter.com/DrApplesmith) 出現。
+Darin和James討論AEM雲端中的Dispatcher，包括一些最佳實務和與AMS/內部部署的差異。 此外，他們也會談到移轉至雲端的問題。 特邀嘉賓與雲端專家， [Applesmith博士](https://twitter.com/DrApplesmith) 進行外觀。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342133?quality=12&learn=on)
 
-## 此視頻中包含的內容
+## 本影片涵蓋的內容
 
-+ 要遷移的實例的評估
-   + BPA — 最佳做法分析器
-   + CAM — 雲加速管理器
-+ [重複](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
++ 評估您要移轉的執行個體
+   + BPA — 最佳做法分析工具
+   + CAM - cloud acceleration manager
++ [重新發佈](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
 + [AEM 現代化工具](https://opensource.adobe.com/aem-modernize-tools/)
-+ [Cloud Service遷移工具](https://github.com/adobe/aem-cloud-service-source-migration)
++ [Cloud Service移轉工具](https://github.com/adobe/aem-cloud-service-source-migration)

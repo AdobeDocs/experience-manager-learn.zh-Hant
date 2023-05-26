@@ -1,6 +1,6 @@
 ---
-title: 使用AEMIMS與標籤屬性連接
-description: 瞭解如何使AEM用中的IMS配置與標籤屬性連AEM接。 此安裝程AEM序使用啟動API驗證，並AEM允許通過啟動API通信以訪問標籤屬性。
+title: 使用IMS連線AEM與標籤屬性
+description: 瞭解如何使用AEM中的IMS設定連線AEM與標籤屬性。 此設定可使用Launch API驗證AEM，並允許AEM透過Launch API通訊以存取標籤屬性。
 topics: integrations
 audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
@@ -19,33 +19,33 @@ ht-degree: 0%
 
 ---
 
-# 使用AEMIMS與標籤屬性連接{#connect-aem-and-tag-property-using-ims}
+# 使用IMS連線AEM與標籤屬性{#connect-aem-and-tag-property-using-ims}
 
 >[!NOTE]
 >
->產品UI、內容和文檔中正在實施將Adobe Experience Platform Launch更名為一組資料收集技術的AEM過程，因此此處仍在使用「啟動」一詞。
+>AEM產品UI、內容和檔案正在實施將Adobe Experience Platform Launch重新命名為一組資料收集技術的程式，因此此處仍使用Launch一詞。
 
-瞭解如何使AEM用中的IMS(Identity Management系統)配置與標籤屬性連AEM接。 此安裝程AEM序使用啟動API驗證，並AEM允許通過啟動API通信以訪問標籤屬性。
+瞭解如何使用AEM中的IMS (Identity Management系統)設定來連結AEM與標籤屬性。 此設定可使用Launch API驗證AEM，並允許AEM透過Launch API通訊以存取標籤屬性。
 
-## 建立或重用IMS配置
+## 建立或重新使用IMS設定
 
-使用Adobe Developer控制台項目的IMS配置需要與新創AEM建的標籤屬性整合。 此配置允AEM許使用Launch API與Tags應用程式通信，IMS處理此整合的安全方面。
+需要使用Adobe Developer控制檯專案的IMS設定，才能將AEM與新建立的標籤屬性整合。 此設定可讓AEM使用Launch API與Tags應用程式通訊，而IMS會處理此整合的安全性方面。
 
-每當配置AEMasCloud Service環境時，都會自動建立一些IMS配置，如Asset compute、Adobe Analytics和Adobe啟動。 自動建立 **Adobe啟動** 如果您使用6.X環境，則可以使用IMS配置或建立AEM新的IMS配置。
+每當布建AEM as Cloud Service環境時，就會自動建立一些IMS設定，例如Asset compute、Adobe Analytics和Adobe Launch。 已自動建立 **Adobe啟動** 如果您使用AEM 6.X環境，則可以使用IMS設定或應建立新的IMS設定。
 
-已自動建立審閱 **Adobe啟動** IMS配置使用以下步驟。
+評論自動建立 **Adobe啟動** 使用以下步驟進行IMS設定。
 
-1. 開啟AEM **工具** 菜單
+1. 在AEM中開啟 **工具** 功能表
 
-1. 在「安全性」部分，選擇「Adobe IMS配置」。
+1. 在「安全性」區段中，選取「Adobe IMS設定」。
 
-1. 選擇 **Adobe啟動** 卡，按一下 **屬性**，查看詳細資訊 **證書** 和 **帳戶** 頁籤。 然後按一下 **取消** 返回而不修改任何自動建立的詳細資訊。
+1. 選取 **Adobe啟動** 卡片並按一下 **屬性**，檢閱以下專案的詳細資料： **憑證** 和 **帳戶** 索引標籤。 然後按一下 **取消** 返回，而不修改任何自動建立的詳細資訊。
 
-1. 選擇 **Adobe啟動** 卡，這次點擊 **檢查運行狀況**，您應該看到 **成功** 下面的消息。
+1. 選取 **Adobe啟動** 卡片，這次按一下 **檢查健康狀態**，您應該會看到 **成功** 訊息如下。
 
-   ![Adobe啟動正常IMS配置](assets/adobe-launch-healthy-ims-config.png)
+   ![Adobe啟動狀況良好的IMS設定](assets/adobe-launch-healthy-ims-config.png)
 
 
 ## 後續步驟
 
-[在中建立啟動Cloud Service配AEM置](create-aem-launch-cloud-service.md)
+[在AEM中建立LaunchCloud Service設定](create-aem-launch-cloud-service.md)

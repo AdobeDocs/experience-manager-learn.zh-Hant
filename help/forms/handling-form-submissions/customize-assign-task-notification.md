@@ -1,6 +1,6 @@
 ---
-title: 自定義分配任務通知
-description: 在分配任務通知電子郵件中包括表單資料
+title: 自訂指派任務通知
+description: 在指派任務通知電子郵件中包含表單資料
 feature: Workflow
 topics: integrations
 audience: developer
@@ -21,19 +21,19 @@ ht-degree: 1%
 
 ---
 
-# 自定義分配任務通知
+# 自訂指派任務通知
 
-分配任務元件用於將任務分配給工作流參與者。 將任務分配給用戶或組時，電子郵件通知將發送到定義的用戶或組成員。
-此電子郵件通知通常包含與任務相關的動態資料。 此動態資料是使用系統生成的 [元資料屬性](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)。
-要在電子郵件通知中包含來自已提交表單資料的值，我們需要建立自定義元資料屬性，然後在電子郵件模板中使用這些自定義元資料屬性
+指派任務元件用於將任務指派給工作流程參與者。 當任務指派給使用者或群組時，會傳送電子郵件通知給已定義的使用者或群組成員。
+此電子郵件通知通常包含與任務相關的動態資料。 此動態資料是使用產生的系統擷取 [中繼資料屬性](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification).
+若要在電子郵件通知中包含來自已提交表單資料的值，我們需要建立自訂中繼資料屬性，然後在電子郵件範本中使用這些自訂中繼資料屬性
 
 
 
-## 建立自定義元資料屬性
+## 建立自訂中繼資料屬性
 
-建議的方法是建立一個OSGI元件，該元件實現 [工作項用戶元資料服務](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)
+建議的方法是建立實作的getUserMetadata方法的OSGI元件 [WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)
 
-以下代碼建立4個元資料屬性(_名字_。_姓氏_。_原因_ 和 _請求金額_)，並根據提交的資料設定其值。 例如，元資料屬性 _名字_ s的值設定為提交資料中名為firstName的元素的值。 以下代碼假定自適應表單的已提交資料為xml格式。 基於JSON架構或表單資料模型的自適應Forms生成JSON格式的資料。
+下列程式碼會建立4個中繼資料屬性(_名字_，_姓氏_，_原因_ 和 _amountRequested_)並從提交的資料中設定其值。 例如中繼資料屬性 _名字_&#x200B;的數值會根據提交的資料，設定為名為firstName的元素的值。 下列程式碼假設最適化表單提交的資料為xml格式。 以JSON結構描述或表單資料模型為基礎的最適化Forms會產生JSON格式的資料。
 
 
 ```java
@@ -113,44 +113,44 @@ return customMetadataMap;
 }
 ```
 
-## 在任務通知電子郵件模板中使用自定義元資料屬性
+## 在任務通知電子郵件範本中使用自訂中繼資料屬性
 
-在電子郵件模板中，可以使用以下語法包括元資料屬性，其中amountRequested是元資料屬性 `${amountRequested}`
+在電子郵件範本中，您可以使用以下語法來包含中繼資料屬性，其中amountRequested是中繼資料屬性 `${amountRequested}`
 
-## 配置分配任務以使用自定義元資料屬性
+## 設定指派任務以使用自訂中繼資料屬性
 
-在將OSGi元件構建並部署到伺服器AEM後，將「分配任務」元件配置為使用自定義元資料屬性，如下所示。
+在OSGi元件建立並部署到AEM伺服器後，請如下所示設定「指派工作」元件以使用自訂中繼資料屬性。
 
 
 ![任務通知](assets/task-notification.PNG)
 
-## 啟用自定義元資料屬性的使用
+## 允許使用自訂中繼資料屬性
 
-![自定義元資料屬性](assets/custom-meta-data-properties.PNG)
+![自訂中繼資料屬性](assets/custom-meta-data-properties.PNG)
 
-## 在伺服器上嘗試
+## 若要在您的伺服器上嘗試此動作
 
-* [配置日CQ郵件服務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
-* 將有效電子郵件ID與 [管理員用戶](http://localhost:4502/security/users.html)
-* 下載並安裝 [工作流和通知模板](assets/workflow-and-task-notification-template.zip) 使用 [軟體包管理器](http://localhost:4502/crx/packmgr/index.jsp)
-* 下載 [自適應窗體](assets/request-travel-authorization.zip) 從AEM中 [窗體和文檔ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)。
-* 部署並啟動 [自定義捆綁包](assets/work-items-user-service-bundle.jar) 使用 [Web控制台](http://localhost:4502/system/console/bundles)
+* [設定Day CQ郵件服務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
+* 將有效的電子郵件ID與 [管理員使用者](http://localhost:4502/security/users.html)
+* 下載並安裝 [Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip) 使用 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+* 下載 [最適化表單](assets/request-travel-authorization.zip) 並從匯入AEM [表單與檔案ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
+* 部署並啟動 [自訂組合](assets/work-items-user-service-bundle.jar) 使用 [網頁主控台](http://localhost:4502/system/console/bundles)
 * [預覽並提交表單](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 
-表單提交任務分配通知將發送到與管理員用戶關聯的電子郵件ID。 以下螢幕快照顯示任務分配通知示例
+在表單提交時，任務指派通知會傳送到與管理員使用者相關聯的電子郵件ID。 下列熒幕擷圖顯示範例任務指派通知
 
 ![通知](assets/task-nitification-email.png)
 
 >[!NOTE]
->分配任務通知的電子郵件模板需要採用以下格式。
+>指派任務通知的電子郵件範本需要以下列格式。
 >
-> subject=已分配任務 —  `${workitem_title}`
+> subject=任務已指派 —  `${workitem_title}`
 >
-> message=表示您的電子郵件模板且沒有任何新行字元的字串。
+> message=字串，代表您的電子郵件範本，不含任何新行字元。
 
-## 分配任務電子郵件通知中的任務注釋
+## 指派任務電子郵件通知中的任務註解
 
-在某些情況下，您可能希望在後續任務通知中包括前一個任務所有者的注釋。 下面列出了用於捕獲任務最後注釋的代碼：
+在某些情況下，您可能會想要在後續的任務通知中包含前一個任務擁有者的註解。 擷取任務最後評論的程式碼如下：
 
 ```java
 package samples.aemforms.taskcomments.core;
@@ -202,4 +202,4 @@ public class CaptureTaskComments implements WorkitemUserMetadataService {
 }
 ```
 
-具有上述代碼的捆綁包可以 [從此處下載](assets/samples.aemforms.taskcomments.taskcomments.core-1.0-SNAPSHOT.jar)
+具有上述程式碼的套件組合可以是 [已從此處下載](assets/samples.aemforms.taskcomments.taskcomments.core-1.0-SNAPSHOT.jar)

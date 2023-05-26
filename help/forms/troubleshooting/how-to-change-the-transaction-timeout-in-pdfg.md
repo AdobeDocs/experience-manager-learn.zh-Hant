@@ -1,6 +1,6 @@
 ---
-title: 如何在PDFG服務中更改應用伺服器的事務超時
-description: 增加或減少PDF生成器應用程式伺服器的事務超時的步驟
+title: 如何在PDFG服務中變更應用程式伺服器的交易逾時
+description: 增加或減少PDF產生器之應用程式伺服器的交易逾時的步驟
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 ---
 
-# 如何在PDFG服務中更改應用伺服器的事務超時
+# 如何在PDFG服務中變更應用程式伺服器的交易逾時
 
-*此視頻描述了在FormsPDFG服務中更改應用伺服器事務超時的過程。*
+*此影片說明在Forms PDFG服務中變更應用程式伺服器交易逾時的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335555?quality=12&learn=on)
