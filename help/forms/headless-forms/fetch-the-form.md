@@ -7,10 +7,10 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
+source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 0%
+source-wordcount: '149'
+ht-degree: 1%
 
 ---
 
@@ -76,3 +76,7 @@ export default function Contact(){
 ```
 
 上述程式碼使用原生html元件，這些元件對應至最適化表單中使用的元件。 例如，我們將文字輸入最適化表單元件對應至TextField元件。 文章中使用的原生元件 [可從此處下載](./assets/native-components.zip)
+
+## 後續步驟
+
+[從下拉式清單中選取表單](./select-form-from-drop-down-list.md)
