@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 733d640f7040aefdd98fa3b999428ef0aac1fd61
+source-git-commit: 19c31819f3df7c6c43753d6ec4de8f6ecf4e55dd
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '454'
 ht-degree: 22%
 
 ---
@@ -100,6 +100,7 @@ ht-degree: 22%
    + Experience Platform {#experience-platform}
       + [產生FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
+      + [使用Platform Web SDK進行分析](integrations/platform/analytics-using-web-sdk.md)
    + Experience Platform資料收集標籤(Launch) {#experience-platform-data-collection-tags}
       + [概觀](integrations/experience-platform/data-collection/tags/overview.md)
       + [建立標籤屬性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
