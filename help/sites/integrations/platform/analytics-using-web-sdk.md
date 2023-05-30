@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
-source-git-commit: 19c31819f3df7c6c43753d6ec4de8f6ecf4e55dd
+source-git-commit: 3831c6ed1467018c9f5bf15aa9f6b8ee78034c02
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1646'
 ht-degree: 1%
 
 ---
@@ -73,7 +73,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-如需SDR檔案中應包含的概念和各種元素的詳細資訊，請造訪 [建立和維護解決方案設計參考(SDR)檔案](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). 您也可以下載範例Excel範本，不過也可以使用WKND專用版本 [此處](./assets/Analytics-SDR-Template.xlsx).
+如需SDR檔案中應包含的概念和各種元素的詳細資訊，請造訪 [建立和維護解決方案設計參考(SDR)檔案](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). 您也可以下載範例Excel範本，不過也可以使用WKND專用版本 [此處](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
 
 ## 設定Analytics — 報表套裝、Analysis Workspace
 
@@ -83,7 +83,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 為了分析、收集見解並和他人共用收集到的資料中的見解，Analysis Workspace中建立了一個專案。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419875?quality=12&learn=on)
 
 若要進一步瞭解Analytics設定和概念，強烈建議使用下列資源：
 
@@ -121,6 +121,10 @@ Experience Data Model (XDM)結構描述可幫助您將收集的資料標準化�
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419882?quality=12&learn=on)
+
+>[!TIP]
+>
+>影片中顯示的資料元素和規則事件程式碼可供您參考， **展開以下摺疊式功能表元素**. 不過，如果您未使用Adobe使用者端資料層，則必須修改下列程式碼，但定義資料元素並在規則定義中使用這些元素的概念仍然適用。
 
 +++ 資料元素和規則事件程式碼
 
@@ -209,6 +213,13 @@ Experience Data Model (XDM)結構描述可幫助您將收集的資料標準化�
 
 如需整合AEM核心元件與Adobe使用者端資料層的詳細資訊，請參閱 [將Adobe Client Data Layer與AEM核心元件搭配使用指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html).
 
+
+>[!INFO]
+>
+>全面瞭解 **變數對應** 索引標籤屬性詳細資訊在解決方案設計參考(SDR)檔案中，存取已完成的WKND特定版本以供下載 [此處](./assets/Final-WKND-WebSDK-BRD-SDR.xlsx).
+
+
+
 ## 驗證WKND上已更新的標籤屬性
 
 確保在WKND網站頁面上建置、發佈並正確使用更新的標籤屬性。 使用Google Chrome網頁瀏覽器的 [Adobe Experience Platform Debugger擴充功能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)：
@@ -235,7 +246,7 @@ Experience Data Model (XDM)結構描述可幫助您將收集的資料標準化�
 
 Analysis Workspace是Adobe Analytics中的強大工具，可讓您以彈性和互動的方式探索和視覺化資料。 它提供拖放介面，可建立自訂報表、執行進階分段並套用各種資料視覺效果。
 
-讓我們重新開啟在中建立的Analysis Workspace專案 [設定Analytics](#setup-analytics---report-suite-analysis-workspace) 步驟。 在 **熱門頁面** 區段，檢查各種量度，例如造訪次數、不重複訪客、登入點、跳出率等。 若要評估WKND頁面和首頁CTA的效能，請拖放WKND特定的維度（WKND頁面名稱、WKND CTA名稱）和量度（WKND CTA點選事件）。 這些見解對於行銷人員瞭解哪些CTA更有效率，並做出符合其業務目標的資料導向式決策非常有價值。
+讓我們重新開啟在中建立的Analysis Workspace專案 [設定Analytics](#setup-analytics---report-suite-analysis-workspace) 步驟。 在 **熱門頁面** 區段，檢查各種量度，例如造訪次數、不重複訪客、登入點、跳出率等。 若要評估WKND頁面和首頁CTA的效能，請拖放WKND特定的維度（WKND頁面名稱、WKND CTA名稱）和量度（WKND CTA點選事件）。 這些見解對於行銷人員瞭解哪些CTA更有效率，並根據其業務目標制定資料導向式決策非常有價值。
 
 若要將使用者歷程視覺化，請使用流量視覺效果，從 **WKND頁面名稱** 並擴展至各種路徑。
 
@@ -250,6 +261,12 @@ Analysis Workspace是Adobe Analytics中的強大工具，可讓您以彈性和�
 透過實作建議的步驟並使用提供的資源(例如解決方案設計參考(SDR)檔案)和瞭解重要的Analytics概念，行銷人員可以有效地收集和分析資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419888?quality=12&learn=on)
+
+
+>[!AVAILABILITY]
+>
+>如果您偏好使用 **端對端影片** 涵蓋整個整合程式，而非個別設定步驟影片，您可以按一下 [此處](https://video.tv.adobe.com/v/3419889/) 以存取它。
+
 
 ## 其他資源
 
