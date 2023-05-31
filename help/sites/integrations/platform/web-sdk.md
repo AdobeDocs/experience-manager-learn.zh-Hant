@@ -11,9 +11,9 @@ last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
 exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
-source-git-commit: 63afa03de70d6f8f695d552018344d53a5cec6f5
+source-git-commit: 32472c8591aeb47a7c6a7253afd7ad9ab0e45171
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1340'
 ht-degree: 1%
 
 ---
@@ -207,6 +207,11 @@ Experience Data Model (XDM)結構描述可幫助您標準化客戶體驗資料�
 做得好！您已使用Experience Platform Web SDK完成AEM的設定，以便從網站收集及擷取資料。 有了這個基礎，您現在可以探索更多可能性，以增強和整合Analytics、Target、Customer Journey Analytics (CJA)和其他許多產品，為您的客戶打造豐富的個人化體驗。 持續學習和探索，以釋放Adobe Experience Cloud的完整潛能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418900?quality=12&learn=on)
+
+
+>[!AVAILABILITY]
+>
+>如果您偏好使用 **端對端影片** 涵蓋整個整合程式，而非個別設定步驟影片，您可以按一下 [此處](https://video.tv.adobe.com/v/3418905/) 以存取它。
 
 ## 其他資源
 
