@@ -9,10 +9,10 @@ level: Beginner
 thumbnail: 28988.jpg
 last-substantial-update: 2022-06-25T00:00:00Z
 exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 1%
+source-wordcount: '1047'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Creative Cloud for enterprise的Adobe Asset Link擴充功能加強在Creat
 
 >[!TIP]
 >
-> 進一步瞭解 [Adobe XD Premium訓練計畫](https://spark.adobe.com/page/wU7OXv8qKGugO/) 可協助您將Asset Link與Adobe Experience Manager工作流程整合。
+> 進一步瞭解 [Adobe XD Premium訓練計畫](https://helpx.adobe.com/support/xd.html) 可協助您將Asset Link與Adobe Experience Manager工作流程整合。
 
 ## AdobeAsset Link和AEM創意工作流程
 
@@ -65,7 +65,7 @@ Adobe Asset Link提供Adobe Asset Link與AEM之間的InDesign直接連結支援�
 
 >[!NOTE]
 >
->僅使用您的Adobe Creative CloudEnterprise ID或Federated ID。 請確定 [設定AEM以進行Adobe資產連結](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html).
+>僅使用您的Adobe Creative CloudEnterprise ID或Federated ID。 請確定 [設定AEM以進行Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html).
 
 您可以使用下列其中一個選項，將資產放置到InDesign版面配置中：
 

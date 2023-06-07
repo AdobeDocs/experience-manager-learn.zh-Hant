@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1188'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ _本章中的IDE熒幕擷取畫面來自 [Visual Studio Code](https://code.visua
 
 必須安裝下列軟體：
 
-- [Node.js v18](https://nodejs.org/)
+- [Node.js v18](https://nodejs.org/en)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## 目標
@@ -109,7 +109,7 @@ React應用程式原始碼範例位於Github.com <https://github.com/adobe/aem-g
 
 1. 此 `src/api` 資料夾包含用來向AEM提出GraphQL查詢的檔案。
    - `src/api/aemHeadlessClient.js` 初始化並匯出用於與AEM通訊的AEM Headless使用者端
-   - `src/api/usePersistedQueries.js` 實作 [自訂React鉤點](https://react.dev/docs/hooks-custom.html) 將資料從AEM GraphQL傳回至 `Teams.js` 和 `Person.js` 檢視元件。
+   - `src/api/usePersistedQueries.js` 實作 [自訂React鉤點](https://react.dev/learn/reusing-logic-with-custom-hooks#custom-hooks-sharing-logic-between-components) 將資料從AEM GraphQL傳回至 `Teams.js` 和 `Person.js` 檢視元件。
 
 1. 此 `src/components/Teams.js` 檔案會使用清單查詢來顯示團隊及其成員的清單。
 1. 此 `src/components/Person.js` 檔案會使用引數化的單一結果查詢，顯示單一人員的詳細資訊。
@@ -187,7 +187,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 接下來，建立在React應用程式的主要檢視上顯示「團隊」及其成員的功能。 此功能需要：
 
-- 新 [自訂React useEffect鉤點](https://react.dev/docs/hooks-custom.html) 在 `src/api/usePersistedQueries.js` 會叫用 `my-project/all-teams` 持久查詢，傳回AEM中的團隊內容片段清單。
+- 新 [自訂React useEffect鉤點](https://react.dev/reference/react/useEffect#useeffect) 在 `src/api/usePersistedQueries.js` 會叫用 `my-project/all-teams` 持久查詢，傳回AEM中的團隊內容片段清單。
 - 位於的React元件 `src/components/Teams.js` 會叫用新的自訂React `useEffect` 鉤點，並轉譯團隊資料。
 
 完成後，應用程式的主要檢視會填入來自AEM的Teams資料。
@@ -337,7 +337,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 此功能需要：
 
-- 新 [自訂React useEffect鉤點](https://react.dev/docs/hooks-custom.html) 在 `src/api/usePersistedQueries.js` 會叫用引數化 `my-project/person-by-name` 持久查詢，並傳回單一人員記錄。
+- 新 [自訂React useEffect鉤點](https://react.dev/reference/react/useEffect#useeffect) 在 `src/api/usePersistedQueries.js` 會叫用引數化 `my-project/person-by-name` 持久查詢，並傳回單一人員記錄。
 
 - 位於的React元件 `src/components/Person.js` 以個人全名作為查詢引數的系統，會叫用新的自訂React `useEffect` 鉤點，並呈現個人資料。
 

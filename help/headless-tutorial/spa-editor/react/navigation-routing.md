@@ -12,9 +12,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1621'
 ht-degree: 0%
 
 ---
@@ -26,12 +26,12 @@ ht-degree: 0%
 ## 目標
 
 1. 瞭解使用SPA編輯器時可用的SPA模型路由選項。
-1. 瞭解如何使用 [React路由器](https://reacttraining.com/react-router/) 以在SPA的不同檢視之間導覽。
+1. 瞭解如何使用 [React路由器](https://reacttraining.com/react-router) 以在SPA的不同檢視之間導覽。
 1. 使用AEM React核心元件來實作由AEM頁面階層驅動的動態導覽。
 
 ## 您將建置的內容
 
-本章會將導覽新增至AEM中的SPA。 導覽功能表由AEM頁面階層驅動，並將使用提供的JSON模型。 [導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html).
+本章會將導覽新增至AEM中的SPA。 導覽功能表由AEM頁面階層驅動，並將使用提供的JSON模型。 [導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html).
 
 ![已新增導覽](assets/navigation-routing/navigation-added.png)
 
@@ -209,9 +209,9 @@ ht-degree: 0%
 
 ## Inspect React路由  {#react-routing}
 
-導覽與路由的實作方式 [React路由器](https://reactrouter.com/). React Router是React應用程式的導覽元件集合。 [AEM React Core Components](https://github.com/adobe/aem-react-core-wcm-components-base) 使用React Router的功能來實作 **導覽** 先前步驟中使用的元件。
+導覽與路由的實作方式 [React路由器](https://reactrouter.com/en/main). React Router是React應用程式的導覽元件集合。 [AEM React Core Components](https://github.com/adobe/aem-react-core-wcm-components-base) 使用React Router的功能來實作 **導覽** 先前步驟中使用的元件。
 
-接下來，檢查React路由器如何與SPA整合，並使用React路由器的 [連結](https://reactrouter.com/web/api/Link) 元件。
+接下來，檢查React路由器如何與SPA整合，並使用React路由器的 [連結](https://reactrouter.com/en/main/components/link) 元件。
 
 1. 在IDE中開啟檔案 `index.js` 於 `ui.frontend/src/index.js`.
 
@@ -238,7 +238,7 @@ ht-degree: 0%
    });
    ```
 
-   請注意 `App` 包在 `Router` 元件來源 [React路由器](https://reacttraining.com/react-router/). 此 `ModelManager`由AEM SPA編輯器JS SDK提供，根據JSON模型API為AEM頁面新增動態路由。
+   請注意 `App` 包在 `Router` 元件來源 [React路由器](https://reacttraining.com/react-router). 此 `ModelManager`由AEM SPA編輯器JS SDK提供，根據JSON模型API為AEM頁面新增動態路由。
 
 1. 開啟檔案 `Page.js` 於 `ui.frontend/src/components/Page/Page.js`
 
@@ -260,7 +260,7 @@ ht-degree: 0%
    此 `Page` SPA元件使用 `MapTo` 要對應的函式 **頁面** AEM中的對應變數至對應的SPA元件。 此 `withRoute` SPA AEM公用程式可協助您根據 `cqPath` 屬性。
 
 1. 開啟 `Header.js` 元件於 `ui.frontend/src/components/Header/Header.js`.
-1. 更新 `Header` 換行 `<h1>` 標籤於 [連結](https://reactrouter.com/web/api/Link) 前往首頁：
+1. 更新 `Header` 換行 `<h1>` 標籤於 [連結](https://reactrouter.com/en/main/components/link) 前往首頁：
 
    ```diff
      //Header.js

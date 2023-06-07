@@ -11,9 +11,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 434f56e143bc0f969723de48abd26d49a308af9b
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '4061'
+source-wordcount: '4057'
 ht-degree: 0%
 
 ---
@@ -446,7 +446,7 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助�
    import org.osgi.annotation.versioning.Version;
    ```
 
-每當對此封裝中的檔案進行變更時， [套件版本必須在語義上調整](https://semver.org/). 如果沒有，Maven專案的 [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) 會偵測到無效的封裝版本，並中斷內建。 幸運的是，失敗時，Maven外掛程式會報告無效的Java™套件版本及其應該使用的版本。 更新 `@Version("...")` 違反的Java™套件中的宣告 `package-info.java` 至外掛程式建議修正的版本。
+每當對此封裝中的檔案進行變更時， [套件版本必須在語義上調整](https://semver.org/). 如果沒有，Maven專案的 [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd) 會偵測到無效的封裝版本，並中斷內建。 幸運的是，失敗時，Maven外掛程式會報告無效的Java™套件版本及其應該使用的版本。 更新 `@Version("...")` 違反的Java™套件中的宣告 `package-info.java` 至外掛程式建議修正的版本。
 
 ### 署名實施 {#byline-implementation}
 
