@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 19c31819f3df7c6c43753d6ec4de8f6ecf4e55dd
+source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '458'
 ht-degree: 22%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 22%
    + [樣式系統](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
    + [Launch](page-authoring/launches.md)
-   + 專家建議 {#expert-advice}
+   + 向同儕學習 {#expert-advice}
       + [網站階層秘訣](page-authoring/expert-advice/site-hierarchy.md)
 + 元件 {#components}
    + [元件開發](components/component-development.md)
@@ -123,7 +123,7 @@ ht-degree: 22%
       + [使用體驗片段選件建立Target活動](integrations/adobe-target/create-target-activity.md)
       + [使用視覺化體驗撰寫器進行個人化](integrations/adobe-target/personalization-using-vec.md)
       + [個人化完整網頁體驗](integrations/adobe-target/personalization-web-page.md)
-+ 專家資源 {#expert-resources}
++ 向同儕學習 {#expert-resources}
    + [AEM Sites成熟度評估](expert-resources/maturity-assessment.md)
    + [網站維護](expert-resources/site-maintenance.md)
    + [AEM Champion秘訣與技巧：第1場講座](expert-resources/champion-tips-1.md)

@@ -4,8 +4,9 @@ seo-title: AEM Sites Site Hierarchy, Taxonomy, and Tagging Guide
 description: AEM Sites中繼資料、標籤、分類法和階層的完整概觀。 使用本指南來確保您的內容策略一致，並遵循最佳實務
 seo-description: A full overview of AEM Sites metadata, tagging, taxonomy, and hierarchy. Use this guide to ensure your content strategy is consistent and following best practices
 audience: author, marketer
+feature: Learn From Your Peers
 exl-id: c88c3ec7-9060-43e2-a6a2-d47bba6f7cf3
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
 workflow-type: tm+mt
 source-wordcount: '2034'
 ht-degree: 0%
