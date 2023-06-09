@@ -7,13 +7,13 @@ kt: 13346
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+exl-id: 31008bb3-316b-4035-89ea-e830b429b927
+source-git-commit: 529e98269a08431152686202a8a2890712b9c835
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '286'
 ht-degree: 1%
 
 ---
-
 
 # 從下拉式清單中選取要填寫的表單
 
@@ -49,22 +49,24 @@ export default function SelectFormFromDropDownList()
         'form': Form
     };
 
-const[formPath, setFormPath] = useState('');
+const[formID, setFormID] = useState('');
 const[afForms,SetOptions] = useState([]);
 const [selectedForm, setForm] = useState('');
 const HandleChange = (event) =>
      {
-        console.log("The path is "+event.target.value) 
+        console.log("The form id is "+event.target.value) 
     
-        setFormPath(event.target.value)
-        console.log("The formPath"+ formPath);
+        setFormID(event.target.value)
+        
      };
 const getForm = async () =>
      {
-        const resp = await fetch(`${formPath}/jcr:content/guideContainer.model.json`);
+        
+        console.log("The formID in getForm"+ formID);
+        const resp = await fetch(`/adobe/forms/af/${formID}`);
         let formJSON = await resp.json();
-        console.log(formJSON);
-        setForm(formJSON);
+        console.log(formJSON.afModelDefinition);
+        setForm(formJSON.afModelDefinition);
      }
 const getAFForms =async()=>
      {
@@ -88,7 +90,7 @@ const getAFForms =async()=>
         getForm()
         
 
-    },[formPath]);
+    },[formID]);
 
   return (
     <Box sx={{ minWidth: 120 }}>
@@ -97,7 +99,7 @@ const getAFForms =async()=>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={formPath}
+          value={formID}
           label="Please select a form"
           onChange={HandleChange}
           
@@ -105,7 +107,7 @@ const getAFForms =async()=>
        {afForms.map((afForm,index) => (
     
         
-          <MenuItem  key={index} value={afForm.path}>{afForm.title}</MenuItem>
+          <MenuItem  key={index} value={afForm.id}>{afForm.title}</MenuItem>
         ))}
         
        
@@ -126,10 +128,13 @@ const getAFForms =async()=>
 * [清單表單](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). 擷取表單的呼叫只會在元件轉譯時執行一次。 API呼叫的結果會儲存在afForms變數中。
 在上述程式碼中，我們會使用map函式來反複執行afForms，針對afForms陣列中的每個專案，會建立MenuItem元件並新增至Select元件。
 
-* 擷取表單 — 對下列端點進行get呼叫，其中formPath是使用者在下拉式清單中指向所選最適化表單的路徑。 此GET呼叫的結果會儲存在selectedForm中。
+* 擷取表單 — 對 [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition)，其中id是使用者在下拉式清單中選取的最適化表單的id。 此GET呼叫的結果會儲存在selectedForm中。
 
 ```
-${formPath}/jcr:content/guideContainer.model.json`
+const resp = await fetch(`/adobe/forms/af/${formID}`);
+let formJSON = await resp.json();
+console.log(formJSON.afModelDefinition);
+setForm(formJSON.afModelDefinition);
 ```
 
 * 顯示選取的表單。 已使用下列程式碼來顯示選取的表單。 AdaptiveForm元素在aemforms/af-react-renderer npm套件中提供，且預期對應和formJson為其屬性
@@ -141,6 +146,3 @@ ${formPath}/jcr:content/guideContainer.model.json`
 ## 後續步驟
 
 [以卡片版面配置顯示表單](./display-forms-card-view.md)
-
-
-
