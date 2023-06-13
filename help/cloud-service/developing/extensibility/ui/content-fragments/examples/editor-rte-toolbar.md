@@ -10,7 +10,7 @@ jira: KT-13464
 thumbnail: KT-13464.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: c54d078c6282f8ace936dd4a9ee0d5cc39490230
+source-git-commit: e59c9d1f17c6ade169e834a21b9d5f50ac3a569e
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 新增自訂按鈕到RTF編輯器(RTE)工具列
 
-![內容片段編輯器工具列擴充功能範例](./assets/rte-toolbar/hero.png){align="center"}
+![內容片段編輯器工具列擴充功能範例](./assets/rte/rte-toolbar-hero.png){align="center"}
 
 自訂按鈕可新增至 **rte工具列** 在內容片段編輯器中使用 `rte` 延伸點。 此範例顯示如何新增自訂按鈕，稱為 _新增秘訣_ 到RTE工具列，並修改RTE中的內容。
 
