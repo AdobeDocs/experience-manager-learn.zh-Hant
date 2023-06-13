@@ -10,20 +10,15 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-09T00:00:00Z
 jira: KT-12433
 thumbnail: KT-12433.jpeg
-source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
+exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
+source-git-commit: d81c66e041abbd56e7115f37732550cf10e59359
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1671'
 ht-degree: 1%
 
 ---
 
 # 使用內容片段個人化AEM Headless體驗
-
->[!IMPORTANT]
->
-> AEMas a Cloud Service提供Adobe Experience Manager內容片段匯出至Adobe Target的功能 [發行前通道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features).
-
-
 
 本教學課程探討如何將AEM內容片段匯出至Adobe Target，然後使用AdobeWeb SDK來個人化Headless體驗。 此 [React WKND應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) 用於探索如何使用內容片段選件將個人化Target活動新增到體驗，以促進WKND冒險。
 
