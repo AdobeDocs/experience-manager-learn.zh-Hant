@@ -9,10 +9,10 @@ version: Cloud Service
 topic: Development
 kt: 8851
 exl-id: daf7d316-e9ec-41b5-89c8-fe4f4ada9701
-source-git-commit: f0beb8b32aa25d6c26243879c9c0e42095488e23
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 0%
+source-wordcount: '118'
+ht-degree: 1%
 
 ---
 
@@ -40,3 +40,7 @@ ht-degree: 0%
 ![執行管道](assets/run-pipeline.png)
 
 部署程式碼後，您應該會在AEM Forms的雲端服務執行個體中看到變更。
+
+## 後續步驟
+
+[更新maven原型專案](./updating-project-archetype.md)

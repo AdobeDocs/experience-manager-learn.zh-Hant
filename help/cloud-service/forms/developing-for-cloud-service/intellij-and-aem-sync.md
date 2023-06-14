@@ -9,10 +9,10 @@ version: Cloud Service
 topic: Development
 kt: 8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 2%
+source-wordcount: '515'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +26,7 @@ Cygwin是相容於POSIX的程式設計和執行階段環境，可在Microsoft Wi
 
 在c：\cloudmanager下建立名為adoberepo的資料夾。
 
-[安裝存放庫工具].(https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo).Installing repo tool只是複製repo檔案，並將其置於c：\cloudmanger\adoberepo資料夾中。
+[安裝存放庫工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) 安裝repo工具只不過是複製repo檔案，並將其置於c：\cloudmanger\adoberepo資料夾中。
 
 將下列專案新增至路徑環境變數C:\cygwin64\bin；C:\CloudManager\adoberepo；
 
@@ -35,7 +35,7 @@ Cygwin是相容於POSIX的程式設計和執行階段環境，可在Microsoft Wi
 * 啟動IntelliJ
 * 按Ctrl+Alt+S鍵以啟動設定視窗。
 * 選取「工具」 — >「外部工具」，然後按一下+符號並輸入下列專案，如熒幕擷取畫面所示。
-   ![rep](assets/repo.png)
+  ![rep](assets/repo.png)
 * 在「群組」下拉式欄位中輸入「repo」，確保您建立名為repo的群組，且您建立的所有命令都屬於 **存放庫** 群組
 
 
@@ -85,3 +85,7 @@ Cygwin是相容於POSIX的程式設計和執行階段環境，可在Microsoft Wi
 * 建立下列資料夾結構。C:\aemformscs\aem-sdk\author\crx-quickstart\install
 * 將aem-forms-addon-xxxxxx.far複製到安裝資料夾
 * 開啟命令提示字元並瀏覽至c：\aemformscs\aem-sdk\author輸入以下命令java -jar aem-author-p4502.jar -gui。 這會在您的AEM執行個體中部署表單附加套件。
+
+## 後續步驟
+
+[將您的AEM表單和範本與AEM專案同步](./deploy-your-first-form.md)

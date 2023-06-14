@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 8842
 exl-id: 274018b9-91fe-45ad-80f2-e7826fddb37e
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -34,3 +34,7 @@ ht-degree: 0%
 * 開啟命令提示視窗並瀏覽至 **c：\cloudmanager**
 * 複製並貼上內容 [文字檔](assets/creating-maven-project.txt) 在命令提示字元視窗中。 您可能必須變更DarchetypeVersion=30，視 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 撰寫本文時，最新版本是30版。
 * 按Enter鍵執行命令。如果一切順利，您應該會看到建置成功訊息。
+
+## 後續步驟
+
+[安裝IntelliJ](./intellij-set-up.md)

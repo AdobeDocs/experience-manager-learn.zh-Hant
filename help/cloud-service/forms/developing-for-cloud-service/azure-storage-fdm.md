@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 9006
 exl-id: 77c00a35-43bf-485f-ac12-0fffb307dc16
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -46,3 +46,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >現在，當您使用Cloud Manager建置和部署專案時，必須在雲端服務設定中重新輸入Azure存取金鑰。 為避免重新輸入存取金鑰，建議使用環境變數建立內容感知設定，如 [下一篇文章](./context-aware-fdm.md)
+
+## 後續步驟
+
+[建立內容感知設定](./context-aware-fdm.md)

@@ -9,10 +9,10 @@ version: Cloud Service
 topic: Development
 kt: 10423
 exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 10%
+source-wordcount: '395'
+ht-degree: 11%
 
 ---
 
@@ -67,3 +67,7 @@ org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integr
 ![cloud-config-property](assets/cloud-config-properties.png)
 
 對於具有基本驗證的REST雲端設定，您通常想要為serviceEndPoint、userName和密碼屬性建立環境變數。
+
+## 後續步驟
+
+[將您的AEM專案推送到Cloud Manager](./push-project-to-cloud-manager-git.md)

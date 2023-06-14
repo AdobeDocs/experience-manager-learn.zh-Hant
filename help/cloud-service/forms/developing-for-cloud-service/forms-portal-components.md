@@ -8,10 +8,10 @@ version: Cloud Service
 topic: Development
 kt: 10373
 exl-id: ab01573a-e95f-4041-8ccf-16046d723aba
-source-git-commit: 69cd5022d136e9fa84f33d2fc5ca249ac0fb6490
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 0%
+source-wordcount: '349'
+ht-degree: 2%
 
 ---
 
@@ -51,7 +51,7 @@ AEM Forms提供下列立即可用的入口網站元件：
           componentGroup="BankingApplication - Content"/>
 ```
 
-### 搜尋和製表人
+### 搜尋和列表器
 
 製作按鈕元件的副本並將其重新命名為 _searchandlister_.
 取代以下專案中的內容： `.content.xml` 使用下列XML：
@@ -82,3 +82,7 @@ AEM Forms提供下列立即可用的入口網站元件：
 ```
 
 部署專案後，您應該就能在AEM頁面中使用這些元件來建立Forms入口網站。
+
+## 後續步驟
+
+[包含雲端服務設定](./azure-storage-fdm.md)

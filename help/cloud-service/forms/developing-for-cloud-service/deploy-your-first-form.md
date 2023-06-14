@@ -8,10 +8,10 @@ version: Cloud Service
 topic: Development
 kt: 8852
 exl-id: 81a53f52-2a6c-44ef-a13f-ac372b4a33b9
-source-git-commit: d218726565e0e78ba57f0ddb53c354ca78570c66
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 0%
+source-wordcount: '112'
+ht-degree: 1%
 
 ---
 
@@ -28,3 +28,7 @@ ht-degree: 0%
 若要使用IntelliJ和Repo工具將這些資產同步到您的AEM專案，請觀看以下影片
 
 >[!VIDEO](https://video.tv.adobe.com/v/336937?quality=12&learn=on)
+
+## 後續步驟
+
+[建立自訂提交處理常式](./custom-submit-to-servlet.md)
