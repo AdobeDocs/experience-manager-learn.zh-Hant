@@ -10,9 +10,10 @@ recommendations: noDisplay
 kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2023-06-02T00:00:00Z
-source-git-commit: e59c9d1f17c6ade169e834a21b9d5f50ac3a569e
+exl-id: 4e3bb09c-8437-4f1d-bc88-a882a38e246c
+source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '924'
 ht-degree: 1%
 
 ---
@@ -312,6 +313,25 @@ AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [已建立A
         </div>
       </div>
     </div>
-  </div>
-
+  </div>   
+  <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Rich Text Editor Badge">
+    <div class="card" style="height: 100%">
+      <div class="card-image">
+        <figure class="image is-16by9">
+          <a href="./examples/editor-rte-badges.md" title="RTF編輯器徽章" tabindex="-1">
+            <img class="is-bordered-r-small" src="./examples/assets/rte/rte-badge-card.png" alt="RTF編輯器徽章">
+          </a>
+        </figure>
+      </div>
+      <div class="card-content is-padded-small">
+        <div class="content">
+          <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-badges.md" title="RTF編輯器徽章">RTF編輯器徽章</a></p>
+          <p class="is-size-6">在內容片段編輯器中新增徽章至RTF編輯器。</p>
+          <a href="./examples/editor-rte-badges.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視範例</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div> 
 </div>
