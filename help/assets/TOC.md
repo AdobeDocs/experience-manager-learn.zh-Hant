@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 7b98f583f8b54fb9c9c706521c310282dcc17ea3
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '396'
 ht-degree: 25%
 
 ---
@@ -50,6 +50,7 @@ ht-degree: 25%
    + [搜尋提升](./search-and-discovery/search-boost.md)
 
 + 進階功能{#advanced}
+   + [3D資產](./advanced/3d-assets.md)
    + [註解PDF輸出](./advanced/customizing-annotations-pdf-output.md)
    + [資產 Insights](./advanced/asset-insights-launch-tutorial.md)
    + [資產報表](./advanced/asset-reports.md)
@@ -72,13 +73,13 @@ ht-degree: 25%
       + [設定AEM Brand Portal](brand-portal/configure.md)
       + [設定資產來源](brand-portal/configure-asset-sourcing.md)
       + [啟用轉譯下載](brand-portal/enable-renditions-download.md)
+
    + 資產共用{#assets-share}
       + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [在本機AEM上設定Asset Share Commons](./sharing/asset-share-commons-technical-video-setup.md)
       + [主題資產Share Commons](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons資產套件](./sharing/asset-share/asset-share-commons-asset-kits.md)
    + [連接的資產](./sharing/connected-assets.md)
-
 
 + 整合創意工作流程{#creative-workflows}
    + [AEM案頭應用程式](./creative-workflows/aem-desktop-app.md)
@@ -126,6 +127,7 @@ ht-degree: 25%
    + 搭配AEM Sites使用 {#dm-with-aem-sites}
       + [體驗片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
+
    + 教學課程 {#tutorials}
       + [建立輪播集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [建立影像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
@@ -141,7 +143,6 @@ ht-degree: 25%
       + [刪除Dynamic Media設定](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [在Dynamic Media Classic應用程式中下載資產](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [DYNAMIC MEDIA CLASSIC IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
-
 
 + Workfront整合{#workfront}
    + 增強型聯結器{#enhanced-connector}
