@@ -10,17 +10,17 @@ jira: KT-13464
 thumbnail: KT-13464.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: e59c9d1f17c6ade169e834a21b9d5f50ac3a569e
+exl-id: 2b72c282-bce8-4f2a-bce6-f2f31e96ec88
+source-git-commit: 6f537a0c7605b96f6c6b43ff8c5bf634369171cc
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
 
-
 # 新增自訂按鈕到RTF編輯器(RTE)工具列
 
-![內容片段編輯器工具列擴充功能範例](./assets/rte/rte-toolbar-hero.png){align="center"}
+>[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
 自訂按鈕可新增至 **rte工具列** 在內容片段編輯器中使用 `rte` 延伸點。 此範例顯示如何新增自訂按鈕，稱為 _新增秘訣_ 到RTE工具列，並修改RTE中的內容。
 
