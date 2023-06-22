@@ -9,7 +9,7 @@ version: Cloud Service
 topic: Development
 kt: 8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
@@ -68,7 +68,7 @@ Cygwin是相容於POSIX的程式設計和執行階段環境，可在Microsoft Wi
 
 選取aem-banking-application專案中的任何專案（例如ui.content），然後按一下滑鼠右鍵，您應該會看到repo選項，而在repo選項下方，您會看到我們先前新增的4個命令。
 
-## 設定AEM作者執行個體
+## 設定AEM作者執行個體{#set-up-aem-author-instance}
 
 您可以依照下列步驟操作，在本機系統上快速設定雲端就緒執行個體。
 * [下載最新的AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)

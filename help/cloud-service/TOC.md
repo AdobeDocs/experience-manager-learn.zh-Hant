@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '977'
 ht-degree: 22%
 
 ---
@@ -208,6 +208,10 @@ ht-degree: 22%
       + [設定資產面板](./forms/create-first-af/configure-assets-panel.md)
       + [設定開始面板](./forms/create-first-af/configure-start-panel.md)
       + [新增和設定工具列](./forms/create-first-af/add-configure-toolbar.md)
+   + 使用Headless表單的自訂提交服務{#custom-submit-headless-forms}
+      + [1 — 簡介](./forms/custom-submit-headless-forms/introduction.md)
+      + [2 — 建立自訂提交服務](./forms/custom-submit-headless-forms/custom-submit-service.md)
+      + [3 — 顯示回應](./forms/custom-submit-headless-forms/handle-response-react-app.md)
    + AEM Forms與Analytics{#forms-and-analytics}
       + [簡介](./forms/form-data-analytics/introduction.md)
       + [建立資料元素](./forms/form-data-analytics/data-elements.md)

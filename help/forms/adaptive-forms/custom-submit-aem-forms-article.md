@@ -8,10 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 0%
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
 
@@ -24,11 +24,15 @@ ht-degree: 0%
 * 登入crx
 * 在應用程式下建立「sling：folder」型別的節點。 讓我們呼叫此節點CustomSubmitHelpx。
 * 儲存新建立的節點。
-* 將下列兩個屬性新增至新建立的節點
-* 屬性名稱 |屬性值
-* guideComponentType | fd/af/components/guidesubmittype
-* guideDataModel | xfa、xsd、basic
-* jcr：description |自訂提交說明
+* 將下列三個屬性新增至新建立的節點
+
+| 屬性名稱 | 屬性值 |
+|----------------    | ---------------------------------|
+| guideComponentType | fd/af/components/guidesubmittype |
+| guideDataModel | xfa、xsd、basic |
+| jcr：description | CustomSubmitHelp |
+
+
 * 儲存變更
 * 在CustomSubmitHelpx節點下建立名為post.submit.jsp的新檔案。提交最適化表單時，會呼叫此POST。 您可以視需要在此檔案中撰寫JSP程式碼。 以下程式碼會將請求轉送給servlet。
 
