@@ -10,17 +10,17 @@ jira: KT-13465
 thumbnail: KT-13465.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: e59c9d1f17c6ade169e834a21b9d5f50ac3a569e
+exl-id: be4c0a6a-5c1f-4408-9ac6-56b8f0653d42
+source-git-commit: 9c8c03df7c510ab697d5222f9dffd5111519b712
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
 
-
 # 將Widget新增至RTF編輯器(RTE)
 
-![內容片段編輯器Widget範例](./assets/rte/rte-widget-hero.png){align="center"}
+>[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
 若要在RTF編輯器(RTE)中新增動態內容，請 **Widget** 功能可供使用。 Widget可協助您在RTE中整合簡單或複雜的UI，您也可以使用所選的JS架構來建立UI。 它們可視為透過按下列鍵開啟的對話方塊 `{` RTE中的特殊索引鍵。
 
@@ -230,4 +230,3 @@ const DiscountCodes = () => {
 
 export default DiscountCodes;
 ```
-
