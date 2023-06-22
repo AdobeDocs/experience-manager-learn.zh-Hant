@@ -10,9 +10,9 @@ jira: KT-13466
 thumbnail: KT-13466.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
+source-git-commit: c965d5ff3f49f4859779e657674dab8602fb831b
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 新增徽章至RTF編輯器(RTE)
 
-![內容片段編輯器徽章範例](./assets/rte/rte-badge-home.png){align="center"}
+>[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
 [RTF編輯器徽章](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)  是RTF編輯器(RTE)中文字無法編輯的擴充功能。 這表示宣告為此類的徽章只能完全移除，且不能部分編輯。 這些徽章也支援RTE內的特殊色彩，向內容作者清楚指出文字是徽章，因此不可編輯。 此外，這類提示還會提供有關徽章文字含義的視覺提示。
 
