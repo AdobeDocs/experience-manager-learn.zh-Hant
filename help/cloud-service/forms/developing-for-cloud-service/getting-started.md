@@ -9,7 +9,7 @@ version: Cloud Service
 topic: Development
 kt: 8842
 exl-id: 274018b9-91fe-45ad-80f2-e7826fddb37e
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -19,6 +19,7 @@ ht-degree: 0%
 # 安裝必要的軟體
 
 本教學課程將引導您完成建立AEM Forms專案所需的步驟，以及使用IntelliJ和repo工具將AEM Forms專案與本機AEM執行個體同步。 您還將瞭解如何將專案新增到本機Git存放庫並將本機Git存放庫推送到Cloud Manager存放庫。
+
 
 
 

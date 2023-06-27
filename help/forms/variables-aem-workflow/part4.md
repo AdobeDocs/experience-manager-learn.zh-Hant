@@ -3,10 +3,11 @@ title: AEM工作流程中的變數[第4部分]
 description: 在AEM工作流程中使用XML、JSON、ArrayList、檔案型別的變數
 version: 6.5
 topic: Development
+feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: 269e43f7-24cf-4786-9439-f51bfe91d39c
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -79,4 +80,4 @@ AEM Forms 6.5已匯入ArrayList型別的變數。使用ArrayList變數的常見�
 * 您應該會看到名為「指派給費用管理員」的新任務
 * 開啟與任務關聯的表單
 * 您應該會看到兩個具有管理員名稱的自訂路由
-   [探索ReviewExpenseReportWorkflow。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) 此工作流程使用Or-Split元件中的ArrayList變數、JSON型別變數、規則編輯器
+  [探索ReviewExpenseReportWorkflow。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) 此工作流程使用Or-Split元件中的ArrayList變數、JSON型別變數、規則編輯器

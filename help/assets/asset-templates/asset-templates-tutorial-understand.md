@@ -3,10 +3,11 @@ title: 瞭解AEM Assets中的InDesign檔案和資產範本
 description: 本影片教學課程會逐步解說如何定義AEM Assets資產範本功能中使用的InDesign檔案，以及隨附的所有考量事項。
 version: 6.4, 6.5
 topic: Content Management
+feature: Templates
 role: User
 level: Intermediate
 exl-id: c418e94a-b18e-429a-b41c-2bf32e158598
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -35,6 +36,7 @@ ht-degree: 0%
 4. 新增FPO標誌影像([提供於zip中](assets/asset-templates-tutorial-video--supporting-files.zip))至主版頁面上的Logo元素。
 
    * **按一下右鍵**&#x200B;並選取&#x200B;**「符合」>「框架符合選項……」>「內容符合」>「按比例填滿框架」**
+
    [深入瞭解框架彎管頭選項](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)，，而此設定適用於您的使用案例。
 
 5. 透過「原地貼上」，從「頁面」和「頁面」的主版範本中向下複製頁首（標誌和公司名稱）。

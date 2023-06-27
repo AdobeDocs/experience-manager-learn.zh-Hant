@@ -3,6 +3,7 @@ title: 使用AEM中的系統概觀儀表板
 description: 在舊版AEM中，管理員需要檢視多個位置，才能完整瞭解AEM執行個體。 「系統概覽」旨在透過單一儀表板提供AEM執行個體的設定、硬體和健康情況的高層級檢視，以解決此問題。
 version: 6.4, 6.5
 topics: administration, operations, monitoring
+feature: Operations
 activity: use
 audience: administrator, architect, developer, implementer
 doc-type: technical video
@@ -11,7 +12,7 @@ topic: Administration
 role: Admin
 level: Beginner
 exl-id: af8f499c-4955-44b5-8f21-085263ca31a3
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%

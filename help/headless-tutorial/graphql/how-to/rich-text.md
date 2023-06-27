@@ -6,9 +6,10 @@ doc-type: article
 kt: 9985
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
+level: Intermediate
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: 117b67bd185ce5af9c83bd0c343010fab6cd0982
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '1465'
 ht-degree: 0%
@@ -247,7 +248,7 @@ query ($path: String!) {
 
 多行欄位的RTF文字JSON回應會結構化為階層式樹狀結構。 每個物件或節點代表RTF文字的不同HTML區塊。
 
-以下是多行文字欄位的JSON回應範例。 請注意，每個物件或節點都包含 `nodeType` 代表RTF中的HTML區塊，例如 `paragraph`， `link`、和 `text`. 每個節點可選擇性包含 `content` 該子陣列包含目前節點的任何子節點。
+以下是多行文字欄位的JSON回應範例。 請注意，每個物件或節點都包含 `nodeType` 代表RTF中的HTML區塊，例如 `paragraph`， `link`、和 `text`. 每個節點可選擇性包含 `content` ，此子陣列包含目前節點的任何子系。
 
 ```json
 "json": [// root "content" or child nodes
