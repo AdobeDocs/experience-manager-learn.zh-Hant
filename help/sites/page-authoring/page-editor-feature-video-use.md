@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
-source-git-commit: d0027647ce3157173d2592728757150199db930d
+source-git-commit: 1623e1eaf966e625e1ec402a2996e8beb1e1cd03
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 1%
@@ -35,6 +35,6 @@ AEM網站的頁面編輯器是建立和編輯網頁內容的強大工具。 頁�
 
 ## 其他資源 {#additional-resources}
 
-* [AEM頁面編輯器檔案[(https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)
+* [AEM頁面編輯器檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)
 * [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
 * [網站編寫使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
