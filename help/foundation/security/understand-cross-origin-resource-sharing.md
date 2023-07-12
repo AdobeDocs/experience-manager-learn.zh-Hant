@@ -12,9 +12,9 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 73bb813c961cf988355984b0385998a493ee3716
+source-git-commit: 325c0204c33686e09deb82dd159557e0b8743df6
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '966'
 ht-degree: 1%
 
 ---
@@ -182,7 +182,22 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，每個原則都會表
 | 否 | AEM 發佈 | 已驗證 | 避免在已驗證的請求上快取CORS標頭。 這符合不快取已驗證請求的常見指南，因為很難確定請求使用者的驗證/授權狀態將如何影響傳送的資源。 |
 | 是 | AEM 發佈 | 匿名 | Dispatcher中可快取的匿名請求也可以快取其回應標頭，以確保未來的CORS請求可以存取快取的內容。 AEM Publish上的任何CORS設定變更 **必須** 之後會令受影響的快取資源失效。 最佳實務指示程式碼或設定部署會清除Dispatcher快取，因為很難判斷哪些快取內容可能會生效。 |
 
-若要允許快取CORS標頭，請將以下設定新增至所有支援的AEM Publish dispatcher.any檔案。
+### 允許CORS要求標頭
+
+若要允許必要的 [傳遞至AEM以進行處理的HTTP要求標頭](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，Disaptcher的 `/clientheaders` 設定。
+
+```
+/clientheaders {
+   ...
+   "Origin"
+   "Access-Control-Request-Method"
+   "Access-Control-Request-Headers"
+}
+```
+
+### 快取CORS回應標頭
+
+若要允許在快取內容上快取及提供CORS標頭，請新增以下內容 [/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers) 至AEM發佈 `dispatcher.any` 檔案。
 
 ```
 /publishfarm {
