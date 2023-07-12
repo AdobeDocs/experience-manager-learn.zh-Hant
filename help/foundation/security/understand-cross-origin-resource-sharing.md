@@ -12,7 +12,7 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: c6ca64d1b66bbf5bedf73736b5d94130bc21f6c8
+source-git-commit: 73bb813c961cf988355984b0385998a493ee3716
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 1%
@@ -185,18 +185,24 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，每個原則都會表
 若要允許快取CORS標頭，請將以下設定新增至所有支援的AEM Publish dispatcher.any檔案。
 
 ```
-/myfarm { 
-  ...
-  /headers {
-      "Origin"
-      "Access-Control-Allow-Origin"
-      "Access-Control-Expose-Headers"
-      "Access-Control-Max-Age"
-      "Access-Control-Allow-Credentials"
-      "Access-Control-Allow-Methods"
-      "Access-Control-Allow-Headers"
-  }
-  ...
+/publishfarm {
+    ...
+    /cache {
+        ...
+        # CORS HTTP response headers
+        # https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers
+        /headers {
+            ...
+            "Access-Control-Allow-Origin"
+            "Access-Control-Expose-Headers"
+            "Access-Control-Max-Age"
+            "Access-Control-Allow-Credentials"
+            "Access-Control-Allow-Methods"
+            "Access-Control-Allow-Headers"
+        }
+    ...
+    }
+...
 }
 ```
 
