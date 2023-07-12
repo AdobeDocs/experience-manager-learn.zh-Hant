@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Value Video
 last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13228
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+exl-id: a52b253c-14b4-465b-9714-7f321435a945
+source-git-commit: 2e37a7ae14f98e2298bcb0a625f8ed55edcee6ad
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 5%
 
 ---
-
 
 # AEM Champion秘訣與技巧 — Cloud Manager入門行動手冊
 
@@ -23,7 +23,7 @@ ht-degree: 5%
 
 >[!TIP]
 >
->下載 [在此處入門行動手冊。](./assets/AEM-Cloud-Manager-Onboarding-Playbook.xlsx)
+>下載 [在此處入門行動手冊。](./assets/Cloud-Manager-for-AEM-as-a-Cloud-Service.xlsx)
 
 檢視您的技術負責人Rakesh Pasupuleti提供的這些秘訣。 Rakesh是Adobe Experience Manager達人，他分享了關於如何使用入門教戰手冊的想法。
 
