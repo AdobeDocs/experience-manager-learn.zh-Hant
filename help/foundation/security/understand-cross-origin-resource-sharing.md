@@ -12,7 +12,7 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: c6ca64d1b66bbf5bedf73736b5d94130bc21f6c8
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 1%
@@ -64,7 +64,7 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，每個原則都會表
 #### [!UICONTROL 公開的標頭]
 
 * `"exposedheaders" <header>`
-* 標頭引數清單，指示允許瀏覽器存取的請求標頭。
+* 標頭引數清單，指出瀏覽器可存取的回應標頭。
 
 #### [!UICONTROL 最大年齡]
 
