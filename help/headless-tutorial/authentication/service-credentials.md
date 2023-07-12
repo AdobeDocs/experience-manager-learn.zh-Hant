@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 96d576ae24305c1f41073921fbb904e07c1206f6
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 0%
 1. 外部應用程式會使用服務憑證中的資訊來建構JWT權杖
 1. JWT權杖會傳送至Adobe IMS以交換存取權杖
 1. Adobe IMS傳回可用來存取AEMas a Cloud Service的存取權杖
-   + 存取Token可要求到期日。 最好讓存取權杖的生命週期縮短，並在需要時重新整理。
+   + 存取權杖無法變更到期時間。
 1. 外部應用程式會向AEM發出as a Cloud Service的HTTP請求，將存取權杖作為持有人權杖新增到HTTP請求的授權標頭
 1. AEMas a Cloud Service會接收HTTP要求、驗證要求，並執行HTTP要求所要求的工作，然後將HTTP回應傳回至外部應用程式
 
