@@ -7,9 +7,9 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: 46728ac6ad37590413e247d23262233626b0575b
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -94,26 +94,48 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## Dispatcher 設定 {#dispatcher-configuration}
 
-若要允許在快取內容上快取及提供CORS標頭，請新增以下內容 [/clientheaders設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) 至所有支援的AEM Publish `dispatcher.any` 檔案。
+### 允許CORS要求標頭
+
+若要允許必要的 [傳遞至AEM以進行處理的HTTP要求標頭](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，Disaptcher的 `/clientheaders` 設定。
 
 ```
-/myfarm { 
-  ...
-  /clientheaders {
-      "Access-Control-Allow-Origin"
-      "Access-Control-Expose-Headers"
-      "Access-Control-Max-Age"
-      "Access-Control-Allow-Credentials"
-      "Access-Control-Allow-Methods"
-      "Access-Control-Allow-Headers"
-  }
-  ...
+/clientheaders {
+   ...
+   "Origin"
+   "Access-Control-Request-Method"
+   "Access-Control-Request-Headers"
+}
+```
+
+### 快取CORS回應標頭
+
+若要允許在快取內容上快取及提供CORS標頭，請新增以下內容 [/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers) 至AEM發佈 `dispatcher.any` 檔案。
+
+```
+/publishfarm {
+    ...
+    /cache {
+        ...
+        # CORS HTTP response headers
+        # https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers
+        /headers {
+            ...
+            "Access-Control-Allow-Origin"
+            "Access-Control-Expose-Headers"
+            "Access-Control-Max-Age"
+            "Access-Control-Allow-Credentials"
+            "Access-Control-Allow-Methods"
+            "Access-Control-Allow-Headers"
+        }
+    ...
+    }
+...
 }
 ```
 
 **重新啟動網頁伺服器應用程式** 變更後 `dispatcher.any` 檔案。
 
-可能需要完全清除快取，以確保標題在之後的下一個請求中被適當地快取 `/clientheaders` 設定更新。
+可能需要完全清除快取，以確保標題在之後的下一個請求中被適當地快取 `/cache /headers` 設定更新。
 
 ## 支援材料 {#supporting-materials}
 
