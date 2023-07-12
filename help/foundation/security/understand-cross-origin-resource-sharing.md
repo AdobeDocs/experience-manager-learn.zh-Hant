@@ -12,9 +12,9 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 325c0204c33686e09deb82dd159557e0b8743df6
+source-git-commit: d2a9596ddadd897793a0fce8421aa8b246b45b12
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '1007'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，每個原則都會表
 #### [!UICONTROL 公開的標頭]
 
 * `"exposedheaders" <header>`
-* 標頭引數清單，指出瀏覽器可存取的回應標頭。
+* 標頭引數清單，指出瀏覽器可存取的回應標頭。 若為CORS請求（非預檢），若非空白，這些值會複製到 `Access-Control-Expose-Headers` 回應標頭。 之後，瀏覽器即可存取清單中的值（標頭名稱）；若沒有清單，瀏覽器將無法讀取這些標頭。
 
 #### [!UICONTROL 最大年齡]
 
@@ -74,7 +74,7 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，每個原則都會表
 #### [!UICONTROL 支援的標頭]
 
 * `"supportedheaders" <header>`
-* 以下專案清單： `header` 表示提出實際請求時可以使用哪些HTTP標頭的引數。
+* 以下專案清單： `header` 表示提出實際請求時可以使用哪些HTTP請求標頭的引數。
 
 #### [!UICONTROL 允許的方法]
 
@@ -98,8 +98,7 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，每個原則都會表
   ],
   "supportedmethods":[
     "GET",
-    "HEAD",
-    "OPTIONS"
+    "HEAD"
   ],
   "alloworigin":[
     "http://127.0.0.1:3000",
@@ -140,7 +139,6 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，每個原則都會表
     "HEAD"
     "POST",
     "DELETE",
-    "OPTIONS",
     "PUT"
   ],
   "alloworigin":[
