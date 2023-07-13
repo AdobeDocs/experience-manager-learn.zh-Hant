@@ -9,9 +9,9 @@ level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 44f4261b-d6fe-42ad-a3aa-2a36ca897b5e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
@@ -25,14 +25,21 @@ ht-degree: 0%
 * [互動式通訊範本範例](assets/waiver-interactive-communication.zip)
 * [部署DevelopingWithServiceUser套裝](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
 * 使用OSGi configMgr在Apache Sling服務使用者對應程式服務中新增以下專案
-   **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**
-* [可從這裡下載React應用程式程式碼範例](assets/src.zip)
+  **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**
 
+## 部署範例react應用程式
 
+* [下載範例react應用程式](assets/mult-step-form1.zip)
+* 在新資料夾中解壓縮react應用程式的內容
+* 導覽至資料夾，然後執行下列命令
 
-範例react應用程式需要部署在本機環境中
+```java
+npm install
+npm start
+```
 
-您必須變更端點URL以符合您的環境。 開啟EmergencyContact.js檔案，並變更擷取方法中的URL
+開啟EmergencyContact.js檔案，並變更擷取方法中的URL以符合您的環境。
+
 
 ```javascript
  const getWebForm=async()=>
@@ -49,6 +56,6 @@ ht-degree: 0%
  
 ```
 
-若要啟用從REACT應用程式對AEM端點進行POST呼叫，您需要在AdobeGranite跨原始資源共用原則設定的「允許的原始項」欄位中指定適當的專案
+若要啟用從REACT應用程式對AEM端點進行POST呼叫，您需要在「AdobeGranite跨原始資源共用原則」設定的「允許的原始項」欄位中指定適當的專案。
 
 ![cors — 設定](assets/cors-settings.png)
