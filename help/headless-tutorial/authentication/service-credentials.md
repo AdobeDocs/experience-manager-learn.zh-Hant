@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 96d576ae24305c1f41073921fbb904e07c1206f6
+source-git-commit: f8ed9fddb5f244860ba229b46a80638a7269d95e
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1925'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 0%
 技術帳戶只建立一次，不過私密金鑰用來管理與技術帳戶相關聯的服務認證，可隨時間進行管理。 例如，新的私密金鑰/服務認證必須在目前私密金鑰到期之前產生，以允許服務認證的使用者不中斷的存取。
 
 1. 確保您是以下列身分登入：
-   + __Adobe IMS組織管理員__
+   + __Adobe IMS組織的系統管理員__
    + 成員 __AEM管理員__ 上的IMS產品設定檔 __AEM作者__
 1. 登入 [AdobeCloud Manager](https://my.cloudmanager.adobe.com)
 1. 開啟包含AEMas a Cloud Service環境的程式，以整合設定的服務認證
