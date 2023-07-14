@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 5feeed5c0725c7985a8fe85794315c272e5cde4b
+source-git-commit: 695cccfdd03618505b2d3419b1ad82d8dbd0a122
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '987'
 ht-degree: 22%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 22%
    + [製作和發佈服務](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Cloud Manager {#cloud-manager}
-   + [方案](./cloud-manager/programs.md)
+   + [計畫](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
    + [CI/CD 生產管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD 非生產管道](./cloud-manager/cicd-non-production-pipeline.md)
@@ -99,10 +99,11 @@ ht-degree: 22%
       + [OSGi設定基本需知](./developing/osgi-services/configurations.md)
       + [使用OCD的OSGi設定](./developing/osgi-services/configurations-ocd.md)
    + 進階{#advanced}
-      + [網頁最佳化的影像API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
-      + [服務使用者](./developing/advanced/service-users.md)
-      + [自訂名稱空間](./developing/advanced/custom-namespaces.md)
       + [快取頁面變體](./developing/advanced/variant-caching.md)
+      + [CSRF保護](./developing/advanced/csrf-protection.md)
+      + [自訂名稱空間](./developing/advanced/custom-namespaces.md)
+      + [服務使用者](./developing/advanced/service-users.md)
+      + [網頁最佳化的影像API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
    + 快速開發環境{#rde}
       + [概觀](./developing/rde/overview.md)
       + [如何設定](./developing/rde/how-to-setup.md)
