@@ -7,11 +7,13 @@ kt: 6114
 topic: Development
 role: Admin
 level: Beginner
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 0715a2cc-c042-4ddc-85a1-7720f420351b
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 5%
+source-wordcount: '264'
+ht-degree: 6%
 
 ---
 
@@ -38,3 +40,7 @@ ht-degree: 5%
 * 影片說明將本機AEM Forms執行個體連結至Adobe Cloud上的Automated forms conversion服務所需的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39493?quality=12&learn=on)
+
+## 後續步驟
+
+[將PDF表單轉換為最適化表單](./convert-pdf-form-into-adaptive-form.md)

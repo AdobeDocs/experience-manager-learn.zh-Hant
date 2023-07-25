@@ -9,10 +9,11 @@ level: Intermediate
 kt: 6409
 thumbnail: KT-6296.jpg
 exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
+badgeIntegration: label="整合" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
-source-git-commit: 5a8d3983a22df4e273034c8d8441b31e6bc764ba
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '2161'
+source-wordcount: '2162'
 ht-degree: 0%
 
 ---
@@ -152,12 +153,10 @@ Analysis Workspace是彈性的瀏覽器工具，可讓您快速建立分析和�
 1. 讓我們依照其範本型別來劃分頁面。 從元件選取頁面範本量度，並將「頁面範本」量度拖放至「頁面名稱」維度。 您現在可以檢視依範本型別劃分的頁面名稱。
 
    * **變更前**
-
-      ![eVar5](assets/create-analytics-workspace/evar5.png)
+     ![eVar5](assets/create-analytics-workspace/evar5.png)
 
    * **變更後**
-
-      ![eVar5量度](assets/create-analytics-workspace/evar5-metrics.png)
+     ![eVar5量度](assets/create-analytics-workspace/evar5-metrics.png)
 
 1. 若要瞭解使用者在WKND網站頁面上與CTA按鈕互動的方式，需要進一步劃分，方法是新增按鈕ID (eVar8)量度。
 
@@ -244,11 +243,9 @@ Analytics分類是在產生報表時，將Analytics變數資料分類，然後�
 1. 在元件尋找器中，搜尋 **WKND CTA按鈕** 並拖放 **WKND CTA按鈕（按鈕Id）** 維度至按鈕ID量度並加以取代。
 
    * **變更前**
-
-      ![工作區按鈕在前](assets/create-analytics-workspace/wknd-button-before.png)
+     ![工作區按鈕在前](assets/create-analytics-workspace/wknd-button-before.png)
    * **變更後**
-
-      ![工作區按鈕（在後）](assets/create-analytics-workspace/wknd-button-after.png)
+     ![工作區按鈕（在後）](assets/create-analytics-workspace/wknd-button-after.png)
 
 1. 您會注意到，包含行動號召(CTA)按鈕的按鈕ID量度，現在已取代為「分類範本」中提供的對應名稱。
 1. 讓我們比較Analytics Workspace表格與WKND首頁，瞭解CTA按鈕點選計數及其分析。 根據工作區自由表格資料，使用者按下 **立即滑雪** WKND首頁於西澳洲露營的按鈕及四次 **瞭解詳情** 按鈕。

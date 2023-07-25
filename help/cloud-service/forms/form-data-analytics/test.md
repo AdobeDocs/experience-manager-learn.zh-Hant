@@ -7,12 +7,14 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
-topic: Development
+topic: Integrations, Development
 kt: 12557
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '207'
 ht-degree: 1%
 
 ---
@@ -55,3 +57,7 @@ _satellite.setDebug(true)
 新增 [AEP偵錯工具擴充功能](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) （您必須登入）才能取得更多偵錯資訊
 
 ![platform-debugger](assets/platform-debugger.png)
+
+## 恭喜
+
+您已成功將AEM Formsas a Cloud Service與Adobe Analytics整合，以報告表單資料欄位。

@@ -7,10 +7,12 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: b1d7ce04-0127-4539-a5e1-802d7b9427dd
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1067'
 ht-degree: 2%
 
 ---
@@ -27,9 +29,8 @@ ht-degree: 2%
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe I/O主控台](https://console.adobe.io)
 
-      >[!NOTE]
-      >您應具有在Launch中開發、核准、發佈、管理擴充功能及管理環境的許可權。 如果您因無法使用的使用者介面選項而無法完成其中任何步驟，請聯絡您的Experience Cloud管理員以請求存取權。 如需Launch許可權的詳細資訊， [請參閱檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
-
+     >[!NOTE]
+     >您應具有在Launch中開發、核准、發佈、管理擴充功能及管理環境的許可權。 如果您因無法使用的使用者介面選項而無法完成其中任何步驟，請聯絡您的Experience Cloud管理員以請求存取權。 如需Launch許可權的詳細資訊， [請參閱檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
 
 * **瀏覽器外掛程式**
    * Adobe Experience Cloud Debugger ([鉻黃](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj))

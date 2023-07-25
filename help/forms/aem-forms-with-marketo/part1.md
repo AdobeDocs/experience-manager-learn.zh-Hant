@@ -1,21 +1,23 @@
 ---
-title: AEM Forms與Marketo（第1部分）
-description: 使用AEM Forms表單資料模型將AEM Forms與Marketo整合的教學課程。
+title: 整合AEM Forms和Marketo
+description: 瞭解如何使用AEM Forms表單資料模型整合AEM Forms和Marketo。
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
-topic: Development
+topic: Integrations, Development
 role: Developer
 level: Experienced
 exl-id: 45047852-4fdb-4702-8a99-faaad7213b61
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 0%
+source-wordcount: '379'
+ht-degree: 1%
 
 ---
 
-# AEM Forms與Marketo
+# 整合AEM Forms和Marketo
 
 Marketo是Adobe的一部分，提供著重於帳戶行銷的行銷自動化軟體，包括電子郵件、行動裝置、社交、數位廣告、網頁管理和分析。
 

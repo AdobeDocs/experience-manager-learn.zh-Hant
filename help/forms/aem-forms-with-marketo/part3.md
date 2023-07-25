@@ -3,13 +3,15 @@ title: AEM Forms與Marketo（第3部分）
 description: 使用AEM Forms表單資料模型將AEM Forms與Marketo整合的教學課程。
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
-topic: Development
+topic: Integrations, Development
 role: Developer
 level: Experienced
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '389'
 ht-degree: 1%
 
 ---
@@ -53,4 +55,3 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 ## 後續步驟
 
 [整合各項以進行測試](./part4.md)
-

@@ -7,10 +7,12 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '589'
 ht-degree: 2%
 
 ---
@@ -50,14 +52,13 @@ WKND網站重新設計了首頁，並且想要將其目前首頁訪客重新導�
 
 1. 行銷人員透過AEM內容編輯器啟動WKND首頁重新設計討論並詳細說明要求。
    * ***需求*** ：使用卡片式設計重新設計WKND網站首頁。
-2. 接著，AEM內容編輯器會根據需求，以卡片式設計建立新的WKND網站首頁，並發佈新首頁。
+2. 接著，AEM內容編輯器會根據需求，使用卡片式設計建立新的WKND網站首頁，並發佈新首頁。
 
 ## 行銷人員活動
 
 1. 行銷人員會建立A/B目標活動，使用重新導向選件作為體驗，並將所有網站流量分配給新增了成功目標和量度的新首頁。
    1. 從您的Adobe Target視窗，導覽至 **活動** 標籤。
    2. 按一下 **建立活動** 按鈕並選取活動型別 **A/B測試**
-
       ![Adobe Target — 建立活動](assets/personalization-use-case-2/create-ab-activity.png)
    3. 選取 **Web** 頻道並選擇 **視覺化體驗撰寫器**.
    4. 輸入 **活動URL** 並按一下 **下一個** 以開啟Visual Experience Composer。

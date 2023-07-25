@@ -1,5 +1,5 @@
 ---
-title: 在AEM中建立LaunchCloud Service設定
+title: 在AEM Sites中建立LaunchCloud Service設定
 description: 瞭解如何在AEM中建立LaunchCloud Service設定。 LaunchCloud Service設定隨後可套用至現有網站，且可在製作和發佈環境中觀察標籤程式庫的載入情況。
 topics: integrations
 audience: administrator
@@ -12,10 +12,12 @@ topic: Integrations
 feature: Integrations
 role: Developer
 level: Intermediate
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---

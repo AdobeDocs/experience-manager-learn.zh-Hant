@@ -8,10 +8,11 @@ role: Developer
 level: Intermediate
 kt: 6296
 thumbnail: KT-6296.jpg
+badgeIntegration: label="整合" type="positive"
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
-source-git-commit: 5a8d3983a22df4e273034c8d8441b31e6bc764ba
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1886'
 ht-degree: 1%
 
 ---
@@ -148,7 +149,7 @@ Adobe使用者端資料層是 **事件** 驅動資料層。 只要按一下任�
 
    此 `event` 物件傳遞自 `trigger()` 在自訂事件中呼叫的方法。 此 `component` object是從資料層衍生的元件的目前狀態 `getState()` 方法，且是觸發點按的元素。
 
-1. 儲存變更並執行 [建置](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) 標籤屬性中，將程式碼提升至 [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) 用於您的AEM網站。
+1. 儲存變更並執行 [建置](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) 標籤屬性中，將程式碼提升至 [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant) 用於您的AEM網站。
 
    >[!NOTE]
    >

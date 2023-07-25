@@ -1,23 +1,27 @@
 ---
-title: 搭配Acrobat Sign使用AEM Forms
-description: Acrobat Sign和AEM Forms可自動化複雜的交易，並加入法律電子簽章，以提供順暢的數位體驗。
-feature: Adaptive Forms,Acrobat Sign
+title: 將AEM Forms與Acrobat Sign整合
+description: 整合Acrobat Sign和AEM Forms以自動化複雜的交易，並納入法律電子簽章，作為順暢數位體驗的一部分。
+feature: Adaptive Forms, Acrobat Sign
 version: 6.4,6.5
-topic: Development
+topic: Integrations, Development
 role: Developer
 level: Beginner
 exl-id: 0be61f04-c3ed-4ecb-bab7-73fd308c14e0
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 11%
+source-wordcount: '170'
+ht-degree: 12%
 
 ---
 
-# 搭配Acrobat Sign使用AEM Forms
+# 將AEM Forms與Acrobat Sign整合
 
-Acrobat Sign可啟用最適化表單的電子簽章工作流程。 電子簽名有助於改善處理法律、銷售、薪資、人力資源管理及許多領域文件的工作流程。AEM Forms與Acrobat Sign之間的整合可讓您進行下列工作
+瞭解如何將AEM表單與Acrobat Sign整合，啟用最適化表單的電子簽章工作流程。 電子簽名有助於改善處理法律、銷售、薪資、人力資源管理及許多領域文件的工作流程。
+
+AEM Forms與Acrobat Sign之間的整合可提供下列功能：
 
 * 使用最適化Forms來擷取資料，並顯示自動產生的記錄檔案(DoR)以供簽名
 * 根據您的PDF範本建立最適化Forms。 將資料與pdf範本合併，並顯示相同的資料以供簽名
@@ -31,3 +35,7 @@ Acrobat Sign可啟用最適化表單的電子簽章工作流程。 電子簽名�
 * 作用中的Acrobat Sign開發人員帳戶。
 * Acrobat Sign API應用計畫
 * Acrobat Sign API應用程式的認證（使用者端ID和使用者端密碼）。
+
+## 後續步驟
+
+[設定SSL](./set-up-ssl.md)

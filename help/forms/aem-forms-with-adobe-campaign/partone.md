@@ -3,14 +3,16 @@ title: 產生JSON Web權杖和存取權杖
 description: 本文說明產生JWT所需的程式碼，以及對Adobe Campaign Standard進行REST呼叫所需的存取權杖
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
-topic: Development
+topic: Integrations, Development
 role: Developer
 level: Experienced
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: a5e5aad4-064f-4638-a53a-88dfb1d27c8f
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
+source-wordcount: '246'
+ht-degree: 1%
 
 ---
 

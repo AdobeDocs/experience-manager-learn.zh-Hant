@@ -12,11 +12,13 @@ topic: Integrations
 feature: Integrations
 role: Developer
 level: Intermediate
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 0%
+source-wordcount: '291'
+ht-degree: 1%
 
 ---
 
@@ -48,7 +50,7 @@ Adobe提供Adobe Experience Platform Debugger [Chrome擴充功能](https://chrom
 
 1. 開啟Adobe Experience Platform Debugger擴充功能，然後在發佈執行個體上開啟網站頁面
 
-1. 在 **Adobe Experience Platform Debugger >摘要> Adobe Experience Platform標籤** 區段，確認您的Tag屬性詳細資訊，例如，名稱、版本、建置日期、環境和擴充功能。
+1. 在 **Adobe Experience Platform Debugger>摘要> Adobe Experience Platform標籤** 區段，確認您的Tag屬性詳細資訊，例如，名稱、版本、建置日期、環境和擴充功能。
 
    ![Adobe Experience Platform Debugger和標籤屬性詳細資料](assets/tag-property-details.png)
 

@@ -1,6 +1,6 @@
 ---
-title: Workfront for Experience Manager增強型聯結器工作階段
-description: 瞭解Adobe Workfront和Experience Manager Assets增強型聯結器的基本概念。
+title: 使用增強型聯結器整合Workfront和AEM Assets
+description: 瞭解Adobe Workfront和Experience Manager Assets增強型聯結器整合的基本概念。
 version: Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
@@ -9,19 +9,21 @@ level: Beginner
 kt: 9754
 thumbnail: kt-9754.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
 
-# Workfront for Experience Manager增強型聯結器專家系列
+# 將Workfront和AEM Assets與增強型聯結器整合
 
 ![AEM Experts系列](./assets/banner.png)
 
-與Adobe的Workfront和Experience Manager Assets專家一起加入這個由四部分組成的影片系列，他們將示範和討論Workfront的來龍去脈，以便Experience Manager增強型聯結器。
+與Adobe的Workfront和Experience Manager Assets專家一起加入這個由四部分組成的影片系列，他們將示範和討論使用增強型聯結器整合Workfront和AEM Assets的來龍去脈。
 
 這四部分專家系列將跟隨一群Adobe專家(從產品經理、顧問到Adobe合作夥伴)討論：
 

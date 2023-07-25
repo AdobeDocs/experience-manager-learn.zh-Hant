@@ -1,6 +1,6 @@
 ---
-title: 整合Experience PlatformWeb SDK
-description: 瞭解如何將AEMas a Cloud Service與Experience Platform Web SDK整合。 此基礎步驟對於整合Adobe Experience Cloud產品(例如Adobe Analytics、Target)或最近的創新產品(例如Real-time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至關重要。
+title: 整合AEM Sites和Experience PlatformWeb SDK
+description: 瞭解如何將AEM Sitesas a Cloud Service與Experience Platform Web SDK整合。 此基礎步驟對於整合Adobe Experience Cloud產品(例如Adobe Analytics、Target)或最近的創新產品(例如Real-time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至關重要。
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
@@ -10,21 +10,23 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service " before-title="false"
 exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
-source-git-commit: 32472c8591aeb47a7c6a7253afd7ad9ab0e45171
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1354'
 ht-degree: 1%
 
 ---
 
-# 整合Experience PlatformWeb SDK
+# 整合AEM Sites和Experience PlatformWeb SDK
 
 瞭解如何將AEMas a Cloud Service與Experience Platform整合 [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html). 此基礎步驟對於整合Adobe Experience Cloud產品(例如Adobe Analytics、Target)或最近的創新產品(例如Real-time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至關重要。
 
 您也會學習如何收集和傳送 [WKND - Adobe Experience Manager專案範例](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) pageview資料 [Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html).
 
-完成此設定後，您已實作堅實的基礎。 此外，您已準備好使用如下的應用程式來推進Experience Platform實施 [Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html)， [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)、和 [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html). 進階實作可標準化網頁和客戶資料，協助促進客戶參與度提高。
+完成此設定後，您已實作堅實的基礎。 此外，您已準備好使用如下的應用程式來推進Experience Platform實施 [Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hant)， [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)、和 [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html). 進階實作可標準化網頁和客戶資料，協助促進客戶參與度提高。
 
 ## 必備條件
 
@@ -92,75 +94,75 @@ Experience Data Model (XDM)結構描述可幫助您標準化客戶體驗資料�
 
 + 此 `Page Name` 資料元素程式碼。
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('dc:title')) {
-       // return value of 'dc:title' from the data layer Page object, which is propogated via 'cmp:show` event
-       return event.component['dc:title'];
-   }
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('dc:title')) {
+      // return value of 'dc:title' from the data layer Page object, which is propogated via 'cmp:show` event
+      return event.component['dc:title'];
+  }
+  ```
 
 + 此 `Site Section` 資料元素程式碼。
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('repo:path')) {
-   let pagePath = event.component['repo:path'];
-   
-   let siteSection = '';
-   
-   //Check of html String in URL.
-   if (pagePath.indexOf('.html') > -1) { 
-    siteSection = pagePath.substring(0, pagePath.lastIndexOf('.html'));
-   
-    //replace slash with colon
-    siteSection = siteSection.replaceAll('/', ':');
-   
-    //remove `:content`
-    siteSection = siteSection.replaceAll(':content:','');
-   }
-   
-       return siteSection 
-   }
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('repo:path')) {
+  let pagePath = event.component['repo:path'];
+  
+  let siteSection = '';
+  
+  //Check of html String in URL.
+  if (pagePath.indexOf('.html') > -1) { 
+   siteSection = pagePath.substring(0, pagePath.lastIndexOf('.html'));
+  
+   //replace slash with colon
+   siteSection = siteSection.replaceAll('/', ':');
+  
+   //remove `:content`
+   siteSection = siteSection.replaceAll(':content:','');
+  }
+  
+      return siteSection 
+  }
+  ```
 
 + 此 `Host Name` 資料元素程式碼。
 
-   ```javascript
-   if(window && window.location && window.location.hostname) {
-       return window.location.hostname;
-   }
-   ```
+  ```javascript
+  if(window && window.location && window.location.hostname) {
+      return window.location.hostname;
+  }
+  ```
 
 + 此 `all pages - on load` 規則事件程式碼
 
-   ```javascript
-   var pageShownEventHandler = function(evt) {
-   // defensive coding to avoid a null pointer exception
-   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-       //trigger Launch Rule and pass event
-       console.debug("cmp:show event: " + evt.eventInfo.path);
-       var event = {
-           //include the path of the component that triggered the event
-           path: evt.eventInfo.path,
-           //get the state of the component that triggered the event
-           component: window.adobeDataLayer.getState(evt.eventInfo.path)
-       };
-   
-       //Trigger the Launch Rule, passing in the new 'event' object
-       // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
-       // i.e 'event.component['someKey']'
-       trigger(event);
-       }
-   }
-   
-   //set the namespace to avoid a potential race condition
-   window.adobeDataLayer = window.adobeDataLayer || [];
-   
-   //push the event listener for cmp:show into the data layer
-   window.adobeDataLayer.push(function (dl) {
-       //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
-       dl.addEventListener("cmp:show", pageShownEventHandler);
-   });
-   ```
+  ```javascript
+  var pageShownEventHandler = function(evt) {
+  // defensive coding to avoid a null pointer exception
+  if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
+      //trigger Launch Rule and pass event
+      console.debug("cmp:show event: " + evt.eventInfo.path);
+      var event = {
+          //include the path of the component that triggered the event
+          path: evt.eventInfo.path,
+          //get the state of the component that triggered the event
+          component: window.adobeDataLayer.getState(evt.eventInfo.path)
+      };
+  
+      //Trigger the Launch Rule, passing in the new 'event' object
+      // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
+      // i.e 'event.component['someKey']'
+      trigger(event);
+      }
+  }
+  
+  //set the namespace to avoid a potential race condition
+  window.adobeDataLayer = window.adobeDataLayer || [];
+  
+  //push the event listener for cmp:show into the data layer
+  window.adobeDataLayer.push(function (dl) {
+      //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
+      dl.addEventListener("cmp:show", pageShownEventHandler);
+  });
+  ```
 
 +++
 

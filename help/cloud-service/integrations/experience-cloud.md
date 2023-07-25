@@ -10,10 +10,12 @@ kt: 10718
 thumbnail: KT-10718.png
 last-substantial-update: 2022-11-17T00:00:00Z
 mini-toc-levels: 1
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM as a Cloud Service " before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '928'
 ht-degree: 13%
 
 ---
@@ -23,24 +25,24 @@ ht-degree: 13%
 瞭解AEMas a Cloud Service已支援整合其他Adobe Experience Cloud產品。
 按一下Experience Cloud產品以取得如何設定和使用整合功能的檔案。
 
-|  | AEM Sites | AEM Assets | AEM Forms |
+|                                                                   | AEM Sites | AEM Assets | AEM Forms |
 |-------------------------------------------------------------------|:---------:|:----------:|:---------:|
-| [Acrobat Sign](#adobe-acrobat-sign) |  |  | ✔ |
-| 廣告 |  |  |  |
+| [Acrobat Sign](#adobe-acrobat-sign) |           |            | ✔ |
+| 廣告 |           |            |          |
 | [分析](#adobe-analytics) | ✔ | ✔ | ✔ |
-| Audience Manager |  |  |  |
-| Campaign Classic |  |  |  |
-| Campaign Standard |  |  |  |
-| [商務](#adobe-commerce) | ✔ | ✔ |  |
-| Customer Journey Analytics |  |  |  |
-| [Experience Platform標籤](#adobe-experience-platform-tags) | ✔ |  | ✔ |
-| [Journey Optimizer](#adobe-journey-optimizer) |  | ✔ |  |
-| [Learning Manager](#adobe-learning-manager) | ✔ |  |  |
-| Marketo Engage |  |  |  |
-| Real-time CDP |  |  |  |
+| Audience Manager |           |            |          |
+| Campaign Classic |           |            |          |
+| Campaign Standard |           |            |          |
+| [商務](#adobe-commerce) | ✔ | ✔ |          |
+| Customer Journey Analytics |           |            |          |
+| [Experience Platform標籤](#adobe-experience-platform-tags) | ✔ |            | ✔ |
+| [Journey Optimizer](#adobe-journey-optimizer) |           | ✔ |          |
+| [Learning Manager](#adobe-learning-manager) | ✔ |            |          |
+| Marketo Engage |           |            |          |
+| Real-time CDP |           |            |          |
 | [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
-| [目標](#adobe-target) | ✔ |  |  |
-| [Workfront](#adobe-workfront) |  | ✔ |  |
+| [目標](#adobe-target) | ✔ |            |          |
+| [Workfront](#adobe-workfront) |           | ✔ |          |
 
 
 ## Adobe Acrobat Sign
@@ -132,7 +134,7 @@ Adobe Sensei提供AI和機器學習技術，透過智慧標籤、智慧裁切、
 
 ### AEM Assets
 
-+ [影像的智慧標記](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
++ [影像的智慧型標記](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
 + [影像的自訂智慧標籤](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/custom-smart-tags.html)
 + [視訊的智慧標籤](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/video-smart-tags.html)
 + [智慧型裁切](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html)

@@ -7,11 +7,13 @@ kt: 6126
 topic: Development
 role: User
 level: Beginner
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: fba18118-0431-4edd-a5a6-0281e8c12979
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 0%
+source-wordcount: '96'
+ht-degree: 1%
 
 ---
 
@@ -22,3 +24,8 @@ ht-degree: 0%
 以下影片說明為就地簽署體驗設定表單所需的步驟
 
 >[!VIDEO](https://video.tv.adobe.com/v/39574?quality=12&learn=on)
+
+## 恭喜
+
+您已成功設定轉換後的適用性表單，以使用Acrobat Sign整合提供就地進行簽名體驗。
+

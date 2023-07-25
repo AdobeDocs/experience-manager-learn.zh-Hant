@@ -7,10 +7,12 @@ topic: Integrations
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-04T00:00:00Z
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
@@ -66,6 +68,7 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/25945?quality=12&learn=on)
 
 >[!NOTE]
+>
 需要為您的Adobe Analytics報表套裝啟用即時資料收集和AEM資產報表。 啟用AEM Asset Reporting可保留分析變數來追蹤資產分析。
 
 如需AEM Assets Insights設定，您需要下列憑證
@@ -83,6 +86,7 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
+>
 請確定將所有變更從作者執行個體復寫至發佈執行個體。
 
 ### 規則1 ：頁面追蹤器(pagetracker.js) {#rule-page-tracker-pagetracker-js}

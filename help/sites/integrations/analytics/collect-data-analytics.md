@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Analytics收集頁面資料
-description: 使用事件導向的Adobe使用者端資料層，在以Adobe Experience Manager建立的網站上收集使用者活動的相關資料。 瞭解如何使用標籤規則來監聽這些事件，並將資料傳送至Adobe Analytics報表套裝。
+title: 將AEM Sites與Adobe Analytics與Adobe Analytics標籤擴充功能整合
+description: 使用事件導向的Adobe使用者端資料層，將AEM Sites與Adobe Analytics整合，以收集有關使用Adobe Experience Manager建立的網站上的使用者活動的資料。 瞭解如何使用標籤規則來監聽這些事件，並將資料傳送至Adobe Analytics報表套裝。
 version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
@@ -8,22 +8,23 @@ role: Developer
 level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
+badgeIntegration: label="整合" type="positive"
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: 6a5e62a2a897adc421585e79c5f36f6aa759feaa
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '2447'
+source-wordcount: '2470'
 ht-degree: 2%
 
 ---
 
-# 使用Adobe Analytics收集頁面資料
+# 整合AEM Sites和Adobe Analytics
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，產品檔案中出現了幾項術語變更。 請參閱下列內容 [檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) 以取得術語變更的彙整參考資料。
 
 
-瞭解如何使用 [使用AEM核心元件Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) 以收集有關Adobe Experience Manager Sites中頁面的資料。 [Experience Platform中的標籤](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) 和 [Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) 用於建立規則，以將頁面資料傳送至Adobe Analytics。
+瞭解如何使用「 」的內建功能，將AEM Sites和Adobe Analytics與Adobe Analytics標籤擴充功能整合 [使用AEM核心元件Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) 以收集有關Adobe Experience Manager Sites中頁面的資料。 [Experience Platform中的標籤](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) 和 [Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) 用於建立規則，以將頁面資料傳送至Adobe Analytics。
 
 ## 您即將建置的內容 {#what-build}
 
@@ -57,7 +58,7 @@ ht-degree: 2%
 除了設定AEM環境及安裝WKND程式碼基底之外，您還可以使用Experience Platform偵錯工具來 **切換** 即時 [WKND網站](http://wknd.site/us/en.html) 至 *您的* 標籤屬性。 不過，如果您的AEM網站已有 [Adobe使用者端資料層已啟用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
 
 1. 登入Experience Platform並 [建立標籤屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html) （如果沒有）。
-1. 確定初始標籤JavaScript [資料庫已建立](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) 並提升至標籤 [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html).
+1. 確定初始標籤JavaScript [資料庫已建立](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) 並提升至標籤 [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant).
 1. 從程式庫已發佈到的標籤環境中複製JavaScript內嵌程式碼。
 
    ![複製標籤屬性內嵌程式碼](assets/collect-data-analytics/launch-environment-copy.png)
@@ -179,7 +180,7 @@ Adobe使用者端資料層是 **事件** 驅動資料層。 載入AEM Page資料
 
    此 `event` 物件傳遞自 `trigger()` 在自訂事件中呼叫的方法。 此處 `component` 是從資料層衍生的目前頁面 `getState` 在自訂事件中。
 
-1. 儲存變更並執行 [建置](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) 標籤屬性中，將程式碼提升至 [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) 用於您的AEM網站。
+1. 儲存變更並執行 [建置](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) 標籤屬性中，將程式碼提升至 [環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant) 用於您的AEM網站。
 
    >[!NOTE]
    >

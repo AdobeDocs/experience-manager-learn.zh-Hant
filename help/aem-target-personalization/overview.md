@@ -5,15 +5,17 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="整合" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: b632883f-65fd-4f89-bf39-ec2bce352d2d
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '840'
-ht-degree: 1%
+source-wordcount: '842'
+ht-degree: 0%
 
 ---
 
-# AEM 和 Adobe Target 快速入門 {#getting-started-with-aem-target}
+# 整合AEM Sites和Adobe Target {#getting-started-with-aem-target}
 
 AEM和Target都是強大的解決方案，而且功能似乎重疊。 客戶有時很難瞭解搭配使用這些產品來提供個人化體驗的方式和時機。 為了提供最佳化體驗給每位一般使用者，組織內不同的團隊應密切合作，並定義各自的職責。
 
@@ -38,7 +40,7 @@ AEM可協助您建立個人化內容，將您的所有內容和資產整合在�
 * Target會&#x200B;使用AEM體驗片段標籤作為活動中的選件
 * Target提供體驗片段HTML，AEM提供參照的影像
 
-   ![使用體驗片段圖表進行個人化](assets/personalization-use-case-1/use-case-1-diagram.png)
+  ![使用體驗片段圖表進行個人化](assets/personalization-use-case-1/use-case-1-diagram.png)
 
 **若要實作此案例，您需要：**
 
@@ -59,7 +61,7 @@ VEC是Adobe Target的主要功能之一。 VEC可讓行銷人員和設計人員�
 * 使用Adobe Target VEC建立全新內容
 * 同時適用於AEM託管網站和非AEM託管網站
 
-   ![使用視覺化體驗撰寫器圖表進行個人化](assets/personalization-use-case-3/use-case-diagram-3.png)
+  ![使用視覺化體驗撰寫器圖表進行個人化](assets/personalization-use-case-3/use-case-diagram-3.png)
 
 **若要實作此案例，您需要：**
 
@@ -77,7 +79,7 @@ VEC是Adobe Target的主要功能之一。 VEC可讓行銷人員和設計人員�
 * 此處未建立任何全新內容
 * 同時適用於AEM和非AEM網站
 
-   ![圖表](assets/personalization-use-case-2/use-case-2-diagram.png)
+  ![圖表](assets/personalization-use-case-2/use-case-2-diagram.png)
 
 **若要實作此案例，您需要：**
 
