@@ -11,9 +11,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
+badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
+source-git-commit: 6f874fd3da09ce808920a7f8ea3386beda726272
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '898'
 ht-degree: 4%
 
 ---
@@ -37,7 +38,7 @@ A [完整逐步教學課程](https://experienceleague.adobe.com/docs/experience-
 
 ## AEM需求
 
-React應用程式可與下列AEM部署選項搭配使用。 所有部署都需要 [WKND網站v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 即將安裝。
+React應用程式可與下列AEM部署選項搭配使用。 所有部署都需要 [WKND網站v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 即將安裝。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 + 使用進行本機設定 [AEM CLOUD SERVICE SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)
