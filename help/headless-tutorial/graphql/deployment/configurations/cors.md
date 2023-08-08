@@ -9,41 +9,44 @@ level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
-source-git-commit: 36b4217a899b462296d4389bc96a644da97d5da4
+last-substantial-update: 2023-08-08T00:00:00Z
+source-git-commit: 181023c9584bcd5084778ebf00d34f8ecaa74524
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 1%
+source-wordcount: '647'
+ht-degree: 2%
 
 ---
 
 # 跨原始資源共用(CORS)
 
-Adobe Experience Manager as a Cloud Service的跨原始資源共用(CORS)有助於非AEM Web屬性對AEM GraphQL API進行瀏覽器型使用者端呼叫。
-
-以下文章說明如何設定 _單一來源_ 透過CORS存取一組特定的AEM Headless端點。 單一來源表示只有單一非AEM網域會存取AEM，例如https://app.example.com連線到https://www.example.com。 由於快取疑慮，使用此方法時可能無法使用多來源存取。
+Adobe Experience Manager as a Cloud Service的跨原始資源共用(CORS)可協助非AEM Web屬性對AEM GraphQL API和其他AEM Headless資源進行瀏覽器型使用者端呼叫。
 
 >[!TIP]
 >
-> 以下設定為範例。 請確定您調整這些值，以符合專案的要求。
+> 以下設定為範例。 請確定您調整這些值，以符合專案的需求。
 
 ## CORS需求
 
-當連線到AEM GraphQL API的使用者端並非從與AEM相同的來源（也稱為主機或網域）提供服務時，瀏覽器型連線至AEM API需要CORS。
+當「不」從與AEM相同的來源（也稱為主機或網域）提供連線至AEM的使用者端時，以瀏覽器為基礎的連線至AEM GraphQL API需要CORS。
 
 | 使用者端型別 | [單頁應用程式(SPA)](../spa.md) | [Web元件/JS](../web-component.md) | [行動](../mobile.md) | [伺服器對伺服器](../server-to-server.md) |
 |----------------------------:|:---------------------:|:-------------:|:---------:|:----------------:|
 | 需要CORS設定 | ✔ | ✔ | ✘ | ✘ |
 
-## OSGi設定
+## AEM 作者
+
+在AEM Author服務上啟用CORS與AEM Publish和AEM Preview服務不同。 AEM Author服務需要將OSGi設定新增到AEM Author服務的執行模式資料夾，而且不會使用Dispatcher設定。
+
+### OSGi設定
 
 AEM CORS OSGi Configuration Factory會定義接受CORS HTTP要求的允許條件。
 
 | 使用者端連線至 | AEM 作者 | AEM 發佈 | AEM預覽 |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
-| 需要CORS OSGi設定 | ✔ | ✔ | ✔ |
+| 需要CORS OSGi設定 | ✔ | ✘ | ✘ |
 
 
-以下範例定義AEM Publish的OSGi設定(`../config.publish/..`)，但可新增至 [任何支援的執行模式資料夾](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#runmode-resolution).
+以下範例為AEM作者定義OSGi設定(`../config.author/..`)，因此僅在AEM Author服務上有效。
 
 主要組態屬性為：
 
@@ -51,13 +54,15 @@ AEM CORS OSGi Configuration Factory會定義接受CORS HTTP要求的允許條件
 + `allowedpaths` 指定允許來自指定來源的URL路徑模式。
    + 若要支援AEM GraphQL持續查詢，請新增以下模式： `/graphql/execute.json.*`
    + 若要支援體驗片段，請新增以下模式： `/content/experience-fragments/.*`
-+ `supportedmethods` 指定CORS要求允許的HTTP方法。 新增 `GET`，以支援AEM GraphQL持續查詢（和體驗片段）。
++ `supportedmethods` 指定CORS要求允許的HTTP方法。 若要支援AEM GraphQL持續查詢（和體驗片段），請新增 `GET` .
++ `supportedheaders` 包含 `"Authorization"` 因為對AEM作者的請求應該獲得授權。
++ `supportscredentials` 設為 `true` 由於向AEM作者提出的請求應該獲得授權。
 
 [進一步瞭解CORS OSGi設定。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
 
-此設定範例支援使用AEM GraphQL持續查詢。 若要使用使用者端定義的GraphQL查詢，請在中新增GraphQL端點URL `allowedpaths` 和 `POST` 至 `supportedmethods`.
+以下範例支援在AEM Author上使用AEM GraphQL持續查詢。 若要使用使用者端定義的GraphQL查詢，請在中新增GraphQL端點URL `allowedpaths` 和 `POST` 至 `supportedmethods`.
 
-+ `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~graphql.cfg.json`
++ `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~graphql.cfg.json`
 
 ```json
 {
@@ -76,111 +81,142 @@ AEM CORS OSGi Configuration Factory會定義接受CORS HTTP要求的允許條件
     "X-Requested-With",
     "Content-Type",
     "Access-Control-Request-Method",
-    "Access-Control-Request-Headers"
+    "Access-Control-Request-Headers",
+    "Authorization"
   ],
   "supportedmethods":[
     "GET",
     "HEAD",
+    "POST"
   ],
   "maxage:Integer": 1800,
-  "supportscredentials": false,
+  "supportscredentials": true,
   "exposedheaders":[ "" ]
 }
 ```
 
-### 授權的AEM GraphQL API請求
+#### OSGi設定範例
 
-存取需要授權的AEM GraphQL API時（通常是AEM Author或AEM Publish上的受保護內容），請確保CORS OSGi設定有其他值：
++ [WKND專案中可以找到OSGi設定的範例。](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json)
 
-+ `supportedheaders` 另清單 `"Authorization"`
-+ `supportscredentials` 設為 `true`
+## AEM 發佈
 
-AEM GraphQL API的授權請求需要CORS設定並不常見，因為它們通常出現在以下情境中 [伺服器對伺服器應用程式](../server-to-server.md) 因此，不需要CORS設定。 需要CORS設定的瀏覽器型應用程式，例如 [單頁應用程式](../spa.md) 或 [Web元件](../web-component.md)通常使用授權，因為很難保護認證。
+在AEM Publish （和預覽）服務上啟用CORS與AEM Author服務不同。 AEM Publish服務需要將AEM Dispatcher設定新增到AEM Publish的Dispatcher設定。 AEM Publish不使用 [OSGi設定](#osgi-configuration).
 
-例如，這兩個設定的設定如下 `CORSPolicyImpl` OSGi工廠設定：
+在AEM Publish上設定CORS時，請確定：
 
-+ `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config/com.adobe.granite.cors.impl.CORSPolicyImpl~graphql.cfg.json`
++ 此 `Origin` 無法透過移除 `Origin` 標題（若之前已新增）來自AEM Dispatcher專案的 `clientheaders.any` 檔案。 任何 `Access-Control-` 標題應從 `clientheaders.any` 會由檔案和Dispatcher管理，而非AEM Publish服務。
++ 若您有 [CORS OSGi設定](#osgi-configuration) 已在您的AEM Publish服務上啟用，您必須將其移除，並將其設定移轉至 [Dispatcher vhost設定](#set-cors-headers-in-vhost) 概述如下。
 
-```json
-{ 
-  ...
-  "supportedheaders": [
-    "Origin",
-    "Accept",
-    "X-Requested-With",
-    "Content-Type",
-    "Access-Control-Request-Method",
-    "Access-Control-Request-Headers",
-    "Authorization"
-  ],
-  ...
-  "supportscredentials": true,
-  ...
-}
-```
+### Dispatcher 設定
 
-#### 範例OSGi設定
-
-+ [您可以在WKND專案中找到OSGi設定的範例。](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json)
-
-## Dispatcher 設定
-
-AEM Publish （和Preview）服務的Dispatcher必須設定為支援CORS。
+AEM Publish （和預覽）服務的Dispatcher必須設定為支援CORS。
 
 | 使用者端連線至 | AEM 作者 | AEM 發佈 | AEM預覽 |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
 | 需要Dispatcher CORS設定 | ✘ | ✔ | ✔ |
 
-### 允許HTTP請求上的CORS標頭
+#### 設定Dispatcher環境變數
 
-更新 `clientheaders.any` 檔案以允許HTTP請求標頭 `Origin`，  `Access-Control-Request-Method`、和 `Access-Control-Request-Headers` 傳遞至AEM，讓HTTP請求可由 [AEM CORS設定](#osgi-configuration).
+1. 開啟global.vars檔案以進行AEM Dispatcher設定，通常位於 `dispatcher/src/conf.d/variables/global.vars`.
+2. 將下列專案新增至檔案：
 
-`dispatcher/src/conf.dispatcher.d/clientheaders/clientheaders.any`
+   ```
+   # Enable CORS handling in the dispatcher
+   #
+   # By default, CORS is handled by the AEM publish server.
+   # If you uncomment and define the ENABLE_CORS variable, then CORS will be handled in the dispatcher.
+   # See the default.vhost file for a suggested dispatcher configuration. Note that:
+   #   a. You will need to adapt the regex from default.vhost to match your CORS domains
+   #   b. Remove the "Origin" header (if it exists) from the clientheaders.any file
+   #   c. If you have any CORS domains configured in your AEM publish server origin, you have to move those to the dispatcher
+   #       (i.e. accordingly update regex in default.vhost to match those domains)
+   #
+   Define ENABLE_CORS
+   ```
 
-```
-# Allowing CORS headers to be passed through to the publish tier to support headless and SPA Editor use cases.
-# https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_request_headers
+#### 在vhost中設定CORS標頭
 
-"Origin"
-"Access-Control-Request-Method"
-"Access-Control-Request-Headers"
+1. 在您的Dispatcher設定專案中開啟AEM Publish服務的vhost設定檔案，通常位於 `dispatcher/src/conf.d/available_vhosts/<example>.vhost`
+2. 複製 `<IfDefine ENABLE_CORS>...</IfDefine>` 將下列區塊匯入您已啟用的vhost設定檔。
 
-$include "./default_clientheaders.any"
-```
+   ```{line-numbers="true"}
+   <VirtualHost *:80>
+     ...
+     <IfModule mod_headers.c>
+       ...
+       <IfDefine ENABLE_CORS>
+         ################## Start of CORS configuration ##################
+   
+         SetEnvIfExpr "req_novary('Origin') == ''" CORSType=none CORSProcessing=false
+         SetEnvIfExpr "req_novary('Origin') != ''" CORSType=cors CORSProcessing=true CORSTrusted=false
+   
+         SetEnvIfExpr "req_novary('Access-Control-Request-Method') == '' && %{REQUEST_METHOD} == 'OPTIONS' && req_novary('Origin') != ''" CORSType=invalidpreflight CORSProcessing=false
+         SetEnvIfExpr "req_novary('Access-Control-Request-Method') != '' && %{REQUEST_METHOD} == 'OPTIONS' && req_novary('Origin') != ''" CORSType=preflight CORSProcessing=true CORSTrusted=false
+         SetEnvIfExpr "req_novary('Origin') -strcmatch '%{REQUEST_SCHEME}://%{HTTP_HOST}*'" CORSType=samedomain CORSProcessing=false
+   
+         # For requests that require CORS processing, check if the Origin can be trusted
+         SetEnvIfExpr "%{HTTP_HOST} =~ /(.*)/ " ParsedHost=$1
+   
+         ################## Adapt regex to match CORS origin(s) for your environment
+         SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.your-domain\.tld(:\d+)?$)#" CORSTrusted=true
+   
+         # Extract the Origin header
+         SetEnvIfNoCase ^Origin$ ^(.*)$ CORSTrustedOrigin=$1
+   
+         # Flush If already set
+         Header unset Access-Control-Allow-Origin
+         Header unset Access-Control-Allow-Credentials
+   
+         # Trusted
+         Header always set Access-Control-Allow-Credentials "true" "expr=reqenv('CORSTrusted') == 'true'"
+         Header always set Access-Control-Allow-Origin "%{CORSTrustedOrigin}e" "expr=reqenv('CORSTrusted') == 'true'"
+         Header always set Access-Control-Allow-Methods "GET" "expr=reqenv('CORSTrusted') == 'true'"
+         Header always set Access-Control-Max-Age 1800 "expr=reqenv('CORSTrusted') == 'true'"
+         Header always set Access-Control-Allow-Headers "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers" "expr=reqenv('CORSTrusted') == 'true'"
+   
+         # Non-CORS or Not Trusted
+         Header unset Access-Control-Allow-Credentials "expr=reqenv('CORSProcessing') == 'false' || reqenv('CORSTrusted') == 'false'"
+         Header unset Access-Control-Allow-Origin "expr=reqenv('CORSProcessing') == 'false' || reqenv('CORSTrusted') == 'false'"
+         Header unset Access-Control-Allow-Methods "expr=reqenv('CORSProcessing') == 'false' || reqenv('CORSTrusted') == 'false'"
+         Header unset Access-Control-Max-Age "expr=reqenv('CORSProcessing') == 'false' || reqenv('CORSTrusted') == 'false'"
+   
+         # Always vary on origin, even if its not there.
+         Header merge Vary Origin
+   
+         # CORS - send 204 for CORS requests which are not trusted
+         RewriteCond expr "reqenv('CORSProcessing') == 'true' && reqenv('CORSTrusted') == 'false'"
+         RewriteRule "^(.*)" - [R=204,L]
+   
+         # Remove Origin before sending to AEM Publish
+         RequestHeader unset Origin
+   
+         ################## End of CORS configuration ##################
+       </IfDefine>
+       ...
+     </IfModule>
+     ...
+   </VirtualHost>
+   ```
+
+3. 更新下行的規則運算式，以符合存取AEM Publish服務的所需來源。 如果需要多個原點，請複製此線並更新每個原點/原點陣列。
+
+   ```
+   SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*.your-domain.tld(:\d+)?$)#" CORSTrusted=true
+   ```
+
+   + 例如，若要啟用CORS從來源存取，請：
+
+      + 上的任何子網域 `https://example.com`
+      + 任何連線埠開啟 `http://localhost`
+
+     用以下兩行取代該行：
+
+     ```
+     SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.example\.com$)#" CORSTrusted=true
+     SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http://localhost(:\d+)?$)#" CORSTrusted=true
+     ```
 
 #### Dispatcher設定範例
 
-+ [Dispatcher的範例 _使用者端標頭_ 可在WKND專案中找到設定。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/clientheaders/clientheaders.any#L10-L12)
-
-
-### 傳遞CORS HTTP回應標頭
-
-設定Dispatcher陣列以快取 **CORS HTTP回應標題** 為了確保在Dispatcher快取中提供AEM GraphQL持續查詢時包含在內，請新增 `Access-Control-...` 快取標頭清單的標頭。
-
-+ `dispatcher/src/conf.dispatcher.d/available_farms/wknd.farm`
-
-```
-/publishfarm {
-    ...
-    /cache {
-        ...
-        # CORS HTTP response headers
-        # https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers
-        /headers {
-            ...
-            "Access-Control-Allow-Origin"
-            "Access-Control-Expose-Headers"
-            "Access-Control-Max-Age"
-            "Access-Control-Allow-Credentials"
-            "Access-Control-Allow-Methods"
-            "Access-Control-Allow-Headers"
-        }
-    ...
-    }
-...
-}
-```
-
-#### Dispatcher設定範例
-
-+ [Dispatcher的範例 _CORS HTTP回應標題_ 可在WKND專案中找到設定。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/available_farms/wknd.farm#L109-L114)
++ [WKND專案中可以找到Dispatcher設定的範例。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost)
