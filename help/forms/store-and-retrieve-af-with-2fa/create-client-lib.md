@@ -10,7 +10,7 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: c90eea73-bd44-40af-aa98-d766aa572415
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 6%
@@ -19,9 +19,9 @@ ht-degree: 6%
 
 # 建立使用者端程式庫
 
-建立 [使用者端程式庫](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) 其中將包含呼叫方法的程式碼 `doAjaxSubmitWithFileAttachment` 的 `guideBridge` CSS類別所識別之按鈕的點選事件上的API **儲存按鈕**.  我們會傳遞最適化表單資料， `fileMap`，以及 `mobileNumber` 至接聽端點 `**/bin/storeafdatawithattachments`
+建立 [使用者端資料庫](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) 其中包含呼叫方法的程式碼 `doAjaxSubmitWithFileAttachment` 的 `guideBridge` CSS類別所識別之按鈕的點選事件上的API **儲存按鈕**.  我們會傳遞最適化表單資料， `fileMap`，以及 `mobileNumber` 端點接聽： `**/bin/storeafdatawithattachments`
 
-儲存表單資料後，系統會產生唯一的應用程式ID，並在對話方塊中呈現給使用者。 關閉對話方塊時，使用者會被帶入表單，表單可讓他們使用唯一應用程式ID擷取已儲存的最適化表單。
+儲存表單資料後，系統會產生唯一的應用程式ID，並在對話方塊中呈現給使用者。 關閉對話方塊時，使用者將被帶入表單，表單可讓他們使用唯一應用程式ID擷取已儲存的最適化表單。
 
 ```java
 $(document).ready(function () {
@@ -45,7 +45,7 @@ $(document).ready(function () {
             success: function (x) {
               bootbox.alert(
                 "This is your reference number.<br>" +
-                  x.data.path +
+                  x.data.applicationID +
                   " <br>You will need this to retrieve your application",
                 function () {
                   console.log(
@@ -69,8 +69,8 @@ $(document).ready(function () {
 >[!NOTE]
 > 我們已使用 [bootbox javascript程式庫](http://bootboxjs.com/examples.html) 顯示對話方塊
 
-此範例中使用的使用者端資料庫可以是 [已從此處下載](assets/client-libraries.zip)
+此範例中使用的使用者端資料庫可以是 [已從此處下載](assets/store-af-with-attachments-client-lib.zip)
 
 ## 後續步驟
 
-[使用OTP服務驗證使用者](./verify-users-with-otp.md)
+[驗證具有OTP服務的使用者](./verify-users-with-otp.md)
