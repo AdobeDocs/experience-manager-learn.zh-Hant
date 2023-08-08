@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
+source-git-commit: e7e5a07ecada8e5760cd1496bdb44b3d035373dd
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '459'
 ht-degree: 22%
 
 ---
@@ -34,24 +34,24 @@ ht-degree: 22%
    + [可編輯的範本](page-authoring/template-editor-feature-video-use.md)
    + [樣式系統](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
-   + [Launch](page-authoring/launches.md)
+   + [啟動](page-authoring/launches.md)
    + 向同儕學習 {#expert-advice}
       + [網站階層秘訣](page-authoring/expert-advice/site-hierarchy.md)
 + 元件 {#components}
    + [元件開發](components/component-development.md)
    + [核心元件](components/core-components-feature-video-understand.md)
-   + [網頁最佳化的影像傳送](components/web-optimized-image-delivery.md)
+   + [網頁最佳化的影像交付](components/web-optimized-image-delivery.md)
    + [元件主控台](components/components-console-feature-video-use.md)
 + 內容片段 {#content-fragments}
    + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html)
    + [編寫內容片段](content-fragments/content-fragments-feature-video-use.md)
    + [傳送內容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [翻譯內容片段](content-fragments/content-fragments-translation-feature-video-use.md)
-   + [內容片段與體驗片段的比較](content-fragments/understand-content-fragments-and-experience-fragments.md)
+   + [內容片段vs.體驗片段](content-fragments/understand-content-fragments-and-experience-fragments.md)
 + 體驗片段 {#experience-fragments}
    + [使用體驗片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [建置區塊](experience-fragments/building-blocks.md)
-   + [內容片段與體驗片段的比較](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + [內容片段vs.體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 
 + 開發 {#developing}
    + [AEM 專案原型](developing/aem-project-archetype.md)
@@ -87,7 +87,7 @@ ht-degree: 22%
    + [翻譯專案](./multi-site-management/manage-translation-projects.md)
    + [建立多語言翻譯專案](./multi-site-management/create-multinational-translational-project.md)
    + [翻譯工作](./multi-site-management/create-translation-job.md)
-   + [使用Launch更新語言副本](./multi-site-management/updating-language-copy.md)
+   + [透過Launch更新語言副本](./multi-site-management/updating-language-copy.md)
    + [建立語言副本頁面](./multi-site-management/create-new-page-language-copy.md)
    + [翻譯工作狀態](./multi-site-management/translation-job-status.md)
    + [從語言副本建立國家/地區網站](./multi-site-management/create-new-site.md)
@@ -105,7 +105,7 @@ ht-degree: 22%
       + [概觀](integrations/experience-platform/data-collection/tags/overview.md)
       + [建立標籤屬性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [使用IMS連線AEM和標籤屬性](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
-      + [建立AEM啟動Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [建立AEM LaunchCloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [偵錯標籤(Launch)實作](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe使用者端資料層 {#adobe-client-data-layer}
       + [使用Adobe使用者端資料層](integrations/adobe-client-data-layer/data-layer-overview.md)
@@ -124,7 +124,8 @@ ht-degree: 22%
       + [使用視覺化體驗撰寫器進行個人化](integrations/adobe-target/personalization-using-vec.md)
       + [個人化完整網頁體驗](integrations/adobe-target/personalization-web-page.md)
 + 向同儕學習 {#expert-resources}
+   + [概觀](expert-resources/learn-from-your-peers-overview.md)
    + [AEM Sites成熟度評估](expert-resources/maturity-assessment.md)
    + [網站維護](expert-resources/site-maintenance.md)
    + [AEM Champion秘訣與技巧：第1場講座](expert-resources/champion-tips-1.md)
-   + [AEM Champion秘訣與技巧：第2場講座](expert-resources/champion-tips-2.md)
+   + [AEM Champion秘訣與技巧：工作階段2](expert-resources/champion-tips-2.md)
