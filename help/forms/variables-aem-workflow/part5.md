@@ -7,7 +7,7 @@ feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: ecd43765-455c-4f8b-acf2-6ea34495c311
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
@@ -16,8 +16,10 @@ ht-degree: 0%
 
 # AEM Workflow中的規則編輯器
 
-「Or分割」元件是用來在AEM Workflow中進行路由。 在AEM 6.5版本之前，您必須撰寫ECMA或自訂程式碼以啟用條件式路由。 在AEM 6.5中，現在可以使用規則編輯器建立商業規則，以決定要執行的路徑。
+「Or分割」元件可用來在AEM Workflow中進行路由。 在AEM 6.5版本之前，您必須撰寫ECMA或自訂程式碼以啟用條件式路由。 在AEM 6.5中，我們現在能夠使用規則編輯器建立商業規則，這會決定要執行的路徑。
 
-以下影片將示範如何使用規則編輯器在AEM工作流程中進行條件式處理
+下列影片將示範如何使用規則編輯器，在AEM工作流程中進行條件式處理
 
 >[!VIDEO](https://video.tv.adobe.com/v/26362?quality=12&learn=on)
+
+

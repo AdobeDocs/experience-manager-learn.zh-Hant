@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 17f6148ce6f897052d9d13f23e3f1792646eb958
+source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1841'
 ht-degree: 2%
 
 ---
@@ -187,6 +187,7 @@ ht-degree: 2%
    + [ArrayList變數](variables-aem-workflow/part4.md)
    + [表單資料模型變數](variables-aem-workflow/form-data-model.md)
    + [AEM Workflow中的規則編輯器](variables-aem-workflow/part5.md)
+   + [記錄工作流程變數](variables-aem-workflow/part6.md)
 + 檢閱表單資料{#review-form-data}
    + [1 — 簡介](review-form-data/introduction.md)
    + [2 — 建立元件](review-form-data/create-component.md)
