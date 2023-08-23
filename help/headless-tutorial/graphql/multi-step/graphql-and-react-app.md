@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
+source-git-commit: 65244bf81666c20fd5d9d804ad8ea97df8b83d9f
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1218'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 使用簡單的React應用程式來查詢和顯示 **團隊** 和 **個人** AEM GraphQL API公開的內容。 React的使用在很大程度上不重要，而且消費的外部應用程式可以寫入任何平台的任何框架中。
 
-## 必備條件
+## 先決條件
 
 假設此多部分教學課程前面部分所概述的步驟已經完成，或者 [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) 安裝在您的AEMas a Cloud Service製作和發佈服務上。
 
@@ -489,6 +489,10 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 ## 試用應用程式
 
 檢閱應用程式 [http://localhost:3000/](http://localhost:3000/) 並按一下 _成員_ 連結。 您也可以在AEM中新增內容片段，以新增更多團隊和/或成員至Team Alpha。
+
+>[!IMPORTANT]
+>
+>若要驗證您的實作變更，或是在上述變更後無法讓應用程式正常運作，請參閱 [基礎教學課程](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial) 解決方案分支。
 
 ## 潛藏在引擎蓋下
 
