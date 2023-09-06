@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
+source-git-commit: adfb805615d2abe34458d5aea685ae47517c5548
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '1845'
 ht-degree: 2%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 2%
    + [建立稽核工作流程](handling-form-submissions/creating-a-review-workflow.md)
    + [設定最適化表單以觸發工作流程](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [顯示感謝頁面](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
+   + [自訂感謝頁面](handling-form-submissions/thank-you-page-on-fdm-submission.md)
    + [提交至外部端點](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [傳送電子郵件](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
    + [付費休假請求工作流程](handling-form-submissions/paid-time-off-request-workflow.md)
