@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+source-git-commit: 6cbd8f3c49d44e75337715c35c198008da8ae7b9
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1023'
 ht-degree: 21%
 
 ---
@@ -20,13 +20,13 @@ ht-degree: 21%
 + AEM試用版 {#aem-trials}
    + [影像](./aem-trials/images.md)
 + AEM as a Cloud Service 簡介{#introduction}
-   + [什麼是AEMas a Cloud Service？](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [AEM有哪些as a Cloud Service？](./introduction/what-is-aem-as-a-cloud-service.md)
    + [演化](./introduction/evolution.md)
    + [架構](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
    + 策略與思維領導力{#strategy}
       + [Experience Manager — 治理與人員配置模型與原型](./introduction/experience-manager-governance-and-staffing-models.md)
-      + [如何使用Adobe Experience Manager加快內容速度](./introduction/drive-content-velocity-for-sites.md)
+      + [如何使用Adobe Experience Manager提升內容速度](./introduction/drive-content-velocity-for-sites.md)
       + [使用AEM樣式系統加快內容速度](./introduction/accelerate-content-velocity-aem.md)
 + Experience Cloud 整合{#integrations}
    + [整合](./integrations/experience-cloud.md)
@@ -36,7 +36,7 @@ ht-degree: 21%
    + [osgi](./underlying-technology/introduction-osgi.md)
    + [Java內容存放庫](./underlying-technology/introduction-jcr.md)
    + [Sling](./underlying-technology/introduction-sling.md)
-   + [製作和發佈服務](./underlying-technology/introduction-author-publish.md)
+   + [作者與發佈服務](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Cloud Manager {#cloud-manager}
    + [計畫](./cloud-manager/programs.md)
@@ -63,7 +63,7 @@ ht-degree: 21%
          + [產生存取權杖](./developing/extensibility/app-builder/jwt-auth.md)
       + UI擴充性{#ui}
          + [概觀](./developing/extensibility/ui/overview.md)
-         + [Adobe Developer主控台專案](./developing/extensibility/ui/adobe-developer-console-project.md)
+         + [Adobe Developer Console專案](./developing/extensibility/ui/adobe-developer-console-project.md)
          + [初始化應用程式](./developing/extensibility/ui/app-initialization.md)
          + [註冊副檔名](./developing/extensibility/ui/extension-registration.md)
          + [模型](./developing/extensibility/ui/modal.md)
@@ -92,9 +92,9 @@ ht-degree: 21%
       + [Dispatcher設定移轉](./developing/basics/dispatcher-configuration.md)
    + AEM 專案{#aem-projects}
       + [AEM Maven專案](./developing/projects/maven-project-structure.md)
-      + [清除AEM Maven專案](./developing/projects/remove-samples.md)
+      + [清理AEM Maven專案](./developing/projects/remove-samples.md)
    + OSGi服務{#osgi-services}
-      + [OSGi服務基本需知](./developing/osgi-services/basics.md)
+      + [OSGi服務基本知識](./developing/osgi-services/basics.md)
       + [OSGi元件生命週期](./developing/osgi-services/lifecycle.md)
       + [OSGi設定基本需知](./developing/osgi-services/configurations.md)
       + [使用OCD的OSGi設定](./developing/osgi-services/configurations-ocd.md)
@@ -106,12 +106,12 @@ ht-degree: 21%
       + [網頁最佳化的影像API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
    + 快速開發環境{#rde}
       + [概觀](./developing/rde/overview.md)
-      + [如何設定](./developing/rde/how-to-setup.md)
+      + [設定方法](./developing/rde/how-to-setup.md)
       + [使用方式](./developing/rde/how-to-use.md)
       + [開發生命週期](./developing/rde/development-life-cycle.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + 偵錯AEM{#debugging}
-   + 偵錯AEM SDK{#debugging-aem-sdk}
+   + 為AEM SDK除錯{#debugging-aem-sdk}
       + [概觀](./debugging/aem-sdk-local-quickstart/overview.md)
       + [記錄檔](./debugging/aem-sdk-local-quickstart/logs.md)
       + [遠端偵錯](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
@@ -128,6 +128,10 @@ ht-degree: 21%
          + [周遊警告](./debugging/cloud-service/risks/traversals.md)
 + 內容傳送{#content-delivery}
    + [URL重新導向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html)
++ 快取{#caching}
+   + [概觀](./caching/overview.md)
+   + [AEM發佈服務](./caching/publish.md)
+   + [AEM作者服務](./caching/author.md)
 + 存取AEM{#accessing}
    + [概觀](./accessing/overview.md)
    + [Adobe IMS使用者](./accessing/adobe-ims-users.md)
@@ -146,7 +150,7 @@ ht-degree: 21%
    + 程式碼範例{#examples}
       + [非標準連線埠上的HTTP/HTTPS，用於彈性連線埠輸出](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
       + [專用輸出IP位址/VPN的HTTP/HTTPS](./networking/examples/http-dedicated-egress-ip-vpn.md)
-      + [使用資料來源集區的SQL連線](./networking/examples/sql-datasourcepool.md)
+      + [使用DataSourcePool的SQL連線](./networking/examples/sql-datasourcepool.md)
       + [使用Java SQL API的SQL連線](./networking/examples/sql-java-apis.md)
       + [電子郵件服務](./networking/examples/email-service.md)
 + 移轉 {#migration}
@@ -192,8 +196,8 @@ ht-degree: 21%
       + [4 — 同步IntelliJ與AEM](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
       + [5 — 建立表單](./forms/developing-for-cloud-service/deploy-your-first-form.md)
       + [6 — 自訂提交處理常式](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
-      + [7 — 啟用Forms入口網站元件](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [8 — 包含Cloud Services和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [7 — 啟用Forms Portal元件](./forms/developing-for-cloud-service/forms-portal-components.md)
+      + [8 — 包含Cloud Service和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [9 — 內容感知雲端設定](./forms/developing-for-cloud-service/context-aware-fdm.md)
       + [10 — 推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [11 — 部署至開發環境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
@@ -209,7 +213,7 @@ ht-degree: 21%
       + [設定收入面板](./forms/create-first-af/configure-income-panel.md)
       + [設定資產面板](./forms/create-first-af/configure-assets-panel.md)
       + [設定開始面板](./forms/create-first-af/configure-start-panel.md)
-      + [新增和設定工具列](./forms/create-first-af/add-configure-toolbar.md)
+      + [新增並設定工具列](./forms/create-first-af/add-configure-toolbar.md)
    + 使用Headless表單的自訂提交服務{#custom-submit-headless-forms}
       + [1 — 簡介](./forms/custom-submit-headless-forms/introduction.md)
       + [2 — 建立自訂提交服務](./forms/custom-submit-headless-forms/custom-submit-service.md)
@@ -224,7 +228,7 @@ ht-degree: 21%
       + [建立服務認證](./forms/doc-gen-forms-cs/service-credentials.md)
       + [建立JWT權杖](./forms/doc-gen-forms-cs/create-jwt.md)
       + [建立存取Token](./forms/doc-gen-forms-cs/create-access-token.md)
-      + [合併資料與範本](./forms/doc-gen-forms-cs/merge-data-with-template.md)
+      + [將資料與範本合併](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [測試解決方案](./forms/doc-gen-forms-cs/test.md)
       + [挑戰](./forms/doc-gen-forms-cs/challenge.md)
    + 使用批次API產生檔案{#formscs-batch-api}
@@ -245,7 +249,7 @@ ht-degree: 21%
    + Azure入口網站儲存體{#forms-cs-azure-portal}
       + [簡介](./forms/forms-cs-azure-portal/introduction.md)
       + [建立表單資料模型](./forms/forms-cs-azure-portal/create-fdm.md)
-      + [將表單資料儲存在Azure儲存體中](./forms/forms-cs-azure-portal/create-af.md)
+      + [將表單資料儲存在Azure儲存體](./forms/forms-cs-azure-portal/create-af.md)
       + [預填表單](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [查詢提交](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + 儲存並繼續表單填寫{#prefill-azure-storage}
@@ -266,12 +270,12 @@ ht-degree: 21%
       + [Acrobat Sign API應用計畫](./forms/forms-and-sign/create-sign-api-application.md)
       + [Acrobat Sign雲端設定](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [建立最適化表單](./forms/forms-and-sign/create-adaptive-form.md)
-      + [設定以填寫和簽署](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-   + 與Microsoft Power Automate整合{#forms-cs-and-power-automate}
+      + [設定以填寫並簽署](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + 整合Microsoft Power Automate{#forms-cs-and-power-automate}
       + [設定整合](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
       + [剖析提交的表單資料](./forms/forms-cs-and-power-automate/send-email-notification.md)
-      + [將DoR作為電子郵件附件傳送](./forms/forms-cs-and-power-automate/send-dor-email-attachment.md)
-      + [從提交的資料擷取表單附件](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
+      + [傳送DoR作為電子郵件附件](./forms/forms-cs-and-power-automate/send-dor-email-attachment.md)
+      + [從提交的資料中擷取表單附件](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
    + 與Microsoft Dynamics整合{#formscs-dynamics-crm}
       + [建立Dynamics應用程式](./forms/formscs-dynamics-crm/create-dynamics-account.md)
       + [設定資料來源](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
@@ -284,8 +288,8 @@ ht-degree: 21%
       + [建立資料來源](./forms/integrate-with-salesforce/create-data-source.md)
       + [建立表單資料模型](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [測試表單提交](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
-      + [測試點選事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
-   + 將表單提交內容儲存在單一磁碟機和Sharepoint中{#one-drive}
+      + [測試點按事件](./forms/integrate-with-salesforce/create-lead-click-event.md)
+   + 將表單提交內容儲存在單一磁碟機和SharePoint中{#one-drive}
       + [將表單資料儲存在單一磁碟機中](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [將表單資料儲存在SharePoint中](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
 + asset compute擴充性{#asset-compute}
@@ -300,7 +304,7 @@ ht-degree: 21%
       + [設定manifest.yml](./asset-compute/develop/manifest.md)
       + [開發背景工作](./asset-compute/develop/worker.md)
       + [使用開發工具](./asset-compute/develop/development-tool.md)
-   + 測試和偵錯{#test-debug}
+   + 測試和除錯{#test-debug}
       + [測試背景工作](./asset-compute/test-debug/test.md)
       + [對背景工作進行偵錯](./asset-compute/test-debug/debug.md)
    + 部署{#deploy}
@@ -329,7 +333,7 @@ ht-degree: 21%
       + [AEM CDN第1部分](./expert-resources/cloud-5/cloud5-aem-cdn-part1.md)
       + [AEM CDN第2部分](./expert-resources/cloud-5/cloud5-aem-cdn-part2.md)
       + [AEM記錄檔](./expert-resources/cloud-5/cloud5-aem-log-files.md)
-      + [登入Token](./expert-resources/cloud-5/cloud5-getting-login-token-integrations.md)
+      + [登入權杖](./expert-resources/cloud-5/cloud5-getting-login-token-integrations.md)
       + [雲端Dispatcher](./expert-resources/cloud-5/cloud5-aem-dispatcher-cloud.md)
       + [移轉1](./expert-resources/cloud-5/cloud5-aem-content-migration-part-1.md)
       + [移轉2](./expert-resources/cloud-5/cloud5-aem-content-migration-part-2.md)
