@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
+source-git-commit: 7a240374c42e2555be25e682c803f51f442fb7f7
 workflow-type: tm+mt
-source-wordcount: '1484'
+source-wordcount: '1483'
 ht-degree: 7%
 
 ---
@@ -70,11 +70,27 @@ Homebrew是適用於macOS、Windows和Linux的開放原始碼套件管理程式�
 1. 開啟您的終端機
 1. 執行命令以檢查是否已安裝Homebrew： `brew --version`.
 1. 如果未安裝Homebrew，請安裝Homebrew
-   + [在macOS上安裝Homebrew](https://brew.sh/)
-      + macOS上的Homebrew需要 [Xcode](https://apps.apple.com/us/app/xcode/id497799835) 或 [命令列工具](https://developer.apple.com/download/more/)，可透過命令安裝：
-         + `xcode-select --install`
-   + [在Linux上安裝Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
-   + [在Windows 10上安裝Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+[macOS上的Homebrew](https://brew.sh/) 需要 [Xcode](https://apps.apple.com/us/app/xcode/id497799835) 或 [命令列工具](https://developer.apple.com/download/more/)，可透過命令安裝：
+
+```shell
+$ xcode-select --install
+```
+
+>[!TAB Windows]
+
+[在Windows 10上安裝Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!TAB Linux]
+
+[在Linux上安裝Homebrew](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!ENDTABS]
+
 1. 執行下列命令，確認是否已安裝Homebrew： `brew --version`
 
 ![Homebrew](./assets/development-tools/homebrew.png)
@@ -161,7 +177,7 @@ Apache Maven是開放原始碼Java命令列工具，用於建置從AEM專案Mave
 
 此 [ADOBE I/OCLI](https://github.com/adobe/aio-cli)，或 `aio`，提供各種Adobe服務的命令列存取權，包括 [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) 和 [asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). Adobe I/OCLI在AEMas a Cloud Service的開發中起著不可或缺的作用，因為它讓開發人員能夠：
 
-+ AEM as aCloud Services服務的尾部記錄
++ AEM as aCloud Service服務的尾部記錄
 + 從CLI管理Cloud Manager管道
 + 部署至 [AEM快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
 
