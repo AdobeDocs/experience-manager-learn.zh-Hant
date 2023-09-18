@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: adfb805615d2abe34458d5aea685ae47517c5548
+source-git-commit: bac637440d1cc5af0e0abb119ca2f4e93f69cf34
 workflow-type: tm+mt
-source-wordcount: '1845'
+source-wordcount: '1851'
 ht-degree: 2%
 
 ---
@@ -176,6 +176,7 @@ ht-degree: 2%
    + [從xml檔案擷取節點](custom-workflow-steps/extract-xml-node.md)
    + [將檔案儲存至檔案系統](custom-workflow-steps/write-payload-document.md)
    + [將提交的資料儲存在字串變數中](custom-workflow-steps/save-submitted-data-in-string-variable.md)
+   + [從檔案清單擷取檔案](custom-workflow-steps/extract-document-from-list.md)
 + 自訂工作流程元件{#custom-workflow-component}
    + [1 — 簡介](custom-workflow-component/introduction.md)
    + [2寫Java程式碼](custom-workflow-component/custom-process-step-aem-workflow.md)
