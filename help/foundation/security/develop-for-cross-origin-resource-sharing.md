@@ -7,7 +7,7 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 6754ccd7c17bcfa30b7200cb67f5ebd290912cb4
+source-git-commit: 1114ec01555baa1c6ffc2ccc5e77165ec9827e4d
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 運用能力的簡短範例 [!DNL CORS] 以透過使用者端JavaScript從外部Web應用程式存取AEM內容。 此範例使用CORS OSGi設定在AEM上啟用CORS存取。 OSGi設定方法適用於以下情況：
 
-+ 單一來源正在存取AEM發佈內容
-+ AEM Author需要CORS存取權
+* 單一來源正在存取AEM發佈內容
+* AEM Author需要CORS存取權
 
 如果需要多來源的AEM Publish存取權，請參閱 [本檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
 
