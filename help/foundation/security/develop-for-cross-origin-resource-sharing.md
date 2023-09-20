@@ -7,26 +7,31 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 46728ac6ad37590413e247d23262233626b0575b
+source-git-commit: 6754ccd7c17bcfa30b7200cb67f5ebd290912cb4
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
 
-# 為跨原始資源共用(CORS)開發
+# 開發跨原始資源共用(CORS)
 
-運用方式的簡短範例 [!DNL CORS] 透過使用者端JavaScript從外部Web應用程式存取AEM內容。
+運用能力的簡短範例 [!DNL CORS] 以透過使用者端JavaScript從外部Web應用程式存取AEM內容。 此範例使用CORS OSGi設定在AEM上啟用CORS存取。 OSGi設定方法適用於以下情況：
+
++ 單一來源正在存取AEM發佈內容
++ AEM Author需要CORS存取權
+
+如果需要多來源的AEM Publish存取權，請參閱 [本檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
 在本影片中：
 
-* **www.example.com** 透過以下方式對應至localhost `/etc/hosts`
-* **aem-publish.local** 透過以下方式對應至localhost `/etc/hosts`
-* SimpleHTTPServer (的包裝函式 [[!DNL Python]的SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html))透過連線埠8000提供HTML頁面。
-   * _Mac App Store不再提供此功能。 使用類似的，例如 [吉夫](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)._
-* [!DNL AEM Dispatcher] 執行時間 [!DNL Apache HTTP Web Server] 2.4與反向代理要求至 `aem-publish.local` 至 `localhost:4503`.
+* **www.example.com** 透過以下方式對應至本地主機： `/etc/hosts`
+* **aem-publish.local** 透過以下方式對應至本地主機： `/etc/hosts`
+* SimpleHTTPServer （的包裝函式） [[!DNL Python]的SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html))透過連線埠8000提供HTML頁面。
+   * _Mac App Store不再提供此功能。 使用類似的，例如 [吉維斯](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)._
+* [!DNL AEM Dispatcher] 執行時間 [!DNL Apache HTTP Web Server] 2.4和向的反向代理要求 `aem-publish.local` 至 `localhost:4503`.
 
 如需詳細資訊，請檢閱 [瞭解AEM中的跨原始資源共用(CORS)](./understand-cross-origin-resource-sharing.md).
 
@@ -35,7 +40,7 @@ ht-degree: 0%
 此網頁的邏輯如下
 
 1. 按一下按鈕時
-1. 建立 [!DNL AJAX GET] 要求至 `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
+1. 建立 [!DNL AJAX GET] 要求給 `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
 1. 擷取 `jcr:title` 形成JSON回應
 1. 插入 `jcr:title` 進入DOM
 
@@ -96,7 +101,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### 允許CORS要求標頭
 
-若要允許必要的 [傳遞至AEM以進行處理的HTTP要求標頭](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，Disaptcher的 `/clientheaders` 設定。
+若要允許必要的 [要傳遞至AEM以進行處理的HTTP請求標頭](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，在Dispatcher的 `/clientheaders` 設定。
 
 ```
 /clientheaders {
@@ -109,7 +114,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### 快取CORS回應標頭
 
-若要允許在快取內容上快取及提供CORS標頭，請新增以下內容 [/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers) 至AEM發佈 `dispatcher.any` 檔案。
+若要允許在快取內容上快取及提供CORS標頭，請新增下列內容 [/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers) 至AEM發佈 `dispatcher.any` 檔案。
 
 ```
 /publishfarm {
