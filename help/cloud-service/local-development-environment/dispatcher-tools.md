@@ -10,9 +10,9 @@ kt: 4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
+source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1695'
 ht-degree: 9%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 9%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="雲端中的 Dispatcher"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載 AEM as a Cloud Service SDK"
 
-Adobe Experience Manager (AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM Publish層級之間提供安全性與效能層。 Dispatcher 是整個 Experience Manager 架構的組成部分，應該是本機開發設定的一部分。
+Adobe Experience Manager (AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM發佈層級之間提供安全性與效能層。 Dispatcher 是整個 Experience Manager 架構的組成部分，應該是本機開發設定的一部分。
 
 AEM as a Cloud Service SDK 包括建議的 Dispatcher 工具版本，該版本有助於在本機設定、驗證和模擬 Dispatcher。Dispatcher工具由以下部分組成：
 
@@ -108,7 +108,7 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 
 Dispatcher工具提供了一組Apache HTTP Web伺服器和Dispatcher設定檔案，這些檔案定義了所有環境（包括本機開發）的行為。
 
-這些檔案旨在複製到Experience ManagerMaven專案中 `dispatcher/src` 資料夾(如果尚未存在於Experience ManagerMaven專案中)。
+這些檔案旨在複製到Experience ManagerMaven專案中 `dispatcher/src` 資料夾(如果Experience ManagerMaven專案中尚不存在這些資料夾)。
 
 在解壓縮的Dispatcher工具中，提供設定檔的完整說明為 `dispatcher-sdk-x.x.x/docs/Config.html`.
 
@@ -143,13 +143,16 @@ $ ./bin/validate.sh ./src
 
 AEM Dispatcher是使用Docker針對在本機執行 `src` Dispatcher和Apache Web Server設定檔。
 
+
 >[!BEGINTABS]
 
 >[!TAB macOS]
 
 ```shell
-$ ./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
+$ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
+
+此 `docker_run_hot_reload` 偏好使用可執行檔而非 `docker_run` 當組態檔案變更時重新載入它們，而不需手動終止和重新啟動 `docker_run`. 或者， `docker_run` 可以使用，但需要手動終止和重新啟動 `docker_run` 組態檔變更時。
 
 >[!TAB Windows]
 
@@ -160,8 +163,10 @@ $ bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-
 >[!TAB Linux]
 
 ```shell
-$ ./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
+$ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
+
+此 `docker_run_hot_reload` 偏好使用可執行檔而非 `docker_run` 當組態檔案變更時重新載入它們，而不需手動終止和重新啟動 `docker_run`. 或者， `docker_run` 可以使用，但需要手動終止和重新啟動 `docker_run` 組態檔變更時。
 
 >[!ENDTABS]
 
@@ -176,7 +181,7 @@ $ ./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispat
 >[!TAB macOS]
 
 ```shell
-$ ./bin/docker_run.sh ./src host.docker.internal:4503 8080
+$ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
 ```
 
 >[!TAB Windows]
@@ -188,7 +193,7 @@ $ bin\docker_run src host.docker.internal:4503 8080
 >[!TAB Linux]
 
 ```shell
-$ ./bin/docker_run.sh ./src host.docker.internal:4503 8080
+$ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
 ```
 
 >[!ENDTABS]
@@ -202,7 +207,7 @@ AEMas a Cloud ServiceSDK的發佈服務會在連線埠4503上本機執行，可�
 >[!TAB macOS]
 
 ```shell
-$ ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+$ ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
 >[!TAB Windows]
@@ -214,7 +219,7 @@ $ bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.int
 >[!TAB Linux]
 
 ```shell
-$ ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+$ ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
 >[!ENDTABS]
@@ -243,7 +248,7 @@ Dispatcher工具記錄檔在下列情況下發出到標準 `docker_run` 執行�
 >[!TAB macOS]
 
 ```shell
-$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
 >[!TAB Windows]
@@ -255,7 +260,7 @@ $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run <User Directory>/c
 >[!TAB Linux]
 
 ```shell
-$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
 >[!ENDTABS]
@@ -359,7 +364,7 @@ Phase 3 finished
 >[!TAB macOS]
 
 + 從終端機，執行 `ifconfig` 並記錄主機 __inet__ IP位址，通常是 __en0__ 裝置。
-+ 然後執行 `docker_run` 使用主機IP位址： `$ bin/docker_run.sh src <HOST IP>:4503 8080`
++ 然後執行 `docker_run` 使用主機IP位址： `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!TAB Windows]
 
@@ -369,7 +374,7 @@ Phase 3 finished
 >[!TAB Linux]
 
 + 從終端機，執行 `ifconfig` 並記錄主機 __inet__ IP位址，通常是 __en0__ 裝置。
-+ 然後執行 `docker_run` 使用主機IP位址： `$ bin/docker_run.sh src <HOST IP>:4503 8080`
++ 然後執行 `docker_run` 使用主機IP位址： `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!ENDTABS]
 
@@ -390,4 +395,4 @@ Waiting until host.docker.internal is available
 + [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
 + [下載Docker](https://www.docker.com/)
 + [下載AEM參考網站(WKND)](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience ManagerDispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
++ [Experience ManagerDispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)

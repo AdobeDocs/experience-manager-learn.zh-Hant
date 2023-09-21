@@ -1,6 +1,6 @@
 ---
-title: 為AEMas a Cloud Service開發設定本機AEM執行階段
-description: 使用AEMas a Cloud ServiceSDK的Quickstart Jar設定本機AEM執行階段。
+title: 設定適用於AEMas a Cloud Service開發的本機AEM SDK
+description: 使用AEMas a Cloud ServiceSDK的Quickstart Jar設定本機AEM SDK執行階段。
 feature: Developer Tools
 version: Cloud Service
 kt: 4678, 4677
@@ -10,14 +10,14 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
+source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1793'
 ht-degree: 9%
 
 ---
 
-# 設定本機AEM執行階段 {#set-up-local-aem-runtime}
+# 設定本機AEM SDK {#set-up-local-aem-sdk}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
@@ -76,13 +76,13 @@ AEMas a Cloud ServiceSDK (或AEM SDK)包含用於在本機執行AEM製作和發�
 
 1. 將下載的檔案解壓縮 `aem-sdk-XXX.zip` 檔案
 
-## 設定本機AEM作者服務{#set-up-local-aem-author-service}
+## 設定本機AEM Author服務{#set-up-local-aem-author-service}
 
-本機AEM作者服務為開發人員提供本機體驗，數位行銷人員/內容作者將共用該體驗來建立和管理內容。  AEM Author Service在設計上既是製作環境，又是預覽環境，可針對其執行大多數功能開發驗證，使其成為本機開發流程的重要元素。
+本機AEM作者服務為開發人員提供本機體驗，數位行銷人員/內容作者將共用該體驗來建立和管理內容。  AEM Author Service在設計上既是製作環境，又是預覽環境，可讓您針對此環境執行功能開發的大部分驗證，使其成為本機開發流程的重要元素。
 
 1. 建立資料夾 `~/aem-sdk/author`
 1. 複製 __快速入門JAR__ 檔案到  `~/aem-sdk/author` 並將其重新命名為 `aem-author-p4502.jar`
-1. 從命令列執行以下命令，啟動本機AEM Author Service：
+1. 從命令列執行下列動作，啟動本機AEM Author Service：
    + `java -jar aem-author-p4502.jar`
       + 提供管理員密碼作為 `admin`. 可接受任何管理員密碼，但建議使用預設的本機開發以減少重新設定的需求。
 
@@ -123,16 +123,16 @@ $ java -jar aem-author-p4502.jar
 
 ## 設定本機AEM Publish服務
 
-本機AEM Publish Service為開發人員提供AEM的本機體驗使用者將擁有的體驗，例如瀏覽存放在AEM上的網站。 本機AEM Publish Service很重要，因為它與AEM SDK的 [Dispatcher工具](./dispatcher-tools.md) 可讓開發人員進行煙霧測試，並微調面向最終使用者的體驗。
+本機AEM Publish Service為開發人員提供AEM的本機體驗使用者將擁有的體驗，例如瀏覽存放在AEM上的網站。 本機AEM發佈服務很重要，因為它與AEM SDK的整合 [Dispatcher工具](./dispatcher-tools.md) 可讓開發人員進行煙霧測試，並微調面向最終使用者的體驗。
 
 1. 建立資料夾 `~/aem-sdk/publish`
 1. 複製 __快速入門JAR__ 檔案到  `~/aem-sdk/publish` 並將其重新命名為 `aem-publish-p4503.jar`
-1. 從命令列執行以下命令，啟動本機AEM Publish Service：
+1. 從命令列執行下列動作，啟動本機AEM Publish Service：
    + `java -jar aem-publish-p4503.jar`
       + 提供管理員密碼作為 `admin`. 可接受任何管理員密碼，但建議使用預設的本機開發以減少重新設定的需求。
 
    您 *無法* 啟動AEM作為Cloud Service快速入門Jar [按兩下](#troubleshooting-double-click).
-1. 存取本機AEM Publish服務，位於 [http://localhost:4503](http://localhost:4503) 在網頁瀏覽器中
+1. 存取本機AEM Publish Service，位於 [http://localhost:4503](http://localhost:4503) 在網頁瀏覽器中
 
 >[!BEGINTABS]
 
@@ -266,7 +266,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 ## 正在停止本機AEM執行階段
 
-若要停止本機AEM執行階段（AEM製作或發佈服務），請開啟用來啟動AEM執行階段的命令列視窗，然後點選 `Ctrl-C`. 等待AEM關閉。 當關機程式完成時，命令列提示字元可用。
+若要停止本機AEM執行階段(AEM製作或發佈服務)，請開啟用來啟動AEM執行階段的命令列視窗，然後點選 `Ctrl-C`. 等待AEM關閉。 當關機程式完成時，命令列提示字元可用。
 
 ## 選擇性本機AEM執行階段設定工作
 
@@ -394,4 +394,4 @@ $ java --version
 + [下載AEM SDK](https://experience.adobe.com/#/downloads)
 + [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
 + [下載Docker](https://www.docker.com/)
-+ [Experience ManagerDispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
++ [Experience ManagerDispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
