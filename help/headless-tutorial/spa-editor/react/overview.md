@@ -14,7 +14,7 @@ role: Developer
 level: Beginner
 exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
 last-substantial-update: 2022-08-25T00:00:00Z
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 76%
@@ -23,7 +23,9 @@ ht-degree: 76%
 
 # 在AEM中建立您的第一個React SPA {#overview}
 
-歡迎使用專為 Adobe Experience Manager (AEM) 中 **SPA Editor** 功能的新手開發人員設計的多部分教學課程。本教學課程會逐步引導您為虛擬生活風格品牌WKND實作React應用程式。 React應用程式是使用AEM SPA Editor開發並設計來部署，可將React元件對應至AEM元件。 部署至 AEM 的完成 SPA 即可使用 AEM 傳統的內嵌編輯工具動態製作。
+{{edge-delivery-services}}
+
+歡迎使用專為 Adobe Experience Manager (AEM) 中 **SPA Editor** 功能的新手開發人員設計的多部分教學課程。此教學課程會逐步引導您為虛擬生活風格品牌WKND實作React應用程式。 React應用程式是使用AEM SPA Editor開發並設計而成的，可將React元件對應至AEM元件。 部署至 AEM 的完成 SPA 即可使用 AEM 傳統的內嵌編輯工具動態製作。
 
 ![實作的最終 SPA](assets/wknd-spa-implementation.png)
 
@@ -44,7 +46,7 @@ ht-degree: 76%
 開始進行此教學課程前，您需要具備以下條件：
 
 * HTML、CSS 和 JavaScript 的基本知識
-* 基本熟悉 [React](https://reactjs.org/tutorial/tutorial.html)
+* 對的基本熟悉 [React](https://reactjs.org/tutorial/tutorial.html)
 
 *雖然不一定需要，但對於[開發傳統的 AEM Sites 元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)有基本的了解也會有幫助。*
 
@@ -67,4 +69,4 @@ ht-degree: 76%
 
 ## 後續步驟 {#next-steps}
 
-您還在等什麼?!導覽至「 」，開始進行教學課程 [建立專案](create-project.md) 章節，並瞭解如何使用SPA專案原型產生啟用AEM編輯器的專案。
+您還在等什麼?!導覽至「 」以開始本教學課程 [建立專案](create-project.md) 章節，並瞭解如何使用SPA專案原型產生啟用AEM Editor的專案。

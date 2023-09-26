@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Manager as a Cloud Service影片和教學課程
-description: Adobe Experience Manager (AEM) as a Cloud Service教學課程系列
+description: Adobe Experience Manager (AEM)as a Cloud Service教學課程的集合
 sub-product: Experience Manager as a Cloud Service
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 9%
@@ -13,7 +13,9 @@ ht-degree: 9%
 
 # AEMas a Cloud Service影片和教學課程 {#overview}
 
-Adobe Experience Manager (AEM) 現在能以雲端服務形式使用。AEMas a Cloud Service推出新一代Experience Manager產品線，以過去的投資和創新為基礎，保留並擴充所有使用案例和功能。
+{{edge-delivery-services}}
+
+Adobe Experience Manager (AEM) 現在能以雲端服務形式使用。AEMas a Cloud Service推出新一代Experience Manager產品系列，以過去的投資和創新為基礎，保留及擴充所有使用案例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
@@ -22,24 +24,19 @@ Adobe Experience Manager (AEM) 現在能以雲端服務形式使用。AEMas a Cl
 ## 新增功能
 
 * **[權杖型驗證（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
-
-   *瞭解如何使用權杖型驗證，以透過HTTP與AEMas a Cloud Service互動*
+  *瞭解如何使用權杖式驗證，以透過HTTP與AEMas a Cloud Service互動*
 
 * **[Headless GraphQL （教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
-
-   *瞭解如何使用AEM GraphQL API在外部應用程式中強化體驗。*
+  *瞭解如何使用AEM GraphQL API在外部應用程式中強化體驗。*
 
 * **[大量匯入（影片）](./migration/bulk-import.md)**
-
-   *瞭解如何從Azure Blob儲存或Amazon S3大量匯入資產至AEM*
+  *瞭解如何從Azure Blob儲存或Amazon S3大量匯入資產至AEM*
 
 * **[asset compute中繼資料背景工作（教學課程）](./asset-compute/advanced/metadata.md)**
-
-   *瞭解如何從Asset compute背景工作將資產中繼資料寫回AEM*
+  *瞭解如何從Asset compute背景工作將資產中繼資料寫回AEM*
 
 * **[asset compute微服務擴充性（教學課程）](./asset-compute/overview.md)**
-
-   *瞭解如何開發Asset compute背景工作以產生自訂資產轉譯*
+  *瞭解如何開發Asset compute背景工作以產生自訂資產轉譯*
 
 </div>
 
@@ -52,7 +49,7 @@ Adobe Experience Manager (AEM) 現在能以雲端服務形式使用。AEMas a Cl
 
 <div id="staff-picks-section">
 
-## 工作人員選擇
+## 員工精選
 
 <table>
    <td>
@@ -61,7 +58,7 @@ Adobe Experience Manager (AEM) 現在能以雲端服務形式使用。AEMas a Cl
       </a>
       <div>
          <a href="./accessing/overview.md">
-         <strong>設定存取AEM教學課程</strong>
+         <strong>設定AEM存取權教學課程</strong>
          </a>
       </div>
       <p>

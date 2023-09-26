@@ -1,7 +1,7 @@
 ---
 title: 搭配AEM Sites使用頁面差異
 seo-title: Using Page Difference with AEM Sites
-description: AEM Sites的頁面差異功能顯示以顏色編碼快速檢視頁面中的變更內容（版本、即時副本、啟動、語言副本）。
+description: AEM Sites的頁面差異功能顯示以顏色快速檢視頁面中的變更內容（版本、即時副本、啟動、語言副本）。
 seo-description: AEM Sites' page difference capabilities show provides a quick, color-coded view of what content has changed in a page (version, live copy, launches, language copy).
 topics: authoring
 audience: author, marketer
@@ -16,7 +16,7 @@ feature: Authoring
 role: User
 level: Beginner
 exl-id: 4d365957-9a5a-44f8-a117-95c1c0dd757d
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 1%
@@ -25,7 +25,9 @@ ht-degree: 1%
 
 # 使用頁面差異功能 {#using-page-difference-with-aem-sites}
 
-AEM Sites的頁面差異功能顯示以顏色編碼快速檢視頁面中的變更內容（版本、即時副本、啟動、語言副本）。
+{{edge-delivery-services-and-page-editor}}
+
+AEM Sites的頁面差異功能顯示以顏色快速檢視頁面中的變更內容（版本、即時副本、啟動、語言副本）。
 
 ## 比較頁面版本 {#comparing-page-versions}
 

@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
-source-git-commit: 1623e1eaf966e625e1ec402a2996e8beb1e1cd03
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 1%
@@ -24,9 +24,11 @@ ht-degree: 1%
 
 # 使用頁面編輯器 {#using-page-editor-with-aem-sites}
 
-AEM網站的頁面編輯器是建立和編輯網頁內容的強大工具。 頁面編輯器的工具和功能可從「頁面編輯器」的UI工具列存取。
+{{edge-delivery-services-and-page-editor}}
 
-以下影片重點說明「頁面編輯器」的一些主要功能。
+AEM網站的頁面編輯器是建立和編輯網頁內容的強大工具。 頁面編輯器的工具和功能可從頁面編輯器的UI工具列存取。
+
+以下影片重點說明頁面編輯器的部分主要功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
 

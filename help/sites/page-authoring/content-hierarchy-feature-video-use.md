@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 51347f65-bed1-44da-ade3-69209fa443c4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
@@ -24,6 +24,8 @@ ht-degree: 0%
 
 # 內容結構和階層 {#content-hierarchy}
 
-瞭解如何在AEM Sites中建立及組織組織的網站頁面。
+{{edge-delivery-services-and-page-editor}}
+
+瞭解如何在AEM Sites中建立及組織您組織的網站頁面。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31785?quality=12&learn=on)

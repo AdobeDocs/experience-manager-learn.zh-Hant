@@ -1,6 +1,6 @@
 ---
-title: 搭配AEM Sites使用時間扭曲
-description: 時間扭曲是Adobe Experience Manager Sites的一項功能，可讓作者快速檢閱過去特定時間的頁面狀態。
+title: 搭配使用Timewarp與AEM Sites
+description: 時間扭曲是Adobe Experience Manager Sites的一項功能，可讓作者快速地檢閱過去特定時間的頁面狀態。
 topic: Content Management
 feature: Authoring
 role: User
@@ -9,7 +9,7 @@ version: 6.4, 6.5, Cloud Service
 kt: 3307
 thumbnail: 17453.jpg
 exl-id: 12d8c0c6-c556-49f4-a6fe-84fccfccf95e
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
@@ -18,10 +18,12 @@ ht-degree: 0%
 
 # 使用時間扭曲 {#using-timewarp-with-aem-sites}
 
-時間扭曲是Adobe Experience Manager Sites的一項功能，可讓作者快速檢閱過去特定時間的頁面狀態。
+{{edge-delivery-services-and-page-editor}}
+
+時間扭曲是Adobe Experience Manager Sites的一項功能，可讓作者快速地檢閱過去特定時間的頁面狀態。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17453?quality=12&learn=on)
 
 ## 更多資源 {#more-resources}
 
-* [使用頁面版本 — 時間扭曲](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/page-versions.html)
+* [使用頁面版本 — Timewarp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/page-versions.html)

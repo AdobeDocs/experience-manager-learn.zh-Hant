@@ -9,7 +9,7 @@ level: Beginner
 kt: 4321
 thumbnail: 32192.jpg
 exl-id: 41b40982-9796-418e-9bfc-af6fc720e9b8
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 38%
@@ -17,6 +17,8 @@ ht-degree: 38%
 ---
 
 # 瞭解頁面屬性 {#understanding-page-properties-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 以下影片會介紹與Adobe Experience Manager中的頁面相關聯的頁面屬性。
 
@@ -48,7 +50,7 @@ ht-degree: 38%
    * 匯出
 * 縮圖
 * 社交媒體分享
-* Cloud Services設定
+* Cloud Service設定
 * 個人化
    * ContextHub 組態
    * 定位組態

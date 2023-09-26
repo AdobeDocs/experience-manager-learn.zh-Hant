@@ -1,11 +1,11 @@
 ---
 title: AEM Sites影片和教學課程
-description: 從我們的影片和教學課程瞭解Experience Manager Sites。 瞭解我們員工的選擇和AEM Sites的新功能。
+description: 從我們的影片和教學課程瞭解Experience Manager Sites。 瞭解我們的員工選擇和AEM Sites的新功能。
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: d24649d4b1411f57a46595edddb601ac49b51643
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 13%
@@ -14,7 +14,9 @@ ht-degree: 13%
 
 # AEM Sites影片和教學課程 {#overview}
 
-Adobe Experience Manager (AEM) Sites是領先的體驗管理平台。 本使用手冊包含了AEM Sites許多功能的相關影片和教學課程。
+{{edge-delivery-services}}
+
+Adobe Experience Manager (AEM) Sites是領先的體驗管理平台。 本使用手冊包含了有關AEM Sites許多功能的影片和教學課程。
 
 
 <div id="whats-new-section">
@@ -22,24 +24,19 @@ Adobe Experience Manager (AEM) Sites是領先的體驗管理平台。 本使用�
 ## 新增功能
 
 * **[搭配AEM Sites使用啟動（影片）](./page-authoring/launches.md)**
-
-   *瞭解AEM Sites的啟動，以及如何使用它們來準備網站內容以供未來發行。*
+  *瞭解AEM Sites的啟動方式，以及如何使用啟動方式準備網站內容以供未來發行。*
 
 * **[使用AEM元件自訂Adobe使用者端資料層（教學課程）](./integrations/adobe-client-data-layer/data-layer-customize.md)**
-
-   *瞭解如何使用自訂AEM元件的內容更新Adobe使用者端資料層。*
+  *瞭解如何使用自訂AEM元件的內容來更新Adobe Client Data Layer。*
 
 * **[AEM Headless GraphQL快速入門（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
-
-   *如何使用AEM GraphQL API公開來自AEM的內容，以供原生行動應用程式使用。*
+  *如何使用AEM GraphQL API公開來自AEM的內容，以供原生行動應用程式使用。*
 
 * **[使用內容片段（影片系列）](./content-fragments/content-fragments-feature-video-use.md)**
-
-   *內容片段是可重複使用的內容片段，不受通道限制。*
+  *內容片段是可重複使用的內容片段，不受通道限制。*
 
 * **[使用SPA編輯器（影片）](./spa-editor/spa-editor-framework-feature-video-use.md)**
-
-   *瞭解適用於單頁應用程式(SPA)的AEM編輯功能。*
+  *瞭解適用於單頁應用程式(SPA)的AEM編輯功能。*
 
 </div>
 
@@ -52,7 +49,7 @@ Adobe Experience Manager (AEM) Sites是領先的體驗管理平台。 本使用�
 
 <div id="staff-picks-section">
 
-## 工作人員選擇
+## 員工精選
 
 <table>
 <tr>

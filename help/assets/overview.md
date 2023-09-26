@@ -4,7 +4,7 @@ description: 觀看我們的影片，以取得AEM Asset支援和協助。
 sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 15%
@@ -13,7 +13,9 @@ ht-degree: 15%
 
 # AEM Assets影片和教學課程 {#overview}
 
-Adobe Experience Manager (AEM) Assets是AEM平台上的數位資產管理工具，可讓使用者在網頁型存放庫中建立、管理和分享其數位資產（影像、影片、檔案和音訊片段）。 本使用手冊包含了AEM Assets許多功能的相關影片和教學課程。
+{{edge-delivery-services}}
+
+Adobe Experience Manager (AEM) Assets是AEM平台上的數位資產管理工具，可讓使用者在網頁型存放庫中建立、管理和分享其數位資產（影像、影片、檔案和音訊片段）。 本使用手冊包含了有關AEM Assets許多功能的影片和教學課程。
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_assets_overview"
@@ -23,7 +25,7 @@ Adobe Experience Manager (AEM) Assets是AEM平台上的數位資產管理工具�
 
 ## AEM Assets 逐步說明
 
-瞭解什麼是AEM Assets以及如何使用它來實現貴組織的業務目標。
+瞭解什麼是AEM Assets以及如何用來達成貴組織的業務目標。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336196?quality=12&learn=on)
 
@@ -36,7 +38,7 @@ Adobe Experience Manager (AEM) Assets是AEM平台上的數位資產管理工具�
 
 <div id="staff-picks-section">
 
-## 工作人員選擇
+## 員工精選
 
 <table>
 <td>
@@ -54,7 +56,7 @@ Adobe Experience Manager (AEM) Assets是AEM平台上的數位資產管理工具�
 </td>
 <td>
    <a href="./advanced/asset-insights-launch-tutorial.md">
-   <img alt="AEM Assets深入分析" src="./assets/overview/asset-insights.png"/>
+   <img alt="AEM Assets Insights" src="./assets/overview/asset-insights.png"/>
    </a>
    <div>
       <a href="./advanced/asset-insights-launch-tutorial.md">

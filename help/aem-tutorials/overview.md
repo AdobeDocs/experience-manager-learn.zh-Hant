@@ -2,7 +2,7 @@
 title: AEM 教學課程
 description: Adobe Experience Manager的影片和教學課程系列。
 exl-id: fe83a2dc-b43a-4e71-9b03-d31ec4f6a6ff
-source-git-commit: ebe252116f677ff7486346077736d0ee450896c1
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 28%
@@ -10,6 +10,8 @@ ht-degree: 28%
 ---
 
 # Experience Manager教學課程 {#overview}
+
+{{edge-delivery-services}}
 
 Adobe Experience Manager (AEM)是領先的體驗管理平台。 本使用手冊包含影片和教學課程，可幫助您從AEM獲得最大價值。
 
@@ -28,5 +30,5 @@ Adobe Experience Manager (AEM)是領先的體驗管理平台。 本使用手冊�
 + [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
 + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
 + [AEM 和 Adobe Target 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
-+ [AEM 6.x Dispatcher Cache教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)
++ [AEM 6.x Dispatcher快取教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)
 + [AEM 6.x Dynamic Media Classic教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html)
