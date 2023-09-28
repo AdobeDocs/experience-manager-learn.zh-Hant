@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 7b98f583f8b54fb9c9c706521c310282dcc17ea3
+source-git-commit: 90d0d4876869b05c2ce00fd8cf18c474a6a00e27
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 25%
+source-wordcount: '401'
+ht-degree: 24%
 
 ---
 
@@ -25,8 +25,8 @@ ht-degree: 25%
    + [標記](configuring/tagging.md)
    + [中繼資料結構描述](configuring/metadata-schemas.md)
    + [中繼資料設定檔](configuring/metadata-profiles.md)
-   + [中繼資料夾結構](configuring/metadata-folder-schemas.md)
-   + [資產管理搜尋邊欄](configuring/assets-admin-search-rail.md)
+   + [中繼資料的資料夾結構](configuring/metadata-folder-schemas.md)
+   + [Assets管理員搜尋邊欄](configuring/assets-admin-search-rail.md)
    + [處理設定檔](configuring/processing-profiles.md)
    + [自動開始工作流程](configuring/auto-start-workflows.md)
 
@@ -35,11 +35,11 @@ ht-degree: 25%
    + [基本操作](./authoring/basic-operations.md)
    + [中繼資料](./authoring/metadata.md)
    + [轉譯](./authoring/renditions.md)
-   + [建立關聯和取消關聯](./authoring/relate-unrelate.md)
+   + [建立關聯及取消關聯](./authoring/relate-unrelate.md)
 
 + 共同作業{#collaboration}
    + [時間軸和收件匣](./collaboration/timeline-and-inbox.md)
-   + [註解與註解](./collaboration/comments-and-annotations.md)
+   + [註釋和註解](./collaboration/comments-and-annotations.md)
    + [簽入和簽出](./collaboration/check-in-and-check-out.md)
    + [版本](./collaboration/versions.md)
    + [評論任務](./collaboration/review-task.md)
@@ -53,7 +53,7 @@ ht-degree: 25%
    + [3D資產](./advanced/3d-assets.md)
    + [註解PDF輸出](./advanced/customizing-annotations-pdf-output.md)
    + [資產 Insights](./advanced/asset-insights-launch-tutorial.md)
-   + [資產報表](./advanced/asset-reports.md)
+   + [Assets報表](./advanced/asset-reports.md)
    + [許可權(CUG)](./advanced/closed-user-groups.md)
    + [浮水印](./advanced/watermarks.md)
 
@@ -63,6 +63,9 @@ ht-degree: 25%
    + [影像的自訂智慧標籤](metadata/custom-smart-tags.md)
    + [視訊智慧標記](metadata/video-smart-tags.md)
    + [匯入和匯出中繼資料](metadata/metadata-import-export.md)
+
++ Edge遞送服務{#edge-delivery-services}
+   + [Sidekick外掛程式](./edge-delivery-services/sidekick-plugin.md)
 
 + 共用與散佈{#sharing}
    + [下載資產](./sharing/download.md)
@@ -89,7 +92,7 @@ ht-degree: 25%
 + Adobe Asset Link{#adobe-asset-link}
    + [設定](./adobe-asset-link/setup.md)
    + [存取Adobe資產連結](./adobe-asset-link/launch-adobe-asset-link.md)
-   + [面板概觀](./adobe-asset-link/panel-overview.md)
+   + [面板概述](./adobe-asset-link/panel-overview.md)
    + [檔案和集合](./adobe-asset-link/files-and-collections.md)
    + [下載和上傳](./adobe-asset-link/download-and-upload.md)
    + [簽入簽出](./adobe-asset-link/check-in-check-out.md)
@@ -129,12 +132,12 @@ ht-degree: 25%
       + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
 
    + 教學課程 {#tutorials}
-      + [建立輪播集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
+      + [建立轉盤集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [建立影像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [建立影像預設集](dynamic-media/tutorials/creating-image-presets.md)
       + [建立智慧型裁切影像設定檔](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
       + [建立視訊設定檔](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
-      + [處理資產](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [正在處理資產](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
       + [設定安全預覽伺服器](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
       + [產生URL和內嵌程式碼](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
       + [觸發匯出工作](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
