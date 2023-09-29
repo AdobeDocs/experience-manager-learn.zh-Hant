@@ -1,6 +1,6 @@
 ---
 user-guide-title: AEM Sites - WKND 教學課程快速入門
-user-guide-description: AEM 的新開發人員的多部分教學課程。 實作虛構的生活風格品牌 WKND 的 AEM 網站。啟用前端管道來加快開發到部署的週期。
+user-guide-description: AEM 的新開發人員的多部分教學課程。實作虛構的生活風格品牌 WKND 的 AEM 網站。啟用前端管道來加快開發到部署的週期。
 breadcrumb-title: AEM Sites WKND 教學課程
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
@@ -18,7 +18,7 @@ ht-degree: 46%
 
 # AEM Sites - WKND 教學課程快速入門 {#getting-started-wknd-tutorial-develop}
 
-+ [WKND教學課程總覽](overview.md)
++ [WKND教學課程概述](overview.md)
 + 專案原型 {#project-archetype}
    + [概觀](./project-archetype/overview.md)
    + [1 — 專案設定](./project-archetype/project-setup.md)
@@ -31,14 +31,14 @@ ht-degree: 46%
 + 快速建立網站 {#site-template}
    + [概觀](./site-template/overview.md)
    + [1 — 建立網站](./site-template/create-site.md)
-   + [2 — 撰寫和發佈簡介](./site-template/author-content-publish.md)
+   + [2 — 製作與發佈簡介](./site-template/author-content-publish.md)
    + [3 — 使用Adobe XD進行UI規劃](./site-template/ui-planning-adobe-xd.md)
    + [4 — 頁面範本](./site-template/page-templates.md)
-   + [5 — 主題化](./site-template/theming.md)
+   + [5 — 佈景主題](./site-template/theming.md)
 + 啟用前端管道 — DevOps{#enable-frontend-pipeline-devops}
    + [概觀](./enable-frontend-pipeline/overview.md)
    + [1 — 檢閱完整棧疊專案](./enable-frontend-pipeline/review-uifrontend-module.md)
    + [2 — 更新專案以使用前端管道](./enable-frontend-pipeline/update-project.md)
-   + [3 — 使用前端管道部署](./enable-frontend-pipeline/create-frontend-pipeline.md)
+   + [3 — 使用前端管道進行部署](./enable-frontend-pipeline/create-frontend-pipeline.md)
    + [4 — 考量事項](./enable-frontend-pipeline/considerations.md)
 
