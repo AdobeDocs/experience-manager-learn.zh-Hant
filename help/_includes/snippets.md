@@ -1,7 +1,7 @@
 ---
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 7f7bffa24539d0bba0dc9ac8cc94d0c8d1f2e871
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '129'
 ht-degree: 26%
 
 ---
@@ -13,12 +13,12 @@ ht-degree: 26%
 
 ## Edge遞送服務{#edge-delivery-services}
 
-[!BADGE 若要從AEM發佈至Edge Delivery Services，請按一下這裡。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="從AEM發佈至Edge Delivery Services"}
+[!BADGE 若要使用Edge Delivery Services從AEM Sites發佈，請按一下這裡。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="從AEM發佈至Edge Delivery Services"}
 
 ## Edge Delivery Services和頁面編輯器{#edge-delivery-services-and-page-editor}
 
-[!BADGE 若要從AEM發佈至Edge Delivery Services，請按一下這裡。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="從AEM發佈至Edge Delivery Services"}
+[!BADGE 若要使用Edge Delivery Services從AEM Sites發佈，請按一下這裡。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="從AEM發佈至Edge Delivery Services"}
 
 ## Edge Delivery Services和通用視覺化編輯器{#edge-delivery-services-and-universal-visual-editor}
 
-[!BADGE 若要從AEM發佈至Edge Delivery Services，請按一下這裡。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="從AEM發佈至Edge Delivery Services"}
+[!BADGE 若要使用Edge Delivery Services從AEM Sites發佈，請按一下這裡。]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="從AEM發佈至Edge Delivery Services"}
