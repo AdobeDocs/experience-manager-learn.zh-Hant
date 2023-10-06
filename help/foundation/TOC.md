@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation 教學課程
 user-guide-description: Adobe Experience Manager Foundation 的影片和教學課程系列。
 sub-product: Experience Manager
 index: y
-source-git-commit: 2f0490263eaf5e3458e2d71113411a4fdd0aa94c
+source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 16%
+source-wordcount: '232'
+ht-degree: 15%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 16%
    + [使用SSL精靈](./security/use-the-ssl-wizard.md)
    + [ModSecurity CRS DoS攻擊防護](./security/modsecurity-crs-dos-attack-protection.md)
    + [使用私人憑證與API的HTTPS連線](./security/call-internal-apis-having-private-certificate.md)
-   + [雙向TLS (mTLS)驗證](./security/mutual-tls-authentication.md)
+   + [來自AEM的雙向TLS (mTLS)驗證](./security/mutual-tls-authentication.md)
 + 工作流程 {#workflow}
    + [使用工作流程編輯器](./workflow/use-the-workflow-editor.md)
    + [使用工作流程](./workflow/use-workflow.md)

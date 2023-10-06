@@ -1,5 +1,5 @@
 ---
-title: 相互傳輸層安全性(mTLS)驗證
+title: 來自AEM的相互傳輸層安全性(mTLS)驗證
 description: 瞭解如何從AEM對需要相互傳輸層安全性(mTLS)驗證的網頁API進行HTTPS呼叫。
 feature: Security
 version: 6.5, Cloud Service
@@ -10,15 +10,15 @@ kt: 13881
 thumbnail: KT-13881.png
 doc-type: article
 last-substantial-update: 2023-10-10T00:00:00Z
-source-git-commit: 2f0490263eaf5e3458e2d71113411a4fdd0aa94c
+source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
 
 
-# 相互傳輸層安全性(mTLS)驗證
+# 來自AEM的相互傳輸層安全性(mTLS)驗證
 
 瞭解如何從AEM對需要相互傳輸層安全性(mTLS)驗證的網頁API進行HTTPS呼叫。
 
@@ -81,7 +81,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
 ### 憑證交換
 
-如果使用自我簽署CA進行AEM憑證（如上所述），請與API提供者交換憑證或內部憑證授權單位(CA)憑證。
+如果對AEM憑證使用自我簽署CA （如上所述），請將憑證或內部憑證授權單位(CA)憑證傳送給API提供者。
 
 此外，如果API提供者使用自我簽署的CA憑證，請從API提供者接收憑證或內部憑證授權單位(CA)憑證。
 
