@@ -10,17 +10,19 @@ kt: 11548
 thumbnail: KT-11548.png
 doc-type: article
 last-substantial-update: 2023-08-25T00:00:00Z
-source-git-commit: d4859d8af066d456f16f76869e99432aaa5b9863
+exl-id: c88aa724-9680-450a-9fe8-96e14c0c6643
+source-git-commit: 68aaa58c8f95e72e1a7cb89f849c77d1210f31ee
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
 
-
 # 呼叫具有私人憑證的內部API
 
 瞭解如何使用私人或自我簽署憑證，從AEM對Web API進行HTTPS呼叫。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424853?quality=12&learn=on)
 
 根據預設，嘗試與使用自我簽署憑證的網頁API建立HTTPS連線時，連線會失敗並出現錯誤：
 
@@ -59,7 +61,7 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 
 ## HttpClient和載入AEM TrustStore資料
 
-若要呼叫具有 _私人或自我簽署憑證_，則 [HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)的 `SSLContextBuilder` 必須使用AEM TrustStore載入，並用來協助連線。
+若要呼叫具有 _私人或自我簽署憑證_，則 [HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)的 `SSLContextBuilder` 必須使用AEM TrustStore載入，並用來促進連線。
 
 請遵循下列步驟：
 
@@ -148,3 +150,10 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 使用私人憑證有效叫用內部API的傳統方法涉及修改JVM金鑰存放區。 這是透過使用Java匯入私人憑證來實現的™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) 命令。
 
 然而，此方法不符合安全性最佳實務，AEM透過使用 **全域信任存放區** 和 [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html).
+
+
+## 解決方案套件
+
+影片中降級的範例Node.js專案可以從以下下載： [此處](assets/internal-api-call/REST-APIs.zip).
+
+AEM servlet程式碼可在WKND Sites專案的 `tutorial/web-api-invocation` 分支， [另請參閱](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
