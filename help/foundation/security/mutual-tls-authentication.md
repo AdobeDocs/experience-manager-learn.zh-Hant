@@ -10,17 +10,19 @@ kt: 13881
 thumbnail: KT-13881.png
 doc-type: article
 last-substantial-update: 2023-10-10T00:00:00Z
-source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
+exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
+source-git-commit: 549b444d0a195fb9b5b8fd7ff48cf133746e5fd2
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
 
-
 # 來自AEM的相互傳輸層安全性(mTLS)驗證
 
 瞭解如何從AEM對需要相互傳輸層安全性(mTLS)驗證的網頁API進行HTTPS呼叫。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
 
 mTLS或雙向TLS驗證藉由要求 **使用者端和伺服器相互認證**. 此驗證透過使用數位憑證完成。 它通常用於高度安全性和身分驗證至關重要的情況。
 
@@ -221,3 +223,9 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 使用私密憑證有效叫用mTLS API的傳統方法涉及修改JVM金鑰存放區。 這是透過使用Java匯入私人憑證來實現的™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) 命令。
 
 然而，此方法不符合安全性最佳實務，AEM透過使用 **使用者特定的KeyStore和全域TrustStore** 和 [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html).
+
+## 解決方案套件
+
+影片中降級的範例Node.js專案可以從以下下載： [此處](assets/internal-api-call/REST-APIs.zip).
+
+AEM servlet程式碼可在WKND Sites專案的 `tutorial/web-api-invocation` 分支， [另請參閱](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
