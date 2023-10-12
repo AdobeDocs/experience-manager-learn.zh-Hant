@@ -8,7 +8,7 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 19%
@@ -20,13 +20,13 @@ ht-degree: 19%
 
 + [AEM Headless概述](./overview.md)
 + GraphQL {#graphql}
-   + [AEM Headless開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+   + [AEM Headless開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
    + [概觀](./graphql/overview.md)
    + 快速設定 {#quick-setup}
       + [雲端服務](./graphql/quick-setup/cloud-service.md)
       + [AEM SDK](./graphql/quick-setup/local-sdk.md)
    + 影片系列{#video-series}
-      + [1 — 模型基本知識](./graphql/video-series/modeling-basics.md)
+      + [1 — 模型基本概念](./graphql/video-series/modeling-basics.md)
       + [2 — 進階模型](./graphql/video-series/advanced-modeling.md)
       + [3 — 建立GraphQL查詢](./graphql/video-series/creating-graphql-queries.md)
       + [4 — 內容片段變數](./graphql/video-series/content-fragment-variations.md)
@@ -54,7 +54,7 @@ ht-degree: 19%
 + 部署{#deployments}
    + [概觀](./graphql/deployment/overview.md)
    + [單頁應用程式](./graphql/deployment/spa.md)
-   + [網頁元件](./graphql/deployment/web-component.md)
+   + [Web元件](./graphql/deployment/web-component.md)
    + [行動](./graphql/deployment/mobile.md)
    + [伺服器對伺服器](./graphql/deployment/server-to-server.md)
    + 設定{#configurations}
@@ -72,7 +72,7 @@ ht-degree: 19%
    + 範例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [Next.js](./graphql/example-apps/next-js.md)
-      + [網頁元件](./graphql/example-apps/web-component.md)
+      + [Web元件](./graphql/example-apps/web-component.md)
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
       + [Node.js](./graphql/example-apps/server-to-server-app.md)
@@ -113,15 +113,15 @@ ht-degree: 19%
    + [3 — 編寫事件內容片段](./content-services/chapter-3.md)
    + [4 — 定義Content Services範本](./content-services/chapter-4.md)
    + [5 — 編寫Content Services頁面](./content-services/chapter-5.md)
-   + [6 — 在AEM Publish上公開內容以進行傳送](./content-services/chapter-6.md)
+   + [6 — 在AEM Publish上公開傳送的內容](./content-services/chapter-6.md)
    + [7 — 從行動應用程式使用AEM內容服務](./content-services/chapter-7.md)
 + 程式碼範例 {#code-samples}
    + [篩選React應用程式](./graphql/code-samples/filtering-react-app.md)
    + [篩選前置應用程式](./graphql/code-samples/filtering-preact-app.md)
    + [篩選Angular應用程式](./graphql/code-samples/filtering-angular-app.md)
    + [篩選值應用程式](./graphql/code-samples/filtering-vue-app.md)
-   + [使用jQuery和Handlebars篩選](./graphql/code-samples/filtering-jquery-handlebars.md)
-   + [正在篩選SvelteKit應用程式](./graphql/code-samples/filtering-sveltekit-app.md)
+   + [使用jQuery和Handlebars進行篩選](./graphql/code-samples/filtering-jquery-handlebars.md)
+   + [篩選SvelteKit應用程式](./graphql/code-samples/filtering-sveltekit-app.md)
    + [篩選ExpressJS和Pug應用程式](./graphql/code-samples/filtering-express-pug-app.md)
    + [基本React應用程式](./graphql/code-samples/basic-react-app.md)
    + [基本Next.js應用程式](./graphql/code-samples/basic-nextjs-app.md)

@@ -6,7 +6,7 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: e7e5a07ecada8e5760cd1496bdb44b3d035373dd
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 22%
@@ -43,7 +43,7 @@ ht-degree: 22%
    + [網頁最佳化的影像交付](components/web-optimized-image-delivery.md)
    + [元件主控台](components/components-console-feature-video-use.md)
 + 內容片段 {#content-fragments}
-   + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html)
+   + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [編寫內容片段](content-fragments/content-fragments-feature-video-use.md)
    + [傳送內容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [翻譯內容片段](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -51,13 +51,13 @@ ht-degree: 22%
 + 體驗片段 {#experience-fragments}
    + [使用體驗片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [建置區塊](experience-fragments/building-blocks.md)
-   + [內容片段vs.體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + [內容片段vs.體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 
 + 開發 {#developing}
    + [AEM 專案原型](developing/aem-project-archetype.md)
-   + [AEM Sites快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)
-   + [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
-   + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+   + [AEM Sites快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant){target=_blank}
+   + [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
+   + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
    + [回應式中斷點](developing/responsive-breakpoints.md)
    + [使用樣式系統進行開發](developing/style-system-technical-video-understand.md)
@@ -67,7 +67,7 @@ ht-degree: 22%
    + [社交媒體分享](developing/social-media-sharing-technical-video-use.md)
    + [自訂元件圖示](developing/component-icons-technical-video-develop.md)
 + 個人化 {#personalization}
-   + [與Adobe Target整合](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html)
+   + [與Adobe Target整合](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html){target=_blank}
    + [設定體驗片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [搭配Adobe Target使用體驗片段](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [設定ContextHub](personalization/context-hub-technical-video-setup.md)
@@ -75,7 +75,7 @@ ht-degree: 22%
    + [Sitemap](./seo/sitemaps.md)
 + 單頁應用程式 {#spa-editor}
    + [使用SPA編輯器](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+   + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
 + 多網站管理 {#multi-site-management}
    + [語言副本簡介](./multi-site-management/language-copy-overview.md)
    + [即時副本和Blueprint](./multi-site-management/live-copy-and-blueprint.md)
