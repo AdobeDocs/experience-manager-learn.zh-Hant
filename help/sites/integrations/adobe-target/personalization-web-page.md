@@ -14,27 +14,27 @@ level: Intermediate
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
 
 # 個人化完整網頁體驗 {#personalization-fpe}
 
-瞭解如何建立活動，以使用Adobe Target將AEM上託管的網站頁面重新導向至新頁面。
+瞭解如何建立活動，使用Adobe Target將AEM上託管的網頁重新導向至新頁面。
 
-## 必備條件
+## 先決條件
 
-為了個人化AEM網站的完整頁面，必須完成下列設定：
+若要個人化AEM網站的完整頁面，必須完成下列設定：
 
 1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
 1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
 
 ## 案例概述
 
-WKND網站重新設計了首頁，並且想要將其目前首頁訪客重新導向至新的首頁。 同時，也瞭解重新設計的首頁如何協助改善使用者參與度和收入。 行銷人員已指派您建立活動，以將訪客重新導向至新首頁。 讓我們探索WKND網站首頁，瞭解如何使用Adobe Target建立活動。
+WKND網站重新設計了首頁，並且想要將其目前首頁的訪客重新導向至新的首頁。 同時，也瞭解重新設計的首頁如何有助於提高使用者參與度和收入。 身為行銷人員，您已被指派建立活動，以將訪客重新導向新首頁的任務。 讓我們探索WKND網站首頁，瞭解如何使用Adobe Target建立活動。
 
 ## 使用視覺化體驗撰寫器(VEC)建立A/B測試的步驟
 
@@ -47,7 +47,7 @@ WKND網站重新設計了首頁，並且想要將其目前首頁訪客重新導�
 
    ![活動URL](assets/ab-test-url.png)
 
-1. 建立新活動後，視覺化體驗撰寫器會在左側顯示兩個標籤： *體驗A* 和 *體驗B*. 從清單中選取體驗。 您可以使用將新體驗新增至清單 **新增體驗** 按鈕。
+1. 視覺化體驗撰寫器在您建立活動後，會在左側顯示兩個標籤： *體驗A* 和 *體驗B*. 從清單中選取體驗。 您可以使用將體驗新增至清單 **新增體驗** 按鈕。
 
    ![體驗選項](assets/experience-options.png)
 
@@ -59,11 +59,11 @@ WKND網站重新設計了首頁，並且想要將其目前首頁訪客重新導�
 
    ![冒險](assets/new-experiences.png)
 
-1. 按一下 **下一個** 移至目標定位，並保持兩個體驗之間的手動流量分配50-50。
+1. 按一下 **下一個** 移至目標定位，並保持兩個體驗之間的手動流量分配50至50。
 
    ![定位](assets/targeting.png)
 
-1. 對於目標和設定，選擇報表來源作為Adobe Target，然後選取目標量度作為轉換和頁面檢視動作。
+1. 針對目標與設定，選擇報表來源為Adobe Target，然後選取目標量度為轉換連同頁面檢視動作。
 
    ![目標](assets/goals.png)
 
@@ -82,5 +82,5 @@ WKND網站重新設計了首頁，並且想要將其目前首頁訪客重新導�
 
 ## 支援連結
 
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
+* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 * [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

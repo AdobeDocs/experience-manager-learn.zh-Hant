@@ -1,6 +1,6 @@
 ---
 title: 建立使用者端資料庫
-description: 建立clientlibrary以處理「儲存並退出」按鈕的點選事件
+description: 建立使用者端程式庫以處理「儲存並退出」按鈕的點選事件
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: c90eea73-bd44-40af-aa98-d766aa572415
-source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '148'
 ht-degree: 6%
 
 ---
@@ -67,9 +67,9 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> 我們已使用 [bootbox javascript程式庫](http://bootboxjs.com/examples.html) 顯示對話方塊
+> 我們已使用 [Bootbox JavaScript程式庫](https://bootboxjs.com/examples.html) 顯示對話方塊
 
-此範例中使用的使用者端資料庫可以是 [已從此處下載](assets/store-af-with-attachments-client-lib.zip)
+此範例中使用的使用者端資料庫可以是 [已從此處下載。](assets/store-af-with-attachments-client-lib.zip)
 
 ## 後續步驟
 

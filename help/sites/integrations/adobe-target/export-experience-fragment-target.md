@@ -1,6 +1,6 @@
 ---
 title: 將體驗片段匯出至Adobe Target
-description: 瞭解如何將AEM體驗片段發佈和匯出為Adobe Target選件。
+description: 瞭解如何將AEM Experience Fragment發佈並匯出為Adobe Target選件。
 feature: Experience Fragments
 topics: integrations, authoring
 audience: all
@@ -14,10 +14,10 @@ level: Intermediate
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 3%
+source-wordcount: '200'
+ht-degree: 4%
 
 ---
 
@@ -33,15 +33,15 @@ ht-degree: 3%
 
 ## 疑難排解
 
-### 將體驗片段匯出至目標失敗
+### 將體驗片段匯出至Target失敗
 
 #### 錯誤
 
-在沒有Adobe Admin Console中的正確許可權的情況下將體驗片段匯出到Adobe Target，會在AEM Author服務上導致以下錯誤：
+在沒有Adobe Admin Console中的正確許可權的情況下將體驗片段匯出至Adobe Target，會在AEM作者服務上導致以下錯誤：
 
-    ![Target API UI錯誤](assets/error-target-offer.png)
+    ！[Target API UI錯誤](assets/error-target-offer.png)
 
-...和以下日誌訊息 `aemerror` 記錄：
+...以及中的以下記錄訊息 `aemerror` 記錄：
 
     ![Target API主控台錯誤](assets/target-console-error.png)
 
@@ -49,14 +49,14 @@ ht-degree: 3%
 
 1. 登入 [Admin Console](https://adminconsole.adobe.com/) 已使用Adobe Target產品設定檔的管理許可權，但AEM整合
 2. 選取 __產品> Adobe Target >產品描述檔__
-3. 下 __整合__ 索引標籤中，為您的AEMas a Cloud Service環境選取整合(與Adobe I/O專案相同的名稱)
+3. 在 __整合__ 索引標籤中，為您的AEMas a Cloud Service環境選取整合(與Adobe Developer專案相同的名稱)
 4. 指派 __編輯者__ 或 __核准者__ 角色
 
    ![Target API錯誤](assets/target-permissions.png)
 
-新增正確許可權至您的Adobe Target整合應可解決此錯誤。
+將正確的許可權新增至您的Adobe Target整合應可解決此錯誤。
 
 ## 支援連結
 
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

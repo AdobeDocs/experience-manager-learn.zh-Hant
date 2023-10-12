@@ -14,9 +14,9 @@ level: Intermediate
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 瞭解如何使用視覺化體驗撰寫器(VEC)建立A/B測試Target活動。
 
-## 必備條件
+## 先決條件
 
 若要在AEM網站上使用VEC，必須完成下列設定：
 
@@ -40,7 +40,7 @@ WKND網站首頁會以資訊卡的形式顯示當地活動或城市周圍的最�
 
 1. 登入 [Adobe Experience Cloud](https://experience.adobe.com/)，點選 __Target__，導覽至 __活動__ 標籤
 
-   + 如果您沒有看見 __Target__ 在Experience Cloud控制面板上，確保在右上角的組織切換器中選取正確的Adobe組織，並且您的使用者已被授予在中存取Target的許可權。 [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + 如果您沒有看到 __Target__ 在Experience Cloud控制面板上，確保在右上方的組織切換器中選取正確的Adobe組織，且該使用者已被授予在中存取Target的許可權 [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 1. 按一下 **建立活動** 按鈕，然後選擇 **A/B測試** 活動
 
@@ -50,15 +50,15 @@ WKND網站首頁會以資訊卡的形式顯示當地活動或城市周圍的最�
 
    ![活動URL](assets/ab-test-url.png)
 
-1. 建立新活動後，視覺化體驗撰寫器會在左側顯示兩個標籤： *體驗A* 和 *體驗B*. 從清單中選取體驗。 您可以使用將新體驗新增至清單 **新增體驗** 按鈕。
+1. 視覺化體驗撰寫器在您建立活動後，會在左側顯示兩個標籤： *體驗A* 和 *體驗B*. 從清單中選取體驗。 您可以使用將體驗新增至清單 **新增體驗** 按鈕。
 
    ![體驗A](assets/experience.png)
 
-1. 在頁面上選取影像或文字，以開始進行修改，或使用代碼編輯器來挑選和HTML元素。
+1. 在頁面上選取影像或文字，以開始進行修改，或使用程式碼編輯器來挑選及HTML元素。
 
    ![元素](assets/select-element.png)
 
-1. 變更文字 *西澳洲露營* 至 *澳洲歷險*. 「修改」下會顯示新增至體驗的變更清單。 您可以按一下並編輯修改的專案，以檢視其CSS選取器以及新增至該專案的新內容。
+1. 變更文字來源 *西澳洲露營* 至 *澳洲歷險記*. 「修改」下會顯示新增至體驗的變更清單。 您可以按一下並編輯修改的專案，以檢視其CSS選取器以及新增至該專案的新內容。
 
    ![冒險](assets/adventures.png)
 
@@ -67,11 +67,11 @@ WKND網站首頁會以資訊卡的形式顯示當地活動或城市周圍的最�
 
    ![探索](assets/explore.png)
 
-1. 按一下 **下一個** 移至「鎖定目標」，在兩個體驗之間保留50-50的手動流量分配。
+1. 按一下 **下一個** 移至目標定位，並保持兩個體驗之間的手動流量分配50至50。
 
    ![定位](assets/targeting.png)
 
-1. 對於目標和設定，選擇報表來源作為Adobe Target，然後選取目標量度作為轉換和頁面檢視動作。
+1. 針對目標與設定，選擇報表來源為Adobe Target，然後選取目標量度為轉換連同頁面檢視動作。
 
    ![目標](assets/goals.png)
 
@@ -80,15 +80,15 @@ WKND網站首頁會以資訊卡的形式顯示當地活動或城市周圍的最�
 
    ![目標](assets/activate.png)
 
-1. 在新標籤中開啟您的網站頁面（步驟3中的活動URL），您應該能夠從A/B測試活動檢視任一體驗（冒險或探索）。
+1. 在新標籤中開啟您的網站頁面（步驟3中的活動URL），您應該能夠從A/B測試活動檢視任一體驗（探索或探索）。
 
    ![目標](assets/publish.png)
 
 ## 摘要
 
-在本章中，行銷人員可以拖放、交換和修改網頁的版面和內容，而不需變更任何程式碼來執行測試，藉以使用視覺化體驗撰寫器建立體驗。
+在本章中，行銷人員可以拖放、交換及修改網頁的版面和內容，不使用變更任何程式碼來執行測試，藉以使用視覺化體驗撰寫器建立體驗。
 
 ## 支援連結
 
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
