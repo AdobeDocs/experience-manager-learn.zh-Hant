@@ -1,6 +1,6 @@
 ---
 title: AEM Champion秘訣與技巧 — Cloud Manager入門行動手冊
-description: 檢視AEM冠軍和專家Rakesh Pasuleti的Cloud Manager入門和入門行動手冊的這些提示。
+description: 檢視這些有關Cloud Manager上線和上線行動手冊的提示，由AEM冠軍和專家Rakesh Pasupuleti提供。
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -9,8 +9,8 @@ level: Beginner
 doc-type: Value Video
 last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13228
-exl-id: a52b253c-14b4-465b-9714-7f321435a945
-source-git-commit: 2e37a7ae14f98e2298bcb0a625f8ed55edcee6ad
+exl-id: d1745cea-906b-46fa-adcc-7da6e7ee95db
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 5%
@@ -19,13 +19,13 @@ ht-degree: 5%
 
 # AEM Champion秘訣與技巧 — Cloud Manager入門行動手冊
 
-入門行動手冊將幫助您作為AEMas a Cloud Service的新管理員和開發人員負責。 在可下載的試算表中，我們將引導您瞭解您開始入門歷程後頭三週應該完成的活動。
+入門行動手冊將幫助您作為AEMas a Cloud Service的新管理員和開發人員負責。 在可下載的試算表中，我們將逐步引導您瞭解您開始入門歷程後頭三週應該完成的活動。
 
 >[!TIP]
 >
->下載 [在此處入門行動手冊。](./assets/Cloud-Manager-for-AEM-as-a-Cloud-Service.xlsx)
+>下載 [在此加入行動手冊。](./assets/Cloud-Manager-for-AEM-as-a-Cloud-Service.xlsx)
 
-檢視您的技術負責人Rakesh Pasupuleti提供的這些秘訣。 Rakesh是Adobe Experience Manager達人，他分享了關於如何使用入門教戰手冊的想法。
+歡迎參考技術負責人Rakesh Pasupuleti提供的這些秘訣。 Rakesh是Adobe Experience Manager冠軍，他分享了關於如何使用入門行動手冊的想法。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419299?quality=12&learn=on)
 

@@ -1,6 +1,6 @@
 ---
 title: 部署範例資產
-description: 在本機雲端就緒系統上部署範例資產。
+description: 將範例資產部署在本機雲端就緒的系統上。
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -8,7 +8,8 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+exl-id: ae8104fa-7af2-49c2-9e6b-704152d49149
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
@@ -27,8 +28,6 @@ ht-degree: 0%
 
 * [安裝Azure支援的表單資料模型](./assets/azure-storage-fdm.zip). 您必須提供Azure儲存體帳戶認證，表單資料模型才能運作。 在表單資料模型編輯器中測試表單資料模型。
 
-* [匯入最適化表單範例](./assets/credit-applications-af.zip)
+* [匯入範例最適化表單](./assets/credit-applications-af.zip)
 * [匯入使用者端資源庫](./assets/client-lib.zip)
-* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/creditapplications/jcr:content?wcmmode=disabled). 輸入有效的電子郵件，然後按一下儲存按鈕。 表單資料應儲存在Azure儲存體中，且會傳送包含已儲存表單連結的電子郵件至指定的電子郵件地址。
-
-
+* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/creditapplications/jcr:content?wcmmode=disabled). 輸入有效的電子郵件，然後按一下儲存按鈕。 表單資料應儲存在Azure儲存體中，且會傳送一封包含已儲存表單連結的電子郵件至指定的電子郵件地址。

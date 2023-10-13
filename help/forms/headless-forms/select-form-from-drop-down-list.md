@@ -7,8 +7,8 @@ kt: 13346
 topic: Development
 role: User
 level: Intermediate
-exl-id: 31008bb3-316b-4035-89ea-e830b429b927
-source-git-commit: 529e98269a08431152686202a8a2890712b9c835
+exl-id: 49b6a172-8c96-4fc6-8d31-c2109f65faac
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 下拉式清單
 
-下列程式碼可用來將listforms API呼叫的結果填入下拉式清單中。 根據使用者選擇，顯示最適化表單以供使用者填寫和提交。 [原物料UI元件](https://mui.com/) 已用於建立此介面
+下列程式碼可用來將listforms API呼叫的結果填入下拉式清單中。 根據使用者選擇，將顯示最適化表單以供使用者填寫和提交。 [原物料UI元件](https://mui.com/) 已用於建立此介面
 
 ```javascript
 import * as React from 'react';
@@ -125,7 +125,7 @@ const getAFForms =async()=>
 
 建立此使用者介面時，使用了下列兩個API呼叫
 
-* [清單表單](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). 擷取表單的呼叫只會在元件轉譯時執行一次。 API呼叫的結果會儲存在afForms變數中。
+* [清單表單](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). 擷取表單的呼叫只會在元件轉譯時執行一次。 API呼叫的結果儲存在afForms變數中。
 在上述程式碼中，我們會使用map函式來反複執行afForms，針對afForms陣列中的每個專案，會建立MenuItem元件並新增至Select元件。
 
 * 擷取表單 — 對 [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition)，其中id是使用者在下拉式清單中選取的最適化表單的id。 此GET呼叫的結果會儲存在selectedForm中。
@@ -137,7 +137,7 @@ console.log(formJSON.afModelDefinition);
 setForm(formJSON.afModelDefinition);
 ```
 
-* 顯示選取的表單。 已使用下列程式碼來顯示選取的表單。 AdaptiveForm元素在aemforms/af-react-renderer npm套件中提供，且預期對應和formJson為其屬性
+* 顯示選取的表單。 下列程式碼已用於顯示選取的表單。 AdaptiveForm元素在aemforms/af-react-renderer npm套件中提供，且預期對應和formJson為其屬性
 
 ```
 <div><AdaptiveForm mappings={extendMappings} formJson={selectedForm}/></div>

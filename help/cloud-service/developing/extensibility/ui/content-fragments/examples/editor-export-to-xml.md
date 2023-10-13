@@ -10,42 +10,42 @@ jira: KT-13309
 thumbnail: KT-13309.jpg
 doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
-source-git-commit: c54d078c6282f8ace936dd4a9ee0d5cc39490230
+exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
 
 ---
 
-
 # 將內容片段匯出至XML
 
-![內容片段編輯器頁首功能表擴充功能範例](./assets/export-to-xml/hero.png){align="center"}
+![內容片段編輯器標題功能表擴充功能範例](./assets/export-to-xml/hero.png){align="center"}
 
-自訂按鈕可以使用新增到內容片段編輯器標題選單 `headerMenu` 延伸點。 此範例說明如何新增按鈕到標題選單，以及如何處理點選事件，以將作用中的內容片段匯出為XML或CSV。
+自訂按鈕可以使用新增到內容片段編輯器標題選單 `headerMenu` 延伸點。 此範例說明如何新增按鈕到標題選單，以及如何處理點選事件以將作用中的內容片段匯出為XML或CSV。
 
-頁首按鈕可作為單一按鈕存在，或作為具有子專案的按鈕存在。 此範例說明如何使用子專案實作按鈕，但包含用於實作單一按鈕的註釋掉程式碼。
+頁首按鈕可以單一按鈕的形式存在，也可以作為具有子專案的按鈕存在。 此範例說明如何使用子專案實施按鈕，但包含註釋掉的程式碼以實施單一按鈕。
 
 ## 擴充點
 
-此範例延伸至擴充點 `headerBar` 以新增自訂按鈕到內容片段編輯器。
+此範例會延伸至擴充點 `headerBar` 以新增自訂按鈕到內容片段編輯器。
 
-| AEM UI延伸 | 擴充點 |
+| AEM UI已擴充 | 擴充點 |
 | ------------------------ | --------------------- | 
 | [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [頁首功能表](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
 
 ## 範例擴充功能
 
-以下範例會建立含有兩個子專案的標頭功能表按鈕，其中一個是將作用中內容片段匯出為XML （已實作），另一個是將作用中內容片段匯出為CSV （未實作）。
+下列範例會建立含有兩個子專案的頁首功能表按鈕，其中一個是將作用中內容片段匯出為XML （已實作），另一個是將作用中內容片段匯出為CSV （未實作）。
 
-此程式碼顯示如何在擴充功能的註冊檔案中取得內容片段內容，以及如何匯出內容片段的JSON內容。
+此程式碼說明如何在擴充功能的註冊檔案中取得內容片段內容，以及如何匯出內容片段的JSON內容。
 
 ### 擴充功能註冊
 
-`ExtensionRegistration.js`，對應至index.html路由，是AEM擴充功能的入口點，並定義：
+`ExtensionRegistration.js`，對應至index.html路由，是AEM擴充功能的進入點，並定義：
 
-+ 擴充功能按鈕的位置隨即顯示(`headerMenu`)在AEM撰寫體驗中的角色。
-+ getButton()函式中擴充功能按鈕的定義
++ 擴充功能按鈕的位置隨即顯示(`headerMenu`)在AEM編寫體驗中
++ getButton()函式中的擴充功能按鈕定義
 + 按鈕的點選處理常式(在onClick()函式中)或子專案清單及其點選處理常式。
 
 `src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
@@ -145,13 +145,13 @@ export default ExtensionRegistration;
 
 #### 內容片段資料
 
-可使用以下專案擷取使用中的內容片段： `getContentFragment()` 上的方法 `guestConnection.host.contentFragment` 物件。
+可使用以下專案擷取使用中的內容片段 `getContentFragment()` 上的方法 `guestConnection.host.contentFragment` 物件。
 
 ```javascript
 const contentFragment = await guestConnection.host.contentFragment.getContentFragment();
 ```
 
-此 `contentFragment` 物件包含有關內容片段的所有資訊，包括路徑、模型、中繼資料、主要內容和任何變體。
+此 `contentFragment` 物件包含有關內容片段的所有資訊，包括路徑、模型、中繼資料、主要內容及任何變體。
 
 ```json
 {

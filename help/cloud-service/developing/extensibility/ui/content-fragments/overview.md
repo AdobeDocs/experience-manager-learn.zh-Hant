@@ -10,8 +10,8 @@ recommendations: noDisplay
 kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2023-06-02T00:00:00Z
-exl-id: 4e3bb09c-8437-4f1d-bc88-a882a38e246c
-source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
+exl-id: 9164423b-a609-4bc5-9777-112d229ae748
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 1%
@@ -20,17 +20,17 @@ ht-degree: 1%
 
 # AEM內容片段擴充性
 
-AEM內容片段UI是功能強大的可擴充UI，用於管理建立、管理和編輯內容片段。 根據您的需求，有數個擴充點可用於自訂UI。 根據您要擴充的UI，可使用不同的擴充點。
+AEM內容片段UI是功能強大的可擴充UI，用於管理建立、管理和編輯內容片段。 有數個擴充點可用來自訂UI以符合您的需求。 根據您要擴充的UI，有不同的擴充點可供使用。
 
 ## 內容片段主控台擴充功能點
 
-AEM (Adobe Experience Manager)中的內容片段控制檯是一個使用者介面，提供管理和組織內容片段的集中位置。 它提供一套完整的工具和功能，用於建立、編輯、發佈和追蹤內容片段，讓使用者能夠有效地管理各種管道和接觸點上的結構化內容。
+AEM (Adobe Experience Manager)中的內容片段主控台是一個使用者介面，為管理和組織內容片段提供集中式位置。 它提供全方位的工具和功能集，用以建立、編輯、發佈和追蹤內容片段，讓使用者能夠有效地管理各種管道和接觸點上的結構化內容。
 
 ![內容片段主控台](./assets/overview/cfc.png)
 
-[AEM內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) 是用於列出和管理內容片段的可擴充UI。 [已建立AEM內容片段主控台擴充功能](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) 使用 `@adobe/aem-cf-admin-ui-ext-tpl` App Builder範本
+[AEM內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) 是用於列出和管理內容片段的可擴充UI。 [AEM內容片段控制檯擴充功能已建立](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) 使用 `@adobe/aem-cf-admin-ui-ext-tpl` 應用程式建立工具範本。
 
-下列為可用的內容片段主控台擴充功能點：
+下列內容片段主控台擴充功能點可供使用：
 
 <div class="columns is-multiline">
       <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Action bar">
@@ -45,7 +45,7 @@ AEM (Adobe Experience Manager)中的內容片段控制檯是一個使用者介�
           <div class="card-content is-padded-small">
             <div class="content">
               <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/" title="動作列" target="_blank" rel="referrer">動作列</a></p>
-              <p class="is-size-6">自訂選取一或多個內容片段時的動作。</p>
+              <p class="is-size-6">自訂當選取一或多個內容片段時的動作。</p>
               <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
                 <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視檔案</span>
               </a>
@@ -85,7 +85,7 @@ AEM (Adobe Experience Manager)中的內容片段控制檯是一個使用者介�
       <div class="card-content is-padded-small">
         <div class="content">
           <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/" title="頁首功能表" target="_blank" rel="referrer">頁首功能表</a></p>
-          <p class="is-size-6">未選取任何內容片段時的自訂動作。</p>
+          <p class="is-size-6">自訂未選取內容片段時的動作。</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
             <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視檔案</span>
           </a>
@@ -95,13 +95,13 @@ AEM (Adobe Experience Manager)中的內容片段控制檯是一個使用者介�
   </div>  
 </div>
 
-## 內容片段編輯器擴充功能點
+## 內容片段編輯器擴充點
 
-AEM (Adobe Experience Manager)中的內容片段編輯器是一個使用者介面元件，可讓使用者建立、編輯和管理內容片段。 它提供視覺上直覺且方便使用的環境，用於處理結構化內容，讓使用者能夠定義及組織內容元素、套用範本、管理變數以及預覽內容在不同管道中的顯示方式。 內容片段編輯器簡化了建立可重複使用且模組化的內容的流程，這些內容可以輕鬆地在多種數位體驗之間分發和發佈。
+AEM (Adobe Experience Manager)中的內容片段編輯器是一個使用者介面元件，可讓使用者建立、編輯和管理內容片段。 它提供視覺上直覺式且方便使用的環境，讓您使用結構化內容，讓使用者能夠定義及組織內容元素、套用範本、管理變數，以及預覽內容在不同管道中的顯示方式。 內容片段編輯器簡化了建立可重複使用且模組化內容的流程，這些內容可以輕鬆地在多種數位體驗之間分發和發佈。
 
 ![內容片段編輯器](./assets/overview/cfe.png)
 
-AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [已建立AEM內容片段編輯器擴充功能](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/) 使用 `@adobe/aem-cf-editor-ui-ext-tpl` App Builder範本
+AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [AEM內容片段編輯器擴充功能已建立](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/) 使用 `@adobe/aem-cf-editor-ui-ext-tpl` 應用程式建立工具範本。
 
 下列內容片段編輯器擴充功能點可供使用：
 
@@ -118,7 +118,7 @@ AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [已建立A
         <div class="card-content is-padded-small">
           <div class="content">
             <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/" title="頁首功能表" target="_blank" rel="referrer">頁首功能表</a></p>
-            <p class="is-size-6">自訂內容片段編輯器標頭功能表中的動作。</p>
+            <p class="is-size-6">在內容片段編輯器的標頭功能表中自訂動作。</p>
             <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
               <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視檔案</span>
             </a>
@@ -191,7 +191,7 @@ AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [已建立A
 
 ## 擴充功能範例
 
-歡迎使用一系列AEM UI擴充功能程式碼範例！ 此資源旨在為您提供延伸Adobe Experience Manager (AEM)使用者介面的實用示範和深入分析。 無論您是想要增強AEM功能的開發人員，這些程式碼範例都可作為有價值的參考。
+歡迎使用AEM UI擴充功能程式碼範例的集合！ 此資源旨在為您提供延伸Adobe Experience Manager (AEM)使用者介面的實用示範和深入分析。 無論您是想增強AEM功能的開發人員，這些程式碼範例都可作為有價值的參考。
 
 <div class="columns is-multiline">
   <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Bulk property update">
@@ -206,7 +206,7 @@ AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [已建立A
       <div class="card-content is-padded-small">
         <div class="content">
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-bulk-property-update.md" title="大量屬性更新">大量內容片段屬性更新</a></p>
-          <p class="is-size-6">包含強制回應和Adobe I/O Runtime動作的內容片段主控台動作列擴充功能。</p>
+          <p class="is-size-6">包含模組和Adobe I/O Runtime動作的內容片段主控台動作列擴充功能。</p>
           <a href="./examples/console-bulk-property-update.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
             <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視範例</span>
           </a>
@@ -218,14 +218,14 @@ AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [已建立A
         <div class="card" style="height: 100%">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./examples/console-image-generation-and-image-upload.md" title="以OpenAI為基礎的影像產生和上傳至AEM擴充功能" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./examples/assets/digital-image-generation/card.png" alt="以OpenAI為基礎的影像產生和上傳至AEM擴充功能">
+                    <a href="./examples/console-image-generation-and-image-upload.md" title="OpenAI型影像產生並上傳至AEM擴充功能" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./examples/assets/digital-image-generation/card.png" alt="OpenAI型影像產生並上傳至AEM擴充功能">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-image-generation-and-image-upload.md" title="以OpenAI為基礎的影像產生和上傳至AEM擴充功能">OpenAPI影像產生</a></p>
+                    <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-image-generation-and-image-upload.md" title="OpenAI型影像產生並上傳至AEM擴充功能">OpenAPI影像產生</a></p>
                     <p class="is-size-6">探索使用OpenAI產生影像、上傳至AEM並更新所選內容片段上影像屬性的動作列擴充功能範例。</p>
                     <a href="./examples/console-image-generation-and-image-upload.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視範例</span>
@@ -286,7 +286,7 @@ AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [已建立A
       <div class="card-content is-padded-small">
         <div class="content">
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-toolbar.md" title="RTF編輯器工具列按鈕">RTF編輯器工具列按鈕</a></p>
-          <p class="is-size-6">將自訂工具列按鈕新增到內容片段編輯器中的RTE欄位。</p>
+          <p class="is-size-6">在內容片段編輯器中，將自訂工具列按鈕新增到RTE欄位。</p>
           <a href="./examples/editor-rte-toolbar.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
             <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視範例</span>
           </a>
@@ -306,7 +306,7 @@ AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [已建立A
       <div class="card-content is-padded-small">
         <div class="content">
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-toolbar.md" title="RTF編輯器Widget">RTF編輯器Widget</a></p>
-          <p class="is-size-6">將Widget新增至內容片段編輯器中的RTF編輯器。</p>
+          <p class="is-size-6">在內容片段編輯器中將Widget新增至RTF編輯器。</p>
           <a href="./examples/editor-rte-widget.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
             <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視範例</span>
           </a>

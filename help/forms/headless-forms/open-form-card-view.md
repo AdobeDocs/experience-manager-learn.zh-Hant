@@ -7,16 +7,17 @@ kt: 13372
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+exl-id: c8684cd9-b9c5-4b5b-b990-27c5700cea9f
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 3%
 
 ---
 
-# 在卡片上顯示表單點按
+# 在卡片上顯示表單
 
-使用者按一下卡片時，會使用下列程式碼來顯示表單。 使用useParams函式從url擷取要顯示的表單路徑。
+下列程式碼是用來在使用者按一下卡片時顯示表單。 使用useParams函式從url中擷取要顯示的表單路徑。
 
 ```javascript
 import Form from './components/Form';
@@ -64,4 +65,4 @@ export default function DisplayForm()
 
 ## 後續步驟
 
-[在表單提交時顯示感謝訊息](./display-thank-you-message.md)
+[在表格提交時顯示感謝訊息](./display-thank-you-message.md)

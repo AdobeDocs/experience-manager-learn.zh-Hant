@@ -8,7 +8,8 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+exl-id: afc0df42-b4fc-4d04-a36e-63e5a9438597
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 2%
@@ -18,7 +19,7 @@ ht-degree: 2%
 # 建立與Azure儲存體的整合
 
 下一步是使用表單資料模型建立AEM Forms CS與Azure儲存體之間的整合。
-以下影片將逐步說明建立整合所需的步驟。
+以下影片會逐步引導您執行建立整合所需的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/335385?quality=12&learn=on)
 
@@ -28,4 +29,3 @@ ht-degree: 2%
 ## 後續步驟
 
 [建立最適化表單](./create-af.md)
-

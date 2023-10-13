@@ -10,41 +10,41 @@ jira: KT-13453
 thumbnail: KT-13453.jpeg
 doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
-
 # 自訂格線欄
 
 ![內容片段控制檯自訂格線欄](./assets/custom-grid-columns/hero.png){align="center"}
 
-自訂格線欄可以使用以下專案新增到內容片段控制檯：  `contentFragmentGrid` 延伸點。 此範例說明如何新增自訂欄，該欄會根據上次修改日期，以人類可讀的格式顯示內容片段年齡。
+可以使用將自訂格線欄新增到內容片段控制檯  `contentFragmentGrid` 延伸點。 此範例說明如何新增自訂欄，以人類可讀的格式，根據上次修改日期顯示內容片段年齡。
 
 ## 擴充點
 
-此範例延伸至擴充點 `contentFragmentGrid` 以新增自訂欄到內容片段主控台。
+此範例會延伸至擴充點 `contentFragmentGrid` 以新增自訂欄到內容片段控制檯。
 
-| AEM UI延伸 | 擴充點 |
+| AEM UI已擴充 | 擴充點 |
 | ------------------------ | --------------------- | 
-| [內容片段主控台](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [格線資料行](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/) |
+| [內容片段主控台](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [格線欄](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/) |
 
 ## 範例擴充功能
 
-以下範例會建立自訂欄， `Age` 以人類可讀的格式顯示內容片段的年齡。 年齡是從內容片段的上次修改日期算出的。
+以下範例會建立自訂欄， `Age` 以人類可讀的格式顯示內容片段的年齡。 年齡是從內容片段的最後修改日期開始計算的。
 
-此程式碼顯示如何在擴充功能的註冊檔案中取得內容片段的中繼資料，以及如何匯出內容片段的JSON內容。
+此程式碼說明如何在擴充功能的註冊檔案中取得內容片段的中繼資料，以及如何匯出內容片段的JSON內容。
 
-此範例使用 [Luxon](https://moment.github.io/luxon/) 用於計算內容片段年齡的資料庫，透過以下方式安裝： `npm i luxon`.
+此範例使用 [Luxon](https://moment.github.io/luxon/) 用於計算內容片段年齡的程式庫，透過安裝 `npm i luxon`.
 
 ### 擴充功能註冊
 
-`ExtensionRegistration.js`，對應至index.html路由，是AEM擴充功能的入口點，並定義：
+`ExtensionRegistration.js`，對應至index.html路由，是AEM擴充功能的進入點，並定義：
 
-+ 擴充功能的位置會自我插入(`contentFragmentGrid`)在AEM撰寫體驗中的角色。
++ 擴充功能插入本身的位置(`contentFragmentGrid`)在AEM編寫體驗中
 + 自訂欄的定義，在 `getColumns()` 函式
 + 每個自訂欄的值（依列）
 
@@ -147,7 +147,7 @@ export default ExtensionRegistration;
 
 #### 內容片段資料
 
-此 `render(..)` 中的方法 `getColumns()` 傳遞了一個片段陣列。 陣列中的每個物件代表格線中的一列，並包含下列有關內容片段的中繼資料。 此中繼資料可用於格線中的熱門自訂欄。
+此 `render(..)` 中的方法 `getColumns()` 傳遞了片段的陣列。 陣列中的每個物件代表格線中的一列，並包含下列有關內容片段的中繼資料。 此中繼資料可用於格線中的熱門自訂欄。
 
 
 ```javascript
@@ -206,7 +206,7 @@ render: async function (fragments) {
 
 >[!IMPORTANT]
 >
-> 確保AEM Author執行個體設定為允許 [跨來源請求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) 從來源取得AppBuilder應用程式執行所在的位置。 允許的原始項包括 `https://localhost:9080`、AppBuilder中繼來源和AppBuilder生產來源。
+> 確保AEM Author執行個體設定為允許 [跨來源請求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) 從原始位置，AppBuilder應用程式正在執行中。 允許的原始項包括 `https://localhost:9080`、AppBuilder階段來源和AppBuilder生產來源。
 >
 > 或者，擴充功能可呼叫自訂 [AppBuilder動作](../../runtime-action.md) 會代表擴充功能向AEM Author提出要求。
 

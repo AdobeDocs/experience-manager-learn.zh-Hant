@@ -9,7 +9,7 @@ team: TM
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '1037'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 20%
    + [Sling](./underlying-technology/introduction-sling.md)
    + [作者與發佈服務](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
-+ Edge遞送服務 {#edge-delivery-services}
++ Edge Delivery Services {#edge-delivery-services}
    + [AEM AssetsSidekick外掛程式](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [計畫](./cloud-manager/programs.md)

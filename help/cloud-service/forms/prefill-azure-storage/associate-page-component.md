@@ -7,7 +7,8 @@ role: Developer
 level: Beginner
 version: Cloud Service
 topic: Integrations
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+exl-id: 7b2b1e1c-820f-4387-a78b-5d889c31eec0
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 5%
@@ -16,7 +17,7 @@ ht-degree: 5%
 
 # 將頁面元件與範本建立關聯
 
-下一步是將頁面元件與新的最適化表單範本建立關聯。 這可確保每次根據新範本呈現最適化表單時，都會執行頁面元件中的程式碼。 在本教學課程中，將新增一個最適化表單範本，名為 **StoreAndRestoreFromAzure** 建立於 **AzurePortalStorage** 資料夾。
+下一步是將頁面元件與新的調適型表單範本建立關聯。 這可確保在每次根據新範本的自適應表單轉譯時，都會執行頁面元件中的程式碼。 在本教學課程中，我們將新增一個最適化表單範本，名為 **StoreAndRestoreFromAzure** 建立於 **AzurePortalStorage** 資料夾。
 導覽至/conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/initial/jcr：content節點，新增下列屬性並儲存變更。
 
 | **屬性名稱** | **屬性型別** | **屬性值** |
@@ -24,7 +25,7 @@ ht-degree: 5%
 | sling:resourceType | 字串 | azureportalpagecomponent/component/page/storeandfetch |
 
 導覽至/conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/structure/jcr：content節點，新增下列屬性並儲存變更。
-| **屬性名稱**  | **屬性型別** | **屬性值**                                    | |--------------------|-------------------|-------------------------------------------------------| | sling：resourceType |字串 | azureportalpagecomponent/component/page/storeandfetch |
+| **屬性名稱**  | **屬性型別** | **屬性值**                                    | ---------------------------------------資------------------------------------------------------- | sling：resourceType |字串 | azureportalpagecomponent/component/page/storeandfetch |
 
 
 ## 後續步驟

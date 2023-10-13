@@ -7,26 +7,26 @@ kt: 13311
 topic: Development
 role: User
 level: Intermediate
-exl-id: 7316ca02-be57-4ecf-b162-43a736b992b3
-source-git-commit: 529e98269a08431152686202a8a2890712b9c835
+exl-id: c01ad68e-23c9-4564-8e3e-1924af34a493
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
 
 ---
 
-# 以卡片格式擷取及顯示表單
+# 擷取並顯示卡片格式的表單
 
-卡片檢視格式是以卡片形式呈現資訊或資料的設計模式。 每個卡片都代表個別的內容或資料專案，通常由視覺上不同的容器組成，其中包含排列的特定元素。
+卡片檢視格式是以卡片形式呈現資訊或資料的設計模式。 每個卡片代表個別的內容或資料專案，通常由視覺上不同的容器組成，且容器內有特定元素排列。
 React中的可點按卡片是類似卡片或圖磚的互動元件，使用者可點按或點選。 當使用者點按或點選可點按的卡片時，會觸發指定的動作或行為，例如導覽至其他頁面、開啟強制回應視窗或更新UI。
 
-在本文中，我們將使用 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) 以擷取表單並以卡片格式顯示表單，然後在點選事件時開啟最適化表單。
+在本文中，我們將使用 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) 以擷取表單並以卡片格式顯示表單，並在點選事件時開啟最適化表單。
 
 ![卡片檢視](./assets/card-view-forms.png)
 
 ## 卡片範本
 
-下列程式碼已用於設計卡片範本。 卡片範本顯示最適化表單的標題和說明以及Adobe標誌。 [原物料UI元件](https://mui.com/) 已用於建立此版面。
+下列程式碼已用於設計卡片範本。 卡片範本顯示最適化表單的標題和說明以及Adobe標誌。 [原物料UI元件](https://mui.com/) 已用於建立此配置。
 
 
 
@@ -84,7 +84,7 @@ const extendMappings =
 
 ## 擷取表單
 
-listforms API是用來從AEM伺服器擷取表單。 API會傳回JSON物件陣列，每個JSON物件都代表一個表單。
+listforms API是用來從AEM伺服器擷取表單。 API傳回JSON物件陣列，每個JSON物件代表表單。
 
 ```javascript
 import { useState,useEffect } from "react";

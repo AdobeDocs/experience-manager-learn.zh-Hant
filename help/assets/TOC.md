@@ -10,7 +10,7 @@ team: TM
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '401'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 24%
    + [視訊智慧標記](metadata/video-smart-tags.md)
    + [匯入和匯出中繼資料](metadata/metadata-import-export.md)
 
-+ Edge遞送服務{#edge-delivery-services}
++ Edge Delivery Services{#edge-delivery-services}
    + [Sidekick外掛程式](./edge-delivery-services/sidekick-plugin.md)
 
 + 共用與散佈{#sharing}

@@ -7,8 +7,8 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-exl-id: 5953a1ad-0eaf-43f0-b356-6d20c0b59fee
-source-git-commit: 529e98269a08431152686202a8a2890712b9c835
+exl-id: ee534724-54ea-48e1-8c92-de1c56a928d4
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 1%
@@ -17,11 +17,11 @@ ht-degree: 1%
 
 # 擷取表單的JSON
 
-登入您的AEM Forms作者執行個體，並使用建立新的最適化 **使用核心元件空白** 範本。 將您的表單發佈至發佈執行個體。
+登入您的AEM Forms作者執行個體，並使用建立新的最適化 **核心元件空白** 範本。 將您的表單發佈到發佈執行個體。
 
-若要內嵌表單，我們先對發佈伺服器發出get呼叫，擷取最適化表單的json。
+若要內嵌表單，我們會先對發佈伺服器發出get呼叫，擷取最適化表單的json。
 
-下列程式碼片段會擷取適用性表單的json，稱為 **contactus**
+下列程式碼片段會擷取最適化表單的json，稱為 **contact**
 
 ```javascript
 const getForm = async () => {
