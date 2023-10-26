@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 0%
@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# 包含WAF規則的流量篩選規則最佳實務
+# 流量篩選器規則（包括WAF規則）的最佳實務
 
-瞭解流量篩選規則的建議最佳實務，包括WAF規則。 請務必注意，本文中說明的最佳實務並非詳盡無遺，且用意並非要取代您自己的安全性原則和程式。
+瞭解流量篩選規則（包括WAF規則）的建議最佳實務。 請務必注意，本文中說明的最佳實務並非詳盡無遺，且用意並非要取代您自己的安全性原則和程式。
 
 ## 一般最佳實務
 
@@ -33,9 +33,9 @@ ht-degree: 0%
 - 若要封鎖分析後可能察覺到的惡意流量，請新增任何其他規則。 例如，某些攻擊您網站的IP。
 - 規則的建立、部署和分析應該是一個持續的、反複的過程。 這不是一次性活動。
 
-## 流量篩選器規則的最佳實務
+## 流量篩選規則的最佳實務
 
-為您的AEM專案啟用下列流量篩選規則。 然而，所需的值 `rateLimit` 和 `clientCountry` 屬性必須透過與您的安全性團隊共同作業來決定。
+為您的AEM專案啟用以下流量篩選規則。 然而，所需的值 `rateLimit` 和 `clientCountry` 屬性必須透過與您的安全性團隊共同作業來決定。
 
 ```yaml
 kind: CDN

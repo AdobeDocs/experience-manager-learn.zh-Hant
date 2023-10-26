@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 包含WAF規則的流量篩選規則的範例和結果分析
+# 流量篩選器規則（包括WAF規則）的範例和結果分析
 
 瞭解如何宣告各種型別的流量篩選規則，並使用Adobe Experience Manager as a Cloud Service (AEMCS) CDN記錄和儀表板工具來分析結果。
 
