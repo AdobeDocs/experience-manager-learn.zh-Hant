@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
+source-git-commit: 67e0a7530549a0d380e9ef82e3747c40d17b1b75
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '564'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 - _建立規則_ 具有適當的AEM專案結構和組態檔。
 - _部署規則_ 使用Adobe Cloud Manager的設定管道。
-- _測試規則_ 使用各種工具產生流量
+- _測試規則_ 使用各種工具來產生流量。
 - _分析結果_ 使用AEMCS CDN記錄檔和控制面板工具。
 
 ### 在您的AEM專案中建立規則
@@ -37,7 +37,7 @@ ht-degree: 2%
 
 1. 在AEM專案的最上層，建立一個資料夾 `config`.
 
-1. 在 `config` 資料夾，建立新的 `cdn.yaml`.
+1. 在 `config` 資料夾，建立名為的新檔案 `cdn.yaml`.
 
 1. 將下列中繼資料新增至 `cdn.yaml` 檔案：
 
