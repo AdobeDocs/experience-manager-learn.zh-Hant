@@ -24,6 +24,6 @@ ht-degree: 60%
 >title="Adobe IMS 使用者群組"
 >abstract="Adobe IMS 使用者群組會建立對 AEM 公開的使用者邏輯集，以便為 AEM 使用者定義更精細的權限。"
 
- Adobe IMS使用者群組會建立對AEM公開的使用者邏輯集，以便用於定義AEM使用者的微調許可權。
+ Adobe IMS使用者群組會建立對AEM公開的使用者邏輯集，以便為AEM使用者定義更精細的許可權。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39150?quality=12&learn=on)

@@ -30,4 +30,4 @@ Adobe IMS 產品設定檔能提供使用者登入 AEM 作者服務的權限，�
 
 ## 其他資源
 
-+ [在Admin Console檔案中管理產品和使用者存取權](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)
++ [在Admin Console檔案中管理產品和使用者存取許可權](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)

@@ -1,6 +1,6 @@
 ---
 title: 設定存取權限至 AEM as a Cloud Service
-description: AEMas a Cloud Service是雲端原生方式來利用AEM應用程式，因此會利用Adobe IMS (Identity Management系統)來協助使用者（管理員和一般使用者）登入AEM Author服務。 瞭解Adobe IMS使用者、使用者群組和產品設定檔如何結合AEM群組和許可權使用，以提供AEM Author的特定存取權。
+description: AEMas a Cloud Service是雲端原生方式利用AEM應用程式，因此會利用Adobe IMS (Identity Management系統)協助使用者（包括管理員和一般使用者）登入AEM作者服務。 瞭解Adobe IMS使用者、使用者群組和產品設定檔如何與AEM群組和許可權搭配使用，以提供AEM Author的特定存取權。
 version: Cloud Service
 topic: Administration, Security
 feature: User and Groups
@@ -24,7 +24,7 @@ ht-degree: 26%
 >title="Adobe IMS 簡介"
 >abstract="AEM as a Cloud Service 使用 Adobe IMS (Identity Management 系統) 協助其使用者 (包括管理員和一般使用者) 登入到 AEM 作者服務。了解 Adobe IMS 使用者、群組和產品設定檔如何與 AEM 群組和權限一起使用，以提供對 AEM 作者服務的精細存取。"
 
-AEMas a Cloud Service是雲端原生方式來利用AEM應用程式，因此會利用Adobe IMS (Identity Management系統)來協助其使用者（管理員和一般使用者）登入AEM Author服務。
+AEMas a Cloud Service是雲端原生方式以運用AEM應用程式，因此會利用Adobe IMS (Identity Management系統)協助其使用者（包括管理員和一般使用者）登入AEM作者服務。
 
 ![Adobe Admin Console](./assets/hero.png)
 
@@ -43,7 +43,7 @@ AEMas a Cloud Service是雲端原生方式來利用AEM應用程式，因此會�
 
 ## Adobe IMS使用者群組
 
-應該使用將存取AEM作者服務的使用者組織到邏輯群組中 [Adobe IMS使用者群組](https://helpx.adobe.com/tw/enterprise/using/user-groups.html) 在 [Adobe的AdminConsole](https://adminconsole.adobe.com). Adobe IMS使用者群組不提供直接許可權或AEM存取權(這是以下工作： [Adobe IMS產品設定檔](#adobe-ims-product-profiles))但是，它們是定義使用者的邏輯分組的絕佳方式，進而可以使用AEM群組和許可權，轉換為AEM Author服務中的特定存取層級。
+應該使用將存取AEM作者服務的使用者組織到邏輯群組中 [Adobe IMS使用者群組](https://helpx.adobe.com/tw/enterprise/using/user-groups.html) 在 [Adobe的AdminConsole](https://adminconsole.adobe.com). Adobe IMS使用者群組不提供直接許可權或對AEM的存取權(這是以下工作： [Adobe IMS產品設定檔](#adobe-ims-product-profiles))但是，它們是定義使用者的邏輯群組的絕佳方法，這些邏輯群組又可以使用AEM群組和許可權轉譯為AEM Author服務中的特定存取層級。
 
 [瞭解Adobe IMS使用者群組](./adobe-ims-user-groups.md)
 
@@ -62,15 +62,15 @@ Adobe Experience Manager 以 Adobe IMS 使用者、使用者群組和產品設�
 
 [瞭解AEM使用者、群組和許可權](./aem-users-groups-and-permissions.md)
 
-## 存取和許可權逐步說明
+## 存取與許可權逐步說明
 
-在AdobeAdminConsole中設定Adobe IMS使用者、使用者群組和產品設定檔的簡略逐步解說，以及如何在AEM Author中運用這些Adobe IMS抽象化功能來定義和管理特定的群組型許可權。
+在Adobe AdminConsole中設定Adobe IMS使用者、使用者群組和產品設定檔的概要說明，以及如何在AEM Author中善用這些Adobe IMS抽象化功能，定義和管理特定的群組型許可權。
 
-[AEM存取和許可權逐步說明](./walk-through.md)
+[AEM存取與許可權逐步說明](./walk-through.md)
 
 ## 其他Adobe Admin Console資源
 
-下列檔案封面 [Adobe Admin Console](https://adminconsole.adobe.com) — 特定的詳細資訊和顧慮，可能有助於更好地瞭解Adobe Admin Console，並使用它來管理使用者和跨Experience Cloud產品的存取權。
+下列檔案封面 [Adobe Admin Console](https://adminconsole.adobe.com) — 特定的詳細資訊和問題，可能有助於您進一步瞭解Adobe Admin Console，並藉此管理不同Experience Cloud產品的使用者和存取權。
 
 + [Adobe Admin Console 身分識別概觀](https://helpx.adobe.com/tw/enterprise/using/identity.html)
 + [Adobe Admin Console管理員角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)

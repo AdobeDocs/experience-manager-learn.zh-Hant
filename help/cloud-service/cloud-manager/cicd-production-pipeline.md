@@ -31,12 +31,12 @@ ht-degree: 49%
 
 ## 設定
 
-此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) 設定會定義將起始管道的觸發條件、控制生產部署的引數以及效能測試引數。
+此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) 設定會定義將起始管道的觸發條件、控制生產部署的引數及效能測試引數。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### 管道執行
 
-此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) 用於透過Stage建置計畫碼並將計畫碼部署到生產環境，減少實現價值的時間。
+此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) 用於透過Stage建置計畫碼並部署至生產環境，減少實現價值的時間。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)

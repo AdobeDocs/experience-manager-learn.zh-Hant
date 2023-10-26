@@ -1,5 +1,5 @@
 ---
-title: 使用AEM Cloud Manager的持續整合
+title: 使用與AEM Cloud Manager的持續整合
 description: 了解使用 Adobe Cloud Manager 的最佳做法與持續整合。
 role: Developer
 level: Beginner
