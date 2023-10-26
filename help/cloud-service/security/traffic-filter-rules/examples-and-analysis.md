@@ -7,10 +7,10 @@ topic: Security, Administration, Architecture
 role: Admin, Architect
 level: Intermediate
 doc-type: Tutorial
-last-substantial-update: 2023-10-20T00:00:00Z
+last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
+source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 0%
@@ -86,7 +86,7 @@ data:
 
 - 複製下載的記錄檔(例如， `publish_cdn_2023-10-24.log` （如下面的熒幕擷圖所示），放入 `logs/dev` 彈性圖示板工具專案的資料夾。
 
-  ![ELK工具記錄資料夾](./assets/elk-tool-logs-folder.png)
+  ![ELK工具記錄資料夾](./assets/elk-tool-logs-folder.png){width="800" zoomable="yes"}
 
 - 重新整理「彈性儀表板」工具頁面。
    - 在頂端 **全域篩選器** 區段，編輯 `aem_env_name.keyword` 篩選並選取 `dev` 環境值。

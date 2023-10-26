@@ -5,9 +5,9 @@ sub-product: Experience Manager as a Cloud Service
 kt: 3289
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: e100e0078d3464d72dfca769d96ad7a633a1640c
+source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '280'
 ht-degree: 9%
 
 ---
@@ -24,14 +24,14 @@ Adobe Experience Manager (AEM) 現在能以雲端服務形式使用。AEMas a Cl
 
 ## 新增功能
 
+* **[使用包含WAF規則的流量篩選規則來保護網站（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html)**
+  *瞭解如何使用流量篩選規則，包括WAF規則來保護網站*
+
 * **[權杖型驗證（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
   *瞭解如何使用權杖式驗證，以透過HTTP與AEMas a Cloud Service互動*
 
 * **[Headless GraphQL （教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
   *瞭解如何使用AEM GraphQL API在外部應用程式中強化體驗。*
-
-* **[大量匯入（影片）](./migration/bulk-import.md)**
-  *瞭解如何從Azure Blob儲存或Amazon S3大量匯入資產至AEM*
 
 * **[asset compute中繼資料背景工作（教學課程）](./asset-compute/advanced/metadata.md)**
   *瞭解如何從Asset compute背景工作將資產中繼資料寫回AEM*

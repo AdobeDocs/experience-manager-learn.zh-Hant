@@ -7,10 +7,10 @@ topic: Security, Administration, Architecture
 role: Admin, Architect
 level: Intermediate
 doc-type: Tutorial
-last-substantial-update: 2023-10-20T00:00:00Z
+last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 67e0a7530549a0d380e9ef82e3747c40d17b1b75
+source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 2%
@@ -56,7 +56,7 @@ data:
 
 檢視範例： `cdn.yaml` AEM Guides WKND Sites專案中的檔案：
 
-![WKND AEM專案規則檔案和資料夾](./assets/wknd-rules-file-and-folder.png)
+![WKND AEM專案規則檔案和資料夾](./assets/wknd-rules-file-and-folder.png){width="800" zoomable="yes"}
 
 ### 透過Cloud Manager部署規則 {#deploy-rules-through-cloud-manager}
 
