@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
-source-wordcount: '1510'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 0%
 
 瞭解如何宣告各種型別的流量篩選規則，並使用Adobe Experience Manager as a Cloud Service (AEMCS) CDN記錄和儀表板工具來分析結果。
 
-在本節中，您將探索流量篩選規則的實用範例，包括WAF規則。 您會瞭解如何使用，根據URI （或路徑）、IP位址、要求數量及不同的攻擊型別，記錄、允許及封鎖要求。 [AEM WKND網站專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+在本節中，您將探索流量篩選規則的實用範例，包括WAF規則。 您將瞭解如何使用，根據URI （或路徑）、IP位址、請求數量和不同的攻擊型別，記錄、允許和封鎖請求。 [AEM WKND網站專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
-此外，您會發現如何使用儀表板工具來擷取AEMCS CDN記錄，並透過Adobe提供的範例儀表板將基本量度視覺化。
+此外，您將瞭解如何使用儀表板工具來擷取AEMCS CDN記錄，並透過Adobe提供的範例儀表板將基本量度視覺化。
 
 為符合您的特定需求，您可以增強和建立自訂儀表板，進而獲得更深入的見解，並最佳化AEM網站的規則設定。
 
 ## 範例
 
-讓我們探索各種流量篩選規則的範例，包括WAF規則。 請確定您已完成之前的必要設定程式 [如何設定](./how-to-setup.md) 章節，而您已複製 [AEM WKND網站專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+讓我們探索各種流量篩選規則的範例，包括WAF規則。 請確定您已完成之前的必要設定程式 [如何設定](./how-to-setup.md) 章節，而且您已複製 [AEM WKND網站專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
 ### 記錄請求
 
@@ -68,7 +68,7 @@ data:
 
   ![Cloud Manager設定管道](./assets/cloud-manager-config-pipeline.png)
 
-- 在Publish服務上登入並登出您程式的WKND網站以測試規則(例如 `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`)。 您可以使用 `asmith/asmith` 作為使用者名稱和密碼。
+- 在Publish服務上登入並登出您程式的WKND網站以測試規則(例如， `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`)。 您可以使用 `asmith/asmith` 作為使用者名稱和密碼。
 
   ![WKND登入](./assets/wknd-login.png)
 
@@ -104,11 +104,11 @@ data:
 
 ### 封鎖要求
 
-在此範例中，讓我們在 _內部_ 資料夾位於 `/content/wknd/internal` 已部署WKND專案中的路徑。 接著宣告流量篩選規則，此規則 **封鎖流量** 從符合您組織的指定IP位址以外的任何地方的子頁面（例如，公司VPN）。
+在此範例中，讓我們在 _內部_ 路徑下的資料夾 `/content/wknd/internal` 在已部署的WKND專案中。 接著宣告流量篩選規則，此規則 **封鎖流量** 從符合您組織的指定IP位址以外的任何地方的子頁面（例如，公司VPN）。
 
-您可以建立自己的內部頁面(例如， `demo-page.html`)或使用 [附加封裝](./assets/demo-internal-pages-package.zip)
+您可以建立自己的內部頁面(例如， `demo-page.html`)或使用 [附加封裝](./assets/demo-internal-pages-package.zip).
 
-- 在WKND專案的 `/config/cdn.yaml` 檔案。
+- 在WKND專案的 `/config/cdn.yaml` 檔案：
 
 ```yaml
 kind: CDN
@@ -200,7 +200,7 @@ data:
   $ echo "GET https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html" | vegeta attack -rate=120 -duration=5s | vegeta report
   ```
 
-  此命令會在5秒內發出120個請求並輸出報表。 如您所見，成功率為32.5%，其餘部分則收到406 HTTP回應代碼，表示流量遭封鎖。
+  此命令會在5秒內發出120個請求並輸出報表。 如您所見，成功率為32.5%；其餘部分會收到406 HTTP回應代碼，表示流量遭封鎖。
 
   ![Vegeta DoS攻擊](./assets/vegeta-dos-attack.png)
 
@@ -220,7 +220,7 @@ data:
 
 目前為止的流量篩選器規則範例可供所有Sites和Forms客戶設定。
 
-接下來，讓我們探索已購買增強式安全性或WAF-DDoS保護授權的客戶的體驗。 這可讓您設定進階規則，以保護AEM網站免受更複雜的攻擊。
+接下來，讓我們針對已購買增強式安全性或WAF-DDoS保護授權的客戶，探索其使用體驗，該授權可讓他們設定進階規則，以保護網站免受更複雜的攻擊。
 
 在繼續之前，請按照流量篩選規則檔案中的說明，為您的程式啟用WAF-DDoS保護 [設定步驟](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en#setup).
 
@@ -248,7 +248,7 @@ data:
 
 ![ELK工具控制面板WAF標幟請求](./assets/elk-tool-dashboard-waf-flagged.png)
 
-請注意 **WAF標示分佈和Top攻擊** 面板會顯示其他詳細資訊，可用來進一步最佳化規則設定。
+請注意 **WAF旗標分佈** 和 **熱門攻擊** 面板會顯示其他詳細資訊，可用來進一步最佳化規則設定。
 
 ![ELK工具儀表板WAF標示攻擊要求](./assets/elk-tool-dashboard-waf-flagged-top-attacks-1.png)
 
@@ -319,7 +319,7 @@ data:
 
 ![ELK工具控制面板WAF已封鎖的要求](./assets/elk-tool-dashboard-waf-blocked.png)
 
-此外， **WAF標示分佈和Top攻擊** 面板會顯示其他詳細資料。
+此外， **WAF旗標分佈** 和 **熱門攻擊** 面板會顯示其他詳細資料。
 
 ![ELK工具儀表板WAF標示攻擊要求](./assets/elk-tool-dashboard-waf-blocked-top-attacks-1.png)
 
@@ -327,7 +327,7 @@ data:
 
 ### 全面分析
 
-在上方 _分析_ 區段，您已經瞭解如何分析 **特定規則** 使用圖示板工具。 您可以進一步探索使用其他控制面板面板的分析結果，包括：
+在上方 _分析_ 您已經瞭解如何使用儀表板工具來分析特定規則的結果。 您可以進一步探索使用其他控制面板面板的分析結果，包括：
 
 
 - 已分析、已標幟和已封鎖的要求

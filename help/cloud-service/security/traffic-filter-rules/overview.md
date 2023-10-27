@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -30,12 +30,13 @@ ht-degree: 0%
 
 本教學課程將引導您完成建立、部署、測試及分析流量篩選器規則（包括WAF規則）結果的程式。
 
-您可以在中閱讀更多有關流量篩選規則的資訊 [本文](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en)
+您可以在中閱讀更多有關流量篩選規則的資訊 [本文](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en).
 
 >[!IMPORTANT]
 >
-> 名為「WAF規則」的流量篩選規則子類別需要WAF-DDoS保護授權
+> 名為「WAF規則」的流量篩選規則子類別需要WAF-DDoS保護或增強式安全性授權。
 
+我們邀請您透過電子郵件提供意見反應，或詢問有關流量篩選規則的問題 **aemcs-waf-adopter@adobe.com**.
 
 ## 下一步
 
