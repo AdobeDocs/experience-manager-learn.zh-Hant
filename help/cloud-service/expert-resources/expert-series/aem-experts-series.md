@@ -1,29 +1,27 @@
 ---
 title: Adobe Experience Manager as a Cloud Service Experts系列
-description: 瞭解Adobe Experience Manager (AEM)as a Cloud Service於Adobe自己的專業工程師來建置它，以及瞭解提供它的專業服務。
+description: as a Cloud Service於Adobe自己的專業工程師來建置Adobe Experience Manager (AEM)，並瞭解提供該產品的專業服務。
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 topic: Administration, Development
 feature: Developer Tools
 exl-id: ae1cdbe3-0863-41de-bb27-2e88c4640866
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 4b634d8b3063375f7c135a3e3ef81b90c84e2579
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '700'
 ht-degree: 2%
 
 ---
 
-# Adobe Experience Manager as a Cloud Service Experts系列
+# AEMas a Cloud Service專家系列
 
-![AEM Experts系列](./assets/masthead.png)
-
-瞭解與Adobe專業工程師構建Adobe Experience Manager (AEM)及專業服務團隊as a Cloud Service的。 與Adobe的專家一起探索什麼是AEMas a Cloud Service、它與AEM 6有何相同和不同，以及如何從AEM 6移至AEMas a Cloud Service。
+與建置Adobe Experience Manager (AEM)的Adobe專家工程師及提供該產品的專業服務團隊as a Cloud Service，瞭解該產品。 加入Adobe專家的行列，探索什麼是AEMas a Cloud Service、其如何與AEM 6相同和不同，以及如何從AEM 6移至AEMas a Cloud Service。
 
 <br/> 
 <br/>
 
 ## AEMas a Cloud Service快速入門
 
-瞭解AEM as aCloud Services的基礎知識，以及它與AEM 6和Adobe工程的資深雲端架構師有何不同。
+瞭解AEM as aCloud Service的基礎知識，以及它與AEM 6和Adobe工程的資深雲端架構師有何不同。
 
 <table>
   <tr>
@@ -33,11 +31,11 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/introduction.md"><strong>想法不同</strong></a>         
-         <br/><em>與資深雲端架構師Darin Kuntze合作</em>
+         <br/><em>與資深雲端架構師Darin Kuntze</em>
       </div>
       <p>
         <br/>
-         瞭解AEMas a Cloud Service的架構，以及如何對AEMas a Cloud Service實作有不同的思考。
+         檢視AEMas a Cloud Service的架構，以及如何以不同的方式思考AEMas a Cloud Service實作。
       </p>
      </td>   
      <td>
@@ -46,7 +44,7 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/onboarding.md"><strong>AEMas a Cloud Service入門</strong></a>
-         <br/><em>與資深雲端架構師Damian Langsweirdt</em>
+         <br/><em>與資深雲端架構師Damian Langsweirdt合作</em>
       </div>
       <p>
         <br/>
@@ -60,11 +58,11 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/cloud-manager.md"><strong>AEM適用的Cloud Manageras a Cloud Service</strong></a>
-         <br/><em>與資深雲端架構師Bryan Stopp一起</em>
+         <br/><em>與資深雲端架構師Bryan Stopp合作</em>
       </div>
       <p>
         <br/>
-         瞭解AEM適用的Cloud Manageras a Cloud Service，及其與Adobe管理服務(AMS)上AEM適用的Cloud Manager的差異。
+         瞭解適用於AEM的Cloud Manageras a Cloud Service，以及其與適用於AEM onAdobe管理服務(AMS)的Cloud Manager的差異。
       </p>
    </td> 
   </tr>
@@ -72,7 +70,7 @@ ht-degree: 2%
 
 ## 轉移至 AEM as a Cloud Service?
 
-是否計畫從AEM 6移至AEMas a Cloud Service？ 瞭解Adobe移至AEMas a Cloud Service的方法，以及使其順利轉換的各種工具和功能。
+要從AEM 6移至AEMas a Cloud Service嗎？ 瞭解Adobe移至AEMas a Cloud Service的方法，以及有助於順利轉換的各種工具和功能。
 
 <table>
   <tr>
@@ -82,7 +80,7 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md" target="_aem-experts-series-video"><strong>移轉方法</strong></a>
-         <br/><em>與Adobe諮詢服務技術架構師Roger Blanton一起</em>
+         <br/><em>與Adobe諮詢服務技術架構師Roger Blanton合作</em>
       </div>
       <p>
         <br/>
@@ -91,11 +89,11 @@ ht-degree: 2%
    </td>   
      <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md" target="_aem-experts-series-video">
-      <img alt="最新化您的內容" src="./assets/aem-modernizer-tools.png"/>
+      <img alt="更新您的內容" src="./assets/aem-modernizer-tools.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md" target="_aem-experts-series-video"><strong>最新化您的內容</strong></a>
-         <br/><em>與資深雲端架構師Bryan Stopp一起</em>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md" target="_aem-experts-series-video"><strong>更新您的內容</strong></a>
+         <br/><em>與資深雲端架構師Bryan Stopp合作</em>
       </div>
       <p>
         <br/>
@@ -105,15 +103,15 @@ ht-degree: 2%
    </td>   
      <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/repository-modernization.md" target="_aem-experts-series-video">
-      <img alt="更新AEM Maven專案" src="./assets/repository-modernizer.png"/>
+      <img alt="更新您的AEM Maven專案" src="./assets/repository-modernizer.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/repository-modernization.md" target="_aem-experts-series-video"><strong>更新AEM Maven專案</strong></a>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/repository-modernization.md" target="_aem-experts-series-video"><strong>更新您的AEM Maven專案</strong></a>
          <br/><em>雲端架構師Varun Mitra</em>
       </div>
       <p>
         <br/>
-         瞭解如何自動匯入自訂AEM應用程式的Maven專案結構和組織，使其與AEMas a Cloud Service相容並符合Adobe的最新最佳實務。
+         瞭解如何自動將自訂AEM應用程式的Maven專案結構和組織現代化，以與AEMas a Cloud Service相容並符合Adobe的最新最佳實務。
       </p>
    </td> 
   </tr>
@@ -124,7 +122,7 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md" target="_aem-experts-series-video"><strong>更新Oak索引</strong></a>
-         <br/><em>與資深雲端架構師Darin Kuntze合作</em>
+         <br/><em>與資深雲端架構師Darin Kuntze</em>
       </div>
       <p>
         <br/>
@@ -137,34 +135,34 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/dispatcher.md" target="_aem-experts-series-video"><strong>更新Dispatcher設定</strong></a>
-         <br/><em>與資深雲端架構師Bryan Stopp一起</em>
+         <br/><em>與資深雲端架構師Bryan Stopp合作</em>
       </div>
       <p>
         <br/>
-         瞭解適用於AEM的AEM Dispatcheras a Cloud Service，重點放在適用於AEM 6的Dispatcher、Dispatcher轉換工具及如何使用Dispatcher工具SDK。
+         瞭解AEM適用的AEM Dispatcheras a Cloud Service，重點放在適用於AEM 6的Dispatcher、Dispatcher轉換工具及如何使用Dispatcher Tools SDK。
       </p>
    </td>     
    </td>   
      <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md" target="_aem-experts-series-video">
-      <img alt="將您的內容傳輸至AEMas a Cloud Service" src="./assets/content-transfer-tool.png"/>
+      <img alt="將您的內容傳輸到AEMas a Cloud Service" src="./assets/content-transfer-tool.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md" target="_aem-experts-series-video"><strong>將您的內容傳輸至AEMas a Cloud Service</strong></a>
-         <br/><em>與資深雲端架構師Kiran Murugulla</em>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md" target="_aem-experts-series-video"><strong>將您的內容傳輸到AEMas a Cloud Service</strong></a>
+         <br/><em>與資深雲端架構師Kiran Murugulla合作</em>
       </div>
       <p>
         <br/>
-         瞭解內容轉移工具如何協助您將內容從AEM 6.3+移轉至AEMas a Cloud Service。
+         瞭解內容轉移工具如何協助您將內容從AEM 6.3+as a Cloud Service移轉至AEM。
       </p>
    </td> 
   </tr>  
 </table>
 
 
-## AEM as a Cloud Services功能
+## AEM as a Cloud Service功能
 
-向Adobe的專家瞭解AEMas a Cloud Service的獨特功能。
+向Adobe專家瞭解AEMas a Cloud Service的獨特功能。
 
 <table>
   <tr>
@@ -174,11 +172,11 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md" target="_aem-experts-series-video"><strong>asset compute微服務</strong></a>
-         <br/><em>主要雲端架構師Amol Anand的協助下</em>
+         <br/><em>與Principal Cloud Architect Amol Anand合作</em>
       </div>
       <p>
         <br/>
-        瞭解AEM Assets的Asset compute微服務、這些服務如何取代AEM 6資產處理，以及如何將其延伸以產生自訂資產轉譯。
+        瞭解AEM Assets的Asset compute微服務，這些服務如何取代AEM 6資產處理，以及如何將其延伸以產生自訂資產轉譯。
       </p>
    </td>   
    <td>
@@ -187,7 +185,7 @@ ht-degree: 2%
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video"><strong>大量匯入內容</strong></a>
-         <br/><em>與資深雲端架構師Kiran Murugulla</em>
+         <br/><em>與資深雲端架構師Kiran Murugulla合作</em>
       </div>
       <p>
         <br/>
@@ -198,7 +196,7 @@ ht-degree: 2%
   </tr>
 </table>
 
-## 需要AEM as aCloud Services的協助嗎？
+## 需要AEM as aCloud Service的相關協助嗎？
 
 向專家瞭解如何針對AEMas a Cloud Service和AEM SDK進行偵錯和疑難排解！
 
