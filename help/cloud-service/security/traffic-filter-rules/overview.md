@@ -10,17 +10,19 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: e6d67204-2f76-441c-a178-a34798fe266d
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '285'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
-
 
 # 使用流量篩選規則（包括WAF規則）保護網站
 
 瞭解 **流量篩選器規則**，包括其子類別 **網頁應用程式防火牆(WAF)規則** 在AEMas a Cloud Service(AEMCS)中。 閱讀如何建立、部署和測試規則。 此外，也分析結果，以保護您的AEM網站。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425401?quality=12&learn=on)
 
 ## 概觀
 
@@ -36,11 +38,10 @@ ht-degree: 0%
 >
 > 名為「WAF規則」的流量篩選規則子類別需要WAF-DDoS保護或增強式安全性授權。
 
-我們邀請您透過電子郵件提供意見反應，或詢問有關流量篩選規則的問題 **aemcs-waf-adopter@adobe.com**.
+我們邀請您透過傳送電子郵件至：**aemcs-waf-adopter@adobe.com**，以提供意見回饋或詢問有關流量篩選規則的問題。
 
 ## 下一步
 
 瞭解 [如何設定](./how-to-setup.md) 功能，方便您建立、部署和測試流量篩選規則。 閱讀有關設定 **Elasticsearch、Logstash和Kibana (ELK)** 棧疊控制面板工具以分析AEMCS CDN記錄的結果。
-
 
 

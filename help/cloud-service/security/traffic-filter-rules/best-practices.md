@@ -10,17 +10,19 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '416'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # 流量篩選器規則（包括WAF規則）的最佳實務
 
 瞭解流量篩選規則（包括WAF規則）的建議最佳實務。 請務必注意，本文中說明的最佳實務並非詳盡無遺，且用意並非要取代您自己的安全性原則和程式。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425408?quality=12&learn=on)
 
 ## 一般最佳實務
 
@@ -150,3 +152,6 @@ data:
 ## 摘要
 
 總而言之，本教學課程已為您提供在Adobe Experience Manager as a Cloud Service (AEMCS)中加強網頁應用程式安全性所需的知識和工具。 透過實用的規則範例和對結果分析的深入解析，您可以有效地保護您的網站和應用程式。
+
+
+

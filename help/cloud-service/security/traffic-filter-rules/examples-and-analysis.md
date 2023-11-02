@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 0%
 
 ---
-
 
 # 流量篩選器規則（包括WAF規則）的範例和結果分析
 
@@ -27,6 +27,8 @@ ht-degree: 0%
 此外，您將瞭解如何使用儀表板工具來擷取AEMCS CDN記錄，並透過Adobe提供的範例儀表板將基本量度視覺化。
 
 為符合您的特定需求，您可以增強和建立自訂儀表板，進而獲得更深入的見解，並最佳化AEM網站的規則設定。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425404?quality=12&learn=on)
 
 ## 範例
 
@@ -351,4 +353,3 @@ data:
 [流量篩選規則語法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#rules-syntax)
 
 [CDN記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#cdn-log-format)
-
