@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: ea9bf14d9a8f62382c43a50dbf65c4d2b88e6bcf
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 21%
+source-wordcount: '1053'
+ht-degree: 22%
 
 ---
 
@@ -21,7 +21,6 @@ ht-degree: 21%
    + [影像](./aem-trials/images.md)
 + AEM as a Cloud Service 簡介{#introduction}
    + [AEM有哪些as a Cloud Service？](./introduction/what-is-aem-as-a-cloud-service.md)
-   + [演化](./introduction/evolution.md)
    + [架構](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
    + 策略與思維領導力{#strategy}
@@ -136,9 +135,9 @@ ht-degree: 21%
    + [AEM作者服務](./caching/author.md)
 + 存取AEM{#accessing}
    + [概觀](./accessing/overview.md)
-   + [Adobe IMS使用者](./accessing/adobe-ims-users.md)
-   + [Adobe IMS使用者群組](./accessing/adobe-ims-user-groups.md)
-   + [Adobe IMS產品設定檔](./accessing/adobe-ims-product-profiles.md)
+   + [Adobe IMS 使用者](./accessing/adobe-ims-users.md)
+   + [Adobe IMS 使用者群組](./accessing/adobe-ims-user-groups.md)
+   + [Adobe IMS 產品設定檔](./accessing/adobe-ims-product-profiles.md)
    + [AEM使用者、群組和許可權](./accessing/aem-users-groups-and-permissions.md)
    + [AEM 存取權設定逐步說明](./accessing/walk-through.md)
 + 驗證{#authentication}
