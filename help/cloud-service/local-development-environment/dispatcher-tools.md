@@ -17,7 +17,7 @@ ht-degree: 9%
 
 ---
 
-# 設定本機Dispatcher工具 {#set-up-local-dispatcher-tools}
+# 設定本機 Dispatcher 工具 {#set-up-local-dispatcher-tools}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_dispatcher"

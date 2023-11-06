@@ -13,7 +13,7 @@ exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
 source-wordcount: '626'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
@@ -30,7 +30,7 @@ AEMas a Cloud Service是雲端原生方式以運用AEM應用程式，因此會�
 
 了解 Adobe IMS 使用者、群組和產品設定檔如何與 AEM 群組和權限一起使用，以提供對 AEM 作者服務的精細存取。
 
-## Adobe IMS使用者
+## Adobe IMS 使用者
 
 需要存取AEM作者服務的使用者管理為 [Adobe IMS使用者](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html) 在 [Adobe的AdminConsole](https://adminconsole.adobe.com). 了解何謂 Adobe IMS 使用者，以及如何在 Admin Console 中對其進行存取和管理。
 
@@ -41,13 +41,13 @@ AEMas a Cloud Service是雲端原生方式以運用AEM應用程式，因此會�
 
 [瞭解Adobe IMS使用者](./adobe-ims-users.md)
 
-## Adobe IMS使用者群組
+## Adobe IMS 使用者群組
 
 應該使用將存取AEM作者服務的使用者組織到邏輯群組中 [Adobe IMS使用者群組](https://helpx.adobe.com/tw/enterprise/using/user-groups.html) 在 [Adobe的AdminConsole](https://adminconsole.adobe.com). Adobe IMS使用者群組不提供直接許可權或對AEM的存取權(這是以下工作： [Adobe IMS產品設定檔](#adobe-ims-product-profiles))但是，它們是定義使用者的邏輯群組的絕佳方法，這些邏輯群組又可以使用AEM群組和許可權轉譯為AEM Author服務中的特定存取層級。
 
 [瞭解Adobe IMS使用者群組](./adobe-ims-user-groups.md)
 
-## Adobe IMS產品設定檔
+## Adobe IMS 產品設定檔
 
 [Adobe IMS產品設定檔](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)，管理位置 [Adobe的AdminConsole](https://adminconsole.adobe.com)，是提供 [Adobe IMS使用者](#adobe-ims-users) 以基本存取層級登入AEM Author服務的存取權。
 

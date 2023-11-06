@@ -22,8 +22,8 @@ ht-degree: 74%
 >id="aemcloud_devops_deploycode"
 >title="部署程式碼"
 >abstract="將 Cloud Manager Git 存放庫和外部 Git 存放庫整合，並將專案部署到 AEM as a Cloud Service"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=en#cloud-manager" text="合併專案"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#how-to-use" text="使用 Cloud Manager 部署程式碼"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=zh-Hant#cloud-manager" text="合併專案"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=zh-Hant#how-to-use" text="使用 Cloud Manager 部署程式碼"
 
 將 Cloud Manager Git 存放庫和外部 Git 存放庫整合，並將專案部署到 AEM as a Cloud Service
 

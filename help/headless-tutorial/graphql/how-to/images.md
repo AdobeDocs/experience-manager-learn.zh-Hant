@@ -13,11 +13,11 @@ exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 source-git-commit: 97a311e043d3903070cd249d993036b5d88a21dd
 workflow-type: tm+mt
 source-wordcount: '934'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
-# 使用AEM Headless最佳化影像 {#images-with-aem-headless}
+# 利用 AEM Headless 的最佳化影像 {#images-with-aem-headless}
 
 影像是的重要方面 [開發豐富、極具吸引力的AEM Headless體驗](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless支援影像資產的管理及其最佳化傳送。
 

@@ -12,17 +12,17 @@ exl-id: 089a557c-5155-489c-bccf-0cb97e95840c
 source-git-commit: cffc2a60c7279c289090a6289d4cda6d901a1cbb
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 80%
+ht-degree: 83%
 
 ---
 
-# Adobe IMS產品設定檔 {#adobe-ims-product-profiles}
+# Adobe IMS 產品設定檔 {#adobe-ims-product-profiles}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_productprofiles"
 >title="Adobe IMS 產品設定檔"
 >abstract="Adobe IMS 產品設定檔能提供使用者登入 AEM 作者服務的權限，並根據使用者所屬的產品設定檔提供存取基準。如需了解詳細資訊，請參閱 Adobe IMS 設定檔。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#introduction" text="在 Admin Console 中管理產品和使用者存取權限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=zh-Hant#introduction" text="在 Admin Console 中管理產品和使用者存取權限"
 
 Adobe IMS 產品設定檔能提供使用者登入 AEM 作者服務的權限，並根據使用者所屬的產品設定檔提供存取基準。
 

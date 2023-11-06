@@ -1,5 +1,5 @@
 ---
-title: 使用AdobeCloud Manager - CI/CD生產管道
+title: 使用 Adobe Cloud Manager - CI/CD 生產管道
 description: CI/CD生產管道用於建置計畫碼並透過中繼部署到生產環境，減少實現價值的時間。 CI/CD 生產管道設定會定義起始管道的觸發條件、控制生產部署的參數以及效能測試參數。
 topics: Administration
 audience: administrator
@@ -16,18 +16,18 @@ exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '177'
-ht-degree: 49%
+ht-degree: 58%
 
 ---
 
-# 使用AdobeCloud Manager - CI/CD生產管道 {#using-adobe-cloud-manager-ci-cd-production-pipeline}
+# 使用 Adobe Cloud Manager - CI/CD 生產管道 {#using-adobe-cloud-manager-ci-cd-production-pipeline}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_prodpipeline"
 >title="CI/CD 生產管道"
 >abstract="CI/CD 生產管道設定會定義起始管道的觸發條件、控制生產部署的參數以及效能測試參數。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-process" text="部署程式碼"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-production-phase" text="部署至生產階段"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=zh-Hant#deployment-process" text="部署程式碼"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=zh-Hant#deployment-production-phase" text="部署至生產階段"
 
 ## 設定
 

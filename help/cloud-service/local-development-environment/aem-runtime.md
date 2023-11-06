@@ -13,11 +13,11 @@ exl-id: 19f72254-2087-450b-909d-2d90c9821486
 source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
 workflow-type: tm+mt
 source-wordcount: '1793'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
-# 設定本機AEM SDK {#set-up-local-aem-sdk}
+# 設定本機 AEM SDK {#set-up-local-aem-sdk}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"

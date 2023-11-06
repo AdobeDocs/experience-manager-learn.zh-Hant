@@ -12,17 +12,17 @@ exl-id: d35a7892-d707-4a5c-9e97-ec3abba0f30c
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '172'
-ht-degree: 73%
+ht-degree: 75%
 
 ---
 
-# Adobe IMS使用者 {#adobe-ims-users}
+# Adobe IMS 使用者 {#adobe-ims-users}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_users"
 >title="Adobe IMS 使用者"
 >abstract="在 Adobe 的 Admin Console 中會將需要存取 AEM 作者服務的使用者當成 Adobe IMS 使用者管理。了解何謂 Adobe IMS 使用者，以及如何在 Admin Console 中對其進行存取和管理。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#how-to-set-up" text="在 Admin Console 中建立使用者"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=zh-Hant#how-to-set-up" text="在 Admin Console 中建立使用者"
 >additional-url="https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="Adobe Admin Console 身分識別概觀"
 
 需要存取AEM作者服務的使用者管理為 [Adobe IMS使用者](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html) 在 [AdobeAdmin Console](https://adminconsole.adobe.com). 了解何謂 Adobe IMS 使用者，以及如何在 Admin Console 中對其進行存取和管理。
