@@ -3,9 +3,9 @@ title: 如何使用Adobe Experience Manager提升內容速度
 description: 瞭解內容速度及其在企業組織中的價值。 深入探討有效實施的四項原則，以及在實施過程中應注意的陷阱。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: bd886704f10834bb07b42d6b5c0f116496da36de
 workflow-type: tm+mt
-source-wordcount: '2814'
+source-wordcount: '2795'
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ AEM是企業層級的解決方案，涉及公司或品牌的許多部門，其�
 一般而言，最好遵循下列經驗法則：
 
 * 目標是讓不少於80%的體驗通過 [現成元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 和 [樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). 透過客戶證言，這不僅可建立更具擴充性的基礎，讓您能夠利用產品藍圖，而且將速度提升高達50%。
-* [設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[è](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[可編輯的範本](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) 並遠離靜態範本。 設定可編輯的範本（使用樣式系統所需）時，必須指派範本作者，由其控制網站某個頁面或區段可用的不同樣式。 這些對範本本身的更新在日常工作上相當小。
+* [設定可編輯的範本](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) 並遠離靜態範本。 設定可編輯的範本（使用樣式系統所需）時，必須指派範本作者，由其控制網站某個頁面或區段可用的不同樣式。 這些對範本本身的更新在日常工作上相當小。
 * 使用 [體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en) 儘可能使用。 雖然體驗片段的一般使用案例是供多管道發佈，但它們也可在整個網站中有效使用，以一次將一個區域填入內容，而非在多個區域中手動更新內容。 這樣可節省大量的時間和精力，並使撰寫團隊騰出時間從事更具體且豐富的體驗。
 * 創造更豐富的體驗。 透過利用80/20規則（以上版本），組織可以利用特定CSS和後端開發以供特定體驗使用，而非透過常見的維護更新作業。
 * 選擇可擴充的基礎，並快速重新命名。 根據現代實作執行的樣式系統可讓您跨平台有效率地重新命名。 透過變更CSS外觀元素來更新廣泛的內容區段，可快速進行測試和驗證，並提高網站的體驗品質，進而直接影響ROI。
