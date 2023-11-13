@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
 jira: KT-13312
 thumbnail: KT-13312.jpeg
-source-git-commit: bfc4d843c53373010ee04cfa590272cedea7a686
+source-git-commit: be503ba477d63a566b687866289a81a0aa7d01f7
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1231'
 ht-degree: 1%
 
 ---
@@ -41,11 +41,11 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，�
 
 1. 針對所需的AEMCS環境，選取 **下載記錄檔** 從省略符號選單。
 
-   ![下載記錄 — Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="200" zoomable="yes"}
+   ![下載記錄 — Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
 1. 在 **下載記錄檔** 對話方塊中，選取 **發佈** 從下拉式功能表中選取服務，然後按一下 **cdn** 列。
 
-   ![CDN記錄 — Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="200" zoomable="yes"}
+   ![CDN記錄 — Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
 
 如果下載的記錄檔來自 _今天_ 副檔名為 `.log` 否則對於過去的記錄檔，副檔名為 `.log.gz`.
@@ -71,11 +71,11 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，�
 
    1. 開啟 **CDN快取命中率** 按一下「漢堡選單> Analytics >控制面板> CDN快取命中率」來建立控制面板。
 
-      ![CDN快取命中率 — Kibana控制面板](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="200" zoomable="yes"}
+      ![CDN快取命中率 — Kibana控制面板](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
    1. 從右上角選取所需的時間範圍。
 
-      ![時間範圍 — Kibana儀表板](assets/cdn-logs-analysis/time-range.png){width="200" zoomable="yes"}
+      ![時間範圍 — Kibana儀表板](assets/cdn-logs-analysis/time-range.png){width="500" zoomable="yes"}
 
    1. 此 **CDN快取命中率** 控制面板的說明一目瞭然。
 
@@ -83,14 +83,14 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，�
       - 依據快取型別的快取比率
       - 依快取型別區分的快取計數
 
-      ![請求分析總數 — Kibana儀表板](assets/cdn-logs-analysis/total-request-analysis.png){width="200" zoomable="yes"}
+      ![請求分析總數 — Kibana儀表板](assets/cdn-logs-analysis/total-request-analysis.png){width="500" zoomable="yes"}
 
    1. 此 _依請求或MIME型別分析_ 顯示下列詳細資料：
       - 依據快取型別的快取比率
       - 依快取型別區分的快取計數
       - 主要遺漏和通過URL
 
-      ![依請求或Mime型別分析 — Kibana儀表板](assets/cdn-logs-analysis/analysis-by-request-or-mime-types.png){width="200" zoomable="yes"}
+      ![依請求或Mime型別分析 — Kibana儀表板](assets/cdn-logs-analysis/analysis-by-request-or-mime-types.png){width="500" zoomable="yes"}
 
 #### 依環境名稱或程式ID篩選
 
@@ -98,11 +98,11 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，�
 
 1. 在「CDN快取命中率」控制面板中，按一下 **新增篩選器** 圖示。
 
-   ![篩選器 — Kibana控制面板](assets/cdn-logs-analysis/filter.png){width="200" zoomable="yes"}
+   ![篩選器 — Kibana控制面板](assets/cdn-logs-analysis/filter.png){width="500" zoomable="yes"}
 
 1. 在 **新增篩選器** 強制回應視窗，選取 `aem_env_name.keyword` 欄位，以及 `is` 運運算元及下一個欄位的所需環境名稱，最後按一下 _新增篩選器_.
 
-   ![新增篩選器 — Kibana儀表板](assets/cdn-logs-analysis/add-filter.png){width="200" zoomable="yes"}
+   ![新增篩選器 — Kibana儀表板](assets/cdn-logs-analysis/add-filter.png){width="500" zoomable="yes"}
 
 #### 依主機名稱篩選
 
@@ -110,11 +110,11 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，�
 
 1. 在「CDN快取命中率」控制面板中，按一下 **新增篩選器** 圖示。
 
-   ![篩選器 — Kibana控制面板](assets/cdn-logs-analysis/filter.png){width="200" zoomable="yes"}
+   ![篩選器 — Kibana控制面板](assets/cdn-logs-analysis/filter.png){width="500" zoomable="yes"}
 
 1. 在 **新增篩選器** 強制回應視窗，選取 `host.keyword` 欄位，以及 `is` 運運算元及下一個欄位所需的主機名稱，最後按一下 _新增篩選器_.
 
-   ![主機篩選器 — Kibana控制面板](assets/cdn-logs-analysis/add-host-filter.png){width="200" zoomable="yes"}
+   ![主機篩選器 — Kibana控制面板](assets/cdn-logs-analysis/add-host-filter.png){width="500" zoomable="yes"}
 
 同樣地，根據分析需求將更多篩選器新增到儀表板。
 
@@ -127,7 +127,7 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，�
 下載的 `aemcs_cdn_logs_analysis.ipynb` 「互動式Python筆記型電腦」檔案的意義不言自明，但每個區段的關鍵重點為：
 
 - **安裝其他程式庫**：安裝 `termcolor` 和 `tabulate` Python資料庫。
-- **載入CDN記錄檔**：載入CDN記錄檔，使用 `log_file` 變數值，請務必更新其值。 這也會將此CDN記錄轉換為 [熊貓資料框架](https://pandas.pydata.org/docs/reference/frame.html).
+- **載入CDN記錄**：載入CDN記錄檔，使用 `log_file` 變數值，請務必更新其值。 這也會將此CDN記錄轉換為 [熊貓資料框架](https://pandas.pydata.org/docs/reference/frame.html).
 - **執行分析**：第一個程式碼區塊為 _顯示總計、HTML、JS/CSS和影像要求的分析結果_，它提供快取命中率百分比、長條圖和圓餅圖。
 第二個程式碼區塊為 _HTML、JS/CSS和影像的前5大遺漏和通過請求URL_，會以表格格式顯示URL及其計數。
 
@@ -141,33 +141,33 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，�
 
 1. 登入 [Adobe Experience Cloud](https://experience.adobe.com/)，位於首頁> **快速存取** 區段>按一下 **Experience Platform**
 
-   ![Experience Platform](assets/cdn-logs-analysis/experience-platform.png){width="200" zoomable="yes"}
+   ![Experience Platform](assets/cdn-logs-analysis/experience-platform.png){width="500" zoomable="yes"}
 
 1. 在Adobe Experience Platform首頁>資料科學區段>中，按一下 **Notebooks** 功能表專案。 若要啟動Jupyter Notebooks環境，請按一下 **JupyterLab** 標籤。
 
-   ![Notebook記錄檔值更新](assets/cdn-logs-analysis/datascience-notebook.png){width="200" zoomable="yes"}
+   ![Notebook記錄檔值更新](assets/cdn-logs-analysis/datascience-notebook.png){width="500" zoomable="yes"}
 
 1. 在JupyterLab功能表中，使用 **上傳檔案** 圖示，上傳下載的CDN記錄檔及 `aemcs_cdn_logs_analysis.ipynb` 檔案。
 
-   ![上傳檔案 — JupyteLab](assets/cdn-logs-analysis/jupyterlab-upload-file.png){width="200" zoomable="yes"}
+   ![上傳檔案 — JupyteLab](assets/cdn-logs-analysis/jupyterlab-upload-file.png){width="500" zoomable="yes"}
 
 1. 開啟 `aemcs_cdn_logs_analysis.ipynb` 按兩下檔案。
 
 1. 在 **載入CDN記錄檔** 筆記本的區段，更新 `log_file` 值。
 
-   ![Notebook記錄檔值更新](assets/cdn-logs-analysis/notebook-update-variable.png){width="200" zoomable="yes"}
+   ![Notebook記錄檔值更新](assets/cdn-logs-analysis/notebook-update-variable.png){width="500" zoomable="yes"}
 
 1. 若要執行選取的儲存格並前進，請按一下 **播放** 圖示。
 
-   ![Notebook記錄檔值更新](assets/cdn-logs-analysis/notebook-run-cell.png){width="200" zoomable="yes"}
+   ![Notebook記錄檔值更新](assets/cdn-logs-analysis/notebook-run-cell.png){width="500" zoomable="yes"}
 
 1. 執行 **顯示總計、HTML、JS/CSS和影像要求的分析結果** 程式碼儲存格中，輸出會顯示快取命中率百分比、長條圖和圓餅圖。
 
-   ![Notebook記錄檔值更新](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="200" zoomable="yes"}
+   ![Notebook記錄檔值更新](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="500" zoomable="yes"}
 
 1. 執行 **HTML、JS/CSS和影像的前5大遺漏和通過請求URL** 程式碼儲存格中，輸出會顯示前5個MISS和PASS請求URL。
 
-   ![Notebook記錄檔值更新](assets/cdn-logs-analysis/output-top-urls.png){width="200" zoomable="yes"}
+   ![Notebook記錄檔值更新](assets/cdn-logs-analysis/output-top-urls.png){width="500" zoomable="yes"}
 
 您可以增強Jupyter Notebook，根據您的需求分析CDN記錄。
 
