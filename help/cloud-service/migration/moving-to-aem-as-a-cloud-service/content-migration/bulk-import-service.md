@@ -1,6 +1,6 @@
 ---
 title: 使用大量匯入服務的內容移轉
-description: 瞭解如何使用AEM as aCloud Services的大量匯入服務從非AEM來源匯入資產。
+description: 瞭解如何使用AEM as aCloud Service的大量匯入服務從非AEM來源匯入資產。
 version: Cloud Service
 topic: Migration, Upgrade
 feature: Migration
@@ -9,16 +9,18 @@ level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 8a4f4a1370d93aa592d5d67208ad5f85034db0bf
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
 # 大量匯入服務
 
-瞭解如何使用AEM as aCloud Services的大量匯入服務從非AEM來源匯入資產。
+瞭解如何使用AEM as aCloud Service的大量匯入服務從非AEM來源匯入資產。
+
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/336969?quality=12&learn=on)
 
@@ -26,12 +28,16 @@ ht-degree: 0%
 
 ![大量匯入服務生命週期](../assets/bulk-import-service.png)
 
-大量匯入服務用於將儲存在Azure Blob儲存空間或Amazon S3儲存空間的檔案以資產形式傳輸到AEMas a Cloud Service。
+大量匯入服務用於將儲存在Azure Blob儲存體或Amazon S3儲存體中的檔案傳輸到AEMas a Cloud Service中作為資產。
+
+>[!TIP]
+>
+> 此影片中的輸入來源僅顯示Azure Blob Storage和Amazon S3；不過可用來源會隨著時間持續成長。 如需完整的支援輸入來源清單，請參閱產品中的可用選項，或 [檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
 
 ## 重要活動
 
-+ 上傳要匯入的檔案至您的雲端儲存提供者(Azure Blob儲存或Amazon S3)。
-+ 從AEMas a Cloud Service製作服務設定並執行大量匯入服務。
++ 上傳要匯入的檔案至您的雲端儲存提供者。
++ 從AEMas a Cloud Service作者服務設定並執行大量匯入服務。
 + 執行Bulk Service Importer作為一次性匯入，或排程定期匯入。
 
 ## 其他資源
