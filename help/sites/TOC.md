@@ -6,7 +6,7 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: d17544c4f8dda03e5147a1f48dbbdae005ee9438
+source-git-commit: 3f27a728bbaba1ff5a4c7d25e23c3979e59d73ea
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 22%
@@ -25,7 +25,6 @@ ht-degree: 22%
    + [重新導向](document-authoring/redirects.md)
    + [大量中繼資料](document-authoring/bulk-metadata.md)
    + [頁面中繼資料](document-authoring/page-metadata.md)
-   + [回應式導覽](document-authoring/responsive-navigation.md)
    + 操作說明{#how-to}
       + [檔案稽核](./document-authoring/how-to/document-audit.md)
       + [檔案許可權](./document-authoring/how-to/document-permissions.md)
@@ -34,6 +33,7 @@ ht-degree: 22%
       + [內嵌iFrame](./document-authoring/how-to/iframes.md)
       + [影像替代文字](./document-authoring/how-to/image-alt-text.md)
       + [防止搜尋引擎編制索引](./document-authoring/how-to/no-index.md)
+      + [回應式導覽](document-authoring/how-to/responsive-navigation.md)
 + 頁面製作 {#page-authoring}
    + [編寫](page-authoring/aem-sites-authoring-overview.md)
    + [導覽](page-authoring/basic-handling-sites-feature-video-use.md)
@@ -54,11 +54,6 @@ ht-degree: 22%
    + [啟動](page-authoring/launches.md)
    + 向同儕學習 {#expert-advice}
       + [網站階層秘訣](page-authoring/expert-advice/site-hierarchy.md)
-+ 元件 {#components}
-   + [元件開發](components/component-development.md)
-   + [核心元件](components/core-components-feature-video-understand.md)
-   + [網頁最佳化的影像交付](components/web-optimized-image-delivery.md)
-   + [元件主控台](components/components-console-feature-video-use.md)
 + 內容片段 {#content-fragments}
    + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [編寫內容片段](content-fragments/content-fragments-feature-video-use.md)
@@ -99,6 +94,11 @@ ht-degree: 22%
    + [設定體驗片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [搭配Adobe Target使用體驗片段](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [設定ContextHub](personalization/context-hub-technical-video-setup.md)
++ 元件 {#components}
+   + [元件開發](components/component-development.md)
+   + [核心元件](components/core-components-feature-video-understand.md)
+   + [網頁最佳化的影像交付](components/web-optimized-image-delivery.md)
+   + [元件主控台](components/components-console-feature-video-use.md)
 + SEO {#seo}
    + [Sitemap](./seo/sitemaps.md)
 + 單頁應用程式 {#spa-editor}
