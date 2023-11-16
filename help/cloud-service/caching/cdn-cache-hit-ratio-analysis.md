@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
 jira: KT-13312
 thumbnail: KT-13312.jpeg
-source-git-commit: be503ba477d63a566b687866289a81a0aa7d01f7
+source-git-commit: 4e93bc88b0ee5a805f2aaf1e66900f084ae01247
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1433'
 ht-degree: 1%
 
 ---
@@ -20,10 +20,12 @@ ht-degree: 1%
 
 # CDN快取命中率分析
 
-瞭解如何分析提供的AEMas a Cloud Service **CDN記錄** 並獲得以下見解： **快取命中率**、和 **排名在前的URL _未命中_ 和 _通過_ 快取型別** 用於最佳化目的。
+在CDN快取的內容可減少網站使用者所經歷的延遲，這些使用者不需要等待請求回到Apache/Dispatcher或AEM發佈。 有鑑於此，建議您最佳化CDN快取命中率，以最大化可在CDN快取的內容量。
+
+瞭解如何分析提供的AEMas a Cloud Service **CDN記錄** 並獲得以下見解： **快取命中率**、和 **排名在前的URL _未命中_ 和 _通過_ 快取型別**，用於最佳化目的。
 
 
-CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，如需詳細資訊，請參閱 [CDN記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs). 此 `cache` 欄位提供關於 _快取的狀態_ 且其可能值為HIT、MISS或PASS。 讓我們檢視可能值的詳細資訊。
+CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`. 如需詳細資訊，請參閱 [CDN記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs). 此 `cache` 欄位提供關於 _快取的狀態_ 且其可能值為HIT、MISS或PASS。 讓我們檢視可能值的詳細資訊。
 
 | 快取狀態 </br> 可能的值 | 說明 |
 |------------------------------------|:-----------------------------------------------------:|
@@ -31,7 +33,12 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，�
 | 未命中 | 請求的資料為 _在CDN快取中找不到，必須要求_ 從AEM伺服器。 |
 | 通過 | 請求的資料為 _明確設定為不快取_ 並一律從AEM伺服器擷取。 |
 
-在此教學課程中， [AEM WKND專案](https://github.com/adobe/aem-guides-wknd) 部署至AEMas a Cloud Service環境，並使用觸發小型效能測試 [Apache JMeter](https://jmeter.apache.org/).
+在本教學課程中， [AEM WKND專案](https://github.com/adobe/aem-guides-wknd) 部署至AEMas a Cloud Service環境，並使用觸發小型效能測試 [Apache JMeter](https://jmeter.apache.org/).
+
+本教學課程的結構化會引導您完成以下程式：
+1. 透過Cloud Manager下載CDN記錄
+1. 分析這些CDN記錄，其可透過兩種方法執行：本機安裝的儀表板或遠端存取的Jupityer Notebook (適用於授權Adobe Experience Platform的使用者)
+1. 最佳化CDN快取設定
 
 ## 下載CDN記錄
 
@@ -52,12 +59,12 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，�
 
 ## 分析下載的CDN記錄檔
 
-若要獲得如快取命中率以及MISS和PASS快取型別的前URL等見解，請分析下載的CDN記錄檔。 這些見解有助於最佳化 [CDN快取設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html) 並提升網站效能。
+若要獲得如快取命中率，以及MISS和PASS快取型別的前URL等深入分析，請分析下載的CDN記錄檔。 這些見解有助於最佳化 [CDN快取設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html) 並提升網站效能。
 
-為了分析CDN記錄，本文使用 **Elasticsearch、Logstash和Kibana (ELK)** [儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) 和 [Jupyter Notebook](https://jupyter.org/).
+為了分析CDN記錄，本文提供兩個選項： **Elasticsearch、Logstash和Kibana (ELK)** [儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) 和 [Jupyter Notebook](https://jupyter.org/). ELK儀表板工具可安裝在筆記型電腦本機，而Jupityr Notebook工具則可從遠端存取 [做為Adobe Experience Platform的一部分](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en) 適用於已授權Adobe Experience Platform的使用者，而不需安裝其他軟體。
 
 
-### 使用儀表板工具
+### 選項1：使用ELK儀表板工具
 
 此 [麋鹿棧疊](https://www.elastic.co/elastic-stack) 是一組工具，提供可擴充的解決方案，以搜尋、分析和視覺化資料。 它包含Elasticsearch、Logstash和Kibana。
 
@@ -69,7 +76,7 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，�
 
    1. 複製下載的CDN記錄檔（在環境特定資料夾中）。
 
-   1. 開啟 **CDN快取命中率** 按一下「漢堡選單> Analytics >控制面板> CDN快取命中率」來建立控制面板。
+   1. 開啟 **CDN快取命中率** 控制面板按一下左上角的「導覽功能表> Analytics >控制面板> CDN快取點選率」 。
 
       ![CDN快取命中率 — Kibana控制面板](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -118,26 +125,24 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`，�
 
 同樣地，根據分析需求將更多篩選器新增到儀表板。
 
-### 使用Jupyter Notebook
+### 選項2：使用Jupyter Notebook
 
-此 [Jupyter Notebook](https://jupyter.org/) 是開放原始碼的Web應用程式，可讓您建立包含程式碼、文字和視覺效果的檔案。 它用於資料轉換、視覺化和統計模型製作。
+如果使用者不想在本機安裝軟體（亦即上節的ELK儀表板工具），有另一個選項，但需要Adobe Experience Platform的授權。
 
-若要加速CDN記錄分析，請下載 [AEM-as-a-CloudService - CDN記錄分析 — Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb) 檔案。
+此 [Jupyter Notebook](https://jupyter.org/) 是開放原始碼的Web應用程式，可讓您建立包含程式碼、文字和視覺效果的檔案。 它用於資料轉換、視覺化和統計模型製作。 可從遠端存取 [做為Adobe Experience Platform的一部分](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en).
 
-下載的 `aemcs_cdn_logs_analysis.ipynb` 「互動式Python筆記型電腦」檔案的意義不言自明，但每個區段的關鍵重點為：
+#### 下載互動式Python筆記本檔案
+
+首先，下載 [AEM-as-a-CloudService - CDN記錄分析 — Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb) 檔案的常見問答，這將有助於CDN記錄分析。 這份「互動式Python筆記本」檔案內容不言自明，但各節的關鍵重點為：
 
 - **安裝其他程式庫**：安裝 `termcolor` 和 `tabulate` Python資料庫。
-- **載入CDN記錄**：載入CDN記錄檔，使用 `log_file` 變數值，請務必更新其值。 這也會將此CDN記錄轉換為 [熊貓資料框架](https://pandas.pydata.org/docs/reference/frame.html).
-- **執行分析**：第一個程式碼區塊為 _顯示總計、HTML、JS/CSS和影像要求的分析結果_，它提供快取命中率百分比、長條圖和圓餅圖。
-第二個程式碼區塊為 _HTML、JS/CSS和影像的前5大遺漏和通過請求URL_，會以表格格式顯示URL及其計數。
+- **載入CDN記錄**：載入CDN記錄檔，使用 `log_file` 變數值；請務必更新其值。 這也會將此CDN記錄轉換為 [熊貓資料框架](https://pandas.pydata.org/docs/reference/frame.html).
+- **執行分析**：第一個程式碼區塊為 _顯示總計、HTML、JS/CSS和影像要求的分析結果_；它提供快取命中率百分比、長條圖和圓餅圖。
+第二個程式碼區塊為 _HTML、JS/CSS和影像的前5大遺漏和通過請求URL_；會以表格格式顯示URL及其計數。
 
-#### 以Experience Platform執行Jupyter Notebook
+#### 執行Jupyter Notebook
 
->[!IMPORTANT]
->
->如果您使用或授權Experience Platform，則無需安裝其他軟體即可執行Jupyter Notebook。
-
-若要以Experience Platform執行Jupyter Notebook，請遵循下列步驟：
+接下來，請依照下列步驟在Adobe Experience Platform中執行Jupyter Notebook：
 
 1. 登入 [Adobe Experience Cloud](https://experience.adobe.com/)，位於首頁> **快速存取** 區段>按一下 **Experience Platform**
 
