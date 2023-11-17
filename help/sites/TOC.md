@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 05365ec0d6a42c9697b0d0d076c96bffd2cd40d5
+source-git-commit: 4225be50cd3ed4c19c7c6ca90f22df826d6d19a6
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '526'
 ht-degree: 22%
 
 ---
@@ -22,6 +22,7 @@ ht-degree: 22%
    + [預覽和發佈](document-authoring/preview-and-publish.md)
    + [檔案結構](document-authoring/document-structure.md)
    + [預設內容和區段](document-authoring/default-content-and-sections.md)
+   + [封鎖和自動封鎖](document-authoring/blocks-and-autoblocks.md)
    + [重新導向](document-authoring/redirects.md)
    + [大量中繼資料](document-authoring/bulk-metadata.md)
    + [頁面中繼資料](document-authoring/page-metadata.md)
