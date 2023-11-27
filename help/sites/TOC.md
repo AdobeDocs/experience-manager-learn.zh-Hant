@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 521f11e24b2d1a89b9c26d4407ca417dc21caa29
+source-git-commit: 54827c36a33437a8bf090eb10cde8ed656446d0b
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 21%
+source-wordcount: '526'
+ht-degree: 22%
 
 ---
 
@@ -67,17 +67,16 @@ ht-degree: 21%
    + [內容片段vs.體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + 開發{#developing}
-      + [先決條件](./edge-delivery-services/developing/prerequisites.md)
-      + [AEM範本](./edge-delivery-services/developing/aem-boilerplate.md)
-      + [內容存放庫](./edge-delivery-services/developing/content-repository.md)
-      + [AEM範本](./edge-delivery-services/developing/aem-boilerplate.md)
-      + [預覽和發佈](./edge-delivery-services/developing/preview-and-publish.md)
-      + [AEM Sidekick](./edge-delivery-services/developing/sidekick.md)
-      + [檔案結構](./edge-delivery-services/developing/document-structure.md)
-      + [本機開發](./edge-delivery-services/developing/local-development.md)
-      + [Git](./edge-delivery-services/developing/git.md)
+      + [先決條件](edge-delivery-services/developing/prerequisites.md)
+      + [AEM範本](edge-delivery-services/developing/aem-boilerplate.md)
+      + [內容存放庫](edge-delivery-services/developing/content-repository.md)
+      + [預覽和發佈](edge-delivery-services/developing/preview-and-publish.md)
+      + [AEM Sidekick](edge-delivery-services/developing/sidekick.md)
+      + [檔案結構](edge-delivery-services/developing/document-structure.md)
+      + [本機開發](edge-delivery-services/developing/local-development.md)
+      + [Git](edge-delivery-services/developing/git.md)
    + 操作說明{#how-to}
-      + [RSS摘要](./edge-delivery-services/how-to/rss.md)
+      + [RSS摘要](edge-delivery-services/how-to/rss.md)
 + 開發 {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 專案原型](developing/aem-project-archetype.md)
