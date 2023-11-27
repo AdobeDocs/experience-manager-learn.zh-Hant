@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: bfc4d843c53373010ee04cfa590272cedea7a686
+source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
 workflow-type: tm+mt
-source-wordcount: '1058'
-ht-degree: 22%
+source-wordcount: '1084'
+ht-degree: 21%
 
 ---
 
@@ -204,12 +204,13 @@ ht-degree: 22%
       + [4 — 同步IntelliJ與AEM](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
       + [5 — 建立表單](./forms/developing-for-cloud-service/deploy-your-first-form.md)
       + [6 — 自訂提交處理常式](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
-      + [7 — 啟用Forms Portal元件](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [8 — 包含Cloud Service和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
-      + [9 — 內容感知雲端設定](./forms/developing-for-cloud-service/context-aware-fdm.md)
-      + [10 — 推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
-      + [11 — 部署至開發環境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
-      + [12 — 更新maven原型](./forms/developing-for-cloud-service/updating-project-archetype.md)
+      + [7 — 使用資源型別註冊servlet](./forms/developing-for-cloud-service/registering-servlet-using-resourcetype.md)
+      + [8 — 啟用Forms Portal元件](./forms/developing-for-cloud-service/forms-portal-components.md)
+      + [9 — 包含Cloud Service和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [10 — 內容感知雲端設定](./forms/developing-for-cloud-service/context-aware-fdm.md)
+      + [11 — 推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [12 — 部署至開發環境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [13 — 更新maven原型](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + 建立最適化表單{#create-first-af}
       + [簡介](./forms/create-first-af/introduction.md)
       + [建立主題](./forms/create-first-af/create-theme.md)
@@ -254,6 +255,12 @@ ht-degree: 22%
       + [PDF/A公用程式](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [測試解決方案](./forms/forms-cs-assembler/test.md)
       + [挑戰](./forms/forms-cs-assembler/challenge.md)
+   + 使用Blob索引標籤儲存表單提交{#store-submiited-data-with-metadata-tags}
+      + [簡介](./forms/store-submiited-data-with-metadata-tags/introduction.md)
+      + [擴充選擇群組元件](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)
+      + [建立OSGi設定](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
+      + [建立索引標籤](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
+      + [建立自訂提交](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
    + Azure入口網站儲存體{#forms-cs-azure-portal}
       + [簡介](./forms/forms-cs-azure-portal/introduction.md)
       + [建立表單資料模型](./forms/forms-cs-azure-portal/create-fdm.md)
