@@ -3,14 +3,14 @@ title: 設定已轉換的最適化表單
 description: 設定已轉換的最適化表單
 feature: Adaptive Forms
 thumbnail: 39574.jpg
-kt: 6126
+jira: KT-6126
 topic: Development
 role: User
 level: Beginner
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: fba18118-0431-4edd-a5a6-0281e8c12979
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 1%
@@ -19,13 +19,13 @@ ht-degree: 1%
 
 # 設定已轉換的最適化表單
 
-將PDF表單轉換為最適化表單後，您通常需要提供一些有意義的標題，並且您可能需要重新排列一些欄位。 此外，表單也需設定為使用Acrobat Sign整合來獲得就地簽署體驗。
+將PDF表單轉換為最適化表單後，您通常需要提供一些有意義的標題，也可能需要重新排列一些欄位。 此外，表單也需設定為使用Acrobat Sign整合來獲得就地簽署體驗。
 
-以下影片說明為就地簽署體驗設定表單所需的步驟
+以下影片說明為就地簽名體驗設定表單所需執行的步驟
 
 >[!VIDEO](https://video.tv.adobe.com/v/39574?quality=12&learn=on)
 
 ## 恭喜
 
-您已成功設定轉換後的適用性表單，以使用Acrobat Sign整合提供就地進行簽名體驗。
+您已成功設定轉換後的最適化表單為使用Acrobat Sign整合就地簽署體驗。
 

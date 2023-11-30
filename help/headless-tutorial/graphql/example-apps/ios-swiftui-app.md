@@ -3,7 +3,7 @@ title: iOS應用程式 — AEM Headless範例
 description: 範例應用程式是探索Adobe Experience Manager (AEM)無周邊功能的絕佳方式。 此iOS應用程式示範了如何使用AEM GraphQL API透過持續性查詢來查詢內容。
 version: Cloud Service
 mini-toc-levels: 2
-kt: 10587
+jira: KT-10587
 thumbnail: KT-10587.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -12,7 +12,7 @@ level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: 3e4960bf2d243e33fb9f36fd3fbb45f57260229a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 3%
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 檢視 [GitHub上的原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 下列工具應在本機安裝：
 
@@ -52,7 +52,7 @@ iOS應用程式是專為連線至 __AEM發佈__ 不過，如果在iOS應用程�
    ```
 
 1. Launch [Xcode](https://developer.apple.com/xcode/) 並開啟資料夾 `ios-app`
-1. 修改檔案 `Config.xcconfig` 檔案和更新 `AEM_SCHEME` 和 `AEM_HOST` 以符合您的目標AEM Publish服務。
+1. 修改檔案 `Config.xcconfig` 檔案和更新 `AEM_SCHEME` 和 `AEM_HOST` 以比對AEM Publish服務。
 
    ```plain
    // The http/https protocol scheme used to access the AEM_HOST
@@ -61,7 +61,7 @@ iOS應用程式是專為連線至 __AEM發佈__ 不過，如果在iOS應用程�
    AEM_HOST = publish-p123-e456.adobeaemcloud.com
    ```
 
-   如果連線到AEM作者，請新增 `AEM_AUTH_TYPE` 和支援的驗證屬性 `Config.xcconfig`.
+   如果連線到AEM Author，請新增 `AEM_AUTH_TYPE` 和支援的驗證屬性 `Config.xcconfig`.
 
    __基本驗證__
 

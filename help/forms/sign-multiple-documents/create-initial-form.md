@@ -1,15 +1,15 @@
 ---
 title: 建立初始表單以觸發程式
-description: 建立初始表單以觸發電子郵件通知，以開始簽署流程。
+description: 建立初始表單以觸發電子郵件通知以開始簽名流程。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
 role: User
 level: Intermediate
-kt: 6892
+jira: KT-6892
 thumbnail: 6892.jpg
 exl-id: d7c55dc8-d886-4629-bb50-d927308d12e3
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 5%
@@ -23,13 +23,13 @@ ht-degree: 5%
 | 欄位型別 | 名稱 | 用途 | 隱藏 | 預設值 |
 | ------------------------|---------------------------------------|--------------------|--------|----------------- |
 | 文字欄位 | 已簽署 | 表示簽署狀態 | Y | N |
-| 文字欄位 | guid | 以唯一方式識別表單 | Y | 3889 |
+| 文字欄位 | guid | 以唯一識別表單 | Y | 3889 |
 | 文字欄位 | customername | 若要擷取客戶名稱 | N |
 | 文字欄位 | 客戶電子郵件 | 要傳送通知的客戶電子郵件 | N |
-| 核取方塊 | formsToSign | 專案會識別套件中的表單 | N |
+| 核取方塊 | formsToSign | 專案會識別封裝中的表單 | N |
 
-初始表單需要設定以觸發AEM工作流程，稱為 **signmultipleforms**
-請確定資料檔案路徑已設為 **Data.xml**. 這非常重要，因為範常式式碼會在表單提交程式的裝載中尋找名為Data.xml的檔案。
+初始表單需要設定以觸發名為的AEM工作流程 **signmultipleforms**
+確定資料檔案路徑已設為 **Data.xml**. 這非常重要，因為範常式式碼會在處理表單提交的程式中，於裝載中尋找名為Data.xml的檔案。
 
 ## Assets
 

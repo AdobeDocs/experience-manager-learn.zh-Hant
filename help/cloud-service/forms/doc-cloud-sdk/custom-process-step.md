@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 thumbnail: 7837.jpg
-kt: 7837
+jira: KT-7837
 exl-id: 24a788bb-f0dc-4774-91ab-26fde2de098f
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 自訂流程步驟
 
-以下是自訂流程步驟的完整程式碼，該程式碼會以轉換後的pdf轉換和取代原生檔案。此自訂步驟會搜尋資料夾名稱下的所有附件，該資料夾名稱會作為工作流程中的流程引數提供。
+以下是自訂流程步驟的完整程式碼，該程式碼會以轉換的pdf來轉換和取代原生檔案。此自訂步驟會搜尋資料夾名稱（在工作流程中作為流程引數提供）下的所有附件。
 此自訂流程步驟使用自訂DocumentCloudSDKService的方法來建立PDF。
 
 

@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: AEM Project Archetype
-kt: 9534
+jira: KT-9534
 exl-id: c2cd9c52-6f00-4cfe-a972-665093990e5d
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -27,8 +27,8 @@ ht-degree: 0%
 
 * 開啟命令提示字元並瀏覽至c：\cloudmanager
 * 使用最新原型建立maven專案。
-* 複製並貼上內容 [文字檔](assets/creating-maven-project.txt) 在命令提示字元視窗中。 您可能必須變更DarchetypeVersion=33，取決於 [最新版本](https://github.com/adobe/aem-project-archetype/releases). Archetype 33包含新的AEM Forms主題。
-由於我們在cloudmanager資料夾中建立了新的maven專案，而該資料夾中已有aem-banking-application專案，因此您應該變更 **DartifactId** 從aem-banking-application到其他不同名稱。 我已在本文中使用aem-banking-application1。
+* 複製並貼上 [文字檔](assets/creating-maven-project.txt) 在命令提示字元視窗中。 您可能必須變更DarchetypeVersion=33，視 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 原型33包含新的AEM Forms主題。
+由於我們在cloudmanager資料夾中建立了新的maven專案，而該資料夾已具有aem-banking-application專案，因此您應變更 **DartifactId** 從aem-banking-application到其他不同名稱。 我已在本文中使用aem-banking-application1。
 
 >[!NOTE]
 >
@@ -47,11 +47,11 @@ ht-degree: 0%
 
 * 將新專案匯入IntelliJ
 
-* 更新aem-banking-application1專案ui.apps模組中的filter.xml，以包含下列行
+* 更新aem-banking-application1專案ui.apps模組中的filter.xml，以包含以下行
   ```<filter root="/apps/bankingapplication/SubmitToAEMServlet"/>```
 
-將所有程式碼複製到新專案後，您可以將此專案推送到Cloud Manager。
+將所有程式碼複製到新專案後，您就可以將此專案推送到Cloud Manager。
 
 >[!NOTE]
 >
->若要將內容(最適化Forms、表單資料模型等)同步到新專案中，您必須在IntelliJ專案中建立適當的資料夾結構，然後使用repo工具的「取得」命令將IntelliJ專案與AEM執行個體同步。
+>若要將內容(最適化Forms、表單資料模型等)同步到新專案中，您必須在IntelliJ專案中建立適當的資料夾結構，然後使用存放庫工具的「取得」命令將您的IntelliJ專案與AEM執行個體同步。

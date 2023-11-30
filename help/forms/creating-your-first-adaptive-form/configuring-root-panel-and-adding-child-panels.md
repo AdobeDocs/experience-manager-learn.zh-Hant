@@ -1,15 +1,15 @@
 ---
 title: 新增子面板至根面板
-description: 將根面板配置設定為「左側索引標籤」，並將子面板新增至根面板。
+description: 將根面板的版面配置設定為「左側索引標籤」，並將子面板新增至根面板。
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 28536.jpg
-kt: 4209
+jira: KT-4209
 topic: Development
 role: Developer
 level: Beginner
 exl-id: a68c41b8-3e80-4b25-a933-9ceb8aee1e01
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 2%
@@ -24,8 +24,8 @@ ht-degree: 2%
 >[!VIDEO](https://video.tv.adobe.com/v/28536?quality=12&learn=on)
 
 >[!NOTE]
->將子面板新增至根面板時，請 **請確定您處於編輯模式。 編輯按鈕位於瀏覽器的右上角。**
+>將子面板新增至根面板時，請 **確定您處於編輯模式。 編輯按鈕位於瀏覽器的右上角。**
 
 ## 後續步驟
 
-[將元件新增至People面板](./adding-components-to-people-panel.md)
+[將元件新增至「人物」面板](./adding-components-to-people-panel.md)

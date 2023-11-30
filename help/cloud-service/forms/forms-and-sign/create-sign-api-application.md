@@ -8,12 +8,12 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-kt: 7427
+jira: KT-7427
 thumbnail: 332436.jpg
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 exl-id: 1eb43bdc-2718-4724-a5b8-d0f22cf84418
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 1%
@@ -22,6 +22,6 @@ ht-degree: 1%
 
 # 建立Acrobat Sign API應用程式
 
-您必須在Acrobat Sign上建立API應用程式，才能與Acrobat Sign平台整合。 API應用程式可代表使用者端應用程式，與Acrobat Sign平台互動。 您可以在客戶或合作夥伴網域上建立API應用程式。
+您必須在您的Acrobat Sign上建立API應用程式，以便與您的Acrobat Sign平台整合。 API應用程式可代表使用者端應用程式，與Acrobat Sign平台互動。 您可以在客戶或合作夥伴網域上建立API應用程式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332436?quality=12&learn=on)

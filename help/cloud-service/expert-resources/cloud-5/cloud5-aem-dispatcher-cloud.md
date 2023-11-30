@@ -4,12 +4,12 @@ description: Darin和James討論AEM雲端中的Dispatcher，包括一些最佳�
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
-kt: 10054
+jira: KT-10054
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342067.jpeg
 exl-id: 90c61bfb-46ff-4941-b89e-ce38d1025de8
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 2%
@@ -25,7 +25,7 @@ Darin和James討論AEM雲端中的Dispatcher，包括一些最佳實務和與AMS
 
 ## 本影片涵蓋的內容
 
-+ 在雲端服務環境中部署Dispatcher檔案
++ 在雲端服務環境中部署dispatcher檔案
    + [移轉檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
    + [部落格](https://medium.com/adobetech/migrating-a-dispatcher-configuration-from-managed-services-to-aem-as-a-cloud-service-fa8a80d242ee)
 + [移轉工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration)

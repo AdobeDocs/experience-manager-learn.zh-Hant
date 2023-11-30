@@ -1,37 +1,37 @@
 ---
-title: 在App Builder動作中產生存取Token
-description: 瞭解如何使用JWT憑證產生存取Token，以用於App Builder動作。
+title: 在App Builder動作中產生存取權杖
+description: 瞭解如何使用JWT憑證產生存取權杖，以用於App Builder動作。
 feature: Developer Tools
 version: Cloud Service
 topic: Development
 role: Developer
 level: Intermediate
-kt: 11743
+jira: KT-11743
 last-substantial-update: 2023-01-17T00:00:00Z
 exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 1%
 
 ---
 
-# 在App Builder動作中產生存取Token
+# 在App Builder動作中產生存取權杖
 
-App Builder動作可能需要與與Adobe Developer Console專案相關聯的AdobeAPI互動。App Builder應用程式也已部署。
+App Builder動作可能需要與部署了App Builder應用程式的Adobe Developer主控台專案相關聯的AdobeAPI互動。
 
-這可能會要求App Builder動作產生與所需Adobe Developer Console專案相關聯的存取權杖。
+這可能需要應用程式產生器動作，才能產生與所需Adobe Developer主控台專案相關聯的存取權杖。
 
 >[!IMPORTANT]
 >
-> 檢閱 [App Builder安全性檔案](https://developer.adobe.com/app-builder/docs/guides/security/) 以瞭解產生存取權杖與使用所提供的存取權杖的合適時機。
+> 檢閱 [App Builder安全性檔案](https://developer.adobe.com/app-builder/docs/guides/security/) 以瞭解何時適合產生存取權杖以及使用提供的存取權杖。
 >
-> 自訂動作可能需要自行提供安全性檢查，以確保只有允許的消費者才能存取App Builder動作及其背後的Adobe服務。
+> 自訂動作可能需要提供自己的安全性檢查，以確保只有允許的消費者才能存取App Builder動作及其背後的Adobe服務。
 
 
 ## .env檔案
 
-在App Builder專案的 `.env` 檔案，為每個Adobe Developer主控台專案的JWT憑證附加自訂金鑰。 JWT認證值可從Adobe Developer Console專案的 __認證__ > __服務帳戶(JWT)__ 指定工作區的。
+在App Builder專案的 `.env` 檔案，並為每個Adobe Developer主控台專案的JWT憑證附加自訂金鑰。 JWT認證值可從Adobe Developer Console專案的 __認證__ > __服務帳戶(JWT)__ 指定工作區的。
 
 ![Adobe Developer主控台JWT服務認證](./assets/jwt-auth/jwt-credentials.png)
 
@@ -45,14 +45,14 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 ```
 
-以下專案的值： `JWT_CLIENT_ID`， `JWT_CLIENT_SECRET`， `JWT_TECHNICAL_ACCOUNT_ID`， `JWT_IMS_ORG` 可以從Adobe Developer主控台專案的JWT憑證畫面直接複製。
+以下專案的值： `JWT_CLIENT_ID`， `JWT_CLIENT_SECRET`， `JWT_TECHNICAL_ACCOUNT_ID`， `JWT_IMS_ORG` 可以從Adobe Developer Console專案的JWT憑證畫面直接複製。
 
 ### Metascope
 
-決定App Builder動作與互動的AdobeAPI及其中繼資料。 在中以逗號分隔符號列出Metascope `JWT_METASCOPES` 金鑰。 有效的中繼資料集會列在 [Adobe的JWT Metascope檔案](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/).
+判斷App Builder動作互動時所互動用的AdobeAPI及其中繼資料。 在中列出帶有逗號分隔符號的Metascope `JWT_METASCOPES` 機碼。 有效的中繼資料集會列在 [Adobe的JWT Metascope檔案](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/).
 
 
-例如，可將下列值新增至 `JWT_METASCOPES` 中的索引鍵 `.env`：
+例如，可將下列值新增至 `JWT_METASCOPES` 鍵入 `.env`：
 
 ```
 ...
@@ -62,7 +62,7 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 
 ### 私密金鑰
 
-此 `JWT_PRIVATE_KEY` 必須是特別格式化，因為它原本就是多行值，在中不受支援 `.env` 檔案。 最簡單的方式是以base64編碼私密金鑰。 私密金鑰的Base64編碼(`-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----`)可使用作業系統提供的原生工具來完成。
+此 `JWT_PRIVATE_KEY` 必須是特別格式化，因為它原本就是多行值，在中不受支援 `.env` 檔案。 最簡單的方法是以base64編碼私密金鑰。 Base64編碼私密金鑰(`-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----`)可使用作業系統提供的原生工具來完成。
 
 >[!BEGINTABS]
 
@@ -70,7 +70,7 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 
 1. 開啟 `Terminal`
 1. 執行命令 `base64 -i /path/to/private.key | pbcopy`
-1. 系統會自動將base64輸出複製到剪貼簿
+1. base64輸出會自動複製到剪貼簿
 1. 貼入 `.env` 作為對應索引鍵的值
 
 >[!TAB Windows]
@@ -90,7 +90,7 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 
 >[!ENDTABS]
 
-例如，可以將下列base64編碼的私密金鑰新增至 `JWT_PRIVATE_KEY` 中的索引鍵 `.env`：
+例如，可以將下列base64編碼的私密金鑰新增至 `JWT_PRIVATE_KEY` 鍵入 `.env`：
 
 ```
 ...
@@ -99,7 +99,7 @@ JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 
 ## 輸入對應
 
-在JWT認證值設定於 `.env` 檔案中，必須將其對應至AppBuilder動作輸入，才能在動作本身中讀取。 若要這麼做，請在每個變數中新增專案 `ext.config.yaml` 動作 `inputs` 格式為： `PARAMS_INPUT_NAME: $ENV_KEY`.
+在JWT認證值設定於 `.env` 檔案中，必須將註解對應至AppBuilder動作輸入，才能在動作中讀取。 若要這麼做，請在每個變數中新增專案 `ext.config.yaml` 動作 `inputs` 格式為： `PARAMS_INPUT_NAME: $ENV_KEY`.
 
 例如：
 
@@ -130,12 +130,12 @@ runtimeManifest:
             final: true
 ```
 
-下定義的索引鍵 `inputs` 可在以下網址取得： `params` 提供給App Builder動作的物件。
+下定義的索引鍵 `inputs` 可在 `params` 提供給App Builder動作的物件。
 
 
 ## 用於存取權杖的JWT認證
 
-在App Builder動作中， JWT認證位於 `params` 物件，使用者： [`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth) 以產生存取Token，存取Token可存取其他AdobeAPI和服務。
+在App Builder動作中， JWT認證位於 `params` 物件，使用者： [`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth) 以產生存取Token，而後者可存取其他AdobeAPI和服務。
 
 ```javascript
 const fetch = require("node-fetch");

@@ -6,17 +6,17 @@ feature: Integrations
 topic: Integrations
 role: Leader, Architect, Admin, Developer
 level: Beginner
-kt: 10718
+jira: KT-10718
 thumbnail: KT-10718.png
 last-substantial-update: 2022-11-17T00:00:00Z
 mini-toc-levels: 1
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM as a Cloud Service " before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '928'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 13%
 |                                                                   | AEM Sites | AEM Assets | AEM Forms |
 |-------------------------------------------------------------------|:---------:|:----------:|:---------:|
 | [Acrobat Sign](#adobe-acrobat-sign) |           |            | ✔ |
-| 廣告 |           |            |          |
+| Advertising |           |            |          |
 | [分析](#adobe-analytics) | ✔ | ✔ | ✔ |
 | Audience Manager |           |            |          |
 | Campaign Classic |           |            |          |
@@ -47,7 +47,7 @@ ht-degree: 13%
 
 ## Adobe Acrobat Sign
 
-Adobe Acrobat Sign (前身為Acrobat Sign)可改善AEM Forms適用性表單的電子簽章工作流程，以便處理法律、銷售、薪資、人力資源和其他領域的檔案。
+Adobe Acrobat Sign (前身為Acrobat Sign)可改善AEM Forms最適化表單的電子簽章工作流程，以便處理法律、銷售、薪資、人力資源和其他領域的檔案。
 
 ### AEM Forms
 
@@ -56,7 +56,7 @@ Adobe Acrobat Sign (前身為Acrobat Sign)可改善AEM Forms適用性表單的�
 
 ## Adobe Analytics
 
-Adobe Analytics與AEMas a Cloud Service整合，可讓您從客戶歷程中的任何位置追蹤內容活動和分析資料。 此外，您還可以取得多功能的報表、預測智慧等功能。
+Adobe Analytics與AEMas a Cloud Service整合，可讓您從客戶歷程中的任何位置追蹤內容活動及分析資料。 此外，您還可以取得多功能報表、預測智慧等更多功能。
 
 ### AEM Sites
 
@@ -72,7 +72,7 @@ Adobe Analytics與AEMas a Cloud Service整合，可讓您從客戶歷程中的�
 ### AEM Assets
 
 + [資產分析總覽](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html)
-+ [設定資產分析](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html#configure-asset-insights)
++ [設定Assets Insights](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html#configure-asset-insights)
 + [資產分析教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)
 
 ### AEM Forms
@@ -87,7 +87,7 @@ Adobe Analytics與AEMas a Cloud Service整合，可讓您從客戶歷程中的�
 
 ## Adobe Commerce
 
-Adobe Commerce與AEMas a Cloud Service整合，讓品牌可以更快速地擴展和創新，以區別商業體驗並加快線上支出。 AEM with Commerce將Experience Manager中沈浸式、全通路和個人化的體驗與任何數量的商務解決方案相結合，為購物歷程的所有部分帶來差異化的體驗，減少實現價值的時間並促進更高轉換。
+Adobe Commerce與AEMas a Cloud Service整合，讓品牌可以更快速地擴展及創新，以區別商業體驗，並加快線上支出。 AEM with Commerce將Experience Manager中沈浸式、全頻道和個人化的體驗與任意數量的商務解決方案相結合，為購物歷程的所有部分帶來差異化體驗，減少實現價值的時間並促進更高轉換。
 
 ### AEM Sites
 
@@ -96,7 +96,7 @@ Adobe Commerce與AEMas a Cloud Service整合，讓品牌可以更快速地擴展
 
 ## Adobe Experience Platform標籤
 
-Adobe Experience Platform標籤(前身為Adobe Launch、DTM)與AEM緊密整合，提供簡單的方式來部署和管理 [分析](#adobe-analytics)， [目標定位](#adobe-target)、行銷和廣告標籤是吸引客戶體驗的必要條件。
+Adobe Experience Platform標籤(前身為Adobe Launch、DTM)與AEM緊密整合，提供簡單的部署和管理方式 [分析](#adobe-analytics)， [目標定位](#adobe-target)、行銷和廣告標籤是吸引客戶體驗的必要條件。
 
 ### AEM Sites
 
@@ -110,7 +110,7 @@ Adobe Experience Platform標籤(前身為Adobe Launch、DTM)與AEM緊密整合�
 
 ## Adobe Journey Optimizer
 
-Adobe Journey Optimizer可協助您透過單一應用程式，與數百萬客戶排程全通路行銷活動及一對一時刻，還有智慧型決策和見解讓整個旅程最佳化。
+Adobe Journey Optimizer可協助您從單一應用程式為幾百萬名客戶安排全通道行銷活動及一對一時刻，還有智慧型決策和見解讓整個旅程最佳化。
 
 ### AEM Assets
 
@@ -147,14 +147,14 @@ Adobe Sensei提供AI和機器學習技術，透過智慧標籤、智慧裁切、
 
 ## Adobe Target
 
-Adobe Target與AEMas a Cloud Service整合，以AEM內容為依託，為每位使用者提供最佳化的網頁體驗。
+Adobe Target與AEMas a Cloud Service整合，為所有使用者提供最佳化的網頁體驗，由AEM的內容提供支援。
 
 ### AEM Sites
 
 + [設定Adobe Target整合](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
 + 要鎖定的體驗片段
 
-   + [將體驗片段發佈至Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
+   + [發佈體驗片段至Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
    + [以JSON格式發佈體驗片段至Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
 
 + [搭配Target使用AEM Context Hub](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html#creating-an-adobe-target-audience-using-the-audience-console)
@@ -170,5 +170,5 @@ Adobe Workfront與AEM s a Cloud Service的整合可簡化數位資產建立、�
 + [Workfront增強型聯結器影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
 + AEM Assets Essentials
 
-   + [適用於Assets Essentials的Adobe Workfront使用手冊](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
+   + [Assets Essentials適用的Adobe Workfront使用手冊](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
    + [Adobe Workfront和Assets Essentials影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)

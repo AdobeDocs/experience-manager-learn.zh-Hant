@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 10105
+jira: KT-10105
 exl-id: a4955104-8a87-4add-85c7-c3e3395f5f1a
-source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 # 建立和驗證PDF/A檔案
 
-PDF/A是可攜式檔案格式(PDF)的ISO標準化版本，專門用於電子檔案的封存和長期儲存。 PDF/A與PDF的區別在於禁止不適合長期封存的功能，例如字型連結（與字型內嵌相反）和加密。
+PDF/A是可攜式檔案格式(PDF)的ISO標準化版本，專門用於電子檔案的封存和長期儲存。 PDF/A不同於PDF，因為它禁止了不適合長期封存的功能，例如字型連結（與字型內嵌相反）和加密。
 
 ## 轉化為 PDF/A
 
@@ -94,7 +94,7 @@ public class PDFAUtilities {
 
 ## 驗證PDF
 
-下列程式碼可用來驗證給定PDF是否符合PDF/A規範。
+下列程式碼可用來驗證給PDF/A遵循的PDF。
 
 ```java
 public void validatePDFA(String postURL) {

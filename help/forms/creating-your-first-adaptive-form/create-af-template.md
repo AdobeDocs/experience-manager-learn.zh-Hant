@@ -5,9 +5,9 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Beginner
-kt: 5859
+jira: KT-5859
 thumbnail: 37324.jpg
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 8%
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 # 建立最適化表單範本
 
-每個最適化表單都以最適化表單範本為基礎。 範本會定義最適化表單繼承的結構、初始內容、主題等。 您可以建立新的最適化表單範本，或在建立最適化表單時使用現成的範本。
+每個最適化表單都以最適化表單範本為基礎。 範本定義最適化表單繼承的結構、初始內容、主題等。 您可以建立新的最適化表單範本，或在建立最適化表單時使用現成可用的範本。
 此處建立的範本是我們日後最適化表單的基礎。
 以下影片說明建立最適化表單範本的基本程式
 

@@ -6,10 +6,10 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9356
+jira: KT-9356
 thumbnail: KT-9356.jpeg
 exl-id: ec9d37cb-70b6-4414-a92b-3b84b3f458ab
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 下列進階網路選項支援下列程式碼範例。
 
-確保 [適當的](../advanced-networking.md#advanced-networking) 在執行本教學課程之前，已設定進階網路設定。
+確保 [適當](../advanced-networking.md#advanced-networking) 在學習本教學課程之前，已設定進階網路設定。
 
-| 無進階網路 | [彈性的連線埠輸出](../flexible-port-egress.md) | [專用輸出IP位址](../dedicated-egress-ip-address.md) | [虛擬私人網路](../vpn.md) |
+| 沒有進階網路 | [彈性的連線埠輸出](../flexible-port-egress.md) | [專用輸出IP位址](../dedicated-egress-ip-address.md) | [虛擬私人網路](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✔ | ✔ | ✔ |
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 }
 ```
 
-下列專案 `aio CLI` 命令可用於根據環境設定OSGi秘密：
+下列專案 `aio CLI` 命令可用於根據每個環境設定OSGi秘密：
 
 ```shell
 $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret MYSQL_USERNAME "mysql-user" --secret MYSQL_PASSWORD "password123"
@@ -150,11 +150,11 @@ public class MySqlExternalServiceImpl implements ExternalService {
 
 ## MySQL驅動程式相依性
 
-AEMas a Cloud Service通常需要您提供Java™資料庫驅動程式來支援連線。 提供驅動程式的最佳作法通常是透過以下方式將包含這些驅動程式的OSGi套件成品內嵌至AEM專案 `all` 封裝。
+AEMas a Cloud Service通常需要您提供Java™資料庫驅動程式來支援連線。 AEM提供驅動程式的最佳作法通常是透過 `all` 封裝。
 
 ### Reactor pom.xml
 
-在Reactor中包含資料庫驅動程式相依性 `pom.xml` 然後在 `all` 子專案。
+在反應器中加入資料庫驅動程式相依性 `pom.xml` 然後在 `all` 子專案。
 
 + `pom.xml`
 
@@ -176,7 +176,7 @@ AEMas a Cloud Service通常需要您提供Java™資料庫驅動程式來支援�
 
 ## 所有pom.xml
 
-將資料庫驅動程式相依性人工因素內嵌於 `all` 封裝到它們會部署，並可在AEMas a Cloud Service上使用。 這些成品 __必須__ 是匯出資料庫驅動程式Java™類別的OSGi套件組合。
+將資料庫驅動程式相依性人工因素內嵌於 `all` 套件部署到，並可在AEMas a Cloud Service上使用。 這些成品 __必須__ 是匯出資料庫驅動程式Java™類別的OSGi套件組合。
 
 + `all/pom.xml`
 

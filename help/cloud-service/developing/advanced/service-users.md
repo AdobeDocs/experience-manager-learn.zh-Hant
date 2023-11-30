@@ -1,16 +1,16 @@
 ---
 title: 服務使用者
-description: 瞭解如何在您的AEM程式碼中建立和使用服務使用者，以提供對AEM存放庫的受控制程式設計存取權。
+description: 瞭解如何在您的AEM程式碼中建立和使用服務使用者，以提供AEM存放庫的受控制程式設計存取權。
 version: Cloud Service
 topic: Development
 feature: OSGI, Security
 role: Developer
 level: Intermediate
-kt: 9113
+jira: KT-9113
 thumbnail: 337530.jpeg
 last-substantial-update: 2022-10-10T00:00:00Z
 exl-id: 66f627e4-863d-45d7-bc68-7ec108a1c271
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 8%
@@ -19,7 +19,7 @@ ht-degree: 8%
 
 # 服務使用者
 
-瞭解如何在您的AEM程式碼中建立和使用服務使用者，以提供對AEM存放庫的受控制程式設計存取權。
+瞭解如何在您的AEM程式碼中建立和使用服務使用者，以提供AEM存放庫的受控制程式設計存取權。
 
 >[!VIDEO](https://video.tv.adobe.com/v/337530?quality=12&learn=on)
 

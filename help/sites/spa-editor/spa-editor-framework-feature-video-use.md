@@ -1,15 +1,16 @@
 ---
 title: 搭配AEM Sites使用SPA編輯器
-description: AEM單頁應用程式編輯器架構可讓作者編輯單頁應用程式或SPA的內容。 使用React架構的開發人員可建立SPA，然後將SPA區域對應至AEM元件，讓作者使用熟悉的AEM Sites編輯工具。
+description: AEM單頁應用程式編輯器架構讓作者能夠編輯單頁應用程式或SPA的內容。 開發人員使用React架構來建立SPA，然後將SPA的區域對應至AEM元件，讓作者使用熟悉的AEM Sites編輯工具。
 version: 6.4, 6.5, Cloud Service
 topic: SPA
 feature: SPA Editor
 role: Developer
 level: Beginner
-kt: 1047
+jira: KT-1047
 thumbnail: 22229.jpg
+doc-type: Feature Video
 exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 6%
@@ -18,9 +19,9 @@ ht-degree: 6%
 
 # 搭配AEM Sites使用SPA編輯器 {#using-the-spa-editor-with-aem-sites}
 
-影片概述如何在AEM Sites中製作單頁應用程式的內容。
+概述在AEM Sites中製作單頁應用程式內容的影片。
 
-AEM SPA Editor可讓作者編輯單頁應用程式或SPA的內容。 開發人員使用React架構建立SPA，然後將SPA區域對應至AEM元件，讓作者使用熟悉的AEM Sites編輯工具。 以下影片示範了WKND SPA範例網站的一些內容編輯功能。 WKND SPA專案包含兩個React實施。
+AEM SPA Editor可讓作者編輯單頁應用程式或SPA的內容。 開發人員透過React架構建立SPA，接著將SPA區域對應至AEM元件，讓作者使用熟悉的AEM Sites編輯工具。 以下影片示範了WKND SPA範例網站中的部分內容編輯功能。 WKND SPA專案包含兩個React實施。
 
 >[!VIDEO](https://video.tv.adobe.com/v/22229?quality=12&learn=on)
 
@@ -28,13 +29,13 @@ AEM SPA Editor可讓作者編輯單頁應用程式或SPA的內容。 開發人�
 >
 > 單頁應用程式(SPA)編輯器功能需要AEM 6.4 Service Pack 2或更新版本。
 >
-> SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案。
+> SPA編輯器是適用於需要SPA架構使用者端轉譯之專案的建議解決方案。
 
 ## 其他資源 {#additional-resources}
 
 WKND SPA實作僅支援AEM 6.4.8+、AEM 6.5.5+和AEMas a Cloud Service。
 
-下載並安裝適當的 [WKND SPA套件](https://github.com/adobe/aem-guides-wknd-spa/releases) 根據您的AEM版本而定。 有不同的版本 **React**.
+下載並安裝適當的 [WKND SPA套件](https://github.com/adobe/aem-guides-wknd-spa/releases) 根據您的AEM版本。 有不同的版本 **React**.
 
 如需使用SPA編輯器開發的詳細教學課程，請參閱：
 

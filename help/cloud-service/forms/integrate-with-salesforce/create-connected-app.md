@@ -8,10 +8,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms, Integrations
 topic: Development
-kt: 7152
+jira: KT-7152
 thumbnail: 331757.jpg
 exl-id: 6e130397-9747-4d60-9975-4c45c5aab87b
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 建立連線應用程式
 
-連線應用程式是一種架構，可讓外部應用程式使用API和標準通訊協定（例如SAML、OAuth和OpenID Connect）與Salesforce整合。 連線應用程式會使用這些通訊協定來驗證、授權並提供外部應用程式的單一登入(SSO)。
+連線應用程式是一種架構，可讓外部應用程式使用API和標準通訊協定（例如SAML、OAuth和OpenID Connect）與Salesforce整合。 連線的應用程式會使用這些通訊協定來驗證、授權並提供外部應用程式的單一登入(SSO)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/331757?quality=12&learn=on)
 

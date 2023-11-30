@@ -1,5 +1,5 @@
 ---
-title: 使用Adobe Analytics提交表單資料欄位的相關報告
+title: 使用Adobe Analytics提交表單資料欄位的相關報表
 description: 將AEM Forms CS與Adobe Analytics整合以報告表單資料欄位
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -8,11 +8,11 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Integrations, Development
-kt: 12557
+jira: KT-12557
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 exl-id: b9dc505d-72c8-4b6a-974b-fc619ff7c256
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 2%
@@ -21,14 +21,14 @@ ht-degree: 2%
 
 # 建立資料元素
 
-在Tags屬性中，我們新增了兩個新資料元素（ApplicatesStateOfResidence和validationError）。
+我們在Tags屬性中新增了兩個新資料元素（ApplicationsStateOfResidence和validationError）。
 
-![Adaptive-form](assets/data_elements.png)
+![adaptive-form](assets/data_elements.png)
 
-## ApplicatorStateOfResidence
+## ApplicantStateOfResidence
 
-此 **ApplicatorStateOfResidence** 資料元素的設定方式為：選取 **核心** 「擴充功能」下拉式清單中的 **自訂程式碼** 的資料元素型別，如下方熒幕擷取畫面所示
-![申請人 — 國家 — 居所](assets/applicantstateofresidence.png)
+此 **ApplicantStateOfResidence** 資料元素是透過選取 **核心** 「擴充功能」下拉式清單中的 **自訂程式碼** 的「資料元素型別」，如下方熒幕擷取畫面所示
+![applicant-state-residence](assets/applicantstateofresidence.png)
 
 下列自訂程式碼是用來從 **_state_** 最適化表單欄位。
 
@@ -42,7 +42,7 @@ return ApplicantsStateOfResidence;
 
 ## validationError
 
-此 **ValidationError** 資料元素的設定方式為：選取 **核心** 「擴充功能」下拉式清單中的 **自訂程式碼** 的資料元素型別，如下方熒幕擷取畫面所示
+此 **ValidationError** 資料元素是透過選取 **核心** 「擴充功能」下拉式清單中的 **自訂程式碼** 的「資料元素型別」，如下方熒幕擷取畫面所示
 
 ![validation-error](assets/validation-error.png)
 

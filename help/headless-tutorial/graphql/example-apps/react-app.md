@@ -3,7 +3,7 @@ title: React應用程式 — AEM Headless範例
 description: 範例應用程式是探索Adobe Experience Manager (AEM)無周邊功能的絕佳方式。 此React應用程式示範了如何使用AEM GraphQL API透過持續性查詢來查詢內容。
 version: Cloud Service
 mini-toc-levels: 1
-kt: 10715
+jira: KT-10715
 thumbnail: KT-10715.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -12,7 +12,7 @@ level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
-source-git-commit: 6f874fd3da09ce808920a7f8ea3386beda726272
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 4%
@@ -29,7 +29,7 @@ ht-degree: 4%
 
 A [完整逐步教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) 說明此React應用程式的建置方式。
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 下列工具應在本機安裝：
 
@@ -299,9 +299,9 @@ React應用程式使用兩個檢視，在網頁體驗中呈現冒險資料。
 + `REACT_APP_AUTH_METHOD=`：偏好的驗證方法。 選擇性，根據預設不使用驗證。
    + `service-token`：使用服務憑證取得AEMas a Cloud Service上的存取權杖
    + `dev-token`：在AEMas a Cloud Service上使用開發權杖進行本機開發
-   + `basic`：透過本機AEM作者將使用者/通行證用於本機開發
+   + `basic`：搭配本機AEM作者使用使用者/通行證進行本機開發
    + 留空可連線到AEM而不進行驗證
-+ `REACT_APP_AUTHORIZATION=admin:admin`：設定在連線至AEM作者環境時要使用的基本驗證憑證（僅供開發）。 如果連線到發佈環境，就不需要此設定。
++ `REACT_APP_AUTHORIZATION=admin:admin`：設定在連線至AEM作者環境時要使用的基本驗證認證（僅供開發）。 如果連線到發佈環境，就不需要此設定。
 + `REACT_APP_DEV_TOKEN`：開發Token字串。 若要連線到遠端執行個體，您可以在基本驗證(user：pass)旁邊，透過雲端主控台的DEV權杖使用持有者驗證
 + `REACT_APP_SERVICE_TOKEN`：服務憑證檔案的路徑。 若要連線到遠端執行個體，也可使用服務權杖完成驗證（從開發人員控制檯下載檔案）。
 

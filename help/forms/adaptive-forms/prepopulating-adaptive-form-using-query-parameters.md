@@ -6,10 +6,10 @@ version: 6.5
 topic: Development
 role: Developer
 level: Experienced
-kt: 11470
+jira: KT-11470
 last-substantial-update: 2020-11-12T00:00:00Z
 exl-id: 14ac6ff9-36b4-415e-a878-1b01ff9d3888
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%
@@ -26,9 +26,9 @@ https://forms.enablementadobe.com/content/forms/af/testingxml.html?FirstName=Joh
 
 為了完成此使用案例，已建立新的最適化表單範本並與頁面元件建立關聯。 在此頁面元件中，我們有jsp可取得查詢引數，並建立可用來填入調適型表單的xml結構。
 
-建立新最適化表單範本和頁面元件的詳細資訊如下 [本影片說明。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
+有關建立新最適化表單範本和頁面元件的詳細資訊 [在本影片中說明。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
 
-以下是jsp頁面中使用的程式碼
+以下是用於jsp頁面的程式碼
 
 ```java
 java.util.Enumeration enumeration = request.getParameterNames();
@@ -47,12 +47,12 @@ slingRequest.setAttribute("data", dataXml);
 
 >[!NOTE]
 >
->如果您的表單使用結構描述，則xml的結構將會不同，您必須據以建置xml。
+>如果您的表單使用結構描述，則xml的結構將會不同，您必須據此建置xml。
 
 
 ## 在您的系統上部署資產
 
-* [使用封裝管理程式下載並安裝最適化表單範本](assets/populate-with-xml.zip)
+* [使用封裝管理員下載及安裝最適化表單範本](assets/populate-with-xml.zip)
 * [下載並安裝最適化表單範例](assets/populate-af-with-query-paramters-form.zip)
 
 * [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/testingxml/jcr:content?wcmmode=disabled&amp;FirstName=John&amp;LastName=Doe)

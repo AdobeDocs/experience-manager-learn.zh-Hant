@@ -1,16 +1,16 @@
 ---
 title: 儲存表單資料
-description: 將表單資料連同新的附件對應儲存在資料庫中
+description: 將表單資料及新的附件地圖儲存在資料庫中
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6538
+jira: KT-6538
 thumbnail: 6538.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 2bd9fe63-8f42-4b89-95a0-13ade49bc31b
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 2%
@@ -19,8 +19,8 @@ ht-degree: 2%
 
 # 儲存表單資料
 
-下一步是建立服務，在資料庫中插入新列，以儲存最適化表單資料和相關附件資訊。
-下列熒幕擷圖顯示資料庫中的一列。
+下一步是建立服務，在資料庫中插入新列，以儲存最適化表單資料和相關附加資訊。
+以下熒幕擷取畫面顯示資料庫中的一列。
 
 
 ![範例列](assets/sample-row.JPG)

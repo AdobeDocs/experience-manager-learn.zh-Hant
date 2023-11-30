@@ -3,10 +3,10 @@ user-guide-title: AEM Dispatcher Cache 教學課程
 user-guide-description: 此教學課程可協助您更了解 Dispatcher 的運作方式，以及您如何使用。
 sub-product: Experience Manager
 version: 6.4, 6.5
-kt: 2233
+jira: KT-2233
 index: y
 team: TM
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 75%

@@ -1,29 +1,26 @@
 ---
-title: 瞭解Adobe Managed Services上使用AEM的Adobe IMS驗證
-description: Adobe Experience Manager推出適用於AEM執行個體的Admin Console支援，以及適用於Managed Services上AEM的Adobe IMS (Identity Management System)驗證功能。   這項整合可讓AEM Managed Services客戶在單一統一的Web主控台中管理所有Experience Cloud使用者。 可將使用者和群組指派給與AEM執行個體相關聯的產品設定檔，授與對特定AEM執行個體的集中管理存取權。
+title: 瞭解Adobe Managed Services上使用AEM進行Adobe IMS驗證
+description: Adobe Experience Manager推出針對AEM執行個體的Admin Console支援，以及適用於Managed Services上AEM的Adobe IMS (Identity Management系統)型驗證。   這項整合可讓AEM Managed Services客戶在單一統一的Web主控台中管理所有Experience Cloud使用者。 可以將使用者和群組指派給與AEM執行個體相關聯的產品設定檔，授與對特定AEM執行個體的集中管理存取權。
 version: 6.4, 6.5
 feature: User and Groups
-topics: authentication, security
-activity: understand
-audience: administrator, architect, developer, implementer
-doc-type: technical video
-kt: 781
+doc-type: Technical Video
+jira: KT-781
 topic: Architecture
 role: Architect
 level: Experienced
 exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '448'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-# 瞭解Adobe Managed Services上使用AEM的Adobe IMS驗證{#understanding-adobe-ims-authentication-with-aem-on-adobe-managed-services}
+# 瞭解Adobe Managed Services上使用AEM進行Adobe IMS驗證{#understanding-adobe-ims-authentication-with-aem-on-adobe-managed-services}
 
-Adobe Experience Manager推出AEM例項的Admin Console支援，以及針對Managed Services上的AEMAdobeIdentity Management System (IMS)式驗證。   這項整合可讓AEM Managed Services客戶在單一統一的Web主控台中管理所有Experience Cloud使用者。 可將使用者和群組指派給與AEM執行個體相關聯的產品設定檔，授與對特定AEM執行個體的集中管理存取權。
+Adobe Experience Manager推出針對AEM例項的Admin Console支援，以及針對Managed Services上的AEMAdobeIdentity Management系統(IMS)式驗證。   這項整合可讓AEM Managed Services客戶在單一統一的Web主控台中管理所有Experience Cloud使用者。 可以將使用者和群組指派給與AEM執行個體相關聯的產品設定檔，授與對特定AEM執行個體的集中管理存取權。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
 
@@ -34,15 +31,15 @@ Adobe Experience Manager推出AEM例項的Admin Console支援，以及針對Mana
 * 驗證支援包括適用於SSO的客戶SAML2相容IDP。
 * 僅支援Enterprise ID或Federated ID （適用於客戶SSO） (不支援個人AdobeID)。
 
-*&#42;Adobe Managed Services客戶的AEM 6.4 SP3及更新版本支援此功能。*
+*&#42;AEM 6.4 SP3和更新版本都支援此功能，以供Adobe Managed Services客戶使用。*
 
-## 最佳實務 {#best-practices}
+## 最佳做法 {#best-practices}
 
 ### 在Admin Console中套用許可權
 
 在Admin Console和Adobe Experience Manager中，都應避免在使用者層級套用許可權和存取權。
 
-在中，應透過「產品內容」層級的「使用者群組」授予Admin Console使用者存取權。 使用者群組通常最好以組織內的邏輯角色表示，以促進群組在Adobe Experience Cloud產品中的重複使用性。
+在中，應透過「產品內容」層級的「使用者群組」授予Admin Console使用者存取權。 使用者群組通常以組織內的邏輯角色最佳表示，以促進群組在Adobe Experience Cloud產品中的重複使用性。
 
 >[!NOTE]
 >
@@ -50,4 +47,4 @@ Adobe Experience Manager推出AEM例項的Admin Console支援，以及針對Mana
 
 ### 在Adobe Experience Manager中套用許可權
 
-在Adobe Experience Manager中，與Adobe IMS同步的使用者群組應以期限新增至 [AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)，已預先設定適當的許可權，以便在AEM中執行一組特定工作。 從Adobe IMS同步的使用者不應直接新增至 [AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
+在Adobe Experience Manager中，與Adobe IMS同步的使用者群組應以字面意思新增至 [AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)，這些檔案已預先設定適當許可權，以便在AEM中執行一組特定工作。 從Adobe IMS同步的使用者不應直接新增至 [AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).

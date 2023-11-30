@@ -8,17 +8,17 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms, Integrations
 topic: Development
-kt: 7151
+jira: KT-7151
 thumbnail: 331758.jpg
 exl-id: fa00822f-075a-47df-941f-c7370bd1d4f4
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '57'
 ht-degree: 0%
 
 ---
 
-# 從表單提交測試銷售機會開發
+# 從表單提交測試銷售機會產生
 
 根據Sales Force表單資料模型建立最適化表單，並透過提交表單來測試Salesforce中銷售機會的建立
 

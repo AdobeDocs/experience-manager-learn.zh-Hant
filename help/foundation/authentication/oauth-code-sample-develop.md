@@ -6,8 +6,9 @@ feature: User and Groups
 topic: Development
 role: Developer
 level: Experienced
+doc-type: Article
 exl-id: dd37355e-cfc7-4581-ac22-d89c951c22cf
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 1%
@@ -26,8 +27,8 @@ AEM提供三個範圍：
 * 離線存取
 * 複寫
 
-AEM可延伸的OAuth範圍允許定義其他自訂範圍。 例如，您可以開發自訂範圍並部署至AEM，將透過OAuth授權的行動應用程式限製為讀取而非寫入資產。
+AEM可擴充的OAuth範圍可定義其他自訂範圍。 例如，您可以開發自訂範圍並部署至AEM，將透過OAuth授權的行動應用程式限製為讀取而非寫入資產。
 
-OAuth是授權使用者端應用程式的偏好方法，因為它使用存取權杖，而不是要求向該應用程式提供AEM使用者的認證。
+OAuth是授權使用者端應用程式的偏好方法，因為其使用存取權杖，而非需要將AEM使用者的認證提供給該應用程式。
 
 * [檢視程式碼](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/legacy/bundle/src/main/java/com/adobe/acs/samples/authentication/oauth/impl/SampleScopeWithPrivileges.java)

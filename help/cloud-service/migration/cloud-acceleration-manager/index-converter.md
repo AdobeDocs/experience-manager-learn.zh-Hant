@@ -1,15 +1,15 @@
 ---
 title: 索引轉換器
-description: 瞭解索引轉換工具如何自動地將現有AEM索引定義轉換成相容於AEMas a Cloud Service。
+description: 瞭解索引轉換器如何自動地將現有AEM索引定義轉換成相容於AEMas a Cloud Service。
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
 role: Architect, Developer
 level: Intermediate
-kt: 8665
+jira: KT-8665
 thumbnail: 336696.jpeg
 exl-id: fbcb7ae8-0452-4632-a1fc-896187bb6695
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 9%
@@ -18,6 +18,6 @@ ht-degree: 9%
 
 # 索引轉換器
 
-瞭解索引轉換工具如何自動地將現有AEM索引定義轉換成相容於AEMas a Cloud Service。
+瞭解索引轉換器如何自動地將現有AEM索引定義轉換成相容於AEMas a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336696?quality=12&learn=on)

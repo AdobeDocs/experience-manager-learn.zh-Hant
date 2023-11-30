@@ -4,18 +4,13 @@ seo-title: Delivering Content Fragments in Adobe Experience Manager
 description: 內容片段與版面配置無關，可直接在搭配核心元件的AEM Sites中使用，或以Headless方式傳送至下游管道。
 seo-description: Content Fragments, independent of layout, can be used directly in AEM Sites with Core Components or can be delivered in a headless manner to downstream channels.
 feature: Content Fragments
-topics: authoring, content-architecture
-audience: all
-doc-type: feature video
-activity: use
 version: 6.4, 6.5
-uuid: 045473d2-5abe-4414-b91c-d369f3069ead
-discoiquuid: 912e0c41-83cf-49f7-b515-09519b6718c1
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 7%
@@ -24,7 +19,7 @@ ht-degree: 7%
 
 # 傳送內容片段 {#delivering-content-fragments}
 
-Adobe Experience Manager (AEM)內容片段是文字型編輯內容，其中可能包含一些相關聯但被視為純粹內容（沒有設計或版面配置資訊）的結構化資料元素。 內容片段通常建立為與管道無關的內容，其用途為跨管道使用和重複使用，這反過來又會在內容特定的體驗中包裝內容。
+Adobe Experience Manager (AEM)內容片段是文字型編輯內容，其中可能包含某些相關聯的結構化資料元素，但被視為不含設計或版面配置資訊的純內容。 內容片段通常建立為與管道無關的內容，其用途為跨管道使用和重複使用，繼而包裝內容於內容特定的體驗。
 
 內容片段與版面配置無關，可直接在搭配核心元件的AEM Sites中使用，或以Headless方式傳送至下游管道。
 
@@ -38,26 +33,26 @@ Adobe Experience Manager (AEM)內容片段是文字型編輯內容，其中可�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
 
-內容片段可以在AEM Sites頁面上使用，或是透過類似方式，使用AEM WCM Core Components的「 [內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
+內容片段可以在AEM Sites頁面上使用，或以類似方式，使用AEM WCM核心元件的體驗片段 [內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
 
-可以使用AEM樣式系統來設定內容片段元件的樣式，以視需要顯示內容。
+內容片段元件可透過AEM樣式系統進行樣式設定，以視需要顯示內容。
 
 ## 以JSON格式公開內容片段 {#exposing-content-fragments-as-json}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22448?quality=12&learn=on)
 
-AEM Content Services可協助建立AEM頁面型HTTP端點，將轉譯內容轉譯為標準化的JSON格式。
+AEM Content Services可協助建立AEM頁面式HTTP端點，將內容轉譯為標準化JSON格式。
 
-上述影片使用 [內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 以公開個別內容片段。 此 [內容片段清單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) 是新元件，可讓作者定義查詢，以動態方式將內容片段清單填入頁面。 當需要公開多個內容片段時，建議使用內容片段清單元件。
+上述影片使用 [內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 以公開個別內容片段。 此 [內容片段清單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) 是新元件，可讓作者定義查詢，以動態方式將內容片段清單填入頁面。 需要公開多個內容片段時，建議使用內容片段清單元件。
 
 *Content Services端點JSON裝載範例：*\
-**[spitors.json](assets/athletes.json)**
+**[運動人士.json](assets/athletes.json)**
 
 ## 使用Assets HTTP API
 
 >[!VIDEO](https://video.tv.adobe.com/v/26390?quality=12&learn=on)
 
-首次在AEM 6.5中推出，透過Assets HTTP API增強對內容片段的支援。 開發人員可透過此簡單方法，針對內容片段執行建立、讀取、更新和刪除(CRUD)操作。
+首次在AEM 6.5中引入，使用Assets HTTP API增強了對內容片段的支援。 如此一來，開發人員就能輕鬆對內容片段執行建立、讀取、更新和刪除(CRUD)操作。
 
 *Postman請求範例：*
 **[CRUD-CFM-API-We.Retail.postman_collection.json](assets/CRUD-CFM-API-We.Retail.postman_collection.json)**
@@ -66,15 +61,15 @@ AEM Content Services可協助建立AEM頁面型HTTP端點，將轉譯內容轉�
 
 ### Web Channel
 
-透過Web頻道傳遞內容片段的方法直接透過將內容片段元件與AEM Sites搭配使用。
+透過Web Channel傳遞內容片段的方法透過將內容片段元件與AEM Sites一起使用來簡單明瞭。
 
 ### Headless
 
-在Headless使用案例中，有兩個選項可將內容片段公開為JSON以支援第三方管道：
+在Headless使用案例中，有兩個選項可透過JSON公開內容片段，以支援第三方管道：
 
-1. 主要使用案例是交付內容片段供第三方管道使用（唯讀）時，請使用AEM內容服務和Proxy API頁面(影片#2本)。 Content Services架構針對哪些資料會公開提供更大的彈性和選項。 開發人員也可以擴充內容服務架構，以擴充及/或豐富資料。
+1. 主要使用案例是交付內容片段供第三方頻道使用（唯讀）時，請使用AEM Content Services和Proxy API頁面(影片#2)。 Content Services架構針對要公開哪些資料提供更大的彈性和選項。 開發人員也可以擴充內容服務架構，以擴充及/或豐富資料。
 
-2. 當第三方管道需要修改和/或更新內容片段時，請使用Assets HTTP API (影片#3)。 典型的使用案例是在AEM作者環境中擷取第三方內容。
+2. 第三方管道需要修改及/或更新內容片段時，請使用Assets HTTP API (影片#3)。 典型的使用案例是在AEM作者環境中擷取第三方內容。
 
 ## 其他資源 {#additional-resources}
 

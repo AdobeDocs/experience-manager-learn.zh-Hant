@@ -7,12 +7,12 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 10721
+jira: KT-10721
 thumbnail: KT-10721.jpg
 last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
-source-git-commit: 29b9e4a23d8f4ae0494fc43f76f7449062364843
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 1%
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 檢視 [GitHub上的原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/next-js)
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 下列工具應在本機安裝：
 
@@ -42,7 +42,7 @@ Next.js應用程式可與下列AEM部署選項搭配使用。 所有部署都需
 
 ### AEM作者需求
 
-Next.js的設計用途是連線至 __AEM發佈__ 服務，並存取未受保護的內容。 Next.js可設定為透過 `.env` 屬性如下。 由AEM Author提供的影像需要驗證，因此存取Next.js應用程式的使用者也必須登入AEM Author。
+Next.js的設計用途是連線至 __AEM發佈__ 服務，並存取未受保護的內容。 AEM Next.js可設定為透過 `.env` 屬性如下。 由AEM Author提供的影像需要驗證，因此存取Next.js應用程式的使用者也必須登入AEM Author。
 
 ## 使用方式
 
@@ -60,7 +60,7 @@ Next.js的設計用途是連線至 __AEM發佈__ 服務，並存取未受保護�
    ...
    ```
 
-   如果連線到AEM Author服務，則必須提供驗證，因為AEM Author服務預設是安全的。
+   如果連線到AEM Author服務，則必須提供驗證，因為根據預設，AEM Author服務是安全的。
 
    若要使用本機AEM帳戶集 `AEM_AUTH_METHOD=basic` 並在「 」中提供使用者名稱和密碼 `AEM_AUTH_USER` 和 `AEM_AUTH_PASSWORD` 屬性。
 

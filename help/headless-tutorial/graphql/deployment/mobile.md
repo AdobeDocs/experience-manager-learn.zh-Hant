@@ -6,10 +6,10 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10796
+jira: KT-10796
 thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 2%
@@ -20,11 +20,11 @@ ht-degree: 2%
 
 AEM Headless行動部署是iOS、Android™等原生行動應用程式。 以Headless方式消費及與AEM中的內容互動。
 
-行動部署需要最少的設定，因為與AEM Headless API的HTTP連線不是在瀏覽器的內容中啟動。
+行動部署只需要最少的設定，因為與AEM Headless API的HTTP連線不會在瀏覽器的內容中起始。
 
 ## 部署設定
 
-下列部署設定必須就位以進行行動應用程式部署。
+以下部署設定必須就位以進行行動應用程式部署。
 
 | 行動應用程式連線至 | AEM 作者 | AEM 發佈 | AEM預覽 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|

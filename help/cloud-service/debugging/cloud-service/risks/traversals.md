@@ -5,13 +5,13 @@ topics: Migration
 feature: Migration
 role: Architect, Developer
 level: Beginner
-kt: 10427
+jira: KT-10427
 hidefromtoc: true
 hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 9%
@@ -25,16 +25,16 @@ ht-degree: 9%
 
 _什麼是周遊警告？_
 
-周遊警告包括 __aemerror__ 記錄陳述式指出AEM Publish服務上正在執行執行效能不佳的查詢。 周遊警告通常會以兩種方式顯示在AEM中：
+周遊警告包括 __aemerror__ 記錄陳述式指出在AEM Publish服務上執行之查詢的效能不佳。 周遊警告通常會以兩種方式顯示在AEM中：
 
-1. __查詢速度緩慢__ 不使用索引，導致回應時間緩慢。
-1. __失敗的查詢__，會擲回 `RuntimeNodeTraversalException`，導致中斷體驗。
+1. __緩慢查詢__ 不使用索引，導致回應時間緩慢。
+1. __失敗的查詢__，會擲回 `RuntimeNodeTraversalException`，導致中斷的體驗。
 
 允許未勾選周遊警告會減慢AEM效能，並可能導致使用者的體驗中斷。
 
 ## 如何解決周遊警告
 
-可透過三個簡單的步驟來緩解周遊警告：分析、調整和驗證。 在識別最佳調整之前，預計會進行幾次調整和驗證。
+您可以使用三個簡單的步驟來緩解周遊警告：分析、調整和驗證。 在識別最佳調整之前，預計會進行幾次調整和驗證。
 
 <div class="columns is-multiline">
 
@@ -108,11 +108,11 @@ _什麼是周遊警告？_
 
 ## 1.分析{#analyze}
 
-首先，識別哪些AEM Publish服務顯示周遊警告。 若要這麼做，請從Cloud Manager， [下載發佈服務 `aemerror` 記錄](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"} 從過去的所有環境（開發、測試和生產） __三天__.
+首先，識別哪些AEM Publish服務顯示周遊警告。 若要這麼做，請從Cloud Manager， [下載發佈服務 `aemerror` 記錄檔](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"} 過去所有環境（開發、測試和生產）中的 __三天__.
 
-![下載AEMas a Cloud Service記錄](./assets/traversals/download-logs.jpg)
+![下載AEMas a Cloud Service記錄檔](./assets/traversals/download-logs.jpg)
 
-開啟記錄檔並搜尋Java™類別 `org.apache.jackrabbit.oak.plugins.index.Cursors$TraversingCursor`. 包含周遊警告的記錄包含一系列看起來類似以下的陳述式：
+開啟記錄檔並搜尋Java™類別 `org.apache.jackrabbit.oak.plugins.index.Cursors$TraversingCursor`. 包含周遊警告的記錄包含一連串類似下列內容的陳述式：
 
 ```log
 24.05.2022 14:18:46.146 [cm-p123-e456-aem-author-9876-edcba] *WARN* [192.150.10.214 [1653401908419] GET /content/wknd/us/en/example.html HTTP/1.1] 
@@ -123,7 +123,7 @@ called by apps.wknd.components.search.example__002e__jsp._jspService;
 consider creating an index or changing the query
 ```
 
-根據查詢執行的內容，log陳述式可能包含有關查詢發起者的有用資訊：
+根據查詢執行的內容，記錄陳述式可能包含有關查詢建立者的有用資訊：
 
 + 與查詢執行相關聯的HTTP要求URL
 
@@ -157,7 +157,7 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
 
 ### 調整查詢
 
-__變更查詢__ 以新增可解析成現有索引限制的新查詢限制。 可能的話，偏好變更查詢而非變更索引。
+__變更查詢__ 新增可解析成現有索引限制的新查詢限制。 可能的話，偏好變更查詢而非變更索引。
 
 + [瞭解如何調整查詢效能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 
@@ -170,15 +170,15 @@ __變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引�
 
 ## 3.確認{#verify}
 
-必須驗證對查詢、索引或這兩者所做的調整，以確保它們可減輕周遊警告。
+對查詢、索引或兩者進行的調整必須經過驗證，以確保它們可減少周遊警告的影響。
 
 ![說明查詢](./assets/traversals/verify.gif)
 
-若僅限 [查詢的調整](#adjust-the-query) 可透過開發人員控制檯在AEMas a Cloud Service上直接測試查詢 [說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. 說明查詢會針對AEM Author服務執行，但由於索引定義在Author和Publish服務中是相同的，因此針對AEM Author服務驗證查詢就足夠了。
+若僅限 [查詢調整](#adjust-the-query) 做出，可以透過開發人員控制檯在AEMas a Cloud Service上直接測試查詢 [說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. 說明查詢會針對AEM Author服務執行，但由於索引定義在Author和Publish服務中是相同的，因此針對AEM Author服務驗證查詢就足夠了。
 
-若 [索引調整](#adjust-the-index) 建立索引時，索引必須部署至AEMas a Cloud Service。 在部署索引調整後，開發人員控制檯將 [說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} 可用來進一步執行和調整查詢。
+如果 [索引調整](#adjust-the-index) 完成，索引必須部署到AEMas a Cloud Service。 部署索引調整後，開發人員控制檯將可 [說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} 可用來進一步執行和調整查詢。
 
-最終，所有變更（查詢和程式碼）都會提交到Git，並使用Cloud Manager部署到AEMas a Cloud Service。 部署後，會重新測試與原始周遊警告相關聯的程式碼路徑，並確認周遊警告不再出現在 `aemerror` 記錄。
+最終，所有變更（查詢和程式碼）都會提交到Git並使用Cloud Manager部署到AEMas a Cloud Service。 部署後，測試與原始周遊警告相關聯的程式碼路徑會重新測試，並驗證周遊警告不再出現在 `aemerror` 記錄。
 
 ## 其他資源
 
@@ -197,7 +197,7 @@ __變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引�
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜尋和索引">Cloud 5 — 搜尋和索引</a></p>
-               <p class="is-size-6">Cloud 5團隊會顯示AEMas a Cloud Service上搜尋和索引的來龍去脈。</p>
+               <p class="is-size-6">Cloud 5團隊會顯示在AEMas a Cloud Service上探索搜尋和索引的來龍去脈。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">深入了解</span>
                </a>

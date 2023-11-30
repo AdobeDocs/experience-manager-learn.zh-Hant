@@ -7,10 +7,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-kt: 8184
+jira: KT-8184
 thumbnail: 8184.jpg
 exl-id: 394ed621-1106-4b2a-a6b7-2efa5867f5b1
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
@@ -20,9 +20,9 @@ ht-degree: 0%
 # 建立JSON Web權杖
 
 JSON Web Token是開放的產業標準RFC 7519方法，可在兩方之間安全地表示宣告。 此範例中使用JWT.io資料庫來產生JWT。
-您在上一步中下載的服務認證包含PKCS#1格式的私密金鑰。若要擷取此字串的私密金鑰，我們使用 [彈回城堡](https://www.bouncycastle.org/) 程式庫。 屬於Java一部分的加密程式庫不支援PKCS#1格式。
+您在上一步中下載的服務認證包含PKCS#1格式的私密金鑰。若要擷取此字串的私密金鑰，我們使用 [彈城堡](https://www.bouncycastle.org/) 程式庫。 屬於Java一部分的加密程式庫不支援PKCS#1格式。
 
-下列程式碼已用來產生JWT：
+下列程式碼已用於產生JWT：
 
 ```java
 public String getJWTToken()

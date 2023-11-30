@@ -3,14 +3,15 @@ title: 自動開始工作流程
 description: 自動開始工作流程可在上傳或重新處理時，自動叫用自訂工作流程，藉此擴充資產處理作業。
 feature: Asset Compute Microservices, Workflow
 version: Cloud Service
-kt: 4994
+jira: KT-4994
 thumbnail: 37323.jpg
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2023-05-14T00:00:00Z
+doc-type: Feature Video
 exl-id: 5e423f2c-90d2-474f-8bdc-fa15ae976f18
-source-git-commit: 929fd045b81652463034b54c557de04df3d4e64a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%

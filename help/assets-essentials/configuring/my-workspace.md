@@ -1,25 +1,25 @@
 ---
 title: Assets Essentials我的工作區
-description: 瞭解如何使用「我的工作區」使用者可設定的Widget更有效率地工作。
+description: 瞭解如何使用「我的工作區」中使用者可設定的Widget來提高工作效率。
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
 role: Admin, User
 level: Beginner
-doc-type: Feature Video
 last-substantial-update: 2023-01-31T00:00:00Z
-kt: 11800
+jira: KT-11800
 thumbnail: 3413809.jpeg
+doc-type: Feature Video
 exl-id: da9363f3-43a9-4396-b8e8-15267fd7a689
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '31'
 ht-degree: 0%
 
 ---
 
-# Assets Essentials中的工作區
+# Assets Essentials中的我的工作區
 
-瞭解如何使用「我的工作區」使用者可設定的Widget更有效率地工作。
+瞭解如何使用「我的工作區」中使用者可設定的Widget來提高工作效率。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413809?quality=12&learn=on)

@@ -1,18 +1,18 @@
 ---
 title: 使用增強型聯結器整合Workfront和AEM Assets
-description: 瞭解Adobe Workfront和Experience Manager Assets增強型聯結器整合的基本概念。
+description: 瞭解Adobe Workfront和Experience Manager Assets加強聯結器整合的基本概念。
 version: Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, User
 level: Beginner
-kt: 9754
+jira: KT-9754
 thumbnail: kt-9754.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -23,14 +23,14 @@ ht-degree: 0%
 
 ![AEM Experts系列](./assets/banner.png)
 
-與Adobe的Workfront和Experience Manager Assets專家一起加入這個由四部分組成的影片系列，他們將示範和討論使用增強型聯結器整合Workfront和AEM Assets的來龍去脈。
+與Adobe的Workfront和Experience Manager Assets專家一起加入這個四部分影片系列，他們將示範和討論使用增強型聯結器整合Workfront和AEM Assets的來龍去脈。
 
-這四部分專家系列將跟隨一群Adobe專家(從產品經理、顧問到Adobe合作夥伴)討論：
+此四部分專家系列會跟隨一組Adobe專家(從產品經理、顧問和Adobe合作夥伴)討論：
 
 1. [在Workfront和AEM中執行初始設定設定](./setup.md)
 2. [設定Workfront自訂表單與AEM之間的中繼資料同步](./custom-forms.md)
-3. [使用AEM Tags、專案連結資料夾、Adobe資產連結和資料夾中繼資料結構描述來最大化價值](./aem-tags-project-linked-folders-and-folder-metadata.md)
-4. [使用進階AEM工作流程，簡化AEM和Workfront之間的業務流程以及其他進階設定](./advanced-settings-and-workflows.md)
+3. [使用AEM Tags、專案連結檔案夾、Adobe資產連結和檔案夾中繼資料結構描述來最大化價值](./aem-tags-project-linked-folders-and-folder-metadata.md)
+4. [使用進階AEM工作流程來簡化AEM和Workfront以及其他進階設定的業務流程](./advanced-settings-and-workflows.md)
 
 <table>
   <td>
@@ -74,7 +74,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-            瞭解如何從Workfront推動AEM分類、使用專案連結資料夾，以及資料至AEM資產資料夾中繼資料。
+            瞭解如何從Workfront推動AEM分類法、使用專案連結檔案夾和資料至AEM資產檔案夾中繼資料。
       </p>
    </td>   
    <!-- Advanced workflows -->

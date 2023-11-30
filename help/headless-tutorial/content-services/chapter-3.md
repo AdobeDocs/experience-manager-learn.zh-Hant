@@ -1,5 +1,5 @@
 ---
-title: 第3章 — 編寫事件內容片段 — 內容服務
+title: 第3章 — 製作事件內容片段 — 內容服務
 seo-title: Getting Started with AEM Content Services - Chapter 3 - Authoring Event Content Fragments
 description: AEM Headless教學課程的第3章涵蓋從第2章建立的內容片段模式建立及編寫事件內容片段。
 seo-description: Chapter 3 of the AEM Headless tutorial covers creating and authoring Event Content Fragments from the Content Fragment Model created in Chapter 2.
@@ -7,8 +7,9 @@ feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 46ef11a2-81bd-4ff7-b9ef-9f8cba52c6a8
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 2%
@@ -21,20 +22,20 @@ AEM Headless教學課程的第3章涵蓋從中建立的內容片段模式建立�
 
 ## 編寫事件內容片段
 
-使用 [!DNL Event] 已建立的內容片段模型及WKND的AEM設定已套用至 `/content/dam/wknd-mobile` 資產資料夾(透過 `cq:conf` property)， a [!DNL Event] 可建立內容片段。
+使用 [!DNL Event] 已建立內容片段模型且將WKND的AEM設定套用至 `/content/dam/wknd-mobile` 資產資料夾(透過 `cq:conf` 屬性)， a [!DNL Event] 可建立內容片段。
 
 內容片段是一種資產，應像其他資產一樣在AEM Assets中組織和管理。
 
 * 如果需要（或可能需要）翻譯，請在Assets資料夾結構中使用地區設定資料夾
 * 以邏輯方式組織內容片段，以便輕鬆找到和管理
 
-在此步驟中，請建立新的 [!DNL Event] 的 `Punkrock Fest` 在 `/content/dam/wknd-mobile/en/events` 資產資料夾。
+在此步驟中，請妥善建立新的 [!DNL Event] 的 `Punkrock Fest` 在 `/content/dam/wknd-mobile/en/events` 資產資料夾。
 
-1. 導覽至 **[!UICONTROL AEM] > [!UICONTROL 資產] > [!UICONTROL 檔案] > [!DNL WKND Mobile] >[!DNL English]** 和建立資產資料夾 **[!DNL Events]**.
+1. 瀏覽至 **[!UICONTROL AEM] > [!UICONTROL 資產] > [!UICONTROL 檔案] > [!DNL WKND Mobile] >[!DNL English]** 和建立資產資料夾 **[!DNL Events]**.
 1. 範圍 **[!UICONTROL 資產] > [!UICONTROL 檔案] > [!DNL WKND Mobile] > [!DNL English] >[!DNL Events]** 建立型別為的新內容片段 **[!DNL Event]** 標題為 **[!DNL Punkrock Fest]**.
 1. 編寫新建立的 [!DNL Event] 內容片段。
 
-   * [!DNL Event Title] ： **[!DNL Punkrock Fest]**
+   * [!DNL Event Title] : **[!DNL Punkrock Fest]**
    * [!DNL Event Description] ： **&lt;enter a=&quot;&quot; few=&quot;&quot; lines=&quot;&quot; of=&quot;&quot; description...=&quot;&quot;>**
    * [!DNL Event Date] ： **&lt;select a=&quot;&quot; date=&quot;&quot; in=&quot;&quot; the=&quot;&quot; future=&quot;&quot;>**
    * [!DNL Event Type] ： **音樂**
@@ -55,12 +56,12 @@ AEM Headless教學課程的第3章涵蓋從中建立的內容片段模式建立�
 
 *本節僅供參考，其目的是將來自內容片段模型的內容片段的基礎JCR結構社會化。*
 
-1. 開啟 **[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)** 在AEM作者上。
-1. 在CRXDE Lite的左側階層功能表中，導覽至 [/content/dam/wknd-mobile/en/events/punkrock-fest/jcr：content](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content) 哪個節點代表 [!DNL Punkrock Fest] [!DNL Event] JCR中的內容片段。
+1. 開啟 **[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)** 在AEM Author上。
+1. 在CRXDE Lite的左側階層功能表中，導覽至 [/content/dam/wknd-mobile/en/events/punkrock-fest/jcr：content](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content) ，此節點代表 [!DNL Punkrock Fest] [!DNL Event] jcr中的內容片段。
 1. 展開 [資料](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master) 節點。
 在中檢閱 **屬性窗格** 它有屬性 `cq:model` 這指向 [!DNL Event] 內容片段模型定義。
    * **`cq:model`**=**`/conf/settings/wknd-mobile/dam/cfm/models/event`**
-1. 在 `data` 節點選取 [主版](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master) 節點並檢閱屬性。 此節點包含編寫期間收集的內容 [!DNL Event] 內容片段模型。 JCR屬性名稱對應至內容片段模式屬性名稱，而值對應至「 」的撰寫值[!DNL Punkrock Fest]&quot; [!DNL Event] 內容片段。
+1. 在 `data` 節點選取 [主版](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master) 節點並檢閱屬性。 此節點包含編寫期間收集的內容 [!DNL Event] 內容片段模型。 JCR屬性名稱對應至內容片段模型屬性名稱，而值對應至&quot;[!DNL Punkrock Fest]&quot; [!DNL Event] 內容片段。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28356?quality=12&learn=on)
 

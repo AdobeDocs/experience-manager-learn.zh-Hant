@@ -3,13 +3,13 @@ title: 使用函式和程式碼編輯器
 description: 使用函式和程式碼編輯器編寫商業規則
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 4270
+jira: KT-4270
 thumbnail: 22282.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 7b2a4075-bfdf-49f3-b507-34d86193bf64
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 您已安裝 [具有自訂函式的ClientLib](assets/client-libs-and-logo.zip) 在本教學課程的前面部分。
 
-通常使用者端資料庫會包含CSS和Javascript檔案。 此使用者端程式庫包含JavaScript檔案，此檔案會顯示一個函式以填入下拉式清單值。
+通常使用者端資料庫會包含CSS和Javascript檔案。 此使用者端資料庫包含JavaScript檔案，此檔案會公開一個函式以填入下拉式清單值。
 
 
 ## 要填入下拉式清單的函式 {#function-to-populate-drop-down-list}
@@ -66,6 +66,6 @@ else
 
 第5行 — 驗證目前的面板。
 
-第9行 — 如果沒有錯誤，則移至下一個面板
+第9行 — 如果沒有錯誤移至下一個面板
 
 預覽表單，並測試新啟用的功能。

@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 9673
+jira: KT-9673
 exl-id: db25e5a2-e1a8-40ad-af97-35604d515450
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
 <baseURL>/config
 ```
 
-以下是在建立批次設定時需要指定的最小設定。 這必須在HTTP要求內文中傳遞為JSON物件
+以下是建立批次組態時需要指定的最小組態。 這必須在HTTP要求內文中以JSON物件形式傳遞
 
 ```
 {
@@ -50,11 +50,11 @@ ht-degree: 0%
 
 ## 驗證批次設定
 
-若要驗證批次設定是否成功建立，您可以對以下端點進行GET請求呼叫
+若要驗證已成功建立批次設定，您可以對以下端點進行GET請求呼叫
 
 
 ```xml
 <baseURL>/config/monthlystatements
 ```
 
-您只需在HTTP請求內文中傳遞空白的JSON物件即可
+您只需在HTTP請求內文中傳遞空白JSON物件

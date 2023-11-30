@@ -6,12 +6,12 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 10798
+jira: KT-10798
 thumbnail: KT-10798.jpg
 last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: 39b21a29-a75f-4a6c-ba82-377cf5cc1726
-source-git-commit: d3ee129cb228f02d5a5846465400c04ce81dfbb5
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 5%
@@ -26,7 +26,7 @@ ht-degree: 5%
 
 檢視 [GitHub上的原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server)
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 下列工具應在本機安裝：
 
@@ -38,7 +38,7 @@ ht-degree: 5%
 Node.js應用程式可與下列AEM部署選項搭配使用。 所有部署都需要 [WKND網站v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) 即將安裝。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 或者 [服務認證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html) 如果授權請求（例如，連線到AEM作者服務）。
++ 或者 [服務認證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html) 如果授權請求(例如，連線到AEM作者服務)。
 
 此Node.js應用程式可以根據命令列引數連線至AEM Author或AEM Publish。
 
@@ -69,7 +69,7 @@ Node.js應用程式可與下列AEM部署選項搭配使用。 所有部署都需
    $ node index.js https://publish-p123-e789.adobeaemcloud.com
    ```
 
-   若要以授權方式針對AEM Author執行應用程式：
+   若要以授權方式對AEM Author執行應用程式：
 
    ```shell
    $ node index.js https://author-p123-e456.adobeaemcloud.com ./service-config.json

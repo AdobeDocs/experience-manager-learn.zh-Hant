@@ -3,14 +3,14 @@ title: 探索GraphQL API - AEM Headless快速入門 — GraphQL
 description: 開始使用Adobe Experience Manager (AEM)和GraphQL。 使用內建GrapiQL IDE來探索AEM GraphQL API。 瞭解AEM如何根據內容片段模型自動產生GraphQL結構描述。 嘗試使用GraphQL語法建構基本查詢。
 version: Cloud Service
 mini-toc-levels: 1
-kt: 6714
+jira: KT-6714
 thumbnail: KT-6714.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1454'
 ht-degree: 2%
@@ -23,7 +23,7 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
 在本章中，讓我們來探索一些常見的GraphQL查詢，以使用名為的IDE收集內容 [GraphiQL](https://github.com/graphql/graphiql). GraphiQL IDE可讓您快速測試並調整傳回的查詢和資料。 也能讓您輕鬆存取檔案，讓您輕鬆學習和瞭解有哪些方法可用。
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 此教學課程包含多個部分，並假設您已完成下列步驟： [製作內容片段](./author-content-fragments.md) 已完成。
 
@@ -117,7 +117,7 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
 接下來，嘗試查詢以擷取巢狀片段，記住 **團隊** 模型參照 **個人** 模型。
 
-1. 更新查詢以包含 `teamMembers` 屬性。 請記住，這是 **片段引用** 欄位至個人模型。 可傳回「人員」模型的屬性：
+1. 更新查詢以包含 `teamMembers` 屬性。 記住，這是 **片段引用** 欄位至個人模型。 可傳回「人員」模型的屬性：
 
    ```graphql
    query allTeams {

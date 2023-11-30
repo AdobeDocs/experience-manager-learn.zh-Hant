@@ -7,9 +7,9 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
-kt: 8848
+jira: KT-8848
 exl-id: 31487027-d528-48ea-b626-a740b94dceb8
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -42,13 +42,13 @@ git add .
 git commit -m "initial commit"
 ```
 
-這會將檔案提交至Git存放庫
+這會將檔案提交到Git存放庫
 
 
 
 ## 在本機Git存放庫中註冊Cloud Manager存放庫
 
-存取您的cloud manager存放庫
+存取您的Cloud Manager存放庫
 ![存取代表資訊](assets/cloud-manager-repo.png)
 取得Cloud Manager存放庫認證
 ![get-credentials](assets/cloud-manager-repo1.png)
@@ -67,7 +67,7 @@ git config --global user.password "XXXX"
 
 （密碼是您的cloud manager git存放庫密碼）
 
-在本機Git存放庫中註冊Cloud Manager Git存放庫。 下列指令會建立關聯 **Bankingapp** 使用遠端cloud manager git存放庫。 您可以使用任何名稱，而不是 **Bankingapp**
+在本機git存放庫中註冊cloud manager git存放庫。 下列指令會建立關聯 **銀行應用程式** 使用遠端cloud manager git存放庫。 您可以使用任何名稱，而不是 **銀行應用程式**
 
 
 ```shell

@@ -1,16 +1,16 @@
 ---
 title: AEM Forms中的自動完成功能
-description: 可讓使用者利用搜尋和篩選功能，在輸入時快速尋找並選取預先填入的值清單。
+description: 讓使用者利用搜尋和篩選，在輸入時快速尋找和選取預先填入的值清單。
 feature: Adaptive Forms
 type: Tutorial
 version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 11374
+jira: KT-11374
 last-substantial-update: 2022-11-01T00:00:00Z
 exl-id: e9a696f9-ba63-462d-93a8-e9a7a1e94e72
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 
 
-以下是用來提供街道地址建議的代碼
+以下是用來提供街道地址建議的程式碼
 
 ```javascript
 $(".streetAddress input").autocomplete({
@@ -67,7 +67,7 @@ $(".streetAddress input").autocomplete({
 
 ![country-suggestions](assets/auto-complete3.png)
 
-下列程式碼用於顯示建議清單中的表情符號
+下列程式碼用於顯示建議清單中的emoji
 
 ```javascript
 var values=["Wolf \u{1F98A}", "Lion \u{1F981}","Puppy \u{1F436}","Giraffe \u{1F992}","Frog \u{1F438}"];

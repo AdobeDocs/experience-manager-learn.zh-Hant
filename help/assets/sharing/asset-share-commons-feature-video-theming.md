@@ -1,27 +1,28 @@
 ---
-title: Asset Share Commons的主題設定簡介
-description: 適用於功能和技術瞭解Assets Share Commons的材料
+title: Asset Share Commons主題化簡介
+description: Assets Share Commons功能與技術瞭解資料
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-22T00:00:00Z
+doc-type: Tutorial
 exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 1%
 
 ---
 
-# Asset Share Commons的主題設定簡介 {#asset-share-commons-theme}
+# Asset Share Commons主題化簡介 {#asset-share-commons-theme}
 
-簡要介紹Asset Share Commons的主題。 影片會逐步說明使用自訂色彩配置建立新佈景主題的過程。
+簡要介紹「資產共用公域」的主題。 影片會逐步說明使用自訂色彩配置建立新佈景主題的過程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/20572?quality=12&learn=on)
 
-此影片會根據Asset Share Commons Dark主題建立一個新主題。 色彩配置會比對自訂標誌，以提供一致的外觀和感覺。
+此影片會根據資產共用共用深色主題建立一個新主題。 色彩配置會比對自訂標誌，以提供一致的外觀和風格。
 
 ## 主題變數
 
@@ -78,5 +79,5 @@ ht-degree: 1%
 
 ## 其他資源{#additional-resources}
 
-* [Asset Share Commons版本下載](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
+* [Asset Share Commons發行下載](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
 * [ACS AEM Commons 3.11.0+版本下載](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)

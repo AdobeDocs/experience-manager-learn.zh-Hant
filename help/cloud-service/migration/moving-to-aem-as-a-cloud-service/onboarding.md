@@ -1,15 +1,15 @@
 ---
 title: AEM as a Cloud Service 入門
-description: 瞭解如何上手使用AEMas a Cloud Service，從合約階段一直到使用Cloud Manager設定環境。
+description: 瞭解AEMas a Cloud Service上線程式，從合約階段一直到使用Cloud Manager設定環境。
 version: Cloud Service
 feature: Onboarding
 topic: Migration, Upgrade
 role: Developer
 level: Experienced
-kt: 8631
+jira: KT-8631
 thumbnail: 336959.jpeg
 exl-id: 9d2004e5-e928-4190-8298-695635c8e92c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 8%
@@ -18,7 +18,7 @@ ht-degree: 8%
 
 # AEM as a Cloud Service 入門
 
-瞭解如何上手使用AEMas a Cloud Service，從合約階段一直到使用Cloud Manager設定環境。
+瞭解AEMas a Cloud Service上線程式，從合約階段一直到使用Cloud Manager設定環境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336959?quality=12&learn=on)
 
@@ -26,7 +26,7 @@ ht-degree: 8%
 
 ![入門高階圖表](assets/onboarding-diagram.png)
 
-入門的關鍵部分是建立AEMas a Cloud Service計畫，並使用AdobeCloud Manager布建各種環境。 此 [Admin Console](https://adminconsole.adobe.com/) 用於指派角色，並為您組織中的使用者提供AEM環境的存取權。
+上線的重要部分是建立AEMas a Cloud Service計畫並使用AdobeCloud Manager布建各種環境。 此 [Admin Console](https://adminconsole.adobe.com/) 用於指派角色，並為您組織中的使用者提供AEM環境的存取權。
 
 ## 重要活動
 
@@ -36,14 +36,14 @@ ht-degree: 8%
 
 ## 實作練習
 
-透過這個實作練習來嘗試您學到的知識，以運用您的知識。
+透過嘗試您透過此實作練習學到的內容，運用您的知識。
 
 在嘗試實作練習之前，請確定您已觀看並瞭解上述影片和下列資料：
 
 + [以不同方式思考AEMas a Cloud Service](./introduction.md)
 + [Cloud Manager](./cloud-manager.md)
 
-此外，請確定您已完成先前的實作練習：
+此外，請確定您已完成前一個實作練習：
 
 + [AEM現代化工具實作練習](./aem-modernization-tools.md#hands-on-exercise)
 
@@ -58,7 +58,7 @@ ht-degree: 8%
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">實作與上線</div>
             <p style="margin:1rem 0">
-                探索AEMas a Cloud Service上線流程，以及如何將AEM應用程式部署至AEM SDK。
+                探索AEMas a Cloud Service上線流程以及如何將AEM應用程式部署到AEM SDK。
             </p>
             <a  rel="noreferrer"
                 target="_blank"

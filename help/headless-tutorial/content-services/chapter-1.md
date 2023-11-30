@@ -1,14 +1,15 @@
 ---
 title: 第1章 — 教學課程設定和下載 — 內容服務
 seo-title: Getting Started with AEM Content Services - Chapter 1 -  Tutorial Set up
-description: AEM Headless教學課程的第1章教學課程的AEM執行個體的基準線設定。
+description: AEM Headless教學課程的第1章教學課程的AEM執行個體的基準設定。
 seo-description: Chapter 1 of the AEM Headless tutorial the baseline setup for the AEM instance for the tutorial.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: f24a75f6-9062-498c-b782-7d9011aa0bcf
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 1%
@@ -17,13 +18,13 @@ ht-degree: 1%
 
 # 教學課程設定
 
-建議一律使用最新版AEM和AEM WCM核心元件。
+建議一律使用最新版的AEM和AEM WCM核心元件。
 
 * AEM 6.5 或更新版本
 * AEM WCM Core Components 2.4.0或更新版本
-   * 包含在 [下方的WKND Mobile AEM應用程式內容套件](#wknd-mobile-application-packages)
+   * 包含在 [以下的WKND Mobile AEM應用程式內容套件](#wknd-mobile-application-packages)
 
-開始進行本教學課程之前，請確定下列AEM例項為 [已在本機電腦上安裝並執行](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install)：
+開始本教學課程之前，請確定下列AEM例項為 [已在您的本機電腦上安裝並執行](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install)：
 
 * **AEM作者** 於 **連線埠4502**
 * **AEM發佈** 於 **連線埠4503**
@@ -35,7 +36,7 @@ ht-degree: 1%
 * [ui.apps： GitHub >資產> com.adobe.aem.guides.wknd-mobile.ui.apps-x.x.x.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
    * [!DNL WKND Mobile Empty Template Type]
    * [!DNL WKND Mobile] AEM WCM核心元件的Proxy元件
-   * [!DNL WKND Mobile] AEM Content Services頁面的CSS （用於次要樣式）
+   * [!DNL WKND Mobile] AEM Content Services頁面的CSS （適用於次要樣式）
 * [ui.content： GitHub > com.adobe.aem.guides.wknd-mobile.ui.content-x.x.x.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
    * [!DNL WKND Mobile] 網站結構
    * [!DNL WKND Mobile] DAM資料夾結構
@@ -47,7 +48,7 @@ ht-degree: 1%
 
 ## 章節AEM內容套件
 
-這組內容套件會建立相關章節及所有先前章節中說明的內容和設定。 這些套件是選用套件，但可加快內容建立速度。
+這組內容套件會建立相關章節及所有先前章節中所述的內容和組態。 這些套件是選用套件，但可加快內容建立速度。
 
 * [第2章內容： GitHub > Assets > com.adobe.aem.guides.wknd-mobile.content.chapter-2.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
 * [第3章內容： GitHub > Assets > com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
@@ -56,13 +57,13 @@ ht-degree: 1%
 
 ## 原始碼
 
-AEM專案的原始程式碼和 [!DNL Android Mobile App] 可在以下網址取得： [[!DNL AEM Guides - WKND Mobile GitHub Project]](https://github.com/adobe/aem-guides-wknd-mobile). 您不需要為本教學課程建置或修改原始程式碼，提供原始程式碼是為了在建置教學課程所有內容的方式上完全透明。
+AEM專案和 [!DNL Android Mobile App] 可在 [[!DNL AEM Guides - WKND Mobile GitHub Project]](https://github.com/adobe/aem-guides-wknd-mobile). 您不需要為本教學課程建置或修改原始程式碼，提供原始程式碼是為了讓建置教學課程所有層面的方式完全透明。
 
-如果您發現教學課程或程式碼有問題，請留下 [GitHub問題](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+若教學課程或程式碼有任何問題，請留下 [GitHub問題](https://github.com/adobe/aem-guides-wknd-mobile/issues).
 
 ## 跳至結尾
 
-若要跳至教學課程結尾，請前往 [com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) 內容套件可以安裝在 **兩者** AEM Author和AEM Publish。 請注意，內容和設定不會顯示為AEM Author中發佈，但由於手動部署，所有必要內容和設定都可在AEM Publish上取得，允許 [!DNL WKND Mobile App] 以存取內容。
+若要跳至教學課程的結尾，請前往 [com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) 內容套件可安裝在 **兩者** AEM作者和AEM發佈。 請注意，內容與設定不會顯示為AEM Author中的已發佈內容，但由於手動部署，所有必要內容與設定均可在AEM Publish上取得，允許 [!DNL WKND Mobile App] 以存取內容。
 
 
 ## 下一步

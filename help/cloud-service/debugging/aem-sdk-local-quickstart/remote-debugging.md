@@ -1,44 +1,44 @@
 ---
-title: 遠端偵錯AEM SDK
-description: AEM SDK的本機Quickstart允許從IDE進行遠端Java偵錯，讓您逐步完成AEM中的即時程式碼執行，以瞭解確切的執行流程。
-kt: 5251
+title: 從遠端偵錯AEM SDK
+description: AEM SDK的本機Quickstart允許從IDE進行遠端Java偵錯，讓您在AEM中逐步執行即時程式碼，以瞭解確切的執行流程。
+jira: KT-5251
 topic: Development
 feature: Developer Tools
 role: Developer
 level: Beginner, Intermediate
 thumbnail: 34338.jpeg
 exl-id: beac60c6-11ae-4d0c-a055-cd3d05aeb126
-source-git-commit: 45e7c58efd1d89537752fe7f890c0e80f7be7d67
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
 
 ---
 
-# 遠端偵錯AEM SDK
+# 從遠端偵錯AEM SDK
 
 >[!VIDEO](https://video.tv.adobe.com/v/34338?quality=12&learn=on)
 
-AEM SDK的本機Quickstart允許從IDE進行遠端Java偵錯，讓您逐步完成AEM中的即時程式碼執行，以瞭解確切的執行流程。
+AEM SDK的本機Quickstart允許從IDE進行遠端Java偵錯，讓您在AEM中逐步執行即時程式碼，以瞭解確切的執行流程。
 
-若要將遠端偵錯工具連線至AEM，AEM SDK的本機Quickstart必須使用特定引數啟動(`-agentlib:...`)，允許IDE連線到它。
+若要將遠端偵錯工具連線至AEM，必須使用特定引數啟動AEM SDK的本機Quickstart (`-agentlib:...`)，允許IDE連線到它。
 
 ```
 $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar aem-author-p4502.jar   
 ```
 
 + AEM SDK僅支援Java 11
-+ `address` 指定AEM接聽遠端偵錯連線的連線埠，並可變更為本機開發電腦上的任何可用連線埠。
++ `address` 指定AEM接聽遠端偵錯連線的連線埠，並可變更為本機開發電腦上任何可用的連線埠。
 + 最後一個引數(例如 `aem-author-p4502.jar`)是AEM SKD Quickstart Jar。 這可以是AEM Author服務(`aem-author-p4502.jar`)或AEM Publish服務(`aem-publish-p4503.jar`)。
 
 
 ## IDE設定指示
 
-大多數Java IDE都支援遠端偵錯Java程式，但每個IDE的正確設定步驟有所不同。 請檢閱IDE的遠端偵錯設定指示，以取得確切步驟。 通常IDE配置需要：
+大多數Java IDE都提供對Java程式進行遠端偵錯的支援，但每個IDE的具體設定步驟有所不同。 請檢閱IDE的遠端偵錯設定指示，以瞭解確切步驟。 通常IDE配置需要：
 
 + 主機AEM SDK的本機Quickstart正在接聽，也就是 `localhost`.
-+ 連線埠AEM SDK的本機Quickstart正在接聽遠端偵錯連線，該連線是由 `address` 引數(啟動AEM SDK的本機快速入門時)。
-+ 有時候，您必須指定提供原始程式碼給遠端偵錯的Maven專案；這是您的OSGi套件maven專案專案。
++ AEM SDK的本機Quickstart正在接聽連線埠以進行遠端偵錯連線，該連線埠是由 `address` 啟動AEM SDK的本機Quickstart時的引數。
++ 有時候，必須指定提供原始程式碼給遠端偵錯的Maven專案；這是您的OSGi套件組合maven專案專案。
 
 ### 設定指示
 

@@ -7,10 +7,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 8185
+jira: KT-8185
 thumbnail: KT-8185.jpg
 exl-id: ab7b8a06-3009-477d-9e98-590912e8e176
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 0%
@@ -20,9 +20,9 @@ ht-degree: 0%
 # 交換JWT以取得存取權杖
 
 
-在上一步中建立的JWT會透過Adobe IMS API換取存取權杖，然後可以使用它來存取AEMas a Cloud Service。 若要請求存取權杖，請將包含JWT、client_id、client_secret的POST請求傳送至IMS驗證服務。
+先前步驟建立的JWT會透過Adobe IMS API換取存取權杖，然後使用後者來存取AEMas a Cloud Service。 若要請求存取權杖，請將包含JWT、client_id、client_secret的POST請求傳送至IMS驗證服務。
 
-下列程式碼已用於產生存取Token的Exchange JWT
+下列程式碼已用來產生Access權杖的Exchange JWT
 
 ```java
 public String getAccessToken() {

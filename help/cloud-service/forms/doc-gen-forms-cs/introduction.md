@@ -7,10 +7,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 7432
+jira: KT-7432
 thumbnail: 334859.jpg
 exl-id: 08dd141d-9d25-4dd5-a810-70e3835deae4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 簡介
 
-在本課程中，我們將使用檔案產生微服務，透過將資料與XDP範本合併來產生PDF。 若要從外部應用程式使用這些微服務，需執行下列步驟：
+在本課程中，我們將使用檔案產生微服務將資料與XDP範本合併，以產生PDF。 若要從外部應用程式使用這些微服務，包括下列步驟：
 
 1. 產生AEM技術帳戶的服務認證
 1. 從服務憑證建立JSON Web權杖(JWT)，並將相同的權杖交換為存取權杖

@@ -1,15 +1,15 @@
 ---
 title: 執行批次設定
-description: 透過執行批次來啟動檔案產生流程
+description: 執行批次以啟動檔案產生程式
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 9674
+jira: KT-9674
 exl-id: 17f91f81-96d8-49d6-b1e3-53d8899695ae
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
@@ -24,9 +24,9 @@ ht-degree: 0%
 <baseURL>/confi/<configName>/execution
 ```
 
-此API預期空白json物件為要求內文中的引數。
-此API會在由所識別的回應標頭中傳回唯一的URL **位置** 金鑰。
-對此唯一URL的GET請求將告知您批次執行的狀態
+此API預期空白json物件為請求內文中的引數。
+此API會傳回回應標題中的唯一URL，識別方式為 **位置** 機碼。
+這個唯一URL的GET要求會告訴您批次執行的狀態
 
 以下影片示範批次設定的觸發
 

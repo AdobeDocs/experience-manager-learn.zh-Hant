@@ -6,10 +6,10 @@ topic: Headless
 feature: GraphQL API
 role: Developer
 level: Intermediate
-kt: 11614
+jira: KT-11614
 thumbnail: KT-10253.jpeg
 exl-id: 04fcc24c-7433-4443-a109-f01840ef1a89
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 3%
@@ -21,19 +21,19 @@ ht-degree: 3%
 在AEM 6.5中，必須手動安裝GraphiQL IDE工具。
 
 1. 導覽至 **[軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEMas a Cloud Service**.
-1. 搜尋「GraphiQL」(請務必包含 **i** 在 **GraphiQL**)。
+1. 搜尋「GraphiQL」(請務必包含 **ì** 在 **GraphiQL**)。
 1. 下載最新版本 **GraphiQL Content Package v.x.x.x**.
 
    ![下載GraphiQL套件](assets/graphiql/software-distribution.png)
 
    zip檔案是可直接安裝的AEM套件。
 
-1. 從AEM「開始」功能表，瀏覽至 **工具** > **部署** > **套件**.
+1. 從AEM的「開始」功能表，導覽至 **工具** > **部署** > **封裝**.
 1. 按一下 **上傳套裝** 並選擇在先前步驟中下載的套件。 按一下 **安裝** 以安裝套件。
 
    ![安裝GraphiQL套件](assets/graphiql/install-graphiql-package.png)
 
-1. 導覽至 **CRXDE Lite** > **存放庫面板** >選取 `/content/graphiql` 節點(例如， <http://localhost:4502/crx/de/index.jsp#/content/graphiql>)。
+1. 瀏覽至 **CRXDE Lite** > **存放庫面板** >選取 `/content/graphiql` 節點(例如， <http://localhost:4502/crx/de/index.jsp#/content/graphiql>)。
 1. 在 **屬性** 標籤變更值 `endpoint` 屬性至 `/content/_cq_graphql/wknd-shared/endpoint.json`.
    ![端點屬性值變更](assets/graphiql/endpoint-prop-value-change.png)
 
@@ -48,4 +48,4 @@ ht-degree: 3%
 
 >[!TIP]
 >
->若要支援特定專案的GraphQL結構描述和查詢執行，您必須對進行對應的變更 `endpoint` 和 `Excluded Paths` 上述步驟的值。
+>若要支援特定專案的GraphQL結構描述和查詢執行，您必須對 `endpoint` 和 `Excluded Paths` 值。

@@ -7,8 +7,9 @@ version: 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
+doc-type: Feature Video
 exl-id: db4fc561-2368-4df8-9b02-fc08afa00805
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
@@ -26,5 +27,5 @@ AEM Dynamic Media Viewer增強功能可讓AEM作者定義並自訂向網站使�
 * 從檢視器預設集中直覺地選擇檢視器元素並自訂設定，而不需要知道檢視器元件。
 * 說明檢視器設定和引數的修飾詞實用工具提示。
 * 顯示/隱藏CSS選項以進行進階CSS變更。 匯入自訂CSS的功能。
-* 熱點按鈕的OOTB相簿，可最小化新按鈕的開發。
-* 高畫素按鈕圖稿演算功能適用於視網膜顯示器。
+* 熱點按鈕的OOTB相簿將新按鈕的開發降至最低。
+* 適用於視網膜顯示器的高畫素按鈕圖稿演算功能。

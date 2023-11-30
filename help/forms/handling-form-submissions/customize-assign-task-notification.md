@@ -1,5 +1,5 @@
 ---
-title: 自訂指派任務通知
+title: 自訂指派工作通知
 description: 在指派任務通知電子郵件中包含表單資料
 feature: Workflow
 topics: integrations
@@ -7,24 +7,24 @@ audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
-kt: 6279
+jira: KT-6279
 thumbnail: KT-6279.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 0cb74afd-87ff-4e79-a4f4-a4634ac48c51
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 1%
 
 ---
 
-# 自訂指派任務通知
+# 自訂指派工作通知
 
 指派任務元件用於將任務指派給工作流程參與者。 當任務指派給使用者或群組時，會傳送電子郵件通知給已定義的使用者或群組成員。
-此電子郵件通知通常包含與任務相關的動態資料。 此動態資料是使用產生的系統擷取 [中繼資料屬性](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification).
+此電子郵件通知通常包含與任務相關的動態資料。 系統會使用產生的系統擷取此動態資料 [中繼資料屬性](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification).
 若要在電子郵件通知中包含來自已提交表單資料的值，我們需要建立自訂中繼資料屬性，然後在電子郵件範本中使用這些自訂中繼資料屬性
 
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 建議的方法是建立實作的getUserMetadata方法的OSGI元件 [WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)
 
-下列程式碼會建立4個中繼資料屬性(_名字_，_姓氏_，_原因_ 和 _amountRequested_)並從提交的資料中設定其值。 例如中繼資料屬性 _名字_&#x200B;的數值會根據提交的資料，設定為名為firstName的元素的值。 下列程式碼假設最適化表單提交的資料為xml格式。 以JSON結構描述或表單資料模型為基礎的最適化Forms會產生JSON格式的資料。
+下列程式碼會建立4個中繼資料屬性(_名字_，_姓氏_，_原因_ 和 _amountRequested_)並從提交的資料中設定其值。 例如中繼資料屬性 _名字_&#x200B;的會根據提交的資料，將值設定為名為firstName的元素值。 下列程式碼假設最適化表單提交的資料為xml格式。 以JSON結構描述或表單資料模型為基礎的最適化Forms會產生JSON格式的資料。
 
 
 ```java
@@ -119,7 +119,7 @@ return customMetadataMap;
 
 ## 設定指派任務以使用自訂中繼資料屬性
 
-在OSGi元件建立並部署到AEM伺服器後，請如下所示設定「指派工作」元件以使用自訂中繼資料屬性。
+建立OSGi元件並部署到AEM伺服器後，請如下所示設定「指派工作」元件以使用自訂中繼資料屬性。
 
 
 ![任務通知](assets/task-notification.PNG)
@@ -134,7 +134,7 @@ return customMetadataMap;
 * 將有效的電子郵件ID與 [管理員使用者](http://localhost:4502/security/users.html)
 * 下載並安裝 [Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip) 使用 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
 * 下載 [最適化表單](assets/request-travel-authorization.zip) 並從匯入AEM [表單與檔案ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
-* 部署並啟動 [自訂組合](assets/work-items-user-service-bundle.jar) 使用 [網頁主控台](http://localhost:4502/system/console/bundles)
+* 部署和啟動 [自訂套裝](assets/work-items-user-service-bundle.jar) 使用 [網頁主控台](http://localhost:4502/system/console/bundles)
 * [預覽並提交表單](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 
 在表單提交時，任務指派通知會傳送到與管理員使用者相關聯的電子郵件ID。 下列熒幕擷圖顯示範例任務指派通知
@@ -142,7 +142,7 @@ return customMetadataMap;
 ![通知](assets/task-nitification-email.png)
 
 >[!NOTE]
->指派任務通知的電子郵件範本需要以下列格式。
+>指派任務通知的電子郵件範本必須採用以下格式。
 >
 > subject=任務已指派 —  `${workitem_title}`
 >
@@ -150,7 +150,7 @@ return customMetadataMap;
 
 ## 指派任務電子郵件通知中的任務註解
 
-在某些情況下，您可能會想要在後續的任務通知中包含前一個任務擁有者的註解。 擷取任務最後評論的程式碼如下：
+在某些情況下，您可能會想要在後續任務通知中包含先前任務擁有者的註解。 擷取任務最後註解的程式碼如下：
 
 ```java
 package samples.aemforms.taskcomments.core;

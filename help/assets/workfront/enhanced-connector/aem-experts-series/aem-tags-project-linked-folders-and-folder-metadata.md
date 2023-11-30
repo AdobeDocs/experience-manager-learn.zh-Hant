@@ -1,19 +1,19 @@
 ---
-title: 適用於AEM增強型聯結器的Workfront的AEM Tags、專案連結資料夾和資料夾中繼資料
-description: 瞭解如何透過Workfront資料推動在資產上使用AEM Tags、使用專案連結資料夾和Workfront資料至AEM資產資料夾中繼資料結構。
+title: AEM增強型聯結器的Workfront的AEM Tags、專案連結資料夾和資料夾中繼資料
+description: 瞭解如何透過AEM資料促進在資產上使用Workfront Tags、使用專案連結資料夾和Workfront資料至AEM資產資料夾中繼資料結構。
 version: Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, Architect, Developer
 level: Beginner
-kt: 9720
+jira: KT-9720
 thumbnail: 340333.jpeg
 hidefromtoc: false
 last-substantial-update: 2022-09-02T00:00:00Z
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ![AEM Experts系列](./assets/banner.png)
 
-瞭解如何透過Workfront資料推動在資產上使用AEM Tags、設定和使用專案連結資料夾，以及Workfront資料至AEM資產資料夾中繼資料結構。
+瞭解如何透過AEM資料促進在資產上使用Workfront Tags、設定和使用專案連結資料夾，以及Workfront資料至AEM資產資料夾中繼資料結構。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340333?quality=12&learn=on)
 
@@ -32,4 +32,4 @@ _a的第三部分 [Workfront for Experience Manager增強型聯結器的四部�
 
 ## 更正
 
-+ __@ 4:34和6:20__ AEM標籤語法不正確。 視訊顯示器 `we-retail:apparel/footwear`. 正確語法為 `["we-retail:apparel/footwear"]` 或更一般地 `["namespace:tag/childtag"]`.
++ __@ 4:34和6:20__ AEM標籤語法不正確。 視訊顯示器 `we-retail:apparel/footwear`. 正確的語法為 `["we-retail:apparel/footwear"]` 或更一般地 `["namespace:tag/childtag"]`.

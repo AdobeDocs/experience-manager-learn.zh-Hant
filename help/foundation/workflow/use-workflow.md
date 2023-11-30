@@ -1,15 +1,16 @@
 ---
-title: 如何在AEM中使用工作流程
+title: 如何使用AEM中的工作流程
 description: AEM Workflow提供在AEM中共同作業、管理及處理內容的方式。
 version: 6.5, Cloud Service
 feature: Workflow
 topic: Content Management
 role: User
 level: Intermediate
-kt: 2557
+jira: KT-2557
 thumbnail: 27848.jpg
+doc-type: Feature Video
 exl-id: 5a6bf1f2-1dd5-40b4-8ceb-03672a36869d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%

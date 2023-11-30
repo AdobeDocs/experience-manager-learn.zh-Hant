@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 9980
+jira: KT-9980
 exl-id: 693dac88-84f3-4051-8e46-3105093711a3
-source-git-commit: e925b9fa02dc8d4695b85377c5f7f43fbd45ebc8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 
 下一步是使用必要的引數向端點進行HTTPPOST呼叫。 DDX和pdf檔案會以資源檔案的形式提供。 端點具有權杖型驗證，我們會在請求標頭中傳遞存取權杖。
-使用Assembler服務時，請使用名為Document Description XML (DDX)的XML語言來說明您想要的輸出。 DDX是一種宣告式標籤語言，其元素代表檔案的建置區塊。以下DDX用於合併PDF來源元素中識別的兩個pdf檔案。
+使用「組合器」服務時，請使用名為「檔案描述XML (DDX)」的XML語言來描述您想要的輸出。 DDX是一種宣告式標籤語言，其元素代表檔案的建置組塊。下列DDX用於合併PDF來源元素中識別的兩個pdf檔案。
 
 ```xml
 <DDX xmlns="http://ns.adobe.com/DDX/1.0/">

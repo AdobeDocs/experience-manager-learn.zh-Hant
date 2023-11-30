@@ -1,15 +1,15 @@
 ---
-title: 內嵌顯示記錄檔案
+title: 顯示內嵌的記錄檔案
 description: 將最適化表單資料與XDP範本合併，並使用Document Cloud內嵌PDF API顯示內嵌PDF。
 version: 6.4,6.5
 feature: Forms Service
 topic: Development
 role: Developer
 level: Experienced
-kt: 9411
+jira: KT-9411
 exl-id: 327ffe26-e88e-49f0-9f5a-63e2a92e1c8a
 last-substantial-update: 2021-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 常見的使用案例是顯示含有表單填寫者所輸入資料的pdf檔案。
 
-為了完成此使用案例，我們利用 [Adobe PDF內嵌API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
+為了完成此使用案例，我們已運用 [Adobe PDF內嵌API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
 
 已執行下列步驟以完成整合
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 用戶端資源庫
 
-下列程式碼會在 `viewPDF` 核取方塊按鈕已按一下。 我們將最適化表單資料、範本名稱傳遞至端點以產生pdf。 接著會使用內嵌PDF JavaScript程式庫將產生的PDF顯示給表單填寫器。
+下列程式碼會在 `viewPDF` 核取方塊按鈕已按一下。 我們將最適化表單資料、範本名稱傳遞至端點以產生PDF。 接著會使用內嵌PDF JavaScript程式庫將產生的PDF顯示在表單填寫器中。
 
 ```javascript
 $(document).ready(function() {
@@ -84,7 +84,7 @@ $(document).ready(function() {
 
 ## 產生XDP的範例資料
 
-* 在AEM Forms Designer中開啟XDP。
+* 在AEM Forms設計工具中開啟XDP。
 * 按一下檔案 |表單屬性 |預覽
 * 按一下產生預覽資料
 * 按一下「產生」
@@ -92,7 +92,7 @@ $(document).ready(function() {
 
 ## 從xml資料產生XSD
 
-您可以使用任何免費線上工具來 [產生XSD](https://www.freeformatter.com/xsd-generator.html) 來自上一步驟中產生的xml資料。
+您可以使用任何免費的線上工具來 [產生XSD](https://www.freeformatter.com/xsd-generator.html) 來自上一步驟中產生的xml資料。
 
 ## 上傳範本
 
@@ -103,10 +103,10 @@ $(document).ready(function() {
 
 根據上一步的XSD建立最適化表單。
 新增索引標籤至最適化。 新增核取方塊元件和embed-pdf元件至此索引標籤請確定您將核取方塊命名為viewPDF。
-設定embed-pdf元件，如下列熒幕擷圖所示
+設定內嵌pdf元件，如下方熒幕擷圖所示
 ![embed-pdf](assets/embed-pdf-configuration.png)
 
-**內嵌PDFAPI金鑰**  — 這是可用來內嵌pdf的金鑰。 此金鑰僅適用於localhost。 您可以建立 [您自己的金鑰](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) 並將其與其他網域相關聯。
+**內嵌PDFAPI金鑰**  — 這是可用來內嵌PDF的金鑰。 此金鑰僅適用於localhost。 您可以建立 [您自己的金鑰](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) 並將其與其他網域相關聯。
 
 **端點傳回pdf**  — 這是自訂servlet，會將資料與xdp範本合併並傳回pdf。
 
@@ -228,9 +228,9 @@ public class StreamPDFToEmbed extends SlingAllMethodsServlet {
 
 1. [下載並安裝內嵌pdf套件組合](assets/embedpdf.core-1.0-SNAPSHOT.jar).
 這有servlet可合併資料與XDP範本，並串流回pdf。
-1. 使用「 」，將/bin/getPDFToEmbed路徑新增到AdobeGranite CSRF篩選器的排除路徑區段中。 [AEM Configmgr](http://localhost:4502/system/console/configMgr). 在您的生產環境中，建議使用 [CSRF保護架構](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
-1. [匯入使用者端程式庫和自訂元件](assets/embed-pdf.zip)
+1. 使用將路徑/bin/getPDFToEmbed新增到AdobeGranite CSRF篩選器的已排除路徑區段中 [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). 在您的生產環境中，建議使用 [CSRF保護架構](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
+1. [匯入使用者端資料庫和自訂元件](assets/embed-pdf.zip)
 1. [匯入最適化表單和範本](assets/embed-pdf-form-and-xdp.zip)
 1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)
 1. 填寫一些表單欄位
-1. 按Tab鍵切換至「檢視PDF」標籤。 選取「檢視pdf」核取方塊。 您應該會看到在填入最適化表單資料的表單中顯示pdf
+1. 按Tab切換至「檢視PDF」標籤。 選取「檢視pdf」核取方塊。 您應該會看到PDF顯示在填入最適化表單資料的表單中

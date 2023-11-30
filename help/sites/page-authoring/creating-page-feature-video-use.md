@@ -1,21 +1,16 @@
 ---
 title: 在AEM Sites中建立新頁面
-seo-title: Create a new page in Adobe Experience Manager Sites
 description: 以下影片著重說明如何根據Adobe Experience Manager中的範本建立網站頁面。
-seo-description: The following video highlights how to create a site page based on a template in Adobe Experience Manager.
 feature: Page Editor, Editable Templates
-topics: authoring, publishing
-audience: author, marketer
-doc-type: feature video
-activity: use
 version: 6.4, 6.5, Cloud Service
-kt: 4244
+jira: KT-4244
 thumbnail: 31827.jpg
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 2ad1554e-312a-4150-b365-7e00eab1fa43
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%

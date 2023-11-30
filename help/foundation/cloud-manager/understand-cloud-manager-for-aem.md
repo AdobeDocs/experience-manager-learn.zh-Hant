@@ -1,11 +1,8 @@
 ---
 title: 瞭解Adobe Cloud Manager
-description: Adobe Cloud Manager提供簡單但強大的解決方案，可輕鬆管理、內部審查和自助服務AEM環境。
+description: Adobe Cloud Manager提供簡單但強大的解決方案，可讓您輕鬆管理、檢查和AEM環境的自助服務。
 sub-product: Experience Manager Cloud Manager, Experience Manager
-topics: best-practices, cicd, development, operations, governance
-doc-type: feature video
-activity: understand
-audience: developer, implementer, administrator, architect
+doc-type: Feature Video
 topic: Architecture
 feature: Cloud Manager
 role: Architect
@@ -13,7 +10,7 @@ level: Beginner
 exl-id: 53279cbb-70c8-4319-b5bb-9a7d350a7f72
 last-substantial-update: 2022-05-10T00:00:00Z
 thumbnail: understand-cloud-manager.jpg
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 16%
@@ -22,13 +19,13 @@ ht-degree: 16%
 
 # 瞭解Adobe Cloud Manager
 
-Adobe Cloud Manager提供簡單但強大的解決方案，可輕鬆管理、內部審查和自助服務AEM環境。
+Adobe Cloud Manager提供簡單但強大的解決方案，可讓您輕鬆管理、檢查和AEM環境的自助服務。
 
 ## Cloud Manager總覽
 
 本影片系列會探索AEM適用的Cloud Manager的主要功能，包括：
 
-* [方案](#programs)
+* [計畫](#programs)
 * [環境](#environments)
 * [報告](#reports)
 * [CI/CD 生產管道](#cicd-production-pipeline)
@@ -37,7 +34,7 @@ Adobe Cloud Manager提供簡單但強大的解決方案，可輕鬆管理、內�
 
 如需完整概述，請檢閱 [Cloud Manager使用手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html).
 
-## 方案 {#programs}
+## 計畫 {#programs}
 
 [Cloud Manager計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html) 代表支援邏輯業務計畫集合的AEM環境集合，通常會對應到已購買的服務等級協定(SLA)。 例如，一個計畫可能代表AEM資源以支援全球公共網站，而另一個計畫代表內部中央DAM。
 
@@ -45,13 +42,13 @@ Adobe Cloud Manager提供簡單但強大的解決方案，可輕鬆管理、內�
 
 ## 環境 {#environments}
 
-[Cloud Manager環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/managing-environments.html) 由AEM Author、AEM Publish和Dispatcher執行個體組成。 不同的環境支援角色，並可使用不同的CI/CD管道參與（如下所述）。 Cloud Manager環境通常有一個生產環境和一個中繼環境。
+[Cloud Manager環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/managing-environments.html) 是由AEM Author、AEM Publish和Dispatcher執行個體所組成。 不同的環境可支援角色，並使用不同的CI/CD管道與其互動（如下所述）。 Cloud Manager環境通常有一個生產環境和一個中繼環境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)
 
 ## 報告 {#reports}
 
-[Cloud Manager報表](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html) 透過報告及追蹤每個AEM執行個體的各種量度的一組圖表，提供計畫環境和AEM執行個體的檢視。
+[Cloud Manager報表](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html) 透過一組圖表提供計畫的環境和AEM執行個體的檢視，這些圖表會報告和追蹤每個AEM執行個體的各種量度。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26315?quality=12&learn=on)
 
@@ -61,7 +58,7 @@ Adobe Cloud Manager提供簡單但強大的解決方案，可輕鬆管理、內�
 
 >[!NOTE]
 >
-> 透過這些影片，組建、測試和部署時間都已加快，以縮短影片播放時間。 根據專案大小、AEM執行個體數量和UAT流程，完整的管道執行通常需要45分鐘或更長時間（包括強制性的30分鐘效能測試）。
+> 透過這些影片，已加快建置、測試和部署時間，以縮短影片時間。 根據專案大小、AEM執行個體數量和UAT流程，完整的管道執行通常需要45分鐘或更長時間（包括強制性的30分鐘效能測試）。
 
 ### 設定
 
@@ -71,7 +68,7 @@ Adobe Cloud Manager提供簡單但強大的解決方案，可輕鬆管理、內�
 
 ### 管道執行
 
-此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) 用於透過Stage建置計畫碼並將計畫碼部署到生產環境，減少實現價值的時間。
+此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) 用於透過Stage建置計畫碼並部署至生產環境，減少實現價值的時間。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)
 
@@ -83,8 +80,8 @@ Adobe Cloud Manager提供簡單但強大的解決方案，可輕鬆管理、內�
 
 ## 活動 {#activity}
 
-Cloud Manager提供計畫活動的整合式檢視，列出所有CI/CD管道執行，包括生產和非生產，允許檢視過去和現在的活動，並可以檢視任何活動的詳細資訊。
+Cloud Manager會提供方案活動的整合式檢視，以及所有CI/CD管道執行的清單（包括生產和非生產），讓您檢視過去和現在的活動，以及可以檢視任何活動的詳細資訊。
 
-Cloud Manager也可在每個使用者層級與整合 [Adobe Experience Cloud通知](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/notifications.html)，全方位檢視感興趣的事件和動作。
+Cloud Manager也整合了每個使用者層級與 [Adobe Experience Cloud通知](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/notifications.html)，提供感興趣之事件和動作的全方位檢視。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)

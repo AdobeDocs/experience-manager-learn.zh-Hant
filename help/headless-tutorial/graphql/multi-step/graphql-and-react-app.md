@@ -3,14 +3,14 @@ title: 使用GraphQL API建置React應用程式以查詢AEM - AEM Headless快速
 description: 開始使用Adobe Experience Manager (AEM)和GraphQL。 建置從AEM GraphQL API擷取內容/資料的React應用程式，也瞭解AEM Headless JS SDK的使用方式。
 version: Cloud Service
 mini-toc-levels: 1
-kt: 6716
+jira: KT-6716
 thumbnail: KT-6716.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 2%
@@ -120,7 +120,7 @@ React應用程式原始碼範例位於Github.com <https://github.com/adobe/aem-g
 
 檢閱 `aemHeadlessClient.js` 檔案以瞭解如何建立 `AEMHeadless` 用來與AEM通訊的物件。
 
-1. 開啟 `src/api/aemHeadlessClient.js`.
+1. 開啟 `src/api/aemHeadlessClient.js`。
 
 1. 複查明細行1-40：
 
@@ -198,7 +198,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ### 步驟
 
-1. 開啟 `src/api/usePersistedQueries.js`.
+1. 開啟 `src/api/usePersistedQueries.js`。
 
 1. 找到函式 `useAllTeams()`
 
@@ -347,7 +347,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ![人員](./assets/graphql-and-external-app/react-app__person-view.png)
 
-1. 開啟 `src/api/usePersistedQueries.js`.
+1. 開啟 `src/api/usePersistedQueries.js`。
 
 1. 找到函式 `usePersonByName(fullName)`
 

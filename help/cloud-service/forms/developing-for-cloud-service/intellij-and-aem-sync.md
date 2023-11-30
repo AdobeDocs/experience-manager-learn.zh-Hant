@@ -1,15 +1,15 @@
 ---
 title: 使用存放庫工具設定IntelliJ
-description: 準備您的IntelliJ以與AEM cloud ready執行個體同步
+description: 準備您的IntelliJ以與AEM雲端就緒執行個體同步
 solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
-kt: 8844
+jira: KT-8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
@@ -22,7 +22,7 @@ ht-degree: 3%
 Cygwin是相容於POSIX的程式設計和執行階段環境，可在Microsoft Windows上原生執行。
 安裝 [Cygwin](https://www.cygwin.com/). 我已經安裝在C:\cygwin64資料夾中
 >[!NOTE]
-> 請務必安裝zip、unzip、curl、rsync套件與cygwin安裝
+> 請務必安裝zip、unzip、curl、rsync套件並與cygwin安裝
 
 在c：\cloudmanager下建立名為adoberepo的資料夾。
 
@@ -36,7 +36,7 @@ Cygwin是相容於POSIX的程式設計和執行階段環境，可在Microsoft Wi
 * 按Ctrl+Alt+S鍵以啟動設定視窗。
 * 選取「工具」 — >「外部工具」，然後按一下+符號並輸入下列專案，如熒幕擷取畫面所示。
   ![rep](assets/repo.png)
-* 在「群組」下拉式欄位中輸入「repo」，確保您建立名為repo的群組，且您建立的所有命令都屬於 **存放庫** 群組
+* 在群組下拉式欄位中輸入「repo」，確定您建立了一個名為repo的群組，而且您建立的所有命令都屬於 **存放庫** 群組
 
 
 **Put命令**
@@ -66,16 +66,16 @@ Cygwin是相容於POSIX的程式設計和執行階段環境，可在Microsoft Wi
 從擷取.repo檔案 [repo.zip](assets/repo.zip) 並將其放置在您的AEM專案根資料夾中。 (C:\CloudManager\aem-banking-application)。 開啟.repo檔案，並確認伺服器和認證設定符合您的環境。
 開啟.gitignore檔案，並將下列內容加入至檔案底部，然後儲存變更\# repo .repo
 
-選取aem-banking-application專案中的任何專案（例如ui.content），然後按一下滑鼠右鍵，您應該會看到repo選項，而在repo選項下方，您會看到我們先前新增的4個命令。
+選取aem-banking-application專案中的任何專案，例如ui.content，然後按一下滑鼠右鍵，您應該會看到repo選項，而在repo選項下方，您會看到我們先前新增的4個命令。
 
-## 設定AEM作者執行個體{#set-up-aem-author-instance}
+## 設定AEM編寫執行個體{#set-up-aem-author-instance}
 
-您可以依照下列步驟操作，在本機系統上快速設定雲端就緒執行個體。
-* [下載最新的AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
+您可以依照下列步驟，在本機系統上快速設定雲端就緒執行個體。
+* [下載最新AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
 
 * [下載最新的AEM Forms附加元件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
 
-* 建立下列資料夾結構c：\aemformscs\aem-sdk\author
+* 建立以下資料夾結構c：\aemformscs\aem-sdk\author
 
 * 從AEM SDK zip檔案中解壓縮aem-sdk-quickstart-xxxxxxx.jar檔案，並將其置於c：\aemformscs\aem-sdk\author資料夾中。將jar檔案重新命名為aem-author-p4502.jar
 

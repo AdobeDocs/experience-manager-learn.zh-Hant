@@ -3,18 +3,15 @@ title: 瞭解AEM中的驗證支援
 description: AEM支援的驗證（有時是授權）機制的整合檢視。
 version: 6.4, 6.5
 feature: User and Groups
-topics: authentication, security
-activity: understand
-audience: architect, developer, implementer
-doc-type: article
-kt: 406
+doc-type: Article
+jira: KT-406
 topic: Architecture
 role: Architect
 level: Experienced
 exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
 last-substantial-update: 2022-09-10T00:00:00Z
 thumbnail: KT-406.jpg
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 9%

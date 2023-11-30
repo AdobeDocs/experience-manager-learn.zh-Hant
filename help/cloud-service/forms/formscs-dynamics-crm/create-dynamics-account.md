@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms, Integrations
 topic: Development
-kt: 9839
+jira: KT-9839
 exl-id: ec4ed3e1-98ae-41ce-9891-09da3321edd5
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -24,6 +24,6 @@ ht-degree: 0%
 >取代下列URI中的伺服器和連線埠號碼，以取得重試URI。 使用Azure Active Directory設定應用程式時，您將需要此重試URI。
 >https://[伺服器]：[連線埠]/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
-以下影片會逐步引導您完成向Azure Active Directory註冊Microsoft Dynamics的步驟。
+以下影片會逐步引導您完成在Azure Active Directory註冊Microsoft Dynamics的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340743?quality=12&learn=on)

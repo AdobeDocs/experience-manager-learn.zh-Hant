@@ -1,14 +1,14 @@
 ---
 title: OSGi設定屬性
-description: 瞭解OSGi設定屬性的基本知識，以及如何在OSGi服務中使用這些屬性。
+description: 瞭解OSGi設定屬性的基本概念，以及如何在OSGi服務中使用這些屬性。
 role: Developer
 level: Beginner
 topic: Development
 feature: OSGI
-kt: 8268
+jira: KT-8268
 thumbnail: 335729.jpeg
 exl-id: 096b0a95-7039-4570-b567-ba316bfc8709
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 1%

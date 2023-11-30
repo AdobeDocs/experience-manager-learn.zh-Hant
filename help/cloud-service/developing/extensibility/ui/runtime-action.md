@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
-kt: 11603
+jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 3062900a-0461-4c6f-81e6-c76a7f613804
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 2%
@@ -23,27 +23,27 @@ ht-degree: 2%
 
 AEM UI擴充功能可選擇包含任意數量的 [Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/).
 
-Adobe I/O Runtime動作是可由擴充功能叫用的無伺服器函式。 執行需要與AEM或其他AdobeWeb服務互動的工作時，動作會很有用。 動作通常最適合用於執行長時間執行（超過幾秒的任何時間）的工作，或向AEM或其他Web服務發出HTTP請求。
+Adobe I/O Runtime動作是可由擴充功能叫用的無伺服器函式。 執行需要與AEM或其他AdobeWeb服務互動的工作時，動作會很有用。 動作通常最適合用於執行長時間執行（超過幾秒鐘）的工作，或向AEM或其他Web服務發出HTTP請求。
 
-使用Adobe I/O Runtime動作執行工作的優點包括：
+使用Adobe I/O Runtime動作執行工作的好處包括：
 
 + 動作是在瀏覽器內容之外執行的無伺服器函式，無需擔心CORS
-+ 使用者無法中斷動作（例如，重新整理瀏覽器）
-+ 動作為非同步，因此可在需要時隨時執行，而不會封鎖使用者
++ 使用者無法中斷動作（例如重新整理瀏覽器）
++ 動作非同步，因此可在需要時隨時執行，而不會封鎖使用者
 
 在AEM UI擴充功能的內容中，動作通常用於直接與AEMas a Cloud Service通訊：
 
-+ 從AEM收集所選或目前內容的相關資料
++ 從AEM收集有關選取或目前內容的相關資料
 + 對內容執行自訂作業
-+ 客製化內容建立
++ 內容客製化建立
 
-AEM UI擴充功能出現在特定AEM UI中，但擴充功能及其支援動作可叫用任何可用的AEM HTTP API，包括自訂AEM API端點。
+雖然AEM UI擴充功能出現在特定的AEM UI中，但擴充功能及其支援動作可以叫用任何可用的AEM HTTP API，包括自訂AEM API端點。
 
 ## 叫用動作
 
 Adobe I/O Runtime動作主要從AEM UI擴充功能中的兩個位置叫用：
 
-1. 此 [擴充功能註冊](./extension-registration.md) `onClick(..)` 處理常式
+1. 此 [延伸註冊](./extension-registration.md) `onClick(..)` 處理常式
 1. 在 [強制回應](./modal.md)
 
 ### 從擴充功能註冊
@@ -106,9 +106,9 @@ function ExtensionRegistration() {
 
 ### 從強制回應視窗
 
-可以直接從模式呼叫Adobe I/O Runtime動作來執行更多涉及的工作，特別是依賴與AEMas a Cloud Service、AdobeWeb服務或甚至第三方服務通訊的工作。
+Adobe I/O Runtime動作可以直接從模式呼叫，以執行更多參與的工作，特別是依賴與AEMas a Cloud Service、AdobeWeb服務或甚至第三方服務通訊的工作。
 
-Adobe I/O Runtime動作是以Node.js為基礎的JavaScript應用程式，可在無伺服器Adobe I/O Runtime環境中執行。 這些動作可由擴充功能SPA透過HTTP定址。
+Adobe I/O Runtime動作是以Node.js為基礎的JavaScript應用程式，會在無伺服器的Adobe I/O Runtime環境中執行。 這些動作可由SPA擴充功能透過HTTP定址。
 
 + `./src/aem-ui-extension/web-src/src/components/MyModal.js`
 
@@ -300,13 +300,13 @@ async function main (params) {
 
 ## AEM HTTP API
 
-以下AEM HTTP API通常用於從擴充功能與AEM互動：
+以下AEM HTTP API通常用於透過擴充功能與AEM互動：
 
 + [AEM GRAPHQL API](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 + [AEM ASSETS HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
    + [AEM Assets HTTP API 內容片段支援](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html)
 + [AEM QueryBuilder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html)
-+ [完整AEMas a Cloud ServiceAPI參考資料](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
++ [完整AEMas a Cloud ServiceAPI參考](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
 
 
 ## Adobenpm模組

@@ -1,15 +1,15 @@
 ---
-title: 建立主要工作流程以觸發簽名流程
-description: 建立工作流程以將表單儲存於資料庫以供簽署
+title: 建立主要工作流程以觸發簽名程式
+description: 建立工作流程以儲存表單以供在資料庫中簽名
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 6887.jpg
-kt: 6887
+jira: KT-6887
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 338d9522-f6da-4aa7-b5d8-b9fff39ea94b
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 1%
@@ -18,13 +18,13 @@ ht-degree: 1%
 
 # 建立主要工作流程
 
-使用者提交初始表單時會觸發主要工作流程(**再融資表單**)。 以下是工作流程的流程
+主要工作流程會在使用者提交初始表單時觸發(**再融資表單**)。 以下是工作流程的流程
 
 ![主要工作流程](assets/main-workflow.PNG)
 
 **儲存Forms以簽署** 是自訂流程步驟。
 
-實作自訂流程步驟的動機是擴充AEM Workflow。 下列程式碼會實作自訂流程步驟。 程式碼會擷取要簽署的表單名稱，並將提交的表單資料傳遞至 `insertData` SignMultipleForms服務的方法。 此 `insertData` 方法接著在資料來源所識別的資料庫中插入列 **aemformstutorial**.
+實施自訂流程步驟的動機是擴充AEM工作流程。 下列程式碼會實作自訂流程步驟。 程式碼會擷取要簽署的表單名稱，並將提交的表單資料傳遞至 `insertData` SignMultipleForms服務的方法。 此 `insertData` 方法接著在資料來源所識別的資料庫中插入列 **aemformstutorial**.
 
 此自訂流程步驟中的程式碼會參照 `SignMultipleForms` 服務。
 
@@ -120,8 +120,8 @@ public class StoreFormsToSignWorkflowStep implements WorkflowProcess {
 本文中使用的簽署多個Forms工作流程可以是 [已從此處下載](assets/sign-multiple-forms-workflows.zip)
 
 >[!NOTE]
-> 請務必設定Day CQ郵件服務，以便傳送電子郵件通知。 上述套件中也提供電子郵件範本。
+> 請務必設定Day CQ Mail Service以傳送電子郵件通知。 上述套件中也提供電子郵件範本。
 
 ## 後續步驟
 
-[更新檔案簽署時的簽名狀態](./update-signature-status.md)
+[在檔案簽署時更新簽名狀態](./update-signature-status.md)

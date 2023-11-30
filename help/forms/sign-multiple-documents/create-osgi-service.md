@@ -4,12 +4,12 @@ description: 建立OSGi服務以儲存要簽署的表單
 feature: Workflow
 version: 6.4,6.5
 thumbnail: 6886.jpg
-kt: 6886
+jira: KT-6886
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 49e7bd65-33fb-44d4-aaa2-50832dffffb0
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 建立OSGi服務
 
-下列程式碼是用來儲存需要簽署的表單。 每個要簽署的表單都與唯一的GUID和客戶ID相關聯。 因此，一或多個表單可以與相同的客戶ID建立關聯，但會將唯一的GUID指派給表單。
+下列程式碼是用來儲存需要簽署的表單。 每個要簽署的表單都與唯一的guid和客戶id相關聯。 因此，一個或多個表單可以與相同的客戶ID相關聯，但將具有唯一的GUID指派給表單。
 
 ## 介面
 
@@ -41,7 +41,7 @@ public interface SignMultipleForms
 
 ## 插入資料
 
-insert data方法會在資料來源所識別的資料庫中插入列。 資料庫中的每一列都與表單相對應，並由GUID和客戶ID唯一識別。 表單資料和表單URL也儲存在此列中。 狀態列用於指示表單是否已填寫和簽署。 0值表示表單尚未簽署。
+插入資料方法會在資料來源所識別的資料庫中插入一列。 資料庫中的每一列都會對應至表單，並由GUID和客戶ID唯一識別。 表單資料和表單URL也儲存在此列中。 狀態列用於指示表單是否已填寫和簽署。 值為0表示表單尚未簽署。
 
 ```java
 @Override
@@ -103,7 +103,7 @@ log.debug(e.getMessage());
 
 ## 取得表單資料
 
-下列程式碼用於擷取與特定GUID關聯的最適化表單資料。 然後，表單資料會用於預先填入最適化表單。
+下列程式碼可用來擷取和特定GUID相關聯的適用性表單資料。 然後會使用表單資料預先填入最適化表單。
 
 ```java
 @Override
@@ -130,7 +130,7 @@ public String getFormData(String guid) {
 
 ## 更新簽章狀態
 
-成功完成簽署儀式會觸發與表單相關聯的AEM工作流程。 工作流程的第一步是處理步驟，它會更新資料庫中由guid和客戶id所識別之列的狀態。 我們也會將formdata中帶正負號的元素的值設為Y，表示表單已填寫並簽署。 最適化表單會填入此資料，而xml資料中已簽署資料元素的值會用來顯示適當的訊息。 會從自訂程式步驟叫用updateSignatureStatus程式碼。
+成功完成簽署儀式會觸發與表單相關聯的AEM工作流程。 工作流程的第一步是處理步驟，它會更新資料庫中guid和客戶ID所識別之列的狀態。 我們也會將formdata中帶正負號的元素的值設為Y，表示表單已經填寫並簽署。 最適化表單會填入此資料，而xml資料中已簽署資料元素的值會用於顯示適當的訊息。 從自訂程式步驟叫用updateSignatureStatus程式碼。
 
 
 ```java
@@ -164,7 +164,7 @@ public void updateSignatureStatus(String formData, String guid) {
 
 ## 取得下一個要簽署的表單
 
-下列程式碼已用於取得狀態為0之指定customerID的下一個簽署表單。 如果sql查詢未傳回任何列，我們會傳回字串 **&quot;AllDone&quot;** 這表示指定的客戶id已沒有任何可供簽署的表單。
+下列程式碼已用於取得狀態為0之指定customerID的下一個簽署表單。 如果sql查詢未傳回任何列，我們會傳回字串 **&quot;AllDone&quot;** 這表示指定的客戶id已沒有可供簽署的表單。
 
 ```java
 @Override

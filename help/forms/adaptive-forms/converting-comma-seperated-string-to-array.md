@@ -1,38 +1,38 @@
 ---
-title: 在AEM Forms Workflow中將逗號分隔字串轉換為字串陣列
-description: 當您的表單資料模型具有作為輸入引數之一的字串陣列時，您需要先對從調適型表單的提交動作產生的資料進行按摩，然後再叫用表單資料模型的提交動作。
+title: 在AEM Forms工作流程中將逗號分隔字串轉換為字串陣列
+description: 當您的表單資料模型有一個字串陣列作為輸入引數之一時，您將需要在叫用表單資料模型的提交動作之前，對從調適型表單的提交動作產生的資料進行推測。
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
-kt: 8507
+jira: KT-8507
 exl-id: 9ad69407-2413-416f-9cec-43f88989b31d
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
-# 將逗號分隔字串轉換為字串陣列 {#setting-value-of-json-data-element-in-aem-forms-workflow}
+# 將逗號分隔的字串轉換為字串陣列 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-當您的表單是以具有作為輸入引數的字串陣列的表單資料模型為基礎時，您需要操作提交的最適化表單資料以插入字串陣列。 例如，如果您將核取方塊欄位繫結至字串陣列型別的表單資料模型元素，則核取方塊欄位的資料會以逗號分隔的字串格式顯示。 下列範常式式碼會示範如何以字串陣列取代逗號分隔的字串。
+當您的表單是以具有字串陣列作為輸入引數的表單資料模型為基礎時，您需要操作提交的調適型表單資料以插入字串陣列。 例如，如果您將核取方塊欄位繫結至字串陣列型別的表單資料模型元素，則核取方塊欄位的資料會採用逗號分隔的字串格式。 下列程式碼範例說明如何將逗號分隔的字串取代為字串陣列。
 
 ## 建立流程步驟
 
-當我們想要工作流程執行特定邏輯時，AEM工作流程會使用程式步驟。 處理步驟可以與ECMA指令碼或OSGi服務相關聯。 我們的自訂流程步驟會執行OSGi服務。
+當我們希望工作流程執行特定邏輯時，AEM工作流程會使用流程步驟。 流程步驟可以與ECMA指令碼或OSGi服務相關聯。 我們的自訂流程步驟會執行OSGi服務。
 
 提交的資料採用以下格式。 businessUnits元素的值是以逗號分隔的字串，需要轉換為字串陣列。
 
 ![submit-data](assets/submitted-data-string.png)
 
-與表單資料模型相關聯之rest端點的輸入資料預期的是如本熒幕擷取畫面所示的字串陣列。 處理步驟中的自訂程式碼會將提交的資料轉換為正確的格式。
+與表單資料模型相關聯之rest端點的輸入資料預期的是此熒幕擷取畫面中顯示的字串陣列。 程式步驟中的自訂程式碼會將中提交的資料轉換為正確格式。
 
 ![fdm-string-array](assets/string-array-fdm.png)
 
-我們會將JSON物件路徑和元素名稱傳遞至程式步驟。 處理步驟中的程式碼會將元素的逗號分隔值取代為字串陣列。
+我們會將JSON物件路徑和元素名稱傳遞至流程步驟。 處理步驟中的程式碼會將元素的逗號分隔值取代為字串陣列。
 ![process-step](assets/create-string-array.png)
 
 >[!NOTE]

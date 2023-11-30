@@ -1,14 +1,14 @@
 ---
 title: Cloud 5 AEM記錄檔
-description: 本課程深入探討如何存取AEMas a Cloud Service的記錄檔，包括如何透過使用者介面及API存取記錄檔。
+description: 本課程深入探討如何存取AEMas a Cloud Service的記錄檔，包括如何透過使用者介面及從API存取記錄檔。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
-kt: 9927
+jira: KT-9927
 hidefromtoc: true
 thumbnail: 341156.jpeg
 exl-id: 1d000b09-52e7-4828-a0b3-32a47131e66c
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 14%
@@ -17,7 +17,7 @@ ht-degree: 14%
 
 # Cloud 5 AEM記錄檔
 
-本課程深入探討如何存取AEMas a Cloud Service的記錄檔，包括如何透過使用者介面及API存取記錄檔。
+本課程深入探討如何存取AEMas a Cloud Service的記錄檔，包括如何透過使用者介面及從API存取記錄檔。
 
 >[!VIDEO](https://video.tv.adobe.com/v/341156?quality=12&learn=on)
 

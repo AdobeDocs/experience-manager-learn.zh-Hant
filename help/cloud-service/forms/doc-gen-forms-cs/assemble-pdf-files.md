@@ -1,15 +1,15 @@
 ---
 title: 組合PDF檔案
-description: 使用invokeDDX操作來操作pdf檔案。
+description: 使用invokeDDX操作來處理pdf檔案。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 9958
+jira: KT-9958
 thumbnail: 332439.jpg
-source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -19,9 +19,9 @@ ht-degree: 0%
 # 使用叫用DDX端點操作PDF檔案
 
 
-下一步是使用必要的引數向端點進行HTTPPOST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定的。embedFonts屬性用於將自訂字型嵌入產生的pdf中。 請關注 [本檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html) 將自訂字型部署至Forms cloud執行個體。 屬性是在options.json資源檔案中指定。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
+下一步是使用必要的引數向端點進行HTTPPOST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定。embedFonts屬性是用來在產生的pdf中嵌入自訂字型。 請關注 [本檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html) 將自訂字型部署至Forms雲端例項。 屬性是在options.json資源檔案中指定。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
 
-下列程式碼用於將資料與範本合併，以產生pdf
+下列程式碼是用來將資料與範本合併，以產生pdf
 
 ```java
 public class DocumentGeneration

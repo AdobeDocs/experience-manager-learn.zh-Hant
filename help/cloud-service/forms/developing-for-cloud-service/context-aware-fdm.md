@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: Developer Tools
-kt: 10423
+jira: KT-10423
 exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 11%
@@ -19,23 +19,23 @@ ht-degree: 11%
 
 # 內容感知雲端設定
 
-當您在本機環境中建立雲端設定並在成功測試時，您會想要在上游環境中使用相同的雲端設定，但無須變更端點、秘密金鑰/密碼和/或使用者名稱。 為了達成此使用案例，Cloud Service上的AEM Forms引進了定義上下文感知雲端設定的功能。
-例如，Azure儲存體帳戶雲端設定可透過對使用不同的連線字串和金鑰，在開發、暫存和生產環境中重複使用。
+當您在本機環境中建立雲端設定，並在成功測試時，您會想要在上游環境中使用相同的雲端設定，但不需要變更端點、秘密金鑰/密碼和/或使用者名稱。 為了達成此使用案例，Cloud Service上的AEM Forms引進了定義上下文感知雲端設定的功能。
+例如，透過為使用不同的連線字串和金鑰，Azure儲存體帳戶雲端設定可在開發、暫存和生產環境中重複使用。
 
-需要以下步驟來建立內容感知雲端設定
+建立內容感知雲端設定需要下列步驟
 
 ## 建立環境變數
 
-可以透過 Cloud Manager 設定和管理標準環境變數。它們提供給執行階段環境並且可以在 OSGi 設定中使用。[環境變數可以是特定環境的值或環境祕密，具體取決於變更的內容。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+可以透過 Cloud Manager 設定和管理標準環境變數。它們提供給執行階段環境並且可以在 OSGi 設定中使用。[環境變數可以是特定環境的值或環境密碼，具體取決於變更的內容。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
 
 
 
 以下熒幕擷取畫面顯示定義的azure_key和azure_connection_string環境變數
 ![environment_variable](assets/environment-variables.png)
 
-這些環境變數隨後可以在要用於適當環境的設定檔案中指定。例如，如果您希望所有作者執行個體都使用這些環境變數，您將在config.author資料夾中定義設定檔案，如下所示
+然後，可以在要用於適當環境的設定檔案中指定這些環境變數。例如，如果您希望所有作者執行個體都使用這些環境變數，您將在config.author資料夾中定義設定檔案，如下所示
 
-## 建立設定檔
+## 建立組態檔
 
 在IntelliJ中開啟您的專案。 導覽至config.author並建立名為的檔案
 
@@ -45,7 +45,7 @@ org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integr
 
 ![config.author](assets/config-author.png)
 
-將下列文字複製到您在上一步建立的檔案中。 此檔案中的程式碼正在使用環境變數覆寫accountName和accountKey屬性的值 **azure_connection_string** 和 **azure_key**.
+將下列文字複製到您在上一步建立的檔案中。 此檔案中的程式碼會以環境變數覆寫accountName和accountKey屬性的值 **azure_connection_string** 和 **azure_key**.
 
 ```json
 {
@@ -63,11 +63,11 @@ org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integr
 >
 >此設定將套用至您的雲端服務執行個體中的所有作者環境。 若要將設定套用至發佈環境，您必須將相同的設定檔案置於intelliJ專案的config.publish資料夾中
 >[!NOTE]
-> 請確定被覆寫的屬性是雲端設定的有效屬性。 導覽至雲端設定，以尋找您要覆寫的屬性，如下所示。
+> 請確定正在覆寫的屬性是雲端設定的有效屬性。 導覽至雲端設定，以尋找您要覆寫的屬性，如下所示。
 
 ![cloud-config-property](assets/cloud-config-properties.png)
 
-對於具有基本驗證的REST雲端設定，您通常想要為serviceEndPoint、userName和密碼屬性建立環境變數。
+對於具有基本驗證的REST型雲端設定，您通常會想要為serviceEndPoint、userName和密碼屬性建立環境變數。
 
 ## 後續步驟
 

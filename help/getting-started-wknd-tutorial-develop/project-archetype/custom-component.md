@@ -1,17 +1,17 @@
 ---
 title: 自訂元件
-description: 涵蓋顯示編寫內容的自訂署名元件的端對端建立。 包括開發Sling模型來封裝商業邏輯，以填入署名元件和對應HTL來演算元件。
+description: 涵蓋顯示編寫內容的自訂署名元件的端對端建立。 包括開發Sling模型以封裝商業邏輯以填入署名元件和對應HTL以呈現元件。
 version: 6.5, Cloud Service
-type: Tutorial
 feature: Core Components, APIs
 topic: Content Management, Development
 role: Developer
 level: Beginner
-kt: 4072
+jira: KT-4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
+doc-type: Tutorial
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '4057'
 ht-degree: 0%
@@ -20,19 +20,19 @@ ht-degree: 0%
 
 # 自訂元件 {#custom-component}
 
-本教學課程涵蓋自訂的端對端建立作業 `Byline` 顯示對話方塊中製作內容的AEM元件，並探索開發Sling模型以封裝填入元件HTL的商業邏輯。
+本教學課程涵蓋自訂的端對端建立作業 `Byline` AEM元件，可顯示對話方塊中撰寫的內容，並探索開發Sling模型以封裝填入元件HTL的商業邏輯。
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
-檢閱設定「 」所需的工具和指示 [本機開發環境](overview.md#local-dev-environment).
+檢閱設定所需的工具和指示 [本機開發環境](overview.md#local-dev-environment).
 
 ### 入門專案
 
 >[!NOTE]
 >
-> 如果您成功完成上一章，您可以重複使用專案，並跳過出庫入門專案的步驟。
+> 如果您成功完成上一章，您可以重複使用專案，並略過出庫入門專案的步驟。
 
-檢視教學課程建置的基礎行程式碼：
+檢視教學課程建置的基底程式碼：
 
 1. 檢視 `tutorial/custom-component-start` 分支來源 [GitHub](https://github.com/adobe/aem-guides-wknd)
 
@@ -49,13 +49,13 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 如果使用AEM 6.5或6.4，請附加 `classic` 設定檔至任何Maven命令。
+   > 如果使用AEM 6.5或6.4，請附加 `classic` 設定檔至任何Maven指令。
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-您一律可以檢視完成的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/custom-component-solution) 或切換至分支以在本機簽出程式碼 `tutorial/custom-component-solution`.
+您一律可以於檢視完成的程式碼 [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/custom-component-solution) 或切換至分支以在本機簽出程式碼 `tutorial/custom-component-solution`.
 
 ## 目標
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 *署名元件*
 
-署名元件的實作包含一個收集署名內容的對話方塊，以及一個自訂Sling模型，可擷取詳細資訊，例如：
+「署名」元件的實作包含一個收集署名內容的對話方塊，以及一個自訂Sling模型，可擷取詳細資訊，例如：
 
 * 名稱
 * 影像
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 ## 建立署名元件 {#create-byline-component}
 
-首先，建立「署名元件」節點結構並定義對話方塊。 這代表AEM中的元件，並依據元件在JCR中的位置來隱含定義元件的資源型別。
+首先，建立「署名元件」節點結構並定義對話方塊。 這表示AEM中的元件，並依據元件在JCR中的位置以隱含方式定義元件的資源型別。
 
 此對話方塊會顯示內容作者可提供的介面。 對於此實作，AEM WCM核心元件的 **影像** 元件是用來處理Byline影像的製作和演算，因此必須將其設定為此元件的 `sling:resourceSuperType`.
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
    ![建立節點的對話方塊](assets/custom-component/byline-node-creation.png)
 
-1. 填入 `.content.xml` 檔案：
+1. 填入 `.content.xml` 檔案包含下列專案：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 ### 建立HTL指令碼 {#create-the-htl-script}
 
-1. 內部 `byline` 資料夾，新增檔案 `byline.html`，負責元件的HTML表示。 將檔案命名為與資料夾相同的名稱很重要，因為它會成為Sling用來呈現此資源型別的預設指令碼。
+1. 內部 `byline` 資料夾，新增檔案 `byline.html`，負責元件的HTML表示。 將檔案命名為與資料夾相同的名稱很重要，因為這會成為Sling用來呈現此資源型別的預設指令碼。
 
 1. 將下列程式碼新增至 `byline.html`.
 
@@ -117,18 +117,18 @@ ht-degree: 0%
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
    ```
 
-此 `byline.html` 是 [稍後重新檢視](#byline-htl)，建立Sling模型後。 HTL檔案的目前狀態可讓元件在AEM Sites的頁面編輯器中拖放至頁面時以空白狀態顯示。
+此 `byline.html` 是 [稍後重新造訪](#byline-htl)，建立Sling模型後。 HTL檔案的目前狀態可讓元件在AEM Sites的頁面編輯器中拖放至頁面時以空白狀態顯示。
 
 ### 建立對話方塊定義 {#create-the-dialog-definition}
 
-接下來，使用下列欄位為署名元件定義對話方塊：
+接著，使用下列欄位為Byline元件定義對話方塊：
 
 * **名稱**：投稿人名稱的文字欄位。
-* **影像**：投稿人簡歷的參考。
+* **影像**：參考投稿人簡歷。
 * **職業**：歸屬於貢獻者的職業清單。 職務應依字母遞增順序排序（a至z）。
 
 1. 內部 `byline` 資料夾，建立名為的資料夾 `_cq_dialog`.
-1. 內部 `byline/_cq_dialog`，新增名為的檔案 `.content.xml`. 這是對話方塊的XML定義。 新增下列XML：
+1. 內部 `byline/_cq_dialog`，新增檔案 `.content.xml`. 這是對話方塊的XML定義。 新增下列XML：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -201,14 +201,14 @@ ht-degree: 0%
 
    這些對話方塊節點定義使用 [Sling資源合併](https://sling.apache.org/documentation/bundles/resource-merger.html) 控制從繼承哪些對話方塊標籤 `sling:resourceSuperType` 元件，在此案例中為 **核心元件的影像元件**.
 
-   ![署名對話方塊已完成](assets/custom-component/byline-dialog-created.png)
+   ![已完成的署名對話方塊](assets/custom-component/byline-dialog-created.png)
 
-### 建立原則對話方塊 {#create-the-policy-dialog}
+### 建立[原則]對話方塊 {#create-the-policy-dialog}
 
 遵循與建立對話方塊相同的方法，建立原則對話方塊（以前稱為設計對話方塊）以在從核心元件的影像元件繼承的原則設定中隱藏不需要的欄位。
 
 1. 內部 `byline` 資料夾，建立名為的資料夾 `_cq_design_dialog`.
-1. 內部 `byline/_cq_design_dialog`，建立名為的檔案 `.content.xml`. 使用下列XML更新檔案：。 最簡單的做法是開啟 `.content.xml` 並將下方的XML複製/貼上至其中。
+1. 內部 `byline/_cq_design_dialog`，建立名為的檔案 `.content.xml`. 使用下列XML更新檔案：。 最簡單的做法是開啟 `.content.xml` 並複製/貼上下列XML至其中。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -275,23 +275,23 @@ ht-degree: 0%
    </jcr:root>
    ```
 
-   前一個專案的基礎 **原則對話方塊** XML是從 [核心元件影像元件](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_design_dialog/.content.xml).
+   前一項的基礎 **原則對話方塊** XML是從 [核心元件影像元件](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_design_dialog/.content.xml).
 
-   就像在對話方塊設定中， [Sling資源合併](https://sling.apache.org/documentation/bundles/resource-merger.html) 用於隱藏原本繼承自下列專案的不相關欄位： `sling:resourceSuperType`，如下列節點定義所示： `sling:hideResource="{Boolean}true"` 屬性。
+   就像在對話方塊設定中， [Sling資源合併](https://sling.apache.org/documentation/bundles/resource-merger.html) 用於隱藏原本繼承自下列專案的不相關欄位： `sling:resourceSuperType`，由包含的節點定義可見 `sling:hideResource="{Boolean}true"` 屬性。
 
 ### 部署程式碼 {#deploy-the-code}
 
-1. 同步化變更 `ui.apps` 使用IDE或使用Maven技能。
+1. 同步化變更 `ui.apps` 使用您的IDE或使用Maven技能。
 
    ![匯出至AEM伺服器署名元件](assets/custom-component/export-byline-component-aem.png)
 
 ## 將元件新增至頁面 {#add-the-component-to-a-page}
 
-為了簡單起見，並專注於AEM元件的開發，讓我們將Byline元件以目前狀態新增至「文章」頁面，以驗證 `cq:Component` 節點定義正確。 另外還要確認AEM可辨識新元件定義，且元件的對話方塊可用於編寫。
+為了保持簡單並專注於AEM元件開發，讓我們將Byline元件以目前狀態新增至「文章」頁面，以驗證 `cq:Component` 節點定義正確。 同時也需確認AEM可辨識新元件定義，且元件的對話方塊可用於編寫。
 
 ### 將影像新增至AEM Assets
 
-首先，將擷取的頭像範例上傳至AEM Assets，以便用於填入Byline元件中的影像。
+首先，將擷取的範例頭部上傳至AEM Assets，以便用來填入Byline元件中的影像。
 
 1. 導覽至AEM Assets中的LA Skateparks資料夾： [http://localhost:4502/assets.html/content/dam/wknd/en/magazine/la-skateparks](http://localhost:4502/assets.html/content/dam/wknd/en/magazine/la-skateparks).
 
@@ -301,37 +301,37 @@ ht-degree: 0%
 
 ### 編寫元件 {#author-the-component}
 
-接下來，將Byline元件新增至AEM中的頁面。 因為Byline元件已新增至 **WKND Sites專案 — 內容** 元件群組，透過 `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/.content.xml` 定義，則任何使用者均可自動使用 **容器** 其 **原則** 允許 **WKND Sites專案 — 內容** 元件群組。 因此，文章頁面的版面容器中可使用此功能。
+接下來，將「署名」元件新增至AEM中的頁面。 因為署名元件已新增至 **WKND Sites專案 — 內容** 元件群組，透過 `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/.content.xml` 定義，則任何使用者均可自動使用 **容器** 其 **原則** 允許 **WKND Sites專案 — 內容** 元件群組。 因此，文章頁面的版面容器中可使用此功能。
 
-1. 導覽至LA Skatepark文章： [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+1. 瀏覽LA Skatepark文章： [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
 
-1. 從左側邊欄，拖放 **署名元件** 開啟至 **bottom** 已開啟文章頁面的「版面容器」的頁首。
+1. 從左側邊欄，拖放 **署名元件** 開啟到 **bottom** 已開啟文章頁面的「版面容器」中。
 
    ![將署名元件新增至頁面](assets/custom-component/add-to-page.png)
 
-1. 確定左側邊欄已開啟&#x200B;**和可見，以及**&#x200B;已選取「資產尋找器**」。
+1. 確認左側邊欄已開啟&#x200B;**和可見，以及**&#x200B;已選取「資產尋找器**」。
 
 1. 選取 **署名元件預留位置**，接著會顯示動作列，然後點選 **扳手** 圖示以開啟對話方塊。
 
-1. 開啟對話方塊，且第一個索引標籤（資產）作用中時，請開啟左側邊欄，然後從資產尋找器將影像拖放至「影像」拖放區域。 搜尋「stacey」以尋找WKND ui.content套件中提供的Stacey Roswells生物圖片。
+1. 在開啟對話方塊且第一個索引標籤（資產）處於作用中狀態時，請開啟左側邊欄，然後從資產尋找器將影像拖放至「影像」放置區。 搜尋「stacey」以尋找WKND ui.content套件中提供的Stacey Roswells生物圖片。
 
    ![新增影像至對話方塊](assets/custom-component/add-image.png)
 
 1. 新增影像後，按一下 **屬性** 索引標籤以輸入 **名稱** 和 **職業**.
 
-   輸入職務時，請在 **反向字母順序** order，以便驗證Sling模型中實作的字母順序商業邏輯。
+   輸入職務時，請在 **按字母順序反轉** order，以便驗證Sling模型中實作的字母順序商業邏輯。
 
    點選 **完成** 按鈕來儲存變更。
 
    ![填入署名元件的屬性](assets/custom-component/add-properties.png)
 
-   AEM作者可透過對話方塊設定及編寫元件。 此時，在開發Byline元件時，會包含用於收集資料的對話方塊，但尚未新增轉譯所編寫內容的邏輯。 因此，只會顯示預留位置。
+   AEM作者透過對話方塊設定及編寫元件。 此時，在開發Byline元件時，會納入用來收集資料的對話方塊，但尚未新增呈現所編寫內容的邏輯。 因此，只會顯示預留位置。
 
 1. 儲存對話方塊後，導覽至 [CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/us/en/magazine/guide-la-skateparks/jcr%3Acontent/root/container/container/byline) 和檢閱元件內容如何儲存在AEM頁面下方的署名元件內容節點上。
 
-   尋找「洛杉磯滑板公園」頁面下方的「署名」元件內容節點，即 `/content/wknd/us/en/magazine/guide-la-skateparks/jcr:content/root/container/container/byline`.
+   尋找「洛杉磯滑冰場」頁面下方的「署名」元件內容節點，即 `/content/wknd/us/en/magazine/guide-la-skateparks/jcr:content/root/container/container/byline`.
 
-   注意屬性名稱 `name`， `occupations`、和 `fileReference` 儲存在 **署名節點**.
+   請注意屬性名稱 `name`， `occupations`、和 `fileReference` 儲存在 **署名節點**.
 
    此外，請留意 `sling:resourceType` 節點的ID設為 `wknd/components/content/byline` 這會將此內容節點繫結至Byline元件實作。
 
@@ -339,13 +339,13 @@ ht-degree: 0%
 
 ## 建立署名Sling模型 {#create-sling-model}
 
-接下來，讓我們建立Sling模型以作為資料模型，並存放Byline元件的商業邏輯。
+接下來，建立Sling模型，以作為資料模型並存放Byline元件的商業邏輯。
 
-Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助於將資料從JCR對應到Java™變數，並在AEM環境中開發時提供效率。
+Sling模型是註釋驅動的Java™ POJO (Plain Old Java™ Objects)，可方便將資料從JCR對應至Java™變數，並在AEM環境中開發時提供效率。
 
 ### 檢閱Maven相依性 {#maven-dependency}
 
-署名Sling模型需依賴AEM提供的數個Java™ API。 這些API可透過 `dependencies` 列於 `core` 模組的POM檔案。 本教學課程使用的專案已針對AEMas a Cloud Service建置。 但此版本有其獨特之處，因為可回溯相容於AEM 6.5/6.4。因此，其中同時包含Cloud Service和AEM 6.x的相依性。
+署名Sling模型需依賴AEM提供的多個Java™ API。 這些API可透過 `dependencies` 列於 `core` 模組的POM檔案。 本教學課程使用的專案是針對AEMas a Cloud Service所建置。 但它很獨特，因為可向下相容於AEM 6.5/6.4。因此，其中同時包含Cloud Service和AEM 6.x的相依性。
 
 1. 開啟 `pom.xml` 下的檔案 `<src>/aem-guides-wknd/core/pom.xml`.
 1. 尋找相依性 `aem-sdk-api` - **僅限AEMas a Cloud Service**
@@ -357,7 +357,7 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助�
    </dependency>
    ```
 
-   此 [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en) 包含AEM公開的所有公用Java™ API。 此 `aem-sdk-api` 建立此專案時預設會使用。 此版本會保留在專案根目錄的Parent reactor pom中 `aem-guides-wknd/pom.xml`.
+   此 [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en) 包含AEM公開的所有公用Java™ API。 此 `aem-sdk-api` 建立此專案時預設會使用。 此版本會保留在專案根目錄的「父項反應器」pom中 `aem-guides-wknd/pom.xml`.
 
 1. 尋找的相依性 `uber-jar` - **僅限AEM 6.5/6.4**
 
@@ -371,9 +371,9 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助�
    ...
    ```
 
-   此 `uber-jar` 僅包含在 `classic` 叫用設定檔，即 `mvn clean install -PautoInstallSinglePackage -Pclassic`. 同樣地，此為專案所特有。 在真實世界專案中，從AEM專案原型產生 `uber-jar` 若指定的AEM版本為6.5或6.4，則為預設值。
+   此 `uber-jar` 只有在 `classic` 叫用的設定檔，即 `mvn clean install -PautoInstallSinglePackage -Pclassic`. 同樣地，此為專案所特有。 在真實世界的專案中，從AEM專案原型產生的 `uber-jar` 若指定的AEM版本為6.5或6.4，則為預設值。
 
-   此 [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) 包含AEM 6.x公開的所有公用Java™ API。此版本會保留在專案根目錄的Parent reactor pom中 `aem-guides-wknd/pom.xml`.
+   此 [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) 包含AEM 6.x公開的所有公用Java™ API。此版本會保留在專案根目錄的「父項反應器」pom中 `aem-guides-wknd/pom.xml`.
 
 1. 尋找相依性 `core.wcm.components.core`：
 
@@ -385,11 +385,11 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助�
        </dependency>
    ```
 
-   這是由AEM核心元件公開的完整公用Java™ API。 AEM核心元件是在AEM外部維護的專案，因此有單獨的發行週期。 因此，相依性需要單獨納入，且 **not** 包含在 `uber-jar` 或 `aem-sdk-api`.
+   這是由AEM核心元件公開的完整公用Java™ API。 AEM核心元件是在AEM外部維護的專案，因此有單獨的發行週期。 因此，相依性需要單獨納入，而且 **非** 包含在 `uber-jar` 或 `aem-sdk-api`.
 
-   和uber-jar一樣，此相依性的版本會保留在來自的父Reactor pom檔案中 `aem-guides-wknd/pom.xml`.
+   和uber-jar一樣，此相依性的版本會保留在的Parent reactor pom檔案中 `aem-guides-wknd/pom.xml`.
 
-   在本教學課程的稍後部分，將使用「核心元件影像」類別來顯示Byline元件中的影像。 為了建置和編譯Sling模型，必須有核心元件相依性。
+   在本教學課程的稍後部分，核心元件影像類別是用來顯示Byline元件中的影像。 您必須具有核心元件相依性，才能建置和編譯Sling模型。
 
 ### 署名介面 {#byline-interface}
 
@@ -399,7 +399,7 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助�
 
    ![建立署名介面](assets/custom-component/create-byline-interface.png)
 
-1. 更新 `Byline.java` 方法而可行：
+1. 更新 `Byline.java` 下)：
 
    ```java
    package com.adobe.aem.guides.wknd.core.models;
@@ -433,7 +433,7 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助�
 
    此 `isEmpty()` 方法可用來決定元件是否有任何要呈現的內容，或元件是否等待設定。
 
-   請注意，影像沒有方法； [稍後會檢閱此內容](#tackling-the-image-problem).
+   請注意，影像沒有方法； [稍後會檢閱此專案](#tackling-the-image-problem).
 
 1. 包含公用Java™類別的Java™套件（在此例中為Sling模型）必須使用套件的版本設定  `package-info.java` 檔案。
 
@@ -446,7 +446,7 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助�
    import org.osgi.annotation.versioning.Version;
    ```
 
-每當對此封裝中的檔案進行變更時， [套件版本必須在語義上調整](https://semver.org/). 如果沒有，Maven專案的 [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd) 會偵測到無效的封裝版本，並中斷內建。 幸運的是，失敗時，Maven外掛程式會報告無效的Java™套件版本及其應該使用的版本。 更新 `@Version("...")` 違反的Java™套件中的宣告 `package-info.java` 至外掛程式建議修正的版本。
+每當對此封裝中的檔案進行變更時， [套件版本必須在語義上調整](https://semver.org/). 如果沒有，則Maven專案的 [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd) 會偵測無效的封裝版本，並中斷內建。 所幸的是，如果失敗，Maven外掛程式會報告無效的Java™套件版本以及應有的版本。 更新 `@Version("...")` 違反Java™封裝的宣告 `package-info.java` 至外掛程式建議修正的版本。
 
 ### 署名實施 {#byline-implementation}
 
@@ -457,7 +457,7 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助�
 
    ![署名實作檔案](assets/custom-component/byline-impl-file.png)
 
-1. 開啟 `BylineImpl.java`. 指定它實作 `Byline` 介面。 使用IDE的自動完成功能或手動更新檔案，以包含實作 `Byline` 介面：
+1. 開啟 `BylineImpl.java`。指定其實作 `Byline` 介面。 使用IDE的自動完成功能或手動更新檔案，以包含實作 `Byline` 介面：
 
    ```java
    package com.adobe.aem.guides.wknd.core.models.impl;
@@ -486,7 +486,7 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助�
    }
    ```
 
-1. 透過更新新增Sling模型註釋 `BylineImpl.java` 類別層級的註解。 此 `@Model(..)`註解會將類別轉換為Sling模型。
+1. 透過更新新增Sling模型註釋 `BylineImpl.java` 類別層級的註解。 這個 `@Model(..)`註解是將類別變成Sling模型的內容。
 
    ```java
    import org.apache.sling.api.SlingHttpServletRequest;
@@ -507,10 +507,10 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助�
 
    讓我們檢閱此註解及其引數：
 
-   * 此 `@Model` annotation在部署至AEM時將BylineImpl註冊為Sling模型。
-   * 此 `adaptables` 引數會指定此模型可依請求調整。
-   * 此 `adapters` 引數允許實作類別在Byline介面下註冊。 這可讓HTL指令碼透過介面呼叫Sling模型（而不是直接實作）。 [如需有關介面卡的更多詳細資料，請參閱此處](https://sling.apache.org/documentation/bundles/models.html#specifying-an-alternate-adapter-class-since-110).
-   * 此 `resourceType` 指向Byline元件資源型別（先前建立），並在有多個實作時協助解決正確的模型。 [有關將模型類別與資源型別相關聯的更多詳細資訊，請參閱此處](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130).
+   * 此 `@Model` 註解在將BylineImpl部署到AEM時將其註冊為Sling模型。
+   * 此 `adaptables` 引數指定此模型可依請求調整。
+   * 此 `adapters` 引數允許實作類別在Byline介面下註冊。 這可讓HTL指令碼透過介面呼叫Sling模型（而不是直接實作）。 [有關介面卡的更多詳細資訊，請參閱此處](https://sling.apache.org/documentation/bundles/models.html#specifying-an-alternate-adapter-class-since-110).
+   * 此 `resourceType` 指向Byline元件資源型別（先前建立），並在有多個實施時協助解決正確的模型。 [有關將模型類別與資源型別相關聯的更多詳細資訊，請參閱此處](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130).
 
 ### 實施Sling模型方法 {#implementing-the-sling-model-methods}
 
@@ -518,7 +518,7 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™ Objects)，有助�
 
 第一個實作的方法是 `getName()`，則只會傳回儲存在屬性下署名JCR內容節點中的值 `name`.
 
-對此， `@ValueMapValue` Sling模型註解是用來使用請求資源的ValueMap，將值插入Java™欄位。
+對此， `@ValueMapValue` Sling模型註解是用來使用請求的資源ValueMap，將值插入Java™欄位。
 
 
 ```java
@@ -542,11 +542,11 @@ public class BylineImpl implements Byline {
 
 #### getOccupations() {#implementing-get-occupations}
 
-下一個實作方法是 `getOccupations()`. 此方法會載入儲存在JCR屬性中的職業 `occupations` 並傳回這些專案的已排序（按字母順序）集合。
+下一個實作方法是 `getOccupations()`. 此方法會載入儲存在JCR屬性中的職業 `occupations` 並傳回這些專案的已排序（依字母順序）集合。
 
-使用在中探索的相同技術 `getName()` 屬性值可插入Sling模型的欄位中。
+使用中探索的相同技術 `getName()` 屬性值可插入Sling模型的欄位中。
 
-一旦JCR屬性值透過插入的Java™欄位在Sling模型中可用 `occupations`，排序商業邏輯可套用在 `getOccupations()` 方法。
+透過插入的Java™欄位在Sling模型中提供JCR屬性值後 `occupations`，排序商業邏輯可套用至 `getOccupations()` 方法。
 
 
 ```java
@@ -576,9 +576,9 @@ public class BylineImpl implements Byline {
 
 #### isEmpty() {#implementing-is-empty}
 
-最後一個公用方法是 `isEmpty()` 這會決定元件何時應將其自身視為「已創作完畢」而可呈現。
+最後一個公用方法是 `isEmpty()` 這會決定元件何時應該將自身視為「已撰寫完畢」而呈現。
 
-對於此元件，業務需求是所有三個欄位， `name, image and occupations` 必須填寫 *早於* 元件可以轉譯。
+對於此元件，業務需求是所有三個欄位， `name, image and occupations` 必須填寫 *早於* 可以演算元件。
 
 
 ```java
@@ -609,13 +609,13 @@ public class BylineImpl implements Byline {
 
 #### 處理「影像問題」 {#tackling-the-image-problem}
 
-檢查名稱和佔用條件並不重要，Apache Commons Lang3提供了便利性 [StringUtils](https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html) 類別。 然而，目前還不清楚 **影像是否存在** 可驗證，因為核心元件影像元件是用來對影像進行表面。
+檢查名稱和佔用條件並不重要，Apache Commons Lang3會提供實用功能 [StringUtils](https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html) 類別。 然而，目前還不清楚 **影像是否存在** 可驗證，因為核心元件影像元件是用來表面化影像。
 
 有兩種方法可以解決這個問題：
 
-檢查 `fileReference` JCR屬性解析為資產。 *或* 將此資源轉換為核心元件影像Sling模型，並確保 `getSrc()` 方法不是空的。
+檢查 `fileReference` JCR屬性解析為資產。 *或* 將此資源轉換為核心元件影像Sling模型，並確定 `getSrc()` 方法不是空的。
 
-讓我們使用 **秒** 方法。 第一種方式可能就足夠了，但在本教學課程中，後者是用來讓我們探索Sling模型的其他功能。
+讓我們使用 **秒** 方法。 第一種方法可能就足夠了，但在本教學課程中，後者是用來允許我們探索Sling模型的其他功能。
 
 1. 建立取得影像的私人方法。 此方法會保留為私用，因為不需要在HTL本身中公開影像物件，而且僅用於驅動 `isEmpty().`
 
@@ -635,15 +635,15 @@ public class BylineImpl implements Byline {
 
    第一個使用 `@Self` 註解，自動調整目前請求以符合核心元件的 `Image.class`
 
-   第二個使用 [Apache Sling ModelFactory](https://sling.apache.org/apidocs/sling10/org/apache/sling/models/factory/ModelFactory.html) OSGi服務，這項方便易用的服務，可協助我們在Java™程式碼中建立其他型別的Sling模型。
+   第二個使用 [Apache Sling ModelFactory](https://sling.apache.org/apidocs/sling10/org/apache/sling/models/factory/ModelFactory.html) OSGi服務是一項便利的服務，可協助我們在Java™程式碼中建立其他型別的Sling模型。
 
-   讓我們使用第二個方法。
+   讓我們使用第二種方法。
 
    >[!NOTE]
    >
-   >在真實世界的實作中，方法「一」，使用 `@Self` 較偏好使用，因為這是更簡單、更優雅的解決方案。 在本教學課程中，將會使用第二個方法，因為它需要探索更多實用的Sling模型面向（較複雜的元件）！
+   >在真實世界的實作中，方法「一」，使用 `@Self` 建議使用，因為這是更簡單、更優雅的解決方案。 在本教學課程中，我們使用第二個方法，因為它需要探索更多實用的Sling模型多面性，而這些多面性是較複雜的元件！
 
-   由於Sling模型是Java™ POJO的，而不是OSGi服務，因此通常的OSGi插入註解 `@Reference` **無法** 使用，而Sling模型會提供 **[@OSGiService](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)** 提供類似功能的註解。
+   由於Sling模型是Java™ POJO的，而不是OSGi服務，因此通常是OSGi插入註解 `@Reference` **無法** 改用，Sling模型會提供 **[@OSGiService](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)** 提供類似功能的註解。
 
 1. 更新 `BylineImpl.java` 以包含 `OSGiService` 註解以插入 `ModelFactory`：
 
@@ -658,15 +658,15 @@ public class BylineImpl implements Byline {
    }
    ```
 
-   使用 `ModelFactory` 在可用時，可以使用以下專案建立核心元件影像Sling模型：
+   使用 `ModelFactory` 在可用情況下，可以使用以下專案建立核心元件影像Sling模型：
 
    ```java
    modelFactory.getModelFromWrappedRequest(SlingHttpServletRequest request, Resource resource, java.lang.Class<T> targetClass)
    ```
 
-   然而，此方法需要請求和資源，而Sling模型中尚未提供這兩個資源。 若要取得這些註釋，請使用更多Sling模型註釋！
+   然而，此方法需要請求和資源，但Sling模型中尚未提供這兩個資源。 若要取得這些內容，請使用更多Sling模型註解！
 
-   若要取得目前請求，請 **[@Self](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)** 註解可用來插入 `adaptable` (定義於 `@Model(..)` 作為 `SlingHttpServletRequest.class`，放入Java™類別欄位中。
+   若要取得目前的請求 **[@Self](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)** 註解可用來插入 `adaptable` (定義於 `@Model(..)` 作為 `SlingHttpServletRequest.class`，放入Java™類別欄位中。
 
 1. 新增 **@Self** 附註以取得 **SlingHttpServletRequest要求**：
 
@@ -677,11 +677,11 @@ public class BylineImpl implements Byline {
    private SlingHttpServletRequest request;
    ```
 
-   記住，使用 `@Self Image image` 以上可選擇插入核心元件影像Sling模型 —  `@Self` 註解會嘗試插入可調整的物件（在此例中為SlingHttpServletRequest），並調整成註解欄位型別。 由於核心元件影像Sling模型可從SlingHttpServletRequest物件改寫，因此這原本可以運作，且程式碼比探索性更少 `modelFactory` 方法。
+   記住，使用 `@Self Image image` 以上可選擇插入核心元件影像Sling模型 —  `@Self` 註解會嘗試插入可調整的物件（在此案例中為SlingHttpServletRequest），並調整成註解欄位型別。 由於核心元件影像Sling模型可從SlingHttpServletRequest物件改寫，因此這原本可以運作，且程式碼比探索性更少 `modelFactory` 方法。
 
-   現在會插入透過ModelFactory API例項化影像模型所需的變數。 讓我們使用Sling模型的 **[@PostConstruct](https://sling.apache.org/documentation/bundles/models.html#postconstruct-methods)** 註解，以便在Sling模型例項化後取得此物件。
+   現在會插入透過ModelFactory API例項化影像模型所需的變數。 讓我們使用Sling模型的 **[@PostConstruct](https://sling.apache.org/documentation/bundles/models.html#postconstruct-methods)** 註解以在Sling模型例項化後取得此物件。
 
-   `@PostConstruct` 非常有用，而且作用與建構函式類似，不過，它會在類別例項化並插入所有已註解Java™欄位後叫用。 而其他Sling模型註解會註解Java™類別欄位（變數）， `@PostConstruct` 註解void，zero引數方法，通常名為 `init()` （但任何名稱皆可命名）。
+   `@PostConstruct` 其作用與建構函式類似，但會在類別例項化並插入所有已註解Java™欄位後叫用。 而其他Sling模型註解會註解Java™類別欄位（變數）， `@PostConstruct` 註解void，零引數方法，通常名為 `init()` （但任何名稱皆可）。
 
 1. 新增 **@PostConstruct** 方法：
 
@@ -702,9 +702,9 @@ public class BylineImpl implements Byline {
    }
    ```
 
-   請記住，Sling模型是 **NOT** OSGi服務，所以維護類別狀態是安全的。 經常 `@PostConstruct` 衍生及設定Sling模型類別狀態以供日後使用，類似於普通建構函式的用途。
+   請記住，Sling模型是 **NOT** OSGi服務，因此維護類別狀態是安全的。 經常 `@PostConstruct` 衍生並設定Sling模型類別狀態以供稍後使用，類似於純建構函式的做法。
 
-   如果 `@PostConstruct` 方法擲回例外狀況、Sling模型未例項化且為null。
+   如果 `@PostConstruct` 方法擲回例外狀況，Sling模型未例項化且為空。
 
 1. **getImage()** 現在可以更新為只傳回影像物件。
 
@@ -740,9 +740,9 @@ public class BylineImpl implements Byline {
    }
    ```
 
-   記下多個來電至 `getImage()` 沒有問題，因為傳回初始化的 `image` 類別變數且不會叫用 `modelFactory.getModelFromWrappedRequest(...)` 這並非過於昂貴，但值得避免不必要的電話。
+   記下多個來電至 `getImage()` 不會產生問題，因為會傳回初始化的 `image` 類別變數且不會叫用 `modelFactory.getModelFromWrappedRequest(...)` 這並非過於昂貴，但值得避免不必要的電話。
 
-1. 最終版 `BylineImpl.java` 應如下所示：
+1. 最終的 `BylineImpl.java` 應如下所示：
 
 
    ```java
@@ -844,7 +844,7 @@ public class BylineImpl implements Byline {
 
 ## 署名HTL {#byline-htl}
 
-在 `ui.apps` 模組，開啟 `/apps/wknd/components/byline/byline.html` 之前的AEM元件設定中建立的元件。
+在 `ui.apps` 模組，開啟 `/apps/wknd/components/byline/byline.html` 之前的AEM元件設定中所建立的專案。
 
 ```html
 <div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html">
@@ -852,15 +852,15 @@ public class BylineImpl implements Byline {
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=false}"></sly>
 ```
 
-讓我們檢閱此HTL指令碼目前為止的作用：
+讓我們回顧一下此HTL指令碼目前為止的作用：
 
-* 此 `placeholderTemplate` 指向核心元件的預留位置，此預留位置會在元件未完全設定時顯示。 這會在AEM Sites頁面編輯器中呈現為具有元件標題的方塊，如上述的 `cq:Component`的  `jcr:title` 屬性。
+* 此 `placeholderTemplate` 指向核心元件的預留位置，元件未完全設定時就會顯示。 這會在AEM Sites頁面編輯器中呈現為具有元件標題的方塊，如上述在 `cq:Component`的  `jcr:title` 屬性。
 
-* 此 `data-sly-call="${placeholderTemplate.placeholder @ isEmpty=false}` 載入 `placeholderTemplate` 以上定義並傳入布林值(目前硬式編碼為 `false`)放入預留位置範本中。 時間 `isEmpty` 為true，預留位置範本會呈現灰色方塊，否則不會呈現任何內容。
+* 此 `data-sly-call="${placeholderTemplate.placeholder @ isEmpty=false}` 載入 `placeholderTemplate` 以上定義，並以布林值傳遞(目前以硬式編碼為 `false`)至預留位置範本中。 時間 `isEmpty` 為true，預留位置範本會呈現灰色方塊，否則不會呈現任何內容。
 
 ### 更新署名HTL
 
-1. 更新 **byline.html** 具有下列骨架HTML結構：
+1. 更新 **byline.html** 骨架HTML結構如下：
 
    ```html
    <div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
@@ -874,15 +874,15 @@ public class BylineImpl implements Byline {
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
    ```
 
-   請注意，CSS類別會遵循 [BEM命名慣例](https://getbem.com/naming/). 雖然不強制使用BEM慣例，但建議使用BEM，因為它用於核心元件CSS類別，且通常會產生乾淨且可讀取的CSS規則。
+   請注意，CSS類別會遵循 [BEM命名慣例](https://getbem.com/naming/). 雖然不強制使用BEM慣例，但建議使用BEM，因為核心元件CSS類別會使用它，且通常會產生乾淨且可讀取的CSS規則。
 
-### 在HTL中具現化Sling模型物件 {#instantiating-sling-model-objects-in-htl}
+### 在HTL中例項化Sling模型物件 {#instantiating-sling-model-objects-in-htl}
 
 此 [Use區塊陳述式](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#221-use) 用來在HTL指令碼中具現化Sling模型物件，並將其指派給HTL變數。
 
-此 `data-sly-use.byline="com.adobe.aem.guides.wknd.models.Byline"` 會使用BylineImpl實作的Byline介面(com.adobe.aem.guides.wknd.models.Byline)，並將目前的SlingHttpServletRequest調整至該介面，而結果會儲存在HTL變數名稱byline ( `data-sly-use.<variable-name>`)。
+此 `data-sly-use.byline="com.adobe.aem.guides.wknd.models.Byline"` 使用BylineImpl實作的Byline介面(com.adobe.aem.guides.wknd.models.Byline)，並將目前的SlingHttpServletRequest調整至該介面，結果會儲存在HTL變數名稱byline ( `data-sly-use.<variable-name>`)。
 
-1. 更新外部 `div` 以參照 **署名** Sling模型公用介面：
+1. 更新外部 `div` 以參照 **署名** Sling模型透過其公用介面：
 
    ```xml
    <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
@@ -894,13 +894,13 @@ public class BylineImpl implements Byline {
 
 ### 存取Sling模型方法 {#accessing-sling-model-methods}
 
-HTL會從JSTL借入，並使用與Java™ getter方法名稱相同的縮短格式。
+HTL會從JSTL借用，並使用相同的Java™ getter方法名稱縮短格式。
 
-例如，叫用Byline Sling模型的 `getName()` 方法可縮短為 `byline.name`，同樣地，而非 `byline.isEmpty`，這可以簡稱為 `byline.empty`. 使用完整方法名稱， `byline.getName` 或 `byline.isEmpty`也一樣。 請注意 `()` 絕不會用來叫用HTL中的方法（類似JSTL）。
+例如，叫用Byline Sling模型的 `getName()` 方法可縮短為 `byline.name`，類似的，而不是 `byline.isEmpty`，這可以縮短為 `byline.empty`. 使用完整方法名稱， `byline.getName` 或 `byline.isEmpty`也一樣。 請注意 `()` 絕不會用來叫用HTL中的方法（類似JSTL）。
 
 需要引數的Java™方法 **無法** 用於HTL。 這是為了讓HTL的邏輯維持簡單。
 
-1. 可以透過叫用 `getName()` 方法（使用Byline Sling模型或HTL）： `${byline.name}`.
+1. 可以透過叫用 `getName()` 方法（在Byline Sling模型或HTL中）： `${byline.name}`.
 
    更新 `h2` 標籤：
 
@@ -910,11 +910,11 @@ HTL會從JSTL借入，並使用與Java™ getter方法名稱相同的縮短格�
 
 ### 使用HTL運算式選項 {#using-htl-expression-options}
 
-[HTL運算式選項](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#12-available-expression-options) 在HTL中做為內容的修飾元，範圍從日期格式到i18n翻譯。 運算式也可用來聯結值清單或陣列，以逗號分隔格式顯示位置時需要用到這些清單。
+[HTL運算式選項](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#12-available-expression-options) 在HTL中充當內容的修飾元，範圍從日期格式到i18n翻譯。 運算式也可用來聯結值清單或陣列，以逗號分隔格式顯示職業時需使用這些清單或陣列。
 
-運算式是透過 `@` 運算式中的運運算元。
+運算式是透過 `@` 運運算元中的HTL連結。
 
-1. 若要以「， 」加入職業清單，請使用下列程式碼：
+1. 若要使用「， 」加入職業清單，請使用下列程式碼：
 
    ```html
    <p class="cmp-byline__occupations">${byline.occupations @ join=', '}</p>
@@ -937,11 +937,11 @@ AEM元件的大多數HTL指令碼都會使用 **預留位置範例** 為作者�
    </div>
    ```
 
-   請注意的使用 `data-sly-test`，HTL `test` 區塊是索引鍵，它會設定HTL變數，並轉譯/不轉譯其所使用的HTML元素。 這是以HTL運算式評估的結果為基礎。 如果為「true」，HTML元素會呈現，否則不會呈現。
+   請注意的使用 `data-sly-test`，HTL `test` 區塊是關鍵值，它會設定HTL變數並轉譯/不轉譯它所位於的HTML元素。 這是根據HTL運算式評估的結果。 若設為「true」，HTML元素會呈現，否則不會呈現。
 
-   此HTL變數 `hasContent` 現在可重複使用來有條件地顯示/隱藏預留位置。
+   此HTL變數 `hasContent` 現在可重複使用，以有條件地顯示/隱藏預留位置。
 
-1. 將條件式呼叫更新為 `placeholderTemplate` 檔案底部包含以下專案：
+1. 將條件呼叫更新為 `placeholderTemplate` 檔案底部包含以下專案：
 
    ```html
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
@@ -949,11 +949,11 @@ AEM元件的大多數HTL指令碼都會使用 **預留位置範例** 為作者�
 
 ### 使用核心元件顯示影像 {#using-the-core-components-image}
 
-適用於的HTL指令碼 `byline.html` 即將完成，僅遺失影像。
+適用於的HTL指令碼 `byline.html` 「 」現已接近完成，僅遺失影像。
 
 作為 `sling:resourceSuperType` 指向核心元件的影像元件以製作影像，核心元件的影像元件可用於轉譯影像。
 
-為此，讓我們包含目前的署名資源，但使用資源型別強制使用核心元件影像元件的資源型別 `core/wcm/components/image/v2/image`. 這是元件重複使用的強大模式。 為此，HTL的 `data-sly-resource` 區塊已使用。
+為此，讓我們加入目前的署名資源，但使用資源型別強制使用核心元件影像元件的資源型別 `core/wcm/components/image/v2/image`. 這是元件重複使用的強大模式。 為此，HTL提供 `data-sly-resource` 區塊已使用。
 
 1. 取代 `div` 具有類別 `cmp-byline__image` ，其功能如下：
 
@@ -962,9 +962,9 @@ AEM元件的大多數HTL指令碼都會使用 **預留位置範例** 為作者�
        data-sly-resource="${ '.' @ resourceType = 'core/wcm/components/image/v2/image' }"></div>
    ```
 
-   此 `data-sly-resource`，包括透過相對路徑的目前資源 `'.'`，和會強制納入目前資源（或署名內容資源），資源型別為 `core/wcm/components/image/v2/image`.
+   這個 `data-sly-resource`，包括透過相對路徑的目前資源 `'.'`，並強制納入目前資源（或署名內容資源）和資源型別 `core/wcm/components/image/v2/image`.
 
-   核心元件資源型別會直接使用，而非透過Proxy使用，因為這是指令碼內使用，且永遠不會保留至內容。
+   核心元件資源型別是直接使用，而非透過Proxy使用，因為這是指令碼內使用，且永遠不會保留在內容中。
 
 2. 已完成 `byline.html` 下：
 
@@ -983,7 +983,7 @@ AEM元件的大多數HTL指令碼都會使用 **預留位置範例** 為作者�
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
    ```
 
-3. 將程式碼基底部署至本機AEM執行個體。 由於對下列專案進行了變更： `core` 和 `ui.apps` 兩個模組都需要部署。
+3. 將程式碼基底部署到本機AEM執行個體。 由於下列專案已變更： `core` 和 `ui.apps` 兩個模組都需要部署。
 
    ```shell
    $ cd aem-guides-wknd/ui.apps
@@ -1004,21 +1004,21 @@ AEM元件的大多數HTL指令碼都會使用 **預留位置範例** 為作者�
 
    >[!CAUTION]
    >
-   > 您也可以使用Maven設定檔從根建立整個專案 `autoInstallSinglePackage` 但這可能會覆寫頁面上的內容變更。 這是因為 `ui.content/src/main/content/META-INF/vault/filter.xml` 已針對教學課程入門程式碼進行修改，以完全覆寫現有的AEM內容。 在真實世界中，這並不是問題。
+   > 您也可以使用Maven設定檔從根建置整個專案 `autoInstallSinglePackage` 但這可能會覆寫頁面上的內容變更。 這是因為 `ui.content/src/main/content/META-INF/vault/filter.xml` 已針對教學課程入門程式碼進行修改，以完全覆寫現有的AEM內容。 在真實世界的情境中，這並不是問題。
 
 ### 檢閱未設定樣式的署名元件 {#reviewing-the-unstyled-byline-component}
 
-1. 部署更新後，導覽至 [LA滑板公園終極指南 ](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html) 頁面上，或在章節中先前新增署名元件的位置。
+1. 部署更新後，導覽至 [LA滑板公園終極指南](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html) 頁面，或章節中先前新增Byline元件的位置。
 
-1. 此 **影像**， **名稱**、和 **職業** 現在會出現，並顯示一個未設定樣式，但運作中的「署名」元件。
+1. 此 **影像**， **名稱**、和 **職業** 現在會出現，並顯示一個未設定樣式，但運作中的Byline元件。
 
    ![未設定樣式的署名元件](assets/custom-component/unstyled.png)
 
-### 檢閱Sling模型註冊 {#reviewing-the-sling-model-registration}
+### 檢視Sling模型註冊 {#reviewing-the-sling-model-registration}
 
-此 [AEM Web主控台的Sling模型狀態檢視](http://localhost:4502/system/console/status-slingmodels) 顯示AEM中所有已註冊的Sling模型。 您可以檢閱此清單，以驗證Byline Sling模型是否已安裝及識別。
+此 [AEM Web主控台的Sling模型狀態檢視](http://localhost:4502/system/console/status-slingmodels) 顯示AEM中所有已註冊的Sling模型。 您可檢閱此清單，以驗證署名Sling模型是否已安裝且已認可。
 
-如果 **署名實作** 不會顯示在此清單中，這可能是因為Sling模型的註解有問題，或是模型未新增到正確的套件(`com.adobe.aem.guides.wknd.core.models`)時，不會隱藏任何專案。
+如果 **BylineImpl** 不會顯示在此清單中，可能是Sling模型的註解有問題，或是模型未新增到正確的套件(`com.adobe.aem.guides.wknd.core.models`)中。
 
 ![署名Sling模型已註冊](assets/custom-component/osgi-sling-models.png)
 
@@ -1037,7 +1037,7 @@ AEM元件的大多數HTL指令碼都會使用 **預留位置範例** 為作者�
 
    ![署名專案總管](assets/custom-component/byline-style-project-explorer.png)
 
-1. 將Byline實作CSS （寫入為SCSS）新增至 `_byline.scss`：
+1. 將Byline實作CSS （以SCSS撰寫）新增至 `_byline.scss`：
 
    ```scss
    .cmp-byline {
@@ -1081,13 +1081,13 @@ AEM元件的大多數HTL指令碼都會使用 **預留位置範例** 為作者�
    $ npm run watch
    ```
 
-1. 返回瀏覽器並導覽至 [LA SkateParks文章](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). 您應該會看到元件的更新樣式。
+1. 返回瀏覽器並導覽至 [LA SkatePark文章](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). 您應該會看到元件的更新樣式。
 
    ![完成的署名元件](assets/custom-component/final-byline-component.png)
 
    >[!TIP]
    >
-   > 您可能需要清除瀏覽器快取以確保未提供過時的CSS，然後重新整理頁面以使用署名元件來取得完整樣式。
+   > 您可能需要清除瀏覽器快取以確保沒有提供過時的CSS，然後重新整理頁面以署名元件來取得完整樣式。
 
 ## 恭喜！ {#congratulations}
 
@@ -1099,7 +1099,7 @@ AEM元件的大多數HTL指令碼都會使用 **預留位置範例** 為作者�
 
 * [寫入單元測試或AEM元件](unit-testing.md)
 
-檢視完成的程式碼： [GitHub](https://github.com/adobe/aem-guides-wknd) 或在Git分支上檢閱並部署程式碼 `tutorial/custom-component-solution`.
+檢視完成的程式碼： [GitHub](https://github.com/adobe/aem-guides-wknd) 或在Git分支上檢閱並部署程式碼至本機 `tutorial/custom-component-solution`.
 
 1. 原地複製 [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) 存放庫。
 1. 檢視 `tutorial/custom-component-solution` 分支

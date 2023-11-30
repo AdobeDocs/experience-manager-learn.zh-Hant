@@ -6,17 +6,17 @@ feature: Output Service
 topic: Migration, Upgrade
 role: Developer
 level: Experienced
-kt: 8917
+jira: KT-8917
 thumbnail: 336967.jpeg
 exl-id: ef5864cb-69e1-454b-9d9b-fa14983d80e3
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '35'
 ht-degree: 0%
 
 ---
 
-# 通訊（輸出服務）
+# 通訊（Output服務）
 
 瞭解AEM Formsas a Cloud Service如何支援通訊使用案例。
 

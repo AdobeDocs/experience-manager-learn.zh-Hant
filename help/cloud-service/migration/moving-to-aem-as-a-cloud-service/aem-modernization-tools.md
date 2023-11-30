@@ -6,10 +6,10 @@ topic: Migration, Upgrade
 feature: Migration
 role: Developer
 level: Experienced
-kt: 8629
+jira: KT-8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 6%
@@ -41,12 +41,12 @@ ht-degree: 6%
 
 ![AEM現代化工具生命週期](./assets/aem-modernization-tools.png)
 
-AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和parsys組成的現有AEM頁面，以使用可編輯範本、AEM核心WCM元件和版面配置容器等現代化方法。
+AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和parsys組成的現有AEM頁面，以使用可編輯範本、AEM核心WCM元件和版面配置容器等現代方法。
 
 ## 重要活動
 
-+ 複製AEM 6.x生產環境，以執行AEM現代化工具
-+ 下載並安裝 [最新AEM現代化工具](https://github.com/adobe/aem-modernize-tools/releases/latest) 透過「封裝管理程式」在AEM 6.x生產複製上執行
++ 複製AEM 6.x生產環境以執行AEM現代化工具
++ 下載並安裝 [最新的AEM現代化工具](https://github.com/adobe/aem-modernize-tools/releases/latest) 透過「封裝管理員」在AEM 6.x生產複製上執行
 
 + [頁面結構轉換器](https://opensource.adobe.com/aem-modernize-tools/pages/structure/about.html) 使用版面配置容器將靜態範本中的現有頁面內容更新為對應的可編輯範本
    + 使用OSGi設定定義轉換規則
@@ -63,7 +63,7 @@ AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和parsys�
 
 ## 實作練習
 
-透過這個實作練習來嘗試您學到的知識，以運用您的知識。
+透過嘗試您透過此實作練習學到的內容，運用您的知識。
 
 在嘗試實作練習之前，請確定您已觀看並瞭解上述影片和下列資料：
 
@@ -72,7 +72,7 @@ AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和parsys�
 + [可變和不可變的內容](../../developing/basics/mutable-immutable.md)
 + [AEM專案結構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)
 
-此外，請確定您已完成先前的實作練習：
+此外，請確定您已完成前一個實作練習：
 
 + [BPA和CAM實作練習](./bpa-and-cam.md#hands-on-exercise)
 
@@ -92,7 +92,7 @@ AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和parsys�
             <a  rel="noreferrer"
                 target="_blank"
                 href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session2-migration#bootcamp---session-2-migration-methodology" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">請試用AEM現代化工具</span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">試用AEM現代化工具</span>
             </a>
         </td>
     </tr>

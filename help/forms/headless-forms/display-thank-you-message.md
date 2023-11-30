@@ -3,12 +3,12 @@ title: 在表格提交時顯示感謝訊息
 description: 使用onSubmitSuccess處理常式，在react應用程式中顯示已設定的感謝訊息
 feature: Adaptive Forms
 version: 6.5
-kt: 13490
+jira: KT-13490
 topic: Development
 role: User
 level: Intermediate
 exl-id: 489970a6-1b05-4616-84e8-52b8c87edcda
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%

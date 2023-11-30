@@ -1,13 +1,14 @@
 ---
 title: 透過AEM Dynamic Media瞭解色彩管理
-description: 在本影片中，我們將探索Dynamic Media色彩管理，以及如何使用它在AEM Assets中提供色彩校正預覽功能。
+description: 在這段影片中，我們會探索Dynamic Media色彩管理，以及如何使用它在AEM Assets中提供色彩校正預覽功能。
 feature: Image Profiles, Video Profiles
 version: 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
+doc-type: Feature Video
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 17%
@@ -16,7 +17,7 @@ ht-degree: 17%
 
 # 透過AEM Dynamic Media瞭解色彩管理{#understanding-color-management-with-aem-dynamic-media}
 
-在本影片中，我們將探索Dynamic Media色彩管理，以及如何使用它在AEM Assets中提供色彩校正預覽功能。
+在這段影片中，我們會探索Dynamic Media色彩管理，以及如何使用它在AEM Assets中提供色彩校正預覽功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
 
@@ -24,11 +25,11 @@ ht-degree: 17%
 >
 >[啟用Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) AEM以使用此功能。
 
-此功能以Feature Pack的形式提供給AEM 6.1和6.2版本。
+此功能以Feature Pack形式提供給AEM 6.1和6.2版本。
 
 ## 色彩管理組態節點的XML範本 {#xml-template-for-the-color-management-configuration-node}
 
-以下是「色彩管理」組態節點的XML範本。 此XML範本可複製到AEM開發專案，並使用適合專案的設定進行設定。
+以下是「色彩管理」組態節點的XML範本。 此XML範本可複製到AEM開發專案中，並使用適合專案的設定進行設定。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -88,21 +89,21 @@ ht-degree: 17%
 
 | 名稱 | 色彩空間 | 說明 |
 | ------------------- | ---------- | ------------------------------------- |
-| AdobeRGB | RGB | Adobe RGB (1998) |
+| adobergb | RGB | Adobe RGB (1998) |
 | AppleRGB | RGB | AppleRGB |
 | CIERGB | RGB | CIERGB |
-| CoatedFogra27 | CMYK | COATED FOGRA27 (ISO 12647-2:2004) |
-| CoatedFogra39 | CMYK | COATED FOGRA39 (ISO 12647-2:2004) |
-| CoatedGraCol | CMYK | 鍍膜GRACoL 2006 (ISO 12647-2:2004) |
+| CoatedFogra27 | CMYK | Coated FOGRA27 (ISO 12647-2:2004) |
+| CoatedFogra39 | CMYK | Coated FOGRA39 (ISO 12647-2:2004) |
+| CoatedGraCol | CMYK | Coated GRACoL 2006 (ISO 12647-2:2004) |
 | ColorMatchRGB | RGB | ColorMatchRGB |
-| EuropeISOCoated | CMYK | 歐洲ISO銅版FOGRA27 |
+| 歐洲ISOCoated | CMYK | 歐洲ISO銅版FOGRA27 |
 | EuroscaleCoated | CMYK | Euroscale Coated v2 |
 | EuroscaleUncoated | CMYK | Euroscale Uncoated v2 |
 | JapanColorCoated | CMYK | Japan Color 2001塗裝 |
-| JapanColorNewspaper | CMYK | Japan Color 2002報紙 |
+| JapanColorPaper | CMYK | Japan Color 2002報紙 |
 | JapanColorUncoated | CMYK | Japan Color 2001 Uncoated |
 | JapanColorWebCoated | CMYK | Japan Color 2003 Web Coated |
-| JapanWebCoated | CMYK | Japan Web Coated （廣告） |
+| Japanawebcoated | CMYK | Japan Web Coated （廣告） |
 | NewsprintSNAP2007 | CMYK | 美國新聞紙(SNAP 2007) |
 | NTSC | RGB | NTSC (1953) |
 | PAL | RGB | PAL/SECAM |
@@ -113,13 +114,13 @@ ht-degree: 17%
 | SheetfedUncoated | CMYK | U.S. Sheetfed Uncoated v2 |
 | SMPTE | RGB | SMPTE-C |
 | sRGB | sRGBRGB | IEC61966-2.1 |
-| UncoatedFogra29 | CMYK | 未塗層的FOGRA29 (ISO 12647-2:2004) |
-| 網頁塗層 | CMYK | U.S. Web Coated (SWOP) v2 |
+| UncoatedFogra29 | CMYK | 無塗層的FOGRA29 (ISO 12647-2:2004) |
+| 網頁套裝 | CMYK | U.S. Web Coated (SWOP) v2 |
 | WebCoatedFogra28 | CMYK | Web Coated FOGRA28 (ISO 12647-2:2004) |
-| WebCoatedGrade3 | CMYK | 網頁版SWOP 2006 3級紙張 |
-| WebCoatedGrade5 | CMYK | 網頁版SWOP 2006 5級紙張 |
+| WebCoatedGrade3 | CMYK | Web Coated SWOP 2006 Grade 3紙 |
+| WebCoatedGrade5 | CMYK | Web Coated SWOP 2006 Grade 5紙張 |
 | WebUncoated | CMYK | U.S. Web Uncoated v2 |
-| WideGamutRGB | RGB | 寬色域RGB |
+| 寬色域RGB | RGB | 寬色域RGB |
 
 ## 其他資源{#additional-resources}
 

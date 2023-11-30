@@ -1,15 +1,15 @@
 ---
 title: 使用內容轉移工具進行內容移轉
-description: 瞭解內容轉移工具如何協助您將內容從AEM 6移轉至AEMas a Cloud Service。
+description: 瞭解內容轉移工具如何協助您將內容從AEM 6as a Cloud Service移轉至AEM。
 version: Cloud Service
 topic: Migration, Upgrade
 feature: Migration
 role: Developer
 level: Experienced
-kt: 8919
+jira: KT-8919
 thumbnail: 336970.jpeg
 exl-id: c51ce8e3-e83c-4f8b-a835-70335ed3a5b9
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # 內容轉移工具
 
-瞭解內容轉移工具如何協助您將內容從AEM 6.3+移轉至AEMas a Cloud Service。
+瞭解內容轉移工具如何協助您將內容從AEM 6.3+as a Cloud Service移轉至AEM。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336970?quality=12&learn=on)
 
@@ -31,18 +31,18 @@ ht-degree: 2%
 
 ## 重要活動
 
-+ 下載 [最新的內容轉移工具](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2).
-+ 將AEM Author 6.3+最終內容轉移到AEMas a Cloud ServiceAuthor服務。
++ 下載 [最新內容轉移工具](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2).
++ 將AEM Author 6.3+最終內容轉移至AEMas a Cloud Service作者服務。
    + 在AEM 6.3+作者上安裝「內容轉移工具」，其中包含要轉移的最終內容。
    + 以批次方式執行「內容轉移工具」，轉移內容集。
 + 將AEM Publish 6.3+最終內容轉移到AEMas a Cloud Service發佈服務。
-   + 在包含要轉移之最終內容的AEM 6.3+發佈上安裝內容轉移工具。
+   + 在AEM 6.3+ Publish上安裝內容轉移工具，其中包含要轉移的最終內容。
    + 以批次方式執行「內容轉移工具」，轉移內容集。
 + 可選擇在AEMas a Cloud Service上使用「追加」內容，方式為自上次內容轉移以來轉移新內容
 
 ## 實作練習
 
-透過這個實作練習來嘗試您學到的知識，以運用您的知識。
+透過嘗試您透過此實作練習學到的內容，運用您的知識。
 
 在嘗試實作練習之前，請確定您已觀看並瞭解上述影片和下列資料：
 
@@ -50,7 +50,7 @@ ht-degree: 2%
 + [上線](../onboarding.md)
 + [Cloud Manager](../cloud-manager.md)
 
-此外，請確定您已完成先前的實作練習：
+此外，請確定您已完成前一個實作練習：
 
 + [Dispatcher實作練習](../dispatcher.md#hands-on-exercise)
 

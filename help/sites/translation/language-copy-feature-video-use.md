@@ -1,17 +1,14 @@
 ---
 title: 搭配AEM Sites使用語言副本
-description: 透過AEM建立語言副本精靈網站翻譯增強功能，使用者可以從主要語言建立語言副本，而不必建立根頁面。
+description: 透過AEM建立語言副本精靈網站翻譯增強功能，使用者可以從主語言建立語言副本，而不必建立根頁面。
 feature: Language Copy
-topics: localization, authoring, content-architecture
-audience: all
-doc-type: feature video
-activity: use
 version: 6.4, 6.5
 topic: Localization
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 49613808-6369-4e43-bc26-fd3041265339
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 5%

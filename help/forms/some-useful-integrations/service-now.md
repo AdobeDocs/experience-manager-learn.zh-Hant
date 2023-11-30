@@ -1,15 +1,15 @@
 ---
 title: 整合 [!DNL ServiceNow]
-description: 使用表單資料模型建立並顯示所有事件。
+description: 使用表單資料模型建立並顯示所有未預期事件。
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 9957
+jira: KT-9957
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 93a177b0-7852-44da-89cc-836d127be4e7
 last-substantial-update: 2022-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 2%
@@ -18,9 +18,9 @@ ht-degree: 2%
 
 # 將AEM Forms與整合 [!DNL ServiceNow]
 
-在中建立及顯示事件 [!DNL ServiceNow] 使用AEM Forms中的表單資料模型。
+在中建立和顯示事件 [!DNL ServiceNow] 使用AEM Forms中的表單資料模型。
 
-## 必備條件
+## 先決條件
 
 * [!DNL ServiceNow] 帳戶。
 * 熟悉 [建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
@@ -46,14 +46,14 @@ ht-degree: 2%
 ## 存取ServiceNow執行個體認證
 
 * 按一下您的使用者設定檔
-   ![按一下使用者設定檔](assets/snow-1.png)
+  ![按一下使用者設定檔](assets/snow-1.png)
 
-* 按一下管理執行個體密碼
-* 執行個體詳細資料如下所示
-   ![執行個體詳細資訊](assets/snow-3.png)
+* 按一下管理執行處理密碼
+* 執行個體詳細資訊如下所示
+  ![執行個體詳細資訊](assets/snow-3.png)
 
 ## 測試整合
 
 * [開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/create-incident-in-service-now/jcr:content?wcmmode=disabled)
-* 在說明與註解欄位中輸入一些值，然後按一下「建立事件」按鈕
-* 新建立事件的事件ID應填入文字欄位中，下表應列出所有事件。
+* 在說明與備註欄位中輸入一些值，然後按一下「建立事件」按鈕
+* 新建立之事件的事件ID應填入文字欄位中，且下表應列出所有事件。

@@ -1,16 +1,16 @@
 ---
 title: GraphQL模型基本概念
-description: 瞭解如何在Adobe Experience Manager (AEM)中定義和使用內容片段，以搭配GraphQL使用。
+description: 瞭解如何在Adobe Experience Manager (AEM)中定義及使用內容片段，以搭配GraphQL使用。
 version: Cloud Service
 topic: Headless, Content Management
 feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
-kt: 7619
+jira: KT-7619
 thumbnail: 332858.jpg
 last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 0d22b06f-bf78-4a54-85be-6a932177f36f
-source-git-commit: c7848e180ab7f95b8c97aef1ea50556cb1566533
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # GraphQL模型基本概念
 
-瞭解如何在Adobe Experience Manager (AEM)中定義和使用內容片段，以搭配GraphQL使用。
+瞭解如何在Adobe Experience Manager (AEM)中定義及使用內容片段，以搭配GraphQL使用。
 
 在本影片中，您將：
 

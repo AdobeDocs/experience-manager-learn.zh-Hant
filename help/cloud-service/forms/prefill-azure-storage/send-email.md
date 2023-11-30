@@ -7,8 +7,8 @@ role: Developer
 level: Beginner
 version: Cloud Service
 topic: Integrations
-kt: 8474
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+jira: KT-8474
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 # 傳送電子郵件
 
-表單資料儲存在Azure Blob儲存體後，會傳送包含已儲存表單連結的電子郵件給使用者。 此電子郵件是使用SendGrid REST API傳送。
+表單資料儲存在Azure Blob Storage中後，會傳送包含已儲存表單連結的電子郵件給使用者。 此電子郵件是使用SendGrid REST API傳送。
 
-傳送電子郵件所需的Swagger檔案、表單資料模型和雲端服務設定，將作為文章資產的一部分提供給您。
+在文章資產中，提供了Swagger檔案、表單資料模型和傳送電子郵件所需的雲端服務設定。
 
 您必須建立SendGrid帳戶，此動態範本可內嵌最適化表單中擷取的資料。
 

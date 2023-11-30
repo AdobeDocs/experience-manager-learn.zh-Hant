@@ -3,14 +3,15 @@ title: 使用AEM Sites發佈頁面
 description: Adobe Experience Manager Sites提供數個選項來發佈和取消發佈內容。 本影片探討各種方法及其功能。
 feature-set: Experience Manager
 version: 6.4, 6.5, Cloud Service
-kt: 4322
+jira: KT-4322
 thumbnail: 32193.jpg
 feature: Publishing
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 6dc66195-f438-4366-a5e2-486145e4b6d7
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 1%

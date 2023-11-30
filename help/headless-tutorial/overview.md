@@ -1,20 +1,21 @@
 ---
-title: AEM中的HeadlessTutorials
+title: AEM 中的 Headless 教學課程
 description: Adobe Experience Manager的Headless CMS教學課程系列。 依API、框架和範例應用程式探索教學課程。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '503'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
-# AEM中的HeadlessTutorials{#aem-headless-tutorials}
+# AEM 中的 Headless 教學課程{#aem-headless-tutorials}
 
 {{aem-headless-trials-promo}}
 
@@ -22,9 +23,9 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
 
 >[!TIP]
 >
->本教學課程集合專為喜歡 **透過執行來學習**. 如果您偏好從頭開始學習概念，請檢視 [AEM Headless開發人員歷程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). 這組教學課程和歷程互為補充。
+>此教學課程集合是專為喜歡 **透過執行來學習**. 如果您偏好從頭開始學習概念，請參閱 [AEM Headless開發人員歷程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). 這組教學課程和歷程互相補充。
 
-## 按API顯示的Tutorials
+## 依API的Tutorials
 
 <table>
 <tr>
@@ -49,7 +50,7 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
     </a>
     </div>
     <p>
-    <em>瞭解應用程式如何透過AEM安全地驗證。</em>
+    <em>瞭解應用程式如何安全地向AEM進行驗證。</em>
     </p>
   </td>
   <td>
@@ -70,7 +71,7 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
 
 ## 應用程式範例
 
-範例應用程式是探索Adobe Experience Manager (AEM)的Headless功能的絕佳方式。 下載並安裝這些完成的範例，以立即開始。
+範例應用程式是探索Adobe Experience Manager (AEM)無周邊功能的絕佳方式。 下載並安裝這些完成的範例，以立即開始。
 
 <table>
 <tr>
@@ -116,9 +117,9 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
 </tr>
 </table>
 
-## 依架構的Tutorials
+## 依框架的Tutorials
 
-根據使用的技術瀏覽下列教學課程。 瞭解AEM如何超越單純的Headless使用案例，提供內容感知撰寫和體驗管理選項。
+根據使用的技術瀏覽下列教學課程。 瞭解AEM如何超越單純的Headless使用案例，透過內容感知撰寫和體驗管理選項。
 
 <table>
 <tr>
@@ -132,7 +133,7 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
     </a>
     </div>
     <p>
-    <em>在單純的Headless情境中使用GraphQL建立React JS應用程式。</em>
+    <em>在純Headless情境中使用GraphQL建立React JS應用程式。</em>
     <p>
   </td>
   <td>
@@ -145,7 +146,7 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
     </a>
     </div>
     <p>
-    <em>在內容中編寫遠端託管React應用程式的一部分。</em>
+    <em>在內容中編寫遠端託管的React應用程式的一部分。</em>
     </p>
   </td>
   <td>
@@ -186,7 +187,7 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
       </a>
     </div>
     <p>
-    <em>使用開發人員和服務權杖來驗證身分，以建置Node.js應用程式。</em>
+    <em>使用開發人員和服務權杖來建置Node.js應用程式以進行驗證。</em>
     <p>
   </td>
   <td></td>
