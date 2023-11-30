@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-10-23T00:00:00Z
 kt: 14238
-source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
+source-git-commit: 23459de98420d2a489288df4a1b992c17d42972e
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -46,18 +46,18 @@ public String getBlobData(String blobID) {
 
     } catch (ClientProtocolException e) {
 
-        log.error("Got Client Protocol Exception " + e.getMessage());
+        log.debug("Got Client Protocol Exception " + e.getMessage());
     } catch (IOException e) {
 
-        log.error("Got IOEXception " + e.getMessage());
+        log.debug("Got IOEXception " + e.getMessage());
     }
 
     return null;
 }
 ```
 
-當最適化表單使用 `guid` URL中的引數，與範本相關聯的自訂頁面元件會擷取最適化表單並填入來自Azure儲存體的資料。
-與範本關聯的頁面元件具有下列JSP程式碼。
+當最適化表單在URL中以guid引數轉譯時，與範本相關聯的自訂頁面元件會擷取並填入最適化表單中來自Azure儲存體的資料。
+以下是和範本相關之頁面元件的jsp中的程式碼
 
 ```java
 com.aemforms.saveandfetchfromazure.StoreAndFetchDataFromAzureStorage azureStorage = sling.getService(com.aemforms.saveandfetchfromazure.StoreAndFetchDataFromAzureStorage.class);
@@ -81,9 +81,11 @@ if(guid!=null&&!guid.isEmpty())
 
 * [匯入範例最適化表單](./assets/bank-account-sample-form.zip)
 
-* 使用OSGi設定主控台，在Azure入口網站設定中指定適當的值
+* 使用OSGi設定主控台，在Azure入口網站設定中指定適當的值。
+
 * [預覽和提交BankAccount表單](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
 * 驗證資料是否儲存在您選擇的Azure儲存容器中。 複製Blob ID。
+
 * [預覽銀行帳戶表單](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) 並針對URL中要預先填入Azure儲存體資料的表單，將Blob ID指定為GUID引數
 
