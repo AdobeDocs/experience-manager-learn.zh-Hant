@@ -11,10 +11,11 @@ last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 6e5e3cb4-9a47-42af-86af-da33fd80cb47
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+duration: 259
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '785'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
@@ -65,7 +66,7 @@ ht-degree: 9%
 
    | 資料型別 | 名稱 | 必填 | 選項 |
    |----------|------|----------|---------|
-   | 內容參考 | 資產 | 是 | 新增預設影像。 例如：`/content/dam/wknd-headless/assets/AdobeStock_238607111.jpeg` |
+   | 內容參考 | 資產 | 是 | 新增預設影像。 例如： `/content/dam/wknd-headless/assets/AdobeStock_238607111.jpeg` |
    | 多行文字 | 說明 | 否 |  |
    | 多行文字 | 文章 | 否 |  |
 

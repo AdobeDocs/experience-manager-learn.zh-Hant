@@ -10,10 +10,11 @@ topic: Development
 feature: Developer Tools
 jira: KT-10423
 exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 109
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 11%
+source-wordcount: '379'
+ht-degree: 7%
 
 ---
 
@@ -26,7 +27,7 @@ ht-degree: 11%
 
 ## 建立環境變數
 
-可以透過 Cloud Manager 設定和管理標準環境變數。它們提供給執行階段環境並且可以在 OSGi 設定中使用。[環境變數可以是特定環境的值或環境密碼，具體取決於變更的內容。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+可以透過 Cloud Manager 設定和管理標準環境變數。它們提供給執行階段環境並且可以在 OSGi 設定中使用。[環境變數可以是特定環境的值或環境秘密，具體取決於變更的內容。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
 
 
 

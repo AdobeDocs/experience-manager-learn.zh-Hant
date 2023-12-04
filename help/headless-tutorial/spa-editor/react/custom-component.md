@@ -2,7 +2,6 @@
 title: 建立自訂天氣元件 | AEM SPA Editor and React快速入門
 description: 瞭解如何建立要與AEM SPA編輯器搭配使用的自訂天氣元件。 瞭解如何開發作者對話方塊和Sling模型，以擴充JSON模型來填入自訂元件。 系統會使用Open Weather API和React Open Weather元件。
 feature: SPA Editor
-topics: development
 version: Cloud Service
 jira: KT-5878
 thumbnail: 5878-spa-react.jpg
@@ -11,10 +10,11 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 472
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1216'
-ht-degree: 1%
+source-wordcount: '1105'
+ht-degree: 0%
 
 ---
 
@@ -369,11 +369,11 @@ Sling模型是註釋驅動的Java「POJO」（純舊的Java物件），可方便
 
    這是根據章節中先前的XML檔案建立的對話方塊。
 
-1. 儲存變更。觀察天氣 **聖地亞哥** 現在會顯示：
+1. 儲存變更。 觀察天氣 **聖地亞哥** 現在會顯示：
 
    ![天氣元件已更新](assets/custom-component/weather-updated.png)
 
-1. 導覽至「 」以檢視JSON模型 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). 搜尋 `wknd-spa-react/components/open-weather`:
+1. 導覽至「 」以檢視JSON模型 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). 搜尋 `wknd-spa-react/components/open-weather`：
 
    ```json
    "open_weather": {

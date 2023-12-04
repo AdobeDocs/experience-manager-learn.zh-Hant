@@ -7,9 +7,10 @@ feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: 849bfe6c-6b7f-44d0-85bc-5df0287a9bca
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+duration: 252
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---
@@ -17,8 +18,8 @@ ht-degree: 0%
 # AEM Workflow中的檔案型別變數
 
 
-檔案型別的變數可用來儲存記錄檔案、最適化表單附件。 然後，這些變數便可用於「傳送電子郵件」元件，以透過電子郵件傳送附件。
+檔案型別的變數可用來儲存記錄檔案和最適化表單附件。 這些變數隨後可用於傳送電子郵件元件，以透過電子郵件傳送附件。
 
-此影片會強調使用檔案型別變數來儲存產生的DoR，然後在AEM Workflow的傳送電子郵件步驟中使用檔案變數。
+本影片將反白顯示使用檔案型別變數來儲存產生的DoR，然後在AEM Workflow的傳送電子郵件步驟中使用檔案變數。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26452?quality=12&learn=on)

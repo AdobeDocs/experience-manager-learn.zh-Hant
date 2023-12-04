@@ -9,10 +9,11 @@ thumbnail: 342358.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: e95e7530-100d-4495-abae-4c568e7978b3
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 324
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 2%
+source-wordcount: '64'
+ht-degree: 0%
 
 ---
 
@@ -25,6 +26,6 @@ ht-degree: 2%
 ## 本影片涵蓋的內容
 
 + Dispatcher和SDK概觀
-+ [Dispatcher 工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html)
++ [Dispatcher工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html)
 + 疑難排解錯誤
 + 使用Dispatcher記錄和執行模式進行偵錯

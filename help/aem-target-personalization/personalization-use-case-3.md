@@ -9,10 +9,11 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 167
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 2%
+source-wordcount: '584'
+ht-degree: 1%
 
 ---
 
@@ -58,7 +59,7 @@ WKND網站首頁會以卡片版面配置的形式，顯示當地活動或城市�
    6. 請注意，WKND網站首頁會在視覺化體驗撰寫器編輯器中開啟。
       ![VEC](assets/personalization-use-case-2/vec.png)
    7. **體驗A** 提供預設的WKND首頁，讓我們編輯內容版面 **體驗B**.
-      ![體驗 B](assets/personalization-use-case-3/use-case3-experience-b.png)
+      ![體驗B](assets/personalization-use-case-3/use-case3-experience-b.png)
    8. 按一下其中一個卡片配置容器(*最佳烘焙師*)並選取 **重新排列** 選項。
       ![容器選擇](assets/personalization-use-case-3/container-selection.png)
    9. 按一下您要重新排列的容器，並將其拖放至所需的位置。 讓我們重新排列 *最佳烘焙師* 從第一列第一欄到第一列第三欄的容器。 現在 *最佳烘焙師* 容器在旁邊 *攝影展覽* 容器。

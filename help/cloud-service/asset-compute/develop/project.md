@@ -8,10 +8,11 @@ feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 223
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 2%
+source-wordcount: '577'
+ht-degree: 0%
 
 ---
 
@@ -54,7 +55,7 @@ _產生Asset compute專案的點進（無音訊）_
 1. 選取要下載的專案工作區 `console.json` 的認證，在此案例中選取 `Development`
 1. 前往Adobe I/O專案的根並點選 __全部下載__ 位於右上角。
 1. 檔案下載為 `.json` 前置詞為專案和工作區的檔案，例如： `wkndAemAssetCompute-81368-Development.json`
-1. 您可以執行下列兩個動作中的一個
+1. 您可以
    + 將檔案重新命名為 `console.json` 並將其移至Asset compute工作者專案的根目錄中。 這就是本教學課程中的方法。
    + 將其移至任意資料夾，並從您的檔案夾中參照該資料夾 `.env` 含有設定專案的檔案 `ASSET_COMPUTE_INTEGRATION_FILE_PATH`. 檔案路徑可以是絕對路徑，也可以是相對於專案根目錄的路徑。 例如：
       + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=/Users/example-user/secrets/wkndAemAssetCompute-81368-Development.json`

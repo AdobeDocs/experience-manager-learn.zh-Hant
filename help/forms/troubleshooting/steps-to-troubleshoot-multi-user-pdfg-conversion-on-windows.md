@@ -1,6 +1,6 @@
 ---
-title: 在Windows設定中疑難排解多使用者PDFG轉換問題的步驟
-description: 疑難排解Windows安裝程式上的多個使用者PDF產生器問題。
+title: 在Windows安裝程式中疑難排解多使用者PDFG轉換問題的步驟
+description: 疑難排解Windows安裝程式上的多個使用者PDF Generator問題。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -9,14 +9,15 @@ feature: PDF Generator
 topic: Development
 index: y
 exl-id: 2fddb3a9-570c-4b50-a685-4287a1ddafe1
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 122
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
 
 ---
 
-# 在Windows設定中疑難排解多使用者PDFG轉換問題的步驟
+# 在Windows安裝程式中疑難排解多使用者PDFG轉換問題的步驟
 
 *此影片說明疑難排解Windows安裝程式上的多使用者PDFG轉換問題的程式。*
 

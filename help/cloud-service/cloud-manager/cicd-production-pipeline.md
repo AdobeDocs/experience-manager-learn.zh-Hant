@@ -1,10 +1,7 @@
 ---
 title: 使用 Adobe Cloud Manager - CI/CD 生產管道
 description: CI/CD生產管道用於建置計畫碼並透過中繼部署到生產環境，減少實現價值的時間。 CI/CD 生產管道設定會定義起始管道的觸發條件、控制生產部署的參數以及效能測試參數。
-topics: Administration
-audience: administrator
 doc-type: feature video
-activity: use
 version: Cloud Service
 kt: 6872, 6875
 thumbnail: 26317.jpg
@@ -13,10 +10,11 @@ feature: Cloud Manager, CI-CD Pipeline
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+duration: 423
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 58%
+source-wordcount: '147'
+ht-degree: 53%
 
 ---
 

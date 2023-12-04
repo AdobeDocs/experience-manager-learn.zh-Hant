@@ -1,6 +1,6 @@
 ---
 title: 實作自訂流程步驟
-description: 使用自訂程式步驟將最適化表單附件寫入檔案系統
+description: 使用自訂流程步驟將最適化表單附件寫入檔案系統
 feature: Workflow
 version: 6.5
 topic: Development
@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 879518db-3f05-4447-86e8-5802537584e5
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 272
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -19,12 +20,12 @@ ht-degree: 0%
 
 本教學課程適用於需要實作自訂流程步驟的AEM Forms客戶。 處理步驟可以執行ECMA指令碼或呼叫自訂Java程式碼來執行作業。 本教學課程將說明實作由程式步驟執行的WorkflowProcess所需的步驟。
 
-實作自訂流程步驟的主要原因是為了擴充AEM Workflow。 例如，如果您在工作流程模型中使用AEM Forms元件，您可能會想要執行下列操作
+實作自訂流程步驟的主要原因是為了擴充AEM Workflow。 例如，如果您在工作流程模型中使用AEM Forms元件，您可能想要執行下列操作
 
 * 將最適化表單附件儲存至檔案系統
 * 處理提交的資料
 
-若要完成上述使用案例，您通常會撰寫由處理步驟執行的OSGi服務。
+為了完成上述使用案例，您通常會撰寫由流程步驟執行的OSGi服務。
 
 ## 建立Maven專案
 
@@ -33,17 +34,17 @@ ht-degree: 0%
 
 ### 建立實作WorkflowProcess的類別
 
-在eclipse IDE中開啟maven專案。 展開 **projectname** > **核心** 資料夾。 展開src/main/java資料夾。 您應該會看到結尾為「core」的套件。 建立在此封裝中實作WorkflowProcess的Java類別。 您需要覆寫執行方法。 執行方法的簽章如下public void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)throws WorkflowException執行方法可存取下列3個變數
+在eclipse IDE中開啟Maven專案。 展開 **projectname** > **核心** 資料夾。 展開src/main/java資料夾。 您應該會看到結尾為「core」的套件。 建立在此封裝中實作WorkflowProcess的Java類別。 您需要覆寫執行方法。 execute方法的簽章如下public void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)throws WorkflowException exception執行方法可存取下列3個變數
 
-**工作專案**：workItem變數會授予與工作流程相關資料的存取權。 公開API檔案已可供參考 [此處。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**工作專案**：workItem變數可授予與工作流程相關資料的存取權。 公開API檔案已可供參考 [此處。](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**工作流程工作階段**：此workflowSession變數可讓您控制工作流程。 公開API檔案已可供參考 [此處](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**Workflowsession**：此workflowSession變數可讓您控制工作流程。 公開API檔案已可供參考 [此處](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**中繼資料對應**：與工作流程相關聯的所有中繼資料。 傳遞至程式步驟的任何程式引數都可使用MetaDataMap物件。[API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
+**中繼資料地圖**：與工作流程相關聯的所有中繼資料。 任何傳遞至流程步驟的流程引數都可使用MetaDataMap物件。[API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
-在本教學課程中，我們會將新增至最適化表單的附件寫入檔案系統，作為AEM Workflow的一部分。
+在本教學課程中，我們會將新增至最適化表單的附件寫入檔案系統，做為AEM Workflow的一部分。
 
-為了完成此使用案例，已撰寫下列java類別
+為了完成此使用案例，編寫了下列java類別
 
 讓我們來看看此程式碼
 
@@ -126,24 +127,24 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
             }
 ```
 
-第1行 — 定義元件的屬性。 將OSGi元件與程式步驟建立關聯時，您會看到process.label屬性，如下面的其中一個熒幕擷取畫面所示。
+第1行 — 定義元件的屬性。 將OSGi元件與程式步驟建立關聯時，您會看到process.label屬性，如下面的熒幕擷取畫面之一所示。
 
 行13-15 — 傳遞至此OSGi元件的程式引數會使用「，」分隔符號進行分割。 接著，系統會從字串陣列中擷取attachmentPath和saveToLocation的值。
 
-* attachmentPath — 這是您在調適型表單中指定的相同位置，當您設定調適型表單的提交動作以叫用AEM Workflow時。 這是您希望附件相對於工作流程裝載儲存在AEM中的資料夾名稱。
+* attachmentPath — 這是您在調適型表單中指定之位置，也就是您設定調適型表單的提交動作以叫用AEM Workflow時的位置。 這是您希望附件相對於工作流程裝載儲存在AEM中的資料夾名稱。
 
-* saveToLocation — 這是您希望附件儲存在AEM伺服器檔案系統中的位置。
+* saveToLocation — 這是您希望將附件儲存在AEM伺服器檔案系統中的位置。
 
 這兩個值會以程式引數傳遞，如下面的熒幕擷圖所示。
 
-![ProcessStep](assets/implement-process-step.gif)
+![Processstep](assets/implement-process-step.gif)
 
-QueryBuilder服務用於查詢attachmentsPath資料夾下nt：file型別的節點。 其餘程式碼會逐一瀏覽搜尋結果，以建立Document物件並將其儲存至檔案系統
+QueryBuilder服務用於查詢attachmentsPath資料夾下nt：file型別的節點。 其餘程式碼會逐一檢視搜尋結果，以建立Document物件並將其儲存至檔案系統
 
 
 >[!NOTE]
 >
->由於我們使用的是AEM Forms專屬的Document物件，因此您需要在maven專案中包含aemfd-client-sdk相依性。 群組ID是com.adobe.aemfd ，而成品ID是aemfd-client-sdk。
+>由於我們使用的是AEM Forms專屬的Document物件，因此您需要在maven專案中包含aemfd-client-sdk相依性。 群組ID為com.adobe.aemfd ，而成品ID為aemfd-client-sdk。
 
 #### 建置和部署
 
@@ -152,10 +153,10 @@ QueryBuilder服務用於查詢attachmentsPath資料夾下nt：file型別的節�
 
 建立工作流程模型。 在工作流程模型中拖放流程步驟。 將程式步驟與「將最適化表單附件儲存至檔案系統」相關聯。
 
-提供必要的程式引數，以逗號分隔。 例如Attachments，c：\\scrappp\\。 第一個引數是相較於工作流程裝載儲存最適化表單附件時的資料夾。 此值必須與您在設定最適化表單的提交動作時指定的值相同。 第二個引數是儲存附件的位置。
+提供必要的程式引數，以逗號分隔。 例如Attachments，c：\\scrappp\\。 第一個引數是相較於工作流程裝載儲存最適化表單附件時的資料夾。 這必須是您在設定最適化表單的提交動作時指定的相同值。 第二個引數是儲存附件的位置。
 
-建立最適化表單. 將「檔案附件」元件拖放到表單上。 設定表單的提交動作，以叫用在前面步驟建立的工作流程。 提供適當的附件路徑。
+建立最適化表單。 將檔案附件元件拖放到表單上。 設定表單的提交動作，以叫用先前步驟建立的工作流程。 提供適當的附件路徑。
 
 儲存設定。
 
-預覽表單。 新增一些附件並提交表單。 附件應儲存在您在工作流程中指定的位置中的檔案系統中。
+預覽表單。 新增一些附件並提交表單。 附件應儲存至檔案系統，並置於您在工作流程中指定的位置。

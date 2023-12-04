@@ -9,10 +9,11 @@ level: Beginner
 last-substantial-update: 2022-06-15T00:00:00Z
 doc-type: Feature Video
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 2561
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 2%
+source-wordcount: '1703'
+ht-degree: 0%
 
 ---
 
@@ -40,7 +41,7 @@ Brand Portal的Asset Sourcing用於從第三方機構和團隊收集資產，無
 
 Brand Portal 2019年2月版本的重點在於文字搜尋和主要客戶請求的增強功能。
 
-### 搜尋加強功能
+### 搜尋增強功能
 
 Brand Portal透過篩選窗格中屬性述詞的部分文字搜尋來增強搜尋。 若要允許部分文字搜尋，您需要在搜尋表單的屬性述詞中啟用部分搜尋。
 
@@ -111,7 +112,7 @@ Dynamic Media視訊編碼可從以下來源下載：
 請注意，您只能自訂Brand Portal URL的前置詞，而不能自訂整個URL。
 例如，具有現有網域的組織 `wknd.brand-portal.adobe.com` 可以取得 `wkndinc.brand-portal.adobe.com` 已依請求建立。
 
-不過，AEM Author例項可以 [已設定](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) 僅限租使用者ID URL，而非租使用者別名（替代） URL。
+不過，AEM Author例項可以 [已設定](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) 僅限租使用者ID URL，而非租使用者別名（替代） URL。
 
 **使用案例** ：組織可以自訂入口網站URL，而不停留在Adobe提供的URL，藉此滿足品牌需求。
 
@@ -158,7 +159,7 @@ Brand Portal使用者可運用Aspera架構的快速下載，以快上25倍的速
 
 ### Adobe I/O代管用於設定oAuth整合的UI
 
-Brand Portal使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) 介面建立JWT應用程式，可設定oAuth整合，以允許AEM Assets與Brand Portal整合。 之前，設定OAuth整合的UI主控於 `https://marketing.adobe.com/developer/`. 若要進一步瞭解如何整合AEM Assets與Brand Portal，以將資產和集合發佈至Brand Portal，請參閱 [設定AEM Assets與Brand Portal的整合](https://helpx.adobe.com/tw/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
+Brand Portal使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) 介面建立JWT應用程式，可設定oAuth整合，以允許AEM Assets與Brand Portal整合。 之前，設定OAuth整合的UI主控於 `https://marketing.adobe.com/developer/`. 若要進一步瞭解如何整合AEM Assets與Brand Portal，以將資產和集合發佈至Brand Portal，請參閱 [設定AEM Assets與Brand Portal的整合](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
 
 ## Brand Portal 2018年2月功能和增強功能{#brand-portal-features-and-enhancements-632}
 
@@ -205,7 +206,7 @@ Brand Portal使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legac
 ## 其他資源{#additional-resources}
 
 * [Brand Portal的新增功能](https://helpx.adobe.com/tw/experience-manager/brand-portal/using/whats-new.html)
-* [AEM作者復寫代理](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
+* [AEM作者復寫代理](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [加速下載指南](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM Assets Brand PortalAdobe檔案](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
 * [AEM Assets Dynamic MediaAdobe檔案](https://experienceleague.adobe.com/docs/)

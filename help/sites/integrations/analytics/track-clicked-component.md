@@ -11,10 +11,11 @@ thumbnail: KT-6296.jpg
 badgeIntegration: label="整合" type="positive"
 doc-type: Tutorial
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 567
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1886'
-ht-degree: 1%
+source-wordcount: '1795'
+ht-degree: 0%
 
 ---
 
@@ -275,7 +276,7 @@ Adobe使用者端資料層是 **事件** 驅動資料層。 只要按一下任�
 
    上述設定結合了資料元素中的動態變數 **元件標題** 和靜態字串 **已點選的CTA**.
 
-1. 儲存變更。此 **已點選的CTA** 規則現在應具有下列設定：
+1. 儲存變更。 此 **已點選的CTA** 規則現在應具有下列設定：
 
    ![最終標籤規則設定](assets/track-clicked-component/final-page-loaded-config.png)
 

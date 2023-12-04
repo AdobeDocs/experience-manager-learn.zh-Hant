@@ -1,18 +1,17 @@
 ---
 title: 第2章 — 定義事件內容片段模型 — 內容服務
-seo-title: Getting Started with AEM Content Services - Chapter 2 - Defining Event Content Fragment Models
 description: AEM Headless教學課程的第2章涵蓋啟用和定義內容片段模型，這些模型用來定義標準化資料結構和建立事件的製作介面。
-seo-description: Chapter 2 of the AEM Headless tutorial covers enabling and defining Content Fragment Models used to define a normalized data structure and authoring interface for creating Events.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 472
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '962'
-ht-degree: 7%
+source-wordcount: '940'
+ht-degree: 0%
 
 ---
 
@@ -56,7 +55,7 @@ AEM內容片段模型會定義內容結構，以便AEM作者將原始內容的�
    >此設定變更無法從 [!UICONTROL AEM設定] Web UI。 若要復原此設定：
    >    
    >    1. 開啟 [CRXDE Lite](http://localhost:4502/crx/de)
-   >    1. 瀏覽到 `/conf/wknd-mobile/settings/dam/cfm`
+   >    1. 瀏覽至 `/conf/wknd-mobile/settings/dam/cfm`
    >    1. 刪除 `models` 節點
    >    
    >任何在此設定下建立的現有內容片段模型都會刪除，且其定義會儲存在 `/conf/wknd-mobile/settings/dam/cfm/models`.
@@ -102,9 +101,9 @@ AEM內容片段模型會定義內容結構，以便AEM作者將原始內容的�
 1. 從 **[!UICONTROL 資料型別] 標籤** 在右側，拖曳 **[!UICONTROL 單行文字輸入]** 至左側下拉區域以定義 **[!DNL Question]** 欄位。
 1. 確認新的 **[!UICONTROL 單行文字輸入]** 左側選取「 」，且 **[!UICONTROL 屬性] 標籤** ，即會在右側選取。 依照以下方式填入「屬性」欄位：
 
-   * [!UICONTROL 呈現為] : `textfield`
-   * [!UICONTROL 欄位標籤] : `Event Title`
-   * [!UICONTROL 屬性名稱] : `eventTitle`
+   * [!UICONTROL 呈現為] ： `textfield`
+   * [!UICONTROL 欄位標籤] ： `Event Title`
+   * [!UICONTROL 屬性名稱] ： `eventTitle`
    * [!UICONTROL 最大長度] ：25
    * [!UICONTROL 必填] ： `Yes`
 
@@ -116,57 +115,57 @@ AEM內容片段模型會定義內容結構，以便AEM作者將原始內容的�
 
 ### 事件說明
 
-* [!UICONTROL 資料類型] : `Multi-line text`
-* [!UICONTROL 欄位標籤] : `Event Description`
-* [!UICONTROL 屬性名稱] : `eventDescription`
-* [!UICONTROL 預設類型] : `Rich text`
+* [!UICONTROL 資料型別] ： `Multi-line text`
+* [!UICONTROL 欄位標籤] ： `Event Description`
+* [!UICONTROL 屬性名稱] ： `eventDescription`
+* [!UICONTROL 預設型別] ： `Rich text`
 
 ### 事件日期和時間
 
-* [!UICONTROL 資料類型] : `Date and time`
-* [!UICONTROL 欄位標籤] : `Event Date and Time`
-* [!UICONTROL 屬性名稱] : `eventDateAndTime`
+* [!UICONTROL 資料型別] ： `Date and time`
+* [!UICONTROL 欄位標籤] ： `Event Date and Time`
+* [!UICONTROL 屬性名稱] ： `eventDateAndTime`
 * [!UICONTROL 必填] ： `Yes`
 
 ### 事件類型
 
-* [!UICONTROL 資料類型] : `Enumeration`
-* [!UICONTROL 欄位標籤] : `Event Type`
-* [!UICONTROL 屬性名稱] : `eventType`
+* [!UICONTROL 資料型別] ： `Enumeration`
+* [!UICONTROL 欄位標籤] ： `Event Type`
+* [!UICONTROL 屬性名稱] ： `eventType`
 * [!UICONTROL 選項] ： `Art,Music,Performance,Photography`
 
 ### 票價
 
-* [!UICONTROL 資料類型] : `Number`
-* [!UICONTROL 呈現為] : `numberfield`
-* [!UICONTROL 欄位標籤] : `Ticket Price`
-* [!UICONTROL 屬性名稱] : `eventPrice`
-* [!UICONTROL 類型]：`Integer`
+* [!UICONTROL 資料型別] ： `Number`
+* [!UICONTROL 呈現為] ： `numberfield`
+* [!UICONTROL 欄位標籤] ： `Ticket Price`
+* [!UICONTROL 屬性名稱] ： `eventPrice`
+* [!UICONTROL 型別] ： `Integer`
 * [!UICONTROL 必填] ： `Yes`
 
 ### 事件影像
 
-* [!UICONTROL 資料類型] : `Content Reference`
-* [!UICONTROL 呈現為] : `contentreference`
-* [!UICONTROL 欄位標籤] : `Event Image`
-* [!UICONTROL 屬性名稱] : `eventImage`
-* [!UICONTROL 根路徑] : `/content/dam/wknd-mobile/images`
+* [!UICONTROL 資料型別] ： `Content Reference`
+* [!UICONTROL 呈現為] ： `contentreference`
+* [!UICONTROL 欄位標籤] ： `Event Image`
+* [!UICONTROL 屬性名稱] ： `eventImage`
+* [!UICONTROL 根路徑] ： `/content/dam/wknd-mobile/images`
 * [!UICONTROL 必填] ： `Yes`
 
 ### 地點名稱
 
-* [!UICONTROL 資料類型] : `Single-line text`
-* [!UICONTROL 呈現為] : `textfield`
-* [!UICONTROL 欄位標籤] : `Venue Name`
-* [!UICONTROL 屬性名稱] : `venueName`
+* [!UICONTROL 資料型別] ： `Single-line text`
+* [!UICONTROL 呈現為] ： `textfield`
+* [!UICONTROL 欄位標籤] ： `Venue Name`
+* [!UICONTROL 屬性名稱] ： `venueName`
 * [!UICONTROL 最大長度] ：20
 * [!UICONTROL 必填] ： `Yes`
 
 ### 地點城市
 
-* [!UICONTROL 資料類型] : `Enumeration`
-* [!UICONTROL 欄位標籤] : `Venue City`
-* [!UICONTROL 屬性名稱] : `venueCity`
+* [!UICONTROL 資料型別] ： `Enumeration`
+* [!UICONTROL 欄位標籤] ： `Venue City`
+* [!UICONTROL 屬性名稱] ： `venueCity`
 * [!UICONTROL 選項] ： `Basel,London,Los Angeles,Paris,New York,Tokyo`
 
 >[!VIDEO](https://video.tv.adobe.com/v/28335?quality=12&learn=on)

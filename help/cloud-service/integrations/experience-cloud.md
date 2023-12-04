@@ -13,10 +13,11 @@ mini-toc-levels: 1
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM as a Cloud Service " before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 211
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '928'
-ht-degree: 14%
+source-wordcount: '684'
+ht-degree: 10%
 
 ---
 
@@ -29,7 +30,7 @@ ht-degree: 14%
 |-------------------------------------------------------------------|:---------:|:----------:|:---------:|
 | [Acrobat Sign](#adobe-acrobat-sign) |           |            | ✔ |
 | Advertising |           |            |          |
-| [分析](#adobe-analytics) | ✔ | ✔ | ✔ |
+| [Analytics](#adobe-analytics) | ✔ | ✔ | ✔ |
 | Audience Manager |           |            |          |
 | Campaign Classic |           |            |          |
 | Campaign Standard |           |            |          |
@@ -41,7 +42,7 @@ ht-degree: 14%
 | Marketo Engage |           |            |          |
 | Real-time CDP |           |            |          |
 | [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
-| [目標](#adobe-target) | ✔ |            |          |
+| [Target](#adobe-target) | ✔ |            |          |
 | [Workfront](#adobe-workfront) |           | ✔ |          |
 
 
@@ -134,7 +135,7 @@ Adobe Sensei提供AI和機器學習技術，透過智慧標籤、智慧裁切、
 
 ### AEM Assets
 
-+ [影像的智慧型標記](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
++ [影像的智慧標籤](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
 + [影像的自訂智慧標籤](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/custom-smart-tags.html)
 + [視訊的智慧標籤](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/video-smart-tags.html)
 + [智慧型裁切](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html)
@@ -142,7 +143,7 @@ Adobe Sensei提供AI和機器學習技術，透過智慧標籤、智慧裁切、
 
 ### AEM Forms
 
-+ [自動化表單轉換服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
++ [automated forms conversion服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
 
 
 ## Adobe Target

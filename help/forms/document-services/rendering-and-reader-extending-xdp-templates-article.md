@@ -1,5 +1,5 @@
 ---
-title: 使用許可權將XDP轉譯為PDF
+title: 透過使用許可權將XDP轉譯為PDF
 description: 套用使用許可權至pdf
 version: 6.4,6.5
 feature: Forms Service
@@ -8,14 +8,15 @@ role: Developer
 level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 221
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 2%
+source-wordcount: '411'
+ht-degree: 0%
 
 ---
 
-# 使用許可權將XDP轉譯為PDF{#rendering-xdp-into-pdf-with-usage-rights}
+# 透過使用許可權將XDP轉譯為PDF{#rendering-xdp-into-pdf-with-usage-rights}
 
 一個常見的使用案例是將xdp轉譯為PDF並將Reader擴充功能套用至轉譯的PDF。
 
@@ -24,19 +25,19 @@ ht-degree: 2%
 
 若要完成此使用案例，我們需要執行下列動作。
 
-* 將Reader擴充功能憑證新增至「fd-service」使用者。 列出新增Reader延伸模組認證的步驟 [此處](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=zh-Hant)
+* 將Reader延伸憑證新增至「fd-service」使用者。 列出新增Reader延伸模組認證的步驟 [此處](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)
 
 
-* 您也可以參閱以下影片： [設定Reader延伸模組認證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
+* 您也可以參閱以下影片： [設定Reader擴充功能認證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
 
 
-* 建立可轉譯和套用使用許可權的自訂OSGi服務。 完成此工作的程式碼如下
+* 建立可轉譯及套用使用許可權的自訂OSGi服務。 完成此任務的程式碼如下
 
 ## 轉譯XDP並套用使用許可權 {#render-xdp-and-apply-usage-rights}
 
 * 第7行：我們使用FormsService的renderPDFForm從XDP產生PDF。
 
-* 第8-14行：設定適當的使用許可權。 這些使用許可權是從OSGi組態設定中擷取。
+* 第8-14行：已設定適當的使用許可權。 這些使用許可權是從OSGi組態設定中擷取。
 
 * 第20行：使用與服務使用者fd-service相關聯的resourceresolver
 
@@ -82,11 +83,11 @@ ht-degree: 2%
  }
 ```
 
-下列熒幕擷圖顯示公開的設定屬性。 大部分的常見使用許可權會透過此設定公開。
+下列熒幕擷圖顯示公開的組態屬性。 大部分的常見使用許可權會透過此設定公開。
 
 ![設定屬性](assets/configurationproperties.gif)
 
-下列程式碼會顯示用於建置OSGi組態設定的程式碼
+下列程式碼顯示用來建置OSGi組態設定的程式碼
 
 ```java
 package com.aemformssamples.configuration;
@@ -125,11 +126,11 @@ public @interface DocSvcConfiguration {
 
 下一步是使用GET方法建立servlet，以將讀取器擴展PDF傳回給使用者。 在這種情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會呈現為動態PDF，而且瀏覽器隨附的pdf檢視器不會處理動態pdf。
 
-以下是servlet的程式碼。 我們會將CRX存放庫中的XDP路徑傳遞給此servlet。
+以下是servlet的程式碼。 我們將CRX存放庫中的XDP路徑傳遞給此servlet。
 
 然後呼叫com.aemformssamples.documentservices.core.DocumentServices的renderAndExtendXdp方法。
 
-然後，讀取器延伸PDF會串流至呼叫應用程式
+接著，讀取器延伸PDF會串流至呼叫應用程式
 
 ```java
 package com.aemformssamples.documentservices.core.servlets;
@@ -195,13 +196,13 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 }
 ```
 
-若要在本機伺服器上測試此專案，請遵循下列步驟
-1. [下載並安裝DevelopingWithServiceUser套裝](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+若要在本機伺服器上測試此設定，請遵循下列步驟
+1. [下載並安裝DevelopingWithServiceUser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下載並安裝AEMFormsDocumentServices套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 
 1. [下載自訂入口網站範本html](assets/render-and-extend-template.zip)
-1. [使用封裝管理程式下載與本文相關的資產並將其匯入AEM](assets/renderandextendxdp.zip)
+1. [使用封裝管理程式將和本文相關的資產下載並匯入到AEM](assets/renderandextendxdp.zip)
    * 此套件具有範例入口網站和xdp檔案
-1. 將Reader延伸模組憑證新增至「fd-service」使用者
+1. 將Reader延伸憑證新增至「fd-service」使用者
 1. 將瀏覽器指向 [入口網站網頁](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
 1. 按一下pdf圖示將xdp轉譯為已套用使用許可權的pdf檔案。

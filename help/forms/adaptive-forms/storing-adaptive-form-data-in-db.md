@@ -1,6 +1,6 @@
 ---
 title: 儲存最適化表單資料
-description: 將最適化表單資料儲存至DataBase，作為AEM Workflow的一部分
+description: 將最適化表單資料儲存至DataBase做為AEM工作流程的一部分
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -8,17 +8,18 @@ role: Developer
 level: Experienced
 exl-id: 3dd552da-fc7c-4fc7-97ec-f20b6cc33df0
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 224
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 1%
+source-wordcount: '382'
+ht-degree: 0%
 
 ---
 
 # 在資料庫中儲存最適化表單提交
 
-有多種方式可將提交的表單資料儲存在您選擇的資料庫中。 JDBC資料來源可用來直接將資料儲存到資料庫中。 可以寫入自訂OSGI套件組合以將資料儲存至資料庫。 本文使用AEM工作流程中的自訂流程步驟來儲存資料。
-使用案例是在提交最適化表單時觸發AEM工作流程，且工作流程中的步驟會將提交的資料儲存至資料庫。
+有多種方式可以將提交的表單資料儲存在您選擇的資料庫中。 JDBC資料來源可用來直接將資料儲存到資料庫中。 可寫入自訂OSGI套件組合以將資料儲存至資料庫。 本文使用AEM工作流程中的自訂流程步驟來儲存資料。
+使用案例是在最適化表單提交時觸發AEM工作流程，且工作流程中的步驟會將提交的資料儲存至資料庫。
 
 
 
@@ -39,11 +40,11 @@ ht-degree: 1%
    * FormName — 保留表單名稱的欄名稱
    * ColumnName — 儲存AF資料的欄名稱
 
-   ![指定資料庫詳細資訊OSGi設定](assets/specify-database-details.png)
+  ![指定資料庫詳細資訊OSGi設定](assets/specify-database-details.png)
 
 
 
-## OSGi設定的代碼
+## OSGi設定的程式碼
 
 ```java
 package com.aemforms.dbsamples.core.insertFormData;
@@ -210,11 +211,11 @@ public class InsertAfData implements WorkflowProcess {
 
 * 請確定您已設定JDBC連線集區
 * 使用configMgr指定資料庫詳細資訊
-* [下載Zip檔案並將檔案內容解壓縮至您的硬碟](assets/article-assets.zip)
+* [下載Zip檔案並將內容解壓縮到您的硬碟上](assets/article-assets.zip)
 
-   * 部署jar檔案，使用 [AEM網頁主控台](http://localhost:4502/system/console/bundles). 此jar檔案包含儲存資料庫中表單資料的程式碼。
+   * 部署jar檔案，使用 [AEM網頁主控台](http://localhost:4502/system/console/bundles). 此jar檔案包含將表單資料儲存在資料庫中的程式碼。
 
-   * 將兩個zip檔案匯入 [使用封裝管理程式的AEM](http://localhost:4502/crx/packmgr/index.jsp). 這樣您就可以 [範例工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) 和 [最適化表單範例](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 這會觸發表單提交的工作流程。 請注意工作流程步驟中的程式引數。 這些引數會指出將包含最適化表單資料的資料檔的表單名稱和名稱。 資料檔案儲存在crx存放庫的裝載資料夾下。 請留意 [最適化表單](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 設定為在提交時觸發AEM工作流程，並設定資料檔案設定(data.xml)
+   * 將兩個zip檔案匯入 [使用封裝管理員的AEM](http://localhost:4502/crx/packmgr/index.jsp). 這樣您就可以 [範例工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) 和 [最適化表單範例](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 這會在表單提交時觸發工作流程。 請注意工作流程步驟中的程式引數。 這些引數會指示表單名稱，以及將包含最適化表單資料的資料檔案名稱。 資料檔案儲存在crx存放庫的裝載資料夾下。 請注意 [最適化表單](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 已設定為在提交時觸發AEM工作流程，且資料檔案設定(data.xml)
 
    * 預覽並填寫表單並提交。 您應該會看到資料庫中建立的新列
 

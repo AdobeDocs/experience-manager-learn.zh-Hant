@@ -10,10 +10,11 @@ jira: KT-11860
 thumbnail: KT-11860.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 8fc6d0ef-8753-480b-a504-e7943de8883c
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 113
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 11%
+source-wordcount: '87'
+ht-degree: 9%
 
 ---
 
@@ -24,18 +25,18 @@ ht-degree: 11%
 此影片大綱：
 
 - 什麼是RDE？
-- 它們如何有助於加快開發到部署週期？
+- 它們如何有助於加快開發到部署週期的速度？
 
 >[!VIDEO](https://video.tv.adobe.com/v/3414128?quality=12&learn=on)
 
 ## 下一步
 
-瞭解 [如何設定](./how-to-setup.md) AEMas a Cloud Service的RDE。
+瞭解 [如何設定](./how-to-setup.md) AEMas a Cloud Service中的RDE。
 
 ## 其他資源
 
 [RDE檔案簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
 
-[Cloud Manager CI/CD 管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
+[Cloud Manager CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
 
 [設定開發IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html)

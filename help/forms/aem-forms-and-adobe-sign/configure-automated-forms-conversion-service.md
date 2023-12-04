@@ -1,6 +1,6 @@
 ---
 title: 自動化表單轉換服務
-description: 自動化表單轉換服務. 本文說明AEM管理員如何設定Automated forms conversion服務，以自動將其PDF forms轉換為最適化表單。 此說明適用於貴組織的IT和AEM管理員。
+description: automated forms conversion服務。 本文說明AEM管理員如何設定Automated forms conversion服務，以自動將其PDF forms轉換為最適化表單。 此說明適用於貴組織的IT和AEM管理員。
 feature: Adaptive Forms
 thumbnail: 39493.jpg
 jira: KT-6114
@@ -10,10 +10,11 @@ level: Beginner
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 0715a2cc-c042-4ddc-85a1-7720f420351b
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 592
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 6%
+source-wordcount: '267'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +26,7 @@ ht-degree: 6%
 * 使用Linux和Microsoft Windows作業系統，
 * 設定SMTP郵件伺服器
 
-## 先決條件:
+## 先決條件：
 
 您需要下列專案才能使用Automated forms conversion服務：
 

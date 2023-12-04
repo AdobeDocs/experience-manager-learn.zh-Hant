@@ -8,10 +8,11 @@ role: Developer
 level: Intermediate, Experienced
 doc-type: Article
 exl-id: c51da742-5ce7-499a-83da-227a25fb78c9
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 447
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1536'
-ht-degree: 2%
+source-wordcount: '1522'
+ht-degree: 0%
 
 ---
 
@@ -124,7 +125,7 @@ AEM樣式系統可使用作者友善的標籤來公開這些著色顯示樣式 *
 
 * **配置樣式**
    * 樣式名稱： **促銷**
-   * CSS 類別: `cmp-teaser--promo`
+   * CSS類別： `cmp-teaser--promo`
 * **顯示樣式**
    * 無
 * **有效的CSS類別**： `.cmp-teaser--promo`
@@ -135,10 +136,10 @@ AEM樣式系統可使用作者友善的標籤來公開這些著色顯示樣式 *
 
 * **配置樣式**
    * 樣式名稱： **促銷**
-   * CSS 類別: `cmp-teaser--promo`
+   * CSS類別： `cmp-teaser--promo`
 * **顯示樣式**
    * 樣式名稱： **綠色**
-   * CSS 類別: `cmp-teaser--primary-color`
+   * CSS類別： `cmp-teaser--primary-color`
 * **有效的CSS類別**： `cmp-teaser--promo.cmp-teaser--primary-color`
 
 #### 次要促銷
@@ -147,10 +148,10 @@ AEM樣式系統可使用作者友善的標籤來公開這些著色顯示樣式 *
 
 * **配置樣式**
    * 樣式名稱： **促銷**
-   * CSS 類別: `cmp-teaser--promo`
+   * CSS類別： `cmp-teaser--promo`
 * **顯示樣式**
    * 樣式名稱： **黃色**
-   * CSS 類別: `cmp-teaser--secondary-color`
+   * CSS類別： `cmp-teaser--secondary-color`
 * **有效的CSS類別**： `cmp-teaser--promo.cmp-teaser--secondary-color`
 
 ### 促銷右對齊樣式 {#promo-r-align}
@@ -175,7 +176,7 @@ AEM樣式系統可使用作者友善的標籤來公開這些著色顯示樣式 *
 
 * **配置樣式**
    * 樣式名稱： **促銷（靠右對齊）**
-   * CSS 類別: `cmp-teaser--promo cmp-teaser--alternate`
+   * CSS類別： `cmp-teaser--promo cmp-teaser--alternate`
 * **顯示樣式**
    * 無
 * **有效的CSS類別**： `.cmp-teaser--promo.cmp-teaser--alternate`
@@ -186,10 +187,10 @@ AEM樣式系統可使用作者友善的標籤來公開這些著色顯示樣式 *
 
 * **配置樣式**
    * 樣式名稱： **促銷（靠右對齊）**
-   * CSS 類別: `cmp-teaser--promo cmp-teaser--alternate`
+   * CSS類別： `cmp-teaser--promo cmp-teaser--alternate`
 * **顯示樣式**
    * 樣式名稱： **綠色**
-   * CSS 類別: `cmp-teaser--primary-color`
+   * CSS類別： `cmp-teaser--primary-color`
 * **有效的CSS類別**： `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--primary-color`
 
 #### 促銷右對齊次要
@@ -198,10 +199,10 @@ AEM樣式系統可使用作者友善的標籤來公開這些著色顯示樣式 *
 
 * **配置樣式**
    * 樣式名稱： **促銷（靠右對齊）**
-   * CSS 類別: `cmp-teaser--promo cmp-teaser--alternate`
+   * CSS類別： `cmp-teaser--promo cmp-teaser--alternate`
 * **顯示樣式**
    * 樣式名稱： **黃色**
-   * CSS 類別: `cmp-teaser--secondary-color`
+   * CSS類別： `cmp-teaser--secondary-color`
 * **有效的CSS類別**： `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--secondary-color`
 
 ### 英雄樣式 {#hero-style}
@@ -240,7 +241,7 @@ AEM樣式系統可使用作者友善的標籤來公開這些著色顯示樣式 *
 
 * **配置樣式**
    * 樣式名稱： **Hero**
-   * CSS 類別: `cmp-teaser--hero`
+   * CSS類別： `cmp-teaser--hero`
 * **顯示樣式**
    * 無
 * **有效的CSS類別**： `.cmp-teaser--hero`
@@ -251,10 +252,10 @@ AEM樣式系統可使用作者友善的標籤來公開這些著色顯示樣式 *
 
 * **配置樣式**
    * 樣式名稱： **促銷**
-   * CSS 類別: `cmp-teaser--hero`
+   * CSS類別： `cmp-teaser--hero`
 * **顯示樣式**
    * 樣式名稱： **綠色**
-   * CSS 類別: `cmp-teaser--primary-color`
+   * CSS類別： `cmp-teaser--primary-color`
 * **有效的CSS類別**： `cmp-teaser--hero.cmp-teaser--primary-color`
 
 #### 主圖次要
@@ -263,10 +264,10 @@ AEM樣式系統可使用作者友善的標籤來公開這些著色顯示樣式 *
 
 * **配置樣式**
    * 樣式名稱： **促銷**
-   * CSS 類別: `cmp-teaser--hero`
+   * CSS類別： `cmp-teaser--hero`
 * **顯示樣式**
    * 樣式名稱： **黃色**
-   * CSS 類別: `cmp-teaser--secondary-color`
+   * CSS類別： `cmp-teaser--secondary-color`
 * **有效的CSS類別**： `cmp-teaser--hero.cmp-teaser--secondary-color`
 
 ## 其他資源 {#additional-resources}

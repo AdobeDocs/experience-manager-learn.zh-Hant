@@ -10,10 +10,11 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 611
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 2%
+source-wordcount: '1181'
+ht-degree: 0%
 
 ---
 
@@ -120,7 +121,7 @@ React應用程式原始碼範例位於Github.com <https://github.com/adobe/aem-g
 
 檢閱 `aemHeadlessClient.js` 檔案以瞭解如何建立 `AEMHeadless` 用來與AEM通訊的物件。
 
-1. 開啟 `src/api/aemHeadlessClient.js`。
+1. 開啟 `src/api/aemHeadlessClient.js`.
 
 1. 複查明細行1-40：
 
@@ -198,7 +199,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ### 步驟
 
-1. 開啟 `src/api/usePersistedQueries.js`。
+1. 開啟 `src/api/usePersistedQueries.js`.
 
 1. 找到函式 `useAllTeams()`
 
@@ -347,7 +348,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ![人員](./assets/graphql-and-external-app/react-app__person-view.png)
 
-1. 開啟 `src/api/usePersistedQueries.js`。
+1. 開啟 `src/api/usePersistedQueries.js`.
 
 1. 找到函式 `usePersonByName(fullName)`
 

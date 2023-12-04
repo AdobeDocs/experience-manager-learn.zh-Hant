@@ -2,21 +2,19 @@
 title: 記錄檔
 description: 記錄檔是在AEMas a Cloud Service中偵錯AEM應用程式的第一線，但部署的AEM應用程式必須有充足的登入次數。
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5432
 thumbnail: kt-5432.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 321
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 2%
+source-wordcount: '948'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +27,7 @@ ht-degree: 2%
 Pod ID會顯示在每個記錄陳述式中，並可篩選或排序記錄陳述式。 Pod ID的格式為：
 
 + `cm-p<PROGRAM ID>-e<ENVIRONMENT ID>-aem-<author|publish>-<POD NAME>`
-+ 範例: `cm-p12345-e56789-aem-author-abcdefabde-98765`
++ 範例： `cm-p12345-e56789-aem-author-abcdefabde-98765`
 
 ## 自訂記錄檔
 
@@ -52,9 +50,9 @@ AEM as a Cloud Service不支援自訂記錄檔，但它不支援自訂記錄。
 AEM製作和發佈服務都提供AEM執行階段伺服器記錄檔：
 
 + `aemerror` 是Java錯誤記錄(位於 `/crx-quickstart/logs/error.log` (位於AEM SDK本機Quickstart)。 以下為 [建議的記錄層級](#log-levels) 針對每種環境型別的自訂記錄器：
-   + 開發: `DEBUG`
-   + 測試: `WARN`
-   + 生產: `ERROR`
+   + 開發： `DEBUG`
+   + 分段： `WARN`
+   + 生產： `ERROR`
 + `aemaccess` 列出對AEM服務的HTTP要求與詳細資訊
 + `aemrequest` 列出向AEM服務提出的HTTP要求及其對應的HTTP回應
 
@@ -64,13 +62,13 @@ AEM製作和發佈服務都提供AEM執行階段伺服器記錄檔：
 
 + `httpdaccess` 列出向AEM服務的Apache Web Server/Dispatcher發出的HTTP請求。
 + `httperror`  列出來自Apache網頁伺服器的記錄訊息，以及偵錯受支援的Apache模組(例如 `mod_rewrite`.
-   + 開發: `DEBUG`
-   + 測試: `WARN`
-   + 生產: `ERROR`
+   + 開發： `DEBUG`
+   + 分段： `WARN`
+   + 生產： `ERROR`
 + `aemdispatcher` 列出來自Dispatcher模組的記錄訊息，包括從快取訊息篩選和提供服務。
-   + 開發: `DEBUG`
-   + 測試: `WARN`
-   + 生產: `ERROR`
+   + 開發： `DEBUG`
+   + 分段： `WARN`
+   + 生產： `ERROR`
 
 ## Cloud Manager{#cloud-manager}
 
@@ -172,9 +170,9 @@ __Pod cm-p12345-e56789-aem-author-abcdefg-2222__
 Adobe對於每個AEMas a Cloud Service環境的記錄層級的一般指導為：
 
 + 本機開發(AEM SDK)： `DEBUG`
-+ 開發: `DEBUG`
-+ 測試: `WARN`
-+ 生產: `ERROR`
++ 開發： `DEBUG`
++ 分段： `WARN`
++ 生產： `ERROR`
 
 為每個環境型別設定最適當的記錄層級是，使用AEMas a Cloud Service，記錄層級在程式碼中維護
 

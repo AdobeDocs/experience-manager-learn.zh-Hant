@@ -9,7 +9,8 @@ feature: Document Security
 topic: Development
 index: y
 exl-id: 086afdf4-c9a4-4bb9-b242-e6337281ef9b
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 144
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -18,6 +19,6 @@ ht-degree: 0%
 
 # 如何套用Acrobat中使用Document Security模組建立的原則
 
-*本影片將逐步說明套用在Acrobat中使用Document Security模組建立之原則的過程。*
+*此影片會逐步解說在Acrobat中套用使用Document Security模組建立之原則的過程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335486?quality=12&learn=on)

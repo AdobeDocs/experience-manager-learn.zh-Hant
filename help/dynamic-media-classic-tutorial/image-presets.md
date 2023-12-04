@@ -7,9 +7,10 @@ role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: e472db7c-ac3f-4f66-85af-5a4c68ba609e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 164
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '648'
 ht-degree: 1%
 
 ---
@@ -30,7 +31,7 @@ ht-degree: 1%
 >
 >調整影像大小時，外觀比例（影像寬度與高度的比例）應一律保持成比例，以免影像失真。
 
-影像預設集名稱兩側都有一個貨幣符號($)，並緊跟在問號(？)後面。 分隔符號.
+影像預設集名稱兩側都有一個貨幣符號($)，並緊跟在問號(？)後面。 分隔符號。
 
 >[!TIP]
 >

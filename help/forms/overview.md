@@ -5,32 +5,30 @@ topic: Development
 role: Developer
 sub-product: Experience Manager Forms
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 96ff44c4b9806205682ab305d391614f92bb2536
+duration: 98
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
 
 # AEM Forms教學課程和影片 {#overview}
 
-Adobe Experience Manager (AEM)提供易用的解決方案，可建立、管理、發佈和更新複雜的數位表格，同時與後端流程、商業規則和資料整合。 本使用手冊包含了AEM Forms許多功能的相關影片和教學課程
+Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管理、發佈和更新複雜的數位表格，同時與後端流程、商業規則和資料整合。 本使用手冊包含了有關AEM Forms許多功能的影片和教學課程
 
 <div id="whats-new-section">
 
 ## 新增功能
 
 * **[處理呼叫表單資料模型服務步驟中的錯誤訊息](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
-
-   *工作流程模型中的變數是根據其資料型別儲存值的方法*
+  *工作流程模型中的變數是根據其資料型別儲存值的方式*
 
 * **[互動式通訊檔案中的多系列圖表（影片）](./interactive-communications/multiseriescharts.md)**
-
-   *在同一張圖表中繪製多個系列。 多系列圖表通常與折線圖、長條圖、直條圖型別關聯使用。*
+  *在同一張圖表中繪製多個數列。 多系列圖表通常與折線圖、長條圖、直條圖型別關聯使用。*
 
 * **[建立可重複使用的工作流程模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
-
-   *建立未繫結至特定表單的工作流程模型*
+  *建立未繫結至特定表單的工作流程模型*
 
 </div>
 
@@ -43,7 +41,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，可建立、管理�
 
 <div id="staff-picks-section">
 
-## 工作人員選擇
+## 員工精選
 
 <table>
 <tr>
@@ -57,7 +55,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，可建立、管理�
     </a>
     </div>
     <p>
-    <em>調適型表單是新一代的表單，可動態且回應。 您可以使用調適型表單來提供個人化體驗</em>
+    <em>調適型表單是新一代的表單，不但動態且回應迅速。 您可以使用調適型表單來提供個人化體驗</em>
     <p>
   </td>
    <td>
@@ -70,7 +68,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，可建立、管理�
     </a>
     </div>
     <p>
-    <em>互動式通訊可集中處理及管理安全、個人化與互動式通訊的建立、集合與傳遞，例如商務信函、檔案、對帳單、利益通知、行銷郵件、帳單和歡迎套件。 </em>
+    <em>「互動式通訊」可集中處理及管理安全、個人化與互動式通訊的建立、集合與傳遞，例如商務信函、檔案、對帳單、福利通知、行銷郵件、帳單和歡迎套件。 </em>
     <p>
   </td>
   <td>
@@ -83,7 +81,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，可建立、管理�
     </a>
     </div>
     <p>
-    <em>在AEM Workflow中啟動表單資料模型服務作為步驟</em>
+    <em>啟動表單資料模型服務作為AEM Workflow中的步驟</em>
     <p>
   </td>
 </tr>

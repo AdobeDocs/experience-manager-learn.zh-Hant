@@ -2,20 +2,18 @@
 title: 設定環境變數以增加Asset compute擴充性
 description: 環境變數會保留在.env檔案中以供本機開發使用，並用來提供本機開發所需的Adobe I/O憑證和雲端儲存空間憑證。
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6270
 thumbnail: KT-6270.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: c63c5c75-1deb-4c16-ba33-e2c338ef6251
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 171
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---

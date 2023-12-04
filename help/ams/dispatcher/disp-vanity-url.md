@@ -9,10 +9,11 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 286
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 4%
+source-wordcount: '988'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +48,7 @@ AEM作者可選擇在AEM中為內容設定虛名URL屬性並將其發佈。
 
 作者也可以選取 _重新導向虛名URL_ 新增時的核取方塊 _虛名URL_ 登入點，會導致虛名url的行為如302重新導向。 這表示瀏覽器被告知前往新URL (透過 `Location` 回應標頭)，且瀏覽器會向新URL提出新要求。
 
-#### 觸控式 UI:
+#### 觸控式UI：
 
 ![網站編輯器畫面上AEM編寫UI的下拉式對話方塊選單](assets/disp-vanity-url/aem-page-properties-drop-down.png "aem-page-properties-drop-down")
 

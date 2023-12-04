@@ -10,10 +10,11 @@ mini-toc-levels: 1
 jira: KT-7131
 thumbnail: KT-7131.jpg
 exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 655
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2357'
-ht-degree: 7%
+source-wordcount: '2137'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +36,7 @@ ht-degree: 7%
 
 ## 作者發佈部署模式 {#deployment-pattern}
 
-完整的 AEM 環境由編寫、發佈和 Dispatcher 組成。編寫服務是內部使用者建立、管理和預覽內容的地方。Publish服務會視為「即時」環境，通常是使用者與之互動的對象。 內容在編寫服務上經編輯和核准後，將傳遞到發佈服務。
+完整的 AEM 環境由編寫、發佈和 Dispatcher 組成。Author服務是內部使用者建立、管理和預覽內容的地方。 Publish服務會視為「即時」環境，通常是使用者與之互動的對象。 在Author服務上編輯和核准後的內容會散發到Publish服務。
 
 AEM Headless 應用程式最常見的部署模式是讓應用程式的生產版本連接到 AEM Publish 服務。
 
@@ -46,7 +47,7 @@ AEM Headless 應用程式最常見的部署模式是讓應用程式的生產版�
 1. A **內容作者** 使用AEM作者服務來建立、編輯及管理內容。
 2. **內容作者**&#x200B;和其他內部使用者可以直在作者服務預覽內容。可以設定連接到作者服務的應用程式預覽版本。
 3. 內容獲得核准後，就可以 **已發佈** 至AEM Publish服務。
-4. **一般使用者是與應用程式生產版本互動。**&#x200B;生產應用程式會連線至發佈服務，並使用GraphQL API來請求和使用內容。
+4. **一般使用者** 與應用程式的生產版本互動。 生產應用程式會連線至發佈服務，並使用GraphQL API來請求和使用內容。
 
 本教學課程會將AEM Publish例項新增至目前的設定，以模擬上述部署。 在之前的章節中，React應用程式會直接連線至Author例項，以作為預覽。 React應用程式的生產組建會部署至連線到新發佈執行個體的靜態Node.js伺服器。
 

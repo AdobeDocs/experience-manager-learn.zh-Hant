@@ -11,7 +11,8 @@ role: Developer
 level: Experienced
 exl-id: b278652f-6c09-4abc-b92e-20bfaf2e791a
 last-substantial-update: 2020-11-07T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 62
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 2%
@@ -37,7 +38,7 @@ ht-degree: 2%
 此內容的對象預計會在以下領域有一些體驗：
 
 * 最適化表單
-* 表單資料模式
+* 表單資料模型
 * OSGi服務/元件
 * AEM使用者端資料庫
 

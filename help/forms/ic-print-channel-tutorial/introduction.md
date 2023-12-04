@@ -1,33 +1,29 @@
 ---
-title: 為列印頻道建立您的第一個互動式通訊
-seo-title: Creating your first interactive communication for the print channel
-description: 互動式通訊是AEM Forms 6.4的新功能。本檔案將引導您完成為列印頻道建立互動式通訊所需的步驟。
-seo-description: Interactive Communications is new to AEM Forms 6.4. This document will walk you through the steps needed to create an interactive communication for the print channel.
+title: 為列印管道建立您的第一個互動式通訊
+description: 互動式通訊是AEM Forms 6.4的新功能。本檔案將逐步引導您完成為列印管道建立互動式通訊所需的步驟。
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 1949aeff-ae56-4abd-8e63-23c2fb4859f2
 last-substantial-update: 2019-08-07T00:00:00Z
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+duration: 49
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '174'
 ht-degree: 4%
 
 ---
 
-# 為列印頻道建立您的第一個互動式通訊
+# 為列印管道建立您的第一個互動式通訊
 
-互動式通訊是AEM Forms 6.4的新功能。本檔案將引導您完成為列印頻道建立互動式通訊所需的步驟。
+互動式通訊是AEM Forms 6.4的新功能。本檔案將逐步引導您完成為列印管道建立互動式通訊所需的步驟。
 
-## 必備條件 {#prerequistes}
+## 先決條件 {#prerequistes}
 
-[使用封裝管理程式，將本教學課程的相關資產下載並匯入至AEM。](assets/gettingstartedassets.zip)此zip檔案包含影像、檔案片段、觀察資料夾設定和配置檔案(xdp)作為資產封裝的一部分
+[使用套件管理器下載與本教學課程相關的資產並將其匯入至AEM。](assets/gettingstartedassets.zip)此zip檔案包含影像、檔案片段、watched資料夾設定和配置檔案(xdp)作為資產封裝的一部分
 
 [下載並解壓縮此檔案。](assets/warfileandswaggerfile.zip) 此檔案包含需要部署至Tomcat的SampleRest.war檔案，以及需要用來設定資料來源的Swagger檔案。
 

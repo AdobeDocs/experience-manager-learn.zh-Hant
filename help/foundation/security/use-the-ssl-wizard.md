@@ -9,10 +9,11 @@ role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
 last-substantial-update: 2023-08-08T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 615
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 1%
+source-wordcount: '448'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +34,7 @@ ht-degree: 1%
 
 瀏覽至 __AEM作者>工具>安全性> SSL設定__，然後開啟 __SSL設定精靈__.
 
-![SSL 設定精靈](assets/use-the-ssl-wizard/ssl-config-wizard.png)
+![SSL設定精靈](assets/use-the-ssl-wizard/ssl-config-wizard.png)
 
 ### 建立存放區認證
 

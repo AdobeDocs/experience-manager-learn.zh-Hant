@@ -9,10 +9,11 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 6c504710-be8f-4b44-bd8a-aaf480ae6d8a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 910
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 5%
+source-wordcount: '230'
+ht-degree: 0%
 
 ---
 
@@ -53,7 +54,7 @@ ht-degree: 5%
    -->
    ```
 
-1. （可選）重複最後一個步驟，允許元件位於 [可編輯範本的鎖定（初始）內容](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/page-templates-editable.html) 將透過提供 [!DNL SDI] 以及。 額外設定的原因是提供可編輯範本的鎖定內容 `/conf` 而非 `/content`.
+1. （可選）重複最後一個步驟，允許元件位於 [可編輯範本的鎖定（初始）內容](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html) 將透過提供 [!DNL SDI] 以及。 額外設定的原因是提供可編輯範本的鎖定內容 `/conf` 而非 `/content`.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>

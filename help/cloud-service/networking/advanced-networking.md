@@ -10,10 +10,11 @@ jira: KT-9354
 thumbnail: KT-9354.png
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 157
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 5%
+source-wordcount: '450'
+ht-degree: 2%
 
 ---
 
@@ -60,7 +61,7 @@ AEM進階網路由三個選項組成，用於管理與外部服務的連線。 C
     </td>   
    <td>
       <a  href="./vpn.md"><img alt="虛擬私人網路 (VPN)" src="./assets/vpn.png"/></a>
-      <div><strong><a href="./vpn.md">虛擬私人網路 (VPN)</a></strong></div>
+      <div><strong><a href="./vpn.md">虛擬私人網路(VPN)</a></strong></div>
       <p>
         保護客戶或廠商基礎架構與AEMas a Cloud Service之間的流量。
       </p>

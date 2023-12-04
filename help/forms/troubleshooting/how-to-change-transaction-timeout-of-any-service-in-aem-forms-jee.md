@@ -1,5 +1,5 @@
 ---
-title: 如何變更AEM Forms JEE中服務的交易逾時
+title: 如何在AEM Forms JEE中變更服務的交易逾時
 description: 在AEM Forms JEE中增加或減少服務交易逾時的步驟
 type: Troubleshooting
 role: Admin
@@ -8,14 +8,15 @@ version: 6.5
 topic: Administration
 index: y
 exl-id: 3f30b17b-2e69-4b77-97fc-3df5a273d002
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 72
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
 
 ---
 
-# 如何變更AEM Forms JEE中服務的交易逾時
+# 如何在AEM Forms JEE中變更服務的交易逾時
 
 *本影片逐步解說在AEM Forms JEE中變更服務交易逾時的步驟。*
 

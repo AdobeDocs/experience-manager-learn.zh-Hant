@@ -1,5 +1,5 @@
 ---
-title: Designer預覽PDF已停用 — 如何啟用預覽PDF
+title: 已停用設計工具預覽PDF — 如何啟用預覽PDF
 description: 在Designer中設定PDF預覽的步驟
 type: Troubleshooting
 role: Developer
@@ -9,7 +9,8 @@ feature: Designer
 topic: Development
 index: y
 exl-id: 0d5fb8d1-5aa2-40c7-b1c9-e4b5319e8d36
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 50
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%

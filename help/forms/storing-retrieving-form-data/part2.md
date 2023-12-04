@@ -1,5 +1,5 @@
 ---
-title: 儲存和擷取MySQL資料庫的表單資料 — 儲存表單資料的Servlet
+title: 從MySQL資料庫儲存及擷取表單資料 — 儲存表單資料的Servlet
 description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
 feature: Adaptive Forms
 type: Tutorial
@@ -8,7 +8,8 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: dd82f309-dd4e-42ce-8856-e51c898024f5
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+duration: 75
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 # 儲存表單資料的Servlet
 
-下一步是建立將插入或更新表單資料的servlet。 此servlet會呼叫OSGi服務的適當方法，以插入或更新資料庫。 儲存的最適化表單資料會與GUID相關聯。 然後會使用相同的GUID來更新表單資料。 當按一下「SaveAndContinueLater」按鈕時，就會呼叫此servlet。
+下一步是建立將插入或更新表單資料的servlet。 此servlet會呼叫OSGi服務的適當方法來插入或更新資料庫。 儲存的自適應表單資料會與GUID相關聯。 然後會使用相同的GUID來更新表單資料。 當按一下「SaveAndContinueLater」按鈕時，就會呼叫此servlet。
 
 ```java
 package com.aemforms.saveandcontinue.core.servlets;

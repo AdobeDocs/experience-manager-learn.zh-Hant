@@ -1,6 +1,6 @@
 ---
-title: 從單一資料檔案產生多個pdf
-description: OutputService提供許多使用表單設計建立檔案的方法，以及要與表單設計合併的資料。 瞭解如何從包含多個個別記錄的一個大型xml產生多個pdf。
+title: 從單一資料檔案產生多個PDF
+description: OutputService提供許多使用表單設計建立檔案的方法，以及要與表單設計合併的資料。 瞭解如何從包含多個個別記錄的一個大型xml產生多個PDF。
 feature: Output Service
 version: 6.4,6.5
 topic: Development
@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
 last-substantial-update: 2020-01-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 199
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
@@ -22,10 +23,10 @@ OutputService提供許多使用表單設計建立檔案的方法，以及要與�
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-資料xml有2筆記錄。 每個記錄由form1元素表示。 此xml傳遞至OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) 我們會取得pdf檔案清單（每個記錄一個） generatePDFOutputBatch方法的簽章會採用下列引數
+資料xml有2筆記錄。 每個記錄由form1元素表示。 此xml傳遞至OutputService [generatePDFOutputBatch方法](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) 我們取得pdf檔案清單（每個記錄一個） generatePDFOutputBatch方法的簽章會採用下列引數
 
-* 範本 — 包含範本的對應，以索引鍵識別
-* 資料 — 包含xml資料檔案的對應，以索引鍵識別
+* 範本 — 包含範本（以索引鍵識別）的對應
+* 資料 — 包含xml資料檔案的對應，由索引鍵識別
 * pdfOutputOptions — 設定pdf產生程式的選項
 * batchoptions — 設定批次的選項
 
@@ -33,11 +34,11 @@ OutputService提供許多使用表單設計建立檔案的方法，以及要與�
 
 ## 使用案例詳細資訊{#use-case-details}
 
-在此使用案例中，我們將提供簡單的網頁介面來上傳範本和資料(xml)檔案。 一旦檔案上傳完成，系統就會將POST要求傳送至AEM servlet。 此servlet會擷取檔案並呼叫OutputService的generatePDFOutputBatch方法。 產生的pdf會壓縮成zip檔案，以供一般使用者從網頁瀏覽器下載。
+在此使用案例中，我們將提供簡單的網頁介面以上傳範本和資料(xml)檔案。 一旦檔案上傳完成，系統就會將POST要求傳送至AEM servlet。 此servlet會擷取檔案，並呼叫OutputService的generatePDFOutputBatch方法。 產生的pdf會壓縮成zip檔案，以供一般使用者從網頁瀏覽器下載。
 
 ## Servlet程式碼{#servlet-code}
 
-以下是servlet的程式碼片段。 程式碼會從要求中擷取範本(xdp)和資料檔案(xml)。 範本檔案會儲存至檔案系統。 已建立兩個對映 — 分別包含範本和xml（資料）檔案的templateMap和dataFileMap。 然後呼叫DocumentServices服務的generateMultipleRecords方法。
+以下是servlet中的程式碼片段。 程式碼會從請求中擷取範本(xdp)和資料檔案(xml)。 範本檔案會儲存至檔案系統。 已建立兩個對映 — 分別包含範本和xml（資料）檔案的templateMap和dataFileMap。 然後呼叫DocumentServices服務的generateMultipleRecords方法。
 
 ```java
 for (final java.util.Map.Entry < String, org.apache.sling.api.request.RequestParameter[] > pairs: params
@@ -130,7 +131,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 * [部署DevelopingWithServiceUser套裝](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
 * [部署自訂AEMFormsDocumentServices套裝](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).使用OutputService API產生PDF的自訂套件
 * [將瀏覽器指向封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* [匯入並安裝套件](assets/generate-multiple-pdf-from-xml.zip). 此套件包含html頁面，可讓您放置範本和資料檔案。
+* [匯入及安裝套件](assets/generate-multiple-pdf-from-xml.zip). 此封裝包含html頁面，可讓您放置範本和資料檔案。
 * [將瀏覽器指向MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html？)
 * 將範本和xml資料檔案拖放在一起
 * 下載已建立的zip檔案。 此zip檔案包含輸出服務產生的pdf檔案。

@@ -8,9 +8,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1753
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '4571'
+source-wordcount: '4460'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 * [完成的教學課程套件](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教學課程假設您具備以下基本知識 [AEM開發實務](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/the-basics.html) 並且熟悉 [AEM Maven專案設定](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/ht-projects-maven.html). 所有提及的程式碼都是為了當作參考使用，且僅應部署至 [本機開發AEM執行個體](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted).
+本教學課程假設您具備以下基本知識 [AEM開發實務](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/the-basics.html) 並且熟悉 [AEM Maven專案設定](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ht-projects-maven.html). 所有提及的程式碼都是為了當作參考使用，且僅應部署至 [本機開發AEM執行個體](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted).
 
 ## 專案範本的結構
 
@@ -254,7 +255,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 
 1. 選取自訂範本後，按一下「下一步」，並注意當填入專案成員時，您可以將他們新增為核准者角色。
 
-   ![批准](./assets/develop-aem-projects/user-approver.png)
+   ![核准](./assets/develop-aem-projects/user-approver.png)
 
 1. 按一下「建立」，根據自訂範本完成建立專案。 您會在「專案控制面板」上注意到「任務拼貼」和在「小工具」下設定的其他拼貼會自動顯示。
 

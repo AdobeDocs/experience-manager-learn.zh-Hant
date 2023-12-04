@@ -9,9 +9,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 03cdf5d1-3253-44c9-ae1f-ec5d3c562427
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 177
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -32,7 +33,7 @@ Apache [!DNL Sling Models] 1.3.0引入 [!DNL Sling Model Exporter]，優雅的�
 
 1. [!DNL HTTP GET] 已向AEM中的資源提出請求。
 
-   範例: `HTTP GET /content/my-resource.html`
+   範例： `HTTP GET /content/my-resource.html`
 
 1. 根據請求資源的 `sling:resourceType`，則會解析適當的指令碼。
 
@@ -56,7 +57,7 @@ Apache [!DNL Sling Model Exporter] 隨附於Sling提供的Jackson Exporter，可
 
 1. AEM中的資源會發出HTTPGET要求，選擇器和擴充功能會註冊至 [!DNL Sling Model]的匯出工具。
 
-   範例: `HTTP GET /content/my-resource.model.json`
+   範例： `HTTP GET /content/my-resource.model.json`
 
 1. Sling解析請求資源的 `sling:resourceType`，此元件為動態產生的Sling Exporter Servlet的選擇器和擴充功能，此元件已對應至 [!DNL Sling Model] 使用匯出工具。
 1. 已解析的Sling匯出工具Servlet會叫用 [!DNL Sling Model Exporter] 針對 [!DNL Sling Model] 根據請求或資源改寫的物件（由Sling模型改寫決定）。

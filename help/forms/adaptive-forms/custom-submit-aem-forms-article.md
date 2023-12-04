@@ -1,6 +1,6 @@
 ---
 title: 在AEM Forms中撰寫自訂提交
-description: 快速輕鬆建立您自己的Adaptive Form自訂提交動作
+description: 快速輕鬆建立您自己的自訂最適化表單提交動作
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -8,21 +8,22 @@ role: Developer
 level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
-source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
+duration: 74
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '205'
 ht-degree: 1%
 
 ---
 
 # 在AEM Forms中撰寫自訂提交 {#writing-a-custom-submit-in-aem-forms}
 
-快速輕鬆建立您自己的Adaptive Form自訂提交動作
+快速輕鬆建立您自己的自訂最適化表單提交動作
 
-本文將逐步引導您完成建立自訂提交動作以處理Adaptive Forms提交所需的步驟。
+本文將逐步引導您執行建立自訂提交動作以處理最適化Forms提交所需的步驟。
 
 * 登入crx
-* 在應用程式下建立「sling：folder」型別的節點。 讓我們呼叫此節點CustomSubmitHelpx。
+* 在應用程式底下建立「sling：folder」型別的節點。 讓我們呼叫此節點CustomSubmitHelpx。
 * 儲存新建立的節點。
 * 將下列三個屬性新增至新建立的節點
 
@@ -34,7 +35,7 @@ ht-degree: 1%
 
 
 * 儲存變更
-* 在CustomSubmitHelpx節點下建立名為post.submit.jsp的新檔案。提交最適化表單時，會呼叫此POST。 您可以視需要在此檔案中撰寫JSP程式碼。 以下程式碼會將請求轉送給servlet。
+* 在CustomSubmitHelpx節點下建立名為post.js.jsp的新檔案。提交最適化表單時，會呼叫此POST。 您可以視需要在此檔案中撰寫JSP程式碼。 以下程式碼會將請求轉送給servlet。
 
 ```java
 <%
@@ -66,6 +67,6 @@ ht-degree: 1%
 
 * 儲存您的變更
 
-現在您會開始在最適化表單的提交動作中看到「CustomSubmitHelpx」，如下圖所示。
+現在，您會開始在最適化表單的提交動作中看到「CustomSubmitHelpx」，如本圖所示。
 
 ![具有自訂提交的最適化表單](assets/capture-2.gif)

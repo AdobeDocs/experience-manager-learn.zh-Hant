@@ -1,6 +1,6 @@
 ---
 title: 條碼服務搭配最適化Forms
-description: 使用條碼服務將條碼解碼，並從擷取的資料填入表單欄位。
+description: 使用條碼服務，將條碼解碼並從擷取的資料填入表單欄位。
 feature: Barcoded Forms
 version: 6.4,6.5
 topic: Development
@@ -8,23 +8,24 @@ role: Developer
 level: Intermediate
 exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
 last-substantial-update: 2020-02-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 169
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
 
 # 條碼服務搭配最適化Forms{#barcode-service-with-adaptive-forms}
 
-本文將示範如何使用條碼服務填入調適型表單。 使用案例如下：
+本文將示範如何使用條碼服務填入最適化表單。 使用案例如下：
 
 1. 使用者新增帶有條碼的PDF作為最適化表單附件
-1. 附件的路徑已傳送至servlet
-1. 此servlet將條碼解碼，並傳回JSON格式的資料
-1. 最適化表單接著會使用解碼的資料填入
+1. 附件的路徑已傳送到servlet
+1. 此servlet將條碼解碼並傳回JSON格式的資料
+1. 最適化表單接著會使用解碼資料填入
 
-下列程式碼會解碼條碼，並使用解碼的值填入JSON物件。 然後，servlet會在回應呼叫的應用程式時傳回JSON物件。
+下列程式碼會解碼條碼，並將解碼的值填入JSON物件。 然後，servlet會在回應呼叫的應用程式時傳回JSON物件。
 
 
 
@@ -54,7 +55,7 @@ public JSONObject extractBarCode(Document pdfDocument) {
  }
 ```
 
-以下是servlet程式碼。 當使用者將附件新增到最適化表單時，會呼叫此servlet。 此servlet會將JSON物件傳回呼叫的應用程式。 然後，呼叫應用程式會使用從JSON物件擷取的值填入調適型表單。
+以下是servlet程式碼。 當使用者將附件新增至最適化表單時，就會呼叫此servlet。 此servlet會將JSON物件傳回呼叫的應用程式。 然後，呼叫應用程式會使用從JSON物件擷取的值填入調適型表單。
 
 ```java
 @Component(service = Servlet.class, property = {
@@ -94,7 +95,7 @@ public class DecodeBarCode extends SlingSafeMethodsServlet {
 }
 ```
 
-下列程式碼為最適化表單所參考的使用者端程式庫的一部分。 當使用者將附件新增到最適化表單時，就會觸發此程式碼。 程式碼會對servlet進行GET呼叫，並在要求引數中傳遞附件的路徑。 接著會使用從servlet呼叫收到的資料填入最適化表單。
+下列程式碼為最適化表單所參考的使用者端程式庫的一部分。 當使用者將附件新增到最適化表單時會觸發此程式碼。 程式碼會對servlet進行GET呼叫，並在要求引數中傳遞附件的路徑。 接著會使用從servlet呼叫收到的資料來填入調適型表單。
 
 ```javascript
 $(document).ready(function()
@@ -131,17 +132,17 @@ $(document).ready(function()
 
 >[!NOTE]
 >
->此套件隨附的最適化表單是使用AEM Forms 6.4建置。如果您打算在AEM Forms 6.3環境中使用此套件，請在AEM Form 6.3中建立最適化表單
+>此套件隨附的最適化表單是使用AEM Forms 6.4建置的。如果您打算在AEM Forms 6.3環境中使用此套件，請在AEM Form 6.3中建立最適化表單
 
-第12行 — 取得服務解析程式的自訂程式碼。 此套件組合已包含在此文章資產中。
+第12行 — 用於取得服務解析程式的自訂程式碼。 此套件組合已納入到本文資產中。
 
-第23行 — 呼叫DocumentServices extractBarCode方法，以取得填入已解碼資料的JSON物件
+第23行 — 呼叫DocumentServices extractBarCode方法以取得填入已解碼資料的JSON物件
 
-若要讓此程式在您的系統上執行，請遵循下列步驟：
+若要在系統上執行此檔案，請遵循下列步驟：
 
-1. [下載BarcodeService.zip](assets/barcodeservice.zip) 並使用封裝管理程式匯入至AEM
+1. [下載BarcodeService.zip](assets/barcodeservice.zip) 並使用封裝管理員匯入至AEM
 1. [下載並安裝自訂DocumentServices套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-1. [下載並安裝DevelopingWithServiceUser套裝](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. [下載並安裝DevelopingWithServiceUser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下載範例PDF表單](assets/barcode.pdf)
 1. 將瀏覽器指向 [最適化表單範例](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
 1. 上傳提供的範例PDF

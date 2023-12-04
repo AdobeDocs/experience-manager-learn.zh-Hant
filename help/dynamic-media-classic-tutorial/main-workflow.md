@@ -7,10 +7,11 @@ role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: 04aacd81-bbb2-4742-9306-f0eabc665a41
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 700
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2703'
-ht-degree: 1%
+source-wordcount: '2658'
+ht-degree: 0%
 
 ---
 
@@ -60,7 +61,7 @@ Dynamic Media Classic解決方案的工作流程包含三個主要步驟：
 - **任何檔案夾內若有基本資產名稱/副檔名相同者，將予以覆寫**.
 取代影像的副檔名必須與原始影像相同（例如，chair.jpg必須取代chair.jpg，而非chair.tif ）。 不過，您可以將取代影像上傳到與原始影像不同的資料夾。 更新後的影像位於新資料夾中；檔案無法再在其原始位置找到。
 
-- **任何檔案夾內若有基本資產名稱相同者 (無論副檔名為何)，將予以覆寫**.
+- **任何檔案夾內若有基本資產名稱相同者（無論副檔名為何），將予以覆寫**.
 此選項是最具包容性的取代規則。 您可以將取代影像上傳到與原始檔案不同的資料夾、上傳副檔名不同的檔案，以及取代原始檔案。 如果原始檔案位於不同的資料夾中，則取代影像會位於其上載至的新資料夾中。
 
 進一步瞭解 [覆寫影像選項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option).

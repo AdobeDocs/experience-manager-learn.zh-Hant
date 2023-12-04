@@ -2,10 +2,7 @@
 title: 服務認證
 description: 瞭解如何使用服務認證，這些認證可用來協助外部應用程式、系統和服務，以程式設計方式透過HTTP與作者或發佈服務互動。
 version: Cloud Service
-topics: Development, Security
 feature: APIs
-activity: develop
-audience: developer
 jira: KT-6785
 thumbnail: 330519.jpg
 topic: Headless, Integrations
@@ -14,9 +11,10 @@ level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1037
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1930'
 ht-degree: 0%
 
 ---

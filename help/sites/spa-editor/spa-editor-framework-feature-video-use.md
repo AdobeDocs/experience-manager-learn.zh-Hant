@@ -10,10 +10,11 @@ jira: KT-1047
 thumbnail: 22229.jpg
 doc-type: Feature Video
 exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 492
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 6%
+source-wordcount: '237'
+ht-degree: 1%
 
 ---
 
@@ -39,4 +40,4 @@ WKND SPA實作僅支援AEM 6.4.8+、AEM 6.5.5+和AEMas a Cloud Service。
 
 如需使用SPA編輯器開發的詳細教學課程，請參閱：
 
-* [AEM SPA Editor and React 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+* [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)

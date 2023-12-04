@@ -11,47 +11,48 @@ thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
 exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+duration: 1773
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1396'
-ht-degree: 1%
+source-wordcount: '1289'
+ht-degree: 0%
 
 ---
 
 # 使用OpenAI產生AEM影像資產
 
-瞭解如何使用OpenAI或DALL.E 2產生影像，並將其上傳至AEM DAM以加速內容。
+瞭解如何使用OpenAI或DALL.E 2產生影像，並將其上傳至AEM DAM以提供內容速度。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413093?quality=12&learn=on)
 
-此範例AEM內容片段控制檯擴充功能為 [動作列](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) 使用從自然語言輸入產生數位影像的擴充功能 [OpenAI API](https://openai.com/api/) 或 [DALL.E 2](https://openai.com/dall-e-2/). 產生的影像已上傳至AEM DAM，且所選內容片段的影像屬性已更新，以參考這個從DAM新產生的上傳影像。
+此範例AEM內容片段控制檯擴充功能為 [動作列](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) 使用從自然語言輸入產生數位影像的擴充功能 [OpenAI API](https://openai.com/api/) 或 [DALL.E 2](https://openai.com/dall-e-2/). 產生的影像會上傳至AEM DAM，而所選內容片段的影像屬性會更新，以參考這個從DAM新產生的上傳影像。
 
 在此範例中，您將瞭解：
 
 1. 使用產生影像 [OpenAI API](https://beta.openai.com/docs/guides/images/image-generation-beta) 或 [DALL.E 2](https://openai.com/dall-e-2/)
-2. 正在將影像上傳至AEM
+2. 正在將影像上傳到AEM
 3. 內容片段屬性更新
 
 範例擴充功能的功能流程如下：
 
-![用於數位影像產生的Adobe I/O Runtime動作流程](./assets/digital-image-generation/flow.png){align="center"}
+![數位影像產生的Adobe I/O Runtime動作流程](./assets/digital-image-generation/flow.png){align="center"}
 
 1. 選取內容片段並按一下擴充功能的 `Generate Image` 中的按鈕 [動作列](#extension-registration) 開啟 [強制回應](#modal).
-1. 此 [強制回應](#modal) 顯示使用建立的自訂輸入表單 [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/).
-1. 提交表單會傳送使用者提供的 `Image Description` 文字、選取的內容片段和AEM主機 [自訂Adobe I/O Runtime動作](#adobe-io-runtime-action).
+1. 此 [強制回應](#modal) 顯示使用建置的自訂輸入表單 [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/).
+1. 提交表單會傳送提供的使用者 `Image Description` AEM文字、選定的內容片段和 [自訂Adobe I/O Runtime動作](#adobe-io-runtime-action).
 1. 此 [Adobe I/O Runtime動作](#adobe-io-runtime-action) 驗證輸入。
-1. 接著，它會呼叫OpenAI的 [影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) API及其使用 `Image Description` 文字，指定應產生何種影像。
+1. 接著，它會呼叫OpenAI的 [影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) API及其使用 `Image Description` 文字，指定應該產生何種影像。
 1. 此 [影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) 端點會建立大小的原始影像 _1024x1024_ 使用提示要求引數值的畫素，並傳回產生的影像URL作為回應。
-1. 此 [Adobe I/O Runtime動作](#adobe-io-runtime-action) 將產生的影像下載至App Builder執行階段。
-1. 接下來，它會以預先定義的路徑，從App Builder執行階段將影像上傳至AEM DAM。
-1. AEMas a Cloud Service會將影像儲存至DAM，並針對Adobe I/O Runtime動作傳回成功或失敗回應。 成功的上傳回應會使用Adobe I/O Runtime動作傳至AEM的另一個HTTP請求，更新所選內容片段的影像屬性值。
-1. 強制回應視窗會接收Adobe I/O Runtime動作的回應，並提供新產生之上傳影像的AEM資產詳細資料連結。
+1. 此 [Adobe I/O Runtime動作](#adobe-io-runtime-action) 將產生的影像下載到App Builder執行階段。
+1. 接下來，它會根據預先定義的路徑，從App Builder執行階段將影像上傳至AEM DAM。
+1. AEMas a Cloud Service會將影像儲存至DAM，並針對Adobe I/O Runtime動作傳回成功或失敗回應。 成功的上傳回應會使用Adobe I/O Runtime動作中傳送至AEM的另一個HTTP請求，更新所選內容片段的影像屬性值。
+1. 強制回應視窗會收到Adobe I/O Runtime動作的回應，並提供新產生之上傳影像的AEM資產詳細資料連結。
 
 ## 擴充點
 
-此範例延伸至擴充點 `actionBar` 以新增自訂按鈕到內容片段主控台。
+此範例會延伸至擴充點 `actionBar` 以新增自訂按鈕到內容片段控制檯。
 
-| AEM UI延伸 | 擴充點 |
+| AEM UI已擴充 | 擴充點 |
 | ------------------------ | --------------------- | 
 | [內容片段主控台](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [動作列](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
@@ -61,10 +62,10 @@ ht-degree: 1%
 
 + 您要搜尋哪些範本？： `All Extension Points`
 + 選擇要安裝的範本：` @adobe/aem-cf-admin-ui-ext-tpl`
-+ 您要將擴充功能取什麼名稱？： `Image generation`
++ 您要如何命名擴充功能？： `Image generation`
 + 提供擴充功能的簡短說明： `An example action bar extension that generates an image using OpenAI and uploads it to AEM DAM.`
 + 您想要從哪個版本開始？： `0.0.1`
-+ 您接下來想要做什麼？
++ 您接下來要做什麼？
    + `Add a custom button to Action Bar`
       + 提供按鈕的標簽名稱： `Generate Image`
       + 您必須顯示按鈕的強制回應視窗嗎？ `y`
@@ -90,7 +91,7 @@ ht-degree: 1%
        ...
    ```
 
-1. 通過 `OPENAI_API_KEY` 作為Adobe I/O Runtime動作的引數，更新 `src/aem-cf-console-admin-1/ext.config.yaml`
+1. 通過 `OPENAI_API_KEY` 請更新Adobe I/O Runtime動作引數， `src/aem-cf-console-admin-1/ext.config.yaml`
 
    ```yaml
        ...
@@ -110,14 +111,14 @@ ht-degree: 1%
        ...
    ```
 
-1. 安裝在Node.js程式庫底下
+1. 安裝在Node.js程式庫下方
    1. [OpenAI Node.js資料庫](https://github.com/openai/openai-node#installation)  — 輕鬆叫用OpenAI API
    1. [AEM上傳](https://github.com/adobe/aem-upload#install)  — 將影像上傳至AEM-CS執行個體。
 
 
 >[!TIP]
 >
->在以下章節中，您將瞭解關鍵React和Adobe I/O Runtime動作JavaScript檔案。 金鑰檔案的來源 `web-src` 和  `actions` AppBuilder專案的資料夾，請參閱 [adobe-appbuilder-cfc-ext-image-generation-code.zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
+>在以下章節中，您將瞭解關鍵React和Adobe I/O Runtime動作JavaScript檔案。 重要檔案的參考來源 `web-src` 和  `actions` 中提供的資料夾，請參閱 [adobe-appbuilder-cfc-ext-image-generation-code.zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
 
 
 ### 應用程式路由{#app-routes}
@@ -126,15 +127,15 @@ ht-degree: 1%
 
 路由的邏輯集合有兩種：
 
-1. 第一個路由會將請求對應至 `index.html`，會叫用負責以下專案的React元件： [延伸註冊](#extension-registration).
+1. 第一個路由將請求對應至 `index.html`，會叫用負責 [延伸註冊](#extension-registration).
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
    ```
 
-1. 第二組路由會將URL對應至轉譯擴充功能強制回應內容的React元件。 此 `:selection` param代表分隔的清單內容片段路徑。
+1. 第二組路由會將URL對應至轉譯擴充功能模組內容的React元件。 此 `:selection` param代表分隔清單內容片段路徑。
 
-   如果擴充功能有多個按鈕可叫用分散式動作，則每個 [延伸註冊](#extension-registration) 對應至此處定義的路由。
+   如果擴充功能有多個按鈕可叫用分散式動作，每個按鈕 [延伸註冊](#extension-registration) 對應至此處定義的路由。
 
    ```javascript
    <Route
@@ -145,10 +146,10 @@ ht-degree: 1%
 
 ### 擴充功能註冊
 
-`ExtensionRegistration.js`，對應至 `index.html` route是AEM擴充功能的入口點，並定義：
+`ExtensionRegistration.js`，對應至 `index.html` route，是AEM延伸模組的進入點，並定義：
 
-1. 擴充功能按鈕的位置會顯示在AEM編寫體驗中(`actionBar` 或 `headerMenu`)
-1. 中的擴充功能按鈕定義 `getButton()` 函式
+1. 擴充功能按鈕的位置會顯示在AEM編寫體驗(`actionBar` 或 `headerMenu`)
+1. 擴充功能按鈕在中定義 `getButton()` 函式
 1. 按鈕的點選處理常式，位於 `onClick()` 函式
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
@@ -199,21 +200,21 @@ function ExtensionRegistration() {
 
 ### 模型
 
-擴充功能的每個路由，如 [`App.js`](#app-routes)，對應至會在擴充功能強制回應中轉譯的React元件。
+擴充功能的每個路由，如中所定義 [`App.js`](#app-routes)，對應至在擴充功能強制回應視窗中呈現的React元件。
 
 在此範例應用程式中，有一個強制回應元件(`GenerateImageModal.js`)有四種狀態：
 
 1. 正在載入，表示使用者必須等待
 1. 警告訊息，建議使用者一次只選取一個內容片段
 1. 「產生影像」表單可讓使用者以自然語言提供影像說明。
-1. 影像產生操作的回應，提供新產生、上傳之影像的AEM資產詳細資料連結。
+1. 影像產生操作的回應，提供新產生之上傳影像的AEM資產詳細資訊連結。
 
-重要的是，擴充功能與AEM的任何互動都應委派給 [AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，是在中執行的獨立無伺服器程式 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
+重要的是，擴充功能與AEM的任何互動都應委派給 [AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，是在中執行的個別無伺服器程式 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 使用Adobe I/O Runtime動作與AEM通訊，是為了避免跨原始資源共用(CORS)連線問題。
 
-當 _產生影像_ 已提交表單，自訂 `onSubmitHandler()` 叫用Adobe I/O Runtime動作，傳遞影像說明、目前的AEM主機（網域）和使用者的AEM存取權杖。 然後動作會呼叫OpenAI的 [影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) 使用提交的影像說明產生影像的API。 下次使用 [AEM上傳](https://github.com/adobe/aem-upload) 節點模組的 `DirectBinaryUpload` 類別會將產生的影像上傳至AEM，最後再使用 [AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 以更新內容片段。
+當 _產生影像_ 已提交表單，自訂 `onSubmitHandler()` 叫用Adobe I/O Runtime動作，傳遞影像說明、目前的AEM主機（網域）和使用者的AEM存取權杖。 然後動作呼叫OpenAI的 [影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) API使用提交的影像說明產生影像。 下次使用 [AEM上傳](https://github.com/adobe/aem-upload) 節點模組的 `DirectBinaryUpload` 類別會將產生的影像上傳到AEM，最後再使用 [AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) 更新內容片段。
 
-收到Adobe I/O Runtime動作的回應時，強制回應視窗會更新，以顯示影像產生作業的結果。
+當收到Adobe I/O Runtime動作的回應時，強制回應會更新，以顯示影像產生作業的結果。
 
 + `src/aem-cf-console-admin-1/web-src/src/components/GenerateImageModal.js`
 
@@ -477,20 +478,20 @@ export default function GenerateImageModal() {
 
 ### Adobe I/O Runtime動作
 
-AEM擴充功能App Builder應用程式可以定義或使用0個或多個Adobe I/O Runtime動作。
-Adobe執行階段動作負責需要與AEM、Adobe或協力廠商Web服務互動的工作。
+AEM擴充功能App Builder應用程式可定義或使用0個或多個Adobe I/O Runtime動作。
+Adobe執行階段動作負責的工作需要與AEM、Adobe或協力廠商Web服務互動。
 
 在此範例應用程式中， `generate-image` Adobe I/O Runtime動作負責：
 
 1. 產生影像，使用 [OpenAI API影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) 服務
 1. 使用將產生的影像上傳到AEM-CS執行個體 [AEM上傳](https://github.com/adobe/aem-upload) 資料庫
 1. 向AEM內容片段API發出HTTP請求以更新內容片段的影像屬性。
-1. 傳回成功和失敗的關鍵資訊以供強制回應視窗顯示(`GenerateImageModal.js`)
+1. 傳回成功和失敗的關鍵資訊，以由強制回應視窗(`GenerateImageModal.js`)
 
 
 #### 進入點(`index.js`)
 
-此 `index.js` 使用個別JavaScript模組(即 `generate-image-using-openai, upload-generated-image-to-aem, update-content-fragement`. 這些模組和相關程式碼將在下一節中說明 [子區段](#image-generation-module---generate-image-using-openaijs).
+此 `index.js` 使用個別JavaScript模組(即 `generate-image-using-openai, upload-generated-image-to-aem, update-content-fragement`. 這些模組和相關程式碼將在下文中說明 [子區域](#image-generation-module---generate-image-using-openaijs).
 
 + `src/aem-cf-console-admin-1/actions/generate-image/index.js`
 
@@ -585,7 +586,7 @@ exports.main = main;
 
 #### 影像產生
 
-此模組負責呼叫OpenAI [影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) 端點，使用 [openai](https://github.com/openai/openai-node) 資料庫。 若要取得「 」中定義的OpenAI API秘密金鑰 `.env` 檔案，它使用 `params.OPENAI_API_KEY`.
+此模組負責呼叫OpenAI [影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) 端點使用 [openai](https://github.com/openai/openai-node) 資料庫。 若要取得「 」中定義的OpenAI API秘密金鑰， `.env` 檔案，它使用 `params.OPENAI_API_KEY`.
 
 + `src/aem-cf-console-admin-1/actions/generate-image/generate-image-using-openai.js`
 

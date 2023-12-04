@@ -11,10 +11,11 @@ thumbnail: 30359.jpg
 doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 752
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2799'
-ht-degree: 1%
+source-wordcount: '2546'
+ht-degree: 0%
 
 ---
 
@@ -287,7 +288,7 @@ AEM專案原型會自動設定此整合。 接下來，探索其運作方式。
 
 1. 按一下 **頁面資訊** 圖示，然後在功能表中選取 **以發佈狀態檢視** 以在AEM編輯器外部開啟文章頁面。
 
-   ![以已發佈狀態檢視](assets/client-side-libraries/view-as-published-article-page.png)
+   ![以發佈的形式檢視](assets/client-side-libraries/view-as-published-article-page.png)
 
 1. 檢視頁面來源： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled) 而且您應該可以在「 」檢視下列clientlib參照 `<head>`：
 

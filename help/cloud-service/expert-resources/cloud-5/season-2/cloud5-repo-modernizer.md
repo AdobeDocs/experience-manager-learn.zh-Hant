@@ -8,16 +8,17 @@ thumbnail: 342865.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: de4c2a3b-e5a3-4b2c-aaa0-c0f7028dd61e
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+duration: 318
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 3%
+source-wordcount: '52'
+ht-degree: 0%
 
 ---
 
 # Cloud 5 — 儲存庫現代化工具
 
-夥計們將研究存放庫現代化工具如何幫助您過渡到AEMas a Cloud Service，並提供其工作方式和原因的有用概覽。
+這些人員將研究存放庫現代化工具如何幫助您過渡到AEMas a Cloud Service，並提供它如何運作和原因的有用概述。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342865?quality=12&learn=on)
 

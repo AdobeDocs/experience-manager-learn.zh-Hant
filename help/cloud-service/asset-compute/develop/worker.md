@@ -2,20 +2,18 @@
 title: 開發Asset compute背景工作
 description: asset compute背景工作是Asset compute專案的核心，因為提供自訂功能，可執行或協調對資產執行的工作，以建立新轉譯。
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6282
 thumbnail: KT-6282.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 7d51ec77-c785-4b89-b717-ff9060d8bda7
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 652
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1386'
 ht-degree: 0%
 
 ---

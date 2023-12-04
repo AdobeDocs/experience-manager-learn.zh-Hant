@@ -8,16 +8,17 @@ role: User
 level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
 exl-id: 3a64315f-f699-4538-b999-626e7a998c05
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 125
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '161'
 ht-degree: 1%
 
 ---
 
 # 將所選電子報合併為一個pdf
 
-使用者的選擇儲存在隱藏欄位中。 此隱藏欄位的值會傳遞到servlet，它會使用將選取專案合併為一個pdf [Forms組合器服務](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
+使用者的選擇儲存在隱藏欄位中。 此隱藏欄位的值會傳遞給servlet，後者會使用將選取專案合併為一個pdf [Forms組合器服務](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
 
 
 ## 用於組合pdf檔案的Servlet

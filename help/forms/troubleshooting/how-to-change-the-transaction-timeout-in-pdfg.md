@@ -1,6 +1,6 @@
 ---
 title: 如何在PDFG服務中變更應用程式伺服器的交易逾時
-description: 增加或減少PDF產生器之應用程式伺服器的交易逾時的步驟
+description: 增加或減少PDF Generator應用程式伺服器交易逾時的步驟
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -9,7 +9,8 @@ feature: PDF Generator
 topic: Administration
 index: y
 exl-id: ec190f18-1ab8-4fac-adec-3b64caee290a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 93
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%

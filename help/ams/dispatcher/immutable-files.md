@@ -9,10 +9,11 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 376
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 1%
+source-wordcount: '825'
+ht-degree: 0%
 
 ---
 
@@ -222,7 +223,7 @@ $ cp /etc/httpd/conf.d/available_vhosts/aem_publish.vhost /etc/httpd/conf.d/avai
 
 我們複製了現有的aem_publish.vhost檔案，因為它已具備了我們需要的內容，沒有必要從頭開始。  現在編輯新的weretail.vhost檔案，並進行必要的變更。
 
-變更前:
+之前：
 
 ```
 VirtualHost *:80
@@ -240,7 +241,7 @@ VirtualHost *:80
 /VirtualHost
 ```
 
-變更後:
+之後：
 
 ```
 VirtualHost *:80
@@ -278,7 +279,7 @@ $ cp /etc/httpd/conf.dispatcher.d/available_farms/999_ams_publish_farm.any /etc/
 
 讓我們來顯示這個伺服器陣列檔案需要進行的變更
 
-變更前:
+之前：
 
 ```
 /publishfarm {  
@@ -289,7 +290,7 @@ $ cp /etc/httpd/conf.dispatcher.d/available_farms/999_ams_publish_farm.any /etc/
 }
 ```
 
-變更後:
+之後：
 
 ```
 /weretailpublishfarm {  

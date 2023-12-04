@@ -12,9 +12,10 @@ doc-type: Tutorial
 exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 badgeIntegration: label="整合" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 596
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2162'
+source-wordcount: '2072'
 ht-degree: 0%
 
 ---
@@ -105,9 +106,9 @@ eVar最適合用來測量原因和結果，例如：
 1. 從 **報表套裝管理員** 視窗，選取 **報告套裝Id** 並按一下 **編輯設定**.
 1. 按一下 **轉換** > **成功事件**
 1. 使用 **新增** 選項，建立自訂成功事件以追蹤CTA按鈕點按，然後 **儲存** 您的變更。
-   * `Event` : `event8`
-   * `Name`:`CTA Click`
-   * `Type`:`Counter`
+   * `Event` ： `event8`
+   * `Name`：`CTA Click`
+   * `Type`：`Counter`
 
    ![eVar](assets/create-analytics-workspace/add-success-event.png)
 
@@ -153,19 +154,19 @@ Analysis Workspace是彈性的瀏覽器工具，可讓您快速建立分析和�
 
 1. 讓我們依照其範本型別來劃分頁面。 從元件選取頁面範本量度，並將「頁面範本」量度拖放至「頁面名稱」維度。 您現在可以檢視依範本型別劃分的頁面名稱。
 
-   * **變更前**
-     ![eVar5](assets/create-analytics-workspace/evar5.png)
+   * **早於**
+     ![EVAR5](assets/create-analytics-workspace/evar5.png)
 
-   * **變更後**
+   * **晚於**
      ![eVar5量度](assets/create-analytics-workspace/evar5-metrics.png)
 
 1. 若要瞭解使用者在WKND網站頁面上與CTA按鈕互動的方式，需要進一步劃分，方法是新增按鈕ID (eVar8)量度。
 
-   ![eVar8](assets/create-analytics-workspace/evar8.png)
+   ![EVAR8](assets/create-analytics-workspace/evar8.png)
 
 1. 在下方，您可以看到WKND網站的視覺化呈現方式，其依頁面範本劃分，並進一步依使用者與WKND網站點按動作(CTA)按鈕的互動劃分。
 
-   ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
+   ![EVAR8](assets/create-analytics-workspace/evar8-metric.png)
 
 1. 您可以使用Adobe Analytics分類，以更好記的名稱取代「按鈕ID」值。 您可以深入閱讀如何建立特定量度的分類 [此處](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html). 在此案例中，我們有一個分類量度 `Button Section (Button ID)` 設定 `eVar8` 將按鈕id對應至好記的名稱。
 
@@ -243,9 +244,9 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 
 1. 在元件尋找器中，搜尋 **WKND CTA按鈕** 並拖放 **WKND CTA按鈕（按鈕Id）** 維度至按鈕ID量度並加以取代。
 
-   * **變更前**
+   * **早於**
      ![工作區按鈕（在前）](assets/create-analytics-workspace/wknd-button-before.png)
-   * **變更後**
+   * **晚於**
      ![工作區按鈕（在後）](assets/create-analytics-workspace/wknd-button-after.png)
 
 1. 您會注意到，包含行動號召(CTA)按鈕的按鈕ID量度，現在已取代為分類範本中提供的對應名稱。

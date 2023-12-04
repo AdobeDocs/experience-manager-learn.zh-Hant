@@ -11,10 +11,11 @@ last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: b67bf642-3341-48d0-8ea9-5f262febf414
-source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
+duration: 344
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 3%
+source-wordcount: '545'
+ht-degree: 2%
 
 ---
 
@@ -64,7 +65,7 @@ data:
 
 若要部署規則，請遵循下列步驟：
 
-1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 登入 Cloud Manager 並選取適當的組織和計畫。
+1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 登入 Cloud Manager 並選取適當的組織和方案。
 
 1. 導覽至 _管道_ 卡來自 _計畫總覽_ 頁面，然後按一下 **+新增** 按鈕並選取所需的配管型別。
 

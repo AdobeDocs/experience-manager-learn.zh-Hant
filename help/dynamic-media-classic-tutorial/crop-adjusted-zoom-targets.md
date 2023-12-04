@@ -7,9 +7,10 @@ role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: a1d83c77-a9e4-4ed1-9b00-65fb002164c0
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 686
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2653'
+source-wordcount: '2623'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ Dynamic Media Classic有一些影像編輯工具，可在UI中方便使用，包
 您可以從資產的詳細資訊頁面存取Dynamic Media Classic中的裁切工具，或按一下 **編輯** 按鈕。 您可以透過兩種方式使用此工具裁切：
 
 - 您拖曳裁切視窗操作框或在「大小」方塊中輸入值的預設裁切模式。 瞭解如何 [手動裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop).
-- 修剪. 使用此選項可計算不符合影像的畫素數，移除影像周圍多餘的空格。 瞭解如何 [透過裁剪裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
+- 修剪。 使用此選項可計算不符合影像的畫素數，移除影像周圍多餘的空格。 瞭解如何 [透過裁剪裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
 
 ### _手動裁切_
 

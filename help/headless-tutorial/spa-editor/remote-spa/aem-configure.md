@@ -11,10 +11,11 @@ last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 432
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1246'
-ht-degree: 1%
+source-wordcount: '1230'
+ht-degree: 0%
 
 ---
 
@@ -136,7 +137,7 @@ AEM專案原型會產生下列元素，這些元素用於設定AEM以便與SPA�
 對應可透過完成 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html#root-level-mappings-1) 在中定義 `/etc/map`.
 
 1. 在IDE中，開啟 `ui.content` 子專案
-1. 瀏覽到  `src/main/content/jcr_root`
+1. 瀏覽至  `src/main/content/jcr_root`
 1. 建立資料夾 `etc`
 1. 在 `etc`，建立資料夾 `map`
 1. 在 `map`，建立資料夾 `http`

@@ -10,9 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 227
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '789'
 ht-degree: 3%
 
 ---
@@ -84,7 +85,7 @@ ht-degree: 3%
 1. 在左側邊欄中，展開 **我的專案** 然後點選 **英文**.
 1. 點選 **建立** 以顯示 **新內容片段** 對話方塊並輸入下列值：
 
-   * 位置: `/content/dam/my-project/en`
+   * 位置： `/content/dam/my-project/en`
    * 內容片段模型： **個人**
    * 標題： **John Doe**
    * 名稱：`john-doe`
@@ -93,7 +94,7 @@ ht-degree: 3%
 1. 點選「**建立**」。
 1. 重複上述步驟以建立片段，表示 **艾莉森·史密斯**：
 
-   * 位置: `/content/dam/my-project/en`
+   * 位置： `/content/dam/my-project/en`
    * 內容片段模型： **個人**
    * 標題： **艾莉森·史密斯**
    * 名稱：`alison-smith`
@@ -102,7 +103,7 @@ ht-degree: 3%
 
 1. 接下來，重複步驟以建立 **團隊** 片段代表 **團隊Alpha**：
 
-   * 位置: `/content/dam/my-project/en`
+   * 位置： `/content/dam/my-project/en`
    * 內容片段模型： **團隊**
    * 標題： **團隊Alpha**
    * 名稱：`team-alpha`

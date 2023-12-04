@@ -2,10 +2,7 @@
 title: 延伸元件 | AEM SPA編輯器和Angular快速入門
 description: 瞭解如何擴充與AEM SPA編輯器搭配使用的現有核心元件。 瞭解如何將屬性和內容新增至現有元件，是擴充AEM SPA Editor實作功能的強大技術。 瞭解如何使用委派模式來延伸Sling模型和Sling Resource Merger的功能。
 feature: SPA Editor, Core Components
-topics: development
 version: Cloud Service
-activity: develop
-audience: developer
 jira: KT-5871
 thumbnail: 5871-spa-angular.jpg
 topic: SPA
@@ -13,10 +10,11 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 621
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 1%
+source-wordcount: '1713'
+ht-degree: 0%
 
 ---
 
@@ -261,7 +259,7 @@ ht-degree: 1%
 
    這些方法會透過JSON模型API公開，並傳遞至Angular元件。
 
-3. 開啟 `CardImpl.java`。此為的實作 `Card.java` 介面。 為了加速教學課程，已部分解決此實作。  請注意， `@Model` 和 `@Exporter` 註解以確保Sling模型能夠透過Sling模型匯出工具序列化為JSON。
+3. 開啟 `CardImpl.java`. 此為的實作 `Card.java` 介面。 為了加速教學課程，已部分解決此實作。  請注意， `@Model` 和 `@Exporter` 註解以確保Sling模型能夠透過Sling模型匯出工具序列化為JSON。
 
    `CardImpl.java` 也會使用 [Sling模型的委派模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 以避免從影像核心元件重寫邏輯。
 

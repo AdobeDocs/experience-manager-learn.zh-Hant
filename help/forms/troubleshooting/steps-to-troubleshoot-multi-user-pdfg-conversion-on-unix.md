@@ -1,6 +1,6 @@
 ---
-title: 疑難排解Unix設定中的多使用者PDFG轉換問題的步驟
-description: 疑難排解UNIX安裝程式上的多個使用者PDF產生器問題。
+title: 在Unix設定中疑難排解多使用者PDFG轉換問題的步驟
+description: 疑難排解UNIX安裝程式中的多個使用者PDF Generator問題。
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -9,7 +9,8 @@ feature: PDF Generator
 topic: Development
 index: y
 exl-id: 35732b0f-a492-4d7f-b152-4a43d2c9b58b
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 149
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
@@ -17,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 疑難排解Unix設定中的多使用者PDFG轉換問題的步驟
+# 在Unix設定中疑難排解多使用者PDFG轉換問題的步驟
 
 *此影片說明疑難排解Unix設定中的多使用者PDFG轉換問題的程式。*
 

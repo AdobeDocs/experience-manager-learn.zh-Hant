@@ -8,9 +8,10 @@ role: Developer
 level: Intermediate
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 46df7b13401ee3497c871eac3b8158148c2e6a04
+duration: 164
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -21,8 +22,8 @@ ht-degree: 0%
 
 在本文中，我們將瞭解以下內容
 
-* 輸出服務 — 此服務通常用於合併xml資料與xdp範本或pdf，以產生平面化pdf。 如需詳細資訊，請參閱此 [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 用於Output服務
-* FormsService — 這是功能非常廣泛的服務，可讓您從PDF檔案匯出/匯入資料。 如需詳細資訊，請參閱此 [javadoc](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) 用於Forms服務。
+* 輸出服務 — 通常此服務用於合併xml資料與xdp範本或pdf以產生平面化pdf。 如需詳細資訊，請參閱此 [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 用於Output服務
+* FormsService — 這項功能非常廣泛的服務可讓您從PDF檔案匯出/匯入資料。 如需詳細資訊，請參閱此 [javadoc](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) 用於Forms服務。
 
 
 下列程式碼片段會從PDF檔案匯出資料
@@ -36,15 +37,15 @@ com.adobe.fd.forms.api.FormsService formsservice = sling.getService(com.adobe.fd
 com.adobe.aemfd.docmanager.Document xmlDocument = formsservice.exportData(pdfDocument,com.adobe.fd.forms.api.DataFormat.Auto);
 ```
 
-第1行會從請求中擷取pdfile
+第1行會從請求中擷取PDF檔案
 
 Line2會從請求中擷取saveLocation
 
-第5行保留FormsService
+第5行取得FormsService
 
 第6行會從PDF檔案匯出xmlData
 
-**在您的系統上測試範例套件的方式**
+**若要在系統上測試範例套件**
 
 [使用AEM封裝管理員下載並安裝封裝](assets/outputandformsservice.zip)
 
@@ -53,7 +54,7 @@ Line2會從請求中擷取saveLocation
 
 **安裝套件後，您必須在AdobeGranite CSRF篩選中允許列出下列URL。**
 
-1. 請依照下列步驟將上述路徑加入允許清單。
+1. 請依照下列步驟操作，將上述路徑加入允許清單。
 1. [登入configMgr](http://localhost:4502/system/console/configMgr)
 1. 搜尋AdobeGranite CSRF篩選器
 1. 在排除的區段中新增下列3個路徑並儲存
@@ -61,12 +62,12 @@ Line2會從請求中擷取saveLocation
 1. /content/AemFormsSamples/exportdata
 1. /content/AemFormsSamples/outputservice
 1. 搜尋「Sling查閱者篩選器」
-1. 勾選「允許空白」核取方塊。 （此設定僅供測試用途）測試範常式式碼的方法有很多種。 最快捷、最輕鬆的方式就是使用Postman應用程式。 Postman可讓您向伺服器發出POST請求。 在您的系統上安裝Postman app。
+1. 勾選「允許空白」核取方塊。 （此設定僅供測試用途）測試範常式式碼的方法有很多種。 最快捷、最輕鬆的方式就是使用Postman應用程式。 Postman可讓您向伺服器發出POST要求。 在您的系統上安裝Postman app 。
 啟動應用程式並輸入以下URL以測試匯出資料API
 
-確定您已從下拉式清單中選取「POST」 http://localhost:4502/content/AemFormsSamples/exportdata.html請務必將「授權」指定為「基本驗證」。 指定AEM伺服器使用者名稱和密碼瀏覽至「內文」標籤，然後指定要求引數，如下圖所示
+確定您已從下拉式清單中選取「POST」 http://localhost:4502/content/AemFormsSamples/exportdata.html請務必將「授權」指定為「基本驗證」。 指定AEM伺服器使用者名稱和密碼導覽至「內文」標籤，然後指定要求引數，如下圖所示
 ![匯出](assets/postexport.png)
-然後按一下傳送按鈕
+然後按一下「傳送」按鈕
 
 此套件包含3個範例。 以下段落說明何時使用輸出服務或Forms服務、服務的URL、每個服務預期的輸入引數
 
@@ -96,6 +97,6 @@ Line2會從請求中擷取saveLocation
 * **要求引數：**
 
    * **個人檔案** ：您要匯出資料的pdf檔案
-   * **saveLocation**：將匯出的資料儲存至檔案系統的位置。 例如c：\\documents\\exported_data.xml
+   * **saveLocation**：將匯出的資料儲存在檔案系統上的位置。 例如c：\\documents\\exported_data.xml
 
-[您可以匯入此Postman集合來測試API](assets/document-services-postman-collection.json)
+[您可以匯入此Postman集合以測試API](assets/document-services-postman-collection.json)

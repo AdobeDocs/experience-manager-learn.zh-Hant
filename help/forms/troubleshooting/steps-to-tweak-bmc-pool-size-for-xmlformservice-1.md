@@ -9,9 +9,10 @@ feature: Output Service,Forms Service
 topic: Development
 index: y
 exl-id: 1aead631-8ed5-41c8-9b0e-a081c793cee5
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 115
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
@@ -19,6 +20,6 @@ ht-degree: 0%
 
 # 調整XMLFormService的bmc集區大小的步驟（第1個，共2個）
 
-*此影片逐步解說調整XMLFormService （第1個，共2個）的bmc集區大小的步驟。*
+*此影片會逐步解說調整XMLFormService （2之1）之bmc集區大小的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335552?quality=12&learn=on)

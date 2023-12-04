@@ -2,20 +2,18 @@
 title: 開發人員主控台
 description: AEMas a Cloud Service會為每個環境提供開發人員主控台，以公開執行AEM服務的各種詳細資訊，這些資訊有助於除錯。
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5433
 thumbnail: kt-5433.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 388
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1408'
 ht-degree: 0%
 
 ---

@@ -9,9 +9,10 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 299b32c3-7922-4eee-aa3a-56039a654f70
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 364
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1090'
 ht-degree: 1%
 
 ---
@@ -115,7 +116,7 @@ Define PUBLISH_FORCE_SSL 0
 </VirtualHost>
 ```
 
-`sample_whitelist.rules`:
+`sample_whitelist.rules`：
 
 ```
 <RequireAny> 
@@ -157,21 +158,21 @@ RUNMODE='sites'
 
 這些檔案可以有您想要的任何自訂變數，以下範例檔案中可以看到一些語法範例
 
-`/etc/httpd/conf.d/variables/weretail_domains_dev.vars`:
+`/etc/httpd/conf.d/variables/weretail_domains_dev.vars`：
 
 ```
 Define WERETAIL_DOMAIN dev.weretail.com 
 Define WERETAIL_ALT_DOMAIN dev.weretail.net
 ```
 
-`/etc/httpd/conf.d/variables/weretail_domains_stage.vars`:
+`/etc/httpd/conf.d/variables/weretail_domains_stage.vars`：
 
 ```
 Define WERETAIL_DOMAIN stage.weretail.com
 Define WERETAIL_ALT_DOMAIN stage.weretail.net
 ```
 
-`/etc/httpd/conf.d/variables/weretail_domains_prod.vars`:
+`/etc/httpd/conf.d/variables/weretail_domains_prod.vars`：
 
 ```
 Define WERETAIL_DOMAIN www.weretail.com 
@@ -269,7 +270,7 @@ $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY
 
 設定範例
 
-`/etc/httpd/conf.d/enabled_vhosts/aem_publish.vhost`:
+`/etc/httpd/conf.d/enabled_vhosts/aem_publish.vhost`：
 
 ```
 <VirtualHost *:80> 

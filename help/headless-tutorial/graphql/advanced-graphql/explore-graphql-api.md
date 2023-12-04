@@ -7,31 +7,32 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
-source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
+duration: 628
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1307'
 ht-degree: 0%
 
 ---
 
 # 探索AEM GraphQL API
 
-AEM中的GraphQL API可讓您向下游應用程式公開內容片段資料。 在基本教學課程中 [多步驟GraphQL教學課程](../multi-step/explore-graphql-api.md)，您已使用GraphiQL Explorer來測試及調整GraphQL查詢。
+AEM中的GraphQL API可讓您向下游應用程式公開內容片段資料。 在基本教學課程中 [多步驟GraphQL教學課程](../multi-step/explore-graphql-api.md)，您已使用GraphiQL Explorer來測試和調整GraphQL查詢。
 
-在本章中，您可以使用GraphiQL Explorer定義更進階的查詢，以收集您在中建立的內容片段資料。 [上一章](../advanced-graphql/author-content-fragments.md).
+在本章中，您使用GraphiQL Explorer定義更進階的查詢，以收集您在中建立的內容片段的資料 [上一章](../advanced-graphql/author-content-fragments.md).
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 本檔案是多部分教學課程的一部分。 在繼續本章之前，請確定已完成前面的章節。
 
 ## 目標 {#objectives}
 
-在本章中，您將瞭解如何：
+在本章中，您將學習如何：
 
 * 使用查詢變數篩選包含參考的內容片段清單
 * 篩選片段參考中的內容
 * 從多行文字欄位查詢內嵌內容和片段參考
-* 使用指示詞查詢
+* 使用指令進行查詢
 * 查詢JSON物件內容型別
 
 ## 使用GraphiQL總管
@@ -41,15 +42,15 @@ AEM中的GraphQL API可讓您向下游應用程式公開內容片段資料。 �
 
 接下來，使用內建的GraphiQL Explorer來探索AEM GraphQL API的強大功能。
 
-1. 從AEM開始畫面，瀏覽至 **工具** > **一般** > **GraphQL查詢編輯器**.
+1. 從AEM開始畫面，導覽至 **工具** > **一般** > **GraphQL查詢編輯器**.
 
    ![導覽至GraphiQL IDE](assets/explore-graphql-api/navigate-graphql-query-editor.png)
 
 >[!IMPORTANT]
 >
->在中，某些版本的AEM (6.X.X) GraphiQL Explorer （亦即GraphiQL IDE）工具需要手動安裝，請遵循 [從此處取得指示](../how-to/install-graphiql-aem-6-5.md).
+>在中，有些AEM版本(6.X.X) GraphiQL Explorer （亦稱為GraphiQL IDE）工具需要手動安裝，請遵循 [從此處取得指示](../how-to/install-graphiql-aem-6-5.md).
 
-1. 在右上角，確認「端點」已設為 **WKND共用端點**. 變更 _端點_ 這裡的下拉式清單值會顯示現有的 _持久查詢_ 左上角。
+1. 在右上角，確定「端點」已設為 **WKND共用端點**. 變更 _端點_ 這裡的下拉式清單值會顯示現有的 _持久查詢_ 左上角。
 
    ![設定GraphQL端點](assets/explore-graphql-api/set-wknd-shared-endpoint.png)
 
@@ -60,7 +61,7 @@ AEM中的GraphQL API可讓您向下游應用程式公開內容片段資料。 �
 
 在上一個 [多步驟GraphQL教學課程](../multi-step/explore-graphql-api.md)，您定義並使用基本的持續性查詢來取得內容片段資料。 在這裡，您可以展開此知識，並將變數傳遞至持續查詢，以篩選內容片段資料。
 
-開發使用者端應用程式時，通常需要根據動態引數篩選內容片段。 AEM GraphQL API可讓您將這些引數作為查詢中的變數傳遞，以避免在執行階段在使用者端上建構字串。 如需GraphQL變數的詳細資訊，請參閱 [GraphQL檔案](https://graphql.org/learn/queries/#variables).
+開發使用者端應用程式時，通常需要根據動態引數篩選內容片段。 AEM GraphQL API可讓您在查詢中將這些引數作為變數傳遞，以避免在執行階段在使用者端上建構字串。 如需GraphQL變數的詳細資訊，請參閱 [GraphQL檔案](https://graphql.org/learn/queries/#variables).
 
 在此範例中，查詢所有具有特定技能的講師。
 
@@ -93,9 +94,9 @@ AEM中的GraphQL API可讓您向下游應用程式公開內容片段資料。 �
    }
    ```
 
-   此 `listPersonBySkill` 上述查詢接受一個變數(`skillFilter`)為必要專案 `String`. 此查詢會搜尋所有人員內容片段，並根據 `skills` 欄位和傳入的字串 `skillFilter`.
+   此 `listPersonBySkill` 上方的查詢接受一個變數(`skillFilter`)為必要欄位 `String`. 此查詢會針對所有人員內容片段執行搜尋，並根據 `skills` 欄位和傳入的字串 `skillFilter`.
 
-   此 `listPersonBySkill` 包含 `contactInfo` 屬性，此屬性是對前幾章中定義的聯絡資訊模型的片段參考。 連絡資訊模型包含 `phone` 和 `email` 欄位。 查詢中必須至少存在其中一個欄位，查詢才能正確執行。
+   此 `listPersonBySkill` 包含 `contactInfo` 屬性，此為前幾章中定義之聯絡資訊模型的片段參照。 「聯絡資訊」模型包含 `phone` 和 `email` 欄位。 查詢中必須至少存在其中一個欄位，才能正確執行。
 
    ```graphql
    contactInfo {
@@ -112,7 +113,7 @@ AEM中的GraphQL API可讓您向下游應用程式公開內容片段資料。 �
    }
    ```
 
-1. 執行查詢。 結果應類似於以下內容：
+1. 執行查詢。 結果看起來應該類似下列：
 
    ```json
    {
@@ -144,9 +145,9 @@ AEM中的GraphQL API可讓您向下游應用程式公開內容片段資料。 �
    }
    ```
 
-按下 **播放** 按鈕來執行查詢。 您應該會看到上一個章節的內容片段結果：
+按下 **播放** 按鈕來執行查詢。 您應該會看到上一章內容片段的結果：
 
-![按技能列出的人員結果](assets/explore-graphql-api/person-by-skill.png)
+![依技能顯示的人員](assets/explore-graphql-api/person-by-skill.png)
 
 ## 篩選片段參考中的內容
 
@@ -189,9 +190,9 @@ AEM GraphQL API可讓您查詢巢狀內容片段。 在上一章中，您為冒�
    }
    ```
 
-   此 `getAdventureAdministratorDetailsByAdministratorName` 查詢篩選所有冒險的任何 `administrator` 之 `fullName` 「Jacob Wester」，傳回兩個巢狀內容片段中的資訊：冒險和講師。
+   此 `getAdventureAdministratorDetailsByAdministratorName` 查詢篩選所有冒險的任何 `administrator` 之 `fullName` 「Jacob Wester」，傳回兩個巢狀內容片段的資訊：冒險和講師。
 
-1. 執行查詢。 結果應類似於以下內容：
+1. 執行查詢。 結果看起來應該類似下列：
 
    ```json
    {
@@ -229,7 +230,7 @@ AEM GraphQL API可讓您查詢巢狀內容片段。 在上一章中，您為冒�
 
 ## 從多行文字欄位查詢內嵌參考 {#query-rte-reference}
 
-AEM GraphQL API可讓您在多行文字欄位中查詢內容和片段參考。 在上一章中，您將兩個參照型別新增至 **說明** 約塞米蒂團隊內容片段的欄位。 現在，讓我們擷取這些參考。
+AEM GraphQL API可讓您在多行文字欄位中查詢內容和片段參考。 在上一章中，您將兩個參照型別新增到 **說明** Yosemite團隊內容片段的欄位。 現在，讓我們擷取這些參考。
 
 1. 在GraphiQL IDE中，將下列查詢貼到左側面板中：
 
@@ -275,15 +276,15 @@ AEM GraphQL API可讓您在多行文字欄位中查詢內容和片段參考。 �
    }
    ```
 
-   此 `getTeamByAdventurePath` 查詢會依路徑篩選所有冒險並傳回以下專案的資料 `instructorTeam` 特定冒險的片段參考。
+   此 `getTeamByAdventurePath` 查詢會依路徑篩選所有冒險並傳回以下專案的資料： `instructorTeam` 特定冒險的片段參考。
 
    `_references` 是系統產生的欄位，用於顯示參照，包括插入多行文字欄位中的參照。
 
-   此 `getTeamByAdventurePath` query會擷取多個參考。 首先，它使用內建 `ImageRef` 物件以擷取 `_path` 和 `__typename` 插入多行文字欄位中作為內容參照的影像數量。 接下來，它會使用 `LocationModel` 擷取插入相同欄位中的位置內容片段資料。
+   此 `getTeamByAdventurePath` 查詢會擷取多個參考。 首先，它使用內建 `ImageRef` 物件以擷取 `_path` 和 `__typename` 插入多行文字欄位做為內容參照的影像數量。 接下來，它使用 `LocationModel` 擷取插入到相同欄位中的位置內容片段的資料。
 
    此查詢還包括 `_metadata` 欄位。 這可讓您擷取團隊內容片段的名稱，並稍後在WKND應用程式中顯示。
 
-1. 接下來，在「查詢變數」面板中貼上下列JSON字串，以取得Yosemite Backpacking Adventure：
+1. 接下來，將下列JSON字串貼到「查詢變數」面板中，以取得Yosemite Backpacking Adventure：
 
    ```json
    {
@@ -291,7 +292,7 @@ AEM GraphQL API可讓您在多行文字欄位中查詢內容和片段參考。 �
    }
    ```
 
-1. 執行查詢。 結果應類似於以下內容：
+1. 執行查詢。 結果看起來應該類似下列：
 
    ```json
    {
@@ -343,14 +344,14 @@ AEM GraphQL API可讓您在多行文字欄位中查詢內容和片段參考。 �
    }
    ```
 
-   此 `_references` 欄位會同時顯示標誌影像和插入「 」的Yosemite Valley Lodge內容片段 **說明** 欄位。
+   此 `_references` 欄位會顯示標誌影像和插入的Yosemite Valley Lodge內容片段 **說明** 欄位。
 
 
-## 使用指示詞查詢
+## 使用指令進行查詢
 
-有時在開發使用者端應用程式時，您需要有條件地變更查詢的結構。 在這種情況下，AEM GraphQL API允許您使用GraphQL指令，以根據提供的條件更改查詢的行為。 如需GraphQL指示詞的詳細資訊，請參閱 [GraphQL檔案](https://graphql.org/learn/queries/#directives).
+有時在開發使用者端應用程式時，您需要有條件地變更查詢的結構。 在此情況下，AEM GraphQL API可讓您使用GraphQL指示，以根據提供的條件變更查詢的行為。 如需GraphQL指示詞的詳細資訊，請參閱 [GraphQL檔案](https://graphql.org/learn/queries/#directives).
 
-在 [上一節](#query-rte-reference)，您已瞭解如何在多行文字欄位中查詢內嵌參考。 內容擷取自 `description` 欄位於 `plaintext` 格式。 接下來，讓我們展開該查詢，並使用指示詞來有條件地擷取 `description` 在 `json` 格式化。
+在 [上一節](#query-rte-reference)，您已瞭解如何在多行文字欄位中查詢內嵌參考。 內容擷取自 `description` 已歸檔於 `plaintext` 格式。 接下來，我們將展開該查詢，並使用指示詞來有條件地擷取 `description` 在 `json` 格式化。
 
 1. 在GraphiQL IDE中，將下列查詢貼到左側面板中：
 
@@ -397,7 +398,7 @@ AEM GraphQL API可讓您在多行文字欄位中查詢內容和片段參考。 �
    }
    ```
 
-   上述查詢接受一個以上的變數(`includeJson`)為必要專案 `Boolean`，也稱為查詢的指示詞。 指示詞可用於有條件地包含來自以下專案的資料： `description` 中的欄位 `json` 根據傳入的布林值而格式化 `includeJson`.
+   上述查詢接受另一個變數(`includeJson`)為必要欄位 `Boolean`，也稱為查詢的指示詞。 指示詞可用於有條件地包含來自下列專案的資料： `description` 中的欄位 `json` 根據傳入的布林值設定格式 `includeJson`.
 
 1. 接下來，將下列JSON字串貼到「查詢變數」面板中：
 
@@ -410,7 +411,7 @@ AEM GraphQL API可讓您在多行文字欄位中查詢內容和片段參考。 �
 
 1. 執行查詢。 您應該會得到與上一節相同的結果， [如何查詢多行文字欄位中的內嵌參考](#query-rte-reference).
 
-1. 更新 `includeJson` 指示給 `true` 並再次執行查詢。 結果應類似於以下內容：
+1. 更新 `includeJson` 指示給 `true` 並再次執行查詢。 結果看起來應該類似下列：
 
    ```json
    {
@@ -500,7 +501,7 @@ AEM GraphQL API可讓您在多行文字欄位中查詢內容和片段參考。 �
 
 ## 查詢JSON物件內容型別
 
-請記住，在上一章創作內容片段中，您將JSON物件新增至 **依季節的天氣** 欄位。 現在來擷取位置內容片段中的資料。
+請記住，在先前有關編寫內容片段的章節中，您已將JSON物件新增到 **依季節的天氣** 欄位。 現在，讓我們在位置內容片段中擷取該資料。
 
 1. 在GraphiQL IDE中，將下列查詢貼到左側面板中：
 
@@ -542,7 +543,7 @@ AEM GraphQL API可讓您在多行文字欄位中查詢內容和片段參考。 �
    }
    ```
 
-1. 執行查詢。 結果應類似於以下內容：
+1. 執行查詢。 結果看起來應該類似下列：
 
    ```json
    {
@@ -725,4 +726,4 @@ query getAdventureDetailsBySlug($slug: String!) {
 
 ## 後續步驟
 
-在 [下一個章節](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)，您將瞭解如何保留GraphQL查詢，以及為什麼在您的應用程式中使用保留查詢是最佳實務。
+在 [下一章](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)，您將瞭解如何保留GraphQL查詢，以及在您的應用程式中使用保留查詢是最佳實務的原因。

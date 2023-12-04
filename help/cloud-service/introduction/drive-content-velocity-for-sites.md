@@ -3,9 +3,10 @@ title: 如何使用Adobe Experience Manager提升內容速度
 description: 瞭解內容速度及其在企業組織中的價值。 深入探討有效實施的四項原則，以及在實施過程中應注意的陷阱。
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: bd886704f10834bb07b42d6b5c0f116496da36de
+duration: 728
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2795'
+source-wordcount: '2742'
 ht-degree: 0%
 
 ---

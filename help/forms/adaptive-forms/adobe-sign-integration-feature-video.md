@@ -4,7 +4,6 @@ description: 搭配AEM Forms使用Acrobat Sign
 feature: Acrobat Sign
 role: Admin
 level: Beginner
-uuid: cbccea0f-969c-445d-9390-a236bb1fd2c4
 product: Experience Manager
 topic-tags: forms, adaptive_forms
 topic: Integrations
@@ -14,9 +13,10 @@ index: y
 internal: n
 snippet: y
 last-substantial-update: 2020-10-20T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 641
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '75'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,6 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此功能僅適用於AEM 6.3以後版本。
+>此功能僅適用於AEM 6.3以上的版本。
 
 請造訪 [AEM Forms範例](https://forms.enablementadobe.com/content/samples/samples.html?query=0#formsandsign) 頁面，以取得此功能的即時示範連結。

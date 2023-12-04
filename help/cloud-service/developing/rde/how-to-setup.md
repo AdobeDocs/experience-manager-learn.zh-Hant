@@ -10,10 +10,11 @@ jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: ab9ee81a-176e-4807-ba39-1ea5bebddeb2
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 528
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 2%
+source-wordcount: '453'
+ht-degree: 1%
 
 ---
 
@@ -21,10 +22,10 @@ ht-degree: 2%
 
 瞭解 **如何設定** AEMas a Cloud Service中的快速開發環境(RDE)。
 
-此影片顯示：
+本影片說明：
 
 - 使用Cloud Manager將RDE新增到您的計畫
-- 使用Adobe IMS的RDE登入流程，如何與任何其他AEMas a Cloud Service環境相似
+- 使用Adobe IMS的RDE登入流程，與任何其他AEMas a Cloud Service環境有何相似之處
 - 設定 [Adobe I/O Runtime可擴充CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 也稱為 `aio CLI`
 - AEM RDE和Cloud Manager的設定和設定 `aio CLI` 外掛程式
 
@@ -43,7 +44,7 @@ ht-degree: 2%
 
 ### Adobe I/O Runtime可擴充CLI
 
-安裝Adobe I/O Runtime可擴充CLI，也稱為 `aio CLI` 從命令列執行下列命令。
+安裝Adobe I/O Runtime可擴充CLI (也稱為 `aio CLI` 從命令列執行下列命令。
 
 ```shell
 $ npm install -g @adobe/aio-cli
@@ -69,17 +70,17 @@ AEM RDE外掛程式可讓開發人員從本機電腦部署程式碼和內容。
 
 AEM外掛程式必須設定為與您的RDE互動。 首先，使用Cloud Manager UI複製組織、計畫和環境ID的值。
 
-1. 組織識別碼：複製值來源 **設定檔圖片>帳戶資訊（內部） >強制回應視窗>目前組織ID**
+1. 組織ID：複製值來源 **個人資料圖片>帳戶資訊（內部） >模型視窗>目前組織ID**
 
-   ![組織 ID](./assets/Org-ID.png)
+   ![組織ID](./assets/Org-ID.png)
 
-1. 方案ID：複製值 **計畫總覽>環境> {ProgramName} — 代碼>瀏覽器URI >數字介於 `program/` 和`/environment`**
+1. 方案ID：複製值，從 **計畫總覽>環境> {ProgramName}-rde >瀏覽器URI >數字介於 `program/` 和`/environment`**
 
-1. 環境ID：複製值 **計畫總覽>環境> {ProgramName} — 代碼>瀏覽器URI >之後的數字`environment/`**
+1. 環境ID：複製值 **計畫總覽>環境> {ProgramName}-rde >瀏覽器URI >之後的數字`environment/`**
 
    ![程式和環境ID](./assets/Program-Environment-Id.png)
 
-1. 然後，透過使用 `aio cli`的 `config:set` 命令可透過執行以下命令來設定這些值。
+1. 然後，透過使用 `aio cli`的 `config:set` 命令執行下列命令來設定這些值。
 
    ```shell
    $ aio config:set cloudmanager_orgid <org-id>
@@ -89,7 +90,7 @@ AEM外掛程式必須設定為與您的RDE互動。 首先，使用Cloud Manager
    $ aio config:set cloudmanager_environmentid <env-id>
    ```
 
-您可以執行下列命令來驗證目前的設定值。
+您可以透過執行以下命令來驗證目前的設定值。
 
 ```shell
 $ aio config:list
@@ -103,13 +104,13 @@ $ aio where
 
 ## 驗證RDE存取權
 
-執行下列命令，驗證AEM RDE外掛程式的安裝和設定。
+執行下列命令，驗證AEM RDE外掛程式的安裝和組態。
 
 ```shell
 $ aio aem:rde:status
 ```
 
-RDE狀態資訊的顯示方式與以下專案清單的環境狀態類似： _您的AEM專_ 製作和發佈服務的套件組合和設定。
+RDE狀態資訊會像環境狀態一樣顯示， _您的AEM專案_ 製作和發佈服務的套件組合和設定。
 
 ## 下一步
 
@@ -124,6 +125,6 @@ RDE狀態資訊的顯示方式與以下專案清單的環境狀態類似： _您
 
 [AIO CLI使用方式和命令](https://github.com/adobe/aio-cli#usage)
 
-[用於與AEM快速開發環境互動的Adobe I/O Runtime CLI外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
+[與AEM快速開發環境互動的Adobe I/O Runtime CLI外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [Cloud Manager AIO CLI外掛程式](https://github.com/adobe/aio-cli-plugin-cloudmanager)

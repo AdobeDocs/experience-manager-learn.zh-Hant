@@ -1,8 +1,7 @@
 ---
-title: 在最適化Forms中顯示內嵌的DAM影像
-description: 在最適化Forms中顯示內嵌的DAM影像
+title: 在最適化Forms中內嵌顯示DAM影像
+description: 在最適化Forms中內嵌顯示DAM影像
 feature: Adaptive Forms
-topics: development
 version: 6.4,6.5
 topic: Development
 role: Developer
@@ -11,20 +10,21 @@ last-substantial-update: 2022-10-20T00:00:00Z
 thumbnail: inline-dam.jpg
 kt: kt-11307
 exl-id: 339eb16e-8ad8-4b98-939c-b4b5fd04d67e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 92
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
 
 # 在最適化Forms中顯示DAM影像
 
-常見的使用案例是以最適化表單內嵌顯示crx存放庫中的影像。
+常見的使用案例是以Adaptive Form內聯顯示駐留在crx存放庫中的影像。
 
 ## 新增預留位置影像
 
-第一個步驟是在面板元件前面加上預留位置div。 在下面的程式碼中，面板元件由其CSS類別名稱photo-upload識別。 JavaScript函式是與最適化表單相關聯的使用者端資料庫的一部分。 此函式是在檔案附件元件的初始化事件中呼叫。
+第一個步驟是在面板元件前面加上預留位置div。 在下面的程式碼中，面板元件的CSS類別名稱photo-upload可用來識別。 JavaScript函式屬於與調適型表單相關聯的使用者端資料庫的一部分。 此函式是在檔案附件元件的初始化事件中呼叫。
 
 ```javascript
 /**
@@ -38,7 +38,7 @@ function addPlaceholderDiv(){
 
 ### 顯示內嵌影像
 
-使用者選取影像後，隱藏欄位ImageName會填入選取的影像名稱。 然後，此影像名稱會傳遞至damURLToFile函式，該函式會呼叫createFile函式，將URL轉換為FileReader.readAsDataURL()的Blob。
+使用者選取影像後，隱藏欄位ImageName會填入選取的影像名稱。 然後，此影像名稱會傳遞至damURLToFile函式，該函式會叫用createFile函式，將URL轉換為FileReader.readAsDataURL()的Blob。
 
 ```javascript
 /**
@@ -83,8 +83,8 @@ async function createFile(imageName){
 
 ### 在您的伺服器上部署
 
-* 下載並安裝 [使用者端資料庫和範例影像](assets/InlineDAMImage.zip) 使用AEM Package Manager的AEM執行個體上。
-* 下載並安裝 [範例表單](assets/FieldInspectionForm.zip) 使用AEM套件管理員在您電腦上的AEM執行個體。
-* 將瀏覽器指向 [FielInspectionForm](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
+* 下載並安裝 [使用者端資料庫和範例影像](assets/InlineDAMImage.zip) 在使用AEM Package Manager的AEM執行個體上執行。
+* 下載並安裝 [範例表單](assets/FieldInspectionForm.zip) 使用AEM封裝管理員在您執行AEM執行個體上。
+* 將瀏覽器指向 [檔案檢查表單](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
 * 選取其中一個夾具
 * 您應該會看到表單中顯示的影像

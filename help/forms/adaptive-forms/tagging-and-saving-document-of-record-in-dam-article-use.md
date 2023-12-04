@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
 last-substantial-update: 2019-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 274
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -19,15 +20,15 @@ ht-degree: 0%
 
 本文將逐步解說在AEM DAM中儲存和標籤AEM Forms產生的DoR的使用案例。 檔案的標籤是根據提交的表單資料完成的。
 
-客戶的一個常見要求是儲存和標籤AEM Forms在AEM DAM中產生的記錄檔案(DoR)。 檔案的標籤必須以Adaptive Forms提交的資料為基礎。 例如，如果提交資料中的僱用狀態為「已淘汰」，我們想使用「已淘汰」標籤檔案並將檔案儲存在DAM中。
+客戶的常見要求是儲存並標籤AEM Forms在AEM DAM中產生的記錄檔案(DoR)。 檔案的標籤必須根據最適化Forms提交的資料。 例如，如果提交資料中的僱用狀態為「已淘汰」，我們想使用「已淘汰」標籤檔案並將檔案儲存在DAM中。
 
 使用案例如下：
 
-* 使用者填寫最適化表單。 在最適化表單中，會擷取使用者的婚姻狀況（不含單身）和就業狀況（不含退休）。
-* 在表單提交時，會觸發AEM Workflow。 此工作流程會標籤具有婚姻狀態（單身）和僱用狀態（已淘汰）的檔案，並將檔案儲存在DAM中。
-* 將檔案儲存在DAM中後，管理員應該能夠按這些標籤搜尋檔案。 例如，搜尋「單一」或「已淘汰」會擷取適當的DoR。
+* 使用者填寫最適化表單。 在最適化表單中，會擷取使用者的婚姻狀況（例如，單身）和僱用狀況（例如，已退休）。
+* 在提交表單時會觸發AEM工作流程。 此工作流程會以婚姻狀態（單身）和僱用狀態（已淘汰）標籤檔案，並將檔案儲存在DAM中。
+* 一旦檔案儲存在DAM中，管理員應該能夠按這些標籤搜尋檔案。 例如，搜尋「單一」或「已淘汰」會擷取適當的DoR。
 
-為了滿足此使用案例，已編寫自訂流程步驟。 在此步驟中，我們會從提交的資料中擷取適當資料元素的值。 然後我們使用此值來建構標籤拼貼。 例如，如果婚姻狀況元素的值為「Single」，則標籤標題會變成**Peak：EmploymentStatus/Single。 **使用TagManager API ，我們會找到標籤並將標籤套用至DoR。
+為了滿足此使用案例，已編寫自訂流程步驟。 在此步驟中，我們會從提交的資料中擷取適當資料元素的值。 然後我們使用此值來建構標籤拼貼。 例如，如果婚姻狀況元素的值為「Single」，則標籤標題會變成**Peak：EmploymentStatus/Single。 **我們使用TagManager API來尋找標籤，並將標籤套用至DoR。
 
 以下是在AEM DAM中標籤和儲存記錄檔案的完整程式碼。
 
@@ -157,9 +158,9 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 ```
 
 若要讓此範例在您的系統上運作，請遵循下列步驟：
-* [部署Developing withserviceuser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [部署Developingwithserviceuser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下載和部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 這是自訂OSGI套件組合，會從提交的表單資料中設定標籤。
+* [下載並部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 此自訂OSGI套件組合會從提交的表單資料中設定標籤。
 
 * [下載最適化表單範例](assets/tag-and-store-in-dam-adaptive-form.zip)
 
@@ -172,10 +173,10 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 * [導覽至DAM中的尖峰資料夾](http://localhost:4502/assets.html/content/dam/Peak). 您應該會在Peak資料夾中看見DoR。 檢查檔案的屬性。 應該適當地加以標籤。
 恭喜!! 您已成功在系統上安裝範例
 
-* 讓我們來探索 [工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) 會在表單提交時觸發。
-* 工作流程的第一步是串連申請人名稱和居住縣，以建立唯一的檔案名稱。
-* 工作流程的第二個步驟會傳遞需要標籤的標籤階層與表單欄位元素。 處理步驟會從提交的資料中擷取值，並建構標籤檔案所需的標籤標題。
-* 如果您想要將DoR儲存在DAM中的其他資料夾，您可以使用以下熒幕擷取畫面中指定的設定屬性來指定資料夾位置。
+* 讓我們來探索 [工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) 這會在表單提交時觸發。
+* 工作流程的第一步會串連申請人名稱與居住縣，以建立唯一的檔案名稱。
+* 工作流程的第二個步驟會傳遞標籤階層以及需要標籤的表單欄位元素。 處理步驟會從提交的資料中擷取值，並建構標籤檔案所需的標籤標題。
+* 如果您想要將DoR儲存在DAM中的其他資料夾，您可以使用底下熒幕擷取畫面中指定的設定屬性來指定資料夾位置。
 
 其他兩個引數專用於最適化表單提交選項中指定的DoR和資料檔案路徑。 請確定您在此指定的值與您在最適化表單提交選項中指定的值相符。
 

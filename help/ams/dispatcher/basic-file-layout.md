@@ -9,10 +9,11 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 439
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 1%
+source-wordcount: '1132'
+ht-degree: 0%
 
 ---
 
@@ -62,11 +63,11 @@ ht-degree: 1%
 AdobeManaged Services伺服器影像通常有小型作業系統根磁碟機。  我們將資料放入另一個磁碟區，該磁碟區通常掛載在'/mnt'中。然後我們會使用該磁碟區，而不是下列預設目錄的預設值
 
 `DocumentRoot`
-- 預設:`/var/www/html`
+- 預設：`/var/www/html`
 - AMS：`/mnt/var/www/html`
 
 `Log Directory`
-- 預設: `/var/log/httpd`
+- 預設： `/var/log/httpd`
 - AMS： `/mnt/var/log/httpd`
 
 請記住，舊目錄和新目錄會對應回原始掛載點，以避免混淆。
@@ -80,9 +81,9 @@ AMS將新增到Apache Web Server的基本安裝上。
 ### 檔案根目錄
 
 AMS預設檔案根：
-- 作者:
+- 作者：
    - `/mnt/var/www/author/`
-- 發佈:
+- 發佈：
    - `/mnt/var/www/html/`
 - 全面收集與健康情況檢查維護
    - `/mnt/var/www/default/`

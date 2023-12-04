@@ -9,10 +9,11 @@ level: Experienced
 jira: KT-8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 2545
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 6%
+source-wordcount: '385'
+ht-degree: 1%
 
 ---
 
@@ -105,4 +106,4 @@ AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和parsys�
 + [AEM Gems - AEM現代化套裝簡介](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
 
 1. 在本機AEM SDK上部署最新化的wknd舊版網站。 AEM ASK可從這裡下載：
-   + [Software Distribution 入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).
+   + [軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).

@@ -10,10 +10,11 @@ exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 4693
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2603'
-ht-degree: 1%
+source-wordcount: '2413'
+ht-degree: 0%
 
 ---
 
@@ -200,7 +201,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ## 疑難排解
 
-***說明!*** 我的程式碼無法運作！ 就像所有開發一樣，有時候（可能很多）您的程式碼無法如預期運作。 AEM是一個功能強大的平台，但功能強大……帶來極大的複雜性。 以下是疑難排解及追蹤問題時的幾個高階起點（遠非可能錯誤的完整清單）：
+***協助！*** 我的程式碼無法運作！ 就像所有開發一樣，有時候（可能很多）您的程式碼無法如預期運作。 AEM是一個功能強大的平台，但功能強大……帶來極大的複雜性。 以下是疑難排解及追蹤問題時的幾個高階起點（遠非可能錯誤的完整清單）：
 
 ### 驗證程式碼部署
 

@@ -10,10 +10,11 @@ jira: KT-10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 449
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '934'
-ht-degree: 6%
+source-wordcount: '901'
+ht-degree: 5%
 
 ---
 
@@ -95,9 +96,9 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 
 此 `_assetTransform` 定義 `_dynamicUrl` 旨在最佳化提供的影像轉譯。 您也可以變更URL的查詢引數，在使用者端上調整Web最佳化的影像URL。
 
-| GraphQL引數 | URL 參數 | 說明 | 必填 | GraphQL變數值 | URL引數值 | 範例URL引數 |
+| GraphQL引數 | URL引數 | 說明 | 必填 | GraphQL變數值 | URL引數值 | 範例URL引數 |
 |:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | N/A | 影像資產的格式。 | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | N/A | N/A |
+| `format` | N/A | 影像資產的格式。 | ✔ | `GIF`， `PNG`， `PNG8`， `JPG`， `PJPG`， `BJPG`，  `WEBP`， `WEBPLL`， `WEBPLY` | N/A | N/A |
 | `seoName` | N/A | URL中的檔案區段名稱。 若未提供，則會使用影像資產名稱。 | ✘ | 英數字元， `-`，或 `_` | N/A | N/A |
 | `crop` | `crop` | 裁切影格從影像中取出，必須在影像大小範圍內 | ✘ | 正整數，定義原始影像尺寸範圍內的裁切區域 | 以逗號分隔的數位座標字串 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
 | `size` | `size` | 輸出影像的大小（高度和寬度），以畫素為單位。 | ✘ | 正整數 | 以逗號分隔的正整數 `<WIDTH>,<HEIGHT>` | `?size=1200,800` |

@@ -2,11 +2,8 @@
 title: AEMas a Cloud Service的Asset compute微服務擴充性
 description: 本教學課程將逐步解說如何建立簡易的Asset compute背景工作，此背景工作將原始資產裁切至圓圈以建立資產轉譯，並套用可設定的對比和亮度。 雖然背景工作程式本身至關重要，但本教學課程會使用它來探索建立、開發和部署自訂Asset compute背景工作，以與AEMas a Cloud Service搭配使用。
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5802
 thumbnail: KT-5802.jpg
 topic: Integrations, Development
@@ -14,9 +11,10 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2022-08-15T00:00:00Z
 exl-id: 575b12f9-b57f-41f7-bd39-56d242de4747
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 340
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---

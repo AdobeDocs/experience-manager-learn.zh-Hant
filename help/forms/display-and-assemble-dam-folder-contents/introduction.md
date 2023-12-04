@@ -8,24 +8,25 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
 exl-id: 91fbea23-4886-4892-87ad-1bc4fff5896a
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 31
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 3%
+source-wordcount: '98'
+ht-degree: 4%
 
 ---
 
 # 簡介
 
-常見的使用案例是使用核取方塊元件列出DAM資料夾內容（PDF檔案、Word檔案等），並允許使用者選取要下載的檔案。 選取的檔案將組合成一個檔案，供使用者下載。
+常見的使用案例是使用核取方塊元件列出DAM資料夾內容（PDF檔案、Word檔案等）並允許使用者選取要下載的檔案。 選取的檔案將組合成一個檔案，供使用者下載。
 
 ![使用案例](assets/newsletters-download1.png)
 
-## 必備條件
+## 先決條件
 
 您將需要下列專案：
 
-* 已安裝表單附加元件套件的AEM有效執行個體
+* 已安裝表單附加元件套件的AEM工作執行個體
 
 * [根據此檔案設定的開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 

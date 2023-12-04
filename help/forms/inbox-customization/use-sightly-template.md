@@ -2,19 +2,17 @@
 title: 使用Sightly範本顯示收件匣資料
 description: 新增自訂欄以顯示使用Sightly範本的工作流程其他資料
 feature: Adaptive Forms
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.5
 jira: KT-5830
 topic: Development
 role: Developer
 level: Experienced
 exl-id: d09b46ed-3516-44cf-a616-4cb6e9dfdf41
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 103
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---

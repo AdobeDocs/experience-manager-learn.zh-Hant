@@ -12,10 +12,11 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 237
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 4%
+source-wordcount: '186'
+ht-degree: 3%
 
 ---
 
@@ -43,7 +44,7 @@ ht-degree: 4%
 
 ![Target API主控台錯誤](assets/target-console-error.png)
 
-#### 解析度
+#### 解決方法
 
 1. 登入 [Admin Console](https://adminconsole.adobe.com/) 已使用Adobe Target產品設定檔的管理許可權，但AEM整合
 2. 選取 __產品> Adobe Target >產品描述檔__

@@ -11,10 +11,11 @@ index: y
 doc-type: Tutorial
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 104
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 42%
+source-wordcount: '414'
+ht-degree: 28%
 
 ---
 
@@ -22,7 +23,7 @@ ht-degree: 42%
 
 {{edge-delivery-services-and-page-editor}}
 
-歡迎使用專為Adobe Experience Manager (AEM)的新手開發人員設計的多部分教學課程。 此教學課程會逐步引導您實作虛擬生活風格品牌 WKND 的 AEM 網站。
+歡迎使用專為Adobe Experience Manager (AEM)的新手開發人員設計的多部分教學課程。 此教學課程會逐步引導您實施虛擬生活風格品牌WKND的AEM網站。
 
 本教學課程從使用開始 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 以產生新專案。
 

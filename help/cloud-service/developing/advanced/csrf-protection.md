@@ -11,9 +11,10 @@ last-substantial-update: 2023-07-14T00:00:00Z
 jira: KT-13651
 thumbnail: KT-13651.jpeg
 exl-id: 747322ed-f01a-48ba-a4a0-483b81f1e904
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+duration: 178
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -99,7 +100,7 @@ await fetch('/path/to/aem/endpoint', {
 });
 ```
 
-## Dispatcher 設定
+## Dispatcher設定
 
 在AEM Publish服務上使用CSRF權杖時，必須更新Dispatcher設定，以允許對CSRF權杖端點發出GET請求。 以下設定允許向AEM Publish服務上的CSRF權杖端點發出GET請求。 如果未新增此設定，CSRF權杖端點會傳回404 Not Found回應。
 

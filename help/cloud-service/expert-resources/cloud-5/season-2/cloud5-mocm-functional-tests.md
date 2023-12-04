@@ -1,5 +1,5 @@
 ---
-title: Cloud 5 - Cloud Manager的秘密 — 功能測試
+title: Cloud 5 - Cloud Manager的謎團 — 功能測試
 description: 建立自訂功能測試的方法和原因
 version: Cloud Service
 role: Admin, Developer
@@ -8,16 +8,17 @@ thumbnail: 343624.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 5d9d70ab-3aaa-4e88-b0f8-e8cfe73cc617
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+duration: 324
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 6%
+source-wordcount: '78'
+ht-degree: 0%
 
 ---
 
-# Cloud 5 - Cloud Manager的秘密 — 功能測試
+# Cloud 5 - Cloud Manager的謎團 — 功能測試
 
-AEMas a Cloud Service預設會完成許多功能測試，而您的應用程式會建置在上面。 不過，這些測試可能未涵蓋您可能需要的所有必要測試。 自訂功能測試可以解圍。
+AEMas a Cloud Service預設會完成許多功能測試，而您的應用程式會建置在頂端。 不過，這些測試可能未涵蓋您可能需要的全部必要測試。 自訂功能測試可以解圍。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343624?quality=12&learn=on)
 

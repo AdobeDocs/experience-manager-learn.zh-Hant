@@ -4,14 +4,14 @@ description: 無論您是管理員、作者或開發人員，網站維護都會�
 role: Admin
 level: Beginner, Intermediate
 topic: Administration
-audience: author, marketer, developer
 feature: Learn From Your Peers
 jira: KT-14255
 exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+duration: 266
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 3%
+source-wordcount: '998'
+ht-degree: 1%
 
 ---
 
@@ -63,7 +63,7 @@ ht-degree: 3%
 
 符合稽核記錄資格的AEM事件會產生大量已封存的資料。 由於複製、資產上傳和其他系統活動，這些資料會隨著時間快速成長。
 
-#### [安全性](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=zh-Hant)
+#### [安全性](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en)
 
 請務必嚴格遵守安全性檢查清單最佳實務，以確保AEM執行個體最安全。
 

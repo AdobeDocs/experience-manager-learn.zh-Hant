@@ -9,10 +9,11 @@ level: Beginner
 jira: KT-6060
 thumbnail: 39151.jpg
 exl-id: 7d7942ae-7e38-4abd-9900-5b8e3542f5e1
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 332
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 95%
+source-wordcount: '196'
+ht-degree: 90%
 
 ---
 
@@ -31,5 +32,5 @@ Adobe Experience Manager 以 Adobe IMS 使用者、使用者群組和產品設�
 
 ## 其他資源
 
-+ [Adobe Experience Manager as a Cloud Service 的 IMS 支援](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html)
-+ [AEM 提供的使用者群組及其權限](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups)
++ [Adobe Experience Manager as a Cloud Service的IMS支援](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html)
++ [AEM提供的使用者群組及其許可權](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups)

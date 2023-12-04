@@ -9,9 +9,10 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 559
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1688'
 ht-degree: 0%
 
 ---
@@ -96,7 +97,7 @@ RewriteRule ^/robots.txt$ /content/dam/exampleco/robots.txt [PT,L]
 
 如果副檔名為 `.conf` 放入 `/etc/httpd/conf.d/` 資料夾，它會嘗試將它載入到Apache上的記憶體中，這通常沒問題，但如果重寫規則檔案的副檔名為 `.conf` 放在 `/etc/httpd/conf.d/` 資料夾中，則會自動納入並全域套用，造成混淆和不想要的結果。
 
-## 解析度
+## 解決方法
 
 根據檔案的操作，在安全離開自動包含規則名稱空間的情況下將其命名。
 

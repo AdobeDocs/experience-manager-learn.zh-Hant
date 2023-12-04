@@ -1,7 +1,6 @@
 ---
 title: AEMas a Cloud Service中的周遊警告
 description: 瞭解如何在AEMas a Cloud Service中減輕周遊警告。
-topics: Migration
 feature: Migration
 role: Architect, Developer
 level: Beginner
@@ -11,10 +10,11 @@ hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 327
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 9%
+source-wordcount: '715'
+ht-degree: 2%
 
 ---
 
@@ -127,19 +127,19 @@ consider creating an index or changing the query
 
 + 與查詢執行相關聯的HTTP要求URL
 
-   + 範例: `GET /content/wknd/us/en/example.html HTTP/1.1`
+   + 範例： `GET /content/wknd/us/en/example.html HTTP/1.1`
 
 + Oak查詢語法
 
-   + 範例: `select [jcr:path], [jcr:score], * from [nt:base] as a where [xyz] = 'abc' and isdescendantnode(a, '/content')`
+   + 範例： `select [jcr:path], [jcr:score], * from [nt:base] as a where [xyz] = 'abc' and isdescendantnode(a, '/content')`
 
 + XPath查詢
 
-   + 範例: `/jcr:root/content//element(*, nt:base)[(@xyz = 'abc')] */, path=/content//*, property=[xyz=[abc]])`
+   + 範例： `/jcr:root/content//element(*, nt:base)[(@xyz = 'abc')] */, path=/content//*, property=[xyz=[abc]])`
 
 + 執行查詢的程式碼
 
-   + 範例:  `apps.wknd.components.search.example__002e__jsp._jspService` → `/apps/wknd/components/search/example.html`
+   + 範例：  `apps.wknd.components.search.example__002e__jsp._jspService` → `/apps/wknd/components/search/example.html`
 
 __失敗的查詢__ 後面接著 `RuntimeNodeTraversalException` 陳述式，類似於：
 
@@ -199,7 +199,7 @@ __變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引�
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜尋和索引">Cloud 5 — 搜尋和索引</a></p>
                <p class="is-size-6">Cloud 5團隊會顯示在AEMas a Cloud Service上探索搜尋和索引的來龍去脈。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">深入了解</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解更多</span>
                </a>
            </div>
        </div>
@@ -222,7 +222,7 @@ __變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引�
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="內容搜尋與索引">內容搜尋和索引檔案</a></p>
                <p class="is-size-6">瞭解如何在AEMas a Cloud Service中建立和管理索引。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">深入了解</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解更多</span>
                </a>
            </div>
        </div>
@@ -244,7 +244,7 @@ __變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引�
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="更新Oak索引">更新Oak索引</a></p>
                <p class="is-size-6">瞭解如何將AEM 6 Oak索引定義轉換為AEMas a Cloud Service相容的定義，並維護未來的索引。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">深入了解</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解更多</span>
                </a>
            </div>
        </div>
@@ -266,7 +266,7 @@ __變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引�
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="索引定義檔案">Lucene索引檔案</a></p>
                <p class="has-ellipsis is-size-6">Apache Oak Jackrabbit Lucene索引參考會記錄所有支援的Lucene索引設定。</p>
                <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">深入了解</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解更多</span>
                </a>
            </div>
        </div>

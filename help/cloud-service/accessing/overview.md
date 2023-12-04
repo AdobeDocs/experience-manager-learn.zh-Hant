@@ -1,5 +1,5 @@
 ---
-title: 設定存取權限至 AEM as a Cloud Service
+title: 設定對 AEM as a Cloud Service 的存取權限
 description: AEMas a Cloud Service是雲端原生方式利用AEM應用程式，因此會利用Adobe IMS (Identity Management系統)協助使用者（包括管理員和一般使用者）登入AEM作者服務。 瞭解Adobe IMS使用者、使用者群組和產品設定檔如何與AEM群組和許可權搭配使用，以提供AEM Author的特定存取權。
 version: Cloud Service
 topic: Administration, Security
@@ -10,14 +10,15 @@ jira: KT-5882
 thumbnail: KT-5882.jpg
 last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 148
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 28%
+source-wordcount: '598'
+ht-degree: 26%
 
 ---
 
-# 設定存取權限至 AEM as a Cloud Service {#configuring-access-to-aem-as-a-cloud-service}
+# 設定對 AEM as a Cloud Service 的存取權限 {#configuring-access-to-aem-as-a-cloud-service}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_overview"
@@ -72,6 +73,6 @@ Adobe Experience Manager 以 Adobe IMS 使用者、使用者群組和產品設�
 
 下列檔案封面 [Adobe Admin Console](https://adminconsole.adobe.com) — 特定的詳細資訊和問題，可能有助於您進一步瞭解Adobe Admin Console，並藉此管理不同Experience Cloud產品的使用者和存取權。
 
-+ [Adobe Admin Console 身分識別概觀](https://helpx.adobe.com/tw/enterprise/using/identity.html)
++ [Adobe Admin Console Identity概述](https://helpx.adobe.com/tw/enterprise/using/identity.html)
 + [Adobe Admin Console管理員角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)
 + [Adobe Admin Console開發人員角色](https://helpx.adobe.com/enterprise/using/manage-developers.html)

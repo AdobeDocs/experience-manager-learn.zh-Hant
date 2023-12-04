@@ -1,6 +1,6 @@
 ---
-title: 建立最適化表單時應遵循的命名慣例和最佳實務
-description: 建立最適化表單時應遵循的命名慣例和最佳實務
+title: 建立調適型表單時應遵循的命名慣例和最佳實務
+description: 建立調適型表單時應遵循的命名慣例和最佳實務
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -8,16 +8,17 @@ role: Developer
 level: Beginner
 exl-id: fbfc74d7-ba7c-495a-9e3b-63166a3025ab
 last-substantial-update: 2020-09-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 83
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 2%
+source-wordcount: '281'
+ht-degree: 1%
 
 ---
 
 # 最佳做法
 
-Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡單、愉快的數位體驗。 以下檔案說明開發最適化Forms時需遵循的一些其他最佳實務。 本檔案旨在與 [本檔案](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)
+Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡單、愉快的數位體驗。 以下檔案說明開發最適化Forms時需要遵循的一些其他最佳實務。 本檔案旨在結合 [本檔案](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)
 
 ## 命名慣例
 
@@ -31,13 +32,14 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
    * 名稱可包含字母、數字、底線和美元符號。
    * 名稱必須以字母開頭
    * 名稱區分大小寫
-   * 保留字（例如JavaScript關鍵字）不能用作名稱。 請留意其他AF特定保留字，例如「panel」、「name」。
+   * 保留字（例如JavaScript關鍵字）不能作為名稱使用。 請留意其他AF專屬保留字詞，例如「panel」、「name」。
    * 請勿在您的名稱中包含破折號「 — 」
 * **開發Forms**
-   * 開發大型表單時，應考慮表單片段。 啟用表單片段的延遲載入，以加快載入時間
+   * 開發大型表單時應考量表單片段。 啟用緩慢載入表單片段，以加快載入時間
    * **資料模型**
       * 建議將最適化表單與適當的資料模型建立關聯
+
    * **物件事件**
-      * 與物件可見度相關的程式碼應始終置於所述物件的可見度事件中。
+      * 與物件可視性相關的程式碼應始終置於所述物件的可視性事件中。
    * **指令碼**
-      * 如果您在最適化表單中編寫的程式碼延伸超過5行可見，您必須將程式碼移至使用者端資料庫。 理想情況下，請將函式新增至使用者端程式庫，然後新增適當的jsdoc標籤，讓函式顯示在最適化表單規則編輯器中。
+      * 如果您在最適化表單中撰寫的程式碼延伸超過5行可見，您必須將程式碼移至使用者端資料庫。 理想情況下，請將函式新增至使用者端程式庫，然後新增適當的jsdoc標籤，讓函式顯示在最適化表單規則編輯器中。

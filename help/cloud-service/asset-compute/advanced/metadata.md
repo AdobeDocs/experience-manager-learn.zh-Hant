@@ -2,21 +2,19 @@
 title: 開發Asset compute中繼資料背景工作
 description: 瞭解如何建立Asset compute中繼資料背景工作，以衍生影像資產中最常使用的顏色，並將顏色名稱寫入回AEM中的資產中繼資料。
 feature: Asset Compute Microservices
-topics: metadata, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6448
 thumbnail: 327313.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 6ece6e82-efe9-41eb-adf8-78d9deed131e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 526
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1433'
-ht-degree: 1%
+source-wordcount: '1405'
+ht-degree: 0%
 
 ---
 
@@ -270,12 +268,12 @@ $ aio app deploy
    + __建立中繼資料轉譯__：切換至使用中
    + __端點：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/metadata-colors`
       + 這是工作程式的URL，取得期間為 [部署](#deploy) 或使用指令 `aio app get-url`. 根據AEMas a Cloud Service環境，確保URL指向正確的工作區。
-   + __服務參數__
+   + __服務引數__
       + 點選 __新增引數__
-         + 金鑰: `colorFamily`
-         + 值: `pantone`
+         + 索引鍵： `colorFamily`
+         + 值： `pantone`
             + 支援的值： `basic`， `hex`， `html`， `ntc`， `pantone`， `roygbiv`
-   + __Mime 類型__
+   + __Mime型別__
       + __包括：__ `image/jpeg`， `image/png`， `image/gif`， `image/svg`
          + 這是第三方npm模組唯一支援的MIME型別，用來衍生顏色。
       + __排除：__ `Leave blank`
@@ -291,17 +289,17 @@ $ aio app deploy
 1. 在AEM Author服務中，瀏覽至 __「工具>資產>中繼資料結構」__
 1. 導覽至 __預設__ 並選取和編輯 __影像__ 並新增唯讀表單欄位以公開產生的色彩中繼資料
 1. 新增 __單行文字__
-   + __欄位標籤__: `Colors Family`
-   + __映射至屬性__: `./jcr:content/metadata/wknd:colorsFamily`
+   + __欄位標籤__： `Colors Family`
+   + __對應至屬性__： `./jcr:content/metadata/wknd:colorsFamily`
    + __規則>欄位>停用編輯__：已勾選
 1. 新增 __多值文字__
-   + __欄位標籤__: `Colors`
-   + __映射至屬性__: `./jcr:content/metadata/wknd:colors`
+   + __欄位標籤__： `Colors`
+   + __對應至屬性__： `./jcr:content/metadata/wknd:colors`
 1. 點選 __儲存__ 在右上方
 
 ## 正在處理資產
 
-![資產詳細內容](./assets/metadata/asset-details.png)
+![資產詳細資訊](./assets/metadata/asset-details.png)
 
 1. 在AEM Author服務中，瀏覽至 __「資產」>「檔案」__
 1. 導覽至該資料夾或子資料夾，處理設定檔將套用至

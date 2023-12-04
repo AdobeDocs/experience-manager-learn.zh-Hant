@@ -2,20 +2,18 @@
 title: 偵錯Asset compute背景工作
 description: asset compute背景工作可透過數種方式進行除錯，包括簡單的除錯記錄陳述式、附加的VS Code （作為遠端除錯工具），乃至於從起始自AEMas a Cloud Service的Adobe I/O Runtime中提取啟用的記錄。
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6285
 thumbnail: 40383.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 287
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---

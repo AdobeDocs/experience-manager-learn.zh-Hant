@@ -1,6 +1,6 @@
 ---
 title: 產生JSON Web權杖和存取權杖
-description: 本文說明產生JWT所需的程式碼，以及對Adobe Campaign Standard進行REST呼叫所需的存取權杖
+description: 本文說明產生JWT所需的程式碼以及對Adobe Campaign Standard進行REST呼叫所需的存取權杖
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Integrations, Development
@@ -9,30 +9,31 @@ level: Experienced
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: a5e5aad4-064f-4638-a53a-88dfb1d27c8f
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 236
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '241'
 ht-degree: 1%
 
 ---
 
 # 產生JSON Web權杖和存取權杖 {#generating-json-web-token-and-access-token}
 
-本文說明產生JWT所需的程式碼，以及對Adobe Campaign Standard進行REST呼叫所需的存取權杖
+本文說明產生JWT所需的程式碼以及對Adobe Campaign Standard進行REST呼叫所需的存取權杖
 
 ## 產生JSON Web權杖 {#generate-json-web-token}
 
-使用Adobe Campaign API的第一步是產生JWT。 有關如何為ACS產生JWT的程式碼範例很多。 您可以依照此步驟 [Java程式碼範例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) 以產生JWT。
+使用Adobe Campaign API的第一步是產生JWT。 有關如何為ACS產生JWT的程式碼範例有很多。 您可以依照此步驟 [Java程式碼範例](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) 以產生JWT。
 
-為了將ACS API與AEM Forms搭配使用，我們需要在OSGi套件組合內建立JWT。 下列程式碼片段用於在此範例OSGI套件組合中產生JWT。 有關ACS執行個體的詳細資訊會從OSGI設定屬性中擷取，設定如上所示。
+為了將ACS API與AEM Forms搭配使用，我們需要在OSGi套件組合內建立JWT。 下列程式碼片段是用來在此範例OSGI套件組合中產生JWT。 有關ACS執行個體的詳細資訊會從OSGI設定屬性擷取，設定如上所示。
 
 ![設定](assets/campaignconfiguration.gif)
 
-**答：** 此處顯示的值為虛設值
+**答：** 此處顯示的值是虛設值
 
 下列程式碼會從OSGI設定中擷取Adobe Campaign伺服器的詳細資訊。 我們會建立第80到104行的私密金鑰。
 
-取得私密金鑰後，我們會建立JSON Web Token。
+取得私密金鑰後，我們會建立JSON Web權杖。
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -241,10 +242,10 @@ public class CampaignServiceImpl implements CampaignService {
  }
 ```
 
-## 產生存取Token {#generate-access-token}
+## 產生存取權杖 {#generate-access-token}
 
-然後，我們會進行POST呼叫，將產生的JWT交換為存取權杖。 然後，此存取權杖將作為授權金鑰在HTTP標頭中傳送，以供後續REST呼叫使用
+然後，我們會進行POST呼叫，將產生的JWT交換為存取權杖。 然後，此存取Token會以授權金鑰的形式在HTTP標頭中傳送，以供後續REST呼叫使用
 
 ## 後續步驟
 
-[在ACS中針對表單提交建立設定檔](./parttwo.md)
+[在表單提交時在ACS中建立設定檔](./parttwo.md)

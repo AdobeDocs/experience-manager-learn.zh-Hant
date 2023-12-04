@@ -1,6 +1,5 @@
 ---
 title: 使用樣式系統進行開發
-seo-title: Developing with the Style System
 description: 瞭解如何使用Experience Manager的樣式系統來實作個別樣式並重複使用核心元件。 本教學課程涵蓋樣式系統的開發，以使用範本編輯器的品牌特定CSS和進階原則設定來擴充核心元件。
 version: 6.5, Cloud Service
 feature: Core Components, Style System
@@ -13,10 +12,11 @@ thumbnail: 30386.jpg
 doc-type: Tutorial
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 494
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 1%
+source-wordcount: '1555'
+ht-degree: 0%
 
 ---
 

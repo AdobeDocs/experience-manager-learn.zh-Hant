@@ -10,10 +10,11 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 328
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 1%
+source-wordcount: '1151'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +40,7 @@ AEM Headless快速設定讓您使用WKND Site範例專案中的內容，以AEM H
 
 1. 導覽至 **[軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)** > **AEMas a Cloud Service** 並下載最新版的 **AEM SDK**.
 
-   ![Software Distribution 入口網站](assets/quick-setup/aem-sdk/downloads__aem-sdk.png)
+   ![軟體發佈入口網站](assets/quick-setup/aem-sdk/downloads__aem-sdk.png)
 
 1. 解壓縮下載內容並複製Quickstart jar (`aem-sdk-quickstart-XXX.jar`)至專用的資料夾，例如 `~/aem-sdk/author`.
 1. 將jar檔案重新命名為 `aem-author-p4502.jar`.

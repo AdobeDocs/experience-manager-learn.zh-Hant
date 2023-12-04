@@ -9,9 +9,10 @@ level: Experienced
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 59d5ba6d-91c1-48c7-8c87-8e0caf4f2d7e
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 157
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '431'
 ht-degree: 3%
 
 ---
@@ -38,7 +39,7 @@ ht-degree: 3%
 
 需要實作方法getAuthDetails。 此方法將傳回AuthenticationDetails物件。 此AuthenticationDetails物件將設定進行Adobe Campaign REST API呼叫所需的必要HTTP標頭。
 
-以下是建立自訂驗證時所使用的程式碼。 getAuthDetails方法會完成所有工作。 我們將建立AuthenticationDetails物件。 然後，我們將適當的HttpHeaders新增至此物件並傳回此物件。
+以下是用來建立自訂驗證的程式碼。 getAuthDetails方法會完成所有工作。 我們將建立AuthenticationDetails物件。 然後，我們將適當的HttpHeaders新增至此物件，並傳回此物件。
 
 ```java
 package aemfd.campaign.core;
@@ -103,19 +104,19 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 
 ## 建立資料來源 {#create-data-source}
 
-第一步是建立swagger檔案。 swagger檔案會定義REST API，此API將用於在Adobe Campaign Standard中建立設定檔。 swagger檔案會定義REST API的輸入引數和輸出引數。
+第一步是建立swagger檔案。 swagger檔案會定義REST API，後者將用於在Adobe Campaign Standard中建立設定檔。 swagger檔案會定義REST API的輸入引數和輸出引數。
 
-使用swagger檔案建立資料來源。 建立「資料來源」時，您可以指定驗證型別。 在此情況下，我們將使用自訂驗證來針對Adobe Campaign進行驗證。上方列出的程式碼已用於針對Adobe Campaign進行驗證。
+資料來源是使用swagger檔案所建立。 建立資料來源時，您可以指定驗證型別。 在此情況下，我們將使用自訂驗證，以針對Adobe Campaign進行驗證。上方列出的程式碼已用於針對Adobe Campaign進行驗證。
 
-在與本文相關的資產中，會提供範例Swagger檔案給您。**請務必變更swagger檔案中的主機和basePath，以符合您的ACS執行個體**
+範例Swagger檔案會作為與本文相關的資產的一部分提供給您。**請務必變更swagger檔案中的主機和basePath，以符合您的ACS執行個體**
 
 ## 測試解決方案 {#test-the-solution}
 
 若要測試解決方案，請遵循下列步驟：
-* [請確定您已依照此處所述的步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [請確定您已依照此處所述步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [下載並解壓縮此檔案以取得swagger檔案](assets/create-acs-profile-swagger-file.zip)
-* 使用swagger檔案建立表單資料模型建立資料來源，並將其以上一步驟中建立的資料來源為基礎
-* 根據先前步驟中建立的表單資料模型建立最適化表單。
+* 使用Swagger檔案建立表單資料模型並以上一步驟中建立的資料來源為基礎，建立資料來源
+* 根據上一步建立的表單資料模型建立最適化表單。
 * 將下列元素從資料來源標籤拖放至最適化表單
 
    * 電子郵件

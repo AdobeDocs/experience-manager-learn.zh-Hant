@@ -2,21 +2,19 @@
 title: 將Asset compute背景工作與AEM處理設定檔整合
 description: AEMas a Cloud Service可透過AEM Assets處理設定檔與部署至Adobe I/O Runtime的Asset compute背景工作整合。 處理設定檔設定於「作者」服務中，以使用自訂背景工作處理特定資產，以及將背景工作產生的檔案儲存為資產轉譯。
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6287
 thumbnail: KT-6287.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 179
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 2%
+source-wordcount: '622'
+ht-degree: 0%
 
 ---
 
@@ -43,18 +41,18 @@ ht-degree: 2%
    + __端點：__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/worker`
       + 這是工作者的URL，取得自 `aio app get-url`. 根據AEMas a Cloud Service環境，確保URL指向正確的工作區。
       + 確定背景工作URL指向正確的工作區。 AEMas a Cloud Service階段應使用階段工作區URL，而AEMas a Cloud Service生產應使用生產工作區URL。
-   + __服務參數__
+   + __服務引數__
       + 點選 __新增引數__
-         + 金鑰: `size`
-         + 值: `1000`
+         + 索引鍵： `size`
+         + 值： `1000`
       + 點選 __新增引數__
-         + 金鑰: `contrast`
-         + 值: `0.25`
+         + 索引鍵： `contrast`
+         + 值： `0.25`
       + 點選 __新增引數__
-         + 金鑰: `brightness`
-         + 值: `0.10`
+         + 索引鍵： `brightness`
+         + 值： `0.10`
       + 這些會傳入Asset compute背景工作階段的索引鍵/值組，並可透過以下方式使用： `rendition.instructions` javascript物件。
-   + __Mime 類型__
+   + __Mime型別__
       + __包括：__ `image/jpeg`， `image/png`， `image/gif`， `image/bmp`， `image/tiff`
          + 這些MIME型別是工作者的npm模組中的唯一型別。 此清單會限制由自訂背景工作處理的專案。
       + __排除：__ `Leave blank`
@@ -75,7 +73,7 @@ ht-degree: 2%
 
    ![產生的轉譯](./assets/processing-profiles/rendition.png)
 
-## 已完成!
+## 已完成！
 
 恭喜！您已完成 [教學課程](../overview.md) 如何延伸AEMas a Cloud ServiceAsset compute微服務！ 您現在應該能夠設定、開發、測試、除錯和部署自訂Asset compute背景工作，以供AEMas a Cloud Service作者服務使用。
 
@@ -85,7 +83,7 @@ ht-degree: 2%
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_Github包含是專案的最終狀態，已完整填入工作程式和測試案例，但不包含任何認證，例如。 `.env`, `.config.json` 或 `.aio`._
+_Github包含是專案的最終狀態，已完整填入工作程式和測試案例，但不包含任何認證，例如。 `.env`， `.config.json` 或 `.aio`._
 
 ## 疑難排解
 

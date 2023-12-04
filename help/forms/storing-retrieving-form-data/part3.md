@@ -8,7 +8,8 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 9cce47e7-07b4-43c3-8746-197620855c3f
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+duration: 135
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 1%
@@ -17,7 +18,7 @@ ht-degree: 1%
 
 # 建立OSGi服務以擷取資料
 
-下列程式碼是用來儲存及擷取儲存的最適化表單資料。 系統會使用簡單查詢來擷取與指定GUID相關聯的最適化表單資料。 然後，擷取的資料會傳回至呼叫應用程式。 此程式碼會參照先前步驟中建立的相同資料來源
+已寫入下列程式碼以儲存及擷取已儲存的最適化表單資料。 系統會使用簡單查詢來擷取與指定GUID相關聯的最適化表單資料。 然後，擷取的資料會傳回至呼叫的應用程式。 此程式碼會參照先前步驟中建立的相同資料來源
 
 
 ```java

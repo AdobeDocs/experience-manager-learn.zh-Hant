@@ -1,14 +1,8 @@
 ---
 title: 建立表單資料模型
-seo-title: Creating Form Data Model
 description: 這是建立第一個互動式通訊檔案的多步驟教學課程的第3部分。 在本部分中，我們將建立「表單資料模型」。 表單資料模型可讓您設定並連線至不同的資料來源。它提供直覺式使用者介面，以跨連線的資料來源建立業務實體和服務的統一資料呈現結構描述。以下影片會逐步介紹建立表單資料模型的步驟。
-seo-description: This is part 3 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create Form Data Model. Form Data Model allows you to configure and connect to disparate data sources.It provides an intuitive user interface to create a unified data representation schema of business entities and services across connected data sources. The following video walks through the steps to create Form Data Model.
-uuid: 4cba42f3-860a-4bd3-b4b0-79c63195b36d
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 jira: KT-5952
 thumbnail: 27763.jpg
@@ -16,9 +10,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 4e64aa99-0b1c-49e9-95a7-d254017b80f4
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 265
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---

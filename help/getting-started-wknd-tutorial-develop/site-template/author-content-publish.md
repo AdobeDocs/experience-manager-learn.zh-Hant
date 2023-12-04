@@ -11,10 +11,11 @@ thumbnail: KT-7497.jpg
 doc-type: Tutorial
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
 recommendations: noDisplay, noCatalog
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 350
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1330'
-ht-degree: 2%
+source-wordcount: '1285'
+ht-degree: 0%
 
 ---
 
@@ -112,7 +113,7 @@ AEM環境分為兩種 **作者服務** 和 **發佈服務**. 在本章中，我�
 1. 從AEM開始畫面導覽至 **網站** 並選取 **WKND網站**.
 1. 按一下 **管理發布** 功能表列中的。
 
-   ![管理出版物](assets/author-content-publish/click-manage-publiciation.png)
+   ![管理發布](assets/author-content-publish/click-manage-publiciation.png)
 
    由於這是全新的網站，因此我們想發佈所有頁面，而且可以使用「管理出版物」精靈來定義需要發佈的確切內容。
 
@@ -136,7 +137,7 @@ AEM環境分為兩種 **作者服務** 和 **發佈服務**. 在本章中，我�
 
 1. 取得Publish服務URL的簡單方法是復製作者URL並取代 `author` 文字與 `publish`. 例如：
 
-   * **作者 URL** - `https://author-pYYYY-eXXXX.adobeaemcloud.com/`
+   * **作者URL** - `https://author-pYYYY-eXXXX.adobeaemcloud.com/`
    * **發佈URL** - `https://publish-pYYYY-eXXXX.adobeaemcloud.com/`
 
 1. 新增 `/content/wknd.html` 至發佈URL，使最終URL看起來像這樣： `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd.html`.

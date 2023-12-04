@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-11-28T00:00:00Z
 exl-id: 9f00a2f9-d388-4bcc-bdd6-66531dbb3ed2
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+duration: 26
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '80'
-ht-degree: 3%
+source-wordcount: '74'
+ht-degree: 4%
 
 ---
 
@@ -19,14 +20,14 @@ ht-degree: 3%
 
 本教學課程將逐步引導您完成建立自訂工作流程元件所涉及的步驟。
 
-## 必備條件
+## 先決條件
 
 您將需要下列專案：
 
-* 已安裝表單附加元件套件的AEM有效執行個體
+* 已安裝表單附加元件套件的AEM工作執行個體
 
 * [根據此檔案設定的開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 
 ## 後續步驟
 
-撰寫您的 [實作WorkflowProcess介面以自訂Java程式碼](./custom-process-step-aem-workflow.md)
+撰寫您的 [實作WorkflowProcess介面以自訂java程式碼](./custom-process-step-aem-workflow.md)

@@ -1,6 +1,6 @@
 ---
 title: 雲端5 — 體驗與內容片段
-description: 體驗片段與內容片段之間的差異為何？
+description: 體驗片段與內容片段之間的差異為何，以哪個為對照進行
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -8,16 +8,17 @@ thumbnail: 342864.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: bfd455c4-9a51-4537-ae6d-548d552e13e6
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+duration: 290
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 3%
+source-wordcount: '59'
+ht-degree: 5%
 
 ---
 
 # 雲端5 — 片段
 
-「與」說明體驗片段與內容片段之間的差異
+「vs」呈現體驗片段與內容片段之間的差異
 
 >[!VIDEO](https://video.tv.adobe.com/v/342864?quality=12&learn=on)
 

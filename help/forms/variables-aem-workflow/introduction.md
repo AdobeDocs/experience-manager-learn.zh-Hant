@@ -1,5 +1,5 @@
 ---
-title: AEM Workflow中的變數
+title: AEM工作流程中的變數
 description: 在aem工作流程中使用xml、json、arraylist、document型別的變數
 version: 6.5
 feature: Adaptive Forms, Workflow
@@ -8,14 +8,15 @@ role: Developer
 level: Beginner
 exl-id: e84b70a0-c51b-4fe3-80e8-f3156931297a
 last-substantial-update: 2020-01-26T00:00:00Z
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+duration: 40
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '107'
 ht-degree: 8%
 
 ---
 
-# AEM Workflow中的變數
+# AEM工作流程中的變數
 
 從AEM 6.5開始，您現在可以在AEM Workflow中建立和使用變數。 在此功能之前，工作流程作者通常會使用工作流程中繼資料對應建立索引鍵。 這表示要撰寫一些自訂程式碼來建立和填入這些金鑰。 透過此新功能工作流程，作者現在可以輕鬆建立變數，並在工作流程中的任何地方使用這些變數。
 

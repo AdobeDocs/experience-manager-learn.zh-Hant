@@ -7,9 +7,10 @@ role: Architect
 level: Beginner
 doc-type: Tutorial
 exl-id: 3bdb6e36-4174-44b5-ba05-efbc870c3520
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 4820
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '17460'
+source-wordcount: '17384'
 ht-degree: 0%
 
 ---
@@ -50,7 +51,7 @@ Dispatcher是大部分的必要元件，如果不是所有AEM安裝的話。 您
 
 3. 在系統的所有部分及元件中，反複使用及重複使用的軟體模式。 如果軟體模式最後變成次最佳，則所有使用模式的成品都必須重新編碼。
 
-記憶? 在本頁頂端，我們說Dispatcher是AEM應用程式的重要部分。 存取網頁應用程式非常隨機 — 使用者在無法預測的時間來往往。 最後，所有內容都將（或應該）在Dispatcher中快取。 因此，如果您仔細觀察，您可能已經意識到，快取可以視為「架構」成品，因此應讓團隊的所有成員、開發人員和管理員都瞭解。
+還記得嗎？ 在本頁頂端，我們說Dispatcher是AEM應用程式的重要部分。 存取網頁應用程式非常隨機 — 使用者在無法預測的時間來往往。 最後，所有內容都將（或應該）在Dispatcher中快取。 因此，如果您仔細觀察，您可能已經意識到，快取可以視為「架構」成品，因此應讓團隊的所有成員、開發人員和管理員都瞭解。
 
 我們並不是說開發人員應該實際設定Dispatcher。 他們需瞭解概念（尤其是界限），以確保Dispatcher也能運用其程式碼。
 
@@ -268,7 +269,7 @@ URL的副檔名一律必須為。 不過您可以在AEM中提供沒有副檔名�
 
 最後一章列出了大量例外狀況，當Dispatcher無法快取請求時。 但還有更多事情要考慮：就是因為Dispatcher _可以_ 快取請求，這並不一定意味著 _應該_.
 
-要點在於：快取通常很容易。 Dispatcher只需要儲存回應的結果，並在下次傳入非常相同的請求時傳回。 右? 錯誤！
+要點在於：快取通常很容易。 Dispatcher只需要儲存回應的結果，並在下次傳入非常相同的請求時傳回。 對嗎？ 錯誤！
 
 難點在於 _失效_ 或 _排清_ 的快取記憶體中。 Dispatcher需要找出資源已變更的時間，並且需要再次呈現。
 
@@ -358,7 +359,7 @@ Dispatcher可以安全地刪除資源，及其已快取的所有轉譯。 它會
 
 <br> 
 
-發生了什麼事？Dispatcher會儲存靜態版本的頁面，其中包含轉譯時從其他資源提取的所有內容和標籤。
+發生了什麼事？ Dispatcher會儲存靜態版本的頁面，其中包含轉譯時從其他資源提取的所有內容和標籤。
 
 Dispatcher只是一個檔案系統式的網頁伺服器，不僅速度很快，而且相對簡單。 如果包含的資源變更，則不會意識到這一點。 它仍會依附於轉譯包含頁面時存在的內容。
 
@@ -707,7 +708,7 @@ Invalidate-path /content/mysite/dummy
 
 #### 清理的必要性
 
-噢。 已完成. 萬歲！
+噢。 已完成。 萬歲！
 
 嗯……還不是很清楚。
 
@@ -715,7 +716,7 @@ Invalidate-path /content/mysite/dummy
 
 `/content/mysite/home/jcr:content/par/respi.img.fp-2018-31-12-23-59.jpg`
 
-與任何失效的資源無關。 記憶? 我們只會使「虛擬」資源失效，並依賴自動失效將「home」視為無效。 影像本身可能永遠不會 _實際_ 已刪除。 因此，快取會成長、成長、成長。 當影像變更並啟動時，會在Dispatcher的檔案系統中取得新檔案名稱。
+與任何失效的資源無關。 還記得嗎？ 我們只會使「虛擬」資源失效，並依賴自動失效將「home」視為無效。 影像本身可能永遠不會 _實際_ 已刪除。 因此，快取會成長、成長、成長。 當影像變更並啟動時，會在Dispatcher的檔案系統中取得新檔案名稱。
 
 未實際刪除快取檔案並無限期保留它們有三個問題：
 
@@ -877,7 +878,7 @@ DAM現在提供二進位檔案，以及提供品質屬性的元件。 URL應該�
   …
 ```
 
-這不是個好主意。 記憶? 無法快取含有查詢引數的請求。
+這不是個好主意。 還記得嗎？ 無法快取含有查詢引數的請求。
 
 #### 天真的方法2：傳遞其他資訊作為選取器
 
@@ -1303,7 +1304,7 @@ Google等搜尋引擎會考慮將不同URL上的相同內容設為「欺騙」�
 
 更可靠的設定是從Publish系統傳送失效請求 _晚於_ 他們已收到內容。 文章&quot;[使發佈執行個體中的Dispatcher快取失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)」說明詳細資訊。
 
-**參考**
+**引用**
 
 [helpx.adobe.com — 使發佈執行個體中的Dispatcher快取失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)
 
@@ -1319,7 +1320,7 @@ Google等搜尋引擎會考慮將不同URL上的相同內容設為「欺騙」�
 
 這可讓您免於Dispatcher中重複標題邏輯，並釋放HTTP和AEM的完整表達能力。
 
-**參考**
+**引用**
 
 * [helpx.adobe.com — 快取回應標頭](https://helpx.adobe.com/experience-manager/kb/dispatcher-cache-response-headers.html)
 
@@ -1339,7 +1340,7 @@ Google等搜尋引擎會考慮將不同URL上的相同內容設為「欺騙」�
 
 Cache-Control和Pragma是正式的HTTP標頭，會傳播到上層快取層（例如CDN）並由其解譯。 此 `Dispatcher` 標頭只是Dispatcher不要快取的提示。 它可用來告訴Dispatcher不要快取，同時仍允許上層快取圖層這麼做。 實際上，很難找到可能有用的案例。 但我們確定在某處確實有其他地方。
 
-**參考**
+**引用**
 
 * [Dispatcher — 無快取](https://helpx.adobe.com/experience-manager/kb/DispatcherNoCache.html)
 
@@ -1391,7 +1392,7 @@ Cache-Control和Pragma是正式的HTTP標頭，會傳播到上層快取層（例
 
 
 
-**參考**
+**引用**
 
 *[developer.mozilla.org — 快取](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
 
@@ -1449,7 +1450,7 @@ Cache-Control和Pragma是正式的HTTP標頭，會傳播到上層快取層（例
 
 （某些您可能不想在高負載尖峰時執行的操作）。
 
-**參考**
+**引用**
 
 * [apache.org — 修改重寫](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
 
@@ -1480,7 +1481,7 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 第二……嗯，如果我們看到內部伺服器錯誤，或者更糟糕的是，我們遇到AEM系統的中斷，就沒辦法要求AEM呈現錯誤頁面，對吧？ 中定義的必要後續請求 `ErrorDocument` 指示詞也會失敗。 我們已透過執行cron-job來解決此問題，它會定期透過從定義位置提取錯誤頁面 `wget` 並將其儲存至中定義的靜態檔案位置 `ErrorDocuments` 指令。
 
-**參考**
+**引用**
 
 * [apache.org — 自訂錯誤檔案](https://httpd.apache.org/docs/2.4/custom-error.html)
 
@@ -1507,7 +1508,7 @@ Dispatcher在預設情況下提供資源時不會檢查許可權。 實作方式
 
 **選項3**. 「許可權敏感型快取」是很有趣的方法。 Dispatcher正在快取資源，但在傳送之前，會詢問AEM系統是否可這麼做。 這會從Dispatcher建立額外的請求給Publish — 但通常在已經快取頁面時，它可避免Publish系統重新呈現頁面。 不過，此方法需要一些自訂實施。 請在此文章中尋找詳細資訊 [許可權敏感型快取](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html).
 
-**參考**
+**引用**
 
 * [helpx.adobe.com — 許可權敏感型快取](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)
 
@@ -1573,7 +1574,7 @@ Dispatcher在預設情況下提供資源時不會檢查許可權。 實作方式
 
 此方法有助於定義較長的寬限期，而不用擔心後續請求會無限期地延長寬限期。 雖然如我們先前所述 — 這只是個構想，我們尚無法進行測試。
 
-**參考**
+**引用**
 
 [helpx.adobe.com - Dispatcher設定](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)
 
@@ -1632,7 +1633,7 @@ Dispatcher還在內部標籤相應的URL，以便知道可以直接傳送這些�
 
 如果您檢視Dispatcher的快取目錄，您會看到標示有時間戳記的暫存檔。 這些是目前在背景中載入的檔案。
 
-**參考**
+**引用**
 
 [helpx.adobe.com — 使AEM中的快取頁面失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
 
@@ -1685,7 +1686,7 @@ Dispatcher會將Publish系統遮蔽在僅用於維護的請求之外，提供一
 
 但我們確實建議您儘可能及早在鏈結中縮小URL空間，且以最簡單的方式進行。 請記住，這些技術並不能取代高度敏感網站上的WAF。 有些人稱這些技術為「窮人的防火牆」 — 這是有原因的。
 
-**參考**
+**引用**
 
 [apache.org- sethandler指示詞](https://httpd.apache.org/docs/2.4/mod/core.html#sethandler)
 
@@ -1840,7 +1841,7 @@ _萬用字元模式_，則使用雙引號 `"` 而且您只能使用簡單的預�
 >
 >更複雜的設定會將篩選規則分割成多個檔案，這些檔案包含在 `dispatcher.any` 組態檔。 不過，新檔案不會引入新的名稱空間。 因此，如果您有一個檔案包含規則「001」，而另一個檔案包含規則「001」，您將會收到錯誤。 更有理由想出語意強烈的名字。
 
-**參考**
+**引用**
 
 [helpx.adobe.com — 為glob屬性設計模式](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
 

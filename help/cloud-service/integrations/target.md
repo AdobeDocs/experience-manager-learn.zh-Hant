@@ -13,10 +13,11 @@ thumbnail: KT-12433.jpeg
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+duration: 1721
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1679'
-ht-degree: 1%
+source-wordcount: '1618'
+ht-degree: 0%
 
 ---
 
@@ -174,7 +175,7 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予 __編輯者__
 1. 選取 __資料收集>資料串流__ 並選取 __新增資料串流__
 1. 在「新增資料流」精靈中，輸入：
    + 名稱：`AEM Target integration`
-   + 說明: `Datastream used by the Adobe Web SDK to serve personalized Content Fragments Offers.`
+   + 說明： `Datastream used by the Adobe Web SDK to serve personalized Content Fragments Offers.`
    + 事件結構： `Leave blank`
 1. 選取 __儲存__
 1. 選取 __新增服務__

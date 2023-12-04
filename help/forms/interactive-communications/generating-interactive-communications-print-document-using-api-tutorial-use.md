@@ -1,35 +1,31 @@
 ---
 title: 使用監看資料夾機製為列印頻道產生互動式通訊檔案
-seo-title: Generating Interactive Communications Document for print channel using watch folder mechanism
 description: 使用watched資料夾產生列印管道檔案
-seo-description: Use watched folder to generate print channel documents
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: f5ab4801-cde5-426d-bfe4-ce0a985e25e8
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 161
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
 
 # 使用監看資料夾機製為列印頻道產生互動式通訊檔案
 
-設計和測試列印管道檔案後，您通常需要透過進行REST呼叫來產生檔案，或使用監看資料夾機制產生列印檔案。
+設計和測試列印管道檔案後，您通常需要透過進行REST呼叫來產生檔案，或使用監看資料夾機制來產生列印檔案。
 
-本文說明使用Watched資料夾機制產生列印管道檔案的使用案例。
+本文說明使用watched資料夾機制產生列印管道檔案的使用案例。
 
-將檔案拖放到watched資料夾中時，會執行與watched資料夾相關聯的指令碼。 下方的文章將說明此指令碼。
+當您將檔案放入watched資料夾時，會執行與watched資料夾相關聯的指令碼。 下方的文章將說明此指令碼。
 
-放入watched資料夾中的檔案具有下列結構。 程式碼會為XML檔案中列出的所有帳號產生陳述式。
+放入watched資料夾的檔案具有下列結構。 程式碼會針對XML檔案中列出的所有帳號產生陳述式。
 
 &lt;accountnumbers>
 
@@ -47,19 +43,19 @@ ht-degree: 0%
 
 第1行 — InteractiveCommunicationsDocument的路徑
 
-第15到20行：從XML檔案取得accountnumbers清單，並放入watched資料夾
+第15到20行：從放入watched資料夾的XML檔案取得帳號清單
 
 第24-25行：取得與檔案相關的PrintChannelService和Print Channel。
 
 第30行：將accountnumber作為關鍵元素傳遞至表單資料模型。
 
-第32-36行：為要產生的檔案設定資料選項。
+第32-36行：設定要產生之檔案的資料選項。
 
 第38行：轉譯檔案。
 
 第39-40行 — 將產生的檔案儲存到檔案系統。
 
-表單資料模型的REST端點預期ID為輸入引數。 此id對應至名為accountnumber的請求屬性，如下方熒幕擷圖所示。
+表單資料模型的REST端點需要ID作為輸入引數。 此id對應至名為accountnumber的請求屬性，如下面的熒幕擷圖所示。
 
 ![requestattribute](assets/requestattributeprintchannel.gif)
 
@@ -111,11 +107,11 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-**若要在本機系統上測試此功能，請遵循下列指示：**
+**若要在本機系統上進行測試，請遵循下列指示：**
 
-* 依照以下說明設定Tomcat [文章。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat有產生範例資料的war檔案。
-* 設定服務（亦稱為系統使用者），如以下所述 [文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
-請確定此系統使用者擁有下列節點的讀取許可權。 將許可權登入到的方式 [使用者管理員](https://localhost:4502/useradmin) 和搜尋系統使用者「資料」，並將Tab鍵移至「許可權」索引標籤，以授與下列節點的讀取許可權
+* 依照本說明設定Tomcat [文章。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat有產生範例資料的war檔案。
+* 設定服務aka系統使用者，如以下所述 [文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
+請確定此系統使用者擁有下列節點的讀取許可權。 將許可權登入到的方式 [使用者管理員](https://localhost:4502/useradmin) 和搜尋系統使用者「資料」，並將Tab鍵移至「許可權」索引標籤，將讀取許可權授與下列節點
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
@@ -130,7 +126,7 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 * 根據您的偏好設定，在第2行修改saveLocation
 
-* 建立包含以下內容的accountnumbers.xml檔案
+* 建立含有以下內容的accountnumbers.xml檔案
 
 ```xml
 <accountnumbers>
@@ -152,4 +148,4 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 >
 >如果您打算在非視窗作業系統上使用此功能，請瀏覽至
 >
->/etc/fd/watchfolder /config/PrintChannelDocument並根據您的偏好變更folderPath
+>/etc/fd/watchfolder /config/PrintChannelDocument並根據您的偏好變更資料夾路徑

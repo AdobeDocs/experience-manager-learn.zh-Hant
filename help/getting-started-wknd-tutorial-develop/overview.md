@@ -1,10 +1,7 @@
 ---
 title: 開始使用AEM Sites - WKND教學課程
 description: 瞭解如何為名為WKND的虛構生活風格品牌實作AEM網站。 取得基本Experience Manager主題的逐步解說，例如專案設定、maven原型、核心元件、可編輯的範本、使用者端資料庫和元件開發。
-topics: development
 version: Cloud Service
-activity: develop
-audience: developer
 jira: KT-13565
 mini-toc-levels: 1
 index: y
@@ -16,9 +13,9 @@ level: Beginner
 doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '577'
 ht-degree: 5%
 
 ---

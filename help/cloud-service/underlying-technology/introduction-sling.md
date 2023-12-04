@@ -1,10 +1,7 @@
 ---
 title: Sling簡介
 description: 介紹Sling，這是一個開放原始碼RESTful Web架構，隸屬於Adobe Experience Manager基礎技術棧疊的一部分。
-topics: sling, architecture
-audience: administrator, developer
 doc-type: technical video
-activity: understand
 version: Cloud Service
 jira: KT-4641
 thumbnail: 32032.jpg
@@ -13,14 +10,15 @@ feature: Sling Model
 role: Architect, Developer
 level: Beginner
 exl-id: 92afc9c4-3d58-4787-86f6-46495d89c4d4
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 253
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '41'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
-# [!DNL Sling] 簡介 {#introduction-sling}
+# 簡介 [!DNL Sling] {#introduction-sling}
 
 簡介 [!DNL Sling]，開放原始碼 [!DNL RESTful] 屬於Adobe Experience Manager基礎技術棧疊一部分的網頁架構。
 

@@ -2,20 +2,18 @@
 title: 偵錯AEMas a Cloud Service
 description: 在自助式、可擴充的雲端基礎結構上，這要求AEM開發人員瞭解如何瞭解和偵錯AEMas a Cloud Service的各個層面，從建立和部署到取得執行AEM應用程式的詳細資訊。
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5346
 topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 83
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '314'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -35,7 +33,7 @@ Adobe Cloud Manager管道透過一系列步驟部署AEM應用程式，以確定�
 
 [偵錯AEMas a Cloud Service建置和部署](./build-and-deployment.md)
 
-## 開發人員控制台
+## 開發人員主控台
 
 開發人員主控台提供AEMas a Cloud Service環境的各種資訊和內省，有助於瞭解如何在AEMas a Cloud Service中辨識和運作您的應用程式。
 

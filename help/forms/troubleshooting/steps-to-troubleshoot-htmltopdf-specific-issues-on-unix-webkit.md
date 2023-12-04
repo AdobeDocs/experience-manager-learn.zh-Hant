@@ -1,5 +1,5 @@
 ---
-title: 針對Unix設定的HtmltoPDF特定問題進行疑難排解的步驟（WebKit轉換）
+title: 針對Unix設定（WebKit轉換）中的HtmltoPDF特定問題進行疑難排解的步驟
 description: 在UNIX設定中使用Webkit來疑難排解HtmltoPDF問題。
 type: Troubleshooting
 role: Developer
@@ -9,14 +9,15 @@ feature: PDF Generator
 topic: Development
 index: y
 exl-id: 6afe3b69-1422-4832-a189-57cbc0658ac1
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 132
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
 
 ---
 
-# 針對Unix設定的HtmltoPDF特定問題進行疑難排解的步驟（WebKit轉換）
+# 針對Unix設定（WebKit轉換）中的HtmltoPDF特定問題進行疑難排解的步驟
 
 *此影片會逐步解說疑難排解Unix設定（WebKit轉換）中HtmltoPDF特定問題的程式。*
 

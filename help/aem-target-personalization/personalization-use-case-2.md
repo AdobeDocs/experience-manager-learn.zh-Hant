@@ -1,8 +1,6 @@
 ---
 title: 使用Adobe Target進行個人化
-seo-title: Personalization using Adobe Target
 description: 端對端教學課程，說明如何使用Adobe Target建立和提供個人化體驗。
-seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target.
 feature: Experience Fragments
 topic: Personalization
 role: Developer
@@ -11,10 +9,11 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 165
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 2%
+source-wordcount: '580'
+ht-degree: 1%
 
 ---
 
@@ -69,9 +68,9 @@ WKND網站重新設計了首頁，並且想要將其目前首頁的訪客重新�
    6. 請注意，WKND網站首頁會在視覺化體驗撰寫器編輯器中開啟。
       ![VEC](assets/personalization-use-case-2/vec.png)
    7. 暫留在 **體驗B** 並選取「檢視其他選項」。
-      ![體驗 B](assets/personalization-use-case-2/redirect-url.png)
+      ![體驗B](assets/personalization-use-case-2/redirect-url.png)
    8. 選取 **重新導向至URL** 選項並輸入新WKND首頁的URL。 (http://localhost:4503/content/wknd/en1.html)
-      ![體驗 B](assets/personalization-use-case-2/redirect-url-2.png)
+      ![體驗B](assets/personalization-use-case-2/redirect-url-2.png)
    9. **儲存** 您的變更，並繼續活動建立的後續步驟。
    10. 選取 **流量分配方法** 以手動方式分配100%流量給 **體驗B**.
       ![體驗B流量](assets/personalization-use-case-2/traffic.png)

@@ -10,10 +10,11 @@ jira: KT-10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2023-08-08T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 276
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 2%
+source-wordcount: '603'
+ht-degree: 1%
 
 ---
 
@@ -108,7 +109,7 @@ AEM CORS OSGi Configuration Factory會定義接受CORS HTTP要求的允許條件
 + 此 `Origin` AEM無法透過移除 `Origin` 標題（若之前已新增）來自AEM Dispatcher專案的 `clientheaders.any` 檔案。 任何 `Access-Control-` 標題應從 `clientheaders.any` 會由檔案和Dispatcher管理，而非AEM Publish服務。
 + 若您有 [CORS OSGi設定](#osgi-configuration) 已在您的AEM Publish服務上啟用，您必須將其移除，並將其設定移轉至 [Dispatcher vhost設定](#set-cors-headers-in-vhost) 概述如下。
 
-### Dispatcher 設定
+### Dispatcher設定
 
 AEM Publish （和Preview）服務的Dispatcher必須設定為支援CORS。
 

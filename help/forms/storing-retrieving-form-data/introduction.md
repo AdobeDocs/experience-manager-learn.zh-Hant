@@ -9,22 +9,23 @@ role: Developer
 level: Experienced
 exl-id: 95795102-4278-4556-8e0f-1b8a359ab093
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+duration: 253
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
-# 從MySQL資料庫儲存和擷取最適化表單資料
+# 從MySQL資料庫儲存及擷取最適化表單資料
 
-本教學課程將逐步引導您完成儲存和擷取資料庫的最適化表單資料的相關步驟。 本教學課程使用MySQL資料庫來儲存最適化表單資料。 只要您已在AEM中部署資料庫特定驅動程式，就可以使用您選擇的資料庫來儲存資料。 概略來說，若要完成使用案例，必須執行下列步驟：
+本教學課程將逐步引導您完成儲存和擷取資料庫中的調適型表單資料的相關步驟。 本教學課程使用MySQL資料庫來儲存最適化表單資料。 只要您已在AEM中部署資料庫特定驅動程式，就可以使用您選擇的資料庫來儲存資料。 概略來說，完成使用案例需要下列步驟：
 
 * 使用GuideBridge API存取最適化表單資料
 
 * 對servlet進行POST呼叫。 此servlet會將資料儲存在資料庫中。 儲存的資料與GUID相關聯
 
-* 當您想要使用儲存的資料填入調適型表單時，您會擷取與GUID相關聯的資料，並使用 **request.setAttribute** 方法。
+* 當您想要將儲存的資料填入最適化表單時，您需要擷取與GUID相關的資料，並使用填入最適化表單 **request.setAttribute** 方法。
 
 ## 使用案例示範
 

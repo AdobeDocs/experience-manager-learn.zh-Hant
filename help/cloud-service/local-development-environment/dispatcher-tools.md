@@ -10,10 +10,11 @@ jira: KT-4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 765
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1695'
-ht-degree: 9%
+source-wordcount: '1622'
+ht-degree: 4%
 
 ---
 
@@ -26,9 +27,9 @@ ht-degree: 9%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="雲端中的 Dispatcher"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載 AEM as a Cloud Service SDK"
 
-Adobe Experience Manager (AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM發佈層級之間提供安全性與效能層。 Dispatcher 是整個 Experience Manager 架構的組成部分，應該是本機開發設定的一部分。
+Adobe Experience Manager (AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM發佈層級之間提供安全性與效能層。 Dispatcher是整體Experience Manager架構不可或缺的一部分，應是本機開發設定的一部分。
 
-AEM as a Cloud Service SDK 包括建議的 Dispatcher 工具版本，該版本有助於在本機設定、驗證和模擬 Dispatcher。Dispatcher工具由以下部分組成：
+AEMas a Cloud ServiceSDK包含建議的Dispatcher工具版本，有助於在本機設定、驗證和模擬Dispatcher。 Dispatcher工具由以下部分組成：
 
 + Apache HTTP Web伺服器和Dispatcher設定檔案的基準集合，位於 `.../dispatcher-sdk-x.x.x/src`
 + 組態驗證器CLI工具，位於 `.../dispatcher-sdk-x.x.x/bin/validate`
@@ -234,9 +235,9 @@ Dispatcher工具記錄檔在下列情況下發出到標準 `docker_run` 執行�
 用於偵錯Dispatcher的實用引數包括：
 
 + `DISP_LOG_LEVEL=Debug` 將Dispatcher模組記錄設定為偵錯層級
-   + 預設值為: `Warn`
+   + 預設值為： `Warn`
 + `REWRITE_LOG_LEVEL=Debug` 將Apache HTTP Web伺服器重寫模組記錄設定為偵錯層級
-   + 預設值為: `Warn`
+   + 預設值為： `Warn`
 + `DISP_RUN_MODE` 設定Dispatcher環境的「執行模式」，載入對應的執行模式Dispatcher設定檔案。
    + 預設為 `dev`
 + 有效值： `dev`， `stage`，或 `prod`

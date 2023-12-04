@@ -9,10 +9,11 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 54a30cd9-d94a-4de5-82a1-69ab2263980d
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 179
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '661'
-ht-degree: 4%
+source-wordcount: '595'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +45,7 @@ ht-degree: 4%
 
 * **環境**
    * Java 1.8或Java 11 (僅限AEM 6.5+)
-   * Apache Maven (3.3.9 或更新版本)
+   * Apache Maven （3.3.9或更新版本）
    * 鉻黃
 
 >[!NOTE]

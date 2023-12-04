@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 kt: kt-8049
 exl-id: 1131dca8-882d-4904-8691-95468fb708b7
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 122
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '147'
 ht-degree: 1%
 
 ---
@@ -18,11 +19,11 @@ ht-degree: 1%
 # 自訂流程步驟
 
 
-已實作自訂流程步驟，以建立包含表單附件的zip檔案。 如果您不熟悉如何建立OSGi套件，請 [請依照下列指示操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+已實施自訂流程步驟，以建立包含表單附件的壓縮檔案。 如果您不熟悉建立OSGi套件，請 [請依照下列指示操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
 自訂流程步驟中的程式碼會執行下列動作
 
-* 查詢有效負載資料夾下的所有最適化表單附件。 資料夾名稱會作為流程引數傳遞給流程步驟。
+* 查詢承載資料夾下的所有最適化表單附件。 資料夾名稱會作為流程引數傳遞給流程步驟。
 
 * 建立包含表單附件的zip檔案，並將其儲存在裝載資料夾下。
 * 設定工作流程變數的值(no_of_attachments)
@@ -159,8 +160,8 @@ public class ZipFormAttachments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> 請確定您有一個名為的變數  *no_of_attachments* 工作流程中的Double型別讓此程式碼運作。
+> 請確定您有一個稱為的變數  *no_of_attachments* 型別Double ，讓此程式碼可運作。
 
 ## 後續步驟
 
-[使用附件和附件名稱填入ArrayList工作流程變數](./custom-process-step.md)
+[以附件和附件名稱填入ArrayList工作流程變數](./custom-process-step.md)

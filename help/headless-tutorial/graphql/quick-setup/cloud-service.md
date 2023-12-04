@@ -9,10 +9,11 @@ level: Beginner
 jira: KT-9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 868
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 1%
+source-wordcount: '1078'
+ht-degree: 0%
 
 ---
 
@@ -168,10 +169,10 @@ _步驟的熒幕截圖_
 1. 開啟 __騎腳踏車去猶他州南部__ 資料夾
 1. 選取 __騎腳踏車去猶他州南部__ 內容片段，並選取 __編輯__ 從頂端動作列
 1. 更新內容片段的某些欄位，例如：
-   + 標題: `Cycling Utah's National Parks`
+   + 標題： `Cycling Utah's National Parks`
    + 運送航程長度： `6 Days`
    + 困難： `Intermediate`
-   + 價格: `3500`
+   + 價格： `3500`
    + 主要影像： `/content/dam/wknd-shared/en/activities/cycling/mountain-biking.jpg`
 1. 選取 __儲存__ 在頂端動作列中
 1. 選取 __快速發佈__ 從頂端動作列的 __...__

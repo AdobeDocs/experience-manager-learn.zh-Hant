@@ -1,6 +1,6 @@
 ---
 title: 安裝必要32位元Microsoft Visual C++可轉散發軟體的步驟
-description: 檢查及安裝必要32位元Microsoft Visual C++可轉散發軟體的步驟
+description: 檢查及安裝必要的32位元Microsoft Visual C++可轉散發套件
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -9,14 +9,15 @@ topic: Administration
 feature: Operations
 index: y
 exl-id: 896d75ab-de97-445f-bbe1-6be6cade9ee4
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+duration: 65
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '51'
 ht-degree: 0%
 
 ---
 
-# 檢查及安裝必要32位元Microsoft Visual C++可轉散發軟體的步驟
+# 檢查及安裝必要的32位元Microsoft Visual C++可轉散發套件
 
 *本影片將逐步說明檢查及安裝必要的32位元Microsoft Visual C++可轉散發套件。*
 

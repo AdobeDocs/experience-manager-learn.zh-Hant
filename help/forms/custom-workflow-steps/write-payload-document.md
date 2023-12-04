@@ -9,7 +9,8 @@ level: Beginner
 kt: kt-9859
 exl-id: bab7c403-ba42-4a91-8c86-90b43ca6026c
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 43
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -26,7 +27,7 @@ ht-degree: 0%
 ChangeBeneficiary.pdf,c:\confirmation
 ```
 
-第一個引數是您要儲存至檔案系統的檔名稱。 第二個引數是您要儲存檔案的資料夾位置。 例如在上面的使用案例中，檔案被寫入 `c:\confirmation\ChangeBeneficiary.pdf`
+第一個引數是您要儲存至檔案系統的檔名稱。 第二個引數是您要儲存檔案的資料夾位置。 以上述使用案例為例，檔案會寫入 `c:\confirmation\ChangeBeneficiary.pdf`
 
 以下熒幕擷圖顯示您需要傳遞至自訂流程步驟的引數
 ![write-payload-file-system](assets/write-payload-file-system.png)

@@ -1,6 +1,6 @@
 ---
-title: AEM Forms與Marketo（第2部分）
-description: 使用AEM Forms表單資料模型將AEM Forms與Marketo整合的教學課程。
+title: AEM Forms與Marketo （第2部分）
+description: 教學課程使用AEM Forms表單資料模型將AEM Forms與Marketo整合。
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Integrations, Development
@@ -9,16 +9,17 @@ level: Experienced
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 205
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '356'
 ht-degree: 1%
 
 ---
 
 # Marketo驗證服務
 
-Marketo的REST API已使用2-legged OAuth 2.0驗證。我們需要建立自訂驗證，以針對Marketo進行驗證。 此自訂驗證通常會寫入OSGI套件組合中。 下列程式碼顯示本教學課程中使用的自訂驗證器。
+Marketo的REST API已透過雙腿OAuth 2.0驗證。我們需要建立自訂驗證，以針對Marketo進行驗證。 此自訂驗證通常寫入OSGI套件組合中。 下列程式碼顯示用於本教學課程的自訂驗證器。
 
 ## 自訂驗證服務
 
@@ -69,7 +70,7 @@ public interface MarketoService {
 }
 ```
 
-以下程式碼為服務的，其會傳回用於進行REST API呼叫的access_token。 此服務中的程式碼會存取進行GET呼叫所需的設定引數。 如您所見，我們在GETURL中傳遞client_id、client_secret以產生access_token。 然後，會將此access_token傳回至呼叫的應用程式。
+下列程式碼屬於服務，會傳回用於進行REST API呼叫的access_token。 此服務中的程式碼會存取進行GET呼叫所需的設定引數。 如您所見，我們會在GETURL中傳遞client_id、client_secret以產生access_token。 然後會將此access_token傳回至呼叫的應用程式。
 
 ```java
 package com.marketoandforms.core.impl;
@@ -130,11 +131,11 @@ MarketoConfigurationService config;
 
 以下熒幕擷取畫面顯示需要設定的設定屬性。 您可在上述程式碼中讀取這些設定屬性，以取得access_token
 
-![config](assets/configuration-settings.png)
+![設定](assets/configuration-settings.png)
 
 ### 設定
 
-下列程式碼已用於建立設定屬性。 這些屬性專用於您的Marketo執行個體
+下列程式碼已用於建立設定屬性。 這些屬性是您的Marketo執行個體專屬的屬性
 
 ```java
 package com.marketoandforms.core;
@@ -155,7 +156,7 @@ public @interface MarketoConfiguration {
 }
 ```
 
-下列程式碼會讀取設定屬性，並透過getter方法傳回相同的屬性
+下列程式碼會讀取設定屬性並透過getter方法傳回相同的設定屬性
 
 ```java
 package com.marketoandforms.core;
@@ -201,7 +202,7 @@ public class MarketoConfigurationService {
 ```
 
 1. 將套件組合建置並部署至您的AEM伺服器。
-1. [將瀏覽器指向configMgr](http://localhost:4502/system/console/configMgr) 和搜尋「Marketo憑證服務設定」
+1. [將瀏覽器指向configMgr](http://localhost:4502/system/console/configMgr) 並搜尋「Marketo憑證服務設定」
 1. 指定您的Marketo執行個體特定的適當屬性
 
 ## 後續步驟

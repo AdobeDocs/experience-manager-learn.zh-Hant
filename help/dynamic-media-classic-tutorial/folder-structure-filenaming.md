@@ -2,15 +2,15 @@
 title: 決定您的資料夾結構和檔案命名慣例
 description: 檔案命名可能是您在實施Dynamic Media Classic時最重要的一項決定。 資料夾結構也同樣重要。 瞭解為何對您的資料夾結構和檔案名稱採取這種重要和可能的方法。
 feature: Dynamic Media Classic
-activity: develop
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: 15121896-9196-4ce0-aff2-9178563326b4
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 330
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1202'
 ht-degree: 0%
 
 ---

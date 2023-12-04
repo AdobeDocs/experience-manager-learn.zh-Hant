@@ -1,8 +1,6 @@
 ---
 title: 使用視覺化體驗撰寫器進行個人化
 description: 瞭解如何使用視覺化體驗撰寫器建立Adobe Target活動。
-topics: integrations, authoring, personalization, activity, offers
-audience: all
 version: Cloud Service
 jira: KT-6352
 thumbnail: 6352-personalization-using-vec.jpg
@@ -14,10 +12,11 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 142
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 1%
+source-wordcount: '514'
+ht-degree: 0%
 
 ---
 
@@ -69,7 +68,7 @@ WKND網站首頁會以資訊卡的形式顯示當地活動或城市周圍的最�
 
 1. 按一下 **下一個** 移至目標定位，並保持兩個體驗之間的手動流量分配50至50。
 
-   ![定位](assets/targeting.png)
+   ![目標定位](assets/targeting.png)
 
 1. 針對目標與設定，選擇報表來源為Adobe Target，然後選取目標量度為轉換連同頁面檢視動作。
 

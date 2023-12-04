@@ -1,5 +1,5 @@
 ---
-title: 將DAM資料夾專案新增至選擇群組元件
+title: 新增DAM資料夾專案至選擇群組元件
 description: 動態新增專案至選擇群組元件
 feature: Adaptive Forms
 version: 6.5
@@ -8,20 +8,21 @@ role: User
 level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
 exl-id: 29f56d13-c2e2-4bc2-bfdc-664c848dd851
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 122
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
-# 動態新增專案至選擇群組元件
+# 將專案動態新增至選擇群組元件
 
-AEM Forms 6.5匯入動態新增專案至最適化Forms選擇群組元件（例如CheckBox、選項按鈕和影像清單）的功能。 在本文中，我們將瞭解使用DAM資料夾內容填入選擇群組元件的使用案例。 在熒幕擷圖中，這3個檔案位於名為電子報的資料夾中。每次將新電子報新增至資料夾時，選擇群組元件都會更新以自動列出其內容。 使用者可以選取一或多個要下載的電子報。
+AEM Forms 6.5匯入動態新增專案至最適化Forms選擇群組元件（例如核取方塊、選項按鈕和影像清單）的功能。 在本文中，我們將瞭解使用DAM資料夾內容填入選擇群組元件的使用案例。 在熒幕擷取畫面中，這3個檔案位於名為電子報的資料夾中。每次將新電子報新增至資料夾時，都會更新選擇群組元件，以自動列出其內容。 使用者可以選取一或多個要下載的電子報。
 
 ![規則編輯器](assets/newsletters-download.png)
 
-## 建立servlet以傳回DAM資料夾內容
+## 建立Servlet以傳回DAM資料夾內容
 
 所寫入的下列程式碼會以JSON格式傳回DAM資料夾內容。
 

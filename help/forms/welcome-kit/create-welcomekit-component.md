@@ -1,6 +1,6 @@
 ---
 title: 建立歡迎套件元件
-description: 建立AEM網站頁面，包含根據提交的表單資料下載資產的連結。
+description: 建立AEM網站頁面，內含根據提交表單資料下載資產的連結。
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -8,7 +8,8 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
 exl-id: 66496f0e-c121-4b6d-b371-084393ece3ca
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 36
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%

@@ -11,9 +11,10 @@ last-substantial-update: 2023-08-28T00:00:00Z
 jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: 1a1accbe-7706-4f9b-bf63-755090d03c4c
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+duration: 333
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1134'
 ht-degree: 1%
 
 ---
@@ -94,7 +95,7 @@ AEM Publish CDN是以TTL （存留時間）為基礎，這表示快取存留期�
 + HTTP回應不適用於二進位檔案。
 + HTTP要求URL路徑以副檔名結尾，例如： `.html`， `.json`， `.css`， `.js`等
 + HTTP要求不包含授權，且未由AEM驗證。
-   + 不過，快取已驗證的請求 [可全域啟用](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used) 或選擇性地透過 [許可權敏感型快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-Hant).
+   + 不過，快取已驗證的請求 [可全域啟用](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used) 或選擇性地透過 [許可權敏感型快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
 + HTTP要求不包含查詢引數。
    + 但是，設定 [忽略的查詢引數](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters) 允許從快取中快取/提供包含已忽略查詢引數的HTTP請求。
 + HTTP要求的路徑 [符合允許Dispatcher規則，但不符合拒絕規則](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache).

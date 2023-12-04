@@ -2,7 +2,6 @@
 title: 搭配AEM Sites使用頁面差異
 description: AEM Sites的頁面差異功能顯示以顏色快速檢視頁面中的變更內容（版本、即時副本、啟動、語言副本）。
 version: 6.4, 6.5
-uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 jira: KT-4633
 thumbnail: 32152.jpg
 topic: Content Management
@@ -11,9 +10,10 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 4d365957-9a5a-44f8-a117-95c1c0dd757d
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 518
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '112'
 ht-degree: 1%
 
 ---
