@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 54827c36a33437a8bf090eb10cde8ed656446d0b
+source-git-commit: bd33d076cf9caa7c900ef4fe8b1a17e27a791cae
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 22%
+source-wordcount: '491'
+ht-degree: 16%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 22%
 
 + [概觀](overview.md)
 + 檔案製作 {#document-authoring}
+   + [概觀](document-authoring/overview.md)
    + [設定](document-authoring/set-up.md)
    + [預覽和發佈](document-authoring/preview-and-publish.md)
    + [檔案結構](document-authoring/document-structure.md)
@@ -66,6 +67,7 @@ ht-degree: 22%
    + [建置區塊](experience-fragments/building-blocks.md)
    + [內容片段vs.體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
+   + [概觀](./edge-delivery-services/overview.md)
    + 開發{#developing}
       + [先決條件](edge-delivery-services/developing/prerequisites.md)
       + [AEM範本](edge-delivery-services/developing/aem-boilerplate.md)
@@ -80,8 +82,8 @@ ht-degree: 22%
 + 開發 {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 專案原型](developing/aem-project-archetype.md)
-   + [AEM Sites快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant){target=_blank}
-   + [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
+   + [AEM Sites快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
+   + [AEM Headless快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
    + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
    + [回應式中斷點](developing/responsive-breakpoints.md)
@@ -140,7 +142,7 @@ ht-degree: 22%
    + Adobe使用者端資料層 {#adobe-client-data-layer}
       + [使用Adobe使用者端資料層](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自訂Adobe使用者端資料層](integrations/adobe-client-data-layer/data-layer-customize.md)
-   + 分析 {#analytics}
+   + Analytics {#analytics}
       + [使用Adobe Analytics收集頁面資料](integrations/analytics/collect-data-analytics.md)
       + [使用Adobe Analytics追蹤已點按的元件](integrations/analytics/track-clicked-component.md)
       + [使用Analysis Workspace分析資料](integrations/analytics/create-analytics-workspace.md)
