@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: f6491d04f7f23da75366904a7965103465d33f87
+source-git-commit: e5c50ffb379f497ed72efd63528af4f874b18ade
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 25%
+source-wordcount: '402'
+ht-degree: 16%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 25%
    + [處理設定檔](configuring/processing-profiles.md)
    + [自動開始工作流程](configuring/auto-start-workflows.md)
 
-+ 編寫 {#authoring}
++ 製作 {#authoring}
    + [導覽](./authoring/navigation.md)
    + [基本操作](./authoring/basic-operations.md)
    + [中繼資料](./authoring/metadata.md)
@@ -71,7 +71,7 @@ ht-degree: 25%
    + [下載資產](./sharing/download.md)
    + [發佈資產](./sharing/publish.md)
 
-   + 品牌入口網站{#brand-portal}
+   + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
       + [設定AEM Brand Portal](brand-portal/configure.md)
       + [設定資產來源](brand-portal/configure-asset-sourcing.md)
@@ -84,13 +84,14 @@ ht-degree: 25%
       + [Asset Share Commons資產套件](./sharing/asset-share/asset-share-commons-asset-kits.md)
    + [連接的資產](./sharing/connected-assets.md)
 
-+ 整合創意工作流程{#creative-workflows}
++ 創意工作流程{#creative-workflows}
    + [Adobe Express](./creative-workflows/adobe-express.md)
+   + [Adobe Express AEM Assets附加元件](./creative-workflows/adobe-express-aem-assets-add-on.md)
    + [AEM案頭應用程式](./creative-workflows/aem-desktop-app.md)
-   + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
+   + [Adobe資產連結](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
-+ Adobe Asset Link{#adobe-asset-link}
++ Adobe資產連結{#adobe-asset-link}
    + [設定](./adobe-asset-link/setup.md)
    + [存取Adobe資產連結](./adobe-asset-link/launch-adobe-asset-link.md)
    + [面板概述](./adobe-asset-link/panel-overview.md)
@@ -116,23 +117,23 @@ ht-degree: 25%
       + [智慧型裁切](dynamic-media/smart-crop-feature-video-use.md)
       + [影像銳利化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + 影片 {#video}
+   + 視訊 {#video}
       + [互動視訊](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
       + [視訊播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
       + [360度影片](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [自訂視訊縮圖](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [Dynamic Media智慧型裁切視訊](dynamic-media/dynamic-media-smart-crop-video.md)
-   + 檢視器 {#viewers}
+   + 檢視者 {#viewers}
       + [檢視器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [全景和垂直影像檢視器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
       + [具有Adobe Analytics的檢視器](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + 3D {#3d}
+   + 三維 {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
    + 搭配AEM Sites使用 {#dm-with-aem-sites}
       + [體驗片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
 
-   + 教學課程 {#tutorials}
+   + Tutorials {#tutorials}
       + [建立轉盤集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [建立影像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [建立影像預設集](dynamic-media/tutorials/creating-image-presets.md)

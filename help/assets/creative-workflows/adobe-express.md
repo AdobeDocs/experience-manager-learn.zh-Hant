@@ -1,26 +1,28 @@
 ---
-title: Adobe Express整合
-description: 瞭解如何使用AEM Assets和Adobe Express最佳化內容供應鏈，為所有團隊成員提高生產力和協助工具。
+title: AEM Assets和Adobe Express
+description: 瞭解如何使用Adobe Express在AEM Assets中輕鬆建立和編輯內容。
 version: Cloud Service
 feature: Integrations
-topic: Integrations, Content Management
-role: User
-level: Intermediate
-last-substantial-update: 2023-10-26T00:00:00Z
-jira: KT-14192
-thumbnail: 3425193.jpeg
+topic: Integrations, Content Management, Content Supply Chain
+role: Admin, User
+level: Beginner
 doc-type: Feature Video
-exl-id: 4da1b1ff-5472-4282-a998-ae344e7b8309
-duration: 610
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 500
+last-substantial-update: 2023-12-06T00:00:00Z
+jira: KT-14645
+thumbnail: 3425972.jpeg
+source-git-commit: e5c50ffb379f497ed72efd63528af4f874b18ade
 workflow-type: tm+mt
-source-wordcount: '49'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
-# Adobe Express整合
 
-瞭解如何使用AEM Assets及最佳化內容供應鏈 [Adobe Express](https://www.adobe.com/express/)，提升所有團隊成員的生產力和協助工具。
+# AEM Assets和Adobe Express
 
->[!VIDEO](https://video.tv.adobe.com/v/3425193/?learn=on)
+瞭解如何使用Adobe Express在Adobe Experience Manager Assets中輕鬆建立和編輯內容。 此影片會引導您增強內容工作流程、示範現有資產的編輯和新資產的建立，所有這些工作都經過簡化，以提高效率和方便使用者。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
+
+瞭解如何設定 [適用於Adobe Express的AEM Assets附加元件](./adobe-express-aem-assets-add-on.md) 以從Adobe Express順暢地存取AEM Assets。
