@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
+source-git-commit: 43c021b051806380b3211f2d7357555622217b91
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 21%
+source-wordcount: '1072'
+ht-degree: 16%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 21%
 + [概觀](./overview.md)
 + AEM試用版 {#aem-trials}
    + [影像](./aem-trials/images.md)
-+ AEM as a Cloud Service 簡介{#introduction}
++ AEMas a Cloud Service簡介{#introduction}
    + [AEM有哪些as a Cloud Service？](./introduction/what-is-aem-as-a-cloud-service.md)
    + [架構](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
@@ -27,7 +27,7 @@ ht-degree: 21%
       + [Experience Manager — 治理與人員配置模型與原型](./introduction/experience-manager-governance-and-staffing-models.md)
       + [如何使用Adobe Experience Manager提升內容速度](./introduction/drive-content-velocity-for-sites.md)
       + [使用AEM樣式系統加快內容速度](./introduction/accelerate-content-velocity-aem.md)
-+ Experience Cloud 整合{#integrations}
++ Experience Cloud整合{#integrations}
    + [整合](./integrations/experience-cloud.md)
    + [Adobe Target](./integrations/target.md)
 + 基礎技術 {#underlying-technology}
@@ -40,7 +40,7 @@ ht-degree: 21%
 + Edge Delivery Services {#edge-delivery-services}
    + [AEM AssetsSidekick外掛程式](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
-   + [計畫](./cloud-manager/programs.md)
+   + [方案](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
    + [CI/CD 生產管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD 非生產管道](./cloud-manager/cicd-non-production-pipeline.md)
@@ -81,7 +81,7 @@ ht-degree: 21%
                + [RTE工具列按鈕](./developing/extensibility/ui/content-fragments/examples/editor-rte-toolbar.md)
                + [RTE Widget](./developing/extensibility/ui/content-fragments/examples/editor-rte-widget.md)
                + [RTE徽章](./developing/extensibility/ui/content-fragments/examples/editor-rte-badges.md)
-   + 開發基本概念{#basics}
+   + 開發基本知識{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [本機開發環境](./developing/basics/local-development-environment.md)
       + [AEM 專案原型](./developing/basics/aem-project-archetype.md)
@@ -91,7 +91,7 @@ ht-degree: 21%
       + [內容發佈](./developing/basics/content-publishing.md)
       + [OSGi 設定](./developing/basics/osgi-configurations.md)
       + [Dispatcher設定移轉](./developing/basics/dispatcher-configuration.md)
-   + AEM 專案{#aem-projects}
+   + AEM專案{#aem-projects}
       + [AEM Maven專案](./developing/projects/maven-project-structure.md)
       + [清理AEM Maven專案](./developing/projects/remove-samples.md)
    + OSGi服務{#osgi-services}
@@ -123,7 +123,7 @@ ht-degree: 21%
       + [概觀](./debugging/cloud-service/overview.md)
       + [記錄檔](./debugging/cloud-service/logs.md)
       + [建置和部署](./debugging/cloud-service/build-and-deployment.md)
-      + [開發人員控制台](./debugging/cloud-service/developer-console.md)
+      + [開發人員主控台](./debugging/cloud-service/developer-console.md)
       + [存放庫瀏覽器](./debugging/cloud-service/repository-browser.md)
       + 風險{#risks}
          + [周遊警告](./debugging/cloud-service/risks/traversals.md)
@@ -134,6 +134,9 @@ ht-degree: 21%
    + [AEM發佈服務](./caching/publish.md)
    + [AEM作者服務](./caching/author.md)
    + [CDN快取命中率分析](./caching/cdn-cache-hit-ratio-analysis.md)
+   + 操作說明{#how-to}
+      + [啟用快取](./caching/how-to/enable-caching.md)
+      + [停用快取](./caching/how-to/disable-caching.md)
 + 存取AEM{#accessing}
    + [概觀](./accessing/overview.md)
    + [Adobe IMS 使用者](./accessing/adobe-ims-users.md)
@@ -190,9 +193,9 @@ ht-degree: 21%
       + [內容轉移工具](./migration/cloud-acceleration-manager/content-transfer-tool.md)
       + [程式碼重構工具](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
       + [程式碼存放庫現代化工具](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
-      + [Dispatcher 轉換工具](./migration/cloud-acceleration-manager/dispatcher-converter.md)
+      + [Dispatcher轉換工具](./migration/cloud-acceleration-manager/dispatcher-converter.md)
       + [索引轉換器](./migration/cloud-acceleration-manager/index-converter.md)
-      + [資產工作流程移轉 工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
+      + [資產工作流程移轉工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [瀏覽Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + [內容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
@@ -330,7 +333,7 @@ ht-degree: 21%
    + [疑難排解](./asset-compute/troubleshooting.md)
 
 + 多步驟Tutorials{#multi-step-tutorials}
-   + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant){target=_blank}
+   + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html){target=_blank}
    + [SPA編輯器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html){target=_blank}
