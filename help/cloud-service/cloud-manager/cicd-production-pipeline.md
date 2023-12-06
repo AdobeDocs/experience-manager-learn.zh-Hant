@@ -11,10 +11,10 @@ role: Architect, Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
 duration: 423
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 8a042c561c1a7e48152c2b067d92d709ab5fd53e
 workflow-type: tm+mt
 source-wordcount: '147'
-ht-degree: 53%
+ht-degree: 51%
 
 ---
 
@@ -24,17 +24,17 @@ ht-degree: 53%
 >id="aemcloud_devops_prodpipeline"
 >title="CI/CD 生產管道"
 >abstract="CI/CD 生產管道設定會定義起始管道的觸發條件、控制生產部署的參數以及效能測試參數。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=zh-Hant#deployment-process" text="部署程式碼"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=zh-Hant#deployment-production-phase" text="部署至生產階段"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="部署程式碼"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="部署至生產階段"
 
 ## 設定
 
-此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) 設定會定義將起始管道的觸發條件、控制生產部署的引數及效能測試引數。
+此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html) 設定會定義將起始管道的觸發條件、控制生產部署的引數及效能測試引數。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### 管道執行
 
-此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) 用於透過Stage建置計畫碼並部署至生產環境，減少實現價值的時間。
+此 [CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) 用於透過Stage建置計畫碼並部署至生產環境，減少實現價值的時間。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)
