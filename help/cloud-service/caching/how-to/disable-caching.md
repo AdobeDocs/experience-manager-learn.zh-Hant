@@ -48,7 +48,7 @@ ht-degree: 0%
 
 此選項是停用快取的建議方法，但僅適用於AEM Publish。 若要更新快取標題，請使用 `mod_headers` 模組和 `<LocationMatch>` 指示詞。 一般語法如下：
 
-    &quot;&#39;conf
+    ```
     &lt;locationmatch url=&quot;&quot; url_regex=&quot;&quot;>
     #移除此名稱的回應標頭（若存在）。 如果有多個相同名稱的標頭，則會移除所有標頭。
     標頭未設定Cache-Control
@@ -68,7 +68,7 @@ ht-degree: 0%
 1. 在您的AEM專案中，從找到所需的影片檔案 `dispatcher/src/conf.d/available_vhosts` 目錄。
 1. 更新vhost (例如 `wknd.vhost`)檔案，如下所示：
 
-       &quot;&#39;conf
+       ```
        &lt;locationmatch etc.clientlibs=&quot;&quot;>*\.(css)$&quot;>
        #移除此名稱的回應標頭（若存在）。 如果有多個相同名稱的標頭，則會移除所有標頭。
        標頭未設定Cache-Control
