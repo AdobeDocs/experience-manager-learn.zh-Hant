@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: bd33d076cf9caa7c900ef4fe8b1a17e27a791cae
+source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '496'
 ht-degree: 16%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 16%
       + [網站階層秘訣](page-authoring/expert-advice/site-hierarchy.md)
 + 內容片段 {#content-fragments}
    + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
-   + [編寫內容片段](content-fragments/content-fragments-feature-video-use.md)
+   + [製作內容片段](content-fragments/content-fragments-feature-video-use.md)
    + [傳送內容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [翻譯內容片段](content-fragments/content-fragments-translation-feature-video-use.md)
    + [內容片段vs.體驗片段](content-fragments/understand-content-fragments-and-experience-fragments.md)
@@ -79,6 +79,8 @@ ht-degree: 16%
       + [Git](edge-delivery-services/developing/git.md)
    + 操作說明{#how-to}
       + [RSS摘要](edge-delivery-services/how-to/rss.md)
+      + [社群媒體分享](edge-delivery-services/how-to/social-media-sharing.md)
+      + [刪除頁面](edge-delivery-services/how-to/delete-page.md)
 + 開發 {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 專案原型](developing/aem-project-archetype.md)
