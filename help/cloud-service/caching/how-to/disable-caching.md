@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-30T00:00:00Z
 jira: KT-14224
 thumbnail: KT-14224.jpeg
-source-git-commit: 43c021b051806380b3211f2d7357555622217b91
+exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
+source-git-commit: 783f84c821ee9f94c2867c143973bf8596ca6437
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
-
 
 # 如何停用CDN快取
 
@@ -48,16 +48,16 @@ ht-degree: 0%
 
 此選項是停用快取的建議方法，但僅適用於AEM Publish。 若要更新快取標題，請使用 `mod_headers` 模組和 `<LocationMatch>` 指示詞。 一般語法如下：
 
-    ```
-    &lt;locationmatch url=&quot;&quot; url_regex=&quot;&quot;>
-    #移除此名稱的回應標頭（若存在）。 如果有多個相同名稱的標頭，則會移除所有標頭。
-    標頭未設定Cache-Control
-    標頭未設定Expires
-    
-    #指示CDN不要快取回應。
-    標頭集Cache-Control &quot;private&quot;
-    &lt;/locationmatch>
-    ```
+```
+<LocationMatch "$URL$ || $URL_REGEX$">
+    # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
+    Header unset Cache-Control
+    Header unset Expires
+
+    # Instructs the CDN to not cache the response.
+    Header set Cache-Control "private"
+</LocationMatch>
+```
 
 #### 範例
 
@@ -68,16 +68,17 @@ ht-degree: 0%
 1. 在您的AEM專案中，從找到所需的影片檔案 `dispatcher/src/conf.d/available_vhosts` 目錄。
 1. 更新vhost (例如 `wknd.vhost`)檔案，如下所示：
 
-       ```
-       &lt;locationmatch etc.clientlibs=&quot;&quot;>*\.(css)$&quot;>
-       #移除此名稱的回應標頭（若存在）。 如果有多個相同名稱的標頭，則會移除所有標頭。
-       標頭未設定Cache-Control
-       標頭未設定Expires
-       
-       #指示CDN不要快取回應。
-       標頭集Cache-Control &quot;private&quot;
-       &lt;/locationmatch>
-       ```
+   ```
+   <LocationMatch "^/etc.clientlibs/.*\.(css)$">
+       # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
+       Header unset Cache-Control
+       Header unset Expires
+   
+       # Instructs the CDN to not cache the response.
+       Header set Cache-Control "private"
+   </LocationMatch>
+   ```
+
    中的vhost檔案 `dispatcher/src/conf.d/enabled_vhosts` 目錄為 **符號連結** 至中的檔案 `dispatcher/src/conf.d/available_vhosts` 目錄，因此如果沒有，請務必建立符號連結。
 1. 使用將vhost變更部署到所需的AEMas a Cloud Service環境 [Cloud Manager — 網頁層設定管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines) 或 [RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration).
 
@@ -85,6 +86,6 @@ ht-degree: 0%
 
 此選項同時適用於AEM Publish和Author。 若要更新快取標題，請使用 `SlingHttpServletResponse` 自訂Java™程式碼中的物件（Sling servlet、Sling servlet篩選器）。 一般語法如下：
 
-    ```java
-    response.setHeader(&quot;Cache-Control&quot;， &quot;private&quot;)；
-    ```
+```java
+response.setHeader("Cache-Control", "private");
+```
