@@ -12,9 +12,9 @@ level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 duration: 81
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 90c3ef479b289c9b319735fd28a1e39875c421a9
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '266'
 ht-degree: 3%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 3%
 
 ### AEM環境
 
-若要完成本教學課程，建議AEM管理員存取AEMas a Cloud Service環境。 如果您沒有AEMas a Cloud Service環境的存取權，可以使用 [本機AEMas a Cloud Service快速入門SDK](/help/cloud-service/local-development-environment/aem-runtime.md). 不過，請務必注意，某些產品UI畫面（例如內容片段導覽）不同。
+若要完成本教學課程，建議您擁有AEMas a Cloud Service環境的AEM管理員存取權。 如果您沒有AEMas a Cloud Service環境的存取權，請 [註冊AEM Headless試用版](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en) 探索AEM Headless功能。
 
 ## 讓我們開始吧！
 
