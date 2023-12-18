@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
 duration: 227
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 234c163a2936ca07bdf259038f1b22c4363fae3c
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '853'
 ht-degree: 3%
 
 ---
@@ -75,6 +75,10 @@ ht-degree: 3%
 
 
 ## 建立內容片段 {#create-content-fragment}
+
+>[!TIP]
+>
+>本機AEM SDK使用者：使用AEM Assets UI來建立和編寫內容片段，而非下列內容片段UI。 如需詳細指示，請參閱 [AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html).
 
 接著會根據 **團隊** 和 **個人** 模型。
 
@@ -145,6 +149,10 @@ ht-degree: 3%
 1. 點選 **儲存並關閉** 以儲存對團隊Alpha片段的變更。
 
 ## 發佈內容片段
+
+>[!TIP]
+>
+>本機AEM SDK使用者：使用AEM Assets UI來發佈內容片段，而非下列內容片段UI。 如需詳細指示，請參閱 [AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment).
 
 檢閱和驗證後，發佈所編寫的 `Content Fragments`
 
