@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 43c021b051806380b3211f2d7357555622217b91
+source-git-commit: d9612adbc2ff3e601c2efe5a779c03ad24769276
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1084'
 ht-degree: 16%
 
 ---
@@ -264,6 +264,10 @@ ht-degree: 16%
       + [建立OSGi設定](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
       + [建立索引標籤](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
       + [建立自訂提交](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
+   + 預填核心元件型表單{#prefill-core-component-based-form}
+      + [簡介](./forms/prefill-core-component-form/introduction.md)
+      + [寫入預填服務](./forms/prefill-core-component-form/pre-fill-service.md)
+      + [測試解決方案](./forms/prefill-core-component-form/test-solution.md)
    + Azure入口網站儲存體{#forms-cs-azure-portal}
       + [簡介](./forms/forms-cs-azure-portal/introduction.md)
       + [建立表單資料模型](./forms/forms-cs-azure-portal/create-fdm.md)
