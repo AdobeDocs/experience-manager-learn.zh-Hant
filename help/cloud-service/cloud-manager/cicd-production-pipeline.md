@@ -13,8 +13,8 @@ exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
 duration: 423
 source-git-commit: 8a042c561c1a7e48152c2b067d92d709ab5fd53e
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 51%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 51%
 >id="aemcloud_devops_prodpipeline"
 >title="CI/CD 生產管道"
 >abstract="CI/CD 生產管道設定會定義起始管道的觸發條件、控制生產部署的參數以及效能測試參數。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="部署程式碼"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="部署至生產階段"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=zh-Hant" text="部署程式碼"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=zh-Hant" text="部署至生產階段"
 
 ## 設定
 
