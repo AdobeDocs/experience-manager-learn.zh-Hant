@@ -11,10 +11,10 @@ level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
 duration: 563
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
 workflow-type: tm+mt
-source-wordcount: '1695'
-ht-degree: 8%
+source-wordcount: '1696'
+ht-degree: 4%
 
 ---
 
@@ -23,20 +23,20 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
 >title="本機 AEM 執行階段"
->abstract="Adobe Experience Manager (AEM) 可透過 AEM as a Cloud Service  SDK 的 Quickstart Jar 在本機上執行。如此一來，開發人員就能在將自訂程式碼、設定和內容送交來源控制項前，先行部署和測試，然後再部署至 AEM as a Cloud Service 環境。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
+>abstract="Adobe Experience Manager (AEM) 可透過 AEM as a Cloud Service  SDK 的 Quickstart Jar 在本機上執行。如此一來，開發人員就能在將自訂程式碼、設定和內容送交來源控制項前，先行部署和測試，之後再部署至AEMas a Cloud Service環境。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載 AEM as a Cloud Service SDK"
 
-Adobe Experience Manager (AEM) 可透過 AEM as a Cloud Service  SDK 的 Quickstart Jar 在本機上執行。如此一來，開發人員就能在將自訂程式碼、設定和內容送交來源控制項前，先行部署和測試，然後再部署至 AEM as a Cloud Service 環境。
+Adobe Experience Manager (AEM) 可透過 AEM as a Cloud Service  SDK 的 Quickstart Jar 在本機上執行。如此一來，開發人員就能在將自訂程式碼、設定和內容送交來源控制項前，先行部署和測試，之後再部署至AEMas a Cloud Service環境。
 
 請注意 `~` 會用作使用者目錄的速記。 在Windows中，這相當於 `%HOMEPATH%`.
 
-## 安裝Java
+## 安裝Java™
 
-Experience Manager是Java應用程式，因此需要OracleJava SDK來支援開發工具。
+Experience Manager是一種Java™應用程式，因此需要OracleJava™ SDK來支援開發工具。
 
-1. [下載並安裝最新Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p=list&amp;p.offset=limit&amp;p.offset=0&amp;p.limit=14444)
-1. 執行下列命令，確認已安裝Oracle Java 11 SDK：
+1. [下載並安裝最新的Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p=list&amp;p.offset=limit&amp;p.offset=0&amp;p.limit=14444)
+1. 執行命令，確認已安裝Oracle Java™ 11 SDK：
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ $ java --version
 $ java -version
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ java --version
@@ -85,7 +85,7 @@ AEMas a Cloud ServiceSDK (或AEM SDK)包含用於在本機執行AEM製作和發�
 1. 複製 __快速入門JAR__ 檔案到  `~/aem-sdk/author` 並將其重新命名為 `aem-author-p4502.jar`
 1. 從命令列執行下列動作，啟動本機AEM Author Service：
    + `java -jar aem-author-p4502.jar`
-      + 提供管理員密碼作為 `admin`. 可接受任何管理員密碼，但建議使用預設的本機開發以減少重新設定的需求。
+      + 提供管理員密碼作為 `admin`. 可接受任何管理員密碼，但建議使用本機開發的預設值，以減少重新設定的需求。
 
    您 *無法* 啟動AEM作為Cloud Service快速入門Jar [按兩下](#troubleshooting-double-click).
 1. 存取本機AEM作者服務，位於 [http://localhost:4502](http://localhost:4502) 在網頁瀏覽器中
@@ -110,7 +110,7 @@ $ cd c:\Users\<My User>\aem-sdk\author
 $ java -jar aem-author-p4502.jar
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ mkdir -p ~/aem-sdk/author
@@ -130,7 +130,7 @@ $ java -jar aem-author-p4502.jar
 1. 複製 __快速入門JAR__ 檔案到  `~/aem-sdk/publish` 並將其重新命名為 `aem-publish-p4503.jar`
 1. 從命令列執行下列動作，啟動本機AEM Publish Service：
    + `java -jar aem-publish-p4503.jar`
-      + 提供管理員密碼作為 `admin`. 可接受任何管理員密碼，但建議使用預設的本機開發以減少重新設定的需求。
+      + 提供管理員密碼作為 `admin`. 可接受任何管理員密碼，但建議使用本機開發的預設值，以減少重新設定的需求。
 
    您 *無法* 啟動AEM作為Cloud Service快速入門Jar [按兩下](#troubleshooting-double-click).
 1. 存取本機AEM Publish Service，位於 [http://localhost:4503](http://localhost:4503) 在網頁瀏覽器中
@@ -155,7 +155,7 @@ $ cd c:\Users\<My User>\aem-sdk\publish
 $ java -jar aem-publish-p4503.jar
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ mkdir -p ~/aem-sdk/publish
@@ -194,7 +194,7 @@ $ java -jar aem-author-p4502.jar -r prerelease
 $ java -jar aem-publish-p4503.jar -r prerelease
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 # For AEM Author service in prerelease mode
@@ -214,7 +214,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 >[!NOTE]
 >
-> 復寫代理程式僅可用於本機Quickstart JAR，且僅提供內容發佈的模擬。
+復寫代理程式僅可用於本機Quickstart JAR，且僅提供內容發佈的模擬。
 
 1. 登入 **作者** 服務並導覽至 [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
 1. 按一下 **預設代理程式（發佈）** 以開啟預設的復寫代理。
@@ -279,7 +279,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 >[!WARNING]
 >
-> 將快速入門Jar更新為新版本需要取代整個本機開發環境，導致遺失本機AEM存放庫中的所有程式碼、設定和內容。 確保任何不應銷毀的程式碼、設定或內容已安全地提交至Git，或從本機AEM執行個體匯出為AEM套件。
+將快速入門Jar更新為新版本需要取代整個本機開發環境，導致遺失本機AEM存放庫中的所有程式碼、設定和內容。 確保任何不應銷毀的程式碼、設定或內容已安全地提交至Git，或從本機AEM執行個體匯出為AEM套件。
 
 ### 升級AEM SDK時如何避免內容遺失
 
@@ -317,7 +317,7 @@ $ java -jar aem-author-p4502.jar
 $ java -jar aem-author-p4502.jar
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ java -jar aem-author-p4502.jar
@@ -341,7 +341,7 @@ $ java -jar aem-publish-p4503.jar
 $ java -jar aem-publish-p4503.jar
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ java -jar aem-publish-p4503.jar
@@ -364,9 +364,9 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-這是因為AEMas a Cloud Service需要Java SDK 11，而您執行的是其他版本，很可能是Java 8。 若要解決此問題，請下載並安裝 [oracleJava SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p=list&amp;p.offset=limit&amp;p.offset=0&amp;p.limit=14444).
+這是因為AEMas a Cloud Service需要Java™ SDK 11，而您執行的是其他版本，很可能是Java™ 8。 若要解決此問題，請下載並安裝 [oracleJava™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p=list&amp;p.offset=limit&amp;p.offset=0&amp;p.limit=14444).
 
-安裝OracleJava 11 SDK後，從命令列執行命令，確認其為使用中版本：
+安裝OracleJava™ 11 SDK後，從命令列執行命令，確認其為使用中版本：
 
 >[!BEGINTABS]
 
@@ -382,7 +382,7 @@ $ java --version
 $ java -version
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ java --version
