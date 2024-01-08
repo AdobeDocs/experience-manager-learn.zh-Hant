@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation 教學課程
 user-guide-description: Adobe Experience Manager Foundation 的影片和教學課程系列。
 sub-product: Experience Manager
 index: y
-source-git-commit: 338bb13f1739d822e6a4b7232ae1a2da6b24732a
+source-git-commit: 5fe651bc0dc73397ae9602a28d63b7dc084fcc70
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '229'
 ht-degree: 14%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 14%
    + [設定Sling動態包含](./development/set-up-sling-dynamic-include.md)
    + [瞭解Java API最佳實務](./development/understand-java-api-best-practices.md)
    + [瞭解Sling模型匯出工具](./development/understand-sling-model-exporter.md)
+   + [瞭解Oak索引最佳實務](./development/understand-indexing-best-practices.md)
 + 專案 {#projects}
    + [開發AEM專案](./projects/develop-aem-projects.md)
    + [使用主要專案](./projects/use-project-masters.md)
