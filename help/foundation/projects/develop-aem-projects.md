@@ -1,6 +1,6 @@
 ---
 title: 在AEM中開發專案
-description: 說明如何為AEM專案開發的開發教學課程。  在本教學課程中，我們將建立一個自訂的專案範本，可用來在AEM中建立新的專案，以管理內容製作工作流程和任務。
+description: 說明如何為AEM專案開發的開發教學課程。 在本教學課程中，我們將建立一個自訂的專案範本，可用來在AEM中建立新的專案，以管理內容製作工作流程和任務。
 version: 6.4, 6.5
 feature: Projects, Workflow
 doc-type: Tutorial
@@ -9,16 +9,16 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1753
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: b9b8dd9d815d7a0ef800635a74b030c50821b9df
 workflow-type: tm+mt
-source-wordcount: '4460'
+source-wordcount: '4441'
 ht-degree: 0%
 
 ---
 
 # 在AEM中開發專案
 
-此開發教學課程說明如何開發 [!DNL AEM Projects].  在本教學課程中，我們將建立一個自訂的專案範本，可用來在AEM中建立新的專案，以管理內容製作工作流程和任務。
+此開發教學課程說明如何開發 [!DNL AEM Projects]. 在本教學課程中，我們將建立一個自訂的專案範本，可用來在AEM中建立專案，以管理內容製作工作流程和任務。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-[[!DNL AEM Projects]](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html) 是AEM的一項功能，設計旨在讓您可以更輕鬆地管理與內容建立相關的所有工作流程和任務，將其歸類為AEM Sites或Assets實作的一部分。
+[[!DNL AEM Projects]](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) 是AEM的一項功能，設計旨在讓您可以更輕鬆地管理與內容建立相關的所有工作流程和任務，將其歸類為AEM Sites或Assets實作的一部分。
 
-AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTemplates). 建立新專案時，作者可以從這些可用的範本中進行選擇。 具有獨特業務需求的大型AEM實作將想要建立自訂專案範本，以符合其需求。 透過建立自訂專案範本，開發人員可以設定專案控制面板、連結至自訂工作流程，並為專案建立其他業務角色。 我們將檢視專案範本的結構，並建立範例範本。
+AEM專案隨附幾個 [OOTB專案範本](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html). 建立專案時，作者可以從這些可用的範本中進行選擇。 具有獨特業務需求的大型AEM實作將想要建立自訂專案範本，以符合其需求。 透過建立自訂專案範本，開發人員可以設定專案控制面板、連結至自訂工作流程，並為專案建立其他業務角色。 我們將檢視專案範本的結構，並建立範例範本。
 
 ![自訂專案卡](./assets/develop-aem-projects/custom-project-card.png)
 
@@ -39,13 +39,13 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 * [完成的教學課程套件](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教學課程假設您具備以下基本知識 [AEM開發實務](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/the-basics.html) 並且熟悉 [AEM Maven專案設定](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ht-projects-maven.html). 所有提及的程式碼都是為了當作參考使用，且僅應部署至 [本機開發AEM執行個體](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted).
+本教學課程假設您具備以下基本知識 [AEM開發實務](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/the-basics.html) 並且熟悉 [AEM Maven專案設定](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html). 所有提及的程式碼都是為了當作參考使用，且僅應部署至 [本機開發AEM執行個體](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html).
 
 ## 專案範本的結構
 
 專案範本應該放在原始檔控制之下，而且應該放在應用程式資料夾的/apps之下。 理想情況下，這類檔案應放置在子資料夾中，其命名慣例為 **&#42;/projects/templates/**&lt;my-template>. 依照此命名慣例，任何新的自訂範本在建立專案時便能自動供作者使用。 可用的專案範本組態設定在： **/content/projects/jcr：content** 節點依據 **cq：allowedTemplates** 屬性。 依預設，這是規則運算式： **/(apps|libs)/.&#42;/projects/templates/.&#42;**
 
-專案範本的根節點將具有 **jcr：primaryType** 之 **cq：Template**. 根節點下有3個節點： **小工具**， **角色**、和 **工作流程**. 這些節點全部 **nt：unstructured**. 根節點下方也可以是thumbnail.png檔案，此檔案會在「建立專案」精靈中選取範本時顯示。
+專案範本的根節點將具有 **jcr：primaryType** 之 **cq：Template**. 在的根節點底下有三個節點： **小工具**， **角色**、和 **工作流程**. 這些節點全部 **nt：unstructured**. 根節點下方也可以是thumbnail.png檔案，此檔案會在「建立專案」精靈中選取範本時顯示。
 
 完整的節點結構：
 
@@ -69,15 +69,15 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 
 ### 小工具 {#gadgets}
 
-此節點上沒有其他屬性，但小工具節點的子項可控制建立新專案時用於填入專案控制面板的專案拼貼。 [專案拼貼](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTiles) （也稱為小工具或pod）是填入專案工作地點的簡單卡片。 您可在下列位置找到ootb圖磚的完整清單： **/libs/cq/gui/components/projects/admin/pod。 **專案擁有者在建立專案後，一律可以新增/移除圖磚。
+此節點上沒有其他屬性，但小工具節點的子項可控制建立新專案時用於填入專案控制面板的專案拼貼。 [專案拼貼](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) （也稱為小工具或pod）是填入專案工作地點的簡單卡片。 您可在下列位置找到ootb圖磚的完整清單： **/libs/cq/gui/components/projects/admin/pod。 **專案擁有者在建立專案後，一律可以新增/移除圖磚。
 
 ### 角色 {#roles}
 
-共有3個 [預設角色](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#UserRolesinaProject) 每個專案： **觀察者**， **編輯**、和 **擁有者**. 藉由在角色節點底下新增子節點，您可以為範本新增其他特定於業務的專案角色。 然後，您可以將這些角色連結至與專案關聯的特定工作流程。
+共有三種 [預設角色](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) 每個專案： **觀察者**， **編輯**、和 **擁有者**. 藉由在角色節點底下新增子節點，您可以為範本新增其他特定於業務的專案角色。 然後，您可以將這些角色連結至與專案關聯的特定工作流程。
 
 ### 工作流程 {#workflows}
 
-建立自訂專案範本最吸引人的一個原因是，它可讓您設定與專案搭配使用的可用工作流程。 這些功能包括OOTB工作流程或自訂工作流程。 在 **工作流程** 節點必須有 **模型** 節點(也 `nt:unstructured`)和底下的子節點指定可用的工作流程模型。 屬性**modelId **指向/etc/workflow下的工作流程模型和屬性 **精靈** 指向啟動工作流程時使用的對話方塊。 「專案」的一大優勢是能夠新增自訂對話方塊（精靈），以在工作流程開始時擷取業務特定的中繼資料，並可推動工作流程中的進一步動作。
+建立自訂專案範本最吸引人的原因之一，是它可讓您設定可用工作流程以用於專案。 這些功能包括OOTB工作流程或自訂工作流程。 在 **工作流程** 節點必須有 **模型** 節點(也 `nt:unstructured`)和底下的子節點指定可用的工作流程模型。 屬性**modelId **指向/etc/workflow下的工作流程模型和屬性 **精靈** 指向啟動工作流程時使用的對話方塊。 Projects的顯著優點是能夠新增自訂對話方塊（精靈），以在工作流程開始時擷取業務特定的中繼資料，並可推動工作流程中的進一步動作。
 
 ```shell
 <projects-template-root> (cq:Template)
@@ -92,7 +92,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 
 由於我們主要是複製/設定節點，因此將使用CRXDE Lite。 在本機AEM執行個體中，開啟 [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
 
-1. 首先，在下方建立新資料夾 `/apps/&lt;your-app-folder&gt;` 已命名 `projects`. 在該名稱下方建立另一個資料夾 `templates`.
+1. 首先，在下方建立資料夾 `/apps/&lt;your-app-folder&gt;` 已命名 `projects`. 在該名稱下方建立另一個資料夾 `templates`.
 
    ```shell
    /apps/aem-guides/projects-tasks/
@@ -100,7 +100,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
                                 + templates (nt:folder)
    ```
 
-1. 為了更輕鬆辦事，我們將從現有的Simple Project範本開始建立自訂範本。
+1. 為了更輕鬆辦事，我們將從現有的Simple Project範本開始自訂範本。
 
    1. 複製並貼上節點 **/libs/cq/core/content/projects/templates/default** 在 *範本* 在步驟1建立的資料夾。
 
@@ -148,11 +148,11 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 
 1. 我們將新增自訂核准者角色到我們的專案範本。
 
-   1. 在專案範本(authoring-project)節點下新增一個 **nt：unstructured** 節點已標籤 **角色**.
+   1. 在專案範本(authoring-project)節點下新增一個 **nt：unstructured** 節點標籤 **角色**.
    1. 新增另一個 **nt：unstructured** 將核准者標示為「角色」節點的子節點的節點。
    1. 新增字串屬性 **jcr：title** = &quot;**核准者**「， **roleclass** =&quot;**所有者**「， **roleid**=&quot;**核准者**「。
       1. 核准者節點的名稱以及jcr：title和roleid可以是任何字串值（只要roleid是唯一的）。
-      1. **roleclass** 會根據 [3個OOTB角色](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User%20Roles%20in%20a%20Project)： **所有者**， **編輯者**、和 **觀察者**.
+      1. **roleclass** 會根據 [三個OOTB角色](https://docs.adobe.com/content/docs/en/aem/6-3/author/projects.html)： **所有者**， **編輯者**、和 **觀察者**.
       1. 一般而言，如果自訂角色主要是管理角色，則角色可以 **所有者；** 如果它是更具體的創作角色，例如攝影師或設計師，則 **編輯者** 羅勒克勞斯應該就足夠了。 兩者之間的巨大差異 **所有者** 和 **編輯者** 是專案所有者可以更新專案屬性並將新使用者新增到專案。
 
    ```shell
@@ -165,7 +165,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
                 - roleid = "approver"
    ```
 
-1. 透過複製簡單專案範本，您將獲得4個OOTB工作流程設定。 工作流程/模型下方的每個節點都指向該工作流程的特定工作流程以及開始對話方塊精靈。 在本教學課程的稍後部分，我們將建立此專案的自訂工作流程。 現在請刪除工作流程/模型下的節點：
+1. 透過複製簡單專案範本，您將獲得四個OOTB工作流程已設定。 工作流程/模型下方的每個節點都指向該工作流程的特定工作流程以及開始對話方塊精靈。 在本教學課程的稍後部分，我們將建立此專案的自訂工作流程。 目前，請刪除工作流程/模型下的節點：
 
    ```shell
    ../projects/templates/authoring-project
@@ -176,8 +176,8 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
                - (remove ootb models)
    ```
 
-1. 為了讓內容作者更容易識別專案範本，您可以新增自訂縮圖。 建議的大小為319x319畫素。
-   1. 在CRXDE Lite中，建立新檔案做為小工具、角色和工作流程節點的同層級，並命名為 **thumbnail.png**.
+1. 若要讓內容作者輕鬆識別專案範本，您可以新增自訂縮圖。 建議的大小為319x319畫素。
+   1. 在CRXDE Lite中，將檔案建立為小工具、角色和工作流程節點的同層級，並命名為 **thumbnail.png**.
    1. 儲存，然後導覽至 `jcr:content` 節點，然後按兩下 `jcr:data` 屬性（請避免按一下「檢視」）。
       1. 這會提示您進行編輯 `jcr:data` 檔案對話方塊，您可以上傳自訂縮圖。
 
@@ -247,7 +247,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 
 ## 測試自訂專案範本
 
-現在，我們可以建立新專案來測試專案範本。
+現在，我們可以透過建立專案來測試專案範本。
 
 1. 您應該看到自訂範本作為建立專案的選項之一。
 
@@ -257,7 +257,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 
    ![核准](./assets/develop-aem-projects/user-approver.png)
 
-1. 按一下「建立」，根據自訂範本完成建立專案。 您會在「專案控制面板」上注意到「任務拼貼」和在「小工具」下設定的其他拼貼會自動顯示。
+1. 按一下「建立」以根據自訂範本完成建立專案。 您會在「專案控制面板」上注意到「任務拼貼」和在「小工具」下設定的其他拼貼會自動顯示。
 
    ![任務拼貼](./assets/develop-aem-projects/tasks-tile.png)
 
@@ -290,29 +290,29 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 
 完成第一個任務後，受指派人將有三個選項可路由工作流程：
 
-**一般** — 一般路由會建立指派給專案核准者群組的任務，以進行檢閱和核准。 任務的優先順序為「一般」，到期日為建立任務後的5天。
+**一般** — 一般路由會建立指派給專案核准者群組的任務，以進行檢閱和核准。 任務的優先順序為「一般」，到期日為建立日期起的5天。
 
-**Rush**  — 快速路由也會建立指派給專案核准者群組的任務。 任務的優先順序為「高」，到期日只有1天。
+**Rush**  — 快速路由也會建立指派給專案核准者群組的任務。 任務的優先順序為「高」，到期日只有一天。
 
 **略過**  — 在此範例工作流程中，初始參與者可以選擇略過核准群組。 （是的，這可能會失去「核准」工作流程的目的，但可讓我們說明其他路由功能）
 
-核准者群組可以核准內容或將其傳回給初始受指派人以重新工作。 在被傳回重工的情況下，將會建立新任務並適當地標示為「傳回重工」。
+核准者群組可以核准內容或將其傳回給初始受指派人進行重工。 如果傳回給，重工則會建立新任務並適當地標示為「傳回重工」。
 
 工作流程的最後一個步驟會使用ootb啟動頁面/資產程式步驟，並複製裝載。
 
 ## 建立工作流程模型
 
-1. 從AEM「開始」功能表導覽至「工具」 — >「工作流程」 — >「模型」。 按一下右上角的「建立」以建立新的工作流程模型。
+1. 從AEM「開始」功能表，導覽至「工具」 — >「工作流程」 — >「模型」。 按一下右上角的「建立」以建立工作流程模型。
 
    為新模型指定標題「內容核准工作流程」和URL名稱「content-approval-workflow」。
 
    ![工作流程建立對話方塊](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   有關詳細資訊 [建立工作流程並在此處閱讀](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-models.html).
+   [如需與建立工作流程相關的詳細資訊，請閱讀此處](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
 
-1. 根據最佳實務，自訂工作流程應該分組到他們自己的資料夾中/etc/workflow/models下方。 在CRXDE Lite中建立新的 **&#39;nt：folder&#39;** /etc/workflow/models下名為 **&quot;aem-guides&quot;**. 新增子資料夾可確保自訂工作流程在升級或Service Pack安裝期間不會意外覆寫。
+1. 根據最佳實務，自訂工作流程應該分組到他們自己的資料夾中/etc/workflow/models下方。 在CRXDE Lite中，建立 **&#39;nt：folder&#39;** /etc/workflow/models下名為 **&quot;aem-guides&quot;**. 新增子資料夾可確保自訂工作流程在升級或Service Pack安裝期間不會意外覆寫。
 
-   &#42;請注意切勿將資料夾或自訂工作流程放在ootb子資料夾（如/etc/workflow/models/dam或/etc/workflow/models/projects）下方，因為整個子資料夾也可能被升級或Service Pack覆寫。
+   &#42;請注意，請勿將資料夾或自訂工作流程放在ootb子資料夾（例如/etc/workflow/models/dam或/etc/workflow/models/projects）下，因為升級或Service Pack可能會覆寫整個子資料夾。
 
    ![工作流程模型在6.3中的位置](./assets/develop-aem-projects/custom-workflow-subfolder.png)
 
@@ -320,7 +320,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 
    >[!NOTE]
    >
-   >如果使用AEM 6.4+，工作流程的位置已變更。 另請參閱 [此處取得更多詳細資料。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
+   >如果使用AEM 6.4+，工作流程的位置已變更。 另請參閱 [此處取得更多詳細資料。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
 
    如果使用AEM 6.4+，則會在 `/conf/global/settings/workflow/models`. 對/conf目錄重複上述步驟，並新增名為的子資料夾 `aem-guides` 並移動 `content-approval-workflow` 在下方。
 
@@ -347,7 +347,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 
 1. 「建立專案任務」工作流程處理的設計目的，是建立「任務」作為工作流程中的步驟。 只有在完成任務後，工作流程才會前進。 「建立專案任務」步驟的強大方面是它可以讀取工作流程中繼資料值，並使用這些值來動態建立任務。
 
-   首先刪除預設建立的參與者步驟。 從元件選單中的Sidekick，展開 **&quot;專案&quot;** 子標題並拖放 **建立專案任務** 放到模型上。
+   首先刪除預設建立的參與者步驟。 從元件選單中的Sidekick，展開 **&quot;專案&quot;** 副標題並拖放 **建立專案任務** 放到模型上。
 
    連按兩下「建立專案任務」步驟以開啟工作流程對話方塊。 設定下列屬性：
 
@@ -372,7 +372,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
        Due In - Days = "2"
    ```
 
-   路由標籤是一個可選的對話方塊，可指定使用者完成工作的可用動作。 這些動作只是字串值，會儲存至工作流程的中繼資料。 指令碼可讀取這些值，和/或稍後在工作流程中處理步驟，以動態「路由」工作流程。 根據 [工作流程目標](#goals-tutorial) 我們將在此索引標籤中新增三個動作：
+   路由標籤是一個可選的對話方塊，可指定使用者完成工作的可用動作。 這些動作只是字串值，會儲存至工作流程的中繼資料。 指令碼可讀取這些值，和/或稍後在工作流程中處理步驟，以動態「路由」工作流程。 根據我們將要執行的工作流程目標，新增三個動作至此索引標籤：
 
    ```shell
    Routing Tab
@@ -393,7 +393,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://helpx.adobe.com/experience-mana
 
 1. 在上一個步驟中，我們參考了建立任務前的指令碼。 我們現在將建立該指令碼，其中我們將根據工作流程中繼資料值&quot;**被指定者**「。 此 **「受託人」** 值會在工作流程啟動時設定。 我們也會閱讀工作流程中繼資料，透過閱讀&quot;**taskPriority&quot;** 工作流程中繼資料及**「taskDueDate」**的值，以在第一項任務到期時動態設定。
 
-   為了方便組織，我們在應用程式資料夾底下建立了一個資料夾，用來儲存所有與專案相關的指令碼： **/apps/aem-guides/projects-tasks/projects/scripts**. 在此資料夾下建立名為的新檔案 **&quot;start-task-config.ecma&quot;**. &#42;注意：請確定start-task-config.ecma檔案的路徑與步驟4的「進階設定」標籤中所設定的路徑相符。
+   為了方便組織，我們在應用程式資料夾底下建立了一個資料夾，用來儲存所有與專案相關的指令碼： **/apps/aem-guides/projects-tasks/projects/scripts**. 在此資料夾下建立名為的檔案 **&quot;start-task-config.ecma&quot;**. &#42;注意：請確定start-task-config.ecma檔案的路徑與步驟4的「進階設定」標籤中所設定的路徑相符。
 
    新增下列內容作為檔案的內容：
 
@@ -738,7 +738,7 @@ task.setCurrentAssignee(projectApproverGrp);
    >如果使用AEM 6.4，Workflow的位置已變更。 指向 `modelId` 屬性至下執行階段工作流程模型的位置 `/var/workflow/models/aem-guides/content-approval-workflow`
    >
    >
-   >另請參閱 [此處以取得工作流程位置變更的詳細資訊。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
+   >另請參閱 [此處以取得工作流程位置變更的詳細資訊。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
 
    ```xml
    <contentapproval
@@ -754,4 +754,4 @@ task.setCurrentAssignee(projectApproverGrp);
 
 * [下載完成的教學課程套件](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [AEM專案檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html)
+* [AEM專案檔案](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html)
