@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 449
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 520bb18e464eb48cc2ba0cdfb7f5a7d2af202abf
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 5%
@@ -133,6 +133,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 在React中，從AEM Publish顯示網頁最佳化影像的外觀如下：
 
 ```jsx
+// The AEM host is usually read from a environment variable of the SPA.
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
 ...
 let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
@@ -147,6 +148,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 上述範例顯示使用單一大小的影像，不過在網頁體驗中，通常需要回應式影像集。 回應式影像可透過以下方式實施： [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 或 [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 下列程式碼片段會示範如何使用 `_dynamicUrl` 為基礎，並附加不同的寬度引數，以支援不同的回應式檢視。 不只可以 `width` 可使用查詢引數，但使用者端可以新增其他查詢引數，以根據其需求進一步最佳化影像資產。
 
 ```javascript
+// The AEM host is usually read from a environment variable of the SPA.
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
 ...
 // Read the data from GraphQL response
