@@ -6,8 +6,8 @@ topic: Development
 role: Developer
 level: Beginner
 thumbnail: 30476.jpeg
-duration: 433
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 416
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 49%
@@ -29,7 +29,7 @@ ht-degree: 49%
 
 此教學課程在設計上將使用 **AEMas a Cloud Service** 並且與回溯相容 **AEM 6.5+** 和 **AEM 6.4.2+**.
 
-**[請在這裡檢視教學課程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)**
+**[請在這裡檢視教學課程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
 ## 將WKND部署至AEMas a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 

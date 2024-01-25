@@ -3,8 +3,8 @@ title: 使用AEM樣式系統加快內容速度
 description: 瞭解如何使用AEM樣式系統，讓貴組織的設計人員、內容作者和開發人員以客戶期望的速度和規模建立及提供體驗。
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-duration: 230
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 191
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 0%
@@ -62,7 +62,7 @@ AEM Style Systems有四個主要優點：
    * 這應該是最常使用的轉譯
 * 儘可能只顯示具有效果的樣式選項
    * 如果暴露無效組合，請確定它們不會造成負面影響
-   * 例如一種配置樣式，可指定影像位置，並伴有控制影像位置的無效顯示樣式
+   * 例如，配置樣式會指定影像位置，並伴有控制影像位置的無效顯示樣式
 * 在合併的顯示樣式上選擇版面樣式
    * 減少必須檢查品質的排列數目
    * 確保遵守品牌標準

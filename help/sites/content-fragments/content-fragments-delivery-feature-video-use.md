@@ -8,8 +8,8 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
-duration: 913
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 890
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 2%
@@ -72,7 +72,7 @@ AEM Content Services可協助建立AEM頁面式HTTP端點，將內容轉譯為�
 
 ## 其他資源 {#additional-resources}
 
-* [編寫內容片段](content-fragments-feature-video-use.md)
+* [製作內容片段](content-fragments-feature-video-use.md)
 * [AEM WCM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [AEM WCM核心內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 

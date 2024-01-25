@@ -10,8 +10,8 @@ jira: KT-9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-duration: 2511
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 2365
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '3137'
 ht-degree: 1%
@@ -111,7 +111,7 @@ IDP的公開憑證會新增至AEM全域信任存放區，並用來驗證IDP傳�
 1. 選取 __提交__.
 1. 新新增的憑證會出現在 __從CRT檔案新增憑證__ 區段。
 1. 記下 __別名__，此值用於 [SAML 2.0驗證處理常式OSGi設定](#saml-2-0-authentication-handler-osgi-configuration).
-1. 選取 __儲存並關閉__.
+1. 選取「__儲存並關閉__」。
 
 全域信任存放區在AEM Author上設定了IDP的公開憑證，但由於SAML僅用於AEM Publish，因此必須將全域信任存放區復寫到AEM Publish，才能在那裡存取IDP公開憑證。
 
@@ -138,7 +138,7 @@ _需要建立驗證服務的金鑰存放區，當 [SAML 2.0驗證處理常式OSG
 1. 建立或開啟金鑰存放區。 如果建立金鑰存放區，請妥善儲存密碼。
    + A [公開/私密金鑰存放區已安裝到此金鑰存放區](#install-aem-public-private-key-pair) 僅限需要AuthnRequest簽署/SAML宣告加密時。
    + 如果此SAML整合支援登出，但不支援AuthnRequest簽署/SAML判斷提示，則空的金鑰儲存區就足夠了。
-1. 選取 __儲存並關閉__.
+1. 選取「__儲存並關閉__」。
 1. 建立包含更新版本的套件 __authentication-service__ 使用者。
 
    _使用套件時，請使用下列臨時因應措施：_
@@ -225,7 +225,7 @@ AuthnRequest簽署和SAML判斷提示加密都是選擇性的，但是兩者都�
    + 選取 __提交__
 1. 新新增的憑證會出現在 __從CRT檔案新增憑證__ 區段。
    + 記下 __別名__ 因為這用於 [SAML 2.0驗證處理常式OSGi設定](#saml-20-authentication-handler-osgi-configuration)
-1. 選取 __儲存並關閉__.
+1. 選取「__儲存並關閉__」。
 1. 建立包含更新版本的套件 __authentication-service__ 使用者。
 
    _使用套件時，請使用下列臨時因應措施：_

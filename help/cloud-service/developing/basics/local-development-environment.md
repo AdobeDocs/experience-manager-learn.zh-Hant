@@ -9,8 +9,8 @@ feature: Developer Tools
 jira: KT-6933
 thumbnail: 330558.jpg
 exl-id: 73fe8fb8-ff8a-4070-bc0c-384387d0a25e
-duration: 25
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 14
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 1%
@@ -25,4 +25,4 @@ ht-degree: 1%
 
 _此 `license.properties` 執行AEM SDK不再需要此影片中顯示的。_
 
-檢閱這些指示至 [使用AEM SDK設定完整的本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant).
+檢閱這些指示至 [使用AEM SDK設定完整的本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).

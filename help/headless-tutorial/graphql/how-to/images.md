@@ -10,8 +10,8 @@ jira: KT-10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-duration: 449
-source-git-commit: 520bb18e464eb48cc2ba0cdfb7f5a7d2af202abf
+duration: 409
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 5%
@@ -98,7 +98,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 
 | GraphQL引數 | URL引數 | 說明 | 必填 | GraphQL變數值 | URL引數值 | 範例URL引數 |
 |:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | N/A | 影像資產的格式。 | ✔ | `GIF`， `PNG`， `PNG8`， `JPG`， `PJPG`， `BJPG`，  `WEBP`， `WEBPLL`， `WEBPLY` | N/A | N/A |
+| `format` | 不適用 | 影像資產的格式。 | ✔ | `GIF`， `PNG`， `PNG8`， `JPG`， `PJPG`， `BJPG`，  `WEBP`， `WEBPLL`， `WEBPLY` | N/A | N/A |
 | `seoName` | N/A | URL中的檔案區段名稱。 若未提供，則會使用影像資產名稱。 | ✘ | 英數字元， `-`，或 `_` | N/A | N/A |
 | `crop` | `crop` | 裁切影格從影像中取出，必須在影像大小範圍內 | ✘ | 正整數，定義原始影像尺寸範圍內的裁切區域 | 以逗號分隔的數位座標字串 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
 | `size` | `size` | 輸出影像的大小（高度和寬度），以畫素為單位。 | ✘ | 正整數 | 以逗號分隔的正整數 `<WIDTH>,<HEIGHT>` | `?size=1200,800` |

@@ -9,8 +9,8 @@ level: Experienced
 jira: KT-8631
 thumbnail: 336959.jpeg
 exl-id: 9d2004e5-e928-4190-8298-695635c8e92c
-duration: 536
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 521
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 7%
@@ -32,7 +32,7 @@ ht-degree: 7%
 ## 重要活動
 
 + 系統管理員使用 [Admin Console](https://adminconsole.adobe.com/) 將一或多個使用者指派至 [Cloud Manager — 企業所有者](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) 產品設定檔。
-+ 指派給業主產品設定檔的使用者可使用以下的自助服務功能： [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hant) 至 [建立方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html) 和 [新增環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
++ 指派給業主產品設定檔的使用者可使用以下的自助服務功能： [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) 至 [建立方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html) 和 [新增環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
 + 使用 [Admin Console](https://adminconsole.adobe.com/) 將開發人員和使用者指派給不同的 [Cloud Manager角色](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) 和授予各種AEM環境的許可權。
 
 ## 實作練習

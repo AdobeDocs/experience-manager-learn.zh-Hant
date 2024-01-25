@@ -8,8 +8,8 @@ role: Developer
 level: Experienced
 exl-id: fbe6d341-7941-46f5-bcd8-58b99396d351
 last-substantial-update: 2021-06-09T00:00:00Z
-duration: 167
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 142
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -49,7 +49,7 @@ afData.afUnboundData.data.initialStep,N
       * 匯入並安裝SetValueOfElementInJSONDataWorkflow.zip。此封裝包含與表單相關聯的範例工作流程模型和表單資料模型。
 
 * 將瀏覽器指向 [Forms與檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 按一下建立 |檔案上傳
+* 按一下建立 | 檔案上傳
 * 上傳TimeOffRequestForm.zip檔案
   **此表單是使用AEM Forms 6.4建置的。請確定您使用的是AEM Forms 6.4或更高版本**
 * 開啟 [表單](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)

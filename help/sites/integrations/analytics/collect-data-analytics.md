@@ -11,8 +11,8 @@ thumbnail: 5332-collect-data-analytics.jpg
 badgeIntegration: label="整合" type="positive"
 doc-type: Tutorial
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-duration: 694
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 629
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '2307'
 ht-degree: 1%
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 ## 切換WKND網站的標籤環境
 
-此 [WKND](https://wknd.site/us/en.html) 是面向公眾的網站，建立在 [開放原始碼專案](https://github.com/adobe/aem-guides-wknd) 設計作為參考和 [教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant) 適用於AEM實作。
+此 [WKND](https://wknd.site/us/en.html) 是面向公眾的網站，建立在 [開放原始碼專案](https://github.com/adobe/aem-guides-wknd) 設計作為參考和 [教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) 適用於AEM實作。
 
 除了設定AEM環境及安裝WKND程式碼基底之外，您還可以使用Experience Platform偵錯工具來 **切換** 即時 [WKND網站](https://wknd.site/us/en.html) 至 *您的* 標籤屬性。 不過，如果您的AEM網站已有 [Adobe使用者端資料層已啟用](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
 

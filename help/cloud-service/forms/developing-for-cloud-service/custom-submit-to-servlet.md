@@ -10,8 +10,8 @@ topic: Development
 feature: Developer Tools
 jira: KT-8852
 exl-id: 983e0394-7142-481f-bd5e-6c9acefbfdd0
-duration: 78
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 60
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -53,7 +53,7 @@ post.request.jsp中的下列程式碼只會將POST轉送給掛接在/bin/formstu
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
-在IntelliJ的AEM專案中，以滑鼠右鍵按一下 `apps/bankingapplication` 資料夾並選取新增 |在新封裝對話方塊中的apps.bankingapplication之後封裝並輸入SubmitToAEMServlet。 以滑鼠右鍵按一下SubmitToAEMServlet節點，然後選取存放庫 |取得命令以將AEM專案與AEM伺服器存放庫同步。
+在IntelliJ的AEM專案中，以滑鼠右鍵按一下 `apps/bankingapplication` 資料夾並選取新增 | 在新封裝對話方塊中的apps.bankingapplication後面封裝並輸入SubmitToAEMServlet。 以滑鼠右鍵按一下SubmitToAEMServlet節點，然後選取存放庫 | 取得命令以將AEM專案與AEM伺服器存放庫同步。
 
 
 ## 設定最適化表單

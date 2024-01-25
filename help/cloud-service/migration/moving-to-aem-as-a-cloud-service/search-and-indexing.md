@@ -9,8 +9,8 @@ level: Experienced
 jira: KT-8634
 thumbnail: 336963.jpeg
 exl-id: f752df86-27d4-4dbf-a3cb-ee97b7d9a17e
-duration: 1265
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 1247
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
 ## 重要活動
 
 + 使用 [Adobe I/O工作流程移轉工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) 移轉資產處理工作流程以使用Asset compute微服務的工具。
-+ 設定 [本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant) 並部署自訂索引。 確保更新的索引是最新的。
++ 設定 [本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) 並部署自訂索引。 確保更新的索引是最新的。
 + 將更新的程式碼基底部署到AEMas a Cloud Service開發環境，並繼續驗證。
 + 如果修改現成索引 **一直** 從最新發行版本上執行的AEMas a Cloud Service環境中複製最新索引定義。 修改複製的索引定義以符合您的需求。
 

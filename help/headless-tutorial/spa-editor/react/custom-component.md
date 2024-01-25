@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-duration: 472
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 417
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 0%
@@ -144,7 +144,7 @@ AEM元件定義為節點和屬性。 在專案中，這些節點和屬性在 `ui
    >
    > 您可以檢視更多專案 [檢視核心元件定義的對話方塊範例](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components). 您也可以檢視其他表單欄位，例如 `select`， `textarea`， `pathfield`，可在下方使用 `/libs/granite/ui/components/coral/foundation/form` 在 [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form).
 
-   使用傳統AEM元件， [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hant) 通常需要指令碼。 由於SPA將會轉譯元件，因此不需要HTL指令碼。
+   使用傳統AEM元件， [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html) 通常需要指令碼。 由於SPA將會轉譯元件，因此不需要HTL指令碼。
 
 ## 建立Sling模型
 

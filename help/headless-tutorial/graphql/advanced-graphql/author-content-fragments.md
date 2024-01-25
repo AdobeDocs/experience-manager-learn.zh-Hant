@@ -7,8 +7,8 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 998d3678-7aef-4872-bd62-0e6ea3ff7999
-duration: 818
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 732
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 1%
@@ -58,7 +58,7 @@ ht-degree: 1%
 
    ![建立資料夾](assets/author-content-fragments/create-folder.png)
 
-1. 在出現的「建立資料夾」模式中，在 **標題** 欄位。 記下結尾的「s」。 包含許多片段的資料夾標題必須為複數。 選擇 **建立**。
+1. 在出現的「建立資料夾」模式中，在 **標題** 欄位。 記下結尾的「s」。 包含許多片段的資料夾標題必須為複數。 選取「**建立**」。
 
    ![建立資料夾模型](assets/author-content-fragments/create-folder-modal.png)
 
@@ -163,7 +163,7 @@ AEM可讓您直接從內容片段編輯器建立片段參考。 讓我們建立J
 | 個人資料圖片 | /content/dam/wknd-shared/en/contributors/stacey-roswells.jpg |
 | 傳記 | Stacey Roswells是一位成功的攀巖家和高山冒險家。 斯泰西出生於馬里蘭州巴爾的摩，是六個孩子中的老幺。 Stacey的父親是美國海軍的中校，母親則是現代舞蹈教練。 斯泰西的家人經常因父親的職務任務而搬家，並在父親駐泰國時拍攝了第一張照片。 這也是Stacey學會攀巖的地方。 |
 | 講師經驗等級 | 進階 |
-| 技能 | 攀巖 |滑雪 |揹包 |
+| 技能 | 攀巖 | 滑雪 | 揹包 |
 
 **Kumar Selvaraj**
 
@@ -175,7 +175,7 @@ AEM可讓您直接從內容片段編輯器建立片段參考。 讓我們建立J
 | 個人資料圖片 | /content/dam/wknd-shared/en/contributors/kumar-selvaraj.jpg |
 | 傳記 | Kumar Selvaraj是經驗豐富的AMGA認證專業講師，其主要目標是協助學生提升攀巖和徒步旅行技能。 |
 | 講師經驗等級 | 進階 |
-| 技能 | 攀巖 |揹包 |
+| 技能 | 攀巖 | 揹包 |
 
 **文藝男女**
 
@@ -187,7 +187,7 @@ AEM可讓您直接從內容片段編輯器建立片段參考。 讓我們建立J
 | 個人資料圖片 | /content/dam/wknd-shared/en/contributors/ayo-ogunseinde-237739.jpg |
 | 傳記 | Ayo Ogunseinde是一名位於加州中部Fresno的專業登山師和揹包教練。 Ayo的目標是引導徒步旅行者進行他們最壯觀的國家公園冒險。 |
 | 講師經驗等級 | 進階 |
-| 技能 | 攀巖 |騎行 |揹包 |
+| 技能 | 攀巖 | 循環 | 揹包 |
 
 離開 **其他資訊** 欄位空白。
 

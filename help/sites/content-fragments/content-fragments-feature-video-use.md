@@ -8,15 +8,15 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
-duration: 693
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 676
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 11%
 
 ---
 
-# 編寫內容片段 {#authoring-content-fragments}
+# 製作內容片段 {#authoring-content-fragments}
 
 內容片段是AEM中的內容抽象概念，可讓您獨立於其支援的管道之外撰寫和管理文字型內容。
 
@@ -25,7 +25,7 @@ AEM內容片段是文字型編輯內容，其中可能包含某些相關聯的�
 本影片系列涵蓋AEM內容片段的製作生命週期。 詳細資訊 [提供內容片段可在此處找到](content-fragments-delivery-feature-video-use.md).
 
 1. 啟用和定義內容片段模型
-2. 編寫內容片段
+2. 製作內容片段
 3. 下載內容片段
 4. 編輯功能
 

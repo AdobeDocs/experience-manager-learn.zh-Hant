@@ -10,8 +10,8 @@ level: Beginner
 jira: KT-9359
 exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
-duration: 111
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 102
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 14%
@@ -36,7 +36,7 @@ ht-degree: 14%
 開啟標籤的樣式編輯器時，您處於預設狀態，如下方熒幕擷取畫面所示
 ![導覽標籤](assets/navigation-tab.png)
 
-設定預設狀態的CSS屬性，如下所示 |類別 |屬性名稱 |屬性值 | |：—|：—|：—| |Dimension和位置 |寬度 | 50px | |文字 |字型粗細|粗體 | |文字 |色彩 |#FFF | |文字 |行高| 3 | |文字 |文字對齊 |左側 | |背景|色彩 |#056dae |
+設定預設狀態的CSS屬性，如下所示 | 類別 | 屬性名稱 | 屬性值 | |：—|：—|：—| | Dimension和位置 | 寬度 | 50px | | 文字 | 字型粗細| 粗體 | | 文字 | 顏色 | #FFF | |文字 | 行高| 3 | |文字 | 文字對齊 | 左側 | |背景| 顏色 | #056dae |
 
 儲存您的變更
 

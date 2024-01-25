@@ -9,8 +9,8 @@ level: Experienced
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-duration: 108
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 86
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 1%
@@ -40,7 +40,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 
 將瀏覽器指向 [資料整合頁面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) 這會列出在您的AEM執行個體上建立的所有資料整合。
 
-1. 按一下建立 |表單資料模型
+1. 按一下建立 | 表單資料模型
 1. 提供有意義的標題，例如FormsAndMarketo ，然後按「下一步」
 1. 選取在先前步驟中設定的資料來源，然後按一下建立和編輯，在編輯模式中開啟表單資料模型
 1. 展開「FormsAndMarketo」節點。 展開服務節點

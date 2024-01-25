@@ -10,8 +10,8 @@ thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 doc-type: Tutorial
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-duration: 336
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 311
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 5%
@@ -65,7 +65,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
-> **需要協助設定本機開發環境嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)。
+> **需要協助設定本機開發環境嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 
 ## 1.設定AEM for SPA編輯器
 

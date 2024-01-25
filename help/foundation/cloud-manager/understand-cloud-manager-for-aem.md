@@ -10,8 +10,8 @@ level: Beginner
 exl-id: 53279cbb-70c8-4319-b5bb-9a7d350a7f72
 last-substantial-update: 2022-05-10T00:00:00Z
 thumbnail: understand-cloud-manager.jpg
-duration: 1044
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 1026
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 14%
@@ -26,7 +26,7 @@ Adobe Cloud Manager提供簡單但強大的解決方案，可讓您輕鬆管理�
 
 本影片系列會探索AEM適用的Cloud Manager的主要功能，包括：
 
-* [計畫](#programs)
+* [方案](#programs)
 * [環境](#environments)
 * [報告](#reports)
 * [CI/CD 生產管道](#cicd-production-pipeline)
@@ -35,7 +35,7 @@ Adobe Cloud Manager提供簡單但強大的解決方案，可讓您輕鬆管理�
 
 如需完整概述，請檢閱 [Cloud Manager使用手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html).
 
-## 計畫 {#programs}
+## 方案 {#programs}
 
 [Cloud Manager計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html) 代表支援邏輯業務計畫集合的AEM環境集合，通常會對應到已購買的服務等級協定(SLA)。 例如，一個計畫可能代表AEM資源以支援全球公共網站，而另一個計畫代表內部中央DAM。
 

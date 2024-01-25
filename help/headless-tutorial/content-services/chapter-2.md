@@ -7,11 +7,11 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-duration: 472
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 421
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -87,7 +87,7 @@ AEM內容片段模型會定義內容結構，以便AEM作者將原始內容的�
 
 ## 建立內容片段模型
 
-1. 瀏覽至 **[!UICONTROL 工具] > [!UICONTROL 一般] > [!UICONTROL 內容片段模型]**.
+1. 導覽至「**[!UICONTROL 工具]」>「[!UICONTROL 一般]」>「[!UICONTROL 內容片段模型]**」。
 1. 點選 **[!DNL WKND Mobile]** 資料夾開啟。
 1. 點選 **[!UICONTROL 建立]** 以開啟內容片段模式建立精靈。
 1. 輸入 **[!DNL Event]** 作為 **[!UICONTROL 模型標題]** *（說明為選用）* 然後點選 **[!UICONTROL 建立]** 以儲存。
