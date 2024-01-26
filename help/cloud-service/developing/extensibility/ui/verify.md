@@ -11,7 +11,7 @@ jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
 duration: 637
-source-git-commit: 2a22a1bbe8474b8b7ca95f2b364fd7540b26b894
+source-git-commit: f48fb02887d909a102718dc5a0c4d1ecd2b1ef34
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 0%
@@ -39,9 +39,9 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
 例如，若要預覽內容片段主控台的擴充功能：
 
 1. 登入所需的AEMas a Cloud Service環境。
-2. 選取 __內容片段__ 圖示。
-3. 等候在瀏覽器中載入AEM內容片段主控台。
-4. 從瀏覽器的位址列複製AEM內容片段主控台的URL，看起來應該類似於：
+1. 選取 __內容片段__ 圖示。
+1. 等候在瀏覽器中載入AEM內容片段主控台。
+1. 從瀏覽器的位址列複製AEM內容片段主控台的URL，看起來應該類似於：
 
    ```
    https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
@@ -80,11 +80,11 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
    https://experience.adobe.com/?devMode=true&ext=https://localhost:9080&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
-2. 將預覽URL複製並貼到瀏覽器中。
+1. 將預覽URL複製並貼到瀏覽器中。
 
    + 您可能必須先開始，然後定期進行， [接受HTTPS憑證](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users) 本機應用程式的主機(`https://localhost:9080`)。
 
-3. AEM UI會載入並插入其本機版本的擴充功能以進行驗證。
+1. AEM UI會載入並插入其本機版本的擴充功能以進行驗證。
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
 下方的書籤小程式會預覽 [本機開發組建](#verify-local-development-builds) 擴充功能於 `https://localhost:9080`. 預覽 [中繼組建](#verify-stage-builds)，使用建立書籤小程式 `previewApp` 變數設為App Builder已部署應用程式的URL。
 
 1. 在瀏覽器中建立書籤。
-2. 編輯書籤。
-3. 為書籤提供有意義的名稱，例如 `AEM UI Extension Preview (localhost:9080)`.
-4. 將書籤的URL設定為下列程式碼：
+1. 編輯書籤。
+1. 為書籤提供有意義的名稱，例如 `AEM UI Extension Preview (localhost:9080)`.
+1. 將書籤的URL設定為下列程式碼：
 
    ```javascript
    javascript: (() => {
@@ -161,7 +161,7 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
    })();
    ```
 
-5. 導覽至可擴充的AEM UI，以載入預覽擴充功能，然後按一下書籤小程式。
+1. 導覽至可擴充的AEM UI，以載入預覽擴充功能，然後按一下書籤小程式。
 
 >[!TIP]
 >
