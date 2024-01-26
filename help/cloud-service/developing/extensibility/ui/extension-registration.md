@@ -11,7 +11,7 @@ jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: ef2290d9-ba40-429b-b10d-e82d6c1c20f6
 duration: 96
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -58,7 +58,6 @@ function App(props) {
 根據以下情況下選取的AEM UI擴充功能範本： [初始化App Builder應用程式擴充功能](./app-initialization.md)，可支援不同的擴充點。
 
 + [內容片段UI擴充功能點](./content-fragments/overview.md#extension-points)
-
 
 ## 有條件地包含擴充功能
 
