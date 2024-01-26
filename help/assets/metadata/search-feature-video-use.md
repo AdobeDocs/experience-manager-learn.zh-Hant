@@ -3,8 +3,8 @@ title: 在AEM Assets中使用搜尋
 description: 在這些影片中，我們會介紹AEM中引入Assets搜尋的部分增強功能。 作者可以更新個別中繼資料屬性，以提升關鍵字搜尋結果中的特定資產。 我們也會檢視Assets OmniSearch述詞的一些進階設定。
 version: 6.4, 6.5
 doc-type: Feature Video
-duration: 375
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 379
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
