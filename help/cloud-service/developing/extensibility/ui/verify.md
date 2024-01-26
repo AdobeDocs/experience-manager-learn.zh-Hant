@@ -10,10 +10,10 @@ recommendations: noDisplay, noCatalog
 jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
-duration: 633
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 637
+source-git-commit: 2a22a1bbe8474b8b7ca95f2b364fd7540b26b894
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
@@ -67,6 +67,7 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
 
 記下本機應用程式URL，如下所示 `-> https://localhost:9080`
 
+1. 最初（以及當您看到連線錯誤時）開啟 `https://localhost:9080` （或是您的本機應用程式URL為何），並手動接受 [HTTPS憑證](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users).
 1. 將下列兩個查詢引數新增至 [AEM UI的URL](#aem-ui-url)
    + `&devMode=true`
    + `&ext=<LOCAL APPLICATION URL>`，通常 `&ext=https://localhost:9080`.
