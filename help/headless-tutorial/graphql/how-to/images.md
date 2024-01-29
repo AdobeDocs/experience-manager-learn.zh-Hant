@@ -11,10 +11,10 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 377
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 2aec84f0fbd34678a4e25200ae0cdc6396beca95
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 5%
+source-wordcount: '843'
+ht-degree: 4%
 
 ---
 
@@ -27,14 +27,14 @@ AEM Headless內容模型中使用的內容片段，通常會參照要在Headless
 此 `ImageRef` type有四個URL選項供內容參照使用：
 
 + `_path` 是AEM中的參照路徑，不包含AEM來源（主機名稱）
-+ `_dynamicUrl` 是偏好的Web最佳化影像資產的完整URL。
++ `_dynamicUrl` 是用於影像資產的網頁最佳化傳送的URL。
    + 此 `_dynamicUrl` 不包含AEM來源，因此網域(AEM作者或AEM發佈服務)必須由使用者端應用程式提供。
 + `_authorUrl` 是AEM作者上影像資產的完整URL
    + [AEM作者](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 可用來提供headless應用程式的預覽體驗。
 + `_publishUrl` 是AEM發佈上影像資產的完整URL
    + [AEM發佈](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) 通常是Headless應用程式生產部署顯示影像的位置。
 
-此 `_dynamicUrl` 是用於影像資產的慣用URL且應取代的 `_path`， `_authorUrl`、和 `_publishUrl` 儘可能使用。
+此 `_dynamicUrl` 是用於影像資產傳送的建議URL，應取代使用 `_path`， `_authorUrl`、和 `_publishUrl` 儘可能使用。
 
 |                                | AEM as a Cloud Service  | AEMAS A CLOUD SERVICERDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
@@ -96,17 +96,17 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 
 此 `_assetTransform` 定義 `_dynamicUrl` 旨在最佳化提供的影像轉譯。 您也可以變更URL的查詢引數，在使用者端上調整Web最佳化的影像URL。
 
-| GraphQL引數 | URL引數 | 說明 | 必填 | GraphQL變數值 | URL引數值 | 範例URL引數 |
-|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | 不適用 | 影像資產的格式。 | ✔ | `GIF`， `PNG`， `PNG8`， `JPG`， `PJPG`， `BJPG`，  `WEBP`， `WEBPLL`， `WEBPLY` | N/A | N/A |
-| `seoName` | N/A | URL中的檔案區段名稱。 若未提供，則會使用影像資產名稱。 | ✘ | 英數字元， `-`，或 `_` | N/A | N/A |
-| `crop` | `crop` | 裁切影格從影像中取出，必須在影像大小範圍內 | ✘ | 正整數，定義原始影像尺寸範圍內的裁切區域 | 以逗號分隔的數位座標字串 `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
-| `size` | `size` | 輸出影像的大小（高度和寬度），以畫素為單位。 | ✘ | 正整數 | 以逗號分隔的正整數 `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
-| `rotation` | `rotate` | 影像的旋轉，以度為單位。 | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `?rotate=90` |
-| `flip` | `flip` | 翻轉影像。 | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `?flip=h` |
-| `quality` | `quality` | 影像品質，以原始品質的百分比表示。 | ✘ | 1-100 | 1-100 | `?quality=80` |
-| `width` | `width` | 輸出影像的寬度（畫素）。 時間 `size` 已提供 `width` 會忽略。 | ✘ | 正整數 | 正整數 | `?width=1600` |
-| `preferWebP` | `preferwebp` | 如果 `true` 而且如果瀏覽器支援WebP，則AEM會提供此功能，無論是否支援 `format`. | ✘ | `true`、`false` | `true`、`false` | `?preferwebp=true` |
+| GraphQL引數 | 說明 | 必填 | GraphQL變數值 |
+|:---------|:----------|:-------------------------------|:--:|:--------------------------|
+| `format` | 影像資產的格式。 | ✔ | `GIF`， `PNG`， `PNG8`， `JPG`， `PJPG`， `BJPG`， `WEBP`， `WEBPLL`， `WEBPLY` |
+| `seoName` | URL中的檔案區段名稱。 若未提供，則會使用影像資產名稱。 | ✘ | 英數字元， `-`，或 `_` |
+| `crop` | 裁切影格從影像中取出，必須在影像大小範圍內 | ✘ | 正整數，定義原始影像尺寸範圍內的裁切區域 |
+| `size` | 輸出影像的大小（高度和寬度），以畫素為單位。 | ✘ | 正整數 |
+| `rotation` | 影像的旋轉，以度為單位。 | ✘ | `R90`, `R180`, `R270` |
+| `flip` | 翻轉影像。 | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` |
+| `quality` | 影像品質，以原始品質的百分比表示。 | ✘ | 1-100 |
+| `width` | 輸出影像的寬度（畫素）。 時間 `size` 已提供 `width` 會忽略。 | ✘ | 正整數 |
+| `preferWebP` | 如果 `true` 而且如果瀏覽器支援WebP，則AEM會提供此功能，無論是否支援 `format`. | ✘ | `true`、`false` |
 
 ## GraphQL回應
 
@@ -145,7 +145,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 
 ## 回應式URL
 
-上述範例顯示使用單一大小的影像，不過在網頁體驗中，通常需要回應式影像集。 回應式影像可透過以下方式實施： [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 或 [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 下列程式碼片段會示範如何使用 `_dynamicUrl` 為基礎，並附加不同的寬度引數，以支援不同的回應式檢視。 不只可以 `width` 可使用查詢引數，但使用者端可以新增其他查詢引數，以根據其需求進一步最佳化影像資產。
+上述範例顯示使用單一大小的影像，不過在網頁體驗中，通常需要回應式影像集。 回應式影像可透過以下方式實施： [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) 或 [圖片元素](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). 下列程式碼片段會示範如何使用 `_dynamicUrl` 作為基礎。 `width` 是URL引數，您隨後可將其附加至 `_dynamicUrl` 用於支援不同的回應式檢視。
 
 ```javascript
 // The AEM host is usually read from a environment variable of the SPA.
