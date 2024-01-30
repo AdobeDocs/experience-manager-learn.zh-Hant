@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 377
-source-git-commit: 2aec84f0fbd34678a4e25200ae0cdc6396beca95
+source-git-commit: d178059f6f00228586e692465f7f437129bffaae
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 4%
@@ -97,7 +97,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 此 `_assetTransform` 定義 `_dynamicUrl` 旨在最佳化提供的影像轉譯。 您也可以變更URL的查詢引數，在使用者端上調整Web最佳化的影像URL。
 
 | GraphQL引數 | 說明 | 必填 | GraphQL變數值 |
-|:---------|:----------|:-------------------------------|:--:|:--------------------------|
+|-------------------|------------------------------------------------------------------------------------------------------|----------|-------------------------------------------------------------|
 | `format` | 影像資產的格式。 | ✔ | `GIF`， `PNG`， `PNG8`， `JPG`， `PJPG`， `BJPG`， `WEBP`， `WEBPLL`， `WEBPLY` |
 | `seoName` | URL中的檔案區段名稱。 若未提供，則會使用影像資產名稱。 | ✘ | 英數字元， `-`，或 `_` |
 | `crop` | 裁切影格從影像中取出，必須在影像大小範圍內 | ✘ | 正整數，定義原始影像尺寸範圍內的裁切區域 |
@@ -107,6 +107,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 | `quality` | 影像品質，以原始品質的百分比表示。 | ✘ | 1-100 |
 | `width` | 輸出影像的寬度（畫素）。 時間 `size` 已提供 `width` 會忽略。 | ✘ | 正整數 |
 | `preferWebP` | 如果 `true` 而且如果瀏覽器支援WebP，則AEM會提供此功能，無論是否支援 `format`. | ✘ | `true`、`false` |
+
 
 ## GraphQL回應
 
