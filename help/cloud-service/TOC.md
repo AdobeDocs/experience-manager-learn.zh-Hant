@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: aa6cd605c617de45003a96b1c14e37f055a8c566
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 16%
+source-wordcount: '1119'
+ht-degree: 17%
 
 ---
 
@@ -114,14 +114,14 @@ ht-degree: 16%
 + 偵錯AEM{#debugging}
    + 為AEM SDK除錯{#debugging-aem-sdk}
       + [概觀](./debugging/aem-sdk-local-quickstart/overview.md)
-      + [記錄檔](./debugging/aem-sdk-local-quickstart/logs.md)
+      + [記錄](./debugging/aem-sdk-local-quickstart/logs.md)
       + [遠端偵錯](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi Web主控台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher 工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
    + 偵錯AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [概觀](./debugging/cloud-service/overview.md)
-      + [記錄檔](./debugging/cloud-service/logs.md)
+      + [記錄](./debugging/cloud-service/logs.md)
       + [建置和部署](./debugging/cloud-service/build-and-deployment.md)
       + [開發人員主控台](./debugging/cloud-service/developer-console.md)
       + [存放庫瀏覽器](./debugging/cloud-service/repository-browser.md)
@@ -149,8 +149,8 @@ ht-degree: 16%
    + [SAML 2.0](./authentication/saml-2-0.md)
 + 進階網路{#networking}
    + [概觀](./networking/advanced-networking.md)
-   + [彈性的連線埠輸出](./networking/flexible-port-egress.md)
-   + [專用輸出IP位址](./networking/dedicated-egress-ip-address.md)
+   + [彈性的連接埠輸出](./networking/flexible-port-egress.md)
+   + [專用輸出 IP 位址](./networking/dedicated-egress-ip-address.md)
    + [虛擬私人網路](./networking/vpn.md)
    + 程式碼範例{#examples}
       + [非標準連線埠上的HTTP/HTTPS，用於彈性連線埠輸出](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
@@ -169,6 +169,8 @@ ht-degree: 16%
    + 範例{#examples}
       + [Webhook — 接收AEM活動](./eventing/examples/webhook.md)
       + [日誌 — 載入AEM事件](./eventing/examples/journaling.md)
+      + [Adobe I/O Runtime動作 — 接收AEM事件](./eventing/examples/runtime-action.md)
+      + [Adobe I/O Runtime動作 — 處理AEM事件](./eventing/examples/event-processing-using-runtime-action.md)
 + 移轉 {#migration}
    + [內容轉移工具](./migration/content-transfer-tool.md)
    + [大量匯入資產](./migration/bulk-import.md)

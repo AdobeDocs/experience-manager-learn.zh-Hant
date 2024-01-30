@@ -11,9 +11,9 @@ duration: 573
 last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ AEM Eventing的主要區別包括：
 - 事件取用者程式碼會在AEM外部執行，而不是在與AEM相同的JVM中執行。
 - AEM產品程式碼負責定義事件，並將其傳送至Adobe I/O事件。
 - 事件資訊會標準化，並以JSON格式傳送。 如需詳細資訊，請參閱 [雲端事件](https://cloudevents.io/).
-- 為了傳回AEM，事件取用者會利用AEMas a Cloud ServiceAPI。
+- 為了傳回AEM，事件取用者會使用AEMas a Cloud ServiceAPI。
 
 
 ## 使用它的原因與時機
@@ -60,7 +60,7 @@ AEM Eventing的主要區別包括：
 AEM Eventing在系統架構和營運效率方面具備眾多優勢。 使用AEM Eventing的主要原因包括：
 
 - **建立事件導向架構**：有助於建立鬆散耦合的系統，這些系統可獨立擴展並復原故障。
-- **低程式碼並降低營運成本**：避免AEM中的自訂，使系統更容易維護和擴充，藉此減少營運支出。
+- **低程式碼並降低營運成本**：避免AEM中的自訂，使系統更容易維護和擴充，從而降低營運支出。
 - **簡化AEM與外部系統之間的通訊**：讓Adobe I/O事件管理通訊，例如決定哪些AEM事件應傳送至特定系統或服務，藉此消除點對點連線。
 - **事件更耐用**：Adobe I/O Events是高度可用和可擴展的系統，旨在處理大量事件並可靠地將其提供給訂閱者。
 - **並行處理事件**：啟用同時傳送事件給多個訂閱者的功能，允許跨不同系統進行分散式事件處理。
@@ -92,7 +92,7 @@ AEM事件是根據AEMas a Cloud Service環境啟用，並且僅適用於發行�
 有兩種主要方法可使用AEM事件： _推播_ 方法與 _提取_ 方法。
 
 - **推播方法**：在此方法中，當事件可供使用時，Adobe I/O事件會主動通知事件取用者。 整合選項包括Webhooks、Adobe I/O Runtime和Amazon EventBridge。
-- **提取方法**：在此，事件消費者主動輪詢Adobe I/O事件以檢查新事件。 此方法的主要整合選項為Adobe I/O日誌API。
+- **提取方法**：在此，事件消費者主動輪詢Adobe I/O事件以檢查新事件。 此方法的主要整合選項為Adobe Developer Journaling API。
 
 如需詳細資訊，請參閱 [透過Adobe I/O事件處理的AEM事件](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#aem-events-processing-via-adobe-io).
 
@@ -101,7 +101,7 @@ AEM事件是根據AEMas a Cloud Service環境啟用，並且僅適用於發行�
 <table>
   <tr>
     <td>
-        <a  href="./examples/webhook.md"><img alt="在webhook上接收AEM活動" src="./assets/examples/webhook/Eventing-webhook.png"/></a>
+        <a  href="./examples/webhook.md"><img alt="在webhook上接收AEM活動" src="./assets/examples/webhook/webhook-example.png"/></a>
         <div><strong><a href="./examples/webhook.md">在webhook上接收AEM活動</a></strong></div>
         <p>
           使用Adobe提供的webhook接收AEM事件並檢視事件詳細資訊。
@@ -115,4 +115,20 @@ AEM事件是根據AEMas a Cloud Service環境啟用，並且僅適用於發行�
         </p>
       </td>
     </tr>
+  <tr>
+    <td>
+        <a  href="./examples/runtime-action.md"><img alt="接收Adobe I/O Runtime動作的AEM事件" src="./assets/examples/runtime-action/eventing-runtime.png"/></a>
+        <div><strong><a href="./examples/runtime-action.md">接收Adobe I/O Runtime動作的AEM事件</a></strong></div>
+        <p>
+          接收AEM事件並檢閱事件詳細資料。
+        </p>
+      </td>
+      <td>
+        <a  href="./examples/event-processing-using-runtime-action.md"><img alt="使用Adobe I/O Runtime動作處理的AEM事件" src="./assets/examples/event-processing-using-runtime-action/event-processing.png"/></a>
+        <div><strong><a href="./examples/event-processing-using-runtime-action.md">使用Adobe I/O Runtime動作處理的AEM事件</a></strong></div>
+        <p>
+          瞭解如何使用Adobe I/O Runtime動作處理收到的AEM事件。 事件處理包括AEM回呼、事件資料持續性，以及在SPA中顯示它們。
+        </p>
+      </td>
+  </tr>    
 </table>

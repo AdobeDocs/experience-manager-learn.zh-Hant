@@ -8,10 +8,10 @@ role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
 duration: 163
-last-substantial-update: 2023-12-07T00:00:00Z
+last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 # 日誌記錄和AEM事件
 
 瞭解如何從日誌擷取初始的AEM事件集，並探索有關每個事件的詳細資訊。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427052?quality=12&learn=on)
 
 分錄是一種用於沖銷「AEM事件」的提取方法，而分錄則是經過排序的事件清單。 使用Adobe I/O事件日誌API，您可以從日誌擷取AEM事件，並在您的應用程式中處理它們。 此方法可讓您根據指定的步調管理事件，並有效率地大量處理這些事件。 請參閱 [日誌](https://developer.adobe.com/events/docs/guides/journaling_intro/) 以進行深入分析，包括保留期、分頁等基本考量事項。
 
