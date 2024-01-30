@@ -6,12 +6,10 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
-exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
-last-substantial-update: 2020-07-07T00:00:00Z
-duration: 152
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+last-substantial-update: 2024-01-29T00:00:00Z
+source-git-commit: 959683f23b7b04e315a5a68c13045e1f7973cf94
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '572'
 ht-degree: 0%
 
 ---
@@ -22,8 +20,8 @@ ht-degree: 0%
 
 在本文中，我們將瞭解以下內容
 
-* 輸出服務 — 通常此服務用於合併xml資料與xdp範本或pdf以產生平面化pdf。 如需詳細資訊，請參閱此 [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 用於Output服務
-* FormsService — 這項功能非常廣泛的服務可讓您從PDF檔案匯出/匯入資料。 如需詳細資訊，請參閱此 [javadoc](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) 用於Forms服務。
+* [輸出服務](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)  — 此服務通常用於合併xml資料與xdp範本或pdf，以產生平面化pdf。
+* [表單服務](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html)  — 這是功能非常廣泛的服務，可讓您將xdp轉譯為pdf，以及從資產檔案匯出/匯入PDF檔案。
 
 
 下列程式碼片段會從PDF檔案匯出資料
@@ -47,7 +45,7 @@ Line2會從請求中擷取saveLocation
 
 **若要在系統上測試範例套件**
 
-[使用AEM封裝管理員下載並安裝封裝](assets/outputandformsservice.zip)
+[使用AEM封裝管理員下載並安裝封裝](assets/using-output-and-form-service-api.zip)
 
 
 
@@ -61,6 +59,7 @@ Line2會從請求中擷取saveLocation
 1. /content/AemFormsSamples/mergedata
 1. /content/AemFormsSamples/exportdata
 1. /content/AemFormsSamples/outputservice
+1. /content/AemFormsSamples/renderxdp
 1. 搜尋「Sling查閱者篩選器」
 1. 勾選「允許空白」核取方塊。 （此設定僅供測試用途）測試範常式式碼的方法有很多種。 最快捷、最輕鬆的方式就是使用Postman應用程式。 Postman可讓您向伺服器發出POST要求。 在您的系統上安裝Postman app 。
 啟動應用程式並輸入以下URL以測試匯出資料API
@@ -69,9 +68,9 @@ Line2會從請求中擷取saveLocation
 ![匯出](assets/postexport.png)
 然後按一下「傳送」按鈕
 
-此套件包含3個範例。 以下段落說明何時使用輸出服務或Forms服務、服務的URL、每個服務預期的輸入引數
+此套件包含4個範例。 以下段落說明何時使用輸出服務或Forms服務、服務的URL、每個服務預期的輸入引數
 
-## 合併資料並平面化輸出
+## 使用OutputService將資料與xdp範本合併
 
 * 使用輸出服務將資料與xdp或pdf檔案合併，以產生平面化pdf
 * **POSTURL**： http://localhost:4502/content/AemFormsSamples/outputservice.html
@@ -81,22 +80,34 @@ Line2會從請求中擷取saveLocation
    * **xmlfile**：與xdp_or_pdf_file合併的xml資料檔案
    * **saveLocation**：將演算後的檔案儲存在檔案系統上的位置。 例如c：\\documents\\sample.pdf
 
-### 將資料匯入PDF檔案
+### 使用FormsService API
 
-* 使用FormsService將資料匯入PDF檔案
+#### 匯入資料
+
+* 使用FormsService importData將資料匯入PDF檔案
 * **POSTURL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
+
 * **要求引數：**
 
    * **個人檔案** ：您要合併資料的pdf檔案
    * **xmlfile**：與pdf檔案合併的xml資料檔案
    * **saveLocation**：將演算後的檔案儲存在檔案系統上的位置。 例如 `c:\\outputsample.pdf`。
 
-**從PDF檔案匯出資料**
-* 使用FormsService從PDF檔案匯出資料
-* **POSTUR** L - http://localhost:4502/content/AemFormsSamples/exportdata.html
+#### 匯出資料
+
+* 使用FormsService exportData API從PDF檔案匯出資料
+* **POSTURL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **要求引數：**
 
    * **個人檔案** ：您要匯出資料的pdf檔案
    * **saveLocation**：將匯出的資料儲存在檔案系統上的位置。 例如c：\\documents\\exported_data.xml
 
-[您可以匯入此Postman集合以測試API](assets/document-services-postman-collection.json)
+#### 轉譯XDP
+
+* 將XDP範本轉譯為靜態/動態pdf
+* 使用FormsService renderPDFForm API將xdp範本轉譯為PDF
+* **POSTURL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
+* 要求引數：
+   * xdpName：要呈現為pdf的xdp檔案的名稱
+
+[您可以匯入此Postman集合以測試API](assets/UsingDocumentServicesInAEMForms.postman_collection.json)
