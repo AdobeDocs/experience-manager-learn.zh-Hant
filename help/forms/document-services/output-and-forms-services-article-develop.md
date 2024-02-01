@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
-source-git-commit: 959683f23b7b04e315a5a68c13045e1f7973cf94
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '559'
 ht-degree: 0%
 
 ---
@@ -61,12 +61,18 @@ Line2會從請求中擷取saveLocation
 1. /content/AemFormsSamples/outputservice
 1. /content/AemFormsSamples/renderxdp
 1. 搜尋「Sling查閱者篩選器」
-1. 勾選「允許空白」核取方塊。 （此設定僅供測試用途）測試範常式式碼的方法有很多種。 最快捷、最輕鬆的方式就是使用Postman應用程式。 Postman可讓您向伺服器發出POST要求。 在您的系統上安裝Postman app 。
-啟動應用程式並輸入以下URL以測試匯出資料API
+1. 勾選「允許空白」核取方塊。 （此設定僅供測試之用）
 
-確定您已從下拉式清單中選取「POST」 http://localhost:4502/content/AemFormsSamples/exportdata.html請務必將「授權」指定為「基本驗證」。 指定AEM伺服器使用者名稱和密碼導覽至「內文」標籤，然後指定要求引數，如下圖所示
-![匯出](assets/postexport.png)
-然後按一下「傳送」按鈕
+## 測試樣本
+
+測試範常式式碼的方法有很多種。 最快捷、最輕鬆的方式就是使用Postman應用程式。 Postman可讓您向伺服器發出POST要求。
+
+* 在您的系統上安裝Postman app 。
+* 啟動應用程式並輸入適當的URL
+* 確定您已從下拉式清單中選取「POST」
+* 請務必將「授權」指定為「基本驗證」。 指定AEM伺服器使用者名稱和密碼
+* 在body標籤中指定請求引數
+* 按一下傳送按鈕
 
 此套件包含4個範例。 以下段落說明何時使用輸出服務或Forms服務、服務的URL、每個服務預期的輸入引數
 

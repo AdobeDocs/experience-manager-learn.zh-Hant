@@ -9,9 +9,9 @@ level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
 duration: 59
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,11 @@ ht-degree: 1%
 # 在AEM Forms中撰寫自訂提交 {#writing-a-custom-submit-in-aem-forms}
 
 快速輕鬆建立您自己的自訂最適化表單提交動作
+
+>[!NOTE]
+>本文中的程式碼無法用於以核心元件為基礎的最適化表單。
+>[以下提供核心元件型最適化表單的同等文章](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=en)
+
 
 本文將逐步引導您執行建立自訂提交動作以處理最適化Forms提交所需的步驟。
 

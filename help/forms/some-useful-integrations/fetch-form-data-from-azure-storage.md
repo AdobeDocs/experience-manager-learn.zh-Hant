@@ -10,9 +10,9 @@ last-substantial-update: 2023-10-23T00:00:00Z
 jira: KT-14238
 duration: 81
 exl-id: 77f93aad-0cab-4e52-b0fd-ae5af23a13d0
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,9 @@ ht-degree: 0%
 
 本文說明如何以Azure儲存空間中儲存的資料填入最適化表單。
 假設您已將最適化表單資料儲存在Azure儲存體，且現在想要將該資料預先填入最適化表單。
+>[!NOTE]
+>本文中的程式碼無法用於以核心元件為基礎的最適化表單。[以下提供核心元件型最適化表單的同等文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+
 
 ## 建立GET請求
 
@@ -83,7 +86,7 @@ if(guid!=null&&!guid.isEmpty())
 
 * [匯入範例最適化表單](./assets/bank-account-sample-form.zip)
 
-* 使用OSGi設定主控台，在Azure入口網站設定中指定適當的值。
+* [使用OSGi設定主控台，在Azure入口網站設定中指定適當的值。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
 
 * [預覽和提交BankAccount表單](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
