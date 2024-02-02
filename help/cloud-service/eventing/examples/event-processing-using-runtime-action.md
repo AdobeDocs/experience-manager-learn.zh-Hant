@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
-source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
+source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,9 @@ ht-degree: 0%
 
 - 從先前範例本機初始化的專案 [Adobe I/O Runtime動作與AEM事件](./runtime-action.md#initialize-project-for-local-development).
 
+>[!IMPORTANT]
+>
+>AEMas a Cloud Service事件僅適用於搶鮮版模式的註冊使用者。 若要在您的AEMas a Cloud Service環境中啟用AEM事件，請聯絡 [AEM-Eventing團隊](mailto:grp-aem-events@adobe.com).
 
 ## AEM Events處理器動作
 
