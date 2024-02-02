@@ -1,6 +1,6 @@
 ---
-title: 瞭解AEM中的驗證支援
-description: AEM支援的驗證（有時是授權）機制的整合檢視。
+title: AEM 6.x中的驗證支援
+description: AEM 6.x所支援驗證機制的整合檢視。
 version: 6.4, 6.5
 feature: User and Groups
 doc-type: Article
@@ -12,14 +12,14 @@ exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
 last-substantial-update: 2022-09-10T00:00:00Z
 thumbnail: KT-406.jpg
 duration: 38
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 9ef35d4d20ea574ac2051d7d3e997ecc18c2aaaa
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '116'
 ht-degree: 6%
 
 ---
 
-# 瞭解AEM 6.x中的驗證支援
+# AEM 6.x中的驗證支援
 
 AEM支援的驗證（有時是授權）機制的整合檢視。
 
