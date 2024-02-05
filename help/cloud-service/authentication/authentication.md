@@ -11,9 +11,9 @@ thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
 duration: 51
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: dfb9281abacfe28068b866a8eda786e2d30b9ea6
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '147'
 ht-degree: 3%
 
 ---
@@ -30,6 +30,7 @@ AEMas a Cloud Service支援多種驗證選項，且會因服務型別而異。
 | [單一登入(SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
 | [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
 | [權杖驗證](../../headless-tutorial/authentication/overview.md) | ✔ | ✔ |
+| 基本驗證 | ✘ | ✘ |
 
 ## 驗證選項
 
@@ -52,7 +53,7 @@ AEMas a Cloud Service支援多種驗證選項，且會因服務型別而異。
       </p>
     </td>   
    <td>
-      <a  href="../../headless-tutorial/authentication/overview.md"><img alt="Token" src="./assets/card--token.png"/></a>
+      <a  href="../../headless-tutorial/authentication/overview.md"><img alt="權杖" src="./assets/card--token.png"/></a>
       <div><strong><a href="../../headless-tutorial/authentication/overview.md">權杖驗證</a></strong></div>
       <p>
         允許應用程式和中介軟體使用API服務權杖向AEM進行驗證。
