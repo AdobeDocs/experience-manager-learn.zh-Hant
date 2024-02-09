@@ -1,22 +1,22 @@
 ---
 title: 在AEM Forms中使用輸出和Forms服務進行開發
-description: 在AEM Forms中使用輸出和Forms服務API
+description: 瞭解如何使用AEM Forms中的輸出和Forms服務API進行開發。
 feature: Output Service
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
-source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
+source-git-commit: 8e9bf8001e4bb7341aeadd65ffd2543da359e061
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
 # 在AEM Forms中使用輸出和Forms服務進行開發{#developing-with-output-and-forms-services-in-aem-forms}
 
-在AEM Forms中使用輸出和Forms服務API
+瞭解如何使用AEM Forms中的輸出和Forms服務API進行開發。
 
 在本文中，我們將瞭解以下內容
 
