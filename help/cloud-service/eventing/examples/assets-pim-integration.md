@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: 5d8ee3b9ab6fb974f7faebb1d0ce42d699e2063c
+source-git-commit: f150a2517c4cafe55917e1aa50dca297c9bb3bc5
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
@@ -102,7 +102,7 @@ ht-degree: 0%
 
 若要執行中繼資料擷取和更新，請先更新自動建立的 _一般_ 中的動作程式碼 `src/dx-excshell-1/actions/generic` 資料夾。
 
-如需完整程式碼，請參閱附加的WKND-Assets-PIM-Integration.zip檔案，以下區段會醒目提示重要檔案。
+請參閱附件中的 [WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip) 檔案以取得完整程式碼，而下節會醒目提示重要檔案。
 
 - 此 `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` 檔案會模擬PIM API呼叫，以擷取其他中繼資料，例如SKU和供應商名稱。
 
