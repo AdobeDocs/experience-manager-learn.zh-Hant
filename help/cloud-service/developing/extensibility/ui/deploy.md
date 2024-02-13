@@ -8,12 +8,12 @@ role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
 jira: KT-11603
-last-substantial-update: 2024-01-26T00:00:00Z
+last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 214
-source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
+source-git-commit: 678bda0ea6f6c727170c596e9d3d5f0687ec830f
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,6 @@ ht-degree: 0%
 # 部署擴充功能
 
 若要在AEMas a Cloud Service環境中使用，必須部署和核准擴充功能App Builder應用程式。
-
-![Adobe交換](./assets/deploy/adobe-exchange.png){align="center"}
 
 部署擴充功能App Builder應用程式時，應注意以下幾點：
 
@@ -79,9 +77,9 @@ Adobe Developer Console工作區與AEMas a Cloud Service的環境型別沒有任
 ![擴充功能核准](./assets/deploy/adobe-exchange.png){align="center"}
 
 1. 登入 [Adobe交換](https://exchange.adobe.com/)
-2. 瀏覽至 __管理__ > __Experience Cloud應用程式__
-3. __檢閱__ 擴充功能App Builder應用程式
-4. 如果擴充功能變更是可接受的 __Accept__ 評論。 這會立即在Adobe組織內的所有AEMas a Cloud Service作者服務上插入擴充功能。
+1. 瀏覽至 __管理__ > __擱置檢閱的應用程式__
+1. __檢閱__ 擴充功能App Builder應用程式
+1. 如果擴充功能變更是可接受的 __Accept__ 評論。 這會立即在Adobe組織內的所有AEMas a Cloud Service作者服務上插入擴充功能。
 
 擴充功能要求通過核准後，擴充功能會在AEMas a Cloud Service製作服務中立即啟用。
 
@@ -94,7 +92,7 @@ Adobe Developer Console工作區與AEMas a Cloud Service的環境型別沒有任
 若要部署新版本的擴充功能，必須先撤銷（或移除）。 雖然擴充功能已撤銷，但在AEM主控台中無法使用。
 
 1. 登入 [Adobe交換](https://exchange.adobe.com/)
-1. 瀏覽至 __管理__ > __Experience Cloud應用程式__
+1. 瀏覽至 __管理__ > __應用程式產生器應用程式__
 1. __撤銷__ 要更新的擴充功能
 
 ### 部署擴充功能
@@ -130,10 +128,10 @@ Adobe Developer Console工作區與AEMas a Cloud Service的環境型別沒有任
 
 #### 核准部署請求
 
-![擴充功能核准](./assets/deploy/review.png){align="center"}
+![擴充功能核准](./assets/deploy/adobe-exchange.png){align="center"}
 
 1. 登入 [Adobe交換](https://exchange.adobe.com/)
-1. 瀏覽至 __管理__ > __Experience Cloud應用程式__
+1. 瀏覽至 __管理__ > __擱置檢閱的應用程式__
 1. __檢閱__ 擴充功能App Builder應用程式
 1. 如果擴充功能變更是可接受的 __Accept__ 評論。 這會立即在Adobe組織內的所有AEMas a Cloud Service作者服務上插入擴充功能。
 
@@ -146,5 +144,5 @@ Adobe Developer Console工作區與AEMas a Cloud Service的環境型別沒有任
 若要移除擴充功能，請從Adobe交換撤銷（或移除）該擴充功能。 擴充功能撤銷時，會從所有AEMas a Cloud Service作者服務中移除。
 
 1. 登入 [Adobe交換](https://exchange.adobe.com/)
-1. 瀏覽至 __管理__ > __Experience Cloud應用程式__
+1. 瀏覽至 __管理__ > __應用程式產生器應用程式__
 1. __撤銷__ 要移除的擴充功能
