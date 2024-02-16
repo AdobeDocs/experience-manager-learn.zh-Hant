@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: f150a2517c4cafe55917e1aa50dca297c9bb3bc5
+source-git-commit: f679b4e5e97c9ffba2f04fceaf554e8a231ddfa6
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
@@ -21,17 +21,19 @@ ht-degree: 0%
 
 # PIM整合的AEM Assets事件
 
-瞭解如何整合AEM Assets和產品資訊管理(PIM)系統以更新資產中繼資料 **使用AEM事件**. 在收到AEM Assets事件後，可以根據業務需求在AEM、PIM或兩個系統中更新資產中繼資料。 不過，在此範例中，讓我們更新AEM中的資產中繼資料。
+**注意：本教學課程使用實驗性AEMas a Cloud ServiceAPI。  若要存取這些API，您必須接受發行前軟體合約，並由Adobe工程手動為您的環境啟用這些API。  請聯絡Adobe支援以請求存取權。 **
 
-若要執行資產中繼資料更新 **AEM外部的程式碼**，則 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) 使用無伺服器平台。 事件處理流程如下：
+瞭解如何將AEM Assets與協力廠商系統(例如產品資訊管理(PIM)或產品線管理(PLM)系統)整合，以更新資產中繼資料 **使用原生AEM IO事件**. 在收到AEM Assets事件後，可以根據業務需求在AEM、PIM或兩個系統中更新資產中繼資料。 不過，在此範例中，我們將示範如何在AEM中更新資產中繼資料。
+
+若要執行資產中繼資料更新 **AEM外部的程式碼**，我們會善用 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)，無伺服器平台。 事件處理流程如下：
 
 ![PIM整合的AEM Assets事件](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
 
-1. AEM Author服務觸發 _資產處理已完成_ 資產上傳完成時的事件。
+1. AEM Author服務觸發 _資產處理已完成_ 資產上傳完成及所有資產處理活動完成時的事件。  等待處理完成可確保任何現成的處理（例如中繼資料擷取）都已完成，然後再繼續。
 1. 事件會傳送至 [Adobe I/O事件](https://developer.adobe.com/events/) 服務。
 1. Adobe I/O事件服務會將事件傳遞至 [Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) 以進行處理。
-1. 「Adobe I/O Runtime動作」會呼叫模擬的PIM API來擷取其他中繼資料，例如SKU、供應商資訊。
-1. PIM擷取到的其他中繼資料隨後會在AEM Assets中使用 [Assets作者API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/).
+1. 「Adobe I/O Runtime動作」會呼叫PIM系統的API來擷取其他中繼資料，例如SKU、供應商資訊或其他詳細資訊。
+1. 從PIM擷取的其他中繼資料則會在AEM Assets中使用 [Assets作者API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/).
 
 ## 先決條件
 
@@ -51,10 +53,10 @@ ht-degree: 0%
 1. [初始化專案以進行本機開發](./runtime-action.md#initialize-project-for-local-development)
 1. 在ADC中設定專案
 1. 設定AEM作者服務以啟用ADC專案通訊
-1. 開發可協調中繼資料擷取和更新的執行階段動作
-1. 在AEM作者服務中上傳資產並驗證中繼資料更新
+1. 開發執行階段動作來協調中繼資料的擷取和更新
+1. 將資產上傳至AEM作者服務，並確認中繼資料已更新
 
-如需1-2的詳細步驟，請參閱 [Adobe I/O Runtime動作與AEM事件](./runtime-action.md#) 例如，和3-6請參閱以下章節。
+如需有關步驟1至2的詳細資訊，請參閱 [Adobe I/O Runtime動作與AEM事件](./runtime-action.md#) 有關步驟3至6，請參閱以下章節。
 
 ### 在Adobe Developer主控台(ADC)中設定專案
 
@@ -76,7 +78,7 @@ ht-degree: 0%
 
 - 然後選取 **OAuth伺服器對伺服器** 驗證型別，然後按一下 **下一個**.
 
-- 然後選取 **AEM管理員 — XXX** 產品設定檔並按一下 **儲存已設定的API**. 若要存取精細功能和許可權，選取的產品設定檔必須與產生AEMCS環境的AEM Assets事件相關聯。
+- 然後選取 **AEM管理員 — XXX** 產品設定檔並按一下 **儲存已設定的API**. 若要更新相關資產，選取的產品設定檔必須與產生事件的AEM Assets環境相關聯，且必須有足夠存取權在該處更新資產。
 
   ![新增AEMas a Cloud ServiceAPI — 設定專案](../assets/examples/assets-pim-integration/add-aem-api-product-profile-select.png)
 
@@ -104,7 +106,7 @@ ht-degree: 0%
 
 請參閱附件中的 [WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip) 檔案以取得完整程式碼，而下節會醒目提示重要檔案。
 
-- 此 `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` 檔案會模擬PIM API呼叫，以擷取其他中繼資料，例如SKU和供應商名稱。
+- 此 `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` 檔案會模擬PIM API呼叫，以擷取其他中繼資料，例如SKU和供應商名稱。  此檔案用於示範用途。  一旦您讓端對端流程正常運作，請以呼叫您真正的PIM系統來取代此函式，以擷取資產的中繼資料。
 
   ```javascript
   /**
@@ -285,7 +287,7 @@ $ aio app deploy
 
 企業通常需要在AEM和其他系統（例如PIM）之間同步資產中繼資料。 使用AEM Eventing可以達到此類要求。
 
-- 資產中繼資料程式碼會在AEM外部執行，避免AEM Author服務上的負載，因此事件導向架構可獨立擴展。
+- 資產中繼資料擷取程式碼會在AEM外部執行，避免AEM Author服務上的負載，因此事件導向架構可獨立擴展。
 - 新推出的Assets Author API可用於更新AEM中的資產中繼資料。
 - API驗證使用OAuth伺服器對伺服器（亦稱為使用者端憑證流程），請參閱 [OAuth伺服器對伺服器認證實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/).
 - 與其使用Adobe I/O Runtime動作，其他Webhook或Amazon EventBridge可以用來接收AEM Assets事件和處理中繼資料更新。
