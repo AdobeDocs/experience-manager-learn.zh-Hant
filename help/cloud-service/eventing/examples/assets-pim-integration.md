@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: f679b4e5e97c9ffba2f04fceaf554e8a231ddfa6
+source-git-commit: 6ef17e61190f58942dcf9345b2ea660d972a8f7e
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -21,15 +21,19 @@ ht-degree: 0%
 
 # PIM整合的AEM Assets事件
 
-**注意：本教學課程使用實驗性AEMas a Cloud ServiceAPI。  若要存取這些API，您必須接受發行前軟體合約，並由Adobe工程手動為您的環境啟用這些API。  請聯絡Adobe支援以請求存取權。 **
+>[!IMPORTANT]
+>
+>本教學課程使用實驗性AEMas a Cloud ServiceAPI。 若要存取這些API，您必須接受發行前軟體合約，並由Adobe工程手動為您的環境啟用這些API。 若要請求存取權，請聯絡Adobe支援。
 
-瞭解如何將AEM Assets與協力廠商系統(例如產品資訊管理(PIM)或產品線管理(PLM)系統)整合，以更新資產中繼資料 **使用原生AEM IO事件**. 在收到AEM Assets事件後，可以根據業務需求在AEM、PIM或兩個系統中更新資產中繼資料。 不過，在此範例中，我們將示範如何在AEM中更新資產中繼資料。
+瞭解如何將AEM Assets與協力廠商系統(例如產品資訊管理(PIM)或產品線管理(PLM)系統)整合，以更新資產中繼資料 **使用原生AEM IO事件**. 在收到AEM Assets事件後，可以根據業務需求在AEM、PIM或兩個系統中更新資產中繼資料。 不過，此範例示範如何在AEM中更新資產中繼資料。
 
-若要執行資產中繼資料更新 **AEM外部的程式碼**，我們會善用 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)，無伺服器平台。 事件處理流程如下：
+若要執行資產中繼資料更新 **AEM外部的程式碼**，則 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)，則使用無伺服器平台。
+
+事件處理流程如下：
 
 ![PIM整合的AEM Assets事件](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
 
-1. AEM Author服務觸發 _資產處理已完成_ 資產上傳完成及所有資產處理活動完成時的事件。  等待處理完成可確保任何現成的處理（例如中繼資料擷取）都已完成，然後再繼續。
+1. AEM Author服務觸發 _資產處理已完成_ 資產上傳完成及所有資產處理活動完成時的事件。 等待處理完成可確保已完成任何現成的處理，例如中繼資料擷取。
 1. 事件會傳送至 [Adobe I/O事件](https://developer.adobe.com/events/) 服務。
 1. Adobe I/O事件服務會將事件傳遞至 [Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) 以進行處理。
 1. 「Adobe I/O Runtime動作」會呼叫PIM系統的API來擷取其他中繼資料，例如SKU、供應商資訊或其他詳細資訊。
@@ -106,7 +110,7 @@ ht-degree: 0%
 
 請參閱附件中的 [WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip) 檔案以取得完整程式碼，而下節會醒目提示重要檔案。
 
-- 此 `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` 檔案會模擬PIM API呼叫，以擷取其他中繼資料，例如SKU和供應商名稱。  此檔案用於示範用途。  一旦您讓端對端流程正常運作，請以呼叫您真正的PIM系統來取代此函式，以擷取資產的中繼資料。
+- 此 `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` 檔案會模擬PIM API呼叫，以擷取其他中繼資料，例如SKU和供應商名稱。 此檔案用於示範用途。 一旦您讓端對端流程正常運作，請以呼叫您真正的PIM系統來取代此函式，以擷取資產的中繼資料。
 
   ```javascript
   /**
@@ -209,7 +213,7 @@ ht-degree: 0%
 
 - 此 `src/dx-excshell-1/actions/model` 資料夾包含 `aemAssetEvent.js` 和 `errors.js` 檔案，動作會使用這些檔案來分別剖析收到的事件和處理錯誤。
 
-- 此 `src/dx-excshell-1/actions/generic/index.js` 檔案會使用上述模組來協調中繼資料的擷取和更新。
+- 此 `src/dx-excshell-1/actions/generic/index.js` file使用先前提到的模組來協調中繼資料的擷取和更新。
 
   ```javascript
   ...
