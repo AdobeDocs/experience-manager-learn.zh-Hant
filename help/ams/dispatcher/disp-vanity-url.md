@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
 duration: 267
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 0deeaac90e9d181a60b407e17087650e0be1ff28
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -99,11 +99,27 @@ Dispatcher的伺服器陣列檔案中有設定區段：
 }
 ```
 
-此設定會告訴Dispatcher每300秒從其AEM執行個體擷取此URL，以擷取我們希望允許通過的專案清單。
+此 `/delay` 引數（以秒為單位）並非以固定間隔為基礎來運作，而是以條件為基礎來檢查。 Dispatcher會評估 `/file` （會儲存已辨識的虛名URL清單）收到未列出URL的請求時。 此 `/file` 如果目前時間與之前時間之間的時間差，則不會重新整理 `/file`的上次修改小於 `/delay` 持續時間。 重新整理 `/file` 會在兩個條件下發生：
+
+1. 傳入請求針對的URL未快取或未列於 `/file`.
+1. 至少 `/delay` 秒數已經過了從 `/file` 上次更新時間。
+
+此機制旨在避免阻斷服務(DoS)攻擊，否則可能會利用虛名URL功能讓Dispatcher不堪重負。
+
+更簡單地說， `/file` 只有當要求到達的URL尚未在 `/file` 如果 `/file`的上次修改早於 `/delay` 句點。
+
+若要明確觸發 `/file`，您可在確認下列要求後，要求不存在的URL `/delay` 自上次更新以來已過去時間。 此用途的範例URL包括：
+
+- `https://dispatcher-host-name.com/this-vanity-url-does-not-exist`
+- `https://dispatcher-host-name.com/please-hand-me-that-planet-maestro`
+- `https://dispatcher-host-name.com/random-vanity-url`
+
+此方法會強制Dispatcher更新 `/file`，已提供指定的 `/delay` 間隔自其上次修改後已過。
 
 它會將其回應的快取儲存在 `/file` 引數，因此在此範例中 `/tmp/vanity_urls`
 
 因此，如果您透過URI造訪AEM執行個體，便可看到其擷取內容：
+
 ![從/libs/granite/dispatcher/content/vanityUrls.html轉譯的內容熒幕擷圖](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")
 
 其實就是一份清單，非常簡單
