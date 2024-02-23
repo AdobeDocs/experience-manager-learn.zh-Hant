@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
 duration: 266
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -309,9 +309,8 @@ $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_w
 
 現在，我們只需重新載入Web伺服器服務並使用新網域即可！
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-
-請注意，我們僅變更了需要變更的部分，並運用了基線設定檔案隨附的現有包含和程式碼。  我們只需要標示需要變更的元素。  讓工作變得更輕鬆，並減少我們維護的程式碼
-</div>
+>[!NOTE]
+>
+>請注意，我們僅變更了需要變更的部分，並運用了基線設定檔案隨附的現有包含和程式碼。  我們只需要標示需要變更的元素。  讓工作變得更輕鬆，並減少我們維護的程式碼
 
 [下一個 — > Dispatcher健康情況檢查](./health-check.md)

@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 252
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -59,10 +59,9 @@ method/url/query/protocol/path/selectors/extension/suffix instead.
 
 ## 篩選拒絕
 
-
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-如果記錄層級設定得太低，即使發生拒絕，也不會始終顯示這些專案。 將其設為「資訊」或「除錯」，以確保您可檢視篩選器是否拒絕請求。
-</div>
+>[!NOTE]
+>
+>如果記錄層級設定得太低，即使發生拒絕，也不會始終顯示這些專案。 將其設為「資訊」或「除錯」，以確保您可檢視篩選器是否拒絕請求。
 
 範例記錄專案：
 
@@ -76,10 +75,9 @@ Fri Jul 20 17:25:48 2018 D pid 25939 (tid 139937517123328) Filter rejects: GET /
 Fri Jul 20 22:16:55 2018 I pid 128803 "GET /system/console/" ! - 8ms publishfarm/-
 ```
 
-<div style="color: #000;border-left: 6px solid red;background-color:#ddffff;"><b>注意：</b>
-
-瞭解Dispatcher的規則已設定為篩選掉該請求。 在此情況下，嘗試瀏覽的頁面會被有意拒絕，我們不需要對此執行任何動作。
-</div>
+>[!CAUTION]
+>
+>瞭解Dispatcher的規則已設定為篩選掉該請求。 在此情況下，嘗試瀏覽的頁面會被有意拒絕，我們不需要對此執行任何動作。
 
 如果您的記錄檔看起來像這個專案：
 
@@ -136,9 +134,9 @@ Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit rat
 
 讓此數目儘可能高。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-即使您在伺服器陣列檔案中有快取設定來快取所有內容，您可能會過於頻繁或過於激進地排清，這可能會導致發生快取命中率的百分比降低
-</div>
+>[!NOTE]
+>
+>即使您在伺服器陣列檔案中有快取設定來快取所有內容，您可能會過於頻繁或過於激進地排清，這可能會導致發生快取命中率的百分比降低
 
 ## 缺少目錄
 

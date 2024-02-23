@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 299b32c3-7922-4eee-aa3a-56039a654f70
 duration: 307
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1089'
 ht-degree: 1%
 
 ---
@@ -147,10 +147,9 @@ RUNMODE='sites'
 
 您無法變更這些設定，但可在設定檔案中妥善運用
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-
-因為只有在服務啟動時才會包含這個檔案。  必須重新啟動服務才能取得變更。  這表示重新載入是不夠的，而是需要重新啟動
-</div>
+>[!NOTE]
+>
+>因為只有在服務啟動時才會包含這個檔案。  必須重新啟動服務才能取得變更。  這表示重新載入是不夠的，而是需要重新啟動
 
 ### 變數檔案(`.vars`)
 

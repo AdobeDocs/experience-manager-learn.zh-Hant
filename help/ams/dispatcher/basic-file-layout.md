@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
 duration: 354
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -59,20 +59,23 @@ ht-degree: 0%
 - 允許修補作業系統完全支援的週期，不會發生任何衝突或手動調整
 - 避免標籤錯誤的檔案前後關聯違反SELinux
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-AdobeManaged Services伺服器影像通常有小型作業系統根磁碟機。  我們將資料放入另一個磁碟區，該磁碟區通常掛載在'/mnt'中。然後我們會使用該磁碟區，而不是下列預設目錄的預設值
+>[!BEGINSHADEBOX &quot;Note&quot;]
+
+AdobeManaged Services伺服器影像通常有小型作業系統根磁碟機。  我們將資料放入另一個磁碟區中，該磁碟區通常裝載在 `/mnt`
+然後我們使用該磁碟區，而不是下列預設目錄的預設值
 
 `DocumentRoot`
 - 預設：`/var/www/html`
 - AMS：`/mnt/var/www/html`
 
 `Log Directory`
-- 預設： `/var/log/httpd`
-- AMS： `/mnt/var/log/httpd`
+- 預設： `/var/log/httpd`
+- AMS： `/mnt/var/log/httpd`
 
 請記住，舊目錄和新目錄會對應回原始掛載點，以避免混淆。
 使用單獨的磁碟區並不重要，但值得注意
-</div>
+
+>[!ENDSHADEBOX]
 
 ## AMS附加元件
 
@@ -292,9 +295,9 @@ IncludeOptional conf.d/.conf
 LoadModule dispatcher_module modules/mod_dispatcher.so
 ```
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-我們並未修改Apache提供的任何現有檔案。  相反地，只是將我們的目錄新增到他們原本要前往的目錄中。
-</div><br/>
+>[!NOTE]
+>
+>我們並未修改Apache提供的任何現有檔案。 相反地，我們只是將我們的目錄新增到了他們原本要前往的目錄中。
 
 現在我們在檔案中使用模組 <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> 會初始化模組並載入初始模組專屬設定檔
 

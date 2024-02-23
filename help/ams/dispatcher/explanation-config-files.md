@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 duration: 478
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
 | 檔案 | 檔案目的地 | 說明 |
 | ---- | ---------------- | ----------- |
 | 檔案名稱`.conf` | `/etc/httpd/conf.d/` | 預設的Enterprise Linux安裝會使用此副檔名並包含資料夾，作為覆寫httpd.conf中宣告之設定的位置，並可讓您在Apache中的全域層級新增其他功能。 |
-| 檔案名稱`.vhost` | 已分段： `/etc/httpd/conf.d/available_vhosts/`<br>作用中： `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b> .vhost檔案不會複製到enabled_vhosts資料夾，而是使用symlink指向available_vhosts/\*.vhost檔案的相對路徑</div></u><br><br> | \*.vhost （虛擬主機）檔案為 `<VirtualHosts>`  比對主機名稱的專案，並允許Apache使用不同規則處理每個網域流量。 從 `.vhost` 檔案，其他檔案，例如 `rewrites`， `whitelisting`， `etc` 將包括在內。 |
+| 檔案名稱`.vhost` | 已分段： `/etc/httpd/conf.d/available_vhosts/`<br>作用中： `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><b>注意：</b> .vhost檔案不會複製到enabled_vhosts資料夾，而是使用symlink指向available_vhosts/\*.vhost檔案的相對路徑</u><br><br> | \*.vhost （虛擬主機）檔案為 `<VirtualHosts>`  比對主機名稱的專案，並允許Apache使用不同規則處理每個網域流量。 從 `.vhost` 檔案，其他檔案，例如 `rewrites`， `whitelisting`， `etc` 將包括在內。 |
 | 檔案名稱`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules` 檔案存放區 `mod_rewrite` 要由明確包含和使用的規則 `vhost` 檔案 |
 | 檔案名稱`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules` 檔案包含在 `*.vhost` 檔案。 它包含IP規則運算式或允許拒絕規則，以允許將IP加入白名單。 如果您嘗試根據IP位址限制虛擬主機的檢視，您將會產生其中一個檔案，並包含來自您的檔案 `*.vhost` 檔案 |
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 | 檔案 | 檔案目的地 | 說明 |
 | --- | --- | --- |
 | 檔案名稱`.any` | `/etc/httpd/conf.dispatcher.d/` | AEM Dispatcher Apache模組會從以下來源取得其設定： `*.any` 檔案。 預設的父項包含檔案為 `conf.dispatcher.d/dispatcher.any` |
-| 檔案名稱`_farm.any` | 已分段： `/etc/httpd/conf.dispatcher.d/available_farms/`<br>作用中： `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b> 這些伺服器陣列檔案不可複製到 `enabled_farms` 但使用的資料夾 `symlinks` 至相對路徑 `available_farms/*_farm.any` 檔案 </div> <br/>`*_farm.any` 檔案包含在 `conf.dispatcher.d/dispatcher.any` 檔案。 這些父伺服器陣列檔案可用來控制每個轉譯器或網站型別的模組行為。 檔案建立於 `available_farms` 目錄並啟用 `symlink` 到 `enabled_farms` 目錄。  <br/>它會根據中的名稱自動納入這些變數 `dispatcher.any` 檔案。<br/><b>基線</b> 伺服器陣列檔案開頭為 `000_` 以確保先載入它們。<br><b>自訂</b> 伺服器陣列檔案應在之後載入，方法是從下列位置開始其編號配置： `100_` 以確保適當的包含行為。 |
+| 檔案名稱`_farm.any` | 已分段： `/etc/httpd/conf.dispatcher.d/available_farms/`<br>作用中： `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>注意：</b> 這些伺服器陣列檔案不可複製到 `enabled_farms` 但使用的資料夾 `symlinks` 至相對路徑 `available_farms/*_farm.any` 檔案 <br/>`*_farm.any` 檔案包含在 `conf.dispatcher.d/dispatcher.any` 檔案。 這些父伺服器陣列檔案可用來控制每個轉譯器或網站型別的模組行為。 檔案建立於 `available_farms` 目錄並啟用 `symlink` 到 `enabled_farms` 目錄。  <br/>它會根據中的名稱自動納入這些變數 `dispatcher.any` 檔案。<br/><b>基線</b> 伺服器陣列檔案開頭為 `000_` 以確保先載入它們。<br><b>自訂</b> 伺服器陣列檔案應在之後載入，方法是從下列位置開始其編號配置： `100_` 以確保適當的包含行為。 |
 | 檔案名稱`_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any` 檔案包含在 `conf.dispatcher.d/enabled_farms/*_farm.any` 檔案。 每個陣列都有一組規則，可變更應該篩選掉的流量，而不會讓轉譯器得逞。 |
 | 檔案名稱`_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any` 檔案包含在 `conf.dispatcher.d/enabled_farms/*_farm.any` 檔案。 這些檔案是主機名稱或URI路徑的清單，將透過blob比對來判斷要使用哪個轉譯器為該請求提供服務 |
 | 檔案名稱`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any` 檔案包含在 `conf.dispatcher.d/enabled_farms/*_farm.any` 檔案。 這些檔案指定快取和不快取的專案 |

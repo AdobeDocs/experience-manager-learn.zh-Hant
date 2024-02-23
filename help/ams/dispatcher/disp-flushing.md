@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 461873a1-1edf-43a3-b4a3-14134f855d86
 duration: 653
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '2227'
+source-wordcount: '2225'
 ht-degree: 0%
 
 ---
@@ -133,16 +133,17 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 將此檔案層級設定得太低，可能會導致排清請求清除的內容超出預期。  這進而會造成快取經常流失，使快取中提供的請求變少，進而導致效能問題。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
+>[!BEGINSHADEBOX &quot;Note&quot;]
 
-設定 `statfilelevel` 在合理的層次。  檢視您的資料夾結構，並確定其設定為允許簡潔的排清，而不需周遊太多目錄。   在系統效能測試期間進行測試並確定它符合您的需求。
+設定 `statfilelevel` 在合理的層次。 檢視您的資料夾結構，並確定其設定為允許簡潔的排清，而不需周遊太多目錄。 在系統效能測試期間進行測試並確定它符合您的需求。
 
-支援語言的網站就是一個很好的範例。  典型的內容樹狀目錄如下
+支援語言的網站就是一個很好的範例。 典型的內容樹狀目錄如下
 
 `/content/brand1/en/us/`
 
-在此範例中，使用stat檔案層級設定4。  這可確保您何時排清位於下的內容 <b>`us`</b> 不會造成語言資料夾被排清的資料夾。
-</div>
+在此範例中，使用stat檔案層級設定4。 這可確保您何時排清位於下的內容 **`us`** 不會造成語言資料夾被排清的資料夾。
+
+>[!ENDSHADEBOX]
 
 ### STAT檔案時間戳記交握
 
@@ -227,11 +228,11 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 您可以指定讓Dispatcher填入並管理的目錄做為快取目錄。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-此目錄應該與網頁伺服器設定要使用的網域的Apache檔案根目錄設定相符。
-
-出於許多原因，在每個陣列中讓巢狀docroot資料夾位於Apache檔案根目錄的子資料夾所在的位置是糟糕的想法。
-</div>
+>[!NOTE]
+>
+>此目錄應該與網頁伺服器設定要使用的網域的Apache檔案根目錄設定相符。
+>
+>出於許多原因，在每個陣列中讓巢狀docroot資料夾位於Apache檔案根目錄的子資料夾所在的位置是糟糕的想法。
 
 ### stat檔案層級
 
@@ -275,13 +276,11 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
    - `/var/www/html/content/damn/brand1/en/.stat`
    - `/var/www/html/content/damn/brand1/en/us/.stat`
 
-
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-
-請記住，發生時間戳記交握時，會尋找最接近的 `.stat` 檔案。
-
-具有 `.stat` 檔案層級0和stat檔案僅限於 `/var/www/html/.stat` 表示存在於底下的內容 `/var/www/html/content/dam/brand1/en/us/` 會尋找最接近的 `.stat` 檔案並遍歷5個資料夾以找出唯一 `.stat` 位於層級0且將日期與其比較的檔案。  這表示在如此高的層級排清實際上會使所有快取的專案失效。
-</div>
+>[!NOTE]
+>
+>請記住，發生時間戳記交握時，會尋找最接近的 `.stat` 檔案。
+>
+>擁有 `.stat` 檔案層級0和stat檔案僅限於 `/var/www/html/.stat` 表示存在於底下的內容 `/var/www/html/content/dam/brand1/en/us/` 會尋找最接近的 `.stat` 檔案並遍歷5個資料夾以找出唯一 `.stat` 位於層級0且將日期與其比較的檔案。 這表示在如此高的層級排清實際上會使所有快取的專案失效。
 
 ### 允許失效
 

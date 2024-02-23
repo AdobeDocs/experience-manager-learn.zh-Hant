@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
 duration: 267
-source-git-commit: 0deeaac90e9d181a60b407e17087650e0be1ff28
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -182,9 +182,8 @@ RewriteRule ^/aboutus /content/we-retail/us/en/about-us.html [PT,L,NC]
 - 如果虛值是不經常變更且頻繁使用的固定端點，則使用 `mod_rewrite` 規則。
 - 如果虛名名稱空間(例如： `/aboutus`)必須在同一個AEM執行個體上重複使用多個品牌，然後使用重寫規則。
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>注意：</b>
-
-如果您想使用AEM虛名功能並避免名稱空間，您可以制定命名慣例。 使用類似巢狀的虛名URL `/brand1/aboutus`， `brand2/aboutus`， `brand3/aboutus`.
-</div>
+>[!NOTE]
+>
+>如果您想使用AEM虛名功能並避免名稱空間，您可以制定命名慣例。 使用類似巢狀的虛名URL `/brand1/aboutus`， `brand2/aboutus`， `brand3/aboutus`.
 
 [下一個 — >一般記錄](./common-logs.md)
