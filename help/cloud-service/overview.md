@@ -6,10 +6,10 @@ jira: KT-3289
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
 duration: 490
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 3%
+source-wordcount: '156'
+ht-degree: 5%
 
 ---
 
@@ -20,27 +20,6 @@ ht-degree: 3%
 Adobe Experience Manager (AEM)現在可as a Cloud Service使用。 AEMas a Cloud Service推出新一代Experience Manager產品系列，以過去的投資和創新為基礎，保留及擴充所有使用案例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
-
-<div id="whats-new-section">
-
-## 新增功能
-
-* **[使用包含WAF規則的流量篩選規則來保護網站（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html)**
-  *瞭解如何使用流量篩選規則，包括WAF規則來保護網站*
-
-* **[權杖型驗證（教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
-  *瞭解如何使用權杖式驗證，以透過HTTP與AEMas a Cloud Service互動*
-
-* **[Headless GraphQL （教學課程）](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
-  *瞭解如何使用AEM GraphQL API在外部應用程式中強化體驗。*
-
-* **[asset compute中繼資料背景工作（教學課程）](./asset-compute/advanced/metadata.md)**
-  *瞭解如何從Asset compute背景工作將資產中繼資料寫回AEM*
-
-* **[asset compute微服務擴充性（教學課程）](./asset-compute/overview.md)**
-  *瞭解如何開發Asset compute背景工作以產生自訂資產轉譯*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

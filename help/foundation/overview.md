@@ -5,10 +5,10 @@ role: Leader, Architect, Developer, Admin, User
 level: Beginner
 doc-type: Catalog
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 2%
+source-wordcount: '154'
+ht-degree: 3%
 
 ---
 
@@ -17,21 +17,6 @@ ht-degree: 2%
 {{edge-delivery-services}}
 
 Adobe Experience Manager為AEM Sites、Assets和Forms的使用者提供了一組常用的功能。
-
-<div id="whats-new-section">
-
-## 新增功能
-
-* **[使用工作流程AEM （影片）](./workflow/use-workflow.md)**
-  *AEM Workflow提供在AEM中共同作業、管理及處理內容的方式。*
-
-* **[瞭解Cloud Manager for AEM （影片）](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-  *適用於AEM的Cloud Manager可讓您輕鬆管理、檢查和自助服務AEM環境。*
-
-* **[使用Cloud Manager CI/CD管道（影片）](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-  *瞭解如何使用Cloud Manager的CI/CD管道來確保安全一致的部署。*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

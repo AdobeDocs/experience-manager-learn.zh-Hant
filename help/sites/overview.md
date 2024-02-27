@@ -6,10 +6,10 @@ sub-product: Experience Manager Sites
 topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 16%
+source-wordcount: '175'
+ht-degree: 9%
 
 ---
 
@@ -18,21 +18,6 @@ ht-degree: 16%
 {{edge-delivery-services}}
 
 Adobe Experience Manager (AEM) Sites是領先的體驗管理平台。 本使用手冊包含了有關AEM Sites許多功能的影片和教學課程。
-
-<div id="whats-new-section">
-
-## 新增功能
-
-* **[AEM和Edge Delivery Services概觀（影片）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)**
-  *透過此資訊性概觀影片，探索Adobe Experience Manager (AEM)的完整領域，包括AEM Sites、AEM Assets、AEM Headless、AEM Forms和Edge Delivery Services。*
-
-* **[什麼是AEM和Edge Delivery Services？ (影片)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html)**
-  *瞭解Adobe Experience Manager (AEM)和Edge Delivery Services所提供的價值。*
-
-* **[AEM搭配Edge Delivery Services架構概覽（影片）](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)**
-  *瞭解AEMas a Cloud Service的所有架構！*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -48,11 +33,11 @@ Adobe Experience Manager (AEM) Sites是領先的體驗管理平台。 本使用�
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
       <img alt="AEM Sites - WKND 教學課程快速入門" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
     <strong>AEM Sites快速入門</strong>
     </a>
     </div>
@@ -66,7 +51,7 @@ Adobe Experience Manager (AEM) Sites是領先的體驗管理平台。 本使用�
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html">
-    <strong>AEM Headless 快速入門</strong>
+    <strong>AEM Headless快速入門</strong>
     </a>
     </div>
     <p>
