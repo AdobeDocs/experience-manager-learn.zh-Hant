@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: 6ef17e61190f58942dcf9345b2ea660d972a8f7e
+source-git-commit: 6c01dc8a0e8fd3cc69b21c78da8678e872dcef0c
 workflow-type: tm+mt
 source-wordcount: '1116'
 ht-degree: 0%
@@ -26,6 +26,8 @@ ht-degree: 0%
 >本教學課程使用實驗性AEMas a Cloud ServiceAPI。 若要存取這些API，您必須接受發行前軟體合約，並由Adobe工程手動為您的環境啟用這些API。 若要請求存取權，請聯絡Adobe支援。
 
 瞭解如何將AEM Assets與協力廠商系統(例如產品資訊管理(PIM)或產品線管理(PLM)系統)整合，以更新資產中繼資料 **使用原生AEM IO事件**. 在收到AEM Assets事件後，可以根據業務需求在AEM、PIM或兩個系統中更新資產中繼資料。 不過，此範例示範如何在AEM中更新資產中繼資料。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427592?quality=12&learn=on)
 
 若要執行資產中繼資料更新 **AEM外部的程式碼**，則 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)，則使用無伺服器平台。
 
