@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
+source-git-commit: acfd982ce471c8510cb59ed4d353f1d47dcfb5dc
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '2009'
 ht-degree: 2%
 
 ---
@@ -276,6 +276,7 @@ ht-degree: 2%
    + [用於產生含片段的pdf的ECMA指令碼](document-services/using-fragments-in-output-service-watched-folder.md)
    + [從單一資料檔案產生多個PDF](document-services/generate-multi-record-pdf.md)
    + [在行動表單提交時產生PDF](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [根據核心元件表單提交產生PDF](document-services/generate-pdf-from-core-component-form-submission.md)
    + [從行動表單產生互動式PDF](document-services/render-interactive-form-using-api.md)
    + [從最適化表單產生互動式DoR](document-services/generate-interactive-dor.md)
    + [設定Reader延伸模組認證](document-services/configuring-reader-extension-osgi.md)
@@ -300,7 +301,7 @@ ht-degree: 2%
    + [12 — 在提交表單時開啟代理程式UI](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
 + 儲存及擷取草稿信件 {#store-retrieve-letters}
    + [簡介](store-retrieve-letters/introduction.md)
-   + [實施](store-retrieve-letters/save-draft-letters.md)
+   + [實作](store-retrieve-letters/save-draft-letters.md)
    + [部署範例](store-retrieve-letters/deploy-on-your-server.md)
 + 互動式通訊 {#interactive-communications}
    + [使用批次API](interactive-communications/batch-generation-interactive-communications.md)
