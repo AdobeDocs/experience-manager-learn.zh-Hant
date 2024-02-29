@@ -9,7 +9,7 @@ level: Intermediate
 doc-type: Article
 exl-id: c9ee29d4-a8a5-4e61-bc99-498674887da5
 duration: 524
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 3b6de935b5f1fb5ee2d0e50372188f1eba7baeaa
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 0%
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 為確保對此核心套件進行的變更不會中斷系統的功能，我們建議由資深開發人員或開發人員團隊維持監督。 一個選項是讓單一團隊管理此封裝的所有變更；另一個選項是讓團隊提交由這些資源審查和合併的提取請求。 重要的是，治理模型要由團隊設計和同意，並且開發人員要遵循它。
 
-## 管理部署範圍  {#managing-deployment-scope}
+## 管理部署範圍 {#managing-deployment-scope}
 
 不同團隊將計畫碼部署到相同的存放庫時，請務必不要覆寫彼此的變更。 AEM有機制可在部署內容套件（即篩選器）時控制此動作。 xml檔案。 篩選器之間沒有重疊是很重要的事。  xml檔案，否則，一個團隊的部署可能會清除另一個團隊之前的部署。 為了說明這一點，請參閱以下精心編制的與有問題的篩選檔案範例：
 
