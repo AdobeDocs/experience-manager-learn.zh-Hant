@@ -1,5 +1,5 @@
 ---
-title: 在App Builder動作中產生存取權杖
+title: 在App Builder動作中產生JWT存取權杖
 description: 瞭解如何使用JWT憑證產生存取權杖，以用於App Builder動作。
 feature: Developer Tools
 version: Cloud Service
@@ -10,18 +10,18 @@ jira: KT-11743
 last-substantial-update: 2023-01-17T00:00:00Z
 exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
 duration: 161
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: c77dd9c2872e7e43863d83837cedbff50a7d3c1a
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 0%
+source-wordcount: '456'
+ht-degree: 1%
 
 ---
 
-# 在App Builder動作中產生存取權杖
+# 在App Builder動作中產生JWT存取權杖
 
 App Builder動作可能需要與部署了App Builder應用程式的Adobe Developer主控台專案相關聯的AdobeAPI互動。
 
-這可能需要應用程式產生器動作，才能產生與所需Adobe Developer主控台專案相關聯的存取權杖。
+這可能會要求App Builder動作產生與所需Adobe Developer Console專案相關聯的JWT存取權杖。
 
 >[!IMPORTANT]
 >
