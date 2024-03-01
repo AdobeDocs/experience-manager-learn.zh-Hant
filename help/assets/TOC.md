@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: bd66ad8698e2017cb53b91cae8f1cea92903f05b
+source-git-commit: 7680564ef0058a362ebf47622e50f96eec2866d7
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '412'
 ht-degree: 17%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 17%
    + [建立關聯及取消關聯](./authoring/relate-unrelate.md)
 
 + 共同作業{#collaboration}
+   + [觀看](./collaboration/watch.md)
    + [時間軸和收件匣](./collaboration/timeline-and-inbox.md)
    + [註釋和註解](./collaboration/comments-and-annotations.md)
    + [簽入和簽出](./collaboration/check-in-and-check-out.md)
@@ -56,7 +57,7 @@ ht-degree: 17%
    + [註解PDF輸出](./advanced/customizing-annotations-pdf-output.md)
    + [資產 Insights](./advanced/asset-insights-launch-tutorial.md)
    + [Assets報表](./advanced/asset-reports.md)
-   + [已封鎖的標籤](./advanced/blocked-tags.md)
+   + [已封鎖的標記](./advanced/blocked-tags.md)
    + [提取封存](./advanced/extract-archive.md)
    + [許可權(CUG)](./advanced/closed-user-groups.md)
    + [浮水印](./advanced/watermarks.md)
