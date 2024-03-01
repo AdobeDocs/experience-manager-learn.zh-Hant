@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: acfd982ce471c8510cb59ed4d353f1d47dcfb5dc
+source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '2032'
 ht-degree: 2%
 
 ---
@@ -285,6 +285,14 @@ ht-degree: 2%
    + [證明檔案](document-services/certifying-documents-aem-forms-tutorial.md)
    + [組合表單附件](document-services/assemble-form-attachments.md)
    + [有用的公用程式服務](document-services/useful-utility-services.md)
++ Forms Designer{#forms-designer}
+   + [建立您的第一個表單](forms-designer/create-simple-form.md)
+   + [編寫表單指令碼](forms-designer/first-script-designer.md)
+   + [XML資料繫結](forms-designer/xml-data-binding.md)
+   + [資料庫繫結](forms-designer/binding-to-mysql-db.md)
+   + [使用草寫簽名](forms-designer/scribble-signature-form.md)
+   + [使用數位簽名](forms-designer/adding-dig-signature-field.md)
+   + [Reader擴充表單](forms-designer/reader-extending-j2ee.md)
 + Print Channel互動式通訊
 {#ic-print-channel-tutorial}
    + [1 — 簡介](ic-print-channel-tutorial/introduction.md)
