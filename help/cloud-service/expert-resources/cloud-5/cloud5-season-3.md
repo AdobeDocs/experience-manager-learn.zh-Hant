@@ -4,9 +4,9 @@ description: 第三季可讓您透過與曾參與複雜專案的專家進行深�
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
+source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 簡介
 
-歡迎使用AEM Engineering第三季的Cloud 5系列。 任何產品實作階段的主要問題之一，就是這些範例、工具或API有足夠的程式碼範例和/或即時示範。 此系列的目標是在5分鐘內提供關於AEM Edge Delivery Services的實用資訊。
+歡迎使用AEM Engineering第三季的Cloud 5系列。 任何產品實作階段的主要問題之一，就是這些範例、工具或API有足夠的程式碼範例和/或即時示範。 此系列的目標是在5分鐘或更短時間內提供關於AEMEdge Delivery Services的有用資訊。
 
 ## 建議方塊
 
@@ -56,7 +56,7 @@ ht-degree: 0%
                 探索Real User Monitoring (RUM)可搭配Edge Delivery Services使用。
             </p>
         </td>   
- <td>
+        <td>
             <a href="./season-3/cloud5-edge-workers.md">
                 <img alt="邊緣背景工作" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
             </a>
@@ -70,5 +70,21 @@ ht-degree: 0%
                 探索邊緣工作者使用Edge Delivery Services的重要性。
             </p>
         </td>   
-  </tr>  
+    </tr>
+    <tr>
+        <td>
+            <a href="./season-3/cloud5-publish-events.md">
+                <img alt="在Edge Delivery Services中發佈、取消發佈事件" src="https://video.tv.adobe.com/v/3427681?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-publish-events.md">
+                <strong>在Edge Delivery Services中發佈、取消發佈事件</strong></a>        
+                <br/><em>與AEM Engineering的James Talbot &amp; Amol Anand</em>
+            </div>
+            <p>
+                <br/>
+                探索在Edge Delivery Services中發佈和取消發佈時觸發的事件，以及使用這些事件的使用案例和範例。
+            </p>
+        </td>   
+    </tr>  
 </table>
