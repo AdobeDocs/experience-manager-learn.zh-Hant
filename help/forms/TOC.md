@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
+source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
 workflow-type: tm+mt
-source-wordcount: '2032'
+source-wordcount: '2034'
 ht-degree: 2%
 
 ---
@@ -220,12 +220,13 @@ ht-degree: 2%
    + [處理PDF提交](offline-mobile-form-submission/part-two.md)
    + [檢閱PDF的工作流程](offline-mobile-form-submission/part-three.md)
    + [在您的系統上部署](offline-mobile-form-submission/part-four.md)
-+ 查詢提交的資料{#querying-submitted-data}
-   + [簡介](querying-submitted-data/introduction.md)
-   + [根據JSON結構描述建立表單](querying-submitted-data/part1.md)
-   + [儲存提交的資料](querying-submitted-data/part2.md)
-   + [儲存JSON結構描述](querying-submitted-data/part3.md)
-   + [查詢提交的資料](querying-submitted-data/part4.md)
++ 查詢表單提交{#query-form-submissions}
+   + [簡介](query-form-submissions/introduction.md)
+   + [建立可搜尋的欄位](query-form-submissions/part1.md)
+   + [建立自訂提交](query-form-submissions/part2.md)
+   + [建置查詢介面](query-form-submissions/part3.md)
+   + [寫入預填服務](query-form-submissions/part4.md)
+   + [部署範例](query-form-submissions/part5.md)
 + 在Forms Portal中列出自訂資產型別{#listing-custom-asset-types}
    + [Part1 — 註冊自訂資產型別](listing-custom-asset-types/part1.md)
    + [第2部分 — 建立自訂範本](listing-custom-asset-types/part2.md)
@@ -286,7 +287,9 @@ ht-degree: 2%
    + [組合表單附件](document-services/assemble-form-attachments.md)
    + [有用的公用程式服務](document-services/useful-utility-services.md)
 + Forms Designer{#forms-designer}
+   + [設計檢視](forms-designer/design-view.md)
    + [建立您的第一個表單](forms-designer/create-simple-form.md)
+   + [建立表單範本](forms-designer/creating-form-template.md)
    + [編寫表單指令碼](forms-designer/first-script-designer.md)
    + [XML資料繫結](forms-designer/xml-data-binding.md)
    + [資料庫繫結](forms-designer/binding-to-mysql-db.md)
