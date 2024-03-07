@@ -11,9 +11,9 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
 duration: 335
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ### asset compute專案中缺少Console.json檔案{#missing-console-json}
 
-+ __錯誤：__ 錯誤：驗證時遺失必要檔案(.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY)於async setupAssetCompute (.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __錯誤：__ 錯誤：驗證時遺失必要檔案(`.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY`)非同步設定AssetCompute (`.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY`)
 + __原因：__ 此 `console.json` asset compute專案的根目錄中缺少檔案
 + __解析度：__ 下載新的 `console.json` 形成您的Adobe I/O專案
    1. 在console.adobe.io中，開啟Asset compute專案設定要使用的Adobe I/O專案

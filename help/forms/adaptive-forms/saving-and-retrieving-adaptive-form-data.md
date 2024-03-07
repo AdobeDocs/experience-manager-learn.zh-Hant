@@ -8,9 +8,9 @@ type: Tutorial
 version: 6.4,6.5
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 691
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -32,11 +32,11 @@ ht-degree: 0%
 
 Apache Sling Connection Pooled DataSource已設定為指向要用來儲存最適化表單資料的資料庫。 下列熒幕擷圖顯示我的執行個體的設定。 下列屬性可以複製並貼上
 
-* 資料來源名稱：aemformstutorial — 這是我的程式碼中使用的名稱。
+* `Datasource Name:aemformstutorial`  — 這是我的程式碼中使用的名稱。
 
-* JDBC驅動程式類別：com.mysql.jdbc.Driver
+* `JDBC Driver Class:com.mysql.jdbc.Driver`
 
-* JDBC連線URL:jdbc:mysql://localhost:3306/aemformstutorial
+* `JDBC Connection URL:jdbc:mysql://localhost:3306/aemformstutorial`
 
 ![connectionpool](assets/storingdata.PNG)
 

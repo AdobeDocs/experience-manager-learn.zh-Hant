@@ -8,9 +8,9 @@ role: Developer
 level: Experienced
 exl-id: dccca658-3373-4de2-8589-21ccba2b7ba6
 duration: 49
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '187'
 ht-degree: 1%
 
 ---
@@ -34,6 +34,6 @@ AEM有許多方式可啟用與外部資料庫的整合。 資料庫整合最常�
 
 | 屬性名稱 | 值 |
 | ------------------------|---------------------------------------|
-| 資料來源名稱 | SaveAndContinue |
-| JDBC驅動程式類別 | com.mysql.cj.jdbc.Driver |
-| JDBC連線URI | jdbc:mysql://localhost：3306/aemformstutorial |
+| 資料來源名稱 | `SaveAndContinue` |
+| JDBC驅動程式類別 | `com.mysql.cj.jdbc.Driver` |
+| JDBC連線URI | `jdbc:mysql://localhost:3306/aemformstutorial` |
