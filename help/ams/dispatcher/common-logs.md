@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 252
-source-git-commit: 19beb662b63476f4745291338d944502971638a3
+source-git-commit: 80c04ce1ad7d60c1fc75ecc194dd54a2ad5b82fa
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 0%
@@ -130,7 +130,7 @@ Fri Jul 20 22:35:45 2018 I pid 3648 "GET /favicon.ico" 503 - 54234ms authorfarm/
 Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit ratio: 87.94 %
 ```
 
-這表示會測量您從轉譯器層級和從快取擷取的次數。 您想從快取中達到80%以上，您應該按照說明操作 [此處](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html%3Flang%3Den)：
+這表示會測量您從轉譯器層級和從快取擷取的次數。 您想從快取中達到80%以上，您應該按照說明操作 [此處](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html)：
 
 讓此數目儘可能高。
 
@@ -169,7 +169,7 @@ Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42
 
 當您已將Dispatcher設定為使用動態自動篩選允許虛名URL，但未透過在AEM轉譯器上安裝套件來完成設定時，會發生此錯誤。
 
-若要修正此問題，請在AEM執行個體上安裝虛名URL功能套件，並允許匿名使用者準備就緒。 詳細資料 [此處](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html%3Flang%3Den)
+若要修正此問題，請在AEM執行個體上安裝虛名URL功能套件，並允許匿名使用者準備就緒。 詳細資料 [此處](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
 
 設定的有效虛名URL如下所示：
 
