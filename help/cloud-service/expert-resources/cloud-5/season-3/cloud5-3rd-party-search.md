@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 — 第三方搜尋
-description: 探索如何以最佳方式將第三方搜尋整合至Edge Delivery Services。
+title: Cloud 5 — 協力廠商搜尋
+description: 探索如何將協力廠商搜尋最佳地整合至Edge Delivery Services中。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -8,16 +8,16 @@ role: Admin, Developer
 level: Intermediate
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
+exl-id: 0f41b049-bbbb-47c8-a3f8-25b5c68bdd39
+source-git-commit: cc32f64dfa6494a62dcb7f7cbfc8461faf6cddb1
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '32'
 ht-degree: 0%
 
 ---
 
-# Cloud 5 — 第三方搜尋
+# Cloud 5 — 協力廠商搜尋
 
-探索如何以最佳方式將第三方搜尋整合至Edge Delivery Services。
+探索如何將協力廠商搜尋最佳地整合至Edge Delivery Services中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427040?quality=12&learn=on)
-
