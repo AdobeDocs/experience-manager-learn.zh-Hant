@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
+source-git-commit: 466a19a30dd5f81d50c28cb57034800494255d4b
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1151'
 ht-degree: 17%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 17%
    + [CI/CD 生產管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD 非生產管道](./cloud-manager/cicd-non-production-pipeline.md)
    + [活動](./cloud-manager/activity.md)
+   + [自訂網域名稱](./cloud-manager/custom-domain-names.md)
    + Dev Ops{#devops}
       + [部署程式碼](./cloud-manager/devops/deploy-code.md)
       + [合併專案](./cloud-manager/devops/merge-projects.md)
