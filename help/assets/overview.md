@@ -5,10 +5,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 4867b29295a342020e1c96fe495b14dbace5423c
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 20%
+source-wordcount: '175'
+ht-degree: 18%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Manager (AEM) Assets是AEM平台上的數位資產管理工具�
 
 瞭解什麼是AEM Assets以及如何用來達成貴組織的業務目標。
 
->[!VIDEO](https://video.tv.adobe.com/v/336196?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3427944?learn=on)
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -87,7 +87,7 @@ Adobe Experience Manager (AEM) Assets是AEM平台上的數位資產管理工具�
 
 ## 其他資源
 
-* [AEM Assets 檔案](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
+* [AEM Assets檔案](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
 * [AEMas a Cloud Service教學課程](/help/cloud-service/overview.md)
 * [AEM Sites教學課程](/help/sites/overview.md)
 * [AEM Forms教學課程](/help/forms/overview.md)
