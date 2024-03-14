@@ -9,7 +9,8 @@ version: Cloud Service
 topic: Integrations
 jira: KT-14795
 duration: 60
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+exl-id: 9abe9f9d-8fb3-4e01-a830-1dad1c27274d
+source-git-commit: 3dc1aea74e2a7cf30da9f6fb96ecc5c7edcf6e34
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -20,9 +21,9 @@ ht-degree: 0%
 
 在舊版AEM Form(6.5)中，自訂程式碼必須使用要求屬性預先填入表單資料模型支援的最適化表單。 在AEM Forms as a Cloud Service中，不再需要編寫自訂程式碼。
 
-本文會說明使用表單資料模型預填服務，以從SharePoint清單擷取的資料預填/預填最適化表單所需的步驟。
+本文會說明使用表單資料模型預填服務，以從SharePoint清單擷取的資料預填/預先填入最適化表單所需的步驟。
 
-本文假設您擁有 [已成功設定最適化表單以提交資料至sharepoint清單。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
+本文假設您擁有 [已成功設定最適化表單以提交資料至SharePoint清單。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
 
 以下是SharePoint清單中的資料
 ![sharepoint-list](assets/list-data.png)
@@ -52,7 +53,3 @@ ht-degree: 0%
 ```html
 http://localhost:4502/content/dam/formsanddocuments/contactusform/jcr:content?wcmmode=disabled&submissionid=57e12249-751a-4a38-a81f-0a4422b24412
 ```
-
-
-
-

@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 958dc50dfef808470139a2cab214c6cfeb98ff55
+source-git-commit: 3dc1aea74e2a7cf30da9f6fb96ecc5c7edcf6e34
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1163'
 ht-degree: 17%
 
 ---
@@ -325,6 +325,7 @@ ht-degree: 17%
       + [將表單資料儲存在單一磁碟機中](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [將表單資料儲存在SharePoint中](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
       + [使用SharePoint清單中的資料預先填寫表單](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
+      + [使用工作流程將資料插入SharePoint清單](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
 + asset compute擴充性{#asset-compute}
    + [概觀](./asset-compute/overview.md)
    + 設定{#set-up}
