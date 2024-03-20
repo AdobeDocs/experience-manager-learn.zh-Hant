@@ -6,25 +6,27 @@ feature: Edge Delivery Services
 topic: Development
 role: Developer
 level: Beginner
-jira: KT-14643
+jira: KT-14643, KT-15202
 doc-type: Catalog
-duration: 30
-last-substantial-update: 2023-05-12T00:00:00Z
+duration: 660
+last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
-source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
+source-git-commit: 9f8b20842cf69439f2d46deecf61154b20881ee0
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 13%
+source-wordcount: '331'
+ht-degree: 18%
 
 ---
 
 # Edge Delivery Services影片
 
-瞭解如何使用Edge Delivery快速建立網站
+瞭解如何使用Edge Delivery Services快速建立網站。
 
-檢閱 [檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html) 以瞭解Edge Delivery及其功能的完整細節。
+>[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
 
-## Edge Delivery Services快速入門
+檢閱 [檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) 以取得Edge Delivery Services及其功能的完整詳細資訊。
+
+## 開始使用 Edge Delivery Services
 
 <div class="columns is-multiline">
     <!-- Prerequisites -->
@@ -75,7 +77,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分鐘</p>
+              class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/aem-boilerplate.md" title="使用樣板範本">AEM樣板</a>
             </p>
@@ -106,7 +108,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分鐘</p>
+              class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/content-repository.md" title="連結Google Drive">連結Google Drive</a>
             </p>
@@ -137,7 +139,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分鐘</p>
+              class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/content-repository.md" title="連結Sharepoint">連結SharePoint</a>
             </p>
@@ -168,7 +170,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分鐘</p>
+              class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/preview-and-publish.md" title="預覽和發佈內容">預覽和發佈內容</a>
             </p>
@@ -200,7 +202,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分鐘</p>
+              class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/sidekick.md" title="使用 Sidekick">使用AEM Sidekick</a>
             </p>
@@ -232,7 +234,7 @@ ht-degree: 13%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分鐘</p>
+              class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/document-structure.md" title="檔案結構">檔案結構</a>
             </p>
