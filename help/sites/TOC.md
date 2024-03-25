@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
+source-git-commit: 29f1cc8d891c57e9878c650fd8e02a32bfa73051
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 16%
+source-wordcount: '500'
+ht-degree: 17%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 16%
       + [防止搜尋引擎編制索引](./document-authoring/how-to/no-index.md)
       + [回應式導覽](document-authoring/how-to/responsive-navigation.md)
 + 頁面製作 {#page-authoring}
-   + [編寫](page-authoring/aem-sites-authoring-overview.md)
+   + [製作](page-authoring/aem-sites-authoring-overview.md)
    + [導覽](page-authoring/basic-handling-sites-feature-video-use.md)
    + [網站結構](page-authoring/content-hierarchy-feature-video-use.md)
    + [頁面建立](page-authoring/creating-page-feature-video-use.md)
@@ -46,7 +46,7 @@ ht-degree: 16%
    + [頁面標籤](page-authoring/page-tagging-feature-video-use.md)
    + [頁面版本設定](page-authoring/page-versioning-feature-video-use.md)
    + [頁面版本比較](page-authoring/page-diff-feature-video-use.md)
-   + [頁面內容](page-authoring/page-properties-feature-video-understand.md)
+   + [頁面屬性](page-authoring/page-properties-feature-video-understand.md)
    + [頁面作業](page-authoring/page-operations-feature-video-use.md)
    + [版面模式](page-authoring/responsive-layout-feature-video-understand.md)
    + [發佈](page-authoring/publication-management-feature-video-use.md)
@@ -56,6 +56,8 @@ ht-degree: 16%
    + [啟動](page-authoring/launches.md)
    + 向同儕學習 {#expert-advice}
       + [網站階層秘訣](page-authoring/expert-advice/site-hierarchy.md)
++ Generative AI {#generative-ai}
+   + [產生變數](./generative-ai/generate-variations.md)
 + 內容片段 {#content-fragments}
    + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [製作內容片段](content-fragments/content-fragments-feature-video-use.md)
@@ -106,7 +108,7 @@ ht-degree: 16%
    + [網頁最佳化的影像交付](components/web-optimized-image-delivery.md)
    + [元件主控台](components/components-console-feature-video-use.md)
 + SEO {#seo}
-   + [Sitemap](./seo/sitemaps.md)
+   + [Sitemaps](./seo/sitemaps.md)
 + 單頁應用程式 {#spa-editor}
    + [使用SPA編輯器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
