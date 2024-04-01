@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation 教學課程
 user-guide-description: Adobe Experience Manager Foundation 的影片和教學課程系列。
 sub-product: Experience Manager
 index: y
-source-git-commit: 5fe651bc0dc73397ae9602a28d63b7dc084fcc70
+source-git-commit: a504ace72b1b90c6e7c711a939595b95f24733e6
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '233'
 ht-degree: 14%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 14%
    + [開發AEM專案](./projects/develop-aem-projects.md)
    + [使用主要專案](./projects/use-project-masters.md)
 + 安全性 {#security}
+   + [瞭解DoS/DDoS預防](./security/understanding-dos-and-prevention-approaches.md)
    + [開發跨原始資源共用(CORS)](./security/develop-for-cross-origin-resource-sharing.md)
    + [瞭解跨原始資源共用(CORS)](./security/understand-cross-origin-resource-sharing.md)
    + [使用SSL精靈](./security/use-the-ssl-wizard.md)
