@@ -13,7 +13,7 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
 duration: 141
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 若要在AEM網站上使用VEC，必須完成下列設定：
 
 1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
-1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
+1. [從標籤觸發Adobe Target呼叫](./load-and-fire-target.md)
 
 ## 案例概述
 

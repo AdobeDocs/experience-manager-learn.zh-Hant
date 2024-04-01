@@ -14,9 +14,9 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM as a Cloud Service " before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 duration: 218
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '682'
 ht-degree: 10%
 
 ---
@@ -95,9 +95,9 @@ Adobe Commerce與AEMas a Cloud Service整合，讓品牌可以更快速地擴展
 + [AEM Content and Commerce使用手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
 
 
-## Adobe Experience Platform標籤
+## Adobe Experience Platform中的標籤
 
-Adobe Experience Platform標籤(前身為Adobe Launch、DTM)與AEM緊密整合，提供簡單的部署和管理方式 [分析](#adobe-analytics)， [目標定位](#adobe-target)、行銷和廣告標籤是吸引客戶體驗的必要條件。
+Adobe Experience Platform中的標籤與AEM緊密整合，提供簡單的方式進行部署和管理 [分析](#adobe-analytics)， [目標定位](#adobe-target)、行銷和廣告標籤是吸引客戶體驗的必要條件。
 
 ### AEM Sites
 
@@ -117,7 +117,7 @@ Adobe Journey Optimizer可協助您從單一應用程式為幾百萬名客戶安
 
 + [將AEM Assets Essentials與Adobe Journey Optimizer整合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html)
 
-## AdobeLearning Manager
+## Adobe Learning Manager
 
 Adobe Learning Manager (前身為Adobe Captivate Prime)為客戶和員工提供個人化學習。
 

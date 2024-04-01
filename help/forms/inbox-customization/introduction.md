@@ -11,7 +11,7 @@ level: Experienced
 exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 54
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 5%
@@ -32,7 +32,7 @@ AEM收件匣整合來自各種AEM元件(包括Forms工作流程)的通知和工�
 
 ## 欄自訂
 
-[啟動AEM收件匣](http://localhost:4502/aem/inbox)
+[開啟AEM收件匣](http://localhost:4502/aem/inbox)
 開啟Admin Control ，方法是按一下 _清單檢視_ 圖示，然後選取 _管理員控制_ 如下方熒幕擷取畫面所示
 
 ![admin-control](assets/open-customization.png)

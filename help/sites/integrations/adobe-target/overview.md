@@ -13,7 +13,7 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
 duration: 278
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Adobe Experience Manager (AEM)和Adobe Target是功能強大的解決方案，�
 * __案例1：__ 使用AEM體驗片段選件進行個人化
 
    1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
-   1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
+   1. [從標籤觸發Adobe Target呼叫](./load-and-fire-target.md)
    1. [將AEM作者服務與Adobe Target整合](./setup-aem-target-cloud-service.md)
    1. [將AEM體驗片段匯出至Adobe Target](./export-experience-fragment-target.md)
    1. [使用體驗片段選件個人化網頁的一部分](./create-target-activity.md)
@@ -43,11 +43,11 @@ Adobe Experience Manager (AEM)和Adobe Target是功能強大的解決方案，�
 * __案例2：__ 使用視覺化體驗撰寫器(VEC)進行個人化
 
    1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
-   1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
+   1. [從標籤觸發Adobe Target呼叫](./load-and-fire-target.md)
    1. [使用視覺化體驗撰寫器個人化網頁的一部分](./personalization-using-vec.md)
 
 * __案例3：__ 個人化完整網頁體驗
 
    1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
-   1. [從Launch觸發Adobe Target呼叫](./load-and-fire-target.md)
+   1. [從標籤觸發Adobe Target呼叫](./load-and-fire-target.md)
    1. [個人化完整的網頁體驗](./personalization-web-page.md)

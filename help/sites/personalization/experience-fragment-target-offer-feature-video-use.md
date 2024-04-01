@@ -9,7 +9,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 9ee826cf-389f-4570-bfe1-0d43d3fed3e1
 duration: 588
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Adobe Experience Manager會重新想像AEM和Target之間的個人化工作流�
 
 >[!NOTE]
 >
->建議使用 `at.js` 使用者端程式庫的最佳作法是使用標籤管理解決方案(例如Launch by Adobe、AdobeDTM或任何第三方標籤管理解決方案)，將target程式庫新增至您的網站頁面
+>建議使用 `at.js` 使用者端程式庫和最佳實務是使用標籤管理解決方案(例如Adobe Experience Platform中的標籤)或任何第三方標籤管理解決方案，將target程式庫新增至您的網站頁面
 
 
 * Adobe Experience Manager簡單易用且功能強大的內容建立機制，搭配Adobe Target的人工智慧(AI)和機器學習，可幫助內容作者在集中位置建立和管理所有管道的內容。 行銷人員現在可以將體驗片段匯出至Adobe Target做為HTML選件，擁有更大的彈性，可使用這些選件建立更個人化的體驗，而且現在可以測試和擴充他們建立的每個體驗。

@@ -13,7 +13,7 @@ last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
 duration: 190
-source-git-commit: 0a9a9c6deeab70f12906874b571dc3cf4e6a3305
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Android應用程式是專為連線至 __AEM發佈__ 不過，如果在Android應
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Launch [Android Studio](https://developer.android.com/studio) 並開啟資料夾 `android-app`
+1. 開啟 [Android Studio](https://developer.android.com/studio) 並開啟資料夾 `android-app`
 1. 修改檔案 `config.properties` 在 `app/src/main/assets/config.properties` 和更新 `contentApi.endpoint` 比對目標AEM環境：
 
    ```plain

@@ -12,7 +12,7 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: dd6c17ae-8e08-4db3-95f9-081cc7dbd86e
 duration: 323
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 以下影片會逐步說明如何將AEMas a Cloud Service與Adobe Target連線。
 
-此整合可讓AEM Author服務直接與Adobe Target通訊，並將體驗片段從AEM推送至Target做為選件。  此整合會 *非* 將Adobe Target JavaScript (AT.js)新增至AEM Sites網頁，以便整合 [使用Target擴充功能的AEM與Launch](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md).
+此整合可讓AEM Author服務直接與Adobe Target通訊，並將體驗片段從AEM推送至Target做為選件。  此整合會 *非* 將Adobe Target JavaScript (AT.js)新增至AEM Sites網頁，以便整合 [使用Target擴充功能的AEM和標籤](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
 

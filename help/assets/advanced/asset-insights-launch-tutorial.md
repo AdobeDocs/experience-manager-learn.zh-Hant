@@ -1,6 +1,6 @@
 ---
-title: 使用AEM Assets和Adobe Launch設定資產分析
-description: 在這個由五部分組成的影片系列中，我們將逐步解說透過Launch by Adobe部署的Experience Manager的Asset Insights設定。
+title: 使用AEM Assets和標籤設定Asset Insights
+description: 在這個由五部分組成的影片系列中，我們將逐步解說透過標籤部署的Experience Manager資產分析功能的設定和設定。
 feature: Asset Insights
 version: 6.4, 6.5
 topic: Integrations
@@ -12,16 +12,16 @@ badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-titl
 doc-type: Tutorial
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
 duration: 2051
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
 
-# 使用AEM Assets和Adobe Experience Platform Launch設定資產分析
+# 使用AEM Assets和標籤設定Asset Insights
 
-在這個由五部分組成的影片系列中，我們將逐步解說透過Adobe Launch部署的資產Experience Manager分析功能的設定和設定。
+在這個由五部分組成的影片系列中，我們將逐步解說透過標籤部署的Experience Manager資產分析功能的設定和設定。
 
 ## 第1部分：資產分析概觀 {#overview}
 
@@ -81,9 +81,9 @@ ht-degree: 0%
 * 共用機密(可從下列取得： *Adobe Analytics >管理員>公司設定>網站服務*)。
 * 報表套裝（務必選取用於資產報表的正確報表套裝）
 
-## 第4部分：使用Adobe Experience Platform Launch新增Adobe Analytics擴充功能 {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
+## 第4部分：使用標籤來新增Adobe Analytics擴充功能 {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
 
-新增Adobe Analytics擴充功能、建立頁面載入規則，以及將AEM與Launch與Adobe IMS技術帳戶整合。
+新增Adobe Analytics擴充功能、建立頁面載入規則，以及將AEM與標籤與Adobe IMS技術帳戶整合。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
@@ -175,13 +175,13 @@ document.querySelectorAll('[data-aem-asset-id]').forEach(function(element) {
 ### 主控台除錯陳述式 {#console-debug-statements}
 
 ```javascript
-//Launch Build Info
+// Tags build info
 _satellite.buildInfo
 
 //Enables debug messages
 _satellite.setDebug(true);
 
-//Asset Insight JS Object
+//Asset Insight JavaScript Object
 assetAnalytics
 
 //List of trackable images
@@ -190,10 +190,8 @@ document.querySelectorAll(".cmp-image__image");
 
 影片中參考兩個Google Chrome瀏覽器擴充功能，作為偵錯Analytics的方式。 其他瀏覽器也提供類似的擴充功能。
 
-* [啟動切換器Chrome擴充功能](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en)
-* [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-也可以使用下列Chrome擴充功能，將DTM切換為除錯模式： [Launch與DTM交換器](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en). 這可讓您更容易檢視是否有任何與DTM部署相關的錯誤。 此外，您可以透過任何瀏覽器，手動將DTM切換為除錯模式 *開發人員工具 — > JS主控台* 新增下列程式碼片段：
 
 ## 第5部分：測試分析追蹤和同步分析資料{#analytics-tracking-asset-insights}
 

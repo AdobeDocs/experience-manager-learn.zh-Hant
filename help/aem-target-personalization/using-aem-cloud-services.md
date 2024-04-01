@@ -10,9 +10,9 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 9b191211-2030-4b62-acad-c7eb45b807ca
 duration: 357
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '360'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 搭配Adobe Target的AEM舊版Cloud Service為 **僅限** 用來建立直接AEM Author到Adobe Target的後端連線，以協助將內容從AEM發佈到Target。 Adobe Launch是用來在公開的AEM網站體驗上公開Adobe Target。
+> 搭配Adobe Target的AEM舊版Cloud Service為 **僅限** 用來建立直接AEM Author到Adobe Target的後端連線，以協助將內容從AEM發佈到Target。 Adobe Experience Platform中的標籤是用來在公開的AEM網站體驗上公開Adobe Target。
 
 為了使用AEM體驗片段選件來強化您的個人化活動，請繼續下一章，並使用舊版雲端服務整合AEM與Adobe Target。 從AEM推送體驗片段做為HTML/JSON選件至Target，以及讓Target選件與AEM保持同步時，需要這項整合。 實作時需要這項整合 [概觀一節中討論的情境1](./overview.md#personalization-using-aem-experience-fragment).
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
      >[!NOTE]
      >
-     > 客戶需要布建以下位置的Experience Platform Launch和Adobe I/O： [Adobe支援](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) 或聯絡您的系統管理員
+     > 客戶需要布建資料收集和Adobe I/O，從 [Adobe支援](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) 或聯絡您的系統管理員
 
 ### 將AEM與Adobe Target整合
 

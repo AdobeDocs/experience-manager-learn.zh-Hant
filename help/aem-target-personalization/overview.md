@@ -10,7 +10,7 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: b632883f-65fd-4f89-bf39-ec2bce352d2d
 duration: 219
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '846'
 ht-degree: 0%
@@ -46,7 +46,7 @@ AEM可協助您建立個人化內容，將您的所有內容和資產整合在�
 
 **若要實作此案例，您需要：**
 
-* [使用Launch和Adobe I/O整合AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
+* [使用標籤和Adobe I/O整合AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
 * [使用舊版Cloud Service的AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
 
 ***實施上述整合後，讓我們探索 [詳細情境](./personalization-use-case-1.md).***
@@ -67,7 +67,7 @@ VEC是Adobe Target的其中一項主要功能。 VEC可讓行銷人員和設計�
 
 **若要實作此案例，您需要：**
 
-* [使用Launch和Adobe I/O整合AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
+* [使用標籤和Adobe I/O整合AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
 
 ***實施上述整合後，讓我們探索 [情境詳細資料。](./personalization-use-case-3.md)***
 
@@ -85,6 +85,6 @@ VEC是Adobe Target的其中一項主要功能。 VEC可讓行銷人員和設計�
 
 **若要實作此案例，您需要：**
 
-* [使用Launch和Adobe I/O整合AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
+* [使用標籤和Adobe I/O整合AEM和Adobe Target](./implementation.md#integrating-aem-target-options)
 
 ***實施上述整合後，讓我們探索 [情境詳細資料。](./personalization-use-case-2.md)***

@@ -14,9 +14,9 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service " before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1360
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1232'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 1%
 + 存取目標 **方案** 在資料管理底下
 + 存取目標 **資料集** 在資料管理底下
 + 存取目標 **資料串流** 在「資料收集」底下
-+ 存取目標 **標籤** （先前稱為Launch），位於「資料收集」下
++ 存取目標 **標籤** 在「資料收集」底下
 
 如果您沒有必要的許可權，您的系統管理員使用 [Adobe Admin Console](https://adminconsole.adobe.com/) 可以授與必要的許可權。
 
@@ -75,7 +75,7 @@ ht-degree: 1%
 
 ## 建立標籤屬性 — Experience Platform
 
-瞭解如何在Experience Platform中建立標籤（先前稱為Launch）屬性，以將Web SDK JavaScript程式庫新增至WKND網站。 新定義的標籤屬性有下列資源：
+瞭解如何在Experience Platform中建立標籤屬性，以將Web SDK JavaScript程式庫新增至WKND網站。 新定義的標籤屬性有下列資源：
 
 + 標籤擴充功能： [核心](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) 和 [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
 + 資料元素：使用WKND網站的Adobe使用者端資料層擷取page-name、site-section和host-name的自訂程式碼型別資料元素。 此外，XDM物件型別資料元素也符合之前新建立的WKND XDM結構描述內建 [建立XDM結構描述](#create-xdm-schema---experience-platform) 步驟。
@@ -139,26 +139,26 @@ ht-degree: 1%
   var pageShownEventHandler = function(evt) {
   // defensive coding to avoid a null pointer exception
   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-      //trigger Launch Rule and pass event
+      // trigger tags Rule and pass event
       console.debug("cmp:show event: " + evt.eventInfo.path);
       var event = {
-          //include the path of the component that triggered the event
+          // include the path of the component that triggered the event
           path: evt.eventInfo.path,
-          //get the state of the component that triggered the event
+          // get the state of the component that triggered the event
           component: window.adobeDataLayer.getState(evt.eventInfo.path)
       };
   
-      //Trigger the Launch Rule, passing in the new 'event' object
-      // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
+      // Trigger the tags Rule, passing in the new 'event' object
+      // the 'event' obj can now be referenced by the reserved name 'event' by other tags data elements
       // i.e 'event.component['someKey']'
       trigger(event);
       }
   }
   
-  //set the namespace to avoid a potential race condition
+  // set the namespace to avoid a potential race condition
   window.adobeDataLayer = window.adobeDataLayer || [];
   
-  //push the event listener for cmp:show into the data layer
+  // push the event listener for cmp:show into the data layer
   window.adobeDataLayer.push(function (dl) {
       //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
       dl.addEventListener("cmp:show", pageShownEventHandler);
@@ -174,9 +174,9 @@ ht-degree: 1%
 
 ## 將標籤屬性連線至AEM
 
-瞭解如何透過Adobe IMS和AEM中的AdobeLaunch設定，將最近建立的標籤屬性連結至AEM。 建立AEMas a Cloud Service環境時，會自動產生數個Adobe IMS技術帳戶設定，包括Adobe Launch。 不過，對於AEM 6.5版本，您必須手動設定。
+瞭解如何透過AEM中的Adobe IMS和Adobe Experience Platform設定中的標籤，將最近建立的標籤屬性連結至AEM。 建立AEMas a Cloud Service環境時，會自動產生數個Adobe IMS技術帳戶設定，包括標籤。 不過，對於AEM 6.5版本，您必須手動設定。
 
-連結標籤屬性後，WKND網站便能使用Adobe Launch雲端服務設定，將標籤屬性的JavaScript程式庫載入網頁。
+連結標籤屬性後，WKND網站便能使用Adobe Experience Platform雲端服務設定中的標籤，將標籤屬性的JavaScript程式庫載入網頁。
 
 ### 驗證WKND上的標籤屬性載入
 

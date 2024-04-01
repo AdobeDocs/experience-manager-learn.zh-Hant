@@ -1,6 +1,6 @@
 ---
 title: 載入及觸發Target呼叫
-description: 瞭解如何使用Launch規則來載入、傳遞引數至頁面請求，以及從您的網站頁面觸發Target呼叫。 系統會使用Adobe使用者端資料層，擷取頁面資訊並以引數形式傳遞，此資料層可讓您收集和儲存訪客的網頁體驗相關資料，並且讓此資料易於存取。
+description: 瞭解如何使用標籤規則，將引數載入、傳遞至頁面請求，以及從您的網站頁面觸發Target呼叫。
 feature: Core Components, Adobe Client Data Layer
 version: Cloud Service
 jira: KT-6133
@@ -13,28 +13,28 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 duration: 610
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '550'
 ht-degree: 1%
 
 ---
 
 # 載入及觸發Target呼叫 {#load-fire-target}
 
-瞭解如何使用Launch規則來載入、傳遞引數至頁面請求，以及從您的網站頁面觸發Target呼叫。 系統會使用Adobe使用者端資料層，擷取網頁資訊並以引數形式傳遞，此資料層可讓您收集和儲存訪客的網頁體驗相關資料，並且讓此資料易於存取。
+瞭解如何使用標籤規則，將引數載入、傳遞至頁面請求，以及從您的網站頁面觸發Target呼叫。 系統會使用Adobe使用者端資料層，擷取網頁資訊並以引數形式傳遞，此資料層可讓您收集和儲存訪客的網頁體驗相關資料，並且讓此資料易於存取。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
 ## 頁面載入規則
 
-Adobe使用者端資料層是事件導向的資料層。 載入AEM Page資料層時，會觸發事件 `cmp:show` . 在影片中， `Launch Library Loaded` 使用自訂事件叫用規則。 您可以在下方找到視訊中用於自訂事件和資料元素的程式碼片段。
+Adobe使用者端資料層是事件導向的資料層。 載入AEM Page資料層時，會觸發事件 `cmp:show` . 在影片中， `tags Library Loaded` 使用自訂事件叫用規則。 您可以在下方找到視訊中用於自訂事件和資料元素的程式碼片段。
 
 ### 自訂頁面顯示事件{#page-event}
 
 ![頁面顯示的事件設定和自訂程式碼](assets/load-and-fire-target-call.png)
 
-在Launch屬性中，新增 **事件** 至 **規則**
+在tags屬性中，新增 **事件** 至 **規則**
 
 + __副檔名：__ 核心
 + __事件型別：__ 自訂程式碼
@@ -53,7 +53,7 @@ var pageShownEventHandler = function(coreComponentEvent) {
         // Debug the AEM Component path the show event is associated with
         console.debug("cmp:show event: " + coreComponentEvent.eventInfo.path);
 
-        // Create the Launch Event object
+        // Create the tags Event object
         var launchEvent = {
             // Include the ID of the AEM Component that triggered the event
             id: coreComponentEvent.eventInfo.path,
@@ -61,14 +61,14 @@ var pageShownEventHandler = function(coreComponentEvent) {
             component: window.adobeDataLayer.getState(coreComponentEvent.eventInfo.path)
         };
 
-        //Trigger the Launch Rule, passing in the new `event` object
-        // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
+        // Trigger the tags Rule, passing in the new `event` object
+        // the `event` obj can now be referenced by the reserved name `event` by other tags data elements
         // i.e `event.component['someKey']`
         trigger(launchEvent);
    }
 }
 
-// With the AEM Core Component event handler, that proxies the event and relevant information to Adobe Launch, defined above...
+// With the AEM Core Component event handler, that proxies the event and relevant information to Data Collection, defined above...
 
 // Initialize the adobeDataLayer global object in a safe way
 window.adobeDataLayer = window.adobeDataLayer || [];
@@ -80,20 +80,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-自訂函式會定義 `pageShownEventHandler`，會偵聽AEM核心元件發出的事件、衍生核心元件的相關資訊、將其封裝為事件物件，並在其裝載處以衍生的事件資訊觸發Launch事件。
+自訂函式會定義 `pageShownEventHandler`，會偵聽AEM核心元件發出的事件、衍生核心元件的相關資訊、將其封裝為事件物件，並在其裝載處以衍生的事件資訊觸發標籤事件。
 
-Launch規則是使用Launch的 `trigger(...)` 函式： __僅限__ 可從規則事件的自訂程式碼片段定義中使用。
+使用標籤的 `trigger(...)` 函式： __僅限__ 可從規則事件的自訂程式碼片段定義中使用。
 
-此 `trigger(...)` 函式會將事件物件視為引數，而引數會由Launch中另一個名為的保留名稱在Launch資料元素中公開 `event`. Launch中的資料元素現在可以從參照此事件物件資料的 `event` 物件，使用類似以下的語法 `event.component['someKey']`.
+此 `trigger(...)` 函式會將事件物件視為引數，該引數又會以標籤中另一個保留名稱在標籤中公開，命名為 `event`. 標籤中的資料元素現在可以從參照此事件物件的資料 `event` 物件，使用類似以下的語法 `event.component['someKey']`.
 
-如果 `trigger(...)` 在事件的自訂程式碼事件型別內容之外使用（例如，在動作中），即JavaScript錯誤 `trigger is undefined` 在與Launch屬性整合的網站上擲回。
+如果 `trigger(...)` 在事件的自訂程式碼事件型別內容之外使用（例如，在動作中），即JavaScript錯誤 `trigger is undefined` 在與tags屬性整合的網站上擲回。
 
 
 ### 資料元素
 
 ![資料元素](assets/data-elements.png)
 
-AdobeLaunch資料元素會對應事件物件中的資料 [在自訂頁面顯示事件中觸發](#page-event) 至可在Adobe Target中取得的變數，透過核心擴充功能的自訂程式碼資料元素型別。
+標籤資料元素會對應來自事件物件的資料 [在自訂頁面顯示事件中觸發](#page-event) 至可在Adobe Target中取得的變數，透過核心擴充功能的自訂程式碼資料元素型別。
 
 #### 頁面ID資料元素
 

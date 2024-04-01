@@ -1,6 +1,6 @@
 ---
-title: 將Target擴充功能新增至Launch屬性
-description: 瞭解如何將Adobe Target擴充功能新增至Adobe Experience Platform Launch屬性。
+title: 將Target擴充功能新增至tags屬性
+description: 瞭解如何將Adobe Target擴充功能新增至Tags屬性。
 version: Cloud Service
 jira: KT-6131
 thumbnail: 41247.jpg
@@ -13,18 +13,18 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
 duration: 297
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '97'
 ht-degree: 3%
 
 ---
 
-# 將Target擴充功能新增至Launch屬性 {#adobe-target-extension}
+# 將Target擴充功能新增至Tags屬性 {#adobe-target-extension}
 
-若要觀看此影片，您必須先將 [與AEM整合Experience Platform Launch](../experience-platform/data-collection/tags/overview.md).
+若要觀看此影片，您必須先將 [Adobe Experience Platform與AEM的整合標籤](../experience-platform/data-collection/tags/overview.md).
 
-瞭解如何使用Experience Platform Launch將Adobe Target啟用至您的AEM網站。
+瞭解如何使用標籤將Adobe Target啟用至您的AEM網站。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
 

@@ -10,9 +10,9 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 54a30cd9-d94a-4de5-82a1-69ab2263980d
 duration: 173
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '596'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 在本節中，我們將討論如何針對不同案例使用Adobe Target設定Adobe Experience Manager Sites。 根據您的情境和組織需求。
 
 * **新增Adobe Target JavaScript程式庫（所有案例均需要）**
-對於在AEM上託管的網站，您可以使用將Target資料庫新增至您的網站， [Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html). Launch可讓您透過簡單的方式部署及管理所有必要的標籤，以便支援相關客戶體驗。
+對於在AEM上託管的網站，您可以使用將Target資料庫新增至您的網站， [Adobe Experience Platform中的標籤](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html). 標籤提供一種簡單的方式來部署及管理所有必要的標籤，以便支援相關客戶體驗。
 * **新增Adobe TargetCloud Service（體驗片段案例所需）**
 如果是AEM客戶，想使用體驗片段選件在Adobe Target中建立活動，您需要使用舊版Cloud Service整合Adobe Target與AEM。 從AEM推送體驗片段做為HTML/JSON選件至Target，以及保持選件與AEM同步時，需要這項整合。 *實作案例1需要這項整合。*
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 * **Experience Cloud**
    * 存取您的組織Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * 布建下列解決方案的Experience Cloud
-      * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
+      * [資料彙集](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe I/O主控台](https://console.adobe.io)
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 客戶需要布建以下位置的Experience Platform Launch和Adobe I/O： [Adobe支援](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) 或聯絡您的系統管理員
+> 客戶需要布建資料收集和Adobe I/O，從 [Adobe支援](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) 或聯絡您的系統管理員
 
 ### 設定AEM{#set-up-aem}
 
@@ -82,4 +82,4 @@ ht-degree: 1%
 10. 在AEM Author上安裝套件後，請在AEM Package Manager中選取每個已上傳的套件，然後選取 **更多>復寫** 以確保套件已部署至AEM Publish。
 11. 此時，您已成功安裝WKND參考網站及本教學課程所需的所有其他套件。
 
-[下一章](./using-launch-adobe-io.md)：在下一章，您會將Launch與AEM整合。
+[下一章](./using-launch-adobe-io.md)：在下一章，您將整合標籤與AEM。

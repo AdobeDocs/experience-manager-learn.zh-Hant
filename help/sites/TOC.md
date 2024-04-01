@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 29f1cc8d891c57e9878c650fd8e02a32bfa73051
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '498'
 ht-degree: 17%
 
 ---
@@ -137,12 +137,12 @@ ht-degree: 17%
       + [產生FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [使用Platform Web SDK進行分析](integrations/platform/analytics-using-web-sdk.md)
-   + Experience Platform資料收集標籤(Launch) {#experience-platform-data-collection-tags}
+   + Adobe Experience Platform中的標籤 {#experience-platform-data-collection-tags}
       + [概觀](integrations/experience-platform/data-collection/tags/overview.md)
       + [建立標籤屬性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [使用IMS連線AEM和標籤屬性](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
-      + [建立AEM LaunchCloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
-      + [偵錯標籤(Launch)實作](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
+      + [建立AEM標籤Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [對標籤實作除錯](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe使用者端資料層 {#adobe-client-data-layer}
       + [使用Adobe使用者端資料層](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自訂Adobe使用者端資料層](integrations/adobe-client-data-layer/data-layer-customize.md)
@@ -152,7 +152,7 @@ ht-degree: 17%
       + [使用Analysis Workspace分析資料](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
       + [概觀](integrations/adobe-target/overview.md)
-      + [將Target擴充功能新增至Launch屬性](integrations/adobe-target/add-target-launch-extension.md)
+      + [將Target擴充功能新增至標籤屬性](integrations/adobe-target/add-target-launch-extension.md)
       + [載入及觸發Target呼叫](integrations/adobe-target/load-and-fire-target.md)
       + [建立Adobe TargetCloud Service帳戶](integrations/adobe-target/setup-aem-target-cloud-service.md)
       + [將體驗片段匯出至Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)

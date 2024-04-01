@@ -14,9 +14,9 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2330
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1529'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 0%
 + 存取目標 **方案** 在資料管理底下
 + 存取目標 **資料集** 在資料管理底下
 + 存取目標 **資料串流** 在「資料收集」底下
-+ 存取目標 **標籤** （先前稱為Launch），位於「資料收集」下
++ 存取目標 **標籤**  在「資料收集」底下
 
 如果您沒有必要的許可權，您的系統管理員使用 [Adobe Admin Console](https://adminconsole.adobe.com/) 可以授與必要的許可權。
 

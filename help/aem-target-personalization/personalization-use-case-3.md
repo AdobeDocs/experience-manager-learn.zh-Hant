@@ -10,9 +10,9 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
 duration: 165
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ WKND網站首頁會以卡片版面配置的形式，顯示當地活動或城市�
 
 * **AEM**
    * [AEM發佈執行個體](./implementation.md#getting-aem) 在4503上執行
-   * [使用Adobe Experience Platform Launch將AEM與Adobe Target整合](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [使用標籤與Adobe Target整合的AEM](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * 存取您的組織Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * 布建的Experience Cloud [Adobe Target](https://experiencecloud.adobe.com)
