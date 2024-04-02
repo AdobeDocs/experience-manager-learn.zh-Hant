@@ -12,10 +12,10 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: 1a1accbe-7706-4f9b-bf63-755090d03c4c
 duration: 325
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: baf81bb43a659e49728a05f83e7be394f7fbfb35
 workflow-type: tm+mt
 source-wordcount: '1134'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -37,7 +37,7 @@ AEMas a Cloud Service的CDN快取是由HTTP回應快取標題所控制，其目�
 
 AEMas a Cloud ServiceCDN只會快取HTTP回應，且必須符合下列所有條件：
 
-+ HTTP要求狀態為 `2xx` 或 `3xx`
++ HTTP回應狀態為 `2xx` 或 `3xx`
 + HTTP要求方法為 `GET` 或 `HEAD`
 + 至少存在下列其中一個HTTP回應標題： `Cache-Control`， `Surrogate-Control`，或  `Expires`
 + HTTP回應可以是任何內容型別，包括HTML、JSON、CSS、JS和二進位檔案。
@@ -132,8 +132,8 @@ AEM Dispatcher會使用下列方法快取HTTP回應：
 | 內容類型 | 預設CDN快取期限 |
 |:------------ |:---------- |
 | [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#html-text) | 直到失效 |
-| [資產（影像、影片、檔案等）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#images) | 永不 |
-| [持久查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?publish-instances) | 1分鐘 |
+| [資產（影像、影片、檔案等）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#images) | 從未 |
+| [持久查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?publish-instances) | 1 分鐘 |
 | [使用者端資料庫(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
 | [其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 直到失效 |
 
