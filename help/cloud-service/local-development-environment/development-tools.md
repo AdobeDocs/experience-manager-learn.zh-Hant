@@ -11,9 +11,9 @@ level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 duration: 3592
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 23ae098a1fcb2e6c47fee30f6f45b10e7ff97824
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1301'
 ht-degree: 6%
 
 ---
@@ -201,15 +201,32 @@ Adobe I/OAdobe Cloud Manager外掛程式允許aio CLI透過 `aio cloudmanager` �
 1. 登入 [console.adobe.io](https://console.adobe.io)
 1. 確保包含要連線的Cloud Manager產品的組織在Adobe組織切換器中處於活動狀態
 1. 建立新的或開啟現有的 [Adobe I/O計畫](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
-   + Adobe I/O控制檯程式只是根據您想要管理整合的方式，由整合、建立或使用以及現有程式組成的組織群組
+   + Adobe I/O控制檯專案只是根據您想要管理整合的方式，針對整合、建立或使用以及現有專案進行整理的群組。
    + 如果建立新專案，則在出現提示時選取「空白專案」（與「從範本建立」的比較）
    + Adobe I/O控制檯程式與Cloud Manager程式的概念不同
-1. 使用「開發人員 — Cloud Service」設定檔建立新的Cloud Manager API整合
+1. 建立新的Cloud Manager API整合
+   + 選取已遭取代的「服務帳戶(JWT)」驗證型別（CLI目前不支援OAuth）。
+   + 建立或上傳金鑰。
+   + 選取「開發人員 — Cloud Service」產品設定檔
 1. 取得服務帳戶(JWT)憑證需要填入Adobe I/OCLI [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication)
+
+   ```json
+   //config.json 
+   {
+      "client_id": "Client ID from Service Account (JWT) credential",
+      "client_secret": "Client Secret from Service Account (JWT) credential",
+      "technical_account_id": "Technical Account ID from Service Account (JWT) credential",
+      "ims_org_id": "Organization ID from Service Account (JWT) credential",
+      "meta_scopes": [
+        "ent_cloudmgr_sdk"
+      ]
+   }
+   ```
+
 1. 載入 `config.json` 檔案放入Adobe I/OCLI
-   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager PATH_TO_CONFIG_JSON_FILE --file --json`
+   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager ./path/to/config.json --file --json`
 1. 載入 `private.key` 檔案放入Adobe I/OCLI
-   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
+   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key ./path/to/private.key --file`
 
 開始 [正在執行命令](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) 適用於Cloud Manager，透過Adobe I/OCLI。
 
