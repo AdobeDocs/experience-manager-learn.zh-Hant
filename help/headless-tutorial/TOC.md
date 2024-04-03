@@ -8,10 +8,10 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 jira: KT-2963
 index: y
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: c498783aceaf3bb389baaeaeefbe9d8d0125a82e
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 19%
+source-wordcount: '341'
+ht-degree: 12%
 
 ---
 
@@ -20,10 +20,10 @@ ht-degree: 19%
 
 + [AEM Headless概述](./overview.md)
 + GraphQL {#graphql}
-   + [AEM Headless開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
+   + [AEM Headless開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant){target=_blank}
    + [概觀](./graphql/overview.md)
    + 快速設定 {#quick-setup}
-      + [雲端服務](./graphql/quick-setup/cloud-service.md)
+      + [Cloud Service](./graphql/quick-setup/cloud-service.md)
       + [AEM SDK](./graphql/quick-setup/local-sdk.md)
    + 影片系列{#video-series}
       + [1 — 模型基本概念](./graphql/video-series/modeling-basics.md)
@@ -67,6 +67,7 @@ ht-degree: 19%
    + [當地語系化內容](./graphql/how-to/localized-content.md)
    + [大型結果集](./graphql/how-to/large-result-sets.md)
    + [預覽](./graphql/how-to/preview.md)
+   + [受保護的內容](./graphql/how-to/protected-content.md)
    + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + [在AEM 6.5上安裝GraphiQL](./graphql/how-to/install-graphiql-aem-6-5.md)
    + 範例 {#example-apps}
@@ -85,7 +86,7 @@ ht-degree: 19%
       + [4 — 導覽與路由](./spa-editor/react/navigation-routing.md)
       + [5 — 自訂元件](./spa-editor/react/custom-component.md)
       + [6 — 擴充元件](./spa-editor/react/extend-component.md)
-   + Angular{#angular}
+   + angular{#angular}
       + [概觀](./spa-editor/angular/overview.md)
       + [1 - SPA編輯器專案](./spa-editor/angular/create-project.md)
       + [2 — 整合SPA](./spa-editor/angular/integrate-spa.md)
@@ -106,7 +107,7 @@ ht-degree: 19%
    + [概觀](./authentication/overview.md)
    + [1 — 本機開發存取權杖](./authentication/local-development-access-token.md)
    + [2 — 服務認證](./authentication/service-credentials.md)
-+ Content Services {#content-services}
++ 內容服務 {#content-services}
    + [概觀](./content-services/overview.md)
    + [1 — 教學課程設定](./content-services/chapter-1.md)
    + [2 — 定義事件內容片段模型](./content-services/chapter-2.md)
