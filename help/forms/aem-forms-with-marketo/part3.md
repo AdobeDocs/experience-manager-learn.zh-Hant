@@ -10,7 +10,7 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
 duration: 97
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f818f2ad01d9ecadcf5593aa038c7db15b4d496
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 1%
@@ -28,7 +28,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 1. OData服務
 
 為了整合AEM Forms與Marketo，我們使用RESTful網路服務。 整合的第一步是設定 [資料來源。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) 請使用本教學課程中提供的Swagger檔案。 下列熒幕擷圖顯示設定資料來源時需要指定的重要屬性。
-![資料來源](assets/datasource.jfif)
+![資料來源](assets/datasource.png)
 
 「marketo.json」是Swagger檔案，將作為本教學課程資產的一部分提供給您。
 屬性主機專用於您的Marketo執行個體。
@@ -51,7 +51,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 1. 定位至服務標籤
 1. 選取列出的唯一服務，然後按一下測試服務
 1. 提供有效的leadId，然後按一下「測試」。 如果一切順利，您應該要回頭取得銷售機會詳細資訊，如下方熒幕擷圖所示
-   ![testresults](assets/testresults.jfif)
+   ![testresults](assets/testresults.png)
 
 ## 後續步驟
 

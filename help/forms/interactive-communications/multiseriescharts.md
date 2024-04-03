@@ -10,7 +10,7 @@ level: Beginner
 exl-id: f4af7cb9-cc3b-4bec-9428-ab4f1a3cf41a
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 446
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f818f2ad01d9ecadcf5593aa038c7db15b4d496
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 AEM Forms 6.5匯入了建立及設定多系列圖表的功能。 多系列圖表通常與折線圖、橫條圖、直條圖型別關聯使用。 下列圖表是多系列圖表的良好範例。 圖表顯示在一段時間內在3個不同共同基金中增加$10,000美元的情況。 若要能夠在AEM Forms中建立和使用這些型別的圖表，您必須建立適當的表單資料模型。
 
-![多系列圖表](assets/seriescharts.jfif)
+![多系列圖表](assets/series_charts.png)
 
 若要在AEM Forms中建立多系列圖表，您必須建立適當的表單資料模型，其中包含必要的實體以及實體之間的關聯。 下列熒幕擷圖會反白顯示實體以及這3個實體之間的關聯。 在最上層，我們有一個稱為「組織」的實體，它與Fund實體具有一對多關聯。 Fund實體則與Performance實體具有一對多關聯。
 
-![表單資料模型](assets/formdatamodel.jfif)
+![表單資料模型](assets/form_data_model.png)
 
 ## 建立多系列圖表的表單資料模型
 
