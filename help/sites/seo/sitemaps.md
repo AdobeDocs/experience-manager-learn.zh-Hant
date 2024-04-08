@@ -1,5 +1,5 @@
 ---
-title: Sitemap
+title: Sitemaps
 description: 瞭解如何為AEM Sites建立Sitemap，以利提升SEO。
 version: Cloud Service
 feature: Core Components
@@ -12,14 +12,14 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 957
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 3%
+source-wordcount: '234'
+ht-degree: 4%
 
 ---
 
-# Sitemap
+# Sitemaps
 
 瞭解如何為AEM Sites建立Sitemap，以利提升SEO。
 
@@ -50,7 +50,7 @@ Sling對應節點定義的範例 `https://wknd.com` 可定義於 `/etc/map/https
 
 ### Sitemap排程器OSGi設定
 
-定義 [OSGi工廠設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 針對頻率(使用 [cron運算式](http://www.cronmaker.com/))在AEM中重新/產生並快取sitemap。
+定義 [OSGi工廠設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 針對頻率(使用 [cron運算式](https://cron.help/))在AEM中重新/產生並快取sitemap。
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -93,4 +93,4 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 + [Apache Sling Sitemap檔案](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org Sitemap檔案](https://www.sitemaps.org/protocol.html)
 + [Sitemap.org Sitemap索引檔案檔案](https://www.sitemaps.org/protocol.html#index)
-+ [Cronmaker](http://www.cronmaker.com/)
++ [Cron協助程式](https://cron.help/)

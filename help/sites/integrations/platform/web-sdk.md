@@ -14,9 +14,9 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service " before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1360
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1229'
 ht-degree: 1%
 
 ---
@@ -180,7 +180,7 @@ ht-degree: 1%
 
 ### 驗證WKND上的標籤屬性載入
 
-使用Adobe Experience Platform Debugger [鉻黃](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 或 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) 擴充功能，驗證WKND頁面上是否載入標籤屬性。 您可以確認，
+使用Adobe Experience Platform Debugger [鉻黃](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 擴充功能，驗證WKND頁面上是否載入標籤屬性。 您可以確認，
 
 + 標籤屬性詳細資訊，例如，擴充功能、版本、名稱等。
 + Platform Web SDK程式庫版本，資料流ID

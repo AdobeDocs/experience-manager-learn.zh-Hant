@@ -1,5 +1,5 @@
 ---
-title: 彈性的連線埠輸出
+title: 彈性的連接埠輸出
 description: 瞭解如何設定和使用彈性的連線埠輸出，以支援從AEMas a Cloud Service到外部服務的外部連線。
 version: Cloud Service
 feature: Security
@@ -10,14 +10,14 @@ jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 duration: 906
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '1060'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# 彈性的連線埠輸出
+# 彈性的連接埠輸出
 
 瞭解如何設定和使用彈性的連線埠輸出，以支援從AEMas a Cloud Service到外部服務的外部連線。
 
@@ -36,7 +36,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
 設定彈性連線埠輸出時需要下列專案：
 
 + Adobe Developer Console專案，已啟用Cloud Manager API並 [Cloud Manager企業所有者許可權](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ 存取目標 [Cloud Manager API的驗證認證](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
++ 存取目標 [Cloud Manager API的驗證認證](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
    + 組織ID （亦稱為IMS組織ID）
    + 使用者端ID （亦稱為API金鑰）
    + 存取權杖（亦稱為持有人權杖）

@@ -10,10 +10,10 @@ jira: KT-9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 duration: 948
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '1192'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -40,7 +40,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確定虛擬
 設定虛擬私人網路時，需要下列專案：
 
 + Adobe帳戶 [Cloud Manager企業所有者許可權](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ 存取目標 [Cloud Manager API的驗證認證](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
++ 存取目標 [Cloud Manager API的驗證認證](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
    + 組織ID （亦稱為IMS組織ID）
    + 使用者端ID （亦稱為API金鑰）
    + 存取權杖（亦稱為持有人權杖）

@@ -10,7 +10,7 @@ level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
 duration: 218
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
 
-為了進行本教學課程，我已使用 [Geonames REST API](http://api.geonames.org/) 以展示此功能。
+為了進行本教學課程，我已使用 [Geonames REST API](https://www.geonames.org/export/web-services.html) 以展示此功能。
 有許多組織提供這類服務，只要他們有妥善記錄的REST API，您就可以使用資料整合功能，輕鬆與AEM Forms整合
 
 依照下列步驟，在AEM Forms中實作階層式下拉式清單
@@ -88,7 +88,7 @@ AEM Forms資料整合提供直覺式使用者介面，用於建立和使用 [表
 
 您可以下載以下資產，以開始建立階層式下拉式清單範例。完整的swagger檔案可從下載 [此處](assets/geonames-swagger-files.zip)
 swagger檔案說明下列REST API
-* [取得所有國家/地區](http://api.geonames.org/countryInfoJSON?username=yourusername)
-* [取得Geoname物件的子系](http://api.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+* [取得所有國家/地區](https://secure.geonames.org/countryInfoJSON?username=yourusername)
+* [取得Geoname物件的子系](https://secure.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
 
 已完成 [表單資料模型可從這裡下載](assets/geonames-api-form-data-model.zip)

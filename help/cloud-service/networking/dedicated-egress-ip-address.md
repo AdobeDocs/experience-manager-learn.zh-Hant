@@ -1,5 +1,5 @@
 ---
-title: 專用輸出IP位址
+title: 專用輸出 IP 位址
 description: 瞭解如何設定及使用專用輸出IP位址，此位址允許來自AEM的輸出連線源自於專用IP。
 version: Cloud Service
 feature: Security
@@ -10,14 +10,14 @@ jira: KT-9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 duration: 926
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '1142'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# 專用輸出IP位址
+# 專用輸出 IP 位址
 
 瞭解如何設定及使用專用輸出IP位址，此位址允許來自AEM的輸出連線源自於專用IP。
 
@@ -36,7 +36,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
 設定專用輸出IP位址時，需要下列專案：
 
 + Cloud Manager API與 [Cloud Manager企業所有者許可權](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ 存取目標 [Cloud Manager API驗證認證](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
++ 存取目標 [Cloud Manager API驗證認證](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
    + 組織ID （亦稱為IMS組織ID）
    + 使用者端ID （亦稱為API金鑰）
    + 存取權杖（亦稱為持有人權杖）

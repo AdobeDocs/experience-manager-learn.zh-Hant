@@ -9,7 +9,7 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1603
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '4441'
 ht-degree: 0%
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-[[!DNL AEM Projects]](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) 是AEM的一項功能，設計旨在讓您可以更輕鬆地管理與內容建立相關的所有工作流程和任務，將其歸類為AEM Sites或Assets實作的一部分。
+[[!DNL AEM Projects]](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) 是AEM的一項功能，設計旨在讓您可以更輕鬆地管理與內容建立相關的所有工作流程和任務，將其歸類為AEM Sites或Assets實作的一部分。
 
-AEM專案隨附幾個 [OOTB專案範本](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html). 建立專案時，作者可以從這些可用的範本中進行選擇。 具有獨特業務需求的大型AEM實作將想要建立自訂專案範本，以符合其需求。 透過建立自訂專案範本，開發人員可以設定專案控制面板、連結至自訂工作流程，並為專案建立其他業務角色。 我們將檢視專案範本的結構，並建立範例範本。
+AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects). 建立專案時，作者可以從這些可用的範本中進行選擇。 具有獨特業務需求的大型AEM實作將想要建立自訂專案範本，以符合其需求。 透過建立自訂專案範本，開發人員可以設定專案控制面板、連結至自訂工作流程，並為專案建立其他業務角色。 我們將檢視專案範本的結構，並建立範例範本。
 
 ![自訂專案卡](./assets/develop-aem-projects/custom-project-card.png)
 
@@ -39,7 +39,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://docs.adobe.com/content/help/en/
 * [完成的教學課程套件](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教學課程假設您具備以下基本知識 [AEM開發實務](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/the-basics.html) 並且熟悉 [AEM Maven專案設定](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html). 所有提及的程式碼都是為了當作參考使用，且僅應部署至 [本機開發AEM執行個體](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html).
+本教學課程假設您具備以下基本知識 [AEM開發實務](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) 並且熟悉 [AEM Maven專案設定](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html). 所有提及的程式碼都是為了當作參考使用，且僅應部署至 [本機開發AEM執行個體](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy).
 
 ## 專案範本的結構
 
@@ -69,11 +69,11 @@ AEM專案隨附幾個 [OOTB專案範本](https://docs.adobe.com/content/help/en/
 
 ### 小工具 {#gadgets}
 
-此節點上沒有其他屬性，但小工具節點的子項可控制建立新專案時用於填入專案控制面板的專案拼貼。 [專案拼貼](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) （也稱為小工具或pod）是填入專案工作地點的簡單卡片。 您可在下列位置找到ootb圖磚的完整清單： **/libs/cq/gui/components/projects/admin/pod。 **專案擁有者在建立專案後，一律可以新增/移除圖磚。
+此節點上沒有其他屬性，但小工具節點的子項可控制建立新專案時用於填入專案控制面板的專案拼貼。 [專案拼貼](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) （也稱為小工具或pod）是填入專案工作地點的簡單卡片。 您可在下列位置找到ootb圖磚的完整清單： **/libs/cq/gui/components/projects/admin/pod。 **專案擁有者在建立專案後，一律可以新增/移除圖磚。
 
 ### 角色 {#roles}
 
-共有三種 [預設角色](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) 每個專案： **觀察者**， **編輯**、和 **擁有者**. 藉由在角色節點底下新增子節點，您可以為範本新增其他特定於業務的專案角色。 然後，您可以將這些角色連結至與專案關聯的特定工作流程。
+共有三種 [預設角色](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) 每個專案： **觀察者**， **編輯**、和 **擁有者**. 藉由在角色節點底下新增子節點，您可以為範本新增其他特定於業務的專案角色。 然後，您可以將這些角色連結至與專案關聯的特定工作流程。
 
 ### 工作流程 {#workflows}
 
@@ -152,7 +152,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://docs.adobe.com/content/help/en/
    1. 新增另一個 **nt：unstructured** 將核准者標示為「角色」節點的子節點的節點。
    1. 新增字串屬性 **jcr：title** = &quot;**核准者**「， **roleclass** =&quot;**所有者**「， **roleid**=&quot;**核准者**「。
       1. 核准者節點的名稱以及jcr：title和roleid可以是任何字串值（只要roleid是唯一的）。
-      1. **roleclass** 會根據 [三個OOTB角色](https://docs.adobe.com/content/docs/en/aem/6-3/author/projects.html)： **所有者**， **編輯者**、和 **觀察者**.
+      1. **roleclass** 會根據 [三個OOTB角色](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)： **所有者**， **編輯者**、和 **觀察者**.
       1. 一般而言，如果自訂角色主要是管理角色，則角色可以 **所有者；** 如果它是更具體的創作角色，例如攝影師或設計師，則 **編輯者** 羅勒克勞斯應該就足夠了。 兩者之間的巨大差異 **所有者** 和 **編輯者** 是專案所有者可以更新專案屬性並將新使用者新增到專案。
 
    ```shell
@@ -308,7 +308,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://docs.adobe.com/content/help/en/
 
    ![工作流程建立對話方塊](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   [如需與建立工作流程相關的詳細資訊，請閱讀此處](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
+   [如需與建立工作流程相關的詳細資訊，請閱讀此處](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-models).
 
 1. 根據最佳實務，自訂工作流程應該分組到他們自己的資料夾中/etc/workflow/models下方。 在CRXDE Lite中，建立 **&#39;nt：folder&#39;** /etc/workflow/models下名為 **&quot;aem-guides&quot;**. 新增子資料夾可確保自訂工作流程在升級或Service Pack安裝期間不會意外覆寫。
 
@@ -320,7 +320,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://docs.adobe.com/content/help/en/
 
    >[!NOTE]
    >
-   >如果使用AEM 6.4+，工作流程的位置已變更。 另請參閱 [此處取得更多詳細資料。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
+   >如果使用AEM 6.4+，工作流程的位置已變更。 另請參閱 [此處取得更多詳細資料。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
    如果使用AEM 6.4+，則會在 `/conf/global/settings/workflow/models`. 對/conf目錄重複上述步驟，並新增名為的子資料夾 `aem-guides` 並移動 `content-approval-workflow` 在下方。
 
@@ -660,7 +660,7 @@ task.setCurrentAssignee(projectApproverGrp);
    在 **優先順序** 節點，我們將新增 **個專案** 節點 **nt：unstructured**. 在 **個專案** 節點再新增3個節點，以填入「高」、「中」和「低」的選取選項。 每個節點的型別為 **nt：unstructured** 且應該有 **文字** 和 **值** 屬性。 文字和值應該是相同的值：
 
    1. 高
-   1. 中
+   1. 中等
    1. 低
 
    對於媒體節點，請新增一個名為的額外布林屬性&#x200B;**已選取」** ，且值設定為 **true**. 這將確保「中」是選取欄位中的預設值。
@@ -738,7 +738,7 @@ task.setCurrentAssignee(projectApproverGrp);
    >如果使用AEM 6.4，Workflow的位置已變更。 指向 `modelId` 屬性至下執行階段工作流程模型的位置 `/var/workflow/models/aem-guides/content-approval-workflow`
    >
    >
-   >另請參閱 [此處以取得工作流程位置變更的詳細資訊。](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
+   >另請參閱 [此處以取得工作流程位置變更的詳細資訊。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
    ```xml
    <contentapproval
@@ -754,4 +754,4 @@ task.setCurrentAssignee(projectApproverGrp);
 
 * [下載完成的教學課程套件](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [AEM專案檔案](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html)
+* [AEM專案檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)

@@ -13,9 +13,9 @@ badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
 duration: 279
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '266'
 ht-degree: 1%
 
 ---
@@ -44,11 +44,11 @@ ht-degree: 1%
 
 ## 透過Adobe Experience Platform Debugger除錯
 
-Adobe提供Adobe Experience Platform Debugger [Chrome擴充功能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 和 [Firefox附加元件](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) 偵錯、瞭解及深入分析整合。
+Adobe提供Adobe Experience Platform Debugger [Chrome擴充功能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 偵錯、瞭解及深入分析整合。
 
 1. 開啟Adobe Experience Platform Debugger擴充功能，然後在發佈執行個體上開啟網站頁面
 
-1. 在 **Adobe Experience Platform Debugger>摘要> Adobe Experience Platform標籤** 區段，確認您的Tag屬性詳細資訊，例如，名稱、版本、建置日期、環境和擴充功能。
+2. 在 **Adobe Experience Platform Debugger>摘要> Adobe Experience Platform標籤** 區段，確認您的Tag屬性詳細資訊，例如，名稱、版本、建置日期、環境和擴充功能。
 
    ![Adobe Experience Platform Debugger和標籤屬性詳細資訊](assets/tag-property-details.png)
 
