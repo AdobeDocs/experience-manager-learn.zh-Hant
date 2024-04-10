@@ -11,15 +11,15 @@ duration: 112
 last-substantial-update: 2024-02-29T00:00:00Z
 jira: KT-15056
 thumbnail: 3427623.jpeg
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
+exl-id: 9110589e-a325-479f-b89b-a13e6bdde91d
+source-git-commit: 73c15a195c438dd7a07142bba719c6f820bf298a
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '33'
 ht-degree: 0%
 
 ---
 
-
-# AEM Forms Shorts建立簡易表單Dig Sig
+# 新增數位簽名欄位
 
 說明將數位簽名新增至AEM Forms的簡短影片
 
