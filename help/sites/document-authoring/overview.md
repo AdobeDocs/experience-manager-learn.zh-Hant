@@ -10,13 +10,13 @@ jira: KT-14609
 doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
-source-git-commit: e5e1b1b9313f5c7b031c6e4233052dee67c6bd7c
+exl-id: 172a477f-d277-43c1-8e47-68870b02203c
+source-git-commit: be3f8fe8ae5c76e17325fd87d0924cc27f8c3e60
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 5%
+source-wordcount: '452'
+ht-degree: 11%
 
 ---
-
 
 # 檔案製作影片
 
@@ -107,7 +107,7 @@ ht-degree: 5%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分鐘</p>
+              class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="document-structure.md" title="檔案結構">檔案結構</a>
             </p>
@@ -138,7 +138,7 @@ ht-degree: 5%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分鐘</p>
+              class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="default-content-and-sections.md" title="預設內容和區段">新編輯器切換</a>
             </p>
@@ -169,7 +169,7 @@ ht-degree: 5%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分鐘</p>
+              class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="blocks-and-autoblocks.md" title="封鎖和自動封鎖">
                 封鎖和自動封鎖</a>
@@ -201,7 +201,7 @@ ht-degree: 5%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分鐘</p>
+              class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="redirects.md" title="重新導向">建立重新導向</a>
             </p>
@@ -233,7 +233,7 @@ ht-degree: 5%
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1分鐘</p>
+              class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="bulk-metadata.md" title="大量中繼資料">語言副本</a>
             </p>
@@ -254,11 +254,11 @@ ht-degree: 5%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="page-metadata.md" title="頁面中繼資料"
+            <a href="page-metadata.md" title="頁面繼資料"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425706/?format=jpeg"
-                alt="頁面中繼資料">
+                alt="頁面繼資料">
             </a>
           </figure>
         </div>
@@ -267,7 +267,7 @@ ht-degree: 5%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="page-metadata.md" title="頁面中繼資料">頁面中繼資料</a>
+              <a href="page-metadata.md" title="頁面繼資料">頁面中繼資料</a>
             </p>
             <p class="is-size-6">探索檔案製作如何管理頁面中繼資料。</p>
             <a href="page-metadata.md" class="spectrum-Button
@@ -509,7 +509,7 @@ ht-degree: 5%
         </div>
       </div>
     </div>
-      <!-- No Index -->
+    <!-- No Index -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
       aria-label="No Index" tabindex="7">
       <div class="card">
@@ -541,4 +541,36 @@ ht-degree: 5%
         </div>
       </div>
     </div>
+    <!-- GenAI Prompt Templates -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Use GenAI Prompt Templates" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/prompt-templates-for-content-variations.md" title="使用GenAI提示範本"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
+                alt="使用GenAI提示範本">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分鐘</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/prompt-templates-for-content-variations.md" title="使用GenAI提示範本">GenAI提示範本</a>
+            </p>
+            <p class="is-size-6">探索如何使用產生式AI提示範本來產生內容變化。</p>
+            <a href="./how-to/prompt-templates-for-content-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">觀看影片</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>    
   </div>

@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+source-git-commit: be3f8fe8ae5c76e17325fd87d0924cc27f8c3e60
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 17%
+source-wordcount: '501'
+ht-degree: 18%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 17%
       + [影像替代文字](./document-authoring/how-to/image-alt-text.md)
       + [防止搜尋引擎編制索引](./document-authoring/how-to/no-index.md)
       + [回應式導覽](document-authoring/how-to/responsive-navigation.md)
+      + [GenAI提示範本](./document-authoring/how-to/prompt-templates-for-content-variations.md)
 + 頁面製作 {#page-authoring}
    + [製作](page-authoring/aem-sites-authoring-overview.md)
    + [導覽](page-authoring/basic-handling-sites-feature-video-use.md)
@@ -56,8 +57,8 @@ ht-degree: 17%
    + [啟動](page-authoring/launches.md)
    + 向同儕學習 {#expert-advice}
       + [網站階層秘訣](page-authoring/expert-advice/site-hierarchy.md)
-+ Generative AI {#generative-ai}
-   + [產生變數](./generative-ai/generate-variations.md)
++ 生成式 AI {#generative-ai}
+   + [產生變化版本](./generative-ai/generate-variations.md)
 + 內容片段 {#content-fragments}
    + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [製作內容片段](content-fragments/content-fragments-feature-video-use.md)
