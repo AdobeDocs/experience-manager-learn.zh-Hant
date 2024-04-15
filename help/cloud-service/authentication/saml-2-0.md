@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2430
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 1f9736acbbccd09cb1b32c247860827b13e85129
 workflow-type: tm+mt
-source-wordcount: '3137'
+source-wordcount: '3060'
 ht-degree: 1%
 
 ---
@@ -441,15 +441,6 @@ AEM Publish支援單一反向連結篩選設定，因此請將SAML設定需求�
 ```
 
 如果已設定Apache Webserver上的URL重寫(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，確定向 `.../saml_login` 不會意外損壞端點。
-
-## 啟用資料同步並封裝Token
-
-一旦SAML驗證流程在AEM Publish中建立使用者，AEM使用者節點即可在整個AEM Publish服務層級中進行驗證。
-此需要 [資料同步](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization) 和 [封裝的Token](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#sticky-sessions-and-encapsulated-tokens) 將由AEM Publish服務的Adobe支援啟用。
-
-傳送請求給Adobe客戶支援(透過 [AdminConsole](https://adminconsole.adobe.com) >支援)要求：
-
-> 方案X和環境Y的AEM Publish服務已啟用資料同步和封裝權杖。
 
 ## 部署SAML設定
 
