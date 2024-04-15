@@ -12,9 +12,9 @@ exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
 duration: 431
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: c692ad17a27f244764e3f7c63fc49f54ae4e97e6
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -40,11 +40,7 @@ Adobe Experience Manager推出針對AEM例項的Admin Console支援，以及針�
 
 在Admin Console和Adobe Experience Manager中，都應避免在使用者層級套用許可權和存取權。
 
-在中，應透過「產品內容」層級的「使用者群組」授予Admin Console使用者存取權。 使用者群組通常以組織內的邏輯角色最佳表示，以促進群組在Adobe Experience Cloud產品中的重複使用性。
-
->[!NOTE]
->
-> 如果使用AEMas a Cloud Service，請將Admin Console使用者直接指派給產品設定檔。 AEMas a Cloud Service不支援透過Admin Console使用者群組將Admin Console使用者之間的許可權轉換為產品設定檔。
+在Admin Console中，應透過「產品內容」層級的「使用者群組」授予使用者存取權。 使用者群組通常以組織內的邏輯角色最佳表示，以促進群組在Adobe Experience Cloud產品中的重複使用性。
 
 ### 在Adobe Experience Manager中套用許可權
 
