@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 jira: KT-15286
 last-substantial-update: 2024-04-05T00:00:00Z
-source-git-commit: 73c15a195c438dd7a07142bba719c6f820bf298a
+exl-id: 099aaeaf-2514-4459-81a7-2843baa1c981
+source-git-commit: 537ed10fc056348266472f3e4a59cbcbf1afdca1
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 0%
 # 使用GuideBridge APIPOST表單資料
 
 表單的「儲存並繼續」涉及允許使用者儲存填寫表單的進度並在稍後繼續。
-在適用性Forms中使用地理位置API時，需遵循下列步驟。 為了完成此使用案例，我們需要使用GuideBridge API存取表單資料，並將其傳送至REST端點以進行儲存和擷取。
+為了完成此使用案例，我們需要使用GuideBridge API存取表單資料，並將其傳送至REST端點以進行儲存和擷取。
 
 表單資料會使用規則編輯器儲存在按鈕的點選事件上
 ![規則編輯器](assets/rule-editor.png)
@@ -32,33 +33,35 @@ ht-degree: 0%
 * @param {string} endpoint in Stringformat
 * @return {string} 
  */
-
-function submitFormDataAndAttachments(endpoint) {
-
+ 
+ function submitFormDataAndAttachments(endpoint) {
     guideBridge.getFormDataObject({
         success: function(resultObj) {
-            afFormData = resultObj.data.data;
-            var formData = new FormData();
+            const afFormData = resultObj.data.data;
+            const formData = new FormData();
             formData.append("dataXml", afFormData);
-            for (i = 0; i < resultObj.data.attachments.length; i++) {
-                var attachment = resultObj.data.attachments[i];
+            resultObj.data.attachments.forEach(attachment => {
                 console.log(attachment.name);
                 formData.append(attachment.name, attachment.data);
-            }
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
+            });
+            fetch(endpoint, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
                     console.log("successfully saved");
-                    var fld = guideBridge.resolveNode("$form.confirmation");
-                    return " Form data was saved successfully";
-
+                    const fld = guideBridge.resolveNode("$form.confirmation");
+                    return "Form data was saved successfully";
+                } else {
+                    throw new Error('Failed to save form data');
                 }
-            };
-            xhttp.open('POST', endpoint)
-            xhttp.send(formData);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         }
     });
-
 }
 ```
 
