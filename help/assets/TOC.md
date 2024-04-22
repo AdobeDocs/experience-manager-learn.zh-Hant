@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 7d84d7ec2b2af34ad8522abaae9757c331613cd5
+source-git-commit: 3b500873ee7307df590ac66dea541a1adf14d726
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '412'
 ht-degree: 18%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 18%
 
 + 搜尋和探索{#search-and-discovery}
    + [搜尋](./search-and-discovery/search.md)
-   + [收藏集](./search-and-discovery/collections.md)
+   + [集合](./search-and-discovery/collections.md)
    + [搜尋提升](./search-and-discovery/search-boost.md)
    + [尋找類似影像](./search-and-discovery/find-similar-images.md)
 
@@ -60,6 +60,7 @@ ht-degree: 18%
    + [已封鎖的標記](./advanced/blocked-tags.md)
    + [提取封存](./advanced/extract-archive.md)
    + [許可權(CUG)](./advanced/closed-user-groups.md)
+   + [中繼資料導向許可權(CUG)](./advanced/metadata-driven-permissions.md)
    + [浮水印](./advanced/watermarks.md)
 
 + 進階中繼資料管理{#metadata}
