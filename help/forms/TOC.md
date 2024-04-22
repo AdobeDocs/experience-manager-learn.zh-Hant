@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 73c15a195c438dd7a07142bba719c6f820bf298a
+source-git-commit: eb4463ae0270725c5b0bd96e9799bada25b06303
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2059'
 ht-degree: 2%
 
 ---
@@ -105,6 +105,10 @@ ht-degree: 2%
    + [預先填入HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [使用Salesforce的表單資料模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [以動態方式新增專案至選擇元件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
++ 使用ChatBot填入PDF表單{#chatbot-and-aem-forms}
+   + [1 — 簡介](chatbot-and-aem-forms/introduction.md)
+   + [2 — 剖析ChatBot資料](chatbot-and-aem-forms/parse-chat-bot-data.md)
+   + [3 — 建立PDF](chatbot-and-aem-forms/merge-data-with-template.md)
 + 核心 — 元件式表單{#core-component-based-forms}
    + [使用GuideBridge API存取表單資料](core-components/submit-data-using-guidebridge-api.md)
 + 選擇並彙編DAM資料夾內容{#select-dam-folder-content}
