@@ -5,9 +5,9 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
-source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
+source-git-commit: 5f2415b45a99a92c6e2b72dfc80d47f6f899c7ad
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '393'
 ht-degree: 0%
 
 ---
@@ -130,5 +130,19 @@ ht-degree: 0%
                 探索如何將AEM Assets與檔案製作整合。
             </p>
         </td>        
+        <td>
+            <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
+                <img alt="AEM Sites中的Generative AI" src="https://video.tv.adobe.com/v/3428436?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
+                <strong>AEM Sites中的Generative AI</strong></a>        
+                <br/><em>AEM產品行銷部的James Talbot &amp; Karthik Muralidharan</em>
+            </div>
+            <p>
+                <br/>                
+                探索AEM Sites檔案編寫中可用的新產生AI功能。
+            </p>
+        </td>                
     </tr>      
 </table>
