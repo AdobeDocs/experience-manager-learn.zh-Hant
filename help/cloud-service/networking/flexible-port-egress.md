@@ -9,10 +9,11 @@ level: Intermediate
 jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
+last-substantial-update: 2024-04-26T00:00:00Z
 duration: 906
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+source-git-commit: 4e3f77a9e687042901cd3b175d68a20df63a9b65
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1280'
 ht-degree: 2%
 
 ---
@@ -25,15 +26,16 @@ ht-degree: 2%
 
 彈性的連線埠輸出可讓自訂、特定的連線埠轉送規則附加至AEMas a Cloud Service，以便建立從AEM到外部服務的連線。
 
-Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用輸出IP位址為最大 [適當型別的網路基礎結構](./advanced-networking.md)  ，然後才可執行AEMas a Cloud Service的命令。
+Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保彈性連線埠輸出為最大 [適當型別的網路基礎結構](./advanced-networking.md) ，然後才可執行AEMas a Cloud Service的命令。
 
 >[!MORELIKETHIS]
 >
-> 閱讀AEMas a Cloud Service [進階網路設定檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress) 以取得有關彈性連線埠出口的詳細資訊。
+> 閱讀AEMas a Cloud Service [進階網路設定檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) 以取得有關彈性連線埠出口的詳細資訊。
+
 
 ## 先決條件
 
-設定彈性連線埠輸出時需要下列專案：
+使用Cloud Manager API設定或設定彈性的連線埠輸出時，需要以下專案：
 
 + Adobe Developer Console專案，已啟用Cloud Manager API並 [Cloud Manager企業所有者許可權](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + 存取目標 [Cloud Manager API的驗證認證](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
@@ -49,13 +51,45 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
 
 本教學課程使用 `curl` 以進行Cloud Manager API設定。 提供的 `curl` 命令採用Linux/macOS語法。 如果使用Windows命令提示字元，請將 `\` 換行字元 `^`.
 
+
 ## 為每個程式啟用彈性連線埠輸出
 
 首先在AEMas a Cloud Service上啟用彈性的連線埠輸出。
 
+>[!BEGINTABS]
+
+>[!TAB Cloud Manager]
+
+可以使用Cloud Manager啟用靈活的連線埠輸出。 以下步驟概述如何使用Cloud Manager在AEMas a Cloud Service上啟用靈活的連線埠輸出。
+
+1. 登入 [Adobe Experience Manager Cloud Manager](https://experience.adobe.com/cloud-manager/) 作為Cloud Manager企業所有者。
+1. 導覽至所需的計畫。
+1. 在左側功能表中，導覽至 __服務>網路基礎結構__.
+1. 選取 __新增網路基礎結構__ 按鈕。
+
+   ![新增網路基礎結構](./assets/cloud-manager__add-network-infrastructure.png)
+
+1. 在 __新增網路基礎結構__ 對話方塊中，選取 __彈性的連線埠輸出__ 選項，然後選取 __地區__ 以建立專用輸出IP位址。
+
+   ![新增彈性連線埠輸出](./assets/flexible-port-egress/select-type.png)
+
+1. 選取 __儲存__ 以確認新增彈性連線埠輸出。
+
+   ![確認彈性連線埠輸出建立](./assets/flexible-port-egress/confirmation.png)
+
+1. 等待網路基礎架構建立並標示為 __就緒__. 此程式最多可能需要1小時。
+
+   ![彈性連線埠輸出建立狀態](./assets/flexible-port-egress/ready.png)
+
+建立彈性的連線埠輸出後，您現在可以使用Cloud Manager API設定連線埠轉送規則，如下所述。
+
+>[!TAB Cloud Manager API]
+
+可以使用Cloud Manager API啟用彈性的連線埠輸出。 以下步驟概述如何使用Cloud Manager API在AEMas a Cloud Service上啟用靈活的連線埠輸出。
+
 1. 首先，使用Cloud Manager API確定在中設定進階網路的地區 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 此 `region name` 進行後續Cloud Manager API呼叫所必需。 通常會使用生產環境所在的區域。
 
-   尋找您的AEMas a Cloud Service環境所在地區 [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [環境的詳細資訊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中顯示的區域名稱可以是 [已對應至地區碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 用於Cloud Manager API。
+   尋找您的AEMas a Cloud Service環境所在地區 [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [環境的詳細資訊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Cloud Manager中顯示的區域名稱可以是 [已對應至地區碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 用於Cloud Manager API。
 
    __listRegions HTTP要求__
 
@@ -67,7 +101,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
        -H 'Content-Type: application/json' 
    ```
 
-1. 使用Cloud Manager API為Cloud Manager計畫啟用靈活的連線埠輸出 [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 使用適當的 `region` 從Cloud Manager API取得的程式碼 `listRegions` 作業。
+2. 使用Cloud Manager API為Cloud Manager計畫啟用靈活的連線埠輸出 [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 使用適當的 `region` 從Cloud Manager API取得的程式碼 `listRegions` 作業。
 
    __createNetworkInfrastructure HTTP要求__
 
@@ -82,7 +116,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
 
    等待15分鐘，讓Cloud Manager計畫布建網路基礎結構。
 
-1. 檢查環境是否已完成 __彈性連線埠輸出__ 使用Cloud Manager API進行設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 作業，使用 `id` 從先前步驟的createNetworkInfrastructure HTTP要求傳回。
+3. 檢查環境是否已完成 __彈性連線埠輸出__ 使用Cloud Manager API進行設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 作業，使用 `id` 已從傳回 `createNetworkInfrastructure` 上一步驟中的HTTP要求。
 
    __getNetworkInfrastructure HTTP要求__
 
@@ -95,6 +129,10 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
    ```
 
    確認HTTP回應包含 __狀態__ 之 __就緒__. 如果尚未準備就緒，請每隔幾分鐘重新檢查一次狀態。
+
+建立彈性的連線埠輸出後，您現在可以使用Cloud Manager API設定連線埠轉送規則，如下所述。
+
+>[!ENDTABS]
 
 ## 為每個環境設定彈性的連線埠輸出代理
 
@@ -154,7 +192,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
 
 1. 彈性的連線埠輸出設定可以使用Cloud Manager API更新 [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 記住 `enableEnvironmentAdvancedNetworkingConfiguration` 是 `PUT` 作業，因此每次呼叫此作業時，都必須提供所有規則。
 
-1. 現在您可以在自訂AEM程式碼和設定中使用彈性的連線埠輸出設定。
+1. 現在，您可以在自訂AEM程式碼和設定中使用彈性的連線埠輸出設定。
 
 
 ## 透過彈性連線埠輸出連線至外部服務
@@ -185,7 +223,7 @@ AEM提供兩組對映至AEM HTTP/HTTPS代理的特殊Java™系統變數。
 
 >[!TIP]
 >
-> 請參閱AEMas a Cloud Service的彈性連線埠輸出檔案，以瞭解 [完整的路由規則集](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress-traffic-routing).
+> 請參閱AEMas a Cloud Service的彈性連線埠輸出檔案，以瞭解 [完整的路由規則集](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 #### 程式碼範例
 

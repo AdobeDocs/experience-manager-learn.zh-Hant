@@ -9,11 +9,12 @@ level: Intermediate
 jira: KT-9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
+last-substantial-update: 2024-04-26T00:00:00Z
 duration: 926
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+source-git-commit: 4e3f77a9e687042901cd3b175d68a20df63a9b65
 workflow-type: tm+mt
-source-wordcount: '1142'
-ht-degree: 2%
+source-wordcount: '1365'
+ht-degree: 1%
 
 ---
 
@@ -25,15 +26,15 @@ ht-degree: 2%
 
 專用輸出IP位址允許來自AEMas a Cloud Service的請求使用專用IP位址，允許外部服務根據此IP位址篩選傳入請求。 按讚 [彈性的輸出埠](./flexible-port-egress.md)，專用輸出IP可讓您從非標準連線埠輸出。
 
-Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用輸出IP位址為最大 [適當型別的網路基礎結構](./advanced-networking.md)  ，然後才可執行AEMas a Cloud Service的命令。
+Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用輸出IP位址為最多 [適當型別的網路基礎結構](./advanced-networking.md) ，然後才可執行AEMas a Cloud Service的命令。
 
 >[!MORELIKETHIS]
 >
-> 閱讀AEMas a Cloud Service [進階網路設定檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedicated-egress-IP-address) 以取得專用輸出IP位址的詳細資訊。
+> 閱讀AEMas a Cloud Service [進階網路設定檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) 以取得專用輸出IP位址的詳細資訊。
 
 ## 先決條件
 
-設定專用輸出IP位址時，需要下列專案：
+使用Cloud Manager API設定專用輸出IP位址時，需要以下專案：
 
 + Cloud Manager API與 [Cloud Manager企業所有者許可權](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + 存取目標 [Cloud Manager API驗證認證](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
@@ -53,9 +54,41 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
 
 首先，在AEMas a Cloud Service上啟用並設定專用輸出IP位址。
 
+>[!BEGINTABS]
+
+>[!TAB Cloud Manager]
+
+專用輸出IP地址可以使用Cloud Manager啟用。 下列步驟概述如何使用Cloud Manager在AEMas a Cloud Service上啟用專用輸出IP位址。
+
+1. 登入 [Adobe Experience Manager Cloud Manager](https://experience.adobe.com/cloud-manager/) 作為Cloud Manager企業所有者。
+1. 導覽至所需的計畫。
+1. 在左側功能表中，導覽至 __服務>網路基礎結構__.
+1. 選取 __新增網路基礎結構__ 按鈕。
+
+   ![新增網路基礎結構](./assets/cloud-manager__add-network-infrastructure.png)
+
+1. 在 __新增網路基礎結構__ 對話方塊中，選取 __專用輸出IP位址__ 選項，然後選取 __地區__ 以建立專用輸出IP位址。
+
+   ![新增專用輸出IP位址](./assets/dedicated-egress-ip-address/select-type.png)
+
+1. 選取 __儲存__ 以確認新增專用輸出IP位址。
+
+   ![確認建立專用輸出IP位址](./assets/dedicated-egress-ip-address/confirmation.png)
+
+1. 等待網路基礎架構建立並標示為 __就緒__. 此程式最多可能需要1小時。
+
+   ![專用輸出IP位址建立狀態](./assets/dedicated-egress-ip-address/ready.png)
+
+在建立專用輸出IP位址後，您現在可以使用Cloud Manager API進行設定，如下所述。
+
+>[!TAB Cloud Manager API]
+
+專用輸出IP地址可以使用Cloud Manager API啟用。 下列步驟概述如何使用Cloud Manager API在AEMas a Cloud Service上啟用專用輸出IP位址。
+
+
 1. 首先，使用Cloud Manager API判斷需要進階網路的地區 [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 此 `region name` 進行後續Cloud Manager API呼叫所必需。 通常會使用生產環境所在的區域。
 
-   尋找您的AEMas a Cloud Service環境所在地區 [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [環境的詳細資訊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Cloud Manager中顯示的區域名稱可以是 [已對應至地區碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 用於Cloud Manager API。
+   尋找您的AEMas a Cloud Service環境所在地區 [Cloud Manager](https://my.cloudmanager.adobe.com) 在 [環境的詳細資訊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Cloud Manager中顯示的區域名稱可以是 [已對應至地區碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) 用於Cloud Manager API。
 
    __listRegions HTTP要求__
 
@@ -67,7 +100,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
        -H 'Content-Type: application/json' 
    ```
 
-1. 使用Cloud Manager API為Cloud Manager計畫啟用專用輸出IP地址 [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 使用適當的 `region` 從Cloud Manager API取得的程式碼 `listRegions` 作業。
+2. 使用Cloud Manager API為Cloud Manager計畫啟用專用輸出IP地址 [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) 作業。 使用適當的 `region` 從Cloud Manager API取得的程式碼 `listRegions` 作業。
 
    __createNetworkInfrastructure HTTP要求__
 
@@ -82,7 +115,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
 
    等待15分鐘，讓Cloud Manager計畫布建網路基礎結構。
 
-1. 檢查程式是否已完成 __專用輸出IP位址__ 使用Cloud Manager API進行設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 作業，使用 `id` 從先前步驟的createNetworkInfrastructure HTTP要求傳回。
+3. 檢查程式是否已完成 __專用輸出IP位址__ 使用Cloud Manager API進行設定 [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) 作業，使用 `id` 已從傳回 `createNetworkInfrastructure` 上一步驟中的HTTP要求。
 
    __getNetworkInfrastructure HTTP要求__
 
@@ -95,6 +128,11 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
    ```
 
    確認HTTP回應包含 __狀態__ 之 __就緒__. 如果尚未準備就緒，請每隔幾分鐘重新檢查一次狀態。
+
+在建立專用輸出IP位址後，您現在可以使用Cloud Manager API進行設定，如下所述。
+
+>[!ENDTABS]
+
 
 ## 為每個環境設定專用輸出IP位址代理
 
@@ -113,7 +151,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
 
    在中定義JSON引數 `dedicated-egress-ip-address.json` 並提供給curl，透過 `... -d @./dedicated-egress-ip-address.json`.
 
-   [下載範例dedicated-egress-ip-address.json](./assets/dedicated-egress-ip-address.json). 這個檔案只是一個範例。 根據以下網址記錄的選用/必要欄位，依需求設定您的檔案： [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
+   [下載範例dedicated-egress-ip-address.json](./assets/dedicated-egress-ip-address.json). 這個檔案只是範例。 根據以下網址記錄的選用/必要欄位，依需求設定您的檔案： [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
@@ -138,7 +176,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
 
    專用輸出IP位址設定的HTTP簽章只與不同 [彈性輸出連線埠](./flexible-port-egress.md#enable-dedicated-egress-ip-address-per-environment) 因為它也支援選用的 `nonProxyHosts` 設定。
 
-   `nonProxyHosts` 宣告應透過預設共用IP位址範圍而不是專用輸出IP路由連線埠80或443的一組主機。 `nonProxyHosts` 當Adobe可進一步自動最佳化通過共用IP的流量時，這可能很有用。
+   `nonProxyHosts` 宣告應透過預設共用IP位址範圍而不是專用輸出IP路由連線埠80或443的一組主機。 `nonProxyHosts` 當Adobe會自動最佳化從共用IP傳出的流量時，這項功能可能會相當實用。
 
    針對每個 `portForwards` 對應，進階網路會定義下列轉送規則：
 
@@ -168,9 +206,9 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
 
    主機名稱不可以是 `pinged`，因為是輸出和 _非_ 和入口。
 
-   請注意 __專用輸出IP位址__ 由計畫中的所有AEMas a Cloud Service環境共用。
+   請注意，專用輸出IP位址由計畫中的所有AEMas a Cloud Service環境共用。
 
-1. 現在您可以在自訂AEM程式碼和設定中使用專用輸出IP位址。 通常在使用專用輸出IP位址時，AEMas a Cloud Service連線的外部服務會設定為只允許來自此專用IP位址的流量。
+1. 現在，您可以在自訂AEM程式碼和設定中使用專用輸出IP位址。 通常在使用專用輸出IP位址時，AEMas a Cloud Service連線的外部服務會設定為只允許來自此專用IP位址的流量。
 
 ## 透過專用輸出IP位址連線到外部服務
 
@@ -185,7 +223,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確保專用
 
 >[!TIP]
 >
-> 請參閱AEMas a Cloud Service的專用輸出IP位址檔案，以瞭解 [完整的路由規則集](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedcated-egress-ip-traffic-routing=).
+> 請參閱AEMas a Cloud Service的專用輸出IP位址檔案，以瞭解 [完整的路由規則集](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 
 ### HTTP/HTTPS
