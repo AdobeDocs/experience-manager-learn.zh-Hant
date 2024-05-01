@@ -7,18 +7,24 @@ feature: GraphQL API
 role: Developer, Architect
 level: Intermediate
 jira: KT-15233
-last-substantial-update: 2024-04-01T00:00:00Z
-source-git-commit: c498783aceaf3bb389baaeaeefbe9d8d0125a82e
+last-substantial-update: 2024-05-01T00:00:00Z
+exl-id: c4b093d4-39b8-4f0b-b759-ecfbb6e9e54f
+source-git-commit: a3d2b2343269d2cfc7cecc5817ef1e07a66a88d3
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
 
-
 # 在AEM Headless中保護內容
 
 從AEM Publish提供AEM Headless內容時，確保資料的完整性和安全性是提供敏感內容時的重要關鍵。 本操作說明將逐步解說如何保護AEM Headless GraphQL API端點提供的內容。
+
+本教學課程中的指引，說明對內容有嚴格要求，必須專門提供給特定使用者或使用者群組使用。 必須區分個人化行銷內容與私人內容，例如PII或個人財務資料，以避免混淆和意外結果。 本教學課程說明如何保護私人內容。
+
+討論行銷內容時，我們指的是針對個別使用者或群組量身打造的內容，並非供一般使用者使用。 不過，您必須瞭解，雖然此內容是針對特定使用者，但在預期內容之外公開（例如透過操控HTTP請求）不會帶來安全性、法律或聲譽風險。
+
+需要強調的是，本文中提及的所有內容皆假設為私人內容，且只能由指定的使用者或群組檢視。 行銷內容通常不需要保護，而是應用程式可以管理其傳送給特定使用者的內容，並快取以提升效能。
 
 本操作說明不涵蓋：
 
@@ -114,4 +120,3 @@ AEMas a Cloud Service [依預設快取HTTP回應](https://experienceleague.adobe
 ## 保護AEM Headless GraphQL API端點
 
 本指南並未說明如何保護 [AEM Headless GraphQL API端點](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/graphql-endpoint) 本身，而是專注於保護其所服務的內容。 所有使用者（包括匿名使用者）都可存取包含受保護內容的端點。 系統只會傳回使用者的「已關閉的使用者群組」可存取的內容。 如果沒有可存取的內容，AEM Headless API回應仍會有200 HTTP回應狀態代碼，但結果會是空的。 一般而言，保護內容安全便已足夠，因為端點本身不會揭露敏感資料。 如果您需要保護端點，請透過將ACL套用至AEM Publish上的端點 [Sling存放庫初始化(repoinit)指令碼](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).
-
