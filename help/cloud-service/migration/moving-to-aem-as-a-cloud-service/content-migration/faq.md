@@ -11,9 +11,9 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 569
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85d516d57d818d23372ab7482d25e33242ef0426
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
@@ -77,22 +77,6 @@ CTT擷取流程所需的資源量取決於節點數量、Blob數量及其彙總�
 
 如果使用複製環境進行移轉，則不會影響即時生產伺服器資源使用率，但在即時生產與複製之間同步內容方面，有其本身的缺點
 
-### 問：在我的來源作者系統中，我們已設定SSO讓使用者透過驗證進入作者執行個體。 在此情況下我是否必須使用CTT的使用者對應功能？
-
-簡短的答案是「**是**「。
-
-CTT擷取和擷取 **不含** 使用者對應只會將內容、相關原則（使用者、群組）從來源AEM移轉到AEMaaCS。 但是，這些使用者（身分）需要存在於Adobe IMS中並（布建）有AEMaaCS執行個體的存取權，才能成功驗證。 的工作 [使用者對應工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html) 是將本機AEM使用者對應至IMS使用者，以便驗證和授權共同運作。
-
-在此情況下，SAML身分提供者會針對Adobe IMS設定為使用同盟/Enterprise ID，而非使用驗證處理常式直接對AEM。
-
-### 問：在我的來源作者系統中，我們已設定基本驗證，讓使用者透過本機AEM使用者驗證至作者執行個體。 在此情況下我是否必須使用CTT的使用者對應功能？
-
-簡短的答案是「**是**「。
-
-沒有使用者對應的CTT擷取和內嵌確實將內容、相關原則（使用者、群組）從來源AEM移轉到AEMaaCS。 但是，這些使用者（身分）需要存在於Adobe IMS中並（布建）有AEMaaCS執行個體的存取權，才能成功驗證。 的工作 [使用者對應工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html) 是將本機AEM使用者對應至IMS使用者，以便驗證和授權共同運作。
-
-在此情況下，使用者會使用個人Adobe ID，而IMS管理員會使用Adobe ID來提供AEMaaCS的存取權。
-
 ### 問：在CTT的情境下，「擦去」和「覆寫」這兩個辭彙是什麼意思？
 
 在的內容中 [擷取階段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase)，選項包括覆寫前一個擷取週期臨時容器中的資料，或新增差異（新增/更新/刪除）至容器中。 「暫存容器」並不重要，但與移轉集相關聯的blob儲存容器。 每個移轉集都有各自的暫存容器。
@@ -107,10 +91,11 @@ CTT擷取和擷取 **不含** 使用者對應只會將內容、相關原則（�
    + 確認是否可接受在一個移轉集中移轉所有資產，然後分階段使用它們的網站
 + 在目前狀態中，即使發佈層仍可提供內容，作者擷取程式仍會使作者例項無法用於內容製作
    + 這表示在擷取完成至作者之前，內容製作活動都會凍結
++ 雖然群組已移轉，但使用者已不再移轉
 
 在規劃移轉之前，請先詳閱追加擷取和擷取程式，如檔案所述。
 
-### 問：即使內嵌發生於AEMaaCS作者或發佈執行個體中，我的網站是否仍可供一般使用者使用？
+### 問：即使AEMaaCS作者或發佈執行個體正在進行內嵌，我的網站是否仍可供一般使用者使用？
 
 可以。一般使用者流量不會因內容移轉活動而中斷。 不過，作者擷取會凍結內容製作，直到完成為止。
 
@@ -160,7 +145,6 @@ CTT流程需要連線至以下資源：
 
 + 目標AEMas a Cloud Service環境： `author-p<program_id>-e<env_id>.adobeaemcloud.com`
 + Azure Blob儲存服務： `casstorageprod.blob.core.windows.net`
-+ 使用者對應IO端點： `usermanagement.adobe.io`
 
 請參閱檔案以取得更多關於 [來源連線能力](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#source-environment-connectivity).
 
@@ -198,7 +182,7 @@ CTT流程需要連線至以下資源：
 + 繼續使用內部部署/AMS Prod作者
 + 從現在開始，透過以下執行所有其他移轉週期證明 `wipe=true`
    + 請注意，此操作會移轉完整節點存放區，但只會移轉修改過的Blob，而不是整個Blob。 前一組的Blob位於目標AEMaaCS例項的Azure Blob存放區中。
-   + 使用此移轉證明來測量移轉持續時間、使用者對應、測試、驗證所有其他功能
+   + 使用此移轉證明來測量移轉持續時間、測試、驗證所有其他功能
 + 最後，在上線當週之前，執行擦去=true移轉
    + 在AEMaaCS上連線Dynamic Media
    + 中斷與AEM內部部署來源的DM設定
