@@ -11,10 +11,10 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
+source-git-commit: 43a8b1eb7e714b27972c0ea2b1327ab8db044d25
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 10%
+source-wordcount: '915'
+ht-degree: 8%
 
 ---
 
@@ -560,7 +560,7 @@ ht-degree: 10%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations.md" title="產生變化版本">產生變數</a>
+              <a href="./how-to/generate-variations.md" title="產生變化版本">產生變化版本</a>
             </p>
             <p class="is-size-6">產生Edge Delivery Services變體簡介，並瞭解其對行銷人員的用處。</p>
             <a href="./how-to/generate-variations.md" class="spectrum-Button
@@ -700,6 +700,262 @@ ht-degree: 10%
           </div>
         </div>
       </div>
+    </div>
+    <!-- Using Adobe Target Audiences for Generate Variations -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Using Adobe Target audiences for Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/using-target-audiences-in-generate-variations.md" title="使用Adobe Target對象產生變數"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428792/?format=jpeg"
+                alt="使用Adobe Target對象產生變數">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分鐘</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/using-target-audiences-in-generate-variations.md" title="使用Adobe Target對象產生變數">使用Adobe Target對象產生變數</a>
+            </p>
+            <p class="is-size-6">探索如何使用Adobe Target受眾，以針對您的內容變數鎖定正確的受眾。</p>
+            <a href="./how-to/using-target-audiences-in-generate-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">觀看影片</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Using audience CSV files for Generate Variations -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Using audience CSV files for Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" title="使用對象CSV檔案產生變數"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428793/?format=jpeg"
+                alt="使用對象CSV檔案產生變數">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">1 分鐘</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" title="使用對象CSV檔案產生變數">使用對象CSV檔案產生變數</a>
+            </p>
+            <p class="is-size-6">探索如何使用對象CSV檔案，以針對您的內容變數鎖定適當的對象。</p>
+            <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">觀看影片</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <!-- Use Adobe Firefly to create images -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Use Adobe Firefly to create images for Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" title="使用Adobe Firefly建立影像以產生變化"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428794/?format=jpeg"
+                alt="使用Adobe Firefly建立影像以產生變化">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">1 分鐘</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" title="使用Adobe Firefly建立影像以產生變化">使用Adobe Firefly建立影像以產生變化</a>
+            </p>
+            <p class="is-size-6">探索如何使用Adobe Firefly建立內容變異的影像。</p>
+            <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">觀看影片</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- Generate Variations Actions -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Generative Variation actions" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/generate-variations-actions.md" title="產生變數動作"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428795/?format=jpeg"
+                alt="產生變數動作">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">1 分鐘</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/generate-variations-actions.md" title="產生變數動作">產生變數動作</a>
+            </p>
+            <p class="is-size-6">探索可用於產生之變數的動作</p>
+            <a href="./how-to/generate-variations-actions.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">觀看影片</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>    
+    <!-- Customizing prompts using metadata -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Customizing prompts using metadata" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/customizing-prompts-using-metadata.md" title="使用中繼資料自訂提示"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428796/?format=jpeg"
+                alt="使用中繼資料自訂提示">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分鐘</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/customizing-prompts-using-metadata.md" title="使用中繼資料自訂提示">使用中繼資料自訂提示</a>
+            </p>
+            <p class="is-size-6">探索在自訂提示中使用中繼資料的方式</p>
+            <a href="./how-to/customizing-prompts-using-metadata.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">觀看影片</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- Trust and privacy in Generative AI -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Trust and privacy in Generative AI" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/generate-variations-trust-privacy.md" title="Generative AI中的信任和隱私"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3429060/?format=jpeg"
+                alt="Generative AI中的信任和隱私">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分鐘</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/generate-variations-trust-privacy.md" title="Generative AI中的信任和隱私">Generative AI中的信任和隱私</a>
+            </p>
+            <p class="is-size-6">探索Adobe在其使用創作AI中如何處理信任和隱私</p>
+            <a href="./how-to/generate-variations-trust-privacy.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">觀看影片</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- Overview of experimentation framework -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Overview of experimentation framework" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/experimentation-framework.md" title="實驗框架概觀"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3429061/?format=jpeg"
+                alt="實驗框架概觀">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分鐘</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/experimentation-framework.md" title="實驗框架概觀">實驗框架概觀</a>
+            </p>
+            <p class="is-size-6">探索實驗架構，此架構可讓行銷人員測試哪些內容變數最有效。</p>
+            <a href="./how-to/experimentation-framework.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">觀看影片</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>                        
+    <!-- Setup experimentation framework -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Setting up experimentation framework" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/setup-experimentation-framework.md" title="設定實驗架構"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3429062/?format=jpeg"
+                alt="設定實驗架構">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 分鐘</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/setup-experimentation-framework.md" title="設定實驗架構">設定實驗架構</a>
+            </p>
+            <p class="is-size-6">探索如何在Edge Delivery Services中設定實驗架構。</p>
+            <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">觀看影片</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>                            
   </div>
 
