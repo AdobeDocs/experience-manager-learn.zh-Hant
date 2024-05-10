@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: eb4463ae0270725c5b0bd96e9799bada25b06303
+source-git-commit: 81026b569ae0dc9976f714715682448a41d9f8bc
 workflow-type: tm+mt
-source-wordcount: '2059'
+source-wordcount: '2064'
 ht-degree: 2%
 
 ---
@@ -178,6 +178,7 @@ ht-degree: 2%
    + [將PDF表單轉換為最適化表單](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [設定已轉換的最適化表單](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [搭配Acrobat Sign使用XDP範本](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
+   + [使用Acrobat Sign協助程式方法](aem-forms-and-adobe-sign/send-documents-signing-using-sign-api.md)
 + 簽署多個Forms{#sign-multiple-documents}
    + [1 — 簡介](sign-multiple-documents/introduction.md)
    + [2 — 設定資料來源](sign-multiple-documents/configure-data-source.md)
