@@ -9,7 +9,7 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1603
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+source-git-commit: b778fa9334d70b61b0d0fa31b6c62ac03490b11e
 workflow-type: tm+mt
 source-wordcount: '4441'
 ht-degree: 0%
@@ -39,7 +39,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
 * [完成的教學課程套件](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [GitHub上的完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教學課程假設您具備以下基本知識 [AEM開發實務](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) 並且熟悉 [AEM Maven專案設定](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html). 所有提及的程式碼都是為了當作參考使用，且僅應部署至 [本機開發AEM執行個體](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy).
+本教學課程假設您具備以下基本知識 [AEM開發實務](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) 並且熟悉 [AEM Maven專案設定](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=en). 所有提及的程式碼都是為了當作參考使用，且僅應部署至 [本機開發AEM執行個體](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy).
 
 ## 專案範本的結構
 
@@ -129,7 +129,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
    1. 新增 **nt：unstructured** 已呼叫authoring-project/gadgets下的節點 **任務**.
    1. 將String屬性新增到tasks節點 **cardWeight** = &quot;100&quot;， **jcr：title**=「任務」，和 **sling：resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;。
 
-   現在 [「任務」圖磚](https://experienceleague.adobe.com/docs/#Tasks) 建立新專案時預設會顯示。
+   現在 [「任務」圖磚](https://experienceleague.adobe.com/en/docs) 建立新專案時預設會顯示。
 
    ```shell
    ../projects/templates/authoring-project
@@ -629,13 +629,13 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. 在CRXDE-Lite中，我們將在下建立子資料夾 `/apps/aem-guides/projects-tasks/projects` 名為「精靈」的資料夾。 從下列位置複製預設精靈： `/libs/cq/core/content/projects/workflowwizards/default_workflow` 在新建立的精靈資料夾下方，並將其重新命名為 **content-approval-start**. 完整路徑現在應該是： `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
 
-   預設精靈為兩欄式精靈，第一欄顯示所選工作流程模型的標題、說明和縮圖。 第二欄包含工作流程標題、開始評論和裝載路徑的欄位。 精靈是標準的觸控式UI表單，會使用標準功能 [Granite UI表單元件](https://experienceleague.adobe.com/docs/) 以填入欄位。
+   預設精靈為兩欄式精靈，第一欄顯示所選工作流程模型的標題、說明和縮圖。 第二欄包含工作流程標題、開始評論和裝載路徑的欄位。 精靈是標準的觸控式UI表單，會使用標準功能 [Granite UI表單元件](https://experienceleague.adobe.com/en/docs) 以填入欄位。
 
    ![內容核准工作流程精靈](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
 1. 我們將在精靈中新增一個額外欄位，用於設定工作流程中第一個任務的受指派人(請參閱 [建立工作流程模型](#create-workflow-model)：步驟5)。
 
-   下 `../content-approval-start/jcr:content/items/column2/items` 建立型別為的新節點 `nt:unstructured` 已命名 **&quot;assign&quot;**. 我們將使用「專案使用者選擇器」元件(根據 [Granite使用者選取器元件](https://experienceleague.adobe.com/docs/))。 此表單欄位可讓您輕鬆地將使用者和群組選取限製為僅屬於目前專案的那些專案。
+   下 `../content-approval-start/jcr:content/items/column2/items` 建立型別為的新節點 `nt:unstructured` 已命名 **&quot;assign&quot;**. 我們將使用「專案使用者選擇器」元件(根據 [Granite使用者選取器元件](https://experienceleague.adobe.com/en/docs))。 此表單欄位可讓您輕鬆地將使用者和群組選取限製為僅屬於目前專案的那些專案。
 
    以下是XML表示法 **指派** 節點：
 
@@ -655,7 +655,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. 我們也會新增優先順序選擇欄位，以決定工作流程中第一個任務的優先順序(請參閱 [建立工作流程模型](#create-workflow-model)：步驟5)。
 
-   下 `/content-approval-start/jcr:content/items/column2/items` 建立型別為的新節點 `nt:unstructured` 已命名 **優先順序**. 我們將使用 [Granite UI選取元件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) 以填入表單欄位。
+   下 `/content-approval-start/jcr:content/items/column2/items` 建立型別為的新節點 `nt:unstructured` 已命名 **優先順序**. 我們將使用 [Granite UI選取元件](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions) 以填入表單欄位。
 
    在 **優先順序** 節點，我們將新增 **個專案** 節點 **nt：unstructured**. 在 **個專案** 節點再新增3個節點，以填入「高」、「中」和「低」的選取選項。 每個節點的型別為 **nt：unstructured** 且應該有 **文字** 和 **值** 屬性。 文字和值應該是相同的值：
 
@@ -691,7 +691,7 @@ task.setCurrentAssignee(projectApproverGrp);
    </priority>
    ```
 
-1. 我們將允許工作流程發起者設定初始任務的到期日。 我們將使用 [Granite UI DatePicker](https://experienceleague.adobe.com/docs/) 表單欄位以擷取此輸入。 我們也會新增包含下列專案的隱藏欄位： [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) 以確保在JCR中將輸入儲存為日期型別屬性。
+1. 我們將允許工作流程發起者設定初始任務的到期日。 我們將使用 [Granite UI DatePicker](https://experienceleague.adobe.com/en/docs) 表單欄位以擷取此輸入。 我們也會新增包含下列專案的隱藏欄位： [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) 以確保在JCR中將輸入儲存為日期型別屬性。
 
    新增兩個 **nt：unstructured** 具有下列屬性的節點以XML表示：
 
