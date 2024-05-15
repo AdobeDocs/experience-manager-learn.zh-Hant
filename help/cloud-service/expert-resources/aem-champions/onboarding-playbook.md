@@ -10,8 +10,8 @@ doc-type: Value Video
 last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13228
 exl-id: d1745cea-906b-46fa-adcc-7da6e7ee95db
-duration: 124
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 115
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 1%
@@ -32,4 +32,4 @@ ht-degree: 1%
 
 ## 其他資源 {#additional-resources}
 
-* [AEMas a Cloud Service入門歷程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html)  — 新系統管理員的逐步指南，用於最初布建雲端資源，並根據使用者的工作職責為其指派角色，以便團隊的每個成員都能夠登入並存取其新的AEMas a Cloud Service資源
+* [AEMas a Cloud Service入門歷程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html?lang=zh-Hant)  — 新系統管理員的逐步指南，用於最初布建雲端資源，並根據使用者的工作職責為其指派角色，以便團隊的每個成員都能夠登入並存取其新的AEMas a Cloud Service資源

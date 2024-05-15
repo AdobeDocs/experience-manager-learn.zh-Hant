@@ -10,11 +10,11 @@ level: Beginner
 exl-id: 53279cbb-70c8-4319-b5bb-9a7d350a7f72
 last-substantial-update: 2022-05-10T00:00:00Z
 thumbnail: understand-cloud-manager.jpg
-duration: 1040
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 1011
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 14%
 
 Adobe Cloud Manager提供簡單但強大的解決方案，可讓您輕鬆管理、檢查和AEM環境的自助服務。
 
-## Cloud Manager總覽
+## Cloud Manager 總覽
 
 本影片系列會探索AEM適用的Cloud Manager的主要功能，包括：
 

@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
-duration: 152
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 123
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 90%
@@ -36,7 +36,7 @@ ht-degree: 90%
 
 * [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [AEM SPA Editor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
 * [Angular](https://angular.io/)
 
 *預計約需 1-2 小時完成教學課程的每個部份。*

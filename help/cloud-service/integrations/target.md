@@ -13,8 +13,8 @@ thumbnail: KT-12433.jpeg
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
 exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
-duration: 1620
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 1549
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1618'
 ht-degree: 0%
@@ -256,7 +256,7 @@ Android™和iOS行動體驗可透過以下類似模式進行個人化： [Adobe
    alloy("sendEvent", { ... });
    ```
 
-### 實施
+### 實作
 
 1. 建立React元件 `AdobeTargetActivity.js` 以顯示Adobe Target活動。
 

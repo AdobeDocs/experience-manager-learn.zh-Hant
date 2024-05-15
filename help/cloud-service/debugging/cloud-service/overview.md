@@ -9,11 +9,11 @@ topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
-duration: 73
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 60
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '314'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 AEMas a Cloud Service是運用AEM應用程式的雲端原生方式。 AEMas a Cloud Service在自助式、可擴充的雲端基礎結構上執行，這要求AEM開發人員瞭解如何瞭解和偵錯AEMas a Cloud Service的各個層面，從建立和部署到取得執行AEM應用程式的詳細資訊。
 
-## 記錄檔
+## 記錄
 
 記錄檔會提供您應用程式在AEMas a Cloud Service中如何運作的詳細資訊，以及部署問題的深入分析。
 

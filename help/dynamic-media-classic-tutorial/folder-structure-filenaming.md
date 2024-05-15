@@ -7,8 +7,8 @@ role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: 15121896-9196-4ce0-aff2-9178563326b4
-duration: 311
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 253
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Dynamic Media Classic中的所有URL和交易都是由資產ID驅動，資產ID�
 | ------- | ----------------------- | ------------------------------------------- | ------------------------------- |
 | AA123 | 替代文字檢視 | AA123_1.tif AA123_2.tif AA123_3.tif | AA123_1 AA123_2 AA123_3 |
 |         | 彩色檢視 | AA123_BLU.tif AA123_RED.tif AA123_BROWN.tif | AA123_BLU AA123_RED AA123_BROWN |
-|         | 色票 | AA123_BLU_SW.tif | AA123_BLU_SW |
+|         | 樣本 | AA123_BLU_SW.tif | AA123_BLU_SW |
 |         | 影像集或色票集 |                                             | AA123或AA123_SET | — |
 
 處理集合時（例如「影像集」和「色票集」），集合本身也必須有唯一的名稱。 所以在這種情況下，可以為集合指定基礎SKU作為名稱，或者指定具有「_SET」副檔名的SKU。

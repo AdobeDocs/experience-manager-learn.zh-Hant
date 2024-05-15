@@ -11,8 +11,8 @@ thumbnail: KT-7496.jpg
 doc-type: Tutorial
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
 recommendations: noDisplay, noCatalog
-duration: 265
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 198
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
@@ -118,7 +118,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 如果使用共用AEM環境，請將唯一識別碼附加至 **網站名稱**. 例如 `wknd-site-johndoe`. 這可確保多位使用者可完成相同的教學課程，而不會出現任何衝突。
+   > 如果使用共用AEM環境，請將唯一識別碼附加至 **網站名稱**. 例如 `wknd-site-johndoe`。這可確保多位使用者可完成相同的教學課程，而不會出現任何衝突。
 
 1. 按一下 **建立** 以產生「網站」。 按一下 **完成** 在 **成功** AEM對話方塊。
 

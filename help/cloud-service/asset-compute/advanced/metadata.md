@@ -10,8 +10,8 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 6ece6e82-efe9-41eb-adf8-78d9deed131e
-duration: 500
-source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
+duration: 432
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1405'
 ht-degree: 0%
@@ -22,10 +22,10 @@ ht-degree: 0%
 
 自訂Asset compute背景工作可產生XMP (XML)資料，這些資料會傳回AEM並儲存為資產上的中繼資料。
 
-常見的使用案例包括：
+常見使用案例包含：
 
 + 與協力廠商系統(例如PIM （產品資訊管理系統）)的整合，其中必須擷取其他中繼資料並儲存在資產上
-+ 與Adobe服務（例如Content and Commerce AI）整合，透過其他機器學習屬性來增強資產中繼資料
++ 與Adobe服務(例如內容和Commerce AI)整合，使用其他機器學習屬性來增強資產中繼資料
 + 從資產的二進位檔衍生有關資產的中繼資料，並將其儲存為AEMas a Cloud Service中的資產中繼資料
 
 ## 您將要執行的動作

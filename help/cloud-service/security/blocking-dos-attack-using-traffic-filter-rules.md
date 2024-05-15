@@ -1,5 +1,5 @@
 ---
-title: 使用流量篩選規則封鎖DoS和DDoS攻擊
+title: 使用流量篩選器規則封鎖 DoS 和 DDoS 攻擊
 description: 瞭解如何在AEMas a Cloud Service提供的CDN中使用流量篩選規則來封鎖DoS和DDoS攻擊。
 version: Cloud Service
 feature: Security, Operations
@@ -7,19 +7,19 @@ topic: Security, Administration, Performance
 role: Admin, Architect
 level: Intermediate
 doc-type: Tutorial
-duration: 0
+duration: 436
 last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 2ab958f672b0d5b029bcdf7937b2f72d43ba651f
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1918'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 使用流量篩選規則封鎖DoS和DDoS攻擊
+# 使用流量篩選器規則封鎖 DoS 和 DDoS 攻擊
 
 瞭解如何使用封鎖阻斷服務(DoS)和分散式阻斷服務(DDoS)攻擊 **速率限制流量篩選器** AEMas a Cloud Service(AEMCS)管理的CDN的規則和其他策略。 這些攻擊會導致CDN和潛在的AEM Publish服務（亦稱為來源）的流量尖峰，並可能影響網站的回應能力和可用性。
 

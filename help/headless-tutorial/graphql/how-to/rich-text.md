@@ -9,8 +9,8 @@ topic: Headless, Content Management
 level: Intermediate
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-duration: 821
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 785
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 0%
@@ -63,7 +63,7 @@ AEM GraphQL API提供強大的功能，可將RTF傳回HTML、純文字或純JSON
 
 建立GraphQL查詢時，開發人員可從中選擇不同的回應型別 `html`， `plaintext`， `markdown`、和 `json` 來自多行欄位。
 
-開發人員可以使用 [JSON預覽](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) 在內容片段編輯器中，顯示可使用GraphQL API傳回之目前內容片段的所有值。
+開發人員可以使用 [JSON預覽](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html?lang=zh-Hant) 在內容片段編輯器中，顯示可使用GraphQL API傳回之目前內容片段的所有值。
 
 ## GraphQL持續查詢
 

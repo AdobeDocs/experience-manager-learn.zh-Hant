@@ -1,23 +1,23 @@
 ---
-title: 產生變數
+title: 產生變化版本
 description: 在Adobe Experience Manager中產生變數可最佳化任何體驗的文字和影像。
 version: Cloud Service
 topic: Content Management
 role: User
 level: Beginner, Intermediate
 doc-type: Feature Video
-duration: 407
+duration: 421
 last-substantial-update: 2024-03-14T00:00:00Z
 jira: KT-14911
-source-git-commit: 29f1cc8d891c57e9878c650fd8e02a32bfa73051
+exl-id: 1055c45c-7f04-4f8e-bca8-a4a085a718c8
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '73'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
-
-# 產生變數
+# 產生變化版本
 
 在Adobe Experience Manager中產生變體是一種動態工具，可針對任何體驗最佳化文字和影像，將創意與效率無縫整合。
 

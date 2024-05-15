@@ -8,8 +8,8 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-duration: 608
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 568
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 5%
@@ -43,34 +43,34 @@ HLS瀏覽器支援如下，對於不支援的瀏覽器，我們會退回漸進�
  </thead>
  <tbody>
   <tr> 
-   <td> <p>桌面</p> </td>
+   <td> <p>桌上型電腦</p> </td>
    <td> <p>Internet Explorer 9和10</p> </td>
    <td> <p>漸進式下載</p> </td>
   </tr>
   <tr>
-   <td> <p>桌面</p> </td>
+   <td> <p>桌上型電腦</p> </td>
    <td> <p>Internet Explorer 11+</p> </td>
    <td> <p>Dynamic Media - Scene 7模式： HLS視訊串流</p> 
         <p>Dynamic Media — 混合模式：漸進式下載</p>
    </td>
   </tr>
   <tr>
-   <td> <p>桌面</p> </td>
+   <td> <p>桌上型電腦</p> </td>
    <td> <p>Firefox 23-44</p> </td>
    <td> <p>漸進式下載</p> </td>
   </tr>
   <tr> 
-   <td> <p>桌面</p> </td>
+   <td> <p>桌上型電腦</p> </td>
    <td> <p>Firefox 45或更新版本</p> </td>
    <td> <p>HLS視訊串流</p> </td>
   </tr>
   <tr> 
-   <td> <p>桌面</p> </td>
+   <td> <p>桌上型電腦</p> </td>
    <td> <p>鉻黃</p> </td>
    <td> <p>HLS視訊串流</p> </td>
   </tr>
   <tr> 
-   <td> <p>桌面</p> </td>
+   <td> <p>桌上型電腦</p> </td>
    <td> <p>Safari (Mac)</p> </td>
    <td> <p>HLS視訊串流</p> </td>
   </tr>

@@ -9,8 +9,8 @@ level: Beginner
 last-substantial-update: 2022-06-26T00:00:00Z
 doc-type: Feature Video
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
-duration: 1130
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 1079
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Adobe Stock和AEM Assets整合可讓內容作者和行銷人員輕鬆授權並�
 * 您可以在「資產授權」視窗中新增必要和選用參考。
 * 能夠根據地區選擇「資產授權」視窗的語言偏好設定。
 
-### 篩選
+### 篩選條件
 
 * 使用者可以根據資產型別、方向和檢視類似來篩選庫存資產
 * 資產型別包括像片、插圖、向量、影片、範本、3D、Premium、編輯
@@ -109,7 +109,7 @@ AEM 6.4.2讓使用者可直接從AEM搜尋、預覽、儲存及授權Adobe Stock
 ### 其他資源
 
 * [企業存量計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
-* [AEM 6.4 Service Pack 2發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+* [AEM 6.4 Service Pack 2發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
 * [整合AEM和Adobe Stock](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html)
 * [Adobe I/O控制檯整合API](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
 * [Adobe Stock API檔案](https://www.adobe.io/apis/creativecloud/stock/docs.html)

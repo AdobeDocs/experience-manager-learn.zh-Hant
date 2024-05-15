@@ -8,8 +8,8 @@ role: Developer
 level: Intermediate
 doc-type: Technical Video
 exl-id: 569069e8-7964-49f1-96ed-7dfa4f8ed96c
-duration: 523
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 511
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/18897?quality=12&learn=on)
 
-本影片探討以下社群媒體分享元件的功能（的一部分） [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html))使用 [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) 範例網站。
+本影片探討以下社群媒體分享元件的功能（的一部分） [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant))使用 [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) 範例網站。
 
 * 0:00 — 新增和設定社群媒體分享元件
 * 1:00 — 共用至Facebook

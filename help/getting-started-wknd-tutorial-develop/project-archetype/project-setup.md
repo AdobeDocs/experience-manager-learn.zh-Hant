@@ -12,8 +12,8 @@ thumbnail: 30152.jpg
 doc-type: Tutorial
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
-duration: 578
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 502
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1684'
 ht-degree: 1%
@@ -191,9 +191,9 @@ ht-degree: 1%
 
 [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 是適用於AEM的一組標準化網頁內容管理(WCM)元件。 這些元件提供一組基準功能，並針對個別專案進行樣式、自訂和延伸。
 
-AEMas a Cloud Service環境包含最新版本的 [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). 因此，針對AEMas a Cloud Service產生的專案會 **非** 納入AEM核心元件的內嵌。
+AEMas a Cloud Service環境包含最新版本的 [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant). 因此，針對AEMas a Cloud Service產生的專案會 **非** 納入AEM核心元件的內嵌。
 
-對於AEM 6.5/6.4產生的專案，原型會自動內嵌 [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 在專案中。 AEM 6.5/6.4最佳實務是內嵌AEM核心元件，以確保最新版本可隨專案一起部署。 關於核心元件如何運作的詳細資訊 [您可以在此處找到專案中包含的](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components).
+對於AEM 6.5/6.4產生的專案，原型會自動內嵌 [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 在專案中。 AEM 6.5/6.4最佳實務是內嵌AEM核心元件，以確保最新版本可隨專案一起部署。 關於核心元件如何運作的詳細資訊 [您可以在此處找到專案中包含的](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components).
 
 ## 原始檔控制管理 {#source-control}
 

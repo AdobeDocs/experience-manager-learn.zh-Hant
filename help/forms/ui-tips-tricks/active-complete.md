@@ -10,8 +10,8 @@ level: Beginner
 jira: KT-9359
 exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
-duration: 115
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 68
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 14%
@@ -48,10 +48,10 @@ ht-degree: 14%
 |:---|:---|:---|
 | Dimension和位置 | 寬度 | 50px |
 | 文字 | 字粗 | 粗體 |
-| 文字 | 彩色 | #FFF |
+| 文字 | 颜色 | #FFF |
 | 文字 | 行高 | 3 |
 | 文字 | 文字對齊 | 左 |
-| 背景 | 彩色 | #056dae |
+| 背景 | 颜色 | #056dae |
 
 設定背景影像的樣式，如下方熒幕擷取畫面所示
 
@@ -69,10 +69,10 @@ ht-degree: 14%
 |:---|:---|:---|
 | Dimension和位置 | 寬度 | 50px |
 | 文字 | 字粗 | 粗體 |
-| 文字 | 彩色 | #FFF |
+| 文字 | 颜色 | #FFF |
 | 文字 | 行高 | 3 |
 | 文字 | 文字對齊 | 左 |
-| 背景 | 彩色 | #056dae |
+| 背景 | 颜色 | #056dae |
 
 設定背景影像的樣式，如下方熒幕擷取畫面所示
 

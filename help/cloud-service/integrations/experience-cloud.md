@@ -13,8 +13,8 @@ mini-toc-levels: 1
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM as a Cloud Service " before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-duration: 218
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+duration: 135
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 10%
@@ -88,7 +88,7 @@ Adobe Analytics與AEMas a Cloud Service整合，可讓您從客戶歷程中的�
 
 ## Adobe Commerce
 
-Adobe Commerce與AEMas a Cloud Service整合，讓品牌可以更快速地擴展及創新，以區別商業體驗，並加快線上支出。 AEM with Commerce將Experience Manager中沈浸式、全頻道和個人化的體驗與任意數量的商務解決方案相結合，為購物歷程的所有部分帶來差異化體驗，減少實現價值的時間並促進更高轉換。
+Adobe Commerce與AEMas a Cloud Service整合，讓品牌可以更快速地擴展及創新，以區別商業體驗，並加快線上支出。 AEM與Commerce結合，在Experience Manager中結合沈浸式、全通道和個人化的體驗與任何數量的商業解決方案，為購物歷程的所有部分帶來差異化的體驗，減少實現價值的時間並促進更高的轉換。
 
 ### AEM Sites
 

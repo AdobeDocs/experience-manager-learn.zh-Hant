@@ -7,17 +7,17 @@ topic: Administration, Architecture
 role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
-duration: null
+duration: 1042
 last-substantial-update: 2024-03-12T00:00:00Z
 jira: KT-15121
 thumbnail: KT-15121.jpeg
-source-git-commit: 8230991cebf1a9e994f0dfe96c5590d0c19ef887
+exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 0%
 
 ---
-
 
 # 新增自訂網域名稱
 
@@ -92,7 +92,7 @@ AdobeCloud Manager接受終端實體憑證和憑證鏈 _在個別的表單欄位
 
 若要驗證網域名稱，請執行下列步驟：
 
-- 按照以下步驟在Cloud Manager中新增網域名稱 [新增自訂網域名稱](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name) 檔案。
+- 按照以下步驟在Cloud Manager中新增網域名稱 [新增自訂網域名稱](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name) 檔案。
 - 新增AEM特定 [TXT記錄](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record) 在您的DNS託管服務中。
 - 透過使用查詢DNS伺服器來驗證上述步驟 `dig` 命令。
 
@@ -156,5 +156,3 @@ _aemverification.wknd.enablementadobe.com. 3600    IN TXT "adobe-aem-verificatio
 您也可以觀看端對端影片，其中示範將自訂網域名稱新增到AEMas a Cloud Service託管網站的概述、先決條件和上述步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427817?quality=12&learn=on)
-
-

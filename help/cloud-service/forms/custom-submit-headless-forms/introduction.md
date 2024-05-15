@@ -10,11 +10,11 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-13520
 exl-id: 78fe677c-d5ab-40f6-a381-800f24e227ae
-duration: 33
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 27
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 在提交表單後，請務必向使用者提供有關提交結果的意見回饋。 提交回應可包含交易ID，或僅包含個人化回應。 為了滿足此使用案例，在AEM Forms中寫入自訂提交服務，並將Headless表單提交至此自訂提交服務。
 
-## 先決條件
+## 必要條件
 
 若要成功實作此功能，建議您熟悉下列內容
 

@@ -13,8 +13,8 @@ thumbnail: KT-13156.jpeg
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service " before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
-duration: 1360
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+duration: 1303
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1229'
 ht-degree: 1%
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 ## 建立資料串流 — Experience Platform
 
-資料串流會指示Platform Edge Network將收集到的資料傳送至何處。 例如，可傳送至Experience Platform、Analytics或Adobe Target。
+資料串流會指示PlatformEdge Network將收集到的資料傳送至何處。 例如，可傳送至Experience Platform、Analytics或Adobe Target。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418895?quality=12&learn=on)
@@ -79,7 +79,7 @@ ht-degree: 1%
 
 + 標籤擴充功能： [核心](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) 和 [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
 + 資料元素：使用WKND網站的Adobe使用者端資料層擷取page-name、site-section和host-name的自訂程式碼型別資料元素。 此外，XDM物件型別資料元素也符合之前新建立的WKND XDM結構描述內建 [建立XDM結構描述](#create-xdm-schema---experience-platform) 步驟。
-+ 規則：每當使用觸發的Adobe使用者端資料層造訪WKND網頁時，將資料傳送至Platform Edge Network `cmp:show` 事件。
++ 規則：每當使用觸發的Adobe使用者端資料層造訪WKND網頁時，將資料傳送至PlatformEdge Network `cmp:show` 事件。
 
 使用建置和發佈標籤庫時 **發佈流程**，您可以使用 **新增所有變更的資源** 按鈕。 若要選取所有資源，例如資料元素、規則和標籤擴充功能，而非識別及挑選個別資源。 此外，在開發階段中，您可以將程式庫發佈到 _開發_ 環境，然後驗證並將其提升至 _階段_ 或 _生產_ 環境。
 
@@ -220,6 +220,6 @@ ht-degree: 1%
 
 + [搭配核心元件使用Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
 + [整合Experience Platform資料收集標籤和AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
-+ [Adobe Experience Platform Web SDK和Edge Network概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
++ [Adobe Experience Platform Web SDK與Edge Network概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [資料收集教學課程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

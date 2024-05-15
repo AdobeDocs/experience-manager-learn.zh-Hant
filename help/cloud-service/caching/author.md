@@ -11,8 +11,8 @@ last-substantial-update: 2023-08-28T00:00:00Z
 jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: b8e09820-f1f2-4897-b454-16c0df5a0459
-duration: 77
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 56
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 3%
@@ -43,7 +43,7 @@ AEM Author的CDN確實快取了多種可能感興趣的資源，包括 [持續�
 
 | 內容類型 | 預設CDN快取期限 |
 |:------------ |:---------- |
-| [持久查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances) | 1分鐘 |
+| [持久查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances) | 1 分鐘 |
 | [使用者端資料庫(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
 | [其他所有專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 未快取 |
 

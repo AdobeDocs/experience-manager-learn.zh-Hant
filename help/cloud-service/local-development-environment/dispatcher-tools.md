@@ -10,8 +10,8 @@ jira: KT-4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-duration: 730
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 624
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 4%
@@ -105,7 +105,7 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 ## 瞭解Dispatcher設定檔案
 
 >[!TIP]
-Experience Manager專案建立自 [AEM專案Maven原型](https://github.com/adobe/aem-project-archetype) 已預先填入這組Dispatcher設定檔案，因此不需要從Dispatcher工具src資料夾進行複製。
+> Experience Manager專案建立自 [AEM專案Maven原型](https://github.com/adobe/aem-project-archetype) 已預先填入這組Dispatcher設定檔案，因此不需要從Dispatcher工具src資料夾進行複製。
 
 Dispatcher工具提供了一組Apache HTTP Web伺服器和Dispatcher設定檔案，這些檔案定義了所有環境（包括本機開發）的行為。
 
@@ -353,7 +353,7 @@ Phase 3 finished
 
 此 `host.docker.internal` 是提供給Docker包含並解析到主機的主機名稱。 根據docs.docker.com ([macOS](https://docs.docker.com/desktop/networking/)， [Windows](https://docs.docker.com/desktop/networking/))：
 
->從Docker 18.03開始，建議連線到特殊的DNS名稱host.docker.internal，這會解析為主機使用的內部IP位址
+> 從Docker 18.03開始，建議連線到特殊的DNS名稱host.docker.internal，這會解析為主機使用的內部IP位址
 
 時間 `bin/docker_run src host.docker.internal:4503 8080` 訊息中的結果 __等候host.docker.internal可用__，然後：
 

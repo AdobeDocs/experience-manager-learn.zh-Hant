@@ -8,8 +8,8 @@ topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: e27cf3de-ef89-44d7-819b-157f85f5a80f
-duration: 50
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 41
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 AEM SDK的本機Quickstart是開發人員使用的主要開發環境，並支援多種方法來偵錯AEM和部署的應用程式。 本使用手冊說明在AEM SDK本機Quickstart上偵錯應用程式的一些較常用偵錯工具和控制檯。
 
-## 記錄檔
+## 記錄
 
 記錄檔是AEM應用程式偵錯作業的最前線，但部署的AEM應用程式必須有充足的登入次數。
 

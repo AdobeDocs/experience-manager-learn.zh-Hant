@@ -11,8 +11,8 @@ thumbnail: KT-6265.jpg
 last-substantial-update: 2022-09-20T00:00:00Z
 doc-type: Tutorial
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
-duration: 547
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 452
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 2%
@@ -424,7 +424,7 @@ Adobe使用者端資料層是事件導向，觸發動作的最常見事件之一
 
    >[!NOTE]
    >
-   > 如果為實作中重複使用的物件建立進階資料層，建議將資料層元素擷取到它們自己的資料層特定Java™物件中。 例如，Commerce核心元件已為新增介面 `ProductData` 和 `CategoryData` 因為這些可以在Commerce實作內的許多元件上使用。 檢閱 [aem-cif-core-components存放庫中的程式碼](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) 以取得更多詳細資料。
+   > 如果為實作中重複使用的物件建立進階資料層，建議將資料層元素擷取到它們自己的資料層特定Java™物件中。 例如，Commerce核心元件已為新增介面 `ProductData` 和 `CategoryData` 因為這些元件可用於Commerce實作中的許多元件。 檢閱 [aem-cif-core-components存放庫中的程式碼](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) 以取得更多詳細資料。
 
 ## 恭喜！ {#congratulations}
 

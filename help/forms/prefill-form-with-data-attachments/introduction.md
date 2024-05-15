@@ -8,10 +8,12 @@ level: Beginner
 version: 6.5
 topic: Integrations
 jira: KT-14794
-source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
+exl-id: 488ef5ff-c67d-40e1-b69d-6f2a968d642b
+duration: 17
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -19,7 +21,7 @@ ht-degree: 3%
 
 在本教學課程中，您將瞭解如何實作預先填寫的簡單使用案例 **核心元件** 具有已提交資料與附件的表單。
 
-## 先決條件
+## 必要條件
 
 * 使用具有核心元件的AEM Forms的體驗
 * 建置和部署AEM專案方面的經驗。

@@ -7,8 +7,8 @@ role: Architect
 level: Beginner
 doc-type: Tutorial
 exl-id: 3bdb6e36-4174-44b5-ba05-efbc870c3520
-duration: 4722
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 3855
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '17384'
 ht-degree: 0%
@@ -489,7 +489,7 @@ Dispatcher的失效請求通常是由復寫代理程式從發佈系統觸發。
 
 原始術語「多工緩衝處理」實際上是指共用慢速離線周邊裝置，例如印表機，因此在這裡無法正確套用。 不過我們還是喜歡這個詞，因為它很少在網路上被區分。 而且每個圖樣都應該有一個可區別的名稱，對嗎？ 您可以自行決定這是圖樣還是反圖樣。
 
-#### 實施
+#### 實作
 
 以下是我們實施回應式影像元件的方式：
 

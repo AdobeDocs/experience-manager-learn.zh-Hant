@@ -7,8 +7,8 @@ role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: a1d83c77-a9e4-4ed1-9b00-65fb002164c0
-duration: 681
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 554
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2623'
 ht-degree: 0%
@@ -21,9 +21,9 @@ Dynamic Media Classic主影像概念的主要優點之一，就是您可以重�
 
 在本教學課程的此區段結束時，您將知道如何：
 
-- 在Dynamic Media Classic中裁切影像，並儲存為新的主檔案或虛擬影像。 [深入了解](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html)。
-- 儲存虛擬調整後的影像，並使用它們來取代主要資產。 [深入了解](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html)。
-- 在影像上建立縮放目標以顯示其醒目提示。 [深入了解](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html)。
+- 在Dynamic Media Classic中裁切影像，並儲存為新的主檔案或虛擬影像。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html)。
+- 儲存虛擬調整後的影像，並使用它們來取代主要資產。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html)。
+- 在影像上建立縮放目標以顯示其醒目提示。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html)。
 
 ## 裁切
 

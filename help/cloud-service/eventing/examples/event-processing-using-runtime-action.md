@@ -7,17 +7,17 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 0
+duration: 558
 last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
+exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
 
 ---
-
 
 # 使用Adobe I/O Runtime動作處理的AEM事件
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 在此範例中，事件處理會將原始事件資料和收到的事件儲存為活動訊息，並存放在Adobe I/O Runtime儲存體中。 但是，如果事件為 _內容片段已修改_ 型別，然後它也會呼叫AEM作者服務來尋找修改詳細資料。 最後，它會在單頁應用程式(SPA)中顯示事件詳細資訊。
 
-## 先決條件
+## 必要條件
 
 若要完成本教學課程，您需要：
 
@@ -263,8 +263,3 @@ if (params.challenge) {
 - 可以使用Adobe I/O Runtime動作完成事件處理。
 - 執行階段動作可與您的內部應用程式、協力廠商解決方案和Adobe解決方案等系統通訊。
 - 執行階段動作是商務程式的入口點，是針對內容變更而設計。
-
-
-
-
-

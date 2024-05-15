@@ -10,8 +10,8 @@ role: Developer
 level: Intermediate, Experienced
 doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-duration: 288
-source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
+duration: 253
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 0%
@@ -26,7 +26,7 @@ AEM公開各種能夠以無周邊方式互動的HTTP端點，從GraphQL、AEM Co
 
 >[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
 
-## 先決條件
+## 必要條件
 
 在參加本教學課程之前，請確定已具備下列條件：
 

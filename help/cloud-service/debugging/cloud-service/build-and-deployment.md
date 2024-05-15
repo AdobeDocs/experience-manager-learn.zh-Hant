@@ -10,8 +10,8 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
-duration: 671
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 534
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2476'
 ht-degree: 0%
@@ -50,7 +50,7 @@ AdobeCloud Manager有助於程式碼構建和部署到AEMas a Cloud Service。 �
 + __原因：__ 管道設定為使用的Git分支已刪除。
 + __解析度：__ 使用完全相同的名稱重新建立缺少的Git分支，或重新設定管道以從不同的現有分支建置。
 
-## 建置及單元測試
+## 建置和單元測試
 
 ![建置和單元測試](./assets/build-and-deployment/build-and-unit-testing.png)
 

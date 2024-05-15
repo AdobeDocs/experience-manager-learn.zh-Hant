@@ -7,17 +7,17 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 0
+duration: 761
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: 6c01dc8a0e8fd3cc69b21c78da8678e872dcef0c
+exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1116'
 ht-degree: 0%
 
 ---
-
 
 # PIM整合的AEM Assets事件
 
@@ -298,4 +298,3 @@ $ aio app deploy
 - API驗證使用OAuth伺服器對伺服器（亦稱為使用者端憑證流程），請參閱 [OAuth伺服器對伺服器認證實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/).
 - 與其使用Adobe I/O Runtime動作，其他Webhook或Amazon EventBridge可以用來接收AEM Assets事件和處理中繼資料更新。
 - 透過AEM Eventing進行的資產事件可讓企業自動化及簡化關鍵程式，提升整個內容生態系統的效率及一致性。
-

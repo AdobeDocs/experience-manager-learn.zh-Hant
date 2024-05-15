@@ -11,8 +11,8 @@ last-substantial-update: 2023-03-30T00:00:00Z
 jira: KT-13014
 thumbnail: KT-13014.jpeg
 exl-id: c6bb9d6d-aef0-42d5-a189-f904bbbd7694
-duration: 331
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 352
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 AEMas a Cloud Service支援 [網頁最佳化的影像傳遞](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) 這會自動產生資產的最佳化影像Web轉譯。 網頁最佳化的影像傳送可以使用三種主要方法：
 
-1. [使用AEM核心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+1. [使用AEM核心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
 2. 建立符合以下條件的自訂元件 [擴充AEM核心WCM元件影像元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html#tackling-the-image-problem)
 3. 建立使用AssetDelivery Java™ API產生網頁最佳化影像URL的自訂元件。
 
@@ -133,7 +133,7 @@ public interface WebOptimizedImage {
 }
 ```
 
-#### 實施
+#### 實作
 
 OSGi Service實作包含AEM的選用參考 `AssetDelivery` OSGi服務，以及當影像發生下列情況時選取合適影像URL的遞補邏輯 `AssetDelivery` 是 `null` 在AEM SDK上。 可以根據需求更新遞補邏輯。
 
@@ -289,7 +289,7 @@ public interface ExampleWebOptimizedImages {
 }
 ```
 
-#### 實施
+#### 實作
 
 Sling模型使用自訂 `WebOptimizeImage` OSGi服務，收集其元件顯示之影像資產的Web最佳化影像URL。
 

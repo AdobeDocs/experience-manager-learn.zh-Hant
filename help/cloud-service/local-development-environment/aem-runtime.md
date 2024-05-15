@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-duration: 529
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 411
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 7%
@@ -214,7 +214,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 >[!NOTE]
 >
-復寫代理程式僅可用於本機Quickstart JAR，且僅提供內容發佈的模擬。
+> 復寫代理程式僅可用於本機Quickstart JAR，且僅提供內容發佈的模擬。
 
 1. 登入 **作者** 服務並導覽至 [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
 1. 按一下 **預設代理程式（發佈）** 以開啟預設的復寫代理。
@@ -279,7 +279,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 >[!WARNING]
 >
-將快速入門Jar更新為新版本需要取代整個本機開發環境，導致遺失本機AEM存放庫中的所有程式碼、設定和內容。 確保任何不應銷毀的程式碼、設定或內容已安全地提交至Git，或從本機AEM執行個體匯出為AEM套件。
+> 將快速入門Jar更新為新版本需要取代整個本機開發環境，導致遺失本機AEM存放庫中的所有程式碼、設定和內容。 確保任何不應銷毀的程式碼、設定或內容已安全地提交至Git，或從本機AEM執行個體匯出為AEM套件。
 
 ### 升級AEM SDK時如何避免內容遺失
 

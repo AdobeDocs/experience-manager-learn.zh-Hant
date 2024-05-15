@@ -7,8 +7,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-duration: 532
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 467
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1350'
 ht-degree: 0%
@@ -202,7 +202,7 @@ public class Image {
 若要進一步瞭解AEM Content Services和AEM as a Headless CMS，請造訪Adobe的其他檔案和啟用資料：
 
 * [使用內容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [AEM WCM Core Components使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [AEM WCM Core Components使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
 * [AEM WCM核心元件程式庫](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCM核心元件GitHub專案](https://github.com/adobe/aem-core-wcm-components)
 * [元件匯出程式的程式碼範例](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)

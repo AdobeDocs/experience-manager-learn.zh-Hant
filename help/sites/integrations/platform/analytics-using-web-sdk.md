@@ -13,8 +13,8 @@ thumbnail: KT-13328.jpeg
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
-duration: 2330
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+duration: 2252
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -97,7 +97,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 ## 更新資料流 — 新增Analytics服務
 
-資料串流會指示Platform Edge Network將收集到的資料傳送至何處。 在 [先前的教學課程](./web-sdk.md)，資料串流會設定為傳送資料給Experience Platform。 此資料流已更新，以將資料傳送至中設定的Analytics報表套裝 [以上](#setup-analytics---report-suite-analysis-workspace) 步驟。
+資料串流會指示PlatformEdge Network將收集到的資料傳送至何處。 在 [先前的教學課程](./web-sdk.md)，資料串流會設定為傳送資料給Experience Platform。 此資料流已更新，以將資料傳送至中設定的Analytics報表套裝 [以上](#setup-analytics---report-suite-analysis-workspace) 步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419876?quality=12&learn=on)
 
@@ -276,6 +276,6 @@ Analysis Workspace是Adobe Analytics中的強大工具，可讓您以靈活且�
 + [整合Experience PlatformWeb SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
 + [搭配核心元件使用Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
 + [整合Experience Platform資料收集標籤和AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
-+ [Adobe Experience Platform Web SDK和Edge Network概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
++ [Adobe Experience Platform Web SDK與Edge Network概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [資料收集教學課程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

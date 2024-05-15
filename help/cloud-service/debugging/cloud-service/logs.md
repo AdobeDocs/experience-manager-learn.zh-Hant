@@ -1,5 +1,5 @@
 ---
-title: 記錄檔
+title: 記錄
 description: 記錄檔是在AEMas a Cloud Service中偵錯AEM應用程式的第一線，但部署的AEM應用程式必須有充足的登入次數。
 feature: Developer Tools
 version: Cloud Service
@@ -10,8 +10,8 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
-duration: 277
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 229
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%

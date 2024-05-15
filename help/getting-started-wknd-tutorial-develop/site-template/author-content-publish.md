@@ -11,8 +11,8 @@ thumbnail: KT-7497.jpg
 doc-type: Tutorial
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
 recommendations: noDisplay, noCatalog
-duration: 355
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 263
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 0%
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 AEM元件可視為網頁的小型模組建置區塊。 將UI分成邏輯區塊或元件，可讓管理更容易。 若要重複使用元件，必須可設定元件。 這是透過作者對話方塊完成。
 
-AEM提供一組 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 已準備好使用的生產環境。 此 **核心元件** 從基本元素範圍，例如 [文字](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) 和 [影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 至更複雜的UI元素，例如 [輪播](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html).
+AEM提供一組 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 已準備好使用的生產環境。 此 **核心元件** 從基本元素範圍，例如 [文字](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) 和 [影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 至更複雜的UI元素，例如 [輪播](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html).
 
 接下來，使用AEM頁面編輯器編寫一些元件。
 
@@ -90,7 +90,7 @@ AEM提供一組 [核心元件](https://experienceleague.adobe.com/docs/experienc
 
 1. 請注意，頁面上有一些元件，例如 **標題**， **導覽**， **搜尋** 已修正的問題。 這些區域已設定為頁面範本的一部分，無法在個別頁面上修改。 這會在下一章中進一步探討。
 
-您可以隨意嘗試其他元件。 關於每個專案的檔案 [您可以在此處找到核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). 詳細的影片系列介紹 [頁面製作可在此處找到](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html).
+您可以隨意嘗試其他元件。 關於每個專案的檔案 [您可以在此處找到核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant). 詳細的影片系列介紹 [頁面製作可在此處找到](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html).
 
 ## 發佈更新 {#publish-updates}
 

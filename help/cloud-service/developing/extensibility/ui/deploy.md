@@ -10,8 +10,8 @@ recommendations: noDisplay, noCatalog
 jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
-duration: 214
-source-git-commit: 678bda0ea6f6c727170c596e9d3d5f0687ec830f
+duration: 166
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Adobe Developer Console工作區與AEMas a Cloud Service的環境型別沒有任
 
 ![擴充功能核准](./assets/deploy/adobe-exchange.png){align="center"}
 
-1. 登入 [Adobe交換](https://exchange.adobe.com/)
+1. 登入 [Adobe Exchange](https://exchange.adobe.com/)
 1. 瀏覽至 __管理__ > __擱置檢閱的應用程式__
 1. __檢閱__ 擴充功能App Builder應用程式
 1. 如果擴充功能變更是可接受的 __Accept__ 評論。 這會立即在Adobe組織內的所有AEMas a Cloud Service作者服務上插入擴充功能。
@@ -91,7 +91,7 @@ Adobe Developer Console工作區與AEMas a Cloud Service的環境型別沒有任
 
 若要部署新版本的擴充功能，必須先撤銷（或移除）。 雖然擴充功能已撤銷，但在AEM主控台中無法使用。
 
-1. 登入 [Adobe交換](https://exchange.adobe.com/)
+1. 登入 [Adobe Exchange](https://exchange.adobe.com/)
 1. 瀏覽至 __管理__ > __應用程式產生器應用程式__
 1. __撤銷__ 要更新的擴充功能
 
@@ -130,7 +130,7 @@ Adobe Developer Console工作區與AEMas a Cloud Service的環境型別沒有任
 
 ![擴充功能核准](./assets/deploy/adobe-exchange.png){align="center"}
 
-1. 登入 [Adobe交換](https://exchange.adobe.com/)
+1. 登入 [Adobe Exchange](https://exchange.adobe.com/)
 1. 瀏覽至 __管理__ > __擱置檢閱的應用程式__
 1. __檢閱__ 擴充功能App Builder應用程式
 1. 如果擴充功能變更是可接受的 __Accept__ 評論。 這會立即在Adobe組織內的所有AEMas a Cloud Service作者服務上插入擴充功能。
@@ -141,8 +141,8 @@ Adobe Developer Console工作區與AEMas a Cloud Service的環境型別沒有任
 
 ![移除擴充功能](./assets/deploy/revoke.png)
 
-若要移除擴充功能，請從Adobe交換撤銷（或移除）該擴充功能。 擴充功能撤銷時，會從所有AEMas a Cloud Service作者服務中移除。
+若要移除擴充功能，請將其從Adobe Exchange中撤銷（或移除）。 擴充功能撤銷時，會從所有AEMas a Cloud Service作者服務中移除。
 
-1. 登入 [Adobe交換](https://exchange.adobe.com/)
+1. 登入 [Adobe Exchange](https://exchange.adobe.com/)
 1. 瀏覽至 __管理__ > __應用程式產生器應用程式__
 1. __撤銷__ 要移除的擴充功能

@@ -13,8 +13,8 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Assets Essentials" before-title="false"
 doc-type: Feature Video
 exl-id: c3961fdf-b8aa-410d-9561-520a248ea5b0
-duration: 324
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 322
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 11%
@@ -24,5 +24,6 @@ ht-degree: 11%
 # 設定整合
 
 瞭解如何設定Adobe Workfront與Assets Essentials整合。
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/336254?quality=12&learn=on)

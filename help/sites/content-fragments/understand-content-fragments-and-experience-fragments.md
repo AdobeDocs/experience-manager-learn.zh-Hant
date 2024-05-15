@@ -9,11 +9,11 @@ role: User
 level: Beginner
 doc-type: Article
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
-duration: 231
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 168
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '829'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -100,7 +100,7 @@ Adobe Experience Manager的內容片段和體驗片段表面上看起來可能�
 </td>
 </tr><tr><td><strong>使用</strong></td>
 <td><ul>
-<li>JSON匯出方式 <a href="https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html">AEM Headless GraphQL API</a></li>
+<li>JSON匯出方式 <a href="https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant">AEM Headless GraphQL API</a></li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM核心元件內容片段元件</a> 用於AEM Sites、AEM Screens或體驗片段。</li>
 <li>JSON匯出方式 <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en" target="_blank">AEM內容服務</a> 適用於第三方使用</li>
 <li>JSON匯出至Adobe Target以取得鎖定目標的選件</li>
@@ -173,7 +173,7 @@ Adobe Experience Manager的內容片段和體驗片段表面上看起來可能�
 ## 內容片段的支援資源
 
 + [內容片段使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
-+ [Adobe Experience Manager as a Headless CMS簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html)
++ [Adobe Experience Manager as a Headless CMS簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html?lang=zh-Hant)
 + [在AEM中使用內容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=en)
 + [AEM WCM核心元件的內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 + [使用內容片段和AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=en)

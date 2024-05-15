@@ -10,8 +10,8 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 097216b7-b345-4fcb-bab3-e660d74252a6
-duration: 663
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 656
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 42%
@@ -34,4 +34,4 @@ AEM核心元件是與Adobe Experience Manager搭配使用的標準元件。 核�
 
 * [github專案](https://github.com/adobe/aem-core-wcm-components)
 * [核心元件範例](https://www.aemcomponents.dev/)
-* [核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)

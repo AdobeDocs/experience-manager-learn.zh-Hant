@@ -8,8 +8,8 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
-duration: 687
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 665
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 11%
@@ -75,7 +75,7 @@ AEM內容片段可以從AEM作者下載為包含變體、元素和中繼資料�
 ## 其他資源 {#additional-resources}
 
 * [傳送內容片段](content-fragments-delivery-feature-video-use.md)
-* [AEM WCM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [AEM WCM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
 * [AEM WCM核心內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 若要從影片系列下載並安裝以下套件至最終狀態的AEM 6.4+執行個體：

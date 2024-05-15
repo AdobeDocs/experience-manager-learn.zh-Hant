@@ -11,8 +11,8 @@ thumbnail: KT-13466.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 83acbddb-9168-4d8b-84b5-97577d8a1ead
-duration: 555
-source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
+duration: 538
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 0%
@@ -39,11 +39,11 @@ RTE徽章最常見的使用案例是搭配使用 [RTE Widget](https://developer.
 
 為了簡單起見，此範例使用 [AdobeReact Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) 框架來開發Widget或對話方塊UI以及硬式編碼的WKND客戶服務電話號碼。 若要控制內容的非編輯及不同樣式方面， `#` 字元用於 `prefix` 和 `suffix` 徽章定義的屬性。
 
-## 延伸點
+## 擴充功能點
 
 此範例會延伸至擴充點 `rte` 在內容片段編輯器中，將徽章新增到RTE。
 
-| AEM UI已擴充 | 延伸點 |
+| AEM UI已擴充 | 擴充功能點 |
 | ------------------------ | --------------------- | 
 | [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [RTF編輯器徽章](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/) 和 [RTF編輯器Widget](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
