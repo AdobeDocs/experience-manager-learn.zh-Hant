@@ -8,12 +8,12 @@ role: Architect, Developer
 level: Intermediate
 jira: KT-9351
 thumbnail: 343040.jpeg
-last-substantial-update: 2022-10-17T00:00:00Z
+last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-duration: 2177
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+duration: 2200
+source-git-commit: 11c9173cbb2da75bfccba278e33fc4ca567bbda1
 workflow-type: tm+mt
-source-wordcount: '3060'
+source-wordcount: '3357'
 ht-degree: 1%
 
 ---
@@ -456,3 +456,66 @@ $ git push adobe saml-auth:develop
 ```
 
 部署目標Cloud Manager Git分支(在此範例中， `develop`)，使用完整棧疊部署管道。
+
+## 叫用SAML驗證
+
+您可以建立巧盡心思打造的連結或按鈕，從AEM Site網頁叫用SAML驗證流程。 以下所述的引數可依需要以程式設計方式設定，因此（舉例來說），登入按鈕可設定 `saml_request_path`，這是使用者在成功SAML驗證時根據按鈕內容帶往不同AEM頁面的位置。
+
+### GET要求
+
+可以透過以下格式建立HTTPGET請求來叫用SAML驗證：
+
+`HTTP GET /system/sling/login`
+
+並提供查詢引數：
+
+| 查詢引數名稱 | 查詢引數值 |
+|----------------------|-----------------------|
+| `resource` | 任何SAML驗證處理常式監聽的JCR路徑或子路徑(如 [AdobeGranite SAML 2.0驗證處理常式OSGi設定](#configure-saml-2-0-authentication-handler) `path` 屬性。 |
+| `saml_request_path` | 成功SAML驗證後，使用者應該前往的URL路徑。 |
+
+例如，此HTML連結將觸發SAML登入流程，並在成功後將使用者帶至 `/content/wknd/us/en/protected/page.html`. 您可以視需要以程式設計方式設定這些查詢引數。
+
+```html
+<a href="/system/sling/login?resource=/content/wknd&saml_request_path=/content/wknd/us/en/protected/page.html">
+    Log in using SAML
+</a>
+```
+
+## POST要求
+
+可以透過以下格式建立HTTPPOST請求來叫用SAML驗證：
+
+`HTTP POST /system/sling/login`
+
+並提供表單資料：
+
+| 表單資料名稱 | 表單資料值 |
+|----------------------|-----------------------|
+| `resource` | 任何SAML驗證處理常式監聽的JCR路徑或子路徑(如 [AdobeGranite SAML 2.0驗證處理常式OSGi設定](#configure-saml-2-0-authentication-handler) `path` 屬性。 |
+| `saml_request_path` | 成功SAML驗證後，使用者應該前往的URL路徑。 |
+
+
+例如，此HTML按鈕將使用HTTPPOST來觸發SAML登入流程，在成功後，將使用者帶到 `/content/wknd/us/en/protected/page.html`. 您可以視需要以程式設計方式設定這些表單資料引數。
+
+```html
+<form action="/system/sling/login" method="POST">
+    <input type="hidden" name="resource" value="/content/wknd">
+    <input type="hidden" name="saml_request_path" value="/content/wknd/us/en/protected/page.html">
+    <input type="submit" value="Log in using SAML">
+</form>
+```
+
+### Dispatcher設定
+
+HTTPGET和POST方法都需要使用者端存取AEM `/system/sling/login` 端點，因此必須透過AEM Dispatcher允許。
+
+根據是否使用GET或POST，允許必要的URL模式
+
+```
+# Allow GET-based SAML authentication invocation
+/0191 { /type "allow" /method "GET" /url "/system/sling/login" /query="*" }
+
+# Allow POST-based SAML authentication invocation
+/0192 { /type "allow" /method "POST" /url "/system/sling/login" }
+```
