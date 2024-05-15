@@ -219,7 +219,7 @@ Cloud Manager計畫只能有 __單一__ 網路基礎架構型別。 確定虛擬
 
    在中定義JSON引數 `vpn-configure.json` 並提供給curl，透過 `... -d @./vpn-configure.json`.
 
-[下載範例vpn-configure.json](./assets/vpn-configure.json)
+   [下載範例vpn-configure.json](./assets/vpn-configure.json)
 
    ```json
    {
