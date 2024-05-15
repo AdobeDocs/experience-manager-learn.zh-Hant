@@ -12,9 +12,9 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
 duration: 170
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 - 宣告及驗證規則時，一律以開頭 `action` type `log` 以確保規則不會封鎖合法流量。
 - 針對特定規則，從下列專案轉換： `log` 至 `block` 應完全根據對足夠網站流量的分析。
 - 以漸進方式推出規則，並考慮讓您的測試團隊（QA、效能、滲透測試）參與流程。
-- 使用定期分析規則的影響 [儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool). 根據您網站的流量而定，可每日、每週或每月執行分析。
+- 使用定期分析規則的影響 [儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling). 根據您網站的流量而定，可每日、每週或每月執行分析。
 - 若要封鎖分析後可能察覺到的惡意流量，請新增任何其他規則。 例如，某些攻擊您網站的IP。
 - 規則的建立、部署和分析應該是一個持續的、反複的過程。 這不是一次性活動。
 
@@ -91,7 +91,7 @@ data:
 
 ## WAF規則的最佳作法
 
-在授權您的程式並啟用WAF後，流量相符的WAF旗標會出現在圖表和請求記錄中，即使您未在規則中宣告它們。 如此一來，您就能隨時掌握潛在的新惡意流量，並視需要建立規則。 檢視未反映在宣告規則中的WAF標幟，並考慮宣告它們。
+在授權您的程式並啟用WAF後，流量相符的WAF旗標會出現在圖表和請求記錄中，即使您未在規則中宣告它們。 因此，您一律會察覺到潛在的新惡意流量，並可視需要建立規則。 檢視未反映在宣告規則中的WAF標幟，並考慮宣告它們。
 
 請考量下列AEM專案的WAF規則。 然而，所需的值 `action` 和 `wafFlags` 屬性必須透過與您的安全性團隊共同作業來決定。
 

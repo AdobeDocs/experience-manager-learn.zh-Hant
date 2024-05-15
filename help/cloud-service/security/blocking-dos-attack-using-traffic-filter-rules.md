@@ -12,9 +12,9 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '1918'
+source-wordcount: '1968'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 1%
 - **封鎖：** 如果AdobeCDN的流量超過特定IP位址的Adobe定義速率(每個CDN PoP (Point of Presence))，則CDN會封鎖流向來源的流量。
 - **警報：** 當流量超過特定速率時，「動作中心」會在來源警報通知中傳送流量尖峰。 當任何指定CDN PoP的流量超過 _Adobe定義_ 每個IP位址的請求率。 另請參閱 [流量篩選規則警報](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts) 以取得更多詳細資料。
 
-這些內建的保護應視為組織將DDoS攻擊對效能影響降到最低的能力的基準。 由於每個網站都有不同的效能特性，在達到Adobe定義的速率限制之前，可能會出現效能降低的情況，因此建議延伸預設保護，透過 _客戶設定_.
+這些內建的保護應視為組織將DDoS攻擊對效能影響降到最低的能力的基準。 由於每個網站都有不同的效能特性，且在達到Adobe定義的速率限制之前可能會看到效能降低，因此建議延伸預設保護至 _客戶設定_.
 
 讓我們來看看客戶可採取的一些其他建議措施，以保護其網站免受DDoS攻擊：
 
@@ -76,14 +76,20 @@ Adobe在來源時傳送流量尖峰警報，做為 [動作中心通知](https://
 
 ## 分析流量模式 {#analyze-traffic}
 
-如果您的網站已上線，您可以使用CDN記錄檔及以下其中一種方法來分析流量模式：
+如果您的網站已經上線，您可以使用CDN記錄和Adobe提供的儀表板來分析流量模式。
+
+- **CDN流量儀表板**：透過CDN和來源請求率、4xx和5xx錯誤率以及非快取請求提供流量的深入分析。 此外，也提供每個使用者端IP位址每秒最大CND和來源要求數，以及最佳化CDN設定的更多深入分析。
+
+- **CDN快取命中率**：提供按HIT、PASS和MISS狀態區分的快取命中率總計和請求總計數的深入分析。 也提供熱門點選、通過和錯過URL。
+
+設定控制面板工具，使用 _下列其中一個選項_：
 
 ### ELK — 設定儀表板工具
 
 此 **Elasticsearch、Logstash和Kibana (ELK)** Adobe提供的儀表板工具可用來分析CDN記錄。 此工具包括視覺化流量模式的儀表板，讓您更容易決定速率限制流量篩選規則的最佳臨界值。
 
-- 原地複製 [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) GitHub存放庫。
-- 請遵循下列步驟來設定刀具 [如何設定ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool?tab=readme-ov-file#how-to-set-up-the-elk-docker-container) 步驟。
+- 原地複製 [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub存放庫。
+- 請遵循下列步驟來設定刀具 [如何設定ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container) 步驟。
 - 在設定過程中，匯入 `traffic-filter-rules-analysis-dashboard.ndjson` 檔案以視覺化資料。 此 _CDN流量_ 儀表板包含的視覺效果會顯示在CDN Edge和Origin每個IP/POP的最大請求數。
 - 從 [Cloud Manager](https://my.cloudmanager.adobe.com/)的 _環境_ 卡片，下載AEMCS發佈服務的CDN記錄。
 
@@ -95,9 +101,9 @@ Adobe在來源時傳送流量尖峰警報，做為 [動作中心通知](https://
 
 ### Splunk — 設定控制面板工具
 
-客戶擁有 [已啟用Splunk記錄檔轉送](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) 可以建立新儀表板來分析流量模式。 下列XML檔案可協助您在Splunk建立儀表板：
+客戶擁有 [已啟用Splunk記錄檔轉送](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) 可以建立新的儀表板來分析流量模式。
 
-- [CDN — 流量儀表板](./assets/traffic-dashboard.xml)：此儀表板提供CDN Edge和Origin流量模式的深入分析。 其中包含顯示CDN Edge和Origin每個IP/POP的最大要求數的視覺效果。
+若要在Splunk中建立控制面板，請依照 [適用於AEMCS CDN記錄分析的Splunk控制面板](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md#splunk-dashboards-for-aemcs-cdn-log-analysis) 步驟。
 
 ### 檢視資料
 

@@ -12,10 +12,10 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: b67bf642-3341-48d0-8ea9-5f262febf414
 duration: 292
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 3%
+source-wordcount: '575'
+ht-degree: 2%
 
 ---
 
@@ -95,11 +95,11 @@ data:
 
 ### 透過產生流量來測試規則
 
-若要測試規則，有多種可用的協力廠商工具，而且您的組織可能有偏好的工具。 為了示範，讓我們使用下列工具：
+若要測試規則，有多種可用的協力廠商工具，而且您的組織可能有偏好的工具。 出於示範目的，讓我們使用下列工具：
 
 - [Curl](https://curl.se/) 用於基本測試，例如叫用URL和檢查回應代碼。
 
-- [韋蓋塔](https://github.com/tsenart/vegeta) 執行拒絕服務(DOS)。 請遵循的安裝指示，從 [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
+- [韋蓋塔](https://github.com/tsenart/vegeta) 執行拒絕服務(DOS)。 請依照的安裝指示，從 [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
 
 - [Nikto](https://github.com/sullo/nikto/wiki) 以找出潛在的問題和安全漏洞，例如XSS、SQL隱碼攻擊等。 請遵循的安裝指示，從 [Nikto GitHub](https://github.com/sullo/nikto).
 
@@ -119,9 +119,11 @@ data:
 
 ### 使用儀表板工具分析結果
 
-建立、部署和測試規則後，您可以使用以下工具來分析結果 **Elasticsearch、Logstash和Kibana (ELK)** 儀表板工具。 它可以剖析AEMCS CDN記錄，讓您以各種圖表和圖形的形式呈現結果。
+建立、部署和測試規則後，您可以使用以下工具來分析結果 **CDN** 記錄檔和 **AEMCS-CDN-Log-Analysis-Tooling**. 工具提供一組控制面板，可將Splunk和ELK (Elasticsearch、Logstash和Kibana)棧疊的結果視覺化。
 
-控制面板工具可直接從 [AEMCS-CDN-Log-Analysis-ELK-Tool GitHub存放庫](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) 並依照步驟安裝和載入 **流量篩選規則（包括WAF）** 儀表板。
+工具可從以下位置複製： [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub存放庫。 然後，依照指示安裝並載入 **CDN流量儀表板** 和 **WAF控制面板** 控制面板作為您偏好的可觀察性工具。
+
+在本教學課程中，讓我們使用ELK棧疊。 請遵循 [AEMCS CDN記錄分析的ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) 設定ELK棧疊的指示。
 
 - 載入範例儀表板後，您的Elastic儀表板工具頁面應該如下所示：
 

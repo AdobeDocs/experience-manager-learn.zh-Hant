@@ -12,9 +12,9 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1458'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,14 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`. 如
 |------------------------------------|:-----------------------------------------------------:|
 | 點選 | 請求的資料為 _在CDN快取中找到，不需要進行擷取_ 對AEM伺服器的要求。 |
 | 未命中 | 請求的資料為 _在CDN快取中找不到，必須要求_ 從AEM伺服器。 |
-| 通過 | 請求的資料為 _明確設定為不快取_ 並一律從AEM伺服器擷取。 |
+| 通過 | 請求的資料為 _明確設定為不進行快取_ 並一律從AEM伺服器擷取。 |
 
 在本教學課程中， [AEM WKND專案](https://github.com/adobe/aem-guides-wknd) 部署至AEMas a Cloud Service環境，並使用觸發小型效能測試 [Apache JMeter](https://jmeter.apache.org/).
 
 本教學課程的結構化會引導您完成以下程式：
+
 1. 透過Cloud Manager下載CDN記錄
-1. 分析這些CDN記錄，其可透過兩種方法執行：本機安裝的儀表板或遠端存取的Jupityer Notebook (適用於授權Adobe Experience Platform的使用者)
+1. 分析這些CDN記錄時，可透過兩種方法執行：本機安裝的儀表板或遠端存取的Splunk或Jupityer Notebook (適用於授權Adobe Experience Platform的使用者)
 1. 最佳化CDN快取設定
 
 ## 下載CDN記錄
@@ -60,24 +61,27 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`. 如
 
 ## 分析下載的CDN記錄檔
 
-若要獲得如快取命中率，以及MISS和PASS快取型別的前URL等深入分析，請分析下載的CDN記錄檔。 這些見解有助於最佳化 [CDN快取設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html) 並提升網站效能。
+若要獲得如快取命中率，以及MISS和PASS快取型別的前URL等深入分析，請分析下載的CDN記錄檔。 這些見解有助於最佳化 [CDN快取設定](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching) 並提升網站效能。
 
-為了分析CDN記錄，本文提供兩個選項： **Elasticsearch、Logstash和Kibana (ELK)** [儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) 和 [Jupyter Notebook](https://jupyter.org/). ELK儀表板工具可安裝在筆記型電腦本機，而Jupityr Notebook工具則可從遠端存取 [做為Adobe Experience Platform的一部分](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en) 適用於已授權Adobe Experience Platform的使用者，而不需安裝其他軟體。
+若要分析CDN記錄，本教學課程提供三個選項：
 
+1. **Elasticsearch、Logstash和Kibana (ELK)**：此 [麋鹿儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) 可在本機安裝。
+1. **Splunk**：此 [Splunk儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) 需要存取Splunk和 [AEMCS記錄轉送已啟用](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) 擷取CDN記錄。
+1. [Jupyter Notebook](https://jupyter.org/)：這可做為的一部分從遠端存取 [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) 適用於已授權Adobe Experience Platform的客戶，而不需安裝其他軟體。
 
 ### 選項1：使用ELK儀表板工具
 
 此 [麋鹿棧疊](https://www.elastic.co/elastic-stack) 是一組工具，提供可擴充的解決方案，以搜尋、分析和視覺化資料。 它包含Elasticsearch、Logstash和Kibana。
 
-若要識別關鍵詳細資訊，請使用 [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) 儀表板工具專案。 此專案提供ELK棧疊的Docker容器和預先設定的Kibana儀表板，以分析CDN記錄。
+若要識別關鍵詳細資訊，請使用 [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) 專案。 此專案提供ELK棧疊的Docker容器和預先設定的Kibana儀表板，以分析CDN記錄。
 
-1. 請依照下列步驟操作： [如何設定ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool#how-to-set-up-the-elk-docker-container) 並確保匯入 **CDN快取命中率** Kibana儀表板。
+1. 請依照下列步驟操作： [如何設定ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container) 並確保匯入 **CDN快取命中率** Kibana儀表板。
 
 1. 若要識別CDN快取命中率和前幾個URL，請執行以下步驟：
 
-   1. 複製下載的CDN記錄檔（在環境特定資料夾中）。
+   1. 複製下載的CDN記錄檔至環境特定的記錄檔資料夾內，例如 `ELK/logs/stage`.
 
-   1. 開啟 **CDN快取命中率** 控制面板按一下左上角的「導覽功能表> Analytics >控制面板> CDN快取點選率」 。
+   1. 開啟 **CDN快取命中率** 按一下左上角，即可使用儀表板 _導覽功能表> Analytics >控制面板> CDN快取命中率_.
 
       ![CDN快取命中率 — Kibana控制面板](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -126,11 +130,22 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`. 如
 
 同樣地，根據分析需求將更多篩選器新增到儀表板。
 
-### 選項2：使用Jupyter Notebook
+### 選項2：使用Splunk圖示板工具
+
+此 [Splunk](https://www.splunk.com/) 是一種常用的記錄分析工具，可幫助彙總、分析記錄和建立視覺化效果以進行監控和疑難排解。
+
+若要識別關鍵詳細資訊，請使用 [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) 專案。 此專案提供Splunk控制面板以分析CDN記錄。
+
+1. 請依照下列步驟操作： [適用於AEMCS CDN記錄分析的Splunk控制面板](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) 並確保匯入 **CDN快取命中率** Splunk儀表板。
+1. 如有需要，請更新 _索引、來源型別及其他_ 在Splunk儀表板中篩選值。
+
+   ![Splunk控制面板](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
+
+### 選項3：使用Jupyter Notebook
 
 如果使用者不想在本機安裝軟體（亦即上節的ELK儀表板工具），有另一個選項，但需要Adobe Experience Platform的授權。
 
-此 [Jupyter Notebook](https://jupyter.org/) 是開放原始碼的Web應用程式，可讓您建立包含程式碼、文字和視覺效果的檔案。 它用於資料轉換、視覺化和統計模型製作。 可從遠端存取 [做為Adobe Experience Platform的一部分](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en).
+此 [Jupyter Notebook](https://jupyter.org/) 是開放原始碼的Web應用程式，可讓您建立包含程式碼、文字和視覺效果的檔案。 它用於資料轉換、視覺化和統計模型製作。 可從遠端存取 [做為Adobe Experience Platform的一部分](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data).
 
 #### 下載互動式Python筆記本檔案
 
@@ -181,6 +196,6 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`. 如
 
 分析CDN記錄後，您可以最佳化CDN快取設定以改善網站效能。 AEM最佳實務是快取命中率為90%或更高。
 
-如需詳細資訊，請參閱 [最佳化CDN快取設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#caching).
+如需詳細資訊，請參閱 [最佳化CDN快取設定](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching).
 
 AEM WKND專案具有參考CDN設定，如需詳細資訊，請參閱 [CDN設定](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L137-L190) 從 `wknd.vhost` 檔案。
