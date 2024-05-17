@@ -10,9 +10,9 @@ topic: Integrations
 jira: KT-15126
 exl-id: b369ed05-ba25-4b0e-aa3b-e7fc1621067d
 duration: 52
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: e8e51fadaa824d615524a8c4c41aefb656d0391d
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '290'
 ht-degree: 1%
 
 ---
@@ -39,8 +39,9 @@ ht-degree: 1%
 * 設定呼叫FDM步驟，使用先前步驟建立的表單資料模型。
 * ![associate-fdm](assets/fdm-insert-1.png)
 
-* ![對映輸入引數](assets/fdm-insert-2.png)
-* 請留意是否使用JSON點標籤法。 提交的資料採用以下格式，我們正在從提交的資料中擷取ContactUS物件。
+## 根據核心元件的最適化表單
+
+提交的資料採用以下格式。 我們需要在叫用表單資料模型服務工作流程步驟中使用點標籤法來擷取ContactUS物件，如熒幕擷取所示
 
 ```json
 {
@@ -54,6 +55,41 @@ ht-degree: 1%
 ```
 
 
+* ![對映輸入引數](assets/fdm-insert-2.png)
+
+
+## 根據Foundation元件的最適化表單
+
+提交的資料採用以下格式。 在叫用表單資料模型服務工作流程步驟中使用點標籤法擷取ContactUS JSON物件
+
+```json
+{
+    "afData": {
+        "afUnboundData": {
+            "data": {}
+        },
+        "afBoundData": {
+            "data": {
+                "ContactUS": {
+                    "Title": "Lord",
+                    "HighNetWorth": "true",
+                    "SubmitterName": "John Doe",
+                    "Products": "Forms"
+                }
+            }
+        },
+        "afSubmissionInfo": {
+            "lastFocusItem": "guide[0].guide1[0].guideRootPanel[0].afJsonSchemaRoot[0]",
+            "stateOverrides": {},
+            "signers": {},
+            "afPath": "/content/dam/formsanddocuments/foundationform",
+            "afSubmissionTime": "20240517100126"
+        }
+    }
+}
+```
+
+![以基礎為基礎的表單](assets/foundation-based-form.png)
 
 ## 設定自適應表單以觸發AEM工作流程
 
