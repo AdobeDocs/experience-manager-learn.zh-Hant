@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
+source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
 workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 1%
@@ -103,7 +103,7 @@ Adobe在來源時傳送流量尖峰警報，做為 [動作中心通知](https://
 
 客戶擁有 [已啟用Splunk記錄檔轉送](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) 可以建立新的儀表板來分析流量模式。
 
-若要在Splunk中建立控制面板，請依照 [適用於AEMCS CDN記錄分析的Splunk控制面板](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md#splunk-dashboards-for-aemcs-cdn-log-analysis) 步驟。
+若要在Splunk中建立控制面板，請依照 [適用於AEMCS CDN記錄分析的Splunk控制面板](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis) 步驟。
 
 ### 檢視資料
 

@@ -12,7 +12,7 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
+source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -66,7 +66,7 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`. 如
 若要分析CDN記錄，本教學課程提供三個選項：
 
 1. **Elasticsearch、Logstash和Kibana (ELK)**：此 [麋鹿儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) 可在本機安裝。
-1. **Splunk**：此 [Splunk儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) 需要存取Splunk和 [AEMCS記錄轉送已啟用](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) 擷取CDN記錄。
+1. **Splunk**：此 [Splunk儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) 需要存取Splunk和 [AEMCS記錄轉送已啟用](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) 擷取CDN記錄。
 1. **Jupyter Notebook**：這可做為的一部分從遠端存取 [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) 適用於已授權Adobe Experience Platform的客戶，而不需安裝其他軟體。
 
 ### 選項1：使用ELK儀表板工具
@@ -136,7 +136,7 @@ CDN記錄檔提供JSON格式，包含各種欄位，包括 `url`， `cache`. 如
 
 若要識別關鍵詳細資訊，請使用 [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) 專案。 此專案提供Splunk控制面板以分析CDN記錄。
 
-1. 請依照下列步驟操作： [適用於AEMCS CDN記錄分析的Splunk控制面板](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) 並確保匯入 **CDN快取命中率** Splunk儀表板。
+1. 請依照下列步驟操作： [適用於AEMCS CDN記錄分析的Splunk控制面板](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) 並確保匯入 **CDN快取命中率** Splunk儀表板。
 1. 如有需要，請更新 _索引、來源型別及其他_ 在Splunk儀表板中篩選值。
 
    ![Splunk控制面板](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}

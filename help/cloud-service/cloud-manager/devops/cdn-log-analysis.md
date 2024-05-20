@@ -12,7 +12,7 @@ last-substantial-update: 2024-05-17T00:00:00Z
 jira: KT-15505
 thumbnail: KT-15505.jpeg
 exl-id: 830c2486-099b-454f-bc07-6bf36e81ac8d
-source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
+source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 針對組織運用 [Splunk](https://www.splunk.com/en_us/products/observability-cloud.html) 已啟用AEMCS記錄轉送至其Splunk執行個體的使用者，可以快速匯入預先建立的儀表板。 此設定有助於加速記錄分析，提供可操作的深入分析，以最佳化AEM實作並減少DOS攻擊等安全性威脅。
 
-您可以開始使用 [適用於AEMCS CDN記錄分析的Splunk控制面板](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md#splunk-dashboards-for-aemcs-cdn-log-analysis) 指南。
+您可以開始使用 [適用於AEMCS CDN記錄分析的Splunk控制面板](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis) 指南。
 
 
 ## ELK整合
