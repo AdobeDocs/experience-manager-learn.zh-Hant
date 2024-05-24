@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 211cacf02a73be9e32af91bb6ee5f0d67de56ee0
+source-git-commit: 97fbe450823c6122a25dc46c851296094894683e
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1209'
 ht-degree: 16%
 
 ---
@@ -261,6 +261,8 @@ ht-degree: 16%
       + [將資料與範本合併](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [測試解決方案](./forms/doc-gen-forms-cs/test.md)
       + [挑戰](./forms/doc-gen-forms-cs/challenge.md)
+   + 使用DocAssurance API{#doc-assurance-api}
++[程式碼片段範例](./forms/doc-assurance-api/using-doc-assurance-api.md)
    + 使用批次API產生檔案{#formscs-batch-api}
       + [簡介](./forms/formscs-batch-api/introduction.md)
       + [設定Azure儲存體](./forms/formscs-batch-api/configure-azure-storage.md)
