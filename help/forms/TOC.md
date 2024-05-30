@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 81026b569ae0dc9976f714715682448a41d9f8bc
+source-git-commit: e20d9f80cc7e1c6f5f6c81233d9a5178551e2fa2
 workflow-type: tm+mt
-source-wordcount: '2064'
+source-wordcount: '2069'
 ht-degree: 2%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 2%
    + [在Linux上安裝32位元套件](adaptive-forms/installing-aem-form-on-linux.md)
    + [最適化Forms中的預填服務](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [使用查詢引數填入最適化表單](adaptive-forms/prepopulating-adaptive-form-using-query-parameters.md)
+   + [AEM Forms中的QR碼](adaptive-forms/qr-code-aem-forms.md)
    + [最適化Forms中的自訂提交](adaptive-forms/custom-submit-aem-forms-article.md)
    + [最適化Forms中的驗證碼](adaptive-forms/forms-captcha-feature-video-use.md)
    + [規則編輯器中的自訂函式](adaptive-forms/custom-functions-aem-forms.md)
