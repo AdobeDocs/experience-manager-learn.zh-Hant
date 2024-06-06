@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
 duration: 295
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 1d9aeb4e5bd41096a28e3375d124bd6b6b8784aa
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -40,13 +40,21 @@ AEMas a Cloud Service會為每個環境提供開發人員主控台，以公開�
 
 若要存取和使用Developer Console，必須透過向開發人員的Adobe ID授與以下許可權 [AdobeAdmin Console](https://adminconsole.adobe.com).
 
-1. 確認影響Cloud Manger和AEMas a Cloud Service產品的Adobe組織在Adobe組織切換器中處於作用中狀態。
-1. 開發人員必須是 [Cloud Manager產品的 __開發人員 — Cloud Service__ 產品設定檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer).
-   + 如果此成員資格不存在，開發人員將無法登入開發人員主控台。
+1. 確保Adobe組織切換器中的，您可以看到與要在開發人員控制檯中檢查的環境相關的Adobe組織。
+1. 為了能夠登入開發人員控制檯，開發人員必須是以下任何角色的成員：
+   + [Cloud Manager產品的 __開發人員 — Cloud Service__ 產品設定檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer)：在此情況下，開發人員將看到在選取的開發人員主控台URL底下可用的環境完整清單；如果已在Cloud Manager中選取開發環境或RDE，則可能會出現相同程式中的其他開發環境或RDE。
+   + [__AEM管理員__ 上的產品設定檔 __AEM作者__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)：在此情況下，上一個專案符號中說明的環境清單將限製為指派此角色的相關產品設定檔。
 1. 開發人員必須是 [__AEM使用者__ 或 __AEM管理員__ AEM作者和/或發佈的產品設定檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles).
    + 如果此成員資格不存在， [狀態](#status) 傾印將因為401未授權錯誤而逾時。
 
 ### 疑難排解開發人員控制檯存取
+
+#### 當我登入時，我沒有看到我正在尋找的環境清單
+
+請確認下列事項：
+
++ 您已透過Cloud Manager針對所選環境按一下三個點，並選取開發人員主控台，以選取正確的開發人員主控台URL。
++ 您有 [Cloud Manager產品的 __開發人員 — Cloud Service__ 產品設定檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer) 檢視完整的環境清單，或您是 [__AEM管理員__ 上的產品設定檔 __AEM作者__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles) 對於您找不到的環境。
 
 #### 401傾印狀態時發生未獲授權的錯誤
 

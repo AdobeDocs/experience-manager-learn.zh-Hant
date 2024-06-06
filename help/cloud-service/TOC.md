@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 97fbe450823c6122a25dc46c851296094894683e
+source-git-commit: 4b9f784de5fff7d9ba8cf7ddbe1802c271534010
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1212'
 ht-degree: 16%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 16%
       + App Builder{#app-builder}
          + [產生JWT存取權杖](./developing/extensibility/app-builder/jwt-auth.md)
          + [產生伺服器對伺服器存取權杖](./developing/extensibility/app-builder/server-to-server-auth.md)
+         + [Github webhook驗證](./developing/extensibility/app-builder/github-webhook-verification.md)
       + UI擴充性{#ui}
          + [概觀](./developing/extensibility/ui/overview.md)
          + [Adobe Developer Console專案](./developing/extensibility/ui/adobe-developer-console-project.md)
