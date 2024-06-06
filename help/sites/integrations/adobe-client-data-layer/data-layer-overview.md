@@ -11,7 +11,7 @@ last-substantial-update: 2021-01-11T00:00:00Z
 doc-type: Tutorial
 exl-id: 066693b7-2b87-45e8-93ec-8bd09a7c263e
 duration: 777
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: dc40b8e022477d2b1d8f0ffe3b5e8bcf13be30b3
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 0%
@@ -102,7 +102,7 @@ Adobe Client Data Layer匯入了標準方法，用以收集和儲存訪客的網
 
    ```js
    function teaserShownHandler(event) {
-       var dataObject = getDataObjectHelper(event, {"@type": "wknd/components/teaser"});
+       var dataObject = getDataObjectHelper(event, {"@type": "wknd/components/carousel/item"});
        if(dataObject != null) {
            console.log("Teaser Shown: " + dataObject['dc:title']);
            console.log(dataObject);
@@ -110,7 +110,7 @@ Adobe Client Data Layer匯入了標準方法，用以收集和儲存訪客的網
    }
    ```
 
-   此 `teaserShownHandler` 函式呼叫 `getDataObjectHelper` 函式並傳遞篩選器 `wknd/components/teaser` 作為 `@type` 以篩選掉其他元件所觸發的事件。
+   此 `teaserShownHandler` 函式呼叫 `getDataObjectHelper` 函式並傳遞篩選器 `wknd/components/carousel/item` 作為 `@type` 以篩選掉其他元件所觸發的事件。
 
 1. 接下來，將事件接聽程式推播至資料層，以接聽 `cmp:show` 事件。
 
