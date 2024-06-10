@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
+source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '547'
 ht-degree: 17%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 17%
    + [重新導向](document-authoring/redirects.md)
    + [大量中繼資料](document-authoring/bulk-metadata.md)
    + [頁面中繼資料](document-authoring/page-metadata.md)
+   + [作者驗證](document-authoring/author-authentication.md)
    + 操作說明{#how-to}
       + [檔案稽核](./document-authoring/how-to/document-audit.md)
       + [檔案許可權](./document-authoring/how-to/document-permissions.md)
@@ -36,6 +37,10 @@ ht-degree: 17%
       + [影像替代文字](./document-authoring/how-to/image-alt-text.md)
       + [防止搜尋引擎編制索引](./document-authoring/how-to/no-index.md)
       + [回應式導覽](document-authoring/how-to/responsive-navigation.md)
+      + [Dynamic Media](./document-authoring/how-to/using-dynamic-media.md)
+      + [使用Importer進行網站移轉](./document-authoring/how-to/migration-using-importer.md)
+      + [自訂匯入工具](./document-authoring/how-to/customizing-importer.md)
+      + [使用Importer大量匯入](./document-authoring/how-to/bulk-importing-using-importer.md)
       + 產生變數{#generate-variations}
          + [概觀](./document-authoring/how-to/generate-variations/overview.md)
          + [設定Sidekick](./document-authoring/how-to/generate-variations/configure-sidekick.md)
