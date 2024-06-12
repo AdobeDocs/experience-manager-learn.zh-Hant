@@ -12,9 +12,9 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 1a745f4b11007df5636c2fc0bea05d56393ef9c6
 workflow-type: tm+mt
-source-wordcount: '1930'
+source-wordcount: '1963'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,8 @@ ht-degree: 0%
 # 服務認證
 
 與Adobe Experience Manager (AEM)as a Cloud Service的整合必須能夠安全地向AEM服務進行驗證。 AEM開發人員控制檯授予對服務憑證的存取權，這些憑證用於促進外部應用程式、系統和服務以程式設計方式透過HTTP與AEM作者或發佈服務互動。
+
+AEM已透過與其他Adobe產品整合 [透過Adobe Developer主控台管理的S2S OAuth](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service). 對於與服務帳戶的自訂整合，在AEM開發人員控制檯中使用和管理JWT憑證。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
