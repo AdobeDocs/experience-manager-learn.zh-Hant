@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c67fad3da9b9eaa740c4351448108af3b1542912
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -145,5 +145,19 @@ ht-degree: 0%
                 探索AEM Sites檔案編寫中可用的新產生AI功能。
             </p>
         </td>                
+        <td>
+            <a href="./season-3/cloud5-exploring-universal-editor.md">
+                <img alt="探索通用編輯器" src="https://video.tv.adobe.com/v/3429656?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-exploring-universal-editor.md">
+                <strong>探索通用編輯器</strong></a>        
+                <br/><em>與AEM Engineering的James Talbot及Dirk Rudolph</em>
+            </div>
+            <p>
+                <br/>                
+                 瞭解Universal Editor和AEM與Edge Delivery Services。
+            </p>
+        </td>                    
     </tr>      
 </table>
