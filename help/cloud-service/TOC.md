@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
+source-git-commit: cbba149b23b4d8ecad35f263dc282a3da481fc9f
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1229'
 ht-degree: 16%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 16%
 + [概觀](./overview.md)
 + AEM試用版 {#aem-trials}
    + [影像](./aem-trials/images.md)
-+ AEMas a Cloud Service簡介{#introduction}
-   + [AEM有哪些as a Cloud Service？](./introduction/what-is-aem-as-a-cloud-service.md)
++ AEM as a Cloud Service簡介{#introduction}
+   + [什麼是AEM as a Cloud Service？](./introduction/what-is-aem-as-a-cloud-service.md)
    + [架構](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
    + 策略與思維領導力{#strategy}
@@ -35,7 +35,7 @@ ht-degree: 16%
    + [osgi](./underlying-technology/introduction-osgi.md)
    + [Java內容存放庫](./underlying-technology/introduction-jcr.md)
    + [Sling](./underlying-technology/introduction-sling.md)
-   + [作者與發佈服務](./underlying-technology/introduction-author-publish.md)
+   + [Author與Publish服務](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
    + [AEM AssetsSidekick外掛程式](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
@@ -129,7 +129,7 @@ ht-degree: 16%
       + [OSGi Web主控台](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher 工具](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [其他工具](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + 偵錯AEMas a Cloud Service{#debugging-aem-as-a-cloud-service}
+   + 為AEM as a Cloud Service除錯{#debugging-aem-as-a-cloud-service}
       + [概觀](./debugging/cloud-service/overview.md)
       + [記錄](./debugging/cloud-service/logs.md)
       + [建置和部署](./debugging/cloud-service/build-and-deployment.md)
@@ -141,7 +141,7 @@ ht-degree: 16%
    + [URL重新導向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + 快取{#caching}
    + [概觀](./caching/overview.md)
-   + [AEM發佈服務](./caching/publish.md)
+   + [AEM Publish服務](./caching/publish.md)
    + [AEM作者服務](./caching/author.md)
    + [CDN快取命中率分析](./caching/cdn-cache-hit-ratio-analysis.md)
    + 操作說明{#how-to}
@@ -215,11 +215,11 @@ ht-degree: 16%
       + [Dispatcher轉換工具](./migration/cloud-acceleration-manager/dispatcher-converter.md)
       + [索引轉換器](./migration/cloud-acceleration-manager/index-converter.md)
       + [資產工作流程移轉工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
-      + [瀏覽Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
+      + [導覽Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + [內容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
-   + 針對Formsas a Cloud Service開發{#developing-for-cloud-service}
+   + 針對Forms開發as a Cloud Service{#developing-for-cloud-service}
       + [1 — 快速入門](./forms/developing-for-cloud-service/getting-started.md)
       + [2 — 安裝IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [3 — 設定Git](./forms/developing-for-cloud-service/setup-git.md)
@@ -230,7 +230,7 @@ ht-degree: 16%
       + [8 — 啟用Forms Portal元件](./forms/developing-for-cloud-service/forms-portal-components.md)
       + [9 — 包含Cloud Service和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [10 — 內容感知雲端設定](./forms/developing-for-cloud-service/context-aware-fdm.md)
-      + [11 — 推送到Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [11 — 推送至Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [12 — 部署至開發環境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
       + [13 — 更新maven原型](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + 建立最適化表單{#create-first-af}
@@ -326,7 +326,7 @@ ht-degree: 16%
       + [從提交的資料中擷取表單附件](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
    + 與Microsoft Dynamics整合{#formscs-dynamics-crm}
       + [建立Dynamics應用程式](./forms/formscs-dynamics-crm/create-dynamics-account.md)
-      + [設定資料來源](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
+      + [設定Data Source](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
       + [建立表單資料模型](./forms/formscs-dynamics-crm/create-form-data-model.md)
       + [建立最適化表單](./forms/formscs-dynamics-crm/create-adaptive-form.md)
    + 與Salesforce整合{#integrate-with-salesforce}
@@ -374,7 +374,7 @@ ht-degree: 16%
    + AEM Champions {#aem-champions}
       + [Cloud Manager入門行動手冊](./expert-resources/aem-champions/onboarding-playbook.md)
       + [Cloud Manager環境型別](./expert-resources/aem-champions/environment-types.md)
-      + [Cloud Manager UI](./expert-resources/aem-champions/cloud-manager-ui.md)
+      + [CLOUD MANAGER UI](./expert-resources/aem-champions/cloud-manager-ui.md)
    + [AEM Experts系列](./expert-resources/expert-series/aem-experts-series.md)
    + Cloud 5{#cloud-5}
       + [簡介](./expert-resources/cloud-5/cloud5-introduction.md)
@@ -405,9 +405,8 @@ ht-degree: 16%
       + 第3季{#season-3}
          + [第三方搜尋](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [Real User Monitoring (RUM) — 真實使用者監控(RUM)](./expert-resources/cloud-5/season-3/cloud5-rum.md)
-         + [Real User Monitoring (RUM)總管](./expert-resources/cloud-5/season-3/cloud5-rum-explorer.md)
-         + [邊緣背景工作](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
-         + [在Edge Delivery Services中發佈、取消發佈事件](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
+         + [Edge背景工作](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
+         + [Publish，在Edge Delivery Services中取消發佈事件](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [查詢索引和Excel公式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
          + [自備Cloudflare CDN](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
          + [整合AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
