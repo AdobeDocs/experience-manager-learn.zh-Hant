@@ -12,10 +12,10 @@ last-substantial-update: 2022-06-13T00:00:00Z
 doc-type: Feature Video
 exl-id: 0681e2c4-8661-436c-9170-9aa841a6fa27
 duration: 419
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 726715890d997ba3bb85f4833e220ac2222b3a42
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 2%
+source-wordcount: '378'
+ht-degree: 1%
 
 ---
 
@@ -26,6 +26,22 @@ ht-degree: 2%
 ## 中繼資料匯出 {#metadata-export}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22132?quality=12&learn=on)
+
+>[!TIP]
+>
+> 在Excel中開啟中繼資料匯出CSV檔案時，請使用 [Excel匯入工具](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) 而不要連按兩下檔案來避免UTF-8編碼的CSV檔案發生問題。
+>
+> 若要在Excel中開啟中繼資料匯出CSV檔案，請執行下列步驟：
+> 
+> 1. 開啟Microsoft Excel
+> 1. 選取 __檔案>新增__ 建立空白試算表
+> 1. 在空白試算表開啟的狀態下，選取 __檔案>匯入__
+> 1. 選取 __文字__ 檔案並按一下 __匯入__
+> 1. 從檔案系統選取匯出的CSV檔案，然後按一下 __取得資料__
+> 1. 在匯入精靈的步驟1中，選取 __已分隔__ 並設定 __檔案來源__ 至 __Unicode (UTF-8)__，然後按一下 __下一個__
+> 1. 在步驟2中，設定 __分隔字元__ 至 __逗號__，然後按一下 __下一個__
+> 1. 在步驟3中，將 __欄資料格式__ 原樣，然後按一下 __完成__
+> 1. 選取 __匯入__ 將資料新增至試算表
 
 ## 中繼資料匯入 {#metadata-import}
 
