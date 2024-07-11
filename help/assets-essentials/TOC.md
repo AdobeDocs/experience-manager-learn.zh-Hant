@@ -8,10 +8,10 @@ version: Cloud Service
 feature-set: Experience Manager Assets
 feature: Assets Essentials
 team: TM
-source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
+source-git-commit: a5eb7cb6ba9b806a57a27ad1a0e01609af713656
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 27%
+source-wordcount: '68'
+ht-degree: 20%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 27%
 
 + [快速入門](./getting-started.md)
 
-+ 基本資訊{#basics}
++ 基本知識{#basics}
    + [管理](basics/managing.md)
    + [使用](basics/using.md)
    + [建立內容](basics/creating.md)
@@ -34,6 +34,7 @@ ht-degree: 27%
    + [我的工作區](configuring/my-workspace.md)
    + [中繼資料表單](configuring/metadata-forms.md)
    + [許可權管理](configuring/permissions-management.md)
+   + [分類法管理](configuring/taxonomy-management.md)
 
 + [Creative Cloud整合](integrations/creative-cloud.md)
 
@@ -42,8 +43,8 @@ ht-degree: 27%
    + [設定](./integrations/workfront/configure.md)
    + [對應中繼資料](./integrations/workfront/map-metadata.md)
    + [傳送檔案和連結資產](./integrations/workfront/link-send.md)
-   + [版本記錄](./integrations/workfront/versions.md)
+   + [版本歷史記錄](./integrations/workfront/versions.md)
 
 + [Adobe Journey Optimizer整合](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html){target=_blank}
 
-+ [文件](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html){target=_blank}
++ [檔案](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html){target=_blank}
