@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 在Windows設定中疑難排解HtmltoPDF特定問題的步驟
 
-*此影片會逐步解說疑難排解Windows設定中的HtmltoPDF特定問題的程式。*
+*此影片會逐步解說疑難排解Windows安裝程式上的HtmltoPDF特定問題的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335545?quality=12&learn=on)

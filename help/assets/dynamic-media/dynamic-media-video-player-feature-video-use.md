@@ -66,7 +66,7 @@ HLS瀏覽器支援如下，對於不支援的瀏覽器，我們會退回漸進�
   </tr>
   <tr> 
    <td> <p>桌上型電腦</p> </td>
-   <td> <p>鉻黃</p> </td>
+   <td> <p>Chrome</p> </td>
    <td> <p>HLS視訊串流</p> </td>
   </tr>
   <tr> 
@@ -76,12 +76,12 @@ HLS瀏覽器支援如下，對於不支援的瀏覽器，我們會退回漸進�
   </tr>
   <tr> 
    <td> <p>行動</p> </td>
-   <td> <p>Chrome （Android 6或更舊版本）</p> </td>
+   <td> <p>Chrome (Android 6或更舊版本)</p> </td>
    <td> <p>漸進式下載</p> </td>
   </tr>
   <tr> 
    <td> <p>行動</p> </td>
-   <td> <p>Chrome （Android 7或更新版本）</p> </td>
+   <td> <p>Chrome (Android 7或更新版本)</p> </td>
    <td> <p>HLS視訊串流</p> </td>
   </tr>
   <tr> 

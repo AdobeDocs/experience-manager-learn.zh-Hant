@@ -9,7 +9,7 @@ team: TM
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '60'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
@@ -23,10 +23,10 @@ ht-degree: 6%
    + [基本檔案配置](./dispatcher/basic-file-layout.md)
    + [組態檔說明](./dispatcher/explanation-config-files.md)
    + [瞭解快取](./dispatcher/understanding-cache.md)
-   + [使用及瞭解變數](./dispatcher/variables.md)
+   + [使用和瞭解變數](./dispatcher/variables.md)
    + [Dispatcher排清](./dispatcher/disp-flushing.md)
    + [虛名 URL](./dispatcher/disp-vanity-url.md)
    + [通用記錄](./dispatcher/common-logs.md)
    + [唯讀檔案](./dispatcher/immutable-files.md)
-   + [Dispatcher健康情況檢查](./dispatcher/health-check.md)
+   + [Dispatcher健康狀態檢查](./dispatcher/health-check.md)
    + [GIT符號連結](./dispatcher/git-symlinks.md)

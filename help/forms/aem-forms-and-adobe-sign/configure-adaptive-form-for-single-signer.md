@@ -25,7 +25,7 @@ ht-degree: 4%
 
 >[!VIDEO](https://video.tv.adobe.com/v/39475?quality=12&learn=on)
 
-可透過下列連結下載與此影片相關的資產
+您可從下列連結下載與此影片相關的Assets
 
 * [變更受益人表單](assets/change-of-beneficiary-form.zip)
 

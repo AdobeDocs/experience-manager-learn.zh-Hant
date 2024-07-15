@@ -21,7 +21,7 @@ ht-degree: 0%
 
 常見的使用案例是顯示含有表單填寫者所輸入資料的pdf檔案。
 
-為了完成此使用案例，我們已運用 [Adobe PDF內嵌API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
+為了完成此使用案例，我們已運用[Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)。
 
 已執行下列步驟以完成整合
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 用戶端資源庫
 
-下列程式碼會在 `viewPDF` 核取方塊按鈕已按一下。 我們將最適化表單資料、範本名稱傳遞至端點以產生PDF。 接著會使用內嵌PDF JavaScript程式庫將產生的PDF顯示在表單填寫器中。
+按一下`viewPDF`核取方塊按鈕時，會執行以下程式碼。 我們將最適化表單資料、範本名稱傳遞至端點以產生PDF。 接著會使用內嵌pdf JavaScript資料庫將產生的pdf顯示給表單填充程式。
 
 ```javascript
 $(document).ready(function() {
@@ -93,31 +93,32 @@ $(document).ready(function() {
 
 ## 從xml資料產生XSD
 
-您可以使用任何免費的線上工具來 [產生XSD](https://www.freeformatter.com/xsd-generator.html) 來自上一步驟中產生的xml資料。
+您可以使用任何免費的線上工具，從上個步驟產生的xml資料中[產生XSD](https://www.freeformatter.com/xsd-generator.html)。
 
 ## 上傳範本
 
-請務必上傳xdp範本至 [AEM Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) 使用「建立」按鈕
+確定您使用「建立」按鈕將xdp範本上傳到[AEM Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
 
 ## 建立最適化表單
 
 根據上一步的XSD建立最適化表單。
-新增索引標籤至最適化。 新增核取方塊元件和embed-pdf元件至此索引標籤請確定您將核取方塊命名為viewPDF。
+新增索引標籤至最適化。 新增核取方塊元件和embed-pdf元件至此索引標籤
+請確定您將核取方塊命名為viewPDF。
 設定內嵌pdf元件，如下方熒幕擷圖所示
 ![embed-pdf](assets/embed-pdf-configuration.png)
 
-**內嵌PDFAPI金鑰**  — 這是可用來內嵌PDF的金鑰。 此金鑰僅適用於localhost。 您可以建立 [您自己的金鑰](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) 並將其與其他網域相關聯。
+**內嵌PDFAPI金鑰** — 此金鑰可用來內嵌PDF。 此金鑰僅適用於localhost。 您可以建立[您自己的金鑰](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)，並將其與其他網域建立關聯。
 
-**端點傳回pdf**  — 這是自訂servlet，會將資料與xdp範本合併並傳回pdf。
+**傳回pdf**&#x200B;的端點 — 這是自訂servlet，會將資料與xdp範本合併並傳回pdf。
 
-**範本名稱**  — 這是xdp的路徑。 通常儲存在formsanddocuments資料夾下。
+**範本名稱** — 這是xdp的路徑。 通常儲存在formsanddocuments資料夾下。
 
-**PDF檔案名稱**  — 這是將顯示在內嵌pdf元件中的字串。
+**PDF檔案名稱** — 這是將顯示在內嵌pdf元件中的字串。
 
 ## 建立自訂servlet
 
-已建立自訂servlet以將資料與XDP範本合併並傳回pdf。 完成此任務的程式碼如下。 自訂servlet是 [內嵌pdf套件組合](assets/embedpdf.core-1.0-SNAPSHOT.jar)
+已建立自訂servlet以將資料與XDP範本合併並傳回pdf。 完成此任務的程式碼如下。 自訂servlet是[內嵌pdf套件](assets/embedpdf.core-1.0-SNAPSHOT.jar)的一部分
 
 ```java
 import java.io.ByteArrayInputStream;
@@ -227,9 +228,9 @@ public class StreamPDFToEmbed extends SlingAllMethodsServlet {
 
 若要在本機伺服器上測試此專案，請遵循下列步驟：
 
-1. [下載並安裝內嵌pdf套件組合](assets/embedpdf.core-1.0-SNAPSHOT.jar).
+1. [下載並安裝內嵌pdf套件](assets/embedpdf.core-1.0-SNAPSHOT.jar)。
 這有servlet可合併資料與XDP範本，並串流回pdf。
-1. 使用將路徑/bin/getPDFToEmbed新增到AdobeGranite CSRF篩選器的已排除路徑區段中 [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). 在您的生產環境中，建議使用 [CSRF保護架構](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
+1. 使用[AEM ConfigMgr](http://localhost:4502/system/console/configMgr)，在AdobeGranite CSRF篩選器的排除路徑區段中新增/bin/getPDFToEmbed路徑。 建議在生產環境中使用[CSRF保護架構](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
 1. [匯入使用者端資料庫和自訂元件](assets/embed-pdf.zip)
 1. [匯入最適化表單和範本](assets/embed-pdf-form-and-xdp.zip)
 1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)

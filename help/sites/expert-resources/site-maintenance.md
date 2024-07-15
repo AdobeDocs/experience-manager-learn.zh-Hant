@@ -43,7 +43,7 @@ ht-degree: 1%
 
 索引可讓查詢儘可能快速地執行，以釋放資源以供其他作業使用。 確保您的索引處於最上方的形狀！ AEM會取消周遊的查詢，而非使用索引來避免一個錯誤的查詢影響整體AEM效能。
 
-#### [Tar壓縮/修訂清除](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=en)
+#### [Tar壓縮/修訂清理](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=en)
 
 存放庫的每次更新都會建立新的內容修訂版本。 因此，隨著每次更新，存放庫的大小都會增加。 為避免儲存庫成長不受控制，需要清理舊修訂以釋放磁碟資源。
 
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 清除lucene二進位檔並減少執行中的資料存放區大小要求。
 
-#### [資料存放區廢棄專案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html)
+#### [資料存放區記憶體](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html)
 
 刪除AEM中的資產時，可能會從節點階層中移除對基礎資料存放區記錄的參考，但資料存放區記錄本身會保留。 這個未參考的資料存放區記錄會變成「廢棄專案」，不需要保留。 如果存在許多未參考的資產，將移除這些資產、保留空間、最佳化備份及檔案系統維護效能將大有裨益。
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 
 ## 開發人員
 
-嘗試不使用自訂元件 — 使用 [核心元件](https://www.aemcomponents.dev/). 您的目標應該是80-90%的時間都使用核心元件，並且僅謹慎使用自訂元件。 這通常需要新的方式檢視頁面上的元件 — 您必須實現前端開發人員可以使用CSS輕鬆重新設定元件樣式。 也請記住，這些核心元件可以相互嵌入，以獲得相當複雜的結果。 發揮創意！
+嘗試不使用自訂元件 — 使用[核心元件](https://www.aemcomponents.dev/)。 您的目標應該是80-90%的時間都使用核心元件，並且僅謹慎使用自訂元件。 這通常需要新的方式檢視頁面上的元件 — 您必須實現前端開發人員可以使用CSS輕鬆重新設定元件樣式。 也請記住，這些核心元件可以相互嵌入，以獲得相當複雜的結果。 發揮創意！
 
 ### [樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en)
 
@@ -95,8 +95,8 @@ ht-degree: 1%
 
 ## 一般
 
-透過持續學習與AEM變更保持同步 — 不要困在過去中。 使用 [Experience League](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=en) 和 [Adobe數位學習服務(ADLS)](https://learning.adobe.com/) 磨練您的技能。
+透過持續學習與AEM變更保持同步 — 不要困在過去中。 使用[Experience League](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=en)和[Adobe數位學習服務(ADLS)](https://learning.adobe.com/)來磨練您的技能。
 
 ## 結論
 
-AEM可能是一個很大的系統，而且需要許多型別的人才能「使用」。 從管理員到開發人員（包括前端和核心Java開發人員）再到作者 — 每個人都可以有所成就！ 此外，如果您不想處理日常管理，AMS和AEM一律為as a Cloud Service。
+AEM可能是一個很大的系統，而且需要許多型別的人才能「使用」。 從管理員到開發人員（包括前端和核心Java開發人員）再到作者 — 每個人都可以有所成就！ 此外，如果您不想處理日常管理工作，隨時可以使用AMS和AEM as a Cloud Service。

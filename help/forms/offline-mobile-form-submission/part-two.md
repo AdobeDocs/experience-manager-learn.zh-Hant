@@ -18,12 +18,12 @@ ht-degree: 0%
 
 # 處理PDF提交
 
-在本部分中，我們將建立在AEM Publish上執行的簡單servlet，以處理來自Acrobat/Reader的PDF提交。 此servlet接著會向負責將提交的資料儲存為HTTPPOST的AEM編寫執行個體中執行的servlet提出HTTP編寫請求 `nt:file` 節點(在AEM Author的存放庫中)。
+在本部分中，我們將建立在AEM Publish上執行的簡單servlet，以處理來自Acrobat/Reader的PDF提交。 此servlet接著會向在AEM作者執行個體中執行的servlet發出HTTPPOST請求，此執行個體負責將提交的資料儲存為AEM作者存放庫中的`nt:file`節點。
 
-以下是處理PDF提交的servlet程式碼。 在此servlet中，我們會對掛載的servlet進行POST呼叫 **/bin/startworkflow** 在AEM Author例項中。 此servlet會將表單資料儲存在AEM作者的存放庫中。
+以下是處理PDF提交的servlet程式碼。 在此servlet中，我們會對AEM Author執行個體中掛接在&#x200B;**/bin/startworkflow**&#x200B;上的servlet進行POST呼叫。 此servlet會將表單資料儲存在AEM作者的存放庫中。
 
 
-## AEM發佈servlet
+## AEM Publish servlet
 
 ```java
 package com.aemforms.handlepdfsubmission.core.servlets;
@@ -100,7 +100,7 @@ public class HandlePDFSubmission extends SlingAllMethodsServlet {
 
 ## AEM作者servlet
 
-下一步是將提交的資料儲存在AEM作者的存放庫中。 掛載的servlet `/bin/startworkflow` 儲存提交的資料。
+下一步是將提交的資料儲存在AEM作者的存放庫中。 掛接在`/bin/startworkflow`上的servlet會儲存提交的資料。
 
 ```java
 import java.io.BufferedReader;
@@ -198,6 +198,6 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-AEM工作流程啟動器已設定為每次有新的型別資源時觸發 `nt:file` 建立於 `/content/pdfsubmissions` 節點。 此工作流程會將提交的資料與xdp範本合併，以建立非互動式或靜態PDF。 然後將產生的PDF指派給使用者進行稽核和核准。
+AEM工作流程啟動器已設定為每次在`/content/pdfsubmissions`節點下建立型別`nt:file`的新資源時都會觸發。 此工作流程會將提交的資料與xdp範本合併，以建立非互動式或靜態PDF。 然後將產生的PDF指派給使用者進行稽核和核准。
 
-若要將提交的資料儲存在 `/content/pdfsubmissions` 節點，我們利用 `GetResolver` OSGi服務可讓我們使用 `fd-service` 系統使用者，可在每個AEM Forms安裝中使用。
+若要在`/content/pdfsubmissions`節點下儲存已提交的資料，我們會使用`GetResolver` OSGi服務，讓我們能夠使用每個AEM Forms安裝中可用的`fd-service`系統使用者來儲存已提交的資料。

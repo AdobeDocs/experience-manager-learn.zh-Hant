@@ -29,21 +29,21 @@ ht-degree: 1%
 
 ## 您將建置的內容 {#what-build}
 
-本章會根據下列專案產生新的AEM專案 [AEM專案原型](https://github.com/adobe/aem-project-archetype). AEM專案是以React SPA的一個非常簡單的起點啟動。
+本章會根據[AEM專案原型](https://github.com/adobe/aem-project-archetype)產生新的AEM專案。 AEM專案是以React SPA的一個非常簡單的起點啟動。
 
-**什麼是Maven專案？** - [Apache Maven](https://maven.apache.org/) 是用來建置專案的軟體管理工具。 *所有Adobe Experience Manager* 實作使用Maven專案在AEM之上建置、管理和部署自訂程式碼。
+**什麼是Maven專案？** - [Apache Maven](https://maven.apache.org/)是用於建置專案的軟體管理工具。 *所有Adobe Experience Manager*&#x200B;實作都使用Maven專案在AEM上建置、管理和部署自訂程式碼。
 
-**什麼是Maven原型？** - A [Maven原型](https://maven.apache.org/archetype/index.html) 是用於產生新專案的範本或模式。 AEM專案原型可讓我們使用自訂名稱空間產生新專案，並包含遵循最佳實務的專案結構，大幅加快專案進度。
+**什麼是Maven原型？** - [Maven原型](https://maven.apache.org/archetype/index.html)是用於產生新專案的範本或模式。 AEM專案原型可讓我們使用自訂名稱空間產生新專案，並包含遵循最佳實務的專案結構，大幅加快專案進度。
 
 ## 先決條件
 
-檢閱設定所需的工具和指示 [本機開發環境](overview.md#local-dev-environment). 確定已在中啟動新的Adobe Experience Manager例項 **作者** 模式，正在本機執行。
+檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。 請確定以&#x200B;**作者**&#x200B;模式啟動的Adobe Experience Manager全新執行個體正在本機執行。
 
 ## 建立專案 {#create}
 
 >[!NOTE]
 >
->本教學課程使用版本 **35** 原型的。
+>此教學課程使用原型的版本&#x200B;**35**。
 
 1. 開啟命令列終端機，然後輸入以下Maven命令：
 
@@ -62,11 +62,11 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   > 如果目標為AEM 6.5.5+取代 `aemVersion="cloud"` 替換為 `aemVersion="6.5.5"`. 如果鎖定目標6.4.8+，請使用 `aemVersion="6.4.8"`.
+   > 如果目標為AEM 6.5.5+會將`aemVersion="cloud"`取代為`aemVersion="6.5.5"`。 如果目標為6.4.8+，請使用`aemVersion="6.4.8"`。
 
-   請注意 `frontendModule=react` 屬性。 這會告訴AEM專案原型使用啟動器啟動專案 [React程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html) 與AEM SPA編輯器搭配使用。 屬性，例如 `appTitle`， `appId`， `artifactId`、和 `groupId` 用於識別專案和用途。
+   注意`frontendModule=react`屬性。 這會告知AEM專案原型使用要與AEM SPA編輯器一起使用的起始程式[React程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)來啟動專案。 屬性（如`appTitle`、`appId`、`artifactId`和`groupId`）可用來識別專案和用途。
 
-   設定專案的可用屬性完整清單 [可在此處找到](https://github.com/adobe/aem-project-archetype#available-properties).
+   您可以在此處](https://github.com/adobe/aem-project-archetype#available-properties)找到設定專案[的可用屬性完整清單。
 
 1. 下列資料夾和檔案結構是由本機檔案系統上的Maven原型所產生：
 
@@ -89,14 +89,14 @@ ht-degree: 1%
        |--- .gitignore
    ```
 
-   每個資料夾代表一個單獨的Maven模組。 在本教學課程中，我們將主要使用 `ui.frontend` 模組，亦即React應用程式。 如需個別模組的詳細資訊，請參閱 [AEM專案原型檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
+   每個資料夾代表一個單獨的Maven模組。 在本教學課程中，我們將主要使用`ui.frontend`模組，即React應用程式。 有關個別模組的更多詳細資訊，請參閱[AEM Project Archetype檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)。
 
 ## 部署和建置專案
 
 接下來，使用Maven編譯、建置專案計畫碼並將其部署到AEM的本機執行個體。
 
-1. 確認AEM的執行個體正在連線埠上本機執行 **4502**.
-1. 從命令列導覽至 `aem-guides-wknd-spa.react` 專案目錄。
+1. 請確定AEM的執行個體正在連線埠&#x200B;**4502**&#x200B;上本機執行。
+1. 從命令列導覽至`aem-guides-wknd-spa.react`專案目錄。
 
    ```shell
    $ cd aem-guides-wknd-spa.react
@@ -132,13 +132,13 @@ ht-degree: 1%
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven設定檔 `autoInstallSinglePackage` 編譯專案的個別模組，並將單一套件部署至AEM執行個體。 依預設，此套件會部署至在本機執行於連線埠的AEM執行個體 **4502** 且憑證為 `admin:admin`.
+   Maven設定檔`autoInstallSinglePackage`會編譯專案的個別模組，並將單一套件部署至AEM執行個體。 依預設，此封裝會部署至在本機執行於連線埠&#x200B;**4502**&#x200B;上且認證為`admin:admin`的AEM執行個體。
 
-1. 瀏覽至 **封裝管理員** 在本機AEM執行個體上： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
+1. 瀏覽至本機AEM執行個體上的&#x200B;**封裝管理員**： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)。
 
-1. 您應該會看到多個前置詞為的套件 `aem-guides-wknd-spa.react`.
+1. 您應該會看到多個前置詞為`aem-guides-wknd-spa.react`的封裝。
 
-   ![WKND SPA套件](assets/create-project/package-manager.png)
+   ![WKND SPA封裝](assets/create-project/package-manager.png)
 
    *AEM封裝管理員*
 
@@ -148,19 +148,19 @@ ht-degree: 1%
 
 接下來，開啟原型產生的入門SPA並更新部分內容。
 
-1. 導覽至 **網站** 主控台： [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content).
+1. 導覽至&#x200B;**網站**&#x200B;主控台： [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)。
 
-   WKND SPA包含基本網站結構，其中包含國家/地區、語言和首頁。 此階層是以原型的預設值為基礎 `language_country` 和 `isSingleCountryWebsite`. 這些值可以透過更新 [可用屬性](https://github.com/adobe/aem-project-archetype#available-properties) 產生專案時。
+   WKND SPA包含基本網站結構，其中包含國家/地區、語言和首頁。 此階層是根據`language_country`和`isSingleCountryWebsite`的原型預設值。 產生專案時，可以更新[可用的屬性](https://github.com/adobe/aem-project-archetype#available-properties)來覆寫這些值。
 
-2. 開啟 **us** > **en** > **wknd SPA React首頁** 選取頁面並按一下 **編輯** 功能表列中的按鈕：
+2. 選取頁面，然後按一下功能表列中的&#x200B;**編輯**&#x200B;按鈕，開啟&#x200B;**us** > **en** > **WKND SPA React首頁**&#x200B;頁面：
 
    ![網站主控台](./assets/create-project/open-home-page.png)
 
-3. A **文字** 元件已新增至頁面。 您可以像在AEM中編輯任何其他元件一樣編輯此元件。
+3. **Text**&#x200B;元件已新增至頁面。 您可以像在AEM中編輯任何其他元件一樣編輯此元件。
 
    ![更新文字元件](./assets/create-project/update-text-component.gif)
 
-4. 新增其他 **文字** 元件至頁面。
+4. 新增額外的&#x200B;**Text**&#x200B;元件至頁面。
 
    請注意，製作體驗類似於傳統AEM Sites頁面的製作體驗。 目前可用的元件數量有限。 在本教學課程中新增更多內容。
 
@@ -168,13 +168,13 @@ ht-degree: 1%
 
 接下來，確認這是使用瀏覽器開發人員工具的單頁應用程式。
 
-1. 在 **頁面編輯器**，按一下 **頁面資訊** 按鈕> **以發佈的形式檢視**：
+1. 在&#x200B;**頁面編輯器**&#x200B;中，按一下&#x200B;**頁面資訊**&#x200B;按鈕> **以發佈的形式檢視**：
 
    ![以發佈的形式檢視按鈕](./assets/create-project/view-as-published.png)
 
-   這將使用查詢引數開啟一個新索引標籤 `?wcmmode=disabled` 會有效地關閉AEM編輯器： [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
+   這將開啟一個具有查詢引數`?wcmmode=disabled`的新索引標籤，這會有效地關閉AEM編輯器： [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
 
-2. 檢視頁面來源，並注意文字內容 **[!DNL Hello World]** 或找不到任何其他內容。 您應該會看到類似以下的HTML：
+2. 檢視頁面的來源，並注意找不到文字內容&#x200B;**[!DNL Hello World]**&#x200B;或任何其他內容。 您應該會看到類似以下的HTML：
 
    ```html
    ...
@@ -186,20 +186,20 @@ ht-degree: 1%
    ...
    ```
 
-   `clientlib-react.min.js` 是載入到頁面上的React SPA，負責轉譯內容。
+   `clientlib-react.min.js`是載入到頁面上的React SPA，負責轉譯內容。
 
-   不過， *內容來自何處？*
+   但是，*內容來自何處？*
 
 3. 返回標籤： [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
-4. 開啟瀏覽器的開發人員工具，並在重新整理期間檢查頁面的網路流量。 檢視 **XHR** 要求：
+4. 開啟瀏覽器的開發人員工具，並在重新整理期間檢查頁面的網路流量。 檢視&#x200B;**XHR**&#x200B;要求：
 
    ![XHR要求](./assets/create-project/xhr-requests.png)
 
-   應該會有一個要求 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). 這包含所有將驅動SPA的內容（格式化為JSON）。
+   應該有對[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)的請求。 這包含所有將驅動SPA的內容（格式化為JSON）。
 
-5. 在新標籤中開啟 [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)
+5. 在新標籤中開啟[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)
 
-   請求 `en.model.json` 表示將驅動應用程式的內容模型。 Inspect JSON輸出，您應該能夠找到代表 **[!UICONTROL 文字]** 元件。
+   請求`en.model.json`代表將驅動應用程式的內容模型。 Inspect JSON輸出，您應該能夠找到代表&#x200B;**[!UICONTROL Text]**&#x200B;元件的程式碼片段。
 
    ```json
    ...
@@ -232,4 +232,4 @@ SPA相當簡單。 在接下來的幾個章節中，將新增更多功能。
 
 ### 後續步驟 {#next-steps}
 
-[整合SPA](integrate-spa.md)  — 瞭解SPA原始程式碼如何與AEM專案整合，並瞭解可用於快速開發SPA的工具。
+[整合SPA](integrate-spa.md) — 瞭解SPA原始程式碼如何與AEM專案整合，並瞭解可用於快速開發SPA的工具。

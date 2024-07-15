@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 啟用詳細ORB追蹤的步驟
 
-*此影片會逐步說明啟用詳細ORB追蹤的步驟。*
+*此影片逐步說明啟用詳細的ORB追蹤的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335526?quality=12&learn=on)

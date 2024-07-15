@@ -1,6 +1,6 @@
 ---
 title: 瞭解Asset Share Commons的使用者體驗
-description: Assets Share Commons功能與技術瞭解資料
+description: Assets共用區功能與技術瞭解資料
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution

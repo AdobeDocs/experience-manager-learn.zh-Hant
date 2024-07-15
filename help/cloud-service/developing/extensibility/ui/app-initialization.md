@@ -30,4 +30,4 @@ ht-degree: 0%
 >
 > 上述影片會示範如何使用內容片段主控台擴充功能，以說明App Builder擴充功能應用程式初始化。 不過，請務必注意，涵蓋的概念可套用至所有AEM UI擴充功能。
 
-請參閱Adobe Developer檔案以瞭解 [應用程式初始化程式的詳細逐步解說](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation/#launch-code-generation-during-project-initialization).
+請參閱Adobe Developer檔案，以取得[應用程式初始化程式的詳細逐步解說](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation/#launch-code-generation-during-project-initialization)。

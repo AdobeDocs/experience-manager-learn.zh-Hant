@@ -18,11 +18,11 @@ ht-degree: 1%
 
 # 擷取表單的JSON
 
-登入您的AEM Forms作者執行個體，並使用建立新的最適化 **核心元件空白** 範本。 將您的表單發佈到發佈執行個體。
+登入您的AEM Forms作者執行個體，並使用&#x200B;**Blank with Core Components**&#x200B;範本建立新的最適化。 將您的表單Publish至發佈執行個體。
 
 若要內嵌表單，我們會先對發佈伺服器發出get呼叫，擷取最適化表單的json。
 
-下列程式碼片段會擷取最適化表單的json，稱為 **contact**
+下列程式碼片段會擷取名為&#x200B;**contactus**&#x200B;的最適化表單的json
 
 ```javascript
 const getForm = async () => {
@@ -78,7 +78,7 @@ export default function Contact(){
 }
 ```
 
-上述程式碼使用原生html元件，這些元件對應至最適化表單中使用的元件。 例如，我們將文字輸入最適化表單元件對應至TextField元件。 文章中使用的原生元件 [可從此處下載](./assets/native-components.zip)
+上述程式碼使用原生html元件，這些元件對應至最適化表單中使用的元件。 例如，我們將文字輸入最適化表單元件對應至TextField元件。 文章[中使用的原生元件可從這裡](./assets/native-components.zip)下載
 
 ## 後續步驟
 

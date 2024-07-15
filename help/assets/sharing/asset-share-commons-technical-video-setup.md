@@ -1,6 +1,6 @@
 ---
 title: 在本機AEM上設定Asset Share Commons
-description: Assets Share Commons功能與技術瞭解資料
+description: Assets共用區功能與技術瞭解資料
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution

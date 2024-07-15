@@ -32,7 +32,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本教學課程中的下拉式清單及卡片版面配置是使用建立的 [材質UI程式庫](https://mui.com/). 您需要下載適當的素材UI套件，讓程式碼在您的系統上正常運作。
+>此教學課程中的下拉式清單和卡片版面配置是使用[素材UI程式庫](https://mui.com/)建立的。 您需要下載適當的素材UI套件，讓程式碼在您的系統上正常運作。
 
 ## 設定Proxy
 
@@ -56,7 +56,7 @@ module.exports = function(app) {
 };
 ```
 
-您還需要安裝並新增 **http-proxy-middleware** 模組。
+您還需要安裝&#x200B;**http-proxy-middleware**&#x200B;模組，並將其新增至專案。
 
 ## 後續步驟
 

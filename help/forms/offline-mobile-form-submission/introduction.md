@@ -26,7 +26,7 @@ ht-degree: 0%
 * 處理來自Acrobat/Reader的PDF提交
 * 觸發Adobe Experience Manager (AEM)工作流程以檢閱提交的PDF
 
-本教學課程將逐步解說完成上述使用案例所需的步驟。 與本教學課程相關的範常式式碼和資產為 [此處提供。](part-four.md)
+本教學課程將逐步解說完成上述使用案例所需的步驟。 此教學課程的相關範常式式碼和資產[可在此取得。](part-four.md)
 
 以下影片提供使用案例的概觀
 

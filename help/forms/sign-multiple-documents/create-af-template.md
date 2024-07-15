@@ -25,12 +25,12 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=12&learn=on)
 
-[您可以依照本文章瞭解建立最適化表單範本和頁面元件的程式](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en#storing-and-retrieving-form-data)
+[您可以依照本文瞭解建立最適化表單範本和頁面元件的程式](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en#storing-and-retrieving-form-data)
 
 
 ## Assets
 
-本教學課程使用的範本和頁面元件可以是 [已從此處下載](assets/sign-multiple-forms-template.zip)
+此教學課程中使用的範本和頁面元件可從這裡[下載](assets/sign-multiple-forms-template.zip)
 
 ## 後續步驟
 

@@ -1,6 +1,6 @@
 ---
 title: Assets管理員搜尋邊欄
-description: 資產管理員搜尋邊欄可讓您使用Omnisearch中的自訂條件來搜尋資產。
+description: Assets管理員搜尋邊欄可讓您使用Omnisearch中的自訂條件來搜尋資產。
 sub-product: Experience Manager Assets
 feature: Search
 version: Cloud Service
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 # Assets管理員搜尋邊欄
 
-資產管理員搜尋邊欄可讓您使用Omnisearch中的自訂條件來搜尋資產。
+Assets管理員搜尋邊欄可讓您使用Omnisearch中的自訂條件來搜尋資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35842?quality=12&learn=on)

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何為Workbench啟用除錯輸出
 
-*本影片會逐步解說為Workbench啟用除錯輸出的程式。*
+*此影片會逐步說明為Workbench啟用除錯輸出的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335497?quality=12&learn=on)

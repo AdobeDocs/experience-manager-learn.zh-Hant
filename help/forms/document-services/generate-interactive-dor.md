@@ -78,11 +78,12 @@ $(document).ready(function() {
 
 ### 從xml資料產生XSD
 
-您可以使用任何免費的線上工具來 [產生XSD](https://www.freeformatter.com/xsd-generator.html) 來自上一步驟中產生的xml資料。
+您可以使用任何免費的線上工具，從上個步驟產生的xml資料中[產生XSD](https://www.freeformatter.com/xsd-generator.html)。
 
 ### 建立最適化表單
 
-根據上一步的XSD建立最適化表單。 建立表單關聯以使用使用者端程式庫「irs」。 此使用者端程式庫具有向servlet進行POST呼叫的程式碼，此servlet會將PDF傳回給呼叫的應用程式。以下程式碼會在 _下載PDF_ 已點按
+根據上一步的XSD建立最適化表單。 建立表單關聯以使用使用者端程式庫「irs」。 此使用者端程式庫具有向servlet進行POST呼叫的程式碼，此servlet會將PDF傳回給呼叫的應用程式
+按一下_下載PDF_&#x200B;時會觸發下列程式碼
 
 ```javascript
 $(document).ready(function() {
@@ -117,7 +118,7 @@ $(document).ready(function() {
 
 ## 建立自訂servlet
 
-建立自訂servlet，將資料與XDP範本合併並傳回pdf。 完成此任務的程式碼如下。 自訂servlet是 [AEMFormsDocumentServices.core-1.0-SNAPSHOT套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar))。
+建立自訂servlet，將資料與XDP範本合併並傳回pdf。 完成此任務的程式碼如下。 自訂servlet是[AEMFormsDocumentServices.core-1.0-SNAPSHOT組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)的一部分。
 
 ```java
 public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
@@ -217,14 +218,15 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 若要在本機伺服器上測試此專案，請遵循下列步驟：
 
 1. [下載並安裝DevelopingWithServiceUser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. 在Apache Sling服務使用者對應程式服務DevelopingWithServiceUser.core：getformsresourceresolver=fd-service中新增以下專案
-1. [下載並安裝自訂DocumentServices套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). 這有servlet可合併資料與XDP範本，並串流回pdf
+1. 在Apache Sling服務使用者對應程式服務中新增以下專案
+DevelopingWithServiceUser.core：getformsresourceresolver=fd-service
+1. [下載並安裝自訂DocumentServices套件](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。 這有servlet可合併資料與XDP範本，並串流回pdf
 1. [匯入使用者端資源庫](assets/generate-interactive-dor-client-lib.zip)
-1. [匯入文章資產（最適化表單、XDP範本和XSD）](assets/generate-interactive-dor-sample-assets.zip)
+1. [匯入Assets文章（最適化表單、XDP範本和XSD）](assets/generate-interactive-dor-sample-assets.zip)
 1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. 填寫一些表單欄位。
 1. 按一下「下載PDF」以取得PDF。 您可能需要等候幾秒鐘，才能下載PDF。
 
 >[!NOTE]
 >
->您可以透過嘗試相同的使用案例 [非xsd型最適化表單](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). 請務必將適當的引數傳遞至irs clientlib中streampdf.js的張貼端點。
+>您可以透過[非xsd型最適化表單](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled)嘗試相同的使用案例。 請務必將適當的引數傳遞至irs clientlib中streampdf.js的張貼端點。

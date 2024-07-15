@@ -29,12 +29,12 @@ ht-degree: 0%
 * [Adobe XD UI套件](https://github.com/adobe/aem-site-template-basic/blob/main/files/wireframe.xd)
 * [AEM網站範本](https://github.com/adobe/aem-site-template-basic)
 
-## AEMas a Cloud Service環境 {#environment}
+## AEM as a Cloud Service環境 {#environment}
 
-本教學課程中的步驟將在Adobe Experience Manager as a Cloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 建議使用 [沙箱計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) 和 [開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) 完成本教學課程時。
+本教學課程中的步驟將在Adobe Experience Manager as a Cloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 完成本教學課程時，建議使用[沙箱程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)。
 
 ## 後續步驟 {#next-steps}
 
 逐步教學課程會使用「快速網站建立」功能，逐步引導您為虛擬生活風格品牌WKND實作AEM網站。
 
-您還在等什麼?!導覽至「 」以開始本教學課程 [建立網站](create-site.md) 章節，並瞭解如何使用網站範本產生新的Adobe Experience Manager專案。
+您還在等什麼?!導覽至[建立網站](create-site.md)章節，開始進行教學課程，並瞭解如何使用網站範本產生新的Adobe Experience Manager專案。

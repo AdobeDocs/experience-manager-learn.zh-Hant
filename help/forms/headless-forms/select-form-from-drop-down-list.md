@@ -18,13 +18,13 @@ ht-degree: 1%
 
 # 從下拉式清單中選取要填寫的表單
 
-下拉式清單提供精簡且有條理的方式，向使用者呈現選項清單。 下拉式清單中的專案會填入 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)
+下拉式清單提供精簡且有條理的方式，向使用者呈現選項清單。 下拉式清單中的專案將會填入[listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)的結果
 
 ![卡片檢視](./assets/forms-drop-down.png)
 
 ## 下拉式清單
 
-下列程式碼可用來將listforms API呼叫的結果填入下拉式清單中。 根據使用者選擇，將顯示最適化表單以供使用者填寫和提交。 [原物料UI元件](https://mui.com/) 已用於建立此介面
+下列程式碼可用來將listforms API呼叫的結果填入下拉式清單中。 根據使用者選擇，將顯示最適化表單以供使用者填寫和提交。 建立此介面時已使用[原物料UI元件](https://mui.com/)
 
 ```javascript
 import * as React from 'react';
@@ -126,10 +126,10 @@ const getAFForms =async()=>
 
 建立此使用者介面時，使用了下列兩個API呼叫
 
-* [清單表單](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). 擷取表單的呼叫只會在元件轉譯時執行一次。 API呼叫的結果儲存在afForms變數中。
+* [清單表單](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)。 擷取表單的呼叫只會在元件轉譯時執行一次。 API呼叫的結果儲存在afForms變數中。
 在上述程式碼中，我們會使用map函式來反複執行afForms，針對afForms陣列中的每個專案，會建立MenuItem元件並新增至Select元件。
 
-* 擷取表單 — 對 [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition)，其中id是使用者在下拉式清單中選取的最適化表單的id。 此GET呼叫的結果會儲存在selectedForm中。
+* 擷取表單 — 會對[getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition)進行get呼叫，其中識別碼是使用者在下拉式清單中選取的最適化表單的識別碼。 此GET呼叫的結果會儲存在selectedForm中。
 
 ```
 const resp = await fetch(`/adobe/forms/af/${formID}`);

@@ -32,5 +32,5 @@ Adobe Experience Manager 以 Adobe IMS 使用者、使用者群組和產品設�
 
 ## 其他資源
 
-+ [Adobe Experience Manager as a Cloud Service的IMS支援](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html)
++ 適用於Adobe Experience Manager as a Cloud Service的[IMS支援](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html)
 + [AEM提供的使用者群組及其許可權](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups)

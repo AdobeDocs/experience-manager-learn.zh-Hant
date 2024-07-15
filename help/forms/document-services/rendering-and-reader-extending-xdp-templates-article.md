@@ -25,10 +25,10 @@ ht-degree: 0%
 
 若要完成此使用案例，我們需要執行下列動作。
 
-* 將Reader延伸憑證新增至「fd-service」使用者。 列出新增Reader延伸模組認證的步驟 [此處](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)
+* 將Reader延伸憑證新增至「fd-service」使用者。 [這裡](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)列出新增Reader延伸認證的步驟
 
 
-* 您也可以參閱以下影片： [設定Reader擴充功能認證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
+* 您也可以參考有關[設定Reader延伸認證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)的影片
 
 
 * 建立可轉譯及套用使用許可權的自訂OSGi服務。 完成此任務的程式碼如下
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 下列熒幕擷圖顯示公開的組態屬性。 大部分的常見使用許可權會透過此設定公開。
 
-![設定屬性](assets/configurationproperties.gif)
+![組態屬性](assets/configurationproperties.gif)
 
 下列程式碼顯示用來建置OSGi組態設定的程式碼
 
@@ -126,7 +126,7 @@ public @interface DocSvcConfiguration {
 
 下一步是使用GET方法建立servlet，以將讀取器擴展PDF傳回給使用者。 在這種情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會呈現為動態PDF，而且瀏覽器隨附的pdf檢視器不會處理動態pdf。
 
-以下是servlet的程式碼。 我們將CRX存放庫中的XDP路徑傳遞給此servlet。
+以下是servlet的程式碼。 我們會將CRX存放庫中的XDP路徑傳遞給此servlet。
 
 然後呼叫com.aemformssamples.documentservices.core.DocumentServices的renderAndExtendXdp方法。
 
@@ -204,5 +204,5 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 1. [使用封裝管理程式將和本文相關的資產下載並匯入到AEM](assets/renderandextendxdp.zip)
    * 此套件具有範例入口網站和xdp檔案
 1. 將Reader延伸憑證新增至「fd-service」使用者
-1. 將瀏覽器指向 [入口網站網頁](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
+1. 將瀏覽器指向[入口網站網頁](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
 1. 按一下pdf圖示將xdp轉譯為已套用使用許可權的pdf檔案。

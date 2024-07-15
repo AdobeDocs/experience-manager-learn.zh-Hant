@@ -1,6 +1,6 @@
 ---
-title: 如何在AEMas a Cloud Service中使用OSGi設定？
-description: 探索如何在AEMas a Cloud Service中定義和部署OSGi設定。
+title: 如何在AEM as a Cloud Service中使用OSGi設定？
+description: 探索如何在AEM as a Cloud Service中定義和部署OSGi設定。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # OSGi設定
 
-探索如何在AEMas a Cloud Service中定義和部署OSGi設定。
+探索如何在AEM as a Cloud Service中定義和部署OSGi設定。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330559?quality=12&learn=on)

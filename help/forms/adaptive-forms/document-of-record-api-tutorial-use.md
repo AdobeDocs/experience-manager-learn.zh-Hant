@@ -20,7 +20,7 @@ ht-degree: 0%
 
 以程式設計方式產生記錄檔案(DOR)
 
-本文說明如何使用 `com.adobe.aemds.guide.addon.dor.DoRService API` 以產生 **記錄檔案** 以程式設計方式。 [記錄檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) 是在最適化表單中擷取的資料的PDF版本。
+本文說明如何使用`com.adobe.aemds.guide.addon.dor.DoRService API`以程式設計方式產生&#x200B;**記錄檔案**。 [記錄檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)是在最適化表單中擷取的資料的PDF版本。
 
 1. 以下是程式碼片段。 第一行取得DOR服務。
 1. 設定DoROptions。
@@ -66,10 +66,10 @@ session.save();
 若要在本機系統上嘗試此方法，請遵循下列步驟
 
 1. [使用封裝管理程式下載及安裝文章資產](assets/dor-with-api.zip)
-1. 請確定您已安裝並啟動作為一部分提供的DevelopingWithServiceUser套件 [建立服務使用者文章](service-user-tutorial-develop.md)
+1. 請確定您已安裝並啟動作為[建立服務使用者文章](service-user-tutorial-develop.md)的一部分提供的DevelopingWithServiceUser套件
 1. [登入configMgr](http://localhost:4502/system/console/configMgr)
 1. 搜尋Apache Sling服務使用者對應程式服務
-1. 請確定您有以下專案 _DevelopingWithServiceUser.core：getformsresourceresolver=fd-service_ 在「服務對應」段落中
+1. 在[服務對應]區段中確定下列專案&#x200B;_DevelopingWithServiceUser.core：getformsresourceresolver=fd-service_
 1. [開啟表單](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
 1. 填寫表單並按一下「檢視PDF」
 1. 您應該會在瀏覽器的新標籤中看到DOR
@@ -81,5 +81,5 @@ PDF不會顯示在新的瀏覽器標籤中：
 
 1. 請確定您未封鎖瀏覽器中的快顯視窗
 1. 請確定您是以管理員身分啟動AEM伺服器（至少在Windows上）
-1. 確定&#39;DevelopingWithServiceUser&#39;套件組合位於 *作用中狀態*
-1. [確定系統使用者](http://localhost:4502/useradmin) &#39; fd-service&#39;擁有下列節點的讀取、修改和建立許可權 `/content/usergenerated/content/aemformsenablement`
+1. 確定&#39;DevelopingWithServiceUser&#39;組合處於&#x200B;*作用中狀態*
+1. [請確定系統使用者](http://localhost:4502/useradmin) &#39; fd-service&#39;在下列節點`/content/usergenerated/content/aemformsenablement`上具有[讀取]、[修改]和[建立]許可權

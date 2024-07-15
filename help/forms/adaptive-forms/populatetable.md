@@ -23,12 +23,13 @@ ht-degree: 0%
 ![clickevent](assets/amortization.PNG)
 
 Row1設定為依據服務呼叫傳回的資料而成長。 請注意此處指定的重複設定。 值–1表示表格中的列數不受限制
-![Row1](assets/rowconfiguration.PNG)
+![列1](assets/rowconfiguration.PNG)
 
 ## 在您的伺服器上部署此專案
 
-[依照此處指定安裝Tomcat](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[將此zip檔案中包含的SampleRest.war檔案部署至Tomcat中](assets/sample-rest.zip)
-[安裝資產](assets/amortizationschedule.zip) 使用AEM封裝管理員
-[開啟攤銷排程表單](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-輸入適當的值，然後按一下「計算攤銷排程」，即會填入您的表單
+[依照此處指定的方式安裝Tomcat](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
+[在您的Tomcat中部署包含在這個zip檔案中的SampleRest.war檔案](assets/sample-rest.zip)
+[使用AEM封裝管理員安裝資產](assets/amortizationschedule.zip)
+[開啟分期付款排程表](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
+輸入適當的值，然後按一下計算
+攤銷排程應填入您的表單中

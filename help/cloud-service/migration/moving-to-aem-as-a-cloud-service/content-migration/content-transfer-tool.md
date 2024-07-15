@@ -1,6 +1,6 @@
 ---
 title: 使用內容轉移工具進行內容移轉
-description: 瞭解內容轉移工具如何協助您將內容從AEM 6as a Cloud Service移轉至AEM。
+description: 瞭解內容轉移工具如何協助您將內容從AEM 6移轉至AEM as a Cloud Service。
 version: Cloud Service
 topic: Migration, Upgrade
 feature: Migration
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 # 內容轉移工具
 
-瞭解內容轉移工具如何協助您將內容從AEM 6.3+as a Cloud Service移轉至AEM。
+瞭解內容轉移工具如何協助您將內容從AEM 6.3+移轉至AEM as a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336970?quality=12&learn=on)
 
@@ -28,18 +28,18 @@ ht-degree: 3%
 
 ![內容轉移工具生命週期](../assets/content-transfer-tool.png)
 
-「內容轉移工具」已安裝在AEM 6.3+上，可將內容轉移到AEMas a Cloud Service。
+「內容轉移工具」已安裝在AEM 6.3+上，可將內容轉移到AEM as a Cloud Service。
 
 ## 重要活動
 
-+ 下載 [最新內容轉移工具](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2).
-+ 將AEM Author 6.3+最終內容轉移至AEMas a Cloud Service作者服務。
++ 下載[最新的內容轉移工具](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2)。
++ 將AEM Author 6.3+最終內容傳輸至AEM as a Cloud Service Author服務。
    + 在AEM 6.3+作者上安裝「內容轉移工具」，其中包含要轉移的最終內容。
    + 以批次方式執行「內容轉移工具」，轉移內容集。
-+ 將AEM Publish 6.3+最終內容轉移到AEMas a Cloud Service發佈服務。
-   + 在AEM 6.3+ Publish上安裝內容轉移工具，其中包含要轉移的最終內容。
++ 將AEM Publish 6.3+最終內容傳輸至AEM as a Cloud Service Publish服務。
+   + 在AEM 6.3+ Publish上安裝「內容轉移工具」，其中包含要轉移的最終內容。
    + 以批次方式執行「內容轉移工具」，轉移內容集。
-+ 可選擇在AEMas a Cloud Service上使用「追加」內容，方式為自上次內容轉移以來轉移新內容
++ 可選擇在AEM as a Cloud Service上使用「追加」內容，方式為自上次內容轉移後轉移新內容
 
 ## 實作練習
 
@@ -66,12 +66,12 @@ ht-degree: 3%
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">透過內容轉移工具動手操作</div>
             <p style="margin:1rem 0">
-                探索「內容轉移工具」如何自動將內容從AEM 6移至AEMas a Cloud Service。
+                探索「內容轉移工具」如何自動將內容從AEM 6移至AEM as a Cloud Service。
             </p>
             <a  rel="noreferrer"
                 target="_blank"
                 href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session6-transfercontent#cloud-acceleration-bootcamp---session-6-content" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">試用內容轉移工具</span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">嘗試內容轉移工具</span>
             </a>
         </td>
     </tr>

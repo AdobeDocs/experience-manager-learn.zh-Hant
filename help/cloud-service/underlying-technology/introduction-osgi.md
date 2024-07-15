@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 簡介 [!DNL OSGi] {#introduction-osgi}
+# [!DNL OSGi]簡介 {#introduction-osgi}
 
-簡介 [!DNL OSGi]，動態模組化架構，適用於 [!DNL Java] Adobe Experience Manager的基礎應用程式。
+介紹[!DNL OSGi]，這是[!DNL Java]應用程式的動態模組化架構，是Adobe Experience Manager的基礎。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32031?quality=12&learn=on)

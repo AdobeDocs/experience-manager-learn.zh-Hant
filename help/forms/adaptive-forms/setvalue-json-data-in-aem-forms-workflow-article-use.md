@@ -20,7 +20,7 @@ ht-degree: 0%
 
 由於最適化表單在AEM Workflow中路由給不同的使用者，因此需要根據檢閱表單的人來隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 您可以根據此隱藏欄位的值來編寫商業規則，以隱藏/停用適當的面板或欄位。
 
-![在JSON資料中設定元素值](assets/capture-3.gif)
+![在JSON資料中設定專案的值](assets/capture-3.gif)
 
 在AEM Forms OSGi中 — 我們必須建立自訂OSGi套件組合以設定JSON資料元素的值。 此套件組合是作為本教學課程的一部分提供。
 
@@ -42,27 +42,27 @@ afData.afUnboundData.data.initialStep,N
 
 * [下載並部署DevelopingWidthServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下載並部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 這是自訂OSGI套件組合，可讓您在提交的json資料中設定元素的值。
+* [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 這是自訂OSGI套件組合，可讓您在提交的json資料中設定元素的值。
 
 * [下載並解壓縮zip檔案的內容](assets/set-value-jsondata.zip)
-   * 將瀏覽器指向 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+   * 將瀏覽器指向[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
       * 匯入並安裝SetValueOfElementInJSONDataWorkflow.zip。此封裝包含與表單相關聯的範例工作流程模型和表單資料模型。
 
-* 將瀏覽器指向 [Forms與檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 將瀏覽器指向[Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下建立 | 檔案上傳
 * 上傳TimeOffRequestForm.zip檔案
   **此表單是使用AEM Forms 6.4建置的。請確定您使用的是AEM Forms 6.4或更高版本**
-* 開啟 [表單](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
+* 開啟[表單](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
 * 填寫開始和結束日期並提交表單。
-* 前往 [&quot;收件匣&quot;](http://localhost:4502/aem/inbox)
+* 移至[「收件匣」](http://localhost:4502/aem/inbox)
 * 開啟與工作關聯的表單。
 * 請注意，第一個面板中的欄位已停用。
 * 請注意，核准或拒絕請求的面板現在可見。
 
 >[!NOTE]
 >
->由於我們使用使用者設定檔預先填入最適化表單，請向管理員確認 [使用者設定檔資訊](http://localhost:4502/security/users.html). 至少請確定您已設定FirstName、LastName和Email欄位值。
->您可以為com.aemforms.setvalue.core.SetValueInJson啟用記錄器以啟用偵錯記錄 [從這裡](http://localhost:4502/system/console/slinglog)
+>由於我們正在使用使用者設定檔預先填入最適化表單，請確定管理員[使用者設定檔資訊](http://localhost:4502/security/users.html)。 至少請確定您已設定FirstName、LastName和Email欄位值。
+>您可以從這裡](http://localhost:4502/system/console/slinglog)啟用com.aemforms.setvalue.core.SetValueInJson [的記錄器，以啟用偵錯記錄
 
 >[!NOTE]
 >

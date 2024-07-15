@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 驗證擴充功能
 
-AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a Cloud Service環境進行驗證。
+AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEM as a Cloud Service環境進行驗證。
 
 擴充功能測試是透過巧盡心思構建的URL來完成，它會指示AEM載入擴充功能，但僅限於該要求。
 
@@ -34,12 +34,12 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
 
 ![AEM內容片段主控台URL](./assets/verify/content-fragment-console-url.png){align="center"}
 
-若要建立將非生產擴充功能掛載至AEM的URL，必須取得插入擴充功能的AEM UI的URL。 導覽至AEMas a Cloud Service環境以驗證擴充功能，然後開啟要預覽擴充功能的UI。
+若要建立將非生產擴充功能掛載至AEM的URL，必須取得插入擴充功能的AEM UI的URL。 導覽至AEM as a Cloud Service環境以驗證擴充功能是否開啟，並開啟要預覽擴充功能的UI。
 
 例如，若要預覽內容片段主控台的擴充功能：
 
-1. 登入所需的AEMas a Cloud Service環境。
-1. 選取 __內容片段__ 圖示。
+1. 登入所需的AEM as a Cloud Service環境。
+1. 選取&#x200B;__內容片段__&#x200B;圖示。
 1. 等候在瀏覽器中載入AEM內容片段主控台。
 1. 從瀏覽器的位址列複製AEM內容片段主控台的URL，看起來應該類似於：
 
@@ -65,14 +65,14 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
      -> https://experience.adobe.com/?devMode=true#/custom-apps/?localDevUrl=https://localhost:9080
    ```
 
-記下本機應用程式URL，如下所示 `-> https://localhost:9080`
+記下本機應用程式URL，以上顯示為`-> https://localhost:9080`
 
-1. 最初（以及當您看到連線錯誤時）開啟 `https://localhost:9080` （或是您的本機應用程式URL為何），並手動接受 [HTTPS憑證](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users).
-1. 將下列兩個查詢引數新增至 [AEM UI的URL](#aem-ui-url)
+1. 一開始（以及每當您看到連線錯誤時），在網頁瀏覽器中開啟`https://localhost:9080` （或您的本機應用程式URL為何），然後手動接受[HTTPS憑證](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users)。
+1. 將下列兩個查詢引數新增至[AEM UI的URL](#aem-ui-url)
    + `&devMode=true`
-   + `&ext=<LOCAL APPLICATION URL>`，通常 `&ext=https://localhost:9080`.
+   + `&ext=<LOCAL APPLICATION URL>`，通常為`&ext=https://localhost:9080`。
 
-   新增上述兩個查詢引數(`devMode` 和 `ext`)作為 __第一__ url中的查詢引數。 AEM可擴充UI的使用雜湊路由(`#/@wknd/aem/...`)，因此在 `#` 無法運作。
+   將以上兩個查詢引數（`devMode`和`ext`）新增為URL中的&#x200B;__第一個__&#x200B;查詢引數。 AEM的可擴充UI使用雜湊路由(`#/@wknd/aem/...`)，因此在`#`無法運作後錯誤修正引數。
 
    預覽URL應如下所示：
 
@@ -82,7 +82,7 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
 
 1. 將預覽URL複製並貼到瀏覽器中。
 
-   + 您可能必須先開始，然後定期進行， [接受HTTPS憑證](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users) 本機應用程式的主機(`https://localhost:9080`)。
+   + 您可能必須先接受本機應用程式主機(`https://localhost:9080`)的HTTPS憑證](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users)，然後再定期進行[。
 
 1. AEM UI會載入並插入其本機版本的擴充功能以進行驗證。
 
@@ -93,15 +93,15 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
 ## 驗證階段組建
 
 1. 開啟擴充功能專案根目錄的命令列。
-1. 請確定Stage工作區為作用中（或使用於驗證的任何工作區）。
+1. 請確定Stage工作區作用中(或使用任何Workspace進行驗證)。
 
    ```shell
    $ aio app use -w Stage
    ```
 
-   將任何變更合併至 `.env` 和 `.aio`.
+   合併對`.env`和`.aio`所做的任何變更。
 
-1. 部署更新的擴充功能App Builder應用程式。 如果未登入，請執行 `aio login` 第一。
+1. 部署更新的擴充功能App Builder應用程式。 如果未登入，請先執行`aio login`。
 
    ```shell
    $ aio app deploy
@@ -117,11 +117,11 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
    Successful deployment 🏄
    ```
 
-1. 將下列兩個查詢引數新增至 [AEM UI的URL](#aem-ui-url)
+1. 將下列兩個查詢引數新增至[AEM UI的URL](#aem-ui-url)
    + `&devMode=true`
    + `&ext=<DEPLOYED APPLICATION URL>`
 
-   新增上述兩個查詢引數(`devMode` 和 `ext`)作為 __第一__ URL中的查詢引數，因為可擴充的AEM UI使用雜湊路由(`#/@wknd/aem/...`)，因此在 `#` 無法運作。
+   將以上兩個查詢引數（`devMode`和`ext`）新增為URL中的&#x200B;__第一個__&#x200B;查詢引數，因為可擴充的AEM UI使用雜湊路由(`#/@wknd/aem/...`)，所以在`#`無法運作之後，錯誤地將引數加上修正內容。
 
    預覽URL應如下所示：
 
@@ -134,18 +134,18 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
 
 請記住，使用此方法時，只有在透過製作階段URL存取時，階段擴充功能才會插入到AEM內容片段主控台的。
 
-1. 部署後的擴充功能可透過執行 `aio app deploy` 使用預覽URL時，這些變更會自動反映。
-1. 若要移除擴充功能以進行驗證，請執行 `aio app undeploy`.
+1. 可透過再次執行`aio app deploy`來更新已部署的擴充功能，且這些變更會在使用預覽URL時自動反映。
+1. 若要移除延伸以進行驗證，請執行`aio app undeploy`。
 
 ## 預覽小書籤
 
 如要輕鬆建立上述的預覽和預覽URL，可建立載入擴充功能的JavaScript書籤小程式。
 
-下方的書籤小程式會預覽 [本機開發組建](#verify-local-development-builds) 擴充功能於 `https://localhost:9080`. 預覽 [中繼組建](#verify-stage-builds)，使用建立書籤小程式 `previewApp` 變數設為App Builder已部署應用程式的URL。
+下方的書籤小程式會預覽`https://localhost:9080`上擴充功能的[本機開發組建](#verify-local-development-builds)。 若要預覽[階段組建](#verify-stage-builds)，請建立書籤小程式，並將`previewApp`變數設為已部署的App Builder應用程式的URL。
 
 1. 在瀏覽器中建立書籤。
 1. 編輯書籤。
-1. 為書籤提供有意義的名稱，例如 `AEM UI Extension Preview (localhost:9080)`.
+1. 為書籤指定有意義的名稱，例如`AEM UI Extension Preview (localhost:9080)`。
 1. 將書籤的URL設定為下列程式碼：
 
    ```javascript
@@ -165,4 +165,4 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEMas a C
 
 >[!TIP]
 >
-> 如果App Builder擴充功能未載入，使用時， `&ext=https://localhost:9080`，直接在瀏覽器索引標籤中開啟該主機和連線埠，並接受自我簽署憑證。 然後再次嘗試小書籤。
+> 如果App Builder擴充功能未載入，使用時，請直接在瀏覽器標籤中開啟該主機和連線埠，並接受自我簽署憑證。 `&ext=https://localhost:9080`然後再次嘗試小書籤。

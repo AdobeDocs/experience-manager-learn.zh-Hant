@@ -25,4 +25,4 @@ ht-degree: 5%
 
 ## 在AEM製作中使用產生變數
 
-+ __檔案製作：__ 瞭解如何利用產生變數來建立動態和個人化的檔案，將您的檔案型網站提升至更吸引人且吸引人的體驗。 [檢視檔案](https://www.aem.live/docs/sidekick-generate-variations)
++ __檔案製作：__&#x200B;瞭解如何利用「產生變體」來建立動態和個人化的檔案，將您的檔案型網站提升為更吸引人且吸引人的體驗。 [檢視檔案](https://www.aem.live/docs/sidekick-generate-variations)

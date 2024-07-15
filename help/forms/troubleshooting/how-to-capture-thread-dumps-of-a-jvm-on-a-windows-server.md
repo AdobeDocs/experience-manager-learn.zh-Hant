@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何在Windows伺服器上擷取JVM的對話串傾印
 
-*此影片會逐步說明在Windows伺服器上擷取JVM棧積傾印的步驟。*
+*此影片逐步說明在Windows伺服器上擷取JVM棧積傾印的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335493?quality=12&learn=on)

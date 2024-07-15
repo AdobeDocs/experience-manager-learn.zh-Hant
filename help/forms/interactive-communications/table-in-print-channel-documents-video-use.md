@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/27769?quality=12&learn=on)
 
-表格是用來以表格方式顯示資料。 表格中的列需要根據資料來源傳回的資料而增加或縮小。 若要在列印管道檔案中使用表格，我們需要使用AEM Forms Designer建立版面配置檔案（xdp檔案）。 在此版面配置檔案中，我們新增具有所需欄數的表格。 根據您的要求，確定欄欄位物件型別是TextField或Numeric Field。 對於每個欄，欄位會確定資料繫結已設定為「使用名稱」。
+表格是用來以表格方式顯示資料。 表格中的列需要根據資料來源傳回的資料而增加或縮小。 若要在列印管道檔案中使用表格，我們需要使用AEM Forms Designer建立版面檔案（xdp檔案）。 在此版面配置檔案中，我們新增具有所需欄數的表格。 根據您的要求，確定欄欄位物件型別是TextField或Numeric Field。 對於每個欄，欄位會確定資料繫結已設定為「使用名稱」。
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ ht-degree: 0%
    * 互動式通訊檔案
    * sampleretirementaccountdata.json
 
-* 在中開啟互動式通訊檔案 [編輯模式](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html).
+* 以[編輯模式](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)開啟互動式通訊檔案。
 
 * 將TableDemo版面片段新增至貢獻區段。
 * 將表格儲存格繫結至適當的表單資料模型元素，如影片所示

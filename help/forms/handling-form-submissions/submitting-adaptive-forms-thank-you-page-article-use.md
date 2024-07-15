@@ -32,11 +32,11 @@ ht-degree: 6%
 
 您也可以透過POST提交至外部端點。 若要完成此操作，您只需選取「啟用發佈請求」核取方塊，並提供外部端點的URL。 提交表單時，您會看到感謝頁面，並同時叫用POST端點。
 
-![擷取設定](assets/capture.gif)
+![擷取組態](assets/capture.gif)
 
 若要在您的伺服器上測試此功能，請遵循下列指示：
 
-* 匯入 [使用封裝管理員將與本文相關的資產檔案匯入AEM](assets/submittingtorestendpoint.zip)
-* 將瀏覽器指向 [休假請求表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* 使用封裝管理員](assets/submittingtorestendpoint.zip)將與此文章相關的[資產檔案匯入AEM
+* 將瀏覽器指向[休假申請表](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填寫必填欄位並提交表單
 * 您應該會收到感謝頁面，並在頁面上填入資訊

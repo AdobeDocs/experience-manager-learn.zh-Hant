@@ -1,5 +1,5 @@
 ---
-title: Cloud 5 — 邊緣工作者
+title: Cloud 5 - Edge背景工作
 description: 探索AEM Sites和Edge Delivery Services中邊緣工作者的重要性，以及如何將他們與後端系統整合。
 feature: Edge Delivery Services
 topic: Development
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# Cloud 5 — 邊緣工作者
+# Cloud 5 - Edge背景工作
 
 探索AEM Sites和Edge Delivery Services中邊緣工作者的重要性，以及如何將他們與後端系統整合。
 

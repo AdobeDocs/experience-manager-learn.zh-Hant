@@ -20,7 +20,7 @@ ht-degree: 0%
 
 本文將逐步引導您完成儲存及從資料庫擷取最適化表單資料的相關步驟。 MySQL資料庫是用來儲存最適化表單資料。 基本上，以下是達成使用案例的步驟：
 
-* [設定資料來源](#Configure-Data-Source)
+* [設定Data Source](#Configure-Data-Source)
 * [建立Servlet以將資料寫入資料庫](#create-servlet)
 * [建立OSGI服務以擷取儲存的資料](#create-osgi-service)
 * [建立使用者端資源庫](#create-client-library)
@@ -28,11 +28,11 @@ ht-degree: 0%
 * [功能示範](#capability-demo)
 * [在您的伺服器上部署](#deploy-on-your-server)
 
-## 設定資料來源 {#Configure-Data-Source}
+## 設定Data Source {#Configure-Data-Source}
 
 Apache Sling Connection Pooled DataSource已設定為指向要用來儲存最適化表單資料的資料庫。 下列熒幕擷圖顯示我的執行個體的設定。 下列屬性可以複製並貼上
 
-* `Datasource Name:aemformstutorial`  — 這是我的程式碼中使用的名稱。
+* `Datasource Name:aemformstutorial` — 這是我的程式碼中使用的名稱。
 
 * `JDBC Driver Class:com.mysql.jdbc.Driver`
 

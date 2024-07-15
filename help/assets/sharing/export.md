@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 匯出資產
 
-瞭解如何使用可自訂的Node.js指令碼，將資產匯出至本機電腦。 此匯出指令碼提供如何使用以程式設計方式從AEM下載資產的範例。 [AEM ASSETS HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)，特別聚焦於原始轉譯，以確保最高品質。 其設計可在本機磁碟機上複製AEM Assets的資料夾結構，以輕鬆備份或移轉資產。
+瞭解如何使用可自訂的Node.js指令碼，將資產匯出至本機電腦。 此匯出指令碼提供如何使用[AEM Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)以程式設計方式從AEM下載資產的範例，特別著重於原始轉譯以確保最高品質。 其設計可在本機磁碟機上複製AEM Assets的資料夾結構，以輕鬆備份或移轉資產。
 
 指令碼只會下載資產的原始轉譯，不會下載相關聯的中繼資料，除非該中繼資料已作為XMP嵌入到資產中。 這表示任何儲存在AEM中但未整合至資產檔案的描述性資訊、分類或標籤，都不會納入下載中。 修改指令碼以包含其他轉譯專案，也可以下載這些轉譯。 確保您有足夠的空間來儲存匯出的資產。
 
@@ -31,9 +31,9 @@ ht-degree: 0%
 
 ## 匯出指令碼
 
-指令碼會編寫為JavaScript模組，是Node.js專案的一部分，因為它有相依性 `node-fetch`. 您可以 [將專案下載為zip檔](./assets/export/export-aem-assets-script.zip)，或將下方的指令碼複製到型別的空的Node.js專案中 `module`，並執行 `npm install node-fetch` 以安裝相依性。
+編寫為JavaScript模組的指令碼是Node.js專案的一部分，因為它有對`node-fetch`的相依性。 您可以[將專案下載為zip檔](./assets/export/export-aem-assets-script.zip)，或將下面的指令碼複製到型別為`module`的空白Node.js專案，然後執行`npm install node-fetch`以安裝相依性。
 
-此指令碼會瀏覽AEM Assets資料夾樹狀結構，並將資產和資料夾下載到您電腦上的本機資料夾。 它會使用 [AEM ASSETS HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) 以擷取資料夾和資產資料，並下載資產的原始轉譯。
+此指令碼會瀏覽AEM Assets資料夾樹狀結構，並將資產和資料夾下載到您電腦上的本機資料夾。 它會使用[AEM Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)來擷取資料夾和資產資料，並下載資產的原始轉譯。
 
 ```javascript
 // export-assets.js
@@ -243,7 +243,7 @@ console.timeEnd('Download AEM assets');
 
 下載指令碼後，請更新指令碼底部的設定變數。
 
-此 `AEM_ACCESS_TOKEN` 可透過 [對AEMas a Cloud Service的權杖型驗證](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview) 教學課程。 通常24小時的開發人員權杖就足夠了，只要匯出不到24小時的時間完成，而且產生權杖的使用者擁有要匯出的資產的讀取存取權即可。
+可以使用[對AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview)的權杖式驗證教學課程中的步驟來取得`AEM_ACCESS_TOKEN`。 通常24小時的開發人員權杖就足夠了，只要匯出不到24小時的時間完成，而且產生權杖的使用者擁有要匯出的資產的讀取存取權即可。
 
 ```javascript
 ...
@@ -270,7 +270,7 @@ const MAX_CONCURRENT_DOWNLOADS = 10;
 
 使用Node.js執行指令碼，將資產匯出至本機電腦。
 
-視資產數量及其大小而定，指令碼可能需要一些時間才能完成。 當指令碼執行時， [記錄進度](#output) 至主控台。
+視資產數量及其大小而定，指令碼可能需要一些時間才能完成。 執行指令碼時，它[將進度](#output)記錄到主控台。
 
 ```shell
 $ node export-assets.js
@@ -294,6 +294,6 @@ Downloaded asset: exported-assets/wknd-shared/en/magazine/western-australia/adob
 Download AEM assets: 24.770s
 ```
 
-匯出的資產可在設定中指定的本機資料夾中找到 `LOCAL_DOWNLOAD_FOLDER`. 資料夾結構會反映AEM Assets資料夾結構，並將資產下載至適當的子資料夾。 這些檔案可以上傳至 [支援的雲端儲存空間提供者](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view)，代表 [大量匯入](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import) 至其他AEM執行個體，或用於備份。
+匯出的資產可在組態`LOCAL_DOWNLOAD_FOLDER`中指定的本機資料夾中找到。 資料夾結構會反映AEM Assets資料夾結構，並將資產下載至適當的子資料夾。 這些檔案可以上傳至[支援的雲端儲存提供者](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view)，以便[大量匯入](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import)至其他AEM執行個體，或用於備份目的。
 
-![匯出的資產](./assets/export/exported-assets.png)
+![已匯出資產](./assets/export/exported-assets.png)

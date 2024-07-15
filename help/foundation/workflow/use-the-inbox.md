@@ -1,6 +1,6 @@
 ---
 title: 如何使用AEM中的收件匣
-description: AEM收件匣可促進共同作業，並提升工作與工作流程的可見度。
+description: AEM收件匣可協助您更密切地共同作業及瞭解工作與工作流程。
 version: 6.4, 6.5, Cloud Service
 topic: Collaboration
 feature: Workflow

@@ -23,12 +23,12 @@ ht-degree: 29%
 嵌入式調適型表單功能齊全，使用者無需離開頁面即可填寫並提交表單。此功能可幫助使用者在網頁維持相關的其他元素，並同時與表單進行互動。
 
 以下影片說明在網頁中內嵌Adaptive或HTML5表單所需的步驟。
-請參閱 [檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html) 最佳先決條件、最佳實務等
+請參閱[檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html)，瞭解最佳必要條件、最佳實務等。
 >[!VIDEO](https://video.tv.adobe.com/v/335893?quality=12&learn=on)
 
-您可以下載視訊中使用的範例檔案 [從這裡](assets/embedding-af-web-page.zip)
+您可以從這裡](assets/embedding-af-web-page.zip)下載視訊[中使用的範例檔案
 
-以下是用來擷取調適型表單並將表單嵌入由類別名稱識別的容器的程式碼 **右**
+下列是用來擷取最適化表單並將表單內嵌在類別名稱&#x200B;**right**&#x200B;所識別的容器中的程式碼
 
 ```javascript
 $(document).ready(function(){

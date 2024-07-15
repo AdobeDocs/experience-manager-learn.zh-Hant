@@ -19,7 +19,7 @@ ht-degree: 17%
 
 + [概觀](overview.md)
 
-+ 設定{#configuring}
++ 正在設定{#configuring}
    + [基線資料夾](configuring/baseline-folders.md)
    + [基線許可權](configuring/baseline-permissions.md)
    + [標記](configuring/tagging.md)
@@ -38,7 +38,7 @@ ht-degree: 17%
    + [轉譯](./authoring/renditions.md)
    + [建立關聯及取消關聯](./authoring/relate-unrelate.md)
 
-+ 共同作業{#collaboration}
++ Collaboration{#collaboration}
    + [觀看](./collaboration/watch.md)
    + [時間軸和收件匣](./collaboration/timeline-and-inbox.md)
    + [註釋和註解](./collaboration/comments-and-annotations.md)
@@ -55,7 +55,7 @@ ht-degree: 17%
    + [尋找類似影像](./search-and-discovery/find-similar-images.md)
 
 + 進階功能{#advanced}
-   + [3D資產](./advanced/3d-assets.md)
+   + [3D Assets](./advanced/3d-assets.md)
    + [註解PDF輸出](./advanced/customizing-annotations-pdf-output.md)
    + [Assets報表](./advanced/asset-reports.md)
    + [已封鎖的標記](./advanced/blocked-tags.md)
@@ -74,8 +74,8 @@ ht-degree: 17%
 + Edge Delivery Services{#edge-delivery-services}
    + [Sidekick外掛程式](./edge-delivery-services/sidekick-plugin.md)
 
-+ 共用與散佈{#sharing}
-   + [下載資產](./sharing/download.md)
++ 共用和分發{#sharing}
+   + [下載Assets](./sharing/download.md)
    + [匯出資產](./sharing/export.md)
    + [發佈資產](./sharing/publish.md)
 
@@ -118,41 +118,41 @@ ht-degree: 17%
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media概觀](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic案頭應用程式](dynamic-media/dynamic-media-classic-desktop-application.md)
-   + 影像 {#images}
+   + 影像{#images}
       + [Dynamic Media快照](dynamic-media/dynamic-media-snapshot.md)
       + [智慧型裁切](dynamic-media/smart-crop-feature-video-use.md)
       + [影像銳利化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + 視訊 {#video}
+   + 視訊{#video}
       + [360度影片](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [自訂視訊縮圖](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH最適化串流](dynamic-media/dynamic-media-dash.md)
       + [Dynamic Media智慧型裁切視訊](dynamic-media/dynamic-media-smart-crop-video.md)
       + [視訊播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
-   + 檢視者 {#viewers}
+   + 檢視者{#viewers}
       + [檢視器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [全景和垂直影像檢視器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
       + [具有Adobe Analytics的檢視器](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + 三維 {#3d}
+   + 3D {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + 搭配AEM Sites使用 {#dm-with-aem-sites}
+   + 搭配AEM Sites {#dm-with-aem-sites}使用
       + [體驗片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
 
-   + Tutorials {#tutorials}
+   + Tutorials{#tutorials}
       + [建立轉盤集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [建立影像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [建立影像預設集](dynamic-media/tutorials/creating-image-presets.md)
       + [建立智慧型裁切影像設定檔](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
       + [建立視訊設定檔](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
-      + [正在處理資產](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [正在處理Assets](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
       + [設定安全預覽伺服器](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
       + [產生URL和內嵌程式碼](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
       + [觸發匯出工作](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
       + [使CDN快取失效](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
       + [使用Dynamic Media核心元件](dynamic-media/tutorials/using-dm-components-on-site-page.md)
       + [刪除Dynamic Media設定](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
-      + [在Dynamic Media Classic應用程式中下載資產](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
+      + [在Dynamic Media Classic應用程式中下載Assets](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [DYNAMIC MEDIA CLASSIC IPS API](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
 + Workfront整合{#workfront}
@@ -167,7 +167,7 @@ ht-degree: 17%
          + [進階設定和工作流程](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 
 + 轉換 {#translation}
-   + [來源檔案翻譯](translation/source-file-translation-feature-video-use.md)
+   + [Source檔案翻譯](translation/source-file-translation-feature-video-use.md)
    + [智慧型翻譯搜尋](translation/smart-translation-search-feature-video-use.md)
    + [設定智慧型翻譯搜尋](translation/smart-translation-search-technical-video-setup.md)
 

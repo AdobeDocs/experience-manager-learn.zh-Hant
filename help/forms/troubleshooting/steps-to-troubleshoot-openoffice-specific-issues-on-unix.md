@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 針對Unix安裝程式上的OpenOffice特定失敗進行疑難排解的步驟
 
-*此影片會逐步解說針對AEM Forms PDFG的Unix設定，疑難排解OpenOffice特定失敗的程式。*
+*此影片會逐步解說疑難排解AEM Forms PDFG的Unix安裝上的OpenOffice特定失敗程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335551?quality=12&learn=on)

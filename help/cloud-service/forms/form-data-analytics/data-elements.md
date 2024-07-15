@@ -24,14 +24,14 @@ ht-degree: 2%
 
 我們在Tags屬性中新增了兩個新資料元素（ApplicationsStateOfResidence和validationError）。
 
-![adaptive-form](assets/data_elements.png)
+![最適化表單](assets/data_elements.png)
 
 ## ApplicantStateOfResidence
 
-此 **ApplicantStateOfResidence** 資料元素是透過選取 **核心** 「擴充功能」下拉式清單中的 **自訂程式碼** 的「資料元素型別」，如下方熒幕擷取畫面所示
+在延伸功能下拉式清單中選取&#x200B;**核心**，並選取資料元素型別的&#x200B;**自訂程式碼**，以設定&#x200B;**ApplicantStateOfResidence**資料元素，如下方熒幕擷取畫面所示
 ![applicant-state-residence](assets/applicantstateofresidence.png)
 
-下列自訂程式碼是用來從 **_state_** 最適化表單欄位。
+下列自訂程式碼是用來從&#x200B;**_狀態_**&#x200B;最適化表單欄位擷取值。
 
 ```javascript
 // use the GuideBridge API to access adaptive form elements
@@ -43,11 +43,11 @@ return ApplicantsStateOfResidence;
 
 ## validationError
 
-此 **ValidationError** 資料元素是透過選取 **核心** 「擴充功能」下拉式清單中的 **自訂程式碼** 的「資料元素型別」，如下方熒幕擷取畫面所示
+在延伸功能下拉式清單中選取&#x200B;**核心**，並為資料元素型別選取&#x200B;**自訂程式碼**，以設定&#x200B;**ValidationError**&#x200B;資料元素，如下方熒幕擷取畫面所示
 
-![validation-error](assets/validation-error.png)
+![驗證 — 錯誤](assets/validation-error.png)
 
-下列自訂程式碼是用來設定 `validationError` 資料元素值。
+已寫入下列自訂程式碼以設定`validationError`資料元素值。
 
 ```javascript
 var validationError = "";

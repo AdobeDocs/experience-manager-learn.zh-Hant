@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 使用Brand Portal設定資產來源
 
-*本影片會逐步說明使用Brand Portal設定資產來源的過程。*
+*此影片將逐步說明使用Brand Portal設定資產來源的過程。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335451?quality=12&learn=on)

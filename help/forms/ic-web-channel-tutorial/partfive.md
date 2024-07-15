@@ -23,11 +23,11 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/22350?quality=12&learn=on)
 
-檔案片段包含互動式通訊檔案的文字內容。 此文字內容可以是靜態文字，或從基礎資料模型元素值插入。 例如，親愛的 {name}，其中Dear是靜態文字和 {name} 是表單資料元素名稱。 在執行階段，這將根據name元素的值解析為Dear Gloria Rios或Dear John Jacobs。
+檔案片段包含互動式通訊檔案的文字內容。 此文字內容可以是靜態文字，或從基礎資料模型元素值插入。 例如Dear {name}，其中Dear是靜態文字，{name}是表單資料元素名稱。 在執行階段，這將根據name元素的值解析為Dear Gloria Rios或Dear John Jacobs。
 
 RTF編輯器是足夠直覺的，可供業務使用者編寫文字及插入表單資料元素。 檔案片段編輯器可以設定文字格式、指定字型型別和樣式、插入特殊字元和建立超連結。
 
-檔案片段編輯器也可以在您的文字中插入內嵌條件，如以下所示 [視訊](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+檔案片段編輯器也能插入文字中的內嵌條件，如此[影片](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)所示
 
 >[!NOTE]
 >

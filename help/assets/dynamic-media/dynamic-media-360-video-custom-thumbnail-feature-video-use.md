@@ -24,7 +24,7 @@ AEM 6.5中的Dynamic Media Viewer增強功能包括新增對360視訊呈現、36
 
 >[!NOTE]
 >
->影片假設您的AEM執行個體以Dynamic Media S7模式執行。  [您可以在此處找到使用Dynamic Media設定AEM的說明](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). 上傳視訊時，預設情況下，如果長寬比為2:1，Dynamic Media會以360視訊來處理素材。 即寬高比是2:1。
+>影片假設您的AEM執行個體以Dynamic Media S7模式執行。  [您可以在此找到](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)使用Dynamic Media設定AEM的說明。 上傳視訊時，預設情況下，如果長寬比為2:1，Dynamic Media會以360視訊來處理素材。 即寬高比是2:1。
 
 >[!NOTE]
 >
@@ -104,4 +104,4 @@ Dynamic Media影片現在支援為您的影片選取自訂縮圖。 使用者可
 
 ## 其他資源{#additional-resources}
 
-[在Scene7模式下設定Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[在Scene7模式中設定Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)

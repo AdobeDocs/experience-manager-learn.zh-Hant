@@ -28,6 +28,6 @@ Darin和James討論AEM雲端中的Dispatcher，包括一些最佳實務和與AMS
 + 評估您要移轉的執行個體
    + BPA — 最佳做法分析工具
    + CAM - cloud acceleration manager
-+ [重傳](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
++ [重新發佈](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
 + [AEM 現代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 + [Cloud Service移轉工具](https://github.com/adobe/aem-cloud-service-source-migration)

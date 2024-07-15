@@ -18,22 +18,22 @@ ht-degree: 4%
 
 # 使用多站點管理員 {#using-multi-site-manager-with-aem-sites}
 
-Live Copy概述和Blueprint Configuration Manager是用於使用的AEM作者介面 [多站點管理員](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html) 在Adobe Experience Manager Sites中。
+即時副本概觀和Blueprint設定管理員是AEM作者介面，用於在Adobe Experience Manager Sites中使用[多站點管理員](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html)。
 
 ## 即時副本綜覽 {#live-copy-overview}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17054?quality=12&learn=on)
 
-*Live Copy概述是用於管理即時副本及其各自藍圖的觸控式UI介面。 AEM 6.3中推出的此功能取代了傳統UI Blueprint控制中心。*
+*即時副本概觀是觸控式UI介面，用於管理即時副本及其各自的藍圖。 這項在AEM 6.3中推出的功能取代了傳統UI Blueprint控制中心。*
 
 ## Blueprint Configuration Manager - Touch UI {#blueprint-config-mgr}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17056?quality=12&learn=on)
 
-*AEM 6.3引進了觸控式UI介面來管理用於多站點管理員的藍圖設定。*
+*AEM 6.3引入觸控式UI介面來管理藍圖設定，以用於Multi Site Manager。*
 
 ## 其他資源 {#additional-resources}
 
-* [即時副本概觀主控台](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy-overview.html)
-* [建立和同步化即時副本](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy.html)
+* [即時副本總覽主控台](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy-overview.html)
+* [建立和同步處理即時副本](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy.html)
 * [MSM最佳實務](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-best-practices.html)

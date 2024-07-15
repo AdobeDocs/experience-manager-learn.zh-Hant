@@ -22,16 +22,16 @@ ht-degree: 12%
 + GraphQL {#graphql}
    + [AEM Headless開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant){target=_blank}
    + [概觀](./graphql/overview.md)
-   + 快速設定 {#quick-setup}
+   + 快速設定{#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
       + [AEM SDK](./graphql/quick-setup/local-sdk.md)
-   + 影片系列{#video-series}
+   + 視訊系列{#video-series}
       + [1 — 模型基本概念](./graphql/video-series/modeling-basics.md)
       + [2 — 進階模型](./graphql/video-series/advanced-modeling.md)
       + [3 — 建立GraphQL查詢](./graphql/video-series/creating-graphql-queries.md)
       + [4 — 內容片段變數](./graphql/video-series/content-fragment-variations.md)
       + [5 - GraphQL端點](./graphql/video-series/graphql-endpoints.md)
-      + [6 — 作者和發佈架構](./graphql/video-series/author-publish-architecture.md)
+      + [6 — 作者與Publish架構](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL持續查詢](./graphql/video-series/graphql-persisted-queries.md)
    + 基本教學課程{#multi-step}
       + [概觀](./graphql/multi-step/overview.md)
@@ -55,13 +55,13 @@ ht-degree: 12%
    + [概觀](./graphql/deployment/overview.md)
    + [單頁應用程式](./graphql/deployment/spa.md)
    + [Web元件](./graphql/deployment/web-component.md)
-   + [行動](./graphql/deployment/mobile.md)
+   + [行動裝置](./graphql/deployment/mobile.md)
    + [伺服器對伺服器](./graphql/deployment/server-to-server.md)
-   + 設定{#configurations}
+   + 組態{#configurations}
       + [AEM主機](./graphql/deployment/configurations/aem-hosts.md)
       + [CORS](./graphql/deployment/configurations/cors.md)
       + [Dispatcher篩選器](./graphql/deployment/configurations/dispatcher-filters.md)
-+ 操作說明 {#how-to}
++ 如何{#how-to}
    + [RTF文字](./graphql/how-to/rich-text.md)
    + [影像](./graphql/how-to/images.md)
    + [當地語系化內容](./graphql/how-to/localized-content.md)
@@ -70,7 +70,7 @@ ht-degree: 12%
    + [受保護的內容](./graphql/how-to/protected-content.md)
    + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + [在AEM 6.5上安裝GraphiQL](./graphql/how-to/install-graphiql-aem-6-5.md)
-   + 範例 {#example-apps}
+   + 範例{#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [Next.js](./graphql/example-apps/next-js.md)
       + [Web元件](./graphql/example-apps/web-component.md)
@@ -101,22 +101,22 @@ ht-degree: 12%
       + [3 — 固定元件](./spa-editor/remote-spa/spa-fixed-component.md)
       + [4 — 容器元件](./spa-editor/remote-spa/spa-container-component.md)
       + [5 — 動態路由](./spa-editor/remote-spa/spa-dynamic-routes.md)
-   + 操作說明{#how-to}
+   + 如何{#how-to}
       + [AEM React Editable Components v2](./spa-editor/how-to/react-core-components-v2.md)
-+ 權杖型驗證 {#authentication}
++ 權杖型驗證{#authentication}
    + [概觀](./authentication/overview.md)
    + [1 — 本機開發存取權杖](./authentication/local-development-access-token.md)
    + [2 — 服務認證](./authentication/service-credentials.md)
-+ 內容服務 {#content-services}
++ 內容服務{#content-services}
    + [概觀](./content-services/overview.md)
    + [1 — 教學課程設定](./content-services/chapter-1.md)
    + [2 — 定義事件內容片段模型](./content-services/chapter-2.md)
    + [3 — 編寫事件內容片段](./content-services/chapter-3.md)
    + [4 — 定義Content Services範本](./content-services/chapter-4.md)
    + [5 — 編寫Content Services頁面](./content-services/chapter-5.md)
-   + [6 — 在AEM Publish上公開傳送的內容](./content-services/chapter-6.md)
+   + [6 — 在AEM Publish上公開傳送內容](./content-services/chapter-6.md)
    + [7 — 從行動應用程式使用AEM內容服務](./content-services/chapter-7.md)
-+ 程式碼範例 {#code-samples}
++ 程式碼範例{#code-samples}
    + [篩選React應用程式](./graphql/code-samples/filtering-react-app.md)
    + [篩選前置應用程式](./graphql/code-samples/filtering-preact-app.md)
    + [篩選Angular應用程式](./graphql/code-samples/filtering-angular-app.md)

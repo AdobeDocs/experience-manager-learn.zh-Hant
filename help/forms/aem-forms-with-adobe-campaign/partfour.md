@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## 建立自訂驗證 {#create-custom-authentication}
 
-使用Swagger檔案建立資料來源時，AEM Forms支援下列型別的驗證型別
+使用Swagger檔案建立資料Source時，AEM Forms支援下列型別的驗證
 
 * 無
 * OAuth 2.0
@@ -31,7 +31,7 @@ ht-degree: 3%
 * API 金鑰
 * 自訂驗證
 
-![campaignfdm](assets/campaignfdm.gif)
+![campaiingfdm](assets/campaignfdm.gif)
 
 我們必須使用自訂驗證，才能對Adobe Campaign Standard進行REST呼叫。
 
@@ -102,20 +102,21 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 }
 ```
 
-## 建立資料來源 {#create-data-source}
+## 建立資料Source {#create-data-source}
 
 第一步是建立swagger檔案。 swagger檔案會定義REST API，後者將用於在Adobe Campaign Standard中建立設定檔。 swagger檔案會定義REST API的輸入引數和輸出引數。
 
-資料來源是使用swagger檔案所建立。 建立資料來源時，您可以指定驗證型別。 在此情況下，我們將使用自訂驗證，以針對Adobe Campaign進行驗證。上方列出的程式碼已用於針對Adobe Campaign進行驗證。
+資料來源是使用swagger檔案所建立。 建立資料Source時，您可以指定驗證型別。 在此情況下，我們將使用自訂驗證，以針對Adobe Campaign進行驗證。上方列出的程式碼已用於針對Adobe Campaign進行驗證。
 
-範例Swagger檔案會作為與本文相關的資產的一部分提供給您。**請務必變更swagger檔案中的主機和basePath，以符合您的ACS執行個體**
+範例Swagger檔案會作為與本文相關的資產的一部分提供給您。**請確定您變更主機和swagger檔案中的basePath，以符合您的ACS執行個體**
 
 ## 測試解決方案 {#test-the-solution}
 
 若要測試解決方案，請遵循下列步驟：
-* [請確定您已依照此處所述步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [請確定您已依照此處說明的步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [下載並解壓縮此檔案以取得swagger檔案](assets/create-acs-profile-swagger-file.zip)
-* 使用Swagger檔案建立表單資料模型並以上一步驟中建立的資料來源為基礎，建立資料來源
+* 使用Swagger檔案建立資料Source
+建立表單資料模型，並以上個步驟建立的資料Source為基礎
 * 根據上一步建立的表單資料模型建立最適化表單。
 * 將下列元素從資料來源標籤拖放至最適化表單
 

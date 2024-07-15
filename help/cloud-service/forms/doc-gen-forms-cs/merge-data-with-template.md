@@ -21,7 +21,7 @@ ht-degree: 0%
 # 進行POST呼叫
 
 
-下一步是使用必要的引數向端點進行HTTPPOST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定。embedFonts屬性是用來在產生的pdf中嵌入自訂字型。[請依照本檔案說明，將自訂字型部署至您的Forms雲端例項。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en) 屬性是在options.json資源檔案中指定。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
+下一步是使用必要的引數向端點進行HTTPPOST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定。embedFonts屬性是用來在產生的pdf中嵌入自訂字型。[請依照此檔案將自訂字型部署至您的Forms雲端執行個體。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en)屬性是在options.json資源檔案中指定的。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
 
 下列程式碼是用來將資料與範本合併，以產生pdf
 

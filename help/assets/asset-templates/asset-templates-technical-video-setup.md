@@ -24,11 +24,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM **必須** 上傳INDD範本時連線至執行中的InDesign伺服器。 INDD檔案上的部分初始處理需要InDesign伺服器。
+>上傳INDD範本時，AEM **必須**&#x200B;連線到執行中的InDesign伺服器。 INDD檔案上的部分初始處理需要InDesign伺服器。
 
 ## 下載InDesign Server試用版 {#download-indesign-server-trial}
 
-下載 [InDesign Server試用下載網站](https://www.adobeprerelease.com/)
+下載[InDesign Server試用下載網站](https://www.adobeprerelease.com/)
 
 ## 開始InDesign Server {#starting-indesign-server}
 

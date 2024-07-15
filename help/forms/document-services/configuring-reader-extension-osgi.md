@@ -42,6 +42,6 @@ Reader延伸模組認證與fd-service使用者相關聯。 若要將認證新增
 
 列出pfx檔案詳細資訊的指令為。 以下命令假設您與pfx檔案位於相同的目錄中。
 
-**keytool -v -list -storetype pkcs12 -keystore &lt;name of=&quot;&quot; your=&quot;&quot; pfx=&quot;&quot; file=&quot;&quot;>**
+**keytool -v -list -storetype pkcs12 -keystore &lt;您的.pfx檔案名稱>**
 
 例如keytool -v -list -storetype pkcs12 -keystore 1005566.pfx，其中1005566.pfx是我的pfx檔案名稱

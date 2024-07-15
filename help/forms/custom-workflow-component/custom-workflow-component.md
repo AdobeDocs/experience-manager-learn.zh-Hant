@@ -22,17 +22,17 @@ ht-degree: 0%
 
 
 [下載自訂工作流程元件](assets/saveFiles.zip)
-匯入工作流程元件 [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)匯入工作流程元件[
 
 自訂工作流程元件位於/apps/AEMFormsDemoListings/workflowcomponent/SaveFiles
 
 選取SaveFiles節點並檢查其屬性
 
-**componentGroup**  — 此屬性的值會決定工作流程元件的類別。
+**componentGroup** — 此屬性的值決定工作流程元件的類別。
 
-**jcr：Title**  — 這是工作流程元件的標題。
+**jcr：Title** — 這是工作流程元件的標題。
 
-**sling：resourceSuperType** 此屬性的值將決定此元件的繼承。 在此案例中，我們繼承自流程元件
+**sling：resourceSuperType**&#x200B;此屬性的值將決定此元件的繼承。 在此案例中，我們繼承自流程元件
 
 
 ![component-properties](assets/component-properties1.png)
@@ -49,14 +49,15 @@ ht-degree: 0%
 ![process-args](assets/process-arguments.png)
 
 作者會指定引數，如下方熒幕擷取畫面所示
-![workflow-component](assets/custom-workflow-component.png)
+![工作流程元件](assets/custom-workflow-component.png)
 
-這些值會儲存為中繼資料節點的屬性。 例如值 **c：\formsattachments** 將會儲存在中繼資料節點的屬性saveToLocation中
-![save-location](assets/save-to-location.png)
+這些值會儲存為中繼資料節點的屬性。 例如，值&#x200B;**c：\formsattachments**會儲存在中繼資料節點的屬性saveToLocation中
+![儲存位置](assets/save-to-location.png)
 
 ## cq：editConfig
 
-cq：EditConfig只是主要型別為cq：EditConfig且元件根目錄下名為cq：editConfig的節點元件的編輯行為透過在元件節點下新增cq：EditConfig型別的cq：editConfig節點（型別為cq：Component）來設定
+cq：EditConfig只是元件根目錄下主要型別為cq：EditConfig且名稱為cq：editConfig的節點
+在元件節點底下新增cq：EditConfig型別的cq：editConfig節點（cq：Component型別），即可設定元件的編輯行為
 
 ![edit-config](assets/cq-edit-config.png)
 

@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 最佳做法
 
-Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡單、愉快的數位體驗。 以下檔案說明開發最適化Forms時需要遵循的一些其他最佳實務。 本檔案旨在結合 [本檔案](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)
+Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡單、愉快的數位體驗。 以下檔案說明開發最適化Forms時需要遵循的一些其他最佳實務。 此檔案應該與[此檔案](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)搭配使用
 
 ## 命名慣例
 
@@ -32,10 +32,10 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
    * 名稱可包含字母、數字、底線和美元符號。
    * 名稱必須以字母開頭
    * 名稱區分大小寫
-   * 保留字（例如JavaScript關鍵字）不能作為名稱使用。 請留意其他AF專屬保留字詞，例如「panel」、「name」。
+   * 保留字(例如JavaScript關鍵字)無法當作名稱使用。 請留意其他AF特定的保留字詞，例如   作為「panel」、「name」。
    * 請勿在您的名稱中包含破折號「 — 」
 * **開發Forms**
-   * 開發大型表單時應考量表單片段。 啟用緩慢載入表單片段，以加快載入時間
+   * 開發大型表單時應考量表單片段。 啟用緩慢載入表單片段以加快載入速度   時間
    * **資料模型**
       * 建議將最適化表單與適當的資料模型建立關聯
 

@@ -28,8 +28,8 @@ ht-degree: 0%
 * 儲存
 * 按一下新建立的資產節點並設定其屬性，如下所示
 * 您將需要建立一個名為assettypes的字串型別屬性（您可以視需要加以命名）。請確定屬性是多值。 提供您想要的值並儲存。
-  ![item-load-path](assets/item-load-path-crx.png)
+  ![專案載入路徑](assets/item-load-path-crx.png)
 
-若要在下拉式清單中載入這些值，請在專案載入路徑屬性中提供下列路徑  **/content/assets/assettype**
+若要在下拉式清單中載入這些值，請在專案載入路徑屬性&#x200B;**/content/assets/assettypes**&#x200B;中提供下列路徑
 
-範例套件可以是 [已從此處下載](assets/item-load-path-package.zip)
+範例套件可以[從這裡](assets/item-load-path-package.zip)下載

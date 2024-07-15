@@ -246,7 +246,7 @@ return null;
 
 建立自訂提交處理常式，以處理最適化表單提交。 在此自訂提交處理常式中，我們將呼叫CampaignService的createProfile方法。 createProfile方法接受代表需要建立之設定檔的JSONObject。
 
-若要進一步瞭解AEM Forms中的自訂提交處理常式，請遵循此步驟 [連結](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
+若要進一步瞭解AEM Forms中的自訂提交處理常式，請依照此[連結](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)操作
 
 以下是自訂提交中的程式碼
 
@@ -266,9 +266,9 @@ String pkey = addNewProfile.createProfile(profile);
 一旦我們定義了服務和自訂提交動作，就可以測試我們的解決方案了。 若要測試解決方案，請執行以下步驟
 
 
-* [請確定您已依照此處所述步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [使用封裝管理員匯入最適化表單和自訂提交處理常式](assets/create-acs-profile-on-af-submission.zip)此套件包含已設定為要提交至自訂提交動作的最適化表單。
-* 預覽 [表單](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
+* [請確定您已依照此處說明的步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [使用封裝管理員](assets/create-acs-profile-on-af-submission.zip)匯入最適化表單和自訂提交處理常式。此封裝包含設定為提交至自訂提交動作的最適化表單。
+* 預覽[表單](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * 填寫所有欄位並提交
 * 在您的ACS執行個體中建立一個新的設定檔
 

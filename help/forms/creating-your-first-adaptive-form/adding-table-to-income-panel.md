@@ -21,7 +21,7 @@ ht-degree: 1%
 
 我們將在「收入」面板中新增一個表格。 設定表格列，並使用規則編輯器計算總計。
 
-**新增和設定表格元件**
+**新增及設定資料表元件**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22198?quality=12&learn=on)
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 ## 將收入表格設為動態 {#make-the-income-table-dynamic}
 
-**確定您處於編輯模式。 編輯按鈕位於瀏覽器的右上角。**
+**請確定您處於編輯模式。 編輯按鈕位於瀏覽器的右上角。**
 
 * 根據預設，將表格插入最適化表單時，表格不是動態的，表示您無法在執行階段將新列新增至表格。
 
@@ -48,4 +48,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-[設定「資產」面板](./configuring-assets-panel.md)
+[設定Assets面板](./configuring-assets-panel.md)

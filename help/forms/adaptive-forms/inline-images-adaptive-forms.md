@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 新增預留位置影像
 
-第一個步驟是在檔案附件元件前面加上預留位置div。 在下方的程式碼中，檔案附件元件由其CSS類別名稱photo-upload識別。 JavaScript函式屬於與調適型表單相關聯的使用者端資料庫的一部分。 此函式是在檔案附件元件的初始化事件中呼叫。
+第一個步驟是在檔案附件元件前面加上預留位置div。 在下方的程式碼中，檔案附件元件由其CSS類別名稱photo-upload識別。 JavaScript函式是與最適化表單相關聯的使用者端資料庫的一部分。 此函式是在檔案附件元件的初始化事件中呼叫。
 
 ```javascript
 /**
@@ -65,7 +65,7 @@ function consumeImage (file) {
 
 ### 在您的伺服器上部署
 
-* 下載並安裝 [使用者端資料庫](assets/inline-image-client-library.zip) 在使用AEM封裝管理員的AEM執行個體上執行。
-* 下載並安裝 [範例表單](assets/inline-image-af.zip) 使用AEM封裝管理員在您執行AEM執行個體上。
-* 將瀏覽器指向 [新增內嵌影像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* 使用AEM封裝管理員下載[使用者端程式庫](assets/inline-image-client-library.zip)並安裝在您的AEM執行個體上。
+* 使用AEM封裝管理員下載[範例表單](assets/inline-image-af.zip)並安裝在您的AEM執行個體上。
+* 將瀏覽器指向[新增內嵌影像](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * 按一下「附加像片」按鈕以新增影像

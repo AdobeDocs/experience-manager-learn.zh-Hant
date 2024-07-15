@@ -31,14 +31,14 @@ ht-degree: 0%
 
 ### 若要讓此功能在您的系統上運作，需具備下列條件
 
-* 使用下載並部署套件組合 [Felix Web主控台](http://localhost:4502/system/console/bundles)
+* 使用[Felix Web Console](http://localhost:4502/system/console/bundles)下載並部署組合
 * [DocumentservicesBundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 * [DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [AcroFormsToAEMFormsBundle](https://forms.enablementadobe.com/content/DemoServerBundles/AcroFormToAEMForm.core-1.0-SNAPSHOT.jar)
-* [下載此套件並將其匯入至AEM](assets/acro-form-aem-form.zip). 此套件包含從Acroform建立XSD的工作流程範例和html頁面
-* 開啟 [configMgr](http://localhost:4502/system/console/configMgr)
+* [下載此封裝並匯入AEM](assets/acro-form-aem-form.zip)。 此套件包含從Acroform建立XSD的工作流程範例和html頁面
+* 開啟[configMgr](http://localhost:4502/system/console/configMgr)
    * 搜尋「Apache Sling Service使用者對應程式服務」，然後按一下以開啟屬性
-   * 按一下 `+` 圖示（加號）以新增以下服務對應
+   * 按一下`+`圖示（加號）以新增以下服務對應
       * `DevelopingWithServiceUser.core:getresourceresolver=data`
       * `DevelopingWithServiceUser.core:getformsresourceresolver=fd-service`
    * 按一下「儲存」

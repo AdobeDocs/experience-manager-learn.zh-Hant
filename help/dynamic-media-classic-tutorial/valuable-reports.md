@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ![影像](assets/valuable-reports/reports-1.jpg)
 
-_「頻寬與儲存」報表會顯示此帳戶已超過其30GB的儲存限制。_
+_頻寬和儲存報告顯示此帳戶超過其30GB儲存限制。_
 
 ## 影像錯誤報告
 
@@ -41,7 +41,7 @@ _影像錯誤報告。_
 
 若要進一步瞭解Dynamic Media Classic，請參閱下列資源：
 
-- [Experience League上的Dynamic Media Classic — 取得價值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Experience League上的Dynamic Media Classic — 完成更多工作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- Experience League上的[Dynamic Media Classic — 取得值](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- Experience League上的[Dynamic Media Classic — 完成更多工作](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media電子報封存](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 簡介
 
-互動式通訊可讓準備臨機通訊的代理程式儲存部分完成的通訊，並擷取相同的通訊以繼續工作。 AEM Forms提供您 [服務提供者介面](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html). 客戶應實作此介面，以取得「儲存並繼續」功能。
+互動式通訊可讓準備臨機通訊的代理程式儲存部分完成的通訊，並擷取相同的通訊以繼續工作。 AEM Forms提供[服務提供者介面](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html)。 客戶應實作此介面，以取得「儲存並繼續」功能。
 
 本文使用MySQL資料庫來儲存信件執行個體的中繼資料。 信件資料儲存在檔案系統中。
 

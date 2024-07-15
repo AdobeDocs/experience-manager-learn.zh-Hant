@@ -32,4 +32,4 @@ ht-degree: 0%
 + 技術帳戶驗證
 + 產生的權杖的簡單使用
 
-如需有關本主題的詳細資訊，請參考上的教學課程： [權杖型驗證](/help/headless-tutorial/authentication/overview.md).
+如需此主題的詳細資訊，請參考[權杖式驗證](/help/headless-tutorial/authentication/overview.md)的教學課程。

@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 建議方塊
 
-造訪 [建議方塊](https://forms.office.com/r/74P5Xz4UH0) 用於提交主題構想。
+造訪[建議方塊](https://forms.office.com/r/74P5Xz4UH0)以提交主題概念。
 
 ## 第3季
 
@@ -36,7 +36,7 @@ ht-degree: 0%
             <div>
                 <a href="./season-3/cloud5-3rd-party-search.md">
                 <strong>第三方搜尋</strong></a>        
-                <br/><em>與AEM Engineering的James Talbot及Varun Mitra</em>
+                <br/><em>與AEM Engineering的James Talbot &amp; Varun Mitra</em>
             </div>
             <p>
                 <br/>
@@ -49,8 +49,8 @@ ht-degree: 0%
             </a>
             <div>
                 <a href="./season-3/cloud5-rum.md">
-                <strong>Real User Monitoring (RUM) — 真實使用者監控(RUM)</strong></a>        
-                <br/><em>與AEM Engineering的James Talbot &amp; Damian Langsweirdt</em>
+                <strong>真實使用者監控(RUM)</strong></a>        
+                <br/><em>AEM Engineering的James Talbot &amp; Damian Langsweirdt</em>
             </div>
             <p>
                 <br/>
@@ -109,8 +109,8 @@ ht-degree: 0%
             </a>
             <div>
                 <a href="./season-3/cloud5-query-indexes.md">
-                <strong>查詢索引和Excel公式 </strong></a>        
-                <br/><em>與AEM Engineering的James Talbot及Varun Mitra</em>
+                <strong>查詢索引和Excel公式</strong></a>        
+                <br/><em>與AEM Engineering的James Talbot &amp; Varun Mitra</em>
             </div>
             <p>
                 <br/>
@@ -139,7 +139,7 @@ ht-degree: 0%
             </a>
             <div>
                 <a href="./season-3/cloud5-integrate-assets.md">
-                <strong>將AEM Assets與檔案製作整合</strong></a>        
+                <strong>整合AEM Assets與檔案製作</strong></a>        
                 <br/><em>與AEM Engineering的James Talbot &amp; Darin Kuntze</em>
             </div>
             <p>
@@ -154,7 +154,7 @@ ht-degree: 0%
             <div>
                 <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
                 <strong>AEM Sites中的Generative AI</strong></a>        
-                <br/><em>AEM產品行銷部的James Talbot &amp; Karthik Muralidharan</em>
+                <br/><em>與AEM產品行銷James Talbot &amp; Karthik Muralidharan</em>
             </div>
             <p>
                 <br/>                
@@ -168,7 +168,7 @@ ht-degree: 0%
             <div>
                 <a href="./season-3/cloud5-exploring-universal-editor.md">
                 <strong>探索通用編輯器</strong></a>        
-                <br/><em>與AEM Engineering的James Talbot及Dirk Rudolph</em>
+                <br/><em>AEM Engineering的James Talbot &amp; Dirk Rudolph</em>
             </div>
             <p>
                 <br/>                

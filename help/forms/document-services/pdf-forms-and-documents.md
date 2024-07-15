@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ![Pdfa](assets/pdfa-file-in-acrobat.png)
 
-範例檔案可以是 [已從此處下載](assets/pdf-file-types.zip)
+範例檔案可從這裡[下載](assets/pdf-file-types.zip)
 
 ## XML Forms架構PDF(XFAPDF)
 
@@ -36,7 +36,7 @@ Adobe使用術語XFAPDF表單，來指稱您使用AEM Forms Designer建立的互
 
 ![文字欄位](assets/text-field.JPG)
 
-XFA Forms以XML為基礎。 這種良好的結構和彈性的格式可讓AEM Forms伺服器將您的設計工具檔案轉換為不同的格式，包括傳統的PDF、PDF/A和HTML。 您可以選取「版面配置編輯器」的「XML來源」標籤，在Designer中檢視Forms的完整XML結構。 您可以在AEM Forms Designer中建立靜態和動態XFA Forms。
+XFA Forms以XML為基礎。 這種良好的結構和彈性的格式可讓AEM Forms伺服器將您的Designer檔案轉換為不同的格式，包括傳統的PDF、PDF/A和HTML。 您可以選取「版面配置編輯器」的「XML Source」標籤，在Designer中檢視Forms的完整XML結構。 您可以在AEM Forms Designer中建立靜態和動態XFA Forms。
 
 ## 靜態PDF
 
@@ -50,7 +50,7 @@ XFA Forms以XML為基礎。 這種良好的結構和彈性的格式可讓AEM For
 
 >[!NOTE]
 >
-> 您可以使用AEM Forms Designer建立靜態PDF，方法是將XDP儲存為Adobe靜態PDF表單
+> 您可以將XDP儲存為「靜態PDF表單」，使用AEM Forms Designer建立Adobe靜態PDF
 
 
 
@@ -61,11 +61,11 @@ XFA Forms以XML為基礎。 這種良好的結構和彈性的格式可讓AEM For
 * 動態表單支援可變更表單版面配置和分頁的使用者端指令碼。 例如，如果您將Purchase Order.xdp儲存為動態表單，它會展開並分頁，以因應無數的資料量
 * 動態表單在執行階段支援表單的所有屬性，而靜態表單僅支援子集
 
-* [請參閱本檔案以瞭解靜態與動態pdf表單之間的差異](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
+* [請參閱此檔案以瞭解靜態與動態pdf表單之間的差異](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
 
 >[!NOTE]
 >
-> 您可以使用AEM Forms Designer建立動態PDF，方法是將XDP儲存為Adobe動態XML表單
+> 您可以將XDP儲存為Adobe動態XML表單，以使用AEM Forms Designer建立動態PDF
 
 >[!NOTE]
 >
@@ -86,7 +86,8 @@ XFA Forms以XML為基礎。 這種良好的結構和彈性的格式可讓AEM For
 
 ### Acroforms
 
-Acroform是Adobe的舊版互動式表單技術，可追溯至Acrobat第3版。 Adobe提供 [Acrobat Forms API參考](assets/FormsAPIReference.pdf)日期為2003年5月，目的是提供此技術的技術細節。 Acroform是下列專案的組合：
+Acroform是Adobe的舊版互動式表單技術，可追溯至Acrobat第3版。 Adobe提供[Acrobat Forms API參考](assets/FormsAPIReference.pdf) （日期為2003年5月），以提供此技術的技術細節。 Acroform是
+下列專案：
 
 * 定義表單靜態版面和圖形的傳統PDF。
 * 使用Adobe Acrobat程式的表單工具錨定在頂端的互動式表單欄位。 這些表單工具是AEM Forms Designer中可用功能的一小部分。

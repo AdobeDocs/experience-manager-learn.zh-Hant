@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 以zip檔案傳送表單附件
 
-為了完成使用案例，已撰寫自訂工作流程處理步驟。 在此自訂流程步驟中，將含有表單附件的zip檔案建立並儲存在名為的檔案的裝載資料夾下 *zipped_attachments.zip*
+為了完成使用案例，已撰寫自訂工作流程處理步驟。 在此自訂流程步驟中，將含有表單附件的zip檔案建立並儲存在名為&#x200B;*zipped_attachments.zip*&#x200B;的檔案裝載資料夾下
 
 ![傳送表單附件](assets/send-form-attachments.JPG)
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 為了完成此使用案例，已撰寫自訂工作流程處理步驟。 在此自訂程式步驟中，我們會填入型別為ArrayList of Documents和ArrayList of Strings的工作流程變數。
 
-![send-list-of-documents](assets/send-list-of-documents.JPG)
+![傳送檔案清單](assets/send-list-of-documents.JPG)
 
 ## 後續步驟
 

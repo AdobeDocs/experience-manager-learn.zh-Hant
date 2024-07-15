@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Cloud 5 — 儲存庫現代化工具
 
-這些人員將研究存放庫現代化工具如何幫助您過渡到AEMas a Cloud Service，並提供它如何運作和原因的有用概述。
+這些人員將研究存放庫現代化工具如何幫助您轉換到AEM as a Cloud Service，並提供運作方式和原因的有用概覽。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342865?quality=12&learn=on)
 
 ## 本影片涵蓋的內容
 
 + [AIO CLI](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration)
-+ [存放庫現代化工具](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer)
++ [儲存庫現代化工具](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer)

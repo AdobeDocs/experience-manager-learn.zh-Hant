@@ -1,6 +1,6 @@
 ---
 title: 將元件新增至Assets區段
-description: 為「資產」面板設定收合式選單配置。收合式選單配置提供更佳的一般使用者體驗，讓您新增重複區段。
+description: 為Assets面板設定收合式選單配置。收合式選單配置提供更佳的一般使用者體驗，讓您新增重複區段。
 feature: Adaptive Forms
 version: 6.4,6.5
 jira: KT-4212
@@ -17,11 +17,11 @@ ht-degree: 3%
 
 ---
 
-# 將元件新增至「資產」面板 {#adding-components-to-assets-section}
+# 將元件新增至Assets面板 {#adding-components-to-assets-section}
 
-為「資產」面板設定收合式選單配置。收合式選單配置提供更佳的一般使用者體驗，讓您新增重複區段。
+為Assets面板設定收合式選單配置。收合式選單配置提供更佳的一般使用者體驗，讓您新增重複區段。
 
-**設定資產面板**
+**設定Assets面板**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22200?quality=12&learn=on)
 

@@ -27,11 +27,11 @@ ht-degree: 0%
 
 提交最適化表單時，收件者會收到電子郵件。
 
-![SendEmail](assets/sendemailaction.gif)
+![傳送電子郵件](assets/sendemailaction.gif)
 
 ## 所需設定 {#configurations-needed}
 
-您必須設定Day CQ Mail服務。 您可以將瀏覽器指向以下網址進行設定： [Felix組態管理員](http://localhost:4502/system/console/configMgr)
+您必須設定Day CQ Mail服務。 您可以將瀏覽器指向[Felix Configuration Manager](http://localhost:4502/system/console/configMgr)以進行設定
 
 此熒幕擷圖顯示adobe郵件伺服器的設定屬性。
 
@@ -39,9 +39,9 @@ ht-degree: 0%
 
 若要在您的伺服器上嘗試此動作，請遵循下列指示：
 
-* [匯入資產](assets/timeoffrequest.zip) 使用封裝管理程式在AEM中與本文章相關聯。
+* [使用封裝管理員在AEM中匯入與此文章關聯的資產](assets/timeoffrequest.zip)。
 
-* 開啟 [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
+* 開啟[TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)。
 
 * 填寫詳細資料。請務必在電子郵件欄位中提供有效的電子郵件地址。
 

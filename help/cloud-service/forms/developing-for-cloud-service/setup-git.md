@@ -20,8 +20,10 @@ ht-degree: 0%
 # 安裝Git
 
 
-[安裝Git](https://git-scm.com/downloads). 您可以選取預設設定並完成安裝程式。
-前往命令提示字元導覽至Git —version中的c：\cloudmanager\aem-banking-app type 。 您應該會看到系統上已安裝的GIT版本
+[安裝Git](https://git-scm.com/downloads)。 您可以選取預設設定並完成安裝程式。
+移至命令提示字元
+導覽至c：\cloudmanager\aem-banking-app
+輸入git —version。 您應該會看到系統上已安裝的GIT版本
 
 ## 初始化本機Git存放庫
 
@@ -52,7 +54,7 @@ git commit -m "initial commit"
 存取您的Cloud Manager存放庫
 ![存取代表資訊](assets/cloud-manager-repo.png)
 取得Cloud Manager存放庫認證
-![get-credentials](assets/cloud-manager-repo1.png)
+![取得認證](assets/cloud-manager-repo1.png)
 
 將使用者名稱儲存在設定檔案中
 
@@ -68,7 +70,7 @@ git config --global user.password "XXXX"
 
 （密碼是您的cloud manager git存放庫密碼）
 
-在本機git存放庫中註冊cloud manager git存放庫。 下列指令會建立關聯 **銀行應用程式** 使用遠端cloud manager git存放庫。 您可以使用任何名稱，而不是 **銀行應用程式**
+在本機git存放庫中註冊cloud manager git存放庫。 以下命令會將&#x200B;**bankingapp**&#x200B;與遠端cloud manager git存放庫建立關聯。 您可以使用任何名稱來代替&#x200B;**銀行應用程式**
 
 
 ```shell

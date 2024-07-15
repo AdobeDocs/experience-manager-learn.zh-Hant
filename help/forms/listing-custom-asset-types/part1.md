@@ -28,25 +28,25 @@ ht-degree: 0%
 
 ## 指定基本路徑 {#specify-base-path}
 
-基本路徑是頂層存放庫路徑，包含使用者可能想要列在「搜尋與清單程式」元件中的所有資產。 如有需要，使用者也可以從元件編輯對話方塊設定基本路徑內的特定位置，以便在特定位置觸發搜尋，而不是搜尋基本路徑內的所有節點。 根據預設，基礎路徑會用作擷取資產的搜尋路徑條件，除非使用者從此位置內設定一組特定路徑。 必須有此路徑的最佳值，才能進行效能搜尋。 基底路徑的預設值將保持為 **_/content/dam/formsanddocuments_** 因為所有AEM Forms資產都位於 **_/content/dam/formsanddocuments._**
+基本路徑是頂層存放庫路徑，包含使用者可能想要列在「搜尋與清單程式」元件中的所有資產。 如有需要，使用者也可以從元件編輯對話方塊設定基本路徑內的特定位置，以便在特定位置觸發搜尋，而不是搜尋基本路徑內的所有節點。 根據預設，基礎路徑會用作擷取資產的搜尋路徑條件，除非使用者從此位置內設定一組特定路徑。 必須有此路徑的最佳值，才能進行效能搜尋。 基底路徑的預設值將保持為&#x200B;**_/content/dam/formsanddocuments_**，因為所有AEM Forms資產都位於&#x200B;**_/content/dam/formsanddocuments._**
 
 設定基本路徑的步驟
 
 1. 登入crx
-1. 瀏覽至 **/libs/fd/fp/extensions/querybuilder/basepath**
+1. 導覽至&#x200B;**/libs/fd/fp/extensions/querybuilder/basepath**
 
 1. 按一下工具列中的「覆蓋節點」
 1. 請確定覆蓋位置為「/apps/」
 1. 按一下確定
 1. 按一下「儲存」
-1. 導覽至建立的新結構，位於 **/apps/fd/fp/extensions/querybuilder/basepath**
+1. 導覽至在&#x200B;**/apps/fd/fp/extensions/querybuilder/basepath**&#x200B;建立的新結構
 
-1. 將path屬性的值變更為 **「/content/dam」**
+1. 將路徑屬性的值變更為&#x200B;**&quot;/content/dam&quot;**
 1. 按一下「儲存」
 
-透過指定路徑屬性至 **「/content/dam」** 您基本上是將基本路徑設定為/content/dam。 您可以透過開啟「搜尋並列出程式」元件來驗證這點。
+透過將路徑屬性指定為&#x200B;**&quot;/content/dam&quot;**，您基本上是將基本路徑設定為/content/dam。 您可以透過開啟「搜尋並列出程式」元件來驗證這點。
 
-![基礎路徑](assets/basepath.png)
+![basepath](assets/basepath.png)
 
 ## 註冊自訂資產型別 {#register-custom-asset-types}
 
@@ -59,12 +59,12 @@ ht-degree: 0%
 
 **註冊自訂資產型別的步驟**
 
-1. 建立覆蓋節點，屬於 **/libs/fd/fp/extensions/querybuilder/assettypes**
+1. 建立&#x200B;**/libs/fd/fp/extensions/querybuilder/assettypes**&#x200B;的覆蓋節點
 
 1. 將覆蓋位置設為「/apps」
-1. 導覽至建立的新結構，位於 `/apps/fd/fp/extensions/querybuilder/assettypes`
+1. 瀏覽至在`/apps/fd/fp/extensions/querybuilder/assettypes`建立的新結構
 
-1. 在此位置下，為要註冊的型別建立「nt：unstructured」節點，為節點命名 **mp4files。 將下列兩個屬性新增至此mp4files節點**
+1. 在此位置下，為要註冊的型別建立「nt：unstructured」節點，將節點命名為&#x200B;**mp4files。 將下列兩個屬性新增至此mp4files節點**
 
    1. 新增jcr：title屬性以指定資產型別的顯示名稱。 將jcr：title的值設為「Mp4檔案」。
    1. 新增「type」屬性並將其值設為「videos」。 這是我們在範本中用來列出視訊型別資產的值。 儲存您的變更。
@@ -79,12 +79,12 @@ ht-degree: 0%
 
 1. 這表示屬性dc：format等於video/mp4的資產會被視為資產型別「Mp4視訊」。 對於搜尋條件，您可以使用「jcr：content/metadata」節點上列出的任何屬性
 
-1. **請務必儲存您的工作**
+1. **請確定儲存您的工作**
 
 執行上述步驟後，新資產型別（Mp4檔案）將開始顯示在Search and Lister元件的資產型別下拉式清單中，如下所示
 
-![mp4files](assets/mp4files.png)
+![mp4檔案](assets/mp4files.png)
 
-[如果您無法讓此功能正常運作，可以匯入下列套件。](assets/assettypeskt1.zip) 此套件已定義兩種自訂資產型別。 Mp4檔案與Worddocuments。 建議您檢視 **/apps/fd/fp/extensions/querybuilder/assettype**
+[如果您無法讓此專案順利運作，可以匯入下列套件。](assets/assettypeskt1.zip)封裝定義了兩種自訂資產型別。 Mp4檔案與Worddocuments。 建議您檢視&#x200B;**/apps/fd/fp/extensions/querybuilder/assettypes**
 
-[安裝customeportal套件](assets/customportalpage.zip). 此套件包含範例入口網站頁面。 本教學課程的第2部分將使用此頁面
+[安裝customeportal封裝](assets/customportalpage.zip)。 此套件包含範例入口網站頁面。 本教學課程的第2部分將使用此頁面

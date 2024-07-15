@@ -35,7 +35,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
 
    ![create-imagelist-fragment](./assets/3/create-imagelist-fragment.png)
 
-   我們要建立此型別的片段 `imagelist` (模型為 `imagelist`)，我們會提供標題 `imagelist`.
+   我們要建立型別`imagelist` （模型為`imagelist`）的片段，我們將賦予其標題`imagelist`。
 
    在內容片段編輯器中，我們有機會選取要包含或建立片段的片段。  選取建立片段。
 
@@ -43,7 +43,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
 
 1. 由於影像清單是包含其他片段參照的容器型別片段，因此可以直接從編輯器建立新選件。  建立選件片段、包含和影像說明以及文章。  您可以從下方剪下並貼上文字。  我們使用片段的標題作為卡片的標題。
 
-   __Article 1__
+   __文章1__
 
    _標題_
 
@@ -82,7 +82,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    Like a faint torch, a striking green hue shines through the tent fabric, disappearing just as quickly. The sound of zippers does its best to penetrate the ocean's roar, as we curiously peek our heads out into the freezing wind. Moments after, we sprint out in sweatpants, cameras in hand to document the fabled phenomenon the past week's cloud layer has prevented us from seeing; the Aurora Borealis. It starts with only the faintest streaks of green and blue, seemingly appearing out of thin air, only to vanish before our eyes have had a chance to adjust to the dark. Every pulse becoming more radiant, and before we know it we are gazing in awe at the dancing curtains, shifting colors under starry skies. After a week of battling the elements, it's as if Mother Nature has decided to treat us with just a taste of the breathtaking beauty she is capable of, as if we have finally proven ourselves worthy. With our jaws still open, we watch on as the mesmerizing curtains of emerald green are veiled in a dark cloud layer, and the winds once again take hold of the bay. The exhibition is over for now, but these islands will stay in our minds forever. See you next time, Lofoten, may the forces of life yet again gravitate us towards your majestic shores, because in the hardship of finding what we came for, something else has emerged, a yearning for the undisturbed, the unknown and the truly magical. It's waiting for you no matter where you are in the world.
    ```
 
-   __Article 2__
+   __文章2__
 
    _標題_
 
@@ -125,7 +125,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    Then there's the surf. A pointbreak breaking for 300 meters down a shallow coral shelf, producing immaculate almond-shaped barrels, grinding down the reef at a barely makeable speed. Even though many of the waves race past me on my struggling backhand, the few that I make it to the end of are some of the best I've ever experienced, and I have a hard time containing my excitement, hooting and hollering to Sofia on the cliffs, with her Canon 5D in hand. The line-up out back is an eclectic mix of old salty men on oversized gun surfboards, young semi-pros with stickered boards, girlfriends on longboards and hippies with dreadlocks and big smiles. Nothing of the notorious localism I have read about online, even though I quickly learn to respect the noticeable pecking order, letting the obviously more skilled crowd get the biggest set waves. There are still plenty of action for everyone, and a friendly smile opens up even the grumpiest old-timer. After the sun has set, the same faces are seen around campfires and tailgate barbeques all over the campground, where many seem to have gotten stuck for the season, ignoring distant calls of civilization urging them to return to normal lives. As the stars come out, we set up our cameras for timelapses, hoping to capture some of the magic that is happening above us, all the while our heads turn heavy from the five hours in the water and the beverages that followed.
    ```
 
-   __Article 3__
+   __文章3__
 
    _標題_
 
@@ -158,7 +158,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    Fast forward 5000 years, and although human ingenuity, competition and spirit for invention has further evolved this once crude way of transportation, the principles remain the same. We designed our now countless different models of wooden planks to float on top of powder snow, crafted metal edges to cut through ice, we shaved off every superfluous gram we could find to help us on our journeys, to reach farther, higher and steeper. And today, when in many places, multi-billion dollar corporations charge us big money to ride down over-crowded slopes, many of us are returning to the original way of skiing. Exchanging lift queues for solitude, quantity for quality, and apres-ski beer for trail mix, a new generation of skiers are rediscovering the virtue of earning one's turns, the silence of the mountains, and how far into the unknown a little off-season cardio training can get you.
    ```
 
-   __Article 4__
+   __文章4__
 
    _標題_
 
@@ -191,7 +191,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    Eu facilisis sed odio morbi quis. Consequat semper viverra nam libero justo laoreet sit amet. Eget mi proin sed libero enim sed faucibus. Vitae tempus quam pellentesque nec nam aliquam sem. Justo donec enim diam vulputate ut pharetra sit. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Mauris pellentesque pulvinar pellentesque habitant morbi. Iaculis at erat pellentesque adipiscing. Libero id faucibus nisl tincidunt eget nullam non nisi est. Interdum consectetur libero id faucibus nisl tincidunt. Volutpat odio facilisis mauris sit amet massa. Tristique senectus et netus et malesuada fames ac turpis egestas. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Sapien et ligula ullamcorper malesuada proin libero. Interdum consectetur libero id faucibus nisl tincidunt.
    ```
 
-1. 讓我們返回查詢編輯器並擷取這個新元件。  請注意，我們正在參考 `OfferModel` 以及中繼資料中，用於卡片標題。
+1. 讓我們返回查詢編輯器並擷取這個新元件。  請注意，我們正在查詢中參考`OfferModel`和中繼資料，這些資料將用於卡片標題。
 
    ```graphql
    query imageList {
@@ -227,13 +227,13 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    }
    ```
 
-1. 現在將此連線至我們的應用程式。  在我們 `home.js`，請參考我們的新查詢。 以上 `useEffect()` 我們將設定 `list` 和 `setList`.
+1. 現在將此連線至我們的應用程式。  在`home.js`中，我們將參考新查詢。 在`useEffect()`以上，我們將設定`list`和`setList`。
 
    ```javascript
    const [list, setList] = useState({});
    ```
 
-   內部 `useEffect()` imagelist查詢的新要求。
+   在`useEffect()`內新增imagelist查詢的要求。
 
    ```javascript
    sdk.runPersistedQuery('pure-headless/imagelist')
@@ -295,7 +295,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
 
 ## 啟用通用編輯器
 
-1. 新增 `<meta />` 至應用程式。  開啟 `App.js` ，並在檔案頂端插入匯入。
+1. 將`<meta />`新增至應用程式。  開啟`App.js`並在檔案頂端插入匯入。
 
    ```javascript
    import { Helmet } from 'react-helmet';
@@ -311,11 +311,11 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
 
    >[!TIP]
    >
-   > 我們使用Helmet程式庫，根據 `.env` 檔案，但您可以將此檔案硬式編碼至 `index.html`.
+   > 我們使用Helmet程式庫來根據`.env`檔案建立此動態，不過您可以將此程式碼硬式編碼到`index.html`。
 
 1. 現在來更新「卡片」以識別片段和資料型別，以便編輯每個卡片。
 
-   範圍 `<div className='card' key={card._path}>`
+   在`<div className='card' key={card._path}>`內
 
    新增
 
@@ -331,13 +331,13 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
 
 1. 現在找出可編輯的內容。
 
-   至 `<h3 />` 新增：
+   新增至`<h3 />`：
 
    ```javascript
    itemProp="_metadata" itemType="text"
    ```
 
-   至我們的 `<div />` 新增：
+   至我們的`<div />`新增：
 
    ```javascript
    itemProp="description" itemType="richtext"
@@ -362,7 +362,7 @@ Adobe Experience Manager (AEM)中的內容片段提供管理內容的結構化�
    };
    ```
 
-的最終程式碼 `home.js`：
+`home.js`的最終程式碼：
 
 ```javascript
 import React, { useContext, useEffect, useState } from 'react';

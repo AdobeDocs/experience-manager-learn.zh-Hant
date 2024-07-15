@@ -1,6 +1,6 @@
 ---
 title: 使用Forms Designer建立版面
-description: 此為多部分教學課程的第4部分，說明如何為列印管道建立您的第一個互動式通訊檔案。在本部分中，我們將檢視使用AEM Forms Designer建立的版面配置檔案。
+description: 此為多部分教學課程的第4部分，說明如何為列印管道建立您的第一個互動式通訊檔案。在本部分中，我們檢視使用AEM Forms Designer建立的版面配置檔案。
 feature: Interactive Communication
 doc-type: Tutorial
 version: 6.4,6.5
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 使用Forms Designer建立版面 {#create-layout-using-forms-designer}
 
-在本部分中，我們會檢視使用AEM Forms Designer建立的配置圖檔案。
+在本部分中，我們將檢視使用AEM Forms Designer建立的版面配置檔案。
 
 每個列印管道檔案都以使用AEM Forms Designer工具建立的範本為基礎。 通常，您可以在範本中建立區段或目標區域來容納檔案片段、影像或版面配置片段。 理想情況下，版面配置不會定義任何內容。 這是將版面配置與內容解除耦合的建議做法。
 

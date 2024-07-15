@@ -33,7 +33,7 @@ AEM中的雲端服務設定可讓您建立AEM與其他雲端應用程式之間�
 
 如果您在設定Abobe Sign雲端設定時發生錯誤，可採取下列步驟進行疑難排解
 * 請確定Acrobat Sign API應用程式中指定的重新導向URL格式如下
-&lt;your instance=&quot;&quot; name=&quot;&quot;>/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/&lt;container>.
+&lt;您的執行個體名稱>/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/&lt;container>。
 例如 — https://author-p24107-e32034.adobeaemcloud.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/FormsCS。 FormsCS是要保留雲端設定的容器名稱
 * 請確定oAuth URL正確
 * 檢查您的使用者端ID和使用者端密碼

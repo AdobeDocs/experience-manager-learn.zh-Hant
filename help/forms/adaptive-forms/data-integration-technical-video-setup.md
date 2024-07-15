@@ -30,4 +30,4 @@ ht-degree: 0%
 
 * [下載MySQL JDBC OSGi套件](https://dev.mysql.com/downloads/connector/j/)
 
-   * 透過下載、解壓縮和安裝JAR檔案 [AEM Web Console](http://localhost:4502/system/console/bundles)
+   * 透過[AEM Web主控台](http://localhost:4502/system/console/bundles)下載、解壓縮及安裝JAR檔案

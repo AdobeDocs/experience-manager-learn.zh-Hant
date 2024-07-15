@@ -1,6 +1,6 @@
 ---
 title: 主題設定工作流程 | AEM快速網站建立
-description: 瞭解如何更新Adobe Experience Manager網站的主題來源，以套用品牌特定的樣式。 瞭解如何使用Proxy伺服器檢視CSS和Javascript更新的即時預覽。 本教學課程也將涵蓋如何使用Adobe Cloud Manager的前端管道將主題更新部署到AEM網站。
+description: 瞭解如何更新Adobe Experience Manager網站的主題來源，以套用品牌特定的樣式。 瞭解如何使用Proxy伺服器檢視CSS和Javascript更新的即時預覽。 本教學課程也將涵蓋如何使用AdobeCloud Manager的前端管道將主題更新部署到AEM網站。
 version: Cloud Service
 feature: Core Components
 topic: Content Management, Development
@@ -21,19 +21,19 @@ ht-degree: 1%
 
 # 主題設定工作流程 {#theming}
 
-在本章中，我們會更新Adobe Experience Manager網站的主題來源，以套用品牌特定的樣式。 我們瞭解如何使用Proxy伺服器來檢視CSS和Javascript更新的預覽，同時針對已上線的網站進行程式碼。 本教學課程也將涵蓋如何使用Adobe Cloud Manager的前端管道將主題更新部署到AEM網站。
+在本章中，我們會更新Adobe Experience Manager網站的主題來源，以套用品牌特定的樣式。 我們瞭解如何使用Proxy伺服器來檢視CSS和Javascript更新的預覽，同時針對已上線的網站進行程式碼。 本教學課程也將涵蓋如何使用AdobeCloud Manager的前端管道將主題更新部署到AEM網站。
 
 最後，我們的網站會更新，加入符合WKND品牌的樣式。
 
 ## 先決條件 {#prerequisites}
 
-此教學課程包含多個部分，並假設您已完成下列步驟： [頁面範本](./page-templates.md) 章節已完成。
+此教學課程包含多個部分，並假設[頁面範本](./page-templates.md)章節中概述的步驟已完成。
 
 ## 目標
 
 1. 瞭解如何下載及修改網站的主題來源。
 1. 瞭解即時網站程式碼如何供即時預覽。
-1. 瞭解使用Adobe Cloud Manager的前端管道將編譯的CSS和JavaScript更新交付為主題一部分的端對端工作流程。
+1. 瞭解使用AdobeCloud Manager的前端管道傳送已編譯的CSS和JavaScript更新作為主題一部分的端對端工作流程。
 
 ## 更新主題 {#theme-update}
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 
 ### 解決方案檔案
 
-下載完成的樣式 [WKND範例主題](assets/theming/WKND-THEME-src-1.1.zip)
+下載[WKND範例佈景主題](assets/theming/WKND-THEME-src-1.1.zip)的已完成樣式
 
 ## 使用前端管道部署主題 {#deploy-theme}
 
@@ -60,8 +60,8 @@ ht-degree: 1%
 
 影片的高層級步驟：
 
-1. 建立新的Git [Cloud Manager中的存放庫](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)
-1. 將您的主題來源專案新增到Cloud Manager Git存放庫：
+1. 在Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)中建立新的Git [存放庫
+1. 將主題來源專案新增至Cloud Manager Git存放庫：
 
    ```shell
    $ cd <PATH_TO_THEME_SOURCES_FOLDER>
@@ -71,7 +71,7 @@ ht-degree: 1%
    $ git remote add origin <CLOUD_MANAGER_GIT_REPOSITORY_URL>
    ```
 
-1. 設定 [前端管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html) 在Cloud Manager中部署前端計畫碼。
+1. 在Cloud Manager中設定[前端管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)以部署前端計畫碼。
 1. 執行前端管道將更新部署到目標AEM環境。
 
 ### 存放庫範例
@@ -79,7 +79,7 @@ ht-degree: 1%
 提供幾個可作為參考的範例GitHub存放庫：
 
 * [aem-site-template-standard](https://github.com/adobe/aem-site-template-standard)
-* [aem-site-template-basic-theme-e2e](https://github.com/adobe/aem-site-template-basic-theme-e2e)  — 用於「真實世界」專案的範例。
+* [aem-site-template-basic-theme-e2e](https://github.com/adobe/aem-site-template-basic-theme-e2e) — 用於「真實世界」專案的範例。
 
 ## 恭喜！ {#congratulations}
 
@@ -87,4 +87,4 @@ ht-degree: 1%
 
 ### 後續步驟 {#next-steps}
 
-更深入瞭解AEM開發，並透過使用建立網站，瞭解更多基礎技術 [AEM專案原型](../project-archetype/overview.md).
+透過[AEM專案原型](../project-archetype/overview.md)建立網站，深入瞭解AEM開發並瞭解更多基礎技術。

@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ![感謝頁面](./assets/thank-you-page-fdm-submit.png)
 
-表單資料模型的POST一律會在回應中傳回JSON物件。 此JSON可在「感謝您」頁面URL中作為查詢引數，稱為 _fdmSubmitResult_. 您可以剖析此查詢引數，並在感謝頁面中顯示JSON元素。
+表單資料模型的POST一律會在回應中傳回JSON物件。 此JSON可在「感謝您」頁面URL中作為稱為&#x200B;_fdmSubmitResult_的查詢引數使用。 您可以剖析此查詢引數，並在感謝頁面中顯示JSON元素。
 下列範常式式碼會剖析JSON回應以擷取數字欄位的值。 接著會建構適當的xml，並在slingRequest中傳遞以填入表單。 此程式碼通常會以與調適型表單範本相關聯的頁面元件的jsp撰寫。
 
 ```java
@@ -46,6 +46,8 @@ if(request.getParameter("fdmSubmitResult")!=null)
 
 建立最適化表單，並設定以使用表單資料模型提交動作來提交表單。
 [部署範例最適化表單範本](assets/thank-you-page-template.zip)
-根據此範本建立感謝表單將此感謝頁面與您的主表單建立關聯修改jsp程式碼於 [createXml.jsp](http://localhost:4502/apps/thank-you-page-template/component/page/thankyoupage/createxml.jsp) 建置預填最適化表單所需的xml。
+根據此範本建立感謝表單
+將此感謝頁面與主要表單建立關聯
+修改[createXml.jsp](http://localhost:4502/apps/thank-you-page-template/component/page/thankyoupage/createxml.jsp)中的jsp程式碼以建置預填最適化表單所需的xml。
 預覽並提交您的最適化表單。
 此時應會顯示感謝頁面，並預先填入XML中指定的資料

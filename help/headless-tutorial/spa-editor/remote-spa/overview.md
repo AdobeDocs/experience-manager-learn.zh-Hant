@@ -24,7 +24,7 @@ ht-degree: 5%
 
 開發人員若想使用AEM SPA編輯器將現有的React型（或Next.js）遠端SPA擴充為可編輯的AEM內容，歡迎使用多部分教學課程。
 
-本教學課程建立在 [WKND GraphQL應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)，此類React應用程式會透過AEM GraphQL API使用AEM內容片段內容，但不會提供任何SPA內容的內容內撰寫。
+此教學課程以[WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)為基礎，這是一種React應用程式，它會透過AEM的GraphQL API使用AEM內容片段內容，但不會提供任何內容內嵌撰寫SPA內容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
@@ -32,16 +32,16 @@ ht-degree: 5%
 
 本教學課程旨在說明如何更新遠端SPA或在AEM環境之外執行的SPA，以使用及傳遞在AEM中撰寫的內容。
 
-本教學課程中的大部分活動都著重於JavaScript開發，但其中涵蓋了圍繞AEM的重要方面。 這些方面包括定義內容在AEM中的製作及儲存位置，以及將SPA路由對應至AEM頁面。
+本教學課程中的大部分活動都著重於JavaScript開發，但也涵蓋圍繞AEM的關鍵層面。 這些方面包括定義內容在AEM中的製作及儲存位置，以及將SPA路由對應至AEM頁面。
 
-此教學課程在設計上將使用 **AEMas a Cloud Service** 和由兩個專案組成：
+此教學課程在設計上與&#x200B;**AEM as a Cloud Service**&#x200B;搭配使用，由兩個專案組成：
 
-1. 此 __AEM專案__ 包含必須部署至AEM的設定和內容。
-1. __WKND應用程式__ 專案是要與SPA SPA編輯器整合的AEM
+1. __AEM專案__&#x200B;包含必須部署至AEM的組態和內容。
+1. __WKND App__&#x200B;專案是要與AEM的SPA編輯器整合的SPA
 
 ## 最新程式碼
 
-+ 本教學課程程式碼的起點可在上找到 [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa-tutorial) 在 `remote-spa-tutorial` 資料夾。
++ 您可以在[GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa-tutorial)的`remote-spa-tutorial`資料夾中找到此教學課程程式碼的起點。
 
 ## 先決條件
 
@@ -52,20 +52,20 @@ ht-degree: 5%
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
-+ [aem-guides-wknd.all-2.1.0.zip或更高版本](https://github.com/adobe/aem-guides-wknd/releases)
-+ [aem-guides-wknd-graphql原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main)
++ [aem-guides-wknd.all-2.1.0.zip或更新版本](https://github.com/adobe/aem-guides-wknd/releases)
++ [aem-guides-wknd-graphql原始程式碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main)
 
 本教學課程假設：
 
-+ [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/) 作為IDE
-+ 的工作目錄 `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial`
-+ 以作者服務的形式執行AEM SDK，於 `http://localhost:4502`
-+ 使用本機執行AEM SDK `admin` 具有密碼的帳戶 `admin`
-+ 執行SPA於 `http://localhost:3000`
++ [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/)作為IDE
++ `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial`的工作目錄
++ 在`http://localhost:4502`上以Author服務的形式執行AEM SDK
++ 使用密碼為`admin`的本機`admin`帳戶執行AEM SDK
++ 正在`http://localhost:3000`上執行SPA
 
 >[!NOTE]
 >
-> **需要協助設定本機開發環境嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **需要協助設定您的本機開發環境嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 
 ## 1.設定AEM for SPA編輯器
 

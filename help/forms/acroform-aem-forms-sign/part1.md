@@ -28,7 +28,7 @@ Acroform是使用Acrobat建立的表單。 您可以使用Acrobat從頭開始建
 
 >[!NOTE]
 >
->如果您想要傳送可填寫的Acroform以供使用Acrobat Sign簽署，請為欄位命名。 例如，您可以為欄位命名 **`Sig_es_:signer1:signature`**. 這是Acrobat Sign瞭解的語法。
+>如果您想要傳送可填寫的Acroform以供使用Acrobat Sign簽署，請為欄位命名。 例如，您可以命名欄位&#x200B;**`Sig_es_:signer1:signature`**。 這是Acrobat Sign瞭解的語法。
 
 >[!NOTE]
 >

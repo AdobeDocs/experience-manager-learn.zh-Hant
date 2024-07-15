@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 儲存和擷取草稿信件
 
-下列程式碼可用來儲存信件例項。 信件例項的中繼資料儲存在 _草稿_ 表格。 產生並傳回唯一字串(draftID)。 然後會使用此唯一字串來擷取已儲存的信件例項。
+下列程式碼可用來儲存信件例項。 信件執行個體的中繼資料儲存在&#x200B;_icdrafts_&#x200B;資料表中。 產生並傳回唯一字串(draftID)。 然後會使用此唯一字串來擷取已儲存的信件例項。
 
 ```java
 public String save(CCRDocumentInstance letterToSave) throws CCRDocumentException {
@@ -168,4 +168,4 @@ AEM Forms未提供任何立即可用的使用者介面來列出已儲存的字�
 
 ### Eclipse專案
 
-包含範例實作的eclipse專案可以是 [已從此處下載](assets/icdrafts-eclipse-project.zip)
+包含範例實作的eclipse專案可從這裡[下載](assets/icdrafts-eclipse-project.zip)

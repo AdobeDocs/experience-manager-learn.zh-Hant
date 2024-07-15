@@ -1,5 +1,5 @@
 ---
-title: 使用AEM Sites設定ContextHub以進行個人化
+title: 使用AEM Sites設定Personalization的ContextHub
 description: ContextHub是一種用於儲存、操控和呈現內容資料的架構。 ContextHub Javascript API可讓您視需要存取存放區以建立、更新和刪除資料。 因此，ContextHub代表頁面上的資料層。 本頁面說明如何將Context Hub新增至AEM網站頁面。
 feature: Context Hub
 version: 6.4, 6.5
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 ---
 
-# 設定ContextHub以進行個人化 {#set-up-contexthub}
+# 設定Personalization的ContextHub {#set-up-contexthub}
 
 ContextHub是一種用於儲存、操控和呈現內容資料的架構。 ContextHub Javascript API可讓您視需要存取存放區以建立、更新和刪除資料。 因此，ContextHub代表頁面上的資料層。 本頁面說明如何將Context Hub新增至AEM網站頁面。
 
@@ -24,13 +24,13 @@ ContextHub是一種用於儲存、操控和呈現內容資料的架構。 Contex
 
 >[!NOTE]
 >
->我們在此影片中使用WKND參考網站，它不是AEM版本的一部分。 您可以下載 [最新版本在此](https://github.com/adobe/aem-guides-wknd/releases).
+>我們在此影片中使用WKND參考網站，它不是AEM版本的一部分。 您可以在這裡下載[最新版本](https://github.com/adobe/aem-guides-wknd/releases)。
 
-將ContextHub新增至您的頁面，以啟用ContextHub功能並連結至ContextHub JavaScript程式庫。 ContextHub JavaScript API提供對ContextHub管理之內容資料的存取權。
+將ContextHub新增至您的頁面，以啟用ContextHub功能並連結至ContextHub JavaScript資料庫。 ContextHub JavaScript API可讓您存取ContextHub管理的內容資料。
 
 ## 將ContextHub新增至頁面元件 {#adding-contexthub-to-a-page-component}
 
-若要啟用ContextHub功能並連結至ContextHub JavaScript程式庫，請包含 `contexthub` 中的元件 `<head>` 區段。 頁面元件的HTL程式碼類似於以下範例：
+若要啟用ContextHub功能並連結至ContextHub JavaScript資料庫，請在網頁的`<head>`區段中加入`contexthub`元件。 頁面元件的HTL程式碼類似於以下範例：
 
 ```java
 <!--/* Include Context Hub */-->
@@ -39,7 +39,7 @@ ContextHub是一種用於儲存、操控和呈現內容資料的架構。 Contex
 
 ## 網站設定和ContextHub區段 {#site-configuration-and-contexthub-segments}
 
-ContextHub包含區段引擎，可管理區段並決定針對目前內容解析哪些區段。 已定義數個區段。 您可以使用Javascript API來 [決定已解析的區段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments). 在下啟用您網站的ContextHub區段 [[!UICONTROL 設定瀏覽器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html).
+ContextHub包含區段引擎，可管理區段並決定針對目前內容解析哪些區段。 已定義數個區段。 您可以使用Javascript API來[判斷已解析的區段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)。 在[[!UICONTROL 設定瀏覽器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)下啟用您網站的ContextHub區段。
 
 ## 建立區段 {#create-segments}
 
@@ -54,6 +54,6 @@ ContextHub包含區段引擎，可管理區段並決定針對目前內容解析�
 您可以閱讀以下有關ContextHub和區段的更多資訊：
 
 * [ContextHub](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub.html)
-* [將Context Hub新增至頁面並存取存放區](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html)
+* [正在將內容中心新增至頁面並存取存放區](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html)
 * [了解區段](https://helpx.adobe.com/experience-manager/6-5/sites/classic-ui-authoring/using/classic-personalization-campaigns-segmentation.html)
 * [使用 ContextHub 設定分段](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/segmentation.html)

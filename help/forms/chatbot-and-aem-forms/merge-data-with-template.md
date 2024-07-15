@@ -22,5 +22,5 @@ ht-degree: 0%
 
 ## 使用OutputService產生PDF
 
-此 [generatePDF](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-) 已使用OutputService的方法產生PDF。
+已使用OutputService的[generatePDF](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-)方法來產生PDF。
 接著會使用Adobe Sign REST API傳送產生的PDF以供簽名。

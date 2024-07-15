@@ -35,13 +35,13 @@ AEM Content Services允許在AEM Sites中製作網頁時使用相同的內容抽
 * 使用AEM Sites的範本和公開事件資料為JSON的頁面來定義AEM Content Services端點
 * 探索如何使用AEM WCM核心元件來讓行銷人員編寫JSON端點
 * 使用行動應用程式中的AEM Content Services JSON
-   * 使用Android是因為其擁有跨平台模擬器，本教學課程的所有使用者(Windows、macOS和Linux)都可使用它來執行原生應用程式。
+   * 使用Android是因為它有跨平台模擬器，本教學課程的所有使用者(Windows、macOS和Linux)都可以使用它來執行原生應用程式。
 
 ## github專案
 
-原始程式碼和內容套件可在 [AEM Guides - WKND Mobile GitHub專案](https://github.com/adobe/aem-guides-wknd-mobile).
+原始程式碼和內容套件可在[AEM Guides - WKND Mobile GitHub專案](https://github.com/adobe/aem-guides-wknd-mobile)上取得。
 
-若教學課程或程式碼有任何問題，請留下 [GitHub問題](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+如果您發現教學課程或程式碼有問題，請留下[GitHub問題](https://github.com/adobe/aem-guides-wknd-mobile/issues)。
 
 ## AEM GraphQL與AEM Content Services
 

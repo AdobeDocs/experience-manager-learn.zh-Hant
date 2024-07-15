@@ -13,11 +13,11 @@ ht-degree: 5%
 
 ---
 
-# AEMas a Cloud Service影片和教學課程 {#overview}
+# AEM as a Cloud Service影片和教學課程 {#overview}
 
 {{edge-delivery-services}}
 
-Adobe Experience Manager (AEM)現在可as a Cloud Service使用。 AEMas a Cloud Service推出新一代Experience Manager產品系列，以過去的投資和創新為基礎，保留及擴充所有使用案例和功能。
+Adobe Experience Manager (AEM)現在可as a Cloud Service使用。 AEM as a Cloud Service推出新一代Experience Manager產品線，以過去的投資和創新為基礎，保留及擴充所有使用案例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
@@ -39,7 +39,7 @@ Adobe Experience Manager (AEM)現在可as a Cloud Service使用。 AEMas a Cloud
       </a>
       <div>
          <a href="./accessing/overview.md">
-         <strong>設定AEM存取權教學課程</strong>
+         <strong>設定AEM教學課程的存取權</strong>
          </a>
       </div>
       <p>
@@ -56,7 +56,7 @@ Adobe Experience Manager (AEM)現在可as a Cloud Service使用。 AEMas a Cloud
          </a>
       </div>
       <p>
-         <em>讓您的本機開發電腦準備好進行AEMas a Cloud Service開發！</em>
+         <em>讓您的本機開發電腦準備好進行AEM as a Cloud Service開發！</em>
       <p>
    </td>   
    <td>
@@ -69,7 +69,7 @@ Adobe Experience Manager (AEM)現在可as a Cloud Service使用。 AEMas a Cloud
          </a>
       </div>
       <p>
-         <em>探索用於在AEMas a Cloud ServiceSDK的本機Quickstart上對您的應用程式進行偵錯的工具。</em>
+         <em>探索用來在AEM as a Cloud Service SDK的本機Quickstart上偵錯應用程式的工具。</em>
       <p>
    </td>
 </table>

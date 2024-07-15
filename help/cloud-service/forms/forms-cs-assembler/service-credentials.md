@@ -1,6 +1,6 @@
 ---
 title: AEM服務認證
-description: 從AEM開發人員控制檯下載服務認證。
+description: 從AEM的Developer Console下載服務認證。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 服務認證
 
-與AEMas a Cloud Service的整合必須能夠安全地向AEM進行驗證。 AEM開發人員控制檯產生服務認證，外部應用程式、系統和服務使用這些認證，以程式設計方式透過HTTP與AEM作者或發佈服務互動。
+與AEM as a Cloud Service的整合必須能夠安全地向AEM進行驗證。 AEM的Developer Console會產生服務憑證，外部應用程式、系統和服務會使用這些憑證，以程式設計方式透過HTTP與AEM作者或Publish服務互動。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 

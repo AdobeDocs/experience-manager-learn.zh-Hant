@@ -24,7 +24,7 @@ ht-degree: 0%
 
 讓我們來看看下列程式碼片段。 此程式碼是GET.jsp的一部分，當使用者按一下電子郵件中連結的「 」以檢視Web Channel檔案時，就會觸發此程式碼。 我們會使用jackrabbit UserManager取得登入使用者。 取得登入使用者後，就會取得與使用者設定檔相關聯的accountNumber屬性值。
 
-然後，我們會將accountNumber值與對應中稱為accountnumber的索引鍵建立關聯。 金鑰 **accountnumber** 在表單資料強制回應視窗中定義為請求屬性。 此屬性的值會作為輸入引數傳遞至表單資料模組讀取服務方法。
+然後，我們會將accountNumber值與對應中稱為accountnumber的索引鍵建立關聯。 索引鍵&#x200B;**accountnumber**&#x200B;在表單資料模式中定義為請求屬性。 此屬性的值會作為輸入引數傳遞至表單資料模組讀取服務方法。
 
 第7行：我們將根據互動式通訊檔案URL所識別的資源型別，將收到的請求傳送給另一個servlet。 此第二個servlet傳回的回應會包含在第一個servlet的回應中。
 
@@ -42,8 +42,8 @@ wrapperRequest.getRequestDispatcher("/content/forms/af/401kstatement/irastatemen
 
 第7行代碼的視覺化表示法
 
-![要求引數設定](assets/requestparameter.png)
+![要求參陣列態](assets/requestparameter.png)
 
 為表單資料強制回應視窗的讀取服務定義的請求屬性
 
-[範例AEM套件](assets/webchanneldelivery.zip).
+[範例AEM封裝](assets/webchanneldelivery.zip)。

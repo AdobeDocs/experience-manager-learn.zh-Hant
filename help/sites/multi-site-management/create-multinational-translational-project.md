@@ -1,6 +1,6 @@
 ---
 title: 建立多語言翻譯專案
-description: 瞭解如何從AEM專案主控台為您的語言副本建立、編輯及管理多語言翻譯專案
+description: 瞭解如何從AEM的專案主控台為您的語言副本建立、編輯及管理多語言翻譯專案
 feature: Language Copy, Multi Site Manager
 doc-type: Feature Video
 version: 6.4, 6.5, Cloud Service
@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 建立多語言翻譯專案 {#create-multi-language-translation-projects}
 
-瞭解如何從AEM專案主控台為您的語言副本建立、編輯及管理多語言翻譯專案
+瞭解如何從AEM的專案主控台為您的語言副本建立、編輯及管理多語言翻譯專案
 
 >[!VIDEO](https://video.tv.adobe.com/v/36485?quality=12&learn=on)

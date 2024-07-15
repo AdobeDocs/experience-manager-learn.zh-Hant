@@ -9,7 +9,7 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 92dbd185-bad4-4a4d-b979-0d8f5d47c54b
 duration: 50
@@ -28,16 +28,16 @@ ht-degree: 1%
 
 需要使用Adobe Developer Console專案的IMS設定，才能將AEM與新建立的標籤屬性整合。 此設定允許AEM使用標籤API與標籤應用程式通訊，並且IMS會處理此整合的安全性方面。
 
-每當為AEM as Cloud Service環境布建時，就會自動建立一些IMS設定，例如Asset compute、Adobe Analytics和標籤。 已自動建立 **Adobe Experience Platform中的標籤** 如果您使用AEM 6.X環境，可使用IMS設定或建立新的IMS設定。
+每當為AEM as Cloud Service環境布建時，就會自動建立一些IMS設定，例如Asset Compute、Adobe Analytics和標籤。 若您使用AEM 6.X環境，可使用Adobe Experience Platform **IMS設定中自動建立的**&#x200B;標籤，或應建立新的IMS設定。
 
-檢閱已自動建立 **Adobe Experience Platform中的標籤** 使用以下步驟進行IMS設定。
+檢閱在Adobe Experience Platform **IMS設定中自動建立的**&#x200B;標籤（使用下列步驟）。
 
-1. 在AEM Author中開啟 **工具** 功能表
+1. 在AEM Author中，開啟&#x200B;**工具**&#x200B;功能表
 1. 在「安全性」區段中，選取「Adobe IMS設定」。
-1. 選取 **Adobe啟動** 卡片並按一下 **屬性**，檢閱詳細資訊，從 **憑證** 和 **帳戶** 索引標籤。 然後按一下 **取消** 以在不修改任何自動建立的詳細資料的情況下返回。
-1. 選取 **Adobe啟動** 卡片，這次按一下 **檢查健康狀態**，您應該會看到 **成功** 訊息如下。
+1. 選取&#x200B;**Adobe啟動**&#x200B;卡片，然後按一下&#x200B;**屬性**，檢閱&#x200B;**憑證**&#x200B;和&#x200B;**帳戶**&#x200B;標籤的詳細資料。 然後按一下[取消]返回，而不修改任何自動建立的詳細資料。****
+1. 選取&#x200B;**Adobe啟動**&#x200B;卡，這次按一下&#x200B;**檢查健康狀態**，您應該會看到如下的&#x200B;**成功**&#x200B;訊息。
 
-   ![標籤健康的IMS設定](assets/adobe-launch-healthy-ims-config.png)
+   ![標籤狀況良好的IMS設定](assets/adobe-launch-healthy-ims-config.png)
 
 ## 後續步驟
 

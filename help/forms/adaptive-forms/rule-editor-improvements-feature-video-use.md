@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/19653?quality=12&learn=on)
 
-**規則編輯器的部分改良專案包括：**
+**規則編輯器的部分改善包括：**
 
 * 多值表單元件會自動顯示元件選項
 * 在視覺化編輯器中指定WSDL Web服務的功能

@@ -21,6 +21,6 @@ ht-degree: 0%
 
 ## 組合PDF檔案
 
-修改 `assemble2pdfs.ddx` 檔案組合3個PDF檔案。
+修改`assemble2pdfs.ddx`檔案以組合3個PDF檔案。
 
 您將第三個pdf放在resources/pdf資料夾下。

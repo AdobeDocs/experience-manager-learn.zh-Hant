@@ -1,6 +1,6 @@
 ---
-title: AEMas a Cloud Service內容移轉常見問題集
-description: 取得有關將內容移轉至AEMas a Cloud Service的常見問題解答。
+title: AEM as a Cloud Service內容移轉常見問題集
+description: 取得有關將內容移轉至AEM as a Cloud Service的常見問題解答。
 version: Cloud Service
 doc-type: article
 topic: Migration
@@ -18,16 +18,16 @@ ht-degree: 0%
 
 ---
 
-# AEMas a Cloud Service內容移轉常見問題集
+# AEM as a Cloud Service內容移轉常見問題集
 
-取得有關將內容移轉至AEMas a Cloud Service的常見問題解答。
+取得有關將內容移轉至AEM as a Cloud Service的常見問題解答。
 
 ## 術語
 
-+ **Aemaacs**： [AEMas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/introduction.html?lang=zh-Hant)
-+ **BPA**： [Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=zh-Hant)
++ **AEMaaCS**： [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/introduction.html?lang=zh-Hant)
++ **BPA**： [最佳做法分析工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=zh-Hant)
 + **CTT**： [內容轉移工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
-+ **凸輪**： [Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)
++ **攝影機**： [Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)
 + **IMS**： [Identity Management系統](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html)
 + **DM**： [Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dm-journey/dm-journey-part1.html)
 
@@ -43,17 +43,17 @@ ht-degree: 0%
 
 + 使用內容轉移工具(AEM 6.3+ → AEMaaCS)
 + 透過封裝管理員(AEM→AEMaaCS)
-+ 立即可用的資產(S3/Azure→AEMaaCS)大量匯入服務
++ Assets (S3/Azure→AEMaaCS)適用的現成大量匯入服務
 
 ### 問：使用CTT可傳輸的內容數量是否有限制？
 
 不適用。 CTT工具可從AEM來源擷取並內嵌至AEMaaCS。 不過，在移轉前應考量AEMaaCS平台的特定限制。
 
-如需詳細資訊，請參閱 [雲端移轉必要條件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html).
+如需詳細資訊，請參閱[雲端移轉必要條件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html)。
 
 ### 問：我有來自來源系統的最新BPA報告，應該怎麼做？
 
-將報表匯出為CSV，然後將其上傳到Cloud Acceleration Manager， [與您的IMS組織相關聯](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html). 然後以下列方式完成稽核流程 [整備階段中概述](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
+將報表匯出為CSV，然後將其上傳到與您的IMS組織](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)相關聯的[Cloud Acceleration Manager。 然後依照準備階段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html)中所述的[進行稽核程式。
 
 請檢閱工具提供的程式碼和內容複雜性評估，並記下導致程式碼重構待處理或雲端移轉評估的相關動作專案。
 
@@ -79,9 +79,9 @@ CTT擷取流程所需的資源量取決於節點數量、Blob數量及其彙總�
 
 ### 問：在CTT的情境下，「擦去」和「覆寫」這兩個辭彙是什麼意思？
 
-在的內容中 [擷取階段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase)，選項包括覆寫前一個擷取週期臨時容器中的資料，或新增差異（新增/更新/刪除）至容器中。 「暫存容器」並不重要，但與移轉集相關聯的blob儲存容器。 每個移轉集都有各自的暫存容器。
+在[擷取階段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase)的內容中，選項是覆寫暫存容器中先前擷取循環的資料，或將差異（新增/更新/刪除）新增至其中。 「暫存容器」並不重要，但與移轉集相關聯的blob儲存容器。 每個移轉集都有各自的暫存容器。
 
-在的內容中 [擷取階段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html)，選項為+以取代AEMaaCS的整個內容存放庫，或從中繼移轉容器同步差異（新增/更新/刪除）內容。
+在[擷取階段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html)的內容中，選項為+以取代AEMaaCS的整個內容存放庫，或從中繼移轉容器同步差異化（新增/更新/刪除）內容。
 
 ### 問：來源系統中有多個網站、相關資產、使用者和群組。 是否可以分階段將其移轉至AEMaaCS？
 
@@ -103,21 +103,21 @@ CTT擷取流程所需的資源量取決於節點數量、Blob數量及其彙總�
 
 可以。缺少原始轉譯表示資產二進位檔一開始並未正確上傳。 將其視為不良資料，請檢閱、使用封裝管理員（視需要）進行備份，並在執行擷取之前從來源AEM中將其移除。 不良資料會在資產處理步驟上造成負面結果。
 
-### 問：BPA報表含有與遺失相關的專案 `jcr:content` 資料夾的節點。 我該拿它們做什麼？
+### 問：BPA報告包含與資料夾缺少`jcr:content`節點相關的專案。 我該拿它們做什麼？
 
-時間 `jcr:content` 缺少檔案夾層級、傳播設定的任何動作，例如處理設定檔等。 來自父項的將在此層級中斷。 請檢視遺失的原因 `jcr:content`. 雖然這些資料夾可以移轉，但請注意，這類資料夾會降低使用者體驗，並造成不必要的疑難排解週期。
+當資料夾層級缺少`jcr:content`時，任何傳播設定的動作，例如處理設定檔等 來自父項的將在此層級中斷。 請檢視遺失`jcr:content`的原因。 雖然這些資料夾可以移轉，但請注意，這類資料夾會降低使用者體驗，並造成不必要的疑難排解週期。
 
 ### 問：我已經建立了移轉集。 是否可以檢查其大小？
 
-是的，有一個 [檢查大小](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#migration-set-size) 是CTT一部分的特徵。
+是，有[檢查大小](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#migration-set-size)功能是CTT的一部分。
 
 ### 問：我正在執行移轉（擷取、擷取）。 是否可以驗證我擷取的所有內容是否已擷取至Target？
 
-是的，有一個 [驗證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html) 是CTT一部分的功能。
+是，有[驗證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html)功能，是CTT的一部分。
 
 ### 問：我的客戶需要在AEMaaCS環境（例如從AEMaaCS Dev到AEMaaCS Stage或到AEMaaCS Prod）之間移動內容。 我可以針對這些使用案例使用內容轉移工具嗎？
 
-很遺憾，否。 CTT的使用案例是將內容從內部部署/AMS託管的AEM 6.3+來源移轉到AEMaaCS雲端環境。 [請閱讀CTT檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html).
+很遺憾，否。 CTT的使用案例是將內容從內部部署/AMS託管的AEM 6.3+來源移轉到AEMaaCS雲端環境。 [請閱讀CTT檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)。
 
 ### 問：擷取期間可能會出現哪些問題？
 
@@ -125,7 +125,7 @@ CTT擷取流程所需的資源量取決於節點數量、Blob數量及其彙總�
 
 公開檔案會根據學習內容持續改善，以下是一些高階問題類別和可能的基本原因。
 
-![AEMas a Cloud Service內容移轉擷取問題](../../assets/faq/extraction-issues.jpg) { align=&quot;center&quot; }
+![AEM as a Cloud Service內容移轉擷取問題](../../assets/faq/extraction-issues.jpg) { align=&quot;center&quot; }
 
 ### 問：在擷取期間可能會出現哪些問題？
 
@@ -133,20 +133,20 @@ CTT擷取流程所需的資源量取決於節點數量、Blob數量及其彙總�
 
 以下是可能的問題類別（請勿將此視為專屬清單）
 
-![AEMas a Cloud Service內容移轉擷取問題](../../assets/faq/ingestion-issues.jpg) { align=&quot;center&quot; }
+![AEM as a Cloud Service內容移轉擷取問題](../../assets/faq/ingestion-issues.jpg) { align=&quot;center&quot; }
 
 
 
 ### 問：我的來源伺服器需要輸出網際網路連線才能讓CTT正常運作嗎？
 
-簡短的答案是「**是**「。
+簡短答案是&quot;**是**&quot;。
 
 CTT流程需要連線至以下資源：
 
-+ 目標AEMas a Cloud Service環境： `author-p<program_id>-e<env_id>.adobeaemcloud.com`
++ 目標AEM as a Cloud Service環境： `author-p<program_id>-e<env_id>.adobeaemcloud.com`
 + Azure Blob儲存服務： `casstorageprod.blob.core.windows.net`
 
-請參閱檔案以取得更多關於 [來源連線能力](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#source-environment-connectivity).
+請參閱檔案以取得有關[來源連線能力](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#source-environment-connectivity)的詳細資訊。
 
 ## 資產處理Dynamic Media相關問題
 
@@ -166,7 +166,7 @@ CTT流程需要連線至以下資源：
 + 如果方法是從來源翻制例項移轉，則可以安全地停用用於CTT的翻制上的DM整合。 此步驟純粹是為了避免任何寫入DM或避免DM流量載入。
 + 請注意，CTT會將節點、移轉集的中繼資料從來源AEM移轉到AEMaaCS。 不會直接在DM上執行任何作業。
 
-### 問：當來源AEM上出現DM整合時，有哪些不同的移轉方法？
+### 問：Source AEM上出現DM整合時，有哪些不同的移轉方法？
 
 請先閱讀上述問題和答案
 
@@ -177,10 +177,10 @@ CTT流程需要連線至以下資源：
 如果來源環境中的資產/節點數量位於低端（約100K），假設這些資產可於24至72小時內移轉（包括擷取和擷取），則較佳的方法為
 
 + 直接從生產環境執行移轉
-+ 使用執行初始擷取和內嵌到AEMaaCS `wipe=true`
++ 使用`wipe=true`執行初始擷取並擷取至AEMaaCS
    + 此步驟會移轉所有節點和二進位檔
 + 繼續使用內部部署/AMS Prod作者
-+ 從現在開始，透過以下執行所有其他移轉週期證明 `wipe=true`
++ 從現在開始，請使用`wipe=true`執行所有其他移轉週期證明
    + 請注意，此操作會移轉完整節點存放區，但只會移轉修改過的Blob，而不是整個Blob。 前一組的Blob位於目標AEMaaCS例項的Azure Blob存放區中。
    + 使用此移轉證明來測量移轉持續時間、測試、驗證所有其他功能
 + 最後，在上線當週之前，執行擦去=true移轉
@@ -211,4 +211,4 @@ CTT流程需要連線至以下資源：
 
 + [CTT專家系列影片](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
 
-+ [其他AEMaaCS主題的專家系列影片](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-experts-series.html)
++ 其他AEMaaCS主題的[專家系列影片](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-experts-series.html)

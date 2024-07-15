@@ -25,27 +25,27 @@ ht-degree: 0%
 ## 目標
 
 1. 使用其他屬性和內容擴充現有的核心元件。
-2. 透過使用瞭解元件繼承的基本知識 `sling:resourceSuperType`.
-3. 瞭解如何善用 [委派模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 讓Sling模型重複使用現有邏輯和功能。
+2. 瞭解使用`sling:resourceSuperType`的元件繼承基本知識。
+3. 瞭解如何為Sling模型善用[委派模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)，以重複使用現有邏輯和功能。
 
 ## 您將建置的內容
 
-本章說明將額外屬性新增至標準所需的其他程式碼 `Image` 滿足新需求之元件 `Banner` 元件。 此 `Banner` 元件包含與標準元件相同的所有屬性 `Image` 元件但包含其他屬性，供使用者填入 **橫幅文字**.
+本章說明將額外屬性新增至標準`Image`元件以滿足新`Banner`元件需求所需的額外程式碼。 `Banner`元件包含所有與標準`Image`元件相同的屬性，但包含使用者填入&#x200B;**橫幅文字**&#x200B;的額外屬性。
 
-![最終撰寫的橫幅元件](assets/extend-component/final-author-banner-component.png)
+![最終編寫的橫幅元件](assets/extend-component/final-author-banner-component.png)
 
 ## 先決條件
 
-檢閱設定所需的工具和指示 [本機開發環境](overview.md#local-dev-environment). 在本教學課程的這個階段，我們假設使用者已對AEM SPA Editor功能有了充分的瞭解。
+檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。 在本教學課程的這個階段，我們假設使用者已對AEM SPA Editor功能有了充分的瞭解。
 
 ## Sling資源超級型別的繼承 {#sling-resource-super-type}
 
-若要擴充現有元件，請設定名為的屬性 `sling:resourceSuperType` 於元件的定義上。  `sling:resourceSuperType`是 [屬性](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties) 可在指向其他元件的AEM元件定義上設定。 這會明確設定元件，以繼承識別為之元件的所有功能。 `sling:resourceSuperType`.
+若要擴充現有元件，請在元件的定義上設定名為`sling:resourceSuperType`的屬性。  `sling:resourceSuperType`是可設定在指向其他元件之AEM元件定義上的[屬性](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties)。 這會明確設定元件以繼承識別為`sling:resourceSuperType`之元件的所有功能。
 
-如果我們要擴充 `Image` 元件於 `wknd-spa-react/components/image` 我們需要更新中的程式碼 `ui.apps` 模組。
+如果我們想要在`wknd-spa-react/components/image`擴充`Image`元件，則需要更新`ui.apps`模組中的程式碼。
 
-1. 在下方建立新資料夾 `ui.apps` 模組 `banner` 在 `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/banner`.
-1. 下 `banner` 建立元件定義(`.content.xml`)如下所示：
+1. 在`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/banner`的`banner`的`ui.apps`模組下建立新資料夾。
+1. 在`banner`下建立元件定義(`.content.xml`)，如下所示：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -56,14 +56,14 @@ ht-degree: 0%
        componentGroup="WKND SPA React - Content"/>
    ```
 
-   這設定 `wknd-spa-react/components/banner` 以繼承的所有功能 `wknd-spa-react/components/image`.
+   此設定`wknd-spa-react/components/banner`以繼承`wknd-spa-react/components/image`的所有功能。
 
 ## cq：editConfig {#cq-edit-config}
 
-此 `_cq_editConfig.xml` 檔案會指定AEM編寫UI中的拖放行為。 擴充影像元件時，資源型別必須符合元件本身。
+`_cq_editConfig.xml`檔案指定AEM編寫UI中的拖放行為。 擴充影像元件時，資源型別必須符合元件本身。
 
-1. 在 `ui.apps` 模組在下方建立另一個檔案 `banner` 已命名 `_cq_editConfig.xml`.
-1. 填入 `_cq_editConfig.xml` 使用下列XML：
+1. 在`ui.apps`模組中，在`banner`下建立另一個名為`_cq_editConfig.xml`的檔案。
+1. 使用下列XML填入`_cq_editConfig.xml`：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -159,7 +159,7 @@ ht-degree: 0%
    </jcr:root>
    ```
 
-1. 檔案的獨特之處在於 `<parameters>` 將resourceType設定為的節點 `wknd-spa-react/components/banner`.
+1. 檔案的唯一方面是將resourceType設定為`wknd-spa-react/components/banner`的`<parameters>`節點。
 
    ```xml
    <parameters
@@ -170,14 +170,14 @@ ht-degree: 0%
        imageRotate=""/>
    ```
 
-   大部分的元件不需要 `_cq_editConfig`. 影像元件和後代則為例外。
+   大部分的元件不需要`_cq_editConfig`。 影像元件和後代則為例外。
 
 ## 延伸對話方塊 {#extend-dialog}
 
-我們的 `Banner` 元件需要對話方塊中的額外文字欄位以擷取 `bannerText`. 由於我們使用Sling繼承，因此我們可以使用 [Sling資源合併](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) 覆蓋或延伸對話方塊部分。 在此範例中，對話方塊中已新增索引標籤，以從作者擷取其他資料以填入卡片元件。
+我們的`Banner`元件需要對話方塊中的額外文字欄位才能擷取`bannerText`。 由於我們使用Sling繼承，因此可以使用[Sling資源合併器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html)的功能來覆寫或擴充對話方塊的部分。 在此範例中，對話方塊中已新增索引標籤，以從作者擷取其他資料以填入卡片元件。
 
-1. 在 `ui.apps` 模組，在 `banner` 資料夾，建立名為的資料夾 `_cq_dialog`.
-1. 下 `_cq_dialog` 建立對話方塊定義檔案 `.content.xml`. 請填入下列內容：
+1. 在`ui.apps`模組的`banner`資料夾下方，建立名為`_cq_dialog`的資料夾。
+1. 在`_cq_dialog`下建立對話方塊定義檔`.content.xml`。 請填入下列內容：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -231,22 +231,22 @@ ht-degree: 0%
    </jcr:root>
    ```
 
-   上述XML定義將建立名為的新標籤 **文字** 並排序 *早於* 現有 **資產** 標籤。 它將包含單一欄位 **橫幅文字**.
+   上述XML定義將建立名為&#x200B;**Text**&#x200B;的新索引標籤，並在&#x200B;*現有&#x200B;**資產**索引標籤之前*&#x200B;對其進行排序。 它將包含單一欄位&#x200B;**橫幅文字**。
 
 1. 對話方塊看起來像這樣：
 
    ![橫幅最終對話方塊](assets/extend-component/banner-dialog.png)
 
-   請注意，我們不需要為定義標籤 **資產** 或 **中繼資料**. 這些會透過 `sling:resourceSuperType` 屬性。
+   請注意，我們不需要為&#x200B;**資產**&#x200B;或&#x200B;**中繼資料**&#x200B;定義索引標籤。 這些是透過`sling:resourceSuperType`屬性繼承的。
 
-   在可以預覽對話方塊之前，我們需要實作SPA元件和 `MapTo` 函式。
+   在可以預覽對話方塊之前，我們需要實作SPA元件和`MapTo`函式。
 
 ## 實作SPA元件 {#implement-spa-component}
 
-若要搭配SPA編輯器使用橫幅元件，必須建立新的SPA元件，且元件會對應至 `wknd-spa-react/components/banner`. 此作業可在以下位置完成： `ui.frontend` 模組。
+若要搭配SPA編輯器使用橫幅元件，必須建立將對應到`wknd-spa-react/components/banner`的新SPA元件。 這已在`ui.frontend`模組中完成。
 
-1. 在 `ui.frontend` 模組為建立新資料夾 `Banner` 在 `ui.frontend/src/components/Banner`.
-1. 建立名為的新檔案 `Banner.js` 在 `Banner` 資料夾。 請填入下列內容：
+1. 在`ui.frontend`模組中，於`ui.frontend/src/components/Banner`為`Banner`建立新資料夾。
+1. 在`Banner`資料夾下建立名為`Banner.js`的新檔案。 請填入下列內容：
 
    ```js
    import React, {Component} from 'react';
@@ -296,9 +296,9 @@ ht-degree: 0%
    MapTo('wknd-spa-react/components/banner')(Banner, BannerEditConfig);
    ```
 
-   此SPA元件對應至AEM元件 `wknd-spa-react/components/banner` 建立時間較早。
+   此SPA元件對應至先前建立的AEM元件`wknd-spa-react/components/banner`。
 
-1. 更新 `import-components.js` 在 `ui.frontend/src/components/import-components.js` 以包含新的 `Banner` SPA元件：
+1. 在`ui.frontend/src/components/import-components.js`更新`import-components.js`以包含新的`Banner` SPA元件：
 
    ```diff
      import './ExperienceFragment/ExperienceFragment';
@@ -313,24 +313,24 @@ ht-degree: 0%
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. 更新SPA範本的原則以新增 `Banner` 元件作為 **允許的元件**.
+1. 更新SPA範本的原則以將`Banner`元件新增為&#x200B;**允許的元件**。
 
-1. 導覽至SPA頁面並新增 `Banner` 元件至其中一個SPA頁面：
+1. 導覽至SPA頁面，並將`Banner`元件新增至其中一個SPA頁面：
 
    ![新增橫幅元件](assets/extend-component/add-banner-component.png)
 
    >[!NOTE]
    >
-   > 此對話方塊可讓您儲存值 **橫幅文字** 但此值不會反映在SPA元件中。 若要啟用，我們需要為元件延伸Sling模型。
+   > 此對話方塊可讓您儲存&#x200B;**橫幅文字**&#x200B;的值，但此值不會反映在SPA元件中。 若要啟用，我們需要為元件延伸Sling模型。
 
 ## 新增Java介面 {#java-interface}
 
-若要最終將元件對話方塊中的值顯示給React元件，我們需要更新為填入JSON的Sling模型 `Banner` 元件。 此作業可在以下位置完成： `core` 包含我們SPA專案所有Java程式碼的模組。
+若要最終將元件對話方塊中的值公開給React元件，我們需要更新為`Banner`元件填入JSON的Sling模型。 這是在`core`模組中完成的，此模組包含我們SPA專案的所有Java程式碼。
 
-首先，我們會為以下專案建立新的Java介面： `Banner` 可擴充 `Image` Java介面。
+首先，我們將為`Banner`建立擴充`Image` Java介面的新Java介面。
 
-1. 在 `core` 模組建立名為的新檔案 `BannerModel.java` 在 `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.
-1. 填入 `BannerModel.java` ，其功能如下：
+1. 在`core`模組中，於`core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`建立名為`BannerModel.java`的新檔案。
+1. 以下列專案填入`BannerModel.java`：
 
    ```java
    package com.adobe.aem.guides.wkndspa.react.core.models;
@@ -346,15 +346,15 @@ ht-degree: 0%
    }
    ```
 
-   這將會繼承核心元件的所有方法 `Image` 介面並新增一個方法 `getBannerText()`.
+   這會從核心元件`Image`介面繼承所有方法，並新增一個方法`getBannerText()`。
 
 ## 實施Sling模型 {#sling-model}
 
-接下來，實作的Sling模型 `BannerModel` 介面。
+接下來，實作`BannerModel`介面的Sling模型。
 
-1. 在 `core` 模組建立名為的新檔案 `BannerModelImpl.java` 在 `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models/impl`.
+1. 在`core`模組中，於`core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models/impl`建立名為`BannerModelImpl.java`的新檔案。
 
-1. 填入 `BannerModelImpl.java` ，其功能如下：
+1. 以下列專案填入`BannerModelImpl.java`：
 
    ```java
    package com.adobe.aem.guides.wkndspa.react.core.models.impl;
@@ -429,9 +429,9 @@ ht-degree: 0%
    }
    ```
 
-   請注意， `@Model` 和 `@Exporter` 註解以確保Sling模型能夠透過Sling模型匯出工具序列化為JSON。
+   請注意，您使用了`@Model`和`@Exporter`註解，以確保Sling模型能夠透過Sling模型匯出工具序列化為JSON。
 
-   `BannerModelImpl.java` 使用 [Sling模型的委派模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 以避免從影像核心元件重寫所有邏輯。
+   `BannerModelImpl.java`對Sling模型使用[委派模式](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)以避免重寫影像核心元件中的所有邏輯。
 
 1. 複查下列各行：
 
@@ -441,7 +441,7 @@ ht-degree: 0%
    private Image image;
    ```
 
-   上述註解將具現化名為的影像物件 `image` 根據 `sling:resourceSuperType` 的繼承 `Banner` 元件。
+   上述註解會根據`Banner`元件的`sling:resourceSuperType`繼承將名為`image`的影像物件具現化。
 
    ```java
    @Override
@@ -450,9 +450,9 @@ ht-degree: 0%
    }
    ```
 
-   然後，您就可以直接使用 `image` 物件，用來實作由定義的方法 `Image` 介面，而不需自行撰寫邏輯。 此技巧用於 `getSrc()`， `getAlt()` 和 `getTitle()`.
+   然後就可以直接使用`image`物件來實作`Image`介面定義的方法，而不需要自行撰寫邏輯。 此技巧用於`getSrc()`、`getAlt()`和`getTitle()`。
 
-1. 開啟終端機視窗，將更新僅部署到 `core` 使用Maven模組 `autoInstallBundle` 來自的設定檔 `core` 目錄。
+1. 開啟終端機視窗，並使用`core`目錄中的Maven `autoInstallBundle`設定檔僅部署`core`模組的更新。
 
    ```shell
    $ cd core/
@@ -461,22 +461,22 @@ ht-degree: 0%
 
 ## 整合所有內容 {#put-together}
 
-1. 返回AEM並開啟具有的SPA頁面 `Banner` 元件。
-1. 更新 `Banner` 要包含的元件 **橫幅文字**：
+1. 返回AEM並開啟具有`Banner`元件的SPA頁面。
+1. 更新`Banner`元件以包含&#x200B;**橫幅文字**：
 
    ![橫幅文字](assets/extend-component/banner-text-dialog.png)
 
 1. 將影像填入元件中：
 
-   ![將影像新增至橫幅對話方塊](assets/extend-component/banner-dialog-image.png)
+   ![新增影像至橫幅對話方塊](assets/extend-component/banner-dialog-image.png)
 
    儲存對話方塊更新。
 
-1. 您現在應該會看到下列專案的演算值： **橫幅文字**：
+1. 您現在應該會看到&#x200B;**橫幅文字**&#x200B;的轉譯值：
 
-![橫幅文字已顯示](assets/extend-component/banner-text-displayed.png)
+![顯示的橫幅文字](assets/extend-component/banner-text-displayed.png)
 
-1. 在以下位置檢視JSON模型回應： [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) 並搜尋 `wknd-spa-react/components/card`：
+1. 檢視JSON模型回應： [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)並搜尋`wknd-spa-react/components/card`：
 
    ```json
    "banner": {
@@ -487,7 +487,7 @@ ht-degree: 0%
     },
    ```
 
-   請注意，在中實施Sling模型後，JSON模型已更新為其他索引鍵/值組 `BannerModelImpl.java`.
+   請注意，在`BannerModelImpl.java`中實作Sling模型後，JSON模型已更新為其他索引鍵/值組。
 
 ## 恭喜！ {#congratulations}
 

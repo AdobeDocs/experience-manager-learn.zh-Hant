@@ -1,6 +1,6 @@
 ---
-title: AEMas a Cloud Service中的驗證
-description: 瞭解AEMas a Cloud Service中的驗證。
+title: AEM as a Cloud Service中的驗證
+description: 瞭解AEM as a Cloud Service中的驗證。
 version: Cloud Service
 feature: Security
 topic: Development, Integrations, Security
@@ -18,14 +18,14 @@ ht-degree: 3%
 
 ---
 
-# AEMas a Cloud Service驗證
+# AEM as a Cloud Service驗證
 
-AEMas a Cloud Service支援多種驗證選項，且會因服務型別而異。
+AEM as a Cloud Service支援多種驗證選項，且會因服務型別而異。
 
 |                       | AEM 作者 | AEM 發佈 |
 |-----------------------|:----------:|:-----------:|
 | [Adobe IMS](../accessing/overview.md) | ✔ | ✘ |
-| · [透過Adobe IMS使用SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✘ |
+| · [SAML 2.0 （透過Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up)） | ✔ | ✘ |
 | [SAML 2.0](./saml-2-0.md) | ✘ | ✔ |
 | [單一登入(SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
 | [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
@@ -49,7 +49,7 @@ AEMas a Cloud Service支援多種驗證選項，且會因服務型別而異。
       <a  href="./saml-2-0.md"><img alt="SAML 2.0" src="./assets/card--saml-2-0.png"/></a>
       <div><strong><a href="./saml-2-0.md">SAML 2.0</a></strong></div>
       <p>
-        使用AEM發佈服務的SAML 2.0整合，向IDP驗證您網站的使用者。
+        使用AEM Publish服務的SAML 2.0整合，向IDP驗證您網站的使用者。
       </p>
     </td>   
    <td>

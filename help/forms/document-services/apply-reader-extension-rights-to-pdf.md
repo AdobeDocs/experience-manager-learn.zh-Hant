@@ -21,7 +21,7 @@ ht-degree: 0%
 Reader擴充功能可讓您控制PDF檔案的使用許可權。 使用許可權與Acrobat中提供的功能有關，但不與Adobe Reader中的功能有關。 Reader擴充功能所控制的功能包括新增註釋至檔案、填寫表單及儲存檔案的功能。 已新增使用許可權的PDF檔案稱為許可權啟用檔案。 在Adobe Reader中開啟許可權啟用PDF檔案的使用者可執行為該檔案啟用的操作。
 
 若要完成此使用案例，我們需要執行下列動作：
-* [新增Reader延伸憑證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) 至 `fd-service` 使用者。
+* [將Reader延伸憑證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)新增至`fd-service`位使用者。
 
 ## 建立自訂OSGi服務
 
@@ -196,7 +196,7 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 
 若要在本機伺服器上測試此專案，請遵循下列步驟：
 1. [下載並安裝DevelopingWithServiceUser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [下載並安裝ares.ares.core-ares套件組合](assets/ares.ares.core-ares.jar). 此功能具有自訂服務和servlet，可套用使用許可權並串流回pdf
+1. [下載並安裝ares.ares.core-ares套件](assets/ares.ares.core-ares.jar)。 此功能具有自訂服務和servlet，可套用使用許可權並串流回pdf
 1. [匯入使用者端程式庫和自訂提交](assets/applyaresdemo.zip)
 1. [匯入最適化表單](assets/applyaresform.zip)
 1. 將Reader延伸憑證新增至「fd-service」使用者。 請確定別名為「ares」。

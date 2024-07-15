@@ -28,7 +28,7 @@ ht-degree: 7%
 
 1. 以滑鼠右鍵按一下頁面資料夾，並建立名為storedfetch的節點，型別為cq：Component
 1. 儲存變更
-1. 將下列屬性新增至 `storeandfetch` 節點並儲存
+1. 將下列屬性新增至`storeandfetch`節點並儲存
 
 | **屬性名稱** | **屬性型別** | **屬性值** |
 |-------------------------|-------------------|----------------------------------------|
@@ -37,9 +37,9 @@ ht-degree: 7%
 | jcr:title | 字串 | 最適化表單範本頁面 |
 | sling:resourceSuperType | 字串 | `fd/af/components/page2/aftemplatedpage` |
 
-複製 `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp` 並貼到 `storeandfetch` 節點。 重新命名 `aftemplatedpage.jsp` 至 `storeandfetch.jsp`.
+複製`/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`並將其貼到`storeandfetch`節點下。 將`aftemplatedpage.jsp`重新命名為`storeandfetch.jsp`。
 
-開啟 `storeandfetch.jsp` 並新增下列行：
+開啟`storeandfetch.jsp`並新增下列行：
 
 ```jsp
 <cq:include script="azureportal.jsp"/>
@@ -58,7 +58,8 @@ ht-degree: 7%
 <cq:include script="azureportal.jsp"/>
 ```
 
-在storeandfetch節點下建立名為azureportal.jsp的檔案，將下列程式碼複製到azureportal.jsp中並儲存變更
+在storeandfetch節點下建立名為azureportal.jsp的檔案
+將下列程式碼複製到azureportal.jsp中並儲存變更
 
 ```jsp
 <%@page session="false" %>
@@ -78,7 +79,7 @@ ht-degree: 7%
 %>
 ```
 
-在此程式碼中，我們會取得請求引數的值 **guid** 並將其儲存在名為BlobId的變數中。 然後使用paramMap屬性將此BlobId傳遞到sling請求中。 為了讓此程式碼運作，假設您有一個以Azure儲存體支援的表單資料模型為基礎的表單，且表單資料模型的讀取服務繫結至名為BlobId的請求屬性，如下方熒幕擷取所示。
+在此程式碼中，我們會取得要求引數&#x200B;**guid**&#x200B;的值，並將其儲存在名為BlobId的變數中。 然後使用paramMap屬性將此BlobId傳遞到sling請求中。 為了讓此程式碼運作，假設您有一個以Azure儲存體支援的表單資料模型為基礎的表單，且表單資料模型的讀取服務繫結至名為BlobId的請求屬性，如下方熒幕擷取所示。
 
 ![fdm-request-attribute](./assets/fdm-request-attribute.png)
 

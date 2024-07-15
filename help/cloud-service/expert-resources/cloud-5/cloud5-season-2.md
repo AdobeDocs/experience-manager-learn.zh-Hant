@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 — 第2季
-description: 第二季可讓您瞭解與Adobe自己的專業工程師建置as a Cloud Service的Adobe Experience Manager (AEM)，以及提供該產品的專業服務。
+description: 第二季可讓您向Adobe自己的專家工程師和交付專家服務，as a Cloud Service瞭解Adobe Experience Manager (AEM)。
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
@@ -19,11 +19,11 @@ ht-degree: 1%
 
 ## 簡介
 
-歡迎使用AEM Engineering的第二季Cloud 5系列。 任何產品實作階段的主要問題之一，就是這些範例、工具或API有足夠的程式碼範例和/或即時示範。 此系列的目標是在5分鐘或更短時間內提供關於AEMas a Cloud Service的有用資訊。
+歡迎使用AEM Engineering的第二季Cloud 5系列。 任何產品實作階段的主要問題之一，就是這些範例、工具或API有足夠的程式碼範例和/或即時示範。 此系列的目標是在5分鐘內提供有關AEM as a Cloud Service的有用資訊。
 
 ## 建議方塊
 
-造訪 [建議方塊](https://forms.office.com/r/74P5Xz4UH0) 用於提交主題構想。
+造訪[建議方塊](https://forms.office.com/r/74P5Xz4UH0)以提交主題概念。
 
 ## 第2季
 
@@ -37,7 +37,7 @@ ht-degree: 1%
             </a>
             <div>
                 <a href="season-2/cloud5-experience-v-content-fragments.md"><strong>片段</strong></a>        
-                <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+                <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
             </div>
             <p>
                 <br/>
@@ -49,8 +49,8 @@ ht-degree: 1%
                  <img alt="存放庫現代化工具" src="./imgs/s2/001-thumb.png"/>
             </a>
             <div>
-                <a href="season-2/cloud5-repo-modernizer.md"><strong>存放庫現代化工具</strong></a> 
-               <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+                <a href="season-2/cloud5-repo-modernizer.md"><strong>儲存庫現代化工具</strong></a> 
+               <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
             </div>
             <p>
                 <br/>
@@ -63,7 +63,7 @@ ht-degree: 1%
             </a>
             <div>
                   <a href="season-2/cloud5-admin-console.md"><strong>Admin Console</strong></a>
-               <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+               <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
             </div>
             <p>
             <br/>
@@ -78,7 +78,7 @@ ht-degree: 1%
             </a>
             <div>
                   <a href="season-2/cloud5-sling-job-scheduler.md"><strong>Sling工作</strong></a>
-               <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+               <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
             </div>
             <p>
             <br/>
@@ -90,8 +90,8 @@ ht-degree: 1%
                  <img alt="Repo初始設定式(repoinit)" src="./imgs/s2/004-thumb.png"/>
             </a>
             <div>
-                  <a href="season-2/cloud5-repoinit.md"><strong>Sling存放庫初始設定式</strong></a>
-               <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+                  <a href="season-2/cloud5-repoinit.md"><strong>Sling儲存庫初始設定式</strong></a>
+               <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
             </div>
             <p>
             <br/>
@@ -104,11 +104,11 @@ ht-degree: 1%
             </a>
       <div>
          <a href="season-2/cloud5-fix-your-cache.md"><strong>修正您的……快取</strong></a>
-         <br/><em>資深雲端架構師Damian Langsweirdt與James Talbot</em>
+         <br/><em>資深雲端架構師Damian Langsweirdt &amp; James Talbot</em>
       </div>
       <p>
          <br/>
-             探索將快取最佳化並加速網站在AEMas a Cloud Service上執行的區域。
+             探索將快取最佳化並加快AEM as a Cloud Service上網站執行速度的區域。
       </p>
    </td> 
   </tr>
@@ -118,12 +118,12 @@ ht-degree: 1%
                <img alt="修正您的……重寫" src="./imgs/s2/006-thumb.png"/>
             </a>
       <div>
-            <a href="season-2/cloud5-fix-your-rewrites.md"><strong>修正您的……重寫</strong></a>
-         <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+            <a href="season-2/cloud5-fix-your-rewrites.md"><strong>修正您的……重新寫入</strong></a>
+         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
       </div>
       <p>
         <br/>
-         快速深入分析有助於加快您在AEMas a Cloud Service上的重寫開發和最佳化速度。
+         快速深入分析有助於加快您在AEM as a Cloud Service上重寫開發和最佳化的各種專案。
       </p>
      </td>   
      <td>
@@ -131,8 +131,8 @@ ht-degree: 1%
                <img alt="Cloud Manager的奧秘……體驗稽核" src="./imgs/s2/007-thumb.png"/>
                </a>
       <div>
-            <a href="season-2/cloud5-mocm-experience-audit.md"><strong>Cloud Manager的奧秘……體驗稽核</strong></a>
-         <br/><em>與資深雲端架構師Darin Kuntze</em>
+            <a href="season-2/cloud5-mocm-experience-audit.md"><strong>Cloud Manager的秘密……體驗稽核</strong></a>
+         <br/><em>與Darin Kuntze，資深雲端架構師</em>
       </div>
       <p>
         <br/>
@@ -144,12 +144,12 @@ ht-degree: 1%
                <img alt="Cloud Manager的奧秘……單元測試" src="./imgs/s2/008-thumb.png"/>
             </a>
       <div>
-            <a href="season-2/cloud5-mocm-unit-tests.md"><strong>Cloud Manager的奧秘……單元測試</strong></a>
-         <br/><em>資深雲端架構師Darin Kuntze與Bryan Stopp</em>
+            <a href="season-2/cloud5-mocm-unit-tests.md"><strong>Cloud Manager的秘密……單元測試</strong></a>
+         <br/><em>與Darin Kuntze和Bryan Stopp，資深雲端架構師</em>
       </div>
       <p>
         <br/>
-        Darin和Bryan討論Cloud Manager如何將單元測試執行和程式碼涵蓋範圍報告整合到其CI/CD管道中，以幫助鼓勵和推廣單元測試AEM程式碼的最佳做法。
+        Darin和Bryan討論Cloud Manager如何將單元測試執行和程式碼涵蓋範圍報告整合到其CI/CD管道中，以協助鼓勵和推廣單元測試AEM程式碼的最佳做法。
       </p>
    </td> 
   </tr>
@@ -159,11 +159,11 @@ ht-degree: 1%
                    <img alt="Cloud Manager的奧秘……功能測試" src="./imgs/s2/009-thumb.png"/>
                </a>
             <div>
-                <a href="season-2/cloud5-mocm-functional-tests.md"><strong>Cloud Manager的奧秘……功能測試</strong><br/></a>        
-                <em>資深雲端架構師Darin Kuntze與Bryan Stopp</em>
+                <a href="season-2/cloud5-mocm-functional-tests.md"><strong>Cloud Manager的秘密……功能測試</strong><br/></a>        
+                <em>與Darin Kuntze和Bryan Stopp，資深雲端架構師</em>
             </div>
             <p><br/>
-                Darin和Bryan討論AEMas a Cloud Service部署流程中內建的各種功能測試，以確保計畫碼的品質和可靠性。
+                Darin和Bryan討論AEM as a Cloud Service部署流程中內建的各種功能測試，以確保計畫碼的品質和可靠性。
             </p>
         </td>
         <td></td>

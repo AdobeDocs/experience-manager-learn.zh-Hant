@@ -20,7 +20,7 @@ ht-degree: 1%
 # AEM Forms與Acrobat Sign網路表單
 
 
-本教學課程將逐步引導您瞭解使用提交資料產生互動式通訊檔案的使用案例。 [React](https://react.dev/) 應用程式並展示產生的檔案，以供使用Acrobat Sign網頁表單簽名。
+本教學課程將逐步引導您瞭解使用從[React](https://react.dev/)應用程式提交的資料來產生互動式通訊檔案，以及使用Acrobat Sign網頁表單來展示產生的檔案以供簽署的使用案例。
 
 以下是使用案例的流程
 
@@ -34,8 +34,8 @@ ht-degree: 1%
 使用案例需要下列專案才能運作：
 
 * 具有Forms附加套件的AEM伺服器
-* 一個 [Acrobat Sign應用程式的整合金鑰](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
+* Acrobat Sign應用程式的[整合金鑰](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
 
 ## 後續步驟
 
-寫入 [自訂OSGi服務以產生互動式通訊檔案](./create-ic-document.md) 使用記錄的API
+撰寫[自訂OSGi服務，以使用記錄的API產生互動式通訊檔案](./create-ic-document.md)

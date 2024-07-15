@@ -21,15 +21,15 @@ ht-degree: 0%
 
 已開發自訂AEM套件組合，以建立網頁表單並傳回給一般使用者
 
-* [建立暫時性檔案](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument). 透過此呼叫上傳的檔案稱為暫時性，因為它只能在上傳後7天內使用。 傳回的暫時性檔案ID可用於需要參考上傳檔案的API呼叫。 暫時性檔案請求是由三個部分所組成的多部分請求 — 檔案名稱、MIME型別和檔案資料流。 在此請求中，您一次只能上傳一個檔案。
-* [建立網路表單](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget)這是用來建立新網頁表單的主要端點。 網頁表單是以ACTIVE狀態建立的，用來立即裝載網頁表單。
-* [擷取網路表單](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets).Retrieve的網頁表單使用者。 然後，此網頁表單會呈現給呼叫的應用程式，以簽署檔案。
+* [建立暫時性檔案](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument)。 透過此呼叫上傳的檔案稱為暫時性，因為它只能在上傳後7天內使用。 傳回的暫時性檔案ID可用於需要參考上傳檔案的API呼叫。 暫時性檔案請求是由三個部分所組成的多部分請求 — 檔案名稱、MIME型別和檔案資料流。 在此請求中，您一次只能上傳一個檔案。
+* [建立網頁表單](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget)。這是用來建立新網頁表單的主要端點。 網頁表單是以ACTIVE狀態建立的，用來立即裝載網頁表單。
+* [擷取網頁表單](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets)。從使用者擷取網頁。 然後，此網頁表單會呈現給呼叫的應用程式，以簽署檔案。
 
 ## 建立Acrobat Sign OSGi設定
 
 Acrobat Sign REST API需要整合金鑰，以及與整合金鑰相關聯的電子郵件。 這兩個值會以OSGi設定屬性的形式提供，如下所示
 
-![sign-configuration](assets/sign-configuration.png)
+![簽署組態](assets/sign-configuration.png)
 
 ```java
 package com.acrobatsign.core.configuration;

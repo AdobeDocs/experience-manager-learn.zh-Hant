@@ -29,19 +29,19 @@ ht-degree: 1%
 
 >[!TIP]
 >
-> 在Excel中開啟中繼資料匯出CSV檔案時，請使用 [Excel匯入工具](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) 而不要連按兩下檔案來避免UTF-8編碼的CSV檔案發生問題。
+> 在Excel中開啟中繼資料匯出CSV檔案時，請使用[Excel匯入工具](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6)，而非連按兩下該檔案，以避免UTF-8編碼的CSV檔案發生問題。
 >
 > 若要在Excel中開啟中繼資料匯出CSV檔案，請執行下列步驟：
 > 
 > 1. 開啟Microsoft Excel
-> 1. 選取 __檔案>新增__ 建立空白試算表
-> 1. 在空白試算表開啟的狀態下，選取 __檔案>匯入__
-> 1. 選取 __文字__ 檔案並按一下 __匯入__
-> 1. 從檔案系統選取匯出的CSV檔案，然後按一下 __取得資料__
-> 1. 在匯入精靈的步驟1中，選取 __已分隔__ 並設定 __檔案來源__ 至 __Unicode (UTF-8)__，然後按一下 __下一個__
-> 1. 在步驟2中，設定 __分隔字元__ 至 __逗號__，然後按一下 __下一個__
-> 1. 在步驟3中，將 __欄資料格式__ 原樣，然後按一下 __完成__
-> 1. 選取 __匯入__ 將資料新增至試算表
+> 1. 選取&#x200B;__檔案>新增__&#x200B;以建立空白的試算表
+> 1. 開啟空白試算表時，選取&#x200B;__檔案>匯入__
+> 1. 選取&#x200B;__文字__&#x200B;檔案並按一下&#x200B;__匯入__
+> 1. 從檔案系統選取匯出的CSV檔案，然後按一下&#x200B;__取得資料__
+> 1. 在匯入精靈的步驟1上，選取&#x200B;__分隔符號__&#x200B;並將&#x200B;__檔案來源__&#x200B;設定為&#x200B;__Unicode (UTF-8)__，然後按一下&#x200B;__下一步__
+> 1. 在步驟2中，將&#x200B;__分隔符號__&#x200B;設為&#x200B;__逗號__，然後按一下&#x200B;__下一步__
+> 1. 在步驟3中，保留&#x200B;__資料行資料格式__&#x200B;不變，然後按一下&#x200B;__完成__
+> 1. 選取&#x200B;__匯入__，將資料新增至試算表
 
 ## 中繼資料匯入 {#metadata-import}
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 ### 第一列
 
 * CSV檔案的第一列定義中繼資料結構。
-* 第一欄預設為 `assetPath`，儲存資產的絕對JCR路徑。
+* 第一欄預設為`assetPath`，其中包含資產的絕對JCR路徑。
 
 * 第一列中的後續欄會指向資產的其他中繼資料屬性。
    * 例如： `dc:title, dc:description, jcr:title`
@@ -72,9 +72,9 @@ ht-degree: 1%
    * 不正確： `Dc:Title {{String}}`
 
 * 屬性型別區分大小寫
-* 全部有效 [JCR屬性型別](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html) 受支援
+* 支援所有有效的[JCR屬性型別](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html)
 
-* 多值屬性格式 —  `<metadata property name> {{<property type : MULTI }}`
+* 多值屬性格式 — `<metadata property name> {{<property type : MULTI }}`
 
 ### 第二列為N列
 

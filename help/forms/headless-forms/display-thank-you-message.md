@@ -106,4 +106,4 @@ export default function Contact(){
 }
 ```
 
-上述程式碼使用原生html元件，這些元件對應至最適化表單中使用的元件。 例如，我們將文字輸入最適化表單元件對應至TextField元件。 文章中使用的原生元件 [可從此處下載](./assets/native-components.zip)
+上述程式碼使用原生html元件，這些元件對應至最適化表單中使用的元件。 例如，我們將文字輸入最適化表單元件對應至TextField元件。 文章[中使用的原生元件可從這裡](./assets/native-components.zip)下載

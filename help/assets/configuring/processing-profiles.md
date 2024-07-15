@@ -1,6 +1,6 @@
 ---
 title: 處理設定檔
-description: 處理設定檔會定義要為AEMas a Cloud Service的資產建立的轉譯。
+description: 處理設定檔會定義要為AEM as a Cloud Service中的資產建立的轉譯。
 feature: Asset Compute Microservices
 version: Cloud Service
 jira: KT-4993
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # 處理設定檔
 
-處理設定檔會定義要為AEMas a Cloud Service的資產建立的轉譯。
+處理設定檔會定義要為AEM as a Cloud Service中的資產建立的轉譯。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35597?quality=12&learn=on)

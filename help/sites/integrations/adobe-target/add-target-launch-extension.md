@@ -9,7 +9,7 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
 duration: 290
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 # 將Target擴充功能新增至Tags屬性 {#adobe-target-extension}
 
-若要觀看此影片，您必須先將 [Adobe Experience Platform與AEM的整合標籤](../experience-platform/data-collection/tags/overview.md).
+若要觀看此影片，您必須已將Adobe Experience Platform中的[整合標籤與AEM](../experience-platform/data-collection/tags/overview.md)。
 
 瞭解如何使用標籤將Adobe Target啟用至您的AEM網站。
 

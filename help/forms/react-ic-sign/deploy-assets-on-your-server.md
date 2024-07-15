@@ -59,6 +59,6 @@ npm start
 
 若要啟用從REACT應用程式對AEM端點進行POST呼叫，您需要在「AdobeGranite跨原始資源共用原則」設定的「允許的原始項」欄位中指定適當的專案。
 
-![cors — 設定](assets/cors-settings.png)
+![cors-setting](assets/cors-settings.png)
 
-另請參閱 [透過AEM瞭解CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html) 以取得有關CORS組態選項的詳細資訊。
+如需CORS組態選項的詳細資訊，請參閱[透過AEM瞭解CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)。

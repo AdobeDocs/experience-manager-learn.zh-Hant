@@ -38,8 +38,8 @@ AEM Forms 6.5匯入了建立及設定多系列圖表的功能。 多系列圖表
 若要在您的系統上測試此專案，請遵循下列步驟
 
 * [使用AEM封裝管理員下載並匯入MutualFundFactSheet.zip。](assets/mutualfundfactsheet.zip)
-* [將SeriesChartSampleData.json下載至您的硬碟。](assets/serieschartsampledata.json) 這是用來填入圖表的範例資料。
-* [導覽至Forms和檔案。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [將SeriesChartSampleData.json下載到您的硬碟。](assets/serieschartsampledata.json)這是用來填入圖表的範例資料。
+* [瀏覽至Forms和檔案。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 輕輕選取「MutualFundGrowthFactSheet」互動式通訊範本。
 * 按一下預覽 | Print Channel | 上傳範例資料。
 * 瀏覽至本文提供的範例資料檔案。

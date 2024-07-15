@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # 基線許可權
 
-管理使用者對的存取權 [基線資產資料夾](./baseline-folders.md) 是控管中的重要一環，能確保流程獲得適當支援。
+管理[基準資產資料夾](./baseline-folders.md)的使用者存取權是管理的重要層面，可確保能夠正確支援程式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/37696?quality=12&learn=on)

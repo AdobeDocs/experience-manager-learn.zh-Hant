@@ -23,7 +23,7 @@ ht-degree: 5%
 
 >[!VIDEO](https://video.tv.adobe.com/v/22344?quality=12&learn=on)
 
-請使用提供給您的Swagger檔案，做為此教學課程相關資產的一部分。 這些資產可在 [簡介](introduction.md) 本教學課程的。
+請使用提供給您的Swagger檔案，做為此教學課程相關資產的一部分。 本教學課程的[簡介](introduction.md)提供這些資產。
 
 ## 後續步驟
 

@@ -21,7 +21,7 @@ ht-degree: 2%
 + [概觀](overview.md)
 + [要遵循的最佳實務](adaptive-forms/best-practices-adaptive-forms.md)
 + [使用AEM Author設定OKTA驗證](adaptive-forms/single-sign-on-with-okta.md)
-+ 建立第一個最適化表單 {#creating-your-first-adaptive-form}
++ 建立您的第一個最適化表單{#creating-your-first-adaptive-form}
    + [1 — 簡介和設定](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [2 — 建立自適應表單範本](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [3 — 建立表單片段](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -31,7 +31,7 @@ ht-degree: 2%
    + [7 — 將表格新增至收入面板](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [8 — 設定資產面板](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [9 — 使用自訂函式和程式碼編輯器](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ 處理表單提交 {#handling-af-form-submissions}
++ 處理表單提交{#handling-af-form-submissions}
    + [建立稽核工作流程](handling-form-submissions/creating-a-review-workflow.md)
    + [設定最適化表單以觸發工作流程](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [顯示感謝頁面](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -49,7 +49,7 @@ ht-degree: 2%
    + [使用SendGrid傳送電子郵件](some-useful-integrations/send-grid.md)
    + [將表單資料儲存在Azure儲存體](some-useful-integrations/store-form-data-in-azure-storage.md)
    + [以Azure Blob填入表單](some-useful-integrations/fetch-form-data-from-azure-storage.md)
-+ 建立OSGi套件組合 {#creating-your-first-osgi-bundle}
++ 正在建立OSGi套件{#creating-your-first-osgi-bundle}
    + [1 — 設定環境](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 — 建立OSGi服務](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [3 — 建立Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
@@ -89,30 +89,30 @@ ht-degree: 2%
    + [擷取工作流程註解](adaptive-forms/capturing-workflow-comments-aem-workflow-article.md)
    + [將提交的表單資料儲存在資料庫中](adaptive-forms/storing-adaptive-form-data-in-db.md)
    + [在DB中插入表單附件](adaptive-forms/inserting-form-attachment-in-db.md)
-   + [修改資料來源組態](adaptive-forms/modify-data-source-configuration-settings-article.md)
+   + [修改資料Source設定](adaptive-forms/modify-data-source-configuration-settings-article.md)
    + [覆寫表單資料模型屬性](adaptive-forms/override-fdm-values.md)
    + [AEM 6.4工作流程中的表單資料模型服務](adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md)
    + [處理表單資料模型服務步驟中的錯誤訊息](adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)
    + [AEM 6.5.1工作流程中的表單資料模型服務](adaptive-forms/form-data-model-service-as-step-in-aem65-workflow-video-use.md)
-   + [沒有資料來源的表單資料模型](adaptive-forms/form-data-model-without-data-source-feature-video-use.md)
+   + [不含資料的表單資料模型Source](adaptive-forms/form-data-model-without-data-source-feature-video-use.md)
    + [運算表單資料模型元素](adaptive-forms/computed-form-data-model-elements-aem-forms-feature-video.md)
-   + [在AEM Forms中設定JDBC資料來源](adaptive-forms/data-integration-technical-video-setup.md)
+   + [在AEM Forms中設定JDBC資料Source](adaptive-forms/data-integration-technical-video-setup.md)
    + [JDBC式表單資料模型](adaptive-forms/jdbc-data-model-technical-video-use.md)
    + [在表單資料模型中建立2個實體之間的關聯](adaptive-forms/association-data-model-technical-video-use.md)
    + [在規則編輯器中使用表單資料模型的叫用服務](adaptive-forms/service-data-model-technical-video-use.md)
-   + [使用表單資料模型將二進位資料發佈到AEM DAM](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
+   + [使用表單資料模型將Post二進位資料匯入AEM DAM](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
    + [建立可重複使用的工作流程模型](adaptive-forms/re-usable-aem-forms-workflow-models-article.md)
    + [自訂流程步驟AEM工作流程](adaptive-forms/custom-process-step-aem-workflow.md)
    + [預先填入HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [使用Salesforce的表單資料模型](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [以動態方式新增專案至選擇元件](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ 使用ChatBot填入PDF表單{#chatbot-and-aem-forms}
++ 使用ChatBot{#chatbot-and-aem-forms}填入PDF表單
    + [1 — 簡介](chatbot-and-aem-forms/introduction.md)
    + [2 — 剖析ChatBot資料](chatbot-and-aem-forms/parse-chat-bot-data.md)
    + [3 — 建立PDF](chatbot-and-aem-forms/merge-data-with-template.md)
-+ 核心 — 元件式表單{#core-component-based-forms}
++ 核心 — 元件型表單{#core-component-based-forms}
    + [使用GuideBridge API存取表單資料](core-components/submit-data-using-guidebridge-api.md)
-+ 選擇並彙編DAM資料夾內容{#select-dam-folder-content}
++ 選取並組合DAM資料夾內容{#select-dam-folder-content}
    + [1 — 簡介](display-and-assemble-dam-folder-contents/introduction.md)
    + [2 — 填入選擇群組](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
    + [3 — 組合選取的資產](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
@@ -133,19 +133,19 @@ ht-degree: 2%
    + [1 — 簡介](inbox-customization/introduction.md)
    + [2 — 新增自訂欄](inbox-customization/add-married-column.md)
    + [3 — 使用Sightly範本](inbox-customization/use-sightly-template.md)
-+ 以電子郵件傳送表單附件{#zipping-form-attachments}
++ 電子郵件表單附件{#zipping-form-attachments}
    + [1 — 簡介](zipping-form-attachments/introduction.md)
    + [2 — 郵遞區號表單附件](zipping-form-attachments/custom-process-step.md)
    + [3 — 電子郵件表單附件](zipping-form-attachments/populating-list-of-documents.md)
    + [4 — 測試解決方案](zipping-form-attachments/test.md)
-+ 使用資料和附件預先填寫表單{#prefill-form-with-data-attachments}
++ 正在預先填寫包含資料和附件的表單{#prefill-form-with-data-attachments}
    + [1 — 簡介](prefill-form-with-data-attachments/introduction.md)
    + [2 — 建立自訂提交](prefill-form-with-data-attachments/create-custom-submit.md)
    + [3 — 建立OSGi設定](prefill-form-with-data-attachments/create-osgi-configuration.md)
    + [4 — 建立預填服務](prefill-form-with-data-attachments/create-prefill-service.md)
-+ 儲存和擷取最適化表單{#store-and-retrieve-af-with-2fa}
++ 儲存及擷取最適化表單{#store-and-retrieve-af-with-2fa}
    + [1 — 簡介](store-and-retrieve-af-with-2fa/introduction.md)
-   + [2 — 設定資料來源](store-and-retrieve-af-with-2fa/configure-data-source.md)
+   + [2 — 設定資料Source](store-and-retrieve-af-with-2fa/configure-data-source.md)
    + [3 — 儲存表單附件](store-and-retrieve-af-with-2fa/store-form-attachments.md)
    + [4 — 儲存表單資料](store-and-retrieve-af-with-2fa/store-form-data.md)
    + [5 — 建立Servlet](store-and-retrieve-af-with-2fa/create-servlet.md)
@@ -155,15 +155,15 @@ ht-degree: 2%
    + [9 — 建立主要表單](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
    + [10 — 建立MyAccount表單](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
    + [11 — 部署範例](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
-+ 從pdf檔案匯入資料{#import-data-from-pdf-form}
++ 從pdf檔案{#import-data-from-pdf-form}匯入資料
    + [1 — 簡介](import-data-from-pdf-form/introduction.md)
    + [2 — 建立最適化表單](import-data-from-pdf-form/create-adaptive-form.md)
    + [3 — 建立OSGi服務](import-data-from-pdf-form/create-osgi-service.md)
    + [4 — 填入最適化表單](import-data-from-pdf-form/populate-adaptive-form.md)
    + [5 — 測試解決方案](import-data-from-pdf-form/test-the-solution.md)
-+ 匯出以CSV格式提交的資料{#export-submitted-data-csv-format}
++ 正在匯出CSV格式的已提交資料{#export-submitted-data-csv-format}
    + [匯出提交的資料](export-submitted-data-csv-format/export-submitted-data-csv.md)
-+ HTML5 FORMS{#html5-forms}
++ HTML5 Forms{#html5-forms}
    + [建立HTML5表單](html5-forms/create-html5-form.md)
    + [處理HTML5表單提交](html5-forms/handle-html5-form-submission.md)
 + AEM Forms和Acrobat Sign{#forms-and-sign}
@@ -201,7 +201,7 @@ ht-degree: 2%
    + [1 — 簡介](custom-workflow-component/introduction.md)
    + [2寫Java程式碼](custom-workflow-component/custom-process-step-aem-workflow.md)
    + [3 — 建立工作流程元件](custom-workflow-component/custom-workflow-component.md)
-+ AEM工作流程中的變數{#variables-aem-workflow}
++ AEM工作流程{#variables-aem-workflow}中的變數
    + [簡介 — 工作流程中的變數](variables-aem-workflow/introduction.md)
    + [XML變數](variables-aem-workflow/part1.md)
    + [json變數](variables-aem-workflow/part2.md)
@@ -214,9 +214,9 @@ ht-degree: 2%
    + [1 — 簡介](review-form-data/introduction.md)
    + [2 — 建立元件](review-form-data/create-component.md)
    + [3 — 部署資產](review-form-data/deploy-on-your-system.md)
-+ 在MySQL資料庫中儲存及擷取表單資料{#storing-and-retrieving-form-data}
++ 在MySQL DB{#storing-and-retrieving-form-data}中儲存及擷取表單資料
    + [簡介](storing-retrieving-form-data/introduction.md)
-   + [設定資料來源](storing-retrieving-form-data/part1.md)
+   + [設定Data Source](storing-retrieving-form-data/part1.md)
    + [儲存資料的服務](storing-retrieving-form-data/part3.md)
    + [建立Servlet](storing-retrieving-form-data/part2.md)
    + [客戶庫](storing-retrieving-form-data/part4.md)
@@ -235,13 +235,13 @@ ht-degree: 2%
    + [建置查詢介面](query-form-submissions/part3.md)
    + [寫入預填服務](query-form-submissions/part4.md)
    + [部署範例](query-form-submissions/part5.md)
-+ 在Forms Portal中列出自訂資產型別{#listing-custom-asset-types}
++ 列出Forms入口網站中的自訂資產型別{#listing-custom-asset-types}
    + [Part1 — 註冊自訂資產型別](listing-custom-asset-types/part1.md)
    + [第2部分 — 建立自訂範本](listing-custom-asset-types/part2.md)
 + AEM Forms與Marketo{#aem-forms-with-marketo}
    + [第1部分 — 簡介](aem-forms-with-marketo/part1.md)
    + [第2部分 — 自訂驗證](aem-forms-with-marketo/part2.md)
-   + [第3部分 — 資料來源](aem-forms-with-marketo/part3.md)
+   + [第3部分 — 資料Source](aem-forms-with-marketo/part3.md)
    + [第4部分 — 整合](aem-forms-with-marketo/part4.md)
 
 + AEM Forms與Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
@@ -251,7 +251,7 @@ ht-degree: 2%
    + [4 — 使用ACS設定檔資訊預先填寫表單](aem-forms-with-adobe-campaign/partthree.md)
    + [5 — 使用表單資料模型建立ACS設定檔](aem-forms-with-adobe-campaign/partfour.md)
 
-+ 歡迎套件 {#welcome-kit}
++ 歡迎套件{#welcome-kit}
    + [簡介](welcome-kit/introduction.md)
    + [建立歡迎套件元件](welcome-kit/create-welcomekit-component.md)
    + [建立工作流程元件](welcome-kit/create-workflow-component.md)
@@ -265,7 +265,7 @@ ht-degree: 2%
    + [6 — 顯示選取的表單](headless-forms/open-form-card-view.md)
    + [7 — 處理表單提交](headless-forms/display-thank-you-message.md)
 
-+ 使用Forms和Acrobat Sign的React應用程式 {#react-ic-sign}
++ 使用Forms和Acrobat Sign的React應用程式{#react-ic-sign}
    + [1 — 簡介](react-ic-sign/introduction.md)
    + [2 — 產生檔案](react-ic-sign/create-ic-document.md)
    + [3 - Acrobat Sign API包裝函式](react-ic-sign/wrapper-sign-api.md)
@@ -312,7 +312,7 @@ ht-degree: 2%
 {#ic-print-channel-tutorial}
    + [1 — 簡介](ic-print-channel-tutorial/introduction.md)
    + [2 — 設定Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
-   + [3 — 建立資料來源](ic-print-channel-tutorial/create-data-source.md)
+   + [3 — 建立資料Source](ic-print-channel-tutorial/create-data-source.md)
    + [4 — 建立表單資料模型](ic-print-channel-tutorial/create-form-data-model.md)
    + [5 — 使用Forms Designer建立XDP配置](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
    + [6 — 建立檔案片段](ic-print-channel-tutorial/create-document-fragment.md)
@@ -322,11 +322,11 @@ ht-degree: 2%
    + [10 — 新增表格至Print Channel](ic-print-channel-tutorial/adding-table-to-print-channel.md)
    + [11 — 使用Watched資料夾產生檔案](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
    + [12 — 在提交表單時開啟代理程式UI](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
-+ 儲存及擷取草稿信件 {#store-retrieve-letters}
++ 儲存及擷取草稿信件{#store-retrieve-letters}
    + [簡介](store-retrieve-letters/introduction.md)
    + [實作](store-retrieve-letters/save-draft-letters.md)
    + [部署範例](store-retrieve-letters/deploy-on-your-server.md)
-+ 互動式通訊 {#interactive-communications}
++ 互動式通訊{#interactive-communications}
    + [使用批次API](interactive-communications/batch-generation-interactive-communications.md)
    + [多系列圖表](interactive-communications/multiseriescharts.md)
    + [從提交的資料產生Print Channel檔案](interactive-communications/merge-data-with-ic-template.md)
@@ -336,10 +336,10 @@ ht-degree: 2%
    + [使用Watch資料夾為Print Channel產生互動式通訊檔案](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
    + [自訂文字編輯器](interactive-communications/customize-text-editor.md)
 
-+ Web Channel的互動式通訊 {#ic-web-channel-tutorial}
++ Web管道{#ic-web-channel-tutorial}的互動式通訊
    + [1 — 簡介](ic-web-channel-tutorial/introduction.md)
    + [2 — 設定Tomcat](ic-web-channel-tutorial/partone.md)
-   + [3 — 建立資料來源](ic-web-channel-tutorial/parttwo.md)
+   + [3 — 建立資料Source](ic-web-channel-tutorial/parttwo.md)
    + [4 — 建立表單資料模型](ic-web-channel-tutorial/partthree.md)
    + [5 — 建立Web Channel檔案範本](ic-web-channel-tutorial/partfour.md)
    + [6 — 建立檔案片段](ic-web-channel-tutorial/partfive.md)
@@ -391,7 +391,7 @@ ht-degree: 2%
    + [Workbench：如何啟用Workbench的偵錯輸出](troubleshooting/how-to-enable-debug-output-for-workbench.md)
    + [Workbench：如何調整Workbench記憶體引數](troubleshooting/how-to-tweak-workbench-memory-parameters.md)
    + [維護作業：如何調整維護作業效能引數](troubleshooting/how-to-tweak-workbench-performance-parameters.md)
-   + [Designer：Designer對C++可轉散發軟體的相依性](troubleshooting/dependency-of-vc-on-designer.md)
+   + [Designer： Designer對C++可轉散發功能的相依性](troubleshooting/dependency-of-vc-on-designer.md)
    + [Designer：如何啟用HTML預覽](troubleshooting/how-to-enable-html-preview.md)
    + [Designer：如何啟用PDF預覽](troubleshooting/how-to-enable-pdf-preview.md)
    + [Designer：如何安裝Designer修補程式](troubleshooting/how-to-install-designer-patches.md)

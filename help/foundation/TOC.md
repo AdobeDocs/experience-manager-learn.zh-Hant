@@ -15,19 +15,19 @@ ht-degree: 14%
 # AEM Foundation 影片和教學課程 {#foundation}
 
 + [概觀](./overview.md)
-+ 管理 {#administration}
++ 管理{#administration}
    + [瞭解升級AEM的理由](./administration/understand-reasons-to-upgrade.md)
    + [使用oak-run.jar管理索引](./administration/use-oak-run-jar-to-manage-indexes.md)
    + [使用線上修訂清除](./administration/use-online-revision-clean-up.md)
    + [使用系統概觀儀表板](./administration/use-the-system-overview-dashboard.md)
    + [URL重新導向](./administration/url-redirection.md)
-+ 驗證 {#authentication}
++ 驗證{#authentication}
    + [OKTA和AEM](authentication/okta-saml-integration.md)
    + [OAuth範圍](authentication/oauth-code-sample-develop.md)
    + [瞭解驗證](authentication/authentication-support-article-understand.md)
    + [瞭解AMS上的IMS驗證](authentication/adobe-ims-authentication-technical-video-understand.md)
 + AdobeCloud Manager{#cloud-manager}
-   + [瞭解Adobe Cloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
+   + [瞭解AdobeCloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
    + [CI/CD 管道](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
    + [自訂許可權](./cloud-manager/cloud-permissions.md)
 + 開發 {#development}

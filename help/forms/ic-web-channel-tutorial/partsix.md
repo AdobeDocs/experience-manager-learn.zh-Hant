@@ -36,7 +36,7 @@ ht-degree: 1%
 
    1. 取消勾選「列印管道」核取方塊。 我們不會針對列印管道建立檔案。
    1. Web：選取此選項可產生Web管道的檔案
-   1. 互動式通訊：範本： **global>RetirationAccountStatemen** t（這是先前步驟建立的範本）
+   1. 互動式通訊：範本： **global>RetilationAccountStatemen** t（這是先前步驟建立的範本）
    1. 佈景主題：**參考佈景主題 — >畫布2.0**
 
 1. 點選「建立」

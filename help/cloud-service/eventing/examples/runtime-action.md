@@ -21,45 +21,45 @@ ht-degree: 0%
 
 # Adobe I/O Runtime動作與AEM事件
 
-瞭解如何使用接收AEM事件 [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) 動作並檢閱事件詳細資訊，例如，裝載、標題和中繼資料。
+瞭解如何使用[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)動作接收AEM事件，並檢閱事件詳細資料，例如裝載、標頭和中繼資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427053?quality=12&learn=on)
 
 Adobe I/O Runtime是無伺服器平台，可讓程式碼執行以回應Adobe I/O事件。 因此可協助您建立事件驅動的應用程式，而不需擔心基礎建設問題。
 
-在此範例中，您會建立Adobe I/O Runtime [動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) 會接收AEM事件並記錄事件詳細資訊。
+在此範例中，您會建立接收AEM事件並記錄事件詳細資料的Adobe I/O Runtime [動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)。
 https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 
 高層級步驟為：
 
 - 在Adobe Developer Console中建立專案
 - 初始化專案以進行本機開發
-- 在Adobe Developer主控台中設定專案
+- 在Adobe Developer Console中設定專案
 - 觸發AEM事件並驗證動作執行
 
 ## 先決條件
 
 若要完成本教學課程，您需要：
 
-- AEMas a Cloud Service環境搭配 [AEM事件已啟用](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
+- 已啟用[AEM事件的AEM as a Cloud Service環境](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)。
 
-- 存取目標 [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
+- 存取[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。
 
-- [ADOBE DEVELOPER CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) 已安裝在您的本機電腦上。
+- [Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)已安裝在您的本機電腦上。
 
 >[!IMPORTANT]
 >
->AEMas a Cloud Service事件僅適用於搶鮮版模式的註冊使用者。 若要在您的AEMas a Cloud Service環境中啟用AEM事件，請聯絡 [AEM-Eventing團隊](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Service事件僅適用於搶鮮版模式的註冊使用者。 若要在您的AEM as a Cloud Service環境中啟用AEM事件，請連絡[AEM-Eventing團隊](mailto:grp-aem-events@adobe.com)。
 
 ## 在Adobe Developer Console中建立專案
 
 若要在Adobe Developer Console中建立專案，請遵循下列步驟：
 
-- 瀏覽至 [Adobe Developer Console](https://developer.adobe.com/) 並按一下 **主控台** 按鈕。
+- 導覽至[Adobe Developer Console](https://developer.adobe.com/)並按一下&#x200B;**主控台**&#x200B;按鈕。
 
-- 在 **快速入門** 區段，按一下 **從範本建立專案**. 然後，在 **瀏覽範本** 對話方塊，選取 **App Builder** 範本。
+- 在&#x200B;**快速入門**&#x200B;區段中，按一下&#x200B;**從範本建立專案**。 然後在&#x200B;**瀏覽範本**&#x200B;對話方塊中，選取&#x200B;**App Builder**&#x200B;範本。
 
-- 視需要更新專案標題、應用程式名稱並新增工作區。 然後，按一下 **儲存**.
+- 視需要更新專案標題、應用程式名稱並新增工作區。 然後，按一下&#x200B;**儲存**。
 
   ![在Adobe Developer Console中建立專案](../assets/examples/runtime-action/create-project.png)
 
@@ -74,17 +74,17 @@ https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
   aio app init
   ```
 
-- 選取 `Organization`，則 `Project` 以及工作區中建立的物件。 在 `What templates do you want to search for?` 步驟，選取 `All Templates` 選項。
+- 選取`Organization`、您在上一步建立的`Project`以及工作區。 在`What templates do you want to search for?`步驟中，選取`All Templates`選項。
 
-  ![Org-Project-Selection — 初始化專案](../assets/examples/runtime-action/all-templates.png)
+  ![組織 — 專案 — 選擇 — 初始化專案](../assets/examples/runtime-action/all-templates.png)
 
-- 從範本清單中選取 `@adobe/generator-app-excshell` 選項。
+- 從範本清單中選取`@adobe/generator-app-excshell`選項。
 
   ![擴充性範本 — 初始化專案](../assets/examples/runtime-action/extensibility-template.png)
 
 - 在您最愛的IDE中開啟專案，例如VSCode。
 
-- 選取的 _擴充性範本_ (`@adobe/generator-app-excshell`)提供一般執行階段動作，程式碼位於 `src/dx-excshell-1/actions/generic/index.js` 檔案。 讓我們更新以保持簡單，記錄事件詳細資料並傳回成功回應。 不過在下個範例中，會增強來處理已收到的AEM事件。
+- 選取的&#x200B;_擴充性範本_ (`@adobe/generator-app-excshell`)提供一般執行階段動作，程式碼在`src/dx-excshell-1/actions/generic/index.js`檔案中。 讓我們更新以保持簡單，記錄事件詳細資料並傳回成功回應。 不過在下個範例中，會增強來處理已收到的AEM事件。
 
   ```javascript
   const fetch = require("node-fetch");
@@ -135,40 +135,40 @@ https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
   aio app deploy
   ```
 
-## 在Adobe Developer主控台中設定專案
+## 在Adobe Developer Console中設定專案
 
 若要接收AEM事件並執行上一步建立的Adobe I/O Runtime動作，請在Adobe Developer Console中設定專案。
 
-- 在Adobe Developer Console中導覽至 [專案](https://developer.adobe.com/console/projects) 在上一步中建立，然後按一下以開啟它。 選取 `Stage` 工作區，這是部署動作的位置。
+- 在Adobe Developer Console中，導覽至上一步建立的[專案](https://developer.adobe.com/console/projects)，然後按一下以開啟專案。 選取`Stage`工作區，這是部署動作的位置。
 
-- 按一下 **新增服務** 按鈕並選取 **API** 選項。 在 **新增API** 強制回應視窗，選取 **Adobe服務** > **I/O管理API** 並按一下 **下一個**，按照其他設定步驟操作並按一下 **儲存已設定的API**.
+- 按一下&#x200B;**[新增服務**]按鈕，然後選取&#x200B;**API**&#x200B;選項。 在&#x200B;**新增API**&#x200B;強制回應視窗中，選取&#x200B;**Adobe服務** > **I/O管理API**，然後按一下&#x200B;**下一步**，遵循其他設定步驟，然後按一下&#x200B;**儲存已設定的API**。
 
   ![新增服務 — 設定專案](../assets/examples/runtime-action/add-io-management-api.png)
 
-- 同樣地，按一下 **新增服務** 按鈕並選取 **事件** 選項。 在 **新增事件** 對話方塊，選取 **Experience Cloud** > **AEM Sites**，然後按一下 **下一個**. 按照其他設定步驟操作，選取AEMCS執行個體、事件型別和其他詳細資訊。
+- 同樣地，按一下&#x200B;**新增服務**&#x200B;按鈕並選取&#x200B;**事件**&#x200B;選項。 在&#x200B;**新增事件**&#x200B;對話方塊中，選取&#x200B;**Experience Cloud** > **AEM Sites**，然後按一下&#x200B;**下一步**。 按照其他設定步驟操作，選取AEMCS執行個體、事件型別和其他詳細資訊。
 
-- 最後，在 **如何接收事件** 步驟，展開 **執行階段動作** 選項並選取 _一般_ 在上一步建立的動作。 按一下 **儲存已設定的事件**.
+- 最後，在&#x200B;**如何接收事件**&#x200B;步驟中，展開&#x200B;**執行階段動作**&#x200B;選項，並選取在上一步建立的&#x200B;_一般_&#x200B;動作。 按一下&#x200B;**儲存已設定的事件**。
 
-  ![執行階段動作 — 設定專案 ](../assets/examples/runtime-action/select-runtime-action.png)
+  ![執行階段動作 — 設定專案](../assets/examples/runtime-action/select-runtime-action.png)
 
-- 請檢閱「事件註冊」詳細資料，以及 **偵錯追蹤** 標籤並驗證 **挑戰探查** 要求和回應。
+- 檢閱事件註冊詳細資料，以及&#x200B;**偵錯追蹤**&#x200B;標籤，並驗證&#x200B;**挑戰探查**&#x200B;要求與回應。
 
-  ![活動註冊細節](../assets/examples/runtime-action/debug-tracing-challenge-probe.png)
+  ![活動註冊詳細資料](../assets/examples/runtime-action/debug-tracing-challenge-probe.png)
 
 
 ## 觸發AEM事件
 
-若要從已在上述Adobe Developer Console專案中註冊的AEMas a Cloud Service環境觸發AEM事件，請遵循下列步驟：
+若要從已在上述AEM as a Cloud Service專案中註冊的Adobe Developer Console環境觸發AEM事件，請遵循下列步驟：
 
-- 透過存取和登入您的AEMas a Cloud Service作者環境 [Cloud Manager](https://my.cloudmanager.adobe.com/).
+- 透過[Cloud Manager](https://my.cloudmanager.adobe.com/)存取並登入您的AEM as a Cloud Service作者環境。
 
-- 根據您的 **訂閱的事件**、建立、更新、刪除、發佈或取消發佈內容片段。
+- 根據您的&#x200B;**訂閱事件**，建立、更新、刪除、發佈或取消發佈內容片段。
 
 ## 檢閱事件詳細資料
 
 完成上述步驟後，您應該會看到系統將AEM事件傳遞至一般動作。
 
-您可以在下列位置檢視事件詳細資訊： **偵錯追蹤** 「 」事件註冊詳細資訊的「 」標籤。
+您可以在事件登入詳細資訊的&#x200B;**偵錯追蹤**&#x200B;標籤中檢閱事件詳細資訊。
 
 ![AEM事件詳細資料](../assets/examples/runtime-action/aem-event-details.png)
 

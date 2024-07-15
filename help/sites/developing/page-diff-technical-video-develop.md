@@ -26,9 +26,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->這段影片會將自訂CSS新增至we.Retail使用者端資料庫，而應在該處對自訂者的AEM Sites專案進行這些變更；在以下範常式式碼中： `my-project`.
+>此影片將自訂CSS新增至we.Retail使用者端資料庫，而應該在此處對自訂者的AEM Sites專案進行這些變更；在以下範常式式碼中： `my-project`。
 
-AEM頁面差異可透過直接載入取得OOTB CSS `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`.
+AEM頁面差異會透過`/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`的直接載入取得OOTB CSS。
 
 由於這會直接載入CSS而不使用使用者端程式庫類別，因此我們必須為自訂樣式找到另一個插入點，而此自訂插入點是專案的編寫clientlib。
 
@@ -36,7 +36,7 @@ AEM頁面差異可透過直接載入取得OOTB CSS `/libs/cq/gui/components/comm
 
 ### 準備編寫clientlib {#prepare-the-authoring-clientlib}
 
-確認存在 `authoring` 您專案的clientlib，位於 `/apps/my-project/clientlib/authoring.`
+確定您的專案存在於`/apps/my-project/clientlib/authoring.`的`authoring` clientlib
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -47,7 +47,7 @@ AEM頁面差異可透過直接載入取得OOTB CSS `/libs/cq/gui/components/comm
 
 ### 提供自訂CSS {#provide-the-custom-css}
 
-新增至專案的 `authoring` clientlib a `css.txt` 會指向將提供覆寫樣式的較少檔案。 [更少](https://lesscss.org/) 由於其許多方便的功能（包括此範例中所使用的類別包裝），所以較偏好使用。
+新增至專案的`authoring` clientlib a `css.txt`，其指向將提供覆寫樣式的較少檔案。 [Less](https://lesscss.org/)有許多便利的功能，包括此範例中所使用的類別包裝，因此較偏好使用。
 
 ```shell
 base=./css
@@ -55,7 +55,7 @@ base=./css
 htmldiff.less
 ```
 
-建立 `less` 包含樣式覆蓋的檔案，位於 `/apps/my-project/clientlibs/authoring/css/htmldiff.less`，並視需要提供覆寫樣式。
+在`/apps/my-project/clientlibs/authoring/css/htmldiff.less`建立包含樣式覆寫的`less`檔案，並視需要提供覆寫樣式。
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -103,9 +103,9 @@ body {
 
 ### 透過頁面元件包含編寫clientlib CSS {#include-the-authoring-clientlib-css-via-the-page-component}
 
-在專案的基本頁面中包含編寫clientlibs類別 `/apps/my-project/components/structure/page/customheaderlibs.html` 直接在 `</head>` 標籤確保樣式已載入。
+將編寫clientlibs類別直接加入專案基本頁面的`/apps/my-project/components/structure/page/customheaderlibs.html`中，並放在`</head>`標籤之前，以確保樣式已載入。
 
-這些樣式應限製為 [!UICONTROL 編輯] 和 [!UICONTROL 預覽] wcm模式。
+這些樣式應限製為[!UICONTROL 編輯]和[!UICONTROL 預覽] WCM模式。
 
 ```xml
 <head>

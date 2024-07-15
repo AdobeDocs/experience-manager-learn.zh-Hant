@@ -19,17 +19,17 @@ ht-degree: 0%
 
 {{aem-headless-trials-promo}}
 
-此端對端教學課程會繼續 [基本教學課程](../multi-step/overview.md) 涵蓋Adobe Experience Manager (AEM) Headless和GraphQL的基礎。 進階教學課程說明使用內容片段模型、內容片段和AEM GraphQL持續查詢的深入層面，包括在使用者端應用程式中使用GraphQL持續查詢。
+此端對端教學課程繼續進行[基本教學課程](../multi-step/overview.md)，涵蓋Adobe Experience Manager (AEM) Headless和GraphQL的基礎知識。 進階教學課程說明使用內容片段模型、內容片段和AEM GraphQL持續查詢的深入層面，包括在使用者端應用程式中使用GraphQL持續查詢。
 
 ## 先決條件
 
-完成 [AEMas a Cloud Service快速設定](../quick-setup/cloud-service.md) 以設定您的AEMas a Cloud Service環境。
+完成AEM as a Cloud Service ](../quick-setup/cloud-service.md)的[快速設定，以設定您的AEM as a Cloud Service環境。
 
-強烈建議您完成先前的 [基本教學課程](../multi-step/overview.md) 和 [影片系列](../video-series/modeling-basics.md) 教學課程，再繼續此進階教學課程。 雖然您可以使用本機AEM環境完成本教學課程，但本教學課程僅涵蓋AEMas a Cloud Service的工作流程。
+強烈建議您先完成先前的[基本教學課程](../multi-step/overview.md)和[影片系列](../video-series/modeling-basics.md)教學課程，再繼續此進階教學課程。 雖然您可以使用本機AEM環境完成本教學課程，但本教學課程僅涵蓋AEM as a Cloud Service的工作流程。
 
 >[!CAUTION]
 >
->如果您沒有AEMas a Cloud Service環境的存取權，可以完成 [使用本機SDK的AEM Headless快速設定](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html). 不過，請務必注意，某些產品UI頁面（例如內容片段導覽）是不同的。
+>如果您無法存取AEM as a Cloud Service環境，可以使用本機SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html)完成[AEM Headless快速設定。 不過，請務必注意，某些產品UI頁面（例如內容片段導覽）是不同的。
 
 
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 * 使用巢狀內容和片段參考時製作內容片段，並為內容片段製作控管設定資料夾原則。
 * 使用具有變數和指令的GraphQL查詢來探索AEM GraphQL API功能。
 * 在AEM中使用引數保留GraphQL查詢，並瞭解如何將快取控制引數用於保留查詢。
-* 使用AEM Headless JavaScript SDK將持續查詢請求整合到範例WKND GraphQL React應用程式中。
+* 使用AEM Headless JavaScript SDK將持續查詢請求整合至範例WKND GraphQL React應用程式。
 
 ## AEM Headless的進階概念概覽
 
@@ -51,37 +51,37 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->這段影片（於2:25）提到了透過封裝管理員安裝GraphiQL查詢編輯器以探索GraphQL查詢。 但在較新版本的AEM中，為Cloud Service內建 **GraphiQL Explorer** 提供，因此不需要安裝封裝。 另請參閱 [使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) 以取得詳細資訊。
+>這段影片（於2:25）提到了透過封裝管理員安裝GraphiQL查詢編輯器以探索GraphQL查詢。 但在較新版本的AEM as Cloud Service中提供內建的&#x200B;**GraphiQL Explorer**，因此不需要安裝封裝。 如需詳細資訊，請參閱[使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html)。
 
 
 ## 專案設定
 
-WKND網站專案具有所有必要的設定，因此您可在完成 [快速設定](../quick-setup/cloud-service.md). 本節僅重點說明您在建立自己的AEM Headless專案時可以使用的一些重要步驟。
+WKND網站專案具有所有必要的設定，因此您可在完成[快速設定](../quick-setup/cloud-service.md)後立即啟動教學課程。 本節僅重點說明您在建立自己的AEM Headless專案時可以使用的一些重要步驟。
 
 
 ### 檢閱現有設定
 
-在AEM中開始任何新專案的第一步是建立其設定，作為工作區並建立GraphQL API端點。 若要檢閱或建立組態，請導覽至 **工具** > **一般** > **設定瀏覽器**.
+在AEM中開始任何新專案的第一步是建立其設定，作為工作區並建立GraphQL API端點。 若要檢閱或建立設定，請瀏覽至&#x200B;**工具** > **一般** > **設定瀏覽器**。
 
-![導覽至設定瀏覽器](assets/overview/create-configuration.png)
+![瀏覽至設定瀏覽器](assets/overview/create-configuration.png)
 
-請注意 `WKND Shared` 已針對本教學課程建立網站設定。 若要建立您專案的設定，請選取 **建立** 並完成出現的「建立組態」強制回應視窗中的表單。
+請注意，`WKND Shared`網站組態已經為教學課程建立。 若要為您自己的專案建立設定，請選取右上角的&#x200B;**建立**，並完成出現的「建立設定」強制回應視窗中的表單。
 
 ![檢閱WKND共用組態](assets/overview/review-wknd-shared-configuration.png)
 
 ### 檢閱GraphQL API端點
 
-接下來，您必須設定API端點，以將GraphQL查詢傳送至。 若要檢閱現有端點或建立端點，請導覽至 **工具** > **一般** > **GraphQL**.
+接下來，您必須設定API端點，以將GraphQL查詢傳送至。 若要檢閱現有端點或建立端點，請瀏覽至&#x200B;**工具** > **一般** > **GraphQL**。
 
 ![設定端點](assets/overview/endpoints.png)
 
-請注意 `WKND Shared Endpoint` 已建立。 若要建立專案的端點，請選取 **建立** 前往右上角，並依照工作流程操作。
+請注意，`WKND Shared Endpoint`已經建立。 若要建立專案的端點，請選取右上角的&#x200B;**建立**，然後依照工作流程進行。
 
 ![檢閱WKND共用端點](assets/overview/review-wknd-shared-endpoint.png)
 
 >[!NOTE]
 >
-> 儲存端點後，您將會看到造訪安全性控制檯的強制回應視窗，在您想要設定端點的存取許可權時，此功能可讓您調整安全性設定。 然而，安全性許可權本身並不在本教學課程的討論範圍內。 如需詳細資訊，請參閱 [AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
+> 儲存端點後，您將會看到造訪安全性控制檯的強制回應視窗，在您想要設定端點的存取許可權時，此功能可讓您調整安全性設定。 然而，安全性許可權本身並不在本教學課程的討論範圍內。 如需詳細資訊，請參閱[AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)。
 
 ### 檢閱WKND內容結構和語言根資料夾
 
@@ -89,25 +89,25 @@ WKND網站專案具有所有必要的設定，因此您可在完成 [快速設�
 
 語言根資料夾是以ISO語言代碼作為其名稱（例如EN或FR）的資料夾。 AEM翻譯管理系統使用這些資料夾來定義內容的主要語言和內容翻譯的語言。
 
-前往 **導覽** > **資產** > **檔案**.
+移至&#x200B;**導覽** > **Assets** > **檔案**。
 
-![導覽至檔案](assets/overview/files.png)
+![瀏覽至檔案](assets/overview/files.png)
 
-導覽至 **WKND已共用** 資料夾。 觀察標題為「English」且名稱為「EN」的資料夾。 此資料夾是WKND網站專案的語言根資料夾。
+導覽至&#x200B;**WKND共用**&#x200B;資料夾。 觀察標題為「English」且名稱為「EN」的資料夾。 此資料夾是WKND網站專案的語言根資料夾。
 
 ![英文資料夾](assets/overview/english.png)
 
-針對您自己的專案，在設定中建立語言根資料夾。 請參閱以下小節： [建立資料夾](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#create-folders) 以取得更多詳細資料。
+針對您自己的專案，在設定中建立語言根資料夾。 如需詳細資訊，請參閱[建立資料夾](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#create-folders)的相關章節。
 
 ### 將設定指派給巢狀資料夾
 
 最後，您必須將專案的設定指派給語言根資料夾。 此指派可讓您根據專案設定中定義的內容片段模型來建立內容片段。
 
-若要將語言根資料夾指派給設定，請選取該資料夾，然後選取 **屬性** ，位於頂端導覽列中。
+若要將語言根資料夾指派給組態，請選取資料夾，然後在頂端導覽列中選取&#x200B;**屬性**。
 
 ![選取屬性](assets/overview/properties.png)
 
-接下來，導覽至 **Cloud Service** 標籤並選取中的資料夾圖示 **雲端設定** 欄位。
+接著，導覽至&#x200B;**Cloud Service**&#x200B;標籤，並在&#x200B;**雲端設定**&#x200B;欄位中選取資料夾圖示。
 
 ![雲端設定](assets/overview/cloud-conf.png)
 
@@ -122,17 +122,17 @@ WKND網站專案具有所有必要的設定，因此您可在完成 [快速設�
 
 ## 入門和解決方案套件
 
-兩個AEM **套件** 可用，並可透過以下方式安裝： [封裝管理員](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#sample-content)
+有兩個AEM **套件**&#x200B;可用，可以透過[套件管理員](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#sample-content)安裝
 
-* [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip) 在稍後的教學課程中使用，並包含範例影像和資料夾。
-* [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) 包含第1-4章的完成解決方案，包括新的內容片段模型、內容片段和持續的GraphQL查詢。 對於想要直接跳入 [使用者端應用程式整合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md) 章節。
+* [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip)稍後會在教學課程中使用，並包含範例影像和資料夾。
+* [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip)包含第1-4章的完成解決方案，包括新的內容片段模式、內容片段和持續的GraphQL查詢。 對於想要直接跳到[使用者端應用程式整合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)章節的人很有用。
 
 
-此 [React應用程式 — 進階教學課程 — WKND冒險](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) 專案可供檢閱和探索範例應用程式。 此範例應用程式會叫用持續存在的GraphQL查詢，從AEM擷取內容，並在沈浸式體驗中呈現。
+[React應用程式 — 進階教學課程 — WKND Adventures](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md)專案可供檢閱和探索範例應用程式。 此範例應用程式會叫用持續存在的GraphQL查詢，從AEM擷取內容，並在沈浸式體驗中呈現。
 
 ## 快速入門
 
 若要開始使用這個進階教學課程，請依照下列步驟進行：
 
-1. 使用設定開發環境 [AEMas a Cloud Service](../quick-setup/cloud-service.md).
-1. 開始教學課程一章，於 [建立內容片段模型](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md).
+1. 使用[AEM as a Cloud Service](../quick-setup/cloud-service.md)設定開發環境。
+1. 開始有關[建立內容片段模型](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)的教學課程章節。

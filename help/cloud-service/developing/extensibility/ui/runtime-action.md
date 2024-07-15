@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ![AEM UI擴充功能執行階段動作](./assets/runtime-action/action-runtime-flow.png){align="center"}
 
-AEM UI擴充功能可選擇包含任意數量的 [Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/).
+AEM UI擴充功能可選擇包含任何數量的[Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/)。
 
 Adobe I/O Runtime動作是可由擴充功能叫用的無伺服器函式。 執行需要與AEM或其他AdobeWeb服務互動的工作時，動作會很有用。 動作通常最適合用於執行長時間執行（超過幾秒鐘）的工作，或向AEM或其他Web服務發出HTTP請求。
 
@@ -32,7 +32,7 @@ Adobe I/O Runtime動作是可由擴充功能叫用的無伺服器函式。 執�
 + 使用者無法中斷動作（例如重新整理瀏覽器）
 + 動作非同步，因此可在需要時隨時執行，而不會封鎖使用者
 
-在AEM UI擴充功能的內容中，動作通常用於直接與AEMas a Cloud Service通訊：
+在AEM UI擴充功能的內容中，動作通常用於直接與AEM as a Cloud Service通訊：
 
 + 從AEM收集有關選取或目前內容的相關資料
 + 對內容執行自訂作業
@@ -44,12 +44,12 @@ Adobe I/O Runtime動作是可由擴充功能叫用的無伺服器函式。 執�
 
 Adobe I/O Runtime動作主要從AEM UI擴充功能中的兩個位置叫用：
 
-1. 此 [延伸註冊](./extension-registration.md) `onClick(..)` 處理常式
-1. 在 [強制回應](./modal.md)
+1. [延伸模組註冊的](./extension-registration.md) `onClick(..)`處理常式
+1. 在[模型](./modal.md)內
 
 ### 從擴充功能註冊
 
-可直接從擴充功能註冊代碼呼叫Adobe I/O Runtime動作。 最常見的使用案例是將動作繫結到 [頁首功能表](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/)不使用的按鈕 [模態](./modal.md).
+可直接從擴充功能註冊代碼呼叫Adobe I/O Runtime動作。 最常見的使用案例是將動作繫結到不使用[模式](./modal.md)的[標頭功能表](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/)按鈕。
 
 + `./src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
@@ -110,9 +110,9 @@ export default ExtensionRegistration;
 
 ### 從強制回應視窗
 
-Adobe I/O Runtime動作可以直接從模式呼叫，以執行更多參與的工作，特別是依賴與AEMas a Cloud Service、AdobeWeb服務或甚至第三方服務通訊的工作。
+Adobe I/O Runtime動作可以直接從模式呼叫，以執行更多參與的工作，特別是依賴與AEM as a Cloud Service通訊、AdobeWeb服務或甚至第三方服務的工作。
 
-Adobe I/O Runtime動作是以Node.js為基礎的JavaScript應用程式，會在無伺服器的Adobe I/O Runtime環境中執行。 這些動作可由SPA擴充功能透過HTTP定址。
+Adobe I/O Runtime動作是以Node.js為基礎的JavaScript應用程式，會在無伺服器Adobe I/O Runtime環境中執行。 這些動作可由SPA擴充功能透過HTTP定址。
 
 + `./src/aem-ui-extension/web-src/src/components/MyModal.js`
 
@@ -306,11 +306,11 @@ async function main (params) {
 
 以下AEM HTTP API通常用於透過擴充功能與AEM互動：
 
-+ [AEM GRAPHQL API](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
-+ [AEM ASSETS HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
++ [AEM GraphQL API](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)
++ [AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
    + [AEM Assets HTTP API 內容片段支援](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html)
 + [AEM QueryBuilder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html)
-+ [完整AEMas a Cloud ServiceAPI參考](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
++ [完成AEM as a Cloud Service API參考](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
 
 
 ## Adobenpm模組
@@ -319,13 +319,13 @@ async function main (params) {
 
 + [@adobe/aio-sdk](https://www.npmjs.com/package/@adobe/aio-sdk)
    + [核心SDK](https://github.com/adobe/aio-sdk-core)
-   + [狀態程式庫](https://github.com/adobe/aio-lib-state)
+   + [狀態庫](https://github.com/adobe/aio-lib-state)
    + [檔案庫](https://github.com/adobe/aio-lib-files)
    + [Adobe Target資料庫](https://github.com/adobe/aio-lib-target)
    + [Adobe Analytics資料庫](https://github.com/adobe/aio-lib-analytics)
    + [Adobe Campaign Standard資料庫](https://github.com/adobe/aio-lib-campaign-standard)
    + [Adobe客戶設定檔程式庫](https://github.com/adobe/aio-lib-customer-profile)
-   + [Adobe Audience Manager Customer Data Library](https://github.com/adobe/aio-lib-audience-manager-cd)
+   + [Adobe Audience Manager客戶資料庫](https://github.com/adobe/aio-lib-audience-manager-cd)
    + [Adobe I/O事件](https://github.com/adobe/aio-lib-events)
 + [@adobe/aio-lib-core-networking](https://github.com/adobe/aio-lib-core-networking)
 + [@adobe/node-httptransfer](https://github.com/adobe/node-httptransfer)

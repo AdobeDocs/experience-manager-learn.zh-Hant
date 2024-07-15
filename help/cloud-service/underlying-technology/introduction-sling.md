@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 簡介 [!DNL Sling] {#introduction-sling}
+# [!DNL Sling]簡介 {#introduction-sling}
 
-簡介 [!DNL Sling]，開放原始碼 [!DNL RESTful] 屬於Adobe Experience Manager基礎技術棧疊一部分的網頁架構。
+介紹[!DNL Sling]，這是Adobe Experience Manager基礎技術棧疊中的開放原始碼[!DNL RESTful] Web架構。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32032?quality=12&learn=on)

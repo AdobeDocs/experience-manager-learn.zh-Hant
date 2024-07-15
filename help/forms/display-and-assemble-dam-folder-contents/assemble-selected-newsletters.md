@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 將所選電子報合併為一個pdf
 
-使用者的選擇儲存在隱藏欄位中。 此隱藏欄位的值會傳遞給servlet，後者會使用將選取專案合併為一個pdf [Forms組合器服務](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
+使用者的選擇儲存在隱藏欄位中。 此隱藏欄位的值會傳遞至servlet，它會使用[Forms組合器服務](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html)將選取專案合併為一個pdf。
 
 
 ## 用於組合pdf檔案的Servlet

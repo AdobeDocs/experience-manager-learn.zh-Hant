@@ -27,16 +27,16 @@ ht-degree: 1%
 
 ### 取得最適化表單範本
 
-* 下載 [自適應表單範本](assets/af-form-template.zip)
+* 下載[最適化表單範本](assets/af-form-template.zip)
 * [使用封裝管理員匯入範本](http://localhost:4502/crx/packmgr/index.jsp)
 * 上傳並安裝最適化表單範本
 
 ### 取得最適化表單範例
 
-* 下載 [最適化表單](assets/peak-application-form.zip)
-* 瀏覽至 [表單和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 下載[最適化表單](assets/peak-application-form.zip)
+* 瀏覽至[表單與檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下「建立 — >檔案上傳」
-* 最適化表單範例放置在名為的資料夾中 [應用程式Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
+* 範例最適化表單放置在名為[應用程式Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)的資料夾中
 
 以下影片說明如何設定最適化表單以觸發AEM工作流程
 >[!VIDEO](https://video.tv.adobe.com/v/40258?quality=12&learn=on)

@@ -25,11 +25,11 @@ ht-degree: 1%
 「元件主控台」提供下列功能：
 
 * 概覽：目前AEM執行個體上所有可用的已安裝元件清單
-* [!UICONTROL 屬性]：顯示中繼資料，例如元件的標題、群組和說明
-* [!UICONTROL 原則]：顯示指定元件和相關範本的任何現有原則
+* [!UICONTROL 屬性]：顯示如元件的標題、群組和描述等中繼資料
+* [!UICONTROL 原則]：顯示特定元件和相關範本的任何現有原則
 * [!UICONTROL 即時使用情況]：顯示包含元件的頁面清單
 
-元件主控台位於下方 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 元件]**.
+您可以在&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 元件]**下找到元件主控台。
 元件主控台URL (本機AEM作者)： [http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
 
 ## 其他資源 {#additional-resources}

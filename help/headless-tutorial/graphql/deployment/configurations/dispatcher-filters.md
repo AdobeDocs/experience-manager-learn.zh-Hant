@@ -1,6 +1,6 @@
 ---
-title: AEM GraphQL的Dispatcher篩選器
-description: 瞭解如何設定AEM Publish Dispatcher篩選器以與AEM GraphQL搭配使用。
+title: 適用於AEM GraphQL的Dispatcher篩選器
+description: 瞭解如何設定AEM Publish Dispatcher篩選器，以與AEM GraphQL搭配使用。
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -19,9 +19,9 @@ ht-degree: 1%
 
 # Dispatcher篩選器
 
-Adobe Experience Manager as a Cloud Service會使用AEM發佈Dispatcher篩選器，以確保只有應送達AEM的請求才能送達AEM。 預設會拒絕所有要求，而且必須明確新增允許URL的模式。
+Adobe Experience Manager as a Cloud Service使用AEM Publish Dispatcher篩選器，確保只有可連線AEM的要求才會連線AEM。 預設會拒絕所有要求，而且必須明確新增允許URL的模式。
 
-| 使用者端型別 | [單頁應用程式(SPA)](../spa.md) | [Web元件/JS](../web-component.md) | [行動](../mobile.md) | [伺服器對伺服器](../server-to-server.md) |
+| 使用者端型別 | [單頁應用程式(SPA)](../spa.md) | [網頁元件/JS](../web-component.md) | [行動裝置](../mobile.md) | [伺服器對伺服器](../server-to-server.md) |
 |------------------------------------------:|:---------------------:|:----------------:|:---------:|:----------------:|
 | 需要Dispatcher篩選器設定 | ✔ | ✔ | ✔ | ✔ |
 
@@ -31,14 +31,14 @@ Adobe Experience Manager as a Cloud Service會使用AEM發佈Dispatcher篩選器
 
 ## Dispatcher篩選器設定
 
-AEM發佈Dispatcher篩選器設定會定義允許到達AEM的URL模式，且必須包含AEM持續查詢端點的URL首碼。
+AEM Publish Dispatcher篩選器設定會定義允許到達AEM的URL模式，且必須包含AEM持續查詢端點的URL首碼。
 
 | 使用者端連線至 | AEM 作者 | AEM 發佈 | AEM預覽 |
 |------------------------------------------:|:----------:|:-------------:|:-------------:|
 | 需要Dispatcher篩選器設定 | ✘ | ✔ | ✔ |
 
-新增 `allow` URL模式的規則 `/graphql/execute.json/*`，並確保檔案ID (例如 `/0600`，在範例伺服器陣列檔案中是唯一的)。
-這允許對持久查詢端點發出HTTPGET請求，例如 `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` 到AEM Publish。
+新增URL模式為`/graphql/execute.json/*`的`allow`規則，並確認檔案識別碼（例如`/0600`，在範例伺服器陣列檔案中是唯一的）。
+這允許對持久查詢端點發出HTTPGET要求，例如`HTTP GET /graphql/execute.json/wknd-shared/adventures-all`通過到AEM Publish。
 
 如果在您的AEM Headless體驗中使用體驗片段，請對這些路徑執行相同的操作。
 
@@ -55,4 +55,4 @@ AEM發佈Dispatcher篩選器設定會定義允許到達AEM的URL模式，且必�
 
 ### 篩選設定範例
 
-+ [WKND專案中可以找到Dispatcher篩選的範例。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/filters/filters.any#L28)
++ [在WKND專案中可以找到Dispatcher篩選的範例。](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/filters/filters.any#L28)

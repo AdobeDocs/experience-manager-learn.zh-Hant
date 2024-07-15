@@ -30,9 +30,9 @@ AEM Forms提供許多立即可用的自訂函式，但您需要定義自己的�
 * 選取新建立的clientlibs資料夾，然後新增allowProxy和類別屬性（如熒幕擷取畫面中所示），並儲存變更。
 
 ![client-lib](assets/custom-functions.png)
-* 建立名為的資料夾 **js** 在 **clientlibs** 資料夾
-* 建立名為的檔案 **函式.js** 在 **js** 資料夾
-* 建立名為的檔案 **js.txt** 在 **clientlibs** 資料夾。 儲存您的變更。
+* 在&#x200B;**clientlibs**&#x200B;資料夾下建立名為&#x200B;**js**&#x200B;的資料夾
+* 在&#x200B;**js**&#x200B;資料夾下建立名為&#x200B;**functions.js**&#x200B;的檔案
+* 在&#x200B;**clientlibs**&#x200B;資料夾下建立名為&#x200B;**js.txt**&#x200B;的檔案。 儲存您的變更。
 * 您的資料夾結構看起來應該像下面的熒幕擷取畫面。
 
 ![規則編輯器](assets/folder-structure.png)
@@ -72,10 +72,10 @@ function convertUTC(strUTCString)
 }
 ```
 
-請 [請參閱jsdoc](https://jsdoc.app/index.html)以取得有關為javascript函式加上註解的詳細資訊。
+請[參閱jsdoc](https://jsdoc.app/index.html)以取得有關註解javascript函式的詳細資訊。
 上述程式碼有兩個功能：
-**getCountyNamesList**  — 傳回字串陣列
-**convertUTC**  — 將UTC時間戳記轉換為當地時區
+**getCountyNamesList** — 傳回字串陣列
+**convertUTC** — 將UTC時間戳記轉換為當地時區
 
 開啟js.txt並貼上下列程式碼並儲存變更。
 
@@ -84,10 +84,10 @@ function convertUTC(strUTCString)
 functions.js
 ```
 
-#base=js行指定JavaScript檔案所在的目錄。
-以下各行表示JavaScript檔案相對於基底位置的位置。
+#base=js行會指定JavaScript檔案所在的目錄。
+以下各行表示JavaScript檔案相對於基礎位置的位置。
 
-如果您在建立自訂函式時遇到問題，請隨時 [下載並安裝此套件](assets/custom-functions.zip) 在您的AEM執行個體中。
+如果您在建立自訂函式時遇到問題，請隨時[下載此套件](assets/custom-functions.zip)並安裝在您的AEM執行個體中。
 
 ## 使用自訂函式
 

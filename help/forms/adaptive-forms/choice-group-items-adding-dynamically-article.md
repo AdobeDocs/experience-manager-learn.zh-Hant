@@ -23,7 +23,7 @@ AEM Forms 6.5匯入動態新增專案至最適化Forms選擇群組元件（例�
 
 您可以根據使用案例，使用視覺化編輯器和程式碼編輯器新增專案。
 
-**使用視覺化編輯器：** 您可以從函式呼叫或服務呼叫的結果中填入選擇群組的專案。 例如，您可以透過使用REST API呼叫的回應來設定選擇群組的專案。
+**使用視覺化編輯器：**&#x200B;您可以從函式呼叫或服務呼叫的結果填入選擇群組的專案。 例如，您可以透過使用REST API呼叫的回應來設定選擇群組的專案。
 
 在下方熒幕擷圖中，我們將Loan Period(years)的選項設定為getLoanPeriods服務電話的結果。
 
@@ -89,7 +89,7 @@ else
 **使用視覺化編輯器新增專案**
 
 * [下載資產](assets/usingthevisualeditor.zip)
-* 請安裝Tomcat （如果尚未安裝）。 [此處提供安裝tomcat的說明](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* 請安裝Tomcat （如果尚未安裝）。 [此處提供tomcat的安裝指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
 * [將此zip檔案中包含的SampleRest.war檔案部署至Tomcat中](assets/sample-rest.zip)
 * [開啟Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下「建立」 | 「檔案上傳」並上傳您在上一步中下載的檔案

@@ -24,7 +24,7 @@ OSGi服務由其服務介面語義定義，並實作為服務物件。 服務的
 
 ## 定義介面
 
-只有一個方法的簡單介面，可將資料與 <span class="x x-first x-last">XDP</span> 範本。
+一個簡單介面，具有一個與<span class="x x-first x-last">XDP</span>範本合併資料的方法。
 
 ```java
 package com.mysite.samples;
@@ -40,7 +40,7 @@ public interface MyfirstInterface
 
 ## 實作介面
 
-建立名為的新封裝 `com.mysite.samples.impl` 以保留介面的實作。
+建立名為`com.mysite.samples.impl`的新封裝以儲存介面的實作。
 
 ```java
 package com.mysite.samples.impl;
@@ -78,19 +78,19 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 }
 ```
 
-註解 `@Component(...)` 第10行會將此Java類別標籤為OSGi元件，並將其註冊為OSGi服務。
+第10行的註解`@Component(...)`會將此Java類別標籤為OSGi元件，並將其註冊為OSGi服務。
 
-此 `@Reference` 註解是OSGi宣告式服務的一部分，用於插入 [輸出服務](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) 至變數 `outputService`.
+`@Reference`註解是OSGi宣告式服務的一部分，用來將[Outputservice](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)的參照插入變數`outputService`。
 
 
 ## 建置和部署套件組合
 
-* 開啟 **命令提示視窗**
-* 瀏覽至 `c:\aemformsbundles\mysite\core`
-* 執行命令 `mvn clean install -PautoInstallBundle`
+* 開啟&#x200B;**命令提示字元視窗**
+* 瀏覽至`c:\aemformsbundles\mysite\core`
+* 執行命令`mvn clean install -PautoInstallBundle`
 * 上述命令會自動建置套件，並將其部署至localhost：4502上執行的AEM執行個體
 
-此套件組合也可在下列位置使用 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用將此套件組合部署至AEM [Felix網頁主控台。](http://localhost:4502/system/console/bundles)
+此組合也可在下列位置`C:\AEMFormsBundles\mysite\core\target`使用。 也可以使用[Felix Web主控台將套件組合部署到AEM。](http://localhost:4502/system/console/bundles)
 
 ## 使用服務
 
@@ -101,13 +101,13 @@ MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.mysite.samp
 com.adobe.aemfd.docmanager.Document generatedDocument = myFirstAEMFormsService.mergeDataWithXDPTemplate(xdp_or_pdf_template,xmlDocument);
 ```
 
-包含JSP頁面的範例套件可以是 [已從此處下載](assets/learning_aem_forms.zip)
+包含JSP頁面的範例套件可從這裡[下載](assets/learning_aem_forms.zip)
 
 [完整的套裝軟體可供下載](assets/mysite.core-1.0.0-SNAPSHOT.jar)
 
 ## 測試封裝
 
-使用將套件匯入並安裝到AEM中 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+使用[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)將封裝匯入並安裝到AEM中
 
 使用Postman進行POST呼叫並提供輸入引數，如下方熒幕擷取畫面所示
 ![郵遞員](assets/test-service-postman.JPG)

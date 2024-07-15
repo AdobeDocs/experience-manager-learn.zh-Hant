@@ -33,7 +33,7 @@ ht-degree: 1%
 
 AEM Forms 6.4版本已引入使用互動式通訊檔案中的表格來顯示表格資料的功能。 以下影片會逐步介紹在Web Channel檔案中設定表格的相關步驟。
 
-**在Web Channel檔案中設定表格 — AEM Forms 6.4**
+**在Web Channel檔案中設定資料表 — AEM Forms 6.4**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22360?quality=12&learn=on)
 

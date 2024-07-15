@@ -28,4 +28,4 @@ AEM Assets提供企業級報表架構，可透過直覺式使用者體驗針對�
 
 >[!IMPORTANT]
 >
->AEM 6.5提供設定 [資產報表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html#prerequisite-for-reporting)，讓管理員可定義報表中要追蹤及包含的內容。
+>AEM 6.5提供設定[資產報告](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html#prerequisite-for-reporting)的功能，可讓管理員定義報告中要追蹤和包含的內容。

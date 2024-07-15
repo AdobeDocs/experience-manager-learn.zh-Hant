@@ -75,17 +75,17 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 
 若要建置專案，請遵循下列步驟：
 
-* 開啟 **命令提示視窗**
-* 瀏覽至 `c:\aemformsbundles\mysite\core`
-* 執行命令 `mvn clean install -PautoInstallBundle`
+* 開啟&#x200B;**命令提示字元視窗**
+* 瀏覽至`c:\aemformsbundles\mysite\core`
+* 執行命令`mvn clean install -PautoInstallBundle`
 * 上述命令會自動建置套件組合，並將其部署至在localhost：4502上執行的AEM執行個體
 
-束也可在下列位置使用 `C:\AEMFormsBundles\mysite\core\target`. 也可以使用將此套件組合部署至AEM [Felix網頁主控台。](http://localhost:4502/system/console/bundles)
+此組合也可在下列位置`C:\AEMFormsBundles\mysite\core\target`使用。 也可以使用[Felix Web主控台將套件組合部署到AEM。](http://localhost:4502/system/console/bundles)
 
 
 ## 測試Servlet解析程式
 
-將瀏覽器指向 [servlet解析器URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). 這會告訴您針對指定路徑叫用的servlet，如以下熒幕擷取畫面所示
+將瀏覽器指向[servlet解析程式URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST)。 這會告訴您針對指定路徑叫用的servlet，如以下熒幕擷取畫面所示
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
 ## 使用Postman測試servlet

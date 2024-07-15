@@ -24,4 +24,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->只要所需的資料庫驅動程式以OSGi套件部署到AEM，就可以使用任何RDBMS資料來源。 有關在AEM中設定RDBMS資料來源的相關說明，請參閱 [設定與AEM Forms的資料整合](/help/forms/adaptive-forms/data-integration-technical-video-setup.md).
+>只要所需的資料庫驅動程式以OSGi套件部署到AEM，就可以使用任何RDBMS資料來源。 在AEM中設定RDBMS資料來源已包含在[與AEM Forms的設定資料整合](/help/forms/adaptive-forms/data-integration-technical-video-setup.md)中。

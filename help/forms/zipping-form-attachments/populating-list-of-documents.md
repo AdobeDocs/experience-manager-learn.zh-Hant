@@ -19,14 +19,14 @@ ht-degree: 1%
 # 自訂流程步驟
 
 
-已實作自訂處理步驟，以使用附件和附件名稱填入「陣列清單」型別的工作流程變數。 然後，此變數會用於傳送電子郵件工作流程元件中。 如果您不熟悉建立OSGi套件，請 [請依照下列指示操作](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+已實作自訂處理步驟，以使用附件和附件名稱填入「陣列清單」型別的工作流程變數。 然後，此變數會用於傳送電子郵件工作流程元件中。 如果您不熟悉建立OSGi套件組合，請[依照這些指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
 自訂流程步驟中的程式碼會執行下列動作
 
 * 查詢承載資料夾下的所有最適化表單附件。 資料夾名稱會作為流程引數傳遞給流程步驟。
 
-* 填入 `listOfDocuments` 工作流程變數
-* 填入 `attachmentNames` 工作流程變數
+* 填入`listOfDocuments`工作流程變數
+* 填入`attachmentNames`工作流程變數
 * 設定工作流程變數的值(`no_of_attachments`)
 
 ```java
@@ -113,9 +113,9 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 >[!NOTE]
 >
 > 請確定已在工作流程中定義下列變數，程式碼才能運作
-> *listOfDocuments*  — 檔案型別ArrayList的變數
-> *attachmentName*  — 字串ArrayList型別的變數
-> *no_of_attachments* - Double型別的變數
+> *listOfDocuments* — 檔案型別ArrayList的變數
+> *attachmentNames* — 字串ArrayList型別的變數
+> *no_of_attachments* — 型別為Double的變數
 
 ## 後續步驟
 

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何套用Acrobat中使用Document Security模組建立的原則
 
-*此影片會逐步解說在Acrobat中套用使用Document Security模組建立之原則的過程。*
+*此影片會逐步解說套用在Acrobat中使用Document Security模組建立之原則的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335486?quality=12&learn=on)

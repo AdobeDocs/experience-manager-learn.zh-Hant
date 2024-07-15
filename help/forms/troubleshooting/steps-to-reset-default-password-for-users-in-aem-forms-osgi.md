@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 在AEM Forms OSGi中重設管理員預設密碼的步驟
 
-*本影片逐步說明在AEM Forms OSGi中重設管理員預設密碼的步驟。*
+*此影片會逐步說明在AEM Forms OSGi中重設管理員預設密碼的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335542?quality=12&learn=on)

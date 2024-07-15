@@ -22,8 +22,8 @@ ht-degree: 0%
 
 在本文中，我們將瞭解以下內容
 
-* [輸出服務](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)  — 此服務通常用於合併xml資料與xdp範本或pdf，以產生平面化pdf。
-* [表單服務](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html)  — 這是功能非常廣泛的服務，可讓您將xdp轉譯為pdf，以及從資產檔案匯出/匯入PDF檔案。
+* [輸出服務](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) — 通常此服務是用來合併xml資料與xdp範本或pdf以產生平面化pdf。
+* [FormsService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) — 這是功能非常廣泛的服務，可讓您將xdp轉譯為pdf，以及將資料從和PDF檔案匯出/匯入。
 
 
 下列程式碼片段會從PDF檔案匯出資料
@@ -45,7 +45,7 @@ Line2會從請求中擷取saveLocation
 
 第6行會從PDF檔案匯出xmlData
 
-**若要在系統上測試範例套件**
+**若要在您的系統上測試範例封裝**
 
 [使用AEM封裝管理員下載並安裝封裝](assets/using-output-and-form-service-api.zip)
 
@@ -82,10 +82,10 @@ Line2會從請求中擷取saveLocation
 
 * 使用輸出服務將資料與xdp或pdf檔案合併，以產生平面化pdf
 * **POSTURL**： http://localhost:4502/content/AemFormsSamples/outputservice.html
-* **請求引數 —**
+* **要求引數 —**
 
    * **xdp_or_pdf_file** ：您要合併資料的xdp或pdf檔案
-   * **xmlfile**：與xdp_or_pdf_file合併的xml資料檔案
+   * **xmlfile**：與xdp_or_pdf_file合併的xml資料檔
    * **saveLocation**：將演算後的檔案儲存在檔案系統上的位置。 例如c：\\documents\\sample.pdf
 
 ### 使用FormsService API
@@ -97,8 +97,8 @@ Line2會從請求中擷取saveLocation
 
 * **要求引數：**
 
-   * **個人檔案** ：您要合併資料的pdf檔案
-   * **xmlfile**：與pdf檔案合併的xml資料檔案
+   * **pdf檔案** ：您要與它合併資料的pdf檔案
+   * **xmlfile**：與pdf檔案合併的xml資料檔
    * **saveLocation**：將演算後的檔案儲存在檔案系統上的位置。 例如 `c:\\outputsample.pdf`。
 
 #### 匯出資料
@@ -107,7 +107,7 @@ Line2會從請求中擷取saveLocation
 * **POSTURL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **要求引數：**
 
-   * **個人檔案** ：您要匯出資料的pdf檔案
+   * **pdf檔案** ：您要匯出資料的pdf檔案
    * **saveLocation**：將匯出的資料儲存在檔案系統上的位置。 例如c：\\documents\\exported_data.xml
 
 #### 轉譯XDP

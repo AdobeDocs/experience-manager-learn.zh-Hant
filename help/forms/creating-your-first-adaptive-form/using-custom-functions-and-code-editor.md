@@ -21,7 +21,7 @@ ht-degree: 0%
 
 在本部分中，我們將使用自訂函式和程式碼編輯器來編寫商業規則。
 
-您已安裝 [具有自訂函式的ClientLib](assets/client-libs-and-logo.zip) 在本教學課程的前面部分。
+您已在本教學課程中先前安裝[ClientLib搭配自訂函式](assets/client-libs-and-logo.zip)。
 
 通常使用者端資料庫會包含CSS和Javascript檔案。 此使用者端資料庫包含JavaScript檔案，此檔案會公開一個函式以填入下拉式清單值。
 

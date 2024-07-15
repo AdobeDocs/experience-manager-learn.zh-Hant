@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 疑難排解PDFA轉換和驗證問題的步驟
 
-*本影片將逐步解說在Forms Assembler服務中擷取疑難排解PDF/A轉換和驗證問題所需資訊的步驟。*
+*此影片會逐步說明擷取必要資訊的步驟，以疑難排解Forms Assembler服務中的PDF/A轉換和驗證問題。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335518?quality=12&learn=on)

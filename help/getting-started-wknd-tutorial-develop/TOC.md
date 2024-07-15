@@ -10,8 +10,8 @@ audience: developer
 index: y
 source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 46%
+source-wordcount: '124'
+ht-degree: 40%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 46%
 # AEM Sites - WKND 教學課程快速入門 {#getting-started-wknd-tutorial-develop}
 
 + [WKND教學課程概述](overview.md)
-+ 專案原型 {#project-archetype}
++ 專案原型{#project-archetype}
    + [概觀](./project-archetype/overview.md)
    + [1 — 專案設定](./project-archetype/project-setup.md)
    + [2 — 元件基本知識](./project-archetype/component-basics.md)
@@ -28,7 +28,7 @@ ht-degree: 46%
    + [5 — 樣式系統](./project-archetype/style-system.md)
    + [6 — 自訂元件](./project-archetype/custom-component.md)
    + [7 — 單元測試](./project-archetype/unit-testing.md)
-+ 快速建立網站 {#site-template}
++ 快速網站建立{#site-template}
    + [概觀](./site-template/overview.md)
    + [1 — 建立網站](./site-template/create-site.md)
    + [2 — 製作與發佈簡介](./site-template/author-content-publish.md)

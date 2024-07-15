@@ -20,7 +20,7 @@ ht-degree: 9%
 
 # 快速開發環境
 
-瞭解AEMas a Cloud Service中的快速開發環境(RDE)。
+瞭解AEM as a Cloud Service中的快速開發環境(RDE)。
 
 此影片大綱：
 
@@ -31,11 +31,11 @@ ht-degree: 9%
 
 ## 下一步
 
-瞭解 [如何設定](./how-to-setup.md) AEMas a Cloud Service中的RDE。
+瞭解[如何在AEM as a Cloud Service中設定](./how-to-setup.md) RDE。
 
 ## 其他資源
 
-[RDE檔案簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
+[ RDE檔案簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
 
 [Cloud Manager CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
 

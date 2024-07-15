@@ -33,9 +33,9 @@ AEM收件匣整合來自各種AEM元件(包括Forms工作流程)的通知和工�
 ## 欄自訂
 
 [開啟AEM收件匣](http://localhost:4502/aem/inbox)
-開啟Admin Control ，方法是按一下 _清單檢視_ 圖示，然後選取 _管理員控制_ 如下方熒幕擷取畫面所示
+按一下_清單檢視_&#x200B;圖示，然後選取&#x200B;_管理員控制項_，開啟「管理員控制項」，如下方熒幕擷取畫面所示
 
-![admin-control](assets/open-customization.png)
+![管理員控制](assets/open-customization.png)
 
 在欄自訂UI中，您可以執行下列操作
 

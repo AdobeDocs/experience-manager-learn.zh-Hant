@@ -24,7 +24,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->[啟用Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) AEM以使用此功能。
+>在AEM中[啟用Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)以使用此功能。
 
 此功能以Feature Pack形式提供給AEM 6.1和6.2版本。
 

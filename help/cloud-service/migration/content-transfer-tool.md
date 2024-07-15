@@ -1,6 +1,6 @@
 ---
 title: 使用內容轉移工具
-description: 若要將內容從內部部署或AMS代管版本的AEM移轉至AEMas a Cloud Service環境，建議使用內容轉移工具。
+description: 若要將內容從內部部署或AMS代管版本的AEM移轉至AEM as a Cloud Service環境，建議使用內容轉移工具。
 version: Cloud Service
 doc-type: technical-video
 feature: Migration
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 # 使用內容轉移工具
 
-若要將內容從內部部署或AMS代管版本的AEM移轉至AEMas a Cloud Service環境，建議使用內容轉移工具。
+若要將內容從內部部署或AMS代管版本的AEM移轉至AEM as a Cloud Service環境，建議使用內容轉移工具。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35460?quality=12&learn=on)
 

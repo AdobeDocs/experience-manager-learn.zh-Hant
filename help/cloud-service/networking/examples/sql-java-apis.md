@@ -1,6 +1,6 @@
 ---
 title: 使用Java™ API的SQL連線
-description: 瞭解如何使用Java™ SQL API和輸出連線埠，從AEMas a Cloud Service連線到SQL資料庫。
+description: 瞭解如何使用Java™ SQL API和輸出連線埠，從AEM as a Cloud Service連線到SQL資料庫。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -21,21 +21,21 @@ ht-degree: 0%
 
 與SQL資料庫（以及其他非HTTP/HTTPS服務）的連線必須從AEM代理出去。
 
-此規則的例外情況是 [專用輸出ip位址](../dedicated-egress-ip-address.md) 正在使用中，且服務正在Adobe或Azure上。
+此規則的例外情況是當[專用輸出ip位址](../dedicated-egress-ip-address.md)正在使用中，並且服務在Adobe或Azure上時。
 
 ## 進階網路支援
 
 下列進階網路選項支援下列程式碼範例。
 
-確保 [適當](../advanced-networking.md#advanced-networking) 在學習本教學課程之前，已設定進階網路設定。
+在執行本教學課程之前，請確定已設定[適當的](../advanced-networking.md#advanced-networking)進階網路設定。
 
-| 沒有進階網路 | [彈性的連線埠輸出](../flexible-port-egress.md) | [專用輸出IP位址](../dedicated-egress-ip-address.md) | [虛擬私人網路](../vpn.md) |
+| 沒有進階網路 | [彈性連線埠輸出](../flexible-port-egress.md) | [專用輸出IP位址](../dedicated-egress-ip-address.md) | [虛擬私人網路](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✔ | ✔ | ✔ |
 
 ## OSGi設定
 
-由於密碼不得儲存在程式碼中，因此最好透過 [機密OSGi設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)，使用AIO CLI或Cloud Manager API設定。
+由於密碼不得儲存在程式碼中，所以最好透過[機密OSGi設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)、使用AIO CLI或Cloud Manager API設定，來提供SQL連線的使用者名稱和密碼。
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/com.adobe.aem.wknd.examples.core.connections.impl.MySqlExternalServiceImpl.cfg.json`
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 }
 ```
 
-下列專案 `aio CLI` 命令可用於根據每個環境設定OSGi秘密：
+以下`aio CLI`命令可用於根據每個環境設定OSGi秘密：
 
 ```shell
 $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret MYSQL_USERNAME "mysql-user" --secret MYSQL_PASSWORD "password123"
@@ -54,7 +54,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 
 ## 程式碼範例
 
-此Java™程式碼範例屬於透過下列Cloud Manager連線至外部SQL Server Web伺服器的OSGi服務 `portForwards` 的規則 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 作業。
+此Java™程式碼範例屬於透過下列[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)作業的Cloud Manager `portForwards`規則，連線至外部SQL Server Web伺服器的OSGi服務。
 
 ```json
 ...
@@ -151,11 +151,11 @@ public class MySqlExternalServiceImpl implements ExternalService {
 
 ## MySQL驅動程式相依性
 
-AEMas a Cloud Service通常需要您提供Java™資料庫驅動程式來支援連線。 AEM提供驅動程式的最佳作法通常是透過 `all` 封裝。
+AEM as a Cloud Service通常需要您提供Java™資料庫驅動程式來支援連線。 提供驅動程式通常最好透過`all`套件將包含這些驅動程式的OSGi套件成品內嵌至AEM專案中。
 
 ### Reactor pom.xml
 
-在反應器中加入資料庫驅動程式相依性 `pom.xml` 然後在 `all` 子專案。
+將資料庫驅動程式相依性包含在Reactor `pom.xml`中，然後在`all`子專案中參照它們。
 
 + `pom.xml`
 
@@ -177,7 +177,7 @@ AEMas a Cloud Service通常需要您提供Java™資料庫驅動程式來支援�
 
 ## 所有pom.xml
 
-將資料庫驅動程式相依性人工因素內嵌於 `all` 套件部署到，並可在AEMas a Cloud Service上使用。 這些成品 __必須__ 是匯出資料庫驅動程式Java™類別的OSGi套件組合。
+將資料庫驅動程式相依性成品內嵌到`all`套件中，以部署這些成品，並可在AEM as a Cloud Service上使用。 這些成品&#x200B;__必須__&#x200B;是匯出資料庫驅動程式Java™類別的OSGi組合。
 
 + `all/pom.xml`
 

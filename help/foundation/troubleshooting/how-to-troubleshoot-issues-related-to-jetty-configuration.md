@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 如何疑難排解AEM中Jetty設定的相關問題
 
-*本影片逐步解說在AEM中疑難排解與Jetty設定相關問題的步驟。*
+*此影片逐步解說在AEM中疑難排解與Jetty設定相關問題的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335470?quality=12&learn=on)

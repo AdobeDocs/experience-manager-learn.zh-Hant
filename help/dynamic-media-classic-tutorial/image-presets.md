@@ -37,8 +37,8 @@ ht-degree: 1%
 >
 >針對網站上每個不重複影像大小，建立一個影像預設集。 例如，如果您需要產品詳細資料頁面的350 X 350影像、瀏覽/搜尋頁面的120 X 120影像，以及交叉銷售/精選專案的90 X 90影像，則無論您有500個影像或500,000個影像，都需要三個影像預設集。
 
-- 進一步瞭解 [影像預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
-- 瞭解如何 [建立影像預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
+- 深入瞭解[影像預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html)。
+- 瞭解如何[建立影像預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)。
 
 ## 影像預設集和銳利化
 
@@ -60,10 +60,10 @@ ht-degree: 1%
 
 Dynamic Media Classic允許三種型別的銳利化：簡單銳利化、重新取樣模式和遮色片銳利化。
 
-進一步瞭解 [Dynamic Media Classic銳利化選項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
+深入瞭解[Dynamic Media Classic銳利化選項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)。
 
 ## 其他資源
 
-[影像預設集指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf). 用來最佳化影像品質和載入速度的設定。
+[影像預設集指南](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)。 用來最佳化影像品質和載入速度的設定。
 
-[影像是第2部分：絕不僅僅是模糊 — 品質與速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). 討論使用影像預設集提供高品質、快速載入影像的部落格。
+[影像是第2部分：絕不模糊 — 品質與速度](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/)。 討論使用影像預設集提供高品質、快速載入影像的部落格。

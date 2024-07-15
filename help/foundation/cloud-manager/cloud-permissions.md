@@ -1,6 +1,6 @@
 ---
 title: Cloud Manager自訂許可權
-description: 瞭解如何使用AEM中的Cloud Manager自訂許可權來策略性地管理不同團隊的存取，確保有效率且安全的專案管理和部署。
+description: 瞭解如何在AEM中使用Cloud Manager自訂許可權，以策略性方式管理不同團隊的存取權，確保有效率且安全的專案管理和部署。
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Cloud Manager自訂許可權
 
-瞭解如何使用Cloud Manager [自訂許可權](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html) AEM以策略性地管理不同團隊的存取權，確保有效率且安全的專案管理和部署。
+瞭解如何在AEM中使用Cloud Manager [自訂許可權](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html)，策略性地管理不同團隊的存取權，以確保有效率且安全的專案管理和部署。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425892/?learn=on)

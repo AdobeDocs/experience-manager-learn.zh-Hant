@@ -1,6 +1,6 @@
 ---
 title: AEM Formsas a Cloud Service數位註冊
-description: 瞭解AEM Formsas a Cloud Service如何支援數位註冊使用案例。
+description: 瞭解AEM Forms as a Cloud Service如何支援數位註冊使用案例。
 version: Cloud Service
 topic: Migration, Upgrade
 feature: Migration
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 數位註冊
 
-瞭解AEM Formsas a Cloud Service如何支援數位註冊使用案例。
+瞭解AEM Forms as a Cloud Service如何支援數位註冊使用案例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336966?quality=12&learn=on)

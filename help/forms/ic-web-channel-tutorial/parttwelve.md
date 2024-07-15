@@ -68,7 +68,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->請檢視 **/apps/AEMForms/fetchad/GET.jsp** crx中的檔案。 請確定字串變數webChannelDocument指向有效的通訊檔案路徑。
+>請檢視crx中的&#x200B;**/apps/AEMForms/fetchad/GET.jsp**&#x200B;檔案。 請確定字串變數webChannelDocument指向有效的通訊檔案路徑。
 
 ## 後續步驟
 

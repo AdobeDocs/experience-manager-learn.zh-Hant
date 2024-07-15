@@ -32,7 +32,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
-> [Adobe資產連結](./adobe-asset-link.md) 是Adobe的專用解決方案，可在Photoshop、Illustrator、InDesign等Adobe Creative Cloud應用程式中使用AEM資產。 在這些應用程式中使用AEM Assets時，偏好使用Adobe Asset Link，而非AEM案頭應用程式。
+> [Adobe Asset Link](./adobe-asset-link.md)是Adobe在Adobe Creative Cloud應用程式(Photoshop、Illustrator、InDesign)中處理AEM資產的專用解決方案。 在這些應用程式中使用AEM Assets時，偏好使用Adobe Asset Link，而非AEM案頭應用程式。
 
 ## 其他資源
 

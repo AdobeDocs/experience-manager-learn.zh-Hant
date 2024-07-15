@@ -1,6 +1,6 @@
 ---
-title: 什麼是AEMas a Cloud Service專案結構？
-description: 探索為AEMas a Cloud Service建構Maven專案的最佳實務。
+title: 什麼是AEM as a Cloud Service專案結構？
+description: 探索為AEM as a Cloud Service建構Maven專案的最佳實務。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # AEM專案結構
 
-探索建構最佳實務 [AEM Maven專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#developing) 適用於AEMas a Cloud Service。
+探索為AEM as a Cloud Service建構[AEM Maven專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#developing)的最佳實務。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330557?quality=12&learn=on)

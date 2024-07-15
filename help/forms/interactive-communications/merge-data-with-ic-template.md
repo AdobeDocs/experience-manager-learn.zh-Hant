@@ -162,7 +162,7 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
 
 若要在您的伺服器上測試此專案，請遵循下列步驟：
 
-* [設定Day CQ Mail Service。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) 需要此項才能傳送包含產生為附件的檔案的電子郵件。
+* [設定Day CQ Mail Service。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html)需要此專案，才能傳送包含產生為附件的檔案的電子郵件。
 * [部署使用服務進行開發的使用者套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * 確定您已在Apache Sling服務使用者對應程式服務設定中新增以下專案
 * **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**
@@ -175,9 +175,9 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
 
    * GenerateIC.GenerateIC.core-1.0-SNAPSHOT.jar。 此套件組合包含本文所述的程式碼。
 
-* [開啟ChangeOfReviewantForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
+* [開啟ChangeOfReviewalForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
 * 請確定最適化表單已設定為提交至AEM Workflow，如下所示
   ![影像](assets/generateic.PNG)
-* [設定工作流程模型。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)確定流程步驟和傳送電子郵件元件已根據您的環境進行設定
-* [預覽ChangeOfViewiniorForm。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) 填寫一些詳細資料並提交
+* [設定工作流程模型。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)確定流程步驟和傳送電子郵件元件已依照您的環境設定
+* [預覽ChangeOfWeiefliantForm。](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)填寫部分詳細資料並提交
 * 應叫用工作流程，並將IC列印通道檔案以附件的形式傳送給在傳送電子郵件元件中指定的收件者

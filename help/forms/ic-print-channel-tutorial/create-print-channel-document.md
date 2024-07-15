@@ -23,7 +23,7 @@ ht-degree: 2%
 
 在此部分中，會建立Print channel的互動式通訊檔案。
 
-定義並設定資料來源和表單資料模型後，我們現在會為Print Channel建立互動式通訊
+在定義和設定資料Source和表單資料模型後，我們現在會針對Print Channel建立互動式通訊
 
 >[!VIDEO](https://video.tv.adobe.com/v/37888?quality=12&learn=on)
 

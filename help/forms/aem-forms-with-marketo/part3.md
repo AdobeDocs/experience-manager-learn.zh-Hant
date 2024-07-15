@@ -17,17 +17,17 @@ ht-degree: 1%
 
 ---
 
-# 設定資料來源
+# 設定Data Source
 
 AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列是支援的現成可用型別。 不過，只要稍微自訂，您也可以與其他資料來源整合。
 
 1. 關聯式資料庫 — MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS
 1. AEM使用者設定檔
 1. RESTful Web服務
-1. 以SOAP為基礎的web服務
+1. SOAP型網站服務
 1. OData服務
 
-為了整合AEM Forms與Marketo，我們使用RESTful網路服務。 整合的第一步是設定 [資料來源。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) 請使用本教學課程中提供的Swagger檔案。 下列熒幕擷圖顯示設定資料來源時需要指定的重要屬性。
+為了整合AEM Forms與Marketo，我們使用RESTful網路服務。 整合的第一步是設定[資料來源。](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices)請使用本教學課程中提供的Swagger檔案。 下列熒幕擷圖顯示設定資料來源時需要指定的重要屬性。
 ![資料來源](assets/datasource.png)
 
 「marketo.json」是Swagger檔案，將作為本教學課程資產的一部分提供給您。
@@ -38,7 +38,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 
 之後，設定資料來源的下一步是建立表單資料模型，此模型會根據上一步驟中設定的資料來源建立。 若要建立表單資料模型，請遵循下列步驟：
 
-將瀏覽器指向 [資料整合頁面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) 這會列出在您的AEM執行個體上建立的所有資料整合。
+將瀏覽器指向[資料整合頁面。](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm)此清單列出在您的AEM執行個體上建立的所有資料整合。
 
 1. 按一下建立 | 表單資料模型
 1. 提供有意義的標題，例如FormsAndMarketo ，然後按「下一步」

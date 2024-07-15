@@ -32,9 +32,9 @@ ht-degree: 1%
 ![component-prop](assets/componentprop.PNG)
 
 我們已新增按鈕，可瀏覽至下一個要簽署的表單
-![template-code](assets/template-code.PNG)
+![範本程式碼](assets/template-code.PNG)
 
-summary.jsp包含下列程式碼。 其參考了類別ID所識別的使用者端程式庫 **getnextform**
+summary.jsp包含下列程式碼。 它參考到類別ID **getnextform**&#x200B;所識別的使用者端資料庫
 
 ```java
 <%--
@@ -47,7 +47,7 @@ summary.jsp包含下列程式碼。 其參考了類別ID所識別的使用者端
 
 ## Assets
 
-自訂摘要元件可以是 [已從此處下載](assets/custom-summary-step.zip)
+自訂摘要元件可以[從這裡](assets/custom-summary-step.zip)下載
 
 ## 後續步驟
 

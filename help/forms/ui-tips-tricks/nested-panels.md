@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 建立最適化表單
 
-建立具有下列結構的最適化表單。 根面板具有子面板，這些子面板在左側顯示為索引標籤。 其中一些是&quot;**索引標籤**&quot;擁有其他子面板。 例如，「家庭」標籤有兩個名為「配偶」和「子女」的子項面板。
+建立具有下列結構的最適化表單。 根面板具有子面板，這些子面板在左側顯示為索引標籤。 其中部分「**標籤**」具有其他子面板。 例如，「家庭」標籤有兩個名為「配偶」和「子女」的子項面板。
 
 也會在FormContainer下方新增一個工具列，其中包含「上一個」和「下一個」按鈕
 
@@ -39,13 +39,13 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/338369?quality=12&learn=on)
 
 
-將下列程式碼新增至的 **下一個** 使用程式碼編輯器的按鈕
+使用程式碼編輯器在&#x200B;**下一步**&#x200B;按鈕的點選事件中新增下列程式碼
 
 ```javascript
 window.guideBridge.setFocus(null, 'nextItemDeep', true);
 ```
 
-將下列程式碼新增至的 **前一個** 使用程式碼編輯器的按鈕
+使用程式碼編輯器在&#x200B;**Prev**&#x200B;按鈕的點選事件中新增下列程式碼
 
 ```javascript
 window.guideBridge.setFocus(null, 'prevItemDeep', true);

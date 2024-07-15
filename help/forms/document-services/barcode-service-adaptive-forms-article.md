@@ -140,10 +140,10 @@ $(document).ready(function()
 
 若要在系統上執行此檔案，請遵循下列步驟：
 
-1. [下載BarcodeService.zip](assets/barcodeservice.zip) 並使用封裝管理員匯入至AEM
+1. [下載BarcodeService.zip](assets/barcodeservice.zip)並使用封裝管理員匯入AEM
 1. [下載並安裝自訂DocumentServices套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [下載並安裝DevelopingWithServiceUser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下載範例PDF表單](assets/barcode.pdf)
-1. 將瀏覽器指向 [最適化表單範例](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. 將瀏覽器指向[最適化表單範例](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
 1. 上傳提供的範例PDF
 1. 您應該會看到已填入資料的表單

@@ -24,9 +24,9 @@ ht-degree: 5%
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324?quality=12&learn=on)
 
-請參閱 [最適化表單範本檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) 以取得更多詳細資料
+如需詳細資訊，請參閱[最適化表單範本檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
 
-如有需要，您可以下載 [自適應表單範本](assets/peak-application-template.zip) 並使用匯入AEM [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+如有需要，您可以使用[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)下載[最適化表單範本](assets/peak-application-template.zip)並匯入至AEM
 
 
 ## 後續步驟

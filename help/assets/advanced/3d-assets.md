@@ -1,6 +1,6 @@
 ---
-title: 3D資產
-description: 瞭解AEM Assetsas a Cloud Service的3D資產支援。
+title: 3D Assets
+description: 瞭解AEM Assets as a Cloud Service中的3D資產支援。
 version: Cloud Service
 feature: 3D Assets
 topic: Content Management
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # 3D資產
 
-瞭解AEM Assetsas a Cloud Service的3D資產支援。
+瞭解AEM Assets as a Cloud Service中的3D資產支援。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420690/?learn=on)

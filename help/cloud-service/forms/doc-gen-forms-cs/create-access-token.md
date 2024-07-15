@@ -21,7 +21,7 @@ ht-degree: 0%
 # 交換JWT以取得存取權杖
 
 
-先前步驟建立的JWT會透過Adobe IMS API換取存取權杖，然後使用後者來存取AEMas a Cloud Service。 若要請求存取權杖，請將包含JWT、client_id、client_secret的POST請求傳送至IMS驗證服務。
+先前步驟建立的JWT會透過Adobe IMS API換取存取權杖，然後使用後者來存取AEM as a Cloud Service。 若要請求存取權杖，請將包含JWT、client_id、client_secret的POST請求傳送至IMS驗證服務。
 
 下列程式碼已用來產生Access權杖的Exchange JWT
 

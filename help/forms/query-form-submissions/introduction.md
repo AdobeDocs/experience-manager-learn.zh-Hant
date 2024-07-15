@@ -33,9 +33,9 @@ ht-degree: 1%
 
 
 
-如果您是開發人員且想要瞭解此使用案例實施的程式碼和其他詳細資訊，請匯入此 [VSCode或IntelliJ中的AEM專案。](assets/azuredemoproject.zip)
+如果您是開發人員，並且想要瞭解此使用案例實作的程式碼和其他詳細資訊，請在VSCode或IntelliJ.](assets/azuredemoproject.zip)中匯入此[AEM專案
 
-如果您只想讓此範例在本機系統上運作，請依照所述的步驟進行 [本教學課程的第5部分](./part5.md)
+如果您只想讓此範例在本機系統上運作，請依照本教學課程中提及的步驟[part5 ](./part5.md)
 
 建立解決方案時，涉及下列步驟
 

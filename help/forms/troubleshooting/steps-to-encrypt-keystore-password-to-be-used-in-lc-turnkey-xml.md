@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 加密要在lc_turnkey.xml中使用的金鑰庫密碼的步驟
 
-*本影片將逐步說明加密lc_turnkey.xml中所使用的Keystore密碼的步驟。*
+*此影片將逐步說明加密金鑰庫密碼的步驟，以用於lc_turnkey.xml。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335538?quality=12&learn=on)

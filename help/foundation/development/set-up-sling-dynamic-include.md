@@ -17,20 +17,20 @@ ht-degree: 0%
 
 ---
 
-# 設定 [!DNL Sling Dynamic Include]
+# 設定[!DNL Sling Dynamic Include]
 
-安裝及使用的影片逐步解說 [!DNL Apache Sling Dynamic Include] 替換為 [AEM傳送器](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 執行於 [!DNL Apache HTTP Web Server].
+在[!DNL Apache HTTP Web Server]上執行[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)時，安裝及使用[!DNL Apache Sling Dynamic Include]的影片逐步解說。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040?quality=12&learn=on)
 
 >[!NOTE]
 >
-> 請確定本機已安裝了最新版的AEM Dispatcher。
+> 確保本機已安裝最新版AEM Dispatcher。
 
-1. 下載並安裝 [[!DNL Sling Dynamic Include] 組合](https://sling.apache.org/downloads.cgi).
-1. 設定 [!DNL Sling Dynamic Include] 透過 [!DNL OSGi Configuration Factory] 在 **http://&lt;host>：&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**.
+1. 下載並安裝[[!DNL Sling Dynamic Include] 套件](https://sling.apache.org/downloads.cgi)。
+1. 透過&#x200B;**http://&lt;host>：&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**&#x200B;的[!DNL OSGi Configuration Factory]設定[!DNL Sling Dynamic Include]。
 
-   或者，若要新增至AEM程式碼基底，請建立適當的 **sling：OsgiConfig** 節點位置：
+   或者，若要新增至AEM程式碼基底，請在以下位置建立適當的&#x200B;**sling：OsgiConfig**&#x200B;節點：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -54,7 +54,7 @@ ht-degree: 0%
    -->
    ```
 
-1. （可選）重複最後一個步驟，允許元件位於 [可編輯範本的鎖定（初始）內容](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html) 將透過提供 [!DNL SDI] 以及。 額外設定的原因是提供可編輯範本的鎖定內容 `/conf` 而非 `/content`.
+1. （選擇性）重複上一個步驟，允許透過[!DNL SDI]也提供[可編輯範本](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html)的鎖定（初始）內容上的元件。 額外設定的原因是可編輯範本的鎖定內容是從`/conf`而非`/content`提供。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -78,7 +78,7 @@ ht-degree: 0%
    -->
    ```
 
-1. 更新 [!DNL Apache HTTPD Web server]的 `httpd.conf` 檔案以啟用 [!DNL Include] 模組。
+1. 更新[!DNL Apache HTTPD Web server]的`httpd.conf`檔案以啟用[!DNL Include]模組。
 
    ```shell
    $ sudo vi .../httpd.conf
@@ -88,7 +88,7 @@ ht-degree: 0%
    LoadModule include_module libexec/apache2/mod_include.so
    ```
 
-1. 更新 [!DNL vhost] 要遵循include指示的檔案。
+1. 更新[!DNL vhost]檔案以遵循include指示。
 
    ```shell
    $ sudo vi .../vhosts/aem-publish.local.conf
@@ -113,7 +113,7 @@ ht-degree: 0%
    </VirtualHost>
    ```
 
-1. 更新dispatcher.any設定檔案以支援(1) `nocache` 選擇器和(2)啟用TTL支援。
+1. 更新dispatcher.any設定檔以支援(1) `nocache`選取器和(2)啟用TTL支援。
 
    ```shell
    $ sudo vi .../conf/dispatcher.any
@@ -131,7 +131,7 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   > 保留結尾 `*` 在glob關閉 `*.nocache.html*` 以上規則，可能會導致 [子資源請求中的問題](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16).
+   > 將上述glob `*.nocache.html*`規則中的尾端`*`保留為關閉，可能會導致子資源的要求](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16)中有[個問題。
 
    ```shell
    /cache {
@@ -140,7 +140,7 @@ ht-degree: 0%
    }
    ```
 
-1. 永遠重新啟動 [!DNL Apache HTTP Web Server] 變更其組態檔或 `dispatcher.any`.
+1. 變更組態檔或`dispatcher.any`後，請一律重新啟動[!DNL Apache HTTP Web Server]。
 
    ```shell
    $ sudo apachectl restart
@@ -148,7 +148,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您使用 [!DNL Sling Dynamic Includes] 若要提供edge-side include (ESI)，請務必快取相關 [Dispatcher快取中的回應標頭](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). 可能的標頭包括：
+>如果您使用[!DNL Sling Dynamic Includes]來提供Edge-side Include (ESI)，請務必在Dispatcher快取中快取相關的[回應標頭](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)。 可能的標頭包括：
 >
 >* &quot;Cache-Control&quot;
 >* &quot;Content-Disposition&quot;
@@ -163,4 +163,4 @@ ht-degree: 0%
 ## 支援材料
 
 * [下載Sling動態包含套件](https://sling.apache.org/downloads.cgi)
-* [Apache Sling動態包含檔案](https://github.com/Cognifide/Sling-Dynamic-Include)
+* [Apache Sling Dynamic Include檔案](https://github.com/Cognifide/Sling-Dynamic-Include)

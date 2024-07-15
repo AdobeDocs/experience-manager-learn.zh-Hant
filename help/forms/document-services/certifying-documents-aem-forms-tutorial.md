@@ -22,7 +22,7 @@ ht-degree: 0%
 
 若要認證檔案，您可以在案頭上使用Acrobat DC，或使用AEM Forms Document Services做為伺服器上自動化程式的一部分。
 
-本文提供範例OSGI套件組合，可讓您使用AEM Forms Document Services認證pdf檔案。範例中使用的程式碼為 [此處提供](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+本文提供使用AEM Forms Document Services認證pdf檔案的範例OSGI套件組合。範例中使用的程式碼為[此處](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)提供
 
 若要使用AEM Forms認證檔案，必須遵循下列步驟
 
@@ -31,18 +31,18 @@ ht-degree: 0%
 請依照下列步驟操作，將憑證新增至AEM的金鑰儲存區
 
 * [初始化全域信任存放區](http://localhost:4502/libs/granite/security/content/truststore.html)
-* [搜尋fd-service](http://localhost:4502/security/users.html) 使用者
-* **您必須捲動結果頁面才能載入所有使用者，以尋找fd-service使用者**
+* [搜尋fd-service](http://localhost:4502/security/users.html)使用者
+* **您必須捲動結果頁面才能載入所有使用者，以尋找fd服務使用者**
 * 連按兩下fd-service使用者以開啟使用者設定視窗
 * 按一下「從Keystore檔案新增私密金鑰」。指定您憑證的特定別名和密碼
-  ![add-certificate](assets/adding-certificate-keystore.PNG)
+  ![新增憑證](assets/adding-certificate-keystore.PNG)
 * 儲存您的變更
 
 ## 建立OSGI服務
 
 您可以撰寫專屬的OSGi套件組合，並使用AEM Forms使用者端SDK實作服務以認證PDF檔案。 以下連結對於撰寫您自己的OSGi套件組合相當實用
 
-* [建立您的第一個OSGi套件](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)
+* [正在建立您的第一個OSGi套件](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)
 * [使用檔案服務API](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 或者，您也可以使用範例套件作為本教學課程資產的一部分。
@@ -53,15 +53,15 @@ ht-degree: 0%
 
 ## 在您的本機系統上測試範例
 
-* 下載並安裝 [自訂檔案服務套裝](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* 下載並安裝 [使用服務使用者套件進行開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* 下載並安裝[自訂檔案服務套件](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* 下載並安裝[使用服務使用者套件組合開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [確定您已在Apache Sling服務使用者對應程式服務中新增下列專案](http://localhost:4502/system/console/configMgr)
-  **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service** 如下方熒幕擷圖所示
+  **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**，如下列熒幕擷圖所示
   ![使用者對應程式](assets/user-mapper-service.PNG)
 * [匯入範例最適化表單](assets/certify-pdf-af.zip)
 * [匯入並安裝自訂提交](assets/custom-submit-certify.zip)
 * [開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/certifypdf/jcr:content?wcmmode=disabled)
 * 上傳需要認證的PDF檔案
-  **可選**  — 指定您要在認證檔案時使用的簽章欄位
+  **選擇性** — 指定您要在認證檔案時使用的簽章欄位
 * 按一下「提交」。
 * 已認證的PDF應該會退回給您。

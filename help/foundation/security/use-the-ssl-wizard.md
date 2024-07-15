@@ -32,55 +32,55 @@ ht-degree: 0%
 
 ## 使用SSL設定精靈
 
-瀏覽至 __AEM作者>工具>安全性> SSL設定__，然後開啟 __SSL設定精靈__.
+瀏覽至&#x200B;__AEM Author > Tools > Security > SSL Configuration__，然後開啟&#x200B;__SSL Configuration Wizard__。
 
 ![SSL設定精靈](assets/use-the-ssl-wizard/ssl-config-wizard.png)
 
 ### 建立存放區認證
 
-若要建立 _金鑰存放區_ 與 `ssl-service` 系統使用者和全域 _信任存放區_，使用 __儲存認證__ 精靈步驟。
+若要建立與`ssl-service`系統使用者及全域&#x200B;_信任存放區_&#x200B;相關聯的&#x200B;_金鑰存放區_，請使用&#x200B;__存放區認證__&#x200B;精靈步驟。
 
-1. 輸入密碼並確認密碼 __金鑰存放區__ 與 `ssl-service` 系統使用者。
-1. 輸入全域密碼和確認密碼 __信任存放區__. 請注意，這是系統範圍的信任存放區，如果已建立，則會忽略輸入的密碼。
+1. 輸入與`ssl-service`系統使用者相關聯之&#x200B;__金鑰存放區__&#x200B;的密碼及確認密碼。
+1. 輸入全域&#x200B;__信任存放區__&#x200B;的密碼及確認密碼。 請注意，這是系統範圍的信任存放區，如果已建立，則會忽略輸入的密碼。
 
    ![SSL設定 — 儲存認證](assets/use-the-ssl-wizard/store-credentials.png)
 
 ### 上傳私密金鑰和憑證
 
-若要上傳 _私密金鑰_ 和 _SSL憑證_，使用 __金鑰與憑證__ 精靈步驟。
+若要上傳&#x200B;_私密金鑰_&#x200B;和&#x200B;_SSL憑證_，請使用&#x200B;__金鑰和憑證__&#x200B;精靈步驟。
 
-通常您的IT部門會提供CA信任的憑證和金鑰，但自我簽署憑證可用於 __開發__ 和 __測試__ 目的。
+一般而言，您的IT部門會提供CA信任的憑證和金鑰，但自我簽署憑證可用於&#x200B;__開發__&#x200B;和&#x200B;__測試__&#x200B;用途。
 
-若要建立或下載自我簽署憑證，請參閱 [自我簽署私密金鑰和憑證](#self-signed-private-key-and-certificate).
+若要建立或下載自我簽署憑證，請參閱[自我簽署私密金鑰與憑證](#self-signed-private-key-and-certificate)。
 
-1. 上傳 __私密金鑰__ DER （辨別編碼規則）格式。 不同於PEM，DER編碼的檔案不包含純文字陳述式，例如 `-----BEGIN CERTIFICATE-----`
-1. 上傳相關聯的 __SSL憑證__ 在 `.crt` 格式。
+1. 以DER （辨別編碼規則）格式上傳&#x200B;__私密金鑰__。 不同於PEM，DER編碼的檔案不包含純文字陳述式，例如`-----BEGIN CERTIFICATE-----`
+1. 以`.crt`格式上傳相關聯的&#x200B;__SSL憑證__。
 
    ![SSL設定 — 私密金鑰和憑證](assets/use-the-ssl-wizard/privatekey-and-certificate.png)
 
 ### 更新SSL聯結器詳細資料
 
-若要更新 _主機名稱_ 和 _連線埠_ 使用 __SSL聯結器__ 精靈步驟。
+若要更新&#x200B;_主機名稱_&#x200B;和&#x200B;_連線埠_，請使用&#x200B;__SSL聯結器__&#x200B;精靈步驟。
 
-1. 更新或驗證 __HTTPS主機名稱__ 值，它應符合 `Common Name (CN)` 從憑證。
-1. 更新或驗證 __HTTPS連線埠__ 值。
+1. 更新或驗證&#x200B;__HTTPS主機名稱__&#x200B;值，它應該與憑證中的`Common Name (CN)`相符。
+1. 更新或驗證&#x200B;__HTTPS連線埠__&#x200B;值。
 
    ![SSL設定 — SSL聯結器詳細資料](assets/use-the-ssl-wizard/ssl-connector-details.png)
 
 ### 驗證SSL設定
 
-1. 若要驗證SSL，請按一下 __前往HTTPS URL__ 按鈕。
-1. 如果使用自我簽署憑證，您會看到 `Your connection is not private` 錯誤。
+1. 若要驗證SSL，請按一下&#x200B;__移至HTTPS URL__&#x200B;按鈕。
+1. 如果使用自我簽署憑證，您會看到`Your connection is not private`錯誤。
 
    ![SSL設定 — 透過HTTPS驗證AEM](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
 
 ## 自我簽署私密金鑰和憑證
 
-以下zip包含 [!DNL DER] 和 [!DNL CRT] 在本機設定AEM SSL所需的檔案，且僅供本機開發使用。
+下列zip包含在本機設定AEM SSL所需的[!DNL DER]和[!DNL CRT]檔案，且僅供本機開發使用。
 
-此 [!DNL DER] 和 [!DNL CERT] 提供檔案是為了方便起見，並使用以下產生私密金鑰和自簽憑證一節中概述的步驟產生。
+提供[!DNL DER]和[!DNL CERT]檔案是為了方便起見，並使用下列[產生私密金鑰和自簽憑證]一節中概述的步驟產生。
 
-如有需要，憑證密語為 **管理員**.
+如有需要，憑證密語為&#x200B;**admin**。
 
 此localhost — 私密金鑰和自簽的certificate.zip （2028年7月到期）
 
@@ -88,7 +88,7 @@ ht-degree: 0%
 
 ### 私密金鑰和自簽憑證產生
 
-上述影片說明在AEM製作執行個體使用自我簽署憑證時，SSL的設定和設定。 以下命令使用 [[!DNL OpenSSL]](https://www.openssl.org/) 可以產生私密金鑰和憑證，以用於精靈的步驟2。
+上述影片說明在AEM製作執行個體使用自我簽署憑證時，SSL的設定和設定。 使用[[!DNL OpenSSL]](https://www.openssl.org/)的下列命令可以產生私密金鑰和憑證，以用於精靈的步驟2。
 
 ```shell
 ### Create Private Key

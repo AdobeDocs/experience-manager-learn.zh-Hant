@@ -27,7 +27,7 @@ ht-degree: 0%
 
 放入watched資料夾的檔案具有下列結構。 程式碼會針對XML檔案中列出的所有帳號產生陳述式。
 
-&lt;accountnumbers>
+&lt;accountnumber>
 
 &lt;accountnumber>509840&lt;/accountnumber>
 
@@ -107,11 +107,11 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-**若要在本機系統上進行測試，請遵循下列指示：**
+**若要在本機系統上測試此專案，請遵循下列指示：**
 
-* 依照本說明設定Tomcat [文章。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat有產生範例資料的war檔案。
-* 設定服務aka系統使用者，如以下所述 [文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
-請確定此系統使用者擁有下列節點的讀取許可權。 將許可權登入到的方式 [使用者管理員](https://localhost:4502/useradmin) 和搜尋系統使用者「資料」，並將Tab鍵移至「許可權」索引標籤，將讀取許可權授與下列節點
+* 依照此[文章中的說明設定Tomcat。](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat有產生範例資料的war檔案。
+* 依照此[文章](/help/forms/adaptive-forms/service-user-tutorial-develop.md)的說明，設定服務aka系統使用者。
+請確定此系統使用者擁有下列節點的讀取許可權。 若要將許可權登入授予[user admin](https://localhost:4502/useradmin)，並搜尋系統使用者「資料」，並透過將Tab鍵移至許可權索引標籤，在下列節點上授與讀取許可權
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af

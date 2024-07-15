@@ -28,9 +28,9 @@ ht-degree: 1%
 ## 為AEM 6.x設定影像的自訂智慧標籤{#set-up}
 
 >[!NOTE]
-> 影像的自訂智慧標籤會自動針對AEMas a Cloud Service布建。
+> 影像的自訂智慧標籤會自動為AEM as a Cloud Service布建。
 
-影像的自訂智慧標籤需要 [要設定影像的智慧標籤](./image-smart-tags.md#set-up).
+影像的自訂智慧標籤需要影像的[智慧標籤才能設定](./image-smart-tags.md#set-up)。
 
 瞭解如何使用智慧內容服務和Adobe I/O，在AEM Assets中設定智慧標籤培訓。影像的自訂智慧標籤
 
@@ -38,4 +38,4 @@ ht-degree: 1%
 
 ## 其他資源
 
-* AEM 6.4需要 [最新Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64).
+* AEM 6.4需要[最新的Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)。

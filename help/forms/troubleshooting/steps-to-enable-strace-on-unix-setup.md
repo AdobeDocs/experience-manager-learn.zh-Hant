@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 在Unix設定中啟用字串追蹤的步驟
 
-*本影片逐步解說在AEM Forms PDFG的Unix設定中啟用字串追蹤的步驟。*
+*此影片會逐步說明在AEM Forms PDFG的Unix設定中啟用字串追蹤的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335525?quality=12&learn=on)

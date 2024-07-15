@@ -1,6 +1,6 @@
 ---
-title: 為AEMas a Cloud Service開發設定Dispatcher工具
-description: AEM SDK的Dispatcher工具可讓您在本機輕鬆安裝、執行及疑難排解Dispatcher，協助Adobe Experience Manager (AEM)專案的本機開發。
+title: 設定Dispatcher工具以進行AEM as a Cloud Service開發
+description: AEM SDK的Dispatcher工具可讓您在本機輕鬆安裝、執行及疑難排解Adobe Experience Manager (AEM)專案，協助本機開發Dispatcher。
 version: Cloud Service
 topic: Development
 feature: Dispatcher, Developer Tools
@@ -27,52 +27,52 @@ ht-degree: 4%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="雲端中的 Dispatcher"
 >additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html" text="下載 AEM as a Cloud Service SDK"
 
-Adobe Experience Manager (AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM發佈層級之間提供安全性與效能層。 Dispatcher是整體Experience Manager架構不可或缺的一部分，應是本機開發設定的一部分。
+Adobe Experience Manager (AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM Publish層級之間提供安全性與效能層。 Dispatcher是整體Experience Manager架構不可或缺的一部分，並應成為本機開發設定的一部分。
 
-AEMas a Cloud ServiceSDK包含建議的Dispatcher工具版本，有助於設定驗證並在本機模擬Dispatcher。 Dispatcher工具由以下部分組成：
+AEM as a Cloud Service SDK包含建議的Dispatcher Tools版本，有助於設定驗證並在本機模擬Dispatcher。 Dispatcher Tools由以下部分組成：
 
-+ Apache HTTP Web伺服器和Dispatcher設定檔案的基準集合，位於 `.../dispatcher-sdk-x.x.x/src`
-+ 組態驗證器CLI工具，位於 `.../dispatcher-sdk-x.x.x/bin/validate`
-+ 組態產生CLI工具，位於 `.../dispatcher-sdk-x.x.x/bin/validator`
-+ 組態部署CLI工具，位於 `.../dispatcher-sdk-x.x.x/bin/docker_run`
-+ 不可變的組態檔覆寫CLI工具，位於 `.../dispatcher-sdk-x.x.x/bin/update_maven`
++ 位於`.../dispatcher-sdk-x.x.x/src`的Apache HTTP Web Server和Dispatcher組態檔基準組
++ 位於`.../dispatcher-sdk-x.x.x/bin/validate`的組態驗證器CLI工具
++ 位於`.../dispatcher-sdk-x.x.x/bin/validator`的組態產生CLI工具
++ 位於`.../dispatcher-sdk-x.x.x/bin/docker_run`的組態部署CLI工具
++ 不可變的組態檔覆寫CLI工具，位於`.../dispatcher-sdk-x.x.x/bin/update_maven`
 + 使用Dispatcher模組執行Apache HTTP Web伺服器的Docker影像
 
-請注意 `~` 會用作使用者目錄的速記。 在Windows中，這相當於 `%HOMEPATH%`.
+請注意，`~`是用作使用者目錄的速記。 在Windows中，這相當於`%HOMEPATH%`。
 
 >[!NOTE]
 >
-> 此頁面中的影片是錄製在macOS上。 Windows使用者可以跟著進行，但會使用每個視訊提供的對等Dispatcher工具Windows命令。
+> 此頁面中的影片是錄製在macOS上。 Windows使用者可以跟著進行，但會使用每個視訊提供的對等Dispatcher Tools Windows命令。
 
 ## 先決條件
 
 1. Windows使用者必須使用Windows 10專業版（或支援Docker的版本）
-1. 安裝 [Experience Manager發佈快速入門Jar](./aem-runtime.md) 本機開發電腦上。
+1. 在本機開發電腦上安裝[Experience ManagerPublish Quickstart Jar](./aem-runtime.md)。
 
-+ 可選擇安裝最新的 [AEM參考網站](https://github.com/adobe/aem-guides-wknd/releases) 在本機AEM Publish服務上。 本教學課程會使用此網站將運作中的Dispatcher視覺化。
++ 可選擇在本機AEM Publish服務上安裝最新的[AEM參考網站](https://github.com/adobe/aem-guides-wknd/releases)。 本教學課程會使用此網站以視覺效果呈現運作中的Dispatcher。
 
-1. 安裝並啟動最新版本的 [Docker](https://www.docker.com/) (Docker Desktop 2.2.0.5+ / Docker Engine v19.03.9+)本機開發電腦上。
+1. 在本機開發電腦上安裝並啟動最新版本的[Docker](https://www.docker.com/) (Docker Desktop 2.2.0.5+ / Docker Engine v19.03.9+)。
 
 ## 下載Dispatcher工具(做為AEM SDK的一部分)
 
-AEMas a Cloud ServiceSDK (或AEM SDK)包含用於執行具有本機開發用Dispatcher模組的Apache HTTP Web伺服器的Dispatcher工具，以及相容的QuickStart Jar。
+AEM as a Cloud Service SDK (或AEM SDK)包含用於在本機執行Apache HTTP Web伺服器(包含Dispatcher模組以進行開發)的Dispatcher工具，以及相容的QuickStart Jar。
 
-如果AEMas a Cloud ServiceSDK已下載至 [設定本機AEM執行階段](./aem-runtime.md)，則不需要重新下載。
+如果AEM as a Cloud Service SDK已下載至[設定本機AEM執行階段](./aem-runtime.md)，則不需要重新下載。
 
-1. 登入 [experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1) 使用您的Adobe ID
-   + 您的Adobe組織 __必須__ 已針對AEMas a Cloud Service布建以下載AEMas a Cloud ServiceSDK
-1. 按一下最新的 __AEM SDK__ 要下載的結果列
+1. 使用您的Adobe ID登入[experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)
+   + 您的Adobe組織&#x200B;__必須__&#x200B;已布建給AEM as a Cloud Service，才能下載AEM as a Cloud Service SDK
+1. 按一下要下載的最新&#x200B;__AEM SDK__&#x200B;結果列
 
 ## 從AEM SDK Zip解壓縮Dispatcher工具
 
 >[!TIP]
 >
-> Windows使用者在包含本機Dispatcher工具的資料夾的路徑中不能有任何空格或特殊字元。 如果路徑中存在空格， `docker_run.cmd` 失敗。
+> Windows使用者在包含「本機Dispatcher工具」的資料夾路徑中不能有任何空格或特殊字元。 如果路徑中存在空格，`docker_run.cmd`會失敗。
 
-Dispatcher工具的版本與AEM SDK的版本不同。 確保透過與AEMas a Cloud Service版本相符的AEM SDK版本提供Dispatcher工具的版本。
+Dispatcher工具的版本與AEM SDK的版本不同。 確保透過與Dispatcher版本相符的AEM SDK版本來提供AEM as a Cloud Service工具的版本。
 
-1. 將下載的檔案解壓縮 `aem-sdk-xxx.zip` 檔案
-1. 將Dispatcher工具解壓縮到 `~/aem-sdk/dispatcher`
+1. 解壓縮下載的`aem-sdk-xxx.zip`檔案
+1. 將Dispatcher工具解壓縮至`~/aem-sdk/dispatcher`
 
 >[!BEGINTABS]
 
@@ -85,7 +85,7 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 
 >[!TAB Windows]
 
-解壓縮 `aem-sdk-dispatcher-tools-x.x.x-windows.zip` 到 `C:\Users\<My User>\aem-sdk\dispatcher` （視需要建立遺失的資料夾）。
+將`aem-sdk-dispatcher-tools-x.x.x-windows.zip`解壓縮至`C:\Users\<My User>\aem-sdk\dispatcher` （視需要建立缺少的資料夾）。
 
 >[!TAB Linux®]
 
@@ -100,22 +100,22 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601?quality=12&learn=on)
 
-*本影片使用macOS作說明用途。 可使用等效的Windows/Linux指令來取得類似的結果。*
+*此影片使用macOS作說明用途。 可使用同等的Windows/Linux命令來取得類似的結果。*
 
-## 瞭解Dispatcher設定檔案
+## 瞭解Dispatcher設定檔
 
 >[!TIP]
-> Experience Manager專案建立自 [AEM專案Maven原型](https://github.com/adobe/aem-project-archetype) 已預先填入這組Dispatcher設定檔案，因此不需要從Dispatcher工具src資料夾進行複製。
+> 從[AEM專案Maven原型](https://github.com/adobe/aem-project-archetype)建立的Experience Manager專案已預先填入這組Dispatcher設定檔案，因此不需要從Dispatcher Tools src資料夾進行複製。
 
-Dispatcher工具提供了一組Apache HTTP Web伺服器和Dispatcher設定檔案，這些檔案定義了所有環境（包括本機開發）的行為。
+Dispatcher工具提供一組Apache HTTP Web伺服器和Dispatcher設定檔，可定義所有環境（包括本機開發）的行為。
 
-這些檔案旨在複製到Experience ManagerMaven專案中 `dispatcher/src` 資料夾(如果Experience ManagerMaven專案中不存在這些資料夾)。
+如果這些檔案在Experience ManagerMaven專案中不存在，則將複製到Experience ManagerMaven專案到`dispatcher/src`資料夾。
 
-在解壓縮的Dispatcher工具中，提供設定檔的完整說明為 `dispatcher-sdk-x.x.x/docs/Config.html`.
+在解壓縮的Dispatcher工具中，組態檔的完整說明為`dispatcher-sdk-x.x.x/docs/Config.html`。
 
 ## 驗證設定
 
-Dispatcher和Apache Web伺服器設定(可選，透過 `httpd -t`)可使用進行驗證 `validate` 指令碼(不要與 `validator` 可執行檔)。 此 `validate` script提供一種便利的方式來執行 [三個階段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=en) 的 `validator`.
+可選擇使用`validate`指令碼驗證Dispatcher和Apache Web伺服器設定（透過`httpd -t`） （請勿與`validator`可執行檔混淆）。 `validate`指令碼提供執行`validator`的[三個階段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=en)的便利方式。
 
 
 >[!BEGINTABS]
@@ -142,7 +142,7 @@ $ ./bin/validate.sh ./src
 
 ## 在本機執行Dispatcher
 
-AEM Dispatcher是使用Docker針對在本機執行 `src` Dispatcher和Apache Web Server設定檔。
+AEM Dispatcher是使用Docker針對`src` Dispatcher和Apache Web伺服器組態檔在本機執行。
 
 
 >[!BEGINTABS]
@@ -153,7 +153,7 @@ AEM Dispatcher是使用Docker針對在本機執行 `src` Dispatcher和Apache Web
 $ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
 
-此 `docker_run_hot_reload` 偏好使用可執行檔而非 `docker_run` 當組態檔案變更時重新載入它們，而不需手動終止和重新啟動 `docker_run`. 或者， `docker_run` 可以使用，但需要手動終止和重新啟動 `docker_run` 組態檔變更時。
+`docker_run_hot_reload`可執行檔優先於`docker_run`，因為它會在組態檔變更時重新載入組態檔，而不需手動終止和重新啟動`docker_run`。 或者，可以使用`docker_run`，但是當組態檔變更時，它需要手動終止和重新啟動`docker_run`。
 
 >[!TAB Windows]
 
@@ -167,11 +167,11 @@ $ bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-
 $ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
 
-此 `docker_run_hot_reload` 偏好使用可執行檔而非 `docker_run` 當組態檔案變更時重新載入它們，而不需手動終止和重新啟動 `docker_run`. 或者， `docker_run` 可以使用，但需要手動終止和重新啟動 `docker_run` 組態檔變更時。
+`docker_run_hot_reload`可執行檔優先於`docker_run`，因為它會在組態檔變更時重新載入組態檔，而不需手動終止和重新啟動`docker_run`。 或者，可以使用`docker_run`，但是當組態檔變更時，它需要手動終止和重新啟動`docker_run`。
 
 >[!ENDTABS]
 
-此 `<aem-publish-host>` 可設為 `host.docker.internal`，Docker在解析為主機電腦IP的容器中提供的特殊DNS名稱。 如果 `host.docker.internal` 無法解析，請參閱 [疑難排解](#troubleshooting-host-docker-internal) 一節。
+`<aem-publish-host>`可設為`host.docker.internal`，這是Docker在解析為主機電腦IP的容器中提供的特殊DNS名稱。 如果`host.docker.internal`無法解析，請參閱下列[疑難排解](#troubleshooting-host-docker-internal)一節。
 
 例如，若要使用Dispatcher工具提供的預設設定檔案啟動Dispatcher Docker容器：
 
@@ -199,9 +199,9 @@ $ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
 
 >[!ENDTABS]
 
-AEMas a Cloud ServiceSDK的發佈服務會在連線埠4503上本機執行，可透過Dispatcher存取： `http://localhost:8080`.
+透過AEM as a Cloud Service SDK的Publish服務（于連線埠4503本機執行）可在`http://localhost:8080`透過Dispatcher取得。
 
-若要針對Experience Manager專案的Dispatcher設定執行Dispatcher工具，請指向您專案的 `dispatcher/src` 資料夾。
+若要針對Experience Manager專案的Dispatcher設定執行Dispatcher工具，請指向您專案的`dispatcher/src`資料夾。
 
 >[!BEGINTABS]
 
@@ -228,21 +228,21 @@ $ ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.in
 
 ## Dispatcher工具記錄檔
 
-在本機開發期間，Dispatcher記錄有助於瞭解HTTP請求是否遭到封鎖以及為何遭到封鎖。 記錄層級可藉由在執行前置詞來設定 `docker_run` 以及環境引數。
+在本機開發期間，Dispatcher記錄有助於瞭解HTTP請求是否遭到封鎖以及為何遭到封鎖。 記錄層級可以透過以環境引數為執行`docker_run`加上前置字元來設定。
 
-Dispatcher工具記錄檔在下列情況下發出到標準 `docker_run` 執行前填入。
+執行`docker_run`時，會將Dispatcher工具記錄檔發出至標準。
 
 用於偵錯Dispatcher的實用引數包括：
 
-+ `DISP_LOG_LEVEL=Debug` 將Dispatcher模組記錄設定為偵錯層級
++ `DISP_LOG_LEVEL=Debug`將Dispatcher模組記錄設定為偵錯層級
    + 預設值為： `Warn`
-+ `REWRITE_LOG_LEVEL=Debug` 將Apache HTTP Web伺服器重寫模組記錄設定為偵錯層級
++ `REWRITE_LOG_LEVEL=Debug`將Apache HTTP Web伺服器重寫模組記錄設定為Debug層級
    + 預設值為： `Warn`
-+ `DISP_RUN_MODE` 設定Dispatcher環境的「執行模式」，載入對應的執行模式Dispatcher設定檔案。
-   + 預設為 `dev`
-+ 有效值： `dev`， `stage`，或 `prod`
++ `DISP_RUN_MODE`會設定Dispatcher環境的「執行模式」，載入對應的執行模式Dispatcher設定檔。
+   + 預設為`dev`
++ 有效值： `dev`、`stage`或`prod`
 
-一或多個引數可以傳遞至 `docker_run`
+一或多個引數可以傳遞至`docker_run`
 
 >[!BEGINTABS]
 
@@ -268,39 +268,39 @@ $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run_hot_reload.sh ~/
 
 ### 記錄檔存取
 
-Apache網頁伺服器和AEM Dispatcher記錄檔可直接在Docker容器中存取：
+Apache Web Server和AEM Dispatcher記錄檔可直接在Docker容器中存取：
 
 + [存取Docker容器中的日誌](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
 + [將Docker日誌複製到本機檔案系統](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
 
 ## 何時更新Dispatcher工具{#dispatcher-tools-version}
 
-Dispatcher工具的版本增加頻率低於Experience Manager，因此Dispatcher工具在本機開發環境中所需的更新較少。
+Dispatcher Tools版本的增加頻率低於Experience Manager，因此Dispatcher Tools在本機開發環境中所需的更新較少。
 
-建議的Dispatcher工具版本是隨AEMas a Cloud ServiceSDK提供的版本，此版本符合Experience Manageras a Cloud Service版本。 AEMas a Cloud Service的版本可透過以下方式找到： [Cloud Manager](https://my.cloudmanager.adobe.com/).
+建議的Dispatcher工具版本是隨AEM as a Cloud Service SDK提供的符合Experience Manageras a Cloud Service版本的版本。 可透過[Cloud Manager](https://my.cloudmanager.adobe.com/)找到AEM as a Cloud Service的版本。
 
-+ __Cloud Manager >環境__，依指定的環境而定 __AEM版本__ 標籤
++ __Cloud Manager >環境__，依由&#x200B;__AEM版本__&#x200B;標籤指定的環境而定
 
 ![Experience Manager版本](./assets/dispatcher-tools/aem-version.png)
 
-*請注意，Dispatcher工具版本與Experience Manager版本不符。*
+*請注意，Dispatcher Tools版本與Experience Manager版本不符。*
 
-## 如何更新Apache和Dispatcher設定的基準線集
+## 如何更新Apache和Dispatcher設定的基準組
 
-Apache和Dispatcher設定的基準集會定期增強，並與AEMas a Cloud ServiceSDK版本一起發行。 最佳實務是將基準設定增強功能併入您的AEM專案並避免 [本機驗證](#validate-configurations) 和Cloud Manager管道故障。 使用 `update_maven.sh` 指令碼來自 `.../dispatcher-sdk-x.x.x/bin` 資料夾。
+Apache和Dispatcher設定的基準集已定期增強，並隨AEM as a Cloud Service SDK版本發行。 最佳實務是將基準設定增強功能合併到您的AEM專案中，並避免[本機驗證](#validate-configurations)和Cloud Manager管道失敗。 使用`.../dispatcher-sdk-x.x.x/bin`資料夾中的`update_maven.sh`指令碼更新它們。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416744?quality=12&learn=on)
 
-*本影片使用macOS作說明用途。 可使用等效的Windows/Linux指令來取得類似的結果。*
+*此影片使用macOS作說明用途。 可使用同等的Windows/Linux命令來取得類似的結果。*
 
 
-假設您過去曾使用建立AEM專案 [AEM專案原型](https://github.com/adobe/aem-project-archetype)，基準Apache和Dispatcher設定為最新。 使用這些基準線設定，您的專案特定設定是透過重複使用和複製檔案 `*.vhost`， `*.conf`， `*.farm` 和 `*.any` 從 `dispatcher/src/conf.d` 和 `dispatcher/src/conf.dispatcher.d` 資料夾。 您的本機Dispatcher驗證和Cloud Manager管道運作正常。
+假設您過去曾使用[AEM專案原型](https://github.com/adobe/aem-project-archetype)建立AEM專案，基準Apache和Dispatcher設定為最新。 使用這些基準組態，您的專案特定組態是透過重複使用和從`dispatcher/src/conf.d`和`dispatcher/src/conf.dispatcher.d`資料夾複製`*.vhost`、`*.conf`、`*.farm`和`*.any`等檔案所建立的。 您的本機Dispatcher驗證和Cloud Manager管道運作正常。
 
-同時，由於新功能、安全性修正和最佳化等多種原因，基準Apache和Dispatcher設定已獲得增強。 做為AEMas a Cloud Service發行的一部分，透過較新版本的Dispatcher工具發行。
+同時，由於新功能、安全性修正和最佳化等多種原因，基準Apache和Dispatcher設定已獲得增強。 做為AEM as a Cloud Service發行版本的一部分，透過較新版本的Dispatcher Tools發行。
 
-現在，當針對最新的Dispatcher工具版本驗證您專案專屬的Dispatcher設定時，它們會開始失敗。 若要解決此問題，必須使用下列步驟更新基準線設定：
+現在，針對最新的Dispatcher工具版本驗證您專案專屬的Dispatcher設定時，這些設定會開始失敗。 若要解決此問題，必須使用下列步驟更新基準線設定：
 
-+ 確認針對最新Dispatcher工具版本的驗證失敗
++ 確認針對最新Dispatcher Tools版本的驗證失敗
 
   ```shell
   $ ./bin/validate.sh ${YOUR-AEM-PROJECT}/dispatcher/src
@@ -312,7 +312,7 @@ Apache和Dispatcher設定的基準集會定期增強，並與AEMas a Cloud Servi
   ** error: immutable file 'conf.d/available_vhosts/default.vhost' has been changed!
   ```
 
-+ 使用更新不可變檔案 `update_maven.sh` 指令碼
++ 使用`update_maven.sh`指令碼更新不可變檔案
 
   ```shell
   $ ./bin/update_maven.sh ${YOUR-AEM-PROJECT}/dispatcher/src
@@ -329,7 +329,7 @@ Apache和Dispatcher設定的基準集會定期增強，並與AEMas a Cloud Servi
   Cloud manager validator 2.0.53
   ```
 
-+ 驗證更新的不可變檔案，例如 `dispatcher_vhost.conf`， `default.vhost`、和 `default.farm` 如有需要，請在自訂檔案中進行衍生自這些檔案的相關變更。
++ 驗證已更新的不可變檔案（例如`dispatcher_vhost.conf`、`default.vhost`和`default.farm`），並視需要在自訂檔案中進行衍生自這些檔案的相關變更。
 
 + 重新驗證設定，應該會通過
 
@@ -351,31 +351,31 @@ Phase 3 finished
 
 ### docker_run導致「等到host.docker.internal可用」訊息{#troubleshooting-host-docker-internal}
 
-此 `host.docker.internal` 是提供給Docker包含並解析到主機的主機名稱。 根據docs.docker.com ([macOS](https://docs.docker.com/desktop/networking/)， [Windows](https://docs.docker.com/desktop/networking/))：
+`host.docker.internal`是提供給Docker包含的主機名稱，可解析成主機。 根據docs.docker.com ([macOS](https://docs.docker.com/desktop/networking/)， [Windows](https://docs.docker.com/desktop/networking/))：
 
 > 從Docker 18.03開始，建議連線到特殊的DNS名稱host.docker.internal，這會解析為主機使用的內部IP位址
 
-時間 `bin/docker_run src host.docker.internal:4503 8080` 訊息中的結果 __等候host.docker.internal可用__，然後：
+當`bin/docker_run src host.docker.internal:4503 8080`導致訊息&#x200B;__等候host.docker.internal可用時__，則：
 
 1. 確保已安裝的Docker版本為18.03或更高版本
-1. 您可能已設定本機電腦，無法註冊/解析 `host.docker.internal` 名稱。 請改用您的本機IP。
+1. 您可能設定了本機電腦，無法註冊/解析`host.docker.internal`名稱。 請改用您的本機IP。
 
 >[!BEGINTABS]
 
 >[!TAB macOS]
 
-+ 從終端機，執行 `ifconfig` 並記錄主機 __inet__ IP位址，通常是 __en0__ 裝置。
-+ 然後執行 `docker_run` 使用主機IP位址： `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ 從終端機，執行`ifconfig`並記錄主機&#x200B;__inet__ IP位址，通常是&#x200B;__en0__&#x200B;裝置。
++ 然後使用主機IP位址執行`docker_run`： `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!TAB Windows]
 
-+ 在命令提示字元中，執行 `ipconfig`，並記錄主機的 __Ipv4位址__ 主機的。
-+ 然後，執行 `docker_run` 使用此IP位址： `$ bin\docker_run src <HOST IP>:4503 8080`
++ 在命令提示字元中，執行`ipconfig`並記錄主機的&#x200B;__IPv4位址__。
++ 然後，使用此IP位址執行`docker_run`： `$ bin\docker_run src <HOST IP>:4503 8080`
 
 >[!TAB Linux®]
 
-+ 從終端機，執行 `ifconfig` 並記錄主機 __inet__ IP位址，通常是 __en0__ 裝置。
-+ 然後執行 `docker_run` 使用主機IP位址： `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ 從終端機，執行`ifconfig`並記錄主機&#x200B;__inet__ IP位址，通常是&#x200B;__en0__&#x200B;裝置。
++ 然後使用主機IP位址執行`docker_run`： `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!ENDTABS]
 

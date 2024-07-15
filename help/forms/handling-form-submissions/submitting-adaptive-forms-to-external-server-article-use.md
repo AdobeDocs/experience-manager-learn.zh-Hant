@@ -24,7 +24,7 @@ ht-degree: 12%
 
 通常客戶會想要將表單資料提交至外部伺服器，以便進一步處理。
 
-若要將資料發佈到內部伺服器，請提供資源的路徑。 資料會發佈到資源的路徑。例如， &lt;/content restendpoint=&quot;&quot;> . 對於此類發佈請求，會使用提交請求的驗證資訊。
+若要將資料發佈到內部伺服器，請提供資源的路徑。 資料會發佈到資源的路徑。例如， &lt;/content/restEndPoint> 。 對於此類發佈請求，會使用提交請求的驗證資訊。
 
 若要將資料發佈到外部伺服器，請提供 URL。URL 的格式是：<http://host:port/path_to_rest_end_point>。確保您已設定匿名處理POST請求的路徑。
 
@@ -50,13 +50,13 @@ String data = request.getParameter(paramName);System.out.println("The data  is "
 }
 ```
 
-![表單提交](assets/formsubmission.gif)
+![formsubmission](assets/formsubmission.gif)
 若要在您的伺服器上測試此專案，請執行下列動作
 
-1. 請安裝Tomcat （如果尚未安裝）。 [此處提供安裝tomcat的說明](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)
-1. 下載 [zip檔案](assets/aemformsenablement.zip) 與此文章相關聯。 解壓縮檔案以取得war檔案。
+1. 請安裝Tomcat （如果尚未安裝）。 [此處提供tomcat的安裝指示](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)
+1. 下載與此文章關聯的[zip檔案](assets/aemformsenablement.zip)。 解壓縮檔案以取得war檔案。
 1. 在您的tomcat伺服器中部署war檔案。
-1. 建立具有檔案附件元件的簡單調適型表單，並設定其提交動作，如上方熒幕擷圖所示。 POSTURL為 <http://localhost:8080/AemFormsEnablement/HandleFormSubmission>. 如果您的AEM和tomcat未在localhost上執行，請適當的變更URL。
-1. 若要啟用將多部分表單資料提交至tomcat的功能，請將下列屬性新增至 &lt;tomcatinstalldir>\conf\context.xml並重新啟動Tomcat伺服器。
+1. 建立具有檔案附件元件的簡單調適型表單，並設定其提交動作，如上方熒幕擷圖所示。 POSTURL為<http://localhost:8080/AemFormsEnablement/HandleFormSubmission>。 如果您的AEM和tomcat未在localhost上執行，請適當的變更URL。
+1. 若要啟用將多部分表單資料提交至tomcat的功能，請將下列屬性新增至&lt;tomcatInstallDir>\conf\context.xml的內容元素，然後重新啟動Tomcat伺服器。
 1. **&lt;Context allowCasualMultipartParsing=&quot;true&quot;>**
 1. 預覽最適化表單、新增附件並提交。 檢查tomcat主控台視窗中的訊息。

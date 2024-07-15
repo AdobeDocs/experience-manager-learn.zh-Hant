@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何為JBoss Admin Console新增管理使用者
 
-*本影片逐步解說為JBoss Admin Console新增管理使用者的步驟。*
+*此影片會逐步說明為JBoss Admin Console新增管理使用者的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335484?quality=12&learn=on)

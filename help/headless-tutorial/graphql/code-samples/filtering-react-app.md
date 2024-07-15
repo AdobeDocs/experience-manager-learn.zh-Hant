@@ -22,11 +22,11 @@ ht-degree: 0%
 
 # 篩選React應用程式
 
-探索AEM Headless GraphQL API使用 [React](https://reactjs.org/) 應用程式。 此React應用程式會建立可按活動型別篩選的WKND Adventures清單。
+探索AEM Headless GraphQL API使用[React](https://reactjs.org/)應用程式篩選資料的能力。 此React應用程式會建立可按活動型別篩選的WKND Adventures清單。
 
-此程式碼示範使用Adobe的 [適用於JavaScript的AEM Headless使用者端](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) 從React叫用持續的GraphQL查詢。 此應用程式使用 `wknd-shared/adventures-all` 持續查詢以收集所有冒險，並衍生可用活動型別清單。 當使用者選擇活動型別時，選擇的型別傳遞給 `wknd-shared/adventures-by-activity` 持久查詢並擷取冒險詳細資料，只針對指定活動型別的那些冒險。
+此程式碼示範如何使用Adobe的[AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md)從React叫用持續的GraphQL查詢。 此應用程式使用`wknd-shared/adventures-all`持續查詢來收集所有冒險，並衍生可用活動型別清單。 當使用者選取活動型別時，選取的型別會傳遞到`wknd-shared/adventures-by-activity`持續查詢，並僅擷取指定活動型別的那些冒險的冒險詳細資料。
 
 此程式碼：
 
 + 連線至AEM Publish服務，且不需要驗證
-+ 使用WKND的持久查詢： `wknd-shared/adventures-all` 和 `wknd-shared/adventures-by-activity`
++ 使用WKND的持續查詢： `wknd-shared/adventures-all`和`wknd-shared/adventures-by-activity`

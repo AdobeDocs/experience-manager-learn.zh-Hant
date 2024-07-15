@@ -1,6 +1,6 @@
 ---
-title: 「作者」與「發佈」階層簡介
-description: 介紹Adobe Experience Manager架構中的「作者」和「發佈」階層。
+title: Author和Publish Tier簡介
+description: 介紹Adobe Experience Manager架構中的「作者」和「Publish」階層。
 doc-type: technical video
 version: Cloud Service
 jira: KT-4639
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# 「作者」與「發佈」階層簡介 {#introduction-author-publish}
+# Author和Publish Tier簡介 {#introduction-author-publish}
 
-介紹Adobe Experience Manager架構中的「作者」和「發佈」階層。
+介紹Adobe Experience Manager架構中的「作者」和「Publish」階層。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32033?quality=12&learn=on)

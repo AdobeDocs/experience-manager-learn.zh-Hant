@@ -22,7 +22,7 @@ ht-degree: 1%
 
 已建置簡單的查詢介面，以允許「管理員」輸入搜尋條件，以擷取特定表單提交。 然後結果會以簡單的表格格式顯示，並附上檢視特定表單提交的選項。
 
-![query-submissions](assets/query-submissions.png)
+![查詢提交](assets/query-submissions.png)
 
 此介面中的下拉式清單為階層式下拉式清單。 下拉式清單中可用的選項會根據上一個下拉式清單中所做的選擇而變更。
 

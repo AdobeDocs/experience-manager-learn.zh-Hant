@@ -30,9 +30,9 @@ ht-degree: 1%
 * 按一下檔案 | 表單屬性 | 預覽。
 * 按一下「產生預覽資料」。
 * 按一下「產生」。
-* 提供有意義的檔案名稱，例如 `form-data.xml`
+* 提供有意義的檔案名稱，例如`form-data.xml`
 
-您可以使用任何免費的線上工具來 [產生XSD](https://www.freeformatter.com/xsd-generator.html) 來自上一步驟中產生的xml資料。
+您可以使用任何免費的線上工具，從上個步驟產生的xml資料中[產生XSD](https://www.freeformatter.com/xsd-generator.html)。
 
 根據上一步的結構描述建立最適化表單。
 
@@ -40,12 +40,12 @@ ht-degree: 1%
 >建議您一律檢查在提交最適化表單時產生的資料。 這可讓您非常瞭解需要與最適化表單合併之資料的XML格式。
 
 從最適化表單提交的資料
-![submit-data](./assets/af-submitted-data.png)
+![提交的資料](./assets/af-submitted-data.png)
 
 從PDF匯出的資料
-![exported-data](./assets/exported-data.png)
+![匯出的資料](./assets/exported-data.png)
 
-從匯出的資料中，您必須擷取 **_topmostSubform_** 保留適當名稱空間的節點，以成功將資料與最適化表單合併。
+從匯出的資料中，您必須擷取&#x200B;**_topmostSubform_**&#x200B;節點，並保留適當的名稱空間，才能順利將資料與最適化表單合併。
 
 ## 後續步驟
 

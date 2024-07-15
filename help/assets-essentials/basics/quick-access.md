@@ -21,6 +21,6 @@ ht-degree: 5%
 
 # 快速存取
 
-瞭解「我的工作區」的「快速存取」Widget可做為您的個人鏡頭放入AEM Assets，讓您提升生產力並簡化工作流程，隨手可得指派工作所需的所有資產。
+瞭解My Workspace的快速存取Widget可做為您的個人鏡頭進入AEM Assets，讓您輕鬆掌握指派任務所需的所有資產，進而提高生產力並簡化工作流程。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420975/?learn=on)

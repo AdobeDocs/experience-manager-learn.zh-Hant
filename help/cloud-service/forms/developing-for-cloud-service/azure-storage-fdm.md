@@ -20,10 +20,11 @@ ht-degree: 0%
 
 # 在您的專案中包含雲端服務設定
 
-建立名為&#39;FormTutorial&#39;的設定容器以儲存您的雲端服務設定透過提供Azure儲存體帳戶詳細資料和Azure存取金鑰，在&#39;FormTutorial&#39;容器中為Azure儲存體建立名為&#39;FormsCSAndAzureBlob&#39;的雲端服務設定。
+建立名為「FormTutorial」的設定容器來儲存您的雲端服務設定
+透過提供Azure儲存體帳戶詳細資料和Azure存取金鑰，在「FormTutorial」容器中為Azure儲存體建立名為「FormsCSAndAzureBlob」的雲端服務設定。
 
 在IntelliJ中開啟您的AEM專案。 請務必新增資料夾FormTutorial，如ui.content專案中所示
-![cloud-services-configuration](assets/cloud-services-configuration.png)
+![雲端服務組態](assets/cloud-services-configuration.png)
 
 請務必在ui.content專案的filter.xml中新增以下專案
 
@@ -47,7 +48,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->現在，當您使用Cloud Manager建置和部署專案時，必須在雲端服務設定中重新輸入您的Azure存取金鑰。 若要避免重新輸入存取索引鍵，建議使用環境變數建立內容感知設定，如中所述。 [下一篇文章](./context-aware-fdm.md)
+>現在，當您使用Cloud Manager建置和部署專案時，必須在雲端服務設定中重新輸入您的Azure存取金鑰。 為避免重新輸入存取金鑰，建議使用[下一篇文章](./context-aware-fdm.md)中說明的環境變數來建立內容感知設定
 
 ## 後續步驟
 

@@ -38,11 +38,11 @@ Adobe Experience Manager (AEM) Sites是領先的體驗管理平台。 本使用�
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
-    <strong>AEM Sites快速入門</strong>
+    <strong>開始使用AEM Sites</strong>
     </a>
     </div>
     <p>
-    <em>適用於希望實作AEM Sites的開發人員的快速入門手冊。</em>
+    <em>想要實作AEM Sites的開發人員的快速入門手冊。</em>
     <p>
   </td>
   <td>
@@ -64,11 +64,11 @@ Adobe Experience Manager (AEM) Sites是領先的體驗管理平台。 本使用�
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-        <strong>AEM SPA編輯器快速入門</strong>
+        <strong>開始使用AEM SPA編輯器</strong>
       </a>
     </div>
     <p>
-    <em>開發人員整合單頁應用程式(SPA)與AEM的快速入門手冊。</em>
+    <em>開發人員將單頁應用程式(SPA)與AEM整合的快速入門手冊。</em>
     <p>
   </td>
 </tr>
@@ -82,7 +82,7 @@ Adobe Experience Manager (AEM) Sites是領先的體驗管理平台。 本使用�
 * [AEM Sites開發檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [AEM Sites管理檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
 * [AEM Sites部署檔案](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEMas a Cloud Service教學課程](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service教學課程](/help/cloud-service/overview.md)
 * [AEM Assets教學課程](/help/assets/overview.md)
 * [AEM Forms教學課程](/help/forms/overview.md)
 * [AEM Foundation教學課程](/help/foundation/overview.md)

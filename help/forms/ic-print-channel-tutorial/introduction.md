@@ -23,13 +23,13 @@ ht-degree: 4%
 
 ## 先決條件 {#prerequistes}
 
-[使用套件管理器下載與本教學課程相關的資產並將其匯入至AEM。](assets/gettingstartedassets.zip)此zip檔案包含影像、檔案片段、watched資料夾設定和配置檔案(xdp)作為資產封裝的一部分
+[使用封裝管理程式，將本教學課程的相關資產下載並匯入AEM。](assets/gettingstartedassets.zip)此zip檔案包含影像、檔案片段、觀察資料夾設定和配置檔案(xdp)做為資產封裝的一部分
 
-[下載並解壓縮此檔案。](assets/warfileandswaggerfile.zip) 此檔案包含需要部署至Tomcat的SampleRest.war檔案，以及需要用來設定資料來源的Swagger檔案。
+[下載並解壓縮此檔案。](assets/warfileandswaggerfile.zip)此檔案包含需要部署至Tomcat的SampleRest.war檔案，以及需要用來設定資料來源的Swagger檔案。
 
 完成本教學課程後，您將瞭解下列內容：
 
-* 建立資料來源
+* 建立資料Source
 * 建立表單資料模型
 * 建立檔案片段
 * 設定表格和圖表

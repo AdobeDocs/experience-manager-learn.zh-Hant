@@ -1,6 +1,6 @@
 ---
 title: 內容片段主控台概述
-description: 瞭解AEMas a Cloud Service的內容片段撰寫控制檯的基本特性和功能。
+description: 瞭解AEM as a Cloud Service的內容片段撰寫控制檯的基本特性和功能。
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # 內容片段主控台概述
 
-瞭解AEMas a Cloud Service的內容片段撰寫控制檯的基本特性和功能。
+瞭解AEM as a Cloud Service的內容片段撰寫控制檯的基本特性和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409492?quality=12&learn=on)

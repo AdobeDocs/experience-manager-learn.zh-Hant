@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 疑難排解DDX相關問題的步驟
 
-*本影片逐步解說在Forms組合器服務中擷取疑難排解DDX相關問題所需資訊的步驟。*
+*此影片將逐步說明在Forms組合器服務中擷取疑難排解DDX相關問題所需資訊的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335517?quality=12&learn=on)

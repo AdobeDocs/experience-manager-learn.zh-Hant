@@ -22,7 +22,7 @@ Adobe Experience Manager (AEM)內容片段是文字型編輯內容，其中可�
 
 內容片段與版面配置無關，可直接在搭配核心元件的AEM Sites中使用，或以Headless方式傳送至下游管道。
 
-本影片系列涵蓋使用內容片段的傳送選項。 有關定義與的詳細資訊 [您可以在此處找到編寫內容片段](content-fragments-feature-video-use.md).
+本影片系列涵蓋使用內容片段的傳送選項。 有關定義和[編寫內容片段的詳細資訊，請參閱此處](content-fragments-feature-video-use.md)。
 
 1. 在網頁上使用內容片段
 2. 使用AEM Content Services將內容片段公開為JSON
@@ -32,7 +32,7 @@ Adobe Experience Manager (AEM)內容片段是文字型編輯內容，其中可�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
 
-內容片段可以在AEM Sites頁面上使用，或以類似方式，使用AEM WCM核心元件的體驗片段 [內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
+內容片段可以在AEM Sites頁面上使用，或以類似方式使用AEM WCM核心元件的[內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)的體驗片段。
 
 內容片段元件可透過AEM樣式系統進行樣式設定，以視需要顯示內容。
 
@@ -42,18 +42,18 @@ Adobe Experience Manager (AEM)內容片段是文字型編輯內容，其中可�
 
 AEM Content Services可協助建立AEM頁面式HTTP端點，將內容轉譯為標準化JSON格式。
 
-上述影片使用 [內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 以公開個別內容片段。 此 [內容片段清單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) 是新元件，可讓作者定義查詢，以動態方式將內容片段清單填入頁面。 需要公開多個內容片段時，建議使用內容片段清單元件。
+上述影片使用[內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)來公開個別內容片段。 [內容片段清單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html)是新元件，可讓作者定義查詢，以動態方式將內容片段清單填入頁面。 需要公開多個內容片段時，建議使用內容片段清單元件。
 
-*Content Services端點JSON裝載範例：*\
+*範例Content Services端點JSON裝載：*\
 **[運動人士.json](assets/athletes.json)**
 
 ## 使用Assets HTTP API
 
 >[!VIDEO](https://video.tv.adobe.com/v/26390?quality=12&learn=on)
 
-首次在AEM 6.5中引入，使用Assets HTTP API增強了對內容片段的支援。 如此一來，開發人員就能輕鬆對內容片段執行建立、讀取、更新和刪除(CRUD)操作。
+AEM 6.5首次匯入，使用Assets HTTP API加強對內容片段的支援。 如此一來，開發人員就能輕鬆對內容片段執行建立、讀取、更新和刪除(CRUD)操作。
 
-*Postman請求範例：*
+*範例POSTMAN請求：*
 **[CRUD-CFM-API-We.Retail.postman_collection.json](assets/CRUD-CFM-API-We.Retail.postman_collection.json)**
 
 ## 要使用的傳送方法

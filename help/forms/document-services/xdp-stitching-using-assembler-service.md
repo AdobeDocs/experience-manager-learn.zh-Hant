@@ -19,9 +19,9 @@ ht-degree: 0%
 # 使用組合器服務的XDP拼接
 
 本文提供相關資產，用於示範使用組合器服務彙整xdp檔案的能力。
-寫入下列jsp程式碼以插入名為的子表單 **地址** 從名為address.xdp的xdp檔案移至名為 **地址** 在master.xdp檔案中。 產生的xdp會儲存在AEM安裝的根資料夾中。
+下列jsp程式碼是用來在master.xdp檔案中插入名為**address**&#x200B;的xdp檔案中名為&#x200B;**address**&#x200B;的子表單。 產生的xdp會儲存在AEM安裝的根資料夾中。
 
-組合器服務需仰賴有效的DDX檔案來說明如何操作PDF檔案。 您可參閱 [DDX參考檔案在此](assets/ddxRef.pdf).第40頁包含有關xdp彙整的資訊。
+組合器服務需仰賴有效的DDX檔案來說明如何操作PDF檔案。 您可以在此參閱[DDX參考檔案](assets/ddxRef.pdf)。第40頁包含有關xdp彙整的資訊。
 
 ```java
     javax.servlet.http.Part ddxFile = request.getPart("xdpstitching.ddx");
@@ -53,7 +53,7 @@ ht-degree: 0%
     finalXDP.copyToFile(new java.io.File("stitched.xdp"));
 ```
 
-下面列出要將片段插入另一個xdp的DDX檔案。 DDX會插入子表單  **地址** 從address.xdp到插入點，稱為 **地址** 在master.xdp中。 產生的檔案命名為 **stitched.xdp** 會儲存至檔案系統。
+下面列出要將片段插入另一個xdp的DDX檔案。 DDX從address.xdp將子表單&#x200B;**位址**&#x200B;插入到master.xdp中稱為&#x200B;**位址**&#x200B;的插入點。 名稱為&#x200B;**stitched.xdp**&#x200B;的結果檔案已儲存至檔案系統。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -68,19 +68,21 @@ ht-degree: 0%
 
 若要讓此功能在您的AEM伺服器上運作
 
-* 下載 [XDP拼接套件](assets/xdp-stitching.zip) 至您的本機系統。
-* 使用上傳並安裝套件 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* [解壓縮此zip檔案的內容](assets/xdp-and-ddx.zip) 取得範例xdp和DDX檔案
+* 將[XDP拼接封裝](assets/xdp-stitching.zip)下載到您的本機系統。
+* 使用[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)上傳及安裝封裝
+* [擷取此zip檔案的內容](assets/xdp-and-ddx.zip)以取得範例xdp和DDX檔案
 
 **安裝套件後，您必須在AdobeGranite CSRF篩選中允許列出下列URL。**
 
 1. 請依照下列步驟操作，將上述路徑加入允許清單。
 1. [登入configMgr](http://localhost:4502/system/console/configMgr)
 1. 搜尋AdobeGranite CSRF篩選器
-1. 在排除的區段中新增以下路徑並儲存 `/content/AemFormsSamples/assemblerservice`
+1. 在排除的區段中新增以下路徑並儲存`/content/AemFormsSamples/assemblerservice`
 1. 搜尋「Sling查閱者篩選器」
-1. 勾選「允許空白」核取方塊。 （此設定僅供測試用途）測試範常式式碼的方法有很多種。 最快捷、最輕鬆的方式就是使用Postman應用程式。 Postman可讓您向伺服器發出POST要求。 在您的系統上安裝Postman app 。
-啟動應用程式，然後輸入下列URL以測試匯出資料API http://localhost:4502/content/AemFormsSamples/assemblerservice.html
+1. 勾選「允許空白」核取方塊。 （此設定僅供測試之用）
+測試範常式式碼的方法有很多種。 最快捷、最輕鬆的方式就是使用Postman應用程式。 Postman可讓您向伺服器發出POST要求。 在您的系統上安裝Postman app 。
+啟動應用程式並輸入以下URL以測試匯出資料API
+http://localhost:4502/content/AemFormsSamples/assemblerservice.html
 
 提供下列在熒幕擷取畫面中指定的輸入引數。 您可以使用先前下載的範例檔案，
 ![xdp-stitch-postman](assets/xdp-stitching-postman.png)

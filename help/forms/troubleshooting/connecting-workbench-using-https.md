@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 使用HTTPS將Workbench連線至AEM Forms伺服器的步驟
 
-*本影片逐步解說使用HTTPS將Workbench連線至AEM Forms伺服器的步驟。*
+*此影片會逐步說明使用HTTPS將Workbench連線至AEM Forms伺服器的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335482?quality=12&learn=on)

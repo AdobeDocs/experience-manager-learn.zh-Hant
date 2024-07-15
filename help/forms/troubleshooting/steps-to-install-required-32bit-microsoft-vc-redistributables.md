@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 檢查及安裝必要的32位元Microsoft Visual C++可轉散發套件
 
-*本影片將逐步說明檢查及安裝必要的32位元Microsoft Visual C++可轉散發套件。*
+*此影片會逐步說明檢查及安裝必要的32位元Microsoft Visual C++可轉散發套件。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335520?quality=12&learn=on)

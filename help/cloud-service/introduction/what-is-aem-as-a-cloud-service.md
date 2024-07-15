@@ -1,6 +1,6 @@
 ---
-title: AEM有哪些as a Cloud Service？
-description: 探索什麼是AEMas a Cloud Service和Edge Delivery Services，以及它們所提供的價值。
+title: 什麼是AEM as a Cloud Service？
+description: 探索什麼是AEM as a Cloud Service和Edge Delivery Services，以及它們所提供的價值。
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -18,10 +18,10 @@ ht-degree: 0%
 
 ---
 
-# AEM有哪些as a Cloud Service？
+# 什麼是AEM as a Cloud Service？
 
 {{edge-delivery-services}}
 
-探索什麼是AEMas a Cloud Service和Edge Delivery Services，以及它們所提供的價值。
+探索什麼是AEM as a Cloud Service和Edge Delivery Services，以及它們所提供的價值。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330546?quality=12&learn=on)

@@ -24,6 +24,7 @@ ht-degree: 0%
 
 您將需要下列專案：
 
-已安裝核心元件之表單附加套件的AEM工作執行個體
+已安裝表單附加元件套件的AEM工作執行個體
+核心元件已安裝
 
 [根據此檔案設定的開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)

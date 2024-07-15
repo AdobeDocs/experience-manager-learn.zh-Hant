@@ -37,12 +37,13 @@ ht-degree: 0%
 * libXext （X11通訊協定常見擴充功能的程式庫）
 * libXinerama (X11擴充功能，支援將案頭擴充至多個顯示器。 其名稱是Cinerama的雙關語，這是一種使用多部投影機的寬熒幕電影格式。 libXinerama是與RandR擴充功能介面的程式庫)
 * libXrandr （Xinerama擴充功能現在已基本過時，已被RandR擴充功能取代）
-* libXrender （X Rendering Extension使用者端資料庫） nss-softokn-freebl （適用於網路安全服務的Freebl資料庫）
+* libXrender （X Rendering Extension使用者端程式庫）
+nss-softokn-freebl （網路安全服務的Freebl資料庫）
 * zlib （通用、無專利、無損資料壓縮程式庫）
 
 從Red Hat Enterprise Linux 6開始，程式庫32位元版本的副檔名為。686，而64位元版本的副檔名為.x86_64。 例如，expat.i686。 在RHEL 6之前，32位元版本的副檔名為.i386。 在安裝32位元版本之前，請確定已安裝最新的64位元版本。 如果程式庫的64位元版本比安裝的32位元版本舊，您將會收到如下錯誤：
 
-0m錯誤：受保護的multilib版本： libsepol-2.5-10.el7.x86_64 ！= libsepol-2.5-6.el7.i686 [0mError：發現多程式庫版本問題。]
+0m錯誤：受保護的multilib版本： libsepol-2.5-10.el7.x86_64 ！= libsepol-2.5-6.el7.i686 [0m錯誤：發現多重Lib版本問題。]
 
 ## 首次安裝
 
@@ -70,29 +71,60 @@ ht-degree: 0%
 
 ## 符號連結
 
-此外，您需要分別建立指向最新32位元版本libcurl、libcrypto和libssl程式庫的libcurl.so、libcrypto.so和libssl.so symlink。 您可以在/usr/lib/ ln -s /usr/lib/libcurl.so.4.5.0 /usr/lib/libcurl.so ln -s /usr/lib/libcrypto.so.1.1.1c /usr/lib/libcrypto.so ln -s /usr/lib/libssl.so.1.1.1c /usr/lib/libssl.so中找到檔案
+此外，您需要分別建立指向最新32位元版本libcurl、libcrypto和libssl程式庫的libcurl.so、libcrypto.so和libssl.so symlink。 您可以在/usr/lib/中找到檔案
+ln -s /usr/lib/libcurl.so.4.5.0 /usr/lib/libcurl.so
+ln -s /usr/lib/libcrypto.so.1.1.1c /usr/lib/libcrypto.so
+ln -s /usr/lib/libssl.so.1.1.1c /usr/lib/libssl.so
 
 ## 現有系統的更新
 
-在更新期間，x86_64和i686架構之間可能會發生衝突，例如：錯誤：作業事件檢查錯誤：安裝glibc-2.28-72.el8時產生的/lib/ld-2.28.so檔案與封裝glibc32-2.28-42.1.el8.x86_64時產生的檔案衝突
+在更新期間，x86_64和i686架構之間可能會發生衝突，例如：
+錯誤：交易檢查錯誤：
+檔案/lib/ld-2.28.so來自glibc-2.28-72.el8.i686的安裝與來自套件glibc32-2.28-42.1.el8.x86_64的檔案衝突
 
-如果您遇到這種情況，請先解除安裝違規套件，如本例中：yum remove glibc32-2.28-42.1.el8.x86_64
+如果您遇到這種情況，請先解除安裝違規套件，如以下情況：
+Yum移除glibc32-2.28-42.1.el8.x86_64
 
-說了又做了，您想要x86_64和i686版本完全相同，例如從這個輸出到指令： yum info glibc
+說了又做了，您想要x86_64和i686版本完全相同，例如從這個輸出到指令：
+yum資訊glibc
 
-上次中繼資料到期檢查：0:41:33前於2020年1月18日星期六11:37:東部時間上午08點。
-已安裝的封裝名稱： glibc版本： 2.28版本： 72.el8架構： i686大小： 13 M來源： glibc-2.28-72.el8.src.rpm儲存區域： @System從存放庫： BaseOS摘要： GNU libc資料庫URL ： http://www.gnu.org/software/glibc/授權： LGPLv2+和LGPLv2+例外以及GPLv2+例外以及BSD和Inner-Net和ISC公共域和GFDL描述：glibc包中包含由使用的標準庫：系統上的多個程式。 為了節省磁碟空間和：記憶體以及簡化升級，共同系統程式碼會保留在同一個位置並在程式之間共用。 此特定套件：包含最重要的一組共用程式庫：標準C ：程式庫和標準數學程式庫。 如果沒有這兩個程式庫，Linux系統將無法運作。
+上次中繼資料到期檢查： 0:41:33前於2020年1月18日星期六11:37:08 AM EST。
+已安裝的封裝
+名稱： glibc
+版本：2.28
+版本：72.el8
+架構：i686
+大小：13米
+Source ： glibc-2.28-72.el8.src.rpm
+存放庫：@System
+從存放庫：BaseOS
+摘要：GNU libc程式庫
+URL ： http://www.gnu.org/software/glibc/
+授權：LGPLv2+和LGPLv2+ （例外），GPLv2+和GPLv2+ （例外），以及BSD、Inner-Net和ISC以及公共網域和GFDL
+說明：glibc套件包含使用的標準程式庫：系統上的多個程式。 為了節省磁碟空間和：記憶體以及簡化升級，共同系統程式碼會保留在同一個位置並在程式之間共用。 此特定套件：包含最重要的一組共用程式庫：標準C ：程式庫和標準數學程式庫。 如果沒有這兩個程式庫，Linux系統將無法運作。
 
-名稱： glibc版本：2.28版本：72.el8架構：x86_64大小：15 M來源：glibc-2.28-72.el8.src.rpm儲存庫：@System從存放庫：BaseOS摘要：GNU libc資料庫URL：http://www.gnu.org/software/glibc/授權：LGPLv2+和LGPLv2+例外以及GPLv2+例外以及BSD、Inner-Net和ISC公共域和GFDL描述：Glibc包中包含由使用的標準庫：系統上的多個程式。 為了節省磁碟空間和：記憶體以及簡化升級，共同系統程式碼會保留在同一個位置並在程式之間共用。 此特定套件：包含最重要的一組共用程式庫：標準C ：程式庫和標準數學程式庫。 如果沒有這兩個程式庫，Linux系統將無法運作。
+名稱： glibc
+版本：2.28
+版本：72.el8
+架構：x86_64
+大小：15米
+Source ： glibc-2.28-72.el8.src.rpm
+存放庫：@System
+從存放庫：BaseOS
+摘要：GNU libc程式庫
+URL ： http://www.gnu.org/software/glibc/
+授權：LGPLv2+和LGPLv2+ （例外），GPLv2+和GPLv2+ （例外），以及BSD、Inner-Net和ISC以及公共網域和GFDL
+說明：glibc套件包含使用的標準程式庫：系統上的多個程式。 為了節省磁碟空間和：記憶體以及簡化升級，共同系統程式碼會保留在同一個位置並在程式之間共用。 此特定套件：包含最重要的一組共用程式庫：標準C ：程式庫和標準數學程式庫。 如果沒有這兩個程式庫，Linux系統將無法運作。
 
 ## 一些有用的yum命令
 
-yum清單已安裝yum搜尋 [part_of_package_name]
-提供以下功能的百年酒 [package_name]
-Yum安裝 [package_name]
-百勝重新安裝 [package_name]
-yum資訊 [package_name]
-百勝分隔清單 [package_name]
-您移除了 [package_name]
+已安裝yum清單
+yum搜尋[part_of_package_name]
+提供[package_name]的yum
+yum安裝[package_name]
+Yum重新安裝[package_name]
+yum資訊[package_name]
+yum deplist [package_name]
+Yum移除[package_name]
 yum check-update [package_name]
-Yum更新 [package_name]
+Yum更新[package_name]

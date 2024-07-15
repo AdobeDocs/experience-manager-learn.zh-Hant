@@ -63,7 +63,7 @@ public String getFormData(Document pdfForm) {
 }
 ```
 
-以下是用來解壓縮的公用程式函式 _**topmostSubForm**_ 搭配適當的名稱空間
+以下是撰寫的公用程式函式，用於擷取&#x200B;_**topmostSubForm**_&#x200B;與適當的名稱空間
 
 ```java
 private static org.w3c.dom.Node getChildByTagName(org.w3c.dom.Node parent, String tagName) {

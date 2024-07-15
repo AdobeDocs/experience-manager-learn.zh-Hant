@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # 內嵌Headless最適化表單
 
-這個 [教學課程將涵蓋各種Headless API](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) 讓您列出、顯示及提交表單。
+此[教學課程將涵蓋各種Headless API](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction)，讓您列出、顯示及提交表單。
 
 本文將介紹各種Headless API，讓您以Headless方式列出、顯示和提交調適型表單。
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 下列熒幕擷圖顯示內嵌於SPA中的聯絡人表格
 
-![contact-us-form](./assets/contact-us-form.png)
+![連絡人表單](./assets/contact-us-form.png)
 
 ## 先決條件
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 * 執行AEM Forms 6.5.16的執行個體
 
-* [在作者和發佈執行個體上啟用Headless表單](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=en)
+* [在您的作者和發佈執行個體上啟用Headless表單](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=en)
 
 ## 後續步驟
 

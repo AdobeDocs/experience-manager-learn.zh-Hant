@@ -20,8 +20,8 @@ ht-degree: 1%
 # 擴充選擇群組元件
 
 核取方塊群組、下拉式清單和選項按鈕核心元件已擴充為包含其他屬性索引標籤。 其他屬性頁簽有一個核取方塊可指出該欄位是否用作blob索引頁簽
-![additional-properties](assets/drop-down-additonal-properties.png). 選取核取方塊時，會建立名為Searchable的屬性，且在jcr存放庫中將其值設為true，如下方熒幕擷取畫面所示
-![可搜尋](assets/searchable-true.png).
+![其他屬性](assets/drop-down-additonal-properties.png)。 選取核取方塊時，會建立名為Searchable的屬性，且在jcr存放庫中將其值設為true，如下方熒幕擷取畫面所示
+![可搜尋](assets/searchable-true.png)。
 
 下列.content.xml是在_cq_dialog資料夾下建立的。
 

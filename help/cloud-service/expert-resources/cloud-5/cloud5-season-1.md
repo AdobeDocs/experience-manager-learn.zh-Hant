@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 — 第1季
-description: as a Cloud Service於Adobe自己的專家工程師來建置Adobe Experience Manager (AEM)，以及瞭解專家服務所提供的資訊。
+description: 向建置Adobe Experience Manager (AEM)的Adobe專家工程師與提供該產品的專家服務人員瞭解as a Cloud Service。
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 ## 簡介
 
-歡迎使用AEM Engineering的Cloud 5系列。 任何產品實作階段的主要問題之一，就是這些範例、工具或API有足夠的程式碼範例和/或即時示範。 此系列的目標是在5分鐘或更短時間內提供關於AEMas a Cloud Service的有用資訊。
+歡迎使用AEM Engineering的Cloud 5系列。 任何產品實作階段的主要問題之一，就是這些範例、工具或API有足夠的程式碼範例和/或即時示範。 此系列的目標是在5分鐘內提供有關AEM as a Cloud Service的有用資訊。
 
-造訪 [建議方塊](https://forms.office.com/r/74P5Xz4UH0) 用於提交主題構想。
+造訪[建議方塊](https://forms.office.com/r/74P5Xz4UH0)以提交主題概念。
 
 ## 第1季
 
@@ -33,11 +33,11 @@ ht-degree: 0%
       </a>
       <div>
          <a href="./cloud5-aem-cdn-part1.md"><strong>AEM CDN深入探討（第1部分）</strong></a>         
-         <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
       </div>
       <p>
         <br/>
-         第1部分說明AEMas a Cloud Service的CDN，以及如何在實施中使用。
+         第1部分說明AEM as a Cloud Service的CDN，以及如何在實施中使用。
       </p>
      </td>   
      <td>
@@ -46,11 +46,11 @@ ht-degree: 0%
       </a>
       <div>
          <a href="./cloud5-aem-cdn-part2.md"><strong>AEM CDN深入探討（第2部分）</strong></a>
-         <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
       </div>
       <p>
         <br/>
-         第2部分延續我們對AEMas a Cloud ServiceCDN的審視。 我們針對您使用新CDN所獲得的功能回答了一些更常見的問題和誤解。
+         第2部分延續我們對AEM as a Cloud Service CDN的審視。 我們針對您使用新CDN所獲得的功能回答了一些更常見的問題和誤解。
       </p>
    </td>
      <td>
@@ -58,12 +58,12 @@ ht-degree: 0%
             <img alt="記錄檔和記錄" src="./imgs/003-thumb.png"/>
         </a>
       <div>
-         <a href="./cloud5-aem-log-files.md"><strong>記錄檔和記錄</strong></a>
-         <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+         <a href="./cloud5-aem-log-files.md"><strong>記錄檔與記錄</strong></a>
+         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
       </div>
       <p>
         <br/>
-         以下快速說明如何在AEMas a Cloud Service存取記錄，包括如何透過使用者介面及從API存取記錄。
+         以下快速說明如何存取AEM as a Cloud Service中的記錄，包括如何透過使用者介面及從API存取記錄。
       </p>
    </td> 
   </tr>
@@ -74,7 +74,7 @@ ht-degree: 0%
         </a>
       <div>
         <a href="./cloud5-getting-login-token-integrations.md"><strong>與存取權杖整合</strong></a>        
-         <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
       </div>
       <p>
         <br/>
@@ -86,8 +86,8 @@ ht-degree: 0%
       <img alt="雲端中的 Dispatcher" src="./imgs/005-thumb.png"/>
        </a>  
       <div>
-        <a href="./cloud5-aem-dispatcher-cloud.md"><strong>雲端中的Dispatcher</strong></a>
-         <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+        雲端中的<a href="./cloud5-aem-dispatcher-cloud.md"><strong>Dispatcher</strong></a>
+         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
       </div>
       <p>
         <br/>
@@ -100,7 +100,7 @@ ht-degree: 0%
         </a>
       <div>
          <a href="./cloud5-aem-content-migration-part-1.md"><strong>移轉（第1部分）</strong></a>
-         <br/><em>與資深雲端建築師與博士達林·昆策及詹姆斯·塔博特合作</em>
+         <br/><em>與Darin Kuntze &amp; James Talbot，資深雲端架構師與Applesmith博士</em>
       </div>
       <p>
         <br/>
@@ -115,7 +115,7 @@ ht-degree: 0%
         </a>
       <div>
         <a href="./cloud5-aem-content-migration-part-2.md"><strong>移轉（第2部分）</strong></a>     
-         <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
       </div>
       <p>
         <br/>
@@ -128,7 +128,7 @@ ht-degree: 0%
         </a>
       <div>
          <a href="./cloud5-aem-dispatcher-validator.md"><strong>Dispatcher驗證器</strong></a>
-         <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
       </div>
       <p>
         <br/>
@@ -141,7 +141,7 @@ ht-degree: 0%
         </a>
       <div>
          <a href="./cloud5-aem-search-and-indexing.md"><strong>索引和搜尋提示</strong></a>
-         <br/><em>資深雲端架構師達林·孔策與詹姆斯·塔博特</em>
+         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
       </div>
       <p>
         <br/>
@@ -156,10 +156,10 @@ ht-degree: 0%
             </a>
             <div>
                 <a href="./cloud5-adobe-app-builder.md"><strong>AdobeApp Builder</strong></a><br/>        
-                <em>資深雲端設計師與Amol Anand合著的Darin Kuntze與James Talbot</em>
+                <em>與Darin Kuntze &amp; James Talbot，資深雲端架構師與Amol Anand</em>
             </div>
             <p><br/>
-                快來看看您可以使用AdobeApp Builder做的一些很酷的事情，並瞭解雲端中自訂的未來相關新資訊。
+                快來看看您可以AdobeApp Builder做的一些有趣事，並瞭解雲端中自訂的未來相關新資訊。
             </p>
         </td>
         <td></td>

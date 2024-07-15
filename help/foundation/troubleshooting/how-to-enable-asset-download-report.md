@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 如何啟用資產下載報表
 
-*本影片逐步說明啟用資產下載報告的步驟。*
+*此影片逐步說明啟用資產下載報告的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335463?quality=12&learn=on)

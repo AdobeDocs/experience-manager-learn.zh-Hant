@@ -48,8 +48,8 @@ _影像集範例_
 
 ![影像](assets/media-sets/image-set-url-1.png)
 
-- 進一步瞭解影像集，使用 [影像集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/quick-start-image-sets.html).
-- 瞭解如何 [建立影像集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set).
+- 透過[影像集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/quick-start-image-sets.html)深入瞭解影像集。
+- 瞭解如何[建立影像集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set)。
 
 ### 色票集
 
@@ -67,8 +67,8 @@ _色票集範例_
 
 ![影像](assets/media-sets/image-set_url.png)
 
-- 進一步瞭解使用時的色票集 [色票集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html).
-- 瞭解如何 [建立色票集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set).
+- 透過[色票集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html)深入瞭解色票集。
+- 瞭解如何[建立色票集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set)。
 
 ### 迴轉集
 
@@ -84,8 +84,8 @@ _迴轉集範例_
 
 ![影像](assets/media-sets/spin-set.png)
 
-- 進一步瞭解迴轉集，使用 [快速啟動迴轉集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html).
-- 瞭解如何 [建立迴轉集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set).
+- 透過[迴轉集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html)深入瞭解迴轉集。
+- 瞭解如何[建立迴轉集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set)。
 
 ## 混合媒體集
 
@@ -99,13 +99,13 @@ _混合媒體集範例_
 
 ![影像](assets/media-sets/image-set-url-1.png)
 
-- 進一步瞭解混合媒體集與 [混合媒體集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html).
+- 透過[混合媒體集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html)深入瞭解混合媒體集。
 
-- 瞭解如何 [建立混合媒體集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set).
+- 瞭解如何[建立混合媒體集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set)。
 
 若要在網站上顯示縮放、集合或視訊的影像，請在Dynamic Media Classic的「檢視器」中將其呼叫。 Dynamic Media Classic包含豐富的媒體資產檢視器，例如色票集、迴轉集、視訊和許多其他。
 
-進一步瞭解 [AEM Assets和Dynamic Media Classic的檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html).
+深入瞭解AEM Assets和Dynamic Media Classic的[檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html)。
 
 ## 大量集預設集
 
@@ -113,7 +113,7 @@ _混合媒體集範例_
 
 每個預設集都是一組名稱唯一、內含的指示，用於定義如何使用符合所定義命名慣例的影像來建構集合。 在預設集中，您首先會為要分組到一組中的資產定義命名慣例。 然後可以建立批次集預設集來參考這些影像。
 
-雖然您可以自行建立預設集(位於 **設定>應用程式設定>批次集預設集** )，最佳實務是請您的諮詢團隊或技術支援為您設定。 原因如下：
+雖然您可以自行建立預設集（位於&#x200B;**設定>應用程式設定>批次集預設集** ），但最佳實務是請諮詢團隊或技術支援人員為您設定。 原因如下：
 
 - 批次集預設集的設定可能很複雜 — 它們由規則運算式提供支援，除非您是開發人員，否則此語法可能不熟悉或令人困惑。
 - 建立後，預設會開啟這些功能。 沒有「還原」功能。 如果您開始上傳數千個影像，而預設集設定不正確，您最終可能會收到數百或數千個損毀的集合，您必須手動尋找和刪除這些集合。
@@ -122,17 +122,17 @@ _混合媒體集範例_
 
 批次集預設集只會在上傳時套用；無法在影像上傳後執行。 因此，在開始載入所有影像之前，請務必規劃您的命名慣例，並建置預設集。
 
-建立預設集後，公司管理員可以選擇預設集是作用中或非作用中。 啟用表示它們會顯示在下方的上傳頁面上 **工作選項**，非作用中的預設集仍會保持隱藏。
+建立預設集後，公司管理員可以選擇預設集是作用中或非作用中。 「作用中」表示這些預設集會出現在上傳頁面的&#x200B;**工作選項**&#x200B;下，而非作用中的預設集將保持隱藏狀態。
 
-瞭解如何 [建立批次集預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset).
+瞭解如何[建立批次集預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset)。
 
 ### 在上傳時使用批次集預設集
 
 以下說明建立批次集預設集後，如何在上傳時使用批次集預設集：
 
-1. 按一下 **上傳** 並選擇 **從案頭** 或 **透過FTP**.
-2. 按一下 **工作選項**.
-3. 開啟 **批次集預設集** 選項，然後核取或取消核取預設集以將其用於上傳。
+1. 按一下&#x200B;**上傳**，然後選擇&#x200B;**從案頭**&#x200B;或&#x200B;**透過FTP**。
+2. 按一下&#x200B;**工作選項**。
+3. 開啟&#x200B;**批次集預設集**&#x200B;選項，然後核取或取消核取預設集以將其用於上傳。
 4. 上傳完成後，請檢視資料夾中的已完成集合。
 
-進一步瞭解 [批次集預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets).
+深入瞭解[批次集預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets)。

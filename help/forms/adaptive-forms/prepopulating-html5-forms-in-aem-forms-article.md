@@ -33,18 +33,18 @@ slingRequest.setAttribute(&quot;data&quot;， content)；
 
 在此範例中，我們使用內容來設定資料屬性。 內容代表您想要預先填入表單的資料。 通常，您會透過對內部服務進行REST呼叫來擷取「內容」。
 
-若要達到此使用案例，您需要建立自訂設定檔。 有關建立自訂設定檔的詳細資訊，清楚記錄於 [AEM Forms檔案在此](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html).
+若要達到此使用案例，您需要建立自訂設定檔。 建立自訂設定檔的詳細資訊已清楚記錄在[此處的AEM Forms檔案中](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html)。
 
 建立自訂設定檔後，您將會建立JSP檔案，透過呼叫後端系統來擷取資料。 擷取資料後，您將使用slingRequest.setAttribute(&quot;data&quot;， content)；預先填入表單
 
 轉譯XDP時，您也可以將一些引數傳入xdp，並根據引數的值，從後端系統擷取資料。
 
-[例如，此url有name引數](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=john)
+[例如，此URL具有名稱引數](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=john)
 
 您編寫的JSP將可以透過request.getParameter(&quot;name&quot;)存取name引數。 然後，您可以將此引數的值傳遞至後端程式，以擷取所需的資料。
 若要讓此功能在您的系統上運作，請遵循下列步驟：
 
-* [使用封裝管理程式下載資產並將其匯入AEM](assets/prepopulatemobileform.zip)
+* [使用封裝管理員下載並匯入資產到AEM](assets/prepopulatemobileform.zip)
 此套件將安裝下列專案
 
    * CustomProfile
@@ -55,4 +55,4 @@ slingRequest.setAttribute(&quot;data&quot;， content)；
 >
 >如果您要透過呼叫Workbench程式來填入表單，則可在/apps/AEMFormsDemoListings/customprofiles/PrepopulateForm/html.jsp中加入callWorkbenchProcess.jsp，而非setdata.jsp
 
-* [將您最愛的瀏覽器指向此URL](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=Adobe%20Systems). 表單應預先填入name引數的值
+* [將您最愛的瀏覽器指向此url](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=Adobe%20Systems)。 表單應預先填入name引數的值

@@ -35,7 +35,7 @@ public abstract String saveDocumentInCrx(String jcrPath,String fileExtension, Do
 }
 ```
 
-範例組合可以是 [已從此處下載](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)
+範例組合可從這裡](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)下載[
 
 ## 使用公用程式服務的程式碼範例
 
@@ -50,7 +50,7 @@ aemFormsUtilities.saveDocumentInCrx("/content/xmlfiles",".xml",xmlStringDoc);
 ## 先決條件
 
 
-您需要部署 [DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar) 並啟動套件組合。
+您必須部署[DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar)並啟動套件。
 
 
-如果您要使用這些公用程式服務在CRX存放庫中儲存檔案，請遵循 [使用服務使用者文章進行開發](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms). 請務必提供 [必要許可權](http://localhost:4502/useradmin) 存放至適當的CRX資料夾給fd-service使用者。
+如果您要使用這些公用程式服務將檔案儲存在CRX存放庫中，請依照[使用服務使用者開發](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms)文章中的說明進行。 請確定您在適當的CRX資料夾上為fd服務使用者提供[必要的許可權](http://localhost:4502/useradmin)。

@@ -41,7 +41,7 @@ RDE的主要優點，可保持開發勢頭。
 
 ## 其他資源
 
-[多位開發人員共同作業情境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#multiple-developers-collaborating-on-the-same-rde)
+[多位開發人員共同作業案例](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#multiple-developers-collaborating-on-the-same-rde)
 
 [本機開發環境設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
 

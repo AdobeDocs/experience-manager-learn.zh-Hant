@@ -28,7 +28,7 @@ AEM Style Systems有四個主要優點：
 
 5步驟設定與標準元件開發工作流程非常類似。
 
-| **領導力** | **Designer** | **開發人員/架構師** | **範本作者** | **內容作者** |
+| **領導力** | **Designer** | **開發人員/架構者** | **範本作者** | **內容作者** |
 | --- | --- | --- | --- | --- |
 | 決定該元件的內容和目標 | 決定內容的視覺和體驗式呈現 | 開發CSS和JS以支援體驗；定義並提供要使用的類別名稱 | 新增開發人員定義的CSS類別名稱，為樣式化元件設定範本原則。 每種樣式都應使用好記的名稱。 | 編寫頁面時，會視需要套用樣式，以獲得想要的外觀和風格 |
 
@@ -53,7 +53,7 @@ AEM Style Systems有四個主要優點：
 
 >[!NOTE]
 >
->若需這些功能的示範，建議您觀看我們的 [客戶成功網路研討會](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) 威爾·布里斯班和約瑟夫·范布斯柯克。
+>如需這些功能的示範，建議您與Will Brisbane和Joseph Van Buskirk一起觀看我們的[客戶成功網路研討會](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/)。
 
 ## 最佳做法
 
@@ -91,6 +91,6 @@ AEM Style Systems有四個主要優點：
 
 最後，Style Systems的使用更多是藝術而非科學。 如我們所討論，我們提供一些最佳實務，但您可以靈活地自訂組織的設定。
 
-如需詳細資訊，請參閱我們的 [客戶成功網路研討會](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) 威爾·布里斯班和約瑟夫·范布斯柯克。
+如需詳細資訊，請檢視我們的[客戶成功網路研討會](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/)，與Will Brisbane和Joseph Van Buskirk一起進行。
 
-若要進一步瞭解策略與思想領導力，請前往 [客戶成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html) 集線器。
+在[客戶成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html)中心瞭解更多策略和思想領導力。

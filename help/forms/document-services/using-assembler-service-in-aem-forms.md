@@ -103,19 +103,19 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 若要讓此功能在您的AEM伺服器上運作
 
-* 下載 [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) 至您的本機系統。
-* 使用上傳並安裝套件 [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* 下載[自訂檔案服務套裝](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* 下載 [使用服務使用者套件進行開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* 使用部署和啟動套件組合 [felix網頁主控台](http://localhost:4502/system/console/bundles)
-* 將瀏覽器指向 [AssemblePdf.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
+* 將[AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip)下載至您的本機系統。
+* 使用[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)上傳及安裝封裝
+* 下載[自訂檔案服務組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* 下載[使用服務使用者套件組合開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* 使用[felix Web主控台](http://localhost:4502/system/console/bundles)部署及啟動組合
+* 將瀏覽器指向[AssemblePdf.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
 * 拖放多個PDF檔案的檔案
 
 >[!NOTE]
 >
 >請確定您的AEM Forms安裝已完成。 您的所有套件組合都必須處於作用中狀態。
 >
->請確定您已新增 — 開機委派RSA和BouncyCastle程式庫（如本中所述） [安裝AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>確定您已新增 — 開機委派RSA和BouncyCastle程式庫，如此[安裝AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)中所述
 >
 >**此示範的注意事項**
 >

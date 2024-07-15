@@ -160,7 +160,7 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 若要讓此範例在您的系統上運作，請遵循下列步驟：
 * [部署Developingwithserviceuser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [下載並部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 此自訂OSGI套件組合會從提交的表單資料中設定標籤。
+* [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 此自訂OSGI套件組合會從提交的表單資料中設定標籤。
 
 * [下載最適化表單範例](assets/tag-and-store-in-dam-adaptive-form.zip)
 
@@ -168,12 +168,12 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 
 * 按一下建立 | 檔案上傳和上傳標籤 — and-store-in-dam-adaptive-form.zip
 
-* [匯入文章資產](assets/tag-and-store-in-dam-assets.zip) 使用AEM封裝管理員
-* 開啟 [預覽模式下的範例表單](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **填寫所有欄位** 並提交表單。
-* [導覽至DAM中的尖峰資料夾](http://localhost:4502/assets.html/content/dam/Peak). 您應該會在Peak資料夾中看見DoR。 檢查檔案的屬性。 應該適當地加以標籤。
+* [使用AEM封裝管理員匯入文章資產](assets/tag-and-store-in-dam-assets.zip)
+* 在預覽模式](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled)中開啟[範例表單。 **填寫所有欄位**&#x200B;並提交表單。
+* [導覽至DAM中的尖峰資料夾](http://localhost:4502/assets.html/content/dam/Peak)。 您應該會在Peak資料夾中看見DoR。 檢查檔案的屬性。 應該適當地加以標籤。
 恭喜!! 您已成功在系統上安裝範例
 
-* 讓我們來探索 [工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) 這會在表單提交時觸發。
+* 讓我們探索在表單提交時觸發的[工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html)。
 * 工作流程的第一步會串連申請人名稱與居住縣，以建立唯一的檔案名稱。
 * 工作流程的第二個步驟會傳遞標籤階層以及需要標籤的表單欄位元素。 處理步驟會從提交的資料中擷取值，並建構標籤檔案所需的標籤標題。
 * 如果您想要將DoR儲存在DAM中的其他資料夾，您可以使用底下熒幕擷取畫面中指定的設定屬性來指定資料夾位置。

@@ -26,17 +26,17 @@ AEM Forms提供許多立即可用的提交選項，可滿足大部分使用案�
 
 ## 建立AEM專案
 
-如果您已有現有的AEM FormsCloud Service專案，您可以 [跳至寫入自訂提交服務](#Write-the-custom-submit-service)
+如果您已有現有的AEM FormsCloud Service專案，您可以[跳到寫入自訂提交服務](#Write-the-custom-submit-service)
 
 * 在您的c磁碟機上建立名為cloudmanager的資料夾。
 * 導覽至這個新建立的資料夾
-* 複製並貼上內容 [此文字檔](./assets/creating-maven-project.txt) 在命令提示字元視窗中。您可能必須變更DarchetypeVersion=41，取決於 [最新版本](https://github.com/adobe/aem-project-archetype/releases). 撰寫本文時，最新版本是41。
+* 在命令提示字元視窗中複製並貼上[此文字檔](./assets/creating-maven-project.txt)的內容。您可能必須根據[最新版本](https://github.com/adobe/aem-project-archetype/releases)變更DarchetypeVersion=41。 撰寫本文時，最新版本是41。
 * 按下Enter鍵來執行命令。如果一切順利，您應該會看到建置成功訊息。
 
 ## 寫入自訂提交服務{#Write-the-custom-submit-service}
 
-啟動IntelliJ並開啟AEM專案。 建立名為的新Java類別 **HandleRegistrationFormSubmit** 如下方熒幕擷取畫面所示
-![custom-submit-service](./assets/custom-submit-service.png)
+啟動IntelliJ並開啟AEM專案。 建立名為&#x200B;**HandleRegistrationFormSubmission**的新Java類別，如下方熒幕擷取畫面所示
+![自訂送出服務](./assets/custom-submit-service.png)
 
 已撰寫下列程式碼來實作服務
 
@@ -88,9 +88,9 @@ public class HandleRegistrationFormSubmission implements FormSubmitActionService
 
 ## 在應用程式下建立crx節點
 
-展開ui.apps節點，建立新的套件，稱為 **HandleRegistrationFormSubmit** 在「應用程式」節點下，如下方熒幕擷取畫面所示
+展開ui.apps節點，在apps節點下建立名稱為&#x200B;**HandleRegistrationFormSubmission**的新套件，如下面的熒幕擷取畫面所示
 ![crx-node](./assets/crx-node.png)
-在「 」底下建立名為.content.xml的檔案 **HandleRegistrationFormSubmit**. 將下列程式碼複製並貼到.content.xml中
+在**HandleRegistrationFormSubmission**&#x200B;下建立名為.content.xml的檔案。 將下列程式碼複製並貼到.content.xml中
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -102,7 +102,7 @@ public class HandleRegistrationFormSubmission implements FormSubmitActionService
     submitService="Core Custom AF Submit"/>
 ```
 
-的值 **submitService** 元素必須相符  **serviceName = &quot;核心自訂AF提交&quot;** 在FormSubmitActionService實作中。
+**submitService**&#x200B;元素的值必須與FormSubmitActionService實作中的&#x200B;**serviceName = &quot;Core Custom AF Submit&quot;**&#x200B;相符。
 
 ## 將程式碼部署到您的本機AEM Forms執行個體
 
@@ -118,10 +118,10 @@ mvn clean install -PautoInstallSinglePackage
 ## 將程式碼推送到Cloud Manager並部署程式碼
 
 在本地執行個體上驗證代碼後，將代碼推送至您的雲端執行個體。
-將變更推送至本機Git存放庫，然後推送至Cloud Manager存放庫。 您可參閱  [Git設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html)， [將AEM專案推送到cloud manager存放庫](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html) 和 [部署到開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html) 文章。
+將變更推送至本機Git存放庫，然後推送至Cloud Manager存放庫。 您可以參考[Git設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html)、[將AEM專案推送到Cloud Manager存放庫](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html)以及[部署到開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html)文章。
 
 成功執行管道後，您應該能夠將表單的提交動作關聯到自訂提交處理常式，如下方熒幕擷取所示
-![submit-action](./assets/configure-submit-action.png)
+![送出動作](./assets/configure-submit-action.png)
 
 ## 後續步驟
 

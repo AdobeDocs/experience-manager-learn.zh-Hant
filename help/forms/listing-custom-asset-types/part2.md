@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ![appsfolder](assets/appsfolder_.png)
 
-下列程式碼會列出使用搜尋及製表器元件的各種資產型別。 我們會為每種型別的資產建立個別的html元素，如data-type = &quot;videos&quot;標籤所示。 針對「影片」的資產型別，我們使用 &lt;video> 元素以內嵌播放視訊。 對於「worddocuments」的資產型別，我們使用不同的html標籤。
+下列程式碼會列出使用搜尋及製表器元件的各種資產型別。 我們會為每種型別的資產建立個別的html元素，如data-type = &quot;videos&quot;標籤所示。 若是「視訊」的資產型別，我們使用&lt;video>元素來內嵌播放視訊。 對於「worddocuments」的資產型別，我們使用不同的html標籤。
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 ## 設定搜尋和清單元件 {#configure-search-and-lister-component}
 
-定義自訂範本後，現在必須將此自訂範本與「搜尋並製表器」元件建立關聯。 指向您的瀏覽器 [至此url](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
+定義自訂範本後，現在必須將此自訂範本與「搜尋並製表器」元件建立關聯。 將您的瀏覽器[指向此URL](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html)。
 
 切換至設計模式，並將段落系統設定為將「搜尋」和「製表器」元件加入允許的元件群組中。 Search and Lister元件是Document Services群組的一部分。
 
@@ -105,11 +105,11 @@ ht-degree: 0%
 
 ![assettypes](assets/assettypes.png)
 
-現在您已設定搜尋和清單產生器入口網站元件，是時候檢視清單產生器的運作情況了。 指向您的瀏覽器 [至此url](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). 結果可能會與下方顯示的影像類似。
+現在您已設定搜尋和清單產生器入口網站元件，是時候檢視清單產生器的運作情況了。 將您的瀏覽器[指向此URL](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled)。 結果可能會與下方顯示的影像類似。
 
 >[!NOTE]
 >
->如果您的入口網站在發佈伺服器上列出自訂資產型別，請務必將「讀取」許可權授與節點的「fd-service」使用者 **/apps/fd/fp/extensions/querybuilder**
+>如果您的入口網站在發佈伺服器上列出自訂資產型別，請確定您將「讀取」許可權授予「fd-service」使用者到節點&#x200B;**/apps/fd/fp/extensions/querybuilder**
 
 ![assettypes](assets/assettypeslistings.png)
-[請使用封裝管理員下載並安裝此封裝。](assets/customassettypekt1.zip) 這包含範例mp4和word檔案以及xdp檔案，這些檔案會用作使用搜尋和清單產生器元件來列出的資產型別
+[請使用封裝管理員下載並安裝此封裝。](assets/customassettypekt1.zip)此檔案包含範例mp4和word檔案，以及xdp檔案，這些檔案會作為使用搜尋和清單器元件列出的資產型別

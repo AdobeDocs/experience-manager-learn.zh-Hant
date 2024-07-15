@@ -33,7 +33,7 @@ ht-degree: 0%
 - 發佈者
    - `/mnt/var/www/html`
 
-當每個請求周遊Dispatcher時，請求遵循設定的規則以保留本機快取版本來回應合格專案
+當每個請求周遊Dispatcher時，這些請求遵循設定的規則以保留本機快取版本來回應合格專案
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 ## 組態檔
 
-Dispatcher可控制什麼才有資格在 `/cache {` 任何伺服器陣列檔案的部分。 
+Dispatcher控制任何伺服器陣列檔案的`/cache {`區段中符合快取條件的專案。 
 在AMS基準設定陣列中，您會找到包含專案，如下所示：
 
 
@@ -55,7 +55,7 @@ Dispatcher可控制什麼才有資格在 `/cache {` 任何伺服器陣列檔案�
 ```
 
 
-針對要快取或不快取的內容建立規則時，請參閱檔案 [此處](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+建立要快取或不快取的規則時，請參閱檔案[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
 
 
 ## 快取作者
@@ -65,7 +65,7 @@ Dispatcher可控制什麼才有資格在 `/cache {` 任何伺服器陣列檔案�
 
 讓我們來談談在設定作者陣列以正確快取時所採取的策略。
 
-以下是基本作者 `/cache {` 作者伺服器陣列檔案的區段：
+以下是作者伺服器陣列檔案的基本作者`/cache {`區段：
 
 
 ```
@@ -92,13 +92,13 @@ Dispatcher可控制什麼才有資格在 `/cache {` 任何伺服器陣列檔案�
 }
 ```
 
-在此要注意的重要事項為 `/docroot` 設為author的快取目錄。
+這裡要注意的重要事項是`/docroot`已設定為作者的快取目錄。
 
 >[!NOTE]
 >
->確定您的 `DocumentRoot` 在作者的 `.vhost` 檔案符合陣列 `/docroot` 引數
+>確定您在作者`.vhost`檔案中的`DocumentRoot`符合陣列`/docroot`引數
 
-快取規則include陳述式包含檔案 `/etc/httpd/conf.dispatcher.d/cache/ams_author_cache.any` 包含下列規則：
+快取規則include陳述式包含檔案`/etc/httpd/conf.dispatcher.d/cache/ams_author_cache.any`，其中包含下列規則：
 
 ```
 /0000 { 
@@ -132,15 +132,15 @@ Dispatcher可控制什麼才有資格在 `/cache {` 任何伺服器陣列檔案�
 ```
 
 在作者情境中，內容會隨時隨心所欲地變更。 您只想快取不會經常變更的專案。
-我們有規則要快取 `/libs` 因為它們是基準AEM安裝的一部分，且在您安裝Service Pack、Cumulative Fix Pack、Upgrade或Hotfix之前會變更。 因此，快取這些元素相當合理，而且使用網站的一般使用者在製作體驗上也確實有極大的好處。
+我們有要快取`/libs`的規則，因為這些規則是基準AEM安裝的一部分，而且會在您安裝Service Pack、Cumulative Fix Pack、Upgrade或Hotfix之前變更。 因此，快取這些元素相當合理，而且使用網站的一般使用者在製作體驗上也確實有極大的好處。
 
 >[!NOTE]
 >
->請記住，這些規則也會快取 <b>`/apps`</b> 這是自訂應用程式程式碼所在的位置。 如果您正在此執行個體上開發程式碼，當您儲存檔案時，會發現這會非常令人困惑，並且由於提供快取復本，看不到是否會反映在UI中。 這裡的用意是，如果您將程式碼部署到AEM中，頻率也會很低，而且部署步驟的一部分應該是要清除作者快取。 同樣地，其優點也是巨大的，可讓您的可快取程式碼更快速地為使用者執行。
+>請記住，這些規則也會快取<b>`/apps`</b>這是自訂應用程式程式碼所在的位置。 如果您正在此執行個體上開發程式碼，當您儲存檔案時，會發現這會非常令人困惑，並且由於提供快取復本，看不到是否會反映在UI中。 這裡的用意是，如果您將程式碼部署到AEM中，頻率也會很低，而且部署步驟的一部分應該是要清除作者快取。 同樣地，其優點也是巨大的，可讓您的可快取程式碼更快速地為使用者執行。
 
 ## ServeOnStale （亦稱為陳舊/SOS服務）
 
-這是Dispatcher功能的其中一項優勢。 如果發佈者負載過重或變得無回應，通常會擲回502或503 http回應代碼。 如果發生上述情況並啟用此功能，系統會指示Dispatcher即使不是最新復本，仍盡力提供快取中仍有的內容。 如果您已擁有某樣功能，最好還是提供該功能，而不是只顯示錯誤訊息而不提供任何功能。
+這是Dispatcher功能的其中一項gem。 如果發佈者負載過重或變得無回應，通常會擲回502或503 http回應代碼。 如果發生上述情況並啟用此功能，系統將會指示Dispatcher盡最大努力仍提供快取中的內容，即使該內容不是全新復本。 如果您已擁有某樣功能，最好還是提供該功能，而不是只顯示錯誤訊息而不提供任何功能。
 
 >[!NOTE]
 >
@@ -157,11 +157,11 @@ Dispatcher可控制什麼才有資格在 `/cache {` 任何伺服器陣列檔案�
 
 >[!NOTE]
 >
->Dispatcher模組的其中一個正常行為是，如果請求的URI中有查詢引數（通常如下所示） `/content/page.html?myquery=value`)它會略過檔案快取，直接前往AEM執行個體。 其將此請求視為動態頁面，不應加以快取。 這可能會對快取效率造成不良影響。
+>Dispatcher模組的其中一個正常行為是，如果要求在URI中有查詢引數（通常顯示為`/content/page.html?myquery=value`），它將略過快取檔案並直接前往AEM執行個體。 其將此請求視為動態頁面，不應加以快取。 這可能會對快取效率造成不良影響。
 
-檢視此 [文章](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner) 顯示重要的查詢引數如何影響網站效能。
+請參閱此[文章](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)，說明重要的查詢引數如何影響您的網站效能。
 
-依預設，您想要設定 `ignoreUrlParams` 要允許的規則 `*`.  這表示所有查詢引數都會被忽略，並允許所有頁面的快取，無論使用的引數為何。
+依預設，您想要將`ignoreUrlParams`規則設定為允許`*`。  這表示所有查詢引數都會被忽略，並允許所有頁面的快取，無論使用的引數為何。
 
 以下是有人建立社群媒體深層連結參考機制的範例，此機制使用URI中的引數參考來瞭解此人的來源。
 
@@ -171,7 +171,7 @@ Dispatcher可控制什麼才有資格在 `/cache {` 任何伺服器陣列檔案�
 - https://www.we-retail.com/home.html?reference=facebook
 
 此頁面可100%快取，但因為引數存在而未快取。 
-設定您的 `ignoreUrlParams` 作為允許清單將有助於解決此問題：
+將您的`ignoreUrlParams`設定為允許清單將有助於修正此問題：
 
 ```
 /cache { 
@@ -180,7 +180,7 @@ Dispatcher可控制什麼才有資格在 `/cache {` 任何伺服器陣列檔案�
     }
 ```
 
-現在，當Dispatcher看到請求時，它會忽略請求具有 `query` 引數： `?` 參照並仍快取頁面
+現在，當Dispatcher看到請求時，將會忽略請求具有`?`參考的`query`引數，並且仍快取頁面的事實
 
 <b>動態範例：</b>
 
@@ -229,10 +229,10 @@ Dispatcher可控制什麼才有資格在 `/cache {` 任何伺服器陣列檔案�
 </html>
 ```
 
-如果您造訪過 `/search.html?q=fruit` 接著，它會先快取html，並填入顯示結果的結果。
+如果您先造訪`/search.html?q=fruit`，則它會快取html以顯示結果的結果。
 
-接著您造訪 `/search.html?q=vegetables` 第二種，但將顯示果實結果。
-這是因為的查詢引數 `q` 在快取方面被忽略。  若要避免此問題，您需要記下根據查詢引數呈現HTML不同的頁面，並拒絕快取。
+接著您造訪`/search.html?q=vegetables`秒，但結果會顯示水果。
+這是因為`q`的查詢引數在快取方面被忽略。  若要避免此問題，您需要記下根據查詢引數呈現HTML不同的頁面，並拒絕快取。
 
 範例：
 
@@ -252,7 +252,7 @@ Dispatcher可控制什麼才有資格在 `/cache {` 任何伺服器陣列檔案�
 
 ## 快取回應標頭
 
-很明顯，Dispatcher會快取 `.html` pages和clientlibs (即 `.js`， `.css`)，但您知道它也可以將特定回應標題與內容一起快取，放在名稱相同，但 `.h` 副檔名。 這樣不僅可對內容進行下一個回應，還可對快取中應隨附的回應標頭進行回應。
+很明顯，Dispatcher會快取`.html`頁面和clientlibs （亦即`.js`、`.css`），但您知道它也可以將特定回應標題連同內容快取，放在具有相同名稱，但副檔名為`.h`的檔案中。 這樣不僅可對內容進行下一個回應，還可對快取中應隨附的回應標頭進行回應。
 
 AEM可處理的不只是UTF-8編碼
 
@@ -260,7 +260,7 @@ AEM可處理的不只是UTF-8編碼
 
 這些值在快取時依預設會移除，Apache httpd Webserver會以其一般檔案處理方法（通常僅限於根據檔案副檔名進行MIME型別猜測）自行處理資產。
 
-如果您有Dispatcher快取資產和所需的標頭，您可以公開適當的體驗，並確保將所有詳細資訊提供給使用者端瀏覽器。
+如果您有Dispatcher快取資產和所需的標頭，您可以公開適當的體驗，並向使用者端瀏覽器保證所有詳細資訊。
 
 以下是陣列範例，其具有要快取的標頭：
 
@@ -290,11 +290,11 @@ AEM可處理的不只是UTF-8編碼
 
 ### 此運作方式的範例：
 
-如果您有5個要失效的請求 `/content/exampleco/en/` 所有這一切都發生在3秒的時間段內。
+如果您有5個使`/content/exampleco/en/`失效的請求，則所有請求都會在3秒內發生。
 
-關閉此功能後，您會使快取目錄失效 `/content/exampleco/en/` 5次
+若關閉此功能，您將會使快取目錄`/content/exampleco/en/`失效5次
 
-此功能開啟並設為5秒時，會使快取目錄失效 `/content/exampleco/en/` <b>一次</b>
+此功能開啟且設為5秒時，將會使快取目錄`/content/exampleco/en/` <b>失效</b>一次
 
 以下是為5秒寬限期設定的此功能語法範例：
 
@@ -305,7 +305,7 @@ AEM可處理的不只是UTF-8編碼
 
 ## TTL型失效
 
-Dispatcher模組的較新功能為 `Time To Live (TTL)` 根據快取專案的失效選項。 當專案被快取時，它會尋找是否存在快取控制標題，並在快取目錄中產生具有相同名稱和 `.ttl` 副檔名。
+Dispatcher模組的較新功能是針對快取的專案以`Time To Live (TTL)`個失效選項為基礎。 當專案被快取時，它會尋找是否存在快取控制標題，並在快取目錄中產生具有相同名稱和`.ttl`副檔名的檔案。
 
 以下是在伺服器陣列設定檔案中設定的功能範例：
 
@@ -316,7 +316,7 @@ Dispatcher模組的較新功能為 `Time To Live (TTL)` 根據快取專案的失
 
 >[!NOTE]
 >
->請記住，AEM仍需要設定為傳送TTL標頭，以便Dispatcher遵守。 切換此功能只會讓Dispatcher知道何時要移除AEM傳送快取控制標題的檔案。 如果AEM未開始傳送TTL標頭，則Dispatcher不會在此處執行任何特殊操作。
+>請記住，仍需將AEM設定為傳送TTL標頭以供Dispatcher遵循。 切換此功能只會讓Dispatcher知道何時移除AEM傳送快取控制標題的檔案。 如果AEM沒有開始傳送TTL標頭，Dispatcher就不會在這裡執行任何特殊的動作。
 
 ## 快取篩選規則
 
@@ -336,6 +336,6 @@ Dispatcher模組的較新功能為 `Time To Live (TTL)` 根據快取專案的失
 
 我們希望讓已發佈的網站儘可能貪婪，並快取所有內容。
 
-如果快取時存在中斷體驗的元素，您可以新增規則以移除快取該專案的選項。 如上述範例所示，不應快取csrf代號且將其排除。 您可以找到有關撰寫這些規則的進一步詳細資料 [此處](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+如果快取時存在中斷體驗的元素，您可以新增規則以移除快取該專案的選項。 如上述範例所示，不應快取csrf代號且將其排除。 您可以在[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)找到撰寫這些規則的詳細資料
 
 [下一個 — >使用和瞭解變數](./variables.md)

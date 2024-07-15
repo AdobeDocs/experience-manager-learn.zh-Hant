@@ -24,22 +24,22 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/19293?quality=12&learn=on)
 
-1. 下載並開啟 [**InDesign檔案範本**](assets/asset-templates-tutorial-video--supporting-files.zip)
-2. **開啟「標籤」面板，** 請檢閱標籤命名慣例，並注意InDesign檔案中的可作者元素已加上標籤。 請記住，在AEM中只能編輯已標籤的元素。
+1. 下載並開啟&#x200B;[**InDesign檔案範本**](assets/asset-templates-tutorial-video--supporting-files.zip)
+2. **開啟「標籤」面板，**&#x200B;檢閱標籤命名慣例，並注意InDesign檔案中的可作者元素已標籤。 請記住，在AEM中只能編輯已標籤的元素。
 
-   * **「視窗>公用程式>標籤」**
+   * **視窗>公用程式>標籤**
 
-3. 在頁面上，新增文字元素，提供文字「Header」並套用 **標題** 段落樣式。
+3. 在頁面上，新增文字元素、提供文字「標題」並套用&#x200B;**標題**&#x200B;段落樣式。
 
    * **視窗>樣式>段落樣式**
 
-   然後，建立並套用名為的新標籤 **Page2Heading。**
+   然後，建立並套用名稱為&#x200B;**Page2Heading.**&#x200B;的新標籤
 
-4. 新增FPO標誌影像([提供於zip中](assets/asset-templates-tutorial-video--supporting-files.zip))至主版頁面上的Logo元素。
+4. 將FPO標誌影像（[提供於zip](assets/asset-templates-tutorial-video--supporting-files.zip)中）新增至主版頁面上的標誌專案。
 
-   * **按一下右鍵**&#x200B;並選取&#x200B;**「符合」>「框架符合」選項…… >「內容符合」>「按比例填滿框架」**
+   * **按一下滑鼠右鍵**&#x200B;並選取&#x200B;**「彎管頭>框架彎管頭選項…… >內容彎管頭>按比例填滿框架」**
 
-   [深入瞭解框架彎管頭選項](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)，，且適用於您的使用案例。
+   [進一步瞭解框架彎管頭選項](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)，以及適合您的使用案例。
 
 5. 透過「就地貼上」，從頁面和頁面中的主版範本複製頁首（標誌和公司名稱）。
 
@@ -57,24 +57,24 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/19294?quality=12&learn=on)
 
-1. **開始InDesign Server** 在連線埠8080上。
-2. 確保 **AEM編寫執行個體已設定為與您的InDesign Server互動**（反之亦然）。
+1. 在連線埠8080上&#x200B;**啟動InDesign Server**。
+2. 請確定&#x200B;**AEM Author執行個體已設定為與您的InDesign Server**&#x200B;互動（反之亦然）。
 
    * [IDS背景工作Cloud Service設定](http://localhost:4502/etc/cloudservices/proxy/ids.html)
    * [雲端ProxyCloud Service設定](http://localhost:4502/etc/cloudservices/proxy.html)
    * [AEM Externalizer OSGi設定](http://localhost:4502/system/console/configMgr)
 
-3. **已將InDesign檔案上傳至AEM Assets** 並允許AEM工作流程和InDesign Server完整處理資產。
-4. **建立新範本** 在 **資產>範本** 並選取在步驟#4中上傳至AEM的InDesign檔案。
-5. **編輯資產範本** 在步驟#5中建立，並編寫可編輯欄位。
-6. 按一下 **完成** 以產生「資產範本」的最終高傳真轉譯。
+3. **已將InDesign檔案上傳至AEM Assets**，並允許AEM工作流程和InDesign Server完整處理資產。
+4. **在** Assets >範本&#x200B;**下建立新範本**，並在步驟#4中選取上傳至AEM的InDesign檔案。
+5. **編輯在步驟#5中建立的資產範本**，並編寫可編輯的欄位。
+6. 按一下&#x200B;**完成**&#x200B;以產生資產範本的最終高傳真轉譯。
 7. 按一下「資產範本」卡以開啟，並檢閱「資產轉譯」以下載高傳真轉譯。
 
 ## 其他資源 {#additional-resources}
 
 InDesign範本檔案和支援的影像
 
-下載 [InDesign範本檔案和支援的影像](assets/asset-templates-tutorial-video--supporting-files-1.zip)
+下載[InDesign範本檔案和支援的影像](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
 * [InDesignCC試用版下載](https://creative.adobe.com/products/download/indesign)
-* InDesign Server試用版可從以下網址下載： [Adobe發行前網站](https://www.adobeprerelease.com/) 或 [CC Enterprise客戶可以聯絡其帳戶管理員，要求InDesign Server試用版授權](https://www.adobe.com/products/indesignserver/faq.html)
+* 可以從[InDesign Server發行前網站](https://www.adobeprerelease.com/)下載Adobe試用版，或[CC Enterprise客戶可以連絡其帳戶主管以要求AMInDesign Server試用版授權](https://www.adobe.com/products/indesignserver/faq.html)

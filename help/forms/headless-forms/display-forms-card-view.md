@@ -21,13 +21,13 @@ ht-degree: 0%
 卡片檢視格式是以卡片形式呈現資訊或資料的設計模式。 每個卡片代表個別的內容或資料專案，通常由視覺上不同的容器組成，且容器內有特定元素排列。
 React中的可點按卡片是類似卡片或圖磚的互動元件，使用者可點按或點選。 當使用者點按或點選可點按的卡片時，會觸發指定的動作或行為，例如導覽至其他頁面、開啟強制回應視窗或更新UI。
 
-在本文中，我們將使用 [listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) 以擷取表單並以卡片格式顯示表單，並在點選事件時開啟最適化表單。
+在本文中，我們將使用[listforms API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)來擷取表單，並以卡片格式顯示表單，並在點選事件時開啟最適化表單。
 
 ![卡片檢視](./assets/card-view-forms.png)
 
 ## 卡片範本
 
-下列程式碼已用於設計卡片範本。 卡片範本顯示最適化表單的標題和說明以及Adobe標誌。 [原物料UI元件](https://mui.com/) 已用於建立此配置。
+下列程式碼已用於設計卡片範本。 卡片範本顯示最適化表單的標題和說明以及Adobe標誌。 [材料UI元件](https://mui.com/)已用於建立此配置。
 
 
 

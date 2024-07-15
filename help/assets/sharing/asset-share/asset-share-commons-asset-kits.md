@@ -21,8 +21,8 @@ ht-degree: 0%
 
 # Asset Share Commons Asset Kit
 
-瞭解如何使用資產共用共用的 [資產套件](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) 產生從AEM Assets資料夾或集合中列出資產的定製、可共用網頁。
+瞭解如何使用Asset Share Common的[資產套件](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/)產生訂製、可共用的網頁，這些網頁會列出AEM Assets資料夾或集合中的資產。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415467?quality=12&learn=on)
 
-_[資產套件](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) 僅適用於Asset Share Commons 2.5.4+_
+_[資產套件](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/)僅適用於Asset Share Commons 2.5.4+_

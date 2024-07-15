@@ -20,11 +20,11 @@ ht-degree: 0%
 
 # 擴充功能模型
 
-![AEM UI擴充功能模型](./assets/modal/modal.png){align="center"}
+![AEM UI擴充功能模組](./assets/modal/modal.png){align="center"}
 
 AEM UI擴充功能模式提供一種將自訂UI附加至AEM UI擴充功能的方法。
 
-模型是React應用程式，根據 [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)，和可以建立擴充功能所需的任何自訂UI，包含但不限於：
+模組是以[React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)為基礎的React應用程式，可以建立擴充功能所需的任何自訂UI，包括但不限於：
 
 + 確認對話方塊
 + [輸入表單](https://react-spectrum.adobe.com/react-spectrum/#forms)
@@ -35,9 +35,9 @@ AEM UI擴充功能模式提供一種將自訂UI附加至AEM UI擴充功能的方
 
 ## 強制回應路由
 
-強制回應體驗由以下定義的擴充功能App Builder React應用程式定義： `web-src` 資料夾。 和任何React應用程式一樣，完整體驗也是使用來編排 [React路由](https://reactrouter.com/en/main/components/routes) 該轉譯器 [React元件](https://reactjs.org/docs/components-and-props.html).
+強制回應體驗是由`web-src`資料夾下定義的App Builder React應用程式擴充功能所定義。 和任何React應用程式一樣，完整體驗是使用[轉譯[React元件](https://reactjs.org/docs/components-and-props.html)的React路由](https://reactrouter.com/en/main/components/routes)來編排。
 
-產生初始模組檢視至少需要一個路由。 此初始路由會在 [延伸註冊](#extension-registration)的 `onClick(..)` 函式，如下所示。
+產生初始模組檢視至少需要一個路由。 此初始路由會在[延伸註冊](#extension-registration)的`onClick(..)`函式中叫用，如下所示。
 
 
 + `./src/aem-ui-extension/web-src/src/components/App.js`
@@ -81,12 +81,12 @@ function App(props) {
 
 ## 擴充功能註冊
 
-若要開啟強制回應，請呼叫 `guestConnection.host.modal.showUrl(..)` 由擴充功能的 `onClick(..)` 函式。 `showUrl(..)` 傳遞的JavaScript物件具有索引鍵/值：
+若要開啟強制回應視窗，會從擴充功能的`onClick(..)`函式呼叫`guestConnection.host.modal.showUrl(..)`。 `showUrl(..)`傳遞的是具有索引鍵/值的JavaScript物件：
 
-+ `title` 提供向使用者顯示的強制回應視窗標題名稱
-+ `url` 是叫用 [React路由](#modal-routes) 負責強制回應視窗的初始檢視。
++ `title`提供顯示給使用者的強制回應視窗標題名稱
++ `url`是叫用負責模組初始檢視的[React路由](#modal-routes)的URL。
 
-當務之急是 `url` 傳遞至 `guestConnection.host.modal.showUrl(..)` 會解析成擴充功能中的路由，否則強制回應視窗中不會顯示任何內容。
+傳遞至`guestConnection.host.modal.showUrl(..)`的`url`必須解析成在擴充功能中路由，否則強制回應不會顯示任何內容。
 
 + `./src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
@@ -109,7 +109,7 @@ function ExtensionRegistration() {
 
 ## 模組元件
 
-每個延伸路線， [這不是 `index` 路由](./extension-registration.md#app-routes)，對應至可在擴充功能強制回應視窗中呈現的React元件。
+擴充功能的每個路由（不是`index`路由](./extension-registration.md#app-routes)的[）都對應到可在擴充功能模式中轉譯的React元件。
 
 強制回應可由任意數量的React路徑組成，從簡單的單路徑強制回應到複雜的多路徑強制回應。
 
@@ -185,9 +185,9 @@ export default function MyModal() {
 
 ## 關閉強制回應視窗
 
-![AEM UI擴充功能強制關閉按鈕](./assets/modal/close.png){align="center"}
+![AEM UI延伸模組關閉按鈕](./assets/modal/close.png){align="center"}
 
-模組必須提供自己的緊密控制。 這可透過叫用來完成 `guestConnection.host.modal.close()`.
+模組必須提供自己的緊密控制。 這是透過叫用`guestConnection.host.modal.close()`完成的。
 
 ```javascript
 <ButtonGroup align="end">

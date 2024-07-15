@@ -1,5 +1,5 @@
 ---
-title: 建立及設定Odata來源
+title: 建立及設定Odata Source
 description: 建立並設定雲端服務設定以與Microsoft Dynamics連線。
 type: Documentation
 role: Developer

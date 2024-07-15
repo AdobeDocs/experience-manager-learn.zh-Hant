@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 為AEM Forms OSGi執行個體啟用SSL的步驟
 
-*本影片逐步解說為AEM Forms OSGi執行個體啟用SSL的步驟。*
+*此影片會逐步說明為AEM Forms OSGi執行個體啟用SSL的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335524?quality=12&learn=on)

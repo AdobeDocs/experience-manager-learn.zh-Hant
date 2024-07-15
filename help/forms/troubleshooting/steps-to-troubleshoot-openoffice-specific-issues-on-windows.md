@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 在AEM Forms PDFG轉換的Windows設定上疑難排解OpenOffice特定失敗的步驟
 
-*此影片會逐步解說疑難排解Windows安裝程式上OpenOffice特定失敗的程式。*
+*此影片會逐步說明疑難排解Windows安裝程式上OpenOffice特定失敗的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335481?quality=12&learn=on)

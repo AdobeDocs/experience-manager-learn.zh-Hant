@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何變更平均資訊量的值
 
-*本影片逐步解說變更平均資訊量值的步驟。*
+*此影片逐步說明變更平均資訊量值的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335494?quality=12&learn=on)

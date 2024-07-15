@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # 開發考量事項
 
-在啟用前端管道僅在AEMas a Cloud Service環境中部署前端資源後，對本機AEM開發有一些影響，因此您必須調整Git分支模型。
+在啟用前端管道僅在AEM as a Cloud Service環境中部署前端資源後，對本機AEM開發有一些影響，因此您必須調整Git分支模型。
 
 ## 目標
 
@@ -37,9 +37,9 @@ ht-degree: 0%
 
 ## 調整後的開發方法
 
-* 對於使用AEM SDK的本機開發，後端開發團隊仍需要透過以下方式產生clientlib `ui.frontend` 模組但在將Cloud Manager部署到AEMas a Cloud Service環境期間您必須略過。 這顯示了一個難題，即如何隔離中概述的專案設定變更 [更新專案](update-project.md) 章節。
+* 對於使用AEM SDK的本機開發，後端開發團隊仍需要透過`ui.frontend`模組產生clientlib，但在Cloud Manager部署至AEM as a Cloud Service環境期間，您必須略過它。 這會在如何隔離[更新專案](update-project.md)章節中概述的專案設定變更上帶來挑戰。
 
-A __解決方案__ 可能是為了調整您的Git分支模型，並確保AEM專案設定變更絕不會流回 __本機開發__ AEM後端開發人員使用的分支。
+__解決方案__&#x200B;可能是為了調整您的Git分支模型，並確保AEM專案設定變更絕不會回到AEM後端開發人員使用的&#x200B;__本機開發__&#x200B;分支。
 
 
-* 如果您引進新元件或更新同時有變更的現有元件，則作為持續增強AEM專案的一部分 `ui.app` 和 `ui.frontend` 模組，您必須執行完整棧疊和前端管道。
+* 作為持續增強您的AEM專案的一部分，如果您引進新元件或更新同時具有`ui.app`和`ui.frontend`模組變更的現有元件，您必須執行完整棧疊和前端管道。

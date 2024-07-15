@@ -18,9 +18,10 @@ ht-degree: 0%
 
 # 匯入Eclipse專案
 
-下載並解壓縮 [zip檔案](./assets/aem-forms-cs-doc-gen.zip)
+下載並解壓縮[zip檔案](./assets/aem-forms-cs-doc-gen.zip)
 
-啟動Eclipse並將專案匯入Eclipse專案包含resources資料夾中的下列檔案：
+啟動Eclipse並將專案匯入Eclipse
+專案在資源資料夾中包含下列檔案：
 
 * DataFile1、DataFile2和DataFile3 — 要與範本合併以產生最終PDF檔案的範例xml資料檔案
 * custom_fonts.xdp - XDP範本
@@ -37,6 +38,6 @@ ht-degree: 0%
 * 以Java應用程式執行Main.java
 
 >[!NOTE]
-> 第一次執行Java程式時，您會收到HTTP 403錯誤。 若要完成此程式，請務必提供 [AEM中技術帳戶使用者的適當許可權](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
+> 第一次執行Java程式時，您會收到HTTP 403錯誤。 若要通過此程式，請確定您授予[適當許可權給AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)中的技術帳戶使用者。
 
-**AEM Forms使用者** 是我用於此課程的角色。
+**AEM Forms使用者**&#x200B;是我用於此課程的角色。

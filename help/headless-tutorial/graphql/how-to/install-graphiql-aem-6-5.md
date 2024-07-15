@@ -21,32 +21,32 @@ ht-degree: 0%
 
 在AEM 6.5中，必須手動安裝GraphiQL IDE工具。
 
-1. 導覽至 **[軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEMas a Cloud Service**.
-1. 搜尋「GraphiQL」(請務必包含 **ì** 在 **GraphiQL**)。
-1. 下載最新版本 **GraphiQL Content Package v.x.x.x**.
+1. 導覽至&#x200B;**[軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service**。
+1. 搜尋「GraphiQL」（請務必在&#x200B;**GraphiQL**&#x200B;中包含&#x200B;**i**）。
+1. 下載最新的&#x200B;**GraphiQL Content Package v.x.x.x**。
 
-   ![下載GraphiQL套件](assets/graphiql/software-distribution.png)
+   ![下載GraphiQL封裝](assets/graphiql/software-distribution.png)
 
    zip檔案是可直接安裝的AEM套件。
 
-1. 從AEM的「開始」功能表，導覽至 **工具** > **部署** > **封裝**.
-1. 按一下 **上傳套裝** 並選擇在先前步驟中下載的套件。 按一下 **安裝** 以安裝套件。
+1. 從AEM開始功能表，瀏覽至&#x200B;**工具** > **部署** > **套件**。
+1. 按一下&#x200B;**上傳封裝**，然後選擇在先前步驟中下載的封裝。 按一下&#x200B;**安裝**&#x200B;以安裝封裝。
 
-   ![安裝GraphiQL套件](assets/graphiql/install-graphiql-package.png)
+   ![安裝GraphiQL封裝](assets/graphiql/install-graphiql-package.png)
 
-1. 瀏覽至 **CRXDE Lite** > **存放庫面板** >選取 `/content/graphiql` 節點(例如， <http://localhost:4502/crx/de/index.jsp#/content/graphiql>)。
-1. 在 **屬性** 標籤變更值 `endpoint` 屬性至 `/content/_cq_graphql/wknd-shared/endpoint.json`.
+1. 導覽至&#x200B;**CRXDE Lite** > **存放庫面板** >選取`/content/graphiql`節點（例如<http://localhost:4502/crx/de/index.jsp#/content/graphiql>）。
+1. 在&#x200B;**屬性**&#x200B;索引標籤中，將`endpoint`屬性的值變更為`/content/_cq_graphql/wknd-shared/endpoint.json`。
    ![端點屬性值變更](assets/graphiql/endpoint-prop-value-change.png)
 
-1. 導覽至 **Web主控台設定** UI >搜尋 **CSRF篩選器** 設定(例如，<http://localhost:4502/system/console/configMgr/com.adobe.granite.csrf.impl.CSRFFilter)>
-1. 在 `Excluded Paths` 屬性名稱欄位更新，WKND GraphQL端點路徑 `/content/cq:graphql/wknd-shared/endpoint`.
+1. 瀏覽至&#x200B;**網頁主控台組態** UI >搜尋&#x200B;**CSRF篩選器**&#x200B;組態（例如<http://localhost:4502/system/console/configMgr/com.adobe.granite.csrf.impl.CSRFFilter)>）
+1. 在`Excluded Paths`屬性名稱欄位更新中，WKND GraphQL端點路徑為`/content/cq:graphql/wknd-shared/endpoint`。
 
 ![排除路徑屬性值變更](assets/graphiql/exclude-paths-value-change.png)
 
-1. 存取GraphiQL編輯器，使用 `//HOST:PORT/content/graphiql.html`，並確認您可以建構新查詢或執行現有查詢。 (例如 <http://localhost:4502/content/graphiql.html>)
+1. 使用`//HOST:PORT/content/graphiql.html`存取GraphiQL編輯器，並確認您可以建構新的查詢或執行現有的查詢。 （例如<http://localhost:4502/content/graphiql.html>）
 
 ![GraphiQL編輯器](assets/graphiql/graphiql-editor.png)
 
 >[!TIP]
 >
->若要支援特定專案的GraphQL結構描述和查詢執行，您必須對 `endpoint` 和 `Excluded Paths` 值。
+>若要支援您專案特定的GraphQL結構描述和查詢執行，您必須對上述步驟中的`endpoint`和`Excluded Paths`值進行對應的變更。

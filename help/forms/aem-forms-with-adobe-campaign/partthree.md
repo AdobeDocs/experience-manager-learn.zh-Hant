@@ -21,7 +21,7 @@ ht-degree: 0%
 
 在本節中，我們會使用ACS擷取的設定檔資訊預先填寫最適化表單。 AEM Forms有這項預先填寫最適化表單的強大功能。
 
-若要深入瞭解預先填寫最適化表單，請閱讀此 [教學課程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
+若要深入瞭解預先填寫最適化表單，請閱讀此[教學課程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
 
 若要透過從ACS擷取資料預先填入最適化表單，我們假設ACS中有設定檔，其電子郵件與登入AEM的使用者相同。 例如，如果登入AEM的人員的電子郵件ID是csimms@adobe.com，我們希望在ACS中找到其電子郵件是csimms@adobe.com的設定檔。
 
@@ -233,10 +233,10 @@ return "Pre Fill Forms Using Campaign Profile";
 
 若要讓此功能在您的系統上運作，請遵循下列指示：
 
-* [請確定您已依照此處所述步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
+* [請確定您已依照此處說明的步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [使用封裝管理員將範例最適化表單匯入AEM](assets/pre-fill-af-from-campaign.zip)
 * 請務必使用與其電子郵件ID由Adobe Campaign中的設定檔共用的使用者登入AEM。 例如，如果AEM使用者的電子郵件ID是johndoe@adobe.com ，則您需要在ACS中擁有其電子郵件是johndoe@adobe.com的設定檔。
-* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).
+* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled)。
 
 ## 後續步驟
 

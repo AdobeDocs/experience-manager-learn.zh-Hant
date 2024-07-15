@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 針對Windows安裝程式上的Acrobat特定問題進行疑難排解的步驟
 
-*本影片逐步解說針對AEM Forms PDFG的Windows設定，疑難排解Acrobat特定問題的程式。*
+*此影片會逐步解說疑難排解AEM Forms PDFG的Windows安裝程式上的Acrobat特定問題。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335480?quality=12&learn=on)

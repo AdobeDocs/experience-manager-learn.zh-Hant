@@ -21,11 +21,11 @@ ht-degree: 2%
 
 新增配偶詳細資料片段，以設定「人員」面板。 系統會建立規則，在應徵者婚姻狀況已婚時顯示配偶詳細資料片段。
 
-**在AEM Forms 6.3和6.4中設定「人員」面板**
+**在AEM Forms 6.3和6.4中設定人員面板**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22193?quality=12&learn=on)
 
-**在AEM Forms 6.5及更高版本中設定人員面板**
+**在AEM Forms 6.5和更高版本中設定人員面板**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28385?quality=12&learn=on)
 

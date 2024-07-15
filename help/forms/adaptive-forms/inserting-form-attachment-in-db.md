@@ -26,19 +26,19 @@ ht-degree: 1%
 
 ## 建立資料庫表格以儲存表單資料與附件
 
-已建立名為newhire的表格來儲存表單資料。 請注意欄名稱圖片型別 **LONGBLOB** 儲存表單附件
-![table-schema](assets/insert-picture-table.png)
+已建立名為newhire的表格來儲存表單資料。 請注意&#x200B;**LONGBLOB**型別的資料行名稱圖片，以儲存表單附件
+![資料表 — 結構描述](assets/insert-picture-table.png)
 
 ## 建立表單資料模型
 
 已建立表單資料模型以與MySQL資料庫通訊。 您將需要建立下列專案
 
 * [AEM中的JDBC資料來源](./data-integration-technical-video-setup.md)
-* [以JDBC資料來源為基礎的表單資料模型](./jdbc-data-model-technical-video-use.md)
+* 以JDBC資料來源為基礎的[表單資料模型](./jdbc-data-model-technical-video-use.md)
 
 ## 建立工作流程
 
-將最適化表單設定為提交至AEM工作流程，您可以選擇將表單附件儲存在工作流程變數中，或將附件儲存在有效負載下的指定資料夾中。 對於此使用案例，我們需要將附件儲存在ArrayList of Document型別的工作流程變數中。 我們需要從這個ArrayList擷取第一個專案，並初始化檔案變數。 工作流程變數稱為 **listOfDocuments** 和 **employeePhoto** 「 」已建立。
+將最適化表單設定為提交至AEM工作流程，您可以選擇將表單附件儲存在工作流程變數中，或將附件儲存在有效負載下的指定資料夾中。 對於此使用案例，我們需要將附件儲存在ArrayList of Document型別的工作流程變數中。 我們需要從這個ArrayList擷取第一個專案，並初始化檔案變數。 已建立名為&#x200B;**listOfDocuments**&#x200B;和&#x200B;**employeePhoto**的工作流程變數。
 提交最適化表單以觸發工作流程時，工作流程中的步驟將使用ECMA指令碼初始化employeePhoto變數。 以下是ECMA指令碼
 
 ```javascript
@@ -55,8 +55,8 @@ log.info("Employee Photo updated");
 ```
 
 工作流程的下一步是使用叫用表單資料模型服務元件，將資料和表單附件插入表格中。
-![插入圖片](assets/fdm-insert-pic.png)
-[您可以從這裡下載包含範例ecma指令碼的完整工作流程](assets/add-new-employee.zip).
+![插入pic](assets/fdm-insert-pic.png)
+[您可以從這裡](assets/add-new-employee.zip)下載包含範例ecma指令碼的完整工作流程。
 
 >[!NOTE]
 > 您必須建立新的以JDBC為基礎的表單資料模型，並在工作流程中使用該表單資料模型

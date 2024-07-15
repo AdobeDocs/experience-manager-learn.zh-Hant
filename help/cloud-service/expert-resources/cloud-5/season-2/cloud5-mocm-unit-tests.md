@@ -1,5 +1,5 @@
 ---
-title: Cloud 5 - Cloud Manager的秘密 — 單元測試
+title: Cloud 5 - Cloud Manager的奧秘 — 單元測試
 description: 使用AEM和Cloud Manager進行單元測試
 version: Cloud Service
 role: Admin, Developer
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 ---
 
-# Cloud 5 - Cloud Manager的秘密 — 單元測試
+# Cloud 5 - Cloud Manager的奧秘 — 單元測試
 
 單元測試是軟體開發中一個經常被忽略的步驟，是每個開發人員都應該完成的極為重要的活動。 AEM原本就提供許多預設品質檢查，但無法測試您已自訂或變更的所有專案。
 

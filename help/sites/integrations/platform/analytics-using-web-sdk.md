@@ -11,7 +11,7 @@ last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 # 將AEM Sites和Adobe Analytics與Platform Web SDK整合
 
-瞭解 **現代方法** 有關如何使用Platform Web SDK整合Adobe Experience Manager (AEM)和Adobe Analytics。 此全方位的教學課程會引導您完成順暢收集資料的程式 [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) pageview和CTA點按資料。 透過在AdobeAnalysis Workspace中將收集的資料視覺化，在其中您可以探索各種量度和維度，以獲得有價值的見解。 此外，請探索Platform資料集以驗證及分析資料。 加入我們的歷程，利用AEM和Adobe Analytics的強大功能進行資料導向式決策。
+瞭解&#x200B;**現代方法**，瞭解如何使用Platform Web SDK整合Adobe Experience Manager (AEM)和Adobe Analytics。 此全方位的教學課程會引導您完成順暢地收集[WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)頁面檢視和CTA點按資料的程式。 透過在AdobeAnalysis Workspace中將收集的資料視覺化，在其中您可以探索各種量度和維度，以獲得有價值的見解。 此外，請探索Platform資料集以驗證及分析資料。 加入我們的歷程，利用AEM和Adobe Analytics的強大功能進行資料導向式決策。
 
 ## 概觀
 
@@ -38,30 +38,30 @@ ht-degree: 0%
 
 使用Platform Web SDK整合Adobe Analytics時，需具備下列條件。
 
-您已完成設定步驟，從 **[整合Experience PlatformWeb SDK](./web-sdk.md)** 教學課程。
+您已完成&#x200B;**[整合Experience PlatformWeb SDK](./web-sdk.md)**&#x200B;教學課程的設定步驟。
 
-在 **AEM作為Cloud Service**：
+在&#x200B;**AEM中作為Cloud Service**：
 
-+ [AEM管理員對AEMas a Cloud Service環境的存取權](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html)
++ [AEM管理員存取AEM as a Cloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html)
 + 部署管理員對Cloud Manager的存取權
-+ 複製並部署 [WKND — 範例Adobe Experience Manager專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) 至您的AEMas a Cloud Service環境。
++ 複製並部署[WKND — 範例Adobe Experience Manager專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)至您的AEM as a Cloud Service環境。
 
-在 **Adobe Analytics**：
+在&#x200B;**Adobe Analytics**&#x200B;中：
 
-+ 存取以建立 **報表套裝**
-+ 存取以建立 **Analysis Workspace**
++ 存取以建立&#x200B;**報告套裝**
++ 存取以建立&#x200B;**Analysis Workspace**
 
-在 **Experience Platform**：
+在&#x200B;**Experience Platform**&#x200B;中：
 
-+ 存取預設生產、 **Prod** 沙箱。
-+ 存取目標 **方案** 在資料管理底下
-+ 存取目標 **資料集** 在資料管理底下
-+ 存取目標 **資料串流** 在「資料收集」底下
-+ 存取目標 **標籤**  在「資料收集」底下
++ 存取預設生產&#x200B;**Prod**&#x200B;沙箱。
++ 存取資料管理下的&#x200B;**結構描述**
++ 存取資料管理下的&#x200B;**資料集**
++ 存取資料收集底下的&#x200B;**資料串流**
++ 存取資料收集底下的&#x200B;**標籤**
 
-如果您沒有必要的許可權，您的系統管理員使用 [Adobe Admin Console](https://adminconsole.adobe.com/) 可以授與必要的許可權。
+如果您沒有必要的許可權，使用[Adobe Admin Console](https://adminconsole.adobe.com/)的系統管理員可以授與必要的許可權。
 
-在深入探討AEM與Analytics使用Platform Web SDK的整合程式之前，讓我們先瞭解 _回顧基本元件和關鍵要素_ 建立於 [整合Experience PlatformWeb SDK](./web-sdk.md) 教學課程。 為整合提供堅實的基礎。
+在探索使用Platform Web SDK的AEM與Analytics整合程式之前，我們&#x200B;_回顧在[整合Experience PlatformWeb SDK](./web-sdk.md)教學課程中建立的基本元件和關鍵元素_。 為整合提供堅實的基礎。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419873?quality=12&learn=on)
 
@@ -76,13 +76,13 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-如需SDR檔案中應包含的概念和各種元素的詳細資訊，請參閱 [建立和維護解決方案設計參考(SDR)檔案](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). 您也可以下載範例Excel範本，也可使用WKND專用版本 [此處](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
+如需有關SDR檔案中應包含的概念和各種元素的詳細資訊，請造訪[建立和維護解決方案設計參考(SDR)檔案](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html)。 您也可以下載範例Excel範本，不過[此處](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx)也提供WKND特定版本。
 
 ## 設定Analytics — 報表套裝、Analysis Workspace
 
 第一步是設定Adobe Analytics，特別是使用轉換變數(或eVar)和成功事件的報告套裝。 轉換變數可用來測量原因和結果。 成功事件可用來追蹤動作。
 
-在本教學課程中，  `eVar5, eVar6, and eVar7` track  _WKND頁面名稱、WKND CTA ID和WKND CTA名稱_ 分別是，和 `event7` 用於追蹤  _WKND CTA點選事件_.
+在本教學課程中，`eVar5, eVar6, and eVar7`會分別追蹤&#x200B;_WKND頁面名稱、WKND CTA ID和WKND CTA名稱_，而`event7`則會用來追蹤&#x200B;_WKND CTA點選事件_。
 
 為了分析、收集見解並和他人分享這些見解從收集的資料中，Analysis Workspace建立了專案。
 
@@ -90,48 +90,48 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 若要進一步瞭解Analytics設定和概念，強烈建議使用下列資源：
 
-+ [報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html)
++ [報告套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html)
 + [轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)
-+ [成功事件](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html)
++ [個成功事件](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html)
 + [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)
 
 ## 更新資料流 — 新增Analytics服務
 
-資料串流會指示PlatformEdge Network將收集到的資料傳送至何處。 在 [先前的教學課程](./web-sdk.md)，資料串流會設定為傳送資料給Experience Platform。 此資料流已更新，以將資料傳送至中設定的Analytics報表套裝 [以上](#setup-analytics---report-suite-analysis-workspace) 步驟。
+資料串流會指示PlatformEdge Network將收集到的資料傳送至何處。 在[先前的教學課程](./web-sdk.md)中，Datastream已設定為傳送資料給Experience Platform。 此資料流已更新，以將資料傳送至在[以上](#setup-analytics---report-suite-analysis-workspace)步驟中設定的Analytics報表套裝。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419876?quality=12&learn=on)
 
 ## 建立XDM結構描述
 
-體驗資料模型(XDM)結構描述可協助您將收集的資料標準化。 在 [先前的教學課程](./web-sdk.md)，此XDM結構描述具有 `AEP Web SDK ExperienceEvent` 欄位群組已建立。 此外，使用此XDM結構描述會建立資料集，以將收集的資料儲存在Experience Platform中。
+體驗資料模型(XDM)結構描述可協助您將收集的資料標準化。 在[先前的教學課程](./web-sdk.md)中，已建立具有`AEP Web SDK ExperienceEvent`欄位群組的XDM結構描述。 此外，使用此XDM結構描述會建立資料集，以將收集的資料儲存在Experience Platform中。
 
 但是，該XDM結構描述沒有Adobe Analytics特定的欄位群組來傳送eVar事件資料。 會建立新的XDM結構描述，而非更新現有結構描述，以避免將eVar事件資料儲存在平台中。
 
-新建立的XDM結構描述具有 `AEP Web SDK ExperienceEvent` 和 `Adobe Analytics ExperienceEvent Full Extension` 欄位群組。
+新建立的XDM結構描述具有`AEP Web SDK ExperienceEvent`和`Adobe Analytics ExperienceEvent Full Extension`欄位群組。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419877?quality=12&learn=on)
 
 
 ## 更新標籤屬性
 
-在 [先前的教學課程](./web-sdk.md)，接著會建立標籤屬性，其中包含資料元素和規則，用以收集、對應及傳送pageview資料。 必須為以下專案增強此功能：
+在[先前的教學課程](./web-sdk.md)中，已建立標籤屬性，其中包含資料元素和規則以收集、對應及傳送pageview資料。 必須為以下專案增強此功能：
 
-+ 將頁面名稱對應至 `eVar5`
-+ 觸發 **pageview** Analytics呼叫（或傳送信標）
++ 將頁面名稱對應至`eVar5`
++ 正在觸發&#x200B;**pageview** Analytics呼叫（或傳送信標）
 + 使用Adobe使用者端資料層收集CTA資料
-+ 將CTA ID和名稱對應至 `eVar6` 和 `eVar7` （分別）。 此外，CTA點按計數會 `event7`
-+ 觸發 **連結點選** Analytics呼叫（或傳送信標）
++ 將CTA ID和名稱分別對應至`eVar6`和`eVar7`。 另外，CTA點按計數為`event7`
++ 正在觸發&#x200B;**連結點選** Analytics呼叫（或傳送信標）
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419882?quality=12&learn=on)
 
 >[!TIP]
 >
->影片中顯示的資料元素和規則事件程式碼可供您參考， **展開下列摺疊式功能表元素**. 不過，如果您未使用Adobe使用者端資料層，則必須修改下列程式碼，但定義資料元素並在規則定義中使用這些元素的概念仍適用。
+>影片中顯示的資料元素和規則事件程式碼可供您參考，**展開下列摺疊式功能表元素**。 不過，如果您未使用Adobe使用者端資料層，則必須修改下列程式碼，但定義資料元素並在規則定義中使用這些元素的概念仍適用。
 
 +++ 資料元素和規則事件程式碼
 
-+ 此 `Component ID` 資料元素程式碼。
++ `Component ID`資料元素程式碼。
 
   ```javascript
   if(event && event.path && event.path.includes('.')) {    
@@ -143,7 +143,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
   }
   ```
 
-+ 此 `Component Name` 資料元素程式碼。
++ `Component Name`資料元素程式碼。
 
   ```javascript
   if(event && event.component && event.component.hasOwnProperty('dc:title')) {
@@ -155,7 +155,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
   }    
   ```
 
-+ 此 `all pages - on load` **Rule-Condition** 程式碼
++ `all pages - on load` **Rule-Condition**&#x200B;代碼
 
   ```javascript
   if(event && event.component && event.component.hasOwnProperty('@type') && event.component.hasOwnProperty('xdm:template')) {
@@ -165,7 +165,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
   }    
   ```
 
-+ 此 `home page - cta click` **Rule-Event** 程式碼
++ `home page - cta click` **規則事件**&#x200B;程式碼
 
   ```javascript
   var componentClickedHandler = function(evt) {
@@ -197,7 +197,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
   });    
   ```
 
-+ 此 `home page - cta click` **Rule-Condition** 程式碼
++ `home page - cta click` **Rule-Condition**&#x200B;代碼
 
   ```javascript
   if(event && event.component && event.component.hasOwnProperty('@type')) {
@@ -214,18 +214,18 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 +++
 
-如需整合AEM核心元件與Adobe使用者端資料層的詳細資訊，請參閱 [搭配使用Adobe Client Data Layer與AEM核心元件指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html).
+如需整合AEM核心元件與Adobe使用者端資料層的詳細資訊，請參閱[搭配使用Adobe使用者端資料層與AEM核心元件指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)。
 
 
 >[!INFO]
 >
->若要全面瞭解 **變數對應** 索引標籤屬性詳細資訊在解決方案設計參考(SDR)檔案中，存取已完成的WKND特定版本以供下載 [此處](./assets/Final-WKND-WebSDK-BRD-SDR.xlsx).
+>若要全面瞭解Solution Design Reference (SDR)檔案中的&#x200B;**變數對應**&#x200B;索引標籤屬性詳細資訊，請在[這裡](./assets/Final-WKND-WebSDK-BRD-SDR.xlsx)存取已完成的WKND特定版本以供下載。
 
 
 
 ## 驗證WKND上已更新的標籤屬性
 
-以確保在WKND網站頁面上建置、發佈和正確使用更新的標籤屬性。 使用Google Chrome網頁瀏覽器的 [Adobe Experience Platform Debugger延伸模組](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)：
+以確保在WKND網站頁面上建置、發佈和正確使用更新的標籤屬性。 使用Google Chrome網頁瀏覽器的[Adobe Experience Platform Debugger延伸功能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)：
 
 + 若要確保標籤屬性是最新版本，請檢查建置日期。
 
@@ -241,7 +241,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 ## 資料集驗證 — WKND頁面檢視、CTA資料
 
-資料集是資料集合的儲存和管理結構，例如遵循結構描述的資料庫表格。 在中建立的資料集 [先前的教學課程](./web-sdk.md) 用於驗證pageview和CTA點選資料是否已擷取到Experience Platform資料集中。 在資料集UI中，各種詳細資訊（例如，記錄總數、大小和擷取的批次）會與視覺上吸引人的長條圖一起顯示。
+資料集是資料集合的儲存和管理結構，例如遵循結構描述的資料庫表格。 在[先前的教學課程](./web-sdk.md)中建立的資料集會被重複使用，以驗證pageview和CTA點按資料是否已擷取到Experience Platform資料集中。 在資料集UI中，各種詳細資訊（例如，記錄總數、大小和擷取的批次）會與視覺上吸引人的長條圖一起顯示。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419885?quality=12&learn=on)
 
@@ -249,9 +249,9 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 Analysis Workspace是Adobe Analytics中的強大工具，可讓您以靈活且互動的方式探索及視覺化資料。 它提供拖放介面，可建立自訂報表、執行進階分段並套用各種資料視覺效果。
 
-讓我們重新開啟在中建立的Analysis Workspace專案 [設定Analytics](#setup-analytics---report-suite-analysis-workspace) 步驟。 在 **熱門頁面** 區段，檢查各種量度，例如造訪次數、不重複訪客、登入點、跳出率等。 若要評估WKND頁面和首頁CTA的效能，請拖放WKND特定的維度（WKND頁面名稱、WKND CTA名稱）和量度（WKND CTA點選事件）。 這些見解對於行銷人員瞭解哪些CTA更有效率，並根據其業務目標做出資料導向式決策非常有價值。
+讓我們重新開啟在[設定Analytics](#setup-analytics---report-suite-analysis-workspace)步驟中建立的Analysis Workspace專案。 在&#x200B;**最上層頁面**&#x200B;區段中，檢查各種量度，例如造訪、不重複訪客、登入、跳出率等。 若要評估WKND頁面和首頁CTA的效能，請拖放WKND特定的維度（WKND頁面名稱、WKND CTA名稱）和量度（WKND CTA點選事件）。 這些見解對於行銷人員瞭解哪些CTA更有效率，並根據其業務目標做出資料導向式決策非常有價值。
 
-若要將使用者歷程視覺化，請使用流量視覺效果，從 **WKND頁面名稱** 並延伸至不同的路徑。
+若要將使用者歷程視覺化，請使用流量視覺效果，從&#x200B;**WKND頁面名稱**&#x200B;開始，並展開至各種路徑。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419886?quality=12&learn=on)
 
@@ -268,14 +268,14 @@ Analysis Workspace是Adobe Analytics中的強大工具，可讓您以靈活且�
 
 >[!AVAILABILITY]
 >
->如果您偏好使用 **端對端視訊** 涵蓋整個整合程式，而非個別設定步驟影片，您可以 [此處](https://video.tv.adobe.com/v/3419889/) 以存取它。
+>若您偏好涵蓋整個整合程式的&#x200B;**端對端影片**，而非個別設定步驟影片，您可以按一下[這裡](https://video.tv.adobe.com/v/3419889/)加以存取。
 
 
 ## 其他資源
 
 + [整合Experience PlatformWeb SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
 + [搭配核心元件使用Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
-+ [整合Experience Platform資料收集標籤和AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
-+ [Adobe Experience Platform Web SDK與Edge Network概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
-+ [資料收集教學課程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
++ [整合Experience Platform資料收集標籤與AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
++ [Adobe Experience Platform Web SDK與Edge Network總覽](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
++ [資料彙集教學課程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

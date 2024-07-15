@@ -1,6 +1,6 @@
 ---
 title: 什麼是AEM SDK？
-description: as a Cloud Service使用和設定AEM適用的SDK 。
+description: 使用和設定AEM as a Cloud Service的SDK。
 role: Developer
 level: Beginner
 type: Tutorial
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# AEMas a Cloud ServiceSDK簡介
+# AEM as a Cloud Service SDK簡介
 
-as a Cloud Service使用和設定AEM適用的SDK。
+使用和設定適用於AEM as a Cloud Service的SDK。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330552?quality=12&learn=on)

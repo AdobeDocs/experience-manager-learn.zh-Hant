@@ -12,8 +12,8 @@ role: User
 team: TM
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 20%
+source-wordcount: '54'
+ht-degree: 9%
 
 ---
 
@@ -33,4 +33,4 @@ ht-degree: 20%
    + [非資產內容參照](editor/non-asset-content-references.md)
    + [RTE變體比較](editor/rte-variant-compare.md)
 + [擴充性](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/extensibility/content-fragments/overview.html)
-+ [文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html){target=_blank}
++ [檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html){target=_blank}

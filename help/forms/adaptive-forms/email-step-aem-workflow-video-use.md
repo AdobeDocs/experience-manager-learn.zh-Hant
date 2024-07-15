@@ -28,7 +28,7 @@ AEM Forms 6.4已匯入「傳送電子郵件」步驟。使用此步驟，我們�
 1. 在表單提交時，會觸發AEM工作流程
 1. AEM工作流程利用「傳送電子郵件」元件，以傳送包含DoR作為附件的電子郵件
 
-在使用「傳送電子郵件」步驟之前，請務必從以下位置設定Day CQ Mail Service： [configMgr](http://localhost:4502/system/console/configMgr). 提供您環境的特定值
+在使用「傳送電子郵件」步驟之前，請務必從[configMgr](http://localhost:4502/system/console/configMgr)設定Day CQ郵件服務。 提供您環境的特定值
 
 ![設定Day CQ郵件服務](assets/mailservice.png)
 
@@ -42,13 +42,13 @@ AEM Forms 6.4已匯入「傳送電子郵件」步驟。使用此步驟，我們�
 
 1. [部署Developingwithserviceuser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [下載並安裝setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)此套件包含用於建立中繼資料屬性的程式碼，此程式碼是工作流程程式步驟的一部分。
+1. [下載並安裝setvalue套件](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)此套件包含用於建立中繼資料屬性的程式碼，此程式碼是工作流程程式步驟的一部分。
 1. [設定Day CQ郵件服務](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html)
-1. [使用封裝管理員將與此文章相關聯的資產匯入並安裝到CRX中](assets/emaildoraemformskt.zip)
-1. 啟動 [最適化表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled). 填寫必填欄位並提交。
+1. [使用套件管理器將與本文相關的資產匯入並安裝到CRX中](assets/emaildoraemformskt.zip)
+1. 啟動[自適應表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)。 填寫必填欄位並提交。
 1. 您應該會收到包含DocumentOfRecord作為附件的電子郵件
 
-探索 [工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/emaildor.html)
+探索[工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/emaildor.html)
 
 檢視工作流程的流程步驟。 與程式步驟相關聯的自訂程式碼將會建立中繼資料屬性名稱，並從提交的資料中設定其值。這些值隨後由傳送電子郵件元件使用。
 
@@ -57,4 +57,4 @@ AEM Forms 6.4已匯入「傳送電子郵件」步驟。使用此步驟，我們�
 >在AEM Forms 6.5及更高版本中，您不需要此自訂程式碼來建立中繼資料屬性。 請使用AEM Workflow中的變數功能
 
 請確定已按照以下熒幕擷取畫面設定傳送電子郵件元件的附件索引標籤
-![傳送電子郵件附件索引標籤](assets/sendemailcomponentconfigure.jpg)「DOR.pdf」值必須比對在最適化表單的提交選項中指定的記錄檔案路徑中指定的值。
+![傳送電子郵件附件標籤](assets/sendemailcomponentconfigure.jpg)「DOR.pdf」值必須符合您在最適化表單的提交選項中指定的記錄檔案路徑中指定的值。

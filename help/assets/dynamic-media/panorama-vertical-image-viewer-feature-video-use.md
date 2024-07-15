@@ -58,14 +58,14 @@ AEM 6.4中的Dynamic Media Viewer增強功能包括新增全景影像檢視器�
    <td><p>垂直影像檢視器可協助提供最高的產品影像檢視體驗，讓消費者以最佳方式呈現產品，進而推動轉換並將回報降至最低。</p> <p> </p> </td>
   </tr>
   <tr>
-   <td>可用 </td>
+   <td>可使用 </td>
    <td>OOTB</td>
    <td>OOTB</td>
   </tr>
  </tbody>
 </table>
 
-[在Scene7模式下設定Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[在Scene7模式中設定Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
 
 [在混合模式下設定Dynamic Media](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/config-dynamic.html)
 

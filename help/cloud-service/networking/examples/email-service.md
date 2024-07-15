@@ -1,6 +1,6 @@
 ---
 title: 電子郵件服務
-description: 瞭解如何設定AEMas a Cloud Service以使用輸出埠連線電子郵件服務。
+description: 瞭解如何設定AEM as a Cloud Service以使用輸出埠連線電子郵件服務。
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -19,35 +19,35 @@ ht-degree: 0%
 
 # 電子郵件服務
 
-透過設定AEM從AEMas a Cloud Service傳送電子郵件 `DefaultMailService` 以使用進階網路輸出埠。
+透過設定AEM `DefaultMailService`使用進階網路輸出埠，從AEM as a Cloud Service傳送電子郵件。
 
-由於（大部分）郵件服務不會透過HTTP/HTTPS執行，因此必須代理從AEMas a Cloud Service連線到郵件服務。
+由於（大部分）郵件服務不會透過HTTP/HTTPS執行，因此必須代理從AEM as a Cloud Service連線至郵件服務。
 
-+ `smtp.host` 設為OSGi環境變數 `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` 所以會透過出口進行路由。
-   + `$[env:AEM_PROXY_HOST]` 是保留的變數，AEMas a Cloud Service會對應至內部 `proxy.tunnel` 主機。
-   + 請勿嘗試設定 `AEM_PROXY_HOST` 透過Cloud Manager。
-+ `smtp.port` 設為 `portForward.portOrig` 對應到目的地電子郵件服務主機和連線埠的連線埠。 此範例使用對應： `AEM_PROXY_HOST:30465` → `smtp.sendgrid.com:465`.
-   + 此 `smpt.port` 設為 `portForward.portOrig` 連線埠，而不是SMTP伺服器的實際連線埠。 兩者之間的對應 `smtp.port` 和 `portForward.portOrig` 連線埠由Cloud Manager建立 `portForwards` 規則（如下所示）。
++ `smtp.host`已設定為OSGi環境變數`$[env:AEM_PROXY_HOST;default=proxy.tunnel]`，因此會透過輸出進行路由。
+   + `$[env:AEM_PROXY_HOST]`是AEM as a Cloud Service對應到內部`proxy.tunnel`主機的保留變數。
+   + 請勿嘗試透過Cloud Manager設定`AEM_PROXY_HOST`。
++ `smtp.port`設定為對應到目的地電子郵件服務主機和連線埠的`portForward.portOrig`連線埠。 此範例使用對應： `AEM_PROXY_HOST:30465` → `smtp.sendgrid.com:465`。
+   + `smpt.port`設定為`portForward.portOrig`連線埠，而不是SMTP伺服器的實際連線埠。 `smtp.port`與`portForward.portOrig`連線埠之間的對應是由Cloud Manager `portForwards`規則所建立（如下所示）。
 
-由於密碼不得儲存在程式碼中，因此電子郵件服務的使用者名稱和密碼最好使用 [機密OSGi設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)，使用AIO CLI或Cloud Manager API設定。
+由於密碼不得儲存在程式碼中，因此最好使用[機密OSGi設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)、使用AIO CLI或Cloud Manager API來設定電子郵件服務的使用者名稱和密碼。
 
-通常 [彈性連線埠輸出](../flexible-port-egress.md) 用於滿足與電子郵件服務整合，除非有必要 `allowlist` AdobeIP，在此情況下 [專用輸出ip位址](../dedicated-egress-ip-address.md) 可使用。
+通常使用[彈性連線埠輸出](../flexible-port-egress.md)來滿足與電子郵件服務整合，除非需要`allowlist`AdobeIP，在這種情況下，可以使用[專用輸出IP位址](../dedicated-egress-ip-address.md)。
 
-此外，請檢閱AEM檔案，網址為 [傳送電子郵件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
+此外，檢閱[傳送電子郵件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email)的AEM檔案。
 
 ## 進階網路支援
 
 下列進階網路選項支援下列程式碼範例。
 
-確保 [適當](../advanced-networking.md#advanced-networking) 在學習本教學課程之前，已設定進階網路設定。
+在執行本教學課程之前，請確定已設定[適當的](../advanced-networking.md#advanced-networking)進階網路設定。
 
-| 沒有進階網路 | [彈性的連線埠輸出](../flexible-port-egress.md) | [專用輸出IP位址](../dedicated-egress-ip-address.md) | [虛擬私人網路](../vpn.md) |
+| 沒有進階網路 | [彈性連線埠輸出](../flexible-port-egress.md) | [專用輸出IP位址](../dedicated-egress-ip-address.md) | [虛擬私人網路](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
 | ✘ | ✔ | ✔ | ✔ |
 
 ## OSGi設定
 
-此OSGi設定範例透過以下Cloud Manager將AEM Mail OSGi Service設定為使用外部郵件服務 `portForwards` 的規則 [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) 作業。
+此OSGi設定範例透過[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)作業的下列Cloud Manager `portForwards`規則，設定AEM Mail OSGi Service使用外部郵件服務。
 
 ```json
 ...
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/config/com.day.cq.mailer.DefaultMailService.cfg.json`
 
-設定AEM [預設郵件服務](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email) 根據您的電子郵件提供者的要求(例如 `smtp.ssl`、等)。
+依照您的電子郵件提供者的要求設定AEM [DefaulMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email) （例如`smtp.ssl`等）。
 
 ```json
 {
@@ -78,10 +78,10 @@ ht-degree: 0%
 }
 ```
 
-此 `EMAIL_USERNAME` 和 `EMAIL_PASSWORD` OSGi變數和密碼可使用以下其中一種方式，依環境設定：
+可以使用下列其中一項，為每個環境設定`EMAIL_USERNAME`和`EMAIL_PASSWORD` OSGi變數和密碼：
 
 + [Cloud Manager環境設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)
-+ 或使用 `aio CLI` 命令
++ 或使用`aio CLI`命令
 
   ```shell
   $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "myApiKey" --secret EMAIL_PASSWORD "password123"

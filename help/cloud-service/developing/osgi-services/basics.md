@@ -95,4 +95,4 @@ package com.adobe.aem.wknd.examples.core.adventures;
 import org.osgi.annotation.versioning.Version;
 ```
 
-新增 `package-info.java` 需要，才能確保AEM中的其他OSGi套件組合可解析OSGi服務介面（或任何Java類別）。 如果 `package-info.java` 遺失，不會匯出Java套件及其Java介面或類別。 其他嘗試從此Java套件匯入這些Java介面或類別的OSGi套件組合將會出現錯誤訊息 __無法解析__ 在AEM OSGi Bundle主控台中。
+需要新增`package-info.java`，以確保AEM中的其他OSGi套件組合可以解析OSGi服務介面（或任何Java類別）。 如果`package-info.java`遺失，將不會匯出Java套件及其Java介面或類別。 其他OSGi套件組合嘗試從這個Java套件匯入這些Java介面或類別時，將會出現錯誤訊息&#x200B;__無法解析__ (在AEM的OSGi套件組合主控台中)。

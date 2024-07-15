@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何在AEM Forms JEE中變更服務的交易逾時
 
-*本影片逐步解說在AEM Forms JEE中變更服務交易逾時的步驟。*
+*此影片逐步說明在AEM Forms JEE中變更服務交易逾時的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335495?quality=12&learn=on)

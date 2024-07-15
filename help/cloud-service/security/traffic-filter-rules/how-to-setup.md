@@ -15,13 +15,13 @@ duration: 292
 source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 # 如何設定包含WAF規則的流量篩選規則
 
-瞭解 **如何設定** 流量篩選規則，包括WAF規則。 閱讀建立、部署、測試和分析結果的相關資訊。
+瞭解&#x200B;**如何設定**&#x200B;流量篩選規則，包括WAF規則。 閱讀建立、部署、測試和分析結果的相關資訊。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425407?quality=12&learn=on)
 
@@ -29,20 +29,20 @@ ht-degree: 2%
 
 設定程式涉及下列專案：
 
-- _建立規則_ 具有適當的AEM專案結構和組態檔。
-- _部署規則_ 使用Adobe Cloud Manager的設定管道。
-- _測試規則_ 使用各種工具來產生流量。
-- _分析結果_ 使用AEMCS CDN記錄檔和控制面板工具。
+- _使用適當的AEM專案結構和組態檔建立規則_。
+- 使用AdobeCloud Manager的設定管道&#x200B;_部署規則_。
+- _使用各種工具來測試規則_&#x200B;以產生流量。
+- _使用AEMCS CDN記錄檔和儀表板工具分析結果_。
 
 ### 在您的AEM專案中建立規則
 
 若要建立規則，請遵循下列步驟：
 
-1. 在AEM專案的最上層，建立一個資料夾 `config`.
+1. 在您的AEM專案的最上層，建立資料夾`config`。
 
-1. 在 `config` 資料夾，建立名為的新檔案 `cdn.yaml`.
+1. 在`config`資料夾中，建立名為`cdn.yaml`的新檔案。
 
-1. 將下列中繼資料新增至 `cdn.yaml` 檔案：
+1. 將下列中繼資料新增至`cdn.yaml`檔案：
 
 ```yaml
 kind: CDN
@@ -57,7 +57,7 @@ data:
     rules:
 ```
 
-檢視範例： `cdn.yaml` AEM Guides WKND Sites專案中的檔案：
+檢視AEM Guides WKND Sites專案中`cdn.yaml`檔案的範例：
 
 ![WKND AEM專案規則檔案和資料夾](./assets/wknd-rules-file-and-folder.png){width="800" zoomable="yes"}
 
@@ -67,13 +67,13 @@ data:
 
 1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 登入 Cloud Manager 並選取適當的組織和方案。
 
-1. 導覽至 _管道_ 卡來自 _計畫總覽_ 頁面，然後按一下 **+新增** 按鈕並選取所需的配管型別。
+1. 從&#x200B;_方案總覽_&#x200B;頁面瀏覽至&#x200B;_管道_&#x200B;卡片，然後按一下&#x200B;**+新增**&#x200B;按鈕並選取所需的管道型別。
 
    ![Cloud Manager管道卡](./assets/cloud-manager-pipelines-card.png)
 
-   在上述範例中，為了示範之用 _新增非生產管道_ 已選取，因為已使用開發環境。
+   在上述範例中，為了示範目的，已選取&#x200B;_新增非生產管道_，因為使用的是開發環境。
 
-1. 在 _新增非生產管道_ 對話方塊，選擇並輸入以下詳細資訊：
+1. 在&#x200B;_新增非生產管道_&#x200B;對話方塊中，選擇並輸入下列詳細資料：
 
    1. 設定步驟：
 
@@ -82,13 +82,13 @@ data:
 
       ![Cloud Manager設定管道對話方塊](./assets/cloud-manager-config-pipeline-step1-dialog.png)
 
-   2. 原始程式碼步驟：
+   2. Source程式碼步驟：
 
       - **要部署的程式碼**：目標部署
       - **包含**：設定
       - **部署環境**：您的環境名稱，例如wknd-program-dev。
-      - **存放庫**：管道應從中擷取程式碼的Git存放庫；例如， `wknd-site`
-      - **Git分支**：Git存放庫分支的名稱。
+      - **存放庫**：管道應從中擷取程式碼的Git存放庫；例如`wknd-site`
+      - **Git分支**： Git存放庫分支的名稱。
       - **程式碼位置**： `/config`，對應至上一步驟中建立的頂層設定資料夾。
 
       ![Cloud Manager設定管道對話方塊](./assets/cloud-manager-config-pipeline-step2-dialog.png)
@@ -97,11 +97,11 @@ data:
 
 若要測試規則，有多種可用的協力廠商工具，而且您的組織可能有偏好的工具。 出於示範目的，讓我們使用下列工具：
 
-- [Curl](https://curl.se/) 用於基本測試，例如叫用URL和檢查回應代碼。
+- [Curl](https://curl.se/)進行基本測試，例如叫用URL及檢查回應代碼。
 
-- [韋蓋塔](https://github.com/tsenart/vegeta) 執行拒絕服務(DOS)。 請依照的安裝指示，從 [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
+- [Vegeta](https://github.com/tsenart/vegeta)執行拒絕服務(DOS)。 遵循[Vegeta GitHub](https://github.com/tsenart/vegeta#install)的安裝指示。
 
-- [Nikto](https://github.com/sullo/nikto/wiki) 以找出潛在的問題和安全漏洞，例如XSS、SQL隱碼攻擊等。 請遵循的安裝指示，從 [Nikto GitHub](https://github.com/sullo/nikto).
+- [Nikto](https://github.com/sullo/nikto/wiki)尋找潛在的問題和安全性漏洞，例如XSS、SQL插入等。 遵循[Nikto GitHub](https://github.com/sullo/nikto)的安裝指示。
 
 - 執行下列命令，確認終端機已安裝並可以使用這些工具：
 
@@ -119,15 +119,15 @@ data:
 
 ### 使用儀表板工具分析結果
 
-建立、部署和測試規則後，您可以使用以下工具來分析結果 **CDN** 記錄檔和 **AEMCS-CDN-Log-Analysis-Tooling**. 工具提供一組控制面板，可將Splunk和ELK (Elasticsearch、Logstash和Kibana)棧疊的結果視覺化。
+建立、部署和測試規則之後，您可以使用&#x200B;**CDN**&#x200B;記錄檔和&#x200B;**AEMCS-CDN-Log-Analysis-Tooling**&#x200B;來分析結果。 工具提供一組控制面板，可將Splunk和ELK (Elasticsearch、Logstash和Kibana)棧疊的結果視覺化。
 
-工具可從以下位置複製： [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub存放庫。 然後，依照指示安裝並載入 **CDN流量儀表板** 和 **WAF控制面板** 控制面板作為您偏好的可觀察性工具。
+工具可從[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub存放庫複製。 然後，按照指示安裝和載入您慣用可觀察性工具的&#x200B;**CDN流量儀表板**&#x200B;和&#x200B;**WAF儀表板**&#x200B;儀表板。
 
-在本教學課程中，讓我們使用ELK棧疊。 請遵循 [AEMCS CDN記錄分析的ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) 設定ELK棧疊的指示。
+在本教學課程中，讓我們使用ELK棧疊。 遵循AEMCS CDN記錄分析的[ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md)指示來設定ELK棧疊。
 
 - 載入範例儀表板後，您的Elastic儀表板工具頁面應該如下所示：
 
-  ![ELK流量篩選規則控制面板](./assets/elk-dashboard.png)
+  ![ELK流量篩選規則儀表板](./assets/elk-dashboard.png)
 
 >[!NOTE]
 >
@@ -136,4 +136,4 @@ data:
 
 ## 下一步
 
-瞭解如何在中宣告流量篩選規則，包括WAF規則 [範例和結果分析](./examples-and-analysis.md) 章節，使用AEM WKND Sites專案。
+瞭解如何使用AEM WKND Sites專案在[範例和結果分析](./examples-and-analysis.md)章節中宣告包含WAF規則的流量篩選規則。

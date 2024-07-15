@@ -20,22 +20,22 @@ ht-degree: 0%
 
 # 設定環境變數
 
-![點環境檔案](assets/environment-variables/dot-env-file.png)
+![dot env檔案](assets/environment-variables/dot-env-file.png)
 
-在開始開發Asset compute工作者之前，請確保專案已設定Adobe I/O和雲端儲存空間資訊。 此資訊會儲存在專案的 `.env`  僅用於本機開發，不會儲存在Git中。 此 `.env` 檔案提供一種將索引鍵/值配對公開至本機Asset compute本機開發環境的便利方法。 時間 [部署](../deploy/runtime.md) 將背景工作Asset compute至Adobe I/O Runtime， `.env` 不會使用檔案，而是透過環境變數傳入值的子集。 其他自訂引數和秘密可以儲存在 `.env` 檔，例如協力廠商Web服務的開發認證。
+在開始開發Asset compute工作者之前，請確保專案已設定Adobe I/O和雲端儲存空間資訊。 此資訊儲存在專案的`.env`中，僅用於本機開發，不會儲存在Git中。 `.env`檔案提供一種便利的方法，將索引鍵/值配對公開至本機Asset compute本機開發環境。 將[部署](../deploy/runtime.md)Asset compute背景工作程式至Adobe I/O Runtime時，並未使用`.env`檔案，而是透過環境變數傳入值的子集。 其他自訂引數和密碼也可以儲存在`.env`檔案中，例如協力廠商Web服務的開發認證。
 
-## 參考 `private.key`
+## 參考`private.key`
 
 ![私密金鑰](assets/environment-variables/private-key.png)
 
-開啟 `.env` 檔案，取消註解 `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` 鍵，並提供檔案系統上至 `private.key` 和新增至Adobe I/OApp Builder專案的公開憑證配對。
+開啟`.env`檔案、取消註解`ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH`金鑰，然後提供檔案系統上與Adobe I/OApp Builder專案中新增的公開憑證配對的`private.key`的絕對路徑。
 
-+ 如果您的金鑰組是由Adobe I/O產生，則會作為  `config.zip`.
++ 如果您的金鑰組是由Adobe I/O產生，則會自動下載為`config.zip`的一部分。
 + 如果您提供公開金鑰來Adobe I/O，則您也應擁有相符的私密金鑰。
 + 如果您沒有這些金鑰組，可以在下方產生新的金鑰組或上傳新的公開金鑰：
   [https://console.adobe.com](https://console.adobe.io) >您的Asset computeApp Builder專案> Workspaces @開發>服務帳戶(JWT)。
 
-記住 `private.key` 不應將檔案簽入Git，因為它包含秘密，而應儲存在專案外部的安全位置。
+請記住，不應將`private.key`檔案簽入Git，因為它包含秘密，而應儲存在專案外部的安全位置。
 
 例如，在macOS上，這可能如下所示：
 
@@ -47,19 +47,19 @@ ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=/Users/example-user/credentials/aem-guides-w
 
 ## 設定雲端儲存空間認證
 
-asset compute工作者的本機開發需要存取 [雲端儲存空間](../set-up/accounts-and-services.md#cloud-storage). 用於本機開發的雲端儲存空間憑證提供在 `.env` 檔案。
+asset compute背景工作程式的本機開發需要存取[雲端儲存空間](../set-up/accounts-and-services.md#cloud-storage)。 `.env`檔案中提供用於本機開發的雲端儲存空間認證。
 
-本教學課程偏好使用Azure Blob儲存體，但Amazon S3及其在中的對應索引鍵 `.env` 可改用檔案。
+本教學課程偏好使用Azure Blob儲存體，但可以改用Amazon S3及其`.env`檔案中的對應金鑰。
 
 ### 使用Azure Blob儲存體
 
-取消註解並填入下列索引鍵 `.env` 並以Azure入口網站上提供的雲端儲存空間值填入。
+在`.env`檔案中取消註解並填入下列金鑰，然後以Azure入口網站上提供的雲端儲存空間值填入。
 
 ![Azure Blob儲存體](./assets/environment-variables/azure-portal-credentials.png)
 
-1. 的值 `AZURE_STORAGE_CONTAINER_NAME` key
-1. 的值 `AZURE_STORAGE_ACCOUNT` key
-1. 的值 `AZURE_STORAGE_KEY` key
+1. `AZURE_STORAGE_CONTAINER_NAME`鍵的值
+1. `AZURE_STORAGE_ACCOUNT`鍵的值
+1. `AZURE_STORAGE_KEY`鍵的值
 
 例如，其外觀可能類似（值僅供圖解之用）：
 
@@ -71,15 +71,15 @@ AZURE_STORAGE_CONTAINER_NAME=asset-compute
 ...
 ```
 
-結果 `.env` 檔案如下所示：
+結果`.env`檔案如下所示：
 
 ![Azure Blob儲存體認證](assets/environment-variables/cloud-storage-credentials.png)
 
-如果您未使用Microsoft Azure Blob儲存體，請移除或保留這些註解(在前面加上 `#`)。
+如果您未使用Microsoft Azure Blob儲存體，請移除或保留這些註解（以`#`為前置詞）。
 
 ### 使用Amazon S3雲端儲存空間{#amazon-s3}
 
-如果您正在使用Amazon S3雲端儲存空間，請取消註解並填入 `.env` 檔案。
+如果您正在使用Amazon S3雲端儲存空間，請取消註解並在`.env`檔案中填入下列金鑰。
 
 例如，其外觀可能類似（值僅供圖解之用）：
 
@@ -94,7 +94,7 @@ AWS_REGION=us-east-1
 
 ## 驗證專案設定
 
-設定產生的Asset compute專案後，請先驗證設定，然後再進行程式碼變更，以確保在中布建支援服務。 `.env` 檔案。
+設定產生的Asset compute專案後，請在變更程式碼之前驗證設定，以確保在`.env`檔案中布建支援服務。
 
 若要啟動Asset compute專案的Asset compute開發工具：
 
@@ -104,12 +104,12 @@ AWS_REGION=us-east-1
    $ aio app run
    ```
 
-1. 本機Asset compute開發工具將在您的預設Web瀏覽器中開啟： __http://localhost:9000__.
+1. 本機Asset compute開發工具將在您的預設網頁瀏覽器中開啟，網址為&#x200B;__http://localhost:9000__。
 
    ![aio應用程式執行](assets/environment-variables/aio-app-run.png)
 
 1. 在開發工具初始化時，請觀察命令列輸出和網頁瀏覽器中的錯誤訊息。
-1. 若要停止「Asset compute開發工具」，請點選 `Ctrl-C` 在執行的視窗中 `aio app run` 以終止程式。
+1. 若要停止Asset compute開發工具，請在執行`aio app run`的視窗中點選`Ctrl-C`以終止處理序。
 
 ## 疑難排解
 

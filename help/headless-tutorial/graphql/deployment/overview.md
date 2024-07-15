@@ -26,17 +26,17 @@ AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、�
 
 ## AEM服務架構
 
-在探索部署考量之前，必須瞭解AEM邏輯架構，以及AEMas a Cloud Service服務層的分離和角色。 AEMas a Cloud Service由兩個邏輯服務組成：
+在探索部署考量之前，必須瞭解AEM的邏輯架構，以及AEM as a Cloud Service服務層的分離和角色。 AEM as a Cloud Service由兩個邏輯服務組成：
 
-+ __AEM作者__ 是團隊建立、共同作業和發佈內容片段（和其他資產）的服務。
-+ __AEM發佈__ 是已發佈的服務。內容片段（和其他資產）會復寫以供一般使用。
-+ __AEM預覽__ 此服務會模擬AEM Publish的行為，但發佈內容給它，以供預覽或檢閱。 AEM預覽適用於內部對象，而非一般內容傳送。 根據所需的工作流程，使用AEM預覽是選用的。
++ __AEM Author__&#x200B;是團隊建立、共同作業和發佈內容片段（及其他資產）的服務。
++ __AEM Publish__&#x200B;是已發佈的服務。內容片段（和其他資產）會復寫以供一般使用。
++ __AEM Preview__&#x200B;是模擬AEM Publish行為的服務，但發佈內容給它以供預覽或檢閱。 AEM預覽適用於內部對象，而非一般內容傳送。 根據所需的工作流程，使用AEM預覽是選用的。
 
 ![AEM服務架構](./assets/overview/aem-service-architecture.png)
 
-典型AEMas a Cloud Service無周邊部署架構_
+典型AEM as a Cloud Service headless部署架構_
 
-以生產容量作業的AEM Headless使用者端通常會與AEM Publish （其中包含已核准的已發佈內容）互動。 與AEM Author互動的使用者端需要特別小心，因為AEM Author預設是安全的，所有請求都需要授權，並且可能還包含進行中的工作或未核准的內容。
+以生產容量作業的AEM Headless使用者端通常會與AEM Publish （其中包含已核准且已發佈的內容）互動。 與AEM Author互動的使用者端需要特別小心，因為AEM Author預設是安全的，所有請求都需要授權，並且可能還包含進行中的工作或未核准的內容。
 
 ## Headless使用者端部署
 
@@ -56,7 +56,7 @@ AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、�
                    <p class="headline is-size-6 has-text-weight-bold"><a href="./spa.md" title="單頁應用程式(SPA)">單頁應用程式(SPA)</a></p>
                    <p class="is-size-6">瞭解單頁應用程式(SPA)的部署考量事項。</p>
                    <a href="./spa.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解</span>
+                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">學習</span>
                    </a>
                </div>
            </div>
@@ -75,9 +75,9 @@ AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、�
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="./web-component.md" title="Web元件/JS">Web元件/JS</a></p>
-               <p class="is-size-6">瞭解Web元件和瀏覽器型JavaScript Headless使用者的部署考量事項。</p>
+               <p class="is-size-6">瞭解Web元件和瀏覽器型JavaScript Headless消費者的部署考量事項。</p>
                <a href="./web-component.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">學習</span>
                </a>
            </div>
        </div>
@@ -98,7 +98,7 @@ AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、�
                <p class="headline is-size-6 has-text-weight-bold"><a href="./mobile.md" title="行動應用程式">行動應用程式</a></p>
                <p class="is-size-6">瞭解行動應用程式的部署考量事項。</p>
                <a href="./mobile.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">學習</span>
                </a>
            </div>
        </div>
@@ -119,7 +119,7 @@ AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、�
                <p class="headline is-size-6 has-text-weight-bold"><a href="./server-to-server.md" title="伺服器對伺服器應用程式">伺服器對伺服器應用程式</a></p>
                <p class="is-size-6">瞭解伺服器對伺服器應用程式的部署注意事項</p>
                <a href="./server-to-server.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">學習</span>
                </a>
            </div>
        </div>

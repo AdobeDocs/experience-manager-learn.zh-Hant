@@ -17,12 +17,12 @@ ht-degree: 1%
 
 # 在您的系統上測試此功能
 
-[下載此套件並將其匯入至AEM](assets/acro-form-aem-form.zip)
+[下載此封裝並匯入AEM](assets/acro-form-aem-form.zip)
 此套件包含範例工作流程和html頁面，可讓您從上傳的Acroform建立結構。
 
 ## 設定工作流程
 
-1. [在編輯模式下開啟工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/MergeAcroformData.html).
+1. [在編輯模式中開啟工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/MergeAcroformData.html)。
 2. 開啟MergeAcroformData步驟的設定屬性。
 3. 按一下「處理」標籤。
 4. 請確定您傳送的引數是伺服器上的有效資料夾。
@@ -33,7 +33,7 @@ ht-degree: 1%
 1. 使用先前步驟建立的結構描述建立調適型表單。
 2. 將一些結構描述元素拖放到最適化表單上。
 3. 設定最適化表單的提交動作，以提交至AEM工作流程(MergeAcroformData)。
-4. **請務必指定資料檔案路徑為「Data.xml」。 這非常重要，因為範常式式碼會在工作流程裝載中尋找名為Data.xml的檔案。**
+4. **請確定您指定資料檔路徑為「Data.xml」。 這非常重要，因為範常式式碼會在工作流程裝載中尋找名為Data.xml的檔案。**
 5. 預覽最適化表單、填寫表單並提交。
 6. 您應該會在設定工作流程下，看到與已合併儲存至步驟4中所指定資料夾的資料進行PDF
 

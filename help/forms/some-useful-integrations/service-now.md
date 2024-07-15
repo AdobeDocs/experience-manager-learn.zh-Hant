@@ -1,5 +1,5 @@
 ---
-title: 整合 [!DNL ServiceNow]
+title: 與 [!DNL ServiceNow]整合
 description: 使用表單資料模型建立並顯示所有未預期事件。
 feature: Adaptive Forms
 version: 6.4,6.5
@@ -17,32 +17,32 @@ ht-degree: 0%
 
 ---
 
-# 將AEM Forms與整合 [!DNL ServiceNow]
+# 將AEM Forms與[!DNL ServiceNow]整合
 
-在中建立和顯示事件 [!DNL ServiceNow] 使用AEM Forms中的表單資料模型。
+使用AEM Forms中的表單資料模型在[!DNL ServiceNow]中建立和顯示事件。
 
 ## 先決條件
 
-* [!DNL ServiceNow] 帳戶。
-* 熟悉 [建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
-* 熟悉 [表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)
+* [!DNL ServiceNow]帳戶。
+* 熟悉[建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
+* 熟悉[表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)
 
-## 資產範例
+## Assets範例
 
 本文提供的範例資產包括
 
 * 雲端服務設定
-* Swagger檔案以建立事件並擷取所有事件
+* Swagger檔案以建立事件並擷取全部   事件
 * 以Swagger檔案為基礎的表單資料模型
-* 要建立和清單的最適化表單 [!DNL ServiceNow] 事件
+* 用於建立和列出[!DNL ServiceNow]個事件的最適化表單
 
 ## 在您的伺服器上部署資產
 
-* 下載 [資產範例](assets/service-now.zip)
-* 使用將資產匯入AEM [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
-* 用於這項整合的swagger檔案位於 ```/conf/9957/settings/cloudconfigs/fdm``` crx存放庫中的資料夾
-* 編輯 [CreateIncident雲端服務設定](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)以符合您的ServiceNow執行個體。
-* 編輯 [GetAllIncidents雲端服務設定](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) 以符合您的ServiceNow執行個體。 您需要變更主機、使用者名稱和密碼，以符合您的ServiceNow執行個體認證。
+* 下載[範例資產](assets/service-now.zip)
+* 使用[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)將資產匯入AEM
+* 用於此整合的swagger檔案位於crx存放庫中的```/conf/9957/settings/cloudconfigs/fdm```資料夾下
+* 編輯[CreateIncident雲端服務設定](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)以符合您的ServiceNow執行個體。
+* 編輯[GetAllIncidents雲端服務設定](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents)以符合您的ServiceNow執行個體。 您需要變更主機、使用者名稱和密碼，以符合您的ServiceNow執行個體認證。
 
 ## 存取ServiceNow執行個體認證
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 * 按一下管理執行處理密碼
 * 執行個體詳細資訊如下所示
-  ![執行個體詳細資訊](assets/snow-3.png)
+  ![執行個體詳細資料](assets/snow-3.png)
 
 ## 測試整合
 

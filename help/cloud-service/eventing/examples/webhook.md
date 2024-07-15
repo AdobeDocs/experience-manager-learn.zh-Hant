@@ -25,51 +25,51 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
 
-在此範例中，利用Adobe提供的 _託管webhook_ 可讓您接收AEM事件，而不需要設定自己的webhook。 此Adobe提供的webhook託管於 [故障](https://glitch.com/)，此平台以提供Web式環境而聞名，有助於建置和部署Web應用程式。 不過，您也可以選擇使用您自己的webhook選項（若偏好使用）。
+在此範例中，利用Adobe提供的&#x200B;_託管webhook_&#x200B;可讓您接收AEM事件，而不需要設定您自己的webhook。 此Adobe提供的webhook託管於[Glitch](https://glitch.com/)，這個平台以提供有助於建置和部署Web應用程式的網頁式環境而聞名。 不過，您也可以選擇使用您自己的webhook選項（若偏好使用）。
 
 ## 先決條件
 
 若要完成本教學課程，您需要：
 
-- AEMas a Cloud Service環境搭配 [AEM事件已啟用](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
+- 已啟用[AEM事件的AEM as a Cloud Service環境](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)。
 
-- [為AEM事件設定的Adobe Developer Console專案](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
+- 已為AEM事件設定[Adobe Developer Console專案](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console)。
 
 >[!IMPORTANT]
 >
->AEMas a Cloud Service事件僅適用於搶鮮版模式的註冊使用者。 若要在您的AEMas a Cloud Service環境中啟用AEM事件，請聯絡 [AEM-Eventing團隊](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Service事件僅適用於搶鮮版模式的註冊使用者。 若要在您的AEM as a Cloud Service環境中啟用AEM事件，請連絡[AEM-Eventing團隊](mailto:grp-aem-events@adobe.com)。
 
 ## 存取webhook
 
 若要存取Adobe提供的webhook，請按照以下步驟操作：
 
-- 確認您可存取 [問題 — 託管的webhook](https://lovely-ancient-coaster.glitch.me/) 在新的瀏覽器標籤中。
+- 確認您可以在新的瀏覽器分頁中存取[問題 — 託管的webhook](https://lovely-ancient-coaster.glitch.me/)。
 
   ![問題 — 託管的webhook](../assets/examples/webhook/glitch-hosted-webhook.png)
 
-- 輸入webhook的唯一名稱，例如 `<YOUR_PETS_NAME>-aem-eventing` 並按一下 **連線**. 您應該會看到 `Connected to: ${YOUR-WEBHOOK-URL}` 訊息出現在畫面上。
+- 輸入您webhook的唯一名稱，例如`<YOUR_PETS_NAME>-aem-eventing`，然後按一下&#x200B;**連線**。 您應該會看到`Connected to: ${YOUR-WEBHOOK-URL}`訊息出現在畫面上。
 
   ![問題 — 建立webhook](../assets/examples/webhook/glitch-create-webhook.png)
 
-- 記下 **Webhook URL**. 在本教學課程的後半部分，您會用到它。
+- 記下&#x200B;**Webhook URL**。 在本教學課程的後半部分，您會用到它。
 
-## 在Adobe Developer主控台專案中設定webhook
+## 在Adobe Developer Console專案中設定webhook
 
 若要在上述webhook URL上接收AEM活動，請按照以下步驟操作：
 
-- 在 [Adobe Developer Console](https://developer.adobe.com)，導覽至您的專案，然後按一下以開啟專案。
+- 在[Adobe Developer Console](https://developer.adobe.com)中，導覽至您的專案並按一下以開啟專案。
 
-- 在 **產品與服務** 部分，按一下省略符號 `...` 位於所需事件卡片旁，該卡片應將AEM事件傳送至webhook並選取 **編輯**.
+- 在&#x200B;**產品與服務**&#x200B;區段下，按一下應將AEM事件傳送至webhook之所需事件卡片旁的省略符號`...`，並選取&#x200B;**編輯**。
 
   ![Adobe Developer Console專案編輯](../assets/examples/webhook/adobe-developer-console-project-edit.png)
 
-- 在新開啟的 **設定事件註冊** 對話方塊，按一下 **下一個** 以繼續前往 **如何接收事件** 步驟。
+- 在新開啟的&#x200B;**設定事件註冊**&#x200B;對話方塊中，按一下&#x200B;**下一步**&#x200B;以繼續進行&#x200B;**如何接收事件**&#x200B;步驟。
 
-  ![Adobe Developer主控台專案設定](../assets/examples/webhook/adobe-developer-console-project-configure.png)
+  ![Adobe Developer Console專案設定](../assets/examples/webhook/adobe-developer-console-project-configure.png)
 
-- 在 **如何接收事件** 步驟，選取 **Webhook** 並貼上 **Webhook URL** 您先前從Glitch託管的webhook中複製，然後按一下 **儲存已設定的事件**.
+- 在&#x200B;**如何接收事件**&#x200B;步驟中，選取&#x200B;**Webhook**&#x200B;選項並貼上您先前從Glitch託管的Webhook複製的&#x200B;**Webhook URL**，然後按一下&#x200B;**儲存已設定的事件**。
 
-  ![Adobe Developer主控台專案Webhook](../assets/examples/webhook/adobe-developer-console-project-webhook.png)
+  ![Adobe Developer Console專案Webhook](../assets/examples/webhook/adobe-developer-console-project-webhook.png)
 
 - 在Glitch Webook頁面中，您應該會看到GET請求，這是Adobe I/O事件傳送以驗證webhook URL的挑戰請求。
 
@@ -78,11 +78,11 @@ ht-degree: 0%
 
 ## 觸發AEM事件
 
-若要從已在上述Adobe Developer Console專案中註冊的AEMas a Cloud Service環境觸發AEM事件，請遵循下列步驟：
+若要從已在上述AEM as a Cloud Service專案中註冊的Adobe Developer Console環境觸發AEM事件，請遵循下列步驟：
 
-- 透過存取和登入您的AEMas a Cloud Service作者環境 [Cloud Manager](https://my.cloudmanager.adobe.com/).
+- 透過[Cloud Manager](https://my.cloudmanager.adobe.com/)存取並登入您的AEM as a Cloud Service作者環境。
 
-- 根據您的 **訂閱的事件**、建立、更新、刪除、發佈或取消發佈內容片段。
+- 根據您的&#x200B;**訂閱事件**，建立、更新、刪除、發佈或取消發佈內容片段。
 
 ## 檢閱事件詳細資料
 
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 以下是POST請求的主要詳細資料：
 
-- 路徑： `/webhook/${YOUR-WEBHOOK-URL}`，例如 `/webhook/AdobeTM-aem-eventing`
+- 路徑： `/webhook/${YOUR-WEBHOOK-URL}`，例如`/webhook/AdobeTM-aem-eventing`
 
 - 標頭：由Adobe I/O事件傳送的請求標頭，例如：
 
@@ -154,8 +154,8 @@ ht-degree: 0%
 }
 ```
 
-您可以看到AEM事件詳細資料具有在webhook中處理事件所需的所有必要資訊。 例如，事件型別(`type`)，事件來源(`source`)，事件id (`event_id`)，事件時間(`time`)和事件資料(`data`)。
+您可以看到AEM事件詳細資料具有在webhook中處理事件所需的所有必要資訊。 例如，事件型別(`type`)、事件來源(`source`)、事件識別碼(`event_id`)、事件時間(`time`)和事件資料(`data`)。
 
 ## 其他資源
 
-- [Webhook原始碼問題](https://glitch.com/edit/#!/lovely-ancient-coaster) 可供參考。
+- [Glitch webhook原始程式碼](https://glitch.com/edit/#!/lovely-ancient-coaster)可供參考。

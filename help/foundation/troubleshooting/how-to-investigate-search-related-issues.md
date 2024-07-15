@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 如何調查AEM中搜尋的相關問題
 
-*本影片逐步解說在AEM中調查搜尋相關問題的步驟。*
+*此影片會逐步說明在AEM中調查搜尋相關問題的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335467?quality=12&learn=on)

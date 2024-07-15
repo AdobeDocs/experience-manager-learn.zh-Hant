@@ -31,9 +31,9 @@ ht-degree: 0%
 
 - Universal Editor的簡短概述
 - 設定本機開發環境
-   - **AEM SDK**：它會使用GraphQL API為React應用程式提供內容片段中儲存的內容。
+   - **AEM SDK**：它使用GraphQL API為React應用程式提供儲存在內容片段中的內容。
    - **React應用程式**：顯示AEM內容的簡單使用者介面。
-   - **Universal Editor服務**：a _Universal Editor服務的本機副本_ 該工具會繫結通用編輯器和AEM SDK。
+   - **通用編輯器服務**：繫結通用編輯器和AEM SDK的通用編輯器服務&#x200B;_的_&#x200B;本機復本。
 - 如何使用通用編輯器檢測React應用程式以編輯內容
 - 如何使用通用編輯器編輯React應用程式內容
 
@@ -50,14 +50,14 @@ Universal Editor可讓內容作者和開發人員（前端和後端）檢視一�
 
 ## 範例React應用程式
 
-本教學課程使用 [**WKND團隊**](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#react-app---basic-tutorial---teampersons) 作為範例React應用程式。 此 **WKND團隊** React應用程式會顯示團隊成員及其詳細資訊的清單。
+本教學課程使用&#x200B;[**WKND Teams**](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#react-app---basic-tutorial---teampersons)作為範例React應用程式。 **WKND Teams** React應用程式會顯示團隊成員清單及其詳細資料。
 
-標題、說明和專案團隊成員等專案團隊詳細資料會儲存為 _團隊_ AEM中的內容片段。 同樣地，姓名、履歷和個人資料圖片等個人詳細資料也會儲存為 _個人_ AEM中的內容片段。
+標題、說明和團隊成員等團隊詳細資料會在AEM中儲存為&#x200B;_團隊_&#x200B;內容片段。 同樣地，個人詳細資訊（例如姓名、履歷和設定檔圖片）會在AEM中儲存為&#x200B;_個人_&#x200B;內容片段。
 
-React應用程式的內容由AEM使用GraphQL API提供，使用者介面是使用兩個React元件所建置。 `Teams` 和 `Person`.
+AEM使用GraphQL API來提供React應用程式的內容，而使用者介面是使用兩個React元件`Teams`和`Person`所建置。
 
-對應的教學課程可協助您瞭解如何建立 **WKND團隊** React應用程式。 您可以找到教學課程 [此處](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview).
+有對應的教學課程可學習如何建立&#x200B;**WKND Teams** React應用程式。 您可以在[這裡](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview)找到教學課程。
 
 ## 下一步
 
-瞭解如何 [設定本機開發環境](./local-development-setup.md).
+瞭解如何[設定本機開發環境](./local-development-setup.md)

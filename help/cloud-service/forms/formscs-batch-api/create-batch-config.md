@@ -22,7 +22,7 @@ ht-degree: 0%
 若要使用批次API，請建立批次設定，並根據該設定執行執行。 以下影片示範如何使用API建立批次組態
 
 >[!NOTE]
->請確定AEM使用者屬於 ```forms-users``` 群組進行API呼叫。
+>請確定AEM使用者屬於```forms-users```群組，以進行API呼叫。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/340241?quality=12&learn=on)

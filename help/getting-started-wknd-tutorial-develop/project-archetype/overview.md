@@ -25,9 +25,9 @@ ht-degree: 28%
 
 歡迎使用專為Adobe Experience Manager (AEM)的新手開發人員設計的多部分教學課程。 此教學課程會逐步引導您實施虛擬生活風格品牌WKND的AEM網站。
 
-本教學課程從使用開始 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 以產生新專案。
+此教學課程從使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)產生新專案開始。
 
-此教學課程在設計上將使用 **AEMas a Cloud Service** 並且與回溯相容 **AEM 6.5.14+**. 使用以下項目實作網站：
+此教學課程在設計上使用&#x200B;**AEM as a Cloud Service**，並且回溯相容於&#x200B;**AEM 6.5.14+**。 使用以下項目實作網站：
 
 * [Maven AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
@@ -40,20 +40,20 @@ ht-degree: 28%
 
 ## 本機開發環境 {#local-dev-environment}
 
-本機開發環境是完成此教學課程不可或缺的條件。熒幕截圖和影片都是使用在macOS環境中執行的AEMas a Cloud ServiceSDK擷取，並搭配使用 [Visual Studio Code](https://code.visualstudio.com/) 作為IDE。 除非另有註明，否則命令和程式碼應不受本機作業系統的限制。
+本機開發環境是完成此教學課程不可或缺的條件。熒幕擷取畫面和視訊是使用在macOS環境上執行的AEM as a Cloud Service SDK擷取，並將[Visual Studio Code](https://code.visualstudio.com/)當做IDE使用。 除非另有註明，否則命令和程式碼應不受本機作業系統的限制。
 
 ### 必要的軟體
 
 下列專案應在本機安裝：
 
-* [本機AEM **作者** 例項](https://experience.adobe.com/#/downloads) (Cloud Service SDK或6.5.14+)
+* [本機AEM **作者**&#x200B;執行個體](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK或6.5.14+)
 * [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 或更新版本)
 * [Node.js](https://nodejs.org/en/) （LTS — 長期支援）
 * [npm 6+](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
-* [Visual Studio Code](https://code.visualstudio.com/) 或同等的IDE
-   * [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  — 教學課程中使用的工具
+* [Visual Studio Code](https://code.visualstudio.com/)或同等的IDE
+   * [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) — 教學課程中使用的工具
 
 >[!NOTE]
 >
@@ -71,4 +71,4 @@ ht-degree: 28%
 
 ## 後續步驟 {#next-steps}
 
-您還在等什麼？ 導覽至「 」以開始本教學課程 [專案設定](project-setup.md) 章節，並瞭解如何使用AEM專案原型產生新的Adobe Experience Manager專案。
+您還在等什麼？ 導覽至[專案設定](project-setup.md)章節，開始進行教學課程，並瞭解如何使用AEM專案原型產生新的Adobe Experience Manager專案。

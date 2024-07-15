@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # 建立自訂設定檔
 
-在本部分中，我們將建立 [自訂設定檔。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) 設定檔負責將XDP轉譯為HTML。 提供立即可用的預設設定檔，用於將XDP轉譯為HTML。 它代表自訂版的Mobile Forms轉譯服務。 您可以使用Mobile Form Rendition服務來自訂Mobile Forms的外觀、行為和互動。 在我們的自訂設定檔中，我們將使用Guidelbridge API擷取填入行動表單的資料。 然後，這些資料會傳送到自訂servlet，接著會產生互動式PDF，並將其串流回呼叫的應用程式。
+在本部分中，我們將建立[自訂設定檔。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)設定檔負責將XDP轉譯為HTML。 提供立即可用的預設設定檔，用於將XDP轉譯為HTML。 它代表自訂版的Mobile Forms轉譯服務。 您可以使用Mobile Form Rendition服務來自訂Mobile Forms的外觀、行為和互動。 在我們的自訂設定檔中，我們將使用Guidelbridge API擷取填入行動表單的資料。 然後，這些資料會傳送到自訂servlet，接著會產生互動式PDF，並將其串流回呼叫的應用程式。
 
-使用取得表單資料 `formBridge` JavaScript API。 我們利用 `getDataXML()` 方法：
+使用`formBridge` JavaScript API取得表單資料。 我們使用`getDataXML()`方法：
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});
@@ -59,7 +59,7 @@ var suc = function(obj) {
 
 ## 產生互動式PDF
 
-以下是servlet程式碼，負責呈現互動式pdf並將pdf傳回給呼叫的應用程式。 此servlet會叫用 `mobileFormToInteractivePdf` 自訂DocumentServices OSGi服務的方法。
+以下是servlet程式碼，負責呈現互動式pdf並將pdf傳回給呼叫的應用程式。 此servlet會叫用自訂DocumentServices OSGi服務的`mobileFormToInteractivePdf`方法。
 
 ```java
 import java.io.File;
@@ -121,7 +121,7 @@ public class GenerateInteractivePDF extends SlingAllMethodsServlet {
 
 ### 呈現互動式PDF
 
-下列程式碼會使用 [Forms服務API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) 以使用行動表單中的資料呈現互動式PDF。
+下列程式碼會使用[Forms服務API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html)，以使用行動表單中的資料來呈現互動式PDF。
 
 ```java
 public Document mobileFormToInteractivePdf(Document xmlData,String path) {
@@ -144,7 +144,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-若要檢視從部分完成的行動表單下載互動式PDF的功能， [請按這裡](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content).
+若要檢視從部分完成的行動表單下載互動式PDF的功能，[請按一下這裡](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content)。
 下載PDF後，下一步就是提交PDF以觸發AEM工作流程。 此工作流程將合併來自已提交PDF的資料，並產生非互動式PDF以供檢閱。
 
 針對此使用案例建立的自訂設定檔可作為本教學課程資產的一部分使用。

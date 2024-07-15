@@ -27,14 +27,15 @@ ht-degree: 7%
 
 ## 建立環境變數
 
-可以透過 Cloud Manager 設定和管理標準環境變數。它們提供給執行階段環境並且可以在 OSGi 設定中使用。[環境變數可以是特定環境的值或環境秘密，具體取決於變更的內容。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+可以透過 Cloud Manager 設定和管理標準環境變數。它們提供給執行階段環境並且可以在 OSGi 設定中使用。[根據正在變更的內容，環境變數可以是特定環境的值或環境秘密。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
 
 
 
 以下熒幕擷取畫面顯示定義的azure_key和azure_connection_string環境變數
-![environment_variable](assets/environment-variables.png)
+![environment_variables](assets/environment-variables.png)
 
-然後，可以在要用於適當環境的設定檔案中指定這些環境變數。例如，如果您希望所有作者執行個體都使用這些環境變數，您將在config.author資料夾中定義設定檔案，如下所示
+然後，您便可以在組態檔中指定這些環境變數，以便在適當的環境中使用
+例如，如果您希望您的所有作者執行個體都使用這些環境變數，您將會在config.author資料夾中定義設定檔案，如下所示
 
 ## 建立組態檔
 
@@ -46,7 +47,7 @@ org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integr
 
 ![config.author](assets/config-author.png)
 
-將下列文字複製到您在上一步建立的檔案中。 此檔案中的程式碼會以環境變數覆寫accountName和accountKey屬性的值 **azure_connection_string** 和 **azure_key**.
+將下列文字複製到您在上一步建立的檔案中。 此檔案中的程式碼正在使用環境變數&#x200B;**azure_connection_string**&#x200B;和&#x200B;**azure_key**&#x200B;覆寫accountName和accountKey屬性的值。
 
 ```json
 {
@@ -66,7 +67,7 @@ org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-integr
 >[!NOTE]
 > 請確定正在覆寫的屬性是雲端設定的有效屬性。 導覽至雲端設定，以尋找您要覆寫的屬性，如下所示。
 
-![cloud-config-property](assets/cloud-config-properties.png)
+![雲端設定屬性](assets/cloud-config-properties.png)
 
 對於具有基本驗證的REST型雲端設定，您通常會想要為serviceEndPoint、userName和密碼屬性建立環境變數。
 

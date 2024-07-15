@@ -8,13 +8,13 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15752
-source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
+exl-id: 6f2b280d-c2b5-4b75-88e4-2296329d69e7
+source-git-commit: a12b1778413079646814cb25567abfc26a429340
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 2%
 
 ---
-
 
 # 設定開發環境
 
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 [建立Maven專案](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started)
 
-[安裝IntelliJ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up)  — 您可以略過在本教學課程中新增字型模組。
+[安裝IntelliJ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up) — 您可以略過在本教學課程中新增字型模組。
 
 [初始化Git](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git)
 
@@ -31,4 +31,3 @@ ht-degree: 2%
 ## 後續步驟
 
 [建立地址元件](./creating-address-component.md)
-

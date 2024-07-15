@@ -37,7 +37,7 @@ ht-degree: 0%
 
 * 選取「鉛筆」圖示以編輯預設文字。
 
-* 將預設文字取代為&quot;**您的退休收入展望」**
+* 將預設文字取代為&#x200B;**您的退休收入展望**
 
 **設定RightPanel目標區域**
 
@@ -49,23 +49,23 @@ ht-degree: 0%
 
 * 選取「鉛筆」圖示以編輯預設文字。
 
-* 將預設文字取代為&quot;**預估每月退休收入」**
+* 將預設文字取代為「**預估月薪退休收入」**
 
 ## 新增退休收入Outlook檔案片段 {#add-retirement-income-outlook-document-fragment}
 
-* 按一下「資產」圖示並套用篩選器，以顯示「檔案片段」型別的資產。 將RetirationIncomeOutlook檔案片段拖放至[左面板]目標區域。
+* 按一下Assets圖示並套用篩選器，以顯示「檔案片段」型別的資產。 將RetirationIncomeOutlook檔案片段拖放至[左面板]目標區域。
 
-* 您可以參閱 [至此頁面](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) 將檔案片段新增到內容區域時。
+* 新增檔案片段至內容區域時，您可以參考[此頁面](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html)。
 
 ## 新增預估月收入圖表 {#adding-estimated-monthly-income-chart}
 
 * 按一下右側的RightPanel目標區域。 按一下「+」圖示以插入圖表元件。 我們將使用直條圖來顯示預估的每月收入。 輕輕點選新插入的圖表元件。 選取「扳手」圖示以開啟設定屬性表。使用下列屬性設定圖表，如下方熒幕擷圖所示。
 
-**AEM Forms 6.4 — 設定預估月收入直條圖**
+**AEM Forms 6.4 — 設定預估月收入資料行圖表**
 
-![form64](assets/estimatedmonthlyincomechart.png)
+![表單64](assets/estimatedmonthlyincomechart.png)
 
-**AEM Forms 6.5 — 設定預估月收入直條圖**
+**AEM Forms 6.5 — 設定預估月收入資料行圖表**
 
 ![forms65](assets/estimatedmonthlyincomechart65.PNG)
 

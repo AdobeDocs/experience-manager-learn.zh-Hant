@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # 更新完整棧疊AEM專案以使用前端管道 {#update-project-enable-frontend-pipeline}
 
-在本章中，我們對 __WKND網站專案__ 使用前端管道來部署JavaScript和CSS，而不需要完整的完整棧疊管道執行。 這會分離前端和後端成品的開發和部署生命週期，讓整體開發流程更快速、反覆無常。
+在本章中，我們會對&#x200B;__WKND Sites專案__&#x200B;進行設定變更，以使用前端管道來部署JavaScript和CSS，而不是要求完全的完整棧疊管道執行。 這會分離前端和後端成品的開發和部署生命週期，讓整體開發流程更快速、反覆無常。
 
 ## 目標 {#objectives}
 
@@ -34,16 +34,16 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-此教學課程包含多個部分，並假設您已檢閱 [&#39;ui.frontend&#39;模組](./review-uifrontend-module.md).
+此教學課程包含多個部分，並假設您已檢閱[&#39;ui.frontend&#39;模組](./review-uifrontend-module.md)。
 
 
 ## 完整棧疊AEM專案的變更
 
 有三個與專案相關的設定變更和一個要針對測試回合部署的樣式變更，因此在WKND專案中總共有四個特定變更，以便為前端管道合約啟用它。
 
-1. 移除 `ui.frontend` 來自完整棧疊建置週期的模組
+1. 從完整棧疊建置週期移除`ui.frontend`模組
 
-   * 在中，WKND Sites專案的根 `pom.xml` 註解 `<module>ui.frontend</module>` 子模組專案。
+   * 在中，WKND Sites專案的根`pom.xml`註解`<module>ui.frontend</module>`子模組專案。
 
    ```xml
        ...
@@ -57,7 +57,7 @@ ht-degree: 0%
        ...
    ```
 
-   * 和註解相關的相依性 `ui.apps/pom.xml`
+   * 和來自`ui.apps/pom.xml`的註解相關相依性
 
    ```xml
        ...
@@ -76,9 +76,9 @@ ht-degree: 0%
        ...
    ```
 
-1. 準備 `ui.frontend` 用於前端管道合約的模組，其方式為新增兩個新的webpack設定檔案。
+1. 新增兩個新的Webpack設定檔，為前端管道合約準備`ui.frontend`模組。
 
-   * 複製現有的 `webpack.common.js` 作為 `webpack.theme.common.js`，並變更 `output` 屬性和 `MiniCssExtractPlugin`， `CopyWebpackPlugin` 外掛程式設定引數如下：
+   * 將現有的`webpack.common.js`復製為`webpack.theme.common.js`，並變更`output`屬性和`MiniCssExtractPlugin`、`CopyWebpackPlugin`外掛程式設定引數，如下所示：
 
    ```javascript
    ...
@@ -100,7 +100,7 @@ ht-degree: 0%
    ...
    ```
 
-   * 複製現有的 `webpack.prod.js` 作為 `webpack.theme.prod.js`，並變更 `common` 變數在上述檔案中的位置為
+   * 將現有的`webpack.prod.js`復製為`webpack.theme.prod.js`，並將`common`變數的位置變更為上述檔案為
 
    ```javascript
    ...
@@ -117,7 +117,7 @@ ht-degree: 0%
    >您可以自行命名或組織這些欄位。
 
 
-   * 在 `package.json` 檔案，確認  `name` 屬性值與的網站名稱相同。 `/conf` 節點。 在 `scripts` 屬性， a `build` 指令碼，說明如何從此模組建置前端檔案。
+   * 在`package.json`檔案中，確定`name`屬性值與`/conf`節點的網站名稱相同。 在`scripts`屬性下，指示如何從此模組建置前端檔案的`build`指令碼。
 
    ```javascript
        {
@@ -133,9 +133,9 @@ ht-degree: 0%
        }
    ```
 
-1. 準備 `ui.content` 用於前端管道的模組，其方式為新增兩個Sling設定。
+1. 透過新增兩個Sling設定，為前端管道準備`ui.content`模組。
 
-   * 建立檔案於 `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig`  — 這包括 `ui.frontend` 模組產生於 `dist` 資料夾使用webpack建置程式。
+   * 在`com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig`建立檔案 — 這包含`ui.frontend`模組使用webpack建置程式在`dist`資料夾下產生的所有前端檔案。
 
    ```xml
    ...
@@ -158,10 +158,10 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >    檢視完整的 [HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml) 在 __AEM WKND網站專案__.
+   >    在&#x200B;__AEM WKND Sites專案__&#x200B;中檢視完整的[HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml)。
 
 
-   * 第二個 `com.adobe.aem.wcm.site.manager.config.SiteConfig` 使用 `themePackageName` 與的值相同 `package.json` 和 `name` 屬性值和 `siteTemplatePath` 指向 `/libs/wcm/core/site-templates/aem-site-template-stub-2.0.0` 虛設常式路徑值。
+   * 接著`com.adobe.aem.wcm.site.manager.config.SiteConfig`的`themePackageName`值與`package.json`和`name`屬性值相同，且`siteTemplatePath`指向`/libs/wcm/core/site-templates/aem-site-template-stub-2.0.0`存根路徑值。
 
    ```xml
    ...
@@ -176,9 +176,9 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >    請參閱，完整 [Siteconfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.aem.wcm.site.manager.config.SiteConfig/.content.xml) 在 __AEM WKND網站專案__.
+   >    檢視&#x200B;__AEM WKND Sites專案__&#x200B;中的完整[SiteConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.aem.wcm.site.manager.config.SiteConfig/.content.xml)。
 
-1. 主題或樣式變更為了透過測試回合的前端管道部署，我們正在變更 `text-color` Adobe為紅色（或者您可以自行挑選），方法是更新 `ui.frontend/src/main/webpack/base/sass/_variables.scss`.
+1. 主題或樣式變更為透過測試回合的前端管道部署，我們正在更新`ui.frontend/src/main/webpack/base/sass/_variables.scss`以將`text-color`變更為Adobe紅色（或者您可以自行挑選）。
 
    ```css
        $black:     #a40606;
@@ -190,12 +190,12 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
-> 這些變更可在GitHub內部取得 [__前端管道__](https://github.com/adobe/aem-guides-wknd/tree/feature/frontend-pipeline) 的分支 __AEM WKND網站專案__.
+> 這些變更可在&#x200B;__AEM WKND Sites專案__&#x200B;的&#x200B;[__前端管道__](https://github.com/adobe/aem-guides-wknd/tree/feature/frontend-pipeline)分支內的GitHub上取得。
 
 
-## 警告 —  _啟用前端管道_ 按鈕
+## 警告 — _啟用前端管道_&#x200B;按鈕
 
-此 [邊欄選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) 的 [網站](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) 選項會顯示 **啟用前端管道** 按鈕。 按一下 **啟用前端管道** 按鈕將覆寫上述 **Sling設定**，請確定 **您沒有按一下** 透過Cloud Manager管道執行部署上述變更後這個按鈕。
+[邊欄選取器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)的[站台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)選項會在選取您的站台根或站台頁面時顯示&#x200B;**啟用前端管道**&#x200B;按鈕。 按一下&#x200B;**啟用前端管道**&#x200B;按鈕將會覆寫上述&#x200B;**Sling設定**，請確定&#x200B;**在透過Cloud Manager管道執行部署上述變更後，您沒有按一下**&#x200B;此按鈕。
 
 ![啟用前端管道按鈕](assets/enable-front-end-Pipeline-button.png)
 
@@ -207,4 +207,4 @@ ht-degree: 0%
 
 ## 後續步驟 {#next-steps}
 
-在下一章中， [使用前端管道進行部署](create-frontend-pipeline.md)，您將建立和執行前端管道，並驗證我們 __已移開__ 從「/etc.clientlibs」型前端資源傳遞。
+在下一章[使用前端管道部署](create-frontend-pipeline.md)中，您將建立和執行前端管道，並驗證我們如何&#x200B;__離開__&#x200B;基於「/etc.clientlibs」的前端資源傳遞。

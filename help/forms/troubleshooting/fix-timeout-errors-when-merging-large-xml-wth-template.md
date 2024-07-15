@@ -30,16 +30,20 @@ POST /services/OutputService/GeneratePdfOutput HTTP/1.1] com.adobe.fd.output.int
 ## 變更aries逾時
 
 * 停止AEM伺服器
-* 建立名為的資料夾 **安裝** 在AEM安裝的crx-quickstart資料夾下
-* 建立名為的檔案 **org.apache.aries.transaction.config** 安裝資料夾底下有以下content aries.transaction.timeout=&quot;1200&quot;。 您可以依需求變更逾時值。 逾時值以秒為單位
+* 在AEM安裝的crx-quickstart資料夾下建立名為&#x200B;**install**&#x200B;的資料夾
+* 建立名為&#x200B;**org.apache.aries.transaction.config**的檔案，其內容如下
+aries.transaction.timeout=&quot;1200&quot;
+在「安裝資料夾」下。 您可以依需求變更逾時值。 逾時值以秒為單位
 
 >[!NOTE]
-> 建立org.apache.aries.transaction設定後，您就可以從 [configMgr](http://localhost:4502/system/console/configMgr) 而不編輯檔案
+> 建立org.apache.aries.transaction設定後，您就可以從[configMgr](http://localhost:4502/system/console/configMgr)編輯交易逾時值，而不用編輯檔案
 
 
 ## 變更Jacorb ORB提供者設定
 
 * [開啟OSGi ConfigMgr](http://localhost:4502/system/console/configMgr)
-* 搜尋 **Jacorb ORB提供者**
-* 新增下列專案jacorb.connection.client.pending_reply_timeout=600000上述設定會將擱置中的回覆逾時（也稱為CORBA使用者端逾時）設為600秒。
+* 搜尋&#x200B;**Jacorb ORB提供者**
+* 新增以下專案
+jacorb.connection.client.pending_reply_timeout=600000
+上述設定會將擱置中的回覆逾時（也稱為CORBA使用者端逾時）設為600秒。
 * 儲存您的變更

@@ -23,42 +23,42 @@ ht-degree: 0%
 
 Sling模型匯出工具已在Sling模型v1.3.0中推出。此新功能可讓您將新註解新增至Sling模型，以定義如何將模型匯出為不同的Java物件，或更常見的是，匯出為不同的格式，例如JSON。
 
-Apache Sling提供Jackson JSON匯出程式，以涵蓋將Sling模型匯出為JSON物件以供程式化Web消費者（例如其他Web服務和JavaScript應用程式）使用的最常見案例。
+Apache Sling提供Jackson JSON匯出工具，以涵蓋將Sling模型匯出為JSON物件以供程式化Web消費者(例如其他Web服務和JavaScript應用程式)使用的最常見案例。
 
 ## 為Sling模型匯出工具設定AEM
 
 >[!VIDEO](https://video.tv.adobe.com/v/16862?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 是 [!DNL Apache Sling] 專案且未直接繫結至AEM產品發行週期。 [!DNL Sling Model Exporter] 相容於AEM 6.3和更新版本。
+[!DNL Sling Model Exporter]是[!DNL Apache Sling]專案的功能，未直接繫結至AEM產品發行週期。 [!DNL Sling Model Exporter]與AEM 6.3和更新版本相容。
 
-## 的使用案例 [!DNL Sling Model Exporter]
+## [!DNL Sling Model Exporter]的使用案例
 
 >[!VIDEO](https://video.tv.adobe.com/v/16863?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 最適合運用Sling模型，此模型已包含可透過HTL （或前身為JSP）支援HTML轉譯的商業邏輯，並顯示與JSON相同的商業表示以供程式化Web服務或JavaScript應用程式使用。
+[!DNL Sling Model Exporter]非常適合運用已包含商業邏輯的Sling模型，這些商業邏輯可透過HTL （或先前的JSP）支援HTML轉譯，並顯示與JSON相同的商業表示以供程式化Web服務或JavaScript應用程式使用。
 
 ## 建立Sling模型匯出工具
 
 >[!VIDEO](https://video.tv.adobe.com/v/16864?quality=12&learn=on)
 
-正在啟用 [!DNL Exporter] 支援 [!DNL Sling Model] 就像新增 `@Exporter` Java類別的註解。
+在[!DNL Sling Model]上啟用[!DNL Exporter]支援，就像將`@Exporter`註解新增至Java類別一樣簡單。
 
 ## 套用Sling模型匯出工具選項
 
 >[!VIDEO](https://video.tv.adobe.com/v/16865?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] 支援將每個模型的匯出工具選項傳遞至匯出工具實作，以驅動 [!DNL Sling Model] 最後匯出。 這些選項通常會「全域」套用至 [!DNL Sling Model] 會匯出，而非根據資料點，而資料點可透過下文所述的內嵌註解來完成。
+[!DNL Sling Model Exporter]支援將每個模型的匯出工具選項傳遞至匯出工具實作，以驅動[!DNL Sling Model]最終匯出的方式。 這些選項通常會「全域」套用至[!DNL Sling Model]的匯出方式，而不是透過下述內嵌註解完成的每個資料點。
 
-[!DNL Jackson Exporter] 選項包括：
+[!DNL Jackson Exporter]選項包括：
 
-* [對應工具功能選項](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
+* [對應程式功能選項](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
 * [序列化功能選項](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
 
-## 套用 [!DNL Jackson] 註解
+## 套用[!DNL Jackson]註解
 
 >[!VIDEO](https://video.tv.adobe.com/v/16866?quality=12&learn=on)
 
-匯出工具實施也可能支援可在上內巢狀用的註解 [!DNL Sling Model] 類別，可提供更精細的控制層級來匯出資料。
+匯出工具實作也支援可內巢狀用至[!DNL Sling Model]類別的註解，可提供更細微的控制資料匯出方式。
 
 * [[!DNL Jackson Exporter] 附註](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)
 

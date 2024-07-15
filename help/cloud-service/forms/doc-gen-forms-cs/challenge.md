@@ -20,4 +20,4 @@ ht-degree: 0%
 
 修改程式碼，將範本的URL當作POST要求引數之一傳遞。
 
-中的程式碼 `DocumentGeneration.java` 必須修改才能傳遞範本的URL。
+必須修改`DocumentGeneration.java`中的程式碼以傳遞範本的URL。

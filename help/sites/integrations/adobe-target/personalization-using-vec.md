@@ -1,5 +1,5 @@
 ---
-title: 使用視覺化體驗撰寫器進行個人化
+title: 使用視覺化體驗撰寫器的Personalization
 description: 瞭解如何使用視覺化體驗撰寫器建立Adobe Target活動。
 version: Cloud Service
 jira: KT-6352
@@ -9,7 +9,7 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
 duration: 101
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ---
 
-# 使用視覺化體驗撰寫器進行個人化 {#personalization-vec}
+# 使用視覺化體驗撰寫器的Personalization {#personalization-vec}
 
 瞭解如何使用視覺化體驗撰寫器(VEC)建立A/B測試Target活動。
 
@@ -37,19 +37,19 @@ WKND網站首頁會以資訊卡的形式顯示當地活動或城市周圍的最�
 
 ## 使用視覺化體驗撰寫器(VEC)建立A/B測試的步驟
 
-1. 登入 [Adobe Experience Cloud](https://experience.adobe.com/)，點選 __Target__，導覽至 __活動__ 標籤
+1. 登入[Adobe Experience Cloud](https://experience.adobe.com/)，點選&#x200B;__Target__，導覽至&#x200B;__活動__&#x200B;標籤
 
-   + 如果您沒有看到 __Target__ 在Experience Cloud控制面板上，確保在右上方的組織切換器中選取正確的Adobe組織，且該使用者已被授予在中存取Target的許可權 [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + 如果您在Experience Cloud控制面板上看不到&#x200B;__Target__，請確定在右上方的組織切換器中選取了正確的Adobe組織，且該使用者已在[Adobe Admin Console](https://adminconsole.adobe.com/)中獲得Target的存取權。
 
-1. 按一下 **建立活動** 按鈕，然後選擇 **A/B測試** 活動
+1. 按一下&#x200B;**建立活動**&#x200B;按鈕，然後選擇&#x200B;**A/B測試**&#x200B;活動
 
    ![A/B活動](assets/ab-target-activity.png)
 
-1. 選取 **視覺化體驗撰寫器** 選項，提供活動URL，然後按一下 **下一個**
+1. 選取&#x200B;**視覺化體驗撰寫器**&#x200B;選項，提供活動URL，然後按一下&#x200B;**下一步**
 
    ![活動URL](assets/ab-test-url.png)
 
-1. 視覺化體驗撰寫器在您建立活動後，會在左側顯示兩個標籤： *體驗A* 和 *體驗B*. 從清單中選取體驗。 您可以使用將體驗新增至清單 **新增體驗** 按鈕。
+1. 視覺化體驗撰寫器在您建立活動後在左側顯示兩個標籤： *體驗A*&#x200B;和&#x200B;*體驗B*。 從清單中選取體驗。 您可以使用&#x200B;**新增體驗**&#x200B;按鈕來新增體驗至清單。
 
    ![體驗A](assets/experience.png)
 
@@ -57,16 +57,16 @@ WKND網站首頁會以資訊卡的形式顯示當地活動或城市周圍的最�
 
    ![元素](assets/select-element.png)
 
-1. 變更文字來源 *西澳洲露營* 至 *澳洲歷險記*. 「修改」下會顯示新增至體驗的變更清單。 您可以按一下並編輯修改的專案，以檢視其CSS選取器以及新增至該專案的新內容。
+1. 將文字從&#x200B;*Camping in West Australia*&#x200B;變更為&#x200B;*Adventures of Australia*。 「修改」下會顯示新增至體驗的變更清單。 您可以按一下並編輯修改的專案，以檢視其CSS選取器以及新增至該專案的新內容。
 
    ![冒險](assets/adventures.png)
 
-1. 重新命名 *體驗A* 至 *冒險*
-1. 同樣地，更新上的文字 *體驗B* 從 *西澳洲露營* 至 *探索澳洲荒野*.
+1. 將&#x200B;*體驗A*&#x200B;重新命名為&#x200B;*冒險*
+1. 同樣地，將&#x200B;*體驗B*&#x200B;上的文字從&#x200B;*Camping in West Australia*&#x200B;更新為&#x200B;*探索澳洲荒野*。
 
    ![探索](assets/explore.png)
 
-1. 按一下 **下一個** 移至目標定位，並保持兩個體驗之間的手動流量分配50至50。
+1. 按一下[下一步]****&#x200B;移至[目標定位]，讓兩個體驗之間保持50-50的手動流量分配。
 
    ![目標定位](assets/targeting.png)
 

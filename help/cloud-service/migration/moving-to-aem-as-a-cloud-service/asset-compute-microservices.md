@@ -1,6 +1,6 @@
 ---
-title: AEM Assets微服務和移至AEMas a Cloud Service
-description: 瞭解AEM Assetsas a Cloud Service的asset compute微服務如何讓您有效率地產生您資產的任何轉譯，取代此傳統AEM Workflow的角色。
+title: AEM Assets微服務和移至AEM as a Cloud Service
+description: 瞭解AEM Assets as a Cloud Service的asset compute微服務如何讓您有效率地產生您資產的任何轉譯，取代此傳統AEM Workflow的角色。
 version: Cloud Service
 feature: Asset Compute Microservices
 topic: Migration, Upgrade
@@ -17,9 +17,9 @@ ht-degree: 1%
 
 ---
 
-# AEM Assets微服務 — 移至AEMas a Cloud Service
+# AEM Assets微服務 — 移至AEM as a Cloud Service
 
-瞭解AEM Assetsas a Cloud Service的asset compute微服務如何讓您有效率地產生您資產的任何轉譯，取代此傳統AEM Workflow的角色。
+瞭解AEM Assets as a Cloud Service的asset compute微服務如何讓您有效率地產生您資產的任何轉譯，取代此傳統AEM Workflow的角色。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
 
@@ -27,14 +27,14 @@ ht-degree: 1%
 
 ![資產工作流程移轉工具](./assets/asset-workflow-migration.png)
 
-在重構程式碼庫時，請使用 [資產工作流程移轉工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html) 移轉現有的工作流程，以使用AEMas a Cloud Service中的Asset compute微服務。
+作為重構程式碼庫的一部分，請使用[資產工作流程移轉工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html)移轉現有的工作流程，以使用AEM as a Cloud Service中的Asset compute微服務。
 
 ## 重要活動
 
-+ 使用 [Adobe I/O工作流程移轉工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator) 移轉資產處理工作流程以使用Asset compute微服務的工具。
-+ 設定 [本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) 並部署更新的工作流程。 複雜的工作流程可能需要手動調整。
++ 使用[Adobe I/O工作流程移轉程式](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator)工具，移轉資產處理工作流程，以使用Asset compute微服務。
++ 設定[本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)並部署更新的工作流程。 複雜的工作流程可能需要手動調整。
 + 繼續使用AEM SDK在本機開發環境中反複進行，直到更新的工作流程符合功能對等為止。
-+ 將更新的程式碼基底部署到AEMas a Cloud Service開發環境，並繼續驗證。
++ 將更新的程式碼基底部署到AEM as a Cloud Service開發環境，並繼續驗證。
 
 ## 實作練習
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 在嘗試實作練習之前，請確定您已觀看並瞭解上述影片和下列資料：
 
-+ [以不同方式思考AEMas a Cloud Service](./introduction.md)
++ [以不同方式思考AEM as a Cloud Service](./introduction.md)
 + [上線](./onboarding.md)
 
 此外，請確定您已完成前一個實作練習：

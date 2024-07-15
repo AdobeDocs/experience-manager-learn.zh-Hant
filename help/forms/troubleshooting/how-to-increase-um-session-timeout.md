@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 如何增加UM工作階段逾時
 
-*此影片會逐步解說增加UM工作階段逾時的程式。*
+*此影片逐步完成UM工作階段逾時增加的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335503?quality=12&learn=on)

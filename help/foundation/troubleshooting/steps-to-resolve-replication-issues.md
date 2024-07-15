@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 解決AEM中復寫問題的步驟
 
-*本影片逐步解說在AEM中解決復寫問題的步驟。*
+*此影片逐步解說解決AEM中復寫問題的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335471?quality=12&learn=on)

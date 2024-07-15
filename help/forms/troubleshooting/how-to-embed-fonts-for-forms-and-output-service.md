@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何為Forms嵌入字型和輸出服務轉換
 
-*本影片逐步解說為Forms嵌入字型和輸出服務轉換的步驟。*
+*此影片會逐步說明為Forms內嵌字型和輸出服務轉換的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335496?quality=12&learn=on)

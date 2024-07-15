@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336?quality=12&learn=on)
 
-*本影片會逐步解說使用內建AEM CAPTCHA服務及Google reCAPTCHA服務，將驗證碼新增至AEM最適化表單的程式。*
+*此影片會逐步解說使用內建AEM CAPTCHA服務及Google的reCAPTCHA服務，將驗證碼新增至AEM最適化表單的程式。*
 
 >[!NOTE]
 >
@@ -30,11 +30,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->**若要在發佈執行個體上設定reCaptcha，請依照步驟操作**
+>**若要在發佈執行個體上設定reCaptcha，請遵循步驟**
 >
 >在作者執行個體上設定reCaptach
 >
->開啟Felix [網頁主控台](http://localhost:4502/system/console/bundles) 在作者執行個體上
+>在作者執行個體上開啟Felix [網頁主控台](http://localhost:4502/system/console/bundles)
 >
 >搜尋com.adobe.granite.crypto.file套件組合
 >
@@ -43,15 +43,15 @@ ht-degree: 0%
 >導覽至作者執行個體上檔案系統上的套件ID
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
->* 複製HMAC和主檔案
+* 複製HMAC和主檔案
 >
->開啟 [felix網頁主控台](http://localhost:4502/system/console/bundles) 在您的發佈執行個體上。 搜尋com.adobe.granite.crypto.file套件組合。 記下套件組合ID
+開啟發佈執行個體上的[felix web主控台](http://localhost:4502/system/console/bundles)。 搜尋com.adobe.granite.crypto.file套件組合。 記下套件組合ID
 >
->導覽至發佈執行個體檔案系統上的套件ID
+導覽至發佈執行個體檔案系統上的套件ID
 >
->* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
->* 刪除現有的HMAC和主檔案。
->* 貼上從製作執行個體複製的HMAC和主檔案
+* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
+* 刪除現有的HMAC和主檔案。
+* 貼上從製作執行個體複製的HMAC和主檔案
 >
 重新啟動AEM發佈伺服器
 

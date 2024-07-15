@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Document Services
 topic: Development
 jira: KT-15508
-source-git-commit: 97fbe450823c6122a25dc46c851296094894683e
+exl-id: 40617082-4d23-4c91-a016-2d947187052b
+source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -17,17 +18,17 @@ ht-degree: 0%
 
 # 使用DocAssurance API
 
-此 [DocAssurance服務](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance) 提供使用PDF檔案執行各種數位簽名或加密作業的功能，例如簽署、認證、新增簽名欄位、加密、解密等。
-本文提供Java程式碼片段，協助您開始使用API。程式碼片段會使用存取權杖。 [本文會說明產生存取權杖所需的步驟](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)
+[DocAssurance服務](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance)提供使用PDF檔案執行各種數位簽章或加密作業的功能，例如簽署、認證、新增簽章欄位、加密、解密等。
+本文提供Java程式碼片段，協助您開始使用API。程式碼片段會使用存取權杖。 [本文說明產生存取權杖](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)所需的步驟
 
 
-<span class="preview">此功能可在早期採用者計畫下取得。 您可以從您的正式電子郵件ID寫信到aem-forms-ea@adobe.com ，以加入率先採用者計畫並請求存取此功能</span>
+<span class="preview">這項功能可在早期採用者方案下使用。 您可以從您的正式電子郵件ID寫信到aem-forms-ea@adobe.com以加入早期採用者計畫，並要求存取此功能</span>
 
 
 ## 先決條件
 
 * AEM FormsCloud Service體驗
-* 使用經驗 [Apache HTTP元件](https://hc.apache.org/httpcomponents-client-4.5.x/)
+* 使用[Apache HTTP元件](https://hc.apache.org/httpcomponents-client-4.5.x/)的經驗
 * 存取AEM FormsCloud Service環境
 
 ## Inspect檔案
@@ -157,4 +158,4 @@ if (response.getStatusLine().getStatusCode() == 200) {
 
 ### Postman集合
 
-API的Postman集合可以是 [已從此處下載以進行測試](assets/DocAssuranceAPI.postman_collection.json). 您可以使用基本驗證或持有人權杖型別的驗證來叫用API。
+可以從這裡[下載API的Postman集合以進行測試](assets/DocAssuranceAPI.postman_collection.json)。 您可以使用基本驗證或持有人權杖型別的驗證來叫用API。

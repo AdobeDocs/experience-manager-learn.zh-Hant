@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 如何強制重新編譯所有Sling指令碼jsps、Java和Sightly
 
-*本影片將逐步說明強制重新編譯所有Sling指令碼jsps、Java和Sightly的步驟。*
+*此影片會逐步說明強制重新編譯所有Sling指令碼jsps、Java和Sightly的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335464?quality=12&learn=on)

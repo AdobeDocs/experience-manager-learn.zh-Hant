@@ -179,5 +179,5 @@ public class LogWorkflowVariables implements WorkflowProcess {
 
 ## 部署範例套件組合
 
-[部署變數記錄器套件](assets/VariableLogger.core-1.0.0-SNAPSHOT.jar) 使用Felix網頁主控台。
+[使用Felix網頁主控台部署變數記錄器組合](assets/VariableLogger.core-1.0.0-SNAPSHOT.jar)。
 將此套件組合與AEM工作流程中的程式步驟建立關聯，以記錄String和Document變數的值。

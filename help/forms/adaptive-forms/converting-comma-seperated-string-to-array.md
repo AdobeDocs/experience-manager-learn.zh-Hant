@@ -27,7 +27,7 @@ ht-degree: 0%
 
 提交的資料採用以下格式。 businessUnits元素的值是以逗號分隔的字串，需要轉換為字串陣列。
 
-![submit-data](assets/submitted-data-string.png)
+![提交的資料](assets/submitted-data-string.png)
 
 與表單資料模型相關聯之rest端點的輸入資料預期的是此熒幕擷取畫面中顯示的字串陣列。 程式步驟中的自訂程式碼會將中提交的資料轉換為正確格式。
 
@@ -142,4 +142,4 @@ public class CreateStringArray implements WorkflowProcess {
 }
 ```
 
-範例組合可以是 [已從此處下載](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)
+範例組合可從這裡](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)下載[

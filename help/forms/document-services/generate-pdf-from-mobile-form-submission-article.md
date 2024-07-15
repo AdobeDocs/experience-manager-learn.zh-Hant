@@ -79,7 +79,7 @@ $("#file1").click();
 });
 ```
 
-[自訂設定檔](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). 使用自訂設定檔可讓您更輕鬆地操控行動表單的HTMLDOM物件。 隱藏的檔案元素會新增至HTML.jsp。 當使用者點選「新增您的像片」時，就會觸發檔案元素的點選事件。 這可讓使用者瀏覽並選取要附加的照片。 然後使用javascript FileReader物件來取得影像的base64編碼字串。 base64影像字串會儲存在表單的文字欄位中。 提交表單時，我們會擷取此值，並將其插入XML的img元素中。 然後使用此XML與xdp合併，以產生最終pdf。
+[自訂設定檔](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles)。 使用自訂設定檔可讓您更輕鬆地操控行動表單的HTMLDOM物件。 隱藏的檔案元素會新增至HTML.jsp。 當使用者點選「新增您的像片」時，就會觸發檔案元素的點選事件。 這可讓使用者瀏覽並選取要附加的照片。 然後使用javascript FileReader物件來取得影像的base64編碼字串。 base64影像字串會儲存在表單的文字欄位中。 提交表單時，我們會擷取此值，並將其插入XML的img元素中。 然後使用此XML與xdp合併，以產生最終pdf。
 
 用於本文的自訂設定檔已可供您使用作為本文資產的一部分。
 
@@ -116,7 +116,7 @@ function readURL(input) {
 
 * [下載並安裝與本文相關的套件。](assets/pdf-from-mobile-form-submission.zip)
 
-* 檢視的屬性頁面，確定已正確設定提交URL和HTML演算設定檔  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
+* 檢視[xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)的屬性頁面，確定送出URL和HTML轉譯器設定檔已正確設定
 
 * [以html預覽XDP](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 

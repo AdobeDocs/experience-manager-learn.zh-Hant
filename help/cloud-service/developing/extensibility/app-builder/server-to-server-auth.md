@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # 在App Builder動作中產生伺服器對伺服器存取權杖
 
-App Builder動作可能需要與支援的Adobe API互動 **OAuth伺服器對伺服器認證** 和已與Adobe Developer Console專案關聯，並已部署App Builder應用程式。
+App Builder動作可能需要與支援&#x200B;**OAuth伺服器對伺服器認證**&#x200B;且與App Builder應用程式部署的Adobe Developer Console專案相關聯的Adobe API互動。
 
-本指南說明如何使用產生存取權杖 _OAuth伺服器對伺服器認證_ 用於App Builder動作。
+本指南說明如何使用&#x200B;_OAuth伺服器對伺服器認證_&#x200B;產生存取權杖，以用於App Builder動作。
 
 >[!IMPORTANT]
 >
@@ -29,9 +29,9 @@ App Builder動作可能需要與支援的Adobe API互動 **OAuth伺服器對伺�
 
 ## Adobe Developer Console專案設定
 
-將所需的AdobeAPI新增至Adobe Developer Console專案時，請在 _設定API_ 步驟，選取 **OAuth伺服器對伺服器** 驗證型別。
+將所需的AdobeAPI新增至Adobe Developer Console專案時，請在&#x200B;_設定API_&#x200B;步驟中，選取&#x200B;**OAuth伺服器對伺服器**&#x200B;驗證型別。
 
-![Adobe Developer主控台 — OAuth伺服器對伺服器](./assets/s2s-auth/oauth-server-to-server.png)
+![Adobe Developer Console - OAuth伺服器對伺服器](./assets/s2s-auth/oauth-server-to-server.png)
 
 若要指派上述自動建立的整合服務帳戶，請選取所需的產品設定檔。 因此，透過產品設定檔，可控制服務帳戶許可權。
 
@@ -39,9 +39,9 @@ App Builder動作可能需要與支援的Adobe API互動 **OAuth伺服器對伺�
 
 ## .env檔案
 
-在App Builder專案的 `.env` 檔案，附加Adobe Developer主控台專案的OAuth伺服器對伺服器憑證的自訂金鑰。 OAuth伺服器對伺服器認證值可從Adobe Developer主控台專案的 __認證__ > __OAuth伺服器對伺服器__ 指定工作區的。
+在App Builder專案的`.env`檔案中，附加Adobe Developer Console專案的OAuth伺服器對伺服器憑證的自訂金鑰。 對於指定的工作區，可從Adobe Developer Console專案的&#x200B;__認證__ > __OAuth伺服器對伺服器__&#x200B;取得OAuth伺服器對伺服器認證值。
 
-![Adobe Developer主控台OAuth伺服器對伺服器認證](./assets/s2s-auth/oauth-server-to-server-credentials.png)
+![Adobe Developer Console OAuth伺服器對伺服器認證](./assets/s2s-auth/oauth-server-to-server-credentials.png)
 
 ```
 ...
@@ -50,11 +50,11 @@ OAUTHS2S_CLIENT_SECRET=p8e-EIRF6kY6EHLBSdw2b-pLUWKodDqJqSz3
 OAUTHS2S_CECREDENTIALS_METASCOPES=AdobeID,openid,ab.manage,additional_info.projectedProductContext,read_organizations,read_profile,account_cluster.read
 ```
 
-以下專案的值： `OAUTHS2S_CLIENT_ID`， `OAUTHS2S_CLIENT_SECRET`， `OAUTHS2S_CECREDENTIALS_METASCOPES` 可以從Adobe Developer主控台專案的OAuth伺服器對伺服器憑證畫面直接複製。
+可以從Adobe Developer Console專案的「OAuth伺服器對伺服器認證」畫面直接複製`OAUTHS2S_CLIENT_ID`、`OAUTHS2S_CLIENT_SECRET`、`OAUTHS2S_CECREDENTIALS_METASCOPES`的值。
 
 ## 輸入對應
 
-OAuth伺服器對伺服器認證值設定於 `.env` 檔案中，這些區段必須對應至AppBuilder動作輸入，才能在動作中讀取。 若要這麼做，請在每個變數中新增專案 `ext.config.yaml` 動作 `inputs` 格式為： `PARAMS_INPUT_NAME: $ENV_KEY`.
+在`.env`檔案中設定OAuth伺服器對伺服器認證值時，必須將它們對應至AppBuilder動作輸入，才能在動作本身中讀取。 若要這麼做，請在`ext.config.yaml`動作`inputs`中為每個變數新增專案，格式為： `PARAMS_INPUT_NAME: $ENV_KEY`。
 
 例如：
 
@@ -83,13 +83,13 @@ runtimeManifest:
             final: true
 ```
 
-下定義的索引鍵 `inputs` 可在 `params` 提供給App Builder動作的物件。
+在`inputs`下定義的金鑰可在提供給App Builder動作的`params`物件上使用。
 
 ## 用於存取Token的OAuth伺服器對伺服器認證
 
-在App Builder動作中， OAuth伺服器對伺服器憑證位於 `params` 物件。 使用這些認證，可以使用以下專案產生存取權杖 [OAuth 2.0資料庫](https://oauth.net/code/). 或者，您可以使用 [節點擷取程式庫](https://www.npmjs.com/package/node-fetch) 向Adobe IMS權杖端點發出POST請求以取得存取權杖。
+在App Builder動作中，`params`物件中有OAuth伺服器對伺服器認證。 使用這些認證，可以使用[OAuth 2.0資料庫](https://oauth.net/code/)產生存取權杖。 或者，您可以使用[節點擷取程式庫](https://www.npmjs.com/package/node-fetch)，向Adobe IMS權杖端點發出POST請求以取得存取權杖。
 
-下列範例示範如何使用 `node-fetch` 資料庫，向Adobe IMS權杖端點發出POST請求以取得存取權杖。
+下列範例示範如何使用`node-fetch`資料庫向Adobe IMS權杖端點發出POST要求以取得存取權杖。
 
 ```javascript
 const fetch = require("node-fetch");

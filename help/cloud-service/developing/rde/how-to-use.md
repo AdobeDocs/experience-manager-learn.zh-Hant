@@ -20,21 +20,21 @@ ht-degree: 0%
 
 # 如何使用快速開發環境
 
-瞭解 **使用方式** AEMas a Cloud Service中的快速開發環境(RDE)。 從您最愛的整合式開發環境(IDE)，將程式碼和內容部署到RDE，以加快接近最終版本的程式碼開發週期。
+瞭解&#x200B;**如何在AEM as a Cloud Service中使用**&#x200B;快速開發環境(RDE)。 從您最愛的整合式開發環境(IDE)，將程式碼和內容部署到RDE，以加快接近最終版本的程式碼開發週期。
 
-使用 [AEM WKND網站專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) 您將瞭解如何透過執行AEM-RDE將各種AEM成品部署到RDE `install` 命令。
+使用[AEM WKND Sites專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)，您將瞭解如何從您最喜愛的IDE執行AEM-RDE的`install`命令，將各種AEM成品部署到RDE。
 
 - AEM程式碼和內容套件(all， ui.apps)部署
 - OSGi套件組合和設定檔案部署
 - Apache和Dispatcher會將部署設定為zip檔案
-- 個別檔案，例如HTL、 `.content.xml` （對話方塊XML）部署
-- 檢閱其他RDE命令，例如 `status, reset and delete`
+- 個別檔案，例如HTL、`.content.xml` （對話方塊XML）部署
+- 檢閱其他RDE命令，例如`status, reset and delete`
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415491?quality=12&learn=on)
 
 ## 必備條件
 
-原地複製 [WKND網站](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) 專案並在您最愛的IDE中開啟，以將AEM成品部署至RDE。
+複製[WKND Sites](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)專案，並在您最愛的IDE中開啟該專案，以將AEM成品部署至RDE。
 
 ```shell
 $ git clone git@github.com:adobe/aem-guides-wknd.git
@@ -49,11 +49,11 @@ $ mvn clean package
 
 ## 使用AEM-RDE外掛程式部署AEM成品
 
-使用 `aem:rde:install` 命令，讓我們部署各種AEM成品。
+使用`aem:rde:install`命令，讓我們部署各種AEM成品。
 
-### 部署 `all` 和 `dispatcher` 套件
+### 部署`all`和`dispatcher`封裝
 
-常見的起始點是先部署 `all` 和 `dispatcher` 套裝軟體，方法是執行下列命令。
+常見的起點是先執行下列命令以部署`all`和`dispatcher`封裝。
 
 ```shell
 # Install the 'all' package
@@ -67,10 +67,10 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
 
 ### 增強和部署元件
 
-讓我們來增強 `Hello World Component` 並將其部署至RDE。
+讓我們增強`Hello World Component`並將其部署至RDE。
 
-1. 開啟對話方塊XML (`.content.xml`)檔案來源 `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/` 資料夾
-1. 新增 `Description` 現有欄位之後的文字欄位 `Text` 對話方塊欄位
+1. 從`ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/`資料夾開啟對話方塊XML (`.content.xml`)檔案
+1. 在現有`Text`對話方塊欄位之後新增`Description`文字欄位
 
    ```xml
    ...
@@ -82,8 +82,8 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. 開啟 `helloworld.html` 檔案來源 `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld` 資料夾
-1. 呈現 `Description` 現有屬性之後的屬性 `<div>` 的元素 `Text` 屬性。
+1. 從`ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld`資料夾開啟`helloworld.html`檔案
+1. 在`Text`屬性的現有`<div>`元素之後轉譯`Description`屬性。
 
    ```html
    ...
@@ -96,7 +96,7 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
 
 1. 執行Maven組建或同步個別檔案，驗證本機AEM-SDK上的變更。
 
-1. 透過將變更部署至RDE `ui.apps` 封裝或部署個別對話方塊和HTL檔案。
+1. 透過`ui.apps`封裝或部署個別對話方塊和HTL檔案來部署變更至RDE。
 
    ```shell
    # Using 'ui.apps' package
@@ -113,24 +113,24 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    $ aio aem:rde:install ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/.content.xml -t content-xml -p /apps/wknd/components/helloworld/_cq_dialog/.content.xml
    ```
 
-1. 透過新增或編輯 `Hello World Component` 在WKND網站頁面上。
+1. 在WKND網站頁面上新增或編輯`Hello World Component`，以驗證RDE上的變更。
 
-### 檢閱 `install` 命令選項
+### 檢閱`install`命令選項
 
-在上述個別檔案部署命令範例中， `-t` 和 `-p` 旗標分別用來指出JCR路徑的型別和目的地。 讓我們檢閱可用的 `install` 命令選項，方法是執行下列命令。
+在上述個別檔案部署命令範例中，`-t`和`-p`旗標分別用來表示JCR路徑的型別和目的地。 請執行以下命令，檢閱可用的`install`命令選項。
 
 ```shell
 $ aio aem:rde:install --help
 ```
 
-這些旗幟含義明確， `-s` 標幟可用來將部署目標定位為製作或發佈服務。 使用 `-t` 部署時標幟 **content-file或content-xml** 檔案以及 `-p` 此旗標可指定AEM RDE環境中的目的地JCR路徑。
+標幟的含義不言自明，`-s`標幟有助於將部署目標定位到作者或發佈服務。 部署&#x200B;**content-file或content-xml**&#x200B;檔案時，請使用`-t`旗標搭配`-p`旗標來指定AEM RDE環境中的目的地JCR路徑。
 
 ### 部署OSGi套件組合
 
-若要瞭解如何部署OSGi套件，請增強 `HelloWorldModel` Java™類別並將其部署至RDE。
+若要瞭解如何部署OSGi套件，請增強`HelloWorldModel` Java™類別並將其部署至RDE。
 
-1. 開啟 `HelloWorldModel.java` 檔案來源 `core/src/main/java/com/adobe/aem/guides/wknd/core/models` 資料夾
-1. 更新 `init()` 方法如下：
+1. 從`core/src/main/java/com/adobe/aem/guides/wknd/core/models`資料夾開啟`HelloWorldModel.java`檔案
+1. 更新`init()`方法，如下所示：
 
    ```java
    ...
@@ -141,7 +141,7 @@ $ aio aem:rde:install --help
    ...
    ```
 
-1. 透過部署以下專案驗證本機AEM-SDK上的變更： `core` 透過maven指令的套件
+1. 透過maven命令部署`core`套件組合，驗證本機AEM-SDK上的變更
 1. 執行下列命令，將變更部署至RDE
 
    ```shell
@@ -150,7 +150,7 @@ $ aio aem:rde:install --help
    $ aio aem:rde:install target/aem-guides-wknd.core-2.1.3-SNAPSHOT.jar
    ```
 
-1. 透過新增或編輯 `Hello World Component` 在WKND網站頁面上。
+1. 在WKND網站頁面上新增或編輯`Hello World Component`，以驗證RDE上的變更。
 
 ### 部署OSGi設定
 
@@ -168,14 +168,14 @@ $ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
 
 >[!TIP]
 >
->若只要在作者或發佈執行個體上安裝OSGi設定，請使用 `-s` 標幟。
+>若只要在作者或發佈執行個體上安裝OSGi設定，請使用`-s`旗標。
 
 
 ### 部署Apache或Dispatcher設定
 
-Apache或Dispatcher設定檔案 **無法個別部署**，但整個Dispatcher資料夾結構都必須以ZIP檔案的形式部署。
+Apache或Dispatcher設定檔案&#x200B;**無法個別部署**，但整個Dispatcher資料夾結構必須以ZIP檔案的形式部署。
 
-1. 在的設定檔案中進行所需的變更 `dispatcher` 模組，如需示範，請更新 `dispatcher/src/conf.d/available_vhosts/wknd.vhost` 快取 `html` 檔案僅保留60秒。
+1. 在`dispatcher`模組的設定檔中進行所需的變更，為了示範之用，請更新`dispatcher/src/conf.d/available_vhosts/wknd.vhost`以快取`html`個檔案，僅保留60秒。
 
    ```
    ...
@@ -188,7 +188,7 @@ Apache或Dispatcher設定檔案 **無法個別部署**，但整個Dispatcher資�
    ...
    ```
 
-1. 在本機驗證變更，請參閱 [在本機執行Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#run-dispatcher-locally) 以取得更多詳細資料。
+1. 在本機驗證變更，請參閱[在本機執行Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#run-dispatcher-locally)以取得詳細資料。
 1. 執行下列命令，將變更部署至RDE：
 
    ```shell
@@ -223,13 +223,13 @@ aem rde status   Get a list of the bundles and configs deployed to the current r
 
 ## 下一步
 
-瞭解 [使用RDE的開發/部署生命週期](./development-life-cycle.md) 以快速提供功能。
+瞭解如何使用RDE](./development-life-cycle.md)快速提供功能的[開發/部署生命週期。
 
 
 ## 其他資源
 
 [RDE命令檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#rde-cli-commands)
 
-[與AEM快速開發環境互動的Adobe I/O Runtime CLI外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
+用於與AEM快速開發環境互動的[Adobe I/O Runtime CLI外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [AEM專案設定](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html)

@@ -23,6 +23,6 @@ ht-degree: 1%
 
 {{edge-delivery-services}}
 
-瞭解如何 [AEM AssetsSidekick外掛程式](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin) 可用來將受管理的資產併入透過Edge Delivery Services提供的高影響力體驗。
+瞭解如何使用[AEM AssetsSidekick外掛程式](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin)，將受管理的資產併入透過Edge Delivery Services提供的高影響力體驗。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424615/?learn=on)

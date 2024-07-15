@@ -21,7 +21,7 @@ ht-degree: 0%
 
 以下是將「核心元件」改為大寫的修訂文字：
 
-典型案例涉及透過核心元件型調適型表單提交的資料產生PDF。 此資料一律為JSON格式。 若要使用轉譯PDFAPI產生PDF，必須將JSON資料轉換為XML格式。 此 `toString` 方法 `org.json.XML` 用於此轉換。 如需詳細資訊，請參閱 [檔案： `org.json.XML.toString` 方法](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-).
+典型案例涉及透過核心元件型調適型表單提交的資料產生PDF。 此資料一律為JSON格式。 若要使用轉譯PDFAPI產生PDF，必須將JSON資料轉換為XML格式。 `org.json.XML`的`toString`方法已用於此轉換。 如需詳細資訊，請參閱`org.json.XML.toString`方法](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-)的[檔案。
 
 ## 以JSON結構描述為基礎的最適化表單
 
@@ -35,15 +35,15 @@ ht-degree: 0%
 1. 導覽至「檔案」>「表單屬性」>「預覽」。
 1. 選取「產生預覽資料」。
 1. 按一下「產生」。
-1. 指派有意義的檔案名稱，例如 `form-data.xml`.
+1. 指派有意義的檔案名稱，例如`form-data.xml`。
 
 ### 從XML資料產生JSON結構描述
 
-您可以利用任何免費的線上工具來 [將XML轉換為JSON](https://jsonformatter.org/xml-to-jsonschema) 使用上一步驟中產生的XML資料。
+您可以利用任何免費的線上工具，利用上一步驟產生的XML資料將XML轉換為JSON](https://jsonformatter.org/xml-to-jsonschema)。[
 
 ### 將JSON轉換為XML的自訂工作流程程式
 
-提供的程式碼會將JSON轉換為XML，並將產生的XML儲存在名為的工作流程處理變數中 `dataXml`.
+提供的程式碼會將JSON轉換為XML，並將產生的XML儲存在名為`dataXml`的工作流程處理變數中。
 
 ```java
 import org.slf4j.LoggerFactory;
@@ -119,10 +119,10 @@ public class ConvertJSONToXML implements WorkflowProcess {
 
 若要在本機伺服器上測試此功能，請遵循下列簡化步驟：
 
-1. [透過AEM OSGi Web主控台下載及安裝自訂套件組合](assets/convertJsonToXML.core-1.0.0-SNAPSHOT.jar).
-1. [匯入工作流程封裝](assets/workflow_to_render_pdf.zip).
-1. [匯入範例最適化表單和XDP範本](assets/adaptive_form_and_xdp_template.zip).
-1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/f23/jcr:content?wcmmode=disabled).
+1. [透過AEM OSGi Web主控台下載及安裝自訂套件](assets/convertJsonToXML.core-1.0.0-SNAPSHOT.jar)。
+1. [匯入工作流程封裝](assets/workflow_to_render_pdf.zip)。
+1. [匯入範例最適化表單和XDP範本](assets/adaptive_form_and_xdp_template.zip)。
+1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/f23/jcr:content?wcmmode=disabled)。
 1. 填寫一些表單欄位。
 1. 提交表單以起始AEM工作流程。
 1. 在工作流程的裝載資料夾中找到轉譯的PDF。

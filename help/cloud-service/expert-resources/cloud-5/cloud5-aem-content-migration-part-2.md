@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 AEM內容移轉第2部分
-description: 在涵蓋內容移轉的第二部影片中，James和Darin討論如何使用內容轉移工具(CTT)協助移轉至AEMas a Cloud Service。
+description: 在涵蓋內容移轉的第二部影片中，James和Darin討論如何使用內容轉移工具(CTT)協助移轉至AEM as a Cloud Service。
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # 移轉至雲端 — 第2部分
 
-在涵蓋內容移轉的第二部影片中，James和Darin討論如何使用內容轉移工具(CTT)協助移轉至AEMas a Cloud Service。
+在涵蓋內容移轉的第二部影片中，James和Darin討論如何使用內容轉移工具(CTT)協助移轉至AEM as a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342268?quality=12&learn=on)
 
@@ -28,6 +28,6 @@ ht-degree: 3%
 + 評估您要移轉的執行個體
    + BPA — 最佳做法分析工具
    + CAM - cloud acceleration manager
-+ [重傳](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
++ [重新發佈](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
 + [AEM 現代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 + [Cloud Service移轉工具](https://github.com/adobe/aem-cloud-service-source-migration)

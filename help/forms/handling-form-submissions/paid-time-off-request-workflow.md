@@ -27,9 +27,9 @@ ht-degree: 0%
 * 管理員會開啟表單。 管理員應該無法編輯提交者填入的任何資訊。
 * 核准者區段應該對核准者可見(在此情況下是AEM管理員使用者)。
 
-為了滿足上述要求，我們使用名為的隱藏欄位 **初始步驟** 在表單中，其預設值設定為「是」。提交表單時，工作流程中的第一個步驟會將initialstep的值設定為「否」。 表單具有商業規則，可根據初始步驟值隱藏和顯示適當的區段。
+為了滿足上述要求，我們在表單中使用名為&#x200B;**initialstep**&#x200B;的隱藏欄位，其預設值設定為「是」。提交表單時，工作流程中的第一個步驟會將initialstep的值設定為「否」。 表單具有商業規則，可根據初始步驟值隱藏和顯示適當的區段。
 
-**設定表單以觸發AEM Workflow**
+**設定表單以觸發AEM工作流程**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28406?quality=12&learn=on)
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 **表單的核准者檢視**
 
-![核准者檢視](assets/approversview.gif)
+![approverview](assets/approversview.gif)
 
 在核准者檢視中，核准者無法編輯提交的資料。 此外，也有新區段僅供核准者使用。
 
@@ -51,8 +51,8 @@ ht-degree: 0%
 * [下載並部署DevelopingWidthServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [下載並部署SetValue自訂OSGI套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
 * [將與本文相關的資產匯入AEM](assets/helpxworkflow.zip)
-* 開啟 [休假請求表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* 開啟[休假要求表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填寫詳細資料並提交
-* 開啟 [收件匣](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). 您應該會看到新任務已指派。 開啟表單。 提交者的資料應為唯讀，且應會顯示新的核准者區段。
-* 探索 [工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
+* 開啟[收件匣](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html)。 您應該會看到新任務已指派。 開啟表單。 提交者的資料應為唯讀，且應會顯示新的核准者區段。
+* 探索[工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
 * 探索流程步驟。 此步驟會將initialstep的值設為「否」。

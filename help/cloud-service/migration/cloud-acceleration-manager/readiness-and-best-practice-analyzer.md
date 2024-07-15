@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 整備與Best Practice Analyzer
 
-瞭解Best Practice Analyzer如何協助您準備從AEM內部部署或AdobeManaged Services以Experience Manageras a Cloud Service。
+瞭解Best Practice Analyzer如何協助您準備從AEM內部部署或AdobeManaged Services移至Experience Manageras a Cloud Service。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336690?quality=12&learn=on)

@@ -31,9 +31,9 @@ ht-degree: 0%
 
 繼續使用AEM Forms的SendGrid動態範本傳送電子郵件之前，請確定您已符合下列先決條件：
 
-1. **SendGrid帳戶**：在註冊SendGrid帳戶 [https://sendgrid.com](https://sendgrid.com) 以存取其電子郵件傳遞服務。 您需要帳戶認證，才能將SendGrid與AEM Forms整合。
-1. **熟悉建立資料來源**：具備在AEM Forms中建立資料來源的實際操作知識。 如有需要，請參閱以下檔案： [建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) 以取得詳細指示。
-1. **熟悉表單資料模型**：瞭解AEM Forms中表單資料模型的概念。 如有需要，請檢閱以下檔案： [建立表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html) 以確保您具備必要的瞭解。
+1. **SendGrid帳戶**：在[https://sendgrid.com](https://sendgrid.com)註冊SendGrid帳戶，以存取其電子郵件傳遞服務。 您需要帳戶認證，才能將SendGrid與AEM Forms整合。
+1. **熟悉建立資料來源**：擁有在AEM Forms中建立資料來源的工作知識。 如有需要，請參閱有關[建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)的檔案以取得詳細指示。
+1. **熟悉表單資料模型**：瞭解AEM Forms中表單資料模型的概念。 如有需要，請檢閱有關[建立表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)的檔案，以確保您具備必要的瞭解。
 
 只要符合這些必要條件，您就具備了必要的知識和資源，可以使用AEM Forms的SendGrid動態範本有效傳送電子郵件。
 
@@ -49,10 +49,10 @@ ht-degree: 0%
 
 若要測試本指南中說明的功能，請遵循下列步驟：
 
-1. 下載 [swagger檔案](assets/SendGridWithDynamicTemplate.yaml) （在資產資料夾中提供）。
+1. 下載資產資料夾中提供的[swagger檔案](assets/SendGridWithDynamicTemplate.yaml)。
 2. 使用下載的Swagger檔案和您的SendGrid認證建立Restful資料來源。
 3. 根據Restful資料來源建立表單資料模型。
-4. 叫用 `mail/send` 根據您的需求POST表單資料模型的操作。 例如，您可以在按鈕點選時觸發電子郵件，或將其納入您的AEM Forms工作流程的一部分。
+4. 根據您的需求，叫用表單資料模型的`mail/send`POST作業。 例如，您可以在按鈕點選時觸發電子郵件，或將其納入您的AEM Forms工作流程的一部分。
 
 服務的裝載範例如下。 將預留位置值取代為您自己的資料：
 
@@ -75,6 +75,6 @@ ht-degree: 0%
 }
 ```
 
-確保 `template_id` 與SendGrid動態電子郵件範本的ID相對應，且電子郵件地址有效並由SendGrid驗證。 中的值 `personalizations` 區段可讓您使用最適化表單中使用者輸入的資料，將電子郵件個人化。
+請確定`template_id`對應至您SendGrid動態電子郵件範本的識別碼，且電子郵件地址有效且由SendGrid驗證。 `personalizations`區段中的值可讓您使用使用者從最適化表單輸入的資料來個人化電子郵件。
 
 按照這些步驟並自訂所提供的裝載，您就能有效地測試SendGrid動態範本與AEM Forms的整合。

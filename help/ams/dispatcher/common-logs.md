@@ -1,6 +1,6 @@
 ---
 title: AEM Dispatcher通用記錄檔
-description: 檢視Dispatcher提供的常見記錄專案，並瞭解它們的含義以及如何解決它們。
+description: 從Dispatcher檢視常見的記錄專案，並瞭解其含義以及如何處理。
 version: 6.5
 topic: Administration, Performance
 feature: Dispatcher
@@ -37,7 +37,7 @@ Please consult the documentation at 'https://www.adobe.com/go/docs_dispatcher_co
 method/url/query/protocol/path/selectors/extension/suffix instead.
 ```
 
-自從Dispatcher模組4.2.x開始，他們開始勸阻人們在其篩選器檔案中使用以下型別的相符專案：
+自Dispatcher模組4.2.x起，他們就不再鼓勵使用者在其篩選器檔案中使用下列型別的相符專案：
 
 ```
 /0041 { /type "allow" /glob "* *.css *"   }
@@ -86,8 +86,8 @@ Fri Jul 20 17:26:47 2018 D pid 20051 (tid 139937517123328) Filter rejects:
 GET /etc/designs/exampleco/fonts/montserrat-regular/montserrat-regular-webfont.eot HTTP/1.1
 ```
 
-讓我們知道我們的設計檔案 `.eot` 正遭到封鎖，我們將會修正此問題。
-因此，我們應該檢視篩選器檔案，並新增下列行來允許 `.eot` 檔案透過
+這讓我們知道我們的設計檔案`.eot`已被封鎖，我們將要修正它。
+因此，我們應該檢視篩選器檔案，並新增下列行以允許`.eot`個檔案通過
 
 ```
 /0011 { /type "allow" /method "GET" /extension 'eot' /path "/etc/designs/*" }
@@ -109,7 +109,7 @@ Fri Jul 20 22:31:15 2018 W pid 3648 Unable to connect socket to 10.43.3.40:4502:
 Fri Jul 20 22:31:15 2018 W pid 3648 Unable to connect to any backend in farm authorfarm
 ```
 
-當您在伺服器陣列的renders區段中設定錯誤的IP位址時，就會發生這種情況。 該AEM執行個體停止回應或偵聽，Dispatcher無法存取它。
+當您在伺服器陣列的renders區段中設定錯誤的IP位址時，就會發生這種情況。 該AEM執行個體停止回應或接聽，且Dispatcher無法連線到該執行個體。
 
 檢查防火牆規則，確認AEM執行個體正在執行且狀況良好。
 
@@ -120,7 +120,7 @@ Fri Jul 20 22:32:42 2018 I pid 3648 "GET /favicon.ico" 502 - 54034ms authorfarm/
 Fri Jul 20 22:35:45 2018 I pid 3648 "GET /favicon.ico" 503 - 54234ms authorfarm/-
 ```
 
-這表示AEM執行個體有一個開啟的通訊端，它可以透過回應觸及並逾時。 這表示您的AEM執行個體太慢或不健康，Dispatcher已在陣列的轉譯區段中到達其設定的逾時設定。 請增加逾時設定或讓AEM執行個體正常運作。
+這表示AEM執行個體有一個開啟的通訊端，它可以透過回應觸及並逾時。 這表示您的AEM執行個體太慢或不健康，而Dispatcher在陣列的轉譯區段中已達到其設定的逾時設定。 請增加逾時設定或讓AEM執行個體正常運作。
 
 ## 快取層級
 
@@ -130,7 +130,7 @@ Fri Jul 20 22:35:45 2018 I pid 3648 "GET /favicon.ico" 503 - 54234ms authorfarm/
 Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit ratio: 87.94 %
 ```
 
-這表示會測量您從轉譯器層級和從快取擷取的次數。 您想從快取中達到80%以上，您應該按照說明操作 [此處](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html)：
+這表示會測量您從轉譯器層級和從快取擷取的次數。 您想從快取中達到80%以上，您應該依照說明[這裡](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html)：
 
 讓此數目儘可能高。
 
@@ -169,7 +169,7 @@ Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42
 
 當您已將Dispatcher設定為使用動態自動篩選允許虛名URL，但未透過在AEM轉譯器上安裝套件來完成設定時，會發生此錯誤。
 
-若要修正此問題，請在AEM執行個體上安裝虛名URL功能套件，並允許匿名使用者準備就緒。 詳細資料 [此處](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
+若要修正此問題，請在AEM執行個體上安裝虛名URL功能套件，並允許匿名使用者準備就緒。 詳細資訊[在此](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
 
 設定的有效虛名URL如下所示：
 
@@ -187,11 +187,11 @@ Thu Sep 27 17:40:29 2018 D pid 21844 Loaded 18 vanity URLs from file /tmp/vanity
 Wed Nov 13 17:17:26 2019 W pid 19173:tid 140542738364160 No farm matches host 'we-retail.com', selected last farm 'publishfarm'
 ```
 
-此錯誤表示從所有可用的伺服器陣列檔案 `/etc/httpd/conf.dispatcher.d/enabled_farms/` 他們無法從以下位置找到相符的專案 `/virtualhost` 區段。
+此錯誤表示在`/etc/httpd/conf.dispatcher.d/enabled_farms/`中可用的所有伺服器陣列檔案中，無法從`/virtualhost`區段找到相符的專案。
 
-伺服器陣列檔案會根據要求所傳入的網域名稱或路徑來比對流量。 這會使用glob比對，如果不符合，則表示您未正確設定陣列、輸入陣列中的專案拼字，或專案完全遺失。 當陣列不符合任何專案時，它最終只會預設為陣列檔案棧疊中包含的最後一個陣列。 在此範例中， `999_ams_publish_farm.any` 命名為publishfarm的一般名稱。
+伺服器陣列檔案會根據要求所傳入的網域名稱或路徑來比對流量。 這會使用glob比對，如果不符合，則表示您未正確設定陣列、輸入陣列中的專案拼字，或專案完全遺失。 當陣列不符合任何專案時，它最終只會預設為陣列檔案棧疊中包含的最後一個陣列。 在此範例中，它是名為publishfarm一般名稱的`999_ams_publish_farm.any`。
 
-以下是範例伺服器陣列檔案 `/etc/httpd/conf.dispatcher.d/enabled_farms/300_weretail_publish_farm.any` 會縮小以反白相關零件。
+以下是範例伺服器陣列檔案`/etc/httpd/conf.dispatcher.d/enabled_farms/300_weretail_publish_farm.any`，已縮減以強調顯示相關部分。
 
 ## 服務專案來源
 
@@ -201,6 +201,6 @@ Wed Nov 13 17:17:26 2019 W pid 19173:tid 140542738364160 No farm matches host 'w
 Tue Nov 26 16:41:34 2019 I pid 9208 (tid 140112092391168) "GET /content/we-retail/us/en.html" - + 24034ms publishfarm/0
 ```
 
-已透過內容的GEThttp方法擷取頁面 `/content/we-retail/us/en.html` 花了24034毫秒。 我們要注意的是最後部分 `publishfarm/0`. 您會看到它鎖定目標並符合 `publishfarm`. 已從轉譯器0擷取請求。 這表示必須從AEM要求此頁面，然後快取。 現在，讓我們再次要求此頁面，並檢視記錄的情況。
+已透過GEThttp方法為內容`/content/we-retail/us/en.html`擷取頁面，耗時24034毫秒。 我們要注意的部份位於最後`publishfarm/0`。 您會看到它鎖定目標並符合`publishfarm`。 已從轉譯器0擷取請求。 這表示必須從AEM要求此頁面，然後快取。 現在，讓我們再次要求此頁面，並檢視記錄的情況。
 
 [下一個 — >唯讀檔案](./immutable-files.md)

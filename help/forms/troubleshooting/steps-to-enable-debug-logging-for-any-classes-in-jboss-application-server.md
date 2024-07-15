@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 在JBoss應用程式伺服器中啟用任何類別的偵錯記錄步驟
 
-*此影片會逐步說明在JBoss應用程式伺服器中為任何類別啟用偵錯記錄的步驟。*
+*此影片會逐步說明在JBoss Application Server中啟用任何類別的偵錯記錄步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335522?quality=12&learn=on)

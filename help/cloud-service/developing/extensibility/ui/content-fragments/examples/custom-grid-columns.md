@@ -21,32 +21,32 @@ ht-degree: 0%
 
 # 自訂格線欄
 
-![內容片段控制檯自訂格線欄](./assets/custom-grid-columns/hero.png){align="center"}
+![內容片段主控台自訂格線資料行](./assets/custom-grid-columns/hero.png){align="center"}
 
-可以使用將自訂格線欄新增到內容片段控制檯  `contentFragmentGrid` 延伸點。 此範例說明如何新增自訂欄，以人類可讀的格式，根據上次修改日期顯示內容片段年齡。
+可使用`contentFragmentGrid`擴充點將自訂格線欄新增至內容片段主控台。 此範例說明如何新增自訂欄，以人類可讀的格式，根據上次修改日期顯示內容片段年齡。
 
 ## 擴充點
 
-此範例會延伸至擴充點 `contentFragmentGrid` 以新增自訂欄到內容片段控制檯。
+此範例延伸至擴充點`contentFragmentGrid`，以新增自訂欄至內容片段主控台。
 
 | AEM UI已擴充 | 擴充點 |
 | ------------------------ | --------------------- | 
-| [內容片段主控台](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [格線欄](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/) |
+| [內容片段主控台](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [格線資料行](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/) |
 
 ## 範例擴充功能
 
-以下範例會建立自訂欄， `Age` 以人類可讀的格式顯示內容片段的年齡。 年齡是從內容片段的最後修改日期開始計算的。
+下列範例會建立自訂欄`Age`，以人類可讀的格式顯示內容片段的年齡。 年齡是從內容片段的最後修改日期開始計算的。
 
 此程式碼說明如何在擴充功能的註冊檔案中取得內容片段的中繼資料，以及如何匯出內容片段的JSON內容。
 
-此範例使用 [Luxon](https://moment.github.io/luxon/) 用於計算內容片段年齡的程式庫，透過安裝 `npm i luxon`.
+此範例使用[Luxon](https://moment.github.io/luxon/)資料庫來計算透過`npm i luxon`安裝的內容片段年齡。
 
 ### 擴充功能註冊
 
-`ExtensionRegistration.js`，對應至index.html路由，是AEM擴充功能的進入點，並定義：
+`ExtensionRegistration.js`對應至index.html路由，是AEM擴充功能的進入點，並定義：
 
-+ 擴充功能插入本身的位置(`contentFragmentGrid`)在AEM編寫體驗中
-+ 自訂欄的定義，在 `getColumns()` 函式
++ 擴充功能的位置會在AEM編寫體驗中注入自身(`contentFragmentGrid`)
++ `getColumns()`函式中自訂資料行的定義
 + 每個自訂欄的值（依列）
 
 ```javascript
@@ -149,7 +149,7 @@ export default ExtensionRegistration;
 
 #### 內容片段資料
 
-此 `render(..)` 中的方法 `getColumns()` 傳遞了片段的陣列。 陣列中的每個物件代表格線中的一列，並包含下列有關內容片段的中繼資料。 此中繼資料可用於格線中的熱門自訂欄。
+`getColumns()`中的`render(..)`方法傳遞的是片段陣列。 陣列中的每個物件代表格線中的一列，並包含下列有關內容片段的中繼資料。 此中繼資料可用於格線中的熱門自訂欄。
 
 
 ```javascript
@@ -161,7 +161,7 @@ render: async function (fragments) {
 }
 ```
 
-可作為元素使用的範例內容片段JSON `fragments` 中的引數 `render(..)` 方法。
+可作為`render(..)`方法中`fragments`引數的專案使用的內容片段JSON範例。
 
 ```json
 {
@@ -208,9 +208,9 @@ render: async function (fragments) {
 
 >[!IMPORTANT]
 >
-> 確保AEM Author執行個體設定為允許 [跨來源請求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) 從原始位置，AppBuilder應用程式正在執行中。 允許的原始項包括 `https://localhost:9080`、AppBuilder階段來源和AppBuilder生產來源。
+> 請確定AEM Author執行個體已設定為允許來自AppBuilder應用程式執行所在原始位置的[跨原始位置要求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html)。 允許的來源包括`https://localhost:9080`、AppBuilder階段來源和AppBuilder生產來源。
 >
-> 或者，擴充功能可呼叫自訂 [AppBuilder動作](../../runtime-action.md) 會代表擴充功能向AEM Author提出要求。
+> 或者，擴充功能可以呼叫自訂[AppBuilder動作](../../runtime-action.md)，代表擴充功能向AEM Author提出要求。
 
 
 ```javascript
@@ -227,9 +227,9 @@ const response = await fetch(`${context.aemHost}${fragment.id.slice('/content/da
 
 #### 欄定義
 
-轉譯方法的結果為JavaScript物件，其索引鍵為內容片段的路徑(或 `fragment.id`)，而值為要在欄中顯示的值。
+轉譯方法的結果為JavaScript物件，其索引鍵為內容片段的路徑（或`fragment.id`），而值為要顯示在欄中的值。
 
-例如，此擴充功能在 `age` 欄為：
+例如，這個`age`資料行的延伸結果為：
 
 ```json
 {

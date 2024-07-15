@@ -24,7 +24,9 @@ ht-degree: 2%
 
 * 無法使用預設JCR存放庫ACL來控制路徑繫結的servlet的存取許可權
 * 路徑繫結的servlet只能註冊到路徑而非資源型別（即沒有尾碼處理）
-* 如果路徑繫結的servlet不是作用中（例如，如果組合遺失或未啟動），POST可能會導致非預期的結果。 通常在下列位置建立節點： `/bin/xyz` 對於只檢視存放庫的開發人員而言，這會覆蓋繫結對應的servlet路徑鑑於這些缺點，強烈建議將servlet繫結到資源型別而不是路徑
+* 如果路徑繫結的servlet不是作用中（例如，如果組合遺失或未啟動），POST可能會導致非預期的結果。 通常會在`/bin/xyz`建立節點，接著覆蓋servlet路徑繫結
+對於只檢視存放庫的開發人員而言，對應並不透明
+考慮到這些缺點，強烈建議將servlet繫結到資源型別而不是路徑
 
 ## 建立Servlet
 
@@ -33,7 +35,7 @@ ht-degree: 2%
 
 ## 範例Servlet
 
-以下servlet已繫結至Sling資源型別： _**azure/fetchchoices**_
+下列servlet繫結至Sling資源型別： _**azure/fetchchoices**_
 
 
 
@@ -82,10 +84,10 @@ public class GetFieldChoices extends SlingAllMethodsServlet implements Serializa
 ## 在CRX中建立資源
 
 * 登入您的本機AEM SDK。
-* 建立名為的資源 `fetchchoices` （您可以隨意命名此節點），型別為 `cq:Page` 在內容節點下。
+* 在內容節點下建立型別為`cq:Page`且名為`fetchchoices`的資源（您可以隨意命名此節點）。
 * 儲存您的變更
-* 建立名為的節點 `jcr:content` 型別 `cq:PageContent` 並儲存變更
-* 將下列屬性新增至 `jcr:content` 節點
+* 建立名稱為`jcr:content`且型別為`cq:PageContent`的節點並儲存變更
+* 將下列屬性新增至`jcr:content`節點
 
 | 屬性名稱 | 屬性值 |
 |--------------------|--------------------|
@@ -93,21 +95,21 @@ public class GetFieldChoices extends SlingAllMethodsServlet implements Serializa
 | sling:resourceType | `azure/fetchchoices` |
 
 
-此 `sling:resourceType` 值必須與servlet中指定的resourceTypes=&quot;azure/fetchchoices相符。
+`sling:resourceType`值必須與servlet中指定的resourceTypes=&quot;azure/fetchchoices相符。
 
-您現在可以透過請求資源來叫用servlet `sling:resourceType` = `azure/fetchchoices` 路徑中任何選取器或副檔名在Sling servlet中註冊。
+您現在可以透過在資源的完整路徑請求`sling:resourceType` = `azure/fetchchoices`來叫用您的servlet，並在Sling servlet中註冊任何選擇器或副檔名。
 
 ```html
 http://localhost:4502/content/fetchchoices/jcr:content.json?formPath=/content/forms/af/forrahul/jcr:content/guideContainer
 ```
 
-路徑 `/content/fetchchoices/jcr:content` 是資源和擴充功能的路徑 `.json` 是servlet中指定的內容
+路徑`/content/fetchchoices/jcr:content`是資源的路徑，副檔名`.json`是servlet中指定的路徑
 
 ## 同步您的AEM專案
 
 1. 在您最愛的編輯器中開啟AEM專案。 我已使用intelliJ來做這件事。
-1. 建立名為的資料夾 `fetchchoices` 在 `\aem-banking-application\ui.content\src\main\content\jcr_root\content`
-1. 按一下右鍵 `fetchchoices` 資料夾並選取 `repo | Get Command` （此功能表專案是本教學課程上一章所設定）。
+1. 在`\aem-banking-application\ui.content\src\main\content\jcr_root\content`下建立名為`fetchchoices`的資料夾
+1. 以滑鼠右鍵按一下「`fetchchoices`」資料夾並選取「`repo | Get Command`」（此功能表專案是在本教學課程的上一章中設定的）。
 
 這應該會將此節點從AEM同步至您的本機AEM專案。
 
@@ -119,7 +121,7 @@ http://localhost:4502/content/fetchchoices/jcr:content.json?formPath=/content/fo
 <filter root="/content/fetchchoices" mode="merge"/>
 ```
 
-您現在可以使用Cloud Manager將變更推送到AEMas a Cloud Service環境。
+您現在可以使用Cloud Manager將變更推送到AEM as a Cloud Service環境。
 
 ## 後續步驟
 

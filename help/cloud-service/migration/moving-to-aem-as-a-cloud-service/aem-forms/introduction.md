@@ -1,6 +1,6 @@
 ---
 title: AEM Formsas a Cloud Service
-description: 瞭解AEM Formsas a Cloud Service所支援的使用案例和功能。
+description: 瞭解AEM Forms as a Cloud Service支援的使用案例和功能。
 version: Cloud Service
 topic: Migration, Upgrade
 feature: Migration
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # AEM Formsas a Cloud Service — 移至AEM CS
 
-瞭解AEM Formsas a Cloud Service所支援的使用案例和功能。
+瞭解AEM Forms as a Cloud Service支援的使用案例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336968?quality=12&learn=on)

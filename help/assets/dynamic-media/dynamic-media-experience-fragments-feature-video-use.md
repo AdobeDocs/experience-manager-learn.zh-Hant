@@ -25,8 +25,8 @@ AEM Assets Dynamic Media透過互動媒體檢視器整合資產熱點與體驗�
 
 >[!NOTE]
 >
->搭配AEM Assets Dynamic Media熱點使用AEM體驗片段需要 [在Dynamic Media中執行的AEM](https://experienceleague.adobe.com/docs/) 模式。
+>搭配AEM Assets Dynamic Media熱點使用AEM體驗片段需要以Dynamic Media](https://experienceleague.adobe.com/docs/)模式執行[AEM。
 
 影片中顯示的快顯視窗體驗片段變體可在下方以AEM套件形式使用。
 
-下載 [體驗片段Dynamic Media資產](assets/experience-fragmentsdynamic-mediaassets-100.zip)
+下載[體驗片段Dynamic Media Assets](assets/experience-fragmentsdynamic-mediaassets-100.zip)

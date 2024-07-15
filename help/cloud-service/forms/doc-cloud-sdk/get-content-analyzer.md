@@ -26,7 +26,7 @@ ht-degree: 0%
 + 引數
 + 輸出。
 
-此專案的詳細資料 [表單引數可在此取得。](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
+此[表單引數的詳細資料可在此取得。](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
 
 下列範常式式碼會產生所有Office 365檔案型別的JSON片段。
 

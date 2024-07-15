@@ -28,11 +28,11 @@ ht-degree: 2%
 
 >[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
 
-體驗片段是一組群組的元件，組合後會建立體驗。 例如， *標題*， *影像*， *說明*、和 *呼叫動作按鈕* 可結合以形成Teaser體驗。
+體驗片段是一組群組的元件，組合後會建立體驗。 例如，*Title*、*Image*、*Description*&#x200B;和&#x200B;*行動號召按鈕*&#x200B;可以合併為一個Teaser體驗。
 
 透過體驗片段，行銷人員可以：
 
 * 跨管道（擁有的管道和協力廠商接觸點）重複使用體驗
 * 針對特定使用案例建立體驗的變數
 * 讓變數與使用即時副本保持同步
-* 立即將社交貼文體驗新增至Facebook和Pinterest
+* 開箱即用的Facebook和Pinterest社交Post體驗

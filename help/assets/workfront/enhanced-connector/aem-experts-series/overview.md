@@ -10,7 +10,7 @@ jira: KT-9754
 thumbnail: kt-9754.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
+badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
 duration: 49
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # 將Workfront和AEM Assets與增強型聯結器整合
 
-![AEM Experts系列](./assets/banner.png)
+![AEM專家系列](./assets/banner.png)
 
 與Adobe的Workfront和Experience Manager Assets專家一起加入這個四部分影片系列，他們將示範和討論使用增強型聯結器整合Workfront和AEM Assets的來龍去脈。
 
@@ -40,8 +40,8 @@ ht-degree: 0%
              src="./assets/setup.png">
       </a>
       <div>
-         <a href="./setup.md"><strong>設定和初始設定</strong></a>
-         <br/><em>第1/4部分</em>
+         <a href="./setup.md"><strong>設定及初始組態</strong></a>
+         <br/><em>第1/4</em>部分
       </div>
       <p>
         <br/>
@@ -56,7 +56,7 @@ ht-degree: 0%
       </a>
       <div>
          <a href="./custom-forms.md"><strong>Workfront自訂表單和中繼資料對應</strong></a>
-         <br/><em>第2/4部分</em>
+         <br/><em>第2/4</em>部分
       </div>
       <p>
         <br/>
@@ -71,7 +71,7 @@ ht-degree: 0%
       </a>
       <div>
          <a href="./aem-tags-project-linked-folders-and-folder-metadata.md"><strong>AEM Tags、專案連結資料夾和資料夾中繼資料</strong></a>
-         <br/><em>第3/4部分</em> 
+         <br/><em>第3/4</em>部分 
       </div>
       <p>
         <br/>
@@ -86,7 +86,7 @@ ht-degree: 0%
       </a>
       <div>
          <a href="./advanced-settings-and-workflows.md"><strong>進階設定和工作流程</strong></a>
-         <br/><em>第4/4部分</em>
+         <br/><em>第4/4</em>部分
       </div>
       <p>
         <br/>

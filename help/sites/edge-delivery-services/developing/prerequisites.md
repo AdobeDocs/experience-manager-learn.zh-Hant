@@ -27,6 +27,6 @@ ht-degree: 0%
 
 ## 安裝節點.js
 
-若要開始為Edge Delivery Services開發，請 [Node.js](https://nodejs.org) 必須安裝在您的系統上。 您可以透過執行來驗證是否已安裝Node.js `node -v` 在命令列中，如果目前版本存在，則會顯示目前版本。 如果您的系統未安裝Node.js，請參閱以下隨附的視訊以瞭解詳細的安裝指示。
+若要開始開發Edge Delivery Services，必須在您的系統上安裝[Node.js](https://nodejs.org)。 您可以在命令列執行`node -v`，以確認是否已安裝Node.js，如果目前版本存在，就會顯示目前版本。 如果您的系統未安裝Node.js，請參閱以下隨附的視訊以瞭解詳細的安裝指示。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425710/?learn=on)

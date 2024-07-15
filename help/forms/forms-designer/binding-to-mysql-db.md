@@ -1,5 +1,5 @@
 ---
-title: 在Forms Designer中將表單欄位繫結到Mysql支援的資料來源
+title: 將表單欄位繫結到Forms Designer中的Mysql支援的資料來源
 description: 說明將AEM表單繫結至MySql資料庫的短片
 version: 6.5
 feature: Forms Designer,Designer

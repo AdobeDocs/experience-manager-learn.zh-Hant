@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 針對Unix設定（WebKit轉換）中的HtmltoPDF特定問題進行疑難排解的步驟
 
-*此影片會逐步解說疑難排解Unix設定（WebKit轉換）中HtmltoPDF特定問題的程式。*
+*此影片會逐步解說疑難排解Unix設定（WebKit轉換）的HtmltoPDF特定問題的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335548?quality=12&learn=on)

@@ -83,7 +83,7 @@ public class ListFolderContent extends SlingSafeMethodsServlet {
 }
 ```
 
-## 使用JavaScript函式建立使用者端資料庫
+## 使用JavaScript功能建立使用者端資料庫
 
 此servlet是從JavaScript函式叫用。 此函式傳回陣列物件，此物件將用於填入選擇群組元件
 
@@ -111,11 +111,11 @@ function getDAMFolderAssets(damFolder) {
 
 ## 建立最適化表單
 
-建立最適化表單並將表單與客戶庫建立關聯 **listfolderassets**. 將核取方塊元件新增至表單。 使用規則編輯器填入核取方塊的選項，如熒幕擷取畫面所示
-![set-options](assets/set-options-newsletter.png)
+建立最適化表單，並將表單與使用者端資料庫&#x200B;**listfolderassets**建立關聯。 將核取方塊元件新增至表單。 使用規則編輯器填入核取方塊的選項，如熒幕擷取畫面所示
+![設定選項](assets/set-options-newsletter.png)
 
-我們正在叫用javascript函式，稱為 **getDAMFolderAssets** 並傳遞DAM資料夾資產的路徑以列在表單中。
+我們正在叫用名為&#x200B;**getDAMFolderAssets**&#x200B;的Javascript函式，並將DAM資料夾的資產路徑傳遞至表單中的清單。
 
 ## 後續步驟
 
-[組合選取的資產](./assemble-selected-newsletters.md)
+[組合選取的Assets](./assemble-selected-newsletters.md)

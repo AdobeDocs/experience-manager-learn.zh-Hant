@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 在Windows Server 2016中檢查AEM Forms PDFG的資料夾許可權的步驟
 
-*本影片逐步解說在Windows Server 2016中檢查「資料夾許可權」的其他步驟。*
+*此影片逐步解說在Windows Server 2016中檢查「資料夾許可權」的其他步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335519?quality=12&learn=on)

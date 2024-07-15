@@ -61,11 +61,11 @@ Adobe Experience Manager (AEM) Assets是AEM平台上的數位資產管理工具�
    </a>
    <div>
       <a href="../assets-essentials/overview.md">
-      <strong>Assets Essentials快速入門</strong>
+      <strong>開始使用Assets Essentials</strong>
       </a>
    </div>
    <p>
-      <em>加速從概念到設計再到交付的體驗建立。</em>
+      <em>加速建立從概念到設計到傳遞的體驗。</em>
    <p>
 </td>
 <td>
@@ -88,7 +88,7 @@ Adobe Experience Manager (AEM) Assets是AEM平台上的數位資產管理工具�
 ## 其他資源
 
 * [AEM Assets檔案](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
-* [AEMas a Cloud Service教學課程](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service教學課程](/help/cloud-service/overview.md)
 * [AEM Sites教學課程](/help/sites/overview.md)
 * [AEM Forms教學課程](/help/forms/overview.md)
 * [AEM Foundation教學課程](/help/foundation/overview.md)

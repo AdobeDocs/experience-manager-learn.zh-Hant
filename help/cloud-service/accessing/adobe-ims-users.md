@@ -26,11 +26,11 @@ ht-degree: 74%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=zh-Hant#how-to-set-up" text="在 Admin Console 中建立使用者"
 >additional-url="https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="Adobe Admin Console 身分識別概觀"
 
-需要存取AEM作者服務的使用者管理為 [Adobe IMS使用者](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html) 在 [AdobeAdmin Console](https://adminconsole.adobe.com). 了解何謂 Adobe IMS 使用者，以及如何在 Admin Console 中對其進行存取和管理。
+需要存取AEM作者服務的使用者在[AdobeAdmin Console](https://adminconsole.adobe.com)中管理為[Adobe IMS使用者](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html)。 了解何謂 Adobe IMS 使用者，以及如何在 Admin Console 中對其進行存取和管理。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39149?quality=12&learn=on)
 
 ## 其他資源
 
-+ [在Admin Console檔案中建立使用者](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#onboarding-users-in-admin-console)
-+ [Adobe Admin Console Identity概觀檔案](https://helpx.adobe.com/tw/enterprise/using/identity.html)
++ [在Admin Console檔案中上線使用者](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#onboarding-users-in-admin-console)
++ [Adobe Admin Console身分識別總覽檔案](https://helpx.adobe.com/tw/enterprise/using/identity.html)

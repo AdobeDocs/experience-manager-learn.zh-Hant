@@ -8,35 +8,35 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15752
-source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
+exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
+source-git-commit: a12b1778413079646814cb25567abfc26a429340
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 1%
 
 ---
 
-
 # 建立地址元件
 
 登入本機雲端就緒的AEM Forms執行個體的CRXDE。
 
-複製 ``/apps/bankingapplication/components/adaptiveForm/button`` 節點並將其重新命名為addressblock。 選取addressblock節點並設定其屬性，如下所示。
+建立``/apps/bankingapplication/components/adaptiveForm/button``節點的復本，並將其重新命名為addressblock。 選取addressblock節點並設定其屬性，如下所示。
 
 >[!NOTE]
 >
-> ``bankingapplication`` 是在建立Maven專案時提供的appId。 您的環境中此appId可能不同。 您可以製作任何元件的副本，我剛才正好製作按鈕元件的副本
+> ``bankingapplication``是在建立Maven專案時提供的appId。 您的環境中此appId可能不同。 您可以製作任何元件的副本，我剛才正好製作按鈕元件的副本
 
 
-![address-bloc](assets/address-properties.png)
+![位址區塊](assets/address-properties.png)
 
 ## cq-template節點屬性
 
-選取 ``cq-template`` 下的節點 ``addressblock`` 節點並設定其屬性，如下所示。 請注意，fieldType已設定為panel
+選取``addressblock``節點下的``cq-template``節點並設定其屬性，如下所示。 請注意，fieldType已設定為panel
 ![cq-template](assets/cq-template.png)
 
 ## 在cq-template下新增節點
 
-新增下列型別的節點 ``nt:unstructured`` 在 ``cq-template``
+在``cq-template``下新增下列型別``nt:unstructured``的節點
 
 * streetaddress
 * 城市
@@ -49,25 +49,25 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 此 **_銀行應用程式_** 在路徑中是指maven專案的appId。 您的環境可能會有所不同
+> 路徑中的&#x200B;**_銀行應用程式_**&#x200B;參考Maven專案的appId。 您的環境可能會有所不同
 
-選取 ``streetaddress`` 節點並設定其屬性，如下所示。
-![street-address](assets/streetaddress.png)
+選取``streetaddress``節點並設定其屬性，如下所示。
+![街道地址](assets/streetaddress.png)
 
 ## 設定城市節點的屬性
 
-選取 ``city`` 節點並設定其屬性，如下所示。
+選取``city``節點並設定其屬性，如下所示。
 ![城市](assets/city.png)
 
 ## 設定zip節點的屬性
 
-選取 ``zip`` 節點並設定其屬性，如下所示。
+選取``zip``節點並設定其屬性，如下所示。
 ![zip](assets/zip.png)
 
 ## 設定狀態節點的屬性
 
-選取 ``state`` 節點並設定其屬性，如下所示。 請注意fieldType的狀態型別 — 已設定為下拉式清單
-![state](assets/state.png)
+選取``state``節點並設定其屬性，如下所示。 請注意fieldType的狀態型別 — 已設定為下拉式清單
+![狀態](assets/state.png)
 
 最終的addressblock元件看起來像這樣
 
@@ -76,7 +76,3 @@ ht-degree: 1%
 ## 後續步驟
 
 [部署專案](./deploy-your-project.md)
-
-
-
-

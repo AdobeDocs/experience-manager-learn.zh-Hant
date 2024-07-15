@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 用於檢閱和核准已提交PDF的工作流程
 
-最後一個也是最後一個步驟是建立AEM工作流程，這會產生靜態或非互動式PDF以供檢閱和核准。 透過節點上設定的AEM啟動器觸發工作流程 `/content/pdfsubmissions`.
+最後一個也是最後一個步驟是建立AEM工作流程，這會產生靜態或非互動式PDF以供檢閱和核准。 工作流程是透過節點`/content/pdfsubmissions`上設定的AEM啟動器觸發。
 
 以下熒幕擷圖顯示工作流程中的步驟。
 
@@ -26,16 +26,16 @@ ht-degree: 0%
 
 ## 產生非互動式PDF工作流程步驟
 
-此處會指定XDP範本及要與範本合併的資料。 要合併的資料是從PDF提交的資料。 此提交的資料會儲存在節點下 `/content/pdfsubmissions`.
+此處會指定XDP範本及要與範本合併的資料。 要合併的資料是從PDF提交的資料。 此提交的資料儲存在節點`/content/pdfsubmissions`下。
 
 ![工作流程](assets/generate-pdf1.PNG)
 
-產生的PDF會指派給名為的工作流程變數 `submittedPDF`.
+產生的PDF已指派給名為`submittedPDF`的工作流程變數。
 
 ![工作流程](assets/generate-pdf2.PNG)
 
 ### 指派產生的PDF以供檢閱和核准
 
-指派任務工作流程元件是用來指派產生的PDF以供檢閱和核准。 變數 `submittedPDF` 用於「指派任務」工作流程元件的Forms和「檔案」索引標籤中。
+指派任務工作流程元件是用來指派產生的PDF以供檢閱和核准。 變數`submittedPDF`用於指派工作流程元件的Forms和檔案索引標籤。
 
 ![工作流程](assets/assign-task.PNG)

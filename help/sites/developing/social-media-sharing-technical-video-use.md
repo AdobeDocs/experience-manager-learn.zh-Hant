@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/18897?quality=12&learn=on)
 
-本影片探討以下社群媒體分享元件的功能（的一部分） [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant))使用 [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) 範例網站。
+此影片使用[We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail)範例網站，探索下列社群媒體分享元件([AEM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)的一部分)的功能。
 
 * 0:00 — 新增和設定社群媒體分享元件
 * 1:00 — 共用至Facebook
@@ -31,13 +31,13 @@ ht-degree: 1%
 
 ## 外部化器設定 {#externalizer-setup}
 
-![Day CQ連結外部化器](assets/externalizer.png)
+![天CQ連結外部器](assets/externalizer.png)
 
 [http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl)
 
-[AEM外部化器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) 應同時在AEM Author和AEM Publish上設定，以將發佈執行模式對應到用來存取AEM Publish的公開存取網域。
+[AEM的外部化程式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html)應同時在AEM Author和AEM Publish上設定，以將發佈執行模式對應到用來存取AEM Publish的公開存取網域。
 
-在這段影片中，我們使用 `/etc/hosts` 到欺騙 *www.example.com* 解析為localhost，並使用 [基本AEM Dispatcher設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) 允許www.example.com做為AEM Publish的前端。
+在此影片中，我們使用`/etc/hosts`來偽造&#x200B;*www.example.com*，以解析為localhost，並使用[基本AEM Dispatcher設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)，以允許www.example.com在AEM Publish前面。
 
 ## 支援材料 {#supporting-materials}
 

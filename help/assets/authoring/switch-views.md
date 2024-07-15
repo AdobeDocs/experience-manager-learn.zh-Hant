@@ -1,6 +1,6 @@
 ---
 title: 在AEM Assets中切換檢視
-description: 瞭解如何在AEM Assetsas a Cloud Service中有效率地切換檢視，以確保順暢的資產管理。
+description: 瞭解如何在AEM Assetsas a Cloud Service中有效率地切換檢視，確保順暢的資產管理。
 version: Cloud Service
 feature: Asset Management
 topic: Content Management
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # 切換檢視
 
-瞭解如何有效率地在 [資產檢視和管理員檢視](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/overview.html#persona-based-experiences) 在AEM Assetsas a Cloud Service中，確保順暢的資產管理。
+瞭解如何在AEM Assetsas a Cloud Service中的[Assets檢視與管理員檢視](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/overview.html#persona-based-experiences)之間有效率地切換，以確保順暢的資產管理。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426806/?learn=on)

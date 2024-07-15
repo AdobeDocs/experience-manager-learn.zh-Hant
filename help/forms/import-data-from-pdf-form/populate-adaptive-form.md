@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 進行Ajax呼叫
 
-當使用者已上傳pdf檔案時，我們需要對servlet進行POST呼叫，並在POST請求中傳遞已上傳的PDF檔案。 POST請求會傳回crx存放庫中匯出資料的路徑
+當使用者已上傳pdf檔案時，我們需要對servlet進行POST呼叫，並在POST請求中傳遞已上傳的PDF檔案。 Post請求會傳回crx存放庫中匯出資料的路徑
 
 ```javascript
 $("#fileElem").on('change', function (e) {
@@ -58,8 +58,8 @@ function handleFiles(formData) {
 }
 ```
 
-掛載的servlet **_/bin/ExtractDataFromPDF_** 會從PDF檔案中擷取資料，並傳回所擷取資料儲存所在的crx節點的路徑。
-此 [GuideBridge setData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor) 方法接著用於設定最適化表單的資料。
+掛載在&#x200B;**_/bin/ExtractDataFromPDF_**上的servlet會從PDF檔案中擷取資料，並傳回所擷取資料儲存所在的crx節點的路徑。
+接著會使用[GuideBridge setData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor)方法來設定最適化表單的資料。
 
 ## 後續步驟
 

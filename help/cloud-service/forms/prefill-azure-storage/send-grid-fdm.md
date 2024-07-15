@@ -27,8 +27,8 @@ AEM Forms資料整合可設定不同的資料來源，並將其與AEM Forms連�
 
 請依照下列步驟，建立AEM Forms與SendGrid之間的整合
 
-* 建立RESTful資料來源，使用 [swagger檔案](./assets/SendGridWithDynamicTemplate.yaml). [請觀看此影片，瞭解詳細指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) 在AEM Forms中建立資料來源時
-* 根據上一步驟建立的資料來源建立表單資料模型。[請依照詳細檔案操作](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models.html) 建立表單資料模型時。
+* 使用[swagger檔案](./assets/SendGridWithDynamicTemplate.yaml)建立RESTful資料來源。 [請觀看此影片，瞭解在AEM Forms中建立資料來源的詳細指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
+* 根據上一步驟建立的資料來源建立表單資料模型。[請遵循建立表單資料模型的詳細檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models.html)。
 
 為本教學課程建立的表單資料模型會包含在文章資產中。
 

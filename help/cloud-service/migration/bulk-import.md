@@ -1,6 +1,6 @@
 ---
 title: 搭配AEM Assets使用大量匯入
-description: AEMas a Cloud Service中的大量匯入工具可讓管理員以安全又有效率的方式從雲端儲存空間(Azure Blob儲存或Amazon S3)大量匯入資產。
+description: AEM as a Cloud Service中的大量匯入工具可讓管理員以安全又有效率的方式從雲端儲存空間(Azure Blob儲存或Amazon S3)大量匯入資產。
 version: Cloud Service
 doc-type: technical-video
 feature: Migration
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 # 使用大量匯入
 
-AEMas a Cloud Service中的大量匯入工具可讓管理員以安全又有效率的方式從雲端儲存空間大量匯入資產。
+AEM as a Cloud Service中的大量匯入工具可讓管理員以安全又有效率的方式從雲端儲存空間大量匯入資產。
 
 >[!BEGINTABS]
 
->[!TAB 資產檢視]
+>[!TAB Assets檢視]
 
-瞭解如何使用將許多檔案匯入AEM Assets [資產檢視](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [大量匯入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html)，以Dropbox作為範例雲端儲存空間提供者，提供簡單明瞭的整合程式。
+瞭解如何使用[資產檢視](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [大量匯入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html)，將許多檔案匯入AEM Assets，以Dropbox作為範例雲端儲存提供者，實現清晰易用的整合程式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
 
@@ -37,7 +37,7 @@ AEMas a Cloud Service中的大量匯入工具可讓管理員以安全又有效�
 
 >[!TIP]
 >
-> 此影片中的輸入來源僅顯示Azure Blob Storage和Amazon S3；不過可用來源會隨著時間持續成長。 如需完整的支援輸入來源清單，請參閱產品中的可用選項，或 [檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
+> 此影片中的輸入來源僅顯示Azure Blob Storage和Amazon S3；不過可用來源會隨著時間持續成長。 如需支援的輸入來源完整清單，請參閱產品中的可用選項，或[檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload)。
 
 ## 排程大量匯入
 

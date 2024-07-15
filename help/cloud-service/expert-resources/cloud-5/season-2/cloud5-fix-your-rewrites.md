@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # Cloud 5 — 修正您的……重寫
 
-作為系列的第二部分，我們探索一些您可以瞭解的內容，以加快您在AEMas a Cloud Service上的重寫開發和最佳化。
+作為系列的第二部分，我們探索一些您可以瞭解的內容，以加速您在AEM as a Cloud Service上的重寫開發和最佳化。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343600?quality=12&learn=on)
 

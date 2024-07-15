@@ -24,4 +24,4 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
 
-另外，瞭解如何設定 [AEM Assets與Adobe Express的原生整合](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express) 以從Adobe Express順暢地存取AEM Assets。
+此外，瞭解如何設定[AEM Assets與Adobe Express](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express)的原生整合，以從Adobe Express順暢存取AEM Assets。

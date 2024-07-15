@@ -29,7 +29,7 @@ AEM網站的頁面編輯器是建立和編輯網頁內容的強大工具。 頁�
 >[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
 
 
-請參閱 [AEM檔案，以取得頁面編輯器功能的完整概觀](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html).
+請參閱[AEM檔案，以取得頁面編輯器功能的完整概觀](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)。
 
 ## 其他資源 {#additional-resources}
 

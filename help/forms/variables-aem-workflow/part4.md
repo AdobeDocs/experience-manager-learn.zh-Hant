@@ -68,12 +68,12 @@ AEM Forms 6.5已匯入ArrayList型別的變數。使用ArrayList變數的常見�
 然後會使用CustomRoutes ArrayList來填入AssignTask元件中的路由
 ![自訂路由](assets/arraylist.jpg)
 使用提交的資料中的值初始化CustomRoutes ArrayList變數後，就會使用CustomRoutes變數填入AssignTask元件的路由。 下面的熒幕擷圖顯示AssignTask中的自訂路由
-![工作分派](assets/customactions.jpg)
+![指派工作](assets/customactions.jpg)
 
 若要在您的系統上測試此工作流程，請遵循下列步驟
 
 * 下載ArrayListVariable.zip檔案並儲存至您的檔案系統
-* [匯入zip檔案](assets/arraylistvariable.zip) 使用AEM封裝管理員
+* [使用AEM封裝管理員匯入zip檔案](assets/arraylistvariable.zip)
 * [開啟TravelExpenseReport表單](http://localhost:4502/content/dam/formsanddocuments/helpx/travelexpensereport/jcr:content?wcmmode=disabled)
 * 輸入一些費用和2位經理的名稱
 * 按一下提交按鈕
@@ -81,4 +81,4 @@ AEM Forms 6.5已匯入ArrayList型別的變數。使用ArrayList變數的常見�
 * 您應該會看到名為「指派給費用管理員」的新任務
 * 開啟與任務關聯的表單
 * 您應該會看到兩個具有管理員名稱的自訂路由
-  [探索ReviewExpenseReportWorkflow。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) 此工作流程使用Or-Split元件中的ArrayList變數、JSON型別變數、規則編輯器
+  [探索ReviewExpenseReportWorkflow。](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html)此工作流程使用Or-Split元件中的ArrayList變數、JSON型別變數、規則編輯器

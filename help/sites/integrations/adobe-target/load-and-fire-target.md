@@ -9,7 +9,7 @@ topic: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 duration: 588
@@ -28,19 +28,19 @@ ht-degree: 1%
 
 ## 頁面載入規則
 
-Adobe使用者端資料層是事件導向的資料層。 載入AEM Page資料層時，會觸發事件 `cmp:show` . 在影片中， `tags Library Loaded` 使用自訂事件叫用規則。 您可以在下方找到視訊中用於自訂事件和資料元素的程式碼片段。
+Adobe使用者端資料層是事件導向的資料層。 載入AEM Page資料層時，會觸發事件`cmp:show` 。 在影片中，使用自訂事件叫用`tags Library Loaded`規則。 您可以在下方找到視訊中用於自訂事件和資料元素的程式碼片段。
 
 ### 自訂頁面顯示事件{#page-event}
 
 ![頁面顯示的事件設定和自訂程式碼](assets/load-and-fire-target-call.png)
 
-在tags屬性中，新增 **事件** 至 **規則**
+在標籤屬性中，將新的&#x200B;**事件**&#x200B;新增至&#x200B;**規則**
 
-+ __副檔名：__ 核心
-+ __事件型別：__ 自訂程式碼
-+ __名稱：__ 頁面顯示事件處理常式（或描述性內容）
++ __延伸模組：__&#x200B;核心
++ __事件型別：__&#x200B;自訂程式碼
++ __名稱：__&#x200B;頁面顯示事件處理常式（或描述性內容）
 
-點選 __開啟編輯器__ 按鈕，並貼入下列程式碼片段。 此程式碼 __必須__ 已新增至 __事件設定__ 和後續的 __動作__.
+點選&#x200B;__開啟編輯器__&#x200B;按鈕，然後貼入下列程式碼片段。 此程式碼&#x200B;__必須__&#x200B;新增至&#x200B;__事件組態__&#x200B;和後續的&#x200B;__動作__。
 
 ```javascript
 // Define the event handler function
@@ -80,20 +80,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-自訂函式會定義 `pageShownEventHandler`，會偵聽AEM核心元件發出的事件、衍生核心元件的相關資訊、將其封裝為事件物件，並在其裝載處以衍生的事件資訊觸發標籤事件。
+自訂函式定義`pageShownEventHandler`，並接聽AEM核心元件發出的事件、衍生核心元件的相關資訊、將其封裝成事件物件，並在其裝載處以衍生的事件資訊觸發標籤事件。
 
-使用標籤的 `trigger(...)` 函式： __僅限__ 可從規則事件的自訂程式碼片段定義中使用。
+使用標籤的`trigger(...)`函式（僅&#x200B;__2}可在規則事件的自訂程式碼片段定義中使用）觸發標籤規則。__
 
-此 `trigger(...)` 函式會將事件物件視為引數，該引數又會以標籤中另一個保留名稱在標籤中公開，命名為 `event`. 標籤中的資料元素現在可以從參照此事件物件的資料 `event` 物件，使用類似以下的語法 `event.component['someKey']`.
+`trigger(...)`函式將事件物件視為引數，而這個引數又在標籤「資料元素」中公開，並以標籤中名為`event`的另一個保留名稱公開。 標籤中的資料元素現在可以使用如`event.component['someKey']`的語法，從`event`物件參照此事件物件的資料。
 
-如果 `trigger(...)` 在事件的自訂程式碼事件型別內容之外使用（例如，在動作中），即JavaScript錯誤 `trigger is undefined` 在與tags屬性整合的網站上擲回。
+如果在事件的Custom Code事件型別內容之外使用`trigger(...)` （例如，在動作中），則在與tags屬性整合的網站上擲回JavaScript錯誤`trigger is undefined`。
 
 
 ### 資料元素
 
 ![資料元素](assets/data-elements.png)
 
-標籤資料元素會對應來自事件物件的資料 [在自訂頁面顯示事件中觸發](#page-event) 至可在Adobe Target中取得的變數，透過核心擴充功能的自訂程式碼資料元素型別。
+標籤資料元素會透過核心擴充功能的自訂程式碼資料元素型別，將自訂頁面顯示事件](#page-event)中觸發之事件物件[的資料對應至Adobe Target中的可用變數。
 
 #### 頁面ID資料元素
 
@@ -137,7 +137,7 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 
 #### 未設定mboxDisable Cookie時的錯誤訊息
 
-![Target Cookie網域錯誤](assets/target-cookie-error.png)
+![目標Cookie網域錯誤](assets/target-cookie-error.png)
 
 ```
 > AT: [page-init] Adobe Target content delivery is disabled. Ensure that you can save cookies to your current domain, there is no "mboxDisable" cookie and there is no "mboxDisable" parameter in the query string.
@@ -146,7 +146,7 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 #### 解決方案
 
 客戶有時使用雲端型例項搭配Target進行Target測試或簡單的概念證明用途。 這些網域和許多其他網域均屬於公用字尾清單。
-如果您使用這些網域，則現代瀏覽器不會儲存Cookie，除非您自訂 `cookieDomain` 設定，使用 `targetGlobalSettings()`.
+如果您使用這些網域，則新式瀏覽器不會儲存Cookie，除非您使用`targetGlobalSettings()`自訂`cookieDomain`設定。
 
 ```
 window.targetGlobalSettings = {  

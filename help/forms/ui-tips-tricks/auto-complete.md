@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 提供地址建議
 
-![country-suggestions](assets/auto-complete2.png)
+![國家/地區建議](assets/auto-complete2.png)
 
 
 
@@ -66,7 +66,7 @@ $(".streetAddress input").autocomplete({
 
 ## 使用emoji的建議
 
-![country-suggestions](assets/auto-complete3.png)
+![國家/地區建議](assets/auto-complete3.png)
 
 下列程式碼用於顯示建議清單中的emoji
 
@@ -79,8 +79,8 @@ minLength: 1, source: values, delay: 0
 );
 ```
 
-此 [可下載範例表單](assets/auto-complete-form.zip) 從這裡。 請務必使用程式碼的程式碼編輯器提供您自己的使用者名稱/API金鑰，以成功執行REST呼叫。
+可從這裡下載[範例表單](assets/auto-complete-form.zip)。 請務必使用程式碼的程式碼編輯器提供您自己的使用者名稱/API金鑰，以成功執行REST呼叫。
 
 >[!NOTE]
 >
-> 若要讓自動完成生效，請確認您的表單使用下列使用者端程式庫 **cq.jquery.ui**. 此使用者端程式庫隨附AEM。
+> 若要自動完成以運作，請確認您的表單使用下列使用者端程式庫&#x200B;**cq.jquery.ui**。 此使用者端程式庫隨附AEM。

@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## JDBC連線集區
 
-* 前往 [ConfigMgr](http://localhost:4502/system/console/configMgr)
+* 移至[ConfigMgr](http://localhost:4502/system/console/configMgr)
 
    * 搜尋「JDBC連線集區」。 建立新的Day Commons JDBC連線集區。 指定資料庫的特定設定。
 
@@ -33,14 +33,14 @@ ht-degree: 0%
 
 ## 指定資料庫詳細資訊
 
-* 搜尋&quot;**指定資料庫詳細資訊**&quot;
+* 搜尋「**指定資料庫詳細資料**」
 * 指定資料庫的特定屬性。
    * DataSourceName：您先前設定的資料來源名稱。
    * TableName — 您要儲存AF資料的表格名稱
    * FormName — 保留表單名稱的欄名稱
    * ColumnName — 儲存AF資料的欄名稱
 
-  ![指定資料庫詳細資訊OSGi設定](assets/specify-database-details.png)
+  ![指定資料庫詳細資料OSGi組態](assets/specify-database-details.png)
 
 
 
@@ -213,9 +213,9 @@ public class InsertAfData implements WorkflowProcess {
 * 使用configMgr指定資料庫詳細資訊
 * [下載Zip檔案並將內容解壓縮到您的硬碟上](assets/article-assets.zip)
 
-   * 部署jar檔案，使用 [AEM網頁主控台](http://localhost:4502/system/console/bundles). 此jar檔案包含將表單資料儲存在資料庫中的程式碼。
+   * 使用[AEM Web主控台](http://localhost:4502/system/console/bundles)部署jar檔案。 此jar檔案包含將表單資料儲存在資料庫中的程式碼。
 
-   * 將兩個zip檔案匯入 [使用封裝管理員的AEM](http://localhost:4502/crx/packmgr/index.jsp). 這樣您就可以 [範例工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) 和 [最適化表單範例](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 這會在表單提交時觸發工作流程。 請注意工作流程步驟中的程式引數。 這些引數會指示表單名稱，以及將包含最適化表單資料的資料檔案名稱。 資料檔案儲存在crx存放庫的裝載資料夾下。 請注意 [最適化表單](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) 已設定為在提交時觸發AEM工作流程，且資料檔案設定(data.xml)
+   * 使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)將兩個zip檔案匯入[AEM。 這將為您取得[範例工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html)以及將在表單提交時觸發工作流程的[範例最適化表單](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html)。 請注意工作流程步驟中的程式引數。 這些引數會指示表單名稱，以及將包含最適化表單資料的資料檔案名稱。 資料檔案儲存在crx存放庫的裝載資料夾下。 請注意[最適化表單](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html)如何設定為在提交時觸發AEM工作流程，以及資料檔設定(data.xml)
 
    * 預覽並填寫表單並提交。 您應該會看到資料庫中建立的新列
 

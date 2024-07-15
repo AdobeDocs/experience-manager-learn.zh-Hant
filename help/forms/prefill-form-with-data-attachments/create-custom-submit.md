@@ -40,7 +40,7 @@ ht-degree: 1%
 }
 ```
 
-元素 _**contractcopy**_ 代表檔案附件元件，用於擷取表單提交的附件。
+專案&#x200B;_**contractcopy**_代表檔案附件元件，可用來擷取表單所提交的附件。
 為了能夠使用資料及其附件預先填寫最適化表單，提交的附件將儲存在Azure入口網站，並且提交的資料中合約副本物件的資料元素將使用已儲存附件的URL進行更新。
 自訂提交服務會擷取附件，並儲存在Azure入口網站中。  更新的已提交資料如下所示
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 ```
 
 
-[以下提供核心元件型最適化表單的範例自訂提交處理常式](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). 已寫入下列自訂提交以處理表單提交
+[您可以在此取得核心元件式最適化表單的範例自訂提交處理常式](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56)。 已寫入下列自訂提交以處理表單提交
 
 ```java
 package com.azuredemo.core;

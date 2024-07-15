@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 在Windows Server 2016中新增AEM Forms PDF使用者的步驟。
 
-*本影片逐步說明在Windows 2016中新增AEM Forms PDFG使用者的其他步驟。*
+*此影片逐步說明在Windows 2016中新增AEM Forms PDFG使用者的其他步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335479?quality=12&learn=on)

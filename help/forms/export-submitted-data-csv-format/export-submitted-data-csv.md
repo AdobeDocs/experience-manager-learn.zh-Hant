@@ -24,7 +24,7 @@ ht-degree: 0%
 >
 >此範例僅適用於最適化Forms，而非根據結構或表單資料模型
 
-![表格結構](assets/tablestructure.PNG)
+![資料表結構](assets/tablestructure.PNG)
 如您所見，結構描述的名稱是aemformstutorial。在此結構描述內，是表單提交表格，其中已定義下列欄
 
 * formdata：此欄會儲存提交的formdata
@@ -32,7 +32,7 @@ ht-degree: 0%
 * id：這是主索引鍵，並設為自動增加
 
 表格名稱和兩欄名稱會公開為OSGi設定屬性，如下面的熒幕擷圖所示：
-![OSGI設定](assets/configuration.PNG)
+![osgi-configuration](assets/configuration.PNG)
 程式碼會讀取這些值，並建構要執行的適當SQL查詢。 例如，以下查詢會根據上述值執行
 
 `SELECT formdata FROM aemformstutorial.formsubmissions where formname=timeoffrequestform`
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 * 第37行：我們正在存取Apache Sling Connection Pooled DataSource。
 
-* 第89行：這是服務的進入點。方法 `getCSVFile(..)` 採用formName作為輸入引數，並擷取與給定表單名稱相關的已提交資料。
+* 第89行：這是服務的進入點。方法`getCSVFile(..)`採用formName作為輸入引數，並擷取與指定表單名稱相關的提交資料。
 
 >[!NOTE]
 >
@@ -265,7 +265,7 @@ public @interface StoreAndExportConfiguration {
 
 ## Servlet
 
-以下為叫用 `getCSVFile(..)` 服務的方法。 此服務會傳回StringBuffer物件，然後串流回呼叫的應用程式
+以下是叫用服務`getCSVFile(..)`方法的servlet程式碼。 此服務會傳回StringBuffer物件，然後串流回呼叫的應用程式
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -307,6 +307,6 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 
 ### 在您的伺服器上部署
 
-* 匯入 [SQL檔案](assets/formsubmissions.sql) 使用MySQL Workbench進入MySQL伺服器。 這會建立名為的結構描述 **aemformstutorial** 和已呼叫的表格 **formsubmitments** 包含一些範例資料。
-* 部署 [OSGi套件](assets/store-export.jar) 使用Felix網頁主控台
-* [若要取得TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform). 您應該會收到CSV檔案的串流回傳給您。
+* 使用MySQL Workbench將[SQL檔案](assets/formsubmissions.sql)匯入MySQL伺服器。 這會建立名為&#x200B;**aemformstutorial**&#x200B;的結構描述，以及名為&#x200B;**formsubmissions**&#x200B;的資料表，其中包含一些範例資料。
+* 使用Felix Web主控台部署[OSGi套件](assets/store-export.jar)
+* [取得TimeOffRequest提交](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform)。 您應該會收到CSV檔案的串流回傳給您。

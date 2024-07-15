@@ -10,7 +10,7 @@ jira: KT-9124
 thumbnail: 337575.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Assetsas a Cloud Service、AEM Assets 6.5" before-title="false"
+badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
 doc-type: Feature Video
 exl-id: fe9d1305-7add-4434-a4a9-16e0fb805574
 duration: 911

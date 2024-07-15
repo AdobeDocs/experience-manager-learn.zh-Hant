@@ -30,11 +30,11 @@ ht-degree: 1%
 
 * 已安裝表單附加元件套件的AEM工作執行個體
 
-* **假設您在localhost：4502上執行AEM Forms 6.4版或更新版本。**
+* **假設您在localhost：4502.**&#x200B;上執行AEM Forms 6.4版或更新版本
 
-* [下載client-libs-and-logo](assets/client-libs-and-logo.zip) 和 [getting-started-fragment](assets/getting-started-fragment.zip) 到您的硬碟。
+* [將client-libs-and-logo](assets/client-libs-and-logo.zip)和[getting-started-fragment](assets/getting-started-fragment.zip)下載到您的硬碟。
 
-* 使用將zip檔案匯入AEM [封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
+* 使用[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)將zip檔案匯入AEM
 
 ## 後續步驟
 

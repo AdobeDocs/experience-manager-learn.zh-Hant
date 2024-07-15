@@ -37,11 +37,11 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
     </a>
     <div>
       <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
-    <strong>建立第一個最適化表單</strong>
+    <strong>建立您的第一個最適化表單</strong>
     </a>
     </div>
     <p>
-    <em>調適型表單是新一代的表單，不但動態且回應迅速。 您可以使用調適型表單來提供個人化體驗</em>
+    <em>最適化表單是動態且回應式的新一代表單。 您可以使用最適化表單來提供個人化體驗</em>
     <p>
   </td>
    <td>
@@ -54,7 +54,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
     </a>
     </div>
     <p>
-    <em>「互動式通訊」可集中處理及管理安全、個人化與互動式通訊的建立、集合與傳遞，例如商務信函、檔案、對帳單、福利通知、行銷郵件、帳單和歡迎套件。 </em>
+    <em>互動式通訊可集中處理及管理安全、個人化及互動式通訊的建立、集合及傳遞，例如商務信函、檔案、對帳單、福利通知、行銷郵件、帳單及歡迎套件。</em>
     <p>
   </td>
   <td>
@@ -63,11 +63,11 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
     </a>
     <div>
       <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-    <strong>在AEM Workflow中使用表單資料模型</strong>
+    <strong>在AEM工作流程中使用表單資料模型</strong>
     </a>
     </div>
     <p>
-    <em>啟動表單資料模型服務作為AEM Workflow中的步驟</em>
+    <em>在AEM工作流程中啟動表單資料模型服務</em>
     <p>
   </td>
 </tr>
@@ -82,7 +82,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
 * [AEM Sites開發檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [AEM Sites管理檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
 * [AEM Sites部署檔案](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEMas a Cloud Service教學課程](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service教學課程](/help/cloud-service/overview.md)
 * [AEM Assets教學課程](/help/assets/overview.md)
 * [AEM Forms教學課程](/help/forms/overview.md)
 * [AEM Foundation教學課程](/help/foundation/overview.md)

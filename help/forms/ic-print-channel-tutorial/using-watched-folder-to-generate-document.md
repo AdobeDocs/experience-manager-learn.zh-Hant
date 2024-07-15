@@ -26,11 +26,11 @@ ht-degree: 0%
 
 當您在AEM中設定watched資料夾時，您會關聯ECMA指令碼或Java程式碼，這些程式碼會在檔案放入watched資料夾時執行。 在本文中，我們將重點介紹ECMA指令碼，它會產生列印通道檔案並將其儲存至檔案系統。
 
-watched資料夾設定和ECMA指令碼是您於匯入的資產的一部分 [本教學課程的開頭](introduction.md)
+Watched資料夾設定和ECMA指令碼是您在本教學課程的[開頭匯入的資產的一部分](introduction.md)
 
 放入watched資料夾的輸入檔案具有下列結構。 ECMA指令碼會讀取帳號，並產生每個帳號的列印管道檔案。
 
-如需有關產生檔案的ECMA指令碼的詳細資訊， [請參閱本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+如需有關產生檔案的ECMA指令碼的詳細資訊，[請參閱本文](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 ```xml
 <accountnumbers>
@@ -54,7 +54,7 @@ watched資料夾設定和ECMA指令碼是您於匯入的資產的一部分 [本�
 * 請確定interactiveCommunicationsDocument的路徑指向您要列印的正確檔案。（第1行）
 * 記下saveLocation （第2行）。您可以視需要加以變更。
 * 請確定表單資料模型的輸入引數已繫結至要求屬性，且其繫結值已設為「accountnumber」。 請參閱下方的熒幕擷圖。
-  ![請求](assets/requestattributeprintchannel.gif)
+  ![要求](assets/requestattributeprintchannel.gif)
 
 * 建立含有以下內容的accountnumbers.xml檔案
 

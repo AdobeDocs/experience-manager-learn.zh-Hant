@@ -1,5 +1,5 @@
 ---
-title: 使用AEMas a Cloud Service快取頁面變體
+title: 使用AEM as a Cloud Service快取頁面變體
 description: 瞭解如何設定和使用AEM as a Cloud Service來支援快取頁面變體。
 role: Architect, Developer
 topic: Development
@@ -19,21 +19,21 @@ ht-degree: 1%
 
 ## 範例使用案例
 
-+ 任何服務提供者，如果根據使用者的地理位置和具有動態內容的頁面快取，提供不同的服務方案和對應的定價選項，應在CDN和Dispatcher進行管理。
++ 服務提供者若根據使用者的地理位置及具有動態內容的頁面快取，提供不同的服務方案集和相應的定價選項，應在CDN和Dispatcher進行管理。
 
-+ 零售客戶在全國/地區都有商店，而每個商店會根據其所在位置提供不同優惠方案，且含動態內容的頁面快取應在CDN和Dispatcher中進行管理。
++ 零售客戶在全國/地區都有商店，而每個商店會根據其所在位置提供不同優惠方案，而具有動態內容的頁面快取應在CDN和Dispatcher中管理。
 
 ## 解決方案概覽
 
-+ 識別變體索引鍵及其可能有的值數量。 在我們的範例中，我們因美國各州而異，因此數字上限為50。 這足夠小，不會導致CDN的變體限制發生問題。 [檢閱變體限制區段](#variant-limitations).
++ 識別變體索引鍵及其可能有的值數量。 在我們的範例中，我們因美國各州而異，因此數字上限為50。 這足夠小，不會導致CDN的變體限制發生問題。 [檢閱變體限制區段](#variant-limitations)。
 
-+ AEM程式碼必須設定Cookie __&quot;x-aem-variant&quot;__ 至訪客的偏好狀態(例如 `Set-Cookie: x-aem-variant=NY`)時，HTTP請求對應的回應。
++ AEM程式碼必須將Cookie __&quot;x-aem-variant&quot;__&#x200B;設定為訪客的慣用狀態(例如 `Set-Cookie: x-aem-variant=NY`)。
 
-+ 訪客的後續請求會傳送該Cookie (例如 `"Cookie: x-aem-variant=NY"`)，而Cookie則會在CDN層級轉換為預先定義的標題(即 `x-aem-variant:NY`)，這會傳遞給Dispatcher。
++ 訪客的後續請求會傳送該Cookie (例如 `"Cookie: x-aem-variant=NY"`)，且Cookie在CDN層級轉換為預先定義的標頭（即`x-aem-variant:NY`），這會傳遞給Dispatcher。
 
-+ Apache重寫規則會修改請求路徑，以在頁面URL中包含標頭值作為Apache Sling選擇器(例如 `/page.variant=NY.html`)。 這可讓AEM Publish根據選擇器和排程程式提供不同的內容，以便針對每個變體快取一個頁面。
++ Apache重寫規則會修改請求路徑，以在頁面URL中包含標頭值作為Apache Sling選擇器(例如 `/page.variant=NY.html`)。 這可讓AEM Publish根據選擇器和排程程式提供不同的內容，以便每個變體快取一個頁面。
 
-+ AEM Dispatcher傳送的回應必須包含HTTP回應標頭 `Vary: x-aem-variant`. 這會指示CDN為不同的標頭值儲存不同的快取復本。
++ AEM Dispatcher傳送的回應必須包含HTTP回應標頭`Vary: x-aem-variant`。 這會指示CDN為不同的標頭值儲存不同的快取復本。
 
 >[!TIP]
 >
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 ## HTTP要求流程
 
-![變數快取要求流程](./assets/variant-cache-request-flow.png)
+![變體快取要求流程](./assets/variant-cache-request-flow.png)
 
 >[!NOTE]
 >
@@ -49,13 +49,13 @@ ht-degree: 1%
 
 ## 使用情況
 
-1. 為了示範此功能，我們將使用 [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)以的實作為例。
+1. 為了示範此功能，我們將使用[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)的實作作為範例。
 
-1. 實作 [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) 在AEM中設定 `x-aem-variant` HTTP回應上的Cookie，具有變數值。
+1. 在AEM中實作[SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html)，以使用變數值在HTTP回應上設定`x-aem-variant` Cookie。
 
-1. AEM CDN自動轉換 `x-aem-variant` Cookie匯入相同名稱的HTTP標頭。
+1. AEM CDN會自動將`x-aem-variant` Cookie轉換為相同名稱的HTTP標頭。
 
-1. 將Apache Web Server mod_rewrite規則新增至 `dispatcher` 專案，修改請求路徑以包含變體選擇器。
+1. 將Apache Web伺服器mod_rewrite規則新增至您的`dispatcher`專案，這會修改請求路徑以包含變體選擇器。
 
 1. 使用Cloud Manager部署篩選器並重寫規則。
 
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 ## 程式碼範例
 
-+ 要設定的SlingServletFilter範例 `x-aem-variant` AEM中有值的Cookie。
++ 在AEM中設定具有值的`x-aem-variant` Cookie的SlingServletFilter範例。
 
   ```
   package com.adobe.aem.guides.wknd.core.servlets.filters;
@@ -120,7 +120,7 @@ ht-degree: 1%
   }
   ```
 
-+ 中的範例重寫規則 __dispatcher/src/conf.d/rewrite.rules__ 在Git中作為原始程式碼管理，並使用Cloud Manager部署的檔案。
++ __dispatcher/src/conf.d/rewrite.rules__&#x200B;檔案中的範例重寫規則(在Git中作為原始程式碼管理，並使用Cloud Manager部署)。
 
   ```
   ...
@@ -134,7 +134,7 @@ ht-degree: 1%
 
 ## 變數限制
 
-+ AEM CDN最多可管理200個變數。 這表示 `x-aem-variant` 標頭最多可以有200個不重複值。 如需詳細資訊，請檢閱 [CDN設定限制](https://docs.fastly.com/en/guides/resource-limits).
++ AEM CDN最多可管理200個變數。 這表示`x-aem-variant`標頭最多可以有200個唯一值。 如需詳細資訊，請檢閱[CDN組態限制](https://docs.fastly.com/en/guides/resource-limits)。
 
 + 務必謹慎確保您選擇的變體金鑰不會超過此數字。  舉例來說，使用者ID並非好鍵，因為大多數網站很容易超過200個值，而某個國家/地區少於200個國家/地區會更適合使用。
 

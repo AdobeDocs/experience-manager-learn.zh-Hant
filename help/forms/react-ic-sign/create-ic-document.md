@@ -24,7 +24,7 @@ ht-degree: 1%
 * 建立預填服務
 * 產生互動式通訊檔案
 
-服務名稱 `ccm-print-test` 用於存取此服務。 定義此預填服務後，您就可以在servlet或工作流程處理步驟實作中存取此服務，以產生列印管道檔案。
+服務名稱`ccm-print-test`是用來存取此服務。 定義此預填服務後，您就可以在servlet或工作流程處理步驟實作中存取此服務，以產生列印管道檔案。
 
 ```java
 package com.acrobatsign.core;
@@ -318,4 +318,4 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
 
 ## 後續步驟
 
-撰寫 [公開Acrobat Sign API的OSGi服務包裝函式](./wrapper-sign-api.md)
+撰寫[OSGi服務包裝函式以公開Acrobat Sign API](./wrapper-sign-api.md)

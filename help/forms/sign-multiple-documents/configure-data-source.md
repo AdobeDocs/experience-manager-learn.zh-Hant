@@ -1,5 +1,5 @@
 ---
-title: 設定AEM資料來源
+title: 設定AEM Data Source
 description: 設定MySQL支援的資料來源以儲存及擷取表單資料
 feature: Adaptive Forms
 topic: Development
@@ -19,11 +19,11 @@ ht-degree: 3%
 
 # 設定資料來源
 
-AEM有許多方式可啟用與外部資料庫的整合。 整合資料庫最常見的方式之一，是透過 [configMgr](http://localhost:4502/system/console/configMgr).
-第一步是下載並部署適當的 [MySql驅動程式](https://mvnrepository.com/artifact/mysql/mysql-connector-java) 在AEM中。
+AEM有許多方式可啟用與外部資料庫的整合。 整合資料庫的最常見方式之一，是透過[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling Connection Pooled DataSource組態屬性。
+第一步是下載並部署AEM中適當的[MySql驅動程式](https://mvnrepository.com/artifact/mysql/mysql-connector-java)。
 建立Apache Sling Connection Pooled DataSource，並提供以下熒幕擷取畫面中指定的屬性。 資料庫結構描述會作為本教學課程資產的一部分提供給您。
 
-![data-source](assets/data-source.PNG)
+![資料來源](assets/data-source.PNG)
 
 資料庫有一個名為formdata的表格，包含3個資料欄，如下面的熒幕擷取畫面所示。
 
@@ -31,7 +31,7 @@ AEM有許多方式可啟用與外部資料庫的整合。 整合資料庫最常�
 
 
 >[!NOTE]
->請務必為您的資料來源命名 **aemformstutorial**. 範常式式碼使用名稱來連線至資料庫。
+>請確定您為資料來源命名&#x200B;**aemformstutorial**。 範常式式碼使用名稱來連線至資料庫。
 
 | 屬性名稱 | 值 |
 | ------------------------|--------------------------------------- |
@@ -41,7 +41,7 @@ AEM有許多方式可啟用與外部資料庫的整合。 整合資料庫最常�
 
 ## Assets
 
-建立架構的SQL檔案可以是 [已從此處下載](assets/sign-multiple-forms.sql). 您必須使用MySql Workbench匯入此檔案，才能建立結構描述和表格。
+可從這裡](assets/sign-multiple-forms.sql)下載建立結構描述的SQL檔案[。 您必須使用MySql Workbench匯入此檔案，才能建立結構描述和表格。
 
 ## 後續步驟
 

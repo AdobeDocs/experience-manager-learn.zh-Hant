@@ -1,6 +1,6 @@
 ---
 title: 標記
-description: 標籤是用於跨資產資料夾階層管理資產的必要工具。 若要讓使用者在AEM中探索及整理資產並整理資產，建立標籤分類法是很重要的工作。
+description: 標籤是用於跨Assets資料夾階層管理資產的必要工具。 若要讓使用者在AEM中探索及整理資產並整理資產，建立標籤分類法是很重要的工作。
 feature: Asset Management
 version: Cloud Service
 jira: KT-4871
@@ -21,6 +21,6 @@ ht-degree: 3%
 
 # 標記
 
-標籤是用於跨資產資料夾階層管理資產的必要工具。 若要讓使用者在AEM中探索及整理資產並整理資產，建立標籤分類法是很重要的工作。
+標籤是用於跨Assets資料夾階層管理資產的必要工具。 若要讓使用者在AEM中探索及整理資產並整理資產，建立標籤分類法是很重要的工作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34073?quality=12&learn=on)

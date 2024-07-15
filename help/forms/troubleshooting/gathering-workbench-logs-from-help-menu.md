@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 從「說明」功能表收集Workbench記錄
 
-*本影片會逐步說明從「說明」功能表收集Workbench記錄檔的程式。*
+*此影片會逐步說明從「說明功能表」收集Workbench記錄檔的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335501?quality=12&learn=on)

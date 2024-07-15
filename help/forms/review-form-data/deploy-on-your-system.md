@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # 在您的系統上部署資產
 
-部署 [摘要元件](assets/summarize-component.zip).
+部署[摘要元件](assets/summarize-component.zip)。
 
-[部署範例最適化表單](assets/sample-adaptive-form.zip).
+[部署範例最適化表單](assets/sample-adaptive-form.zip)。
 
 [預覽範例表單](http://localhost:4502/content/dam/formsanddocuments/testsummary/jcr:content?wcmmode=disabled)
 
-填寫表單欄位，然後按一下 **下一個** 按鈕以檢視表單資料。 您也可以按一下鉛筆圖示來編輯表單資料。
+填寫表單欄位，並按一下&#x200B;**下一步**&#x200B;按鈕瀏覽摘要畫面以檢視表單資料。 您也可以按一下鉛筆圖示來編輯表單資料。

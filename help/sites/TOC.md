@@ -17,7 +17,7 @@ ht-degree: 17%
 # AEM Sites 影片和教學課程 {#sites}
 
 + [概觀](overview.md)
-+ 檔案製作 {#document-authoring}
++ 檔案製作{#document-authoring}
    + [概觀](document-authoring/overview.md)
    + [設定](document-authoring/set-up.md)
    + [預覽和發佈](document-authoring/preview-and-publish.md)
@@ -28,7 +28,7 @@ ht-degree: 17%
    + [大量中繼資料](document-authoring/bulk-metadata.md)
    + [頁面中繼資料](document-authoring/page-metadata.md)
    + [作者驗證](document-authoring/author-authentication.md)
-   + 操作說明{#how-to}
+   + 如何{#how-to}
       + [檔案稽核](./document-authoring/how-to/document-audit.md)
       + [檔案許可權](./document-authoring/how-to/document-permissions.md)
       + [檔案版本](./document-authoring/how-to/document-versions.md)
@@ -55,7 +55,7 @@ ht-degree: 17%
       + [實驗架構](./document-authoring/how-to/experimentation-framework.md)
       + [設定實驗架構](./document-authoring/how-to/setup-experimentation-framework.md)
       + [實驗用的中繼資料](./document-authoring/how-to/experimentation-add-metadata.md)
-+ 頁面製作 {#page-authoring}
++ 頁面製作{#page-authoring}
    + [製作](page-authoring/aem-sites-authoring-overview.md)
    + [導覽](page-authoring/basic-handling-sites-feature-video-use.md)
    + [網站結構](page-authoring/content-hierarchy-feature-video-use.md)
@@ -73,7 +73,7 @@ ht-degree: 17%
    + [樣式系統](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
    + [啟動](page-authoring/launches.md)
-   + 向同儕學習 {#expert-advice}
+   + 向同儕學習{#expert-advice}
       + [網站階層秘訣](page-authoring/expert-advice/site-hierarchy.md)
 + 生成式 AI {#generative-ai}
    + [產生變化版本](./generative-ai/generate-variations.md)
@@ -86,10 +86,10 @@ ht-degree: 17%
 + 體驗片段 {#experience-fragments}
    + [使用體驗片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [建置區塊](experience-fragments/building-blocks.md)
-   + [內容片段vs.體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
+   + [內容片段與體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [概觀](./edge-delivery-services/overview.md)
-   + 開發{#developing}
+   + 正在開發{#developing}
       + [先決條件](edge-delivery-services/developing/prerequisites.md)
       + [AEM範本](edge-delivery-services/developing/aem-boilerplate.md)
       + [內容存放庫](edge-delivery-services/developing/content-repository.md)
@@ -105,7 +105,7 @@ ht-degree: 17%
 + 開發 {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 專案原型](developing/aem-project-archetype.md)
-   + [AEM Sites快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
+   + [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
    + [AEM Headless快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
    + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
@@ -121,17 +121,17 @@ ht-degree: 17%
    + [設定體驗片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [搭配Adobe Target使用體驗片段](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [設定ContextHub](personalization/context-hub-technical-video-setup.md)
-+ 元件 {#components}
++ 元件{#components}
    + [元件開發](components/component-development.md)
    + [核心元件](components/core-components-feature-video-understand.md)
    + [網頁最佳化的影像交付](components/web-optimized-image-delivery.md)
    + [元件主控台](components/components-console-feature-video-use.md)
 + SEO {#seo}
    + [Sitemaps](./seo/sitemaps.md)
-+ 單頁應用程式 {#spa-editor}
++ 單頁應用程式{#spa-editor}
    + [使用SPA編輯器](spa-editor/spa-editor-framework-feature-video-use.md)
    + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
-+ 多網站管理 {#multi-site-management}
++ 多網站管理{#multi-site-management}
    + [語言副本簡介](./multi-site-management/language-copy-overview.md)
    + [即時副本和Blueprint](./multi-site-management/live-copy-and-blueprint.md)
    + [建立即時副本](./multi-site-management/create-live-copy.md)
@@ -152,20 +152,20 @@ ht-degree: 17%
    + [設定翻譯規則](translation/translation-rules-editor-technical-video-setup.md)
    + [翻譯增強功能](translation/translation-enhancements-feature-video-use.md)
 + 整合 {#integrations}
-   + Experience Platform {#experience-platform}
+   + Experience Platform{#experience-platform}
       + [產生FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [使用Platform Web SDK進行分析](integrations/platform/analytics-using-web-sdk.md)
-   + Adobe Experience Platform中的標籤 {#experience-platform-data-collection-tags}
+   + Adobe Experience Platform {#experience-platform-data-collection-tags}中的標籤
       + [概觀](integrations/experience-platform/data-collection/tags/overview.md)
       + [建立標籤屬性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [使用IMS連線AEM和標籤屬性](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
       + [建立AEM標籤Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [對標籤實作除錯](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
-   + Adobe使用者端資料層 {#adobe-client-data-layer}
+   + Adobe使用者端資料層{#adobe-client-data-layer}
       + [使用Adobe使用者端資料層](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自訂Adobe使用者端資料層](integrations/adobe-client-data-layer/data-layer-customize.md)
-   + Analytics {#analytics}
+   + 分析{#analytics}
       + [使用Adobe Analytics收集頁面資料](integrations/analytics/collect-data-analytics.md)
       + [使用Adobe Analytics追蹤已點按的元件](integrations/analytics/track-clicked-component.md)
       + [使用Analysis Workspace分析資料](integrations/analytics/create-analytics-workspace.md)
@@ -176,9 +176,9 @@ ht-degree: 17%
       + [建立Adobe TargetCloud Service帳戶](integrations/adobe-target/setup-aem-target-cloud-service.md)
       + [將體驗片段匯出至Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
       + [使用體驗片段選件建立Target活動](integrations/adobe-target/create-target-activity.md)
-      + [使用視覺化體驗撰寫器進行個人化](integrations/adobe-target/personalization-using-vec.md)
-      + [個人化完整網頁體驗](integrations/adobe-target/personalization-web-page.md)
-+ 向同儕學習 {#expert-resources}
+      + [使用視覺化體驗撰寫器的Personalization](integrations/adobe-target/personalization-using-vec.md)
+      + [提供完整網頁體驗的Personalization](integrations/adobe-target/personalization-web-page.md)
++ 向同儕學習{#expert-resources}
    + [概觀](expert-resources/learn-from-your-peers-overview.md)
    + [AEM Sites成熟度評估](expert-resources/maturity-assessment.md)
    + [網站維護](expert-resources/site-maintenance.md)

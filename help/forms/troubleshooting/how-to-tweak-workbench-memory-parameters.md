@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何調整Workbench記憶體引數
 
-*此影片會逐步解說調整Workbench記憶體引數的程式。*
+*此影片逐步解說調整Workbench記憶體引數的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335509?quality=12&learn=on)

@@ -18,13 +18,13 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
 
 ## 新增功能
 
-* **[處理呼叫表單資料模型服務步驟中的錯誤訊息](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
-  *工作流程模型中的變數是根據其資料型別儲存值的方式*
+* **[處理啟動表單資料模型服務步驟中的錯誤訊息](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
+  *工作流程模型中的變數是根據其資料型別來儲存值的方式*
 
 * **[互動式通訊檔案中的多系列圖表（影片）](./interactive-communications/multiseriescharts.md)**
-  *在同一張圖表中繪製多個數列。 多系列圖表通常與折線圖、長條圖、直條圖型別關聯使用。*
+  *在同一張圖表中繪製多個數列。 多數列圖表通常與折線、長條圖、直條圖型別關聯使用。*
 
-* **[建立可重複使用的工作流程模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
+* **[正在建立可重複使用的工作流程模型](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
   *建立未繫結至特定表單的工作流程模型*
 
 ## 員工精選
@@ -37,11 +37,11 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
     </a>
     <div>
       <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
-    <strong>建立第一個最適化表單</strong>
+    <strong>建立您的第一個最適化表單</strong>
     </a>
     </div>
     <p>
-    <em>調適型表單是新一代的表單，不但動態且回應迅速。 您可以使用調適型表單來提供個人化體驗</em>
+    <em>最適化表單是動態且回應式的新一代表單。 您可以使用最適化表單來提供個人化體驗</em>
     <p>
   </td>
    <td>
@@ -54,7 +54,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
     </a>
     </div>
     <p>
-    <em>「互動式通訊」可集中處理及管理安全、個人化與互動式通訊的建立、集合與傳遞，例如商務信函、檔案、對帳單、福利通知、行銷郵件、帳單和歡迎套件。 </em>
+    <em>互動式通訊可集中處理及管理安全、個人化及互動式通訊的建立、集合及傳遞，例如商務信函、檔案、對帳單、福利通知、行銷郵件、帳單及歡迎套件。</em>
     <p>
   </td>
   <td>
@@ -63,11 +63,11 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
     </a>
     <div>
       <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-    <strong>在AEM Workflow中使用表單資料模型</strong>
+    <strong>在AEM工作流程中使用表單資料模型</strong>
     </a>
     </div>
     <p>
-    <em>啟動表單資料模型服務作為AEM Workflow中的步驟</em>
+    <em>在AEM工作流程中啟動表單資料模型服務</em>
     <p>
   </td>
 </tr>
@@ -92,7 +92,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
     </a>
     </div>
     <p>
-    <em> 區分人工和自動存取表單</em>
+    <em>區分人工與自動存取表單</em>
     <p>
   </td>
   <td>
@@ -105,7 +105,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
     </a>
     </div>
     <p>
-    <em>在提交表單之前預覽表單資料。</em>
+    <em>在送出表單之前先預覽表單資料。</em>
     </p>
   </td>
   <td>
@@ -138,7 +138,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
     </a>
     </div>
     <p>
-    <em>使用AEM Forms和Acrobat Sign填寫及簽署租使用者與業主之間的租賃合約</em>
+    <em>使用AEM Forms和Acrobat Sign填寫並簽署租使用者與房東之間的租約合約</em>
     <p>
   </td>
   <td>
@@ -164,7 +164,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
       </a>
     </div>
     <p>
-    <em>使用Forms和Acrobat Sign無縫簽署多個檔案</em>
+    <em>使用Forms和Acrobat Sign無縫簽署多份檔案</em>
     <p>
   </td>
 </tr>

@@ -1,5 +1,5 @@
 ---
-title: 已停用設計工具預覽PDF — 如何啟用預覽PDF
+title: Designer預覽PDF已停用 — 如何啟用預覽PDF
 description: 在Designer中設定PDF預覽的步驟
 type: Troubleshooting
 role: Developer
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何啟用預覽PDF
 
-*本影片逐步說明在Designer中啟用預覽PDF的步驟。*
+*此影片逐步說明在Designer中啟用預覽PDF的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335500?quality=12&learn=on)

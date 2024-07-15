@@ -18,34 +18,34 @@ ht-degree: 0%
 
 # 在AEM中開發專案
 
-此開發教學課程說明如何開發 [!DNL AEM Projects]. 在本教學課程中，我們將建立一個自訂的專案範本，可用來在AEM中建立專案，以管理內容製作工作流程和任務。
+此開發教學課程說明如何為[!DNL AEM Projects]開發。 在本教學課程中，我們將建立一個自訂的專案範本，可用來在AEM中建立專案，以管理內容製作工作流程和任務。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
-*此影片會簡短示範下列教學課程中建立的已完成工作流程。*
+*此影片簡短示範在下列教學課程中建立的已完成工作流程。*
 
 ## 簡介 {#introduction}
 
-[[!DNL AEM Projects]](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) 是AEM的一項功能，設計旨在讓您可以更輕鬆地管理與內容建立相關的所有工作流程和任務，將其歸類為AEM Sites或Assets實作的一部分。
+[[!DNL AEM Projects]](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)是AEM的一項功能，設計旨在讓您可以更輕鬆地管理與內容建立相關的所有工作流程和工作，並將其群組為AEM Sites或Assets實作的一部分。
 
-AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects). 建立專案時，作者可以從這些可用的範本中進行選擇。 具有獨特業務需求的大型AEM實作將想要建立自訂專案範本，以符合其需求。 透過建立自訂專案範本，開發人員可以設定專案控制面板、連結至自訂工作流程，並為專案建立其他業務角色。 我們將檢視專案範本的結構，並建立範例範本。
+AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)。 建立專案時，作者可以從這些可用的範本中進行選擇。 具有獨特業務需求的大型AEM實作將想要建立自訂專案範本，以符合其需求。 透過建立自訂專案範本，開發人員可以設定專案控制面板、連結至自訂工作流程，並為專案建立其他業務角色。 我們將檢視專案範本的結構，並建立範例範本。
 
 ![自訂專案卡](./assets/develop-aem-projects/custom-project-card.png)
 
 ## 設定
 
-本教學課程將逐步說明建立自訂專案範本所需的程式碼。 您可以下載並安裝 [附加封裝](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip) ，連同教學課程一起前往本機環境。 您也可以存取上託管的完整Maven專案 [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide).
+本教學課程將逐步說明建立自訂專案範本所需的程式碼。 您可以下載[附加套件](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)並安裝到本機環境，以隨附教學課程。 您也可以存取在[GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)上託管的完整Maven專案。
 
 * [完成的教學課程套件](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
-* [GitHub上的完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
+* GitHub上的[完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-本教學課程假設您具備以下基本知識 [AEM開發實務](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) 並且熟悉 [AEM Maven專案設定](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=en). 所有提及的程式碼都是為了當作參考使用，且僅應部署至 [本機開發AEM執行個體](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy).
+本教學課程假設您具備[AEM開發實務](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/developing/introduction/the-basics)的一些基本知識，並且熟悉[AEM Maven專案設定](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=en)。 所有提及的程式碼都是要當作參考使用，而且只應部署至[本機開發AEM執行個體](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)。
 
 ## 專案範本的結構
 
-專案範本應該放在原始檔控制之下，而且應該放在應用程式資料夾的/apps之下。 理想情況下，這類檔案應放置在子資料夾中，其命名慣例為 **&#42;/projects/templates/**&lt;my-template>. 依照此命名慣例，任何新的自訂範本在建立專案時便能自動供作者使用。 可用的專案範本組態設定在： **/content/projects/jcr：content** 節點依據 **cq：allowedTemplates** 屬性。 依預設，這是規則運算式： **/(apps|libs)/.&#42;/projects/templates/.&#42;**
+專案範本應該放在原始檔控制之下，而且應該放在應用程式資料夾的/apps之下。 理想情況下，應該將它們放在命名慣例為&#x200B;**&#42;/projects/templates/**&lt;my-template>的子資料夾中。 依照此命名慣例，任何新的自訂範本在建立專案時便能自動供作者使用。 **cq：allowedTemplates**&#x200B;屬性將可用專案範本的組態設定在： **/content/projects/jcr：content**&#x200B;節點。 依預設，這是規則運算式： **/(apps|libs)/。&#42;/projects/templates/.&#42;**
 
-專案範本的根節點將具有 **jcr：primaryType** 之 **cq：Template**. 在的根節點底下有三個節點： **小工具**， **角色**、和 **工作流程**. 這些節點全部 **nt：unstructured**. 根節點下方也可以是thumbnail.png檔案，此檔案會在「建立專案」精靈中選取範本時顯示。
+專案範本的根節點會有&#x200B;**cq：Template**&#x200B;的&#x200B;**jcr：primaryType**。 在根節點底下有三個節點： **小工具**、**角色**&#x200B;和&#x200B;**工作流程**。 這些節點都是&#x200B;**nt：unstructured**。 根節點下方也可以是thumbnail.png檔案，此檔案會在「建立專案」精靈中選取範本時顯示。
 
 完整的節點結構：
 
@@ -61,23 +61,23 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
 
 ### 專案範本根目錄
 
-專案範本的根節點為型別 **cq：Template**. 您可以在此節點上設定屬性 **jcr：title** 和 **jcr：description** 「建立專案精靈」中顯示的資訊。 還有一個屬性稱為 **精靈** 會指向將填入專案屬性的表單。 預設值為： **/libs/cq/core/content/projects/wizard/steps/defaultproject.html** 大多數情況下應該都能正常運作，因為它允許使用者填入基本專案屬性並新增群組成員。
+專案範本的根節點為&#x200B;**cq：Template**&#x200B;型別。 您可以在此節點上設定顯示在建立專案精靈中的屬性&#x200B;**jcr：title**&#x200B;和&#x200B;**jcr：description**。 也有名稱為&#x200B;**精靈**&#x200B;的屬性，指向將填入專案屬性的表單。 預設值： **/libs/cq/core/content/projects/wizard/steps/defaultproject.html**&#x200B;在大多數情況下應該可以正常運作，因為它允許使用者填入基本的Project屬性並新增群組成員。
 
-*&#42;請注意，「建立專案精靈」不使用SlingPOSTservlet。 而是將值發佈到自訂servlet：**com.adobe.cq.projects.impl.servlet.ProjectServlet**. 新增自訂欄位時，應將此列入考量。*
+*&#42;請注意，「建立專案精靈」未使用SlingPOSTServlet。 而是將值發佈到自訂servlet：**com.adobe.cq.projects.impl.servlet.ProjectServlet**。 新增自訂欄位時，應將此列入考量。*
 
-您可為翻譯專案範本找到自訂精靈的範例： **/libs/cq/core/content/projects/wizard/translationproject/defaultproject**.
+您可以找到翻譯專案範本的自訂精靈範例： **/libs/cq/core/content/projects/wizard/translationproject/defaultproject**。
 
 ### 小工具 {#gadgets}
 
-此節點上沒有其他屬性，但小工具節點的子項可控制建立新專案時用於填入專案控制面板的專案拼貼。 [專案拼貼](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) （也稱為小工具或pod）是填入專案工作地點的簡單卡片。 您可在下列位置找到ootb圖磚的完整清單： **/libs/cq/gui/components/projects/admin/pod。 **專案擁有者在建立專案後，一律可以新增/移除圖磚。
+此節點上沒有其他屬性，但小工具節點的子項可控制建立新專案時用於填入專案控制面板的專案拼貼。 [專案拼貼](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) （也稱為小工具或Pod）是填入專案工作地點的簡單卡片。 您可在下列位置找到ootb圖磚的完整清單： **/libs/cq/gui/components/projects/admin/pod。 **專案擁有者在建立專案後，一律可以新增/移除圖磚。
 
 ### 角色 {#roles}
 
-共有三種 [預設角色](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) 每個專案： **觀察者**， **編輯**、和 **擁有者**. 藉由在角色節點底下新增子節點，您可以為範本新增其他特定於業務的專案角色。 然後，您可以將這些角色連結至與專案關聯的特定工作流程。
+每個專案都有三個[預設角色](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)： **觀察者**、**編輯器**&#x200B;和&#x200B;**擁有者**。 藉由在角色節點底下新增子節點，您可以為範本新增其他特定於業務的專案角色。 然後，您可以將這些角色連結至與專案關聯的特定工作流程。
 
 ### 工作流程 {#workflows}
 
-建立自訂專案範本最吸引人的原因之一，是它可讓您設定可用工作流程以用於專案。 這些功能包括OOTB工作流程或自訂工作流程。 在 **工作流程** 節點必須有 **模型** 節點(也 `nt:unstructured`)和底下的子節點指定可用的工作流程模型。 屬性**modelId **指向/etc/workflow下的工作流程模型和屬性 **精靈** 指向啟動工作流程時使用的對話方塊。 Projects的顯著優點是能夠新增自訂對話方塊（精靈），以在工作流程開始時擷取業務特定的中繼資料，並可推動工作流程中的進一步動作。
+建立自訂專案範本最吸引人的原因之一，是它可讓您設定可用工作流程以用於專案。 這些功能包括OOTB工作流程或自訂工作流程。 在&#x200B;**工作流程**&#x200B;節點下，需要一個&#x200B;**模型**&#x200B;節點（也是`nt:unstructured`）和子節點，才能指定可用的工作流程模型。 屬性**modelId **指向/etc/workflow下的工作流程模型，而屬性&#x200B;**wizard**&#x200B;指向啟動工作流程時使用的對話方塊。 Projects的顯著優點是能夠新增自訂對話方塊（精靈），以在工作流程開始時擷取業務特定的中繼資料，並可推動工作流程中的進一步動作。
 
 ```shell
 <projects-template-root> (cq:Template)
@@ -90,9 +90,9 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
 
 ## 建立專案範本 {#creating-project-template}
 
-由於我們主要是複製/設定節點，因此將使用CRXDE Lite。 在本機AEM執行個體中，開啟 [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
+由於我們主要是複製/設定節點，因此將使用CRXDE Lite。 在您的本機AEM執行個體中，開啟[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)。
 
-1. 首先，在下方建立資料夾 `/apps/&lt;your-app-folder&gt;` 已命名 `projects`. 在該名稱下方建立另一個資料夾 `templates`.
+1. 首先，在`/apps/&lt;your-app-folder&gt;`下建立名為`projects`的資料夾。 在名為`templates`的資料夾下建立另一個資料夾。
 
    ```shell
    /apps/aem-guides/projects-tasks/
@@ -102,7 +102,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
 
 1. 為了更輕鬆辦事，我們將從現有的Simple Project範本開始自訂範本。
 
-   1. 複製並貼上節點 **/libs/cq/core/content/projects/templates/default** 在 *範本* 在步驟1建立的資料夾。
+   1. 將節點&#x200B;**/libs/cq/core/content/projects/templates/default**&#x200B;複製並貼到步驟1中建立的&#x200B;*範本*&#x200B;資料夾下。
 
    ```shell
    /apps/aem-guides/projects-tasks/
@@ -110,11 +110,11 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
                      + default (cq:Template)
    ```
 
-1. 您現在應該有如下的路徑 **/apps/aem-guides/projects-tasks/projects/templates/authoring-project**.
+1. 您現在應該有&#x200B;**/apps/aem-guides/projects-tasks/projects/templates/authoring-project**&#x200B;之類的路徑。
 
-   1. 編輯 **jcr：title** 和 **jcr：description** 自訂標題和說明值的author-project節點屬性。
+   1. 將作者專案節點的&#x200B;**jcr：title**&#x200B;和&#x200B;**jcr：description**&#x200B;屬性編輯為自訂標題和說明值。
 
-      1. 離開 **精靈** 指向預設Project屬性的屬性。
+      1. 讓&#x200B;**精靈**&#x200B;屬性保持指向預設Project屬性。
 
    ```shell
    /apps/aem-guides/projects-tasks/projects/
@@ -126,10 +126,10 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
    ```
 
 1. 我們想要針對此專案範本使用任務。
-   1. 新增 **nt：unstructured** 已呼叫authoring-project/gadgets下的節點 **任務**.
-   1. 將String屬性新增到tasks節點 **cardWeight** = &quot;100&quot;， **jcr：title**=「任務」，和 **sling：resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;。
+   1. 在名為&#x200B;**tasks**&#x200B;的authoring-project/gadgets下新增新的&#x200B;**nt：unstructured**&#x200B;節點。
+   1. 將String屬性新增至&#x200B;**cardWeight** = &quot;100&quot;、**jcr：title**=&quot;Tasks&quot;和&#x200B;**sling：resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;的任務節點。
 
-   現在 [「任務」圖磚](https://experienceleague.adobe.com/en/docs) 建立新專案時預設會顯示。
+   現在，建立新專案時，預設會顯示[任務動態磚](https://experienceleague.adobe.com/en/docs)。
 
    ```shell
    ../projects/templates/authoring-project
@@ -148,12 +148,12 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
 
 1. 我們將新增自訂核准者角色到我們的專案範本。
 
-   1. 在專案範本(authoring-project)節點下新增一個 **nt：unstructured** 節點標籤 **角色**.
-   1. 新增另一個 **nt：unstructured** 將核准者標示為「角色」節點的子節點的節點。
-   1. 新增字串屬性 **jcr：title** = &quot;**核准者**「， **roleclass** =&quot;**所有者**「， **roleid**=&quot;**核准者**「。
+   1. 在專案範本(authoring-project)節點底下新增一個標示為&#x200B;**角色**&#x200B;的新&#x200B;**nt：unstructured**&#x200B;節點。
+   1. 新增另一個標示為核准者的&#x200B;**nt：unstructured**&#x200B;節點為角色節點的子節點。
+   1. 新增字串屬性&#x200B;**jcr：title** = &quot;**核准者**&quot;，**roleclass** =&quot;**所有者**&quot;，**roleid**=&quot;**核准者**&quot;。
       1. 核准者節點的名稱以及jcr：title和roleid可以是任何字串值（只要roleid是唯一的）。
-      1. **roleclass** 會根據 [三個OOTB角色](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)： **所有者**， **編輯者**、和 **觀察者**.
-      1. 一般而言，如果自訂角色主要是管理角色，則角色可以 **所有者；** 如果它是更具體的創作角色，例如攝影師或設計師，則 **編輯者** 羅勒克勞斯應該就足夠了。 兩者之間的巨大差異 **所有者** 和 **編輯者** 是專案所有者可以更新專案屬性並將新使用者新增到專案。
+      1. **roleclass**&#x200B;會根據[三個OOTB角色](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)： **擁有者**、**編輯者**&#x200B;和&#x200B;**觀察者**&#x200B;來控制套用到該角色的許可權。
+      1. 一般而言，如果自訂角色更多的是管理角色，則角色可以是&#x200B;**所有者；**&#x200B;如果它是更具體的製作角色，例如攝影師或Designer，則&#x200B;**編輯者**&#x200B;角色應該就足夠了。 **擁有者**&#x200B;與&#x200B;**編輯者**&#x200B;之間的最大差異，是專案擁有者可以更新專案屬性，並將新使用者新增至專案。
 
    ```shell
    ../projects/templates/authoring-project
@@ -177,9 +177,9 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
    ```
 
 1. 若要讓內容作者輕鬆識別專案範本，您可以新增自訂縮圖。 建議的大小為319x319畫素。
-   1. 在CRXDE Lite中，將檔案建立為小工具、角色和工作流程節點的同層級，並命名為 **thumbnail.png**.
-   1. 儲存，然後導覽至 `jcr:content` 節點，然後按兩下 `jcr:data` 屬性（請避免按一下「檢視」）。
-      1. 這會提示您進行編輯 `jcr:data` 檔案對話方塊，您可以上傳自訂縮圖。
+   1. 在CRXDE Lite中，將檔案建立為名為&#x200B;**thumbnail.png**&#x200B;的小工具、角色和工作流程節點的同層級。
+   1. 儲存並導覽至`jcr:content`節點，然後按兩下`jcr:data`屬性（避免按一下「檢視」）。
+      1. 這應該會以編輯`jcr:data`檔案對話方塊提示您，而且您可以上傳自訂縮圖。
 
    ```shell
    ../projects/templates/authoring-project
@@ -270,11 +270,11 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
 
 比起傳統的參與者步驟，使用「任務建立步驟」可提供幾項優點：
 
-* **開始和到期日期**  — 讓作者更容易管理時間，新的「行事曆」功能會利用這些日期。
-* **優先順序**  — 內建「低」、「一般」和「高」優先順序，讓作者能夠排定工作的優先順序
-* **執行緒註解**  — 當作者處理任務時，他們能夠留下註解以增加共同作業
-* **可見度**  — 具有專案的任務圖磚和檢視可讓經理檢視時間的花費方式
-* **專案整合**  — 任務已與專案角色和儀表板整合
+* **開始與到期日** — 讓作者可以輕鬆管理時間，新的行事曆功能會利用這些日期。
+* **優先順序** — 內建的優先順序為「低」、「一般」和「高」，可讓作者優先處理工作
+* **執行緒註解** — 當作者處理工作時，他們可以留下註解，增加協同合作
+* **可見度** — 具有「專案」的任務圖磚和檢視可讓管理員檢視時間花費的方式
+* **專案整合** — 任務已與專案角色和儀表板整合
 
 與參與者步驟類似，任務也可以動態指派和路由。 如下列教學課程所示，工作中繼資料（如標題、優先順序）也可根據先前的動作動態設定。
 
@@ -282,7 +282,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
 
 ## 範例使用案例需求 {#goals-tutorial}
 
-![工作流程流程圖](./assets/develop-aem-projects/workflow-process-diagram.png)
+![工作流程圖表](./assets/develop-aem-projects/workflow-process-diagram.png)
 
 上圖概述範例核准工作流程的高層級需求。
 
@@ -292,9 +292,9 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
 
 **一般** — 一般路由會建立指派給專案核准者群組的任務，以進行檢閱和核准。 任務的優先順序為「一般」，到期日為建立日期起的5天。
 
-**Rush**  — 快速路由也會建立指派給專案核准者群組的任務。 任務的優先順序為「高」，到期日只有一天。
+**快速傳送** — 快速傳送也會建立指派給專案核准者群組的任務。 任務的優先順序為「高」，到期日只有一天。
 
-**略過**  — 在此範例工作流程中，初始參與者可以選擇略過核准群組。 （是的，這可能會失去「核准」工作流程的目的，但可讓我們說明其他路由功能）
+**略過** — 在此範例工作流程中，初始參與者可以選擇略過核准群組。 （是的，這可能會失去「核准」工作流程的目的，但可讓我們說明其他路由功能）
 
 核准者群組可以核准內容或將其傳回給初始受指派人進行重工。 如果傳回給，重工則會建立新任務並適當地標示為「傳回重工」。
 
@@ -308,21 +308,21 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
 
    ![工作流程建立對話方塊](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   [如需與建立工作流程相關的詳細資訊，請閱讀此處](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-models).
+   [如需與建立工作流程相關的詳細資訊，請閱讀這裡](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-models)。
 
-1. 根據最佳實務，自訂工作流程應該分組到他們自己的資料夾中/etc/workflow/models下方。 在CRXDE Lite中，建立 **&#39;nt：folder&#39;** /etc/workflow/models下名為 **&quot;aem-guides&quot;**. 新增子資料夾可確保自訂工作流程在升級或Service Pack安裝期間不會意外覆寫。
+1. 根據最佳實務，自訂工作流程應該分組到他們自己的資料夾中/etc/workflow/models下方。 在CRXDE Lite中，在名為&#x200B;**&quot;aem-guides&quot;**&#x200B;的/etc/workflow/models下方建立一個&#x200B;**&quot;nt：folder&quot;**。 新增子資料夾可確保自訂工作流程在升級或Service Pack安裝期間不會意外覆寫。
 
-   &#42;請注意，請勿將資料夾或自訂工作流程放在ootb子資料夾（例如/etc/workflow/models/dam或/etc/workflow/models/projects）下，因為升級或Service Pack可能會覆寫整個子資料夾。
+   &#42;請注意，請勿將資料夾或自訂工作流程放在ootb子資料夾（例如/etc/workflow/models/dam或/etc/workflow/models/projects）之下，因為升級或Service Pack也可能會覆寫整個子資料夾。
 
-   ![工作流程模型在6.3中的位置](./assets/develop-aem-projects/custom-workflow-subfolder.png)
+   ![工作流程模型在6.3](./assets/develop-aem-projects/custom-workflow-subfolder.png)中的位置
 
    工作流程模型在6.3中的位置
 
    >[!NOTE]
    >
-   >如果使用AEM 6.4+，工作流程的位置已變更。 另請參閱 [此處取得更多詳細資料。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
+   >如果使用AEM 6.4+，工作流程的位置已變更。 如需詳細資訊，請參閱[。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
-   如果使用AEM 6.4+，則會在 `/conf/global/settings/workflow/models`. 對/conf目錄重複上述步驟，並新增名為的子資料夾 `aem-guides` 並移動 `content-approval-workflow` 在下方。
+   如果使用AEM 6.4+，則會在`/conf/global/settings/workflow/models`下建立工作流程模型。 使用/conf目錄重複上述步驟，並新增名為`aem-guides`的子資料夾，然後將`content-approval-workflow`移到其下方。
 
    ![新式工作流程定義位置](./assets/develop-aem-projects/modern-workflow-definition-location.png)
 工作流程模型在6.4+中的位置
@@ -335,7 +335,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
    1. 核准
    1. 發佈
 
-   ![工作流程階段設定](./assets/develop-aem-projects/workflow-model-stage-properties.png)
+   ![工作流程階段組態](./assets/develop-aem-projects/workflow-model-stage-properties.png)
 
    從「頁面屬性」對話方塊設定「工作流程階段」 。
 
@@ -343,15 +343,15 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
 
    從AEM收件匣中看到的工作流程進度列。
 
-   您可以選擇上傳 **影像** 至當使用者選取時當作工作流程縮圖的「頁面屬性」 。 影像尺寸應為319x319畫素。 新增 **說明** 前往頁面屬性也會在使用者前往選取工作流程時顯示。
+   您可以選擇將&#x200B;**影像**&#x200B;上傳到頁面屬性，當使用者選取它時，該頁面屬性會作為工作流程縮圖。 影像尺寸應為319x319畫素。 當使用者進入選取工作流程時，也會將&#x200B;**描述**&#x200B;新增至頁面屬性。
 
 1. 「建立專案任務」工作流程處理的設計目的，是建立「任務」作為工作流程中的步驟。 只有在完成任務後，工作流程才會前進。 「建立專案任務」步驟的強大方面是它可以讀取工作流程中繼資料值，並使用這些值來動態建立任務。
 
-   首先刪除預設建立的參與者步驟。 從元件選單中的Sidekick，展開 **&quot;專案&quot;** 副標題並拖放 **建立專案任務** 放到模型上。
+   首先刪除預設建立的參與者步驟。 從元件功能表的Sidekick展開&#x200B;**「專案」**&#x200B;子標題，並將&#x200B;**「建立專案任務」**&#x200B;拖放到模型上。
 
    連按兩下「建立專案任務」步驟以開啟工作流程對話方塊。 設定下列屬性：
 
-   此標籤在所有工作流程程式步驟中都是通用的，我們將設定標題和說明（一般使用者看不到這些內容）。 我們將設定的重要屬性是「工作流程階段」 **編輯內容** （從下拉式功能表）。
+   此標籤在所有工作流程程式步驟中都是通用的，我們將設定標題和說明（一般使用者看不到這些內容）。 我們將設定的重要屬性是，從下拉式功能表中將「工作流程階段」設為&#x200B;**「編輯內容」**。
 
    ```shell
    Common Tab
@@ -391,9 +391,9 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
       Pre-Create Task Script = "/apps/aem-guides/projects/scripts/start-task-config.ecma"
    ```
 
-1. 在上一個步驟中，我們參考了建立任務前的指令碼。 我們現在將建立該指令碼，其中我們將根據工作流程中繼資料值&quot;**被指定者**「。 此 **「受託人」** 值會在工作流程啟動時設定。 我們也會閱讀工作流程中繼資料，透過閱讀&quot;**taskPriority&quot;** 工作流程中繼資料及**「taskDueDate」**的值，以在第一項任務到期時動態設定。
+1. 在上一個步驟中，我們參考了建立任務前的指令碼。 我們現在將建立該指令碼，其中將根據工作流程中繼資料值&quot;**assignee**&quot;的值來設定任務的受指派人。 工作流程啟動時會設定&#x200B;**&quot;assignee&quot;**&#x200B;值。 我們也會讀取工作流程中繼資料，藉由讀取工作流程中繼資料的&quot;**taskPriority&quot;**&quot;值，以及**&quot;taskDueDate&quot; **在第一個任務到期時動態設定，以動態選擇任務的優先順序。
 
-   為了方便組織，我們在應用程式資料夾底下建立了一個資料夾，用來儲存所有與專案相關的指令碼： **/apps/aem-guides/projects-tasks/projects/scripts**. 在此資料夾下建立名為的檔案 **&quot;start-task-config.ecma&quot;**. &#42;注意：請確定start-task-config.ecma檔案的路徑與步驟4的「進階設定」標籤中所設定的路徑相符。
+   為了方便組織，我們在應用程式資料夾底下建立了一個資料夾，用以儲存所有與專案相關的指令碼： **/apps/aem-guides/projects-tasks/projects/scripts**。 在此資料夾下建立名為&#x200B;**&quot;start-task-config.ecma&quot;**&#x200B;的檔案。 &#42;請注意，您的start-task-config.ecma檔案的路徑必須與步驟4的[進階設定]索引標籤中所設定的路徑相符。
 
    新增下列內容作為檔案的內容：
 
@@ -416,7 +416,7 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
    task.setProperty("taskPriority", taskPriority);
    ```
 
-1. 導覽回「內容核准工作流程」。 拖放 **OR拆分** 元件(可在「工作流程」類別下方的Sidekick中找到)，位於 **開始任務** 步驟。 在「一般」對話方塊中，選取「3個分支」的選項按鈕。 OR拆分會讀取工作流程中繼資料值 **&quot;lastTaskAction&quot;** 以決定工作流程的路徑。 此 **&quot;lastTaskAction&quot;** 屬性會設定為步驟4中設定之「路由」標籤的其中一個值。 針對每個「分支」標籤，填寫 **指令碼** 文字區域包含下列值：
+1. 導覽回「內容核准工作流程」。 將&#x200B;**OR拆分**&#x200B;元件(可在「工作流程」類別下的Sidekick中找到)拖放到&#x200B;**開始任務**&#x200B;步驟下。 在「一般」對話方塊中，選取「3個分支」的選項按鈕。 OR分割會讀取工作流程中繼資料值&#x200B;**&quot;lastTaskAction&quot;**，以決定工作流程的路由。 **&quot;lastTaskAction&quot;**&#x200B;屬性已設定為步驟4中所設定「路由」索引標籤的其中一個值。 針對每個「分支」索引標籤，使用下列值填入&#x200B;**指令碼**&#x200B;文字區域：
 
    ```
    function check() {
@@ -454,9 +454,9 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
    }
    ```
 
-   &#42;請注意，我們正在執行直接字串比對來決定路由，因此在Branch指令碼中設定的值務必與步驟4中設定的Route值相符。
+   &#42;請注意，我們正在執行直接字串比對來判斷路由，因此在Branch指令碼中設定的值務必與步驟4中設定的Route值相符。
 
-1. 拖放另一個»**建立專案任務**「在OR分割下向模型的最左側（分支1）前進。 使用下列屬性填寫對話方塊：
+1. 將另一個&quot;**建立專案任務**&quot;步驟拖放到模型上OR分割下方最左邊的（分支1）。 使用下列屬性填寫對話方塊：
 
    ```
    Common Tab
@@ -478,11 +478,11 @@ AEM專案隨附幾個 [OOTB專案範本](https://experienceleague.adobe.com/en/d
        "Send Back for Revision"
    ```
 
-   由於這是「一般核准」路由，因此任務的優先順序會設為「中」。 此外，我們給核准者群組5天的時間來完成任務。 「工作」標籤上的被指定者會保留空白，因為我們會在「進階設定」標籤中動態地指定此被指定者。 完成此任務時，我們會為「核准者」群組提供兩種可能的路徑： **&quot;核准並發佈&quot;** 如果他們核准內容且內容可以發佈和 **&quot;傳回以進行修訂&quot;** 如果發生原始編輯器需要更正的問題。 核准者可留下附註，讓原始編輯者看到工作流程是否傳回給他/她。
+   由於這是一般核准路由，因此任務的優先順序會設定為Medium。 此外，我們給核准者群組5天的時間來完成任務。 「工作」標籤上的被指定者會保留空白，因為我們會在「進階設定」標籤中動態地指定此被指定者。 完成此任務時，我們為核准者群組提供兩種可能的路徑：**「核准和Publish」** （如果他們核准內容且內容可以發佈）和&#x200B;**「傳回以進行修訂」** （如果原始編輯器需要更正的問題）。 核准者可留下附註，讓原始編輯者看到工作流程是否傳回給他/她。
 
 在本教學課程的前面，我們建立了包含核准者角色的專案範本。 每次從此範本建立新專案時，專案特定的群組都會為核准者角色建立。 就像參與者步驟一樣，一個任務只能指派給使用者或群組。 我們想要將此任務指派給對應至「核准者群組」的專案群組。 所有從專案內啟動的工作流程都會有中繼資料，會將專案角色對應至專案特定群組。
 
-將下列程式碼複製並貼到 **指令碼** **進階設定**標籤的文字區域。 此程式碼將讀取工作流程中繼資料，並將任務指派給專案的核准者群組。 如果找不到核准者群組值，則會退回將任務指派給管理員群組。
+在{Advanced Settings}索引標籤的&#x200B;**指令碼**&#x200B;文字區域中複製+貼上**列程式碼** 此程式碼將讀取工作流程中繼資料，並將任務指派給專案的核准者群組。 如果找不到核准者群組值，則會退回將任務指派給管理員群組。
 
 ```
 var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -490,7 +490,7 @@ var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approv
 task.setCurrentAssignee(projectApproverGrp);
 ```
 
-1. 拖放另一個»**建立專案任務**「在OR分割的下方，向模型邁進到中間分支（分支2）。 使用下列屬性填寫對話方塊：
+1. 將另一個&quot;**建立專案任務**&quot;步驟拖放到模型上，到OR分割下的中間分支（分支2）。 使用下列屬性填寫對話方塊：
 
    ```
    Common Tab
@@ -514,7 +514,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
    由於這是「匆忙核准」路由，因此任務的優先順序會設為「高」。 此外，我們只給核准者群組一天時間來完成任務。 「工作」標籤上的被指定者會保留空白，因為我們會在「進階設定」標籤中動態地指定此被指定者。
 
-   我們可以重複使用與步驟7相同的指令碼片段，以填入 **指令碼** 「進階設定」**簽上的文字區**。 複製+貼上下列程式碼：
+   我們可以重複使用與步驟7相同的指令碼片段，以填入{**進階設定{tab**上的&#x200B;**指令碼**&#x200B;文字區域。 複製+貼上下列程式碼：
 
    ```
    var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -533,11 +533,11 @@ task.setCurrentAssignee(projectApproverGrp);
        Description = "Placeholder step to indicate that the original editor decided to bypass the approver group."
    ```
 
-   ![工作流程模型OR分割](./assets/develop-aem-projects/workflow-stage-after-orsplit.png)
+   ![工作流程模型或分割](./assets/develop-aem-projects/workflow-stage-after-orsplit.png)
 
    設定OR分割中的所有三個分支後，工作流程模型應該如下所示。
 
-1. 由於「核准者」群組可選擇將工作流程傳送回原始編輯器以進行進一步修訂，因此我們將依賴 **轉至** 步驟以瞭解上次採取的動作，並將工作流程路由至開始處或讓工作流程繼續。
+1. 由於「核准者」群組可選擇將工作流程傳送回原始編輯器以進行進一步的修訂，因此我們將仰賴&#x200B;**跳至**&#x200B;步驟來讀取上次採取的動作，並將工作流程路由至開頭，或讓工作流程繼續。
 
    將「跳到步驟」元件(可在「工作流程」下的Sidekick中找到)拖放到OR分割下，放置該元件重新結合的位置。 連按兩下並在對話方塊中設定下列屬性：
 
@@ -552,9 +552,9 @@ task.setCurrentAssignee(projectApproverGrp);
        The step to go to. = "Start Task Creation"
    ```
 
-   最後一項我們要設定的是作為「跳至處理」步驟一部分的指令碼。 Script值可透過對話方塊內嵌，或設定為指向外部檔案。 Goto指令碼必須包含 **函式check()** 如果工作流程應移至指定步驟，則傳回true。 傳回false會導致工作流程繼續進行。
+   最後一項我們要設定的是作為「跳至處理」步驟一部分的指令碼。 Script值可透過對話方塊內嵌，或設定為指向外部檔案。 Goto指令碼必須包含&#x200B;**函式check()**，如果工作流程應該移至指定的步驟，則會傳回true。 傳回false會導致工作流程繼續進行。
 
-   如果核准者群組選擇 **&quot;傳回以進行修訂&quot;** 動作（在步驟7和8中設定），然後我們想要將工作流程傳回 **開始建立任務** 步驟。
+   如果核准者群組選擇&#x200B;**「傳回以進行修訂」**&#x200B;動作（在步驟7和步驟8中設定），則我們想要將工作流程傳回&#x200B;**「開始建立任務」**&#x200B;步驟。
 
    在「流&#39;b5&#39;7b」標籤上，將下列程式碼片段新增至「指令碼」文字區域：
 
@@ -570,17 +570,17 @@ task.setCurrentAssignee(projectApproverGrp);
    }
    ```
 
-1. 若要發佈裝載，我們將使用ootb **啟動頁面/資產** 程式步驟。 此程式步驟幾乎不需要任何設定，而且會將工作流程的裝載新增至復寫佇列以進行啟用。 我們將在「跳至」步驟下方新增步驟，如此一來，只有核准者群組已核准要發佈的內容，或原始編輯者選擇「略過核准」路徑時，才能到達該步驟。
+1. 為了發佈裝載，我們將使用ootb **啟動頁面/資產**&#x200B;程式步驟。 此程式步驟幾乎不需要任何設定，而且會將工作流程的裝載新增至復寫佇列以進行啟用。 我們將在「跳至」步驟下方新增步驟，如此一來，只有核准者群組已核准要發佈的內容，或原始編輯者選擇「略過核准」路徑時，才能到達該步驟。
 
-   拖放 **啟動頁面/資產** 在模型中「跳至步驟」下的「處理步驟」 (Process step) (可在「WCM工作流程」下的Sidekick中找到)。
+   將&#x200B;**啟動頁面/資產**&#x200B;程式步驟(可在WCM工作流程下的Sidekick中找到)拖放到模型中跳到步驟的下方。
 
    ![工作流程模型完成](assets/develop-aem-projects/workflow-model-final.png)
 
    新增「跳至」步驟和「啟動頁面/資產」步驟後，工作流程模型看起來會是什麼樣子。
 
-1. 如果「核准者」群組傳回內容以供修訂，我們想讓原始編輯器知道。 我們可以動態變更「工作」建立屬性來達到此目的。 我們將關閉的lastActionTooled屬性值 **&quot;傳回以進行修訂&quot;**. 如果該值存在，我們將修改標題和說明，以指出此工作是傳回內容以供修訂的結果。 我們也會將優先順序更新為 **&quot;高&quot;** 所以這是編輯器處理的第一個專案。 最後，我們將任務到期日設定為自工作流程傳回修訂之日算起的一天。
+1. 如果「核准者」群組傳回內容以供修訂，我們想讓原始編輯器知道。 我們可以動態變更「工作」建立屬性來達到此目的。 我們將關閉&#x200B;**「傳回以進行修訂」**&#x200B;的lastActionTaken屬性值。 如果該值存在，我們將修改標題和說明，以指出此工作是傳回內容以供修訂的結果。 我們也會將優先順序更新為&#x200B;**「高」**，使其成為編輯器處理的第一個專案。 最後，我們將任務到期日設定為自工作流程傳回修訂之日算起的一天。
 
-   取代開頭 `start-task-config.ecma` 具有下列內容的指令碼（在步驟5中建立）：
+   以下列專案取代起始`start-task-config.ecma`指令碼（在步驟5中建立）：
 
    ```
    // start-task-config.ecma
@@ -623,21 +623,21 @@ task.setCurrentAssignee(projectApproverGrp);
 
 ## 建立「啟動工作流程」精靈 {#start-workflow-wizard}
 
-從專案中啟動工作流程時，您必須指定精靈來啟動工作流程。 預設精靈： `/libs/cq/core/content/projects/workflowwizards/default_workflow` 可讓使用者輸入工作流程標題、開始註解及工作流程執行的裝載路徑。 底下也有其他幾個範例： `/libs/cq/core/content/projects/workflowwizards`.
+從專案中啟動工作流程時，您必須指定精靈來啟動工作流程。 預設精靈： `/libs/cq/core/content/projects/workflowwizards/default_workflow`可讓使用者輸入工作流程標題、開始註解以及工作流程執行所需的裝載路徑。 在下方也有其他幾個範例： `/libs/cq/core/content/projects/workflowwizards`。
 
 建立自訂精靈的功能非常強大，因為您可以在工作流程開始之前收集關鍵資訊。 資料會儲存為工作流程的中繼資料的一部分，而工作流程程式可以讀取此資料，並根據輸入的值動態變更行為。 我們將建立自訂精靈，以根據啟動精靈值動態指派工作流程中的第一個任務。
 
-1. 在CRXDE-Lite中，我們將在下建立子資料夾 `/apps/aem-guides/projects-tasks/projects` 名為「精靈」的資料夾。 從下列位置複製預設精靈： `/libs/cq/core/content/projects/workflowwizards/default_workflow` 在新建立的精靈資料夾下方，並將其重新命名為 **content-approval-start**. 完整路徑現在應該是： `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
+1. 在CRXDE-Lite中，我們將在`/apps/aem-guides/projects-tasks/projects`資料夾下建立一個名為「精靈」的子資料夾。 從下列來源複製預設精靈： `/libs/cq/core/content/projects/workflowwizards/default_workflow` （在新建立的精靈資料夾下），並將它重新命名為&#x200B;**content-approval-start**。 完整路徑現在應該是： `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`。
 
-   預設精靈為兩欄式精靈，第一欄顯示所選工作流程模型的標題、說明和縮圖。 第二欄包含工作流程標題、開始評論和裝載路徑的欄位。 精靈是標準的觸控式UI表單，會使用標準功能 [Granite UI表單元件](https://experienceleague.adobe.com/en/docs) 以填入欄位。
+   預設精靈為兩欄式精靈，第一欄顯示所選工作流程模型的標題、說明和縮圖。 第二欄包含工作流程標題、開始評論和裝載路徑的欄位。 精靈是標準的觸控式UI表單，並使用標準的[Granite UI表單元件](https://experienceleague.adobe.com/en/docs)來填入欄位。
 
    ![內容核准工作流程精靈](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
-1. 我們將在精靈中新增一個額外欄位，用於設定工作流程中第一個任務的受指派人(請參閱 [建立工作流程模型](#create-workflow-model)：步驟5)。
+1. 我們將新增其他欄位至精靈，用於設定工作流程中第一個工作的受指派人（請參閱[建立工作流程模型](#create-workflow-model)：步驟5）。
 
-   下 `../content-approval-start/jcr:content/items/column2/items` 建立型別為的新節點 `nt:unstructured` 已命名 **&quot;assign&quot;**. 我們將使用「專案使用者選擇器」元件(根據 [Granite使用者選取器元件](https://experienceleague.adobe.com/en/docs))。 此表單欄位可讓您輕鬆地將使用者和群組選取限製為僅屬於目前專案的那些專案。
+   在`../content-approval-start/jcr:content/items/column2/items`底下建立名稱為&#x200B;**&quot;assign&quot;**&#x200B;的型別`nt:unstructured`的新節點。 我們將使用Projects使用者選擇器元件（以[Granite使用者選擇器元件](https://experienceleague.adobe.com/en/docs)為基礎）。 此表單欄位可讓您輕鬆地將使用者和群組選取限製為僅屬於目前專案的那些專案。
 
-   以下是XML表示法 **指派** 節點：
+   以下是&#x200B;**指派**&#x200B;節點的XML表示法：
 
    ```xml
    <assign
@@ -653,17 +653,17 @@ task.setCurrentAssignee(projectApproverGrp);
        required="{Boolean}true"/>
    ```
 
-1. 我們也會新增優先順序選擇欄位，以決定工作流程中第一個任務的優先順序(請參閱 [建立工作流程模型](#create-workflow-model)：步驟5)。
+1. 我們也會新增優先順序選擇欄位，以決定工作流程中第一個任務的優先順序（請參閱[建立工作流程模型](#create-workflow-model)：步驟5）。
 
-   下 `/content-approval-start/jcr:content/items/column2/items` 建立型別為的新節點 `nt:unstructured` 已命名 **優先順序**. 我們將使用 [Granite UI選取元件](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions) 以填入表單欄位。
+   在`/content-approval-start/jcr:content/items/column2/items`底下建立名稱為&#x200B;**優先順序**&#x200B;且型別為`nt:unstructured`的新節點。 我們將使用[Granite UI Select元件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions)來填入表單欄位。
 
-   在 **優先順序** 節點，我們將新增 **個專案** 節點 **nt：unstructured**. 在 **個專案** 節點再新增3個節點，以填入「高」、「中」和「低」的選取選項。 每個節點的型別為 **nt：unstructured** 且應該有 **文字** 和 **值** 屬性。 文字和值應該是相同的值：
+   我們將在&#x200B;**優先順序**&#x200B;節點下方新增&#x200B;**nt：unstructured**&#x200B;的&#x200B;**專案**&#x200B;節點。 在&#x200B;**專案**&#x200B;節點底下再新增3個節點，以填入「高」、「Medium」和「低」的選擇選項。 每個節點的型別為&#x200B;**nt：unstructured**，應該有&#x200B;**文字**&#x200B;和&#x200B;**值**&#x200B;屬性。 文字和值應該是相同的值：
 
    1. 高
    1. 中等
    1. 低
 
-   對於媒體節點，請新增一個名為的額外布林屬性&#x200B;**已選取」** ，且值設定為 **true**. 這將確保「中」是選取欄位中的預設值。
+   針對Medium節點，新增名稱為&quot;**selected&quot;**&#x200B;且值設定為&#x200B;**true**&#x200B;的其他布林值屬性。 這將確保Medium是選取欄位中的預設值。
 
    以下是節點結構和屬性的XML表示法：
 
@@ -691,9 +691,9 @@ task.setCurrentAssignee(projectApproverGrp);
    </priority>
    ```
 
-1. 我們將允許工作流程發起者設定初始任務的到期日。 我們將使用 [Granite UI DatePicker](https://experienceleague.adobe.com/en/docs) 表單欄位以擷取此輸入。 我們也會新增包含下列專案的隱藏欄位： [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) 以確保在JCR中將輸入儲存為日期型別屬性。
+1. 我們將允許工作流程發起者設定初始任務的到期日。 我們將使用[Granite UI DatePicker](https://experienceleague.adobe.com/en/docs)表單欄位來擷取此輸入。 我們也會新增含有[TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint)的隱藏欄位，以確保在JCR中將輸入儲存為Date型別屬性。
 
-   新增兩個 **nt：unstructured** 具有下列屬性的節點以XML表示：
+   新增兩個&#x200B;**nt：unstructured**&#x200B;節點，其下列屬性以XML表示：
 
    ```xml
    <duedate
@@ -713,17 +713,17 @@ task.setCurrentAssignee(projectApproverGrp);
        value="Calendar"/>
    ```
 
-1. 您可以檢視啟動精靈對話方塊的完整程式碼 [此處](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/projects-tasks-guide/ui.apps/src/main/content/jcr_root/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start/.content.xml).
+1. 您可以在[這裡](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/projects-tasks-guide/ui.apps/src/main/content/jcr_root/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start/.content.xml)檢視啟動精靈對話方塊的完整程式碼。
 
 ## 連線工作流程和專案範本 {#connecting-workflow-project}
 
 最後我們要做的就是確保可以從其中一個專案啟動工作流程模型。 為此，我們需要重新造訪在此系列第1部分建立的專案範本。
 
-「工作流程組態」是「專案範本」的區域，可指定要用於該專案的可用工作流程。 此設定還負責在啟動工作流程時(我們在 [先前的步驟)](#start-workflow-wizard). 專案範本的工作流程設定是「即時」的，這表示更新工作流程設定將會影響建立的新專案以及使用該範本的現有專案。
+「工作流程組態」是「專案範本」的區域，可指定要用於該專案的可用工作流程。 組態還負責在啟動工作流程時指定[啟動工作流程精靈] （我們在[先前步驟中建立的工作流程）](#start-workflow-wizard)。 專案範本的工作流程設定是「即時」的，這表示更新工作流程設定將會影響建立的新專案以及使用該範本的現有專案。
 
-1. 在CRXDE-Lite中導覽至先前建立的編寫專案範本，位於 `/apps/aem-guides/projects-tasks/projects/templates/authoring-project/workflows/models`.
+1. 在CRXDE-Lite中，導覽至先前在`/apps/aem-guides/projects-tasks/projects/templates/authoring-project/workflows/models`建立的編寫專案範本。
 
-   在模型節點下方，新增名為的節點 **contentapproval** 具有節點型別 **nt：unstructured**. 將下列屬性新增至節點：
+   在模型節點底下新增名稱為&#x200B;**contentapproval**&#x200B;的新節點，其節點型別為&#x200B;**nt：unstructured**。 將下列屬性新增至節點：
 
    ```xml
    <contentapproval
@@ -735,10 +735,10 @@ task.setCurrentAssignee(projectApproverGrp);
 
    >[!NOTE]
    >
-   >如果使用AEM 6.4，Workflow的位置已變更。 指向 `modelId` 屬性至下執行階段工作流程模型的位置 `/var/workflow/models/aem-guides/content-approval-workflow`
+   >如果使用AEM 6.4，Workflow的位置已變更。 將`modelId`屬性指向`/var/workflow/models/aem-guides/content-approval-workflow`下的執行階段工作流程模型的位置
    >
    >
-   >另請參閱 [此處以取得工作流程位置變更的詳細資訊。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
+   >請參閱[此處，以取得工作流程位置變更的詳細資料。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
    ```xml
    <contentapproval
@@ -753,5 +753,5 @@ task.setCurrentAssignee(projectApproverGrp);
 ## 支援材料
 
 * [下載完成的教學課程套件](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
-* [GitHub上的完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
+* GitHub上的[完整程式碼存放庫](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 * [AEM專案檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)

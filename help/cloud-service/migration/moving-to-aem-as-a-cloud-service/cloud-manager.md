@@ -1,6 +1,6 @@
 ---
-title: 透過AEMas a Cloud Service使用Cloud Manager
-description: 瞭解適用於AEM的Cloud Manageras a Cloud Service，以及其與適用於AEM onAdobe管理服務(AMS)的Cloud Manager的差異。
+title: 搭配AEM as a Cloud Service使用Cloud Manager
+description: 瞭解適用於AEM as a Cloud Service的Cloud Manager，以及其與適用於AEM on Adobe Manage Services (AMS)的Cloud Manager的差異。
 version: Cloud Service
 feature: Cloud Manager
 topic: Migration, Upgrade
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # Cloud Manager
 
-瞭解適用於AEM的Cloud Manageras a Cloud Service，以及其與適用於AEM onAdobe管理服務(AMS)的Cloud Manager的差異。
+瞭解適用於AEM as a Cloud Service的Cloud Manager，以及其與適用於AEM on Adobe Manage Services (AMS)的Cloud Manager的差異。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336961?quality=12&learn=on)
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 在嘗試實作練習之前，請確定您已觀看並瞭解上述影片和下列資料：
 
-+ [以不同方式思考AEMas a Cloud Service](./introduction.md)
++ [以不同方式思考AEM as a Cloud Service](./introduction.md)
 + [上線](./onboarding.md)
 
 此外，請確定您已完成前一個實作練習：
@@ -46,7 +46,7 @@ ht-degree: 2%
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
-            <div style="font-size:1.25rem;font-weight:400;">使用Cloud Manager實作</div>
+            <div style="font-size:1.25rem;font-weight:400;">Cloud Manager動手操作</div>
             <p style="margin:1rem 0">
                 探索使用AIO CLI Cloud Manager外掛程式觸發Cloud Manager管道。
             </p>
@@ -54,7 +54,7 @@ ht-degree: 2%
                 target="_blank"
                 href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session4-cloud-manager#bootcamp-session-4-cloud-manager-develop-and-deploy
 " class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">請試用Cloud Manager</span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">試用Cloud Manager</span>
             </a>
         </td>
     </tr>

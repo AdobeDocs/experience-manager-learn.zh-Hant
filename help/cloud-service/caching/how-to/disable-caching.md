@@ -1,6 +1,6 @@
 ---
 title: 如何停用CDN快取
-description: 瞭解如何在AEMas a Cloud Service的CDN中停用HTTP回應的快取。
+description: 瞭解如何在AEM as a Cloud Service的CDN中停用HTTP回應的快取。
 version: Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
@@ -21,17 +21,17 @@ ht-degree: 0%
 
 # 如何停用CDN快取
 
-瞭解如何在AEMas a Cloud Service的CDN中停用HTTP回應的快取。 回應的快取是由所控制 `Cache-Control`， `Surrogate-Control`，或 `Expires` HTTP回應快取標題。
+瞭解如何在AEM as a Cloud Service的CDN中停用HTTP回應的快取。 回應快取是由`Cache-Control`、`Surrogate-Control`或`Expires` HTTP回應快取標頭所控制。
 
-這些快取標頭通常是在AEM Dispatcher vhost設定中使用 `mod_headers`，但也可以在AEM Publish本身執行的自訂Java™程式碼中設定。
+這些快取標頭通常在使用`mod_headers`的AEM Dispatcher vhost設定中設定，但也可以在AEM Publish本身中執行的自訂Java™程式碼中設定。
 
 ## 預設快取行為
 
-檢閱AEM Publish和Author的預設快取行為(若 [AEM專案原型](./enable-caching.md#default-caching-behavior) 基礎的AEM專案已部署。
+在部署基於[AEM Project Archetype](./enable-caching.md#default-caching-behavior)的AEM專案時，檢閱AEM Publish和Author的預設快取行為。
 
 ## 停用快取
 
-關閉快取可能會對AEMas a Cloud Service執行個體的效能產生負面影響，因此在關閉預設快取行為時請務必謹慎。
+關閉快取可能會對AEM as a Cloud Service執行個體的效能產生負面影響，因此在關閉預設快取行為時請務必謹慎。
 
 不過，在某些情況下，您可能會想要停用快取，例如：
 
@@ -40,14 +40,14 @@ ht-degree: 0%
 
 若要停用快取，您可以使用兩種方式更新快取標頭。
 
-1. **Dispatcher vhost設定：** 僅適用於AEM Publish。
-1. **自訂Java™程式碼：** 可供AEM Publish和Author使用。
+1. **Dispatcher vhost設定：**&#x200B;僅適用於AEM Publish。
+1. **自訂Java™程式碼：**&#x200B;可同時用於AEM Publish和Author。
 
 讓我們檢閱這些選項中的每一個。
 
 ### Dispatcher vhost設定
 
-此選項是停用快取的建議方法，但僅適用於AEM Publish。 若要更新快取標題，請使用 `mod_headers` 模組和 `<LocationMatch>` 指示詞。 一般語法如下：
+此選項是停用快取的建議方法，但此選項僅適用於AEM Publish。 若要更新快取標頭，請使用Apache HTTP伺服器的vhost檔案中的`mod_headers`模組和`<LocationMatch>`指示詞。 一般語法如下：
 
 ```
 <LocationMatch "$URL$ || $URL_REGEX$">
@@ -62,12 +62,12 @@ ht-degree: 0%
 
 #### 範例
 
-若要停用 **CSS內容型別** 如需疑難排解，請依照下列步驟進行。
+若要停用&#x200B;**CSS內容型別**&#x200B;的CDN快取，以進行部分疑難排解，請按照下列步驟進行。
 
 請注意，若要略過現有的CSS快取，必須變更CSS檔案，才能為CSS檔案產生新的快取索引鍵。
 
-1. 在您的AEM專案中，從找到所需的影片檔案 `dispatcher/src/conf.d/available_vhosts` 目錄。
-1. 更新vhost (例如 `wknd.vhost`)檔案，如下所示：
+1. 在您的AEM專案中，從`dispatcher/src/conf.d/available_vhosts`目錄找出所需的vhsot檔案。
+1. 更新vhost （例如`wknd.vhost`）檔案，如下所示：
 
    ```
    <LocationMatch "^/etc.clientlibs/.*\.(css)$">
@@ -80,12 +80,12 @@ ht-degree: 0%
    </LocationMatch>
    ```
 
-   中的vhost檔案 `dispatcher/src/conf.d/enabled_vhosts` 目錄為 **符號連結** 至中的檔案 `dispatcher/src/conf.d/available_vhosts` 目錄，因此如果沒有，請務必建立符號連結。
-1. 使用將vhost變更部署到所需的AEMas a Cloud Service環境 [Cloud Manager — 網頁層設定管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines) 或 [RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration).
+   `dispatcher/src/conf.d/enabled_vhosts`目錄中的vhost檔案是`dispatcher/src/conf.d/available_vhosts`目錄中檔案的&#x200B;**symlink**，因此請務必建立symlink （若不存在）。
+1. 使用[Cloud Manager - Web層設定管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines)或[RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration)，將vhost變更部署到所需的AEM as a Cloud Service環境。
 
 ### 自訂Java™程式碼
 
-此選項同時適用於AEM Publish和Author。 若要更新快取標題，請使用 `SlingHttpServletResponse` 自訂Java™程式碼中的物件（Sling servlet、Sling servlet篩選器）。 一般語法如下：
+此選項同時適用於AEM Publish和Author。 若要更新快取標頭，請在自訂Java™程式碼（Sling servlet、Sling servlet篩選器）中使用`SlingHttpServletResponse`物件。 一般語法如下：
 
 ```java
 response.setHeader("Cache-Control", "private");

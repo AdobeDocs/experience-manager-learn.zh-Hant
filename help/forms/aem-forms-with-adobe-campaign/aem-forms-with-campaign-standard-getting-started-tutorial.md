@@ -36,11 +36,11 @@ ACS具有一組豐富的API，可讓ACS與我們選擇的技術連線。 在本�
 若要開始使用，請遵循下列指示
 
 * [下載並解壓縮與本教學課程相關的資產。](assets/aem-forms-and-acs-bundles.zip)
-* 使用部署套件組合 [Felix Web主控台](http://localhost:4502/system/console/bundles)
+* 使用[Felix Web主控台](http://localhost:4502/system/console/bundles)部署組合
 * 在Felix OSGI設定中為Adobe Campaign提供適當的設定。
-* [建立本文所述的服務使用者](/help/forms/adaptive-forms/service-user-tutorial-develop.md). 請務必部署與文章相關聯的OSGi套件組合。
+* [建立本文中提及的服務使用者](/help/forms/adaptive-forms/service-user-tutorial-develop.md)。 請務必部署與文章相關聯的OSGi套件組合。
 * 將ACS私密金鑰儲存在etc/key/campaign/private.key中。 您必須在etc/key下建立名為campaign的資料夾。
-* [為服務使用者「資料」提供Campaign資料夾的讀取許可權。](http://localhost:4502/useradmin)
+* [為服務使用者「資料」提供Campaign資料夾的讀取存取權。](http://localhost:4502/useradmin)
 
 ## 後續步驟
 

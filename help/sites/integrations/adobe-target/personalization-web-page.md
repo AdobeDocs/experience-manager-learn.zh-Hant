@@ -1,5 +1,5 @@
 ---
-title: 個人化完整網頁體驗
+title: 完整網頁體驗的Personalization
 description: 瞭解如何建立Target活動，以使用Adobe Target將AEM網站頁面重新導向至新頁面。
 jira: KT-6353
 thumbnail: 6353-personalization-web-page.jpg
@@ -8,7 +8,7 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
 duration: 89
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# 個人化完整網頁體驗 {#personalization-fpe}
+# 完整網頁體驗的Personalization {#personalization-fpe}
 
 瞭解如何建立活動，使用Adobe Target將AEM上託管的網頁重新導向至新頁面。
 
@@ -37,27 +37,27 @@ WKND網站重新設計了首頁，並且想要將其目前首頁的訪客重新�
 ## 使用視覺化體驗撰寫器(VEC)建立A/B測試的步驟
 
 1. 登入Adobe Target並導覽至「活動」標籤
-1. 按一下 **建立活動** 按鈕，然後選擇 **A/B測試** 活動
+1. 按一下&#x200B;**建立活動**&#x200B;按鈕，然後選擇&#x200B;**A/B測試**&#x200B;活動
 
    ![A/B活動](assets/ab-target-activity.png)
 
-1. 選取 **視覺化體驗撰寫器** 選項，提供活動URL，然後按一下 **下一個**
+1. 選取&#x200B;**視覺化體驗撰寫器**&#x200B;選項，提供活動URL，然後按一下&#x200B;**下一步**
 
    ![活動URL](assets/ab-test-url.png)
 
-1. 視覺化體驗撰寫器在您建立活動後，會在左側顯示兩個標籤： *體驗A* 和 *體驗B*. 從清單中選取體驗。 您可以使用將體驗新增至清單 **新增體驗** 按鈕。
+1. 視覺化體驗撰寫器在您建立活動後在左側顯示兩個標籤： *體驗A*&#x200B;和&#x200B;*體驗B*。 從清單中選取體驗。 您可以使用&#x200B;**新增體驗**&#x200B;按鈕來新增體驗至清單。
 
    ![體驗選項](assets/experience-options.png)
 
-1. 檢視體驗A可用的選項，然後選取 **重新導向至URL** 選項並提供新WKND網站首頁的URL。
+1. 檢視體驗A可用的選項，然後選取&#x200B;**重新導向至URL**&#x200B;選項，並提供新WKND網站首頁的URL。
 
    ![重新導向URL](assets/redirect-url.png)
 
-1. 重新命名 *體驗A* 至 *新增WKND首頁* 和 *體驗B* 至 *wknd首頁*
+1. 將&#x200B;*體驗A*&#x200B;重新命名為&#x200B;*新的WKND首頁*&#x200B;和&#x200B;*體驗B*&#x200B;重新命名為&#x200B;*WKND首頁*
 
    ![冒險](assets/new-experiences.png)
 
-1. 按一下 **下一個** 移至目標定位，並保持兩個體驗之間的手動流量分配50至50。
+1. 按一下[下一步]****&#x200B;移至[目標定位]，並保持兩個體驗之間的手動流量分配為50-50。
 
    ![目標定位](assets/targeting.png)
 
@@ -70,7 +70,7 @@ WKND網站重新設計了首頁，並且想要將其目前首頁的訪客重新�
 
    ![目標](assets/activate.png)
 
-1. 在新標籤中開啟您的網站頁面（步驟3中的活動URL），您應該能夠從A/B測試活動檢視任一體驗（WKND首頁或新WKND首頁）。 `us/en.html` 重新導向至 `us/home.html`.
+1. 在新標籤中開啟您的網站頁面（步驟3中的活動URL），您應該能夠從A/B測試活動檢視任一體驗（WKND首頁或新WKND首頁）。 `us/en.html`重新導向至`us/home.html`。
 
    ![目標](assets/redirect-test.png)
 

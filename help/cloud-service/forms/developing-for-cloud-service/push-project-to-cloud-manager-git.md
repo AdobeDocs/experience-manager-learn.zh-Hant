@@ -21,7 +21,8 @@ ht-degree: 1%
 
 在上一步中，我們將AEM專案與在AEM例項中建立的最適化Forms和主題同步。
 我們現在需要將這些變更新增到本機Git存放庫，然後將本機Git存放庫推送到Cloud Manager Git存放庫。
-開啟命令提示字元並瀏覽至c：\cloudmanager\aem-banking-app執行以下命令
+開啟命令提示字元並導覽至c：\cloudmanager\aem-banking-app
+執行以下命令
 
 ```
 git add .

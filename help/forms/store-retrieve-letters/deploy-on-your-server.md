@@ -24,9 +24,9 @@ ht-degree: 2%
 * [建立資料庫綱要](assets/icdrafts.sql)
 * [匯入使用者端資源庫](assets/icdrafts.zip)
 * [匯入最適化表單](assets/SavedDraftsAdaptiveForm.zip)
-* 建立資料來源，稱為 _SaveAndContinue_
+* 建立名為&#x200B;_SaveAndContinue_&#x200B;的資料來源
 
-![建立資料來源](assets/data-source.png)
+![建立資料Source](assets/data-source.png)
 
 | 屬性名稱 | 屬性值 |
 |---|---|
@@ -35,7 +35,7 @@ ht-degree: 2%
 | JDBC連線URL | `jdbc:mysql://localhost:3306/aemformstutorial?autoReconnect=true&useSSL=false&characterEncoding=utf8&useUnicode=true` |
 
 * [部署icdraft組合](assets/icdrafts.icdrafts.core-1.0-SNAPSHOT.jar)
-* 請確定 _使用CCRDocumentInstanceService啟用儲存_ 在OSGI設定中，如下所示
+* 請確定您在OSGI設定中&#x200B;_使用CCRDocumentInstanceService_啟用儲存，如下所示
   ![啟用草稿](assets/enable-drafts.png)
 * 開啟任何互動式通訊。 按一下另存為草稿以儲存
 * [檢視已儲存的草稿](http://localhost:4502/content/dam/formsanddocuments/saveddrafts/jcr:content?wcmmode=disabled)
@@ -43,4 +43,4 @@ ht-degree: 2%
 >[!NOTE]
 >xml檔案儲存在AEM伺服器安裝的根資料夾中。 Eclipse專案是提供給您根據您的需求自訂解決方案。
 
-包含範例實作的eclipse專案可以是 [已從此處下載](assets/icdrafts-eclipse-project.zip)
+包含範例實作的eclipse專案可從這裡[下載](assets/icdrafts-eclipse-project.zip)

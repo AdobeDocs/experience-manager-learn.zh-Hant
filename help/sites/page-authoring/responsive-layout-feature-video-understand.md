@@ -28,4 +28,4 @@ Adobe Experience Manager Sites可讓作者根據裝置寬度管理元件的寬�
 
 ## 其他資源 {#additional-resources}
 
-* [Responsive佈局檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)
+* [回應式佈局檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)

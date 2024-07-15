@@ -1,6 +1,6 @@
 ---
-title: 將Asset compute背景工作部署到Adobe I/O Runtime以與AEMas a Cloud Service搭配使用
-description: asset compute專案及其所包含的背景工作必須部署至Adobe I/O Runtime，才可供AEMas a Cloud Service使用。
+title: 將Asset compute背景工作部署到Adobe I/O Runtime以與AEM as a Cloud Service搭配使用
+description: asset compute專案及其所包含的背景工作必須部署至Adobe I/O Runtime，才可供AEM as a Cloud Service使用。
 feature: Asset Compute Microservices
 version: Cloud Service
 doc-type: Tutorial
@@ -20,45 +20,45 @@ ht-degree: 0%
 
 # 部署至Adobe I/O Runtime
 
-asset compute專案及其所包含的背景工作必須透過Adobe I/OCLI部署至Adobe I/O Runtime，才可供AEMas a Cloud Service使用。
+asset compute專案及其所包含的背景工作必須透過Adobe I/O CLI部署至Adobe I/O Runtime，才可供AEM as a Cloud Service使用。
 
-部署至Adobe I/O Runtime以供AEMas a Cloud Service製作服務使用時，只需要兩個環境變數：
+部署到Adobe I/O Runtime以供AEM as a Cloud Service Author服務使用時，只需要兩個環境變數：
 
-+ `AIO_runtime_namespace` 指向要部署的App Builder工作區
-+ `AIO_runtime_auth` 是App Builder工作區的驗證認證
++ `AIO_runtime_namespace`指向App Builder Workspace以部署到
++ `AIO_runtime_auth`是App Builder工作區的驗證認證
 
-中定義的其他標準變數 `.env` 檔案由AEMas a Cloud Service在叫用Asset compute背景工作時以隱含方式提供。
+在`.env`檔案中定義的其他標準變數，在AEM as a Cloud Service叫用Asset compute背景工作程式時以隱含方式提供。
 
 ## 開發工作區
 
-因為此專案是使用 `aio app init` 使用 `Development` 工作區， `AIO_runtime_namespace` 自動設為 `81368-wkndaemassetcompute-development` 具有相符的 `AIO_runtime_auth` 在我們的本機 `.env` 檔案。  如果 `.env` 檔案存在於用來發出部署命令的目錄中，其值會被使用，除非這些值是透過作業系統層級變數匯出來取代，亦即 [中繼與生產](#stage-and-production) 工作區已定位。
+因為此專案是使用`aio app init`使用`Development`工作區所產生，`AIO_runtime_namespace`會自動設定為`81368-wkndaemassetcompute-development`，且在本機`.env`檔案中符合`AIO_runtime_auth`。  如果用於發出部署命令的目錄中存在`.env`檔案，則會使用其值，除非其值透過OS層級變數匯出取代，這就是[階段和生產](#stage-and-production)工作區的目標方式。
 
-![使用.env變數部署aio應用程式](./assets/runtime/development__aio.png)
+使用.env變數部署![aio應用程式](./assets/runtime/development__aio.png)
 
-若要部署到專案中定義的工作區 `.env` 檔案：
+若要部署至專案`.env`檔案中定義的工作區：
 
 1. 在Asset compute專案的根目錄中開啟命令列
-1. 執行命令 `aio app deploy`
-1. 執行命令 `aio app get-url` 以取得背景工作URL，以便用於AEMas a Cloud Service處理設定檔，以參考此自訂Asset compute背景工作。 如果專案包含多個背景工作，則會列出每個背景工作的獨立URL。
+1. 執行命令`aio app deploy`
+1. 執行命令`aio app get-url`以取得背景工作URL，以便用於AEM as a Cloud Service處理設定檔，以參考此自訂Asset compute背景工作。 如果專案包含多個背景工作，則會列出每個背景工作的獨立URL。
 
-如果本機開發和AEMas a Cloud Service開發環境使用單獨的Asset compute部署，則對AEMas a Cloud Service開發環境的部署可以使用與相同的方式管理 [中繼和生產部署](#stage-and-production).
+如果本機開發和AEM as a Cloud Service開發環境使用單獨的Asset compute部署，則對AEM as a Cloud Service Dev的部署可採用與[中繼和生產部署](#stage-and-production)相同的方式進行管理。
 
 ## 中繼和生產工作區{#stage-and-production}
 
-部署到中繼和生產工作區通常由您選擇的CI/CD系統完成。 asset compute專案必須離散地部署到每個工作區（中繼然後是生產）。
+部署到中繼和生產工作區通常由您選擇的CI/CD系統完成。 asset compute專案必須離散地部署到每個Workspace （暫存然後生產）。
 
-設定真正的環境變數會覆寫中相同名稱變數的值 `.env`.
+設定True環境變數會覆寫`.env`中同名變數的值。
 
-![使用匯出變數部署aio應用程式](./assets/runtime/stage__export-and-aio.png)
+使用匯出變數部署![aio應用程式](./assets/runtime/stage__export-and-aio.png)
 
 部署到中繼和生產環境的一般方法通常由CI/CD系統自動化，即：
 
-1. 確保 [Adobe I/OCLI npm模組與Asset compute外掛程式](../set-up/development-environment.md#aio) 已安裝
+1. 請確定已安裝[Adobe I/OCLI npm模組和Asset compute外掛程式](../set-up/development-environment.md#aio)
 1. 檢視要從Git部署的Asset compute專案
 1. 使用與目標工作區（「預備」或「生產」）相對應的值設定環境變數
-   + 兩個必要變數為 `AIO_runtime_namespace` 和 `AIO_runtime_auth` 和是透過Workspace的，在Adobe I/O開發人員控制檯中為每個工作區取得 __全部下載__ 功能。
+   + 兩個必要變數為`AIO_runtime_namespace`和`AIO_runtime_auth`，是透過Workspace的&#x200B;__全部下載__&#x200B;功能在Adobe I/ODeveloper Console中為每個工作區取得的。
 
-![Adobe Developer主控台 — AIO執行階段名稱空間和驗證](./assets/runtime/stage-auth-namespace.png)
+![Adobe Developer Console - AIO執行階段名稱空間和驗證](./assets/runtime/stage-auth-namespace.png)
 
 從命令列發出匯出指令可以設定這些鍵的值：
 
@@ -71,13 +71,13 @@ $ export AIO_runtime_auth=27100f9f-2676-4cce-b73d-b3fb6bac47d1:0tDu307W6MboQf5VW
 
 1. 設定好要部署的目標工作區的所有環境變數後，請執行部署命令：
    + `aio app deploy`
-1. AEMas a Cloud Service處理設定檔參考的工作者URL也可透過以下方式取得：
+1. AEM as a Cloud Service處理設定檔參考的工作者URL也可透過以下方式取得：
    + `aio app get-url`。
 
 如果Asset compute專案版本變更，背景工作URL也會變更以反映新版本，且該URL需要在「處理設定檔」中更新。
 
-## 工作區API布建{#workspace-api-provisioning}
+## Workspace API布建{#workspace-api-provisioning}
 
-時間 [在Adobe I/O中設定App Builder專案](../set-up/app-builder.md) 為了支援本機開發，已建立新的開發工作區，且 __asset compute、I/O事件__ 和 __I/O事件管理API__ 已新增至該頁面。
+當[在Adobe I/O](../set-up/app-builder.md)中設定App Builder專案以支援本機開發時，已建立新的開發工作區，並新增&#x200B;__Asset compute、I/O事件__&#x200B;和&#x200B;__I/O事件管理API__。
 
-此 __asset compute、I/O事件__ 和 __I/O事件管理API__ API只會明確新增至用於本機開發的工作區。 （專門）與AEMas a Cloud Service環境整合的工作區 __非__ 需要明確新增這些API，因為這些API會自然地提供給AEMas a Cloud Service使用。
+__Asset compute、I/O事件__&#x200B;和&#x200B;__I/O事件管理API__ API僅明確新增至本機開發所使用的工作區。 與AEM as a Cloud Service環境整合（獨佔）的工作區&#x200B;__不需要__&#x200B;明確新增這些API，因為API自然可供AEM as a Cloud Service使用。

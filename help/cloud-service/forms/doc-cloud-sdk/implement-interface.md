@@ -22,7 +22,7 @@ ht-degree: 0%
 
 以下是實現介面的類別的完整程式碼。
 
-此類別使用2種公用程式方法 `getAccessToken`， `getJWTToken` 和靜態方法 `getContentAnalyserRequest` 之 `GetContentAnalyser` 類別。
+這個類別使用`GetContentAnalyser`類別的2個公用程式方法`getAccessToken`、`getJWTToken`和靜態方法`getContentAnalyserRequest`。
 
 
 ```java

@@ -165,7 +165,7 @@ public void updateSignatureStatus(String formData, String guid) {
 
 ## 取得下一個要簽署的表單
 
-下列程式碼已用於取得狀態為0之指定customerID的下一個簽署表單。 如果sql查詢未傳回任何列，我們會傳回字串 **&quot;AllDone&quot;** 這表示指定的客戶id已沒有可供簽署的表單。
+下列程式碼已用於取得狀態為0之指定customerID的下一個簽署表單。 如果SQL查詢未傳回任何資料列，我們會傳回字串&#x200B;**&quot;AllDone&quot;**，這表示指定的客戶ID已沒有可簽署的表單。
 
 ```java
 @Override
@@ -205,7 +205,7 @@ public String getNextFormToSign(int customerID) {
 
 ## Assets
 
-包含上述服務的OSGi套件組合可以是 [已從此處下載](assets/sign-multiple-forms.jar)
+包含上述服務的OSGi套件組合可以從這裡[下載](assets/sign-multiple-forms.jar)
 
 ## 後續步驟
 

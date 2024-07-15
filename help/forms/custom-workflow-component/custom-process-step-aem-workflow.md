@@ -24,12 +24,13 @@ ht-degree: 0%
 
 ## 建立Maven專案
 
-第一步是使用適當的AdobeMaven原型建立Maven專案。 詳細步驟列於此 [文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). 將您的maven專案匯入到eclipse中後，您就可以開始編寫可在流程步驟中使用的第一個OSGi元件了。
+第一步是使用適當的AdobeMaven原型建立Maven專案。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中列出了詳細步驟。 將您的maven專案匯入到eclipse中後，您就可以開始編寫可在流程步驟中使用的第一個OSGi元件了。
 
 
 ### 建立實作WorkflowProcess的類別
 
-在eclipse IDE中開啟Maven專案。 展開 **projectname** > **核心** 資料夾。 展開src/main/java資料夾。 您應該會看到結尾為「core」的套件。 建立在此封裝中實作WorkflowProcess的Java類別。 您需要覆寫執行方法。 執行方法的簽章如下public void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)擲回WorkflowException
+在eclipse IDE中開啟Maven專案。 展開&#x200B;**projectname** > **core**資料夾。 展開src/main/java資料夾。 您應該會看到結尾為「core」的套件。 建立在此封裝中實作WorkflowProcess的Java類別。 您需要覆寫執行方法。 執行方法的簽章如下
+公開void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)擲回WorkflowException
 
 在本教學課程中，我們會將新增至最適化表單的附件寫入檔案系統，做為AEM Workflow的一部分。
 
@@ -123,7 +124,7 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
 這兩個值會使用工作流程元件的對話方塊作為流程引數傳遞
 
-![Processstep](assets/custom-workflow-component.png)
+![ProcessStep](assets/custom-workflow-component.png)
 
 QueryBuilder服務用於查詢attachmentsPath資料夾下nt：file型別的節點。 其餘程式碼會逐一檢視搜尋結果，以建立Document物件並將其儲存至檔案系統
 
@@ -142,10 +143,10 @@ QueryBuilder服務用於查詢attachmentsPath資料夾下nt：file型別的節�
 
 #### 建置和部署
 
-[依照此處的說明建置套件組合](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
-[請確定該套件組合已部署且處於作用中狀態](http://localhost:4502/system/console/bundles)
+[依照此處所述建置組合](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[請確定套件組合已部署且處於使用中狀態](http://localhost:4502/system/console/bundles)
 
 ## 後續步驟
 
-建立您的 [自訂工作流程元件](./custom-workflow-component.md)
+建立您的[自訂工作流程元件](./custom-workflow-component.md)
 

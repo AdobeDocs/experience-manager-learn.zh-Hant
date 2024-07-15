@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 在AEM Forms OSGi中啟用任何類別的偵錯記錄步驟
 
-*本影片逐步解說在AEM Forms OSGi中啟用任何類別偵錯記錄的步驟。*
+*此影片會逐步說明在AEM Forms OSGi中啟用任何類別的偵錯記錄步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335521?quality=12&learn=on)

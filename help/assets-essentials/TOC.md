@@ -22,7 +22,7 @@ ht-degree: 20%
 
 + [快速入門](./getting-started.md)
 
-+ 基本知識{#basics}
++ 基本資訊{#basics}
    + [管理](basics/managing.md)
    + [使用](basics/using.md)
    + [建立內容](basics/creating.md)
@@ -30,7 +30,7 @@ ht-degree: 20%
    + [共同作業](basics/collaborating.md)
    + [連結共用](basics/link-sharing.md)
 
-+ 設定{#configuring}
++ 正在設定{#configuring}
    + [我的工作區](configuring/my-workspace.md)
    + [中繼資料表單](configuring/metadata-forms.md)
    + [許可權管理](configuring/permissions-management.md)

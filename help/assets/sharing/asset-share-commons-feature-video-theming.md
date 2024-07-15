@@ -1,6 +1,6 @@
 ---
 title: Asset Share Commons主題化簡介
-description: Assets Share Commons功能與技術瞭解資料
+description: Assets共用區功能與技術瞭解資料
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution
@@ -76,7 +76,7 @@ ht-degree: 1%
 @msgWarningBackgroundColor: @yellow;
 ```
 
-下載 [自訂使用者端資料庫主題](assets/asc-theme-demo.zip)
+下載[自訂使用者端資料庫主題](assets/asc-theme-demo.zip)
 
 ## 其他資源{#additional-resources}
 

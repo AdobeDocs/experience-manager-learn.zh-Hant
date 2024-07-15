@@ -1,5 +1,5 @@
 ---
-title: 使用表單資料模型發佈二進位資料
+title: 使用表單資料模型建立Post二進位資料
 description: 使用表單資料模型將二進位資料發佈至AEM DAM
 feature: Workflow
 version: 6.4,6.5
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ---
 
-# 使用表單資料模型發佈二進位資料{#using-form-data-model-to-post-binary-data}
+# 使用表單資料模型建立Post二進位資料{#using-form-data-model-to-post-binary-data}
 
 從AEM Forms 6.4開始，我們現在能呼叫表單資料模型服務，做為AEM Workflow中的步驟。 本文將逐步引導您瞭解使用表單資料模型服務張貼記錄檔案的範例使用案例。
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 在「服務輸入」標籤中，我們對映下列專案
 
-* 相對於承載具有DOR.pdf屬性的檔案（需要儲存的二進位物件）。 這表示在提交最適化表單時，產生的記錄檔案會儲存在名為DOR.pdf的檔案中，且與工作流程裝載相關。**請確定此DOR.pdf與您在設定最適化表單的提交屬性時提供的相同。**
+* 相對於承載具有DOR.pdf屬性的檔案（需要儲存的二進位物件）。 這表示在提交最適化表單時，產生的記錄檔案會儲存在名為DOR.pdf的檔案中，且與工作流程裝載相關。**請確定此DOR.pdf與您在設定最適化表單的提交屬性時所提供的相同。**
 
 * fileName — 這是用來在DAM中儲存二進位物件的名稱。 因此您想要此屬性動態產生，以便每個提交的fileName都是唯一的。 為此目的，我們使用工作流程中的程式步驟來建立稱為filename的中繼資料屬性，並將其值設定為提交表單之人員的「成員名稱」和「帳號」的組合。 例如，若人員的成員名稱是John Jacobs，其帳號是9846，則檔案名稱將是John Jacobs_9846.pdf
 
@@ -42,24 +42,24 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->疑難排解提示 — 如果由於某些原因沒有在DAM中建立DOR.pdf，請按一下以重設資料來源驗證設定 [此處](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam). 這些是AEM驗證設定，預設為admin/admin。
+>疑難排解提示 — 如果由於某些原因沒有在DAM中建立DOR.pdf，請按一下[這裡](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam)來重設資料來源驗證設定。 這些是AEM驗證設定，預設為admin/admin。
 
 若要在您的伺服器上測試此功能，請遵循下列步驟：
 
 1.[部署Developingwithserviceuser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [下載並部署setvalue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar).此自訂OSGI套件組合用於建立中繼資料屬性，並從提交的表單資料中設定其值。
+1. [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。此自訂OSGI組合是用來建立中繼資料屬性，並從提交的表單資料中設定其值。
 
-1. [匯入資產](assets/postdortodam.zip) 使用封裝管理員將與本文相關的內容放入AEM中。您將獲得以下內容
+1. [使用封裝管理員將與此文章關聯的資產](assets/postdortodam.zip)匯入AEM。您將取得下列專案
 
    1. 工作流程模型
    1. 最適化表單已設定為提交至AEM Workflow
    1. 設定為使用PostToDam.JSON檔案的資料來源
-   1. 使用資料來源的表單資料模型
+   1. 使用資料Source的表單資料模型
 
-1. 指向您的 [瀏覽器以開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+1. 指向您的[瀏覽器以開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 1. 填寫表單並提交。
 1. 若記錄檔案已建立並儲存，請核取Assets應用程式。
 
 
-[Swagger檔案](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) 用於建立資料來源，可供您參考
+用於建立資料來源的[Swagger檔案](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile)可供您參考

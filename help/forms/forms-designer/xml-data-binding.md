@@ -1,6 +1,6 @@
 ---
 title: 在XDP型表單中建立XML資料繫結
-description: 說明將AEM表單繫結至XML資料來源的簡短影片
+description: 說明將AEM表單繫結至XML資料Source的簡短影片
 version: 6.5
 feature: Forms Designer,Designer
 topic: Development
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # 在AEM Forms Designer中建立XML資料繫結
 
-說明將AEM表單繫結至XML資料來源的簡短影片
+說明將AEM表單繫結至XML資料Source的簡短影片
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427625/?learn=on)

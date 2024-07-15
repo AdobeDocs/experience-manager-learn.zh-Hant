@@ -1,6 +1,6 @@
 ---
-title: 什麼是「排程程式」
-description: 瞭解什麼是Dispatcher。
+title: 什麼是「Dispatcher」
+description: 瞭解Dispatcher到底是什麼。
 version: 6.5
 topic: Administration
 feature: Dispatcher
@@ -17,11 +17,11 @@ ht-degree: 2%
 
 ---
 
-# 什麼是「排程程式」
+# 什麼是「Dispatcher」
 
 [目錄](./overview.md)
 
-從要求AEM Dispatcher的基本說明開始。
+從必須使用AEM Dispatcher的基本說明開始。
 
 ## Apache Web Server
 
@@ -29,20 +29,20 @@ ht-degree: 2%
 
 Apache伺服器功能的基本說明：
 
-- 遵循簡單規則，從其靜態檔案目錄(`DocumentRoot`)
-- 儲存在預設位置的檔案(`/var/www/html`)會依請求進行比對，並在請求使用者端的瀏覽器中轉譯
+- 遵循簡單規則，從其靜態檔案目錄(`DocumentRoot`)透過HTTP(s)通訊協定提供檔案
+- 儲存在預設位置(`/var/www/html`)的檔案在要求上相符，並在要求使用者端的瀏覽器中轉譯
 
 
 
 
 ## AEM特定模組檔案(`mod_dispatcher.so`)
 
-然後，將稱為Dispatcher模組的外掛程式新增到Apache Web Server
+然後將稱為Dispatcher模組的外掛程式新增至Apache Web Server
 
-AdobeAEM Dispatcher模組功能的基本說明：
+AEM Dispatcher模組Adobe功能的基本說明：
 
 - 增加預設檔案處理常式
-- 篩選出不良請求/保護AEM軟腹部/端點
+- 篩選出不良請求/保護AEM的軟腹部/端點
 - 如果存在多個轉譯器，則為負載平衡
 - 允許使用動態快取目錄/支援排清停滯的檔案
 - 它是所有AMS安裝的前門，並將網站和資產提供給使用者端的瀏覽器
@@ -51,7 +51,7 @@ AdobeAEM Dispatcher模組功能的基本說明：
 
 ## 網站流量工作流程
 
-瞭解哪些片段會一起安裝在一起以建置基本Dispatcher伺服器，可讓您瞭解Adobe管理員服務設定的基本Web流量工作流程。
+瞭解哪些片段會一起安裝在一起以建置基本Dispatcher伺服器，可讓您瞭解Adobe管理員服務設定的基本網路流量工作流程。
 這應該有助於您瞭解它在為您AEM內容的訪客提供內容的系統鏈中扮演什麼角色。
 
 <b>提供已快取的內容</b>

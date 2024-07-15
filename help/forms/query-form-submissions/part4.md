@@ -20,11 +20,11 @@ ht-degree: 2%
 
 # 使用提交的資料和附件預先填寫表單
 
-當 **管理員** 按一下搜尋結果表格中的ViewLink，表單會預先填入提交的資料。
+當&#x200B;**管理員**&#x200B;按一下搜尋結果表格中的ViewLink時，表單會預先填入提交的資料。
 
 預填服務是用來從Azure入口網站擷取與BlobId相關聯的資料。
 
-[這裡有提供有關使用資料和附件預先填寫表單的個別文章。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html)
+[這裡有另外一篇以資料及附件預先填寫表單的文章。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html)
 
 ## 後續步驟
 

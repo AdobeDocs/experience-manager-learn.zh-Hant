@@ -58,11 +58,11 @@ wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").incl
 
 * [使用封裝管理員匯入及安裝與本文相關的資產。](assets/launch-agent-ui.zip)
 * [登入configMgr](http://localhost:4502/system/console/configMgr)
-* 搜尋 _AdobeGranite CSRF篩選器_
-* 新增 _/content/getprintchannel_ 在排除的路徑中
+* 搜尋&#x200B;_AdobeGranite CSRF篩選器_
+* 在排除的路徑中新增&#x200B;_/content/getprintchannel_
 * 儲存您的變更。
-* [開啟POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp). 確定傳遞給FormFieldRequestParameter的字串是有效的documentId。（第19行）。
-* [開啟網頁](http://localhost:4502/content/OpenPrintChannel.html) 並輸入accountnumber並提交表單。
+* [開啟POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。 確定傳遞給FormFieldRequestParameter的字串是有效的documentId。（第19行）。
+* [開啟網頁](http://localhost:4502/content/OpenPrintChannel.html)，然後輸入accountnumber並提交表單。
 * 代理程式UI介面應會開啟，並預先填入表單中所輸入帳號的特定資料。
 
 >[!NOTE]

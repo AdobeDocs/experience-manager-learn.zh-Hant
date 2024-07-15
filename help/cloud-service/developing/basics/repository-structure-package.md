@@ -19,6 +19,6 @@ ht-degree: 2%
 
 # 存放庫結構套件
 
-探索AEM應用程式的 [存放庫結構套件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html)、其重要性以及如何以最佳方式定義它。
+探索AEM應用程式的[存放庫結構套件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html)、其重要性以及如何以最佳方式定義它。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330550?quality=12&learn=on)

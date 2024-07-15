@@ -20,8 +20,8 @@ ht-degree: 0%
 
 # 建立Adobe I/O專案
 
-1. 建立整合的第一步是建立 [Adobe ID](https://account.adobe.com/)
-1. 前往 [Adobe Developer Console](https://console.adobe.io/home)
+1. 建立整合的第一步是建立[Adobe ID](https://account.adobe.com/)
+1. 前往[Adobe Developer Console](https://console.adobe.io/home)
 1. 使用您在步驟1建立的Adobe ID登入
 1. 建立新專案
 

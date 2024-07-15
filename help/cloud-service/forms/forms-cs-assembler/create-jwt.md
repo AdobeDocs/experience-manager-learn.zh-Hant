@@ -20,7 +20,7 @@ ht-degree: 0%
 # 建立JSON Web權杖(JWT)
 
 JSON Web Token是開放的產業標準RFC 7519方法，可在兩方之間安全地表示宣告。 此範例中使用JWT.io資料庫來產生JWT。
-您在上一步中下載的服務認證包含PKCS#1格式的私密金鑰。若要擷取此字串的私密金鑰，我們使用 [彈城堡](https://www.bouncycastle.org/) 程式庫。 屬於Java一部分的加密程式庫不支援PKCS#1格式。
+您在上一步下載的服務認證包含PKCS#1格式的私密金鑰。若要擷取此字串的私密金鑰，我們已使用[BouncyCastle](https://www.bouncycastle.org/)資料庫。 屬於Java一部分的加密程式庫不支援PKCS#1格式。
 
 下列程式碼已用於產生JWT：
 

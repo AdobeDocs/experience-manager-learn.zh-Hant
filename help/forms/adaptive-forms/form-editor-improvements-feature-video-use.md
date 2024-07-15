@@ -22,7 +22,7 @@ AEM 6.3在此版本中引進了數個新功能和增強功能，以簡化最適�
 
 >[!VIDEO](https://video.tv.adobe.com/v/19500?quality=12&learn=on)
 
-**最適化表單編輯器的幾項主要改善包括：**
+**最適化表單編輯器的部分主要改良專案包括：**
 
 * [改善一般使用者體驗](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
 
@@ -32,8 +32,8 @@ AEM 6.3在此版本中引進了數個新功能和增強功能，以簡化最適�
 
 * [內嵌編輯元件標題](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
 * [元件中的預設驗證](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
-* [鍵盤快速鍵提供更快的內容製作體驗](https://helpx.adobe.com/aem-forms/6-3/keyboard-shortcuts.html#AdaptiveFormEditor)
-* [支援用於建立最適化表單的JSON結構描述](https://helpx.adobe.com/aem-forms/6-3/adaptive-form-json-schema-form-model.html)
-* [最適化表單中的驗證碼](https://helpx.adobe.com/aem-forms/6-3/captcha-adaptive-forms.html)
-* [增強的Acrobat Sign整合](https://helpx.adobe.com/aem-forms/6-3/working-with-adobe-sign.html)
+* [鍵盤快速鍵以加速內容製作體驗](https://helpx.adobe.com/aem-forms/6-3/keyboard-shortcuts.html#AdaptiveFormEditor)
+* [支援JSON結構描述以建立最適化表單](https://helpx.adobe.com/aem-forms/6-3/adaptive-form-json-schema-form-model.html)
+* 最適化表單中的[驗證碼](https://helpx.adobe.com/aem-forms/6-3/captcha-adaptive-forms.html)
+* [增強型Acrobat Sign整合](https://helpx.adobe.com/aem-forms/6-3/working-with-adobe-sign.html)
 * [非同步提交表單](https://helpx.adobe.com/aem-forms/6-3/asynchronous-submissions-adaptive-forms.html)

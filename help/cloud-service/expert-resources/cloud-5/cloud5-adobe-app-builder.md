@@ -1,6 +1,6 @@
 ---
-title: Cloud 5Adobe應用程式產生器
-description: 本集說明使用AdobeApp Builder的外部整合模式
+title: Cloud 5AdobeApp Builder
+description: 本集深入探討使用AdobeApp Builder的外部整合模式
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 ---
 
-# Cloud 5Adobe應用程式產生器
+# Cloud 5AdobeApp Builder
 
-Amol Anand會加入並提供與Adobe應用程式產生器整合的相關資訊，以及何時何地使用。
+Amol Anand加入我們，讓我們瞭解與AdobeApp Builder整合的相關資訊，以及何時何地使用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342375?quality=12&learn=on)
 
 ## 本影片涵蓋的內容
 
-+ 概觀 [App Builder](https://developer.adobe.com/app-builder/docs/overview/)
++ [App Builder](https://developer.adobe.com/app-builder/docs/overview/)的概觀
 + [Tutorials和程式碼實驗室](https://developer.adobe.com/app-builder/docs/resources/)
-+ [記錄與監視](https://adobedocs.github.io/adobeio-runtime/guides/logging_monitoring.html#retrieving-activations-for-blocking-successful-calls)
-+ 設定 [系統限制](https://adobedocs.github.io/adobeio-runtime/guides/system_settings.html)
-+ [本機開發](https://developer.adobe.com/app-builder/docs/resources/debugging/) 提示
++ [記錄及監視](https://adobedocs.github.io/adobeio-runtime/guides/logging_monitoring.html#retrieving-activations-for-blocking-successful-calls)
++ 正在設定[系統限制](https://adobedocs.github.io/adobeio-runtime/guides/system_settings.html)
++ [本機開發](https://developer.adobe.com/app-builder/docs/resources/debugging/)提示

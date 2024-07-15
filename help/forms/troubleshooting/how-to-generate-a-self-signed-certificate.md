@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # 如何產生自我簽署憑證
 
-*本影片逐步解說產生自我簽署憑證的步驟。*
+*此影片將逐步說明產生自我簽署憑證的步驟。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335539?quality=12&learn=on)

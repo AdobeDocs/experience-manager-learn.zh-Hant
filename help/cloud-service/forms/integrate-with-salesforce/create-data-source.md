@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# 建立資料來源
+# 建立資料Source
 
 使用先前步驟建立的Swagger檔案建立REST支援的資料來源
 

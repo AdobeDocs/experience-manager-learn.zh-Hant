@@ -1,6 +1,6 @@
 ---
 title: AEM作者服務快取
-description: AEMas a Cloud Service作者服務快取的一般總覽。
+description: AEM as a Cloud Service Author服務快取的一般概觀。
 version: Cloud Service
 feature: Developer Tools
 topic: Performance
@@ -31,11 +31,11 @@ ht-degree: 3%
 
 AEM Author服務使用CDN，但其目的在於增強產品資源的傳送，且不應進行大量設定，而是讓其照原樣運作。
 
-![AEM發佈快取概觀圖表](./assets/author/author-cdn.png){align="center"}
+![AEM Publish快取概觀圖表](./assets/author/author-cdn.png){align="center"}
 
 AEM Author CDN位於一般使用者（通常是行銷人員或內容作者）和AEM Author之間。 它會快取不可變檔案，例如支援AEM編寫體驗的靜態資產，而不是編寫的內容。
 
-AEM Author的CDN確實快取了多種可能感興趣的資源，包括 [持續性查詢上的可自訂TTL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances)，和 [自訂使用者端資料庫的長TTL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries).
+AEM Author的CDN確實快取了多種可能值得關注的資源型別，包括持續查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances)上的[可自訂TTL，以及自訂使用者端資料庫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries)上的[長TTL。
 
 ### 預設快取存留期
 
@@ -43,11 +43,11 @@ AEM Author的CDN確實快取了多種可能感興趣的資源，包括 [持續�
 
 | 內容類型 | 預設CDN快取期限 |
 |:------------ |:---------- |
-| [持久查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances) | 1 分鐘 |
+| [持續查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances) | 1 分鐘 |
 | [使用者端資料庫(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
 | [其他所有專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 未快取 |
 
 
 ## AEM Dispatcher
 
-AEM Author服務不包含AEM Dispatcher，僅使用 [CDN](#cdn) 用於快取。
+AEM Author服務不包含AEM Dispatcher，僅使用[CDN](#cdn)進行快取。

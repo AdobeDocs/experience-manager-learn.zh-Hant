@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 建立使用者端程式庫
 
-建立 [使用者端資料庫](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) 其中包含呼叫方法的程式碼 `doAjaxSubmitWithFileAttachment` 的 `guideBridge` CSS類別所識別之按鈕的點選事件上的API **儲存按鈕**.  我們會傳遞最適化表單資料， `fileMap`，以及 `mobileNumber` 端點接聽： `**/bin/storeafdatawithattachments`
+建立[使用者端程式庫](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)，它將包含在CSS類別&#x200B;**儲存按鈕**&#x200B;所識別的按鈕的點選事件上呼叫`guideBridge` API的方法`doAjaxSubmitWithFileAttachment`的程式碼。  我們將最適化表單資料`fileMap`和`mobileNumber`傳遞至`**/bin/storeafdatawithattachments`接聽的端點
 
 儲存表單資料後，系統會產生唯一的應用程式ID，並在對話方塊中呈現給使用者。 關閉對話方塊時，使用者將被帶入表單，表單可讓他們使用唯一應用程式ID擷取已儲存的最適化表單。
 
@@ -68,9 +68,9 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> 我們已使用 [Bootbox JavaScript程式庫](https://bootboxjs.com/examples.html) 顯示對話方塊
+> 我們已使用[啟動方塊JavaScript資料庫](https://bootboxjs.com/examples.html)來顯示對話方塊
 
-此範例中使用的使用者端資料庫可以是 [已從此處下載。](assets/store-af-with-attachments-client-lib.zip)
+此範例中使用的使用者端資料庫可以從這裡[下載。](assets/store-af-with-attachments-client-lib.zip)
 
 ## 後續步驟
 

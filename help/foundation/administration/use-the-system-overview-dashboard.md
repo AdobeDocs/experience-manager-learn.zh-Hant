@@ -18,16 +18,16 @@ ht-degree: 0%
 
 # 使用系統概觀儀表板
 
-Adobe Experience Manager (AEM) [!UICONTROL 系統概覽] 從單一儀表板提供AEM執行個體的組態、硬體及健康情況的高層級檢視。
+Adobe Experience Manager (AEM) [!UICONTROL 系統概覽]提供從單一儀表板檢視AEM執行個體的組態、硬體及健康情況的高階檢視。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
-1. 系統概觀可從以下位置存取： **AEM開始** > **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 系統概覽]**
+1. 系統概觀可從下列位置存取： **AEM開始** > **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 系統概觀]**
 
-   直接位於 **`<server-host>/libs/granite/operations/content/systemoverview.html`**
+   直接在&#x200B;**`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
-1. 此資訊來自 [!UICONTROL 系統概覽] 可透過按一下 [!UICONTROL 下載] 按鈕。 資訊也會透過以下內容公開 [!DNL REST] 端點：
-1. 以下是從匯出的JSON輸出範例 [!UICONTROL 系統概覽]：
+1. 按一下[!UICONTROL 下載]按鈕，即可匯出[!UICONTROL 系統總覽]中的資訊。 此資訊也會透過下列[!DNL REST]端點公開：
+1. 以下是從[!UICONTROL 系統概覽]匯出的JSON輸出範例：
 
    ```json
    {

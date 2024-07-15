@@ -22,7 +22,7 @@ ht-degree: 0%
 本文說明如何以Azure儲存空間中儲存的資料填入最適化表單。
 假設您已將最適化表單資料儲存在Azure儲存體，且現在想要將該資料預先填入最適化表單。
 >[!NOTE]
->本文中的程式碼無法用於以核心元件為基礎的最適化表單。[以下提供核心元件型最適化表單的同等文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+>本文中的程式碼無法用於以核心元件為基礎的最適化表單。[此處提供核心元件型最適化表單的同等文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
 
 
 ## 建立GET請求
@@ -88,8 +88,8 @@ if(guid!=null&&!guid.isEmpty())
 
 * [使用OSGi設定主控台，在Azure入口網站設定中指定適當的值。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
 
-* [預覽和提交BankAccount表單](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
+* [預覽並提交銀行帳戶表單](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
 * 驗證資料是否儲存在您選擇的Azure儲存容器中。 複製Blob ID。
 
-* [預覽銀行帳戶表單](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) 並針對URL中要預先填入Azure儲存體資料的表單，將Blob ID指定為GUID引數
+* [預覽BankAccount表單](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6)，並將Blob ID指定為URL中的GUID引數，以便使用Azure儲存體中的資料預先填入表單

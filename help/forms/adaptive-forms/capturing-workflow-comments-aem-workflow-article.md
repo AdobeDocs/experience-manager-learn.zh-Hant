@@ -24,22 +24,22 @@ ht-degree: 0%
 
 為了滿足此需求，提供範例OSGi套件，其可用於擷取註解並將這些註解儲存為工作流程中繼資料屬性。
 
-下列熒幕擷圖顯示如何在中使用程式步驟 [AEM工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) 擷取註解並將其儲存為中繼資料屬性。 「擷取工作流程註解」是需要用於程式步驟中的java類別名稱。 您必須傳遞內含註解的中繼資料屬性名稱。 在下方熒幕擷圖中，managerComments是將儲存註解的中繼資料屬性。
+下列熒幕擷圖顯示如何使用[AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)中的程式步驟來擷取註解，並將註解儲存為中繼資料屬性。 「擷取工作流程註解」是需要用於程式步驟中的java類別名稱。 您必須傳遞內含註解的中繼資料屬性名稱。 在下方熒幕擷圖中，managerComments是將儲存註解的中繼資料屬性。
 
 ![workflowcomments1](assets/workflowcomments1.gif)
 
 若要在您的系統上測試此功能，請遵循下列步驟：
-* [確定工作流程中的程式步驟已設定為使用「擷取工作流程註解」](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
+* [請確定工作流程中的程式步驟設定為使用擷取工作流程註解](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
 
 * [部署Developingwithserviceuser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [部署SetValue套件組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). 此套件包含用來擷取註解的範常式式碼，並將其儲存為中繼資料屬性
+* [部署SetValue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 此套件包含用來擷取註解的範常式式碼，並將其儲存為中繼資料屬性
 
-* [將與本文相關的資產下載並解壓縮至您的檔案系統](assets/capturecomments.zip) 資產包含工作流程模型和最適化表單範例。
+* [將本文相關的資產下載並解壓縮至您的檔案系統](assets/capturecomments.zip)這些資產包含工作流程模型和範例最適化表單。
 
 * 使用封裝管理員將2個zip檔案匯入AEM
 
-* [瀏覽至此URL以預覽表單](http://localhost:4502/content/dam/formsanddocuments/capturecomments/jcr:content?wcmmode=disabled)
+* [瀏覽到此URL以預覽表單](http://localhost:4502/content/dam/formsanddocuments/capturecomments/jcr:content?wcmmode=disabled)
 
 * 填寫表單欄位並提交表單
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 * 從收件匣開啟工作並提交表單。 出現提示時，請輸入一些註解。
 
-註解儲存在名為的中繼資料屬性中 `managerComments` 在AEM存放庫中。 若要檢查註解，請以管理員身分登入crx。 工作流程例項會儲存在下列路徑中：
+註解儲存在AEM儲存庫中稱為`managerComments`的中繼資料屬性中。 若要檢查註解，請以管理員身分登入crx。 工作流程例項會儲存在下列路徑中：
 
 `/var/workflow/instances/server0`
 

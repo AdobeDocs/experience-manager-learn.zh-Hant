@@ -28,13 +28,13 @@ ht-degree: 1%
 
 Adobe Analytics擷取的表單資料會以環形圖格式呈現
 
-**依據州的提交內容**
+**依狀態提交**
 
 ![applicantsbystate](assets/donut.png)
 
 欄位驗證錯誤
 
-![field-validation-error](assets/donut-field-validation.png)
+![欄位驗證錯誤](assets/donut-field-validation.png)
 
 ## 偵錯
 
@@ -51,11 +51,11 @@ _satellite.setDebug(true)
 
 與表單互動，同時保持主控台視窗開啟。 您應該會看到類似這樣的內容
 
-![console-debug](assets/debug.png)
+![主控台 — 偵錯](assets/debug.png)
 
 ## 使用Adobe Experience Platform Debugger
 
-新增 [AEP Debugger擴充功能](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) （您必須登入）以取得更多偵錯資訊
+將[AEP偵錯工具擴充功能](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html)新增至瀏覽器（您必須登入），以取得更多偵錯資訊
 
 ![platform-debugger](assets/platform-debugger.png)
 

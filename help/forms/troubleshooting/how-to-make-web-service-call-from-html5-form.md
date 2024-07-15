@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何從HTML5表單進行Web服務呼叫
 
-*此影片會逐步說明從HTML5表單進行Web服務呼叫的程式。*
+*此影片逐步解說從HTML5表單進行Web服務呼叫的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335505?quality=12&learn=on)

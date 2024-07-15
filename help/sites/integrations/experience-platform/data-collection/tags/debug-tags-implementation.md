@@ -9,7 +9,7 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sitesas a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
 duration: 259
@@ -28,9 +28,9 @@ ht-degree: 1%
 
 ## 透過Satellite物件進行使用者端除錯
 
-使用者端除錯有助於驗證Tag屬性規則載入或執行順序。 每當將Tag屬性新增至網站時， `_satellite` 瀏覽器中有JavaScript物件，以便利使用者端事件和資料追蹤。
+使用者端除錯有助於驗證Tag屬性規則載入或執行順序。 每當將Tag屬性新增至網站時，瀏覽器中都會顯示`_satellite` JavaScript物件，以利使用者端事件和資料追蹤。
 
-若要啟用使用者端除錯，請呼叫 `setDebug(true)` 上的方法 `_satellite` 物件。
+若要啟用使用者端偵錯，請呼叫`_satellite`物件上的`setDebug(true)`方法。
 
 1. 開啟瀏覽器主控台，然後執行下列命令。
 
@@ -38,19 +38,19 @@ ht-degree: 1%
        _satellite.setDebug(true);
    ```
 
-1. 重新載入AEM網站頁面，並驗證主控台記錄檔顯示 _已引發規則_ 訊息如下。
+1. 重新載入AEM網站頁面，並確認主控台記錄檔顯示如下所示的&#x200B;_已引發規則_&#x200B;訊息。
 
-   ![製作和發佈頁面上的標籤屬性](assets/satellite-object-debugging.png)
+   作者和Publish頁面上的![標籤屬性](assets/satellite-object-debugging.png)
 
 ## 透過Adobe Experience Platform Debugger除錯
 
-Adobe提供Adobe Experience Platform Debugger [Chrome擴充功能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 偵錯、瞭解及深入分析整合。
+Adobe提供Adobe Experience Platform Debugger[Chrome擴充功能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)以偵錯、瞭解及深入分析整合。
 
-1. 開啟Adobe Experience Platform Debugger擴充功能，然後在發佈執行個體上開啟網站頁面
+1. 開啟Adobe Experience Platform Debugger擴充功能，並在Publish例項上開啟網站頁面
 
-2. 在 **Adobe Experience Platform Debugger>摘要> Adobe Experience Platform標籤** 區段，確認您的Tag屬性詳細資訊，例如，名稱、版本、建置日期、環境和擴充功能。
+2. 在&#x200B;**Adobe Experience Platform Debugger>摘要> Adobe Experience Platform Tags**&#x200B;區段中，驗證Tag屬性詳細資訊，例如，名稱、版本、建置日期、環境和擴充功能。
 
-   ![Adobe Experience Platform Debugger和標籤屬性詳細資訊](assets/tag-property-details.png)
+   ![Adobe Experience Platform Debugger和標籤屬性詳細資料](assets/tag-property-details.png)
 
 ## 其他資源 {#additional-resources}
 

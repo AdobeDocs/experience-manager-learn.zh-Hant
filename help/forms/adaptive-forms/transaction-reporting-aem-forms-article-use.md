@@ -37,7 +37,7 @@ AEM Forms 6.4.1已引入交易報告功能，以擷取表單提交次數、使�
 
 選取工具 | Forms | 檢視交易報告
 
-或按一下以檢視交易報告 [此處](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
+或按一下[這裡](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)以檢視交易報告
 
 ![交易報告](assets/transactionreporting.gif)
 
@@ -49,4 +49,4 @@ AEM Forms 6.4.1已引入交易報告功能，以擷取表單提交次數、使�
 
 如果您在製作執行個體上檢視交易報告，請確定已在所有發佈執行個體上設定反向復寫。
 
-若要進一步瞭解交易報告 [請按這裡](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+若要深入瞭解交易報告[，請按一下這裡](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)

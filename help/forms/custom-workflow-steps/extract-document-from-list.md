@@ -36,7 +36,7 @@ ht-degree: 0%
 ## 設定最適化表單
 
 * 設定最適化表單的提交動作以觸發AEM工作流程
-  ![submit-action](assets/store-attachments.png)
+  ![送出動作](assets/store-attachments.png)
 
 ## 測試解決方案
 

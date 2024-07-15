@@ -25,7 +25,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 在Dynamic Media Scene7模式下執行Adobe Experience Manager，以運用此功能。 您也需要 [將標籤與您的AEM執行個體整合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
+> 在Dynamic Media Scene7模式下執行Adobe Experience Manager，以運用此功能。 您也需要[將標籤與您的AEM執行個體整合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)。
 
 透過引入Dynamic Media Viewer擴充功能，Adobe Experience Manager現在為使用Dynamic Media檢視器(5.13)傳送的資產提供進階分析支援，在Sites頁面上使用Dynamic Media Viewer時，提供更精細的事件追蹤控制。
 
@@ -166,6 +166,6 @@ ht-degree: 1%
 
 ## 其他資源{#additional-resources}
 
-* [將AEM與Adobe Experience Platform中的標籤整合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-* [在Dynamic Media Scene7模式上執行Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=en)
+* [整合AEM與Adobe Experience Platform中的標籤](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
+* [在Dynamic Media Scene7模式下執行Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=en)
 * [使用標籤整合Dynamic Media檢視器與Adobe Analytics](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html)

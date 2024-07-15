@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # AEM Headless Web元件部署
 
-AEM Headless [Web元件](https://developer.mozilla.org/en-US/docs/Web/Web_Components)/JS部署是在網頁瀏覽器中執行的純JavaScript應用程式，會以Headless方式在AEM中使用內容並與之互動。 Web元件/JS部署與 [SPA部署](./spa.md) 因為它們不使用強大的SPA架構，且預期會內嵌在任何網站的內容中、傳送，以從AEM呈現內容。
+AEM Headless [Web元件](https://developer.mozilla.org/en-US/docs/Web/Web_Components)/JS部署是純JavaScript應用程式，在網頁瀏覽器中執行，以Headless方式使用並與AEM中的內容互動。 Web元件/JS部署與[SPA部署](./spa.md)不同，因為它們不使用健全的SPA架構，而且預期會嵌入到任何網站的內容中、傳遞，以從AEM呈現內容。
 
 
 ## 部署設定

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何調整Workbench效能引數
 
-*本影片會逐步解說調整Workbench效能引數的程式。*
+*此影片逐步解說調整Workbench效能引數的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335511?quality=12&learn=on)

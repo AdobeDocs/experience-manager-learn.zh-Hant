@@ -22,13 +22,13 @@ ht-degree: 0%
 
 ## 預覽再融資表單
 
-客戶服務代理填寫並提交時會觸發使用案例 [再融資表單](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled).
+客戶服務代理程式填寫並提交[再融資表單](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)時，就會觸發使用案例。
 
 「簽署多個Forms」工作流程會在提交此表單時觸發，而客戶會收到電子郵件通知，其中包含開始表單填寫和簽署流程的連結。
 
 ## 在套件中填寫表單
 
-呈現客戶以填寫並簽署封裝中的第一個表單。 成功簽署表單後，客戶可導覽至封裝中的下一個表單。 所有表格填寫並簽署後，客戶會看到「**全部完成**」表單。
+呈現客戶以填寫並簽署封裝中的第一個表單。 成功簽署表單後，客戶可導覽至封裝中的下一個表單。 所有表格填寫並簽署後，客戶會看到&quot;**AllDone**&quot;表格。
 
 ## 疑難排解
 
@@ -50,4 +50,4 @@ ht-degree: 0%
 
 ### 未看到AllDone表單
 
-當沒有更多表單可登入套件時，會向使用者顯示AllDone表單。如果您沒有看到AllDone表單，請檢查GetNextFormToSign.js檔案的第33行中使用的URL，該檔案屬於 **getnextform** 使用者端資料庫。
+當沒有更多表單可登入套件時，會向使用者顯示AllDone表單。如果您沒有看到AllDone表單，請檢查GetNextFormToSign.js檔案（屬於&#x200B;**getnextform**&#x200B;使用者端程式庫的一部分）第33行中使用的URL。

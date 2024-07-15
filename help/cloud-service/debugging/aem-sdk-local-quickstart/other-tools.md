@@ -25,12 +25,12 @@ ht-degree: 1%
 
 ![CRXDE Lite](./assets/other-tools/crxde-lite.png)
 
-CRXDE Lite是網頁型介面，用於與JCR、AEM資料存放庫互動。 CRXDE Lite可讓您完全瞭解JCR，包括節點、屬性、屬性值和許可權。
+CRXDE Lite是網頁型介面，用於與AEM的JCR資料存放庫互動。 CRXDE Lite可讓您完全瞭解JCR，包括節點、屬性、屬性值和許可權。
 
 CRXDE Lite位於：
 
 + 「工具」>「一般」>「CRXDE Lite」
-+ 或直接在 [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
++ 或直接在[http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 
 ### 偵錯內容
 
@@ -44,7 +44,7 @@ CRXDE Lite提供對JCR的直接存取。 透過CRXDE Lite看到的內容受限�
 
 ![CRXDE Lite — 偵錯內容](./assets/other-tools/crxde-lite__debugging-content.png)
 
-透過CRXDE Lite直接對AEM SDK所做的任何變更可能難以追蹤和控管。 視情況需要，確認透過CRXDE Lite進行的變更能夠返回AEM專案的可變內容套件(`ui.content`)並認可至Git。 理想情況下，所有應用程式內容變更都源自程式碼基底，並透過部署流入AEM SDK，而不是透過CRXDE Lite直接變更AEM SDK。
+透過CRXDE Lite直接對AEM SDK所做的任何變更可能難以追蹤和控管。 視情況而定，請確定透過CRXDE Lite進行的變更回到了AEM專案的可變內容套件(`ui.content`)並認可到Git。 理想情況下，所有應用程式內容變更都源自程式碼基底，並透過部署流入AEM SDK，而不是透過CRXDE Lite直接變更AEM SDK。
 
 ### 偵錯存取控制
 
@@ -62,11 +62,11 @@ CRXDE Lite提供一種在特定節點上測試和評估特定使用者或群組�
 
 結果顯示如下：
 
-+ __路徑__ 重申已評估的路徑
-+ __主體__ 再次確認路徑評估對象的使用者或群組
-+ __主體__ 列出所選主體所屬的所有主體。
++ __Path__&#x200B;會重申評估過的路徑
++ __主體__&#x200B;會重申路徑評估對象的使用者或群組
++ __主參與者__&#x200B;列出選取的主參與者所屬的所有主參與者。
    + 這有助於瞭解透過繼承提供許可權的可傳遞群組成員資格
-+ __路徑上的許可權__ 列出所選主體在所評估路徑上的所有JCR許可權
++ __位於路徑__&#x200B;的許可權列出所選主體在評估路徑上的所有JCR許可權
 
 ## 說明查詢
 
@@ -77,13 +77,13 @@ CRXDE Lite提供一種在特定節點上測試和評估特定使用者或群組�
 說明查詢位於：
 
 + 「工具」 > 「診斷」 > 「查詢效能」 > 「說明查詢」標籤
-+ [http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) >說明查詢標籤
++ [http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) >說明查詢索引標籤
 
 ## QueryBuilder Debugger
 
 ![QueryBuilder Debugger](./assets/other-tools/query-debugger.png)
 
-QueryBuilder Debugger是網頁型工具，可協助您使用AEM除錯及瞭解搜尋查詢 [Querybuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) 語法。
+QueryBuilder偵錯工具是網頁式工具，可協助您使用AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)語法偵錯並瞭解搜尋查詢。
 
 QueryBuilder Debugger位於：
 

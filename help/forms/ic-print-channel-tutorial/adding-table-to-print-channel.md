@@ -22,7 +22,7 @@ ht-degree: 1%
 # 新增表格至貢獻區段
 
 在本部分中，我們將在「貢獻」區段中新增表格。
-請參閱 [在Print Channel中使用表格](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) 以取得在列印管道檔案中使用表格的詳細資訊。
+如需在列印管道檔案中使用表格的詳細資訊，請參閱[使用列印管道中的表格](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md)。
 
 登入AEM Forms並導覽至「Adobe Experience Manager > Forms > Forms與檔案」。
 

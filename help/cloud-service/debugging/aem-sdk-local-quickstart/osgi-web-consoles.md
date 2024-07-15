@@ -32,7 +32,7 @@ AEM提供許多OSGi主控台，每個主控台都提供AEM不同層面的關鍵�
 套件組合主控台位於：
 
 + 「工具>作業> Web主控台> OSGi >套裝」
-+ 或直接存取： [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
++ 或直接在： [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
 按一下每個套件組合，可提供協助您偵錯應用程式的詳細資訊。
 
@@ -49,7 +49,7 @@ AEM提供許多OSGi主控台，每個主控台都提供AEM不同層面的關鍵�
 元件主控台位於：
 
 + 工具>作業> Web主控台> OSGi >元件
-+ 或直接存取： [http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
++ 或直接在： [http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
 
 協助偵錯活動的主要面向：
 
@@ -66,7 +66,7 @@ AEM提供許多OSGi主控台，每個主控台都提供AEM不同層面的關鍵�
 Sling模型控制檯位於：
 
 + 工具>作業> Web主控台>狀態> Sling模型
-+ 或直接存取： [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
++ 或直接在： [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
 
 協助偵錯活動的主要面向：
 

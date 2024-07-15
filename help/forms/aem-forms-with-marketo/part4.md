@@ -33,11 +33,11 @@ ht-degree: 0%
 
 下列熒幕擷圖說明規則編輯器設定
 
-![規則編輯器](assets/ruleeditor.png)
+![ruleeditor](assets/ruleeditor.png)
 
 ## 偵錯
 
-如果您使用本文提供的套件組合，建議您啟用 [偵錯記錄](http://localhost:4502/system/console/slinglog) 下列類別：
+如果您使用本文提供的組合，您可能想要為下列類別啟用[偵錯記錄](http://localhost:4502/system/console/slinglog)：
 
 + `com.marketoandforms.core.impl.MarketoServiceImpl`
 + `com.marketoandforms.core.MarketoConfigurationService`

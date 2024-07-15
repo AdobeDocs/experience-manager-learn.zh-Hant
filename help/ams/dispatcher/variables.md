@@ -1,5 +1,5 @@
 ---
-title: 使用和瞭解AEM Dispatcher設定中的變數
+title: 在您的AEM Dispatcher設定中使用和瞭解變數
 description: 瞭解如何在Apache和Dispatcher模組設定檔案中使用變數，以將它們提升到新的境界。
 version: 6.5
 topic: Administration, Development
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 [&lt; — 上一步：瞭解快取](./understanding-cache.md)
 
-本檔案將說明如何在Apache網頁伺服器和您的Dispatcher模組設定檔案中運用變數的強大功能。
+本檔案將說明如何在Apache Web Server和Dispatcher模組設定檔案中運用變數的強大功能。
 
 ## 變數
 
@@ -33,8 +33,8 @@ Apache支援變數，而且由於Dispather模組版本4.1.9，因此也支援變
 
 - 請確定任何特定於環境的內容並非內嵌在設定中，而是會解壓縮的，以確保來自開發環境的設定檔案可在生產環境中使用相同的功能輸出。
 - 切換功能並變更AMS提供且不允許您變更的不可變檔案的記錄層級。
-- 根據變數變更要使用的包含，例如 `RUNMODE` 和 `ENV_TYPE`
-- 符合 `DocumentRoot`的和 `VirtualHost` Apache設定和模組設定之間的DNS名稱。
+- 根據`RUNMODE`和`ENV_TYPE`等變數變更要使用的包含
+- 在Apache設定和模組設定之間比對`DocumentRoot`和`VirtualHost`的DNS名稱。
 
 ## 使用基線變數
 
@@ -42,9 +42,9 @@ Apache支援變數，而且由於Dispather模組版本4.1.9，因此也支援變
 
 ### 基線變數
 
-AMS預設變數在檔案中宣告 `/etc/httpd/conf.d/variables/ootb.vars`.  此檔案無法編輯，但存在是為了確保變數沒有null值。  我們會先納入這些量度，然後再納入 `/etc/httpd/conf.d/variables/ams_default.vars`.  您可以編輯該檔案來更改這些變數的值，甚至可以在您自己的檔案中加入相同的變數名稱和值！
+已在檔案`/etc/httpd/conf.d/variables/ootb.vars`中宣告AMS預設變數。  此檔案無法編輯，但存在是為了確保變數沒有null值。  先包含後包含，而非包含`/etc/httpd/conf.d/variables/ams_default.vars`。  您可以編輯該檔案來更改這些變數的值，甚至可以在您自己的檔案中加入相同的變數名稱和值！
 
-以下是檔案內容的範例 `/etc/httpd/conf.d/variables/ams_default.vars`：
+以下是檔案`/etc/httpd/conf.d/variables/ams_default.vars`內容的範例：
 
 ```
 Define DISP_LOG_LEVEL info
@@ -56,7 +56,7 @@ Define PUBLISH_FORCE_SSL 0
 
 ### 範例1 — 強制SSL
 
-以上顯示的變數 `AUHOR_FORCE_SSL`，或 `PUBLISH_FORCE_SSL` 可設為1以啟用重寫規則，強制一般使用者在收到http請求時重新導向至https
+`AUHOR_FORCE_SSL`或`PUBLISH_FORCE_SSL`上顯示的變數可設為1，以啟用重寫規則，強制一般使用者在收到http要求時重新導向至https
 
 以下是允許此切換運作的設定檔案語法：
 
@@ -75,7 +75,7 @@ Define PUBLISH_FORCE_SSL 0
 
 ### 範例2 — 記錄層級
 
-變數 `DISP_LOG_LEVEL` 可用於設定您想要擁有的記錄層級（實際用於執行組態中）。
+變數`DISP_LOG_LEVEL`可用來設定您想讓實際用於執行組態中的記錄層級使用的變數。
 
 以下是ams基準組態檔案中的語法範例：
 
@@ -86,7 +86,7 @@ Define PUBLISH_FORCE_SSL 0
 </IfModule>
 ```
 
-如果您需要增加Dispatcher記錄層級，只需更新 `ams_default.vars` 變數 `DISP_LOG_LEVEL` 達到您想要的層級。
+如果您需要增加Dispatcher記錄層級，只需將`ams_default.vars`變數`DISP_LOG_LEVEL`更新為您想要的層級。
 
 範例值可以是整數或單字：
 
@@ -100,7 +100,7 @@ Define PUBLISH_FORCE_SSL 0
 
 ### 範例3 — 白名單
 
-變數 `AUTHOR_WHITELIST_ENABLED` 和 `PUBLISH_WHITELIST_ENABLED` 可設為1以參與重寫規則，包括根據IP位址允許或不允許一般使用者流量的規則。  若要在上切換此功能，需要結合建立白名單規則檔案並加以納入。
+變數`AUTHOR_WHITELIST_ENABLED`和`PUBLISH_WHITELIST_ENABLED`可設為1以參與重寫規則，這些規則包括允許或禁止根據IP位址的一般使用者流量的規則。  若要在上切換此功能，需要結合建立白名單規則檔案並加以納入。
 
 以下是一些語法範例，說明變數如何啟用包含白名單檔案和白名單檔案的範例
 
@@ -124,13 +124,13 @@ Define PUBLISH_FORCE_SSL 0
 </RequireAny>
 ```
 
-如您所見 `sample_whitelist.rules` 會強制執行IP限制，但切換變數可將其納入 `sample.vhost`
+如您所見，`sample_whitelist.rules`強制執行IP限制，但切換變數可將其納入`sample.vhost`
 
 ## 變數的放置位置
 
 ### 網頁伺服器啟動引數
 
-AMS會將伺服器/拓撲特定變數放在Apache程式的啟動引數內的檔案中 `/etc/sysconfig/httpd`
+AMS會將伺服器/拓撲特定變數放在`/etc/sysconfig/httpd`檔案內的Apache處理序啟動引數中
 
 此檔案有預先定義的變數，如下所示：
 
@@ -153,7 +153,7 @@ RUNMODE='sites'
 
 ### 變數檔案(`.vars`)
 
-程式碼提供的自訂變數應在下列欄位中存取： `.vars` 目錄中的檔案 `/etc/httpd/conf.d/variables/`
+您的程式碼提供的自訂變數應存在於目錄`/etc/httpd/conf.d/variables/`內的`.vars`檔案中
 
 這些檔案可以有您想要的任何自訂變數，以下範例檔案中可以看到一些語法範例
 
@@ -178,42 +178,42 @@ Define WERETAIL_DOMAIN www.weretail.com
 Define WERETAIL_ALT_DOMAIN www..weretail.net
 ```
 
-建立您自己的變數時，檔案會根據其內容進行命名，並遵循手冊中提供的命名標準 [此處](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention).  在上述範例中，您可以看到變數檔案裝載不同的DNS專案，做為設定檔案中使用的變數。
+建立您自己的變數時，檔案會根據變數的內容來命名，並遵循手冊[此處](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention)提供的命名標準。  在上述範例中，您可以看到變數檔案裝載不同的DNS專案，做為設定檔案中使用的變數。
 
 ## 使用變數
 
 現在您已定義變數檔案中的變數，您將想知道如何在其他設定檔案中正確使用變數。
 
-我們將使用範例 `.vars` 以上檔案中的說明，以說明正確的使用案例。
+我們將使用以上範例`.vars`檔案來說明正確的使用案例。
 
-我們想要在整體上包含所有以環境為基礎的變數，我們將建立檔案 `/etc/httpd/conf.d/000_load_env_vars.conf`
+我們要將所有基於環境的變數納入全域，我們將建立檔案`/etc/httpd/conf.d/000_load_env_vars.conf`
 
 ```
 IncludeOptional /etc/httpd/conf.d/variables/*_${ENV_TYPE}.vars
 IncludeOptional /etc/httpd/conf.d/variables/*_${RUNMODE}.vars
 ```
 
-我們知道當httpd服務啟動時，它會拉取AMS在中設定的變數 `/etc/sysconfig/httpd` 且具有變數集 `ENV_TYPE` 和 `RUNMODE`
+我們知道，當httpd服務啟動時，它會提取AMS在`/etc/sysconfig/httpd`中設定的變數，並具有變數集`ENV_TYPE`和`RUNMODE`
 
-當這個全域 `.conf` 如果提取檔案，則會提早提取，因為中的檔案包含順序 `conf.d` 檔案名稱中的英數字元載入順序表示為000，可確保先載入目錄中的其他檔案。
+當這個全域`.conf`檔案被提取時，將會提早提取，因為`conf.d`中的檔案包含順序是字母數字載入順序，檔案名稱中的平均值000將確保它先於目錄中的其他檔案載入。
 
-include陳述式也在檔案名稱中使用變數。  這可以根據中的值變更它將實際載入的檔案 `ENV_TYPE` 和 `RUNMODE` 變數。
+include陳述式也在檔案名稱中使用變數。  這可以根據`ENV_TYPE`和`RUNMODE`變數中的值來變更它將實際載入的檔案。
 
-如果 `ENV_TYPE` 值為 `dev` 則要使用的檔案為：
+如果`ENV_TYPE`值為`dev`，則要使用的檔案為：
 
 `/etc/httpd/conf.d/variables/weretail_domains_dev.vars`
 
-如果 `ENV_TYPE` 值為 `stage` 則要使用的檔案為：
+如果`ENV_TYPE`值為`stage`，則要使用的檔案為：
 
 `/etc/httpd/conf.d/variables/weretail_domains_stage.vars`
 
-如果 `RUNMODE` 值為 `preview` 則要使用的檔案為：
+如果`RUNMODE`值為`preview`，則要使用的檔案為：
 
 `/etc/httpd/conf.d/variables/weretail_domains_preview.vars`
 
 包含該檔案後，我們將可使用儲存在中的變數名稱。
 
-在我們 `/etc/httpd/conf.d/available_vhosts/weretail.vhost` 檔案我們可以置換僅適用於dev的一般語法：
+在`/etc/httpd/conf.d/available_vhosts/weretail.vhost`檔案中，我們可以置換僅適用於dev的一般語法：
 
 ```
 <VirtualHost *:80> 
@@ -229,7 +229,7 @@ include陳述式也在檔案名稱中使用變數。  這可以根據中的值�
  ServerAlias ${WERETAIL_ALT_DOMAIN}
 ```
 
-在我們 `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` 檔案我們可以置換僅適用於dev的一般語法：
+在`/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any`檔案中，我們可以置換僅適用於dev的一般語法：
 
 ```
 "dev.weretail.com" 
@@ -259,7 +259,7 @@ source /etc/sysconfig/httpd;/sbin/httpd -S | grep Define | grep "="
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_CONFIG | grep -v "#"
 ```
 
-變數在編譯的Dispatcher設定中的外觀如何：
+變數在經過編譯的Dispatcher設定中的外觀如何：
 
 ```
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY

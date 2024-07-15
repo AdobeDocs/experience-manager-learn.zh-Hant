@@ -1,6 +1,6 @@
 ---
-title: AEMas a Cloud Service中的周遊警告
-description: 瞭解如何在AEMas a Cloud Service中減輕周遊警告。
+title: AEM as a Cloud Service中的周遊警告
+description: 瞭解如何在AEM as a Cloud Service中減輕周遊警告。
 feature: Migration
 role: Architect, Developer
 level: Beginner
@@ -25,10 +25,10 @@ ht-degree: 2%
 
 _什麼是周遊警告？_
 
-周遊警告包括 __aemerror__ 記錄陳述式指出在AEM Publish服務上執行之查詢的效能不佳。 周遊警告通常會以兩種方式顯示在AEM中：
+周遊警告是&#x200B;__aemerror__&#x200B;記錄陳述式，指出正在AEM Publish服務上執行執行效能不佳的查詢。 周遊警告通常會以兩種方式顯示在AEM中：
 
-1. __緩慢查詢__ 不使用索引，導致回應時間緩慢。
-1. __失敗的查詢__，會擲回 `RuntimeNodeTraversalException`，導致中斷的體驗。
+1. __查詢速度緩慢__&#x200B;未使用索引，導致回應時間緩慢。
+1. __失敗的查詢__，擲回`RuntimeNodeTraversalException`，導致中斷的體驗。
 
 允許未勾選周遊警告會減慢AEM效能，並可能導致使用者的體驗中斷。
 
@@ -108,11 +108,11 @@ _什麼是周遊警告？_
 
 ## 1.分析{#analyze}
 
-首先，識別哪些AEM Publish服務顯示周遊警告。 若要這麼做，請從Cloud Manager， [下載發佈服務 `aemerror` 記錄檔](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"} 過去所有環境（開發、測試和生產）中的 __三天__.
+首先，識別哪些AEM Publish服務會出現周遊警告。 若要這麼做，請從Cloud Manager下載Publish服務過去&#x200B;__三天__&#x200B;從所有環境（開發、中繼及生產）的`aemerror`記錄](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"}。[
 
-![下載AEMas a Cloud Service記錄檔](./assets/traversals/download-logs.jpg)
+![下載AEM as a Cloud Service記錄檔](./assets/traversals/download-logs.jpg)
 
-開啟記錄檔並搜尋Java™類別 `org.apache.jackrabbit.oak.plugins.index.Cursors$TraversingCursor`. 包含周遊警告的記錄包含一連串類似下列內容的陳述式：
+開啟記錄檔，並搜尋Java™類別`org.apache.jackrabbit.oak.plugins.index.Cursors$TraversingCursor`。 包含周遊警告的記錄包含一連串類似下列內容的陳述式：
 
 ```log
 24.05.2022 14:18:46.146 [cm-p123-e456-aem-author-9876-edcba] *WARN* [192.150.10.214 [1653401908419] GET /content/wknd/us/en/example.html HTTP/1.1] 
@@ -139,9 +139,9 @@ consider creating an index or changing the query
 
 + 執行查詢的程式碼
 
-   + 範例：  `apps.wknd.components.search.example__002e__jsp._jspService` → `/apps/wknd/components/search/example.html`
+   + 範例： `apps.wknd.components.search.example__002e__jsp._jspService` → `/apps/wknd/components/search/example.html`
 
-__失敗的查詢__ 後面接著 `RuntimeNodeTraversalException` 陳述式，類似於：
+__失敗的查詢__&#x200B;後面接著一個`RuntimeNodeTraversalException`陳述式，類似於：
 
 ```log
 24.05.2022 14:18:47.240 [cm-p123-e456-aem-author-9876-edcba] *WARN* [192.150.10.214 [1653401908419] GET /content/wknd/us/en/example.html HTTP/1.1] 
@@ -157,15 +157,15 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
 
 ### 調整查詢
 
-__變更查詢__ 新增可解析成現有索引限制的新查詢限制。 可能的話，偏好變更查詢而非變更索引。
+__變更查詢__&#x200B;以新增可解析成現有索引限制的新查詢限制。 可能的話，偏好變更查詢而非變更索引。
 
 + [瞭解如何調整查詢效能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 
 ### 調整索引
 
-__變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引更新。
+__變更（或建立） AEM索引__，讓現有的查詢限制可解析為索引更新。
 
-+ [瞭解如何調整現有索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [瞭解如何調整現有的索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 + [瞭解如何建立索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target="_blank"}
 
 ## 3.確認{#verify}
@@ -174,11 +174,11 @@ __變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引�
 
 ![說明查詢](./assets/traversals/verify.gif)
 
-若僅限 [查詢調整](#adjust-the-query) 做出，可以透過開發人員控制檯在AEMas a Cloud Service上直接測試查詢 [說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. 說明查詢會針對AEM Author服務執行，但由於索引定義在Author和Publish服務中是相同的，因此針對AEM Author服務驗證查詢就足夠了。
+如果只對查詢](#adjust-the-query)進行[調整，則可以透過Developer Console的[說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}，直接在AEM as a Cloud Service上測試查詢。 說明查詢會針對AEM Author服務執行，但由於索引定義在Author和Publish服務中相同，因此針對AEM Author服務驗證查詢便已足夠。
 
-如果 [索引調整](#adjust-the-index) 完成，索引必須部署到AEMas a Cloud Service。 部署索引調整後，開發人員控制檯將可 [說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} 可用來進一步執行和調整查詢。
+如果已對索引](#adjust-the-index)進行[調整，則必須將索引部署到AEM as a Cloud Service。 部署索引調整後，Developer Console的[Explain查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}可用於進一步執行和調整查詢。
 
-最終，所有變更（查詢和程式碼）都會提交到Git並使用Cloud Manager部署到AEMas a Cloud Service。 部署後，測試與原始周遊警告相關聯的程式碼路徑會重新測試，並驗證周遊警告不再出現在 `aemerror` 記錄。
+最終，所有變更（查詢和程式碼）都會提交至Git，並使用Cloud Manager部署至AEM as a Cloud Service。 部署後，將測試與原始周遊警告關聯的程式碼路徑，並確認周遊警告不再出現在`aemerror`記錄中。
 
 ## 其他資源
 
@@ -197,9 +197,9 @@ __變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引�
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜尋和索引">Cloud 5 — 搜尋和索引</a></p>
-               <p class="is-size-6">Cloud 5團隊會顯示在AEMas a Cloud Service上探索搜尋和索引的來龍去脈。</p>
+               <p class="is-size-6">Cloud 5團隊會顯示AEM as a Cloud Service上搜尋和建立索引的來龍去脈。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解更多</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
                </a>
            </div>
        </div>
@@ -220,9 +220,9 @@ __變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引�
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="內容搜尋與索引">內容搜尋和索引檔案</a></p>
-               <p class="is-size-6">瞭解如何在AEMas a Cloud Service中建立和管理索引。</p>
+               <p class="is-size-6">瞭解如何在AEM as a Cloud Service中建立和管理索引。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解更多</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
                </a>
            </div>
        </div>
@@ -242,9 +242,9 @@ __變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引�
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="更新Oak索引">更新Oak索引</a></p>
-               <p class="is-size-6">瞭解如何將AEM 6 Oak索引定義轉換為AEMas a Cloud Service相容的定義，並維護未來的索引。</p>
+               <p class="is-size-6">瞭解如何將AEM 6 Oak索引定義轉換成相容於AEM as a Cloud Service，以及維護未來的索引。</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解更多</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
                </a>
            </div>
        </div>
@@ -266,7 +266,7 @@ __變更（或建立） AEM索引__ 以使現有查詢限制可解析為索引�
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="索引定義檔案">Lucene索引檔案</a></p>
                <p class="has-ellipsis is-size-6">Apache Oak Jackrabbit Lucene索引參考會記錄所有支援的Lucene索引設定。</p>
                <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">瞭解更多</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
                </a>
            </div>
        </div>

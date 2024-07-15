@@ -20,9 +20,9 @@ ht-degree: 2%
 
 歡迎使用我們的教學課程，瞭解如何使用ChatBot填入Adobe Experience Manager Forms (AEM Forms)的PDF表單，以及使用Adobe Sign傳送以進行數位簽名。
 
-已使用建立ChatBot [聊天機器人](https://www.chatbot.com/).
+已使用[聊天機器人](https://www.chatbot.com/)建立ChatBot。
 
-出於本教學課程的目的，我們將合併ChatBot中擷取的資料與 [W-9表單](assets/fw9.xdp)
+在本教學課程中，我們將合併ChatBot中擷取的資料與[W-9表單](assets/fw9.xdp)
 
 以下影片示範此使用案例。
 

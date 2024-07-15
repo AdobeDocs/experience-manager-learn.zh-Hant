@@ -1,5 +1,5 @@
 ---
-title: Cloud 5 — 在Edge Delivery Services中發佈、取消發佈事件
+title: Cloud 5 - Publish，在Edge Delivery Services中取消發佈事件
 description: 探索在Edge Delivery Services中發佈和取消發佈時觸發的事件，以及使用這些事件的使用案例和範例。
 feature: Edge Delivery Services
 topic: Development
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ---
 
-# Cloud 5 — 在Edge Delivery Services中發佈、取消發佈事件
+# Cloud 5 - Publish，在Edge Delivery Services中取消發佈事件
 
 探索在Edge Delivery Services中發佈和取消發佈時觸發的事件，以及使用這些事件的使用案例和範例。
 

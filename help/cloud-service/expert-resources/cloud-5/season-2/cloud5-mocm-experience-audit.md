@@ -18,7 +18,7 @@ ht-degree: 5%
 
 # Cloud 5 - Cloud Manager的秘密 — 體驗稽核
 
-在三部分系列的第一部分，我們探索Cloud Manager的基礎知識，並深入瞭解體驗稽核功能。
+在三部分系列的第一部分，我們會探索Cloud Manager的基本概念，並深入瞭解體驗稽核功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/343620?quality=12&learn=on)
 

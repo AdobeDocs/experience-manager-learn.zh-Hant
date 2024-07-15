@@ -17,10 +17,10 @@ ht-degree: 35%
 # AEM和Target快速入門 {#aem-target-tutorial}
 
 + [概觀](./overview.md)
-+ [使用AEM體驗片段進行個人化](./personalization-use-case-1.md)
-+ [使用視覺化體驗撰寫器進行個人化](./personalization-use-case-3.md)
-+ [個人化完整網頁體驗](./personalization-use-case-2.md)
-+ 實施 {#aem-target-implementation}
++ [使用AEM體驗片段的Personalization](./personalization-use-case-1.md)
++ [使用視覺化體驗撰寫器的Personalization](./personalization-use-case-3.md)
++ [完整網頁體驗的Personalization](./personalization-use-case-2.md)
++ 實作{#aem-target-implementation}
    + [簡介](./implementation.md)
    + [使用標籤和Adobe I/O的AEM和Adobe Target](./using-launch-adobe-io.md)
    + [使用舊版Cloud Service的AEM和Adobe Target](./using-aem-cloud-services.md)

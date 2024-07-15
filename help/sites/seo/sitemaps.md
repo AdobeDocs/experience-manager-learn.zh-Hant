@@ -25,7 +25,7 @@ ht-degree: 4%
 
 >[!WARNING]
 >
->此影片示範如何在網站地圖中使用相對URL。 Sitemap [應使用絕對URL](https://sitemaps.org/protocol.html). 另請參閱 [設定](#absolute-sitemap-urls) 瞭解如何啟用絕對URL，因為以下影片未說明此問題。
+>此影片示範如何在網站地圖中使用相對URL。 Sitemap [應使用絕對URL](https://sitemaps.org/protocol.html)。 請參閱[組態](#absolute-sitemap-urls)以瞭解如何啟用絕對URL，因為下列影片並未說明此問題。
 
 >[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
 
@@ -33,9 +33,9 @@ ht-degree: 4%
 
 ### 絕對網站地圖URL{#absolute-sitemap-urls}
 
-AEM Sitemap透過使用支援絕對URL [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). 這是透過在產生Sitemap (通常是AEM Publish服務)的AEM服務上建立對應節點來完成的。
+AEM的Sitemap使用[Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)支援絕對URL。 這是透過在產生Sitemap (通常是AEM Publish服務)的AEM服務上建立對應節點來完成。
 
-Sling對應節點定義的範例 `https://wknd.com` 可定義於 `/etc/map/https` 如下所示：
+`https://wknd.com`的Sling對應節點定義範例可在`/etc/map/https`下定義，如下所示：
 
 | 路徑 | 屬性名稱 | 屬性型別 | 屬性值 |
 |------|----------|---------------|-------|
@@ -43,14 +43,14 @@ Sling對應節點定義的範例 `https://wknd.com` 可定義於 `/etc/map/https
 | `/etc/map/https/wknd-site` | `sling:internalRedirect` | 字串 | `/content/wknd/(.*)` |
 | `/etc/map/https/wknd-site` | `sling:match` | 字串 | `wknd.com/$1` |
 
-以下熒幕擷圖說明類似的設定，但 `http://wknd.local` (執行於的本機主機名稱對應 `http`)。
+以下熒幕擷圖說明類似設定，但適用於`http://wknd.local` （在`http`上執行的本機主機名稱對應）。
 
-![網站地圖絕對URL設定](../assets/sitemaps/sitemaps-absolute-urls.jpg)
+![Sitemap絕對URL組態](../assets/sitemaps/sitemaps-absolute-urls.jpg)
 
 
 ### Sitemap排程器OSGi設定
 
-定義 [OSGi工廠設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) 針對頻率(使用 [cron運算式](https://cron.help/))在AEM中重新/產生並快取sitemap。
+定義在AEM中重新/產生並快取Sitemap的頻率（使用[cron運算式](https://cron.help/)）的[OSGi工廠設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)。
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -62,7 +62,7 @@ Sling對應節點定義的範例 `https://wknd.com` 可定義於 `/etc/map/https
 }
 ```
 
-### Dispatcher允許篩選規則
+### Dispatcher允許篩選器規則
 
 允許Sitemap索引和Sitemap檔案的HTTP要求。
 
@@ -77,7 +77,7 @@ Sling對應節點定義的範例 `https://wknd.com` 可定義於 `/etc/map/https
 
 ### Apache Webserver重寫規則
 
-確定 `.xml` Sitemap HTTP請求會路由至正確的基礎AEM頁面。 如果未使用URL縮短功能，或使用Sling對應來縮短URL，則不需要進行此設定。
+請確定`.xml`個Sitemap HTTP要求已路由到正確的基礎AEM頁面。 如果未使用URL縮短功能，或使用Sling對應來縮短URL，則不需要進行此設定。
 
 `dispatcher/src/conf.d/rewrites/rewrite.rules`
 

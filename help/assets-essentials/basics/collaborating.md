@@ -1,5 +1,5 @@
 ---
-title: Assets Essentials中的共同作業
+title: Assets Essentials中的Collaboration
 description: 瞭解如何使用評論、註解和工作在資產管理內部共同作業。
 version: Cloud Service
 feature: Assets Essentials
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# Assets Essentials中的共同作業
+# Assets Essentials中的Collaboration
 
 瞭解如何使用評論、註解和工作在資產管理上共同作業。
 

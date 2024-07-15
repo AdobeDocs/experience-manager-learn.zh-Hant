@@ -27,7 +27,7 @@ ht-degree: 2%
 
 * 對servlet進行POST呼叫。 此servlet會將資料儲存在資料庫中，並將表單附件儲存在CRX存放庫中。 資料庫中儲存的資料與GUID相關聯。
 
-* 當您想要將儲存的資料填入最適化表單時，您需要擷取與GUID相關的資料，並使用填入最適化表單 **request.setAttribute** 方法。
+* 當您想要將儲存的資料填入最適化表單時，請擷取與GUID相關的資料，並使用&#x200B;**request.setAttribute**&#x200B;方法填入最適化表單。
 
 ## 使用案例示範
 
@@ -45,4 +45,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-[設定資料來源](./configure-data-source.md)
+[設定資料Source](./configure-data-source.md)

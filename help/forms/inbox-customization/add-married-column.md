@@ -82,17 +82,17 @@ return isMarried(inboxItem);
 * [登入AEM網頁主控台](http://localhost:4502/system/console/bundles)
 * [部署和啟動收件匣自訂套裝](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [開啟您的收件匣](http://localhost:4502/aem/inbox)
-* 按一下以開啟Admin Control _清單檢視_ 圖示旁邊 _建立_ 按鈕
+* 按一下&#x200B;_建立_&#x200B;按鈕旁的&#x200B;_清單檢視_&#x200B;圖示以開啟Admin Control
 * 將「已婚」欄新增至「收件匣」並儲存變更
-* [前往FormsAndDocuments UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [匯入範例表單](assets/snap-form.zip) 藉由選取 _檔案上傳_ 從 _建立_ 功能表
+* [移至FormsAndDocuments UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* 從&#x200B;_建立_&#x200B;功能表選取&#x200B;_檔案上傳_，以匯入範例表單](assets/snap-form.zip)[
 * [預覽表單](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* 選取 _婚姻狀況_ 並提交表單
+* 選取&#x200B;_婚姻狀況_並提交表單
   [檢視收件匣](http://localhost:4502/aem/inbox)
 
 提交表單會觸發工作流程，且任務會指派給「管理員」使用者。 您應該會在「已婚」欄下看到值，如本熒幕擷取畫面所示
 
-![已婚欄](assets/married-column.PNG)
+![已婚資料行](assets/married-column.PNG)
 
 ## 後續步驟
 

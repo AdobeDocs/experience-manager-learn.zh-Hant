@@ -186,7 +186,7 @@ $ lsattr -Rl /etc/httpd 2>/dev/null | grep Immutable
 
 ### 變數
 
-變數可讓您在不變更組態檔本身的情況下進行功能變更。  某些設定元素可透過調整變數值進行調整。  其中一個範例是我們可以從檔案中反白顯示 `/etc/httpd/conf.d/dispatcher_vhost.conf` 顯示於此處：
+變數可讓您在不變更組態檔本身的情況下進行功能變更。  某些設定元素可透過調整變數值進行調整。  我們可以從檔案`/etc/httpd/conf.d/dispatcher_vhost.conf`中反白顯示的一個範例顯示如下：
 
 ```
 Include /etc/httpd/conf.d/variables/ams_default.vars
@@ -199,7 +199,7 @@ IfModule disp_apache2.c
 /IfModule
 ```
 
-瞭解DispatcherLogLevel指示詞如何將 `DISP_LOG_LEVEL` 而不是您在這裡看到的正常值。  在該區段的程式碼上方，您也會看到變數檔案的include陳述式。  變數檔案 `/etc/httpd/conf.d/variables/ams_default.vars` 是我們下一個要找的地方。  以下是變數檔案的內容：
+瞭解DispatcherLogLevel指示詞的變數是`DISP_LOG_LEVEL`，而不是您會看到的正常值。  在該區段的程式碼上方，您也會看到變數檔案的include陳述式。  變數檔案`/etc/httpd/conf.d/variables/ams_default.vars`是我們接下來要檢視的位置。  以下是變數檔案的內容：
 
 ```
 Define DISP_LOG_LEVEL info
@@ -211,7 +211,7 @@ Define PUBLISH_FORCE_SSL 0
 Define LIVECYCLE_FORCE_SSL 1
 ```
 
-您在上方看到目前的值 `DISP_LOG_LEVEL` 變數為 `info`.  我們可以將其調整為追蹤或偵錯，或您選擇的數值/層級。  現在，控制記錄層級的每個位置都將自動調整。
+您在上面看到`DISP_LOG_LEVEL`變數的目前值為`info`。  我們可以將其調整為追蹤或偵錯，或您選擇的數值/層級。  現在，控制記錄層級的每個位置都將自動調整。
 
 ### 覆蓋方法
 
@@ -259,13 +259,13 @@ VirtualHost *:80
 /VirtualHost
 ```
 
-現在我們已更新 `ServerName` 和 `ServerAlias` 以符合新的網域名稱，並更新其他階層連結標題。  現在啟用新檔案，讓Apache知道要使用新檔案：
+現在我們已更新`ServerName`和`ServerAlias`以符合新的網域名稱，並更新其他階層連結標題。  現在啟用新檔案，讓Apache知道要使用新檔案：
 
 ```
 $ cd /etc/httpd/conf.d/enabled_vhosts/; ln -s ../available_vhosts/weretail_publish.vhost .
 ```
 
-現在，Apache Webserver知道網域會產生流量，但我們仍需要通知Dispatcher模組它有新的網域名稱要遵守。  我們將從建立新的 `*_vhost.any` 檔案 `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` 在該檔案中，我們將輸入我們要遵循的網域名稱：
+現在，Apache Webserver知道網域會產生流量，但我們仍需要通知Dispatcher模組它有新的網域名稱要遵守。  我們將從建立新的`*_vhost.any`檔案`/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any`開始，並在該檔案中放入我們要遵循的網域名稱：
 
 ```
 "we-retail.adobe.com"
@@ -301,7 +301,7 @@ $ cp /etc/httpd/conf.dispatcher.d/available_farms/999_ams_publish_farm.any /etc/
 }
 ```
 
-現在我們已更新伺服器陣列名稱，以及它在 `/virtualhosts` 陣列設定的區段。  我們需要啟用這個新的伺服器陣列檔案，以便它可以在執行設定中使用：
+現在我們已更新伺服器陣列名稱，及其在伺服器陣列組態`/virtualhosts`區段中所使用的包含專案。  我們需要啟用這個新的伺服器陣列檔案，以便它可以在執行設定中使用：
 
 ```
 $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_weretail_publish_farm.any .
@@ -313,4 +313,4 @@ $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_w
 >
 >請注意，我們僅變更了需要變更的部分，並運用了基線設定檔案隨附的現有包含和程式碼。  我們只需要標示需要變更的元素。  讓工作變得更輕鬆，並減少我們維護的程式碼
 
-[下一個 — > Dispatcher健康情況檢查](./health-check.md)
+[下一步 — > Dispatcher健康狀態檢查](./health-check.md)

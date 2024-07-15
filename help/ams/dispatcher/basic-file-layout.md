@@ -21,7 +21,7 @@ ht-degree: 0%
 
 [目錄](./overview.md)
 
-[&lt; — 上一頁：「Dispatcher」是什麼](./what-is-the-dispatcher.md)
+[&lt; — 上一頁：什麼是「Dispatcher」](./what-is-the-dispatcher.md)
 
 本檔案說明AMS標準組態檔案集以及此組態標準背後的想法
 
@@ -61,11 +61,11 @@ ht-degree: 0%
 
 >[!BEGINSHADEBOX &quot;Note&quot;]
 
-AdobeManaged Services伺服器影像通常有小型作業系統根磁碟機。  我們將資料放入另一個磁碟區中，該磁碟區通常裝載在 `/mnt`
+AdobeManaged Services伺服器影像通常有小型作業系統根磁碟機。  我們將資料放入另一個磁碟區中，該磁碟區通常掛載於`/mnt`
 然後我們使用該磁碟區，而不是下列預設目錄的預設值
 
 `DocumentRoot`
-- 預設：`/var/www/html`
+- 預設： `/var/www/html`
 - AMS：`/mnt/var/www/html`
 
 `Log Directory`
@@ -86,7 +86,7 @@ AMS將新增到Apache Web Server的基本安裝上。
 AMS預設檔案根：
 - 作者：
    - `/mnt/var/www/author/`
-- 發佈：
+- Publish：
    - `/mnt/var/www/html/`
 - 全面收集與健康情況檢查維護
    - `/mnt/var/www/default/`
@@ -95,29 +95,29 @@ AMS預設檔案根：
 
 下列目錄可讓您建置具有臨時區域的組態檔，您可以在檔案上工作，並且只能在準備就緒時啟用。
 - `/etc/httpd/conf.d/available_vhosts/`
-   - 此資料夾會主控您所有名為的VirtualHost /檔案 `.vhost`
+   - 此資料夾裝載您所有名為`.vhost`的VirtualHost /檔案
 - `/etc/httpd/conf.d/enabled_vhosts/`
-   - 當您準備好使用時 `.vhost` 檔案，您將 `available_vhosts` 資料夾使用相對路徑將其符號連結 `enabled_vhosts` 目錄
+   - 當您準備好使用`.vhost`檔案時，請在`available_vhosts`資料夾內使用相對路徑將它們與`enabled_vhosts`目錄建立符號連結
 
-### 其他 `conf.d` 目錄
+### 其他`conf.d`個目錄
 
 Apache設定中會有其他常見的片段，而我們建立了子目錄，允許以簡潔的方式分隔這些檔案，而不會將所有檔案集中在一個目錄中
 
 #### 重寫目錄
 
-此目錄可包含所有 `_rewrite.rules` 您建立的檔案包含與Apache Web伺服器互動的典型RewriteRulesyntax [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 模組
+此目錄可包含您建立的所有`_rewrite.rules`檔案，其中包含與Apache Web伺服器[mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)模組互動的一般RewriteRulesyntax
 
 - `/etc/httpd/conf.d/rewrites/`
 
 #### 白名單目錄
 
-此目錄可包含所有 `_whitelist.rules` 您建立的檔案，其中包含您的一般 `IP Allow` 或 `Require IP`與Apache Web伺服器互動的語法 [存取控制](https://httpd.apache.org/docs/2.4/howto/access.html)
+此目錄可包含您建立的所有`_whitelist.rules`檔案，其中包含一般的`IP Allow`或`Require IP`語法，這些語法與Apache Web伺服器[存取控制](https://httpd.apache.org/docs/2.4/howto/access.html)有關
 
 - `/etc/httpd/conf.d/whitelists/`
 
 #### 變數目錄
 
-此目錄可包含所有 `.vars` 您建立的檔案包含可在設定檔案中使用的變數
+此目錄可包含您建立的所有`.vars`檔案，其中包含您可在組態檔中使用的變數
 
 - `/etc/httpd/conf.d/variables/`
 
@@ -135,41 +135,41 @@ Apache Web Server極具擴充性，當模組有許多組態檔時，最佳實務
 
 下列目錄可讓您建置具有臨時區域的組態檔，您可以在檔案上工作，並且只能在準備就緒時啟用。
 - `/etc/httpd/conf.dispatcher.d/available_farms/`
-   - 此資料夾會主控您所有的 `/myfarm {` 已呼叫的檔案 `_farm.any`
+   - 此資料夾裝載您所有名為`_farm.any`的`/myfarm {`檔案
 - `/etc/httpd/conf.dispatcher.d/enabled_farms/`
    - 當您準備好使用伺服器陣列檔案時，您可以在available_farms資料夾內將其連結，並使用相對路徑連至enabled_farms目錄
 
-### 其他 `conf.dispatcher.d` 目錄
+### 其他`conf.dispatcher.d`個目錄
 
-有一些其他片段是Dispatcher伺服器陣列檔案設定的子區段，我們建立了子目錄以允許簡潔的方式分隔這些檔案，而不是將所有檔案放在同一個目錄中
+還有其他片段是Dispatcher伺服器陣列檔案設定的子區段，我們建立了子目錄以允許簡潔的方式分隔這些檔案，而不會將所有檔案放在同一個目錄中
 
 #### 快取目錄
 
-此目錄包含所有 `_cache.any`， `_invalidate.any` 您建立的檔案包含您想要模組如何處理來自AEM的快取元素以及失效規則語法的規則。  如需此章節的詳細資訊，請參閱此處 [此處](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+此目錄包含您建立的所有`_cache.any`、`_invalidate.any`檔案，其中包含您希望模組如何處理來自AEM的快取元素以及失效規則語法的規則。  如需此節的詳細資訊，請參閱[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
 
 - `/etc/httpd/conf.dispatcher.d/cache/`
 
 #### 使用者端標頭目錄
 
-此目錄可包含所有 `_clientheaders.any` 您建立的檔案包含您希望在請求傳入時傳遞給AEM的使用者端標題清單。  本節的詳細資訊如下 [此處](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)
+此目錄可包含您建立的所有`_clientheaders.any`檔案，這些檔案包含您希望在收到請求時傳遞給AEM的使用者端標題清單。  此章節的詳細資訊為[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 
 #### 篩選器目錄
 
-此目錄可包含所有 `_filters.any` 您建立的檔案包含要封鎖或允許透過Dispatcher的流量到達AEM的所有篩選規則
+此目錄可包含您建立的所有`_filters.any`檔案，其中包含要封鎖或允許透過Dispatcher的流量到達AEM的所有篩選規則
 
 - `/etc/httpd/conf.dispatcher.d/filters/`
 
 #### Renders目錄
 
-此目錄可包含所有 `_renders.any` 您建立的檔案，其中包含與Dispatcher將使用其內容的每個後端伺服器的連線詳細資料
+此目錄可包含您建立的所有`_renders.any`檔案，這些檔案包含與Dispatcher將使用其內容的每個後端伺服器的連線詳細資料
 
 - `/etc/httpd/conf.dispatcher.d/renders/`
 
 #### Vhosts目錄
 
-此目錄可包含所有 `_vhosts.any` 您建立的檔案包含網域名稱和路徑的清單，以符合特定伺服器陣列與特定後端伺服器的需求
+此目錄可以包含您建立的所有`_vhosts.any`檔案，其中包含符合特定伺服器陣列與特定後端伺服器的網域名稱和路徑清單
 
 - `/etc/httpd/conf.dispatcher.d/vhosts/`
 
@@ -276,20 +276,20 @@ Enterprise Linux具有Apache Webserver套裝程式(httpd)的修補週期。
 
 您變更的預設檔案越少安裝越好，原因在於，如果有任何修補的安全性修正或設定改進是透過RPM / Yum命令套用的，則不會在變更的檔案上方套用修正。
 
-而是會建立 `.rpmnew` 檔案。  這表示您會遺漏某些您可能想要的變更，並在設定資料夾中建立更多記憶體。
+而是在原始檔案旁邊建立`.rpmnew`檔案。  這表示您會遺漏某些您可能想要的變更，並在設定資料夾中建立更多記憶體。
 
-即更新安裝期間的RPM將會檢視 `httpd.conf` 如果它位於 `unaltered` 表示它將 *replace* 檔案會讓您取得重要更新。  如果 `httpd.conf` 為 `altered` 然後它 *不會取代* 檔案，而是會建立一個名為的參考檔案 `httpd.conf.rpmnew` 而且該檔案中有許多需要的修正，不適用於服務啟動。
+亦即，RPM在更新安裝期間會檢視`httpd.conf`，如果它處於`unaltered`狀態，它會&#x200B;*取代*&#x200B;檔案，而您將取得重要更新。  如果`httpd.conf`是`altered`，則&#x200B;*不會取代*&#x200B;檔案，而是會建立名為`httpd.conf.rpmnew`的參考檔案，而且許多需要的修正會在該檔案中，不適用於服務啟動。
 
-Enterprise Linux已正確設定，以便以更好的方式處理此使用案例。  它們為您提供可以延伸或覆寫其為您設定的預設值的區域。  在httpd的基本安裝內，您會找到檔案 `/etc/httpd/conf/httpd.conf`，而且其語法如下：
+Enterprise Linux已正確設定，以便以更好的方式處理此使用案例。  它們為您提供可以延伸或覆寫其為您設定的預設值的區域。  在httpd的基礎安裝中，您會找到檔案`/etc/httpd/conf/httpd.conf`，其語法如下：
 
 ```
 Include conf.modules.d/.conf
 IncludeOptional conf.d/.conf
 ```
 
-我們的想法是，Apache希望您在將新檔案新增到時擴充模組和設定 `/etc/httpd/conf.d/` 和 `/etc/httpd/conf.modules.d/` 副檔名為 `.conf`
+其想法是，Apache想要您擴充模組與設定，以將新檔案新增至副檔名為`.conf`的`/etc/httpd/conf.d/`與`/etc/httpd/conf.modules.d/`目錄
 
-將Dispatcher模組新增到Apache時，您會建立一個模組，這是完美的範例 `.so` 中的檔案 ` /etc/httpd/modules/` 然後在中新增檔案，將其納入 `/etc/httpd/conf.modules.d/02-dispatcher.conf` 包含載入模組的內容 `.so` 檔案
+將Dispatcher模組新增至Apache的最佳範例是，您在` /etc/httpd/modules/`中建立模組`.so`檔案，然後在`/etc/httpd/conf.modules.d/02-dispatcher.conf`中新增包含載入模組`.so`檔案內容的檔案，以包含該模組
 
 ```
 LoadModule dispatcher_module modules/mod_dispatcher.so
@@ -299,7 +299,7 @@ LoadModule dispatcher_module modules/mod_dispatcher.so
 >
 >我們並未修改Apache提供的任何現有檔案。 相反地，我們只是將我們的目錄新增到了他們原本要前往的目錄中。
 
-現在我們在檔案中使用模組 <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> 會初始化模組並載入初始模組專屬設定檔
+現在我們在檔案<b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b>中使用模組，它會初始化模組並載入初始模組特定設定檔
 
 ```
 <IfModule disp_apache2.c> 

@@ -26,6 +26,6 @@ ht-degree: 89%
 >abstract="CI/CD 非生產用管道分成兩種類別：程式碼品質管道以及部署管道。程式碼品質管道會從 Git 分支輸入所有程式碼，以建置並根據 Cloud Manager 的程式碼品質掃描加以評估。部署管道會支援將程式碼從 Git 存放庫自動部署到任何非生產環境，這指的是任何已佈建的 AEM 環境 (非預備或生產環境)。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=zh-Hant#non-production-%26-code-quality-only-pipelines" text="非生產和僅限程式碼品質管道"
 
-[CI/CD非生產用管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=zh-Hant#non-production-%26-code-quality-only-pipelines) 分成兩個類別：計畫碼品質管道和部署管道。 程式碼品質管道會從 Git 分支輸入所有程式碼，以建置並根據 Cloud Manager 的程式碼品質掃描加以評估。部署管道會支援將程式碼從 Git 存放庫自動部署到任何非生產環境，這指的是任何已佈建的 AEM 環境 (非預備或生產環境)。
+[CI/CD非生產用管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=zh-Hant#non-production-%26-code-quality-only-pipelines)分成兩個類別：程式碼品質管道和部署管道。 程式碼品質管道會從 Git 分支輸入所有程式碼，以建置並根據 Cloud Manager 的程式碼品質掃描加以評估。部署管道會支援將程式碼從 Git 存放庫自動部署到任何非生產環境，這指的是任何已佈建的 AEM 環境 (非預備或生產環境)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316?quality=12&learn=on)

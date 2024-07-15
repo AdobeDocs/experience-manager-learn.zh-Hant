@@ -22,7 +22,7 @@ ht-degree: 1%
 
 本文說明在AEM工作流程中使用叫用FDM步驟將資料插入SharePoint清單所需的步驟。
 
-本文假設您擁有 [已成功設定最適化表單以提交資料至SharePoint清單。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
+本文假設您已[成功設定最適化表單，以將資料提交至SharePoint清單。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
 
 
 ## 根據SharePoint清單資料來源建立表單資料模型
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 * 使用叫用FDM步驟建立簡單的工作流程。
 * 設定呼叫FDM步驟，使用先前步驟建立的表單資料模型。
-* ![associate-fdm](assets/fdm-insert-1.png)
+* ![關聯 — fdm](assets/fdm-insert-1.png)
 
 ## 根據核心元件的最適化表單
 
@@ -89,14 +89,14 @@ ht-degree: 1%
 }
 ```
 
-![以基礎為基礎的表單](assets/foundation-based-form.png)
+![foundation表單](assets/foundation-based-form.png)
 
 ## 設定自適應表單以觸發AEM工作流程
 
 * 使用先前步驟建立的表單資料模型建立最適化表單。
 * 將資料來源中的一些欄位拖放至您的表單上。
 * 設定表單的提交動作，如下所示
-* ![submit-action](assets/configure-af.png)
+* ![送出動作](assets/configure-af.png)
 
 
 

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 建立和設定Dynamics帳戶
 
-[登入](https://dynamics.microsoft.com/en-us/) 至您的Microsoft Dynamics帳戶。 您可以建立 [免費試用帳戶](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) 如果您沒有Dynamics帳戶。
+[登入](https://dynamics.microsoft.com/en-us/)您的Microsoft Dynamics帳戶。 如果您沒有Dynamics帳戶，可以建立[免費試用帳戶](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/)。
 
 >[!NOTE]
 >取代下列URI中的伺服器和連線埠號碼，以取得重試URI。 使用Azure Active Directory設定應用程式時，您將需要此重試URI。

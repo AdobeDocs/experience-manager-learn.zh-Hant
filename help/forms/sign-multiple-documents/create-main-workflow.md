@@ -19,15 +19,15 @@ ht-degree: 1%
 
 # 建立主要工作流程
 
-主要工作流程會在使用者提交初始表單時觸發(**再融資表單**)。 以下是工作流程的流程
+使用者提交初始表單(**RefinanceForm**)時會觸發主要工作流程。 以下是工作流程的流程
 
 ![主要工作流程](assets/main-workflow.PNG)
 
-**儲存Forms以簽署** 是自訂流程步驟。
+**儲存Forms以簽署**&#x200B;為自訂程式步驟。
 
-實施自訂流程步驟的動機是擴充AEM工作流程。 下列程式碼會實作自訂流程步驟。 程式碼會擷取要簽署的表單名稱，並將提交的表單資料傳遞至 `insertData` SignMultipleForms服務的方法。 此 `insertData` 方法接著在資料來源所識別的資料庫中插入列 **aemformstutorial**.
+實施自訂流程步驟的動機是擴充AEM工作流程。 下列程式碼會實作自訂流程步驟。 程式碼會擷取要簽署的表單名稱，並將提交的表單資料傳遞給SignMultipleForms服務中的`insertData`方法。 `insertData`方法接著在資料來源&#x200B;**aemformstutorial**&#x200B;所識別的資料庫中插入資料列。
 
-此自訂流程步驟中的程式碼會參照 `SignMultipleForms` 服務。
+此自訂程式步驟中的程式碼參考`SignMultipleForms`服務。
 
 
 
@@ -118,7 +118,7 @@ public class StoreFormsToSignWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-本文中使用的簽署多個Forms工作流程可以是 [已從此處下載](assets/sign-multiple-forms-workflows.zip)
+本文中使用的簽署多個Forms工作流程可以從這裡[下載](assets/sign-multiple-forms-workflows.zip)
 
 >[!NOTE]
 > 請務必設定Day CQ Mail Service以傳送電子郵件通知。 上述套件中也提供電子郵件範本。

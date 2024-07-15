@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何擷取並排解與Forms和輸出服務轉換相關的字型問題
 
-*本影片將逐步說明擷取文案以偵錯Forms和輸出服務轉換字型相關問題的程式。*
+*此影片將逐步說明擷取相關文字的流程，以偵錯Forms和輸出服務轉換的字型相關問題。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335487?quality=12&learn=on)

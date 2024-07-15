@@ -23,7 +23,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 關聯式資料庫 — MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS
 1. AEM使用者設定檔
 1. RESTful Web服務
-1. 以SOAP為基礎的web服務
+1. SOAP型網站服務
 1. OData服務
 
 此影片會逐步說明一個工作流程，說明AEM Forms如何搭配Microsoft Dynamics作為後端資料來源使用，提供互動式個人化通訊。

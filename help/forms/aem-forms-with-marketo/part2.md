@@ -202,7 +202,7 @@ public class MarketoConfigurationService {
 ```
 
 1. 將套件組合建置並部署至您的AEM伺服器。
-1. [將瀏覽器指向configMgr](http://localhost:4502/system/console/configMgr) 並搜尋「Marketo憑證服務設定」
+1. [將瀏覽器指向configMgr](http://localhost:4502/system/console/configMgr)並搜尋「Marketo認證服務組態」
 1. 指定您的Marketo執行個體特定的適當屬性
 
 ## 後續步驟

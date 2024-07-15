@@ -23,17 +23,17 @@ ht-degree: 1%
 
 ![內容片段編輯器標題功能表擴充功能範例](./assets/export-to-xml/hero.png){align="center"}
 
-自訂按鈕可以使用新增到內容片段編輯器標題選單 `headerMenu` 延伸點。 此範例說明如何新增按鈕到標題選單，以及如何處理點選事件以將作用中的內容片段匯出為XML或CSV。
+可使用`headerMenu`擴充點將自訂按鈕新增到內容片段編輯器標題功能表中。 此範例說明如何新增按鈕到標題選單，以及如何處理點選事件以將作用中的內容片段匯出為XML或CSV。
 
 頁首按鈕可以單一按鈕的形式存在，也可以作為具有子專案的按鈕存在。 此範例說明如何使用子專案實施按鈕，但包含註釋掉的程式碼以實施單一按鈕。
 
 ## 擴充點
 
-此範例會延伸至擴充點 `headerBar` 以新增自訂按鈕到內容片段編輯器。
+此範例延伸至擴充點`headerBar`，以將自訂按鈕新增至內容片段編輯器。
 
 | AEM UI已擴充 | 擴充點 |
 | ------------------------ | --------------------- | 
-| [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [頁首功能表](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
+| [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [標題功能表](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
 
 ## 範例擴充功能
 
@@ -43,9 +43,9 @@ ht-degree: 1%
 
 ### 擴充功能註冊
 
-`ExtensionRegistration.js`，對應至index.html路由，是AEM擴充功能的進入點，並定義：
+`ExtensionRegistration.js`對應至index.html路由，是AEM擴充功能的進入點，並定義：
 
-+ 擴充功能按鈕的位置隨即顯示(`headerMenu`)在AEM編寫體驗中
++ 擴充功能按鈕的位置會顯示在AEM編寫體驗中(`headerMenu`)
 + getButton()函式中的擴充功能按鈕定義
 + 按鈕的點選處理常式(在onClick()函式中)或子專案清單及其點選處理常式。
 
@@ -148,13 +148,13 @@ export default ExtensionRegistration;
 
 #### 內容片段資料
 
-可使用以下專案擷取使用中的內容片段 `getContentFragment()` 上的方法 `guestConnection.host.contentFragment` 物件。
+可在`guestConnection.host.contentFragment`物件上使用`getContentFragment()`方法擷取使用中的內容片段。
 
 ```javascript
 const contentFragment = await guestConnection.host.contentFragment.getContentFragment();
 ```
 
-此 `contentFragment` 物件包含有關內容片段的所有資訊，包括路徑、模型、中繼資料、主要內容及任何變體。
+`contentFragment`物件包含有關內容片段的所有資訊，包括路徑、模型、中繼資料、主要內容以及任何變體。
 
 ```json
 {

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # 如何在AEM Forms中啟用效能記錄，以偵錯Forms和輸出服務的相關問題
 
-*本影片會逐步解說在AEM Forms中啟用效能記錄，以偵錯與Forms和輸出服務相關的問題。*
+*此影片逐步解說在AEM Forms中啟用效能記錄以偵錯與Forms和輸出服務相關問題的程式。*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335499?quality=12&learn=on)

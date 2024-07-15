@@ -1,6 +1,6 @@
 ---
 title: 回應式導覽
-description: 探索如何在邊緣傳遞檔案製作中執行回應式導覽。
+description: 探索如何在Edge Delivery檔案製作中執行回應式導覽。
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management

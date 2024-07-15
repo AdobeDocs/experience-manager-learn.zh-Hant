@@ -22,7 +22,7 @@ ht-degree: 9%
 
 瞭解如何設定檔案編寫，以允許AEM作者使用Microsoft Word或Google檔案編輯和發佈檔案。
 
-檢閱 [檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html) 以取得設定檔案編寫的完整詳細資訊。
+檢閱[檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html)，以取得設定檔案編寫的完整詳細資料。
 
 ## 檔案製作快速入門
 
@@ -78,7 +78,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">4 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="preview-and-publish.md" title="預覽和發佈內容">編輯器概觀</a>
+              <a href="preview-and-publish.md" title="預覽和發佈內容">編輯器總覽</a>
             </p>
             <p class="is-size-6">使用AEM Sidekick預覽和發佈內容的簡短概觀。</p>
             <a href="preview-and-publish.md" class="spectrum-Button
@@ -235,7 +235,8 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="bulk-metadata.md" title="大量中繼資料">語言副本</a>
+              <a href="bulk-metadata.md" title="大量中繼資料">語言
+                復本</a>
             </p>
             <p class="is-size-6">探索在檔案製作中如何處理大量中繼資料。</p>
             <a href="bulk-metadata.md" class="spectrum-Button
@@ -400,7 +401,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/document-permissions.md" title="檔案許可權">檔案許可權 </a>
+              <a href="./how-to/document-permissions.md" title="檔案許可權">檔案許可權</a>
             </p>
             <p class="is-size-6">探索檔案編寫如何處理檔案許可權。</p>
             <a href="./how-to/document-permissions.md" class="spectrum-Button
@@ -528,7 +529,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/image-alt-text.md" title="使用替代文字">製作影像替代文字</a>
+              <a href="./how-to/image-alt-text.md" title="使用替代文字">編寫影像替代文字</a>
             </p>
             <p class="is-size-6">探索檔案製作如何處理影像替代文字。</p>
             <a href="./how-to/image-alt-text.md" class="spectrum-Button
@@ -560,7 +561,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/no-index.md" title="防止索引">防止搜尋引擎編制索引</a>
+              <a href="./how-to/no-index.md" title="防止索引">防止搜尋引擎索引</a>
             </p>
             <p class="is-size-6">探索如何防止搜尋引擎編制索引。</p>
             <a href="./how-to/no-index.md" class="spectrum-Button
@@ -624,7 +625,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/migration-using-importer.md" title="使用Importer進行網站移轉">使用Importer進行網站移轉</a>
+              使用Importer進行<a href="./how-to/migration-using-importer.md" title="使用Importer進行網站移轉">網站移轉</a>
             </p>
             <p class="is-size-6">探索如何使用AEM Importer工具將網站移轉至Edge Delivery Services。</p>
             <a href="./how-to/migration-using-importer.md" class="spectrum-Button
@@ -789,7 +790,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/prompt-templates.md" title="產生變數 — 提示範本">產生變數 — 提示範本</a>
+              <a href="./how-to/generate-variations/prompt-templates.md" title="產生變數 — 提示範本">產生變化 — 提示範本</a>
             </p>
             <p class="is-size-6">探索如何使用提示範本來產生變數。</p>
             <a href="./how-to/generate-variations/prompt-templates.md" class="spectrum-Button
@@ -821,7 +822,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="產生變數 — 自訂提示範本">產生變數 — 自訂提示範本</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="產生變數 — 自訂提示範本">產生變化 — 自訂提示範本</a>
             </p>
             <p class="is-size-6">探索如何建立產生變異的自訂提示範本。</p>
             <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
@@ -853,7 +854,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="產生變數 — 儲存自訂提示範本">產生變數 — 儲存自訂提示範本</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="產生變數 — 儲存自訂提示範本">產生變化 — 儲存自訂提示範本</a>
             </p>
             <p class="is-size-6">探索如何儲存產生變異的自訂提示範本。</p>
             <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
@@ -981,7 +982,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/actions.md" title="產生變數 — 對所產生變數的動作">產生變數 — 對所產生變數的動作</a>
+              <a href="./how-to/generate-variations/actions.md" title="產生變數 — 對所產生變數的動作">產生變化 — 對產生的變化執行的動作</a>
             </p>
             <p class="is-size-6">探索可用於產生內容變數的動作。</p>
             <a href="./how-to/generate-variations/actions.md" class="spectrum-Button
@@ -1013,7 +1014,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/trust-privacy.md" title="產生變數 — 信任和隱私">產生變數 — 信任和隱私</a>
+              <a href="./how-to/generate-variations/trust-privacy.md" title="產生變數 — 信任和隱私">產生變化 — 信任和隱私</a>
             </p>
             <p class="is-size-6">探索Adobe如何處理產生變異的信任和隱私權。</p>
             <a href="./how-to/generate-variations/trust-privacy.md" class="spectrum-Button
@@ -1045,7 +1046,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-framework.md" title="實驗框架概觀">實驗框架概觀</a>
+              <a href="./how-to/experimentation-framework.md" title="實驗框架概觀">實驗架構概觀</a>
             </p>
             <p class="is-size-6">探索實驗架構，讓行銷人員測試哪些內容變數最有效。</p>
             <a href="./how-to/experimentation-framework.md" class="spectrum-Button
@@ -1077,7 +1078,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/setup-experimentation-framework.md" title="設定實驗架構">設定實驗架構</a>
+              <a href="./how-to/setup-experimentation-framework.md" title="設定實驗架構">正在設定實驗架構</a>
             </p>
             <p class="is-size-6">探索如何在Edge Delivery Services檔案製作中設定實驗架構。</p>
             <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
@@ -1109,7 +1110,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-add-metadata.md" title="新增用於實驗的中繼資料">新增用於實驗的中繼資料</a>
+              <a href="./how-to/experimentation-add-metadata.md" title="新增用於實驗的中繼資料">正在新增實驗的中繼資料</a>
             </p>
             <p class="is-size-6">探索新增實驗用的中繼資料</p>
             <a href="./how-to/experimentation-add-metadata.md" class="spectrum-Button

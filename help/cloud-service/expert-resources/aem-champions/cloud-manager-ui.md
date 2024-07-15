@@ -1,6 +1,6 @@
 ---
 title: AEM Champion秘訣與技巧 — Cloud Manager UI
-description: 檢視這些有關如何使用AEM冠軍和專家Rakesh Pasupuleti的Cloud Manager UI的提示。
+description: 檢視這些提示，瞭解如何使用AEM Champion和專家Rakesh Pasupuleti提供的Cloud Manager UI。
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -26,4 +26,4 @@ ht-degree: 2%
 
 ## 其他資源 {#additional-resources}
 
-* [Cloud Manager簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html)  — 有關在AEMas a Cloud Service中使用Cloud Manager的檔案
+* [Cloud Manager簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html) — 在AEM as a Cloud Service中使用Cloud Manager的相關檔案

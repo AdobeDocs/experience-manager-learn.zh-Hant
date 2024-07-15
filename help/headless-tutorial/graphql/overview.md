@@ -20,7 +20,8 @@ ht-degree: 10%
 
 {{aem-headless-trials-promo}}
 
-適用於內容片段的AEM GraphQL API支援Headless CMS案例，在這些案例中，外部使用者端應用程式會使用AEM中管理的內容呈現體驗。
+AEM的內容片段GraphQL API
+支援Headless CMS情境，其中外部使用者端應用程式會使用AEM中管理的內容呈現體驗。
 
 現代化的內容傳送API是Javascript型前端應用程式效率和效能的關鍵。 使用REST API會帶來挑戰：
 
@@ -41,13 +42,13 @@ ht-degree: 10%
 
 ## AEM Headless GraphQL影片系列
 
-透過內容片段和AEM GraphQL API及開發工具的深入逐步說明，瞭解AEM GraphQL功能。
+透過內容片段和AEM的GraphQL API及開發工具的深入逐步說明，瞭解AEM的GraphQL功能。
 
 * [AEM Headless GraphQL影片系列](./video-series/modeling-basics.md)
 
 ## AEM Headless GraphQL實作教學課程
 
-透過AEM GraphQL API建置使用內容片段的React應用程式，以探索AEM GraphQL功能。
+透過AEM的GraphQL API建置使用內容片段的React應用程式，以探索AEM的GraphQL功能。
 
 * [AEM Headless GraphQL實作教學課程](./multi-step/overview.md)
 

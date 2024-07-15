@@ -28,4 +28,4 @@ ht-degree: 14%
 1. 建立批次資料存放區設定
 1. 執行批次API
 
-建議您先熟悉 [API檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=en) 再繼續使用此教學課程。
+建議您先熟悉[API檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=en)，再繼續使用此教學課程。
