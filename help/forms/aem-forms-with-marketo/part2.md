@@ -10,200 +10,43 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
 duration: 137
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '213'
 ht-degree: 1%
 
 ---
 
-# Marketo驗證服務
+# 建立資料Source
 
-Marketo的REST API已透過雙腿OAuth 2.0驗證。我們需要建立自訂驗證，以針對Marketo進行驗證。 此自訂驗證通常寫入OSGI套件組合中。 下列程式碼顯示用於本教學課程的自訂驗證器。
+Marketo的REST API已透過雙腿OAuth 2.0驗證。我們可以使用上一步中下載的swagger檔案輕鬆建立資料來源
 
-## 自訂驗證服務
+## 建立設定容器
 
-下列程式碼會建立AuthenticationDetails物件，此物件具有針對Marketo進行驗證所需的access_token
+* 登入AEM。
+* 按一下[工具]功能表，然後按一下&#x200B;**設定瀏覽器**，如下所示
 
-```java
-package com.marketoandforms.core;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
- 
-import com.adobe.aemfd.dermis.authentication.api.IAuthentication;
-import com.adobe.aemfd.dermis.authentication.exception.AuthenticationException;
-import com.adobe.aemfd.dermis.authentication.model.AuthenticationDetails;
-import com.adobe.aemfd.dermis.authentication.model.Configuration;
-@Component(service={IAuthentication.class}, immediate=true)
-public class MarketoAuthenticationService implements IAuthentication {
-@Reference
-MarketoService marketoService;
-    @Override
-    public AuthenticationDetails getAuthDetails(Configuration arg0) throws AuthenticationException
-    {
-        AuthenticationDetails auth = new AuthenticationDetails();
-        auth.addHttpHeader("Cache-Control", "no-cache");
-        auth.addHttpHeader("Authorization", "Bearer " + marketoService.getAccessToken());
-        return auth
-    }
- 
-    @Override
-    public String getAuthenticationType() {
-        // TODO Auto-generated method stub
-        return "AemForms With Marketo";
-    }
-}
-```
+* ![工具功能表](assets/datasource3.png)
 
-MarketoAuthenticationService會實作IAuthentication介面。 此介面是AEM Forms使用者端SDK的一部分。 此服務取得存取權杖並將權杖插入AuthenticationDetails的HttpHeader。 填入AuthenticationDetails物件的HttpHeaders後，AuthenticationDetails物件會傳回至表單資料模型的Dermis層。
+* 按一下&#x200B;**建立**&#x200B;並提供有意義的名稱，如下所示。 請務必選取雲端設定選項，如下所示
 
-請留意getAuthenticationType方法傳回的字串。 當您設定資料來源時，會使用此字串。
+* ![設定容器](assets/datasource4.png)
 
-### 取得存取Token
+## 建立雲端服務
 
-定義簡單介面時，會使用傳回access_token的方法。 實作此介面的類別的程式碼會列在頁面的下方。
+* 導覽至工具功能表，然後按一下雲端服務 — >資料來源
 
-```java
-package com.marketoandforms.core;
-public interface MarketoService {
-    String getAccessToken();
-}
-```
+* ![雲端服務](assets/datasource5.png)
 
-下列程式碼屬於服務，會傳回用於進行REST API呼叫的access_token。 此服務中的程式碼會存取進行GET呼叫所需的設定引數。 如您所見，我們會在GETURL中傳遞client_id、client_secret以產生access_token。 然後會將此access_token傳回至呼叫的應用程式。
+* 選取在先前步驟中建立的設定容器，然後按一下&#x200B;**建立**&#x200B;以建立新的資料來源。請提供有意義的名稱，然後從[服務型別]下拉式清單中選取RESTful服務，然後按一下[下一步]****
+* ![新資料來源](assets/datasource6.png)
 
-```java
-package com.marketoandforms.core.impl;
-import java.io.IOException;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.ParseException;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONException;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import com.marketoandforms.core.*; 
-@Component(service=MarketoService.class,immediate = true)
-public class MarketoServiceImpl implements MarketoService {
-    private final Logger log = LoggerFactory.getLogger(getClass());
-@Reference
-MarketoConfigurationService config;
-    @Override
-    public String getAccessToken()
-    {
-        String AUTH_URL = config.getAUTH_URL();
-        String CLIENT_ID = config.getCLIENT_ID();
-        String CLIENT_SECRET = config.getCLIENT_SECRET();
-        String AUTH_PATH = config.getAUTH_PATH();
-        HttpClient httpClient = HttpClientBuilder.create().build();
-        String getURL = AUTH_URL+AUTH_PATH+"&client_id="+CLIENT_ID+"&client_secret="+CLIENT_SECRET;
-        log.debug("The url to get the access token is "+getURL);
-        HttpGet httpGet = new HttpGet(getURL);
-        httpGet.addHeader("Cache-Control","no-cache");
-        try {
-            HttpResponse httpResponse = httpClient.execute(httpGet);
-            HttpEntity httpEntity = httpResponse.getEntity();
-            org.json.JSONObject responseJSON = new org.json.JSONObject(EntityUtils.toString(httpEntity))
-            return (String)responseJSON.get("access_token");
-        } catch (ClientProtocolException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (ParseException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (JSONException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return null;
-    }
-}
-```
+* 上傳Swagger檔案，並指定您Marketo執行個體專屬的授予型別、使用者端ID、使用者端密碼和存取權杖URL，如下方熒幕擷取畫面所示。
 
-以下熒幕擷取畫面顯示需要設定的設定屬性。 您可在上述程式碼中讀取這些設定屬性，以取得access_token
+* 測試連線，如果連線成功，請確定您按一下藍色的&#x200B;**建立**&#x200B;按鈕，以完成建立資料來源的程式。
 
-![設定](assets/configuration-settings.png)
+* ![資料來源設定](assets/datasource1.png)
 
-### 設定
-
-下列程式碼已用於建立設定屬性。 這些屬性是您的Marketo執行個體專屬的屬性
-
-```java
-package com.marketoandforms.core;
- 
-import org.osgi.service.metatype.annotations.AttributeDefinition;
-import org.osgi.service.metatype.annotations.ObjectClassDefinition;
- 
-@ObjectClassDefinition(name="Marketo Credentials Service Configuration", description = "Connect Form With Marketo")
-public @interface MarketoConfiguration {
-     @AttributeDefinition(name="Identity Endpoint", description="URL of Marketo Identity Endpoint")
-     String identityEndpoint() default "";
-      @AttributeDefinition(name="Authentication path", description="Marketo authentication path")
-      String authPath() default "";
-      @AttributeDefinition(name="Client ID", description="Client ID")
-      String clientID() default "";
-      @AttributeDefinition(name="Client Secret", description="Client Secret")
-      String clientSecret() default "";
-}
-```
-
-下列程式碼會讀取設定屬性並透過getter方法傳回相同的設定屬性
-
-```java
-package com.marketoandforms.core;
- 
-import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.metatype.annotations.Designate;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-@Component(immediate=true, service={MarketoConfigurationService.class})
-@Designate(ocd=MarketoConfiguration.class)
-public class MarketoConfigurationService {
-    private final Logger log = LoggerFactory.getLogger(getClass());
-    private MarketoConfiguration config;
-    private String AUTH_URL;
-    private String  AUTH_PATH;
-    private String CLIENT_ID ;
-    private String CLIENT_SECRET;
-     @Activate
-      protected final void activate(MarketoConfiguration config) {
-        System.out.println("####In my marketo activating auth service");
-        AUTH_URL = config.identityEndpoint();
-        AUTH_PATH = config.authPath();
-        CLIENT_ID = config.clientID();
-        CLIENT_SECRET = config.clientSecret();
-        log.info("clientID:" + CLIENT_ID);
-        System.out.println("The client id is "+CLIENT_ID+"AUTH PATH"+AUTH_PATH);
-      }
-    public String getAUTH_URL() {
-        return AUTH_URL;
-    }
-   public String getAUTH_PATH() {
-        return AUTH_PATH;
-    }
-    public String getCLIENT_ID() {
-        return CLIENT_ID;
-    }
-
-    public String getCLIENT_SECRET() {
-        return CLIENT_SECRET;
-    }
-}
-```
-
-1. 將套件組合建置並部署至您的AEM伺服器。
-1. [將瀏覽器指向configMgr](http://localhost:4502/system/console/configMgr)並搜尋「Marketo認證服務組態」
-1. 指定您的Marketo執行個體特定的適當屬性
 
 ## 後續步驟
 

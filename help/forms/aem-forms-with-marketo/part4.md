@@ -10,20 +10,24 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
 
-# 使用表單資料模型建立最適化表單
+# 測試整合
 
-下一步是建立最適化表單，並以先前步驟建立的表單資料模型為基礎。
-使用者輸入銷售機會ID，並叫用以Tab鍵瀏覽Marketo服務以依ID取得銷售機會。 然後，服務作業的結果會對應至最適化Forms的適當欄位。
+我們將建立簡單的表單擷取作業，並顯示Market中的Lead物件，以測試整合。
+>[!NOTE]
+>
+>此功能已根據基礎元件在表單上測試。
+
+## 建立最適化表單
 
 1. 建立最適化表單，並以空白表單範本為基礎，將其與先前步驟中建立的表單資料模型建立關聯。
-1. 在編輯模式下開啟表單
+1. 在編輯模式中開啟表單。
 1. 將TextField元件和Panel元件拖放到最適化表單上。 將TextField元件的標題設為「輸入銷售機會Id」，並將名稱設為「LeadId」
 1. 將2個TextField元件拖放到Panel元件上
 1. 將2個Textfield元件的「名稱」和「標題」設定為「名字」和「姓氏」
@@ -35,12 +39,6 @@ ht-degree: 0%
 
 ![ruleeditor](assets/ruleeditor.png)
 
-## 偵錯
-
-如果您使用本文提供的組合，您可能想要為下列類別啟用[偵錯記錄](http://localhost:4502/system/console/slinglog)：
-
-+ `com.marketoandforms.core.impl.MarketoServiceImpl`
-+ `com.marketoandforms.core.MarketoConfigurationService`
 
 ## 恭喜
 
