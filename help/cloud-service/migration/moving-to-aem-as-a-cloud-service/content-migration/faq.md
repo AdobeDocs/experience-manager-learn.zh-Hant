@@ -11,7 +11,7 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 399
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: e29eaefb20d466126d0d31ad8eb598b63a0cebcd
 workflow-type: tm+mt
 source-wordcount: '1884'
 ht-degree: 0%
@@ -91,7 +91,7 @@ CTT擷取流程所需的資源量取決於節點數量、Blob數量及其彙總�
    + 確認是否可接受在一個移轉集中移轉所有資產，然後分階段使用它們的網站
 + 在目前狀態中，即使發佈層仍可提供內容，作者擷取程式仍會使作者例項無法用於內容製作
    + 這表示在擷取完成至作者之前，內容製作活動都會凍結
-+ 雖然群組已移轉，但使用者已不再移轉
++ 雖然群組已遷移，但使用者已不再遷移。
 
 在規劃移轉之前，請先詳閱追加擷取和擷取程式，如檔案所述。
 
