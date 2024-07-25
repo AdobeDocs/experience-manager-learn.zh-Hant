@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: fe763bad61fba4230612d8ad46a6159e675e1529
+source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1222'
 ht-degree: 16%
 
 ---
@@ -26,7 +26,6 @@ ht-degree: 16%
    + 策略與思想領導力{#strategy}
       + [Experience Manager — 治理與人員配置模型與原型](./introduction/experience-manager-governance-and-staffing-models.md)
       + [如何使用Adobe Experience Manager提升內容速度](./introduction/drive-content-velocity-for-sites.md)
-      + [使用AEM樣式系統加快內容速度](./introduction/accelerate-content-velocity-aem.md)
 + Experience Cloud整合{#integrations}
    + [整合](./integrations/experience-cloud.md)
    + [Adobe Target](./integrations/target.md)
