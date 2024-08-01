@@ -12,9 +12,9 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -38,10 +38,6 @@ ht-degree: 0%
 - [Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)已安裝在您的本機電腦上。
 
 - 從先前範例[Adobe I/O Runtime動作和AEM事件](./runtime-action.md#initialize-project-for-local-development)本機初始化的專案。
-
->[!IMPORTANT]
->
->AEM as a Cloud Service事件僅適用於搶鮮版模式的註冊使用者。 若要在您的AEM as a Cloud Service環境中啟用AEM事件，請連絡[AEM-Eventing團隊](mailto:grp-aem-events@adobe.com)。
 
 ## AEM Events處理器動作
 

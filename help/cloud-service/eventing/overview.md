@@ -12,9 +12,9 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: c0aa4049e846a0f24f8a5f5b014dbaf5bfc8eb2d
+source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,6 @@ ht-degree: 0%
 瞭解AEM事件、內容、使用原因及時機，並提供相關範例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426686?quality=12&learn=on)
-
->[!IMPORTANT]
->
->AEM as a Cloud Service事件僅適用於搶鮮版模式的註冊使用者。 若要在您的AEM as a Cloud Service環境中啟用AEM事件，請連絡<a href="mailto:grp-aem-events@adobe.com">AEM事件團隊</a>。
 
 ## 內容
 

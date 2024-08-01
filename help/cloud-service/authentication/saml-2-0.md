@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 11c9173cbb2da75bfccba278e33fc4ca567bbda1
+source-git-commit: 49f8df6e658b35aa3ba6e4f70cd39ff225c46120
 workflow-type: tm+mt
-source-wordcount: '3357'
+source-wordcount: '3919'
 ht-degree: 1%
 
 ---
@@ -441,6 +441,107 @@ AEM Publish支援單一反向連結篩選設定，因此請將SAML設定需求�
 ```
 
 如果已設定Apache Webserver上的URL重新寫入(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，請確定對`.../saml_login`端點的要求不會意外遭到竄改。
+
+### 如何為新環境中的SAML使用者啟用動態群組成員資格
+
+為了大幅增強新AEM as a Cloud Service環境中的群組評估效能，建議在新環境中啟用動態群組成員資格功能。
+這也是在啟動資料同步時的必要步驟。 更多詳細資料[在此](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier)。
+若要這麼做，請將下列屬性新增至OSGI設定檔：
+
+`/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
+
+使用此組態，使用者和群組會建立為[Oak外部使用者](https://jackrabbit.apache.org/oak/docs/security/authentication/identitymanagement.html)。 在AEM中，外部使用者和群組有由`[user name];[idp]`或`[group name];[idp]`組成的預設`rep:principalName`。
+指出存取控制清單(ACL)與使用者或群組的PrincipalName相關聯。
+在先前未指定`identitySyncType`或設為`default`的現有部署中部署此設定時，將會建立新的使用者和群組，且必須將ACL套用至這些新使用者和群組。 請注意，外部群組不能包含本機使用者。 [Repoinit](https://sling.apache.org/documentation/bundles/repository-initialization.html)可用來建立SAML外部群組的ACL，即使這些群組僅在使用者執行登入時才會建立。
+為避免在ACL上重構此功能，已實作標準[移轉功能](#automatic-migration-to-dynamic-group-membership-for-existing-environments)。
+
+### 成員資格如何儲存在具有動態群組成員資格的本機及外部群組中
+
+在本機群組上，群組成員儲存在Oak屬性中： `rep:members`。 屬性包含群組每個成員的uid清單。 其他詳細資料可在[這裡](https://jackrabbit.apache.org/oak/docs/security/user/membership.html#member-representation-in-the-repository)找到。
+範例：
+
+```
+{
+  "jcr:primaryType": "rep:Group",
+  "rep:principalName": "operators",
+  "rep:managedByIdp": "SAML",
+  "rep:members": [
+    "635afa1c-beeb-3262-83c4-38ea31e5549e",
+    "5e496093-feb6-37e9-a2a1-7c87b1cec4b0",
+    ...
+  ],
+   ...
+}
+```
+
+具有動態群組成員資格的外部群組不會儲存群組專案中的任何成員。
+群組成員資格會儲存在使用者專案中。 其他檔案可在[這裡](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)找到。 例如，這是群組的OAK節點：
+
+```
+{
+  "jcr:primaryType": "rep:Group",
+  "jcr:mixinTypes": [
+    "rep:AccessControllable"
+  ],
+  "jcr:createdBy": "",
+  "jcr:created": "Tue Jul 16 2024 08:58:47 GMT+0000",
+  "rep:principalName": "GROUP_1;aem-saml-idp-1",
+  "rep:lastSynced": "Tue Jul 16 2024 08:58:47 GMT+0000",
+  "jcr:uuid": "d9c6af8a-35c0-3064-899a-59af55455cd0",
+  "rep:externalId": "GROUP_1;aem-saml-idp-1",
+  "rep:authorizableId": "GROUP_1;aem-saml-idp-1"
+}
+```
+
+這是該群組之使用者成員的節點：
+
+```
+{
+  "jcr:primaryType": "rep:User",
+  "jcr:mixinTypes": [
+    "rep:AccessControllable"
+  ],
+  "surname": "Test",
+  "rep:principalName": "testUser",
+  "rep:externalId": "test;aem-saml-idp-1",
+  "rep:authorizableId": "test",
+  "rep:externalPrincipalNames": [
+    "projects-users;aem-saml-idp-1",
+    "GROUP_2;aem-saml-idp-1",
+    "GROUP_1;aem-saml-idp-1",
+    "operators;aem-saml-idp-1"
+  ],
+  ...
+}
+```
+
+### 自動移轉至現有環境的動態群組成員資格
+
+啟用此移轉時，會在使用者驗證期間執行，並包含下列步驟：
+1. 本機使用者會移轉至外部使用者，同時保留原始使用者名稱。 這表示已移轉的本機使用者（現在為外部使用者）會保留其原始使用者名稱，而非遵循上一節中所述的命名語法。 將新增一個額外的屬性，稱為： `rep:externalId`，其值為`[user name];[idp]`。 未修改使用者`PrincipalName`。
+2. 對於SAML判斷提示中收到的每個外部群組，都會建立一個外部群組。 如果存在對應的本機群組，外部群組會作為成員新增至本機群組。
+3. 使用者會新增為外部群組的成員。
+4. 然後，本機使用者會從他曾是成員的所有Saml本機群組中移除。 Saml本機群組由OAK屬性識別： `rep:managedByIdp`。 當屬性`syncType`未指定或設定為`default`時，此屬性是由Saml驗證處理常式所設定。
+
+例如，如果移轉之前`user1`是本機使用者，且是本機群組`group1`的成員，則移轉之後會發生下列變更：
+`user1`成為外部使用者。 屬性`rep:externalId`已新增至他的設定檔。
+`user1`成為外部群組的成員： `group1;idp`
+`user1`不再是本機群組的直接成員： `group1`
+`group1;idp`是本機群組的成員： `group1`。
+然後`user1`會透過繼承成為本機群組`group1`的成員
+
+外部群組的群組成員資格儲存在屬性`rep:authorizableId`的使用者設定檔中
+
+### 如何設定自動移轉至動態群組成員資格
+
+1. 啟用SAML OSGI組態檔中的屬性`"identitySyncType": "idp_dynamic_simplified_id"`： `com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json`：
+2. 使用屬性設定新的OSGI服務，PID為： `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~...`：
+
+```
+{
+  "idpIdentifier": "<vaule of identitySyncType of saml configuration to be migrated>"
+}
+```
 
 ## 部署SAML設定
 

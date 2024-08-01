@@ -9,10 +9,10 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
-source-git-commit: a12b1778413079646814cb25567abfc26a429340
+source-git-commit: b1de5c163607163bc702ea7b8ea4916c414f2a3a
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 1%
+source-wordcount: '297'
+ht-degree: 2%
 
 ---
 
@@ -68,6 +68,16 @@ ht-degree: 1%
 
 選取``state``節點並設定其屬性，如下所示。 請注意fieldType的狀態型別 — 已設定為下拉式清單
 ![狀態](assets/state.png)
+
+## 設定狀態列位的預設值
+
+選取``state``節點並新增下列屬性。
+
+| 名稱 | 類型 | 值 |
+|----------|----------|---------------------|
+| 列舉 | 字串[] | CA，紐約 |
+| enumName | 字串[] | 加利福尼亞、紐約 |
+
 
 最終的addressblock元件看起來像這樣
 

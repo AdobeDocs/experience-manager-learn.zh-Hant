@@ -12,9 +12,9 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
+source-git-commit: 1b493d85303e539e07ba8b080ed55ef2af18bfcb
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1947'
 ht-degree: 1%
 
 ---
@@ -42,10 +42,6 @@ ht-degree: 1%
 - 透過「警示動作」設定速率限制流量篩選規則的&#x200B;**警示**，如此一來，當規則觸發時，就會傳送動作中心通知。
 - 宣告&#x200B;**要求轉換**&#x200B;以忽略查詢引數，以增加快取涵蓋範圍。
 
->[!NOTE]
->
->[流量篩選器規則警示](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)功能尚未發行。 若要透過早期採用者程式取得存取權，請傳送電子郵件至&#x200B;**<aemcs-waf-adopter@adobe.com>**。
-
 ### 速率限制流量規則變化 {#rate-limit-variations}
 
 速率限制流量規則有兩種變化：
@@ -72,7 +68,6 @@ ht-degree: 1%
 理想情況下，您最好在進入生產階段前設定規則。 實際上，許多組織只會在收到流量尖峰的警報後，以反應式方式宣告規則，表示可能會發生攻擊。
 
 當超過指定PoP的單一IP位址流量的預設臨界值時，Adobe會在來源警示傳送流量尖峰作為[動作中心通知](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/actions-center)。 如果您收到這類警報，建議設定速率限制流量篩選器規則。 此預設警報不同於客戶在定義流量篩選規則時必須明確啟用的警報，您將在未來章節中瞭解這些警報。
-
 
 ## 分析流量模式 {#analyze-traffic}
 

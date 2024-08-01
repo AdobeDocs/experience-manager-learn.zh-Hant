@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
+source-git-commit: e7a85e8d072d808683580a201dd10b3a847efaaa
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1234'
 ht-degree: 16%
 
 ---
@@ -107,6 +107,7 @@ ht-degree: 16%
       + [快取頁面變體](./developing/advanced/variant-caching.md)
       + [CSRF保護](./developing/advanced/csrf-protection.md)
       + [自訂名稱空間](./developing/advanced/custom-namespaces.md)
+      + [秘密](./developing/advanced/secrets.md)
       + [服務使用者](./developing/advanced/service-users.md)
       + [網頁最佳化的影像API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
    + 快速開發環境{#rde}
@@ -283,6 +284,10 @@ ht-degree: 16%
       + [PDF/A公用程式](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [測試解決方案](./forms/forms-cs-assembler/test.md)
       + [挑戰](./forms/forms-cs-assembler/challenge.md)
+   + 與Marketo{#froms-cs-with-marketo}整合
+      + [簡介](./forms/forms-cs-with-marketo/part1.md)
+      + [建立資料Source](./forms/forms-cs-with-marketo/part2.md)
+      + [建立表單資料模型](./forms/forms-cs-with-marketo/part3.md)
    + 使用Blob索引標籤{#store-submiited-data-with-metadata-tags}儲存表單提交
       + [簡介](./forms/store-submiited-data-with-metadata-tags/introduction.md)
       + [擴充選擇群組元件](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)
