@@ -11,10 +11,10 @@ jira: KT-9359
 exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 364d055b7b2e4f273f906c66328fc14f95321611
 workflow-type: tm+mt
 source-wordcount: '328'
-ht-degree: 14%
+ht-degree: 21%
 
 ---
 
@@ -38,14 +38,15 @@ ht-degree: 14%
 ![導覽標籤](assets/navigation-tab.png)
 
 設定預設狀態的CSS屬性，如下所示
-| 類別 | 屬性名稱  |  屬性值 |
-|：—|：—|：—|
+
+| 類別 | 屬性名稱 | 屬性值 |
+|:---|:---|:---|
 | Dimension和位置 | 寬度 | 50px |
-| 文字 | 字型粗細| 粗體 |
-| 文字 | 顏色 | #FFF |
-|文字 | 行高| 3 |
-|文字  | 文字對齊 | 左側 |
-|背景| 顏色 | #056dae |
+| 文字 | 字粗 | 粗體 |
+| 文字 | 颜色 | #FFF |
+| 文字 | 行高 | 3 |
+| 文字 | 文字對齊 | 左 |
+| 背景 | 颜色 | #056dae |
 
 儲存您的變更
 
