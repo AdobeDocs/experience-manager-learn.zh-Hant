@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 394499d2c070920c404a09be32d036fe96f28aa7
+source-git-commit: f344f6c2fdf763a55c18a0db9625ccbe408919e2
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '407'
 ht-degree: 17%
 
 ---
@@ -168,8 +168,6 @@ ht-degree: 17%
 
 + 轉換 {#translation}
    + [Source檔案翻譯](translation/source-file-translation-feature-video-use.md)
-   + [智慧型翻譯搜尋](translation/smart-translation-search-feature-video-use.md)
-   + [設定智慧型翻譯搜尋](translation/smart-translation-search-technical-video-setup.md)
 
 + 資產範本{#asset-templates}
    + [瞭解資產範本](asset-templates/asset-templates-tutorial-understand.md)

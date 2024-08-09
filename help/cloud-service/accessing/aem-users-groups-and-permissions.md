@@ -10,10 +10,10 @@ jira: KT-6060
 thumbnail: 39151.jpg
 exl-id: 7d7942ae-7e38-4abd-9900-5b8e3542f5e1
 duration: 315
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 1fcfbc85650d0eb6b6b184883c7178a3b1e0ed93
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 90%
+source-wordcount: '204'
+ht-degree: 74%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 90%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=zh-Hant" text="Adobe Experience Manager as a Cloud Service 的 IMS 支援"
 >additional-url="https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="AEM 提供的使用者群組及其權限"
 
-Adobe Experience Manager 以 Adobe IMS 使用者、使用者群組和產品設定檔為建置基礎，以提供使用者可自訂的 AEM 存取權。了解如何定義 AEM 群組和權限，以及 AEM 群組和權限如何與 Adobe IMS 抽象化功能搭配運作，以提供順暢且可自訂的 AEM 存取權。
+Adobe Experience Manager 以 Adobe IMS 使用者、使用者群組和產品設定檔為建置基礎，以提供使用者可自訂的 AEM 存取權。瞭解如何在[AEM提供的使用者群組](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/security#built-in-users-and-groups)的基礎上定義AEM群組和許可權，以及它們如何與Adobe IMS抽象化功能搭配運作，以提供順暢且可自訂的AEM存取權。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39151?quality=12&learn=on)
 
