@@ -9,7 +9,7 @@ level: Intermediate
 jira: KT-15849
 last-substantial-update: 2024-07-19T00:00:00Z
 exl-id: 5df8581c-a44c-449c-bf3b-8cdf57635c4d
-source-git-commit: b823f9e294c42ba258049a942816f9a154a6e1a6
+source-git-commit: d01a56cd1fd3085b0230918b15b4635ba375e346
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 使用許可權密碼加密PDF
 
-複製、編輯或列印PDF檔案需要許可權密碼（也稱為擁有者或主密碼）。 瞭解如何使用[DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) API以程式設計方式將許可權密碼套用至PDF
+複製、編輯或列印PDF檔案需要許可權密碼（也稱為擁有者或主密碼）。 瞭解如何使用[DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) API，以程式設計方式將許可權密碼套用至PDF。
 
 以下JSP程式碼會使用許可權密碼加密PDF：
 
