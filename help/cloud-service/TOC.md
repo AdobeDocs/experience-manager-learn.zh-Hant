@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e7a85e8d072d808683580a201dd10b3a847efaaa
+source-git-commit: 13657903c37b90c6d854dcba317dc1801d869de0
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1254'
 ht-degree: 16%
 
 ---
@@ -45,7 +45,6 @@ ht-degree: 16%
    + [CI/CD 生產管道](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD 非生產管道](./cloud-manager/cicd-non-production-pipeline.md)
    + [活動](./cloud-manager/activity.md)
-   + [自訂網域名稱](./cloud-manager/custom-domain-names.md)
    + 開發作業{#devops}
       + [部署程式碼](./cloud-manager/devops/deploy-code.md)
       + [合併專案](./cloud-manager/devops/merge-projects.md)
@@ -107,6 +106,7 @@ ht-degree: 16%
       + [快取頁面變體](./developing/advanced/variant-caching.md)
       + [CSRF保護](./developing/advanced/csrf-protection.md)
       + [自訂名稱空間](./developing/advanced/custom-namespaces.md)
+      + [從HTL引數化Sling模型](./developing/advanced/sling-model-parameters.md)
       + [秘密](./developing/advanced/secrets.md)
       + [服務使用者](./developing/advanced/service-users.md)
       + [網頁最佳化的影像API](./developing/advanced/web-optimized-image-delivery-java-apis.md)
@@ -138,6 +138,10 @@ ht-degree: 16%
       + 風險{#risks}
          + [周遊警告](./debugging/cloud-service/risks/traversals.md)
 + 內容傳遞{#content-delivery}
+   + [自訂網域名稱](./content-delivery/custom-domain-names.md)
+   + [具有Adobe託管CDN的自訂網域名稱](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
+   + [使用客戶CDN的自訂網域名稱](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
+   + [快取](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
    + [URL重新導向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + 快取{#caching}
    + [概觀](./caching/overview.md)
