@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
+source-git-commit: 7ef37a71f1daefee484478c3194907d5ce918af4
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1275'
 ht-degree: 16%
 
 ---
@@ -152,6 +152,7 @@ ht-degree: 16%
    + 如何{#how-to}
       + [啟用快取](./caching/how-to/enable-caching.md)
       + [停用快取](./caching/how-to/disable-caching.md)
+      + [清除快取](./caching/how-to/purge-cache.md)
 + 正在存取AEM{#accessing}
    + [概觀](./accessing/overview.md)
    + [Adobe IMS 使用者](./accessing/adobe-ims-users.md)
@@ -259,6 +260,10 @@ ht-degree: 16%
       + [2 — 設定](./forms/create-address-block-component/set-up.md)
       + [3 — 建立元件](./forms/create-address-block-component/creating-address-component.md)
       + [4 — 部署元件](./forms/create-address-block-component/deploy-your-project.md)
+   + 建立可點按的影像元件{#clickable-image-component}
+      + [1 — 簡介](./forms/clickable-image-component/introduction.md)
+      + [2 — 建立元件](./forms/clickable-image-component/create-component.md)
+      + [3 — 處理點選事件](./forms/clickable-image-component/handle-click-event.md)
    + AEM Forms與Analytics{#forms-and-analytics}
       + [簡介](./forms/form-data-analytics/introduction.md)
       + [建立資料元素](./forms/form-data-analytics/data-elements.md)
@@ -421,3 +426,4 @@ ht-degree: 16%
          + [整合AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
          + [適用於AEM Sites的Generative AI](./expert-resources/cloud-5/season-3/cloud5-generative-ai-for-aem-sites.md)
          + [探索通用編輯器](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
+         + [匯入網站](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)
