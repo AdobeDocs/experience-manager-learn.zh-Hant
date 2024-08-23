@@ -1,6 +1,6 @@
 ---
 title: Adobe CDN — 快取以外的進階功能
-description: 瞭解Adobe CDN的進階功能（除了快取以外），例如在CDN、CDN錯誤頁面等處設定流量。
+description: 瞭解Adobe CDN除了快取以外的進階功能，例如在CDN設定流量、設定代號和認證、CDN錯誤頁面等。
 version: Cloud Service
 feature: Website Performance, CDN Cache
 topic: Architecture, Performance, Content Management
@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: cc7fa9bbaa775b0216c839be079504c2b5467878
+source-git-commit: 10f9ca66a1669e1207237128469852ec7514d110
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Adobe CDN — 快取以外的進階功能
 
-瞭解Adobe CDN的進階功能（除了快取以外），例如在CDN、CDN錯誤頁面等處設定流量。
+瞭解Adobe內容傳遞網路(CDN)除了快取以外的進階功能，例如在CDN設定流量、設定代號和認證、CDN錯誤頁面等。
 
 除了快取內容以外，Adobe CDN還提供數種進階功能，有助於將您的網站效能最佳化。 這些功能包括：
 
@@ -50,8 +50,7 @@ ht-degree: 0%
 
 - **清除API Token**：可讓您建立自己的清除金鑰，從快取中清除單一或群組或所有資源。
 - **基本驗證**：當您想要限制存取您的網站或網站的一部分時，可以使用輕量型的驗證機制。 通常在上線前作為各種稽核流程的一部分需要。
-- **HTTP標頭驗證**：當客戶管理的CDN將流量路由到AdobeCDN時使用。 AdobeCDN會根據`X-AEM-Edge-Key`標頭值來驗證傳入的要求。
-可讓您為`X-AEM-Edge-Key`標頭建立自己的值。
+- **HTTP標頭驗證**：當客戶管理的CDN將流量路由到AdobeCDN時使用。 AdobeCDN會根據`X-AEM-Edge-Key`標頭值來驗證傳入的要求。 可讓您為`X-AEM-Edge-Key`標頭建立自己的值。
 
 ## CDN錯誤頁面
 
@@ -87,7 +86,7 @@ data:
           location: /us/en/top3.html
 ```
 
-## 其他資源
+## 相關Tutorials
 
 [使用流量篩選規則保護網站](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
@@ -100,7 +99,3 @@ data:
 [設定CDN認證和驗證](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 
 [設定CDN錯誤頁面](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
-
-
-
-
