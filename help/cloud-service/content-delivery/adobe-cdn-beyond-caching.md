@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: 10f9ca66a1669e1207237128469852ec7514d110
+source-git-commit: 65e77a329226ca7c7ccb1e583d2a045074feeb3d
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
@@ -31,12 +31,13 @@ ht-degree: 0%
 
 這些功能是&#x200B;**自助服務**&#x200B;功能。 已在AEM專案的`cdn.yaml`檔案中設定，並使用Cloud Manager設定管道進行部署。
 
+>[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
+
 ## 在CDN設定流量
 
 讓我們瞭解與&#x200B;_在CDN_&#x200B;設定流量相關的主要功能：
 
-- **DoS攻擊預防：**AdobeCDN吸收網路上的DoS攻擊
-層，防止它們連線至您的原始伺服器。
+- **DoS攻擊預防：** AdobeCDN在網路層吸收了DoS攻擊，使其無法連線到您的原始伺服器。
 - **速率限制：**&#x200B;若要保護您的原始伺服器不受太多要求的影響，您可以在CDN上設定速率限制。
 - **Web應用程式防火牆(WAF)：** WAF可保護您的網站，使其免受一般Web應用程式弱點的影響，例如SQL插入、跨網站指令碼等等。 使用此功能需要增強式安全性授權或WAF-DDoS保護授權。
 - **要求轉換：**&#x200B;修改傳入的要求，例如設定或取消設定標頭、修改查詢引數、Cookie等等。
