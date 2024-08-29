@@ -24,8 +24,8 @@ ht-degree: 0%
 
 ## 術語
 
-+ **AEMaaCS**： [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/introduction.html?lang=zh-Hant)
-+ **BPA**： [最佳做法分析工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=zh-Hant)
++ **AEMaaCS**： [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/introduction.html)
++ **BPA**： [最佳做法分析工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html)
 + **CTT**： [內容轉移工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
 + **攝影機**： [Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)
 + **IMS**： [Identity Management系統](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html)
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ### 問：使用CTT可傳輸的內容數量是否有限制？
 
-不適用。 CTT工具可從AEM來源擷取並內嵌至AEMaaCS。 不過，在移轉前應考量AEMaaCS平台的特定限制。
+否。CTT工具可從AEM來源擷取並內嵌至AEMaaCS。 不過，在移轉前應考量AEMaaCS平台的特定限制。
 
 如需詳細資訊，請參閱[雲端移轉必要條件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html)。
 
@@ -152,7 +152,7 @@ CTT流程需要連線至以下資源：
 
 ### 問：資產在AEMaaCS中擷取後是否會自動重新處理？
 
-不適用。 若要處理資產，必須起始重新處理的請求。
+否。若要處理資產，必須起始重新處理的請求。
 
 ### 問：資產在AEMaaCS中擷取後是否會自動重新索引？
 
