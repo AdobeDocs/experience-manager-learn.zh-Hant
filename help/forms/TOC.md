@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: d440662bcfbc8fdea8c1b0e8af7f653b1f8667f9
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '2086'
+source-wordcount: '2089'
 ht-degree: 2%
 
 ---
@@ -224,10 +224,11 @@ ht-degree: 2%
    + [部署範例資產](storing-retrieving-form-data/part6.md)
 + 從行動表單提交觸發AEM工作流程{#offline-mobile-form-submission}
    + [簡介](offline-mobile-form-submission/introduction.md)
-   + [自訂設定檔](offline-mobile-form-submission/part-one.md)
-   + [處理PDF提交](offline-mobile-form-submission/part-two.md)
-   + [檢閱PDF的工作流程](offline-mobile-form-submission/part-three.md)
-   + [在您的系統上部署](offline-mobile-form-submission/part-four.md)
+   + [自訂設定檔](offline-mobile-form-submission/custom-profile.md)
+   + [處理表單提交](offline-mobile-form-submission/handle-form-submission.md)
+   + [儲存已提交的資料](offline-mobile-form-submission/author-servlet.md)
+   + [檢閱PDF的工作流程](offline-mobile-form-submission/review-workflow.md)
+   + [在您的系統上部署](offline-mobile-form-submission/deploy-assets.md)
 + 查詢表單提交{#query-form-submissions}
    + [簡介](query-form-submissions/introduction.md)
    + [建立可搜尋的欄位](query-form-submissions/part1.md)

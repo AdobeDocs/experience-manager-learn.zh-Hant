@@ -9,9 +9,9 @@ level: Experienced
 exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
 last-substantial-update: 2020-01-07T00:00:00Z
 duration: 138
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -127,9 +127,18 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 若要在您的伺服器上測試此功能，請遵循下列指示：
 
-* [下載並解壓縮zip檔案內容至您的檔案系統](assets/mult-records-template-and-xml-file.zip)。此zip檔案包含範本和xml資料檔案。
+* [下載範例資產](assets/mult-records-template-and-xml-file.zip)。此zip檔包含範本和xml資料檔。
+* [匯入]
 * [將瀏覽器指向Felix網頁主控台](http://localhost:4502/system/console/bundles)
 * [部署DevelopingWithServiceUser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)。
+* 使用configMgr在Apache Sling服務使用者對應程式服務中新增以下專案。
+
+```java
+DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+```
+
+![user-mapper-service](assets/user-mapper-service-fd-service.png)
+
 * [部署自訂AEMFormsDocumentServices組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)。使用OutputService API產生PDF的自訂組合
 * [將瀏覽器指向封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)
 * [匯入並安裝封裝](assets/generate-multiple-pdf-from-xml.zip)。 此封裝包含html頁面，可讓您放置範本和資料檔案。
