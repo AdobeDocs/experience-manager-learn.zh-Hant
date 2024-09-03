@@ -11,9 +11,10 @@ duration: 0
 last-substantial-update: 2024-08-13T00:00:00Z
 jira: KT-15963
 thumbnail: KT-15963.jpeg
-source-git-commit: e03480e37463b7d35a49203e331ce661b6dc52f9
+exl-id: 5d81f6ee-a7df-470f-84b9-12374c878a1b
+source-git-commit: 0639217a3bab7799eec3bbcc40c1a69ed1b12682
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -67,6 +68,8 @@ data:
            type: authenticate # The type of the action, must be authenticate
            authenticator: purge-auth # The name of the authenticator to be used, must match the name from the above authenticators list               
 ```
+
+在上述規則中，`purgeKey1`和`purgeKey2`都是從頭開始新增，以支援密碼輪換而不會造成任何中斷。 但是，您只能從`purgeKey1`開始，並在稍後旋轉密碼時新增`purgeKey2`。
 
 1. 儲存、提交變更，並將其推送至Adobe上游存放庫。
 
