@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
+source-git-commit: 177cddea03595b686ec75f129c8be7bb14e4c631
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1292'
 ht-degree: 16%
 
 ---
@@ -385,7 +385,7 @@ ht-degree: 16%
 
 + 多步驟Tutorials{#multi-step-tutorials}
    + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
-   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html){target=_blank}
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant){target=_blank}
    + [SPA編輯器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
    + [AEM Sites和Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html){target=_blank}
    + [權杖型驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html){target=_blank}
@@ -432,3 +432,4 @@ ht-degree: 16%
          + [適用於AEM Sites的Generative AI](./expert-resources/cloud-5/season-3/cloud5-generative-ai-for-aem-sites.md)
          + [探索通用編輯器](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
          + [匯入網站](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)
+         + [使用管理API](./expert-resources/cloud-5/season-3/cloud5-using-admin-api.md)
