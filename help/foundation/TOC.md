@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation 教學課程
 user-guide-description: Adobe Experience Manager Foundation 的影片和教學課程系列。
 sub-product: Experience Manager
 index: y
-source-git-commit: 231ca44f9708ab0b239e4cbf363e8cf2695eedc2
+source-git-commit: 33415305f6aa183373eaef4bb4978a59325c8a32
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 13%
+source-wordcount: '244'
+ht-degree: 14%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 13%
 + AdobeCloud Manager{#cloud-manager}
    + [瞭解AdobeCloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
    + [CI/CD 管道](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
-   + [自訂許可權](./cloud-manager/cloud-permissions.md)
+   + [自訂權限](./cloud-manager/cloud-permissions.md)
 + 開發 {#development}
    + [開發Sling模型匯出工具](./development/develop-sling-model-exporter.md)
    + [設定本機AEM開發環境](./development/set-up-a-local-aem-development-environment.md)
@@ -38,6 +38,7 @@ ht-degree: 13%
    + [瞭解Java API最佳實務](./development/understand-java-api-best-practices.md)
    + [瞭解Sling模型匯出工具](./development/understand-sling-model-exporter.md)
    + [瞭解Oak索引最佳實務](./development/understand-indexing-best-practices.md)
+   + [安裝協力廠商成品](./development/install-third-party-artifacts.md)
 + 專案 {#projects}
    + [開發AEM專案](./projects/develop-aem-projects.md)
    + [使用主要專案](./projects/use-project-masters.md)
