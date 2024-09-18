@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
 workflow-type: tm+mt
-source-wordcount: '2089'
-ht-degree: 2%
+source-wordcount: '2101'
+ht-degree: 1%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 2%
    + [2 — 建立OSGi服務](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [3 — 建立Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
    + [4 — 包含第三方套件組合](creating-your-first-osgi-bundle/include-third-party-jars.md)
-+ 最適化表單 {#adaptive-forms}
++ 最適化 Forms {#adaptive-forms}
    + [在Windows上安裝AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [在Linux上安裝32位元套件](adaptive-forms/installing-aem-form-on-linux.md)
    + [最適化Forms中的預填服務](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
@@ -222,13 +222,19 @@ ht-degree: 2%
    + [客戶庫](storing-retrieving-form-data/part4.md)
    + [最適化表單範本](storing-retrieving-form-data/part5.md)
    + [部署範例資產](storing-retrieving-form-data/part6.md)
-+ 從行動表單提交觸發AEM工作流程{#offline-mobile-form-submission}
-   + [簡介](offline-mobile-form-submission/introduction.md)
-   + [自訂設定檔](offline-mobile-form-submission/custom-profile.md)
-   + [處理表單提交](offline-mobile-form-submission/handle-form-submission.md)
-   + [儲存已提交的資料](offline-mobile-form-submission/author-servlet.md)
-   + [檢閱PDF的工作流程](offline-mobile-form-submission/review-workflow.md)
-   + [在您的系統上部署](offline-mobile-form-submission/deploy-assets.md)
++ 在PDF表單提交時觸發AEM工作流程{#offline-mobile-form-submission}
+   + [部分 — 1](offline-mobile-form-submission/introduction.md)
+   + [部分 — 2](offline-mobile-form-submission/custom-profile.md)
+   + [部分 — 3](offline-mobile-form-submission/handle-form-submission.md)
+   + [部分 — 4](offline-mobile-form-submission/author-servlet.md)
+   + [部分 — 5](offline-mobile-form-submission/review-workflow.md)
+   + [部分 — 6](offline-mobile-form-submission/deploy-assets.md)
++ 在行動表單提交時觸發AEM工作流程{#trigger-aem-workflow-on-mobile-form-submission}
+   + [部分 — 1](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
+   + [部分 — 2](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
+   + [部分 — 3](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
+   + [部分 — 4](trigger-aem-workflow-on-mobile-form-submission/review-workflow.md)
+   + [部分 — 5](trigger-aem-workflow-on-mobile-form-submission/deploy-assets.md)
 + 查詢表單提交{#query-form-submissions}
    + [簡介](query-form-submissions/introduction.md)
    + [建立可搜尋的欄位](query-form-submissions/part1.md)
