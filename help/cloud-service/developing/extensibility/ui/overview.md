@@ -10,18 +10,23 @@ recommendations: noDisplay
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 73f5d90d-e007-41a0-9bb3-b8f36a9b1547
 duration: 50
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 12d7f8f0afc1c19f289c847771cb9f4f965c650c
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
 
-# AEM UI擴充性
+# AEM UI擴充性 {#aem-ui-extensibility}
 
 Adobe Experience Manager (AEM)提供強大的使用者介面(UI)，可建立數位體驗。 為了自訂和擴充UI，Adobe引入了App Builder。 此工具可讓開發人員在不使用JavaScript和React複雜編碼的情況下增強使用者體驗。
 
 App Builder提供實作層，用於建立與在AEM中妥善定義擴充功能點繫結的擴充功能。 App Builder與AEM緊密整合，可即時預覽和測試。 將變更部署至AEM既快速又簡化。 透過使用App Builder，開發人員可節省時間和精力，實現快速原型製作並與利害關係人合作。
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_learn_extensibility_app_builder"
+>title="Adobe Developer App Builder和AEM Headless快速入門"
+>abstract="瞭解AEM App Builder如何讓開發人員透過JavaScript和React快速自訂和擴充AEM UI，以支援順暢的整合和快速部署。"
 
 ## 開發AEM UI擴充功能
 
