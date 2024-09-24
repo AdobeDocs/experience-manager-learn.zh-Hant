@@ -1,6 +1,6 @@
 ---
 title: 建立可點按的影像元件
-description: 在AEM FormsCloud Service中建立可點按的影像元件
+description: 在AEM FormsCloud Service中建立可點按的影像元件。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,14 +9,15 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15968
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+exl-id: c451472f-d282-4662-9852-8a3e73c5c853
+source-git-commit: 1fa202910e6c9d21532c6027647c5f3909931e0e
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
-# 簡介
+# 可點按影像簡介
 
 在Forms中使用可點按的影像，可建立更吸引人、直覺且美觀的使用者體驗。 為了撰寫本文章的目的，我們將SVG用於可點按的影像，因為它提供幾項優點，尤其是在設計彈性、效能和使用者體驗方面。
 SVG可以使用Adobe Illustrator或任何免費線上工具來建立。 我已使用來自](https://simplemaps.com/resources/svg-us)簡易地圖的[USA地圖來展示使用案例。
