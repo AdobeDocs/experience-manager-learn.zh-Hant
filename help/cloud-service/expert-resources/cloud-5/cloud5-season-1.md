@@ -6,10 +6,10 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
 duration: 112
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: ffd90bec7ef63cac96590e59b1b5a92d043cbc03
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 0%
+source-wordcount: '443'
+ht-degree: 1%
 
 ---
 
@@ -105,47 +105,6 @@ ht-degree: 0%
       <p>
         <br/>
          移轉至雲端的秘訣第一部分（共兩部分）。 我們第一部分的主要重點在於讓您做好遷移準備的最佳實務和準備工作。
-      </p>
-   </td> 
-  </tr>
-<tr>
-   <td>
-        <a href="./cloud5-aem-content-migration-part-2.md">
-            <img alt="移轉（第2部分）" src="./imgs/007-thumb.png"/>
-        </a>
-      <div>
-        <a href="./cloud5-aem-content-migration-part-2.md"><strong>移轉（第2部分）</strong></a>     
-         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
-      </div>
-      <p>
-        <br/>
-         移轉至雲端的秘訣與訣竅中的第二部分（共兩部分）。 第二部分主要說明如何使用可用的移轉工具。
-      </p>
-     </td>   
-     <td>
-        <a href="./cloud5-aem-dispatcher-validator.md">
-            <img alt="Dispatcher驗證器" src="./imgs/008-thumb.png"/>
-        </a>
-      <div>
-         <a href="./cloud5-aem-dispatcher-validator.md"><strong>Dispatcher驗證器</strong></a>
-         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
-      </div>
-      <p>
-        <br/>
-         作為先前移轉討論的一個分支，我們將審視Dispatcher驗證器及其可以完成的一些任務。
-      </p>
-   </td>
-     <td>
-        <a href="./cloud5-aem-search-and-indexing.md">
-            <img alt="索引和搜尋提示" src="./imgs/009-thumb.png"/>
-        </a>
-      <div>
-         <a href="./cloud5-aem-search-and-indexing.md"><strong>索引和搜尋提示</strong></a>
-         <br/><em>與資深雲端架構師Darin Kuntze &amp; James Talbot合作</em>
-      </div>
-      <p>
-        <br/>
-         對於像索引和搜尋這樣複雜的專案，團隊會向您展示一些可讓您最佳化開發時間並在問題發生之前解決問題的簡單方法。
       </p>
    </td> 
   </tr>

@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: a224d375605b0abc2f521bfd6992239c77095572
+source-git-commit: ffd90bec7ef63cac96590e59b1b5a92d043cbc03
 workflow-type: tm+mt
-source-wordcount: '1300'
+source-wordcount: '1298'
 ht-degree: 16%
 
 ---
@@ -406,7 +406,6 @@ ht-degree: 16%
       + [登入權杖](./expert-resources/cloud-5/cloud5-getting-login-token-integrations.md)
       + [雲端Dispatcher](./expert-resources/cloud-5/cloud5-aem-dispatcher-cloud.md)
       + [移轉1](./expert-resources/cloud-5/cloud5-aem-content-migration-part-1.md)
-      + [移轉2](./expert-resources/cloud-5/cloud5-aem-content-migration-part-2.md)
       + [Dispatcher驗證器](./expert-resources/cloud-5/cloud5-aem-dispatcher-validator.md)
       + [搜尋和建立索引](./expert-resources/cloud-5/cloud5-aem-search-and-indexing.md)
       + [AdobeApp Builder](./expert-resources/cloud-5/cloud5-adobe-app-builder.md)
