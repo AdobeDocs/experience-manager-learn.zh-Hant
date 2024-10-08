@@ -11,9 +11,9 @@ last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: d731a7131b997fa272013e8d62aa2251e25c08e4
 workflow-type: tm+mt
-source-wordcount: '2413'
+source-wordcount: '2423'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 當我們提及本機AEM執行個體時，我們談論的是在開發人員個人電腦上執行的Adobe Experience Manager復本。 ***所有*** AEM開發應該從撰寫和執行本機AEM執行個體的程式碼開始。
 
-如果您是AEM的新手，可以安裝兩種基本執行模式： ***作者***&#x200B;和&#x200B;***Publish***。 ***作者*** [執行模式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en)是數位行銷人員用來建立和管理內容的環境。 大部分開發期間，您都是將程式碼部署到Author例項。 這可讓您建立頁面以及新增和設定元件。 AEM Sites是WYSIWYG製作CMS，因此大部分CSS和JavaScript都可透過製作例項進行測試。
+如果您是AEM的新手，可以安裝兩種基本執行模式： ***作者***&#x200B;和&#x200B;***Publish***。 ***作者*** [執行模式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en)是數位行銷人員用來建立和管理內容的環境。 大部分開發期間，您都是將程式碼部署到Author例項。 這可讓您建立頁面以及新增和設定元件。 AEM Sites是WYSIWYG製作CMS，因此，大部分CSS和JavaScript都可透過製作例項進行測試。
 
 它也是針對本機&#x200B;***Publish***&#x200B;執行個體的&#x200B;*關鍵*&#x200B;測試程式碼。 ***Publish***&#x200B;執行個體是您網站的訪客與之互動的AEM環境。 雖然&#x200B;***Publish***&#x200B;執行個體與&#x200B;***Author***&#x200B;執行個體是相同的技術棧疊，但在設定和許可權方面有一些重大差異。 程式碼必須在本機&#x200B;***Publish***&#x200B;執行個體上測試，才能升級至較高層級的環境。
 
@@ -181,6 +181,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 * **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** — 適用於JCR內容的類似FTP的工具
 * **[aemfed](https://aemfed.io/)** — 加速您的AEM前端工作流程
 * **[AEM Sync](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Visual Studio Code的社群支援&#42;擴充功能
+* **[WKND專案](https://github.com/adobe/aem-guides-wknd)** — 此影片中顯示的AEM專案範例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 
