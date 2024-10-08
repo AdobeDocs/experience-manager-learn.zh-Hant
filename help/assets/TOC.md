@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: e7692aceded07426a9c1afce9275e82a5af6b0fb
+source-git-commit: d31094c11a023e711f2b49801bb03200f919e8e8
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '431'
 ht-degree: 16%
 
 ---
@@ -79,6 +79,7 @@ ht-degree: 16%
    + [設定Content Hub](./content-hub/settingup-content-hub.md)
    + [上傳Assets與核准程式](./content-hub/uploading-assets-and-approval-process.md)
    + [存取和下載Assets](./content-hub/accessing-and-downloading-assets.md)
+   + [使用Adobe Express建立影像變體](./content-hub/creating-image-variants-using-adobe-express.md)
 
 + 共用和分發{#sharing}
    + [下載Assets](./sharing/download.md)
