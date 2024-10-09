@@ -10,7 +10,7 @@ jira: KT-10797
 thumbnail: kt-10797.jpg
 exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
 duration: 31
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 089bcf71f03bdbb6d21337cc23452afb33ce8098
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 2%
@@ -26,7 +26,7 @@ AEM Headless [Web元件](https://developer.mozilla.org/en-US/docs/Web/Web_Compon
 
 下列部署設定必須就Web元件/JS部署。
 
-| 連線至的Web元件/JS應用程式 | AEM 作者 | AEM 發佈 | AEM預覽 |
+| 連線到→的Web元件/JS應用程式 | AEM 作者 | AEM 發佈 | AEM預覽 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher篩選器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [跨原始資源共用(CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
