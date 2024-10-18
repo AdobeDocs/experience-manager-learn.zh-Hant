@@ -11,9 +11,9 @@ topic: Development
 jira: KT-13520
 exl-id: c23275d7-daf7-4a42-83b6-4d04b297c470
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ AEM Forms提供許多立即可用的提交選項，可滿足大部分使用案�
 
 ## 建立AEM專案
 
-如果您已有現有的AEM FormsCloud Service專案，您可以[跳到寫入自訂提交服務](#Write-the-custom-submit-service)
+如果您已有現有的AEM Formsas a Cloud Service專案，您可以[跳至撰寫自訂提交服務](#Write-the-custom-submit-service)
 
 * 在您的c磁碟機上建立名為cloudmanager的資料夾。
 * 導覽至這個新建立的資料夾

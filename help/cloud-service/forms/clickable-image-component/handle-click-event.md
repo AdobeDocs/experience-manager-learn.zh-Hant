@@ -1,6 +1,6 @@
 ---
 title: 建立可點按的影像元件
-description: 在AEM FormsCloud Service中建立可點按的影像元件
+description: 在AEM Forms as a Cloud Service中建立可點按的影像元件
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,9 +9,10 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15968
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+exl-id: 54344a6d-51d3-4a63-b1f1-283bddbc0f8f
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
-source-wordcount: '83'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---

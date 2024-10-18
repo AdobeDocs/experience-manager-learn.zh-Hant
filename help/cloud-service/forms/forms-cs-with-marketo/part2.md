@@ -1,5 +1,5 @@
 ---
-title: 整合AEM FormsCloud Service和Marketo （第2部分）
+title: 整合AEM Formsas a Cloud Service和Marketo （第2部分）
 description: 瞭解如何使用AEM Forms表單資料模型整合AEM Forms和Marketo。
 feature: Form Data Model,Integration
 version: Cloud Service
@@ -10,9 +10,10 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+exl-id: 75e589fa-f7fc-4d0b-98c8-ce4d603ef2f7
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '220'
 ht-degree: 3%
 
 ---

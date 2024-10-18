@@ -1,5 +1,5 @@
 ---
-title: 在AEM FormsCloud Service中使用垂直索引標籤
+title: 在AEM Forms中使用垂直索引標籤as a Cloud Service
 description: 使用垂直索引標籤建立最適化表單
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -11,9 +11,10 @@ feature: Adaptive Forms
 thumbnail: 331891.jpg
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 jira: KT-16023
-source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
+exl-id: c5bbd35e-fd15-4293-901e-c81faf6025f9
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
@@ -50,4 +51,3 @@ function navigateInPanelWithFocusOption(panelField, focusOption, globals)
 **上一個按鈕**
 
 ![上一個按鈕](assets/prev-button.png)
-

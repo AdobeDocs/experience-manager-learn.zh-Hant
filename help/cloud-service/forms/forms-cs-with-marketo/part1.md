@@ -1,5 +1,5 @@
 ---
-title: 整合AEM Forms Cloud Service和Marketo
+title: 整合AEM Formsas a Cloud Service和Marketo
 description: 瞭解如何使用AEM Forms表單資料模型整合AEM Forms和Marketo。
 feature: Form Data Model,Integration
 version: Cloud Service
@@ -10,9 +10,10 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+exl-id: c3145149-bfa4-4dcb-acde-c359e9348f99
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '342'
 ht-degree: 1%
 
 ---
@@ -33,7 +34,7 @@ Marketo公開REST API，允許從遠端執行系統的許多功能。 從建立�
 
 ## 必備條件
 
-1. 存取AEM FormsCloud Service例項
+1. 存取AEM Formsas a Cloud Service執行個體
 1. 熟悉表單資料模型
 1. Swagger檔案的基本知識
 1. 建立最適化Forms

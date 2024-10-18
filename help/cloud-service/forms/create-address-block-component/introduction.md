@@ -1,6 +1,6 @@
 ---
 title: 建立地址元件
-description: 在AEM FormsCloud Service中建立新的位址核心元件
+description: 在AEM Forms as a Cloud Service中建立新的位址核心元件
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,7 +10,7 @@ topic: Development
 jira: KT-15752
 exl-id: 21b6640e-5cfa-4902-9660-a2b1c91b285d
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
-source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 1%
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ## 先決條件
 
-* 存取AEM FormsCloud Service例項
+* 存取AEM Formsas a Cloud Service執行個體
 * 使用AEM Forms模組開發表單的一些經驗
 * 為AEM/AEM Forms設定開發環境的經驗（Git、IntelliJ等）
 
