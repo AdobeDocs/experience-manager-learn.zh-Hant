@@ -9,9 +9,9 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '296'
 ht-degree: 2%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 2%
 選取``state``節點並設定其屬性，如下所示。 請注意fieldType的狀態型別 — 已設定為下拉式清單
 ![狀態](assets/state.png)
 
-## 設定狀態列位的預設值
+## 設定狀態列位的選項
 
 選取``state``節點並新增下列屬性。
 
