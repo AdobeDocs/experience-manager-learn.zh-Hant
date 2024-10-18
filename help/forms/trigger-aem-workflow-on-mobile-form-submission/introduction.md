@@ -10,16 +10,17 @@ level: Experienced
 last-substantial-update: 2024-09-17T00:00:00Z
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+source-git-commit: c6ffa8f7a398b01fc12e1e2efe4382c941900496
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '195'
 ht-degree: 1%
 
 ---
 
 # 在行動表單提交時觸發AEM工作流程
 
-一個常見的使用案例是能夠將XDP轉譯為資料擷取活動的HTML。提交此表單時，可能需要觸發AEM工作流程。 在AEM工作流程中，我們可以將資料與xdp範本合併，並顯示產生的PDF以供稽核和核准。表單將在發佈執行個體上呈現，並且工作流程將在AEM處理執行個體上觸發。
+一個常見的使用案例是將XDP轉譯為資料擷取活動的HTML。 提交此表單時，可能需要觸發AEM工作流程。 在AEM工作流程中，您可以將資料與XDP範本合併，並顯示產生的PDF以供檢閱和核准。 表單會在發佈執行個體上轉譯，而工作流程會在AEM處理執行個體上觸發。
+
 使用案例包含下列步驟
 
 * 使用者填寫並提交HTML5表單(XDP的HTML5轉譯)。
