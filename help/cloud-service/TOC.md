@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
+source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 16%
+source-wordcount: '1314'
+ht-degree: 15%
 
 ---
 
@@ -278,6 +278,8 @@ ht-degree: 16%
       + [1.簡介](./forms/using-vertical-tabs/introduction.md)
       + [2.建立表單](./forms/using-vertical-tabs/create-af.md)
       + [3.瀏覽](./forms/using-vertical-tabs/navigation.md)
+   + 使用輸出和表單服務{#forms-cs-output-and-forms-service}
+      + [產生PDF](./forms/forms-cs-output-and-forms-service/outputservice.md)
    + AEM Forms CS{#doc-gen-formscs}中的檔案產生
       + [簡介](./forms/doc-gen-forms-cs/introduction.md)
       + [建立服務認證](./forms/doc-gen-forms-cs/service-credentials.md)

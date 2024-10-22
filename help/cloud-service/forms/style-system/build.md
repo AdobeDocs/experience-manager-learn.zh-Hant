@@ -10,9 +10,9 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
+source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,11 @@ ht-degree: 0%
 # 測試變更
 
 根據&#x200B;**&quot;Blank with Core Components&quot;**範本建立調適型表單。 將3個按鈕拖放至表單上，並標示為「企業」、「行銷」和「預設」。
-選取如圖所示的油漆筆刷，將適當的樣式變體指派給公司和行銷按鈕
+選取如下所示的油漆筆刷，將適當的樣式變體指派給「公司」和「行銷」按鈕。
 
 ![樣式](assets/marketing-variation.png)
+
+第三個按鈕將套用預設樣式。
 
 ## 建置主題專案
 
