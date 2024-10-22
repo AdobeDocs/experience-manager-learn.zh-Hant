@@ -7,14 +7,14 @@ feature: Operations, Dispatcher
 role: Developer, Architect
 level: Intermediate
 jira: KT-11466
-last-substantial-update: 2022-10-14T00:00:00Z
+last-substantial-update: 2024-10-22T00:00:00Z
 index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 3cc9b4fa0a30d36638a8c28a73663ffa455ba4a3
+source-git-commit: 9e093e87c8c369ddd750be4a7dc30e2bf86495d5
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ AEM的URL重新導向解決方案如下：
 | [透過AEM管理的CDN在Edge](#at-edge-via-aem-managed-cdn) | ✔ | ✘ | ✔ | Edge/CDN （內建） |
 | [在Edge，透過自備CDN (BYOCDN)](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge/CDN (BYOCDN) |
 | [Apache `mod_rewrite`規則為Dispatcher設定](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
-| [ACS Commons — 重新導向地圖管理員](#redirect-map-manager) | ✘ | ✔ | ✘ | Dispatcher |
+| [ACS Commons — 重新導向地圖管理員](#redirect-map-manager) | ✘ | ✔ | ✔ | Dispatcher |
 | [ACS Commons — 重新導向管理員](#redirect-manager) | ✘ | ✔ | ✔ | AEM |
 | [ `Redirect`頁面屬性](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
 
@@ -76,7 +76,7 @@ AEM的URL重新導向解決方案如下：
 
 #### 重新導向地圖管理員
 
-[重新導向地圖管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)可協助AEM 6.x系統管理員輕鬆維護和發佈[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)檔案，而不需要直接存取Apache Web伺服器或重新啟動Apache Web伺服器。 此功能可讓許可權使用者從AEM中的主控台建立、更新和刪除重新導向規則，無需開發團隊或AEM部署的協助。 重新導向地圖管理員&#x200B;**與AEM as a Cloud Service不相容**。
+[重新導向地圖管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)可協助AEM系統管理員輕鬆維護和發佈[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)檔案，而不需要直接存取Apache Web伺服器或重新啟動Apache Web伺服器。 此功能可讓許可權使用者從AEM中的主控台建立、更新和刪除重新導向規則，無需開發團隊或AEM部署的協助。 重新導向管理員與&#x200B;**AEM as a Cloud Service**&#x200B;和&#x200B;**AEM 6.x**&#x200B;相容。
 
 #### 重新導向管理員
 
