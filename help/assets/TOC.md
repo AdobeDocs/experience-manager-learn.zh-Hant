@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: d31094c11a023e711f2b49801bb03200f919e8e8
+source-git-commit: 3e7668067f9e001b92011a3735fc8debe829e1c9
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 16%
+source-wordcount: '425'
+ht-degree: 18%
 
 ---
 
@@ -76,10 +76,12 @@ ht-degree: 16%
    + [Sidekick外掛程式](./edge-delivery-services/sidekick-plugin.md)
 
 + Content Hub{#content-hub}
-   + [設定Content Hub](./content-hub/settingup-content-hub.md)
-   + [上傳Assets與核准程式](./content-hub/uploading-assets-and-approval-process.md)
-   + [存取和下載Assets](./content-hub/accessing-and-downloading-assets.md)
-   + [使用Adobe Express建立影像變體](./content-hub/creating-image-variants-using-adobe-express.md)
+   + [設定](./content-hub/set-up.md)
+   + [新增資產](./content-hub/add-assets.md)
+   + [下載Assets](./content-hub/download-assets.md)
+   + [使用Adobe Express的影像變體](./content-hub/image-variants.md)
+   + [集合](./content-hub/collections.md)
+   + [分享](./content-hub/share.md)
 
 + 共用和分發{#sharing}
    + [下載Assets](./sharing/download.md)
