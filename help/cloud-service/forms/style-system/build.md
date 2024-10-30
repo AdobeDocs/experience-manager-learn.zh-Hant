@@ -10,9 +10,9 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
+source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 建置主題專案
 
-下一步是建置主題專案。 導覽至您的佈景主題專案的根資料夾，然後執行命令&#x200B;_**npm run build**_，如下面的熒幕擷取所示
+下一步是建置主題專案。 導覽至您的佈景主題專案的根資料夾，然後執行命令&#x200B;_**npm run build**_，如下面的熒幕擷取所示。
 
 ![建置佈景主題](assets/build-theme.png)
 
@@ -46,4 +46,8 @@ ht-degree: 0%
 * 按鈕應該會以適當的樣式更新，如下所示。
 
 ![最終按鈕](assets/final-state-buttons.png)
+
+## 推送變更
+
+如果您對變更感到滿意，可以使用[前端管道](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline)將變更推送到您的雲端執行個體
 
