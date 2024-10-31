@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Catalog
 duration: 45
 last-substantial-update: 2024-10-31T00:00:00Z
-source-git-commit: db8e776458879018fcfdd4d30c518cafc3a2ab14
+source-git-commit: 6aece3e46b486125e7270ddc094d8f2816db1257
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '481'
+ht-degree: 6%
 
 ---
 
@@ -260,7 +260,7 @@ ht-degree: 0%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" title="Content Hub常見問題集">Content Hub常見問題集</a>
                     </p>
-                    <p class="is-size-6">取得Content Hub部分常見問題(FAQ)的回應。</p>
+                    <p class="is-size-6">取得Content Hub部分最常見問題(FAQ)的回應。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">閱讀檔案</span>
