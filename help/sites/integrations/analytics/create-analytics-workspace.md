@@ -13,7 +13,7 @@ exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 badgeIntegration: label="整合" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
 duration: 443
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 606607b85fae012e76d57b0b35820247a6862e32
 workflow-type: tm+mt
 source-wordcount: '2072'
 ht-degree: 0%
@@ -45,7 +45,7 @@ WKND行銷團隊想要瞭解哪些`Call to Action (CTA)`按鈕在首頁上表現
 ### 目標 {#objective}
 
 1. 建立報表套裝或使用現有報表套裝。
-1. 在報表套裝中設定[轉換變數(eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)和[成功事件（事件）](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html)。
+1. 在報表套裝中設定[轉換變數(eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)和[成功事件（事件）](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)。
 1. 建立[Analysis Workspace專案](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)，藉助可讓您快速建置、分析和分享見解的工具，分析資料。
 1. 與其他團隊成員共用Analysis Workspace專案。
 
@@ -69,7 +69,7 @@ eVar最適合用來測量原因和結果，例如：
 * 最終導致註冊的橫幅廣告
 * 訂單前使用內部搜尋的次數
 
-成功事件是可追蹤的動作。 成功事件的條件由您決定。 例如，如果訪客點選了CTA按鈕，該點選事件可被視為成功事件。
+成功事件是可追蹤的動作。 成功事件的條件由您決定。 例如，如果訪客按一下CTA按鈕，該點選事件可被視為成功事件。
 
 ### 設定eVar
 
@@ -116,7 +116,7 @@ eVar最適合用來測量原因和結果，例如：
 
 Analysis Workspace是彈性的瀏覽器工具，可讓您快速建立分析和分享見解。 您可以使用拖放式操作介面進行分析、新增視覺效果以生動呈現資料、組織資料集、與組織中的任何人共用及排程專案。
 
-接下來，建立[專案](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace)以建置儀表板，分析整個網站的CTA按鈕效能。
+接下來，建立[專案](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace)以建置儀表板，分析整個網站中CTA按鈕的效能。
 
 1. 從Analytics工具列中選取&#x200B;**Workspace**，然後按一下&#x200B;**建立新專案**。
 
@@ -148,7 +148,7 @@ Analysis Workspace是彈性的瀏覽器工具，可讓您快速建立分析和�
 
    ![頁面Dimension](assets/create-analytics-workspace/evar9-dimension.png)
 
-1. 將&#x200B;**CTA Click** (event8)量度拖放到「發生次數」量度上並加以取代。 您現在可以檢視在頁面上顯示「頁面名稱」(eVar9)和CTA點選事件對應計數的視覺效果。
+1. 將&#x200B;**CTA Click** (event8)量度拖放至「發生次數」量度上，並加以取代。 您現在可以檢視在頁面上顯示「頁面名稱」(eVar9)和CTA點選事件對應計數的視覺效果。
 
    ![頁面量度 — CTA點按](assets/create-analytics-workspace/evar8-cta-click.png)
 
@@ -164,7 +164,7 @@ Analysis Workspace是彈性的瀏覽器工具，可讓您快速建立分析和�
 
    ![eVar8](assets/create-analytics-workspace/evar8.png)
 
-1. 在下方，您可以看到WKND網站的視覺化呈現方式，其依頁面範本劃分，並進一步依使用者與WKND網站點按動作(CTA)按鈕的互動劃分。
+1. 在下方，您可以看到WKND網站的視覺化呈現方式，依其頁面範本劃分，並進一步依使用者與WKND網站點按以動作(CTA)按鈕的互動劃分。
 
    ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
 
@@ -240,7 +240,7 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 
    ![Workspace按鈕ID](assets/create-analytics-workspace/workspace-report-button-id.png)
 
-1. 接下來，將工作區中顯示「行動號召」(CTA)按鈕識別碼的&#x200B;**按鈕ID**&#x200B;量度，取代為先前步驟中建立的分類名稱。
+1. 接下來，將工作區中顯示「行動號召」 (CTA)按鈕識別碼的&#x200B;**按鈕ID**&#x200B;量度，取代為先前步驟中建立的分類名稱。
 
 1. 在元件尋找器中，搜尋&#x200B;**WKND CTA按鈕**&#x200B;並將&#x200B;**WKND CTA按鈕（按鈕ID）**&#x200B;維度拖放到Button ID量度上並加以取代。
 
@@ -249,8 +249,8 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
    * **After**
      ](assets/create-analytics-workspace/wknd-button-after.png)之後的![Workspace按鈕
 
-1. 您會注意到，包含行動號召(CTA)按鈕的按鈕ID量度，現在已取代為分類範本中提供的對應名稱。
-1. 讓我們比較Analytics Workspace表格與WKND首頁，瞭解CTA按鈕點選次數及其分析。 根據工作區自由表格資料，使用者已按下&#x200B;**SKI NOW**&#x200B;按鈕22次，西澳洲的WKND首頁露營&#x200B;**瞭解詳情**&#x200B;按鈕已按下4次。
+1. 您可以注意到，包含行動號召(CTA)按鈕的按鈕ID量度，現在已取代為分類範本中提供的對應名稱。
+1. 讓我們比較Analytics Workspace表格與WKND首頁，瞭解CTA按鈕點選計數及其分析。 根據工作區自由表格資料，使用者已按下&#x200B;**SKI NOW**&#x200B;按鈕22次，西澳洲的WKND首頁露營&#x200B;**瞭解詳情**&#x200B;按鈕已按下4次。
 
    ![CTA報告](assets/create-analytics-workspace/workspace-report-buttons-wknd.png)
 
