@@ -14,7 +14,7 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 774267b4f4c65c79f185fa3b33383ce9ddd136cb
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 # 將AEM Sites和Adobe Analytics與Platform Web SDK整合
 
-瞭解&#x200B;**現代方法**，瞭解如何使用Platform Web SDK整合Adobe Experience Manager (AEM)和Adobe Analytics。 此全方位的教學課程會引導您完成順暢地收集[WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)頁面檢視和CTA點按資料的程式。 透過在AdobeAnalysis Workspace中將收集的資料視覺化，在其中您可以探索各種量度和維度，以獲得有價值的見解。 此外，請探索Platform資料集以驗證及分析資料。 加入我們的歷程，利用AEM和Adobe Analytics的強大功能進行資料導向式決策。
+瞭解&#x200B;**現代方法**，瞭解如何使用Platform Web SDK整合Adobe Experience Manager (AEM)和Adobe Analytics。 此全方位的教學課程會引導您完成順暢收集[WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)頁面檢視和CTA點按資料的程式。 透過在AdobeAnalysis Workspace中將收集的資料視覺化，在其中您可以探索各種量度和維度，以獲得有價值的見解。 此外，請探索Platform資料集以驗證及分析資料。 加入我們的歷程，利用AEM和Adobe Analytics的強大功能進行資料導向式決策。
 
 ## 概觀
 
-瞭解使用者行為是每個行銷團隊的重要目標。 透過瞭解使用者如何與其內容互動，團隊可以做出明智的決策、最佳化策略並帶來更好的結果。 WKND行銷團隊是虛構的實體，已著眼於在其網站上實作Adobe Analytics以實現此目標。 主要目標是收集關於兩個關鍵量度的資料：頁面檢視和首頁行動號召(CTA)點選。
+瞭解使用者行為是每個行銷團隊的重要目標。 透過瞭解使用者如何與其內容互動，團隊可以做出明智的決策、最佳化策略並帶來更好的結果。 WKND行銷團隊是虛構的實體，已著眼於在其網站上實作Adobe Analytics以實現此目標。 主要目標是收集兩個關鍵量度的資料：頁面檢視和首頁行動號召(CTA)點按。
 
 透過追蹤頁面檢視，團隊能夠分析哪些頁面最受使用者關注。 此外，追蹤首頁CTA點按次數可針對團隊召喚行動元素的成效提供寶貴的見解。 此資料可能會揭示哪些CTA正在與使用者產生共鳴、哪些需要調整，並可能發掘提升使用者參與度並促進轉換的新機會。
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 在&#x200B;**AEM中作為Cloud Service**：
 
-+ [AEM管理員存取AEM as a Cloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html)
++ [AEM管理員存取AEM as a Cloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=zh-Hant)
 + 部署管理員對Cloud Manager的存取權
 + 複製並部署[WKND — 範例Adobe Experience Manager專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)至您的AEM as a Cloud Service環境。
 
@@ -92,7 +92,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 + [報告套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html)
 + [轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)
-+ [個成功事件](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html)
++ [個成功事件](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
 + [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)
 
 ## 更新資料流 — 新增Analytics服務
@@ -118,8 +118,8 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 + 將頁面名稱對應至`eVar5`
 + 正在觸發&#x200B;**pageview** Analytics呼叫（或傳送信標）
-+ 使用Adobe使用者端資料層收集CTA資料
-+ 將CTA ID和名稱分別對應至`eVar6`和`eVar7`。 另外，CTA點按計數為`event7`
++ 使用CTA使用者端資料層收集Adobe資料
++ 將CTA ID和名稱分別對應至`eVar6`和`eVar7`。 此外，CTA點按計數為`event7`
 + 正在觸發&#x200B;**連結點選** Analytics呼叫（或傳送信標）
 
 
@@ -241,7 +241,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 ## 資料集驗證 — WKND頁面檢視、CTA資料
 
-資料集是資料集合的儲存和管理結構，例如遵循結構描述的資料庫表格。 在[先前的教學課程](./web-sdk.md)中建立的資料集會被重複使用，以驗證pageview和CTA點按資料是否已擷取到Experience Platform資料集中。 在資料集UI中，各種詳細資訊（例如，記錄總數、大小和擷取的批次）會與視覺上吸引人的長條圖一起顯示。
+資料集是資料集合的儲存和管理結構，例如遵循結構描述的資料庫表格。 在[先前的教學課程](./web-sdk.md)中建立的資料集會被重複使用，以驗證Pageview和CTA點選資料是否已擷取到Experience Platform資料集中。 在資料集UI中，各種詳細資訊（例如，記錄總數、大小和擷取的批次）會與視覺上吸引人的長條圖一起顯示。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419885?quality=12&learn=on)
 
@@ -249,7 +249,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 Analysis Workspace是Adobe Analytics中的強大工具，可讓您以靈活且互動的方式探索及視覺化資料。 它提供拖放介面，可建立自訂報表、執行進階分段並套用各種資料視覺效果。
 
-讓我們重新開啟在[設定Analytics](#setup-analytics---report-suite-analysis-workspace)步驟中建立的Analysis Workspace專案。 在&#x200B;**最上層頁面**&#x200B;區段中，檢查各種量度，例如造訪、不重複訪客、登入、跳出率等。 若要評估WKND頁面和首頁CTA的效能，請拖放WKND特定的維度（WKND頁面名稱、WKND CTA名稱）和量度（WKND CTA點選事件）。 這些見解對於行銷人員瞭解哪些CTA更有效率，並根據其業務目標做出資料導向式決策非常有價值。
+讓我們重新開啟在[設定Analytics](#setup-analytics---report-suite-analysis-workspace)步驟中建立的Analysis Workspace專案。 在&#x200B;**最上層頁面**&#x200B;區段中，檢查各種量度，例如造訪、不重複訪客、登入、跳出率等。 若要評估WKND頁面和首頁CTA的效能，請拖放WKND特定的維度(WKND頁面名稱、WKND CTA名稱)和量度(WKND CTA點選事件)。 這些見解對於行銷人員瞭解哪些CTA更有效率，並根據其業務目標做出資料導向式決策非常有價值。
 
 若要將使用者歷程視覺化，請使用流量視覺效果，從&#x200B;**WKND頁面名稱**&#x200B;開始，並展開至各種路徑。
 
