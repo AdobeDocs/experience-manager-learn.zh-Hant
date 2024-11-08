@@ -1,5 +1,5 @@
 ---
-title: 在AEM Forms中使用垂直索引標籤as a Cloud Service
+title: 新增自訂圖示
 description: 將自訂圖示新增到垂直索引標籤
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -11,9 +11,10 @@ feature: Adaptive Forms
 thumbnail: 331891.jpg
 badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
 jira: KT-16418
-source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
+exl-id: 20e44be0-5490-4414-9183-bb2d2a80bdf0
+source-git-commit: faa859897b6b9fbb0acff02000611de216ddda3e
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 * 增強的可用性：圖示可以快速傳達每個標籤的用途，讓使用者更容易一眼就找到他們想要的東西。 圖示等視覺提示可協助使用者更直覺地導覽。
 
-* 視覺階層與焦點：圖示可在標籤之間建立更清楚的分隔，進而改善視覺階層。 這可協助重要標籤脫穎而出，並更有效地引導使用者的注意。
+* 視覺階層與焦點：圖示可在標籤之間建立更清楚的分隔，進而改善視覺階層。 這可協助重要標籤脫穎而出，並有效引導使用者的注意。
 依照本文的指示，您應該能夠放置圖示，如下所示
 
 ![個圖示](assets/icons.png)
@@ -42,9 +43,9 @@ ht-degree: 0%
 
 ## 建立圖示對應以儲存圖示
 
-建立_variable.scss檔案的icon-map。 SCSS map $icon-map是索引鍵值配對的集合，每個索引鍵代表圖示名稱（例如home、family等），每個值是與該圖示相關聯的影像檔案的路徑。
+在_variable.scss檔案中建立icon-map。 SCSS map $icon-map是索引鍵值配對的集合，每個索引鍵代表圖示名稱（例如home、family等），每個值是與該圖示相關聯的影像檔案的路徑。
 
-![variable-scss](assets/variable.scss)
+![variable-scss](assets/variable_scss.png)
 
 ```css
 $icon-map: (
@@ -81,8 +82,7 @@ $icon-map: (
 
 新增圖示至垂直索引標籤mixin的設計目的，是在垂直索引標籤上的文字旁新增自訂圖示。 它可讓您輕鬆地將影像加入索引標籤中，做為圖示，將它放置在文字旁邊，並設定其樣式，以確保一致性和對齊方式。
 
-Mixin的劃分
-以下是mixin每個部分的功能：
+Mixin的劃分，以下是mixin每個部分的功能：
 
 引數：
 
