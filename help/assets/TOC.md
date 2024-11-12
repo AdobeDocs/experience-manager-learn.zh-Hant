@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 511823c39f0141155bc1efd7fc599b4b9b05ce69
+source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '434'
+ht-degree: 16%
 
 ---
 
@@ -18,6 +18,10 @@ ht-degree: 0%
 # AEM Assets 影片和教學課程 {#assets}
 
 + [概觀](overview.md)
+
++ 視訊播放清單{#video-playlists}
+   + [管理員檢視](playlists/admin-view.md)
+   + [資產檢視](playlists/assets-view.md)
 
 + 正在設定{#configuring}
    + [基線資料夾](configuring/baseline-folders.md)
@@ -36,7 +40,7 @@ ht-degree: 0%
    + [基本操作](./authoring/basic-operations.md)
    + [中繼資料](./authoring/metadata.md)
    + [轉譯](./authoring/renditions.md)
-   + [建立關聯及取消關聯](./authoring/relate-unrelate.md)
+   + [建立關聯與取消關聯](./authoring/relate-unrelate.md)
 
 + Collaboration{#collaboration}
    + [觀看](./collaboration/watch.md)
@@ -48,18 +52,18 @@ ht-degree: 0%
 
 + 搜尋和探索{#search-and-discovery}
    + [搜尋](./search-and-discovery/search.md)
-   + [內容相關搜尋](./search-and-discovery/contextual-search.md)
+   + [內容搜尋](./search-and-discovery/contextual-search.md)
    + [Adobe Firefly整合](./search-and-discovery/adobe-firefly.md)
    + [集合](./search-and-discovery/collections.md)
-   + [搜尋提升](./search-and-discovery/search-boost.md)
+   + [搜尋加速](./search-and-discovery/search-boost.md)
    + [尋找類似影像](./search-and-discovery/find-similar-images.md)
 
 + 進階功能{#advanced}
-   + [3D Assets](./advanced/3d-assets.md)
+   + [3D資產](./advanced/3d-assets.md)
    + [註解PDF輸出](./advanced/customizing-annotations-pdf-output.md)
    + [Assets報表](./advanced/asset-reports.md)
-   + [已封鎖的標記](./advanced/blocked-tags.md)
-   + [提取封存](./advanced/extract-archive.md)
+   + [已封鎖的標籤](./advanced/blocked-tags.md)
+   + [擷取封存](./advanced/extract-archive.md)
    + [許可權(CUG)](./advanced/closed-user-groups.md)
    + [中繼資料導向的許可權](./advanced/metadata-driven-permissions.md)
    + [視訊隱藏式字幕](./advanced/video-closed-captions.md)
@@ -69,7 +73,7 @@ ht-degree: 0%
    + [階層式中繼資料](metadata/cascade-metadata-feature-video-use.md)
    + [影像的智慧標籤](metadata/image-smart-tags.md)
    + [影像的自訂智慧標籤](metadata/custom-smart-tags.md)
-   + [視訊智慧標記](metadata/video-smart-tags.md)
+   + [視訊的智慧標記](metadata/video-smart-tags.md)
    + [匯入和匯出中繼資料](metadata/metadata-import-export.md)
 
 + Edge Delivery Services{#edge-delivery-services}
@@ -79,15 +83,15 @@ ht-degree: 0%
    + [概觀](./content-hub/overview.md)
    + [設定](./content-hub/set-up.md)
    + [新增資產](./content-hub/add-assets.md)
-   + [下載Assets](./content-hub/download-assets.md)
+   + [下載資產](./content-hub/download-assets.md)
    + [使用Adobe Express的影像變體](./content-hub/image-variants.md)
    + [集合](./content-hub/collections.md)
    + [分享](./content-hub/share.md)
 
 + 共用和分發{#sharing}
-   + [下載Assets](./sharing/download.md)
+   + [下載資產](./sharing/download.md)
    + [匯出資產](./sharing/export.md)
-   + [發佈資產](./sharing/publish.md)
+   + [Publish資產](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
@@ -110,19 +114,19 @@ ht-degree: 0%
 + Adobe資產連結{#adobe-asset-link}
    + [設定](./adobe-asset-link/setup.md)
    + [存取Adobe資產連結](./adobe-asset-link/launch-adobe-asset-link.md)
-   + [面板概述](./adobe-asset-link/panel-overview.md)
+   + [面板概觀](./adobe-asset-link/panel-overview.md)
    + [檔案和集合](./adobe-asset-link/files-and-collections.md)
    + [下載和上傳](./adobe-asset-link/download-and-upload.md)
    + [簽入簽出](./adobe-asset-link/check-in-check-out.md)
    + [版本設定和註解](./adobe-asset-link/file-versioning-and-comments.md)
-   + [置入副本](./adobe-asset-link/place-copy.md)
+   + [放置複本](./adobe-asset-link/place-copy.md)
    + [置入已連結](./adobe-asset-link/place-linked.md)
-   + [僅供刊登(FPO)](./adobe-asset-link/for-placement-only.md)
+   + [僅針對位置(FPO)](./adobe-asset-link/for-placement-only.md)
    + [資產搜尋](./adobe-asset-link/asset-search.md)
 
 + 內容自動化{#content-automation}
    + [概觀](./content-automation/overview.md)
-   + [創意經營](./content-automation/creative-operations.md)
+   + [創意營運](./content-automation/creative-operations.md)
    + [Photoshop動作](./content-automation/photoshop-actions.md)
 
 + Dynamic Media{#dynamic-media}
@@ -138,7 +142,7 @@ ht-degree: 0%
       + [自訂視訊縮圖](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH最適化串流](dynamic-media/dynamic-media-dash.md)
       + [Dynamic Media智慧型裁切視訊](dynamic-media/dynamic-media-smart-crop-video.md)
-      + [視訊播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
+      + [影片播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + 檢視者{#viewers}
       + [檢視器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [全景和垂直影像檢視器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
@@ -155,7 +159,7 @@ ht-degree: 0%
       + [建立影像預設集](dynamic-media/tutorials/creating-image-presets.md)
       + [建立智慧型裁切影像設定檔](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
       + [建立視訊設定檔](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
-      + [正在處理Assets](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [正在處理資產](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
       + [設定安全預覽伺服器](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
       + [產生URL和內嵌程式碼](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
       + [觸發匯出工作](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
@@ -167,7 +171,7 @@ ht-degree: 0%
 
 + Workfront整合{#workfront}
    + 增強型聯結器{#enhanced-connector}
-      + [增強型聯結器基本需知](./workfront/enhanced-connector/basics.md)
+      + [加強的聯結器基本需知](./workfront/enhanced-connector/basics.md)
       + [專案資料夾](./workfront/enhanced-connector/project-folders.md)
       + AEM Experts系列{#aem-experts-series}
          + [概觀](./workfront/enhanced-connector/aem-experts-series/overview.md)
