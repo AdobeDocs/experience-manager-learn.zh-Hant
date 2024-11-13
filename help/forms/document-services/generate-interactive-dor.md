@@ -10,9 +10,9 @@ jira: KT-9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 177
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 2625a9127c36ee191eb67128546864c9f6901663
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ $(document).ready(function() {
 
 ### 建立最適化表單
 
-根據上一步的XSD建立最適化表單。 建立表單關聯以使用使用者端程式庫「irs」。 此使用者端程式庫具有向servlet進行POST呼叫的程式碼，此servlet會將PDF傳回給呼叫的應用程式
+根據上一步的XSD建立最適化表單。 建立表單關聯以使用使用者端程式庫「irs」。 此使用者端程式庫具有向servlet進行POST呼叫的程式碼，此servlet會將PDF傳回給呼叫的應用程式。
 按一下_下載PDF_&#x200B;時會觸發下列程式碼
 
 ```javascript
@@ -211,7 +211,7 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 }
 ```
 
-在範常式式碼中，我們從請求物件中擷取xdp名稱和其他引數。 如果表單不是以XSD為基礎，則會建立要與xdp合併的xml檔案。如果表單是以XSD為基礎，我們只會從最適化表單提交的資料中擷取適當的節點，以產生要與xdp範本合併的xml檔案。
+在此範常式式碼中，xdp名稱和其他引數會從請求物件中擷取。 如果表單不是以XSD為基礎，則會建立新的XML檔案以與xdp合併。 不過，如果表單是以XSD為基礎，則會直接從最適化表單提交的資料中擷取相關節點，並產生XML檔案以相應地與xdp範本合併。
 
 ## 在您的伺服器上部署範例
 
@@ -226,6 +226,11 @@ DevelopingWithServiceUser.core：getformsresourceresolver=fd-service
 1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. 填寫一些表單欄位。
 1. 按一下「下載PDF」以取得PDF。 您可能需要等候幾秒鐘，才能下載PDF。
+
+>[!NOTE]
+>
+>當您使用瀏覽器的pdf檢視器開啟已下載的PDF時，您不會看到pdf中的資料。 使用Adobe Acrobat或Adobe Reader開啟已下載的PDF。
+
 
 >[!NOTE]
 >
