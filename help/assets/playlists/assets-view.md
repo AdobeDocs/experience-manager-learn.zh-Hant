@@ -9,14 +9,16 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: bee9c6dfa7a2e3c55f6ec938cffff4622d800004
+source-git-commit: d95c0cfc64f22efa1490fb1e0d787b8d76006add
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '408'
 ht-degree: 1%
 
 ---
 
-# AEM Assets Assets檢視視訊播放清單
+# Assets檢視的影片播放清單
+
+![AEM Assets Assets檢視](./assets/assets-view.png){align=center}
 
 探索這些播放清單以掌握AEM Assets的as a Cloud ServiceAssets檢視，包括設定、最佳化、使用以及與創意工作流程的無縫整合。 取得成功使用AEM Assets as a Cloud Service所需的深入解析。
 
@@ -36,7 +38,7 @@ ht-degree: 1%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" title="設定Experience Manager的管理存取權">
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" title="設定Experience Manager的管理存取權" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1130bb3c4cd41705ba451f3219632a7d57f9b3f85.jpeg?width=400&format=pjpg&optimize=medium" alt="設定Experience Manager的管理存取權"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -45,11 +47,11 @@ ht-degree: 1%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" title="設定Experience Manager的管理存取權">設定Experience Manager的管理存取權</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" title="設定Experience Manager的管理存取權">設定Experience Manager的管理存取權</a>
                     </p>
                     <p class="is-size-6">探索使用者如何使用Adobe IMS執行AEM as a Cloud Service驗證，以及如何使用Adobe IMS使用者、使用者群組和產品設定檔來控制AEM存取權及其功能。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
                 </a>
             </div>
@@ -59,7 +61,7 @@ ht-degree: 1%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" title="開始使用AEM Assets Essentials">
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" title="開始使用AEM Assets Essentials" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1bdc0e38944ddc90ff77140bb859bb728cc5d4065.jpeg?width=400&format=pjpg&optimize=medium" alt="開始使用AEM Assets Essentials"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -68,11 +70,11 @@ ht-degree: 1%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" title="開始使用AEM Assets Essentials">開始使用AEM Assets Essentials</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" title="開始使用AEM Assets Essentials">開始使用AEM Assets Essentials</a>
                     </p>
                     <p class="is-size-6">瞭解AEM Assets Essentials如何簡化您部門的資產管理。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
                 </a>
             </div>
@@ -80,6 +82,12 @@ ht-degree: 1%
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+
+
+
+
+
 
 
 
@@ -100,7 +108,7 @@ ht-degree: 1%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" title="使用Adobe Firefly產生影像Assets">
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" title="使用Adobe Firefly產生影像Assets" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_16fdb25830809ba4c0fe9fda9afa150b64b0f83f5.jpeg?width=400&format=pjpg&optimize=medium" alt="使用Adobe Firefly產生影像Assets"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -109,11 +117,11 @@ ht-degree: 1%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" title="使用Adobe Firefly產生影像Assets">使用Adobe Firefly產生影像Assets</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" target="_blank" rel="referrer" title="使用Adobe Firefly產生影像Assets">使用Adobe Firefly產生影像Assets</a>
                     </p>
                     <p class="is-size-6">瞭解AEM Assets如何使用Adobe Firefly和Gen AI提升內容速度。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
                 </a>
             </div>
@@ -123,7 +131,7 @@ ht-degree: 1%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-assets-view-search-use" title="在AEM Assets Assets檢視中搜尋以尋找Assets">
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-assets-view-search-use" title="在AEM Assets Assets檢視中搜尋以尋找Assets" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_10a54527c0613cd760d10f3c5c95141203d88a0aa.jpeg?width=400&format=pjpg&optimize=medium" alt="在AEM Assets Assets檢視中搜尋以尋找Assets"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -132,11 +140,11 @@ ht-degree: 1%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-assets-view-search-use" title="在AEM Assets Assets檢視中搜尋以尋找Assets">在AEM Assets Assets檢視中搜尋Assets</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-assets-view-search-use" target="_blank" rel="referrer" title="在AEM Assets Assets檢視中搜尋以尋找Assets">在AEM Assets Assets檢視中搜尋Assets</a>
                     </p>
                     <p class="is-size-6">瞭解AEM Assets Assets檢視搜尋如何協助您快速輕鬆地尋找資產。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-assets-view-search-use" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-assets-view-search-use" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
                 </a>
             </div>
@@ -144,7 +152,6 @@ ht-degree: 1%
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
-
 
 
 
@@ -163,7 +170,7 @@ ht-degree: 1%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" title="使用Workfront和Assets Essentials管理創意內容工作流程">
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" title="使用Workfront和Assets Essentials管理創意內容工作流程" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1781139425d77174a992697a33d097a8bd5b54d5b.jpeg?width=400&format=pjpg&optimize=medium" alt="使用Workfront和Assets Essentials管理創意內容工作流程"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -172,11 +179,11 @@ ht-degree: 1%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" title="使用Workfront和Assets Essentials管理創意內容工作流程">使用Workfront和Assets Essentials管理創意內容工作流程</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="使用Workfront和Assets Essentials管理創意內容工作流程">使用Workfront和Assets Essentials管理創意內容工作流程</a>
                     </p>
                     <p class="is-size-6">瞭解Adobe Workfront和Experience Manager Assets Essentials如何協助您的組織管理創意工作流程。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
                 </a>
             </div>
@@ -184,3 +191,10 @@ ht-degree: 1%
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+
+
+
+
+
+
