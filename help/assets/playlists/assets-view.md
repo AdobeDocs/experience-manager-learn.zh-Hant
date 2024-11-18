@@ -9,7 +9,7 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: c939bf218211ef4f515ac8c7eea67cc5425eb3a9
+source-git-commit: 95ff2a6d99039d541092fcc45e9fc45f1a8a2b6a
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # AEM Assets Assets檢視視訊播放清單
 
-探索這些播放清單以掌握AEM Assetsas a Cloud Service管理員檢視，包括設定、最佳化、使用以及與創意工作流程無縫整合。 取得成功使用AEM Assets as a Cloud Service所需的深入解析。
+探索這些播放清單以掌握AEM Assets的as a Cloud ServiceAssets檢視，包括設定、最佳化、使用以及與創意工作流程的無縫整合。 取得成功使用AEM Assets as a Cloud Service所需的深入解析。
 
 ## 設定Assets檢視
 
