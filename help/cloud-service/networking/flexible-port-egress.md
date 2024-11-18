@@ -11,9 +11,9 @@ thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 870
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1275'
 ht-degree: 2%
 
 ---
@@ -45,9 +45,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 + Cloud Manager計畫ID
 + Cloud Manager環境ID
 
-如需更多詳細資訊，請觀看以下逐步解說，瞭解如何設定、設定和取得Cloud Manger API認證，以及如何使用這些認證進行Cloud Manager API呼叫。
-
->[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
+如需詳細資訊，[請檢閱如何設定、設定和取得Cloud Manger API認證](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用這些認證進行Cloud Manager API呼叫。
 
 本教學課程使用`curl`來進行Cloud Manager API設定。 提供的`curl`命令採用Linux/macOS語法。 如果使用Windows命令提示字元，請將`\`分行符號取代為`^`。
 
