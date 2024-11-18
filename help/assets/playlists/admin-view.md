@@ -8,15 +8,15 @@ level: Beginner
 last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
-source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
+exl-id: 924b3bab-e0ed-4b07-bded-344aab61eac5
+source-git-commit: 74e9962dfb7f451d395a3ec1a56989e3cbc4295b
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
 
-
-# AEM Assets管理員檢視播放清單
+# AEM Assets管理員檢視影片播放清單
 
 探索這些播放清單以掌握AEM Assetsas a Cloud Service管理員檢視，包括設定、最佳化、使用以及與創意工作流程無縫整合。 取得成功使用AEM Assets as a Cloud Service所需的深入解析。
 
@@ -256,5 +256,3 @@ ht-degree: 0%
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
-
-
