@@ -1,17 +1,17 @@
 ---
-title: AEM Assets Assets檢視視訊播放清單
-description: 瞭解如何透過此專為提升您的產品專業知識而設計的影片播放清單集合，在Assets檢視中使用AEM Assetsas a Cloud Service。
+title: AEM Assets Assets檢視的影片播放清單
+description: 透過這精選旨在提升產品知識的影片播放清單，瞭解如何在Assets檢視中導覽AEM Assetsas a Cloud Service。
 version: Cloud Service
 topic: Content Management
 role: User
 level: Beginner
-last-substantial-update: 2024-11-01T00:00:00Z
+last-substantial-update: 2024-11-20T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: 889d9a15041e23fa42d24c508a131690db58738a
+source-git-commit: b98f5321a4545d8b9d89d8d599723acc296cf0d4
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '409'
 ht-degree: 1%
 
 ---
