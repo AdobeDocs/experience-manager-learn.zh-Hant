@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: 4806312931038cc31e6bcf67f242483f62723387
+source-git-commit: e4a9ed215603e1a1726a5a031c1c18f93d438355
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '541'
 ht-degree: 0%
 
 ---
@@ -44,36 +44,6 @@ ht-degree: 0%
             </p>
         </td>   
         <td>
-            <a href="./season-3/cloud5-rum.md">
-                <img alt="Real User Monitoring (RUM) — 真實使用者監控(RUM)" src="https://video.tv.adobe.com/v/3427495?format=jpeg"/>
-            </a>
-            <div>
-                <a href="./season-3/cloud5-rum.md">
-                <strong>真實使用者監控(RUM)</strong></a>        
-                <br/><em>AEM Engineering的James Talbot &amp; Damian Langsweirdt</em>
-            </div>
-            <p>
-                <br/>
-                探索Real User Monitoring (RUM)可搭配Edge Delivery Services使用。
-            </p>
-        </td>   
-        <!--
-        <td>
-            <a href="./season-3/cloud5-rum-explorer.md">
-                <img alt="Real User Monitoring (RUM) Explorer" src="https://video.tv.adobe.com/v/3429772?format=jpeg"/>
-            </a>
-            <div>
-                <a href="./season-3/cloud5-rum-explorer.md">
-                <strong>Real User Monitoring (RUM) Explorer</strong></a>        
-                <br/><em>with James Talbot & Damian Langsweirdt, AEM Engineering</em>
-            </div>
-            <p>
-                <br/>
-                Learn about Real User Monitoring (RUM) Explorer and how to access it.
-            </p>
-        </td>   
-        -->
-        <td>
             <a href="./season-3/cloud5-edge-workers.md">
                 <img alt="Edge背景工作" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
             </a>
@@ -87,8 +57,6 @@ ht-degree: 0%
                 探索邊緣工作者使用Edge Delivery Services的重要性。
             </p>
         </td>   
-    </tr>
-    <tr>
         <td>
             <a href="./season-3/cloud5-publish-events.md">
                 <img alt="Publish，在Edge Delivery Services中取消發佈事件" src="https://video.tv.adobe.com/v/3427681?format=jpeg"/>
@@ -103,6 +71,8 @@ ht-degree: 0%
                 探索在Edge Delivery Services中發佈和取消發佈時觸發的事件，以及使用這些事件的使用案例和範例。
             </p>
         </td>  
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-query-indexes.md">
                 <img alt="在Edge Delivery Services中查詢索引和Excel公式" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
@@ -131,8 +101,6 @@ ht-degree: 0%
                 探索如何在Edge Delivery Services中設定您自己的Cloudflare CDN。
             </p>
         </td>           
-    </tr>  
-    <tr>
         <td>
             <a href="./season-3/cloud5-integrate-assets.md">
                 <img alt="將AEM Assets與檔案製作整合" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
@@ -146,7 +114,9 @@ ht-degree: 0%
                 <br/>
                 探索如何將AEM Assets與檔案製作整合。
             </p>
-        </td>        
+        </td>
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
                 <img alt="AEM Sites中的Generative AI" src="https://video.tv.adobe.com/v/3428436?format=jpeg"/>
@@ -175,8 +145,6 @@ ht-degree: 0%
                  瞭解Universal Editor和AEM與Edge Delivery Services。
             </p>
         </td>
-    </tr>  
-    <tr>
         <td>
             <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
                 <img alt="使用Edge Delivery Services將網站匯入AEM Sites" 
@@ -192,6 +160,8 @@ ht-degree: 0%
                  瞭解如何使用Edge Delivery Services將網站匯入AEM Sites。
             </p>
         </td>
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-using-admin-api.md">
                 <img alt="搭配使用Admin API與Edge Delivery Services" 
@@ -222,8 +192,6 @@ ht-degree: 0%
                  瞭解什麼是Lighthouse分數，以及取得最佳Lighthouse分數的技巧。
             </p>
         </td>            
-    </tr> 
-    <tr>
         <td>
             <a href="./season-3/cloud5-lighthouse-score-optimization-part2.md">
                 <img alt="Lighthouse分數最佳化 — 第2部分"
@@ -238,7 +206,9 @@ ht-degree: 0%
                 <br/>                
                  瞭解改善總封鎖時間的技術。
             </p>
-        </td>            
+        </td>   
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-lighthouse-score-optimization-part3.md">
                 <img alt="Lighthouse分數最佳化 — 第3部分"
