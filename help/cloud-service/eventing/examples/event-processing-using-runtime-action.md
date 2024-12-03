@@ -12,7 +12,7 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: 315bc1029b133f2ae857196f65e39229caaecaa1
+source-git-commit: 933493afff905bf27ba3d752c543c2e92732bc4c
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -259,4 +259,3 @@ if (params.challenge) {
 - 可以使用Adobe I/O Runtime動作完成事件處理。
 - 執行階段動作可與您的內部應用程式、協力廠商解決方案和Adobe解決方案等系統通訊。
 - 執行階段動作是商務程式的入口點，是針對內容變更而設計。
-
