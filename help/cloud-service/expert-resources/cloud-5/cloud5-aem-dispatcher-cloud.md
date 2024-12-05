@@ -10,10 +10,10 @@ recommendations: noDisplay, noCatalog
 thumbnail: 342067.jpeg
 exl-id: 90c61bfb-46ff-4941-b89e-ce38d1025de8
 duration: 311
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 0%
+source-wordcount: '99'
+ht-degree: 2%
 
 ---
 
@@ -30,3 +30,7 @@ Darin和James討論AEM雲端中的Dispatcher，包括一些最佳實務和與AMS
    + [移轉檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
    + [部落格](https://medium.com/adobetech/migrating-a-dispatcher-configuration-from-managed-services-to-aem-as-a-cloud-service-fa8a80d242ee)
 + [移轉工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration)
+
+## 其他資源
+
+在[Cloud 5第1](cloud5-season-1.md)季頁面上觀看相關影片。

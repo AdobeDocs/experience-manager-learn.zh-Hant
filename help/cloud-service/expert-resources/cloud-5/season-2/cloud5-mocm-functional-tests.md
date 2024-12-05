@@ -9,10 +9,10 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 5d9d70ab-3aaa-4e88-b0f8-e8cfe73cc617
 duration: 310
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 0%
+source-wordcount: '90'
+ht-degree: 2%
 
 ---
 
@@ -27,3 +27,7 @@ AEM as a Cloud Service預設會完成許多功能測試，並將您的應用程�
 + [功能測試](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/functional-testing.html)
 + [AEM煙霧測試](https://github.com/adobe/aem-test-samples/)
 + [AEM測試使用者端](https://github.com/adobe/aem-testing-clients/)
+
+## 其他資源
+
+在[Cloud 5第2](../cloud5-season-2.md)季頁面上觀看相關影片。

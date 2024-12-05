@@ -12,16 +12,20 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 last-substantial-update: 2024-09-17T00:00:00Z
 jira: KT-16146
-source-git-commit: 285c652460ff00301d183defc56c07b3f74d8e5c
+exl-id: 4d01f350-1bdd-49df-a99d-dce1ad378364
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 0%
+source-wordcount: '64'
+ht-degree: 3%
 
 ---
-
 
 # Lighthouse分數最佳化 — 第2部分
 
 瞭解改善總封鎖時間，並在Edge Delivery Services專案中獲得最高光源分數的技術。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3434042/?learn=on)
+
+## 其他資源
+
+在[Cloud 5第3](../cloud5-season-3.md)季頁面上觀看相關影片。
