@@ -1,0 +1,85 @@
+---
+title: Cloud 5 — 第4季
+description: 第四季可讓您透過與曾參與複雜專案的專家進行深入訪談，瞭解AEM Edge Delivery服務
+sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
+solution: Experience Manager as a Cloud Service, Experience Manager
+recommendations: noDisplay, noCatalog
+duration: 30
+source-git-commit: 891fd1cfdcb82a6d4f1bb031cfa11893a69d0546
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 0%
+
+---
+
+# Cloud 5第4季
+
+## 簡介
+
+歡迎使用AEM Engineering的Cloud 5系列第四季。 任何產品實作階段的主要問題之一，就是這些範例、工具或API有足夠的程式碼範例和/或即時示範。 此系列的目標是在5分鐘或更短時間內提供關於AEM和Edge Delivery Services的有用資訊。
+
+## 建議方塊
+
+造訪[建議方塊](https://forms.office.com/r/74P5Xz4UH0)以提交主題概念。
+
+## 第4季
+
+每一季的長度各異，且會依固定排程發行。 請造訪此頁面，每週更新或關注您選擇的社交網路。
+
+<!-- CARDS 
+
+* ./season-4/cloud5-edge-delivery-services-best-practices.md
+* ./season-4/cloud5-search-optimization.md
+* ./season-4/cloud5-google-maps.md
+
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Cloud 5 - Development best practices for Edge Delivery Services">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" title="Cloud 5 -Edge Delivery Services的開發最佳實務" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440978/?format=jpeg&nocache=1734024745060" alt="Cloud 5 -Edge Delivery Services的開發最佳實務"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" target="_blank" rel="referrer" title="Cloud 5 -Edge Delivery Services的開發最佳實務">雲端5 -Edge Delivery Services的開發最佳實務</a>
+                    </p>
+                    <p class="is-size-6">探索與經驗豐富的架構師在Edge Delivery Services中進行開發的技巧。</p>
+                </div>
+                <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Integrating with Google Maps">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./season-4/cloud5-google-maps.md" title="與Google地圖整合" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440977/?format=jpeg&nocache=1734024745051" alt="與Google地圖整合"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./season-4/cloud5-google-maps.md" target="_blank" rel="referrer" title="與Google地圖整合">與Google地圖整合</a>
+                    </p>
+                    <p class="is-size-6">探索如何將Edge Delivery Services與Google地圖整合。</p>
+                </div>
+                <a href="./season-4/cloud5-google-maps.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
