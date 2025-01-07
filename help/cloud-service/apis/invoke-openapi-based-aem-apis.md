@@ -1,6 +1,6 @@
 ---
 title: 如何叫用OpenAPI型AEM API
-description: 瞭解如何從自訂應用程式在AEM as a Cloud Service上設定和叫用OpenAPI型AEM API。
+description: 瞭解如何使用OAuth伺服器對伺服器驗證，從自訂應用程式在AEM as a Cloud Service上設定和叫用OpenAPI型AEM API。
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -12,16 +12,18 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
 
-# 如何叫用OpenAPI型AEM API{#invoke-openapi-based-aem-apis}
+# 叫用以OpenAPI為基礎的AEM API，以進行伺服器對伺服器的驗證{#invoke-openapi-based-aem-apis}
 
-瞭解如何從自訂應用程式在AEM as a Cloud Service上設定和叫用OpenAPI型AEM API。
+瞭解如何使用&#x200B;_OAuth伺服器對伺服器_&#x200B;驗證，從自訂應用程式在AEM as a Cloud Service上設定及叫用OpenAPI型AEM API。
+
+OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。 它使用OAuth 2.0 _client_credentials_&#x200B;授權型別來驗證使用者端應用程式。
 
 >[!AVAILABILITY]
 >
@@ -30,7 +32,7 @@ ht-degree: 0%
 在本教學課程中，您將學習如何：
 
 - 為您的AEM as a Cloud Service環境啟用OpenAPI型AEM API存取權。
-- 建立和設定Adobe Developer Console (ADC)專案，以使用OAuth伺服器對伺服器驗證存取AEM API。
+- 建立並設定Adobe Developer Console (ADC)專案，以使用&#x200B;_OAuth伺服器對伺服器驗證_&#x200B;存取AEM API。
 - 開發範例NodeJS應用程式，呼叫Assets Author API以擷取特定資產的中繼資料。
 
 開始之前，請確定您已檢閱[存取AdobeAPI和相關概念](overview.md#accessing-adobe-apis-and-related-concepts)區段。
