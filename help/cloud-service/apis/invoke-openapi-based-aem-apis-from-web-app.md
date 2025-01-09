@@ -1,5 +1,5 @@
 ---
-title: 如何從網頁應用程式叫用OpenAPI型AEM API
+title: 透過網頁應用程式的使用者驗證叫用OpenAPI型AEM API
 description: 瞭解如何使用OAuth網頁應用程式驗證，從自訂網頁應用程式在AEM as a Cloud Service上叫用OpenAPI型AEM API。
 version: Cloud Service
 feature: Developing
@@ -9,15 +9,15 @@ level: Intermediate
 doc-type: Tutorial
 jira: KT-16718
 thumbnail: KT-16718.jpeg
-last-substantial-update: 2024-12-17T00:00:00Z
+last-substantial-update: 2025-01-09T00:00:00Z
 duration: 0
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+exl-id: dc35256a-3873-413f-b282-90948efd5f31
+source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
 workflow-type: tm+mt
-source-wordcount: '2399'
+source-wordcount: '2433'
 ht-degree: 0%
 
 ---
-
 
 # 透過網頁應用程式的使用者驗證叫用OpenAPI型AEM API{#invoke-openapi-based-aem-apis-from-web-app}
 
@@ -36,6 +36,8 @@ OAuth網頁應用程式驗證適用於具有前端和&#x200B;_後端_&#x200B;元
 WKND PIM應用程式是範例Web應用程式，用來管理儲存在AEM as a Cloud Service中的產品屬性及其資產中繼資料。 此範例示範網頁應用程式如何與Adobe API緊密整合，以提供有效率、以使用者為中心的工作流程。
 
 Adobe Developer Console (ADC)專案已設定為使用OAuth Web App驗證存取Assets Author API。 它為WKND-PIM網頁應用程式提供必要的&#x200B;_client_id_&#x200B;和&#x200B;_client_secret_，以起始&#x200B;_authorization_code_&#x200B;授權流程。
+
+>[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)
 
 下圖說明WKND-PIM網頁應用程式&#x200B;_取得使用者特定存取權杖以與Assets Author API_&#x200B;互動的功能流程。
 
@@ -404,6 +406,11 @@ OpenAPI型AEM API呼叫是從伺服器端（Express中介軟體）發出，而�
 
 若要在存取Token過期之前重新整理，您可以實作重新整理Token流程。 不過，為了簡化教學課程，WKND-PIM網頁應用程式不會實作重新整理權杖流程。
 
+
+>[!TIP]
+>
+>您可以依照下一節所述，在本機電腦上試用WKND-PIM網頁應用程式，並取得OAuth網頁應用程式驗證流程和API呼叫的實作體驗。
+
 ## 設定並執行網頁應用程式
 
 讓我們在您的本機電腦上設定並執行WKND-PIM網頁應用程式，以瞭解OAuth網頁應用程式驗證流程和API呼叫。
@@ -644,7 +651,7 @@ OpenAPI型AEM API呼叫是從伺服器端（Express中介軟體）發出，而�
 
 >[!IMPORTANT]
 >
->如果驗證的使用者缺少檢閱或更新資產中繼資料所需的許可權，以OpenAPI為基礎的AEM API將傳回403禁止錯誤。 這可確保即使使用者已通過驗證並擁有有效的IMS存取權杖，他們仍無法在沒有所需許可權的情況下存取AEM資源。
+>如果驗證的使用者缺少檢閱或更新資產中繼資料所需的許可權，基於OpenAPI的AEM API會傳回403禁止錯誤。 這可確保即使使用者已通過驗證並擁有有效的IMS存取權杖，他們若無所需許可權仍無法存取AEM資源。
 
 
 ### 檢閱應用程式程式碼
