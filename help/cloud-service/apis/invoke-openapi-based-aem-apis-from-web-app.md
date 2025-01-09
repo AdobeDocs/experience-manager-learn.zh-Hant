@@ -12,7 +12,7 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-01-09T00:00:00Z
 duration: 0
 exl-id: dc35256a-3873-413f-b282-90948efd5f31
-source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
+source-git-commit: 52749190860961ed2baf4c3c3cd7a6b55a87af58
 workflow-type: tm+mt
 source-wordcount: '2433'
 ht-degree: 0%
@@ -37,7 +37,8 @@ WKND PIM應用程式是範例Web應用程式，用來管理儲存在AEM as a Clo
 
 Adobe Developer Console (ADC)專案已設定為使用OAuth Web App驗證存取Assets Author API。 它為WKND-PIM網頁應用程式提供必要的&#x200B;_client_id_&#x200B;和&#x200B;_client_secret_，以起始&#x200B;_authorization_code_&#x200B;授權流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)
+
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 下圖說明WKND-PIM網頁應用程式&#x200B;_取得使用者特定存取權杖以與Assets Author API_&#x200B;互動的功能流程。
 
