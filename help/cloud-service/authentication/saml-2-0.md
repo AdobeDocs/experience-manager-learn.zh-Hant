@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 87dd4873152d4690abb1efcfebd43d10033afa0a
+source-git-commit: a1f7395cc5f83174259d7a993fefc9964368b4bc
 workflow-type: tm+mt
-source-wordcount: '3919'
+source-wordcount: '4037'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ AEM Publish SAML整合的典型流程如下：
    + IDP會提示使用者輸入認證。
    + 使用者已透過IDP驗證，無需再提供認證。
 1. IDP會產生包含使用者資料的SAML宣告，並使用IDP的私人憑證加以簽署。
-1. IDP會透過HTTPPOST，透過使用者的網頁瀏覽器，將SAML宣告傳送至AEM Publish。
+1. IDP會透過HTTPPOST，透過使用者的網頁瀏覽器(ASTIVATE_PROTECTED_PATH/saml_login)，將SAML宣告傳送至AEM Publish。
 1. AEM Publish會收到SAML判斷提示，並使用IDP公開憑證驗證SAML判斷提示的完整性和真實性。
 1. AEM Publish會根據SAML 2.0 OSGi設定和SAML宣告的內容來管理AEM使用者記錄。
    + 建立使用者
@@ -440,6 +440,9 @@ AEM Publish支援單一反向連結篩選設定，因此請將SAML設定需求�
 /0190 { /type "allow" /method "POST" /url "*/saml_login" }
 ```
 
+>[!NOTE]
+>當在AEM中針對各種受保護路徑和不同IDP端點部署多個SAML設定時，請確保IDP張貼到RESPONSIVE_PROTECTED_PATH/saml_login端點以在AEM端選取適當的SAML設定。 如果同一受保護路徑有重複的SAML設定，則會隨機選取SAML設定。
+
 如果已設定Apache Webserver上的URL重新寫入(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，請確定對`.../saml_login`端點的要求不會意外遭到竄改。
 
 ### 如何為新環境中的SAML使用者啟用動態群組成員資格
@@ -561,6 +564,12 @@ $ git push adobe saml-auth:develop
 ## 叫用SAML驗證
 
 您可以建立巧盡心思打造的連結或按鈕，從AEM Site網頁叫用SAML驗證流程。 以下所述的引數可以視需要以程式設計方式設定，因此，例如，登入按鈕可能會根據按鈕的內容，將使用者在成功SAML驗證時採取的`saml_request_path`設定到不同的AEM頁面。
+
+## 使用SAML時的安全快取
+
+在AEM發佈執行個體上，通常會快取大部分頁面。 不過，對於受SAML保護的路徑，應使用auth_checker設定停用快取或啟用安全快取。 如需詳細資訊，請參閱[這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-dispatcher/using/configuring/permissions-cache)提供的詳細資料
+
+請注意，如果您在快取受保護路徑時未啟用auth_checker，則可能會遇到無法預期的行為。
 
 ### GET要求
 
