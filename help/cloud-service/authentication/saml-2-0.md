@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: a1f7395cc5f83174259d7a993fefc9964368b4bc
+source-git-commit: 6f8d2bdd4ffb1c643cebcdd59fb529d8da1c44cf
 workflow-type: tm+mt
-source-wordcount: '4037'
+source-wordcount: '4262'
 ht-degree: 1%
 
 ---
@@ -445,6 +445,10 @@ AEM Publish支援單一反向連結篩選設定，因此請將SAML設定需求�
 
 如果已設定Apache Webserver上的URL重新寫入(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，請確定對`.../saml_login`端點的要求不會意外遭到竄改。
 
+## 動態群組成員資格
+
+動態群組成員資格是[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)中的功能，可提升群組評估及布建的效能。 本節說明啟用此功能時如何儲存使用者和群組，以及如何修改SAML驗證處理常式的組態，以便為新環境或現有環境啟用它。
+
 ### 如何為新環境中的SAML使用者啟用動態群組成員資格
 
 為了大幅增強新AEM as a Cloud Service環境中的群組評估效能，建議在新環境中啟用動態群組成員資格功能。
@@ -518,7 +522,17 @@ AEM Publish支援單一反向連結篩選設定，因此請將SAML設定需求�
 }
 ```
 
-### 自動移轉至現有環境的動態群組成員資格
+### 如何在現有環境中啟用SAML使用者的動態群組成員資格
+
+如上一節所述，外部使用者和群組的格式與本機使用者和群組使用的格式略有不同。 您可以為外部群組定義新的ACL並布建新的外部使用者，或使用如下所述的移轉工具。
+
+#### 為具有外部使用者的現有環境啟用動態群組成員資格
+
+SAML驗證處理常式會在指定下列屬性時建立外部使用者： `"identitySyncType": "idp"`。 在此情況下，可以啟用動態群組成員資格，並將這個屬性修改為： `"identitySyncType": "idp_dynamic"`。 不需要移轉。
+
+#### 針對具有本機使用者的現有環境，自動移轉至動態群組成員資格
+
+SAML驗證處理常式會在指定下列屬性時建立本機使用者： `"identitySyncType": "default"`。 若未指定屬性，此亦為預設值。 在本節中，我們將說明自動移轉程式所執行的步驟。
 
 啟用此移轉時，會在使用者驗證期間執行，並包含下列步驟：
 1. 本機使用者會移轉至外部使用者，同時保留原始使用者名稱。 這表示已移轉的本機使用者（現在為外部使用者）會保留其原始使用者名稱，而非遵循上一節中所述的命名語法。 將新增一個額外的屬性，稱為： `rep:externalId`，其值為`[user name];[idp]`。 未修改使用者`PrincipalName`。
@@ -533,18 +547,20 @@ AEM Publish支援單一反向連結篩選設定，因此請將SAML設定需求�
 `group1;idp`是本機群組的成員： `group1`。
 然後`user1`會透過繼承成為本機群組`group1`的成員
 
-外部群組的群組成員資格儲存在屬性`rep:authorizableId`的使用者設定檔中
+外部群組的群組成員資格儲存在屬性`rep:externalPrincipalNames`的使用者設定檔中
 
 ### 如何設定自動移轉至動態群組成員資格
 
-1. 啟用SAML OSGI組態檔中的屬性`"identitySyncType": "idp_dynamic_simplified_id"`： `com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json`：
-2. 使用屬性設定新的OSGI服務，PID為： `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~...`：
+1. 啟用SAML OSGi組態檔中的屬性`"identitySyncType": "idp_dynamic_simplified_id"`： `com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json`：
+2. 設定新的OSGi服務，原廠PID的開頭為： `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~`。 例如，PID可以是： `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~myIdP`。 設定下列屬性：
 
 ```
 {
-  "idpIdentifier": "<vaule of identitySyncType of saml configuration to be migrated>"
+  "idpIdentifier": "<value of IDP Identifier (idpIdentifier)" property from the "com.adobe.granite.auth.saml.SamlAuthenticationHandler" configuration to be migrated>"
 }
 ```
+
+若要移轉多個SAML組態，必須為`com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration`建立多個OSGi Factory組態，每個組態指定要移轉的`idpIdentifier`。
 
 ## 部署SAML設定
 
