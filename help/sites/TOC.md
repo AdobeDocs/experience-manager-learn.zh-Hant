@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
+source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '582'
 ht-degree: 17%
 
 ---
@@ -98,6 +98,16 @@ ht-degree: 17%
       + [檔案結構](edge-delivery-services/developing/document-structure.md)
       + [本機開發](edge-delivery-services/developing/local-development.md)
       + [Git](edge-delivery-services/developing/git.md)
+      + 通用編輯器 {#universal-editor}
+         + [概觀](./edge-delivery-services/developing/universal-editor/0-overview.md)
+         + [新程式碼專案](./edge-delivery-services/developing/universal-editor/1-new-code-project.md)
+         + [新增AEM網站](./edge-delivery-services/developing/universal-editor/2-new-aem-site.md)
+         + [本機開發環境](./edge-delivery-services/developing/universal-editor/3-local-development-environment.md)
+         + [網站品牌化](./edge-delivery-services/developing/universal-editor/4-website-branding.md)
+         + [新區塊](./edge-delivery-services/developing/universal-editor/5-new-block.md)
+         + [編寫區塊](./edge-delivery-services/developing/universal-editor/6-author-block.md)
+         + [僅使用CSS封鎖](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
+         + [使用CSS和JS封鎖](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
    + 操作說明{#how-to}
       + [RSS摘要](edge-delivery-services/how-to/rss.md)
       + [社群媒體分享](edge-delivery-services/how-to/social-media-sharing.md)
@@ -155,7 +165,7 @@ ht-degree: 17%
 + 整合 {#integrations}
    + Experience Platform{#experience-platform}
       + [產生FPID](integrations/platform/fpid.md)
-      + [Web SDK](integrations/platform/web-sdk.md)
+      + [網頁SDK](integrations/platform/web-sdk.md)
       + [使用Platform Web SDK進行分析](integrations/platform/analytics-using-web-sdk.md)
    + Adobe Experience Platform {#experience-platform-data-collection-tags}中的標籤
       + [概觀](integrations/experience-platform/data-collection/tags/overview.md)

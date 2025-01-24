@@ -11,10 +11,10 @@ doc-type: Catalog
 duration: 660
 last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
-source-git-commit: 2aa189c46af16813d2709aa2ec02b509c4bb544e
+source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 14%
+source-wordcount: '430'
+ht-degree: 16%
 
 ---
 
@@ -24,74 +24,74 @@ ht-degree: 14%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
 
-請檢閱[檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview)，以瞭解Edge Delivery Services及其功能的完整詳細資料。
+請檢閱[檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/overview)，以瞭解Edge Delivery Services及其功能的完整詳細資料。
 
 
 ## Edge Delivery Services開發人員教學課程
 
+<!-- CARDS 
 
-<div class="columns is-multiline">
-    <!-- Document-based authoring -->
-    <div class="column is-half-tablet is-half-desktop is-one-half-widescreen"
-      aria-label="Document-based authoring and Edge Delivery Services tutorial" tabindex="0">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="檔案式撰寫網站教學課程"
-              tabindex="-1">
-              <img class="is-bordered-r-small"
-                src="./assets/overview/document-based-authoring-tutorial.png"
-                alt="檔案式撰寫網站教學課程">
-            </a>
-          </figure>
+* https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial
+  {title = Document-based authoring and Edge Delivery Services tutorial}
+  {description = Learn how to create Edge Delivery Services web sites authored using Document-based authoring.}
+  {cta = Start the tutorial}
+
+* ./developing/universal-editor/0-overview.md
+  {title = Universal Editor and Edge Delivery Services tutorial}
+  {description = Learn the basics of creating an Edge Delivery Services web sites authored with Universal Editor.}
+  {cta = Start the tutorial}
+
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Document-based authoring and Edge Delivery Services tutorial">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="檔案型撰寫和Edge Delivery Services教學課程" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial./media_18d1c2a9ecd6557f129e41b42a03a8dfbff1e27e9.png?width=400&format=png&optimize=medium" alt="檔案型撰寫和Edge Delivery Services教學課程"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" target="_blank" rel="referrer" title="檔案型撰寫和Edge Delivery Services教學課程">檔案式撰寫與Edge Delivery Services教學課程</a>
+                    </p>
+                    <p class="is-size-6">瞭解如何建立使用檔案式撰寫功能撰寫的Edge Delivery Services網站。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">開始教學課程</span>
+                </a>
+            </div>
         </div>
-        <div class="card-content is-padded-small">
-          <div class="content">
-            <p class="headline is-size-6 has-text-weight-bold">
-              <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="檔案式撰寫網站教學課程">檔案式撰寫網站教學課程</a>
-            </p>
-            <p class="is-size-6">瞭解如何建立使用檔案式撰寫功能撰寫的Edge Delivery Services網站。</p>
-            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" class="spectrum-Button
-              spectrum-Button--outline spectrum-Button--primary
-              spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">開始教學課程</span>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
-    <!-- Universal Editor -->
-    <div class="column is-half-tablet is-half-desktop is-one-half-widescreen"
-      aria-label="Universal Editor and Edge Delivery Services tutorial" tabindex="1">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" title="Universal Editor網站教學課程"
-              tabindex="-1">
-              <img class="is-bordered-r-small"
-                src="./assets/overview/universal-editor-tutorial.png"
-                alt="Universal Editor網站教學課程">
-            </a>
-          </figure>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Universal Editor and Edge Delivery Services tutorial">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./developing/universal-editor/0-overview.md" title="通用編輯器和Edge Delivery Services教學課程" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="developing/universal-editor/assets/0-overview/hero.png" alt="通用編輯器和Edge Delivery Services教學課程"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./developing/universal-editor/0-overview.md" target="_blank" rel="referrer" title="通用編輯器和Edge Delivery Services教學課程">通用編輯器和Edge Delivery Services教學課程</a>
+                    </p>
+                    <p class="is-size-6">瞭解使用Universal Editor撰寫的Edge Delivery Services網站建立作業的基本知識。</p>
+                </div>
+                <a href="./developing/universal-editor/0-overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">開始教學課程</span>
+                </a>
+            </div>
         </div>
-        <div class="card-content is-padded-small">
-          <div class="content">
-            <p class="headline is-size-6 has-text-weight-bold">
-              <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" title="Universal Editor網站教學課程">Universal Editor網站教學課程</a>
-            </p>
-            <p class="is-size-6">瞭解如何建立使用通用編輯器編寫的Edge Delivery Services網站。</p>
-            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" class="spectrum-Button
-              spectrum-Button--outline spectrum-Button--primary
-              spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">開始教學課程</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>    
-  </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
 
 
@@ -358,11 +358,11 @@ ht-degree: 14%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/git.md" title="與Git整合"
+            <a href="./developing/git.md" title="與 Git 整合"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425718/?format=jpeg"
-                alt="與Git整合">
+                alt="與 Git 整合">
             </a>
           </figure>
         </div>
@@ -371,7 +371,7 @@ ht-degree: 14%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/git.md" title="與Git整合">與Git整合</a>
+              <a href="./developing/git.md" title="與 Git 整合">與Git整合</a>
             </p>
             <p class="is-size-6">設定Git和Edge Delivery Services。</p>
             <a href="./developing/git.md" class="spectrum-Button
