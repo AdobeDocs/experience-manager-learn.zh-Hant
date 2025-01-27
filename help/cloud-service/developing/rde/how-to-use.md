@@ -11,9 +11,9 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: 60139d8531d65225fa1aa957f6897a6688033040
+source-git-commit: d199ff3b9f4d995614c193f52dc90270f2283adf
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 - AEM程式碼和內容套件(all， ui.apps)部署
 - OSGi套件組合和設定檔案部署
-- Apache和Dispatcher會將部署設定為zip檔案
+- 以zip檔案形式部署Apache和Dispatcher
 - 個別檔案，例如HTL、`.content.xml` （對話方塊XML）部署
 - 檢閱其他RDE命令，例如`status, reset and delete`
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 $ git clone git@github.com:adobe/aem-guides-wknd.git
 ```
 
-接著，執行以下maven命令，將其建置並部署至本機AEM-SDK。
+然後，執行以下maven命令以將其建置並部署至本機AEM-SDK。
 
 ```
 $ cd aem-guides-wknd/
@@ -96,7 +96,7 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. 執行Maven組建或同步個別檔案，驗證本機AEM SDK上的變更。
+1. 執行Maven建置或同步個別檔案，驗證本機AEM SDK上的變更。
 
 1. 透過`ui.apps`套件或透過部署個別對話方塊和HTL檔案來部署對RDE的變更：
 
@@ -191,7 +191,7 @@ Apache或Dispatcher設定檔案&#x200B;**無法個別部署**，但整個Dispatc
    ...
    ```
 
-1. 在本機驗證變更，請參閱[在本機執行Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#run-dispatcher-locally)以取得詳細資料。
+1. 在本機驗證變更，請參閱[在本機執行Dispatcher](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools)以取得詳細資料。
 1. 執行下列命令，將變更部署至RDE：
 
    ```shell
@@ -200,7 +200,49 @@ Apache或Dispatcher設定檔案&#x200B;**無法個別部署**，但整個Dispatc
    $ aio aem:rde:install target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
    ```
 
+1. 驗證RDE上的變更。
+
+### 部署組態(YAML)檔案
+
+可以使用`install`命令將CDN、維護工作、記錄檔轉送和AEM API驗證組態檔部署至RDE。 這些設定在AEM專案的`config`資料夾中管理為YAML檔案，如需詳細資訊，請參閱[支援的設定](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations)。
+
+若要瞭解如何部署組態檔，請增強`cdn`組態檔並將其部署到RDE。
+
+1. 從`config`資料夾開啟`cdn.yaml`檔案
+1. 更新所需的設定，例如，將速率限制更新為每秒200個請求
+
+   ```yaml
+   kind: "CDN"
+   version: "1"
+   metadata:
+     envTypes: ["dev", "stage", "prod"]
+   data:
+     trafficFilters:
+       rules:
+       #  Block client for 5m when it exceeds an average of 100 req/sec to origin on a time window of 10sec
+       - name: limit-origin-requests-client-ip
+         when:
+           reqProperty: tier
+           equals: 'publish'
+         rateLimit:
+           limit: 200 # updated rate limit
+           window: 10
+           count: fetches
+           penalty: 300
+           groupBy:
+             - reqProperty: clientIp
+         action: log
+   ...
+   ```
+
+1. 執行下列命令，將變更部署至RDE
+
+   ```shell
+   $ aio aem:rde:install -t env-config ./config/cdn.yaml
+   ```
+
 1. 驗證RDE上的變更
+
 
 ## 其他AEM RDE外掛程式命令
 
@@ -231,8 +273,8 @@ aem rde status   Get a list of the bundles and configs deployed to the current r
 
 ## 其他資源
 
-[RDE命令檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#rde-cli-commands)
+[RDE命令檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
 
 用於與AEM快速開發環境互動的[Adobe I/O Runtime CLI外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[AEM專案設定](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html)
+[AEM專案設定](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
