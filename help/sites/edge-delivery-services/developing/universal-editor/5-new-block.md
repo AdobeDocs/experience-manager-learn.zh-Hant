@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
+source-git-commit: fcd2d7ae7a0bddb0d80aada2f206be7629b676e3
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1705'
 ht-degree: 0%
 
 ---
-
 
 # 建立新區塊
 
@@ -136,6 +136,12 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 - 使用[元素群組](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的[欄位摺疊將文字內容欄位群組在一起。
 
 如果您不熟悉[欄位摺疊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)、[元素群組](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)或[型別推斷](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)，請先檢閱連結的檔案，再繼續進行，因為這些檔案對於建立結構良好的區塊模型是必要的。
+
+在以下範例中：
+
+- [型別推斷](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)用於從`image`欄位自動建立`<img>`HTML專案。 欄位收合與`image`和`imageAlt`欄位搭配使用，以建立`<img>`HTML專案。 `src`屬性設定為`image`欄位的值，而`alt`屬性設定為`imageAlt`欄位的值。
+- `textContent`是用來分類欄位的群組名稱。 它應該是語意上的，但可以為此區塊的任何特有內容。 這會通知通用編輯器轉譯最終HTML輸出中相同`<div>`元素內具有此首碼的所有欄位。
+- 欄位收合也會套用至行動號召(CTA)的`textContent`群組中。 CTA是透過[型別推斷](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)建立為`<a>`。 `cta`欄位是用來設定`<a>`專案的`href`屬性，`ctaText`欄位會提供`<a ...>`標籤內連結的文字內容。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
 
