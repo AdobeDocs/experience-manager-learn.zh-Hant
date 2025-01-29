@@ -13,9 +13,9 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
 duration: 266
-source-git-commit: c638c1e012952f2f43806a325d729cde088ab9f5
+source-git-commit: 241c56d34c851cf9bac553cb9fc545a835e495d2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1054'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ ht-degree: 0%
 # 使用AEM Sites產生Experience PlatformFPID
 
 將透過AEM Publish傳送的Adobe Experience Manager (AEM)網站與Adobe Experience Platform (AEP)整合需要AEM產生和維護唯一的第一方裝置ID (FPID) Cookie，以唯一追蹤使用者活動。
+
+FPID Cookie應由伺服器(AEM Publish)設定，而非使用JavaScript來建立使用者端Cookie。 這是因為現代化瀏覽器（例如Safari和Firefox）可能會封鎖由JavaScript產生的Cookie或使其快速過期。
 
 閱讀支援檔案，以便[瞭解第一部分裝置ID和Experience CloudID如何搭配運作的詳細資訊](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=en)。
 
