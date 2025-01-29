@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
+source-git-commit: 9b10d79190d805b86884f033e040891655c3c890
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '269'
 ht-degree: 1%
 
 ---
-
 
 # 建立Edge Delivery Services程式碼專案
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 3. **安裝AEM Code Sync GitHub應用程式**&#x200B;並授與存放庫的存取權。 您可以在這裡找到[應用程式](https://github.com/apps/aem-code-sync)。
 4. **將您新專案的`fstab.yaml`**&#x200B;設定為指向正確的AEM Author服務。
 
-   * 若要實驗，您可以使用較低的AEM as a Cloud Service環境（Stage、Dev或RDE），但真正的網站實作應設定為使用生產AEM Author服務。
+   * 若要實驗，您可以使用較低的AEM as a Cloud Service環境（中繼或開發），但真正的網站實作應設定為使用生產AEM服務。
 
 5. **編輯您新專案的`paths.json`**，將AEM Author服務路徑對應至您網站的根目錄。
 
