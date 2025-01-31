@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: fcd2d7ae7a0bddb0d80aada2f206be7629b676e3
+source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1742'
 ht-degree: 0%
 
 ---
@@ -322,6 +322,8 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 | `definition.plugins.xwalk.page.resourceType` | 定義用於在通用編輯器中呈現元件的Sling資源型別。 一律使用`core/franklin/components/block/v#/block`資源型別。 |
 | `definition.plugins.xwalk.page.template.name` | 區塊的名稱。 它應該使用小寫和連字型大小，以符合區塊的資料夾名稱。 此值也可用來在通用編輯器中標示區塊的例項。 |
 | `definition.plugins.xwalk.page.template.model` | 將此定義連結至其`model`定義，該定義會控制為通用編輯器中區塊顯示的編寫欄位。 這裡的值必須符合`model.id`值。 |
+| `definition.plugins.xwalk.page.template.classes` | 選擇性屬性，其值已新增至區塊HTML專案的`class`屬性。 這允許相同區塊的變體。 [將類別欄位](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)新增至區塊的[模型](#block-model)，可使`classes`值變成可編輯。 |
+
 
 以下是區塊定義的JSON範例：
 
