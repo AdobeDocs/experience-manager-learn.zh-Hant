@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 500
 exl-id: d1ebcaf4-cea6-4820-8b05-3a0c71749d33
-source-git-commit: 567d2803c5cee274104b38f847820f7665320195
+source-git-commit: b40bf5afc28cb350c470336e38f8ca127fb05d79
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,15 @@ AEM網站是儲存及編寫網站內容的地方。 最終體驗是AEM網站內�
 
 ![適用於Edge Delivery Services和通用編輯器的新AEM網站](./assets/2-new-aem-site/new-site.png)
 
-請依照下列步驟建立新的AEM網站：
-
+依照檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site)中概述的[詳細步驟建立新的AEM網站。  以下是步驟的摘要清單，包括本教學課程中使用的值。
 1. **在AEM作者中建立新網站**。 本教學課程使用下列網站命名：
    * 網站標題： `WKND (Universal Editor)`
    * 網站名稱： `aem-wknd-eds-ue`
+
+      * 網站名稱值必須符合新增到`paths.json`](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping)的網站路徑名稱[。
+
 2. **從具有AEM編寫網站範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases)的[Edge Delivery Services匯入最新的範本**。
 3. **為網站命名**&#x200B;以符合GitHub存放庫名稱，並將GitHub URL設為存放庫的URL。
-
-如需詳細指示，請參閱快速入門手冊中的[建立和編輯新的AEM網站區段](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site)。
 
 ## Publish要預覽的新網站
 
