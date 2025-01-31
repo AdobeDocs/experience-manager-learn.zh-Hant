@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 700
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
+source-git-commit: 6f0cbdd638ed909b5897521557b65dcf74ac1012
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # 設定本機開發環境
 
@@ -65,7 +65,7 @@ Edge Delivery Services網站專案的開發工具和流程是專為網頁開發�
 
 ## 複製GitHub存放庫
 
-將包含AEMEdge Delivery Services程式碼專案的[GitHub存放庫](./1-new-code-project.md)複製到您的本機開發環境。
+將在包含AEMEdge Delivery Services程式碼專案的新程式碼專案章節](./1-new-code-project.md)中建立的[GitHub存放庫複製到您的本機開發環境。
 
 ![GitHub存放庫複製](./assets/3-local-development-environment/github-clone.png)
 
@@ -120,6 +120,8 @@ info: Enabled reverse proxy to https://main--aem-wknd-eds-ue--<YOUR_ORG>.aem.pag
 ```
 
 AEM CLI會在您的瀏覽器中`http://localhost:3000/`開啟網站。 專案中的變更會自動在網頁瀏覽器中熱重新載入，而內容變更[需要發佈到預覽環境](./6-author-block.md)並重新整理網頁瀏覽器。
+
+如果網站開啟時頁面為404，則很可能在[新程式碼專案](./1-new-code-project.md)中更新的[fstab.yaml或paths.json](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project)設定不正確，或是變更尚未認可至`main`分支。
 
 ## 建立JSON片段
 
@@ -208,4 +210,3 @@ $ npm run lint:fix
 ```
 
 >[!ENDTABS]
-
