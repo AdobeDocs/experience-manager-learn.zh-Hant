@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
-source-git-commit: 48b402642738abf512edab68b6074935cb7dd444
+source-git-commit: 176be4209409763b69ceff5e893d0e857efa6d30
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '287'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ![新Edge Delivery Services專案](./assets/1-new-project/new-project.png)
 
-依照檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project)中概述的[詳細步驟操作，Edge Delivery Services程式碼專案的內容可在通用編輯器中編輯。  以下是步驟的摘要清單，包括本教學課程中使用的值。
+請依照檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project)中概述的[詳細步驟，建立可在Universal Editor中編輯其內容的Edge Delivery Services程式碼專案。  以下是步驟的摘要清單，包括本教學課程中使用的值。
 
 1. **設定GitHub帳戶。**&#x200B;如果您要為貴組織建立專案，請確定該組織擁有GitHub帳戶，而且您是成員。
 2. **使用[AEM Boilerplate XWalk專案範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk)建立新的程式碼專案**。
