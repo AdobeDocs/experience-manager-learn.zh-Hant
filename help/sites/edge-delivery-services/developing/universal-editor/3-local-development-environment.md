@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: ecf37e1f964d0cda90eeca11b224ab950727d2ad
+source-git-commit: 66bc4cb6f992c64b1a7e32310ce3e26515f3d380
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '973'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,11 @@ Edge Delivery Services網站專案的開發工具和流程是專為網頁開發�
 
 ## 開發拓朴
 
-可透過Universal Editor編輯的Edge Delivery Services網站專案之開發拓朴包含下列幾個方面：
+這部影片會概略介紹可使用Universal Editor編輯的Edge Delivery Services網站專案的開發拓撲。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
+
++++檢視其他開發拓朴詳細資訊
 
 - **GitHub存放庫**：
    - **用途**：主控網站的程式碼(CSS和JavaScript)。
@@ -54,6 +58,8 @@ Edge Delivery Services網站專案的開發工具和流程是專為網頁開發�
       - **GitHub存放庫**&#x200B;的本機復本，用於分支式開發。
       - 做為開發伺服器的&#x200B;**AEM CLI**&#x200B;會將本機程式碼變更套用至&#x200B;**預覽環境**，以進行熱過載體驗。
    - **工作流程**：開發人員在本機撰寫程式碼、認可對有效分支的變更、將分支推送到GitHub、在&#x200B;**通用編輯器** （使用指定的分支）中驗證，並在準備好進行生產部署時將其合併到&#x200B;**主要分支**。
+
++++
 
 ## 先決條件
 
