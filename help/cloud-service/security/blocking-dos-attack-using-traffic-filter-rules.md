@@ -12,9 +12,9 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 1b493d85303e539e07ba8b080ed55ef2af18bfcb
+source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1924'
 ht-degree: 1%
 
 ---
@@ -109,7 +109,7 @@ ELK和Splunk儀表板中提供下列視覺效果：
   **ELK儀表板**：
   ![ELK儀表板 — 每個IP/POP的最大要求數](./assets/elk-edge-max-per-ip-pop.png)
 
-  **Splunk儀表板**：\
+  **Splunk儀表板**：
   ![Splunk儀表板 — 每個IP/POP的最大請求數](./assets/splunk-edge-max-per-ip-pop.png)
 
 - **每個使用者端IP和POP的原始RPS**：此視覺效果顯示在原點&#x200B;**每個IP/POP的最大要求數目**。 視覺效果中的尖峰表示請求數量上限。
@@ -168,10 +168,10 @@ data:
           count: all # count all requests
           groupBy:
             - reqProperty: clientIp
-        action: 
+        action:
           type: log
-          experimental_alert: true
-    #  Prevent attack at origin by blocking client for 5 minutes if they make more than 100 requests per second on average            
+          alert: true
+    #  Prevent attack at origin by blocking client for 5 minutes if they make more than 100 requests per second on average
       - name: prevent-dos-attacks-origin
         when:
           reqProperty: tier
@@ -183,17 +183,12 @@ data:
           count: fetches # count only fetches
           groupBy:
             - reqProperty: clientIp
-        action: 
+        action:
           type: log
-          experimental_alert: true   
-          
+          alert: true
 ```
 
 請注意，來源和邊緣規則皆已宣告，且警示屬性設定為`true`，因此只要達到臨界值，您就可以收到警示，可能表示發生攻擊。
-
->[!NOTE]
->
->發行警示功能時，將移除experimental_alert前面的&#x200B;_experimental_ prefix_。 若要加入早期採用者計畫，請傳送電子郵件至&#x200B;**<aemcs-waf-adopter@adobe.com>**。
 
 建議一開始將動作型別設為記錄，以便監視數小時或數天的流量，確保合法流量不會超過這些速率。 幾天後，請變更為封鎖模式。
 
@@ -211,13 +206,13 @@ data:
 kind: "CDN"
 version: "1"
 metadata:
-  envTypes: 
+  envTypes:
     - dev
     - stage
-    - prod  
-data:  
-  experimental_requestTransformations:
-    rules:            
+    - prod
+data:
+  requestTransformations:
+    rules:
       - name: unset-all-query-params-except-those-needed
         when:
           reqProperty: tier
@@ -229,7 +224,7 @@ data:
 
 ## 接收流量篩選規則警示 {#receiving-alerts}
 
-如上所述，如果流量篩選規則包含&#x200B;*experimental_alert： true*，則符合規則時會收到警示。
+如上所述，如果流量篩選規則包含&#x200B;*警示： true*，則符合規則時會收到警示。
 
 ## 對警報執行動作 {#acting-on-alerts}
 
@@ -242,7 +237,7 @@ data:
 >[!CAUTION]
 >
 > 請勿在生產環境中執行這些步驟。 下列步驟僅適用於模擬。
-> 
+>
 >如果您收到指出流量尖峰的警報，請繼續前往[分析流量模式](#analyzing-traffic-patterns)區段。
 
 若要模擬攻擊，可以使用[Apache Benchmark](https://httpd.apache.org/docs/2.4/programs/ab.html)、[Apache JMeter](https://jmeter.apache.org/)、[Vegeta](https://github.com/tsenart/vegeta)等工具。
