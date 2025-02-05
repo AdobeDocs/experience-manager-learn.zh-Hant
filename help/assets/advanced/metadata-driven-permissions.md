@@ -11,22 +11,22 @@ doc-type: Tutorial
 last-substantial-update: 2024-05-03T00:00:00Z
 exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
 duration: 158
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 6e08e6830c4e2ab27e813d262f4f51c6aae2909b
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
 
 # 中繼資料導向的許可權{#metadata-driven-permissions}
 
-中繼資料導向許可權是一項功能，可讓AEM Assets Author的存取控制決定以資產中繼資料屬性為基礎，而非檔案夾結構。 透過此功能，您可以定義存取控制原則來評估屬性，例如資產狀態、型別或任何您定義的自訂中繼資料屬性。
+中繼資料導向許可權是一項功能，可讓AEM Assets Author的存取控制決定以資產內容或中繼資料屬性為依據，而非檔案夾結構。 透過此功能，您可以定義存取控制原則以評估屬性，例如資產狀態、型別或您定義的任何自訂屬性。
 
-讓我們來看一個範例。 創意人員將其工作上傳至AEM Assets至行銷活動相關資料夾，可能是未獲核准使用的進行中資產。 我們希望確保行銷人員只看見此行銷活動的已核准資產。 我們可以運用中繼資料屬性，指出資產已核准，且可供行銷人員使用。
+讓我們來看一個範例。 創意人員將其工作上傳至AEM Assets至行銷活動相關資料夾，可能是未獲核准使用的進行中資產。 我們希望確保行銷人員只看見此行銷活動的已核准資產。 我們可以使用中繼資料屬性來指出資產已核准，且可供行銷人員使用。
 
 ## 運作方式
 
-啟用中繼資料導向許可權涉及定義哪些資產中繼資料屬性將驅動存取限制，例如「狀態」或「品牌」。 然後，這些屬性可用於建立存取控制專案，以指定哪些使用者群組有權存取具有特定屬性值的資產。
+啟用中繼資料導向許可權涉及定義哪些資產內容或中繼資料屬性將驅動存取限制，例如「狀態」或「品牌」。 然後，這些屬性可用於建立存取控制專案，以指定哪些使用者群組有權存取具有特定屬性值的資產。
 
 ## 先決條件
 
@@ -34,9 +34,9 @@ ht-degree: 0%
 
 ## OSGi設定 {#configure-permissionable-properties}
 
-若要實作中繼資料導向的許可權，開發人員必須將OSGi設定部署至AEM as a Cloud Service，讓特定資產中繼資料屬性可支援中繼資料導向的許可權。
+若要實作中繼資料導向許可權，開發人員必須將OSGi設定部署至AEM as a Cloud Service，此設定可啟用特定資產內容或中繼資料屬性，以支援中繼資料導向許可權。
 
-1. 決定哪些資產中繼資料屬性將用於存取控制。 屬性名稱是資產`jcr:content/metadata`資源上的JCR屬性名稱。 在我們的案例中，它將是一個名為`status`的屬性。
+1. 決定哪些資產內容或中繼資料屬性將用於存取控制。 屬性名稱是資產`jcr:content`或`jcr:content/metadata`資源上的JCR屬性名稱。 在我們的案例中，它將是一個名為`status`的屬性。
 1. 在您的AEM Maven專案中建立OSGi設定`com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json`。
 1. 將下列JSON貼到建立的檔案中：
 
@@ -46,11 +46,12 @@ ht-degree: 0%
        "status",
        "brand"
      ],
+     "restrictionContentPropertyNames":[],
      "enabled":true
    }
    ```
 
-1. 以必要的值取代屬性名稱。
+1. 以必要的值取代屬性名稱。  `restrictionContentPropertyNames`設定屬性是用來啟用`jcr:content`資源屬性的許可權，而`restrictionPropertyNames`設定屬性是啟用資產`jcr:content/metadata`資源屬性的許可權。
 
 ## 重設基本資產許可權
 
@@ -90,7 +91,7 @@ ht-degree: 0%
 
 ![管理員檢視](./assets/metadata-driven-permissions/admin-view.png)
 
-設定許可權並相應地設定資產中繼資料屬性後，使用者（在此案例中為行銷人員使用者）將只會看到核准的資產。
+設定許可權並據此設定資產中繼資料屬性後，使用者（在此案例中為行銷人員使用者）將只會看到核准的資產。
 
 ![行銷人員檢視](./assets/metadata-driven-permissions/marketeer-view.png)
 
@@ -100,13 +101,13 @@ ht-degree: 0%
 
 - 根據特定屬性對資產存取進行微調控制。
 - 將存取控制原則與檔案夾結構分離，讓資產組織更具彈性。
-- 能夠根據多個中繼資料屬性定義複雜的存取控制規則。
+- 能夠根據多個內容或中繼資料屬性定義複雜的存取控制規則。
 
 >[!NOTE]
 >
 > 請務必注意：
 > 
-> - 中繼資料屬性是使用&#x200B;__字串相等__ (`=`) (尚未支援其他資料型別或運運算元，大於(`>`)或日期屬性)針對限制進行評估
+> - 使用&#x200B;__字串等同性__ (`=`) (尚未支援其他資料型別或運運算元，大於(`>`)或日期屬性)來針對限制評估屬性
 > - 若要允許限制屬性有多個值，可以從[選取型別]下拉式選單中選取相同的屬性，然後輸入新的限制值（例如`status=approved`、`status=wip`），再按一下[+]將限制新增至專案，以新增其他限制至存取控制專案
 > ![允許多個值](./assets/metadata-driven-permissions/allow-multiple-values.png)
 > - 支援&#x200B;__AND限制__，透過具有不同屬性名稱（例如`status=approved`、`brand=Adobe`）的單一Access Control專案中的多重限制，將評估為AND條件，亦即，選取的使用者群組將被授與具有`status=approved AND brand=Adobe`之資產的讀取存取權
