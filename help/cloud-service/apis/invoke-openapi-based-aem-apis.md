@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '1803'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -194,6 +194,10 @@ _Admin Console_&#x200B;視窗會顯示新新增的產品設定檔。
    ```
 
    以ADC專案的OAuth伺服器對伺服器認證的實際ClientID取代`<ADC Project's OAuth Server-to-Server credential ClientID>`。 此教學課程中使用的API端點僅可在作者層級使用，但對於其他API，yaml設定也可以有&#x200B;_發佈_&#x200B;或&#x200B;_預覽_&#x200B;節點。
+
+   >[!CAUTION]
+   >
+   > 為了示範，所有環境都會使用相同的ClientID。 建議您針對每個環境（開發、階段、生產）使用個別的ClientID，以提升安全性和控制能力。
 
 1. 將設定變更提交至Git存放庫並將變更推送至遠端存放庫。
 

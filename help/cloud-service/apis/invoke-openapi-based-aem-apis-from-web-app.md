@@ -12,9 +12,9 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-01-09T00:00:00Z
 duration: 0
 exl-id: dc35256a-3873-413f-b282-90948efd5f31
-source-git-commit: 7fe1116de7cf69b3b7ce14ac0b97906f8986546b
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '2433'
+source-wordcount: '2462'
 ht-degree: 0%
 
 ---
@@ -519,6 +519,11 @@ OpenAPI型AEM API呼叫是從伺服器端（Express中介軟體）發出，而�
    ```
 
    以ADC專案的OAuth Web App認證的實際ClientID取代`<ADC Project's OAuth Web App credential ClientID>`。 此教學課程中使用的API端點僅可在作者層級使用，但對於其他API，yaml設定也可以有&#x200B;_發佈_&#x200B;或&#x200B;_預覽_&#x200B;節點。
+
+   >[!CAUTION]
+   >
+   > 為了示範，所有環境都會使用相同的ClientID。 建議您針對每個環境（開發、階段、生產）使用個別的ClientID，以提升安全性和控制能力。
+
 
 1. 將設定變更提交至Git存放庫並將變更推送至遠端存放庫。
 

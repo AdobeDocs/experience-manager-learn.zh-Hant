@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2025-02-05T00:00:00Z
 jira: KT-15739
 thumbnail: KT-15739.jpeg
-source-git-commit: f3e1bef93e53de19cf917a915c0fb836f7d3c194
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
@@ -236,10 +236,13 @@ RewriteRule ^(.*)$ ${skicampaign:%{$1}|/} [L,R=301]
 
 讓我們使用瀏覽器或`curl`命令來測試URL重新導向。 存取`/ski/westcoast` URL並確認它重新導向至`/us/en/adventures/tahoe-skiing.html`。
 
-
 ## 摘要
 
 在本教學課程中，您已瞭解如何使用AEM as a Cloud Service環境中的管道免費設定來管理URL重新導向。
 
 行銷團隊可以管理URL重新導向，將其視為文字檔案中的索引鍵/值組，並將其上傳至DAM或使用ACS Commons — 重新導向對應管理員或重新導向管理員。 Dispatcher設定已更新，可將URL重新導向載入為RewriteMap，並將其套用至傳入請求。
 
+## 其他資源
+
+- [管道可用URL重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
+- [URL重新導向](url-redirection.md)

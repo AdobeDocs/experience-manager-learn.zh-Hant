@@ -12,9 +12,9 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 907a313a9ed7e92358f0aa2503f8333fb26ba35d
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
@@ -76,13 +76,14 @@ AEM的URL重新導向解決方案如下：
 
 #### 重新導向地圖管理員
 
-[重新導向地圖管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)可協助AEM系統管理員輕鬆維護和發佈[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)檔案，而不需要直接存取Apache Web伺服器或重新啟動Apache Web伺服器。 此功能可讓許可權使用者從AEM中的主控台建立、更新和刪除重新導向規則，無需開發團隊或AEM部署的協助。 重新導向對應管理員同時是&#x200B;**AEM as a Cloud Service** （請參閱[可用的管道URL重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)策略）和&#x200B;**AEM 6.x**&#x200B;相容。
+[重新導向地圖管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)可協助AEM系統管理員輕鬆維護和發佈[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)檔案，而不需要直接存取Apache Web伺服器或重新啟動Apache Web伺服器。 此功能可讓許可權使用者從AEM中的主控台建立、更新和刪除重新導向規則，無需開發團隊或AEM部署的協助。 重新導向對應管理員同時是&#x200B;**AEM as a Cloud Service** （請參閱[可用的管道URL重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)策略和相關的[教學課程](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirects-using-pipeline-free-configurations#acs-commons---redirect-map-manager)）和&#x200B;**AEM 6.x**&#x200B;相容。
 
 #### 重新導向管理員
 
 [重新導向管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html)可讓AEM中的使用者輕鬆地維護和發佈AEM的重新導向。 實作是以Java™ servlet篩選器為基礎，因此是典型的JVM資源消耗。 此功能也會消除對AEM開發團隊和AEM部署的相依性。 重新導向管理員與&#x200B;**AEM as a Cloud Service**&#x200B;和&#x200B;**AEM 6.x**&#x200B;相容。 雖然初始的重新導向請求必須命中AEM Publish服務，以依預設產生301/302 （大多數） CDN的快取301/302，並允許後續請求被重新導向到edge/CDN。
 
-[重新導向管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html)也支援&#x200B;**AEM as a Cloud Service**&#x200B;的[管線免除URL重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)策略，方法是透過[將重新導向編譯成文字檔](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html) （適用於[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)），因此它允許更新Apache Web Server中使用的重新導向，而不需要直接存取它或重新啟動它。 在此案例中，初始重新導向請求會點選Apache Web伺服器，而不是AEM Publish服務。
+[重新導向管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html)也支援&#x200B;**AEM as a Cloud Service**&#x200B;的[管線免除URL重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)策略，方法是透過[將重新導向編譯成文字檔](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html) （適用於[Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)），因此它允許更新Apache Web Server中使用的重新導向，而不需要直接存取它或重新啟動它。 如需詳細資訊，請參閱[教學課程](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirects-using-pipeline-free-configurations#acs-commons---redirect-manager)。
+在此案例中，初始重新導向請求會點選Apache Web伺服器，而不是AEM Publish服務。
 
 ### `Redirect`頁面屬性
 

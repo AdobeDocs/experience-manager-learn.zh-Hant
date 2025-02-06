@@ -12,9 +12,9 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -126,6 +126,11 @@ ht-degree: 0%
   ```
 
   以ADC專案的OAuth伺服器對伺服器認證的實際ClientID取代`<ADC Project's OAuth Server-to-Server credential ClientID>`。
+
+  >[!CAUTION]
+  >
+  > 為了示範，所有環境都會使用相同的ClientID。 建議您針對每個環境（開發、階段、生產）使用個別的ClientID，以提升安全性和控制能力。
+
 
 - 將設定變更提交至Git存放庫並將變更推送至遠端存放庫。
 

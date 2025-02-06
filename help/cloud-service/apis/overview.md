@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 1%
@@ -75,7 +75,7 @@ AEM同時提供舊版和現代API，以便與其作者和發佈服務型別互�
 
 在未來的版本中，將會新增更多以OpenAPI為基礎的AEM API，以支援其他使用案例。
 
-## 驗證支援{#authentication-support}
+### 驗證支援{#authentication-support}
 
 以OpenAPI為基礎的AEM API支援下列驗證方法：
 
@@ -95,7 +95,7 @@ AEM同時提供舊版和現代API，以便與其作者和發佈服務型別互�
 | 安全性考量 | 在後端系統中安全地儲存機密認證(`client_id`， `client_secret`)。 | 使用者的驗證及被授與其自己的暫時存取權杖。 在後端系統中安全地儲存機密認證(`client_id`， `client_secret`)。 |
 | 授予類型 | _client_credentials_ | _authorization_code_ |
 
-## 存取Adobe API和相關概念{#accessing-adobe-apis-and-related-concepts}
+### 存取Adobe API和相關概念{#accessing-adobe-apis-and-related-concepts}
 
 在存取Adobe API之前，您必須瞭解以下重要概念：
 
