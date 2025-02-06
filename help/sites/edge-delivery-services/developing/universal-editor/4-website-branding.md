@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: a5cd9906-7e7a-43dd-a6b2-e80f67d37992
-source-git-commit: ceb82c48af10191cece72fe5f53dd79287f805d0
+source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -292,6 +292,8 @@ Edge Delivery Services專案最佳化網頁字型的使用，以維持高效能�
 網頁字型因其大小而經常影響效能，可能會增加累積版面位移(CLS)分數，並降低整體Lighthouse分數。 為了確保在Web字型載入時立即顯示文字，Edge Delivery Services專案使用瀏覽器原生備援字型。 在套用所需字型時，此方法有助於維持流暢的使用者體驗。
 
 若要選取最佳備援字型，請使用Adobe的[Helix字型備援Chrome擴充功能](https://www.aem.live/developer/font-fallback)，該擴充功能會在自訂字型載入前，決定要供瀏覽器使用的緊密相符字型。 應將產生的遞補字型宣告新增至`styles/styles.css`檔案，以改善效能並確保使用者獲得順暢的體驗。
+
+![Helix字型後援Chrome擴充功能](./assets/4-website-branding/font-fallback-chrome-plugin.png){align=center}
 
 若要使用[Helix Font Fallback Chrome擴充功能](https://www.aem.live/developer/font-fallback)，請確定網頁已套用在Edge Delivery Services網站上使用的相同變數中的網頁字型。 此教學課程示範[wknd.site](http://wknd.site/us/en.html)上的擴充功能。 開發網站時，請將擴充功能套用至正在處理的網站，而非[wknd.site](http://wknd.site/us/en.html)。
 
