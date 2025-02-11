@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '585'
 ht-degree: 17%
 
 ---
@@ -108,6 +108,8 @@ ht-degree: 17%
          + [編寫區塊](./edge-delivery-services/developing/universal-editor/6-author-block.md)
          + [僅使用CSS封鎖](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
          + [使用CSS和JS封鎖](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
+         + 操作說明{#how-to}
+            + [區塊選項](./edge-delivery-services/developing/universal-editor/how-to/block-options.md)
    + 操作說明{#how-to}
       + [RSS摘要](edge-delivery-services/how-to/rss.md)
       + [社群媒體分享](edge-delivery-services/how-to/social-media-sharing.md)
@@ -116,8 +118,8 @@ ht-degree: 17%
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 專案原型](developing/aem-project-archetype.md)
    + [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
-   + [AEM Headless快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
-   + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
+   + [開始使用AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
+   + [開始使用AEM SPA Editor和React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
    + [回應式中斷點](developing/responsive-breakpoints.md)
    + [使用樣式系統進行開發](developing/style-system-technical-video-understand.md)
@@ -141,7 +143,7 @@ ht-degree: 17%
    + [Sitemaps](./seo/sitemaps.md)
 + 單頁應用程式{#spa-editor}
    + [使用SPA編輯器](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
+   + [開始使用AEM SPA Editor和React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
 + 多網站管理{#multi-site-management}
    + [語言副本簡介](./multi-site-management/language-copy-overview.md)
    + [即時副本和Blueprint](./multi-site-management/live-copy-and-blueprint.md)
@@ -163,7 +165,7 @@ ht-degree: 17%
    + [設定翻譯規則](translation/translation-rules-editor-technical-video-setup.md)
    + [翻譯增強功能](translation/translation-enhancements-feature-video-use.md)
 + 整合 {#integrations}
-   + Experience Platform{#experience-platform}
+   + Experience Platform {#experience-platform}
       + [產生FPID](integrations/platform/fpid.md)
       + [網頁SDK](integrations/platform/web-sdk.md)
       + [使用Platform Web SDK進行分析](integrations/platform/analytics-using-web-sdk.md)
@@ -184,7 +186,7 @@ ht-degree: 17%
       + [概觀](integrations/adobe-target/overview.md)
       + [將Target擴充功能新增至標籤屬性](integrations/adobe-target/add-target-launch-extension.md)
       + [載入及觸發Target呼叫](integrations/adobe-target/load-and-fire-target.md)
-      + [建立Adobe TargetCloud Service帳戶](integrations/adobe-target/setup-aem-target-cloud-service.md)
+      + [建立Adobe Target Cloud Service帳戶](integrations/adobe-target/setup-aem-target-cloud-service.md)
       + [將體驗片段匯出至Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
       + [使用體驗片段選件建立Target活動](integrations/adobe-target/create-target-activity.md)
       + [使用視覺化體驗撰寫器的Personalization](integrations/adobe-target/personalization-using-vec.md)

@@ -10,16 +10,16 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
 
 # 建立新區塊
 
-本章說明使用通用編輯器為Edge Delivery Services網站建立新可編輯Teaser區塊的程式。
+本章說明使用通用編輯器為Edge Delivery Services網站建立新可編輯的Teaser區塊的程式。
 
 ![新Teaser區塊](./assets//5-new-block/teaser-block.png)
 
@@ -70,7 +70,7 @@ $ git checkout -b teaser origin/main
 區塊JSON定義了區塊的三個主要方面：
 
 - **定義**：在通用編輯器中將區塊註冊為可編輯的元件，將其連結至區塊模型，並選擇性地連結至篩選器。
-- **模型**：指定區塊的編寫欄位，以及這些欄位如何呈現為語意Edge Delivery ServicesHTML。
+- **模型**：指定區塊的編寫欄位，以及這些欄位如何呈現為語意Edge Delivery Services HTML。
 - **篩選器**：設定篩選規則，以限制可透過通用編輯器將區塊新增到哪些容器。 大部分割槽塊不是容器，而是將其ID新增至其他容器區塊的篩選器。
 
 在`/blocks/teaser/_teaser.json`處建立新檔案，其初始結構如下，順序完全一樣。 如果索引鍵順序有誤，表示可能無法正確建置。
@@ -93,7 +93,7 @@ $ git checkout -b teaser origin/main
 
    ![通用編輯器欄位](./assets/5-new-block/fields-in-universal-editor.png)
 
-2. 如何將欄位值演算為Edge Delivery ServicesHTML。
+2. 如何將欄位值轉譯為Edge Delivery Services HTML。
 
 已指派對應至[區塊定義](#block-definition)且包含`fields`陣列的`id`模型，以指定可編輯的欄位。
 
@@ -130,7 +130,7 @@ Teaser區塊的設計會分為這兩個邏輯元件（影像和文字內容）�
 
 **此標籤說明建立Teaser區塊模型的正確方式。**
 
-Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery ServicesHTML顯示為所需Web體驗所需的程式碼，區塊模型應反映此結構。
+Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery Services HTML顯示為所需Web體驗所需的程式碼，區塊模型應反映此結構。
 
 - 使用[欄位摺疊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)將&#x200B;**影像**&#x200B;和&#x200B;**影像替代文字**&#x200B;群組在一起。
 - 使用[元素群組](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的[欄位摺疊將文字內容欄位群組在一起。
@@ -139,7 +139,7 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 
 在以下範例中：
 
-- [型別推斷](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)用於從`image`欄位自動建立`<img>`HTML專案。 欄位收合與`image`和`imageAlt`欄位搭配使用，以建立`<img>`HTML專案。 `src`屬性設定為`image`欄位的值，而`alt`屬性設定為`imageAlt`欄位的值。
+- [型別推斷](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)是用來從`image`欄位自動建立`<img>` HTML專案。 欄位收合與`image`和`imageAlt`欄位搭配使用，以建立`<img>`個HTML專案。 `src`屬性設定為`image`欄位的值，而`alt`屬性設定為`imageAlt`欄位的值。
 - `textContent`是用來分類欄位的群組名稱。 它應該是語意上的，但可以為此區塊的任何特有內容。 這會通知通用編輯器轉譯最終HTML輸出中相同`<div>`元素內具有此首碼的所有欄位。
 - 欄位收合也會套用至行動號召(CTA)的`textContent`群組中。 CTA是透過[型別推斷](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)建立為`<a>`。 `cta`欄位是用來設定`<a>`專案的`href`屬性，`ctaText`欄位會提供`<a ...>`標籤內連結的文字內容。
 
@@ -194,7 +194,7 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 
 此模型會為區塊定義在Universal Editor中的編寫輸入。
 
-此區塊產生的Edge Delivery ServicesHTML會將影像放在第一個div，並將元素群組`textContent`欄位放在第二個div。
+此區塊產生的Edge Delivery Services HTML會將影像放在第一個div，並將元素群組`textContent`欄位放在第二個div。
 
 ```html
 <div>
@@ -276,7 +276,7 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 }
 ```
 
-區塊的Edge Delivery ServicesHTML會將每個欄位的值轉譯為單獨的`div`，使內容理解、樣式應用和HTML結構調整變得複雜，以實現所需的設計。
+區塊的Edge Delivery Services HTML會以個別的`div`呈現每個欄位的值，使內容理解、樣式應用程式和HTML結構調整複雜化，以達到所需的設計。
 
 ```html
 <div>
@@ -322,7 +322,7 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 | `definition.plugins.xwalk.page.resourceType` | 定義用於在通用編輯器中呈現元件的Sling資源型別。 一律使用`core/franklin/components/block/v#/block`資源型別。 |
 | `definition.plugins.xwalk.page.template.name` | 區塊的名稱。 它應該使用小寫和連字型大小，以符合區塊的資料夾名稱。 此值也可用來在通用編輯器中標示區塊的例項。 |
 | `definition.plugins.xwalk.page.template.model` | 將此定義連結至其`model`定義，該定義會控制為通用編輯器中區塊顯示的編寫欄位。 這裡的值必須符合`model.id`值。 |
-| `definition.plugins.xwalk.page.template.classes` | 選擇性屬性，其值已新增至區塊HTML專案的`class`屬性。 這允許相同區塊的變體。 [將類別欄位](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)新增至區塊的[模型](#block-model)，可使`classes`值變成可編輯。 |
+| `definition.plugins.xwalk.page.template.classes` | 選擇性屬性，其值已新增至區塊HTML元素的`class`屬性。 這允許相同區塊的變體。 [將類別欄位](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)新增至區塊的[模型](#block-model)，可使`classes`值變成可編輯。 |
 
 
 以下是區塊定義的JSON範例：
@@ -420,15 +420,11 @@ $ npm run lint:js
 
 ## 建立專案JSON
 
-設定區塊JSON檔案(`blocks/teaser/_teaser.json`、`models/_section.json`)後，必須將其編譯到專案的`component-models.json`、`component-definitions.json`和`component-filters.json`檔案。 編譯是透過執行專案的[組建JSON](./3-local-development-environment.md#build-json-fragments) npm指令碼來完成。
+在設定區塊JSON檔案（例如`blocks/teaser/_teaser.json`、`models/_section.json`）後，會自動編譯至專案的`component-models.json`、`component-definitions.json`和`component-filters.json`檔案。 此編譯由[AEM Boilerplate XWalk專案範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk)中包含的[Husky](https://typicode.github.io/husky/)預先認可勾點自動處理。
 
-```bash
-# ~/Code/aem-wknd-eds-ue
+也可以使用專案的[組建JSON](./3-local-development-environment.md#build-json-fragments) NPM指令碼，以手動或程式設計方式觸發組建。
 
-$ npm run build:json
-```
-
-## 部署區塊定義
+## 部署區塊JSON
 
 若要讓區塊可在通用編輯器中使用，專案必須認可並推送至GitHub存放庫的分支，在此例中為`teaser`分支。
 
@@ -439,6 +435,7 @@ Universal Editor使用的確切分支名稱可透過通用編輯器的URL根據�
 
 $ git add .
 $ git commit -m "Add teaser block JSON files so it is available in Universal Editor"
+# JSON files are compiled automatically and added to the commit via a husky precommit hook
 $ git push origin teaser
 ```
 

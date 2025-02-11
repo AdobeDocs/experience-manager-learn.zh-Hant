@@ -1,6 +1,6 @@
 ---
 title: 設定本機開發環境
-description: 為使用Edge Delivery Services提供且可透過通用編輯器編輯的網站設定本機開發環境。
+description: 為使用Edge Delivery Services提供並可使用通用編輯器編輯的網站設定本機開發環境。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: 66bc4cb6f992c64b1a7e32310ce3e26515f3d380
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 本機開發環境對於快速開發Edge Delivery Services提供的網站至關重要。 此環境使用本機開發的程式碼，同時從Edge Delivery Services取得內容，讓開發人員可立即檢視程式碼變更。 這類設定可支援快速、反複的開發和測試。
 
-Edge Delivery Services網站專案的開發工具和流程是專為網頁開發人員所熟悉，並提供快速且有效率的開發體驗所設計。
+Edge Delivery Services網站專案的開發工具和程式設計為網頁開發人員熟悉，並提供快速且有效率的開發體驗。
 
 ## 開發拓朴
 
@@ -71,7 +71,7 @@ Edge Delivery Services網站專案的開發工具和流程是專為網頁開發�
 
 ## 複製GitHub存放庫
 
-將在包含AEMEdge Delivery Services程式碼專案的新程式碼專案章節](./1-new-code-project.md)中建立的[GitHub存放庫複製到您的本機開發環境。
+將在包含AEM Edge Delivery Services程式碼專案的新程式碼專案章節](./1-new-code-project.md)中建立的[GitHub存放庫複製到您的本機開發環境。
 
 ![GitHub存放庫複製](./assets/3-local-development-environment/github-clone.png)
 
@@ -84,7 +84,7 @@ $ git clone git@github.com:<YOUR_ORG>/aem-wknd-eds-ue.git
 
 ## 安裝專案相依性
 
-瀏覽至專案資料夾，並安裝`npm install`的必要相依性。 雖然Edge Delivery Services專案不使用傳統的Node.js建置系統（例如Webpack或Vite），但它們仍需要多個相依性才能進行本機開發。
+瀏覽至專案資料夾，並安裝`npm install`的必要相依性。 雖然Edge Delivery Services專案不使用傳統的Node.js建置系統（例如Webpack或Vite），但還是需要幾個相依性才能進行本機開發。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -131,14 +131,17 @@ AEM CLI會在您的瀏覽器中`http://localhost:3000/`開啟網站。 專案中
 
 ## 建立JSON片段
 
-使用[AEM Boilerplate XWalk範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk)建立的Edge Delivery Services專案依賴在Universal Editor中啟用區塊製作的JSON設定。
+使用[Edge Delivery Services Boilerplate XWalk範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk)建立的AEM專案仰賴可在通用編輯器中啟用區塊製作的JSON設定。
 
 - **JSON片段**：與其關聯的區塊一起儲存，並定義區塊模型、定義和篩選器。
    - **模型片段**：儲存在`/blocks/example/_example.json`。
    - **定義片段**：儲存在`/blocks/example/_example.json`。
    - **篩選片段**：儲存在`/blocks/example/_example.json`。
 
-NPM指令碼會編譯這些JSON片段，並將其置於專案根目錄的適當位置。 若要建立JSON檔案，請使用提供的NPM指令碼。 例如，若要編譯所有片段，請執行：
+
+[AEM Boilerplate XWalk專案範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk)包含[Husky](https://typicode.github.io/husky/)預先認可連結，可偵測JSON片段的變更，並在`git commit`將這些變更編譯為適當的`component-*.json`檔案。
+
+雖然下列NPM指令碼可以透過`npm run`手動執行以建置JSON檔案，但這通常不是必要的，因為Husky預先認可勾點會自動處理它。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue

@@ -1,6 +1,6 @@
 ---
 title: 使用CSS和JS開發區塊
-description: 使用CSS和JavaScript開發Edge Delivery Services適用的區塊，並可使用通用編輯器編輯。
+description: 使用Edge Delivery Services的CSS和JavaScript開發區塊，並可使用通用編輯器進行編輯。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 41c4cfcf-0813-46b7-bca0-7c13de31a20e
-source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 此方法在下列情況中特別有用：
 
-- **外部CSS管理：**&#x200B;當區塊的CSS在Edge Delivery Services外部受到管理且與其的HTML結構不符時。
+- **外部CSS管理：**&#x200B;當區塊的CSS在Edge Delivery Services外部受到管理，且未對齊其HTML結構時。
 - **其他屬性：**&#x200B;需要額外的屬性（例如[ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)協助工具或[微資料](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata)）時。
 - **JavaScript增強功能：**&#x200B;需要互動功能（例如事件接聽程式）時。
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 若要尋找要裝飾的DOM，請在您的本機開發環境中開啟包含未裝飾區塊的頁面，選取區塊並檢查DOM。
 
-![Inspect區塊DOM](./assets/7a-block-css/inspect-block-dom.png)
+![檢查區塊DOM](./assets/7a-block-css/inspect-block-dom.png)
 
 >[!ENDTABS]
 
@@ -100,7 +100,7 @@ JavaScript檔案應匯出預設函式：
 export default function decorate(block) { ... }
 ```
 
-預設函式採用Edge Delivery ServicesHTML中代表區塊的DOM元素/樹狀結構，並包含呈現區塊時執行的自訂JavaScript。
+預設函式採用代表Edge Delivery Services HTML中區塊的DOM元素/樹狀結構，並包含呈現區塊時執行的自訂JavaScript。
 
 此範例JavaScript會執行三個主要動作：
 
@@ -195,27 +195,32 @@ export default function decorate(block) {
     left: 50%; 
     transform: translateX(-50%);
     height: 500px;
+    overflow: hidden; 
 
     /* The teaser image */
-    & .image-wrapper {
+    .image-wrapper {
         position: absolute;
         z-index: -1;
         inset: 0;
         box-sizing: border-box;
         overflow: hidden; 
 
-        & .image {
+        .image {
             object-fit: cover;
             object-position: center;
             width: 100%;
             height: 100%;
             transform: scale(1); 
             transition: transform 0.6s ease-in-out;
+
+            .zoom {
+                transform: scale(1.1);
+            }            
         }
     }
 
     /* The teaser text content */
-    & .content {
+    .content {
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -225,55 +230,51 @@ export default function decorate(block) {
         width: 80vw;
         max-width: 1200px;
   
-        & .title {
+        .title {
             font-size: var(--heading-font-size-xl);
             margin: 0;
         }
 
-        & .title::after {
+        .title::after {
             border-bottom: 0;
         }
 
-        & p {
+        p {
             font-size: var(--body-font-size-s);
             margin-bottom: 1rem;
             animation: teaser-fade-in .6s;
-        }
-
-        & p.terms-and-conditions {
-            font-size: var(--body-font-size-xs);
-            color: var(--secondary-color);
-            padding: .5rem 1rem;
-            font-style: italic;
-            border: solid var(--light-color);
-            border-width: 0 0 0 10px;
+        
+            &.terms-and-conditions {
+                font-size: var(--body-font-size-xs);
+                color: var(--secondary-color);
+                padding: .5rem 1rem;
+                font-style: italic;
+                border: solid var(--light-color);
+                border-width: 0 0 0 10px;
+            }
         }
 
         /* Add underlines to links in the text */
-        & a:hover {
+        a:hover {
             text-decoration: underline;
         }
 
         /* Add specific spacing to buttons. These button CSS classes are automatically added by Edge Delivery Services. */
-        & .button-container {
+        .button-container {
             margin: 0;
             padding: 0;
+        
+            .button {   
+                background-color: var(--primary-color);
+                border-radius: 0;
+                color: var(--dark-color);
+                font-size: var(--body-font-size-xs);
+                font-weight: bold;
+                padding: 1em 2.5em;
+                margin: 0;
+                text-transform: uppercase;
+            }
         }
-
-        & .button {   
-            background-color: var(--primary-color);
-            border-radius: 0;
-            color: var(--dark-color);
-            font-size: var(--body-font-size-xs);
-            font-weight: bold;
-            padding: 1em 2.5em;
-            margin: 0;
-            text-transform: uppercase;
-        }
-    }
-
-    & .zoom {
-        transform: scale(1.1);
     }
 }
 
@@ -327,7 +328,7 @@ $ npm run lint
 
 ## 在通用編輯器中預覽
 
-若要在AEM Universal Editor中檢視變更，請新增、提交變更，並將其推送至Universal Editor使用的Git存放庫分支。 這麼做可確保區塊實作不會中斷編寫體驗。
+若要在AEM的通用編輯器中檢視變更，請新增、提交變更，並將其推送到通用編輯器使用的Git存放庫分支。 這麼做可確保區塊實作不會中斷編寫體驗。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
