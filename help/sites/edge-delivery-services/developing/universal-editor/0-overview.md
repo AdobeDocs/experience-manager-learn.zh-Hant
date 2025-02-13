@@ -10,9 +10,9 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: 9dd07383a3d46d1bbecd2dc8574e6d06a0535fee
+source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ![Edge Delivery Services和Universal Editor開發人員教學課程](./assets/0-overview/hero.png)
 
-在本教學課程中，您將學習建置AEM網站的基礎知識，此網站結合強大的撰寫功能與通用編輯器，以及使用Edge Delivery Services的超快傳送速度。 到最後，您將基本瞭解如何建立新專案、設定本機開發環境和建立新區塊。
+在本教學課程中，您將瞭解建置AEM網站的基礎知識，該網站結合強大的撰寫功能與通用編輯器，以及使用Edge Delivery Services的超快傳送速度。 到最後，您將基本瞭解如何建立新專案、設定本機開發環境和建立新區塊。
 
 ## 專案設定
 
-瞭解如何在AEM as a Cloud Service中建立程式碼專案及設定新網站。 此設定可讓您使用通用編輯器進行無縫開發，以建立內容並透過Edge Delivery Services快速傳送內容。
+瞭解如何在AEM as a Cloud Service中建立程式碼專案及設定新網站。 此設定可讓您透過Universal Editor進行無縫開發，以透過Edge Delivery Services建立內容及快速傳送內容。
 
 <!-- CARDS 
 
@@ -73,7 +73,7 @@ ht-degree: 0%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./2-new-aem-site.md" target="_blank" rel="referrer" title="建立AEM網站">建立AEM網站</a>
                     </p>
-                    <p class="is-size-6">在AEM Sites中建立可供Edge Delivery Services使用的網站，使用通用編輯器即可編輯。</p>
+                    <p class="is-size-6">在Edge Delivery Services的AEM Sites中建立網站，您可以使用通用編輯器進行編輯。</p>
                 </div>
                 <a href="./2-new-aem-site.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
@@ -100,7 +100,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="設定本機開發環境" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/3-local-development-environment/github-clone.png" alt="設定本機開發環境"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1739374885708" alt="設定本機開發環境"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -110,7 +110,7 @@ ht-degree: 0%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./3-local-development-environment.md" target="_blank" rel="referrer" title="設定本機開發環境">設定本機開發環境</a>
                     </p>
-                    <p class="is-size-6">為使用Edge Delivery Services提供且可透過通用編輯器編輯的網站設定本機開發環境。</p>
+                    <p class="is-size-6">為使用Edge Delivery Services提供並可使用通用編輯器編輯的網站設定本機開發環境。</p>
                 </div>
                 <a href="./3-local-development-environment.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
@@ -146,7 +146,7 @@ ht-degree: 0%
 
 ## 區塊開發
 
-瞭解如何透過定義內容模型並設定用於測試和開發的範例內容來建立新區塊。 探索呈現區塊的兩種方法，並瞭解如何建構區塊以在AEM和Edge Delivery Services中獲得最佳效能和彈性。
+瞭解如何透過定義內容模型並設定用於測試和開發的範例內容來建立新區塊。 探索呈現區塊的兩種方法，並瞭解如何在AEM和Edge Delivery Services中建構區塊以取得最佳效能和彈性。
 
 <!-- CARDS 
 
@@ -219,7 +219,7 @@ ht-degree: 0%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./7a-block-css.md" target="_blank" rel="referrer" title="使用CSS開發區塊">使用CSS開發區塊</a>
                     </p>
-                    <p class="is-size-6">使用CSS為Edge Delivery Services開發區塊，可使用通用編輯器進行編輯。</p>
+                    <p class="is-size-6">使用Edge Delivery Services的CSS開發區塊，並可使用通用編輯器編輯。</p>
                 </div>
                 <a href="./7a-block-css.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
@@ -242,9 +242,46 @@ ht-degree: 0%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./7b-block-js-css.md" target="_blank" rel="referrer" title="使用CSS和JS開發區塊">使用CSS和JS開發區塊</a>
                     </p>
-                    <p class="is-size-6">使用CSS和JavaScript開發Edge Delivery Services適用的區塊，並可使用通用編輯器編輯。</p>
+                    <p class="is-size-6">使用Edge Delivery Services的CSS和JavaScript開發區塊，並可使用通用編輯器進行編輯。</p>
                 </div>
                 <a href="./7b-block-js-css.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+## 後續步驟
+
+現在您已完成本教學課程，請在這些重點操作說明所學知識的基礎上再接再厲。 這些指南會詳細介紹此處涵蓋的程式碼和概念，探索角色特定使用案例、進階技術以及增強Edge Delivery Services和Universal Editor開發技能的其他提示。
+
+<!-- CARDS 
+
+* ./how-to/block-options.md
+
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Block options">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./how-to/block-options.md" title="區塊選項" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="how-to/assets/block-options/main.png" alt="區塊選項"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./how-to/block-options.md" target="_blank" rel="referrer" title="區塊選項">封鎖選項</a>
+                    </p>
+                    <p class="is-size-6">瞭解如何使用多個顯示選項建置區塊。</p>
+                </div>
+                <a href="./how-to/block-options.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
                 </a>
             </div>
