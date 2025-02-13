@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation 教學課程
 user-guide-description: Adobe Experience Manager Foundation 的影片和教學課程系列。
 sub-product: Experience Manager
 index: y
-source-git-commit: 515c4020e1c358b5ee044a81affc8d7e1e4ff4eb
+source-git-commit: bc2f4655631f28323a39ed5b4c7878613296a0ba
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '248'
 ht-degree: 14%
 
 ---
@@ -21,14 +21,15 @@ ht-degree: 14%
    + [使用線上修訂清除](./administration/use-online-revision-clean-up.md)
    + [使用系統概觀儀表板](./administration/use-the-system-overview-dashboard.md)
    + [URL重新導向](./administration/url-redirection.md)
+   + [實作管道專用URL重新導向](./administration/implementing-pipeline-free-url-redirects.md)
 + 驗證{#authentication}
    + [OKTA和AEM](authentication/okta-saml-integration.md)
    + [OAuth範圍](authentication/oauth-code-sample-develop.md)
    + [瞭解驗證](authentication/authentication-support-article-understand.md)
    + [瞭解AMS上的IMS驗證](authentication/adobe-ims-authentication-technical-video-understand.md)
    + [JWT到OAuth憑證移轉](authentication/jwt-to-oauth-migration.md)
-+ AdobeCloud Manager{#cloud-manager}
-   + [瞭解AdobeCloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
++ Adobe Cloud Manager{#cloud-manager}
+   + [瞭解Adobe Cloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
    + [CI/CD 管道](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
    + [自訂權限](./cloud-manager/cloud-permissions.md)
 + 開發 {#development}
@@ -60,7 +61,7 @@ ht-degree: 14%
    + [如何強制在AEM6.4中重新編譯](./troubleshooting/how-to-force-recompilation.md)
    + [如何調查AEM中與索引相關的問題](./troubleshooting/how-to-investigate-indexing-related-issues.md)
    + [如何調查AEM中的SAML相關問題](./troubleshooting/how-to-investigate-saml-related-issues.md)
-   + [如何調查AEM中搜尋的相關問題](./troubleshooting/how-to-investigate-search-related-issues.md)
+   + [如何調查AEM中的搜尋相關問題](./troubleshooting/how-to-investigate-search-related-issues.md)
    + [如何設定Oak登入權杖工作階段有效期](./troubleshooting/how-to-set-the-oak-login-token-session-expiration.md)
    + [如何疑難排解Jetty設定的相關問題](./troubleshooting/how-to-troubleshoot-issues-related-to-jetty-configuration.md)
    + [如何疑難排解效能相關問題](./troubleshooting/how-to-troubleshoot-performance-related-issues.md)
