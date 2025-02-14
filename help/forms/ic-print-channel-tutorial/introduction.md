@@ -1,6 +1,6 @@
 ---
-title: 為列印管道建立您的第一個互動式通訊
-description: 互動式通訊是AEM Forms 6.4的新功能。本檔案將逐步引導您完成為列印管道建立互動式通訊所需的步驟。
+title: 為Print Channel建立您的第一個互動式通訊
+description: 瞭解為列印管道建立互動式通訊所需的步驟。 互動式通訊是AEM Forms 6.4的新功能。
 feature: Interactive Communication
 doc-type: Tutorial
 version: 6.4,6.5
@@ -10,9 +10,9 @@ level: Beginner
 exl-id: 1949aeff-ae56-4abd-8e63-23c2fb4859f2
 last-substantial-update: 2019-08-07T00:00:00Z
 duration: 31
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 61d97738e295d9dc39281cb59e6ef1ca73944387
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '169'
 ht-degree: 4%
 
 ---
