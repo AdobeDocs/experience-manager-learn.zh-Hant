@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+source-git-commit: b3d053a09dfc8989441a21bf0d8c4771d816106f
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1855'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動
 
 >[!AVAILABILITY]
 >
->以OpenAPI為基礎的AEM API屬於搶先存取計畫的一部分。 如果您有興趣存取這些檔案，建議您傳送電子郵件至[aem-apis@adobe.com](mailto:aem-apis@adobe.com)，並提供使用案例的說明。
+>以OpenAPI為基礎的AEM API可作為搶先存取計畫的一部分提供。 如果您有興趣存取這些檔案，建議您傳送電子郵件至[aem-apis@adobe.com](mailto:aem-apis@adobe.com)，並提供使用案例的說明。
 
 在本教學課程中，您將學習如何：
 
@@ -35,7 +35,7 @@ OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動
 - 建立並設定Adobe Developer Console (ADC)專案，以使用&#x200B;_OAuth伺服器對伺服器驗證_&#x200B;存取AEM API。
 - 開發範例NodeJS應用程式，呼叫Assets Author API以擷取特定資產的中繼資料。
 
-開始之前，請確定您已檢閱[存取AdobeAPI和相關概念](overview.md#accessing-adobe-apis-and-related-concepts)區段。
+開始之前，請確定您已檢閱[存取Adobe API和相關概念](overview.md#accessing-adobe-apis-and-related-concepts)區段。
 
 ## 先決條件
 
@@ -77,7 +77,7 @@ AEM as a Cloud Service環境的現代化需要兩個步驟，
 
 ### 更新AEM執行個體
 
-若要更新AEM執行個體，請在Adobe[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_環境_&#x200B;區段中，選取環境名稱旁的&#x200B;_省略符號_&#x200B;圖示，並選取&#x200B;**更新**&#x200B;選項。
+若要更新AEM執行個體，請在Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_環境_&#x200B;區段中，選取環境名稱旁的&#x200B;_省略符號_&#x200B;圖示，並選取&#x200B;**更新**&#x200B;選項。
 
 ![更新AEM執行個體](assets/update-aem-instance.png)
 
@@ -89,7 +89,7 @@ AEM as a Cloud Service環境的現代化需要兩個步驟，
 
 ### 新增產品設定檔
 
-若要將產品設定檔新增至AEM執行個體，請在Adobe[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_環境_&#x200B;區段中，選取環境名稱旁的&#x200B;_省略符號_&#x200B;圖示，並選取&#x200B;**新增產品設定檔**&#x200B;選項。
+若要將產品設定檔新增至AEM執行個體，請在Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_環境_&#x200B;區段中，選取環境名稱旁的&#x200B;_省略符號_&#x200B;圖示，並選取&#x200B;**新增產品設定檔**&#x200B;選項。
 
 ![新增產品設定檔](assets/add-new-product-profiles.png)
 
@@ -105,7 +105,7 @@ _Admin Console_&#x200B;視窗會顯示新新增的產品設定檔。
 
 新產品設定檔可在Adobe Developer Console (ADC)中啟用OpenAPI型AEM API存取。
 
-新增的產品設定檔與&#x200B;_服務_&#x200B;相關聯，這些服務代表具有預先定義存取控制清單(ACL)的AEM使用者群組。 _服務_&#x200B;用來控制AEM API的存取層級。
+新增的產品設定檔與&#x200B;_服務_&#x200B;相關聯，這些服務代表具有預先定義存取控制清單(ACL)的AEM使用者群組。 _服務_&#x200B;是用來控制AEM API的存取層級。
 
 您也可以選取或取消選取與產品設定檔相關聯的&#x200B;_服務_，以減少或增加存取層級。
 
@@ -163,20 +163,24 @@ _Admin Console_&#x200B;視窗會顯示新新增的產品設定檔。
 
    ![選取產品設定檔](assets/select-product-profile.png)
 
+   >[!CAUTION]
+   >
+   >    請注意，服務帳戶（亦稱為技術帳戶）使用者可取得完整存取權，因為它與&#x200B;**AEM管理員 — XX - XX**&#x200B;產品設定檔相關聯。
+
+
 1. 檢閱AEM API和驗證設定。
 
    ![AEM API設定](assets/aem-api-configuration.png)
 
    ![驗證組態](assets/authentication-configuration.png)
 
-
 ## 設定AEM執行個體以啟用ADC專案通訊
 
 若要啟用ADC Project的OAuth伺服器對伺服器認證ClientID來與AEM執行個體通訊，您必須設定AEM執行個體。
 
-這是透過在AEM專案的`config.yaml`檔案中定義組態來完成。 然後，使用Cloud Manager中的設定管道來部署`config.yaml`檔案。
+若要完成設定，請在AEM專案的`config.yaml`檔案中定義設定。 然後，使用Cloud Manager中的設定管道來部署`config.yaml`檔案。
 
-1. 在AEM專案中，從`config`資料夾尋找或建立`config.yaml`檔案。
+1. 在AEM專案中，從`config`資料夾中找到或建立`config.yaml`檔案。
 
    ![找到設定YAML](assets/locate-config-yaml.png)
 
@@ -221,15 +225,15 @@ _Admin Console_&#x200B;視窗會顯示新新增的產品設定檔。
 GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
 ```
 
-若要擷取特定資產的中繼資料，您需要`bucket`和`assetId`值。 `bucket`是不含Adobe網域名稱(.adobeaemcloud.com)的AEM執行個體名稱，例如`author-p63947-e1420428`。
+若要擷取特定資產的中繼資料，您需要`bucket`和`assetId`值。 `bucket`是不含AEM網域名稱(.adobeaemcloud.com)的Adobe執行個體名稱，例如`author-p63947-e1420428`。
 
 `assetId`是首碼為`urn:aaid:aem:`之資產的JCR UUID，例如`urn:aaid:aem:a200faf1-6d12-4abc-bc16-1b9a21f870da`。 有多種方式可取得`assetId`：
 
-- 附加AEM資產路徑`.json`副檔名以取得資產中繼資料。 例如，`https://author-p63947-e1420429.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/cycling-southern-utah/adobestock-221043703.jpg.json`並尋找`jcr:uuid`屬性。
+- 附加AEM資產路徑`.json`擴充功能以取得資產中繼資料。 例如，`https://author-p63947-e1420429.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/cycling-southern-utah/adobestock-221043703.jpg.json`並尋找`jcr:uuid`屬性。
 
 - 或者，您可以在瀏覽器的元素檢查器中檢查資產，以取得`assetId`。 尋找`data-id="urn:aaid:aem:..."`屬性。
 
-  ![Inspect資產](assets/inspect-asset.png)
+  ![檢查資產](assets/inspect-asset.png)
 
 ### 使用瀏覽器叫用API
 
@@ -243,7 +247,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
    ![API檔案](assets/api-documentation.png)
 
 1. 輸入下列值：
-   1. `bucket`值是不含Adobe網域名稱(.adobeaemcloud.com)的AEM執行個體名稱，例如`author-p63947-e1420428`。
+   1. `bucket`值是不含AEM網域名稱(.adobeaemcloud.com)的Adobe執行個體名稱，例如`author-p63947-e1420428`。
 
    1. 已從ADC專案的OAuth伺服器對伺服器認證取得&#x200B;**安全性**&#x200B;區段相關的`Bearer Token`和`X-Api-Key`值。 按一下&#x200B;**產生存取權杖**&#x200B;以取得`Bearer Token`值，並使用`ClientID`值做為`X-Api-Key`。
       ![產生存取權杖](assets/generate-access-token.png)
@@ -258,7 +262,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
 
    ![叫用API — 回應](assets/invoke-api-response.png)
 
-上述步驟確認AEM as a Cloud Service環境的現代化，啟用AEM API存取。 它也會確認ADC專案的成功設定，以及與AEM編寫執行個體的OAuth伺服器對伺服器認證ClientID通訊。
+上述步驟確認AEM as a Cloud Service環境的現代化，啟用AEM API存取權。 這也會確認ADC專案的成功設定，以及與AEM編寫執行個體的OAuth伺服器對伺服器認證ClientID通訊。
 
 ### NodeJS應用程式範例
 
