@@ -11,7 +11,7 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: d199ff3b9f4d995614c193f52dc90270f2283adf
+source-git-commit: 98d67d5b624b386c6a579cd03117372bc9058acb
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 使用[AEM WKND Sites專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)，您將瞭解如何從您最喜愛的IDE執行AEM-RDE的`install`命令，將各種AEM成品部署到RDE。
 
-- AEM程式碼和內容套件(all， ui.apps)部署
+- AEM程式碼和內容套件（所有， ui.apps）部署
 - OSGi套件組合和設定檔案部署
 - 以zip檔案形式部署Apache和Dispatcher
 - 個別檔案，例如HTL、`.content.xml` （對話方塊XML）部署
@@ -51,7 +51,7 @@ $ mvn clean package
 
 首先，確定您已安裝[最新的`aio` CLI模組](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli)。
 
-然後，使用`aio aem:rde:install`命令部署各種AEM成品。 現在您必須
+然後，使用`aio aem:rde:install`命令來部署各種AEM成品。 現在您必須
 
 ### 部署`all`和`dispatcher`封裝
 
@@ -96,7 +96,7 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. 執行Maven建置或同步個別檔案，驗證本機AEM SDK上的變更。
+1. 執行Maven組建或同步個別檔案，驗證本機AEM SDK上的變更。
 
 1. 透過`ui.apps`套件或透過部署個別對話方塊和HTL檔案來部署對RDE的變更：
 
@@ -126,7 +126,7 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
 $ aio aem:rde:install --help
 ```
 
-標幟的含義不言自明，`-s`標幟有助於將部署目標定位到作者或發佈服務。 部署&#x200B;**content-file或content-xml**&#x200B;檔案時，請使用`-t`旗標搭配`-p`旗標來指定AEM RDE環境中的目的地JCR路徑。
+標幟的含義不言自明，`-s`標幟有助於將部署目標定位到作者或發佈服務。 部署&#x200B;**content-file或content-xml**&#x200B;檔案時，請使用`-t`旗標以及`-p`旗標來指定AEM RDE環境中的目的地JCR路徑。
 
 ### 部署OSGi套件組合
 
@@ -238,7 +238,7 @@ Apache或Dispatcher設定檔案&#x200B;**無法個別部署**，但整個Dispatc
 1. 執行下列命令，將變更部署至RDE
 
    ```shell
-   $ aio aem:rde:install -t env-config ./config/cdn.yaml
+   $ aio aem:rde:install -t env-config ./config
    ```
 
 1. 驗證RDE上的變更
@@ -275,6 +275,6 @@ aem rde status   Get a list of the bundles and configs deployed to the current r
 
 [RDE命令檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
 
-用於與AEM快速開發環境互動的[Adobe I/O Runtime CLI外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
+與AEM快速開發環境互動的[Adobe I/O Runtime CLI外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [AEM專案設定](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
