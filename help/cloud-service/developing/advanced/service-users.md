@@ -11,10 +11,10 @@ thumbnail: 337530.jpeg
 last-substantial-update: 2022-10-10T00:00:00Z
 exl-id: 66f627e4-863d-45d7-bc68-7ec108a1c271
 duration: 1053
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 7d114e59c0fb975994540e0af2e3d31a09c5a38f
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 11%
+source-wordcount: '96'
+ht-degree: 7%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 11%
 + [Sling存放庫初始化(repoinit)檔案](https://sling.apache.org/documentation/bundles/repository-initialization.html)
 + [Sling服務驗證檔案](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)
 
-## 程式碼
+## 代碼
 
 ### ContentStatisticsImpl.java
 
@@ -121,6 +121,8 @@ public class ContentStatisticsImpl implements ContentStatistics {
 ```
 
 ### org.apache.sling.jcr.repoinit.RepositoryInitializer-wknd-examples-statistics.config
+
+並非所有Sling儲存庫初始設定式指示詞都支援`.config`副檔名，例如`ACLOptions`。 若要使用進階指令，請使用`.cfg.json`格式，其中Sling儲存庫初始設定式指示詞的每一行都是個別的字串常值。
 
 `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.author/org.apache.sling.jcr.repoinit.RepositoryInitializer-wknd-examples-statistics.config`
 
