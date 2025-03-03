@@ -1,6 +1,7 @@
 ---
-title: 使用GuideBridge API存取表單資料
-description: 針對以核心元件為基礎的最適化表單，使用GuideBridge API存取表單資料和附件。
+title: 使用GuideBridge API發佈表單資料
+description: 瞭解如何使用GuideBridge API存取及傳送最適化表單的表單資料。 輕鬆儲存及擷取表單資料。
+duration: 68
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -9,33 +10,33 @@ level: Experienced
 jira: KT-15286
 last-substantial-update: 2024-04-05T00:00:00Z
 exl-id: 099aaeaf-2514-4459-81a7-2843baa1c981
-duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
 
-# 使用GuideBridge APIPOST表單資料
 
-表單的「儲存並繼續」涉及允許使用者儲存填寫表單的進度並在稍後繼續。
-為了完成此使用案例，我們需要使用GuideBridge API存取表單資料，並將其傳送至REST端點以進行儲存和擷取。
+# 使用GuideBridge API存取及傳送表單資料
 
-表單資料會使用規則編輯器儲存在按鈕的點選事件上
+瞭解如何利用GuideBridge API來存取表單資料，並將其傳送至REST端點以進行儲存和擷取。 此功能可讓使用者順暢地儲存並繼續完成表單。
+
+在規則編輯器按一下按鈕時，系統會觸發JavaScript函式，以儲存表單資料。
+
 ![規則編輯器](assets/rule-editor.png)
 
-下列JavaScript函式是用來傳送資料至指定的端點
+下列JavaScript函式示範如何將表單資料傳送至指定的端點：
 
 ```javascript
 /**
 * Submits data and attachments 
-* @name submitFormDataAndAttachments Submit form data and attachments to REST end point
-* @param {string} endpoint in Stringformat
+* @name submitFormDataAndAttachments Submit form data and attachments to REST endpoint
+* @param {string} endpoint in String format
 * @return {string} 
  */
  
- function submitFormDataAndAttachments(endpoint) {
+function submitFormDataAndAttachments(endpoint) {
     guideBridge.getFormDataObject({
         success: function(resultObj) {
             const afFormData = resultObj.data.data;
@@ -51,7 +52,7 @@ ht-degree: 0%
             })
             .then(response => {
                 if (response.ok) {
-                    console.log("successfully saved");
+                    console.log("Successfully saved");
                     const fld = guideBridge.resolveNode("$form.confirmation");
                     return "Form data was saved successfully";
                 } else {
@@ -66,14 +67,13 @@ ht-degree: 0%
 }
 ```
 
-
-
 ## 伺服器端代碼
 
-已寫入下列伺服器端Java程式碼以處理表單資料。 以下是在AEM中執行的Java servlet，這會透過上述JavaScript中的XHR呼叫進行呼叫。
+以下伺服器端Java程式碼會處理表單資料處理。 AEM中的此Java servlet會透過上述JavaScript函式中的XHR呼叫叫用。
 
 ```java
 package com.azuredemo.core.servlets;
+
 import com.adobe.aemfd.docmanager.Document;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
@@ -83,12 +83,14 @@ import org.apache.sling.servlets.annotations.SlingServletResourceTypes;
 import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import javax.servlet.Servlet;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
+
 @Component(
    service = {
       Servlet.class
@@ -100,14 +102,17 @@ import java.util.List;
    extensions = "json"
 )
 public class StoreFormSubmission extends SlingAllMethodsServlet implements Serializable {
-   private static final long serialVersionUID = 1 L;
+   private static final long serialVersionUID = 1L;
    private final transient Logger log = LoggerFactory.getLogger(this.getClass());
+
    protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException {
-      List < RequestParameter > listOfRequestParameters = request.getRequestParameterList();
-      log.debug("The size of list is " + listOfRequestParameters.size());
+      List<RequestParameter> listOfRequestParameters = request.getRequestParameterList();
+      log.debug("The size of the list is " + listOfRequestParameters.size());
+      
       for (int i = 0; i < listOfRequestParameters.size(); i++) {
          RequestParameter requestParameter = listOfRequestParameters.get(i);
-         log.debug("is this request parameter a form field?" + requestParameter.isFormField());
+         log.debug("Is this request parameter a form field?" + requestParameter.isFormField());
+         
          if (!requestParameter.isFormField()) {
             Document attachmentDOC = new Document(requestParameter.getInputStream());
             attachmentDOC.copyToFile(new File(requestParameter.getName()));
@@ -116,6 +121,7 @@ public class StoreFormSubmission extends SlingAllMethodsServlet implements Seria
             log.debug(requestParameter.getString());
          }
       }
+      
       response.setStatus(HttpServletResponse.SC_OK);
    }
 }

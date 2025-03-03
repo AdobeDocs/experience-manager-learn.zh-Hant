@@ -1,6 +1,6 @@
 ---
 title: 區塊選項
-description: 了解如何版本編號具有多個显示選項的区塊。
+description: 瞭解如何使用多個顯示選項建置區塊。
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -10,16 +10,16 @@ doc-type: Tutorial
 jira: KT-17296
 duration: 700
 exl-id: f41dff22-bd47-4ea0-98cc-f5ca30b22c4b
-source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '1961'
 ht-degree: 0%
 
 ---
 
-# 開發帶有選項的塊
+# 使用選項開發區塊
 
-此教學課程以邊緣交付服務和通用编辑器教學課程為基礎，指導您完成向塊添加塊選項的過程。 藉由定義區塊選項，您可以自訂區塊的外觀和功能，讓不同的變化符合各種內容需求。 這可讓您在網站的設計系統中擁有更大的彈性和可重複使用性。
+本教學課程以Edge Delivery Services和Universal Editor教學課程為基礎，引導您完成新增區塊選項至區塊的程式。 藉由定義區塊選項，您可以自訂區塊的外觀和功能，讓不同的變化符合各種內容需求。 這可讓您在網站的設計系統中擁有更大的彈性和可重複使用性。
 
 ![並排區塊選項](./assets/block-options/main.png){align="center"}
 
@@ -35,9 +35,9 @@ ht-degree: 0%
 
 這些選項可讓您在建立動態和可調整區塊時擁有彈性和效率。
 
-此教學課程演示了佈局變體用例，其中 Teaser 塊可以以兩種不同的布局顯示： **預設** 和 **並排**&#x200B;顯示。
+此教學課程示範版面配置變化使用案例，其中Teaser區塊可以兩種不同的版面配置顯示： **預設**&#x200B;和&#x200B;**並排**。
 
-## 塊模型
+## 區塊模型
 
 若要將區塊選項新增至Teaser區塊，請在`/block/teaser/_teaser.json`開啟其JSON片段，並將新欄位新增至模型定義。 此欄位將其`name`屬性設為`classes`，這是AEM用來儲存區塊選項(套用至區塊的Edge Delivery Services HTML)的保護欄位。
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 作者選取選項時，對應的值會新增為區塊的HTML的CSS類別：
 
-- 如果 **選擇「預設** 」：
+- 如果選取&#x200B;**預設**：
 
   ```html
   <div class="block teaser">
@@ -95,7 +95,7 @@ ht-degree: 0%
   </div>
   ```
 
-- 如果 **選取「並排** 」：
+- 如果選取&#x200B;**並排**：
 
   ```html
   <div class="block teaser side-by-side">
@@ -103,10 +103,10 @@ ht-degree: 0%
   </div>
   ```
 
-這允許根據所選的打開應用不同的樣式和條件JavaScript。
+這可讓您根據所選的開啟專案，套用不同的樣式和條件式JavaScript。
 
 
->[!TAB 使用多個 CSS 類別進行選取]
+>[!TAB 選取包含多個CSS類別]
 
 **此教學課程未使用這個方法，但說明了替代方法和進階區塊選項。**
 
@@ -116,9 +116,9 @@ ht-degree: 0%
 
 #### 區塊模型
 
-例如，“ **並排** ”選項可以支援圖像顯示在左側 （`side-by-side left`） 或右側 （`side-by-side right`） 的變體。
+例如，**並排**&#x200B;選項可支援影像在左側(`side-by-side left`)或右側(`side-by-side right`)出現的變化。
 
-[!BADGE /blocks/Teaser/_Teaser.json]{type=Neutral tooltip="檔案以下程式代碼範例的名稱。"}
+[!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
 
 ```json{highlight="4,8,9-21"}
 ...
@@ -148,11 +148,11 @@ ht-degree: 0%
 ...
 ```
 
-#### 區塊 HTML
+#### 封鎖HTML
 
-當作者選擇一個選項時，相應的值將作為塊的 HTML 中的一組空格分隔的 CSS 類應用：
+作者選取選項時，對應的值會在區塊的HTML中，套用為一組以空格分隔的CSS類別：
 
-- 如果 **選擇「預設** 」：
+- 如果選取&#x200B;**預設**：
 
   ```html
   <div class="block teaser">
@@ -160,7 +160,7 @@ ht-degree: 0%
   </div>
   ```
 
-- 如果 **選取並排，左側影像** ：
+- 如果選取&#x200B;**與影像並排於左側**：
 
   ```html
   <div class="block teaser side-by-side left">
@@ -168,7 +168,7 @@ ht-degree: 0%
   </div>
   ```
 
-- 如果 **選取了並排與右側影像** ：
+- 如果選取&#x200B;**並排影像（位於右側**）：
 
   ```html
   <div class="block teaser side-by-side right">
@@ -179,13 +179,13 @@ ht-degree: 0%
 這可讓您根據所選的選項，套用不同的樣式和條件式JavaScript。
 
 
->[!TAB 具有多個 CSS 類別的複選]
+>[!TAB 使用多個CSS類別進行多重選取]
 
-**此方法未在此教學課程中使用，但說明瞭替代方法和高級塊選項。**
+**此教學課程未使用這個方法，但說明了替代方法和進階區塊選項。**
 
-的 `"component": "multiselect"` 輸入類型允許作者同時選擇多個選項。 這可以通過組合多種設計選擇來對塊的外觀進行複雜的排列。
+`"component": "multiselect"`的輸入型別允許作者同時選取多個選項。 如此可結合多種設計選擇，讓區塊的外觀發生複雜的排列。
 
-![具有多個 CSS 類別的複選](./assets/block-options/tab-3.png){align="center"}
+![使用多個CSS類別進行多重選取](./assets/block-options/tab-3.png){align="center"}
 
 ### 區塊模型
 
@@ -223,9 +223,9 @@ ht-degree: 0%
 
 #### 封鎖HTML
 
-當作者選擇多個選項時，相應的值將作為空格分隔的 CSS 類應用於塊的 HTML 中：
+當作者選取多個選項時，對應的值會在區塊的HTML中套用為以空格分隔的CSS類別：
 
-- 如果 **選擇了「並排** 」和 **「左側** 影像」：
+- 如果選取&#x200B;**並排**&#x200B;和左側&#x200B;**影像**：
 
   ```html{highlight="1"}
   <div class="block teaser side-by-side left">
@@ -233,7 +233,7 @@ ht-degree: 0%
   </div>
   ```
 
-- 如果 **選取「並排** 」和 **「右側** 影像」：
+- 如果選取&#x200B;**並排**&#x200B;和右側&#x200B;**的**&#x200B;影像：
 
   ```html{highlight="1"}
   <div class="block teaser side-by-side right">
@@ -241,11 +241,11 @@ ht-degree: 0%
   </div>
   ```
 
-雖然多選提供了靈活性，但它在管理設計排列方面帶來了複雜性。 如果沒有限制，衝突的選擇可能會銷售機會為中斷或偏離品牌的體驗。
+雖然多選提供彈性，但設計排列的管理卻相當複雜。 若沒有限制，衝突的選取專案可能會導致體驗中斷或品牌外。
 
 例如：
 
-- **影像在左側**&#x200B;或影像右側&#x200B;**而不選擇**“並排&#x200B;**”，則會將它們**&#x200B;隱式應用於“預設”**，後者始終將圖像設置為背景，因此**&#x200B;左右對齊無關。
+- **影像在左側**&#x200B;或&#x200B;**影像在右側**&#x200B;而未選取&#x200B;**並排**&#x200B;會隱含地套用至&#x200B;**預設**，此預設會一律將影像設定為背景，因此左右對齊是不相關的。
 - 同時選取左邊的&#x200B;**影像**&#x200B;和右邊的&#x200B;**影像是矛盾的**。
 - 選取&#x200B;**並排的**，但不包含&#x200B;**影像在左側**&#x200B;或影像在右側&#x200B;**可能會被視為模稜兩可，因為影像的位置未指定。**
 
@@ -262,7 +262,7 @@ ht-degree: 0%
 
 在下列範例中，將`classes`欄位的`value`屬性指派給`side-by-side`，預設選項設定為&#x200B;**並排**。 區塊模型中對應的區塊選項輸入是選用的。
 
-您也可以為相同區塊定義多個專案，每個專案都有不同的名稱和類別。 這可讓Universal Editor顯示不同的區塊專案，每個區塊專案都已預先設定特定的區塊選項。 雖然這些塊在編輯者中顯示為單獨的塊，但代碼庫包含單個塊，該塊根據所選選項動態呈現。
+您也可以為相同區塊定義多個專案，每個專案都有不同的名稱和類別。 這可讓Universal Editor顯示不同的區塊專案，每個區塊專案都已預先設定特定的區塊選項。 雖然這些區段在編輯器中會顯示為個別區塊，但程式碼基底會包含根據所選選項動態呈現的單一區塊。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
 
@@ -394,17 +394,17 @@ $ git push origin teaser
 
 ### 編寫區塊
 
-編輯通用编辑器中的新 **区塊選項** 頁面，並新增 **Teaser** 区塊。 請確保將 查詢 參數 `?ref=block-options` 添加到URL，以便使用 GitHub 分支中的 `block-options` 代碼載入頁面，
+在通用編輯器中編輯新的&#x200B;**區塊選項**&#x200B;頁面，並新增&#x200B;**Teaser**&#x200B;區塊。 請確定將查詢引數`?ref=block-options`新增至URL，以使用`block-options` GitHub分支的程式碼載入頁面，
 
-阻止對話框現在包含一個 **Teaser 選項** 下拉列表，其中包含 **預設** 和 **並排** 選項。 選擇 **並排** 並完成剩餘的內容製作。
+區塊對話方塊現在包含&#x200B;**Teaser選項**&#x200B;下拉式清單，其中包含&#x200B;**預設**&#x200B;和&#x200B;**並排**&#x200B;選項。 選擇&#x200B;**並排式**&#x200B;並排完成其餘的內容製作。
 
-![帶有選項塊對話框的 Teaser](./assets/block-options/block-dialog.png){align="center"}
+![含選項區塊對話方塊的Teaser](./assets/block-options/block-dialog.png){align="center"}
 
 選擇性地新增兩個&#x200B;**Teaser**&#x200B;區塊 — 一個設定為&#x200B;**預設**，另一個設定為&#x200B;**並排**。 這可讓您在開發期間並排預覽這兩個選項，並確保並排實作&#x200B;**不會影響**&#x200B;預設&#x200B;**選項。**
 
 ### 發佈以預覽
 
-將Teaser區塊新增到頁面後，[使用&#x200B;**管理出版物**&#x200B;和AEM作者的網站管理員將頁面發佈到預覽](../6-author-block.md)。
+將Teaser區塊新增到頁面後，[使用&#x200B;**發佈**&#x200B;按鈕並將頁面發佈到預覽](../6-author-block.md)，並選擇在通用編輯器中發佈到&#x200B;**預覽**。
 
 ## 封鎖HTML
 
@@ -461,15 +461,15 @@ $ git push origin teaser
 
 ## 封鎖CSS
 
-`blocks/teaser/teaser.css`編輯為「並排&#x200B;**」選項新增特定的 CSS 樣式**。此檔包含該塊的預設 CSS。
+編輯`blocks/teaser/teaser.css`為&#x200B;**並排式**&#x200B;選項新增特定的CSS樣式。 此檔案包含區塊的預設CSS。
 
-若要修改“**並行**”選項的樣式，請在面向使用該類配置的`side-by-side`塊的文件中添加新的作用域 CSS 規則`teaser.css`Teaser。
+若要修改&#x200B;**並排式**&#x200B;選項的樣式，請在`teaser.css`檔案中新增範圍CSS規則，該規則會鎖定以`side-by-side`類別設定的Teaser區塊。
 
 ```css
 .block.teaser.side-by-side { ... }
 ```
 
-或者，您也可以使用「CSS 巢狀」以獲得更簡潔的版本：
+或者，您可以使用CSS Nesting取得更精簡的版本：
 
 ```css
 .block.teaser {
@@ -481,9 +481,9 @@ $ git push origin teaser
 }
 ```
 
-在 `&.side-by-side` 規則 中，添加必要的 CSS 屬性以在應用類時 `side-by-side` 設置塊的樣式。
+在`&.side-by-side`規則內，當套用`side-by-side`類別時，新增必要的CSS屬性以設定區塊樣式。
 
-一種常見的方法是通過應用於 `all: initial` 共享選擇器，然後為變體添加所需的樣式 `side-by-side` 來重置默認樣式。 如果大部分的樣式都是跨選項共用的，覆寫特定屬性可能會較為容易。 不過，如果多個選取器需要變更，重設所有樣式並僅重新套用必要的樣式可讓程式碼更清楚、更容易維護。
+常見的方法是將`all: initial`套用至共用選取器，然後為`side-by-side`變體新增必要的樣式，以重設預設樣式。 如果大部分的樣式都是跨選項共用的，覆寫特定屬性可能會較為容易。 不過，如果多個選取器需要變更，重設所有樣式並僅重新套用必要的樣式可讓程式碼更清楚、更容易維護。
 [!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
 
 ```css
@@ -664,7 +664,7 @@ $ git push origin teaser
 
 藉由檢查套用至區塊元素的類別，即可直接識別區塊的作用中選項。 在此範例中，我們需要根據作用中選項調整`.image-wrapper`樣式的套用位置。
 
-該 `getOptions` 函數返回應用於塊的類數位，不包括 `block` and `teaser` （因為所有塊都有該 `block` 類，並且所有 Teaser 塊都有 `teaser` 該類）。 陣列中任何剩餘的類都指示活動選項。 如果陣列為空，則應用預設選項。
+`getOptions`函式傳回套用至區塊的類別陣列，不包括`block`和`teaser` （因為所有區塊都有`block`類別，而所有Teaser區塊都有`teaser`類別）。 陣列中任何剩餘的類別都會指出作用中的選項。 如果陣列是空的，則會套用預設選項。
 
 ```javascript
 function getOptions(block) {
@@ -673,7 +673,7 @@ function getOptions(block) {
 }
 ```
 
-此選項清單可用于在塊的JavaScript中有條件地執行自定義邏輯：
+此選項清單可用於在區塊的JavaScript中有條件地執行自訂邏輯：
 
 ```javascript
 if (getOptions(block).includes('side-by-side')) {
@@ -685,9 +685,9 @@ if (getOptions(block).includes('side-by-side')) {
 }
 ```
 
-包含「預設」和「並行」選項的Teaser塊的完整更新JavaScript檔如下所示：
+具有預設和並排選項的Teaser區塊完整更新JavaScript檔案如下：
 
-[!BADGE /blocks/Teaser/Teaser.js]{type=Neutral tooltip="檔案以下程式代碼範例的名稱。"}
+[!BADGE /blocks/teaser/teaser.js]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
 
 ```javascript
 /* /blocks/teaser/teaser.js */
@@ -762,7 +762,7 @@ export default function decorate(block) {
 
 ## 將程式碼插入
 
-請確保 [經常檢查](../3-local-development-environment.md#linting) 代碼更改，以保持其乾淨和一致。 定期篩選有助於及早發現問題，減少整體開發時間。 請記住，您必須先解決所有Linting問題，才能將您的開發工作合併至`main`分支！
+請務必[經常lint](../3-local-development-environment.md#linting)您的程式碼變更，以保持其整齊一致。 定期篩選有助於及早發現問題，減少整體開發時間。 請記住，您必須先解決所有Linting問題，才能將您的開發工作合併至`main`分支！
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -790,6 +790,6 @@ $ git push origin block-options
 
 ## 恭喜！
 
-您現在已探索Edge Delivery Services和Universal Editor中的區塊選項，為您提供工具，以更大的彈性自訂和簡化內容編輯。 開始專案中應用這些選項來提高效率並保持一致性。
+您現在已探索Edge Delivery Services和Universal Editor中的區塊選項，為您提供工具，以更大的彈性自訂和簡化內容編輯。 開始在您的專案中套用這些選項，以提高效率並維持一致性。
 
 如需更多最佳實務和進階技術，請參閱[通用編輯器檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。

@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '588'
 ht-degree: 17%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 17%
       + [實驗用的中繼資料](./document-authoring/how-to/experimentation-add-metadata.md)
 + 頁面製作{#page-authoring}
    + [製作](page-authoring/aem-sites-authoring-overview.md)
-   + [導覽](page-authoring/basic-handling-sites-feature-video-use.md)
+   + [瀏覽](page-authoring/basic-handling-sites-feature-video-use.md)
    + [網站結構](page-authoring/content-hierarchy-feature-video-use.md)
    + [頁面建立](page-authoring/creating-page-feature-video-use.md)
    + [頁面製作](page-authoring/page-authoring-overview-feature-video-use.md)
@@ -110,6 +110,7 @@ ht-degree: 17%
          + [使用CSS和JS封鎖](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
          + 操作說明{#how-to}
             + [區塊選項](./edge-delivery-services/developing/universal-editor/how-to/block-options.md)
+            + [頁首與頁尾](./edge-delivery-services/developing/universal-editor/how-to/header-and-footer.md)
    + 操作說明{#how-to}
       + [RSS摘要](edge-delivery-services/how-to/rss.md)
       + [社群媒體分享](edge-delivery-services/how-to/social-media-sharing.md)
