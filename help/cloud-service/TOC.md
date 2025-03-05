@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
+source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1377'
 ht-degree: 15%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 15%
    + [架構](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
    + 策略與思想領導力{#strategy}
-      + [Experience Manager — 治理與人員配置模型與原型](./introduction/experience-manager-governance-and-staffing-models.md)
+      + [Experience Manager — 治理和人員配置模型與原型](./introduction/experience-manager-governance-and-staffing-models.md)
       + [如何使用Adobe Experience Manager提升內容速度](./introduction/drive-content-velocity-for-sites.md)
 + Experience Cloud整合{#integrations}
    + [整合](./integrations/experience-cloud.md)
@@ -36,10 +36,10 @@ ht-degree: 15%
    + [osgi](./underlying-technology/introduction-osgi.md)
    + [Java內容存放庫](./underlying-technology/introduction-jcr.md)
    + [Sling](./underlying-technology/introduction-sling.md)
-   + [Author與Publish服務](./underlying-technology/introduction-author-publish.md)
+   + [作者與發佈服務](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
-   + [AEM AssetsSidekick外掛程式](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
+   + [AEM Assets Sidekick外掛程式](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [方案](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
@@ -143,26 +143,32 @@ ht-degree: 15%
          + [周遊警告](./debugging/cloud-service/risks/traversals.md)
 + AEM API{#aem-apis}
    + [概觀](./apis/overview.md)
-   + [OpenAPI型AEM API （伺服器對伺服器）](./apis/invoke-openapi-based-aem-apis.md)
-   + [OpenAPI型AEM API （使用者驗證）](./apis/invoke-openapi-based-aem-apis-from-web-app.md)
+   + OpenAPIs{#openapis}
+      + [概觀](./apis/openapis/overview.md)
+      + [設定方法](./apis/openapis/setup.md)
+      + [伺服器對伺服器驗證](./apis/openapis/use-cases/invoke-api-using-oauth-s2s.md)
+      + [使用者驗證（網頁應用程式）](./apis/openapis/use-cases/invoke-api-using-oauth-web-app.md)
+      + 如何{#how-to}
+         + [認證和產品設定檔管理](./apis/openapis/how-to/credentials-and-product-profile-management.md)
+         + [許可權管理](./apis/openapis/how-to/services-user-group-permission-management.md)
 + 內容傳遞{#content-delivery}
    + [自訂網域名稱](./content-delivery/custom-domain-names.md)
-   + [具有Adobe託管CDN的自訂網域名稱](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
+   + [使用Adobe管理的CDN自訂網域名稱](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
    + [使用客戶CDN的自訂網域名稱](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
    + [快取](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
-   + [AdobeCDN — 快取範圍以外](./content-delivery/adobe-cdn-beyond-caching.md)
+   + [Adobe CDN — 快取範圍以外](./content-delivery/adobe-cdn-beyond-caching.md)
    + [自訂錯誤頁面](./content-delivery/custom-error-pages.md)
    + [URL重新導向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + 快取{#caching}
    + [概觀](./caching/overview.md)
-   + [AEM Publish服務](./caching/publish.md)
+   + [AEM發佈服務](./caching/publish.md)
    + [AEM作者服務](./caching/author.md)
    + [CDN快取命中率分析](./caching/cdn-cache-hit-ratio-analysis.md)
    + 如何{#how-to}
       + [啟用快取](./caching/how-to/enable-caching.md)
       + [停用快取](./caching/how-to/disable-caching.md)
       + [清除快取](./caching/how-to/purge-cache.md)
-+ 正在存取AEM{#accessing}
++ 存取AEM{#accessing}
    + [概觀](./accessing/overview.md)
    + [Adobe IMS 使用者](./accessing/adobe-ims-users.md)
    + [Adobe IMS 使用者群組](./accessing/adobe-ims-user-groups.md)
@@ -208,7 +214,7 @@ ht-degree: 15%
       + [BPA與CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [AEM現代化工具](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
       + [存放庫現代化](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
-      + [asset compute微服務](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
+      + [Asset Compute微服務](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
       + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
       + [搜尋和建立索引](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + 內容移轉{#content-migration}
@@ -216,7 +222,7 @@ ht-degree: 15%
          + [內容轉移工具](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
          + [常見問題集](./migration/moving-to-aem-as-a-cloud-service/content-migration/faq.md)
       + [疑難排解](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
-      + AEM Formsas a Cloud Service{#aem-forms}
+      + AEM Forms as a Cloud Service {#aem-forms}
          + [簡介](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [數位註冊](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
          + [通訊](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
@@ -233,7 +239,7 @@ ht-degree: 15%
       + [使用Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + [內容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
-   + 針對Formsas a Cloud Service{#developing-for-cloud-service}開發
+   + 針對Forms as a Cloud Service{#developing-for-cloud-service}開發
       + [1 — 快速入門](./forms/developing-for-cloud-service/getting-started.md)
       + [2 — 安裝IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [3 — 設定Git](./forms/developing-for-cloud-service/setup-git.md)
@@ -242,7 +248,7 @@ ht-degree: 15%
       + [6 — 自訂提交處理常式](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
       + [7 — 使用資源型別註冊servlet](./forms/developing-for-cloud-service/registering-servlet-using-resourcetype.md)
       + [8 — 啟用Forms Portal元件](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [9 — 包含Cloud Service和FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [9 — 包含雲端服務與FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [10 — 內容感知雲端設定](./forms/developing-for-cloud-service/context-aware-fdm.md)
       + [11 — 推送至Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [12 — 部署至開發環境](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
@@ -382,14 +388,14 @@ ht-degree: 15%
       + [將表單資料儲存在SharePoint中](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
       + [使用SharePoint清單中的資料預先填寫表單](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
       + [使用工作流程將資料插入SharePoint清單](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
-+ asset compute擴充性{#asset-compute}
++ Asset Compute擴充性{#asset-compute}
    + [概觀](./asset-compute/overview.md)
    + 設定{#set-up}
       + [帳戶和服務布建](./asset-compute/set-up/accounts-and-services.md)
       + [本機開發環境](./asset-compute/set-up/development-environment.md)
       + [App Builder](./asset-compute/set-up/app-builder.md)
    + 開發{#develop}
-      + [建立Asset compute專案](./asset-compute/develop/project.md)
+      + [建立Asset Compute專案](./asset-compute/develop/project.md)
       + [設定環境變數](./asset-compute/develop/environment-variables.md)
       + [設定manifest.yml](./asset-compute/develop/manifest.md)
       + [開發背景工作](./asset-compute/develop/worker.md)
@@ -399,12 +405,12 @@ ht-degree: 15%
       + [對背景工作進行偵錯](./asset-compute/test-debug/debug.md)
    + 部署{#deploy}
       + [部署至Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
-      + [與AEM整合](./asset-compute/deploy/processing-profiles.md)
+      + [整合AEM](./asset-compute/deploy/processing-profiles.md)
    + 進階{#advanced}
       + [中繼資料背景工作](./asset-compute/advanced/metadata.md)
    + [疑難排解](./asset-compute/troubleshooting.md)
 
-+ 多步驟Tutorials{#multi-step-tutorials}
++ 多步驟教學課程{#multi-step-tutorials}
    + [AEM Sites開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant){target=_blank}
    + [SPA編輯器(React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
@@ -430,7 +436,7 @@ ht-degree: 15%
       + [移轉1](./expert-resources/cloud-5/cloud5-aem-content-migration-part-1.md)
       + [Dispatcher驗證器](./expert-resources/cloud-5/cloud5-aem-dispatcher-validator.md)
       + [搜尋和建立索引](./expert-resources/cloud-5/cloud5-aem-search-and-indexing.md)
-      + [AdobeApp Builder](./expert-resources/cloud-5/cloud5-adobe-app-builder.md)
+      + [Adobe App Builder](./expert-resources/cloud-5/cloud5-adobe-app-builder.md)
       + 第2{#season-2}季
          + [片段](./expert-resources/cloud-5/season-2/cloud5-experience-v-content-fragments.md)
          + [Repo Modernizer](./expert-resources/cloud-5/season-2/cloud5-repo-modernizer.md)
@@ -445,7 +451,7 @@ ht-degree: 15%
       + 第3{#season-3}季
          + [第三方搜尋](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [Edge背景工作](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
-         + [Publish，在Edge Delivery Services中取消發佈事件](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
+         + [在Edge Delivery Services中發佈、取消發佈事件](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [查詢索引和Excel公式](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
          + [自備Cloudflare CDN](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
          + [整合AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)

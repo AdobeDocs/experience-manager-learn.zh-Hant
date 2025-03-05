@@ -1,118 +1,307 @@
 ---
 title: AEM API概述
-description: 瞭解Adobe Experience Manager (AEM)中的各種API型別，並取得以OpenAPI規格為基礎的API (通常稱為「以OpenAPI為基礎的AEM API」)的概觀。
+description: 瞭解Adobe Experience Manager (AEM)中的各種API，並瞭解為您的整合選擇哪種API。
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
 level: Beginner
 doc-type: Article
-jira: KT-16515
-thumbnail: KT-16515.jpeg
-last-substantial-update: 2024-11-20T00:00:00Z
+jira: KT-17425
+thumbnail: KT-17425.jpeg
+last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 1%
+source-wordcount: '945'
+ht-degree: 2%
 
 ---
 
 # AEM API概述{#aem-apis-overview}
 
-瞭解Adobe Experience Manager (AEM)as a Cloud Service中的各種API型別，並取得以[OpenAPI Specification (OAS)](https://swagger.io/specification/)為基礎的AEM API (通常稱為OpenAPI為基礎的AEM API)的概觀。
+瞭解Adobe Experience Manager (AEM)中的各種API，並瞭解為您的整合選擇哪種API。
 
-AEM as a Cloud Service提供各種API，用於建立、讀取、更新和刪除內容、資產和表單。 這些API可讓開發人員建立與AEM互動的自訂應用程式。
+若要在AEM中建立、讀取、更新及刪除內容、資產和表單，開發人員可使用各式各樣的API。 這些API可讓開發人員建立與AEM互動的自訂應用程式。
 
-讓我們來探索AEM中的各種API型別，並瞭解存取AdobeAPI的主要概念。
+讓我們探索AEM中的不同API型別，並瞭解為您的整合選擇哪種API。
 
 ## AEM API的型別{#types-of-aem-apis}
 
-AEM同時提供舊版和現代API，以便與其作者和發佈服務型別互動。
+AEM提供下列API，以便與其作者和發佈服務型別互動。
 
-- **舊版API**：在舊版AEM中推出，舊版API仍支援回溯相容性。
-
-- **現代API**：根據REST、OpenAPI規格，這些API會遵循目前的API設計最佳實務，建議用於新整合。
-
-
-| AEM API型別 | 規格 | 可用性 | 使用案例 | 範例 |
+| AEM API型別 | 描述 | 可用性 | 使用案例 | API範例 |
 | --- | --- | --- | --- | --- |
-| 傳統（非RESTful） API | Sling Servlet | AEM 6.X、AEM as a Cloud Service | 舊版整合、回溯相容性 | [查詢產生器API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api)及其他 |
-| RESTful API | HTTP、JSON | AEM 6.X、AEM as a Cloud Service | CRUD作業，現代應用程式 | [Assets HTTP API](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)、[工作流程REST API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-program-interaction#using-the-workflow-rest-api)、[內容服務的JSON匯出工具](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter)及其他 |
-| GRAPHQL API | GraphQL | AEM 6.X、AEM as a Cloud Service | Headless CMS、SPA、行動應用程式 | [GraphQL API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments) |
-| OpenAPI型AEM API | REST， OpenAPI | **僅限AEM as a Cloud Service** | API優先開發，現代應用程式 | [Assets作者API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)、[資料夾API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)、[AEM Sites API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/sites/delivery/)、[Forms Acrobat服務](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/)及其他 |
+| OpenAPI型AEM API | 適用於Assets、Sites和Forms的標準化機器可讀API。 | **僅限AEM as a Cloud Service** | API優先開發，現代應用程式 | [Assets作者API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)、[資料夾API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)、[AEM Sites API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/sites/delivery/)、[Forms Acrobat服務](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/)及其他 |
+| RESTful API | 與AEM資源互動的傳統REST端點。 | AEM 6.X、AEM as a Cloud Service | CRUD作業，現代應用程式 | [Assets HTTP API](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)、[工作流程REST API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-program-interaction#using-the-workflow-rest-api)、[內容服務的JSON匯出工具](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter)及其他 |
+| GRAPHQL API | 透過彈性的查詢，針對有效擷取結構化內容進行最佳化。 | AEM 6.X、AEM as a Cloud Service | Headless CMS、SPA、行動應用程式 | [GraphQL API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments) |
+| 傳統（非RESTful） API | JCR、Sling模型、查詢產生器等較舊的API。 | AEM 6.X、AEM as a Cloud Service | 舊版整合、回溯相容性 | [查詢產生器API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api)及其他 |
 
->[!IMPORTANT]
->
->以OpenAPI為基礎的AEM API僅可在AEM as a Cloud Service中使用，且與AEM 6.X不相容。
+如需詳細資訊，請參閱[Adobe Experience Manager as a Cloud Service API](https://developer.adobe.com/experience-cloud/experience-manager-apis/)頁面。
 
-如需AEM API的詳細資訊，請參閱[Adobe Experience Manager as a Cloud Service API](https://developer.adobe.com/experience-cloud/experience-manager-apis/)。
+## 要選擇哪個API{#which-api-to-choose}
 
-讓我們深入瞭解以OpenAPI為基礎的AEM API，以及存取AdobeAPI的重要概念。
+為您的整合選取API時，請考慮下列因素：
 
-## OpenAPI型AEM API{#openapi-based-aem-apis}
+- **使用案例**：判斷AEM API是否支援您的使用案例。 儘可能使用OpenAPI式AEM API _，因為這些API提供與AEM互動的標準化現代方法。_&#x200B;如果無法使用OpenAPI型API，請考慮使用RESTful API或GraphQL API，作為最後的手段，使用傳統API。
 
->[!AVAILABILITY]
->
->以OpenAPI為基礎的AEM API屬於搶先存取計畫的一部分。 如果您有興趣存取這些檔案，建議您傳送電子郵件至[aem-apis@adobe.com](mailto:aem-apis@adobe.com)，並提供使用案例的說明。
+- **相容性**：確定選取的API與您的AEM版本相容。 例如，_OpenAPI型AEM API是AEM as a Cloud Service_&#x200B;的專屬專案，無法在AEM 6.X中使用。
 
-[OpenAPI規格](https://swagger.io/specification/) （先前稱為Swagger）是廣泛使用的RESTful API定義標準。 AEM as a Cloud Service提供數種OpenAPI規格型API (或只是OpenAPI型AEM API)，可讓您更輕鬆地建立與AEM的作者或發佈服務型別互動的自訂應用程式。 以下是一些範例：
+- **AEM服務型別： Author與Publish**：API的選擇也取決於它是在Author或Publish服務上執行，因為它們的存取模型不同。 AEM Author服務是用於內容建立，一律需要驗證。 AEM Publish服務用於內容傳送，且可能不需要驗證，端視使用案例而定。
 
-**個網站**
+- **驗證**：確認API支援您打算使用的驗證方法。 例如：
+   - **以OpenAPI為基礎的AEM API**：支援OAuth 2.0驗證，包括使用者端認證（伺服器對伺服器）、授權代碼（網頁應用程式）以及代碼交換（單頁應用程式）授權型別的證明金鑰。 其他AEM API不支援OAuth 2.0驗證。
+   - **RESTful API**：支援JSON Web權杖(JWT)驗證，也稱為權杖型驗證。
 
-- [網站API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/sites/delivery/)：使用內容片段的API。
+## JSON Web權杖(JWT)和OAuth 2.0之間的差異{#difference-between-jwt-and-oauth}
 
-**Assets**
+讓我們比較JSON Web權杖(JWT)和OAuth 2.0，AEM API中使用的兩種常見驗證機制：
 
-- [資料夾API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)：用於處理資料夾的API，例如建立、列出和刪除資料夾。
-
-- [Assets作者API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)：使用資產及其中繼資料的API。
-
-**Forms**
-
-- [Forms Communications API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/)：處理表單與檔案的API。
-
-在未來的版本中，將會新增更多以OpenAPI為基礎的AEM API，以支援其他使用案例。
-
-### 驗證支援{#authentication-support}
-
-以OpenAPI為基礎的AEM API支援下列驗證方法：
-
-- **OAuth伺服器對伺服器認證**：適用於需要API存取而不需使用者互動的後端服務。 它使用&#x200B;_client_credentials_&#x200B;授權型別，在伺服器層級啟用安全存取管理。 如需詳細資訊，請參閱[OAuth伺服器對伺服器認證](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/#oauth-server-to-server-credential)。
-
-- **OAuth Web App認證**：適用於具有代表使用者存取AEM API的前端和&#x200B;_後端_&#x200B;元件的網頁應用程式。 它使用&#x200B;_authorization_code_&#x200B;授權型別，後端伺服器可在此安全地管理密碼和權杖。 如需詳細資訊，請參閱[OAuth Web App認證](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-web-app-credential)。
-
-- **OAuth單頁應用程式認證**：專為瀏覽器中執行的SPA所設計，需要代表沒有後端伺服器的使用者存取API。 它使用&#x200B;_authorization_code_&#x200B;授權型別，並依賴使用PKCE （代碼交換的證明金鑰）的使用者端安全性機制來保護授權代碼流程。 如需詳細資訊，請參閱[OAuth單頁應用程式認證](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential)。
-
-### OAuth伺服器對伺服器與OAuth網頁應用程式/單頁應用程式憑證之間的差異{#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials}
-
-| | OAuth伺服器對伺服器 | OAuth使用者驗證(Web-app) |
+| 功能 | JSON Web權杖(JWT) | OAuth 2.0 |
 | --- | --- | --- |
-| 驗證目的 | 專為機器對機器互動所設計。 | 專為使用者導向互動所設計。 |
-| 權杖行為 | 代表使用者端應用程式本身的存取權杖發生問題。 | 代表已驗證身分的使用者發行存取權杖。 |
-| 使用案例 | 需要API存取而不需使用者互動的後端服務。 | 具有代表使用者存取API的前端和後端元件的網頁應用程式。 |
-| 安全性考量 | 在後端系統中安全地儲存機密認證(`client_id`， `client_secret`)。 | 使用者的驗證及被授與其自己的暫時存取權杖。 在後端系統中安全地儲存機密認證(`client_id`， `client_secret`)。 |
-| 授予類型 | _client_credentials_ | _authorization_code_ |
+| 使用位置 | RESTful API | 以OpenAPI為基礎的AEM API （RESTful或其他API不支援） |
+| 用途 | 服務驗證 | 使用者或服務驗證 |
+| 使用者互動 | 不需要使用者互動 | 授權代碼和單頁應用程式授予型別所需的使用者互動 |
+| 最適合 | 伺服器對伺服器API呼叫 | 安全且許可的應用程式和使用者存取 |
+| 必要資訊 | 簽署JWT的私密金鑰 | OAuth 2.0的使用者端ID和使用者端密碼 |
+| 權杖到期 | 期限短，通常需要重新整理 | 存取權杖為短期。 refresh-token是長效的，用於取得新的存取 — token |
+| 認證管理 | [AEM Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console) | [Adobe Developer Console](https://developer.adobe.com/developer-console/) |
 
-### 存取Adobe API和相關概念{#accessing-adobe-apis-and-related-concepts}
+## OpenAPI型AEM API
 
-在存取Adobe API之前，您必須瞭解以下重要概念：
+在[OpenAPI-based AEM API](./openapis/overview.md)指南中進一步瞭解OpenAPI-based AEM API和存取Adobe API的重要概念。
 
-- **[Adobe Developer Console](https://developer.adobe.com/)**：存取AdobeAPI、SDK、即時事件、無伺服器函式等的開發人員中心。 請注意，它與用來偵錯AEM應用程式的&#x200B;_AEM_ Developer Console不同。
+### 使用案例
 
-- **[Adobe Developer Console專案](https://developer.adobe.com/developer-console/docs/guides/projects/)**：管理API整合、事件和執行階段函式的中心位置。 在這裡，您可以設定API、設定驗證並產生所需的認證。
+<!-- CARDS
+{target = _self}
 
-- **[產品設定檔](https://helpx.adobe.com/tw/enterprise/using/manage-product-profiles.html)**：產品設定檔提供許可權預設集，可讓您控制使用者或應用程式對AEM、Adobe Target、Adobe Analytics等Adobe產品的存取權。 每個Adobe產品都有與其相關的預先定義產品設定檔。
+* ./openapis/use-cases/invoke-api-using-oauth-s2s.md
+  {title = Invoke API using Server-to-Server authentication}
+  {description = Learn how to invoke OpenAPI-based AEM APIs from a custom NodeJS application using OAuth Server-to-Server authentication.}
+  {image = ./openapis/assets/s2s/OAuth-S2S.png}
+* ./openapis/use-cases/invoke-api-using-oauth-web-app.md
+  {title = Invoke API using Web App authentication}
+  {description = Learn how to invoke OpenAPI-based AEM APIs from a custom web application using OAuth Web App authentication.}
+  {image = ./openapis/assets/web-app/OAuth-WebApp.png}  
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Invoke API using Server-to-Server authentication">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./openapis/use-cases/invoke-api-using-oauth-s2s.md" title="使用伺服器對伺服器驗證叫用API" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./openapis/assets/s2s/OAuth-S2S.png" alt="使用伺服器對伺服器驗證叫用API"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./openapis/use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" title="使用伺服器對伺服器驗證叫用API">使用伺服器對伺服器驗證啟動API</a>
+                    </p>
+                    <p class="is-size-6">瞭解如何使用OAuth伺服器對伺服器驗證，從自訂NodeJS應用程式叫用OpenAPI型AEM API。</p>
+                </div>
+                <a href="./openapis/use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Invoke API using Web App authentication">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./openapis/use-cases/invoke-api-using-oauth-web-app.md" title="使用網頁應用程式驗證叫用API" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./openapis/assets/web-app/OAuth-WebApp.png" alt="使用網頁應用程式驗證叫用API"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./openapis/use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" title="使用網頁應用程式驗證叫用API">使用網頁應用程式驗證啟動API</a>
+                    </p>
+                    <p class="is-size-6">瞭解如何使用OAuth網頁應用程式驗證，從自訂網頁應用程式叫用OpenAPI型AEM API。</p>
+                </div>
+                <a href="./openapis/use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-- **服務**：服務會定義實際許可權，並與產品設定檔相關聯。 若要減少或增加許可權預設集，您可以取消選取或選取與產品設定檔關聯的服務。 因此，可讓您控制產品及其API的存取層級。 在AEM as a Cloud Service中，服務代表具有存放庫節點預先定義存取控制清單(ACL)的使用者群組，允許精細的許可權管理。
 
-## 後續步驟{#next-steps}
 
-瞭解不同的AEM API型別，包括
-以OpenAPI為基礎的AEM API以及存取AdobeAPI的重要概念，讓您現在可以開始建立與AEM互動的自訂應用程式。
+## GraphQL API — 範例
 
-讓我們開始使用：
+在[AEM Headless快速入門 — GraphQL](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview)中進一步瞭解GraphQL API以及如何使用
 
-- [叫用伺服器對伺服器驗證的OpenAPI型AEM API](invoke-openapi-based-aem-apis.md)教學課程，示範如何使用OAuth伺服器對伺服器認證&#x200B;_存取OpenAPI型AEM API_。
-- [透過網頁應用程式的使用者驗證叫用OpenAPI型AEM API](invoke-openapi-based-aem-apis-from-web-app.md)教學課程，示範如何使用OAuth網頁應用程式認證&#x200B;_從_&#x200B;網頁應用程式存取OpenAPI型AEM API。
+### 使用案例
+
+<!-- CARDS
+{target = _self}
+
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app
+  {title = Single Page Application (SPA)}
+  {description = Learn how to build a Single Page Application (SPA) that fetches content from AEM using GraphQL APIs.}
+  {image = ./assets/react-app-card.png}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps
+  {title = Mobile App}
+  {description = Learn how to build a mobile app that fetches content from AEM using GraphQL APIs.}
+  {image = ./assets/ios-app-card.png}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component
+  {title = Web Component}
+  {description = Learn how to build a web component that fetches content from AEM using GraphQL APIs.}
+  {image = ./assets/web-component-card.png}
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Single Page Application (SPA)">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" title="單頁應用程式(SPA)" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/react-app-card.png" alt="單頁應用程式(SPA)"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" target="_self" rel="referrer" title="單頁應用程式(SPA)">單頁應用程式(SPA)</a>
+                    </p>
+                    <p class="is-size-6">瞭解如何使用GraphQL API建立可從AEM擷取內容的單頁應用程式(SPA)。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Mobile App">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" title="行動應用程式" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/ios-app-card.png" alt="行動應用程式"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" target="_self" rel="referrer" title="行動應用程式">行動應用程式</a>
+                    </p>
+                    <p class="is-size-6">瞭解如何使用GraphQL API建立從AEM擷取內容的行動應用程式。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Web Component">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" title="Web元件" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/web-component-card.png" alt="Web元件"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" target="_self" rel="referrer" title="Web元件">網頁元件</a>
+                    </p>
+                    <p class="is-size-6">瞭解如何使用GraphQL API建置可從AEM擷取內容的網頁元件。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+## RESTful API — 範例
+
+深入瞭解RESTful API，例如[Assets HTTP API](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)和[JSON匯出工具](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter)。
+
+### 使用案例
+
+<!-- CARDS
+{target = _self}
+
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview
+  {title = Invoke API using Server-to-Server authentication}
+  {description = Learn how to build a native mobile app that fetches content from AEM using Content Services RESTful APIs.}
+  {image = ./assets/RESTful-Content-Service.png}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview
+  {title = Token-based Authentication for RESTful APIs}
+  {description = Learn how to invoke RESTful APIs using JSON Web Token (JWT) authentication.}
+  {image = ./assets/RESTful-TokenAuth.png}
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Invoke API using Server-to-Server authentication">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" title="使用伺服器對伺服器驗證叫用API" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/RESTful-Content-Service.png" alt="使用伺服器對伺服器驗證叫用API"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" target="_self" rel="referrer" title="使用伺服器對伺服器驗證叫用API">使用伺服器對伺服器驗證啟動API</a>
+                    </p>
+                    <p class="is-size-6">瞭解如何使用Content Services RESTful API建立可從AEM擷取內容的原生行動應用程式。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Token-based Authentication for RESTful APIs">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview" title="RESTful API的權杖型驗證" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/RESTful-TokenAuth.png" alt="RESTful API的權杖型驗證"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        RESTful API的<a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview" target="_self" rel="referrer" title="RESTful API的權杖型驗證">權杖型驗證</a>
+                    </p>
+                    <p class="is-size-6">瞭解如何使用JSON Web權杖(JWT)驗證來叫用RESTful API。</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+
