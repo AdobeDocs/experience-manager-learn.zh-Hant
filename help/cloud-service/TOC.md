@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1387'
 ht-degree: 15%
 
 ---
@@ -309,8 +309,12 @@ ht-degree: 15%
       + [將資料與範本合併](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [測試解決方案](./forms/doc-gen-forms-cs/test.md)
       + [挑戰](./forms/doc-gen-forms-cs/challenge.md)
-   + 使用DocAssurance API{#doc-assurance-api}
-      + [程式碼片段範例](./forms/doc-assurance-api/using-doc-assurance-api.md)
+   + 使用Forms Document Services API{#forms-document-services-api}
+      + [簡介](./forms/forms-document-services/introduction.md)
+      + [設定OpenAPI](./forms/forms-document-services/using-open-api.md)
+      + [產生存取權杖](./forms/forms-document-services/generate-access-token.md)
+      + [套用使用許可權](./forms/forms-document-services/make-api-calls.md)
+      + [程式碼範例](./forms/forms-document-services/sample-project.md)
    + 使用批次API{#formscs-batch-api}產生檔案
       + [簡介](./forms/formscs-batch-api/introduction.md)
       + [設定Azure儲存體](./forms/formscs-batch-api/configure-azure-storage.md)
