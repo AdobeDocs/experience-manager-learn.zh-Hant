@@ -11,7 +11,8 @@ duration: 0
 last-substantial-update: 2024-06-21T00:00:00Z
 jira: KT-15945
 thumbnail: KT-15945.jpeg
-source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
+exl-id: fa9ee14f-130e-491b-91b6-594ba47a7278
+source-git-commit: 98f1996dbeb6a683f98ae654e8fa13f6c7a2f9b2
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 0%
@@ -22,7 +23,7 @@ ht-degree: 0%
 
 瞭解如何將自訂網域名稱新增至使用&#x200B;**客戶管理的CDN**&#x200B;的AEM as a Cloud Service網站。
 
-在本教學課程中，使用客戶管理的CDN新增HTTPS可定址自訂網域名稱`wkndviaawscdn.enablementadobe.com` (具有傳輸層安全性(TLS))，以強化範例[AEM WKND](https://github.com/adobe/aem-guides-wknd)網站的品牌。 在本教學課程中，AWS CloudFront是作為客戶管理的CDN，不過任何CDN提供者都應該與AEM as a Cloud Service相容。
+在本教學課程中，使用客戶管理的CDN新增HTTPS可定址自訂網域名稱`wkndviaawscdn.enablementadobe.com`以及傳輸層安全性(TLS)，藉此加強範例[AEM WKND](https://github.com/adobe/aem-guides-wknd)網站的品牌。 在本教學課程中，AWS CloudFront是作為客戶管理的CDN，不過任何CDN提供者都應該與AEM as a Cloud Service相容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432561?quality=12&learn=on)
 
@@ -39,7 +40,7 @@ ht-degree: 0%
    - 憑證授權單位(CA) — 要求網站網域（例如[DigitCert](https://www.digicert.com/)）的已簽署憑證
    - 客戶CDN — 設定客戶CDN和新增SSL憑證和網域詳細資訊，例如AWS CloudFront、Azure CDN或Akamai。
    - 網域名稱系統(DNS)託管服務 — 為您的自訂網域新增DNS記錄，例如Azure DNS或AWS Route 53。
-- 存取[AdobeCloud Manager](https://my.cloudmanager.adobe.com/)，將HTTP標頭驗證CDN規則部署至AEM as a Cloud Service環境。
+- 存取[Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)，將HTTP標頭驗證CDN規則部署至AEM as a Cloud Service環境。
 - 範例[AEM WKND](https://github.com/adobe/aem-guides-wknd)網站已部署至[生產程式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs)型別的AEM as a Cloud Service環境。
 
 如果您無法存取協力廠商服務，請&#x200B;_與您的安全性或託管團隊共同作業，以完成步驟_。
@@ -75,7 +76,7 @@ $ openssl crl2pkcs7 -nocrl -certfile <YOUR-SIGNED-CERT>.crt | openssl pkcs7 -pri
 
 簽署的憑證可能包含憑證鏈，其中包括根和中間憑證以及終端實體憑證。
 
-AdobeCloud Manager在個別的表單欄位&#x200B;_中接受終端實體憑證和憑證鏈結_，因此您必須從簽署的憑證中擷取終端實體憑證和憑證鏈結。
+Adobe Cloud Manager在個別的表單欄位&#x200B;_中接受終端實體憑證和憑證鏈結_，因此您必須從簽署的憑證中擷取終端實體憑證和憑證鏈結。
 
 在本教學課程中，以`*.enablementadobe.com`網域所簽發的[DigitCert](https://www.digicert.com/)已簽署憑證為例。 透過在文字編輯器中開啟已簽署的憑證並複製`-----BEGIN CERTIFICATE-----`和`-----END CERTIFICATE-----`標籤之間的內容來擷取終端實體和憑證鏈結。
 
@@ -89,7 +90,7 @@ AdobeCloud Manager在個別的表單欄位&#x200B;_中接受終端實體憑證�
 - 將自訂網域名稱新增到CDN。
 - 設定CDN以快取內容，例如影像、CSS和JavaScript檔案。
 - 將`X-Forwarded-Host` HTTP標頭新增至CDN設定，好讓您的CDN在其傳送給AEMCD來源的所有要求中包含此標頭。
-- 請確定`Host`標頭值設定為包含方案和環境ID且結尾為`adobeaemcloud.com`的預設AEM as a Cloud Service網域。 從客戶CDN傳遞至AdobeCDN的HTTP主機標頭值必須是預設AEM as a Cloud Service網域，任何其他值都會導致錯誤狀態。
+- 請確定`Host`標頭值設定為包含方案和環境ID且結尾為`adobeaemcloud.com`的預設AEM as a Cloud Service網域。 從客戶CDN傳遞至Adobe CDN的HTTP主機標頭值必須是預設AEM as a Cloud Service網域，任何其他值都會導致錯誤狀態。
 
 ## 設定DNS記錄
 
@@ -112,7 +113,7 @@ AdobeCloud Manager在個別的表單欄位&#x200B;_中接受終端實體憑證�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432565?quality=12&learn=on)
 
-若沒有HTTP標頭驗證CDN規則，`Host`標頭值將設定為包含方案和環境ID且結尾為`adobeaemcloud.com`的預設AEM as a Cloud Service網域。 只有在部署了HTTP標頭驗證CDN規則的情況下，AdobeCDN才會將`Host`標頭值轉換為從客戶CDN接收的`X-Forwarded-Host`值。 否則，`Host`標頭值會依原樣傳遞至AEM as a Cloud Service環境，且不會使用`X-Forwarded-Host`標頭。
+若沒有HTTP標頭驗證CDN規則，`Host`標頭值將設定為包含方案和環境ID且結尾為`adobeaemcloud.com`的預設AEM as a Cloud Service網域。 只有在部署了HTTP標頭驗證CDN規則的情況下，Adobe CDN才會將`Host`標頭值轉換為從客戶CDN接收的`X-Forwarded-Host`值。 否則，`Host`標頭值會依原樣傳遞至AEM as a Cloud Service環境，且不會使用`X-Forwarded-Host`標頭。
 
 ### 用於列印主機標頭值的範例servlet程式碼
 
@@ -200,16 +201,16 @@ public class VerifyHeadersServlet extends SlingSafeMethodsServlet {
   kind: "CDN"
   version: "1"
   metadata:
-  envTypes: ["prod"]
+    envTypes: ["prod"]
   data:
-  authentication:
+    authentication:
       authenticators:
-      - name: edge-auth
+        - name: edge-auth
           type: edge
           edgeKey1: ${{CDN_EDGEKEY_080124}}
           edgeKey2: ${{CDN_EDGEKEY_110124}}
       rules:
-      - name: edge-auth-rule
+        - name: edge-auth-rule
           when: { reqProperty: tier, equals: "publish" }
           action:
           type: authenticate
@@ -223,7 +224,7 @@ public class VerifyHeadersServlet extends SlingSafeMethodsServlet {
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432567?quality=12&learn=on)
 
-更新客戶CDN以在`X-AEM-Edge-Key` HTTP標頭中傳遞密碼。 AdobeCDN使用密碼來驗證來自客戶CDN的請求，並將`Host`標頭值轉換為從客戶CDN接收的`X-Forwarded-Host`的值。
+更新客戶CDN以在`X-AEM-Edge-Key` HTTP標頭中傳遞密碼。 Adobe CDN使用密碼來驗證來自客戶CDN的請求，並將`Host`標頭值轉換為從客戶CDN接收的`X-Forwarded-Host`的值。
 
 ## 端對端視訊
 
