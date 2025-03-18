@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: efaf77a9f8e68f679be3469c39697b57366684b3
+source-git-commit: 77beb9f543bc6dc8c1ab4993c969375ce3e238e8
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '450'
 ht-degree: 16%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 16%
    + [3D資產](./advanced/3d-assets.md)
    + [註解PDF輸出](./advanced/customizing-annotations-pdf-output.md)
    + [Assets報表](./advanced/asset-reports.md)
-   + [content credentials](./advanced/content-credentials.md)
+   + [內容認證](./advanced/content-credentials.md)
    + [已封鎖的標籤](./advanced/blocked-tags.md)
    + [擷取封存](./advanced/extract-archive.md)
    + [許可權(CUG)](./advanced/closed-user-groups.md)
@@ -96,7 +96,7 @@ ht-degree: 16%
 + 共用和分發{#sharing}
    + [下載資產](./sharing/download.md)
    + [匯出資產](./sharing/export.md)
-   + [Publish資產](./sharing/publish.md)
+   + [發佈資產](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
@@ -105,13 +105,13 @@ ht-degree: 16%
 
    + 資產共用{#assets-share}
       + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
-      + [在本機AEM上設定Asset Share Commons](./sharing/asset-share-commons-technical-video-setup.md)
+      + [在本機AEM上設定資產共用公域](./sharing/asset-share-commons-technical-video-setup.md)
       + [主題資產Share Commons](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons資產套件](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
-+ 創意工作流程{#creative-workflows}
++ Creative工作流程{#creative-workflows}
    + [Adobe Express整合](./creative-workflows/adobe-express.md)
-   + [Adobe Express與AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
+   + [Adobe Express和AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM案頭應用程式](./creative-workflows/aem-desktop-app.md)
    + [Adobe資產連結](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
@@ -131,13 +131,14 @@ ht-degree: 16%
 
 + 內容自動化{#content-automation}
    + [概觀](./content-automation/overview.md)
-   + [創意營運](./content-automation/creative-operations.md)
+   + [Creative作業](./content-automation/creative-operations.md)
    + [Photoshop動作](./content-automation/photoshop-actions.md)
 
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media概觀](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic案頭應用程式](dynamic-media/dynamic-media-classic-desktop-application.md)
    + 影像{#images}
+      + [Dynamic Media範本](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media快照](dynamic-media/dynamic-media-snapshot.md)
       + [智慧型裁切](dynamic-media/smart-crop-feature-video-use.md)
       + [影像銳利化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
@@ -146,7 +147,7 @@ ht-degree: 16%
       + [360度影片](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [自訂視訊縮圖](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH最適化串流](dynamic-media/dynamic-media-dash.md)
-      + [Dynamic Media智慧型裁切視訊](dynamic-media/dynamic-media-smart-crop-video.md)
+      + [Dynamic Media智慧型裁切影片](dynamic-media/dynamic-media-smart-crop-video.md)
       + [影片播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + 檢視者{#viewers}
       + [檢視器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
@@ -158,7 +159,7 @@ ht-degree: 16%
       + [體驗片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
 
-   + Tutorials{#tutorials}
+   + 教學課程{#tutorials}
       + [建立轉盤集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [建立影像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [建立影像預設集](dynamic-media/tutorials/creating-image-presets.md)
@@ -181,7 +182,7 @@ ht-degree: 16%
       + AEM Experts系列{#aem-experts-series}
          + [概觀](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [設定](./workfront/enhanced-connector/aem-experts-series/setup.md)
-         + [Workfront表單和AEM中繼資料](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
+         + [Workfront forms和AEM中繼資料](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
          + [標籤、專案連結資料夾和資料夾中繼資料](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)
          + [進階設定和工作流程](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 

@@ -9,27 +9,27 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 500
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: ca356d38-262d-4c30-83a0-01c8a1381ee6
+source-git-commit: 77beb9f543bc6dc8c1ab4993c969375ce3e238e8
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
 
-
 # 編寫區塊
 
-將[Teaser區塊的JSON](./5-new-block.md)推送到`teaser`分支後，該區塊在AEM通用編輯器中變成可編輯。
+將[Teaser區塊的JSON](./5-new-block.md)推送到`teaser`分支後，該區塊會在AEM通用編輯器中變成可編輯。
 
 在開發環境中編寫區塊很重要，原因如下：
 
 1. 它可驗證區塊的定義和模型是否正確。
-1. 可讓開發人員檢閱區塊的語意HTML，這是開發的基礎。
-1. 如此可讓內容和語意HTML部署至預覽環境，支援更快速的區塊開發。
+1. 它可讓開發人員檢閱區塊的語意HTML，這是開發的基礎。
+1. 如此可讓內容與語意HTML都部署至預覽環境，支援更快速的區塊開發。
 
 ## 使用`teaser`分支的程式碼開啟通用編輯器
 
-1. 登入AEM Author。
+1. 登入AEM作者。
 2. 導覽至&#x200B;**網站**，並選取在[上一章](./2-new-aem-site.md)中建立的網站(WKND （通用編輯器）)。
 
    ![AEM Sites](./assets/6-author-block/open-new-site.png)
@@ -54,8 +54,8 @@ ht-degree: 0%
 
    ![通用編輯器 — 作者區塊](./assets/6-author-block/author-block.png)
 
-8. 完成編寫之後，請切換到前一個瀏覽器索引標籤(AEM Sites管理員)，選取Teaser頁面，按一下&#x200B;**管理出版物**，選擇&#x200B;**預覽**，然後將變更發佈到預覽環境。 然後會將變更發佈至網站的`aem.page`網域。
-   ![AEM Sites - Publish或預覽](./assets/6-author-block/publish-to-preview.png)
+8. 完成編寫之後，請選取Universal Editor右上角的&#x200B;**發佈**&#x200B;按鈕，選擇發佈到&#x200B;**預覽**，然後將變更發佈到預覽環境。 然後會將變更發佈至網站的`aem.page`網域。
+   ![AEM Sites — 發佈或預覽](./assets/6-author-block/publish-to-preview.png)
 
 9. 等候變更發佈以預覽，然後透過[http://localhost:3000/branches/teaser](http://localhost:3000/branches/teaser)的[AEM CLI](./3-local-development-environment.md#install-the-aem-cli)開啟網頁。
 
