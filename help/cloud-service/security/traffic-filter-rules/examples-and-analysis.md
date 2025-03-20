@@ -1,6 +1,6 @@
 ---
-title: 包含WAF規則的流量篩選規則的範例和結果分析
-description: 瞭解各種流量篩選規則，包括WAF規則範例。 此外，如何使用AEM as a Cloud Service (AEMCS) CDN記錄來分析結果。
+title: 流量篩選器規則(包括WAF規則)的範例和結果分析
+description: 瞭解各種流量篩選器規則，包括WAF規則範例。 此外，如何使用AEM as a Cloud Service (AEMCS) CDN記錄來分析結果。
 version: Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
@@ -12,18 +12,18 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 532
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 67091c068634e6c309afaf78942849db626128f6
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
 
 ---
 
-# 流量篩選器規則（包括WAF規則）的範例和結果分析
+# 流量篩選器規則(包括WAF規則)的範例和結果分析
 
 瞭解如何宣告各種型別的流量篩選規則，並使用Adobe Experience Manager as a Cloud Service (AEMCS) CDN記錄和儀表板工具來分析結果。
 
-在本節中，您將探索流量篩選規則的實用範例，包括WAF規則。 您將瞭解如何使用[AEM WKND Sites專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)，根據URI （或路徑）、IP位址、要求數目和不同的攻擊型別來記錄、允許和封鎖要求。
+在本節中，您將探索流量篩選規則的實用範例，包括WAF規則。 您將瞭解如何使用[AEM WKND Sites專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)，根據URI （或路徑）、IP位址、要求數及不同的攻擊型別來記錄、允許及封鎖要求。
 
 此外，您將瞭解如何使用儀表板工具來擷取AEMCS CDN記錄，並透過Adobe提供的範例儀表板將基本量度視覺化。
 
@@ -67,11 +67,11 @@ data:
 
 - 提交變更並將其推送到Cloud Manager Git存放庫。
 
-- 使用先前建立的Cloud Manager `Dev-Config`設定管道[將變更部署到AEM開發環境](how-to-setup.md#deploy-rules-through-cloud-manager)。
+- 使用先前建立的AEM `Dev-Config`設定管道[，將變更部署至Cloud Manager開發環境](how-to-setup.md#deploy-rules-through-cloud-manager)。
 
   ![Cloud Manager設定管道](./assets/cloud-manager-config-pipeline.png)
 
-- 在Publish服務上登入並登出您程式的WKND網站（例如，`https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`）以測試規則。 您可以使用`asmith/asmith`作為使用者名稱和密碼。
+- 在Publish服務上登入並登出您程式的WKND網站以測試規則（例如，`https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`）。 您可以使用`asmith/asmith`作為使用者名稱和密碼。
 
   ![WKND登入](./assets/wknd-login.png)
 
@@ -79,7 +79,7 @@ data:
 
 讓我們從Cloud Manager下載AEMCS CDN記錄檔，並使用您在上一章中設定的[儀表板工具](how-to-setup.md#analyze-results-using-elk-dashboard-tool)，來分析`publish-auth-requests`規則的結果。
 
-- 從[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;**環境**&#x200B;卡下載AEMCS **Publish**&#x200B;服務的CDN記錄。
+- 從[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;**環境**&#x200B;卡下載AEMCS **發佈**&#x200B;服務的CDN記錄。
 
   ![Cloud Manager CDN記錄下載](./assets/cloud-manager-cdn-log-downloads.png)
 
@@ -140,7 +140,7 @@ data:
 
 - 提交變更並將其推送到Cloud Manager Git存放庫。
 
-- 使用Cloud Manager中先前建立的[個](how-to-setup.md#deploy-rules-through-cloud-manager) `Dev-Config`設定管道將變更部署到AEM開發環境。
+- 使用Cloud Manager中先前建立的[個](how-to-setup.md#deploy-rules-through-cloud-manager) `Dev-Config`設定管道，將變更部署至AEM開發環境。
 
 - 存取WKND網站的內部頁面（例如`https://publish-pXXXX-eYYYY.adobeaemcloud.com/content/wknd/internal/demo-page.html`）或使用下列CURL命令測試規則：
 
@@ -200,7 +200,7 @@ data:
 - 若要模擬DoS攻擊，請使用下列[Vegeta](https://github.com/tsenart/vegeta)命令。
 
   ```shell
-  $ echo "GET https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html" | vegeta attack -rate=120 -duration=5s | vegeta report
+  $ echo "GET https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html" | vegeta attack -rate=120 -duration=60s | vegeta report
   ```
 
   此命令會在5秒內發出120個請求並輸出報表。 如您所見，成功率為32.5%；其餘部分會收到406 HTTP回應代碼，表示流量遭封鎖。
@@ -225,13 +225,13 @@ data:
 
 目前為止的流量篩選器規則範例可供所有Sites和Forms客戶設定。
 
-接下來，讓我們針對已購買增強式安全性或WAF-DDoS保護授權的客戶，探索其使用體驗，該授權可讓他們設定進階規則，以保護網站免受更複雜的攻擊。
+接下來，讓我們針對已購買增強式安全性或WAF-DDoS保護授權的客戶，探索其體驗，該授權可讓他們設定進階規則，以保護網站免受更複雜的攻擊。
 
-在繼續之前，請啟用程式的WAF-DDoS保護，如流量篩選規則檔案[設定步驟](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en#setup)中所述。
+在繼續之前，請按照流量篩選規則檔案[設定步驟](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en#setup)中的說明，為您的程式啟用WAF-DDoS保護。
 
 #### 不含WAFFlags
 
-讓我們先看看在WAF規則宣告之前的體驗。 當您的程式啟用WAF-DDoS時，您的CDN會依預設記錄任何相符的惡意流量，因此您擁有正確的資訊以提出適當的規則。
+讓我們在宣告WAF規則之前先看看體驗。 在您的程式中啟用WAF-DDoS後，您的CDN會依預設記錄任何相符的惡意流量，因此您擁有正確的資訊以提出適當的規則。
 
 我們從攻擊WKND網站開始，但不新增WAF規則（或使用`wafFlags`屬性）並分析結果。
 
@@ -251,11 +251,11 @@ data:
 
 不過，這次您應該會在使用者端IP (cli_ip)、主機、URL、動作(waf_action)和規則名稱(waf_match)欄中看到&#x200B;**標幟的要求**&#x200B;和對應值。 此資訊可讓您分析結果並最佳化規則設定。
 
-![ELK工具儀表板WAF標幟的要求](./assets/elk-tool-dashboard-waf-flagged.png)
+![ELK工具儀表板WAF已標幟的請求](./assets/elk-tool-dashboard-waf-flagged.png)
 
-請注意&#x200B;**WAF旗標分佈**&#x200B;和&#x200B;**熱門攻擊**&#x200B;面板如何顯示其他詳細資訊，可用來進一步最佳化規則設定。
+請注意&#x200B;**WAF旗標分佈**&#x200B;和&#x200B;**熱門攻擊**&#x200B;面板如何顯示其他詳細資料，這些詳細資料可用來進一步最佳化規則設定。
 
-![ELK工具儀表板WAF標籤攻擊要求](./assets/elk-tool-dashboard-waf-flagged-top-attacks-1.png)
+![ELK工具儀表板WAF會標籤攻擊要求](./assets/elk-tool-dashboard-waf-flagged-top-attacks-1.png)
 
 ![ELK工具儀表板WAF熱門攻擊要求](./assets/elk-tool-dashboard-waf-flagged-top-attacks-2.png)
 
@@ -264,7 +264,7 @@ data:
 
 現在，新增包含`wafFlags`屬性的WAF規則做為`action`屬性的一部分，並&#x200B;**封鎖模擬的攻擊要求**。
 
-從語法的角度來看，WAF規則與先前所見者類似，不過，`action`屬性參考一或多個`wafFlags`值。 若要深入瞭解`wafFlags`，請檢閱[WAF旗標清單](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#waf-flags-list)區段。
+從語法的角度來看，WAF規則與先前看到的規則類似，不過，`action`屬性會參考一或多個`wafFlags`值。 若要深入瞭解`wafFlags`，請檢閱[WAF旗標清單](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#waf-flags-list)區段。
 
 - 在WKND專案的`/config/cdn.yaml`檔案中新增下列規則。 請注意，`block-waf-flags`規則如何包含某些受到模擬惡意流量攻擊時出現在儀表板工具中的wafFlags。 事實上，隨著威脅的演變，長期分析記錄以判斷要宣告哪些新規則是很好的做法。
 
@@ -321,11 +321,11 @@ data:
 
 這次您應該會在&#x200B;**已封鎖的要求**&#x200B;下看到專案，以及使用者端IP (cli_ip)、主機、URL、動作(waf_action)和規則名稱(waf_match)欄中的對應值。
 
-![ELK工具儀表板WAF已封鎖的要求](./assets/elk-tool-dashboard-waf-blocked.png)
+![ELK工具儀表板WAF已封鎖請求](./assets/elk-tool-dashboard-waf-blocked.png)
 
-此外，**WAF旗標分佈**&#x200B;和&#x200B;**熱門攻擊**&#x200B;面板會顯示其他詳細資料。
+此外，**WAF標幟分佈**&#x200B;和&#x200B;**熱門攻擊**&#x200B;面板會顯示其他詳細資料。
 
-![ELK工具儀表板WAF標籤攻擊要求](./assets/elk-tool-dashboard-waf-blocked-top-attacks-1.png)
+![ELK工具儀表板WAF會標籤攻擊要求](./assets/elk-tool-dashboard-waf-blocked-top-attacks-1.png)
 
 ![ELK工具儀表板WAF熱門攻擊要求](./assets/elk-tool-dashboard-waf-blocked-top-attacks-2.png)
 
@@ -335,7 +335,7 @@ data:
 
 
 - 已分析、已標幟和已封鎖的要求
-- WAF標示一段時間內的分佈
+- WAF會標示一段時間內的分佈
 - 一段時間內觸發的流量篩選規則
 - 依WAF旗標ID排名最前的攻擊
 - 排名在前的觸發流量篩選器

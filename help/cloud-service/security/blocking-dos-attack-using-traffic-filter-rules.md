@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
+source-git-commit: 67091c068634e6c309afaf78942849db626128f6
 workflow-type: tm+mt
 source-wordcount: '1924'
 ht-degree: 1%
@@ -30,11 +30,11 @@ ht-degree: 1%
 讓我們來瞭解一下AEM網站的預設DDoS保護：
 
 - **快取：**&#x200B;如果快取原則良好，DDoS攻擊的影響會比較受限，因為CDN會防止大多數要求前往來源並造成效能降低。
-- **自動縮放：** AEM製作和發佈服務會自動縮放，以處理流量尖峰，但它們仍會受到流量突然大幅增加的影響。
-- **封鎖：**&#x200B;如果來自特定IP位址的Adobe流量超過每個CDN PoP (Point of Presence)的Adobe定義速率，則CDN會封鎖流向來源的流量。
+- **自動縮放：** AEM製作和發佈服務會自動縮放，以處理流量尖峰，不過仍會受到流量突然大幅增加的影響。
+- **封鎖：**&#x200B;如果來自特定IP位址的流量超過每個CDN PoP (Point of Presence)的Adobe定義速率，Adobe CDN會封鎖流向來源的流量。
 - **警示：**&#x200B;當流量超過特定速率時，動作中心會在來源警示通知中傳送流量尖峰。 當任何指定CDN PoP的流量超過每個IP位址的&#x200B;_Adobe定義的_&#x200B;要求速率時，就會觸發此警報。 如需詳細資訊，請參閱[流量篩選規則警示](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)。
 
-這些內建的保護應視為組織將DDoS攻擊對效能影響降到最低的能力的基準。 由於每個網站都有不同的效能特性，且在達到Adobe定義的速率限制之前，可能會發現效能降低，因此建議透過&#x200B;_客戶組態_&#x200B;來延伸預設保護。
+這些內建的保護應視為組織將DDoS攻擊對效能影響降到最低的能力的基準。 由於每個網站都有不同的效能特性，且在達到Adobe定義的速率限制之前可能會發現效能降低，因此建議透過&#x200B;_客戶組態_&#x200B;來延伸預設保護。
 
 讓我們來看看客戶可採取的一些其他建議措施，以保護其網站免受DDoS攻擊：
 
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 以下步驟反映了客戶保護其網站的可能過程。
 
-1. 辨識速率限制流量篩選器規則的必要性。 這可能是由於收到Adobe在來源警報時出現的現成流量尖峰所致，也可能是主動決定採取預防措施，以降低DDoS成功的風險。
+1. 辨識速率限制流量篩選器規則的必要性。 這可能是由於收到Adobe在來源警示的現成流量尖峰所致，也可能是主動決定採取預防措施，以降低成功DDoS的風險。
 1. 如果您的網站已上線，請使用控制面板分析流量模式，以決定速率限制流量篩選規則的最佳臨界值。 如果您的網站尚未上線，請根據您的流量預期挑選值。
 1. 使用上一步的值，設定速率限制流量篩選規則。 請務必啟用對應的警報，以便在達到臨界值時通知您。
 1. 每當流量尖峰發生時，都會收到流量篩選規則警報，針對您的組織是否可能遭惡意行動者設為目標，提供寶貴的深入分析。
@@ -67,11 +67,11 @@ ht-degree: 1%
 
 理想情況下，您最好在進入生產階段前設定規則。 實際上，許多組織只會在收到流量尖峰的警報後，以反應式方式宣告規則，表示可能會發生攻擊。
 
-當超過指定PoP的單一IP位址流量的預設臨界值時，Adobe會在來源警示傳送流量尖峰作為[動作中心通知](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/actions-center)。 如果您收到這類警報，建議設定速率限制流量篩選器規則。 此預設警報不同於客戶在定義流量篩選規則時必須明確啟用的警報，您將在未來章節中瞭解這些警報。
+當超過指定PoP單一IP位址流量的預設臨界值時，Adobe會在來源警示傳送流量尖峰作為[動作中心通知](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/actions-center)。 如果您收到這類警報，建議設定速率限制流量篩選器規則。 此預設警報不同於客戶在定義流量篩選規則時必須明確啟用的警報，您將在未來章節中瞭解這些警報。
 
 ## 分析流量模式 {#analyze-traffic}
 
-如果您的網站已經上線，您可以使用CDN記錄和Adobe提供的儀表板來分析流量模式。
+如果您的網站已經上線，您可以使用CDN記錄檔和Adobe提供的儀表板來分析流量模式。
 
 - **CDN流量儀表板**：透過CDN和原始要求率、4xx和5xx錯誤率以及非快取要求，提供流量的深入分析。 此外，也提供每個使用者端IP位址每秒最大CND和來源要求數，以及最佳化CDN設定的更多深入分析。
 
@@ -86,7 +86,7 @@ Adobe提供的&#x200B;**Elasticsearch、Logstash和Kibana (ELK)**&#x200B;儀表�
 - 複製[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub存放庫。
 - 依照[如何設定ELK Docker容器](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container)步驟來設定工具。
 - 在設定過程中，匯入`traffic-filter-rules-analysis-dashboard.ndjson`檔案以視覺化資料。 _CDN流量_&#x200B;儀表板包含的視覺效果會顯示在CDN Edge和Origin的每個IP/POP的最大請求數。
-- 從[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_環境_&#x200B;卡中，下載AEMCS Publish服務的CDN記錄。
+- 從[Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_環境_&#x200B;卡中，下載AEMCS發佈服務的CDN記錄檔。
 
   ![Cloud Manager CDN記錄下載](./assets/cloud-manager-cdn-log-downloads.png)
 
@@ -247,12 +247,12 @@ data:
 使用下列[Vegeta](https://github.com/tsenart/vegeta)命令，您可以對您的網站提出許多要求：
 
 ```shell
-$ echo "GET https://<YOUR-WEBSITE-DOMAIN>" | vegeta attack -rate=120 -duration=5s | vegeta report
+$ echo "GET https://<YOUR-WEBSITE-DOMAIN>" | vegeta attack -rate=120 -duration=60s | vegeta report
 ```
 
 上述命令會在5秒內發出120個請求並輸出報表。 假設網站沒有速率限制，這可能會導致流量尖峰。
 
 ### 來源請求
 
-若要略過CDN快取並向來源(AEM Publish服務)提出請求，您可以在URL中新增唯一的查詢引數。 請參考[使用JMeter指令碼模擬DoS攻擊](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection#simulate-dos-attack-using-jmeter-script)中的範例Apache JMeter指令碼
+若要略過CDN快取並向來源(AEM發佈服務)提出請求，您可以在URL中新增唯一的查詢引數。 請參考[使用JMeter指令碼模擬DoS攻擊](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection#simulate-dos-attack-using-jmeter-script)中的範例Apache JMeter指令碼
 
