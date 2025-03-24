@@ -1,7 +1,7 @@
 ---
 title: 搭配AEM Headless使用最佳化的影像
 description: 瞭解如何使用AEM Headless請求最佳化的影像URL。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
 role: Developer
@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 300
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 4%
@@ -31,7 +31,7 @@ AEM Headless內容模型中使用的內容片段，通常會參照要在Headless
    + `_dynamicUrl`不包含AEM來源，因此網域(AEM Author或AEM Publish服務)必須由使用者端應用程式提供。
 + `_authorUrl`是AEM作者上影像資產的完整URL
    + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html)可用於提供Headless應用程式的預覽體驗。
-+ `_publishUrl`是AEM Publish上影像資產的完整URL
++ `_publishUrl`是AEM發佈上影像資產的完整URL
    + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html)通常是Headless應用程式的生產部署顯示影像的位置。
 
 `_dynamicUrl`是建議用於影像資產傳送的URL，應儘可能取代使用`_path`、`_authorUrl`和`_publishUrl`。
@@ -96,7 +96,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 
 `_assetTransform`定義如何建構`_dynamicUrl`以最佳化提供的影像轉譯。 您也可以變更URL的查詢引數，在使用者端上調整Web最佳化的影像URL。
 
-| GraphQL引數 | 說明 | 必填 | GraphQL變數值 |
+| GraphQL引數 | 描述 | 必填 | GraphQL變數值 |
 |-------------------|------------------------------------------------------------------------------------------------------|----------|-------------------------------------------------------------|
 | `format` | 影像資產的格式。 | ✔ | `GIF`、`PNG`、`PNG8`、`JPG`、`PJPG`、`BJPG`、`WEBP`、`WEBPLL`、`WEBPLY` |
 | `seoName` | URL中的檔案區段名稱。 若未提供，則會使用影像資產名稱。 | ✘ | 英數、`-`或`_` |
@@ -106,7 +106,7 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 | `flip` | 翻轉影像。 | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` |
 | `quality` | 影像品質，以原始品質的百分比表示。 | ✘ | 1-100 |
 | `width` | 輸出影像的寬度（畫素）。 提供`size`時，會忽略`width`。 | ✘ | 正整數 |
-| `preferWebP` | 如果`true`和AEM在瀏覽器支援的情況下提供WebP，則無論`format`為何。 | ✘ | `true`、`false` |
+| `preferWebP` | 如果`true`和AEM在瀏覽器支援的情況下提供WebP （不論`format`為何）。 | ✘ | `true`、`false` |
 
 
 ## GraphQL回應
@@ -196,7 +196,7 @@ document.body.innerHTML=`<picture>
 
 ### 範常式式碼
 
-這個簡單的React應用程式使用[AEM Headless SDK](./aem-headless-sdk.md)查詢AEM Headless API以取得Adventure內容，並使用具有srcset](#img-element-with-srcset)和[picture element](#picture-element)的[img元素來顯示網頁最佳化的影像。 `srcset`和`sources`使用自訂`setParams`函式，將Web最佳化傳遞查詢引數附加至影像的`_dynamicUrl`，因此請變更根據網頁使用者端需求傳遞的影像轉譯。
+這個簡單的React應用程式使用[AEM Headless SDK](./aem-headless-sdk.md)來查詢AEM Headless API的Adventure內容，並使用具有srcset](#img-element-with-srcset)和[picture element](#picture-element)的[img元素來顯示網頁最佳化的影像。 `srcset`和`sources`使用自訂`setParams`函式，將Web最佳化傳遞查詢引數附加至影像的`_dynamicUrl`，因此請變更根據網頁使用者端需求傳遞的影像轉譯。
 
 在使用AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries)的自訂React勾點[useAdventureByPath中執行針對AEM的查詢。
 

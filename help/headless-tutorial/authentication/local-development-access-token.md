@@ -1,7 +1,7 @@
 ---
 title: 本機開發存取權杖
-description: AEM本機開發存取權杖可用來加速與AEM as a Cloud Service整合的開發，以便透過HTTP以程式設計方式與AEM作者或Publish服務互動。
-version: Cloud Service
+description: AEM本機開發存取權杖可用來加速與AEM as a Cloud Service整合的開發，以便透過HTTP以程式設計方式與AEM製作或發佈服務互動。
+version: Experience Manager as a Cloud Service
 feature: APIs
 jira: KT-6785
 thumbnail: 330477.jpg
@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
 duration: 572
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 本機開發存取權杖
 
-若是建置整合需要以程式設計方式存取AEM as a Cloud Service，開發人員需透過簡單快捷的方式，取得AEM的暫時存取權杖，以利本機開發活動。 為滿足此需求，AEM的Developer Console可讓開發人員自行產生暫時性存取權杖，這些權杖可用來以程式設計方式存取AEM。
+在建置需要以程式設計方式存取AEM as a Cloud Service的整合功能時，開發人員需要透過簡單快速的方式，取得AEM的暫時存取權杖，以便利本機開發活動。 為了滿足此需求，AEM的Developer Console可讓開發人員自行產生暫時性存取權杖，這些權杖可用來以程式設計方式存取AEM。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330477?quality=12&learn=on)
 
@@ -29,13 +29,13 @@ ht-degree: 0%
 
 ![取得本機開發存取權杖](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-本機開發存取Token可讓您以產生Token的使用者身分，存取AEM作者和Publish服務，以及其許可權。 儘管這是開發權杖，請勿共用此權杖或儲存在原始檔控制中。
+本機開發存取Token可讓您以產生Token的使用者身分，存取AEM作者和發佈服務，以及其許可權。 儘管這是開發權杖，請勿共用此權杖或儲存在原始檔控制中。
 
 1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，請確定您身為開發人員，是下列成員之一：
    + __Cloud Manager — 開發人員__ IMS產品設定檔(授與AEM Developer Console的存取權)
    + 存取權杖整合之AEM環境服務的&#x200B;__AEM管理員__&#x200B;或&#x200B;__AEM使用者__ IMS產品設定檔
    + 沙箱AEM as a Cloud Service環境僅需要&#x200B;__AEM管理員__&#x200B;或&#x200B;__AEM使用者__&#x200B;產品設定檔的成員資格
-1. 登入[AdobeCloud Manager](https://my.cloudmanager.adobe.com)
+1. 登入[Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
 1. 開啟包含AEM as a Cloud Service環境的程式以與整合
 1. 點選&#x200B;__環境__&#x200B;區段中環境旁的&#x200B;__省略符號__，然後選取&#x200B;__Developer Console__
 1. 點選「__整合__」標籤
@@ -59,16 +59,16 @@ ht-degree: 0%
 
 ### 外部應用程式範例
 
-我們將建立簡單的外部JavaScript應用程式，說明如何使用本機開發人員存取權杖透過HTTPS以程式設計方式存取AEM as a Cloud Service。 這說明了在AEM外部執行的&#x200B;_任何_&#x200B;應用程式或系統（不論架構或語言為何）如何使用存取權杖以程式設計方式驗證及存取AEM as a Cloud Service。 在[下一個區段](./service-credentials.md)中，我們將更新此應用程式程式碼以支援產生用於生產用途的權杖的方法。
+我們將建立簡單的外部JavaScript應用程式，說明如何使用本機開發人員存取權杖透過HTTPS以程式設計方式存取AEM as a Cloud Service。 這可說明在AEM外部執行的&#x200B;_任何_&#x200B;應用程式或系統（不論架構或語言為何）如何使用存取權杖以程式設計方式驗證及存取AEM as a Cloud Service。 在[下一個區段](./service-credentials.md)中，我們將更新此應用程式程式碼以支援產生用於生產用途的權杖的方法。
 
-此範例應用程式從命令列執行，並使用以下流程使用AEM Assets HTTP API更新AEM資產中繼資料：
+此範例應用程式從命令列執行，並使用以下流程使用AEM HTTP API更新AEM Assets資產中繼資料：
 
 1. 從命令列(`getCommandLineParams()`)讀取引數
 1. 取得用來驗證AEM as a Cloud Service (`getAccessToken(...)`)的存取權杖
 1. 列出在命令列引數(`listAssetsByFolder(...)`)中指定的AEM資產資料夾中的所有資產
 1. 使用命令列引數(`updateMetadata(...)`)中指定的值更新列出的資產中繼資料
 
-使用存取權杖以程式設計方式向AEM驗證的核心元素，是向AEM發出的所有HTTP請求新增授權HTTP請求標頭，格式如下：
+使用存取權杖以程式設計方式向AEM進行驗證的關鍵元素，是向AEM發出的所有HTTP請求新增授權HTTP請求標頭，格式如下：
 
 + `Authorization: Bearer ACCESS_TOKEN`
 

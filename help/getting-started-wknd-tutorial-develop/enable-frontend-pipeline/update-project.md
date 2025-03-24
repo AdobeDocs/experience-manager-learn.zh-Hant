@@ -1,7 +1,7 @@
 ---
 title: 更新完整棧疊AEM專案以使用前端管道
 description: 瞭解如何更新完整棧疊AEM專案以將其啟用用於前端管道，因此它只會建置和部署前端成品。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
 duration: 307
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
@@ -178,14 +178,14 @@ ht-degree: 0%
    >
    >    檢視&#x200B;__AEM WKND Sites專案__&#x200B;中的完整[SiteConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.aem.wcm.site.manager.config.SiteConfig/.content.xml)。
 
-1. 主題或樣式變更為透過測試回合的前端管道部署，我們正在更新`ui.frontend/src/main/webpack/base/sass/_variables.scss`以將`text-color`變更為Adobe紅色（或者您可以自行挑選）。
+1. 主題或樣式變更成透過測試回合的前端管道部署，我們正在更新`ui.frontend/src/main/webpack/base/sass/_variables.scss`以將`text-color`變更為Adobe紅（或者您也可以選擇自己的顏色）。
 
    ```css
        $black:     #a40606;
        ...
    ```
 
-最後，將這些變更推送至您方案的AdobeGit存放庫。
+最後，將這些變更推送至您程式的Adobe Git存放庫。
 
 
 >[!AVAILABILITY]

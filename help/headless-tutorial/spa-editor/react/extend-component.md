@@ -2,7 +2,7 @@
 title: 擴充核心元件 | AEM SPA Editor and React快速入門
 description: 瞭解如何為要與AEM SPA編輯器搭配使用的現有核心元件擴充JSON模型。 瞭解如何將屬性和內容新增至現有元件，是擴充AEM SPA Editor實作功能的強大技術。 瞭解如何使用委派模式來延伸Sling模型和Sling Resource Merger的功能。
 feature: SPA Editor, Core Components
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5879
 thumbnail: 5879-spa-react.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
 duration: 316
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 擴充核心元件 {#extend-component}
 
-瞭解如何擴充與AEM SPA編輯器搭配使用的現有核心元件。 瞭解如何擴充現有元件是一項強大的技術，可自訂和擴充AEM SPA Editor實作的功能。
+瞭解如何擴充要與AEM SPA Editor搭配使用的現有核心元件。 瞭解如何擴充現有元件是一項強大的技術，可自訂和擴充AEM SPA Editor實作的功能。
 
 ## 目標
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## 先決條件
 
-檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。 在本教學課程的這個階段，我們假設使用者已對AEM SPA Editor功能有了充分的瞭解。
+檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。 在教學課程的這個階段，我們假設使用者已對AEM SPA Editor功能有深入的瞭解。
 
 ## Sling資源超級型別的繼承 {#sling-resource-super-type}
 
@@ -243,7 +243,7 @@ ht-degree: 0%
 
 ## 實作SPA元件 {#implement-spa-component}
 
-若要搭配SPA編輯器使用橫幅元件，必須建立將對應到`wknd-spa-react/components/banner`的新SPA元件。 這已在`ui.frontend`模組中完成。
+若要搭配SPA Editor使用Banner元件，必須建立將對應至`wknd-spa-react/components/banner`的新SPA元件。 這已在`ui.frontend`模組中完成。
 
 1. 在`ui.frontend`模組中，於`ui.frontend/src/components/Banner`為`Banner`建立新資料夾。
 1. 在`Banner`資料夾下建立名為`Banner.js`的新檔案。 請填入下列內容：
@@ -306,7 +306,7 @@ ht-degree: 0%
    + import './Banner/Banner';
    ```
 
-1. 此時，可以將專案部署到AEM並且可以測試對話方塊。 使用您的Maven技能部署專案：
+1. 此時，可以將專案部署到AEM，並且可以測試對話方塊。 使用您的Maven技能部署專案：
 
    ```shell
    $ cd aem-guides-wknd-spa.react
@@ -325,7 +325,7 @@ ht-degree: 0%
 
 ## 新增Java介面 {#java-interface}
 
-若要最終將元件對話方塊中的值公開給React元件，我們需要更新為`Banner`元件填入JSON的Sling模型。 這是在`core`模組中完成的，此模組包含我們SPA專案的所有Java程式碼。
+若要最終將元件對話方塊中的值公開給React元件，我們需要更新為`Banner`元件填入JSON的Sling模型。 這是在包含我們SPA專案所有Java程式碼的`core`模組中完成的。
 
 首先，我們將為`Banner`建立擴充`Image` Java介面的新Java介面。
 

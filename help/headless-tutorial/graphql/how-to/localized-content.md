@@ -1,7 +1,7 @@
 ---
 title: 搭配AEM Headless使用當地語系化內容
-description: 瞭解如何使用GraphQL來查詢AEM的本地化內容。
-version: Cloud Service
+description: 瞭解如何使用GraphQL查詢AEM的本地化內容。
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-10254
 thumbnail: KT-10254.jpeg
 exl-id: 5e3d115b-f3a1-4edc-86ab-3e0713a36d54
 duration: 130
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # AEM Headless本地化內容
 
-AEM為Headless內容提供[翻譯整合架構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html)，允許輕鬆翻譯內容片段和支援資產，以便跨地區使用。 這是用於翻譯其他AEM內容(例如頁面、體驗片段、Assets和Forms)的相同架構。 [Headless內容經翻譯](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=zh-Hant)並發佈後，即可供Headless應用程式使用。
+AEM為Headless內容提供[翻譯整合架構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html)，可讓您輕鬆翻譯內容片段和支援資產，以便跨地區使用。 這是用於翻譯其他AEM內容(例如頁面、體驗片段、Assets和Forms)的相同架構。 [Headless內容經翻譯](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=zh-hant)並發佈後，即可供Headless應用程式使用。
 
 ## Assets資料夾結構{#assets-folder-structure}
 
@@ -52,7 +52,7 @@ query($locale: String!) {
 }
 ```
 
-`_locale`篩選器中使用的`$locale`變數需要地區設定代碼（例如`en`、`en_us`或`de`），如[AEM資產資料夾基礎本地化慣例](#assets-folder-structure)中所指定。
+`_locale`篩選器中使用的`$locale`變數需要地區設定代碼（例如`en`、`en_us`或`de`），如[AEM資產資料夾基底本地化慣例](#assets-folder-structure)中所指定。
 
 ## React範例
 
@@ -113,7 +113,7 @@ Adventures元件會依地區設定查詢AEM的所有冒險並列出其標題。 
 
 此方法可延伸至您應用程式中的其他查詢，確保所有查詢僅包含使用者地區設定選擇所指定的內容。
 
-對AEM的查詢是在自訂React勾點[getAdventuresByLocale中執行的，在「查詢AEM GraphQL」檔案](./aem-headless-sdk.md)中有更詳細的說明。
+對AEM的查詢是在自訂React勾點[getAdventuresByLocale中執行的，有關查詢AEM GraphQL檔案](./aem-headless-sdk.md)的更多詳細說明。
 
 ```javascript
 // src/Adventures.js

@@ -1,7 +1,7 @@
 ---
-title: AEM as a Cloud Service的AEM Headless快速設定
-description: AEM Headless快速設定讓您使用AEM Headless的實際操作，其中包含來自WKND Site範例專案的內容，以及透過AEM Headless GraphQL API使用內容的React應用程式。
-version: Cloud Service
+title: AEM Headless快速設定AEM as a Cloud Service
+description: AEM Headless快速設定讓您運用WKND Site範例專案中的內容，以AEM Headless進行操作，以及透過AEM Headless GraphQL API使用內容的React應用程式。
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
@@ -10,16 +10,16 @@ jira: KT-9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
 duration: 781
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 0%
 
 ---
 
-# AEM as a Cloud Service的AEM Headless快速設定
+# AEM Headless快速設定AEM as a Cloud Service
 
-AEM Headless快速設定讓您使用WKND Site範例專案中的內容，以AEM Headless進行操作，並提供在AEM Headless GraphQL API使用內容的範例React應用程式(SPA)。
+AEM Headless快速設定可讓您使用AEM Headless的實際操作，其中包含來自WKND Site範例專案的內容，以及透過AEM Headless GraphQL API使用內容的範例React應用程式(SPA)。
 
 ## 先決條件
 
@@ -27,7 +27,7 @@ AEM Headless快速設定讓您使用WKND Site範例專案中的內容，以AEM H
 
 + AEM as a Cloud Service沙箱環境（最好是開發環境）
 + 存取AEM as a Cloud Service和Cloud Manager
-   + __AEM管理員__ AEM as a Cloud Service的存取權
+   + __AEM管理員__&#x200B;存取AEM as a Cloud Service
    + __Cloud Manager — 部署管理員__&#x200B;對Cloud Manager的存取權
 + 下列工具必須安裝在本機：
    + [Node.js v18](https://nodejs.org/en/)
@@ -36,7 +36,7 @@ AEM Headless快速設定讓您使用WKND Site範例專案中的內容，以AEM H
 
 ## 1.建立Cloud Manager Git存放庫
 
-首先，建立用於部署WKND網站的Cloud Manager Git存放庫。 WKND Site是範例AEM網站專案，其中包含快速設定的React應用程式所使用的內容（內容片段）和GraphQL AEM端點。
+首先，建立用於部署WKND網站的Cloud Manager Git存放庫。 WKND網站是範例AEM網站專案，其中包含快速設定的React應用程式所使用的內容（內容片段）和GraphQL AEM端點。
 
 _步驟的熒幕廣播_
 >[!VIDEO](https://video.tv.adobe.com/v/339073?quality=12&learn=on)
@@ -143,8 +143,8 @@ _步驟的熒幕廣播_
 
    1. 在Cloud Manager的頂端導覽列中選取&#x200B;__環境__
    1. 選取&#x200B;__開發__&#x200B;環境
-   1. 找到&#x200B;__Publish服務(AEM和Dispatcher)__&#x200B;連結&#x200B;__環境區段__&#x200B;表格
-   1. 複製連結位址，並將其用作AEM as a Cloud Service Publish服務的URI
+   1. 找到&#x200B;__發佈服務(AEM和Dispatcher)__&#x200B;連結&#x200B;__環境區段__&#x200B;表格
+   1. 複製連結位址，並將其用作AEM as a Cloud Service發佈服務的URI
 
 1. 在IDE中，將變更儲存至`.env.development`
 1. 從命令列，執行React應用程式
@@ -175,7 +175,7 @@ _步驟的熒幕廣播_
    + 價格： `3500`
    + 主要影像： `/content/dam/wknd-shared/en/activities/cycling/mountain-biking.jpg`
 1. 在頂端動作列中選取&#x200B;__儲存__
-1. 從頂端動作列的&#x200B;__選取__&#x200B;快速Publish __...__
+1. 從頂端動作列的&#x200B;__選取__&#x200B;快速發佈&#x200B;__...__
 1. 重新整理[http://localhost:3000](http://localhost:3000)上執行的React應用程式。
 1. 在React應用程式中，選取現在更新的「循環冒險」，並驗證對內容片段進行的內容變更。
 
@@ -191,7 +191,7 @@ _步驟的熒幕廣播_
 
 恭喜！您已成功使用AEM Headless來增強React應用程式！
 
-若要詳細瞭解React應用程式如何使用AEM as a Cloud Service的內容，請檢視[AEM Headless教學課程](../multi-step/overview.md)。 本教學課程會探索如何在AEM中建立內容片段，以及此React應用程式如何使用其JSON格式內容。
+若要詳細瞭解React應用程式如何使用AEM as a Cloud Service的內容，請檢視[AEM Headless教學課程](../multi-step/overview.md)。 本教學課程會探索如何在AEM中建立內容片段，以及此React應用程式如何以JSON形式使用其內容。
 
 ### 後續步驟
 

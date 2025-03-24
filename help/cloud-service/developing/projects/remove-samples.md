@@ -1,7 +1,7 @@
 ---
-title: 從AEM Maven專案移除範例
+title: 從AEM Maven專案移除樣本
 description: 瞭解如何從AEM專案原型產生的AEM專案中清理並移除範常式式碼。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: AEM Project Archetype
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-9092
 thumbnail: 337263.jpeg
 exl-id: 4e10c2b7-41b6-41a0-b8d4-9207a9d3f9c8
 duration: 341
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # 從AEM Maven專案移除範例
 
-瞭解如何從AEM專案原型產生的AEM專案中清理和移除產生的範常式式碼。
+瞭解如何從AEM專案原型產生的AEM專案中清理及移除產生的範常式式碼。
 
 >[!VIDEO](https://video.tv.adobe.com/v/337263?quality=12&learn=on)
 

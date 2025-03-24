@@ -2,14 +2,14 @@
 title: Github.com webhook驗證
 description: 瞭解如何在App Builder動作中驗證來自Github.com的webhook請求。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Intermediate
 jira: KT-15714
 last-substantial-update: 2023-06-06T00:00:00Z
 exl-id: 5492dc7b-f034-4a7f-924d-79e083349e26
-source-git-commit: 8f64864658e521446a91bb4c6475361d22385dc1
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Github.com webhook驗證
 
-Webhook可讓您建立或設定可訂閱GitHub.com上特定事件的整合。 觸發其中一項事件時，GitHub會傳送HTTPPOST裝載至webhook已設定的URL。 然而，基於安全考量，請務必確認傳入的webhook請求是否實際來自GitHub，而非惡意執行者。 本教學課程會逐步引導您執行步驟，在AdobeApp Builder動作中使用共用密碼來驗證GitHub.com webhook請求。
+Webhook可讓您建立或設定可訂閱GitHub.com上特定事件的整合。 觸發其中一個事件時，GitHub會傳送HTTP POST裝載至webhook已設定的URL。 然而，基於安全考量，請務必確認傳入的webhook請求是否實際來自GitHub，而非惡意執行者。 本教學課程會逐步引導您完成在Adobe App Builder動作中，使用共用密碼驗證GitHub.com webhook要求的步驟。
 
 ## 在AppBuilder中設定Github機密
 
@@ -39,7 +39,7 @@ Webhook可讓您建立或設定可訂閱GitHub.com上特定事件的整合。 �
 
    - 將AppBuilder動作`web`設定設為`raw`，以從GitHub.com接收原始要求內文。
    - 在AppBuilder動作設定的`inputs`底下，新增`GITHUB_SECRET`金鑰，並將其對應至包含密碼的`.env`欄位。 此索引鍵的值是以`$`為前置詞的`.env`欄位名稱。
-   - 將AppBuilder動作設定中的`require-adobe-auth`註解設為`false`，以允許不需要進行Adobe驗證即可呼叫動作。
+   - 將AppBuilder動作設定中的`require-adobe-auth`註解設為`false`，以允許不需要經過Adobe驗證即可呼叫動作。
 
    產生的`ext.config.yaml`檔案應如下所示：
 

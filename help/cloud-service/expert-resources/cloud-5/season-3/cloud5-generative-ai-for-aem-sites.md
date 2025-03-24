@@ -1,7 +1,7 @@
 ---
 title: AEM Sites中的Generative AI
 description: 探索可用於AEM檔案製作的新創作AI功能。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Generative AI, Edge Delivery Services
 topic: Content Management
 role: Admin, Developer, Leader, User
@@ -13,7 +13,7 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 jira: KT-15348
 exl-id: c7020e3e-2664-42f1-a3b4-c23eb17cbf4b
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 # AEM Sites中的Generative AI
 
-探索AEM Sites檔案編寫中可用的新產生AI功能。 我們涵蓋功能、與Adobe Firefly和Adobe Express的整合，以及後端使用的技術、使用的資料模型，以及如何訓練這些模型。
+探索AEM Sites檔案編寫中可用的新產生AI功能。 我們會說明功能、與Adobe Firefly和Adobe Express的整合，以及後端使用的技術、使用的資料模型，以及如何訓練這些模型。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428436/?learn=on)
 

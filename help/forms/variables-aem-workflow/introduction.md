@@ -1,7 +1,7 @@
 ---
 title: AEM工作流程中的變數
 description: 在aem工作流程中使用xml、json、arraylist、document型別的變數
-version: 6.5
+version: Experience Manager 6.5
 feature: Adaptive Forms, Workflow
 topic: Development
 role: Developer
@@ -9,7 +9,7 @@ level: Beginner
 exl-id: e84b70a0-c51b-4fe3-80e8-f3156931297a
 last-substantial-update: 2020-01-26T00:00:00Z
 duration: 22
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 8%
@@ -39,4 +39,4 @@ ht-degree: 8%
 * [json變數](part2.md)
 * [檔案變數](part3.md)
 * [ArrayList變數](part4.md)
-* [AEM Workflow中的規則編輯器](part5.md)
+* [AEM工作流程中的規則編輯器](part5.md)

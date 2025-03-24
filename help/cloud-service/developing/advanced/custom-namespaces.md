@@ -1,7 +1,7 @@
 ---
 title: 自訂名稱空間
 description: 瞭解如何定義自訂名稱空間並將其部署到AEM as a Cloud Service。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development, Content Management
 feature: Metadata
 role: Developer
@@ -11,7 +11,7 @@ thumbnail: 3412319.jpg
 last-substantial-update: 2022-12-14T00:00:00Z
 exl-id: e86ddc9d-ce44-407a-a20c-fb3297bb0eb2
 duration: 496
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 2%
@@ -22,11 +22,11 @@ ht-degree: 2%
 
 瞭解如何定義自訂[名稱空間](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/4.5_Namespaces.html)並將其部署到AEM as a Cloud Service。
 
-自訂名稱空間是`:`前面的JCR屬性的選用部分。 AEM使用幾個名稱空間，例如：
+自訂名稱空間是`:`前面的JCR屬性的選用部分。 AEM使用數個名稱空間，例如：
 
 + JCR系統屬性為`jcr`
-+ 適用於AEM (先前稱為Adobe CQ)屬性的`cq`
-+ 針對DAM資產特定的AEM屬性的`dam`
++ 適用於AEM （先前稱為Adobe CQ）屬性的`cq`
++ 針對DAM資產特有的AEM屬性的`dam`
 + 都柏林核心屬性的`dc`
 
 ...和其他許多專案。
@@ -41,7 +41,7 @@ ht-degree: 2%
 
 + [Sling存放庫初始化(repoinit)檔案](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)
 
-## 程式碼
+## 代碼
 
 下列程式碼可用來設定`wknd`名稱空間。
 
@@ -58,4 +58,4 @@ ht-degree: 2%
 }
 ```
 
-這允許使用`wknd`名稱空間的自訂屬性（表示為`register namespace`指令之後的第一個引數）在AEM中使用。 如需更進階的指令碼定義，請檢閱[Sling存放庫初始化(repoinit)檔案](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)中的範例。
+這可讓使用`wknd`名稱空間（表示為`register namespace`指示之後的第一個引數）的自訂屬性在AEM中使用。 如需更進階的指令碼定義，請檢閱[Sling存放庫初始化(repoinit)檔案](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)中的範例。

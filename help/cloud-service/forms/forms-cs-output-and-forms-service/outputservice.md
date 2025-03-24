@@ -4,24 +4,24 @@ description: 將資料與XDP範本合併，以產生非互動式PDF
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-16384
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
-source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
+exl-id: 8a5a4d11-12a2-462d-8684-a0c6ec0cac0e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 8%
 
 ---
 
-
 # 使用輸出服務產生PDF檔案
 
-[輸出服務](https://javadoc.io/static/com.adobe.aem/aem-forms-sdk-api/2024.07.31.00-240800/com/adobe/fd/output/api/OutputService.html)是屬於AEM Document Services一部分的OSGi服務。 它支援各種AEM Forms Designer的輸出格式和設計功能。 輸出服務會轉換XFA範本和XML資料，以產生不同格式的列印檔案。
+[Output服務](https://javadoc.io/static/com.adobe.aem/aem-forms-sdk-api/2024.07.31.00-240800/com/adobe/fd/output/api/OutputService.html)是屬於AEM Document Services一部分的OSGi服務。 它支援各種AEM Forms Designer的輸出格式和設計功能。 輸出服務會轉換XFA範本和XML資料，以產生不同格式的列印檔案。
 
-AEM Forms as a Cloud Service中的輸出服務非常類似於AEM Forms 6.5中的服務，因此如果您熟悉AEM Forms 6.5中的輸出服務，轉換至AEM Forms as a Cloud Service應該相當簡單明瞭。
+AEM Forms as a Cloud Service中的輸出服務與AEM Forms 6.5中的輸出服務非常類似，因此如果您熟悉AEM Forms 6.5中的輸出服務，轉換到AEM Forms as a Cloud Service應該相當簡單明瞭。
 
 使用Output服務，您可以建立以下用途的應用程式：
 
@@ -30,7 +30,7 @@ AEM Forms as a Cloud Service中的輸出服務非常類似於AEM Forms 6.5中的
 + 從 XFA 表單 PDF 產生列印 PDF。
 + 將多組資料與提供的範本合併，以大量產生PDF、PostScript、PCL和ZPL檔案。
 
-此服務旨在用於AEM Formsas a Cloud Service執行個體的內容。 下列程式碼片段會使用`OutputService`在servlet中產生PDF檔案。
+此服務旨在用於AEM Forms as a Cloud Service執行個體的內容。 下列程式碼片段會使用`OutputService`在servlet中產生PDF檔案。
 
 ```java
 import com.adobe.fd.output.api.OutputService;

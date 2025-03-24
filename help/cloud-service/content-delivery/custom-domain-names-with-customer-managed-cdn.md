@@ -1,7 +1,7 @@
 ---
 title: 使用客戶管理的CDN的自訂網域名稱
 description: 瞭解如何在使用客戶管理的CDN的AEM as a Cloud Service網站上實作自訂網域名稱。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-06-21T00:00:00Z
 jira: KT-15945
 thumbnail: KT-15945.jpeg
 exl-id: fa9ee14f-130e-491b-91b6-594ba47a7278
-source-git-commit: 67091c068634e6c309afaf78942849db626128f6
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 0%

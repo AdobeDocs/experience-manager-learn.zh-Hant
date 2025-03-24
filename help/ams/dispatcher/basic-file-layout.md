@@ -1,7 +1,7 @@
 ---
 title: AMS Dispatcher基本檔案配置
 description: 瞭解基本Apache和Dispatcher檔案配置。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Development
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
 duration: 308
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1130'
 ht-degree: 0%
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 >[!BEGINSHADEBOX &quot;Note&quot;]
 
-AdobeManaged Services伺服器影像通常有小型作業系統根磁碟機。  我們將資料放入另一個磁碟區中，該磁碟區通常掛載於`/mnt`
+Adobe Managed Services伺服器影像通常有小型作業系統根磁碟機。  我們將資料放入另一個磁碟區中，該磁碟區通常掛載於`/mnt`
 然後我們使用該磁碟區，而不是下列預設目錄的預設值
 
 `DocumentRoot`
@@ -86,7 +86,7 @@ AMS將新增到Apache Web Server的基本安裝上。
 AMS預設檔案根：
 - 作者：
    - `/mnt/var/www/author/`
-- Publish：
+- 發佈：
    - `/mnt/var/www/html/`
 - 全面收集與健康情況檢查維護
    - `/mnt/var/www/default/`
@@ -151,13 +151,13 @@ Apache Web Server極具擴充性，當模組有許多組態檔時，最佳實務
 
 #### 使用者端標頭目錄
 
-此目錄可包含您建立的所有`_clientheaders.any`檔案，這些檔案包含您希望在收到請求時傳遞給AEM的使用者端標題清單。  此章節的詳細資訊為[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)
+此目錄可包含您建立的所有`_clientheaders.any`檔案，其中包含您希望在收到請求時傳遞至AEM的使用者端標題清單。  此章節的詳細資訊為[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 
 #### 篩選器目錄
 
-此目錄可包含您建立的所有`_filters.any`檔案，其中包含要封鎖或允許透過Dispatcher的流量到達AEM的所有篩選規則
+此目錄可包含您建立並包含所有篩選規則的`_filters.any`個檔案，這些規則用來封鎖或允許透過Dispatcher的流量到達AEM
 
 - `/etc/httpd/conf.dispatcher.d/filters/`
 

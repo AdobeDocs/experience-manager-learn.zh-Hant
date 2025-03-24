@@ -1,7 +1,7 @@
 ---
 title: AEM的JWT-To-OAuth憑證移轉
-description: 瞭解如何將其他Adobe解決方案移轉至新的OAuth伺服器對伺服器認證。
-version: 6.5, Cloud Service
+description: 瞭解如何將其他Adobe解決方案移轉至新的OAuth伺服器對伺服器憑證。
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Integrations, Migration, Security
 topic: Integrations, Migration, Security
 role: Admin, Developer
@@ -10,13 +10,13 @@ doc-type: Technical Video
 duration: 334
 last-substantial-update: 2024-08-19T00:00:00Z
 jira: KT-16019
-source-git-commit: 82cde75f1ec5b9e03f8f1c1e46298f3dd049718b
+exl-id: d4c9a509-baec-44e7-8b0b-6b469c1b5c2b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 1%
 
 ---
-
 
 # AEM的JWT-To-OAuth憑證移轉
 

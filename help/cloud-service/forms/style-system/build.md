@@ -5,18 +5,18 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
+exl-id: 4a02f494-ca0e-42d4-bbb9-6223ff8685e3
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
 
 ---
-
 
 # 測試變更
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 * 開啟主題專案的dist資料夾下的theme.css檔案。選取並複製整個檔案內容。
 * 預覽在先前步驟中建立的表單。
-* 以滑鼠右鍵按一下其中一個按鈕，然後選取「Inspect」以開啟開發人員主控台。
+* 以滑鼠右鍵按一下其中一個按鈕，然後選取「檢查」以開啟開發人員主控台。
 * 在開發人員主控台中，按一下theme.css以開啟theme.css
 * 使用CTR-A選取並刪除theme.css的整個內容，然後按一下刪除按鈕。
 * 複製並貼上您在上一步中建立的theme.css內容。
@@ -50,4 +50,3 @@ ht-degree: 0%
 ## 推送變更
 
 如果您對變更感到滿意，可以使用[前端管道](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline)將變更推送到您的雲端執行個體
-

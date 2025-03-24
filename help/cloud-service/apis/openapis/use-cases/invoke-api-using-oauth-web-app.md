@@ -1,7 +1,7 @@
 ---
 title: 使用OAuth網頁應用程式驗證叫用OpenAPI型AEM API
 description: 瞭解如何透過使用OAuth網頁應用程式的自訂網頁應用程式中的使用者型驗證，在AEM as a Cloud Service上叫用OpenAPI型AEM API。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
@@ -11,7 +11,8 @@ jira: KT-16718
 thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
-source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2245'
 ht-degree: 0%
@@ -655,4 +656,3 @@ OpenAPI型AEM API呼叫是從伺服器端（Express中介程式）發出，而�
 - [授權要求](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#authorize-request)
 - [正在擷取存取權杖](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#fetching-access-tokens)
 - [正在重新整理存取權杖](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#refreshing-access-tokens)
-

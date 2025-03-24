@@ -1,7 +1,7 @@
 ---
 title: 建立網站 | AEM快速網站建立
 description: 瞭解如何使用網站建立精靈來產生新網站。 Adobe提供的標準網站範本是新網站的起點。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
 recommendations: noDisplay, noCatalog
 duration: 198
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 # 建立網站 {#create-site}
 
-快速建立網站時，請使用Adobe Experience Manager AEM中的網站建立精靈來產生新網站。 Adobe提供的標準網站範本是作為新網站的起點。
+快速建立網站時，請使用Adobe Experience Manager (AEM)中的網站建立精靈來產生新網站。 Adobe提供的標準網站範本是作為新網站的起點。
 
 ## 先決條件 {#prerequisites}
 
 本章中的步驟將在Adobe Experience Manager as a Cloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 完成本教學課程時，建議使用[沙箱程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)。
 
-[生產計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html)環境也可用於此教學課程；不過，請確保此教學課程的活動不會影響目標環境上正在執行的工作，因為此教學課程會將內容和程式碼部署到目標AEM環境。
+[生產計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html)環境也可用於本教學課程；不過，請確保本教學課程的活動不會影響目標環境中正在執行的工作，因為本教學課程會將內容和程式碼部署到目標AEM環境。
 
 [AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html)可用於本教學課程的部分內容。 此教學課程依賴雲端服務的部分，例如[使用Cloud Manager的前端管道](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html)部署主題，無法在AEM SDK上執行。
 
@@ -41,10 +41,10 @@ ht-degree: 0%
 
 ## 登入Adobe Experience Manager Author {#author}
 
-首先，請登入您的AEM as a Cloud Service環境。 AEM環境在&#x200B;**作者服務**&#x200B;和&#x200B;**Publish服務**&#x200B;之間分割。
+首先，請登入您的AEM as a Cloud Service環境。 AEM環境在&#x200B;**作者服務**&#x200B;和&#x200B;**發佈服務**&#x200B;之間分割。
 
 * **作者服務** — 用來建立、管理和更新網站內容。 通常只有內部使用者才能存取&#x200B;**作者服務**，而且是在登入畫面之後。
-* **Publish服務** — 裝載已上線的網站。 這是一般使用者會看到的服務，通常可公開使用。
+* **發佈服務** — 裝載已上線的網站。 這是一般使用者會看到的服務，通常可公開使用。
 
 大部分教學課程將使用&#x200B;**作者服務**&#x200B;進行。
 
@@ -68,7 +68,7 @@ ht-degree: 0%
    >
    >建議在此教學課程中使用&#x200B;**開發**&#x200B;環境。
 
-1. 已針對AEM **作者服務**&#x200B;啟動新標籤。 按一下&#x200B;**使用Adobe**&#x200B;登入，您應該使用相同的Experience Cloud認證自動登入。
+1. 已針對AEM **作者服務**&#x200B;啟動新索引標籤。 按一下&#x200B;**使用Adobe**&#x200B;登入，您應該使用相同的Experience Cloud認證自動登入。
 
 1. 在重新導向並驗證之後，您現在應該會看到AEM開始畫面。
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 ## 下載基本網站範本
 
-網站範本提供新網站的起點。 網站範本包括一些基本主題、頁面範本、設定和範例內容。 確切地說，網站範本中包含的內容取決於開發人員。 Adobe提供&#x200B;**基本網站範本**&#x200B;以加速新實作。
+網站範本提供新網站的起點。 網站範本包括一些基本主題、頁面範本、設定和範例內容。 確切地說，網站範本中包含的內容取決於開發人員。 Adobe提供&#x200B;**基本網站範本**，可加速新實作。
 
 1. 開啟新的瀏覽器索引標籤，並導覽至GitHub上的基本網站範本專案： [https://github.com/adobe/aem-site-template-standard](https://github.com/adobe/aem-site-template-standard)。 此專案是開放原始碼的，並授權任何人使用。
 1. 按一下&#x200B;**版本**&#x200B;並瀏覽至[最新版本](https://github.com/adobe/aem-site-template-standard/releases/latest)。
@@ -120,7 +120,7 @@ ht-degree: 0%
    >
    > 如果使用共用AEM環境，請將唯一識別碼附加至&#x200B;**網站名稱**。 例如 `wknd-site-johndoe`。這可確保多位使用者可完成相同的教學課程，而不會出現任何衝突。
 
-1. 按一下&#x200B;**建立**&#x200B;以產生網站。 AEM完成建立網站時，請在&#x200B;**成功**&#x200B;對話方塊中按一下&#x200B;**完成**。
+1. 按一下&#x200B;**建立**&#x200B;以產生網站。 當AEM完成建立網站時，請在&#x200B;**成功**&#x200B;對話方塊中按一下&#x200B;**完成**。
 
 ## 探索新網站
 
@@ -142,4 +142,4 @@ ht-degree: 0%
 
 ### 後續步驟 {#next-steps}
 
-使用Adobe Experience Manager， AEM中的頁面編輯器來更新[作者內容和發佈](author-content-publish.md)章節中的網站內容。 瞭解如何設定原子元件以更新內容。 瞭解AEM作者和Publish環境之間的差異，並瞭解如何發佈更新至已上線的網站。
+在Adobe Experience Manager、AEM中使用頁面編輯器，以更新[作者內容和發佈](author-content-publish.md)章節中的網站內容。 瞭解如何設定原子元件以更新內容。 瞭解AEM作者與發佈環境之間的差異，並瞭解如何發佈更新至已上線的網站。

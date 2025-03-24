@@ -4,13 +4,13 @@ description: 在Designer中設定PDF預覽的步驟
 type: Troubleshooting
 role: Developer
 level: Intermediate
-version: 6.5
+version: Experience Manager 6.5
 feature: Designer
 topic: Development
 index: y
 exl-id: 0d5fb8d1-5aa2-40c7-b1c9-e4b5319e8d36
 duration: 40
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%

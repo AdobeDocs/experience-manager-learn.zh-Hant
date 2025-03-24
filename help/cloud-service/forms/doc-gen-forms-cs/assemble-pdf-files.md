@@ -4,13 +4,13 @@ description: 使用invokeDDX操作來處理pdf檔案。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-9958
 thumbnail: 332439.jpg
 duration: 50
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 # 使用叫用DDX端點操作PDF檔案
 
 
-下一步是使用必要的引數向端點進行HTTPPOST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定。embedFonts屬性是用來在產生的pdf中嵌入自訂字型。 請依照[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html)中的說明將自訂字型部署至Forms雲端執行個體。 屬性是在options.json資源檔案中指定。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
+下一步是使用必要的引數向端點進行HTTP POST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定。embedFonts屬性是用來在產生的pdf中嵌入自訂字型。 請依照[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html)中的說明將自訂字型部署至Forms雲端執行個體。 屬性是在options.json資源檔案中指定。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
 
 下列程式碼是用來將資料與範本合併，以產生pdf
 

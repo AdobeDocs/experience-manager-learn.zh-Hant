@@ -3,14 +3,14 @@ title: 在Windows上安裝AEM Forms的簡化步驟
 description: 在Windows上快速輕鬆地安裝AEM Forms的步驟
 feature: Adaptive Forms
 type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 113
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果您打算使用AEM Forms，請勿連按兩下AEM快速入門jar。
+>如果您打算使用AEM Forms，請勿連按兩下AEM快速入門jar 。
 >
 >此外，請確定AEM Forms安裝資料夾路徑中沒有空格。
 >
@@ -39,8 +39,8 @@ ht-degree: 1%
 雖然我們建議遵循安裝AEM Forms的[官方檔案](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)。 您可以依照下列步驟，在Windows環境中安裝和設定AEM Forms：
 
 * 請確定您已安裝適當的JDK
-   * 您需要AEM 6.2：OracleSE 8 JDK 1.8.x （64位元）
-   * 您需要AEM 6.3和AEM 6.4：OracleSE 8 JDK 1.8.x （64位元）
+   * 您需要AEM 6.2： Oracle SE 8 JDK 1.8.x （64位元）
+   * 您需要AEM 6.3和AEM 6.4： Oracle SE 8 JDK 1.8.x （64位元）
    * AEM 6.5需要JDK 8或JDK 11
    * [此處列出官方JDK需求](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=zh-Hant)
 * 請確定JAVA_HOME設定為指向您已安裝的JDK。
@@ -86,4 +86,4 @@ ht-degree: 1%
 1. 儲存變更。
 
 恭喜!!! 您現在已在系統上安裝和設定AEM Forms。
-您可以視需要在伺服器上設定[Reader延伸模組](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)或[PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html)
+您可以視需要在伺服器上設定[Reader擴充功能](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)或[PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html)

@@ -1,7 +1,7 @@
 ---
 title: AEM Dispatcher通用記錄檔
 description: 從Dispatcher檢視常見的記錄專案，並瞭解其含義以及如何處理。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Performance
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 229
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 0%
@@ -109,9 +109,9 @@ Fri Jul 20 22:31:15 2018 W pid 3648 Unable to connect socket to 10.43.3.40:4502:
 Fri Jul 20 22:31:15 2018 W pid 3648 Unable to connect to any backend in farm authorfarm
 ```
 
-當您在伺服器陣列的renders區段中設定錯誤的IP位址時，就會發生這種情況。 該AEM執行個體停止回應或接聽，且Dispatcher無法連線到該執行個體。
+當您在伺服器陣列的renders區段中設定錯誤的IP位址時，就會發生這種情況。 該或AEM執行個體停止回應或接聽，而Dispatcher無法連線。
 
-檢查防火牆規則，確認AEM執行個體正在執行且狀況良好。
+請檢查防火牆規則，確認AEM執行個體正在執行且狀況良好。
 
 閘道逾時範例記錄專案：
 
@@ -167,9 +167,9 @@ Thu Sep 27 17:35:11 2018 D pid 18936 Vanity URL file (/tmp/vanity_urls) not foun
 Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42:4503/libs/granite/dispatcher/content/vanityUrls.html: remote server returned: HTTP/1.1 404 Not Found
 ```
 
-當您已將Dispatcher設定為使用動態自動篩選允許虛名URL，但未透過在AEM轉譯器上安裝套件來完成設定時，會發生此錯誤。
+當您已將Dispatcher設定為使用動態自動篩選允許虛名URL，但未透過在AEM轉譯器上安裝套件完成設定時，會發生此錯誤。
 
-若要修正此問題，請在AEM執行個體上安裝虛名URL功能套件，並允許匿名使用者準備就緒。 詳細資訊[在此](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
+若要修正此問題，請在AEM執行個體上安裝虛名url功能套件，並允許匿名使用者準備就緒。 詳細資訊[在此](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
 
 設定的有效虛名URL如下所示：
 
@@ -201,6 +201,6 @@ Wed Nov 13 17:17:26 2019 W pid 19173:tid 140542738364160 No farm matches host 'w
 Tue Nov 26 16:41:34 2019 I pid 9208 (tid 140112092391168) "GET /content/we-retail/us/en.html" - + 24034ms publishfarm/0
 ```
 
-已透過GEThttp方法為內容`/content/we-retail/us/en.html`擷取頁面，耗時24034毫秒。 我們要注意的部份位於最後`publishfarm/0`。 您會看到它鎖定目標並符合`publishfarm`。 已從轉譯器0擷取請求。 這表示必須從AEM要求此頁面，然後快取。 現在，讓我們再次要求此頁面，並檢視記錄的情況。
+已透過GET http方法為內容`/content/we-retail/us/en.html`擷取頁面，耗時24034毫秒。 我們要注意的部份位於最後`publishfarm/0`。 您會看到它鎖定目標並符合`publishfarm`。 已從轉譯器0擷取請求。 這表示必須從AEM要求此頁面，然後快取。 現在，讓我們再次要求此頁面，並檢視記錄的情況。
 
 [下一個 — >唯讀檔案](./immutable-files.md)

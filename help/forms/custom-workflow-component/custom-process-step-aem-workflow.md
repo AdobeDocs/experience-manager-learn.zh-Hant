@@ -2,14 +2,14 @@
 title: 使用對話方塊實作自訂流程步驟
 description: 使用自訂流程步驟將最適化表單附件寫入檔案系統
 feature: Workflow
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 149d2c8c-bf44-4318-bba8-bec7e25da01b
 duration: 135
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 建立Maven專案
 
-第一步是使用適當的AdobeMaven原型建立Maven專案。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中列出了詳細步驟。 將您的maven專案匯入到eclipse中後，您就可以開始編寫可在流程步驟中使用的第一個OSGi元件了。
+第一步是使用適當的Adobe Maven原型建立Maven專案。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中列出了詳細步驟。 將您的maven專案匯入到eclipse中後，您就可以開始編寫可在流程步驟中使用的第一個OSGi元件了。
 
 
 ### 建立實作WorkflowProcess的類別
@@ -32,7 +32,7 @@ ht-degree: 0%
 在eclipse IDE中開啟Maven專案。 展開&#x200B;**projectname** > **core**資料夾。 展開src/main/java資料夾。 您應該會看到結尾為「core」的套件。 建立在此封裝中實作WorkflowProcess的Java類別。 您需要覆寫執行方法。 執行方法的簽章如下
 公開void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)擲回WorkflowException
 
-在本教學課程中，我們會將新增至最適化表單的附件寫入檔案系統，做為AEM Workflow的一部分。
+在本教學課程中，我們會將新增至最適化表單的附件寫入檔案系統，做為AEM工作流程的一部分。
 
 為了完成此使用案例，編寫了下列java類別
 
@@ -118,9 +118,9 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 ```
 
 
-* attachmentsPath — 這是您在調適型表單中指定之位置，也就是您設定調適型表單的提交動作以叫用AEM Workflow時的位置。 這是您希望附件相對於工作流程裝載儲存在AEM中的資料夾名稱。
+* attachmentsPath — 這是您在調適型表單中指定之位置，也就是您設定調適型表單的提交動作以叫用AEM工作流程時的位置。 這是您希望附件相對於工作流程裝載儲存在AEM中的資料夾名稱。
 
-* saveToLocation — 這是您希望將附件儲存在AEM伺服器檔案系統中的位置。
+* saveToLocation — 這是您希望附件儲存在AEM伺服器檔案系統中的位置。
 
 這兩個值會使用工作流程元件的對話方塊作為流程引數傳遞
 

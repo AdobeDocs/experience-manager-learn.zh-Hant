@@ -1,7 +1,7 @@
 ---
 title: 管理AEM GraphQL的AEM主機
 description: 瞭解如何在AEM Headless應用程式中設定AEM主機。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -10,7 +10,7 @@ jira: KT-10831
 thumbnail: KT-10831.jpg
 exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
 duration: 496
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1614'
 ht-degree: 0%
@@ -26,13 +26,13 @@ ht-degree: 0%
 
 通常AEM Headless應用程式會針對GraphQL API和影像要求與單一AEM服務互動。 AEM服務會根據AEM Headless應用程式部署而變更：
 
-| AEM Headless部署型別 | AEM環境 | AEM服務 |
+| AEM無周邊部署型別 | AEM環境 | AEM服務 |
 |-------------------------------|:---------------------:|:----------------:|
 | 生產 | 生產 | 發佈 |
 | 製作預覽 | 生產 | 預覽 |
 | 開發 | 開發 | 發佈 |
 
-若要處理部署型別排列，每個應用程式部署都是使用指定要連線的AEM服務的設定所建置。 接著會使用已設定的AEM服務主機/網域來建構AEM GraphQL API URL和影像URL。 若要判斷管理組建相依設定的正確方法，請參考AEM Headless應用程式的架構(例如React、iOS、Android™等)檔案，因為方法會因架構而異。
+為了處理部署型別排列，每個應用程式部署都是使用指定要連線的AEM服務的設定所建置。 接著會使用已設定的AEM服務主機/網域來建構AEM GraphQL API URL和影像URL。 若要判斷管理組建相依設定的正確方法，請參閱AEM Headless應用程式的架構(例如React、iOS、Android™等)檔案，因為方法會因架構而異。
 
 | 使用者端型別 | [單頁應用程式(SPA)](../spa.md) | [網頁元件/JS](../web-component.md) | [行動裝置](../mobile.md) | [伺服器對伺服器](../server-to-server.md) |
 |------------------------------------------:|:---------------------:|:----------------:|:---------:|:----------------:|
@@ -40,13 +40,13 @@ ht-degree: 0%
 
 下列範例是為[AEM GraphQL API](#aem-graphql-api-requests)和[影像要求](#aem-image-requests)建構URL的可能方法，適用於幾個熱門的Headless架構和平台。
 
-## AEM GraphQL API要求
+## AEM GraphQL API請求
 
-從Headless應用程式到AEM的GraphQL API的HTTPGET要求必須設定為與正確的AEM服務互動，如上方](#managing-aem-hosts)的[表格所述。
+從Headless應用程式到AEM的GraphQL API的HTTP GET請求必須設定為與正確的AEM服務互動，如上方[表格](#managing-aem-hosts)所述。
 
 使用[AEM Headless SDK](../../how-to/aem-headless-sdk.md) (適用於瀏覽器式JavaScript、伺服器式JavaScript和Java™)時，AEM主機可以使用AEM服務初始化AEM Headless使用者端物件以與其連線。
 
-開發自訂AEM Headless使用者端時，請確定AEM服務的主機可以根據組建引數引數化。
+開發自訂AEM Headless使用者端時，請確定AEM服務的主機可以根據組建引數引數引數化。
 
 ### 範例
 
@@ -54,9 +54,9 @@ ht-degree: 0%
 
 +++ React範例
 
-此範例大致以[AEM Headless React應用程式](../../example-apps/react-app.md)為基礎，說明如何設定AEM GraphQL API要求以根據環境變數連線至不同的AEM Services。
+此範例大致上以[AEM Headless React應用程式](../../example-apps/react-app.md)為基礎，說明如何設定AEM GraphQL API要求來根據環境變數連線至不同的AEM服務。
 
-React應用程式應使用適用於JavaScript](../../how-to/aem-headless-sdk.md)的[AEM Headless使用者端，與AEM的GraphQL API互動。 適用於JavaScript的AEM Headless使用者端所提供的AEM Headless使用者端必須透過其連線的AEM Service主機進行初始化。
+React應用程式應使用適用於JavaScript的[AEM Headless使用者端](../../how-to/aem-headless-sdk.md)，與AEM的GraphQL API互動。 適用於JavaScript的AEM Headless使用者端所提供的AEM Headless使用者端，必須透過其連線的AEM服務主機進行初始化。
 
 #### React環境檔案
 
@@ -88,7 +88,7 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 
 #### AEM headless使用者端
 
-適用於JavaScript](../../how-to/aem-headless-sdk.md)的[AEM Headless使用者端包含AEM Headless使用者端，會向AEM的GraphQL API發出HTTP請求。 AEM Headless使用者端必須使用使用中`.env`檔案的值與其互動的AEM主機進行初始化。
+適用於JavaScript ](../../how-to/aem-headless-sdk.md)的[AEM Headless使用者端包含AEM Headless使用者端，可向AEM的GraphQL API發出HTTP請求。 AEM Headless使用者端必須使用使用中`.env`檔案的值與其互動的AEM主機進行初始化。
 
 + `src/api/headlessClient.js`
 
@@ -110,7 +110,7 @@ export const aemHeadlessClient = new AEMHeadless({
 });
 ```
 
-#### React useEffect(..) 勾點
+#### React useEffect(..)鉤點
 
 自訂React useEffect掛接會呼叫AEM Headless使用者端，並代表呈現檢視的React元件以AEM主機初始化。
 
@@ -166,7 +166,7 @@ let { data, error } = useAdventureByPath('/content/dam/wknd-shared/en/adventures
 
 此範例以[範例AEM Headless iOS™應用程式](../../example-apps/ios-swiftui-app.md)為基礎，說明如何設定AEM GraphQL API要求以根據[組建特定設定變數](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)連線至不同的AEM主機。
 
-iOS™應用程式需要自訂AEM Headless使用者端，才能與AEM的GraphQL API互動。 必須撰寫AEM Headless使用者端，以設定AEM服務主機。
+iOS™應用程式需要自訂AEM Headless使用者端，才能與AEM的GraphQL API互動。 必須將AEM Headless使用者端設定為可設定AEM服務主機。
 
 #### 建置設定
 
@@ -195,7 +195,7 @@ let aemHost: String = try Configuration.value(for: "AEM_HOST")      // publish-p
 let aemHeadlessClient = Aem(scheme: aemScheme, host: aemHost);
 ```
 
-自訂AEM Headless使用者端(`api/Aem.swift`)包含方法`makeRequest(..)`，其會以設定的AEM `scheme`和`host`為AEM GraphQL API要求加上前置詞。
+自訂AEM Headless使用者端(`api/Aem.swift`)包含方法`makeRequest(..)`，其會以已設定的AEM `scheme`和`host`為AEM GraphQL API要求加上前置詞。
 
 + `api/Aem.swift`
 
@@ -217,15 +217,15 @@ private func makeRequest(persistedQueryName: String, params: [String: String] = 
 }
 ```
 
-[可以建立新的組建組態檔](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)以連線到不同的AEM服務。 `AEM_SCHEME`和`AEM_HOST`的組建特定值是根據XCode中選取的組建使用，導致自訂AEM Headless使用者端連線到正確的AEM服務。
+[可以建立新的組建組態檔](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)，以連線至不同的AEM服務。 `AEM_SCHEME`和`AEM_HOST`的組建特定值是根據XCode中選取的組建使用，導致自訂AEM Headless使用者端連線到正確的AEM服務。
 
 +++
 
 +++ Android™範例
 
-此範例以[範例AEM Headless Android™應用程式](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)為基礎，說明如何設定AEM GraphQL API要求以根據組建特定（或風格）設定變數連線至不同的AEM Services。
+此範例以[範例AEM Headless Android™應用程式](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)為基礎，說明如何設定AEM GraphQL API要求來根據組建特定（或風格）設定變數連線至不同的AEM Services。
 
-Android™應用程式(以Java™撰寫時)應使用[AEM Headless Client for Java™](https://github.com/adobe/aem-headless-client-java)與AEM的GraphQL API互動。 適用於Java™的AEM Headless使用者端所提供的AEM Headless使用者端必須透過其連線的AEM Service主機進行初始化。
+Android™應用程式(以Java™撰寫時)應使用[適用於Java™](https://github.com/adobe/aem-headless-client-java)的AEM Headless使用者端，與AEM的GraphQL API互動。 適用於Java™的AEM Headless使用者端所提供的AEM Headless使用者端，必須透過其連線的AEM服務主機進行初始化。
 
 #### 建置組態檔
 
@@ -234,7 +234,7 @@ Android™應用程式會定義「productFlavors」，以針對不同用途建�
 
 在應用程式的`build.gradle`檔案中，已建立名為`env`的新`flavorDimension`。
 
-在`env`維度中，定義了兩個`productFlavors`： `dev`和`prod`。 每個`productFlavor`都使用`buildConfigField`來設定組建特定的變數，這些變數定義要連線的AEM服務。
+在`env`維度中，定義了兩個`productFlavors`： `dev`和`prod`。 每個`productFlavor`都使用`buildConfigField`來設定組建特定的變數，這些變數會定義要連線的AEM服務。
 
 + `app/build.gradle`
 
@@ -290,7 +290,7 @@ public class AdventuresLoader extends AsyncTaskLoader<AdventureList> {
 
 從Headless應用程式到AEM的影像要求必須設定為與正確的AEM服務互動，如上表](#managing-aem-hosts)中的[所述。
 
-Adobe建議使用AEMGraphQL API中透過`_dynamicUrl`欄位提供的[最佳化影像](../../how-to/images.md)。 `_dynamicUrl`欄位傳回無主機URL，其前置詞可為用於查詢AEM GraphQL API的AEM服務主機。 在GraphQL回應中的`_dynamicUrl`欄位看起來如下所示：
+Adobe建議使用AEM GraphQL API中透過`_dynamicUrl`欄位提供的[最佳化影像](../../how-to/images.md)。 `_dynamicUrl`欄位會傳回無主機URL，此URL可加上用來查詢AEM GraphQL API之AEM服務主機的前置詞。 在GraphQL回應中的`_dynamicUrl`欄位看起來如下所示：
 
 ```json
 {
@@ -345,7 +345,7 @@ query ($path: String!) {
 
 +++ React範例
 
-此範例以[範例AEM Headless React應用程式](../../example-apps/react-app.md)為基礎，說明如何將影像URL設定為根據環境變數連線到正確的AEM Services。
+此範例以[範例AEM Headless React應用程式](../../example-apps/react-app.md)為基礎，說明如何設定影像URL以根據環境變數連線至正確的AEM服務。
 
 此範例顯示如何使用可設定的`REACT_APP_AEM_HOST` React環境變數為影像參考`_dynamicUrl`欄位加上前置詞。
 
@@ -403,7 +403,7 @@ return (
 
 +++ iOS™範例
 
-此範例以[範例AEM Headless iOS™應用程式](../../example-apps/ios-swiftui-app.md)為基礎，說明如何設定AEM影像URL以根據[組建特定設定變數](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)連線至不同的AEM主機。
+此範例是以[範例AEM Headless iOS™應用程式](../../example-apps/ios-swiftui-app.md)為基礎，說明如何設定AEM影像URL，以根據[組建特定設定變數](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)連線至不同的AEM主機。
 
 #### 建置設定
 
@@ -422,7 +422,7 @@ AEM_HOST = publish-p123-e789.adobeaemcloud.com
 
 #### 影像URL產生器
 
-在`Aem.swift`自訂AEM Headless使用者端實作中，自訂函式`imageUrl(..)`會採用GraphQL回應中`_dynamicUrl`欄位所提供的影像路徑，並在其前面加上AEM的主機。 然後每當影像轉譯時，就會在iOS檢視中叫用此函式。
+在自訂AEM Headless使用者端實作`Aem.swift`中，自訂函式`imageUrl(..)`會採用GraphQL回應中`_dynamicUrl`欄位所提供的影像路徑，並在其前面加上AEM的主機。 然後每當影像轉譯時，就會在iOS檢視中叫用此函式。
 
 + `WKNDAdventures/AEM/Aem.swift`
 
@@ -470,7 +470,7 @@ struct AdventureListItemView: View {
 ...
 ```
 
-[可以建立新的組建組態檔](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)以連線到不同的AEM服務。 `AEM_SCHEME`和`AEM_HOST`的組建特定值是根據XCode中選取的組建使用，導致自訂AEM Headless使用者端與正確的AEM服務互動。
+[可以建立新的組建組態檔](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)，以連線至不同的AEM服務。 `AEM_SCHEME`和`AEM_HOST`的組建特定值是根據XCode中選取的組建使用，導致自訂AEM Headless使用者端與正確的AEM服務互動。
 
 +++
 
@@ -485,7 +485,7 @@ Android™應用程式會定義「productFlavors」，以針對不同用途建�
 
 在應用程式的`build.gradle`檔案中，已建立名為`env`的新`flavorDimension`。
 
-在`env`維度中，定義了兩個`productFlavors`： `dev`和`prod`。 每個`productFlavor`都使用`buildConfigField`來設定組建特定的變數，這些變數定義要連線的AEM服務。
+在`env`維度中，定義了兩個`productFlavors`： `dev`和`prod`。 每個`productFlavor`都使用`buildConfigField`來設定組建特定的變數，這些變數會定義要連線的AEM服務。
 
 + `app/build.gradle`
 
@@ -510,9 +510,9 @@ android {
 }
 ```
 
-#### 正在載入AEM影像
+#### 載入AEM影像
 
-Android™使用`ImageGetter`從AEM擷取及本機快取影像資料。 在`prepareDrawableFor(..)`中，AEM服務主機（定義於使用中的組建組態）是用來為影像路徑加上前置詞，以建立AEM的可解析URL。
+Android™使用`ImageGetter`從AEM擷取及本機快取影像資料。 在`prepareDrawableFor(..)`中，使用作用中組建設定中定義的AEM服務主機，為影像路徑加上前置詞，以建立AEM的可解析URL。
 
 + `app/src/main/java/com/adobe/wknd/androidapp/loader/RemoteImagesCache.java`
 

@@ -1,7 +1,7 @@
 ---
 title: 簡易搜尋實作指南
 description: 簡單搜尋實作是來自2017 Summit lab AEM Search Demystified的資料。 本頁包含本實驗室的材料。 如需實驗室的導覽，請檢視本頁簡報區段中的實驗室活頁簿。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Search
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ exl-id: aa268c5f-d29e-4868-a58b-444379cb83be
 last-substantial-update: 2022-08-10T00:00:00Z
 thumbnail: 32090.jpg
 duration: 138
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 1%
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 ### 章節 {#chapters}
 
-*以下章節連結假設[初始套件](#initialpackages)安裝在AEM Author`http://localhost:4502`*&#x200B;上
+*下列章節連結假設[初始套件](#initialpackages)已安裝在AEM Author`http://localhost:4502`*&#x200B;上
 
 * [第1章](http://localhost:4502/editor.html/content/summit/l4080/chapter-1.html)
 * [第2章](http://localhost:4502/editor.html/content/summit/l4080/chapter-2.html)
@@ -107,7 +107,7 @@ ht-degree: 1%
    * 查詢必須指定等於索引的查詢路徑範圍的路徑限制，或指定其子系。
    * 範圍較廣的索引（例如`/oak:index/cqPageLucene`）也會將資料編入索引，導致重複擷取和磁碟使用成本。
    * 可能需要重複的組態管理(例如 在多個租使用者索引中新增相同的indexRules （如果它們必須滿足相同的查詢集）
-   * 此方法最適合在AEM Publish層級用於自訂網站搜尋，如同在AEM Author中一樣，對於不同的租使用者（例如，透過OmniSearch），查詢通常會在內容樹狀結構中執行 — 不同的索引定義可能會僅根據路徑限制產生不同的行為。
+   * 此方法最適合用於AEM Publish層級的自訂網站搜尋，因為在AEM Author中，查詢通常會針對不同租使用者（例如透過OmniSearch）在內容樹狀結構的高處執行 — 不同的索引定義可能會產生僅根據路徑限制的不同行為。
 
 3. **所有可用分析器的清單在何處？**
 

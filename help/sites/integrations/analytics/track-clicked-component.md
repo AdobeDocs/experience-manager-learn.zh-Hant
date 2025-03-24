@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe Analytics追蹤已點按的元件
 description: 使用事件導向的Adobe使用者端資料層，追蹤Adobe Experience Manager網站上特定元件的點按次數。 瞭解如何使用標籤規則來監聽這些事件，並使用追蹤連結信標將資料傳送至Adobe Analytics報表套裝。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
@@ -12,16 +12,16 @@ badgeIntegration: label="整合" type="positive"
 doc-type: Tutorial
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
 duration: 394
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1750'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # 使用Adobe Analytics追蹤已點按的元件
 
-使用事件導向的[Adobe使用者端資料層搭配AEM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)，追蹤Adobe Experience Manager網站上特定元件的點按次數。 瞭解如何使用Tag屬性中的規則來監聽點選事件、依元件篩選資料，以及透過追蹤連結信標將資料傳送至Adobe Analytics。
+使用事件導向的[Adobe Client Data Layer搭配AEM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)，追蹤Adobe Experience Manager網站上特定元件的點按次數。 瞭解如何使用Tag屬性中的規則來監聽點選事件、依元件篩選資料，以及透過追蹤連結信標將資料傳送至Adobe Analytics。
 
 ## 您即將建置的內容 {#what-build}
 
@@ -41,9 +41,9 @@ WKND行銷團隊想要瞭解哪些`Call to Action (CTA)`按鈕在首頁上表現
 
 * 已啟用[Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)的&#x200B;**標籤屬性**
 * **Adobe Analytics**&#x200B;測試/開發報表套裝ID與追蹤伺服器。 請參閱下列有關[建立報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)的檔案。
-* [Experience Platform偵錯工具](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)瀏覽器延伸模組已設定您在[WKND網站](https://wknd.site/us/en.html)或啟用Adobe資料層的AEM網站上載入的標籤屬性。
+* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)瀏覽器擴充功能已設定您在[WKND網站](https://wknd.site/us/en.html)或啟用Adobe資料層的AEM網站上載入的標籤屬性。
 
-## Inspect按鈕和Teaser結構
+## 檢查按鈕和Teaser結構
 
 在標籤屬性中建立規則之前，請檢閱Button和Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)的[結構描述，並在資料層實作中檢查它們，這樣會很有用。
 
@@ -83,17 +83,17 @@ WKND行銷團隊想要瞭解哪些`Call to Action (CTA)`按鈕在首頁上表現
 
    以上資料詳細資料是根據[元件/容器專案結構描述](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)。 新標籤規則會使用此結構描述。
 
-## 建立CTA點選規則
+## 建立CTA點按規則
 
 Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每當按一下任何核心元件時，都會透過資料層傳送`cmp:click`事件。 若要接聽`cmp:click`事件，請建立規則。
 
 1. 導覽至Experience Platform並進入與AEM網站整合的標籤屬性。
 1. 導覽至標籤屬性UI中的&#x200B;**規則**&#x200B;區段，然後按一下&#x200B;**新增規則**。
-1. 將規則&#x200B;**CTA點按**&#x200B;命名。
+1. 將規則&#x200B;**命名為CTA已點按**。
 1. 按一下&#x200B;**事件** > **新增**&#x200B;以開啟&#x200B;**事件設定**&#x200B;精靈。
 1. 針對&#x200B;**事件型別**&#x200B;欄位，選取&#x200B;**自訂程式碼**。
 
-   ![將規則CTA點選命名並新增自訂程式碼事件](assets/track-clicked-component/custom-code-event.png)
+   ![將CTA點按的規則命名並新增自訂程式碼事件](assets/track-clicked-component/custom-code-event.png)
 
 1. 按一下主面板中的&#x200B;**開啟編輯器**，然後輸入下列程式碼片段：
 
@@ -147,7 +147,7 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
 
    `event`物件是從自訂事件中呼叫的`trigger()`方法傳遞。 `component`物件是從資料層`getState()`方法衍生的元件的目前狀態，而且是觸發點選的元素。
 
-1. 儲存變更並在標籤屬性中執行[組建](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以將程式碼提升至您AEM網站上使用的[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant)。
+1. 儲存變更並在標籤屬性中執行[組建](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以將程式碼提升至您AEM網站上使用的[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)。
 
    >[!NOTE]
    >
@@ -157,7 +157,7 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
 
 1. 按一下&#x200B;**Teaser**&#x200B;或&#x200B;**按鈕** CTA按鈕之一，以導覽至其他頁面。
 
-   要按一下![CTA按鈕](assets/track-clicked-component/cta-button-to-click.png)
+   ![CTA按鈕以點選](assets/track-clicked-component/cta-button-to-click.png)
 
 1. 在開發人員主控台中觀察是否已引發&#x200B;**CTA Clicked**&#x200B;規則：
 
@@ -167,7 +167,7 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
 
 接著，建立資料元素以擷取已點按的元件ID和標題。 回想一下在上一個練習中，`event.path`的輸出類似於`component.button-b6562c963d`，而`event.component['dc:title']`的值類似於「檢視行程」。
 
-### 元件ID
+### 元件 ID
 
 1. 導覽至Experience Platform並進入與AEM網站整合的標籤屬性。
 1. 瀏覽至&#x200B;**資料元素**&#x200B;區段，然後按一下&#x200B;**新增資料元素**。
@@ -207,15 +207,15 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
 
 1. 儲存變更。
 
-## 將條件新增至CTA點按規則
+## 將條件新增至CTA點選規則
 
 接下來，更新&#x200B;**CTA Clicked**&#x200B;規則，以確保該規則只在&#x200B;**Teaser**&#x200B;或&#x200B;**Button**&#x200B;觸發`cmp:click`事件時引發。 由於Teaser的CTA在資料層中被視為個別物件，因此請務必檢查父系，以確認其來自Teaser。
 
-1. 在標籤屬性UI中，導覽至先前建立的&#x200B;**已點按CTA**&#x200B;規則。
+1. 在標籤屬性UI中，導覽至先前建立的&#x200B;**CTA已點按**&#x200B;規則。
 1. 在&#x200B;**條件**&#x200B;下，按一下&#x200B;**新增**&#x200B;以開啟&#x200B;**條件組態**&#x200B;精靈。
 1. 針對&#x200B;**條件型別**&#x200B;欄位，選取&#x200B;**自訂程式碼**。
 
-   ![CTA點按條件自訂代碼](assets/track-clicked-component/custom-code-condition.png)
+   ![CTA點按條件自訂程式碼](assets/track-clicked-component/custom-code-condition.png)
 
 1. 按一下&#x200B;**開啟編輯器**，然後在自訂程式碼編輯器中輸入下列內容：
 
@@ -254,7 +254,7 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
    * `prop8` - `%Component ID%`
    * `event8`
 
-   ![設定eVarProp和事件](assets/track-clicked-component/set-evar-prop-event.png)
+   ![設定eVar Prop和事件](assets/track-clicked-component/set-evar-prop-event.png)
 
    >[!NOTE]
    >
@@ -270,7 +270,7 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
 
    傳送連結信標的![設定](assets/track-clicked-component/analytics-send-beacon-link-track.png)
 
-   上述設定結合資料元素&#x200B;**元件標題**&#x200B;的動態變數與靜態字串&#x200B;**已點按**。
+   上述設定結合資料元素&#x200B;**元件標題**&#x200B;的動態變數與靜態字串&#x200B;**CTA已點按**。
 
 1. 儲存變更。 **CTA已點按**&#x200B;規則現在應具有下列設定：
 
@@ -278,27 +278,27 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
 
    * **1。**&#x200B;接聽`cmp:click`事件。
    * **2。**&#x200B;檢查事件是否由&#x200B;**按鈕**&#x200B;或&#x200B;**Teaser**&#x200B;觸發。
-   * **3。**&#x200B;設定Analytics變數以追蹤&#x200B;**元件識別碼**，作為&#x200B;**eVar**、**prop**&#x200B;和&#x200B;**事件**。
+   * **3。**&#x200B;設定Analytics變數來追蹤&#x200B;**元件識別碼**，作為&#x200B;**eVar**、**prop**&#x200B;和&#x200B;**事件**。
    * **4。**&#x200B;傳送Analytics追蹤連結信標（並&#x200B;**不會**&#x200B;將其視為頁面檢視）。
 
 1. 儲存所有變更並建置您的標籤程式庫，升級至適當的環境。
 
 ## 驗證追蹤連結信標和Analytics呼叫
 
-現在&#x200B;**CTA Clicked**&#x200B;規則會傳送Analytics信標，您應該能夠使用Analytics Debugger檢視Experience Platform追蹤變數。
+現在&#x200B;**CTA Clicked**&#x200B;規則會傳送Analytics信標，您應該能夠使用Experience Platform Debugger檢視Analytics追蹤變數。
 
 1. 在瀏覽器中開啟[WKND網站](https://wknd.site/us/en.html)。
-1. 按一下Debugger圖示![Experience Platform Debugger圖示](assets/track-clicked-component/experience-cloud-debugger.png)以開啟Experience PlatformDebugger。
+1. 按一下Debugger圖示![Experience Platform Debugger圖示](assets/track-clicked-component/experience-cloud-debugger.png)以開啟Experience Platform Debugger。
 1. 如先前所述，確認Debugger將標籤屬性對應至&#x200B;*您的*&#x200B;開發環境，並檢查&#x200B;**主控台記錄**。
 1. 開啟Analytics功能表，並確認報表套裝已設為&#x200B;*您的*&#x200B;報表套裝。
 
    ![Analytics索引標籤偵錯工具](assets/track-clicked-component/analytics-tab-debugger.png)
 
-1. 在瀏覽器中，按一下&#x200B;**Teaser**&#x200B;或&#x200B;**按鈕** CTA按鈕之一以瀏覽至其他頁面。
+1. 在瀏覽器中，按一下&#x200B;**Teaser**&#x200B;或&#x200B;**按鈕** CTA按鈕之一以導覽至其他頁面。
 
-   要按一下![CTA按鈕](assets/track-clicked-component/cta-button-to-click.png)
+   ![CTA按鈕以點選](assets/track-clicked-component/cta-button-to-click.png)
 
-1. 返回Experience Platform偵錯工具，向下捲動並展開&#x200B;**網路要求** > *您的報表套裝*。 您應該可以找到&#x200B;**eVar**、**prop**&#x200B;和&#x200B;**事件**&#x200B;集。
+1. 返回Experience Platform Debugger，向下捲動並展開&#x200B;**網路要求** > *您的報表套裝*。 您應該可以找到&#x200B;**eVar**、**prop**&#x200B;和&#x200B;**event**&#x200B;集合。
 
    ![點選時追蹤的Analytics事件、evar和prop](assets/track-clicked-component/evar-prop-link-clicked-tracked-debugger.png)
 
@@ -312,8 +312,8 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
 
    >[!NOTE]
    >
-   > 如果您沒有看到任何主控台記錄，請確定已在Experience Platform偵錯工具的&#x200B;**Experience Platform標籤**&#x200B;下檢查&#x200B;**主控台記錄**。
+   > 如果您沒有看到任何主控台記錄，請確定已在Experience Platform Debugger的&#x200B;**Experience Platform標籤**&#x200B;下檢查&#x200B;**主控台記錄**。
 
 ## 恭喜！
 
-您剛才在Experience Platform中使用事件導向的Adobe使用者端資料層和標籤來追蹤AEM網站上特定元件的點按次數。
+您剛才在Experience Platform中使用事件導向的Adobe Client Data Layer和Tag ，追蹤AEM網站上特定元件的點按次數。

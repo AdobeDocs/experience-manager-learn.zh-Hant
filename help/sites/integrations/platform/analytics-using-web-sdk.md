@@ -1,7 +1,7 @@
 ---
 title: 將AEM Sites和Adobe Analytics與Platform Web SDK整合
 description: 使用現代的Platform Web SDK方法整合AEM Sites和Adobe Analytics。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
 role: Admin, Architect, Data Architect, Developer
@@ -11,10 +11,10 @@ last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
-source-git-commit: 774267b4f4c65c79f185fa3b33383ce9ddd136cb
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 # 將AEM Sites和Adobe Analytics與Platform Web SDK整合
 
-瞭解&#x200B;**現代方法**，瞭解如何使用Platform Web SDK整合Adobe Experience Manager (AEM)和Adobe Analytics。 此全方位的教學課程會引導您完成順暢收集[WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)頁面檢視和CTA點按資料的程式。 透過在AdobeAnalysis Workspace中將收集的資料視覺化，在其中您可以探索各種量度和維度，以獲得有價值的見解。 此外，請探索Platform資料集以驗證及分析資料。 加入我們的歷程，利用AEM和Adobe Analytics的強大功能進行資料導向式決策。
+瞭解&#x200B;**現代方法**，瞭解如何使用Platform Web SDK整合Adobe Experience Manager (AEM)和Adobe Analytics。 此全方位的教學課程會引導您完成順暢收集[WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)頁面檢視和CTA點按資料的程式。 透過在Adobe Analysis Workspace中將收集的資料視覺化，在其中您可以探索各種量度和維度，以獲得有價值的見解。 此外，請探索Platform資料集以驗證及分析資料。 加入我們的歷程，利用AEM和Adobe Analytics的強大功能進行資料導向式決策。
 
 ## 概觀
 
@@ -36,13 +36,13 @@ ht-degree: 0%
 
 ## 先決條件
 
-使用Platform Web SDK整合Adobe Analytics時，需具備下列條件。
+使用Platform Web SDK整合Adobe Analytics時，需要下列專案。
 
-您已完成&#x200B;**[整合Experience PlatformWeb SDK](./web-sdk.md)**&#x200B;教學課程的設定步驟。
+您已完成&#x200B;**[整合Experience Platform Web SDK](./web-sdk.md)**&#x200B;教學課程的設定步驟。
 
-在&#x200B;**AEM中作為Cloud Service**：
+在&#x200B;**AEM as Cloud Service**&#x200B;中：
 
-+ [AEM管理員存取AEM as a Cloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=zh-Hant)
++ [AEM管理員對AEM as a Cloud Service環境的存取權](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=zh-Hant)
 + 部署管理員對Cloud Manager的存取權
 + 複製並部署[WKND — 範例Adobe Experience Manager專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)至您的AEM as a Cloud Service環境。
 
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 如果您沒有必要的許可權，使用[Adobe Admin Console](https://adminconsole.adobe.com/)的系統管理員可以授與必要的許可權。
 
-在探索使用Platform Web SDK的AEM與Analytics整合程式之前，我們&#x200B;_回顧在[整合Experience PlatformWeb SDK](./web-sdk.md)教學課程中建立的基本元件和關鍵元素_。 為整合提供堅實的基礎。
+使用Platform Web SDK來探討AEM與Analytics的整合程式之前，請&#x200B;_回顧在[整合Experience Platform Web SDK](./web-sdk.md)教學課程中建立的基本元件和關鍵元素_。 為整合提供堅實的基礎。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419873?quality=12&learn=on)
 
@@ -97,13 +97,13 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 ## 更新資料流 — 新增Analytics服務
 
-資料串流會指示PlatformEdge Network將收集到的資料傳送至何處。 在[先前的教學課程](./web-sdk.md)中，Datastream已設定為傳送資料給Experience Platform。 此資料流已更新，以將資料傳送至在[以上](#setup-analytics---report-suite-analysis-workspace)步驟中設定的Analytics報表套裝。
+資料串流會指示Platform Edge Network將收集到的資料傳送至何處。 在[先前的教學課程](./web-sdk.md)中，Datastream已設定為將資料傳送至Experience Platform。 此資料流已更新，以將資料傳送至在[以上](#setup-analytics---report-suite-analysis-workspace)步驟中設定的Analytics報表套裝。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419876?quality=12&learn=on)
 
 ## 建立XDM結構描述
 
-體驗資料模型(XDM)結構描述可協助您將收集的資料標準化。 在[先前的教學課程](./web-sdk.md)中，已建立具有`AEP Web SDK ExperienceEvent`欄位群組的XDM結構描述。 此外，使用此XDM結構描述會建立資料集，以將收集的資料儲存在Experience Platform中。
+體驗資料模型(XDM)結構描述可協助您將收集的資料標準化。 在[先前的教學課程](./web-sdk.md)中，已建立具有`AEP Web SDK ExperienceEvent`欄位群組的XDM結構描述。 此外，使用此XDM結構描述會建立資料集，將收集的資料儲存在Experience Platform中。
 
 但是，該XDM結構描述沒有Adobe Analytics特定的欄位群組來傳送eVar事件資料。 會建立新的XDM結構描述，而非更新現有結構描述，以避免將eVar事件資料儲存在平台中。
 
@@ -127,7 +127,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 >[!TIP]
 >
->影片中顯示的資料元素和規則事件程式碼可供您參考，**展開下列摺疊式功能表元素**。 不過，如果您未使用Adobe使用者端資料層，則必須修改下列程式碼，但定義資料元素並在規則定義中使用這些元素的概念仍適用。
+>影片中顯示的資料元素和規則事件程式碼可供您參考，**展開下列摺疊式功能表元素**。 不過，如果您未使用Adobe使用者端資料層，則必須修改下列程式碼，但仍適用定義資料元素及在規則定義中使用資料元素的概念。
 
 +++ 資料元素和規則事件程式碼
 
@@ -214,7 +214,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 +++
 
-如需整合AEM核心元件與Adobe使用者端資料層的詳細資訊，請參閱[搭配使用Adobe使用者端資料層與AEM核心元件指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)。
+如需整合AEM核心元件與Adobe Client Data Layer的詳細資訊，請參閱[搭配使用Adobe Client Data Layer與AEM核心元件指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)。
 
 
 >[!INFO]
@@ -225,11 +225,11 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 ## 驗證WKND上已更新的標籤屬性
 
-以確保在WKND網站頁面上建置、發佈和正確使用更新的標籤屬性。 使用Google Chrome網頁瀏覽器的[Adobe Experience Platform Debugger延伸功能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)：
+以確保在WKND網站頁面上建置、發佈和正確使用更新的標籤屬性。 使用Google Chrome網頁瀏覽器的[Adobe Experience Platform Debugger擴充功能](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)：
 
 + 若要確保標籤屬性是最新版本，請檢查建置日期。
 
-+ 若要驗證PageView和HomePage CTA的XDM事件資料，請按一下，使用擴充功能中的「Experience PlatformWeb SDK」功能表選項。
++ 若要驗證PageView和HomePage CTA的XDM事件資料，請按一下，使用擴充功能中的Experience Platform Web SDK功能表選項。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419883?quality=12&learn=on)
 
@@ -273,9 +273,9 @@ Analysis Workspace是Adobe Analytics中的強大工具，可讓您以靈活且�
 
 ## 其他資源
 
-+ [整合Experience PlatformWeb SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
++ [整合Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
 + [搭配核心元件使用Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
-+ [整合Experience Platform資料收集標籤與AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
-+ [Adobe Experience Platform Web SDK與Edge Network總覽](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
++ [整合Experience Platform資料收集標籤和AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
++ [Adobe Experience Platform Web SDK和Edge Network概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [資料彙集教學課程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

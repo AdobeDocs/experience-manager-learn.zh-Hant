@@ -1,7 +1,7 @@
 ---
 title: 瞭解AEM中的Sling模型匯出工具
 description: Apache Sling Model 1.3.0引入了Sling模型匯出工具，這是一種將Sling模型物件匯出或序列化為自訂抽象的簡潔方式。 本文會比較使用Sling模型填入HTL指令碼的傳統使用案例，利用Sling模型匯出工具框架將Sling模型序列化為JSON。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
 doc-type: Article
@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 exl-id: 03cdf5d1-3253-44c9-ae1f-ec5d3c562427
 duration: 133
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 0%
@@ -31,9 +31,9 @@ Apache [!DNL Sling Models] 1.3.0引入了[!DNL Sling Model Exporter]，這是一
 
 ![Sling模型要求流程](./assets/understand-sling-model-exporter/sling-model-request-flow.png)
 
-1. 在AEM中對資源發出[!DNL HTTP GET]個要求。
+1. 在AEM中提出對資源的[!DNL HTTP GET]要求。
 
-   範例： `HTTP GET /content/my-resource.html`
+   範例：`HTTP GET /content/my-resource.html`
 
 1. 根據要求資源的`sling:resourceType`，已解析適當的指令碼。
 
@@ -55,9 +55,9 @@ Apache [!DNL Sling Model Exporter]附帶Sling提供的Jackson Exporter，可自�
 
 *此流程說明使用提供的Jackson Exporter產生JSON輸出的流程。 自訂匯出工具的使用遵循相同的流程，但採用其輸出格式。*
 
-1. 在AEM中針對資源發出HTTPGET要求，選取器和擴充功能已向[!DNL Sling Model]的匯出工具註冊。
+1. 已針對AEM中的資源提出HTTP GET要求，選取器和擴充功能已向[!DNL Sling Model]的匯出工具註冊。
 
-   範例： `HTTP GET /content/my-resource.model.json`
+   範例：`HTTP GET /content/my-resource.model.json`
 
 1. Sling將請求資源的`sling:resourceType`、選擇器和擴充功能解析為動態產生的Sling匯出程式Servlet，該程式對應到具有匯出程式的[!DNL Sling Model]。
 1. 已解析的Sling匯出工具Servlet會針對從請求或資源改寫的[!DNL Sling Model]物件叫用[!DNL Sling Model Exporter] （由Sling模型改寫決定）。

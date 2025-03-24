@@ -2,14 +2,14 @@
 title: 透過AEM Sites瞭解樣式系統最佳實務
 description: 說明透過Adobe Experience Manager Sites實作樣式系統的最佳實務的詳細文章。
 feature: Style System
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate, Experienced
 doc-type: Article
 exl-id: c51da742-5ce7-499a-83da-227a25fb78c9
 duration: 328
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 >
 >請檢閱位於[的內容瞭解如何為樣式系統](style-system-technical-video-understand.md)編碼，以確保瞭解AEM樣式系統使用的類似BEM的慣例。
 
-針對「AEM樣式系統」實作有兩種主要風格或樣式：
+針對AEM樣式系統實作有兩種主要風格或樣式：
 
 * **配置樣式**
 * **顯示樣式**
@@ -41,7 +41,7 @@ ht-degree: 0%
 * 僅公開具有效果的樣式組合
    * 如果暴露無效組合，請確定它們至少不會產生不良影響
 
-隨著AEM作者可用的可能樣式組合數量增加，存在更多必須通過QA驗證且符合品牌標準之排列組合。 太多選項也會讓作者感到困惑，因為不知道需要哪個選項或組合才能產生想要的效果。
+隨著AEM作者可用的可能樣式組合數量增加，存在更多必須通過QA及品牌標準驗證的排列。 太多選項也會讓作者感到困惑，因為不知道需要哪個選項或組合才能產生想要的效果。
 
 ### 樣式名稱與CSS類別的比較 {#style-names-vs-css-classes}
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 元件必須具備選項，才能使用品牌的&#x200B;**主要**&#x200B;和&#x200B;**次要**&#x200B;色彩來著色，但是AEM作者知道色彩為&#x200B;**綠色**&#x200B;和&#x200B;**黃色**，而不是主要和次要的設計語言。
 
-AEM樣式系統可以使用作者友善的標籤&#x200B;**綠色**&#x200B;和&#x200B;**黃色**&#x200B;來公開這些色彩顯示樣式，同時允許CSS開發人員使用`.cmp-component--primary-color`和`.cmp-component--secondary-color`的語意命名來定義CSS中的實際樣式實作。
+AEM樣式系統可使用作者友善的標籤&#x200B;**綠色**&#x200B;和&#x200B;**黃色**&#x200B;來公開這些色彩顯示樣式，同時允許CSS開發人員使用`.cmp-component--primary-color`和`.cmp-component--secondary-color`的語意命名來定義CSS中的實際樣式實作。
 
 **綠色**&#x200B;的樣式名稱對應至`.cmp-component--primary-color`，黃色&#x200B;**對應至`.cmp-component--secondary-color`。**
 
@@ -117,7 +117,7 @@ AEM樣式系統可以使用作者友善的標籤&#x200B;**綠色**&#x200B;和&#x
 
 **促銷版面配置樣式**&#x200B;是用來促銷網站上的高價值內容，並且是水準配置以佔用網頁的空間，而且必須能夠依據品牌顏色來配置樣式，預設的促銷版面配置樣式使用黑色文字。
 
-為此，已在Teaser元件的AEM樣式系統中設定&#x200B;**促銷**&#x200B;的&#x200B;**配置樣式**&#x200B;以及&#x200B;**綠色**&#x200B;和&#x200B;**黃色**&#x200B;的&#x200B;**顯示樣式**。
+為此，已在AEM樣式系統中為Teaser元件設定&#x200B;**促銷**&#x200B;的&#x200B;**配置樣式**&#x200B;以及&#x200B;**綠色**&#x200B;和&#x200B;**黃色**&#x200B;的&#x200B;**顯示樣式**。
 
 #### 促銷預設
 
@@ -158,7 +158,7 @@ AEM樣式系統可以使用作者友善的標籤&#x200B;**綠色**&#x200B;和&#x
 
 **促銷右對齊**&#x200B;版面配置樣式是「促銷」樣式的變異，這種樣式會顛倒影像與文字（影像在右方，文字在左方）的位置。
 
-右對齊方式的核心是顯示樣式，可以將其輸入到「AEM樣式系統」中作為顯示樣式，該顯示樣式與「促銷」配置樣式一起選取。 這違反了以下最佳實務：
+右對齊方式的核心是顯示樣式，您可以將它作為顯示樣式輸入到AEM樣式系統中，此顯示樣式與「促銷」配置樣式一起選取。 這違反了以下最佳實務：
 
 **僅公開具有效果的樣式組合**
 

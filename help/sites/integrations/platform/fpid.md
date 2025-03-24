@@ -1,7 +1,7 @@
 ---
 title: 使用AEM Sites產生Adobe Experience Platform FPID
 description: 瞭解如何使用AEM Sites產生或重新整理Adobe Experience Platform FPID Cookie。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Integrations, APIs, Dispatcher
 topic: Integrations, Personalization, Development
 role: Developer
@@ -10,31 +10,31 @@ last-substantial-update: 2024-10-09T00:00:00Z
 jira: KT-11336
 thumbnail: kt-11336.jpeg
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
 duration: 266
-source-git-commit: 241c56d34c851cf9bac553cb9fc545a835e495d2
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 0%
 
 ---
 
-# 使用AEM Sites產生Experience PlatformFPID
+# 使用AEM Sites產生Experience Platform FPID
 
-將透過AEM Publish傳送的Adobe Experience Manager (AEM)網站與Adobe Experience Platform (AEP)整合需要AEM產生和維護唯一的第一方裝置ID (FPID) Cookie，以唯一追蹤使用者活動。
+將透過AEM Publish提供的Adobe Experience Manager (AEM)網站與Adobe Experience Platform (AEP)整合需要AEM產生和維護唯一的第一方裝置ID (FPID) Cookie，以專門追蹤使用者活動。
 
 FPID Cookie應由伺服器(AEM Publish)設定，而非使用JavaScript來建立使用者端Cookie。 這是因為現代化瀏覽器（例如Safari和Firefox）可能會封鎖由JavaScript產生的Cookie或使其快速過期。
 
-閱讀支援檔案，以便[瞭解第一部分裝置ID和Experience CloudID如何搭配運作的詳細資訊](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=en)。
+閱讀支援檔案，以便[瞭解第一部分裝置ID和Experience Cloud ID如何搭配運作的詳細資訊](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=en)。
 
 以下是使用AEM做為Web主機時，FPID的運作方式概觀。
 
-使用AEM](./assets/aem-platform-fpid-architecture.png)的![FPID與ECID
+使用AEM的![FPID與ECID](./assets/aem-platform-fpid-architecture.png)
 
 ## 使用AEM產生並保留FPID
 
-AEM Publish服務會儘可能在CDN和AEM Dispatcher快取中快取要求，以最佳化效能。
+AEM Publish服務會透過快取要求(儘可能在CDN和AEM Dispatcher快取中)來最佳化效能。
 
 絕不會快取產生每位使用者不重複FPID Cookie並傳回FPID值的HTTP請求並直接從AEM Publish （可實作邏輯以確保唯一性）提供服務，這點至關重要。
 
@@ -44,23 +44,23 @@ AEM Publish服務會儘可能在CDN和AEM Dispatcher快取中快取要求，以�
 
 ![FPID與AEM流程圖](./assets/aem-fpid-flow.png)
 
-1. 網頁瀏覽器會要求使用AEM託管的網頁。 CDN或AEM Dispatcher快取的網頁快取復本可為請求提供服務。
+1. 網頁瀏覽器會要求AEM代管的網頁。 CDN或AEM Dispatcher快取的網頁快取復本可為請求提供服務。
 1. 如果網頁無法從CDN或AEM Dispatcher快取提供服務，要求會送達AEM Publish服務，該服務會產生要求的網頁。
-1. 接著，網頁會傳回至網頁瀏覽器，並填入無法處理請求的快取。 使用AEM時，CDN和AEM Dispatcher快取命中率會高於90%。
-1. 此網頁包含的JavaScript會對AEM Publish服務中的自訂FPID servlet發出無法快取的非同步XHR (AJAX)請求。 由於這是無法快取的請求（因其隨機查詢引數和快取控制標頭），CDN或AEM Dispatcher永遠不會快取它，且一律會送達AEM Publish服務以產生回應。
-1. AEM Publish服務中的自訂FPID servlet會處理要求、在沒有找到現有FPID Cookie時產生新的FPID，或延長任何現有FPID Cookie的生命週期。 此servlet也會傳回回應本文中的FPID，以供使用者端JavaScript使用。 幸運的是，自訂FPID servlet邏輯是輕量級的，防止此請求影響AEM Publish服務效能。
+1. 接著，網頁會傳回至網頁瀏覽器，並填入無法處理請求的快取。 使用AEM時，CDN和AEM Dispatcher快取命中率預計會高於90%。
+1. 此網頁包含的JavaScript會對AEM Publish服務中的自訂FPID servlet發出無法快取的非同步XHR (AJAX)請求。 由於這是無法快取的請求（因其隨機查詢引數和快取控制標頭），CDN或AEM Dispatcher絕不會快取它，而是一律會送達AEM Publish服務以產生回應。
+1. AEM Publish服務中的自訂FPID servlet會處理要求、在沒有找到現有FPID Cookie時產生新的FPID，或延長任何現有FPID Cookie的生命週期。 此servlet也會傳回回應本文中的FPID，以供使用者端JavaScript使用。 幸運的是，自訂FPID servlet邏輯是輕量級的，防止此請求影響AEM發佈服務效能。
 1. XHR要求的回應會傳回給瀏覽器，並在回應本文中以JSON格式顯示FPID Cookie，以供Platform Web SDK使用。
 
 ## 程式碼範例
 
 下列程式碼和設定可部署至AEM Publish服務，以建立端點，產生或延長現有FPID Cookie的生命週期，並將FPID傳回JSON。
 
-### AEM Publish FPID Cookie servlet
+### AEM發佈FPID Cookie servlet
 
-必須使用[Sling servlet](https://sling.apache.org/documentation/the-sling-engine/servlets.html#registering-a-servlet-using-java-annotations-1)建立AEM Publish HTTP端點，以產生或擴充FPID Cookie。
+必須使用[Sling servlet](https://sling.apache.org/documentation/the-sling-engine/servlets.html#registering-a-servlet-using-java-annotations-1)建立AEM發佈HTTP端點，以產生或擴充FPID Cookie。
 
 + 此servlet已繫結至`/bin/aem/fpid`，因為存取它不需要驗證。 如果需要驗證，則繫結到Sling資源型別。
-+ 此servlet接受HTTPGET要求。 回應標示為`Cache-Control: no-store`以防止快取，但應使用唯一的防快取查詢引數來要求此端點。
++ 此servlet接受HTTP GET請求。 回應標示為`Cache-Control: no-store`以防止快取，但應使用唯一的防快取查詢引數來要求此端點。
 
 當HTTP請求到達servlet時，此servlet會檢查請求上是否存在FPID Cookie：
 
@@ -73,7 +73,7 @@ AEM Publish服務會儘可能在CDN和AEM Dispatcher快取中快取要求，以�
 
 FPID值可用來引數化Platform Web SDK的呼叫。
 
-以下是AEM servlet端點的範常式式碼（可透過`HTTP GET /bin/aep/fpid`取得），其會產生或重新整理FPID Cookie，並傳回FPID為JSON。
+以下是AEM servlet端點的範常式式碼（可透過`HTTP GET /bin/aep/fpid`使用），其會產生或重新整理FPID Cookie，並傳回FPID為JSON。
 
 + `core/src/main/java/com/adobe/aem/guides/wkndexamples/core/aep/impl/FpidServlet.java`
 
@@ -164,17 +164,17 @@ public class FpidServlet extends SlingAllMethodsServlet {
 此JavaScript指令碼通常使用下列其中一種方法新增至頁面：
 
 + Adobe Experience Platform中的[標籤](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [AEM使用者端資料庫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs.html?lang=en)
++ [AEM使用者端資源庫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs.html?lang=en)
 
 對自訂AEM FPID servlet的XHR呼叫雖然非同步，但速度很快，因此使用者可以造訪AEM提供的網頁，並在完成請求之前導覽離開。
 如果發生這種情形，相同的程式會在從AEM載入網頁的下一個頁面時重新嘗試。
 
-AEM FPID servlet (`/bin/aep/fpid`)的HTTPGET會使用隨機查詢引數加以引數化，以確保瀏覽器與AEM Publish服務之間的任何基礎結構都不會快取要求的回應。
+AEM FPID servlet (`/bin/aep/fpid`)的HTTP GET已使用隨機查詢引數加以引數化，以確保瀏覽器與AEM發佈服務之間的任何基礎結構都不會快取要求的回應。
 同樣地，已新增`Cache-Control: no-store`要求標頭以支援避免快取。
 
-在叫用AEM FPID servlet時，會從JSON回應擷取FPID，並由[Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en)用來將其傳送至Experience Platform API。
+叫用AEM FPID servlet時，FPID會從JSON回應中擷取，並由[Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en)用來傳送給Experience Platform API。
 
-請參閱Experience Platform檔案以取得有關在identityMap](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap)中使用FPID的[的詳細資訊
+請參閱Experience Platform檔案以取得在identityMap](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap)中使用FPID之[的詳細資訊
 
 ```javascript
 ...
@@ -225,9 +225,9 @@ AEM FPID servlet (`/bin/aep/fpid`)的HTTPGET會使用隨機查詢引數加以引
 
 ### Dispatcher允許篩選器
 
-最後，必須透過AEM Dispatcher的`filter.any`設定來允許對自訂FPID servlet的HTTPGET要求。
+最後，必須透過AEM Dispatcher的`filter.any`設定，允許對自訂FPID servlet的HTTP GET要求。
 
-如果此Dispatcher設定未正確實作，對`/bin/aep/fpid`的HTTPGET請求會導致404。
+如果此Dispatcher設定未正確實作，對`/bin/aep/fpid`發出的HTTP GET請求會導致404錯誤。
 
 + `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
@@ -237,7 +237,7 @@ AEM FPID servlet (`/bin/aep/fpid`)的HTTPGET會使用隨機查詢引數加以引
 
 ## Experience Platform資源
 
-檢閱下列有關第一方裝置ID (FPID)和使用Platform Web SDK管理身分資料的Experience Platform檔案。
+檢閱下列Experience Platform檔案，瞭解第一方裝置ID (FPID)並透過Platform Web SDK管理身分資料。
 
 + [產生第一方裝置識別碼](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html)
 + Platform Web SDK中的[第一方裝置識別碼](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html)

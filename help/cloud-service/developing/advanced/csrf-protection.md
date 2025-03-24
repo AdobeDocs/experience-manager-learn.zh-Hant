@@ -1,7 +1,7 @@
 ---
 title: CSRF保護
-description: 瞭解如何為已驗證身分的使用者產生並新增AEM CSRF權杖至允許的POST、PUT和刪除請求給AEM。
-version: Cloud Service
+description: 瞭解如何為已驗證身分的使用者產生並新增AEM CSRF權杖至允許的POST、PUT和AEM刪除請求。
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-13651
 thumbnail: KT-13651.jpeg
 exl-id: 747322ed-f01a-48ba-a4a0-483b81f1e904
 duration: 125
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -21,25 +21,25 @@ ht-degree: 0%
 
 # CSRF保護
 
-瞭解如何為已驗證身分的使用者產生並新增AEM CSRF權杖至允許的POST、PUT和刪除請求給AEM。
+瞭解如何為已驗證身分的使用者產生並新增AEM CSRF權杖至允許的POST、PUT和AEM刪除請求。
 
-AEM需要有效的CSRF權杖才能傳送給&#x200B;__已驗證__ __POST__、__PUT或&#x200B;__DELETE__ HTTP要求給AEM Author和Publish服務。
+AEM需要有效的CSRF權杖才能傳送給&#x200B;__已驗證的__ __POST__、__PUT或&#x200B;__DELETE__ HTTP要求給AEM製作和發佈服務。
 
 __GET__&#x200B;要求或&#x200B;__匿名__&#x200B;要求不需要CSRF權杖。
 
-如果CSRF權杖未隨POST、PUT或DELETE請求傳送，AEM會傳回403禁止回應，並且AEM會記錄以下錯誤：
+如果CSRF代號未隨POST、PUT或DELETE請求傳送，AEM會傳回403禁止回應，而AEM會記錄下列錯誤：
 
 ```log
 [INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] isValidRequest: empty CSRF token - rejecting
 [INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] doFilter: the provided CSRF token is invalid
 ```
 
-請參閱[檔案以取得有關AEM CSRF保護](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html)的詳細資料。
+請參閱[檔案以取得有關AEM的CSRF保護](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html)的詳細資料。
 
 
 ## CSRF使用者端資源庫
 
-AEM提供使用者端程式庫，可用來產生和新增CSRF Token XHR，並透過修補核心原型功能表單POST請求。 功能是由`granite.csrf.standalone`使用者端程式庫類別所提供。
+AEM提供使用者端程式庫，可用來產生和新增CSRF Token XHR，並透過修補核心原型功能形成POST請求。 功能是由`granite.csrf.standalone`使用者端程式庫類別所提供。
 
 若要使用此方法，請新增`granite.csrf.standalone`作為相依性，以載入您的頁面上的使用者端程式庫。 例如，如果您使用`wknd.site`使用者端程式庫類別，請新增`granite.csrf.standalone`做為頁面上載入的使用者端程式庫的相依性。
 
@@ -102,7 +102,7 @@ await fetch('/path/to/aem/endpoint', {
 
 ## Dispatcher設定
 
-在AEM Publish服務上使用CSRF權杖時，必須更新Dispatcher設定以允許對CSRF權杖端點提出GET請求。 以下設定允許向AEM Publish服務上的CSRF權杖端點發出GET請求。 如果未新增此設定，CSRF權杖端點會傳回404 Not Found回應。
+在AEM Publish服務上使用CSRF權杖時，必須更新Dispatcher設定以允許GET請求到CSRF權杖端點。 以下設定允許對AEM Publish服務上的CSRF Token端點發出GET請求。 如果未新增此設定，CSRF權杖端點會傳回404 Not Found回應。
 
 * `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 

@@ -1,8 +1,8 @@
 ---
 title: 搭配使用樣式系統與AEM Sites
-description: Adobe Experience Manager的樣式系統可提供元件的視覺化變化，無需後端開發，讓您更妥善地重複使用AEM元件，且內容製作更為多樣化與有效率。 樣式系統與AEM的核心元件、範本編輯器和回應式版面搭配使用時，提供強大的功能以快速撰寫豐富的體驗。
+description: Adobe Experience Manager的樣式系統可提供元件的視覺化變化，無需後端開發，讓您更妥善地重複使用AEM元件，且內容製作更為多樣化且更有效率。 樣式系統與AEM的核心元件、範本編輯器和回應式版面搭配使用時，提供強大的功能以快速撰寫豐富的體驗。
 feature: Style System
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-974
 thumbnail: 21750.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
 duration: 220
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 {{edge-delivery-services-and-page-editor}}
 
-Adobe Experience Manager的樣式系統可提供元件的視覺化變化，無需後端開發，讓您更妥善地重複使用AEM元件，且內容製作更為多樣化與有效率。 樣式系統與AEM核心元件、範本編輯器和回應式版面搭配使用時，提供強大的功能以快速撰寫豐富的體驗。
+Adobe Experience Manager的樣式系統可提供元件的視覺化變化，無需後端開發，讓您更妥善地重複使用AEM元件，且內容製作更為多樣化且更有效率。 樣式系統與AEM核心元件、範本編輯器和回應式版面搭配使用時，提供強大的功能以快速撰寫豐富的體驗。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21750?quality=12&learn=on)
 

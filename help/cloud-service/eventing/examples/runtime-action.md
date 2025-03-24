@@ -1,7 +1,7 @@
 ---
-title: Adobe I/O Runtime動作與AEM事件
+title: Adobe I/O Runtime動作和AEM事件
 description: 瞭解如何使用Adobe I/O Runtime動作接收AEM事件，並檢閱事件詳細資訊，例如裝載、標題和中繼資料。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,20 +12,20 @@ last-substantial-update: 2024-01-29T00:00:00Z
 jira: KT-14878
 thumbnail: KT-14878.jpeg
 exl-id: b1c127a8-24e7-4521-b535-60589a1391bf
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
 
 ---
 
-# Adobe I/O Runtime動作與AEM事件
+# Adobe I/O Runtime動作和AEM事件
 
 瞭解如何使用[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)動作接收AEM事件，並檢閱事件詳細資料，例如裝載、標頭和中繼資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427053?quality=12&learn=on)
 
-Adobe I/O Runtime是無伺服器平台，可讓程式碼執行以回應Adobe I/O事件。 因此可協助您建立事件驅動的應用程式，而不需擔心基礎建設問題。
+Adobe I/O Runtime是無伺服器平台，可讓程式碼執行以回應Adobe I/O Events。 因此可協助您建立事件驅動的應用程式，而不需擔心基礎建設問題。
 
 在此範例中，您會建立接收AEM事件並記錄事件詳細資料的Adobe I/O Runtime [動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)。
 https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
@@ -154,7 +154,7 @@ https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 
 ## 觸發AEM事件
 
-若要從已在上述AEM as a Cloud Service專案中註冊的Adobe Developer Console環境觸發AEM事件，請遵循下列步驟：
+若要從已在上述AEM專案中註冊的AEM as a Cloud Service環境觸發Adobe Developer Console事件，請遵循下列步驟：
 
 - 透過[Cloud Manager](https://my.cloudmanager.adobe.com/)存取並登入您的AEM as a Cloud Service作者環境。
 
@@ -166,9 +166,9 @@ https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 
 您可以在事件登入詳細資訊的&#x200B;**偵錯追蹤**&#x200B;標籤中檢閱事件詳細資訊。
 
-![AEM事件詳細資料](../assets/examples/runtime-action/aem-event-details.png)
+![AEM活動詳細資料](../assets/examples/runtime-action/aem-event-details.png)
 
 
 ## 後續步驟
 
-在下個範例中，我們將增強此動作以處理AEM事件、回撥AEM作者服務以取得內容詳細資料、將詳細資料儲存在Adobe I/O Runtime儲存體中，並透過單頁應用程式(SPA)顯示它們。
+在下個範例中，我們將增強此動作以處理AEM事件、回撥AEM作者服務以取得內容詳細資料、在Adobe I/O Runtime儲存空間中儲存詳細資料，並透過單頁應用程式(SPA)顯示它們。

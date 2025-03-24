@@ -5,14 +5,14 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
 thumbnail: 331891.jpg
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16418
 exl-id: 20e44be0-5490-4414-9183-bb2d2a80bdf0
-source-git-commit: faa859897b6b9fbb0acff02000611de216ddda3e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## 先決條件
 
-若要閱讀本文，您需要熟悉Git、使用Cloud Manager建立和部署AEM專案、在AEM Cloud Manager中設定前端管道，以及少量CSS。 如果您不熟悉上述主題，請遵循[使用主題來設定核心元件樣式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components#rename-env-file-theme-folder)文章。
+若要閱讀本文章，您需要熟悉Git、使用Cloud Manager建立和部署AEM專案、在AEM Cloud Manager中設定前端管道，以及少量CSS。 如果您不熟悉上述主題，請遵循[使用主題來設定核心元件樣式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components#rename-env-file-theme-folder)文章。
 
 ## 在主題中新增圖示
 

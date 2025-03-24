@@ -1,7 +1,7 @@
 ---
 title: AEM Dispatcher排清
 description: 瞭解AEM如何讓Dispatcher的舊快取檔案失效。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 461873a1-1edf-43a3-b4a3-14134f855d86
 duration: 520
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 0%
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ### Dispatcher FLUSH復寫接收虛擬主機
 
-Dispatcher模組會尋找特定標頭，以瞭解POST請求何時可以傳遞給AEM轉譯器，或者該請求是否已序列化為排清請求，且需要由Dispatcher處理常式本身處理。
+Dispatcher模組會尋找特定標頭，以瞭解POST請求何時可以傳遞給AEM轉譯，或該請求是否已序列化為排清請求，且須由Dispatcher處理常式本身處理。
 
 以下是顯示這些值的設定頁面熒幕擷圖：
 主要組態畫面設定索引標籤的![圖片，序列化型別顯示為Dispatcher Flush](assets/disp-flushing/disp-flush-agent1.png "disp-flush-agent1")
@@ -69,15 +69,15 @@ Dispatcher模組會尋找特定標頭，以瞭解POST請求何時可以傳遞給
 
 在`Transport`索引標籤上，您可以看到將`URI`設定為指向將接收排清請求的Dispatcher的IP位址。  路徑`/dispatcher/invalidate.cache`不是模組判斷其是否為排清的方式，它只是您可以在存取記錄檔中看到的明顯端點，用來知道其為排清請求。  在`Extended`標籤上，我們將瀏覽現有的專案，以確認其為Dispatcher模組的排清請求。
 
-![復寫代理程式Extended索引標籤的熒幕擷圖。  請注意，隨傳送的POST請求傳送的標頭會告訴Dispatcher排清](assets/disp-flushing/disp-flush-agent3.png "disp-flush-agent3")
+![復寫代理程式Extended索引標籤的熒幕擷圖。  請注意，隨著傳送的POST要求傳送以通知Dispatcher排清](assets/disp-flushing/disp-flush-agent3.png "disp-flush-agent3")的標頭
 
 排清要求的`HTTP Method`只是具有某些特殊要求標題的`GET`要求：
 - CQ-Action
-   - 這會根據要求使用AEM變數，其值通常為&#x200B;*啟動或刪除*
+   - 這會根據請求使用AEM變數，其值通常為&#x200B;*啟動或刪除*
 - CQ-Handle
-   - 這會根據要求使用AEM變數，其值通常是已清除專案的完整路徑，例如`/content/dam/logo.jpg`
+   - 這會根據請求使用AEM變數，其值通常是已清除專案的完整路徑，例如`/content/dam/logo.jpg`
 - CQ-Path
-   - 這會根據要求使用AEM變數，其值通常是要清除之專案的完整路徑，例如`/content/dam`
+   - 這會根據請求使用AEM變數，其值通常是要清除之專案的完整路徑，例如`/content/dam`
 - 主機
    - 這是詐騙`Host`標頭以鎖定在Dispatcher Apache網頁伺服器(`/etc/httpd/conf.d/enabled_vhosts/aem_flush.vhost`)上設定之特定`VirtualHost`的位置。  這是硬式編碼值，符合`aem_flush.vhost`檔案`ServerName`或`ServerAlias`中的專案
 
@@ -150,7 +150,7 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 當對內容的請求進入相同的常式時
 
 1. 會比較`.stat`檔案的時間戳記與要求的檔案時間戳記
-2. 如果`.stat`檔案比要求的檔案新，它會刪除快取的內容，並從AEM擷取新的內容，然後快取該內容。  然後提供內容
+2. 如果`.stat`檔案比要求的檔案新，則會刪除快取的內容並從AEM擷取新內容，然後快取該內容。  然後提供內容
 3. 如果`.stat`檔案比要求的檔案舊，它就會知道檔案是新的，可以提供內容。
 
 ### 快取交握 — 範例1
@@ -171,7 +171,7 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 最近的`.stat`檔案時間為2019-11-01 @ 12:22PM
 
-如本範例所示，此檔案比`.stat`檔案舊，將會被移除並從AEM中拉取新的檔案，以便在提供給提出請求的一般使用者之前，在快取中取代它。
+如本範例所示，此檔案比`.stat`檔案舊，系統將會移除該檔案，並從AEM提取新的檔案來取代快取中的檔案，然後再提供給提出請求的一般使用者。
 
 ## 伺服器陣列檔案設定
 

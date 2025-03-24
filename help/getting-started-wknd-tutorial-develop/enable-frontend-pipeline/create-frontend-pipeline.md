@@ -1,7 +1,7 @@
 ---
 title: 使用前端管道進行部署
 description: 瞭解如何建立和執行可建置前端資源並部署到AEM as a Cloud Service中內建CDN的前端管道。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
 duration: 225
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # 使用前端管道進行部署
 
-在本章中，我們會在AdobeCloud Manager中建立和執行前端管道。 它只會從`ui.frontend`模組建置檔案，並將其部署至AEM as a Cloud Service中的內建CDN。 因此將遠離以`/etc.clientlibs`為基礎的前端資源傳遞。
+在本章中，我們會在Adobe Cloud Manager中建立和執行前端管道。 它只會從`ui.frontend`模組建置檔案，並將其部署至AEM as a Cloud Service中的內建CDN。 因此將遠離以`/etc.clientlibs`為基礎的前端資源傳遞。
 
 
 ## 目標 {#objectives}
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ## 部署順序
 
-* 首先執行新重新命名的&#x200B;__FullStack WKND Deploy to Dev__&#x200B;管道，以從AEM存放庫中移除WKND clientlib檔案。 而且最重要的是透過新增&#x200B;__Sling設定__&#x200B;檔案(`SiteConfig`， `HtmlPageItemsConfig`)為前端管道合約準備AEM。
+* 首先執行新重新命名的&#x200B;__FullStack WKND Deploy to Dev__&#x200B;管道，以從AEM存放庫中移除WKND clientlib檔案。 而且最重要的是透過新增&#x200B;__Sling設定__&#x200B;檔案(`SiteConfig`， `HtmlPageItemsConfig`)，為前端管道合約準備AEM。
 
 ![未設定樣式的WKND網站](assets/unstyled-wknd-site.png)
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ## 驗證樣式變更和新傳遞正規化
 
-* 開啟WKND網站的任何頁面，您會看到文字顏色為&#x200B;__Adobe紅色__，而前端資源(CSS、JS)檔案是從CDN傳遞。 資源要求主機名稱以`https://static-pXX-eYY.p123-e456.adobeaemcloud.com/$HASH_VALUE$/theme/site.css`開頭，同樣以`HtmlPageItemsConfig`檔案中參考的site.js或任何其他靜態資源開頭。
+* 開啟WKND網站的任何頁面，您就可以看到文字顏色&#x200B;__Adobe Red__，以及從CDN傳送的前端資源(CSS、JS)檔案。 資源要求主機名稱以`https://static-pXX-eYY.p123-e456.adobeaemcloud.com/$HASH_VALUE$/theme/site.css`開頭，同樣以`HtmlPageItemsConfig`檔案中參考的site.js或任何其他靜態資源開頭。
 
 
 ![新樣式的WKND網站](assets/newly-styled-wknd-site.png)

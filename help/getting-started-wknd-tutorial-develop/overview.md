@@ -1,7 +1,7 @@
 ---
 title: 開始使用AEM Sites - WKND教學課程
-description: 瞭解如何為名為WKND的虛構生活風格品牌實作AEM網站。 取得基本Experience Manager主題的逐步解說，例如專案設定、maven原型、核心元件、可編輯的範本、使用者端資料庫和元件開發。
-version: Cloud Service
+description: 瞭解如何為名為WKND的虛構生活風格品牌實施AEM網站。 取得基本Experience Manager主題的逐步解說，例如專案設定、maven原型、核心元件、可編輯的範本、使用者端程式庫和元件開發。
+version: Experience Manager as a Cloud Service
 jira: KT-13565
 mini-toc-levels: 1
 index: y
@@ -13,7 +13,7 @@ level: Beginner
 doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 5%
@@ -28,7 +28,7 @@ ht-degree: 5%
 
 ## 概觀 {#wknd-tutorial-overview}
 
-此多部分教學課程的目標是教導開發人員如何使用Adobe Experience Manager (AEM)中的最新標準和技術來實作網站。 完成本教學課程後，開發人員應瞭解平台的基本基礎和AEM中的常見設計模式。
+此多部分教學課程的目標是教導開發人員如何使用Adobe Experience Manager (AEM)中的最新標準和技術來實作網站。 完成本教學課程後，開發人員應瞭解AEM平台的基本基礎和常見設計模式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
@@ -36,17 +36,17 @@ ht-degree: 5%
 
 啟動AEM Sites專案有兩種基本方法。
 
-**AEM專案原型** — 使用Maven範本產生最小AEM專案的傳統開發AEM方法。 這是針對AEM 6.5/6.4專案和AEM as a Cloud Service專案建議的方法，可預期大量自訂。 此教學課程提供對AEM開發的更深入探討。
+**AEM專案原型** — 使用Maven範本產生最小AEM專案的傳統開發AEM方法。 這是針對AEM 6.5/6.4專案和AEM as a Cloud Service專案建議的方法，可預期大量自訂。 本教學課程提供對AEM開發的更深入探討。
 
-[以AEM專案原型開始教學課程](./project-archetype/overview.md)
+[開始使用AEM專案原型的教學課程](./project-archetype/overview.md)
 
-**AEM網站範本** — 也稱為「快速網站建立」，這是使用預先定義的網站範本產生AEM網站的低程式碼方法。 使用現成可用的元件和範本，讓網站快速上線運作。 使用主題化工作流程，僅以CSS和JavaScript套用品牌特定樣式和自訂。 建議新專案和開發人員使用。 僅適用於AEM as a Cloud Service。
+**AEM網站範本** — 也稱為「快速網站建立」，這是一種使用預先定義的網站範本產生AEM網站的低程式碼方法。 使用現成可用的元件和範本，讓網站快速上線運作。 使用主題化工作流程，僅以CSS和JavaScript套用品牌特定樣式和自訂。 建議新專案和開發人員使用。 僅適用於AEM as a Cloud Service。
 
 [使用網站範本開始教學課程](./site-template/create-site.md)
 
 ## Adobe XD UI套件
 
-為了讓本教學課程更接近真實案例Adobe的天才UX設計人員使用[Adobe XD](https://www.adobe.com/products/xd.html)建立網站模型。 在教學課程中，各種設計片段皆實施至可完整撰寫的AEM網站。 特別感謝&#x200B;**Lorenzo Buosi**&#x200B;和&#x200B;**Kilian Amendola**&#x200B;為WKND網站創造美觀的設計。
+為了讓本教學課程更接近真實世界的情境，Adobe才華橫溢的UX設計人員使用[Adobe XD](https://www.adobe.com/products/xd.html)為網站建立模型。 在教學課程中，各種設計片段皆實施至可完整撰寫的AEM網站。 特別感謝&#x200B;**Lorenzo Buosi**&#x200B;和&#x200B;**Kilian Amendola**&#x200B;為WKND網站創造美觀的設計。
 
 下載XD UI套件：
 
@@ -69,4 +69,4 @@ WKND參考網站中的許多影像來自[Adobe Stock](https://stock.adobe.com/)�
 
 ## 後續步驟 {#next-steps}
 
-您還在等什麼?!瞭解如何[使用AEM專案原型](./project-archetype/overview.md)產生新的Adobe Experience Manager專案，或[使用網站範本](./site-template/create-site.md)建立網站。
+您還在等什麼?!瞭解如何[使用Adobe Experience Manager專案原型](./project-archetype/overview.md)產生新的AEM專案，或[使用網站範本](./site-template/create-site.md)建立網站。

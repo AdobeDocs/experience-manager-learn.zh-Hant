@@ -3,14 +3,14 @@ title: 使用Sightly範本顯示收件匣資料
 description: 新增自訂欄以顯示使用Sightly範本的工作流程其他資料
 feature: Adaptive Forms
 doc-type: article
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-5830
 topic: Development
 role: Developer
 level: Experienced
 exl-id: d09b46ed-3516-44cf-a616-4cb6e9dfdf41
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -84,7 +84,7 @@ return val;
 
 * [以管理員使用者身分登入crx](http://localhost:4502/crx/de/index.jsp)
 * [匯入sightly範本](assets/sightly-template.zip)
-* [登入AEM網頁主控台](http://localhost:4502/system/console/bundles)
+* [登入AEM Web主控台](http://localhost:4502/system/console/bundles)
 * [部署和啟動收件匣自訂套裝](assets/income-column-customization.jar)
 * [開啟您的收件匣](http://localhost:4502/aem/inbox)
 * 按一下「建立」按鈕旁的「清單檢視」以開啟「管理員控制項」

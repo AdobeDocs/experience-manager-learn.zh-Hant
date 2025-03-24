@@ -1,7 +1,7 @@
 ---
 title: AEM SPA Editor and Angular 快速入門
 description: 建立可在 Adobe Experience Manager (AEM) 中使用 WKND SPA 編輯的第一個 Angular 單頁應用程式 (SPA)。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5913
 thumbnail: 5913-spa-angular.jpg
 feature: SPA Editor
@@ -11,18 +11,18 @@ level: Beginner
 doc-type: Tutorial
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
 duration: 123
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 90%
 
 ---
 
-# 在AEM中建立您的第一個AngularSPA {#introduction}
+# 在AEM中建立您的第一個Angular SPA {#introduction}
 
 {{edge-delivery-services}}
 
-歡迎使用專為 Adobe Experience Manager (AEM) 中 **SPA Editor** 功能的新手開發人員設計的多部分教學課程。此教學課程會逐步引導您為虛擬生活風格品牌 WKND 實作 Angular 應用程式。angular應用程式是使用AEM SPA Editor開發並設計來部署，該編輯器會將Angular元件對應至AEM元件。 部署至 AEM 的完成 SPA 即可使用 AEM 傳統的內嵌編輯工具動態製作。
+歡迎使用專為 Adobe Experience Manager (AEM) 中 **SPA Editor** 功能的新手開發人員設計的多部分教學課程。此教學課程會逐步引導您為虛擬生活風格品牌 WKND 實作 Angular 應用程式。Angular應用程式是使用AEM的SPA Editor開發並設計而成的，該SPA Editor會將Angular元件對應至AEM元件。 部署至 AEM 的完成 SPA 即可使用 AEM 傳統的內嵌編輯工具動態製作。
 
 ![實作的最終 SPA](assets/wknd-spa-implementation.png)
 
@@ -36,7 +36,7 @@ ht-degree: 90%
 
 * [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [AEM SPA Editor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)
 * [Angular](https://angular.io/)
 
 *預計約需 1-2 小時完成教學課程的每個部份。*

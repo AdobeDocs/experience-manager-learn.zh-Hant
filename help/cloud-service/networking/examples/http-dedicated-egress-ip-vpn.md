@@ -1,7 +1,7 @@
 ---
 title: 專用輸出IP位址和VPN的HTTP/HTTPS連線
 description: 瞭解如何從AEM as a Cloud Service向為專用輸出IP位址和VPN執行的外部Web服務發出HTTP/HTTPS請求
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
 duration: 70
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
@@ -40,7 +40,7 @@ HTTP/HTTPS連線會自動使用專用輸出IP位址或VPN從AEM as a Cloud Servi
 此Java™程式碼範例屬於OSGi服務，可在AEM as a Cloud Service中執行，與8080上的外部網頁伺服器建立HTTP連線。 HTTPS （或HTTP）連線會自動以代理方式從AEM as a Cloud Service出去，不需要特別開發。
 
 >[!NOTE]
-> 建議使用[Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html)進行來自AEM的HTTP/HTTPS呼叫。
+> 建議使用[Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html)從AEM進行HTTP/HTTPS呼叫。
 
 + `core/src/com/adobe/aem/wknd/examples/connections/impl/HttpExternalServiceImpl.java`
 

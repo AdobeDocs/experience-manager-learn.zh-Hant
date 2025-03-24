@@ -1,14 +1,14 @@
 ---
 title: 探索AEM GraphQL API - AEM Headless的進階概念 — GraphQL
 description: 使用GraphiQL IDE傳送GraphQL查詢。 瞭解使用篩選器、變數和指令的進階查詢。 查詢片段和內容參考，包括來自多行文字欄位的參考。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
 duration: 438
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1307'
 ht-degree: 0%
@@ -38,7 +38,7 @@ AEM中的GraphQL API可讓您向下游應用程式公開內容片段資料。 �
 ## 使用GraphiQL總管
 
 
-[GraphiQL Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html)工具可讓開發人員針對目前AEM環境上的內容建立和測試查詢。 GraphiQL工具也可讓使用者&#x200B;**儲存或儲存**&#x200B;查詢，以供使用者端應用程式在生產設定中使用。
+[GraphiQL Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html)工具可讓開發人員針對目前AEM環境中的內容建立和測試查詢。 GraphiQL工具也可讓使用者&#x200B;**儲存或儲存**&#x200B;查詢，以供使用者端應用程式在生產設定中使用。
 
 接下來，使用內建的GraphiQL Explorer來探索AEM的GraphQL API功能。
 

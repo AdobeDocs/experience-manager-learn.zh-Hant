@@ -2,7 +2,7 @@
 title: AEM內容片段擴充功能
 description: 瞭解如何建置和部署AEM as a Cloud Service內容片段擴充功能
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ thumbnail: KT-11603.png
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 9164423b-a609-4bc5-9777-112d229ae748
 duration: 126
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # AEM內容片段擴充性
 
-AEM內容片段UI是功能強大的可擴充UI，用於管理建立、管理和編輯內容片段。 有數個擴充點可用來自訂UI以符合您的需求。 根據您要擴充的UI，有不同的擴充點可供使用。
+AEM內容片段UI是功能強大的可擴充UI，可管理建立、管理和編輯內容片段。 有數個擴充點可用來自訂UI以符合您的需求。 根據您要擴充的UI，有不同的擴充點可供使用。
 
 ## 內容片段主控台擴充功能點
 
@@ -102,7 +102,7 @@ AEM (Adobe Experience Manager)中的內容片段編輯器是一個使用者介�
 
 ![內容片段編輯器](./assets/overview/cfe.png)
 
-AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [AEM內容片段編輯器延伸模組是使用`@adobe/aem-cf-editor-ui-ext-tpl` App Builder範本建立](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/)。
+AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [AEM內容片段編輯器擴充功能是使用`@adobe/aem-cf-editor-ui-ext-tpl` App Builder範本建立](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/)。
 
 下列內容片段編輯器擴充功能點可供使用：
 
@@ -192,7 +192,7 @@ AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [AEM內容�
 
 ## 擴充功能範例
 
-歡迎使用AEM UI擴充功能程式碼範例的集合！ 此資源旨在為您提供延伸Adobe Experience Manager (AEM)使用者介面的實用示範和深入分析。 無論您是想增強AEM功能的開發人員，這些程式碼範例都可作為有價值的參考。
+歡迎使用AEM UI擴充功能程式碼範例的集合！ 此資源旨在為您提供延伸Adobe Experience Manager (AEM)使用者介面的實用示範和深入分析。 無論您是想增強AEM功能的開發人員，這些程式碼範例都可作為寶貴參考。
 
 <div class="columns is-multiline">
   <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Bulk property update">

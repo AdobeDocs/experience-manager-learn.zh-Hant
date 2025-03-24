@@ -1,7 +1,7 @@
 ---
 title: iOS應用程式 — AEM Headless範例
-description: 範例應用程式是探索Adobe Experience Manager (AEM)無周邊功能的絕佳方式。 此iOS應用程式示範了如何使用AEM的GraphQL API透過持續性查詢來查詢內容。
-version: Cloud Service
+description: 範例應用程式是探索Adobe Experience Manager (AEM)無頭式功能的絕佳方式。 此iOS應用程式示範了如何使用AEM的GraphQL API透過持續性查詢來查詢內容。
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 2
 jira: KT-10587
 thumbnail: KT-10587.jpg
@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
-badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
 duration: 278
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # iOS應用程式
 
-範例應用程式是探索Adobe Experience Manager (AEM)無周邊功能的絕佳方式。 此iOS應用程式示範了如何使用AEM的GraphQL API透過持續性查詢來查詢內容。
+範例應用程式是探索Adobe Experience Manager (AEM)無頭式功能的絕佳方式。 此iOS應用程式示範了如何使用AEM的GraphQL API透過持續性查詢來查詢內容。
 
 使用AEM Headless的![iOS SwiftUI應用程式](./assets/ios-swiftui-app/ios-app.png)
 
@@ -53,7 +53,7 @@ iOS應用程式設計來連線至&#x200B;__AEM Publish__&#x200B;環境，不過�
    ```
 
 1. 開啟[Xcode](https://developer.apple.com/xcode/)並開啟資料夾`ios-app`
-1. 修改檔案`Config.xcconfig`並更新`AEM_SCHEME`和`AEM_HOST`，以符合您的目標AEM Publish服務。
+1. 修改檔案`Config.xcconfig`並更新`AEM_SCHEME`和`AEM_HOST`，以符合您的目標AEM發佈服務。
 
    ```plain
    // The http/https protocol scheme used to access the AEM_HOST
@@ -66,7 +66,7 @@ iOS應用程式設計來連線至&#x200B;__AEM Publish__&#x200B;環境，不過�
 
    __基本驗證__
 
-   `AEM_USERNAME`和`AEM_PASSWORD`驗證本機AEM使用者是否有權存取WKND GraphQL內容。
+   `AEM_USERNAME`和`AEM_PASSWORD`會驗證可存取WKND GraphQL內容的本機AEM使用者。
 
    ```plain
    AEM_AUTH_TYPE = basic
@@ -76,7 +76,7 @@ iOS應用程式設計來連線至&#x200B;__AEM Publish__&#x200B;環境，不過�
 
    __權杖驗證__
 
-   `AEM_TOKEN`是[存取Token](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)，其可驗證給有權存取WKND GraphQL內容的AEM使用者。
+   `AEM_TOKEN`是[存取權杖](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)，其會向具有WKND GraphQL內容存取權的AEM使用者進行驗證。
 
    ```plain
    AEM_AUTH_TYPE = token
@@ -88,13 +88,13 @@ iOS應用程式設計來連線至&#x200B;__AEM Publish__&#x200B;環境，不過�
 
 ## 程式碼
 
-以下摘要說明如何建立iOS應用程式、其如何連線至AEM Headless以使用GraphQL持續查詢來擷取內容，以及資料如何呈現。 您可以在[GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)上找到完整程式碼。
+以下摘要說明如何建立iOS應用程式、如何連線至AEM Headless以使用GraphQL持續查詢擷取內容，以及資料如何呈現。 您可以在[GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)上找到完整程式碼。
 
 ### 持久查詢
 
 依照AEM Headless最佳實務，iOS應用程式會使用AEM GraphQL持續性查詢來查詢冒險資料。 應用程式使用兩個持續查詢：
 
-+ `wknd/adventures-all`持續查詢，這會傳回AEM中所有具有刪節屬性集的冒險。 此持續查詢會驅動初始檢視的冒險清單。
++ `wknd/adventures-all`持續查詢，此查詢會傳回AEM中所有冒險的摘要。 此持續查詢會驅動初始檢視的冒險清單。
 
 ```
 # Retrieves a list of all Adventures
@@ -193,12 +193,12 @@ query ($slug: String!, $imageFormat:AssetTransformFormat=JPG, $imageSeoName: Str
 
 ### 執行GraphQL持久查詢
 
-AEM的持續查詢會透過HTTPGET執行，因此使用HTTPPOST的常見GraphQL程式庫（例如Apollo）無法使用。 請改為建立自訂類別，對AEM執行持續查詢HTTPGET請求。
+AEM的持久查詢會透過HTTP GET執行，因此使用HTTP POST的常見GraphQL程式庫（例如Apollo）無法使用。 請改為建立自訂類別，對AEM執行持續查詢HTTP GET請求。
 
-`AEM/Aem.swift`會具現化所有與AEM Headless互動時所使用的`Aem`類別。 模式為：
+`AEM/Aem.swift`會具現化所有與AEM Headless的互動所使用的`Aem`類別。 模式為：
 
 1. 每個持續查詢都有對應的公用函式(例如 `getAdventures(..)`或`getAdventureBySlug(..)`) iOS應用程式的檢視叫用以取得冒險資料。
-1. 公用函式會呼叫私人函式`makeRequest(..)`，該函式會對AEM Headless叫用非同步HTTPGET要求，並傳回JSON資料。
+1. 公用函式會呼叫私人函式`makeRequest(..)` (該函式會叫用向AEM Headless發出的非同步HTTP GET請求)，並傳回JSON資料。
 1. 接著，每個公用函式都會解碼JSON資料，並執行任何必要的檢查或轉換，然後將冒險資料傳回檢視。
 
    + AEM的GraphQL JSON資料會使用`AEM/Models.swift`中定義的結構/類別來解碼，這些結構/類別對應到傳回我的AEM Headless的JSON物件。
@@ -274,11 +274,11 @@ SwiftUI用於應用程式中的各種檢視。 Apple提供[使用SwiftUI](https:
 
 + `Views/AdventureDetailView.swift`
 
-  顯示冒險的詳細資訊，包括標題、說明、價格、活動型別和主要影像。 此檢視會使用`aem.getAdventureBySlug(slug: slug)`查詢AEM的完整冒險詳細資料，其中`slug`引數是根據選取清單列傳入。
+  顯示冒險的詳細資訊，包括標題、說明、價格、活動型別和主要影像。 此檢視會使用`aem.getAdventureBySlug(slug: slug)`查詢AEM以取得完整的冒險詳細資料，其中`slug`引數是根據選取清單列傳入。
 
 ### 遠端影像
 
-冒險內容片段參考的影像由AEM提供。 此iOS應用程式在GraphQL回應中使用路徑`_dynamicUrl`欄位，並在`AEM_SCHEME`和`AEM_HOST`加上前置詞，以建立完整限定的URL。 如果針對AE SDK開發，`_dynamicUrl`會傳回null，因此對於開發，會退回影像的`_path`欄位。
+由冒險內容片段參考的影像，由AEM提供。 此iOS應用程式在GraphQL回應中使用路徑`_dynamicUrl`欄位，並在`AEM_SCHEME`和`AEM_HOST`加上前置詞，以建立完整限定的URL。 如果針對AE SDK開發，`_dynamicUrl`會傳回null，所以對於開發，會退回影像的`_path`欄位。
 
 如果連線到AEM上需要授權的受保護資源，則也必須將憑證新增到影像請求。
 
@@ -286,7 +286,7 @@ SwiftUI用於應用程式中的各種檢視。 Apple提供[使用SwiftUI](https:
 
 `aem`類別（在`AEM/Aem.swift`中）以兩種方式方便使用AEM影像：
 
-1. `aem.imageUrl(path: String)`用於檢視中，以將AEM配置加在影像的路徑前面，並建立完整限定的URL。
+1. `aem.imageUrl(path: String)`用於檢視中，以將AEM的配置加在影像的路徑前面，並建立完整限定的URL。
 
    ```swift
    // adventure.image() => /adobe/dynamicmedia/deliver/dm-aid--741ed388-d5f8-4797-8095-10c896dc9f1d/example.jpg?quality=80&preferwebp=true

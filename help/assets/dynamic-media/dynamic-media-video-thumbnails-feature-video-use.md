@@ -2,14 +2,14 @@
 title: 搭配AEM Dynamic Media使用自訂視訊縮圖
 description: AEM Assets自訂視訊縮圖可讓作者從一組產生的縮圖中，選取適當的縮圖。 可輕鬆自訂為視訊產生的縮圖數量。
 feature: Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: da3190bb-f350-420f-bf24-a6dede296efa
 duration: 376
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
@@ -28,4 +28,4 @@ AEM Assets自訂視訊縮圖可讓作者從一組產生的縮圖中，選取適�
 
 >[!NOTE]
 >
->您應該以Dynamic Media](https://experienceleague.adobe.com/docs/)模式執行您的[AEM執行個體
+>您應該在Dynamic Media](https://experienceleague.adobe.com/docs/)模式下執行您的[AEM執行個體

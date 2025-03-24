@@ -1,7 +1,7 @@
 ---
-title: 具有Adobe託管CDN的自訂網域名稱
+title: 使用Adobe管理的CDN自訂網域名稱
 description: 瞭解如何在使用Adobe管理的CDN的AEM as a Cloud Service網站上實作自訂網域名稱。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
 role: Admin, Architect, Developer
@@ -12,14 +12,14 @@ last-substantial-update: 2024-08-12T00:00:00Z
 jira: KT-15121
 thumbnail: KT-15121.jpeg
 exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
-source-git-commit: f92e66d6edc929bff1e8cae6adb7f408352aeb77
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
-# 具有AdobeCDN的自訂網域名稱
+# 使用Adobe CDN的自訂網域名稱
 
 瞭解如何為使用Adobe內容傳遞網路(CDN)的AEM as a Cloud Service網站實作自訂網域名稱。
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 高層級步驟為：
 
-具有AdobeCDN](./assets/add-custom-domain-name-with-Adobe-CDN.png){width="800" zoomable="yes"}的![自訂網域名稱
+![具有Adobe CDN的自訂網域名稱](./assets/add-custom-domain-name-with-Adobe-CDN.png){width="800" zoomable="yes"}
 
 ## 先決條件
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 - 存取協力廠商服務：
    - 憑證授權單位(CA) — 要求網站網域（例如[DigitCert](https://www.digicert.com/)）的已簽署憑證
    - 網域名稱系統(DNS)託管服務 — 為您的自訂網域新增DNS記錄，例如Azure DNS或AWS Route 53。
-- 以&#x200B;**企業所有者**&#x200B;或&#x200B;**Adobe管理員**&#x200B;角色存取[部署的Cloud Manager](https://my.cloudmanager.adobe.com/)。
+- 以&#x200B;**業務負責人**&#x200B;或&#x200B;**部署管理員**&#x200B;角色存取[Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)。
 - 範例[AEM WKND](https://github.com/adobe/aem-guides-wknd)網站已部署至[生產程式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs)型別的AEM as a Cloud Service環境。
 
 如果您無法存取協力廠商服務，請&#x200B;_與您的安全性或託管團隊共同作業，以完成步驟_。
@@ -75,7 +75,7 @@ $ openssl crl2pkcs7 -nocrl -certfile <YOUR-SIGNED-CERT>.crt | openssl pkcs7 -pri
 
 簽署的憑證可能包含憑證鏈，其中包括根和中間憑證以及終端實體憑證。
 
-AdobeCloud Manager接受不同表單欄位&#x200B;_中的終端實體憑證和憑證鏈結_，因此您必須從簽署的憑證中擷取終端實體憑證和憑證鏈結。
+Adobe Cloud Manager接受不同表單欄位&#x200B;_中的終端實體憑證和憑證鏈結_，因此您必須從簽署的憑證中擷取終端實體憑證和憑證鏈結。
 
 在本教學課程中，以`*.enablementadobe.com`網域所簽發的[DigitCert](https://www.digicert.com/)已簽署憑證為例。 透過在文字編輯器中開啟已簽署的憑證並複製`-----BEGIN CERTIFICATE-----`和`-----END CERTIFICATE-----`標籤之間的內容來擷取終端實體和憑證鏈結。
 
@@ -92,7 +92,7 @@ AdobeCloud Manager接受不同表單欄位&#x200B;_中的終端實體憑證和�
 若要驗證網域名稱，請執行下列步驟：
 
 - 依照[新增自訂網域名稱](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name)檔案，在Cloud Manager中新增網域名稱。
-- 在您的DNS代管服務中新增AEM特定的[TXT記錄](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record)。
+- 在您的DNS託管服務中新增AEM特定的[TXT記錄](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record)。
 - 使用`dig`命令查詢DNS伺服器，以驗證上述步驟。
 
 ```bash

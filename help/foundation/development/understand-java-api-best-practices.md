@@ -1,7 +1,7 @@
 ---
 title: Java&amp；trade；AEM中的API最佳作法
-description: AEM是以豐富的開放原始碼軟體棧疊為基礎，在開發期間會公開許多Java&amp； trade； API。 本文會探索主要的API，以及何時應該使用這些API以及其使用原因。
-version: 6.4, 6.5
+description: AEM建置在豐富的開放原始碼軟體棧疊上，在開發期間會公開許多Java&amp； trade； API。 本文會探索主要的API，以及何時應該使用這些API以及其使用原因。
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: APIs
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ exl-id: b613aa65-f64b-4851-a2af-52e28271ce88
 last-substantial-update: 2022-06-24T00:00:00Z
 thumbnail: aem-java-bp.jpg
 duration: 416
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 0%
@@ -65,13 +65,13 @@ AEM建置在四個主要的Java™ API集上。
 
 AEM API提供產品化使用案例專用的抽象概念與功能。
 
-例如，AEM [PageManager](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html)和[Page](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) API為AEM中代表網頁的`cq:Page`節點提供抽象概念。
+例如，AEM的[PageManager](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html)和[Page](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) API為AEM中代表網頁的`cq:Page`節點提供抽象概念。
 
-雖然這些節點可透過[!DNL Sling] API作為資源使用，以及透過JCR API作為節點使用，但AEM API為常見使用案例提供抽象概念。 使用AEM API可確保AEM產品與AEM的自訂和擴充功能之間的一致行為。
+雖然這些節點可透過[!DNL Sling] API作為資源使用，以及透過JCR API作為節點使用，但AEM的API為常見使用案例提供抽象概念。 使用AEM API可確保AEM產品與AEM的自訂和擴充功能之間的一致行為。
 
 ### com.adobe.&#42;與com.day。&#42; API
 
-AEM API具有套件內偏好設定，依偏好設定的順序由下列Java™套件識別：
+AEM API具有套件內偏好設定，依偏好設定順序由下列Java™套件識別：
 
 1. `com.adobe.cq`
 1. `com.adobe.granite`
@@ -79,7 +79,7 @@ AEM API具有套件內偏好設定，依偏好設定的順序由下列Java™套
 
 `com.adobe.cq`套件支援產品使用案例，而`com.adobe.granite`則支援跨產品平台使用案例，例如工作流程或工作(用於跨產品：AEM Assets、Sites等)。
 
-`com.day.cq`套件包含「原始」API。 這些API處理在Adobe贏取[!DNL Day CQ]之前和/或前後存在的核心抽象概念與功能。 這些API受到支援，應避免使用，除非`com.adobe.cq`或`com.adobe.granite`套件未提供（較新的）替代方案。
+`com.day.cq`套件包含「原始」API。 這些API解決在Adobe收購[!DNL Day CQ]之前和/或前後存在的核心抽象概念與功能。 這些API受到支援，應避免使用，除非`com.adobe.cq`或`com.adobe.granite`套件未提供（較新的）替代方案。
 
 新的抽象概念（例如[!DNL Content Fragments]和[!DNL Experience Fragments]）是建置在`com.adobe.cq`空間中，而非如下所述的`com.day.cq`。
 
@@ -91,7 +91,7 @@ AEM支援多種查詢語言。 三種主要語言為[JCR-SQL2](https://docs.jbos
 
 所有查詢語言實際上都有相同的效能設定檔，因為[!DNL Apache Oak]會將其轉儲至JCR-SQL2以進行最終查詢執行，而且與JCR-SQL2的查詢時間本身相比，轉換時間可忽略不計。
 
-偏好的API是[AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)，這是最高級別的抽象化，提供健全API來建構、執行和擷取查詢的結果，並提供下列專案：
+偏好的API是[AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)，這是最高級的抽象化，提供健全API來建構、執行和擷取查詢的結果，並提供下列專案：
 
 * 簡單、引數化的查詢建構（模型化為Map的查詢引數）
 * 原生[Java™ API和HTTP API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
@@ -138,19 +138,19 @@ AEM支援多種查詢語言。 三種主要語言為[JCR-SQL2](https://docs.jbos
 
 * **[JCR 2.0 JavaDocs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-[JCR (Java™ Content Repository) 2.0 API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)是JCR實作規格的一部分(在AEM的情況下，[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/))。 所有JCR實作都必須符合併實作這些API，因此，是與AEM內容互動的最低層級API。
+[JCR (Java™ Content Repository) 2.0 API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)是JCR實作規格的一部分(在AEM中，[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/))。 所有JCR實作都必須符合併實作這些API，因此，是與AEM內容互動的最低層級API。
 
-JCR本身是階層式/樹狀結構的NoSQL資料存放區，AEM會將其當作內容存放庫。 JCR具有大量受支援的API，範圍從內容CRUD到查詢內容。 儘管有這個強大的API，但很少比更高層級AEM和[!DNL Sling]抽象更偏好。
+JCR本身是階層式/樹狀結構的NoSQL資料存放區，AEM會將其當作內容存放庫。 JCR具有大量受支援的API，範圍從內容CRUD到查詢內容。 雖然有這個強大的API，但很少比更高層級的AEM和[!DNL Sling]抽象更偏向使用它們。
 
 與Apache Jackrabbit Oak API相比，總是偏好JCR API。 JCR API適用於與JCR存放庫互動&#x200B;******，而Oak API則適用於&#x200B;***實作*** JCR存放庫。
 
 ### JCR API的常見誤解
 
-雖然JCR是AEM的內容存放庫，但其API並非與內容互動的偏好方法。 相反地，他們偏好AEM API (Page、Assets、Tag等)或Sling Resource API，因為這些提供更好的抽象化。
+雖然JCR是AEM的內容存放庫，但其API並非與內容互動的偏好方法。 相反地，他們偏好AEM API (Page、Assets、Tag等)或Sling Resource API，因為這些API提供更好的抽象功能。
 
 >[!CAUTION]
 >
->在AEM應用程式中，廣泛使用JCR API的工作階段和節點介面會導致程式碼異味。 請確定應該改用[!DNL Sling] API。
+>在AEM應用程式中廣泛使用JCR API的工作階段和節點介面會洩漏程式碼。 請確定應該改用[!DNL Sling] API。
 
 ### JCR API的常見用法
 
@@ -172,7 +172,7 @@ OSGi API與較高層級API (AEM、[!DNL Sling]和JCR)之間幾乎沒有重疊，
 
 ### OSGi與Apache Felix API
 
-OSGi會定義所有OSGi容器都必須實作並遵循的規格。 AEM的OSGi實作Apache Felix也提供自己的數個API。
+OSGi會定義所有OSGi容器都必須實作並遵循的規格。 AEM的OSGi實作Apache Felix也提供數種專屬的API。
 
 * 偏好使用OSGi API (`org.osgi`)而非Apache Felix API (`org.apache.felix`)。
 
@@ -348,7 +348,7 @@ String relativeResourceValue = properties.get("relative/propertyName", "Default 
 Resource resource = page.adaptTo(Resource.class);
 ```
 
-#### AEM資產到[!DNL Sling] [!DNL Resource]
+#### 將AEM資產傳送至[!DNL Sling] [!DNL Resource]
 
 ```java
 Resource resource = asset.adaptTo(Resource.class);
@@ -372,7 +372,7 @@ resource.getResourceResolver().commit();
 
 ### 建立AEM頁面
 
-您必須一律使用PageManager建立頁面，就像使用「頁面範本」一樣，才能在AEM中正確定義和初始化「頁面」。
+您必須一律使用PageManager建立頁面，就像使用「頁面範本」一樣，才能在AEM中正確定義和初始化頁面。
 
 ```java
 String templatePath = "/conf/my-app/settings/wcm/templates/content-page";

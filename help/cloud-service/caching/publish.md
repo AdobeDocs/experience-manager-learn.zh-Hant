@@ -1,7 +1,7 @@
 ---
-title: AEM Publish服務快取
+title: AEM發佈服務快取
 description: AEM as a Cloud Service Publish服務快取的一般概觀。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Dispatcher, Developer Tools
 topic: Performance
 role: Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: 1a1accbe-7706-4f9b-bf63-755090d03c4c
 duration: 240
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1134'
 ht-degree: 2%
@@ -21,15 +21,15 @@ ht-degree: 2%
 
 # AEM 發佈
 
-AEM Publish服務有兩個主要快取層，即AEM as a Cloud Service CDN和AEM Dispatcher。 您可以選擇將客戶管理的CDN放在AEM as a Cloud Service CDN前。 AEM as a Cloud Service CDN提供內容邊緣交付，確保為全球的使用者提供低延遲的體驗。 AEM Dispatcher提供直接在AEM Publish前面的快取，並用於減少AEM Publish本身不必要的負載。
+AEM Publish服務有兩個主要快取層，即AEM as a Cloud Service CDN和AEM Dispatcher。 您可以選擇將客戶管理的CDN放在AEM as a Cloud Service CDN前。 AEM as a Cloud Service CDN提供內容邊緣交付，確保為全球的使用者提供低延遲的體驗。 AEM Dispatcher直接在AEM Publish之前提供快取，並用於減少AEM Publish本身不必要的負載。
 
-![AEM Publish快取概觀圖表](./assets/publish/publish-all.png){align="center"}
+![AEM發佈快取概觀圖表](./assets/publish/publish-all.png){align="center"}
 
 ## CDN
 
 AEM as a Cloud Service的CDN快取是由HTTP回應快取標題所控制，其目的在於快取內容以最佳化新鮮度與效能之間的平衡。 CDN位於一般使用者與AEM Dispatcher之間，用於快取儘可能接近一般使用者的內容，以確保高效能體驗。
 
-![AEM Publish CDN](./assets/publish/publish-cdn.png){align="center"}
+![AEM發佈CDN](./assets/publish/publish-cdn.png){align="center"}
 
 設定CDN快取內容的方式僅限於在HTTP回應上設定快取標題。 這些快取標頭通常在使用`mod_headers`的AEM Dispatcher vhost設定中設定，但也可以在AEM Publish本身中執行的自訂Java™程式碼中設定。
 
@@ -67,7 +67,7 @@ AEM Publish CDN是以TTL （存留時間）為基礎，這表示快取存留期�
 
 #### 預設快取存留期
 
-如果HTTP回應符合上述限定詞](#when-are-http-requestsresponses-cached)的AEM Dispatcher快取[資格，則下列為預設值，除非有自訂組態。
+如果HTTP回應符合上述限定詞](#when-are-http-requestsresponses-cached)的AEM Dispatcher快取[資格，則下列為預設值，除非有自訂設定。
 
 | 內容類型 | 預設CDN快取期限 |
 |:------------ |:---------- |
@@ -79,11 +79,11 @@ AEM Publish CDN是以TTL （存留時間）為基礎，這表示快取存留期�
 
 ### 如何自訂快取規則
 
-[設定CDN快取內容的方式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#disp)僅限於在HTTP回應上設定快取標頭。 這些快取標頭通常使用`mod_headers`在AEM Dispatcher `vhost`設定中設定，但也可以在AEM Publish本身執行的自訂Java™程式碼中設定。
+[設定CDN快取內容的方式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#disp)僅限於在HTTP回應上設定快取標頭。 這些快取標頭通常使用`mod_headers`在AEM Dispatcher `vhost`設定中設定，但也可以在AEM Publish本身中執行的自訂Java™程式碼中設定。
 
 ## AEM Dispatcher
 
-![AEM Publish AEM Dispatcher](./assets/publish/publish-dispatcher.png){align="center"}
+![AEM發佈AEM Dispatcher](./assets/publish/publish-dispatcher.png){align="center"}
 
 ### 何時會快取HTTP要求/回應？
 
@@ -94,7 +94,7 @@ AEM Publish CDN是以TTL （存留時間）為基礎，這表示快取存留期�
 + HTTP回應狀態為`200`
 + HTTP回應不適用於二進位檔案。
 + HTTP要求URL路徑以副檔名結尾，例如： `.html`、`.json`、`.css`、`.js`等。
-+ HTTP要求不包含授權，且未由AEM驗證。
++ HTTP請求不包含授權，且未由AEM驗證。
    + 不過，可全域啟用[驗證要求的快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used)，或選擇性地透過[許可權敏感型快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html)啟用。
 + HTTP要求不包含查詢引數。
    + 不過，設定[忽略的查詢引數](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters)可讓具有忽略的查詢引數的HTTP要求從快取中快取/提供服務。
@@ -127,7 +127,7 @@ AEM Dispatcher會使用下列方法快取HTTP回應：
 
 #### 預設快取存留期
 
-如果HTTP回應符合上述限定詞](#when-are-http-requestsresponses-cached-1)的AEM Dispatcher快取[資格，則下列為預設值，除非有自訂組態。
+如果HTTP回應符合上述限定詞](#when-are-http-requestsresponses-cached-1)的AEM Dispatcher快取[資格，則下列為預設值，除非有自訂設定。
 
 | 內容類型 | 預設CDN快取期限 |
 |:------------ |:---------- |
@@ -148,4 +148,4 @@ AEM Dispatcher的快取可透過[Dispatcher設定](https://experienceleague.adob
 + 啟用或停用TTL快取
 + ...等等
 
-使用`mod_headers`設定快取標題`vhost`設定不會影響Dispatcher快取（以TTL為基礎），因為這些會在AEM Dispatcher處理回應後新增至HTTP回應。 若要透過HTTP回應標頭影響Dispatcher快取，需要在AEM Publish中執行並設定適當HTTP回應標頭的自訂Java™程式碼。
+使用`mod_headers`設定快取標頭時，`vhost`設定不會影響Dispatcher快取（以TTL為基礎），因為這些會在AEM Dispatcher處理回應後新增至HTTP回應。 若要透過HTTP回應標頭影響Dispatcher快取，需要在AEM Publish中執行並設定適當HTTP回應標頭的自訂Java™程式碼。

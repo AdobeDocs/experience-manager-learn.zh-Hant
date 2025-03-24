@@ -1,8 +1,8 @@
 ---
 title: 新增導覽和路由 | AEM SPA Editor and React快速入門
-description: 瞭解如何使用SPA編輯器SDK將對應到AEM頁面，以支援SPA中的多個檢視。 動態導覽是使用React Router和React Core Components來實施。
+description: 瞭解如何使用SPA Editor SDK將對應到AEM頁面，以支援SPA中的多個檢視。 動態導覽是使用React Router和React Core Components來實施。
 feature: SPA Editor
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-4988
 thumbnail: 4988-spa-react.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
 duration: 337
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 0%
@@ -20,17 +20,17 @@ ht-degree: 0%
 
 # 新增導覽和路由 {#navigation-routing}
 
-瞭解如何使用SPA編輯器SDK將對應到AEM頁面，以支援SPA中的多個檢視。 動態導覽是使用React Router和React Core Components來實施。
+瞭解如何使用SPA Editor SDK將對應到AEM頁面，以支援SPA中的多個檢視。 動態導覽是使用React Router和React Core Components來實施。
 
 ## 目標
 
 1. 瞭解使用SPA編輯器時可用的SPA模型路由選項。
 1. 瞭解如何使用[React Router](https://reacttraining.com/react-router)，在SPA的不同檢視之間瀏覽。
-1. 使用AEM React核心元件來實作由AEM頁面階層驅動的動態導覽。
+1. 使用AEM React核心元件，實作由AEM頁面階層驅動的動態導覽。
 
 ## 您將建置的內容
 
-本章會將導覽新增至AEM中的SPA。 導覽功能表是由AEM頁面階層所驅動，並將使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html)提供的JSON模型。
+本章將新增導覽至AEM中的SPA。 導覽功能表是由AEM頁面階層所驅動，並將使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html)提供的JSON模型。
 
 ![已新增導覽](assets/navigation-routing/navigation-added.png)
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 ## 將導覽新增至範本 {#add-navigation-template}
 
 1. 開啟瀏覽器並登入AEM，[http://localhost:4502/](http://localhost:4502/)。 起始程式碼基底應該已經部署。
-1. 瀏覽至&#x200B;**SPA頁面範本**： [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html)。
+1. 導覽至&#x200B;**SPA頁面範本**： [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html)。
 1. 選取最外層的&#x200B;**根配置容器**，然後按一下它的&#x200B;**原則**&#x200B;圖示。 請注意，**not**&#x200B;選取&#x200B;**配置容器**&#x200B;已解除製作鎖定。
 
    ![選取根配置容器原則圖示](assets/navigation-routing/root-layout-container-policy.png)
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 ## 建立子頁面
 
-接著，在AEM中建立其他頁面，做為SPA中的不同檢視。 我們也會檢查AEM所提供JSON模型的階層結構。
+接下來，在AEM中建立其他頁面，這些頁面將用作SPA中的不同檢視。 我們也會檢查AEM所提供JSON模型的階層結構。
 
 1. 導覽至&#x200B;**網站**&#x200B;主控台： [http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home)。 選取&#x200B;**WKND SPA React首頁**，然後按一下&#x200B;**建立** > **頁面**：
 
@@ -94,7 +94,7 @@ ht-degree: 0%
 
    ![輸入初始頁面屬性](assets/navigation-routing/initial-page-properties.png)
 
-   按一下「**建立**」，然後在對話方塊快顯視窗中，按一下「**開啟**」以在AEM SPA編輯器中開啟頁面。
+   按一下「**建立**」，然後在對話方塊快顯視窗中按一下「**開啟**」，在AEM SPA編輯器中開啟頁面。
 
 1. 將新的&#x200B;**Text**&#x200B;元件新增至主要&#x200B;**配置容器**。 編輯元件並輸入文字： **第1**&#x200B;頁（使用RTE和&#x200B;**H2**&#x200B;元素）。
 
@@ -123,7 +123,7 @@ ht-degree: 0%
 
 接下來，檢查推動SPA多檢視體驗的JSON模型。
 
-1. 在新索引標籤中，開啟AEM提供的JSON模型API： [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)。 使用瀏覽器延伸模組[格式化JSON](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)可能會有幫助。
+1. 在新標籤中，開啟AEM提供的JSON模型API： [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)。 使用瀏覽器延伸模組[格式化JSON](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)可能會有幫助。
 
    SPA首次載入時會請求此JSON內容。 外部結構如下所示：
 
@@ -148,11 +148,11 @@ ht-degree: 0%
    }
    ```
 
-   在`:children`底下，您應該會看到每個已建立頁面的專案。 所有頁面的內容都在此初始JSON請求中。 透過導覽路由，SPA的後續檢視會快速載入，因為內容在使用者端已經可用。
+   在`:children`底下，您應該會看到每個已建立頁面的專案。 所有頁面的內容都在此初始JSON請求中。 透過導覽路由，SPA的後續檢視會快速載入，因為內容在使用者端已可用。
 
    在初始JSON要求中載入SPA的&#x200B;**所有**&#x200B;內容是不明智的，因為這會減慢初始頁面載入的速度。 接下來，讓我們檢視如何收集頁面的階層深度。
 
-1. 瀏覽至&#x200B;**SPA根**&#x200B;範本，網址為： [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html)。
+1. 導覽至&#x200B;**SPA Root**&#x200B;範本，位於： [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html)。
 
    按一下&#x200B;**頁面屬性功能表** > **頁面原則**：
 
@@ -192,9 +192,9 @@ ht-degree: 0%
 
 1. 重新開啟SPA首頁： [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html)，然後開啟瀏覽器的開發人員工具。
 
-   重新整理頁面，您應該會看到`/content/wknd-spa-react/us/en.model.json` (SPA根目錄)的XHR要求。 請注意，根據教學課程中先前進行的階層深度設定，SPA根範本僅包含三個子頁面。 這不包括&#x200B;**第3**&#x200B;頁。
+   重新整理頁面，您應該會看到`/content/wknd-spa-react/us/en.model.json`的XHR要求（即SPA根目錄）。 請注意，根據教學課程中先前進行之SPA根範本的階層深度設定，僅包含三個子頁面。 這不包括&#x200B;**第3**&#x200B;頁。
 
-   ![初始JSON要求 — SPA根目錄](assets/navigation-routing/initial-json-request.png)
+   ![初始JSON要求 — SPA根](assets/navigation-routing/initial-json-request.png)
 
 1. 在開發人員工具開啟的狀態下，使用`Navigation`元件直接導覽至&#x200B;**第3**&#x200B;頁：
 
@@ -206,11 +206,11 @@ ht-degree: 0%
 
 1. 透過直接導覽至[http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html)來嘗試深層連結。 另請注意，瀏覽器的返回按鈕仍會繼續運作。
 
-## Inspect React路由  {#react-routing}
+## 檢查React路由  {#react-routing}
 
 已使用[React路由器](https://reactrouter.com/en/main)實作導覽及路由。 React Router是React應用程式的導覽元件集合。 [AEM React Core Components](https://github.com/adobe/aem-react-core-wcm-components-base)使用React Router的功能來實施先前步驟中使用的&#x200B;**導覽**&#x200B;元件。
 
-接下來，檢查React路由器如何與SPA整合，並使用React路由器的[連結](https://reactrouter.com/en/main/components/link)元件進行實驗。
+接下來，檢查React Router如何與SPA整合，並使用React Router的[連結](https://reactrouter.com/en/main/components/link)元件進行實驗。
 
 1. 在IDE中，在`ui.frontend/src/index.js`開啟檔案`index.js`。
 
@@ -237,7 +237,7 @@ ht-degree: 0%
    });
    ```
 
-   請注意，`App`已包裝在[React路由器](https://reacttraining.com/react-router)的`Router`元件中。 由AEM SPA編輯器JS SDK提供的`ModelManager`會根據JSON模型API將動態路由新增至AEM頁面。
+   請注意，`App`已包裝在[React路由器](https://reacttraining.com/react-router)的`Router`元件中。 由AEM SPA Editor JS SDK提供的`ModelManager`會根據JSON模型API將動態路由新增至AEM頁面。
 
 1. 在`ui.frontend/src/components/Page/Page.js`開啟檔案`Page.js`
 
@@ -256,7 +256,7 @@ ht-degree: 0%
    );
    ```
 
-   `Page` SPA元件使用`MapTo`函式，將AEM中的&#x200B;**頁面**&#x200B;對應到對應的SPA元件。 `withRoute`公用程式可協助您根據`cqPath`屬性，以動態方式將SPA路由到適當的AEM子頁面。
+   `Page` SPA元件使用`MapTo`函式將AEM中的&#x200B;**頁面**&#x200B;對應到對應的SPA元件。 `withRoute`公用程式可協助您根據`cqPath`屬性，以動態方式將SPA路由到適當的AEM子頁面。
 
 1. 在`ui.frontend/src/components/Header/Header.js`開啟`Header.js`元件。
 1. 更新`Header`以將`<h1>`標籤包裝在[連結](https://reactrouter.com/en/main/components/link)的首頁中：
@@ -322,8 +322,8 @@ ht-degree: 0%
    </a>
    ```
 
-   這可協助說明SPA路由與一般網頁連結之間的差異。
+   這可協助說明SPA路由和一般網頁連結之間的差異。
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您已瞭解如何使用SPA編輯器SDK將對應至AEM頁面，以支援SPA中的多個檢視。 已使用React路由器實作動態導覽，並已新增至`Header`元件。
+恭喜，您已瞭解如何使用SPA Editor SDK將對應到AEM頁面，以支援SPA中的多個檢視。 已使用React路由器實作動態導覽，並已新增至`Header`元件。

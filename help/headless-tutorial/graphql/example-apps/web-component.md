@@ -1,7 +1,7 @@
 ---
-title: Web元件/JS - AEM Headless範例
-description: 範例應用程式是探索Adobe Experience Manager (AEM)無周邊功能的絕佳方式。 此Web元件/JS應用程式示範了如何使用AEM的GraphQL API透過持續性查詢來查詢內容。
-version: Cloud Service
+title: 網頁元件/JS - AEM Headless範例
+description: 範例應用程式是探索Adobe Experience Manager (AEM)無頭式功能的絕佳方式。 此網頁元件/JS應用程式示範了如何使用AEM的GraphQL API透過持續性查詢來查詢內容。
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
@@ -9,10 +9,10 @@ level: Beginner
 jira: KT-10797
 thumbnail: kt-10797.jpg
 last-substantial-update: 2023-05-10T00:00:00Z
-badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 4f090809-753e-465c-9970-48cf0d1e4790
 duration: 129
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Web元件
 
-範例應用程式是探索Adobe Experience Manager (AEM)無周邊功能的絕佳方式。 此Web元件應用程式示範了如何使用AEM的GraphQL API透過持續性查詢來查詢內容，以及如何轉譯UI的一部分，使用純JavaScript程式碼完成。
+範例應用程式是探索Adobe Experience Manager (AEM)無頭式功能的絕佳方式。 此Web元件應用程式示範了如何使用AEM的GraphQL API透過持續性查詢來查詢內容，以及如何轉譯UI的一部分，使用純JavaScript程式碼完成。
 
 ![含AEM Headless的Web元件](./assets/web-component/web-component.png)
 
@@ -36,11 +36,11 @@ ht-degree: 0%
 
 ## AEM需求
 
-Web元件可與下列AEM部署選項搭配使用。
+網頁元件可搭配下列AEM部署選項使用。
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 + 使用[AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)進行本機設定
-   + 需要[JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p=list&amp;p.offset=limit&amp;p.offset=0&amp;p.limit=14444) (如果連線到本機AEM 6.5或AEM SDK)
+   + 需要[JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p=list&amp;p.offset=limit&amp;p.offset=0&amp;p.limit=14&amp;p.limit=144) (如果連線到本機AEM 6.5或AEM SDK)
 
 此範例應用程式依賴安裝[basic-tutorial-solution.content.zip](../multi-step/assets/explore-graphql-api/basic-tutorial-solution.content.zip)，且已具備必要的[部署設定](../deployment/web-component.md)。
 
@@ -65,7 +65,7 @@ Web元件可與下列AEM部署選項搭配使用。
 
 1. 編輯`.../src/person.js`檔案以包含AEM連線詳細資料：
 
-   在`aemHeadlessService`物件中，更新`aemHost`以指向您的AEM Publish服務。
+   在`aemHeadlessService`物件中，更新`aemHost`以指向您的AEM發佈服務。
 
    ```plain
    # AEM Server namespace
@@ -78,7 +78,7 @@ Web元件可與下列AEM部署選項搭配使用。
    queryParamName=name
    ```
 
-   如果連線到AEM Author服務，請在`aemCredentials`物件中提供本機AEM使用者認證。
+   如果連線到AEM作者服務，請在`aemCredentials`物件中提供本機AEM使用者認證。
 
    ```plain
    # For Basic auth, use AEM ['user','pass'] pair (for example, when connecting to local AEM Author instance)
@@ -93,7 +93,7 @@ Web元件可與下列AEM部署選項搭配使用。
    $ npm start
    ```
 
-1. 新的瀏覽器視窗會開啟靜態HTML頁面，其中在[http://localhost:8080](http://localhost:8080)嵌入網頁元件。
+1. 新的瀏覽器視窗會開啟靜態的HTML頁面，其中在[http://localhost:8080](http://localhost:8080)嵌入網頁元件。
 1. _個人資訊_&#x200B;網頁元件會顯示在網頁上。
 
 ## 程式碼
@@ -102,7 +102,7 @@ Web元件可與下列AEM部署選項搭配使用。
 
 ### 網頁元件HTML標籤
 
-已將可重複使用的Web元件（亦稱為自訂元素） `<person-info>`新增到`../src/assets/aem-headless.html`HTML頁面。 它支援`host`和`query-param-value`屬性來驅動元件的行為。 `host`屬性的值會覆寫`person.js`中`aemHeadlessService`物件的`aemHost`值，而`query-param-value`是用來選取要呈現的人員。
+已將可重複使用的Web元件（亦稱為自訂元素） `<person-info>`新增到`../src/assets/aem-headless.html` HTML頁面。 它支援`host`和`query-param-value`屬性來驅動元件的行為。 `host`屬性的值會覆寫`person.js`中`aemHeadlessService`物件的`aemHost`值，而`query-param-value`是用來選取要呈現的人員。
 
 ```html
     <person-info 

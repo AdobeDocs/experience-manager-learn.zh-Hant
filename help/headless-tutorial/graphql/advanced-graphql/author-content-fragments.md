@@ -1,14 +1,14 @@
 ---
 title: 作者內容片段 — AEM Headless的進階概念 — GraphQL
 description: 在Adobe Experience Manager (AEM) Headless的進階概念的本章中，瞭解如何在內容片段中使用索引標籤、日期和時間、JSON物件以及片段參考。 設定檔案夾原則以限制可包含的內容片段模型。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 998d3678-7aef-4872-bd62-0e6ea3ff7999
 duration: 609
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 1%
@@ -36,10 +36,10 @@ ht-degree: 1%
 
 ## 安裝範例內容 {#sample-content}
 
-安裝包含數個資料夾和用於加速教學課程之範例影像的AEM套件。
+安裝包含數個資料夾和範例影像的AEM套件，用以加速教學課程。
 
 1. 下載[Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip)
-1. 在AEM中，瀏覽至&#x200B;**工具** > **部署** > **封裝**&#x200B;以存取&#x200B;**封裝管理員**。
+1. 在AEM中，瀏覽至&#x200B;**工具** > **部署** > **套件**&#x200B;以存取&#x200B;**套件管理員**。
 1. 上傳並安裝上一步驟中下載的套件（zip檔案）。
 
    ![透過封裝管理員上傳的封裝](assets/author-content-fragments/install-starter-package.png)

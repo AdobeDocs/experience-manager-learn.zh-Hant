@@ -1,7 +1,7 @@
 ---
 title: 建立區塊
 description: 為可使用通用編輯器編輯的Edge Delivery Services網站建置區塊。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1767'
 ht-degree: 0%
@@ -99,7 +99,7 @@ $ git checkout -b teaser origin/main
 
 `fields`陣列中的每個欄位都有JSON物件，其中包含下列必要屬性：
 
-| JSON屬性 | 說明 |
+| JSON屬性 | 描述 |
 |---------------|-----------------------------------------------------------------------------------------------------------------------|
 | `component` | [欄位型別](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#component-types)，例如`text`、`reference`或`aem-content`。 |
 | `name` | 欄位名稱，對應至儲存值於AEM中的JCR屬性。 |
@@ -315,7 +315,7 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 
 區塊定義會在通用編輯器中註冊區塊。 以下是區塊定義中使用的JSON屬性劃分：
 
-| JSON屬性 | 說明 |
+| JSON屬性 | 描述 |
 |---------------|-------------|
 | `definition.title` | 區塊標題顯示在通用編輯器的&#x200B;**新增**&#x200B;區塊中。 |
 | `definition.id` | 區塊的唯一ID，用來控制它在`filters`中的使用。 |

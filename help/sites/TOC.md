@@ -5,8 +5,8 @@ breadcrumb-title: AEM Sites 教學課程
 feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
-version: 6.4, 6.5, Cloud Service
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 17%
@@ -57,7 +57,7 @@ ht-degree: 17%
       + [實驗用的中繼資料](./document-authoring/how-to/experimentation-add-metadata.md)
 + 頁面製作{#page-authoring}
    + [製作](page-authoring/aem-sites-authoring-overview.md)
-   + [瀏覽](page-authoring/basic-handling-sites-feature-video-use.md)
+   + [導覽](page-authoring/basic-handling-sites-feature-video-use.md)
    + [網站結構](page-authoring/content-hierarchy-feature-video-use.md)
    + [頁面建立](page-authoring/creating-page-feature-video-use.md)
    + [頁面製作](page-authoring/page-authoring-overview-feature-video-use.md)

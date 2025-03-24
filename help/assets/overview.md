@@ -1,14 +1,14 @@
 ---
 title: AEM Assets 影片和教學課程
-description: 觀看我們的影片，以取得AEM Asset支援和協助。
+description: 觀看我們的影片，以取得AEM資產支援和協助。
 sub-product: Experience Manager Assets
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: d0e1513b4e6ea536b40f3dbb69a0f512f7521164
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '177'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -70,11 +70,11 @@ Adobe Experience Manager (AEM) Assets是AEM平台上的數位資產管理工具�
 </td>
 <td>
    <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-   <img alt="Dynamic Media概觀" src="./assets/overview/dynamic-media.png" />
+   <img alt="Dynamic Media概述" src="./assets/overview/dynamic-media.png" />
    </a>
    <div>
       <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-      <strong>Dynamic Media概觀</strong>
+      <strong>Dynamic Media概述</strong>
       </a>
    </div>
    <p>

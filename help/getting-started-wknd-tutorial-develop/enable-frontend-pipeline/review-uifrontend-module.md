@@ -1,7 +1,7 @@
 ---
 title: 檢閱完整棧疊專案的ui.frontend模組
 description: 檢閱Maven型全棧疊AEM Sites專案的前端開發、部署和傳送生命週期。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
 duration: 364
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 * 瞭解AEM完整棧疊專案中前端成品的建置和部署流程
 * 檢閱AEM完整棧疊專案的`ui.frontend`模組的[webpack](https://webpack.js.org/)設定
-* AEM使用者端程式庫（也稱為clientlibs）產生程式
+* AEM client library （亦稱為clientlibs）產生程式
 
 ## AEM完整棧疊和快速網站建立專案的前端部署流程
 
@@ -63,13 +63,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 同樣地，在&#x200B;__AEM快速網站建立歷程__&#x200B;中，執行&#x200B;__前端__&#x200B;管道以將[前端變更](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html)部署到AEM as a Cloud Service環境，請參閱[設定您的管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html)
+> 同樣地，在&#x200B;__AEM快速網站建立歷程__&#x200B;中，透過執行&#x200B;__前端__&#x200B;管道，將[前端變更](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html)部署到AEM as a Cloud Service環境。請參閱[設定您的管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html)
 
 ### 檢閱WKND Sites專案中的Webpack設定 {#development-frontend-webpack-clientlib}
 
 * 有三個&#x200B;__webpack__&#x200B;設定檔案可用來捆綁WKND Sites前端資源。
 
-   1. `webpack.common` — 這包含指示WKND資源繫結和最佳化的&#x200B;__公用__&#x200B;設定。 __output__&#x200B;屬性會告訴應在何處產生其建立的整合檔案(也稱為JavaScript組合，但不要與AEM OSGi組合混淆)。 預設名稱設為`clientlib-site/js/[name].bundle.js`。
+   1. `webpack.common` — 這包含指示WKND資源繫結和最佳化的&#x200B;__公用__&#x200B;設定。 __output__&#x200B;屬性會告訴應在何處產生其建立的整合檔案(也稱為JavaScript套裝，但不要與AEM OSGi套裝混淆)。 預設名稱設為`clientlib-site/js/[name].bundle.js`。
 
   ```javascript
       ...

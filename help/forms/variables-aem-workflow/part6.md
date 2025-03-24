@@ -1,7 +1,7 @@
 ---
 title: 在AEM工作流程中記錄變數[第6部分]
 description: 記錄AEM工作流程變數的值
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 feature: Adaptive Forms, Workflow
 role: Developer
@@ -9,16 +9,16 @@ level: Beginner
 jira: KT-13783
 exl-id: 6afb3a52-9879-4393-8efd-ec3e5c303063
 duration: 84
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 0%
 
 ---
 
-# 在AEM Workflow中記錄變數值
+# 在AEM工作流程中記錄變數值
 
-記錄變數的值是軟體開發的常見做法。 它可協助開發人員追蹤並瞭解AEM工作流程的執行方式、診斷問題並監視AEM工作流程中的資料流程。
+記錄變數的值是軟體開發的常見做法。 它可協助開發人員追蹤及瞭解AEM工作流程的執行方式、診斷問題並監視AEM工作流程中的資料流程。
 
 
 

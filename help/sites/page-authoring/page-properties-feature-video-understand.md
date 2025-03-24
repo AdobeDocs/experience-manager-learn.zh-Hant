@@ -1,7 +1,7 @@
 ---
 title: 瞭解AEM Sites中的頁面屬性
 description: 以下影片會介紹與Adobe Experience Manager中的頁面相關聯的頁面屬性中繼資料。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 feature: Page Editor
 role: User
@@ -11,7 +11,7 @@ thumbnail: 32192.jpg
 doc-type: Feature Video
 exl-id: 41b40982-9796-418e-9bfc-af6fc720e9b8
 duration: 410
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 44%
@@ -37,7 +37,7 @@ ht-degree: 44%
       * 頁面標題
       * 導覽標題
       * 字幕
-      * 說明
+      * 描述
    * 開啟/關閉時間
    * 虛名 URL
 * 進階
@@ -52,7 +52,7 @@ ht-degree: 44%
    * 匯出
 * 縮圖
 * 社交媒體分享
-* Cloud Service設定
+* 雲端服務設定
 * 個人化
    * ContextHub 組態
    * 定位組態

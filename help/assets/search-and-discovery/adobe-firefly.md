@@ -1,7 +1,7 @@
 ---
 title: 搜尋和Adobe Firefly
 description: 瞭解AEM Assets如何與Adobe Firefly整合，將空白的搜尋結果轉換為具生產力的資產產生體驗。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Search, Generative AI
 role: User
@@ -11,7 +11,7 @@ duration: 104
 last-substantial-update: 2024-05-09T00:00:00Z
 jira: KT-15486
 exl-id: 4da5eb7e-fd8c-4a27-a824-1fb72c95933e
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%

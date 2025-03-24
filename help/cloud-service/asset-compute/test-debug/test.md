@@ -1,8 +1,8 @@
 ---
-title: 測試Asset compute背景工作
-description: asset compute專案定義了一種模式，用於輕鬆建立及執行Asset compute背景工作的測試。
+title: 測試Asset Compute背景工作
+description: Asset Compute專案定義了一種模式，用於輕鬆建立及執行Asset Compute背景工作的測試。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6284
 thumbnail: KT-6284.jpg
@@ -11,22 +11,22 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 04992caf-b715-4701-94a8-6257e9bd300c
 duration: 142
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 0%
 
 ---
 
-# 測試Asset compute背景工作
+# 測試Asset Compute背景工作
 
-asset compute專案定義了一種模式，用於輕鬆建立及執行Asset compute背景工作](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html)的[測試。
+Asset Compute專案定義了一種模式，用於輕鬆建立及執行Asset Compute背景工作[測試](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html)。
 
 ## 背景工作測試的剖析
 
-asset compute工作者的測試會分成多個測試套裝，而在每個測試套裝中，會有一或多個測試案例宣告要測試的條件。
+Asset Compute Worker的測試會分成多個測試套裝，而每個測試套裝中，都會有一或多個測試案例宣告要測試的條件。
 
-asset compute專案中的測試結構如下：
+Asset Compute專案中的測試結構如下：
 
 ```
 /actions/<worker-name>/index.js
@@ -78,7 +78,7 @@ asset compute專案中的測試結構如下：
    }
    ```
 
-   這些是傳遞至[開發工具的Asset compute設定檔定義](../develop/development-tool.md)的相同機碼/值，減去`worker`機碼。
+   這些是傳遞至[開發工具的Asset Compute設定檔定義](../develop/development-tool.md)的相同機碼/值，減去`worker`機碼。
 
 1. 將預期的[轉譯檔案](./assets/test/success-parameterized/rendition.png)新增到此測試案例，並將其命名為`rendition.png`。 此檔案代表指定輸入`file.jpg`之背景工作程式的預期輸出。
 1. 從命令列，執行`aio app test`以執行專案根目錄測試

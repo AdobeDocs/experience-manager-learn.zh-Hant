@@ -5,13 +5,13 @@ feature: Adaptive Forms
 type: Documentation
 role: Developer
 level: Beginner
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 jira: KT-15126
 exl-id: b369ed05-ba25-4b0e-aa3b-e7fc1621067d
 duration: 52
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 # 使用叫用FDM工作流程步驟將資料插入SharePoint清單
 
 
-本文說明在AEM工作流程中使用叫用FDM步驟將資料插入SharePoint清單所需的步驟。
+本文說明在SharePoint工作流程中使用叫用FDM步驟，將資料插入AEM清單所需的步驟。
 
 本文假設您已[成功設定最適化表單，以將資料提交至SharePoint清單。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
 
@@ -92,7 +92,7 @@ ht-degree: 1%
 
 ![foundation表單](assets/foundation-based-form.png)
 
-## 設定自適應表單以觸發AEM工作流程
+## 設定最適化表單以觸發AEM工作流程
 
 * 使用先前步驟建立的表單資料模型建立最適化表單。
 * 將資料來源中的一些欄位拖放至您的表單上。

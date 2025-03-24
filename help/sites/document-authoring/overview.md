@@ -1,7 +1,7 @@
 ---
 title: 檔案製作影片
 description: 瞭解如何在AEM中設定及設定檔案製作。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User
@@ -11,7 +11,7 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 9%
@@ -20,7 +20,7 @@ ht-degree: 9%
 
 # 檔案製作影片
 
-瞭解如何設定檔案編寫，以允許AEM作者使用Microsoft Word或Google檔案編輯和發佈檔案。
+瞭解如何設定檔案編寫，以允許AEM作者使用Microsoft Word或Google Docs編輯和發佈檔案。
 
 檢閱[檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html)，以取得設定檔案編寫的完整詳細資料。
 
@@ -80,7 +80,7 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="preview-and-publish.md" title="預覽和發佈內容">編輯器總覽</a>
             </p>
-            <p class="is-size-6">使用AEM Sidekick預覽和發佈內容的簡短概觀。</p>
+            <p class="is-size-6">使用AEM Sidekick預覽和發佈內容的簡要概觀。</p>
             <a href="preview-and-publish.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -593,7 +593,7 @@ ht-degree: 9%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/using-dynamic-media.md" title="Dynamic Media">Dynamic Media</a>
+              <a href="./how-to/using-dynamic-media.md" title="Dynamic Media">動態媒體</a>
             </p>
             <p class="is-size-6">探索如何使用Dynamic Media來最佳化影像傳送。</p>
             <a href="./how-to/using-dynamic-media.md" class="spectrum-Button
@@ -659,7 +659,7 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/customizing-importer.md" title="自訂匯入工具">自訂匯入工具</a>
             </p>
-            <p class="is-size-6">探索如何自訂網站移轉的AEM Importer工具。</p>
+            <p class="is-size-6">探索如何自訂AEM Importer工具以進行網站移轉。</p>
             <a href="./how-to/customizing-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -728,7 +728,7 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/generate-variations/overview.md" title="產生變化版本">產生變化版本</a>
             </p>
-            <p class="is-size-6">產生Edge Delivery Services變體簡介，並瞭解其對行銷人員的用處。</p>
+            <p class="is-size-6">在Edge Delivery Services中產生變數簡介，並瞭解其對行銷人員的用處。</p>
             <a href="./how-to/generate-variations/overview.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -760,7 +760,7 @@ ht-degree: 9%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/generate-variations/configure-sidekick.md" title="產生變數 — 設定Sidekick">產生變數 — 設定Sidekick</a>
             </p>
-            <p class="is-size-6">探索如何設定Sidekick以產生Edge Delivery Services檔案製作中的變數。</p>
+            <p class="is-size-6">探索如何在Edge Delivery Services檔案製作中設定Sidekick以產生變數。</p>
             <a href="./how-to/generate-variations/configure-sidekick.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">

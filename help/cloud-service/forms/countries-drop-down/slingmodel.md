@@ -5,22 +5,22 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
+exl-id: f4a18f02-61a2-4fa3-bfbb-41bf696cd2a8
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
 
 ---
 
-
 # 為元件建立Sling模型
 
-AEM中的Sling模型是以Java為基礎的架構，用來簡化元件後端邏輯的開發。 它可讓開發人員使用註解，將資料從AEM資源（JCR節點）對應至Java物件，提供簡潔有效的方法處理元件的動態資料。
+AEM中的Sling模型是Java型架構，用來簡化元件後端邏輯的開發。 它可讓開發人員使用註解，將資料從AEM資源（JCR節點）對應至Java物件，提供簡潔有效的方法處理元件的動態資料。
 此類別CountriesDropDownImpl是AEM (Adobe Experience Manager)專案中CountriesDropDown介面的實作。 這會提供下拉式元件，讓使用者可以根據所選大陸選取國家/地區。 下拉式清單資料會從儲存在AEM DAM (Digital Asset Manager)中的JSON檔案動態載入。
 
 類別&#x200B;**中的**&#x200B;欄位

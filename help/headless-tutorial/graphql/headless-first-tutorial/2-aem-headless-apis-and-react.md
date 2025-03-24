@@ -1,7 +1,7 @@
 ---
 title: AEM Headless API和React - AEM Headless第一個教學課程
-description: 瞭解如何涵蓋從AEM GraphQL API擷取內容片段資料，以及在React應用程式中顯示資料。
-version: Cloud Service
+description: 瞭解如何涵蓋從AEM的GraphQL API擷取內容片段資料，以及在React應用程式中顯示資料。
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 2b726473-5a32-4046-bce8-6da3c57a1b60
 duration: 225
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 0%
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 歡迎使用本教學課程章節，我們將探索如何設定React應用程式，以使用AEM Headless SDK連線Adobe Experience Manager (AEM) Headless API。 我們將說明如何從AEM的GraphQL API擷取內容片段資料，以及在React應用程式中顯示該資料。
 
-AEM Headless API允許從任何使用者端應用程式存取AEM內容。 我們將引導您設定React應用程式，以使用AEM Headless SDK連線至AEM Headless API。 此設定可在您的React應用程式與AEM之間建立可重複使用的通訊通道。
+AEM Headless API可讓您從任何使用者端應用程式存取AEM內容。 我們將引導您設定React應用程式，以使用AEM Headless SDK連線至AEM Headless API。 此設定可在您的React應用程式與AEM之間建立可重複使用的通訊通道。
 
-接下來，我們將使用AEM Headless SDK從AEM的GraphQL API擷取內容片段資料。 AEM中的內容片段提供結構化的內容管理。 利用AEM Headless SDK，您可以使用GraphQL輕鬆查詢和擷取內容片段資料。
+接下來，我們將使用AEM Headless SDK，從AEM的GraphQL API擷取內容片段資料。 AEM中的內容片段提供結構化的內容管理。 利用AEM Headless SDK，您可以使用GraphQL輕鬆查詢和擷取內容片段資料。
 
 取得內容片段資料後，我們會將其整合至您的React應用程式。 您將瞭解如何以吸引人的方式格式化及顯示資料。 我們將介紹在React元件中處理和呈現內容片段資料的最佳實務，以確保與應用程式UI無縫整合。
 
@@ -58,7 +58,7 @@ AEM Headless API允許從任何使用者端應用程式存取AEM內容。 我們
    REACT_APP_TOKEN=<developer token>
    ```
 
-1. 您可以在Cloud Manager中擷取開發人員權杖。 登入[AdobeCloud Manager](https://experience.adobe.com/)。 按一下&#x200B;__Experience Manager> Cloud Manager__。 選擇適當的計畫，然後按一下「環境」旁邊的省略符號。
+1. 您可以在Cloud Manager中擷取開發人員權杖。 登入[Adobe Cloud Manager](https://experience.adobe.com/)。 按一下&#x200B;__Experience Manager > Cloud Manager__。 選擇適當的計畫，然後按一下「環境」旁邊的省略符號。
 
    ![AEM Developer Console](./assets/2/developer-console.png)
 
@@ -138,7 +138,7 @@ AEM Headless API允許從任何使用者端應用程式存取AEM內容。 我們
    export default App;
    ```
 
-1. 匯入`AEMHeadless` SDK。 此SDK是應用程式用來與AEM的Headless API互動的Helper資料庫。
+1. 匯入`AEMHeadless` SDK。 此SDK是應用程式使用的協助程式庫，可與AEM的Headless API互動。
 
    將此匯入陳述式新增至`home.js`。
 
@@ -167,7 +167,7 @@ AEM Headless API允許從任何使用者端應用程式存取AEM內容。 我們
    }
    ```
 
-1. 初始化`useEffect()`內的AEM Headless SDK，因為`context`變數變更時AEM Headless SDK必須變更。
+1. 在`useEffect()`內初始化AEM Headless SDK，因為`context`變數變更時AEM Headless SDK必須變更。
 
    ```javascript
    useEffect(() => {
@@ -184,7 +184,7 @@ AEM Headless API允許從任何使用者端應用程式存取AEM內容。 我們
    > `/utils`下有`context.js`個檔案正在從`.env`檔案讀取專案。 若需參考，`context.url`是AEM as a Cloud Service環境的URL。 `context.endpoint`是上一個課程中建立之端點的完整路徑。 最後，`context.token`是開發人員權杖。
 
 
-1. 建立會公開來自AEM Headless SDK之內容的React狀態。
+1. 建立公開來自AEM Headless SDK內容的React狀態。
 
    ```javascript
    const Home = () => {

@@ -5,10 +5,10 @@ breadcrumb-title: AEM Headless 教學課程
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
 index: y
-source-git-commit: c498783aceaf3bb389baaeaeefbe9d8d0125a82e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 12%
@@ -31,7 +31,7 @@ ht-degree: 12%
       + [3 — 建立GraphQL查詢](./graphql/video-series/creating-graphql-queries.md)
       + [4 — 內容片段變數](./graphql/video-series/content-fragment-variations.md)
       + [5 - GraphQL端點](./graphql/video-series/graphql-endpoints.md)
-      + [6 — 作者與Publish架構](./graphql/video-series/author-publish-architecture.md)
+      + [6 — 作者和發佈架構](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL持續查詢](./graphql/video-series/graphql-persisted-queries.md)
    + 基本教學課程{#multi-step}
       + [概觀](./graphql/multi-step/overview.md)
@@ -86,9 +86,9 @@ ht-degree: 12%
       + [4 — 導覽與路由](./spa-editor/react/navigation-routing.md)
       + [5 — 自訂元件](./spa-editor/react/custom-component.md)
       + [6 — 擴充元件](./spa-editor/react/extend-component.md)
-   + angular{#angular}
+   + Angular{#angular}
       + [概觀](./spa-editor/angular/overview.md)
-      + [1 - SPA編輯器專案](./spa-editor/angular/create-project.md)
+      + [1 - SPA Editor專案](./spa-editor/angular/create-project.md)
       + [2 — 整合SPA](./spa-editor/angular/integrate-spa.md)
       + [3 — 對應SPA元件](./spa-editor/angular/map-components.md)
       + [4 — 導覽與路由](./spa-editor/angular/navigation-routing.md)
@@ -97,7 +97,7 @@ ht-degree: 12%
    + 遠端SPA{#remote-spa}
       + [概觀](./spa-editor/remote-spa/overview.md)
       + [1 — 設定AEM](./spa-editor/remote-spa/aem-configure.md)
-      + [2 -BootstrapSPA](./spa-editor/remote-spa/spa-bootstrap.md)
+      + [2 - BOOTSTRAP SPA](./spa-editor/remote-spa/spa-bootstrap.md)
       + [3 — 固定元件](./spa-editor/remote-spa/spa-fixed-component.md)
       + [4 — 容器元件](./spa-editor/remote-spa/spa-container-component.md)
       + [5 — 動態路由](./spa-editor/remote-spa/spa-dynamic-routes.md)
@@ -114,7 +114,7 @@ ht-degree: 12%
    + [3 — 編寫事件內容片段](./content-services/chapter-3.md)
    + [4 — 定義Content Services範本](./content-services/chapter-4.md)
    + [5 — 編寫Content Services頁面](./content-services/chapter-5.md)
-   + [6 — 在AEM Publish上公開傳送內容](./content-services/chapter-6.md)
+   + [6 — 在AEM Publish上公開傳送的內容](./content-services/chapter-6.md)
    + [7 — 從行動應用程式使用AEM內容服務](./content-services/chapter-7.md)
 + 程式碼範例{#code-samples}
    + [篩選React應用程式](./graphql/code-samples/filtering-react-app.md)

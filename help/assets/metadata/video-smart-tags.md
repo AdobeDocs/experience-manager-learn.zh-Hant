@@ -2,7 +2,7 @@
 title: AEM Assets中的影片智慧標籤
 description: Experience Manager Assets運用Adobe Sensei，使用可描述影片中關鍵元素的關鍵字，聰明地標籤影片資產，讓AEM使用者能透過關鍵字搜尋輕鬆找到影片。
 feature: Smart Tags
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6445
 thumbnail: 327005.jpg
 topic: Content Management
@@ -12,7 +12,7 @@ last-substantial-update: 2022-06-11T00:00:00Z
 doc-type: Feature Video
 exl-id: 24d62f81-a6a6-4cfd-b529-b071539a2c1d
 duration: 69
-source-git-commit: e4a9ed215603e1a1726a5a031c1c18f93d438355
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%

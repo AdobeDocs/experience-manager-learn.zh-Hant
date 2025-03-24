@@ -5,12 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
+exl-id: e1e5745e-96fb-46c6-aa7f-43cdf2dfddbc
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 1%
@@ -23,10 +24,10 @@ ht-degree: 1%
 
 建立此對話方塊的最簡單方法如下：
 
-1. 在您的AEM專案中，在countries元件資料夾底下建立一個名為_cq_dialog的資料夾。
+1. 在您的AEM專案中，在countries元件資料夾底下建立名為_cq_dialog的資料夾。
 2. 在_cq_dialog資料夾內，建立名為.content.xml的檔案。
 3. 將下方提供的XML程式碼貼入此檔案中。
-4. 儲存您的變更，並與AEM同步專案。
+4. 儲存您的變更，並將您的專案與AEM同步。
 
 這會新增國家/地區元件的對話方塊設定。
 

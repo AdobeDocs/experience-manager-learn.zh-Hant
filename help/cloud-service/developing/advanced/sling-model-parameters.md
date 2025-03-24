@@ -1,23 +1,23 @@
 ---
 title: 從HTL引數化Sling模型
 description: 瞭解如何在AEM中從HTL傳遞引數至Sling模型。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Sling Model
 role: Developer
 jira: KT-15923
 level: Intermediate, Experienced
-source-git-commit: f45d04b489771b9d3613cb4ce5e7b94d531ac783
+exl-id: 5d852617-720a-4a00-aecd-26d0ab77d9b3
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
-
 # 從HTL引數化Sling模型
 
-Adobe Experience Manager (AEM)提供強大的架構，可建立動態且具備調整能力的Web應用程式。 其強大的功能之一是可引數化Sling模型，增強其彈性和可重複使用性。 本教學課程將引導您建立引數化Sling模型，並在HTL (HTML範本語言)中使用它來呈現動態內容。
+Adobe Experience Manager (AEM)為建立動態和適應性極強的Web應用程式提供強大的架構。 其強大的功能之一是可引數化Sling模型，增強其彈性和可重複使用性。 本教學課程將引導您建立引數化Sling模型，並在HTL (HTML範本語言)中使用它來呈現動態內容。
 
 ## HTL指令碼
 
@@ -127,4 +127,3 @@ HTL指令碼使用引數`"Hello"`和`"World"`產生下列輸出：
 ```
 
 這示範了如何根據透過HTL提供的輸入引數來影響AEM中的引數化Sling模型。
-

@@ -1,7 +1,7 @@
 ---
 title: 使用AEM中的系統總覽儀表板
-description: 在舊版AEM中，管理員需要檢視多個位置，才能取得AEM執行個體的完整資訊。 「系統概覽」旨在透過單一儀表板提供AEM執行個體的組態、硬體和執行狀況的高層級檢視，以解決此問題。
-version: 6.4, 6.5
+description: 在舊版AEM中，管理員需要檢視多個位置，才能完整瞭解AEM執行個體。 「系統概覽」旨在解決此問題，透過單一儀表板提供AEM執行個體的設定、硬體和健康狀態的高層級檢視。
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Operations
 doc-type: Technical Video
 topic: Administration
@@ -9,7 +9,7 @@ role: Admin
 level: Beginner
 exl-id: af8f499c-4955-44b5-8f21-085263ca31a3
 duration: 357
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # 使用系統概觀儀表板
 
-Adobe Experience Manager (AEM) [!UICONTROL 系統概覽]提供從單一儀表板檢視AEM執行個體的組態、硬體及健康情況的高階檢視。
+Adobe Experience Manager (AEM) [!UICONTROL 系統概覽]提供從單一儀表板檢視AEM執行個體的組態、硬體及健康情況的高層級檢視。
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
-1. 系統概觀可從下列位置存取： **AEM開始** > **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 系統概觀]**
+1. 系統總覽可從&#x200B;**AEM開始** > **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 系統總覽]**&#x200B;存取
 
    直接在&#x200B;**`<server-host>/libs/granite/operations/content/systemoverview.html`**
 

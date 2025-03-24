@@ -1,7 +1,7 @@
 ---
 title: 使用JDBC DataSourcePool的SQL連線
 description: 瞭解如何使用AEM的JDBC DataSourcePool和輸出連線埠，從AEM as a Cloud Service連線到SQL資料庫。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
 duration: 117
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
@@ -60,7 +60,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 
 ## 程式碼範例
 
-此Java™程式碼範例屬於透過AEM DataSourcePool OSGi服務連線至外部MySQL資料庫的OSGi服務。
+此Java™程式碼範例屬於OSGi服務，透過AEM的DataSourcePool OSGi服務連線至外部MySQL資料庫。
 DataSourcePool OSGi Factory設定接著會指定透過[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)作業中的`portForwards`規則對應到外部主機和連線埠`mysql.example.com:3306`的連線埠(`30001`)。
 
 ```json
@@ -134,7 +134,7 @@ public class JdbcExternalServiceImpl implements ExternalService {
 
 ## MySQL驅動程式相依性
 
-AEM as a Cloud Service通常需要您提供Java™資料庫驅動程式來支援連線。 提供驅動程式通常最好透過`all`套件將包含這些驅動程式的OSGi套件成品內嵌至AEM專案中。
+AEM as a Cloud Service通常需要您提供Java™資料庫驅動程式來支援連線。 提供驅動程式的最佳作法通常是透過`all`套件將包含這些驅動程式的OSGi套件成品內嵌至AEM專案。
 
 ### Reactor pom.xml
 

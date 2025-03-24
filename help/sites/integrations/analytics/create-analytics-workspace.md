@@ -1,7 +1,7 @@
 ---
 title: 使用Analysis Workspace分析資料
 description: 瞭解如何將從Adobe Experience Manager網站擷取的資料對應至Adobe Analytics報表套裝中的量度和維度。 瞭解如何使用Adobe Analytics的Analysis Workspace功能建置詳細的報告控制面板。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: User
@@ -13,7 +13,7 @@ exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 badgeIntegration: label="整合" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
 duration: 443
-source-git-commit: 606607b85fae012e76d57b0b35820247a6862e32
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2072'
 ht-degree: 0%
@@ -55,13 +55,13 @@ WKND行銷團隊想要瞭解哪些`Call to Action (CTA)`按鈕在首頁上表現
 
 * 已啟用[Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)的&#x200B;**標籤屬性**
 * **Adobe Analytics**&#x200B;測試/開發報表套裝ID與追蹤伺服器。 請參閱下列有關[建立報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)的檔案。
-* [Experience Platform偵錯工具](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)瀏覽器延伸模組已設定在[WKND網站](https://wknd.site/us/en.html)或啟用Adobe資料層的AEM網站上載入標籤屬性。
+* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)瀏覽器擴充功能已設定在[WKND網站](https://wknd.site/us/en.html)或啟用Adobe資料層的AEM網站上載入標籤屬性。
 
 ## 轉換變數(eVar)和成功事件（事件）
 
-Custom Insight轉換變數(或eVar)會放置在網站所選網頁的Adobe代碼中。 其主要用途是在自訂行銷報告中區隔轉換成功量度。 eVar可以是以造訪為基礎，其功能與Cookie類似。 傳遞至eVar變數的值會跟隨使用者一段預定的時間。
+Custom Insight轉換變數(或eVar)會放置在網站所選網頁的Adobe程式碼中。 其主要用途是在自訂行銷報告中區隔轉換成功量度。 eVar可以是以造訪為基礎，其功能與Cookie類似。 傳入eVar變數的值會跟隨使用者預定的一段時間。
 
-當eVar設定為訪客的值時，Adobe會自動記住該值，直到它過期為止。 訪客在eVar值作用中時遇到的任何成功事件都會計入該eVar值。
+當eVar設為訪客的值時，Adobe會自動記住該值，直到它過期為止。 eVar值作用中時，訪客遇到的任何成功事件都會計入eVar值。
 
 eVar最適合用來測量原因和結果，例如：
 
@@ -160,7 +160,7 @@ Analysis Workspace是彈性的瀏覽器工具，可讓您快速建立分析和�
    * **After**
      ![eVar5量度](assets/create-analytics-workspace/evar5-metrics.png)
 
-1. 若要瞭解使用者在WKND網站頁面上與CTA按鈕互動的方式，需要進一步劃分，方法是新增按鈕ID (eVar8)量度。
+1. 若要瞭解使用者在WKND網站頁面上與CTA按鈕互動的方式，需要新增按鈕ID (eVar8)量度來進一步劃分。
 
    ![eVar8](assets/create-analytics-workspace/evar8.png)
 
@@ -185,7 +185,7 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 
    ![轉換分類](assets/create-analytics-workspace/conversion-classification.png)
 
-1. 從&#x200B;**選取分類型別**&#x200B;下拉式清單中，選取變數(eVar8按鈕ID)以新增分類。
+1. 從&#x200B;**選取分類型別**&#x200B;下拉式清單中，選取變數(eVar8 — 按鈕ID)以新增分類。
 1. 按一下「分類」區段所列分類變數旁的箭頭，以新增分類。
 
    ![轉換分類型別](assets/create-analytics-workspace/select-classification-variable.png)
@@ -198,7 +198,7 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 
 ### 分類匯入工具
 
-使用匯入工具將分類上傳至Adobe Analytics。 您也可以在匯入之前，匯出資料以進行更新。 您使用匯入工具匯入的資料必須是特定格式。 Adobe可讓您選擇下載資料範本，並將所有適當的標題詳細資料放在以Tab分隔的資料檔案中。 您可以將新資料新增至此範本，然後使用FTP在瀏覽器中匯入資料檔案。
+使用匯入工具將分類上傳至Adobe Analytics。 您也可以在匯入之前，匯出資料以進行更新。 您使用匯入工具匯入的資料必須是特定格式。 Adobe提供您下載資料範本的選項，該範本包含以Tab分隔的資料檔案中所有適當的標題詳細資訊。 您可以將新資料新增至此範本，然後使用FTP在瀏覽器中匯入資料檔案。
 
 #### 分類範本
 
@@ -217,14 +217,14 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 
 1. 按一下&#x200B;**下載**&#x200B;並將範本檔案儲存到您的本機系統。 範本檔案是以定位字元分隔的資料檔案（副檔名為.tab），大多數的試算表應用程式均能支援。
 1. 使用您選擇的編輯器開啟以Tab分隔的資料檔案。
-1. 針對區段中步驟9的每個eVar9值，將按鈕ID (eVar9)和對應的按鈕名稱新增至以定位點分隔的檔案。
+1. 針對區段中步驟9的每個eVar9值，將按鈕ID (eVar9)和對應的按鈕名稱新增至定位點分隔的檔案。
 
    ![索引鍵值](assets/create-analytics-workspace/key-value.png)
 
 1. **儲存**&#x200B;以Tab分隔的檔案。
 1. 瀏覽至&#x200B;**匯入檔案**&#x200B;標籤。
 1. 設定檔案匯入的目的地。
-   * **選取報表套裝** ： WKND Site AEM （報表套裝）
+   * **選取報表套裝** ： WKND網站AEM （報表套裝）
    * **要分類的資料集** ：按鈕Id (轉換變數eVar8)
 1. 按一下&#x200B;**選擇檔案**&#x200B;選項，從您的系統上傳Tab分隔的檔案，然後按一下&#x200B;**匯入檔案**
 

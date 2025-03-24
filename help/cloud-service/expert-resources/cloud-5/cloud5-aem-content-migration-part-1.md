@@ -1,7 +1,7 @@
 ---
 title: 移轉至雲端 — 第1部分
 description: Darin和James討論移轉至AEM Cloud並示範一些技巧和最佳實務。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 role: Admin, Developer
 level: Intermediate
 jira: KT-10207
@@ -10,7 +10,7 @@ recommendations: noDisplay, noCatalog
 thumbnail: 342133.jpeg
 exl-id: 817ea20d-d902-4497-83d3-5800ed6aaa8f
 duration: 315
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 6%

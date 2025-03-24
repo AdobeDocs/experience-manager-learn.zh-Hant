@@ -1,7 +1,7 @@
 ---
 title: 新增網站品牌
 description: 為Edge Delivery Services網站定義全域CSS、CSS變數和網頁字型。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: a5cd9906-7e7a-43dd-a6b2-e80f67d37992
-source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 0%
@@ -96,7 +96,7 @@ Edge Delivery Services使用位於`styles/styles.css`的全域CSS檔案，為整
 
 裸元素會直接透過其元素名稱來設定樣式，而不使用CSS類別。 例如，使用`h1 { ... }`將樣式套用至`h1`元素，而不使用`.page-heading` CSS類別的樣式。
 
-在`styles/styles.css`檔案中，一組基本樣式套用至純HTML元素。 Edge Delivery Services網站會使用裸元素來排定優先順序，因為它們會符合Edge Delivery服務的原生語意HTML。
+在`styles/styles.css`檔案中，一組基本樣式套用至純HTML元素。 Edge Delivery Services網站會使用裸元素來排定優先順序，因為這些元素會與Edge Delivery服務的原生語意HTML一致。
 
 為了符合WKND品牌，讓我們在`styles.css`中設定一些裸元素的樣式：
 
@@ -123,11 +123,11 @@ h2::after {
 
 ### 推斷的元素
 
-在Edge Delivery Services中，專案的`scripts.js`和`aem.js`程式碼會根據HTML中的內容，自動增強特定的純HTML元素。
+在Edge Delivery Services中，專案的`scripts.js`和`aem.js`程式碼會根據其在HTML中的內容，自動增強特定的純HTML元素。
 
 例如，根據此內容，在錨點(`<a>`)元素自己的行上撰寫（而不是與周圍文字內嵌）被推斷為按鈕。 這些錨點會以CSS類別`button-container`的容器`div`自動包裝，而且錨點元素已新增`button` CSS類別。
 
-例如，當連結是在自己的行上編寫時，Edge Delivery Services JavaScript會將其DOM更新為以下內容：
+例如，當連結以專屬的行編寫時，Edge Delivery Services JavaScript會將其DOM更新為下列專案：
 
 ```html
 <p class="button-container">
@@ -291,11 +291,11 @@ Edge Delivery Services專案最佳化網頁字型的使用，以維持高效能�
 
 網頁字型因其大小而經常影響效能，可能會增加累積版面位移(CLS)分數，並降低整體Lighthouse分數。 為了確保在Web字型載入時立即顯示文字，Edge Delivery Services專案使用瀏覽器原生備援字型。 在套用所需字型時，此方法有助於維持流暢的使用者體驗。
 
-若要選取最佳備援字型，請使用Adobe的[Helix字型備援Chrome擴充功能](https://www.aem.live/developer/font-fallback)，該擴充功能會在自訂字型載入前，決定要供瀏覽器使用的緊密相符字型。 應將產生的遞補字型宣告新增至`styles/styles.css`檔案，以改善效能並確保使用者獲得順暢的體驗。
+若要選取最佳後援字型，請使用Adobe的[Helix Font Fallback Chrome擴充功能](https://www.aem.live/developer/font-fallback)，該功能會在自訂字型載入前，決定要供瀏覽器使用的緊密相符字型。 應將產生的遞補字型宣告新增至`styles/styles.css`檔案，以改善效能並確保使用者獲得順暢的體驗。
 
 ![Helix字型後援Chrome擴充功能](./assets/4-website-branding/font-fallback-chrome-plugin.png){align=center}
 
-若要使用[Helix Font Fallback Chrome擴充功能](https://www.aem.live/developer/font-fallback)，請確定網頁已套用在Edge Delivery Services網站上使用的相同變數中的網頁字型。 此教學課程示範[wknd.site](http://wknd.site/us/en.html)上的擴充功能。 開發網站時，請將擴充功能套用至正在處理的網站，而非[wknd.site](http://wknd.site/us/en.html)。
+若要使用[Helix Font Fallback Chrome擴充功能](https://www.aem.live/developer/font-fallback)，請確定網頁已套用在Edge Delivery Services網站上使用的相同變化中的網頁字型。 此教學課程示範[wknd.site](http://wknd.site/us/en.html)上的擴充功能。 開發網站時，請將擴充功能套用至正在處理的網站，而非[wknd.site](http://wknd.site/us/en.html)。
 
 ```css
 /* styles/styles.css */
@@ -336,7 +336,7 @@ Edge Delivery Services專案最佳化網頁字型的使用，以維持高效能�
 
 ## 開發預覽
 
-新增CSS時，AEM CLI的本機開發環境會自動重新載入變更，因此可快速輕鬆地檢視CSS對區塊的影響。
+新增CSS時，AEM CLI的本機開發環境會自動重新載入變更，因此能夠快速輕鬆地檢視CSS對區塊的影響。
 
 ![WKND品牌CSS的開發預覽](./assets/4-website-branding/preview.png)
 

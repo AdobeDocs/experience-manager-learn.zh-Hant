@@ -2,7 +2,7 @@
 title: 設定AEM as a Cloud Service開發的開發工具
 description: 設定本機開發機器，並具備在本機針對AEM進行開發所需的所有基準線工具。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-4267
 thumbnail: 25907.jpg
 topic: Development
@@ -11,7 +11,7 @@ level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 duration: 3508
-source-git-commit: b865156776865b1155af7c7f3bd234bd337be796
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 6%

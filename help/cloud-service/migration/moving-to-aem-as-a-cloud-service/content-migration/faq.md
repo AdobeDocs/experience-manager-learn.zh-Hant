@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service內容移轉常見問題集
 description: 取得有關將內容移轉至AEM as a Cloud Service的常見問題解答。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: article
 topic: Migration
 feature: Migration
@@ -11,7 +11,7 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 399
-source-git-commit: e29eaefb20d466126d0d31ad8eb598b63a0cebcd
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1884'
 ht-degree: 0%
@@ -29,15 +29,15 @@ ht-degree: 0%
 + **CTT**： [內容轉移工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
 + **攝影機**： [Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)
 + **IMS**： [Identity Management系統](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html)
-+ **DM**： [Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dm-journey/dm-journey-part1.html)
++ **DM**： [動態媒體](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dm-journey/dm-journey-part1.html)
 
-建立CTT相關Adobe支援票證時，請使用以下範本提供詳細資訊。
+建立CTT相關的Adobe支援票證時，請使用以下範本以提供詳細資訊。
 
 ![內容移轉Adobe支援票證範本](../../assets/faq/adobe-support-ticket-template.png) { align=&quot;center&quot; }
 
 ## 一般內容移轉問題
 
-### 問：將內容移轉至AEM做為Cloud Service有哪些不同方法？
+### 問：將內容移轉至AEM as Cloud Service有哪些不同方法？
 
 有三種不同方法可供使用
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ### 問：使用CTT可傳輸的內容數量是否有限制？
 
-否。CTT工具可從AEM來源擷取並內嵌至AEMaaCS。 不過，在移轉前應考量AEMaaCS平台的特定限制。
+不行。CTT工具可從AEM來源擷取並內嵌至AEMaaCS。 不過，在移轉前應考量AEMaaCS平台的特定限制。
 
 如需詳細資訊，請參閱[雲端移轉必要條件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html)。
 
@@ -61,17 +61,17 @@ ht-degree: 0%
 
 製作層級與發佈層級之間一律建議執行1:1擷取和擷取。 也就是說，擷取來源生產作者並將其擷取到開發、中繼和生產CS中是可接受的作法。
 
-### 問：是否有方法可以估計使用CTT將內容從來源AEM移轉到AEMaaCS所需的時間？
+### 問：是否有方法可以估計使用CTT將內容從來源AEM移轉至AEMaaCS所需的時間？
 
 由於移轉程式取決於網際網路頻寬、配置給CTT程式的棧積、可用的記憶體，以及每個來源系統都比較主觀的磁碟IO，因此建議及早執行移轉證明，並推斷資料點以得出預估值。
 
-### 問：如果我啟動CTT擷取程式，來源AEM效能會受到哪些影響？
+### 問：如果我啟動CTT擷取程式，來源AEM的效能會受到哪些影響？
 
 CTT工具會在自己的Java™流程中執行，最多需要4gb的棧積，這是透過OSGi設定可設定的。 此數字可能會變更，但您可以對Java™流程進行深思熟慮並找出原因。
 
-如果已安裝AZCopy且/或已啟用預先複製選項/驗證功能，則AZCopy處理序會消耗CPU週期。
+如果已安裝AZCopy且/或已啟用預先複製選項/驗證功能，則AZCopy程式會使用CPU週期。
 
-除了jvm之外，此工具也會使用磁碟IO將資料儲存在可轉換的暫存空間中，且在擷取週期之後會加以清除。 除了RAM、CPU和磁碟IO之外，CTT工具也會使用來源系統的網路頻寬，將資料上傳到Azure blob存放區。
+除了jvm之外，此工具也會使用磁碟IO將資料儲存在可轉換的暫存空間中，且在擷取週期之後會加以清除。 除了RAM、CPU和磁碟IO之外，CTT工具也會使用來源系統的網路頻寬，將資料上傳至Azure blob存放區。
 
 CTT擷取流程所需的資源量取決於節點數量、Blob數量及其彙總大小。 很難提供公式，因此建議執行小型移轉證明，以判斷來源伺服器大小需求。
 
@@ -152,7 +152,7 @@ CTT流程需要連線至以下資源：
 
 ### 問：資產在AEMaaCS中擷取後是否會自動重新處理？
 
-否。若要處理資產，必須起始重新處理的請求。
+不行。若要處理資產，必須起始重新處理的請求。
 
 ### 問：資產在AEMaaCS中擷取後是否會自動重新索引？
 
@@ -207,7 +207,7 @@ CTT流程需要連線至以下資源：
 
 ## 其他資源
 
-+ [在雲端中移轉至Experience Manager的秘訣與技巧( Summit 2022)](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
++ [在雲端中移轉至Experience Manager ( Summit 2022)的秘訣與技巧](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
 
 + [CTT專家系列影片](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
 

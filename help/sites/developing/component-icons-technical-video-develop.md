@@ -1,7 +1,7 @@
 ---
 title: 在Adobe Experience Manager Sites中自訂元件圖示
 description: 元件圖示可讓作者透過圖示或有意義的縮寫快速識別元件。 作者現在可以找到所需的元件，以前所未有的速度建置其網頁體驗。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Core Components
 topic: Development
 role: User
@@ -9,7 +9,7 @@ level: Intermediate
 doc-type: Technical Video
 exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
 duration: 379
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 0%

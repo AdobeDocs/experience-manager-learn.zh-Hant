@@ -2,7 +2,7 @@
 title: 搭配AEM Assets Dynamic Media使用智慧型裁切
 description: 智慧型裁切使用Adobe Sensei，省去針對回應式設計裁切內容所費時且成本高昂的工作。
 feature: Smart Crop, Image Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
@@ -10,7 +10,7 @@ jira: KT-784
 doc-type: Feature Video
 exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
 duration: 443
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -25,14 +25,14 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->影片假設您的AEM執行個體以Dynamic Media S7模式執行。 [您可以在此處找到使用Dynamic Media設定AEM的說明。](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>影片假設您的AEM執行個體在Dynamic Media S7模式下執行。 [您可以在此處找到使用Dynamic Media設定AEM的說明。](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## Adobe Experience Manager的Dynamic Media智慧型裁切功能包括
 
 * AEM資產管理員可以根據裝置寬度和高度，輕鬆建立智慧型裁切的影像設定檔。
 * 您可以為個別資產執行智慧型裁切，或為資料夾內的所有資產執行智慧型裁切。
 * 智慧型裁切編輯版面可以調整大小，以提升可見度。
-* AEM Sites的Dynamic Media元件支援智慧型裁切。
+* AEM Sites的Dynamic Media元件支援智慧裁切。
 * 智慧型裁切資產的已發佈URL可用於接受託管資產的第三方應用程式。
 
 >[!NOTE]

@@ -1,8 +1,8 @@
 ---
 title: 使用存放庫瀏覽器除錯AEM
-description: 存放庫瀏覽器是一款功能強大的工具，可讓您檢視AEM的基本資料存放區，以便更輕鬆地偵錯AEM as a Cloud Service環境。
+description: 存放庫瀏覽器是功能強大的工具，可讓您檢視AEM的基本資料存放區，以便更輕鬆地偵錯AEM as a Cloud Service環境。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-10004
 thumbnail: 341464.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 88af40fc-deff-4b92-84b1-88df2dbdd90b
 duration: 305
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 使用存放庫瀏覽器除錯AEM as a Cloud Service
 
-存放庫瀏覽器是一款功能強大的工具，可讓您檢視AEM的基本資料存放區，以便更輕鬆地偵錯AEM as a Cloud Service環境。 存放庫瀏覽器支援生產、暫存和開發以及作者、Publish和預覽服務上AEM的資源和屬性的唯讀檢視。
+存放庫瀏覽器是功能強大的工具，可讓您檢視AEM的基本資料存放區，以便更輕鬆地偵錯AEM as a Cloud Service環境。 存放庫瀏覽器支援生產、暫存和開發以及作者、發佈和預覽服務中AEM的資源和屬性的唯讀檢視。
 
 >[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
 
@@ -41,8 +41,8 @@ ht-degree: 0%
    + 所有預覽
 1. 選取&#x200B;__開啟存放庫瀏覽器__
 
-「存放庫瀏覽器」會以唯讀模式為選取的服務層(作者、Publish或預覽)開啟，顯示您的使用者可存取的資源與屬性。
+「存放庫瀏覽器」會以唯讀模式開啟所選服務層（作者、發佈或預覽），顯示您的使用者可存取的資源與屬性。
 
-## Publish和預覽存取權
+## 發佈和預覽存取權
 
-預設情況下，存取Publish或預覽的功能會受到限制，減少存放庫瀏覽器中的可用資源。 [若要在Publish （或預覽）上檢視所有資源，請將使用者新增至Publish （或預覽） Administrators角色。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)
+依預設，存取發佈或預覽是有限的，減少了存放庫瀏覽器中的可用資源。 [若要檢視發佈（或預覽）上的所有資源，請將使用者新增至發佈（或預覽）管理員角色。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)

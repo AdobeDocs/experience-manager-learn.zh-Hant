@@ -1,7 +1,7 @@
 ---
 title: 虛擬私人網路 (VPN)
-description: 瞭解如何將AEM as a Cloud Service與您的VPN連線，以在AEM和內部服務之間建立安全的通訊通道。
-version: Cloud Service
+description: 瞭解如何將AEM as a Cloud Service與您的VPN連線，以在AEM與內部服務之間建立安全的通訊通道。
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 1%
@@ -20,11 +20,11 @@ ht-degree: 1%
 
 # 虛擬私人網路 (VPN)
 
-瞭解如何將AEM as a Cloud Service與您的VPN連線，以在AEM和內部服務之間建立安全的通訊通道。
+瞭解如何將AEM as a Cloud Service與您的VPN連線，以在AEM與內部服務之間建立安全的通訊通道。
 
 ## 什麼是虛擬私人網路？
 
-虛擬私人網路(VPN)可讓AEM as a Cloud Service客戶將Cloud Manager程式內的&#x200B;**AEM環境**&#x200B;連線至現有的[支援](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)個VPN。 VPN可在AEM as a Cloud Service與客戶網路內的服務之間提供安全且受控制的連線。
+虛擬私人網路(VPN)可讓AEM as a Cloud Service客戶將Cloud Manager計畫內的&#x200B;**AEM環境**&#x200B;連線至現有的[支援](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)個VPN。 VPN可在AEM as a Cloud Service與客戶網路內的服務之間提供安全且受控制的連線。
 
 Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別。 在執行下列命令之前，請確定虛擬私人網路是您AEM as a Cloud Service最[適當的網路基礎建設型別](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
@@ -40,7 +40,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 使用Cloud Manager API設定虛擬私人網路時，需要下列專案：
 
-+ 具有[Cloud Manager企業所有者許可權](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)的Adobe帳戶
++ 具有[Cloud Manager企業所有者許可權的Adobe帳戶](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + 存取[Cloud Manager API的驗證認證](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
    + 組織ID （亦稱為IMS組織ID）
    + 使用者端ID （亦稱為API金鑰）
@@ -240,7 +240,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
    }
    ```
 
-   `nonProxyHosts`宣告了一組主機，應該透過預設共用IP位址範圍而不是專用輸出IP路由連線埠80或443。 `nonProxyHosts`可能很有用，因為通過共用IP的流量已由Adobe自動最佳化。
+   `nonProxyHosts`宣告了一組主機，應該透過預設共用IP位址範圍而不是專用輸出IP路由連線埠80或443。 `nonProxyHosts`可能很實用，因為Adobe已自動最佳化透過共用IP的流量。
 
    對於每個`portForwards`對應，進階網路會定義下列轉送規則：
 
@@ -248,7 +248,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
    |---------------------------------|----------|----------------|------------------|----------|
    | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-   如果您的AEM部署&#x200B;__僅__&#x200B;需要外部服務的HTTP/HTTPS連線，請將`portForwards`陣列保留空白，因為這些規則僅對非HTTP/HTTPS要求是必要的。
+   如果您的AEM部署&#x200B;__僅__&#x200B;需要外部服務的HTTP/HTTPS連線，請將`portForwards`陣列保留空白，因為這些規則僅對非HTTP/HTTPS要求為必要。
 
 
 2. 對於每個環境，請使用Cloud Manager API的[getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業來驗證VPN路由規則是否有效。
@@ -269,7 +269,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 ## 透過虛擬私人網路連線到外部服務
 
-啟用「虛擬私人網路」後，AEM程式碼和設定便可使用它們透過VPN呼叫外部服務。 AEM處理外部呼叫的方式有兩種：
+啟用「虛擬私人網路」後，AEM程式碼和設定便可使用它們透過VPN呼叫外部服務。 AEM對外部呼叫的處理方式有所差異，共有兩種型別：
 
 1. 對外部服務的HTTP/HTTPS呼叫
    + 包括對標準80或443連線埠以外的連線埠上執行的服務發出的HTTP/HTTPS呼叫。
@@ -280,7 +280,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 ### HTTP/HTTPS
 
-從AEM建立HTTP/HTTPS連線時，使用VPN時，HTTP/HTTPS連線會自動從AEM代理出去。 不需要其他程式碼或設定即可支援HTTP/HTTPS連線。
+從AEM建立HTTP/HTTPS連線時，若使用VPN，HTTP/HTTPS連線會自動從AEM代理出去。 不需要其他程式碼或設定即可支援HTTP/HTTPS連線。
 
 >[!TIP]
 >
@@ -311,7 +311,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 | `AEM_PROXY_HOST` | 非HTTP/HTTPS連線的Proxy主機 | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
-接著會透過`AEM_PROXY_HOST`與對應的連線埠(`portForwards.portOrig`)呼叫與外部服務的連線，AEM會路由傳送到對應的外部主機名稱(`portForwards.name`)與連線埠(`portForwards.portDest`)。
+接著會透過`AEM_PROXY_HOST`與對應的連線埠(`portForwards.portOrig`)呼叫與外部服務的連線，AEM會接著路由至對應的外部主機名稱(`portForwards.name`)與連線埠(`portForwards.portDest`)。
 
 | Proxy主機 | Proxy連線埠 |  | 外部主機 | 外部連線埠 |
 |---------------------------------|----------|----------------|------------------|----------|
@@ -359,10 +359,10 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
       </p>
     </td>
    <td>
-      <a  href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking"><img alt="AEM Publish的路徑型VPN存取限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <a  href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking"><img alt="AEM發佈的路徑型VPN存取限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
       <div><strong><a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking">AEM Publish的路徑型VPN存取限制</a></strong></div>
       <p>
-            需要AEM Publish上特定路徑的VPN存取權。
+            AEM Publish上的特定路徑需要VPN存取權。
       </p>
     </td>
    <td></td>

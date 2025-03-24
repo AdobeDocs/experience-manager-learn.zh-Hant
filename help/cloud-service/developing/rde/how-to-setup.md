@@ -2,7 +2,7 @@
 title: 如何設定快速開發環境
 description: 瞭解如何設定AEM as a Cloud Service的快速開發環境。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,10 +11,10 @@ thumbnail: KT-11861.png
 last-substantial-update: 2024-06-04T00:00:00Z
 exl-id: ab9ee81a-176e-4807-ba39-1ea5bebddeb2
 duration: 485
-source-git-commit: f714adaa9bb637c0c7b17837c1d4b9f2be737c5c
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '668'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -154,7 +154,7 @@ AEM RDE外掛程式可讓開發人員從本機電腦部署程式碼和內容。
 
 ## 驗證RDE存取權
 
-執行下列命令，驗證AEM RDE外掛程式的安裝和組態。
+執行下列命令，驗證AEM RDE外掛程式的安裝和設定。
 
 ```shell
 $ aio aem:rde:status
@@ -175,6 +175,6 @@ RDE狀態資訊的顯示方式如環境狀態、_您的AEM專案_&#x200B;套件�
 
 [aio CLI使用方式和命令](https://github.com/adobe/aio-cli#usage)
 
-用於與AEM快速開發環境互動的[Adobe I/O Runtime CLI外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
+[與AEM快速開發環境互動的Adobe I/O Runtime CLI外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [Cloud Manager aio CLI外掛程式](https://github.com/adobe/aio-cli-plugin-cloudmanager)

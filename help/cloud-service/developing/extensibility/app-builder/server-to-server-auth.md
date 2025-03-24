@@ -2,7 +2,7 @@
 title: 在App Builder動作中產生伺服器對伺服器存取權杖
 description: 瞭解如何使用OAuth伺服器對伺服器憑證產生存取權杖，以用於App Builder動作。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Intermediate
@@ -10,7 +10,7 @@ jira: KT-14724
 last-substantial-update: 2024-02-29T00:00:00Z
 duration: 122
 exl-id: 919cb9de-68f8-4380-940a-17274183298f
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -19,17 +19,17 @@ ht-degree: 0%
 
 # 在App Builder動作中產生伺服器對伺服器存取權杖
 
-App Builder動作可能需要與支援&#x200B;**OAuth伺服器對伺服器認證**&#x200B;且與App Builder應用程式部署的Adobe Developer Console專案相關聯的Adobe API互動。
+App Builder動作可能需要與支援&#x200B;**OAuth伺服器對伺服器認證**&#x200B;且與App Builder應用程式部署的Adobe Developer Console專案關聯的Adobe API互動。
 
 本指南說明如何使用&#x200B;_OAuth伺服器對伺服器認證_&#x200B;產生存取權杖，以用於App Builder動作。
 
 >[!IMPORTANT]
 >
-> 服務帳戶(JWT)憑證已遭取代，改用OAuth伺服器對伺服器憑證。 不過，仍有部分AdobeAPI僅支援服務帳戶(JWT)憑證，且正在移轉至OAuth伺服器對伺服器。 請檢閱Adobe API檔案，以瞭解支援的認證。
+> 服務帳戶(JWT)憑證已遭取代，改用OAuth伺服器對伺服器憑證。 不過，仍有部分Adobe API僅支援服務帳戶(JWT)憑證，且正在移轉至OAuth伺服器對伺服器。 請檢閱Adobe API檔案，以瞭解支援的認證。
 
 ## Adobe Developer Console專案設定
 
-將所需的AdobeAPI新增至Adobe Developer Console專案時，請在&#x200B;_設定API_&#x200B;步驟中，選取&#x200B;**OAuth伺服器對伺服器**&#x200B;驗證型別。
+將所需的Adobe API新增至Adobe Developer Console專案時，請在&#x200B;_設定API_&#x200B;步驟中，選取&#x200B;**OAuth伺服器對伺服器**&#x200B;驗證型別。
 
 ![Adobe Developer Console - OAuth伺服器對伺服器](./assets/s2s-auth/oauth-server-to-server.png)
 
@@ -87,7 +87,7 @@ runtimeManifest:
 
 ## 用於存取Token的OAuth伺服器對伺服器認證
 
-在App Builder動作中，`params`物件中有OAuth伺服器對伺服器認證。 使用這些認證，可以使用[OAuth 2.0資料庫](https://oauth.net/code/)產生存取權杖。 或者，您可以使用[節點擷取程式庫](https://www.npmjs.com/package/node-fetch)，向Adobe IMS權杖端點發出POST請求以取得存取權杖。
+在App Builder動作中，`params`物件中有OAuth伺服器對伺服器認證。 使用這些認證，可以使用[OAuth 2.0資料庫](https://oauth.net/code/)產生存取權杖。 或者，您可以使用[節點擷取程式庫](https://www.npmjs.com/package/node-fetch)，向Adobe IMS權杖端點發出POST要求以取得存取權杖。
 
 下列範例示範如何使用`node-fetch`資料庫向Adobe IMS權杖端點發出POST要求以取得存取權杖。
 

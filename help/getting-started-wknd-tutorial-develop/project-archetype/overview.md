@@ -1,7 +1,7 @@
 ---
 title: AEM Sites — 專案原型快速入門
 description: AEM Sites — 專案原型快速入門。 WKND教學課程是多部分教學課程，專為Adobe Experience Manager的新手開發人員設計。 此教學課程會逐步引導您為虛擬生活風格品牌WKND實作AEM網站。 此教學課程涵蓋基礎的主題，例如專案設定、maven原型、核心元件、可編輯的範本、使用者端資料庫和元件開發。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
 topic: Content Management, Development
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
 duration: 74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 28%
@@ -23,11 +23,11 @@ ht-degree: 28%
 
 {{edge-delivery-services-and-page-editor}}
 
-歡迎使用專為Adobe Experience Manager (AEM)的新手開發人員設計的多部分教學課程。 此教學課程會逐步引導您實施虛擬生活風格品牌WKND的AEM網站。
+歡迎使用專為Adobe Experience Manager (AEM)的新手開發人員設計的多部分教學課程。 此教學課程會逐步引導您為虛擬生活風格品牌WKND實作AEM網站。
 
 此教學課程從使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)產生新專案開始。
 
-此教學課程在設計上使用&#x200B;**AEM as a Cloud Service**，並且回溯相容於&#x200B;**AEM 6.5.14+**。 使用以下項目實作網站：
+此教學課程在設計上與&#x200B;**AEM as a Cloud Service**&#x200B;搭配使用，並且回溯相容於&#x200B;**AEM 6.5.14+**。 使用以下項目實作網站：
 
 * [Maven AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
@@ -46,7 +46,7 @@ ht-degree: 28%
 
 下列專案應在本機安裝：
 
-* [本機AEM **作者**&#x200B;執行個體](https://experience.adobe.com/#/downloads) (Cloud ServiceSDK或6.5.14+)
+* [本機AEM **作者**&#x200B;執行個體](https://experience.adobe.com/#/downloads) (Cloud Service SDK或6.5.14+)
 * [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 或更新版本)
 * [Node.js](https://nodejs.org/en/) （LTS — 長期支援）
@@ -71,4 +71,4 @@ ht-degree: 28%
 
 ## 後續步驟 {#next-steps}
 
-您還在等什麼？ 導覽至[專案設定](project-setup.md)章節，開始進行教學課程，並瞭解如何使用AEM專案原型產生新的Adobe Experience Manager專案。
+您還在等什麼？ 導覽至[專案設定](project-setup.md)章節，開始進行教學課程，並瞭解如何使用Adobe Experience Manager專案原型產生新的AEM專案。

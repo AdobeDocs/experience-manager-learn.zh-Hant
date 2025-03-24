@@ -1,7 +1,7 @@
 ---
 title: 使用AEM Headless SDK
 description: 瞭解如何使用AEM Headless SDK進行GraphQL查詢。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
 duration: 200
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 6%
@@ -21,7 +21,7 @@ ht-degree: 6%
 
 AEM Headless SDK是一組程式庫，使用者端可使用這些程式庫，透過HTTP快速輕鬆地與AEM Headless API互動。
 
-AEM Headless SDK適用於多種平台：
+AEM Headless SDK適用於各種平台：
 
 + [適用於用戶端瀏覽器的 AEM Headless SDK (JavaScript)](https://github.com/adobe/aem-headless-client-js)
 + [適用於伺服器端/Node.js 的 AEM Headless SDK (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
@@ -29,9 +29,9 @@ AEM Headless SDK適用於多種平台：
 
 ## 持續性 GraphQL 查詢
 
-使用GraphQL透過持續性查詢來查詢AEM (與[使用者端定義的GraphQL查詢](#graphl-queries)不同)可讓開發人員在AEM中持續性查詢（而非其結果），然後要求依名稱執行查詢。 持久查詢與SQL資料庫中預存程式的概念類似。
+使用GraphQL透過持續性查詢來查詢AEM (與[使用者端定義的GraphQL查詢](#graphl-queries)相反)，可讓開發人員在AEM中持續性查詢（而非其結果），然後要求依名稱執行查詢。 持久查詢與SQL資料庫中預存程式的概念類似。
 
-持續查詢的效能比使用者端定義的GraphQL查詢更高，因為持續查詢是使用HTTPGET(可在CDN和AEM Dispatcher層級快取)執行。 持久查詢也有效，定義API，並消除開發人員瞭解每個內容片段模式詳細資訊的需求。
+持續查詢的效能比使用者端定義的GraphQL查詢更高，因為持續查詢是使用HTTP GET (可在CDN和AEM Dispatcher層級快取)執行。 持久查詢也有效，定義API，並消除開發人員瞭解每個內容片段模式詳細資訊的需求。
 
 ### 程式碼範例{#persisted-graphql-queries-code-examples}
 
@@ -45,9 +45,9 @@ AEM Headless SDK適用於多種平台：
 $ npm i @adobe/aem-headless-client-js
 ```
 
-此程式碼範例說明如何使用[@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm模組使用`async/await`語法來查詢AEM。 JavaScript的AEM Headless SDK也支援[Promise語法](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client)。
+此程式碼範例說明如何使用[@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm模組使用`async/await`語法來查詢AEM。 適用於JavaScript的AEM Headless SDK也支援[Promise語法](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client)。
 
-此程式碼假設在AEM Author上已建立名為`wknd/adventureNames`的持續查詢，並發佈至AEM Publish。
+此程式碼假設已在AEM Author上建立名為`wknd/adventureNames`的持續查詢，並發佈至AEM Publish。
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';
@@ -88,7 +88,7 @@ let { data, errors } = executePersistedQuery('wknd-shared/adventures-by-slug', {
 
 +++
 
-+++ React useEffect(..) 範例
++++ React useEffect(..)範例
 
 從您的React專案根目錄執行`npm install`命令，以安裝[@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js)。
 
@@ -96,12 +96,12 @@ let { data, errors } = executePersistedQuery('wknd-shared/adventures-by-slug', {
 $ npm i @adobe/aem-headless-client-js
 ```
 
-此程式碼範例說明如何使用[React useEffect(..) 勾選](https://reactjs.org/docs/hooks-effect.html)以執行對AEM GraphQL的非同步呼叫。
+此程式碼範例說明如何使用[React useEffect(...)鉤點](https://reactjs.org/docs/hooks-effect.html)執行對AEM GraphQL的非同步呼叫。
 
 在React中使用`useEffect`進行非同步GraphQL呼叫很有用，因為：
 
-1. 它提供同步包裝函式，以供非同步呼叫AEM。
-1. 它減少了不必要的AEM請求。
+1. 它為AEM的非同步呼叫提供同步包裝函式。
+1. 這可減少不必要的AEM請求。
 
 此程式碼假設已在AEM Author上建立名為`wknd-shared/adventure-by-slug`的持續查詢，並使用GraphiQL發佈至AEM Publish。
 

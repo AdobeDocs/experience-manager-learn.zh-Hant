@@ -1,7 +1,7 @@
 ---
 title: 主題設定工作流程 | AEM快速網站建立
-description: 瞭解如何更新Adobe Experience Manager網站的主題來源，以套用品牌特定的樣式。 瞭解如何使用Proxy伺服器檢視CSS和Javascript更新的即時預覽。 本教學課程也將涵蓋如何使用AdobeCloud Manager的前端管道將主題更新部署到AEM網站。
-version: Cloud Service
+description: 瞭解如何更新Adobe Experience Manager網站的主題來源，以套用品牌特定的樣式。 瞭解如何使用Proxy伺服器檢視CSS和Javascript更新的即時預覽。 本教學課程也將涵蓋如何使用AEM Cloud Manager的前端管道將主題更新部署到Adobe網站。
+version: Experience Manager as a Cloud Service
 feature: Core Components
 topic: Content Management, Development
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
 recommendations: noDisplay, noCatalog
 duration: 1275
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 主題設定工作流程 {#theming}
 
-在本章中，我們會更新Adobe Experience Manager網站的主題來源，以套用品牌特定的樣式。 我們瞭解如何使用Proxy伺服器來檢視CSS和Javascript更新的預覽，同時針對已上線的網站進行程式碼。 本教學課程也將涵蓋如何使用AdobeCloud Manager的前端管道將主題更新部署到AEM網站。
+在本章中，我們會更新Adobe Experience Manager網站的主題來源，以套用品牌特定的樣式。 我們瞭解如何使用Proxy伺服器來檢視CSS和Javascript更新的預覽，同時針對已上線的網站進行程式碼。 本教學課程也將涵蓋如何使用AEM Cloud Manager的前端管道將主題更新部署到Adobe網站。
 
 最後，我們的網站會更新，加入符合WKND品牌的樣式。
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 1. 瞭解如何下載及修改網站的主題來源。
 1. 瞭解即時網站程式碼如何供即時預覽。
-1. 瞭解使用AdobeCloud Manager的前端管道傳送已編譯的CSS和JavaScript更新作為主題一部分的端對端工作流程。
+1. 瞭解使用Adobe Cloud Manager的前端管道傳送已編譯的CSS和JavaScript更新作為主題一部分的端對端工作流程。
 
 ## 更新主題 {#theme-update}
 
@@ -83,8 +83,8 @@ ht-degree: 1%
 
 ## 恭喜！ {#congratulations}
 
-恭喜，您剛才已更新並部署主題至AEM！
+恭喜，您剛才已更新並部署AEM的主題！
 
 ### 後續步驟 {#next-steps}
 
-透過[AEM專案原型](../project-archetype/overview.md)建立網站，深入瞭解AEM開發並瞭解更多基礎技術。
+透過[AEM專案原型](../project-archetype/overview.md)建立網站，更深入瞭解AEM開發，並瞭解更多基礎技術。

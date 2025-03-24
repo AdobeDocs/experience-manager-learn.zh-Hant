@@ -1,15 +1,15 @@
 ---
-title: Dynamic Media與AEM Assets概述
-description: 此影片系列會提供您如何使用Adobe Experience Manager Dynamic Media作為內容服務來管理及存取媒體內容的概觀。 Dynamic Media可讓您管理和發佈動態數位體驗 — Experience Manager Assets獨有的功能。 我們的架構和元件套件可讓行銷人員自訂並跨所有裝置提供互動式多媒體體驗。
+title: 使用AEM Assets的Dynamic Media概述
+description: 此影片系列會提供您如何使用Adobe Experience Manager Dynamic Media作為內容服務來管理及存取媒體內容的概觀。 Dynamic Media可讓您管理和發佈動態數位體驗，這是Experience Manager Assets獨有的功能。 我們的架構和元件套件可讓行銷人員自訂並跨所有裝置提供互動式多媒體體驗。
 feature: Smart Crop, Video Profiles, Image Profiles, Viewer Presets, 360 VR Video, Image Sets, Spin Sets
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
-source-git-commit: fd372c7ee387504e4316a6ca657a77fe0a0c511e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # 搭配AEM Assets使用Dynamic Media {#understanding-aem-dynamic-media}
 
-此多部分影片系列會提供您如何使用Adobe Experience Manager Dynamic Media作為內容服務來管理及存取媒體內容的概觀。 Dynamic Media可讓您管理和發佈動態數位體驗 — Experience Manager Assets獨有的功能。 我們的架構和元件套件可讓行銷人員自訂並跨所有裝置提供互動式多媒體體驗。
+此多部分影片系列會提供您如何使用Adobe Experience Manager Dynamic Media作為內容服務來管理和存取媒體內容的概觀。 Dynamic Media可讓您管理和發佈動態數位體驗，這是Experience Manager Assets獨有的功能。 我們的架構和元件套件可讓行銷人員自訂並跨所有裝置提供互動式多媒體體驗。
 
 ## Dynamic Media即時示範
 
 [![AEM Assets Dynamic Media即時示範](./assets/overview/live-demo.png)](https://landing.adobe.com/tw/na/dynamic-media/ctir-2755/live-demos.html)
 
-探索使用我們的&#x200B;[**即時示範**](https://landing.adobe.com/tw/na/dynamic-media/ctir-2755/live-demos.html)AdobeDynamic Media的可能性，讓尖端的解決方案變得生動有趣。 瞭解&#x200B;[**動態Assets**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/dynamic-assets.html)如何簡化工作流程及提升內容管理，並探索可吸引每個管道對象的&#x200B;[**互動式體驗**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/interactive-experiences.html)。 [瞭解Dynamic Media如何轉換您的內容策略](https://landing.adobe.com/tw/na/dynamic-media/ctir-2755/live-demos.html)！
+透過我們的&#x200B;[**即時示範**](https://landing.adobe.com/tw/na/dynamic-media/ctir-2755/live-demos.html)探索Adobe Dynamic Media的可能性，讓尖端的解決方案變得生動有趣。 瞭解&#x200B;[**動態Assets**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/dynamic-assets.html)如何簡化工作流程及提升內容管理，並探索可吸引每個管道對象的&#x200B;[**互動式體驗**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/interactive-experiences.html)。 [瞭解Dynamic Media如何轉換您的內容策略](https://landing.adobe.com/tw/na/dynamic-media/ctir-2755/live-demos.html)！
 
 ## Dynamic Media概觀
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 >
 >此處示範的功能適用於Dynamic Media DMS7執行模式（我們目前支援的執行模式），不一定是DMS7已取代的DMHybrid執行模式。
 
-此影片說明如何使用Adobe Experience Manager Dynamic Media作為內容服務來管理及存取媒體內容。 Dynamic Media採用單一主要資產方法運作，您可上傳影像資產或視訊資產，您可請求這些資產完成不限數量的必要可消耗變化或衍生轉譯。 包含：
+本影片說明如何使用Adobe Experience Manager Dynamic Media作為內容服務服務來管理及存取媒體內容。 Dynamic Media運作於單一主要資產方法上，您可上傳影像資產或視訊資產，您可請求這些資產完成不限數量的必要可消耗變化或衍生轉譯。 包含：
 
 * 說明單一主要資產至URL產品的交付專案
 * 影像處理選項
@@ -48,9 +48,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此處示範的功能適用於Dynamic Media DMS7執行模式（我們目前支援的執行模式），不一定是DMS7已取代的DMHybrid執行模式。 本影片參考第1部分影片中說明的概念(Dynamic Media概觀)。
+>此處示範的功能適用於Dynamic Media DMS7執行模式（我們目前支援的執行模式），不一定是DMS7已取代的DMHybrid執行模式。 本影片參考第1部分影片中說明的概念（Dynamic Media概觀）。
 
-本影片說明如何在Adobe Experience Manager Dynamic Media中管理媒體內容，並可透過元件輕鬆在AEM Sites中使用，以進行簡單並自動裁切，以根據回應式頁面寬度進行最佳化。 輕鬆建立互動式影像橫幅並產生復本URL，以用於任何內容管理系統。
+本影片說明如何在Adobe Experience Manager Dynamic Media中管理媒體內容，並可透過元件在AEM Sites中輕鬆使用，以進行簡單並自動裁切，以根據回應式頁面寬度進行最佳化。 輕鬆建立互動式影像橫幅並產生復本URL，以用於任何內容管理系統。
 
 * AEM Sites Dynamic Media元件彈性
 * 使用影像預設集在本機下載
@@ -62,12 +62,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此處示範的功能適用於Dynamic Media DMS7執行模式（我們目前支援的執行模式），不一定是DMS7已取代的DMHybrid執行模式。 本影片參考第1部分影片中說明的概念(Dynamic Media概觀)。
+>此處示範的功能適用於Dynamic Media DMS7執行模式（我們目前支援的執行模式），不一定是DMS7已取代的DMHybrid執行模式。 本影片參考第1部分影片中說明的概念（Dynamic Media概觀）。
 
 本影片說明混合媒體檢視器媒體資產集合（包括迴轉集、影片和產品影像集合）的簡單建立流程。 新增內容至混合媒體集，並建立自訂檢視器，從最終複製URL或AEM Sites元件中選擇。
 
 * 從適當的產品像片建立迴轉集
-* 上傳並編碼Dynamic Media影片的母片影片
+* 上傳並編碼Dynamic Media視訊的主視訊
 * 從迴轉集、視訊和像片建立混合媒體集
 * 編輯及使用自訂混合媒體檢視器
 
@@ -86,9 +86,9 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
-本影片說明如何超越調整影像大小，以利用來源檔案本身的功能（背景透明度、內建剪裁路徑，以及將文字裁切為變數），並搭配使用Dynamic Media的URL修飾元。
+本影片說明如何超越調整影像大小，以利用來源檔案本身的功能（背景透明度、內建剪裁路徑，以及使用Dynamic Media的URL修飾元裁切和文字做為變數）。
 
-* 在Dynamic Media修飾詞欄位中使用URL修飾詞
+* 在Dynamic Media修飾元欄位中使用URL修飾元
 * 變更具有透明度的影像的背景顏色
 * 剪裁至影像路徑
 * 裁切至影像路徑
@@ -103,7 +103,7 @@ ht-degree: 0%
 >
 >「影像品質」是以反向壓縮的百分比來測量，其中100%品質的壓縮率最低，因此會產生高品質的影像，但檔案大小相對較大。 Jpeg壓縮是一種有失真壓縮方案，其中壓縮設定會決定影像品質和檔案大小。
 
-使用2個指令調整jpeg壓縮設定，平衡jpeg影像品質與產生的檔案大小（以KB為單位）以提升頁面載入速度。 QLT透過調整jpeg壓縮品質設定來定義影像品質。 「JPEG大小」指令可讓您指定需要使用壓縮來達到的檔案大小。
+使用2個指令調整jpeg壓縮設定，平衡jpeg影像品質與產生的檔案大小（以KB為單位）以提升頁面載入速度。 QLT透過調整jpeg壓縮品質設定來定義影像品質。 「JPEG大小」指令可讓您指定需要使用壓縮達到的檔案大小。
 
 ## 隱藏式字幕
 

@@ -1,7 +1,7 @@
 ---
 title: 頁面範本
 description: 瞭解如何建立和修改頁面範本。 瞭解頁面範本和頁面之間的關係。 瞭解如何設定頁面範本的原則，為內容提供精細的控管和品牌一致性。  根據Adobe XD的模型建立結構良好的雜誌文章範本。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Editable Templates, Page Editor
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
 duration: 1561
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 0%

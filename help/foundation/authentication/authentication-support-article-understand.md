@@ -1,7 +1,7 @@
 ---
 title: AEM 6.x中的驗證支援
-description: AEM 6.x所支援驗證機制的整合檢視。
-version: 6.4, 6.5
+description: AEM 6.x支援的驗證機制整合檢視。
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: User and Groups
 doc-type: Article
 jira: KT-406
@@ -12,7 +12,7 @@ exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
 last-substantial-update: 2022-09-10T00:00:00Z
 thumbnail: KT-406.jpg
 duration: 22
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 6%
@@ -21,7 +21,7 @@ ht-degree: 6%
 
 # AEM 6.x中的驗證支援
 
-AEM支援的驗證（有時是授權）機制的整合檢視。
+AEM支援的驗證（及偶爾授權）機制整合檢視。
 
 *下表說明使用者如何在AEM中進行驗證。*
 
@@ -34,7 +34,7 @@ AEM支援的驗證（有時是授權）機制的整合檢視。
             <td><strong>AEM 6.5</strong></td>
         </tr>
         <tr>
-            <td><strong>AEM作為標準身分提供者</strong></td>
+            <td><strong>AEM作為正式身分提供者</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -58,7 +58,7 @@ AEM支援的驗證（有時是授權）機制的整合檢視。
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>非AEM系統作為標準身分提供者</strong></td>
+            <td><strong>非AEM系統（作為標準身分提供者）</strong></td>
             <td></td>
             <td></td>
             <td></td>
@@ -95,4 +95,4 @@ AEM支援的驗證（有時是授權）機制的整合檢視。
     </tbody>
 </table>
 
-{⁕0}透過社群專案提供，但不由Adobe直接支援。**
+{⁕0}透過社群專案提供，但Adobe不直接支援。**

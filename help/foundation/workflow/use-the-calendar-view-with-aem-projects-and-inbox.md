@@ -1,14 +1,14 @@
 ---
 title: 搭配AEM專案和收件匣使用行事曆檢視
-description: AEM行事曆檢視會追蹤行事曆檢視中的專案和任務，以便更輕鬆地進行專案管理和排程。 有了行事曆檢視，使用者將能全面檢視目前正在進行、已計畫、即將到期及已過期的專案和任務。
-version: 6.4, 6.5
+description: AEM的行事曆檢視會追蹤行事曆檢視中的專案和任務，讓專案管理和排程更輕鬆。 有了行事曆檢視，使用者將能全面檢視目前正在進行、已計畫、即將到期及已過期的專案和任務。
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Workflow, Projects
 doc-type: Feature Video
 topic: Collaboration
 role: User
 level: Beginner
 duration: 478
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 搭配AEM專案和收件匣使用行事曆檢視
 
-AEM行事曆檢視會追蹤行事曆檢視中的專案和任務，以便更輕鬆地進行專案管理和排程。 有了行事曆檢視，使用者將能全面檢視目前正在進行、已計畫、即將到期及已過期的專案和任務。
+AEM的行事曆檢視會追蹤行事曆檢視中的專案和任務，讓專案管理和排程更輕鬆。 有了行事曆檢視，使用者將能全面檢視目前正在進行、已計畫、即將到期及已過期的專案和任務。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16804?quality=12&learn=on)
 

@@ -4,26 +4,26 @@ description: 使用HTTP端點在Forms CA中建立和驗證PDF/A檔案
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-10105
 exl-id: a4955104-8a87-4add-85c7-c3e3395f5f1a
 duration: 65
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 3%
 
 ---
 
-# 建立和驗證PDF/A檔案
+# 建立及驗證PDF/A檔案
 
 PDF/A是可攜式檔案格式(PDF)的ISO標準化版本，專門用於電子檔案的封存和長期儲存。 PDF/A不同於PDF，因為它禁止了不適合長期封存的功能，例如字型連結（與字型內嵌相反）和加密。
 
 ## 轉化為 PDF/A
 
-下列程式碼已用於將PDF轉換為PDF/A
+下列程式碼可用來將PDF轉換為PDF/A
 
 ```java
 package com.aemformscs.documentservices;
@@ -93,9 +93,9 @@ public class PDFAUtilities {
 }
 ```
 
-## 驗證PDF
+## 驗證PDF/A
 
-下列程式碼可用來驗證給PDF/A遵循的PDF。
+下列程式碼用於驗證指定的PDF for PDF/A合規性。
 
 ```java
 public void validatePDFA(String postURL) {

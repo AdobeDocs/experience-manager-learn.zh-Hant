@@ -1,8 +1,8 @@
 ---
-title: 將Asset compute背景工作與AEM處理設定檔整合
-description: AEM as a Cloud Service可透過AEM Assets處理設定檔與部署至Adobe I/O Runtime的Asset compute背景工作整合。 處理設定檔設定於「作者」服務中，以使用自訂背景工作處理特定資產，以及將背景工作產生的檔案儲存為資產轉譯。
+title: 將Asset Compute背景工作與AEM處理設定檔整合
+description: AEM as a Cloud Service可透過Asset Compute處理設定檔與部署至Adobe I/O Runtime的AEM Assets背景工作整合。 處理設定檔設定於「作者」服務中，以使用自訂背景工作處理特定資產，以及將背景工作產生的檔案儲存為資產轉譯。
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6287
 thumbnail: KT-6287.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
 duration: 126
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 與AEM處理設定檔整合
 
-若要Asset compute背景工作在AEM as a Cloud Service中產生自訂轉譯，必須透過處理設定檔在AEM as a Cloud Service作者服務中註冊。 受該處理設定檔約束的所有資產將在上傳或重新處理時叫用背景工作，並產生自訂轉譯，並可透過資產的轉譯提供使用。
+若要Asset Compute背景工作在AEM as a Cloud Service中產生自訂轉譯，必須透過處理設定檔在AEM as a Cloud Service作者服務中註冊。 受該處理設定檔約束的所有資產將在上傳或重新處理時叫用背景工作，並產生自訂轉譯，並可透過資產的轉譯提供使用。
 
 ## 定義處理設定檔
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ![正在處理設定檔](./assets/processing-profiles/new-processing-profile.png)
 
-1. 以&#x200B;__AEM管理員__&#x200B;身分登入AEM as a Cloud Service作者服務。 由於這是教學課程，建議您使用開發環境或沙箱中的環境。
+1. 以&#x200B;__AEM as a Cloud Service管理員__&#x200B;身分登入AEM作者服務。 由於這是教學課程，建議您使用開發環境或沙箱中的環境。
 1. 導覽至&#x200B;__工具> Assets >處理設定檔__
 1. 點選&#x200B;__建立__&#x200B;按鈕
 1. 為處理設定檔命名，`WKND Asset Renditions`
@@ -51,7 +51,7 @@ ht-degree: 0%
       + 點選&#x200B;__新增引數__
          + 索引鍵： `brightness`
          + 值： `0.10`
-      + 這些金鑰/值組已傳遞至Asset compute背景工作，並可透過`rendition.instructions` JavaScript物件使用。
+      + 這些金鑰/值組已傳入Asset Compute背景工作，並可透過`rendition.instructions` JavaScript物件使用。
    + __Mime型別__
       + __包含：__ `image/jpeg`，`image/png`，`image/gif`，`image/bmp`，`image/tiff`
          + 這些MIME型別是工作者的npm模組中的唯一型別。 此清單會限制由自訂背景工作處理的專案。
@@ -75,11 +75,11 @@ ht-degree: 0%
 
 ## 已完成！
 
-恭喜！您已完成如何延伸AEM as a Cloud ServiceAsset compute微服務的[教學課程](../overview.md)！ 您現在應該能夠設定、開發、測試、除錯和部署自訂Asset compute背景工作，以供AEM as a Cloud Service作者服務使用。
+恭喜！您已完成如何延伸AEM as a Cloud Service Asset Compute微服務的[教學課程](../overview.md)！ 您現在應該能夠設定、開發、測試、除錯和部署自訂Asset Compute背景工作，以供AEM as a Cloud Service作者服務使用。
 
 ### 在Github上檢閱完整的專案原始程式碼
 
-最終Asset compute專案可在Github上取得，網址為：
+Github提供最終的Asset Compute專案，網址為：
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
@@ -87,5 +87,5 @@ _Github包含是專案的最終狀態，已完整填入Worker和測試案例，�
 
 ## 疑難排解
 
-+ [AEM資產中缺少自訂轉譯](../troubleshooting.md#custom-rendition-missing-from-asset)
++ [AEM中的資產缺少自訂轉譯](../troubleshooting.md#custom-rendition-missing-from-asset)
 + [AEM中的資產處理失敗](../troubleshooting.md#asset-processing-fails)

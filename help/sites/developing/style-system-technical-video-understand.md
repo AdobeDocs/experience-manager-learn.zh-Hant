@@ -1,15 +1,15 @@
 ---
 title: 瞭解如何為AEM樣式系統編碼
-description: 在本影片中，我們將瞭解CSS （或LESS）和JavaScript的剖析，這些樣式使用樣式系統來設定AdobeExperience Manager的核心標題元件的樣式，以及這些樣式如何套用至HTML和DOM。
+description: 在這段影片中，我們將瞭解CSS （或LESS）和JavaScript的剖析；這兩種樣式用於透過「樣式系統」設定Adobe Experience Manager的核心標題元件的樣式，以及如何將這些樣式套用至HTML和DOM。
 feature: Style System
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Intermediate, Experienced
 doc-type: Technical Video
 exl-id: 8fbc3819-3214-4c58-8629-a27eb6f0c545
 duration: 1005
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1065'
 ht-degree: 0%
@@ -63,7 +63,7 @@ ht-degree: 0%
 }
 ```
 
-透過Experience Manager到下列CSS以原生方式編譯上述[!DNL LESS]。
+上述[!DNL LESS]由Experience Manager以原生方式編譯成下列CSS。
 
 ```css
 /* CSS */
@@ -146,9 +146,9 @@ jQuery(function ($) {
 
 ## 開發最佳實務 {#development-best-practices}
 
-### HTML最佳實務 {#html-best-practices}
+### HTML最佳作法 {#html-best-practices}
 
-* HTML（透過HTL產生）在結構上應儘可能符合語意，避免對元素進行不必要的分組/巢狀。
+* HTML （透過HTL產生）應在結構上儘可能提供語意，避免對元素進行不必要的分組/巢狀。
 * HTML元素應可透過BEM樣式CSS類別進行定址。
 
 **良好** — 元件中的所有元素均可透過BEM標籤法來定址：
@@ -190,7 +190,7 @@ jQuery(function ($) {
 >
 >[BEM](https://en.bem.info/)的所有其他租使用者都應該對齊。
 
-* 使用前置處理器，例如[LESS](https://lesscss.org/) (由AEM原生支援)或[SCSS](https://sass-lang.com/) （需要自訂建置系統），以允許CSS定義清晰且可重複使用。
+* 使用前置處理器，例如[LESS](https://lesscss.org/) (由AEM原生支援)或[SCSS](https://sass-lang.com/) （需要自訂建置系統），以便能夠清除CSS定義且可重複使用。
 
 * 保持選擇器的權重/特異性一致；這有助於避免和解決難以識別的CSS重疊顯示衝突。
 * 將每個樣式組織成獨立檔案。
@@ -239,8 +239,8 @@ CSS選取器結構範例應如下所示：
 * Style-JavaScript應審慎使用，且為少數使用案例。
 * Style-JavaScript應該主要用於操控元件的DOM，以支援CSS的樣式設定。
 * 如果元件會在頁面上出現多次，請重新評估Javascript的使用，並瞭解計算/和重新繪製成本。
-* 如果元件在頁面上可能出現多次時，Javascript以非同步(透過AJAX)方式提取新資料/內容，請重新評估其使用。
-* 處理Publish和編寫體驗。
+* 如果Javascript在元件可能在頁面上出現多次時非同步(透過AJAX)提取新資料/內容，請重新評估其使用。
+* 處理發佈和編寫體驗。
 * 儘可能重複使用style-Javascript。
    * 例如，如果元件的多個樣式需要將影像移至背景影像，style-JavaScript可以實作一次，並附加至多個`BLOCK--MODIFIERs`。
 * 儘可能將樣式JavaScript與功能性JavaScript分開。

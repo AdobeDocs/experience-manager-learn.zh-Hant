@@ -1,7 +1,7 @@
 ---
-title: 從AEM範本建立Edge Delivery Services專案
-description: 從AEM範本建立Edge Delivery Services專案
-version: 6.5, Cloud Service
+title: 從Edge Delivery Services的AEM範本建立專案
+description: 從Edge Delivery Services的AEM範本建立專案
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-14479
 thumbnail: 3425713.jpeg
 duration: 89
 exl-id: 8fa9ac34-d77a-46d1-af19-4b89c1b8d54f
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 2%

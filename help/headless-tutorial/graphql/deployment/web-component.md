@@ -1,7 +1,7 @@
 ---
-title: AEM Headless Web元件部署
+title: AEM無周邊網路元件部署
 description: 瞭解Web元件/純JS型AEM Headless部署的部署考量事項。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -10,16 +10,16 @@ jira: KT-10797
 thumbnail: kt-10797.jpg
 exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
 duration: 31
-source-git-commit: 089bcf71f03bdbb6d21337cc23452afb33ce8098
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 2%
 
 ---
 
-# AEM Headless Web元件部署
+# AEM無周邊網路元件部署
 
-AEM Headless [Web元件](https://developer.mozilla.org/en-US/docs/Web/Web_Components)/JS部署是純JavaScript應用程式，在網頁瀏覽器中執行，以Headless方式使用並與AEM中的內容互動。 Web元件/JS部署與[SPA部署](./spa.md)不同，因為它們不使用健全的SPA架構，而且預期會嵌入到任何網站的內容中、傳遞，以從AEM呈現內容。
+AEM Headless [Web元件](https://developer.mozilla.org/en-US/docs/Web/Web_Components)/JS部署是純粹的JavaScript應用程式，在網頁瀏覽器中執行，以Headless方式使用並與AEM中的內容互動。 Web元件/JS部署與[SPA部署](./spa.md)不同，因為它們不使用健全的SPA架構，並且預期會內嵌在任何網站的內容中，傳遞以從AEM呈現內容。
 
 
 ## 部署設定

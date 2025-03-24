@@ -2,7 +2,7 @@
 title: 使用Brand Portal
 description: AEM作者與AEM Assets Brand Portal整合的影片逐步解說。
 feature: Brand Portal
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
@@ -10,9 +10,9 @@ last-substantial-update: 2022-06-15T00:00:00Z
 doc-type: Feature Video
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
 duration: 2460
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,17 @@ Adobe Experience Manager (AEM) Assets Brand Portal整合的影片指南。
 
 ## Brand Portal 2019年9月功能和增強功能
 
-Brand Portal 2019年9月最值得一提的是推出了Asset Sourcing，除了可提升內容速度，也讓創作Experience Manager與協力廠商創意和貢獻者之間可以輕鬆快速地交換資產。
+Brand Portal 2019年9月最值得一提的是推出了Asset Sourcing，除了可提升內容速度，也允許在Experience Manager作者與協力廠商創意和貢獻者之間輕鬆快速地交換資產。
 
 ### Brand Portal資產來源{#asset-sourcing}
 
-Brand Portal的Asset Sourcing用於從第三方機構和團隊收集資產，無縫地將其同步回Experience Manager作者以供審閱和使用。
+Brand Portal的Asset Sourcing用於從第三方機構和團隊收集資產，無縫地將其同步回Experience Manager Author以供審閱和使用。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29365?quality=12&learn=on)
 
-*需要Experience Manager作者6.5 SP2 (6.5.2)或更新版本才能使用Asset Sourcing*
+*需要Experience Manager Author 6.5 SP2 (6.5.2)或更新版本才能使用Asset Sourcing*
 
-檢閱[啟用Asset Sourcing的Experience Manager作者](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=zh-Hant)，瞭解如何在Experience Manager作者上設定和設定Asset Sourcing。
+檢閱[啟用Experience Manager Author for Asset Sourcing](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=zh-Hant)，瞭解如何在Experience Manager Author上設定和設定Asset Sourcing。
 
 ## Brand Portal 2019年2月功能和增強功能{#brand-portal-features-and-enhancements-644}
 
@@ -82,13 +82,13 @@ Brand Portal允許在搜尋查詢中使用星號(*)，連同搜尋片語中的�
 
 請注意，虛擬資料夾的預設縮圖是第一個共用資料夾的縮圖影像。
 
-### Dynamic Media視訊轉譯支援
+### Dynamic Media影片轉譯支援
 
-AEM Author例項位於Dynamic Media混合模式的使用者，除了原始視訊檔案外，也可以預覽和下載Dynamic Media轉譯。
+AEM製作例項位於Dynamic Media混合模式的使用者，除了原始視訊檔案外，也可以預覽和下載Dynamic Media轉譯。
 
 若要允許預覽和下載特定租使用者帳戶上的動態媒體轉譯，管理員需要從管理工具面板的視訊設定中指定Dynamic Media設定(視訊服務URL （DM閘道URL）和註冊ID以擷取動態視訊)。
 
-您可在下列位置預覽Dynamic Media影片：
+您可在以下位置預覽Dynamic Media影片：
 
 * 資產詳細資訊頁面
 * 資產的卡片檢視
@@ -101,7 +101,7 @@ Dynamic Media視訊編碼可從以下來源下載：
 
 ### 已排程發佈至Brand Portal
 
-從[AEM (6.4.2.0)](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011)到Brand Portal的Assets （和資料夾）發佈工作流程可以排程在之後的日期、時間。
+從[AEM (6.4.2.0)](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011)製作執行個體到Brand Portal的Assets （和資料夾）發佈工作流程可以排程在之後的日期、時間。
 
 同樣地，已發佈的資產可在稍後的日期（時間）從入口網站移除，方法是排程從Brand Portal取消發佈工作流程。
 
@@ -112,7 +112,7 @@ Dynamic Media視訊編碼可從以下來源下載：
 請注意，您只能自訂Brand Portal URL的前置詞，而不能自訂整個URL。
 例如，具有現有網域`wknd.brand-portal.adobe.com`的組織可以取得根據請求建立的`wkndinc.brand-portal.adobe.com`。
 
-不過，AEM Author執行個體只能使用租使用者ID URL設定[設定](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)，而不能使用租使用者別名（替代） URL。
+不過，AEM作者執行個體只能使用租使用者ID URL設定[設定](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)，而不能使用租使用者別名（替代） URL。
 
 **使用案例** ：組織可以自訂入口網站URL，而不停留在Adobe提供的URL，藉此滿足品牌需求。
 
@@ -157,20 +157,20 @@ Brand Portal使用者可運用Aspera架構的快速下載，以快上25倍的速
 * *卡片和清單檢視上的資料夾階層路徑* — 可讓使用者知道儲存在Brand Portal執行個體中的資料夾位置。 協助使用者區分不同資料夾階層內具有相同名稱的資料夾。
 * *總覽選項* — 選取資產/資料夾，然後從工具列選取總覽選項，即可提供有關資產/資料夾的非管理員使用者中繼資料。 目前，顯示標題、建立日期和路徑
 
-### Adobe I/O代管用於設定oAuth整合的UI
+### Adobe I/O代管UI以設定oAuth整合
 
-Brand Portal使用Adobe I/O[https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)介面建立JWT應用程式，如此可設定oAuth整合，以允許AEM Assets與Brand Portal整合。 之前，用於設定OAuth整合的UI是在`https://marketing.adobe.com/developer/`中託管。 若要進一步瞭解如何整合AEM Assets與Brand Portal，以將資產和集合發佈至Brand Portal，請參閱[設定AEM Assets與Brand Portal的整合](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)。
+Brand Portal使用Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)介面建立JWT應用程式，如此可設定oAuth整合，以允許AEM Assets與Brand Portal整合。 之前，用於設定OAuth整合的UI是在`https://marketing.adobe.com/developer/`中託管。 若要進一步瞭解如何整合AEM Assets與Brand Portal，以將資產和集合發佈至Brand Portal，請參閱[設定AEM Assets與Brand Portal的整合](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html)。
 
 ## Brand Portal 2018年2月功能和增強功能{#brand-portal-features-and-enhancements-632}
 
-新功能增強了旨在將Brand Portal與AEM對齊的功能。
+新功能強化了旨在將Brand Portal與AEM對齊的功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
 
 ### 改善導覽
 
-* 升級的使用者介面，此介面與AEM一致並使用Coral3 UI。
-* 透過新的Adobe標誌，快速輕鬆地存取管理工具。
+* 升級的使用者介面，此介面與AEM一致，並使用Coral3 UI。
+* 透過新的Adobe標誌，輕鬆快速地存取管理工具。
 * 覆蓋圖中的產品導覽
 * 從子資料夾快速瀏覽至父資料夾。
 * 用於導覽至管理工具和內容的Omnisearch選項。
@@ -195,7 +195,7 @@ Brand Portal使用Adobe I/O[https://legacy-oauth.cloud.adobe.io/](https://legacy
 
 ### 報告與管理功能
 
-* AEM Assets的中繼資料結構現在可以從AEM發佈到Brand Portal。
+* AEM Assets的中繼資料結構現在可從AEM發佈至Brand Portal。
 * 管理員可以建立和管理三種型別的報表：已下載、已過期和已發佈的資產
 * 可設定需要納入報表的欄。
 * 在Brand Portal中建立資產的影像預設集。
@@ -208,7 +208,7 @@ Brand Portal使用Adobe I/O[https://legacy-oauth.cloud.adobe.io/](https://legacy
 * [Brand Portal的新功能](https://helpx.adobe.com/tw/experience-manager/brand-portal/using/whats-new.html)
 * [AEM作者復寫代理程式](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [加速下載指南](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
-* [AEM Assets Brand PortalAdobe檔案](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
-* [AEM Assets Dynamic MediaAdobe檔案](https://experienceleague.adobe.com/docs/)
+* [AEM Assets Brand Portal Adobe檔案](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
+* [AEM Assets Dynamic Media Adobe檔案](https://experienceleague.adobe.com/docs/)
 * [下載Aspera Connect](https://downloads.asperasoft.com/connect2/)
 * [Aspera連線測試伺服器](https://test-connect.asperasoft.com/)

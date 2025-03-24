@@ -1,8 +1,8 @@
 ---
 title: 為AEM as a Cloud Service除錯
-description: 在自助式、可擴充的雲端基礎結構上，這要求AEM開發人員瞭解如何理解和偵錯AEM as a Cloud Service的各種面向，從建立和部署到取得執行AEM應用程式的詳細資訊。
+description: 在提供自助服務、可擴充的雲端基礎結構上，AEM開發人員需要瞭解如何瞭解和偵錯AEM as a Cloud Service的各種層面，從建立和部署到取得執行AEM應用程式的詳細資訊。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5346
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
 duration: 60
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 1%
@@ -29,7 +29,7 @@ AEM as a Cloud Service是以雲端原生方式使用AEM應用程式。 AEM as a 
 
 ## 建置和部署
 
-Adobe Cloud Manager管道透過一系列步驟部署AEM應用程式，以判斷部署到AEM as a Cloud Service時的程式碼品質和可行性。 每個步驟都可能導致失敗，因此瞭解如何偵錯組建以確定根本原因，以及如何解決任何失敗很重要。
+Adobe Cloud Manager管道會透過一系列步驟部署AEM應用程式，以判斷部署至AEM as a Cloud Service時的程式碼品質和可行性。 每個步驟都可能導致失敗，因此瞭解如何偵錯組建以確定根本原因，以及如何解決任何失敗很重要。
 
 [偵錯AEM as a Cloud Service建置和部署](./build-and-deployment.md)
 
@@ -41,6 +41,6 @@ Adobe Cloud Manager管道透過一系列步驟部署AEM應用程式，以判斷�
 
 ## 存放庫瀏覽器
 
-存放庫瀏覽器是一款功能強大的工具，可讓您檢視AEM的基本資料存放區，以便更輕鬆地偵錯AEM as a Cloud Service環境。 存放庫瀏覽器支援生產、暫存和開發以及作者、Publish和預覽服務上AEM的資源和屬性的唯讀檢視。
+存放庫瀏覽器是功能強大的工具，可讓您檢視AEM的基本資料存放區，以便更輕鬆地偵錯AEM as a Cloud Service環境。 存放庫瀏覽器支援生產、暫存和開發以及作者、發佈和預覽服務中AEM的資源和屬性的唯讀檢視。
 
 [使用存放庫瀏覽器除錯AEM as a Cloud Service](./repository-browser.md)

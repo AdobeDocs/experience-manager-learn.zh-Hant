@@ -1,7 +1,7 @@
 ---
-title: 產生Edge Delivery Services中的變數
-description: 產生Edge Delivery Services變體簡介，並瞭解其對行銷人員的用處。
-version: Cloud Service
+title: 在Edge Delivery Services中產生變數
+description: 在Edge Delivery Services中產生變數簡介，並瞭解其對行銷人員的用處。
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: Admin, Developer, Leader, User
@@ -11,17 +11,17 @@ duration: 98
 last-substantial-update: 2024-04-11T00:00:00Z
 jira: KT-15320
 exl-id: f8bfffb5-f8fd-4d24-822b-687b849efc10
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
 
 ---
 
-# 產生Edge Delivery Services中的變數
+# 在Edge Delivery Services中產生變數
 
 {{edge-delivery-services}}
 
-產生Edge Delivery Services變體簡介，並瞭解其對行銷人員的用處。
+在Edge Delivery Services中產生變數簡介，並瞭解其對行銷人員的用處。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428304/?learn=on)

@@ -1,7 +1,7 @@
 ---
-title: 包含WAF規則的流量篩選規則最佳實務
-description: 瞭解流量篩選器規則（包括WAF規則）的建議最佳實務。
-version: Cloud Service
+title: 流量篩選器規則(包括WAF規則)的最佳作法
+description: 瞭解流量篩選器規則(包括WAF規則)的建議最佳實務。
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
 role: Admin, Architect
@@ -12,16 +12,16 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
 duration: 170
-source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
-# 流量篩選器規則（包括WAF規則）的最佳實務
+# 流量篩選器規則(包括WAF規則)的最佳作法
 
-瞭解流量篩選規則（包括WAF規則）的建議最佳實務。 請務必注意，本文中說明的最佳實務並非詳盡無遺，且用意並非要取代您自己的安全性原則和程式。
+瞭解流量篩選規則(包括WAF規則)的建議最佳實務。 請務必注意，本文中說明的最佳實務並非詳盡無遺，且用意並非要取代您自己的安全性原則和程式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425408?quality=12&learn=on)
 
@@ -91,9 +91,9 @@ data:
 
 ## WAF規則的最佳作法
 
-在授權您的程式並啟用WAF後，流量相符的WAF旗標會出現在圖表和請求記錄中，即使您未在規則中宣告它們。 因此，您一律會察覺到潛在的新惡意流量，並可視需要建立規則。 檢視未反映在宣告規則中的WAF標幟，並考慮宣告它們。
+在您的方案授權並啟用WAF後，即使使用者未在規則中宣告流量，符合WAF旗標的流量也會顯示在圖表和請求記錄中。 因此，您一律會察覺到潛在的新惡意流量，並可視需要建立規則。 檢視未反映在宣告規則中的WAF旗標，並考慮宣告它們。
 
-請考量下列AEM專案的WAF規則。 但是，`action`和`wafFlags`屬性的所需值必須透過與您的安全性團隊共同作業來決定。
+請考量下列WAF規則中適用於您的AEM專案。 但是，`action`和`wafFlags`屬性的所需值必須透過與您的安全性團隊共同作業來決定。
 
 ```yaml
 kind: CDN

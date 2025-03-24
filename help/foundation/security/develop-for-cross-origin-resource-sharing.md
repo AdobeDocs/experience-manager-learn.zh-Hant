@@ -1,7 +1,7 @@
 ---
 title: 使用AEM開發跨原始資源共用(CORS)
-description: 運用CORS透過使用者端JavaScript從外部Web應用程式存取AEM內容的簡短範例。
-version: 6.4, 6.5
+description: 運用CORS透過使用者端AEM從外部Web應用程式存取JavaScript內容的簡短範例。
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Security, Development
 role: Developer
 level: Beginner
@@ -9,7 +9,7 @@ feature: Security
 doc-type: Technical Video
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
 duration: 333
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -20,10 +20,10 @@ ht-degree: 0%
 
 運用[!DNL CORS]透過使用者端JavaScript從外部Web應用程式存取AEM內容的簡短範例。 此範例使用CORS OSGi設定在AEM上啟用CORS存取。 OSGi設定方法適用於以下情況：
 
-* 單一來源正在存取AEM Publish內容
+* 單一來源正在存取AEM發佈內容
 * AEM Author需要CORS存取權
 
-如果需要對AEM Publish的多來源存取，請參閱[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
+如果需要對AEM Publish的多重來源存取權，請參閱[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 如需更多詳細資料，請檢閱[瞭解AEM](./understand-cross-origin-resource-sharing.md)中的跨原始資源共用(CORS)。
 
-## www.example.comHTML與JavaScript
+## www.example.com HTML和JavaScript
 
 此網頁的邏輯如下
 
@@ -116,7 +116,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### 快取CORS回應標頭
 
-若要允許在快取的內容上快取及提供CORS標頭，請將下列[/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers)新增至AEM Publish `dispatcher.any`檔案。
+若要允許在快取的內容上快取及提供CORS標頭，請將下列[/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers)新增至AEM發佈`dispatcher.any`檔案。
 
 ```
 /publishfarm {

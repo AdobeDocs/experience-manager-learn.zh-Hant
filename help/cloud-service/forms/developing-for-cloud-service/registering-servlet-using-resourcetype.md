@@ -5,13 +5,13 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Developer Tools
 jira: KT-14581
 duration: 90
 exl-id: 2a33a9a9-1eef-425d-aec5-465030ee9b74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 * 無法使用預設JCR存放庫ACL來控制路徑繫結的servlet的存取許可權
 * 路徑繫結的servlet只能註冊到路徑而非資源型別（即沒有尾碼處理）
-* 如果路徑繫結的servlet不是作用中（例如，如果組合遺失或未啟動），POST可能會導致非預期的結果。 通常會在`/bin/xyz`建立節點，接著覆蓋servlet路徑繫結
+* 如果路徑繫結的servlet不是作用中（例如，如果組合遺失或未啟動），POST可能會產生非預期的結果。 通常會在`/bin/xyz`建立節點，接著覆蓋servlet路徑繫結
 對於只檢視存放庫的開發人員而言，對應並不透明
 考慮到這些缺點，強烈建議將servlet繫結到資源型別而不是路徑
 
@@ -83,7 +83,7 @@ public class GetFieldChoices extends SlingAllMethodsServlet implements Serializa
 
 ## 在CRX中建立資源
 
-* 登入您的本機AEM SDK。
+* 登入本機的AEM SDK。
 * 在內容節點下建立型別為`cq:Page`且名為`fetchchoices`的資源（您可以隨意命名此節點）。
 * 儲存您的變更
 * 建立名稱為`jcr:content`且型別為`cq:PageContent`的節點並儲存變更

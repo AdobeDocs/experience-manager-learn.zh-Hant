@@ -1,7 +1,7 @@
 ---
 title: 使用樣式系統進行開發
 description: 瞭解如何使用Experience Manager的樣式系統來實作個別樣式並重複使用核心元件。 本教學課程涵蓋樣式系統的開發，以使用範本編輯器的品牌特定CSS和進階原則設定來擴充核心元件。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, Style System
 topic: Content Management, Development
 role: Developer
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
 duration: 358
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
@@ -130,7 +130,7 @@ ht-degree: 0%
    >
    > 此時，不會發生可見的變更，因為`underline`樣式尚未實作。 在下一個練習中，會實作此樣式。
 
-1. 按一下&#x200B;**頁面資訊**&#x200B;圖示> **以發佈的形式檢視**，在AEM編輯器外部檢查頁面。
+1. 按一下&#x200B;**頁面資訊**&#x200B;圖示> **以發佈的形式檢視**，以檢查AEM編輯器外部的頁面。
 1. 使用您的瀏覽器開發人員工具，驗證Title元件周圍的標籤是否已將CSS類別`cmp-title--underline`套用至外部div。
 
    已套用底線類別的![Div](assets/style-system/div-underline-class-applied.png)
@@ -300,7 +300,7 @@ ht-degree: 0%
 
    >[!CAUTION]
    >
-   > 在此案例中，樣式目標是原始HTML元素。 這是因為文字元件為內容作者提供RTF編輯器。 直接針對RTE內容建立樣式時，應謹慎進行，而且更重要的一點是應嚴格限定樣式的範圍。
+   > 在此情況下，樣式會鎖定原始HTML元素。 這是因為文字元件為內容作者提供RTF編輯器。 直接針對RTE內容建立樣式時，應謹慎進行，而且更重要的一點是應嚴格限定樣式的範圍。
 
 1. 再次返回瀏覽器，您應該會看到已新增Quote區塊樣式：
 
@@ -334,13 +334,13 @@ main.container {
 }
 ```
 
-樣式系統不適用於`main`HTML專案，而是可用來建立&#x200B;**固定寬度**&#x200B;樣式，做為容器原則的一部分。 樣式系統可讓使用者選擇在&#x200B;**固定寬度**&#x200B;和&#x200B;**流動寬度**&#x200B;容器之間切換。
+樣式系統可用來建立&#x200B;**固定寬度**&#x200B;樣式，以做為容器原則的一部分，而非鎖定`main` HTML專案。 樣式系統可讓使用者選擇在&#x200B;**固定寬度**&#x200B;和&#x200B;**流動寬度**&#x200B;容器之間切換。
 
 1. **額外挑戰** — 使用從先前練習中取得的課程，並使用樣式系統來實作Container元件的&#x200B;**固定寬度**&#x200B;和&#x200B;**流動寬度**&#x200B;樣式。
 
 ## 恭喜！ {#congratulations}
 
-恭喜，文章頁面幾乎已設定樣式，而您透過AEM樣式系統獲得實作體驗。
+恭喜，文章頁面幾乎已設定樣式，而您透過AEM Style System獲得實作體驗。
 
 ### 後續步驟 {#next-steps}
 

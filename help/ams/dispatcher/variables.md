@@ -1,7 +1,7 @@
 ---
 title: 在您的AEM Dispatcher設定中使用和瞭解變數
 description: 瞭解如何在Apache和Dispatcher模組設定檔案中使用變數，以將它們提升到新的境界。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Development
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 299b32c3-7922-4eee-aa3a-56039a654f70
 duration: 260
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 1%

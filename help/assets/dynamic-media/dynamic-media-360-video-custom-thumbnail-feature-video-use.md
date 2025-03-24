@@ -1,30 +1,30 @@
 ---
-title: 透過AEM Assets使用Dynamic Media 360影片和自訂影片縮圖
-description: AEM 6.5中的Dynamic Media Viewer增強功能包括新增對360視訊呈現、360媒體檢視器（video360Social和video360VR）的支援，以及選取自訂視訊縮圖的功能。
+title: 搭配AEM Assets使用Dynamic Media 360影片和自訂影片縮圖
+description: AEM 6.5中的Dynamic Media Viewer增強功能包括新增支援360視訊轉譯、360媒體檢視器（video360Social和video360VR）以及選取自訂視訊縮圖的能力。
 feature: Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 4ee0b68f-3897-4104-8615-9de8dbb8f327
 duration: 656
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 3%
 
 ---
 
-# 透過AEM Assets使用Dynamic Media 360影片和自訂影片縮圖
+# 搭配AEM Assets使用Dynamic Media 360影片和自訂影片縮圖
 
-AEM 6.5中的Dynamic Media Viewer增強功能包括新增對360視訊呈現、360媒體檢視器（video360Social和video360VR）的支援，以及選取自訂視訊縮圖的功能。
+AEM 6.5中的Dynamic Media Viewer增強功能包括新增支援360視訊轉譯、360媒體檢視器（video360Social和video360VR）以及選取自訂視訊縮圖的能力。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26391?quality=12&learn=on)
 
 >[!NOTE]
 >
->影片假設您的AEM執行個體以Dynamic Media S7模式執行。  [您可以在此找到](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)使用Dynamic Media設定AEM的說明。 上傳視訊時，預設情況下，如果長寬比為2:1，Dynamic Media會以360視訊來處理素材。 即寬高比是2:1。
+>影片假設您的AEM執行個體在Dynamic Media S7模式下執行。  [在Dynamic Media中設定AEM的指示，請參閱此處](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)。 上傳視訊時，Dynamic Media預設會將影片處理為360視訊（如果長寬比為2:1）。 即寬高比是2:1。
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ AEM 6.5中的Dynamic Media Viewer增強功能包括新增對360視訊呈現、36
 
 ## Dynamic Media 360影片
 
-Dynamic Media影片現在支援為您的影片選取自訂縮圖。 使用者可以從AEM Assets中選取現有資產，或選取視訊影格作為縮圖。
+Dynamic Media視訊現在支援為您的視訊選取自訂縮圖的功能。 使用者可以從AEM Assets中選取現有資產，或選取視訊影格作為縮圖。
 
 ## Dynamic 360媒體檢視器
 
@@ -104,4 +104,4 @@ Dynamic Media影片現在支援為您的影片選取自訂縮圖。 使用者可
 
 ## 其他資源{#additional-resources}
 
-[在Scene7模式中設定Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[在Scene7模式下設定Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)

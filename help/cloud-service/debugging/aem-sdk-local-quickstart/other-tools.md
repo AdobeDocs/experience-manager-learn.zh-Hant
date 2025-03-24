@@ -1,8 +1,8 @@
 ---
-title: 除錯AEM SDK的其他工具
+title: 偵錯AEM SDK的其他工具
 description: 多種其他工具可協助偵錯AEM SDK的本機Quickstart。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5251
 topic: Development
@@ -10,31 +10,31 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 11fb83e9-dbaf-46e5-8102-ae8cc716c6ba
 duration: 107
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 1%
 
 ---
 
-# 除錯AEM SDK的其他工具
+# 偵錯AEM SDK的其他工具
 
-還有其他各種工具可協助您在AEM SDK的本機Quickstart上偵錯應用程式。
+還有其他各種工具，協助您在AEM SDK的本機Quickstart上偵錯應用程式。
 
 ## CRXDE Lite
 
 ![CRXDE Lite](./assets/other-tools/crxde-lite.png)
 
-CRXDE Lite是網頁型介面，用於與AEM的JCR資料存放庫互動。 CRXDE Lite可讓您完全瞭解JCR，包括節點、屬性、屬性值和許可權。
+CRXDE Lite是網頁型介面，用於與AEM的資料存放庫JCR互動。 CRXDE Lite可完全顯示JCR，包括節點、屬性、屬性值和許可權。
 
 CRXDE Lite位於：
 
-+ 「工具」>「一般」>「CRXDE Lite」
++ 「工具>一般> CRXDE Lite」
 + 或直接在[http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 
 ### 偵錯內容
 
-CRXDE Lite提供對JCR的直接存取。 透過CRXDE Lite看到的內容受限於授予您的使用者的許可權，這表示您可能無法檢視或修改JCR中的所有內容，具體取決於您的存取權。
+CRXDE Lite提供對JCR的直接存取。 透過CRXDE Lite看到的內容受限於授予您使用者的許可權，這表示根據您的存取權，您可能無法檢視或修改JCR中的所有內容。
 
 + JCR結構可使用左側導覽窗格導覽和操作
 + 在左側導覽窗格中選取節點，會顯示底部窗格中的node屬性。
@@ -44,15 +44,15 @@ CRXDE Lite提供對JCR的直接存取。 透過CRXDE Lite看到的內容受限�
 
 ![CRXDE Lite — 偵錯內容](./assets/other-tools/crxde-lite__debugging-content.png)
 
-透過CRXDE Lite直接對AEM SDK所做的任何變更可能難以追蹤和控管。 視情況而定，請確定透過CRXDE Lite進行的變更回到了AEM專案的可變內容套件(`ui.content`)並認可到Git。 理想情況下，所有應用程式內容變更都源自程式碼基底，並透過部署流入AEM SDK，而不是透過CRXDE Lite直接變更AEM SDK。
+直接透過CRXDE Lite對AEM SDK所做的任何變更可能很難追蹤和控管。 請視情況確定透過CRXDE Lite進行的變更回到了AEM專案的可變內容套件(`ui.content`)並認可到Git。 理想情況下，所有應用程式內容變更都源自程式碼基底，並透過部署流入AEM SDK，而不是直接透過CRXDE Lite變更AEM SDK。
 
 ### 偵錯存取控制
 
-CRXDE Lite提供一種在特定節點上測試和評估特定使用者或群組（亦稱為主體）之存取控制的方法。
+CRXDE Lite提供測試和評估特定使用者或群組（亦稱為主體）之特定節點上存取控制的方法。
 
-若要存取CRXDE Lite中的「測試存取控制」主控台，請瀏覽至：
+若要存取CRXDE Lite中的「測試存取控制」主控台，請導覽至：
 
-+ CRXDE Lite>工具>測試存取控制……
++ CRXDE Lite >工具>測試存取控制……
 
 ![CRXDE Lite — 測試存取控制](./assets/other-tools/crxde-lite__test-access-control.png)
 
@@ -72,7 +72,7 @@ CRXDE Lite提供一種在特定節點上測試和評估特定使用者或群組�
 
 ![說明查詢](./assets/other-tools/explain-query.png)
 
-說明AEM SDK本機Quickstart中的查詢Web型工具，此工具提供有關AEM如何解譯和執行查詢的關鍵深入分析，以及確保AEM以高效方式執行查詢的寶貴工具。
+說明AEM SDK本機Quickstart中的「查詢Web型」工具，該工具可提供AEM如何解譯和執行查詢的關鍵深入分析，以及確保AEM以高效方式執行查詢的寶貴工具。
 
 說明查詢位於：
 
@@ -83,7 +83,7 @@ CRXDE Lite提供一種在特定節點上測試和評估特定使用者或群組�
 
 ![QueryBuilder Debugger](./assets/other-tools/query-debugger.png)
 
-QueryBuilder偵錯工具是網頁式工具，可協助您使用AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)語法偵錯並瞭解搜尋查詢。
+QueryBuilder偵錯工具是網頁式工具，可協助您使用AEM的[QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)語法偵錯並瞭解搜尋查詢。
 
 QueryBuilder Debugger位於：
 

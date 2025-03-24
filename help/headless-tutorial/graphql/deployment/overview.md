@@ -1,7 +1,7 @@
 ---
 title: AEM Headless部署
 description: 瞭解AEM Headless應用程式的各種部署考量事項。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -11,7 +11,7 @@ thumbnail: kt-10794.jpg
 last-substantial-update: 2022-08-26T00:00:00Z
 exl-id: 6de58ca0-9444-4272-9487-15a9e3c89231
 duration: 59
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # AEM Headless部署
 
-AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、網站、行動應用程式，甚至伺服器對伺服器程式。
+AEM Headless使用者端部署有許多形式；AEM託管的SPA、外部SPA、網站、行動應用程式，甚至伺服器對伺服器程式。
 
-根據使用者端和部署方式，AEM Headless部署有不同的考量事項。
+視使用者端和部署方式而定，AEM Headless部署有不同的考量事項。
 
 ## AEM服務架構
 
@@ -30,13 +30,13 @@ AEM Headless使用者端部署有多種形式；AEM託管的SPA、外部SPA、�
 
 + __AEM Author__&#x200B;是團隊建立、共同作業和發佈內容片段（及其他資產）的服務。
 + __AEM Publish__&#x200B;是已發佈的服務。內容片段（和其他資產）會復寫以供一般使用。
-+ __AEM Preview__&#x200B;是模擬AEM Publish行為的服務，但發佈內容給它以供預覽或檢閱。 AEM預覽適用於內部對象，而非一般內容傳送。 根據所需的工作流程，使用AEM預覽是選用的。
++ __AEM Preview__&#x200B;是模擬AEM Publish行為的服務，但發佈內容給它以供預覽或檢閱。 AEM預覽適用於內部對象，而非一般內容傳送。 根據所需的工作流程，使用AEM預覽為選用。
 
 ![AEM服務架構](./assets/overview/aem-service-architecture.png)
 
 典型AEM as a Cloud Service headless部署架構_
 
-以生產容量作業的AEM Headless使用者端通常會與AEM Publish （其中包含已核准且已發佈的內容）互動。 與AEM Author互動的使用者端需要特別小心，因為AEM Author預設是安全的，所有請求都需要授權，並且可能還包含進行中的工作或未核准的內容。
+以生產容量作業的AEM Headless客戶通常會與AEM Publish （其中包含已核准的已發佈內容）互動。 與AEM Author互動的使用者端需要特別小心，因為AEM Author預設是安全的，所有請求都需要授權，並且可能還包含進行中的工作或未核准的內容。
 
 ## Headless使用者端部署
 

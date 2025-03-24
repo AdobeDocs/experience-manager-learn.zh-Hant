@@ -1,7 +1,7 @@
 ---
 title: Sitemaps
 description: 瞭解如何為AEM Sites建立Sitemap，以利提升SEO。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Core Components
 topic: Content Management
 role: Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 937
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 4%
@@ -33,7 +33,7 @@ ht-degree: 4%
 
 ### 絕對網站地圖URL{#absolute-sitemap-urls}
 
-AEM的Sitemap使用[Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)支援絕對URL。 這是透過在產生Sitemap (通常是AEM Publish服務)的AEM服務上建立對應節點來完成。
+AEM的Sitemap使用[Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)支援絕對URL。 這是透過在AEM服務上建立對應節點以產生Sitemap (通常是AEM Publish服務)來完成。
 
 `https://wknd.com`的Sling對應節點定義範例可在`/etc/map/https`下定義，如下所示：
 
@@ -50,7 +50,7 @@ AEM的Sitemap使用[Sling對應](https://sling.apache.org/documentation/the-slin
 
 ### Sitemap排程器OSGi設定
 
-定義在AEM中重新/產生並快取Sitemap的頻率（使用[cron運算式](https://cron.help/)）的[OSGi工廠設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)。
+定義在AEM中重新/產生並快取Sitemap之頻率（使用[cron運算式](https://cron.help/)）的[OSGi工廠設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)。
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -77,7 +77,7 @@ AEM的Sitemap使用[Sling對應](https://sling.apache.org/documentation/the-slin
 
 ### Apache Webserver重寫規則
 
-請確定`.xml`個Sitemap HTTP要求已路由到正確的基礎AEM頁面。 如果未使用URL縮短功能，或使用Sling對應來縮短URL，則不需要進行此設定。
+請確定`.xml`個Sitemap HTTP要求已路由至正確的基礎AEM頁面。 如果未使用URL縮短功能，或使用Sling對應來縮短URL，則不需要進行此設定。
 
 `dispatcher/src/conf.d/rewrites/rewrite.rules`
 

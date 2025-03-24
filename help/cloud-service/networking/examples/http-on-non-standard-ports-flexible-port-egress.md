@@ -1,7 +1,7 @@
 ---
 title: 非標準連線埠上的HTTP/HTTPS連線，用於靈活的連線埠輸出
 description: 瞭解如何從AEM as a Cloud Service向在非標準連線埠上執行的外部Web服務發出HTTP/HTTPS請求，以進行彈性連線埠輸出。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
 duration: 86
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 非標準連線埠上的HTTP/HTTPS連線，用於靈活的連線埠輸出
 
-非標準連線埠（非80/443）上的HTTP/HTTPS連線必須使用AEM as a Cloud Service的代理連線，但是它們不需要任何特殊的`portForwards`規則，而且可以使用AEM的進階網路的`AEM_PROXY_HOST`和保留的Proxy連線埠`AEM_HTTP_PROXY_PORT`或`AEM_HTTPS_PROXY_PORT`，視目的地為HTTP/HTTPS而定。
+非標準連線埠（非80/443）上的HTTP/HTTPS連線必須使用AEM as a Cloud Service的代理連線，但是它們不需要任何特殊的`portForwards`規則，而且可以使用AEM的進階網路的`AEM_PROXY_HOST`和保留的代理連線埠`AEM_HTTP_PROXY_PORT`或`AEM_HTTPS_PROXY_PORT`，視目的地為HTTP/HTTPS而定。
 
 ## 進階網路支援
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 此Java™程式碼範例屬於OSGi服務，可在AEM as a Cloud Service中執行，與8080上的外部網頁伺服器建立HTTP連線。 與HTTPS網頁伺服器的連線使用環境變數`AEM_PROXY_HOST`和`AEM_HTTPS_PROXY_PORT` (在AEM版本&lt; 6094中預設為`proxy.tunnel:3128`)。
 
 >[!NOTE]
-> 建議使用[Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html)進行來自AEM的HTTP/HTTPS呼叫。
+> 建議使用[Java™ 11 HTTP API](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html)從AEM進行HTTP/HTTPS呼叫。
 
 + `core/src/com/adobe/aem/wknd/examples/connections/impl/HttpExternalServiceImpl.java`
 

@@ -3,14 +3,14 @@ title: 新增自訂欄
 description: 新增自訂欄以顯示工作流程的其他資料
 feature: Adaptive Forms
 doc-type: article
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-5830
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
 duration: 75
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
@@ -79,7 +79,7 @@ return isMarried(inboxItem);
 
 ## 在您的伺服器上測試
 
-* [登入AEM網頁主控台](http://localhost:4502/system/console/bundles)
+* [登入AEM Web主控台](http://localhost:4502/system/console/bundles)
 * [部署和啟動收件匣自訂套裝](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [開啟您的收件匣](http://localhost:4502/aem/inbox)
 * 按一下&#x200B;_建立_&#x200B;按鈕旁的&#x200B;_清單檢視_&#x200B;圖示以開啟Admin Control

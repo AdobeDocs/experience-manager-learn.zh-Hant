@@ -2,7 +2,7 @@
 title: AEM UI擴充功能註冊
 description: 瞭解如何註冊AEM UI擴充功能。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: ef2290d9-ba40-429b-b10d-e82d6c1c20f6
 duration: 85
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -28,7 +28,7 @@ AEM UI擴充功能是專門的App Builder應用程式，以React為基礎，並�
 
 擴充功能的`App.js`會宣告[React路由器](https://reactrouter.com/en/main)，其中包含在AEM UI中註冊擴充功能的索引路由。
 
-索引路由會在AEM UI初次載入時叫用，而此路由的目標會定義擴充功能在主控台中的公開方式。
+索引路由會在AEM UI首次載入時叫用，而此路由的目標會定義擴充功能在主控台中的公開方式。
 
 + `./src/aem-ui-extension/web-src/src/components/App.js`
 
@@ -55,7 +55,7 @@ function App(props) {
 
 `ExtensionRegistration.js`必須透過擴充功能的索引路徑立即載入，並做為擴充功能的註冊點。
 
-根據在[初始化App Builder應用程式擴充功能](./app-initialization.md)時選取的AEM UI擴充功能範本，支援不同的擴充功能點。
+根據在[初始化AEM應用程式擴充功能](./app-initialization.md)時選取的App Builder UI擴充功能範本，支援不同的擴充功能點。
 
 + [內容片段UI擴充功能點](./content-fragments/overview.md#extension-points)
 
@@ -71,7 +71,7 @@ AEM UI擴充功能可執行自訂邏輯，以限制擴充功能出現的AEM環�
 載入擴充功能的最常見檢查為：
 
 + 使用AEM主機(`new URLSearchParams(window.location.search).get('repo')`)來決定是否應載入擴充功能。
-   + 只顯示屬於特定計劃一部分的AEM環境上的擴充功能（如以下範例所示）。
+   + 只顯示屬於特定計劃一部分的AEM環境上的擴充功能（如下列範例所示）。
    + 僅顯示特定AEM環境(AEM主機)上的擴充功能。
 + 使用[Adobe I/O Runtime動作](./runtime-action.md)對AEM發出HTTP呼叫，以判斷目前的使用者是否應該看到擴充功能。
 

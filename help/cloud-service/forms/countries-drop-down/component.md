@@ -5,12 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
+exl-id: 87e790c9-6ef6-4337-90b8-687ca576b21a
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 2%
@@ -42,7 +43,7 @@ ht-degree: 2%
 
 ![sling-model](assets/countriesdropdown.png)
 
-最後，請將這些更新同步處理您的專案，以確保CRX存放庫中的變更反映在AEM專案中。
+最後，請將這些更新同步處理您的專案，以確保CRX存放庫中的變更會反映在您的AEM專案中。
 
 
 ## 後續步驟

@@ -1,27 +1,27 @@
 ---
 title: 在AEM as a Cloud Service中管理秘密
 description: 瞭解在AEM as a Cloud Service中管理機密的最佳實務，使用AEM提供的工具和技術來保護您的敏感資訊，確保您的應用程式安全保密。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development, Security
 feature: OSGI, Cloud Manager
 role: Developer
 jira: KT-15880
 level: Intermediate, Experienced
-source-git-commit: ba7ba62dbc70b07f73d96a488e7d3088bf9d467a
+exl-id: 856b7da4-9ee4-44db-b245-4fdd220e8a4e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 0%
 
 ---
 
-
 # 在AEM as a Cloud Service中管理秘密
 
 管理秘密（例如API金鑰和密碼）對於維護應用程式安全性至關重要。 Adobe Experience Manager (AEM) as a Cloud Service提供強大的工具，可安全地處理秘密。
 
-在本教學課程中，您將學習在AEM中管理秘密的最佳實務。 我們將介紹AEM所提供的保護您敏感資訊的工具和技術，確保您的應用程式安全無虞且機密無虞。
+在本教學課程中，您將學習AEM中管理秘密的最佳實務。 我們將介紹AEM所提供的工具和技術，以保護您的敏感資訊，確保您的應用程式安全無虞且保密。
 
-本教學課程假定您具備AEM Java開發、OSGi服務、Sling模型和AdobeCloud Manager的工作知識。
+本教學課程假設您具備AEM Java開發、OSGi服務、Sling模型和Adobe Cloud Manager的工作知識。
 
 ## 密碼管理員OSGi服務
 
@@ -155,7 +155,7 @@ OSGi服務和設定就緒後，最後一個步驟就是在Cloud Manager中設定
 
 ![Cloud Manager密碼設定](./assets/secrets/cloudmanager-configuration.png)
 
-1. 登入[AdobeCloud Manager](https://my.cloudmanager.adobe.com)。
+1. 登入[Adobe Cloud Manager](https://my.cloudmanager.adobe.com)。
 1. 選取您要設定密碼的AEM程式和環境。
 1. 在「環境詳細資料」檢視中，選取「**組態**」標籤。
 1. 選取「**新增**」。

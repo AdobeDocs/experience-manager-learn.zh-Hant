@@ -1,7 +1,7 @@
 ---
 title: 自訂網域名稱選項
 description: 瞭解如何為您的AEM as a Cloud Service託管網站管理和實作自訂網域名稱。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Custom Domain Names
 topic: Architecture, Migration
 role: Admin, Architect, Developer
@@ -11,9 +11,10 @@ duration: 130
 last-substantial-update: 2024-08-09T00:00:00Z
 jira: KT-15946
 thumbnail: KT-15946.jpeg
-source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
+exl-id: e11ff38c-e823-4631-a5b0-976c2d11353e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '599'
 ht-degree: 1%
 
 ---
@@ -74,13 +75,12 @@ ht-degree: 1%
 
 | 自訂網域名稱和 | 新增SSL憑證至 | 新增網域名稱到 | 設定DNS記錄於 | 需要HTTP標頭驗證CDN規則嗎？ |
 |---------------------|:-----------------------:|-----------------------:|-----------------------:|-----------------------:|
-| Adobe管理的CDN | AdobeCloud Manager | AdobeCloud Manager | DNS託管服務 | ✘ |
+| Adobe管理的CDN | Adobe Cloud Manager | Adobe Cloud Manager | DNS託管服務 | ✘ |
 | 客戶管理的CDN | CDN供應商 | CDN供應商 | DNS託管服務 | ✔ |
 
 ### 逐步教學課程
 
 現在您已經瞭解網域名稱管理程式，您可以依照下列教學課程，實作AEM as a Cloud Service網站的自訂網域名稱：
 
-**[具有Adobe管理的CDN的自訂網域名稱](./custom-domain-name-with-adobe-managed-cdn.md)**：在本教學課程中，您將瞭解如何以Adobe管理的CDN **將自訂網域名稱新增到**AEM as a Cloud Service網站。
+**[具有Adobe管理的CDN的自訂網域名稱](./custom-domain-name-with-adobe-managed-cdn.md)**：在本教學課程中，您將瞭解如何使用Adobe管理的CDN **將自訂網域名稱新增到**AEM as a Cloud Service網站。
 **[使用客戶管理的CDN的自訂網域名稱](./custom-domain-names-with-customer-managed-cdn.md)**：在本教學課程中，您將瞭解如何使用客戶管理的CDN **將自訂網域名稱新增到** AEM as a Cloud Service網站。
-

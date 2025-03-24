@@ -1,7 +1,7 @@
 ---
 title: 彈性的連接埠輸出
 description: 瞭解如何設定和使用彈性的連線埠輸出，以支援從AEM as a Cloud Service到外部服務的外部連線。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 870
-source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 2%
@@ -174,7 +174,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
    |---------------------------------|----------|----------------|------------------|----------|
    | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-   如果您的AEM部署&#x200B;__僅__&#x200B;需要外部服務的HTTP/HTTPS連線（連線埠80/443），請將`portForwards`陣列保留空白，因為只有非HTTP/HTTPS要求才需要這些規則。
+   如果您的AEM部署&#x200B;__僅__&#x200B;需要外部服務的HTTP/HTTPS連線（連線埠80/443），請將`portForwards`陣列保留空白，因為這些規則僅對非HTTP/HTTPS要求是必要的。
 
 1. 對於每個環境，請使用Cloud Manager API [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業來驗證輸出規則是否有效。
 
@@ -195,7 +195,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 ## 透過彈性連線埠輸出連線至外部服務
 
-啟用彈性連線埠輸出Proxy後，AEM程式碼和設定便可使用它們來呼叫外部服務。 AEM處理外部呼叫的方式有兩種：
+啟用彈性連線埠輸出Proxy後，AEM程式碼和設定便可使用它們來呼叫外部服務。 AEM對外部呼叫的處理方式有所差異，共有兩種型別：
 
 1. 對非標準連線埠上的外部服務進行HTTP/HTTPS呼叫
    + 包括對標準80或443連線埠以外的連線埠上執行的服務發出的HTTP/HTTPS呼叫。
@@ -207,9 +207,9 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 ### 非標準連線埠上的HTTP/HTTPS
 
-從AEM建立與非標準連線埠（非80/443）的HTTP/HTTPS連線時，必須透過特殊主機和連線埠（透過預留位置提供）進行連線。
+從AEM建立與非標準連線埠（非80/443）的HTTP/HTTPS連線時，必須透過提供預留位置的特殊主機和連線埠進行連線。
 
-AEM提供兩組特殊Java™系統變數，這些變數對應至AEM的HTTP/HTTPS代理程式。
+AEM提供兩組特殊的Java™系統變數，這些變數對應至AEM的HTTP/HTTPS代理程式。
 
 | 變數名稱 | 使用 | Java™程式碼 | OSGi設定 |
 | - |  - | - | - |
@@ -248,7 +248,7 @@ AEM提供兩組特殊Java™系統變數，這些變數對應至AEM的HTTP/HTTPS
 | `AEM_PROXY_HOST` | 非HTTP/HTTPS連線的Proxy主機 | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
 
 
-接著會透過`AEM_PROXY_HOST`與對應的連線埠(`portForwards.portOrig`)呼叫與外部服務的連線，AEM會路由傳送到對應的外部主機名稱(`portForwards.name`)與連線埠(`portForwards.portDest`)。
+接著會透過`AEM_PROXY_HOST`與對應的連線埠(`portForwards.portOrig`)呼叫與外部服務的連線，AEM會接著路由至對應的外部主機名稱(`portForwards.name`)與連線埠(`portForwards.portDest`)。
 
 | Proxy主機 | Proxy連線埠 |  | 外部主機 | 外部連線埠 |
 |---------------------------------|----------|----------------|------------------|----------|

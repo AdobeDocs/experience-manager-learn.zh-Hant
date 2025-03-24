@@ -2,14 +2,14 @@
 title: 新增專案至選擇群組元件
 description: 動態新增專案至選擇群組元件
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: User
 level: Beginner
 exl-id: 8fbea634-7949-417f-a4d6-9e551fff63f3
 last-substantial-update: 2021-09-10T00:00:00Z
 duration: 337
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -100,4 +100,4 @@ else
 * 應填入攤銷表。 攤銷排程是使用REST呼叫擷取。
 
 >[!NOTE]
-> 我們假定tomcat是在連線埠8080上執行，而AEM是在連線埠4502上執行
+> 我們假定tomcat是在連線埠8080上執行，AEM是在連線埠4502上執行

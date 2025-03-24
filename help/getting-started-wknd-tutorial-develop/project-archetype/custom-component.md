@@ -1,7 +1,7 @@
 ---
 title: 自訂元件
 description: 涵蓋顯示編寫內容的自訂署名元件的端對端建立。 包括開發Sling模型以封裝商業邏輯以填入署名元件和對應HTL以呈現元件。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, APIs
 topic: Content Management, Development
 role: Developer
@@ -12,7 +12,7 @@ thumbnail: 30181.jpg
 doc-type: Tutorial
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
 duration: 1039
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '3869'
 ht-degree: 0%
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 ## 目標
 
-1. 瞭解如何建立自訂AEM元件
+1. 瞭解如何建置自訂AEM元件
 1. 瞭解如何使用Sling模型封裝商業邏輯
 1. 瞭解如何從HTL指令碼使用Sling模型
 
@@ -107,7 +107,7 @@ ht-degree: 0%
 
 ### 建立HTL指令碼 {#create-the-htl-script}
 
-1. 在`byline`資料夾中，新增負責元件HTML表示的檔案`byline.html`。 將檔案命名為與資料夾相同的名稱很重要，因為這會成為Sling用來呈現此資源型別的預設指令碼。
+1. 在`byline`資料夾中，新增負責元件之HTML簡報的檔案`byline.html`。 將檔案命名為與資料夾相同的名稱很重要，因為這會成為Sling用來呈現此資源型別的預設指令碼。
 
 1. 將下列程式碼新增至`byline.html`。
 
@@ -288,7 +288,7 @@ ht-degree: 0%
 
 ## 將元件新增至頁面 {#add-the-component-to-a-page}
 
-為了保持簡單並專注於AEM元件開發，讓我們將Byline元件在其目前狀態下新增至Article頁面，以驗證`cq:Component`節點定義是否正確。 同時也需確認AEM可辨識新元件定義，且元件的對話方塊可用於編寫。
+為了保持簡單並專注於AEM元件開發，讓我們將Byline元件以其目前狀態新增至Article頁面，以驗證`cq:Component`節點定義是否正確。 也可用於確認AEM可辨識新元件定義，且元件的對話方塊可用於編寫。
 
 ### 將影像新增至AEM Assets
 
@@ -342,7 +342,7 @@ ht-degree: 0%
 
 接下來，建立Sling模型，以作為資料模型並存放Byline元件的商業邏輯。
 
-Sling模型是註釋驅動的Java™ POJO (Plain Old Java™ Objects)，可方便將資料從JCR對應至Java™變數，並在AEM環境中開發時提供效率。
+Sling模型是註解導向的Java™ POJO (Plain Old Java™物件)，有助於將資料從JCR對應至Java™變數，並在AEM環境中開發時提供效率。
 
 ### 檢閱Maven相依性 {#maven-dependency}
 
@@ -861,7 +861,7 @@ public class BylineImpl implements Byline {
 
 ### 更新署名HTL
 
-1. 使用以下骨架HTML結構更新&#x200B;**byline.html**：
+1. 使用下列骨架HTML結構更新&#x200B;**byline.html**：
 
    ```html
    <div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
@@ -923,7 +923,7 @@ HTL會從JSTL借用，並使用相同的Java™ getter方法名稱縮短格式�
 
 ### 有條件地顯示預留位置 {#conditionally-displaying-the-placeholder}
 
-AEM元件的大多數HTL指令碼都使用&#x200B;**預留位置範例**&#x200B;為作者&#x200B;**提供視覺提示，指出元件的編寫不正確，並且不會顯示在AEM Publish**&#x200B;上。 推動此決定的慣例是在元件的支援Sling模型上實作方法，在此案例中為： `Byline.isEmpty()`。
+AEM元件的大部分HTL指令碼都使用&#x200B;**預留位置範例**&#x200B;為作者&#x200B;**提供視覺提示，指出元件的編寫不正確，並且不會顯示在AEM Publish**&#x200B;上。 推動此決定的慣例是在元件的支援Sling模型上實作方法，在此案例中為： `Byline.isEmpty()`。
 
 在Byline Sling模型上叫用`isEmpty()`方法，並將結果（或更確切地說，透過`!`運運算元是負值）儲存到名為`hasContent`的HTL變數：
 
@@ -938,7 +938,7 @@ AEM元件的大多數HTL指令碼都使用&#x200B;**預留位置範例**&#x200B;
    </div>
    ```
 
-   請注意，使用`data-sly-test`時，HTL `test`區塊是機碼，它會設定HTL變數並轉譯/不轉譯它所在的HTML元素。 這是根據HTL運算式評估的結果。 若設為「true」，HTML元素會呈現，否則不會呈現。
+   請注意，使用`data-sly-test`時，HTL `test`區塊是機碼，其會設定HTL變數並轉譯/不轉譯其所在的HTML元素。 這是根據HTL運算式評估的結果。 若設為「true」，HTML元素會呈現，否則不會呈現。
 
    此HTL變數`hasContent`現在可重複使用，以有條件地顯示/隱藏預留位置。
 
@@ -984,7 +984,7 @@ AEM元件的大多數HTL指令碼都使用&#x200B;**預留位置範例**&#x200B;
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
    ```
 
-3. 將程式碼基底部署到本機AEM執行個體。 由於對`core`和`ui.apps`所做的變更需要部署這兩個模組。
+3. 將程式碼基底部署至本機AEM執行個體。 由於對`core`和`ui.apps`所做的變更需要部署這兩個模組。
 
    ```shell
    $ cd aem-guides-wknd/ui.apps
@@ -1009,7 +1009,7 @@ AEM元件的大多數HTL指令碼都使用&#x200B;**預留位置範例**&#x200B;
 
 ### 檢閱未設定樣式的署名元件 {#reviewing-the-unstyled-byline-component}
 
-1. 部署更新後，請導覽至[LA Skateparks最終指南](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)頁面，或是在章節前面新增Byline元件的位置。
+1. 部署更新後，請導覽至[Ultimate指南](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)頁面，或是在章節前面新增Byline元件的任何位置。
 
 1. **影像**、**名稱**&#x200B;和&#x200B;**職業**&#x200B;現在出現，且未設定樣式，但存在正在運作的Byline元件。
 

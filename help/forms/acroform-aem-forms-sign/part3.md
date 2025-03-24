@@ -3,11 +3,11 @@ title: 使用AEM Forms的Acroforms
 description: 整合Acroforms與AEM Forms的教學課程的第3部分。 在您的系統上測試工作流程與最適化表單。
 feature: adaptive-forms
 doc-type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 45
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 # 在您的系統上測試此功能
 
-[下載此封裝並匯入AEM](assets/acro-form-aem-form.zip)
+[下載此套件並將其匯入AEM](assets/acro-form-aem-form.zip)
 此套件包含範例工作流程和html頁面，可讓您從上傳的Acroform建立結構。
 
 ## 設定工作流程
@@ -35,7 +35,7 @@ ht-degree: 1%
 3. 設定最適化表單的提交動作，以提交至AEM工作流程(MergeAcroformData)。
 4. **請確定您指定資料檔路徑為「Data.xml」。 這非常重要，因為範常式式碼會在工作流程裝載中尋找名為Data.xml的檔案。**
 5. 預覽最適化表單、填寫表單並提交。
-6. 您應該會在設定工作流程下，看到與已合併儲存至步驟4中所指定資料夾的資料進行PDF
+6. 您應該會看到的PDF中，資料已合併儲存至設定工作流程步驟4中指定的資料夾
 
 >[!NOTE]
 >

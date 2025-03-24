@@ -1,7 +1,7 @@
 ---
 title: 本機開發設定
 description: 瞭解如何設定通用編輯器的本機開發環境，以便編輯範例React應用程式的內容。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 47bef697-5253-493a-b9f9-b26c27d2db56
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 本機開發設定
 
-瞭解如何設定本機開發環境，以使用AEM通用編輯器編輯React應用程式的內容。
+瞭解如何設定本機開發環境，以使用AEM通用編輯器來編輯React應用程式的內容。
 
 ## 先決條件
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 若要提供WKND Teams React應用程式的內容，請在本機AEM SDK中安裝下列套件。
 
 - [WKND Teams — 內容套件](./assets/basic-tutorial-solution.content.zip)：包含內容片段模型、內容片段和持續的GraphQL查詢。
-- [WKND Teams — 設定封裝](./assets/basic-tutorial-solution.ui.config.zip)：包含跨原始資源共用(CORS)和權杖驗證處理常式設定。 CORS有助於非AEM Web屬性對AEM的GraphQL API發出瀏覽器式使用者端呼叫，而Token Authentication Handler則用於向AEM驗證每個請求。
+- [WKND Teams — 設定封裝](./assets/basic-tutorial-solution.ui.config.zip)：包含跨原始資源共用(CORS)和權杖驗證處理常式設定。 CORS有助於非AEM Web屬性對AEM的GraphQL API發出瀏覽器式使用者端呼叫，而Token驗證處理常式則可用來向AEM驗證每個請求。
 
   ![WKND團隊 — 套件](./assets/wknd-teams-packages.png)
 
@@ -74,7 +74,7 @@ ht-degree: 0%
    $ npm start
    ```
 
-1. 在[http://localhost:3000](http://localhost:3000)的瀏覽器中，開啟WKND Teams React應用程式。 它會顯示專案團隊成員及其詳細資訊的清單。 本機AEM SDK會使用GraphQL API (`/graphql/execute.json/my-project/all-teams`)提供React應用程式的內容，您可以使用瀏覽器的網路標籤進行驗證。
+1. 在[http://localhost:3000](http://localhost:3000)的瀏覽器中，開啟WKND Teams React應用程式。 它會顯示專案團隊成員及其詳細資訊的清單。 React應用程式的內容由本機AEM SDK使用GraphQL API (`/graphql/execute.json/my-project/all-teams`)提供，您可以使用瀏覽器的網路標籤進行驗證。
 
    ![WKND團隊 — React應用程式](./assets/wknd-teams-react-app.png)
 

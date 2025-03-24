@@ -2,14 +2,14 @@
 title: 將AEM Forms與聊天機器人搭配使用
 description: 使用聊天機器人填寫PDF表單
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-15344
 topic: Development
 role: User
 level: Intermediate
 exl-id: 8c51a374-7444-4a6a-99ed-dce671dc57cb
 duration: 161
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # 使用ChatBot填寫PDF表單
 
-歡迎使用我們的教學課程，瞭解如何使用ChatBot填入Adobe Experience Manager Forms (AEM Forms)的PDF表單，以及使用Adobe Sign傳送以進行數位簽名。
+歡迎使用我們的教學課程，瞭解如何使用ChatBot在PDF表單中填入Adobe Experience Manager Forms (AEM Forms)，以及使用Adobe Sign傳送表單以供數位簽名。
 
 已使用[聊天機器人](https://www.chatbot.com/)建立ChatBot。
 

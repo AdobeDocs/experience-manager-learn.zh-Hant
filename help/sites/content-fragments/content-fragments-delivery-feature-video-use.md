@@ -2,14 +2,14 @@
 title: 在AEM中傳送內容片段
 description: 內容片段與版面配置無關，可直接在搭配核心元件的AEM Sites中使用，或以Headless方式傳送至下游管道。
 feature: Content Fragments
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
 duration: 878
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 2%
@@ -34,13 +34,13 @@ Adobe Experience Manager (AEM)內容片段是文字型編輯內容，其中可�
 
 內容片段可以在AEM Sites頁面上使用，或以類似方式使用AEM WCM核心元件的[內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)的體驗片段。
 
-內容片段元件可透過AEM樣式系統進行樣式設定，以視需要顯示內容。
+您可以使用AEM的樣式系統來設定內容片段元件的樣式，以視需要顯示內容。
 
 ## 以JSON格式公開內容片段 {#exposing-content-fragments-as-json}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22448?quality=12&learn=on)
 
-AEM Content Services可協助建立AEM頁面式HTTP端點，將內容轉譯為標準化JSON格式。
+AEM內容服務可協助您建立AEM頁面式HTTP端點，將內容轉譯為標準化JSON格式。
 
 上述影片使用[內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)來公開個別內容片段。 [內容片段清單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html)是新元件，可讓作者定義查詢，以動態方式將內容片段清單填入頁面。 需要公開多個內容片段時，建議使用內容片段清單元件。
 
@@ -73,7 +73,7 @@ AEM 6.5首次匯入，使用Assets HTTP API加強對內容片段的支援。 如
 ## 其他資源 {#additional-resources}
 
 * [製作內容片段](content-fragments-feature-video-use.md)
-* [AEM WCM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+* [AEM WCM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)
 * [AEM WCM核心內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 若要從影片系列下載並安裝以下套件至最終狀態的AEM 6.4+執行個體：\

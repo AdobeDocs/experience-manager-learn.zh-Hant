@@ -1,25 +1,25 @@
 ---
-title: 將Dynamic Media檢視器與Adobe Analytics和標籤搭配使用
-description: 適用於標籤的Dynamic Media Viewers擴充功能，以及Dynamic Media Viewers 5.13版的發行，可讓Dynamic Media、Adobe Analytics和標籤的客戶在其標籤設定中使用Dynamic Media Viewers專屬的事件和資料。
+title: 搭配Adobe Analytics和標籤使用Dynamic Media檢視器
+description: 適用於標籤的Dynamic Media Viewers擴充功能，以及Dynamic Media Viewers 5.13版的發行，可讓Dynamic Media、Adobe Analytics和標籤的客戶在其標籤設定中，使用特定於Dynamic Media Viewers的事件和資料。
 sub-product: Dynamic Media
 feature: Asset Insights
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 9d807f4c-999c-45e6-a9db-6c1776bddda1
 duration: 576
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 1%
 
 ---
 
-# 將Dynamic Media檢視器與Adobe Analytics和標籤搭配使用{#using-dynamic-media-viewers-adobe-analytics-tags}
+# 搭配Adobe Analytics和標籤使用Dynamic Media檢視器{#using-dynamic-media-viewers-adobe-analytics-tags}
 
-對於擁有Dynamic Media和Adobe Analytics的客戶，您現在可以使用Dynamic Media Viewer擴充功能來追蹤網站上的Dynamic Media Viewer使用情形。
+對於擁有Dynamic Media和Adobe Analytics的客戶，您現在可以使用Dynamic Media檢視器擴充功能來追蹤網站上的Dynamic Media檢視器使用情況。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29308?quality=12&learn=on)
 
@@ -27,13 +27,13 @@ ht-degree: 1%
 >
 > 在Dynamic Media Scene7模式下執行Adobe Experience Manager，以運用此功能。 您也需要[將標籤與您的AEM執行個體整合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)。
 
-透過引入Dynamic Media Viewer擴充功能，Adobe Experience Manager現在為使用Dynamic Media檢視器(5.13)傳送的資產提供進階分析支援，在Sites頁面上使用Dynamic Media Viewer時，提供更精細的事件追蹤控制。
+隨著動態媒體檢視器擴充功能的推出，Adobe Experience Manager現在為使用Dynamic Media檢視器(5.13)傳送的資產提供進階分析支援，在Sites頁面上使用Dynamic Media檢視器時，可提供更精細的事件追蹤控制。
 
 如果您已有AEM Assets和Sites，您可以整合標籤屬性與AEM編寫執行個體。 將Launch整合與您的網站建立關聯後，您可以將動態媒體元件新增至頁面，並啟用檢視器的事件追蹤。
 
 若為僅限AEM Assets的客戶或Dynamic Media Classic客戶，使用者可取得檢視器的內嵌程式碼，並將其新增至頁面。 接著，您就可以手動將標籤指令碼資料庫新增至頁面，以追蹤檢視器事件。
 
-下表列出Dynamic Media Viewer事件及其支援的引數：
+下表列出Dynamic Media檢視器事件及其支援的引數：
 
 <table>
    <tbody>

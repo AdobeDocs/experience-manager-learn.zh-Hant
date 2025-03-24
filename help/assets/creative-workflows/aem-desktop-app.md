@@ -1,7 +1,7 @@
 ---
 title: AEM案頭應用程式
-description: 使用AEM案頭應用程式，針對任何應用程式和檔案格式，簡化存取AEM在案頭上管理之任何資產的作業。
-version: 6.5, 6.4
+description: 使用AEM Desktop App可針對任何應用程式和檔案格式，簡化存取AEM在案頭上管理之任何資產的作業。
+version: Experience Manager 6.5, Experience Manager 6.4
 topic: Content Management
 feature: Desktop App
 role: User
@@ -12,7 +12,7 @@ last-substantial-update: 2022-06-24T00:00:00Z
 doc-type: Feature Video
 exl-id: 6765758f-0719-4ed9-83be-8ed192a75b41
 duration: 367
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 4%
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 # 使用 AEM 桌面應用程式
 
-使用AEM案頭應用程式，針對任何應用程式和檔案格式，簡化存取AEM在案頭上管理之任何資產的作業。
+使用AEM Desktop App可針對任何應用程式和檔案格式，簡化存取AEM在案頭上管理之任何資產的作業。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28868?quality=12&learn=on)
 

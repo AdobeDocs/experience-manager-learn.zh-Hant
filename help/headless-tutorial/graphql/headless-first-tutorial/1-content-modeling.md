@@ -1,7 +1,7 @@
 ---
 title: 內容模式 — AEM Headless第一個教學課程
 description: 瞭解如何在AEM中善用內容片段、建立片段模型和使用GraphQL端點。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 6e5e3cb4-9a47-42af-86af-da33fd80cb47
 duration: 175
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 8%
@@ -57,7 +57,7 @@ ht-degree: 8%
    | 內容參考 | 資產 | 是 | 您可視需要新增預設影像。 例如： /content/dam/wknd-headless/assets/AdobeStock_307513975.mp4 |
    | 單行文字 | 標題 | 是 |
    | 單行文字 | 前置標題 | 否 |
-   | 多行文字 | 說明 | 否 | 確定預設型別為RTF文字 |
+   | 多行文字 | 描述 | 否 | 確定預設型別為RTF文字 |
    | 列舉 | 樣式 | 是 | 呈現為下拉式清單。 選項包括Hero ->Hero和Featured ->精選 |
 
    ![Teaser模型](./assets/1/teaser-model.png)
@@ -67,7 +67,7 @@ ht-degree: 8%
    | 資料型別 | 名稱 | 必填 | 選項 |
    |----------|------|----------|---------|
    | 內容參考 | 資產 | 是 | 新增預設影像。 例如： `/content/dam/wknd-headless/assets/AdobeStock_238607111.jpeg` |
-   | 多行文字 | 說明 | 否 |  |
+   | 多行文字 | 描述 | 否 |  |
    | 多行文字 | 文章 | 否 |  |
 
    ![優惠方案模型](./assets/1/offer-model.png)
@@ -93,12 +93,12 @@ ht-degree: 8%
 
    按一下新資料夾並建立Teaser。 按一下&#x200B;__建立__&#x200B;和&#x200B;__內容片段__，然後選取&#x200B;__Teaser__&#x200B;模型。 將模型命名為&#x200B;__Hero__，然後按一下&#x200B;__建立__。
 
-   | 名稱 | 附註 |
+   | 名稱 | 備註 |
    |----------|------|
    | 資產 | 保留為預設值，或選擇其他資產（視訊或影像） |
    | 標題 | `Explore. Discover. Live.` |
    | 前置標題 | `Join use for your next adventure.` |
-   | 說明 | 留空 |
+   | 描述 | 留空 |
    | 樣式 | `Hero` |
 
    ![英雄片段](./assets/1/teaser-model.png)
@@ -195,4 +195,4 @@ ht-degree: 8%
 
 恭喜！您已成功設定AEM as a Cloud Service以允許建立內容片段和GraphQL端點。 您也可以建立內容片段模型和內容片段，並定義GraphQL端點與持續查詢。 您現在已準備好進入下一個教學課程章節，您將瞭解如何建立AEM Headless React應用程式，該應用程式會使用您在本章中建立的內容片段和GraphQL端點。
 
-[下一章：AEM Headless APIs和React](./2-aem-headless-apis-and-react.md)
+[下一章：AEM Headless API和React](./2-aem-headless-apis-and-react.md)

@@ -1,7 +1,7 @@
 ---
 title: 如何在AEM Headless中使用大型結果集
 description: 瞭解如何使用AEM Headless處理大型結果集。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
 role: Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-13102
 thumbnail: 3418381.jpeg
 exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
 duration: 308
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # AEM Headless中的大型結果集
 
-AEM Headless GraphQL查詢可能會傳回大量結果。 本文會說明如何在AEM Headless中使用大型結果，以確保您的應用程式發揮最佳效能。
+AEM Headless GraphQL查詢可能會傳回大量結果。 本文說明如何在AEM Headless中使用大型結果，以確保您的應用程式獲得最佳效能。
 
 AEM Headless支援對較大結果集的較小子集進行[位移/限制](#list-query)和[游標式分頁](#paginated-query)查詢。 可以提出多個請求，以收集所需數量的結果。
 

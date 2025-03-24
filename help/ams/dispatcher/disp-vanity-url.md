@@ -1,7 +1,7 @@
 ---
 title: AEM Dispatcher虛名URL功能
 description: 瞭解AEM如何處理虛名URL，以及使用重寫規則將內容對應到更接近傳送邊緣的其他技術。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Performance
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
 duration: 244
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 概觀
 
-本檔案可協助您瞭解AEM如何處理虛名URL，以及使用重寫規則將內容對應到更接近傳送邊緣的其他技術
+本檔案可協助您瞭解AEM如何處理虛名URL，以及其他一些使用重寫規則來對應更靠近傳送邊緣之內容的技術
 
 ## 什麼是虛名URL
 
@@ -50,7 +50,7 @@ AEM作者可選擇在AEM中為內容設定虛名URL屬性並將其發佈。
 
 #### 觸控式UI：
 
-![網站編輯器熒幕上AEM編寫UI的下拉式對話方塊功能表](assets/disp-vanity-url/aem-page-properties-drop-down.png "aem-page-properties — 下拉式清單")
+![網站編輯器熒幕上AEM編寫UI的下拉式對話方塊功能表](assets/disp-vanity-url/aem-page-properties-drop-down.png "aem-page-properties-drop-down")
 
 ![aem頁面屬性對話方塊頁面](assets/disp-vanity-url/aem-page-properties.png "aem-page-properties")
 
@@ -70,7 +70,7 @@ AEM作者可選擇在AEM中為內容設定虛名URL屬性並將其發佈。
 
 每個虛名專案都是用於內部重新導向的sling對應專案。
 
-造訪AEM執行個體Felix主控台( `/system/console/jcrresolver` )即可看到對應
+造訪AEM執行個體Felix主控台( `/system/console/jcrresolver` )即可看到地圖
 
 以下是虛專案建立的地圖專案的熒幕擷圖：
 ![資源解析規則中虛專案的主控台熒幕擷圖](assets/disp-vanity-url/vanity-resource-resolver-entry.png "vanity-resource-resolver-entry")
@@ -164,7 +164,7 @@ RewriteRule ^/aboutus /content/we-retail/us/en/about-us.html [PT,L,NC]
 
 ## 哪一種方法及何處
 
-使用AEM控制虛名專案具有以下優點
+使用AEM控制虛名專案的優點如下
 
 - 作者可以即時建立這些檔案
 - 它們會與內容共存，並可與內容一起封裝

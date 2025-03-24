@@ -1,25 +1,25 @@
 ---
 title: AEM工作流程中的變數[第4部分]
 description: 在AEM工作流程中使用XML、JSON、ArrayList、檔案型別的變數
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: 269e43f7-24cf-4786-9439-f51bfe91d39c
 duration: 102
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
 
 ---
 
-# AEM工作流程中的ArrayList變數
+# AEM工作流程中的陣列清單變數
 
 AEM Forms 6.5已匯入ArrayList型別的變數。使用ArrayList變數的常見使用案例是定義要在AssignTask中使用的自訂路由。
 
-若要在AEM Workflow中使用ArrayList變數，您需要建立最適化表單，該表單會在提交的資料中產生重複元素。 常見的作法是定義包含陣列元素的結構描述。 出於本文的目的，我建立了一個包含陣列元素的簡單JSON結構描述。 使用案例是員工填寫費用報表。 在費用報表中，我們會擷取提交者的經理名稱與經理名稱。 管理員的名稱儲存在稱為managerchain的陣列中。 以下熒幕擷圖顯示費用報表表單，以及來自最適化Forms提交的資料。
+若要在AEM工作流程中使用ArrayList變數，您需要建立最適化表單，該表單會在提交的資料中產生重複元素。 常見的作法是定義包含陣列元素的結構描述。 出於本文的目的，我建立了一個包含陣列元素的簡單JSON結構描述。 使用案例是員工填寫費用報表。 在費用報表中，我們會擷取提交者的經理名稱與經理名稱。 管理員的名稱儲存在稱為managerchain的陣列中。 以下熒幕擷圖顯示費用報表表單，以及來自最適化Forms提交的資料。
 
 ![費用報表](assets/expensereport.jpg)
 

@@ -2,7 +2,7 @@
 title: 搭配AEM Sites使用頁面編輯器
 description: 以下影片重點說明Adobe Experience Manager中觸控式UI網站編輯器的幾項主要功能。
 feature: Page Editor
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-4248
 thumbnail: 32011.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
 duration: 395
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 2%

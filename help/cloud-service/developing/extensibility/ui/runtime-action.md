@@ -2,7 +2,7 @@
 title: AEM UI擴充功能Adobe I/O Runtime動作
 description: 瞭解如何建立AEM UI擴充功能模型。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: 3062900a-0461-4c6f-81e6-c76a7f613804
 duration: 240
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 AEM UI擴充功能可選擇包含任何數量的[Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/)。
 
-Adobe I/O Runtime動作是可由擴充功能叫用的無伺服器函式。 執行需要與AEM或其他AdobeWeb服務互動的工作時，動作會很有用。 動作通常最適合用於執行長時間執行（超過幾秒鐘）的工作，或向AEM或其他Web服務發出HTTP請求。
+Adobe I/O Runtime動作是可由擴充功能叫用的無伺服器函式。 執行需要與AEM或其他Adobe Web服務互動的工作時，動作會很有用。 動作通常最適合用於執行長期執行（超過幾秒鐘）的工作，或向AEM或其他Web服務發出HTTP請求。
 
 使用Adobe I/O Runtime動作執行工作的好處包括：
 
@@ -34,11 +34,11 @@ Adobe I/O Runtime動作是可由擴充功能叫用的無伺服器函式。 執�
 
 在AEM UI擴充功能的內容中，動作通常用於直接與AEM as a Cloud Service通訊：
 
-+ 從AEM收集有關選取或目前內容的相關資料
++ 從AEM收集所選或目前內容的相關資料
 + 對內容執行自訂作業
 + 內容客製化建立
 
-雖然AEM UI擴充功能出現在特定的AEM UI中，但擴充功能及其支援動作可以叫用任何可用的AEM HTTP API，包括自訂AEM API端點。
+雖然AEM UI擴充功能出現在特定的AEM UI中，但擴充功能及其支援動作可叫用任何可用的AEM HTTP API，包括自訂AEM API端點。
 
 ## 叫用動作
 
@@ -110,9 +110,9 @@ export default ExtensionRegistration;
 
 ### 從強制回應視窗
 
-Adobe I/O Runtime動作可以直接從模式呼叫，以執行更多參與的工作，特別是依賴與AEM as a Cloud Service通訊、AdobeWeb服務或甚至第三方服務的工作。
+Adobe I/O Runtime動作可直接從模式呼叫，以執行更多參與的工作，尤其是依賴與AEM as a Cloud Service、Adobe Web服務或甚至第三方服務通訊的工作。
 
-Adobe I/O Runtime動作是以Node.js為基礎的JavaScript應用程式，會在無伺服器Adobe I/O Runtime環境中執行。 這些動作可由SPA擴充功能透過HTTP定址。
+Adobe I/O Runtime動作是以Node.js為基礎的JavaScript應用程式，會在無伺服器Adobe I/O Runtime環境中執行。 這些動作可由擴充功能SPA透過HTTP定址。
 
 + `./src/aem-ui-extension/web-src/src/components/MyModal.js`
 
@@ -313,7 +313,7 @@ async function main (params) {
 + [完成AEM as a Cloud Service API參考](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
 
 
-## Adobenpm模組
+## Adobe npm模組
 
 以下是開發Adobe I/O Runtime動作的實用npm模組：
 
@@ -326,6 +326,6 @@ async function main (params) {
    + [Adobe Campaign Standard資料庫](https://github.com/adobe/aio-lib-campaign-standard)
    + [Adobe客戶設定檔程式庫](https://github.com/adobe/aio-lib-customer-profile)
    + [Adobe Audience Manager客戶資料庫](https://github.com/adobe/aio-lib-audience-manager-cd)
-   + [Adobe I/O事件](https://github.com/adobe/aio-lib-events)
+   + [Adobe I/O Events](https://github.com/adobe/aio-lib-events)
 + [@adobe/aio-lib-core-networking](https://github.com/adobe/aio-lib-core-networking)
 + [@adobe/node-httptransfer](https://github.com/adobe/node-httptransfer)

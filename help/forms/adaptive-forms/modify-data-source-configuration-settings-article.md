@@ -2,14 +2,14 @@
 title: 修改資料Source組態設定。
 description: 在「資料Source組態設定」中修改主機名稱和其他設定。
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 6c63787c-e511-4764-9a03-2c85c394bcc0
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 28
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 以下熒幕擷取畫面顯示AEM Forms 6.4和Forms 6.5中的資料來源組態設定
 
-AEM 6.4 **中的**&#x200B;資料Source設定
+AEM 6.4中的&#x200B;**資料Source設定**
 
 ![64資料來源組態](assets/64release.gif)
 **AEM 6.5及更高版本中的可編輯資料Source設定**

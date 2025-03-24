@@ -6,9 +6,9 @@ user-guide-description: 供初學者和經驗豐富的 AEM Forms 開發人員使
 solution: Experience Manager, Experience Manager Forms
 breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 index: y
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2101'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
    + [提交至外部端點](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [傳送電子郵件](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
    + [付費休假請求工作流程](handling-form-submissions/paid-time-off-request-workflow.md)
-   + [設定最適化表單以觸發AEM Workflow — 影片](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
+   + [設定最適化表單以觸發AEM工作流程 — 影片](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [自訂指派工作通知](handling-form-submissions/customize-assign-task-notification.md)
 + 有用的整合{#some-useful-integrations}
    + [雙因素驗證](some-useful-integrations/two-factor-authentication.md)
@@ -54,7 +54,7 @@ ht-degree: 1%
    + [2 — 建立OSGi服務](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [3 — 建立Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
    + [4 — 包含第三方套件組合](creating-your-first-osgi-bundle/include-third-party-jars.md)
-+ 最適化 Forms {#adaptive-forms}
++ 最適化表單 {#adaptive-forms}
    + [在Windows上安裝AEM Forms](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [在Linux上安裝32位元套件](adaptive-forms/installing-aem-form-on-linux.md)
    + [最適化Forms中的預填服務](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
@@ -100,7 +100,7 @@ ht-degree: 1%
    + [JDBC式表單資料模型](adaptive-forms/jdbc-data-model-technical-video-use.md)
    + [在表單資料模型中建立2個實體之間的關聯](adaptive-forms/association-data-model-technical-video-use.md)
    + [在規則編輯器中使用表單資料模型的叫用服務](adaptive-forms/service-data-model-technical-video-use.md)
-   + [使用表單資料模型將二進位資料發佈到AEM DAM](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
+   + [使用表單資料模型將二進位資料發佈至AEM DAM](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
    + [建立可重複使用的工作流程模型](adaptive-forms/re-usable-aem-forms-workflow-models-article.md)
    + [自訂流程步驟AEM工作流程](adaptive-forms/custom-process-step-aem-workflow.md)
    + [預先填入HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
@@ -175,7 +175,7 @@ ht-degree: 1%
    + [建立及設定最適化表單](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [為單一簽署者設定最適化表單](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [為兩個簽署者設定最適化表單](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
-   + [設定Automated forms conversion服務](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
+   + [設定自動錶單轉換服務](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [將PDF表單轉換為最適化表單](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [設定已轉換的最適化表單](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [搭配Acrobat Sign使用XDP範本](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
@@ -208,7 +208,7 @@ ht-degree: 1%
    + [檔案變數](variables-aem-workflow/part3.md)
    + [ArrayList變數](variables-aem-workflow/part4.md)
    + [表單資料模型變數](variables-aem-workflow/form-data-model.md)
-   + [AEM Workflow中的規則編輯器](variables-aem-workflow/part5.md)
+   + [AEM工作流程中的規則編輯器](variables-aem-workflow/part5.md)
    + [記錄工作流程變數](variables-aem-workflow/part6.md)
 + 檢閱表單資料{#review-form-data}
    + [1 — 簡介](review-form-data/introduction.md)
@@ -279,9 +279,9 @@ ht-degree: 1%
    + [4 — 產生簽署Widget](react-ic-sign/create-servlet-to-expose-endpoint.md)
    + [5 — 部署範例資產](react-ic-sign/deploy-assets-on-your-server.md)
 + 文件服務 {#document-services}
-   + [PDF forms型別](document-services/pdf-forms-and-documents.md)
+   + [PDF forms的型別](document-services/pdf-forms-and-documents.md)
    + [在最適化表單中內嵌pdf](document-services/embed-pdf-inline.md)
-   + [輪播元件中的PDF](document-services/display-pdf-in-carousel.md)
+   + [PDF的輪播元件](document-services/display-pdf-in-carousel.md)
    + [在AEM Forms中使用組合器服務](document-services/using-assembler-service-in-aem-forms.md)
    + [使用組合器服務進行XDP拼接](document-services/xdp-stitching-using-assembler-service.md)
    + [使用AEM Forms中的Watched資料夾](document-services/watched-folders-document-services-article-use.md)
@@ -296,8 +296,8 @@ ht-degree: 1%
    + [根據核心元件表單提交產生PDF](document-services/generate-pdf-from-core-component-form-submission.md)
    + [從行動表單產生互動式PDF](document-services/render-interactive-form-using-api.md)
    + [從最適化表單產生互動式DoR](document-services/generate-interactive-dor.md)
-   + [設定Reader延伸模組認證](document-services/configuring-reader-extension-osgi.md)
-   + [套用使用許可權至XDP轉譯的PDF](document-services/rendering-and-reader-extending-xdp-templates-article.md)
+   + [設定Reader擴充功能認證](document-services/configuring-reader-extension-osgi.md)
+   + [在XDP轉譯上套用使用許可權至PDF](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [套用使用許可權至已上傳的PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [證明檔案](document-services/certifying-documents-aem-forms-tutorial.md)
    + [組合表單附件](document-services/assemble-form-attachments.md)

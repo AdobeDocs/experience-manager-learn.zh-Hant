@@ -4,12 +4,12 @@ description: 執行ExecuteAssemblerService.java以測試解決方案
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 exl-id: 5139aa84-58d5-40e3-936a-0505bd407ee8
 duration: 55
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -27,12 +27,12 @@ ht-degree: 0%
 
 ![resources-file](./assets/resources.png)
 
-## 測試組裝PDF檔案
+## 測試組合PDF檔案
 
 * 將您的服務認證複製並貼到專案的service_token.json資源檔案中。
 * 開啟AssemblePDFFiles.java檔案，並指定要儲存產生的PDF檔案的資料夾
 * 開啟ExecuteAssemblerService.java。 設定變數&#x200B;_AEM_FORMS_CS_&#x200B;的值以指向您的執行個體。
-* 取消註解適當的行以測試組裝兩個或多個PDF檔案
+* 取消註解適當的行，以測試組裝兩個或多個PDF檔案
 * 以Java應用程式執行ExecuteAssemblerService.java
 
 ### 測試PDFA公用程式
@@ -46,6 +46,6 @@ ht-degree: 0%
 
 
 >[!NOTE]
-> 第一次執行Java程式時，您會收到HTTP 403錯誤。 若要通過此程式，請確定您授予[適當許可權給AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)中的技術帳戶使用者。
+> 第一次執行Java程式時，您會收到HTTP 403錯誤。 若要完成此程式，請確定您已在AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)中將[適當的許可權授予技術帳戶使用者。
 
 **AEM Forms使用者**&#x200B;是我用於此課程的角色。

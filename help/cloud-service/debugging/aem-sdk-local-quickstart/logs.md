@@ -1,8 +1,8 @@
 ---
-title: 使用記錄檔除錯AEM SDK
+title: 使用記錄檔為AEM SDK除錯
 description: 記錄檔是AEM應用程式偵錯作業的最前線，但部署的AEM應用程式必須有充足的登入次數。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5252
 topic: Development
@@ -10,30 +10,30 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 91aa4a10-47fe-4313-acd2-ca753e5484d9
 duration: 411
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
 
 ---
 
-# 使用記錄檔除錯AEM SDK
+# 使用記錄檔為AEM SDK除錯
 
-存取AEM SDK的記錄檔(AEM SDK本機快速入門Jar或Dispatcher工具)可提供AEM應用程式除錯的重要深入分析。
+存取AEM SDK的記錄檔(AEM SDK本機Quickstart Jar或Dispatcher Tools)可提供AEM應用程式偵錯的重要深入分析。
 
-## AEM記錄
+## AEM記錄檔
 
 >[!VIDEO](https://video.tv.adobe.com/v/34334?quality=12&learn=on)
 
 記錄檔是AEM應用程式偵錯作業的最前線，但部署的AEM應用程式必須有充足的登入次數。 Adobe建議儘可能保持本機開發和AEM as a Cloud Service開發記錄設定，因為它標準化AEM SDK本機Quickstart和AEM as a Cloud Service開發環境的記錄可見度，減少設定迂迴和重新部署。
 
-[AEM專案原型](https://github.com/adobe/aem-project-archetype)會透過Sling Logger OSGi設定，在DEBUG層級設定AEM應用程式之Java套件的記錄，以進行本機開發，該設定可在
+[AEM專案原型](https://github.com/adobe/aem-project-archetype)會透過Sling Logger OSGi設定，為您AEM應用程式的Java套件設定DEBUG層級的記錄，以進行本機開發，該設定可在
 
 `ui.apps/src/main/content/jcr_root/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
 哪些專案記錄到`error.log`。
 
-如果預設記錄不足以用於本機開發，則可透過AEM SDK的本機Quickstart的「記錄支援」Web主控台([/system/console/slinglog](http://localhost:4502/system/console/slinglog))來設定臨機記錄，不過，不建議將臨機記錄變更儲存到Git，除非也在AEM as a Cloud Service開發環境中需要這些相同的記錄設定。 請記住，透過記錄支援主控台進行的變更會直接儲存至AEM SDK的本機Quickstart存放庫。
+如果預設記錄不足以供本機開發使用，則可透過AEM SDK的本機Quickstart的「記錄支援」網頁主控台([/system/console/slinglog](http://localhost:4502/system/console/slinglog))來設定臨機記錄。不過，不建議將臨機記錄變更儲存至Git，除非AEM as a Cloud Service Dev環境也需要這些相同的記錄設定。 請記住，透過記錄支援主控台進行的變更會直接儲存至AEM SDK的本機Quickstart存放庫。
 
 可在`error.log`檔案中檢視Java記錄陳述式：
 

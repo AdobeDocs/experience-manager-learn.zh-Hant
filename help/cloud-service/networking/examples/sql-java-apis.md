@@ -1,7 +1,7 @@
 ---
 title: 使用Java™ API的SQL連線
 description: 瞭解如何使用Java™ SQL API和輸出連線埠，從AEM as a Cloud Service連線到SQL資料庫。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9356
 thumbnail: KT-9356.jpeg
 exl-id: ec9d37cb-70b6-4414-a92b-3b84b3f458ab
 duration: 124
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # 使用Java™ API的SQL連線
 
-與SQL資料庫（以及其他非HTTP/HTTPS服務）的連線必須從AEM代理出去。
+與SQL資料庫（以及其他非HTTP/HTTPS服務）的連線必須使用AEM的代理連線。
 
-此規則的例外情況是當[專用輸出ip位址](../dedicated-egress-ip-address.md)正在使用中，並且服務在Adobe或Azure上時。
+此規則的例外情況是[專用輸出ip位址](../dedicated-egress-ip-address.md)正在使用中，且服務位於Adobe或Azure上。
 
 ## 進階網路支援
 
@@ -151,7 +151,7 @@ public class MySqlExternalServiceImpl implements ExternalService {
 
 ## MySQL驅動程式相依性
 
-AEM as a Cloud Service通常需要您提供Java™資料庫驅動程式來支援連線。 提供驅動程式通常最好透過`all`套件將包含這些驅動程式的OSGi套件成品內嵌至AEM專案中。
+AEM as a Cloud Service通常需要您提供Java™資料庫驅動程式來支援連線。 提供驅動程式的最佳作法通常是透過`all`套件將包含這些驅動程式的OSGi套件成品內嵌至AEM專案。
 
 ### Reactor pom.xml
 

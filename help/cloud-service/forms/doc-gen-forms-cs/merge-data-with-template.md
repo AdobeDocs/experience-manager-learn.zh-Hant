@@ -4,14 +4,14 @@ description: 使用必要的引數向端點發出POST請求
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-8185
 thumbnail: 332439.jpg
 exl-id: d144b3f6-7c7a-46a7-bc5f-1767895749d0
 duration: 49
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 # 進行POST呼叫
 
 
-下一步是使用必要的引數向端點進行HTTPPOST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定。embedFonts屬性是用來在產生的pdf中嵌入自訂字型。[請依照此檔案將自訂字型部署至您的Forms雲端執行個體。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en)屬性是在options.json資源檔案中指定的。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
+下一步是使用必要的引數向端點進行HTTP POST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定。embedFonts屬性是用來在產生的pdf中嵌入自訂字型。[請依照此檔案將自訂字型部署至您的Forms雲端執行個體。](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en)屬性是在options.json資源檔案中指定的。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
 
 下列程式碼是用來將資料與範本合併，以產生pdf
 

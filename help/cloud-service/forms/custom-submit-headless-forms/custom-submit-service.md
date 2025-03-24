@@ -5,13 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-13520
 exl-id: c23275d7-daf7-4a42-83b6-4d04b297c470
 duration: 115
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%
@@ -26,7 +26,7 @@ AEM Forms提供許多立即可用的提交選項，可滿足大部分使用案�
 
 ## 建立AEM專案
 
-如果您已有現有的AEM Formsas a Cloud Service專案，您可以[跳至撰寫自訂提交服務](#Write-the-custom-submit-service)
+如果您已有現有的AEM Forms as a Cloud Service專案，您可以[跳至撰寫自訂提交服務](#Write-the-custom-submit-service)
 
 * 在您的c磁碟機上建立名為cloudmanager的資料夾。
 * 導覽至這個新建立的資料夾
@@ -107,7 +107,7 @@ public class HandleRegistrationFormSubmission implements FormSubmitActionService
 ## 將程式碼部署到您的本機AEM Forms執行個體
 
 將變更推送到Cloud Manager存放庫之前，建議將程式碼部署到本機雲端就緒的作者執行個體以測試程式碼。 確定作者執行個體正在執行。
-若要將程式碼部署到您的雲端就緒編寫執行個體，請導覽至AEM專案的根資料夾並執行以下命令
+若要將程式碼部署到您的雲端就緒製作執行個體，請導覽至AEM專案的根資料夾，然後執行下列命令
 
 ```
 mvn clean install -PautoInstallSinglePackage

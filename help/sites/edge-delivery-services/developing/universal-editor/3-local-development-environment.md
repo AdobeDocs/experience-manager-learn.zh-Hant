@@ -1,7 +1,7 @@
 ---
 title: 設定本機開發環境
 description: 為使用Edge Delivery Services提供並可使用通用編輯器編輯的網站設定本機開發環境。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 1%
@@ -149,7 +149,7 @@ AEM CLI會在您的瀏覽器中`http://localhost:3000/`開啟網站。 專案中
 npm run build:json
 ```
 
-| NPM指令碼 | 說明 |
+| NPM指令碼 | 描述 |
 |--------------------|-----------------------------------------------------------------------------|
 | `build:json` | 從片段建置所有JSON檔案，並將其新增至適當的`component-*.json`檔案。 |
 | `build:json:models` | 建置區塊JSON片段並將它們編譯成`/component-models.json`。 |
@@ -172,7 +172,7 @@ NPM指令碼可以透過`npm run`執行，例如：
 $ npm run lint
 ```
 
-| NPM指令碼 | 說明 |
+| NPM指令碼 | 描述 |
 |------------------|--------------------------------------------------|
 | `lint:js` | 執行JavaScript Linting檢查。 |
 | `lint:css` | 執行CSS篩選檢查。 |
@@ -194,7 +194,7 @@ $ npm run lint:fix
 
 >[!TAB 其他指令碼]
 
-| NPM指令碼 | 命令 | 說明 |
+| NPM指令碼 | 命令 | 描述 |
 |------------------|------------------------------------------------|-------------------------------------------------------|
 | `lint:js:fix` | `npm run lint:js -- --fix` | 自動修正JavaScript Linting問題。 |
 | `lint:css:fix` | `stylelint blocks/**/*.css styles/*.css -- --fix` | 自動修正CSS篩選問題。 |

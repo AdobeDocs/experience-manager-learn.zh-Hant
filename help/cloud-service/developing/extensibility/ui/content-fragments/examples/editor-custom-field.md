@@ -2,7 +2,7 @@
 title: 內容片段主控台 — 自訂欄位
 description: 瞭解如何在AEM內容片段編輯器中建立自訂欄位。
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 role: Developer
 level: Intermediate
 doc-type: Tutorial
@@ -11,7 +11,7 @@ last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
 exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
-AEM UI擴充功能應使用[AdobeReact Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)架構進行開發，因為這樣可維持與AEM其他部分一致的外觀與風格，並且擁有預先建立的廣泛功能庫，可減少開發時間。
+AEM UI擴充功能應使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)架構進行開發，因為這樣可與AEM其他部分維持一致的外觀與風格，並且擁有預先建立的廣泛功能庫，可減少開發時間。
 
 ## 擴充點
 
@@ -132,10 +132,10 @@ export default ExtensionRegistration;
 
 ### 自訂欄位
 
-`SkuField` React元件會使用AdobeReact Spectrum做為選擇器表單，以自訂UI更新內容片段編輯器。 重點包括：
+`SkuField` React元件會使用Adobe React Spectrum做為選擇器表單，以自訂UI更新內容片段編輯器。 重點包括：
 
-+ 利用`useEffect`進行初始化並連線至AEM內容片段編輯器，並在安裝完成前顯示載入狀態。
-+ 在iFrame內呈現時，它會透過`onOpenChange`函式動態調整iFrame的高度，以符合AdobeReact頻譜選擇器的下拉式清單。
++ 利用`useEffect`進行初始化並連線至AEM的內容片段編輯器，並在安裝完成前顯示載入狀態。
++ 在iFrame內呈現時，它會透過`onOpenChange`函式動態調整iFrame的高度，以符合Adobe React頻譜選擇器的下拉式清單。
 + 使用`onSelectionChange`函式中的`connection.host.field.onChange(value)`將欄位選取內容傳回主機，確保選取的值已根據內容片段模型的指南驗證並自動儲存。
 
 自訂欄位會在插入內容片段編輯器的iFrame中轉譯。 自訂欄位程式碼與內容片段編輯器之間的通訊僅透過`connection`物件進行，由`@adobe/uix-guest`封裝中的`attach`函式建立。

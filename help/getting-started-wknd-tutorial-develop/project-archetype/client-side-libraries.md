@@ -1,7 +1,7 @@
 ---
 title: 使用者端程式庫和前端工作流程
 description: 瞭解如何使用使用者端資料庫來針對Adobe Experience Manager (AEM) Sites實作部署及管理CSS和JavaScript。 瞭解如何將ui.frontend模組（一個webpack專案）整合到端對端建置流程中。
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, AEM Project Archetype
 topic: Content Management, Development
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 duration: 557
-source-git-commit: 58ef1c482f127981083c07e5de5a1aba2f7c3aec
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2554'
 ht-degree: 0%
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 以下使用者端程式庫組織由AEM Project Archetype產生，但僅代表起點。 專案最終如何管理並向Sites實作CSS和JavaScript，可能會因資源、技能組合和需求而有很大的差異。
+> 下列使用者端程式庫組織由AEM Project Archetype產生，但僅代表起點。 專案最終如何管理並向Sites實作CSS和JavaScript，可能會因資源、技能組合和需求而有很大的差異。
 
 1. 使用VSCode或其他IDE開啟&#x200B;**ui.apps**&#x200B;模組。
 1. 展開路徑`/apps/wknd/clientlibs`以檢視原型產生的clientlibs。
@@ -109,7 +109,7 @@ ht-degree: 0%
 
 1. 下表摘要列出使用者端程式庫。 如需有關[包含使用者端資料庫的更多詳細資料，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html?lang=en#developing)。
 
-   | 名稱 | 說明 | 附註 |
+   | 名稱 | 描述 | 備註 |
    |-------------------| ------------| ------|
    | `clientlib-base` | WKND網站運作所需的CSS和JavaScript基本層級 | 內嵌核心元件使用者端程式庫 |
    | `clientlib-grid` | 產生[配置模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)運作所需的CSS。 | 行動/平板電腦中斷點可在此處設定 |
@@ -131,9 +131,9 @@ ht-degree: 0%
 
    `main.scss`是`ui.frontend`模組中Sass檔案的進入點。 它包含`_variables.scss`檔案，其中包含一系列要用於專案中不同Sass檔案的品牌變數。 也包含`_base.scss`檔案，並定義HTML元素的一些基本樣式。 規則運算式包含`src/main/webpack/components`下個別元件樣式的樣式。 另一個規則運算式包含`src/main/webpack/site/styles`下的檔案。
 
-1. Inspect檔案`main.ts`。 它包含`main.scss`和規則運算式，以收集專案中的任何`.js`或`.ts`檔案。 [Webpack組態檔](https://webpack.js.org/configuration/)使用此進入點作為整個`ui.frontend`模組的進入點。
+1. 檢查檔案`main.ts`。 它包含`main.scss`和規則運算式，以收集專案中的任何`.js`或`.ts`檔案。 [Webpack組態檔](https://webpack.js.org/configuration/)使用此進入點作為整個`ui.frontend`模組的進入點。
 
-1. Inspect `src/main/webpack/site/styles`下的檔案：
+1. 檢查`src/main/webpack/site/styles`下的檔案：
 
    ![樣式檔案](assets/client-side-libraries/style-files.png)
 
@@ -143,7 +143,7 @@ ht-degree: 0%
 
    ![元件Sass檔案](assets/client-side-libraries/component-sass-files.png)
 
-   每個檔案都會對應至核心元件，例如[摺疊式功能表元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/accordion.html?lang=en)。 每個核心元件是以[區塊元素修飾元](https://getbem.com/)或BEM標籤法建置，以便更輕鬆地以樣式規則鎖定特定CSS類別。 `/components`底下的檔案已由AEM Project原型用每個元件的不同BEM規則進行除錯。
+   每個檔案都會對應至核心元件，例如[摺疊式功能表元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/accordion.html?lang=en)。 每個核心元件是以[區塊元素修飾元](https://getbem.com/)或BEM標籤法建置，以便更輕鬆地以樣式規則鎖定特定CSS類別。 `/components`底下的檔案已由AEM專案原型用每個元件的不同BEM規則進行除錯。
 
 1. 下載WKND基本樣式&#x200B;**[wknd-base-styles-src-v3.zip](/help/getting-started-wknd-tutorial-develop/project-archetype/assets/client-side-libraries/wknd-base-styles-src-v3.zip)**&#x200B;和&#x200B;**解壓縮**&#x200B;檔案。
 
@@ -163,15 +163,15 @@ ht-degree: 0%
 
    ![已變更的檔案](assets/client-side-libraries/changed-files-uifrontend.png)
 
-   Inspect變更的檔案，以檢視WKND樣式實施的詳細資訊。
+   檢查變更的檔案，以檢視WKND樣式實施的詳細資訊。
 
-## Inspect ui.frontend整合 {#ui-frontend-integration}
+## 檢查ui.frontend整合 {#ui-frontend-integration}
 
-內建在&#x200B;**ui.frontend**&#x200B;模組[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)中的關鍵整合專案，會從webpack/npm專案中取得編譯的CSS和JS成品，並將其轉換成AEM使用者端資料庫。
+內建在&#x200B;**ui.frontend**&#x200B;模組[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)中的重要整合專案，會從webpack/npm專案中取得編譯的CSS和JS成品，並將其轉換成AEM使用者端資料庫。
 
 ![ui.frontend架構整合](assets/client-side-libraries/ui-frontend-architecture.png)
 
-AEM專案原型會自動設定此整合。 接下來，探索其運作方式。
+AEM專案原型會自動設定這項整合。 接下來，探索其運作方式。
 
 
 1. 開啟命令列終端機，並使用`npm install`命令安裝&#x200B;**ui.frontend**&#x200B;模組：
@@ -222,21 +222,21 @@ AEM專案原型會自動設定此整合。 接下來，探索其運作方式。
    >
    >此外還有`npm run prod`個人資料，可縮制JS和CSS。 這是透過Maven觸發Webpack建置時的標準編譯。 如需[ui.frontend模組的詳細資訊，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)。
 
-1. 在`ui.frontend/dist/clientlib-site/site.css`下方Inspect檔案`site.css`。 這是根據Sass來源檔案編譯的CSS。
+1. 檢查`ui.frontend/dist/clientlib-site/site.css`下方的檔案`site.css`。 這是根據Sass來源檔案編譯的CSS。
 
    ![分散式網站CSS](assets/client-side-libraries/ui-frontend-dist-site-css.png)
 
-1. Inspect檔案`ui.frontend/clientlib.config.js`。 這是npm外掛程式[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)的設定檔，它會將`/dist`的內容轉換為使用者端程式庫，並將其移至`ui.apps`模組。
+1. 檢查檔案`ui.frontend/clientlib.config.js`。 這是npm外掛程式[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)的設定檔，它會將`/dist`的內容轉換為使用者端程式庫，並將其移至`ui.apps`模組。
 
-1. 在`ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css/site.css`的&#x200B;**ui.apps**&#x200B;模組中Inspect檔案`site.css`。 這應該是來自&#x200B;**ui.frontend**&#x200B;模組的`site.css`檔案的相同復本。 現在它位於&#x200B;**ui.apps**&#x200B;模組中，所以可將其部署到AEM。
+1. 在`ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css/site.css`的&#x200B;**ui.apps**&#x200B;模組中檢查檔案`site.css`。 這應該是來自&#x200B;**ui.frontend**&#x200B;模組的`site.css`檔案的相同復本。 現在位於&#x200B;**ui.apps**&#x200B;模組中，可將其部署至AEM。
 
    ![ui.apps clientlib-site](assets/client-side-libraries/ui-apps-clientlib-site-css.png)
 
    >[!NOTE]
    >
-   > 由於&#x200B;**clientlib-site**&#x200B;是在建置期間使用&#x200B;**npm**&#x200B;或&#x200B;**maven**&#x200B;編譯的，因此可以安全地從&#x200B;**ui.apps**&#x200B;模組的原始檔控制中忽略它。 Inspect **ui.apps**&#x200B;下方的`.gitignore`檔案。
+   > 由於&#x200B;**clientlib-site**&#x200B;是在建置期間使用&#x200B;**npm**&#x200B;或&#x200B;**maven**&#x200B;編譯的，因此可以安全地從&#x200B;**ui.apps**&#x200B;模組的原始檔控制中忽略它。 檢查&#x200B;**ui.apps**&#x200B;下方的`.gitignore`檔案。
 
-1. 在AEM開啟LA Skatepark文章，網址為： [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)。
+1. 在AEM開啟LA Skatepark文章： [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)。
 
    ![已更新文章的基本樣式](assets/client-side-libraries/updated-base-styles.png)
 
@@ -276,7 +276,7 @@ AEM專案原型會自動設定此整合。 接下來，探索其運作方式。
 
 ## 頁面和範本包含 {#page-inclusion}
 
-接下來，讓我們檢閱在AEM頁面中參照clientlibs的方式。 Web開發的常見最佳實務是在關閉`</body>`標籤之前，將CSS納入HTML標題`<head>`和JavaScript中。
+接下來，讓我們檢閱如何在AEM頁面中參照clientlibs。 Web開發的常見最佳實務是在關閉`</body>`標籤之前，將CSS納入HTML標題`<head>`和JavaScript中。
 
 1. 瀏覽至[http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)上的文章頁面範本
 
@@ -324,7 +324,7 @@ AEM專案原型會自動設定此整合。 接下來，探索其運作方式。
 
    >[!NOTE]
    >
-   > 對於AEM 6.5/6.4，使用者端程式庫不會自動縮制。 請參閱[HTML庫管理員的檔案以啟用縮制（建議）](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors)。
+   > 若為AEM 6.5/6.4，使用者端程式庫不會自動縮制。 請參閱有關[HTML資料庫管理員的檔案以啟用縮制（建議）](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors)。
 
    >[!WARNING]
    >
@@ -345,7 +345,7 @@ AEM專案原型會自動設定此整合。 接下來，探索其運作方式。
 
 在前幾個練習中，**ui.frontend**&#x200B;模組中的多個Sass檔案已更新，並透過建置程式最終看到這些變更反映在AEM中。 接下來，讓我們看一下使用[webpack-dev-server](https://webpack.js.org/configuration/dev-server/)快速開發針對&#x200B;**static** HTML的前端樣式的技巧。
 
-如果大多數樣式和前端計畫碼是由無法輕鬆存取AEM環境的專屬前端開發人員執行，這項技術會很實用。 此技術也允許FED直接修改HTML，然後可以交由AEM開發人員實作為元件。
+如果大多數樣式和前端計畫碼是由無法輕鬆存取AEM環境的專屬前端開發人員執行，這項技術會很實用。 此技術也允許FED直接修改HTML，然後交由AEM開發人員實作為元件。
 
 1. 複製位於[http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled)的LA滑板公園文章頁面的頁面來源。
 1. 重新開啟IDE。 從AEM複製的標籤貼到`src/main/webpack/static`下方的&#x200B;**ui.frontend**&#x200B;模組中的`index.html`。
@@ -391,7 +391,7 @@ AEM專案原型會自動設定此整合。 接下來，探索其運作方式。
 
    >[!CAUTION]
    >
-   > 靜態標籤的影像src指向本機AEM例項上的即時影像元件。 如果影像的路徑變更、AEM未啟動或瀏覽器未登入本機AEM執行個體，影像會顯示為已損毀。 如果移交給外部資源，也可以使用靜態參照取代影像。
+   > 靜態標籤的影像src指向本機AEM例項上的即時影像元件。 如果影像的路徑變更、AEM未啟動，或瀏覽器未登入本機AEM執行個體，影像會顯示為已損毀。 如果移交給外部資源，也可以使用靜態參照取代影像。
 
 1. 您可以輸入`CTRL+C`，從命令列&#x200B;**停止** Webpack伺服器。
 
@@ -399,13 +399,13 @@ AEM專案原型會自動設定此整合。 接下來，探索其運作方式。
 
 **[aemfed](https://aemfed.io/)**&#x200B;是開放原始碼命令列工具，可用來加速前端開發。 它由[aemsync](https://www.npmjs.com/package/aemsync)、[Browsersync](https://browsersync.io/)和[Sling記錄追蹤器](https://sling.apache.org/documentation/bundles/log-tracers.html)提供支援。
 
-從高層面來看，`aemfed`的設計是用來接聽&#x200B;**ui.apps**&#x200B;模組內的檔案變更，並自動將其直接同步至執行中的AEM執行個體。 本機瀏覽器會根據變更自動重新整理，從而加速前端開發。 它也設計為與Sling記錄追蹤器搭配使用，以直接在終端機中自動顯示任何伺服器端錯誤。
+從高層面來看，`aemfed`的設計目的是監聽&#x200B;**ui.apps**&#x200B;模組內的檔案變更，並自動將其直接同步至執行中的AEM執行個體。 本機瀏覽器會根據變更自動重新整理，從而加速前端開發。 它也設計為與Sling記錄追蹤器搭配使用，以直接在終端機中自動顯示任何伺服器端錯誤。
 
 如果您正在&#x200B;**ui.apps**&#x200B;模組中執行許多工作、修改HTL指令碼以及建立自訂元件，**aemfed**&#x200B;可以是一個強大的工具。 [您可以在這裡找到完整檔案](https://github.com/abmaonline/aemfed)。
 
 ### 偵錯使用者端程式庫 {#debugging-clientlibs}
 
-使用不同的&#x200B;**類別**&#x200B;和&#x200B;**內嵌**&#x200B;方法，以包含多個使用者端程式庫，可能很難進行疑難排解。 AEM公開了幾個工具來幫助解決此問題。 最重要的工具之一是&#x200B;**Rebuild Client Libraries**，它會強制AEM重新編譯任何LESS檔案並產生CSS。
+使用不同的&#x200B;**類別**&#x200B;和&#x200B;**內嵌**&#x200B;方法，以包含多個使用者端程式庫，可能很難進行疑難排解。 AEM提供數種工具可協助解決此問題。 最重要的工具之一是&#x200B;**重建使用者端資料庫**，它會強制AEM重新編譯任何LESS檔案並產生CSS。
 
 * [**傾印程式庫**](http://localhost:4502/libs/granite/ui/content/dumplibs.html) — 列出在AEM執行個體中註冊的使用者端程式庫。`<host>/libs/granite/ui/content/dumplibs.html`
 

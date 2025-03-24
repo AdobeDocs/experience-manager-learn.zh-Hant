@@ -3,14 +3,14 @@ title: 在最適化表單中顯示QR碼
 description: 在最適化表單中顯示QR碼
 feature: Adaptive Forms
 type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 jira: KT-15603
 last-substantial-update: 2024-05-28T00:00:00Z
 exl-id: 0c6079f4-601e-4a82-976c-71dbb2faa671
-source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 範例元件使用[QRCode.js](https://davidshimjs.github.io/qrcodejs/)。
 
-QRCode.js是用於建立QRCode的Javascript程式庫，它支援具有HTML5畫布的跨瀏覽器以及DOM中的表格標籤。
+QRCode.js是用於建立QRCode的Javascript程式庫，它支援具有HTML5 Canvas的跨瀏覽器功能，以及DOM中的表格標籤。
 
 元件會根據元件的configuration屬性中指定的值來產生QR碼。
 ![影像](assets/qr-code-url.png)

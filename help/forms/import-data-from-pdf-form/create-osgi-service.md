@@ -2,14 +2,14 @@
 title: 建立OSGi服務以從PDF表單匯出資料
 description: 使用FormsService API從PDF表單匯出資料
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 jira: KT-14196
 exl-id: c3032669-154c-4565-af6e-32d94e975e37
 duration: 52
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 匯出資料
 
-從PDF檔案填入調適型表單的第一步，是匯出指定PDF檔案的資料，並將其儲存在AEM存放庫中。
+從PDF檔案填入最適化表單的第一步，是匯出指定PDF檔案的資料，並將其儲存於AEM存放庫。
 
 下列程式碼是用來從上傳的pdf中擷取資料，並經過調整以取得填入最適化表單時所用的正確格式
 

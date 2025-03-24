@@ -1,7 +1,7 @@
 ---
 title: 探索GraphQL API - AEM Headless快速入門 — GraphQL
 description: 開始使用Adobe Experience Manager (AEM)和GraphQL。 使用內建GrapiQL IDE來探索AEM的GraphQL API。 瞭解AEM如何根據內容片段模型自動產生GraphQL結構描述。 嘗試使用GraphQL語法建構基本查詢。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6714
 thumbnail: KT-6714.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
 duration: 332
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%
@@ -75,7 +75,7 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
    >[!NOTE]
    >
-   > 在中，舊版的AEM可能未內建GraphiQL IDE。 您可以依照這些[指示](#install-graphiql)手動安裝。
+   > 在中，舊版AEM可能未內建GraphiQL IDE。 您可以依照這些[指示](#install-graphiql)手動安裝。
 
 1. 在右上角，確定端點已設為&#x200B;**我的專案端點**。
 
@@ -216,7 +216,7 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
    ![使用查詢變數來篩選](assets/explore-graphql-api/using-query-variables-filter.png)
 
-   篩選和建立複雜查詢有許多其他選項，請參閱[瞭解如何搭配AEM使用GraphQL — 範例內容和查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html)。
+   有許多其他選項可用來篩選及建立複雜查詢，請參閱[瞭解如何搭配AEM使用GraphQL — 範例內容和查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html)。
 
 1. 增強上述查詢以擷取設定檔圖片
 
@@ -280,7 +280,7 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
 ## 保留查詢 {#persist-queries}
 
-一旦開發人員滿意從查詢傳回的查詢和結果資料，下一步就是將查詢儲存或儲存到AEM。 [持續查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)是將GraphQL API公開給使用者端應用程式的偏好機制。 當查詢持續存在後，即可使用GET請求來請求它，並在Dispatcher和CDN層快取。 持久查詢的效能要好得多。 除了效能優勢外，持續查詢還可確保不會意外向使用者端應用程式顯示額外資料。 有關[持續查詢的更多詳細資訊，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)。
+一旦開發人員滿意從查詢傳回的查詢和結果資料，下一步就是儲存或保留查詢至AEM。 [持續查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)是將GraphQL API公開給使用者端應用程式的偏好機制。 當查詢持續存在後，即可使用GET請求來請求它，並在Dispatcher和CDN層進行快取。 持久查詢的效能要好得多。 除了效能優勢外，持續查詢還可確保不會意外向使用者端應用程式顯示額外資料。 有關[持續查詢的更多詳細資訊，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)。
 
 接下來，保留兩個簡單查詢，它們會在下一個章節中使用。
 
@@ -326,7 +326,7 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
    劃分上述URL：
 
-   | 名稱 | 說明 |
+   | 名稱 | 描述 |
    | ---------|---------- |
    | `/graphql/execute.json` | 持久查詢端點 |
    | `/my-project` | `/conf/my-project`的專案組態 |
@@ -372,21 +372,21 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
    ![最後一個持續查詢](assets/explore-graphql-api/final-persisted-queries.png)
 
 
-## Publish GraphQL端點與持續查詢
+## 發佈GraphQL端點與持續查詢
 
 檢閱和驗證後，發佈`GraphQL Endpoint`和`Persisted Queries`
 
 1. 從AEM開始畫面瀏覽至&#x200B;**工具** > **一般** > **GraphQL**。
 
-1. 點選「**我的專案端點**」旁的核取方塊，然後點選「**Publish**」
+1. 點選「**我的專案端點**」旁的核取方塊，然後點選「**發佈**」
 
-   ![Publish GraphQL端點](assets/explore-graphql-api/publish-graphql-endpoint.png)
+   ![發佈GraphQL端點](assets/explore-graphql-api/publish-graphql-endpoint.png)
 
 1. 從AEM開始畫面瀏覽至&#x200B;**工具** > **一般** > **GraphQL查詢編輯器**
 
-1. 從「持續查詢」面板點選&#x200B;**所有團隊**&#x200B;查詢，然後點選&#x200B;**Publish**
+1. 從「持續查詢」面板點選&#x200B;**所有團隊**&#x200B;查詢，然後點選&#x200B;**發佈**
 
-   ![Publish持續查詢](assets/explore-graphql-api/publish-persisted-query.png)
+   ![發佈持續查詢](assets/explore-graphql-api/publish-persisted-query.png)
 
 1. 對`person-by-name`查詢重複上述步驟
 
@@ -408,5 +408,5 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
 ## 安裝GraphiQL工具（選用） {#install-graphiql}
 
-在某些版本的AEM (6.X.X)中，需要手動安裝GraphiQL IDE工具，請從這裡](../how-to/install-graphiql-aem-6-5.md)使用[指示。
+在中，某些版本的AEM (6.X.X) GraphiQL IDE工具需要手動安裝，請從這裡](../how-to/install-graphiql-aem-6-5.md)使用[指示。
 

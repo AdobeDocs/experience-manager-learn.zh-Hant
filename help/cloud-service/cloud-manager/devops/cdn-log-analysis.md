@@ -1,7 +1,7 @@
 ---
 title: CDN記錄分析工具
-description: 瞭解Adobe提供的AEM Cloud Service CDN記錄分析工具，以及它如何協助您深入瞭解您的CDN效能和AEM實作。
-version: Cloud Service
+description: 瞭解Adobe提供的AEM Cloud Service CDN記錄分析工具，以及此工具如何協助您深入瞭解您的CDN效能和AEM實作。
+version: Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Development
 role: Developer, Architect, Admin
@@ -12,7 +12,7 @@ last-substantial-update: 2024-05-17T00:00:00Z
 jira: KT-15505
 thumbnail: KT-15505.jpeg
 exl-id: 830c2486-099b-454f-bc07-6bf36e81ac8d
-source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # CDN記錄分析工具
 
-瞭解Adobe提供的&#x200B;_AEM Cloud Service CDN Log Analysis Tooling_，以及它如何協助您深入瞭解您的CDN效能和AEM實作。
+瞭解Adobe提供的&#x200B;_AEM Cloud Service CDN記錄分析工具_，以及如何協助深入瞭解您的CDN效能和AEM實作。
  
 >[!VIDEO](https://video.tv.adobe.com/v/3429177?quality=12&learn=on)
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
   ![CDN流量儀表板](assets/Traffic-dashboard.png)
 
-- **WAF儀表板**：透過已分析、已標幟和已封鎖的請求，提供深入分析。 此外，它還提供WAF旗標ID的熱門攻擊、使用者端IP、國家/地區和使用者代理的前100名攻擊者，以及最佳化WAF設定的更多深入分析。
+- **WAF儀表板**：透過已分析、已標幟和已封鎖的請求，提供深入分析。 此外也提供WAF旗標ID的熱門攻擊、使用者端IP、國家/地區和使用者代理的前100名攻擊，以及最佳化WAF設定的更多深入分析。
 
   ![WAF儀表板](assets/WAF-Dashboard.png)
 
@@ -65,6 +65,6 @@ ht-degree: 0%
 
 ## ELK整合
 
-[ELK棧疊](https://www.elastic.co/elastic-stack) (包含Elasticsearch、Logstash和Kibana)是另一個強大的記錄分析選項。 對於無法存取Splunk設定或記錄轉送功能的組織，此功能非常有用。 在本機設定ELK棧疊很簡單，工具提供Docker Compose檔案以快速開始。 接著，您可以匯入預先建立的控制面板，並擷取使用AdobeCloud Manager下載的CDN記錄。
+[ELK棧疊](https://www.elastic.co/elastic-stack) (包含Elasticsearch、Logstash和Kibana)是另一個強大的記錄分析選項。 對於無法存取Splunk設定或記錄轉送功能的組織，此功能非常有用。 在本機設定ELK棧疊很簡單，工具提供Docker Compose檔案以快速開始。 接著，您可以匯入預先建立的控制面板，並擷取使用Adobe Cloud Manager下載的CDN記錄。
 
 您可以開始使用AEMCS CDN記錄分析](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis)指南的[ELK Docker容器。

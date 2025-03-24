@@ -2,7 +2,7 @@
 title: 來自AEM的相互傳輸層安全性(mTLS)驗證
 description: 瞭解如何從AEM對需要相互傳輸層安全性(mTLS)驗證的網頁API進行HTTPS呼叫。
 feature: Security
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
 role: Admin, Architect, Developer
 level: Experienced
@@ -12,7 +12,7 @@ doc-type: Article
 last-substantial-update: 2023-10-10T00:00:00Z
 exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
 duration: 495
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 0%
@@ -71,7 +71,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
   openssl verify -CAfile internal-ca-cert.pem client-cert.pem
   ```
 
-- 將AEM私密金鑰轉換為DER格式，AEM KeyStore需要DER格式的私密金鑰。
+- 將AEM私密金鑰轉換為DER格式，AEM的KeyStore需要DER格式的私密金鑰。
 
   ```shell
   openssl pkcs8 -topk8 -inform PEM -outform DER -in client-key.pem -out client-key.der -nocrypt
@@ -90,7 +90,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
 ### 憑證匯入
 
-若要匯入AEM憑證，請遵循下列步驟：
+若要匯入AEM的憑證，請遵循下列步驟：
 
 1. 以&#x200B;**管理員**&#x200B;身分登入&#x200B;**AEM作者**。
 
@@ -120,15 +120,15 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
 1. 確認憑證已成功匯入。
 
-   ![AEM私密金鑰和憑證已匯入](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
+   ![已匯入AEM私密金鑰和憑證](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
 
-如果API提供者使用自我簽署CA憑證，請將收到的憑證匯入AEM的TrustStore，請依照[這裡](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html#httpclient-and-load-aem-truststore-material)的步驟執行。
+如果API提供者使用自我簽署CA憑證，請將收到的憑證匯入AEM的TrustStore，請依照[這裡](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html#httpclient-and-load-aem-truststore-material)的步驟操作。
 
 同樣地，如果AEM使用自我簽署CA憑證，請要求API提供者匯入該憑證。
 
 ### 使用HttpClient的典型mTLS API叫用代碼
 
-更新如下所示的Java™程式碼。 若要使用`@Reference`註解來取得AEM `KeyStoreService`服務，呼叫程式碼必須是OSGi元件/服務或Sling模型（其中使用`@OsgiService`）。
+更新如下所示的Java™程式碼。 若要使用`@Reference`註解來取得AEM的`KeyStoreService`服務，呼叫程式碼必須是OSGi元件/服務或Sling模型（其中使用`@OsgiService`）。
 
 
 ```java

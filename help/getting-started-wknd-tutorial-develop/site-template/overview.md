@@ -1,7 +1,7 @@
 ---
 title: AEM Sites快速入門 | AEM快速網站建立
 description: 瞭解如何使用低程式碼方法，利用「快速網站建立」和預先定義的網站範本在Adobe Experience Manager中建立您的第一個網站。 使用現成可用的元件和範本，讓網站快速上線運作。 使用Adobe XD驅動的主題工作流程，僅以CSS和JavaScript套用品牌特定樣式和自訂。 建議新專案和開發人員使用。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
@@ -11,7 +11,7 @@ thumbnail: 333477.jpg
 doc-type: Tutorial
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
 duration: 426
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%

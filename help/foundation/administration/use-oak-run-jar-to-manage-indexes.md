@@ -1,7 +1,7 @@
 ---
 title: 使用oak-run.jar管理索引
 description: oak-run.jar的index命令可整合許多功能來管理AEM中的Oak索引，包括收集索引統計資料、執行索引一致性檢查以及重新索引索引本身。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Search
 doc-type: Technical Video
 topic: Performance
@@ -9,7 +9,7 @@ role: Developer
 level: Experienced
 exl-id: be49718e-f1f5-4ab2-9c9d-6430a52bb439
 duration: 726
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 使用oak-run.jar管理索引
 
-[!DNL oak-run.jar]的index命令整合許多功能以管理AEM中的[!DNL Oak]200個索引，包括收集索引統計資料、執行索引一致性檢查以及重新索引索引本身。
+[!DNL oak-run.jar]的index命令整合許多功能以在AEM中管理[!DNL Oak]200個索引，包括收集索引統計資料、執行索引一致性檢查以及重新索引索引本身。
 
 >[!NOTE]
 >
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ## 使用oak-run.jar建立MongoMK線上索引
 
-* [!DNL MongoMK]和[!DNL RDBMK]上有[!DNL oak-run.jar]的線上索引是重新索引[!DNL MongoMK] （和[!DNL RDBMK]） AEM安裝的建議方法。 **[!DNL MongoMK]或[!DNL RDBMK]不應使用其他方法。**
+* 在[!DNL MongoMK]和[!DNL RDBMK]上使用[!DNL oak-run.jar]的線上索引是重新索引[!DNL MongoMK] （和[!DNL RDBMK]） AEM安裝的建議方法。 **[!DNL MongoMK]或[!DNL RDBMK]不應使用其他方法。**
 * 此索引只需要針對叢集中的單一AEM執行個體執行。
 * [!DNL MongoMK]的線上索引可針對執行中的AEM叢集安全執行，因為存放庫周遊只會發生在單一[!DNL MongoDB]節點上，而允許其他節點繼續提供要求而不會對效能造成重大影響。
 

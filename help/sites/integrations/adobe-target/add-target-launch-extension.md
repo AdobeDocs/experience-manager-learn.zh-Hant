@@ -1,7 +1,7 @@
 ---
 title: 將Target擴充功能新增至tags屬性
 description: 瞭解如何將Adobe Target擴充功能新增至Tags屬性。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6131
 thumbnail: 41247.jpg
 topic: Integrations
@@ -9,11 +9,11 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
 duration: 290
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 3%

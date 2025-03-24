@@ -1,7 +1,7 @@
 ---
 title: 從外部應用程式向AEM as a Cloud Service進行驗證
 description: 探索外部應用程式如何使用本機開發存取權杖和服務認證，以程式設計方式透過HTTP驗證並與AEM as a Cloud Service互動。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: APIs
 jira: KT-6785
 thumbnail: 330460.jpg
@@ -11,7 +11,7 @@ level: Intermediate, Experienced
 doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
 duration: 253
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 對AEM as a Cloud Service的權杖型驗證
 
-AEM公開各種能夠以無周邊方式互動的HTTP端點，從GraphQL、AEM Content Services到Assets HTTP API。 通常，這些Headless消費者可能需要向AEM驗證以存取受保護的內容或操作。 為方便起見，AEM支援對來自外部應用程式、服務或系統的HTTP要求進行權杖式驗證。
+AEM公開各種能以無周邊方式互動的HTTP端點，從GraphQL、AEM Content Services到Assets HTTP API。 通常，這些Headless消費者可能需要向AEM驗證以存取受保護的內容或操作。 為方便起見，AEM支援對來自外部應用程式、服務或系統的HTTP請求進行權杖式驗證。
 
 在本教學課程中，請深入探索外部應用程式可如何以程式設計方式使用存取權杖並透過HTTP向AEM as a Cloud Service驗證及互動。
 
@@ -31,7 +31,7 @@ AEM公開各種能夠以無周邊方式互動的HTTP端點，從GraphQL、AEM Co
 在參加本教學課程之前，請確定已具備下列條件：
 
 1. 存取AEM as a Cloud Service環境（最好是開發環境或沙箱計畫）
-1. AEM as a Cloud Service環境作者服務AEM管理員產品設定檔的成員資格
+1. AEM as a Cloud Service環境作者服務的成員資格AEM管理員產品設定檔
 1. 您的Adobe IMS組織管理員的成員資格或存取權（他們將必須執行[服務認證](./service-credentials.md)的一次性初始化）
 1. 最新[WKND網站](https://github.com/adobe/aem-guides-wknd)已部署至您的Cloud Service環境
 
@@ -49,7 +49,7 @@ Node.js應用程式的執行流程如下：
    + 資產已更新的AEM資產資料夾(`folder`)
    + 要更新的中繼資料屬性和值（`propertyName`和`propertyValue`）
    + 檔案的本機路徑，提供存取AEM as a Cloud Service所需的認證(`file`)
-1. 用於驗證AEM的存取權杖衍生自透過命令列引數`file`提供的JSON檔案
+1. 用來驗證AEM的存取權杖衍生自透過命令列引數`file`提供的JSON檔案
 
    a.如果在JSON檔案(`file`)中提供用於非本機開發的服務認證，則會從Adobe IMS API擷取存取權杖
 1. 應用程式使用存取權杖來存取AEM，並列出在命令列引數`folder`中指定的資料夾中的所有資產
@@ -59,7 +59,7 @@ Node.js應用程式的執行流程如下：
 
 ## 本機開發存取權杖
 
-本機開發存取權杖是為特定AEM as a Cloud Service環境產生的，可讓您存取作者和Publish服務。  這些存取權杖為暫時性，僅供在開發透過HTTP與AEM互動的外部應用程式或系統時使用。 開發人員不必取得及管理好記的服務認證，而是可以快速輕鬆地自行產生暫時存取權杖，好讓他們開發整合。
+本機開發存取權杖是為特定的AEM as a Cloud Service環境產生，可讓您存取製作和發佈服務。  這些存取權杖為暫時性，僅供在開發透過HTTP與AEM互動的外部應用程式或系統時使用。 開發人員不必取得及管理好記的服務認證，而是可以快速輕鬆地自行產生暫時存取權杖，好讓他們開發整合。
 
 + [如何使用本機開發存取權杖](./local-development-access-token.md)
 

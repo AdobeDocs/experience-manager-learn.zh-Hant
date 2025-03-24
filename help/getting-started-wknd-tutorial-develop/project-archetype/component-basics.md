@@ -1,7 +1,7 @@
 ---
 title: AEM Sites快速入門 — 元件基本知識
 description: 透過簡單的「HelloWorld」範例瞭解Adobe Experience Manager (AEM) Sites元件的基礎技術。 探討HTL、Sling模型、使用者端資料庫和作者對話方塊等主題。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, Developer Tools
 topic: Content Management, Development
 role: Developer
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
 duration: 1715
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 0%
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 ## 元件製作 {#component-authoring}
 
-元件可視為網頁的小型模組建置區塊。 為了重複使用元件，元件必須可設定。 這是透過作者對話方塊完成。 接下來，讓我們編寫簡單元件，並檢查對話方塊中的值如何儲存在AEM中。
+元件可視為網頁的小型模組建置區塊。 為了重複使用元件，元件必須可設定。 這是透過作者對話方塊完成。 接下來，我們會編寫簡單元件，並檢查對話方塊中的值如何儲存在AEM中。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330986?quality=12&learn=on)
 
@@ -111,8 +111,8 @@ HTML範本語言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/exper
 以下是上述影片中執行的高層級步驟。
 
 1. 切換至IDE並開啟專案至`ui.apps`模組。
-1. 開啟`helloworld.html`檔案並更新HTML標示。
-1. 使用[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)等IDE工具，將檔案變更與本機AEM執行個體同步化。
+1. 開啟`helloworld.html`檔案並更新HTML標籤。
+1. 使用[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)之類的IDE工具，將檔案變更與本機AEM執行個體同步。
 1. 返回瀏覽器並觀察元件轉譯器已變更。
 1. 開啟定義`HelloWorld`元件之對話方塊的`.content.xml`檔案：
 
@@ -172,7 +172,7 @@ HTML範本語言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/exper
 
 ## Sling 模型 {#sling-models}
 
-Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可方便將資料從JCR對應至Java™變數。 在AEM環境中開發時，這些範本也提供幾個其他細節。
+Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可方便將資料從JCR對應至Java™變數。 在AEM環境中開發時，這些範本也提供數個其他細節。
 
 接下來，讓我們對`HelloWorldModel` Sling模型做一些更新，以便在將儲存於JCR中的值輸出到頁面之前，先將它們套用一些商業邏輯。
 

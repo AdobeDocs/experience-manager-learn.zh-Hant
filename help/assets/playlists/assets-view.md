@@ -1,7 +1,7 @@
 ---
 title: AEM Assets Assets檢視的影片播放清單
-description: 透過這精選旨在提升產品知識的影片播放清單，瞭解如何在Assets檢視中導覽AEM Assetsas a Cloud Service。
-version: Cloud Service
+description: 透過這精選旨在提升產品知識的影片播放清單，瞭解如何在Assets檢視中導覽AEM Assets as a Cloud Service。
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: User
 level: Beginner
@@ -9,7 +9,7 @@ last-substantial-update: 2024-11-20T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: cce071c22a14669344318ad00d57a4fccc956a33
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 1%
@@ -20,11 +20,11 @@ ht-degree: 1%
 
 ![AEM Assets Assets檢視](./assets/assets-view.png){align="center"}
 
-探索這些播放清單以掌握AEM Assets的as a Cloud ServiceAssets檢視，包括設定、最佳化、使用以及與創意工作流程的無縫整合。 取得成功使用AEM Assets as a Cloud Service所需的深入解析。
+探索這些播放清單以掌握AEM Assets as a Cloud Service Assets檢視，包括設定、最佳化、使用以及與創意工作流程無縫整合。 獲取成功使用AEM Assets as a Cloud Service所需的深入解析。
 
 ## 設定Assets檢視
 
-開始使用基本設定和設定，讓AEM Assetsas a Cloud Service為您的團隊和專案順暢地運作。
+開始使用基本設定和設定，讓AEM Assets as a Cloud Service為您的團隊和專案順暢地運作。
 
 <!-- CARDS
 
@@ -157,7 +157,7 @@ ht-degree: 1%
 
 ## 使用AEM Assets連線創意工作流程
 
-將AEM Assetsas a Cloud Service與您的創意工具整合，釋放順暢的協同合作，確保工作流程一致且有效率。
+將AEM Assets as a Cloud Service與您的創意工具整合，釋放順暢的協同合作，確保工作流程一致且有效率。
 
 <!-- CARDS
 
@@ -172,8 +172,8 @@ ht-degree: 1%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" title="使用Workfront和Assets Essentials管理創意內容工作流程" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1781139425d77174a992697a33d097a8bd5b54d5b.jpeg?width=400&format=pjpg&optimize=medium" alt="使用Workfront和Assets Essentials管理創意內容工作流程"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" title="使用Workfront和Assets Essentials管理Creative工作流程" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1781139425d77174a992697a33d097a8bd5b54d5b.jpeg?width=400&format=pjpg&optimize=medium" alt="使用Workfront和Assets Essentials管理Creative工作流程"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -181,7 +181,7 @@ ht-degree: 1%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="使用Workfront和Assets Essentials管理創意內容工作流程">使用Workfront和AEM Assets管理創意內容工作流程</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="使用Workfront和Assets Essentials管理Creative工作流程">使用Workfront和AEM Assets管理Creative工作流程</a>
                     </p>
                     <p class="is-size-6">瞭解Adobe Workfront和AEM Assets如何協助您的組織管理創意工作流程。</p>
                 </div>

@@ -1,7 +1,7 @@
 ---
 title: 電子郵件服務
 description: 瞭解如何設定AEM as a Cloud Service以使用輸出埠連線電子郵件服務。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
 duration: 76
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 電子郵件服務
 
-透過設定AEM `DefaultMailService`使用進階網路輸出埠，從AEM as a Cloud Service傳送電子郵件。
+透過設定AEM的`DefaultMailService`使用進階網路輸出埠，從AEM as a Cloud Service傳送電子郵件。
 
 由於（大部分）郵件服務不會透過HTTP/HTTPS執行，因此必須代理從AEM as a Cloud Service連線至郵件服務。
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 由於密碼不得儲存在程式碼中，因此最好使用[機密OSGi設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)、使用AIO CLI或Cloud Manager API來設定電子郵件服務的使用者名稱和密碼。
 
-通常使用[彈性連線埠輸出](../flexible-port-egress.md)來滿足與電子郵件服務整合，除非需要`allowlist`AdobeIP，在這種情況下，可以使用[專用輸出IP位址](../dedicated-egress-ip-address.md)。
+一般會使用[彈性連線埠輸出](../flexible-port-egress.md)來滿足與電子郵件服務整合，除非需要`allowlist` Adobe IP，在這種情況下可以使用[專用輸出IP位址](../dedicated-egress-ip-address.md)。
 
 此外，檢閱[傳送電子郵件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email)的AEM檔案。
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## OSGi設定
 
-此OSGi設定範例透過[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)作業的下列Cloud Manager `portForwards`規則，設定AEM Mail OSGi Service使用外部郵件服務。
+此OSGi設定範例透過[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)作業的下列Cloud Manager `portForwards`規則，將AEM的Mail OSGi Service設定為使用外部郵件服務。
 
 ```json
 ...
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/config/com.day.cq.mailer.DefaultMailService.cfg.json`
 
-依照您的電子郵件提供者的要求設定AEM [DefaulMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email) （例如`smtp.ssl`等）。
+根據您的電子郵件提供者（例如`smtp.ssl`等）要求，設定AEM的[DefaulMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email)。
 
 ```json
 {

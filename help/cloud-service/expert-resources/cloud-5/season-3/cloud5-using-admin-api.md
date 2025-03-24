@@ -1,7 +1,7 @@
 ---
 title: 搭配使用Admin API與Edge Delivery Services
 description: 瞭解如何在Edge Delivery Services中使用管理員API來管理內容和程式碼的生命週期。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Admin, Developer, Leader, User
@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 last-substantial-update: 2024-09-04T00:00:00Z
 jira: KT-16087
 exl-id: 93a8a2b5-ddd2-43f7-a02b-63036b450614
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 4%
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 # 搭配使用Admin API與Edge Delivery Services
 
-瞭解如何透過Cloud Architect的Varun Mitra在Edge Delivery Services中使用[AEM Admin API](https://www.aem.live/docs/admin.html)來管理內容和程式碼的生命週期。
+瞭解如何在Edge Delivery Services中使用[AEM Admin API](https://www.aem.live/docs/admin.html)，透過Cloud Architect的Varun Mitra管理內容和程式碼的生命週期。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3433158/?learn=on)
 

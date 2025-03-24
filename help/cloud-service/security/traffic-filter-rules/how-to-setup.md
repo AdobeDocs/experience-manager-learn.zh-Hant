@@ -1,7 +1,7 @@
 ---
-title: 如何設定包含WAF規則的流量篩選規則
-description: 瞭解如何設定以建立、部署、測試及分析流量篩選器規則（包括WAF規則）的結果。
-version: Cloud Service
+title: 如何設定流量篩選器規則，包括WAF規則
+description: 瞭解如何設定來建立、部署、測試及分析流量篩選器規則(包括WAF規則)的結果。
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
 role: Admin, Architect
@@ -12,14 +12,14 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: b67bf642-3341-48d0-8ea9-5f262febf414
 duration: 292
-source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 3%
 
 ---
 
-# 如何設定包含WAF規則的流量篩選規則
+# 如何設定流量篩選器規則，包括WAF規則
 
 瞭解&#x200B;**如何設定**&#x200B;流量篩選規則，包括WAF規則。 閱讀建立、部署、測試和分析結果的相關資訊。
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 設定程式涉及下列專案：
 
 - _使用適當的AEM專案結構和組態檔建立規則_。
-- 使用AdobeCloud Manager的設定管道&#x200B;_部署規則_。
+- 使用Adobe Cloud Manager的設定管道&#x200B;_部署規則_。
 - _使用各種工具來測試規則_&#x200B;以產生流量。
 - _使用AEMCS CDN記錄檔和儀表板工具分析結果_。
 
@@ -65,7 +65,7 @@ data:
 
 若要部署規則，請遵循下列步驟：
 
-1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 登入 Cloud Manager 並選取適當的組織和方案。
+1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 登入 Cloud Manager，並選取適當的組織和方案。
 
 1. 從&#x200B;_方案總覽_&#x200B;頁面瀏覽至&#x200B;_管道_&#x200B;卡片，然後按一下&#x200B;**+新增**&#x200B;按鈕並選取所需的管道型別。
 

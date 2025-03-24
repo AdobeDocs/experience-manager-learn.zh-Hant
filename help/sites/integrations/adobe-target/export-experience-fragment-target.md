@@ -1,19 +1,19 @@
 ---
 title: 將體驗片段匯出至Adobe Target
-description: 瞭解如何將AEM Experience Fragment發佈並匯出為Adobe Target選件。
+description: 瞭解如何將AEM體驗片段發佈和匯出為Adobe Target選件。
 feature: Experience Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6350
 thumbnail: 41245.jpg
 topic: Integrations
 role: User
 level: Intermediate
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
 duration: 213
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 3%
@@ -46,7 +46,7 @@ ht-degree: 3%
 
 #### 解決方法
 
-1. 以AEM整合之外的Adobe Target產品設定檔的管理許可權登入[Admin Console](https://adminconsole.adobe.com/)
+1. 以Admin Console產品設定檔的管理許可權登入[Adobe Target](https://adminconsole.adobe.com/)，但使用AEM整合
 2. 選取&#x200B;__產品> Adobe Target >產品設定檔__
 3. 在&#x200B;__整合__&#x200B;標籤下方，選取您AEM as a Cloud Service環境的整合(與Adobe Developer專案相同的名稱)
 4. 指派&#x200B;__編輯者__&#x200B;或&#x200B;__核准者__&#x200B;角色

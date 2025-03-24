@@ -1,7 +1,7 @@
 ---
 title: 什麼是「Dispatcher」
 description: 瞭解Dispatcher到底是什麼。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 96c8dd09-e0a7-4abc-b04b-a805aaa67502
 duration: 73
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 2%
@@ -39,10 +39,10 @@ Apache伺服器功能的基本說明：
 
 然後將稱為Dispatcher模組的外掛程式新增至Apache Web Server
 
-AEM Dispatcher模組Adobe功能的基本說明：
+Adobe AEM Dispatcher模組用途的基本說明：
 
 - 增加預設檔案處理常式
-- 篩選出不良請求/保護AEM的軟腹部/端點
+- 篩選掉不良請求/保護AEM的軟腹部/端點
 - 如果存在多個轉譯器，則為負載平衡
 - 允許使用動態快取目錄/支援排清停滯的檔案
 - 它是所有AMS安裝的前門，並將網站和資產提供給使用者端的瀏覽器
@@ -51,8 +51,8 @@ AEM Dispatcher模組Adobe功能的基本說明：
 
 ## 網站流量工作流程
 
-瞭解哪些片段會一起安裝在一起以建置基本Dispatcher伺服器，可讓您瞭解Adobe管理員服務設定的基本網路流量工作流程。
-這應該有助於您瞭解它在為您AEM內容的訪客提供內容的系統鏈中扮演什麼角色。
+瞭解哪些片段會一起安裝在一起以建置基本Dispatcher伺服器，可讓您瞭解Adobe Manager服務設定的基本網路流量工作流程。
+這應該有助於您瞭解在提供內容給您AEM內容的訪客的系統鏈中，它扮演了什麼角色。
 
 <b>提供已快取的內容</b>
 

@@ -1,14 +1,14 @@
 ---
 title: AEM Headless的進階概念 — GraphQL
 description: 端對端教學課程，說明Adobe Experience Manager (AEM) GraphQL API的進階概念。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
 duration: 441
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -39,9 +39,9 @@ ht-degree: 0%
 
 * 使用驗證規則和更進階的資料型別（例如Tab預留位置、巢狀片段參照、JSON物件以及日期和時間資料型別）建立內容片段模型。
 * 使用巢狀內容和片段參考時製作內容片段，並為內容片段製作控管設定資料夾原則。
-* 使用具有變數和指令的GraphQL查詢來探索AEM GraphQL API功能。
+* 使用具有變數和指令的AEM查詢，探索GraphQL GraphQL API功能。
 * 在AEM中使用引數保留GraphQL查詢，並瞭解如何將快取控制引數用於保留查詢。
-* 使用AEM Headless JavaScript SDK將持續查詢請求整合至範例WKND GraphQL React應用程式。
+* 使用AEM Headless JavaScript SDK將持續查詢請求整合到範例WKND GraphQL React應用程式中。
 
 ## AEM Headless的進階概念概覽
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->這段影片（於2:25）提到了透過封裝管理員安裝GraphiQL查詢編輯器以探索GraphQL查詢。 但在較新版本的AEM as Cloud Service中提供內建的&#x200B;**GraphiQL Explorer**，因此不需要安裝封裝。 如需詳細資訊，請參閱[使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html)。
+>這段影片（於2:25）提到了透過封裝管理員安裝GraphiQL查詢編輯器以探索GraphQL查詢。 但在較新版本的AEM as Cloud Service中，提供了內建的&#x200B;**GraphiQL Explorer**，因此不需要安裝套件。 如需詳細資訊，請參閱[使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html)。
 
 
 ## 專案設定
@@ -107,7 +107,7 @@ WKND網站專案具有所有必要的設定，因此您可在完成[快速設定
 
 ![選取屬性](assets/overview/properties.png)
 
-接著，導覽至&#x200B;**Cloud Service**&#x200B;標籤，並在&#x200B;**雲端設定**&#x200B;欄位中選取資料夾圖示。
+接著，導覽至&#x200B;**雲端服務**&#x200B;標籤，並在&#x200B;**雲端設定**&#x200B;欄位中選取資料夾圖示。
 
 ![雲端設定](assets/overview/cloud-conf.png)
 
@@ -122,13 +122,13 @@ WKND網站專案具有所有必要的設定，因此您可在完成[快速設定
 
 ## 入門和解決方案套件
 
-有兩個AEM **套件**&#x200B;可用，可以透過[套件管理員](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#sample-content)安裝
+有兩個AEM **套件**&#x200B;可供使用，並可透過[套件管理員](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#sample-content)安裝
 
 * [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip)稍後會在教學課程中使用，並包含範例影像和資料夾。
 * [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip)包含第1-4章的完成解決方案，包括新的內容片段模式、內容片段和持續的GraphQL查詢。 對於想要直接跳到[使用者端應用程式整合](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)章節的人很有用。
 
 
-[React應用程式 — 進階教學課程 — WKND Adventures](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md)專案可供檢閱和探索範例應用程式。 此範例應用程式會叫用持續存在的GraphQL查詢，從AEM擷取內容，並在沈浸式體驗中呈現。
+[React應用程式 — 進階教學課程 — WKND Adventures](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md)專案可供檢閱和探索範例應用程式。 此範例應用程式會叫用持續存在的AEM查詢，以從GraphQL擷取內容，並在沈浸式體驗中呈現。
 
 ## 快速入門
 

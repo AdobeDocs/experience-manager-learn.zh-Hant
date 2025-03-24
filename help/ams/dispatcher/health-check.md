@@ -1,7 +1,7 @@
 ---
 title: AMS Dispatcher健康狀態檢查
 description: AMS提供健康狀態檢查cgi-bin指令碼，雲端負載平衡器將執行此指令碼以檢視AEM是否健康且應該持續為公共流量提供服務。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 69b4e469-52cc-441b-b6e5-2fe7ef18da90
 duration: 247
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 0%
@@ -38,11 +38,11 @@ ht-degree: 0%
 
 預設檢查通常是連線埠檢查，以檢視負載平衡器中的目標伺服器是否接聽連線埠流量進入（即TCP 80和443）
 
-> `Note:`雖然此功能可運作，但AEM是否運作狀況良好，並沒有真正的量測軌可開啟。  它只會測試Dispatcher (Apache Web Server)是否啟動並執行。
+> `Note:`雖然此功能可運作，但AEM是否運作狀況良好，並沒有真正的量測計。  它只會測試Dispatcher (Apache Web Server)是否啟動並執行。
 
 ## AMS健康狀態檢查
 
-為避免將流量傳送給遇到不健康的AEM執行個體的健康排程程式，AMS建立了一些額外專案來評估腿部的健康狀態，而不僅僅是Dispatcher。
+為避免將流量傳送給遇到不健康的AEM執行個體的健康排程程式，AMS建立了一些評估腿部健康而不只是Dispatcher的額外專案。
 
 ![影像顯示運作狀況檢查的不同專案](assets/load-balancer-healthcheck/health-check-pieces.png "運作狀況檢查專案")
 
@@ -101,9 +101,9 @@ Listen 81
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_author.vhost`
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_publish.vhost`
 
-這些檔案的名稱是`000_`，目的為做為前置詞。  其最初設定為使用與即時網站相同的網域名稱。  其目的是讓此檔案在健康情況檢查偵測到其中一個AEM後端發生問題時啟用。  然後提供錯誤頁面，而不是只有沒有頁面的503 HTTP回應代碼。  它會從一般`.vhost`檔案竊取流量，因為它會在共用相同的`ServerName`或`ServerAlias`時，在該`.vhost`檔案之前載入。  導致預定要前往特定網域的頁面移至不正常的主機，而不是正常流量流經的預設主機。
+這些檔案的名稱是`000_`，目的為做為前置詞。  其最初設定為使用與即時網站相同的網域名稱。  其用意是在健康情況檢查偵測到其中一個AEM後端發生問題時，啟用此檔案。  然後提供錯誤頁面，而不是只有沒有頁面的503 HTTP回應代碼。  它會從一般`.vhost`檔案竊取流量，因為它會在共用相同的`ServerName`或`ServerAlias`時，在該`.vhost`檔案之前載入。  導致預定要前往特定網域的頁面移至不正常的主機，而不是正常流量流經的預設主機。
 
-健康情況檢查指令碼執行時，會登出目前的健康情況狀態。  每分鐘一次，伺服器上會執行一個cronjob，在記錄中尋找不健康的專案。  如果偵測到作者AEM執行個體狀況不良，則會啟用符號連結：
+健康情況檢查指令碼執行時，會登出目前的健康情況狀態。  每分鐘一次，伺服器上會執行一個cronjob，在記錄中尋找不健康的專案。  如果偵測到作者AEM執行個體運作不正常，則會啟用符號連結：
 
 記錄專案：
 
@@ -185,13 +185,13 @@ X-Vhost: unhealthy-author
 
 #### /bin/checkauthor
 
-使用這個指令碼時，會檢查並記錄它所在的任何執行個體，但只有在`author`個AEM執行個體狀況不良時才會傳回錯誤
+使用這個指令碼時，會檢查並記錄它所在的任何執行個體，但只有在`author`個AEM執行個體狀況不正常時才會傳回錯誤
 
-> `Note:`請記住，如果發佈AEM執行個體狀況不良，Dispatcher將維持服務狀態，讓流量流向作者AEM執行個體
+> `Note:`請記住，如果發佈AEM執行個體不正常，Dispatcher將維持服務狀態，以允許流量流向作者AEM執行個體
 
 #### /bin/checkpublish （預設）
 
-使用這個指令碼時，會檢查並記錄它所在的任何執行個體，但只有在`publish`個AEM執行個體狀況不良時才會傳回錯誤
+使用這個指令碼時，會檢查並記錄它所在的任何執行個體，但只有在`publish`個AEM執行個體狀況不正常時才會傳回錯誤
 
 > `Note:`請記住，如果作者AEM執行個體狀況不良，Dispatcher將維持服務狀態，讓流量流向發佈AEM執行個體
 
@@ -203,13 +203,13 @@ X-Vhost: unhealthy-author
 
 #### /bin/checkboth
 
-使用這個指令碼時，會檢查並記錄它所在的任何執行個體，但只有在`author`和`publisher` AEM執行個體狀況不良時才會傳回錯誤
+使用這個指令碼時，會檢查並記錄它正在執行的任何執行個體，但只有在`author`和`publisher` AEM執行個體狀況不良時才會傳回錯誤
 
 > `Note:`請記住，如果發佈AEM執行個體或編寫AEM執行個體不正常，Dispatcher將不會退出服務。  這表示如果其中一個狀況不良，系統仍會繼續接收流量，並對要求資源的人造成錯誤。
 
 #### /bin/healthy
 
-使用這個指令碼時，會檢查並記錄它正在執行的任何執行個體，但無論AEM是否傳回錯誤，都會正常傳回。
+使用這個指令碼時，會檢查並記錄其面對的任何執行個體，但無論AEM是否傳回錯誤，都會正常傳回。
 
 > `Note:`此指令碼用於健康情況檢查未如預期運作時，並允許覆寫以將AEM執行個體保留在負載平衡器中。
 

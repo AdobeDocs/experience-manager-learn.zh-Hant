@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe XD進行UI規劃 | AEM快速網站建立
 description: 瞭解如何使用Adobe XD UI Kit來設計和加速您的Adobe Experience Manager Sites實施。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 3155e0fa-56b7-4a52-8eef-fee488e95f68
 recommendations: noDisplay, noCatalog
 duration: 646
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 # 使用Adobe XD進行UI規劃 {#ui-planning-adobe-xd}
 
-在大多數情況下，規劃新網站會從模型和靜態設計開始。 [Adobe XD](https://www.adobe.com/products/xd.html)是同級最佳的設計工具，可建立使用者體驗。 Adobe建議使用Adobe XD或其他工具，透過使用UI模型來規劃Sites實施。
+在大多數情況下，規劃新網站會從模型和靜態設計開始。 [Adobe XD](https://www.adobe.com/products/xd.html)是同級最佳的設計工具，可建立使用者體驗。 Adobe建議您使用Adobe XD或其他工具，透過使用UI模型來規劃Sites實施。
 
 ## 先決條件 {#prerequisites}
 
@@ -46,7 +46,7 @@ ht-degree: 2%
 高階步驟：
 
 1. 下載[標準網站範本XD檔案](https://github.com/adobe/aem-site-template-standard/raw/main/files/wireframe.xd)。
-1. Adobe XD中的Inspect UI Kit 。
+1. 在Adobe XD中檢查UI套件。
 1. 模擬將設計交給前端開發人員。
 
 ## WKND UI套件 {#wknd-ui-kit}
@@ -56,7 +56,7 @@ ht-degree: 2%
 高階步驟：
 
 1. 下載[WKND文章XD檔案](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)。
-1. Inspect WKND文章範本的設計。
+1. 檢查WKND文章範本的設計。
 
 ## 恭喜！ {#congratulations}
 

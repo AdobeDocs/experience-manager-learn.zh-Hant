@@ -1,7 +1,7 @@
 ---
 title: 正確地將Symlink新增至GIT
 description: 有關使用Dispatcher設定時如何以及在何處新增符號連結的說明。
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 6e751586-e92e-482d-83ce-6fcae4c1102c
 duration: 295
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 0%
@@ -176,7 +176,7 @@ Source： [Git - git-config檔案](https://git-scm.com/docs/git-config#Documenta
 
 以下說明Git在Windows上的行為：符號連結· git-for-windows/git Wiki · GitHub
 
-> `Info`：以上連結的檔案中所列的假設似乎與AEM Developer在Windows上的可能設定沒有關係，尤其是NTFS，而且我們只有檔案符號連結與目錄符號連結
+> `Info`：以上連結的檔案中所列的假設似乎可以接受，因為AEM開發人員可能會在Windows上執行安裝程式，尤其是NTFS，而且我們只有檔案符號連結與目錄符號連結
 
 好消息，因為[Git for Windows 2.10.2](https://github.com/git-for-windows/git/releases/tag/v2.10.2.windows.1)版安裝程式有[明確選項可啟用符號連結支援。](https://github.com/git-for-windows/git/issues/921)
 

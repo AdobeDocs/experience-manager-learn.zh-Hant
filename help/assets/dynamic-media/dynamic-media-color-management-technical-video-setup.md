@@ -1,15 +1,15 @@
 ---
 title: 透過AEM Dynamic Media瞭解色彩管理
-description: 在這段影片中，我們會探索Dynamic Media色彩管理，以及如何使用它在AEM Assets中提供色彩校正預覽功能。
+description: 在本影片中，我們將探索Dynamic Media色彩管理，以及如何使用它在AEM Assets中提供色彩校正預覽功能。
 feature: Image Profiles, Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
 doc-type: Feature Video
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
 duration: 274
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 11%
@@ -18,7 +18,7 @@ ht-degree: 11%
 
 # 透過AEM Dynamic Media瞭解色彩管理{#understanding-color-management-with-aem-dynamic-media}
 
-在這段影片中，我們會探索Dynamic Media色彩管理，以及如何使用它在AEM Assets中提供色彩校正預覽功能。
+在本影片中，我們將探索Dynamic Media色彩管理，以及如何使用它在AEM Assets中提供色彩校正預覽功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
 
@@ -30,7 +30,7 @@ ht-degree: 11%
 
 ## 色彩管理組態節點的XML範本 {#xml-template-for-the-color-management-configuration-node}
 
-以下是「色彩管理」組態節點的XML範本。 此XML範本可複製到AEM開發專案中，並使用適合專案的設定進行設定。
+以下是「色彩管理」組態節點的XML範本。 此XML範本可複製到AEM開發專案，並使用適合專案的設定進行設定。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -88,15 +88,15 @@ ht-degree: 11%
 
 ### 預設Adobe色彩設定檔清單如下 {#list-of-default-adobe-color-profiles-are-listed-below}
 
-| 名稱 | 色彩空間 | 說明 |
+| 名稱 | 色彩空間 | 描述 |
 | ------------------- | ---------- | ------------------------------------- |
 | adobergb | RGB | Adobe RGB (1998) |
-| AppleRGB | RGB | AppleRGB |
-| CIERGB | RGB | CIERGB |
+| AppleRGB | RGB | Apple RGB |
+| CIERGB | RGB | CIE RGB |
 | CoatedFogra27 | CMYK | Coated FOGRA27 (ISO 12647-2:2004) |
 | CoatedFogra39 | CMYK | Coated FOGRA39 (ISO 12647-2:2004) |
 | CoatedGraCol | CMYK | Coated GRACoL 2006 (ISO 12647-2:2004) |
-| ColorMatchRGB | RGB | ColorMatchRGB |
+| ColorMatchRGB | RGB | ColorMatch RGB |
 | 歐洲ISOCoated | CMYK | 歐洲ISO銅版FOGRA27 |
 | EuroscaleCoated | CMYK | Euroscale Coated v2 |
 | EuroscaleUncoated | CMYK | Euroscale Uncoated v2 |
@@ -108,13 +108,13 @@ ht-degree: 11%
 | NewsprintSNAP2007 | CMYK | 美國新聞紙(SNAP 2007) |
 | NTSC | RGB | NTSC (1953) |
 | PAL | RGB | PAL/SECAM |
-| ProPhoto | RGB | ProPhotoRGB |
+| ProPhoto | RGB | ProPhoto RGB |
 | PS4預設 | CMYK | Photoshop 4預設CMYK |
 | PS5預設 | CMYK | Photoshop 5預設CMYK |
 | SheetfedCoated | CMYK | U.S. Sheetfed Coated v2 |
 | SheetfedUncoated | CMYK | U.S. Sheetfed Uncoated v2 |
 | SMPTE | RGB | SMPTE-C |
-| sRGB | sRGBRGB | IEC61966-2.1 |
+| sRGB | RGB sRGB | IEC61966-2.1 |
 | UncoatedFogra29 | CMYK | 無塗層的FOGRA29 (ISO 12647-2:2004) |
 | 網頁套裝 | CMYK | U.S. Web Coated (SWOP) v2 |
 | WebCoatedFogra28 | CMYK | Web Coated FOGRA28 (ISO 12647-2:2004) |

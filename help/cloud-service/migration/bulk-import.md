@@ -1,7 +1,7 @@
 ---
 title: 搭配AEM Assets使用大量匯入
 description: AEM as a Cloud Service中的大量匯入工具可讓管理員以安全又有效率的方式從雲端儲存空間(Azure Blob儲存或Amazon S3)大量匯入資產。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: technical-video
 feature: Migration
 jira: KT-6729, KT-14796
@@ -12,10 +12,10 @@ level: Beginner
 last-substantial-update: 2024-01-16T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
 duration: 712
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '175'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -25,13 +25,13 @@ AEM as a Cloud Service中的大量匯入工具可讓管理員以安全又有效�
 
 >[!BEGINTABS]
 
->[!TAB Assets檢視]
+>[!TAB 資產視圖]
 
-瞭解如何使用[資產檢視](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [大量匯入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html)，將許多檔案匯入AEM Assets，以Dropbox作為範例雲端儲存提供者，實現清晰易用的整合程式。
+瞭解如何使用[資產檢視](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [大量匯入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html)，將許多檔案匯入AEM Assets，以Dropbox作為範例雲端儲存提供者，實現清晰且易於遵循的整合程式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
 
->[!TAB 管理員檢視]
+>[!TAB 管理員視圖]
 
 >[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
 

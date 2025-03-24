@@ -1,7 +1,7 @@
 ---
 title: 定義內容片段模型 — AEM Headless快速入門 — GraphQL
 description: 開始使用Adobe Experience Manager (AEM)和GraphQL。 瞭解如何在AEM中建立內容模型，並使用內容片段模型建置結構。 檢閱現有模型並建立模型。 瞭解定義結構時可用的不同資料型別。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6712
 thumbnail: 22452.jpg
@@ -11,10 +11,10 @@ role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
 duration: 228
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1110'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -112,7 +112,7 @@ ht-degree: 1%
 
    ![最終人員模型](assets/content-fragment-models/final-author-model.png)
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下「**儲存**」以儲存變更。
 
 ### 建立團隊模型
 
@@ -157,29 +157,29 @@ ht-degree: 1%
 
    ![最終團隊模型](assets/content-fragment-models/final-team-model.png)
 
-1. 按一下[儲存]儲存變更。****
+1. 按一下「**儲存**」以儲存變更。
 
 1. 您現在應該可以從以下兩種模式運作：
 
    ![兩個模型](assets/content-fragment-models/two-new-models.png)
 
-## Publish專案設定和內容片段模型
+## 發佈專案設定和內容片段模型
 
 檢閱和驗證後，發佈`Project Configuration`和`Content Fragment Model`
 
 1. 從AEM開始畫面瀏覽至&#x200B;**工具** > **一般** > **設定瀏覽器**。
 
-1. 點選「**我的專案**」旁的核取方塊，然後點選「**Publish**」
+1. 點選&#x200B;**我的專案**&#x200B;旁的核取方塊，然後點選&#x200B;**發佈**
 
-   ![Publish專案設定](assets/content-fragment-models/publish-project-config.png)
+   ![發佈專案設定](assets/content-fragment-models/publish-project-config.png)
 
 1. 從AEM開始畫面，瀏覽至&#x200B;**工具** > **一般** > **內容片段模式**。
 
 1. 導覽至&#x200B;**我的專案**&#x200B;資料夾。
 
-1. 點選&#x200B;**人員**&#x200B;和&#x200B;**團隊**&#x200B;模型，然後點選&#x200B;**Publish**
+1. 點選&#x200B;**人員**&#x200B;和&#x200B;**團隊**&#x200B;模型，然後點選&#x200B;**發佈**
 
-   ![Publish內容片段模型](assets/content-fragment-models/publish-content-fragment-model.png)
+   ![發佈內容片段模型](assets/content-fragment-models/publish-content-fragment-model.png)
 
 ## 恭喜！ {#congratulations}
 

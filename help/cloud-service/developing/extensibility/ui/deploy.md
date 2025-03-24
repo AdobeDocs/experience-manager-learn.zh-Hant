@@ -2,7 +2,7 @@
 title: 部署AEM UI擴充功能
 description: 瞭解如何部署AEM UI擴充功能。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 166
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 Adobe Developer Console工作區與AEM as a Cloud Service環境型別沒有任何直接關聯。
 + 部署至生產工作區的擴充功能會顯示在該擴充功能所在的Adobe組織的所有AEM as a Cloud Service環境中。
 擴充功能無法藉由新增檢查AEM as a Cloud Service主機名稱](https://developer.adobe.com/uix/docs/guides/publication/#enabling-extension-only-on-specific-aem-environments)的[條件式邏輯，限製為已登入的環境。
-+ AEM as a Cloud Service上可以使用多個擴充功能。 Adobe建議使用每個擴充功能App Builder應用程式來解決單一業務目標。 也就是說，單一擴充功能App Builder應用程式可實作支援共同業務目標的多個擴充點。
++ AEM as a Cloud Service上可以使用多個擴充功能。 Adobe建議使用App Builder應用程式的每個擴充功能來解決單一業務目標。 也就是說，單一擴充功能App Builder應用程式可實作支援共同業務目標的多個擴充點。
 
 ## 初始部署
 
@@ -141,7 +141,7 @@ Adobe Developer Console工作區與AEM as a Cloud Service環境型別沒有任�
 
 ![移除延伸模組](./assets/deploy/revoke.png)
 
-若要移除擴充功能，請將其從Adobe Exchange中撤銷（或移除）。 擴充功能撤銷時，會從所有AEM as a Cloud Service Author服務中移除。
+若要移除擴充功能，請從Adobe Exchange撤銷（或移除）該擴充功能。 擴充功能撤銷時，會從所有AEM as a Cloud Service Author服務中移除。
 
 1. 登入[Adobe Exchange](https://exchange.adobe.com/)
 1. 瀏覽至&#x200B;__管理__ > __App Builder應用程式__

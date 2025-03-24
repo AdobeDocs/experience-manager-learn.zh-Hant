@@ -1,7 +1,7 @@
 ---
 title: CDN快取命中率分析
 description: 瞭解如何分析AEM as a Cloud Service提供的CDN記錄。 取得各種深入分析，例如快取命中率，以及MISS和PASS快取型別的熱門URL，以用於最佳化目的。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -28,11 +28,11 @@ ht-degree: 0%
 
 CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`。 如需詳細資訊，請參閱[CDN記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs)。 `cache`欄位提供快取&#x200B;_的_&#x200B;狀態相關資訊，其可能值為HIT、MISS或PASS。 讓我們檢視可能值的詳細資訊。
 
-| 快取</br>可能的值的狀態 | 說明 |
+| 快取</br>可能的值的狀態 | 描述 |
 |------------------------------------|:-----------------------------------------------------:|
 | 點選 | 要求的資料在CDN快取中找到&#x200B;_，不需要向AEM伺服器提出fetch_&#x200B;要求。 |
 | 未命中 | 要求的資料在CDN快取中找不到&#x200B;_，必須向AEM伺服器要求_。 |
-| 通過 | 要求的資料已明確設定為&#x200B;_不快取_，且一律會從AEM伺服器擷取。 |
+| 通過 | 要求的資料已明確設定為&#x200B;_不進行快取_，且一律會從AEM伺服器擷取。 |
 
 在此教學課程中，[AEM WKND專案](https://github.com/adobe/aem-guides-wknd)已部署至AEM as a Cloud Service環境，並使用[Apache JMeter](https://jmeter.apache.org/)觸發小型效能測試。
 
@@ -52,7 +52,7 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
    ![下載記錄 — Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
-1. 在&#x200B;**下載記錄檔**&#x200B;對話方塊中，從下拉式功能表選取&#x200B;**Publish**&#x200B;服務，然後按一下&#x200B;**CDN**&#x200B;列旁的下載圖示。
+1. 在&#x200B;**下載記錄檔**&#x200B;對話方塊中，從下拉式功能表選取&#x200B;**發佈**&#x200B;服務，然後按一下&#x200B;**CDN**&#x200B;列旁的下載圖示。
 
    ![CDN記錄檔 — Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
@@ -153,18 +153,18 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
 #### 下載互動式Python筆記本檔案
 
-首先，下載[AEM-as-a-CloudService - CDN記錄分析 — Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb)檔案，這有助於進行CDN記錄分析。 這份「互動式Python筆記本」檔案內容不言自明，但各節的關鍵重點為：
+首先，下載[AEM-as-a-CloudService - CDN記錄分析 — Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb)檔案，此檔案將協助CDN記錄分析。 這份「互動式Python筆記本」檔案內容不言自明，但各節的關鍵重點為：
 
 - **安裝其他資料庫**：安裝`termcolor`和`tabulate` Python資料庫。
 - **載入CDN記錄檔**：使用`log_file`變數值載入CDN記錄檔；請確定更新其值。 它也會將此CDN記錄檔轉換為[Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html)。
 - **執行分析**：第一個程式碼區塊是&#x200B;_顯示總計、HTML、JS/CSS和影像要求的分析結果_；它提供快取命中率百分比、長條圖和圓餅圖。
-第二個程式碼區塊是HTML、JS/CSS和影像_的_&#x200B;前5個遺漏和傳遞要求URL；它以表格格式顯示URL及其計數。
+第二個程式碼區塊是HTML、JS/CSS和Image_的_&#x200B;前5個遺漏和PASS要求URL；它以表格格式顯示URL及其計數。
 
 #### 執行Jupyter Notebook
 
 接下來，請依照下列步驟在Adobe Experience Platform中執行Jupyter Notebook：
 
-1. 登入[Adobe Experience Cloud](https://experience.adobe.com/)，在首頁> **快速存取**&#x200B;區段>按一下&#x200B;**Experience Platform**&#x200B;中
+1. 登入[Adobe Experience Cloud](https://experience.adobe.com/)，在首頁> **快速存取**&#x200B;區段>按一下&#x200B;**Experience Platform**
 
    ![Experience Platform](assets/cdn-logs-analysis/experience-platform.png){width="500" zoomable="yes"}
 
@@ -186,11 +186,11 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
    ![筆記本記錄檔值更新](assets/cdn-logs-analysis/notebook-run-cell.png){width="500" zoomable="yes"}
 
-1. 執行Total、Analysis、JS/CSS和Image Requests **程式碼儲存格的**&#x200B;顯示HTML結果後，輸出會顯示快取命中率百分比、長條圖和圓餅圖。
+1. 執行Total、HTML、JS/CSS和Image Requests **程式碼儲存格的**&#x200B;顯示分析結果後，輸出會顯示快取命中率百分比、長條圖和圓餅圖。
 
    ![筆記本記錄檔值更新](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="500" zoomable="yes"}
 
-1. 執行HTML、JS/CSS和影像&#x200B;**程式碼儲存格的**&#x200B;前5名遺漏和通過要求URL後，輸出會顯示前5名遺漏和通過要求URL。
+1. 執行HTML、JS/CSS和Image **程式碼儲存格的**&#x200B;前5名遺漏和通過請求URL後，輸出會顯示前5名遺漏和通過請求URL。
 
    ![筆記本記錄檔值更新](assets/cdn-logs-analysis/output-top-urls.png){width="500" zoomable="yes"}
 
@@ -198,7 +198,7 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
 ## 最佳化CDN快取設定
 
-分析CDN記錄後，您可以最佳化CDN快取設定以改善網站效能。 AEM最佳實務是快取命中率為90%或更高。
+分析CDN記錄後，您可以最佳化CDN快取設定以改善網站效能。 AEM的最佳實務是快取命中率為90%或更高。
 
 如需詳細資訊，請參閱[最佳化CDN快取設定](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching)。
 

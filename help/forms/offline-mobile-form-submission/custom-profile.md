@@ -1,9 +1,9 @@
 ---
 title: 在HTML5表單提交時觸發AEM工作流程 — 建立自訂設定檔
-description: 建立自訂設定檔，以下載包含部分填入HTML5表單之資料的互動式pdf
+description: 建立自訂設定檔，從已部分填滿的HTML5表單下載包含資料的互動式pdf
 feature: Mobile Forms
 doc-type: article
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ jira: kt-16133
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: b6e3acee-4a07-4d00-b3a1-f7aedda21e6e
 duration: 102
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 建立自訂設定檔
 
-在本部分中，我們將建立[自訂設定檔。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)設定檔負責將XDP轉譯為HTML。 提供立即可用的預設設定檔，用於將XDP轉譯為HTML。 它代表自訂版的Mobile Forms轉譯服務。 您可以使用Mobile Form Rendition服務來自訂Mobile Forms的外觀、行為和互動。 在我們的自訂設定檔中，我們將使用Guidelbridge API擷取填入行動表單的資料。 然後，這些資料會傳送到自訂servlet，接著會產生互動式PDF，並將其串流回呼叫的應用程式。
+在本部分中，我們將建立[自訂設定檔。](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)設定檔負責將XDP轉譯為HTML。 提供預設設定檔，可立即將XDP轉譯為HTML。 它代表自訂版的Mobile Forms轉譯服務。 您可以使用Mobile Form Rendition服務來自訂Mobile Forms的外觀、行為和互動。 在我們的自訂設定檔中，我們將使用Guidelbridge API擷取填入行動表單的資料。 然後，這些資料會傳送到自訂servlet，接著會產生互動式PDF，並將其串流回呼叫的應用程式。
 
 使用`formBridge` JavaScript API取得表單資料。 我們使用`getDataXML()`方法：
 
@@ -127,7 +127,7 @@ public class GeneratePDFFromMobileFormData extends SlingAllMethodsServlet implem
 
 ### 呈現互動式PDF
 
-下列程式碼會使用[Forms服務API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html)，以使用行動表單中的資料來呈現互動式PDF。
+下列程式碼會使用[Forms服務API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html)，以行動表單中的資料來呈現互動式PDF。
 
 ```java
 package com.aemforms.mobileforms.core.documentservices.impl;

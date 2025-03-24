@@ -1,7 +1,7 @@
 ---
 title: 專用輸出 IP 位址
 description: 瞭解如何設定及使用專用輸出IP位址，此位址允許來自AEM的輸出連線源自於專用IP。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
-source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 1%
@@ -174,7 +174,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
    專用輸出IP位址設定的HTTP簽章僅與[彈性輸出連線埠](./flexible-port-egress.md#enable-dedicated-egress-ip-address-per-environment)不同，因為它也支援選用的`nonProxyHosts`設定。
 
-   `nonProxyHosts`宣告了一組主機，應該透過預設共用IP位址範圍而不是專用輸出IP路由連線埠80或443。 `nonProxyHosts`可能很有用，因為通過共用IP的流量已由Adobe自動最佳化。
+   `nonProxyHosts`宣告了一組主機，應該透過預設共用IP位址範圍而不是專用輸出IP路由連線埠80或443。 `nonProxyHosts`可能很實用，因為Adobe已自動最佳化透過共用IP的流量。
 
    對於每個`portForwards`對應，進階網路會定義下列轉送規則：
 
@@ -210,7 +210,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 ## 透過專用輸出IP位址連線到外部服務
 
-在啟用專用輸出IP位址的情況下，AEM程式碼和設定可以使用專用輸出IP來呼叫外部服務。 AEM處理外部呼叫的方式有兩種：
+在啟用專用輸出IP位址的情況下，AEM程式碼和設定可以使用專用輸出IP來呼叫外部服務。 AEM對外部呼叫的處理方式有所差異，共有兩種型別：
 
 1. 對外部服務的HTTP/HTTPS呼叫
    + 包括對標準80或443連線埠以外的連線埠上執行的服務發出的HTTP/HTTPS呼叫。
@@ -253,7 +253,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 | `AEM_PROXY_HOST` | 非HTTP/HTTPS連線的Proxy主機 | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
-接著會透過`AEM_PROXY_HOST`與對應的連線埠(`portForwards.portOrig`)呼叫與外部服務的連線，AEM會路由傳送到對應的外部主機名稱(`portForwards.name`)與連線埠(`portForwards.portDest`)。
+接著會透過`AEM_PROXY_HOST`與對應的連線埠(`portForwards.portOrig`)呼叫與外部服務的連線，AEM會接著路由至對應的外部主機名稱(`portForwards.name`)與連線埠(`portForwards.portDest`)。
 
 | Proxy主機 | Proxy連線埠 |  | 外部主機 | 外部連線埠 |
 |---------------------------------|----------|----------------|------------------|----------|

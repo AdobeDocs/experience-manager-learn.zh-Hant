@@ -1,8 +1,8 @@
 ---
-title: 使用AdobeCloud Manager - CI/CD非生產管道
+title: 使用Adobe Cloud Manager - CI/CD非生產管道
 description: CI/CD 非生產用管道分成兩種類別：程式碼品質管道以及部署管道。程式碼品質管道會從 Git 分支輸入所有程式碼，以建置並根據 Cloud Manager 的程式碼品質掃描加以評估。部署管道會支援將程式碼從 Git 存放庫自動部署到任何非生產環境，這指的是任何已佈建的 AEM 環境 (非預備或生產環境)。
 doc-type: feature video
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6873
 thumbnail: 26316.jpg
 topic: Architecture
@@ -11,7 +11,7 @@ role: Architect, Developer, Admin
 level: Beginner
 exl-id: b28805d3-bb2d-4f66-8daa-9a8eb7ecf0a1
 duration: 211
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 89%

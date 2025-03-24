@@ -1,7 +1,7 @@
 ---
 title: 初始化適用於AEM UI的App Builder應用程式
 description: 瞭解如何初始化AEM UI擴充功能App Builder應用程式，定義擴充功能出現的位置及其執行的工作。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Development
 role: Developer
@@ -13,7 +13,7 @@ jira: KT-11659
 thumbnail: 3412876.jpeg
 exl-id: ef5ad335-7278-4c00-beb6-233a3d1e330e
 duration: 265
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%

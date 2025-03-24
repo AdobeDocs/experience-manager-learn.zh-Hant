@@ -1,7 +1,7 @@
 ---
 title: 搭配使用「元件主控台」與AEM Sites
 description: 「元件主控台」為開發人員和管理員提供管理網站實施中所有不同元件的中心位置。 下列影片詳細說明元件主控台的功能。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Core Components
 topic: Content Management
 role: User
@@ -9,7 +9,7 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: 6f33f121-5564-4c46-ab56-7ea382a0ab5a
 duration: 224
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 1%

@@ -1,14 +1,14 @@
 ---
 title: 使用者端應用程式整合 — AEM Headless的進階概念 — GraphQL
 description: 實作持續性查詢並將其整合到WKND應用程式中。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: d0576962-a86a-4742-8635-02be1ec3243f
 duration: 241
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 在上一章中，您使用GraphiQL Explorer建立和更新持久查詢。
 
-本章會逐步引導您使用現有&#x200B;**React元件**&#x200B;內的HTTPGET要求，將持續性查詢與WKND使用者端應用程式（亦稱為WKND應用程式）整合在一起。 此外，您可選擇挑戰應用AEM Headless學習內容，以編碼專業知識增強WKND使用者端應用程式。
+本章會逐步引導您完成步驟，在現有&#x200B;**React元件**&#x200B;中使用HTTP GET要求，將持續性查詢與WKND使用者端應用程式（亦稱為WKND應用程式）整合。 此外也提供選購挑戰功能，讓您運用AEM Headless學習經驗、編碼專業知識來增強WKND使用者端應用程式。
 
 ## 先決條件 {#prerequisites}
 
@@ -38,13 +38,13 @@ ht-degree: 1%
 可安裝的解決方案套件可完成第1-4章的AEM UI中的步驟。 如果前幾章已完成，則此封裝&#x200B;**不需要**。
 
 1. 下載[Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip)。
-1. 在AEM中，瀏覽至&#x200B;**工具** > **部署** > **封裝**&#x200B;以存取&#x200B;**封裝管理員**。
+1. 在AEM中，瀏覽至&#x200B;**工具** > **部署** > **套件**&#x200B;以存取&#x200B;**套件管理員**。
 1. 上傳並安裝上一步驟中下載的套件（zip檔案）。
 1. 將套件復寫至AEM Publish服務
 
 ## 目標 {#objectives}
 
-在本教學課程中，您將瞭解如何使用[適用於JavaScript的AEM Headless Client ](https://github.com/adobe/aem-headless-client-js)，將持續性查詢的請求整合到範例WKND GraphQL React應用程式中。
+在本教學課程中，您將瞭解如何使用適用於JavaScript的[AEM Headless Client ](https://github.com/adobe/aem-headless-client-js)，將持續性查詢的請求整合到範例WKND GraphQL React應用程式中。
 
 ## 複製並執行範例使用者端應用程式 {#clone-client-app}
 
@@ -84,7 +84,7 @@ ht-degree: 1%
 
    >[!NOTE]
    > 
-   > 上述指示是將React應用程式連線至&#x200B;**AEM Publish服務**，但若要連線至&#x200B;**AEM作者服務**，請取得目標AEM as a Cloud Service環境的本機開發權杖。
+   > 上述指示是將React應用程式連線至&#x200B;**AEM Publish服務**，但若要連線至&#x200B;**AEM Author服務**，請取得目標AEM as a Cloud Service環境的本機開發權杖。
    >
    > 也可以使用基本驗證，使用AEMaaCS SDK](/help/headless-tutorial/graphql/quick-setup/local-sdk.md)將應用程式連線到[本機作者執行個體。
 
@@ -106,18 +106,18 @@ ht-degree: 1%
 
 1. 開啟瀏覽器的開發人員工具並檢查`XHR`請求
 
-   ![POSTGraphQL](assets/client-application-integration/graphql-persisted-query.png)
+   ![發佈GraphQL](assets/client-application-integration/graphql-persisted-query.png)
 
    您應該會看到對GraphQL端點的`GET`個要求，其中包含專案設定名稱(`wknd-shared`)、持續查詢名稱(`adventure-by-slug`)、變數名稱(`slug`)、值(`yosemite-backpacking`)和特殊字元編碼。
 
 >[!IMPORTANT]
 >
->    若您想知道為什麼GraphQL API要求是針對`http://localhost:3000`而非AEM Publish Service網域提出，請檢閱基礎教學課程中的[ ](../multi-step/graphql-and-react-app.md#under-the-hood)。
+>    若您想知道為什麼GraphQL API要求是針對`http://localhost:3000`而非AEM Publish Service網域提出，請參閱基本教學課程的](../multi-step/graphql-and-react-app.md#under-the-hood)主題。[
 
 
 ## 檢閱程式碼
 
-在[基本教學課程 — 使用AEM的GraphQL API建置React應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)步驟中，我們已檢閱並增強一些重要檔案，以獲得實際操作的專業知識。 增強WKND應用程式之前，請先檢閱重要檔案。
+在[基本教學課程 — 使用AEM的GraphQL API建置React應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)步驟中，我們已檢閱並增強一些重要檔案，以獲得實作專業知識。 增強WKND應用程式之前，請先檢閱重要檔案。
 
 * [檢閱AEMHeadless物件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)
 
@@ -145,7 +145,7 @@ WKND React應用程式的主要檢視是所有冒險清單，您可以根據&#x2
 
 * 如上所述，`useAdventureBySlug(slug)`連結定義於`src/api/usePersistedQueries.js`檔案中。 它透過`aemHeadlessClient.js`委派給`AEMHeadless`來呼叫`wknd-shared/adventure-by-slug`持續查詢。
 
-* 成功執行查詢後，`AdventureDetail.js`中的`AdventureDetailRender(..)`轉譯器函式會新增HTML元素以顯示冒險詳細資料。
+* 成功執行查詢後，`AdventureDetail.js`的`AdventureDetailRender(..)`轉譯器函式會新增HTML元素來顯示Adventure詳細資料。
 
 
 ## 增強程式碼

@@ -1,7 +1,7 @@
 ---
 title: 使用大量匯入服務的內容移轉
-description: 瞭解如何使用AEM as aCloud Service的大量匯入服務從非AEM來源匯入資產。
-version: Cloud Service
+description: 瞭解AEM as a Cloud Services的大量匯入服務如何可用從非AEM來源匯入資產。
+version: Experience Manager as a Cloud Service
 topic: Migration, Upgrade
 feature: Migration
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
 duration: 650
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 大量匯入服務
 
-瞭解如何使用AEM as aCloud Service的大量匯入服務從非AEM來源匯入資產。
+瞭解AEM as a Cloud Services的大量匯入服務如何可用從非AEM來源匯入資產。
 
 
 

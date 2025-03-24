@@ -1,7 +1,7 @@
 ---
 title: 編寫內容片段 — AEM Headless快速入門 — GraphQL
 description: 開始使用Adobe Experience Manager (AEM)和GraphQL。 根據內容片段模型建立及編輯新內容片段。 瞭解如何建立內容片段的變體。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6713
 thumbnail: 22451.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
 duration: 173
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '853'
 ht-degree: 3%
@@ -50,7 +50,7 @@ ht-degree: 3%
 
    ![開啟資料夾屬性](assets/author-content-fragments/open-folder-properties.png)
 
-1. 點選&#x200B;**Cloud Service**&#x200B;標籤。 在[雲端設定]索引標籤下，使用路徑尋找器來選取&#x200B;**我的專案**&#x200B;設定。 值應為`/conf/my-project`。
+1. 點選「**雲端服務**」標籤。 在[雲端設定]索引標籤下，使用路徑尋找器來選取&#x200B;**我的專案**&#x200B;設定。 值應為`/conf/my-project`。
 
    ![設定雲端設定](assets/author-content-fragments/set-cloud-config-my-project.png)
 
@@ -78,7 +78,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
->本機AEM SDK使用者：使用AEM Assets UI來建立和編寫內容片段，而非下列內容片段UI。 如需詳細指示，請參閱[AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)。
+>對於本機AEM SDK使用者：利用AEM Assets UI來建立和編寫內容片段，而不是以下概述的內容片段UI。 如需詳細指示，請參閱[AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)。
 
 接下來幾個內容片段是根據&#x200B;**團隊**&#x200B;和&#x200B;**人員**&#x200B;模型建立的。
 
@@ -105,11 +105,11 @@ ht-degree: 3%
 
    點選&#x200B;**建立**&#x200B;以建立人員片段。
 
-1. 接著，重複步驟以建立代表&#x200B;**團隊Alpha**&#x200B;的&#x200B;**團隊**&#x200B;片段：
+1. 接下來，重複步驟以建立代表&#x200B;**團隊Alpha**&#x200B;的&#x200B;**團隊**&#x200B;片段：
 
    * 位置： `/content/dam/my-project/en`
    * 內容片段模型： **團隊**
-   * 標題： **團隊Alpha**
+   * 標題： **Alpha團隊**
    * 名稱：`team-alpha`
 
    點選&#x200B;**建立**&#x200B;以建立團隊片段。
@@ -146,13 +146,13 @@ ht-degree: 3%
    >
    >您也可以使用&#x200B;**新增內容片段**&#x200B;按鈕來建立內嵌內容片段。
 
-1. 點選&#x200B;**儲存並關閉**&#x200B;以儲存對團隊Alpha片段的變更。
+1. 點選&#x200B;**儲存並關閉**&#x200B;以儲存對Team Alpha片段的變更。
 
-## Publish內容片段
+## 發佈內容片段
 
 >[!TIP]
 >
->本機AEM SDK使用者：使用AEM Assets UI來發佈內容片段，而非下列內容片段UI。 如需詳細指示，請參閱[AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment)。
+>針對本機AEM SDK使用者：利用AEM Assets UI發佈內容片段，而非下列內容片段UI。 如需詳細指示，請參閱[AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment)。
 
 檢閱和驗證後，發佈編寫的`Content Fragments`
 
@@ -160,8 +160,8 @@ ht-degree: 3%
 
 1. 在左側邊欄中，展開&#x200B;**我的專案**，然後點選&#x200B;**英文**。
 
-1. 點選內容片段旁的核取方塊，然後點選&#x200B;**Publish**。
-   ![Publish內容片段](assets/author-content-fragments/publish-content-fragment.png)
+1. 點選內容片段旁的核取方塊，然後點選&#x200B;**發佈**。
+   ![發佈內容片段](assets/author-content-fragments/publish-content-fragment.png)
 
 ## 恭喜！ {#congratulations}
 

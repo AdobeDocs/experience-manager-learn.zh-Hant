@@ -1,7 +1,7 @@
 ---
 title: 在AEM中開發Sling模型匯出工具
 description: 此技術逐步解說會逐步解說如何設定AEM以與Sling模型匯出工具搭配使用、使用匯出工具架構增強現有的Sling模型以轉譯為JSON，以及如何使用匯出工具選項和Jackson註解來進一步自訂輸出。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
 doc-type: Technical Video
@@ -10,7 +10,7 @@ role: Developer
 level: Intermediate
 exl-id: fc321ed1-5cf7-4bbe-adc6-c4905af7b43c
 duration: 932
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Apache Sling提供Jackson JSON匯出工具，以涵蓋將Sling模型匯出為JSO
 
 >[!VIDEO](https://video.tv.adobe.com/v/16863?quality=12&learn=on)
 
-[!DNL Sling Model Exporter]非常適合運用已包含商業邏輯的Sling模型，這些商業邏輯可透過HTL （或先前的JSP）支援HTML轉譯，並顯示與JSON相同的商業表示以供程式化Web服務或JavaScript應用程式使用。
+[!DNL Sling Model Exporter]非常適合運用已包含商業邏輯的Sling模型，這些商業邏輯透過HTL （或以前的JSP）支援HTML轉譯，並顯示與JSON相同的商業表示以供程式化Web服務或JavaScript應用程式使用。
 
 ## 建立Sling模型匯出工具
 

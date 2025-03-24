@@ -1,7 +1,7 @@
 ---
 title: 搭配AEM Headless使用RTF文字
-description: 瞭解如何使用具有Adobe Experience Manager內容片段的多行RTF編輯器編寫內容並嵌入參考內容，以及AEM的GraphQL API如何以JSON形式傳送RTF以供無頭應用程式使用。
-version: Cloud Service
+description: 瞭解如何使用具有Adobe Experience Manager內容片段的多行RTF編輯器編寫內容並嵌入參考內容，以及AEM的GraphQL API如何將RTF傳遞為JSON，以供Headless應用程式使用。
+version: Experience Manager as a Cloud Service
 doc-type: article
 jira: KT-9985
 feature: Content Fragments, GraphQL API
@@ -10,7 +10,7 @@ level: Intermediate
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
 duration: 785
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 0%
@@ -49,7 +49,7 @@ AEM的GraphQL API提供強大的功能，可將RTF傳回HTML、純文字或純JS
 
 **預設型別**&#x200B;可以設定為：
 
-* RTF
+* RTF 文字
 * Markdown
 * 純文字
 
@@ -63,7 +63,7 @@ AEM的GraphQL API提供強大的功能，可將RTF傳回HTML、純文字或純JS
 
 建立GraphQL查詢時，開發人員可以從多行欄位中從`html`、`plaintext`、`markdown`和`json`選擇不同的回應型別。
 
-開發人員可以在內容片段編輯器中使用[JSON預覽](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html?lang=zh-Hant)，以顯示可使用GraphQL API傳回之目前內容片段的所有值。
+開發人員可以在內容片段編輯器中使用[JSON預覽](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html?lang=zh-hant)，以顯示可使用GraphQL API傳回之目前內容片段的所有值。
 
 ## GraphQL持續查詢
 
@@ -351,16 +351,16 @@ const nodeMap = {
 
 ![插入內容片段參考](assets/rich-text/insert-contentfragment.png)
 
-上面的熒幕擷圖描繪了插入多行欄位中的另一個內容片段，洛杉磯滑冰公園終極指南。 可插入欄位中的內容片段型別是由內容片段模式中[多行資料型別](#multi-line-data-type)中的&#x200B;**允許的內容片段模式**&#x200B;設定所控制。
+上方的熒幕擷圖描繪了插入多行欄位中的另一個內容片段，洛杉磯滑冰場Ultimate指南。 可插入欄位中的內容片段型別是由內容片段模式中[多行資料型別](#multi-line-data-type)中的&#x200B;**允許的內容片段模式**&#x200B;設定所控制。
 
 ## 使用GraphQL查詢內嵌參考
 
-GraphQL API可讓開發人員建立查詢，查詢中包含有關插入多行欄位中的任何參考的其他屬性。 JSON回應包含一個單獨的`_references`物件，其中列出這些額外的屬性。 JSON回應可讓開發人員完全掌控如何呈現參考資料或連結，而不必處理教條式HTML。
+GraphQL API可讓開發人員建立查詢，查詢中包含有關插入多行欄位中的任何參考的其他屬性。 JSON回應包含一個單獨的`_references`物件，其中列出這些額外的屬性。 JSON回應可讓開發人員完全掌控如何呈現參考資料或連結，而不必處理教條式的HTML。
 
 例如，您可能想要：
 
 * 包含自訂路由邏輯，用於在實作單頁應用程式（例如使用React路由器或Next.js）時管理其他內容片段的連結
-* 使用指向AEM Publish環境的絕對路徑作為`src`值來轉譯內嵌影像。
+* 使用指向AEM發佈環境的絕對路徑作為`src`值來轉譯內嵌影像。
 * 決定如何使用其他自訂屬性呈現對其他內容片段的嵌入參考。
 
 建構GraphQL查詢時使用`json`傳回型別並包含`_references`物件：

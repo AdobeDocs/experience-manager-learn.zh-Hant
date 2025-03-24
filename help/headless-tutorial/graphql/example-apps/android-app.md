@@ -1,7 +1,7 @@
 ---
 title: Android應用程式 — AEM Headless範例
-description: 範例應用程式是探索Adobe Experience Manager (AEM)無周邊功能的絕佳方式。 此Android應用程式示範了如何使用AEM的GraphQL API來查詢內容。
-version: Cloud Service
+description: 範例應用程式是探索Adobe Experience Manager (AEM)無頭式功能的絕佳方式。 此Android應用程式示範了如何使用AEM的GraphQL API來查詢內容。
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 2
 jira: KT-10588
 thumbnail: KT-10588.jpg
@@ -10,19 +10,19 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
-badgeVersions: label="AEM Headlessas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
 duration: 160
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '614'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Android應用程式
 
-範例應用程式是探索Adobe Experience Manager (AEM)無周邊功能的絕佳方式。 此Android應用程式示範了如何使用AEM的GraphQL API來查詢內容。 適用於Java](https://github.com/adobe/aem-headless-client-java)的[AEM Headless Client用於執行GraphQL查詢，並將資料對應至Java物件以支援此應用程式。
+範例應用程式是探索Adobe Experience Manager (AEM)無頭式功能的絕佳方式。 此Android應用程式示範了如何使用AEM的GraphQL API來查詢內容。 適用於Java](https://github.com/adobe/aem-headless-client-java)的[AEM Headless Client用於執行GraphQL查詢，並將資料對應至Java物件以支援應用程式。
 
 使用AEM Headless的![Android Java應用程式](./assets/android-java-app/android-app.png)
 
@@ -61,7 +61,7 @@ Android應用程式設計來連線至&#x200B;__AEM Publish__&#x200B;環境，不
 
    __基本驗證__
 
-   `contentApi.user`和`contentApi.password`驗證本機AEM使用者是否有權存取WKND GraphQL內容。
+   `contentApi.user`和`contentApi.password`會驗證可存取WKND GraphQL內容的本機AEM使用者。
 
    ```plain
    contentApi.endpoint=https://author-p123-e456.adobeaemcloud.com
@@ -96,7 +96,7 @@ builder.tokenAuth(token)
 
 依照AEM Headless最佳實務，iOS應用程式會使用AEM GraphQL持續性查詢來查詢冒險資料。 應用程式使用兩個持續查詢：
 
-+ `wknd/adventures-all`持續查詢，這會傳回AEM中所有具有刪節屬性集的冒險。 此持續查詢會驅動初始檢視的冒險清單。
++ `wknd/adventures-all`持續查詢，此查詢會傳回AEM中所有冒險的摘要。 此持續查詢會驅動初始檢視的冒險清單。
 
 ```
 # Retrieves a list of all adventures
@@ -175,9 +175,9 @@ query($slug: String!) {
 
 ### 執行GraphQL持久查詢
 
-AEM的持續查詢會透過HTTPGET執行，因此，適用於Java](https://github.com/adobe/aem-headless-client-java)的[AEM Headless使用者端是用來對AEM執行持續的GraphQL查詢，並將冒險內容載入應用程式。
+AEM的持久查詢會透過HTTP GET執行，因此，適用於Java的[AEM Headless使用者端](https://github.com/adobe/aem-headless-client-java)是用來對AEM執行持續的GraphQL查詢，並將冒險內容載入應用程式。
 
-每個持續查詢都有對應的「載入器」類別，會非同步呼叫AEM HTTPGET端點，並使用自訂定義的[資料模型](#data-models)傳回冒險資料。
+每個持續查詢都有對應的「載入器」類別，可非同步呼叫AEM HTTP GET端點，並使用自訂定義的[資料模型](#data-models)傳回冒險資料。
 
 + `loader/AdventuresLoader.java`
 

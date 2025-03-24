@@ -1,7 +1,7 @@
 ---
 title: 如何在AEM中使用主要專案
 description: 主要專案透過AEM專案大幅簡化使用者和團隊管理。
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Content Management, Collaboration
 feature: Projects
 level: Intermediate
@@ -11,7 +11,7 @@ thumbnail: 17740.jpg
 doc-type: Feature Video
 exl-id: 78ff62ad-1017-4a02-80e9-81228f9e01eb
 duration: 260
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 0%
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 刪除主要專案會導致衍生的專案無法使用。
 
-在刪除主要專案之前，請確定所有衍生的專案都已完成並從AEM中移除。 在移除衍生的專案之前，請務必儲存所有必要的專案資料。 從AEM移除所有衍生專案後，就可以安全地刪除主專案。
+在刪除主要專案之前，請確定所有衍生的專案都已完成並從AEM中移除。 在移除衍生的專案之前，請務必儲存所有必要的專案資料。 從AEM移除所有衍生專案後，即可安全地刪除主專案。
 
 ## 將[!DNL Project Masters]標示為非使用中
 
@@ -51,6 +51,6 @@ ht-degree: 0%
 
 ![專案主要技術檢視](assets/use-project-masters/project-masters-architecture.png)
 
-[!DNL Project Masters]的工作方式是定義一組AEM使用者群組（擁有者、編輯者和觀察者），並允許衍生的「專案」參照及重複使用這些集中定義的使用者群組。
+[!DNL Project Masters]的工作方式是定義一組AEM使用者群組（擁有者、編輯者和觀察者），並允許衍生的專案參照和重複使用這些集中定義的使用者群組。
 
 這會減少AEM中所需的使用者群組總數。 在[!DNL Project Masters]之前，每個專案已建立3個使用者群組及隨附的ACE以強制進行許可權設定，因此100個專案產生了300個使用者群組。 主要專案允許任意數量的專案重複使用相同的三個群組，前提是共用的成員資格符合整個專案的業務需求。

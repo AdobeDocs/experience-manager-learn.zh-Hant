@@ -1,7 +1,7 @@
 ---
 title: 使用通用編輯器檢測React應用程式以編輯內容
 description: 瞭解如何使用Universal Editor檢測React應用程式以編輯內容。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 2a25cd44-cbd1-465e-ae3f-d3876e915114
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 0%
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 若要將WKND Teams React應用程式&#x200B;_與內容來源_&#x200B;連線以進行編輯，您必須提供連線中繼資料。 Universal Editor服務會使用此中繼資料來建立與內容來源的連線。
 
-連線中繼資料儲存為HTML檔案中的`<meta>`標籤。 連線中繼資料的語法如下：
+連線中繼資料會儲存為HTML檔案中的`<meta>`標籤。 連線中繼資料的語法如下：
 
 ```html
 <meta name="urn:adobe:aue:<category>:<referenceName>" content="<protocol>:<url>">
@@ -129,7 +129,7 @@ export default App;
 
 ## 新增中繼資料 — 本機通用編輯器服務設定
 
-Universal Editor服務的本機復本不是由Adobe託管的通用編輯器服務，而是用於本機開發。 本機服務會繫結Universal Editor和AEM SDK，所以讓我們將本機Universal Editor服務中繼資料新增到WKND Teams React應用程式。
+Universal Editor服務的本機副本並非由Adobe託管，而是用於本機開發。 本機服務會繫結通用編輯器和AEM SDK，所以讓我們將本機通用編輯器服務中繼資料新增到WKND Teams React應用程式。
 
 這些組態設定也會儲存為HTML檔案中的`<meta>`標籤。 本機Universal Editor服務中繼資料的語法如下：
 
@@ -178,7 +178,7 @@ export default App;
 
 ## 檢測React元件
 
-若要編輯WKND Teams React應用程式的內容（例如&#x200B;_團隊標題和團隊說明_），您必須檢測React元件。 檢測表示將相關資料屬性(`data-aue-*`)新增至您要使用通用編輯器使其可編輯的HTML元素。 如需資料屬性的詳細資訊，請參閱[屬性和型別](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)。
+若要編輯WKND Teams React應用程式的內容（例如&#x200B;_團隊標題和團隊說明_），您必須檢測React元件。 檢測表示將相關資料屬性(`data-aue-*`)新增至您想要使用通用編輯器使其可編輯的HTML元素。 如需資料屬性的詳細資訊，請參閱[屬性和型別](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)。
 
 ### 定義可編輯的元素
 
@@ -222,7 +222,7 @@ export default App;
 
 若要將已編輯的內容儲存回AEM以及在屬性邊欄中載入內容，您必須將AEM資源詳細資料提供給通用編輯器。
 
-在此案例中，AEM資源是Team內容片段路徑，所以讓我們將資源詳細資料新增至頂層`<div>`元素的`Teams` React元件。
+在此案例中，AEM資源是團隊內容片段路徑，所以讓我們將資源詳細資料新增至頂層`<div>`元素的`Teams` React元件。
 
 1. 更新`src/components/Teams.js`檔案以將`data-aue-resource`、`data-aue-type`和`data-aue-label`屬性新增到最上層`<div>`專案。
 
@@ -256,7 +256,7 @@ export default App;
 
    ![通用編輯器 — WKND團隊可編輯](./assets/universal-editor-wknd-teams-team-editable.png)
 
-1. 若要修正401未授權錯誤，您必須使用通用編輯器中的&#x200B;**驗證標題**&#x200B;選項，將本機AEM SDK驗證詳細資料提供給通用編輯器。 作為其本機AEM SDK，請將`admin:admin`認證的值設定為`Basic YWRtaW46YWRtaW4=`。
+1. 若要修正401未授權錯誤，您必須使用通用編輯器中的&#x200B;**Authentication headers**&#x200B;選項，將本機AEM SDK驗證詳細資料提供給通用編輯器。 作為其本機AEM SDK，`admin:admin`認證的值設定為`Basic YWRtaW46YWRtaW4=`。
 
    ![通用編輯器 — 新增驗證標頭](./assets/universal-editor-wknd-teams-team-editable-auth.png)
 
@@ -266,9 +266,9 @@ export default App;
 
 #### 隱藏在機殼下
 
-屬性邊欄會使用本機Universal Editor服務，從AEM資源載入內容。 使用瀏覽器的網路標籤，您可以看到本機通用編輯器服務(`https://localhost:8001/details`)的POST要求，以載入內容。
+屬性邊欄會使用本機Universal Editor服務從AEM資源載入內容。 使用瀏覽器的網路標籤，您可以看到本機通用編輯器服務(`https://localhost:8001/details`)的POST要求，以載入內容。
 
-當您使用內嵌編輯或屬性邊欄來編輯內容時，變更會使用本機Universal Editor服務儲存回AEM資源。 使用瀏覽器的網路標籤，您可以看到本機通用編輯器服務（`https://localhost:8001/update`或`https://localhost:8001/patch`）的POST要求，以儲存內容。
+當您使用內嵌編輯或屬性邊欄來編輯內容時，變更會使用本機Universal Editor服務儲存回AEM資源。 使用瀏覽器的網路標籤，您可以看到本機通用編輯器服務（`https://localhost:8001/update`或`https://localhost:8001/patch`）的POST要求以儲存內容。
 
 ![通用編輯器 — WKND團隊可編輯](./assets/universal-editor-under-the-hood-request.png)
 
@@ -311,7 +311,7 @@ export default App;
    export default Teams;
    ```
 
-   `data-aue-type`屬性的值為`component`，因為團隊成員在AEM中儲存為`Person`個內容片段，有助於指出內容的移動/可刪除部分。
+   `data-aue-type`屬性的值為`component`，因為團隊成員儲存為AEM中的`Person`內容片段，有助於指出內容的移動/可刪除部分。
 
 1. 重新整理瀏覽器中載入WKND Teams React應用程式的「通用編輯器」頁面。 您現在可以看到可以使用屬性邊欄編輯專案團隊成員。
 
@@ -413,7 +413,7 @@ export default App;
 
 #### 隱藏在機殼下
 
-內容新增和刪除作業由本機Universal Editor服務完成。 對`/add`或`/remove`發出包含詳細裝載的POST要求給本機Universal Editor服務，以將內容新增或刪除AEM。
+內容新增和刪除作業由本機Universal Editor服務完成。 對`/add`或`/remove`發出的POST要求具有詳細的裝載，已傳送到本機Universal Editor服務，以將內容新增或刪除AEM。
 
 ## 解決方案檔案
 

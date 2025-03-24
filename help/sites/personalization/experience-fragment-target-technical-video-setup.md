@@ -2,7 +2,7 @@
 title: 在AEM中設定體驗片段和Adobe Target整合
 description: Adobe Experience Manager 6.4會重新想像AEM和Target之間的個人化工作流程。 在AEM中建立的體驗現在可以作為HTML選件直接提供給Adobe Target。 它可讓行銷人員順暢地測試及個人化不同管道的內容。
 feature: Experience Fragments
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 16cb0b92-9398-4fd2-b8c3-f4b7675ef72c
 topic: Personalization
 role: Admin, Developer
@@ -10,7 +10,7 @@ level: Intermediate
 doc-type: Technical Video
 exl-id: 9c139a36-e3c5-407e-af5d-b4fb8860f5a2
 duration: 238
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 2%

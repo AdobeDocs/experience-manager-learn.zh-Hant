@@ -1,7 +1,7 @@
 ---
 title: Webhook和AEM活動
-description: 瞭解如何在webhook上接收AEM事件，並檢閱事件詳細資訊，例如裝載、標題和中繼資料。
-version: Cloud Service
+description: 瞭解如何透過webhook接收AEM事件，並檢閱事件詳細資訊，例如裝載、標題和中繼資料。
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 # Webhook和AEM活動
 
-瞭解如何在webhook上接收AEM事件，並檢閱事件詳細資訊，例如裝載、標題和中繼資料。
+瞭解如何透過webhook接收AEM事件，並檢閱事件詳細資訊，例如裝載、標題和中繼資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
 
-在此範例中，利用Adobe提供的&#x200B;_託管webhook_&#x200B;可讓您接收AEM事件，而不需要設定您自己的webhook。 此Adobe提供的webhook託管於[Glitch](https://glitch.com/)，這個平台以提供有助於建置和部署Web應用程式的網頁式環境而聞名。 不過，您也可以選擇使用您自己的webhook選項（若偏好使用）。
+在此範例中，使用Adobe提供的&#x200B;_託管webhook_&#x200B;可讓您接收AEM活動，而不需要設定您自己的webhook。 此Adobe提供的webhook託管於[Glitch](https://glitch.com/)，這個平台以提供有助於建置和部署Web應用程式的網頁式環境而聞名。 不過，您也可以選擇使用您自己的webhook選項（若偏好使用）。
 
 ## 先決條件
 
@@ -33,12 +33,12 @@ ht-degree: 0%
 
 - 已啟用[AEM事件的AEM as a Cloud Service環境](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)。
 
-- 已為AEM事件設定[Adobe Developer Console專案](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console)。
+- 已針對Adobe Developer Console事件設定[AEM專案](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console)。
 
 
 ## 存取webhook
 
-若要存取Adobe提供的webhook，請按照以下步驟操作：
+若要存取Adobe提供的webhook，請遵循下列步驟：
 
 - 確認您可以在新的瀏覽器分頁中存取[問題 — 託管的webhook](https://lovely-ancient-coaster.glitch.me/)。
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 - 在[Adobe Developer Console](https://developer.adobe.com)中，導覽至您的專案並按一下以開啟專案。
 
-- 在&#x200B;**產品與服務**&#x200B;區段下，按一下應將AEM事件傳送至webhook之所需事件卡片旁的省略符號`...`，並選取&#x200B;**編輯**。
+- 在&#x200B;**產品與服務**&#x200B;區段下，按一下應將AEM活動傳送至webhook之所需活動卡片旁的省略符號`...`，然後選取&#x200B;**編輯**。
 
   ![Adobe Developer Console專案編輯](../assets/examples/webhook/adobe-developer-console-project-edit.png)
 
@@ -68,14 +68,14 @@ ht-degree: 0%
 
   ![Adobe Developer Console專案Webhook](../assets/examples/webhook/adobe-developer-console-project-webhook.png)
 
-- 在Glitch Webook頁面中，您應該會看到GET請求，這是Adobe I/O事件傳送以驗證webhook URL的挑戰請求。
+- 在Glitch Webook頁面中，您應該會看到GET請求，這是Adobe I/O Events傳送以驗證webhook URL的挑戰請求。
 
   ![問題 — 挑戰要求](../assets/examples/webhook/glitch-challenge-request.png)
 
 
 ## 觸發AEM事件
 
-若要從已在上述AEM as a Cloud Service專案中註冊的Adobe Developer Console環境觸發AEM事件，請遵循下列步驟：
+若要從已在上述AEM專案中註冊的AEM as a Cloud Service環境觸發Adobe Developer Console事件，請遵循下列步驟：
 
 - 透過[Cloud Manager](https://my.cloudmanager.adobe.com/)存取並登入您的AEM as a Cloud Service作者環境。
 
@@ -83,15 +83,15 @@ ht-degree: 0%
 
 ## 檢閱事件詳細資料
 
-完成上述步驟後，您應該會看到AEM活動已傳送至webhook。 在Glitch webhook頁面中尋找POST請求。
+完成上述步驟後，您應該會看到正在傳送至webhook的AEM活動。 在Glitch webhook頁面中尋找POST要求。
 
 ![問題 — POST要求](../assets/examples/webhook/glitch-post-request.png)
 
-以下是POST請求的主要詳細資料：
+以下是POST要求的主要詳細資料：
 
 - 路徑： `/webhook/${YOUR-WEBHOOK-URL}`，例如`/webhook/AdobeTM-aem-eventing`
 
-- 標頭：由Adobe I/O事件傳送的請求標頭，例如：
+- 標頭： Adobe I/O Events傳送的要求標頭，例如：
 
 ```json
 {
@@ -117,7 +117,7 @@ ht-degree: 0%
 }
 ```
 
-- body/payload：Adobe I/O事件傳送的要求內文，例如：
+- body/payload： Adobe I/O Events傳送的要求內文，例如：
 
 ```json
 {

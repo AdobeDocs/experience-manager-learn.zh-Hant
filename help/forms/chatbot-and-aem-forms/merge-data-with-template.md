@@ -2,14 +2,14 @@
 title: 將資料與XDP範本合併
 description: 將資料與範本合併，以建立PDF檔案
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-15344
 topic: Development
 role: User
 level: Intermediate
 exl-id: 6a865402-db3d-4e0e-81a0-a15dace6b7ab
 duration: 15
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 將資料與XDP範本合併
 
-下一步是將XML資料與範本合併，以產生PDF。 接著，系統會使用Adobe Sign傳送此PDF以供簽名。
+下一步是合併XML資料與範本，以產生PDF。 接著，系統會使用Adobe Sign傳送此PDF以供簽名。
 
 ## 使用OutputService產生PDF
 

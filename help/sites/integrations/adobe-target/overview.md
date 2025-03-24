@@ -2,18 +2,18 @@
 title: 整合AEM Sites和Adobe Target
 description: 瞭解如何整合AEM Sites和Adobe Target以提供個人化體驗。
 feature: Experience Fragments, Core Components, Adobe Client Data Layer
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6043
 thumbnail: 41241.jpg
 topic: Integrations, Personalization
 role: User
 level: Beginner
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
 duration: 262
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Adobe Experience Manager (AEM)和Adobe Target是功能強大的解決方案，�
 
 * __案例1：__&#x200B;使用AEM體驗片段選件的Personalization
 
-   1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+   1. [將Adobe Target新增至AEM網站](./add-target-launch-extension.md)
    1. [從標籤觸發Adobe Target呼叫](./load-and-fire-target.md)
    1. [將AEM作者服務與Adobe Target整合](./setup-aem-target-cloud-service.md)
    1. [將AEM體驗片段匯出至Adobe Target](./export-experience-fragment-target.md)
@@ -42,12 +42,12 @@ Adobe Experience Manager (AEM)和Adobe Target是功能強大的解決方案，�
 
 * __案例2：__&#x200B;使用視覺化體驗撰寫器(VEC)的Personalization
 
-   1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+   1. [將Adobe Target新增至AEM網站](./add-target-launch-extension.md)
    1. [從標籤觸發Adobe Target呼叫](./load-and-fire-target.md)
    1. [使用視覺化體驗撰寫器個人化網頁的一部分](./personalization-using-vec.md)
 
 * __案例3：__&#x200B;完整網頁體驗的Personalization
 
-   1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+   1. [將Adobe Target新增至AEM網站](./add-target-launch-extension.md)
    1. [從標籤觸發Adobe Target呼叫](./load-and-fire-target.md)
    1. [個人化完整的網頁體驗](./personalization-web-page.md)

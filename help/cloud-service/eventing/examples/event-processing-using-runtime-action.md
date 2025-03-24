@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe I/O Runtime動作處理的AEM事件
 description: 瞭解如何使用Adobe I/O Runtime動作處理收到的AEM事件。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427054?quality=12&learn=on)
 
-在此範例中，事件處理會將原始事件資料和收到的事件儲存為活動訊息，並存放在Adobe I/O Runtime儲存體中。 但是，如果事件是&#x200B;_修改的內容片段_&#x200B;型別，它也會呼叫AEM作者服務以尋找修改詳細資料。 最後，它會在單頁應用程式(SPA)中顯示事件詳細資訊。
+在此範例中，事件處理會將原始事件資料和收到的事件儲存為活動訊息，並存放在Adobe I/O Runtime儲存體中。 不過，如果事件是&#x200B;_修改的內容片段_&#x200B;型別，那麼它也會呼叫AEM作者服務來尋找修改詳細資料。 最後，它會在單頁應用程式(SPA)中顯示事件詳細資訊。
 
 ## 必要條件
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 - 從先前範例[Adobe I/O Runtime動作和AEM事件](./runtime-action.md#initialize-project-for-local-development)本機初始化的專案。
 
-## AEM Events處理器動作
+## AEM事件處理器動作
 
 在此範例中，事件處理器[動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)會執行下列工作：
 
@@ -94,7 +94,7 @@ ht-degree: 0%
   module.exports = needsAEMCallback;
   ```
 
-- `src/dx-excshell-1/actions/aem-event-processor/loadEventDetailsFromAEM.js`模組呼叫AEM作者服務以尋找修改詳細資料。
+- `src/dx-excshell-1/actions/aem-event-processor/loadEventDetailsFromAEM.js`模組會呼叫AEM作者服務以尋找修改詳細資料。
 
   ```javascript
   ...

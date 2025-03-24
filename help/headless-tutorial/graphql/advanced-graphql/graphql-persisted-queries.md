@@ -1,14 +1,14 @@
 ---
 title: 持續性GraphQL查詢 — AEM Headless的進階概念 — GraphQL
 description: 在Adobe Experience Manager (AEM) Headless的進階概念的本章中，瞭解如何使用引數建立和更新持續的GraphQL查詢。 瞭解如何在持續性查詢中傳遞快取控制引數。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 6a8e90ae-0765-4066-9df4-a3e4d2cda285
 duration: 183
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 # 持續性 GraphQL 查詢
 
-持續查詢是儲存在Adobe Experience Manager (AEM)伺服器上的查詢。 使用者端可以傳送具有查詢名稱的HTTPGET要求來執行它。 此方法的好處是可快取。 雖然使用者端GraphQL查詢也可以使用HTTPPOST請求執行（無法快取），但HTTP快取或CDN可以快取持續查詢，從而提高效能。 持續查詢可讓您簡化要求並提高安全性，因為您的查詢會封裝在伺服器上，而且AEM管理員可以完全控制這些查詢。 使用AEM GraphQL API時，是&#x200B;**最佳實務並強烈建議**&#x200B;使用持續查詢。
+持續查詢是儲存在Adobe Experience Manager (AEM)伺服器上的查詢。 使用者端可以傳送具有查詢名稱的HTTP GET要求來執行它。 此方法的好處是可快取。 雖然使用者端GraphQL查詢也可以使用HTTP POST請求執行（無法快取），但HTTP快取或CDN可以快取持續查詢，從而提高效能。 持續查詢可讓您簡化要求並提高安全性，因為您的查詢會封裝在伺服器上，且AEM管理員可完全控制這些查詢。 使用AEM GraphQL API時，是&#x200B;**最佳實務並強烈建議**&#x200B;使用持續查詢。
 
 在上一章中，您已探索一些進階GraphQL查詢，以收集WKND應用程式的資料。 在本章中，您會將查詢保留到AEM，並瞭解如何對保留的查詢使用快取控制。
 
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 ## 檢閱&#x200B;_GraphQL持續查詢_&#x200B;組態設定
 
-讓我們檢閱一下您的AEM執行個體中的WKND網站專案是否已啟用&#x200B;_GraphQL持續查詢_。
+假設已在您的AEM執行個體中為WKND網站專案啟用&#x200B;_GraphQL持續查詢_。
 
 1. 瀏覽至&#x200B;**工具** > **一般** > **設定瀏覽器**。
 

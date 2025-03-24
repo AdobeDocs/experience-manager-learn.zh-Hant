@@ -1,7 +1,7 @@
 ---
 title: 使用AEM現代化工具移至AEM as a Cloud Service
 description: 瞭解如何使用AEM現代化工具將現有AEM專案和內容升級成相容於AEM as a Cloud Service。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Migration, Upgrade
 feature: Migration
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
 duration: 2502
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # AEM 現代化工具
 
-瞭解如何使用AEM現代化工具將現有AEM Sites內容升級成相容於AEM as a Cloud Service並符合最佳實務。
+瞭解如何使用AEM現代化工具將現有AEM Sites內容升級成與AEM as a Cloud Service相容並符合最佳實務。
 
 ## 多合一轉換器
 
@@ -42,11 +42,11 @@ ht-degree: 1%
 
 ![AEM現代化工具生命週期](./assets/aem-modernization-tools.png)
 
-AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和parsys組成的現有AEM頁面，以使用可編輯範本、AEM核心WCM元件和版面配置容器等現代方法。
+AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和Parsys組成的現有AEM頁面，以使用可編輯範本、AEM核心WCM元件和版面配置容器等現代方法。
 
 ## 重要活動
 
-+ 複製AEM 6.x生產環境以執行AEM現代化工具
++ 原地複製AEM 6.x生產環境，以便針對下列專案執行AEM現代化工具
 + 透過「封裝管理員」在AEM 6.x生產複製上下載並安裝[最新AEM現代化工具](https://github.com/adobe/aem-modernize-tools/releases/latest)
 
 + [頁面結構轉換器](https://opensource.adobe.com/aem-modernize-tools/pages/structure/about.html)會使用版面配置容器，將靜態範本中的現有頁面內容更新為對應的可編輯範本
@@ -105,5 +105,5 @@ AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和parsys�
 + [AEM現代化工具檔案](https://opensource.adobe.com/aem-modernize-tools/)
 + [AEM Gems — 介紹AEM現代化套件](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
 
-1. 在本機AEM SDK上部署最新化的wknd舊版網站。 AEM ASK可從這裡下載：
+1. 在本機AEM SDK上部署新現代化的wknd舊版網站。 AEM ASK可從這裡下載：
    + [軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html)。

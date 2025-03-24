@@ -1,7 +1,7 @@
 ---
-title: 使用GraphQL API建置React應用程式以查詢AEM - AEM Headless快速入門 — GraphQL
+title: 使用GraphQL API建置React應用程式以查詢AEM - AEM快速入門 — GraphQL
 description: 開始使用Adobe Experience Manager (AEM)和GraphQL。 建置從AEM GraphQL API擷取內容/資料的React應用程式，也瞭解AEM Headless JS SDK的使用方式。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6716
 thumbnail: KT-6716.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 duration: 410
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 0%
@@ -19,15 +19,15 @@ ht-degree: 0%
 ---
 
 
-# 建立使用AEM GraphQL API的React應用程式
+# 使用AEM的GraphQL API建置React應用程式
 
-在本章中，您將探索AEM的GraphQL API如何推動外部應用程式中的體驗。
+在本章中，您將探索AEM的GraphQL API如何在外部應用程式中推動體驗。
 
-使用簡單的React應用程式來查詢及顯示AEM的GraphQL API所公開的&#x200B;**團隊**&#x200B;和&#x200B;**人員**&#x200B;內容。 React的使用在很大程度上不重要，而且消費的外部應用程式可以寫入任何平台的任何框架中。
+使用簡單的React應用程式來查詢及顯示AEM GraphQL API公開的&#x200B;**團隊**&#x200B;和&#x200B;**人員**&#x200B;內容。 React的使用在很大程度上不重要，而且消費的外部應用程式可以寫入任何平台的任何框架中。
 
 ## 先決條件
 
-我們已假設完成此多部分教學課程前幾部分所概述的步驟，或已在您的AEM as a Cloud Service作者和Publish服務上安裝[basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)。
+假設此多部分教學課程前幾部分所述的步驟已完成，或您的AEM as a Cloud Service作者和發佈服務上已安裝[basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)。
 
 本章中的&#x200B;_IDE熒幕擷取畫面來自[Visual Studio Code](https://code.visualstudio.com/)_
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## 取得範例React應用程式
 
-在本章中，使用與AEM的GraphQL API互動所需的程式碼實作一個草稿範例React應用程式，並顯示從這些API取得的團隊和人員資料。
+在本章中，已使用與AEM的GraphQL API互動所需的程式碼實作簡略的範例React應用程式，並顯示從這些API取得的團隊和人員資料。
 
 範例React應用程式原始碼可在Github.com上的<https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial>取得
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 1. 更新`.env.development`以連線至AEM as a Cloud Service Publish服務。
 
-   - 將`REACT_APP_HOST_URI`的值設為您的AEM as a Cloud Service Publish URL (例如 `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`)和`REACT_APP_AUTH_METHOD`的值至`none`
+   - 將`REACT_APP_HOST_URI`的值設為您的AEM as a Cloud Service發佈URL (例如 `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`)和`REACT_APP_AUTH_METHOD`的值至`none`
 
    >[!NOTE]
    >
@@ -125,7 +125,7 @@ ht-degree: 0%
 
 1. 複查明細行1-40：
 
-   - 從[AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js)匯入`AEMHeadless`宣告，第11行。
+   - 從JavaScript ](https://github.com/adobe/aem-headless-client-js)的[AEM Headless使用者端匯入`AEMHeadless`宣告，第11行。
 
    - 根據`.env.development`、第14-22行中定義的變數以及箭號函式運算式`setAuthorization`、第31-40行所定義的授權組態。
 
@@ -148,7 +148,7 @@ export default aemHeadlessClient;
 
 若要實作泛型`fetchPersistedQuery(..)`函式以執行AEM GraphQL持續查詢，請開啟`usePersistedQueries.js`檔案。 `fetchPersistedQuery(..)`函式使用`aemHeadlessClient`物件的`runPersistedQuery()`函式以非同步、承諾型行為執行查詢。
 
-稍後，自訂React `useEffect`連結呼叫此函式以從AEM擷取特定資料。
+稍後，自訂React `useEffect`連結會呼叫此函式，以從AEM擷取特定資料。
 
 1. 在`src/api/usePersistedQueries.js`中&#x200B;**更新** `fetchPersistedQuery(..)`，第35行，代碼如下。
 
@@ -190,10 +190,10 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 接下來，建置可在React應用程式的主要檢視上顯示團隊及其成員的功能。 此功能需要：
 
-- 在`src/api/usePersistedQueries.js`中的新[自訂React useEffect勾點](https://react.dev/reference/react/useEffect#useeffect)，它會叫用`my-project/all-teams`持續查詢，並傳回AEM中的Team內容片段清單。
+- `src/api/usePersistedQueries.js`中的新[自訂React useEffect勾點](https://react.dev/reference/react/useEffect#useeffect)，會叫用`my-project/all-teams`持續查詢，傳回AEM中的Team內容片段清單。
 - 位於`src/components/Teams.js`的React元件會叫用新的自訂React `useEffect`鉤點，並轉譯Teams資料。
 
-完成後，應用程式的主要檢視會填入來自AEM的團隊資料。
+完成後，應用程式的主要檢視會填入AEM中的團隊資料。
 
 ![團隊檢視](./assets/graphql-and-external-app/react-app__teams-view.png)
 
@@ -489,7 +489,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 ## 試用應用程式
 
-檢閱應用程式[http://localhost:3000/](http://localhost:3000/)並按一下&#x200B;_成員_&#x200B;連結。 您也可以在AEM中新增內容片段，以新增更多團隊和/或成員至團隊Alpha。
+檢閱應用程式[http://localhost:3000/](http://localhost:3000/)並按一下&#x200B;_成員_&#x200B;連結。 您也可以在AEM中新增內容片段，以新增更多團隊和/或成員至Team Alpha。
 
 >[!IMPORTANT]
 >
@@ -516,4 +516,4 @@ module.exports = function(app) {
 
 ## 恭喜！{#congratulations}
 
-恭喜！您已成功建立React應用程式，以使用並顯示AEM的GraphQL API資料，作為基本教學課程的一部分！
+恭喜！您已成功建立React應用程式，以使用及顯示AEMGraphQL API的資料，作為基本教學課程的一部分！

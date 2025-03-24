@@ -2,14 +2,14 @@
 title: Dispatcher瞭解快取
 description: 瞭解Dispatcher模組如何操作其快取。
 topic: Administration, Performance
-version: 6.5
+version: Experience Manager 6.5
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
 duration: 407
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1708'
 ht-degree: 0%
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->我們刻意將已發佈的工作負載與作者工作負載分開，因為當Apache在DocumentRoot中尋找檔案時，它不知道該檔案來自哪個AEM執行個體。 因此，即使您在作者陣列中停用快取，如果作者的DocumentRoot與publisher相同，它會在出現時從快取中提供檔案。 這表示您將會從發佈的快取中提供作者檔案，並為您的訪客創造非常糟糕的混合比對體驗。
+>我們刻意將已發佈的工作負載與作者工作負載分開，因為當Apache在DocumentRoot中尋找檔案時，並不知道該檔案來自哪個AEM執行個體。 因此，即使您在作者陣列中停用快取，如果作者的DocumentRoot與publisher相同，它會在出現時從快取中提供檔案。 這表示您將會從發佈的快取中提供作者檔案，並為您的訪客創造非常糟糕的混合比對體驗。
 >
 >為不同的發佈內容保留單獨的DocumentRoot目錄也是個非常糟糕的想法。 您必須建立多個重新快取的專案，這些專案在clientlibs之類的網站之間沒有差異，並且必須為您設定的每個DocumentRoot設定復寫排清代理程式。 增加每次頁面啟動時的頭頂排清量。 依賴檔案的名稱空間及其完整快取路徑，並避免發佈網站有多個DocumentRoot。
 
@@ -132,7 +132,7 @@ Dispatcher控制任何伺服器陣列檔案的`/cache {`區段中符合快取條
 ```
 
 在作者情境中，內容會隨時隨心所欲地變更。 您只想快取不會經常變更的專案。
-我們有要快取`/libs`的規則，因為這些規則是基準AEM安裝的一部分，而且會在您安裝Service Pack、Cumulative Fix Pack、Upgrade或Hotfix之前變更。 因此，快取這些元素相當合理，而且使用網站的一般使用者在製作體驗上也確實有極大的好處。
+我們有要快取`/libs`的規則，因為這些規則是基準AEM安裝的一部分，且在您安裝Service Pack、Cumulative Fix Pack、Upgrade或Hotfix之前可能會變更。 因此，快取這些元素相當合理，而且使用網站的一般使用者在製作體驗上也確實有極大的好處。
 
 >[!NOTE]
 >
@@ -232,7 +232,7 @@ Dispatcher控制任何伺服器陣列檔案的`/cache {`區段中符合快取條
 如果您先造訪`/search.html?q=fruit`，則它會快取html以顯示結果的結果。
 
 接著您造訪`/search.html?q=vegetables`秒，但結果會顯示水果。
-這是因為`q`的查詢引數在快取方面被忽略。  若要避免此問題，您需要記下根據查詢引數呈現HTML不同的頁面，並拒絕快取。
+這是因為`q`的查詢引數在快取方面被忽略。  若要避免此問題，您需要記錄會根據查詢引數呈現不同HTML的頁面，並拒絕快取。
 
 範例：
 
@@ -254,7 +254,7 @@ Dispatcher控制任何伺服器陣列檔案的`/cache {`區段中符合快取條
 
 很明顯，Dispatcher會快取`.html`頁面和clientlibs （亦即`.js`、`.css`），但您知道它也可以將特定回應標題連同內容快取，放在具有相同名稱，但副檔名為`.h`的檔案中。 這樣不僅可對內容進行下一個回應，還可對快取中應隨附的回應標頭進行回應。
 
-AEM可處理的不只是UTF-8編碼
+AEM可處理的不僅僅是UTF-8編碼
 
 有時專案具有特殊的標頭，可協助控制快取TTL的編碼詳細資訊和上次修改的時間戳記。
 
@@ -286,7 +286,7 @@ AEM可處理的不只是UTF-8編碼
 
 ## 自動讓寬限期失效
 
-在擁有來自具有許多頁面啟動之作者的大量活動的AEM系統上，您可能會有發生重複無效判定的競爭條件。 不需要大量重複的排清請求，您可以建置一些容許度，在寬限期清除之前不要重複排清。
+在擁有來自可執行許多頁面啟動之作者的大量活動的AEM系統上，您可能會有發生重複無效判定的競爭條件。 不需要大量重複的排清請求，您可以建置一些容許度，在寬限期清除之前不要重複排清。
 
 ### 此運作方式的範例：
 
@@ -316,7 +316,7 @@ Dispatcher模組的較新功能是針對快取的專案以`Time To Live (TTL)`�
 
 >[!NOTE]
 >
->請記住，仍需將AEM設定為傳送TTL標頭以供Dispatcher遵循。 切換此功能只會讓Dispatcher知道何時移除AEM傳送快取控制標題的檔案。 如果AEM沒有開始傳送TTL標頭，Dispatcher就不會在這裡執行任何特殊的動作。
+>請記住，仍需將AEM設定為傳送TTL標頭以供Dispatcher遵循。 切換此功能只會讓Dispatcher知道何時移除AEM傳送快取控制標題的檔案。 如果AEM未開始傳送TTL標題，則Dispatcher不會在此處執行任何特殊操作。
 
 ## 快取篩選規則
 

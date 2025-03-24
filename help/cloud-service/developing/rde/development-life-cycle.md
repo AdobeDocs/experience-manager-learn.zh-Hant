@@ -2,7 +2,7 @@
 title: 使用快速開發環境的開發生命週期
 description: 瞭解使用快速開發環境的全新開發生命週期看起來如何，以及RDE的主要優點。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,10 +11,10 @@ thumbnail: KT-11863.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 062672f6-d03c-44da-9ac5-3d1ecff1a628
 duration: 153
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '116'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -45,4 +45,4 @@ RDE的主要優點，可保持開發勢頭。
 
 [本機開發環境設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
 
-[使用AdobeCloud Manager - CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)
+[使用Adobe Cloud Manager - CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)

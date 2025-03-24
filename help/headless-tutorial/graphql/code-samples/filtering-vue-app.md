@@ -1,7 +1,7 @@
 ---
 title: 篩選值應用程式
 description: 一種簡單的值應用程式，可篩選使用內容片段模組化的WKND Adventures。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
@@ -13,7 +13,7 @@ hide: true
 hidefromtoc: true
 exl-id: 8f96093a-4449-4249-9257-028e2ffd979b
 duration: 26
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%

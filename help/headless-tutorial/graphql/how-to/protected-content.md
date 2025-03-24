@@ -1,7 +1,7 @@
 ---
 title: AEM Headless中的受保護內容
 description: 瞭解如何保護AEM Headless中的內容。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
 role: Developer, Architect
@@ -10,7 +10,7 @@ jira: KT-15233
 last-substantial-update: 2024-05-01T00:00:00Z
 exl-id: c4b093d4-39b8-4f0b-b759-ecfbb6e9e54f
 duration: 254
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 0%
@@ -30,17 +30,17 @@ ht-degree: 0%
 本操作說明不涵蓋：
 
 - 直接保護端點，而是專注於保護其傳送的內容。
-- AEM Publish的驗證或取得登入權杖。 驗證方法和認證傳遞取決於個別使用案例和實施。
+- AEM發佈或取得登入權杖的驗證。 驗證方法和認證傳遞取決於個別使用案例和實施。
 
 ## 使用者群組
 
-首先，我們必須定義[使用者群組](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions)，其中包含應該有權存取受保護內容的使用者。
+首先，我們必須定義[使用者群組](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions)，其中包含應該有權存取受保護內容的使用者。
 
 ![AEM Headless受保護的內容使用者群組](./assets/protected-content/user-groups.png){align="center"}
 
 使用者群組會指派對AEM Headless內容的存取權，包括內容片段或其他參考資產。
 
-1. 以&#x200B;**使用者管理員**&#x200B;身分登入AEM Author。
+1. 以&#x200B;**使用者管理員**&#x200B;的身分登入AEM Author。
 1. 瀏覽至&#x200B;**工具** > **安全性** > **群組**。
 1. 選取右上角的&#x200B;**建立**。
 1. 在&#x200B;**詳細資料**&#x200B;索引標籤中，指定&#x200B;**群組識別碼**&#x200B;和&#x200B;**群組名稱**。
@@ -52,20 +52,20 @@ ht-degree: 0%
 
 ### 將使用者新增至使用者群組
 
-若要授予AEM Headless GraphQL API請求對受保護內容的存取權，您可以將headless請求與屬於特定使用者群組的使用者建立關聯。 以下是兩種常見方法：
+若要授予AEM Headless GraphQL API請求對受保護內容的存取權，您可以將Headless請求與屬於特定使用者群組的使用者建立關聯。 以下是兩種常見方法：
 
 1. **AEM as a Cloud Service [技術帳戶](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials)：**
    - 在AEM as a Cloud Service Developer Console中建立技術帳戶。
-   - 使用技術帳戶登入一次AEM Author。
+   - 使用技術帳戶登入AEM Author一次。
    - 透過&#x200B;**工具>安全性>群組> AEM Headless API使用者>成員**，將技術帳戶新增到使用者群組。
-   - 在AEM Publish上&#x200B;**同時啟動技術帳戶使用者和使用者群組**。
+   - 在AEM發佈上&#x200B;**同時啟動技術帳戶使用者和使用者群組**。
    - 此方法要求Headless使用者端不要將服務認證公開給使用者，因為這些認證是特定使用者的認證，不應該共用。
 
    ![AEM技術帳戶群組管理](./assets/protected-content/group-membership.png){align="center"}
 
 2. **已命名的使用者：**
-   - 驗證已命名的使用者，並直接將其新增到AEM Publish上的使用者群組。
-   - 此方法需要Headless使用者端使用AEM Publish驗證使用者憑證、取得AEM登入或存取Token，並將此Token用於後續對AEM的請求。 本作法不說明如何達成此目標的詳細資訊，且須視實施而定。
+   - 驗證已命名的使用者，並直接將其新增到AEM發佈上的使用者群組。
+   - 此方法需要Headless使用者端使用AEM Publish驗證使用者憑證、取得AEM登入或存取Token，並將此Token用於向AEM提出的後續請求。 本作法不說明如何達成此目標的詳細資訊，且須視實施而定。
 
 ## 保護內容片段
 
@@ -82,7 +82,7 @@ ht-degree: 0%
 4. 選取「**許可權**」標籤。
 5. 輸入&#x200B;**群組名稱**&#x200B;並選取&#x200B;**新增**&#x200B;按鈕以新增新的CUG。
 6. **儲存**&#x200B;以套用CUG。
-7. **選取**&#x200B;資產資料夾並選取&#x200B;**Publish**，將套用CUG的資料夾傳送至AEM Publish，並評估為許可權。
+7. **選取**&#x200B;資產資料夾並選取&#x200B;**發佈**，將套用CUG的資料夾傳送至AEM Publish，並評估為許可權。
 
 對包含需要保護的內容片段的所有資料夾執行這些相同步驟，將正確的CUG套用至每個資料夾。
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 ### 保護引用的內容
 
-內容片段經常會參考其他AEM內容，例如影像。 若要保護此參考內容的安全，請將CUG套用至儲存參考資產的資產資料夾。 請注意，參考的資產通常會使用與AEM Headless GraphQL API不同的方法請求。 因此，在要求傳遞存取權杖給這些參考資產的方式可能會有所不同。
+內容片段經常會參考其他AEM內容，例如影像。 若要保護此參考內容的安全，請將CUG套用至儲存參考資產的資產資料夾。 請注意，參考的資產通常會使用與AEM Headless GraphQL API不同的方法來請求。 因此，在要求傳遞存取權杖給這些參考資產的方式可能會有所不同。
 
 根據內容架構，可能有必要將CUG套用至多個資料夾，以確保所有參考內容都受到保護。
 
@@ -120,4 +120,4 @@ AEM as a Cloud Service [依預設快取HTTP回應](https://experienceleague.adob
 
 ## 保護AEM Headless GraphQL API端點
 
-本指南並未說明如何保護[AEM Headless GraphQL API端點](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/graphql-endpoint)本身，而是著重於保護其所提供的內容。 所有使用者（包括匿名使用者）都可存取包含受保護內容的端點。 系統只會傳回使用者的「已關閉的使用者群組」可存取的內容。 如果沒有可存取的內容，AEM Headless API回應仍會有200 HTTP回應狀態代碼，但結果會是空的。 一般而言，保護內容安全便已足夠，因為端點本身不會揭露敏感資料。 如果您需要保護端點的安全，請透過[Sling存放庫初始化(repoinit)指令碼](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)在AEM Publish上套用ACL。
+本指南並未說明如何保護[AEM Headless GraphQL API端點](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/graphql-endpoint)本身，而是著重於保護其所提供的內容。 所有使用者（包括匿名使用者）都可存取包含受保護內容的端點。 系統只會傳回使用者的「已關閉的使用者群組」可存取的內容。 如果沒有可存取的內容，AEM Headless API回應仍會有200 HTTP回應狀態代碼，但結果會是空的。 一般而言，保護內容安全便已足夠，因為端點本身不會揭露敏感資料。 如果您需要保護端點，請透過[Sling存放庫初始化(repoinit)指令碼](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)在AEM Publish上將ACL套用至這些端點。

@@ -2,7 +2,7 @@
 title: AEM as a Cloud Service的本機開發環境
 description: Adobe Experience Manager (AEM)本機開發環境概觀。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: article
 jira: KT-3290
 thumbnail: 32565.jpg
@@ -12,7 +12,7 @@ level: Beginner
 last-substantial-update: 2022-09-01T00:00:00Z
 exl-id: 8b12f34c-be98-4f47-853c-411bb601990c
 duration: 835
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 12%
@@ -28,19 +28,19 @@ ht-degree: 12%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=zh-Hant" text="開發準則"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=zh-Hant" text="開發基本概念"
 
-本教學課程會逐步解說如何使用AEM as a Cloud Service SDK為Adobe Experience Manager (AEM)設定本機開發環境。 其中包括開發、建置及編譯AEM專案所需的開發工具，以及可讓開發人員透過AdobeCloud Manager將新功能部署到AEM as a Cloud Service之前，先在本機快速驗證這些功能的本機執行時間。
+本教學課程會逐步解說如何使用AEM as a Cloud Service SDK為Adobe Experience Manager (AEM)設定本機開發環境。 其中包括開發、建置及編譯AEM專案所需的開發工具，以及可讓開發人員在透過Adobe Cloud Manager部署至AEM as a Cloud Service之前，先在本機快速驗證新功能的本機執行時間。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32565?quality=12&learn=on)
 
 ![AEM as a Cloud Service本機開發環境技術棧疊](./assets/overview/aem-sdk-technology-stack.png)
 
-AEM的本機開發環境可以分成三個邏輯群組：
+AEM的本機開發環境可分成三個邏輯群組：
 
 + __AEM專案__&#x200B;包含自訂AEM應用程式的自訂程式碼、設定和內容。
-+ 在本機執行AEM Author和Publish服務的本機版本的&#x200B;__本機AEM執行階段__。
++ 在本機執行AEM作者與發佈服務之本機版本的&#x200B;__本機AEM執行階段__。
 + 執行Apache HTTP Web Server和Dispatcher本機版本的&#x200B;__本機Dispatcher執行階段__。
 
-本教學課程將逐步說明如何安裝和設定上圖中醒目提示的專案，為AEM開發提供穩定的本機開發環境。
+本教學課程將逐步說明如何安裝和設定上圖中重點顯示的專案，為AEM開發提供穩定的本機開發環境。
 
 ## 檔案系統組織
 
@@ -48,7 +48,7 @@ AEM的本機開發環境可以分成三個邏輯群組：
 
 + `~/aem-sdk`是包含AEM as a Cloud Service SDK所提供各種工具的組織資料夾
 + `~/aem-sdk/author`包含AEM作者服務
-+ `~/aem-sdk/publish`包含AEM Publish服務
++ `~/aem-sdk/publish`包含AEM發佈服務
 + `~/aem-sdk/dispatcher`包含Dispatcher工具
 + `~/code/<project name>`包含自訂AEM專案原始碼
 

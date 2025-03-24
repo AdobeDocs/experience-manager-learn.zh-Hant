@@ -1,10 +1,10 @@
 ---
 title: 在AEM Sites中開發資源狀態
-description: Adobe Experience Manager的資源狀態API是可插入的架構，可在AEM的各種編輯器網頁UI中公開狀態訊息。
+description: Adobe Experience Manager的資源狀態API是可插拔架構，可在AEM的各種編輯器Web UI中公開狀態訊息。
 doc-type: Tutorial
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 duration: 88
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 開發資源狀態 {#developing-resource-statuses-in-aem-sites}
 
-Adobe Experience Manager的資源狀態API是可插入的架構，可在AEM的各種編輯器網頁UI中公開狀態訊息。
+Adobe Experience Manager的資源狀態API是可插拔架構，可在AEM的各種編輯器Web UI中公開狀態訊息。
 
 ## 概觀 {#overview}
 

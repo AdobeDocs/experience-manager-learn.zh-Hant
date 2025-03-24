@@ -2,7 +2,7 @@
 title: 驗證AEM UI擴充功能
 description: 瞭解在部署到生產環境之前，如何預覽、測試和驗證AEM UI擴充功能。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
 duration: 600
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 0%
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # 驗證擴充功能
 
-AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEM as a Cloud Service環境進行驗證。
+AEM UI擴充功能可根據Adobe組織中擴充功能所屬的任何AEM as a Cloud Service環境進行驗證。
 
-擴充功能測試是透過巧盡心思構建的URL來完成，它會指示AEM載入擴充功能，但僅限於該要求。
+擴充功能測試是透過巧盡心思構建的URL來完成，它會指示AEM載入擴充功能，且僅針對該請求載入。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412877?quality=12&learn=on)
 
@@ -88,7 +88,7 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEM as a 
 
 >[!IMPORTANT]
 >
->請記住，使用此方法時，開發中的擴充功能只會影響您的體驗，而AEM UI的所有其他使用者體驗UI，而不會插入擴充功能。
+>請記住，使用此方法時，開發中的擴充功能只會影響您的體驗，而AEM UI的所有其他使用者則會體驗UI，而不會插入擴充功能。
 
 ## 驗證階段組建
 
@@ -132,7 +132,7 @@ AEM UI擴充功能可依據擴充功能所屬的Adobe組織中的任何AEM as a 
 1. 將預覽URL複製並貼到瀏覽器中。
 1. AEM內容片段主控台會插入在中部署至中繼工作區的擴充功能版本。 此Stage URL可與QA或企業使用者共用，以進行驗證。
 
-請記住，使用此方法時，只有在透過製作階段URL存取時，階段擴充功能才會插入到AEM內容片段主控台的。
+請記住，使用此方法時，分階段擴充功能只會在透過製作階段URL存取時插入到AEM內容片段控制檯上。
 
 1. 可透過再次執行`aio app deploy`來更新已部署的擴充功能，且這些變更會在使用預覽URL時自動反映。
 1. 若要移除延伸以進行驗證，請執行`aio app undeploy`。

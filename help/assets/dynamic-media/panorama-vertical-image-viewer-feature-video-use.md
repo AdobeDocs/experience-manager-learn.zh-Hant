@@ -1,22 +1,22 @@
 ---
-title: 搭配AEM Assets Dynamic Media使用全景和垂直影像檢視器
+title: 搭配使用AEM Assets Dynamic Media的全景和垂直影像檢視器
 description: AEM 6.4中的Dynamic Media Viewer增強功能包括新增全景影像檢視器、全景虛擬現實影像檢視器和垂直影像檢視器。 Panoramic Viewer可讓您輕鬆享受引人入勝的沈浸式體驗，無需任何自訂開發，即可呈現房間、屬性、位置或風景。
 feature: Video Profiles, Video Profiles, 360 VR Video
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
 duration: 535
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%
 
 ---
 
-# 搭配AEM Assets Dynamic Media使用全景和垂直影像檢視器{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
+# 搭配使用AEM Assets Dynamic Media的全景和垂直影像檢視器{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
 AEM 6.4中的Dynamic Media Viewer增強功能包括新增全景影像檢視器、全景虛擬現實影像檢視器和垂直影像檢視器。 Panoramic Viewer可讓您輕鬆享受引人入勝的沈浸式體驗，無需任何自訂開發，即可呈現房間、屬性、位置或風景。
 
@@ -24,7 +24,7 @@ AEM 6.4中的Dynamic Media Viewer增強功能包括新增全景影像檢視器�
 
 >[!NOTE]
 >
->影片假設您的AEM執行個體以Dynamic Media S7模式執行。 [您可以在此處找到使用Dynamic Media設定AEM的說明。](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>影片假設您的AEM執行個體在Dynamic Media S7模式下執行。 [您可以在此處找到使用Dynamic Media設定AEM的說明。](https://helpx.adobe.com/tw/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## 全景與全景VR檢視器
 
@@ -65,9 +65,9 @@ AEM 6.4中的Dynamic Media Viewer增強功能包括新增全景影像檢視器�
  </tbody>
 </table>
 
-[在Scene7模式中設定Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[在Scene7模式下設定Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
 
-[在混合模式下設定Dynamic Media](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/config-dynamic.html)
+[在混合模式中設定Dynamic Media](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/config-dynamic.html)
 
 >[!NOTE]
 >

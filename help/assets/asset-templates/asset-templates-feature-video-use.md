@@ -1,7 +1,7 @@
 ---
 title: 搭配AEM Assets和InDesign Server使用資產範本
 description: AEM Assets範本可讓行銷人員建立、管理和提供數位和列印用的數位資產。 與InDesign伺服器整合時，使用Assets範本更容易建立行銷手冊、名片、傳單、廣告和明信片。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 feature: Templates
 role: User
@@ -11,7 +11,7 @@ thumbnail: 25170.jpg
 doc-type: Feature Video
 exl-id: 45e0f3d5-db56-44e7-ad68-4d60991a6d77
 duration: 737
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -24,7 +24,7 @@ AEM Assets範本可讓行銷人員建立、管理和提供數位和列印用的�
 
 >[!NOTE]
 >
->如需設定InDesign Server的步驟，請檢閱[使用InDesign Server](asset-templates-technical-video-setup.md)設定Assets範本。
+>如需設定InDesign Server的步驟，請檢閱[使用InDesign Server設定Assets範本](asset-templates-technical-video-setup.md)。
 
 ## 概觀 {#overview}
 
@@ -34,6 +34,6 @@ AEM Assets範本可讓行銷人員建立、管理和提供數位和列印用的�
 
 ## 技術概覽 {#technical-overview}
 
-本影片提供AEM Assets主張範本功能的更多技術概覽，以及AEM如何透過InDesign促進AEM Assets和內容的組成，以建立豐富、吸引人的列印體驗。
+本影片提供AEM Assets主張範本功能的更多技術概覽，以及AEM如何透過InDesign協助AEM Assets和內容的構成，以建立豐富、吸引人的列印體驗。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17071?quality=12&learn=on)

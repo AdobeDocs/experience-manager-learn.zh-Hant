@@ -1,14 +1,14 @@
 ---
 title: 建立內容片段模型 — AEM Headless的進階概念 — GraphQL
 description: 在Adobe Experience Manager (AEM) Headless的進階概念的本章中，瞭解如何透過新增索引標籤預留位置、日期和時間、JSON物件、片段參照和內容參照來編輯內容片段模型。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
 duration: 757
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1991'
 ht-degree: 1%
@@ -236,5 +236,5 @@ Adobe Experience Manager隨附一些內建的驗證方法。 這些驗證方法�
 
 此系列的下一章將涵蓋您在本章中建立的模型中的[編寫內容片段](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)。 瞭解如何使用本章介紹的資料型別並建立檔案夾原則以限制可在資產檔案夾中建立的內容片段模型。
 
-雖然本教學課程可選擇使用，但請務必在真實世界生產環境中發佈所有內容。 若要檢視AEM中的作者和Publish環境，請參閱
+雖然本教學課程可選擇使用，但請務必在真實世界生產環境中發佈所有內容。 如需AEM中「作者」和「發佈」環境的稽核，請參閱
 [AEM Headless與GraphQL影片系列](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md)。

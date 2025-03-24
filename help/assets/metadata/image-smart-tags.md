@@ -5,14 +5,14 @@ topic: Content Management
 feature: Smart Tags
 role: User
 level: Intermediate
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-645
 thumbnail: 17019.jpg
 last-substantial-update: 2022-06-09T00:00:00Z
 doc-type: Feature Video
 exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
 duration: 574
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
@@ -37,11 +37,11 @@ AEM Assets的影像智慧標籤會藉由自動將衍生的中繼資料標籤新�
 * 具有組織管理員許可權的Adobe ID帳戶
 * 您的組織已啟用智慧內容服務
 
-影片詳細說明設定用於智慧標籤影像的「Adobe I/O智慧內容」服務所需的下列工作。
+影片詳細說明設定用於智慧標籤影像的Adobe I/O智慧內容服務所需的下列工作。
 
 * 在AEM中建立Smart Content Service設定以產生公開金鑰。 取得公開憑證以進行OAuth整合。
 * 在Adobe I/O中建立整合，並上傳產生的公開金鑰。
-* 從Adobe I/O使用API金鑰和其他認證來設定您的AEM執行個體。
+* 使用Adobe I/O的API金鑰和其他憑證來設定您的AEM執行個體。
 * 可選擇在資產上傳時啟用自動標籤。
 
 ## 其他資源

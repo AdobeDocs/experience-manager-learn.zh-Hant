@@ -1,7 +1,7 @@
 ---
 title: 使用以核心元件為基礎的最適化表單中的資料產生PDF
 description: 將核心元件型表單提交的資料與工作流程中的XDP範本合併
-version: 6.5
+version: Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-15025
 last-substantial-update: 2024-02-26T00:00:00Z
 exl-id: cae160f2-21a5-409c-942d-53061451b249
 duration: 97
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 以下是將「核心元件」改為大寫的修訂文字：
 
-典型案例涉及透過核心元件型調適型表單提交的資料產生PDF。 此資料一律為JSON格式。 若要使用轉譯PDFAPI產生PDF，必須將JSON資料轉換為XML格式。 `org.json.XML`的`toString`方法已用於此轉換。 如需詳細資訊，請參閱`org.json.XML.toString`方法](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-)的[檔案。
+典型案例涉及透過核心元件型調適型表單提交的資料產生PDF。 此資料一律為JSON格式。 若要使用轉譯PDF API產生PDF，必須將JSON資料轉換為XML格式。 `org.json.XML`的`toString`方法已用於此轉換。 如需詳細資訊，請參閱`org.json.XML.toString`方法](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-)的[檔案。
 
 ## 以JSON結構描述為基礎的最適化表單
 
@@ -110,7 +110,7 @@ public class ConvertJSONToXML implements WorkflowProcess {
 若要處理表單提交，請建立包含兩個步驟的工作流程：
 
 1. 初始步驟會採用自訂程式，將提交的JSON資料轉換為XML。
-1. 後續步驟會透過結合XML資料與XDP範本來產生PDF。
+1. 後續步驟會透過合併XML資料與XDP範本來產生PDF。
 
 ![json-to-xml](assets/json-to-xml-process-step.png)
 
@@ -125,4 +125,4 @@ public class ConvertJSONToXML implements WorkflowProcess {
 1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/f23/jcr:content?wcmmode=disabled)。
 1. 填寫一些表單欄位。
 1. 提交表單以起始AEM工作流程。
-1. 在工作流程的裝載資料夾中找到轉譯的PDF。
+1. 在工作流程的裝載資料夾中找到已轉譯的PDF。

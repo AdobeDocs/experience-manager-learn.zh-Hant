@@ -2,14 +2,14 @@
 title: 使用setData方法填入最適化表單
 description: 傳送已上傳的pdf檔案以進行資料擷取，並使用擷取的資料填入最適化表單
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 jira: KT-14196
 exl-id: f380d589-6520-4955-a6ac-2d0fcd5aaf3f
 duration: 32
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 進行Ajax呼叫
 
-當使用者已上傳pdf檔案時，我們需要對servlet進行POST呼叫，並在POST請求中傳遞已上傳的PDF檔案。 Post請求會傳回crx存放庫中匯出資料的路徑
+當使用者已上傳PDF檔案時，我們需要對servlet進行POST呼叫，並在POST請求中傳遞已上傳的PDF檔案。 POST要求會傳回crx存放庫中匯出資料的路徑
 
 ```javascript
 $("#fileElem").on('change', function (e) {

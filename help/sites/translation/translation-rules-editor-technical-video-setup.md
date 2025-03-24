@@ -2,14 +2,14 @@
 title: 在AEM中設定翻譯規則
 description: 翻譯設定UI可讓使用者管理在AEM Sites中翻譯內容的規則。 此影片詳細說明如何為自訂元件建立新的翻譯規則。
 feature: Language Copy
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Localization
 role: User
 level: Beginner
 doc-type: Technical Video
 exl-id: 359da531-839c-4680-abf9-c880cc700159
 duration: 542
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 以下影片是在AEM 6.3上錄製的。AEM 6.4+引進了儲存翻譯規則XML檔案的新存放庫結構。 在AEM 6.4+中使用翻譯組態UI時，規則會儲存至位置`/conf/global/settings/translation/rules/translation_rules.xml`。 如需詳細資訊，請參閱[識別要翻譯的內容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html)。
+> 以下影片是在AEM 6.3上錄製的。AEM 6.4+推出新的存放庫結構，用於儲存翻譯規則XML檔案。 在AEM 6.4+中使用翻譯設定UI時，規則會儲存至位置`/conf/global/settings/translation/rules/translation_rules.xml`。 如需詳細資訊，請參閱[識別要翻譯的內容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
 
@@ -36,11 +36,11 @@ ht-degree: 0%
 
 存取翻譯設定UI：
 
-* **[!UICONTROL AEM開始功能表] > [!UICONTROL 工具] > [!UICONTROL 一般] > [[!UICONTROL 翻譯組態]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
+* **[!UICONTROL AEM開始功能表] > [!UICONTROL 工具] > [!UICONTROL 一般] > [[!UICONTROL 翻譯設定]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
 ## AEM 6.3之前 {#prior-to-aem}
 
-在先前的AEM版本中，透過編輯位於翻譯工作流程下的XML檔案，手動更新翻譯規則： `/etc/workflow/models/translation/translation_rules.xml`。
+在舊版AEM中，透過編輯位於翻譯工作流程下的XML檔案手動更新翻譯規則： `/etc/workflow/models/translation/translation_rules.xml`。
 
 ## 其他資源 {#additional-resources}
 

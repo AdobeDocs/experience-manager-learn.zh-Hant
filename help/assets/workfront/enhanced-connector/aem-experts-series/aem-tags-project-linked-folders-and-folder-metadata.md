@@ -1,7 +1,7 @@
 ---
-title: AEM增強型聯結器的Workfront的AEM Tags、專案連結資料夾和資料夾中繼資料
+title: 適用於AEM增強型聯結器的Workfront的AEM Tags、專案連結資料夾和資料夾中繼資料
 description: 瞭解如何透過AEM資料促進在資產上使用Workfront Tags、使用專案連結資料夾和Workfront資料至AEM資產資料夾中繼資料結構。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, Architect, Developer
@@ -11,10 +11,10 @@ thumbnail: 340333.jpeg
 hidefromtoc: false
 last-substantial-update: 2022-09-02T00:00:00Z
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
+badgeVersions: label="AEM Assets as a Cloud Service， AEM Assets 6.5" before-title="false"
 exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
 duration: 2633
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/340333?quality=12&learn=on)
 
-_Workfront上Experience Manager增強型聯結器的[四部分專家系列的第3部分](./overview.md)_
+_Workfront for Experience Manager增強型聯結器的[四部分專家系列第三部分](./overview.md)_
 
 ## 更正
 

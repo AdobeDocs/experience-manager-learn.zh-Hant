@@ -4,12 +4,12 @@ description: 在AEM Forms as a Cloud Service中建立新的位址核心元件
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: be25be52-2914-4820-9356-678a326f8edc
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 部署您的專案
 
-開始將專案部署至AEM Formsas a Cloud Service之前，建議先將專案部署至本機雲端就緒的AEM Forms執行個體。
+開始將專案部署至AEM Forms as a Cloud Service之前，建議先將專案部署至本機雲端就緒的AEM Forms執行個體。
 
 ## 將變更與您的AEM專案同步
 

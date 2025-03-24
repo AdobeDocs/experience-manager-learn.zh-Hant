@@ -2,7 +2,7 @@
 title: 內容片段控制檯中的自訂格線欄
 description: 瞭解如何將自訂格線欄新增到內容片段主控台。
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
 exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
 duration: 198
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 `ExtensionRegistration.js`對應至index.html路由，是AEM擴充功能的進入點，並定義：
 
-+ 擴充功能的位置會在AEM編寫體驗中注入自身(`contentFragmentGrid`)
++ 擴充功能的位置會將它自己(`contentFragmentGrid`)插入AEM編寫體驗中
 + `getColumns()`函式中自訂資料行的定義
 + 每個自訂欄的值（依列）
 
@@ -208,7 +208,7 @@ render: async function (fragments) {
 
 >[!IMPORTANT]
 >
-> 請確定AEM Author執行個體已設定為允許來自AppBuilder應用程式執行所在原始位置的[跨原始位置要求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html)。 允許的來源包括`https://localhost:9080`、AppBuilder階段來源和AppBuilder生產來源。
+> 請確定AEM Author執行個體已設定為允許來自AppBuilder應用程式執行所在原始位置的[跨原始請求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html)。 允許的來源包括`https://localhost:9080`、AppBuilder階段來源和AppBuilder生產來源。
 >
 > 或者，擴充功能可以呼叫自訂[AppBuilder動作](../../runtime-action.md)，代表擴充功能向AEM Author提出要求。
 

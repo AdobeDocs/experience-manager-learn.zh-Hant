@@ -2,13 +2,13 @@
 title: Edge Delivery Services開發
 description: 瞭解如何開發使用Edge Delivery Services傳送的AEM網站。
 feature: Edge Delivery Services
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
 doc-type: Catalog
 exl-id: f97c96df-d3c2-4106-8fb0-def6e74897d7
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%

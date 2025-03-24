@@ -3,7 +3,7 @@ title: AEM Forms中的自動完成功能
 description: 讓使用者利用搜尋和篩選，在輸入時快速尋找和選取預先填入的值清單。
 feature: Adaptive Forms
 type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11374
 last-substantial-update: 2022-11-01T00:00:00Z
 exl-id: e9a696f9-ba63-462d-93a8-e9a7a1e94e72
 duration: 47
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
@@ -83,4 +83,4 @@ minLength: 1, source: values, delay: 0
 
 >[!NOTE]
 >
-> 若要自動完成以運作，請確認您的表單使用下列使用者端程式庫&#x200B;**cq.jquery.ui**。 此使用者端程式庫隨附AEM。
+> 若要自動完成以運作，請確認您的表單使用下列使用者端程式庫&#x200B;**cq.jquery.ui**。 此使用者端資料庫隨附AEM。

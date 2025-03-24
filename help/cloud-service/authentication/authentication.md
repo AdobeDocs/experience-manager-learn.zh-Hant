@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service中的驗證
 description: 瞭解AEM as a Cloud Service中的驗證。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Integrations, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
 duration: 28
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 3%
@@ -49,14 +49,14 @@ AEM as a Cloud Service支援多種驗證選項，且會因服務型別而異。
       <a  href="./saml-2-0.md"><img alt="SAML 2.0" src="./assets/card--saml-2-0.png"/></a>
       <div><strong><a href="./saml-2-0.md">SAML 2.0</a></strong></div>
       <p>
-        使用AEM Publish服務的SAML 2.0整合，向IDP驗證您網站的使用者。
+        使用AEM發佈服務的SAML 2.0整合，向IDP驗證您網站的使用者。
       </p>
     </td>   
    <td>
       <a  href="../../headless-tutorial/authentication/overview.md"><img alt="權杖" src="./assets/card--token.png"/></a>
       <div><strong><a href="../../headless-tutorial/authentication/overview.md">權杖驗證</a></strong></div>
       <p>
-        允許應用程式和中介軟體使用API服務權杖向AEM進行驗證。
+        允許應用程式和中介軟體使用API服務權杖來驗證AEM。
       </p>
     </td>   
   </tr>

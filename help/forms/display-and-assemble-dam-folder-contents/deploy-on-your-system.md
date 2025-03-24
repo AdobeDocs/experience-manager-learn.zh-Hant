@@ -2,14 +2,14 @@
 title: 在本機部署資產
 description: 在本機AEM執行個體上部署教學課程資產
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
 exl-id: d23b51ba-1efb-4505-b5b3-44a02177e467
 duration: 27
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 在您的系統上部署
 
-請依照下列步驟，讓此使用案例在本機AEM執行個體上運作。
+請依照下列步驟，將此使用案例用於本機AEM執行個體。
 
 * [部署Zip檔案中包含的DevelopingWithServiceUser組合](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)。
 

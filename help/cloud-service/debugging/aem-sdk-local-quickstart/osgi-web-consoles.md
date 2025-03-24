@@ -1,8 +1,8 @@
 ---
 title: 使用OSGi Web主控台除錯AEM SDK
-description: AEM SDK的本機Quickstart有一個OSGi Web主控台，提供各種本機AEM執行階段的資訊和說明，有助於瞭解AEM如何辨識您的應用程式和函式。
+description: AEM SDK的本機Quickstart有一個OSGi Web主控台，提供本機AEM執行階段中的各種資訊和內省，有助於瞭解AEM如何辨識您的應用程式和發揮其功能。
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 kt: 5265, 5366, 5267
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 0929bc1a-376c-4e16-a540-a276fd5af164
 duration: 486
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%
@@ -19,15 +19,15 @@ ht-degree: 0%
 
 # 使用OSGi Web主控台除錯AEM SDK
 
-AEM SDK的本機Quickstart有一個OSGi Web主控台，提供各種本機AEM執行階段的資訊和說明，有助於瞭解AEM如何辨識您的應用程式和函式。
+AEM SDK的本機Quickstart有一個OSGi Web主控台，提供本機AEM執行階段中的各種資訊和內省，有助於瞭解AEM如何辨識您的應用程式和發揮其功能。
 
-AEM提供許多OSGi主控台，每個主控台都提供AEM不同層面的關鍵深入分析，不過下列通常是除錯應用程式時最有用的地方。
+AEM提供許多OSGi主控台，每個主控台都提供AEM不同層面的關鍵深入分析，不過，以下通常是除錯應用程式時最有用的地方。
 
 ## 組合
 
 >[!VIDEO](https://video.tv.adobe.com/v/34335?quality=12&learn=on)
 
-此套件組合控制檯是OSGi套件組合的目錄，其詳細資訊已部署到AEM，且具有啟動和停止這些套件組合的隨選功能。
+此套件組合控制檯是OSGi套件組合的目錄，其詳細資料已部署至AEM，且具有啟動和停止這些套件組合的隨選功能。
 
 套件組合主控台位於：
 
@@ -44,7 +44,7 @@ AEM提供許多OSGi主控台，每個主控台都提供AEM不同層面的關鍵�
 
 >[!VIDEO](https://video.tv.adobe.com/v/34336?quality=12&learn=on)
 
-「元件」主控台是部署至AEM之所有OSGi元件的目錄，並提供其相關的所有資訊，從已定義的OSGi元件生命週期，到他們可以參考的OSGi服務
+「元件」主控台是部署至AEM之所有OSGi元件的目錄，並提供這些元件的所有相關資訊，從元件已定義的OSGi元件生命週期，到元件參照的OSGi服務
 
 元件主控台位於：
 

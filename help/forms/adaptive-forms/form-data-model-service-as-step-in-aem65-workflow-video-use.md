@@ -1,16 +1,16 @@
 ---
 title: 在AEM 6.5工作流程中使用表單資料模型服務的步驟
-description: AEM Forms 6.5匯入了在AEM工作流程中建立變數的功能。 有了這項新功能，使用AEM Workflow中的「叫用表單資料模型服務」變得非常容易。 以下影片將逐步說明在AEM Workflow中使用叫用表單資料模型服務所涉及的步驟。
+description: AEM Forms 6.5匯入了在AEM工作流程中建立變數的功能。 透過這項新功能，使用AEM工作流程中的「叫用表單資料模型服務」已變得非常容易。 以下影片將逐步說明在AEM工作流程中使用叫用表單資料模型服務所涉及的步驟。
 feature: Workflow
 type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 1f13d82e-c1d0-4c8c-8468-b4a4c5897c71
 last-substantial-update: 2021-02-09T00:00:00Z
 duration: 239
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 在AEM 6.5工作流程中使用表單資料模型服務的步驟 {#using-form-data-model-service-as-step-in-workflow}
 
-從AEM Forms 6.4開始，我們現在能使用表單資料模型服務做為AEM Workflow的一部分。 以下影片會逐步介紹在AEM Workflow中設定表單資料模型步驟所需的步驟
+從AEM Forms 6.4開始，我們現在能使用表單資料模型服務做為AEM工作流程的一部分。 以下影片會逐步介紹在AEM工作流程中設定表單資料模型步驟所需的步驟
 
 >此影片中示範的功能需要AEM Forms 6.5.1
 

@@ -2,7 +2,7 @@
 title: 匯出資產
 description: 瞭解如何大量匯出資產並將資產下載到您的本機電腦。
 feature: Asset Management
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: Developer
 level: Experienced
@@ -12,7 +12,7 @@ jira: KT-15313
 thumbnail: KT-15313.jpeg
 exl-id: d04c3316-6f8f-4fd1-9df1-3fe09d44f735
 duration: 256
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 # 匯出資產
 
-瞭解如何使用可自訂的Node.js指令碼，將資產匯出至本機電腦。 此匯出指令碼提供如何使用[AEM Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)以程式設計方式從AEM下載資產的範例，特別著重於原始轉譯以確保最高品質。 其設計可在本機磁碟機上複製AEM Assets的資料夾結構，以輕鬆備份或移轉資產。
+瞭解如何使用可自訂的Node.js指令碼，將資產匯出至本機電腦。 此匯出指令碼提供如何使用[AEM HTTP API](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)從AEM Assets以程式設計方式下載資產的範例，特別著重於原始轉譯以確保最高品質。 其設計可在本機磁碟機上複製AEM Assets的資料夾結構，以輕鬆備份或移轉資產。
 
-指令碼只會下載資產的原始轉譯，不會下載相關聯的中繼資料，除非該中繼資料已作為XMP嵌入到資產中。 這表示任何儲存在AEM中但未整合至資產檔案的描述性資訊、分類或標籤，都不會納入下載中。 修改指令碼以包含其他轉譯專案，也可以下載這些轉譯。 確保您有足夠的空間來儲存匯出的資產。
+指令碼只會下載資產的原始轉譯，不會下載相關聯的中繼資料，除非該中繼資料已內嵌到資產中做為XMP。 這表示所有儲存在AEM中但未整合至資產檔案的描述性資訊、分類或標籤，都不會納入下載中。 修改指令碼以包含其他轉譯專案，也可以下載這些轉譯。 確保您有足夠的空間來儲存匯出的資產。
 
 指令碼通常會針對AEM Author執行，但也可以針對AEM Publish執行，只要可透過Dispatcher存取AEM Assets HTTP API端點和資產轉譯。
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 編寫為JavaScript模組的指令碼是Node.js專案的一部分，因為它有對`node-fetch`的相依性。 您可以[將專案下載為zip檔](./assets/export/export-aem-assets-script.zip)，或將下面的指令碼複製到型別為`module`的空白Node.js專案，然後執行`npm install node-fetch`以安裝相依性。
 
-此指令碼會瀏覽AEM Assets資料夾樹狀結構，並將資產和資料夾下載到您電腦上的本機資料夾。 它會使用[AEM Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)來擷取資料夾和資產資料，並下載資產的原始轉譯。
+此指令碼會瀏覽AEM Assets資料夾樹狀結構，並將資產和資料夾下載到您電腦上的本機資料夾。 它會使用[AEM Assets HTTP API](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets)來擷取資料夾和資產資料，並下載資產的原始轉譯。
 
 ```javascript
 // export-assets.js

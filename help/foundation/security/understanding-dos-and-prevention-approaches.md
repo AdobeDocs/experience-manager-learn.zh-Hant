@@ -1,7 +1,7 @@
 ---
 title: 瞭解DoS/DDoS預防
 description: 瞭解如何防止及緩解針對AEM的DoS和DDoS攻擊。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Development
 role: Admin, Architect, Developer
@@ -11,7 +11,7 @@ duration: 75
 last-substantial-update: 2024-03-30T00:00:00Z
 jira: KT-15219
 exl-id: 1d7dd829-e235-4884-a13f-b6ea8f6b4b0b
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 瞭解AEM中的DoS/DDoS預防
 
-瞭解可用於預防和緩解您的AEM環境上的DoS和DDoS攻擊的選項。 在深入瞭解預防機制之前，請先簡要概述[DoS](https://developer.mozilla.org/en-US/docs/Glossary/DOS_attack)和[DoS](https://developer.mozilla.org/en-US/docs/Glossary/Distributed_Denial_of_Service)。
+瞭解可用於防止和減少AEM環境上的DoS和DDoS攻擊的選項。 在深入瞭解預防機制之前，請先簡要概述[DoS](https://developer.mozilla.org/en-US/docs/Glossary/DOS_attack)和[DoS](https://developer.mozilla.org/en-US/docs/Glossary/Distributed_Denial_of_Service)。
 
 - DoS （拒絕服務）和DDoS （分散式拒絕服務）攻擊都是惡意嘗試破壞目標伺服器、服務或網路的正常運作，使其目標使用者無法存取。
 - DoS攻擊通常來自單一來源，而DDoS攻擊來自多個來源。
@@ -61,7 +61,7 @@ ht-degree: 1%
     </tbody>
 </table>
 
-## Post事件分析和持續改善
+## 事後分析和持續改善
 
 雖然在識別和防範DoS/DDoS攻擊方面並沒有萬能的標準流程，這取決於貴組織的安全程式。 **事件後分析和持續改善**&#x200B;是這個過程中的關鍵步驟。 以下是一些需要考量的最佳實務：
 

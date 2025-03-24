@@ -2,7 +2,7 @@
 title: 呼叫具有私人憑證的內部API
 description: 瞭解如何呼叫具有私人或自我簽署憑證的內部API。
 feature: Security
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
 role: Admin, Architect, Developer
 level: Experienced
@@ -12,7 +12,7 @@ doc-type: Article
 last-substantial-update: 2023-08-25T00:00:00Z
 exl-id: c88aa724-9680-450a-9fe8-96e14c0c6643
 duration: 332
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -60,20 +60,20 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 程式碼使用[Apache HttpComponent](https://hc.apache.org/)的[HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)程式庫類別及其方法。
 
 
-## HttpClient和載入AEM TrustStore資料
+## HttpClient並載入AEM TrustStore資料
 
 若要呼叫具有&#x200B;_私人或自我簽署憑證_&#x200B;的API端點，[HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)的`SSLContextBuilder`必須以AEM的TrustStore載入，並用來促進連線。
 
 請遵循下列步驟：
 
-1. 以&#x200B;**管理員**&#x200B;身分登入&#x200B;**AEM作者**。
+1. 以&#x200B;**管理員**&#x200B;的身分登入&#x200B;**AEM作者**。
 1. 瀏覽至&#x200B;**AEM Author > Tools > Security > Trust Store**，然後開啟&#x200B;**全域信任存放區**。 如果第一次存取，請設定全域信任存放區的密碼。
 
    ![全域信任存放區](assets/internal-api-call/global-trust-store.png)
 
 1. 若要匯入私用憑證，請按一下[選取憑證檔案]按鈕&#x200B;**，然後選取副檔名為`.cer`的憑證檔案。**&#x200B;按一下&#x200B;**提交**&#x200B;按鈕以匯入它。
 
-1. 更新如下所示的Java™程式碼。 請注意，若要使用`@Reference`取得AEM `KeyStoreService`，呼叫程式碼必須是OSGi元件/服務或Sling模型（其中使用`@OsgiService`）。
+1. 更新如下所示的Java™程式碼。 請注意，若要使用`@Reference`取得AEM的`KeyStoreService`，呼叫程式碼必須是OSGi元件/服務或Sling模型（其中使用`@OsgiService`）。
 
    ```java
    ...

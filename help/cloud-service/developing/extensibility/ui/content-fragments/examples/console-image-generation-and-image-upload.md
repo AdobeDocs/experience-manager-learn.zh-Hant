@@ -2,7 +2,7 @@
 title: 透過自訂內容片段主控台擴充功能產生OpenAI影像
 description: 瞭解如何使用OpenAI或DALL·E 2從自然語言描述產生數位影像，並使用自訂內容片段主控台擴充功能將產生的影像上傳到AEM。
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
 duration: 1438
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 0%
@@ -25,12 +25,12 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413093?quality=12&learn=on)
 
-這個範例AEM內容片段主控台擴充功能是一個[動作列](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/)擴充功能，它使用[OpenAI API](https://openai.com/api/)或[DALL·E 2](https://openai.com/dall-e-2/)從自然語言輸入產生數位影像。 產生的影像會上傳至AEM DAM，而所選內容片段的影像屬性會更新，以參考這個從DAM新產生的上傳影像。
+這個範例AEM內容片段主控台擴充功能是一個[動作列](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/)擴充功能，它使用[OpenAI API](https://openai.com/api/)或[DALL·E 2](https://openai.com/dall-e-2/)從自然語言輸入中產生數位影像。 產生的影像會上傳至AEM DAM，而所選內容片段的影像屬性會更新，以參考這個從DAM新產生的上傳影像。
 
 在此範例中，您將瞭解：
 
 1. 使用[OpenAI API](https://beta.openai.com/docs/guides/images/image-generation-beta)或[DALL·E 2](https://openai.com/dall-e-2/)產生影像
-2. 正在將影像上傳到AEM
+2. 將影像上傳至AEM
 3. 內容片段屬性更新
 
 範例擴充功能的功能流程如下：
@@ -45,8 +45,8 @@ ht-degree: 0%
 1. [影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta)端點使用提示要求引數值建立大小為&#x200B;_1024x1024_&#x200B;畫素的原始影像，並傳回產生的影像URL作為回應。
 1. [Adobe I/O Runtime動作](#adobe-io-runtime-action)會將產生的影像下載到App Builder執行階段。
 1. 接下來，它會根據預先定義的路徑，起始從App Builder執行階段到AEM DAM的影像上傳。
-1. AEM as a Cloud Service會將影像儲存至DAM，並針對Adobe I/O Runtime動作傳回成功或失敗回應。 成功的上傳回應會使用Adobe I/O Runtime動作中傳送至AEM的另一個HTTP請求，更新所選內容片段的影像屬性值。
-1. 強制回應視窗會收到Adobe I/O Runtime動作的回應，並提供新產生之上傳影像的AEM資產詳細資料連結。
+1. AEM as a Cloud Service會將影像儲存至DAM，並針對Adobe I/O Runtime動作傳回成功或失敗回應。 成功的上傳回應會使用Adobe I/O Runtime動作中向AEM傳送的另一個HTTP請求，更新所選內容片段的影像屬性值。
+1. 強制回應視窗會收到Adobe I/O Runtime動作的回應，並提供新產生之上傳影像的AEM資產詳細資訊連結。
 
 ## 擴充點
 
@@ -113,7 +113,7 @@ ht-degree: 0%
 
 1. 安裝在Node.js程式庫下方
    1. [OpenAI Node.js程式庫](https://github.com/openai/openai-node#installation) — 輕鬆叫用OpenAI API
-   1. [AEM上傳](https://github.com/adobe/aem-upload#install) — 上傳影像到AEM-CS執行個體。
+   1. [AEM上傳](https://github.com/adobe/aem-upload#install) — 將影像上傳至AEM-CS執行個體。
 
 
 >[!TIP]
@@ -220,7 +220,7 @@ export default ExtensionRegistration;
 1. 「產生影像」表單可讓使用者以自然語言提供影像說明。
 1. 影像產生操作的回應，提供新產生之上傳影像的AEM資產詳細資訊連結。
 
-重要的是，擴充功能與AEM的任何互動都應委派給[AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，這是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中執行的個別無伺服器程式。
+重要的是，從擴充功能與AEM的任何互動都應委派給[AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，這是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中執行的個別無伺服器程式。
 使用Adobe I/O Runtime動作與AEM通訊，是為了避免跨原始資源共用(CORS)連線問題。
 
 提交&#x200B;_產生影像_&#x200B;表單時，自訂`onSubmitHandler()`會叫用Adobe I/O Runtime動作，傳遞影像說明、目前的AEM主機（網域）和使用者的AEM存取權杖。 然後動作會呼叫OpenAI的[影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) API，以使用提交的影像說明產生影像。 接著使用[AEM上傳](https://github.com/adobe/aem-upload)節點模組的`DirectBinaryUpload`類別，它將產生的影像上傳到AEM，最後使用[AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)來更新內容片段。
@@ -488,13 +488,13 @@ export default function GenerateImageModal() {
 ### Adobe I/O Runtime動作
 
 AEM擴充功能App Builder應用程式可定義或使用0個或多個Adobe I/O Runtime動作。
-Adobe執行階段動作負責的工作需要與AEM、Adobe或協力廠商Web服務互動。
+Adobe Runtime動作負責的工作需要與AEM、Adobe或協力廠商Web服務互動。
 
 在此範例應用程式中，`generate-image` Adobe I/O Runtime動作負責：
 
 1. 正在使用[OpenAI API影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta)服務產生影像
-1. 正在使用[AEM Upload](https://github.com/adobe/aem-upload)資料庫將產生的影像上傳到AEM-CS執行個體
-1. 向AEM內容片段API發出HTTP請求以更新內容片段的影像屬性。
+1. 使用[AEM上傳](https://github.com/adobe/aem-upload)資料庫將產生的影像上傳到AEM-CS執行個體
+1. 向AEM內容片段API發出HTTP請求，以更新內容片段的影像屬性。
 1. 傳回成功與失敗的關鍵資訊，以由強制回應視窗(`GenerateImageModal.js`)顯示
 
 
@@ -653,9 +653,9 @@ module.exports = {
 
 #### 上傳至AEM
 
-此模組負責使用[AEM Upload](https://github.com/adobe/aem-upload)資料庫將OpenAI產生的影像上傳到AEM。 產生的影像會先使用Node.js [File System](https://nodejs.org/api/fs.html)程式庫下載到App Builder執行階段，一旦上傳到AEM完成，就會將其刪除。
+此模組負責使用[AEM Upload](https://github.com/adobe/aem-upload)資料庫將OpenAI產生的影像上傳至AEM。 產生的影像會先使用Node.js [File System](https://nodejs.org/api/fs.html)程式庫下載到App Builder執行階段，一旦上傳到AEM完成，就會將其刪除。
 
-在下列程式碼中，`uploadGeneratedImageToAEM`函式會協調將產生的影像下載到執行階段、將其上傳到AEM並從執行階段刪除它。 影像已上傳至`/content/dam/wknd-shared/en/generated`路徑，確認DAM中存在所有資料夾，其使用[AEM上傳](https://github.com/adobe/aem-upload)資料庫的先決條件。
+在下列程式碼中，`uploadGeneratedImageToAEM`函式會協調將產生的影像下載到執行階段、將其上傳到AEM並從執行階段將其刪除。 影像已上傳至`/content/dam/wknd-shared/en/generated`路徑，確認DAM中存在所有資料夾，其使用[AEM上傳](https://github.com/adobe/aem-upload)資料庫的先決條件。
 
 + `src/aem-cf-console-admin-1/actions/generate-image/upload-generated-image-to-aem.js`
 

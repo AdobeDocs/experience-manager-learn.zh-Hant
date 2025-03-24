@@ -1,7 +1,7 @@
 ---
 title: 為AEM設定Sling動態包含
 description: 在Apache HTTP Web Server上執行AEM Dispatcher時，安裝和使用Apache Sling Dynamic Include的影片逐步說明。
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
 doc-type: Technical Video
@@ -10,7 +10,7 @@ role: Developer
 level: Experienced
 exl-id: 6c504710-be8f-4b44-bd8a-aaf480ae6d8a
 duration: 863
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 設定[!DNL Sling Dynamic Include]
 
-在[!DNL Apache HTTP Web Server]上執行[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)時，安裝及使用[!DNL Apache Sling Dynamic Include]的影片逐步解說。
+在[!DNL Apache HTTP Web Server]上執行[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)時，安裝及使用[!DNL Apache Sling Dynamic Include]的影片逐步解說。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040?quality=12&learn=on)
 

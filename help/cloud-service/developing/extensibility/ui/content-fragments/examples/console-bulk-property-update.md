@@ -2,7 +2,7 @@
 title: 大量屬性更新範例AEM內容片段主控台擴充功能
 description: 大量更新內容片段屬性的AEM內容片段主控台擴充功能的範例。
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 duration: 1362
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -32,8 +32,8 @@ ht-degree: 0%
 1. 選取內容片段，然後按一下[動作列](#extension-registration)中的擴充功能按鈕，開啟[強制回應](#modal)。
 2. [模型](#modal)顯示以[React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)建置的自訂輸入表單。
 3. 提交表單會將選取的內容片段清單和AEM主機傳送到[自訂Adobe I/O Runtime動作](#adobe-io-runtime-action)。
-4. [Adobe I/O Runtime動作](#adobe-io-runtime-action)會驗證輸入並向AEM發出HTTPPUT要求，以更新所選的內容片段。
-5. 每個內容片段的一系列HTTPPUT可更新指定的屬性。
+4. [Adobe I/O Runtime動作](#adobe-io-runtime-action)會驗證輸入並向AEM發出HTTP PUT請求以更新所選的內容片段。
+5. 每個內容片段的一系列HTTP PUT可更新指定的屬性。
 6. AEM as a Cloud Service會儲存內容片段的屬性更新，並傳回Adobe I/O Runtime動作的成功或失敗回應。
 7. 強制回應視窗收到來自Adobe I/O Runtime動作的回應，並顯示成功的大量更新清單。
 
@@ -168,7 +168,7 @@ export default ExtensionRegistration;
 1. 大量屬性更新表單，可讓使用者指定要更新的屬性名稱和值
 1. 大量屬性更新操作的回應，其中列出已更新的內容片段以及無法更新的內容片段
 
-重要的是，擴充功能與AEM的任何互動都應委派給[AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，這是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中執行的個別無伺服器程式。
+重要的是，從擴充功能與AEM的任何互動都應委派給[AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，這是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中執行的個別無伺服器程式。
 使用Adobe I/O Runtime動作與AEM通訊是為了避免跨原始資源共用(CORS)連線問題。
 
 提交大量屬性更新表單時，自訂`onSubmitHandler()`會叫用Adobe I/O Runtime動作，傳遞目前的AEM主機（網域）和使用者的AEM存取權杖，接著呼叫[AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)以更新內容片段。
@@ -434,7 +434,7 @@ export default function BulkPropertyUpdateModal() {
 ### Adobe I/O Runtime動作
 
 AEM擴充功能App Builder應用程式可定義或使用0個或多個Adobe I/O Runtime動作。
-Adobe執行階段動作應負責需要與AEM或其他AdobeWeb服務互動的工作。
+Adobe Runtime動作應負責需要與AEM或其他Adobe網路服務互動的工作。
 
 在此範例應用程式中，使用預設名稱`generic`的Adobe I/O Runtime動作負責：
 

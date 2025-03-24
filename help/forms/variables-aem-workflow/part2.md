@@ -1,23 +1,23 @@
 ---
 title: AEM工作流程中的變數[第2部分]
 description: 在AEM工作流程中使用XML、JSON、ArrayList、檔案型別的變數
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: e7d3e0be-5194-47c2-a668-ce78e727986e
 duration: 354
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
 
 ---
 
-# AEM Workflow中JSON型別的變數
+# AEM工作流程中JSON型別的變數
 
-從AEM Forms 6.5開始，我們現在可以在AEM Workflow中建立JSON型別的變數。 一般來說，如果您根據JSON結構描述提交調適型Forms至AEM Workflow，或想要儲存表單資料模型叫用作業的結果，您將建立JSON型別的變數。 以下影片將逐步說明在AEM工作流程中建立及使用JSON型別變數所需的步驟
+從AEM Forms 6.5開始，我們現在可以在AEM工作流程中建立JSON型別的變數。 一般來說，如果您根據JSON結構描述提交調適型Forms至AEM工作流程，或想要儲存表單資料模型叫用作業的結果，您將建立JSON型別的變數。 以下影片將逐步說明在AEM工作流程中建立及使用JSON型別變數所需的步驟
 
 **如果使用AEM Forms 6.5.0**
 

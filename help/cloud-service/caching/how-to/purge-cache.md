@@ -1,7 +1,7 @@
 ---
 title: 如何清除CDN快取
 description: 瞭解如何從AEM as a Cloud Service的CDN中清除或移除快取的HTTP回應。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-08-13T00:00:00Z
 jira: KT-15963
 thumbnail: KT-15963.jpeg
 exl-id: 5d81f6ee-a7df-470f-84b9-12374c878a1b
-source-git-commit: 0639217a3bab7799eec3bbcc40c1a69ed1b12682
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
@@ -43,9 +43,9 @@ ht-degree: 0%
 
 ### 設定CDN規則
 
-清除API Token的建立方式是在AEM專案程式碼中設定CDN規則。
+清除API權杖是透過在您的AEM專案代碼中設定CDN規則來建立。
 
-1. 從AEM專案的主要`config`資料夾開啟`cdn.yaml`檔案。 例如，[WKND專案的cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml)檔案。
+1. 從您AEM專案的主要`config`資料夾開啟`cdn.yaml`檔案。 例如，[WKND專案的cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml)檔案。
 
 1. 將下列CDN規則新增至`cdn.yaml`檔案：
 
@@ -129,7 +129,7 @@ Surrogate-Key: <SURROGATE_KEY>
 - **X-AEM-Purge-Key：`<PURGE_API_TOKEN>`**：包含清除API Token值的自訂標頭。
 - **X-AEM-Purge：`<PURGE_TYPE>`**：指定清除作業型別的自訂標頭。 值可以是`hard`、`soft`或`all`。 下表說明每種永久刪除型別：
 
-  | 清除型別 | 說明 |
+  | 清除型別 | 描述 |
   |:------------:|:-------------:|
   | hard （預設） | 立即移除快取的資源。 避免使用它，因為它會增加流向原始伺服器的流量。 |
   | 柔和 | 將快取的資源標示為過時，並從原始伺服器擷取最新版本。 |

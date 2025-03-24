@@ -5,12 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
+exl-id: 52205a93-d03c-430c-a707-b351ab333939
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 3%
@@ -19,7 +20,7 @@ ht-degree: 3%
 
 # 在元件的原則中定義樣式
 
-* 登入本機雲端就緒AEM執行個體並導覽至工具 | 一般 | 範本 | 您的專案名稱。
+* 登入本機雲端就緒AEM執行個體，並導覽至「工具」 | 一般 | 範本 | 您的專案名稱。
 
 * 在編輯模式中選取並開啟&#x200B;**使用核心元件空白**&#x200B;範本。
 * 按一下按鈕元件的原則圖示，開啟原則編輯器。

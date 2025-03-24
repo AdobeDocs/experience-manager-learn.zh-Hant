@@ -5,12 +5,12 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 jira: KT-8843
 exl-id: 34840d28-ad47-4a69-b15d-cd9593626527
 duration: 43
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 新增字型模組
 
-如果您想在PDF檔案中使用自訂字型，則需要將自訂字型推送到AEM Forms CS執行個體。 請遵循下列步驟
+如果您想在PDF檔案中使用自訂字型，您需要將自訂字型推送到AEM Forms CS執行個體。 請遵循下列步驟
 
 * 在C:\CloudManager\aem-banking-application中建立名為&#x200B;**字型**&#x200B;的資料夾
 * 將[font.zip](assets/fonts.zip)的內容解壓縮至新建立的字型資料夾

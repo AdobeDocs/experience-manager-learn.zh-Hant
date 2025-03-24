@@ -1,7 +1,7 @@
 ---
 title: Cloud 5 — 修正您的……快取
 description: 提供一些最佳化快取記憶體並加速網站運作的簡單秘訣
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 role: Admin, Developer
 level: Intermediate
 thumbnail: 343475.jpeg
@@ -9,7 +9,7 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 591ed430-80b3-49fa-b52f-0d07a2e5ac0e
 duration: 311
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 4%

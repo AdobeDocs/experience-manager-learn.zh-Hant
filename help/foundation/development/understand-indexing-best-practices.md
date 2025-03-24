@@ -1,7 +1,7 @@
 ---
 title: 在AEM中編制索引最佳實務
 description: 瞭解如何在AEM中編制索引最佳實務。
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 sub-product: Experience Manager, Experience Manager Sites
 feature: Search
 doc-type: Article
@@ -13,7 +13,7 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: 54a7f93637545a4467c4c587bbc3d1d0de5c64a1
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 1%
@@ -33,13 +33,13 @@ ht-degree: 1%
 - 查詢的結果最後&#x200B;**篩選為**&#x200B;以確保目前的使用者具有讀取存取權。 這表示查詢結果可能小於索引節點的數目。
 - 在索引定義變更之後重新索引存放庫，需要時間，而且取決於存放庫的大小。
 
-若要擁有有效率且正確的搜尋功能以不會影響AEM執行個體的效能，瞭解索引最佳實務很重要。
+若要使用有效率且正確的搜尋功能而不會影響AEM執行個體的效能，請務必瞭解建立索引的最佳實務。
 
 ## 自訂與OOTB索引
 
 有時候，您必須建立自訂索引以支援您的搜尋需求。 但在建立自訂索引之前，請遵循以下准則：
 
-- 瞭解搜尋需求，並檢查OOTB索引是否可支援搜尋需求。 透過Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`使用&#x200B;**查詢效能工具** （位於[本機SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS）。
+- 瞭解搜尋需求，並檢查OOTB索引是否可支援搜尋需求。 透過Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`使用&#x200B;**查詢效能工具** (位於[本機SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS)。
 
 - 定義最佳查詢，使用[最佳化查詢](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)流程圖和[JCR查詢速查表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf)以作參考。
 
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 - 在&#x200B;**AEMCS**&#x200B;中，自訂OOTB索引時，使用&#x200B;**\&lt;OOTBIndexName>-\&lt;productVersion>-custom-\&lt;customVersion>**&#x200B;命名慣例。 例如，`cqPageLucene-custom-1`或`damAssetLucene-8-custom-1`。 這有助於在OOTB索引更新時合併自訂索引定義。 如需詳細資訊，請參閱[對現成可用索引的變更](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/operations/indexing)。
 
-- 在&#x200B;**AEM 6.X**&#x200B;中，上述命名&#x200B;_無法運作_，不過只需在`indexRules`節點中用必要的屬性更新OOTB索引即可。
+- 在&#x200B;**AEM 6.X**&#x200B;中，上述命名&#x200B;_無法運作_，不過只需在`indexRules`節點中以&#39;b6&#39;7d要屬性更新OOTB索引即可。
 
 - 一律使用CRX DE封裝管理員(/crx/packmgr/)從AEM執行個體複製最新的OOTB索引定義，重新命名並在XML檔案中新增自訂。
 
@@ -168,7 +168,7 @@ dam：Asset nodetype](./assets/understand-indexing-best-practices/index-for-damA
 
 ## 停用Apache Tika以最佳化索引
 
-AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF、Word、Excel等)擷取中繼資料和文字內容。_&#x200B;擷取的內容會儲存在存放庫中，並由Oak Lucene索引編制索引。
+AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF、Word、Excel等)擷取中繼資料和文字內容_。 擷取的內容會儲存在存放庫中，並由Oak Lucene索引編制索引。
 
 有時使用者不需要在檔案/資產的內容中搜尋的能力，在這種情況下，您可以透過停用Apache Tika來改善索引效能。 優點包括：
 
@@ -185,7 +185,7 @@ AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF�
 
 若要依mime型別停用Apache Tika，請執行以下步驟：
 
-- 在自訂或OOBT索引定義下新增`nt:unstructured`型別的`tika`節點。 在下列範例中，已針對OOTB `damAssetLucene`索引停用PDFMIME型別。
+- 在自訂或OOBT索引定義下新增`nt:unstructured`型別的`tika`節點。 在下列範例中，已針對OOTB `damAssetLucene`索引停用PDF MIME型別。
 
 ```xml
 /oak:index/damAssetLucene
@@ -253,11 +253,11 @@ AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF�
 
 ### 查詢效能工具
 
-可透過Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`在[本機SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS取得的OOTB _查詢效能工具_，可協助&#x200B;**分析查詢效能**&#x200B;和[JCR查詢速查表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en)以定義最佳查詢。
+可透過Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`在[本機SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS取得的OOTB _查詢效能工具_&#x200B;可協助&#x200B;**分析查詢效能**&#x200B;和[JCR查詢速查表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en)以定義最佳查詢。
 
 ### 疑難排解工具和提示
 
-以下大多數適用於AEM 6.X和本機疑難排解。
+以下大部分適用於AEM 6.X和本機疑難排解。
 
 - 索引管理員可在`http://host:port/libs/granite/operations/content/diagnosistools/indexManager.html`取得，以取得型別、上次更新時間、大小等索引資訊。
 

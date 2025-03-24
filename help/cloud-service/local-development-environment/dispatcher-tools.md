@@ -1,7 +1,7 @@
 ---
 title: 設定Dispatcher工具以進行AEM as a Cloud Service開發
-description: AEM SDK的Dispatcher工具可讓您在本機輕鬆安裝、執行及疑難排解Adobe Experience Manager (AEM)專案，協助本機開發Dispatcher。
-version: Cloud Service
+description: AEM SDK的Dispatcher工具可讓您在本機輕鬆安裝、執行及疑難排解Adobe Experience Manager (AEM)專案，協助本機Dispatcher開發。
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Dispatcher, Developer Tools
 role: Developer
@@ -11,9 +11,9 @@ thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
 duration: 624
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1620'
 ht-degree: 4%
 
 ---
@@ -27,9 +27,9 @@ ht-degree: 4%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="雲端中的 Dispatcher"
 >additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html" text="下載 AEM as a Cloud Service SDK"
 
-Adobe Experience Manager (AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM Publish層級之間提供安全性與效能層。 Dispatcher是整體Experience Manager架構不可或缺的一部分，並應成為本機開發設定的一部分。
+Adobe Experience Manager (AEM)的Dispatcher是Apache HTTP Web伺服器模組，可在CDN和AEM發佈層級之間提供安全性與效能層。 Dispatcher是整體Experience Manager架構不可或缺的一部分，並應成為本機開發設定的一部分。
 
-AEM as a Cloud Service SDK包含建議的Dispatcher Tools版本，有助於設定驗證並在本機模擬Dispatcher。 Dispatcher Tools由以下部分組成：
+AEM as a Cloud Service SDK包含建議的Dispatcher工具版本，可協助設定驗證並在本機模擬Dispatcher。 Dispatcher Tools由以下部分組成：
 
 + 位於`.../dispatcher-sdk-x.x.x/src`的Apache HTTP Web Server和Dispatcher組態檔基準組
 + 位於`.../dispatcher-sdk-x.x.x/bin/validate`的組態驗證器CLI工具
@@ -47,15 +47,15 @@ AEM as a Cloud Service SDK包含建議的Dispatcher Tools版本，有助於設�
 ## 先決條件
 
 1. Windows使用者必須使用Windows 10專業版（或支援Docker的版本）
-1. 在本機開發電腦上安裝[Experience ManagerPublish Quickstart Jar](./aem-runtime.md)。
+1. 在本機開發電腦上安裝[Experience Manager發佈快速入門Jar](./aem-runtime.md)。
 
-+ 可選擇在本機AEM Publish服務上安裝最新的[AEM參考網站](https://github.com/adobe/aem-guides-wknd/releases)。 本教學課程會使用此網站以視覺效果呈現運作中的Dispatcher。
++ 可選擇在本機AEM發佈服務上安裝最新的[AEM參考網站](https://github.com/adobe/aem-guides-wknd/releases)。 本教學課程會使用此網站以視覺效果呈現運作中的Dispatcher。
 
 1. 在本機開發電腦上安裝並啟動最新版本的[Docker](https://www.docker.com/) (Docker Desktop 2.2.0.5+ / Docker Engine v19.03.9+)。
 
 ## 下載Dispatcher工具(做為AEM SDK的一部分)
 
-AEM as a Cloud Service SDK (或AEM SDK)包含用於在本機執行Apache HTTP Web伺服器(包含Dispatcher模組以進行開發)的Dispatcher工具，以及相容的QuickStart Jar。
+AEM as a Cloud Service SDK (又稱AEM SDK)包含用於在本機執行Apache HTTP Web伺服器(包含Dispatcher模組以進行開發)的Dispatcher工具，以及相容的QuickStart Jar。
 
 如果AEM as a Cloud Service SDK已下載至[設定本機AEM執行階段](./aem-runtime.md)，則不需要重新下載。
 
@@ -63,7 +63,7 @@ AEM as a Cloud Service SDK (或AEM SDK)包含用於在本機執行Apache HTTP We
    + 您的Adobe組織&#x200B;__必須__&#x200B;已布建給AEM as a Cloud Service，才能下載AEM as a Cloud Service SDK
 1. 按一下要下載的最新&#x200B;__AEM SDK__&#x200B;結果列
 
-## 從AEM SDK Zip解壓縮Dispatcher工具
+## 從AEM SDK zip解壓縮Dispatcher工具
 
 >[!TIP]
 >
@@ -105,11 +105,11 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 ## 瞭解Dispatcher設定檔
 
 >[!TIP]
-> 從[AEM專案Maven原型](https://github.com/adobe/aem-project-archetype)建立的Experience Manager專案已預先填入這組Dispatcher設定檔案，因此不需要從Dispatcher Tools src資料夾進行複製。
+> 從[Experience Manager專案Maven Archetype](https://github.com/adobe/aem-project-archetype)建立的AEM專案會預先填入這組Dispatcher設定檔案，因此不需要從Dispatcher Tools src資料夾進行複製。
 
 Dispatcher工具提供一組Apache HTTP Web伺服器和Dispatcher設定檔，可定義所有環境（包括本機開發）的行為。
 
-如果這些檔案在Experience ManagerMaven專案中不存在，則將複製到Experience ManagerMaven專案到`dispatcher/src`資料夾。
+如果這些檔案不存在於Experience Manager Maven專案中，這些檔案將會複製到Experience Manager Maven專案中的`dispatcher/src`資料夾。
 
 在解壓縮的Dispatcher工具中，組態檔的完整說明為`dispatcher-sdk-x.x.x/docs/Config.html`。
 
@@ -199,9 +199,9 @@ $ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
 
 >[!ENDTABS]
 
-透過AEM as a Cloud Service SDK的Publish服務（于連線埠4503本機執行）可在`http://localhost:8080`透過Dispatcher取得。
+透過Dispatcher在`http://localhost:8080`提供於連線埠4503本機執行的AEM as a Cloud Service SDK的發佈服務。
 
-若要針對Experience Manager專案的Dispatcher設定執行Dispatcher工具，請指向您專案的`dispatcher/src`資料夾。
+若要對Experience Manager專案的Dispatcher設定執行Dispatcher工具，請指向您專案的`dispatcher/src`資料夾。
 
 >[!BEGINTABS]
 
@@ -275,9 +275,9 @@ Apache Web Server和AEM Dispatcher記錄檔可直接在Docker容器中存取：
 
 ## 何時更新Dispatcher工具{#dispatcher-tools-version}
 
-Dispatcher Tools版本的增加頻率低於Experience Manager，因此Dispatcher Tools在本機開發環境中所需的更新較少。
+Dispatcher工具版本的增加頻率低於Experience Manager，因此Dispatcher工具在本機開發環境中所需的更新較少。
 
-建議的Dispatcher工具版本是隨AEM as a Cloud Service SDK提供的符合Experience Manageras a Cloud Service版本的版本。 可透過[Cloud Manager](https://my.cloudmanager.adobe.com/)找到AEM as a Cloud Service的版本。
+建議的Dispatcher Tools版本是，此版本與Experience Manager as a Cloud Service版本相符的AEM as a Cloud Service SDK搭配。 可透過[Cloud Manager](https://my.cloudmanager.adobe.com/)找到AEM as a Cloud Service的版本。
 
 + __Cloud Manager >環境__，依由&#x200B;__AEM版本__&#x200B;標籤指定的環境而定
 
@@ -287,7 +287,7 @@ Dispatcher Tools版本的增加頻率低於Experience Manager，因此Dispatcher
 
 ## 如何更新Apache和Dispatcher設定的基準組
 
-Apache和Dispatcher設定的基準集已定期增強，並隨AEM as a Cloud Service SDK版本發行。 最佳實務是將基準設定增強功能合併到您的AEM專案中，並避免[本機驗證](#validate-configurations)和Cloud Manager管道失敗。 使用`.../dispatcher-sdk-x.x.x/bin`資料夾中的`update_maven.sh`指令碼更新它們。
+Apache和Dispatcher設定的基準集已定期增強，並隨AEM as a Cloud Service SDK版本一起發行。 最佳實務是將基準設定增強功能合併到您的AEM專案中，並避免[本機驗證](#validate-configurations)和Cloud Manager管道失敗。 使用`.../dispatcher-sdk-x.x.x/bin`資料夾中的`update_maven.sh`指令碼更新它們。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416744?quality=12&learn=on)
 
@@ -393,7 +393,7 @@ Waiting until host.docker.internal is available
 ## 其他資源
 
 + [下載AEM SDK](https://experience.adobe.com/#/downloads)
-+ [AdobeCloud Manager](https://my.cloudmanager.adobe.com/)
++ [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [下載Docker](https://www.docker.com/)
 + [下載AEM參考網站(WKND)](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience ManagerDispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience Manager Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)

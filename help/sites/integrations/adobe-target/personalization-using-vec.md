@@ -1,7 +1,7 @@
 ---
 title: 使用視覺化體驗撰寫器的Personalization
 description: 瞭解如何使用視覺化體驗撰寫器建立Adobe Target活動。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6352
 thumbnail: 6352-personalization-using-vec.jpg
 topic: Integrations
@@ -9,11 +9,11 @@ feature: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
 duration: 101
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 若要在AEM網站上使用VEC，必須完成下列設定：
 
-1. [將Adobe Target新增至您的AEM網站](./add-target-launch-extension.md)
+1. [將Adobe Target新增至AEM網站](./add-target-launch-extension.md)
 1. [從標籤觸發Adobe Target呼叫](./load-and-fire-target.md)
 
 ## 案例概述
@@ -39,7 +39,7 @@ WKND網站首頁會以資訊卡的形式顯示當地活動或城市周圍的最�
 
 1. 登入[Adobe Experience Cloud](https://experience.adobe.com/)，點選&#x200B;__Target__，導覽至&#x200B;__活動__&#x200B;標籤
 
-   + 如果您在Experience Cloud控制面板上看不到&#x200B;__Target__，請確定在右上方的組織切換器中選取了正確的Adobe組織，且該使用者已在[Adobe Admin Console](https://adminconsole.adobe.com/)中獲得Target的存取權。
+   + 如果您在Experience Cloud控制面板上看不到&#x200B;__Target__，請確定在右上方的組織切換器中選取正確的Adobe組織，且該使用者已在[Adobe Admin Console](https://adminconsole.adobe.com/)中獲得Target的存取權。
 
 1. 按一下&#x200B;**建立活動**&#x200B;按鈕，然後選擇&#x200B;**A/B測試**&#x200B;活動
 
@@ -53,7 +53,7 @@ WKND網站首頁會以資訊卡的形式顯示當地活動或城市周圍的最�
 
    ![體驗A](assets/experience.png)
 
-1. 在頁面上選取影像或文字，以開始進行修改，或使用程式碼編輯器來挑選及HTML元素。
+1. 在頁面上選取影像或文字，以開始進行修改，或使用程式碼編輯器挑選及HTML元素。
 
    ![元素](assets/select-element.png)
 

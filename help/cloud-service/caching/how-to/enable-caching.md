@@ -1,7 +1,7 @@
 ---
 title: 如何啟用CDN快取
 description: 瞭解如何在AEM as a Cloud Service的CDN中啟用HTTP回應的快取。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 544c3230-6eb6-4f06-a63c-f56d65c0ff4b
 duration: 174
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 預設快取行為
 
-當自訂設定不存在時，將使用預設值。 在以下熒幕擷圖中，您可以看到部署[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)型`mynewsite`AEM專案時AEM Publish和Author的預設快取行為。
+當自訂設定不存在時，將使用預設值。 在以下熒幕擷圖中，您可以看到部署[AEM專案原型](https://github.com/adobe/aem-project-archetype)型`mynewsite`AEM專案時，AEM Publish和Author的預設快取行為。
 
 ![預設快取行為](../assets/how-to/aem-publish-default-cache-headers.png){width="800" zoomable="yes"}
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 以下摘要說明每個&#x200B;**標頭**&#x200B;的用途以及適用於標頭的&#x200B;**屬性**。
 
-|                     | 網頁瀏覽器 | CDN | 說明 |
+|                     | 網頁瀏覽器 | CDN | 描述 |
 |---------------------|:-----------:|:---------:|:-----------:|
 | Cache-Control | ✔ | ✔ | 此標題會控制網頁瀏覽器和CDN快取存留期。 |
 | Surrogate-Control | ✘ | ✔ | 此標題會控制CDN快取壽命。 |

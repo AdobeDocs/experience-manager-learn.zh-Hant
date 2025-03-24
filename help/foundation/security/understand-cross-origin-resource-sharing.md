@@ -1,7 +1,7 @@
 ---
-title: 瞭解與AEM的跨原始資源共用(CORS)
-description: Adobe Experience Manager的跨原始資源共用(CORS)可協助非AEM Web屬性對AEM發出使用者端呼叫（包括已驗證和未驗證的），以擷取內容或直接與AEM互動。
-version: 6.4, 6.5
+title: 瞭解使用AEM的跨原始資源共用(CORS)
+description: Adobe Experience Manager的跨原始資源共用(CORS)可協助非AEM網頁屬性對AEM發出使用者端呼叫（包括已驗證和未驗證的呼叫），以擷取內容或直接與AEM互動。
+version: Experience Manager 6.4, Experience Manager 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: Security, APIs
 doc-type: Article
@@ -10,7 +10,7 @@ role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 duration: 240
-source-git-commit: 6922d885c25d0864560ab3b8e38907060ff3cc70
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 1%
@@ -23,18 +23,18 @@ Adobe Experience Manager的跨原始資源共用([!DNL CORS])可協助非AEM Web
 
 本檔案中概述的OSGI設定足以用於：
 
-1. AEM Publish上的單一來源資源共用
+1. AEM發佈上的單一來源資源共用
 2. AEM作者的CORS存取權
 
-如果AEM Publish上需要多來源CORS存取，請參閱[本檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
+如果AEM Publish上需要多來源CORS存取權，請參閱[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
 
-## AdobeGranite跨原始資源共用原則OSGi設定
+## Adobe Granite跨原始資源共用原則OSGi設定
 
-CORS設定在AEM中作為OSGi設定處理站進行管理，每個原則都會表示為處理站的一個執行個體。
+CORS設定在AEM中作為OSGi設定處理站進行管理，而每個原則都會表示為處理站的一個執行個體。
 
 * `http://<host>:<port>/system/console/configMgr > Adobe Granite Cross Origin Resource Sharing Policy`
 
-![AdobeGranite跨原始資源共用原則OSGi設定](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
+![Adobe Granite跨原始資源共用原則OSGi設定](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
 
 [!DNL Adobe Granite Cross-Origin Resource Sharing Policy] (`com.adobe.granite.cors.impl.CORSPolicyImpl`)
 
@@ -183,11 +183,11 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，每個原則都會表
 |-----------|-------------|-----------------------|-------------|
 | 否 | AEM 發佈 | 已驗證 | AEM Author上的Dispatcher快取僅限於靜態的非編寫資產。 這使得在AEM Author上快取大部分資源（包括HTTP回應標頭）變得困難和不實際。 |
 | 否 | AEM 發佈 | 已驗證 | 避免在已驗證的請求上快取CORS標頭。 這符合不快取已驗證請求的常見指南，因為很難判斷請求使用者的驗證/授權狀態將如何影響傳送的資源。 |
-| 是 | AEM 發佈 | 匿名 | Dispatcher中可快取的匿名請求也可以快取其回應標頭，以確保未來的CORS請求可以存取快取的內容。 AEM Publish **上的任何CORS組態變更都必須**，之後才會讓受影響的快取資源失效。 最佳實務指示程式碼或設定部署會清除Dispatcher快取，因為很難判斷哪些快取內容可能會受到影響。 |
+| 是 | AEM 發佈 | 匿名 | Dispatcher中可快取的匿名請求也可以快取其回應標頭，以確保未來的CORS請求可以存取快取的內容。 在AEM發佈&#x200B;**上進行的任何CORS組態變更都必須**，之後才會讓受影響的快取資源失效。 最佳實務指示程式碼或設定部署會清除Dispatcher快取，因為很難判斷哪些快取內容可能會受到影響。 |
 
 ### 允許CORS要求標頭
 
-若要允許必要的[HTTP要求標頭傳遞至AEM進行處理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，必須在Dispatcher的`/clientheaders`設定中允許這些標頭。
+若要允許必要的[HTTP要求標頭傳遞至AEM進行處理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，Dispatcher的`/clientheaders`設定中必須允許這些標頭。
 
 ```
 /clientheaders {
@@ -200,7 +200,7 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，每個原則都會表
 
 ### 快取CORS回應標頭
 
-若要允許在快取的內容上快取及提供CORS標頭，請將下列[/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers)新增至AEM Publish `dispatcher.any`檔案。
+若要允許在快取的內容上快取及提供CORS標頭，請將下列[/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers)新增至AEM發佈`dispatcher.any`檔案。
 
 ```
 /publishfarm {
@@ -247,6 +247,6 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，每個原則都會表
 
 ## 支援材料
 
-* 跨原始資源共用原則的[AEM OSGi Configuration Factory](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
+* [跨原始資源共用原則的AEM OSGi Configuration Factory](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [跨原始資源共用(W3C)](https://www.w3.org/TR/cors/)
 * [HTTP存取控制(Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)

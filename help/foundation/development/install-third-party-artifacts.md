@@ -1,7 +1,7 @@
 ---
 title: 安裝協力廠商成品 — 無法在公共Maven存放庫中取得
 description: 瞭解如何在建置和部署AEM專案時安裝公開Maven存放庫中*不可用的協力廠商成品。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: OSGI
 topic: Development
 role: Architect, Developer
@@ -11,13 +11,13 @@ duration: 0
 last-substantial-update: 2024-09-13T00:00:00Z
 jira: KT-16207
 thumbnail: KT-16207.jpeg
-source-git-commit: 33415305f6aa183373eaef4bb4978a59325c8a32
+exl-id: 0cec14b3-4be5-4666-a36c-968ea2fc634f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 0%
 
 ---
-
 
 # 安裝協力廠商成品 — 無法在公共Maven存放庫中取得
 
@@ -31,11 +31,11 @@ ht-degree: 0%
 
 ## 標準案例
 
-通常您要安裝協力廠商套件組合，*的套件可在公用Maven存放庫中*&#x200B;作為您AEM專案`pom.xml`檔案中的相依性。
+通常您要安裝協力廠商套件組合，*的套件可在公用Maven存放庫中*，作為您AEM專案`pom.xml`檔案中的相依性。
 
 例如：
 
-- [AEM WCM核心元件](https://github.com/adobe/aem-core-wcm-components) **套件**&#x200B;已新增為[WKND專案的](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L747-L753) `pom.xml`檔案中的相依性。 此處將`provided`範圍用作AEM執行階段所提供的AEM WCM核心元件組合。 如果AEM執行階段未提供該組合，您將會使用`compile`範圍，而且它是預設範圍。
+- [AEM WCM核心元件](https://github.com/adobe/aem-core-wcm-components) **套件**&#x200B;已新增為[WKND專案的](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L747-L753) `pom.xml`檔案中的相依性。 此處將`provided`範圍用作AEM執行階段所提供的AEM WCM核心元件組合。 如果AEM執行階段未提供該套件，您將會使用`compile`範圍，而且它是預設範圍。
 
 - [共用的WKND](https://github.com/adobe/aem-guides-wknd-shared) **套件**&#x200B;已新增為[WKND專案的](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L767-L773) `pom.xml`檔案中的相依性。
 
@@ -75,9 +75,9 @@ ht-degree: 0%
 
   驗證WKND網站頁面是否正確轉譯。
 
-## 在AEM專案中安裝第三方套件組合{#install-third-party-bundle}
+## 在AEM專案中安裝協力廠商套件組合{#install-third-party-bundle}
 
-讓我們安裝並使用公開Maven存放庫&#x200B;_中沒有提供給AEM WKND專案的示範OSGi [my-example-bundle](./assets/install-third-party-articafcts/my-example-bundle.zip)。_
+讓我們安裝並使用公開Maven存放庫&#x200B;_中不適用於AEM WKND專案的示範OSGi [my-example-bundle](./assets/install-third-party-articafcts/my-example-bundle.zip)。_
 
 **my-example-bundle**&#x200B;匯出`HelloWorldService`個OSGi服務，其`sayHello()`方法傳回`Hello Earth!`則訊息。
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 ### 將套件組合新增至`all`模組
 
-第一個步驟是將`my-example-bundle`新增到AEM WKND專案的`all`模組。
+第一步是將`my-example-bundle`新增到AEM WKND專案的`all`模組。
 
 - 下載並解壓縮[my-example-bundle.zip](./assets/install-third-party-articafcts/my-example-bundle.zip)檔案。
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 ### 使用套件組合中的服務
 
-讓我們使用AEM WKND專案中`my-example-bundle`的`HelloWorldService` OSGi服務。
+在AEM WKND專案中使用來自`my-example-bundle`的`HelloWorldService` OSGi服務。
 
 - 在AEM WKND專案的`core`模組中，建立`SayHello.java` Sling servlet @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet`。
 
@@ -178,7 +178,7 @@ ht-degree: 0%
 
 - 存取瀏覽器中的URL `http://localhost:4502/bin/sayhello`，以驗證`SayHello` Servlet是否如預期般運作。
 
-- 將上述變更提交至AEM WKND專案的存放庫。 然後執行Cloud Manager管道以驗證RDE或AEM環境中的變更。
+- 將上述變更提交至AEM WKND專案的存放庫。 然後執行Cloud Manager管道，驗證RDE或AEM環境中的變更。
 
   ![驗證SayHello servlet — 組合服務](./assets/install-third-party-articafcts/verify-sayhello-servlet-bundle-service.png)
 
@@ -188,7 +188,7 @@ AEM WKND專案的[tutorial/install-3rd-party-bundle](https://github.com/adobe/ae
 
 公共Maven存放庫中未提供的OSGi套件組合可按照以下步驟安裝在AEM專案中：
 
-- 將OSGi套件組合複製到`all`模組的`jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install`目錄。 若要封裝並部署套件組合至AEM執行個體，此步驟是必要的。
+- 將OSGi套件組合複製到`all`模組的`jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install`目錄。 封裝套件並將套件部署至AEM執行個體時，必須執行此步驟。
 
 - 更新根與核心模組的`pom.xml`檔案，將OSGi套件組合新增為相依性，且範圍和`systemPath`指向套件組合檔案。 `system`此步驟是編譯專案的必要步驟。
 
@@ -196,7 +196,7 @@ AEM WKND專案的[tutorial/install-3rd-party-bundle](https://github.com/adobe/ae
 
 在此範例中，`my-example-jar`不是OSGi套件組合，而是Java jar檔案。
 
-讓我們安裝並使用示範[my-example-jar](./assets/install-third-party-articafcts/my-example-jar.zip)，此示範&#x200B;_在公用Maven存放庫_&#x200B;中不適用於AEM WKND專案。
+讓我們安裝並使用示範[my-example-jar](./assets/install-third-party-articafcts/my-example-jar.zip)，該示範&#x200B;_在公開Maven存放庫_&#x200B;中不適用於AEM WKND專案。
 
 **my-example-jar**&#x200B;是Java jar檔案，其中包含具有`sayHello()`方法的`MyHelloWorldService`類別，可傳回`Hello World!`訊息。
 
@@ -204,7 +204,7 @@ AEM WKND專案的[tutorial/install-3rd-party-bundle](https://github.com/adobe/ae
 
 ### 將jar新增到`all`模組
 
-第一個步驟是將`my-example-jar`新增到AEM WKND專案的`all`模組。
+第一步是將`my-example-jar`新增到AEM WKND專案的`all`模組。
 
 - 下載並解壓縮[my-example-jar.zip](./assets/install-third-party-articafcts/my-example-jar.zip)檔案。
 
@@ -216,7 +216,7 @@ AEM WKND專案的[tutorial/install-3rd-party-bundle](https://github.com/adobe/ae
 
 ### 使用jar中的服務
 
-讓我們使用AEM WKND專案中`my-example-jar`的`MyHelloWorldService`。
+讓我們在AEM WKND專案中使用`my-example-jar`中的`MyHelloWorldService`。
 
 - 在AEM WKND專案的`core`模組中，建立`SayHello.java` Sling servlet @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet`。
 
@@ -327,7 +327,7 @@ AEM WKND專案的[tutorial/install-3rd-party-bundle](https://github.com/adobe/ae
 
 - 存取瀏覽器中的URL `http://localhost:4502/bin/sayhello`，以驗證`SayHello` Servlet是否如預期般運作。
 
-- 將上述變更提交至AEM WKND專案的存放庫。 然後執行Cloud Manager管道以驗證RDE或AEM環境中的變更。
+- 將上述變更提交至AEM WKND專案的存放庫。 然後執行Cloud Manager管道，驗證RDE或AEM環境中的變更。
 
   ![驗證SayHello servlet - JAR服務](./assets/install-third-party-articafcts/verify-sayhello-servlet-jar-service.png)
 
@@ -353,7 +353,7 @@ AEM WKND專案的[tutorial/install-3rd-party-jar](https://github.com/adobe/aem-g
 
 它完全只是為了示範安裝公共Maven存放庫中沒有的AEM套件的步驟。
 
-ACS AEM Commons套件可在公共Maven存放庫中取得。 請參考[將ACS AEM Commons新增至您的AEM Maven專案](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html)，將其新增至您的AEM專案。
+ACS AEM Commons套件可在公共Maven存放庫中取得。 請參閱[將ACS AEM Commons新增至您的AEM Maven專案](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html)，將其新增至您的AEM專案。
 
 ### 將套件新增至`all`模組
 
@@ -369,7 +369,7 @@ ACS AEM Commons套件可在公共Maven存放庫中取得。 請參考[將ACS AEM
   $mvn clean install
   ```
 
-- 本機建置的封裝位於@ `all/target`，有兩個.zip檔案，其中一個結尾是`-cloud`，適用於AEM as a Cloud Service，另一個適用於AEM 6.X。
+- 本機建置的封裝位於@ `all/target`，有兩個.zip檔案，其中一個結尾是`-cloud`，適用於AEM as a Cloud Service，另一個則適用於AEM 6.X。
 
 - 在AEM WKND專案的`all`模組中，建立`all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install`目錄結構。 `/all/src/main/content`目錄已存在，您只需要建立`jcr_root/apps/wknd-vendor-packages/container/install`目錄。
 
@@ -391,7 +391,7 @@ ACS AEM Commons套件可在公共Maven存放庫中取得。 請參考[將ACS AEM
 
      ![ACS AEM Commons SNAPSHOT版本套件](./assets/install-third-party-articafcts/acs-aem-commons-snapshot-bundle.png)
 
-- 將上述變更提交至AEM WKND專案的存放庫。 然後執行Cloud Manager管道以驗證RDE或AEM環境中的變更。
+- 將上述變更提交至AEM WKND專案的存放庫。 然後執行Cloud Manager管道，驗證RDE或AEM環境中的變更。
 
 ### 重要學習{#key-learnings-package}
 
@@ -402,4 +402,4 @@ ACS AEM Commons套件可在公共Maven存放庫中取得。 請參考[將ACS AEM
 
 ## 摘要
 
-在本教學課程中，您已瞭解如何在建置和部署AEM專案時，安裝公開Maven存放庫中不可用的協力廠商成品（套件、Java jar和套件）。
+在本教學課程中，您已瞭解如何在建置和部署AEM專案時，安裝公開Maven存放庫中不可用的協力廠商成品（套件組合、Java jar和套件）。

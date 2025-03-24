@@ -2,14 +2,14 @@
 title: 使用AEM設定OKTA
 description: 瞭解使用okta使用單一登入的各種組態設定
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 role: Admin
 level: Experienced
 exl-id: 85c9b51e-92bb-4376-8684-57c9c3204b2f
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 153
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 0%
@@ -53,7 +53,7 @@ ht-degree: 0%
 ### 設定SAML驗證處理常式
 
 瀏覽至[configMgr](http://localhost:4502/system/console/configMgr)。
-搜尋並開啟「AdobeGranite SAML 2.0驗證處理常式」。
+搜尋並開啟「Adobe Granite SAML 2.0驗證處理常式」。
 提供下列指定的屬性
 以下是需要指定的主要屬性：
 
@@ -87,11 +87,11 @@ Sling查閱者篩選查閱者屬性熒幕擷圖
 
 #### 設定OKTA整合的DEBUG記錄
 
-在AEM上設定OKTA整合時，檢閱AEM SAML驗證處理常式的DEBUG記錄會很有幫助。 若要將記錄層級設定為DEBUG，請透過AEM OSGi Web Console建立新的Sling記錄器設定。
+在AEM上設定OKTA整合時，檢閱AEM的SAML驗證處理常式的DEBUG記錄會很有幫助。 若要將記錄層級設定為DEBUG，請透過AEM OSGi Web Console建立新的Sling記錄器設定。
 
 請記得在「中繼與生產」上移除或停用此記錄器，以減少記錄雜訊。
 
-在AEM上設定OKTA整合時，檢閱AEM SAML驗證處理常式的DEBUG記錄會很有幫助。 若要將記錄層級設定為DEBUG，請透過AEM OSGi Web Console建立新的Sling記錄器設定。
+在AEM上設定OKTA整合時，檢閱AEM的SAML驗證處理常式的DEBUG記錄會很有幫助。 若要將記錄層級設定為DEBUG，請透過AEM OSGi Web Console建立新的Sling記錄器設定。
 **請記得移除或停用[中繼與生產]上的這個記錄器，以減少記錄雜訊。**
 * 瀏覽至[configMgr](http://localhost:4502/system/console/configMgr)
 

@@ -1,7 +1,7 @@
 ---
 title: AEM Headless第一個教學課程
 description: 瞭解如何成為AEM Headless的第一個應用程式。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: b0ac4b50-5fe5-41a1-9530-8e593d7000c9
 duration: 89
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 2%
@@ -27,11 +27,11 @@ ht-degree: 2%
 
 React是用於建置使用者介面的熱門JavaScript程式庫，以其簡易性、可重複使用性和元件型架構而聞名。 AEM提供強大的內容管理功能並公開Headless API，好讓開發人員透過各種管道和應用程式存取儲存在AEM中的內容和資料。
 
-善用AEM Headless API，您可以從AEM執行個體擷取內容、資產和資料，並使用它們來強化React應用程式。 GraphQL為API的彈性查詢語言，提供從AEM執行個體要求特定資料的高效且精確方式，實現了React與AEM之間的順暢整合。
+善用AEM Headless API，您可以從AEM執行個體擷取內容、資產和資料，並使用它們來強化React應用程式。 GraphQL是一種彈性的API查詢語言，可讓您以有效率且精確的方式向AEM執行個體要求特定資料，實現React與AEM之間的順暢整合。
 
 ![AEM Headless第一個教學課程](./assets/overview/overview.png)
 
-在本教學課程中，我們將逐步引導您完成使用React和AEM Headless API搭配GraphQL來建置網頁體驗的流程。 您將瞭解如何設定開發環境、建立React與AEM之間的連線、使用GraphQL查詢擷取內容，以及在您的網頁應用程式中動態呈現。
+在本教學課程中，我們將逐步引導您完成使用React和AEM Headless API搭配GraphQL來建置Web體驗的程式。 您將瞭解如何設定開發環境、在React和AEM之間建立連線、使用GraphQL查詢擷取內容，以及在您的網頁應用程式中動態呈現。
 
 我們將介紹設定React專案、使用AEM建立驗證、使用GraphQL從AEM查詢內容、處理React元件中的資料，以及利用快取和分頁來最佳化效能等主題。
 

@@ -1,7 +1,7 @@
 ---
 title: 設定Edge Delivery Services的本機開發環境
 description: 如何設定Edge Delivery Services的本機開發環境。
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-14483
 thumbnail: 3425717.jpeg
 duration: 169
 exl-id: 0f3e50f0-88d8-46be-be8b-0f547c3633a6
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 設定本機開發環境
 
-如何設定本機開發環境，以進行Edge Delivery Services開發。
+如何設定Edge Delivery Services開發的本機開發環境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425717/?learn=on)
 
@@ -34,7 +34,7 @@ ht-degree: 1%
    $ sudo npm install -g @adobe/aem-cli
    ```
 
-1. 將目錄變更為專案目錄，該目錄是從[AEM樣板](https://github.com/adobe/aem-boilerplate)範本建立的Git存放庫。
+1. 將目錄變更至您的專案目錄，此目錄是從[AEM樣板](https://github.com/adobe/aem-boilerplate)範本建立的Git存放庫。
 
    ```
    $ git clone git@github.com:my-org/my-project.git

@@ -1,7 +1,7 @@
 ---
 title: 使用增強型聯結器整合Workfront和AEM Assets
 description: 瞭解Adobe Workfront和Experience Manager Assets加強聯結器整合的基本概念。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, User
@@ -10,10 +10,10 @@ jira: KT-9754
 thumbnail: kt-9754.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
+badgeVersions: label="AEM Assets as a Cloud Service， AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
 duration: 49
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 1. [在Workfront和AEM中執行初始設定設定](./setup.md)
 2. [設定Workfront自訂表單與AEM之間的中繼資料同步](./custom-forms.md)
 3. [使用AEM Tags、專案連結檔案夾、Adobe資產連結和檔案夾中繼資料結構描述來最大化價值](./aem-tags-project-linked-folders-and-folder-metadata.md)
-4. [使用進階AEM工作流程來簡化AEM和Workfront以及其他進階設定的業務流程](./advanced-settings-and-workflows.md)
+4. [使用進階AEM工作流程簡化AEM和Workfront及其他進階設定的業務流程](./advanced-settings-and-workflows.md)
 
 <table>
   <td>
@@ -45,7 +45,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-         瞭解如何設定和執行Workfront的初始設定，以便Experience Manager增強型聯結器。
+         瞭解如何設定和執行Workfront for Experience Manager增強型聯結器的初始設定。
       </p>
    </td>
    <!-- Workfront custom forms and metadata mapping -->
@@ -75,7 +75,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-            瞭解如何從Workfront推動AEM分類法、使用專案連結檔案夾和資料至AEM資產檔案夾中繼資料。
+            瞭解如何從Workfront推動AEM分類、使用專案連結檔案夾和資料至AEM資產檔案夾中繼資料。
       </p>
    </td>   
    <!-- Advanced workflows -->
@@ -90,7 +90,7 @@ ht-degree: 0%
       </div>
       <p>
         <br/>
-            瞭解關於AEM增強型聯結器Workfront的進階設定，使用進階工作流程管理資料同步。
+            瞭解適用於AEM增強型聯結器的Workfront的進階設定，使用進階工作流程管理資料同步。
       </p>
    </td>
   </tr>  

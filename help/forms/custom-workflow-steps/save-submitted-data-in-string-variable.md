@@ -2,7 +2,7 @@
 title: 將提交的資料儲存在字串變數中
 description: 自訂處理步驟，以擷取繫結資料並將其儲存在字串型別的工作流程變數中
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ last-substantial-update: 2022-10-02T00:00:00Z
 thumbnail: string-variable.jpg
 exl-id: 65dcbfbb-7eb5-4fa3-aeb3-587c59ee2fe9
 duration: 74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%

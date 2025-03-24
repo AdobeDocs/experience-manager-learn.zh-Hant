@@ -1,7 +1,7 @@
 ---
 title: AMS Dispatcher唯讀或不可變檔案
 description: 瞭解為什麼有些檔案是唯讀或不可編輯的，以及如何進行您想要的功能變更
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Development
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
 duration: 253
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 [&lt; — 上一步：通用記錄檔](./common-logs.md)
 
-## 說明
+## 描述
 
 本檔案將說明哪些檔案已鎖定且不可變更，以及如何正確進行所需的組態設定。
 

@@ -1,7 +1,7 @@
 ---
 title: Edge Delivery Services影片
 description: 瞭解如何使用Edge Delivery Services快速建立網站。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ doc-type: Catalog
 duration: 660
 last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 16%
@@ -48,8 +48,8 @@ ht-degree: 16%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="檔案型撰寫和Edge Delivery Services教學課程" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial./media_18d1c2a9ecd6557f129e41b42a03a8dfbff1e27e9.png?width=400&format=png&optimize=medium" alt="檔案型撰寫和Edge Delivery Services教學課程"
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="檔案式撰寫和Edge Delivery Services教學課程" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial./media_18d1c2a9ecd6557f129e41b42a03a8dfbff1e27e9.png?width=400&format=png&optimize=medium" alt="檔案式撰寫和Edge Delivery Services教學課程"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -57,7 +57,7 @@ ht-degree: 16%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" target="_blank" rel="referrer" title="檔案型撰寫和Edge Delivery Services教學課程">檔案式撰寫與Edge Delivery Services教學課程</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" target="_blank" rel="referrer" title="檔案式撰寫和Edge Delivery Services教學課程">檔案式撰寫和Edge Delivery Services教學課程</a>
                     </p>
                     <p class="is-size-6">瞭解如何建立使用檔案式撰寫功能撰寫的Edge Delivery Services網站。</p>
                 </div>
@@ -71,8 +71,8 @@ ht-degree: 16%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./developing/universal-editor/0-overview.md" title="通用編輯器和Edge Delivery Services教學課程" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="developing/universal-editor/assets/0-overview/hero.png" alt="通用編輯器和Edge Delivery Services教學課程"
+                    <a href="./developing/universal-editor/0-overview.md" title="Universal Editor和Edge Delivery Services教學課程" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="developing/universal-editor/assets/0-overview/hero.png" alt="Universal Editor和Edge Delivery Services教學課程"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -80,7 +80,7 @@ ht-degree: 16%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./developing/universal-editor/0-overview.md" target="_blank" rel="referrer" title="通用編輯器和Edge Delivery Services教學課程">通用編輯器和Edge Delivery Services教學課程</a>
+                        <a href="./developing/universal-editor/0-overview.md" target="_blank" rel="referrer" title="Universal Editor和Edge Delivery Services教學課程">通用編輯器和Edge Delivery Services教學課程</a>
                     </p>
                     <p class="is-size-6">瞭解使用Universal Editor撰寫的Edge Delivery Services網站建立作業的基本知識。</p>
                 </div>
@@ -152,7 +152,7 @@ ht-degree: 16%
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/aem-boilerplate.md" title="使用樣板範本">AEM樣板</a>
             </p>
-            <p class="is-size-6">使用AEM Boilerplate範本設定程式碼存放庫。</p>
+            <p class="is-size-6">使用AEM範本設定程式碼存放庫。</p>
             <a href="./developing/aem-boilerplate.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -231,10 +231,10 @@ ht-degree: 16%
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/preview-and-publish.md" title="預覽和Publish內容"
+            <a href="./developing/preview-and-publish.md" title="預覽和發佈內容"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="預覽和Publish內容">
+                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="預覽和發佈內容">
             </a>
           </figure>
         </div>
@@ -243,7 +243,7 @@ ht-degree: 16%
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 分鐘</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/preview-and-publish.md" title="預覽和Publish內容">預覽和發佈內容</a>
+              <a href="./developing/preview-and-publish.md" title="預覽和發佈內容">預覽和發佈內容</a>
             </p>
             <p class="is-size-6">使用AEM Sidekick預覽和發佈內容。</p>
             <a href="./developing/preview-and-publish.md" class="spectrum-Button

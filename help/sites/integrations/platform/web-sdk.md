@@ -1,7 +1,7 @@
 ---
 title: 整合AEM Sites和Experience Platform Web SDK
-description: 瞭解如何將AEM Sitesas a Cloud Service與Experience Platform Web SDK整合。 此基礎步驟對於整合Adobe Experience Cloud產品(例如Adobe Analytics、Target)或最近的創新產品(例如Real-time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至關重要。
-version: Cloud Service
+description: 瞭解如何將AEM Sites as a Cloud Service與Experience Platform Web SDK整合。 此基礎步驟對於整合Adobe Experience Cloud產品(例如Adobe Analytics、Target)或最近的創新產品(例如Real-Time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至關重要。
+version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
 role: Admin, Architect, Data Architect, Developer
@@ -14,7 +14,7 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service " before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1303
-source-git-commit: b57fb7ce9483dbfe206de7b89e6cf8dba72429a7
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1248'
 ht-degree: 1%
@@ -23,17 +23,17 @@ ht-degree: 1%
 
 # 整合AEM Sites和Experience Platform Web SDK
 
-瞭解如何將AEM as a Cloud Service與Experience Platform[Web SDK](https://experienceleague.adobe.com/docs/experience-platform/web-sdk/home.html)整合。 此基礎步驟對於整合Adobe Experience Cloud產品(例如Adobe Analytics、Target)或最近的創新產品(例如Real-time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至關重要。
+瞭解如何將AEM as a Cloud Service與Experience Platform [網頁SDK](https://experienceleague.adobe.com/docs/experience-platform/web-sdk/home.html)整合。 此基礎步驟對於整合Adobe Experience Cloud產品(例如Adobe Analytics、Target)或最近的創新產品(例如Real-Time Customer Data Platform、Customer Journey Analytics和Journey Optimizer)至關重要。
 
-您也會瞭解如何在[Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home)中收集及傳送[WKND — 範例Adobe Experience Manager專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)頁面檢視資料。
+您也會瞭解如何在[Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home)中收集並傳送[WKND — 範例Adobe Experience Manager專案](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)頁面檢視資料。
 
-完成此設定後，您已實作堅實的基礎。 此外，您已準備好使用類似[Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#)、[Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/en/docs/customer-journey-analytics)和[Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/en/docs/journey-optimizer)的應用程式來推進Experience Platform實作。 進階實作可標準化網頁和客戶資料，協助促進更佳的客戶參與度。
+完成此設定後，您已實作堅實的基礎。 此外，您已準備好使用類似[Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html)、[Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/en/docs/customer-journey-analytics)和[Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/en/docs/journey-optimizer)的應用程式來推進Experience Platform實作。 進階實作可標準化網頁和客戶資料，協助促進更佳的客戶參與度。
 
 ## 先決條件
 
 整合Experience Platform Web SDK時，需要下列專案。
 
-在&#x200B;**AEM中作為Cloud Service**：
+在&#x200B;**AEM as Cloud Service**&#x200B;中：
 
 + AEM管理員對AEM as a Cloud Service環境的存取權
 + 部署管理員對Cloud Manager的存取權
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 ## 建立資料串流 — Experience Platform
 
-資料串流會指示PlatformEdge Network將收集到的資料傳送至何處。 例如，可傳送至Experience Platform、Analytics或Adobe Target。
+資料串流會指示Platform Edge Network將收集到的資料傳送至何處。 例如，可傳送至Experience Platform、Analytics或Adobe Target。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418895?quality=12&learn=on)
@@ -75,11 +75,11 @@ ht-degree: 1%
 
 ## 建立標籤屬性 — Experience Platform
 
-瞭解如何在Experience Platform中建立標籤屬性，以將Web SDK JavaScript程式庫新增至WKND網站。 新定義的標籤屬性有下列資源：
+瞭解如何在Experience Platform中建立標籤屬性，以將網路SDK JavaScript程式庫新增至WKND網站。 新定義的標籤屬性有下列資源：
 
-+ 標籤擴充功能： [核心](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension)和[Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
-+ 資料元素：使用WKND網站的Adobe使用者端資料層擷取page-name、site-section和host-name的自訂程式碼型別資料元素。 此外，XDM物件型別資料元素也符合之前[建立XDM結構描述](#create-xdm-schema---experience-platform)步驟中新建立的WKND XDM結構描述內建。
-+ 規則：每當使用Adobe使用者端資料層觸發`cmp:show`事件來造訪WKND網頁時，將資料傳送至PlatformEdge Network。
++ 標籤延伸模組： [核心](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension)和[Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
++ 資料元素：使用WKND網站的Adobe使用者端資料層擷取page-name、site-section和host-name的自訂代碼型別資料元素。 此外，XDM物件型別資料元素也符合之前[建立XDM結構描述](#create-xdm-schema---experience-platform)步驟中新建立的WKND XDM結構描述內建。
++ 規則：每當使用Adobe Client Data Layer觸發`cmp:show`事件來造訪WKND網頁時，請將資料傳送至Platform Edge Network。
 
 使用&#x200B;**發佈流程**&#x200B;建置及發佈標籤庫時，您可以使用&#x200B;**新增所有變更的資源**&#x200B;按鈕。 若要選取所有資源，例如資料元素、規則和標籤擴充功能，而非識別及挑選個別資源。 此外，在開發階段中，您可以僅將程式庫發佈到&#x200B;_開發_&#x200B;環境，然後驗證並提升到&#x200B;_階段_&#x200B;或&#x200B;_生產_&#x200B;環境。
 
@@ -88,7 +88,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->影片中顯示的資料元素和規則事件程式碼可供您參考，**展開下列摺疊式功能表元素**。 不過，如果您未使用Adobe使用者端資料層，則必須修改下列程式碼，但定義資料元素並在規則定義中使用這些元素的概念仍適用。
+>影片中顯示的資料元素和規則事件程式碼可供您參考，**展開下列摺疊式功能表元素**。 不過，如果您未使用Adobe使用者端資料層，則必須修改下列程式碼，但仍適用定義資料元素及在規則定義中使用資料元素的概念。
 
 
 +++ 資料元素和規則事件程式碼
@@ -170,13 +170,13 @@ ht-degree: 1%
 
 [標籤總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/home)提供資料元素、規則和擴充功能等重要概念的深入知識。
 
-如需整合AEM核心元件與Adobe使用者端資料層的詳細資訊，請參閱[搭配使用Adobe使用者端資料層與AEM核心元件指南](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)。
+如需整合AEM核心元件與Adobe Client Data Layer的詳細資訊，請參閱[搭配使用Adobe Client Data Layer與AEM核心元件指南](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)。
 
-## 將標籤屬性連線至AEM
+## 將Tag屬性連線至AEM
 
 瞭解如何透過AEM中的Adobe IMS和Adobe Experience Platform設定中的標籤，將最近建立的標籤屬性連結至AEM。 建立AEM as a Cloud Service環境時，會自動產生數個Adobe IMS技術帳戶設定，包括標籤。 如需逐步指示，請參閱[使用IMS連線AEM Sites與標籤屬性](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/connect-aem-tag-property-using-ims)。
 
-不過，對於AEM 6.5版本，您必須手動設定。
+不過，若是AEM 6.5版本，您必須手動設定。
 
 
 
@@ -184,11 +184,11 @@ ht-degree: 1%
 
 ### 驗證WKND上的標籤屬性載入
 
-使用Adobe Experience Platform Debugger[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)延伸模組，驗證WKND頁面上是否載入標籤屬性。 您可以確認，
+使用Adobe Experience Platform Debugger [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)擴充功能，驗證WKND頁面上是否載入標籤屬性。 您可以確認，
 
 + 標籤屬性詳細資訊，例如，擴充功能、版本、名稱等。
 + Platform Web SDK程式庫版本，資料流ID
-+ XDM物件作為Experience Platform Web SDK中`events`屬性的一部分
++ XDM物件作為Experience Platform Web SDK中的`events`屬性
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418897?quality=12&learn=on)
 
@@ -204,14 +204,14 @@ ht-degree: 1%
 
 ## Experience Platform中的WKND pageview資料
 
-在使用AEM設定Web SDK後，尤其是在WKND網站上，您可以導覽網站頁面來產生流量。 然後確認正在將Pageview資料擷取至Experience Platform資料集。 在資料集UI中，各種詳細資訊（例如，記錄總數、大小和擷取的批次）會與視覺上吸引人的長條圖一起顯示。
+在使用AEM設定網站SDK後（尤其是在WKND網站上），您可以導覽網站頁面來產生流量。 然後確認頁面檢視資料正在擷取到Experience Platform資料集中。 在資料集UI中，各種詳細資訊（例如，記錄總數、大小和擷取的批次）會與視覺上吸引人的長條圖一起顯示。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418899?quality=12&learn=on)
 
 
 ## 摘要
 
-做得好！您已使用Experience Platform Web SDK完成AEM的設定，以收集並從網站擷取資料。 有了這個基礎，您現在可以探索更多可能性來增強和整合Analytics、Target、Customer Journey Analytics (CJA)和其他許多產品，為您的客戶打造豐富的個人化體驗。 持續學習和探索，以釋放Adobe Experience Cloud的完整潛能。
+做得好！您已使用Experience Platform Web SDK完成AEM的設定，以便從網站收集及擷取資料。 有了這個基礎，您現在可以探索更多可能性來增強和整合Analytics、Target、Customer Journey Analytics (CJA)和其他許多產品，為您的客戶打造豐富的個人化體驗。 持續學習和探索，以釋放Adobe Experience Cloud的完整潛能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418900?quality=12&learn=on)
 
@@ -223,7 +223,7 @@ ht-degree: 1%
 ## 其他資源
 
 + [搭配核心元件使用Adobe使用者端資料層](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)
-+ [整合Experience Platform資料收集標籤與AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview)
-+ [Adobe Experience Platform Web SDK與Edge Network總覽](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/web-sdk/overview)
++ [整合Experience Platform資料收集標籤和AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview)
++ [Adobe Experience Platform Web SDK和Edge Network概觀](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/web-sdk/overview)
 + [資料彙集教學課程](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/overview)
 + [Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview)

@@ -2,7 +2,7 @@
 title: 使用ModSecurity保護您的AEM網站免受DoS攻擊
 description: 瞭解如何使用OWASP ModSecurity核心規則集(CRS)啟用ModSecurity，以保護您的網站免受拒絕服務(DoS)攻擊。
 feature: Security
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
 role: Admin, Architect
 level: Experienced
@@ -12,14 +12,14 @@ doc-type: Article
 last-substantial-update: 2023-08-18T00:00:00Z
 exl-id: 9f689bd9-c846-4c3f-ae88-20454112cf9a
 duration: 783
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
 
-# 使用ModSecurity保護AEM網站免受DoS攻擊
+# 使用ModSecurity保護您的AEM網站免受DoS攻擊
 
 瞭解如何使用Adobe Experience Manager (AEM) Publish Dispatcher上的&#x200B;**OWASP ModSecurity核心規則集(CRS)**，啟用ModSecurity以保護您的網站免受拒絕服務(DoS)攻擊。
 
@@ -28,11 +28,11 @@ ht-degree: 0%
 
 ## 概觀
 
-[Open Web Application Security Project® (OWASP)](https://owasp.org/)基礎提供&#x200B;[**OWASP Top 10**](https://owasp.org/www-project-top-ten/)，其中概述Web應用程式十大最關鍵的安全性考量。
+[Open Web Application Security Project® (OWASP)](https://owasp.org/)基礎提供&#x200B;[**OWASP前10名**](https://owasp.org/www-project-top-ten/)，概述Web應用程式十大最關鍵的安全性考量。
 
 ModSecurity是開放原始碼的跨平台解決方案，可針對針對Web應用程式的一系列攻擊提供保護。 它也允許進行HTTP流量監視、記錄和即時分析。
 
-OWSAP®也提供[OWASP® ModSecurity核心規則集(CRS)](https://github.com/coreruleset/coreruleset)。 CRS是一組用於ModSecurity的通用&#x200B;**攻擊偵測**&#x200B;規則。 因此，CRS的目標是保護網路應用程式免受各種攻擊，包括OWASP Top Ten，而且最少會發出錯誤警示。
+OWSAP®也提供[OWASP® ModSecurity核心規則集(CRS)](https://github.com/coreruleset/coreruleset)。 CRS是一組用於ModSecurity的通用&#x200B;**攻擊偵測**&#x200B;規則。 因此，CRS的目標是保護網頁應用程式免受各種攻擊，包括OWASP前十大攻擊，並將錯誤警報降至最低。
 
 本教學課程示範如何啟用及設定&#x200B;**DOS-PROTECTION** CRS規則，以保護您的網站免受潛在的DoS攻擊。
 
@@ -111,7 +111,7 @@ OWSAP®也提供[OWASP® ModSecurity核心規則集(CRS)](https://github.com/cor
 若要初始化CRS，請移除常見的誤判，並為您的網站新增本機例外，請遵循下列步驟：
 
 1. 若要初始化CRS，請從&#x200B;**REQUEST-901-INITIALIZATION**&#x200B;檔案中移除`.disabled`。 換言之，將`REQUEST-901-INITIALIZATION.conf.disabled`檔案重新命名為`REQUEST-901-INITIALIZATION.conf`。
-1. 若要移除常見的誤判，例如本機IP (127.0.0.1) ping，請從&#x200B;**REQUEST-905-COMMON-EXCEPTIONS**&#x200B;檔案中移除`.disabled`。
+1. 若要移除常見的誤判，例如本機IP (127.0.0.1) Ping，請從&#x200B;**REQUEST-905-COMMON-EXCEPTIONS**&#x200B;檔案中移除`.disabled`。
 1. 若要新增本機例外狀況，例如AEM平台或您的網站特定路徑，請將`REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example`重新命名為`REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf`
    1. 將AEM平台專屬的路徑例外新增至新重新命名的檔案。
 
@@ -152,7 +152,7 @@ OWSAP®也提供[OWASP® ModSecurity核心規則集(CRS)](https://github.com/cor
 
 >[!TIP]
 >
->在AEM 6.5上設定時，請務必使用可驗證AEM健全狀態的個別AMS或內部部署路徑（亦稱為心率路徑）來取代上述路徑。
+>在AEM 6.5上設定時，請務必使用可驗證AEM健全狀態的個別AMS或內部部署路徑（亦即心率路徑）取代上述路徑。
 
 ## 新增ModSecurity Apache設定
 
@@ -224,11 +224,11 @@ OWSAP®也提供[OWASP® ModSecurity核心規則集(CRS)](https://github.com/cor
    </VirtualHost>
    ```
 
-上述&#x200B;_ModSecurity CRS_&#x200B;和&#x200B;_DOS-PROTECTION_&#x200B;設定都可以在AEM WKND Sites專案的[tutorial/enable-modsecurity-crs-dos-protection](https://github.com/adobe/aem-guides-wknd/tree/tutorial/enable-modsecurity-crs-dos-protection)分支上取得，以供您檢閱。
+上述&#x200B;_ModSecurity CRS_&#x200B;和&#x200B;_DOS-PROTECTION_&#x200B;設定均可在AEM WKND Sites專案的[tutorial/enable-modsecurity-crs-dos-protection](https://github.com/adobe/aem-guides-wknd/tree/tutorial/enable-modsecurity-crs-dos-protection)分支上取得，以供您檢閱。
 
 ### 驗證Dispatcher設定
 
-使用AEM as a Cloud Service時，在部署&#x200B;_Dispatcher設定_&#x200B;變更之前，建議使用[AEM SDK的Dispatcher Tools](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html)的`validate`指令碼在本機驗證變更。
+使用AEM as a Cloud Service時，在部署&#x200B;_Dispatcher設定_&#x200B;變更之前，建議使用[AEM SDK的Dispatcher工具](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html)的`validate`指令碼在本機驗證變更。
 
 ```
 # Go inside Dispatcher SDK 'bin' directory
@@ -280,7 +280,7 @@ $ ./validate.sh <YOUR-AEM-PROJECT-CODE-DIR>/dispatcher/src
 
 ModSecurity記錄器設定會記錄DoS攻擊事件的詳細資訊。 若要檢視詳細資訊，請遵循下列步驟：
 
-1. 下載並開啟&#x200B;**Publish Dispatcher**&#x200B;的`httpderror`記錄檔。
+1. 下載並開啟&#x200B;**發佈Dispatcher**&#x200B;的`httpderror`記錄檔。
 1. 搜尋記錄檔中的單字`burst`，以檢視&#x200B;**錯誤**&#x200B;行
 
    ```

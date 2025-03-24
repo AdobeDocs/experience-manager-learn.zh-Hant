@@ -1,7 +1,7 @@
 ---
 title: AEM Assets管理員檢視影片播放清單
-description: 瞭解如何運用此影片播放清單集合的AEM Assetsas a Cloud Service管理員功能，以增強您的產品技能。
-version: Cloud Service
+description: 瞭解如何運用此影片播放清單集合的AEM Assets as a Cloud Service管理員功能，以提升您的產品技能。
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: User
 level: Beginner
@@ -9,7 +9,7 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 924b3bab-e0ed-4b07-bded-344aab61eac5
-source-git-commit: 33e0ded0cdcb5d8ed146fdc59c6f37495cd251eb
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ![AEM Assets管理員檢視](./assets/admin-view.png){align="center"}
 
-探索這些播放清單以掌握AEM Assetsas a Cloud Service管理員檢視，包括設定、最佳化、使用以及與創意工作流程無縫整合。 取得成功使用AEM Assets as a Cloud Service所需的深入解析。
+探索這些播放清單以掌握AEM Assets as a Cloud Service管理員檢視，其中涵蓋設定、最佳化、使用以及與創意工作流程的無縫整合。 獲取成功使用AEM Assets as a Cloud Service所需的深入解析。
 
 ## 設定管理員檢視
 
-開始使用基本設定和設定，讓AEM Assetsas a Cloud Service為您的團隊和專案順暢地運作。
+開始使用基本設定和設定，讓AEM Assets as a Cloud Service為您的團隊和專案順暢地運作。
 
 <!-- CARDS
 
@@ -208,7 +208,7 @@ ht-degree: 0%
 
 ## 使用AEM Assets連線創意工作流程
 
-將AEM Assetsas a Cloud Service與您的創意工具整合，釋放順暢的協同合作，確保工作流程一致且有效率。
+將AEM Assets as a Cloud Service與您的創意工具整合，釋放順暢的協同合作，確保工作流程一致且有效率。
 
 <!-- CARDS
 
@@ -245,8 +245,8 @@ ht-degree: 0%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" title="搭配AEM Assets Content Automation使用創意操作" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1d229d6d304f8ef16f59a8e759bd1b55a9b3b4d1d.jpeg?width=400&format=pjpg&optimize=medium" alt="搭配AEM Assets Content Automation使用創意操作"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" title="透過AEM Assets Content Automation使用Creative作業" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1d229d6d304f8ef16f59a8e759bd1b55a9b3b4d1d.jpeg?width=400&format=pjpg&optimize=medium" alt="透過AEM Assets Content Automation使用Creative作業"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -254,7 +254,7 @@ ht-degree: 0%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" target="_blank" rel="referrer" title="搭配AEM Assets Content Automation使用創意操作">搭配AEM Assets Content Automation使用創意作業</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" target="_blank" rel="referrer" title="透過AEM Assets Content Automation使用Creative作業">搭配AEM Assets Content Automation使用Creative作業</a>
                     </p>
                     <p class="is-size-6">瞭解如何使用Content Automation附加元件在Adobe Experience Manager Assets上執行Creative Cloud作業。</p>
                 </div>

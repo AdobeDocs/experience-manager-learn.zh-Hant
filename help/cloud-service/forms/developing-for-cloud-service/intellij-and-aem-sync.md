@@ -5,12 +5,12 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 jira: KT-8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
 duration: 92
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Cygwin是相容於POSIX的程式設計和執行階段環境，可在Microsoft Wi
 
 選取aem-banking-application專案中的任何專案，例如ui.content，然後按一下滑鼠右鍵，您應該會看到repo選項，而在repo選項下方，您會看到我們先前新增的4個命令。
 
-## 設定AEM編寫執行個體{#set-up-aem-author-instance}
+## 設定AEM作者例項{#set-up-aem-author-instance}
 
 您可以依照下列步驟，在本機系統上快速設定雲端就緒執行個體。
 * [下載最新的AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)

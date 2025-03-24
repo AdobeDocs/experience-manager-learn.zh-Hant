@@ -2,18 +2,18 @@
 title: 載入及觸發Target呼叫
 description: 瞭解如何使用標籤規則，將引數載入、傳遞至頁面請求，以及從您的網站頁面觸發Target呼叫。
 feature: Core Components, Adobe Client Data Layer
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6133
 thumbnail: 41243.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 duration: 588
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 1%
@@ -22,13 +22,13 @@ ht-degree: 1%
 
 # 載入及觸發Target呼叫 {#load-fire-target}
 
-瞭解如何使用標籤規則，將引數載入、傳遞至頁面請求，以及從您的網站頁面觸發Target呼叫。 系統會使用Adobe使用者端資料層，擷取網頁資訊並以引數形式傳遞，此資料層可讓您收集和儲存訪客的網頁體驗相關資料，並且讓此資料易於存取。
+瞭解如何使用標籤規則，將引數載入、傳遞至頁面請求，以及從您的網站頁面觸發Target呼叫。 系統會使用Adobe使用者端資料層，以引數形式擷取網頁資訊並加以傳遞，此資料層可讓您收集和儲存訪客的網頁體驗相關資料，並且讓此資料易於存取。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
 ## 頁面載入規則
 
-Adobe使用者端資料層是事件導向的資料層。 載入AEM Page資料層時，會觸發事件`cmp:show` 。 在影片中，使用自訂事件叫用`tags Library Loaded`規則。 您可以在下方找到視訊中用於自訂事件和資料元素的程式碼片段。
+Adobe使用者端資料層是事件導向的資料層。 載入AEM頁面資料層時，會觸發事件`cmp:show` 。 在影片中，使用自訂事件叫用`tags Library Loaded`規則。 您可以在下方找到視訊中用於自訂事件和資料元素的程式碼片段。
 
 ### 自訂頁面顯示事件{#page-event}
 

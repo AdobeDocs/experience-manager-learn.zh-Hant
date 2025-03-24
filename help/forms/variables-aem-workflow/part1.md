@@ -1,21 +1,21 @@
 ---
-title: AEM工作流程中的變數[Part1]
+title: AEM工作流程中的變數[第1部分]
 description: 在AEM工作流程中使用XML、JSON、ArrayList、檔案型別的變數
 feature: Adaptive Forms, Workflow
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: f9782684-3a74-4080-9680-589d3f901617
 duration: 561
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
 
 ---
 
-# AEM Workflow中的XML變數
+# AEM工作流程中的XML變數
 
 如果您有XSD式最適化表單，而且想要從工作流程中的最適化表單提交中擷取值，通常會使用XML型別的變數。
 

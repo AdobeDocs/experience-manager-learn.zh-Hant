@@ -4,12 +4,12 @@ description: 在AEM Forms as a Cloud Service中建立可點按的影像元件
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15968
 exl-id: b635f171-775d-480e-bf7a-c92ab4af0aee
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 1%
@@ -47,7 +47,7 @@ apps\corecomponent\components\adaptiveForm
 
 ## 建立svg.html
 
-建立名為svg.html的檔案。 此檔案會呈現USA map的SVG。將[svg.html](assets/svg.html)的內容複製到新建立的檔案中。 您複製的是美國地圖的SVG。 儲存檔案。
+建立名為svg.html的檔案。 此檔案會呈現USA地圖的SVG。將[svg.html](assets/svg.html)的內容複製到新建立的檔案中。 您複製的是美國地圖的SVG。 儲存檔案。
 
 ## 部署專案
 

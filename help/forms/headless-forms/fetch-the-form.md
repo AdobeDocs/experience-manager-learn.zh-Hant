@@ -2,14 +2,14 @@
 title: 擷取最適化表單的JSON以內嵌
 description: 使用API擷取最適化表單的json
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-13285
 topic: Development
 role: User
 level: Intermediate
 exl-id: ee534724-54ea-48e1-8c92-de1c56a928d4
 duration: 50
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # 擷取表單的JSON
 
-登入您的AEM Forms作者執行個體，並使用&#x200B;**Blank with Core Components**&#x200B;範本建立新的最適化。 將您的表單Publish至發佈執行個體。
+登入您的AEM Forms作者執行個體，並使用&#x200B;**Blank with Core Components**&#x200B;範本建立新的最適化。 將您的表單發佈到發佈執行個體。
 
 若要內嵌表單，我們會先對發佈伺服器發出get呼叫，擷取最適化表單的json。
 

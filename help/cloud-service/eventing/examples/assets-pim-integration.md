@@ -1,7 +1,7 @@
 ---
 title: PIM整合的AEM Assets事件
 description: 瞭解如何整合AEM Assets和產品資訊管理(PIM)系統，以進行資產中繼資料更新。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1517'
 ht-degree: 0%
@@ -25,11 +25,11 @@ ht-degree: 0%
 >
 >本教學課程使用OpenAPI型AEM API。 如果您有興趣存取，建議您將使用案例說明以電子郵件寄至[aem-apis@adobe.com](mailto:aem-apis@adobe.com)，作為搶先使用方案的一部分。
 
-瞭解如何使用OpenAPI型Assets Author API接收AEM事件並對其採取行動，以更新AEM中的內容狀態。
+瞭解如何使用OpenAPI型AEM製作API接收Assets事件並據以更新AEM中的內容狀態。
 
-如何處理收到的事件取決於業務需求。 例如，事件資料可用來更新協力廠商系統或AEM，或同時更新兩者。
+如何處理收到的事件取決於業務需求。 例如，事件資料可用來更新協力廠商系統或AEM，或兩者皆更新。
 
-此範例示範如何將協力廠商系統(例如產品資訊管理(PIM)系統)與AEM as a Cloud Service Assets整合。 在收到AEM Assets事件時，系統會對其進行處理以從PIM系統擷取其他中繼資料，並更新AEM中的資產中繼資料。 更新的資產中繼資料可包含SKU、供應商名稱或其他產品詳細資料等額外資訊。
+此範例示範如何將協力廠商系統(例如產品資訊管理(PIM)系統)與AEM as a Cloud Service Assets整合。 在收到AEM Assets事件時，系統會對其進行處理，以從PIM系統擷取其他中繼資料，並更新AEM中的資產中繼資料。 更新的資產中繼資料可包含SKU、供應商名稱或其他產品詳細資料等額外資訊。
 
 為了接收及處理AEM Assets事件[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)，使用無伺服器平台。 不過，您也可以在協力廠商系統或Amazon EventBridge中使用其他事件處理系統，例如Webhook。
 
@@ -38,8 +38,8 @@ ht-degree: 0%
 用於PIM整合的![AEM Assets事件](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
 
 1. 當資產上傳完成且所有資產處理活動也完成時，AEM作者服務會觸發&#x200B;_資產處理完成_&#x200B;事件。 等候資產處理完成可確保任何現成可用的處理（例如中繼資料擷取）已完成。
-1. 事件已傳送至[Adobe I/O事件](https://developer.adobe.com/events/)服務。
-1. Adobe I/O事件服務會將事件傳遞至[Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)進行處理。
+1. 事件已傳送至[Adobe I/O Events](https://developer.adobe.com/events/)服務。
+1. Adobe I/O Events服務將事件傳遞至[Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)以進行處理。
 1. 「Adobe I/O Runtime動作」會呼叫PIM系統的API來擷取其他中繼資料，例如SKU、供應商資訊或其他詳細資訊。
 1. 從PIM擷取的其他中繼資料會在AEM Assets中使用以OpenAPI為基礎的[Assets作者API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)更新。
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 高階開發步驟為：
 
 1. [更新AEM as a Cloud Service環境](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
-1. [啟用AEM API存取](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
+1. [啟用AEM API存取權](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
 1. [在Adobe Developer Console (ADC)中建立專案](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
 1. [初始化專案以進行本機開發](./runtime-action.md#initialize-project-for-local-development)
 1. 在ADC中設定專案
@@ -106,9 +106,9 @@ ht-degree: 0%
 
 若要啟用ADC Project的OAuth伺服器對伺服器認證ClientID來與AEM執行個體通訊，您必須設定AEM執行個體。
 
-這是透過在AEM專案的`config.yaml`檔案中定義組態來完成。 然後，使用Cloud Manager中的設定管道來部署`config.yaml`檔案。
+若要完成設定，請在AEM專案的`config.yaml`檔案中定義設定。 然後，使用Cloud Manager中的設定管道來部署`config.yaml`檔案。
 
-- 在AEM專案中，從`config`資料夾尋找或建立`config.yaml`檔案。
+- 在AEM專案中，從`config`資料夾中找到或建立`config.yaml`檔案。
 
   ![找到設定YAML](../assets/examples/assets-pim-integration/locate-config-yaml.png)
 
@@ -331,10 +331,10 @@ ht-degree: 0%
 
 ## 概念與主要要領
 
-企業通常需要在AEM和其他系統（例如PIM）之間同步資產中繼資料。 使用AEM Eventing可以達到此類要求。
+企業通常需要在AEM和其他系統（例如PIM）之間同步資產中繼資料。 使用AEM Eventing即可達到這類要求。
 
 - 資產中繼資料擷取程式碼會在AEM外部執行，避免AEM Author服務上的負載，因此是一種獨立擴展的事件導向架構。
 - 新推出的Assets Author API可用於更新AEM中的資產中繼資料。
 - API驗證使用OAuth伺服器對伺服器（亦稱為使用者端認證流程），請參閱[OAuth伺服器對伺服器認證實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)。
 - 與其使用Adobe I/O Runtime動作，其他Webhook或Amazon EventBridge可以用來接收AEM Assets事件和處理中繼資料更新。
-- 透過AEM Eventing的資產事件可讓企業自動化及簡化關鍵程式，提升整個內容生態系統的效率及一致性。
+- 透過AEM舉辦資產活動可讓企業自動化及簡化關鍵程式，進而促進內容生態系統的效率及一致性。

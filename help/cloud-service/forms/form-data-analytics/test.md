@@ -5,15 +5,15 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Integrations, Development
 jira: KT-12557
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
 duration: 38
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 1%
@@ -55,10 +55,10 @@ _satellite.setDebug(true)
 
 ## 使用Adobe Experience Platform Debugger
 
-將[AEP偵錯工具擴充功能](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html)新增至瀏覽器（您必須登入），以取得更多偵錯資訊
+將[AEP Debugger擴充功能](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html)新增至瀏覽器（您必須登入），以取得更多偵錯資訊
 
 ![platform-debugger](assets/platform-debugger.png)
 
 ## 恭喜
 
-您已成功將AEM Formsas a Cloud Service與Adobe Analytics整合，以報告表單資料欄位。
+您已成功將AEM Forms as a Cloud Service與Adobe Analytics整合，以報告表單資料欄位。

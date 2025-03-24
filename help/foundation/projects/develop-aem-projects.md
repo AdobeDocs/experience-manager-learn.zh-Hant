@@ -1,7 +1,7 @@
 ---
 title: 在AEM中開發專案
-description: 說明如何為AEM專案開發的開發教學課程。 在本教學課程中，我們將建立一個自訂的專案範本，可用來在AEM中建立新的專案，以管理內容製作工作流程和任務。
-version: 6.4, 6.5
+description: 說明如何為AEM專案開發的開發教學課程。 在本教學課程中，我們將建立一個自訂專案範本，可用來在AEM中建立新的專案，以管理內容製作工作流程和任務。
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Projects, Workflow
 doc-type: Tutorial
 topic: Development
@@ -9,7 +9,7 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1417
-source-git-commit: 54a7f93637545a4467c4c587bbc3d1d0de5c64a1
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '4441'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 在AEM中開發專案
 
-此開發教學課程說明如何為[!DNL AEM Projects]開發。 在本教學課程中，我們將建立一個自訂的專案範本，可用來在AEM中建立專案，以管理內容製作工作流程和任務。
+此開發教學課程說明如何為[!DNL AEM Projects]開發。 在本教學課程中，我們將建立一個自訂專案範本，可用來在AEM中建立專案，以管理內容製作工作流程和任務。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-[[!DNL AEM Projects]](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)是AEM的一項功能，設計旨在讓您可以更輕鬆地管理與內容建立相關的所有工作流程和工作，並將其群組為AEM Sites或Assets實作的一部分。
+[[!DNL AEM Projects]](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)是AEM的一項功能，旨在讓您可以更輕鬆地管理與內容建立相關的所有工作流程和工作，並將其群組為AEM Sites或Assets實作的一部分。
 
 AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)。 建立專案時，作者可以從這些可用的範本中進行選擇。 具有獨特業務需求的大型AEM實作將想要建立自訂專案範本，以符合其需求。 透過建立自訂專案範本，開發人員可以設定專案控制面板、連結至自訂工作流程，並為專案建立其他業務角色。 我們將檢視專案範本的結構，並建立範例範本。
 
@@ -63,7 +63,7 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
 
 專案範本的根節點為&#x200B;**cq：Template**&#x200B;型別。 您可以在此節點上設定顯示在建立專案精靈中的屬性&#x200B;**jcr：title**&#x200B;和&#x200B;**jcr：description**。 也有名稱為&#x200B;**精靈**&#x200B;的屬性，指向將填入專案屬性的表單。 預設值： **/libs/cq/core/content/projects/wizard/steps/defaultproject.html**&#x200B;在大多數情況下應該可以正常運作，因為它允許使用者填入基本的Project屬性並新增群組成員。
 
-*&#42;請注意，「建立專案精靈」未使用SlingPOSTServlet。 而是將值發佈到自訂servlet：**com.adobe.cq.projects.impl.servlet.ProjectServlet**。 新增自訂欄位時，應將此列入考量。*
+*&#42;請注意，[建立專案精靈]不使用Sling POST servlet。 而是將值發佈到自訂servlet：**com.adobe.cq.projects.impl.servlet.ProjectServlet**。 新增自訂欄位時，應將此列入考量。*
 
 您可以找到翻譯專案範本的自訂精靈範例： **/libs/cq/core/content/projects/wizard/translationproject/defaultproject**。
 
@@ -90,7 +90,7 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
 
 ## 建立專案範本 {#creating-project-template}
 
-由於我們主要是複製/設定節點，因此將使用CRXDE Lite。 在您的本機AEM執行個體中，開啟[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)。
+由於我們主要是複製/設定節點，因此將使用CRXDE Lite。 在本機AEM執行個體中，開啟[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)。
 
 1. 首先，在`/apps/&lt;your-app-folder&gt;`下建立名為`projects`的資料夾。 在名為`templates`的資料夾下建立另一個資料夾。
 
@@ -264,7 +264,7 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
 
 ## 為什麼是工作流程？
 
-傳統上，以核准流程為中心的AEM工作流程會使用參與者工作流程步驟。 AEM收件匣包含有關工作和工作流程的詳細資訊，以及與AEM專案的增強整合。 這些功能讓使用「專案建立作業」處理步驟成為更具吸引力的選項。
+傳統上以核准流程為中心的AEM工作流程會使用參與者工作流程步驟。 AEM的收件匣包含有關工作和工作流程的詳細資訊，以及與AEM專案的增強整合。 這些功能讓使用「專案建立作業」處理步驟成為更具吸引力的選項。
 
 ### 為何要執行工作？
 
@@ -302,7 +302,7 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
 
 ## 建立工作流程模型
 
-1. 從AEM「開始」功能表，導覽至「工具」 — >「工作流程」 — >「模型」。 按一下右上角的「建立」以建立工作流程模型。
+1. 從AEM開始功能表，導覽至工具 — >工作流程 — >模型。 按一下右上角的「建立」以建立工作流程模型。
 
    為新模型指定標題「內容核准工作流程」和URL名稱「content-approval-workflow」。
 
@@ -310,7 +310,7 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
 
    [如需與建立工作流程相關的詳細資訊，請閱讀這裡](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-models)。
 
-1. 根據最佳實務，自訂工作流程應該分組到他們自己的資料夾中/etc/workflow/models下方。 在CRXDE Lite中，在名為&#x200B;**&quot;aem-guides&quot;**&#x200B;的/etc/workflow/models下方建立一個&#x200B;**&quot;nt：folder&quot;**。 新增子資料夾可確保自訂工作流程在升級或Service Pack安裝期間不會意外覆寫。
+1. 根據最佳實務，自訂工作流程應該分組到他們自己的資料夾中/etc/workflow/models下方。 在CRXDE Lite中，在名為&#x200B;**&quot;aem-guides&quot;**&#x200B;的/etc/workflow/models底下建立&#x200B;**&quot;nt：folder&quot;**。 新增子資料夾可確保自訂工作流程在升級或Service Pack安裝期間不會意外覆寫。
 
    &#42;請注意，請勿將資料夾或自訂工作流程放在ootb子資料夾（例如/etc/workflow/models/dam或/etc/workflow/models/projects）之下，因為升級或Service Pack也可能會覆寫整個子資料夾。
 
@@ -322,12 +322,12 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
    >
    >如果使用AEM 6.4+，工作流程的位置已變更。 如需詳細資訊，請參閱[。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
-   如果使用AEM 6.4+，則會在`/conf/global/settings/workflow/models`下建立工作流程模型。 使用/conf目錄重複上述步驟，並新增名為`aem-guides`的子資料夾，然後將`content-approval-workflow`移到其下方。
+   如果使用AEM 6.4+，工作流程模型會在`/conf/global/settings/workflow/models`下建立。 使用/conf目錄重複上述步驟，並新增名為`aem-guides`的子資料夾，然後將`content-approval-workflow`移到其下方。
 
    ![新式工作流程定義位置](./assets/develop-aem-projects/modern-workflow-definition-location.png)
 工作流程模型在6.4+中的位置
 
-1. AEM 6.3中引進的功能是將「工作流程階段」新增至指定工作流程。 這些階段會從「工作流程資訊」標籤上的「收件匣」顯示給使用者。 它會向使用者顯示工作流程中的目前階段，以及工作流程之前和之後的階段。
+1. AEM 6.3引進的功能是將「工作流程階段」新增至指定工作流程。 這些階段會從「工作流程資訊」標籤上的「收件匣」顯示給使用者。 它會向使用者顯示工作流程中的目前階段，以及工作流程之前和之後的階段。
 
    若要設定階段，請從Sidekick開啟「頁面屬性」對話方塊。 第四個索引標籤標示為「階段」。 新增下列值以設定此工作流程的三個階段：
 
@@ -347,7 +347,7 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
 
 1. 「建立專案任務」工作流程處理的設計目的，是建立「任務」作為工作流程中的步驟。 只有在完成任務後，工作流程才會前進。 「建立專案任務」步驟的強大方面是它可以讀取工作流程中繼資料值，並使用這些值來動態建立任務。
 
-   首先刪除預設建立的參與者步驟。 從元件功能表的Sidekick展開&#x200B;**「專案」**&#x200B;子標題，並將&#x200B;**「建立專案任務」**&#x200B;拖放到模型上。
+   首先刪除預設建立的參與者步驟。 從Sidekick的元件功能表展開&#x200B;**「專案」**&#x200B;子標題，並將&#x200B;**「建立專案任務」**&#x200B;拖放至模型上。
 
    連按兩下「建立專案任務」步驟以開啟工作流程對話方塊。 設定下列屬性：
 
@@ -478,7 +478,7 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
        "Send Back for Revision"
    ```
 
-   由於這是一般核准路由，因此任務的優先順序會設定為Medium。 此外，我們給核准者群組5天的時間來完成任務。 「工作」標籤上的被指定者會保留空白，因為我們會在「進階設定」標籤中動態地指定此被指定者。 完成此任務時，我們為核准者群組提供兩種可能的路徑：**「核准和Publish」** （如果他們核准內容且內容可以發佈）和&#x200B;**「傳回以進行修訂」** （如果原始編輯器需要更正的問題）。 核准者可留下附註，讓原始編輯者看到工作流程是否傳回給他/她。
+   由於這是一般核准路由，因此任務的優先順序會設定為Medium。 此外，我們給核准者群組5天的時間來完成任務。 「工作」標籤上的被指定者會保留空白，因為我們會在「進階設定」標籤中動態地指定此被指定者。 完成此任務時，我們為核准者群組提供兩種可能的路徑：如果他們核准內容且可以發佈，則為&#x200B;**「核准並發佈」**；如果原始編輯器需要更正問題，則為&#x200B;**「傳回以便修訂」**。 核准者可留下附註，讓原始編輯者看到工作流程是否傳回給他/她。
 
 在本教學課程的前面，我們建立了包含核准者角色的專案範本。 每次從此範本建立新專案時，專案特定的群組都會為核准者角色建立。 就像參與者步驟一樣，一個任務只能指派給使用者或群組。 我們想要將此任務指派給對應至「核准者群組」的專案群組。 所有從專案內啟動的工作流程都會有中繼資料，會將專案角色對應至專案特定群組。
 
@@ -539,7 +539,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. 由於「核准者」群組可選擇將工作流程傳送回原始編輯器以進行進一步的修訂，因此我們將仰賴&#x200B;**跳至**&#x200B;步驟來讀取上次採取的動作，並將工作流程路由至開頭，或讓工作流程繼續。
 
-   將「跳到步驟」元件(可在「工作流程」下的Sidekick中找到)拖放到OR分割下，放置該元件重新結合的位置。 連按兩下並在對話方塊中設定下列屬性：
+   將「跳到步驟」元件(可在Sidekick中的「工作流程」下方找到)拖放到OR分割下方，放置該元件重新結合的位置。 連按兩下並在對話方塊中設定下列屬性：
 
    ```
    Common Tab
@@ -572,7 +572,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
 1. 為了發佈裝載，我們將使用ootb **啟動頁面/資產**&#x200B;程式步驟。 此程式步驟幾乎不需要任何設定，而且會將工作流程的裝載新增至復寫佇列以進行啟用。 我們將在「跳至」步驟下方新增步驟，如此一來，只有核准者群組已核准要發佈的內容，或原始編輯者選擇「略過核准」路徑時，才能到達該步驟。
 
-   將&#x200B;**啟動頁面/資產**&#x200B;程式步驟(可在WCM工作流程下的Sidekick中找到)拖放到模型中跳到步驟的下方。
+   將&#x200B;**啟動頁面/資產**&#x200B;程式步驟(可在Sidekick中的WCM工作流程下找到)拖放到模型中跳到步驟的下方。
 
    ![工作流程模型完成](assets/develop-aem-projects/workflow-model-final.png)
 
@@ -660,7 +660,7 @@ task.setCurrentAssignee(projectApproverGrp);
    我們將在&#x200B;**優先順序**&#x200B;節點下方新增&#x200B;**nt：unstructured**&#x200B;的&#x200B;**專案**&#x200B;節點。 在&#x200B;**專案**&#x200B;節點底下再新增3個節點，以填入「高」、「Medium」和「低」的選擇選項。 每個節點的型別為&#x200B;**nt：unstructured**，應該有&#x200B;**文字**&#x200B;和&#x200B;**值**&#x200B;屬性。 文字和值應該是相同的值：
 
    1. 高
-   1. 中等
+   1. 中
    1. 低
 
    針對Medium節點，新增名稱為&quot;**selected&quot;**&#x200B;且值設定為&#x200B;**true**&#x200B;的其他布林值屬性。 這將確保Medium是選取欄位中的預設值。
@@ -735,7 +735,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
    >[!NOTE]
    >
-   >如果使用AEM 6.4，Workflow的位置已變更。 將`modelId`屬性指向`/var/workflow/models/aem-guides/content-approval-workflow`下的執行階段工作流程模型的位置
+   >如果使用AEM 6.4，工作流程的位置已變更。 將`modelId`屬性指向`/var/workflow/models/aem-guides/content-approval-workflow`下的執行階段工作流程模型的位置
    >
    >
    >請參閱[此處，以取得工作流程位置變更的詳細資料。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)

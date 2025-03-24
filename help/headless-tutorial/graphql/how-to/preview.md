@@ -1,7 +1,7 @@
 ---
 title: 內容片段預覽
-description: 瞭解如何使用內容片段預覽給所有作者，以快速瞭解內容變更如何影響您的AEM Headless體驗。
-version: Cloud Service
+description: 瞭解如何使用內容片段預覽來預覽所有作者，以快速瞭解內容變更如何影響您的AEM Headless體驗。
+version: Experience Manager as a Cloud Service
 feature: Content Fragments
 topic: Headless, Content Management, Development
 role: Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-10841
 thumbnail: 3416906.jpeg
 exl-id: 247d40a3-ff67-4c1f-86bf-3794d7ce3e32
 duration: 463
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -28,7 +28,7 @@ AEM Headless應用程式支援整合式撰寫預覽。 預覽體驗會連結AEM�
 若要使用內容片段預覽，必須符合數個條件：
 
 1. 應用程式必須部署至作者可存取的URL
-1. 應用程式必須設定為連線至AEM作者服務(而非AEM Publish服務)
+1. 應用程式必須設定為連線至AEM作者服務(而非AEM發佈服務)
 1. 應用程式必須設計有可使用[內容片段路徑或ID](#url-expressions)的URL或路由，以選取要顯示在應用程式體驗中預覽的內容片段。
 
 ## 預覽URL
@@ -37,11 +37,11 @@ AEM Headless應用程式支援整合式撰寫預覽。 預覽體驗會連結AEM�
 
 ![內容片段模型預覽URL](./assets/preview/cf-model-preview-url.png)
 
-1. 以管理員身分登入AEM Author服務
+1. 以管理員身分登入AEM作者服務
 1. 導覽至&#x200B;__工具>一般>內容片段模型__
 1. 選取&#x200B;__內容片段模型__，並從上方動作列選取&#x200B;__屬性__。
 1. 使用[URL運算式](#url-expressions)輸入內容片段模型的預覽URL
-   + 預覽URL必須指向連線至AEM Author服務的應用程式部署。
+   + 預覽URL必須指向連線至AEM作者服務的應用程式部署。
 
 ### URL運算式
 

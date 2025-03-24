@@ -1,7 +1,7 @@
 ---
 title: 使用AEM元件自訂Adobe使用者端資料層
-description: 瞭解如何使用自訂AEM元件的內容來自訂Adobe使用者端資料層。 瞭解如何使用AEM核心元件提供的API來擴充及自訂資料層。
-version: Cloud Service
+description: 瞭解如何使用自訂Adobe元件的內容來自訂AEM Client Data Layer。 瞭解如何使用AEM核心元件提供的API來擴充及自訂資料層。
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2022-09-20T00:00:00Z
 doc-type: Tutorial
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
 duration: 452
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 2%
@@ -21,13 +21,13 @@ ht-degree: 2%
 
 # 使用AEM元件自訂Adobe使用者端資料層 {#customize-data-layer}
 
-瞭解如何使用自訂AEM元件的內容來自訂Adobe使用者端資料層。 瞭解如何使用[AEM核心元件提供的API來擴充](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)和自訂資料層。
+瞭解如何使用自訂Adobe元件的內容來自訂AEM Client Data Layer。 瞭解如何使用[AEM核心元件提供的API來擴充](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)和自訂資料層。
 
 ## 您即將建置的內容
 
 ![署名資料層](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
-在本教學課程中，讓我們透過更新WKND [Byline元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html)，探索擴充Adobe使用者端資料層的各種選項。 _Byline_&#x200B;元件是&#x200B;**自訂元件**，在本教學課程中學到的課程可套用至其他自訂元件。
+在本教學課程中，讓我們透過更新WKND [Byline元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html)，探索擴充Adobe Client Data Layer的各種選項。 _Byline_&#x200B;元件是&#x200B;**自訂元件**，在本教學課程中學到的課程可套用至其他自訂元件。
 
 ### 目標 {#objective}
 
@@ -63,7 +63,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   > 對於AEM 6.5和最新的Service Pack，將`classic`設定檔新增到Maven命令：
+   > 若為AEM 6.5和最新的Service Pack，請將`classic`設定檔新增至Maven命令：
    >
    > `mvn clean install -PautoInstallSinglePackage -Pclassic`
 
@@ -173,9 +173,9 @@ ht-degree: 2%
 
 ## 更新署名HTL {#htl}
 
-接下來，更新`Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en)。 HTL (HTML範本語言)是用於呈現元件HTML的範本。
+接下來，更新`Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en)。 HTL (HTML範本語言)是用來呈現元件HTML的範本。
 
-使用每個AEM元件上的特殊資料屬性`data-cmp-data-layer`來公開其資料層。 AEM核心元件提供的JavaScript會尋找此資料屬性。 此資料屬性的值會以Byline Sling模型的`getData()`方法傳回的JSON字串填入，並插入至Adobe使用者端資料層。
+每個AEM元件上的特殊資料屬性`data-cmp-data-layer`可用來公開其資料層。 AEM核心元件所提供的JavaScript會尋找此資料屬性。 此資料屬性的值會以Byline Sling模型的`getData()`方法傳回的JSON字串填入，並插入至Adobe使用者端資料層。
 
 1. 在IDE中開啟`aem-guides-wknd`專案。 導覽至`ui.apps`模組。
 1. 在`ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`開啟檔案`byline.html`。
@@ -204,7 +204,7 @@ ht-degree: 2%
 
 1. 返回瀏覽器，然後使用Byline元件重新開啟頁面： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html)。
 
-1. 開啟開發人員工具，並檢查Byline元件的頁面HTML來源：
+1. 開啟開發人員工具，並檢查Byline元件頁面的HTML來源：
 
    ![署名資料層](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
@@ -235,7 +235,7 @@ ht-degree: 2%
 
 ## 新增點選事件 {#click-event}
 
-Adobe使用者端資料層是事件導向，而觸發動作的最常見事件之一是`cmp:click`事件。 AEM核心元件可透過資料元素`data-cmp-clickable`輕鬆註冊您的元件。
+Adobe Client Data Layer是事件導向，而觸發動作的最常見事件之一是`cmp:click`事件。 AEM核心元件可透過資料元素`data-cmp-clickable`輕鬆註冊您的元件。
 
 可點按的元素通常是CTA按鈕或導覽連結。 很遺憾，署名元件沒有這些專案，但我們仍會註冊它，因為這可能適用於其他自訂元件。
 
@@ -260,7 +260,7 @@ Adobe使用者端資料層是事件導向，而觸發動作的最常見事件之
 
 1. 返回瀏覽器，然後使用新增的署名元件重新開啟頁面： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html)。
 
-   為了測試事件，我們將使用開發人員控制檯手動新增一些JavaScript。 請參閱[將Adobe使用者端資料層與AEM核心元件搭配使用](data-layer-overview.md)，以取得如何執行此動作的影片。
+   為了測試事件，我們將使用開發人員控制檯手動新增一些JavaScript。 如需如何執行此動作的影片，請參閱[搭配使用Adobe使用者端資料層與AEM核心元件](data-layer-overview.md)。
 
 1. 開啟瀏覽器的開發人員工具，並在&#x200B;**主控台**&#x200B;中輸入下列方法：
 
@@ -300,7 +300,7 @@ Adobe使用者端資料層是事件導向，而觸發動作的最常見事件之
 
 ## 使用DataLayerBuilder公用程式 {#data-layer-builder}
 
-在本章的早期，當Sling模型已[更新](#sling-model)時，我們選擇使用`HashMap`並手動設定每個屬性來建立JSON字串。 此方法適用於小型一次性元件，但若是擴充AEM核心元件的元件，則可能會導致大量額外程式碼。
+在本章的早期，當Sling模型已[更新](#sling-model)時，我們選擇使用`HashMap`並手動設定每個屬性來建立JSON字串。 此方法適用於小型一次性元件，但若是擴充AEM核心元件的元件，可能會導致大量額外程式碼。
 
 公用程式類別`DataLayerBuilder`可用來執行大部分的繁重工作。 這允許實作僅擴充其所需的屬性。 讓我們更新Sling模型以使用`DataLayerBuilder`。
 
@@ -428,7 +428,7 @@ Adobe使用者端資料層是事件導向，而觸發動作的最常見事件之
 
 ## 恭喜！ {#congratulations}
 
-您剛才探索了一些使用AEM元件擴充及自訂Adobe使用者端資料層的方法！
+您剛剛探索了幾個方法，可使用AEM元件擴充和自訂Adobe Client Data Layer！
 
 ## 其他資源 {#additional-resources}
 

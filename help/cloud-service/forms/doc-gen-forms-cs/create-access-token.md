@@ -1,17 +1,17 @@
 ---
 title: 交換JWT以取得存取權杖
-description: 將JSON Web權杖(JWT)與Adobe IMS API交換為AEM存取權杖。
+description: 將JSON Web權杖(JWT)與Adobe IMS API交換AEM存取權杖。
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-8185
 thumbnail: KT-8185.jpg
 exl-id: ab7b8a06-3009-477d-9e98-590912e8e176
 duration: 33
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%

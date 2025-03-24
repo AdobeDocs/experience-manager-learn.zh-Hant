@@ -1,7 +1,7 @@
 ---
 title: 如何在AEM as a Cloud Service中的領導者執行個體上執行工作
 description: 瞭解如何在AEM as a Cloud Service中的領導者執行個體上執行工作。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: OSGI, Cloud Manager
 role: Architect, Developer
@@ -11,13 +11,13 @@ duration: 0
 last-substantial-update: 2024-10-23T00:00:00Z
 jira: KT-16399
 thumbnail: KT-16399.jpeg
-source-git-commit: 7dca86137d476418c39af62c3c7fa612635c0583
+exl-id: b8b88fc1-1de1-4b5e-8c65-d94fcfffc5a5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
 
 ---
-
 
 # 如何在AEM as a Cloud Service中的領導者執行個體上執行工作
 
@@ -128,9 +128,9 @@ public class SimpleJobConsumerImpl implements JobConsumer {
 
 ### 預設工作處理
 
-當您將上述程式碼部署至AEM as a Cloud Service環境，並在AEM Author服務(以具有多個AEM Author JVM的叢集方式運作)上執行時，工作將在每個AEM Author例項(pod)上執行一次，這表示建立的工作數量將與pod的數量相符。 Pod的數量一律會超過一個（適用於非RDE環境），但會隨著AEM as a Cloud Service的內部資源管理而波動。
+當您將上述程式碼部署到AEM as a Cloud Service環境，並在AEM Author服務(以具有多個AEM Author JVM的叢集方式運作)上執行時，工作將在每個AEM Author例項(pod)上執行一次，這表示建立的作業數量將符合pod數量。 Pod的數量一律會超過一個（適用於非RDE環境），但會隨著AEM as a Cloud Service的內部資源管理而波動。
 
-工作會在每個AEM Author執行個體(pod)上執行，因為`wknd/simple/job/topic`與AEM的主佇列相關聯，這會將工作分散到所有可用的執行個體。
+工作會在每個AEM Author執行個體(pod)上執行，因為`wknd/simple/job/topic`與AEM的主佇列相關聯，該佇列會將工作分散到所有可用的執行個體。
 
 如果工作負責變更狀態（例如建立或更新資源或外部服務），這通常會有問題。
 
@@ -151,7 +151,7 @@ public class SimpleJobConsumerImpl implements JobConsumer {
 <DD.MM.YYYY HH:mm:ss.SSS> INFO [com.adobe.aem.guides.wknd.core.sling.jobs.impl.SimpleJobConsumerImpl] Processing WKND Job, and Job metadata is: Created in activate method
 ```
 
-有兩個記錄專案，每個AEM Author執行個體（`68775db964-nxxcx`和`68775db964-r4zk7`）各一個，表示每個執行個體(pod)已處理工作。
+有兩個記錄專案，每個AEM Author執行個體（`68775db964-nxxcx`和`68775db964-r4zk7`）各一個，代表每個執行個體(pod)已處理工作。
 
 ## 如何在領導者執行個體上執行工作
 

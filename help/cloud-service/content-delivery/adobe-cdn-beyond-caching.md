@@ -1,7 +1,7 @@
 ---
 title: Adobe CDN — 快取以外的進階功能
-description: 瞭解Adobe CDN除了快取以外的進階功能，例如在CDN設定流量、設定代號和認證、CDN錯誤頁面等。
-version: Cloud Service
+description: 瞭解Adobe CDN除了快取功能以外的進階功能，例如在CDN設定流量、設定代號和憑證、CDN錯誤頁面等。
+version: Experience Manager as a Cloud Service
 feature: Website Performance, CDN Cache
 topic: Architecture, Performance, Content Management
 role: Developer, Architect, User, Leader
@@ -12,7 +12,7 @@ last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
 exl-id: 8948a900-01e9-49ed-9ce5-3a057f5077e4
-source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Adobe CDN — 快取以外的進階功能
 
-瞭解Adobe內容傳遞網路(CDN)除了快取以外的進階功能，例如在CDN設定流量、設定代號和認證、CDN錯誤頁面等。
+瞭解Adobe內容傳遞網路(CDN)除了快取以外的進階功能，例如在CDN設定流量、設定代號和憑證、CDN錯誤頁面等。
 
 除了快取內容以外，Adobe CDN還提供數種進階功能，有助於將您的網站效能最佳化。 這些功能包括：
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 讓我們瞭解與&#x200B;_在CDN_&#x200B;設定流量相關的主要功能：
 
-- **DoS攻擊預防：** AdobeCDN在網路層吸收了DoS攻擊，使其無法連線到您的原始伺服器。
+- **DoS攻擊預防：** Adobe CDN在網路層吸收DoS攻擊，使其無法連線至您的原始伺服器。
 - **速率限制：**&#x200B;若要保護您的原始伺服器不受太多要求的影響，您可以在CDN上設定速率限制。
 - **Web應用程式防火牆(WAF)：** WAF可保護您的網站，使其免受一般Web應用程式弱點的影響，例如SQL插入、跨網站指令碼等等。 使用此功能需要增強式安全性授權或WAF-DDoS保護授權。
 - **要求轉換：**&#x200B;修改傳入的要求，例如設定或取消設定標頭、修改查詢引數、Cookie等等。
@@ -51,13 +51,13 @@ ht-degree: 0%
 
 - **清除API Token**：可讓您建立自己的清除金鑰，從快取中清除單一或群組或所有資源。
 - **基本驗證**：當您想要限制存取您的網站或網站的一部分時，可以使用輕量型的驗證機制。 通常在上線前作為各種稽核流程的一部分需要。
-- **HTTP標頭驗證**：當客戶管理的CDN將流量路由到AdobeCDN時使用。 AdobeCDN會根據`X-AEM-Edge-Key`標頭值來驗證傳入的要求。 可讓您為`X-AEM-Edge-Key`標頭建立自己的值。
+- **HTTP標頭驗證**：當客戶管理的CDN將流量路由到Adobe CDN時使用。 Adobe CDN會根據`X-AEM-Edge-Key`標頭值來驗證傳入的要求。 可讓您為`X-AEM-Edge-Key`標頭建立自己的值。
 
 ## CDN錯誤頁面
 
 讓我們瞭解與&#x200B;_CDN錯誤頁面_&#x200B;相關的主要功能：
 
-- **品牌錯誤頁面**：當AdobeCDN無法連線到您的原始伺服器時，在&#x200B;_不可能的情況_&#x200B;中向您的使用者顯示品牌錯誤頁面。
+- **品牌錯誤頁面**：當Adobe CDN無法連線到您的原始伺服器時，在&#x200B;_不可能的情況_&#x200B;中向您的使用者顯示品牌錯誤頁面。
 
 ## 實施方式
 
@@ -87,7 +87,7 @@ data:
           location: /us/en/top3.html
 ```
 
-## 相關Tutorials
+## 相關教學課程
 
 [使用流量篩選規則保護網站](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
