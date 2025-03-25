@@ -2,7 +2,7 @@
 title: 更新資料庫中表單的簽章狀態
 description: 使用AEM工作流程更新資料庫中已簽署表單的簽名狀態
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6888
 thumbnail: 6888.jpg
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Experienced
 exl-id: 75852a4b-7008-4c65-bab1-cc5dbf525e20
 duration: 42
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 ![主要工作流程](assets/update-signature.PNG)
 
 更新簽章狀態為自訂程式步驟。
-實作自訂流程步驟的主要原因是為了擴充AEM Workflow。 以下是用來更新簽名狀態的自訂程式碼。
+實作自訂流程步驟的主要原因是為了擴充AEM工作流程。 以下是用來更新簽名狀態的自訂程式碼。
 此自訂流程步驟中的程式碼會參照SignMultipleForms服務。
 
 

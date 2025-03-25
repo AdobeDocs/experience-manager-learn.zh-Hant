@@ -1,16 +1,16 @@
 ---
 title: 在工作流程中使用表單資料模型服務作為步驟
-description: 從AEM Forms 6.4開始，我們現在能使用表單資料模型做為AEM Workflow的一部分。 以下影片會逐步介紹在AEM Workflow中設定表單資料模型步驟所需的步驟。
+description: 從AEM Forms 6.4開始，我們現在能使用表單資料模型做為AEM工作流程的一部分。 以下影片會逐步介紹在AEM工作流程中設定表單資料模型步驟所需的步驟。
 feature: Workflow
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 0c77a853-fa71-46ac-8626-99bc69d6222d
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 205
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 在工作流程中使用表單資料模型服務作為步驟 {#using-form-data-model-service-as-step-in-workflow}
 
-從AEM Forms 6.4開始，我們現在能使用表單資料模型做為AEM Workflow的一部分。 以下影片會逐步介紹在AEM Workflow中設定表單資料模型步驟所需的步驟
+從AEM Forms 6.4開始，我們現在能使用表單資料模型做為AEM工作流程的一部分。 以下影片會逐步介紹在AEM工作流程中設定表單資料模型步驟所需的步驟
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)

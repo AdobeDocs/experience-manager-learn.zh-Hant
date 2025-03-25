@@ -3,7 +3,7 @@ title: 建立檔案片段
 description: 這是建立第一個互動式通訊檔案的多步驟教學課程的第5部分。 在本部分中，我們將建立檔案片段以儲存收件者名稱和地址。
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 47d3aa97-0bff-48e0-8a65-55e5332f811b
 jira: KT-5958
 thumbnail: 22350.jpg
@@ -12,7 +12,7 @@ role: Developer
 level: Beginner
 exl-id: 2fe3f950-bc2a-4e91-8d91-00438691727a
 duration: 217
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%

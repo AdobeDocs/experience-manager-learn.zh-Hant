@@ -2,7 +2,7 @@
 title: 建立最適化表單
 description: 建立並設定最適化表單以使用表單資料模型的預填服務
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-5813
 thumbnail: kt-5813.jpg
 topic: Development
@@ -10,10 +10,10 @@ role: User
 level: Beginner
 exl-id: c8d4eed8-9e2b-458c-90d8-832fc9e0ad3f
 duration: 124
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '598'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 下一步是以表格方式顯示員工的受益人。 提供的範例表單有一個包含4欄和單列的表格。 我們需要設定表格以隨著受益人數目而成長。
 
-* 在編輯模式中開啟表單。
+* 以編輯模式開啟表單。
 * 展開根面板 — >您的受益人 — >表格
 * 選取「列1」，然後按一下扳手圖示以開啟其屬性表。
 * 將Bind參考設定為&#x200B;**/newhire/GetEmployeeResponsibineals**

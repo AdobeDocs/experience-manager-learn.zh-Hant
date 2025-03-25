@@ -2,14 +2,14 @@
 title: 在AEM Forms中撰寫自訂提交
 description: 快速輕鬆建立您自己的自訂最適化表單提交動作
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
 duration: 51
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 1%
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 
 * 儲存變更
-* 在CustomSubmitHelpx節點下建立名為post.js.jsp的新檔案。提交最適化表單時，會呼叫此POST。 您可以視需要在此檔案中撰寫JSP程式碼。 以下程式碼會將請求轉送給servlet。
+* 在CustomSubmitHelpx節點下建立名為post.POST.jsp的新檔案。提交最適化表單時，會呼叫此JSP。 您可以視需要在此檔案中撰寫JSP程式碼。 以下程式碼會將請求轉送給servlet。
 
 ```java
 <%

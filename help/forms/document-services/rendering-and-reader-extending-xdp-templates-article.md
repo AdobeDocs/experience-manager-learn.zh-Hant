@@ -1,7 +1,7 @@
 ---
 title: 透過使用許可權將XDP轉譯為PDF
 description: 套用使用許可權至pdf
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -9,7 +9,7 @@ level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 150
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -20,15 +20,15 @@ ht-degree: 0%
 
 一個常見的使用案例是將xdp轉譯為PDF並將Reader擴充功能套用至轉譯的PDF。
 
-例如，在AEM Forms的表單入口網站中，當使用者按一下XDP時，我們可以將XDP轉譯為PDF，讓讀者擴展PDF。
+例如，在AEM Forms的表單入口網站中，當使用者按一下XDP時，我們可以將XDP轉譯為PDF，Reader可擴充PDF。
 
 
 若要完成此使用案例，我們需要執行下列動作。
 
-* 將Reader延伸憑證新增至「fd-service」使用者。 [這裡](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)列出新增Reader延伸認證的步驟
+* 將Reader擴充功能憑證新增至「fd-service」使用者。 [這裡](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)列出新增Reader擴充功能認證的步驟
 
 
-* 您也可以參考有關[設定Reader延伸認證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)的影片
+* 您也可以參考有關[設定Reader擴充功能認證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)的影片
 
 
 * 建立可轉譯及套用使用許可權的自訂OSGi服務。 完成此任務的程式碼如下
@@ -124,13 +124,13 @@ public @interface DocSvcConfiguration {
 
 ## 建立Servlet以串流PDF {#create-servlet-to-stream-the-pdf}
 
-下一步是使用GET方法建立servlet，以將讀取器擴展PDF傳回給使用者。 在這種情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會呈現為動態PDF，而且瀏覽器隨附的pdf檢視器不會處理動態pdf。
+下一步是使用GET方法建立servlet，將reader extended PDF傳回給使用者。 在此情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF呈現為動態PDF，而且瀏覽器隨附的pdf檢視器無法處理動態pdf。
 
 以下是servlet的程式碼。 我們會將CRX存放庫中的XDP路徑傳遞給此servlet。
 
 然後呼叫com.aemformssamples.documentservices.core.DocumentServices的renderAndExtendXdp方法。
 
-接著，讀取器延伸PDF會串流至呼叫應用程式
+接著，Reader擴充的PDF會串流至呼叫應用程式
 
 ```java
 package com.aemformssamples.documentservices.core.servlets;
@@ -201,8 +201,8 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 1. [下載並安裝AEMFormsDocumentServices套件組合](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 
 1. [下載自訂入口網站範本html](assets/render-and-extend-template.zip)
-1. [使用封裝管理程式將和本文相關的資產下載並匯入到AEM](assets/renderandextendxdp.zip)
+1. [使用封裝管理程式將與本文相關的資產下載並匯入至AEM](assets/renderandextendxdp.zip)
    * 此套件具有範例入口網站和xdp檔案
-1. 將Reader延伸憑證新增至「fd-service」使用者
+1. 將Reader擴充功能憑證新增至「fd-service」使用者
 1. 將瀏覽器指向[入口網站網頁](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
 1. 按一下pdf圖示將xdp轉譯為已套用使用許可權的pdf檔案。

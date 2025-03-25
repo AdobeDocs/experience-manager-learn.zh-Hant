@@ -4,13 +4,13 @@ description: 這是建立第一個互動式通訊檔案的多步驟教學課程�
 discoiquuid: b44ff855-9ead-471e-8f0f-b562b88a5337
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: a0a0c8dc-5302-446c-9fec-e23fe1320e34
 duration: 33
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 在本節中，我們將建立Web Channel的互動式通訊。
 
-1. 登入AEM編寫執行個體，並導覽至「Adobe Experience Manager > Forms > Forms &amp; Documents」。
+1. 登入AEM作者例項，並導覽至「Adobe Experience Manager > Forms > Forms與檔案」。
 1. 開啟401KStatment資料夾。
 1. 點選「建立」並選取「互動式通訊」。 會顯示「建立互動式通訊」頁面。
 1. 輸入下列資訊

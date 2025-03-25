@@ -2,14 +2,14 @@
 title: 在輸出服務中使用片段
 description: 產生PDF檔案，其片段位於crx存放庫中
 feature: Output Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-09T00:00:00Z
 exl-id: d7887e2e-c2d4-4f0c-b117-ba7c41ea539a
 duration: 106
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
@@ -70,11 +70,11 @@ out.println("Document genreated and saved to " + filePath);
 * [使用AEM封裝管理員下載並安裝封裝](assets/using-fragments-assets.zip)
 * [範例xdp和片段可以從這裡下載](assets/xdptemplates.zip)
 
-**安裝套件後，您必須在AdobeGranite CSRF篩選中允許列出下列URL。**
+**安裝套件後，您必須在Adobe Granite CSRF篩選器中允許列出下列URL。**
 
 1. 請依照下列步驟操作，將上述路徑加入允許清單。
 1. [登入configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜尋AdobeGranite CSRF篩選器
+1. 搜尋Adobe Granite CSRF篩選器
 1. 在排除的區段中新增以下路徑並儲存
 1. /content/AemFormsSamples/usingfragments
 

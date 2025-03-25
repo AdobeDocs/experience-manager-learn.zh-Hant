@@ -2,14 +2,14 @@
 title: 在AEM Forms中認證檔案
 description: 使用Docassurance服務認證AEM Forms中的PDF檔案
 feature: Document Security
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 1471929f-d269-4adc-88ad-2ad3682305e1
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 75
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ## 正在新增憑證至信任存放區 {#adding-certificate-to-trust-store}
 
-請依照下列步驟操作，將憑證新增至AEM的金鑰儲存區
+請依照下列步驟操作，將憑證新增至AEM中的金鑰儲存區
 
 * [初始化全域信任存放區](http://localhost:4502/libs/granite/security/content/truststore.html)
 * [搜尋fd-service](http://localhost:4502/security/users.html)使用者
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## 建立OSGI服務
 
-您可以撰寫專屬的OSGi套件組合，並使用AEM Forms使用者端SDK實作服務以認證PDF檔案。 以下連結對於撰寫您自己的OSGi套件組合相當實用
+您可以撰寫自己的OSGi套件組合，並使用AEM Forms使用者端SDK來實作認證PDF檔案的服務。 以下連結對於撰寫您自己的OSGi套件組合相當實用
 
 * [正在建立您的第一個OSGi套件](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)
 * [使用檔案服務API](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)

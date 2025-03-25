@@ -2,14 +2,14 @@
 title: 在AEM Forms中使用Forms服務呈現互動式PDF
 description: 在AEM Forms中使用Forms Service API來呈現互動式PDF
 feature: Forms Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 9b2ef4c9-8360-480d-9165-f56a959635fb
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 75
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Line2-4：建立PDFFormRenderOptions並設定其屬性
 1. [使用AEM封裝管理員下載並安裝封裝](assets/downloadinteractivepdffrommobileform.zip)
 
 1. [登入configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜尋AdobeGranite CSRF篩選器
+1. 搜尋Adobe Granite CSRF篩選器
 1. 在排除的區段中新增以下路徑並儲存
 1. /bin/generateinteractivepdf
 1. 搜尋&#x200B;_Apache Sling Service使用者對應程式服務_，然後按一下以開啟屬性
@@ -68,4 +68,4 @@ Line2-4：建立PDFFormRenderOptions並設定其屬性
 1. 互動式pdf應下載至您的本機系統
 
 
-範例套件包含與行動表單相關聯的自訂設定檔。 請探索[customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp)檔案。 此jsp會從行動表單中擷取資料，並向&#x200B;***/bin/generateinteractivepdf***&#x200B;路徑上掛接的servlet發出POST請求。 此servlet會將互動式pdf傳回至呼叫的應用程式。 customtoolbar.jsp中的程式碼然後將檔案下載到您的本機系統
+範例套件包含與行動表單相關聯的自訂設定檔。 請探索[customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp)檔案。 此jsp會從行動表單中擷取資料，並對掛接在&#x200B;***/bin/generateinteractivepdf***&#x200B;路徑上的servlet發出POST請求。 此servlet會將互動式pdf傳回至呼叫的應用程式。 customtoolbar.jsp中的程式碼然後將檔案下載到您的本機系統

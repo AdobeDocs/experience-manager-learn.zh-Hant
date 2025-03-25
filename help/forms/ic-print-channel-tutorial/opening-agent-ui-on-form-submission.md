@@ -1,9 +1,9 @@
 ---
-title: 在POST提交時開啟代理程式UI
+title: 在發佈提交時開啟代理程式UI
 description: 這是多步驟教學課程的第11部分，說明如何為列印管道建立您的第一份互動式通訊檔案。 在本部分中，我們將啟動代理程式ui介面，以在表單提交時建立隨選通訊。
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6168
 thumbnail: 40122.jpg
 topic: Development
@@ -11,14 +11,14 @@ role: Developer
 level: Intermediate
 exl-id: 509b4d0d-9f3c-46cb-8ef7-07e831775086
 duration: 170
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
 
 ---
 
-# 在POST提交時開啟代理程式UI
+# 在發佈提交時開啟代理程式UI
 
 在本部分中，我們將啟動代理程式ui介面，以在表單提交時建立隨選通訊。
 
@@ -58,7 +58,7 @@ wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").incl
 
 * [使用封裝管理員匯入及安裝與本文相關的資產。](assets/launch-agent-ui.zip)
 * [登入configMgr](http://localhost:4502/system/console/configMgr)
-* 搜尋&#x200B;_AdobeGranite CSRF篩選器_
+* 搜尋&#x200B;_Adobe Granite CSRF篩選器_
 * 在排除的路徑中新增&#x200B;_/content/getprintchannel_
 * 儲存您的變更。
 * [開啟POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp)。 確定傳遞給FormFieldRequestParameter的字串是有效的documentId。（第19行）。

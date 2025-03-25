@@ -2,7 +2,7 @@
 title: 簡介
 description: 多份表單使用案例的簽名影片示範
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 thumbnail: 330165.jpg
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ level: Experienced
 exl-id: 0260d4b6-8615-4d78-a920-b36766a0f8e9
 last-substantial-update: 2021-07-07T00:00:00Z
 duration: 211
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 3%
@@ -28,8 +28,8 @@ ht-degree: 3%
 
 本課程假設如下：
 
-* 您可以存取已安裝並設定Forms附加套件的AEM 6.4或6.5伺服器
-* 使用Acrobat Sign設定的AEM
+* 您可以存取已安裝並設定AEM附加套件的Forms 6.4或6.5伺服器
+* AEM已設定Acrobat Sign
 * 存取SMTP伺服器
 * AEM/AEM Forms使用體驗
 

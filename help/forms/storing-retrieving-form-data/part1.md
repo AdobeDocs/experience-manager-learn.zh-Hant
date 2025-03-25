@@ -1,14 +1,14 @@
 ---
 title: 從MySQL資料庫儲存及擷取表單資料 — 設定資料Source
 description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Experienced
 exl-id: dccca658-3373-4de2-8589-21ccba2b7ba6
 duration: 36
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 # 設定Data Source
 
-AEM有許多方式可啟用與外部資料庫的整合。 資料庫整合最常見和標準的作法之一，是透過[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling Connection Pooled DataSource組態屬性。
+AEM有許多方式可用來與外部資料庫整合。 資料庫整合最常見和標準的作法之一，是透過[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling Connection Pooled DataSource組態屬性。
 第一步是下載並部署AEM中適當的[MySql驅動程式](https://mvnrepository.com/artifact/mysql/mysql-connector-java)。
 建立Apache Sling Connection Pooled DataSource，並提供以下熒幕擷取畫面中指定的屬性。 資料庫結構描述會作為本教學課程資產的一部分提供給您。
 

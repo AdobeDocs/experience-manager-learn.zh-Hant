@@ -1,22 +1,22 @@
 ---
-title: 以最適化Forms Workflow擷取工作流程註解
+title: 在Adaptive Forms Workflow中擷取工作流程註解
 description: 在AEM工作流程中擷取工作流程註解
 feature: Workflow
-version: 6.4
+version: Experience Manager 6.4
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 5c250bbb-bac6-427d-8aca-1fbb1229e02c
 last-substantial-update: 2020-10-10T00:00:00Z
 duration: 73
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 0%
 
 ---
 
-# 以最適化Forms Workflow擷取工作流程註解{#capturing-workflow-comments-in-adaptive-forms-workflow}
+# 在Adaptive Forms Workflow中擷取工作流程註解{#capturing-workflow-comments-in-adaptive-forms-workflow}
 
 >[僅適用於AEM Forms 6.4。在AEM Forms 6.5中，請使用變數功能來達成此使用案例]
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 為了滿足此需求，提供範例OSGi套件，其可用於擷取註解並將這些註解儲存為工作流程中繼資料屬性。
 
-下列熒幕擷圖顯示如何使用[AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)中的程式步驟來擷取註解，並將註解儲存為中繼資料屬性。 「擷取工作流程註解」是需要用於程式步驟中的java類別名稱。 您必須傳遞內含註解的中繼資料屬性名稱。 在下方熒幕擷圖中，managerComments是將儲存註解的中繼資料屬性。
+下列熒幕擷圖顯示如何使用[AEM工作流程](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)中的程式步驟來擷取註解，並將註解儲存為中繼資料屬性。 「擷取工作流程註解」是需要用於程式步驟中的java類別名稱。 您必須傳遞內含註解的中繼資料屬性名稱。 在下方熒幕擷圖中，managerComments是將儲存註解的中繼資料屬性。
 
 ![workflowcomments1](assets/workflowcomments1.gif)
 

@@ -1,15 +1,15 @@
 ---
 title: 在AEM Forms工作流程中設定Json資料元素的值
-description: 由於最適化表單在AEM Workflow中路由給不同的使用者，因此需要根據檢閱表單的人來隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 您可以根據此隱藏欄位的值來編寫商業規則，以隱藏/停用適當的面板或欄位。
+description: 當最適化表單路由傳送給AEM Workflow中的不同使用者時，需要根據檢閱表單的人來隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 您可以根據此隱藏欄位的值來編寫商業規則，以隱藏/停用適當的面板或欄位。
 feature: Adaptive Forms
-version: 6.4
+version: Experience Manager 6.4
 topic: Development
 role: Developer
 level: Experienced
 exl-id: fbe6d341-7941-46f5-bcd8-58b99396d351
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 126
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # 在AEM Forms工作流程中設定JSON資料元素的值 {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-由於最適化表單在AEM Workflow中路由給不同的使用者，因此需要根據檢閱表單的人來隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 您可以根據此隱藏欄位的值來編寫商業規則，以隱藏/停用適當的面板或欄位。
+當最適化表單路由傳送給AEM Workflow中的不同使用者時，需要根據檢閱表單的人來隱藏或停用某些欄位或面板。 為了滿足這些使用案例，我們通常會設定隱藏欄位的值。 您可以根據此隱藏欄位的值來編寫商業規則，以隱藏/停用適當的面板或欄位。
 
 ![在JSON資料中設定專案的值](assets/capture-3.gif)
 
 在AEM Forms OSGi中 — 我們必須建立自訂OSGi套件組合以設定JSON資料元素的值。 此套件組合是作為本教學課程的一部分提供。
 
-我們使用AEM工作流程中的「流程步驟」 。 我們會將「在Json中設定元素值」的OSGi套件組合與此程式步驟建立關聯。
+我們使用AEM工作流程中的「程式步驟」 。 我們會將「在Json中設定元素值」的OSGi套件組合與此程式步驟建立關聯。
 
 我們需要傳遞兩個引數給設定值組合。 第一個引數是需要設定其值的元素的路徑。 第二個引數是需要設定的值。
 

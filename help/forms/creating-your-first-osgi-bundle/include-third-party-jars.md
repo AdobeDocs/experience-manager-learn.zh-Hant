@@ -1,7 +1,7 @@
 ---
 title: 包含第三方jar
 description: 瞭解如何在您的AEM專案中使用協力廠商jar檔案
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Adaptive Forms
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
 exl-id: e8841c63-3159-4f13-89a1-d8592af514e3
 duration: 53
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 0%
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 ## 建立檔案夾結構
 
-我們正在將此組合新增至位於&#x200B;**c：\aemformsbundles**&#x200B;資料夾中的AEM專案&#x200B;**AEMFormsProcessStep**
+我們正在將此套件組合新增至位於&#x200B;**c：\aemformsbundles**&#x200B;資料夾中的AEM專案&#x200B;**AEMFormsProcessStep**
 
 * 從專案的C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault資料夾開啟&#x200B;**filter.xml**
 記下篩選元素的根屬性。

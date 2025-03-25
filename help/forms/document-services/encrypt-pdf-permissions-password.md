@@ -2,14 +2,14 @@
 title: 使用許可權密碼加密PDF
 description: 使用DocAssuranceService加密PDF
 feature: Document Services
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 jira: KT-15849
 last-substantial-update: 2024-07-19T00:00:00Z
 exl-id: 5df8581c-a44c-449c-bf3b-8cdf57635c4d
-source-git-commit: d01a56cd1fd3085b0230918b15b4635ba375e346
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 使用許可權密碼加密PDF
 
-複製、編輯或列印PDF檔案需要許可權密碼（也稱為擁有者或主密碼）。 瞭解如何使用[DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) API，以程式設計方式將許可權密碼套用至PDF。
+複製、編輯或列印PDF檔案需要許可權密碼（也稱為擁有者或主版密碼）。 瞭解如何使用[DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) API，以程式設計方式將許可權密碼套用至PDF。
 
 以下JSP程式碼會使用許可權密碼加密PDF：
 
@@ -63,15 +63,15 @@ ht-degree: 0%
 
 [使用AEM封裝管理員下載並安裝封裝](assets/encryptpdf.zip)
 
-**安裝套件後，將下列URL新增至AdobeGranite CSRF篩選器的OSGi設定允許清單：**
+**安裝套件後，將下列URL新增至Adobe Granite CSRF篩選器的OSGi設定允許清單：**
 
 1. [登入configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜尋AdobeGranite CSRF篩選器
+1. 搜尋Adobe Granite CSRF篩選器
 1. 在排除的區段中新增以下路徑並儲存
 1. /content/AemFormsSamples/encrypt
 
 ## 測試範例
 
-測試範常式式碼的方法有很多種。 最快捷、最輕鬆的方式就是使用Postman應用程式。 Postman可讓您向伺服器提出POST要求。下列熒幕擷圖顯示post要求運作所需的要求引數。 在提交請求之前，請務必指定適當的授權型別。
+測試範常式式碼的方法有很多種。 最快捷、最輕鬆的方式就是使用Postman應用程式。 Postman可讓您向伺服器發出POST要求。下列熒幕擷圖顯示post要求運作所需的要求引數。 在提交請求之前，請務必指定適當的授權型別。
 
 ![encrypt-pdf-postman](assets/encrypt-pdf-postman.png)

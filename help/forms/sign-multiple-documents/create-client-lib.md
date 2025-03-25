@@ -2,7 +2,7 @@
 title: 建立使用者端資源庫
 description: 用於擷取下一個要簽署的表單的使用者端資料庫程式碼
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6907
 thumbnail: 6907.jpg
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Intermediate
 exl-id: 3c148b30-2c7d-428d-9a3c-f3067ca3a239
 duration: 34
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # 建立使用者端資源庫
 
-建立自訂使用者端資料庫（簡稱clientlib）以擷取url引數，並在GET呼叫中傳遞這些引數。 會對/bin/getnextformtosign上掛接的servlet進行GET呼叫，該servlet會傳回下一個表單的url以登入套件。
+建立自訂使用者端資料庫（簡稱clientlib）以擷取url引數，並在GET呼叫中傳遞這些引數。 GET會呼叫掛接在/bin/getnextformtosign上的servlet，此servlet會傳回下一個表單的url以登入套件。
 
 以下是clientlib javascript函式中使用的程式碼
 

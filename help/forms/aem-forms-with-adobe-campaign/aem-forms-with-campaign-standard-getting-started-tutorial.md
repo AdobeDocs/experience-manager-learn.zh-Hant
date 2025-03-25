@@ -2,7 +2,7 @@
 title: 整合AEM Forms和Adobe Campaign Standard
 description: 使用AEM Forms表單資料模型將AEM Forms與Adobe Campaign Standard整合，以擷取ACS促銷活動設定檔資訊等。
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 44
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 1%
@@ -30,7 +30,7 @@ ACS具有一組豐富的API，可讓ACS與我們選擇的技術連線。 在本�
 
 * [在您的ACS執行個體上設定API存取。](https://experienceleague.adobe.com/docs/campaign-standard/using/working-with-apis/get-started-apis.html?lang=en)
 * 建立JSON Web權杖。
-* 將JSON Web權杖與AdobeIdentity Management服務交換為存取權杖。
+* 將JSON Web權杖與Adobe Identity Management服務交換為存取權杖。
 * 在授權HTTP標頭中包含此存取Token，並在對ACS執行個體的每個請求中包含X-API-Key。
 
 若要開始使用，請遵循下列指示

@@ -2,14 +2,14 @@
 title: 在AEM Forms中使用PDFG
 description: 示範使用AEM Forms建立PDF的拖放功能
 feature: PDF Generator
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: bc79fcbf-b8b3-4d3a-9cd6-0bcd9321c7d5
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 52
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
@@ -20,10 +20,10 @@ ht-degree: 0%
 
 示範使用AEM Forms建立PDF的拖放功能
 
-PDFG代表PDF產生。 這表示您可以將各種檔案格式轉換為PDF。 最常見的是Microsoft Office檔案。 PDFG自6.1起即是AEM Forms的一部分。
+PDFG代表PDF Generation。 這表示您可以將多種檔案格式轉換成PDF。 最常見的是Microsoft Office檔案。 PDFG自6.1起即是AEM Forms的一部分。
 [此處列出PDFG API的Javadoc](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)
 
-與本文相關的資產可讓您將MS Office檔案或JPG檔案拖放至HTML頁面的拖放區域。 檔案一旦被卸下，就會叫用PDFG服務並將檔案轉換為PDF並儲存到AEM Server的檔案系統中。
+與本文相關的資產可讓您將MS Office檔案或JPG檔案拖放至HTML頁面的拖放區域。 檔案一經卸下，就會叫用PDFG服務，並將檔案轉換成PDF，儲存到AEM伺服器的檔案系統中。
 
 若要安裝示範資產，請執行以下步驟
 
@@ -37,7 +37,7 @@ PDFG代表PDF產生。 這表示您可以將各種檔案格式轉換為PDF。 �
 1. 將Word檔案或jpg拖放至拖放區域。
 1. 輸入檔案會轉換為PDF，並儲存在點4所指定的相同位置。
 
-下列程式碼片段顯示PDFG服務將檔案轉換為PDF的使用情況
+下列程式碼片段顯示如何使用PDFG服務將檔案轉換成PDF
 
 ```java
 com.adobe.pdfg.service.api.GeneratePDFService pdfService = sling.getService(com.adobe.pdfg.service.api.GeneratePDFService.class);

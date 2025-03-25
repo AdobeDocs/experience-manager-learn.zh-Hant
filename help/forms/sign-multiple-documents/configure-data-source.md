@@ -5,12 +5,12 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Beginner
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6899
 thumbnail: 6899.jpg
 exl-id: 2e851ae5-6caa-42e3-8af2-090766a6f36a
 duration: 39
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # 設定資料來源
 
-AEM有許多方式可啟用與外部資料庫的整合。 整合資料庫的最常見方式之一，是透過[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling Connection Pooled DataSource組態屬性。
+AEM有許多方式可用來與外部資料庫整合。 整合資料庫的最常見方式之一，是透過[configMgr](http://localhost:4502/system/console/configMgr)使用Apache Sling Connection Pooled DataSource組態屬性。
 第一步是下載並部署AEM中適當的[MySql驅動程式](https://mvnrepository.com/artifact/mysql/mysql-connector-java)。
 建立Apache Sling Connection Pooled DataSource，並提供以下熒幕擷取畫面中指定的屬性。 資料庫結構描述會作為本教學課程資產的一部分提供給您。
 

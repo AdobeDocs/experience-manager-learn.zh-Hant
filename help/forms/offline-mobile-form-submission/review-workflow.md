@@ -1,16 +1,16 @@
 ---
 title: 在HTML5表單提交時觸發AEM工作流程 — 檢閱並核准PDF
-description: 用於稽核已提交PDF的工作流程
+description: 稽核已提交PDF的工作流程
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 jira: kt-16133
 exl-id: a767d8f8-d75e-4472-9139-c08d804ee076
 duration: 32
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 用於檢閱和核准已提交PDF的工作流程
 
-最後一個也是最後一個步驟是建立AEM工作流程，這會產生靜態或非互動式PDF以供檢閱和核准。 工作流程是透過節點`/content/formsubmissions`上設定的AEM啟動器觸發。
+最後一個也是最後一個步驟是建立AEM工作流程，這會產生靜態或非互動式PDF以供檢閱和核准。 工作流程是透過節點`/content/formsubmissions`上設定的AEM Launcher觸發。
 
 以下熒幕擷圖顯示工作流程中的步驟。
 

@@ -3,13 +3,13 @@ title: 具有JSON結構描述和資料的AEM Forms[Part2]
 description: 多部分教學課程將逐步引導您完成使用JSON結構描述建立調適型表單和查詢已提交資料的相關步驟。
 feature: Adaptive Forms
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 29195c70-af12-4a22-8484-3c87a1e07378
 duration: 110
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 為了將提交的資料儲存在資料庫中，我們將撰寫servlet以擷取繫結資料以及表單名稱並儲存。 以下提供處理表單提交及將afBoundData儲存在資料庫中的完整程式碼。
 
-我們已建立自訂提交以處理表單提交。 在此自訂提交的post.request.jsp中，我們將POST轉寄給servlet。
+我們已建立自訂提交以處理表單提交。 在此自訂提交的post.POST.jsp中，我們會將請求轉寄給servlet。
 
 若要深入瞭解自訂提交請求，請閱讀此[文章](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
 

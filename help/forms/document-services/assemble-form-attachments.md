@@ -2,7 +2,7 @@
 title: 組合表單附件
 description: 以指定順序組合表單附件
 feature: Assembler
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6406
 thumbnail: kt-6406.jpg
 topic: Development
@@ -11,7 +11,7 @@ level: Experienced
 exl-id: a5df8780-b7ab-4b91-86f6-a24392752107
 last-substantial-update: 2021-07-07T00:00:00Z
 duration: 150
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 建立實作[com.adobe.granite.workflow.exec.WorkflowProcess介面](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)的OSGi元件。 此元件中的程式碼可與AEM工作流程中的流程步驟元件相關聯。 在此元件中實作介面com.adobe.granite.workflow.exec.WorkflowProcess的執行方法。
 
-當提交最適化表單以觸發AEM工作流程時，提交的資料會儲存在裝載資料夾下的指定檔案中。 例如，這是提交的資料檔案。 我們需要組合idcard和bankstatements標籤下指定的附件。
+提交最適化表單以觸發AEM工作流程時，提交的資料會儲存在裝載資料夾下的指定檔案中。 例如，這是提交的資料檔案。 我們需要組合idcard和bankstatements標籤下指定的附件。
 ![已提交資料](assets/submitted-data.JPG)。
 
 ### 取得標籤名稱
@@ -45,7 +45,7 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### 從附件名稱建立DDX
 
-然後，我們需要建立[檔案描述XML (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)檔案，Assembler服務會使用這些檔案來組合檔案。 以下是從處理序引數建立的DDX。 NoForms元素可讓您在組裝XFA型檔案之前將其平面化。 請注意，PDF來源元素的順序與流程引數中指定的順序一致。
+然後，我們需要建立[檔案描述XML (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)檔案，Assembler服務會使用這些檔案來組合檔案。 以下是從處理序引數建立的DDX。 NoForms元素可讓您在組裝XFA型檔案之前將其平面化。 請注意，PDF來源元素的順序正確無誤，如程式引數中所指定。
 
 ![ddx-xml](assets/ddx.PNG)
 
@@ -145,4 +145,4 @@ session.save();
 * 檢查crx](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload)中工作流程的[裝載資料夾以取得組合的pdf
 
 >[!NOTE]
-> 如果您已經為自訂套件組合啟用記錄器，則DDX和已組裝的檔案會寫入AEM安裝的資料夾。
+> 如果您已啟用自訂套裝的記錄器，則DDX且已組裝的檔案會寫入您的AEM安裝檔案夾。

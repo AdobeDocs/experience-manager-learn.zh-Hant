@@ -3,7 +3,7 @@ title: 從MySQL資料庫儲存及擷取含有附件的表單資料
 description: 多部分教學課程，逐步引導您完成儲存和擷取含有附件的表單資料的步驟
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6593
 thumbnail: 327122.jpg
 topic: Development
@@ -12,7 +12,7 @@ level: Experienced
 exl-id: b278652f-6c09-4abc-b92e-20bfaf2e791a
 last-substantial-update: 2020-11-07T00:00:00Z
 duration: 148
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 # 使用2FA儲存及擷取最適化表單資料
 
-本教學課程將逐步引導您完成使用2FA儲存及擷取含有附件的最適化表單資料的步驟。 本教學課程使用MySQL資料庫來儲存最適化表單資料。 只要您已在AEM中部署資料庫特定驅動程式，就可以使用您選擇的資料庫來儲存資料。 概略來說，完成使用案例需要下列步驟：
+本教學課程將逐步引導您完成使用2FA儲存及擷取含有附件的最適化表單資料的步驟。 本教學課程使用MySQL資料庫來儲存最適化表單資料。 只要您已在AEM中部署資料庫特定驅動程式，即可使用您選擇的資料庫來儲存資料。 概略來說，完成使用案例需要下列步驟：
 
 * 使用GuideBridge API存取最適化表單資料
 

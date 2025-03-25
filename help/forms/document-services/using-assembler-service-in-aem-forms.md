@@ -2,14 +2,14 @@
 title: 在AEM Forms中使用組合器服務
 description: 在AEM Forms中使用組合器服務來組合多個pdf檔案
 feature: Assembler
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 18da12ea-b1ea-48e4-979e-3cb59584dfbd
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 76
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 在AEM Forms中使用組合器服務{#using-assembler-service-in-aem-forms}
 
-本文提供的資產可讓您示範將多個PDF檔案拖放到瀏覽器中，以及將組合的pdf檔案儲存到檔案系統的功能。 以下是servlet的程式碼，它會組合使用瀏覽器上傳的pdf檔案。
+本文提供的資產可讓您示範如何拖放多個PDF檔案至瀏覽器，以及將組合的pdf檔案儲存至您的檔案系統。 以下是servlet的程式碼，它會組合使用瀏覽器上傳的pdf檔案。
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -109,7 +109,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 * 下載[使用服務使用者套件組合開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * 使用[felix Web主控台](http://localhost:4502/system/console/bundles)部署及啟動組合
 * 將瀏覽器指向[AssemblePdf.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
-* 拖放多個PDF檔案的檔案
+* 拖放多個PDF檔案
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 >
 >**此示範的注意事項**
 >
-> * 程式碼不會處理XFA型PDF檔案
+> * 程式碼不會處理以XFA為基礎的PDF檔案
 >
 > * 請確定您只拖放PDF檔案
 >

@@ -2,7 +2,7 @@
 title: 使用ACS設定檔預先填寫最適化表單
 description: 使用ACS設定檔預先填寫最適化Forms
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -10,7 +10,7 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
 duration: 144
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 若要深入瞭解預先填寫最適化表單，請閱讀此[教學課程](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)。
 
-若要透過從ACS擷取資料預先填入最適化表單，我們假設ACS中有設定檔，其電子郵件與登入AEM的使用者相同。 例如，如果登入AEM的人員的電子郵件ID是csimms@adobe.com，我們希望在ACS中找到其電子郵件是csimms@adobe.com的設定檔。
+若要透過從ACS擷取資料預先填入最適化表單，我們假設ACS中有設定檔，其電子郵件與登入的AEM使用者相同。 例如，如果登入AEM之人員的電子郵件ID為csimms@adobe.com，我們預計會在ACS中找到其電子郵件為csimms@adobe.com的設定檔。
 
 使用REST API從ACS擷取設定檔資訊時，需要以下步驟
 
@@ -235,7 +235,7 @@ return "Pre Fill Forms Using Campaign Profile";
 
 * [請確定您已依照此處說明的步驟進行](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [使用封裝管理員將範例最適化表單匯入AEM](assets/pre-fill-af-from-campaign.zip)
-* 請務必使用與其電子郵件ID由Adobe Campaign中的設定檔共用的使用者登入AEM。 例如，如果AEM使用者的電子郵件ID是johndoe@adobe.com ，則您需要在ACS中擁有其電子郵件是johndoe@adobe.com的設定檔。
+* 請務必使用與其電子郵件ID由Adobe Campaign中的設定檔共用的使用者來登入AEM。 例如，如果AEM使用者的電子郵件ID為johndoe@adobe.com，則您需要在ACS中擁有其電子郵件為johndoe@adobe.com的設定檔。
 * [預覽表單](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled)。
 
 ## 後續步驟

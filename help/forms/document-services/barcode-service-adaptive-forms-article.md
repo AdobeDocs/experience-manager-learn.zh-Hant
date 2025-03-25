@@ -2,14 +2,14 @@
 title: 條碼服務搭配最適化Forms
 description: 使用條碼服務，將條碼解碼並從擷取的資料填入表單欄位。
 feature: Barcoded Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
@@ -145,5 +145,5 @@ $(document).ready(function()
 1. [下載並安裝DevelopingWithServiceUser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [下載範例PDF表單](assets/barcode.pdf)
 1. 將瀏覽器指向[最適化表單範例](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
-1. 上傳提供的範例PDF
+1. 上傳提供的PDF範例
 1. 您應該會看到已填入資料的表單

@@ -2,24 +2,25 @@
 title: AEM Forms與Marketo （第4部分）
 description: 教學課程使用AEM Forms表單資料模型將AEM Forms與Marketo整合。
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Formsas a Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
 duration: 68
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '281'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
 # 測試整合
 
 我們將建立簡單的表單擷取，並從Market顯示Lead物件，以測試整合。
+
 >[!NOTE]
 >
 >此功能已根據基礎元件在表單上測試。
@@ -27,7 +28,7 @@ ht-degree: 0%
 ## 建立最適化表單
 
 1. 建立最適化表單，並以空白表單範本為基礎，將其與先前步驟中建立的表單資料模型建立關聯。
-1. 在編輯模式中開啟表單。
+1. 以編輯模式開啟表單。
 1. 將TextField元件和Panel元件拖放到最適化表單上。 將TextField元件的標題設為「輸入銷售機會Id」，並將名稱設為「LeadId」
 1. 將2個TextField元件拖放到Panel元件上
 1. 將2個Textfield元件的「名稱」和「標題」設定為「名字」和「姓氏」

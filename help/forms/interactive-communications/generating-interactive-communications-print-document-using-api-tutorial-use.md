@@ -3,14 +3,14 @@ title: 使用監看資料夾機製為列印頻道產生互動式通訊檔案
 description: 使用watched資料夾產生列印管道檔案
 feature: Interactive Communication
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: f5ab4801-cde5-426d-bfe4-ce0a985e25e8
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
@@ -115,7 +115,7 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
-* 使用封裝管理員將下列封裝匯入AEM。 此套件包含下列專案：
+* 使用套件管理器將下列套件匯入AEM。 此套件包含下列專案：
 
 
 * [互動式通訊檔案範例](assets/retirementstatementprint.zip)

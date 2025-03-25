@@ -3,13 +3,13 @@ title: 從MySQL資料庫儲存及擷取表單資料 — 建立使用者端程式
 description: 多部分教學課程，逐步引導您完成儲存和擷取表單資料的相關步驟
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: eef98a55-80d0-4598-abf2-02a6c5247b64
 duration: 90
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 0%

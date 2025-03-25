@@ -3,14 +3,14 @@ title: 在AEM Forms Print Channel檔案中使用表格元件
 description: 以下影片會逐步解說在Interactive Communications中為列印管道檔案使用表格元件所需的步驟。
 feature: Interactive Communication
 doc-type: technical video
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 54afd047-c6e6-4557-9336-39420f30df88
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 277
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%

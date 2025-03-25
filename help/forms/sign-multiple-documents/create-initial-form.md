@@ -2,7 +2,7 @@
 title: 建立初始表單以觸發程式
 description: 建立初始表單以觸發電子郵件通知以開始簽名流程。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: User
 level: Intermediate
@@ -10,10 +10,10 @@ jira: KT-6892
 thumbnail: 6892.jpg
 exl-id: d7c55dc8-d886-4629-bb50-d927308d12e3
 duration: 35
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '177'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 初始表單（再融資表單）是用來簽署多個表單，方法是觸發&#x200B;**簽署多個Forms** AEM工作流程。 您可以輸入您選擇的值，但請確定表單中已新增下列欄位。
 
-| 欄位型別 | 名稱 | 用途 | 隱藏 | 預設值 |
+| 欄位類型 | 名稱 | 用途 | 隱藏 | 預設值 |
 | ------------------------|---------------------------------------|--------------------|--------|----------------- |
 | 文字欄位 | 已簽署 | 表示簽署狀態 | Y | N |
 | 文字欄位 | guid | 以唯一識別表單 | Y | 3889 |

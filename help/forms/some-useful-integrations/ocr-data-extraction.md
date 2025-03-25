@@ -2,7 +2,7 @@
 title: ocr資料擷取
 description: 從政府核發的檔案擷取資料以填入表單。
 feature: Barcoded Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6679
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ level: Intermediate
 exl-id: 1532a865-4664-40d9-964a-e64463b49587
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 145
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 OpenAPI Specification （前身為Swagger Specification）是REST API的API說明格式。 OpenAPI檔案可讓您說明整個API，包括：
 
-* 每個端點的可用端點(/users)和操作(GET/users、POST/users)
+* 每個端點的可用端點(/users)和操作(GET /users、POST /users)
 * 作業引數每個作業的輸入和輸出
 驗證方法
 * 聯絡資訊、授權、使用條款及其他資訊。
@@ -98,7 +98,7 @@ AEM Forms資料整合提供直覺式使用者介面，可建立和使用[表單�
 
 ## 建立最適化表單
 
-將表單資料模型的POST叫用與您的調適型表單整合，以從表單中的使用者上傳的檔案中擷取資料。 您可以自由建立自己的調適型表單，並使用表單資料模型的POST引動來傳送上傳檔案的base64編碼字串。
+將表單資料模型的POST引動與您的調適型表單整合，以從表單中的使用者上傳的檔案中擷取資料。 您可以自由建立自己的調適型表單，並使用表單資料模型的POST引動來傳送上傳檔案的base64編碼字串。
 
 ## 在您的伺服器上部署
 

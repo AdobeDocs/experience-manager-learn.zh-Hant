@@ -2,14 +2,14 @@
 title: 使用組合器服務的XDP拼接
 description: 在AEM Forms中使用組合器服務來拼接xdp
 feature: Assembler
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2022-12-19T00:00:00Z
 exl-id: e116038f-7d86-41ee-b1b0-7b8569121d6d
 duration: 91
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 本文提供相關資產，用於示範使用組合器服務彙整xdp檔案的能力。
 下列jsp程式碼是用來在master.xdp檔案中插入名為**address**&#x200B;的xdp檔案中名為&#x200B;**address**&#x200B;的子表單。 產生的xdp會儲存在AEM安裝的根資料夾中。
 
-組合器服務需仰賴有效的DDX檔案來說明如何操作PDF檔案。 您可以在此參閱[DDX參考檔案](assets/ddxRef.pdf)。第40頁包含有關xdp彙整的資訊。
+組合器服務需仰賴有效的DDX檔案來說明對PDF檔案的操作。 您可以在此參閱[DDX參考檔案](assets/ddxRef.pdf)。第40頁包含有關xdp彙整的資訊。
 
 ```java
     javax.servlet.http.Part ddxFile = request.getPart("xdpstitching.ddx");
@@ -72,11 +72,11 @@ ht-degree: 0%
 * 使用[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)上傳及安裝封裝
 * [擷取此zip檔案的內容](assets/xdp-and-ddx.zip)以取得範例xdp和DDX檔案
 
-**安裝套件後，您必須在AdobeGranite CSRF篩選中允許列出下列URL。**
+**安裝套件後，您必須在Adobe Granite CSRF篩選器中允許列出下列URL。**
 
 1. 請依照下列步驟操作，將上述路徑加入允許清單。
 1. [登入configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜尋AdobeGranite CSRF篩選器
+1. 搜尋Adobe Granite CSRF篩選器
 1. 在排除的區段中新增以下路徑並儲存`/content/AemFormsSamples/assemblerservice`
 1. 搜尋「Sling查閱者篩選器」
 1. 勾選「允許空白」核取方塊。 （此設定僅供測試之用）

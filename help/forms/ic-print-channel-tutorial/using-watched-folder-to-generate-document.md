@@ -3,7 +3,7 @@ title: 使用Watched資料夾產生Print Channel檔案
 description: 這是多步驟教學課程的第10部分，說明如何為列印管道建立您的第一份互動式通訊檔案。 在本部分中，我們將使用watched資料夾機制來產生列印管道檔案。
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
 topic: Development
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 9bb05c94-2a7b-4149-b567-186eb08b1c66
 duration: 70
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 建立及測試您的列印管道檔案後，我們需要一種機制，以批次模式或依需求產生這些檔案。 通常，這些型別的檔案會以批次模式產生，最常見的機制是使用watched資料夾。
 
-當您在AEM中設定watched資料夾時，您會關聯ECMA指令碼或Java程式碼，這些程式碼會在檔案放入watched資料夾時執行。 在本文中，我們將重點介紹ECMA指令碼，它會產生列印通道檔案並將其儲存至檔案系統。
+在AEM中設定watched資料夾時，您會建立ECMA指令碼或Java程式碼的關聯，以便在將檔案拖放至watched資料夾時執行。 在本文中，我們將重點介紹ECMA指令碼，它會產生列印通道檔案並將其儲存至檔案系統。
 
 Watched資料夾設定和ECMA指令碼是您在本教學課程的[開頭匯入的資產的一部分](introduction.md)
 

@@ -1,7 +1,7 @@
 ---
 title: 顯示內嵌的記錄檔案
-description: 將最適化表單資料與XDP範本合併，並使用Document Cloud內嵌PDF API顯示內嵌PDF。
-version: 6.4,6.5
+description: 將最適化表單資料與XDP範本合併，並使用Document Cloud內嵌PDF API顯示PDF內嵌。
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-9411
 exl-id: 327ffe26-e88e-49f0-9f5a-63e2a92e1c8a
 last-substantial-update: 2021-07-07T00:00:00Z
 duration: 165
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 已執行下列步驟以完成整合
 
-## 建立自訂元件以內嵌顯示PDF
+## 建立自訂元件以內嵌PDF
 
 已建立自訂元件(embed-pdf)以內嵌POST呼叫傳回的pdf。
 
@@ -108,7 +108,7 @@ $(document).ready(function() {
 設定內嵌pdf元件，如下方熒幕擷圖所示
 ![embed-pdf](assets/embed-pdf-configuration.png)
 
-**內嵌PDFAPI金鑰** — 此金鑰可用來內嵌PDF。 此金鑰僅適用於localhost。 您可以建立[您自己的金鑰](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)，並將其與其他網域建立關聯。
+**內嵌PDF API金鑰** — 此金鑰可用來內嵌PDF。 此金鑰僅適用於localhost。 您可以建立[您自己的金鑰](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)，並將其與其他網域建立關聯。
 
 **傳回pdf**&#x200B;的端點 — 這是自訂servlet，會將資料與xdp範本合併並傳回pdf。
 
@@ -230,9 +230,9 @@ public class StreamPDFToEmbed extends SlingAllMethodsServlet {
 
 1. [下載並安裝內嵌pdf套件](assets/embedpdf.core-1.0-SNAPSHOT.jar)。
 這有servlet可合併資料與XDP範本，並串流回pdf。
-1. 使用[AEM ConfigMgr](http://localhost:4502/system/console/configMgr)，在AdobeGranite CSRF篩選器的排除路徑區段中新增/bin/getPDFToEmbed路徑。 建議在生產環境中使用[CSRF保護架構](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
+1. 使用[AEM ConfigMgr](http://localhost:4502/system/console/configMgr)，在Adobe Granite CSRF篩選器的排除路徑區段中新增路徑/bin/getPDFToEmbed。 建議在生產環境中使用[CSRF保護架構](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
 1. [匯入使用者端資料庫和自訂元件](assets/embed-pdf.zip)
 1. [匯入最適化表單和範本](assets/embed-pdf-form-and-xdp.zip)
 1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)
 1. 填寫一些表單欄位
-1. 按Tab切換至「檢視PDF」標籤。 選取「檢視pdf」核取方塊。 您應該會看到PDF顯示在填入最適化表單資料的表單中
+1. 按Tab鍵前往「檢視PDF 」標籤。 選取「檢視pdf」核取方塊。 您應該會看到PDF顯示在填入最適化表單資料的表單中

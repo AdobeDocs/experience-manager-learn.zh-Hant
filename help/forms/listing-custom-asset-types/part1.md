@@ -3,7 +3,7 @@ title: 註冊自訂資產型別
 description: 啟用AEMForms Portal中列出的自訂資產型別
 feature: Adaptive Forms
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 99944f44-0985-4320-b437-06c5adfc60a1
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ level: Experienced
 exl-id: da613092-e03b-467c-9b9e-668142df4634
 last-substantial-update: 2019-07-11T00:00:00Z
 duration: 129
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->確定您已安裝含SP1的AEM 6.3及對應的AEM Forms附加元件。 此功能僅適用於AEM Forms 6.3 SP1及更高版本
+>請確認您已安裝含SP1的AEM 6.3以及對應的AEM Forms附加元件。 此功能僅適用於AEM Forms 6.3 SP1及更高版本
 
 ## 指定基本路徑 {#specify-base-path}
 
@@ -52,10 +52,10 @@ ht-degree: 0%
 
 我們已在搜尋和清單器元件中新增索引標籤（資產清單）。 此索引標籤會列出現成可用的資產型別以及您設定的其他資產型別。 依預設，會列出以下資產型別
 
-1. 最適化表單
+1. 自適應表單
 1. 表單範本
 1. PDF forms
-1. 檔案(靜態PDF)
+1. 檔案（靜態PDF）
 
 **註冊自訂資產型別的步驟**
 

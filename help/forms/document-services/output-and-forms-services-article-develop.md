@@ -2,14 +2,14 @@
 title: 在AEM Forms中使用輸出和Forms服務進行開發
 description: 瞭解如何使用AEM Forms中的輸出和Forms服務API進行開發。
 feature: Output Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
 duration: 122
-source-git-commit: 12af84e3d9be24fabb01a64eced6279749668599
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -52,11 +52,11 @@ Line2會從請求中擷取saveLocation
 
 
 
-**安裝套件後，您必須在AdobeGranite CSRF篩選中允許列出下列URL。**
+**安裝套件後，您必須在Adobe Granite CSRF篩選器中允許列出下列URL。**
 
 1. 請依照下列步驟操作，將上述路徑加入允許清單。
 1. [登入configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜尋AdobeGranite CSRF篩選器
+1. 搜尋Adobe Granite CSRF篩選器
 1. 在排除的區段中新增下列3個路徑並儲存
 1. /content/AemFormsSamples/mergedata
 1. /content/AemFormsSamples/exportdata
@@ -81,7 +81,7 @@ Line2會從請求中擷取saveLocation
 ## 使用OutputService將資料與xdp範本合併
 
 * 使用輸出服務將資料與xdp或pdf檔案合併，以產生平面化pdf
-* **POSTURL**： http://localhost:4502/content/AemFormsSamples/outputservice.html
+* **張貼URL**： http://localhost:4502/content/AemFormsSamples/outputservice.html
 * **要求引數 —**
 
    * **xdp_or_pdf_file** ：您要合併資料的xdp或pdf檔案
@@ -93,7 +93,7 @@ Line2會從請求中擷取saveLocation
 #### 匯入資料
 
 * 使用FormsService importData將資料匯入PDF檔案
-* **POSTURL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
+* **張貼URL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
 
 * **要求引數：**
 
@@ -104,7 +104,7 @@ Line2會從請求中擷取saveLocation
 #### 匯出資料
 
 * 使用FormsService exportData API從PDF檔案匯出資料
-* **POSTURL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
+* **張貼URL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **要求引數：**
 
    * **pdf檔案** ：您要匯出資料的pdf檔案
@@ -114,7 +114,7 @@ Line2會從請求中擷取saveLocation
 
 * 將XDP範本轉譯為靜態/動態pdf
 * 使用FormsService renderPDFForm API將xdp範本轉譯為PDF
-* **POSTURL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
+* **張貼URL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
 * 要求引數：
    * xdpName：要呈現為pdf的xdp檔案的名稱
 

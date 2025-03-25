@@ -2,7 +2,7 @@
 title: 在AEM Forms工作流程中將逗號分隔字串轉換為字串陣列
 description: 當您的表單資料模型有一個字串陣列作為輸入引數之一時，您將需要在叫用表單資料模型的提交動作之前，對從調適型表單的提交動作產生的資料進行推測。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
@@ -10,7 +10,7 @@ jira: KT-8507
 exl-id: 9ad69407-2413-416f-9cec-43f88989b31d
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 建立流程步驟
 
-當我們希望工作流程執行特定邏輯時，AEM工作流程會使用流程步驟。 流程步驟可以與ECMA指令碼或OSGi服務相關聯。 我們的自訂流程步驟會執行OSGi服務。
+當我們想要工作流程執行特定邏輯時，AEM工作流程會使用流程步驟。 流程步驟可以與ECMA指令碼或OSGi服務相關聯。 我們的自訂流程步驟會執行OSGi服務。
 
 提交的資料採用以下格式。 businessUnits元素的值是以逗號分隔的字串，需要轉換為字串陣列。
 

@@ -1,22 +1,22 @@
 ---
-title: 使用Forms Workflow的傳送電子郵件步驟
+title: 使用Forms Workflow的「傳送電子郵件」步驟
 description: AEM Forms 6.4已匯入「傳送電子郵件」步驟。使用此步驟，我們可以建立業務流程或工作流程，讓您傳送包含或不包含附件的電子郵件。 以下影片會逐步介紹設定傳送電子郵件元件的步驟
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 21e58bbc-c1d6-4d41-a4d4-f522a3a5d4a7
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 314
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-# 使用Forms Workflow的傳送電子郵件步驟 {#using-send-email-step-of-forms-workflow}
+# 使用Forms Workflow的「傳送電子郵件」步驟 {#using-send-email-step-of-forms-workflow}
 
 AEM Forms 6.4已匯入「傳送電子郵件」步驟。使用此步驟，我們可以建立業務流程或工作流程，讓您傳送包含或不包含附件的電子郵件。 以下影片會逐步介紹設定傳送電子郵件元件的步驟。
 
@@ -25,8 +25,8 @@ AEM Forms 6.4已匯入「傳送電子郵件」步驟。使用此步驟，我們�
 在本文中，我們將引導您完成以下使用案例：
 
 1. 使用者填寫休假請求表單
-1. 在表單提交時，會觸發AEM工作流程
-1. AEM工作流程利用「傳送電子郵件」元件，以傳送包含DoR作為附件的電子郵件
+1. 在提交表單時會觸發AEM工作流程
+1. AEM工作流程利用傳送電子郵件元件，以傳送包含DoR作為附件的電子郵件
 
 在使用「傳送電子郵件」步驟之前，請務必從[configMgr](http://localhost:4502/system/console/configMgr)設定Day CQ郵件服務。 提供您環境的特定值
 
@@ -54,7 +54,7 @@ AEM Forms 6.4已匯入「傳送電子郵件」步驟。使用此步驟，我們�
 
 >[!NOTE]
 >
->在AEM Forms 6.5及更高版本中，您不需要此自訂程式碼來建立中繼資料屬性。 請使用AEM Workflow中的變數功能
+>在AEM Forms 6.5及更高版本中，您不需要此自訂程式碼來建立中繼資料屬性。 請使用AEM工作流程中的變數功能
 
 請確定已按照以下熒幕擷取畫面設定傳送電子郵件元件的附件索引標籤
 ![傳送電子郵件附件標籤](assets/sendemailcomponentconfigure.jpg)「DOR.pdf」值必須符合您在最適化表單的提交選項中指定的記錄檔案路徑中指定的值。

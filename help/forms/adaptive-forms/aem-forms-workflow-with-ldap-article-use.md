@@ -4,12 +4,12 @@ description: 指派AEM Forms工作流程任務給提交者的管理員
 feature: Adaptive Forms, Workflow
 topic: Integrations
 role: Developer
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 level: Intermediate
 exl-id: 2e9754ff-49fe-4260-b911-796bcc4fd266
 last-substantial-update: 2021-09-18T00:00:00Z
 duration: 111
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 指派AEM Forms工作流程任務給提交者的管理員。
 
-在AEM工作流程中使用最適化表單時，您會想要動態地將任務指派給表單提交者的管理員。 為了完成此使用案例，我們必須使用Ldap設定AEM。
+在AEM工作流程中使用最適化表單時，您會想要動態地將任務指派給表單提交者的管理員。 若要完成此使用案例，我們必須使用Ldap設定AEM。
 
 使用LDAP設定AEM所需的步驟在[此處](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)詳細說明。
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ![同步處理程式](assets/synchandler.gif)
 
-設定LDAP並將使用者匯入AEM後，我們就可以建立工作流程，將任務指派給提交者的管理員。 為了撰寫本文章，我們已開發簡單的單步驟核准工作流程。
+設定LDAP並將使用者匯入AEM後，我們便會建立工作流程，將任務指派給提交者的管理員。 為了撰寫本文章，我們已開發簡單的單步驟核准工作流程。
 
 工作流程的第一步是將initialstep的值設定為「否」。 最適化表單中的商業規則將停用「提交者詳細資料」面板，並根據初始步驟值顯示「核准者」面板。
 
@@ -64,12 +64,12 @@ String managerPorperty = workflowInitiator.getProperty("profile/manager")[0].get
 
 請參閱本文章以實作您自己的[ParticipantChooser 。](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
 
-在您的系統上測試此專案(對於Adobe員工，您可以立即使用此範例)
+若要在系統上測試此專案(若為Adobe員工，您可立即使用此範例)
 
 * [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 這是用於設定管理員屬性的自訂OSGI套件。
 * [下載並安裝DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [使用封裝管理員](assets/aem-forms-ldap.zip)，將與本文相關的Assets匯入至AEM。此封裝包含LDAP組態檔、工作流程以及最適化表單。
-* 使用適當的LDAP認證設定AEM與LDAP。
+* 使用適當的LDAP憑證以您的LDAP設定AEM。
 * 使用您的LDAP憑證登入AEM。
 * 開啟[timeoffrequestform](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填寫表單並提交。
@@ -77,4 +77,4 @@ String managerPorperty = workflowInitiator.getProperty("profile/manager")[0].get
 
 >[!NOTE]
 >
->這個用於擷取管理員名稱的自訂程式碼已針對AdobeLDAP進行測試。 如果您要針對不同的LDAP執行此程式碼，您必須修改或撰寫您自己的getParticipant實作，才能取得管理員名稱。
+>此用於擷取管理員名稱的自訂程式碼已針對Adobe LDAP進行測試。 如果您要針對不同的LDAP執行此程式碼，您必須修改或撰寫您自己的getParticipant實作，才能取得管理員名稱。

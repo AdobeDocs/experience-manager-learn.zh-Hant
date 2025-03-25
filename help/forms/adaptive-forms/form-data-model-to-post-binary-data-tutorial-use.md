@@ -1,30 +1,30 @@
 ---
-title: 使用表單資料模型建立Post二進位資料
+title: 使用表單資料模型發佈二進位資料
 description: 使用表單資料模型將二進位資料發佈至AEM DAM
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 9c62a7d6-8846-424c-97b8-2e6e3c1501ec
 last-substantial-update: 2021-01-09T00:00:00Z
 duration: 95
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%
 
 ---
 
-# 使用表單資料模型建立Post二進位資料{#using-form-data-model-to-post-binary-data}
+# 使用表單資料模型發佈二進位資料{#using-form-data-model-to-post-binary-data}
 
-從AEM Forms 6.4開始，我們現在能呼叫表單資料模型服務，做為AEM Workflow中的步驟。 本文將逐步引導您瞭解使用表單資料模型服務張貼記錄檔案的範例使用案例。
+從AEM Forms 6.4開始，我們現在能叫用表單資料模型服務，作為AEM工作流程中的步驟。 本文將逐步引導您瞭解使用表單資料模型服務張貼記錄檔案的範例使用案例。
 
 使用案例如下：
 
 1. 使用者填寫並提交最適化表單。
 1. 最適化表單已設定為產生記錄檔案。
-1. 提交此最適化表單時會觸發AEM工作流程，它會使用叫用表單資料模型服務將記錄檔案POST至AEM DAM。
+1. 提交此最適化表單時，會觸發AEM工作流程，進而使用叫用表單資料模型服務將記錄檔案發佈至AEM DAM。
 
 ![posttodam](assets/posttodamshot1.png)
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 1. [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。此自訂OSGI組合是用來建立中繼資料屬性，並從提交的表單資料中設定其值。
 
-1. [使用封裝管理員將與此文章關聯的資產](assets/postdortodam.zip)匯入AEM。您將取得下列專案
+1. [使用封裝管理員將與本文相關的資產](assets/postdortodam.zip)匯入AEM。您將取得下列專案
 
    1. 工作流程模型
    1. 最適化表單已設定為提交至AEM Workflow

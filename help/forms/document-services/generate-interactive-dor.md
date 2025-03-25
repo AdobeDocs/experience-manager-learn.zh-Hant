@@ -1,7 +1,7 @@
 ---
 title: 使用最適化表單資料產生互動式DoR
 description: 將最適化表單資料與XDP範本合併，以產生可下載的pdf
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 177
-source-git-commit: 2625a9127c36ee191eb67128546864c9f6901663
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 下載互動式DoR
 
-一個常見的使用案例是能夠下載包含Adaptive Form資料的互動式DoR。 下載的DoR將使用Adobe Acrobat或Adobe Reader完成。
+一個常見的使用案例是能夠下載包含Adaptive Form資料的互動式DoR。 下載的DoR將使用Adobe Acrobat或Adobe Reader來完成。
 
 ## 最適化表單並非以XSD結構描述為基礎
 
@@ -82,7 +82,7 @@ $(document).ready(function() {
 
 ### 建立最適化表單
 
-根據上一步的XSD建立最適化表單。 建立表單關聯以使用使用者端程式庫「irs」。 此使用者端程式庫具有向servlet進行POST呼叫的程式碼，此servlet會將PDF傳回給呼叫的應用程式。
+根據上一步的XSD建立最適化表單。 建立表單關聯以使用使用者端程式庫「irs」。 此使用者端程式庫具有對servlet進行POST呼叫的程式碼，可將PDF傳回給呼叫的應用程式。
 按一下_下載PDF_&#x200B;時會觸發下列程式碼
 
 ```javascript
@@ -229,7 +229,7 @@ DevelopingWithServiceUser.core：getformsresourceresolver=fd-service
 
 >[!NOTE]
 >
->當您使用瀏覽器的pdf檢視器開啟已下載的PDF時，您不會看到pdf中的資料。 使用Adobe Acrobat或Adobe Reader開啟已下載的PDF。
+>當您使用瀏覽器的pdf檢視器開啟已下載的PDF時，您不會看到pdf中的資料。 使用Adobe Acrobat或Adobe Reader開啟下載的PDF。
 
 
 >[!NOTE]

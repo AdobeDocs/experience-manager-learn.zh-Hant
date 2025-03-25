@@ -3,12 +3,12 @@ title: 建立表單資料模型零件3
 description: 這是建立第一個互動式通訊檔案的多步驟教學課程的第3部分。 在本部分中，我們將建立「表單資料模型」。 表單資料模型可讓您設定並連線至不同的資料來源。它提供直覺式使用者介面，以跨連線的資料來源建立業務實體和服務的統一資料呈現結構描述。以下影片會逐步介紹建立表單資料模型的步驟。
 feature: Interactive Communication
 topic: Development
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 role: Developer
 level: Beginner
 exl-id: 798012e5-5099-4fd0-82ad-a21f64a97aca
 duration: 406
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%

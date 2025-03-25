@@ -1,22 +1,22 @@
 ---
-title: 在AEM Forms 6.3和6.4中使用Salesforce設定DataSource
-description: 使用表單資料模型將AEM Forms與Salesforce整合
+title: 在AEM Forms 6.3和6.4中使用Salesforce設定資料來源
+description: 使用表單資料模型整合AEM Forms與Salesforce
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
 last-substantial-update: 2020-02-14T00:00:00Z
 duration: 175
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
 
 ---
 
-# 在AEM Forms 6.3和6.4中使用Salesforce設定DataSource{#configuring-datasource-with-salesforce-in-aem-forms-and}
+# 在AEM Forms 6.3和6.4中使用Salesforce設定資料來源{#configuring-datasource-with-salesforce-in-aem-forms-and}
 
 ## 先決條件 {#prerequisites}
 
@@ -27,11 +27,11 @@ ht-degree: 0%
 * 捲動至本頁底部，下載swagger檔案並將其儲存至硬碟。
 * 已啟用SSL的AEM Forms
 
-   * [在AEM 6.3](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)上啟用SSL的官方檔案
-   * [在AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)上啟用SSL的官方檔案
+   * [在AEM 6.3上啟用SSL的官方檔案](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
+   * [在AEM 6.4上啟用SSL的官方檔案](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
-* 您需要有Salesforce帳戶
-* 您需要建立連線應用程式。 [這裡](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0)列出建立應用程式的官方檔案表單Salesforce。
+* 您必須擁有Salesforce帳戶
+* 您需要建立連線應用程式。 建立應用程式的官方檔案表單Salesforce在[這裡](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0)列出。
 * 為應用程式提供適當的OAuth範圍（我已選取所有可用的OAuth範圍以進行測試）
 * 提供回呼URL。 在我的案例中，回呼URL為
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
    * 如果您使用**AEM Forms 6.4**，則回呼URL為https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
-在此範例中，gbedekar -w7-1:6443是我的伺服器名稱，以及執行AEM的連線埠。
+在此範例中，gbedekar -w7-1:6443是我的伺服器名稱，也是執行AEM的連線埠。
 
 建立連線應用程式後，請記下&#x200B;**消費者金鑰和秘密金鑰**。 在AEM Forms中建立資料來源時，您需要這些資訊。
 
@@ -106,7 +106,7 @@ ht-degree: 0%
    * 驗證處理常式：授權持有者
    * 按一下「連線至OAuth」按鈕。 如果您看到任何錯誤，請檢閱上述步驟，以確保所有資訊皆正確輸入。
 
-使用SalesForce建立資料Source後，您就可以使用剛剛建立的資料Source建立表單資料整合。 其檔案連結為[這裡](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
+使用Salesforce建立資料Source後，您就可以使用剛剛建立的資料Source建立表單資料整合。 其檔案連結為[這裡](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
 
 請務必設定表單資料模型以包含POST服務，以便在SFDC中建立Lead物件。
 

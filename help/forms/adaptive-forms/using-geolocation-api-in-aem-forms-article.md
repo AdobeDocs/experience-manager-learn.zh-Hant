@@ -2,14 +2,14 @@
 title: 在最適化Forms中使用地理位置API
 description: 使用地理位置API填入表單上的位址列位
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 50db6155-ee83-4ddb-9e3a-56e8709222db
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 88
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -87,7 +87,7 @@ API傳回的JSON接著會經過剖析，以設定調適型表單欄位。
 >
 >為了測試目的，您可以將HTTP通訊協定與URL中的localhost搭配使用。
 >
->對於生產伺服器，您需要為AEM伺服器啟用SSL才能取得此功能。
+>若使用生產伺服器，您必須為AEM伺服器啟用SSL，才能取得此功能。
 >
 >與本文相關的範例已透過美國地址進行測試。 如果您想在其他地理位置使用此功能，則可能必須調整JSON剖析。
 

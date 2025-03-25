@@ -1,7 +1,7 @@
 ---
 title: 套用使用許可權至上傳的pdf
 description: 套用使用許可權至pdf
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Reader Extensions
 topic: Development
 role: Developer
@@ -9,19 +9,19 @@ level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 129
-source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 0%
 
 ---
 
-# 套用Reader延伸模組
+# 套用Reader擴充功能
 
-Reader擴充功能可讓您控制PDF檔案的使用許可權。 使用許可權與Acrobat中提供的功能有關，但不與Adobe Reader中的功能有關。 Reader擴充功能所控制的功能包括新增註釋至檔案、填寫表單及儲存檔案的功能。 已新增使用許可權的PDF檔案稱為許可權啟用檔案。 在Adobe Reader中開啟許可權啟用PDF檔案的使用者可執行為該檔案啟用的操作。
+Reader擴充功能可讓您控制PDF檔案的使用許可權。 使用許可權與Acrobat中提供的功能有關，但不與Adobe Reader中的功能有關。 Reader擴充功能控制的功能包括新增註釋至檔案、填寫表單及儲存檔案的功能。 已新增使用許可權的PDF檔案稱為許可權啟用檔案。 在Adobe Reader中開啟許可權啟用PDF檔案的使用者可執行為該檔案啟用的操作。
 
 若要完成此使用案例，我們需要執行下列動作：
-* [將Reader延伸憑證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)新增至`fd-service`位使用者。
+* [將Reader擴充功能憑證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)新增至`fd-service`位使用者。
 
 ## 建立自訂OSGi服務
 
@@ -71,9 +71,9 @@ public class ApplyUsageRights implements ReaderExtendPDF {
 }
 ```
 
-## 建立Servlet以串流處理讀取器延伸PDF
+## 建立Servlet以串流Reader Extended PDF
 
-下一步是使用POST方法建立servlet，以將讀取器擴展PDF傳回給使用者。 在這種情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF會呈現為動態PDF，而且瀏覽器隨附的pdf檢視器不會處理動態pdf。
+下一步是使用POST方法建立servlet，將reader extended PDF傳回給使用者。 在此情況下，系統會要求使用者將PDF儲存至其檔案系統。 這是因為PDF呈現為動態PDF，而且瀏覽器隨附的pdf檢視器無法處理動態pdf。
 
 以下是servlet的程式碼。 此servlet從最適化表單的自訂提交動作叫用。
 Servlet會建立UsageRights物件，並根據使用者在最適化表單中輸入的值來設定其屬性。 此servlet接著會呼叫為此目的建立之服務的applyUsageRights方法。
@@ -207,7 +207,7 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 1. [下載並安裝ares.ares.core-ares套件](assets/ares.ares.core-ares.jar)。 此功能具有自訂服務和servlet，可套用使用許可權並串流回pdf。
 1. [匯入使用者端程式庫和自訂提交](assets/applyaresdemo.zip)
 1. [匯入最適化表單](assets/applyaresform.zip)
-1. 將Reader延伸憑證新增至「fd-service」使用者。 確定別名是&quot;**ares**&quot;。
+1. 將Reader擴充功能憑證新增至「fd-service」使用者。 確定別名是&quot;**ares**&quot;。
 1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
 1. 選取適當的許可權並上傳PDF檔案
-1. 按一下提交以取得Reader延伸PDF
+1. 按一下提交即可取得Reader Extended PDF

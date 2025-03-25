@@ -2,7 +2,7 @@
 title: 將AEM Forms與SendGrid整合
 description: 利用AEM Forms的SengGrid雲端型電子郵件傳遞平台。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-13605
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ level: Intermediate
 last-substantial-update: 2023-07-14T00:00:00Z
 exl-id: 62b73f4b-69d8-4ede-9d57-3d6472d25d5a
 duration: 118
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -52,7 +52,7 @@ ht-degree: 0%
 1. 下載資產資料夾中提供的[swagger檔案](assets/SendGridWithDynamicTemplate.yaml)。
 2. 使用下載的Swagger檔案和您的SendGrid認證建立Restful資料來源。
 3. 根據Restful資料來源建立表單資料模型。
-4. 根據您的需求，叫用表單資料模型的`mail/send`POST作業。 例如，您可以在按鈕點選時觸發電子郵件，或將其納入您的AEM Forms工作流程的一部分。
+4. 根據您的需求，叫用表單資料模型的`mail/send` POST作業。 例如，您可以在按鈕點選時觸發電子郵件，或將其納入您的AEM Forms工作流程的一部分。
 
 服務的裝載範例如下。 將預留位置值取代為您自己的資料：
 

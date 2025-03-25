@@ -3,7 +3,7 @@ title: 在表單提交上顯示提交ID
 description: 在感謝頁面中顯示表單資料模型提交的回應
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-13900
 last-substantial-update: 2023-09-09T00:00:00Z
 exl-id: 18648914-91cc-470d-8f27-30b750eb2f32
 duration: 72
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 自訂感謝頁面
 
-將最適化表單提交至REST端點時，您會想要顯示確認訊息，讓使用者知道已成功提交表單。 POST回應包含有關提交的詳細資訊，例如提交ID，而設計良好的確認訊息包含有助於提供更佳使用者體驗的提交ID。 此回應會顯示於已設定最適化表單的感謝頁面中。
+將最適化表單提交至REST端點時，您會想要顯示確認訊息，讓使用者知道已成功提交表單。 POST回應包含提交的詳細資訊，例如提交ID，而設計良好的確認訊息則包含有助於提供更佳使用者體驗的提交ID。 此回應會顯示於已設定最適化表單的感謝頁面中。
 
 以下熒幕擷圖顯示正在使用表單資料模型提交動作提交表單，並設定感謝頁面
 

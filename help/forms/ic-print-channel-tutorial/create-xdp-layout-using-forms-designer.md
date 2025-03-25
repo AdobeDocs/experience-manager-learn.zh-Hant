@@ -3,7 +3,7 @@ title: 使用Forms Designer建立版面
 description: 此為多部分教學課程的第4部分，說明如何為列印管道建立您的第一個互動式通訊檔案。在本部分中，我們檢視使用AEM Forms Designer建立的版面配置檔案。
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 17f4cdbb-079b-4fe3-861d-cfa0c03d30dd
 jira: KT-5957
 thumbnail: 37890.jpg
@@ -12,7 +12,7 @@ role: Developer
 level: Beginner
 exl-id: 1bda648c-01be-44f1-aa73-3f5e7365d094
 duration: 141
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 1%

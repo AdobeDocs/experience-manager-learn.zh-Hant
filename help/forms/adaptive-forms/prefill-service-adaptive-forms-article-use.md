@@ -2,14 +2,14 @@
 title: 最適化Forms中的預填服務
 description: 從後端資料來源擷取資料，預先填入調適型表單。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: f2c324a3-cbfa-4942-b3bd-dc47d8a3f7b5
 last-substantial-update: 2021-11-27T00:00:00Z
 duration: 129
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 在下列程式碼片段中，我們有一個實作DataXMLProvider介面的類別。 我們取得登入使用者的存取權，然後擷取登入使用者的設定檔資訊。 然後我們會使用稱為「data」的根節點元素來建立XML檔案，並將適當的元素附加至此資料節點。 一旦建構XML檔案之後，就會傳回XML檔案的輸入資料流。
 
-此類別隨後會成為OSGi套件組合併部署至AEM。 部署套件組合後，即可使用此預填服務做為最適化表單的預填服務。
+此類別然後再製作為OSGi套件組合併部署至AEM。 部署套件組合後，即可使用此預填服務做為最適化表單的預填服務。
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ public class PrefillAdaptiveForm implements DataXMLProvider {
 
 * 請確定已填寫登入[使用者的設定檔](http://localhost:4502/security/users.html)資訊。 範例會尋找登入使用者的FirstName、LastName和Email屬性。
 * [將zip檔案的內容下載並解壓縮到您的電腦上](assets/prefillservice.zip)
-* 使用[AEM Web主控台](http://localhost:4502/system/console/bundles)部署prefill.core-1.0.0-SNAPSHOT組合
+* 使用[AEM Web主控台](http://localhost:4502/system/console/bundles)部署prefill.core-1.0.0-SNAPSHOT套件組合
 * 使用「建立」匯入最適化表單 | 從[FormsAndDocuments區段](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)上傳檔案
 * 確定[表單](http://localhost:4502/editor.html/content/forms/af/prefill.html)使用&#x200B;**「自訂AEM Forms預填服務」**&#x200B;做為預填服務。 這可以從&#x200B;**表單容器**&#x200B;區段的組態屬性中驗證。
 * [預覽表單](http://localhost:4502/content/dam/formsanddocuments/prefill/jcr:content?wcmmode=disabled)。 您應該會看到表單已填入正確的值。

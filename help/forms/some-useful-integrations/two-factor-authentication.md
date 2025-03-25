@@ -2,7 +2,7 @@
 title: SMS雙因素驗證
 description: 新增額外的安全層級，可在使用者想要執行特定活動時協助確認使用者的身份
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6317
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ level: Experienced
 exl-id: c2c55406-6da6-42be-bcc0-f34426b3291a
 last-substantial-update: 2021-07-07T00:00:00Z
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
@@ -33,7 +33,7 @@ SMS雙因素驗證（雙因素驗證）是一種安全性驗證程式，透過�
 
 OpenAPI Specification （前身為Swagger Specification）是REST API的API說明格式。 OpenAPI檔案可讓您說明整個API，包括：
 
-* 每個端點的可用端點(/users)和操作(GET/users、POST/users)
+* 每個端點的可用端點(/users)和操作(GET /users、POST /users)
 * 作業引數每個作業的輸入和輸出
 驗證方法
 * 聯絡資訊、授權、使用條款及其他資訊。
@@ -59,7 +59,7 @@ AEM Forms資料整合提供直覺式使用者介面，可建立和使用[表單�
 
 ## 建立最適化表單
 
-將表單資料模型的POST叫用與您的回應式表單整合，以驗證使用者在表單中輸入的行動電話號碼。 您可以自由建立自己的最適化表單，並根據需求使用表單資料模型的POST引動來傳送和驗證OTP代碼。
+將表單資料模型的POST呼叫與您的自適應表單整合，以驗證使用者在表單中輸入的行動電話號碼。 您可以自由建立自己的最適化表單，並根據需求使用表單資料模型的POST引動來傳送和驗證OTP代碼。
 
 如果您想要搭配API金鑰使用範例資產，請遵循下列步驟：
 

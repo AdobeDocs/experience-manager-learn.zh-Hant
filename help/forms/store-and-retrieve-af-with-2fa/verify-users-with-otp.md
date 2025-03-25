@@ -3,7 +3,7 @@ title: 使用OTP驗證使用者
 description: 使用OTP驗證與應用程式號碼關聯的行動電話號碼。
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6594
 thumbnail: 6594.jpg
 topic: Development
@@ -11,7 +11,7 @@ role: Developer
 level: Experienced
 exl-id: d486d5de-efd9-4dd3-9d9c-1bef510c6073
 duration: 84
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -34,7 +34,7 @@ SMS雙因素驗證（雙因素驗證）是一種安全性驗證程式，透過�
 
 OpenAPI Specification （前身為Swagger Specification）是REST API的API說明格式。 OpenAPI檔案可讓您說明整個API，包括：
 
-* 每個端點的可用端點(/users)和操作(GET/users、POST/users)
+* 每個端點的可用端點(/users)和操作(GET /users、POST /users)
 * 作業引數每個作業的輸入和輸出
 驗證方法
 * 聯絡資訊、授權、使用條款及其他資訊。

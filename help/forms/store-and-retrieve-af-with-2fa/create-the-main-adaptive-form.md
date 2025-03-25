@@ -3,7 +3,7 @@ title: 建立主要的最適化表單
 description: 建立最適化表單來擷取申請人資訊，並建立最適化表單來擷取已儲存的最適化表單
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6552
 thumbnail: 6552.jpg
 topic: Development
@@ -11,7 +11,7 @@ role: User
 level: Beginner
 exl-id: 73de0ac4-ada6-4b8e-90a8-33b976032135
 duration: 41
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 * 範例表單是以[自訂最適化表單範本](assets/custom-template-with-page-component.zip)為基礎，必須匯入AEM才能正確呈現範例表單。
 
-* 已完成的[StoreAfWithAttachments表單](assets/store-af-with-attachments-form.zip)可以下載並匯入您的AEM執行個體。
+* 您可以下載已完成的[StoreAfWithAttachments表單](assets/store-af-with-attachments-form.zip)，並將其匯入您的AEM執行個體。
 
 * 與此表單](assets/workflow-model-store-af-with-attachments.zip)相關聯的[AEM工作流程需要匯入您的AEM執行個體，表單才能運作。
 

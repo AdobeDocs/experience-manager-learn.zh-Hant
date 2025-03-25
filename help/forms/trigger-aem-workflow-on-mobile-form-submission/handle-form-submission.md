@@ -3,13 +3,14 @@ title: 在HTML5表單提交時觸發AEM工作流程
 description: 處理HTML5表單提交
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+exl-id: 5fbc0cb9-5b55-4269-9172-039414db89cc
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 1%
@@ -18,12 +19,12 @@ ht-degree: 1%
 
 # 處理表單提交
 
-在本部分中，我們將建立在AEM Publish上執行的簡單servlet以處理HTML5表單提交。 此servlet會向在AEM作者執行個體中執行的servlet發出HTTPPOST請求，該執行個體負責將提交的資料儲存為AEM作者存放庫中的`nt:file`節點。
+在這部分中，我們將建立一個在AEM Publish上執行的簡單servlet，以處理HTML5表單提交。 此servlet會向在AEM作者執行個體中執行的servlet發出HTTP POST請求，該執行個體負責將提交的資料儲存為AEM作者存放庫中的`nt:file`節點。
 
-以下是處理HTML5表單提交的servlet程式碼。 在此servlet中，我們會對AEM Author執行個體中掛接在&#x200B;**/bin/startworkflow**&#x200B;上的servlet進行POST呼叫。 此servlet會將表單資料儲存在AEM作者的存放庫中。
+以下為處理HTML5表單提交的servlet程式碼。 在此servlet中，我們會對AEM Author執行個體中掛接在&#x200B;**/bin/startworkflow**&#x200B;上的servlet進行POST呼叫。 此servlet會將表單資料儲存在AEM作者的存放庫中。
 
 
-## AEM Publish servlet
+## AEM發佈servlet
 
 下列程式碼會處理HTML5表單提交作業。 此程式碼會在發佈執行個體上執行。
 

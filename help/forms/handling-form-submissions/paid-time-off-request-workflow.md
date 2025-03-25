@@ -1,9 +1,9 @@
 ---
 title: 簡易帶薪休假請求工作流程
-description: 在AEM Workflow中隱藏和顯示最適化表單面板
+description: 在AEM工作流程中隱藏及顯示最適化表單面板
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 1c4822e6-76ce-446b-98cb-408900d68b24
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ level: Experienced
 exl-id: 9342bd2f-2ba9-42ee-9224-055649ac3c90
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 592
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -23,9 +23,9 @@ ht-degree: 0%
 在本文中，我們將討論申請付費休假的簡單工作流程。 業務需求如下：
 
 * 使用者A透過填寫最適化表單來要求休假。
-* 表單會路由傳送給AEM管理員使用者（在現實情況中，它會路由傳送給提交者的管理員）
+* 表單會路由傳送給AEM管理員使用者（在現實情況中，它會路由給提交者的管理員）
 * 管理員會開啟表單。 管理員應該無法編輯提交者填入的任何資訊。
-* 核准者區段應該對核准者可見(在此情況下是AEM管理員使用者)。
+* 核准者區段應向核准者顯示(在此情況下，核准者應為AEM管理員使用者)。
 
 為了滿足上述要求，我們在表單中使用名為&#x200B;**initialstep**&#x200B;的隱藏欄位，其預設值設定為「是」。提交表單時，工作流程中的第一個步驟會將initialstep的值設定為「否」。 表單具有商業規則，可根據初始步驟值隱藏和顯示適當的區段。
 

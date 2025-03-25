@@ -2,14 +2,14 @@
 title: 建立不含資料的表單資料模型Source
 description: 從AEM Forms 6.4開始，我們現在能定義表單資料模型(FDM)，不必將其與資料來源建立關聯。 以下影片會逐步說明不使用任何資料來源建立FDM的步驟。
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: b43568e7-99f0-425d-9601-c671ecdaff69
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 188
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%

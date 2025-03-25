@@ -1,15 +1,15 @@
 ---
 title: 使用資料屬性預先填入HTML5 Forms。
-description: 從後端來源擷取資料，填入HTML5表單。
+description: 從後端來源擷取資料，以填入HTML5表單。
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: ab0f5282-383b-4be6-9c57-cded6ab37528
 last-substantial-update: 2020-01-09T00:00:00Z
 duration: 94
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 使用AEM Forms以HTML格式轉譯的XDP範本稱為HTML5或Mobile Forms。 常見的使用案例是在轉譯表單時預先填入這些表單。
 
-有2種方式可以在資料轉譯為HTML時與xdp範本合併。
+資料呈現為HTML時，有2種方式可與xdp範本合併。
 
 **dataRef**：您可以在URL中使用dataRef引數。 此引數會指定與範本合併之資料檔案的絕對路徑。 此引數可以是Rest服務的URL，會以XML格式傳回資料。
 
@@ -44,7 +44,7 @@ slingRequest.setAttribute(&quot;data&quot;， content)；
 您編寫的JSP將可以透過request.getParameter(&quot;name&quot;)存取name引數。 然後，您可以將此引數的值傳遞至後端程式，以擷取所需的資料。
 若要讓此功能在您的系統上運作，請遵循下列步驟：
 
-* [使用封裝管理員下載並匯入資產到AEM](assets/prepopulatemobileform.zip)
+* [使用封裝管理員下載資產並將其匯入AEM](assets/prepopulatemobileform.zip)
 此套件將安裝下列專案
 
    * CustomProfile
