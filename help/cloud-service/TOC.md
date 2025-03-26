@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 4412e1aca73290bbcf35161db754dab65144c3c9
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1380'
 ht-degree: 15%
 
 ---
@@ -27,7 +27,6 @@ ht-degree: 15%
    + [Cloud Manager](./introduction/cloud-manager.md)
    + 策略與思想領導力{#strategy}
       + [Experience Manager — 治理和人員配置模型與原型](./introduction/experience-manager-governance-and-staffing-models.md)
-      + [如何使用Adobe Experience Manager提升內容速度](./introduction/drive-content-velocity-for-sites.md)
 + Experience Cloud整合{#integrations}
    + [整合](./integrations/experience-cloud.md)
    + [Adobe Target](./integrations/target.md)
@@ -468,6 +467,6 @@ ht-degree: 15%
          + [Lighthouse分數最佳化 — 第2部分](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part2.md)
          + [Lighthouse分數最佳化 — 第3部分](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part3.md)
       + 第4{#season-4}季
-         + [最佳做法](./expert-resources/cloud-5/season-4/cloud5-edge-delivery-services-best-practices.md)
+         + [最佳實務](./expert-resources/cloud-5/season-4/cloud5-edge-delivery-services-best-practices.md)
          + [搜尋最佳化](./expert-resources/cloud-5/season-4/cloud5-search-optimization.md)
          + [Google地圖](./expert-resources/cloud-5/season-4/cloud5-google-maps.md)
