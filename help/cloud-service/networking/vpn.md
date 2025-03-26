@@ -11,9 +11,9 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: e1bea4320ed7a8b6d45f674649ba9ba946054b17
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1556'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,12 @@ ht-degree: 1%
 # 虛擬私人網路 (VPN)
 
 瞭解如何將AEM as a Cloud Service與您的VPN連線，以在AEM與內部服務之間建立安全的通訊通道。
+
+>[!IMPORTANT]
+>
+>您可以透過Cloud Manager UI或使用API呼叫來設定VPN和連線埠轉送。 本教學課程著重於API方法。
+>
+>如果您偏好使用UI，請參閱[設定AEM as a Cloud Service的進階網路](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 ## 什麼是虛擬私人網路？
 
@@ -51,7 +57,11 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 如需詳細資訊，[請檢閱如何設定、設定和取得Cloud Manger API認證](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用這些認證進行Cloud Manager API呼叫。
 
-本教學課程使用`curl`來進行Cloud Manager API設定。 提供的`curl`命令採用Linux/macOS語法。 如果使用Windows命令提示字元，請將`\`分行符號取代為`^`。
+>[!IMPORTANT]
+>
+>如果您偏好程式化方法&#x200B;*，此教學課程會使用`curl`來進行Cloud Manager API設定 —*。 提供的`curl`命令採用Linux®或macOS語法。 如果使用Windows命令提示字元，請將`\`分行符號取代為`^`。
+>
+>或者，您也可以透過Cloud Manager UI完成相同工作。 *如果您偏好使用UI方法*，請參閱[設定AEM as a Cloud Service的進階網路](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 ## 為每個程式啟用虛擬私人網路
 
@@ -240,7 +250,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
    }
    ```
 
-   `nonProxyHosts`宣告了一組主機，應該透過預設共用IP位址範圍而不是專用輸出IP路由連線埠80或443。 `nonProxyHosts`可能很實用，因為Adobe已自動最佳化透過共用IP的流量。
+   `nonProxyHosts`宣告了一組主機，應該透過預設共用IP位址範圍而不是專用輸出IP路由連線埠80或443。 `nonProxyHosts`在流經Adobe自動最佳化的共用IP的流量時可能很有用。
 
    對於每個`portForwards`對應，進階網路會定義下列轉送規則：
 
@@ -263,7 +273,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
        -H 'Content-Type: application/json'
    ```
 
-3. 可使用Cloud Manager API的[enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業更新虛擬私人網路Proxy設定。 請記住，`enableEnvironmentAdvancedNetworkingConfiguration`是`PUT`作業，因此每次呼叫此作業時，都必須提供所有規則。
+3. 可使用Cloud Manager API的[enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業來更新虛擬私人網路Proxy設定。 請記住，`enableEnvironmentAdvancedNetworkingConfiguration`是`PUT`作業，因此每次呼叫此作業時，都必須提供所有規則。
 
 4. 現在，您可以在自訂AEM程式碼和設定中使用虛擬私人網路輸出設定。
 
@@ -272,9 +282,9 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 啟用「虛擬私人網路」後，AEM程式碼和設定便可使用它們透過VPN呼叫外部服務。 AEM對外部呼叫的處理方式有所差異，共有兩種型別：
 
 1. 對外部服務的HTTP/HTTPS呼叫
-   + 包括對標準80或443連線埠以外的連線埠上執行的服務發出的HTTP/HTTPS呼叫。
+   + 這些外部服務包括對在標準連線埠80或443以外的連線埠上執行的服務發出的HTTP/HTTPS呼叫。
 1. 對外部服務的非HTTP/HTTPS呼叫
-   + 包括任何非HTTP呼叫，例如與郵件伺服器、SQL資料庫或服務之間的連線，這些服務會在其他非HTTP/HTTPS通訊協定上執行。
+   + 這些外部服務包括任何非HTTP呼叫，例如與郵件伺服器、SQL資料庫或使用HTTP/HTTPS以外的通訊協定之服務的連線。
 
 預設允許來自標準連線埠(80/443)上AEM的HTTP/HTTPS請求，但若未正確設定，請勿使用VPN連線，如下所述。
 
