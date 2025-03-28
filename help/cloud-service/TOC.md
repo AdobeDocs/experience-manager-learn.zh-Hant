@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 4412e1aca73290bbcf35161db754dab65144c3c9
+source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1383'
 ht-degree: 15%
 
 ---
@@ -148,6 +148,7 @@ ht-degree: 15%
       + [設定方法](./apis/openapis/setup.md)
       + [伺服器對伺服器驗證](./apis/openapis/use-cases/invoke-api-using-oauth-s2s.md)
       + [使用者驗證（網頁應用程式）](./apis/openapis/use-cases/invoke-api-using-oauth-web-app.md)
+      + [使用者驗證(SPA)](./apis/openapis/use-cases/invoke-api-using-oauth-single-page-app.md)
       + 如何{#how-to}
          + [認證和產品設定檔管理](./apis/openapis/how-to/credentials-and-product-profile-management.md)
          + [許可權管理](./apis/openapis/how-to/services-user-group-permission-management.md)
@@ -467,6 +468,6 @@ ht-degree: 15%
          + [Lighthouse分數最佳化 — 第2部分](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part2.md)
          + [Lighthouse分數最佳化 — 第3部分](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part3.md)
       + 第4{#season-4}季
-         + [最佳實務](./expert-resources/cloud-5/season-4/cloud5-edge-delivery-services-best-practices.md)
+         + [最佳做法](./expert-resources/cloud-5/season-4/cloud5-edge-delivery-services-best-practices.md)
          + [搜尋最佳化](./expert-resources/cloud-5/season-4/cloud5-search-optimization.md)
          + [Google地圖](./expert-resources/cloud-5/season-4/cloud5-google-maps.md)
