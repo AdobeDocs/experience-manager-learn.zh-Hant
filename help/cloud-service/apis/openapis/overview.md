@@ -12,10 +12,10 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 2%
+source-wordcount: '1015'
+ht-degree: 1%
 
 ---
 
@@ -59,15 +59,18 @@ ht-degree: 2%
 
 - **OAuth Single Page App認證**：專為瀏覽器中執行的SPA所設計，需要代表沒有後端伺服器的使用者存取API。 它使用&#x200B;_authorization_code_&#x200B;授權型別，並依賴使用PKCE （代碼交換的證明金鑰）的使用者端安全性機制來保護授權代碼流程。 如需詳細資訊，請參閱[OAuth單頁應用程式認證](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential)。
 
-## OAuth伺服器對伺服器與OAuth網頁應用程式/單頁應用程式憑證之間的差異{#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials}
+## OAuth伺服器對伺服器與Web應用程式與單頁應用程式憑證的差異{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 
-| | OAuth伺服器對伺服器 | OAuth使用者驗證(Web-app) |
-| --- | --- | --- |
-| 驗證目的 | 專為機器對機器互動所設計。 | 專為使用者導向互動所設計。 |
-| 權杖行為 | 代表使用者端應用程式本身的存取權杖發生問題。 | 代表已驗證身分的使用者發行存取權杖。 |
-| 使用案例 | 需要API存取而不需使用者互動的後端服務。 | 具有代表使用者存取API的前端和後端元件的網頁應用程式。 |
-| 安全性考量 | 在後端系統中安全地儲存機密認證(`client_id`， `client_secret`)。 | 使用者的驗證及被授與其自己的暫時存取權杖。 在後端系統中安全地儲存機密認證(`client_id`， `client_secret`)。 |
-| 授予類型 | _client_credentials_ | _authorization_code_ |
+下表總結以OpenAPI為基礎的AEM API所支援的三種OAuth驗證方法之間的差異：
+
+|  | OAuth伺服器對伺服器 | OAuth網頁應用程式 | OAuth單頁應用程式(SPA) |
+| --- | --- | --- | --- |
+| **驗證目的** | 專為機器對機器互動所設計。 | 專為具有&#x200B;_後端_&#x200B;的網頁應用程式中使用者導向互動所設計。 | 專為&#x200B;_使用者端JavaScript應用程式_&#x200B;中的使用者導向互動所設計。 |
+| **權杖行為** | 代表使用者端應用程式本身的存取權杖發生問題。 | 透過後端&#x200B;_為已驗證的使用者_&#x200B;發出存取權杖。 | 透過僅前端流程&#x200B;_為已驗證的使用者_&#x200B;發出存取權杖。 |
+| **使用案例** | 需要API存取而不需使用者互動的後端服務。 | 具有代表使用者存取API的前端和後端元件的網頁應用程式。 | 純粹的前端(JavaScript)應用程式代表沒有後端的使用者存取API。 |
+| **安全性考量** | 在後端系統中安全地儲存機密認證(`client_id`， `client_secret`)。 | 使用者驗證之後，會透過後端呼叫&#x200B;_授予他們自己的_&#x200B;暫時存取權杖。 在後端系統中安全地儲存機密認證(`client_id`， `client_secret`)，以交換存取權杖的授權碼。 | 使用者驗證之後，會透過前端呼叫&#x200B;_授予他們自己的_&#x200B;暫時存取Token。 不使用`client_secret`，因為存放在前端App是不安全的。 仰賴PKCE交換存取權杖的授權代碼。 |
+| **授與型別** | _client_credentials_ | _authorization_code_ | 具有&#x200B;**PKCE**&#x200B;的&#x200B;_authorization_code_ |
+| **Adobe Developer Console認證型別** | OAuth伺服器對伺服器 | OAuth網頁應用程式 | OAuth單頁應用程式 |
 
 ## 存取Adobe API和相關概念{#accessing-adobe-apis-and-related-concepts}
 

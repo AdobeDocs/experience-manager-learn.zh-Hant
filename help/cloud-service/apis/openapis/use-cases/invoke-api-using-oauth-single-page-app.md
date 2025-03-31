@@ -11,13 +11,13 @@ jira: KT-17430
 thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
-source-wordcount: '2103'
+source-wordcount: '2104'
 ht-degree: 0%
 
 ---
-
 
 # 使用OAuth單頁應用程式叫用OpenAPI型AEM API
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 OAuth單頁應用程式驗證非常適合在瀏覽器中執行的JavaScript型應用程式。 無論他們缺乏後端伺服器，還是需要擷取存取權杖以代表使用者與AEM API互動。
 
-PKCE流程延伸OAuth 2.0 _authorization_code_&#x200B;授權型別，藉由防止授權代碼攔截來增強安全性。 如需詳細資訊，請參閱[OAuth伺服器對伺服器與OAuth Web App/單頁應用程式認證之間的差異](../overview.md#difference-between-oauth-server-to-server-and-oauth-web-appsingle-page-app-credentials)。
+PKCE流程延伸OAuth 2.0 _authorization_code_&#x200B;授權型別，藉由防止授權代碼攔截來增強安全性。 如需詳細資訊，請參閱[OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)區段。
 
 >[!AVAILABILITY]
 >

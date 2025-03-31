@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
 source-wordcount: '1253'
 ht-degree: 0%
@@ -123,7 +123,7 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
    ![選取驗證](./assets/s2s/select-authentication.png)
 
-   伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。 「網頁應用程式」和「單頁應用程式」驗證選項適用於需要代表使用者存取API的應用程式。 如需詳細資訊，請參閱[ OAuth伺服器對伺服器與OAuth Web App/單頁應用程式認證之間的差異](./overview.md#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials)。
+   伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。 「網頁應用程式」和「單頁應用程式」驗證選項適用於需要代表使用者存取API的應用程式。 如需詳細資訊，請參閱[ OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
 
 1. 如有需要，您可以重新命名API以方便識別。 為了示範目的，會使用預設名稱。
 
