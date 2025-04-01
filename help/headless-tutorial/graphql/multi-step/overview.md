@@ -1,6 +1,6 @@
 ---
-title: AEM Headless實作教學課程快速入門 — GraphQL
-description: 端對端教學課程，說明如何使用AEM GraphQL API建置和公開內容。
+title: AEM Headless動手教學課程快速入門 — GraphQL
+description: 端對端教學課程，說明如何使用AEM GraphQL API來建立和公開內容。
 doc-type: Tutorial
 mini-toc-levels: 1
 jira: KT-6678
@@ -12,7 +12,7 @@ level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 duration: 54
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 3%
@@ -20,8 +20,6 @@ ht-degree: 3%
 ---
 
 # AEM Headless - GraphQL 快速入門
-
-{{aem-headless-trials-promo}}
 
 端對端教學課程說明如何在Headless CMS案例中使用AEM的GraphQL API建置和公開內容，並由外部應用程式使用。
 
@@ -33,7 +31,7 @@ ht-degree: 3%
 * 建立內容片段模型以模型化資料
 * 根據先前建立的模型建立內容片段。
 * 探索如何使用整合的GraphiQL開發工具來查詢AEM中的內容片段。
-* 儲存或保留GraphQL查詢至AEM
+* 若要儲存或儲存GraphQL查詢至AEM
 * 使用範例React應用程式中的持續GraphQL查詢
 
 ## 先決條件 {#prerequisites}
@@ -48,7 +46,7 @@ ht-degree: 3%
 
 ### AEM環境
 
-若要完成本教學課程，建議您擁有AEM as a Cloud Service環境的AEM管理員存取權。 如果您無法存取AEM as a Cloud Service環境，請[註冊AEM Headless試用版](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en)，以探索AEM的Headless功能。
+若要完成本教學課程，建議您擁有AEM as a Cloud Service環境的AEM管理員存取權。 如果您無法存取AEM as a Cloud Service環境，請[註冊AEM Headless試用版](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang-zh-hant)，以探索AEM的Headless功能。
 
 ## 讓我們開始吧！
 

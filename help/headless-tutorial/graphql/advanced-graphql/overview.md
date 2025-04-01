@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
 duration: 441
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -16,8 +16,6 @@ ht-degree: 0%
 ---
 
 # AEM Headless的進階概念
-
-{{aem-headless-trials-promo}}
 
 此端對端教學課程繼續進行[基本教學課程](../multi-step/overview.md)，涵蓋Adobe Experience Manager (AEM) Headless和GraphQL的基礎知識。 進階教學課程說明使用內容片段模型、內容片段和AEM GraphQL持續查詢的深入層面，包括在使用者端應用程式中使用GraphQL持續查詢。
 

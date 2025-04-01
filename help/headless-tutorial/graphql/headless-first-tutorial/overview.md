@@ -12,7 +12,7 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: b0ac4b50-5fe5-41a1-9530-8e593d7000c9
 duration: 89
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 2%
@@ -20,8 +20,6 @@ ht-degree: 2%
 ---
 
 # AEM Headless第一個教學課程
-
-{{aem-headless-trials-promo}}
 
 歡迎參加有關使用React建置網頁體驗的教學課程，這套教學課程由AEM Headless API和GraphQL提供完整支援。 在本教學課程中，我們將結合React、Adobe Experience Manager (AEM) Headless API和GraphQL的強大功能，引導您完成建立動態和互動式Web應用程式的程式。
 

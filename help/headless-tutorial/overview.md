@@ -1,5 +1,5 @@
 ---
-title: AEM中Headless的Tutorials
+title: AEM中的Headless教學課程
 description: Adobe Experience Manager的Headless CMS教學課程系列。 依API、框架和範例應用程式探索教學課程。
 feature: Content Fragments, APIs
 topic: Headless, Content Management
@@ -8,16 +8,14 @@ level: Beginner
 doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 1%
 
 ---
 
-# AEM中Headless的Tutorials{#aem-headless-tutorials}
-
-{{aem-headless-trials-promo}}
+# AEM中的Headless教學課程{#aem-headless-tutorials}
 
 Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON格式傳送其內容。 使用實作教學課程來探索如何使用各種選項並選擇適合您的選項。
 
@@ -25,16 +23,16 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
 >
 >此教學課程集合是專為喜歡&#x200B;**透過實踐學習**&#x200B;的人所設計。 如果您偏好從頭開始學習概念，請檢視[AEM Headless開發人員歷程](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html)。 這組教學課程和歷程互相補充。
 
-## 依API的Tutorials
+## 教學課程（依API）
 
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant">
       <img alt="GRAPHQL API" src="./assets/graphql-icon.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant">
     <strong>GraphQL API</strong>
     </a>
     </div>
@@ -73,7 +71,7 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
 
 ## 應用程式範例
 
-範例應用程式是探索Adobe Experience Manager (AEM)無周邊功能的絕佳方式。 下載並安裝這些完成的範例，以立即開始。
+範例應用程式是探索Adobe Experience Manager (AEM)無頭式功能的絕佳方式。 下載並安裝這些完成的範例，以立即開始。
 
 <table>
 <tr>
@@ -119,9 +117,9 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
 </tr>
 </table>
 
-## 依框架的Tutorials
+## 教學課程（依框架）
 
-根據使用的技術瀏覽下列教學課程。 瞭解AEM如何超越單純的Headless使用案例，透過內容感知撰寫和體驗管理選項。
+根據使用的技術瀏覽下列教學課程。 瞭解AEM如何超越單純的Headless使用案例，提供內容感知撰寫和體驗管理選項。
 
 <table>
 <tr>
@@ -130,7 +128,7 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
       <img alt="React - Headless" src="./assets/react-headless.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant">
     <strong>React - Headless</strong>
     </a>
     </div>
@@ -153,11 +151,11 @@ Adobe Experience Manager (AEM)有多個選項可定義Headless端點並以JSON�
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-      <img alt="React - SPA編輯器" src="./assets/react-spa-editor.png" />
+      <img alt="React - SPA Editor" src="./assets/react-spa-editor.png" />
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-        <strong>React - SPA編輯器</strong>
+        <strong>React - SPA Editor</strong>
       </a>
     </div>
     <p>
