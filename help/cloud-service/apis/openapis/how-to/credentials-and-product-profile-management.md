@@ -12,9 +12,9 @@ thumbnail: KT-17428.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 277b4789-b035-4904-b489-c827c970fb55
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: f125cffc72a6f0eb558492f8dde6f4f30bc074ec
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
@@ -93,24 +93,25 @@ _產品設定檔_&#x200B;提供認證的&#x200B;_許可權（或授權）_&#x200
 
 若要為AEM API新增產品設定檔，請在ADC專案的&#x200B;**API**&#x200B;區段中按一下&#x200B;**編輯產品設定檔**，在&#x200B;**設定API**&#x200B;對話方塊中選取所需的產品設定檔，然後儲存變更。
 
-    ！[編輯產品設定檔](../assets/how-to/edit-product-profiles.png)
+![編輯產品設定檔](../assets/how-to/edit-product-profiles.png)
 
 選取與所需服務相關聯的所需產品設定檔(例如&#x200B;**AEM Administrators - author - Program XXX - Environment XXX**)，然後儲存變更。
 
-    ！[選取產品設定檔](../assets/how-to/select-product-profile.png)
+![選取產品設定檔](../assets/how-to/select-product-profile.png)
 
 請注意，**AEM管理員 — 作者 — 方案XXX — 環境XXX**&#x200B;產品設定檔與&#x200B;**AEM管理員**&#x200B;服務和&#x200B;**AEM Assets API使用者**&#x200B;服務皆有關聯。 如果沒有後者，產品設定檔將不會顯示在可用的產品設定檔清單中。
 
-    ！[產品設定檔服務](../assets/how-to/product-profile-services.png)
+![產品設定檔服務](../assets/how-to/product-profile-services.png)
 
 更新資產中繼資料的&#x200B;**PATCH**&#x200B;請求現在應該可以正常運作，而不會發生問題。
 
-    ！[PATCH要求](../assets/how-to/patch-request.png)
+![PATCH要求](../assets/how-to/patch-request.png)
 
 
 >[!TAB 移除產品設定檔]
 
-若要移除AEM API的產品設定檔，請在ADC專案的&#x200B;**API**&#x200B;區段中按一下&#x200B;**編輯產品設定檔**，在&#x200B;**設定API**對話方塊中取消選取所需的產品設定檔，然後儲存變更。
+若要移除AEM API的產品設定檔，請在ADC專案的&#x200B;**API**&#x200B;區段中按一下&#x200B;**編輯產品設定檔**，在&#x200B;**設定API**&#x200B;對話方塊中取消選取所需的產品設定檔，然後儲存變更。
+
 ![取消選取產品設定檔](../assets/how-to/deselect-product-profile.png)
 
 >[!ENDTABS]
