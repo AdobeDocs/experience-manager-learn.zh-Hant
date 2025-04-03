@@ -12,9 +12,9 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 7212bec910320847e9375dd1956a8cf76df1d579
+source-git-commit: 3d42029f193f293631585314983956618d707244
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2113'
 ht-degree: 0%
 
 ---
@@ -569,6 +569,7 @@ AEM as a Cloud Service的跨原始資源共用(CORS)協助非AEM Web屬性對AEM
 
 ## 其他資源{#additional-resources}
 
+- [Adobe Experience Manager as a Cloud Service API](https://developer.adobe.com/experience-cloud/experience-manager-apis/)
 - [使用者驗證實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/)
 - [授權要求](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#authorize-request)
 - [正在擷取存取權杖](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#fetching-access-tokens)
