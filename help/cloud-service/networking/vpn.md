@@ -11,9 +11,9 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: e1bea4320ed7a8b6d45f674649ba9ba946054b17
+source-git-commit: 5f547d9a721c2072559e877d1c4a08fcd11327b7
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1531'
 ht-degree: 1%
 
 ---
@@ -368,12 +368,6 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
             設定IP允許清單，以便只有VPN流量可以存取AEM。
       </p>
     </td>
-   <td>
-      <a  href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking"><img alt="AEM發佈的路徑型VPN存取限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking">AEM Publish的路徑型VPN存取限制</a></strong></div>
-      <p>
-            AEM Publish上的特定路徑需要VPN存取權。
-      </p>
     </td>
    <td></td>
 </tr></table>
