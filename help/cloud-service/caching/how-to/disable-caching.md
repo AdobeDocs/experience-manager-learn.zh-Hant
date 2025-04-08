@@ -1,6 +1,6 @@
 ---
 title: 如何停用CDN快取
-description: 瞭解如何在 AEM 中停用 HTTP 回應快取為Cloud Service的 CDN。
+description: 瞭解如何在AEM as a Cloud Service的CDN中停用HTTP回應的快取。
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
@@ -12,7 +12,7 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 100
-source-git-commit: a98ca7ddc155190b63664239d604d11ad470fdf5
+source-git-commit: cf006f24abbc5aa4b91277b91d68538c41d33e15
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
@@ -36,10 +36,10 @@ AEM as a Cloud Service CDN中HTTP回應的快取是由以下來自來源`Cache-C
 
 關閉快取可能會對AEM as a Cloud Service執行個體的效能產生負面影響，因此在關閉預設快取行為時請務必謹慎。
 
-不過，在某些情況下，您可能需要停用快取，例如：
+不過，在某些情況下，您可能會想要停用快取，例如：
 
-- 開發新功能並希望立即看到更改。
-- 内容是安全的（僅適用於經過身份驗證的使用者）或動態的（購物車、訂單詳細資訊），不應緩存。
+- 正在開發新功能，並且想要立即看到變更。
+- 內容安全（僅供驗證的使用者使用）或動態（購物車、訂單詳細資料）且不應快取。
 
 若要停用快取，您可以使用兩種方式更新快取標頭。
 
@@ -56,7 +56,7 @@ AEM as a Cloud Service CDN中HTTP回應的快取是由以下來自來源`Cache-C
 <LocationMatch "$URL$ || $URL_REGEX$">
     # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
     Header unset Cache-Control
-    Header unset Surroagate-Control
+    Header unset Surrogate-Control
     Header unset Expires
 
     # Instructs the Browser and the CDN to not cache the response.
@@ -69,11 +69,11 @@ AEM as a Cloud Service CDN中HTTP回應的快取是由以下來自來源`Cache-C
 
 #### 範例
 
-若要出於某些故障排除目的禁用 CSS 內容類型的&#x200B;**CDN 快取**，追隨以下步驟。
+若要停用&#x200B;**CSS內容型別**&#x200B;的CDN快取，以進行部分疑難排解，請按照下列步驟進行。
 
-請注意，要繞過現有的 CSS 快取，需要更改 CSS 檔才能為 CSS 檔生成新的緩存鍵。
+請注意，若要略過現有的CSS快取，必須變更CSS檔案，才能為CSS檔案產生新的快取索引鍵。
 
-1. 在 AEM 專案中，從 `dispatcher/src/conf.d/available_vhosts` 目錄中找到所需的 vhsot 檔。
+1. 在您的AEM專案中，從`dispatcher/src/conf.d/available_vhosts`目錄找出所需的vhsot檔案。
 1. 更新vhost （例如`wknd.vhost`）檔案，如下所示：
 
    ```
