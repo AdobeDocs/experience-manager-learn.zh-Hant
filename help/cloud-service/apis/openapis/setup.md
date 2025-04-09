@@ -1,6 +1,6 @@
 ---
-title: 設定OpenAPI型AEM API
-description: 瞭解如何設定您的AEM as a Cloud Service環境，以啟用對OpenAPI型AEM API的存取權。
+title: 設定基於 OpenAPI 的 AEM API
+description: 了解如何將AEM設置為Cloud Service環境，以啟用對基於 OpenAPI 的 AEM API 的訪問。
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
@@ -37,14 +37,14 @@ ht-degree: 0%
 
 ## AEM as a Cloud Service環境的現代化
 
-AEM as a Cloud Service環境的現代化是一項針對每個環境的一次性活動，其中涉及以下步驟：
+AEM 作為Cloud Service環境的現代化是每環境一次性活動，涉及以下步驟：
 
-- 更新至AEM版本&#x200B;**2024.10.18459.20241031T210302Z**&#x200B;或更新版本。
-- 如果環境是在2024.10.18459.20241031T210302Z版之前建立，請新增產品設定檔。
+- 更新到AEM版本 **2024.10.18459.20241031T210302Z** 或更高版本。
+- 如果環境是在版本 2024.10.18459.20241031T210302Z 之前創建的，請向其添加新的產品配置檔。
 
 ### 更新AEM執行個體
 
-若要更新AEM執行個體，請在Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)的&#x200B;_環境_&#x200B;區段中，選取環境名稱旁的&#x200B;_省略符號_&#x200B;圖示，並選取&#x200B;**更新**&#x200B;選項。
+要更新AEM執行個體，請在Adobe Systems [Cloud Manager](https://my.cloudmanager.adobe.com/) 的環境&#x200B;__&#x200B;部分中，選擇&#x200B;_環境名稱旁邊的省略號_&#x200B;圖示，然後選擇&#x200B;**更新**&#x200B;選項。
 
 ![更新AEM執行個體](./assets/setup/update-aem-instance.png)
 
@@ -68,12 +68,11 @@ _Admin Console_&#x200B;視窗會顯示新新增的產品設定檔。
 
 上述步驟已完成AEM as a Cloud Service環境的現代化。
 
-## 啟用AEM API存取權
+## 啟用AEM API存取權{#enable-aem-apis-access}
 
 _新產品設定檔_&#x200B;的存在會在Adobe Developer Console (ADC)中啟用OpenAPI型AEM API存取。 回想一下，[Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts)是存取Adobe API、SDK、即時事件、無伺服器函式等的開發人員中心。
 
-新增的產品設定檔與&#x200B;_服務_&#x200B;相關聯，這些服務代表&#x200B;_具有預先定義存取控制清單(ACL)_的AEM使用者群組。
-_服務_&#x200B;是用來控制AEM API的存取層級。
+新增的產品設定檔與&#x200B;_服務_&#x200B;相關聯，這些服務代表&#x200B;_具有預先定義存取控制清單(ACL)_&#x200B;的AEM使用者群組。 _服務_&#x200B;是用來控制AEM API的存取層級。
 
 您也可以選取或取消選取與產品設定檔相關聯的&#x200B;_服務_，以減少或增加存取層級。
 
@@ -81,19 +80,23 @@ _服務_&#x200B;是用來控制AEM API的存取層級。
 
 ![檢閱與產品設定檔關聯的服務](./assets/setup/review-services-associated-with-product-profile.png)
 
-依預設，**AEM Assets API Users**&#x200B;服務未與任何產品設定檔建立關聯。 讓我們將其與新新增的&#x200B;**AEM Assets Collaborator使用者 — 作者 — 方案XXX — 環境XXX**&#x200B;產品設定檔建立關聯。 在此關聯之後，ADC專案的&#x200B;_資產作者API_&#x200B;可以設定所需的驗證，並將驗證帳戶與產品設定檔建立關聯。
+依預設，**AEM Assets API Users**&#x200B;服務未與任何產品設定檔建立關聯。 讓我們將其與新新增的&#x200B;**AEM Assets Collaborator使用者 — 作者 — 方案XXX — 環境XXX**&#x200B;產品設定檔建立關聯。 建立此關聯後，ADC專案的&#x200B;_資產作者API_&#x200B;可以設定所需的伺服器對伺服器驗證，並將ADC專案（在下一步中建立）的驗證帳戶與產品設定檔建立關聯。
 
 ![將AEM Assets API使用者服務與產品設定檔建立關聯](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
-## 建立Adobe Developer Console (ADC)專案
+>[!IMPORTANT]
+>
+>若要為AEM Assets API啟用伺服器對伺服器驗證，上述步驟至關重要。 若沒有此關聯，AEM Assets API就無法與伺服器對伺服器驗證方法搭配使用。
 
-ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與產品設定檔建立關聯。
+## 建立 Adobe Systems 開發人員主控台 （ADC） 專案
 
-若要建立ADC專案：
+ADC 專案用於添加所需的 API、設置其身份驗證以及將身份驗證帳戶與產品配置文件關聯。
 
-1. 使用您的Adobe ID登入[Adobe Developer Console](https://developer.adobe.com/console)。
+要建立 ADC 專案，請執行以下作：
 
-   ![Adobe Developer Console](./assets/setup/adobe-developer-console.png)
+1. 使用Adobe ID登入 [Adobe Systems 開發人員控制台](https://developer.adobe.com/console) 。
+
+   ![Adobe Systems開發人員控制台](./assets/setup/adobe-developer-console.png)
 
 1. 在&#x200B;_快速入門_&#x200B;區段中，按一下&#x200B;**建立新專案**&#x200B;按鈕。
 
@@ -115,15 +118,15 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
    ![新增API](./assets/s2s/add-api.png)
 
-1. 在&#x200B;_新增API_&#x200B;對話方塊中，依&#x200B;_Experience Cloud_&#x200B;篩選，並選取所需的AEM API。 例如，在此案例中，已選取&#x200B;_資產作者API_。
+1. 在&#x200B;_新增API_&#x200B;對話方塊中，依&#x200B;_Experience Cloud_&#x200B;篩選，並選取所需的AEM API。 例如，在本例中， _選擇資產作者 API_ 。
 
-   ![新增AEM API](./assets/s2s/add-aem-api.png)
+   ![新增 AEM API](./assets/s2s/add-aem-api.png)
 
-1. 接下來，在&#x200B;_設定API_&#x200B;對話方塊中，選取所需的驗證選項。 例如，在此案例中，已選取&#x200B;**伺服器對伺服器**&#x200B;驗證選項。
+1. 下一個，在「配置 API _」_&#x200B;對話框中，選擇所需的身份驗證選項。例如，在本例中，選擇了“ **伺服器到伺服器** 身份驗證”選項。
 
    ![選取驗證](./assets/s2s/select-authentication.png)
 
-   伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。 「網頁應用程式」和「單頁應用程式」驗證選項適用於需要代表使用者存取API的應用程式。 如需詳細資訊，請參閱[ OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
+   伺服器到伺服器身份驗證非常適合需要 API 訪問而無需用戶交互的後端服務。 Web 應用程式和單頁面應用程式身份驗證選項適用於需要代表用戶訪問 API 的應用程式。 如需詳細資訊，請參閱[ OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
 
 1. 如有需要，您可以重新命名API以方便識別。 為了示範目的，會使用預設名稱。
 
@@ -141,16 +144,16 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
 如果您選擇&#x200B;**OAuth網頁應用程式**&#x200B;或&#x200B;**OAuth單頁應用程式**&#x200B;驗證方法，將不會提示產品設定檔關聯，但需要應用程式重新導向URI。 應用程式重新導向URI用於在透過授權碼進行驗證後，將使用者重新導向至應用程式。 相關使用案例教學課程會概述此類驗證特定配置。
 
-## 設定AEM執行個體以啟用ADC專案通訊
+## 配置 AEM 執行個體以啟用 ADC 專案通信
 
-若要啟用ADC專案的ClientID以與AEM執行個體通訊，您需要設定AEM執行個體。
+要使 ADC 專案的 ClientID 能够与AEM執行個體通信，您需要配置AEM執行個體。
 
-若要完成，請在的`config.yaml`檔案中定義API設定
-AEM專案，並使用Cloud Manager中的設定管道進行部署。
+它是通過在文件中定義 API 配置來完成的 `config.yaml` 
+AEM專案，並使用 Cloud Manager 中的設定管道進行部署。
 
-1. 在AEM專案中，從`config`資料夾中找到或建立`config.yaml`檔案。
+1. 在AEM專案中，找到資料夾或從`config`資料夾中創建`config.yaml`檔。
 
-   ![找到設定YAML](./assets/setup/locate-config-yaml.png)
+   ![查找配置 YAML](./assets/setup/locate-config-yaml.png)
 
 1. 將下列設定新增至`config.yaml`檔案。
 

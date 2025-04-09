@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1719'
 ht-degree: 1%
 
 ---
@@ -73,6 +73,11 @@ OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動
 ## 設定ADC專案
 
 設定ADC專案步驟是[設定OpenAPI型AEM API](../setup.md)中的&#x200B;_重複_。 您需重複新增Assets Author API，並將其驗證方法設定為OAuth伺服器對伺服器。
+
+>[!TIP]
+>
+>請確定您已完成[設定OpenAPI型AEM API](../setup.md#enable-aem-apis-access)文章中的&#x200B;**啟用AEM API存取**&#x200B;步驟。 若沒有它，將無法使用伺服器對伺服器驗證選項。
+
 
 1. 從[Adobe Developer Console](https://developer.adobe.com/console/projects)，開啟所需的專案。
 
