@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
 duration: 229
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 0363505b426d6e4733c57409e17e9d69f7a567c7
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '962'
 ht-degree: 1%
 
 ---
@@ -167,14 +167,7 @@ __Pod cm-p12345-e56789-aem-author-abcdefg-2222__
 
 ## 建議的記錄層級{#log-levels}
 
-Adobe對於每個AEM as a Cloud Service環境的記錄層級的一般指引如下：
-
-+ 本機開發(AEM SDK)： `DEBUG`
-+ 開發： `DEBUG`
-+ 階段： `WARN`
-+ 生產：`ERROR`
-
-針對每種環境型別設定最適當的記錄層級是AEM as a Cloud Service，記錄層級會保留在程式碼中
+Adobe對每個AEM as a Cloud Service環境的記錄層級的一般指導是遵守AEM的預設記錄設定（預設記錄層級為`INFO`）。 Adobe也建議使用記錄陳述式來檢測自訂程式碼，以允許以`INFO`的記錄層級執行。 記錄層級在程式碼中進行維護
 
 + OSGi設定中會維護Java記錄設定
 + Dispatcher專案中的Apache網頁伺服器和Dispatcher記錄層級
