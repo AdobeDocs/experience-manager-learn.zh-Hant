@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 7ec2db883ba485b4062db84630cf94c8ed0967ee
+source-git-commit: 4cdab2b243af74a8075ae65e8f24e7f56ef2a23b
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 0%
@@ -35,7 +35,7 @@ ht-degree: 0%
 1. AEM as a Cloud Service環境的現代化。
 1. 啟用AEM API存取權。
 1. 建立Adobe Developer Console (ADC)專案。
-1. 設定ADC專案
+1. 設定ADC專案。
 1. 設定AEM執行個體以啟用ADC專案通訊。
 
 ## AEM as a Cloud Service環境的現代化{#modernization-of-aem-as-a-cloud-service-environment}
