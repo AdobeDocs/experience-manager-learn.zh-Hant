@@ -9,7 +9,7 @@ role: Developer
 level: Experienced
 exl-id: c588bdca-b8a8-4de2-97e0-ba08b195699f
 duration: 50
-source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+source-git-commit: ed8749f312dc5ad18e047163bcae28d6753b6f8c
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%
@@ -17,7 +17,6 @@ ht-degree: 0%
 ---
 
 # 根據JSON結構描述建立最適化表單
-
 
 AEM Forms 6.3版本已引入根據JSON結構描述建立最適化Forms的功能。 有關使用JSON結構描述建立最適化Forms的詳細資訊，請參閱本[文章](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html)。
 
@@ -31,8 +30,6 @@ AEM Forms 6.3版本已引入根據JSON結構描述建立最適化Forms的功能�
 >
 >請確定您的json結構描述檔案已命名正確。 例如，它必須以下列格式&lt;name>schema.json命名。 因此您的結構描述檔案可以是mortgage.schema.json或credit.schema.json。
 
-
 ![資料儲存](assets/datastored.gif)
-
 
 [可用來建立最適化Forms的JSON結構描述範例。](assets/samplejsonschemas.zip)。下載並解壓縮zip檔案以取得JSON結構描述
