@@ -11,9 +11,9 @@ thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 24d634fd1e62e873bc1dbb3ac0cd18f70129ee86
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1370'
 ht-degree: 1%
 
 ---
@@ -226,7 +226,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 ### HTTP/HTTPS
 
-從AEM建立HTTP/HTTPS連線時，若使用專用輸出IP位址，HTTP/HTTPS連線會自動使用專用輸出IP位址代理出AEM。 不需要其他程式碼或設定即可支援HTTP/HTTPS連線。
+從AEM建立HTTP/HTTPS連線時，若使用專用輸出IP位址，HTTP/HTTPS連線會自動使用專用輸出IP位址代理出AEM。 除了設定專用輸出IP位址進階網路之外，不需要額外的程式碼或設定即可支援HTTP/HTTPS連線。
 
 #### 程式碼範例
 
