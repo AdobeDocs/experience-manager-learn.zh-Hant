@@ -12,7 +12,7 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 62887c6251b09ac22664cfeb9c5513363efb555e
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%
@@ -50,7 +50,7 @@ AEM的URL重新導向解決方案如下：
 
 此選項僅適用於AEM as a Cloud Service客戶。
 
-[AEM管理的CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn)提供Edge層級的重新導向解決方案，因此可減少到來源的來回次數。 [使用者端重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)功能可讓您在AEM專案程式碼中設定重新導向規則，並使用[設定管道](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)進行部署。 CDN設定檔(`cdn.yaml`)大小不應超過100KB。
+[AEM管理的CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn)提供Edge層級的重新導向解決方案，因此可減少到來源的來回次數。 [伺服器端重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#server-side-redirectors)功能可讓您在AEM專案程式碼中設定重新導向規則，並使用[設定管道](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)進行部署。 CDN設定檔(`cdn.yaml`)大小不應超過100KB。
 
 在Edge或CDN層級管理重新導向具有效能優勢。
 
