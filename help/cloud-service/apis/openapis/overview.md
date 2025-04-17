@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: 182d7b76411ab885ab93b7724b97bf75cc52323c
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1002'
 ht-degree: 1%
 
 ---
@@ -45,10 +45,6 @@ ht-degree: 1%
 
 在未來版本中，將新增更多以OpenAPI為基礎的AEM API，以支援其他使用案例。
 
->[!AVAILABILITY]
->
->以OpenAPI為基礎的AEM API可作為搶先存取計畫的一部分提供。 如果您有興趣存取這些檔案，建議您傳送電子郵件至[aem-apis@adobe.com](mailto:aem-apis@adobe.com)，並提供使用案例的說明。
-
 ## 驗證支援{#authentication-support}
 
 以OpenAPI為基礎的AEM API支援OAuth 2.0驗證，包括下列授權型別：
@@ -71,6 +67,7 @@ ht-degree: 1%
 | **安全性考量** | 在後端系統中安全地儲存機密認證(`client_id`， `client_secret`)。 | 使用者驗證之後，會透過後端呼叫&#x200B;_授予他們自己的_&#x200B;暫時存取權杖。 在後端系統中安全地儲存機密認證(`client_id`， `client_secret`)，以交換存取權杖的授權碼。 | 使用者驗證之後，會透過前端呼叫&#x200B;_授予他們自己的_&#x200B;暫時存取Token。 不使用`client_secret`，因為存放在前端App是不安全的。 仰賴PKCE交換存取權杖的授權代碼。 |
 | **授與型別** | _client_credentials_ | _authorization_code_ | 具有&#x200B;**PKCE**&#x200B;的&#x200B;_authorization_code_ |
 | **Adobe Developer Console認證型別** | OAuth伺服器對伺服器 | OAuth網頁應用程式 | OAuth單頁應用程式 |
+| **教學課程** | [使用伺服器對伺服器驗證啟動API](./use-cases/invoke-api-using-oauth-s2s.md) | [使用網頁應用程式驗證啟動API](./use-cases/invoke-api-using-oauth-web-app.md) | [使用單頁應用程式驗證啟動API](./use-cases/invoke-api-using-oauth-single-page-app.md) |
 
 ## 存取Adobe API和相關概念{#accessing-adobe-apis-and-related-concepts}
 
