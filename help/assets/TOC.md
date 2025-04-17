@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: ebc609ae621ea5d4d0eba0e28202448b6eaeb8cc
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 16%
+source-wordcount: '454'
+ht-degree: 21%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 16%
    + [資產檢視](playlists/assets-view.md)
    + [管理員檢視](playlists/admin-view.md)
 
-+ 正在設定{#configuring}
++ 設定{#configuring}
    + [基線資料夾](configuring/baseline-folders.md)
    + [基線許可權](configuring/baseline-permissions.md)
    + [標記](configuring/tagging.md)
@@ -34,7 +34,7 @@ ht-degree: 16%
    + [處理設定檔](configuring/processing-profiles.md)
    + [自動開始工作流程](configuring/auto-start-workflows.md)
 
-+ 製作 {#authoring}
++ 製作{#authoring}
    + [切換檢視](./authoring/switch-views.md)
    + [導覽](./authoring/navigation.md)
    + [基本操作](./authoring/basic-operations.md)
@@ -42,7 +42,7 @@ ht-degree: 16%
    + [轉譯](./authoring/renditions.md)
    + [建立關聯與取消關聯](./authoring/relate-unrelate.md)
 
-+ Collaboration{#collaboration}
++ 協作{#collaboration}
    + [觀看](./collaboration/watch.md)
    + [時間軸和收件匣](./collaboration/timeline-and-inbox.md)
    + [註釋和註解](./collaboration/comments-and-annotations.md)
@@ -86,6 +86,8 @@ ht-degree: 16%
    + [使用Adobe Express的影像變體](./content-hub/image-variants.md)
    + [集合](./content-hub/collections.md)
    + [分享](./content-hub/share.md)
+   + 使用案例{#use-cases}
+      + [管理資產](./content-hub/use-cases/manage-assets.md)
 
 + Edge Delivery Services{#edge-delivery-services}
    + [Sidekick外掛程式](./edge-delivery-services/sidekick-plugin.md)
@@ -93,7 +95,7 @@ ht-degree: 16%
 + Adobe GenStudio{#adobe-genstudio}
    + [AEM Assets和GenStudio for Performance Marketing](https://experienceleague.adobe.com/en/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
 
-+ 共用和分發{#sharing}
++ 共用與散佈{#sharing}
    + [下載資產](./sharing/download.md)
    + [匯出資產](./sharing/export.md)
    + [發佈資產](./sharing/publish.md)
@@ -110,7 +112,7 @@ ht-degree: 16%
       + [Asset Share Commons資產套件](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
 + Creative工作流程{#creative-workflows}
-   + [Adobe Express整合](./creative-workflows/adobe-express.md)
+   + [Adobe Express 整合](./creative-workflows/adobe-express.md)
    + [Adobe Express和AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM案頭應用程式](./creative-workflows/aem-desktop-app.md)
    + [Adobe資產連結](./creative-workflows/adobe-asset-link.md)
@@ -137,29 +139,29 @@ ht-degree: 16%
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media概觀](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic案頭應用程式](dynamic-media/dynamic-media-classic-desktop-application.md)
-   + 影像{#images}
+   + 影像 {#images}
       + [Dynamic Media範本](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media快照](dynamic-media/dynamic-media-snapshot.md)
       + [智慧型裁切](dynamic-media/smart-crop-feature-video-use.md)
       + [影像銳利化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [色彩管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + 視訊{#video}
+   + 影片 {#video}
       + [360度影片](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [自訂視訊縮圖](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH最適化串流](dynamic-media/dynamic-media-dash.md)
       + [Dynamic Media智慧型裁切影片](dynamic-media/dynamic-media-smart-crop-video.md)
       + [影片播放器](dynamic-media/dynamic-media-video-player-feature-video-use.md)
-   + 檢視者{#viewers}
+   + 檢視器 {#viewers}
       + [檢視器](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [全景和垂直影像檢視器](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
       + [具有Adobe Analytics的檢視器](dynamic-media/dynamic-media-viewer-extension-use.md)
    + 3D {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + 搭配AEM Sites {#dm-with-aem-sites}使用
+   + 搭配AEM Sites使用 {#dm-with-aem-sites}
       + [體驗片段](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media核心元件](dynamic-media/dynamic-media-core-components.md)
 
-   + 教學課程{#tutorials}
+   + 教學課程 {#tutorials}
       + [建立轉盤集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [建立影像集](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [建立影像預設集](dynamic-media/tutorials/creating-image-presets.md)
@@ -186,7 +188,7 @@ ht-degree: 16%
          + [標籤、專案連結資料夾和資料夾中繼資料](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)
          + [進階設定和工作流程](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 
-+ 轉換 {#translation}
++ 翻譯 {#translation}
    + [Source檔案翻譯](translation/source-file-translation-feature-video-use.md)
 
 + 資產範本{#asset-templates}
