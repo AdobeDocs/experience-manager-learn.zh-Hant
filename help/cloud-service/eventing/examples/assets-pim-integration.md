@@ -12,9 +12,9 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1518'
 ht-degree: 0%
 
 ---
@@ -106,13 +106,13 @@ ht-degree: 0%
 
 若要啟用ADC Project的OAuth伺服器對伺服器認證ClientID來與AEM執行個體通訊，您必須設定AEM執行個體。
 
-若要完成設定，請在AEM專案的`config.yaml`檔案中定義設定。 然後，使用Cloud Manager中的設定管道來部署`config.yaml`檔案。
+若要完成設定，請在AEM專案的`api.yaml`檔案中定義設定。 然後，使用Cloud Manager中的設定管道來部署`api.yaml`檔案。
 
-- 在AEM專案中，從`config`資料夾中找到或建立`config.yaml`檔案。
+- 在AEM專案中，從`config`資料夾中找到或建立`api.yaml`檔案。
 
-  ![找到設定YAML](../assets/examples/assets-pim-integration/locate-config-yaml.png)
+  ![找出API YAML](../assets/examples/assets-pim-integration/locate-api-yaml.png)
 
-- 將下列設定新增至`config.yaml`檔案。
+- 將下列設定新增至`api.yaml`檔案。
 
   ```yaml
   kind: "API"
@@ -134,9 +134,9 @@ ht-degree: 0%
 
 - 將設定變更提交至Git存放庫並將變更推送至遠端存放庫。
 
-- 使用Cloud Manager中的設定管道來部署上述變更。 請注意，也可以使用命令列工具將`config.yaml`檔案安裝在RDE中。
+- 使用Cloud Manager中的設定管道來部署上述變更。 請注意，也可以使用命令列工具將`api.yaml`檔案安裝在RDE中。
 
-  ![部署config.yaml](../assets/examples/assets-pim-integration/config-pipeline.png)
+  ![部署API YAML](../assets/examples/assets-pim-integration/config-pipeline.png)
 
 ### 開發執行階段動作
 

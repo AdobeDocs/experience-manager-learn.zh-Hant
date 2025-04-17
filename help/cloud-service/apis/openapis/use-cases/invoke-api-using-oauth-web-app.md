@@ -12,9 +12,9 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '2245'
+source-wordcount: '2213'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,6 @@ ht-degree: 0%
 瞭解如何透過使用OAuth網頁應用程式的自訂網頁應用程式中的使用者型驗證，在AEM as a Cloud Service上叫用OpenAPI型AEM API。
 
 OAuth網頁應用程式驗證適用於具有前端和&#x200B;_後端_&#x200B;元件，且需要&#x200B;**代表使用者**&#x200B;存取AEM API的網頁應用程式。 它會使用OAuth 2.0 _authorization_code_&#x200B;授權型別來代表使用者取得存取權杖以存取AEM API。 如需詳細資訊，請參閱[ OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
-
->[!AVAILABILITY]
->
->以OpenAPI為基礎的AEM API可作為搶先存取計畫的一部分提供。 如果您有興趣存取這些檔案，建議您傳送電子郵件至[aem-apis@adobe.com](mailto:aem-apis@adobe.com)，並提供使用案例的說明。
 
 ## 您能學到的內容{#what-you-learn}
 

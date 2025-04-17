@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 4cdab2b243af74a8075ae65e8f24e7f56ef2a23b
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1274'
 ht-degree: 0%
 
 ---
@@ -23,12 +23,7 @@ ht-degree: 0%
 
 瞭解如何設定您的AEM as a Cloud Service環境，以啟用對OpenAPI型AEM API的存取權。
 
->[!AVAILABILITY]
->
->以OpenAPI為基礎的AEM API可作為搶先存取計畫的一部分提供。 如果您有興趣存取這些檔案，建議您傳送電子郵件至[aem-apis@adobe.com](mailto:aem-apis@adobe.com)，並提供使用案例的說明。
-
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
-
 
 高層級設定程式涉及下列步驟：
 
@@ -151,14 +146,13 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
 若要啟用ADC專案的ClientID以與AEM執行個體通訊，您需要設定AEM執行個體。
 
-若要完成，請在的`config.yaml`檔案中定義API設定
-AEM專案，並使用Cloud Manager中的設定管道進行部署。
+方法是在YAML檔案中定義API設定，並使用Cloud Manager中的設定管道進行部署。 YAML檔案會定義來自ADC專案的可與AEM執行個體通訊的允許ClientID。
 
-1. 在AEM專案中，從`config`資料夾中找到或建立`config.yaml`檔案。
+1. 在AEM專案中，從`config`資料夾中找到或建立`api.yaml`檔案。
 
-   ![找到設定YAML](./assets/setup/locate-config-yaml.png)
+   ![找出API YAML](./assets/setup/locate-api-yaml.png){width="500" zoomable="no"}
 
-1. 將下列設定新增至`config.yaml`檔案。
+1. 將下列設定新增至`api.yaml`檔案。
 
    ```yaml
    kind: "API"
@@ -179,9 +173,9 @@ AEM專案，並使用Cloud Manager中的設定管道進行部署。
 
 1. 提交設定變更並將變更推送到Cloud Manager管道所連線的遠端Git存放庫。
 
-1. 使用Cloud Manager中的設定管道來部署上述變更。 請注意，也可以使用命令列工具將`config.yaml`檔案安裝在RDE中。
+1. 使用Cloud Manager中的設定管道來部署上述變更。 請注意，也可以使用命令列工具將`api.yaml`檔案安裝在RDE中。
 
-   ![部署config.yaml](./assets/setup/config-pipeline.png)
+   ![部署YAML](./assets/setup/config-pipeline.png)
 
 ## 後續步驟
 

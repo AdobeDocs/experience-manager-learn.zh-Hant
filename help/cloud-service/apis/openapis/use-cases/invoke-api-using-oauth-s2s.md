@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1687'
 ht-degree: 1%
 
 ---
@@ -24,10 +24,6 @@ ht-degree: 1%
 瞭解如何使用&#x200B;_OAuth伺服器對伺服器_&#x200B;驗證，從自訂應用程式叫用AEM as a Cloud Service上的OpenAPI型AEM API。
 
 OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。 它使用OAuth 2.0 _client_credentials_&#x200B;授權型別來驗證使用者端應用程式。
-
->[!AVAILABILITY]
->
->以OpenAPI為基礎的AEM API可作為搶先存取計畫的一部分提供。 如果您有興趣存取這些檔案，建議您傳送電子郵件至[aem-apis@adobe.com](mailto:aem-apis@adobe.com)，並提供使用案例的說明。
 
 ## 您能學到的內容{#what-you-learn}
 

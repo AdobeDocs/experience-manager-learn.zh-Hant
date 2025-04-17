@@ -12,9 +12,9 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 3d42029f193f293631585314983956618d707244
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '2113'
+source-wordcount: '2081'
 ht-degree: 0%
 
 ---
@@ -26,10 +26,6 @@ ht-degree: 0%
 OAuth單頁應用程式驗證非常適合在瀏覽器中執行的JavaScript型應用程式。 無論他們缺乏後端伺服器，還是需要擷取存取權杖以代表使用者與AEM API互動。
 
 PKCE流程延伸OAuth 2.0 _authorization_code_&#x200B;授權型別，藉由防止授權代碼攔截來增強安全性。 如需詳細資訊，請參閱[OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)區段。
-
->[!AVAILABILITY]
->
->以OpenAPI為基礎的AEM API可作為搶先存取計畫的一部分提供。 如果您有興趣存取這些檔案，建議您傳送電子郵件至[aem-apis@adobe.com](mailto:aem-apis@adobe.com)，並提供使用案例的說明。
 
 ## 您能學到的內容{#what-you-learn}
 
