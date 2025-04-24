@@ -11,9 +11,9 @@ last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
 workflow-type: tm+mt
-source-wordcount: '2423'
+source-wordcount: '2408'
 ht-degree: 0%
 
 ---
@@ -179,7 +179,6 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 * [**下載**](https://code.visualstudio.com/Download) **Visual Studio程式碼**
 * **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** — 適用於JCR內容的類似FTP的工具
-* **[aemfed](https://aemfed.io/)** — 加速您的AEM前端工作流程
 * **[AEM Sync](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Visual Studio Code的社群支援&#42;擴充功能
 * **[WKND專案](https://github.com/adobe/aem-guides-wknd)** — 此影片中顯示的範例AEM專案。
 
@@ -189,8 +188,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 * 00:53 — 使用Maven建置和部署原始程式碼
 * 04:03 — 使用存放庫命令列工具推送程式碼變更
 * 08:29 — 使用存放庫命令列工具變更提取程式碼
-* 10:40 — 使用嵌入式工具推送程式碼變更
-* 14:24 — 疑難排解，重建使用者端程式庫
+* 10:32 — 疑難排解，重建使用者端程式庫
 
 ### [!DNL CRXDE Lite]
 

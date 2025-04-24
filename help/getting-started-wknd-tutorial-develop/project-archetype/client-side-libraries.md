@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 duration: 557
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2432'
 ht-degree: 0%
 
 ---
@@ -394,14 +394,6 @@ AEM專案原型會自動設定這項整合。 接下來，探索其運作方式�
    > 靜態標籤的影像src指向本機AEM例項上的即時影像元件。 如果影像的路徑變更、AEM未啟動，或瀏覽器未登入本機AEM執行個體，影像會顯示為已損毀。 如果移交給外部資源，也可以使用靜態參照取代影像。
 
 1. 您可以輸入`CTRL+C`，從命令列&#x200B;**停止** Webpack伺服器。
-
-### 已封存 {#develop-aemfed}
-
-**[aemfed](https://aemfed.io/)**&#x200B;是開放原始碼命令列工具，可用來加速前端開發。 它由[aemsync](https://www.npmjs.com/package/aemsync)、[Browsersync](https://browsersync.io/)和[Sling記錄追蹤器](https://sling.apache.org/documentation/bundles/log-tracers.html)提供支援。
-
-從高層面來看，`aemfed`的設計目的是監聽&#x200B;**ui.apps**&#x200B;模組內的檔案變更，並自動將其直接同步至執行中的AEM執行個體。 本機瀏覽器會根據變更自動重新整理，從而加速前端開發。 它也設計為與Sling記錄追蹤器搭配使用，以直接在終端機中自動顯示任何伺服器端錯誤。
-
-如果您正在&#x200B;**ui.apps**&#x200B;模組中執行許多工作、修改HTL指令碼以及建立自訂元件，**aemfed**&#x200B;可以是一個強大的工具。 [您可以在這裡找到完整檔案](https://github.com/abmaonline/aemfed)。
 
 ### 偵錯使用者端程式庫 {#debugging-clientlibs}
 
