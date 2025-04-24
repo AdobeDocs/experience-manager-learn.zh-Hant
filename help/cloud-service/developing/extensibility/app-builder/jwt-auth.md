@@ -10,7 +10,7 @@ jira: KT-11743
 last-substantial-update: 2023-01-17T00:00:00Z
 exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
 duration: 151
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 1%
@@ -50,7 +50,7 @@ JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 
 ### Metascope
 
-判斷App Builder動作互動的Adobe API及其中繼資料。 在`JWT_METASCOPES`索引鍵中列出帶有逗號分隔符號的Metascope。 [Adobe的JWT Metascope檔案](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/)中列出了有效的Metascope。
+判斷App Builder動作互動的Adobe API及其中繼資料。 在`JWT_METASCOPES`索引鍵中列出帶有逗號分隔符號的Metascope。 [Adobe的JWT Metascope檔案](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/scopes)中列出了有效的Metascope。
 
 
 例如，下列值可新增至`.env`中的`JWT_METASCOPES`機碼：

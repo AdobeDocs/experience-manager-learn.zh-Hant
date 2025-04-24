@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 182d7b76411ab885ab93b7724b97bf75cc52323c
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 1%
@@ -51,9 +51,9 @@ ht-degree: 1%
 
 - **OAuth伺服器對伺服器認證**：適用於需要API存取而不需使用者互動的後端服務。 它使用&#x200B;_client_credentials_&#x200B;授權型別，在伺服器層級啟用安全存取管理。 如需詳細資訊，請參閱[OAuth伺服器對伺服器認證](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/#oauth-server-to-server-credential)。
 
-- **OAuth Web App認證**：適用於具有代表使用者存取AEM API的前端和&#x200B;_後端_&#x200B;元件的網頁應用程式。 它使用&#x200B;_authorization_code_&#x200B;授權型別，後端伺服器可在此安全地管理密碼和權杖。 如需詳細資訊，請參閱[OAuth Web App認證](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-web-app-credential)。
+- **OAuth Web App認證**：適用於具有代表使用者存取AEM API的前端和&#x200B;_後端_&#x200B;元件的網頁應用程式。 它使用&#x200B;_authorization_code_&#x200B;授權型別，後端伺服器可在此安全地管理密碼和權杖。 如需詳細資訊，請參閱[OAuth Web App認證](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential)。
 
-- **OAuth Single Page App認證**：專為瀏覽器中執行的SPA所設計，需要代表沒有後端伺服器的使用者存取API。 它使用&#x200B;_authorization_code_&#x200B;授權型別，並依賴使用PKCE （代碼交換的證明金鑰）的使用者端安全性機制來保護授權代碼流程。 如需詳細資訊，請參閱[OAuth單頁應用程式認證](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential)。
+- **OAuth Single Page App認證**：專為瀏覽器中執行的SPA所設計，需要代表沒有後端伺服器的使用者存取API。 它使用&#x200B;_authorization_code_&#x200B;授權型別，並依賴使用PKCE （代碼交換的證明金鑰）的使用者端安全性機制來保護授權代碼流程。 如需詳細資訊，請參閱[OAuth單頁應用程式認證](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential)。
 
 ## OAuth伺服器對伺服器與Web應用程式與單頁應用程式憑證的差異{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 

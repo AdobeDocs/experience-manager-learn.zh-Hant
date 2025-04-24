@@ -12,7 +12,7 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '1687'
 ht-degree: 1%
@@ -50,7 +50,7 @@ OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動
 
 - 必須在其上部署範例[WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)專案。
 
-- 存取[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。
+- 存取[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started)。
 
 - 在本機電腦上安裝[Node.js](https://nodejs.org/en/)，以執行範例NodeJS應用程式。
 
@@ -117,7 +117,7 @@ OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動
 
 ### 檢閱API
 
-在開發應用程式之前，請先檢閱&#x200B;_Assets作者API_&#x200B;中的[傳遞指定資產的中繼資料](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/../assets/author/#operation/getAssetMetadata)端點。 API語法為：
+在開發應用程式之前，請先檢閱&#x200B;_Assets作者API_&#x200B;中的[傳遞指定資產的中繼資料](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata)端點。 API語法為：
 
 ```http
 GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
@@ -471,4 +471,4 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 ## 其他資源
 
-- [OAuth 伺服器對伺服器認證實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+- [OAuth 伺服器對伺服器認證實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)

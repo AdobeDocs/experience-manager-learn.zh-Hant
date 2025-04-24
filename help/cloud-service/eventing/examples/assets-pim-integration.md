@@ -12,7 +12,7 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '1518'
 ht-degree: 0%
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 - 已啟用[AEM事件的AEM as a Cloud Service環境](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment)。 此外，必須在其上部署範例[WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)專案。
 
-- 存取[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。
+- 存取[Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started)。
 
 - [Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)已安裝在您的本機電腦上。
 
@@ -335,6 +335,6 @@ ht-degree: 0%
 
 - 資產中繼資料擷取程式碼會在AEM外部執行，避免AEM Author服務上的負載，因此是一種獨立擴展的事件導向架構。
 - 新推出的Assets Author API可用於更新AEM中的資產中繼資料。
-- API驗證使用OAuth伺服器對伺服器（亦稱為使用者端認證流程），請參閱[OAuth伺服器對伺服器認證實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)。
+- API驗證使用OAuth伺服器對伺服器（亦稱為使用者端認證流程），請參閱[OAuth伺服器對伺服器認證實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)。
 - 與其使用Adobe I/O Runtime動作，其他Webhook或Amazon EventBridge可以用來接收AEM Assets事件和處理中繼資料更新。
 - 透過AEM舉辦資產活動可讓企業自動化及簡化關鍵程式，進而促進內容生態系統的效率及一致性。

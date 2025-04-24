@@ -11,7 +11,7 @@ level: Intermediate, Experienced
 doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
 duration: 253
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 0%
@@ -73,5 +73,5 @@ Node.js應用程式的執行流程如下：
 
 + [下載應用程式範例](./assets/aem-guides_token-authentication-external-application.zip)
 + JWT建立與交換的其他程式碼範例
-   + [Node.js、Java、Python、C#.NET和PHP程式碼範例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)
+   + [Node.js、Java、Python、C#.NET和PHP程式碼範例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples)
    + [JavaScript/Axios型程式碼範例](https://github.com/adobe/aemcs-api-client-lib)

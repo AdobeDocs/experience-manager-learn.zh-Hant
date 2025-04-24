@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '1963'
 ht-degree: 0%
@@ -149,7 +149,7 @@ function getCommandLineParams() {
 
 讀取服務認證後，即會使用它們產生JWT，然後與Adobe IMS API交換存取權杖。 接著，您就可以使用此存取權杖來存取AEM as a Cloud Service。
 
-此範例應用程式是以Node.js為基礎，因此最好使用[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模組來促進(1) JWT的產生和(20)與Adobe IMS的交換。 如果您的應用程式是使用其他語言開發的，請檢閱[適當的程式碼範例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)，瞭解如何使用其他程式語言建構向Adobe IMS傳送的HTTP要求。
+此範例應用程式是以Node.js為基礎，因此最好使用[@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm模組來促進(1) JWT的產生和(20)與Adobe IMS的交換。 如果您的應用程式是使用其他語言開發的，請檢閱[適當的程式碼範例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples)，瞭解如何使用其他程式語言建構向Adobe IMS傳送的HTTP要求。
 
 1. 更新`getAccessToken(..)`以檢查JSON檔案內容，並判斷其是否代表本機開發存取權杖或服務認證。 這可透過檢查`.accessToken`屬性的存在來輕鬆達成，該屬性僅存在於本機開發存取權杖JSON中。
 
