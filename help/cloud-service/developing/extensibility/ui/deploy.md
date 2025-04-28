@@ -11,9 +11,9 @@ jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 166
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 1049f605eb1c3b68e70e34d4cdad31858b076858
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
@@ -94,6 +94,22 @@ Adobe Developer Console工作區與AEM as a Cloud Service環境型別沒有任�
 1. 登入[Adobe Exchange](https://exchange.adobe.com/)
 1. 瀏覽至&#x200B;__管理__ > __App Builder應用程式__
 1. __撤銷__&#x200B;要更新的擴充功能
+
+撤銷擴充功能後，仍可在Extension Manager中以撤銷狀態看到。 若要完全移除它，您必須移除專案。
+
+移除專案的按鈕位於右上方：
+
+![刪除按鈕](./assets/deploy/extension-delete-button.png){align="center"}
+
+擴充功能未撤銷前，將無法刪除專案：
+
+![專案不能刪除](./assets/deploy/extension-can-not-delete-project.png){align="center"}
+
+當擴充功能撤銷時，專案便可移除：
+
+![專案不能刪除](./assets/deploy/extension-delete-procject.png){align="center"}
+
+移除專案後，擴充功能在Extension Manager中不再可見。
 
 ### 部署擴充功能
 
