@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 58ae9e503bd278479d78d4df6ffe39356d5ec59b
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1100'
 ht-degree: 1%
 
 ---
@@ -54,6 +54,15 @@ ht-degree: 1%
 - **OAuth Web App認證**：適用於具有代表使用者存取AEM API的前端和&#x200B;_後端_&#x200B;元件的網頁應用程式。 它使用&#x200B;_authorization_code_&#x200B;授權型別，後端伺服器可在此安全地管理密碼和權杖。 如需詳細資訊，請參閱[OAuth Web App認證](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential)。
 
 - **OAuth Single Page App認證**：專為瀏覽器中執行的SPA所設計，需要代表沒有後端伺服器的使用者存取API。 它使用&#x200B;_authorization_code_&#x200B;授權型別，並依賴使用PKCE （代碼交換的證明金鑰）的使用者端安全性機制來保護授權代碼流程。 如需詳細資訊，請參閱[OAuth單頁應用程式認證](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential)。
+
+## 要使用哪種驗證方法{#auth-method-decision}
+
+在決定使用哪種驗證方法時，請考慮下列事項：
+
+![要使用哪個驗證方法？](./assets/overview/which-authentication-method-to-use.png)
+
+每當涉及AEM使用者內容時，使用者驗證（網頁應用程式或單頁應用程式）應為預設選項。 這可確儲存放庫中的所有動作都已正確歸屬於已驗證的使用者，並且使用者限製為僅擁有其有權使用的許可權。
+使用伺服器對伺服器（或技術系統帳戶）代表個別使用者執行動作，會略過安全性模型，並帶來許可權提升和不正確稽核等風險。
 
 ## OAuth伺服器對伺服器與Web應用程式與單頁應用程式憑證的差異{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 
