@@ -21,4 +21,4 @@ ht-degree: 0%
 
 使用Dynamic Media將視訊檔案上傳至AEM Assets後，會自動產生隱藏式字幕。
 
->[!VIDEO](https://video.tv.adobe.com/v/3432627/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446398/?learn=on&captions=chi_hant)

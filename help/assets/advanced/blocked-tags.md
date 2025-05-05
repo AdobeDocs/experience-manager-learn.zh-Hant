@@ -23,4 +23,4 @@ ht-degree: 6%
 
 瞭解如何使用封鎖的標籤來增強AEM as a Cloud Service中的資產管理，以防止應用文化敏感、不相關或有爭議的智慧標籤。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426839/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448511/?learn=on&captions=chi_hant)

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 簡短影片，逐步說明如何在Workbench中建立簡易表單程式
 
->[!VIDEO](https://video.tv.adobe.com/v/3429494/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440236/?learn=on&captions=chi_hant)

@@ -23,7 +23,7 @@ ht-degree: 16%
 
 使用先前步驟中建立的Swagger檔案建立REST支援的資料來源。
 
->[!VIDEO](https://video.tv.adobe.com/v/331755?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447276?quality=12&learn=on&captions=chi_hant)
 
 | 設定 | 值 |
 |---------------------|-----------------------------------------------------------------|

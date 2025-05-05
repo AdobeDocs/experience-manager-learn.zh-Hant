@@ -23,4 +23,4 @@ ht-degree: 0%
 
 探索如何使用區段、預設內容等專案來組合Edge Delivery Services檔案。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425716/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445200/?learn=on&captions=chi_hant)

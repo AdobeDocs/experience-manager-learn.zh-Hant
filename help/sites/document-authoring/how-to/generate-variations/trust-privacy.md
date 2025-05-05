@@ -22,4 +22,4 @@ ht-degree: 0%
 
 探索Adobe如何處理在Edge Delivery Services檔案製作中產生變異時的信任和隱私權。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429060/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440025/?learn=on&captions=chi_hant)

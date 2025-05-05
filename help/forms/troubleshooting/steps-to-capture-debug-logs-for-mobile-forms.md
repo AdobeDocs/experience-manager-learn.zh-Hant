@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此影片會逐步說明擷取行動表單除錯記錄的步驟。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335516?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438598?quality=12&learn=on&captions=chi_hant)

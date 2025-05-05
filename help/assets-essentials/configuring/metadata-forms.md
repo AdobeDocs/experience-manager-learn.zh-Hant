@@ -21,4 +21,4 @@ ht-degree: 10%
 
 瞭解如何輕鬆快速地設定中繼資料Forms，以量身打造可在AEM Assets中使用的資產中繼資料。
 
->[!VIDEO](https://video.tv.adobe.com/v/3431686?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452058?quality=12&learn=on&captions=chi_hant)

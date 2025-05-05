@@ -24,4 +24,4 @@ ht-degree: 0%
 
 瞭解如何使用Edge Delivery Services在檔案製作中透過AEM Sidekick設定製作驗證。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429594/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438189/?learn=on&captions=chi_hant)

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 歡迎使用AEM Engineering的Cloud 5系列。 任何產品實作階段的主要問題之一，就是這些範例、工具或API有足夠的程式碼範例和/或即時示範。 此系列的目標是在5分鐘內提供有關AEM as a Cloud Service的有用資訊。
 
->[!VIDEO](https://video.tv.adobe.com/v/340667?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447834?quality=12&learn=on&captions=chi_hant)

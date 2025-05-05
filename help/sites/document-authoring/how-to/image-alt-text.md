@@ -25,4 +25,4 @@ ht-degree: 0%
 
 瞭解如何在使用AEM檔案編寫功能編寫的頁面中，將替代文字新增至影像。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425721/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438686/?learn=on&captions=chi_hant)

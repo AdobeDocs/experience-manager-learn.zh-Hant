@@ -23,7 +23,7 @@ ht-degree: 5%
 
 可編輯的範本可讓專門的作者建立和更新頁面範本，並使用Adobe Experience Manager (AEM) Sites管理進階原則設定。
 
->[!VIDEO](https://video.tv.adobe.com/v/326784?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449622?quality=12&learn=on&captions=chi_hant)
 
 可編輯的範本是建立新AEM Sites的建議。
 

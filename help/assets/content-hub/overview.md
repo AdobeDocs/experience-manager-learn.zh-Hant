@@ -69,7 +69,7 @@ ht-degree: 10%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/content-hub/configure" title="設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3439311/?format=jpeg&nocache=1744751768916" alt="設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3439322/?format=jpeg&nocache=1744751768916&captions=chi_hant" alt="設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -92,7 +92,7 @@ ht-degree: 10%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/content-hub/add-assets" title="新增資產" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432980/?format=jpeg&nocache=1744751769952" alt="新增資產"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3450293/?format=jpeg&nocache=1744751769952&captions=chi_hant" alt="新增資產"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -161,7 +161,7 @@ ht-degree: 10%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/content-hub/collections" title="集合" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435687/?format=jpeg&nocache=1744751769136" alt="集合"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3445311/?format=jpeg&nocache=1744751769136&captions=chi_hant" alt="集合"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -184,7 +184,7 @@ ht-degree: 10%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/content-hub/share" title="分享" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435685/?format=jpeg&nocache=1744751769933" alt="分享"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3445366/?format=jpeg&nocache=1744751769933&captions=chi_hant" alt="分享"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

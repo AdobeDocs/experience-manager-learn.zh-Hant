@@ -23,4 +23,4 @@ ht-degree: 2%
 
 使用Edge Delivery Services的[AEM範本](https://github.com/adobe/aem-boilerplate)設定程式碼Git存放庫。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425713/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434622/?learn=on&captions=chi_hant)

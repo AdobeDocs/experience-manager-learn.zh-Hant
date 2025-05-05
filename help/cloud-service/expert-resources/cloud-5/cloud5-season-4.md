@@ -42,7 +42,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" title="Edge Delivery Services的開發最佳實務" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440978/?format=jpeg&nocache=1734040055526" alt="Edge Delivery Services的開發最佳實務"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441011/?format=jpeg&nocache=1734040055526&captions=chi_hant" alt="Edge Delivery Services的開發最佳實務"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -65,7 +65,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-search-optimization.md" title="Edge Delivery Services中的搜尋最佳化" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440976/?format=jpeg&nocache=1734040055519" alt="Edge Delivery Services中的搜尋最佳化"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440989/?format=jpeg&nocache=1734040055519&captions=chi_hant" alt="Edge Delivery Services中的搜尋最佳化"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -88,7 +88,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-google-maps.md" title="與Google地圖整合" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440977/?format=jpeg&nocache=1734040055523" alt="與Google地圖整合"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441000/?format=jpeg&nocache=1734040055523&captions=chi_hant" alt="與Google地圖整合"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

@@ -27,4 +27,4 @@ ht-degree: 0%
 
 請依照影片內容建立您的Adobe I/O專案。
 
->[!VIDEO](https://video.tv.adobe.com/v/333220?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440103?quality=12&learn=on&captions=chi_hant)

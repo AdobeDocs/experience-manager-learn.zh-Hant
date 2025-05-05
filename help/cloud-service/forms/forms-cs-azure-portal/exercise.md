@@ -21,5 +21,5 @@ ht-degree: 0%
 
 增強使用案例，如本影片所示
 
->[!VIDEO](https://video.tv.adobe.com/v/335800?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436574?quality=12&learn=on&captions=chi_hant)
 

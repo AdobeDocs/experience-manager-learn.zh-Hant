@@ -21,7 +21,7 @@ ht-degree: 7%
 
 瞭解AEM as a Cloud Service上線程式，從合約階段一直到使用Cloud Manager設定環境。
 
->[!VIDEO](https://video.tv.adobe.com/v/336959?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431507?quality=12&learn=on&captions=chi_hant)
 
 ## Cloud Manager與Admin Console
 

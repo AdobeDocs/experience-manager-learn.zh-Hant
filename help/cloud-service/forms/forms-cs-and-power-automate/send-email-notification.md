@@ -23,4 +23,4 @@ ht-degree: 0%
 
 使用Microsoft Power Automate從表單提交內容擷取欄位值，以傳送電子郵件通知給最適化表單提交者。
 
->[!VIDEO](https://video.tv.adobe.com/v/345957?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431476?quality=12&learn=on&captions=chi_hant)

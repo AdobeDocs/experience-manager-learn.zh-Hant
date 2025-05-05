@@ -24,4 +24,4 @@ ht-degree: 0%
 
 處理大量記錄時，使用查詢和搜尋最佳化，將您的Lighthouse分數設為100次購買。 使用技術最佳化查詢索引、增強搜尋功能並劃分查詢索引，以實現最佳效能最佳化
 
->[!VIDEO](https://video.tv.adobe.com/v/3440976/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440989/?learn=on&enablevpops&captions=chi_hant)

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索如何在檔案製作中執行回應式導覽。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425707/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438178/?learn=on&captions=chi_hant)

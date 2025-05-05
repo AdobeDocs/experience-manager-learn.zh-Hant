@@ -36,7 +36,7 @@ ht-degree: 9%
             <a href="set-up.md" title="檔案製作設定"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425699/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438875/?format=jpeg&captions=chi_hant"
                 alt="檔案製作概觀">
             </a>
           </figure>
@@ -68,7 +68,7 @@ ht-degree: 9%
             <a href="preview-and-publish.md" title="預覽和發佈內容"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425700/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441356/?format=jpeg&captions=chi_hant"
                 alt="預覽和發佈內容">
             </a>
           </figure>
@@ -100,7 +100,7 @@ ht-degree: 9%
             <a href="document-structure.md" title="檔案結構"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425701/?format=jpeg" alt="檔案結構">
+                src="https://video.tv.adobe.com/v/3438827/?format=jpeg&captions=chi_hant" alt="檔案結構">
             </a>
           </figure>
         </div>
@@ -131,7 +131,7 @@ ht-degree: 9%
             <a href="default-content-and-sections.md" title="預設內容和區段"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425702/?format=jpeg" alt="預設內容和區段">
+                src="https://video.tv.adobe.com/v/3437986/?format=jpeg&captions=chi_hant" alt="預設內容和區段">
             </a>
           </figure>
         </div>
@@ -161,7 +161,7 @@ ht-degree: 9%
           <figure class="image is-16by9">
             <a href="blocks-and-autoblocks.md" title="封鎖和自動封鎖" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425703/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3439515/?format=jpeg&captions=chi_hant"
                 alt="封鎖和自動封鎖">
             </a>
           </figure>
@@ -194,7 +194,7 @@ ht-degree: 9%
             <a href="redirects.md" title="重新導向"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425704/?format=jpeg" alt="重新導向">
+                src="https://video.tv.adobe.com/v/3438554/?format=jpeg&captions=chi_hant" alt="重新導向">
             </a>
           </figure>
         </div>
@@ -225,7 +225,7 @@ ht-degree: 9%
             <a href="bulk-metadata.md" title="大量中繼資料"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425705/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438433/?format=jpeg&captions=chi_hant"
                 alt="大量中繼資料">
             </a>
           </figure>
@@ -258,7 +258,7 @@ ht-degree: 9%
             <a href="page-metadata.md" title="頁面繼資料"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425706/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438079/?format=jpeg&captions=chi_hant"
                 alt="頁面繼資料">
             </a>
           </figure>
@@ -290,7 +290,7 @@ ht-degree: 9%
             <a href="author-authentication.md" title="作者驗證"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429594/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438189/?format=jpeg&captions=chi_hant"
                 alt="作者驗證">
             </a>
           </figure>
@@ -327,7 +327,7 @@ ht-degree: 9%
             <a href="./how-to/responsive-navigation.md" title="回應式導覽"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425707/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438178/?format=jpeg&captions=chi_hant"
                 alt="回應式導覽">
             </a>
           </figure>
@@ -359,7 +359,7 @@ ht-degree: 9%
             <a href="./how-to/document-audit.md" title="檔案稽核"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425722/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437722/?format=jpeg&captions=chi_hant"
                 alt="檔案稽核">
             </a>
           </figure>
@@ -391,7 +391,7 @@ ht-degree: 9%
             <a href="./how-to/document-permissions.md" title="檔案許可權"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425724/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438112/?format=jpeg&captions=chi_hant"
                 alt="檔案許可權">
             </a>
           </figure>
@@ -423,7 +423,7 @@ ht-degree: 9%
             <a href="./how-to/document-versions.md" title="檔案版本"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425728/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438807/?format=jpeg&captions=chi_hant"
                 alt="檔案版本">
             </a>
           </figure>
@@ -455,7 +455,7 @@ ht-degree: 9%
             <a href="./how-to/document-workflows.md" title="檔案工作流程"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425720/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438301/?format=jpeg&captions=chi_hant"
                 alt="檔案工作流程">
             </a>
           </figure>
@@ -487,7 +487,7 @@ ht-degree: 9%
             <a href="./how-to/iframes.md" title="使用iFrame"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425719/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438400/?format=jpeg&captions=chi_hant"
                 alt="使用iFrame">
             </a>
           </figure>
@@ -519,7 +519,7 @@ ht-degree: 9%
             <a href="./how-to/image-alt-text.md" title="使用替代文字"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425721/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438686/?format=jpeg&captions=chi_hant"
                 alt="使用替代文字">
             </a>
           </figure>
@@ -551,7 +551,7 @@ ht-degree: 9%
             <a href="./how-to/no-index.md" title="防止索引"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425726/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438130/?format=jpeg&captions=chi_hant"
                 alt="防止索引">
             </a>
           </figure>
@@ -583,7 +583,7 @@ ht-degree: 9%
             <a href="./how-to/using-dynamic-media.md" title="Dynamic Media"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429593/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438917/?format=jpeg&captions=chi_hant"
                 alt="Dynamic Media">
             </a>
           </figure>
@@ -615,7 +615,7 @@ ht-degree: 9%
             <a href="./how-to/migration-using-importer.md" title="使用Importer進行網站移轉"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429595/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3443707/?format=jpeg&captions=chi_hant"
                 alt="使用Importer進行網站移轉">
             </a>
           </figure>
@@ -647,7 +647,7 @@ ht-degree: 9%
             <a href="./how-to/customizing-importer.md" title="自訂匯入工具"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429596/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3444256/?format=jpeg&captions=chi_hant"
                 alt="自訂匯入工具">
             </a>
           </figure>
@@ -679,7 +679,7 @@ ht-degree: 9%
             <a href="./how-to/bulk-importing-using-importer.md" title="使用匯入工具大量匯入"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429597/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3445896/?format=jpeg&captions=chi_hant"
                 alt="使用匯入工具大量匯入">
             </a>
           </figure>
@@ -716,7 +716,7 @@ ht-degree: 9%
             <a href="./how-to/generate-variations/overview.md" title="產生變化版本"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441346/?format=jpeg&captions=chi_hant"
                 alt="產生變化版本">
             </a>
           </figure>
@@ -748,7 +748,7 @@ ht-degree: 9%
             <a href="./how-to/generate-variations/configure-sidekick.md" title="產生變數 — 設定Sidekick"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437000/?format=jpeg&captions=chi_hant"
                 alt="產生變數 — 設定Sidekick">
             </a>
           </figure>
@@ -780,7 +780,7 @@ ht-degree: 9%
             <a href="./how-to/generate-variations/prompt-templates.md" title="產生變數 — 提示範本"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441346/?format=jpeg&captions=chi_hant"
                 alt="產生變數 — 提示範本">
             </a>
           </figure>
@@ -812,7 +812,7 @@ ht-degree: 9%
             <a href="./how-to/generate-variations/custom-prompt-templates.md" title="產生變數 — 自訂提示範本"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438510/?format=jpeg&captions=chi_hant"
                 alt="產生變數 — 自訂提示範本">
             </a>
           </figure>
@@ -844,7 +844,7 @@ ht-degree: 9%
             <a href="./how-to/generate-variations/custom-prompt-templates.md" title="產生變數 — 儲存自訂提示範本"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437521/?format=jpeg&captions=chi_hant"
                 alt="產生變數 — 儲存自訂提示範本">
             </a>
           </figure>
@@ -876,7 +876,7 @@ ht-degree: 9%
             <a href="./how-to/generate-variations/using-target-audiences.md" title="產生變數 — 使用Adobe Target對象"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428792/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437766/?format=jpeg&captions=chi_hant"
                 alt="產生變數 — 使用Adobe Target對象">
             </a>
           </figure>
@@ -908,7 +908,7 @@ ht-degree: 9%
             <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="產生變數 — 使用CSV檔案對象"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428793/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436898/?format=jpeg&captions=chi_hant"
                 alt="產生變數 — 使用CSV檔案對象">
             </a>
           </figure>
@@ -940,7 +940,7 @@ ht-degree: 9%
             <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="產生變數 — 使用Adobe Firefly"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428794/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438367/?format=jpeg&captions=chi_hant"
                 alt="產生變數 — 使用Adobe Firefly">
             </a>
           </figure>
@@ -972,7 +972,7 @@ ht-degree: 9%
             <a href="./how-to/generate-variations/actions.md" title="產生變數 — 對所產生變數的動作"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428795/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437307/?format=jpeg&captions=chi_hant"
                 alt="產生變數 — 對所產生變數的動作">
             </a>
           </figure>
@@ -1004,7 +1004,7 @@ ht-degree: 9%
             <a href="./how-to/generate-variations/trust-privacy.md" title="產生變數 — 信任和隱私"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429060/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3440025/?format=jpeg&captions=chi_hant"
                 alt="產生變數 — 信任和隱私">
             </a>
           </figure>
@@ -1036,7 +1036,7 @@ ht-degree: 9%
             <a href="./how-to/experimentation-framework.md" title="實驗框架概觀"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429061/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437870/?format=jpeg&captions=chi_hant"
                 alt="實驗框架概觀">
             </a>
           </figure>
@@ -1068,7 +1068,7 @@ ht-degree: 9%
             <a href="./how-to/setup-experimentation-framework.md" title="設定實驗架構"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429062/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438939/?format=jpeg&captions=chi_hant"
                 alt="設定實驗架構">
             </a>
           </figure>
@@ -1100,7 +1100,7 @@ ht-degree: 9%
             <a href="./how-to/experimentation-add-metadata.md" title="新增用於實驗的中繼資料"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428796/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3440129/?format=jpeg&captions=chi_hant"
                 alt="新增用於實驗的中繼資料">
             </a>
           </figure>

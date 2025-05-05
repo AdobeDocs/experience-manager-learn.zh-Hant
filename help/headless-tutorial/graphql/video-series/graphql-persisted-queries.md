@@ -28,4 +28,4 @@ ht-degree: 10%
 + 瞭解如何建立、更新及執行GraphQL查詢
 + 瞭解透過使用者端查詢進行持續查詢的好處
 
->[!VIDEO](https://video.tv.adobe.com/v/333429?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447388?quality=12&learn=on&captions=chi_hant)

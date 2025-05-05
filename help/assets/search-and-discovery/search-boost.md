@@ -21,4 +21,4 @@ ht-degree: 7%
 
 # 搜尋提升
 
->[!VIDEO](https://video.tv.adobe.com/v/16766?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444069?quality=12&learn=on&captions=chi_hant)

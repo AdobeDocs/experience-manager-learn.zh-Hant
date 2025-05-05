@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索如何使用CSV檔案閱聽眾，透過Edge Delivery Services檔案製作中的相關內容鎖定適當的閱聽眾。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428793/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436898/?learn=on&captions=chi_hant)

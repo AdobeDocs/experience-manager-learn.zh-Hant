@@ -24,7 +24,7 @@ ht-degree: 0%
 瞭解如何使用Adobe Experience Manager (AEM) Publish Dispatcher上的&#x200B;**OWASP ModSecurity核心規則集(CRS)**，啟用ModSecurity以保護您的網站免受拒絕服務(DoS)攻擊。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3422976?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452143?quality=12&learn=on&captions=chi_hant)
 
 ## 概觀
 

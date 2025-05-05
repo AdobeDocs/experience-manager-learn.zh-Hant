@@ -25,7 +25,7 @@ ht-degree: 0%
 
 在本教學課程中，您將瞭解如何使用自助服務功能，設定及使用Purge API Token來清除範例[AEM WKND](https://github.com/adobe/aem-guides-wknd)網站的CDN快取。
 
->[!VIDEO](https://video.tv.adobe.com/v/3432948?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436944?quality=12&learn=on&captions=chi_hant)
 
 ## 快取失效vs明確清除
 

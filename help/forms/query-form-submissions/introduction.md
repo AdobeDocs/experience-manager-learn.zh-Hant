@@ -22,7 +22,7 @@ ht-degree: 1%
 
 以下影片說明使用案例
 
->[!VIDEO](https://video.tv.adobe.com/v/3427096?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443507?learn=on&captions=chi_hant)
 
 
 若要依照本教學課程進行，建議您有權存取下列內容

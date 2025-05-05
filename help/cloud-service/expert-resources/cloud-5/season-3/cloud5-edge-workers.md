@@ -21,7 +21,7 @@ ht-degree: 3%
 
 探索AEM Sites和Edge Delivery Services中邊緣工作者的重要性，以及如何將他們與後端系統整合。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427589?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448156?learn=on&captions=chi_hant)
 
 ## 其他資源
 

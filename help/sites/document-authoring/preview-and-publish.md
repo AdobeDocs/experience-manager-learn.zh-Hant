@@ -25,4 +25,4 @@ ht-degree: 0%
 
 如何使用檔案製作來建立和發佈內容的逐步指南。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425700/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441356/?learn=on&captions=chi_hant)

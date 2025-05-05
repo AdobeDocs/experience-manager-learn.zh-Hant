@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 使用案例示範
 
->[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437320?quality=12&learn=on&captions=chi_hant)
 
 出於本教學課程的目的，我已使用[Geonames REST API](https://www.geonames.org/export/web-services.html)來示範此功能。
 有許多組織提供這類服務，只要他們有妥善記錄的REST API，您就可以使用資料整合功能，輕鬆與AEM Forms整合

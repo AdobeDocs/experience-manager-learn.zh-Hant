@@ -33,12 +33,12 @@ ht-degree: 0%
 
 將SharePoint設定為內容存放庫，以與Edge Delivery Services搭配使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425712/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446039/?learn=on&captions=chi_hant)
 
 >[!TAB Google磁碟機]
 
 將Google Drive設定為內容存放庫，以與Edge Delivery Services搭配使用。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425711/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434731/?learn=on&captions=chi_hant)
 
 >[!ENDTABS]

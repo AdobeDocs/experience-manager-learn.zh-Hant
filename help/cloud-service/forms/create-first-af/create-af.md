@@ -23,4 +23,4 @@ ht-degree: 13%
 
 建立最適化表單，並將其與建立的主題建立關聯。
 
->[!VIDEO](https://video.tv.adobe.com/v/332237?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424904?quality=12&learn=on&captions=chi_hant)

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此影片會逐步說明為Forms內嵌字型和輸出服務轉換的步驟。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335496?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436485?quality=12&learn=on&captions=chi_hant)

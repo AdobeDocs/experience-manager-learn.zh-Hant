@@ -21,4 +21,4 @@ ht-degree: 0%
 
 瞭解如何針對AEM SDK、AEM as a Cloud Service以及建置和部署程式進行疑難排解和偵錯。
 
->[!VIDEO](https://video.tv.adobe.com/v/336964?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454670?quality=12&learn=on&captions=chi_hant)

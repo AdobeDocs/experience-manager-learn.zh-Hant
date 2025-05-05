@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解如何使用整合Adobe Experience Manager Assets as a Cloud Service與Adobe Creative Cloud Service API的Content Automation附加元件來處理您的資產。
 
->[!VIDEO](https://video.tv.adobe.com/v/336540?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444093?quality=12&learn=on&captions=chi_hant)

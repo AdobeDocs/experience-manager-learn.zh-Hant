@@ -26,6 +26,6 @@ ht-degree: 1%
 
 瞭解如何設定Workfront和AEM Assets，以使用Workfront自訂表單和AEM中繼資料結構描述管理和同步處理資產中繼資料。
 
->[!VIDEO](https://video.tv.adobe.com/v/340332?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431489?quality=12&learn=on&captions=chi_hant)
 
 _Experience Manager增強型聯結器Workfront上[四部分專家系列的第二部分](./overview.md)_

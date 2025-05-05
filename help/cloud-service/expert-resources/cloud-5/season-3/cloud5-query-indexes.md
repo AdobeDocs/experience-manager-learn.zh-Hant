@@ -24,7 +24,7 @@ ht-degree: 3%
 
 探索查詢索引以及如何撰寫Excel公式，以使用Edge Delivery Services操控和排序資料集。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427787/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453774/?learn=on&captions=chi_hant)
 
 ## 其他資源
 

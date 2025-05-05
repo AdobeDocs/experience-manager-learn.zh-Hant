@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索如何在Edge Delivery Services檔案製作中設定實驗架構。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429062/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438939/?learn=on&captions=chi_hant)

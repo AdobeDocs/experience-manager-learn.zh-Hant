@@ -23,13 +23,13 @@ ht-degree: 0%
 
 第1部分 — 新增標題、影像、文字欄位和日期欄位
 
->[!VIDEO](https://video.tv.adobe.com/v/3427620/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439737/?learn=on&captions=chi_hant)
 
 第2部分 — 新增和建立自訂物件及表單片段
 
->[!VIDEO](https://video.tv.adobe.com/v/3427621/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439592/?learn=on&captions=chi_hant)
 
 存取說明內容
 
->[!VIDEO](https://video.tv.adobe.com/v/3427622/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437248/?learn=on&captions=chi_hant)
 

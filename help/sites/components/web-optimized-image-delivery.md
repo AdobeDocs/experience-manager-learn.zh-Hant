@@ -23,4 +23,4 @@ ht-degree: 0%
 
 瞭解如何使用AEM核心元件在AEM as a Cloud Service網站上啟用Web最佳化影像傳送。
 
->[!VIDEO](https://video.tv.adobe.com/v/346064?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450003?quality=12&learn=on&captions=chi_hant)

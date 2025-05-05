@@ -21,4 +21,4 @@ ht-degree: 0%
 
 瞭解AEM的內容片段UI如何讓您使用快速篩選輕鬆找到內容片段。 透過此功能，尋找特定內容片段變得快速輕鬆。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419310/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436707/?learn=on&captions=chi_hant)

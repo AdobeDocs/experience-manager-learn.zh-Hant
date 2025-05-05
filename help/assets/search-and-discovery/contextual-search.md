@@ -22,7 +22,7 @@ ht-degree: 0%
 
 瞭解如何在Adobe Experience Manager Assets中使用內容搜尋，透過自然語言查詢有效尋找資產。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428667/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438967/?learn=on&captions=chi_hant)
 
 ## 切換內容搜尋
 

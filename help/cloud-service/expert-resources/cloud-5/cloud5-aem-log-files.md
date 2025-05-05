@@ -20,7 +20,7 @@ ht-degree: 4%
 
 本課程深入探討如何存取AEM as a Cloud Service中的記錄檔，包括如何透過使用者介面及API存取記錄檔。
 
->[!VIDEO](https://video.tv.adobe.com/v/341156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448489?quality=12&learn=on&captions=chi_hant)
 
 ## 本影片涵蓋的內容
 

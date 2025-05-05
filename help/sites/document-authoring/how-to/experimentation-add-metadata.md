@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索在Edge Delivery Services檔案製作中新增實驗用的中繼資料。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428796/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440129/?learn=on&captions=chi_hant)

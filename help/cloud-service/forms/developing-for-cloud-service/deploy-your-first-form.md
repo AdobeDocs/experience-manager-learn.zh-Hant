@@ -29,7 +29,7 @@ ht-degree: 1%
 
 若要使用IntelliJ和Repo工具將這些資產同步至您的AEM專案，請觀看以下影片
 
->[!VIDEO](https://video.tv.adobe.com/v/336937?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448633?quality=12&learn=on&captions=chi_hant)
 
 ## 後續步驟
 

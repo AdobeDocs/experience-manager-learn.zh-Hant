@@ -23,4 +23,4 @@ ht-degree: 0%
 
 調適型表單範本是專用的AEM頁面範本，具有用來建立調適型表單的特定屬性和內容結構。 範本有預先設定的版面、樣式和基本初始內容結構。 每個最適化表單都以範本為基礎。
 
->[!VIDEO](https://video.tv.adobe.com/v/332223?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446160?quality=12&learn=on&captions=chi_hant)

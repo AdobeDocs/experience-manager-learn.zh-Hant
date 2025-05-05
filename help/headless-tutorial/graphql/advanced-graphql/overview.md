@@ -45,7 +45,7 @@ ht-degree: 0%
 
 以下影片提供本教學課程中所涵蓋概念的高層級概觀。 此教學課程包括使用更進階的資料型別定義內容片段模型、巢狀內容片段，以及在AEM中保留GraphQL查詢。
 
->[!VIDEO](https://video.tv.adobe.com/v/340035?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446138?quality=12&learn=on&captions=chi_hant)
 
 >[!CAUTION]
 >

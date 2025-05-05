@@ -21,4 +21,4 @@ ht-degree: 0%
 
 瞭解AEM Forms as a Cloud Service如何支援數位註冊使用案例。
 
->[!VIDEO](https://video.tv.adobe.com/v/336966?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3455145?quality=12&learn=on&captions=chi_hant)

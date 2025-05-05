@@ -21,4 +21,4 @@ ht-degree: 0%
 
 瞭解Best Practice Analyzer如何協助您準備從AEM內部部署或Adobe Managed Services移至Experience Manager as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336690?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446464?quality=12&learn=on&captions=chi_hant)

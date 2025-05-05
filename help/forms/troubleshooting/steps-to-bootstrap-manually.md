@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *如果資料庫初始化無法正常運作，此影片會逐步進行手動啟動的程式。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335515?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436280?quality=12&learn=on&captions=chi_hant)

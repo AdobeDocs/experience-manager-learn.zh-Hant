@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此影片逐步解說在AEM Forms中啟用效能記錄以偵錯與Forms和輸出服務相關問題的程式。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335499?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439726?quality=12&learn=on&captions=chi_hant)

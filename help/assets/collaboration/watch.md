@@ -23,7 +23,7 @@ ht-degree: 12%
 
 瞭解如何在AEM Assets中每當watched資產、資料夾或集合變更時接收通知。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427646/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439636/?learn=on&captions=chi_hant)
 
 >[!TIP]
 >

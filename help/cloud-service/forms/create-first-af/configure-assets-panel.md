@@ -23,4 +23,4 @@ ht-degree: 0%
 
 使用帶有Accordion版面的可重複面板擷取申請者的資產。
 
->[!VIDEO](https://video.tv.adobe.com/v/336473?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445189?quality=12&learn=on&captions=chi_hant)

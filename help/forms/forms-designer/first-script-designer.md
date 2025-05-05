@@ -23,4 +23,4 @@ ht-degree: 0%
 
 說明如何在AEM Forms Designer中建立和測試指令碼的簡短影片
 
->[!VIDEO](https://video.tv.adobe.com/v/3427627/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443718/?learn=on&captions=chi_hant)

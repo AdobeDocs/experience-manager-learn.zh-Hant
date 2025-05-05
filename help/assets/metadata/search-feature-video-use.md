@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 使用資產中繼資料進行搜尋提升 {#search-boost-asset}
 
->[!VIDEO](https://video.tv.adobe.com/v/16766?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444069?quality=12&learn=on&captions=chi_hant)
 
 ## 多值和標籤搜尋述詞的進階設定 {#multi-value-tag-predicates}
 

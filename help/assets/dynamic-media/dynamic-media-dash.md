@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解AEM Assets Dynamic Media的DASH最適化串流通訊協定如何確保傳送的視訊能適應可用的頻寬，並確保順暢的播放體驗。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429072/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443628/?learn=on&captions=chi_hant)

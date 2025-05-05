@@ -21,4 +21,4 @@ ht-degree: 0%
 
 探索Dynamic Media範本（可撰寫影像資產）、其最佳實務，以及如何滿足個人化內容提供的需求。 瞭解如何建立和管理範本，以及如何使用範本大規模提供個人化內容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3451727/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3451738/?learn=on&enablevpops&captions=chi_hant)

@@ -37,11 +37,11 @@ ht-degree: 0%
 
 瞭解如何為在Adobe Managed Services或內部部署中執行的AEM 6設定Adobe Asset Link、設定使用者權益和AEM as a Cloud Service，以及如何安裝和使用Adobe Asset Link。
 
->[!VIDEO](https://video.tv.adobe.com/v/338823?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434120?quality=12&learn=on&captions=chi_hant)
 
 
 ## 網域信任的Asset Link設定
 
 瞭解網域信任是什麼、透過Experience Manager Assets使用Adobe Asset Link的意義，以及如何設定網域信任。
 
->[!VIDEO](https://video.tv.adobe.com/v/338825?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454160?quality=12&learn=on&captions=chi_hant)

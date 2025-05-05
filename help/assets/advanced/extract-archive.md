@@ -23,4 +23,4 @@ ht-degree: 5%
 
 瞭解如何使用我們的資訊影片在AEM Assets中掌握有效的數位資產管理，展示Extract ZIP功能，以輕鬆地將資產階層直接整理和上傳到DAM。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426368/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447153/?learn=on&captions=chi_hant)

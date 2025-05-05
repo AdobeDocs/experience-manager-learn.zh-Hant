@@ -22,4 +22,4 @@ ht-degree: 1%
 
 瞭解如何使用[Adobe Express](https://www.adobe.com/tw/express/)與AEM Assets的整合，以最佳化內容供應鏈，並提高所有團隊成員的生產力和協助工具。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425193/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453143/?learn=on&captions=chi_hant)

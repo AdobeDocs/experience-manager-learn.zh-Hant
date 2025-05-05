@@ -21,4 +21,4 @@ ht-degree: 17%
 
 瞭解如何對AEM as a Cloud Service實作有不同的思考。
 
->[!VIDEO](https://video.tv.adobe.com/v/336956?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454317?quality=12&learn=on&captions=chi_hant)

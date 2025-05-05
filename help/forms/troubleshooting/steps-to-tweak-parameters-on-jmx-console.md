@@ -22,4 +22,4 @@ ht-degree: 0%
 
 *此影片逐步解說在JMX主控台調整引數的步驟。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335554?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438415?quality=12&learn=on&captions=chi_hant)

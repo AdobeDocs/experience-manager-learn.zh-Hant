@@ -20,7 +20,7 @@ ht-degree: 1%
 
 有關如何取得Cloud Service整合的登入權杖的深入指南，以及用於此操作的一些使用案例。
 
->[!VIDEO](https://video.tv.adobe.com/v/341277?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448648?quality=12&learn=on&captions=chi_hant)
 
 ## 本影片涵蓋的內容
 

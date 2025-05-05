@@ -23,7 +23,7 @@ ht-degree: 0%
 
 瞭解如何從AEM對需要相互傳輸層安全性(mTLS)驗證的網頁API進行HTTPS呼叫。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447870?quality=12&learn=on&captions=chi_hant)
 
 mTLS或雙向TLS驗證會要求&#x200B;**使用者端和伺服器都相互驗證**，藉以增強TLS通訊協定的安全性。 此驗證透過使用數位憑證完成。 它通常用於高度安全性和身分驗證至關重要的情況。
 

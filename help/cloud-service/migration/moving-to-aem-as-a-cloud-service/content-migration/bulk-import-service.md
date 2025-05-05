@@ -23,7 +23,7 @@ ht-degree: 0%
 
 
 
->[!VIDEO](https://video.tv.adobe.com/v/336969?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453290?quality=12&learn=on&captions=chi_hant)
 
 ## 使用大量匯入服務
 

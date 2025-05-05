@@ -22,4 +22,4 @@ ht-degree: 0%
 
 以下影片將逐步說明建立和設定最適化表單的步驟，以便建立和顯示潛在客戶物件。
 
->[!VIDEO](https://video.tv.adobe.com/v/340791?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449319?quality=12&learn=on&captions=chi_hant)

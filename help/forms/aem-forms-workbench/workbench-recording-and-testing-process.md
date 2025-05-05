@@ -21,4 +21,4 @@ ht-degree: 0%
 
 一段簡短影片，逐步解說如何在Workbench中偵錯表單程式
 
->[!VIDEO](https://video.tv.adobe.com/v/3429495/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439826/?learn=on&captions=chi_hant)

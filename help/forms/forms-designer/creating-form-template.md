@@ -23,4 +23,4 @@ ht-degree: 0%
 
 隨附許多現成可用的範本，您可以依個人喜好自行使用或自訂。 範本也可以在AEM Forms Designer中建立和管理。 您可以從空白頁面、範本、試算表、PDF或Microsoft Word檔案開始。 本影片涵蓋所有這些選項，以及開箱即用的功能
 
->[!VIDEO](https://video.tv.adobe.com/v/3427678/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439159/?learn=on&captions=chi_hant)

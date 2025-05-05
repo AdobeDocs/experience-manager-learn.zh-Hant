@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 大量屬性更新的擴充功能範例
 
->[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454471?quality=12&learn=on&captions=chi_hant)
 
 此範例AEM內容片段主控台擴充功能是一個[動作列](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/)擴充功能，可將內容片段屬性大量更新為通用值。
 

@@ -21,7 +21,7 @@ ht-degree: 0%
 
 瞭解AEM as a Cloud Service的搜尋索引、如何將AEM 6索引定義轉換成相容於AEM as a Cloud Service，以及如何將索引部署至AEM as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336963?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454725?quality=12&learn=on&captions=chi_hant)
 
 ## 索引轉換工具
 

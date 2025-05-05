@@ -24,4 +24,4 @@ ht-degree: 0%
 
 設定最適化表單以觸發稽核工作流程
 
->[!VIDEO](https://video.tv.adobe.com/v/332435?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446517?quality=12&learn=on&captions=chi_hant)

@@ -21,7 +21,7 @@ ht-degree: 2%
 
 如何在您的AEM開發工作流程中使用Dispatcher驗證器的快速範例。
 
->[!VIDEO](https://video.tv.adobe.com/v/342358?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448430?quality=12&learn=on&captions=chi_hant)
 
 ## 本影片涵蓋的內容
 

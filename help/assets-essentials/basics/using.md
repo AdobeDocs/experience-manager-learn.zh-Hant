@@ -23,4 +23,4 @@ ht-degree: 0%
 
 瞭解如何篩選、搜尋和下載AEM Assets中的資產。
 
->[!VIDEO](https://video.tv.adobe.com/v/335861?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444002?quality=12&learn=on&captions=chi_hant)

@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解如何導覽可用的標籤並自訂設定選項以滿足您組織的需求。 此影片將協助管理員瞭解不同的設定，並提供高級指示，說明如何量身打造最佳效能，並與組織目標保持一致。
 
->[!VIDEO](https://video.tv.adobe.com/v/3439311/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3439322/?learn=on&enablevpops&captions=chi_hant)

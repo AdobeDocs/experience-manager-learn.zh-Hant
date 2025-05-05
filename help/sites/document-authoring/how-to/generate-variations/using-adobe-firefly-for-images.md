@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索如何使用Adobe Firefly建立用於內容變異的影像，以在Edge Delivery Services檔案製作中鎖定正確的對象。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428794/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438367/?learn=on&captions=chi_hant)

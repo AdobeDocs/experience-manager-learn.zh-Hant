@@ -23,7 +23,7 @@ ht-degree: 0%
 
 瞭解Adobe提供的&#x200B;_AEM Cloud Service CDN記錄分析工具_，以及如何協助深入瞭解您的CDN效能和AEM實作。
  
->[!VIDEO](https://video.tv.adobe.com/v/3429177?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446116?quality=12&learn=on&captions=chi_hant)
 
 ## 概觀
 

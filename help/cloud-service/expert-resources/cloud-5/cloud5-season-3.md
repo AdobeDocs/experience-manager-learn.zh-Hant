@@ -31,7 +31,7 @@ ht-degree: 0%
     <tr>
         <td>
             <a href="./season-3/cloud5-3rd-party-search.md">
-                <img alt="第三方搜尋" src="https://video.tv.adobe.com/v/3427040?format=jpeg"/>
+                <img alt="第三方搜尋" src="https://video.tv.adobe.com/v/3452635?format=jpeg&captions=chi_hant"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-3rd-party-search.md">
@@ -45,7 +45,7 @@ ht-degree: 0%
         </td>   
         <td>
             <a href="./season-3/cloud5-edge-workers.md">
-                <img alt="Edge背景工作" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
+                <img alt="Edge背景工作" src="https://video.tv.adobe.com/v/3448156?format=jpeg&captions=chi_hant"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-edge-workers.md">
@@ -59,7 +59,7 @@ ht-degree: 0%
         </td>   
         <td>
             <a href="./season-3/cloud5-publish-events.md">
-                <img alt="Publish，在Edge Delivery Services中取消發佈事件" src="https://video.tv.adobe.com/v/3427681?format=jpeg"/>
+                <img alt="Publish，在Edge Delivery Services中取消發佈事件" src="https://video.tv.adobe.com/v/3446667?format=jpeg&captions=chi_hant"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-publish-events.md">
@@ -75,7 +75,7 @@ ht-degree: 0%
     <tr>
         <td>
             <a href="./season-3/cloud5-query-indexes.md">
-                <img alt="在Edge Delivery Services中查詢索引和Excel公式" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
+                <img alt="在Edge Delivery Services中查詢索引和Excel公式" src="https://video.tv.adobe.com/v/3453774?format=jpeg&captions=chi_hant"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-query-indexes.md">
@@ -89,7 +89,7 @@ ht-degree: 0%
         </td>  
         <td>
             <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
-                <img alt="自備Cloudflare CDN" src="https://video.tv.adobe.com/v/3428100?format=jpeg"/>
+                <img alt="自備Cloudflare CDN" src="https://video.tv.adobe.com/v/3452547?format=jpeg&captions=chi_hant"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
@@ -103,7 +103,7 @@ ht-degree: 0%
         </td>           
         <td>
             <a href="./season-3/cloud5-integrate-assets.md">
-                <img alt="將AEM Assets與檔案製作整合" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
+                <img alt="將AEM Assets與檔案製作整合" src="https://video.tv.adobe.com/v/3448951?format=jpeg&captions=chi_hant"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-integrate-assets.md">

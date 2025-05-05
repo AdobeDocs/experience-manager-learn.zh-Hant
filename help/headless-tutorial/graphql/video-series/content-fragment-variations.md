@@ -28,5 +28,5 @@ ht-degree: 8%
 + 瞭解如何在真實世界情境中使用變數
 + 檢閱GraphQL語法以請求特定變數
 
->[!VIDEO](https://video.tv.adobe.com/v/333295?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449331?quality=12&learn=on&captions=chi_hant)
 

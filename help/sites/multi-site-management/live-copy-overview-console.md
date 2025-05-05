@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解如何使用即時副本概述主控台檢視或管理網站上的繼承，或執行轉出作業。
 
->[!VIDEO](https://video.tv.adobe.com/v/36680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3432381?quality=12&learn=on&captions=chi_hant)

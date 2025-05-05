@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此影片逐步說明在AEM Forms JEE中變更服務交易逾時的步驟。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335495?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436806?quality=12&learn=on&captions=chi_hant)

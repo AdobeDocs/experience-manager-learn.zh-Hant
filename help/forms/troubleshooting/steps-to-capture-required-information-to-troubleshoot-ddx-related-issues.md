@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此影片將逐步說明在Forms組合器服務中擷取疑難排解DDX相關問題所需資訊的步驟。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335517?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439192?quality=12&learn=on&captions=chi_hant)

@@ -24,7 +24,7 @@ ht-degree: 0%
 
 建立Adobe Developer Console專案，定義存取其他Adobe服務的許可權，並管理其部署。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412875?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3442025?quality=12&learn=on&captions=chi_hant)
 
 >[!IMPORTANT]
 >

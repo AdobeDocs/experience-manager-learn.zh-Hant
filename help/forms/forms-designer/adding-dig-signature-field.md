@@ -23,4 +23,4 @@ ht-degree: 0%
 
 說明將數位簽名新增至AEM Forms的簡短影片
 
->[!VIDEO](https://video.tv.adobe.com/v/3427623/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439537/?learn=on&captions=chi_hant)

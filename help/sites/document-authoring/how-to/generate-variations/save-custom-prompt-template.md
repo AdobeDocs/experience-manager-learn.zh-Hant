@@ -24,5 +24,5 @@ ht-degree: 0%
 
 探索如何儲存在Edge Delivery Services檔案製作中產生變異的自訂提示範本。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428317/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437521/?learn=on&captions=chi_hant)
 

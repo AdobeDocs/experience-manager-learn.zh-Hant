@@ -22,4 +22,4 @@ ht-degree: 0%
 
 *此影片會逐步解說調整XMLFormService (1/2)之bmc集區大小的步驟。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335552?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438675?quality=12&learn=on&captions=chi_hant)

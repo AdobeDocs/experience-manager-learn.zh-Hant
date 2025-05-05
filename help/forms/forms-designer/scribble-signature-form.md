@@ -23,4 +23,4 @@ ht-degree: 0%
 
 描述將手寫簽名新增到AEM Forms的簡短影片
 
->[!VIDEO](https://video.tv.adobe.com/v/3427626/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437331/?learn=on&captions=chi_hant)

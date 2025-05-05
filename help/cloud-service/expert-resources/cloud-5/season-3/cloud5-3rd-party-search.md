@@ -21,7 +21,7 @@ ht-degree: 4%
 
 探索如何將協力廠商搜尋最佳整合至Edge Delivery Services中。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427040?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452635?quality=12&learn=on&captions=chi_hant)
 
 ## 其他資源
 

@@ -23,4 +23,4 @@ ht-degree: 2%
 
 瞭解AEM的內容片段控制檯和編輯器如何讓您輕鬆瞭解和管理參考的內容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3420950/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423636/?learn=on&captions=chi_hant)

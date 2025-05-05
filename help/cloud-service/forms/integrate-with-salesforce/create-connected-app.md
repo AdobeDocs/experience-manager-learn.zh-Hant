@@ -24,7 +24,7 @@ ht-degree: 0%
 連線應用程式是一種架構，可讓外部應用程式使用API和標準通訊協定（例如SAML、OAuth和OpenID Connect）與Salesforce整合。 連線的應用程式會使用這些通訊協定來驗證、授權並提供外部應用程式的單一登入(SSO)。
 <!--- 331757 was the old video -->
 
->[!VIDEO](https://video.tv.adobe.com/v/3447257?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447268?quality=12&learn=on&captions=chi_hant)
 
 >[!NOTE]
 >請確定您在[Salesforce Developer Edition](https://developer.salesforce.com/signup)中建立帳戶，因為開發人員版本中預設已啟用REST API。

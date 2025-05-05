@@ -23,4 +23,4 @@ ht-degree: 0%
 
 說明將AEM表單繫結至MySql資料庫的短片
 
->[!VIDEO](https://video.tv.adobe.com/v/3427624/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439570/?learn=on&captions=chi_hant)

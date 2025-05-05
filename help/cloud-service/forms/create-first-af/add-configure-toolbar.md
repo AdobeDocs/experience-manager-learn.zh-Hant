@@ -23,4 +23,4 @@ ht-degree: 0%
 
 工具列通常會在表單容器層級新增。 工具列可以包含按鈕，以導覽至表單的下一個和上一個面板、提交表單、儲存表單資料等。
 
->[!VIDEO](https://video.tv.adobe.com/v/332236?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424955?quality=12&learn=on&captions=chi_hant)

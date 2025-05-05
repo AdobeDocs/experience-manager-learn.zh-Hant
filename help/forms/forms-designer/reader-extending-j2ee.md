@@ -23,4 +23,4 @@ ht-degree: 0%
 
 簡短影片，說明如何使用AEM Forms Reader擴充功能，讓一般使用者可以從AdobeAcrobat Reader填寫並儲存PDF forms
 
->[!VIDEO](https://video.tv.adobe.com/v/3427629/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439526/?learn=on&captions=chi_hant)

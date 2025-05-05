@@ -23,4 +23,4 @@ ht-degree: 0%
 
 瞭解AEM Assets as a Cloud Service中的3D資產支援。
 
->[!VIDEO](https://video.tv.adobe.com/v/3420690/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423672/?learn=on&captions=chi_hant)

@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 您將要執行的動作
 
->[!VIDEO](https://video.tv.adobe.com/v/327313?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437022?quality=12&learn=on&captions=chi_hant)
 
 在本教學課程中，我們將建立Asset Compute中繼資料背景工作，它會衍生影像資產中最常使用的顏色，並將顏色名稱寫入回AEM中的資產中繼資料。 雖然背景工作程式本身至關重要，但本教學課程將利用此背景工作程式來探索如何使用Asset Compute背景工作程式將中繼資料回寫至AEM as a Cloud Service中的資產。
 

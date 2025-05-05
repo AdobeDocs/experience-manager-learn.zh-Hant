@@ -66,7 +66,7 @@ ht-degree: 0%
 
 網站範本產生頁首和頁尾。 接下來，更新體驗片段以符合模型。 請依照下列影片中的步驟操作：
 
->[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447810?quality=12&learn=on&captions=chi_hant)
 
 以下影片的高層級步驟：
 

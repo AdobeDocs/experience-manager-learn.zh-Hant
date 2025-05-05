@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此影片會逐步說明在FormsIVS和OutputIVS中更新自訂XDP和資料檔的步驟，以進行測試。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335513?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439748?quality=12&learn=on&captions=chi_hant)

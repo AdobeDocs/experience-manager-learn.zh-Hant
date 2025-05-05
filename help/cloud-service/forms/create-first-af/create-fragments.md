@@ -23,4 +23,4 @@ ht-degree: 0%
 
 使用片段可簡化並加速大量表單的建立與維護。 建立表單時，插入所需片段的參考，片段就會顯示在表單中。
 
->[!VIDEO](https://video.tv.adobe.com/v/332231?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438429?quality=12&learn=on&captions=chi_hant)

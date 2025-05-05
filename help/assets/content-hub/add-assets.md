@@ -23,4 +23,4 @@ ht-degree: 0%
 
 瞭解如何在Adobe Experience Manager Assets Content Hub中上傳資產、套用標籤，以及瞭解核准工作流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3432980/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450293/?learn=on&captions=chi_hant)

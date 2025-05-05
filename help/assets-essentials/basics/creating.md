@@ -23,4 +23,4 @@ ht-degree: 0%
 
 瞭解如何使用Adobe Photoshop Express上傳資產、建立版本及編輯資產。
 
->[!VIDEO](https://video.tv.adobe.com/v/335746?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444008?quality=12&learn=on&captions=chi_hant)

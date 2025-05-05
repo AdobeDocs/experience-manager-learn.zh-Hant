@@ -25,7 +25,7 @@ ht-degree: 0%
 
 瞭解如何將AEM Headless與Adobe Target整合，方法是將AEM內容片段匯出至Adobe Target，並使用Adobe Experience Platform Web SDK的alloy.js來個人化Headless體驗。 [React WKND應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=zh-Hant)用於探索如何使用內容片段選件來將個人化Target活動新增到體驗中，以促進WKND冒險。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428901/?quality=12&learn=on&captions=chi_hant)
 
 本教學課程涵蓋設定AEM和Adobe Target的相關步驟：
 
@@ -50,7 +50,7 @@ Adobe Target Cloud Service是在AEM中建立，以便利將內容片段匯出至
 
 如需如何建立Adobe Target Cloud Service的逐步指示，請參閱[檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=zh-Hant)。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428906/?quality=12&learn=on&captions=chi_hant)
 
 
 ## 設定資產資料夾{#configure-asset-folders}
@@ -71,7 +71,7 @@ Adobe Target Cloud Service是在AEM中建立，以便利將內容片段匯出至
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416504/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428909/?quality=12&learn=on&captions=chi_hant)
 
 ## 許可AEM Target整合{#permission}
 
@@ -90,7 +90,7 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予Adobe Admin Co
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416505/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441984/?quality=12&learn=on&captions=chi_hant)
 
 ## 將內容片段匯出至目標{#export-content-fragments}
 
@@ -121,7 +121,7 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予Adobe Admin Co
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416506/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428915/?quality=12&learn=on&captions=chi_hant)
 
 ## 使用內容片段選件的Target活動{#activity}
 
@@ -160,7 +160,7 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予Adobe Admin Co
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416507/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444792/?quality=12&learn=on&captions=chi_hant)
 
 ## Experience Platform資料串流ID{#datastream-id}
 
@@ -190,7 +190,7 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予Adobe Admin Co
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416500/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428904/?quality=12&learn=on&captions=chi_hant)
 
 ## 將個人化新增至AEM Headless應用程式{#code}
 

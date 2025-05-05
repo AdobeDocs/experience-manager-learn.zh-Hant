@@ -24,4 +24,4 @@ ht-degree: 0%
 
 瞭解如何在網站移轉期間使用AEM Importer工具大量匯入網頁。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429597/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445896/?learn=on&captions=chi_hant)

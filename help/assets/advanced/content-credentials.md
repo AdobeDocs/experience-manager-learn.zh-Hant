@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解AEM Assets [內容認證](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/assets-view/content-credentials)如何提供可驗證的中繼資料，以確保數位資產的真實性和完整性，在內容建立中加強信任和透明度。
 
->[!VIDEO](https://video.tv.adobe.com/v/3441700/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441722/?learn=on&enablevpops&captions=chi_hant)

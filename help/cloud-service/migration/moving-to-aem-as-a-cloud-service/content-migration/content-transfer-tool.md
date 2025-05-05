@@ -22,7 +22,7 @@ ht-degree: 3%
 
 瞭解內容轉移工具如何協助您將內容從AEM 6.3+移轉至AEM as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336970?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454758?quality=12&learn=on&captions=chi_hant)
 
 ## 使用內容轉移工具
 

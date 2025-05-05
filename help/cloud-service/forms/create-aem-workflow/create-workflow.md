@@ -24,4 +24,4 @@ ht-degree: 0%
 
 使用AEM Forms工作流程元件建立工作流程模型。 使用Or-Split元件，根據狀態變數的值來分支工作流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/332434?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453202?quality=12&learn=on&captions=chi_hant)

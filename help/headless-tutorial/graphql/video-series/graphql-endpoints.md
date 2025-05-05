@@ -28,4 +28,4 @@ ht-degree: 7%
 + 瞭解如何針對端點執行GraphQL查詢
 + 瞭解如何發佈GraphQL端點
 
->[!VIDEO](https://video.tv.adobe.com/v/333339?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445034?quality=12&learn=on&captions=chi_hant)

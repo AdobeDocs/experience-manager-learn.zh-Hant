@@ -21,7 +21,7 @@ ht-degree: 3%
 
 快速深入搜尋和建立索引的深水區。 這是極具挑戰性的主題，我們希望可協助您更有效地完成交付作業。
 
->[!VIDEO](https://video.tv.adobe.com/v/342374?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448121?quality=12&learn=on&captions=chi_hant)
 
 ## 本影片涵蓋的內容
 

@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解內容片段內容欄位如何支援參照各種型別的AEM內容，例如體驗片段和頁面。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419313/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436773/?learn=on&captions=chi_hant)

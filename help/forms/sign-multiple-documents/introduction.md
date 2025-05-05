@@ -22,7 +22,7 @@ ht-degree: 3%
 無論您是要申請抵押貸款還是要開立新的銀行帳戶，都需要填寫並簽署多個表單。 AEM Forms與Acrobat Sign之間的整合可讓您輕鬆填寫及簽署多個表單。
 以下影片將逐步說明簽署多個表單的使用案例。
 
->[!VIDEO](https://video.tv.adobe.com/v/330165?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444979?quality=12&learn=on&captions=chi_hant)
 
 ## 先決條件
 

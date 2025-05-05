@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索如何在檔案製作中使用區塊和自動區塊，以及如何改善網站和製作體驗。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425703/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439515/?learn=on&captions=chi_hant)

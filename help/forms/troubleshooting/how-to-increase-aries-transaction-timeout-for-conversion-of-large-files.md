@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此影片會逐步說明增加「aries.transaction.timeout」的程式，以解決與大型檔案轉換相關的問題。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437832?quality=12&learn=on&captions=chi_hant)

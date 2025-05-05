@@ -24,4 +24,4 @@ ht-degree: 0%
 
 來自戰壕的傳說 — 探索如何將邊緣交付服務與Google地圖整合，以及如何透過整合將效能最佳化。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440977/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441000/?learn=on&enablevpops&captions=chi_hant)

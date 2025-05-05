@@ -24,7 +24,7 @@ ht-degree: 0%
 
 初始化AEM UI擴充功能App Builder應用程式，定義擴充功能出現的位置及其執行的工作。
 
->[!VIDEO](https://video.tv.adobe.com/v/3412876?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447087?quality=12&learn=on&captions=chi_hant)
 
 >[!IMPORTANT]
 >

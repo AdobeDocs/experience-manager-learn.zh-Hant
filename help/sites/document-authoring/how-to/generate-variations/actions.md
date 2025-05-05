@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索可用於產生內容變數的動作，包括儲存、複製、評等等在Edge Delivery Services檔案製作中。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428795/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437307/?learn=on&captions=chi_hant)

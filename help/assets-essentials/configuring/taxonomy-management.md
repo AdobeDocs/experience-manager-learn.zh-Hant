@@ -22,4 +22,4 @@ ht-degree: 6%
 
 瞭解如何在AEM Assets Assets檢視中管理標籤分類法。
 
->[!VIDEO](https://video.tv.adobe.com/v/3431081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447377/?learn=on&captions=chi_hant)

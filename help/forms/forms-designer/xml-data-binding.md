@@ -23,4 +23,4 @@ ht-degree: 0%
 
 說明將AEM表單繫結至XML Data Source的簡短影片
 
->[!VIDEO](https://video.tv.adobe.com/v/3427625/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439837/?learn=on&captions=chi_hant)

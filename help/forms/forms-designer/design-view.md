@@ -23,4 +23,4 @@ ht-degree: 0%
 
 有關AEM Forms Designer中設計工具檢視的短片
 
->[!VIDEO](https://video.tv.adobe.com/v/3427615/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436832/?learn=on&captions=chi_hant)

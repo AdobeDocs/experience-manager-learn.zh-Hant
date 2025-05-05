@@ -26,4 +26,4 @@ ht-degree: 0%
 + 透過Creative Cloud Libraries順暢存取來自AEM Assets的檔案
 + Creative Cloud Libraries中要共用至AEM Assets的檔案
 
->[!VIDEO](https://video.tv.adobe.com/v/3432401?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444019?quality=12&learn=on&captions=chi_hant)

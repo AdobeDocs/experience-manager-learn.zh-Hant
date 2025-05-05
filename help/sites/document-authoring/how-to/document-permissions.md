@@ -25,4 +25,4 @@ ht-degree: 0%
 
 瞭解如何透過AEM檔案製作功能來許可檔案。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425724/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438112/?learn=on&captions=chi_hant)

@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此影片會逐步說明從工作管理員中清除程式記錄的步驟。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335577?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437678?quality=12&learn=on&captions=chi_hant)

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 使用RTF編輯器在靜態文字元件中設定文字的樣式。
 
->[!VIDEO](https://video.tv.adobe.com/v/332235?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440128?quality=12&learn=on&captions=chi_hant)

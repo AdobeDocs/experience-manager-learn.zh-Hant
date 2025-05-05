@@ -27,7 +27,7 @@ Edge Delivery Services網站專案的開發工具和程式設計為網頁開發�
 
 這部影片會概略介紹可使用Universal Editor編輯的Edge Delivery Services網站專案的開發拓撲。
 
->[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3443989/?learn=on&enablevpops&captions=chi_hant)
 
 +++檢視其他開發拓朴詳細資訊
 

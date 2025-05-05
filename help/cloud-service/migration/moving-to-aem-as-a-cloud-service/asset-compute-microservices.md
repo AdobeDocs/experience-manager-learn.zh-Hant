@@ -21,7 +21,7 @@ ht-degree: 1%
 
 瞭解AEM Assets as a Cloud Service的資產計算微服務如何讓您有效率地產生您資產的任何轉譯，取代此傳統AEM Workflow的角色。
 
->[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454298?quality=12&learn=on&captions=chi_hant)
 
 ## 工作流程移轉工具
 

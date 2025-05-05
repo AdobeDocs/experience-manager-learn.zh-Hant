@@ -22,4 +22,4 @@ ht-degree: 0%
 
 以下影片將逐步說明建立雲端服務設定以與Microsoft Dynamics連線的步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/340758?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448309?quality=12&learn=on&captions=chi_hant)

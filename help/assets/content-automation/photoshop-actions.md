@@ -23,4 +23,4 @@ ht-degree: 0%
 
 瞭解內容作者如何使用Photoshop API搭配內容自動化附加元件，在AEM Assets中執行Creative Cloud動作。
 
->[!VIDEO](https://video.tv.adobe.com/v/336539?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444076?quality=12&learn=on&captions=chi_hant)

@@ -85,4 +85,4 @@ functions.js
 ## 使用自訂函式
 
 以下影片會逐步帶您瞭解在適用性表單的規則編輯器中使用自訂函式的相關步驟
->[!VIDEO](https://video.tv.adobe.com/v/340305?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445852?quality=12&learn=on&captions=chi_hant)

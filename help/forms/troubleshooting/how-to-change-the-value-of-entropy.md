@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此影片逐步說明變更平均資訊量值的步驟。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335494?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437689?quality=12&learn=on&captions=chi_hant)

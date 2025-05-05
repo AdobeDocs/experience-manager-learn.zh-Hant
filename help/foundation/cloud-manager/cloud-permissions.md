@@ -23,4 +23,4 @@ ht-degree: 0%
 
 瞭解如何在AEM中使用Cloud Manager [自訂許可權](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html?lang=zh-Hant)，以策略性方式管理不同團隊的存取權，確保有效率且安全的專案管理和部署。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425892/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449815/?learn=on&captions=chi_hant)

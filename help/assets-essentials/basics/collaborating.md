@@ -23,4 +23,4 @@ ht-degree: 3%
 
 瞭解如何使用評論、註解和工作在資產管理上共同作業。
 
->[!VIDEO](https://video.tv.adobe.com/v/335856?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443996?quality=12&learn=on&captions=chi_hant)

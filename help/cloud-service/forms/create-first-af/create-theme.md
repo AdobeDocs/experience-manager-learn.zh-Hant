@@ -23,4 +23,4 @@ ht-degree: 18%
 
 主題包含元件和面板的樣式細節，您可以重複使用不同表單上的主題。 樣式包括背景顏色、狀態顏色、透明度、對齊方式和大小等屬性。將主題套用至表單時，指定的樣式會反映至表單的對應元件。
 
->[!VIDEO](https://video.tv.adobe.com/v/332229?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424884?quality=12&learn=on&captions=chi_hant)

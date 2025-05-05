@@ -27,7 +27,7 @@ ht-degree: 11%
 - 什麼是RDE？
 - 它們如何有助於加快開發到部署週期的速度？
 
->[!VIDEO](https://video.tv.adobe.com/v/3414128?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453609?quality=12&learn=on&captions=chi_hant)
 
 ## 下一步
 

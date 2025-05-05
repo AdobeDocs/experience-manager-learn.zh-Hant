@@ -29,7 +29,7 @@ AEM as a Cloud Service中的大量匯入工具可讓管理員以安全又有效�
 
 瞭解如何使用[資產檢視](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html?lang=zh-Hant) [大量匯入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html?lang=zh-Hant)，將許多檔案匯入AEM Assets，以Dropbox作為範例雲端儲存提供者，實現清晰且易於遵循的整合程式。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451981/?learn=on&captions=chi_hant)
 
 >[!TAB 管理員視圖]
 

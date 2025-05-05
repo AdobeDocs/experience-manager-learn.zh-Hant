@@ -36,7 +36,7 @@ ht-degree: 0%
 
 若要變更此預設行為，我們需要執行以下操作
 
->[!VIDEO](https://video.tv.adobe.com/v/338369?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438642?quality=12&learn=on&captions=chi_hant)
 
 
 使用程式碼編輯器在&#x200B;**下一步**&#x200B;按鈕的點選事件中新增下列程式碼
@@ -57,7 +57,7 @@ window.guideBridge.setFocus(null, 'prevItemDeep', true);
 
 使用樣式編輯器來隱藏索引標籤子面板的標題。
 
->[!VIDEO](https://video.tv.adobe.com/v/338370?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439141?quality=12&learn=on&captions=chi_hant)
 
 >[!NOTE]
 >

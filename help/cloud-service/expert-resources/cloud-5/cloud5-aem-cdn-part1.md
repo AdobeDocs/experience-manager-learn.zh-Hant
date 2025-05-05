@@ -22,7 +22,7 @@ ht-degree: 2%
 
 深入瞭解AEM as a Cloud Service提供的CDN，包括它的功能以及是否自備CDN。 這是第1部分（共2部分）。
 
->[!VIDEO](https://video.tv.adobe.com/v/340760?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447848?quality=12&learn=on&captions=chi_hant)
 
 ## 本系列第一部分所涵蓋的內容
 

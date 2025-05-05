@@ -20,7 +20,7 @@ ht-degree: 2%
 
 使用AEM CDN的第二部分內容，並深入探究各種選項。
 
->[!VIDEO](https://video.tv.adobe.com/v/340994?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448419?quality=12&learn=on&captions=chi_hant)
 
 ## 本系列第二部分所涵蓋的內容
 

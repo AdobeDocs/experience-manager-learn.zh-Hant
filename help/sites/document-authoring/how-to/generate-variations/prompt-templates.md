@@ -24,5 +24,5 @@ ht-degree: 0%
 
 探索如何在Edge Delivery Services檔案製作中使用提示範本來產生變數。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428307/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441346/?learn=on&captions=chi_hant)
 

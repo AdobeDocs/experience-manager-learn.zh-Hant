@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索實驗架構，讓行銷人員測試哪些內容變體在Edge Delivery Services檔案製作中最有效。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429061/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437870/?learn=on&captions=chi_hant)

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 瞭解如何在AEM Assets as a Cloud Service中的[Assets檢視與管理員檢視](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/overview.html?lang=zh-Hant#persona-based-experiences)之間有效率地切換，以確保順暢的資產管理。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426806/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439045/?learn=on&captions=chi_hant)

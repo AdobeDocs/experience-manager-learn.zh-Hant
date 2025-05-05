@@ -26,7 +26,7 @@ ht-degree: 2%
 
 以下影片示範此使用案例。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428432?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441803?learn=on&captions=chi_hant)
 
 ## 必備條件
 

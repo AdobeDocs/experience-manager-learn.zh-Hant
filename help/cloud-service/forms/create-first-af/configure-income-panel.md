@@ -23,4 +23,4 @@ ht-degree: 0%
 
 新增表格元件至收入面板，以擷取申請者的收入來源。
 
->[!VIDEO](https://video.tv.adobe.com/v/332233?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3425129?quality=12&learn=on&captions=chi_hant)

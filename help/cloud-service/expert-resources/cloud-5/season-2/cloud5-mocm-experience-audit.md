@@ -20,7 +20,7 @@ ht-degree: 7%
 
 在三部分系列的第一部分，我們會探索Cloud Manager的基本概念，並深入瞭解體驗稽核功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/343620?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449188?quality=12&learn=on&captions=chi_hant)
 
 ## 本影片涵蓋的內容
 

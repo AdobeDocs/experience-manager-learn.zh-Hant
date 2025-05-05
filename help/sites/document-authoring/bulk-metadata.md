@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索如何在檔案編寫中處理大量中繼資料，以及作者如何無需專業技術即可更新大量中繼資料。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425705/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438433/?learn=on&captions=chi_hant)

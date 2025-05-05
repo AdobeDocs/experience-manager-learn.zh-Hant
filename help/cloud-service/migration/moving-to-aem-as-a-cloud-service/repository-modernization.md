@@ -21,7 +21,7 @@ ht-degree: 0%
 
 瞭解存放庫現代化、可變和不可變的內容、封裝結構和存放庫現代化CLI工具。
 
->[!VIDEO](https://video.tv.adobe.com/v/336958?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454803?quality=12&learn=on&captions=chi_hant)
 
 ## Repository Modernizer工具
 

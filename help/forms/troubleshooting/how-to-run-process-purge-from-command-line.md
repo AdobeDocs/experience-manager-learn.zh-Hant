@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *此影片會逐步說明從命令列執行程式清除工具的步驟。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335508?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438378?quality=12&learn=on&captions=chi_hant)

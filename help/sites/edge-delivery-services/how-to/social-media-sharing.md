@@ -23,4 +23,4 @@ ht-degree: 0%
 
 瞭解如何使用Edge Delivery Services將您的社群媒體分享內容最佳化。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425974/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439448/?learn=on&captions=chi_hant)

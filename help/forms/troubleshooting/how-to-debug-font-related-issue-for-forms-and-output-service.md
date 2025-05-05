@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *此影片將逐步說明擷取相關文字的流程，以偵錯Forms和輸出服務轉換的字型相關問題。*
 
->[!VIDEO](https://video.tv.adobe.com/v/335487?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439915?quality=12&learn=on&captions=chi_hant)

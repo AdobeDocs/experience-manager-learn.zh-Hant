@@ -24,4 +24,4 @@ ht-degree: 0%
 
 在Edge Delivery Services中產生變數簡介，並瞭解其對行銷人員的用處。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428304/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438565/?learn=on&captions=chi_hant)

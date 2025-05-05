@@ -25,4 +25,4 @@ ht-degree: 0%
 
 深入瞭解預設內容和區段的檔案製作概念，以及這些概念如何幫助您打造更好的網站。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425702/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437986/?learn=on&captions=chi_hant)

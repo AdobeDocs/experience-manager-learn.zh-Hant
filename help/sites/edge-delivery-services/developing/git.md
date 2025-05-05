@@ -23,4 +23,4 @@ ht-degree: 0%
 
 使用Git設定Edge Delivery Services開發環境。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425718/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441837/?learn=on&captions=chi_hant)

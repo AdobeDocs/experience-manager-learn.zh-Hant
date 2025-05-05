@@ -22,7 +22,7 @@ ht-degree: 0%
 
 存放庫瀏覽器是功能強大的工具，可讓您檢視AEM的基本資料存放區，以便更輕鬆地偵錯AEM as a Cloud Service環境。 存放庫瀏覽器支援生產、暫存和開發以及作者、發佈和預覽服務中AEM的資源和屬性的唯讀檢視。
 
->[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447065?quality=12&learn=on&captions=chi_hant)
 
 存放庫瀏覽器僅&#x200B;__可在AEM as a Cloud Service環境中使用__ (使用[CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite)對本機AEM SDK進行偵錯)。
 

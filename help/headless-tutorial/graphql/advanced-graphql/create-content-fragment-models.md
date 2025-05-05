@@ -43,7 +43,7 @@ ht-degree: 1%
 
 以下影片簡要介紹內容片段模型，以及在本教學課程中如何使用它們。
 
->[!VIDEO](https://video.tv.adobe.com/v/340037?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449530?quality=12&learn=on&captions=chi_hant)
 
 ## 建立內容片段模型 {#create-models}
 

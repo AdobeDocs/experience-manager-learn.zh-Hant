@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解如何在Microsoft Sharepoint中設定及儲存最適化表單資料。
 
->[!VIDEO](https://video.tv.adobe.com/v/3415793/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452536/?quality=12&learn=on&captions=chi_hant)

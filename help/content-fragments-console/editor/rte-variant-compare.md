@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解AEM如何讓您輕鬆比較和同步內容片段變數中的RTE欄位。 透過比較和同步這些變化，您可以確保在使用該內容片段的所有管道間傳送一致的訊息。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419314/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437564/?learn=on&captions=chi_hant)

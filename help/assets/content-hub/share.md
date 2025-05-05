@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解如何在AEM Assets Content Hub中與團隊成員共用資產和集合，以提升有效的團隊合作和安全資產共用。
 
->[!VIDEO](https://video.tv.adobe.com/v/3435685/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445366/?learn=on&captions=chi_hant)

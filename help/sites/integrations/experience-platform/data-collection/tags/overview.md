@@ -27,7 +27,7 @@ ht-degree: 2%
 
 標籤是Adobe Experience Platform的下一代標籤管理技術。 標籤提供部署Adobe Analytics、Target、Audience Manager和更多解決方案的最簡單方式。 取得標籤的總覽，以及建議的Adobe Experience Manager整合。
 
->[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445211?quality=12&learn=on&captions=chi_hant)
 
 ## 先決條件
 

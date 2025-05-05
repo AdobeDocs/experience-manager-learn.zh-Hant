@@ -23,4 +23,4 @@ ht-degree: 0%
 # 簡介影片
 
 
->[!VIDEO](https://video.tv.adobe.com/v/332571?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424983?quality=12&learn=on&captions=chi_hant)

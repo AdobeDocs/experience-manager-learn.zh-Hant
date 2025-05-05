@@ -22,6 +22,6 @@ ht-degree: 0%
 
 瞭解如何使用Adobe Express在Adobe Experience Manager Assets中輕鬆建立和編輯內容。 此影片會引導您增強內容工作流程、示範現有資產的編輯和新資產的建立，所有這些工作都經過簡化，以提高效率和方便使用者。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444087/?learn=on&captions=chi_hant)
 
 此外，瞭解如何設定[AEM Assets與Adobe Express的原生整合](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express)，以便從Adobe Express順暢存取AEM Assets。

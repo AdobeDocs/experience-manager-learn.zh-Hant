@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## 產生SSL憑證
 
->[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441505?quality=12&learn=on&captions=chi_hant)
 
 您有兩個選項：
 
@@ -222,7 +222,7 @@ public class VerifyHeadersServlet extends SlingSafeMethodsServlet {
 
 ## 在X-AEM-Edge-Key HTTP標頭中傳遞密碼
 
->[!VIDEO](https://video.tv.adobe.com/v/3432567?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445056?quality=12&learn=on&captions=chi_hant)
 
 更新客戶CDN以在`X-AEM-Edge-Key` HTTP標頭中傳遞密碼。 Adobe CDN使用密碼來驗證來自客戶CDN的請求，並將`Host`標頭值轉換為從客戶CDN接收的`X-Forwarded-Host`的值。
 

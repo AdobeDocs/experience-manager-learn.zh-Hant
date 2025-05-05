@@ -24,5 +24,5 @@ ht-degree: 0%
 
 探索如何在Edge Delivery Services檔案製作中設定Sidekick以產生變數。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428306/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437000/?learn=on&captions=chi_hant)
 

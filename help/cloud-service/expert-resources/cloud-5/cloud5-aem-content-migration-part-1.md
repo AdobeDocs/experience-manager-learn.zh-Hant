@@ -21,7 +21,7 @@ ht-degree: 6%
 
 Darin和James討論AEM雲端中的Dispatcher，包括一些最佳實務和與AMS/內部部署的差異。 此外，他們也會談到移轉至雲端的問題。
 
->[!VIDEO](https://video.tv.adobe.com/v/342133?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448750?quality=12&learn=on&captions=chi_hant)
 
 ## 本影片涵蓋的內容
 

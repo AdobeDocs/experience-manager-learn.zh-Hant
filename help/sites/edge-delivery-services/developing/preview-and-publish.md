@@ -23,4 +23,4 @@ ht-degree: 0%
 
 使用[AEM Sidekick](./sidekick.md)在Edge Delivery Services中預覽和發佈內容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425714/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434720/?learn=on&captions=chi_hant)

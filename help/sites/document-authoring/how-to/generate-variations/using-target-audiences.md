@@ -24,4 +24,4 @@ ht-degree: 0%
 
 探索如何使用Adobe Target受眾，透過Edge Delivery Services檔案製作中的相關內容鎖定適當的受眾。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428792/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437766/?learn=on&captions=chi_hant)

@@ -37,7 +37,7 @@ Reader延伸模組認證與fd-service使用者相關聯。 若要將認證新增
 
 請觀看影片，將認證新增至fd服務使用者
 
->[!VIDEO](https://video.tv.adobe.com/v/335849?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447298?quality=12&learn=on&captions=chi_hant)
 
 
 列出pfx檔案詳細資訊的指令為。 以下命令假設您與pfx檔案位於相同的目錄中。

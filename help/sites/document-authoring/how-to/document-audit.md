@@ -25,4 +25,4 @@ ht-degree: 0%
 
 瞭解如何稽核使用AEM檔案編寫功能編寫的檔案。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425722/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437722/?learn=on&captions=chi_hant)
