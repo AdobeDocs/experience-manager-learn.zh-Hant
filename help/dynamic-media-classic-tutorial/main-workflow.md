@@ -31,12 +31,12 @@ Dynamic Media Classic解決方案的工作流程包含三個主要步驟：
 
 這是工作流程的開始。 在此步驟中，您會收集或建立適合您使用之工作流程的來源內容，並將其上傳至Dynamic Media Classic。 此系統支援影像、視訊和字型的多種檔案型別，也支援PDF、Adobe Illustrator和Adobe InDesign的檔案型別。
 
-檢視[支援的檔案型別](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats)的完整清單。
+檢視[支援的檔案型別](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hant#supported-asset-file-formats)的完整清單。
 
 您可以透過數種不同的方式上傳來源內容：
 
-- 直接從您的案頭或本機網路。 [瞭解如何進行](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-sps-desktop-application)。
-- 從Dynamic Media Classic FTP伺服器。 [瞭解如何進行](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp)。
+- 直接從您的案頭或本機網路。 [瞭解如何進行](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hant#upload-files-using-sps-desktop-application)。
+- 從Dynamic Media Classic FTP伺服器。 [瞭解如何進行](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hant#upload-files-using-via-ftp)。
 
 預設模式為「從案頭」，您可在此瀏覽本機網路上的檔案並開始上傳。
 
@@ -64,11 +64,11 @@ Dynamic Media Classic解決方案的工作流程包含三個主要步驟：
 - **在任何資料夾中覆寫相同的基本資產名稱，無論副檔名為何**。
 此選項是最具包容性的取代規則。 您可以將取代影像上傳到與原始檔案不同的資料夾、上傳副檔名不同的檔案，以及取代原始檔案。 如果原始檔案位於不同的資料夾中，則取代影像會位於其上載至的新資料夾中。
 
-深入瞭解[覆寫影像選項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option)。
+深入瞭解[覆寫影像選項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=zh-Hant#using-the-overwrite-images-option)。
 
 雖然並非必要，但使用上述兩種方法其中之一進行上傳時，您可以為該特定上傳指定「工作選項」 — 例如，排程週期性上傳、設定上傳時的裁切選項以及許多其他選項。 這些對於某些工作流程非常有用，因此如果可供您使用，也值得考慮。
 
-深入瞭解[工作選項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options)。
+深入瞭解[工作選項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hant#upload-options)。
 
 上傳是任何工作流程中的第一個必要步驟，因為Dynamic Media Classic無法搭配其系統中尚未包含的任何內容使用。 在上傳期間，系統會於幕後使用集中式Dynamic Media Classic資料庫註冊每個上傳的資產、指派ID並將其複製到儲存空間。 此外，系統會將影像檔案轉換為可動態調整大小和縮放的格式，並將視訊檔案轉換為MP4網頁易記格式。
 
@@ -97,7 +97,7 @@ Dynamic Media Classic解決方案的工作流程包含三個主要步驟：
 
 **雖然沒有影像大小下限，但我們不建議上傳巨量影像。**&#x200B;巨型影像可以視為4000+畫素。 上傳此大小的影像可能會顯示影像中灰燼或毛髮等潛在瑕疵。 這類影像會佔用更多Dynamic Media Classic伺服器空間，讓您超出合約的儲存空間限制。
 
-深入瞭解[上傳檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files)。
+深入瞭解[上傳檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=zh-Hant#uploading-your-files)。
 
 ## 步驟2：作者(和Publish)
 
@@ -145,8 +145,8 @@ Dynamic Media Classic工作流程的最終產品是指向資產的URL （無論�
 >
 >為避免快取延遲問題，請一律提前工作 — 晚上、一天、兩週等。 及時建置，讓內部各方在發佈給公眾之前進行QA/接受，以證明您的工作。 即使工作是在之前的晚上，您仍可在當晚進行變更並重新發佈。 到早上，10小時已經過去，快取會以正確的影像更新。
 
-- 深入瞭解[建立發佈工作](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job)。
-- 深入瞭解[發佈](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html)。
+- 深入瞭解[建立發佈工作](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html?lang=zh-Hant#creating-a-publish-job)。
+- 深入瞭解[發佈](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html?lang=zh-Hant)。
 
 ## 步驟3：傳送
 
@@ -184,4 +184,4 @@ Dynamic Media Classic工作流程的最終產品是指向資產的URL （無論�
 
 您也可以使用&#x200B;**縮放**&#x200B;選項，在多種預先建立的縮放預設集之一中預覽影像，這些預設集是以不同的包含縮放檢視器為基礎。
 
-深入瞭解[預覽Assets](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/previewing-asset.html)。
+深入瞭解[預覽Assets](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/previewing-asset.html?lang=zh-Hant)。

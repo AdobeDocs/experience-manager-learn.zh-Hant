@@ -60,7 +60,7 @@ ht-degree: 0%
 
 AEM元件可視為網頁的小型模組建置區塊。 將UI分成邏輯區塊或元件，可讓管理更容易。 若要重複使用元件，必須可設定元件。 這是透過作者對話方塊完成。
 
-AEM提供一組[已生產就緒可供使用的「核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)」。 **核心元件**&#x200B;的範圍包括基本元素（例如[Text](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)和[Image](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)）到更複雜的UI元素（例如[輪播](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)）。
+AEM提供一組[已生產就緒可供使用的「核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)」。 **核心元件**&#x200B;的範圍包括基本元素（例如[Text](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hant)和[Image](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hant)）到更複雜的UI元素（例如[輪播](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html?lang=zh-Hant)）。
 
 接下來，使用AEM頁面編輯器編寫一些元件。
 
@@ -90,7 +90,7 @@ AEM提供一組[已生產就緒可供使用的「核心元件](https://experienc
 
 1. 請注意，頁面上有已修正的元件，例如&#x200B;**Title**、**Navigation**、**Search**。 這些區域已設定為頁面範本的一部分，無法在個別頁面上修改。 這會在下一章中進一步探討。
 
-您可以隨意嘗試其他元件。 如需各個[核心元件的相關檔案，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)。 有關[頁面編寫的詳細影片系列可在此找到](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html)。
+您可以隨意嘗試其他元件。 如需各個[核心元件的相關檔案，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)。 有關[頁面編寫的詳細影片系列可在此找到](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html?lang=zh-Hant)。
 
 ## 發佈更新 {#publish-updates}
 
@@ -156,9 +156,9 @@ AEM環境在&#x200B;**作者服務**&#x200B;和&#x200B;**發佈服務**&#x200B;�
 
    ![直接發佈](assets/author-content-publish/page-editor-publish.png)
 
-1. 返回&#x200B;**AEM發佈服務**&#x200B;以檢視變更。 您很可能不會&#x200B;**立即**&#x200B;看到更新。 這是因為&#x200B;**AEM發佈服務**&#x200B;包含透過Apache Web伺服器和CDN[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html)的快取。 依預設，快取HTML內容約5分鐘。
+1. 返回&#x200B;**AEM發佈服務**&#x200B;以檢視變更。 您很可能不會&#x200B;**立即**&#x200B;看到更新。 這是因為&#x200B;**AEM發佈服務**&#x200B;包含透過Apache Web伺服器和CDN[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html?lang=zh-Hant)的快取。 依預設，快取HTML內容約5分鐘。
 
-1. 若要略過快取以進行測試/偵錯，只需新增查詢引數，例如`?nocache=true`。 URL看起來會像`https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`。 有關可用快取策略與設定的詳細資訊[可在此找到](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html)。
+1. 若要略過快取以進行測試/偵錯，只需新增查詢引數，例如`?nocache=true`。 URL看起來會像`https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`。 有關可用快取策略與設定的詳細資訊[可在此找到](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html?lang=zh-Hant)。
 
 1. 您也可以在Cloud Manager中找到發佈服務的URL。 瀏覽至&#x200B;**Cloud Manager方案** > **環境** > **環境**。
 

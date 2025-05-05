@@ -38,7 +38,7 @@ AEM中的GraphQL API可讓您向下游應用程式公開內容片段資料。 �
 ## 使用GraphiQL總管
 
 
-[GraphiQL Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html)工具可讓開發人員針對目前AEM環境中的內容建立和測試查詢。 GraphiQL工具也可讓使用者&#x200B;**儲存或儲存**&#x200B;查詢，以供使用者端應用程式在生產設定中使用。
+[GraphiQL Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=zh-Hant)工具可讓開發人員針對目前AEM環境中的內容建立和測試查詢。 GraphiQL工具也可讓使用者&#x200B;**儲存或儲存**&#x200B;查詢，以供使用者端應用程式在生產設定中使用。
 
 接下來，使用內建的GraphiQL Explorer來探索AEM的GraphQL API功能。
 

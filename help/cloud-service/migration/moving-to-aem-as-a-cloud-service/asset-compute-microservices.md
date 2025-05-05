@@ -27,12 +27,12 @@ ht-degree: 1%
 
 ![資產工作流程移轉工具](./assets/asset-workflow-migration.png)
 
-在重構程式碼基底的過程中，請使用[資產工作流程移轉工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html)移轉現有的工作流程，以便在AEM as a Cloud Service中使用Asset Compute微服務。
+在重構程式碼基底的過程中，請使用[資產工作流程移轉工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html?lang=zh-Hant)移轉現有的工作流程，以便在AEM as a Cloud Service中使用Asset Compute微服務。
 
 ## 重要活動
 
 + 使用[Adobe I/O Workflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator)工具移轉資產處理工作流程，以使用Asset Compute微服務。
-+ 設定[本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)並部署更新的工作流程。 複雜的工作流程可能需要手動調整。
++ 設定[本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)並部署更新的工作流程。 複雜的工作流程可能需要手動調整。
 + 繼續使用AEM SDK在本機開發環境中反複進行，直到更新的工作流程符合功能對等為止。
 + 將更新的程式碼基底部署到AEM as a Cloud Service開發環境，並繼續驗證。
 

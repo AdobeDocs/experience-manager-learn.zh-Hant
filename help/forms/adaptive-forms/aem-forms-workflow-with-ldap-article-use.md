@@ -22,7 +22,7 @@ ht-degree: 0%
 
 在AEM工作流程中使用最適化表單時，您會想要動態地將任務指派給表單提交者的管理員。 若要完成此使用案例，我們必須使用Ldap設定AEM。
 
-使用LDAP設定AEM所需的步驟在[此處](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)詳細說明。
+使用LDAP設定AEM所需的步驟在[此處](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/ldap-config.html)詳細說明。
 
 出於本文的目的，我附加了使用Adobe Ldap設定AEM時使用的設定檔案。 這些檔案包含在封裝中，可使用封裝管理員匯入這些檔案。
 

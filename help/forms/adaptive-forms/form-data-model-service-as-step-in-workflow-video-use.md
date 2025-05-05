@@ -28,7 +28,7 @@ ht-degree: 0%
 * [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 這是設定中繼資料屬性的自訂OSGI套件組合。
 >在AEM Forms 6.5及更高版本中，此功能可立即使用，如[在此說明](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* 使用SampleRest.war檔案設定tomcat，如[此處](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)所述。在Tomcat中部署的war檔案具有傳回申請人信用分數的代碼。 信用分數是介於200到800之間的隨機數字
+* 使用SampleRest.war檔案設定tomcat，如[此處](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=zh-Hant)所述。在Tomcat中部署的war檔案具有傳回申請人信用分數的代碼。 信用分數是介於200到800之間的隨機數字
 
 * [使用封裝管理員](assets/invoke-fdm-as-service-step.zip)將資產匯入AEM。封裝包含下列專案：
 

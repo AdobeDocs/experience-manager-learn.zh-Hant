@@ -30,7 +30,7 @@ ht-degree: 0%
 
 若要存取AEM as a Cloud Service上的存放庫瀏覽器：
 
-1. 確定您的使用者具有[必要的存取權](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#access-prerequisites)
+1. 確定您的使用者具有[必要的存取權](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html?lang=zh-Hant#access-prerequisites)
 1. 登入[Cloud Manager](https://my.cloudmanager.adobe.com)
 1. 選取包含AEM as a Cloud Service環境要除錯的方案
 1. 開啟與AEM as a Cloud Service環境相對應的[Developer Console](./developer-console.md)以進行偵錯
@@ -45,4 +45,4 @@ ht-degree: 0%
 
 ## 發佈和預覽存取權
 
-依預設，存取發佈或預覽是有限的，減少了存放庫瀏覽器中的可用資源。 [若要檢視發佈（或預覽）上的所有資源，請將使用者新增至發佈（或預覽）管理員角色。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)
+依預設，存取發佈或預覽是有限的，減少了存放庫瀏覽器中的可用資源。 [若要檢視發佈（或預覽）上的所有資源，請將使用者新增至發佈（或預覽）管理員角色。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html?lang=zh-Hant#navigate-the-hierarchy)

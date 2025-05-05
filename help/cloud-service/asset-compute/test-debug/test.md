@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 測試Asset Compute背景工作
 
-Asset Compute專案定義了一種模式，用於輕鬆建立及執行Asset Compute背景工作[測試](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html)。
+Asset Compute專案定義了一種模式，用於輕鬆建立及執行Asset Compute背景工作[測試](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html?lang=zh-Hant)。
 
 ## 背景工作測試的剖析
 

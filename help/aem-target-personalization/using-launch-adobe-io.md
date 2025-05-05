@@ -30,7 +30,7 @@ ht-degree: 1%
       * [Adobe Developer Console](https://developer.adobe.com/console/)
 
      >[!NOTE]
-     >您應該具有開發、核准、Publish、管理擴充功能及管理資料收集中環境的許可權。 如果您因無法使用的使用者介面選項而無法完成其中任何步驟，請聯絡Experience Cloud管理員以請求存取許可權。 如需有關標籤許可權的詳細資訊，[請參閱檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html)。
+     >您應該具有開發、核准、Publish、管理擴充功能及管理資料收集中環境的許可權。 如果您因無法使用的使用者介面選項而無法完成其中任何步驟，請聯絡Experience Cloud管理員以請求存取許可權。 如需有關標籤許可權的詳細資訊，[請參閱檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=zh-Hant)。
 
 * **Chrome瀏覽器延伸模組**
    * Adobe Experience Cloud Debugger(https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
@@ -75,7 +75,7 @@ AEM提供與標籤的現成整合。 此整合可讓AEM管理員透過簡單易�
 1. 確定您隸屬於正確的組織，然後繼續建立標籤屬性。
    ![Experience Cloud — 標籤](assets/using-launch-adobe-io/launch-create-property.png)
 
-   *如需建立屬性的詳細資訊，請參閱產品檔案中的[建立屬性](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property)。*
+   *如需建立屬性的詳細資訊，請參閱產品檔案中的[建立屬性](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=zh-Hant#create-or-configure-a-property)。*
 1. 按一下&#x200B;**新增屬性**&#x200B;按鈕
 1. 提供屬性的名稱(例如，*AEM Target教學課程*)
 1. 網域請輸入&#x200B;*localhost.com*，因為這是WKND示範網站執行所在的網域。 雖然&#39;*Domain*&#39;欄位是必要欄位，標籤屬性仍可在任何已實作的網域上運作。 此欄位的主要用途是在規則產生器中預先填入功能表選項。
@@ -87,7 +87,7 @@ AEM提供與標籤的現成整合。 此整合可讓AEM管理員透過簡單易�
 
 #### 新增Target擴充功能
 
-Adobe Target擴充功能支援將Target JavaScript SDK用於現代網路`at.js`的使用者端實作。 仍在使用Target舊版程式庫`mbox.js`、[的客戶應升級至at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html)，才能使用標籤。
+Adobe Target擴充功能支援將Target JavaScript SDK用於現代網路`at.js`的使用者端實作。 仍在使用Target舊版程式庫`mbox.js`、[的客戶應升級至at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html?lang=zh-Hant)，才能使用標籤。
 
 Target擴充功能包含兩個主要部分：
 
@@ -137,7 +137,7 @@ Target擴充功能包含兩個主要部分：
 
 >[!NOTE]
 >
-> 授予Adobe Developer整合使用適當[角色選取工作區的存取權，以允許中央團隊只在少數幾個工作區中進行API導向的變更](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html)。
+> 授予Adobe Developer整合使用適當[角色選取工作區的存取權，以允許中央團隊只在少數幾個工作區中進行API導向的變更](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html?lang=zh-Hant)。
 
 1. 使用來自Adobe Developer的憑證在AEM中建立IMS整合。 （01:12至03:55）
 2. 在資料收集中建立屬性。 （涵蓋[以上](#create-launch-property)）

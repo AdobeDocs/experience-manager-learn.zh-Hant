@@ -21,7 +21,7 @@ ht-degree: 0%
 
 在舊版Adobe Experience Manager (AEM)中，管理資源解析器用於需要存取存放庫的後端處理。 AEM 6.3不建議使用管理資源解析程式。而是使用存放庫中具有特定許可權的系統使用者。
 
-深入瞭解[在AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html)中建立及使用服務使用者的詳細資訊。
+深入瞭解[在AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html?lang=zh-Hant)中建立及使用服務使用者的詳細資訊。
 
 本文將逐步說明如何建立系統使用者及設定使用者對應程式屬性。
 

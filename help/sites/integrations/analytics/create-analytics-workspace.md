@@ -45,17 +45,17 @@ WKND行銷團隊想要瞭解哪些`Call to Action (CTA)`按鈕在首頁上表現
 ### 目標 {#objective}
 
 1. 建立報表套裝或使用現有報表套裝。
-1. 在報表套裝中設定[轉換變數(eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)和[成功事件（事件）](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)。
-1. 建立[Analysis Workspace專案](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)，藉助可讓您快速建置、分析和分享見解的工具，分析資料。
+1. 在報表套裝中設定[轉換變數(eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=zh-Hant)和[成功事件（事件）](https://experienceleague.adobe.com/zh-hant/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)。
+1. 建立[Analysis Workspace專案](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=zh-Hant)，藉助可讓您快速建置、分析和分享見解的工具，分析資料。
 1. 與其他團隊成員共用Analysis Workspace專案。
 
 ## 先決條件
 
 本教學課程是[使用Adobe Analytics](./track-clicked-component.md)追蹤已點按元件的延續，並假設您有：
 
-* 已啟用[Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)的&#x200B;**標籤屬性**
-* **Adobe Analytics**&#x200B;測試/開發報表套裝ID與追蹤伺服器。 請參閱下列有關[建立報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)的檔案。
-* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)瀏覽器擴充功能已設定在[WKND網站](https://wknd.site/us/en.html)或啟用Adobe資料層的AEM網站上載入標籤屬性。
+* 已啟用[Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=zh-Hant)的&#x200B;**標籤屬性**
+* **Adobe Analytics**&#x200B;測試/開發報表套裝ID與追蹤伺服器。 請參閱下列有關[建立報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=zh-Hant)的檔案。
+* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hant)瀏覽器擴充功能已設定在[WKND網站](https://wknd.site/us/en.html)或啟用Adobe資料層的AEM網站上載入標籤屬性。
 
 ## 轉換變數(eVar)和成功事件（事件）
 
@@ -116,19 +116,19 @@ eVar最適合用來測量原因和結果，例如：
 
 Analysis Workspace是彈性的瀏覽器工具，可讓您快速建立分析和分享見解。 您可以使用拖放式操作介面進行分析、新增視覺效果以生動呈現資料、組織資料集、與組織中的任何人共用及排程專案。
 
-接下來，建立[專案](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace)以建置儀表板，分析整個網站中CTA按鈕的效能。
+接下來，建立[專案](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html?lang=zh-Hant#analysis-workspace)以建置儀表板，分析整個網站中CTA按鈕的效能。
 
 1. 從Analytics工具列中選取&#x200B;**Workspace**，然後按一下&#x200B;**建立新專案**。
 
    ![Workspace](assets/create-analytics-workspace/create-workspace.png)
 
-1. 選擇從&#x200B;**空白專案**&#x200B;開始，或選取其中一個預先建立的範本(由Adobe提供，或由您的組織建立的自訂範本)。 您可使用數個範本，視您思考的分析或使用案例而定。 [深入瞭解](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html)可用的不同範本選項。
+1. 選擇從&#x200B;**空白專案**&#x200B;開始，或選取其中一個預先建立的範本(由Adobe提供，或由您的組織建立的自訂範本)。 您可使用數個範本，視您思考的分析或使用案例而定。 [深入瞭解](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html?lang=zh-Hant)可用的不同範本選項。
 
    在Workspace專案中，可從左側欄存取面板、表格、視覺效果和元件。 它們構成了專案的建置組塊。
 
-   * **[元件](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)** — 元件包括維度、量度、區段或日期範圍，您可以在自由表格中結合這些元件，開始回應您的業務問題。 請務必熟悉各種元件型別，再開始建立分析。 熟悉元件術語後，即可開始在自由表格中以拖放方式建立分析。
-   * **[視覺效果](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)** — 接著在資料上新增視覺效果（例如長條圖或折線圖），以視覺化方式生動呈現資料。 在左側邊欄中，選取中間的「視覺效果」圖示，即可檢視完整的可用視覺效果清單。
-   * **[面板](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html)** — 面板是表格與視覺效果的集合。 您可以從Workspace左上角圖示存取面板。 當您想要根據時段、報表套裝或分析使用案例來組織專案時，面板會很有幫助。 Analysis Workspace中有以下面板型別：
+   * **[元件](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html?lang=zh-Hant)** — 元件包括維度、量度、區段或日期範圍，您可以在自由表格中結合這些元件，開始回應您的業務問題。 請務必熟悉各種元件型別，再開始建立分析。 熟悉元件術語後，即可開始在自由表格中以拖放方式建立分析。
+   * **[視覺效果](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html?lang=zh-Hant)** — 接著在資料上新增視覺效果（例如長條圖或折線圖），以視覺化方式生動呈現資料。 在左側邊欄中，選取中間的「視覺效果」圖示，即可檢視完整的可用視覺效果清單。
+   * **[面板](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html?lang=zh-Hant)** — 面板是表格與視覺效果的集合。 您可以從Workspace左上角圖示存取面板。 當您想要根據時段、報表套裝或分析使用案例來組織專案時，面板會很有幫助。 Analysis Workspace中有以下面板型別：
 
    ![範本選取專案](assets/create-analytics-workspace/workspace-tools.png)
 
@@ -170,7 +170,7 @@ Analysis Workspace是彈性的瀏覽器工具，可讓您快速建立分析和�
 
    ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
 
-1. 您可以使用Adobe Analytics分類，以更好記的名稱取代「按鈕ID」值。 如需深入瞭解如何建立特定量度[的分類，請參閱此處](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)。 在此案例中，我們為`eVar8`設定了分類量度`Button Section (Button ID)`，將按鈕ID對應至好記的名稱。
+1. 您可以使用Adobe Analytics分類，以更好記的名稱取代「按鈕ID」值。 如需深入瞭解如何建立特定量度[的分類，請參閱此處](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=zh-Hant)。 在此案例中，我們為`eVar8`設定了分類量度`Button Section (Button ID)`，將按鈕ID對應至好記的名稱。
 
    ![按鈕區段](assets/create-analytics-workspace/button-section.png)
 

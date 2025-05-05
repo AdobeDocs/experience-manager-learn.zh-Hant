@@ -31,9 +31,9 @@ ht-degree: 7%
 
 ## 重要活動
 
-+ 系統管理員使用[Admin Console](https://adminconsole.adobe.com/)將一個或多個使用者指派給[Cloud Manager — 業務負責人](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html)產品設定檔。
-+ 指派給業務負責人產品設定檔的使用者使用[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)的自助服務功能來[建立方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html)和[新增環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
-+ 使用[Admin Console](https://adminconsole.adobe.com/)將開發人員和使用者指派至不同的[Cloud Manager角色](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html)，並授予各種AEM環境的許可權。
++ 系統管理員使用[Admin Console](https://adminconsole.adobe.com/)將一個或多個使用者指派給[Cloud Manager — 業務負責人](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=zh-Hant)產品設定檔。
++ 指派給業務負責人產品設定檔的使用者使用[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hant)的自助服務功能來[建立方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html?lang=zh-Hant)和[新增環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hant)
++ 使用[Admin Console](https://adminconsole.adobe.com/)將開發人員和使用者指派至不同的[Cloud Manager角色](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=zh-Hant)，並授予各種AEM環境的許可權。
 
 ## 實作練習
 

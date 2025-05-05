@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 使用本機AEM SDK的AEM Headless快速設定 {#setup}
 
-AEM Headless快速設定可讓您使用AEM Headless的實際操作，其中包含來自WKND Site範例專案的內容，以及透過AEM Headless GraphQL API使用內容的範例React應用程式(SPA)。 本指南使用[AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html)。
+AEM Headless快速設定可讓您使用AEM Headless的實際操作，其中包含來自WKND Site範例專案的內容，以及透過AEM Headless GraphQL API使用內容的範例React應用程式(SPA)。 本指南使用[AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=zh-Hant)。
 
 ## 先決條件 {#prerequisites}
 
@@ -32,7 +32,7 @@ AEM Headless快速設定可讓您使用AEM Headless的實際操作，其中包�
 
 ## 1.安裝AEM SDK {#aem-sdk}
 
-此設定使用[AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?#aem-as-a-cloud-service-sdk)來探索AEM的GraphQL API。 本節提供快速指南，說明如何安裝AEM SDK，以及如何在作者模式中執行。 如需設定本機開發環境[的詳細指南，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html#local-development-environment-set-up)。
+此設定使用[AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=zh-Hant&#aem-as-a-cloud-service-sdk)來探索AEM的GraphQL API。 本節提供快速指南，說明如何安裝AEM SDK，以及如何在作者模式中執行。 如需設定本機開發環境[的詳細指南，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant#local-development-environment-set-up)。
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ AEM Headless快速設定可讓您使用AEM Headless的實際操作，其中包�
 
 來自&#x200B;**WKND參考網站**&#x200B;的範例內容是用來加速教學課程。 WKND是虛構的生活風格品牌，通常與AEM培訓搭配使用。
 
-WKND網站包含公開[GraphQL端點](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html)所需的設定。 在真實世界的實作中，請依照檔案說明的步驟，將GraphQL端點[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html)納入您的客戶專案。 [CORS](#cors-config)也已封裝為WKND網站的一部分。 需要CORS設定才能授與外部應用程式的存取權，有關[CORS](#cors-config)的詳細資訊可在下方找到。
+WKND網站包含公開[GraphQL端點](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html?lang=zh-Hant)所需的設定。 在真實世界的實作中，請依照檔案說明的步驟，將GraphQL端點[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html?lang=zh-Hant)納入您的客戶專案。 [CORS](#cors-config)也已封裝為WKND網站的一部分。 需要CORS設定才能授與外部應用程式的存取權，有關[CORS](#cors-config)的詳細資訊可在下方找到。
 
 1. 下載適用於WKND網站的最新編譯的AEM套件： [aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest)。
 
@@ -98,7 +98,7 @@ WKND網站包含公開[GraphQL端點](https://experienceleague.adobe.com/docs/ex
 
 >[!NOTE]
 >
-> 如果使用Cloud Service環境，請參閱檔案，瞭解如何[將程式碼基底（例如WKND參考網站）部署到Cloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version)。
+> 如果使用Cloud Service環境，請參閱檔案，瞭解如何[將程式碼基底（例如WKND參考網站）部署到Cloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=zh-Hant#coding-against-the-right-aem-version)。
 
 ## 3.下載並執行WKND React應用程式 {#sample-app}
 

@@ -26,5 +26,5 @@ Experience Manager核心元件的影像元件已內建Dynamic Media支援。 影
 
 ## 其他資源
 
-* [影像核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=en#dynamic-media)
-* [Dynamic Media命令參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=en#image-serving-api)
+* [影像核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hant#dynamic-media)
+* [Dynamic Media命令參考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=zh-Hant#image-serving-api)

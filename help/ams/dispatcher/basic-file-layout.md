@@ -145,7 +145,7 @@ Apache Web Server極具擴充性，當模組有許多組態檔時，最佳實務
 
 #### 快取目錄
 
-此目錄包含您建立的所有`_cache.any`、`_invalidate.any`檔案，其中包含您希望模組如何處理來自AEM的快取元素以及失效規則語法的規則。  如需此節的詳細資訊，請參閱[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+此目錄包含您建立的所有`_cache.any`、`_invalidate.any`檔案，其中包含您希望模組如何處理來自AEM的快取元素以及失效規則語法的規則。  如需此節的詳細資訊，請參閱[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#configuring-the-dispatcher-cache-cache)
 
 - `/etc/httpd/conf.dispatcher.d/cache/`
 

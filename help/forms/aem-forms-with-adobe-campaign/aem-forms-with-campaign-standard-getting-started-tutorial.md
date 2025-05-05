@@ -28,7 +28,7 @@ ACS具有一組豐富的API，可讓ACS與我們選擇的技術連線。 在本�
 
 若要將AEM Forms與ACS整合，您需要遵循以下步驟：
 
-* [在您的ACS執行個體上設定API存取。](https://experienceleague.adobe.com/docs/campaign-standard/using/working-with-apis/get-started-apis.html?lang=en)
+* [在您的ACS執行個體上設定API存取。](https://experienceleague.adobe.com/docs/campaign-standard/using/working-with-apis/get-started-apis.html?lang=zh-Hant)
 * 建立JSON Web權杖。
 * 將JSON Web權杖與Adobe Identity Management服務交換為存取權杖。
 * 在授權HTTP標頭中包含此存取Token，並在對ACS執行個體的每個請求中包含X-API-Key。

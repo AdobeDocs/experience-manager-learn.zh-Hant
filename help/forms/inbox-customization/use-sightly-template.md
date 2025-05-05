@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## Sightly範本
 
-以下是sightly範本。 樣版中的程式碼會根據收入顯示圖示。 這些圖示是AEM隨附的[coral ui icon library](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)的一部分。
+以下是sightly範本。 樣版中的程式碼會根據收入顯示圖示。 這些圖示是AEM隨附的[coral ui icon library](https://helpx.adobe.com/tw/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)的一部分。
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -80,7 +80,7 @@ return val;
 
 >[!NOTE]
 >
->本文假設您已安裝此系列中[先前文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html)的[範例工作流程](assets/review-workflow.zip)和[範例表單](assets/snap-form.zip)。
+>本文假設您已安裝此系列中[先前文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html?lang=zh-Hant)的[範例工作流程](assets/review-workflow.zip)和[範例表單](assets/snap-form.zip)。
 
 * [以管理員使用者身分登入crx](http://localhost:4502/crx/de/index.jsp)
 * [匯入sightly範本](assets/sightly-template.zip)

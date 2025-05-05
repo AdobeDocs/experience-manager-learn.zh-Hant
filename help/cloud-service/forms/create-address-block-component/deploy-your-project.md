@@ -44,4 +44,4 @@ ht-degree: 0%
 
 ## 將專案部署到雲端環境
 
-如果您的本機開發環境一切正常，下一步就是使用Cloud Manager部署到[雲端執行個體。](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git)
+如果您的本機開發環境一切正常，下一步就是使用Cloud Manager部署到[雲端執行個體。](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git)

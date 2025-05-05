@@ -39,7 +39,7 @@ while ((line = reader.readLine()) != null) {
 System.out.println("The submitted form data is " + stringBuffer.toString());
 ```
 
-如果您打算使用程式碼來叫用J2EE處理序，請確定您已設定[Adobe LiveCycle Client SDK設定](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html)。
+如果您打算使用程式碼來叫用J2EE處理序，請確定您已設定[Adobe LiveCycle Client SDK設定](https://helpx.adobe.com/tw/aem-forms/6/submit-form-data-livecycle-process.html)。
 
 ## 設定HTML5表單的提交URL
 
@@ -65,5 +65,5 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 ### 其他閱讀
 
-如需從HTML5表單提交專案產生PDF的詳細資訊，請參閱本[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html)。
+如需從HTML5表單提交專案產生PDF的詳細資訊，請參閱本[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html?lang=zh-Hant)。
 

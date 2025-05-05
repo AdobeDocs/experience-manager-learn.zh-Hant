@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 建立Maven專案
 
-第一步是使用適當的Adobe Maven原型建立Maven專案。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)中列出了詳細步驟。 將Maven專案匯入到Eclipse後，您就可以開始編寫可在流程步驟中使用的第一個OSGi元件了。
+第一步是使用適當的Adobe Maven原型建立Maven專案。 此[文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=zh-Hant)中列出了詳細步驟。 將Maven專案匯入到Eclipse後，您就可以開始編寫可在流程步驟中使用的第一個OSGi元件了。
 
 
 ### 建立實作WorkflowProcess的類別
@@ -42,9 +42,9 @@ public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaData
 
 execute方法可存取下列3個變數：
 
-**WorkItem**： workItem變數會授予與工作流程相關之資料的存取權。 公開API檔案可在[這裡](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)取得。
+**WorkItem**： workItem變數會授予與工作流程相關之資料的存取權。 公開API檔案可在[這裡](https://helpx.adobe.com/tw/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)取得。
 
-**WorkflowSession**：此workflowSession變數可讓您控制工作流程。 [此處](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)提供公開API檔案。
+**WorkflowSession**：此workflowSession變數可讓您控制工作流程。 [此處](https://helpx.adobe.com/tw/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)提供公開API檔案。
 
 **MetaDataMap**：所有與工作流程關聯的中繼資料。 任何傳遞至流程步驟的流程引數都可使用MetaDataMap物件。[API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
@@ -154,7 +154,7 @@ QueryBuilder服務是用來查詢attachmentsPath資料夾下型別為`nt:file`�
 
 #### 建置和部署
 
-[依照此處所述建置組合](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[依照此處所述建置組合](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=zh-Hant)
 [請確定套件組合已部署且處於使用中狀態](http://localhost:4502/system/console/bundles)
 
 建立工作流程模型。 在工作流程模型中拖放流程步驟。 將程式步驟與「將最適化表單附件儲存至檔案系統」相關聯。

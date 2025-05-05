@@ -103,7 +103,7 @@ ht-degree: 0%
        sling:resourceSuperType="core/wcm/components/image/v2/image"/>
    ```
 
-   上述XML檔案提供元件的定義，包括標題、說明和群組。 `sling:resourceSuperType`指向`core/wcm/components/image/v2/image`，它是[核心影像元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)。
+   上述XML檔案提供元件的定義，包括標題、說明和群組。 `sling:resourceSuperType`指向`core/wcm/components/image/v2/image`，它是[核心影像元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=zh-Hant)。
 
 ### 建立HTL指令碼 {#create-the-htl-script}
 
@@ -358,7 +358,7 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™物件)，有助於�
    </dependency>
    ```
 
-   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en)包含AEM公開的所有公用Java™ API。 建置此專案時，預設會使用`aem-sdk-api`。 此版本會從位於`aem-guides-wknd/pom.xml`的專案根目錄保留在「父項」反應器pom中。
+   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=zh-Hant)包含AEM公開的所有公用Java™ API。 建置此專案時，預設會使用`aem-sdk-api`。 此版本會從位於`aem-guides-wknd/pom.xml`的專案根目錄保留在「父項」反應器pom中。
 
 1. 尋找`uber-jar`的相依性 — 僅&#x200B;**AEM 6.5/6.4**
 
@@ -374,7 +374,7 @@ Sling模型是註解導向的Java™ POJO (Plain Old Java™物件)，有助於�
 
    只有在叫用`classic`設定檔時，才會包含`uber-jar`，亦即`mvn clean install -PautoInstallSinglePackage -Pclassic`。 同樣地，此為專案所特有。 在從AEM專案原型產生的真實專案中，如果指定的AEM版本是6.5或6.4，則會預設為`uber-jar`。
 
-   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies)包含AEM 6.x公開的所有公用Java™ API。從專案`aem-guides-wknd/pom.xml`的根目錄在Parent reactor pom中維護版本。
+   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=zh-Hant#experience-manager-api-dependencies)包含AEM 6.x公開的所有公用Java™ API。從專案`aem-guides-wknd/pom.xml`的根目錄在Parent reactor pom中維護版本。
 
 1. 尋找`core.wcm.components.core`的相依性：
 

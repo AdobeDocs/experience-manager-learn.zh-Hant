@@ -22,7 +22,7 @@ ht-degree: 0%
 
 若要認證檔案，您可以在案頭上使用Acrobat DC，或使用AEM Forms Document Services做為伺服器上自動化程式的一部分。
 
-本文提供使用AEM Forms Document Services認證pdf檔案的範例OSGI套件組合。範例中使用的程式碼為[此處](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)提供
+本文提供使用AEM Forms Document Services認證pdf檔案的範例OSGI套件組合。範例中使用的程式碼為[此處](https://helpx.adobe.com/tw/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)提供
 
 若要使用AEM Forms認證檔案，必須遵循下列步驟
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 您可以撰寫自己的OSGi套件組合，並使用AEM Forms使用者端SDK來實作認證PDF檔案的服務。 以下連結對於撰寫您自己的OSGi套件組合相當實用
 
 * [正在建立您的第一個OSGi套件](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)
-* [使用檔案服務API](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+* [使用檔案服務API](https://helpx.adobe.com/tw/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 或者，您也可以使用範例套件作為本教學課程資產的一部分。
 

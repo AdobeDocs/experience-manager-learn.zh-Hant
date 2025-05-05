@@ -26,5 +26,5 @@ ht-degree: 3%
 
 ## 其他資源 {#additional-resources}
 
-* [管理環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html) — 有關AEM as a Cloud Service中環境管理的檔案
-* [快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html) - AEM as a Cloud Service中RDE的檔案
+* [管理環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hant) — 有關AEM as a Cloud Service中環境管理的檔案
+* [快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=zh-Hant) - AEM as a Cloud Service中RDE的檔案

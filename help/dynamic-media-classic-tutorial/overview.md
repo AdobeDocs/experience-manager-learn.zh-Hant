@@ -42,7 +42,7 @@ Dynamic Media Classic是客戶建立、編寫及提供多媒體內容的中樞�
 - **影片。**&#x200B;上傳最終視訊並發佈，然後逐步下載至可設定的視訊檢視器。
 - **智慧型影像處理。**&#x200B;技術可運用Adobe Sensei AI功能，並搭配現有的「影像預設集」使用，根據使用者端瀏覽器功能自動最佳化影像格式、大小和品質，藉以提升影像傳送效能。
 
-若要探索解決方案的其他功能，請瀏覽Dynamic Media Classic的[檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html)。
+若要探索解決方案的其他功能，請瀏覽Dynamic Media Classic的[檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html?lang=zh-Hant)。
 
 ## Dynamic Media Classic使用者介面(UI)
 
@@ -72,4 +72,4 @@ _Dynamic Media Classic UI_
 >
 >選取「上傳」對話方塊中的「上傳後使用&#x200B;**Publish**」核取方塊，以便在上傳時自動發佈資產。
 
-深入瞭解[瀏覽Dynamic Media Classic的UI](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html)。
+深入瞭解[瀏覽Dynamic Media Classic的UI](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html?lang=zh-Hant)。

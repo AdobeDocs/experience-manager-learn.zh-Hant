@@ -21,13 +21,13 @@ ht-degree: 2%
 
 # 使用AEM元件自訂Adobe使用者端資料層 {#customize-data-layer}
 
-瞭解如何使用自訂Adobe元件的內容來自訂AEM Client Data Layer。 瞭解如何使用[AEM核心元件提供的API來擴充](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)和自訂資料層。
+瞭解如何使用自訂Adobe元件的內容來自訂AEM Client Data Layer。 瞭解如何使用[AEM核心元件提供的API來擴充](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html?lang=zh-Hant)和自訂資料層。
 
 ## 您即將建置的內容
 
 ![署名資料層](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
-在本教學課程中，讓我們透過更新WKND [Byline元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html)，探索擴充Adobe Client Data Layer的各種選項。 _Byline_&#x200B;元件是&#x200B;**自訂元件**，在本教學課程中學到的課程可套用至其他自訂元件。
+在本教學課程中，讓我們透過更新WKND [Byline元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html?lang=zh-Hant)，探索擴充Adobe Client Data Layer的各種選項。 _Byline_&#x200B;元件是&#x200B;**自訂元件**，在本教學課程中學到的課程可套用至其他自訂元件。
 
 ### 目標 {#objective}
 
@@ -39,9 +39,9 @@ ht-degree: 2%
 
 需要&#x200B;**本機開發環境**&#x200B;才能完成此教學課程。 熒幕截圖和影片都是使用在macOS上執行的AEM as a Cloud Service SDK擷取。 除非另有說明，否則指令和程式碼與本機作業系統無關。
 
-**AEM as a Cloud Service 的新手嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+**AEM as a Cloud Service 的新手嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)。
 
-**AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+**AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hant)。
 
 ## 下載及部署WKND參考網站 {#set-up-wknd-site}
 
@@ -173,7 +173,7 @@ ht-degree: 2%
 
 ## 更新署名HTL {#htl}
 
-接下來，更新`Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en)。 HTL (HTML範本語言)是用來呈現元件HTML的範本。
+接下來，更新`Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=zh-Hant)。 HTL (HTML範本語言)是用來呈現元件HTML的範本。
 
 每個AEM元件上的特殊資料屬性`data-cmp-data-layer`可用來公開其資料層。 AEM核心元件所提供的JavaScript會尋找此資料屬性。 此資料屬性的值會以Byline Sling模型的`getData()`方法傳回的JSON字串填入，並插入至Adobe使用者端資料層。
 
@@ -434,4 +434,4 @@ Adobe Client Data Layer是事件導向，而觸發動作的最常見事件之一
 
 * [Adobe使用者端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
 * [資料層與核心元件的整合](https://github.com/adobe/aem-core-wcm-components/blob/main/DATA_LAYER_INTEGRATION.md)
-* [使用Adobe使用者端資料層和核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [使用Adobe使用者端資料層和核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant)

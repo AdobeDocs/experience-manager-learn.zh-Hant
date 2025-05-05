@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
-> 此影片中的輸入來源僅顯示Azure Blob Storage和Amazon S3；不過可用來源會隨著時間持續成長。 如需支援的輸入來源完整清單，請參閱產品中的可用選項，或[檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload)。
+> 此影片中的輸入來源僅顯示Azure Blob Storage和Amazon S3；不過可用來源會隨著時間持續成長。 如需支援的輸入來源完整清單，請參閱產品中的可用選項，或[檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=zh-Hant#bulk-upload)。
 
 ## 重要活動
 
@@ -43,6 +43,6 @@ ht-degree: 0%
 
 ## 其他資源
 
-+ [大量匯入服務組態選項](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#configure-bulk-ingestor-tool)
-+ 資產擷取上的[Adobe Developers Live工作階段](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html)
++ [大量匯入服務組態選項](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=zh-Hant#configure-bulk-ingestor-tool)
++ 資產擷取上的[Adobe Developers Live工作階段](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=zh-Hant)
 

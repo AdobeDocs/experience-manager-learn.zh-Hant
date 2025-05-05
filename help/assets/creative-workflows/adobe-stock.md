@@ -110,6 +110,6 @@ AEM 6.4.2讓使用者可直接從AEM搜尋、預覽、儲存及授權Adobe Stock
 
 * [企業庫存計畫](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
 * [AEM 6.4 Service Pack 2發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
-* [整合AEM和Adobe Stock](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html)
+* [整合AEM和Adobe Stock](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html?lang=zh-Hant)
 * [Adobe I/O主控台整合API](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
 * [Adobe Stock API檔案](https://www.adobe.io/apis/creativecloud/stock/docs.html)

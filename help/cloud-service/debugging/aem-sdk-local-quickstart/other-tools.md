@@ -83,7 +83,7 @@ CRXDE Lite提供測試和評估特定使用者或群組（亦稱為主體）之�
 
 ![QueryBuilder Debugger](./assets/other-tools/query-debugger.png)
 
-QueryBuilder偵錯工具是網頁式工具，可協助您使用AEM的[QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)語法偵錯並瞭解搜尋查詢。
+QueryBuilder偵錯工具是網頁式工具，可協助您使用AEM的[QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=zh-Hant)語法偵錯並瞭解搜尋查詢。
 
 QueryBuilder Debugger位於：
 

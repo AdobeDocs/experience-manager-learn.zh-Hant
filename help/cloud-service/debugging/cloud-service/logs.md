@@ -176,9 +176,9 @@ Adobe對每個AEM as a Cloud Service環境的記錄層級的一般指導是遵�
 
 ### 用於設定Java記錄層級的環境特定變數
 
-為每個環境設定靜態的已知Java記錄層級的替代方法，是使用AEM做為Cloud Service的[環境特定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)來引數化記錄層級，以允許透過[Adobe I/O CLI搭配Cloud Manager外掛程式](#aio-cli)動態變更值。
+為每個環境設定靜態的已知Java記錄層級的替代方法，是使用AEM做為Cloud Service的[環境特定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#environment-specific-configuration-values)來引數化記錄層級，以允許透過[Adobe I/O CLI搭配Cloud Manager外掛程式](#aio-cli)動態變更值。
 
-這需要更新記錄OSGi設定，以使用環境特定的變數預留位置。 [記錄層級的預設值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values)應根據[Adobe建議](#log-levels)設定。 例如：
+這需要更新記錄OSGi設定，以使用環境特定的變數預留位置。 [記錄層級的預設值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#default-values)應根據[Adobe建議](#log-levels)設定。 例如：
 
 `/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config~example.cfg.json`
 
@@ -193,8 +193,8 @@ Adobe對每個AEM as a Cloud Service環境的記錄層級的一般指導是遵�
 
 此方法有其必須考量的缺點：
 
-+ [允許有限數量的環境變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#number-of-variables)，建立變數來管理記錄層級將使用一個。
-+ 可透過[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)、[Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)和[Cloud Manager HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#cloud-manager-api-format-for-setting-properties)以程式設計方式管理環境變數。
++ [允許有限數量的環境變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#number-of-variables)，建立變數來管理記錄層級將使用一個。
++ 可透過[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=zh-Hant)、[Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)和[Cloud Manager HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#cloud-manager-api-format-for-setting-properties)以程式設計方式管理環境變數。
 + 環境變數的變更必須由支援的工具手動重設。 若忘記將高流量環境（例如生產）重設為較不詳細的記錄層級，可能會讓記錄泛濫，並影響AEM的效能。
 
 _環境特定變數無法用於Apache Web Server或Dispatcher記錄設定，因為這些設定未透過OSGi設定。_

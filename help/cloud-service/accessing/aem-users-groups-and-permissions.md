@@ -26,11 +26,11 @@ ht-degree: 74%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=zh-Hant" text="Adobe Experience Manager as a Cloud Service 的 IMS 支援"
 >additional-url="https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/identity.html" text="AEM 提供的使用者群組及其權限"
 
-Adobe Experience Manager 以 Adobe IMS 使用者、使用者群組和產品設定檔為建置基礎，以提供使用者可自訂的 AEM 存取權。瞭解如何在[AEM提供的使用者群組](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/security#built-in-users-and-groups)的基礎上定義AEM群組和許可權，以及它們如何與Adobe IMS抽象化功能搭配運作，以提供順暢且可自訂的AEM存取權。
+Adobe Experience Manager 以 Adobe IMS 使用者、使用者群組和產品設定檔為建置基礎，以提供使用者可自訂的 AEM 存取權。瞭解如何在[AEM提供的使用者群組](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/security/security#built-in-users-and-groups)的基礎上定義AEM群組和許可權，以及它們如何與Adobe IMS抽象化功能搭配運作，以提供順暢且可自訂的AEM存取權。
 
 >[!VIDEO](https://video.tv.adobe.com/v/39151?quality=12&learn=on)
 
 ## 其他資源
 
-+ 適用於Adobe Experience Manager as a Cloud Service的[IMS支援](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html)
-+ [AEM提供的使用者群組及其許可權](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/security.html)
++ 適用於Adobe Experience Manager as a Cloud Service的[IMS支援](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=zh-Hant)
++ [AEM提供的使用者群組及其許可權](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/security.html?lang=zh-Hant)

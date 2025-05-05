@@ -30,5 +30,5 @@ Dynamic Media Snapshot是視覺化展示工具，旨在說明Dynamic Media在最
 
 ## 其他資源
 
-* [HTTP通訊協定命令](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)
-* [智慧型影像](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/imaging-faq.html)
+* [HTTP通訊協定命令](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=zh-Hant)
+* [智慧型影像](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/imaging-faq.html?lang=zh-Hant)

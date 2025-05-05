@@ -28,4 +28,4 @@ AEM Assets自訂視訊縮圖可讓作者從一組產生的縮圖中，選取適�
 
 >[!NOTE]
 >
->您應該在Dynamic Media[&#128279;](https://experienceleague.adobe.com/docs/)模式下執行您的AEM執行個體
+>您應該在Dynamic Media[&#128279;](https://experienceleague.adobe.com/docs/?lang=zh-Hant)模式下執行您的AEM執行個體

@@ -60,8 +60,8 @@ WKND網站正計畫透過其網站在美國各地宣佈&#x200B;**SkateFest挑戰
 1. AEM內容編輯器會根據需求，為內容區塊建立體驗片段，並將其以選件的形式匯出至Adobe Target。 為了向美國所有州提供個人化內容，內容作者可以建立一個體驗片段主要變數，然後建立50個其他變數，每個州各一個。 接著，您可以手動編輯每個狀態變數的內容以及相關影像和文字。 製作體驗片段時，內容編輯人員可使用「資產尋找器」選項，快速存取AEM Assets中可用的所有資產。 當體驗片段匯出至Adobe Target時，其所有變數也會以選件的形式推送至Adobe Target。
 
 1. 從AEM將體驗片段匯出至Adobe Target做為選件後，行銷人員可以使用這些選件在Target中建立活動。 根據WKND網站SkateFest行銷活動，行銷人員需要為每個州的WKND網站訪客建立並提供個人化體驗。 若要建立體驗鎖定目標活動，行銷人員必須識別對象。 對於我們的WKND SkateFest行銷活動，我們需要根據訪客WKND網站的來源位置，建立50個個別的對象。
-   * [對象](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01)會定義您活動的目標，並用於任何有目標定位可用的地方。 Target受眾是一組已定義的訪客條件。 選件可鎖定至特定對象（或區段）。 只有屬於該對象的訪客可以看到鎖定他們為目標的體驗。  例如，您可以將選件傳送給由使用特定瀏覽器或來自特定地理位置的訪客所組成的對象。
-   * [選件](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9)是在行銷活動或活動期間顯示在您網頁上的內容。 當您測試網頁時，會使用您位置中的不同選件來測量每個體驗的成功程度。 選件可包含不同型別的內容，包括：
+   * [對象](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html?lang=zh-Hant#section_3F32DA46BDF947878DD79DBB97040D01)會定義您活動的目標，並用於任何有目標定位可用的地方。 Target受眾是一組已定義的訪客條件。 選件可鎖定至特定對象（或區段）。 只有屬於該對象的訪客可以看到鎖定他們為目標的體驗。  例如，您可以將選件傳送給由使用特定瀏覽器或來自特定地理位置的訪客所組成的對象。
+   * [選件](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html?lang=zh-Hant#section_973D4CC4CEB44711BBB9A21BF74B89E9)是在行銷活動或活動期間顯示在您網頁上的內容。 當您測試網頁時，會使用您位置中的不同選件來測量每個體驗的成功程度。 選件可包含不同型別的內容，包括：
       * 影像
       * 文字
       * **HTML**

@@ -45,7 +45,7 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 
 ## 建立自訂提交處理常式
 
-在`apps/bankingapplication`資料夾中建立自訂提交動作，其方式與在[舊版AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en)中建立的方式相同。 出於本教學課程的目的，我在CRX存放庫的`apps/bankingapplication`節點下建立了名為SubmitToAEMServlet的資料夾。
+在`apps/bankingapplication`資料夾中建立自訂提交動作，其方式與在[舊版AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=zh-Hant)中建立的方式相同。 出於本教學課程的目的，我在CRX存放庫的`apps/bankingapplication`節點下建立了名為SubmitToAEMServlet的資料夾。
 
 post.POST.jsp中的下列程式碼只會將要求轉送給掛載在/bin/formstutorial上的servlet。 這與先前步驟建立的servlet相同
 

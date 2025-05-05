@@ -32,5 +32,5 @@ ht-degree: 9%
    + [新編輯器切換](editor/new-editor-toggle.md)
    + [非資產內容參照](editor/non-asset-content-references.md)
    + [RTE變體比較](editor/rte-variant-compare.md)
-+ [擴充性](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/extensibility/content-fragments/overview.html)
-+ [檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html){target=_blank}
++ [擴充性](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/extensibility/content-fragments/overview.html?lang=zh-Hant)
++ [檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=zh-Hant){target=_blank}

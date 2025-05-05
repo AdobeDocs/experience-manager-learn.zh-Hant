@@ -49,4 +49,4 @@ ht-degree: 0%
 
 ## 推送變更
 
-如果您對變更感到滿意，可以使用[前端管道](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline)將變更推送到您的雲端執行個體
+如果您對變更感到滿意，可以使用[前端管道](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline)將變更推送到您的雲端執行個體

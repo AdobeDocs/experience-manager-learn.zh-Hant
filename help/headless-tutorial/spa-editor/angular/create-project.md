@@ -87,7 +87,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   > 注意`frontendModule=angular`屬性。 這會告訴AEM專案原型使用要與AEM SPA編輯器搭配使用的入門程式[Angular程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)，來啟動專案。
+   > 注意`frontendModule=angular`屬性。 這會告訴AEM專案原型使用要與AEM SPA編輯器搭配使用的入門程式[Angular程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hant)，來啟動專案。
 
 ## 建置專案
 

@@ -27,7 +27,7 @@ Darin和James討論AEM雲端中的Dispatcher，包括一些最佳實務和與AMS
 ## 本影片涵蓋的內容
 
 + 在雲端服務環境中部署dispatcher檔案
-   + [移轉檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
+   + [移轉檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html?lang=zh-Hant)
    + [部落格](https://medium.com/adobetech/migrating-a-dispatcher-configuration-from-managed-services-to-aem-as-a-cloud-service-fa8a80d242ee)
 + [移轉工具](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration)
 

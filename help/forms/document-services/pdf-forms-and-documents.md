@@ -61,7 +61,7 @@ XFA Forms以XML為基礎。 這種良好的結構和彈性的格式可讓AEM For
 * 動態表單支援可變更表單版面配置和分頁的使用者端指令碼。 例如，如果您將Purchase Order.xdp儲存為動態表單，它會展開並分頁，以因應無數的資料量
 * 動態表單在執行階段支援表單的所有屬性，而靜態表單僅支援子集
 
-* [請參閱此檔案以瞭解靜態與動態pdf表單之間的差異](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
+* [請參閱此檔案以瞭解靜態與動態pdf表單之間的差異](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html?lang=zh-Hant#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
 
 >[!NOTE]
 >

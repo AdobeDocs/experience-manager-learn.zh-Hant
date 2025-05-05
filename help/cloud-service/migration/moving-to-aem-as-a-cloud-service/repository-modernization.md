@@ -27,11 +27,11 @@ ht-degree: 0%
 
 ![儲存庫現代化工具](./assets/repository-modernizer.png)
 
-在重構程式碼基底的過程中，請使用[Repository Modernizer工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html)將6.x程式碼基底重構為更現代的結構。
+在重構程式碼基底的過程中，請使用[Repository Modernizer工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html?lang=zh-Hant)將6.x程式碼基底重構為更現代的結構。
 
 ## 重要活動
 
 * 使用[Adobe I/O Repository Modernizer](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationrepository-modernizer)工具來重新建構專案，以符合AEM as a Cloud Service專案的預期結構。
 * 手動調整和修正更新程式碼庫中的任何建置錯誤。
-* 設定[本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)並部署更新的程式碼基底。 反複執行，直到專案處於穩定狀態為止。
+* 設定[本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)並部署更新的程式碼基底。 反複執行，直到專案處於穩定狀態為止。
 * 將更新的程式碼基底部署到AEM as a Cloud Service開發環境，並繼續驗證。

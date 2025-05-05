@@ -18,7 +18,7 @@ ht-degree: 4%
 
 # 使用多站點管理員 {#using-multi-site-manager-with-aem-sites}
 
-即時副本概觀和Blueprint設定管理員是AEM作者介面，用於在Adobe Experience Manager Sites中使用[多站點管理員](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html)。
+即時副本概觀和Blueprint設定管理員是AEM作者介面，用於在Adobe Experience Manager Sites中使用[多站點管理員](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html?lang=zh-Hant)。
 
 ## 即時副本綜覽 {#live-copy-overview}
 
@@ -34,6 +34,6 @@ ht-degree: 4%
 
 ## 其他資源 {#additional-resources}
 
-* [即時副本總覽主控台](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy-overview.html)
-* [建立和同步處理即時副本](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy.html)
-* [MSM最佳實務](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-best-practices.html)
+* [即時副本總覽主控台](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/msm-livecopy-overview.html)
+* [建立和同步處理即時副本](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/msm-livecopy.html)
+* [MSM最佳實務](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/msm-best-practices.html)

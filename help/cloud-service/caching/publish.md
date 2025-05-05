@@ -51,7 +51,7 @@ AEM as a Cloud Service CDN快取下列專案：
 + HTTP回應內文
 + HTTP回應標題
 
-通常，單一URL的HTTP請求/回應會快取為單一物件。 不過，當HTTP回應上設定`Vary`標頭時，CDN可以處理單一URL的多重物件快取。 避免在值沒有嚴格控制之值集的標頭上指定`Vary`，因為這會造成許多快取遺漏，降低快取命中率。 若要支援在AEM Dispatcher快取各種請求，[請檢閱變體快取檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/variant-caching.html)。
+通常，單一URL的HTTP請求/回應會快取為單一物件。 不過，當HTTP回應上設定`Vary`標頭時，CDN可以處理單一URL的多重物件快取。 避免在值沒有嚴格控制之值集的標頭上指定`Vary`，因為這會造成許多快取遺漏，降低快取命中率。 若要支援在AEM Dispatcher快取各種請求，[請檢閱變體快取檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/variant-caching.html?lang=zh-Hant)。
 
 ### 快取存留期{#cdn-cache-life}
 
@@ -71,15 +71,15 @@ AEM Publish CDN是以TTL （存留時間）為基礎，這表示快取存留期�
 
 | 內容類型 | 預設CDN快取期限 |
 |:------------ |:---------- |
-| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#html-text) | 5 分鐘 |
-| [Assets （影像、影片、檔案等）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#images) | 10 分鐘 |
-| [持續查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?publish-instances) | 2 小時 |
-| [使用者端資料庫(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
-| [其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 未快取 |
+| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#html-text) | 5 分鐘 |
+| [Assets （影像、影片、檔案等）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#images) | 10 分鐘 |
+| [持續查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant&publish-instances) | 2 小時 |
+| [使用者端資料庫(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#client-side-libraries) | 30 天 |
+| [其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#other-content) | 未快取 |
 
 ### 如何自訂快取規則
 
-[設定CDN快取內容的方式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#disp)僅限於在HTTP回應上設定快取標頭。 這些快取標頭通常使用`mod_headers`在AEM Dispatcher `vhost`設定中設定，但也可以在AEM Publish本身中執行的自訂Java™程式碼中設定。
+[設定CDN快取內容的方式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#disp)僅限於在HTTP回應上設定快取標頭。 這些快取標頭通常使用`mod_headers`在AEM Dispatcher `vhost`設定中設定，但也可以在AEM Publish本身中執行的自訂Java™程式碼中設定。
 
 ## AEM Dispatcher
 
@@ -95,10 +95,10 @@ AEM Publish CDN是以TTL （存留時間）為基礎，這表示快取存留期�
 + HTTP回應不適用於二進位檔案。
 + HTTP要求URL路徑以副檔名結尾，例如： `.html`、`.json`、`.css`、`.js`等。
 + HTTP請求不包含授權，且未由AEM驗證。
-   + 不過，可全域啟用[驗證要求的快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used)，或選擇性地透過[許可權敏感型快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html)啟用。
+   + 不過，可全域啟用[驗證要求的快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#caching-when-authentication-is-used)，或選擇性地透過[許可權敏感型快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-Hant)啟用。
 + HTTP要求不包含查詢引數。
-   + 不過，設定[忽略的查詢引數](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters)可讓具有忽略的查詢引數的HTTP要求從快取中快取/提供服務。
-+ HTTP要求的路徑[符合允許Dispatcher規則，但不符合拒絕規則](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。
+   + 不過，設定[忽略的查詢引數](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#ignoring-url-parameters)可讓具有忽略的查詢引數的HTTP要求從快取中快取/提供服務。
++ HTTP要求的路徑[符合允許Dispatcher規則，但不符合拒絕規則](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#specifying-the-documents-to-cache)。
 + HTTP回應沒有下列AEM Publish設定的HTTP回應標頭：
 
    + `no-cache`
@@ -110,7 +110,7 @@ AEM Publish CDN是以TTL （存留時間）為基礎，這表示快取存留期�
 AEM Dispatcher快取下列專案：
 
 + HTTP回應內文
-+ 在Dispatcher的[快取標頭組態](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-http-response-headers)中指定的HTTP回應標頭。 檢視[AEM專案原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L106-L113)隨附的預設設定。
++ 在Dispatcher的[快取標頭組態](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#caching-http-response-headers)中指定的HTTP回應標頭。 檢視[AEM專案原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L106-L113)隨附的預設設定。
    + `Cache-Control`
    + `Content-Disposition`
    + `Content-Type`
@@ -123,7 +123,7 @@ AEM Dispatcher快取下列專案：
 AEM Dispatcher會使用下列方法快取HTTP回應：
 
 + 直到透過如發佈或取消發佈內容等機制觸發失效為止。
-+ 在Dispatcher設定[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl)中明確設定時的TTL （存留時間）。 檢閱`enableTTL`設定，以檢視[AEM專案原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L122-L127)中的預設設定。
++ 在Dispatcher設定[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#configuring-time-based-cache-invalidation-enablettl)中明確設定時的TTL （存留時間）。 檢閱`enableTTL`設定，以檢視[AEM專案原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L122-L127)中的預設設定。
 
 #### 預設快取存留期
 
@@ -131,15 +131,15 @@ AEM Dispatcher會使用下列方法快取HTTP回應：
 
 | 內容類型 | 預設CDN快取期限 |
 |:------------ |:---------- |
-| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#html-text) | 直到失效 |
-| [Assets （影像、影片、檔案等）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#images) | 從未 |
-| [持續查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?publish-instances) | 1 分鐘 |
-| [使用者端資料庫(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
-| [其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 直到失效 |
+| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#html-text) | 直到失效 |
+| [Assets （影像、影片、檔案等）](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#images) | 從未 |
+| [持續查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant&publish-instances) | 1 分鐘 |
+| [使用者端資料庫(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#client-side-libraries) | 30 天 |
+| [其他](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#other-content) | 直到失效 |
 
 ### 如何自訂快取規則
 
-AEM Dispatcher的快取可透過[Dispatcher設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)設定，包括：
+AEM Dispatcher的快取可透過[Dispatcher設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#configuring-the-dispatcher-cache-cache)設定，包括：
 
 + 快取的內容
 + 發佈/取消發佈時快取的哪些部分會失效

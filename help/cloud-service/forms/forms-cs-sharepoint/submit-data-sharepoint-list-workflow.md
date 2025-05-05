@@ -23,7 +23,7 @@ ht-degree: 1%
 
 本文說明在SharePoint工作流程中使用叫用FDM步驟，將資料插入AEM清單所需的步驟。
 
-本文假設您已[成功設定最適化表單，以將資料提交至SharePoint清單。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
+本文假設您已[成功設定最適化表單，以將資料提交至SharePoint清單。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=zh-Hant#connect-af-sharepoint-list)
 
 
 ## 根據SharePoint清單資料來源建立表單資料模型

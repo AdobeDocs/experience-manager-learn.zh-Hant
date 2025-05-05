@@ -65,7 +65,7 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
 ## 使用 GraphiQL IDE
 
-[GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html)工具可讓開發人員針對目前AEM環境中的內容建立和測試查詢。 GraphiQL工具也可讓使用者&#x200B;**儲存或儲存**&#x200B;查詢，以供使用者端應用程式在生產設定中使用。
+[GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=zh-Hant)工具可讓開發人員針對目前AEM環境中的內容建立和測試查詢。 GraphiQL工具也可讓使用者&#x200B;**儲存或儲存**&#x200B;查詢，以供使用者端應用程式在生產設定中使用。
 
 接下來，使用內建GraphiQL IDE來探索AEM的GraphQL API功能。
 
@@ -216,7 +216,7 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
    ![使用查詢變數來篩選](assets/explore-graphql-api/using-query-variables-filter.png)
 
-   有許多其他選項可用來篩選及建立複雜查詢，請參閱[瞭解如何搭配AEM使用GraphQL — 範例內容和查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html)。
+   有許多其他選項可用來篩選及建立複雜查詢，請參閱[瞭解如何搭配AEM使用GraphQL — 範例內容和查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html?lang=zh-Hant)。
 
 1. 增強上述查詢以擷取設定檔圖片
 
@@ -280,7 +280,7 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
 ## 保留查詢 {#persist-queries}
 
-一旦開發人員滿意從查詢傳回的查詢和結果資料，下一步就是儲存或保留查詢至AEM。 [持續查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)是將GraphQL API公開給使用者端應用程式的偏好機制。 當查詢持續存在後，即可使用GET請求來請求它，並在Dispatcher和CDN層進行快取。 持久查詢的效能要好得多。 除了效能優勢外，持續查詢還可確保不會意外向使用者端應用程式顯示額外資料。 有關[持續查詢的更多詳細資訊，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html)。
+一旦開發人員滿意從查詢傳回的查詢和結果資料，下一步就是儲存或保留查詢至AEM。 [持續查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant)是將GraphQL API公開給使用者端應用程式的偏好機制。 當查詢持續存在後，即可使用GET請求來請求它，並在Dispatcher和CDN層進行快取。 持久查詢的效能要好得多。 除了效能優勢外，持續查詢還可確保不會意外向使用者端應用程式顯示額外資料。 有關[持續查詢的更多詳細資訊，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant)。
 
 接下來，保留兩個簡單查詢，它們會在下一個章節中使用。
 
@@ -396,7 +396,7 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
 ## 其他資源
 
-若要深入瞭解GraphQL查詢，請前往[學習如何搭配AEM使用GraphQL — 範例內容和查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html)。
+若要深入瞭解GraphQL查詢，請前往[學習如何搭配AEM使用GraphQL — 範例內容和查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html?lang=zh-Hant)。
 
 ## 恭喜！ {#congratulations}
 

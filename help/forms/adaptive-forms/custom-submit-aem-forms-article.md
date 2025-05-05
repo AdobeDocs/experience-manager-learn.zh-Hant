@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >本文中的程式碼無法用於以核心元件為基礎的最適化表單。
->[此處提供核心元件型最適化表單的同等文章](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=en)
+>[此處提供核心元件型最適化表單的同等文章](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=zh-Hant)
 
 
 本文將逐步引導您執行建立自訂提交動作以處理最適化Forms提交所需的步驟。

@@ -46,4 +46,4 @@ AEM Assets的影像智慧標籤會藉由自動將衍生的中繼資料標籤新�
 
 ## 其他資源
 
-* [AEM Assets智慧標籤檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/smart-tags.html)
+* [AEM Assets智慧標籤檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/smart-tags.html?lang=zh-Hant)

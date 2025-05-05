@@ -71,14 +71,14 @@ ht-degree: 3%
    * 標題*： **英文**
    * 名稱： **en**
 
-   最佳實務是設定專案以提供多語言支援。 如需詳細資訊，請參閱[下列檔案頁面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html)。
+   最佳實務是設定專案以提供多語言支援。 如需詳細資訊，請參閱[下列檔案頁面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=zh-Hant)。
 
 
 ## 建立內容片段 {#create-content-fragment}
 
 >[!TIP]
 >
->對於本機AEM SDK使用者：利用AEM Assets UI來建立和編寫內容片段，而不是以下概述的內容片段UI。 如需詳細指示，請參閱[AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)。
+>對於本機AEM SDK使用者：利用AEM Assets UI來建立和編寫內容片段，而不是以下概述的內容片段UI。 如需詳細指示，請參閱[AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=zh-Hant)。
 
 接下來幾個內容片段是根據&#x200B;**團隊**&#x200B;和&#x200B;**人員**&#x200B;模型建立的。
 
@@ -152,7 +152,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
->針對本機AEM SDK使用者：利用AEM Assets UI發佈內容片段，而非下列內容片段UI。 如需詳細指示，請參閱[AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment)。
+>針對本機AEM SDK使用者：利用AEM Assets UI發佈內容片段，而非下列內容片段UI。 如需詳細指示，請參閱[AEM檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=zh-Hant#publishing-and-referencing-a-fragment)。
 
 檢閱和驗證後，發佈編寫的`Content Fragments`
 
@@ -173,5 +173,5 @@ ht-degree: 3%
 
 ## 相關檔案
 
-* [管理內容片段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)
-* [變化 - 編寫片段內容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)
+* [管理內容片段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=zh-Hant)
+* [變化 - 編寫片段內容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html?lang=zh-Hant)

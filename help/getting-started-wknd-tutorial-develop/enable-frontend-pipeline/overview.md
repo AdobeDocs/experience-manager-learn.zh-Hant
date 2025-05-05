@@ -33,10 +33,10 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->一般而言，前端管道通常會與[AEM快速網站建立](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/overview.html?lang=en)搭配使用，這裡有相關的教學課程[AEM Sites快速入門 — 快速網站建立](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html)以瞭解更多相關資訊。 因此，在本教學課程和相關影片中，您會看到參考資料，這是為了確保能找出細微的差異，並透過一些直接或間接的比較來說明重要概念。
+>一般而言，前端管道通常會與[AEM快速網站建立](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/overview.html?lang=zh-Hant)搭配使用，這裡有相關的教學課程[AEM Sites快速入門 — 快速網站建立](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html?lang=zh-Hant)以瞭解更多相關資訊。 因此，在本教學課程和相關影片中，您會看到參考資料，這是為了確保能找出細微的差異，並透過一些直接或間接的比較來說明重要概念。
 
 
-相關的[多步驟教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html)會使用「快速網站建立」功能，逐步解說如何為虛擬生活風格品牌WKND實作AEM網站。 檢閱[主題工作流程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html)以瞭解前端管道運作也很有幫助。
+相關的[多步驟教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html?lang=zh-Hant)會使用「快速網站建立」功能，逐步解說如何為虛擬生活風格品牌WKND實作AEM網站。 檢閱[主題工作流程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html?lang=zh-Hant)以瞭解前端管道運作也很有幫助。
 
 ## 前端管道的概述、優點和考量事項
 
@@ -49,9 +49,9 @@ ht-degree: 1%
 
 ## 先決條件
 
-本教學課程中的部署步驟會在Adobe Cloud Manager中進行，請確認您有&#x200B;__部署管理員__&#x200B;角色，請參閱雲端管理[角色定義](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions)。
+本教學課程中的部署步驟會在Adobe Cloud Manager中進行，請確認您有&#x200B;__部署管理員__&#x200B;角色，請參閱雲端管理[角色定義](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=zh-Hant#role-definitions)。
 
-完成本教學課程時，請務必使用[沙箱程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html)。
+完成本教學課程時，請務必使用[沙箱程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html?lang=zh-Hant)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hant)。
 
 ## 後續步驟 {#next-steps}
 

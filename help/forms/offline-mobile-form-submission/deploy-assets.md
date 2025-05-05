@@ -32,7 +32,7 @@ ht-degree: 0%
 
 * [匯入自訂設定檔](assets/customprofile.zip)，該設定檔會將HTML5表單中的資料與XDP合併，並傳回互動式pdf。
 
-* [部署使用服務進行開發的使用者套件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=en)
+* [部署使用服務進行開發的使用者套件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=zh-Hant)
 使用configMgr在Apache Sling服務使用者對應程式服務中新增以下專案
 
 ```
@@ -52,7 +52,7 @@ DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 * 指定作者執行個體的使用者名稱/密碼，並在AEM存放庫&#x200B;**中指定**&#x200B;現有位置，以使用[configMgr](http://localhost:4503/system/console/configMgr)在AEM Server認證中儲存提交的資料。 您可以在AEM Workflow Server上將端點的URL維持不變。 這是端點，會從指定節點的提交中擷取並儲存資料。
   ![發佈設定](assets/publish-config.png)
 
-* [部署使用服務進行開發的使用者套件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=en)
+* [部署使用服務進行開發的使用者套件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=zh-Hant)
 * [開啟osgi設定](http://localhost:4503/system/console/configMgr)。
 * 搜尋&#x200B;**Apache Sling反向連結篩選器**。 請確定已選取「允許空白」核取方塊。
 * [匯入自訂設定檔](assets/customprofile.zip)，該設定檔會將HTML5表單中的資料與XDP合併，並傳回互動式pdf。

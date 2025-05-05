@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 整合AEM Sites和Adobe Analytics
 
-瞭解如何使用[AEM Sites使用者端資料層與Adobe Analytics核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)的內建功能，將AEM和Adobe與Adobe Analytics標籤擴充功能整合，以收集Adobe Experience Manager Sites中某個頁面的相關資料。 Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)中的標籤和[Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)是用來建立規則，以將頁面資料傳送至Adobe Analytics。
+瞭解如何使用[AEM Sites使用者端資料層與Adobe Analytics核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant)的內建功能，將AEM和Adobe與Adobe Analytics標籤擴充功能整合，以收集Adobe Experience Manager Sites中某個頁面的相關資料。 Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=zh-Hant)中的標籤和[Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=zh-Hant)是用來建立規則，以將頁面資料傳送至Adobe Analytics。
 
 ## 您即將建置的內容 {#what-build}
 
@@ -40,9 +40,9 @@ ht-degree: 1%
 需要下列專案：
 
 * Experience Platform中的&#x200B;**標籤屬性**
-* **Adobe Analytics**&#x200B;測試/開發報表套裝ID與追蹤伺服器。 請參閱下列有關[建立報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)的檔案。
-* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)瀏覽器延伸模組。 本教學課程中的熒幕擷取畫面是從Chrome瀏覽器擷取。
-* （選用）已啟用[Adobe使用者端資料層的AEM網站](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 此教學課程使用公開的[WKND](https://wknd.site/us/en.html)網站，但歡迎您使用自己的網站。
+* **Adobe Analytics**&#x200B;測試/開發報表套裝ID與追蹤伺服器。 請參閱下列有關[建立報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=zh-Hant)的檔案。
+* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hant)瀏覽器延伸模組。 本教學課程中的熒幕擷取畫面是從Chrome瀏覽器擷取。
+* （選用）已啟用[Adobe使用者端資料層的AEM網站](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant#installation-activation)。 此教學課程使用公開的[WKND](https://wknd.site/us/en.html)網站，但歡迎您使用自己的網站。
 
 >[!NOTE]
 >
@@ -50,12 +50,12 @@ ht-degree: 1%
 
 ## 切換WKND網站的標籤環境
 
-[WKND](https://wknd.site/us/en.html)是面向公眾的網站，建置基礎為[開放原始碼專案](https://github.com/adobe/aem-guides-wknd)，設計作為參考和[AEM實作的教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
+[WKND](https://wknd.site/us/en.html)是面向公眾的網站，建置基礎為[開放原始碼專案](https://github.com/adobe/aem-guides-wknd)，設計作為參考和[AEM實作的教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)。
 
-您不必設定AEM環境及安裝WKND程式碼基底，而是可以使用Experience Platform Debugger將已上線的[WKND網站](https://wknd.site/us/en.html)切換&#x200B;**至&#x200B;*您的*標籤屬性。**&#x200B;不過，如果您的AEM網站已啟用[Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)，您就可以使用該網站。
+您不必設定AEM環境及安裝WKND程式碼基底，而是可以使用Experience Platform Debugger將已上線的[WKND網站](https://wknd.site/us/en.html)切換&#x200B;**至&#x200B;*您的*標籤屬性。**&#x200B;不過，如果您的AEM網站已啟用[Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant#installation-activation)，您就可以使用該網站。
 
-1. 登入Experience Platform並[建立Tag屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html) （如果尚未建立）。
-1. 確定已建立初始標籤JavaScript [資料庫](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library)並提升至標籤[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)。
+1. 登入Experience Platform並[建立Tag屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=zh-Hant) （如果尚未建立）。
+1. 確定已建立初始標籤JavaScript [資料庫](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=zh-Hant#create-a-library)並提升至標籤[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant)。
 1. 從已發佈程式庫的目的地標籤環境中複製JavaScript內嵌程式碼。
 
    ![複製標籤屬性內嵌程式碼](assets/collect-data-analytics/launch-environment-copy.png)
@@ -75,7 +75,7 @@ ht-degree: 1%
 
 ## 驗證WKND網站上的Adobe使用者端資料層
 
-[WKND參考專案](https://github.com/adobe/aem-guides-wknd)是以AEM核心元件建置，並且預設已啟用[Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。 接下來，確認Adobe使用者端資料層已啟用。
+[WKND參考專案](https://github.com/adobe/aem-guides-wknd)是以AEM核心元件建置，並且預設已啟用[Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant#installation-activation)。 接下來，確認Adobe使用者端資料層已啟用。
 
 1. 導覽至[WKND網站](https://wknd.site/us/en.html)。
 1. 開啟瀏覽器的開發人員工具，並導覽至&#x200B;**主控台**。 執行以下命令：
@@ -104,11 +104,11 @@ ht-degree: 1%
 
    若要將頁面資料傳送至Adobe Analytics，請使用資料層的`dc:title`、`xdm:language`和`xdm:template`等標準屬性。
 
-   如需詳細資訊，請參閱核心元件資料結構描述中的[頁面結構描述](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page)。
+   如需詳細資訊，請參閱核心元件資料結構描述中的[頁面結構描述](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant#page)。
 
    >[!NOTE]
    >
-   > 如果您沒有看到`adobeDataLayer` JavaScript物件？ 確定您的網站上已啟用[Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+   > 如果您沒有看到`adobeDataLayer` JavaScript物件？ 確定您的網站上已啟用[Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant#installation-activation)。
 
 ## 建立頁面載入規則
 
@@ -177,11 +177,11 @@ Adobe使用者端資料層是&#x200B;**事件導向**&#x200B;資料層。 載入
 
    `event`物件是從自訂事件中呼叫的`trigger()`方法傳遞。 在此，`component`是從自訂事件中的資料層`getState`衍生的目前頁面。
 
-1. 儲存變更並在標籤屬性中執行[組建](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以將程式碼提升至您AEM網站上使用的[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)。
+1. 儲存變更並在標籤屬性中執行[組建](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html?lang=zh-Hant)，以將程式碼提升至您AEM網站上使用的[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant)。
 
    >[!NOTE]
    >
-   > 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)將內嵌程式碼切換至&#x200B;**開發**&#x200B;環境可能很有用。
+   > 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hant)將內嵌程式碼切換至&#x200B;**開發**&#x200B;環境可能很有用。
 
 1. 導覽至您的AEM網站，然後開啟開發人員工具以檢視主控台。 重新整理頁面，您應該會看到主控台訊息已記錄：
 

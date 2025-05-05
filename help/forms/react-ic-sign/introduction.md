@@ -34,7 +34,7 @@ ht-degree: 1%
 使用案例需要下列專案才能運作：
 
 * 具有Forms附加套件的AEM伺服器
-* Acrobat Sign應用程式的[整合金鑰](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
+* Acrobat Sign應用程式的[整合金鑰](https://helpx.adobe.com/tw/sign/kb/how-to-create-an-integration-key.html)
 
 ## 後續步驟
 

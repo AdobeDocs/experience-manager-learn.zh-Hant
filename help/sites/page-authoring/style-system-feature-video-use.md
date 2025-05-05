@@ -34,4 +34,4 @@ Adobe Experience Manager的樣式系統可提供元件的視覺化變化，無�
 
 想要瞭解如何使用樣式系統進行開發？ 請檢視下列教學課程：
 
-* [使用樣式系統進行開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)
+* [使用樣式系統進行開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html?lang=zh-Hant)

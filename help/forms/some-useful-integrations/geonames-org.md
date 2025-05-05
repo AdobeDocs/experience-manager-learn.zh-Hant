@@ -53,13 +53,13 @@ OpenAPI Specification （前身為Swagger Specification）是REST API的API說�
 
 ## 建立資料來源
 
-若要將AEM/AEM Forms與協力廠商應用程式整合，我們必須在雲端服務設定中[建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)。 請使用[swagger檔案](assets/geonames-swagger-files.zip)建立您的資料來源。
+若要將AEM/AEM Forms與協力廠商應用程式整合，我們必須在雲端服務設定中[建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=zh-Hant)。 請使用[swagger檔案](assets/geonames-swagger-files.zip)建立您的資料來源。
 您需要建立2個資料來源（一個用於擷取所有國家/地區，另一個用於取得子元素）
 
 
 ## 建立表單資料模型
 
-AEM Forms資料整合提供直覺式使用者介面，可建立和使用[表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 讓表單資料模型以先前步驟建立的資料來源為基礎。 具有2個資料來源的表單資料模型
+AEM Forms資料整合提供直覺式使用者介面，可建立和使用[表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=zh-Hant)。 讓表單資料模型以先前步驟建立的資料來源為基礎。 具有2個資料來源的表單資料模型
 
 ![fdm](assets/geonames-fdm.png)
 

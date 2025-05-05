@@ -78,10 +78,10 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
 
 ## 其他資源
 
-* [AEM Sites編寫檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites開發檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-* [AEM Sites管理檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites部署檔案](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [AEM Sites編寫檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=zh-Hant)
+* [AEM Sites開發檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=zh-Hant)
+* [AEM Sites管理檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html?lang=zh-Hant)
+* [AEM Sites部署檔案](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html?lang=zh-Hant)
 * [AEM as a Cloud Service教學課程](/help/cloud-service/overview.md)
 * [AEM Assets教學課程](/help/assets/overview.md)
 * [AEM Forms教學課程](/help/forms/overview.md)

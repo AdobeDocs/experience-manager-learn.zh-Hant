@@ -175,7 +175,7 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 ## 伺服器陣列檔案設定
 
-完整的組態選項集說明檔案全部在這裡： [https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)
+完整的組態選項集說明檔案全部在這裡： [https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)
 
 我們將重點介紹其中幾個與快取排清相關的設定
 

@@ -24,7 +24,7 @@ ht-degree: 5%
 
 開發人員若想使用AEM SPA編輯器將現有的React型（或Next.js）遠端SPA擴充為可編輯的AEM內容，歡迎使用多部分教學課程。
 
-此教學課程以[WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)為基礎，這是一種React應用程式，它會透過AEM的GraphQL API使用AEM內容片段內容，但不會提供任何內容內嵌撰寫SPA內容。
+此教學課程以[WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant)為基礎，這是一種React應用程式，它會透過AEM的GraphQL API使用AEM內容片段內容，但不會提供任何內容內嵌撰寫SPA內容。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
@@ -47,7 +47,7 @@ ht-degree: 5%
 
 本教學課程需要下列內容：
 
-+ [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en)
++ [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=zh-Hant)
 + [Node.js v18](https://nodejs.org/en/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
@@ -65,7 +65,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
-> **需要協助設定您的本機開發環境嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **需要協助設定您的本機開發環境嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)。
 
 ## 1.設定AEM for SPA編輯器
 

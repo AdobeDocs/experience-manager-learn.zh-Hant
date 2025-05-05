@@ -85,20 +85,20 @@ AEM API具有套件內偏好設定，依偏好設定順序由下列Java™套件
 
 ### 查詢API
 
-AEM支援多種查詢語言。 三種主要語言為[JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html)、XPath和[AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)。
+AEM支援多種查詢語言。 三種主要語言為[JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html)、XPath和[AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=zh-Hant)。
 
 最重要的考量是在程式碼庫中維持一致的查詢語言，以降低複雜度和理解成本。
 
 所有查詢語言實際上都有相同的效能設定檔，因為[!DNL Apache Oak]會將其轉儲至JCR-SQL2以進行最終查詢執行，而且與JCR-SQL2的查詢時間本身相比，轉換時間可忽略不計。
 
-偏好的API是[AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)，這是最高級的抽象化，提供健全API來建構、執行和擷取查詢的結果，並提供下列專案：
+偏好的API是[AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=zh-Hant)，這是最高級的抽象化，提供健全API來建構、執行和擷取查詢的結果，並提供下列專案：
 
 * 簡單、引數化的查詢建構（模型化為Map的查詢引數）
-* 原生[Java™ API和HTTP API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
-* [AEM Query Debugger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)
-* [AEM述詞](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-predicate-reference.html)支援一般查詢需求
+* 原生[Java™ API和HTTP API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)
+* [AEM Query Debugger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=zh-Hant)
+* [AEM述詞](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-predicate-reference.html?lang=zh-Hant)支援一般查詢需求
 
-* 可擴充的API，允許開發自訂[查詢述詞](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
+* 可擴充的API，允許開發自訂[查詢述詞](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)
 * JCR-SQL2和XPath可透過[[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-)和[JCR API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)直接執行，分別傳回[[!DNL Sling] 資源](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html)或[JCR節點](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html)的結果。
 
 >[!CAUTION]
@@ -132,7 +132,7 @@ AEM支援多種查詢語言。 三種主要語言為[JCR-SQL2](https://docs.jbos
    * [排程器](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
    * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 
-* [服務使用者](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
+* [服務使用者](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html?lang=zh-Hant)
 
 ## JCR API
 
@@ -154,7 +154,7 @@ JCR本身是階層式/樹狀結構的NoSQL資料存放區，AEM會將其當作�
 
 ### JCR API的常見用法
 
-* [存取控制管理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
+* [存取控制管理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html?lang=zh-Hant)
 * [可授權管理（使用者/群組）](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/user/package-summary.html)
 * JCR觀察（接聽JCR事件）
 * 建立深層節點結構

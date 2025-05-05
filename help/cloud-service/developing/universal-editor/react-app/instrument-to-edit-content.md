@@ -178,7 +178,7 @@ export default App;
 
 ## 檢測React元件
 
-若要編輯WKND Teams React應用程式的內容（例如&#x200B;_團隊標題和團隊說明_），您必須檢測React元件。 檢測表示將相關資料屬性(`data-aue-*`)新增至您想要使用通用編輯器使其可編輯的HTML元素。 如需資料屬性的詳細資訊，請參閱[屬性和型別](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)。
+若要編輯WKND Teams React應用程式的內容（例如&#x200B;_團隊標題和團隊說明_），您必須檢測React元件。 檢測表示將相關資料屬性(`data-aue-*`)新增至您想要使用通用編輯器使其可編輯的HTML元素。 如需資料屬性的詳細資訊，請參閱[屬性和型別](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)。
 
 ### 定義可編輯的元素
 

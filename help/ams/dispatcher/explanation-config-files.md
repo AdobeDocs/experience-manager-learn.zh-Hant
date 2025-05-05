@@ -253,7 +253,7 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 當來自`/etc/httpd/conf.dispatcher.d/available_farms/`目錄的任何FILENAME_farm.any檔案被符號連結到`/etc/httpd/conf.dispatcher.d/enabled_farms/`目錄時，它們將被用於執行組態中。
 
-伺服器陣列檔案具有以[伺服器陣列](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms)的最上層區段為基礎的子包含，例如快取、clientheaders、篩選器、轉譯器和vhosts。
+伺服器陣列檔案具有以[伺服器陣列](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#defining-farms-farms)的最上層區段為基礎的子包含，例如快取、clientheaders、篩選器、轉譯器和vhosts。
 
 `FILENAME_farm.any`檔案會根據每個檔案需要包含在伺服器陣列檔案中的位置，為其包含include陳述式。  以下是`FILENAME_farm.any`檔案的語法範例，作為良好參考：
 

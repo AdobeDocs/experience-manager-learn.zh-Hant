@@ -39,7 +39,7 @@ ht-degree: 0%
 
    * **按一下滑鼠右鍵**&#x200B;並選取&#x200B;**「彎管頭>框架彎管頭選項…… >內容彎管頭>按比例填滿框架」**
 
-   [進一步瞭解框架彎管頭選項](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)，以及適合您的使用案例。
+   [進一步瞭解框架彎管頭選項](https://helpx.adobe.com/tw/indesign/using/frames-objects.html#fitting_objects_to_frames)，以及適合您的使用案例。
 
 5. 透過「就地貼上」，從頁面和頁面中的主版範本複製頁首（標誌和公司名稱）。
 

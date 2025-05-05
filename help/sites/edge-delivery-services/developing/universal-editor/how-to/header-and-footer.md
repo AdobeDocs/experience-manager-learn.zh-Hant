@@ -470,4 +470,4 @@ footer {
 
 此模式提供靈活且可維護的方法，用於實作全網站的導覽元件。
 
-如需更多最佳實務和進階技術，請參閱[通用編輯器檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。
+如需更多最佳實務和進階技術，請參閱[通用編輯器檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。

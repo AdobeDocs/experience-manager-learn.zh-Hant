@@ -93,4 +93,4 @@ AEM Style Systems有四個主要優點：
 
 如需詳細資訊，請檢視我們的[客戶成功網路研討會](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/)，與Will Brisbane和Joseph Van Buskirk一起進行。
 
-在[客戶成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html)中心瞭解更多策略和思想領導力。
+在[客戶成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html?lang=zh-Hant)中心瞭解更多策略和思想領導力。

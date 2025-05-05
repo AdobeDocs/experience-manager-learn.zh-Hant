@@ -29,10 +29,10 @@ AEM網站的頁面編輯器是建立和編輯網頁內容的強大工具。 頁�
 >[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
 
 
-請參閱[AEM檔案，以取得頁面編輯器功能的完整概觀](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)。
+請參閱[AEM檔案，以取得頁面編輯器功能的完整概觀](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html?lang=zh-Hant)。
 
 ## 其他資源 {#additional-resources}
 
-* [AEM頁面編輯器檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)
-* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [網站編寫使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM頁面編輯器檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html?lang=zh-Hant)
+* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=zh-Hant)
+* [網站編寫使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=zh-Hant)

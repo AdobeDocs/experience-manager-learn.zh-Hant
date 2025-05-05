@@ -21,7 +21,7 @@ ht-degree: 1%
 
 本指南將逐步引導您建立自訂流程步驟，以在Adobe Experience Manager中填入具有附件和附件名稱的「陣列清單」型別清單變數。 這些變數對於「傳送電子郵件」工作流程元件至關重要。
 
-如果您不熟悉如何建立OSGi套件，請依照以下[指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)。
+如果您不熟悉如何建立OSGi套件，請依照以下[指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=zh-Hant)。
 
 自訂流程步驟中的程式碼會執行下列動作：
 

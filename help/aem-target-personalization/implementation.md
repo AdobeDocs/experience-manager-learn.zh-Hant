@@ -22,7 +22,7 @@ ht-degree: 1%
 在本節中，我們將討論如何針對不同案例使用Adobe Target設定Adobe Experience Manager Sites。 根據您的情境和組織需求。
 
 * **新增Adobe Target JavaScript資料庫（所有案例均需要）**
-對於在AEM上託管的網站，您可以使用Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)中的標籤將Target資料庫新增至您的網站。 標籤提供一種簡單的方式來部署及管理所有必要的標籤，以便支援相關客戶體驗。
+對於在AEM上託管的網站，您可以使用Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=zh-Hant)中的標籤將Target資料庫新增至您的網站。 標籤提供一種簡單的方式來部署及管理所有必要的標籤，以便支援相關客戶體驗。
 * **新增Adobe TargetCloud Service（體驗片段案例所需）**
 如果是AEM客戶，想使用體驗片段選件在Adobe Target中建立活動，您需要使用舊版Cloud Service整合Adobe Target與AEM。 從AEM推送體驗片段做為HTML/JSON選件至Target，以及保持選件與AEM同步時，需要這項整合。 *實作案例1需要此整合。*
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 #### 設定AEM Author和Publish例項
 
-1. 取得[AEM Quickstart Jar的復本和授權。](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingtheSoftware)
+1. 取得[AEM Quickstart Jar的復本和授權。](https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/deploy.html#GettingtheSoftware)
 2. 在電腦上建立檔案夾結構，如下所示：
    ![資料夾結構](assets/implementation/aem-setup-1.png)
 3. 將Quickstart jar重新命名為`aem-author-p4502.jar`，並將其放在`/author`目錄下。 在`/author`目錄下新增`license.properties`檔案。

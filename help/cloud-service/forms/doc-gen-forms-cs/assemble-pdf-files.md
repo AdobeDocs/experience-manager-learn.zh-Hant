@@ -20,7 +20,7 @@ ht-degree: 0%
 # 使用叫用DDX端點操作PDF檔案
 
 
-下一步是使用必要的引數向端點進行HTTP POST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定。embedFonts屬性是用來在產生的pdf中嵌入自訂字型。 請依照[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html)中的說明將自訂字型部署至Forms雲端執行個體。 屬性是在options.json資源檔案中指定。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
+下一步是使用必要的引數向端點進行HTTP POST呼叫。 範本和資料檔會以資源檔的形式提供。 產生的pdf屬性是透過請求中的選項引數指定。embedFonts屬性是用來在產生的pdf中嵌入自訂字型。 請依照[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=zh-Hant)中的說明將自訂字型部署至Forms雲端執行個體。 屬性是在options.json資源檔案中指定。 由於端點具有權杖型驗證，因此我們會在請求標頭中傳遞存取權杖。
 
 下列程式碼是用來將資料與範本合併，以產生pdf
 

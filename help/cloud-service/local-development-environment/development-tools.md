@@ -100,7 +100,7 @@ $ xcode-select --install
 
 ## 安裝Git
 
-[Git](https://git-scm.com/)是[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html)使用的原始檔控制管理系統，因此是開發所需。
+[Git](https://git-scm.com/)是[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html?lang=zh-Hant)使用的原始檔控制管理系統，因此是開發所需。
 
 >[!BEGINTABS]
 
@@ -180,7 +180,7 @@ Apache Maven是開放原始碼Java命令列工具，用於建置從AEM專案Mave
 
 + AEM as a Cloud Services的尾部記錄
 + 從CLI管理Cloud Manager管道
-+ 部署至[AEM快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
++ 部署至[AEM快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=zh-Hant)
 
 ### 安裝Adobe I/O CLI
 
@@ -217,7 +217,7 @@ Adobe I/O Cloud Manager外掛程式可讓aio CLI透過`aio cloudmanager`命令�
 
 ### 設定AEM快速開發環境外掛程式{#rde}
 
-AEM快速開發環境外掛程式可讓aio CLI透過`aio aem:rde`命令與AEM as a Cloud Service [快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)互動。
+AEM快速開發環境外掛程式可讓aio CLI透過`aio aem:rde`命令與AEM as a Cloud Service [快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=zh-Hant)互動。
 
 1. 執行`aio plugins:install @adobe/aio-cli-plugin-aem-rde`以安裝[AEM快速開發環境外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde)。
 
@@ -254,9 +254,9 @@ Visual Studio Code是前端開發人員建立前端程式碼、JavaScript、CSS�
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__&#x200B;是Java開發的熱門IDE，可支援Adobe提供的&#x200B;__[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)__&#x200B;外掛程式，提供IDE中的GUI以供撰寫及同步JCR內容與本機AEM執行個體。
+__[Eclipse IDE](https://www.eclipse.org/ide/)__&#x200B;是Java開發的熱門IDE，可支援Adobe提供的&#x200B;__[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=zh-Hant)__&#x200B;外掛程式，提供IDE中的GUI以供撰寫及同步JCR內容與本機AEM執行個體。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [下載Eclipse](https://www.eclipse.org/ide/)
-+ [下載Eclipse開發工具](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
++ [下載Eclipse開發工具](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=zh-Hant)

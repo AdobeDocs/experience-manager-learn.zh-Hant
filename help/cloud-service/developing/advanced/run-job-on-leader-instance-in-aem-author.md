@@ -136,7 +136,7 @@ public class SimpleJobConsumerImpl implements JobConsumer {
 
 如果您希望工作在AEM Author服務上只執行一次，請新增如下所述的[工作佇列設定](#how-to-run-a-job-on-the-leader-instance)。
 
-您可以在[Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager)中檢閱AEM Author服務的記錄檔，以驗證它。
+您可以在[Cloud Manager](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager)中檢閱AEM Author服務的記錄檔，以驗證它。
 
 ![由所有執行個體處理的工作](./assets/run-job-once/job-processed-by-all-instances.png)
 

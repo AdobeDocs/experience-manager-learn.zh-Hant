@@ -21,7 +21,7 @@ ht-degree: 0%
 
 您可以使用批次API從範本產生多個互動式通訊。 範本是沒有任何資料的互動式通訊。 Batch API將資料與範本結合，以產生互動式通訊。 此API適合用於大量生產互動式通訊。 例如，電話帳單、多個客戶的信用卡對帳單。
 
-[深入瞭解批次產生API](https://experienceleague.adobe.com/docs/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html)
+[深入瞭解批次產生API](https://experienceleague.adobe.com/docs/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html?lang=zh-Hant)
 
 本文提供使用批次API產生互動式通訊檔案的資產範例。
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 ## 使用REST請求產生批次
 
-您可以透過REST要求叫用[批次API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)。 您可以公開其他應用程式的REST端點，以叫用API來產生檔案。
+您可以透過REST要求叫用[批次API](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/index.html)。 您可以公開其他應用程式的REST端點，以叫用API來產生檔案。
 提供的資產範例會公開REST端點，以用於產生互動式通訊檔案。 此servlet接受下列引數：
 
 * fileName — 資料檔案在檔案系統上的位置。

@@ -71,7 +71,7 @@ AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和Parsys�
 + [以不同方式思考AEM as a Cloud Service](./introduction.md)
 + [存放庫現代化](./repository-modernization.md)
 + [可變和不可變的內容](../../developing/basics/mutable-immutable.md)
-+ [AEM專案結構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)
++ [AEM專案結構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=zh-Hant)
 
 此外，請確定您已完成前一個實作練習：
 
@@ -103,7 +103,7 @@ AEM現代化工具會自動轉換由舊版靜態範本、基礎元件和Parsys�
 
 + [下載AEM現代化工具](https://github.com/adobe/aem-modernize-tools/releases/latest)
 + [AEM現代化工具檔案](https://opensource.adobe.com/aem-modernize-tools/)
-+ [AEM Gems — 介紹AEM現代化套件](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
++ [AEM Gems — 介紹AEM現代化套件](https://helpx.adobe.com/tw/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
 
 1. 在本機AEM SDK上部署新現代化的wknd舊版網站。 AEM ASK可從這裡下載：
    + [軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html)。

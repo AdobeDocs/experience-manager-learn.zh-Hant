@@ -50,7 +50,7 @@ AEM as a Cloud Service是雲端原生運用AEM應用程式的方式，因此會�
 
 ## Adobe IMS 產品設定檔
 
-[&#128279;](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)在[Adobe的AdminConsole](https://adminconsole.adobe.com)中管理的Adobe IMS產品設定檔是提供[Adobe IMS使用者](#adobe-ims-users)登入AEM Author服務基本存取層級存取權的機械。
+[&#128279;](https://helpx.adobe.com/tw/enterprise/using/manage-permissions-and-roles.html)在[Adobe的AdminConsole](https://adminconsole.adobe.com)中管理的Adobe IMS產品設定檔是提供[Adobe IMS使用者](#adobe-ims-users)登入AEM Author服務基本存取層級存取權的機械。
 
 + __AEM使用者__&#x200B;產品設定檔可讓使用者透過AEM貢獻者群組的成員資格，以唯讀方式存取AEM。
 + __AEM管理員__&#x200B;產品設定檔可提供使用者對AEM的完整管理存取權。
@@ -74,5 +74,5 @@ Adobe Experience Manager 以 Adobe IMS 使用者、使用者群組和產品設�
 下列檔案涵蓋[Adobe Admin Console](https://adminconsole.adobe.com)特定的詳細資訊和顧慮，可能有助於您更深入瞭解Adobe Admin Console，並使用它來管理使用者和跨多個Experience Cloud產品的存取權。
 
 + [Adobe Admin Console身分總覽](https://helpx.adobe.com/tw/enterprise/using/identity.html)
-+ [Adobe Admin Console管理員角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)
-+ [Adobe Admin Console開發人員角色](https://helpx.adobe.com/enterprise/using/manage-developers.html)
++ [Adobe Admin Console管理員角色](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)
++ [Adobe Admin Console開發人員角色](https://helpx.adobe.com/tw/enterprise/using/manage-developers.html)

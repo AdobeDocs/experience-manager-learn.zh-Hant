@@ -30,5 +30,5 @@ AEM 6.3 Forms匯入的功能可讓使用者使用以hobbes.js架構為基礎建�
 >
 >**有用的連結**
 >
->* [Calvin SDK名稱空間](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
->* [Hobbes.js檔案](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
+>* [Calvin SDK名稱空間](https://helpx.adobe.com/tw/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
+>* [Hobbes.js檔案](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)

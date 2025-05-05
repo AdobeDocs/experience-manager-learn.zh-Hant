@@ -32,5 +32,5 @@ ht-degree: 75%
 
 ## 其他資源
 
-+ [在Admin Console檔案中入門使用者](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#onboarding-users-in-admin-console)
++ [在Admin Console檔案中入門使用者](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=zh-Hant#onboarding-users-in-admin-console)
 + [Adobe Admin Console身分識別總覽檔案](https://helpx.adobe.com/tw/enterprise/using/identity.html)

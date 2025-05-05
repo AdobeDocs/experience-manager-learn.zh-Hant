@@ -22,7 +22,7 @@ ht-degree: 1%
 
 # 定義規則
 
-在Tags屬性中，我們建立了2個新的[規則](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) （**欄位驗證錯誤和FormSubmit**）。
+在Tags屬性中，我們建立了2個新的[規則](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html?lang=zh-Hant) （**欄位驗證錯誤和FormSubmit**）。
 
 ![最適化表單](assets/rules.png)
 
@@ -54,7 +54,7 @@ Adobe Analytics — 設定變數如下
 Adobe Analytics — 設定變數的設定如下。
 ![form-submit-rule-set-variables](assets/form-submit-set-variable.png)
 
-當您準備好測試您的標籤程式碼時，請[使用發佈流程發佈您對標籤所做的變更](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html)。
+當您準備好測試您的標籤程式碼時，請[使用發佈流程發佈您對標籤所做的變更](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html?lang=zh-Hant)。
 
 ## 後續步驟
 

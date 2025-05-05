@@ -31,7 +31,7 @@ ht-degree: 0%
 ![表單檔案](assets/fragment-folder-structure-ui.png)
 
 
-* 輸出服務 — 通常此服務用於合併xml資料與xdp範本或pdf以產生平面化pdf。 如需詳細資訊，請參閱輸出服務的[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)。 在此範例中，我們使用crx存放庫中的片段。
+* 輸出服務 — 通常此服務用於合併xml資料與xdp範本或pdf以產生平面化pdf。 如需詳細資訊，請參閱輸出服務的[javadoc](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)。 在此範例中，我們使用crx存放庫中的片段。
 
 
 下列程式碼是用來在PDF檔案中包含片段

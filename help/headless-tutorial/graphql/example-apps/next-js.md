@@ -73,7 +73,7 @@ Next.js的設計可連線至&#x200B;__AEM Publish__&#x200B;服務，並存取未
    AEM_AUTH_PASSWORD=password-for-the-aem-user-account
    ```
 
-   若要使用[AEM as a Cloud Service本機開發權杖](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#generating-the-access-token)，請設定`AEM_AUTH_METHOD=dev-token`，並在`AEM_AUTH_DEV_TOKEN`屬性中提供完整的開發權杖值。
+   若要使用[AEM as a Cloud Service本機開發權杖](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=zh-Hant#generating-the-access-token)，請設定`AEM_AUTH_METHOD=dev-token`，並在`AEM_AUTH_DEV_TOKEN`屬性中提供完整的開發權杖值。
 
    ```plain
    ...

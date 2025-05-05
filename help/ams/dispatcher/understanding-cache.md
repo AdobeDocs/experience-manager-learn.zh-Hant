@@ -55,7 +55,7 @@ Dispatcher控制任何伺服器陣列檔案的`/cache {`區段中符合快取條
 ```
 
 
-建立要快取或不快取的規則時，請參閱檔案[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+建立要快取或不快取的規則時，請參閱檔案[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#configuring-the-dispatcher-cache-cache)
 
 
 ## 快取作者
@@ -336,6 +336,6 @@ Dispatcher模組的較新功能是針對快取的專案以`Time To Live (TTL)`�
 
 我們希望讓已發佈的網站儘可能貪婪，並快取所有內容。
 
-如果快取時存在中斷體驗的元素，您可以新增規則以移除快取該專案的選項。 如上述範例所示，不應快取csrf代號且將其排除。 您可以在[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)找到撰寫這些規則的詳細資料
+如果快取時存在中斷體驗的元素，您可以新增規則以移除快取該專案的選項。 如上述範例所示，不應快取csrf代號且將其排除。 您可以在[這裡](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#configuring-the-dispatcher-cache-cache)找到撰寫這些規則的詳細資料
 
 [下一個 — >使用和瞭解變數](./variables.md)

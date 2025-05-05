@@ -122,5 +122,5 @@ body {
 ## 其他資源 {#additional-resources}
 
 * [下載we.Retail範例網站](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
-* [使用AEM使用者端資料庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [使用AEM使用者端資料庫](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [較少CSS檔案](https://lesscss.org/)

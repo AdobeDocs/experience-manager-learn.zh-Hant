@@ -118,7 +118,7 @@ mvn clean install -PautoInstallSinglePackage
 ## 將程式碼推送到Cloud Manager並部署程式碼
 
 在本地執行個體上驗證代碼後，將代碼推送至您的雲端執行個體。
-將變更推送至本機Git存放庫，然後推送至Cloud Manager存放庫。 您可以參考[Git設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html)、[將AEM專案推送到Cloud Manager存放庫](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html)以及[部署到開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html)文章。
+將變更推送至本機Git存放庫，然後推送至Cloud Manager存放庫。 您可以參考[Git設定](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html?lang=zh-Hant)、[將AEM專案推送到Cloud Manager存放庫](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html?lang=zh-Hant)以及[部署到開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html?lang=zh-Hant)文章。
 
 成功執行管道後，您應該能夠將表單的提交動作關聯到自訂提交處理常式，如下方熒幕擷取所示
 ![送出動作](./assets/configure-submit-action.png)

@@ -42,7 +42,7 @@ ht-degree: 0%
 
 ## 建立新規則
 
-在&#x200B;**標籤屬性**&#x200B;檢視中按一下新建立的標籤屬性，以開啟該屬性。 在「_我最近的活動_」標題下，您應該會看到核心擴充功能已新增至其中。 核心標籤擴充功能是預設的擴充功能，並提供頁面載入、瀏覽器、表單和其他事件型別等基本事件型別。如需詳細資訊，請參閱[核心擴充功能概觀](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html)。
+在&#x200B;**標籤屬性**&#x200B;檢視中按一下新建立的標籤屬性，以開啟該屬性。 在「_我最近的活動_」標題下，您應該會看到核心擴充功能已新增至其中。 核心標籤擴充功能是預設的擴充功能，並提供頁面載入、瀏覽器、表單和其他事件型別等基本事件型別。如需詳細資訊，請參閱[核心擴充功能概觀](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=zh-Hant)。
 
 規則可讓您指定訪客與您的AEM網站互動時應該發生的事。 為了簡單起見，我們將兩則訊息記錄到瀏覽器主控台，以示範資料收集標籤整合如何將JavaScript程式碼插入您的AEM網站，而不需要更新AEM專案程式碼。
 
@@ -93,4 +93,4 @@ Tag屬性&#x200B;_規則_&#x200B;是使用程式庫啟動，請將程式庫視�
 
 ## 其他資源 {#additional-resources}
 
-* [建立標籤屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)
+* [建立標籤屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=zh-Hant)

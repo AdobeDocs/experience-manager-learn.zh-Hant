@@ -43,10 +43,10 @@ BPA套件應安裝在複製的AEM 6.x生產環境中。 BPA會產生一份報表
 在嘗試實作練習之前，請確定您已觀看並瞭解上述影片和下列資料：
 
 + [以不同方式思考AEM as a Cloud Service](./introduction.md)
-+ [什麼是AEM as a Cloud Service？](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=en)
-+ [Assets as a Cloud Service 架構](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=en)
-+ [可變和不可變的內容](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=en)
-+ [為AEM as a Cloud Service和AEM 6.x開發時的差異](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#developing)
++ [什麼是AEM as a Cloud Service？](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=zh-Hant)
++ [Assets as a Cloud Service 架構](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=zh-Hant)
++ [可變和不可變的內容](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=zh-Hant)
++ [為AEM as a Cloud Service和AEM 6.x開發時的差異](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=zh-Hant#developing)
 
 <table style="border-width:0">
     <tr>

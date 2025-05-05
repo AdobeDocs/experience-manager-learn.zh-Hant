@@ -65,7 +65,7 @@ ht-degree: 0%
 
 1. **更新CDN設定檔**：使用必要的設定更新您AEM專案中的`cdn.yaml`檔案。 這些設定會新增為規則，並遵循規則語法。 規則三個主要元件： `name`、`when`和`action`。
 
-2. **部署CDN設定檔案**：使用Cloud Manager設定管道部署更新的`cdn.yaml`檔案。 如需詳細資訊，請參閱[透過Cloud Manager部署規則](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
+2. **部署CDN設定檔案**：使用Cloud Manager設定管道部署更新的`cdn.yaml`檔案。 如需詳細資訊，請參閱[透過Cloud Manager部署規則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
 
 ### 範例
 
@@ -91,13 +91,13 @@ data:
 
 [使用流量篩選規則保護網站](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
-[設定並部署HTTP標頭驗證CDN規則](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
+[設定並部署HTTP標頭驗證CDN規則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
 
-[如何清除CDN快取](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
+[如何清除CDN快取](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
 
-[設定CDN錯誤頁面](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
+[設定CDN錯誤頁面](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
 
-[在CDN設定流量](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
+[在CDN設定流量](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
 
-[設定CDN認證和驗證](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
+[設定CDN認證和驗證](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 

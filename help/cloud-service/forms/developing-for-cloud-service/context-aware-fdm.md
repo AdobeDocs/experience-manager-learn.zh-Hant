@@ -27,7 +27,7 @@ ht-degree: 7%
 
 ## 建立環境變數
 
-可以透過 Cloud Manager 設定和管理標準環境變數。它們提供給執行階段環境並且可以在 OSGi 設定中使用。[根據正在變更的內容，環境變數可以是特定環境的值或環境秘密。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+可以透過 Cloud Manager 設定和管理標準環境變數。它們提供給執行階段環境並且可以在 OSGi 設定中使用。[根據正在變更的內容，環境變數可以是特定環境的值或環境秘密。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=zh-Hant)
 
 
 

@@ -24,7 +24,7 @@ Marketo是Adobe的一部分，提供行銷自動化軟體，其著重於以帳�
 
 現在，我們可以運用AEM Forms的表單資料模型，將AEM Form與Marketo緊密整合。
 
-[進一步瞭解表單資料模型](https://helpx.adobe.com/experience-manager/6-5/forms/using/data-integration.html)
+[進一步瞭解表單資料模型](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/data-integration.html)
 
 Marketo公開REST API，允許從遠端執行系統的許多功能。 從建立程式到大量潛在客戶匯入，有許多選項可讓您對Marketo執行個體進行微調控制。 使用表單資料模型時，可輕鬆將AEM Forms與Marketo整合。
 

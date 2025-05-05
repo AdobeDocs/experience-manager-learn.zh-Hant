@@ -20,7 +20,7 @@ ht-degree: 0%
 
 請依照下列步驟，將此使用案例用於本機AEM執行個體。
 
-* [部署Zip檔案中包含的DevelopingWithServiceUser組合](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)。
+* [部署Zip檔案中包含的DevelopingWithServiceUser組合](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=zh-Hant)。
 
 * 在Apache Sling服務使用者對應程式服務&#x200B;**DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**&#x200B;中，使用[configMgr](http://localhost:4502/system/console/configMgr)新增下列專案。
 

@@ -134,4 +134,4 @@ Adobe身為客戶體驗的領導者，瞭解確保您擁有合適的人才和治
 
 如需有關治理與人員配置模型與原型的更深入討論，請聆聽這個一小時的小組討論： [角色原型和為 [!DNL AEM Assets] 和 [!DNL Sites]建立營運架構](https://adobecustomersuccess.adobeconnect.com/p8ml5nmy0758mp4/)
 
-在[客戶成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html)中心瞭解更多策略和思想領導力。
+在[客戶成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html?lang=zh-Hant)中心瞭解更多策略和思想領導力。

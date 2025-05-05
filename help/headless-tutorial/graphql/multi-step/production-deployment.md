@@ -61,7 +61,7 @@ AEM Headless 應用程式最常見的部署模式是讓應用程式的生產版�
 
 目前有一個SDK執行個體在&#x200B;**作者**&#x200B;模式中執行。 SDK也可以在&#x200B;**發佈**&#x200B;模式下啟動，以模擬AEM發佈環境。
 
-如需設定本機開發環境[的詳細指南，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=en#local-development-environment-set-up)。
+如需設定本機開發環境[的詳細指南，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant#local-development-environment-set-up)。
 
 1. 在您的本機檔案系統上，建立專用資料夾以安裝發佈執行個體，亦即名為`~/aem-sdk/publish`。
 1. 複製前幾章中用於Author執行個體的Quickstart jar檔案，並將其貼到`publish`目錄中。 或者，導覽至[軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)，下載最新的SDK並解壓縮Quickstart jar檔案。
@@ -312,7 +312,7 @@ React應用程式可使用webpack伺服器啟動，但這僅適用於開發。 �
 1. 啟動作者執行個體（如果尚未啟動），並瀏覽至[http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)的封裝管理員
 1. 下載套件[EnableReplicationAgent.zip](./assets/publish-deployment/EnableReplicationAgent.zip)，並使用封裝管理員進行安裝。
 
-   此套件會安裝可讓作者執行個體將內容發佈到發佈執行個體的設定。 您可在此找到[此設定的手動步驟](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en#content-distribution)。
+   此套件會安裝可讓作者執行個體將內容發佈到發佈執行個體的設定。 您可在此找到[此設定的手動步驟](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=zh-Hant#content-distribution)。
 
    >[!NOTE]
    >
@@ -408,7 +408,7 @@ AEM預設為安全狀態，不允許非AEM的Web屬性進行使用者端呼叫�
 
 如需內容片段和GraphQL的詳細資訊，請參閱下列資源：
 
-* 使用內容片段搭配GraphQL的[Headless內容傳遞](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html)
-* [與內容片段搭配使用的 AEM GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
-* [權杖型驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en#authentication)
-* [將程式碼部署至AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=en#cloud-manager)
+* 使用內容片段搭配GraphQL的[Headless內容傳遞](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html?lang=zh-Hant)
+* [與內容片段搭配使用的 AEM GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html?lang=zh-Hant)
+* [權杖型驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hant#authentication)
+* [將程式碼部署至AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=zh-Hant#cloud-manager)

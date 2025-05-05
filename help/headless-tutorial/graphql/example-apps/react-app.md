@@ -28,7 +28,7 @@ ht-degree: 1%
 
 在GitHub[&#128279;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)上檢視原始程式碼
 
-提供[完整的逐步教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)，說明此React應用程式的建置方式。
+提供[完整的逐步教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hant)，說明此React應用程式的建置方式。
 
 ## 先決條件 {#prerequisites}
 
@@ -41,8 +41,8 @@ ht-degree: 1%
 
 React應用程式可與下列AEM部署選項搭配使用。 所有部署都需要安裝[WKND網站v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest)。
 
-+ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 使用[AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)進行本機設定
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=zh-Hant)
++ 使用[AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)進行本機設定
    + 需要[JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p=list&amp;p.offset=limit&amp;p.offset=0&amp;p.limit=14&amp;p.limit=144)
 
 React應用程式的設計是要連線至&#x200B;__AEM Publish__&#x200B;環境，不過，如果React應用程式的設定中有提供驗證，則它可以從AEM Author取得內容。
@@ -314,4 +314,4 @@ React應用程式使用兩個檢視，在網頁體驗中呈現冒險資料。
 
 ### 跨原始資源共用(CORS)
 
-此React應用程式仰賴在目標AEM環境上執行的AEM型CORS設定，並假設React應用程式以開發模式在`http://localhost:3000`上執行。  請檢閱[AEM Headless部署檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa.html)，以取得如何設定和設定CORS的詳細資訊。
+此React應用程式仰賴在目標AEM環境上執行的AEM型CORS設定，並假設React應用程式以開發模式在`http://localhost:3000`上執行。  請檢閱[AEM Headless部署檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa.html?lang=zh-Hant)，以取得如何設定和設定CORS的詳細資訊。

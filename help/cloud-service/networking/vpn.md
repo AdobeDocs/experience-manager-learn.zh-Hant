@@ -26,21 +26,21 @@ ht-degree: 1%
 >
 >您可以透過Cloud Manager UI或使用API呼叫來設定VPN和連線埠轉送。 本教學課程著重於API方法。
 >
->如果您偏好使用UI，請參閱[設定AEM as a Cloud Service的進階網路](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+>如果您偏好使用UI，請參閱[設定AEM as a Cloud Service的進階網路](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 ## 什麼是虛擬私人網路？
 
-虛擬私人網路(VPN)可讓AEM as a Cloud Service客戶將Cloud Manager計畫內的&#x200B;**AEM環境**&#x200B;連線至現有的[支援](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)個VPN。 VPN可在AEM as a Cloud Service與客戶網路內的服務之間提供安全且受控制的連線。
+虛擬私人網路(VPN)可讓AEM as a Cloud Service客戶將Cloud Manager計畫內的&#x200B;**AEM環境**&#x200B;連線至現有的[支援](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)個VPN。 VPN可在AEM as a Cloud Service與客戶網路內的服務之間提供安全且受控制的連線。
 
-Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別。 在執行下列命令之前，請確定虛擬私人網路是您AEM as a Cloud Service最[適當的網路基礎建設型別](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別。 在執行下列命令之前，請確定虛擬私人網路是您AEM as a Cloud Service最[適當的網路基礎建設型別](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 >[!NOTE]
 >
->請注意，不支援將組建環境從Cloud Manager連線至VPN。 如果您必須從私人存放庫存取二進位成品，您必須使用公用網際網路[上可用的URL （如此處](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project)所述）來設定安全且受密碼保護的存放庫。
+>請注意，不支援將組建環境從Cloud Manager連線至VPN。 如果您必須從私人存放庫存取二進位成品，您必須使用公用網際網路[上可用的URL （如此處](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project)所述）來設定安全且受密碼保護的存放庫。
 
 >[!MORELIKETHIS]
 >
-> 閱讀AEM as a Cloud Service [進階網路組態檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)，以取得有關虛擬私人網路的詳細資訊。
+> 閱讀AEM as a Cloud Service [進階網路組態檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)，以取得有關虛擬私人網路的詳細資訊。
 
 ## 先決條件
 
@@ -55,13 +55,13 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 + Cloud Manager環境ID
 + **路由式**&#x200B;虛擬私人網路，可存取所有必要的連線引數。
 
-如需詳細資訊，[請檢閱如何設定、設定和取得Cloud Manger API認證](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用這些認證進行Cloud Manager API呼叫。
+如需詳細資訊，[請檢閱如何設定、設定和取得Cloud Manger API認證](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用這些認證進行Cloud Manager API呼叫。
 
 >[!IMPORTANT]
 >
 >如果您偏好程式化方法&#x200B;*，此教學課程會使用`curl`來進行Cloud Manager API設定 —*。 提供的`curl`命令採用Linux®或macOS語法。 如果使用Windows命令提示字元，請將`\`分行符號取代為`^`。
 >
->或者，您也可以透過Cloud Manager UI完成相同工作。 *如果您偏好使用UI方法*，請參閱[設定AEM as a Cloud Service的進階網路](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+>或者，您也可以透過Cloud Manager UI完成相同工作。 *如果您偏好使用UI方法*，請參閱[設定AEM as a Cloud Service的進階網路](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 ## 為每個程式啟用虛擬私人網路
 
@@ -113,7 +113,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 1. 首先，使用Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業來決定需要進階網路的地區。 進行後續Cloud Manager API呼叫需要`region name`。 通常會使用生產環境所在的區域。
 
-   在[環境的詳細資料](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)底下的[Cloud Manager](https://my.cloudmanager.adobe.com)中尋找您的AEM as a Cloud Service環境地區。 Cloud Manager中顯示的地區名稱可以[對應到Cloud Manager API中使用的地區代碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments)。
+   在[環境的詳細資料](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)底下的[Cloud Manager](https://my.cloudmanager.adobe.com)中尋找您的AEM as a Cloud Service環境地區。 Cloud Manager中顯示的地區名稱可以[對應到Cloud Manager API中使用的地區代碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments)。
 
    __listRegions HTTP要求__
 
@@ -294,7 +294,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 >[!TIP]
 >
-> 請參閱AEM as a Cloud Service的虛擬私人網路檔案，以取得[完整的路由規則集](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+> 請參閱AEM as a Cloud Service的虛擬私人網路檔案，以取得[完整的路由規則集](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 #### 程式碼範例
 
@@ -362,8 +362,8 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 <table><tr>
    <td>
-      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list"><img alt="套用IP允許清單" src="./assets/code_examples__vpn-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list">套用IP允許清單</a></strong></div>
+      <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list"><img alt="套用IP允許清單" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list">套用IP允許清單</a></strong></div>
       <p>
             設定IP允許清單，以便只有VPN流量可以存取AEM。
       </p>

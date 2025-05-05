@@ -54,7 +54,7 @@ Cloud Manager和Cloud Manager計畫的簡介。
 
 ## 支援材料
 
-* [Cloud Manager使用手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
-* [下載程式碼掃描 [!DNL SonarQube] 規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)
+* [Cloud Manager使用手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hant)
+* [下載程式碼掃描 [!DNL SonarQube] 規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html?lang=zh-Hant)
    * 連結區段&#x200B;*底部有* XLSX可用
 * [[!DNL SonarQube] Java™規則索引](https://rules.sonarsource.com/java/)

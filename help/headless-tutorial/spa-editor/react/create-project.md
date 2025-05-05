@@ -64,7 +64,7 @@ ht-degree: 1%
    >
    > 如果目標為AEM 6.5.5+會將`aemVersion="cloud"`取代為`aemVersion="6.5.5"`。 如果目標為6.4.8+，請使用`aemVersion="6.4.8"`。
 
-   注意`frontendModule=react`屬性。 這會告訴AEM專案原型使用要與AEM SPA編輯器搭配使用的啟動程式[React程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)來啟動專案。 屬性（如`appTitle`、`appId`、`artifactId`和`groupId`）可用來識別專案和用途。
+   注意`frontendModule=react`屬性。 這會告訴AEM專案原型使用要與AEM SPA編輯器搭配使用的啟動程式[React程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=zh-Hant)來啟動專案。 屬性（如`appTitle`、`appId`、`artifactId`和`groupId`）可用來識別專案和用途。
 
    您可以在此處[&#128279;](https://github.com/adobe/aem-project-archetype#available-properties)找到設定專案的可用屬性完整清單。
 
@@ -89,7 +89,7 @@ ht-degree: 1%
        |--- .gitignore
    ```
 
-   每個資料夾代表一個單獨的Maven模組。 在本教學課程中，我們將主要使用`ui.frontend`模組，即React應用程式。 有關個別模組的更多詳細資訊，請參閱[AEM專案原型檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)。
+   每個資料夾代表一個單獨的Maven模組。 在本教學課程中，我們將主要使用`ui.frontend`模組，即React應用程式。 有關個別模組的更多詳細資訊，請參閱[AEM專案原型檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)。
 
 ## 部署和建置專案
 

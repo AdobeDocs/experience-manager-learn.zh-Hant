@@ -43,7 +43,7 @@ Asset Compute背景工作在`renditionCallback(...)`函式中實作Asset Compute
 1. Asset Compute Worker會將新轉譯的二進位資料儲存至`rendition.path`。
 1. 寫入至`rendition.path`的二進位資料會透過Asset Compute SDK傳輸至AEM Author Service，並公開為&#x200B;__(4a)__&#x200B;文字轉譯，而&#x200B;__(4b)__&#x200B;則持續儲存至資產的中繼資料節點。
 
-上圖列出了Asset Compute開發人員面臨的問題以及Asset Compute背景工作呼叫的邏輯流程。 好奇的是，有Asset Compute執行的[內部詳細資料](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html)可供使用，但只能依賴公開的Asset Compute SDK API合約。
+上圖列出了Asset Compute開發人員面臨的問題以及Asset Compute背景工作呼叫的邏輯流程。 好奇的是，有Asset Compute執行的[內部詳細資料](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html?lang=zh-Hant)可供使用，但只能依賴公開的Asset Compute SDK API合約。
 
 ## 工作人員的剖析
 

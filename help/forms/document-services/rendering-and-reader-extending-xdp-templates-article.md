@@ -25,10 +25,10 @@ ht-degree: 0%
 
 若要完成此使用案例，我們需要執行下列動作。
 
-* 將Reader擴充功能憑證新增至「fd-service」使用者。 [這裡](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)列出新增Reader擴充功能認證的步驟
+* 將Reader擴充功能憑證新增至「fd-service」使用者。 [這裡](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=zh-Hant)列出新增Reader擴充功能認證的步驟
 
 
-* 您也可以參考有關[設定Reader擴充功能認證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)的影片
+* 您也可以參考有關[設定Reader擴充功能認證](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=zh-Hant)的影片
 
 
 * 建立可轉譯及套用使用許可權的自訂OSGi服務。 完成此任務的程式碼如下

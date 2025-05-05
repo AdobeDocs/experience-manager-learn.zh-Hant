@@ -26,7 +26,7 @@ Adobe Client Data Layer匯入了標準方法，用以收集和儲存訪客的網
 
 >[!NOTE]
 >
-> 想要在AEM網站上啟用Adobe使用者端資料層嗎？ [請在這裡檢視指示](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)。
+> 想要在AEM網站上啟用Adobe使用者端資料層嗎？ [請在這裡檢視指示](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant#installation-activation)。
 
 ## 探索資料層
 
@@ -179,4 +179,4 @@ Adobe Client Data Layer匯入了標準方法，用以收集和儲存訪客的網
 ## 其他資源 {#additional-resources}
 
 * [Adobe使用者端資料層檔案](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [使用Adobe使用者端資料層和核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [使用Adobe使用者端資料層和核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant)

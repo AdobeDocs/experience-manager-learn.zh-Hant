@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ```
 Fri Jul 20 03:35:09 2018 W pid 8300 (tid 139937910880384) /etc/httpd/conf/publish-filters.any:5: Allowing requests with globs is considered unsafe.
-Please consult the documentation at 'https://www.adobe.com/go/docs_dispatcher_config_en' on how to use attributes 
+Please consult the documentation at 'https://www.adobe.com/go/docs_dispatcher_config_tw' on how to use attributes 
 method/url/query/protocol/path/selectors/extension/suffix instead.
 ```
 
@@ -130,7 +130,7 @@ Fri Jul 20 22:35:45 2018 I pid 3648 "GET /favicon.ico" 503 - 54234ms authorfarm/
 Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit ratio: 87.94 %
 ```
 
-這表示會測量您從轉譯器層級和從快取擷取的次數。 您想從快取中達到80%以上，您應該依照說明[這裡](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html)：
+這表示會測量您從轉譯器層級和從快取擷取的次數。 您想從快取中達到80%以上，您應該依照說明[這裡](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html?lang=zh-Hant)：
 
 讓此數目儘可能高。
 
@@ -169,7 +169,7 @@ Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42
 
 當您已將Dispatcher設定為使用動態自動篩選允許虛名URL，但未透過在AEM轉譯器上安裝套件完成設定時，會發生此錯誤。
 
-若要修正此問題，請在AEM執行個體上安裝虛名url功能套件，並允許匿名使用者準備就緒。 詳細資訊[在此](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
+若要修正此問題，請在AEM執行個體上安裝虛名url功能套件，並允許匿名使用者準備就緒。 詳細資訊[在此](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html?lang=zh-Hant)
 
 設定的有效虛名URL如下所示：
 

@@ -28,7 +28,7 @@ ht-degree: 1%
 
 內容片段是AEM擷取並傳送至外部翻譯服務的認可內容型別。 現成支援數個使用案例：
 
-1. 可以直接在Assets主控台中選取內容片段[以進行語言複製和翻譯](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html)。
+1. 可以直接在Assets主控台中選取內容片段[以進行語言複製和翻譯](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=zh-Hant)。
 2. 為語言複製選取網站頁面時，在網站頁面上參考的內容片段會複製到適當的語言資料夾並擷取以供翻譯。
 3. 內嵌在內容片段中的內嵌媒體資產符合擷取和翻譯的條件。
 4. 與內容片段相關的資產集合符合擷取和翻譯的條件。

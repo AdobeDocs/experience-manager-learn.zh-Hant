@@ -169,7 +169,7 @@ RDE狀態資訊的顯示方式如環境狀態、_您的AEM專案_&#x200B;套件�
 
 ## 其他資源
 
-[在程式檔案中啟用RDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#enabling-rde-in-a-program)
+[在程式檔案中啟用RDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=zh-Hant#enabling-rde-in-a-program)
 
 [Adobe I/O Runtime可擴充CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/)的設定，也稱為`aio CLI`
 

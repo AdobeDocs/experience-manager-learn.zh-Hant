@@ -1302,11 +1302,11 @@ Google等搜尋引擎會考慮將不同URL上的相同內容設為「欺騙」�
 
 如果使用者端同時要求該內容，Dispatcher將會要求並儲存過時內容。
 
-更可靠的設定是在&#x200B;_收到內容後，從Publish系統_&#x200B;傳送失效請求。 文章&quot;[使發佈執行個體中的Dispatcher快取失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)&quot;描述了詳細資料。
+更可靠的設定是在&#x200B;_收到內容後，從Publish系統_&#x200B;傳送失效請求。 文章&quot;[使發佈執行個體中的Dispatcher快取失效](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)&quot;描述了詳細資料。
 
 **個參考**
 
-[helpx.adobe.com — 使發佈執行個體中的Dispatcher快取失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)
+[helpx.adobe.com — 使發佈執行個體中的Dispatcher快取失效](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)
 
 ### HTTP標題和標題快取
 
@@ -1454,7 +1454,7 @@ _200 — 這裡是HTTP標題中較新的版本_，以及HTTP內文中的實際�
 
 * [apache.org - Mod重新寫入](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
 
-* [helpx.adobe.com — 資源對應](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
+* [helpx.adobe.com — 資源對應](https://helpx.adobe.com/tw/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
 
 ### 錯誤處理
 
@@ -1506,11 +1506,11 @@ Dispatcher預設會傳送資源，不會檢查許可權。 實作方式與以下
 
 **選項2**。 「不快取」通常是壞主意。 如果確實如此，請確定排除的流量和敏感資源數量都很少。 或者，請務必在Publish系統中安裝一些記憶體中的快取，讓Publish系統能夠處理產生的負載 — 本系列第三部分將對此進行詳細介紹。
 
-**選項3**。 「許可權敏感型快取」是很有趣的方法。 Dispatcher正在快取資源，但在傳送資源前，會詢問AEM系統是否可這麼做。 這會從Dispatcher向Publish建立額外的請求，但通常可避免Publish系統重新呈現已快取的頁面。 不過，此方法需要一些自訂實施。 在文章[許可權敏感型快取](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)中尋找詳細資料。
+**選項3**。 「許可權敏感型快取」是很有趣的方法。 Dispatcher正在快取資源，但在傳送資源前，會詢問AEM系統是否可這麼做。 這會從Dispatcher向Publish建立額外的請求，但通常可避免Publish系統重新呈現已快取的頁面。 不過，此方法需要一些自訂實施。 在文章[許可權敏感型快取](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/permissions-cache.html)中尋找詳細資料。
 
 **個參考**
 
-* [helpx.adobe.com — 許可權敏感型快取](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)
+* [helpx.adobe.com — 許可權敏感型快取](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/permissions-cache.html)
 
 ### 設定寬限期
 
@@ -1576,7 +1576,7 @@ Dispatcher預設會傳送資源，不會檢查許可權。 實作方式與以下
 
 **個參考**
 
-[helpx.adobe.com - Dispatcher設定](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)
+[helpx.adobe.com - Dispatcher設定](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html)
 
 ### 自動重新擷取
 
@@ -1635,7 +1635,7 @@ Dispatcher還在內部標籤對應的URL，以便知道可以直接傳送這些�
 
 **個參考**
 
-[helpx.adobe.com — 使AEM的快取頁面失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
+[helpx.adobe.com — 使AEM的快取頁面失效](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/page-invalidate.html)
 
 ### 遮蔽Publish系統
 
@@ -1690,7 +1690,7 @@ Dispatcher會遮蔽Publish系統，使其免受僅用於維護目的的請求的
 
 [apache.org- sethandler指示詞](https://httpd.apache.org/docs/2.4/mod/core.html#sethandler)
 
-[helpx.adobe.com — 設定內容篩選的存取權](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter)
+[helpx.adobe.com — 設定內容篩選的存取權](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter)
 
 ### 使用規則運算式和Glob進行篩選
 
@@ -1843,7 +1843,7 @@ _萬用字元模式_，相反使用雙引號`"`，而且您只能使用簡單的
 
 **個參考**
 
-[helpx.adobe.com — 為glob屬性設計模式](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
+[helpx.adobe.com — 為glob屬性設計模式](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
 
 ### 通訊協定規格
 
@@ -1906,17 +1906,17 @@ CQ-Handle: <path-pattern>
 
 ## 其他資源
 
-Dispatcher快取的相關簡介和簡介： [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)
+Dispatcher快取的相關簡介和簡介： [https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher.html)
 
-含有所有指示詞的Dispatcher檔案說明： [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)
+含有所有指示詞的Dispatcher檔案說明： [https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html)
 
-部分常見問題： [https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html)
+部分常見問題： [https://helpx.adobe.com/tw/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/tw/experience-manager/using/dispatcher-faq.html)
 
 有關Dispatcher最佳化的網路研討會影片 — 強烈建議： [https://my.adobeconnect.com/p7th2gf8k43?proto=true](https://my.adobeconnect.com/p7th2gf8k43?proto=true)
 
 在Potsdam 2018 [https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html](https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html)舉行的「未充分瞭解的內容失效能力」、「adaptTo()」會議簡報
 
-使AEM中的快取頁面失效： [https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
+使AEM中的快取頁面失效： [https://helpx.adobe.com/tw/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/page-invalidate.html)
 
 ## 下一步
 

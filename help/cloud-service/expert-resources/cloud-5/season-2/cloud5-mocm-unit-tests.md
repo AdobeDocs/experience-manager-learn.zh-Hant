@@ -25,7 +25,7 @@ ht-degree: 6%
 ## 本影片涵蓋的內容
 
 + 自動檢查總覽
-+ [自訂程式碼品質規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html)
++ [自訂程式碼品質規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html?lang=zh-Hant)
 
 ## 其他資源
 

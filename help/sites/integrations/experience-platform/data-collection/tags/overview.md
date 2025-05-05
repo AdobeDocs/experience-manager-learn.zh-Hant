@@ -51,6 +51,6 @@ ht-degree: 2%
 
 ## 其他資源 {#additional-resources}
 
-+ [Experience Platform與Experience Cloud應用程式的整合](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
-+ [標籤總覽](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [在具有標籤的網站中實作Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)
++ [Experience Platform與Experience Cloud應用程式的整合](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html?lang=zh-Hant)
++ [標籤總覽](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=zh-Hant)
++ [在具有標籤的網站中實作Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html?lang=zh-Hant)

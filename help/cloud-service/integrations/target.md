@@ -42,13 +42,13 @@ ht-degree: 0%
 
 Adobe IMS設定可促進AEM與Adobe Target之間的驗證。
 
-如需如何建立Adobe IMS設定的逐步指示，請參閱[檔案](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/integrations/target#adobe-target-cloud-service)。
+如需如何建立Adobe IMS設定的逐步指示，請參閱[檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/integrations/target#adobe-target-cloud-service)。
 
 ## Adobe Target Cloud Service{#adobe-target-cloud-service}
 
 Adobe Target Cloud Service是在AEM中建立，以便利將內容片段匯出至Adobe Target。
 
-如需如何建立Adobe Target Cloud Service的逐步指示，請參閱[檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)。
+如需如何建立Adobe Target Cloud Service的逐步指示，請參閱[檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=zh-Hant)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
 
@@ -164,7 +164,7 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予Adobe Admin Co
 
 ## Experience Platform資料串流ID{#datastream-id}
 
-需要[Adobe Experience Platform Datastream](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html) ID，AEM Headless應用程式才能使用[Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html)與Adobe Target互動。
+需要[Adobe Experience Platform Datastream](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html?lang=zh-Hant) ID，AEM Headless應用程式才能使用[Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=zh-Hant)與Adobe Target互動。
 
 +++展開以取得逐步指示
 
@@ -184,7 +184,7 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予Adobe Admin Co
       + 可在Adobe Target中的&#x200B;__管理>主機__&#x200B;設定目標環境。
    + 目標協力廠商ID名稱空間： __保留空白__
 1. 選取&#x200B;__儲存__
-1. 在右側，複製&#x200B;__資料串流ID__&#x200B;以用於[Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html)設定呼叫。
+1. 在右側，複製&#x200B;__資料串流ID__&#x200B;以用於[Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=zh-Hant)設定呼叫。
 
 +++
 
@@ -194,7 +194,7 @@ Adobe Target整合(顯示為developer.adobe.com專案)必須授予Adobe Admin Co
 
 ## 將個人化新增至AEM Headless應用程式{#code}
 
-本教學課程探討如何透過[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)，使用Adobe Target中的內容片段選件，個人化簡單的React應用程式。 此方法可用於個人化任何以JavaScript為基礎的網頁體驗。
+本教學課程探討如何透過[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=zh-Hant)，使用Adobe Target中的內容片段選件，個人化簡單的React應用程式。 此方法可用於個人化任何以JavaScript為基礎的網頁體驗。
 
 Android™和iOS行動體驗可透過[Adobe的行動SDK](https://developer.adobe.com/client-sdks/documentation/)，依類似的模式進行個人化。
 
@@ -230,7 +230,7 @@ Android™和iOS行動體驗可透過[Adobe的行動SDK](https://developer.adobe
    $ npm run start
    ```
 
-1. 將[Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html#option-3%3A-using-the-npm-package)安裝為NPM套件。
+1. 將[Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=zh-Hant#option-3%3A-using-the-npm-package)安裝為NPM套件。
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/personalization-tutorial

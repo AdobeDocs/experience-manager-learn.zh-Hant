@@ -45,6 +45,6 @@ ht-degree: 0%
 
 ## 支援連結 {#supporting-links}
 
-* [管理Assets和已關閉的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en#closed-user-group)
-* [正在建立已關閉的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html)
+* [管理Assets和已關閉的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=zh-Hant#closed-user-group)
+* [正在建立已關閉的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html?lang=zh-Hant)
 * [Oak已關閉的使用者群組檔案](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html)

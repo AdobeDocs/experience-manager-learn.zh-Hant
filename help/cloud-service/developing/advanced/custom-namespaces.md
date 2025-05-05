@@ -33,7 +33,7 @@ ht-degree: 2%
 
 名稱空間可用來表示屬性的範圍和目的。 建立自訂名稱空間（通常是您的公司名稱）有助於清楚識別AEM實作特有的節點或屬性，並包含您的企業特有的資料。
 
-在[Sling存放庫初始化(repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html)指令碼中管理自訂名稱空間，並將它部署到AEM as a Cloud Service做為OSGi設定，以及新增到您的[AEM專案的](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) `ui.config`專案。
+在[Sling存放庫初始化(repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html)指令碼中管理自訂名稱空間，並將它部署到AEM as a Cloud Service做為OSGi設定，以及新增到您的[AEM專案的](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant) `ui.config`專案。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
 

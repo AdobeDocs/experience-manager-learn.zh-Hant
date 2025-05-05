@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ## 檢查文字元件
 
-[AEM專案原型](https://github.com/adobe/aem-project-archetype)提供對應至AEM [文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`元件。 這是&#x200B;**content**&#x200B;元件的範例，其會轉譯來自AEM的&#x200B;*content*。
+[AEM專案原型](https://github.com/adobe/aem-project-archetype)提供對應至AEM [文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hant)的`Text`元件。 這是&#x200B;**content**&#x200B;元件的範例，其會轉譯來自AEM的&#x200B;*content*。
 
 讓我們瞭解元件的運作方式。
 
@@ -198,7 +198,7 @@ ht-degree: 0%
 
 ## 建立影像元件
 
-接下來，建立對應至AEM [影像元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)的`Image`Angular元件。 `Image`元件是&#x200B;**content**&#x200B;元件的另一個範例。
+接下來，建立對應至AEM [影像元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hant)的`Image`Angular元件。 `Image`元件是&#x200B;**content**&#x200B;元件的另一個範例。
 
 ### 檢查JSON
 
@@ -434,7 +434,7 @@ AEM SPA Editor SDK會自動支援&#x200B;**配置容器**。 名稱所指示的&
 
    **配置容器**&#x200B;元件有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，而且可由SPA編輯器使用`:type`屬性來辨識，就像`Text`和`Image`元件一樣。
 
-   SPA編輯器也提供相同的功能，可以使用[配置模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)來重新調整元件大小。
+   SPA編輯器也提供相同的功能，可以使用[配置模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=zh-Hant#defining-layouts-layout-mode)來重新調整元件大小。
 
 3. 返回[http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html)。 新增其他&#x200B;**影像**&#x200B;元件，然後嘗試使用&#x200B;**配置**&#x200B;選項重新調整其大小：
 

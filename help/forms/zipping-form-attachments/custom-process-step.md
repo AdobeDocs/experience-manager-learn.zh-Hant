@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 自訂流程步驟
 
-已實施自訂流程步驟，以建立包含表單附件的壓縮檔案。 如果您不熟悉建立OSGi套件組合，請[依照這些指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)。
+已實施自訂流程步驟，以建立包含表單附件的壓縮檔案。 如果您不熟悉建立OSGi套件組合，請[依照這些指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=zh-Hant)。
 
 自訂流程步驟中的程式碼會執行下列動作：
 

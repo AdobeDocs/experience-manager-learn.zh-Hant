@@ -34,7 +34,7 @@ ht-degree: 2%
 
 * 執行AEM Forms 6.5.16的執行個體
 
-* [在您的作者和發佈執行個體上啟用Headless表單](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=en)
+* [在您的作者和發佈執行個體上啟用Headless表單](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=zh-Hant)
 
 ## 後續步驟
 

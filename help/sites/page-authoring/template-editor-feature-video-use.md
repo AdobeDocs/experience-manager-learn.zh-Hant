@@ -40,5 +40,5 @@ ht-degree: 5%
 
 ## 其他資源 {#additional-resources}
 
-* [可編輯的頁面範本 — 檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
-* [建立頁面範本 — 檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)
+* [可編輯的頁面範本 — 檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=zh-Hant)
+* [建立頁面範本 — 檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html?lang=zh-Hant)

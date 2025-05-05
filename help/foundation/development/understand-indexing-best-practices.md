@@ -41,7 +41,7 @@ ht-degree: 1%
 
 - 瞭解搜尋需求，並檢查OOTB索引是否可支援搜尋需求。 透過Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`使用&#x200B;**查詢效能工具** (位於[本機SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS)。
 
-- 定義最佳查詢，使用[最佳化查詢](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)流程圖和[JCR查詢速查表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf)以作參考。
+- 定義最佳查詢，使用[最佳化查詢](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)流程圖和[JCR查詢速查表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=zh-Hant)以作參考。
 
 - 如果OOTB索引不支援搜尋需求，您有兩個選擇。 但是，檢閱建立有效索引的[提示](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - 自訂OOTB索引：方便維護和升級的偏好選項。
@@ -253,7 +253,7 @@ AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF�
 
 ### 查詢效能工具
 
-可透過Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`在[本機SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS取得的OOTB _查詢效能工具_&#x200B;可協助&#x200B;**分析查詢效能**&#x200B;和[JCR查詢速查表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en)以定義最佳查詢。
+可透過Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`在[本機SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS取得的OOTB _查詢效能工具_&#x200B;可協助&#x200B;**分析查詢效能**&#x200B;和[JCR查詢速查表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=zh-Hant)以定義最佳查詢。
 
 ### 疑難排解工具和提示
 
@@ -274,6 +274,6 @@ AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF�
 如需詳細資訊，請參閱下列檔案：
 
 - [Oak查詢和索引](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
-- [查詢和建立索引最佳做法](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
+- [查詢和建立索引最佳做法](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
 - [查詢和建立索引的最佳實務](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
 

@@ -42,9 +42,9 @@ AEM as a Cloud Service為每個環境提供一個Developer Console，它會公�
 
 1. 確保Adobe組織切換器中的，您可以看到與您要在Developer Console中檢查的環境相關的Adobe組織。
 1. 為了能夠登入Developer Console，開發人員必須是以下任何角色的成員：
-   + [Cloud Manager產品的&#x200B;__開發人員 — Cloud Service__&#x200B;產品設定檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer)：在此情況下，開發人員將看到所選Developer Console URL底下可用的完整環境清單；如果已在Cloud Manager中選取開發環境或RDE，則可能會顯示相同程式中的其他開發環境或RDE。
-   + [__AEM管理員__ __AEM作者__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)上的產品設定檔：在此情況下，上一個專案符號中說明的環境清單將限於指派此角色的相關產品設定檔。
-1. 開發人員必須是AEM作者和/或發佈[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)上的&#x200B;__AEM使用者__&#x200B;或&#x200B;__AEM管理員__&#x200B;產品設定檔的成員。
+   + [Cloud Manager產品的&#x200B;__開發人員 — Cloud Service__&#x200B;產品設定檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html?lang=zh-Hant#assign-developer)：在此情況下，開發人員將看到所選Developer Console URL底下可用的完整環境清單；如果已在Cloud Manager中選取開發環境或RDE，則可能會顯示相同程式中的其他開發環境或RDE。
+   + [__AEM管理員__ __AEM作者__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=zh-Hant#aem-product-profiles)上的產品設定檔：在此情況下，上一個專案符號中說明的環境清單將限於指派此角色的相關產品設定檔。
+1. 開發人員必須是AEM作者和/或發佈[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=zh-Hant#aem-product-profiles)上的&#x200B;__AEM使用者__&#x200B;或&#x200B;__AEM管理員__&#x200B;產品設定檔的成員。
    + 如果此成員資格不存在，[狀態](#status)傾印將逾時，並出現401未授權錯誤。
 
 ### 疑難排解Developer Console存取問題
@@ -54,7 +54,7 @@ AEM as a Cloud Service為每個環境提供一個Developer Console，它會公�
 請確認下列事項：
 
 + 您已透過Cloud Manager針對所選環境按一下三個點，然後選取Developer Console ，以選取正確的Developer Console URL。
-+ 您擁有[Cloud Manager產品的&#x200B;__開發人員 — Cloud Service__&#x200B;產品設定檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer)以檢視完整的環境清單，或者您是找不到環境之&#x200B;__AEM作者__[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles)上的&#x200B;__AEM管理員__&#x200B;產品設定檔的一部分。
++ 您擁有[Cloud Manager產品的&#x200B;__開發人員 — Cloud Service__&#x200B;產品設定檔](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html?lang=zh-Hant#assign-developer)以檢視完整的環境清單，或者您是找不到環境之&#x200B;__AEM作者__[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=zh-Hant#aem-product-profiles)上的&#x200B;__AEM管理員__&#x200B;產品設定檔的一部分。
 
 #### 401傾印狀態時發生未獲授權的錯誤
 
@@ -110,7 +110,7 @@ AEM as a Cloud Service Author和Publish服務分別由多個執行個體組成�
 + 提供每個OSGi元件的狀態；包括元件是作用中還是不滿意
 + 將詳細資訊提供給不滿意的服務參考可能會導致OSGi元件變成作用中
 + 列出繫結至OSGi元件的OSGi屬性及其值。
-   + 這會顯示透過[OSGi環境設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)插入的實際值。
+   + 這會顯示透過[OSGi環境設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#environment-specific-configuration-values)插入的實際值。
 
 ### 設定
 
@@ -119,7 +119,7 @@ AEM as a Cloud Service Author和Publish服務分別由多個執行個體組成�
 設定可協助您透過以下方式偵錯：
 
 + 依OSGi元件列出OSGi屬性及其值
-   + 這不會顯示透過[OSGi環境設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values)插入的實際值。 請參閱上面的[元件](#components)，以取得插入的值。
+   + 這不會顯示透過[OSGi環境設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#environment-specific-configuration-values)插入的實際值。 請參閱上面的[元件](#components)，以取得插入的值。
 + 尋找和識別設定錯誤的屬性
 
 ### Oak索引

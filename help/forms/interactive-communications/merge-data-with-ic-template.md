@@ -162,7 +162,7 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
 
 若要在您的伺服器上測試此專案，請遵循下列步驟：
 
-* [設定Day CQ Mail Service。](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html)需要此專案，才能傳送包含產生為附件的檔案的電子郵件。
+* [設定Day CQ Mail Service。](https://helpx.adobe.com/tw/experience-manager/6-5/communities/using/email.html)需要此專案，才能傳送包含產生為附件的檔案的電子郵件。
 * [部署使用服務進行開發的使用者套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * 確定您已在Apache Sling服務使用者對應程式服務設定中新增以下專案
 * **DevelopingWithServiceUser.core：getformsresourceresolver=fd-service**

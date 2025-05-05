@@ -23,7 +23,7 @@ ht-degree: 1%
 
 瞭解如何在AEM as a Cloud Service (AEMCS)管理的CDN中使用&#x200B;**速率限制流量篩選器**&#x200B;規則和其他策略，以封鎖拒絕服務(DoS)和分散式拒絕服務(DDoS)攻擊。 這些攻擊會導致CDN和潛在的AEM Publish服務（亦稱為來源）的流量尖峰，並可能影響網站的回應能力和可用性。
 
-本教學課程可作為&#x200B;_如何分析您的流量模式並設定速率限制[流量篩選器規則](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)_&#x200B;以緩解這些攻擊的指南。 本教學課程也說明如何[設定警示](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)，以便在懷疑有攻擊時通知您。
+本教學課程可作為&#x200B;_如何分析您的流量模式並設定速率限制[流量篩選器規則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)_&#x200B;以緩解這些攻擊的指南。 本教學課程也說明如何[設定警示](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)，以便在懷疑有攻擊時通知您。
 
 ## 瞭解保護
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 - **快取：**&#x200B;如果快取原則良好，DDoS攻擊的影響會比較受限，因為CDN會防止大多數要求前往來源並造成效能降低。
 - **自動縮放：** AEM製作和發佈服務會自動縮放，以處理流量尖峰，不過仍會受到流量突然大幅增加的影響。
 - **封鎖：**&#x200B;如果來自特定IP位址的流量超過每個CDN PoP (Point of Presence)的Adobe定義速率，Adobe CDN會封鎖流向來源的流量。
-- **警示：**&#x200B;當流量超過特定速率時，動作中心會在來源警示通知中傳送流量尖峰。 當任何指定CDN PoP的流量超過每個IP位址的&#x200B;_Adobe定義的_&#x200B;要求速率時，就會觸發此警報。 如需詳細資訊，請參閱[流量篩選規則警示](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)。
+- **警示：**&#x200B;當流量超過特定速率時，動作中心會在來源警示通知中傳送流量尖峰。 當任何指定CDN PoP的流量超過每個IP位址的&#x200B;_Adobe定義的_&#x200B;要求速率時，就會觸發此警報。 如需詳細資訊，請參閱[流量篩選規則警示](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts)。
 
 這些內建的保護應視為組織將DDoS攻擊對效能影響降到最低的能力的基準。 由於每個網站都有不同的效能特性，且在達到Adobe定義的速率限制之前可能會發現效能降低，因此建議透過&#x200B;_客戶組態_&#x200B;來延伸預設保護。
 
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 理想情況下，您最好在進入生產階段前設定規則。 實際上，許多組織只會在收到流量尖峰的警報後，以反應式方式宣告規則，表示可能會發生攻擊。
 
-當超過指定PoP單一IP位址流量的預設臨界值時，Adobe會在來源警示傳送流量尖峰作為[動作中心通知](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/actions-center)。 如果您收到這類警報，建議設定速率限制流量篩選器規則。 此預設警報不同於客戶在定義流量篩選規則時必須明確啟用的警報，您將在未來章節中瞭解這些警報。
+當超過指定PoP單一IP位址流量的預設臨界值時，Adobe會在來源警示傳送流量尖峰作為[動作中心通知](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/operations/actions-center)。 如果您收到這類警報，建議設定速率限制流量篩選器規則。 此預設警報不同於客戶在定義流量篩選規則時必須明確啟用的警報，您將在未來章節中瞭解這些警報。
 
 ## 分析流量模式 {#analyze-traffic}
 
@@ -96,7 +96,7 @@ Adobe提供的&#x200B;**Elasticsearch、Logstash和Kibana (ELK)**&#x200B;儀表�
 
 ### Splunk — 設定控制面板工具
 
-已啟用[Splunk記錄檔轉送](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)的客戶可以建立新的儀表板，以分析流量模式。
+已啟用[Splunk記錄檔轉送](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)的客戶可以建立新的儀表板，以分析流量模式。
 
 若要在Splunk中建立儀表板，請依照[適用於AEMCS CDN記錄分析的Splunk儀表板](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis)步驟操作。
 
@@ -142,7 +142,7 @@ ELK和Splunk儀表板中提供下列視覺效果：
 
 在您的AEM專案的`/config/cdn.yaml`檔案中設定&#x200B;**速率限制流量篩選器**&#x200B;規則，其值以上述討論為基礎。 如有需要，請洽詢您的Web安全性團隊，以確定速率限制值適當，且不會封鎖合法流量。
 
-如需詳細資訊，請參閱[在您的AEM專案中建立規則](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#create-rules-in-your-aem-project)。
+如需詳細資訊，請參閱[在您的AEM專案中建立規則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#create-rules-in-your-aem-project)。
 
 ```yaml
 kind: CDN
@@ -195,12 +195,12 @@ data:
 請依照下列步驟，將變更部署至AEMCS環境：
 
 - 提交上述變更並將其推播至您的Cloud Manager Git存放庫。
-- 使用Cloud Manager的配置管道將變更部署到AEMCS環境。 如需詳細資訊，請參閱[透過Cloud Manager部署規則](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
+- 使用Cloud Manager的配置管道將變更部署到AEMCS環境。 如需詳細資訊，請參閱[透過Cloud Manager部署規則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager)。
 - 若要驗證&#x200B;**速率限制流量篩選規則**&#x200B;是否如預期運作，您可以模擬攻擊，如[攻擊模擬](#attack-simulation)區段中所述。 將請求數限制在高於規則中設定的速率限制值的值。
 
 ### 設定請求轉換規則 {#configure-request-transform-rules}
 
-除了速率限制流量篩選規則之外，建議使用[要求轉換](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations)來取消設定應用程式不需要的查詢引數，以最小化透過快取破壞技術略過快取的方式。 例如，如果您只想允許`search`和`campaignId`查詢引數，則可宣告下列規則：
+除了速率限制流量篩選規則之外，建議使用[要求轉換](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations)來取消設定應用程式不需要的查詢引數，以最小化透過快取破壞技術略過快取的方式。 例如，如果您只想允許`search`和`campaignId`查詢引數，則可宣告下列規則：
 
 ```yaml
 kind: "CDN"
@@ -254,5 +254,5 @@ $ echo "GET https://<YOUR-WEBSITE-DOMAIN>" | vegeta attack -rate=120 -duration=6
 
 ### 來源請求
 
-若要略過CDN快取並向來源(AEM發佈服務)提出請求，您可以在URL中新增唯一的查詢引數。 請參考[使用JMeter指令碼模擬DoS攻擊](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection#simulate-dos-attack-using-jmeter-script)中的範例Apache JMeter指令碼
+若要略過CDN快取並向來源(AEM發佈服務)提出請求，您可以在URL中新增唯一的查詢引數。 請參考[使用JMeter指令碼模擬DoS攻擊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection#simulate-dos-attack-using-jmeter-script)中的範例Apache JMeter指令碼
 

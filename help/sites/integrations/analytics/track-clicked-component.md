@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 使用Adobe Analytics追蹤已點按的元件
 
-使用事件導向的[Adobe Client Data Layer搭配AEM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)，追蹤Adobe Experience Manager網站上特定元件的點按次數。 瞭解如何使用Tag屬性中的規則來監聽點選事件、依元件篩選資料，以及透過追蹤連結信標將資料傳送至Adobe Analytics。
+使用事件導向的[Adobe Client Data Layer搭配AEM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant)，追蹤Adobe Experience Manager網站上特定元件的點按次數。 瞭解如何使用Tag屬性中的規則來監聽點選事件、依元件篩選資料，以及透過追蹤連結信標將資料傳送至Adobe Analytics。
 
 ## 您即將建置的內容 {#what-build}
 
@@ -39,13 +39,13 @@ WKND行銷團隊想要瞭解哪些`Call to Action (CTA)`按鈕在首頁上表現
 
 本教學課程是[使用Adobe Analytics](./collect-data-analytics.md)收集頁面資料的延續，並假設您擁有：
 
-* 已啟用[Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)的&#x200B;**標籤屬性**
-* **Adobe Analytics**&#x200B;測試/開發報表套裝ID與追蹤伺服器。 請參閱下列有關[建立報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html)的檔案。
-* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)瀏覽器擴充功能已設定您在[WKND網站](https://wknd.site/us/en.html)或啟用Adobe資料層的AEM網站上載入的標籤屬性。
+* 已啟用[Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=zh-Hant)的&#x200B;**標籤屬性**
+* **Adobe Analytics**&#x200B;測試/開發報表套裝ID與追蹤伺服器。 請參閱下列有關[建立報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=zh-Hant)的檔案。
+* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hant)瀏覽器擴充功能已設定您在[WKND網站](https://wknd.site/us/en.html)或啟用Adobe資料層的AEM網站上載入的標籤屬性。
 
 ## 檢查按鈕和Teaser結構
 
-在標籤屬性中建立規則之前，請檢閱Button和Teaser[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)的結構描述，並在資料層實作中檢查它們，這樣會很有用。
+在標籤屬性中建立規則之前，請檢閱Button和Teaser[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant#item)的結構描述，並在資料層實作中檢查它們，這樣會很有用。
 
 1. 導覽至[WKND首頁](https://wknd.site/us/en.html)
 1. 開啟瀏覽器的開發人員工具，並導覽至&#x200B;**主控台**。 執行以下命令：
@@ -81,7 +81,7 @@ WKND行銷團隊想要瞭解哪些`Call to Action (CTA)`按鈕在首頁上表現
        xdm:linkURL: "/content/wknd/us/en/magazine/san-diego-surf.html"
    ```
 
-   以上資料詳細資料是根據[元件/容器專案結構描述](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)。 新標籤規則會使用此結構描述。
+   以上資料詳細資料是根據[元件/容器專案結構描述](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=zh-Hant#item)。 新標籤規則會使用此結構描述。
 
 ## 建立CTA點按規則
 
@@ -147,11 +147,11 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
 
    `event`物件是從自訂事件中呼叫的`trigger()`方法傳遞。 `component`物件是從資料層`getState()`方法衍生的元件的目前狀態，而且是觸發點選的元素。
 
-1. 儲存變更並在標籤屬性中執行[組建](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html)，以將程式碼提升至您AEM網站上使用的[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html)。
+1. 儲存變更並在標籤屬性中執行[組建](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html?lang=zh-Hant)，以將程式碼提升至您AEM網站上使用的[環境](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant)。
 
    >[!NOTE]
    >
-   > 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)將內嵌程式碼切換至&#x200B;**開發**&#x200B;環境可能很有用。
+   > 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hant)將內嵌程式碼切換至&#x200B;**開發**&#x200B;環境可能很有用。
 
 1. 導覽至[WKND網站](https://wknd.site/us/en.html)，並開啟開發人員工具以檢視主控台。 此外，請選取&#x200B;**保留記錄檔**&#x200B;核取方塊。
 

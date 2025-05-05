@@ -24,7 +24,7 @@ ht-degree: 4%
 
 ## 本影片涵蓋的內容
 
-+ 記錄檔[總覽](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
++ 記錄檔[總覽](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html?lang=zh-Hant)
 + 透過UI存取記錄檔
 + 使用Adobe CLI
    + [Adobe I/O可擴充CLI](https://github.com/adobe/aio-cli)

@@ -791,4 +791,4 @@ $ git push origin block-options
 
 您現在已探索Edge Delivery Services和Universal Editor中的區塊選項，為您提供工具，以更大的彈性自訂和簡化內容編輯。 開始在您的專案中套用這些選項，以提高效率並維持一致性。
 
-如需更多最佳實務和進階技術，請參閱[通用編輯器檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。
+如需更多最佳實務和進階技術，請參閱[通用編輯器檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。

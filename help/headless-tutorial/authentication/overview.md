@@ -37,7 +37,7 @@ AEM公開各種能以無周邊方式互動的HTTP端點，從GraphQL、AEM Conte
 
 ## 外部應用程式概述
 
-此教學課程使用從命令列執行的[簡單Node.js應用程式](./assets/aem-guides_token-authentication-external-application.zip)，以使用[Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html)更新AEM as a Cloud Service上的資產中繼資料。
+此教學課程使用從命令列執行的[簡單Node.js應用程式](./assets/aem-guides_token-authentication-external-application.zip)，以使用[Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=zh-Hant)更新AEM as a Cloud Service上的資產中繼資料。
 
 Node.js應用程式的執行流程如下：
 

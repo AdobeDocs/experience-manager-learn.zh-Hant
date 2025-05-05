@@ -20,7 +20,7 @@ ht-degree: 0%
 
 以程式設計方式產生記錄檔案(DOR)
 
-本文說明如何使用`com.adobe.aemds.guide.addon.dor.DoRService API`以程式設計方式產生&#x200B;**記錄檔案**。 [記錄檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)是在最適化表單中擷取的資料的PDF版本。
+本文說明如何使用`com.adobe.aemds.guide.addon.dor.DoRService API`以程式設計方式產生&#x200B;**記錄檔案**。 [記錄檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=zh-Hant)是在最適化表單中擷取的資料的PDF版本。
 
 1. 以下是程式碼片段。 第一行取得DOR服務。
 1. 設定DoROptions。

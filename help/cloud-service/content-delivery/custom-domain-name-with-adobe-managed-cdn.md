@@ -40,7 +40,7 @@ ht-degree: 0%
    - 憑證授權單位(CA) — 要求網站網域（例如[DigitCert](https://www.digicert.com/)）的已簽署憑證
    - 網域名稱系統(DNS)託管服務 — 為您的自訂網域新增DNS記錄，例如Azure DNS或AWS Route 53。
 - 以&#x200B;**業務負責人**&#x200B;或&#x200B;**部署管理員**&#x200B;角色存取[Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)。
-- 範例[AEM WKND](https://github.com/adobe/aem-guides-wknd)網站已部署至[生產程式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs)型別的AEM as a Cloud Service環境。
+- 範例[AEM WKND](https://github.com/adobe/aem-guides-wknd)網站已部署至[生產程式](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs)型別的AEM as a Cloud Service環境。
 
 如果您無法存取協力廠商服務，請&#x200B;_與您的安全性或託管團隊共同作業，以完成步驟_。
 
@@ -83,7 +83,7 @@ Adobe Cloud Manager接受不同表單欄位&#x200B;_中的終端實體憑證和�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427906?quality=12&learn=on)
 
-若要在Cloud Manager中新增SSL憑證，請依照[新增SSL憑證](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/add-ssl-certificate)檔案操作。
+若要在Cloud Manager中新增SSL憑證，請依照[新增SSL憑證](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/add-ssl-certificate)檔案操作。
 
 ## 網域名稱驗證
 
@@ -92,7 +92,7 @@ Adobe Cloud Manager接受不同表單欄位&#x200B;_中的終端實體憑證和�
 若要驗證網域名稱，請執行下列步驟：
 
 - 依照[新增自訂網域名稱](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name)檔案，在Cloud Manager中新增網域名稱。
-- 在您的DNS託管服務中新增AEM特定的[TXT記錄](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record)。
+- 在您的DNS託管服務中新增AEM特定的[TXT記錄](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record)。
 - 使用`dig`命令查詢DNS伺服器，以驗證上述步驟。
 
 ```bash
@@ -128,7 +128,7 @@ _aemverification.wknd.enablementadobe.com. 3600    IN TXT "adobe-aem-verificatio
 
 本教學課程使用Azure DNS，但可使用任何DNS提供者。 若要新增TXT記錄，您必須遵循DNS託管服務的檔案。
 
-如果發生問題，請檢閱[檢查網域名稱狀態](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/check-domain-name-status)檔案。
+如果發生問題，請檢閱[檢查網域名稱狀態](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/check-domain-name-status)檔案。
 
 ## 設定DNS記錄
 
@@ -136,9 +136,9 @@ _aemverification.wknd.enablementadobe.com. 3600    IN TXT "adobe-aem-verificatio
 
 若要設定自訂網域的DNS記錄，請執行下列步驟：
 
-1. 根據網域型別，例如根網域(APEX)或子網域(CNAME)，判斷DNS記錄型別（CNAME或APEX），並遵循[設定DNS設定](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/configure-dns-settings)檔案。
+1. 根據網域型別，例如根網域(APEX)或子網域(CNAME)，判斷DNS記錄型別（CNAME或APEX），並遵循[設定DNS設定](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/configure-dns-settings)檔案。
 1. 在您的DNS託管服務中新增DNS記錄。
-1. 依照[檢查DNS記錄狀態](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/check-dns-record-status)檔案來觸發DNS記錄驗證。
+1. 依照[檢查DNS記錄狀態](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/check-dns-record-status)檔案來觸發DNS記錄驗證。
 
 在本教學課程中，由於使用了&#x200B;**子網域** `wknd.enablementadobe.com`，因此新增了指向`cdn.adobeaemcloud.com`的CNAME記錄型別。
 

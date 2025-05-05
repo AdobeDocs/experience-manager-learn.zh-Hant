@@ -28,4 +28,4 @@ ht-degree: 0%
 
 ## 更多資源 {#more-resources}
 
-* [使用頁面版本 — Timewarp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/page-versions.html)
+* [使用頁面版本 — Timewarp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/page-versions.html?lang=zh-Hant)

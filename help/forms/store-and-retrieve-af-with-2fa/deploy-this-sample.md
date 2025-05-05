@@ -45,7 +45,7 @@ ht-degree: 1%
 ## 部署下列OSGi套裝
 
 部署具有[程式碼的套件組合，以儲存及擷取資料庫](assets/SaveAndResume.core-1.0.0-SNAPSHOT.jar)中的資料
-下載並解壓縮[developingwithserviceuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)。
+下載並解壓縮[developingwithserviceuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=zh-Hant)。
 使用Felix Web主控台部署DevelopingWithServiceUser.jar檔案。
 
 ## 部署使用者端程式庫

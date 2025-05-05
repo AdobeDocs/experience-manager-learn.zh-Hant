@@ -20,7 +20,7 @@ ht-degree: 4%
 
 # 利用 AEM Headless 的最佳化影像 {#images-with-aem-headless}
 
-影像是[開發豐富、極具吸引力的AEM Headless體驗的重要方面](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)。 AEM Headless支援影像資產的管理及其最佳化傳送。
+影像是[開發豐富、極具吸引力的AEM Headless體驗的重要方面](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hant)。 AEM Headless支援影像資產的管理及其最佳化傳送。
 
 AEM Headless內容模型中使用的內容片段，通常會參照要在Headless體驗中顯示的影像資產。 AEM的GraphQL查詢可以寫入，以根據影像參考來源提供URL給影像。
 
@@ -30,9 +30,9 @@ AEM Headless內容模型中使用的內容片段，通常會參照要在Headless
 + `_dynamicUrl`是影像資產網頁最佳化傳遞的URL。
    + `_dynamicUrl`不包含AEM來源，因此網域(AEM Author或AEM Publish服務)必須由使用者端應用程式提供。
 + `_authorUrl`是AEM作者上影像資產的完整URL
-   + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html)可用於提供Headless應用程式的預覽體驗。
+   + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=zh-Hant)可用於提供Headless應用程式的預覽體驗。
 + `_publishUrl`是AEM發佈上影像資產的完整URL
-   + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html)通常是Headless應用程式的生產部署顯示影像的位置。
+   + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=zh-Hant)通常是Headless應用程式的生產部署顯示影像的位置。
 
 `_dynamicUrl`是建議用於影像資產傳送的URL，應儘可能取代使用`_path`、`_authorUrl`和`_publishUrl`。
 
@@ -50,7 +50,7 @@ AEM Headless內容模型中使用的內容片段，通常會參照要在Headless
 
 確定包含影像參考的內容片段欄位是&#x200B;__內容參考__&#x200B;資料型別。
 
-在[內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)中檢閱欄位型別，方法是選取欄位並檢查右側的&#x200B;__屬性__&#x200B;索引標籤。
+在[內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html?lang=zh-Hant)中檢閱欄位型別，方法是選取欄位並檢查右側的&#x200B;__屬性__&#x200B;索引標籤。
 
 ![內容片段模型參考影像](./assets/images/content-fragment-model.jpeg)
 

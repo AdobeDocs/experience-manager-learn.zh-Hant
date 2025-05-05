@@ -122,7 +122,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
    ![已匯入AEM私密金鑰和憑證](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
 
-如果API提供者使用自我簽署CA憑證，請將收到的憑證匯入AEM的TrustStore，請依照[這裡](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html#httpclient-and-load-aem-truststore-material)的步驟操作。
+如果API提供者使用自我簽署CA憑證，請將收到的憑證匯入AEM的TrustStore，請依照[這裡](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html?lang=zh-Hant#httpclient-and-load-aem-truststore-material)的步驟操作。
 
 同樣地，如果AEM使用自我簽署CA憑證，請要求API提供者匯入該憑證。
 
@@ -217,7 +217,7 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 - 如果API提供者使用自我簽署CA憑證，請取得全域AEM TrustStore，`getAEMTrustStore(...)`方法就會執行此動作。
 - 建立`SSLContextBuilder`的物件，請參閱Java™ [API詳細資料](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html)。
 - 使用`loadKeyMaterial(final KeyStore keystore,final char[] keyPassword)`方法將使用者的AEM KeyStore載入`SSLContextBuilder`。
-- 金鑰存放區密碼是建立金鑰存放區時設定的密碼，應儲存在OSGi設定中，請參閱[密碼設定值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)。
+- 金鑰存放區密碼是建立金鑰存放區時設定的密碼，應儲存在OSGi設定中，請參閱[密碼設定值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values)。
 
 ## 避免JVM金鑰存放區變更
 

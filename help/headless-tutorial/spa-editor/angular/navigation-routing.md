@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 您將建置的內容
 
-本章將導覽功能表新增至現有的`Header`元件。 導覽功能表是由AEM頁面階層所驅動，並使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
+本章將導覽功能表新增至現有的`Header`元件。 導覽功能表是由AEM頁面階層所驅動，並使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=zh-Hant)提供的JSON模型。
 
 ![已實作導覽](assets/navigation-routing/final-navigation-implemented.gif)
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 ## 檢查HeaderComponent更新 {#inspect-header}
 
-在先前的章節中，`HeaderComponent`元件已新增為透過`app.component.html`包含的純Angular元件。 在本章中，`HeaderComponent`元件已從應用程式移除，並透過[範本編輯器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)新增。 這可讓使用者從AEM中設定`HeaderComponent`的導覽功能表。
+在先前的章節中，`HeaderComponent`元件已新增為透過`app.component.html`包含的純Angular元件。 在本章中，`HeaderComponent`元件已從應用程式移除，並透過[範本編輯器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hant)新增。 這可讓使用者從AEM中設定`HeaderComponent`的導覽功能表。
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ ht-degree: 0%
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`元件將透過`sling:resourceSuperType`屬性繼承[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)的所有功能。
+   AEM `Header`元件將透過`sling:resourceSuperType`屬性繼承[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=zh-Hant)的所有功能。
 
 ## 將HeaderComponent新增至SPA範本 {#add-header-template}
 

@@ -56,7 +56,7 @@ Universal Editor可讓內容作者和開發人員（前端和後端）檢視一�
 
 AEM使用GraphQL API提供React應用程式的內容，而使用者介面是使用兩個React元件`Teams`和`Person`建置。
 
-有對應的教學課程可學習如何建立&#x200B;**WKND Teams** React應用程式。 您可以在[這裡](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview)找到教學課程。
+有對應的教學課程可學習如何建立&#x200B;**WKND Teams** React應用程式。 您可以在[這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview)找到教學課程。
 
 ## 下一步
 

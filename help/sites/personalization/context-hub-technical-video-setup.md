@@ -39,7 +39,7 @@ ContextHub是一種用於儲存、操控和呈現內容資料的架構。 Contex
 
 ## 網站設定和ContextHub區段 {#site-configuration-and-contexthub-segments}
 
-ContextHub包含區段引擎，可管理區段並決定針對目前內容解析哪些區段。 已定義數個區段。 您可以使用Javascript API來[判斷已解析的區段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)。 在[[!UICONTROL 設定瀏覽器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)下啟用您網站的ContextHub區段。
+ContextHub包含區段引擎，可管理區段並決定針對目前內容解析哪些區段。 已定義數個區段。 您可以使用Javascript API來[判斷已解析的區段](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments)。 在[[!UICONTROL 設定瀏覽器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=zh-Hant)下啟用您網站的ContextHub區段。
 
 ## 建立區段 {#create-segments}
 
@@ -53,7 +53,7 @@ ContextHub包含區段引擎，可管理區段並決定針對目前內容解析�
 
 您可以閱讀以下有關ContextHub和區段的更多資訊：
 
-* [ContextHub](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub.html)
-* [正在將內容中心新增至頁面並存取存放區](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html)
-* [了解區段](https://helpx.adobe.com/experience-manager/6-5/sites/classic-ui-authoring/using/classic-personalization-campaigns-segmentation.html)
-* [使用 ContextHub 設定分段](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/segmentation.html)
+* [ContextHub](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/contexthub.html)
+* [正在將內容中心新增至頁面並存取存放區](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/ch-adding.html)
+* [了解區段](https://helpx.adobe.com/tw/experience-manager/6-5/sites/classic-ui-authoring/using/classic-personalization-campaigns-segmentation.html)
+* [使用 ContextHub 設定分段](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/segmentation.html)

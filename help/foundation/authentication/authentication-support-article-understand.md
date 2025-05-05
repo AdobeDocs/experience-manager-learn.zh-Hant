@@ -52,7 +52,7 @@ AEM支援的驗證（及偶爾授權）機制整合檢視。
             <td>✔</td>
         </tr>
         <tr>
-            <td>權杖型（含<a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">封裝的權杖</a>）</td>
+            <td>權杖型（含<a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html?lang=zh-Hant" target="_blank">封裝的權杖</a>）</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -63,25 +63,25 @@ AEM支援的驗證（及偶爾授權）機制整合檢視。
             <td></td>
             <td></td>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ldap-config.html" target="_blank">LDAP</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ldap-config.html?lang=zh-Hant" target="_blank">LDAP</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html" target="_blank">SSO</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html?lang=zh-Hant" target="_blank">SSO</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html" target="_blank">SAML 2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html?lang=zh-Hant" target="_blank">SAML 2.0</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/events/assets/oauth-server-functionality-in-aem-7-23-14.pdf" target="_blank">OAuth 1.0a和2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/events/assets/oauth-server-functionality-in-aem-7-23-14.pdf?lang=zh-Hant" target="_blank">OAuth 1.0a和2.0</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>

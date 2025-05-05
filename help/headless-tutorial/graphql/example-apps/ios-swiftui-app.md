@@ -39,8 +39,8 @@ ht-degree: 0%
 
 iOS應用程式可與下列AEM部署選項搭配使用。 所有部署都需要安裝[WKND網站v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest)。
 
-+ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ 使用[AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)進行本機設定
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=zh-Hant)
++ 使用[AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)進行本機設定
 
 iOS應用程式設計來連線至&#x200B;__AEM Publish__&#x200B;環境，不過，如果iOS應用程式的設定中有提供驗證，則可以從AEM Author取得內容。
 
@@ -76,7 +76,7 @@ iOS應用程式設計來連線至&#x200B;__AEM Publish__&#x200B;環境，不過�
 
    __權杖驗證__
 
-   `AEM_TOKEN`是[存取權杖](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)，其會向具有WKND GraphQL內容存取權的AEM使用者進行驗證。
+   `AEM_TOKEN`是[存取權杖](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hant)，其會向具有WKND GraphQL內容存取權的AEM使用者進行驗證。
 
    ```plain
    AEM_AUTH_TYPE = token
@@ -333,5 +333,5 @@ SwiftUI用於應用程式中的各種檢視。 Apple提供[使用SwiftUI](https:
 
 ## 其他資源
 
-+ [AEM Headless快速入門 — GraphQL教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [AEM Headless快速入門 — GraphQL教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hant)
 + [SwiftUI清單與導覽教學課程](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)

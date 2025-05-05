@@ -25,4 +25,4 @@ ht-degree: 1%
 
 _不再需要此影片中顯示的`license.properties`來執行AEM SDK。_
 
-檢閱這些指示，以[使用AEM SDK設定完整的本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+檢閱這些指示，以[使用AEM SDK設定完整的本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)。

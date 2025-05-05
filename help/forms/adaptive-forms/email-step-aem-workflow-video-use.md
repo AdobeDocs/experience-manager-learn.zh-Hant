@@ -43,7 +43,7 @@ AEM Forms 6.4已匯入「傳送電子郵件」步驟。使用此步驟，我們�
 1. [部署Developingwithserviceuser套件](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
 1. [下載並安裝setvalue套件](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)此套件包含用於建立中繼資料屬性的程式碼，此程式碼是工作流程程式步驟的一部分。
-1. [設定Day CQ郵件服務](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html)
+1. [設定Day CQ郵件服務](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/notification.html)
 1. [使用套件管理器將與本文相關的資產匯入並安裝到CRX中](assets/emaildoraemformskt.zip)
 1. 啟動[自適應表單](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)。 填寫必填欄位並提交。
 1. 您應該會收到包含DocumentOfRecord作為附件的電子郵件

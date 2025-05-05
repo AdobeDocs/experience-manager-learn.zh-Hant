@@ -41,7 +41,7 @@ ht-degree: 0%
 
 建立頁面時，您必須選取範本，作為建立新頁面的基礎。 範本會定義結果頁面的結構、初始內容和允許的元件。
 
-[頁面範本](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html)有3個主要區域：
+[頁面範本](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=zh-Hant)有3個主要區域：
 
 1. **結構** — 定義屬於範本一部分的元件。 內容作者無法編輯這些內容。
 1. **初始內容** — 定義範本開始使用的元件，這些元件可由內容作者編輯和/或刪除
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 ## 使用體驗片段更新頁首和頁尾 {#experience-fragments}
 
-建立全域內容（例如頁首或頁尾）的常見作法是使用[體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 體驗片段，可讓使用者結合多個元件，以建立單一可參考的元件。 體驗片段的優點在於支援多網站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure)。
+建立全域內容（例如頁首或頁尾）的常見作法是使用[體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=zh-Hant)。 體驗片段，可讓使用者結合多個元件，以建立單一可參考的元件。 體驗片段的優點在於支援多網站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=zh-Hant#localized-site-structure)。
 
 網站範本產生頁首和頁尾。 接下來，更新體驗片段以符合模型。 請依照下列影片中的步驟操作：
 

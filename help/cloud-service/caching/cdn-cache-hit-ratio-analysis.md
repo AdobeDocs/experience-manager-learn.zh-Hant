@@ -26,7 +26,7 @@ ht-degree: 0%
 瞭解如何分析提供的AEM as a Cloud Service **CDN記錄檔**，並取得深入分析，例如&#x200B;**快取命中率**，以及&#x200B;_MISS_&#x200B;和&#x200B;_PASS_&#x200B;快取型別&#x200B;**的**&#x200B;大URL，以用於最佳化目的。
 
 
-CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`。 如需詳細資訊，請參閱[CDN記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs)。 `cache`欄位提供快取&#x200B;_的_&#x200B;狀態相關資訊，其可能值為HIT、MISS或PASS。 讓我們檢視可能值的詳細資訊。
+CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`。 如需詳細資訊，請參閱[CDN記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=zh-Hant#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs)。 `cache`欄位提供快取&#x200B;_的_&#x200B;狀態相關資訊，其可能值為HIT、MISS或PASS。 讓我們檢視可能值的詳細資訊。
 
 | 快取</br>可能的值的狀態 | 描述 |
 |------------------------------------|:-----------------------------------------------------:|
@@ -66,8 +66,8 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 若要分析CDN記錄，本教學課程提供三個選項：
 
 1. **Elasticsearch、Logstash和Kibana (ELK)**： [ELK儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md)可安裝在本機。
-1. **Splunk**： [Splunk儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md)需要存取Splunk以及已啟用[AEMCS記錄檔轉送](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)才能擷取CDN記錄。
-1. **Jupyter Notebook**：已授權Adobe Experience Platform的客戶，可透過[Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)從遠端存取它，不需安裝額外的軟體。
+1. **Splunk**： [Splunk儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md)需要存取Splunk以及已啟用[AEMCS記錄檔轉送](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)才能擷取CDN記錄。
+1. **Jupyter Notebook**：已授權Adobe Experience Platform的客戶，可透過[Adobe Experience Platform](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)從遠端存取它，不需安裝額外的軟體。
 
 ### 選項1：使用ELK儀表板工具
 
@@ -149,7 +149,7 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
 如果使用者不想在本機安裝軟體（亦即上節的ELK儀表板工具），有另一個選項，但需要Adobe Experience Platform的授權。
 
-[Jupyter Notebook](https://jupyter.org/)是開放原始碼的Web應用程式，可讓您建立包含程式碼、文字和視覺效果的檔案。 它用於資料轉換、視覺化和統計模型製作。 它可以作為Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)的一部分從遠端存取。
+[Jupyter Notebook](https://jupyter.org/)是開放原始碼的Web應用程式，可讓您建立包含程式碼、文字和視覺效果的檔案。 它用於資料轉換、視覺化和統計模型製作。 它可以作為Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)的一部分從遠端存取。
 
 #### 下載互動式Python筆記本檔案
 

@@ -25,13 +25,13 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-本章中的步驟將在Adobe Experience Manager as a Cloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 完成本教學課程時，建議使用[沙箱程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)。
+本章中的步驟將在Adobe Experience Manager as a Cloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 完成本教學課程時，建議使用[沙箱程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html?lang=zh-Hant)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hant)。
 
-[生產計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html)環境也可用於本教學課程；不過，請確保本教學課程的活動不會影響目標環境中正在執行的工作，因為本教學課程會將內容和程式碼部署到目標AEM環境。
+[生產計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html?lang=zh-Hant)環境也可用於本教學課程；不過，請確保本教學課程的活動不會影響目標環境中正在執行的工作，因為本教學課程會將內容和程式碼部署到目標AEM環境。
 
-[AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html)可用於本教學課程的部分內容。 此教學課程依賴雲端服務的部分，例如[使用Cloud Manager的前端管道](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html)部署主題，無法在AEM SDK上執行。
+[AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=zh-Hant)可用於本教學課程的部分內容。 此教學課程依賴雲端服務的部分，例如[使用Cloud Manager的前端管道](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html?lang=zh-Hant)部署主題，無法在AEM SDK上執行。
 
-如需詳細資訊，請檢閱[上線檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)。
+如需詳細資訊，請檢閱[上線檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=zh-Hant)。
 
 ## 目標 {#objective}
 
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 存取Experience Manager時發生問題？ 檢閱[上線檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
+> 存取Experience Manager時發生問題？ 檢閱[上線檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=zh-Hant)
 
 ## 下載基本網站範本
 

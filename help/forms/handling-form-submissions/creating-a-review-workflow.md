@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 必備條件
 
-請確定您有AEM Forms的工作執行個體。 請依照[安裝指南](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html)中的指示安裝並設定AEM Forms
+請確定您有AEM Forms的工作執行個體。 請依照[安裝指南](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html?lang=zh-Hant)中的指示安裝並設定AEM Forms
 
 以下影片說明如何使用AEM Forms元件建立稽核及核准工作流程
 >[!VIDEO](https://video.tv.adobe.com/v/40242?quality=12&learn=on)

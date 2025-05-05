@@ -22,7 +22,7 @@ ht-degree: 9%
 
 瞭解如何設定檔案編寫，以允許AEM作者使用Microsoft Word或Google Docs編輯和發佈檔案。
 
-檢閱[檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html)，以取得設定檔案編寫的完整詳細資料。
+檢閱[檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=zh-Hant)，以取得設定檔案編寫的完整詳細資料。
 
 ## 檔案製作快速入門
 

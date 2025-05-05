@@ -50,7 +50,7 @@ aemFormsUtilities.saveDocumentInCrx("/content/xmlfiles",".xml",xmlStringDoc);
 ## 先決條件
 
 
-您必須部署[DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar)並啟動套件。
+您必須部署[DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar?lang=zh-Hant)並啟動套件。
 
 
-如果您要使用這些公用程式服務將檔案儲存在CRX存放庫中，請依照[使用服務使用者開發](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms)文章中的說明進行。 請確定您在適當的CRX資料夾上為fd服務使用者提供[必要的許可權](http://localhost:4502/useradmin)。
+如果您要使用這些公用程式服務將檔案儲存在CRX存放庫中，請依照[使用服務使用者開發](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=zh-Hant#adaptive-forms)文章中的說明進行。 請確定您在適當的CRX資料夾上為fd服務使用者提供[必要的許可權](http://localhost:4502/useradmin)。

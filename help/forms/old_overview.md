@@ -83,7 +83,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant">
       <img alt= "在AEM Forms中截圖" src="./assets/captcha1.png" />
     </a>
     <div>
@@ -175,11 +175,11 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
 
 ## 其他資源
 
-* [Experience League — 探索AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Sites編寫檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites開發檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-* [AEM Sites管理檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites部署檔案](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [Experience League — 探索AEM](https://experienceleague.adobe.com/zh-hant#recommended/solutions/experience-manager)
+* [AEM Sites編寫檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=zh-Hant)
+* [AEM Sites開發檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=zh-Hant)
+* [AEM Sites管理檔案](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html?lang=zh-Hant)
+* [AEM Sites部署檔案](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html?lang=zh-Hant)
 * [AEM as a Cloud Service 教學課程](/help/cloud-service/overview.md)
 * [AEM Assets 教學課程](/help/assets/overview.md)
 * [AEM Forms 教學課程](/help/forms/overview.md)

@@ -40,7 +40,7 @@ ht-degree: 1%
 
 Android應用程式可與下列AEM部署選項搭配使用。 所有部署都需要安裝[WKND網站v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest)。
 
-+ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=zh-Hant)
 
 Android應用程式設計來連線至&#x200B;__AEM Publish__&#x200B;環境，不過，如果Android應用程式的設定中有提供驗證，則可以從AEM Author取得內容。
 
@@ -75,7 +75,7 @@ Android應用程式設計來連線至&#x200B;__AEM Publish__&#x200B;環境，不
 
 ### 連線到AEM環境
 
-如果連線到AEM作者環境，則需要[授權](https://github.com/adobe/aem-headless-client-java#using-authorization)。 [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java)提供使用[權杖式驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)的功能。 若要在`AdventureLoader.java`和`AdventuresLoader.java`中使用權杖式驗證更新使用者端產生器：
+如果連線到AEM作者環境，則需要[授權](https://github.com/adobe/aem-headless-client-java#using-authorization)。 [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java)提供使用[權杖式驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hant)的功能。 若要在`AdventureLoader.java`和`AdventuresLoader.java`中使用權杖式驗證更新使用者端產生器：
 
 ```java
 /* Comment out basicAuth
@@ -229,5 +229,5 @@ Android應用程式使用兩個檢視，在行動體驗中呈現冒險資料。
 
 ## 其他資源
 
-+ [AEM Headless快速入門 — GraphQL教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [AEM Headless快速入門 — GraphQL教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hant)
 + [適用於Java的AEM Headless使用者端](https://github.com/adobe/aem-headless-client-java)

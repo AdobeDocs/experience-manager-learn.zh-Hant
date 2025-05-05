@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 根據JSON結構描述建立最適化表單
 
-AEM Forms 6.3版本已引入根據JSON結構描述建立最適化Forms的功能。 有關使用JSON結構描述建立最適化Forms的詳細資訊，請參閱本[文章](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html)。
+AEM Forms 6.3版本已引入根據JSON結構描述建立最適化Forms的功能。 有關使用JSON結構描述建立最適化Forms的詳細資訊，請參閱本[文章](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html?lang=zh-Hant)。
 
 一旦您根據JSON結構描述建立最適化表單，下一步就是將提交的資料儲存在資料庫中。 為此，我們將使用各資料庫廠商推出的新JSON資料型別。 就本文而言，我們將使用MySql 8資料庫來儲存提交的資料。
 

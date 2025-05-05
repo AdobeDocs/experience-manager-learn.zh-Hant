@@ -19,6 +19,6 @@ ht-degree: 1%
 
 # 可變和不可變的內容
 
-瞭解AEM as a Cloud中[可變和不可變內容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)的重要性和差異，以及它如何影響您的開發方式。
+瞭解AEM as a Cloud中[可變和不可變內容](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=zh-Hant)的重要性和差異，以及它如何影響您的開發方式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330555?quality=12&learn=on)

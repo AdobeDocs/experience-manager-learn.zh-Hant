@@ -100,7 +100,7 @@ ht-degree: 0%
 
 ## HTL (HTML範本語言)和對話方塊 {#htl-dialogs}
 
-HTML範本語言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)**&#x200B;是AEM元件用來呈現內容的輕量型伺服器端範本語言。
+HTML範本語言或&#x200B;**[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html?lang=zh-Hant)**&#x200B;是AEM元件用來呈現內容的輕量型伺服器端範本語言。
 
 **對話方塊**&#x200B;定義元件可用的設定。
 
@@ -262,7 +262,7 @@ Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可�
 
    `HelloWorld`模型執行個體現在可以透過`model`變數，使用`HelloWord`在HTL中使用。 這些方法引動可以使用縮短的方法語法，例如： `${model.getTitle()}`可以縮短為`${model.title}`。
 
-   同樣地，所有HTL指令碼都插入了[全域物件](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html)，您可以使用與Sling模型物件相同的語法來存取這些物件。
+   同樣地，所有HTL指令碼都插入了[全域物件](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=zh-Hant)，您可以使用與Sling模型物件相同的語法來存取這些物件。
 
    ```html
    <div class="cmp-helloworld" data-cmp-is="helloworld" 
@@ -285,7 +285,7 @@ Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可�
 
 使用者端資料庫（簡稱`clientlibs`）提供整理和管理AEM Sites實作所需CSS和JavaScript檔案的機制。 使用者端資料庫是在AEM的頁面上包含CSS和JavaScript的標準方式。
 
-[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)模組是整合至建置程式的解耦[webpack](https://webpack.js.org/)專案。 如此可讓您使用熱門的前端資料庫，例如Sass、LESS和TypeScript。 `ui.frontend`模組在[使用者端程式庫章節](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md)中有更深入的探討。
+[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=zh-Hant)模組是整合至建置程式的解耦[webpack](https://webpack.js.org/)專案。 如此可讓您使用熱門的前端資料庫，例如Sass、LESS和TypeScript。 `ui.frontend`模組在[使用者端程式庫章節](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md)中有更深入的探討。
 
 接下來，更新`HelloWorld`元件的CSS樣式。
 

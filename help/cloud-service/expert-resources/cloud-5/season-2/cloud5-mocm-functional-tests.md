@@ -24,7 +24,7 @@ AEM as a Cloud Service預設會完成許多功能測試，並將您的應用程�
 
 ## 本影片涵蓋的內容
 
-+ [功能測試](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/functional-testing.html)
++ [功能測試](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/functional-testing.html?lang=zh-Hant)
 + [AEM煙霧測試](https://github.com/adobe/aem-test-samples/)
 + [AEM測試使用者端](https://github.com/adobe/aem-testing-clients/)
 

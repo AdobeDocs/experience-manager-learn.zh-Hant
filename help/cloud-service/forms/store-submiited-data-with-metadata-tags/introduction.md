@@ -31,7 +31,7 @@ ht-degree: 3%
 
 若要在AEM Forms CS中實作上述使用案例，您將需要下列專案
 
-* [AEM Forms CS雲端就緒執行個體](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync.html?lang=en#set-up-aem-author-instance)
+* [AEM Forms CS雲端就緒執行個體](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync.html?lang=zh-Hant#set-up-aem-author-instance)
 * [Azure入口網站帳戶](https://portal.azure.com/)
 
 

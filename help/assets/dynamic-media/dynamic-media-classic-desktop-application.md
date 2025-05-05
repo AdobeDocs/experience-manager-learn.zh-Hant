@@ -37,6 +37,6 @@ Adobe Dynamic Media Classic案頭應用程式與下列作業系統相容：
 
 ## 支援材料
 
-* [Adobe Dynamic Media Classic案頭應用程式檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
-* [Adobe Dynamic Media常見問題](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
-* [下載Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
+* [Adobe Dynamic Media Classic案頭應用程式檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=zh-Hant)
+* [Adobe Dynamic Media常見問題](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html?lang=zh-Hant)
+* [下載Dynamic Media Classic案頭應用程式](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html?lang=zh-Hant)

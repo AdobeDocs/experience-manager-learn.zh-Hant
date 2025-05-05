@@ -34,7 +34,7 @@ __GET__&#x200B;要求或&#x200B;__匿名__&#x200B;要求不需要CSRF權杖。
 [INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] doFilter: the provided CSRF token is invalid
 ```
 
-請參閱[檔案以取得有關AEM的CSRF保護](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html)的詳細資料。
+請參閱[檔案以取得有關AEM的CSRF保護](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=zh-Hant)的詳細資料。
 
 
 ## CSRF使用者端資源庫

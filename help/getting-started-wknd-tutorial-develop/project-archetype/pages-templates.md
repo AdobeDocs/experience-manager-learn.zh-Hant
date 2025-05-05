@@ -23,7 +23,7 @@ ht-degree: 0%
 
 {{edge-delivery-services-and-page-editor}}
 
-在本章中，讓我們探索基礎頁面元件與可編輯範本之間的關係。 瞭解如何根據[Adobe XD](https://helpx.adobe.com/support/xd.html)的某些模型建置無樣式的文章範本。 在建置範本的過程中，將涵蓋「可編輯範本」的核心元件和進階原則設定。
+在本章中，讓我們探索基礎頁面元件與可編輯範本之間的關係。 瞭解如何根據[Adobe XD](https://helpx.adobe.com/tw/support/xd.html)的某些模型建置無樣式的文章範本。 在建置範本的過程中，將涵蓋「可編輯範本」的核心元件和進階原則設定。
 
 ## 先決條件 {#prerequisites}
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ## 使用Adobe XD進行UI規劃 {#adobexd}
 
-通常，規劃新網站會從模型和靜態設計開始。 [Adobe XD](https://helpx.adobe.com/support/xd.html)是建立使用者體驗的設計工具。 接下來，讓我們檢查UI套件和模型，協助規劃文章頁面範本的結構。
+通常，規劃新網站會從模型和靜態設計開始。 [Adobe XD](https://helpx.adobe.com/tw/support/xd.html)是建立使用者體驗的設計工具。 接下來，讓我們檢查UI套件和模型，協助規劃文章頁面範本的結構。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
 
@@ -82,13 +82,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 一般[AEM核心元件UI Kit也可以](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd)作為自訂專案的起點。
+> 一般[AEM核心元件UI Kit也可以](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd?lang=zh-Hant)作為自訂專案的起點。
 
 ## 建立文章頁面範本
 
 建立頁面時，您必須選取範本，作為建立頁面的基礎。 範本會定義結果頁面的結構、初始內容和允許的元件。
 
-[可編輯的範本](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)有三個主要區域：
+[可編輯的範本](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=zh-Hant)有三個主要區域：
 
 1. **結構** — 定義屬於範本一部分的元件。 內容作者無法編輯這些內容。
 1. **初始內容** — 定義範本開始使用的元件，這些元件可由內容作者編輯和/或刪除
@@ -160,7 +160,7 @@ ht-degree: 0%
 
 ## 使用體驗片段更新頁首和頁尾 {#experience-fragments}
 
-建立全域內容（例如頁首或頁尾）的常見作法是使用[體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。 體驗片段，可讓使用者結合多個元件，以建立單一可參考的元件。 體驗片段的優點在於支援多網站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=en)。
+建立全域內容（例如頁首或頁尾）的常見作法是使用[體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=zh-Hant)。 體驗片段，可讓使用者結合多個元件，以建立單一可參考的元件。 體驗片段的優點在於支援多網站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=zh-Hant)。
 
 AEM專案原型產生了頁首和頁尾。 接下來，更新體驗片段以符合模型。 請依照下列影片中的步驟操作：
 
@@ -262,7 +262,7 @@ AEM專案原型產生了頁首和頁尾。 接下來，更新體驗片段以符�
 
    頁面元件下方只有兩個HTL指令碼： `customfooterlibs.html`和`customheaderlibs.html`。 *這個元件如何呈現頁面？*
 
-   `sling:resourceSuperType`屬性指向`core/wcm/components/page/v2/page`。 此屬性允許WKND的頁面元件繼承&#x200B;**所有**&#x200B;核心元件頁面元件的功能。 這是第一個稱為[Proxy元件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)的範例。 在[這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)可找到更多資訊。
+   `sling:resourceSuperType`屬性指向`core/wcm/components/page/v2/page`。 此屬性允許WKND的頁面元件繼承&#x200B;**所有**&#x200B;核心元件頁面元件的功能。 這是第一個稱為[Proxy元件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=zh-Hant#ProxyComponentPattern)的範例。 在[這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=zh-Hant)可找到更多資訊。
 
 1. Inspect是WKND元件中的另一個元件，來自`/apps/wknd/components/breadcrumb`的`Breadcrumb`元件。 請注意，可以找到相同的`sling:resourceSuperType`屬性，但這次它指向`core/wcm/components/breadcrumb/v2/breadcrumb`。 這是使用Proxy元件模式來包含核心元件的另一個範例。 事實上，WKND程式碼基底中的所有元件都是AEM核心元件的代理程式（自訂示範HelloWorld元件除外）。 最佳實務是在&#x200B;*之前*&#x200B;寫入自訂程式碼之前，儘可能重複使用核心元件的功能。
 
@@ -312,7 +312,7 @@ AEM專案原型產生了頁首和頁尾。 接下來，更新體驗片段以符�
 
    將HTL分成多個指令碼的另一個原因是為了允許Proxy元件覆寫個別指令碼，以實作自訂商業邏輯。 HTL指令碼`customfooterlibs.html`和`customheaderlibs.html`是為明確用途而建立的，以便透過實作專案來覆寫。
 
-   您可以閱讀本文章[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)，深入瞭解可編輯範本如何影響內容頁面的轉譯。
+   您可以閱讀本文章[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=zh-Hant)，深入瞭解可編輯範本如何影響內容頁面的轉譯。
 
 1. Inspect是另一個核心元件，例如`/libs/core/wcm/components/breadcrumb/v2/breadcrumb`的階層連結。 檢視`breadcrumb.html`指令碼，瞭解最終產生階層連結元件標籤的方式。
 

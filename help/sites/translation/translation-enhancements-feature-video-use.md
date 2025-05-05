@@ -42,6 +42,6 @@ AEM 6.5翻譯增強功能包括：
 
 ## 其他資源 {#additional-resources}
 
-* [翻譯多語言網站的內容](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html)
-* [https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html)
-* [翻譯最佳實務](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-bp.html)
+* [翻譯多語言網站的內容](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/translation.html)
+* [https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/tc-manage.html)
+* [翻譯最佳實務](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/tc-bp.html)

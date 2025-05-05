@@ -25,10 +25,10 @@ AEM as a Cloud Service支援多種驗證選項，且會因服務型別而異。
 |                       | AEM 作者 | AEM 發佈 |
 |-----------------------|:----------:|:-----------:|
 | [Adobe IMS](../accessing/overview.md) | ✔ | ✘ |
-| · [SAML 2.0 （透過Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up)） | ✔ | ✘ |
+| · [SAML 2.0 （透過Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=zh-Hant#how-to-set-up)） | ✔ | ✘ |
 | [SAML 2.0](./saml-2-0.md) | ✘ | ✔ |
-| [單一登入(SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
-| [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
+| [單一登入(SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html?lang=zh-Hant#integration-with-an-idp) | ✘ | ✔ |
+| [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html?lang=zh-Hant#integration-with-an-idp) | ✘ | ✔ |
 | [權杖驗證](../../headless-tutorial/authentication/overview.md) | ✔ | ✔ |
 | 基本驗證 | ✘ | ✘ |
 

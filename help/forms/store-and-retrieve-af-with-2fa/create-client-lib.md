@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 建立使用者端程式庫
 
-建立[使用者端程式庫](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)，它將包含在CSS類別&#x200B;**儲存按鈕**&#x200B;所識別的按鈕的點選事件上呼叫`guideBridge` API的方法`doAjaxSubmitWithFileAttachment`的程式碼。  我們將最適化表單資料`fileMap`和`mobileNumber`傳遞至`**/bin/storeafdatawithattachments`接聽的端點
+建立[使用者端程式庫](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=zh-Hant)，它將包含在CSS類別&#x200B;**儲存按鈕**&#x200B;所識別的按鈕的點選事件上呼叫`guideBridge` API的方法`doAjaxSubmitWithFileAttachment`的程式碼。  我們將最適化表單資料`fileMap`和`mobileNumber`傳遞至`**/bin/storeafdatawithattachments`接聽的端點
 
 儲存表單資料後，系統會產生唯一的應用程式ID，並在對話方塊中呈現給使用者。 關閉對話方塊時，使用者將被帶入表單，表單可讓他們使用唯一應用程式ID擷取已儲存的最適化表單。
 

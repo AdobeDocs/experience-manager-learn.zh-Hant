@@ -21,9 +21,9 @@ Dynamic Media Classic主影像概念的主要優點之一，就是您可以重�
 
 在本教學課程的此區段結束時，您將知道如何：
 
-- 在Dynamic Media Classic中裁切影像，並儲存為新的主檔案或虛擬影像。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html)。
-- 儲存虛擬調整後的影像，並使用它們來取代主要資產。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html)。
-- 在影像上建立縮放目標以顯示其醒目提示。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html)。
+- 在Dynamic Media Classic中裁切影像，並儲存為新的主檔案或虛擬影像。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=zh-Hant)。
+- 儲存虛擬調整後的影像，並使用它們來取代主要資產。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html?lang=zh-Hant)。
+- 在影像上建立縮放目標以顯示其醒目提示。 [了解更多](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html?lang=zh-Hant)。
 
 ## 裁切
 
@@ -42,8 +42,8 @@ Dynamic Media Classic有一些影像編輯工具，可在UI中方便使用，包
 
 您可以從資產的詳細資訊頁面或按一下&#x200B;**編輯**&#x200B;按鈕，存取Dynamic Media Classic中的裁切工具。 您可以透過兩種方式使用此工具裁切：
 
-- 您拖曳裁切視窗操作框或在「大小」方塊中輸入值的預設裁切模式。 瞭解如何[手動裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop)。
-- 修剪。 使用此選項可計算不符合影像的畫素數，移除影像周圍多餘的空格。 瞭解如何[裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image)。
+- 您拖曳裁切視窗操作框或在「大小」方塊中輸入值的預設裁切模式。 瞭解如何[手動裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=zh-Hant#select-an-area-to-crop)。
+- 修剪。 使用此選項可計算不符合影像的畫素數，移除影像周圍多餘的空格。 瞭解如何[裁切](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=zh-Hant#crop-to-remove-white-space-around-an-image)。
 
 ### _手動裁切_
 
@@ -134,7 +134,7 @@ _已調整主影像的檢視表ASIAN_BR_MAIN_
 
 決定是否使用「縮放目標」的另一個因素，是您選擇的檢視器。 並非所有檢視器型別都可以顯示縮放目標（例如，彈出檢視器不支援縮放目標）。
 
-瞭解如何[建立縮放目標](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets)。
+瞭解如何[建立縮放目標](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html?lang=zh-Hant#creating-and-editing-zoom-targets)。
 
 ![影像](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 

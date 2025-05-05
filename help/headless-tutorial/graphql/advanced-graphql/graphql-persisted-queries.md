@@ -207,9 +207,9 @@ GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
 
 >[!TIP]
 >
->    如果對AEM作者環境執行上述查詢，您必須傳送認證。 請參閱[本機開發存取權杖](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html)以示範，並參閱[呼叫AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api)以取得檔案詳細資訊。
+>    如果對AEM作者環境執行上述查詢，您必須傳送認證。 請參閱[本機開發存取權杖](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html?lang=zh-Hant)以示範，並參閱[呼叫AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=zh-Hant#calling-the-aem-api)以取得檔案詳細資訊。
 
-此外，請檢閱[如何執行持久查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query)、[使用查詢變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables)和[編碼查詢URL以供應用程式使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url)，以瞭解使用者端應用程式如何執行持久查詢。
+此外，請檢閱[如何執行持久查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant#execute-persisted-query)、[使用查詢變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant#query-variables)和[編碼查詢URL以供應用程式使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant#encoding-query-url)，以瞭解使用者端應用程式如何執行持久查詢。
 
 ## 更新持續性查詢中的快取控制引數 {#cache-control-all-adventures}
 
@@ -231,7 +231,7 @@ AEM GraphQL API可讓您更新查詢的預設快取控制引數，以提高效�
    ![保留GraphQL快取設定](assets/graphql-persisted-queries/persist-graphql-cache-config.png)
 
 
-檢閱[快取您的持續查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#caching-persisted-queries)，以取得預設快取控制引數的詳細資訊。
+檢閱[快取您的持續查詢](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant#caching-persisted-queries)，以取得預設快取控制引數的詳細資訊。
 
 
 ## 恭喜！

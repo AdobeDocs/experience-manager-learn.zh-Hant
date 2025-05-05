@@ -34,4 +34,4 @@ ht-degree: 1%
 
 ## 其他資源 {#additional-resources}
 
-* [元件主控台檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/default-components-console.html)
+* [元件主控台檔案](https://helpx.adobe.com/tw/experience-manager/6-5/sites/authoring/using/default-components-console.html)

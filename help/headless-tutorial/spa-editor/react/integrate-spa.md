@@ -51,13 +51,13 @@ ht-degree: 0%
 
 *SPA整合的高階描述。*
 
-有關前端組建的其他資訊可在[此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)找到。
+有關前端組建的其他資訊可在[此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=zh-Hant)找到。
 
 ## 檢查SPA整合 {#inspect-spa-integration}
 
-接下來，請檢查`ui.frontend`模組以瞭解由[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)自動產生的SPA。
+接下來，請檢查`ui.frontend`模組以瞭解由[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=zh-Hant)自動產生的SPA。
 
-1. 在您選擇的IDE中，開啟您的AEM專案。 此教學課程將使用[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)。
+1. 在您選擇的IDE中，開啟您的AEM專案。 此教學課程將使用[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=zh-Hant#microsoft-visual-studio-code)。
 
    ![VSCode - AEM WKND SPA專案](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -77,7 +77,7 @@ ht-degree: 0%
    "@adobe/aem-core-components-react-spa": "1.1.7",
    ```
 
-   上述模組構成[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)，並提供可將SPA元件對應至AEM元件的功能。
+   上述模組構成[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html?lang=zh-Hant)，並提供可將SPA元件對應至AEM元件的功能。
 
    此外也包含[AEM WCM元件 — React Core實作](https://github.com/adobe/aem-react-core-wcm-components-base)和[AEM WCM元件 — Spa編輯器 — React Core實作](https://github.com/adobe/aem-react-core-wcm-components-spa)。 這是一組可重複使用的UI元件，對應至現成可用的AEM元件。 這些模組的設計用途與樣式皆符合您專案的需求。
 

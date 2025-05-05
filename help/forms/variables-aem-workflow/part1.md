@@ -57,6 +57,6 @@ XML變數可用來預先填入最適化表單，或將最適化表單的提交�
 
 * [使用封裝管理程式下載資產並將其匯入AEM](assets/xmlandstringvariable.zip)
 * [探索工作流程模型](http://localhost:4502/editor.html/conf/global/settings/workflow/models/vacationrequest.html)以瞭解用於工作流程中的變數
-* [設定電子郵件服務](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
+* [設定電子郵件服務](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
 * [開啟最適化表單](http://localhost:4502/content/dam/formsanddocuments/applicationfortimeoff/jcr:content?wcmmode=disabled)
 * 填寫詳細資料並提交表單。

@@ -37,8 +37,8 @@ ht-degree: 1%
 >
 >針對網站上每個不重複影像大小，建立一個影像預設集。 例如，如果您需要產品詳細資料頁面的350 X 350影像、瀏覽/搜尋頁面的120 X 120影像，以及交叉銷售/精選專案的90 X 90影像，則無論您有500個影像或500,000個影像，都需要三個影像預設集。
 
-- 深入瞭解[影像預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html)。
-- 瞭解如何[建立影像預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset)。
+- 深入瞭解[影像預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html?lang=zh-Hant)。
+- 瞭解如何[建立影像預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html?lang=zh-Hant#creating-an-image-preset)。
 
 ## 影像預設集和銳利化
 
@@ -60,7 +60,7 @@ ht-degree: 1%
 
 Dynamic Media Classic允許三種型別的銳利化：簡單銳利化、重新取樣模式和遮色片銳利化。
 
-深入瞭解[Dynamic Media Classic銳利化選項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image)。
+深入瞭解[Dynamic Media Classic銳利化選項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html?lang=zh-Hant#sharpening_an_image)。
 
 ## 其他資源
 

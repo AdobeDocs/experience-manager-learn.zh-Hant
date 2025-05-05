@@ -20,7 +20,7 @@ ht-degree: 0%
 
 管理員可以設定網路資料夾，稱為Watched資料夾，這樣當使用者將檔案(例如PDF檔案)放入Watched資料夾時，就會啟動預先設定的工作流程、服務或指令碼操作，以處理新增的檔案。 服務執行指定的操作後，會將結果檔案儲存在指定的輸出資料夾中。 如需工作流程、服務和指令碼的詳細資訊。
 
-若要進一步瞭解如何建立watched資料夾，[請按一下這裡](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html)
+若要進一步瞭解如何建立watched資料夾，[請按一下這裡](https://helpx.adobe.com/tw/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html)
 
 Watched資料夾用於以批次模式產生檔案。 使用watched資料夾機制，可以為列印通道產生互動式通訊，或使用輸出服務將資料與範本合併。
 
@@ -28,7 +28,7 @@ Watched資料夾用於以批次模式產生檔案。 使用watched資料夾機�
 
 Output服務是AEM Document Services中的OSGi服務。 輸出服務支援各種AEM Forms Designer的輸出格式和輸出設計功能。 輸出服務可以轉換XFA範本和XML資料，以產生多種格式的列印檔案。
 
-若要進一步瞭解輸出服務，[請按一下這裡](https://helpx.adobe.com/aem-forms/6/output-service.html)。
+若要進一步瞭解輸出服務，[請按一下這裡](https://helpx.adobe.com/tw/aem-forms/6/output-service.html)。
 若要在系統上設定watched資料夾，請遵循下列步驟：
 * [下載並解壓縮zip檔案的內容](assets/outputservicewatchedfolderkt.zip)。此zip檔案包含用來建立watched資料夾的套件，以及使用watched資料夾機制測試輸出服務的範例檔案
    * Windows系統

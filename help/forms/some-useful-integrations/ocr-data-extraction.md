@@ -83,11 +83,11 @@ requestBody定義的參考支援下列專案
 
 ## 建立資料Source
 
-若要將AEM/AEM Forms與協力廠商應用程式整合，我們必須在雲端服務設定中[建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)。 請使用[swagger檔案](assets/drivers-license-swagger.zip)建立您的資料來源。
+若要將AEM/AEM Forms與協力廠商應用程式整合，我們必須在雲端服務設定中[建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=zh-Hant)。 請使用[swagger檔案](assets/drivers-license-swagger.zip)建立您的資料來源。
 
 ## 建立表單資料模型
 
-AEM Forms資料整合提供直覺式使用者介面，可建立和使用[表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 讓表單資料模型以先前步驟建立的資料來源為基礎。
+AEM Forms資料整合提供直覺式使用者介面，可建立和使用[表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=zh-Hant)。 讓表單資料模型以先前步驟建立的資料來源為基礎。
 
 ![fdm](assets/test-dl-fdm.PNG)
 

@@ -65,7 +65,7 @@ AEM 6.4中的Dynamic Media Viewer增強功能包括新增全景影像檢視器�
  </tbody>
 </table>
 
-[在Scene7模式下設定Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[在Scene7模式下設定Dynamic Media](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/config-dms7.html)
 
 [在混合模式中設定Dynamic Media](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/config-dynamic.html)
 

@@ -27,7 +27,7 @@ AEM的GraphQL API提供強大的功能，可將RTF傳回HTML、純文字或純JS
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104?quality=12&learn=on)
 
-在內容片段編輯器中，多行文字欄位的功能表列為作者提供標準的RTF格式功能，例如&#x200B;**粗體**、*斜體*&#x200B;和底線。 以全熒幕模式開啟多行欄位，可啟用[其他格式化工具，例如段落文字、尋找和取代、拼字檢查等等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)。
+在內容片段編輯器中，多行文字欄位的功能表列為作者提供標準的RTF格式功能，例如&#x200B;**粗體**、*斜體*&#x200B;和底線。 以全熒幕模式開啟多行欄位，可啟用[其他格式化工具，例如段落文字、尋找和取代、拼字檢查等等](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html?lang=zh-Hant)。
 
 >[!NOTE]
 >

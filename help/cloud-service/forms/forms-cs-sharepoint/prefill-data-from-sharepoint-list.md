@@ -24,7 +24,7 @@ ht-degree: 0%
 
 本文會說明使用表單資料模型預填服務，以從SharePoint清單擷取的資料預填/預先填入最適化表單所需的步驟。
 
-本文假設您已[成功設定最適化表單，以將資料提交至SharePoint清單。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
+本文假設您已[成功設定最適化表單，以將資料提交至SharePoint清單。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=zh-Hant#connect-af-sharepoint-list)
 
 以下是SharePoint清單中的資料
 ![sharepoint-list](assets/list-data.png)

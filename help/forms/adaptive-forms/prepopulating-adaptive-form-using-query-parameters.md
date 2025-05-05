@@ -27,7 +27,7 @@ https://forms.enablementadobe.com/content/forms/af/testingxml.html?FirstName=Joh
 
 為了完成此使用案例，已建立新的最適化表單範本並與頁面元件建立關聯。 在此頁面元件中，我們有jsp可取得查詢引數，並建立可用來填入調適型表單的xml結構。
 
-有關建立新最適化表單範本和頁面元件的詳細資訊[在本影片中說明。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
+有關建立新最適化表單範本和頁面元件的詳細資訊[在本影片中說明。](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=zh-Hant)
 
 以下是用於jsp頁面的程式碼
 

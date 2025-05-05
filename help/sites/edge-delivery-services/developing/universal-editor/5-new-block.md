@@ -101,11 +101,11 @@ $ git checkout -b teaser origin/main
 
 | JSON屬性 | 描述 |
 |---------------|-----------------------------------------------------------------------------------------------------------------------|
-| `component` | [欄位型別](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#component-types)，例如`text`、`reference`或`aem-content`。 |
+| `component` | [欄位型別](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#component-types)，例如`text`、`reference`或`aem-content`。 |
 | `name` | 欄位名稱，對應至儲存值於AEM中的JCR屬性。 |
 | `label` | 在通用編輯器中向作者顯示的標籤。 |
 
-如需完整的屬性清單（包括選擇性），請檢閱[通用編輯器欄位檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#fields)。
+如需完整的屬性清單（包括選擇性），請檢閱[通用編輯器欄位檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#fields)。
 
 #### 區塊設計
 
@@ -132,16 +132,16 @@ Teaser區塊的設計會分為這兩個邏輯元件（影像和文字內容）�
 
 Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery Services HTML顯示為所需Web體驗所需的程式碼，區塊模型應反映此結構。
 
-- 使用[欄位摺疊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)將&#x200B;**影像**&#x200B;和&#x200B;**影像替代文字**&#x200B;群組在一起。
-- 使用[元素群組](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的欄位摺疊將文字內容欄位群組在一起。
+- 使用[欄位摺疊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)將&#x200B;**影像**&#x200B;和&#x200B;**影像替代文字**&#x200B;群組在一起。
+- 使用[元素群組](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的欄位摺疊將文字內容欄位群組在一起。
 
-如果您不熟悉[欄位摺疊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)、[元素群組](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)或[型別推斷](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)，請先檢閱連結的檔案，再繼續進行，因為這些檔案對於建立結構良好的區塊模型是必要的。
+如果您不熟悉[欄位摺疊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)、[元素群組](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)或[型別推斷](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)，請先檢閱連結的檔案，再繼續進行，因為這些檔案對於建立結構良好的區塊模型是必要的。
 
 在以下範例中：
 
-- [型別推斷](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)是用來從`image`欄位自動建立`<img>` HTML專案。 欄位收合與`image`和`imageAlt`欄位搭配使用，以建立`<img>`個HTML專案。 `src`屬性設定為`image`欄位的值，而`alt`屬性設定為`imageAlt`欄位的值。
+- [型別推斷](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)是用來從`image`欄位自動建立`<img>` HTML專案。 欄位收合與`image`和`imageAlt`欄位搭配使用，以建立`<img>`個HTML專案。 `src`屬性設定為`image`欄位的值，而`alt`屬性設定為`imageAlt`欄位的值。
 - `textContent`是用來分類欄位的群組名稱。 它應該是語意上的，但可以為此區塊的任何特有內容。 這會通知通用編輯器轉譯最終HTML輸出中相同`<div>`元素內具有此首碼的所有欄位。
-- 欄位收合也會套用至行動號召(CTA)的`textContent`群組中。 CTA是透過[型別推斷](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)建立為`<a>`。 `cta`欄位是用來設定`<a>`專案的`href`屬性，`ctaText`欄位會提供`<a ...>`標籤內連結的文字內容。
+- 欄位收合也會套用至行動號召(CTA)的`textContent`群組中。 CTA是透過[型別推斷](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)建立為`<a>`。 `cta`欄位是用來設定`<a>`專案的`href`屬性，`ctaText`欄位會提供`<a ...>`標籤內連結的文字內容。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
 
@@ -223,7 +223,7 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 
 **此索引標籤說明建立Teaser區塊模型的次佳方式，並且只與正確方式並置。**
 
-在不使用[欄位摺疊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)和[元素群組](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)的情況下，將每個欄位定義為區塊模型中的獨立欄位，似乎很誘人。 然而，此監督使區塊樣式化為有凝聚力的單位變得複雜。
+在不使用[欄位摺疊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)和[元素群組](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)的情況下，將每個欄位定義為區塊模型中的獨立欄位，似乎很誘人。 然而，此監督使區塊樣式化為有凝聚力的單位變得複雜。
 
 例如，Teaser模型可以定義為&#x200B;**，而不需要**&#x200B;欄位摺疊或元素群組，如下所示：
 
@@ -304,7 +304,7 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 </div>        
 ```
 
-每個欄位都隔離在自己的`div`中，因此很難將影像和文字內容設為內聚單位。 您可以用心和創意達成想要的設計，但使用[元素群組](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)將文字內容欄位分組，並使用[欄位摺疊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)來新增編寫的值，因為元素屬性更簡單、更容易，而且語義上也正確。
+每個欄位都隔離在自己的`div`中，因此很難將影像和文字內容設為內聚單位。 您可以用心和創意達成想要的設計，但使用[元素群組](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)將文字內容欄位分組，並使用[欄位摺疊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)來新增編寫的值，因為元素屬性更簡單、更容易，而且語義上也正確。
 
 請參閱上面的&#x200B;**寫入方式**&#x200B;索引標籤，瞭解如何更妥善地建立Teaser區塊的模型。
 
@@ -322,7 +322,7 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 | `definition.plugins.xwalk.page.resourceType` | 定義用於在通用編輯器中呈現元件的Sling資源型別。 一律使用`core/franklin/components/block/v#/block`資源型別。 |
 | `definition.plugins.xwalk.page.template.name` | 區塊的名稱。 它應該使用小寫和連字型大小，以符合區塊的資料夾名稱。 此值也可用來在通用編輯器中標示區塊的例項。 |
 | `definition.plugins.xwalk.page.template.model` | 將此定義連結至其`model`定義，該定義會控制為通用編輯器中區塊顯示的編寫欄位。 這裡的值必須符合`model.id`值。 |
-| `definition.plugins.xwalk.page.template.classes` | 選擇性屬性，其值已新增至區塊HTML元素的`class`屬性。 這允許相同區塊的變體。 [將類別欄位](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)新增至區塊的[模型](#block-model)，可使`classes`值變成可編輯。 |
+| `definition.plugins.xwalk.page.template.classes` | 選擇性屬性，其值已新增至區塊HTML元素的`class`屬性。 這允許相同區塊的變體。 [將類別欄位](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)新增至區塊的[模型](#block-model)，可使`classes`值變成可編輯。 |
 
 
 以下是區塊定義的JSON範例：
@@ -363,7 +363,7 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 
 ### 封鎖篩選器
 
-區塊的`filters`陣列為[容器區塊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container)定義其他區塊可以新增至容器。 篩選器定義可新增至容器的區塊ID (`model.id`)清單。
+區塊的`filters`陣列為[容器區塊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container)定義其他區塊可以新增至容器。 篩選器定義可新增至容器的區塊ID (`model.id`)清單。
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
 
@@ -375,7 +375,7 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 }
 ```
 
-Teaser元件不是[容器區塊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container)，這表示您無法新增其他區塊至其中。 因此，其`filters`陣列會留空。 請改為將Teaser的ID新增至區段的篩選清單，以便將Teaser新增至區段。
+Teaser元件不是[容器區塊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container)，這表示您無法新增其他區塊至其中。 因此，其`filters`陣列會留空。 請改為將Teaser的ID新增至區段的篩選清單，以便將Teaser新增至區段。
 
 ![封鎖篩選器](./assets/5-new-block/filters.png)
 

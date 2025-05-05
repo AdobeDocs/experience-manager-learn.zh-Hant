@@ -48,8 +48,8 @@ _影像集範例_
 
 ![影像](assets/media-sets/image-set-url-1.png)
 
-- 透過[影像集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/quick-start-image-sets.html)深入瞭解影像集。
-- 瞭解如何[建立影像集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set)。
+- 透過[影像集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/quick-start-image-sets.html?lang=zh-Hant)深入瞭解影像集。
+- 瞭解如何[建立影像集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/creating-image-set.html?lang=zh-Hant#creating-an-image-set)。
 
 ### 色票集
 
@@ -67,8 +67,8 @@ _色票集範例_
 
 ![影像](assets/media-sets/image-set_url.png)
 
-- 透過[色票集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html)深入瞭解色票集。
-- 瞭解如何[建立色票集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set)。
+- 透過[色票集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html?lang=zh-Hant)深入瞭解色票集。
+- 瞭解如何[建立色票集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html?lang=zh-Hant#creating-a-swatch-set)。
 
 ### 迴轉集
 
@@ -84,8 +84,8 @@ _迴轉集範例_
 
 ![影像](assets/media-sets/spin-set.png)
 
-- 透過[迴轉集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html)深入瞭解迴轉集。
-- 瞭解如何[建立迴轉集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set)。
+- 透過[迴轉集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html?lang=zh-Hant)深入瞭解迴轉集。
+- 瞭解如何[建立迴轉集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html?lang=zh-Hant#creating-a-spin-set)。
 
 ## 混合媒體集
 
@@ -99,13 +99,13 @@ _混合媒體集範例_
 
 ![影像](assets/media-sets/image-set-url-1.png)
 
-- 透過[混合媒體集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html)深入瞭解混合媒體集。
+- 透過[混合媒體集快速入門](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html?lang=zh-Hant)深入瞭解混合媒體集。
 
-- 瞭解如何[建立混合媒體集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set)。
+- 瞭解如何[建立混合媒體集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html?lang=zh-Hant#creating-a-mixed-media-set)。
 
 若要在網站上顯示縮放、集合或視訊的影像，請在Dynamic Media Classic的「檢視器」中將其呼叫。 Dynamic Media Classic包含豐富的媒體資產檢視器，例如色票集、迴轉集、視訊和許多其他。
 
-深入瞭解AEM Assets和Dynamic Media Classic的[檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html)。
+深入瞭解AEM Assets和Dynamic Media Classic的[檢視器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html?lang=zh-Hant)。
 
 ## 大量集預設集
 
@@ -124,7 +124,7 @@ _混合媒體集範例_
 
 建立預設集後，公司管理員可以選擇預設集是作用中或非作用中。 「作用中」表示這些預設集會出現在上傳頁面的&#x200B;**工作選項**&#x200B;下，而非作用中的預設集將保持隱藏狀態。
 
-瞭解如何[建立批次集預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset)。
+瞭解如何[建立批次集預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=zh-Hant#creating-a-batch-set-preset)。
 
 ### 在上傳時使用批次集預設集
 
@@ -135,4 +135,4 @@ _混合媒體集範例_
 3. 開啟&#x200B;**批次集預設集**&#x200B;選項，然後核取或取消核取預設集以將其用於上傳。
 4. 上傳完成後，請檢視資料夾中的已完成集合。
 
-深入瞭解[批次集預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets)。
+深入瞭解[批次集預設集](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=zh-Hant#batch-set-presets)。

@@ -49,11 +49,11 @@ OpenAPI Specification （前身為Swagger Specification）是REST API的API說�
 
 ## 建立資料Source
 
-若要將AEM/AEM Forms與協力廠商應用程式整合，我們需要使用雲端服務設定中的swagger檔案[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) REST型資料來源。 完成的資料來源會作為此課程資產的一部分提供給您。
+若要將AEM/AEM Forms與協力廠商應用程式整合，我們需要使用雲端服務設定中的swagger檔案[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=zh-Hant) REST型資料來源。 完成的資料來源會作為此課程資產的一部分提供給您。
 
 ## 建立表單資料模型
 
-AEM Forms資料整合提供直覺式使用者介面，可建立和使用[表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)。 表單資料模型仰賴資料來源交換資料。
+AEM Forms資料整合提供直覺式使用者介面，可建立和使用[表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=zh-Hant)。 表單資料模型仰賴資料來源交換資料。
 完成的表單資料模型可從這裡[&#128279;](assets/sms-2fa-fdm.zip)下載
 
 ![fdm](assets/2FA-fdm.PNG)

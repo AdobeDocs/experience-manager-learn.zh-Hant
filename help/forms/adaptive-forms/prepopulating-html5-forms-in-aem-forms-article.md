@@ -33,7 +33,7 @@ slingRequest.setAttribute(&quot;data&quot;， content)；
 
 在此範例中，我們使用內容來設定資料屬性。 內容代表您想要預先填入表單的資料。 通常，您會透過對內部服務進行REST呼叫來擷取「內容」。
 
-若要達到此使用案例，您需要建立自訂設定檔。 建立自訂設定檔的詳細資訊已清楚記錄在[此處的AEM Forms檔案中](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html)。
+若要達到此使用案例，您需要建立自訂設定檔。 建立自訂設定檔的詳細資訊已清楚記錄在[此處的AEM Forms檔案中](https://helpx.adobe.com/tw/aem-forms/6/html5-forms/custom-profile.html)。
 
 建立自訂設定檔後，您將會建立JSP檔案，透過呼叫後端系統來擷取資料。 擷取資料後，您將使用slingRequest.setAttribute(&quot;data&quot;， content)；預先填入表單
 

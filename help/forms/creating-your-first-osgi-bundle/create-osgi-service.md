@@ -80,7 +80,7 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 
 第10行的註解`@Component(...)`會將此Java類別標籤為OSGi元件，並將其註冊為OSGi服務。
 
-`@Reference`註解是OSGi宣告式服務的一部分，用來將[Outputservice](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)的參照插入變數`outputService`。
+`@Reference`註解是OSGi宣告式服務的一部分，用來將[Outputservice](https://helpx.adobe.com/tw/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)的參照插入變數`outputService`。
 
 
 ## 建置和部署套件組合

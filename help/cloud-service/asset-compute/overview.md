@@ -147,7 +147,7 @@ Asset Compute背景工作必須部署至Adobe I/O Runtime，才能與AEM as a Cl
 
 ### 文件
 
-+ [Asset Compute服務檔案](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
++ [Asset Compute服務檔案](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=zh-Hant)
 + [Asset Compute開發工具Readme](https://github.com/adobe/asset-compute-devtool)
 + [Asset Compute範例背景工作](https://github.com/adobe/asset-compute-example-workers)
 

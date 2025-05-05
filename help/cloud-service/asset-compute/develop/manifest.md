@@ -28,7 +28,7 @@ ht-degree: 0%
 
 背景工作被定義為`actions`下的Adobe I/O Runtime動作專案，由一組設定組成。
 
-存取其他Adobe I/O整合的工作者必須將`annotations -> require-adobe-auth`屬性設定為`true`，因為此[透過`params.auth`物件公開工作者的Adobe I/O認證](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis)。 當背景工作呼叫Adobe I/O API (例如Adobe Photoshop、Lightroom或Sensei API)時，通常需要此專案，而且每個背景工作可切換。
+存取其他Adobe I/O整合的工作者必須將`annotations -> require-adobe-auth`屬性設定為`true`，因為此[透過`params.auth`物件公開工作者的Adobe I/O認證](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=zh-Hant#access-adobe-apis)。 當背景工作呼叫Adobe I/O API (例如Adobe Photoshop、Lightroom或Sensei API)時，通常需要此專案，而且每個背景工作可切換。
 
 1. 開啟並檢閱自動產生的背景工作`manifest.yml`。 包含多個Asset Compute背景工作程式的專案，必須為`actions`陣列下的每個背景工作程式定義一個專案。
 
@@ -51,7 +51,7 @@ packages:
 
 每個背景工作可以在Adobe I/O Runtime中為其執行內容設定[限制](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)。 這些值應該根據工作者的數量、比率、將計算的資產型別，以及執行的工作型別，調整為工作者提供最佳規模。
 
-在設定限制之前，請檢閱[Adobe大小調整指南](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers)。 Asset Compute背景工作處理資產時，記憶體可能會用完，導致Adobe I/O Runtime執行終止，因此請確保背景工作的大小適合處理所有候選資產。
+在設定限制之前，請檢閱[Adobe大小調整指南](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=zh-Hant#sizing-workers)。 Asset Compute背景工作處理資產時，記憶體可能會用完，導致Adobe I/O Runtime執行終止，因此請確保背景工作的大小適合處理所有候選資產。
 
 1. 新增`inputs`區段至新的`wknd-asset-compute`動作專案。 這可調整Asset Compute背景工作的整體效能和資源配置。
 

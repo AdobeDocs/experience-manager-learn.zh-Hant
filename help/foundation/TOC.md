@@ -51,7 +51,7 @@ ht-degree: 14%
    + [ModSecurity CRS DoS攻擊防護](./security/modsecurity-crs-dos-attack-protection.md)
    + [使用私人憑證與API的HTTPS連線](./security/call-internal-apis-having-private-certificate.md)
    + [來自AEM的雙向TLS (mTLS)驗證](./security/mutual-tls-authentication.md)
-   + [JWT-To-OAuth認證移轉](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
+   + [JWT-To-OAuth認證移轉](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
 + 工作流程 {#workflow}
    + [使用工作流程編輯器](./workflow/use-the-workflow-editor.md)
    + [使用工作流程](./workflow/use-workflow.md)

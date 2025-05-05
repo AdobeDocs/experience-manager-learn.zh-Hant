@@ -47,4 +47,4 @@ AEM Sites的頁面差異功能顯示以顏色快速檢視頁面中的變更內�
 
 ## 其他資源 {#additional-resources}
 
-* [頁面差異檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html)
+* [頁面差異檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html?lang=zh-Hant)

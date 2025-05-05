@@ -272,8 +272,8 @@ CSS以主要（綠色）色彩將&#x200B;**Hero**&#x200B;配置樣式的文字�
 
 ## 其他資源 {#additional-resources}
 
-* [樣式系統檔案](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)
-* [正在建立AEM使用者端資料庫](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [樣式系統檔案](https://helpx.adobe.com/tw/experience-manager/6-5/sites/authoring/using/style-system.html)
+* [正在建立AEM使用者端資料庫](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [BEM （區塊元素修飾元）檔案網站](https://getbem.com/)
 * [較少說明檔案網站](https://lesscss.org/)
 * [jQuery網站](https://jquery.com/)

@@ -23,7 +23,7 @@ ht-degree: 0%
 * 單一來源正在存取AEM發佈內容
 * AEM Author需要CORS存取權
 
-如果需要對AEM Publish的多重來源存取權，請參閱[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
+如果需要對AEM Publish的多重來源存取權，請參閱[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=zh-Hant#dispatcher-configuration)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
@@ -103,7 +103,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### 允許CORS要求標頭
 
-若要允許必要的[HTTP要求標頭傳遞至AEM進行處理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，必須在Disaptcher的`/clientheaders`設定中允許這些標頭。
+若要允許必要的[HTTP要求標頭傳遞至AEM進行處理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#specifying-the-http-headers-to-pass-through-clientheaders)，必須在Disaptcher的`/clientheaders`設定中允許這些標頭。
 
 ```
 /clientheaders {
@@ -116,7 +116,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### 快取CORS回應標頭
 
-若要允許在快取的內容上快取及提供CORS標頭，請將下列[/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers)新增至AEM發佈`dispatcher.any`檔案。
+若要允許在快取的內容上快取及提供CORS標頭，請將下列[/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#caching-http-response-headers)新增至AEM發佈`dispatcher.any`檔案。
 
 ```
 /publishfarm {

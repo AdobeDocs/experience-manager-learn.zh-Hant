@@ -163,7 +163,7 @@ data:
 
 讓&#x200B;**透過封鎖IP位址的請求來避免DoS攻擊**，每秒發出100個請求，導致其被封鎖5分鐘。
 
-- 在WKND專案的`/config/cdn.yaml`檔案中新增下列[速率限制流量篩選器規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#ratelimit-structure)。
+- 在WKND專案的`/config/cdn.yaml`檔案中新增下列[速率限制流量篩選器規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hant#ratelimit-structure)。
 
 ```yaml
 kind: CDN
@@ -227,7 +227,7 @@ data:
 
 接下來，讓我們針對已購買增強式安全性或WAF-DDoS保護授權的客戶，探索其體驗，該授權可讓他們設定進階規則，以保護網站免受更複雜的攻擊。
 
-在繼續之前，請按照流量篩選規則檔案[設定步驟](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en#setup)中的說明，為您的程式啟用WAF-DDoS保護。
+在繼續之前，請按照流量篩選規則檔案[設定步驟](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hant#setup)中的說明，為您的程式啟用WAF-DDoS保護。
 
 #### 不含WAFFlags
 
@@ -264,7 +264,7 @@ data:
 
 現在，新增包含`wafFlags`屬性的WAF規則做為`action`屬性的一部分，並&#x200B;**封鎖模擬的攻擊要求**。
 
-從語法的角度來看，WAF規則與先前看到的規則類似，不過，`action`屬性會參考一或多個`wafFlags`值。 若要深入瞭解`wafFlags`，請檢閱[WAF旗標清單](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#waf-flags-list)區段。
+從語法的角度來看，WAF規則與先前看到的規則類似，不過，`action`屬性會參考一或多個`wafFlags`值。 若要深入瞭解`wafFlags`，請檢閱[WAF旗標清單](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hant#waf-flags-list)區段。
 
 - 在WKND專案的`/config/cdn.yaml`檔案中新增下列規則。 請注意，`block-waf-flags`規則如何包含某些受到模擬惡意流量攻擊時出現在儀表板工具中的wafFlags。 事實上，隨著威脅的演變，長期分析記錄以判斷要宣告哪些新規則是很好的做法。
 
@@ -352,7 +352,7 @@ data:
 
 ## 其他資源
 
-[流量篩選器規則語法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#rules-syntax)
+[流量篩選器規則語法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hant#rules-syntax)
 
-[CDN記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#cdn-log-format)
+[CDN記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hant#cdn-log-format)
 

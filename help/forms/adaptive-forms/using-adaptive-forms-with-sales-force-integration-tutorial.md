@@ -27,8 +27,8 @@ ht-degree: 0%
 * 捲動至本頁底部，下載swagger檔案並將其儲存至硬碟。
 * 已啟用SSL的AEM Forms
 
-   * [在AEM 6.3上啟用SSL的官方檔案](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
-   * [在AEM 6.4上啟用SSL的官方檔案](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
+   * [在AEM 6.3上啟用SSL的官方檔案](https://helpx.adobe.com/tw/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
+   * [在AEM 6.4上啟用SSL的官方檔案](https://helpx.adobe.com/tw/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
 * 您必須擁有Salesforce帳戶
 * 您需要建立連線應用程式。 建立應用程式的官方檔案表單Salesforce在[這裡](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0)列出。
@@ -73,7 +73,7 @@ ht-degree: 0%
 * 驗證處理常式：授權持有者
 * 按一下「連線至OAUTH」。如果一切順利，您應該不會看到任何錯誤
 
-使用Salesforce建立表單資料模型後，您就可以使用剛剛建立的資料Source建立表單資料整合。 建立表單資料整合的官方檔案為[這裡](https://helpx.adobe.com/aem-forms/6-3/data-integration.html)。
+使用Salesforce建立表單資料模型後，您就可以使用剛剛建立的資料Source建立表單資料整合。 建立表單資料整合的官方檔案為[這裡](https://helpx.adobe.com/tw/aem-forms/6-3/data-integration.html)。
 
 請務必設定表單資料模型以包含POST服務，以便在SFDC中建立Lead物件。
 
@@ -106,7 +106,7 @@ ht-degree: 0%
    * 驗證處理常式：授權持有者
    * 按一下「連線至OAuth」按鈕。 如果您看到任何錯誤，請檢閱上述步驟，以確保所有資訊皆正確輸入。
 
-使用Salesforce建立資料Source後，您就可以使用剛剛建立的資料Source建立表單資料整合。 其檔案連結為[這裡](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
+使用Salesforce建立資料Source後，您就可以使用剛剛建立的資料Source建立表單資料整合。 其檔案連結為[這裡](https://helpx.adobe.com/tw/experience-manager/6-4/forms/using/create-form-data-models.html)
 
 請務必設定表單資料模型以包含POST服務，以便在SFDC中建立Lead物件。
 

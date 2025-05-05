@@ -20,7 +20,7 @@ ht-degree: 0%
 
 您可以使用現有資料預先填寫最適化表單的欄位。 當使用者開啟表單時，這些欄位的值將被預填。 有多種方式可預先填寫最適化表單欄位。 在本文中，我們將瞭解如何使用AEM Forms預填服務預填最適化表單。
 
-若要深入瞭解預先填入最適化表單的各種方法，[請遵循此檔案](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+若要深入瞭解預先填入最適化表單的各種方法，[請遵循此檔案](https://helpx.adobe.com/tw/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
 
 若要使用預填服務預填調適型表單，您必須建立實作`com.adobe.forms.common.service.DataXMLProvider`介面的類別。 方法`getDataXMLForDataRef`將具有邏輯，可建置並傳回最適化表單將用來預先填入欄位的資料。 在此方法中，您可以從任何來源擷取資料，並傳回資料檔案的輸入資料流。 下列程式碼範例會擷取登入使用者的使用者設定檔資訊，並建構XML檔案，其輸入資料流會傳回供調適型表單使用。
 

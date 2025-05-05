@@ -21,7 +21,7 @@ ht-degree: 0%
 
 使用Calvin SDK自動測試最適化Forms
 
-Calvin SDK是Adaptive Forms開發人員用來測試Adaptive Forms的公用程式API。 Calvin SDK是建置在[Hobbes.js測試架構](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)之上。 Calvin SDK自AEM Forms 6.3起即可使用。
+Calvin SDK是Adaptive Forms開發人員用來測試Adaptive Forms的公用程式API。 Calvin SDK是建置在[Hobbes.js測試架構](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)之上。 Calvin SDK自AEM Forms 6.3起即可使用。
 
 在本教學課程中，您將建立下列專案：
 

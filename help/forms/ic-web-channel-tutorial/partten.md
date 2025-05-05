@@ -55,7 +55,7 @@ ht-degree: 0%
 
 * 按一下Assets圖示並套用篩選器，以顯示「檔案片段」型別的資產。 將RetirationIncomeOutlook檔案片段拖放至[左面板]目標區域。
 
-* 新增檔案片段至內容區域時，您可以參考[此頁面](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html)。
+* 新增檔案片段至內容區域時，您可以參考[此頁面](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html?lang=zh-Hant)。
 
 ## 新增預估月收入圖表 {#adding-estimated-monthly-income-chart}
 

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 測試兩種方法所需的步驟
 
-* 設定[天CQ郵件服務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=en#configuring-the-mail-service)從AEM Forms伺服器傳送電子郵件
+* 設定[天CQ郵件服務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=zh-Hant#configuring-the-mail-service)從AEM Forms伺服器傳送電子郵件
 * 使用[felix Web主控台](http://localhost:4502/system/console/bundles)部署[formattachments](assets/formattachments.formattachments.core-1.0-SNAPSHOT.jar)組合
 
 ## 傳送zip檔案作為電子郵件附件

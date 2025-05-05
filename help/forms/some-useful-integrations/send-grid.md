@@ -32,8 +32,8 @@ ht-degree: 0%
 繼續使用AEM Forms的SendGrid動態範本傳送電子郵件之前，請確定您已符合下列先決條件：
 
 1. **SendGrid帳戶**：在[https://sendgrid.com](https://sendgrid.com)註冊SendGrid帳戶，以存取其電子郵件傳遞服務。 您需要帳戶認證，才能將SendGrid與AEM Forms整合。
-1. **熟悉建立資料來源**：擁有在AEM Forms中建立資料來源的工作知識。 如有需要，請參閱有關[建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)的檔案以取得詳細指示。
-1. **熟悉表單資料模型**：瞭解AEM Forms中表單資料模型的概念。 如有需要，請檢閱有關[建立表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)的檔案，以確保您具備必要的瞭解。
+1. **熟悉建立資料來源**：擁有在AEM Forms中建立資料來源的工作知識。 如有需要，請參閱有關[建立資料來源](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=zh-Hant)的檔案以取得詳細指示。
+1. **熟悉表單資料模型**：瞭解AEM Forms中表單資料模型的概念。 如有需要，請檢閱有關[建立表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=zh-Hant)的檔案，以確保您具備必要的瞭解。
 
 只要符合這些必要條件，您就具備了必要的知識和資源，可以使用AEM Forms的SendGrid動態範本有效傳送電子郵件。
 

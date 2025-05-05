@@ -24,7 +24,7 @@ ht-degree: 4%
 
 ## 本影片涵蓋的內容
 
-+ [快取與內容傳送](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html)
++ [快取與內容傳送](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant)
 + [Google Lighthouse](https://developers.google.com/web/tools/lighthouse)
 
 ## 其他資源

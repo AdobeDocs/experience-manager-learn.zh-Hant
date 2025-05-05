@@ -60,6 +60,6 @@ ht-degree: 44%
 
 ## 其他資源 {#additional-resources}
 
-* [編輯頁面屬性檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
-* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [製作頁面的快速入門手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+* [編輯頁面屬性檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html?lang=zh-Hant)
+* [編輯頁面內容檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=zh-Hant)
+* [製作頁面的快速入門手冊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=zh-Hant)

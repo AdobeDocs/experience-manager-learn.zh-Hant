@@ -20,13 +20,13 @@ ht-degree: 2%
 
 如果您已設定開發環境，則可安全地略過本教學課程的此部分。
 
-[建立Maven專案](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started)
+[建立Maven專案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started)
 
-[安裝IntelliJ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up) — 您可以略過在本教學課程中新增字型模組。
+[安裝IntelliJ](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up) — 您可以略過在本教學課程中新增字型模組。
 
-[初始化Git](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git)
+[初始化Git](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git)
 
-[將IntelliJ與AEM Forms的本機雲端就緒執行個體同步](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync)
+[將IntelliJ與AEM Forms的本機雲端就緒執行個體同步](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync)
 
 ## 後續步驟
 

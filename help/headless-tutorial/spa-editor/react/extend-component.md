@@ -174,7 +174,7 @@ ht-degree: 0%
 
 ## 延伸對話方塊 {#extend-dialog}
 
-我們的`Banner`元件需要對話方塊中的額外文字欄位才能擷取`bannerText`。 由於我們使用Sling繼承，因此可以使用[Sling資源合併器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html)的功能來覆寫或擴充對話方塊的部分。 在此範例中，對話方塊中已新增索引標籤，以從作者擷取其他資料以填入卡片元件。
+我們的`Banner`元件需要對話方塊中的額外文字欄位才能擷取`bannerText`。 由於我們使用Sling繼承，因此可以使用[Sling資源合併器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=zh-Hant)的功能來覆寫或擴充對話方塊的部分。 在此範例中，對話方塊中已新增索引標籤，以從作者擷取其他資料以填入卡片元件。
 
 1. 在`ui.apps`模組的`banner`資料夾下方，建立名為`_cq_dialog`的資料夾。
 1. 在`_cq_dialog`下建立對話方塊定義檔`.content.xml`。 請填入下列內容：

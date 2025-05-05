@@ -27,7 +27,7 @@ ht-degree: 0%
 
 - [OSGi套件](https://www.osgi.org/resources/architecture/)： OSGi套件是Java™封存檔案，其中包含Java類別、資源，以及說明套件及其相依性的資訊清單。
 - [Java jar](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html)：包含Java類別和資源的Java™封存檔案。
-- [封裝](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages)：封裝是包含檔案系統序列化表單之儲存庫內容的zip檔案。
+- [封裝](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages)：封裝是包含檔案系統序列化表單之儲存庫內容的zip檔案。
 
 ## 標準案例
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 若要按照本教學課程進行學習，您需要：
 
-- [本機AEM開發環境](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview)或[快速開發環境(RDE)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview)設定。
+- [本機AEM開發環境](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview)或[快速開發環境(RDE)](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/rde/overview)設定。
 
 - [AEM WKND專案](https://github.com/adobe/aem-guides-wknd) _新增協力廠商套件組合或jar或封裝_&#x200B;並驗證變更。
 

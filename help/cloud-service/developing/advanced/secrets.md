@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ### OSGi服務實施
 
-我們將逐步開發自訂OSGi服務，[會公開OSGi設定的秘密](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#secret-configuration-values)。
+我們將逐步開發自訂OSGi服務，[會公開OSGi設定的秘密](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#secret-configuration-values)。
 
 實作透過`@Activate`方法從OSGi設定讀取秘密，並透過`getSecret(String secretName)`方法公開這些秘密。 或者，您可以為每個密碼建立離散方法，例如`getApiKey()`，但此方法需要更多維護，因為新增或移除密碼時。
 
@@ -80,7 +80,7 @@ public interface SecretsManager {
 
 ## 將密碼對應至OSGi設定
 
-若要公開OSGi服務中的密碼值，請使用[OSGi密碼組態值](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#secret-configuration-values)將它們對應到OSGi組態。 將OSGi屬性名稱定義為金鑰，以從`SecretsManager.getSecret()`方法擷取秘密值。
+若要公開OSGi服務中的密碼值，請使用[OSGi密碼組態值](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#secret-configuration-values)將它們對應到OSGi組態。 將OSGi屬性名稱定義為金鑰，以從`SecretsManager.getSecret()`方法擷取秘密值。
 
 在您的AEM Maven專案的OSGi設定檔案`/apps/example/osgiconfig/config/com.example.core.util.impl.SecretsManagerImpl.cfg.json`中定義秘密。 每個屬性都代表AEM中公開的秘密，其值是透過Cloud Manager設定。 金鑰是OSGi屬性名稱，用來從`SecretsManager`服務擷取秘密值。
 
@@ -151,7 +151,7 @@ public class ExampleSecretConsumerImpl implements ExampleSecretConsumer {
 
 OSGi服務和設定就緒後，最後一個步驟就是在Cloud Manager中設定秘密值。
 
-密碼的值可以透過[Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Variables)設定，或是更常見的透過[Cloud Manager UI](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables#overview)設定。 若要透過Cloud Manager UI套用機密變數：
+密碼的值可以透過[Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Variables)設定，或是更常見的透過[Cloud Manager UI](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables#overview)設定。 若要透過Cloud Manager UI套用機密變數：
 
 ![Cloud Manager密碼設定](./assets/secrets/cloudmanager-configuration.png)
 

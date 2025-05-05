@@ -28,7 +28,7 @@ AEM內容片段模型會定義內容結構，以便AEM作者將原始內容的�
 
 ## 啟用內容片段模型
 
-內容片段模型&#x200B;**必須**&#x200B;透過&#x200B;**[AEM [!UICONTROL 設定瀏覽器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)**&#x200B;啟用。
+內容片段模型&#x200B;**必須**&#x200B;透過&#x200B;**[AEM [!UICONTROL 設定瀏覽器]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=zh-Hant)**&#x200B;啟用。
 
 如果設定未啟用內容片段模型&#x200B;**&#x200B;**，則相關AEM設定將不會顯示&#x200B;**[!UICONTROL 建立] > [!UICONTROL 內容片段]**&#x200B;按鈕。
 
@@ -40,7 +40,7 @@ AEM內容片段模型會定義內容結構，以便AEM作者將原始內容的�
 >
 >使用`global`設定時，該設定會套用至所有內容，而且不需要設定`cq:conf`。
 >
->如需詳細資訊，請參閱[[!UICONTROL 設定瀏覽器]檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)。
+>如需詳細資訊，請參閱[[!UICONTROL 設定瀏覽器]檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=zh-Hant)。
 
 1. 以具有適當許可權的使用者身分登入AEM Author，以修改相關的設定。
    * 在本教學課程中，可以使用&#x200B;**管理員**&#x200B;使用者。

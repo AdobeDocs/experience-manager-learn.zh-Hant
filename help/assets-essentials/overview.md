@@ -38,11 +38,11 @@ Experience Manager Assets Essentials提供簡化的使用者介面，用於輕�
    </p>
 </td>
 <td>
-   <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
+   <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=zh-Hant">
    <img alt="Assets Essentials檔案" src="./assets/overview/assets-essentials-docs.png"/>
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=zh-Hant">
       <strong>Assets Essentials檔案</strong>
       </a>
    </div>
@@ -51,11 +51,11 @@ Experience Manager Assets Essentials提供簡化的使用者介面，用於輕�
    <p>
 </td>
 <td>
-   <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
+   <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=zh-Hant">
    <img alt="Adobe Journey Optimizer與Assets Essentials" src="./assets/overview/adobe-journey-optimizer.png" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
+      <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=zh-Hant">
       <strong>Adobe Journey Optimizer整合</strong>
       </a>
    </div>

@@ -26,7 +26,7 @@ AEM提供[AEM React Editable Components v2](https://www.npmjs.com/package/@adobe
 
 + [npm模組](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 + [Github專案](https://github.com/adobe/aem-react-editable-components)
-+ [Adobe檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html)
++ [Adobe檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=zh-Hant)
 
 
 如需AEM React Editable Components v2的詳細資訊和程式碼範例，請檢閱技術檔案：
@@ -37,7 +37,7 @@ AEM提供[AEM React Editable Components v2](https://www.npmjs.com/package/@adobe
 
 ## AEM頁面
 
-AEM React Editable Components可搭配SPA Editor或遠端SPA React應用程式運作。 填入可編輯React元件的內容必須透過延伸[SPA頁面元件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html)的AEM頁面公開。 對應至可編輯React元件的AEM元件必須實作AEM的[元件匯出工具架構](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html) — 例如[AEM核心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)。
+AEM React Editable Components可搭配SPA Editor或遠端SPA React應用程式運作。 填入可編輯React元件的內容必須透過延伸[SPA頁面元件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html?lang=zh-Hant)的AEM頁面公開。 對應至可編輯React元件的AEM元件必須實作AEM的[元件匯出工具架構](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=zh-Hant) — 例如[AEM核心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)。
 
 
 ## 相依性

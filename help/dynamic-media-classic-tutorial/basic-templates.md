@@ -63,8 +63,8 @@ ht-degree: 0%
 
 根據應用程式的商業規則和需求，範本專案可能會相對簡單或極為複雜。 基本範本是從影像伺服器呼叫，但由於Dynamic Media Classic環境的彈性，您甚至可以將範本巢狀內嵌於其他範本中，讓您建立相當複雜的影像，而這些影像可以透過常用的變數連結。
 
-- 深入瞭解[範本基本知識](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html)。
-- 瞭解如何建立[基本範本](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template)。
+- 深入瞭解[範本基本知識](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html?lang=zh-Hant)。
+- 瞭解如何建立[基本範本](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html?lang=zh-Hant#creating_a_template)。
 
 ## 建立基本範本
 
@@ -186,7 +186,7 @@ _有和沒有陰影的圖層_
 
 陰影效果會水平或垂直位移到圖層之外，而「光暈」效果則會均勻地套用在所有方向。 內部效果會作用於圖層不透明部分的頂端，而「外部效果」只會影響透明區域。
 
-深入瞭解[新增圖層效果](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers)。
+深入瞭解[新增圖層效果](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html?lang=zh-Hant#using-shadow-and-glow-effects-on-layers)。
 
 ### 新增引數
 
@@ -223,7 +223,7 @@ _有和沒有陰影的圖層_
 >
 >因為看不到屬性而無法新增引數？ 只需變更圖層的屬性，使其不依照預設即可（透過移動、調整大小、隱藏等等）。 您現在應該會看到該屬性已公開。
 
-深入瞭解[範本引數](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html)。
+深入瞭解[範本引數](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html?lang=zh-Hant)。
 
 ## 建立含文字圖層的範本
 
@@ -312,7 +312,7 @@ _範本基本文字編輯器。_
 - 您可以看到RGB值：\red56\green53\blue4 — 這是文字顏色。
 - 雖然字型大小為20，但您不會看到數字20。 不過，您確實會看到指令\fs40 — 由於某些奇怪的原因，RTF會以半點來測量字型。 因此\fs40就是字型大小！
 
-您有足夠的資訊來建立引數，不過「影像伺服」檔案中有所有RTF命令的完整參考。 造訪[影像伺服檔案](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c)。
+您有足夠的資訊來建立引數，不過「影像伺服」檔案中有所有RTF命令的完整參考。 造訪[影像伺服檔案](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html?lang=zh-Hant#concept-0d3136db7f6f49668274541cd4b6364c)。
 
 #### 新增引數至文字圖層
 
@@ -330,7 +330,7 @@ _範本基本文字編輯器。_
 >
 >若要新增引數至文字顏色，請分別新增紅色、綠色和藍色引數。 例如，如果RTF是`\red56\green53\blue46`，您應該為值56、53和46新增個別的紅色、綠色和藍色引數。 在URL中，您可以呼叫全部三者來變更顏色： `&$red=56&$green=53&$blue=46`。
 
-瞭解如何[建立動態文字引數](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters)。
+瞭解如何[建立動態文字引數](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html?lang=zh-Hant#creating-dynamic-text-parameters)。
 
 ## 發佈及建立範本URL
 
@@ -344,7 +344,7 @@ _範本基本文字編輯器。_
 
 您必須執行發佈，才能看到您即時推送至影像伺服器的變更。 請牢記需要發佈的內容：各種影像資產圖層、動態文字的字型以及範本本身。 與其他Dynamic Media Classic多媒體資產（如影像集和迴轉集）類似，基本範本是一種人造結構 — 它是資料庫中的條列專案，使用一系列「影像伺服」命令來參考影像和字型。 因此，當您發佈範本時，您只會更新影像伺服器上的資料。
 
-深入瞭解[發佈您的範本](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/publishing-templates.html)。
+深入瞭解[發佈您的範本](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/publishing-templates.html?lang=zh-Hant)。
 
 ### 範本URL結構
 

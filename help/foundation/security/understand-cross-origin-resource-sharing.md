@@ -26,7 +26,7 @@ Adobe Experience Manager的跨原始資源共用([!DNL CORS])可協助非AEM Web
 1. AEM發佈上的單一來源資源共用
 2. AEM作者的CORS存取權
 
-如果AEM Publish上需要多來源CORS存取權，請參閱[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration)。
+如果AEM Publish上需要多來源CORS存取權，請參閱[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=zh-Hant#dispatcher-configuration)。
 
 ## Adobe Granite跨原始資源共用原則OSGi設定
 
@@ -187,7 +187,7 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，而每個原則都會
 
 ### 允許CORS要求標頭
 
-若要允許必要的[HTTP要求標頭傳遞至AEM進行處理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders)，Dispatcher的`/clientheaders`設定中必須允許這些標頭。
+若要允許必要的[HTTP要求標頭傳遞至AEM進行處理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#specifying-the-http-headers-to-pass-through-clientheaders)，Dispatcher的`/clientheaders`設定中必須允許這些標頭。
 
 ```
 /clientheaders {
@@ -200,7 +200,7 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，而每個原則都會
 
 ### 快取CORS回應標頭
 
-若要允許在快取的內容上快取及提供CORS標頭，請將下列[/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers)新增至AEM發佈`dispatcher.any`檔案。
+若要允許在快取的內容上快取及提供CORS標頭，請將下列[/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#caching-http-response-headers)新增至AEM發佈`dispatcher.any`檔案。
 
 ```
 /publishfarm {

@@ -104,4 +104,4 @@ Dynamic Media視訊現在支援為您的視訊選取自訂縮圖的功能。 使
 
 ## 其他資源{#additional-resources}
 
-[在Scene7模式下設定Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[在Scene7模式下設定Dynamic Media](https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/config-dms7.html)

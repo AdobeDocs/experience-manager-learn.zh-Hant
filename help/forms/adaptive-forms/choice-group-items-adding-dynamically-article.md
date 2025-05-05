@@ -89,7 +89,7 @@ else
 **使用視覺化編輯器新增專案**
 
 * [下載資產](assets/usingthevisualeditor.zip)
-* 請安裝Tomcat （如果尚未安裝）。 [此處提供tomcat的安裝指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* 請安裝Tomcat （如果尚未安裝）。 [此處提供tomcat的安裝指示](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=zh-Hant)
 * [將此zip檔案中包含的SampleRest.war檔案部署至Tomcat中](assets/sample-rest.zip)
 * [開啟Forms和檔案](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * 按一下「建立」 | 「檔案上傳」並上傳您在上一步中下載的檔案

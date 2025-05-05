@@ -23,7 +23,7 @@ ht-degree: 1%
 * AEM WCM Core Components 2.4.0或更新版本
    * 包含在以下[&#128279;](#wknd-mobile-application-packages)的WKND Mobile AEM應用程式內容套件中
 
-開始此教學課程之前，請確定下列AEM執行個體已[安裝並在您的本機電腦](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install)上執行：
+開始此教學課程之前，請確定下列AEM執行個體已[安裝並在您的本機電腦](https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install)上執行：
 
 * 在&#x200B;**連線埠4502**&#x200B;上的&#x200B;**AEM作者**
 * 在&#x200B;**連線埠4503**&#x200B;上的&#x200B;**AEM Publish**

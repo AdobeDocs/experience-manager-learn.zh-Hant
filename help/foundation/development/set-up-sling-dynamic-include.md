@@ -54,7 +54,7 @@ ht-degree: 0%
    -->
    ```
 
-1. （選擇性）重複上一個步驟，允許透過[!DNL SDI]也提供[可編輯範本](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html)的鎖定（初始）內容上的元件。 額外設定的原因是可編輯範本的鎖定內容是從`/conf`而非`/content`提供。
+1. （選擇性）重複上一個步驟，允許透過[!DNL SDI]也提供[可編輯範本](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/page-templates-editable.html)的鎖定（初始）內容上的元件。 額外設定的原因是可編輯範本的鎖定內容是從`/conf`而非`/content`提供。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -148,7 +148,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您使用[!DNL Sling Dynamic Includes]來提供Edge-side Include (ESI)，請務必在Dispatcher快取中快取相關的[回應標頭](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders)。 可能的標頭包括：
+>如果您使用[!DNL Sling Dynamic Includes]來提供Edge-side Include (ESI)，請務必在Dispatcher快取中快取相關的[回應標頭](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#CachingHTTPResponseHeaders)。 可能的標頭包括：
 >
 >* &quot;Cache-Control&quot;
 >* &quot;Content-Disposition&quot;

@@ -32,7 +32,7 @@ Adobe Experience Manager (AEM)內容片段是文字型編輯內容，其中可�
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
 
-內容片段可以在AEM Sites頁面上使用，或以類似方式使用AEM WCM核心元件的[內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)的體驗片段。
+內容片段可以在AEM Sites頁面上使用，或以類似方式使用AEM WCM核心元件的[內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hant)的體驗片段。
 
 您可以使用AEM的樣式系統來設定內容片段元件的樣式，以視需要顯示內容。
 
@@ -42,7 +42,7 @@ Adobe Experience Manager (AEM)內容片段是文字型編輯內容，其中可�
 
 AEM內容服務可協助您建立AEM頁面式HTTP端點，將內容轉譯為標準化JSON格式。
 
-上述影片使用[內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)來公開個別內容片段。 [內容片段清單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html)是新元件，可讓作者定義查詢，以動態方式將內容片段清單填入頁面。 需要公開多個內容片段時，建議使用內容片段清單元件。
+上述影片使用[內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hant)來公開個別內容片段。 [內容片段清單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html?lang=zh-Hant)是新元件，可讓作者定義查詢，以動態方式將內容片段清單填入頁面。 需要公開多個內容片段時，建議使用內容片段清單元件。
 
 *範例Content Services端點JSON裝載：*\
 **[運動人士.json](assets/athletes.json)**
@@ -74,7 +74,7 @@ AEM 6.5首次匯入，使用Assets HTTP API加強對內容片段的支援。 如
 
 * [製作內容片段](content-fragments-feature-video-use.md)
 * [AEM WCM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)
-* [AEM WCM核心內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCM核心內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hant)
 
 若要從影片系列下載並安裝以下套件至最終狀態的AEM 6.4+執行個體：\
 **[aem_demo_fluid-experiencescontent-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**

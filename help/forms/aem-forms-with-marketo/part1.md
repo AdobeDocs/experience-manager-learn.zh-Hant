@@ -25,13 +25,13 @@ Marketo是Adobe的一部分，提供行銷自動化軟體，其著重於以帳�
 
 現在，我們可以運用AEM Forms的表單資料模型，將AEM Form與Marketo緊密整合。
 
-[進一步瞭解表單資料模型](https://helpx.adobe.com/experience-manager/6-5/forms/using/data-integration.html)
+[進一步瞭解表單資料模型](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/data-integration.html)
 
 Marketo公開REST API，允許從遠端執行系統的許多功能。 從建立程式到大量潛在客戶匯入，有許多選項可讓您對Marketo執行個體進行微調控制。 使用表單資料模型時，可輕鬆將AEM Forms與Marketo整合。
 
 >[!NOTE]
 >
->本教學課程專為AEM Forms 6.5量身打造。如果您想要整合AEM Forms as a Cloud Service與Adobe Marketo Engage，請參閱該整合的[專屬檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-adaptive-form-with-market-engage/integrate-form-to-marketo-engage)。
+>本教學課程專為AEM Forms 6.5量身打造。如果您想要整合AEM Forms as a Cloud Service與Adobe Marketo Engage，請參閱該整合的[專屬檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-adaptive-form-with-market-engage/integrate-form-to-marketo-engage)。
 
 本教學課程將逐步引導您完成使用表單資料模型將AEM Forms與Marketo整合的步驟。 完成本教學課程後，您將會擁有OSGi套件組合，可針對Marketo執行自訂驗證。 您也將已使用提供的swagger檔案設定資料來源。
 

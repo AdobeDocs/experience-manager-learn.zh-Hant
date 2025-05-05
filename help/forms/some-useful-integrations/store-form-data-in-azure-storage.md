@@ -23,7 +23,7 @@ ht-degree: 0%
 若要將提交的表單資料儲存在Azure儲存體，必須執行下列步驟。
 
 >[!NOTE]
->本文中的程式碼無法用於以核心元件為基礎的最適化表單。 [此處提供核心元件型最適化表單的同等文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+>本文中的程式碼無法用於以核心元件為基礎的最適化表單。 [此處提供核心元件型最適化表單的同等文章](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=zh-Hant)
 
 
 ## 建立Azure儲存體帳戶
@@ -104,7 +104,7 @@ https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken
 
 * [匯入範例最適化表單](./assets/bank-account-sample-form.zip)
 
-* [使用OSGi設定主控台，在Azure入口網站設定中指定適當的值](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
+* [使用OSGi設定主控台，在Azure入口網站設定中指定適當的值](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=zh-Hant#provide-the-blob-sas-token-and-storage-uri)
 
 * [預覽並提交銀行帳戶表單](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 

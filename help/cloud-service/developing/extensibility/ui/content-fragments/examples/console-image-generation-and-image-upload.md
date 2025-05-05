@@ -223,7 +223,7 @@ export default ExtensionRegistration;
 重要的是，從擴充功能與AEM的任何互動都應委派給[AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，這是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中執行的個別無伺服器程式。
 使用Adobe I/O Runtime動作與AEM通訊，是為了避免跨原始資源共用(CORS)連線問題。
 
-提交&#x200B;_產生影像_&#x200B;表單時，自訂`onSubmitHandler()`會叫用Adobe I/O Runtime動作，傳遞影像說明、目前的AEM主機（網域）和使用者的AEM存取權杖。 然後動作會呼叫OpenAI的[影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) API，以使用提交的影像說明產生影像。 接著使用[AEM上傳](https://github.com/adobe/aem-upload)節點模組的`DirectBinaryUpload`類別，它將產生的影像上傳到AEM，最後使用[AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)來更新內容片段。
+提交&#x200B;_產生影像_&#x200B;表單時，自訂`onSubmitHandler()`會叫用Adobe I/O Runtime動作，傳遞影像說明、目前的AEM主機（網域）和使用者的AEM存取權杖。 然後動作會呼叫OpenAI的[影像產生](https://beta.openai.com/docs/guides/images/image-generation-beta) API，以使用提交的影像說明產生影像。 接著使用[AEM上傳](https://github.com/adobe/aem-upload)節點模組的`DirectBinaryUpload`類別，它將產生的影像上傳到AEM，最後使用[AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=zh-Hant)來更新內容片段。
 
 當收到Adobe I/O Runtime動作的回應時，強制回應會更新，以顯示影像產生作業的結果。
 
@@ -482,7 +482,7 @@ export default function GenerateImageModal() {
 
 >[!NOTE]
 >
->在`buildAssetDetailsURL()`函式中，`aemAssetdetailsURL`變數值假設已啟用[Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview)。 如果您已停用Unified Shell，則必須從變數值中移除`/ui#/aem`。
+>在`buildAssetDetailsURL()`函式中，`aemAssetdetailsURL`變數值假設已啟用[Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=zh-Hant#overview)。 如果您已停用Unified Shell，則必須從變數值中移除`/ui#/aem`。
 
 
 ### Adobe I/O Runtime動作
