@@ -312,7 +312,7 @@ AEM專案原型產生了頁首和頁尾。 接下來，更新體驗片段以符�
 
    將HTL分成多個指令碼的另一個原因是為了允許Proxy元件覆寫個別指令碼，以實作自訂商業邏輯。 HTL指令碼`customfooterlibs.html`和`customheaderlibs.html`是為明確用途而建立的，以便透過實作專案來覆寫。
 
-   您可以閱讀本文章](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)，深入瞭解可編輯範本如何影響[內容頁面的轉譯。
+   您可以閱讀本文章[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)，深入瞭解可編輯範本如何影響內容頁面的轉譯。
 
 1. Inspect是另一個核心元件，例如`/libs/core/wcm/components/breadcrumb/v2/breadcrumb`的階層連結。 檢視`breadcrumb.html`指令碼，瞭解最終產生階層連結元件標籤的方式。
 
@@ -321,7 +321,7 @@ AEM專案原型產生了頁首和頁尾。 接下來，更新體驗片段以符�
 通常，尤其是在開始AEM專案時，將設定（例如範本和相關內容原則）保留到原始檔控制中很有價值。 這可確保所有開發人員都針對相同的內容和設定集，且可確保環境之間有額外的一致性。 一旦專案達到一定的成熟度，管理範本的實務就可以交給特殊的超級使用者群組。
 
 
-目前，範本會被視為其他程式碼片段，並將&#x200B;**文章頁面範本**同步處理為專案的一部分。
+目前，範本會被視為其他程式碼片段，並將&#x200B;**文章頁面範本**&#x200B;同步處理為專案的一部分。
 直到現在，程式碼才會從AEM專案推送到AEM的本機執行個體。 **文章頁面範本**&#x200B;是直接在AEM的本機執行個體上建立的，所以它需要&#x200B;**匯入**&#x200B;範本至AEM專案。 **ui.content**&#x200B;模組包含在AEM專案中，供此特定目的使用。
 
 在VSCode IDE中使用[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync&amp;ssr=false#overview)外掛程式完成後續幾個步驟。 但他們可以使用您設定為&#x200B;**匯入**&#x200B;或從AEM的本機執行個體匯入內容的任何IDE來執行。

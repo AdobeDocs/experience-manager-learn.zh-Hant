@@ -154,7 +154,7 @@ AEM元件定義為節點和屬性。 在專案中，這些節點和屬性在`ui.
 
    >[!NOTE]
    >
-   > 您可以檢視核心元件定義](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)，以檢視更多[對話方塊範例。 您也可以檢視[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)中`/libs/granite/ui/components/coral/foundation/form`下方可用的其他表單欄位，例如`select`、`textarea`、`pathfield`。
+   > 您可以檢視核心元件定義[&#128279;](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)，以檢視更多對話方塊範例。 您也可以檢視[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)中`/libs/granite/ui/components/coral/foundation/form`下方可用的其他表單欄位，例如`select`、`textarea`、`pathfield`。
 
    使用傳統AEM元件時，通常需要[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)指令碼。 由於SPA會轉譯元件，因此不需要HTL指令碼。
 
@@ -168,7 +168,7 @@ Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可�
 
    >[!NOTE]
    >
-   > 如果使用Visual Studio Code IDE，則安裝Java™](https://code.visualstudio.com/docs/java/extensions)的[擴充功能可能會有幫助。
+   > 如果使用Visual Studio Code IDE，則安裝Java™[&#128279;](https://code.visualstudio.com/docs/java/extensions)的擴充功能可能會有幫助。
 
 2. 在`core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/CustomComponent.java`開啟Java™介面`CustomComponent.java`：
 
@@ -235,7 +235,7 @@ Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可�
 
    >[!NOTE]
    >
-   > 您可以在](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)檢視[已完成的CustomComponentImpl.java。
+   > 您可以在[&#128279;](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)檢視已完成的CustomComponentImpl.java。
 
 ## 更新Angular元件
 

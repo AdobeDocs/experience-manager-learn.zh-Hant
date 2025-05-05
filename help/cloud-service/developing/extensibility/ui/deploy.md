@@ -29,7 +29,7 @@ ht-degree: 0%
    + __階段__工作區可作為開發人員工作區。 AEM as a Cloud Service中沒有部署至中繼工作區的擴充功能。
 Adobe Developer Console工作區與AEM as a Cloud Service環境型別沒有任何直接關聯。
 + 部署至生產工作區的擴充功能會顯示在該擴充功能所在的Adobe組織的所有AEM as a Cloud Service環境中。
-擴充功能無法藉由新增檢查AEM as a Cloud Service主機名稱](https://developer.adobe.com/uix/docs/guides/publication/#enabling-extension-only-on-specific-aem-environments)的[條件式邏輯，限製為已登入的環境。
+擴充功能無法藉由新增檢查AEM as a Cloud Service主機名稱[&#128279;](https://developer.adobe.com/uix/docs/guides/publication/#enabling-extension-only-on-specific-aem-environments)的條件式邏輯，限製為已登入的環境。
 + AEM as a Cloud Service上可以使用多個擴充功能。 Adobe建議使用App Builder應用程式的每個擴充功能來解決單一業務目標。 也就是說，單一擴充功能App Builder應用程式可實作支援共同業務目標的多個擴充點。
 
 ## 初始部署

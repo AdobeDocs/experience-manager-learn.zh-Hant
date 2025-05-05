@@ -42,8 +42,7 @@ ht-degree: 0%
 若要進行區塊開發，請先檢閱Edge Delivery Services公開的DOM。 結構已透過JavaScript增強，並以CSS設定樣式。
 
 >[!BEGINTABS]
-
->要裝飾的[!TAB DOM]
+>[!TAB 要裝飾的 DOM]
 
 以下是Teaser區塊的DOM，這是使用JavaScript和CSS裝飾的目標。
 

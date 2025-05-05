@@ -111,7 +111,7 @@ function getDAMFolderAssets(damFolder) {
 
 ## 建立最適化表單
 
-建立最適化表單，並將表單與使用者端資料庫&#x200B;**listfolderassets**建立關聯。 將核取方塊元件新增至表單。 使用規則編輯器填入核取方塊的選項，如熒幕擷取畫面所示
+建立最適化表單，並將表單與使用者端資料庫&#x200B;**listfolderassets**&#x200B;建立關聯。 將核取方塊元件新增至表單。 使用規則編輯器填入核取方塊的選項，如熒幕擷取畫面所示
 ![設定選項](assets/set-options-newsletter.png)
 
 我們正在叫用名為&#x200B;**getDAMFolderAssets**&#x200B;的Javascript函式，並將DAM資料夾的資產路徑傳遞至表單中的清單。

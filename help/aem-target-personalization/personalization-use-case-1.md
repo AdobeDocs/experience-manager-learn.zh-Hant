@@ -135,7 +135,7 @@ WKND網站正計畫透過其網站在美國各地宣佈&#x200B;**SkateFest挑戰
 1. 從您的Adobe Target視窗，導覽至&#x200B;**活動**&#x200B;標籤。
 1. 按一下&#x200B;**建立活動**&#x200B;並選取&#x200B;**體驗鎖定目標**&#x200B;活動型別。
 1. 選取&#x200B;**Web**&#x200B;通道，然後選擇&#x200B;**視覺化體驗撰寫器**。
-1. 輸入&#x200B;**活動URL**&#x200B;並按一下[下一步]**以開啟視覺化體驗撰寫器。**
+1. 輸入&#x200B;**活動URL**&#x200B;並按一下[下一步]&#x200B;**以開啟視覺化體驗撰寫器。**
 
    WKND網站首頁Publish URL： http://localhost:4503/content/wknd/en.html
 
@@ -160,8 +160,8 @@ WKND網站正計畫透過其網站在美國各地宣佈&#x200B;**SkateFest挑戰
 1. 從選件選取UI中為&#x200B;**WKND — 加州**&#x200B;對象選取&#x200B;**WKND SkateFest California** HTML選件，然後按一下&#x200B;**完成**。
 1. 您現在應該能夠看到已新增至您WKND網站頁面的&#x200B;**WKND SkateFest California** HTML選件，供WKND-California對象使用。
 1. 重複步驟7至10，為其他狀態新增體驗鎖定目標，並選擇對應的HTML選件。
-1. 按一下[下一步]****&#x200B;繼續，您可以看到對象與體驗的對應。
-1. 按一下「下一步&#x200B;****」以移至目標與設定。
+1. 按一下[下一步]&#x200B;**&#x200B;**&#x200B;繼續，您可以看到對象與體驗的對應。
+1. 按一下「下一步&#x200B;**&#x200B;**」以移至目標與設定。
 1. 選擇您的報告來源並識別活動的主要目標。 針對我們的情境，我們將報告Source選為&#x200B;**Adobe Target**，測量活動為&#x200B;**轉換**，動作為已檢視頁面，以及指向WKND SkateFest詳細資訊頁面的URL。
 
    ![目標與定位 — Target](assets/personalization-use-case-1/goal-metric-target.png)

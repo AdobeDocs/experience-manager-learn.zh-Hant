@@ -30,4 +30,4 @@ ht-degree: 0%
 >
 > 上述影片示範如何使用內容片段主控台擴充功能來說明Adobe Developer Console專案的建立作業。 不過，請務必注意，涵蓋的概念可套用至所有AEM UI擴充功能。
 
-請參閱Adobe Developer檔案，以取得建立Adobe Developer Console專案](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console)的詳細逐步解說。[
+請參閱Adobe Developer檔案，以取得建立Adobe Developer Console專案[&#128279;](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console)的詳細逐步解說。

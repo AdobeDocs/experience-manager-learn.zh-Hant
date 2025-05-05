@@ -134,7 +134,7 @@ Analysis Workspace是彈性的瀏覽器工具，可讓您快速建立分析和�
 
 ### 使用Analysis Workspace新增資料視覺效果
 
-接下來，建立表格以建立使用者如何與WKND網站首頁上的`Call to Action (CTA)`按鈕互動的視覺化表示法。 若要建置這類表示法，請使用Adobe Analytics](./track-clicked-component.md)在[追蹤已點按元件中收集的資料。 以下是使用WKND網站的呼叫動作按鈕針對使用者互動所追蹤的資料快速摘要。
+接下來，建立表格以建立使用者如何與WKND網站首頁上的`Call to Action (CTA)`按鈕互動的視覺化表示法。 若要建置這類表示法，請使用Adobe Analytics[&#128279;](./track-clicked-component.md)在追蹤已點按元件中收集的資料。 以下是使用WKND網站的呼叫動作按鈕針對使用者互動所追蹤的資料快速摘要。
 
 * `eVar5` - `Page template`
 * `eVar6` - `Page Id`
@@ -154,10 +154,12 @@ Analysis Workspace是彈性的瀏覽器工具，可讓您快速建立分析和�
 
 1. 讓我們依照其範本型別來劃分頁面。 從元件選取頁面範本量度，並將「頁面範本」量度拖放至「頁面名稱」維度。 您現在可以檢視依範本型別劃分的頁面名稱。
 
-   * **在**之前
+   * **在**&#x200B;之前
+
      ![eVar5](assets/create-analytics-workspace/evar5.png)
 
    * **After**
+
      ![eVar5量度](assets/create-analytics-workspace/evar5-metrics.png)
 
 1. 若要瞭解使用者在WKND網站頁面上與CTA按鈕互動的方式，需要新增按鈕ID (eVar8)量度來進一步劃分。
@@ -207,7 +209,7 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 接下來，讓我們下載Button Id (eVar8)變數的分類範本
 
 1. 瀏覽至&#x200B;**管理員** > **分類匯入工具**
-1. 讓我們從&#x200B;**下載範本**索引標籤下載轉換變數的分類範本。
+1. 讓我們從&#x200B;**下載範本**&#x200B;索引標籤下載轉換變數的分類範本。
    ![轉換分類型別](assets/create-analytics-workspace/classification-importer.png)
 
 1. 在「下載範本」索引標籤中指定資料範本設定。
@@ -244,10 +246,12 @@ Analytics分類是將Analytics變數資料分類，然後在您產生報表時�
 
 1. 在元件尋找器中，搜尋&#x200B;**WKND CTA按鈕**&#x200B;並將&#x200B;**WKND CTA按鈕（按鈕ID）**&#x200B;維度拖放到Button ID量度上並加以取代。
 
-   * **在**之前
+   * **在**&#x200B;之前
+
      ![在](assets/create-analytics-workspace/wknd-button-before.png)之前的Workspace按鈕
    * **After**
-     ](assets/create-analytics-workspace/wknd-button-after.png)之後的![Workspace按鈕
+
+     ![&#128279;](assets/create-analytics-workspace/wknd-button-after.png)之後的Workspace按鈕
 
 1. 您可以注意到，包含行動號召(CTA)按鈕的按鈕ID量度，現在已取代為分類範本中提供的對應名稱。
 1. 讓我們比較Analytics Workspace表格與WKND首頁，瞭解CTA按鈕點選計數及其分析。 根據工作區自由表格資料，使用者已按下&#x200B;**SKI NOW**&#x200B;按鈕22次，西澳洲的WKND首頁露營&#x200B;**瞭解詳情**&#x200B;按鈕已按下4次。

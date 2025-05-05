@@ -120,7 +120,7 @@ Dispatcher的伺服器陣列檔案中有設定區段：
 
 因此，如果您透過URI造訪AEM執行個體，便可看到其擷取內容：
 
-從/libs/granite/dispatcher/content/vanityUrls.html](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")轉譯的內容的![熒幕擷圖
+從/libs/granite/dispatcher/content/vanityUrls.html![&#128279;](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")轉譯的內容的熒幕擷圖
 
 其實就是一份清單，非常簡單
 

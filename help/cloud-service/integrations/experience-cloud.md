@@ -67,7 +67,7 @@ Adobe Analytics與AEM as a Cloud Service整合，可讓您追蹤內容活動和�
 
    + [在AEM WCM核心元件中擴充ACDL](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)
    + [整合ACDL與AEM WCM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/integrations.html)
-   + 使用ACDL ](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/adobe-client-data-layer.html)進行[事件導向資料處理
+   + 使用ACDL [&#128279;](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/adobe-client-data-layer.html)進行事件導向資料處理
    + [Adobe使用者端資料層(ACDL)教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
 
 ### AEM Assets

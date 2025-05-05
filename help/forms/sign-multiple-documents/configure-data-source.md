@@ -41,7 +41,7 @@ AEM有許多方式可用來與外部資料庫整合。 整合資料庫的最常�
 
 ## Assets
 
-可從這裡](assets/sign-multiple-forms.sql)下載建立結構描述的SQL檔案[。 您必須使用MySql Workbench匯入此檔案，才能建立結構描述和表格。
+可從這裡[&#128279;](assets/sign-multiple-forms.sql)下載建立結構描述的SQL檔案。 您必須使用MySql Workbench匯入此檔案，才能建立結構描述和表格。
 
 ## 後續步驟
 

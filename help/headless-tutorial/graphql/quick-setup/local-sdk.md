@@ -62,7 +62,7 @@ AEM Headless快速設定可讓您使用AEM Headless的實際操作，其中包�
 
 來自&#x200B;**WKND參考網站**&#x200B;的範例內容是用來加速教學課程。 WKND是虛構的生活風格品牌，通常與AEM培訓搭配使用。
 
-WKND網站包含公開[GraphQL端點](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html)所需的設定。 在真實世界的實作中，請依照檔案說明的步驟，將GraphQL端點](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html)納入您的客戶專案。 [[CORS](#cors-config)也已封裝為WKND網站的一部分。 需要CORS設定才能授與外部應用程式的存取權，有關[CORS](#cors-config)的詳細資訊可在下方找到。
+WKND網站包含公開[GraphQL端點](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html)所需的設定。 在真實世界的實作中，請依照檔案說明的步驟，將GraphQL端點[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html)納入您的客戶專案。 [CORS](#cors-config)也已封裝為WKND網站的一部分。 需要CORS設定才能授與外部應用程式的存取權，有關[CORS](#cors-config)的詳細資訊可在下方找到。
 
 1. 下載適用於WKND網站的最新編譯的AEM套件： [aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest)。
 
@@ -176,7 +176,7 @@ WKND網站包含公開[GraphQL端點](https://experienceleague.adobe.com/docs/ex
 
    >[!NOTE]
    >
-   > GraphiQL工具和GraphQL API將在教學課程的後期](../multi-step/explore-graphql-api.md)中詳細探討[。
+   > GraphiQL工具和GraphQL API將在教學課程的後期[&#128279;](../multi-step/explore-graphql-api.md)中詳細探討。
 
 ## 恭喜！{#congratulations}
 

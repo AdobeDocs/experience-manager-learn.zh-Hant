@@ -35,7 +35,7 @@ AEM Forms提供下列立即可用的入口網站元件：
 新建立的Proxy元件需要指向現成可用的表單元件，以便繼承元件的一切。 變更Proxy元件content.xml中的resourceSuperType即可完成這項作業。 在content.xml中，我們也會指定標題和元件群組。
 >[!NOTE]
 >
-> 您可以從這裡](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)為[這些元件中的每一個建構資源超級型別
+> 您可以從這裡[&#128279;](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)為這些元件中的每一個建構資源超級型別
 
 
 ### 草稿和提交

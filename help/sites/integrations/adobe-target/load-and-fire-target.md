@@ -82,7 +82,7 @@ window.adobeDataLayer.push(function (dataLayer) {
 
 自訂函式定義`pageShownEventHandler`，並接聽AEM核心元件發出的事件、衍生核心元件的相關資訊、將其封裝成事件物件，並在其裝載處以衍生的事件資訊觸發標籤事件。
 
-使用標籤的`trigger(...)`函式（僅&#x200B;__2}可在規則事件的自訂程式碼片段定義中使用）觸發標籤規則。__
+使用標籤的`trigger(...)`函式（僅&#x200B;__2&rbrace;可在規則事件的自訂程式碼片段定義中使用）觸發標籤規則。__
 
 `trigger(...)`函式將事件物件視為引數，而這個引數又在標籤「資料元素」中公開，並以標籤中名為`event`的另一個保留名稱公開。 標籤中的資料元素現在可以使用如`event.component['someKey']`的語法，從`event`物件參照此事件物件的資料。
 
@@ -93,7 +93,7 @@ window.adobeDataLayer.push(function (dataLayer) {
 
 ![資料元素](assets/data-elements.png)
 
-標籤資料元素會透過核心擴充功能的自訂程式碼資料元素型別，將自訂頁面顯示事件](#page-event)中觸發之事件物件[的資料對應至Adobe Target中的可用變數。
+標籤資料元素會透過核心擴充功能的自訂程式碼資料元素型別，將自訂頁面顯示事件[&#128279;](#page-event)中觸發之事件物件的資料對應至Adobe Target中的可用變數。
 
 #### 頁面ID資料元素
 

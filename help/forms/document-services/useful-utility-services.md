@@ -35,7 +35,7 @@ public abstract String saveDocumentInCrx(String jcrPath,String fileExtension, Do
 }
 ```
 
-範例組合可從這裡](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)下載[
+範例組合可從這裡[&#128279;](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)下載
 
 ## 使用公用程式服務的程式碼範例
 

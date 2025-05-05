@@ -74,7 +74,7 @@ ht-degree: 0%
 * 此索引只需要針對叢集中的單一AEM執行個體執行。
 * [!DNL MongoMK]的線上索引可針對執行中的AEM叢集安全執行，因為存放庫周遊只會發生在單一[!DNL MongoDB]節點上，而允許其他節點繼續提供要求而不會對效能造成重大影響。
 
-執行[!DNL MongoMK]線上索引的[!DNL oak-run.jar]索引命令與 [!DNL oak-run.jar]](#tarmkonlineindexingwithoakrunjar)的 [!DNL TarMK] 線上索引相同，不同之處在於區段存放區引數指向包含節點存放區的[!DNL MongoDB]執行個體。[
+執行[!DNL MongoMK]線上索引的[!DNL oak-run.jar]索引命令與 [!DNL oak-run.jar][&#128279;](#tarmkonlineindexingwithoakrunjar)的 [!DNL TarMK] 線上索引相同，不同之處在於區段存放區引數指向包含節點存放區的[!DNL MongoDB]執行個體。
 
 ```
 java -jar oak-run*.jar index

@@ -112,7 +112,7 @@ ht-degree: 1%
 
 下圖顯示`dam:Asset`節點型別的自訂索引，其中`includedPaths`屬性設定為特定路徑。
 
-dam：Asset nodetype](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)上的![索引
+dam：Asset nodetype![&#128279;](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)上的索引
 
 ##### 分析
 

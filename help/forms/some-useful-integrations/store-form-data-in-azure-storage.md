@@ -48,7 +48,7 @@ ht-degree: 0%
 
 ## 提供Blob SAS權杖和儲存URI
 
-若要讓程式碼更通用，可以使用OSGi設定來設定這兩個屬性，如下所示。 _**aemformstutorial**_&#x200B;是儲存帳戶的名稱，_**formsubmissions**_是將儲存資料的容器。
+若要讓程式碼更通用，可以使用OSGi設定來設定這兩個屬性，如下所示。 _&#x200B;**aemformstutorial**&#x200B;_&#x200B;是儲存帳戶的名稱，_&#x200B;**formsubmissions**&#x200B;_是將儲存資料的容器。
 請確定儲存URI結尾有/，且SAS權杖的開頭為？
 ![osgi-configuration](./assets/azure-portal-osgi-configuration.png)
 

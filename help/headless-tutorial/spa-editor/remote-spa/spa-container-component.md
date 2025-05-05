@@ -363,7 +363,7 @@ SPA更新為內嵌`<ResponsiveGrid...>`、三個可編輯React元件（`Editable
 1. 在AEM頁面編輯器中&#x200B;__預覽__&#x200B;您的變更
 1. 重新整理在[http://localhost:3000](http://localhost:3000)本機執行的WKND應用程式以檢視編寫的變更！
 
-   SPA](./assets/spa-container-component/localhost-final.png)中的![容器元件
+   SPA![&#128279;](./assets/spa-container-component/localhost-final.png)中的容器元件
 
 
 ## 恭喜！

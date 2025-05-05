@@ -53,7 +53,7 @@ ht-degree: 0%
 
 ### 問：我有來自來源系統的最新BPA報告，應該怎麼做？
 
-將報表匯出為CSV，然後將其上傳到與您的IMS組織](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)相關聯的[Cloud Acceleration Manager。 然後依照準備階段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html)中所述的[進行稽核程式。
+將報表匯出為CSV，然後將其上傳到與您的IMS組織[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)相關聯的[Cloud Acceleration Manager。 然後依照準備階段](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html)中所述的進行稽核程式。
 
 請檢閱工具提供的程式碼和內容複雜性評估，並記下導致程式碼重構待處理或雲端移轉評估的相關動作專案。
 

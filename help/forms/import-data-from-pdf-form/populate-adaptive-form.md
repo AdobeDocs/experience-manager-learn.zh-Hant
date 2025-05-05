@@ -58,7 +58,7 @@ function handleFiles(formData) {
 }
 ```
 
-掛載在&#x200B;**_/bin/ExtractDataFromPDF_**上的servlet會從PDF檔案中擷取資料，並傳回所擷取資料儲存所在的crx節點的路徑。
+掛載在&#x200B;**_/bin/ExtractDataFromPDF_**&#x200B;上的servlet會從PDF檔案中擷取資料，並傳回所擷取資料儲存所在的crx節點的路徑。
 接著會使用[GuideBridge setData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor)方法來設定最適化表單的資料。
 
 ## 後續步驟

@@ -292,7 +292,7 @@ React核心元件已提供SPA影像元件。 不過，如果您需要額外的�
 
 在跳入SPA程式碼之前，請檢查AEM提供的JSON模型。
 
-1. 導覽至核心元件庫](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的[影像範例。
+1. 導覽至核心元件庫[&#128279;](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的影像範例。
 
    ![影像核心元件JSON](./assets/map-components/image-json.png)
 

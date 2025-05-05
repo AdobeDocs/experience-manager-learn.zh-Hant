@@ -26,7 +26,7 @@ ht-degree: 0%
 ![intellij](assets/intellij.png)
 
 以滑鼠右鍵按一下``adaptiveForm``節點並選取[新增] | 封裝
-請確定您將名稱**addressblock**&#x200B;新增至封裝
+請確定您將名稱&#x200B;**addressblock**&#x200B;新增至封裝
 
 在新建立的封裝``addressblock``上按一下滑鼠右鍵，然後選取``repo | Get Command``，如下所示
 ![repo-sync](assets/sync-repo.png)

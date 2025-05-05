@@ -71,7 +71,7 @@ ht-degree: 0%
 
 本章使用[樣式系統功能](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)來建立文章頁面上所使用之&#x200B;**Title**&#x200B;和&#x200B;**Text**&#x200B;元件的變體。
 
-標題](assets/style-system/styles-added-title.png)的![可用樣式
+標題![&#128279;](assets/style-system/styles-added-title.png)的可用樣式
 
 *標題元件可用的底線樣式*
 
@@ -109,7 +109,7 @@ ht-degree: 0%
 
    **底線** ： `cmp-title--underline`
 
-   標題](assets/style-system/title-style-policy.png)的![樣式原則設定
+   標題![&#128279;](assets/style-system/title-style-policy.png)的樣式原則設定
 
    按一下&#x200B;**完成**&#x200B;儲存標題原則的變更。
 

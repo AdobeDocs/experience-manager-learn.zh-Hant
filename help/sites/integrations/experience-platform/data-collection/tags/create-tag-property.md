@@ -36,7 +36,7 @@ ht-degree: 0%
 
 1. 從左側導覽按一下&#x200B;**標籤**&#x200B;功能表專案，然後從右上角按一下&#x200B;**新增屬性**。
 
-1. 使用&#x200B;**Name**&#x200B;必要欄位為您的Tag屬性命名。 在[網域]欄位中，輸入您的網域名稱，或如果使用AEM as a Cloud Service環境，請輸入`adobeaemcloud.com`並按一下[儲存]。****
+1. 使用&#x200B;**Name**&#x200B;必要欄位為您的Tag屬性命名。 在[網域]欄位中，輸入您的網域名稱，或如果使用AEM as a Cloud Service環境，請輸入`adobeaemcloud.com`並按一下[儲存]。**&#x200B;**
 
    ![標籤屬性](assets/tag-properties.png)
 

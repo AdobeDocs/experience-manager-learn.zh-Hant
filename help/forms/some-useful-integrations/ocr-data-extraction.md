@@ -107,7 +107,7 @@ AEM Forms資料整合提供直覺式使用者介面，可建立和使用[表單�
 * [下載資料來源](assets/drivers-license-source.zip)並使用[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)匯入至AEM
 * [下載表單資料模型](assets/drivers-license-fdm.zip)並使用[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)匯入至AEM
 * [下載使用者端程式庫](assets/drivers-license-client-lib.zip)
-* 可從這裡](assets/adaptive-form-dl.zip)下載最適化表單範例[。 此範例表單使用本文中提供的表單資料模型的服務引動。
+* 可從這裡[&#128279;](assets/adaptive-form-dl.zip)下載最適化表單範例。 此範例表單使用本文中提供的表單資料模型的服務引動。
 * 從[Forms和檔案UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)將表單匯入AEM
 * 以[編輯模式開啟表單。](http://localhost:4502/editor.html/content/forms/af/driverslicenseandpassport.html)
 * 在apikey欄位中將API金鑰指定為預設值，並儲存變更

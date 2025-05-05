@@ -93,4 +93,4 @@ swagger檔案說明下列REST API
 * [取得所有國家/地區](https://secure.geonames.org/countryInfoJSON?username=yourusername)
 * [取得Geoname物件的子系](https://secure.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
 
-您可以從這裡](assets/geonames-api-form-data-model.zip)下載已完成的[表單資料模型
+您可以從這裡[&#128279;](assets/geonames-api-form-data-model.zip)下載已完成的表單資料模型

@@ -38,6 +38,6 @@ ht-degree: 0%
 * 以Java應用程式執行Main.java
 
 >[!NOTE]
-> 第一次執行Java程式時，您會收到HTTP 403錯誤。 若要完成此程式，請確定您已在AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)中將[適當的許可權授予技術帳戶使用者。
+> 第一次執行Java程式時，您會收到HTTP 403錯誤。 若要完成此程式，請確定您已在AEM[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem)中將適當的許可權授予技術帳戶使用者。
 
 **AEM Forms使用者**&#x200B;是我用於此課程的角色。

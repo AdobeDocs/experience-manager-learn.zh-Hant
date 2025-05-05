@@ -134,7 +134,7 @@ Mixin的劃分，以下是mixin每個部分的功能：
 使用前端管道部署更新的主題。
 為垂直標籤元件建立樣式變數，如下所示
 ![style-variation](assets/verticaltab-style-variation.png)
-我們已建立名為Marketing的樣式變數，此變數與css類別_**cmp-verticaltabs—marketing**_相關聯。
+我們已建立名為Marketing的樣式變數，此變數與css類別_&#x200B;**cmp-verticaltabs—marketing**&#x200B;_相關聯。
 使用垂直索引標籤元件建立最適化表單。 將垂直索引標籤元件與行銷樣式變數建立關聯。
 在垂直標籤上新增幾個標籤，並命名它們以符合圖示地圖中定義的影像，例如home、family。
 ![首頁圖示](assets/tab-name.png)

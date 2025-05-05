@@ -85,7 +85,7 @@ return isMarried(inboxItem);
 * 按一下&#x200B;_建立_&#x200B;按鈕旁的&#x200B;_清單檢視_&#x200B;圖示以開啟Admin Control
 * 將「已婚」欄新增至「收件匣」並儲存變更
 * [移至FormsAndDocuments UI](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* 從&#x200B;_建立_&#x200B;功能表選取&#x200B;_檔案上傳_，以匯入範例表單](assets/snap-form.zip)[
+* 從&#x200B;_建立_&#x200B;功能表選取&#x200B;_檔案上傳_，以匯入範例表單[&#128279;](assets/snap-form.zip)
 * [預覽表單](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
 * 選取&#x200B;_婚姻狀況_並提交表單
   [檢視收件匣](http://localhost:4502/aem/inbox)

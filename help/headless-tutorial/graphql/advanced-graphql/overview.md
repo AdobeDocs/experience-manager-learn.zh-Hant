@@ -21,13 +21,13 @@ ht-degree: 0%
 
 ## 先決條件
 
-完成AEM as a Cloud Service ](../quick-setup/cloud-service.md)的[快速設定，以設定您的AEM as a Cloud Service環境。
+完成AEM as a Cloud Service [&#128279;](../quick-setup/cloud-service.md)的快速設定，以設定您的AEM as a Cloud Service環境。
 
 強烈建議您先完成先前的[基本教學課程](../multi-step/overview.md)和[影片系列](../video-series/modeling-basics.md)教學課程，再繼續此進階教學課程。 雖然您可以使用本機AEM環境完成本教學課程，但本教學課程僅涵蓋AEM as a Cloud Service的工作流程。
 
 >[!CAUTION]
 >
->如果您無法存取AEM as a Cloud Service環境，可以使用本機SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html)完成[AEM Headless快速設定。 不過，請務必注意，某些產品UI頁面（例如內容片段導覽）是不同的。
+>如果您無法存取AEM as a Cloud Service環境，可以使用本機SDK[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html)完成AEM Headless快速設定。 不過，請務必注意，某些產品UI頁面（例如內容片段導覽）是不同的。
 
 
 

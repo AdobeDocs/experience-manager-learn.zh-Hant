@@ -156,7 +156,7 @@ AEM環境在&#x200B;**作者服務**&#x200B;和&#x200B;**發佈服務**&#x200B;�
 
    ![直接發佈](assets/author-content-publish/page-editor-publish.png)
 
-1. 返回&#x200B;**AEM發佈服務**&#x200B;以檢視變更。 您很可能不會&#x200B;**立即**&#x200B;看到更新。 這是因為&#x200B;**AEM發佈服務**&#x200B;包含透過Apache Web伺服器和CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html)的[快取。 依預設，快取HTML內容約5分鐘。
+1. 返回&#x200B;**AEM發佈服務**&#x200B;以檢視變更。 您很可能不會&#x200B;**立即**&#x200B;看到更新。 這是因為&#x200B;**AEM發佈服務**&#x200B;包含透過Apache Web伺服器和CDN[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html)的快取。 依預設，快取HTML內容約5分鐘。
 
 1. 若要略過快取以進行測試/偵錯，只需新增查詢引數，例如`?nocache=true`。 URL看起來會像`https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`。 有關可用快取策略與設定的詳細資訊[可在此找到](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html)。
 
@@ -172,7 +172,7 @@ AEM環境在&#x200B;**作者服務**&#x200B;和&#x200B;**發佈服務**&#x200B;�
 
 ### 後續步驟 {#next-steps}
 
-在真實世界的實作中，使用模型和UI設計規劃網站通常會在建立網站之前進行。 瞭解Adobe XD UI Kit如何透過Adobe XD](./ui-planning-adobe-xd.md)在[UI規劃中設計和加速Adobe Experience Manager Sites實施。
+在真實世界的實作中，使用模型和UI設計規劃網站通常會在建立網站之前進行。 瞭解Adobe XD UI Kit如何透過Adobe XD[&#128279;](./ui-planning-adobe-xd.md)在UI規劃中設計和加速Adobe Experience Manager Sites實施。
 
 想要繼續探索AEM Sites功能嗎？ 您可以直接跳到[頁面範本](./page-templates.md)上的章節，瞭解頁面範本與頁面之間的關係。
 

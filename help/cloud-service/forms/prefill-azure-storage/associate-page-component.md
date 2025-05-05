@@ -18,7 +18,7 @@ ht-degree: 5%
 
 # 將頁面元件與範本建立關聯
 
-下一步是將頁面元件與新的調適型表單範本建立關聯。 這可確保在每次根據新範本的自適應表單轉譯時，都會執行頁面元件中的程式碼。 為了這個教學課程的目的，已在&#x200B;**AzurePortalStorage**&#x200B;資料夾中建立名為&#x200B;**StoreAndRestoreFromAzure**的新調適型表單範本。
+下一步是將頁面元件與新的調適型表單範本建立關聯。 這可確保在每次根據新範本的自適應表單轉譯時，都會執行頁面元件中的程式碼。 為了這個教學課程的目的，已在&#x200B;**AzurePortalStorage**&#x200B;資料夾中建立名為&#x200B;**StoreAndRestoreFromAzure**&#x200B;的新調適型表單範本。
 導覽至/conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/initial/jcr：content節點，新增下列屬性並儲存變更。
 
 | **屬性名稱** | **屬性型別** | **屬性值** |

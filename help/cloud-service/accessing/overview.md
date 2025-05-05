@@ -50,7 +50,7 @@ AEM as a Cloud Service是雲端原生運用AEM應用程式的方式，因此會�
 
 ## Adobe IMS 產品設定檔
 
-[在[Adobe的AdminConsole](https://adminconsole.adobe.com)中管理的Adobe IMS產品設定檔](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)是提供[Adobe IMS使用者](#adobe-ims-users)登入AEM Author服務基本存取層級存取權的機械。
+[&#128279;](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html)在[Adobe的AdminConsole](https://adminconsole.adobe.com)中管理的Adobe IMS產品設定檔是提供[Adobe IMS使用者](#adobe-ims-users)登入AEM Author服務基本存取層級存取權的機械。
 
 + __AEM使用者__&#x200B;產品設定檔可讓使用者透過AEM貢獻者群組的成員資格，以唯讀方式存取AEM。
 + __AEM管理員__&#x200B;產品設定檔可提供使用者對AEM的完整管理存取權。

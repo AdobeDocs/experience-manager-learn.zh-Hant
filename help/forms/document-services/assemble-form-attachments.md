@@ -142,7 +142,7 @@ session.save();
 * 將瀏覽器指向[組合附件表單](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
 * 在ID檔案中新增附件，並將一些pdf檔案新增至銀行對帳單區段
 * 提交表單以觸發工作流程
-* 檢查crx](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload)中工作流程的[裝載資料夾以取得組合的pdf
+* 檢查crx[&#128279;](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload)中工作流程的裝載資料夾以取得組合的pdf
 
 >[!NOTE]
 > 如果您已啟用自訂套裝的記錄器，則DDX且已組裝的檔案會寫入您的AEM安裝檔案夾。

@@ -69,7 +69,7 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
 
 ### 小工具 {#gadgets}
 
-此節點上沒有其他屬性，但小工具節點的子項可控制建立新專案時用於填入專案控制面板的專案拼貼。 [專案拼貼](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) （也稱為小工具或Pod）是填入專案工作地點的簡單卡片。 您可在下列位置找到ootb圖磚的完整清單： **/libs/cq/gui/components/projects/admin/pod。 **專案擁有者在建立專案後，一律可以新增/移除圖磚。
+此節點上沒有其他屬性，但小工具節點的子項可控制建立新專案時用於填入專案控制面板的專案拼貼。 [專案拼貼](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) （也稱為小工具或Pod）是填入專案工作地點的簡單卡片。 您可在下列位置找到ootb圖磚的完整清單： **/libs/cq/gui/components/projects/admin/pod。 &#x200B;** 專案擁有者在建立專案後，一律可以新增/移除圖磚。
 
 ### 角色 {#roles}
 
@@ -77,7 +77,7 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
 
 ### 工作流程 {#workflows}
 
-建立自訂專案範本最吸引人的原因之一，是它可讓您設定可用工作流程以用於專案。 這些功能包括OOTB工作流程或自訂工作流程。 在&#x200B;**工作流程**&#x200B;節點下，需要一個&#x200B;**模型**&#x200B;節點（也是`nt:unstructured`）和子節點，才能指定可用的工作流程模型。 屬性**modelId **指向/etc/workflow下的工作流程模型，而屬性&#x200B;**wizard**&#x200B;指向啟動工作流程時使用的對話方塊。 Projects的顯著優點是能夠新增自訂對話方塊（精靈），以在工作流程開始時擷取業務特定的中繼資料，並可推動工作流程中的進一步動作。
+建立自訂專案範本最吸引人的原因之一，是它可讓您設定可用工作流程以用於專案。 這些功能包括OOTB工作流程或自訂工作流程。 在&#x200B;**工作流程**&#x200B;節點下，需要一個&#x200B;**模型**&#x200B;節點（也是`nt:unstructured`）和子節點，才能指定可用的工作流程模型。 屬性&#x200B;**modelId &#x200B;** 指向/etc/workflow下的工作流程模型，而屬性&#x200B;**wizard**&#x200B;指向啟動工作流程時使用的對話方塊。 Projects的顯著優點是能夠新增自訂對話方塊（精靈），以在工作流程開始時擷取業務特定的中繼資料，並可推動工作流程中的進一步動作。
 
 ```shell
 <projects-template-root> (cq:Template)
@@ -391,7 +391,7 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
       Pre-Create Task Script = "/apps/aem-guides/projects/scripts/start-task-config.ecma"
    ```
 
-1. 在上一個步驟中，我們參考了建立任務前的指令碼。 我們現在將建立該指令碼，其中將根據工作流程中繼資料值&quot;**assignee**&quot;的值來設定任務的受指派人。 工作流程啟動時會設定&#x200B;**&quot;assignee&quot;**&#x200B;值。 我們也會讀取工作流程中繼資料，藉由讀取工作流程中繼資料的&quot;**taskPriority&quot;**&quot;值，以及**&quot;taskDueDate&quot; **在第一個任務到期時動態設定，以動態選擇任務的優先順序。
+1. 在上一個步驟中，我們參考了建立任務前的指令碼。 我們現在將建立該指令碼，其中將根據工作流程中繼資料值&quot;**assignee**&quot;的值來設定任務的受指派人。 工作流程啟動時會設定&#x200B;**&quot;assignee&quot;**&#x200B;值。 我們也會讀取工作流程中繼資料，藉由讀取工作流程中繼資料的&quot;**taskPriority&quot;**&quot;值，以及&#x200B;**&quot;taskDueDate&quot; &#x200B;** 在第一個任務到期時動態設定，以動態選擇任務的優先順序。
 
    為了方便組織，我們在應用程式資料夾底下建立了一個資料夾，用以儲存所有與專案相關的指令碼： **/apps/aem-guides/projects-tasks/projects/scripts**。 在此資料夾下建立名為&#x200B;**&quot;start-task-config.ecma&quot;**&#x200B;的檔案。 &#42;請注意，您的start-task-config.ecma檔案的路徑必須與步驟4的[進階設定]索引標籤中所設定的路徑相符。
 
@@ -482,7 +482,7 @@ AEM專案附帶幾個[OOTB專案範本](https://experienceleague.adobe.com/en/do
 
 在本教學課程的前面，我們建立了包含核准者角色的專案範本。 每次從此範本建立新專案時，專案特定的群組都會為核准者角色建立。 就像參與者步驟一樣，一個任務只能指派給使用者或群組。 我們想要將此任務指派給對應至「核准者群組」的專案群組。 所有從專案內啟動的工作流程都會有中繼資料，會將專案角色對應至專案特定群組。
 
-在{Advanced Settings}索引標籤的&#x200B;**指令碼**&#x200B;文字區域中複製+貼上**列程式碼** 此程式碼將讀取工作流程中繼資料，並將任務指派給專案的核准者群組。 如果找不到核准者群組值，則會退回將任務指派給管理員群組。
+在{Advanced Settings}索引標籤的&#x200B;**指令碼**&#x200B;文字區域中複製+貼上&#x200B;**列程式碼** 此程式碼將讀取工作流程中繼資料，並將任務指派給專案的核准者群組。 如果找不到核准者群組值，則會退回將任務指派給管理員群組。
 
 ```
 var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -514,7 +514,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
    由於這是「匆忙核准」路由，因此任務的優先順序會設為「高」。 此外，我們只給核准者群組一天時間來完成任務。 「工作」標籤上的被指定者會保留空白，因為我們會在「進階設定」標籤中動態地指定此被指定者。
 
-   我們可以重複使用與步驟7相同的指令碼片段，以填入{**進階設定{tab**上的&#x200B;**指令碼**&#x200B;文字區域。 複製+貼上下列程式碼：
+   我們可以重複使用與步驟7相同的指令碼片段，以填入&lbrace;**進階設定&lbrace;tab**&#x200B;上的&#x200B;**指令碼**&#x200B;文字區域。 複製+貼上下列程式碼：
 
    ```
    var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -522,7 +522,7 @@ task.setCurrentAssignee(projectApproverGrp);
    task.setCurrentAssignee(projectApproverGrp);
    ```
 
-1. 拖放a**無操作**元件至最右邊的分支（分支3）。 「無操作」元件不會執行任何動作，而且會立即進階，代表原始編輯者要略過核准步驟。 技術上，我們可以離開此分支而不執行任何工作流程步驟，但作為最佳實務，我們將新增「無操作」步驟。 如此便能向其他開發人員清楚說明分支3的用途。
+1. 拖放a&#x200B;**無操作**&#x200B;元件至最右邊的分支（分支3）。 「無操作」元件不會執行任何動作，而且會立即進階，代表原始編輯者要略過核准步驟。 技術上，我們可以離開此分支而不執行任何工作流程步驟，但作為最佳實務，我們將新增「無操作」步驟。 如此便能向其他開發人員清楚說明分支3的用途。
 
    按兩下工作流程步驟並設定標題和說明：
 

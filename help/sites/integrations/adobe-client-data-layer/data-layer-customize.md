@@ -69,7 +69,7 @@ ht-degree: 2%
 
 1. 開啟新的瀏覽器視窗並登入AEM。 開啟&#x200B;**雜誌**&#x200B;頁面，例如： [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html)。
 
-   第](assets/adobe-client-data-layer/byline-component-onpage.png)頁上的![署名元件
+   第![&#128279;](assets/adobe-client-data-layer/byline-component-onpage.png)頁上的署名元件
 
    您應該會看到作為體驗片段的一部分新增到頁面的署名元件範例。 您可以在[http://localhost:4502/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/byline.html](http://localhost:4502/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/byline.html)檢視體驗片段
 1. 開啟您的開發人員工具，並在&#x200B;**主控台**&#x200B;中輸入下列命令：
@@ -424,7 +424,7 @@ Adobe Client Data Layer是事件導向，而觸發動作的最常見事件之一
 
    >[!NOTE]
    >
-   > 如果為實作中重複使用的物件建立進階資料層，建議將資料層元素擷取到它們自己的資料層特定Java™物件中。 例如，Commerce核心元件已新增`ProductData`和`CategoryData`的介面，因為這些介面可用於Commerce實作中的許多元件。 如需詳細資訊，請檢閱aem-cif-core-components repo](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer)中的[程式碼。
+   > 如果為實作中重複使用的物件建立進階資料層，建議將資料層元素擷取到它們自己的資料層特定Java™物件中。 例如，Commerce核心元件已新增`ProductData`和`CategoryData`的介面，因為這些介面可用於Commerce實作中的許多元件。 如需詳細資訊，請檢閱aem-cif-core-components repo[&#128279;](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer)中的程式碼。
 
 ## 恭喜！ {#congratulations}
 

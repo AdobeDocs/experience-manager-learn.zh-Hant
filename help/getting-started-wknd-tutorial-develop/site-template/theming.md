@@ -60,7 +60,7 @@ ht-degree: 1%
 
 影片的高層級步驟：
 
-1. 在Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)中建立新的Git [存放庫
+1. 在Cloud Manager[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)中建立新的Git 存放庫
 1. 將主題來源專案新增至Cloud Manager Git存放庫：
 
    ```shell

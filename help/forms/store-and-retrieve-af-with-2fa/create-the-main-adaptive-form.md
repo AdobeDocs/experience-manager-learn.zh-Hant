@@ -31,7 +31,7 @@ ht-degree: 0%
 
 * 您可以下載已完成的[StoreAfWithAttachments表單](assets/store-af-with-attachments-form.zip)，並將其匯入您的AEM執行個體。
 
-* 與此表單](assets/workflow-model-store-af-with-attachments.zip)相關聯的[AEM工作流程需要匯入您的AEM執行個體，表單才能運作。
+* 與此表單[&#128279;](assets/workflow-model-store-af-with-attachments.zip)相關聯的AEM工作流程需要匯入您的AEM執行個體，表單才能運作。
 
 
 ## 後續步驟

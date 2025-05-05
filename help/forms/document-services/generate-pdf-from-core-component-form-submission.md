@@ -21,7 +21,7 @@ ht-degree: 0%
 
 以下是將「核心元件」改為大寫的修訂文字：
 
-典型案例涉及透過核心元件型調適型表單提交的資料產生PDF。 此資料一律為JSON格式。 若要使用轉譯PDF API產生PDF，必須將JSON資料轉換為XML格式。 `org.json.XML`的`toString`方法已用於此轉換。 如需詳細資訊，請參閱`org.json.XML.toString`方法](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-)的[檔案。
+典型案例涉及透過核心元件型調適型表單提交的資料產生PDF。 此資料一律為JSON格式。 若要使用轉譯PDF API產生PDF，必須將JSON資料轉換為XML格式。 `org.json.XML`的`toString`方法已用於此轉換。 如需詳細資訊，請參閱`org.json.XML.toString`方法[&#128279;](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-)的檔案。
 
 ## 以JSON結構描述為基礎的最適化表單
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 ### 從XML資料產生JSON結構描述
 
-您可以利用任何免費的線上工具，利用上一步驟產生的XML資料將XML轉換為JSON](https://jsonformatter.org/xml-to-jsonschema)。[
+您可以利用任何免費的線上工具，利用上一步驟產生的XML資料將XML轉換為JSON[&#128279;](https://jsonformatter.org/xml-to-jsonschema)。
 
 ### 將JSON轉換為XML的自訂工作流程程式
 

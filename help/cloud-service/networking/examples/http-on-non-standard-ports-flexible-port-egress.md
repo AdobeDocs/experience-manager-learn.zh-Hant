@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
-> 此程式碼範例僅適用於[彈性連線埠輸出](../flexible-port-egress.md)。 專用輸出IP位址和VPN](./http-dedicated-egress-ip-vpn.md)的非標準連線埠上的[HTTP/HTTPS連線有類似但不同的程式碼範例。
+> 此程式碼範例僅適用於[彈性連線埠輸出](../flexible-port-egress.md)。 專用輸出IP位址和VPN[&#128279;](./http-dedicated-egress-ip-vpn.md)的非標準連線埠上的HTTP/HTTPS連線有類似但不同的程式碼範例。
 
 ## 程式碼範例
 

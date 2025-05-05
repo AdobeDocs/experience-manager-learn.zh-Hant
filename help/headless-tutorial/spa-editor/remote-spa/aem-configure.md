@@ -211,7 +211,7 @@ Sling對應會影響`http`和`localhost`上執行的AEM，因此僅支援本機�
 
 ## 跨原始資源共用安全性原則
 
-接下來，設定AEM以保護內容，以便只有此SPA可以存取AEM內容。 在AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html)中設定[跨原始資源共用。
+接下來，設定AEM以保護內容，以便只有此SPA可以存取AEM內容。 在AEM[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html)中設定跨原始資源共用。
 
 1. 在您的IDE中，開啟`ui.config` Maven子專案
 1. 導覽`src/main/content/jcr_root/apps/wknd-app/osgiconfig/config`

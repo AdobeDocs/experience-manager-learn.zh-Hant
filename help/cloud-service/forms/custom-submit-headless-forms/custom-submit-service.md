@@ -35,7 +35,7 @@ AEM Forms提供許多立即可用的提交選項，可滿足大部分使用案�
 
 ## 寫入自訂提交服務{#Write-the-custom-submit-service}
 
-啟動IntelliJ並開啟AEM專案。 建立名為&#x200B;**HandleRegistrationFormSubmission**的新Java類別，如下方熒幕擷取畫面所示
+啟動IntelliJ並開啟AEM專案。 建立名為&#x200B;**HandleRegistrationFormSubmission**&#x200B;的新Java類別，如下方熒幕擷取畫面所示
 ![自訂送出服務](./assets/custom-submit-service.png)
 
 已撰寫下列程式碼來實作服務
@@ -88,9 +88,9 @@ public class HandleRegistrationFormSubmission implements FormSubmitActionService
 
 ## 在應用程式下建立crx節點
 
-展開ui.apps節點，在apps節點下建立名稱為&#x200B;**HandleRegistrationFormSubmission**的新套件，如下面的熒幕擷取畫面所示
+展開ui.apps節點，在apps節點下建立名稱為&#x200B;**HandleRegistrationFormSubmission**&#x200B;的新套件，如下面的熒幕擷取畫面所示
 ![crx-node](./assets/crx-node.png)
-在**HandleRegistrationFormSubmission**&#x200B;下建立名為.content.xml的檔案。 將下列程式碼複製並貼到.content.xml中
+在&#x200B;**HandleRegistrationFormSubmission**&#x200B;下建立名為.content.xml的檔案。 將下列程式碼複製並貼到.content.xml中
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

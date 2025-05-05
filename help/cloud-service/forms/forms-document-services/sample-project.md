@@ -28,6 +28,7 @@ ht-degree: 0%
    * 找出檔案`resources/credentials/server_credentials.json`
    * 開啟它並&#x200B;**更新您環境的特定認證**。
    * 請確定其中包含下列專案的有效值：
+
      `clientId`、`clientSecret`、`adobeIMSV3TokenEndpointURL`和
      `scopes`
 

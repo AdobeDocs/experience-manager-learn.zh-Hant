@@ -98,6 +98,7 @@ _使用wskdebug （無音訊）偵錯Asset Compute背景工作程式的點進_
 1. 根據需要偵錯的工作區，確定已透過`AIO_runtime_namespace`和`AIO_runtime_auth`設定[工作區特定的環境變數](../deploy/runtime.md)。
 1. 從命令列，執行`aio app logs`
    + 如果工作區發生大量流量，請透過`--limit`旗標擴充啟用記錄檔的數量：
+
      `$ aio app logs --limit=25`
 1. 最近（至提供的`--limit`）啟用記錄會傳回作為命令的輸出以供檢閱。
 

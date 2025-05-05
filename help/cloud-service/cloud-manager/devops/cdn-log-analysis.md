@@ -67,4 +67,4 @@ ht-degree: 0%
 
 [ELK棧疊](https://www.elastic.co/elastic-stack) (包含Elasticsearch、Logstash和Kibana)是另一個強大的記錄分析選項。 對於無法存取Splunk設定或記錄轉送功能的組織，此功能非常有用。 在本機設定ELK棧疊很簡單，工具提供Docker Compose檔案以快速開始。 接著，您可以匯入預先建立的控制面板，並擷取使用Adobe Cloud Manager下載的CDN記錄。
 
-您可以開始使用AEMCS CDN記錄分析](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis)指南的[ELK Docker容器。
+您可以開始使用AEMCS CDN記錄分析[&#128279;](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis)指南的ELK Docker容器。

@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ![使用AEM Headless的伺服器對伺服器Node.js應用程式](./assets/server-to-server-app/server-to-server-app.png)
 
-在GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server)上檢視[原始程式碼
+在GitHub[&#128279;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server)上檢視原始程式碼
 
 ## 先決條件 {#prerequisites}
 

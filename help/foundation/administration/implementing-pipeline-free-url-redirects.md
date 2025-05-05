@@ -139,8 +139,7 @@ RewriteRule ^(.*)$ ${<MAPALIAS>:$1|/} [L,R=301]
 讓我們檢閱[以上](#manage-redirects)提及的每個URL重新導向管理選項的Dispatcher設定。
 
 >[!BEGINTABS]
-
->DAM中的[!TAB 文字檔]
+>[!TAB DAM中的 文字檔]
 
 當URL重新導向以文字檔案中的機碼值組形式管理，並上傳至DAM時，設定如下。
 

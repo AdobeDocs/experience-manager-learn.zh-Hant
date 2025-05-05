@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 整合AEM Sites和Adobe Analytics
 
-瞭解如何使用[AEM Sites使用者端資料層與Adobe Analytics核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)的內建功能，將AEM和Adobe與Adobe Analytics標籤擴充功能整合，以收集Adobe Experience Manager Sites中某個頁面的相關資料。 Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)中的[標籤和[Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)是用來建立規則，以將頁面資料傳送至Adobe Analytics。
+瞭解如何使用[AEM Sites使用者端資料層與Adobe Analytics核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)的內建功能，將AEM和Adobe與Adobe Analytics標籤擴充功能整合，以收集Adobe Experience Manager Sites中某個頁面的相關資料。 Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)中的標籤和[Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html)是用來建立規則，以將頁面資料傳送至Adobe Analytics。
 
 ## 您即將建置的內容 {#what-build}
 
@@ -156,7 +156,7 @@ Adobe使用者端資料層是&#x200B;**事件導向**&#x200B;資料層。 載入
    });
    ```
 
-   上述程式碼片段透過[將函式](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)推入資料層，以新增事件接聽程式。 觸發`cmp:show`事件時，會呼叫`pageShownEventHandler`函式。 在此函式中，已新增一些健全性檢查，而且已使用觸發事件的元件之資料層](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)的最新[狀態建構新的`event`。
+   上述程式碼片段透過[將函式](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)推入資料層，以新增事件接聽程式。 觸發`cmp:show`事件時，會呼叫`pageShownEventHandler`函式。 在此函式中，已新增一些健全性檢查，而且已使用觸發事件的元件之資料層[&#128279;](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)的最新狀態建構新的`event`。
 
    最後呼叫`trigger(event)`函式。 `trigger()`函式是標籤屬性中的保留名稱，它會&#x200B;**觸發規則**。 `event`物件傳遞為引數，而該引數又由標籤屬性中的另一個保留名稱公開。 標籤屬性中的資料元素現在可以使用程式碼片段（例如`event.component['someKey']`）來參考各種屬性。
 
@@ -214,7 +214,7 @@ Adobe使用者端資料層是&#x200B;**事件導向**&#x200B;資料層。 載入
 
    >[!NOTE]
    >
-   > 回想一下，已根據在標籤屬性中觸發&#x200B;**規則**&#x200B;的事件，提供`event`物件並設定範圍。 在規則中的資料元素為&#x200B;*referenced*&#x200B;之前，不會設定資料元素的值。 因此，在上一個步驟&#x200B;*中建立的&#x200B;**Page Loaded**規則之類的規則內使用此資料元素是安全的，但*&#x200B;在其他內容中使用此資料元素是不安全的。
+   > 回想一下，已根據在標籤屬性中觸發&#x200B;**規則**&#x200B;的事件，提供`event`物件並設定範圍。 在規則中的資料元素為&#x200B;*referenced*&#x200B;之前，不會設定資料元素的值。 因此，在上一個步驟&#x200B;*中建立的&#x200B;**Page Loaded**&#x200B;規則之類的規則內使用此資料元素是安全的，但*&#x200B;在其他內容中使用此資料元素是不安全的。
 
 ### 頁面名稱
 
@@ -248,7 +248,7 @@ Adobe使用者端資料層是&#x200B;**事件導向**&#x200B;資料層。 載入
 
 1. 規則中現在應該包含三個資料元素：
 
-   規則](assets/collect-data-analytics/data-elements-page-rule.png)中的![資料元素
+   規則![&#128279;](assets/collect-data-analytics/data-elements-page-rule.png)中的資料元素
 
 ## 新增Analytics擴充功能
 
@@ -308,7 +308,7 @@ Adobe使用者端資料層是&#x200B;**事件導向**&#x200B;資料層。 載入
 
    ![移除自訂程式碼動作](assets/collect-data-analytics/remove-console-statements.png)
 
-1. 在[動作]子區段下，按一下[新增] ****&#x200B;以新增動作。
+1. 在[動作]子區段下，按一下[新增] **&#x200B;**&#x200B;以新增動作。
 
 1. 將&#x200B;**擴充功能**&#x200B;型別設定為&#x200B;**Adobe Analytics**，並將&#x200B;**動作型別**&#x200B;設定為&#x200B;**設定變數**
 

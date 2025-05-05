@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 新增blob索引標籤
 
-隨著資料集變大，在資料海洋中尋找特定物件會變得困難。 Blob索引標籤使用索引鍵值索引標籤屬性提供資料管理和探索功能。 您可以在單一容器中或在儲存帳戶的所有容器中分類和尋找物件。 例如，blob索引標籤&#x200B;_**CustomerType=Platinum**_，其中Platinum是CustomerType欄位的值。
+隨著資料集變大，在資料海洋中尋找特定物件會變得困難。 Blob索引標籤使用索引鍵值索引標籤屬性提供資料管理和探索功能。 您可以在單一容器中或在儲存帳戶的所有容器中分類和尋找物件。 例如，blob索引標籤&#x200B;_&#x200B;**CustomerType=Platinum**&#x200B;_，其中Platinum是CustomerType欄位的值。
 
 ![索引標籤](assets/blob-with-index-tags1.png)
 下列程式碼會從提交的資料中建立具有對應值的blob索引資料標籤字串

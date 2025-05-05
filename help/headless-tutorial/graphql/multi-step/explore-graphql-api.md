@@ -408,5 +408,5 @@ AEM的GraphQL API提供強大的查詢語言，以將內容片段的資料公開
 
 ## 安裝GraphiQL工具（選用） {#install-graphiql}
 
-在中，某些版本的AEM (6.X.X) GraphiQL IDE工具需要手動安裝，請從這裡](../how-to/install-graphiql-aem-6-5.md)使用[指示。
+在中，某些版本的AEM (6.X.X) GraphiQL IDE工具需要手動安裝，請從這裡[&#128279;](../how-to/install-graphiql-aem-6-5.md)使用指示。
 

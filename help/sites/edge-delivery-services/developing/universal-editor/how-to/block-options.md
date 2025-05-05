@@ -411,8 +411,7 @@ $ git push origin teaser
 若要開始區塊開發，請先檢閱Edge Delivery Services預覽所公開的DOM結構。 DOM已透過JavaScript增強，並採用CSS樣式，為建置和自訂區塊提供基礎。
 
 >[!BEGINTABS]
-
->要裝飾的[!TAB DOM]
+>[!TAB 要裝飾的 DOM]
 
 以下是Teaser區塊的DOM，已選取&#x200B;**並排**&#x200B;區塊選項，這是使用JavaScript和CSS裝飾的目標。
 

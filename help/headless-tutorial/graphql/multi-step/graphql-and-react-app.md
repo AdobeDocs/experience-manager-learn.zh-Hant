@@ -99,11 +99,11 @@ ht-degree: 0%
 >   此React應用程式已部分實作。 依照本教學課程中的步驟完成實作。 需要實施作業的JavaScript檔案有下列註解，請務必使用本教學課程中指定的程式碼，新增/更新這些檔案中的程式碼。
 >
 >
-> //*********************************
+> //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;***
 >
 >  // TODO請依照AEM Headless教學課程中的步驟來實作此專案
 >
->  //*********************************
+>  //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;***
 >
 
 ## React應用程式剖析
@@ -125,7 +125,7 @@ ht-degree: 0%
 
 1. 複查明細行1-40：
 
-   - 從JavaScript ](https://github.com/adobe/aem-headless-client-js)的[AEM Headless使用者端匯入`AEMHeadless`宣告，第11行。
+   - 從JavaScript [&#128279;](https://github.com/adobe/aem-headless-client-js)的AEM Headless使用者端匯入`AEMHeadless`宣告，第11行。
 
    - 根據`.env.development`、第14-22行中定義的變數以及箭號函式運算式`setAuthorization`、第31-40行所定義的授權組態。
 

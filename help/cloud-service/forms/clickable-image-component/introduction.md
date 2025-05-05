@@ -20,7 +20,7 @@ ht-degree: 0%
 # 可點按影像簡介
 
 在Forms中使用可點按的影像，可建立更吸引人、直覺且美觀的使用者體驗。 出於本文的目的，我們將SVG用於可點按影像，因為它提供數種優勢，尤其是在設計彈性、效能和使用者體驗方面。
-SVG可使用Adobe Illustrator或任何免費線上工具來建立。 我已使用來自](https://simplemaps.com/resources/svg-us)簡易地圖的[USA地圖來展示使用案例。
+SVG可使用Adobe Illustrator或任何免費線上工具來建立。 我已使用來自[&#128279;](https://simplemaps.com/resources/svg-us)簡易地圖的USA地圖來展示使用案例。
 
 ## 使用可點選的「美國地圖」的使用案例
 

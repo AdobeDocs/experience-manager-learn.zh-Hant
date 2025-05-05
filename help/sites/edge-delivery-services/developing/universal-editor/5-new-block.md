@@ -133,7 +133,7 @@ Teaser區塊的設計會分為這兩個邏輯元件（影像和文字內容）�
 Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery Services HTML顯示為所需Web體驗所需的程式碼，區塊模型應反映此結構。
 
 - 使用[欄位摺疊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)將&#x200B;**影像**&#x200B;和&#x200B;**影像替代文字**&#x200B;群組在一起。
-- 使用[元素群組](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的[欄位摺疊將文字內容欄位群組在一起。
+- 使用[元素群組](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)和CTA[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)的欄位摺疊將文字內容欄位群組在一起。
 
 如果您不熟悉[欄位摺疊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse)、[元素群組](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping)或[型別推斷](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference)，請先檢閱連結的檔案，再繼續進行，因為這些檔案對於建立結構良好的區塊模型是必要的。
 
@@ -215,7 +215,7 @@ Teaser包含兩個邏輯區域：影像和文字。 若要簡化將Edge Delivery
 </div>        
 ```
 
-如下一章](./7a-block-css.md)所示範的[，此HTML結構將區塊樣式簡化為內聚單位。
+如下一章[&#128279;](./7a-block-css.md)所示範的，此HTML結構將區塊樣式簡化為內聚單位。
 
 若要瞭解不使用欄位摺疊和元素分組的後果，請參閱上面的&#x200B;**錯誤方式**&#x200B;標籤。
 

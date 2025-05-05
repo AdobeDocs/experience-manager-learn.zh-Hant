@@ -93,7 +93,7 @@ ht-degree: 0%
 
 - 將`my-example-bundle-1.0-SNAPSHOT.jar`檔案從擷取的`target`目錄複製到上述`all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install`目錄。
 
-  所有模組](./assets/install-third-party-articafcts/3rd-party-bundle-all-module.png)中的![第三方套件
+  所有模組![&#128279;](./assets/install-third-party-articafcts/3rd-party-bundle-all-module.png)中的第三方套件
 
 ### 使用套件組合中的服務
 
@@ -212,7 +212,7 @@ AEM WKND專案的[tutorial/install-3rd-party-bundle](https://github.com/adobe/ae
 
 - 將`my-example-jar-1.0-SNAPSHOT.jar`檔案從擷取的`target`目錄複製到上述`all/resource/jar`目錄。
 
-  所有模組](./assets/install-third-party-articafcts/3rd-party-JAR-all-module.png)中的![第三方jar
+  所有模組![&#128279;](./assets/install-third-party-articafcts/3rd-party-JAR-all-module.png)中的第三方jar
 
 ### 使用jar中的服務
 

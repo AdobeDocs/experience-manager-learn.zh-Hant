@@ -249,7 +249,7 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 ### AMS伺服器陣列包含
 
-![<FILENAME>_farms.any將包含sub .any檔案以完成伺服器陣列設定。  在此圖片中，您可以看到陣列將包含每個頂層區段檔案快取、clientheader、篩選器、轉譯器和vhosts .any檔案](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Include")
+![&lt;FILENAME>_farms.any將包含sub .any檔案以完成伺服器陣列設定。  在此圖片中，您可以看到陣列將包含每個頂層區段檔案快取、clientheader、篩選器、轉譯器和vhosts .any檔案](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Include")
 
 當來自`/etc/httpd/conf.dispatcher.d/available_farms/`目錄的任何FILENAME_farm.any檔案被符號連結到`/etc/httpd/conf.dispatcher.d/enabled_farms/`目錄時，它們將被用於執行組態中。
 

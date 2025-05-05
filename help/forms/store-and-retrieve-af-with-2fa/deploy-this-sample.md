@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 建立資料庫
 
-此範例使用MySQL資料庫來儲存最適化表單資料。 您必須將結構描述檔案](assets/data-base-schema.sql)匯入MySQL Workbench，以建立[資料庫結構描述。
+此範例使用MySQL資料庫來儲存最適化表單資料。 您必須將結構描述檔案[&#128279;](assets/data-base-schema.sql)匯入MySQL Workbench，以建立資料庫結構描述。
 
 ## 建立資料來源
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 ## 匯入最適化表單範例
 
-構成此範例的2份表單需要匯入至AEM。 範例表單可從這裡](assets/sample-forms.zip)下載[
+構成此範例的2份表單需要匯入至AEM。 範例表單可從這裡[&#128279;](assets/sample-forms.zip)下載
 
 在編輯模式中開啟[MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html)。 在最適化表單的適當欄位中指定Vonage API金鑰和API密碼值。
 

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 測試變更
 
-根據&#x200B;**&quot;Blank with Core Components&quot;**範本建立調適型表單。 將3個按鈕拖放至表單上，並標示為「企業」、「行銷」和「預設」。
+根據&#x200B;**&quot;Blank with Core Components&quot;**&#x200B;範本建立調適型表單。 將3個按鈕拖放至表單上，並標示為「企業」、「行銷」和「預設」。
 選取如下所示的油漆筆刷，將適當的樣式變體指派給「公司」和「行銷」按鈕。
 
 ![樣式](assets/marketing-variation.png)
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 建置主題專案
 
-下一步是建置主題專案。 導覽至您的佈景主題專案的根資料夾，然後執行命令&#x200B;_**npm run build**_，如下面的熒幕擷取所示。
+下一步是建置主題專案。 導覽至您的佈景主題專案的根資料夾，然後執行命令&#x200B;_&#x200B;**npm run build**&#x200B;_，如下面的熒幕擷取所示。
 
 ![建置佈景主題](assets/build-theme.png)
 

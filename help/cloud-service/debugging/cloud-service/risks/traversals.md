@@ -108,7 +108,7 @@ _什麼是周遊警告？_
 
 ## 1.分析{#analyze}
 
-首先，識別哪些AEM Publish服務會出現周遊警告。 若要這麼做，請從Cloud Manager下載Publish服務過去&#x200B;__三天__&#x200B;從所有環境（開發、中繼及生產）的`aemerror`記錄](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"}。[
+首先，識別哪些AEM Publish服務會出現周遊警告。 若要這麼做，請從Cloud Manager下載Publish服務過去&#x200B;__三天__&#x200B;從所有環境（開發、中繼及生產）的`aemerror`記錄[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"}。
 
 ![下載AEM as a Cloud Service記錄檔](./assets/traversals/download-logs.jpg)
 
@@ -174,9 +174,9 @@ __變更（或建立） AEM索引__，讓現有的查詢限制可解析為索引
 
 ![說明查詢](./assets/traversals/verify.gif)
 
-如果只對查詢](#adjust-the-query)進行[調整，則可以透過Developer Console的[說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}，直接在AEM as a Cloud Service上測試查詢。 說明查詢會針對AEM Author服務執行，但由於索引定義在Author和Publish服務中相同，因此針對AEM Author服務驗證查詢便已足夠。
+如果只對查詢[&#128279;](#adjust-the-query)進行調整，則可以透過Developer Console的[說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}，直接在AEM as a Cloud Service上測試查詢。 說明查詢會針對AEM Author服務執行，但由於索引定義在Author和Publish服務中相同，因此針對AEM Author服務驗證查詢便已足夠。
 
-如果已對索引](#adjust-the-index)進行[調整，則必須將索引部署到AEM as a Cloud Service。 部署索引調整後，Developer Console的[Explain查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}可用於進一步執行和調整查詢。
+如果已對索引[&#128279;](#adjust-the-index)進行調整，則必須將索引部署到AEM as a Cloud Service。 部署索引調整後，Developer Console的[Explain查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}可用於進一步執行和調整查詢。
 
 最終，所有變更（查詢和程式碼）都會提交至Git，並使用Cloud Manager部署至AEM as a Cloud Service。 部署後，將測試與原始周遊警告關聯的程式碼路徑，並確認周遊警告不再出現在`aemerror`記錄中。
 

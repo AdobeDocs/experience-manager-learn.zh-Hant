@@ -196,9 +196,9 @@ document.body.innerHTML=`<picture>
 
 ### 範常式式碼
 
-這個簡單的React應用程式使用[AEM Headless SDK](./aem-headless-sdk.md)來查詢AEM Headless API的Adventure內容，並使用具有srcset](#img-element-with-srcset)和[picture element](#picture-element)的[img元素來顯示網頁最佳化的影像。 `srcset`和`sources`使用自訂`setParams`函式，將Web最佳化傳遞查詢引數附加至影像的`_dynamicUrl`，因此請變更根據網頁使用者端需求傳遞的影像轉譯。
+這個簡單的React應用程式使用[AEM Headless SDK](./aem-headless-sdk.md)來查詢AEM Headless API的Adventure內容，並使用具有srcset[&#128279;](#img-element-with-srcset)和[picture element](#picture-element)的img元素來顯示網頁最佳化的影像。 `srcset`和`sources`使用自訂`setParams`函式，將Web最佳化傳遞查詢引數附加至影像的`_dynamicUrl`，因此請變更根據網頁使用者端需求傳遞的影像轉譯。
 
-在使用AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries)的自訂React勾點[useAdventureByPath中執行針對AEM的查詢。
+在使用AEM Headless SDK[&#128279;](./aem-headless-sdk.md#graphql-persisted-queries)的自訂React勾點useAdventureByPath中執行針對AEM的查詢。
 
 ```javascript
 // src/App.js

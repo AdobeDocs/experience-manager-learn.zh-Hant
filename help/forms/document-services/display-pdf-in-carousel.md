@@ -52,9 +52,9 @@ ht-degree: 1%
 
 若要在本機伺服器上測試此專案，請遵循下列步驟：
 
-1. [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)將使用者端資料庫](assets/pdf-carousel-client-lib.zip)匯入您的本機AEM執行個體[
-1. [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)將pdf轉盤元件](assets/pdf-carousel-component.zip)匯入您的本機AEM執行個體[
-1. [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)將最適化表單](assets/adaptive-form-pdf-carousel.zip)匯入您的本機AEM執行個體[
-1. [使用資產檔案上傳連結](http://localhost:4502/assets.html/content/dam)匯入範例PDF以顯示](assets/pdf-carousel-sample-documents.zip)至您的本機AEM執行個體[
+1. [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)將使用者端資料庫[&#128279;](assets/pdf-carousel-client-lib.zip)匯入您的本機AEM執行個體
+1. [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)將pdf轉盤元件[&#128279;](assets/pdf-carousel-component.zip)匯入您的本機AEM執行個體
+1. [使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)將最適化表單[&#128279;](assets/adaptive-form-pdf-carousel.zip)匯入您的本機AEM執行個體
+1. [使用資產檔案上傳連結](http://localhost:4502/assets.html/content/dam)匯入範例PDF以顯示[&#128279;](assets/pdf-carousel-sample-documents.zip)至您的本機AEM執行個體
 1. [預覽最適化表單](http://localhost:4502/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
 1. 按Tab鍵至「要檢閱的檔案」標籤。 您應該會在轉盤元件中看到三份PDF檔案。

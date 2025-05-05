@@ -31,7 +31,7 @@ ht-degree: 1%
 
 每當最適化表單欄位中出現驗證錯誤時，**欄位驗證錯誤**&#x200B;規則就會觸發。 例如，在我們的表單中，如果電話號碼或電子郵件不是預期的格式，則會顯示驗證錯誤訊息。
 
-如熒幕擷取畫面所示，透過將事件設定為&#x200B;_**Adobe Experience Manager Forms-Error**_&#x200B;來設定[欄位驗證錯誤]規則
+如熒幕擷取畫面所示，透過將事件設定為&#x200B;_&#x200B;**Adobe Experience Manager Forms-Error**&#x200B;_&#x200B;來設定[欄位驗證錯誤]規則
 
 
 
@@ -45,11 +45,11 @@ Adobe Analytics — 設定變數如下
 
 每次成功提交最適化表單時都會觸發表單提交規則。
 
-表單提交規則是使用&#x200B;_**Adobe Experience Manager Forms — 提交**_&#x200B;事件設定
+表單提交規則是使用&#x200B;_&#x200B;**Adobe Experience Manager Forms — 提交**&#x200B;_&#x200B;事件設定
 
 ![form-submit-rule](assets/form-submit-rule.png)
 
-在表單提交規則中，資料元素&#x200B;_**ApplicationsStateOfResidence**_&#x200B;的值對應至prop5，而資料元素FormTitle的值對應至prop8。
+在表單提交規則中，資料元素&#x200B;_&#x200B;**ApplicationsStateOfResidence**&#x200B;_&#x200B;的值對應至prop5，而資料元素FormTitle的值對應至prop8。
 
 Adobe Analytics — 設定變數的設定如下。
 ![form-submit-rule-set-variables](assets/form-submit-set-variable.png)

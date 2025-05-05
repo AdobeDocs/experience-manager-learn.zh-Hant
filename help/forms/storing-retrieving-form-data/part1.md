@@ -27,7 +27,7 @@ AEM有許多方式可用來與外部資料庫整合。 資料庫整合最常見�
 
 ![資料庫](assets/data-base-tables.PNG)
 
-可從這裡](assets/form-data-db.sql)下載建立結構描述的SQL檔案[。 您必須使用MySql Workbench匯入此檔案，才能建立結構描述和表格。
+可從這裡[&#128279;](assets/form-data-db.sql)下載建立結構描述的SQL檔案。 您必須使用MySql Workbench匯入此檔案，才能建立結構描述和表格。
 
 >[!NOTE]
 >請確定您為資料來源命名&#x200B;**SaveAndContinue**。 範常式式碼使用名稱來連線至資料庫。

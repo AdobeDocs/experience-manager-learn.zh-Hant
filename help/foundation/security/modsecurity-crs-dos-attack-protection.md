@@ -270,7 +270,7 @@ $ ./validate.sh <YOUR-AEM-PROJECT-CODE-DIR>/dispatcher/src
 
 1. 資料表&#x200B;**JMeter接聽程式中的**&#x200B;檢視結果顯示要求數目~ 53及更高的&#x200B;**失敗**&#x200B;回應狀態。
 
-   在資料表JMeter - ModSecurity](assets/modsecurity-crs/failed-response-jmeter.png)的檢視結果中![失敗的回應
+   在資料表JMeter - ModSecurity![&#128279;](assets/modsecurity-crs/failed-response-jmeter.png)的檢視結果中失敗的回應
 
 1. 已針對失敗的要求傳回&#x200B;**503 HTTP回應代碼**，您可以使用&#x200B;**檢視結果樹狀結構** JMeter接聽程式來檢視詳細資料。
 

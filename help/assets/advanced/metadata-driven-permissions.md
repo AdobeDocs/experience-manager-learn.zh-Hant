@@ -78,7 +78,7 @@ ht-degree: 0%
 1. 選取&#x200B;__路徑__&#x200B;的`/content/dam` （或子資料夾）
 1. 輸入&#x200B;__許可權__&#x200B;的`jcr:read`
 1. 選取&#x200B;__許可權型別__&#x200B;的`Allow`
-1. 在&#x200B;__限制__&#x200B;下，選取OSGi設定](#configure-permissionable-properties)中設定的[個資產中繼資料屬性名稱之一
+1. 在&#x200B;__限制__&#x200B;下，選取OSGi設定[&#128279;](#configure-permissionable-properties)中設定的個資產中繼資料屬性名稱之一
 1. 在&#x200B;__限制值__&#x200B;欄位中輸入必要的中繼資料屬性值
 1. 按一下&#x200B;__+__&#x200B;圖示，將限制新增至存取控制專案
 1. 按一下&#x200B;__儲存__

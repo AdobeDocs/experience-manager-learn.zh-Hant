@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ### 解決方案套件
 
-可以透過[封裝管理員]下載並安裝Magazine範本](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.1.zip)的已完成[解決方案。
+可以透過[封裝管理員]下載並安裝Magazine範本[&#128279;](assets/page-templates/WKND-Magazine-Template-SOLUTION-1.1.zip)的已完成解決方案。
 
 ## 使用體驗片段更新頁首和頁尾 {#experience-fragments}
 

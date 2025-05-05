@@ -81,7 +81,7 @@ if (assetDelivery != null ) {
 
 當程式碼在AEM as a Cloud Service上執行時，會在自訂元件中使用網頁最佳化的Web影像轉譯。
 
-在AEM as a Cloud Service](./assets/web-optimized-image-delivery-java-apis/cloud-service.png)上進行![網頁最佳化的影像
+在AEM as a Cloud Service![&#128279;](./assets/web-optimized-image-delivery-java-apis/cloud-service.png)上進行網頁最佳化的影像
 
 _AEM as a Cloud Service支援AssetDelivery API，因此使用網頁最佳化的Web轉譯_
 

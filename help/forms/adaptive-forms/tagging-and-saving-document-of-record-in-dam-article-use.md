@@ -28,7 +28,7 @@ ht-degree: 0%
 * 在提交表單時會觸發AEM工作流程。 此工作流程會以婚姻狀態（單身）和僱用狀態（已淘汰）標籤檔案，並將檔案儲存在DAM中。
 * 一旦檔案儲存在DAM中，管理員應該能夠按這些標籤搜尋檔案。 例如，搜尋「單一」或「已淘汰」會擷取適當的DoR。
 
-為了滿足此使用案例，已編寫自訂流程步驟。 在此步驟中，我們會從提交的資料中擷取適當資料元素的值。 然後我們使用此值來建構標籤拼貼。 例如，如果婚姻狀況元素的值為「Single」，則標籤標題會變成**Peak：EmploymentStatus/Single。 **我們使用TagManager API來尋找標籤，並將標籤套用至DoR。
+為了滿足此使用案例，已編寫自訂流程步驟。 在此步驟中，我們會從提交的資料中擷取適當資料元素的值。 然後我們使用此值來建構標籤拼貼。 例如，如果婚姻狀況元素的值為「Single」，則標籤標題會變成&#x200B;**Peak：EmploymentStatus/Single。 &#x200B;** 我們使用TagManager API來尋找標籤，並將標籤套用至DoR。
 
 以下是在AEM DAM中標籤和儲存記錄檔案的完整程式碼。
 
@@ -169,7 +169,7 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 * 按一下建立 | 檔案上傳和上傳標籤 — and-store-in-dam-adaptive-form.zip
 
 * [使用AEM封裝管理員匯入文章資產](assets/tag-and-store-in-dam-assets.zip)
-* 在預覽模式](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled)中開啟[範例表單。 **填寫所有欄位**&#x200B;並提交表單。
+* 在預覽模式[&#128279;](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled)中開啟範例表單。 **填寫所有欄位**&#x200B;並提交表單。
 * [導覽至DAM中的尖峰資料夾](http://localhost:4502/assets.html/content/dam/Peak)。 您應該會在Peak資料夾中看見DoR。 檢查檔案的屬性。 應該適當地加以標籤。
 恭喜!! 您已成功在系統上安裝範例
 

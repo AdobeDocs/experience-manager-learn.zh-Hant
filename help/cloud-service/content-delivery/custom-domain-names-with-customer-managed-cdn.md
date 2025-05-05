@@ -29,7 +29,7 @@ ht-degree: 0%
 
 高層級步驟為：
 
-具有客戶CDN](./assets/add-custom-domain-name-with-customer-CDN.png){width="800" zoomable="yes"}的![自訂網域名稱
+具有客戶CDN![&#128279;](./assets/add-custom-domain-name-with-customer-CDN.png){width="800" zoomable="yes"}的自訂網域名稱
 
 ## 先決條件
 

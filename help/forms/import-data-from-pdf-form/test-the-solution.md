@@ -23,4 +23,4 @@ ht-degree: 0%
 * 使用OSGi Web主控台[自訂檔案服務套裝](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)下載並部署該套裝
 * 使用OSGi Web主控台[使用服務使用者套件開發](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)下載及部署套件
 * 使用OSGi Web主控台[從pdf檔案匯入資料](./assets/onlineToOffline.core-1.0.0-SNAPSHOT.jar)下載並部署套件組合
-* 在&#x200B;_**Apache Sling Service使用者對應程式服務**_ OSGi設定主控台中，新增專案&#x200B;_**DevelopingWithServiceUser.core：getresourceresolver=data**_
+* 在&#x200B;_&#x200B;**Apache Sling Service使用者對應程式服務**&#x200B;_ OSGi設定主控台中，新增專案&#x200B;_&#x200B;**DevelopingWithServiceUser.core：getresourceresolver=data**&#x200B;_

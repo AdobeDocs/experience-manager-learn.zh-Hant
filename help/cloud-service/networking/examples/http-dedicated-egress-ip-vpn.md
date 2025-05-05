@@ -33,7 +33,7 @@ HTTP/HTTPS連線會自動使用專用輸出IP位址或VPN從AEM as a Cloud Servi
 
 >[!CAUTION]
 >
-> 此程式碼範例僅適用於[專用輸出IP位址](../dedicated-egress-ip-address.md)和[VPN](../vpn.md)。 針對彈性連線埠輸出](./http-on-non-standard-ports-flexible-port-egress.md)的非標準連線埠上的[HTTP/HTTPS連線，有類似但不同的程式碼範例可用。
+> 此程式碼範例僅適用於[專用輸出IP位址](../dedicated-egress-ip-address.md)和[VPN](../vpn.md)。 針對彈性連線埠輸出[&#128279;](./http-on-non-standard-ports-flexible-port-egress.md)的非標準連線埠上的HTTP/HTTPS連線，有類似但不同的程式碼範例可用。
 
 ## 程式碼範例
 

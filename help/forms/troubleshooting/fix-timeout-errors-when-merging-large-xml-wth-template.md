@@ -31,7 +31,7 @@ POST /services/OutputService/GeneratePdfOutput HTTP/1.1] com.adobe.fd.output.int
 
 * 停止AEM伺服器
 * 在AEM安裝的crx-quickstart資料夾下建立名為&#x200B;**install**&#x200B;的資料夾
-* 建立名為&#x200B;**org.apache.aries.transaction.config**的檔案，其內容如下
+* 建立名為&#x200B;**org.apache.aries.transaction.config**&#x200B;的檔案，其內容如下
 aries.transaction.timeout=&quot;1200&quot;
 在「安裝資料夾」下。 您可以依需求變更逾時值。 逾時值以秒為單位
 

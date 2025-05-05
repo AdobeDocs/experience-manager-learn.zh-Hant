@@ -92,7 +92,7 @@ _如果系統上同時安裝了Java™ 8和Java™ 11，則VS Code測試執行�
 1. Apache Sling Mocks
 1. AEM Mocks Test Framework （由io.wcm）
 
-使用[AEM Maven原型](project-setup.md)安裝期間，**JUnit5**、**Mockito和&#x200B;**AEM Mocks**&#x200B;測試相依性會自動新增到專案。
+使用[AEM Maven原型](project-setup.md)安裝期間，**JUnit5**、**Mockito和&#x200B;**&#x200B;AEM Mocks**&#x200B;測試相依性會自動新增到專案。
 
 1. 若要檢視這些相依性，請開啟位於&#x200B;**aem-guides-wknd/pom.xml**&#x200B;的Parent Reactor POM，瀏覽至`<dependencies>..</dependencies>`並檢視`<!-- Testing -->`下io.wcm的JUnit、Mockito、Apache Sling Mocks和AEM Mock Tests相依性。
 1. 請確定`io.wcm.testing.aem-mock.junit5`已設為&#x200B;**4.1.0**：

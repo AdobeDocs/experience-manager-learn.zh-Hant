@@ -26,7 +26,7 @@ ht-degree: 1%
 
 使用AEM Headless ![React應用程式](./assets/react-app/react-app.png)
 
-在GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)上檢視[原始程式碼
+在GitHub[&#128279;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)上檢視原始程式碼
 
 提供[完整的逐步教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)，說明此React應用程式的建置方式。
 

@@ -28,7 +28,7 @@ ht-degree: 1%
 
 * 使用[felix Web主控台](http://localhost:4502/system/console/bundles)下載並部署[MySql驅動程式Jar](assets/mysqldriver.jar)檔案
 * 使用[felix網頁主控台](http://localhost:4502/system/console/bundles)下載並部署[OSGi套件](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar)
-* 使用[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)下載並安裝包含使用者端程式庫、最適化表單範本和自訂頁面元件](assets/store-and-fetch-af-with-data.zip)的[封裝
+* 使用[封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)下載並安裝包含使用者端程式庫、最適化表單範本和自訂頁面元件[&#128279;](assets/store-and-fetch-af-with-data.zip)的封裝
 * 使用[FormsAndDocuments介面](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)匯入[範例最適化表單](assets/sample-adaptive-form.zip)
 
 * 使用MySql工作台匯入[form-data-db.sql](assets/form-data-db.sql)。 這會在您的資料庫中建立必要的綱要和表格，讓本教學課程能夠運作。

@@ -35,7 +35,7 @@ AEM UI擴充功能模式提供一種將自訂UI附加至AEM UI擴充功能的方
 
 ## 強制回應路由
 
-強制回應體驗是由`web-src`資料夾下定義的App Builder React應用程式擴充功能所定義。 和任何React應用程式一樣，完整體驗是使用[轉譯[React元件](https://reactjs.org/docs/components-and-props.html)的React路由](https://reactrouter.com/en/main/components/routes)來編排。
+強制回應體驗是由`web-src`資料夾下定義的App Builder React應用程式擴充功能所定義。 和任何React應用程式一樣，完整體驗是使用[&#128279;](https://reactrouter.com/en/main/components/routes)轉譯[React元件](https://reactjs.org/docs/components-and-props.html)的React路由來編排。
 
 產生初始模組檢視至少需要一個路由。 此初始路由會在[延伸註冊](#extension-registration)的`onClick(..)`函式中叫用，如下所示。
 
@@ -109,7 +109,7 @@ function ExtensionRegistration() {
 
 ## 模組元件
 
-擴充功能的每個路由（不是`index`路由](./extension-registration.md#app-routes)的[）都對應到可在擴充功能模式中轉譯的React元件。
+擴充功能的每個路由（不是`index`路由[&#128279;](./extension-registration.md#app-routes)的）都對應到可在擴充功能模式中轉譯的React元件。
 
 強制回應可由任意數量的React路徑組成，從簡單的單路徑強制回應到複雜的多路徑強制回應。
 

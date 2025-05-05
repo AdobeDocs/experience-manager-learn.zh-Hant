@@ -170,7 +170,7 @@ ht-degree: 17%
       + [產生FPID](integrations/platform/fpid.md)
       + [網頁SDK](integrations/platform/web-sdk.md)
       + [使用Platform Web SDK進行分析](integrations/platform/analytics-using-web-sdk.md)
-   + Adobe Experience Platform {#experience-platform-data-collection-tags}中的標籤
+   + Adobe Experience Platform中的標籤 {#experience-platform-data-collection-tags}
       + [概觀](integrations/experience-platform/data-collection/tags/overview.md)
       + [建立標籤屬性](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [使用IMS連線AEM和標籤屬性](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)

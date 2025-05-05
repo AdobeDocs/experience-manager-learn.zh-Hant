@@ -82,7 +82,7 @@ AEM UI擴充功能可根據Adobe組織中擴充功能所屬的任何AEM as a Clo
 
 1. 將預覽URL複製並貼到瀏覽器中。
 
-   + 您可能必須先接受本機應用程式主機(`https://localhost:9080`)的HTTPS憑證](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users)，然後再定期進行[。
+   + 您可能必須先接受本機應用程式主機(`https://localhost:9080`)的HTTPS憑證[&#128279;](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users)，然後再定期進行。
 
 1. AEM UI會載入並插入其本機版本的擴充功能以進行驗證。
 

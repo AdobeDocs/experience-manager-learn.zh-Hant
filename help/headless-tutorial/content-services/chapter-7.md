@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Android之所以用於教學課程，是因為其可在Windows、macOs和Linux上執行Android模擬器，以及其普及度，以及可寫為Java (AEM開發人員完全瞭解的一種語言)。
 
-*教學課程的Android行動應用程式&#x200B;**並非**旨在指示如何建置Android行動應用程式或傳達Android開發最佳實務，而是說明如何從行動應用程式使用AEM Content Services。*
+*教學課程的Android行動應用程式&#x200B;**並非**&#x200B;旨在指示如何建置Android行動應用程式或傳達Android開發最佳實務，而是說明如何從行動應用程式使用AEM Content Services。*
 
 ### AEM Content Services如何推動行動應用程式體驗
 
@@ -54,7 +54,7 @@ Android之所以用於教學課程，是因為其可在Windows、macOs和Linux�
 1. 開啟&#x200B;**Android Studio**
    * 初次啟動Android Studio時，將會出現安裝[!DNL Android SDK]的提示。 接受預設值並完成安裝。
 1. 開啟Android Studio並選取&#x200B;**設定檔或偵錯APK**
-1. 選取在步驟2中下載的APK檔案(**wknd-mobile.x.x.x.apk**)，然後按一下[確定] ****
+1. 選取在步驟2中下載的APK檔案(**wknd-mobile.x.x.x.apk**)，然後按一下[確定] **&#x200B;**
    * 如果系統提示&#x200B;**建立新資料夾**，或&#x200B;**使用現有**，請選取&#x200B;**使用現有**。
 1. 初次啟動Android Studio時，在[專案]清單中的&#x200B;**wknd-mobile.x.x.x**&#x200B;上按一下滑鼠右鍵，然後選取&#x200B;**開啟模組設定**。
    * 在&#x200B;**模組> wknd-mobile.x.x.x >相依性標籤**&#x200B;下，選取&#x200B;**Android API 29平台**。 點選「確定」以關閉並儲存變更。

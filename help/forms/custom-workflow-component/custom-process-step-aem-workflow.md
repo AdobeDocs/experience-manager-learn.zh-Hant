@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ### 建立實作WorkflowProcess的類別
 
-在eclipse IDE中開啟Maven專案。 展開&#x200B;**projectname** > **core**資料夾。 展開src/main/java資料夾。 您應該會看到結尾為「core」的套件。 建立在此封裝中實作WorkflowProcess的Java類別。 您需要覆寫執行方法。 執行方法的簽章如下
+在eclipse IDE中開啟Maven專案。 展開&#x200B;**projectname** > **core**&#x200B;資料夾。 展開src/main/java資料夾。 您應該會看到結尾為「core」的套件。 建立在此封裝中實作WorkflowProcess的Java類別。 您需要覆寫執行方法。 執行方法的簽章如下
 公開void execute(WorkItem workItem， WorkflowSession workflowSession， MetaDataMap processArguments)擲回WorkflowException
 
 在本教學課程中，我們會將新增至最適化表單的附件寫入檔案系統，做為AEM工作流程的一部分。

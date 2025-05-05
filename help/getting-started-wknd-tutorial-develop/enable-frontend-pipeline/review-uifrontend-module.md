@@ -56,7 +56,7 @@ ht-degree: 0%
 
 在開發階段中，會透過更新`ui.frontend/src/main/webpack`資料夾中的CSS、JS檔案來執行前端變更（例如樣式和重新命名）。 然後在建置期間，[webpack](https://webpack.js.org/)模組套件組合器和Maven外掛程式會將這些檔案轉換成最佳化的AEM clientlibs，位於`ui.apps`模組下。
 
-在AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)中執行&#x200B;[__完整棧疊__&#x200B;管道時，會將前端變更部署到Cloud Manager環境。
+在AEM as a Cloud Service[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)中執行&#x200B;__完整棧疊__&#x200B;管道時，會將前端變更部署到Cloud Manager環境。
 
 前端資源會透過以`/etc.clientlibs/`開頭的URI路徑傳送至網頁瀏覽器，通常會在AEM Dispatcher和CDN上快取。
 

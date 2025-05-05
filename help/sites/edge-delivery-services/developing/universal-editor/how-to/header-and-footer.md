@@ -93,8 +93,7 @@ export default async function decorate(block) {
 
 
 >[!BEGINTABS]
-
->要裝飾的[!TAB DOM]
+>[!TAB 要裝飾的 DOM]
 
 以下是頁首頁面使用提供的`header.js`載入並插入DOM中的HTML：
 

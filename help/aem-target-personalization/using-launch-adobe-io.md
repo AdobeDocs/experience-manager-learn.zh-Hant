@@ -100,15 +100,15 @@ Target擴充功能包含兩個主要部分：
 
 1. 在&#x200B;**擴充功能**&#x200B;底下，您可以看到已針對標籤屬性安裝的擴充功能清單。 (預設已安裝[Adobe啟動核心擴充功能](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension))
 2. 按一下&#x200B;**擴充功能目錄**&#x200B;選項，然後在篩選器中搜尋目標。
-3. 選取最新版的Adobe Target at.js，然後按一下&#x200B;**安裝**選項。
+3. 選取最新版的Adobe Target at.js，然後按一下&#x200B;**安裝**&#x200B;選項。
    ![標籤 — 新屬性](assets/using-launch-adobe-io/launch-target-extension.png)
 
-4. 按一下&#x200B;**設定**按鈕，您會注意到已匯入Target帳戶認證的設定視窗，以及此擴充功能的at.js版本。
+4. 按一下&#x200B;**設定**&#x200B;按鈕，您會注意到已匯入Target帳戶認證的設定視窗，以及此擴充功能的at.js版本。
    ![目標 — 擴充功能組態](assets/using-launch-adobe-io/launch-target-extension-2.png)
 
    透過非同步標籤內嵌程式碼部署Target時，您應在標籤內嵌程式碼之前，先在頁面上以硬式編碼撰寫預先隱藏程式碼片段，以便管理內容閃爍問題。 我們稍後將深入瞭解預先隱藏的Snipper。 您可以在[這裡](assets/using-launch-adobe-io/prehiding.js)下載預先隱藏程式碼片段
 
-5. 按一下[儲存]****&#x200B;完成將Target擴充功能新增至標籤屬性，您現在應該能夠看到Target擴充功能列在[已安裝的]****&#x200B;擴充功能清單下。
+5. 按一下[儲存]&#x200B;**&#x200B;**&#x200B;完成將Target擴充功能新增至標籤屬性，您現在應該能夠看到Target擴充功能列在[已安裝的]&#x200B;**&#x200B;**&#x200B;擴充功能清單下。
 
 6. 重複上述步驟以搜尋「Experience CloudID服務」擴充功能並加以安裝。
    ![延伸模組 — Experience Cloud識別碼服務](assets/using-launch-adobe-io/launch-extension-experience-cloud.png)
@@ -128,7 +128,7 @@ Target擴充功能包含兩個主要部分：
 3. 執行&#x200B;**Build for Staging選項**
 4. 建置完成後，請執行&#x200B;**核准以發佈**，這樣會將您的變更從中繼環境移至生產環境。
    ![暫存至生產環境](assets/using-launch-adobe-io/build-staging.png)
-5. 最後，執行&#x200B;**建置和Publish至生產環境**選項，將您的變更推送至生產環境。
+5. 最後，執行&#x200B;**建置和Publish至生產環境**&#x200B;選項，將您的變更推送至生產環境。
    ![將組建和Publish建置到生產環境](assets/using-launch-adobe-io/build-and-publish.png)
 
 ### Adobe Experience Manager
@@ -146,6 +146,6 @@ Target擴充功能包含兩個主要部分：
 5. 手動驗證整合。 （06:15至06:33）
 6. 使用Adobe Experience Cloud Debugger瀏覽器外掛程式。 （06:51至07:22）
 
-此時，您已順利使用標籤](./using-aem-cloud-services.md#integrating-aem-target-options)將[AEM與Adobe Target整合（如選項1所述）。
+此時，您已順利使用標籤[&#128279;](./using-aem-cloud-services.md#integrating-aem-target-options)將AEM與Adobe Target整合（如選項1所述）。
 
 若要使用AEM體驗片段選件來強化您的個人化活動，請前往下一章，並使用舊版雲端服務整合AEM與Adobe Target。

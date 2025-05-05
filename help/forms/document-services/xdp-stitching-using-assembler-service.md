@@ -19,7 +19,7 @@ ht-degree: 0%
 # 使用組合器服務的XDP拼接
 
 本文提供相關資產，用於示範使用組合器服務彙整xdp檔案的能力。
-下列jsp程式碼是用來在master.xdp檔案中插入名為**address**&#x200B;的xdp檔案中名為&#x200B;**address**&#x200B;的子表單。 產生的xdp會儲存在AEM安裝的根資料夾中。
+下列jsp程式碼是用來在master.xdp檔案中插入名為&#x200B;**address**&#x200B;的xdp檔案中名為&#x200B;**address**&#x200B;的子表單。 產生的xdp會儲存在AEM安裝的根資料夾中。
 
 組合器服務需仰賴有效的DDX檔案來說明對PDF檔案的操作。 您可以在此參閱[DDX參考檔案](assets/ddxRef.pdf)。第40頁包含有關xdp彙整的資訊。
 

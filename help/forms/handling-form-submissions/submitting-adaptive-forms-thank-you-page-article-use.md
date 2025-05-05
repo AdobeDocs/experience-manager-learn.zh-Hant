@@ -36,7 +36,7 @@ ht-degree: 6%
 
 若要在您的伺服器上測試此功能，請遵循下列指示：
 
-* 使用封裝管理員](assets/submittingtorestendpoint.zip)將與此文章相關的[資產檔案匯入AEM
+* 使用封裝管理員[&#128279;](assets/submittingtorestendpoint.zip)將與此文章相關的資產檔案匯入AEM
 * 將瀏覽器指向[休假申請表](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * 填寫必填欄位並提交表單
 * 您應該會收到感謝頁面，並在頁面上填入資訊

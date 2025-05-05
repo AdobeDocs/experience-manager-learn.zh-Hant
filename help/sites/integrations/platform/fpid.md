@@ -174,7 +174,7 @@ AEM FPID servlet (`/bin/aep/fpid`)的HTTP GET已使用隨機查詢引數加以�
 
 叫用AEM FPID servlet時，FPID會從JSON回應中擷取，並由[Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en)用來傳送給Experience Platform API。
 
-請參閱Experience Platform檔案以取得在identityMap](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap)中使用FPID之[的詳細資訊
+請參閱Experience Platform檔案以取得在identityMap[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap)中使用FPID之的詳細資訊
 
 ```javascript
 ...

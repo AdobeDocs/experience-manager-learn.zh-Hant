@@ -59,7 +59,7 @@ ht-degree: 1%
 
 將工作流程例項的數目降至最低會提升工作流程引擎的效能，因此您可以定期從儲存庫中清除已完成或執行中的工作流程例項。
 
-#### [稽核記錄維護](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html
+#### [稽核記錄維護] (https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html
 
 符合稽核記錄資格的AEM事件會產生大量已封存的資料。 由於複製、資產上傳和其他系統活動，這些資料會隨著時間快速成長。
 

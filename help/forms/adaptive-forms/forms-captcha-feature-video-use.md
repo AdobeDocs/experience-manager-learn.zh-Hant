@@ -43,17 +43,17 @@ ht-degree: 0%
 >導覽至作者執行個體上檔案系統上的套件ID
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
-* 複製HMAC和主檔案
+>* 複製HMAC和主檔案
 >
-開啟發佈執行個體上的[felix web主控台](http://localhost:4502/system/console/bundles)。 搜尋com.adobe.granite.crypto.file套件組合。 記下套件組合ID
+>開啟發佈執行個體上的[felix web主控台](http://localhost:4502/system/console/bundles)。 搜尋com.adobe.granite.crypto.file套件組合。 記下套件組合ID
 >
-導覽至發佈執行個體檔案系統上的套件ID
+>導覽至發佈執行個體檔案系統上的套件ID
 >
-* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
-* 刪除現有的HMAC和主檔案。
-* 貼上從製作執行個體複製的HMAC和主檔案
+>* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
+>* 刪除現有的HMAC和主檔案。
+>* 貼上從製作執行個體複製的HMAC和主檔案
 >
-重新啟動AEM發佈伺服器
+>重新啟動AEM發佈伺服器
 
 ## 支援材料 {#supporting-materials}
 

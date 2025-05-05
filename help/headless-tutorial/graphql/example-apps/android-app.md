@@ -22,12 +22,12 @@ ht-degree: 1%
 
 # Android應用程式
 
-範例應用程式是探索Adobe Experience Manager (AEM)無頭式功能的絕佳方式。 此Android應用程式示範了如何使用AEM的GraphQL API來查詢內容。 適用於Java](https://github.com/adobe/aem-headless-client-java)的[AEM Headless Client用於執行GraphQL查詢，並將資料對應至Java物件以支援應用程式。
+範例應用程式是探索Adobe Experience Manager (AEM)無頭式功能的絕佳方式。 此Android應用程式示範了如何使用AEM的GraphQL API來查詢內容。 適用於Java[&#128279;](https://github.com/adobe/aem-headless-client-java)的AEM Headless Client用於執行GraphQL查詢，並將資料對應至Java物件以支援應用程式。
 
 使用AEM Headless的![Android Java應用程式](./assets/android-java-app/android-app.png)
 
 
-在GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)上檢視[原始程式碼
+在GitHub[&#128279;](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app)上檢視原始程式碼
 
 ## 先決條件 {#prerequisites}
 

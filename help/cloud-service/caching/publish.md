@@ -67,7 +67,7 @@ AEM Publish CDN是以TTL （存留時間）為基礎，這表示快取存留期�
 
 #### 預設快取存留期
 
-如果HTTP回應符合上述限定詞](#when-are-http-requestsresponses-cached)的AEM Dispatcher快取[資格，則下列為預設值，除非有自訂設定。
+如果HTTP回應符合上述限定詞[&#128279;](#when-are-http-requestsresponses-cached)的AEM Dispatcher快取資格，則下列為預設值，除非有自訂設定。
 
 | 內容類型 | 預設CDN快取期限 |
 |:------------ |:---------- |
@@ -123,11 +123,11 @@ AEM Dispatcher快取下列專案：
 AEM Dispatcher會使用下列方法快取HTTP回應：
 
 + 直到透過如發佈或取消發佈內容等機制觸發失效為止。
-+ 在Dispatcher設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl)中明確設定[時的TTL （存留時間）。 檢閱`enableTTL`設定，以檢視[AEM專案原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L122-L127)中的預設設定。
++ 在Dispatcher設定[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl)中明確設定時的TTL （存留時間）。 檢閱`enableTTL`設定，以檢視[AEM專案原型](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L122-L127)中的預設設定。
 
 #### 預設快取存留期
 
-如果HTTP回應符合上述限定詞](#when-are-http-requestsresponses-cached-1)的AEM Dispatcher快取[資格，則下列為預設值，除非有自訂設定。
+如果HTTP回應符合上述限定詞[&#128279;](#when-are-http-requestsresponses-cached-1)的AEM Dispatcher快取資格，則下列為預設值，除非有自訂設定。
 
 | 內容類型 | 預設CDN快取期限 |
 |:------------ |:---------- |

@@ -45,7 +45,7 @@ WKND行銷團隊想要瞭解哪些`Call to Action (CTA)`按鈕在首頁上表現
 
 ## 檢查按鈕和Teaser結構
 
-在標籤屬性中建立規則之前，請檢閱Button和Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)的[結構描述，並在資料層實作中檢查它們，這樣會很有用。
+在標籤屬性中建立規則之前，請檢閱Button和Teaser[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item)的結構描述，並在資料層實作中檢查它們，這樣會很有用。
 
 1. 導覽至[WKND首頁](https://wknd.site/us/en.html)
 1. 開啟瀏覽器的開發人員工具，並導覽至&#x200B;**主控台**。 執行以下命令：
@@ -126,7 +126,7 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
    });
    ```
 
-   上述程式碼片段透過[將函式](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)推入資料層，以新增事件接聽程式。 每當觸發`cmp:click`事件時，就會呼叫`componentClickedHandler`函式。 在此函式中，已新增一些健全性檢查，並為觸發事件的元件，以資料層](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)的最新[狀態建構新的`event`物件。
+   上述程式碼片段透過[將函式](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function)推入資料層，以新增事件接聽程式。 每當觸發`cmp:click`事件時，就會呼叫`componentClickedHandler`函式。 在此函式中，已新增一些健全性檢查，並為觸發事件的元件，以資料層[&#128279;](https://github.com/adobe/adobe-client-data-layer/wiki#getstate)的最新狀態建構新的`event`物件。
 
    最後呼叫`trigger(event)`函式。 `trigger()`函式是標籤屬性中的保留名稱，它會&#x200B;**觸發規則**。 `event`物件傳遞為引數，而該引數又由標籤屬性中的另一個保留名稱公開。 標籤屬性中的資料元素現在可以使用程式碼片段（例如`event.component['someKey']`）來參考各種屬性。
 
@@ -189,7 +189,7 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
 
    >[!NOTE]
    >
-   > 回想一下，已根據在標籤屬性中觸發&#x200B;**規則**&#x200B;的事件，提供`event`物件並設定範圍。 在規則中的資料元素為&#x200B;*referenced*&#x200B;之前，不會設定資料元素的值。 因此，在上一個步驟&#x200B;*中建立的&#x200B;**Page Loaded**規則之類的規則內使用此資料元素是安全的，但*&#x200B;在其他內容中使用此資料元素是不安全的。
+   > 回想一下，已根據在標籤屬性中觸發&#x200B;**規則**&#x200B;的事件，提供`event`物件並設定範圍。 在規則中的資料元素為&#x200B;*referenced*&#x200B;之前，不會設定資料元素的值。 因此，在上一個步驟&#x200B;*中建立的&#x200B;**Page Loaded**&#x200B;規則之類的規則內使用此資料元素是安全的，但*&#x200B;在其他內容中使用此資料元素是不安全的。
 
 
 ### 元件標題
@@ -245,7 +245,7 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
 
    ![移除自訂程式碼動作](assets/track-clicked-component/remove-console-statements.png)
 
-1. 在[動作]底下，按一下[新增] ****&#x200B;以建立動作。
+1. 在[動作]底下，按一下[新增] **&#x200B;**&#x200B;以建立動作。
 1. 將&#x200B;**擴充功能**&#x200B;型別設定為&#x200B;**Adobe Analytics**，並將&#x200B;**動作型別**&#x200B;設定為&#x200B;**設定變數**。
 
 1. 設定&#x200B;**eVars**、**Props**&#x200B;和&#x200B;**Events**&#x200B;的下列值：
@@ -308,7 +308,7 @@ Adobe使用者端資料層是&#x200B;**事件**&#x200B;驅動的資料層。 每
 
 1. 在瀏覽器主控台中觀察未符合規則「CTA已點按」的訊息&#x200B;*「自訂程式碼」*。
 
-   上述訊息是因為Navigation元件確實觸發`cmp:click`事件&#x200B;*但*，因為規則](#add-a-condition-to-the-cta-clicked-rule)的[條件會檢查資源型別，而不會採取任何動作。
+   上述訊息是因為Navigation元件確實觸發`cmp:click`事件&#x200B;*但*，因為規則[&#128279;](#add-a-condition-to-the-cta-clicked-rule)的條件會檢查資源型別，而不會採取任何動作。
 
    >[!NOTE]
    >

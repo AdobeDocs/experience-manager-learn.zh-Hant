@@ -200,4 +200,4 @@ public class CaptureTaskComments implements WorkitemUserMetadataService {
 }
 ```
 
-具有上述程式碼的套件組合可以從這裡](assets/samples.aemforms.taskcomments.taskcomments.core-1.0-SNAPSHOT.jar)下載[
+具有上述程式碼的套件組合可以從這裡[&#128279;](assets/samples.aemforms.taskcomments.taskcomments.core-1.0-SNAPSHOT.jar)下載

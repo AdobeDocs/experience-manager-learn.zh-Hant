@@ -142,4 +142,4 @@ public class CreateStringArray implements WorkflowProcess {
 }
 ```
 
-範例組合可從這裡](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)下載[
+範例組合可從這裡[&#128279;](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)下載

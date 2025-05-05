@@ -35,7 +35,7 @@ ht-degree: 2%
 
 ## 範例Servlet
 
-下列servlet繫結至Sling資源型別： _**azure/fetchchoices**_
+下列servlet繫結至Sling資源型別： _&#x200B;**azure/fetchchoices**&#x200B;_
 
 
 

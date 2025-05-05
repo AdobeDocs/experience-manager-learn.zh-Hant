@@ -142,7 +142,7 @@ AEM支援多種查詢語言。 三種主要語言為[JCR-SQL2](https://docs.jbos
 
 JCR本身是階層式/樹狀結構的NoSQL資料存放區，AEM會將其當作內容存放庫。 JCR具有大量受支援的API，範圍從內容CRUD到查詢內容。 雖然有這個強大的API，但很少比更高層級的AEM和[!DNL Sling]抽象更偏向使用它們。
 
-與Apache Jackrabbit Oak API相比，總是偏好JCR API。 JCR API適用於與JCR存放庫互動&#x200B;******，而Oak API則適用於&#x200B;***實作*** JCR存放庫。
+與Apache Jackrabbit Oak API相比，總是偏好JCR API。 JCR API適用於與JCR存放庫互動&#x200B;**&#x200B;**&#x200B;**，而Oak API則適用於&#x200B;***實作*** JCR存放庫。
 
 ### JCR API的常見誤解
 

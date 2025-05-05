@@ -95,12 +95,12 @@ API傳回的JSON接著會經過剖析，以設定調適型表單欄位。
 
 * 安裝並啟動AEM Forms伺服器。
 >此功能已在AEM Forms 6.3及更高版本上測試
-* [取得Google API金鑰](https://developers.google.com/maps/documentation/javascript/get-api-key)。
-* [將與本文相關的資產匯入AEM。](assets/geolocationapi.zip)
-* [在編輯模式中開啟最適化表單片段。](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
-* 開啟影像選擇元件的規則編輯器。
-* 將&lt;your_api_key>取代為Google API金鑰。
-* 儲存您的變更。
-* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled)。
-* 按一下「地理位置」圖示。
-* 您的表單應填入您的目前位置。
+>* [取得Google API金鑰](https://developers.google.com/maps/documentation/javascript/get-api-key)。
+>* [將與本文相關的資產匯入AEM。](assets/geolocationapi.zip)
+>* [在編輯模式中開啟最適化表單片段。](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
+>* 開啟影像選擇元件的規則編輯器。
+>* 將&lt;your_api_key>取代為Google API金鑰。
+>* 儲存您的變更。
+>* [預覽表單](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled)。
+>* 按一下「地理位置」圖示。
+>* 您的表單應填入您的目前位置。

@@ -179,7 +179,7 @@ AEM內容片段編輯器是用於編輯內容片段的可擴充UI。 [AEM內容�
       </div>
       <div class="card-content is-padded-small">
         <div class="content">
-          <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/ " title="RTF編輯器徽章" target="_blank" rel="referrer">RTF編輯器徽章</a></p>
+          <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/" title="RTF編輯器徽章" target="_blank" rel="referrer">RTF編輯器徽章</a></p>
           <p class="is-size-6">在RTE內自訂不可編輯的樣式區塊。</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
             <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視檔案</span>

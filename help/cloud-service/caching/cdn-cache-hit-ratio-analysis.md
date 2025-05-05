@@ -136,7 +136,7 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
 若要識別金鑰詳細資料，請使用[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling)專案。 此專案提供Splunk控制面板以分析CDN記錄。
 
-1. 遵循AEMCS CDN記錄分析](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md)的[Splunk儀表板的步驟並確保匯入&#x200B;**CDN快取命中率** Splunk儀表板。
+1. 遵循AEMCS CDN記錄分析[&#128279;](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md)的Splunk儀表板的步驟並確保匯入&#x200B;**CDN快取命中率** Splunk儀表板。
 1. 如有需要，請更新Splunk儀表板中的&#x200B;_索引、Source型別和其他_&#x200B;篩選器值。
 
    ![Splunk儀表板](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
@@ -149,7 +149,7 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
 如果使用者不想在本機安裝軟體（亦即上節的ELK儀表板工具），有另一個選項，但需要Adobe Experience Platform的授權。
 
-[Jupyter Notebook](https://jupyter.org/)是開放原始碼的Web應用程式，可讓您建立包含程式碼、文字和視覺效果的檔案。 它用於資料轉換、視覺化和統計模型製作。 它可以作為Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)的一部分從遠端[存取。
+[Jupyter Notebook](https://jupyter.org/)是開放原始碼的Web應用程式，可讓您建立包含程式碼、文字和視覺效果的檔案。 它用於資料轉換、視覺化和統計模型製作。 它可以作為Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)的一部分從遠端存取。
 
 #### 下載互動式Python筆記本檔案
 

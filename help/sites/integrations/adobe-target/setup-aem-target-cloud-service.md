@@ -23,7 +23,7 @@ ht-degree: 0%
 
 以下影片會逐步說明如何將AEM as a Cloud Service與Adobe Target連線。
 
-此整合可讓AEM Author服務直接與Adobe Target通訊，並將體驗片段從AEM推送至Target做為選件。  這項整合&#x200B;*不會*&#x200B;將Adobe Target JavaScript (AT.js)新增到AEM Sites網頁，因為使用Target擴充功能](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)整合[AEM和標籤。
+此整合可讓AEM Author服務直接與Adobe Target通訊，並將體驗片段從AEM推送至Target做為選件。  這項整合&#x200B;*不會*&#x200B;將Adobe Target JavaScript (AT.js)新增到AEM Sites網頁，因為使用Target擴充功能[&#128279;](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)整合AEM和標籤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
 

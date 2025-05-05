@@ -37,7 +37,7 @@ ht-degree: 0%
 
    * 如果您使用&#x200B;**AEM Forms 6.3**，則回呼URL為https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html。 在這個URL中，建立的是我的表單資料模型的名稱。
 
-   * 如果您使用**AEM Forms 6.4**，則回呼URL為https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
+   * 如果您使用&#x200B;**AEM Forms 6.4**，則回呼URL為https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
 在此範例中，gbedekar -w7-1:6443是我的伺服器名稱，也是執行AEM的連線埠。
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 * OAuth Url為 — **https://login.salesforce.com/services/oauth2/authorize**
 * 重新整理Token Url - **https://na5.salesforce.com/services/oauth2/token**
 * **存取Toke Url - https://na5.salesforce.com/services/oauth2/token**
-* 授權範圍： ** api   chatter_api完整id   openid   refresh_token visualforce web**
+* 授權範圍： **&#x200B; api   chatter_api完整id   openid   refresh_token visualforce web**
 * 驗證處理常式：授權持有者
 * 按一下「連線至OAUTH」。如果一切順利，您應該不會看到任何錯誤
 
@@ -102,7 +102,7 @@ ht-degree: 0%
    * OAuth Url為 — **https://login.salesforce.com/services/oauth2/authorize**
    * 重新整理Token Url - **https://na5.salesforce.com/services/oauth2/token**
    * 存取Token Ur **l - https://na5.salesforce.com/services/oauth2/token**
-   * 授權範圍： ** api chatter_api完整id openid refresh_token visualforce web**
+   * 授權範圍： **&#x200B; api chatter_api完整id openid refresh_token visualforce web**
    * 驗證處理常式：授權持有者
    * 按一下「連線至OAuth」按鈕。 如果您看到任何錯誤，請檢閱上述步驟，以確保所有資訊皆正確輸入。
 

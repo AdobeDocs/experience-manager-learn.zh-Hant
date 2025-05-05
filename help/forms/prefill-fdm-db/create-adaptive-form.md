@@ -95,7 +95,7 @@ ht-degree: 3%
 ## 測試您的表單
 
 現在，我們需要在URL中使用適當的empID開啟表單。 下列2個連結會使用資料庫中的資訊填入表單
-empID=207](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=207)的[表單
+empID=207[&#128279;](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=207)的表單
 [empID=208](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=208)的表單
 
 ## 疑難排解

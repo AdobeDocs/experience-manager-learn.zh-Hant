@@ -77,7 +77,7 @@ function convertUTC(strUTCString)
 functions.js
 ```
 
-#base=js行會指定JavaScript檔案所在的目錄。
+&#x200B;#base=js行會指定JavaScript檔案所在的目錄。
 以下各行表示JavaScript檔案相對於基礎位置的位置。
 
 如果您在建立自訂函式時遇到問題，請隨時[下載此套件](assets/custom-functions.zip)並安裝在您的AEM執行個體中。

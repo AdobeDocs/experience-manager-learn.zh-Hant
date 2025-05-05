@@ -268,7 +268,7 @@ aem rde status   Get a list of the bundles and configs deployed to the current r
 
 ## 下一步
 
-瞭解如何使用RDE](./development-life-cycle.md)快速提供功能的[開發/部署生命週期。
+瞭解如何使用RDE[&#128279;](./development-life-cycle.md)快速提供功能的開發/部署生命週期。
 
 
 ## 其他資源

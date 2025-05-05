@@ -73,7 +73,7 @@ Dynamic Media Classic可辨識並搭配許多不同的可用來源格式運作�
 
 可能適用於某些客戶的Dynamic Media Classic視訊的最後一個注意事項：並非所有公司都可能為帳戶啟用了自動轉換、串流或視訊預設集。 如果因為某些原因，您無法存取串流視訊的URL，這可能是原因。 您可以上傳和發佈逐步下載的視訊，並存取所有視訊檢視器。 不過，若要利用完整的Dynamic Media Classic視訊功能，請聯絡您的客戶經理或銷售經理，以啟用這些功能。
 
-深入瞭解Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html)中的[影片。
+深入瞭解Dynamic Media Classic[&#128279;](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html)中的影片。
 
 ## Video 101
 
@@ -220,6 +220,7 @@ Dynamic Media Classic不僅為您轉換檔案，還提供簡單易用的預設�
 
    - 每個串流視訊帳戶都有數十個立即可用的預設集，如果您建立自己的自訂預設集，也會在這裡看到。
    - 您可以使用下拉式選單依型別篩選。 預設集分為「電腦」、「行動裝置」和「平板電腦」。
+
      ![影像](assets/video-overview/video-overview-4.jpg)
 
 2. 「作用中」欄可讓您選擇要在上傳時顯示所有預設集，還是隻顯示您選擇的預設集。 如果您是在美國，則可能想要取消勾選European PAL預設集；如果您是在英國/歐洲、中東與非洲地區，則取消勾選NTSC預設集。
@@ -315,7 +316,7 @@ Dynamic Media Classic工作流程的最後一步是發佈您的視訊內容。 �
 
 - 深入瞭解[新增關鍵字](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html#add-or-edit-keywords)。
 - 深入瞭解[視訊SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html)。
-- 瞭解視訊SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings)的[設定。
+- 瞭解視訊SEO[&#128279;](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings)的設定。
 
 #### 設定視訊SEO
 

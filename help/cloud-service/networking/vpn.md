@@ -261,7 +261,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
    如果您的AEM部署&#x200B;__僅__&#x200B;需要外部服務的HTTP/HTTPS連線，請將`portForwards`陣列保留空白，因為這些規則僅對非HTTP/HTTPS要求為必要。
 
 
-2. 對於每個環境，請使用Cloud Manager API的[getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業來驗證VPN路由規則是否有效。
+&#x200B;2. 對於每個環境，請使用Cloud Manager API的[getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業來驗證VPN路由規則是否有效。
 
    __getEnvironmentAdvancedNetworkingConfiguration HTTP要求__
 
@@ -273,9 +273,9 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
        -H 'Content-Type: application/json'
    ```
 
-3. 可使用Cloud Manager API的[enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業來更新虛擬私人網路Proxy設定。 請記住，`enableEnvironmentAdvancedNetworkingConfiguration`是`PUT`作業，因此每次呼叫此作業時，都必須提供所有規則。
+&#x200B;3. 可使用Cloud Manager API的[enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業來更新虛擬私人網路Proxy設定。 請記住，`enableEnvironmentAdvancedNetworkingConfiguration`是`PUT`作業，因此每次呼叫此作業時，都必須提供所有規則。
 
-4. 現在，您可以在自訂AEM程式碼和設定中使用虛擬私人網路輸出設定。
+&#x200B;4. 現在，您可以在自訂AEM程式碼和設定中使用虛擬私人網路輸出設定。
 
 ## 透過虛擬私人網路連線到外部服務
 

@@ -48,7 +48,7 @@ AEM中的GraphQL API可讓您向下游應用程式公開內容片段資料。 �
 
 >[!IMPORTANT]
 >
->在中，某些版本的AEM (6.X.X) GraphiQL Explorer （亦即GraphiQL IDE）工具需要手動安裝，請遵循此處](../how-to/install-graphiql-aem-6-5.md)的[指示。
+>在中，某些版本的AEM (6.X.X) GraphiQL Explorer （亦即GraphiQL IDE）工具需要手動安裝，請遵循此處[&#128279;](../how-to/install-graphiql-aem-6-5.md)的指示。
 
 1. 在右上角，確定端點已設為&#x200B;**WKND共用端點**。 在此變更&#x200B;_端點_&#x200B;下拉式清單值會在左上角顯示現有的&#x200B;_持續查詢_。
 

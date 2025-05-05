@@ -336,7 +336,7 @@ ht-degree: 0%
 
    此外，請注意節點的`sling:resourceType`設定為`wknd/components/content/byline`，這會將此內容節點繫結至Byline元件實作。
 
-   CRXDE](assets/custom-component/byline-properties-crxde.png)中的![署名屬性
+   CRXDE![&#128279;](assets/custom-component/byline-properties-crxde.png)中的署名屬性
 
 ## 建立署名Sling模型 {#create-sling-model}
 
@@ -644,7 +644,7 @@ public class BylineImpl implements Byline {
    >
    >在真實世界的實作中，最好使用「One」方法，使用`@Self`，因為這是更簡單、更優雅的解決方案。 在本教學課程中，我們使用第二個方法，因為它需要探索更多實用的Sling模型多面性，而這些多面性是較複雜的元件！
 
-   由於Sling模型是Java™ POJO的，而不是OSGi Services，因此無法使用通常的OSGi插入註解`@Reference` ****，而Sling模型會提供具有類似功能的特殊&#x200B;**[@OSGiService](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)**&#x200B;註解。
+   由於Sling模型是Java™ POJO的，而不是OSGi Services，因此無法使用通常的OSGi插入註解`@Reference` **&#x200B;**，而Sling模型會提供具有類似功能的特殊&#x200B;**[@OSGiService](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)**&#x200B;註解。
 
 1. 更新`BylineImpl.java`以包含`OSGiService`註解以插入`ModelFactory`：
 

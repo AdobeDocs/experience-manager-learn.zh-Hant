@@ -28,7 +28,7 @@ ht-degree: 2%
 
 ## ApplicantStateOfResidence
 
-在延伸功能下拉式清單中選取&#x200B;**核心**，並選取資料元素型別的&#x200B;**自訂程式碼**，以設定&#x200B;**ApplicantStateOfResidence**資料元素，如下方熒幕擷取畫面所示
+在延伸功能下拉式清單中選取&#x200B;**核心**，並選取資料元素型別的&#x200B;**自訂程式碼**，以設定&#x200B;**ApplicantStateOfResidence**&#x200B;資料元素，如下方熒幕擷取畫面所示
 ![applicant-state-residence](assets/applicantstateofresidence.png)
 
 下列自訂程式碼是用來從&#x200B;**_狀態_**&#x200B;最適化表單欄位擷取值。

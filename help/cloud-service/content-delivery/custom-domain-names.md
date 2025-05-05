@@ -82,5 +82,5 @@ ht-degree: 1%
 
 現在您已經瞭解網域名稱管理程式，您可以依照下列教學課程，實作AEM as a Cloud Service網站的自訂網域名稱：
 
-**[具有Adobe管理的CDN的自訂網域名稱](./custom-domain-name-with-adobe-managed-cdn.md)**：在本教學課程中，您將瞭解如何使用Adobe管理的CDN **將自訂網域名稱新增到**AEM as a Cloud Service網站。
+**[具有Adobe管理的CDN的自訂網域名稱](./custom-domain-name-with-adobe-managed-cdn.md)**：在本教學課程中，您將瞭解如何使用Adobe管理的CDN **將自訂網域名稱新增到**&#x200B;AEM as a Cloud Service網站。
 **[使用客戶管理的CDN的自訂網域名稱](./custom-domain-names-with-customer-managed-cdn.md)**：在本教學課程中，您將瞭解如何使用客戶管理的CDN **將自訂網域名稱新增到** AEM as a Cloud Service網站。

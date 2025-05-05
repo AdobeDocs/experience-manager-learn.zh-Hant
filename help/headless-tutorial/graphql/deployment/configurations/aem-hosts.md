@@ -88,7 +88,7 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 
 #### AEM headless使用者端
 
-適用於JavaScript ](../../how-to/aem-headless-sdk.md)的[AEM Headless使用者端包含AEM Headless使用者端，可向AEM的GraphQL API發出HTTP請求。 AEM Headless使用者端必須使用使用中`.env`檔案的值與其互動的AEM主機進行初始化。
+適用於JavaScript [&#128279;](../../how-to/aem-headless-sdk.md)的AEM Headless使用者端包含AEM Headless使用者端，可向AEM的GraphQL API發出HTTP請求。 AEM Headless使用者端必須使用使用中`.env`檔案的值與其互動的AEM主機進行初始化。
 
 + `src/api/headlessClient.js`
 
@@ -288,7 +288,7 @@ public class AdventuresLoader extends AsyncTaskLoader<AdventureList> {
 
 ## AEM影像URL
 
-從Headless應用程式到AEM的影像要求必須設定為與正確的AEM服務互動，如上表](#managing-aem-hosts)中的[所述。
+從Headless應用程式到AEM的影像要求必須設定為與正確的AEM服務互動，如上表[&#128279;](#managing-aem-hosts)中的所述。
 
 Adobe建議使用AEM GraphQL API中透過`_dynamicUrl`欄位提供的[最佳化影像](../../how-to/images.md)。 `_dynamicUrl`欄位會傳回無主機URL，此URL可加上用來查詢AEM GraphQL API之AEM服務主機的前置詞。 在GraphQL回應中的`_dynamicUrl`欄位看起來如下所示：
 

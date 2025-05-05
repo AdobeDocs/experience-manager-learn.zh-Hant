@@ -22,7 +22,7 @@ ht-degree: 0%
 
 
 [下載自訂工作流程元件](assets/saveFiles.zip)
-使用封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)匯入工作流程元件[
+使用封裝管理員[&#128279;](http://localhost:4502/crx/packmgr/index.jsp)匯入工作流程元件
 
 自訂工作流程元件位於/apps/AEMFormsDemoListings/workflowcomponent/SaveFiles
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 作者會指定引數，如下方熒幕擷取畫面所示
 ![工作流程元件](assets/custom-workflow-component.png)
 
-這些值會儲存為中繼資料節點的屬性。 例如，值&#x200B;**c：\formsattachments**會儲存在中繼資料節點的屬性saveToLocation中
+這些值會儲存為中繼資料節點的屬性。 例如，值&#x200B;**c：\formsattachments**&#x200B;會儲存在中繼資料節點的屬性saveToLocation中
 ![儲存位置](assets/save-to-location.png)
 
 ## cq：editConfig

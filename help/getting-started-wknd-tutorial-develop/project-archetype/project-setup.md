@@ -91,7 +91,7 @@ ht-degree: 1%
    >
    > 此外，請一律參照[AEM專案原型>使用方式](https://github.com/adobe/aem-project-archetype#usage)使用最新的`archetypeVersion`
 
-   您可以在此處](https://github.com/adobe/aem-project-archetype#available-properties)找到設定專案[的可用屬性完整清單。
+   您可以在此處[&#128279;](https://github.com/adobe/aem-project-archetype#available-properties)找到設定專案的可用屬性完整清單。
 
 1. 下列資料夾和檔案結構是由本機檔案系統上的Maven原型所產生：
 

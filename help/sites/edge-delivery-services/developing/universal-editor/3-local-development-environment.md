@@ -71,7 +71,7 @@ Edge Delivery Services網站專案的開發工具和程式設計為網頁開發�
 
 ## 複製GitHub存放庫
 
-將在包含AEM Edge Delivery Services程式碼專案的新程式碼專案章節](./1-new-code-project.md)中建立的[GitHub存放庫複製到您的本機開發環境。
+將在包含AEM Edge Delivery Services程式碼專案的新程式碼專案章節[&#128279;](./1-new-code-project.md)中建立的GitHub存放庫複製到您的本機開發環境。
 
 ![GitHub存放庫複製](./assets/3-local-development-environment/github-clone.png)
 

@@ -86,7 +86,7 @@ ht-degree: 1%
    > 
    > 上述指示是將React應用程式連線至&#x200B;**AEM Publish服務**，但若要連線至&#x200B;**AEM Author服務**，請取得目標AEM as a Cloud Service環境的本機開發權杖。
    >
-   > 也可以使用基本驗證，使用AEMaaCS SDK](/help/headless-tutorial/graphql/quick-setup/local-sdk.md)將應用程式連線到[本機作者執行個體。
+   > 也可以使用基本驗證，使用AEMaaCS SDK[&#128279;](/help/headless-tutorial/graphql/quick-setup/local-sdk.md)將應用程式連線到本機作者執行個體。
 
 
 1. 開啟終端機並執行命令：
@@ -112,7 +112,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->    若您想知道為什麼GraphQL API要求是針對`http://localhost:3000`而非AEM Publish Service網域提出，請參閱基本教學課程的](../multi-step/graphql-and-react-app.md#under-the-hood)主題。[
+>    若您想知道為什麼GraphQL API要求是針對`http://localhost:3000`而非AEM Publish Service網域提出，請參閱基本教學課程的[&#128279;](../multi-step/graphql-and-react-app.md#under-the-hood)主題。
 
 
 ## 檢閱程式碼
