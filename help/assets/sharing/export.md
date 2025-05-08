@@ -234,7 +234,7 @@ console.timeEnd('Download AEM assets');
 
 下載指令碼後，請更新指令碼底部的設定變數。
 
-可以使用[對AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview)的權杖式驗證教學課程中的步驟來取得`AEM_ACCESS_TOKEN`。 通常24小時的開發人員權杖就足夠了，只要匯出不到24小時的時間完成，而且產生權杖的使用者擁有要匯出的資產的讀取存取權即可。
+可以使用[對AEM as a Cloud Service](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview)的權杖式驗證教學課程中的步驟來取得`AEM_ACCESS_TOKEN`。 通常24小時的開發人員權杖就足夠了，只要匯出不到24小時的時間完成，而且產生權杖的使用者擁有要匯出的資產的讀取存取權即可。
 
 ```javascript
 ...
@@ -285,6 +285,6 @@ Downloaded asset: exported-assets/wknd-shared/en/magazine/western-australia/adob
 Download AEM assets: 24.770s
 ```
 
-匯出的資產可在組態`LOCAL_DOWNLOAD_FOLDER`中指定的本機資料夾中找到。 資料夾結構會反映AEM Assets資料夾結構，並將資產下載至適當的子資料夾。 這些檔案可以上傳至[支援的雲端儲存提供者](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view)，以便[大量匯入](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import)至其他AEM執行個體，或用於備份目的。
+匯出的資產可在組態`LOCAL_DOWNLOAD_FOLDER`中指定的本機資料夾中找到。 資料夾結構會反映AEM Assets資料夾結構，並將資產下載至適當的子資料夾。 這些檔案可以上傳至[支援的雲端儲存提供者](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view)，以便[大量匯入](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/migration/bulk-import)至其他AEM執行個體，或用於備份目的。
 
 ![已匯出資產](./assets/export/exported-assets.png)
