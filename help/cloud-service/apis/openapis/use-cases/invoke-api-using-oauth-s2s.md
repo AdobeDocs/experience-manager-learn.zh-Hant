@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1727'
 ht-degree: 1%
 
 ---
@@ -89,6 +89,10 @@ OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動
 
    ![選取驗證](../assets/s2s/select-authentication.png)
 
+   >[!TIP]
+   >
+   >如果您沒有看到「伺服器對伺服器」驗證選項，這表示設定整合的使用者不會新增為開發人員至與服務相關聯的產品設定檔。 如需詳細資訊，請參閱[啟用伺服器對伺服器驗證](../setup.md#enable-server-to-server-authentication)。
+
 1. 重新命名認證以方便識別（如有需要），然後按一下&#x200B;**下一步**。 為了示範目的，會使用預設名稱。
 
    ![重新命名認證](../assets/s2s/rename-credential.png)
@@ -141,7 +145,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 1. 展開&#x200B;_中繼資料_&#x200B;區段，然後按一下&#x200B;**傳遞指定資產的中繼資料**&#x200B;選項。
 
-1. 在右窗格中，按一下&#x200B;**嘗試它**&#x200B;按鈕。
+1. 在右窗格中，按一下&#x200B;**嘗試它**按鈕。
    ![API檔案](../assets/s2s/api-documentation.png)
 
 1. 輸入下列值：

@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,8 @@ ht-degree: 0%
 # 設定OpenAPI型AEM API
 
 瞭解如何設定您的AEM as a Cloud Service環境，以啟用對OpenAPI型AEM API的存取權。
+
+在此範例中，使用伺服器對伺服器驗證方法的AEM Assets API用於示範設定程式。 其他OpenAPI型AEM API也遵循相同步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
@@ -78,13 +80,25 @@ _新產品設定檔_&#x200B;的存在會在Adobe Developer Console (ADC)中啟�
 
 ![檢閱與產品設定檔關聯的服務](./assets/setup/review-services-associated-with-product-profile.png)
 
-依預設，**AEM Assets API Users**&#x200B;服務未與任何產品設定檔建立關聯。 讓我們將其與新新增的&#x200B;**AEM Assets Collaborator使用者 — 作者 — 方案XXX — 環境XXX**&#x200B;產品設定檔建立關聯。 建立此關聯後，ADC專案的&#x200B;_資產作者API_&#x200B;可以設定所需的伺服器對伺服器驗證，並將ADC專案（在下一步中建立）的驗證帳戶與產品設定檔建立關聯。
+### 啟用AEM Assets API存取權{#enable-aem-assets-apis-access}
+
+依預設，**AEM Assets API Users**&#x200B;服務未與任何產品設定檔建立關聯。 讓我們將其與新新增的&#x200B;**AEM Assets Collaborator使用者 — 作者 — 方案XXX — 環境XXX**&#x200B;產品設定檔或您要用於AEM Assets API存取的任何其他產品設定檔建立關聯。
 
 ![將AEM Assets API使用者服務與產品設定檔建立關聯](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
+### 啟用伺服器對伺服器驗證
+
+若要為所需的AEM API啟用伺服器對伺服器驗證，使用Adobe Developer Console (ADC)設定整合的使用者必須作為開發人員新增至與服務相關聯的產品設定檔。
+
+例如，若要啟用AEM Assets API的伺服器對伺服器驗證，使用者必須新增為開發人員至&#x200B;**AEM Assets Collaborator使用者 — 作者 — 方案XXX — 環境XXX**&#x200B;產品設定檔。
+
+![將開發人員關聯至產品設定檔](./assets/setup/associate-developer-to-product-profile.png)
+
+建立此關聯後，ADC專案的&#x200B;_資產作者API_&#x200B;可以設定所需的伺服器對伺服器驗證，並將ADC專案（在下一步中建立）的驗證帳戶與產品設定檔建立關聯。
+
 >[!IMPORTANT]
 >
->若要為AEM Assets API啟用伺服器對伺服器驗證，上述步驟至關重要。 若沒有此關聯，AEM Assets API就無法與伺服器對伺服器驗證方法搭配使用。
+>上述步驟對於啟用所需AEM API的伺服器對伺服器驗證至關重要。 若沒有此關聯，AEM API就無法與伺服器對伺服器驗證方法搭配使用。
 
 ## 建立Adobe Developer Console (ADC)專案{#adc-project}
 
@@ -104,7 +118,7 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
    ![已建立新專案](./assets/setup/new-project-created.png)
 
-1. 按一下右上角的&#x200B;**編輯專案**&#x200B;按鈕以編輯專案名稱。 提供有意義的名稱，然後按一下[儲存]。**&#x200B;**
+1. 按一下右上角的&#x200B;**編輯專案**&#x200B;按鈕以編輯專案名稱。 提供有意義的名稱，然後按一下[儲存]。****
 
    ![編輯專案名稱](./assets/setup/edit-project-name.png)
 
@@ -125,6 +139,11 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
    ![選取驗證](./assets/s2s/select-authentication.png)
 
    伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。 「網頁應用程式」和「單頁應用程式」驗證選項適用於需要代表使用者存取API的應用程式。 如需詳細資訊，請參閱[ OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
+
+   >[!TIP]
+   >
+   >如果您沒有看到「伺服器對伺服器」驗證選項，這表示設定整合的使用者不會新增為開發人員至與服務相關聯的產品設定檔。 如需詳細資訊，請參閱[啟用伺服器對伺服器驗證](#enable-server-to-server-authentication)。
+
 
 1. 如有需要，您可以重新命名API以方便識別。 為了示範目的，會使用預設名稱。
 
