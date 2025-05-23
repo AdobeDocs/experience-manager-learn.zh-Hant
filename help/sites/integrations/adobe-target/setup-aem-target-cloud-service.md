@@ -34,4 +34,4 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->影片中顯示的Adobe Target雲端服務設定有已知問題。 在此問題解決之前，請依照影片中的相同步驟操作，但使用[舊版Adobe Target雲端服務設定](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html)。
+>影片中顯示的Adobe Target雲端服務設定有已知問題。 在此問題解決之前，請依照影片中的相同步驟操作，但使用[舊版Adobe Target雲端服務設定](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html?lang=zh-Hant)。
