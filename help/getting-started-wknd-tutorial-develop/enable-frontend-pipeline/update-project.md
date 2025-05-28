@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
 duration: 307
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: b395b3b84e63fe6c24e597d1628f4aed5ba47469
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 完整棧疊AEM專案中的設定變更概觀
 
->[!VIDEO](https://video.tv.adobe.com/v/3453620?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## 先決條件 {#prerequisites}
 
@@ -94,7 +94,7 @@ ht-degree: 0%
            }),
        new CopyWebpackPlugin({
            patterns: [
-               { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './clientlib-site' }
+               { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './theme' }
            ]
        })
    ...
@@ -195,7 +195,7 @@ ht-degree: 0%
 
 ## 警告 — _啟用前端管道_&#x200B;按鈕
 
-[邊欄選取器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=zh-Hant)的[站台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=zh-Hant)選項會在選取您的站台根或站台頁面時顯示&#x200B;**啟用前端管道**&#x200B;按鈕。 按一下&#x200B;**啟用前端管道**&#x200B;按鈕將會覆寫上述&#x200B;**Sling設定**，請確定&#x200B;**在透過Cloud Manager管道執行部署上述變更後，您沒有按一下**&#x200B;此按鈕。
+[邊欄選取器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)的[站台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)選項會在選取您的站台根或站台頁面時顯示&#x200B;**啟用前端管道**&#x200B;按鈕。 按一下&#x200B;**啟用前端管道**&#x200B;按鈕將會覆寫上述&#x200B;**Sling設定**，請確定&#x200B;**在透過Cloud Manager管道執行部署上述變更後，您沒有按一下**&#x200B;此按鈕。
 
 ![啟用前端管道按鈕](assets/enable-front-end-Pipeline-button.png)
 
