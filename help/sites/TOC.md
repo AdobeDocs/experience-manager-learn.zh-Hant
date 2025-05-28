@@ -78,7 +78,7 @@ ht-degree: 20%
 + 生成式 AI {#generative-ai}
    + [產生變化版本](./generative-ai/generate-variations.md)
 + 內容片段 {#content-fragments}
-   + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
+   + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=zh-Hant){target=_blank}
    + [製作內容片段](content-fragments/content-fragments-feature-video-use.md)
    + [傳送內容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [翻譯內容片段](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -86,7 +86,7 @@ ht-degree: 20%
 + 體驗片段 {#experience-fragments}
    + [使用體驗片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [建置區塊](experience-fragments/building-blocks.md)
-   + [內容片段與體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
+   + [內容片段與體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=zh-Hant){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [概觀](./edge-delivery-services/overview.md)
    + 開發{#developing}
@@ -118,9 +118,9 @@ ht-degree: 20%
 + 開發 {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 專案原型](developing/aem-project-archetype.md)
-   + [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
-   + [開始使用AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
-   + [開始使用AEM SPA Editor和React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
+   + [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant){target=_blank}
+   + [開始使用AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant){target=_blank}
+   + [開始使用AEM SPA Editor和React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hant){target=_blank}
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
    + [回應式中斷點](developing/responsive-breakpoints.md)
    + [使用樣式系統進行開發](developing/style-system-technical-video-understand.md)
@@ -131,7 +131,7 @@ ht-degree: 20%
    + [社交媒體分享](developing/social-media-sharing-technical-video-use.md)
    + [自訂元件圖示](developing/component-icons-technical-video-develop.md)
 + 個人化 {#personalization}
-   + [與Adobe Target整合](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html){target=_blank}
+   + [與Adobe Target整合](https://helpx.adobe.com/tw/marketing-cloud/how-to/aem-target.html){target=_blank}
    + [設定體驗片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [搭配Adobe Target使用體驗片段](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [設定ContextHub](personalization/context-hub-technical-video-setup.md)
@@ -144,7 +144,7 @@ ht-degree: 20%
    + [Sitemaps](./seo/sitemaps.md)
 + 單頁應用程式 {#spa-editor}
    + [使用SPA編輯器](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [開始使用AEM SPA Editor和React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
+   + [開始使用AEM SPA Editor和React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hant){target=_blank}
 + 多網站管理 {#multi-site-management}
    + [語言副本簡介](./multi-site-management/language-copy-overview.md)
    + [即時副本和Blueprint](./multi-site-management/live-copy-and-blueprint.md)
