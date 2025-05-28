@@ -195,7 +195,7 @@ ht-degree: 0%
 
 ## 警告 — _啟用前端管道_&#x200B;按鈕
 
-[邊欄選取器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)的[站台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)選項會在選取您的站台根或站台頁面時顯示&#x200B;**啟用前端管道**&#x200B;按鈕。 按一下&#x200B;**啟用前端管道**&#x200B;按鈕將會覆寫上述&#x200B;**Sling設定**，請確定&#x200B;**在透過Cloud Manager管道執行部署上述變更後，您沒有按一下**&#x200B;此按鈕。
+[邊欄選取器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=zh-Hant)的[站台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=zh-Hant)選項會在選取您的站台根或站台頁面時顯示&#x200B;**啟用前端管道**&#x200B;按鈕。 按一下&#x200B;**啟用前端管道**&#x200B;按鈕將會覆寫上述&#x200B;**Sling設定**，請確定&#x200B;**在透過Cloud Manager管道執行部署上述變更後，您沒有按一下**&#x200B;此按鈕。
 
 ![啟用前端管道按鈕](assets/enable-front-end-Pipeline-button.png)
 
