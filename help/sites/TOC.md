@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 17aa4aeb053a0bc0beca5e005185c49cf7a06a67
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 17%
+source-wordcount: '594'
+ht-degree: 20%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 17%
 # AEM Sites 影片和教學課程 {#sites}
 
 + [概觀](overview.md)
-+ 檔案製作{#document-authoring}
++ 檔案製作 {#document-authoring}
    + [概觀](document-authoring/overview.md)
    + [設定](document-authoring/set-up.md)
    + [預覽和發佈](document-authoring/preview-and-publish.md)
@@ -28,7 +28,7 @@ ht-degree: 17%
    + [大量中繼資料](document-authoring/bulk-metadata.md)
    + [頁面中繼資料](document-authoring/page-metadata.md)
    + [作者驗證](document-authoring/author-authentication.md)
-   + 如何{#how-to}
+   + 操作說明{#how-to}
       + [檔案稽核](./document-authoring/how-to/document-audit.md)
       + [檔案許可權](./document-authoring/how-to/document-permissions.md)
       + [檔案版本](./document-authoring/how-to/document-versions.md)
@@ -41,7 +41,7 @@ ht-degree: 17%
       + [使用Importer進行網站移轉](./document-authoring/how-to/migration-using-importer.md)
       + [自訂匯入工具](./document-authoring/how-to/customizing-importer.md)
       + [使用Importer大量匯入](./document-authoring/how-to/bulk-importing-using-importer.md)
-      + 產生變數{#generate-variations}
+      + 產生變化版本{#generate-variations}
          + [概觀](./document-authoring/how-to/generate-variations/overview.md)
          + [設定Sidekick](./document-authoring/how-to/generate-variations/configure-sidekick.md)
          + [提示範本](./document-authoring/how-to/generate-variations/prompt-templates.md)
@@ -55,8 +55,8 @@ ht-degree: 17%
       + [實驗架構](./document-authoring/how-to/experimentation-framework.md)
       + [設定實驗架構](./document-authoring/how-to/setup-experimentation-framework.md)
       + [實驗用的中繼資料](./document-authoring/how-to/experimentation-add-metadata.md)
-+ 頁面製作{#page-authoring}
-   + [製作](page-authoring/aem-sites-authoring-overview.md)
++ 頁面製作 {#page-authoring}
+   + [編寫](page-authoring/aem-sites-authoring-overview.md)
    + [導覽](page-authoring/basic-handling-sites-feature-video-use.md)
    + [網站結構](page-authoring/content-hierarchy-feature-video-use.md)
    + [頁面建立](page-authoring/creating-page-feature-video-use.md)
@@ -73,12 +73,12 @@ ht-degree: 17%
    + [樣式系統](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
    + [啟動](page-authoring/launches.md)
-   + 向同儕學習{#expert-advice}
+   + 向同儕學習 {#expert-advice}
       + [網站階層秘訣](page-authoring/expert-advice/site-hierarchy.md)
 + 生成式 AI {#generative-ai}
    + [產生變化版本](./generative-ai/generate-variations.md)
 + 內容片段 {#content-fragments}
-   + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=zh-Hant){target=_blank}
+   + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [製作內容片段](content-fragments/content-fragments-feature-video-use.md)
    + [傳送內容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [翻譯內容片段](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -86,10 +86,10 @@ ht-degree: 17%
 + 體驗片段 {#experience-fragments}
    + [使用體驗片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [建置區塊](experience-fragments/building-blocks.md)
-   + [內容片段與體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=zh-Hant){target=_blank}
+   + [內容片段與體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [概觀](./edge-delivery-services/overview.md)
-   + 正在開發{#developing}
+   + 開發{#developing}
       + [先決條件](edge-delivery-services/developing/prerequisites.md)
       + [AEM範本](edge-delivery-services/developing/aem-boilerplate.md)
       + [內容存放庫](edge-delivery-services/developing/content-repository.md)
@@ -118,9 +118,9 @@ ht-degree: 17%
 + 開發 {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 專案原型](developing/aem-project-archetype.md)
-   + [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant){target=_blank}
-   + [開始使用AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant){target=_blank}
-   + [開始使用AEM SPA Editor和React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hant){target=_blank}
+   + [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
+   + [開始使用AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
+   + [開始使用AEM SPA Editor和React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
    + [回應式中斷點](developing/responsive-breakpoints.md)
    + [使用樣式系統進行開發](developing/style-system-technical-video-understand.md)
@@ -131,21 +131,21 @@ ht-degree: 17%
    + [社交媒體分享](developing/social-media-sharing-technical-video-use.md)
    + [自訂元件圖示](developing/component-icons-technical-video-develop.md)
 + 個人化 {#personalization}
-   + [與Adobe Target整合](https://helpx.adobe.com/tw/marketing-cloud/how-to/aem-target.html){target=_blank}
+   + [與Adobe Target整合](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html){target=_blank}
    + [設定體驗片段和Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [搭配Adobe Target使用體驗片段](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [設定ContextHub](personalization/context-hub-technical-video-setup.md)
-+ 元件{#components}
++ 元件 {#components}
    + [元件開發](components/component-development.md)
    + [核心元件](components/core-components-feature-video-understand.md)
    + [網頁最佳化的影像交付](components/web-optimized-image-delivery.md)
    + [元件主控台](components/components-console-feature-video-use.md)
 + SEO {#seo}
    + [Sitemaps](./seo/sitemaps.md)
-+ 單頁應用程式{#spa-editor}
++ 單頁應用程式 {#spa-editor}
    + [使用SPA編輯器](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [開始使用AEM SPA Editor和React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hant){target=_blank}
-+ 多網站管理{#multi-site-management}
+   + [開始使用AEM SPA Editor和React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
++ 多網站管理 {#multi-site-management}
    + [語言副本簡介](./multi-site-management/language-copy-overview.md)
    + [即時副本和Blueprint](./multi-site-management/live-copy-and-blueprint.md)
    + [建立即時副本](./multi-site-management/create-live-copy.md)
@@ -160,7 +160,7 @@ ht-degree: 17%
    + [建立語言副本頁面](./multi-site-management/create-new-page-language-copy.md)
    + [翻譯工作狀態](./multi-site-management/translation-job-status.md)
    + [從語言副本建立國家/地區網站](./multi-site-management/create-new-site.md)
-+ 轉換 {#translation}
++ 翻譯 {#translation}
    + [使用多站點管理員](translation/multi-site-manager-feature-video-use.md)
    + [使用語言副本](translation/language-copy-feature-video-use.md)
    + [設定翻譯規則](translation/translation-rules-editor-technical-video-setup.md)
@@ -176,10 +176,10 @@ ht-degree: 17%
       + [使用IMS連線AEM和標籤屬性](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
       + [建立AEM標籤Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [對標籤實作除錯](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
-   + Adobe使用者端資料層{#adobe-client-data-layer}
+   + Adobe使用者端資料層 {#adobe-client-data-layer}
       + [使用Adobe使用者端資料層](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [自訂Adobe使用者端資料層](integrations/adobe-client-data-layer/data-layer-customize.md)
-   + 分析{#analytics}
+   + 分析 {#analytics}
       + [使用Adobe Analytics收集頁面資料](integrations/analytics/collect-data-analytics.md)
       + [使用Adobe Analytics追蹤已點按的元件](integrations/analytics/track-clicked-component.md)
       + [使用Analysis Workspace分析資料](integrations/analytics/create-analytics-workspace.md)
@@ -192,8 +192,9 @@ ht-degree: 17%
       + [使用體驗片段選件建立Target活動](integrations/adobe-target/create-target-activity.md)
       + [使用視覺化體驗撰寫器的Personalization](integrations/adobe-target/personalization-using-vec.md)
       + [提供完整網頁體驗的Personalization](integrations/adobe-target/personalization-web-page.md)
-+ 向同儕學習{#expert-resources}
++ 向同儕學習 {#expert-resources}
    + [概觀](expert-resources/learn-from-your-peers-overview.md)
+   + [在AEM Sites中建立編寫指南](expert-resources/authoring-guide-in-sites.md)
    + [AEM Sites成熟度評估](expert-resources/maturity-assessment.md)
    + [網站維護](expert-resources/site-maintenance.md)
    + [AEM Champion秘訣與技巧：第1場講座](expert-resources/champion-tips-1.md)
