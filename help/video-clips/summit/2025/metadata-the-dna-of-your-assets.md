@@ -25,4 +25,4 @@ ht-degree: 0%
 
 瞭解中繼資料如何推動工作流程、搜尋和深入分析，以及自動化如何讓中繼資料更多元化，以符合品牌標準。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461976/?learn=on&enablevpops&captions=chi_hant)

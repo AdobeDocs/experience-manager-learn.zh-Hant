@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索Content Hub的新功能，包括屬性式存取控制、品牌登陸頁面，以及跨平台的整合式搜尋。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459223/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461821/?learn=on&enablevpops&captions=chi_hant)

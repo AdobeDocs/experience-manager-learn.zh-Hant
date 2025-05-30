@@ -25,4 +25,4 @@ ht-degree: 0%
 
 瞭解體驗產生如何讓行銷人員適應各種角色、頻道和地理位置的內容，同時維持控制。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459245/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462416/?learn=on&enablevpops&captions=chi_hant)

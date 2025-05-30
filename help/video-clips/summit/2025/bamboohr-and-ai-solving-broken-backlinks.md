@@ -25,4 +25,4 @@ ht-degree: 0%
 
 瞭解BambooHR如何使用AI來識別和修復中斷的背景連結，進而將有機流量增加4%。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459238/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461998/?learn=on&enablevpops&captions=chi_hant)
