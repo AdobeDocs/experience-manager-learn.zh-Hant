@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解如何使用AEM Assets Content Hub輕鬆管理和共用核准的品牌資產，讓您的團隊能夠比以往更快地執行行銷活動。
 
->[!VIDEO](https://video.tv.adobe.com/v/3457638/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463075/?learn=on&enablevpops&captions=chi_hant)

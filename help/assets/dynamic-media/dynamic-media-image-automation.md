@@ -21,7 +21,7 @@ ht-degree: 2%
 
 瞭解如何在AEM中使用Dynamic Media來建立虛擬轉譯、管理透明度，以及自動化影像處理以重複使用可擴充的內容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459589/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463056/?learn=on&enablevpops&captions=chi_hant)
 
 
 ## Dynamic Media資產範例
