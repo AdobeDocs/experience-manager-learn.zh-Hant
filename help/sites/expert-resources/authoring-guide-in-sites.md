@@ -22,4 +22,4 @@ ht-degree: 0%
 
 AEM Champion Brett Birschbach分享在Adobe Experience Manager (AEM) Sites中建立即時撰寫指南的最佳作法。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459572/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463144/?learn=on&enablevpops&captions=chi_hant)
