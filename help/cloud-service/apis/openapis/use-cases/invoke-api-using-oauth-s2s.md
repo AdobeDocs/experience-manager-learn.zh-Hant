@@ -12,7 +12,7 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
+source-git-commit: 9a5d811cf92a09da27057f99e1b6b2ed8df2a414
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 1%
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。 它使用OAuth 2.0 _client_credentials_&#x200B;授權型別來驗證使用者端應用程式。
 
-## 您能學到的內容{#what-you-learn}
+## 學習內容{#what-you-learn}
 
 在本教學課程中，您將學習如何：
 
@@ -139,13 +139,13 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 ### 使用瀏覽器叫用API
 
-在開發應用程式之前，請先使用[API檔案](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)中的&#x200B;**嘗試它**&#x200B;功能叫用API。
+在開發應用程式之前，請先使用[API檔案](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)中的&#x200B;**嘗試它**&#x200B;功能叫用API。
 
-1. 在瀏覽器中開啟[Assets作者API檔案](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)。
+1. 在瀏覽器中開啟[Assets作者API檔案](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)。
 
 1. 展開&#x200B;_中繼資料_&#x200B;區段，然後按一下&#x200B;**傳遞指定資產的中繼資料**&#x200B;選項。
 
-1. 在右窗格中，按一下&#x200B;**嘗試它**&#x200B;按鈕。
+1. 在右窗格中，按一下&#x200B;**嘗試它**按鈕。
    ![API檔案](../assets/s2s/api-documentation.png)
 
 1. 輸入下列值：
