@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
-source-git-commit: d138fd849f8d82228b48b0f5b21f1198388e82af
+source-git-commit: 7e13dda1303e33181bdb6845c8274b0e59ea5505
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 100%
+source-wordcount: '594'
+ht-degree: 98%
 
 ---
 
@@ -78,7 +78,7 @@ ht-degree: 100%
 + 生成式 AI {#generative-ai}
    + [產生變化版本](./generative-ai/generate-variations.md)
 + 內容片段 {#content-fragments}
-   + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=zh-Hant){target=_blank}
+   + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [製作內容片段](content-fragments/content-fragments-feature-video-use.md)
    + [傳遞內容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [翻譯內容片段](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -86,7 +86,7 @@ ht-degree: 100%
 + 體驗片段 {#experience-fragments}
    + [使用體驗片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [建置區塊](experience-fragments/building-blocks.md)
-   + [內容片段與體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=zh-Hant){target=_blank}
+   + [內容片段與體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [概觀](./edge-delivery-services/overview.md)
    + 開發{#developing}
@@ -118,9 +118,9 @@ ht-degree: 100%
 + 開發 {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 專案原型](developing/aem-project-archetype.md)
-   + [AEM Sites 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant){target=_blank}
-   + [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant){target=_blank}
-   + [AEM SPA 編輯器和 React 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hant){target=_blank}
+   + [AEM Sites 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
+   + [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
+   + [AEM SPA 編輯器和 React 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
    + [回應式中斷點](developing/responsive-breakpoints.md)
    + [使用樣式系統進行開發](developing/style-system-technical-video-understand.md)
@@ -144,7 +144,7 @@ ht-degree: 100%
    + [Sitemaps](./seo/sitemaps.md)
 + 單頁應用程式 {#spa-editor}
    + [使用 SPA 編輯器](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [AEM SPA 編輯器和 React 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hant){target=_blank}
+   + [AEM SPA 編輯器和 React 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
 + 多網站管理 {#multi-site-management}
    + [語言副本簡介](./multi-site-management/language-copy-overview.md)
    + [Live Copy 和 Blueprint](./multi-site-management/live-copy-and-blueprint.md)
@@ -194,6 +194,7 @@ ht-degree: 100%
       + [完整網頁體驗的個人化](integrations/adobe-target/personalization-web-page.md)
 + 向同儕學習 {#expert-resources}
    + [概觀](expert-resources/learn-from-your-peers-overview.md)
+   + [在AEM Sites中建立編寫指南](expert-resources/authoring-guide-in-sites.md)
    + [AEM Sites 成熟度評估](expert-resources/maturity-assessment.md)
    + [網站維護](expert-resources/site-maintenance.md)
    + [AEM Champion 秘訣與技巧：第 1 段](expert-resources/champion-tips-1.md)
