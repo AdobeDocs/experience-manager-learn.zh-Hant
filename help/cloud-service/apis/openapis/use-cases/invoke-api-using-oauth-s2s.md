@@ -145,7 +145,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 1. 展開&#x200B;_中繼資料_&#x200B;區段，然後按一下&#x200B;**傳遞指定資產的中繼資料**&#x200B;選項。
 
-1. 在右窗格中，按一下&#x200B;**嘗試它**按鈕。
+1. 在右窗格中，按一下&#x200B;**嘗試它**&#x200B;按鈕。
    ![API檔案](../assets/s2s/api-documentation.png)
 
 1. 輸入下列值：
