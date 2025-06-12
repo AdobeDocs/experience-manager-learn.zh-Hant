@@ -13,8 +13,8 @@ level: Beginner
 doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
+workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 # AEM Sites 快速入門 - WKND 教學課程 {#introduction}
 
-{{edge-delivery-services}}
+{{traditional-aem}}
 
 歡迎使用專為初次接觸 Adobe Experience Manager (AEM) 的開發人員設計的多部分教學課程。此教學課程會逐步解說為虛構生活風格品牌 WKND 實施 AEM 網站的情形。此教學課程涵蓋基礎主題，例如專案設定、核心元件、可編輯的範本、用戶端程式庫，以及使用 Adobe Experience Manager Sites 進行元件開發。
 

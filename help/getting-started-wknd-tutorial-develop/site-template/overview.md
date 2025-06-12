@@ -11,7 +11,7 @@ thumbnail: 333477.jpg
 doc-type: Tutorial
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
 duration: 426
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # AEM Sites快速入門 — 快速網站建立 {#site-template}
 
-{{edge-delivery-services}}
+{{traditional-aem}}
 
 瞭解如何使用低程式碼方法，利用「快速網站建立」和預先定義的網站範本在Adobe Experience Manager中建立您的第一個網站。 使用現成可用的元件和範本，讓網站快速上線運作。 使用Adobe XD驅動的主題工作流程，僅以CSS和JavaScript套用品牌特定樣式和自訂。 建議新專案和開發人員使用。
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## AEM as a Cloud Service環境 {#environment}
 
-本教學課程中的步驟將在Adobe Experience Manager as a Cloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 完成本教學課程時，建議使用[沙箱程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html?lang=zh-Hant)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hant)。
+本教學課程中的步驟將在Adobe Experience Manager as a Cloud Service環境中進行。 確保您擁有AEM環境的管理存取權。 完成本教學課程時，建議使用[沙箱程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)。
 
 ## 後續步驟 {#next-steps}
 

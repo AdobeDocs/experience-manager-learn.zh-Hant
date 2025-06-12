@@ -12,29 +12,29 @@ doc-type: Tutorial
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
 duration: 74
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
 workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 28%
+ht-degree: 35%
 
 ---
 
 # AEM Sites — 專案原型快速入門 {#project-archetype}
 
-{{edge-delivery-services-and-page-editor}}
+{{traditional-aem}}
 
-歡迎使用專為Adobe Experience Manager (AEM)的新手開發人員設計的多部分教學課程。 此教學課程會逐步引導您為虛擬生活風格品牌WKND實作AEM網站。
+歡迎使用專為初次接觸 Adobe Experience Manager (AEM) 的開發人員設計的多部分教學課程。此教學課程會逐步引導您為虛擬生活風格品牌WKND實作AEM網站。
 
-此教學課程從使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)產生新專案開始。
+此教學課程從使用[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)產生新專案開始。
 
 此教學課程在設計上與&#x200B;**AEM as a Cloud Service**&#x200B;搭配使用，並且回溯相容於&#x200B;**AEM 6.5.14+**。 使用以下項目實作網站：
 
 * [Maven AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
-* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html?lang=zh-Hant)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
-* [可編輯的範本](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hant)
-* [樣式系統](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html?lang=zh-Hant)
+* [可編輯的範本](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
+* [樣式系統](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
 *預計約需 1-2 小時完成教學課程的每個部份。*
 
@@ -57,9 +57,9 @@ ht-degree: 28%
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service 的新手嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)。
+> **AEM as a Cloud Service 的新手嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
 >
-> **AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hant)。
+> **AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
 
 ## GitHub {#github}
 

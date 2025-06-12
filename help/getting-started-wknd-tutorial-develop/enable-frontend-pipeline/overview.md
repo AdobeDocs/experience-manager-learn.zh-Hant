@@ -15,7 +15,7 @@ last-substantial-update: 2022-09-23T00:00:00Z
 doc-type: Tutorial
 exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
 duration: 206
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 1%
@@ -23,6 +23,8 @@ ht-degree: 1%
 ---
 
 # 為標準AEM專案原型啟用前端管道{#enable-front-end-pipeline-standard-aem-project}
+
+{{traditional-aem}}
 
 瞭解如何啟用使用[AEM專案原型](https://github.com/adobe/aem-project-archetype)建立的[AEM WKND Sites專案](https://github.com/adobe/aem-guides-wknd) (亦稱為標準AEM專案)，以使用前端管道部署前端資源(例如CSS、JavaScript、字型和圖示)來加快開發到部署的週期。 在AEM上將前端開發與完整棧疊後端開發分開。 您也會瞭解這些前端資源是如何&#x200B;__不從AEM存放庫提供__，而是從CDN （傳遞正規化的變更）提供。
 
@@ -33,10 +35,10 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->一般而言，前端管道通常會與[AEM快速網站建立](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/overview.html?lang=zh-Hant)搭配使用，這裡有相關的教學課程[AEM Sites快速入門 — 快速網站建立](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html?lang=zh-Hant)以瞭解更多相關資訊。 因此，在本教學課程和相關影片中，您會看到參考資料，這是為了確保能找出細微的差異，並透過一些直接或間接的比較來說明重要概念。
+>一般而言，前端管道通常會與[AEM快速網站建立](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/overview.html?lang=en)搭配使用，這裡有相關的教學課程[AEM Sites快速入門 — 快速網站建立](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html)以瞭解更多相關資訊。 因此，在本教學課程和相關影片中，您會看到參考資料，這是為了確保能找出細微的差異，並透過一些直接或間接的比較來說明重要概念。
 
 
-相關的[多步驟教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html?lang=zh-Hant)會使用「快速網站建立」功能，逐步解說如何為虛擬生活風格品牌WKND實作AEM網站。 檢閱[主題工作流程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html?lang=zh-Hant)以瞭解前端管道運作也很有幫助。
+相關的[多步驟教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html)會使用「快速網站建立」功能，逐步解說如何為虛擬生活風格品牌WKND實作AEM網站。 檢閱[主題工作流程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html)以瞭解前端管道運作也很有幫助。
 
 ## 前端管道的概述、優點和考量事項
 
@@ -49,9 +51,9 @@ ht-degree: 1%
 
 ## 先決條件
 
-本教學課程中的部署步驟會在Adobe Cloud Manager中進行，請確認您有&#x200B;__部署管理員__&#x200B;角色，請參閱雲端管理[角色定義](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=zh-Hant#role-definitions)。
+本教學課程中的部署步驟會在Adobe Cloud Manager中進行，請確認您有&#x200B;__部署管理員__&#x200B;角色，請參閱雲端管理[角色定義](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions)。
 
-完成本教學課程時，請務必使用[沙箱程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html?lang=zh-Hant)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hant)。
+完成本教學課程時，請務必使用[沙箱程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html)和[開發環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html)。
 
 ## 後續步驟 {#next-steps}
 
