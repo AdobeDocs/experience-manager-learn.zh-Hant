@@ -147,7 +147,7 @@ Asset Compute 工作程式部署至 Adobe I/O Runtime 後，可以透過[資產�
 
 ### 文件
 
-+ [Asset Compute 服務文件](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
++ [Asset Compute 服務文件](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=zh-Hant)
 + [Asset Compute 開發工具讀我檔案](https://github.com/adobe/asset-compute-devtool)
 + [Asset Compute 工作程式範例](https://github.com/adobe/asset-compute-example-workers)
 

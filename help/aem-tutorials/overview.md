@@ -18,18 +18,18 @@ Adobe Experience Manager (AEM) 是業界領先的體驗管理平台。本使用�
 
 ## AEM 教學課程
 
-+ [AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
-+ [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html)
-+ [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html)
-+ [AEM as Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
-+ [AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/overview.html)
-+ [AEM Guides 的教學課程](https://experienceleague.adobe.com/docs/experience-manager-guides-learn/tutorials/overview.html)
++ [AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=zh-Hant)
++ [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=zh-Hant)
++ [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html?lang=zh-Hant)
++ [AEM as Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=zh-Hant)
++ [AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/overview.html?lang=zh-Hant)
++ [AEM Guides 的教學課程](https://experienceleague.adobe.com/docs/experience-manager-guides-learn/tutorials/overview.html?lang=zh-Hant)
 
 ## AEM 多步驟教學課程
 
-+ [AEM Sites 快速入門 - WKND 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-+ [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
-+ [AEM SPA 編輯器和 React 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
-+ [AEM 和 Adobe Target 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
-+ [AEM 6.x Dispatcher 快取教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)
-+ [AEM 6.x Dynamic Media Classic 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html)
++ [AEM Sites 快速入門 - WKND 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)
++ [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant)
++ [AEM SPA 編輯器和 React 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html?lang=zh-Hant)
++ [AEM 和 Adobe Target 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=zh-Hant)
++ [AEM 6.x Dispatcher 快取教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html?lang=zh-Hant)
++ [AEM 6.x Dynamic Media Classic 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html?lang=zh-Hant)

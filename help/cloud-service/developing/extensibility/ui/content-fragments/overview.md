@@ -29,7 +29,7 @@ AEM (Adobe Experience Manager) 中的內容片段主控台是一個使用者介�
 
 ![內容片段主控台](./assets/overview/cfc.png)
 
-[AEM 內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html)是用於列出和管理內容片段的可擴展使用者介面。使用 `@adobe/aem-cf-admin-ui-ext-tpl` App Builder 範本[建立 AEM 內容片段主控台擴充功能](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation)。
+[AEM 內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=zh-Hant)是用於列出和管理內容片段的可擴展使用者介面。使用 `@adobe/aem-cf-admin-ui-ext-tpl` App Builder 範本[建立 AEM 內容片段主控台擴充功能](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation)。
 
 您可以使用以下內容片段主控台擴展點：
 

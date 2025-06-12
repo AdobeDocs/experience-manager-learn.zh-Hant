@@ -24,7 +24,7 @@ ht-degree: 100%
 
 歡迎瀏覽此多部分教學課程，適合想要透過 AEM SPA 編輯器為現有基於 React (或 Next.js) 的遠端 SPA 新增可編輯 AEM 內容的開發人員。
 
-本教學課程以 [WKND GraphQL 應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)為基礎，這是透過 AEM 的 GraphQL API 使用 AEM 內容片段內容的一個 React 應用程式，但不提供任何 SPA 內容情境式製作功能。
+本教學課程以 [WKND GraphQL 應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant)為基礎，這是透過 AEM 的 GraphQL API 使用 AEM 內容片段內容的一個 React 應用程式，但不提供任何 SPA 內容情境式製作功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
@@ -65,7 +65,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> **需要協助設定您的本機開發環境嗎？若要使用 AEM as a Cloud Service SDK 設定本機開發環境，**&#x200B;請參閱[以下指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **需要協助設定您的本機開發環境嗎？若要使用 AEM as a Cloud Service SDK 設定本機開發環境，**&#x200B;請參閱[以下指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)。
 
 ## &#x200B;1. 設定 AEM 以便支援 SPA 編輯器
 
