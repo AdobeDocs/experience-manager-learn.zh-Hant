@@ -48,7 +48,7 @@ ht-degree: 99%
    + [評論和註解](./collaboration/comments-and-annotations.md)
    + [簽入和簽出](./collaboration/check-in-and-check-out.md)
    + [版本](./collaboration/versions.md)
-   + [檢閱任務](./collaboration/review-task.md)
+   + [檢閱工作](./collaboration/review-task.md)
 
 + 搜尋和探索{#search-and-discovery}
    + [搜尋](./search-and-discovery/search.md)
@@ -201,4 +201,4 @@ ht-degree: 99%
 + 部署{#deployment}
    + [多重租戶和同時開發](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hant){target=_blank}
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}
