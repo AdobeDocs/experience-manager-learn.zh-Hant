@@ -29,7 +29,7 @@ ht-degree: 100%
 
 降低安全性漏洞的風險是所有組織的首要任務。AEMCS 提供流量篩選器規則功能 (包括 WAF 規則)，用於保護網站和應用程式。
 
-流量篩選器規則會部署至[內建 CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=zh-Hant)，並於要求到達 AEM 基礎結構之前進行評估。透過此功能，您可以顯著增強網站的安全性，確保只有合法要求才能存取 AEM 基礎結構。
+流量篩選器規則會部署至[內建 CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)，並於要求到達 AEM 基礎結構之前進行評估。透過此功能，您可以顯著增強網站的安全性，確保只有合法要求才能存取 AEM 基礎結構。
 
 本教學課程會引導您逐步完成建立、部署、測試流量篩選器規則 (包括 WAF 規則) 及分析其結果的流程。
 

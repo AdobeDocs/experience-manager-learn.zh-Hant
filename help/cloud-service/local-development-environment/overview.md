@@ -25,7 +25,7 @@ ht-degree: 100%
 >id="aemcloud_localdev_overview"
 >title="概觀"
 >abstract="為 AEM as a Cloud Service 設定本機開發環境包括開發、建置和編譯 AEM 專案所需的開發工具，以及讓開發人員透過 Adobe Cloud Manager 將新功能部署到 AEM as a Cloud Service 之前可先在本機快速進行驗證的本機執行階段。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=zh-Hant" text="開發準則"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="開發準則"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=zh-Hant" text="開發基本概念"
 
 本教學課程會逐步解說如何使用 AEM as a Cloud Service SDK 設定 Adobe Experience Manager (AEM) 的本機開發環境。其中包括開發、建置和編譯 AEM 專案所需的開發工具，以及本機執行階段，讓開發人員可以在本機快速驗證新功能，然後再透過 Adobe Cloud Manager 將新功能部署至 AEM as a Cloud Service。

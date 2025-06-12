@@ -22,7 +22,7 @@ ht-degree: 100%
 
 了解如何設定文件製作，讓 AEM 作者能夠使用 Microsoft Word 或 Google Docs 編輯和發佈文件。
 
-檢閱此[文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=zh-Hant)，了解關於設定文件製作的完整詳細資訊。
+檢閱此[文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html)，了解關於設定文件製作的完整詳細資訊。
 
 ## 文件製作快速入門
 

@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Adobe Experience Manager 的內容片段主控台讓內容片段的管理與製作變得簡單！透過這些影片了解如何充分利用內容片段主控台。
 
-檢閱此[文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=zh-Hant)，了解關於內容片段主控台及其功能的完整詳細資訊。
+檢閱此[文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html)，了解關於內容片段主控台及其功能的完整詳細資訊。
 
 ## 影片
 

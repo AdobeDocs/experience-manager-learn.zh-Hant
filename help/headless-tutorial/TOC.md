@@ -20,7 +20,7 @@ ht-degree: 100%
 
 + [AEM Headless 概觀](./overview.md)
 + GraphQL {#graphql}
-   + [AEM Headless 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant){target=_blank}
+   + [AEM Headless 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
    + [概觀](./graphql/overview.md)
    + 快速設定 {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)

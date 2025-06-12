@@ -27,7 +27,7 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->若您無法存取 AEM as a Cloud Service 環境，可以[使用本機 SDK 完成 AEM Headless 快速設定](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html?lang=zh-Hant)。但需注意，有些產品使用者介面的頁面，例如內容片段導覽，會有所差異。
+>若您無法存取 AEM as a Cloud Service 環境，可以[使用本機 SDK 完成 AEM Headless 快速設定](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html)。但需注意，有些產品使用者介面的頁面，例如內容片段導覽，會有所差異。
 
 
 
@@ -49,7 +49,7 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->影片 (2:25 處) 提到透過套件管理程式安裝 GraphiQL 查詢編輯器，以便了解 GraphQL 查詢。不過，較新版本的 AEM as Cloud Service 中提供內建的 **GraphiQL Explorer**，因此不需要透過套件來安裝。如需詳細資訊，請參閱[使用 GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=zh-Hant)。
+>影片 (2:25 處) 提到透過套件管理程式安裝 GraphiQL 查詢編輯器，以便了解 GraphQL 查詢。不過，較新版本的 AEM as Cloud Service 中提供內建的 **GraphiQL Explorer**，因此不需要透過套件來安裝。如需詳細資訊，請參閱[使用 GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html)。
 
 
 ## 專案設定
@@ -79,7 +79,7 @@ WKND 網站專案已包含所有必要的設定，因此您可以在完成[快�
 
 >[!NOTE]
 >
-> 儲存端點後，您會看到一個關於瀏覽安全性主控台的模態視窗，若您想要設定對於端點的存取權，可利用此模態視窗調整安全性設定。不過，本教學課程並未討論安全性權限本身。如需詳細資訊，請參閱 [AEM 文件](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hant)。
+> 儲存端點後，您會看到一個關於瀏覽安全性主控台的模態視窗，若您想要設定對於端點的存取權，可利用此模態視窗調整安全性設定。不過，本教學課程並未討論安全性權限本身。如需詳細資訊，請參閱 [AEM 文件](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)。
 
 ### 檢閱 WKND 內容結構和語言根資料夾
 

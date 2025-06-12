@@ -163,7 +163,7 @@ data:
 
 請封鎖來自每秒發出 100 次要求之 IP 位址的要求，以&#x200B;**防止 DoS 攻擊**，該位址會被封鎖 5 分鐘。
 
-- 在 WKND 專案的 `/config/cdn.yaml` 檔案中新增以下[速率限制流量篩選器規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hant#ratelimit-structure)。
+- 在 WKND 專案的 `/config/cdn.yaml` 檔案中新增以下[速率限制流量篩選器規則](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#ratelimit-structure)。
 
 ```yaml
 kind: CDN
@@ -264,7 +264,7 @@ data:
 
 現在，新增一個 WAF 規則，在 `action` 屬性中包含 `wafFlags` 屬性，然後&#x200B;**封鎖所模擬的攻擊要求**。
 
-從語法角度來看，WAF 規則與先前所出現的規則類似，但 `action` 屬性會參照一個或多個 `wafFlags` 值。若要了解更多關於 `wafFlags` 的資訊，請參閱 [WAF 標幟清單](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hant#waf-flags-list)區段。
+從語法角度來看，WAF 規則與先前所出現的規則類似，但 `action` 屬性會參照一個或多個 `wafFlags` 值。若要了解更多關於 `wafFlags` 的資訊，請參閱 [WAF 標幟清單](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#waf-flags-list)區段。
 
 - 在 WKND 專案的 `/config/cdn.yaml` 檔案中新增以下規則。請注意，`block-waf-flags` 規則包含一些受到模擬的惡意流量攻擊時曾出現在儀表板工具中的 wafFlags。長期持續分析記錄並藉此判斷要宣告哪些新規則確實是很好的做法，因為威脅情勢會不斷演變。
 
@@ -352,7 +352,7 @@ data:
 
 ## 其他資源
 
-[流量篩選器規則語法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hant#rules-syntax)
+[流量篩選器規則語法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#rules-syntax)
 
-[CDN 記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=zh-Hant#cdn-log-format)
+[CDN 記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#cdn-log-format)
 

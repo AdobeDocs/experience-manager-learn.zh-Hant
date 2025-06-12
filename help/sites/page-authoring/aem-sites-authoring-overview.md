@@ -28,5 +28,5 @@ ht-degree: 100%
 
 ## 其他資源 {#additional-resources}
 
-* [編輯頁面內容文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html?lang=zh-Hant)
-* [製作頁面的快速入門指南](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=zh-Hant)
+* [編輯頁面內容文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [製作頁面的快速入門指南](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)

@@ -78,10 +78,10 @@ Adobe Experience Manager (AEM) 是一項簡單易用的解決方案，其整合�
 
 ## 其他資源
 
-* [AEM Sites 製作文件](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=zh-Hant)
-* [AEM Sites 開發文件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=zh-Hant)
-* [AEM Sites 管理文件](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html?lang=zh-Hant)
-* [AEM Sites 部署文件](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html?lang=zh-Hant)
+* [AEM Sites 製作文件](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites 開發文件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites 管理文件](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites 部署文件](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
 * [AEM as a Cloud Service 教學課程](/help/cloud-service/overview.md)
 * [AEM Assets 教學課程](/help/assets/overview.md)
 * [AEM Forms 教學課程](/help/forms/overview.md)

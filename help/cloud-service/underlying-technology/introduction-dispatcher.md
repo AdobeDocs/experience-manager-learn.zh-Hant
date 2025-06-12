@@ -26,4 +26,4 @@ ht-degree: 100%
 
 ## 其他資源 {#additional-resources}
 
-* [[!DNL Dispatcher] 文件](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
+* [[!DNL Dispatcher] 文件](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
