@@ -78,4 +78,4 @@ Adobe Experience Manager (AEM) 現在以雲端服務形式提供使用。AEM as 
 
 ## 其他資源
 
-* [Adobe Experience Manager as a Cloud Service 文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html)
+* [Adobe Experience Manager as a Cloud Service 文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html?lang=zh-Hant)

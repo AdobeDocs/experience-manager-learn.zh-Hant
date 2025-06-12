@@ -134,4 +134,4 @@ ht-degree: 100%
 
 若想更深入探討治理與人力配置模型和原型，請收聽這場一小時的座談會：「角色原型以及為 [ [!DNL AEM Assets]  和  [!DNL Sites] 建立運作框架](https://adobecustomersuccess.adobeconnect.com/p8ml5nmy0758mp4/)」
 
-在[客戶成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html)中心了解關於策略和思想領導力的更多資訊。
+在[客戶成功](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html?lang=zh-Hant)中心了解關於策略和思想領導力的更多資訊。
