@@ -1,6 +1,6 @@
 ---
-title: 使用Edge Delivery Services預覽和發佈內容
-description: 使用Edge Delivery Services和AEM Sidekick預覽和發佈內容
+title: 透過 Edge Delivery Services 預覽和發佈內容
+description: 使用 AEM Sidekick 透過 Edge Delivery Services 預覽和發佈內容
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,14 +13,14 @@ thumbnail: 3425714.jpeg
 duration: 136
 exl-id: e8ec372e-622e-4954-80df-9c4d73265837
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '36'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # 預覽和發佈內容
 
-使用[AEM Sidekick](./sidekick.md)在Edge Delivery Services中預覽和發佈內容。
+使用 [AEM Sidekick](./sidekick.md) 透過 Edge Delivery Services 預覽和發佈內容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3434720/?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3425714/?learn=on)

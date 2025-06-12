@@ -1,6 +1,6 @@
 ---
 title: 產生變化版本
-description: 在Adobe Experience Manager中產生變數可最佳化任何體驗的文字和影像。
+description: Adobe Experience Manager 中的「產生變化版本」能夠針對任何體驗將文字和影像最佳化。
 version: Experience Manager as a Cloud Service
 topic: Content Management
 role: User
@@ -11,18 +11,18 @@ last-substantial-update: 2024-03-14T00:00:00Z
 jira: KT-14911
 exl-id: 1055c45c-7f04-4f8e-bca8-a4a085a718c8
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '73'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # 產生變化版本
 
-在Adobe Experience Manager中產生變體是一種動態工具，可針對任何體驗最佳化文字和影像，將創意與效率無縫整合。
+Adobe Experience Manager 的「產生變化版本」是一項動態工具，可針對任何體驗將文字和影像最佳化，讓創意與效率無縫結合。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427946/?learn=on)
 
-## 在AEM製作中使用產生變數
+## 在 AEM 製作中使用「產生變化版本」
 
-+ __檔案製作：__&#x200B;瞭解如何利用「產生變體」來建立動態和個人化的檔案，將您的檔案型網站提升為更吸引人且吸引人的體驗。 [檢視檔案](https://www.aem.live/docs/sidekick-generate-variations)
++ __文件製作：__&#x200B;了解如何運用「產生變化版本」來動態建立個人化文件，將您的文件型網站提升為更具魅力、引人入勝的體驗。[檢視文件](https://www.aem.live/docs/sidekick-generate-variations)

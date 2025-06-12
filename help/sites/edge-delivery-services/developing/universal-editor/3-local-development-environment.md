@@ -1,6 +1,6 @@
 ---
 title: 設定本機開發環境
-description: 為使用Edge Delivery Services提供並可使用通用編輯器編輯的網站設定本機開發環境。
+description: 針對透過 Edge Delivery Services 傳遞，且可使用通用編輯器進行編輯的網站，設定本機開發環境。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,80 +11,80 @@ jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '994'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # 設定本機開發環境
 
-本機開發環境對於快速開發Edge Delivery Services提供的網站至關重要。 此環境使用本機開發的程式碼，同時從Edge Delivery Services取得內容，讓開發人員可立即檢視程式碼變更。 這類設定可支援快速、反複的開發和測試。
+本機開發環境對於快速開發以 Edge Delivery Services 進行傳遞的網站來說相當重要。此環境從 Edge Delivery Services 取得內容的同時使用本機開發的程式碼，讓開發人員能夠立即檢視程式碼變更。這樣的設定可以支援快速、反覆的開發與測試。
 
-Edge Delivery Services網站專案的開發工具和程式設計為網頁開發人員熟悉，並提供快速且有效率的開發體驗。
+Edge Delivery Services 網站專案的開發工具和流程設計，旨在維持網頁開發人員所熟悉的部分，並提供快速且有效率的開發體驗。
 
-## 開發拓朴
+## 開發拓撲
 
-這部影片會概略介紹可使用Universal Editor編輯的Edge Delivery Services網站專案的開發拓撲。
+此影片內容概述可使用通用編輯器進行編輯之 Edge Delivery Services 網站專案的開發拓撲。
 
->[!VIDEO](https://video.tv.adobe.com/v/3443989/?learn=on&enablevpops&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
 
-+++檢視其他開發拓朴詳細資訊
++++查看其他的開發拓撲詳細資訊
 
-- **GitHub存放庫**：
-   - **用途**：主控網站的程式碼(CSS和JavaScript)。
-   - **結構**： **主要分支**&#x200B;包含生產就緒的程式碼，而其他分支則包含工作程式碼。
-   - **功能**：任何分支的程式碼都可以在&#x200B;**生產**&#x200B;或&#x200B;**預覽**&#x200B;環境中執行，而不會影響已上線的網站。
+- **GitHub 存放庫**：
+   - **用途**：託管網站的程式碼 (CSS 和 JavaScript)。
+   - **結構**：**主要分支**&#x200B;包含生產就緒的程式碼，而其他分支則包含工作程式碼。
+   - **功能**：任何分支的程式碼都可以針對&#x200B;**生產**&#x200B;或&#x200B;**預覽**&#x200B;環境執行，而不會影響上線網站。
 
-- **AEM作者服務**：
-   - **用途**：做為編輯和管理網站內容的標準內容存放庫。
-   - **功能**：內容是由&#x200B;**通用編輯器**&#x200B;讀取和寫入。 已編輯的內容已發佈到&#x200B;**生產**&#x200B;或&#x200B;**預覽**&#x200B;環境中的&#x200B;**Edge Delivery Services**。
+- **AEM Author 服務**：
+   - **用途**：用作編輯和管理網站內容的標準內容存放庫。
+   - **功能**：使用&#x200B;**通用編輯器**&#x200B;讀取及編寫內容。編輯後的內容會發佈至&#x200B;**生產**&#x200B;或&#x200B;**預覽**&#x200B;環境中的 **Edge Delivery Services**。
 
 - **通用編輯器**：
-   - **用途**：提供用於編輯網站內容的WYSIWYG介面。
-   - **功能**：讀取和寫入&#x200B;**AEM作者服務**。 可設定為使用&#x200B;**GitHub存放庫**&#x200B;中任何分支的程式碼來測試及驗證變更。
+   - **用途**：提供所見即所得的介面來編輯網站內容。
+   - **功能**：從中 **AEM Author 服務** 讀取或寫入至其中。可以設定為使用來自 **GitHub 存放庫**&#x200B;任何分支的程式碼進行測試和驗證變更。
 
 - **Edge Delivery Services**：
    - **生產環境**：
-      - **用途**：將即時網站內容和程式碼提供給一般使用者。
-      - **功能**：使用&#x200B;**GitHub存放庫**&#x200B;的&#x200B;**主要分支**&#x200B;的程式碼，提供從&#x200B;**AEM Author服務**&#x200B;發佈的內容。
+      - **用途**：將上線網站的內容和程式碼傳遞給一般使用者。
+      - **功能**：使用來自 **GitHub 存放庫****主要分支**&#x200B;的程式碼，提供由 **AEM Author 服務**&#x200B;發佈的內容。
    - **預覽環境**：
-      - **目的**：提供測試環境，以便在部署之前測試和預覽內容與程式碼。
-      - **功能**：使用&#x200B;**GitHub存放庫**&#x200B;之任何分支的程式碼，提供從&#x200B;**AEM Author服務**&#x200B;發佈的內容，以啟用徹底測試，而不會影響已上線的網站。
+      - **用途**：提供一個中繼環境，在進行部署之前測試和預覽內容及程式碼。
+      - **功能**：使用來自 **GitHub 存放庫**&#x200B;任何分支的程式碼，提供由 **AEM Author 服務**&#x200B;發佈的內容，可在不影響上線網站的情況下完成全面測試。
 
-- **本機開發人員環境**：
-   - **用途**：可讓開發人員在本機撰寫及測試程式碼(CSS和JavaScript)。
+- **本機開發環境**：
+   - **用途**：讓開發人員能夠在本機編寫及測試程式碼 (CSS 和 JavaScript)。
    - **結構**：
-      - **GitHub存放庫**&#x200B;的本機復本，用於分支式開發。
-      - 做為開發伺服器的&#x200B;**AEM CLI**&#x200B;會將本機程式碼變更套用至&#x200B;**預覽環境**，以進行熱過載體驗。
-   - **工作流程**：開發人員在本機撰寫程式碼、認可對有效分支的變更、將分支推送到GitHub、在&#x200B;**通用編輯器** （使用指定的分支）中驗證，並在準備好進行生產部署時將其合併到&#x200B;**主要分支**。
+      - **GitHub 存放庫**&#x200B;原地複製的本機複本，用於分支型開發。
+      - **AEM CLI** (作為開發伺服器) 會將本機程式碼變更套用至&#x200B;**預覽環境**，以提供即時重新載入的體驗。
+   - **工作流程**：開發人員於本機編寫程式碼，將變更提交至工作分支，將分支推送到 GitHub，在&#x200B;**通用編輯器**&#x200B;中 (使用指定的分支) 進行驗證，並在做好準備進行生產部署時將其合併至&#x200B;**主要分支**&#x200B;內。
 
 +++
 
 ## 先決條件
 
-開始開發之前，請在您的電腦上安裝下列專案：
+開始進行開發之前，請在您的機器上安裝下列項目：
 
 1. [Git](https://git-scm.com/)
-1. [Node.js &amp; npm](https://nodejs.org)
-1. [Microsoft Visual Studio Code](https://code.visualstudio.com/) （或類似的程式碼編輯器）
+1. [Node.js 和 npm](https://nodejs.org)
+1. [Microsoft Visual Studio Code](https://code.visualstudio.com/) (或類似的程式碼編輯器)
 
-## 複製GitHub存放庫
+## 原地複製 GitHub 存放庫
 
-將在包含AEM Edge Delivery Services程式碼專案的新程式碼專案章節[&#128279;](./1-new-code-project.md)中建立的GitHub存放庫複製到您的本機開發環境。
+將[新程式碼專案章節中建立的 GitHub 存放庫](./1-new-code-project.md) (其中包含 AEM Edge Delivery Services 程式碼專案)，原地複製到您的本機開發環境。
 
-![GitHub存放庫複製](./assets/3-local-development-environment/github-clone.png)
+![GitHub 存放庫原地複製](./assets/3-local-development-environment/github-clone.png)
 
 ```bash
 $ cd ~/Code
 $ git clone git@github.com:<YOUR_ORG>/aem-wknd-eds-ue.git
 ```
 
-已在`Code`目錄中建立新的`aem-wknd-eds-ue`資料夾，做為專案的根目錄。 雖然專案可以複製到電腦上的任何位置，但本教學課程使用`~/Code`作為根目錄。
+在 `Code` 目錄中建立一個新的 `aem-wknd-eds-ue` 資料夾，作為專案的根目錄。雖然專案可以原地複製到機器上的任何位置，但本教學課程使用 `~/Code` 作為根目錄。
 
 ## 安裝專案相依性
 
-瀏覽至專案資料夾，並安裝`npm install`的必要相依性。 雖然Edge Delivery Services專案不使用傳統的Node.js建置系統（例如Webpack或Vite），但還是需要幾個相依性才能進行本機開發。
+導覽至專案資料夾，並透過 `npm install` 安裝所需的相依性。雖然 Edge Delivery Services 專案不使用 Webpack 或 Vite 等傳統 Node.js 建構系統，但進行本機開發時仍需要一些相依性。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -92,11 +92,11 @@ $ git clone git@github.com:<YOUR_ORG>/aem-wknd-eds-ue.git
 $ npm install
 ```
 
-## 安裝AEM CLI
+## 安裝 AEM CLI
 
-AEM CLI是Node.js命令列工具，專為簡化以Edge Delivery Services為基礎的AEM網站的開發而設計，提供本機開發伺服器，用於快速開發和測試您的網站。
+AEM CLI 是一項 Node.js 命令列工具，用於簡化以 Edge Delivery Services 為基礎的 AEM 網站開發過程，其提供本機開發伺服器，可以快速開發和測試您的網站。
 
-若要安裝AEM CLI，請執行：
+若要安裝 AEM CLI，請執行：
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -104,11 +104,11 @@ AEM CLI是Node.js命令列工具，專為簡化以Edge Delivery Services為基�
 $ npm install @adobe/aem-cli
 ```
 
-也可以使用`npm install --global @adobe/aem-cli`全域安裝AEM CLI。
+也可以使用 `npm install --global @adobe/aem-cli` 全域安裝 AEM CLI。
 
-## 啟動本機AEM開發伺服器
+## 啟動本機 AEM 開發伺服器
 
-`aem up`命令會啟動本機開發伺服器，並自動開啟瀏覽器視窗以顯示伺服器的URL。 此伺服器會成為Edge Delivery Services環境的反向Proxy，在使用本機程式碼庫進行開發時從那裡提供內容。
+`aem up` 命令會啟動本機開發伺服器，並自動開啟連結至伺服器 URL 的瀏覽器視窗。此伺服器會作為 Edge Delivery Services 環境的反向 Proxy，在您使用本機程式碼基底進行開發時，從那裡提供內容。
 
 ```bash
 $ cd ~/Code/aem-wknd-eds-ue 
@@ -125,23 +125,23 @@ info: Local AEM dev server up and running: http://localhost:3000/
 info: Enabled reverse proxy to https://main--aem-wknd-eds-ue--<YOUR_ORG>.aem.page
 ```
 
-AEM CLI會在您的瀏覽器中`http://localhost:3000/`開啟網站。 專案中的變更會自動在網頁瀏覽器中熱重新載入，而內容變更[需要發佈到預覽環境](./6-author-block.md)並重新整理網頁瀏覽器。
+AEM CLI 會在瀏覽器中開啟網站 `http://localhost:3000/`。專案中的變更會在網頁瀏覽器中自動即時重新載入，而內容變更則[需要發佈至預覽環境](./6-author-block.md)並重新整理網頁瀏覽器。
 
-如果網站開啟時頁面為404，則很可能在[新程式碼專案](./1-new-code-project.md)中更新的[fstab.yaml或paths.json](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project)設定不正確，或是變更尚未認可至`main`分支。
+如果網站開啟時出現 404 頁面，可能是在[新程式碼專案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project)中更新的 [fstab.yaml 或 paths.json](./1-new-code-project.md) 設定不正確，或變更尚未提交至 `main` 分支。
 
-## 建立JSON片段
+## 建置 JSON 片段
 
-使用[Edge Delivery Services Boilerplate XWalk範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk)建立的AEM專案仰賴可在通用編輯器中啟用區塊製作的JSON設定。
+使用 [AEM 樣板專案 XWalk 範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk)建立的 Edge Delivery Services 專案，倚賴啟用通用編輯器之區塊製作功能的 JSON 設定。
 
-- **JSON片段**：與其關聯的區塊一起儲存，並定義區塊模型、定義和篩選器。
-   - **模型片段**：儲存在`/blocks/example/_example.json`。
-   - **定義片段**：儲存在`/blocks/example/_example.json`。
-   - **篩選片段**：儲存在`/blocks/example/_example.json`。
+- **JSON 片段**：與其關聯的區塊一起儲存，並定義區塊模型、定義和篩選器。
+   - **模型片段**：儲存在 `/blocks/example/_example.json`。
+   - **定義片段**：儲存在 `/blocks/example/_example.json`。
+   - **篩選器片段**：儲存在 `/blocks/example/_example.json`。
 
 
-[AEM Boilerplate XWalk專案範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk)包含[Husky](https://typicode.github.io/husky/)預先認可連結，可偵測JSON片段的變更，並在`git commit`將這些變更編譯為適當的`component-*.json`檔案。
+[AEM 樣板專案 XWalk 專案範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk)包含一個 [Husky](https://typicode.github.io/husky/) 預先提交 Hook，其能偵測 JSON 片段的變更，並在 `git commit` 時將其編譯成適當的 `component-*.json` 檔案。
 
-雖然下列NPM指令碼可以透過`npm run`手動執行以建置JSON檔案，但這通常不是必要的，因為Husky預先認可勾點會自動處理它。
+雖然可以透過 `npm run` 手動執行以下 NPM 指令碼來建置 JSON 檔案，但通常不需這麼做，因為 Husky 預先提交 Hook 會自動處理。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -149,22 +149,22 @@ AEM CLI會在您的瀏覽器中`http://localhost:3000/`開啟網站。 專案中
 npm run build:json
 ```
 
-| NPM指令碼 | 描述 |
+| NPM 指令碼 | 說明 |
 |--------------------|-----------------------------------------------------------------------------|
-| `build:json` | 從片段建置所有JSON檔案，並將其新增至適當的`component-*.json`檔案。 |
-| `build:json:models` | 建置區塊JSON片段並將它們編譯成`/component-models.json`。 |
-| `build:json:definitions` | 建置頁面JSON片段並將它們編譯成`/component-definitions.json`。 |
-| `build:json:filters` | 建置頁面JSON片段並將它們編譯成`/component-filters.json`。 |
+| `build:json` | 使用片段建置所有 JSON 檔案，並將其加入到適當的 `component-*.json` 檔案中。 |
+| `build:json:models` | 建置區塊 JSON 片段並將其編譯成 `/component-models.json`。 |
+| `build:json:definitions` | 建置頁面 JSON 片段並將其編譯成 `/component-definitions.json`。 |
+| `build:json:filters` | 建置頁面 JSON 片段並將其編譯成 `/component-filters.json`。 |
 
 >[!TIP]
 >
-> 在對片段檔案進行任何變更後執行`npm run build:json`以重新產生主要JSON檔案。
+> 對片段檔案進行任何變更後，執行 `npm run build:json` 來重新產生主要的 JSON 檔案。
 
-## 鑲邊
+## Linting
 
-Linting可確保程式碼品質和一致性，這是將變更合併到`main`分支之前的Edge Delivery Services專案所必需的。
+Linting 能確保程式碼品質和一致性，而這是 Edge Delivery Services 專案將變更合併至 `main` 分支之前所必需的。
 
-NPM指令碼可以透過`npm run`執行，例如：
+NPM 指令碼可以透過 `npm run` 執行，例如：
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -172,15 +172,15 @@ NPM指令碼可以透過`npm run`執行，例如：
 $ npm run lint
 ```
 
-| NPM指令碼 | 描述 |
+| NPM 指令碼 | 說明 |
 |------------------|--------------------------------------------------|
-| `lint:js` | 執行JavaScript Linting檢查。 |
-| `lint:css` | 執行CSS篩選檢查。 |
-| `lint` | 執行JavaScript和CSS篩選檢查。 |
+| `lint:js` | 執行 JavaScript 的 linting 檢查。 |
+| `lint:css` | 執行 CSS 的 linting 檢查。 |
+| `lint` | 執行 JavaScript 和 CSS 的 linting 檢查。 |
 
-### 自動修正Linting問題
+### 自動修正 linting 問題
 
-您可以將下列`scripts`新增至專案的`package.json`，以自動解決Linting問題，並且可以透過`npm run`執行：
+您可以在專案的 `package.json` 中新增以下 `scripts`，以便自動解決 linting 問題，且能透過 `npm run` 執行：
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -188,21 +188,21 @@ $ npm run lint
 $ npm run lint:fix
 ```
 
-這些指令碼未預先設定AEM Boilerplate XWalk範本，但可新增至`package.json`檔案：
+這些指令碼沒有預先完成 AEM 樣板專案 XWalk 範本相關設定，但可以新增至 `package.json` 檔案中：
 
 >[!BEGINTABS]
 
 >[!TAB 其他指令碼]
 
-| NPM指令碼 | 命令 | 描述 |
+| NPM 指令碼 | 命令 | 說明 |
 |------------------|------------------------------------------------|-------------------------------------------------------|
-| `lint:js:fix` | `npm run lint:js -- --fix` | 自動修正JavaScript Linting問題。 |
-| `lint:css:fix` | `stylelint blocks/**/*.css styles/*.css -- --fix` | 自動修正CSS篩選問題。 |
-| `lint:fix` | `npm run lint:js:fix && npm run lint:css:fix` | 執行JS和CSS修正指令碼以快速清理。 |
+| `lint:js:fix` | `npm run lint:js -- --fix` | 自動修正 JavaScript 的 linting 問題。 |
+| `lint:css:fix` | `stylelint blocks/**/*.css styles/*.css -- --fix` | 自動修正 CSS 的 linting 問題。 |
+| `lint:fix` | `npm run lint:js:fix && npm run lint:css:fix` | 執行 JS 和 CSS 的修正指令碼以快速清理。 |
 
->[!TAB package.json範例]
+>[!TAB package.json 範例]
 
-下列指令碼專案可新增至`package.json` `scripts`陣列。
+以下指令碼項目可以新增至 `package.json` `scripts` 陣列中。
 
 ```json
 {

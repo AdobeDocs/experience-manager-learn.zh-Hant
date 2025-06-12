@@ -1,6 +1,6 @@
 ---
-title: 使用Git
-description: 如何使用Git設定Edge Delivery Services開發環境。
+title: 使用 Git
+description: 如何使用 Git 設定 Edge Delivery Services 開發環境。
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,14 +13,14 @@ thumbnail: 3425718.jpeg
 duration: 147
 exl-id: 68866a41-7790-49f9-bb9e-49b63ae3b3af
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '25'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 設定Git
+# 設定 Git
 
-使用Git設定Edge Delivery Services開發環境。
+使用 Git 設定 Edge Delivery Services 開發環境。
 
->[!VIDEO](https://video.tv.adobe.com/v/3441837/?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3425718/?learn=on)

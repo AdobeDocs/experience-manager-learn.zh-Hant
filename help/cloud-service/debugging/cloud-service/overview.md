@@ -1,6 +1,6 @@
 ---
-title: 為AEM as a Cloud Service除錯
-description: 在提供自助服務、可擴充的雲端基礎結構上，AEM開發人員需要瞭解如何瞭解和偵錯AEM as a Cloud Service的各種層面，從建立和部署到取得執行AEM應用程式的詳細資訊。
+title: AEM as a Cloud Service 偵錯
+description: 在自助服務、可擴展的雲端基礎結構上執行，要求 AEM 開發人員了解如何理解 AEM as a Cloud Service 的各個面向並進行偵錯，包括建置和部署以及獲取正在執行的 AEM 應用程式的詳細資訊。
 feature: Developer Tools
 version: Experience Manager as a Cloud Service
 doc-type: Tutorial
@@ -11,36 +11,36 @@ level: Beginner, Intermediate
 exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
 duration: 60
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '314'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# 為AEM as a Cloud Service除錯
+# AEM as a Cloud Service 偵錯
 
-AEM as a Cloud Service是以雲端原生方式使用AEM應用程式。 AEM as a Cloud Service在自助式、可擴充的雲端基礎結構上執行，這要求AEM開發人員瞭解如何瞭解和偵錯AEM as a Cloud Service的各個層面，從建立和部署到取得執行AEM應用程式的詳細資訊。
+AEM as a Cloud Service 是善用 AEM 應用程式的雲端原生方法。AEM as a Cloud Service 在自助服務、可擴展的雲端基礎結構上執行，要求 AEM 開發人員了解如何理解 AEM as a Cloud Service 的各個面向並進行偵錯，包括建置和部署以及獲取正在執行的 AEM 應用程式的詳細資訊。
 
 ## 記錄
 
-記錄檔提供應用程式在AEM as a Cloud Service中運作方式的詳細資訊，以及部署問題的深入分析。
+記錄會提供關於您的應用程式在 AEM as a Cloud Service 中如何運作的詳細資訊，以及對部署問題的深入分析。
 
-[使用記錄檔對AEM as a Cloud Service除錯](./logs.md)
+[使用記錄對 AEM as a Cloud Service 進行偵錯](./logs.md)
 
 ## 建置和部署
 
-Adobe Cloud Manager管道會透過一系列步驟部署AEM應用程式，以判斷部署至AEM as a Cloud Service時的程式碼品質和可行性。 每個步驟都可能導致失敗，因此瞭解如何偵錯組建以確定根本原因，以及如何解決任何失敗很重要。
+Adobe Cloud Manager 管道會透過一系列步驟部署 AEM 應用程式，以判定部署至 AEM as a Cloud Service 時的程式碼品質和可行性。每個步驟都可能導致失敗，因此了解如何對建置過程進行偵錯來判斷根本原因，以及了解如何解決任何失敗是非常重要的。
 
-[偵錯AEM as a Cloud Service建置和部署](./build-and-deployment.md)
+[針對 AEM as a Cloud Service 的建置及部署進行偵錯](./build-and-deployment.md)
 
-## 開發人員主控台
+## Developer Console
 
-開發人員控制檯提供各種AEM as a Cloud Service環境的資訊和內省，有助於瞭解如何在AEM as a Cloud Service中辨識您的應用程式和發揮其功能。
+Developer Console 會提供關於 AEM as a Cloud Service 環境的各種資訊和深入檢查的功能，有助於了解您的應用程式如何被 AEM as a Cloud Service 識別，以及其如何在 AEM as a Cloud Service 中運作。
 
-[使用Developer Console偵錯AEM as a Cloud Service](./developer-console.md)
+[使用 Developer Console 對 AEM as a Cloud Service 進行偵錯](./developer-console.md)
 
 ## 存放庫瀏覽器
 
-存放庫瀏覽器是功能強大的工具，可讓您檢視AEM的基本資料存放區，以便更輕鬆地偵錯AEM as a Cloud Service環境。 存放庫瀏覽器支援生產、暫存和開發以及作者、發佈和預覽服務中AEM的資源和屬性的唯讀檢視。
+存放庫瀏覽器是功能強大的工具，可以了解 AEM 基礎資料儲存區的情形，因而能輕鬆對 AEM as a Cloud Service 進行偵錯。存放庫瀏覽器支援顯示在生產、中繼和開發以及製作、發佈和預覽服務中 AEM 所有資源和屬性的唯讀視圖。
 
-[使用存放庫瀏覽器除錯AEM as a Cloud Service](./repository-browser.md)
+[使用存放庫瀏覽器對 AEM as a Cloud Service 進行偵錯](./repository-browser.md)

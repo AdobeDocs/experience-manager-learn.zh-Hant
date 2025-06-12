@@ -1,6 +1,6 @@
 ---
-title: 設定Edge Delivery Services的本機開發環境
-description: 如何設定Edge Delivery Services的本機開發環境。
+title: 設定 Edge Delivery Services 的本機開發環境
+description: 如何設定 Edge Delivery Services 的本機開發環境。
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,35 +13,35 @@ thumbnail: 3425717.jpeg
 duration: 169
 exl-id: 0f3e50f0-88d8-46be-be8b-0f547c3633a6
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '87'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # 設定本機開發環境
 
-如何設定Edge Delivery Services開發的本機開發環境。
+如何設定用於開發 Edge Delivery Services 的本機開發環境。
 
->[!VIDEO](https://video.tv.adobe.com/v/3434742/?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3425717/?learn=on)
 
 
 ## 影片中概述的步驟
 
-1. 安裝AEM CLI
+1. 安裝 AEM CLI
 
    ```
    $ sudo npm install -g @adobe/aem-cli
    ```
 
-1. 將目錄變更至您的專案目錄，此目錄是從[AEM樣板](https://github.com/adobe/aem-boilerplate)範本建立的Git存放庫。
+1. 將目錄變更為您的專案目錄，該目錄是使用 [AEM 樣板專案](https://github.com/adobe/aem-boilerplate)範本所建立的 git 存放庫。
 
    ```
    $ git clone git@github.com:my-org/my-project.git
    $ cd my-project
    ```
 
-1. 執行AEM CLI以啟動本機AEM執行個體。
+1. 執行 AEM CLI 來啟動本機 AEM 實例。
 
    ```
    $ pwd
@@ -60,4 +60,4 @@ ht-degree: 1%
    opening default browser: http://localhost:3000/
    ```
 
-1. 開啟http://localhost:3000/您的網頁瀏覽器，檢視您的AEM網站。
+1. 在您的網頁瀏覽器開啟 http://localhost:3000/，即可查看您的 AEM 網站。

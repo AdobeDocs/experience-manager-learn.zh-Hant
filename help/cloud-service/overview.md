@@ -1,23 +1,23 @@
 ---
-title: Adobe Experience Manager as a Cloud Service影片和教學課程
-description: Adobe Experience Manager (AEM)as a Cloud Service教學課程的集合
+title: Adobe Experience Manager as a Cloud Service 影片和教學課程
+description: Adobe Experience Manager (AEM) as a Cloud Service 教學課程集合
 sub-product: Experience Manager as a Cloud Service
 jira: KT-3289
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
 duration: 434
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '156'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# AEM as a Cloud Service影片和教學課程 {#overview}
+# AEM as a Cloud Service 影片和教學課程 {#overview}
 
 {{edge-delivery-services}}
 
-Adobe Experience Manager (AEM)現在可as a Cloud Service使用。 AEM as a Cloud Service推出新一代Experience Manager產品線，以過去的投資和創新為基礎，保留及擴充所有使用案例和功能。
+Adobe Experience Manager (AEM) 現在以雲端服務形式提供使用。AEM as a Cloud Service 推出新一代 Experience Manager 產品系列，以過去的投資和創新為基礎，保留及擴充所有使用案例和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
@@ -30,20 +30,20 @@ Adobe Experience Manager (AEM)現在可as a Cloud Service使用。 AEM as a Clou
 
 <div id="staff-picks-section">
 
-## 員工精選
+## 員工精選內容
 
 <table>
    <td>
       <a href="./accessing/overview.md">
-      <img alt="設定對 AEM as a Cloud Service 的存取權限" src="./assets/overview/staff-pick__accessing.png"/>
+      <img alt="設定對 AEM as a Cloud Service 的存取權" src="./assets/overview/staff-pick__accessing.png"/>
       </a>
       <div>
          <a href="./accessing/overview.md">
-         <strong>設定AEM教學課程的存取權</strong>
+         <strong>設定對 AEM 的存取權教學課程</strong>
          </a>
       </div>
       <p>
-         <em>在Adobe Admin Console中設定IMS使用者以存取AEM。</em>
+         <em>在 Adobe Admin Console 中設定 IMS 使用者以便能存取 AEM。</em>
       <p>
    </td>   
    <td>
@@ -56,20 +56,20 @@ Adobe Experience Manager (AEM)現在可as a Cloud Service使用。 AEM as a Clou
          </a>
       </div>
       <p>
-         <em>讓您的本機開發電腦準備好進行AEM as a Cloud Service開發！</em>
+         <em>讓您的本機開發機器為 AEM as a Cloud Service 的開發做好準備！</em>
       <p>
    </td>   
    <td>
       <a href="./debugging/aem-sdk-local-quickstart/overview.md">
-      <img alt="偵錯AEM SDK的本機Quickstart" src="./assets/overview/staff-pick__debugging.png"/>
+      <img alt="對 AEM SDK 的本機快速入門進行偵錯" src="./assets/overview/staff-pick__debugging.png"/>
       </a>
       <div>
          <a href="./debugging/aem-sdk-local-quickstart/overview.md">
-         <strong>偵錯AEM SDK</strong>
+         <strong>對 AEM SDK 進行偵錯</strong>
          </a>
       </div>
       <p>
-         <em>探索用來在AEM as a Cloud Service SDK的本機Quickstart上偵錯應用程式的工具。</em>
+         <em>探索用於對 AEM as a Cloud Service SDK 本機快速入門上之應用程式進行偵錯的工具。</em>
       <p>
    </td>
 </table>
@@ -78,4 +78,4 @@ Adobe Experience Manager (AEM)現在可as a Cloud Service使用。 AEM as a Clou
 
 ## 其他資源
 
-* [Adobe Experience Manager as a Cloud Service檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html?lang=zh-Hant)
+* [Adobe Experience Manager as a Cloud Service 文件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html)

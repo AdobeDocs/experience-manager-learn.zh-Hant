@@ -1,6 +1,6 @@
 ---
-title: 在AEM中使用SSL精靈
-description: Adobe Experience Manager的SSL設定精靈，讓您更輕鬆地設定AEM執行個體以透過HTTPS執行。
+title: 在 AEM 中使用 SSL 精靈
+description: Adobe Experience Manager 的 SSL 設定精靈，讓您更輕鬆地設定 AEM 實例透過 HTTPS 執行。
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-13839
 doc-type: Technical Video
@@ -11,84 +11,84 @@ exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
 last-substantial-update: 2023-08-08T00:00:00Z
 duration: 564
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '448'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 在AEM中使用SSL精靈
+# 在 AEM 中使用 SSL 精靈
 
-瞭解如何在Adobe Experience Manager中設定SSL，使用內建SSL精靈讓SSL透過HTTPS執行。
+了解如何使用內建的 SSL 精靈，在 Adobe Experience Manager 中設定 SSL，使其透過 HTTPS 執行。
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
 
 
 >[!NOTE]
 >
->對於受管理的環境，最好由IT部門提供CA信任的憑證和金鑰。
+>對於受管理的環境，IT 部門最好提供 CA 信任的憑證和金鑰。
 >
->自我簽署憑證僅用於開發目的。
+>自我簽署的憑證僅能供開發使用。
 
-## 使用SSL設定精靈
+## 使用 SSL 設定精靈
 
-瀏覽至&#x200B;__AEM Author > Tools > Security > SSL Configuration__，然後開啟&#x200B;__SSL Configuration Wizard__。
+導覽至&#x200B;__「AEM Author」>「工具」>「安全性」>「SSL 設定」__，然後開啟「__SSL 設定精靈__」。
 
-![SSL設定精靈](assets/use-the-ssl-wizard/ssl-config-wizard.png)
+![SSL 設定精靈](assets/use-the-ssl-wizard/ssl-config-wizard.png)
 
-### 建立存放區認證
+### 建立儲存認證
 
-若要建立與`ssl-service`系統使用者及全域&#x200B;_信任存放區_&#x200B;相關聯的&#x200B;_金鑰存放區_，請使用&#x200B;__存放區認證__&#x200B;精靈步驟。
+若要建立與 `ssl-service` 系統使用者關聯的 _Key Store_ 以及全域 _Trust Store_，請使用「__儲存認證__」精靈步驟。
 
-1. 輸入與`ssl-service`系統使用者相關聯之&#x200B;__金鑰存放區__&#x200B;的密碼及確認密碼。
-1. 輸入全域&#x200B;__信任存放區__&#x200B;的密碼及確認密碼。 請注意，這是系統範圍的信任存放區，如果已建立，則會忽略輸入的密碼。
+1. 輸入與 `ssl-service` 系統使用者關聯之 __Key Store__ 的密碼，並確認密碼。
+1. 輸入全域 __Trust Store__ 的密碼，並確認密碼。請注意，這是一個全系統適用的 Trust Store，若先前便已建立，則會忽略所輸入的密碼。
 
-   ![SSL設定 — 儲存認證](assets/use-the-ssl-wizard/store-credentials.png)
+   ![SSL 設定 - 儲存認證](assets/use-the-ssl-wizard/store-credentials.png)
 
 ### 上傳私密金鑰和憑證
 
-若要上傳&#x200B;_私密金鑰_&#x200B;和&#x200B;_SSL憑證_，請使用&#x200B;__金鑰和憑證__&#x200B;精靈步驟。
+若要上傳&#x200B;_私密金鑰_&#x200B;和 _SSL 憑證_，請使用「__金鑰和憑證__」精靈步驟。
 
-一般而言，您的IT部門會提供CA信任的憑證和金鑰，但自我簽署憑證可用於&#x200B;__開發__&#x200B;和&#x200B;__測試__&#x200B;用途。
+通常，您的 IT 部門會提供 CA 信任的憑證和金鑰，但自我簽署憑證可供&#x200B;__開發__&#x200B;和&#x200B;__測試__&#x200B;使用。
 
-若要建立或下載自我簽署憑證，請參閱[自我簽署私密金鑰與憑證](#self-signed-private-key-and-certificate)。
+若要建立或下載自我簽署憑證，請參閱[自我簽署的私密金鑰和憑證](#self-signed-private-key-and-certificate)。
 
-1. 以DER （辨別編碼規則）格式上傳&#x200B;__私密金鑰__。 不同於PEM，DER編碼的檔案不包含純文字陳述式，例如`-----BEGIN CERTIFICATE-----`
-1. 以`.crt`格式上傳相關聯的&#x200B;__SSL憑證__。
+1. 以 DER (可分辨編碼規則) 格式上傳&#x200B;__私密金鑰__。與 PEM 不同，DER 編碼的檔案不包含純文字語句，例如 `-----BEGIN CERTIFICATE-----`
+1. 以 `.crt` 格式上傳相關聯的 __SSL 憑證__。
 
-   ![SSL設定 — 私密金鑰和憑證](assets/use-the-ssl-wizard/privatekey-and-certificate.png)
+   ![SSL 設定 - 私密金鑰和憑證](assets/use-the-ssl-wizard/privatekey-and-certificate.png)
 
-### 更新SSL聯結器詳細資料
+### 更新 SSL 連接器詳細資訊
 
-若要更新&#x200B;_主機名稱_&#x200B;和&#x200B;_連線埠_，請使用&#x200B;__SSL聯結器__&#x200B;精靈步驟。
+若要更新&#x200B;_主機名稱_&#x200B;和&#x200B;_連接埠_，請使用「__SSL 連接器__」精靈步驟。
 
-1. 更新或驗證&#x200B;__HTTPS主機名稱__&#x200B;值，它應該與憑證中的`Common Name (CN)`相符。
-1. 更新或驗證&#x200B;__HTTPS連線埠__&#x200B;值。
+1. 更新或驗證「__HTTPS 主機名稱__」值，其應與憑證的 `Common Name (CN)` 相符。
+1. 更新或驗證「__HTTPS 連接埠__」值。
 
-   ![SSL設定 — SSL聯結器詳細資料](assets/use-the-ssl-wizard/ssl-connector-details.png)
+   ![SSL 設定 - SSL 連接器詳細資訊](assets/use-the-ssl-wizard/ssl-connector-details.png)
 
-### 驗證SSL設定
+### 驗證 SSL 設定
 
-1. 若要驗證SSL，請按一下&#x200B;__移至HTTPS URL__&#x200B;按鈕。
-1. 如果使用自我簽署憑證，您會看到`Your connection is not private`錯誤。
+1. 若要驗證 SSL，請按一下「__前往 HTTPS URL__」按鈕。
+1. 如果使用自我簽署憑證，您會看到 `Your connection is not private` 錯誤。
 
-   ![SSL設定 — 透過HTTPS驗證AEM](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
+   ![SSL 設定 - 透過 HTTPS 驗證 AEM](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
 
-## 自我簽署私密金鑰和憑證
+## 自我簽署的私密金鑰和憑證
 
-下列zip包含在本機設定AEM SSL所需的[!DNL DER]和[!DNL CRT]檔案，且僅供本機開發使用。
+以下 zip 檔案包含在本機設定 AEM SSL 所需的 [!DNL DER] 和 [!DNL CRT] 檔案，僅供本機開發使用。
 
-提供[!DNL DER]和[!DNL CERT]檔案是為了方便起見，並使用下列[產生私密金鑰和自簽憑證]一節中概述的步驟產生。
+為方便起見提供 [!DNL DER] 和 [!DNL CERT] 檔案，這是使用下方「產生私密金鑰和自我簽署憑證」區段中所列出的步驟所產生的。
 
-如有需要，憑證密語為&#x200B;**admin**。
+如有需要，憑證密碼為 **admin**。
 
-此localhost — 私密金鑰和自簽的certificate.zip （2028年7月到期）
+localhost - private key and self-signed certificate.zip (2028 年 7 月到期)
 
 [下載憑證檔案](assets/use-the-ssl-wizard/certificate.zip)
 
-### 私密金鑰和自簽憑證產生
+### 產生私密金鑰和自我簽署憑證
 
-上述影片說明如何使用自我簽署憑證，在AEM製作執行個體上設定SSL。 使用[[!DNL OpenSSL]](https://www.openssl.org/)的下列命令可以產生私密金鑰和憑證，以用於精靈的步驟2。
+上述影片內容描述使用自我簽署的憑證在 AEM 作者實例上建立和設定 SSL 的過程。下方使用 [[!DNL OpenSSL]](https://www.openssl.org/) 的命令，可以產生用於精靈步驟 2 的私密金鑰和憑證。
 
 ```shell
 ### Create Private Key

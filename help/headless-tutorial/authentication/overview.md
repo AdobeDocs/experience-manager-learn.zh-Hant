@@ -1,6 +1,6 @@
 ---
-title: 從外部應用程式向AEM as a Cloud Service進行驗證
-description: 探索外部應用程式如何使用本機開發存取權杖和服務認證，以程式設計方式透過HTTP驗證並與AEM as a Cloud Service互動。
+title: 從外部應用程式向 AEM as a Cloud Service 進行驗證
+description: 探索外部應用程式如何使用本機開發存取權杖和服務認證，以程式設計方式透過 HTTP 對 AEM as a Cloud Service 進行驗證並與之互動。
 version: Experience Manager as a Cloud Service
 feature: APIs
 jira: KT-6785
@@ -12,66 +12,66 @@ doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
 duration: 253
 source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '621'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 對AEM as a Cloud Service的權杖型驗證
+# 對 AEM as a Cloud Service 進行權杖型驗證
 
-AEM公開各種能以無周邊方式互動的HTTP端點，從GraphQL、AEM Content Services到Assets HTTP API。 通常，這些Headless消費者可能需要向AEM驗證以存取受保護的內容或操作。 為方便起見，AEM支援對來自外部應用程式、服務或系統的HTTP請求進行權杖式驗證。
+AEM 公開各種可以透過無周邊方式進行互動的 HTTP 端點，包括 GraphQL、AEM 內容服務以及 Assets HTTP API。通常，這些無周邊使用者需要向 AEM 進行驗證後，才能存取受保護的內容或動作。為了更方便驗證，AEM 支援對外部應用程式、服務或系統的 HTTP 要求進行權杖型驗證。
 
-在本教學課程中，請深入探索外部應用程式可如何以程式設計方式使用存取權杖並透過HTTP向AEM as a Cloud Service驗證及互動。
+在本教學課程中，我們會探索外部應用程式如何以程式設計方式使用存取權杖，並透過 HTTP 向 AEM as a Cloud Service 進行驗證並與其互動。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
 
 ## 必要條件
 
-在參加本教學課程之前，請確定已具備下列條件：
+在繼續本教學課程之前，請確保以下事項已完備：
 
-1. 存取AEM as a Cloud Service環境（最好是開發環境或沙箱計畫）
-1. AEM as a Cloud Service環境作者服務的成員資格AEM管理員產品設定檔
-1. 您的Adobe IMS組織管理員的成員資格或存取權（他們將必須執行[服務認證](./service-credentials.md)的一次性初始化）
-1. 最新[WKND網站](https://github.com/adobe/aem-guides-wknd)已部署至您的Cloud Service環境
+1. AEM as a Cloud Service 環境的存取權 (最好為開發環境或沙箱方案)
+1. AEM as a Cloud Service 環境中 Author 服務 AEM 管理員產品設定檔的會籍
+1. 您的 Adobe IMS 組織管理員的會籍或存取權 (必須執行[服務認證](./service-credentials.md)的一次性初始化)
+1. 最新的 [WKND 網站](https://github.com/adobe/aem-guides-wknd)已部署至您的雲端服務環境
 
-## 外部應用程式概述
+## 外部應用程式概觀
 
-此教學課程使用從命令列執行的[簡單Node.js應用程式](./assets/aem-guides_token-authentication-external-application.zip)，以使用[Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=zh-Hant)更新AEM as a Cloud Service上的資產中繼資料。
+本教學課程使用從命令列執行的[簡單 Node.js 應用程式](./assets/aem-guides_token-authentication-external-application.zip)，透過 [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) 更新 AEM as a Cloud Service 上的資產中繼資料。
 
-Node.js應用程式的執行流程如下：
+Node.js 應用程式的執行流程如下：
 
 ![外部應用程式](./assets/overview/external-application.png)
 
-1. 從命令列叫用Node.js應用程式
-1. 命令列引數定義：
-   + 要連線的AEM as a Cloud Service Author服務主機(`aem`)
-   + 資產已更新的AEM資產資料夾(`folder`)
-   + 要更新的中繼資料屬性和值（`propertyName`和`propertyValue`）
-   + 檔案的本機路徑，提供存取AEM as a Cloud Service所需的認證(`file`)
-1. 用來驗證AEM的存取權杖衍生自透過命令列引數`file`提供的JSON檔案
+1. Node.js 應用程式是從命令列叫用的
+1. 命令列參數定義：
+   + 要連線的 AEM as a Cloud Service Author 服務主機 (`aem`)
+   + 所含資產已更新的 AEM 資產資料夾 (`folder`)
+   + 要更新的中繼資料屬性和值 (`propertyName` 和 `propertyValue`)
+   + 提供存取 AEM as a Cloud Service 所需認證之檔案的本機路徑 (`file`)
+1. 用於向 AEM 進行驗證的存取權杖取自透過命令列參數 `file` 提供的 JSON 檔案
 
-   a.如果在JSON檔案(`file`)中提供用於非本機開發的服務認證，則會從Adobe IMS API擷取存取權杖
-1. 應用程式使用存取權杖來存取AEM，並列出在命令列引數`folder`中指定的資料夾中的所有資產
-1. 針對資料夾中的每個資產，應用程式會根據命令列引數`propertyName`和`propertyValue`中指定的屬性名稱和值更新其中繼資料
+   a. 若 JSON 檔案 (`file`) 中提供用於非本機開發的服務認證，則會從 Adobe IMS API 中擷取存取權杖
+1. 應用程式會使用存取權杖存取 AEM，並列出命令列參數 `folder` 中指定之資料夾內所有資產
+1. 針對資料夾中的每項資產，應用程式會根據命令列參數 `propertyName` 和 `propertyValue` 中所指定的屬性名稱和值更新其中繼資料
 
-雖然此範例應用程式為Node.js，但這些互動可以使用不同的程式設計語言開發，並從其他外部系統執行。
+雖然這個應用程式範例使用 Node.js，但這些互動可以使用不同的程式語言進行開發，及從其他外部系統執行。
 
 ## 本機開發存取權杖
 
-本機開發存取權杖是為特定的AEM as a Cloud Service環境產生，可讓您存取製作和發佈服務。  這些存取權杖為暫時性，僅供在開發透過HTTP與AEM互動的外部應用程式或系統時使用。 開發人員不必取得及管理好記的服務認證，而是可以快速輕鬆地自行產生暫時存取權杖，好讓他們開發整合。
+本機開發存取權杖是為特定 AEM as a Cloud Service 環境所產生的，並提供對 Author 與 Publish 服務的存取權。這些存取權杖是臨時的，僅在開發透過 HTTP 與 AEM 互動之外部應用程式或系統期間使用。開發人員不需要取得和管理真正的服務認證，而是可以快速輕鬆地自行產生臨時存取權杖，方便他們開發整合功能。
 
-+ [如何使用本機開發存取權杖](./local-development-access-token.md)
++ [本機開發存取權杖的使用方法](./local-development-access-token.md)
 
 ## 服務認證
 
-服務憑證是任何非開發情況（最明顯的是生產情況）中使用的真實憑證，可促進外部應用程式或系統透過HTTP向AEM as a Cloud Service驗證及與互動。 服務憑證本身不會傳送給AEM進行驗證，而是由外部應用程式使用這些憑證來產生JWT，再與Adobe IMS的API _交換_&#x200B;存取權杖，然後使用後者來向AEM as a Cloud Service驗證HTTP請求。
+服務認證是在任何非開發情境 (最明顯的是生產情境) 中所使用的真實認證，可協助外部應用程式或系統透過 HTTP 與 AEM as a Cloud Service 進行驗證和互動。服務認證本身不會發送到 AEM 進行驗證，反而是外部應用程式會使用這些認證產生 JWT，並與 Adobe IMS 的 API 交換&#x200B;_取得_&#x200B;存取權杖，然後使用該權杖來驗證對 AEM as a Cloud Service 發出的 HTTP 要求。
 
-+ [如何使用服務認證](./service-credentials.md)
++ [服務認證的使用方法](./service-credentials.md)
 
 ## 其他資源
 
 + [下載應用程式範例](./assets/aem-guides_token-authentication-external-application.zip)
-+ JWT建立與交換的其他程式碼範例
-   + [Node.js、Java、Python、C#.NET和PHP程式碼範例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples)
-   + [JavaScript/Axios型程式碼範例](https://github.com/adobe/aemcs-api-client-lib)
++ JWT 建立和交換的其他程式碼範例
+   + [Node.js、Java、Python、C#.NET 和 PHP 程式碼範例](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples)
+   + [以 JavaScript/Axios 為基礎的程式碼範例](https://github.com/adobe/aemcs-api-client-lib)

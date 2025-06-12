@@ -1,6 +1,6 @@
 ---
-title: Edge Delivery Services的檔案結構
-description: 探索如何使用區段、預設內容等專案來組合Edge Delivery Services檔案。
+title: Edge Delivery Services 的文件結構
+description: 探索如何使用區段、預設內容等將 Edge Delivery Services 文件組合在一起。
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,14 +13,14 @@ thumbnail: 3425716.jpeg
 duration: 194
 exl-id: f6e9822b-1803-4aff-aac4-714146568f91
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '40'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 檔案結構
+# 文件結構
 
-探索如何使用區段、預設內容等專案來組合Edge Delivery Services檔案。
+探索如何使用區段、預設內容等將 Edge Delivery Services 文件組合在一起。
 
->[!VIDEO](https://video.tv.adobe.com/v/3445200/?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3425716/?learn=on)

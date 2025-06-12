@@ -1,6 +1,6 @@
 ---
-title: 瞭解使用AEM的跨原始資源共用(CORS)
-description: Adobe Experience Manager的跨原始資源共用(CORS)可協助非AEM網頁屬性對AEM發出使用者端呼叫（包括已驗證和未驗證的呼叫），以擷取內容或直接與AEM互動。
+title: 了解 AEM 的跨來源資源共用 (CORS)
+description: Adobe Experience Manager 的跨來源資源共用 (CORS) 可協助非 AEM 網頁屬性對 AEM 進行已驗證和未驗證兩種用戶端呼叫，以取得內容或直接與 AEM 互動。
 version: Experience Manager 6.4, Experience Manager 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: Security, APIs
@@ -11,89 +11,89 @@ level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 duration: 240
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1011'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# 瞭解跨原始資源共用([!DNL CORS])
+# 了解跨來源資源共用 ([!DNL CORS])
 
-Adobe Experience Manager的跨原始資源共用([!DNL CORS])可協助非AEM Web屬性對AEM進行使用者端呼叫（不論已驗證或未驗證），以擷取內容或直接與AEM互動。
+Adobe Experience Manager 的跨來源資源共用 ([!DNL CORS]) 可協助非 AEM 網頁屬性對 AEM 進行已驗證和未驗證兩種用戶端呼叫，以取得內容或直接與 AEM 互動。
 
-本檔案中概述的OSGI設定足以用於：
+本文件中所列的 OSGI 設定可以滿足以下需求：
 
-1. AEM發佈上的單一來源資源共用
-2. AEM作者的CORS存取權
+1. AEM Publish 上的單一來源資源共用
+2. 對於 AEM Author 的 CORS 存取權
 
-如果AEM Publish上需要多來源CORS存取權，請參閱[此檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=zh-Hant#dispatcher-configuration)。
+若 AEM Publish 上需要多來源 CORS 存取權，請參閱[此文件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=zh-Hant#dispatcher-configuration)。
 
-## Adobe Granite跨原始資源共用原則OSGi設定
+## Adobe Granite 跨來源資源共用原則 OSGi 設定
 
-CORS設定在AEM中作為OSGi設定處理站進行管理，而每個原則都會表示為處理站的一個執行個體。
+CORS 設定在 AEM 中會以 OSGi 設定工廠的形式進行管理，每個原則都是該工廠的一個實例。
 
 * `http://<host>:<port>/system/console/configMgr > Adobe Granite Cross Origin Resource Sharing Policy`
 
-![Adobe Granite跨原始資源共用原則OSGi設定](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
+![Adobe Granite 跨來源資源共用原則 OSGi 設定](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
 
 [!DNL Adobe Granite Cross-Origin Resource Sharing Policy] (`com.adobe.granite.cors.impl.CORSPolicyImpl`)
 
-### 原則選擇
+### 原則選取
 
-原則是透過比較
+選取原則的方式是比較
 
-* 具有`Origin`請求標頭的`Allowed Origin`
-* 和`Allowed Paths` （含要求路徑）。
+* `Allowed Origin` 與 `Origin` 要求標頭
+* 以及 `Allowed Paths` 與要求路徑。
 
-系統會使用符合這些值的第一個原則。 如果找不到任何專案，則會拒絕任何[!DNL CORS]要求。
+使用與這些值相符的第一個原則。若無合適的結果，則會拒絕任何 [!DNL CORS] 要求。
 
-如果完全未設定原則，則不會回應[!DNL CORS]要求，因為處理常式已停用，因此會有效拒絕（只要伺服器的其他模組沒有回應[!DNL CORS]）。
+若完全沒有設定任何原則，[!DNL CORS] 要求也同樣不會得到回應，因為處理常式已停用，因此實際上等同被拒絕，只要沒有其他伺服器模組回應 [!DNL CORS] 的話。
 
 ### 原則屬性
 
 #### [!UICONTROL 允許的來源]
 
 * `"alloworigin" <origin> | *`
-* `origin`引數的清單，指定可存取資源的URI。 對於沒有認證的請求，伺服器可以指定&#42;作為萬用字元，從而允許任何來源存取資源。 *絕對不建議在生產環境中使用`Allow-Origin: *`，因為它允許所有外國（即攻擊者）網站提出瀏覽器嚴禁不含CORS的要求。*
+* 指定可以存取資源之 URI 的 `origin` 參數清單。對於不具備認證的要求，伺服器可以指定 &#42; 作為萬用字元，進而允許任何來源存取該資源。*絕對不建議在生產環境中使用 `Allow-Origin: *`，因為其允許每個外部 (即攻擊者) 網站提出那些若是沒有 CORS 則瀏覽器嚴格禁止的要求。*
 
-#### [!UICONTROL 允許的來源(Regexp)]
+#### [!UICONTROL 允許的來源 (Regexp)]
 
 * `"alloworiginregexp" <regexp>`
-* 指定可存取資源之URI的`regexp`規則運算式清單。 *規則運算式若未小心建置，可能會造成非預期的相符專案，讓攻擊者使用也會符合原則的自訂網域名稱。*&#x200B;通常建議使用`alloworigin`為每個特定的原始主機名稱設定不同的原則，即使這表示重複設定其他原則屬性。 不同的起源往往具有不同的生命週期和要求，因此有利於清晰的分離效果。
+* 指定可以存取資源之 URI 的 `regexp` 規則運算式清單。*如果建置規則運算式時不夠謹慎，可能會導致意外的符合情況，使得攻擊者能夠使用同樣符合原則的自訂網域。*&#x200B;通常會建議使用 `alloworigin`，為每個特定的來源主機名稱分別訂立原則，即使這表示會重複設定其他原則屬性。不同的來源通常有不同的生命週期和需求，因此明確區隔的原則對其有好處。
 
 #### [!UICONTROL 允許的路徑]
 
 * `"allowedpaths" <regexp>`
-* 指定原則套用之資源路徑的`regexp`規則運算式清單。
+* 指定原則適用之來源路徑的 `regexp` 規則運算式清單。
 
 #### [!UICONTROL 公開的標頭]
 
 * `"exposedheaders" <header>`
-* 標頭引數清單，指示瀏覽器可存取的回應標頭。 若為CORS請求（非預檢），若非空白，這些值會複製到`Access-Control-Expose-Headers`回應標頭。 之後，瀏覽器即可存取清單中的值（標頭名稱）；若沒有清單，瀏覽器就無法讀取這些標頭。
+* 指出允許瀏覽器存取的回應標頭的標頭參數清單。針對 CORS 要求 (非預檢)，若其不為空，這些值會被複製到 `Access-Control-Expose-Headers` 回應標頭。然後清單中的值 (標頭名稱) 便可供瀏覽器存取；若沒有這些值，瀏覽器便無法讀取這些標頭。
 
-#### [!UICONTROL 最大年齡]
+#### [!UICONTROL 最長時間]
 
 * `"maxage" <seconds>`
-* `seconds`引數，指出可快取預檢要求結果的時間長度。
+* 指出預檢要求的結果可供快取的時間的 `seconds` 參數。
 
 #### [!UICONTROL 支援的標頭]
 
 * `"supportedheaders" <header>`
-* `header`引數的清單，指出可在發出實際請求時使用哪些HTTP請求標頭。
+* 指出在進行實際要求時可以使用哪些 HTTP 要求標頭的 `header` 參數清單。
 
 #### [!UICONTROL 允許的方法]
 
 * `"supportedmethods"`
-* 方法引數清單，指示提出實際要求時可以使用哪些HTTP方法。
+* 指出在進行實際要求時可以使用哪些 HTTP 方法的方法參數清單。
 
 #### [!UICONTROL 支援認證]
 
 * `"supportscredentials" <boolean>`
-* 指出對要求的回應是否可向瀏覽器公開的`boolean`。 當用作預檢要求回應的一部分時，這表示是否可以使用認證提出實際要求。
+* 指出對於要求之回應是否可以向瀏覽器公開的 `boolean`。用做預檢要求之回應的一部分時，這會指出是否可以使用認證進行實際要求。
 
 ### 設定範例
 
-網站1是基本、匿名存取、唯讀的案例，透過[!DNL GET]請求使用內容：
+網站 1 為基本的、可匿名存取的唯讀情境，透過 [!DNL GET] 要求使用其中的內容：
 
 ```json
 {
@@ -131,7 +131,7 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，而每個原則都會
 }
 ```
 
-網站2較為複雜，且需要授權和變體(POST、PUT、DELETE)請求：
+網站 2 較為複雜，需要經授權的變更性 (POST、PUT、DELETE) 要求：
 
 ```json
 {
@@ -173,21 +173,21 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，而每個原則都會
 }
 ```
 
-## Dispatcher快取疑慮與設定 {#dispatcher-caching-concerns-and-configuration}
+## Dispatcher 快取關注事項和設定 {#dispatcher-caching-concerns-and-configuration}
 
-從Dispatcher 4.1.1+回應標頭開始，即可進行快取。 只要要求為匿名，這樣就可以隨同[!DNL CORS]要求的資源快取[!DNL CORS]標頭。
+從 Dispatcher 4.1.1+ 開始，回應標頭可以被快取。如此一來，只要要求是匿名的，就可以將 [!DNL CORS] 標頭與 [!DNL CORS] 要求的資源一起進行快取。
 
-一般而言，在Dispatcher快取內容的考量也適用於在Dispatcher快取CORS回應標頭。 下表定義何時可以快取[!DNL CORS]個標題（以及[!DNL CORS]個請求）。
+通常，在 Dispatcher 快取內容的考量，也同樣適用於在 Dispatcher 快取 CORS 回應標頭的情形。以下表格內容定義何時可以快取 [!DNL CORS] 標頭 (因此也包含 [!DNL CORS] 要求)。
 
-| 可快取 | 環境 | 驗證狀態 | 解釋 |
+| 可快取 | 環境 | 驗證狀態 | 說明 |
 |-----------|-------------|-----------------------|-------------|
-| 否 | AEM 發佈 | 已驗證 | AEM Author上的Dispatcher快取僅限於靜態的非編寫資產。 這使得在AEM Author上快取大部分資源（包括HTTP回應標頭）變得困難和不實際。 |
-| 否 | AEM 發佈 | 已驗證 | 避免在已驗證的請求上快取CORS標頭。 這符合不快取已驗證請求的常見指南，因為很難判斷請求使用者的驗證/授權狀態將如何影響傳送的資源。 |
-| 是 | AEM 發佈 | 匿名 | Dispatcher中可快取的匿名請求也可以快取其回應標頭，以確保未來的CORS請求可以存取快取的內容。 在AEM發佈&#x200B;**上進行的任何CORS組態變更都必須**，之後才會讓受影響的快取資源失效。 最佳實務指示程式碼或設定部署會清除Dispatcher快取，因為很難判斷哪些快取內容可能會受到影響。 |
+| 否 | AEM Publish | 經驗證 | AEM Author 上的 Dispatcher 快取僅限於靜態、非製作的資產。因此要在 AEM Author 上快取大多數資源 (包括 HTTP 回應標頭) 皆是困難且不切實際的做法。 |
+| 否 | AEM Publish | 經驗證 | 避免快取經驗證要求的 CORS 標頭。這符合避免快取經驗證要求的常見指引，因為很難確定要求使用者的驗證/授權狀態會對所傳遞的資源造成什麼影響。 |
+| 是 | AEM Publish | 匿名 | 在 Dispatcher 可以快取的匿名要求，其回應標頭也可以快取，進而確保未來的 CORS 要求可以存取所快取的內容。AEM Publish 上的任何 CORS 設定變更都&#x200B;**必定**&#x200B;會導致受影響的快取資源失效。最佳實務規定在程式碼或設定部署時需清除 Dispatcher 快取，因為很難判定哪些快取內容可能會受到影響。 |
 
-### 允許CORS要求標頭
+### 允許 CORS 要求標頭
 
-若要允許必要的[HTTP要求標頭傳遞至AEM進行處理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#specifying-the-http-headers-to-pass-through-clientheaders)，Dispatcher的`/clientheaders`設定中必須允許這些標頭。
+若要允許必要的 [HTTP 要求標頭傳遞至 AEM 進行處理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#specifying-the-http-headers-to-pass-through-clientheaders)，必須在 Dispatcher 的 `/clientheaders` 設定中允許這些標頭。
 
 ```
 /clientheaders {
@@ -198,9 +198,9 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，而每個原則都會
 }
 ```
 
-### 快取CORS回應標頭
+### 快取 CORS 回應標頭
 
-若要允許在快取的內容上快取及提供CORS標頭，請將下列[/cache /headers設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#caching-http-response-headers)新增至AEM發佈`dispatcher.any`檔案。
+若要允許在快取內容上快取及提供 CORS 標頭，請將以下 [/cache /headers 設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#caching-http-response-headers)新增至 AEM Publish `dispatcher.any` 檔案中。
 
 ```
 /publishfarm {
@@ -224,29 +224,29 @@ CORS設定在AEM中作為OSGi設定處理站進行管理，而每個原則都會
 }
 ```
 
-請記得在變更`dispatcher.any`檔案之後&#x200B;**重新啟動Web伺服器應用程式**。
+請記得在 `dispatcher.any` 檔案進行變更後，**重新啟動網頁伺服器應用程式**。
 
-可能需要完全清除快取，以確保在`/cache/headers`設定更新後，在下一個請求時適當地快取標題。
+可能需要完全清除快取，以確保在 `/cache/headers` 設定更新後，在下一個要求中能適當地快取標頭。
 
-## 疑難排解CORS
+## CORS 疑難排解
 
-記錄可在`com.adobe.granite.cors`下使用：
+記錄可於 `com.adobe.granite.cors` 找到：
 
-* 啟用`DEBUG`以檢視有關[!DNL CORS]請求被拒絕原因的詳細資料
-* 啟用`TRACE`以檢視所有透過CORS處理常式處理的請求的詳細資料
+* 啟用 `DEBUG` 以查看 [!DNL CORS] 要求被拒絕的詳細原因
+* 啟用 `TRACE` 以查看 CORS 處理常式處理之所有要求的詳細資訊
 
-### 提示：
+### 秘訣：
 
-* 使用curl手動重新建立XHR請求，但請務必複製所有標題和詳細資訊，因為每個標題和詳細資訊都可能有所不同；有些瀏覽器主控台允許複製curl命令
-* 驗證請求是否被CORS處理常式拒絕，而不是被驗證、CSRF權杖篩選器、Dispatcher篩選器或其他安全性層拒絕
-   * 如果CORS處理常式以200回應，但回應中沒有`Access-Control-Allow-Origin`標頭，請檢閱`com.adobe.granite.cors`中[!DNL DEBUG]底下的拒絕記錄檔
-* 如果已啟用[!DNL CORS]請求的Dispatcher快取
-   * 請確定`/cache/headers`設定已套用至`dispatcher.any`，且網頁伺服器已成功重新啟動
-   * 請確保在任何OSGi或dispatcher.any設定變更後已正確清除快取。
-* 如果需要，請檢查請求中是否存在驗證認證。
+* 使用 curl 手動重新建立 XHR 要求，但要確保複製所有標頭和詳細資訊，因為每個項目都會產生影響；有些瀏覽器主控台允許複製 curl 命令
+* 檢查並確認要求是否被 CORS 處理常式拒絕，而不是被驗證、CSRF 權杖篩選器、Dispatcher 篩選器，或者其他安全性層級所拒絕
+   * 若 CORS 處理常式回應 200，但回應中缺少 `Access-Control-Allow-Origin` 標頭，請檢閱 `com.adobe.granite.cors` 中，在 [!DNL DEBUG] 之下的拒絕記錄
+* 若 [!DNL CORS] 要求的 Dispatcher 快取已啟用
+   * 確保 `/cache/headers` 設定已套用至 `dispatcher.any`，並且網頁伺服器已成功重新啟動
+   * 確保在任何 OSGi 或 Dispatcher 設定變更後正確清除快取。
+* 如有需要，在要求時檢查是否存在驗證認證。
 
-## 支援材料
+## 支援素材
 
-* [跨原始資源共用原則的AEM OSGi Configuration Factory](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
-* [跨原始資源共用(W3C)](https://www.w3.org/TR/cors/)
-* [HTTP存取控制(Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+* [適用於跨來源資源共用原則的 AEM OSGi 設定工廠](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
+* [跨來源資源共用 (W3C)](https://www.w3.org/TR/cors/)
+* [HTTP 存取控制 (Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)

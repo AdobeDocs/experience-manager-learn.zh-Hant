@@ -1,6 +1,6 @@
 ---
-title: AEM as a Cloud Service快取
-description: AEM as a Cloud Service快取的一般概觀。
+title: AEM as a Cloud Service 快取
+description: AEM as a Cloud Service 快取的一般概觀。
 version: Experience Manager as a Cloud Service
 feature: Dispatcher, Developer Tools
 topic: Performance
@@ -13,23 +13,23 @@ thumbnail: KT-13858.jpeg
 exl-id: e76ed4c5-3220-4274-a315-a75e549f8b40
 duration: 36
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '206'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM as a Cloud Service快取
+# AEM as a Cloud Service 快取
 
-在AEM as a Cloud Service中，瞭解快取至關重要。 快取涉及儲存及重複使用先前擷取的資料，以提高系統效率並減少載入時間。 此機制可大幅加快內容傳送、提升網站效能及最佳化使用者體驗。
+使用 AEM as a Cloud Service 必須要了解快取。快取包含儲存和重複使用先前擷取的資料，藉以提升系統效率及縮短載入時間。這項機制能顯著加快內容傳遞速度、提升網站效能，並將使用者體驗最佳化。
 
-AEM as a Cloud Service有多個快取層，以及製作和發佈服務之間不同的策略。
+AEM as a Cloud Service 具有多個快取層，而且 Author 與 Publish 服務之間採取不同的快取策略。
 
-![AEM as a Cloud Service快取概觀](./assets/overview/all.png){align="center"}
+![AEM as a Cloud Service 快取概觀](./assets/overview/all.png){align="center"}
 
-## AEM快取
+## AEM 快取
 
-AEM as a Cloud Service具有強大且可設定的多層快取策略，包括CDN、AEM Dispatcher以及客戶管理的CDN （選用）。 可以微調跨圖層的快取以最佳化效能，確保AEM僅提供最佳體驗。 AEM對Author和Publish服務有不同的快取疑慮。 探索以下各服務的快取策略。
+AEM as a Cloud Service 具有強大、可設定的多層快取策略，包括 CDN、AEM Dispatcher，也可以選用客戶管理的 CDN。您可以微調跨層快取以發揮最佳效能，確保 AEM 提供最佳體驗。對於 Author 與 Publish 服務的快取，AEM 對不同的顧慮。探索下方各項服務的快取策略。
 
 
 <div class="columns is-multiline" style="margin-top: 2rem">
@@ -37,17 +37,17 @@ AEM as a Cloud Service具有強大且可設定的多層快取策略，包括CDN�
     <div class="card is-padded-small is-padded-big-mobile" style="height: 100%">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./publish.md" title="AEM發佈服務" tabindex="-1">
-              <img class="is-bordered-r-small" src="./assets/overview/publish-card.png" alt="AEM發佈服務快取">
+            <a href="./publish.md" title="AEM Publish 服務" tabindex="-1">
+              <img class="is-bordered-r-small" src="./assets/overview/publish-card.png" alt="AEM Publish 服務快取">
             </a>
           </figure>
         </div>
         <div class="card-content is-padded-small">
           <div class="content">
-            <p class="headline is-size-6 has-text-weight-bold"><a href="./publish.md" title="AEM發佈服務快取">AEM發佈服務快取</a></p>
-            <p class="is-size-6">AEM Publish服務使用受管理的CDN和AEM Dispatcher，以最佳化一般使用者網頁體驗。</p>
+            <p class="headline is-size-6 has-text-weight-bold"><a href="./publish.md" title="AEM Publish 服務快取">AEM Publish 服務快取</a></p>
+            <p class="is-size-6">AEM Publish 服務使用受管理的 CDN 和 AEM Dispatcher 將一般使用者的網頁體驗最佳化。</p>
             <a href="./publish.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">學習</span>
+              <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
             </a>
           </div>
         </div>
@@ -57,17 +57,17 @@ AEM as a Cloud Service具有強大且可設定的多層快取策略，包括CDN�
         <div class="card is-padded-small is-padded-big-mobile" style="height: 100%">
             <div class="card-image">
             <figure class="image is-16by9">
-                <a href="./author.md" title="AEM作者服務快取" tabindex="-1">
-                <img class="is-bordered-r-small" src="./assets/overview/author-card.png" alt="AEM作者服務快取">
+                <a href="./author.md" title="AEM Author 服務快取" tabindex="-1">
+                <img class="is-bordered-r-small" src="./assets/overview/author-card.png" alt="AEM Author 服務快取">
                 </a>
             </figure>
             </div>
             <div class="card-content is-padded-small">
             <div class="content">
-                <p class="headline is-size-6 has-text-weight-bold"><a href="./author.md" title="AEM作者服務快取">AEM作者服務快取</a></p>
-                <p class="is-size-6">AEM Author服務使用受管理的CDN來提供最佳化的撰寫體驗。</p>
+                <p class="headline is-size-6 has-text-weight-bold"><a href="./author.md" title="AEM Author 服務快取">AEM Author 服務快取</a></p>
+                <p class="is-size-6">AEM Author 服務使用受管理的 CDN 來提供最佳化的製作體驗。</p>
                 <a href="./author.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">學習</span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
                 </a>
             </div>
             </div>

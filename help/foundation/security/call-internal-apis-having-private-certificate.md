@@ -1,6 +1,6 @@
 ---
-title: 呼叫具有私人憑證的內部API
-description: 瞭解如何呼叫具有私人或自我簽署憑證的內部API。
+title: 呼叫具有私人憑證的內部 API
+description: 了解如何呼叫具有私人或自我簽署憑證的內部 API。
 feature: Security
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
@@ -13,32 +13,32 @@ last-substantial-update: 2023-08-25T00:00:00Z
 exl-id: c88aa724-9680-450a-9fe8-96e14c0c6643
 duration: 332
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '467'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 呼叫具有私人憑證的內部API
+# 呼叫具有私人憑證的內部 API
 
-瞭解如何使用私人或自我簽署憑證，從AEM對Web API進行HTTPS呼叫。
+了解如何使用私人或自我簽署憑證，從 AEM 進行對 Web API 的 HTTPS 呼叫。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424853?quality=12&learn=on)
 
-根據預設，嘗試與使用自我簽署憑證的網頁API建立HTTPS連線時，連線會失敗並出現錯誤：
+預設情況下，嘗試與使用自我簽署憑證的 Web API 建立 HTTPS 連線時，連線會失敗並出現下列錯誤：
 
 ```
 PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 ```
 
-此問題通常發生於&#x200B;**API的SSL憑證未由可辨識的憑證授權單位(CA)**&#x200B;核發，且Java™應用程式無法驗證SSL/TLS憑證時。
+當 **API 的 SSL 憑證不是由經認可的憑證授權單位 (CA) 所發行**，而且 Java™ 應用程式無法驗證 SSL/TLS 憑證時，通常會發生這個問題。
 
-讓我們瞭解如何使用[Apache HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)和&#x200B;**AEM的全域TrustStore**，成功呼叫具有私人或自我簽署憑證的API。
+了解如何使用 [Apache HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) 和 **AEM 的全域 TrustStore** 成功呼叫具有私人或自我簽署憑證的 API。
 
 
-## 使用HttpClient的典型API叫用代碼
+## 使用 HttpClient 之原型 API 叫用程式碼
 
-下列程式碼會建立HTTPS連線至網頁API：
+以下程式碼會與 Web API 建立 HTTPS 連線：
 
 ```java
 ...
@@ -57,23 +57,23 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 ...
 ```
 
-程式碼使用[Apache HttpComponent](https://hc.apache.org/)的[HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)程式庫類別及其方法。
+程式碼使用 [Apache HttpComponent](https://hc.apache.org/) 的 [HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) 程式庫類別及其方法。
 
 
-## HttpClient並載入AEM TrustStore資料
+## HttpClient 及載入 AEM TrustStore 素材
 
-若要呼叫具有&#x200B;_私人或自我簽署憑證_&#x200B;的API端點，[HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)的`SSLContextBuilder`必須以AEM的TrustStore載入，並用來促進連線。
+若要呼叫具有&#x200B;_私人或自我簽署憑證_&#x200B;的 API 端點，[HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) 的 `SSLContextBuilder` 必須載入 AEM 的 TrustStore，並藉以使連線更方便。
 
-請遵循下列步驟：
+請依照下列步驟進行：
 
-1. 以&#x200B;**管理員**&#x200B;的身分登入&#x200B;**AEM作者**。
-1. 瀏覽至&#x200B;**AEM Author > Tools > Security > Trust Store**，然後開啟&#x200B;**全域信任存放區**。 如果第一次存取，請設定全域信任存放區的密碼。
+1. 以&#x200B;**管理員**&#x200B;身分登入 **AEM Author**。
+1. 導覽至&#x200B;**「AEM Author」>「工具」>「安全性」>「Trust Store」**，然後開啟「**Global Trust Store**」。若為首次存取，請設定 Global Trust Store 的密碼。
 
-   ![全域信任存放區](assets/internal-api-call/global-trust-store.png)
+   ![Global Trust Store](assets/internal-api-call/global-trust-store.png)
 
-1. 若要匯入私用憑證，請按一下[選取憑證檔案]按鈕&#x200B;**，然後選取副檔名為`.cer`的憑證檔案。**&#x200B;按一下&#x200B;**提交**&#x200B;按鈕以匯入它。
+1. 若要匯入私人憑證，請按一下「**選取憑證檔案**」按鈕，然後選取副檔名為 `.cer` 的所需憑證檔案。按一下「**提交**」按鈕來匯入憑證檔案。
 
-1. 更新如下所示的Java™程式碼。 請注意，若要使用`@Reference`取得AEM的`KeyStoreService`，呼叫程式碼必須是OSGi元件/服務或Sling模型（其中使用`@OsgiService`）。
+1. 如下方所示，更新 Java™ 程式碼。請注意，若要使用 `@Reference` 取得 AEM 的 `KeyStoreService`，呼叫程式碼必須為 OSGi 元件/服務，或者 Sling 模型 (且有使用 `@OsgiService`)。
 
    ```java
    ...
@@ -133,28 +133,28 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
    ...
    ```
 
-   * 將OOTB `com.adobe.granite.keystore.KeyStoreService` OSGi服務插入您的OSGi元件。
-   * 使用`KeyStoreService`和`ResourceResolver`取得全域AEM TrustStore，`getAEMTrustStore(...)`方法會執行此動作。
-   * 建立`SSLContextBuilder`的物件，請參閱Java™ [API詳細資料](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html)。
-   * 使用`loadTrustMaterial(KeyStore truststore,TrustStrategy trustStrategy)`方法將全域AEM TrustStore載入`SSLContextBuilder`。
-   * 在上述方法中傳遞`TrustStrategy`的`null`，可確保在API執行期間只有AEM信任憑證能夠成功。
+   * 將 OOTB `com.adobe.granite.keystore.KeyStoreService` OSGi 服務注入到您的 OSGi 元件中。
+   * 使用 `KeyStoreService` 和 `ResourceResolver` 取得全域 AEM TrustStore，`getAEMTrustStore(...)` 方法可以完成這項作業。
+   * 建立一個 `SSLContextBuilder` 物件，請參閱 Java™ [API 詳細資訊](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html)。
+   * 使用 `loadTrustMaterial(KeyStore truststore,TrustStrategy trustStrategy)` 方法將全域 AEM TrustStore 載入到 `SSLContextBuilder` 中。
+   * 在上述方法中，對 `TrustStrategy` 傳遞 `null`，確保在 API 執行期間只有 AEM 信任的憑證會成功。
 
 
 >[!CAUTION]
 >
->使用上述方法執行時，具有有效CA核發憑證的API呼叫會失敗。 遵循此方法時，只允許使用AEM信任憑證的API呼叫成功。
+>採取前述方式執行時，使用 CA 發行之有效憑證的 API 呼叫會失敗。依照此方法進行時，唯有使用 AEM 信任之憑證的 API 呼叫才會成功。
 >
->使用[標準方法](#prototypical-api-invocation-code-using-httpclient)執行有效CA簽發憑證的API呼叫，這表示只有與私人憑證相關聯的API才應該使用先前提到的方法執行。
+>使用[標準方法](#prototypical-api-invocation-code-using-httpclient)執行 CA 發行之有效憑證的 API 呼叫，表示只有與私人憑證相關聯的 API 才應使用前述方法執行。
 
-## 避免JVM金鑰存放區變更
+## 避免 JVM Keystore 變更
 
-使用私人憑證有效叫用內部API的傳統方法涉及修改JVM金鑰存放區。 這是透過使用Java™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549)命令匯入私人憑證來達成。
+使用私人憑證有效地叫用內部 API 的傳統方法，必須修改 JVM Keystore。使用 Java™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) 指令匯入私人憑證即可做到。
 
-但是，此方法不符合安全性最佳實務，AEM透過使用&#x200B;**全域信任存放區**&#x200B;和[KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html)提供優越的選項。
+然而，此方法不符合安全性最佳實務，而 AEM 提供極佳的選項，即使用 **Global Trust Store** 和 [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html)。
 
 
 ## 解決方案套件
 
-可從[這裡](assets/internal-api-call/REST-APIs.zip)下載影片中降級的範例Node.js專案。
+影片中示範的範例 Node.js 專案可於[此處](assets/internal-api-call/REST-APIs.zip)下載。
 
-AEM servlet程式碼可在WKND Sites專案的`tutorial/web-api-invocation`分支[參閱](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets)中使用。
+AEM servlet 程式碼可於 WKND 網站專案的 `tutorial/web-api-invocation` 分支中找到，[請參閱此處](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets)。

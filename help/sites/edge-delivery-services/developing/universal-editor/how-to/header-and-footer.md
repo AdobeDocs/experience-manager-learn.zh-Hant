@@ -1,6 +1,6 @@
 ---
-title: 頁首與頁尾
-description: 瞭解如何在Edge Delivery Services和Universal Editor中開發頁首和頁尾。
+title: 頁首及頁尾
+description: 了解如何在 Edge Delivery Services 和通用編輯器中開發頁首及頁尾。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,29 +11,29 @@ jira: KT-17470
 duration: 300
 exl-id: 70ed4362-d4f1-4223-8528-314b2bf06c7c
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1207'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 開發頁首和頁尾
+# 開發頁首及頁尾
 
-![頁首與頁尾](./assets/header-and-footer/hero.png){align="center"}
+![頁首及頁尾](./assets/header-and-footer/hero.png){align="center"}
 
-頁首和頁尾在Edge Delivery Services (EDS)中起著唯一的作用，因為它們直接繫結到HTML `<header>`和`<footer>`元素。 不同於一般頁面內容，這些檔案會個別管理，且不需整個頁面快取即可獨立更新。 雖然作者的實作在`blocks/header`和`blocks/footer`下的程式碼專案中是區塊，但作者可以透過包含任何區塊組合的專用AEM頁面編輯其內容。
+頁首及頁尾在 Edge Delivery Services (EDS) 中扮演獨特的角色，因為其與 HTML `<header>` 和 `<footer>` 元素綁定在一起。與一般頁面內容不同，頁首和頁尾皆單獨管理並且可以個別更新，而無需清除整個頁面快取。雖然其在程式碼專案的 `blocks/header` 和 `blocks/footer` 之下以區塊的形式實施，但作者可以透過包含任意區塊組合的專用 AEM 頁面編輯其內容。
 
-## 標題區塊
+## 頁首區塊
 
-![標頭區塊](./assets/header-and-footer/header-local-development-preview.png){align="center"}
+![頁首區塊](./assets/header-and-footer/header-local-development-preview.png){align="center"}
 
-標頭是繫結至Edge Delivery Services HTML `<header>`元素的特殊區塊。
-`<header>`元素會傳送為空白，並透過XHR (AJAX)填入至個別的AEM頁面。
-如此一來，標題就能與頁面內容分開管理，且無需完全清除所有頁面快取即可更新。
+頁首是與 Edge Delivery Services HTML `<header>` 元素綁定的特殊區塊。
+`<header>` 元素傳遞時為空，並透過 XHR (AJAX) 填入到單獨的 AEM 頁面。
+這樣便能在頁面內容之外單獨管理頁首，並且無需清除所有頁面的快取即可進行更新。
 
-標頭區塊負責請求包含標頭內容的AEM頁面片段，並在`<header>`元素中呈現該片段。
+頁首區塊負責要求包含頁首內容的 AEM 頁面片段，並在 `<header>` 元素中進行轉譯。
 
-[!BADGE /blocks/header/header.js]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```javascript
 import { getMetadata } from '../../scripts/aem.js';
@@ -58,44 +58,45 @@ export default async function decorate(block) {
 }
 ```
 
-`loadFragment()`函式向`${navPath}.plain.html`發出XHR (AJAX)要求，而要求會傳回存在於頁面`<main>`標籤中AEM頁面HTML的EDS HTML轉譯、使用可能包含的任何區塊處理其內容，以及傳回更新的DOM樹狀結構。
+`loadFragment()` 函數發出 XHR (AJAX) 要求至 `${navPath}.plain.html`，傳回 AEM 頁面 HTML 的 EDS HTML 轉譯，該轉譯存在於頁面的 `<main>` 標記中，處理其內容及其可能包含的任何區塊，並傳回更新的 DOM 樹。
 
-## 編寫頁首頁面
+## 製作頁首頁面
 
-在開發標題區塊之前，請先在通用編輯器中編寫其內容，以便針對其進行開發。
+在開發頁首區塊之前，首先在通用編輯器中製作其內容，作為開發的依據。
 
-標題內容位於名為`nav`的專用AEM頁面中。
+頁首內容位於名為 `nav` 的專屬 AEM 頁面中。
 
-![預設頁首頁](./assets/header-and-footer/header-page.png){align="center"}
+![預設頁首頁面](./assets/header-and-footer/header-page.png){align="center"}
 
-若要編寫標題：
+若要製作頁首：
 
-1. 在通用編輯器中開啟`nav`頁面
-1. 以包含WKND標誌的&#x200B;**影像區塊**&#x200B;取代預設按鈕
-1. 請以下列方式更新&#x200B;**文字區塊**&#x200B;中的導覽功能表：
+1. 開啟通用編輯器中的 `nav` 頁面
+1. 用包含 WKND 標誌的&#x200B;**影像區塊**&#x200B;取代預設按鈕
+1. 更新&#x200B;**文字區塊**&#x200B;內的導覽功能表，方法如下：
    - 新增您想要的導覽連結
-   - 視需要建立子導覽專案
-   - 現在正在設定首頁(`/`)的所有連結
+   - 在需要的地方建立子導覽項目
+   - 設定所有連結現在指向首頁 (`/`)
 
-通用編輯器中的![作者標題區塊](./assets/header-and-footer/header-author.png){align="center"}
+![在通用編輯器中製作頁首區塊](./assets/header-and-footer/header-author.png){align="center"}
 
-### 發佈以預覽
+### 發佈至預覽
 
-更新頁首頁面後，[發佈頁面以預覽](../6-author-block.md)。
+由於頁首頁面更新，[將頁面發佈至預覽](../6-author-block.md)。
 
-由於頁首內容存在於其本身的頁面（`nav`頁面）上，因此您必須發佈該頁面，頁首變更才會生效。 發佈使用標頭的其他頁面將不會更新Edge Delivery Services上的標頭內容。
+由於頁首內容位於其自己的頁面上 (`nav` 頁面)，您必須專門發佈該頁面，方能讓頁首變更生效。發佈其他使用該頁首的頁面，不會更新 Edge Delivery Services 上的頁首內容。
 
-## 封鎖HTML
+## 區塊 HTML
 
-若要開始區塊開發，請先檢閱Edge Delivery Services預覽所公開的DOM結構。 DOM已透過JavaScript增強，並採用CSS樣式，為建置和自訂區塊提供基礎。
+若要開始進行區塊開發，首先請檢閱 Edge Delivery Services 預覽版所公開的 DOM 結構。DOM 透過 JavaScript 增強，並使用 CSS 設定樣式，為建置和自訂區塊打下基礎。
 
-由於標頭已載入為片段，因此我們需要在透過`loadFragment()`插入DOM並裝飾後，檢查XHR要求傳回的HTML。 這可透過檢查瀏覽器開發人員工具中的DOM來完成。
+由於頁首以片段形式載入，因此我們需要檢查 XHR 要求在注入 DOM 之後所傳回的 HTML，並透過 `loadFragment()` 進行修飾。這項程序可以透過檢查瀏覽器開發工具中的 DOM 來完成。
 
 
 >[!BEGINTABS]
->[!TAB 要裝飾的 DOM]
 
-以下是頁首頁面使用提供的`header.js`載入並插入DOM中的HTML：
+>[!TAB 要進行修飾的 DOM]
+
+以下為使用所提供之 `header.js` 載入並注入 DOM 之後的頁首頁面 HTML：
 
 ```html
 <header class="header-wrapper">
@@ -138,22 +139,22 @@ export default async function decorate(block) {
 </header>
 ```
 
->[!TAB 如何尋找DOM]
+>[!TAB 如何找到 DOM]
 
-若要在網頁瀏覽器的開發人員工具中尋找及檢查頁面的`<header>`元素。
+尋找並檢查網頁瀏覽器開發人員工具中的頁面 `<header>` 元素。
 
-![標頭DOM](./assets/header-and-footer/header-dom.png){align="center"}
+![頁首 DOM](./assets/header-and-footer/header-dom.png){align="center"}
 
 >[!ENDTABS]
 
 
-## 封鎖JavaScript
+## 區塊 JavaScript
 
-來自[AEM Boilerplate XWalk專案範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk)的`/blocks/header/header.js`檔案提供JavaScript以進行導覽，包括下拉式功能表和回應式行動檢視。
+來自 [AEM 樣板專案 XWalk 專案範本](https://github.com/adobe-rnd/aem-boilerplate-xwalk)的 `/blocks/header/header.js` 檔案，提供用於導覽的 JavaScript，包括下拉式選單和回應式行動視圖。
 
-雖然`header.js`指令碼經常大量自訂以符合網站設計，但必須保留`decorate()`中的第一行，以擷取及處理標頭頁面片段。
+雖然 `header.js` 指令碼通常會經過大量自訂以符合網站的設計，但保留 `decorate()` 中最初的文字行相當重要，可用於擷取和處理頁首頁面片段。
 
-[!BADGE /blocks/header/header.js]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```javascript
 export default async function decorate(block) {
@@ -164,25 +165,25 @@ export default async function decorate(block) {
   ...
 ```
 
-剩餘的程式碼可以修改以符合您的專案需求。
+其餘程式碼可以進行修改，以符合您專案的需求。
 
-根據頁首需求，可以調整或移除樣板程式碼。 在本教學課程中，我們將使用提供的程式碼，並透過在第一個編寫的影像周圍新增超連結，將其連結至網站的首頁來增強程式碼。
+根據頁首要求，可以調整或移除樣板專案程式碼。在本教學課程中，我們會使用所提供的程式碼，並在第一張製作好的影像周圍加入超連結，將其連結至網站首頁，以增強其功能。
 
-範本的程式碼會處理頁首頁面片段，假設它依下列順序包含三個區段：
+範本的程式碼會處理頁首頁面片段，假設其由三個區段組成且順序如下：
 
-1. **品牌區段** — 包含標誌且樣式為`.nav-brand`類別。
-2. **區段** — 定義網站的主要功能表並以`.nav-sections`設定樣式。
-3. **工具區段** — 包含搜尋、登入/登出和設定檔等專案，樣式為`.nav-tools`。
+1. **品牌區段** - 包含標誌並使用 `.nav-brand` 類別進行樣式設定。
+2. **區段區段** - 定義網站的主選單，並使用 `.nav-sections` 進行樣式設定。
+3. **工具區段** - 包括搜尋、登入/登出和設定檔等元素，使用 `.nav-tools` 進行樣式設定。
 
-若要將標誌影像超連結至首頁，我們會更新區塊JavaScript，如下所示：
+為了對標誌影像加入連至首頁的超連結，我們按以下方式更新區塊 JavaScript：
 
 >[!BEGINTABS]
 
->[!TAB 已更新JavaScript]
+>[!TAB 更新後的 JavaScript]
 
-更新後的標誌影像包裝程式碼會包含網站首頁(`/`)的連結，如下所示：
+更新後的程式碼將標誌影像與連接至網站首頁的連結 (`/`) 包裝在一起，如下所示：
 
-[!BADGE /blocks/header/header.js]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```javascript
 export default async function decorate(block) {
@@ -213,11 +214,11 @@ export default async function decorate(block) {
 }
 ```
 
->[!TAB 原始JavaScript]
+>[!TAB 原始 JavaScript]
 
-以下是從範本產生的原始`header.js`：
+以下是從範本產生的原始 `header.js`：
 
-[!BADGE /blocks/header/header.js]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE /blocks/header/header.js]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```javascript
 export default async function decorate(block) {
@@ -249,15 +250,15 @@ export default async function decorate(block) {
 >[!ENDTABS]
 
 
-## 封鎖CSS
+## 區塊 CSS
 
-更新`/blocks/header/header.css`以根據WKND的品牌設定其樣式。
+更新 `/blocks/header/header.css`，根據 WKND 的品牌設定其樣式。
 
-我們將新增自訂CSS至`header.css`底部，讓教學課程變更更容易檢視和理解。 雖然這些樣式可直接整合至範本的CSS規則，但將其保持獨立有助於說明修改內容。
+我們會在 `header.css` 的底部新增自訂 CSS，讓教學課程變更較容易查看和理解。雖然這些樣式可以直接整合至範本的 CSS 規則中，但將這些樣式分開有助於說明所修改的內容。
 
-由於我們是在原始規則集之後新增規則，因此我們將使用`header .header.block nav` CSS選取器來包住規則，以確保規則優先於範本規則。
+由於我們是在原始規則集之後新增新規則，因此我們會使用 `header .header.block nav` CSS 選取器將其包裝，以確保其優先性高於範本規則。
 
-[!BADGE /blocks/header/header.css]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE /blocks/header/header.css]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```css
 /* /blocks/header/header.css */
@@ -321,13 +322,13 @@ header .header.block nav {
 
 ## 開發預覽
 
-CSS和JavaScript開發後，AEM CLI的本機開發環境會重新載入變更，讓您快速輕鬆地視覺化程式碼如何影響區塊。 將游標暫留在CTA上，並驗證Teaser的影像是否會放大和縮小。
+隨著 CSS 和 JavaScript 的開發，AEM CLI 的本機開發環境會即時重新載入變更，因而可以快速輕鬆地將程式碼對區塊的影響以視覺化圖形呈現。將游標停留在 CTA 上，檢查並確認 Teaser 的影像會放大和縮小顯示。
 
-![使用CSS和JS的標頭本機開發預覽](./assets/header-and-footer/header-local-development-preview.png){align="center"}
+![使用 CSS 和 JS 進行頁首的本機開發預覽](./assets/header-and-footer/header-local-development-preview.png){align="center"}
 
-## 將程式碼插入
+## 對程式碼進行 lint 檢查
 
-請務必[經常lint](../3-local-development-environment.md#linting)您的程式碼變更，以保持其整齊一致。 定期篩選有助於及早發現問題，減少整體開發時間。 請記住，您必須先解決所有Linting問題，才能將您的開發工作合併至`main`分支！
+務必針對您的程式碼變更[經常進行 lint 檢查](../3-local-development-environment.md#linting)，保持程式碼整潔且一致。定期進行 lint 檢查有助於及早發現問題，進而減少整體開發時間。請記住，在解決所有 linting 問題以前，您不能將開發工作合併到 `main` 分支內！
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -337,7 +338,7 @@ $ npm run lint
 
 ## 在通用編輯器中預覽
 
-若要在AEM的通用編輯器中檢視變更，請新增、提交變更，並將其推送到通用編輯器使用的Git存放庫分支。 這麼做可確保區塊實作不會中斷編寫體驗。
+若要在 AEM 通用編輯器中檢視變更，請將其新增、提交並推送至通用編輯器所使用的 Git 存放庫分支。這樣做可以確保區塊實施不會破壞製作體驗。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -348,43 +349,43 @@ $ git commit -m "CSS and JavaScript implementation for Header block"
 $ git push origin header-and-footer
 ```
 
-現在，使用`?ref=header-and-footer`查詢引數時，可以在通用編輯器中看到變更。
+現在，使用 `?ref=header-and-footer` 查詢參數時可以在通用編輯器中看到變更。
 
-通用編輯器中的![標題](./assets/header-and-footer/header-universal-editor-preview.png){align="center"}
+![通用編輯器中的頁首](./assets/header-and-footer/header-universal-editor-preview.png){align="center"}
 
 ## 頁尾
 
-如同頁首，頁尾內容是在專用的AEM頁面上撰寫 — 在此案例中是頁尾頁面(`footer`)。 頁尾遵循與載入為片段相同的模式，並以CSS和JavaScript裝飾。
+與頁首一樣，頁尾內容也是在專用的 AEM 頁面上製作，在本案例中是頁尾頁面 (`footer`)。頁尾遵循相同的模式，以片段的形式載入，並使用 CSS 和 JavaScript 進行修飾。
 
 >[!BEGINTABS]
 
 >[!TAB 頁尾]
 
-頁尾應以包含下列專案的三欄版面配置實施：
+頁尾應採用三欄式版面，包含：
 
-- 包含促銷活動（影像和文字）的左欄
-- 帶有導覽連結的中間欄
-- 包含社群媒體連結的右側欄
-- 底端橫跨所有三欄的資料列，享有著作權
+- 左側欄顯示促銷活動資訊 (影像和文字)
+- 中間欄含有導覽連結
+- 右側欄內含社交媒體連結
+- 底部有一列橫跨所有三欄，內含版權資訊
 
 ![頁尾預覽](./assets/header-and-footer/footer-preview.png){align="center"}
 
 >[!TAB 頁尾內容]
 
-在「頁尾」頁面中使用資料欄區塊來建立三欄效果。
+使用頁尾頁面中的欄區塊來建立三欄式的效果。
 
-| 欄1 | 欄2 | 欄目3 |
+| 欄目 1 | 欄目 2 | 欄目 3 |
 | ---------|----------------|---------------|
 | 影像 | 標題 3 | 標題 3 |
 | 文字 | 連結清單 | 連結清單 |
 
-![標頭DOM](./assets/header-and-footer/footer-author.png){align="center"}
+![頁首 DOM](./assets/header-and-footer/footer-author.png){align="center"}
 
->[!TAB 頁尾代碼]
+>[!TAB 頁尾程式碼]
 
-下方的CSS以三欄版面配置、一致間距和印刷樣式來設定頁尾區塊的樣式。 頁尾實施僅使用範本提供的JavaScript。
+下方的 CSS 採用三欄式版面、一致的間距，以及印刷樣式來設定頁尾區塊的樣式。頁尾實施僅使用範本所提供的 JavaScript。
 
-[!BADGE /blocks/footer/footer.css]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE /blocks/footer/footer.css]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```css
 /* /blocks/footer/footer.css */
@@ -461,13 +462,13 @@ footer {
 
 ## 恭喜！
 
-您現在已探索如何在Edge Delivery Services和Universal Editor中管理和開發頁首和頁尾。 您已瞭解其運作方式：
+現在您已經了解如何在 Edge Delivery Services 和通用編輯器中管理與開發頁首及頁尾。您已經了解關於頁首和頁尾的以下內容：
 
-- 在獨立於主要內容的專用AEM頁面上撰寫
-- 以片段非同步載入，以啟用獨立更新
-- 以JavaScript和CSS裝飾，建立回應式導覽體驗
-- 與通用編輯器緊密整合，方便的內容管理
+- 與主要內容分開並在專屬的 AEM 頁面上製作
+- 以片段形式非同步載入，可以獨立更新
+- 使用 JavaScript 和 CSS 進行修飾，建立回應式導覽體驗
+- 與通用編輯器緊密整合，輕鬆管理內容
 
-此模式提供靈活且可維護的方法，用於實作全網站的導覽元件。
+此模式提供了一項彈性且可維護的方法，用於實施全站導覽元件。
 
-如需更多最佳實務和進階技術，請參閱[通用編輯器檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。
+若要了解更多最佳實務和進階技術，請查看[通用編輯器文件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options)。

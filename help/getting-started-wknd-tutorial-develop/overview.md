@@ -1,6 +1,6 @@
 ---
-title: 開始使用AEM Sites - WKND教學課程
-description: 瞭解如何為名為WKND的虛構生活風格品牌實施AEM網站。 取得基本Experience Manager主題的逐步解說，例如專案設定、maven原型、核心元件、可編輯的範本、使用者端程式庫和元件開發。
+title: AEM Sites 快速入門 - WKND 教學課程
+description: 了解如何為虛構生活風格品牌 WKND 實施 AEM 網站。透過逐步解說，了解 Experience Manager 的基本主題，例如專案設定、maven 原型、核心元件、可編輯範本、用戶端程式庫和元件開發。
 version: Experience Manager as a Cloud Service
 jira: KT-13565
 mini-toc-levels: 1
@@ -14,59 +14,59 @@ doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '577'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# 開始使用AEM Sites - WKND教學課程 {#introduction}
+# AEM Sites 快速入門 - WKND 教學課程 {#introduction}
 
 {{edge-delivery-services}}
 
-歡迎使用專為Adobe Experience Manager (AEM)的新手開發人員設計的多部分教學課程。 此教學課程會逐步引導您為虛擬生活風格品牌WKND實作AEM網站。 此教學課程涵蓋基礎的主題，例如專案設定、核心元件、可編輯的範本、用戶端資料庫以及使用 Adobe Experience Manager Sites 的元件開發。
+歡迎使用專為初次接觸 Adobe Experience Manager (AEM) 的開發人員設計的多部分教學課程。此教學課程會逐步解說為虛構生活風格品牌 WKND 實施 AEM 網站的情形。此教學課程涵蓋基礎主題，例如專案設定、核心元件、可編輯的範本、用戶端程式庫，以及使用 Adobe Experience Manager Sites 進行元件開發。
 
 ## 概觀 {#wknd-tutorial-overview}
 
-此多部分教學課程的目標是教導開發人員如何使用Adobe Experience Manager (AEM)中的最新標準和技術來實作網站。 完成本教學課程後，開發人員應瞭解AEM平台的基本基礎和常見設計模式。
+這個由多個部分組成的教學課程的目標是指導開發人員，如何使用 Adobe Experience Manager (AEM) 中最新的標準和技術來實施一個網站。完成本教學課程後，開發人員應能了解平台的基礎知識和 AEM 中常見的設計模式。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-## 啟動Sites專案的選項
+## 開始 Sites 專案的選項
 
-啟動AEM Sites專案有兩種基本方法。
+啟動 AEM Sites 專案有兩種基本方法。
 
-**AEM專案原型** — 使用Maven範本產生最小AEM專案的傳統開發AEM方法。 這是針對AEM 6.5/6.4專案和AEM as a Cloud Service專案建議的方法，可預期大量自訂。 本教學課程提供對AEM開發的更深入探討。
+**AEM 專案原型** - 使用 Maven 範本產生最小 AEM 專案來進行 AEM 開發的傳統方法。對於需要大量自訂的 AEM 6.5/6.4 專案和 AEM as a Cloud Service 專案，建議採用此方法。本教學課程深入介紹 AEM 開發。
 
-[開始使用AEM專案原型的教學課程](./project-archetype/overview.md)
+[使用 AEM 專案原型開始教學課程](./project-archetype/overview.md)
 
-**AEM網站範本** — 也稱為「快速網站建立」，這是一種使用預先定義的網站範本產生AEM網站的低程式碼方法。 使用現成可用的元件和範本，讓網站快速上線運作。 使用主題化工作流程，僅以CSS和JavaScript套用品牌特定樣式和自訂。 建議新專案和開發人員使用。 僅適用於AEM as a Cloud Service。
+**AEM 網站範本**：也稱為快速網站建立，是使用預先定義的網站範本產生 AEM 網站的少量程式碼方法。使用現成可用的元件和範本，快速建立並執行網站。使用主題工作流程，僅使用 CSS 和 JavaScript 來套用品牌特定的樣式和自訂內容。推薦新專案和開發人員採用。僅適用於 AEM as a Cloud Service。
 
 [使用網站範本開始教學課程](./site-template/create-site.md)
 
-## Adobe XD UI套件
+## Adobe XD 使用者介面套件
 
-為了讓本教學課程更接近真實世界的情境，Adobe才華橫溢的UX設計人員使用[Adobe XD](https://www.adobe.com/products/xd.html)為網站建立模型。 在教學課程中，各種設計片段皆實施至可完整撰寫的AEM網站。 特別感謝&#x200B;**Lorenzo Buosi**&#x200B;和&#x200B;**Kilian Amendola**&#x200B;為WKND網站創造美觀的設計。
+為了讓本教學課程更貼近真實情境，Adobe 才華洋溢的 UX 設計師使用 [Adobe XD](https://www.adobe.com/tw/products/xd.html) 為網站建立模型。在本教學課程的過程中，我們會將實作設計的各個部分，使其成為一個完全可以製作的 AEM 網站。特別感謝 **Lorenzo Buosi** 和 **Kilian Amendola** 為 WKND 網站創造精美的設計。
 
-下載XD UI套件：
+下載 XD 使用者介面套件：
 
-* [AEM核心元件UI套件](assets/overview/AEM-CoreComponents-UI-Kit.xd)
-* [WKND UI套件](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND.xd)
+* [AEM 核心元件使用者介面套件](assets/overview/AEM-CoreComponents-UI-Kit.xd)
+* [WKND 使用者介面套件](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND.xd)
 
-## 引用網站 {#reference-site}
+## 參照網站 {#reference-site}
 
-WKND網站的完成版本也可做為參考： [https://wknd.site/](https://wknd.site/)
+亦提供 WKND 網站的完成版本供您參考：[https://wknd.site/](https://wknd.site/)
 
-此教學課程涵蓋AEM開發人員所需的主要開發技能，但&#x200B;*不會*&#x200B;端對端建置整個網站。 完成的參考網站是另一個探索和檢視更多AEM立即可用功能的絕佳資源。
+本教學課程涵蓋 AEM 開發人員所需的主要開發技能，但&#x200B;*不會*&#x200B;從頭到尾建立整個網站。已完成的參考網站是探索和了解更多 AEM 現成可用功能的另一個重要資源。
 
-若要在開始教學課程之前測試最新的程式碼，請從GitHub下載並安裝&#x200B;**[最新版本](https://github.com/adobe/aem-guides-wknd/releases/latest)**。
+若要在進入教學課程之前測試最新程式碼，請下載和安裝 **[GitHub 提供的最新版本](https://github.com/adobe/aem-guides-wknd/releases/latest)**。
 
-### 由Adobe Stock提供
+### 由 Adobe Stock 支援
 
-WKND參考網站中的許多影像來自[Adobe Stock](https://stock.adobe.com/)，且為示範資產其他條款中定義的第三方資料，位於[https://www.adobe.com/legal/terms.html](https://www.adobe.com/tw/legal/terms.html)。 如果您想將Adobe Stock影像用於檢視此示範網站以外的其他用途，例如於網站上或行銷資料中展示，您可以購買Adobe Stock上的授權。
+WKND 參考網站中的許多影像來自 [Adobe Stock](https://stock.adobe.com/)，並屬於示範資產附帶條款 (參閱 [https://www.adobe.com/tw/legal/terms.html](https://www.adobe.com/tw/legal/terms.html)) 中定義的第三方素材。除了在這個示範網站檢視之外，如果您想要使用 Adobe Stock 影像作其他用途，例如在網站上展示或在行銷素材中運用，則可以在 Adobe Stock 上購買授權。
 
-透過Adobe Stock，您可以存取超過1.4億張高品質、免版稅的影像，包括像片、圖片、影片和範本，以快速啟動您的創意專案。
+透過 Adobe Stock，您可以存取超過 1.4 億項高品質、免版稅的影像，包括照片、圖形、影片和範本，能快速展開您的創意專案。
 
 ## 後續步驟 {#next-steps}
 
-您還在等什麼?!瞭解如何[使用Adobe Experience Manager專案原型](./project-archetype/overview.md)產生新的AEM專案，或[使用網站範本](./site-template/create-site.md)建立網站。
+還在等什麼？！了解如何[使用 AEM 專案原型產生新的 Adobe Experience Manager 專案](./project-archetype/overview.md)或[使用網站範本建立網站](./site-template/create-site.md)。

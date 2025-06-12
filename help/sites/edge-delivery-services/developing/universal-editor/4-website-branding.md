@@ -1,6 +1,6 @@
 ---
-title: 新增網站品牌
-description: 為Edge Delivery Services網站定義全域CSS、CSS變數和網頁字型。
+title: 新增網站品牌化
+description: 定義 Edge Delivery Services 網站的全域 CSS、CSS 變數和網頁字型。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,34 +11,34 @@ jira: KT-15832
 duration: 900
 exl-id: a5cd9906-7e7a-43dd-a6b2-e80f67d37992
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
-source-wordcount: '1315'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '1313'
+ht-degree: 100%
 
 ---
 
-# 新增網站品牌
+# 新增網站品牌化
 
-從設定整體品牌開始，方法是更新全域樣式、定義CSS變數以及新增網頁字型。 這些基礎元素可確保網站維持一致性和可維護性，並應在整個網站中以一致的方式套用。
+首先藉由更新全域樣式、定義 CSS 變數以及新增網頁字型來設定整體品牌調性。這些基礎元素能確保網站保持一致且可維護，並且應該在整個網站上一致地套用。
 
-## 建立GitHub問題
+## 建立 GitHub 問題
 
-若要讓一切井然有序，請使用GitHub追蹤工作。 首先，請針對以下工作內容建立GitHub問題：
+為使一切井然有序，請使用 GitHub 追蹤工作。首先，針對這項工作建立一個 GitHub 問題：
 
-1. 前往GitHub存放庫（如需詳細資訊，請參閱[建立程式碼專案](./1-new-code-project.md)章節）。
-2. 按一下&#x200B;**問題**&#x200B;標籤，然後按&#x200B;**新問題**。
-3. 為要完成的工作撰寫&#x200B;**標題**&#x200B;和&#x200B;**描述**。
-4. 按一下&#x200B;**提交新問題**。
+1. 前往 GitHub 存放庫 (如需詳細資訊，請參閱[建立程式碼專案](./1-new-code-project.md)章節)。
+2. 按一下「**問題**」索引標籤，然後按一下「**新問題**」。
+3. 針對要完成的工作填入&#x200B;**標題**&#x200B;和&#x200B;**說明**。
+4. 按一下「**提交新問題**」。
 
-稍後當[建立提取請求](#merge-code-changes)時會使用GitHub問題。
+稍後會在[建立提取要求](#merge-code-changes)時使用 GitHub 問題。
 
-![GitHub建立新問題](./assets/4-website-branding/github-issues.png)
+![GitHub 建立新問題](./assets/4-website-branding/github-issues.png)
 
 ## 建立工作分支
 
-若要維護組織並確保程式碼品質，請為每個工作內容建立新的分支。 此做法可防止新程式碼對效能造成負面影響，並確保變更在完成之前不會生效。
+為維持組織架構及確保程式碼品質，請將每項工作各自建立一個新的分支。這種做法可以防止新程式碼對效能產生負面影響，並確保變更在完成之前不會生效。
 
-本章著重於網站的基本樣式，請建立名為`wknd-styles`的分支。
+在本章當中，因為重點在於網站的基本樣式，請建立一個名為 `wknd-styles` 的分支。
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -46,23 +46,23 @@ ht-degree: 0%
 $ git checkout -b wknd-styles
 ```
 
-## 全域CSS
+## 全域 CSS
 
-Edge Delivery Services使用位於`styles/styles.css`的全域CSS檔案，為整個網站設定通用樣式。 `styles.css`可控制顏色、字型和間距等方面，確保整個網站的所有內容看起來都一致。
+Edge Delivery Services 會使用位於 `styles/styles.css` 的全域 CSS 檔案來設定整個網站的通用樣式。`styles.css` 會控制如顏色、字型和間距等方面，確保整個網站的所有內容看起來具有一致性。
 
-全域CSS應與較低層級的建構（例如區塊）無關，而是應專注於網站的整體外觀和風格，以及共用的視覺處理。
+全域 CSS 不應涉及區塊等低層級的結構，而是專注於網站的整體外觀，以及共用的視覺處理。
 
-請記住，必要時可覆寫全域CSS樣式。
+請記得，需要時可以覆寫全域 CSS 樣式。
 
-### css變數
+### CSS 變數
 
-[CSS變數](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)是儲存設計設定（如顏色、字型和大小）的絕佳方式。 透過使用變數，您可以在一個位置變更這些元素，並使其在整個網站中更新。
+[CSS 變數](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)是儲存顏色、字型和大小等設計設定的絕佳方式。藉由使用變數，您可以在單一位置變更這些元素，然後將其更新至整個網站。
 
-若要開始自訂CSS變數，請遵循下列步驟：
+若要開始自訂 CSS 變數，請依照以下步驟進行：
 
-1. 在程式碼編輯器中開啟`styles/styles.css`檔案。
-2. 尋找儲存全域CSS變數的`:root`宣告。
-3. 修改顏色和字型變數以符合WKND品牌。
+1. 在程式碼編輯器中開啟 `styles/styles.css` 檔案。
+2. 找到 `:root` 宣告，那裡儲存全域 CSS 變數。
+3. 修改顏色和字型變數，使其符合 WKND 品牌調性。
 
 範例如下：
 
@@ -88,17 +88,17 @@ Edge Delivery Services使用位於`styles/styles.css`的全域CSS檔案，為整
 }
 ```
 
-探索`:root`區段中的其他變數並檢閱預設設定。
+探索 `:root` 區段中的其他變數，並檢閱預設設定。
 
-當您開發網站時，如果發現重複相同的CSS值，請考慮建立新變數讓樣式更易於管理。 可以從CSS變數受益的其他CSS屬性範例，包括： `border-radius`、`padding`、`margin`和`box-shadow`。
+當您在開發網站的過程中發現自己重複相同的 CSS 值時，請考量建立新變數，讓樣式更易於管理。其他可受益於 CSS 變數的 CSS 屬性範例包括：`border-radius`、`padding`、`margin` 和 `box-shadow`。
 
 ### 裸元素
 
-裸元素會直接透過其元素名稱來設定樣式，而不使用CSS類別。 例如，使用`h1 { ... }`將樣式套用至`h1`元素，而不使用`.page-heading` CSS類別的樣式。
+裸元素會直接以其元素名稱來設定樣式，而非使用 CSS 類別。例如，並非對 `.page-heading` CSS 類別進行樣式設定，而是使用 `h1 { ... }` 將樣式套用至 `h1` 元素。
 
-在`styles/styles.css`檔案中，一組基本樣式套用至純HTML元素。 Edge Delivery Services網站會使用裸元素來排定優先順序，因為這些元素會與Edge Delivery服務的原生語意HTML一致。
+在 `styles/styles.css` 檔案中，一組基本樣式被套用至 HTML 裸元素。Edge Delivery Services 網站會優先使用裸元素，因為其與 Edge Delivery Service 的原生語義 HTML 一致。
 
-為了符合WKND品牌，讓我們在`styles.css`中設定一些裸元素的樣式：
+若要與 WKND 品牌化保持一致，請在 `styles.css` 中設定一些裸元素的樣式：
 
 ```css
 /* styles/styles.css */
@@ -119,15 +119,15 @@ h2::after {
 ...
 ```
 
-這些樣式可確保`h2`元素（除非被覆寫）的樣式與WKND品牌化一致，有助於建立清晰的視覺階層。 每個`h2`下方的部分黃色底線會為標題增加獨特觸控。
+這些樣式能確保 `h2` 元素 (除非被覆寫) 與 WKND 品牌化保持一致的樣式，有助於建立清晰的視覺層級。每個 `h2` 下方的部分黃色底線，為標題增添獨特的風格。
 
-### 推斷的元素
+### 推論元素
 
-在Edge Delivery Services中，專案的`scripts.js`和`aem.js`程式碼會根據其在HTML中的內容，自動增強特定的純HTML元素。
+在 Edge Delivery Services 中，專案的 `scripts.js` 和 `aem.js` 程式碼會根據其在 HTML 中的內容，自動增強特定的 HTML 裸元素。
 
-例如，根據此內容，在錨點(`<a>`)元素自己的行上撰寫（而不是與周圍文字內嵌）被推斷為按鈕。 這些錨點會以CSS類別`button-container`的容器`div`自動包裝，而且錨點元素已新增`button` CSS類別。
+例如，在本身的文字行上製作，而非內嵌於周圍文字中的錨點 (`<a>`) 元素，會根據此內容被推論為按鈕。這些錨點會自動被內含 CSS 類別 `button-container` 的容器 `div` 包裝，且錨點元素中已新增一個 `button` CSS 類別。
 
-例如，當連結以專屬的行編寫時，Edge Delivery Services JavaScript會將其DOM更新為下列專案：
+例如，當連結在其本身的文字行上進行製作時，Edge Delivery Services JavaScript 會將其 DOM 更新為以下內容：
 
 ```html
 <p class="button-container">
@@ -135,9 +135,9 @@ h2::after {
 </p>
 ```
 
-這些按鈕可以自訂以符合WKND品牌 — 這指定按鈕以帶有黑色文字的黃色矩形顯示。
+這些按鈕可以自訂以符合 WKND 品牌調性，其中規定按鈕應顯示為含有黑色文字的黃色矩形。
 
-以下是如何設定`styles.css`中「推斷的按鈕」樣式的範例：
+以下是如何在 `styles.css` 中設定「推論按鈕」樣式的範例：
 
 ```css
 /* styles/styles.css */
@@ -170,18 +170,18 @@ button {
 }
 ```
 
-此CSS會定義基本按鈕樣式，並包含WKND專屬的處理方式，例如大寫文字、黃色背景和黑色文字。 `background-color`和`color`屬性使用CSS變數，允許按鈕樣式與品牌顏色保持一致。 此方法可確保整個網站的按鈕樣式一致，同時保持彈性。
+此 CSS 定義基本的按鈕樣式，並加入 WKND 特定的處理，例如大寫文字、黃色背景和黑色文字。`background-color` 和 `color` 屬性使用 CSS 變數，讓按鈕樣式能夠與品牌顏色保持一致。這種方法可以確保整個網站上的按鈕樣式一致，同時保持彈性。
 
 ## 網頁字型
 
-Edge Delivery Services專案最佳化網頁字型的使用，以維持高效能並儘量降低對Lighthouse分數的影響。 此方法可確保快速演算，而不會損害網站的視覺身分。 以下說明如何有效實作Web字型以獲得最佳效能。
+Edge Delivery Services 專案將網頁字型的使用最佳化，藉以保持高效能，並盡量減少對 Lighthouse 分數的影響。這種方法能確保快速轉譯，但不會對網站的視覺識別造成負面影響。以下是如何有效地實施網頁字型以獲得最佳效能的方法。
 
-### 字型
+### Font face
 
-在`styles/fonts.css`檔案中使用CSS `@font-face`宣告來新增自訂網頁字型。 將`@font-faces`新增至`fonts.css`可確保網頁字型在最佳時間載入，有助於維持Lighthouse分數。
+使用 `styles/fonts.css` 檔案中的 CSS `@font-face` 宣告新增自訂網頁字型。於 `fonts.css` 中新增 `@font-faces`，能確保在最佳時間載入網頁字型，有助於維持 Lighthouse 分數。
 
-1. 開啟`styles/fonts.css`。
-2. 新增下列`@font-face`宣告以包含WKND品牌字型： `Asar`和`Source Sans Pro`。
+1. 開啟 `styles/fonts.css`。
+2. 新增以下 `@font-face` 宣告以加入 WKND 品牌字型：`Asar` 和 `Source Sans Pro`。
 
 ```css
 /* styles/fonts.css */
@@ -250,13 +250,13 @@ Edge Delivery Services專案最佳化網頁字型的使用，以維持高效能�
 }
 ```
 
-本教學課程中使用的字型來源為Google Fonts，但網頁字型可以從任何字型提供者取得，包括[Adobe Fonts](https://fonts.adobe.com/)。
+本教學課程中所用的字型來自 Google Fonts，但您可以向任何字型提供者取得網頁字型，包括 [Adobe Fonts](https://fonts.adobe.com/)。
 
-+++使用本機Web字型檔案
++++使用本機網頁字型檔案
 
-或者，也可以將Web字型檔案複製到`/fonts`資料夾中的專案中，並在`@font-face`宣告中參照。
+或者，將網頁字型檔案複製到 `/fonts` 資料夾中的專案內，並在 `@font-face` 宣告中參照。
 
-本教學課程使用遠端、託管的Web字型，因此更容易遵循。
+本教學課程使用遠端託管的網頁字型，因此更容易跟著進行。
 
 ```css
 /* styles/fonts.css */
@@ -271,7 +271,7 @@ Edge Delivery Services專案最佳化網頁字型的使用，以維持高效能�
 
 +++
 
-最後，更新`styles/styles.css` CSS變數以使用新字型：
+最後，更新 `styles/styles.css` CSS 變數，開始使用新字型：
 
 ```css
 /* styles/styles.css */
@@ -285,17 +285,17 @@ Edge Delivery Services專案最佳化網頁字型的使用，以維持高效能�
 }
 ```
 
-`roboto-fallback`和`roboto-condensed-fallback`是在[備援字型](#fallback-fonts)區段中更新的備援字型，以對齊支援自訂`Asar`和`Source Sans Pro`網頁字型。
+`roboto-fallback` 和 `roboto-condensed-fallback` 為備用字型，會於[備用字型](#fallback-fonts)區段更新以保持一致，支援自訂的 `Asar` 和 `Source Sans Pro` 網頁字型。
 
-### 遞補字型
+### 備用字型
 
-網頁字型因其大小而經常影響效能，可能會增加累積版面位移(CLS)分數，並降低整體Lighthouse分數。 為了確保在Web字型載入時立即顯示文字，Edge Delivery Services專案使用瀏覽器原生備援字型。 在套用所需字型時，此方法有助於維持流暢的使用者體驗。
+網頁字型通常會因其大小而影響效能，可能會導致累積的版面移動 (CLS) 分數增加，而降低整體 Lighthouse 分數。為確保在載入網頁字型時能即時顯示文字，Edge Delivery Services 專案使用瀏覽器原生的備用字型。這種方法有助於在套用所需字型時保持流暢的使用者體驗。
 
-若要選取最佳後援字型，請使用Adobe的[Helix Font Fallback Chrome擴充功能](https://www.aem.live/developer/font-fallback)，該功能會在自訂字型載入前，決定要供瀏覽器使用的緊密相符字型。 應將產生的遞補字型宣告新增至`styles/styles.css`檔案，以改善效能並確保使用者獲得順暢的體驗。
+若要選取最佳的備用字型，請使用 Adobe 的 [Helix 字型備用 Chrome 擴充功能](https://www.aem.live/developer/font-fallback)，此擴充功能會在自訂字型載入之前，決定一個適合瀏覽器使用的最接近的字型。所產生的備用字型宣告應新增至 `styles/styles.css` 檔案，以提高效能並確保使用者的順暢體驗。
 
-![Helix字型後援Chrome擴充功能](./assets/4-website-branding/font-fallback-chrome-plugin.png){align=center}
+![Helix 字型備用 Chrome 擴充功能](./assets/4-website-branding/font-fallback-chrome-plugin.png){align=center}
 
-若要使用[Helix Font Fallback Chrome擴充功能](https://www.aem.live/developer/font-fallback)，請確定網頁已套用在Edge Delivery Services網站上使用的相同變化中的網頁字型。 此教學課程示範[wknd.site](http://wknd.site/us/en.html)上的擴充功能。 開發網站時，請將擴充功能套用至正在處理的網站，而非[wknd.site](http://wknd.site/us/en.html)。
+若要使用 [Helix 字型備用 Chrome 擴充功能](https://www.aem.live/developer/font-fallback)，請確保網頁所套用的網頁字型與 Edge Delivery Services 網站上所使用的字型相同。本教學課程示範在 [wknd.site](http://wknd.site/us/en.html) 上的擴充功能。開發網站時，應將擴充功能套用至正在開發的網站，而非 [wknd.site](http://wknd.site/us/en.html)。
 
 ```css
 /* styles/styles.css */
@@ -320,7 +320,7 @@ Edge Delivery Services專案最佳化網頁字型的使用，以維持高效能�
 ...
 ```
 
-在`styles/styles.css`中的字型CSS變數中，在「真實」字型系列名稱之後新增遞補字型系列名稱。
+將備用字型系列名稱新增至 `styles/styles.css` 的字型 CSS 變數，放在「real」字型系列名稱之後。
 
 ```css
 /* styles/styles.css */
@@ -336,21 +336,21 @@ Edge Delivery Services專案最佳化網頁字型的使用，以維持高效能�
 
 ## 開發預覽
 
-新增CSS時，AEM CLI的本機開發環境會自動重新載入變更，因此能夠快速輕鬆地檢視CSS對區塊的影響。
+當您新增 CSS 時，AEM CLI 的本機開發環境會自動重新載入變更，因此能快速輕鬆地查看 CSS 會如何影響區塊。
 
-![WKND品牌CSS的開發預覽](./assets/4-website-branding/preview.png)
+![WKND 品牌 CSS 開發預覽](./assets/4-website-branding/preview.png)
 
 
-## 下載最終CSS檔案
+## 下載最終版的 CSS 檔案
 
-您可以從下列連結下載更新的CSS檔案：
+您可以從下方連結下載更新的 CSS 檔案：
 
 * [`styles.css`](https://raw.githubusercontent.com/davidjgonzalez/aem-wknd-eds-ue/refs/heads/main/styles/styles.css)
 * [`fonts.css`](https://raw.githubusercontent.com/davidjgonzalez/aem-wknd-eds-ue/refs/heads/main/styles/fonts.css)
 
-## 將CSS檔案加入連結
+## 對 CSS 檔案執行 lint 檢查
 
-請務必[經常lint](./3-local-development-environment.md#linting)您的程式碼變更，以確保它們乾淨一致。 定期篩選有助於及早發現問題，並縮短整體開發時間。 請記住，您必須先解決所有Linting問題，才能將您的工作合併到主要分支！
+務必針對您的程式碼變更[經常進行 lint 檢查](./3-local-development-environment.md#linting)，保持程式碼整潔且一致。定期 linting 有助於及早發現問題，進而減少整體開發時間。請記住，在所有 linting 問題都得到解決以前，您不能將您的開發工作合併到主分支內！
 
 ```bash
 $ npm run lint:css
@@ -358,7 +358,7 @@ $ npm run lint:css
 
 ## 合併程式碼變更
 
-將變更合併至GitHub上的`main`分支，以便在這些更新上建置未來的工作。
+將變更合併到 GitHub 上的 `main` 分支中，並以這些更新為基礎建置未來的工作。
 
 ```bash
 $ git add .
@@ -366,13 +366,13 @@ $ git commit -m "Add global CSS, CSS variables, and web fonts"
 $ git push origin wknd-styles
 ```
 
-一旦變更推送至`wknd-styles`分支後，請在GitHub上建立提取請求，以便合併至`main`分支。
+變更推送至 `wknd-styles` 分支後，在 GitHub 上建立提取要求，將其合併到 `main` 分支中。
 
-1. 從[建立新專案](./1-new-code-project.md)章節導覽至GitHub存放庫。
-2. 按一下&#x200B;**提取請求**&#x200B;索引標籤，然後選取&#x200B;**新提取請求**。
-3. 將`wknd-styles`設為來源分支，並將`main`設為目標分支。
-4. 檢閱變更並按一下&#x200B;**建立提取要求**。
-5. 在提取要求詳細資料中，**新增下列**：
+1. 從[建立新專案](./1-new-code-project.md)章節導覽至 GitHub 存放庫。
+2. 按一下「**提取要求**」索引標籤，然後選取「**新提取要求**」。
+3. 將 `wknd-styles` 設定為來源分支，將 `main` 設定為目標分支。
+4. 檢閱變更然後按一下「**建立提取要求**」。
+5. 在提取要求詳細資料中，**新增以下內容**：
 
    ```
    Add basic global CSS, CSS variables, and web fonts (including fallback fonts) to support the WKND brand.
@@ -384,11 +384,11 @@ $ git push origin wknd-styles
    - After: https://wknd-styles--wknd-aem-eds-ue--davidjgonzalez.aem.live/
    ```
 
-   * `Fix #1`參考了先前建立的GitHub問題。
-   * 測試URL會告訴AEM程式碼同步處理要使用哪些分支來進行驗證和比較。 「之後」URL使用工作分支`wknd-styles`，以檢查程式碼變更如何影響網站效能。
+   * `Fix #1` 會參照先前所建立的 GitHub 問題。
+   * 測試 URL 會告訴 AEM Code Sync 要使用哪些分支進行驗證和比較。「After」URL 使用工作分支 `wknd-styles`，檢查程式碼變更會如何影響網站效能。
 
-6. 按一下&#x200B;**建立提取請求**。
-7. 等待[AEM程式碼同步GitHub應用程式](./1-new-code-project.md)到&#x200B;**完成品質檢查**。 如果失敗，請解決錯誤並重新執行檢查。
-8. 檢查通過後，**將提取要求**&#x200B;合併至`main`。
+6. 按一下「**建立提取要求**」。
+7. 等待 [AEM Code Sync GitHub 應用程式](./1-new-code-project.md)**完成品質檢查**。若未通過，請解決錯誤然後重新執行檢查。
+8. 檢查通過後，將&#x200B;**提取要求合併**&#x200B;到 `main` 內。
 
-變更合併至`main`後，系統不會將它們視為部署至生產環境，新的開發工作可以根據這些更新繼續進行。
+隨著變更合併至 `main` 內，現在被視為已經部署至生產環境，並可以根據這些更新進行新的開發。

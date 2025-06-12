@@ -1,6 +1,6 @@
 ---
-title: 偵錯AEM SDK
-description: AEM SDK是開發人員使用的主要開發環境，並支援多種方法來偵錯AEM和部署的應用程式。
+title: 對 AEM SDK 進行偵錯
+description: AEM SDK 是開發人員使用的主要開發環境，支援多種對 AEM 和已部署之應用程式進行偵錯的方式。
 feature: Developer Tools
 version: Experience Manager as a Cloud Service
 doc-type: Tutorial
@@ -10,36 +10,36 @@ level: Beginner, Intermediate
 exl-id: e27cf3de-ef89-44d7-819b-157f85f5a80f
 duration: 41
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '209'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 偵錯AEM SDK
+# 對 AEM SDK 進行偵錯
 
-AEM SDK的本機quickstart是開發人員使用的主要開發環境，並支援多種方法來偵錯AEM和部署的應用程式。 本使用手冊說明在AEM SDK本機Quickstart上偵錯應用程式的一些較常用偵錯工具和控制檯。
+AEM SDK 的本機快速入門是開發人員使用的主要開發環境，支援多種對 AEM 和已部署之應用程式進行偵錯的方式。本使用者手冊會為您解說一些較為常見的偵錯工具和主控台，其可以在 AEM SDK 的本機快速入門中為您的應用程式偵錯。
 
 ## 記錄
 
-記錄檔是AEM應用程式偵錯作業的最前線，但部署的AEM應用程式必須有充足的登入次數。
+記錄是 AEM 應用程式偵錯作業的最前線，但是其作用取決於已部署的 AEM 應用程式中擁有充足的記錄。
 
-[使用記錄檔為AEM SDK除錯](./logs.md)
+[使用記錄對 AEM SDK 進行偵錯](./logs.md)
 
 ## 遠端偵錯
 
-在AEM SDK的本機Quickstart中執行的Java程式碼進行遠端除錯，可讓您從IDE逐步執行AEM中的即時程式碼。
+在 AEM SDK 的本機快速入門中執行 Java 程式碼的遠端偵錯，讓您可以從 IDE 針對 AEM 中即時執行的程式碼進行逐步除錯。
 
-[從遠端對AEM SDK除錯](./remote-debugging.md)
+[對 AEM SDK 進行遠端偵錯](./remote-debugging.md)
 
-## OSGi Web主控台
+## OSGi 網頁主控台
 
-AEM SDK的本機Quickstart有一個OSGi Web主控台，提供本機AEM執行階段中的各種資訊和內省，有助於瞭解AEM如何辨識您的應用程式和發揮其功能。
+AEM SDK 的本機快速入門有一個 OSGi 網頁主控台，提供有關本機 AEM 執行階段的各種資訊和深入檢查的功能，這些有助於了解您的應用程式如何被 AEM 識別，以及在 AEM 中如何運作。
 
-[使用OSGi Web主控台除錯AEM SDK](./osgi-web-consoles.md)
+[使用 OSGi 網頁主控台對 AEM SDK 進行偵錯](./osgi-web-consoles.md)
 
 ## 其他工具
 
-還有其他各種工具，協助您在AEM SDK的本機Quickstart上偵錯應用程式。
+各種其他工具可以幫助您在 AEM SDK 的本機快速入門中對應用程式進行偵錯。
 
-[偵錯AEM SDK的其他工具](./other-tools.md)
+[用於對 AEM SDK 進行偵錯的其他工具](./other-tools.md)
