@@ -27,7 +27,7 @@ Edge Delivery Services 網站專案的開發工具和流程設計，旨在維持
 
 此影片內容概述可使用通用編輯器進行編輯之 Edge Delivery Services 網站專案的開發拓撲。
 
->[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3443989/?learn=on&enablevpops&captions=chi_hant)
 
 +++查看其他的開發拓撲詳細資訊
 

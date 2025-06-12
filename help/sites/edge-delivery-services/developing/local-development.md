@@ -23,7 +23,7 @@ ht-degree: 100%
 
 如何設定用於開發 Edge Delivery Services 的本機開發環境。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425717/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434742/?learn=on&captions=chi_hant)
 
 
 ## 影片中概述的步驟

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 探索如何使用區段、預設內容等將 Edge Delivery Services 文件組合在一起。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425716/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445200/?learn=on&captions=chi_hant)

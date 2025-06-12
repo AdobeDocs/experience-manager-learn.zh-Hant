@@ -28,7 +28,7 @@ AEM 的內容片段 GraphQL API
 
 為克服這些挑戰，GraphQL 提供查詢型 API，讓用戶端能夠僅針對其所需內容向 AEM 查詢，並使用單一 API 呼叫接收。
 
->[!VIDEO](https://video.tv.adobe.com/v/328618?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452890?quality=12&learn=on&captions=chi_hant)
 
 此影片為 AEM 中實施之 GraphQL API 的概觀。在 AEM 中，GraphQL API 的主要功能是在無周邊部署作業中，將 AEM 內容片段傳遞給下游應用程式。
 
@@ -36,7 +36,7 @@ AEM 的內容片段 GraphQL API
 >id="aemcloud_learn_headless_graphql_overview"
 >title="AEM Headless - GraphQL 快速入門"
 >abstract="了解如何使用 GraphQL 傳遞內容片段。"
->additional-url="https://video.tv.adobe.com/v/328618" text="AEM 中的 GraphQL 概觀"
+>additional-url="https://video.tv.adobe.com/v/3452890?captions=chi_hant" text="AEM 中的 GraphQL 概觀"
 
 ## AEM Headless GraphQL 影片系列
 

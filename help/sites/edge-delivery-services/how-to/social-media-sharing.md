@@ -23,4 +23,4 @@ ht-degree: 100%
 
 了解如何使用 Edge Delivery Services 將社交媒體分享的內容最佳化。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425974/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439448/?learn=on&captions=chi_hant)

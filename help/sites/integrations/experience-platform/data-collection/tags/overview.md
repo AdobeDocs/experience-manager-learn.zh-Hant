@@ -27,7 +27,7 @@ ht-degree: 100%
 
 標記是 Adobe Experience Platform 的新一代標記管理技術。標記是部署 Adobe Analytics、Target、Audience Manager 和許多其他解決方案的最簡單方式。了解標記以及建議與 Adobe Experience Manager 整合的概要介紹。
 
->[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445211?quality=12&learn=on&captions=chi_hant)
 
 ## 先決條件
 

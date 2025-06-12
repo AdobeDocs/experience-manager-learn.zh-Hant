@@ -23,4 +23,4 @@ ht-degree: 100%
 
 使用 [AEM 樣板專案範本](https://github.com/adobe/aem-boilerplate)設定 Edge Delivery Services 程式碼 Git 存放庫。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425713/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434622/?learn=on&captions=chi_hant)

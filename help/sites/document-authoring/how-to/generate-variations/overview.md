@@ -24,4 +24,4 @@ ht-degree: 100%
 
 介紹 Edge Delivery Services 中的產生變化版本，並了解此功能對行銷人員有哪些用處。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428304/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438565/?learn=on&captions=chi_hant)

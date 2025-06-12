@@ -33,12 +33,12 @@ ht-degree: 100%
 
 將 SharePoint 設定為搭配 Edge Delivery Services 使用的內容存放庫。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425712/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446039/?learn=on&captions=chi_hant)
 
 >[!TAB Google Drive]
 
 將 Google Drive 設定為搭配 Edge Delivery Services 使用的內容存放庫。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425711/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434731/?learn=on&captions=chi_hant)
 
 >[!ENDTABS]

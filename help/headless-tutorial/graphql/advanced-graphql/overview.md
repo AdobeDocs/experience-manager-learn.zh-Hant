@@ -45,7 +45,7 @@ ht-degree: 100%
 
 以下影片針對本教學課程所涵蓋之概念提供整體性介紹。本教學課程內容包括使用更進階的資料類型定義內容片段模型、將內容片段巢狀化，以及在 AEM 中進行持續性 GraphQL 查詢。
 
->[!VIDEO](https://video.tv.adobe.com/v/340035?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446138?quality=12&learn=on&captions=chi_hant)
 
 >[!CAUTION]
 >

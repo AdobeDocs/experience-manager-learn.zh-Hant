@@ -27,7 +27,7 @@ ht-degree: 100%
 - 什麼是 RDE？
 - 其如何協助加快從開發到部署的週期？
 
->[!VIDEO](https://video.tv.adobe.com/v/3414128?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453609?quality=12&learn=on&captions=chi_hant)
 
 ## 下一步
 

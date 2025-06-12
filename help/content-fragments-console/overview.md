@@ -38,7 +38,7 @@ Adobe Experience Manager 的內容片段主控台讓內容片段的管理與製�
             <a href="./basics/content-fragments-console.md" title="主控台概觀"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3409492?format=jpeg"
+                src="https://video.tv.adobe.com/v/3449343?format=jpeg&captions=chi_hant"
                 alt="主控台概觀">
             </a>
           </figure>
@@ -104,7 +104,7 @@ Adobe Experience Manager 的內容片段主控台讓內容片段的管理與製�
             <a href="./search/fast-filtering.md" title="快速篩選"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="快速
+                src="https://video.tv.adobe.com/v/3436707?format=jpeg&captions=chi_hant" alt="快速
                 篩選">
             </a>
           </figure>
@@ -172,7 +172,7 @@ Adobe Experience Manager 的內容片段主控台讓內容片段的管理與製�
             <a href="./editor/non-asset-content-references.md" title="非資產
               內容參照" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419313?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436773?format=jpeg&captions=chi_hant"
                 alt="非資產內容參照">
             </a>
           </figure>
@@ -206,7 +206,7 @@ Adobe Experience Manager 的內容片段主控台讓內容片段的管理與製�
             <a href="./editor/rte-variant-compare.md" title="RTE 變體比較"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="RTE
+                src="https://video.tv.adobe.com/v/3437564?format=jpeg&captions=chi_hant" alt="RTE
                 變體比較">
             </a>
           </figure>
@@ -240,7 +240,7 @@ Adobe Experience Manager 的內容片段主控台讓內容片段的管理與製�
             <a href="./editor/language-copies.md" title="語言副本"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419311?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436967?format=jpeg&captions=chi_hant"
                 alt="語言副本">
             </a>
           </figure>
@@ -274,7 +274,7 @@ Adobe Experience Manager 的內容片段主控台讓內容片段的管理與製�
             <a href="./search/references.md" title="參照"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3420950?format=jpeg"
+                src="https://video.tv.adobe.com/v/3423636?format=jpeg&captions=chi_hant"
                 alt="參照">
             </a>
           </figure>
