@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
 duration: 477
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '2123'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # 將SPA元件對應至AEM元件 {#map-components}
+
+{{spa-editor-deprecation}}
 
 瞭解如何使用AEM SPA Editor JS SDK將React元件對應至Adobe Experience Manager (AEM)元件。 元件對應可讓使用者在AEM SPA Editor中對SPA元件進行動態更新，類似於傳統的AEM編寫。
 
@@ -50,7 +53,7 @@ ht-degree: 0%
 
 ## 檢查文字元件
 
-[AEM專案原型](https://github.com/adobe/aem-project-archetype)提供對應至AEM [文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hant)的`Text`元件。 這是&#x200B;**content**&#x200B;元件的範例，其會轉譯來自AEM的&#x200B;*content*。
+[AEM專案原型](https://github.com/adobe/aem-project-archetype)提供對應至AEM [文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`元件。 這是&#x200B;**content**&#x200B;元件的範例，其會轉譯來自AEM的&#x200B;*content*。
 
 讓我們瞭解元件的運作方式。
 
@@ -221,7 +224,7 @@ AEM SPA Editor SDK會自動支援&#x200B;**配置容器**。 名稱所指示的&
 
    **配置容器**&#x200B;元件有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，而且可由SPA編輯器使用`:type`屬性來辨識，就像`Text`和`Image`元件一樣。
 
-   SPA編輯器也提供相同的功能，可以使用[配置模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=zh-Hant#defining-layouts-layout-mode)來重新調整元件大小。
+   SPA編輯器也提供相同的功能，可以使用[配置模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)來重新調整元件大小。
 
 2. 返回[http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。 新增其他&#x200B;**影像**&#x200B;元件，然後嘗試使用&#x200B;**配置**&#x200B;選項重新調整其大小：
 
@@ -286,13 +289,13 @@ AEM SPA Editor SDK會自動支援&#x200B;**配置容器**。 名稱所指示的&
 
 ## （額外練習）建立自訂影像元件 {#bonus-image}
 
-React核心元件已提供SPA影像元件。 不過，如果您需要額外的練習，請建立您自己的React實作，該實作會對應至AEM [影像元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hant)。 `Image`元件是&#x200B;**content**&#x200B;元件的另一個範例。
+React核心元件已提供SPA影像元件。 不過，如果您需要額外的練習，請建立您自己的React實作，該實作會對應至AEM [影像元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)。 `Image`元件是&#x200B;**content**&#x200B;元件的另一個範例。
 
 ### 檢查JSON
 
 在跳入SPA程式碼之前，請檢查AEM提供的JSON模型。
 
-1. 導覽至核心元件庫[&#128279;](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的影像範例。
+1. 導覽至核心元件庫](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的[影像範例。
 
    ![影像核心元件JSON](./assets/map-components/image-json.png)
 

@@ -11,33 +11,34 @@ thumbnail: kt-10900.jpeg
 doc-type: Tutorial
 exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
 duration: 190
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '525'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # 如何使用AEM React Editable Components v2
 
-{{edge-delivery-services}}
+{{spa-editor-deprecation}}
 
 AEM提供[AEM React Editable Components v2](https://www.npmjs.com/package/@adobe/aem-react-editable-components)，這是以Node.js為基礎的SDK，可建立React元件，並支援使用AEM SPA編輯器編輯內容元件。
 
-+ [npm模組](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-+ [Github專案](https://github.com/adobe/aem-react-editable-components)
-+ [Adobe檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=zh-Hant)
+* [npm模組](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
+* [Github專案](https://github.com/adobe/aem-react-editable-components)
+* [Adobe檔案](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html)
 
 
 如需AEM React Editable Components v2的詳細資訊和程式碼範例，請檢閱技術檔案：
 
-+ [與AEM檔案整合](https://github.com/adobe/aem-react-editable-components/tree/master/src/core)
-+ [可編輯的元件檔案](https://github.com/adobe/aem-react-editable-components/tree/master/src/components)
-+ [協助程式檔案](https://github.com/adobe/aem-react-editable-components/tree/master/src/api)
+* [與AEM檔案整合](https://github.com/adobe/aem-react-editable-components/tree/master/src/core)
+* [可編輯的元件檔案](https://github.com/adobe/aem-react-editable-components/tree/master/src/components)
+* [協助程式檔案](https://github.com/adobe/aem-react-editable-components/tree/master/src/api)
 
 ## AEM頁面
 
-AEM React Editable Components可搭配SPA Editor或遠端SPA React應用程式運作。 填入可編輯React元件的內容必須透過延伸[SPA頁面元件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html?lang=zh-Hant)的AEM頁面公開。 對應至可編輯React元件的AEM元件必須實作AEM的[元件匯出工具架構](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=zh-Hant) — 例如[AEM核心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)。
+AEM React Editable Components可搭配SPA Editor或遠端SPA React應用程式運作。 填入可編輯React元件的內容必須透過延伸[SPA頁面元件](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html)的AEM頁面公開。 對應至可編輯React元件的AEM元件必須實作AEM的[元件匯出工具架構](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html) — 例如[AEM核心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 
 ## 相依性
@@ -46,8 +47,7 @@ AEM React Editable Components可搭配SPA Editor或遠端SPA React應用程式�
 
 使用AEM React Editable Components v2的React應用程式的最小相依性集合為： `@adobe/aem-react-editable-components`、`@adobe/aem-spa-component-mapping`和`@adobe/aem-spa-page-model-manager`。
 
-
-+ `package.json`
+* `package.json`
 
 ```json
 {
@@ -75,7 +75,7 @@ AEM React Editable Components可搭配SPA Editor或遠端SPA React應用程式�
 
 使用初始化的ModelManager包裝React應用程式，並轉譯React應用程式。 React應用程式應包含一個從`@adobe/aem-react-editable-components`匯出的`<Page>`元件執行個體。 `<Page>`元件具有根據AEM提供的`.model.json`動態建立React元件的邏輯。
 
-+ `src/index.js`
+* `src/index.js`
 
 ```javascript
 import { Constants, ModelManager } from '@adobe/aem-spa-page-model-manager';
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 `<Page>`是透過`ModelManager`以JSON形式傳遞AEM頁面的表示法。 接著，`<Page>`元件會將JS物件的`resourceType`值與React元件比對，以動態建立JSON中每個物件的React元件，而該元件會透過元件的`MapTo(..)`引動過程將其本身註冊為資源型別。 例如，以下將用於例項化執行個體
 
-+ `HTTP GET /content/.../home.model.json`
+* `HTTP GET /content/.../home.model.json`
 
 ```json
 ...
@@ -181,7 +181,7 @@ export default MapTo("wknd-examples/components/example")(EditableExample);
 1. AEM內嵌元件的JSON內容必須包含滿足內嵌元件要求的內容。 可透過為AEM元件建立對話方塊以收集必要資料來完成此操作。
 1. React元件的「不可編輯」執行個體必須內嵌，而非以`<EditableComponent>`包住的「可編輯」執行個體。 原因在於，如果內嵌元件具有`<EditableComponent>`包裝函式，SPA編輯器會嘗試使用編輯鉻黃（藍色暫留方塊）來裝飾內部元件，而不是使用外部內嵌元件。
 
-+ `HTTP GET /content/.../home.model.json`
+* `HTTP GET /content/.../home.model.json`
 
 ```json
 ...

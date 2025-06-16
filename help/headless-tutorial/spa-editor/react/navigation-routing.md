@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
 duration: 337
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # 新增導覽和路由 {#navigation-routing}
+
+{{spa-editor-deprecation}}
 
 瞭解如何使用SPA Editor SDK將對應到AEM頁面，以支援SPA中的多個檢視。 動態導覽是使用React Router和React Core Components來實施。
 
@@ -30,7 +33,7 @@ ht-degree: 0%
 
 ## 您將建置的內容
 
-本章將新增導覽至AEM中的SPA。 導覽功能表是由AEM頁面階層所驅動，並將使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=zh-Hant)提供的JSON模型。
+本章將新增導覽至AEM中的SPA。 導覽功能表是由AEM頁面階層所驅動，並將使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html)提供的JSON模型。
 
 ![已新增導覽](assets/navigation-routing/navigation-added.png)
 

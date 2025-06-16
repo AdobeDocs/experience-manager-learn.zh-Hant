@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
 duration: 308
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # 建立自訂元件 {#custom-component}
+
+{{spa-editor-deprecation}}
 
 瞭解如何建立要與AEM SPA Editor搭配使用的自訂元件。 瞭解如何開發作者對話方塊和Sling模型，以擴充JSON模型來填入自訂元件。
 
@@ -74,7 +77,7 @@ AEM元件定義為節點和屬性。 在專案中，這些節點和屬性在`ui.
 
 >[!NOTE]
 >
-> 快速重新整理AEM元件的[基本知識可能會有幫助](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=zh-Hant)。
+> 快速重新整理AEM元件的[基本知識可能會有幫助](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html)。
 
 1. 在您選擇的IDE中開啟`ui.apps`資料夾。
 2. 瀏覽至`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components`並建立名為`custom-component`的資料夾。
@@ -154,21 +157,21 @@ AEM元件定義為節點和屬性。 在專案中，這些節點和屬性在`ui.
 
    >[!NOTE]
    >
-   > 您可以檢視核心元件定義[&#128279;](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)，以檢視更多對話方塊範例。 您也可以檢視[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)中`/libs/granite/ui/components/coral/foundation/form`下方可用的其他表單欄位，例如`select`、`textarea`、`pathfield`。
+   > 您可以檢視核心元件定義](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)，以檢視更多[對話方塊範例。 您也可以檢視[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)中`/libs/granite/ui/components/coral/foundation/form`下方可用的其他表單欄位，例如`select`、`textarea`、`pathfield`。
 
-   使用傳統AEM元件時，通常需要[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)指令碼。 由於SPA會轉譯元件，因此不需要HTL指令碼。
+   使用傳統AEM元件時，通常需要[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)指令碼。 由於SPA會轉譯元件，因此不需要HTL指令碼。
 
 ## 建立Sling模型
 
-Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可方便將資料從JCR對應至Java™變數。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=zh-Hant#sling-models)通常可封裝AEM元件的複雜伺服器端商業邏輯。
+Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可方便將資料從JCR對應至Java™變數。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models)通常可封裝AEM元件的複雜伺服器端商業邏輯。
 
-在SPA編輯器的內容中，Sling模型使用[Sling模型匯出工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hant)，透過JSON模型透過功能公開元件的內容。
+在SPA編輯器的內容中，Sling模型使用[Sling模型匯出工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)，透過JSON模型透過功能公開元件的內容。
 
 1. 在您選擇的IDE中，開啟`core`模組。 `CustomComponent.java`和`CustomComponentImpl.java`已建立並作為章節起始程式碼的一部分進行存根。
 
    >[!NOTE]
    >
-   > 如果使用Visual Studio Code IDE，則安裝Java™[&#128279;](https://code.visualstudio.com/docs/java/extensions)的擴充功能可能會有幫助。
+   > 如果使用Visual Studio Code IDE，則安裝Java™](https://code.visualstudio.com/docs/java/extensions)的[擴充功能可能會有幫助。
 
 2. 在`core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/CustomComponent.java`開啟Java™介面`CustomComponent.java`：
 
@@ -235,7 +238,7 @@ Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可�
 
    >[!NOTE]
    >
-   > 您可以在[&#128279;](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)檢視已完成的CustomComponentImpl.java。
+   > 您可以在](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)檢視[已完成的CustomComponentImpl.java。
 
 ## 更新Angular元件
 

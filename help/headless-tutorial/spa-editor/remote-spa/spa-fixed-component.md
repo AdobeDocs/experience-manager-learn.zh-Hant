@@ -12,7 +12,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
 duration: 164
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -21,7 +22,9 @@ ht-degree: 0%
 
 # 可編輯的固定元件
 
-可編輯的React元件可以「固定」，或硬式編碼至SPA檢視中。 如此一來，開發人員就能將與SPA編輯器相容的元件置於SPA檢視中，且使用者能在AEM SPA編輯器中編寫元件的內容。
+{{spa-editor-deprecation}}
+
+可編輯的React元件可以「固定」，或硬式編碼到SPA的檢視中。 如此一來，開發人員就能將與SPA Editor相容的元件放入SPA檢視中，且使用者能在AEM SPA Editor中編寫元件的內容。
 
 ![固定元件](./assets/spa-fixed-component/intro.png)
 
@@ -31,12 +34,12 @@ ht-degree: 0%
 
 若要將&#x200B;__Fixed__&#x200B;元件新增至Home檢視：
 
-+ 建立自訂可編輯的標題元件並將其註冊到專案的標題資源型別
-+ 將可編輯的標題元件放在SPA首頁檢視上
+* 建立自訂可編輯的標題元件並將其註冊到專案的標題資源型別
+* 將可編輯的標題元件放在SPA的「首頁」檢視上
 
 ### 建立可編輯的React Title元件
 
-在SPA首頁檢視中，以自訂的可編輯標題元件取代硬式編碼文字`<h2>Current Adventures</h2>`。 在使用標題元件之前，我們必須：
+在SPA的「首頁」檢視中，以自訂的可編輯標題元件取代硬式編碼文字`<h2>Current Adventures</h2>`。 在使用標題元件之前，我們必須：
 
 1. 建立自訂Title React元件
 1. 使用來自`@adobe/aem-react-editable-components`的方法裝飾自訂Title元件，使其可編輯。
@@ -91,7 +94,7 @@ ht-degree: 0%
    export const titleIsEmpty = (props) => props.text == null || props.text.trim().length === 0
    ```
 
-   請注意，此React元件目前無法使用AEM SPA編輯器進行編輯。 此基本元件將在下一個步驟中變為可編輯。
+   請注意，您尚無法使用AEM SPA Editor編輯此React元件。 此基本元件將在下一個步驟中變為可編輯。
 
    閱讀程式碼的註釋，以瞭解實作詳細資訊。
 
@@ -132,7 +135,7 @@ ht-degree: 0%
    export default EditableTitle;
    ```
 
-   此`EditableTitle` React元件會包裝`Title` React元件，並將其包裝及裝飾為可在AEM SPA編輯器中編輯。
+   此`EditableTitle` React元件會包裝`Title` React元件，並將其包裝及裝飾為可在AEM SPA Editor中編輯。
 
 ### 使用React EditableTitle元件
 
@@ -175,10 +178,10 @@ ht-degree: 0%
    ![標題元件動作列](./assets/spa-fixed-component/title-action-bar.png)
 
 1. 編寫標題元件：
-   + 標題： __WKND冒險__
-   + 型別/大小： __H2__
+   1. 標題： __WKND冒險__
+   1. 型別/大小： __H2__
 
-     ![標題元件對話方塊](./assets/spa-fixed-component/title-dialog.png)
+      ![標題元件對話方塊](./assets/spa-fixed-component/title-dialog.png)
 
 1. 點選&#x200B;__完成__&#x200B;以儲存
 1. 在AEM SPA Editor中預覽變更
@@ -190,10 +193,10 @@ ht-degree: 0%
 
 您已將固定、可編輯的元件新增至WKND應用程式！ 您現在知道如何：
 
-+ 建立固定但可編輯的SPA元件
-+ 在AEM中編寫固定元件
-+ 檢視遠端SPA中的撰寫內容
+* 建立固定但可編輯的元件至SPA
+* 在AEM中編寫固定元件
+* 檢視遠端SPA中的撰寫內容
 
 ## 後續步驟
 
-接下來的步驟是[將AEM ResponsiveGrid容器元件](./spa-container-component.md)新增至SPA，讓作者將可編輯的元件新增至SPA！
+接下來的步驟是[新增AEM ResponsiveGrid容器元件](./spa-container-component.md)至SPA，讓作者將可編輯的元件新增至SPA！

@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
 duration: 316
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # 擴充核心元件 {#extend-component}
+
+{{spa-editor-deprecation}}
 
 瞭解如何擴充要與AEM SPA Editor搭配使用的現有核心元件。 瞭解如何擴充現有元件是一項強大的技術，可自訂和擴充AEM SPA Editor實作的功能。
 
@@ -174,7 +177,7 @@ ht-degree: 0%
 
 ## 延伸對話方塊 {#extend-dialog}
 
-我們的`Banner`元件需要對話方塊中的額外文字欄位才能擷取`bannerText`。 由於我們使用Sling繼承，因此可以使用[Sling資源合併器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=zh-Hant)的功能來覆寫或擴充對話方塊的部分。 在此範例中，對話方塊中已新增索引標籤，以從作者擷取其他資料以填入卡片元件。
+我們的`Banner`元件需要對話方塊中的額外文字欄位才能擷取`bannerText`。 由於我們使用Sling繼承，因此可以使用[Sling資源合併器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html)的功能來覆寫或擴充對話方塊的部分。 在此範例中，對話方塊中已新增索引標籤，以從作者擷取其他資料以填入卡片元件。
 
 1. 在`ui.apps`模組的`banner`資料夾下方，建立名為`_cq_dialog`的資料夾。
 1. 在`_cq_dialog`下建立對話方塊定義檔`.content.xml`。 請填入下列內容：
@@ -231,7 +234,7 @@ ht-degree: 0%
    </jcr:root>
    ```
 
-   上述XML定義將建立名為&#x200B;**Text**&#x200B;的新索引標籤，並在&#x200B;*現有&#x200B;**資產**&#x200B;索引標籤之前*&#x200B;對其進行排序。 它將包含單一欄位&#x200B;**橫幅文字**。
+   上述XML定義將建立名為&#x200B;**Text**&#x200B;的新索引標籤，並在&#x200B;*現有&#x200B;**資產**索引標籤之前*&#x200B;對其進行排序。 它將包含單一欄位&#x200B;**橫幅文字**。
 
 1. 對話方塊看起來像這樣：
 

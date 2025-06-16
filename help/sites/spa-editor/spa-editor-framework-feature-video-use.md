@@ -11,14 +11,17 @@ thumbnail: 22229.jpg
 doc-type: Feature Video
 exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
 duration: 473
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
-# 搭配AEM Sites使用SPA編輯器 {#using-the-spa-editor-with-aem-sites}
+# 搭配AEM Sites使用SPA編輯器
+
+{{spa-editor-deprecation}}
 
 概述在AEM Sites中製作單頁應用程式內容的影片。
 
@@ -40,4 +43,4 @@ WKND SPA實作僅支援AEM 6.4.8+、AEM 6.5.5+和AEM as a Cloud Service。
 
 如需有關使用SPA Editor開發的詳細教學課程，請參閱：
 
-* [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=zh-Hant)
+* [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)

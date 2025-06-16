@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
 duration: 669
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '2531'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # 新增導覽和路由 {#navigation-routing}
+
+{{spa-editor-deprecation}}
 
 瞭解如何使用AEM頁面和SPA Editor SDK支援SPA中的多個檢視。 動態導覽是使用Angular路由實作，並新增到現有的頁首元件。
 
@@ -30,7 +33,7 @@ ht-degree: 0%
 
 ## 您將建置的內容
 
-本章將導覽功能表新增至現有的`Header`元件。 導覽功能表是由AEM頁面階層所驅動，並使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=zh-Hant)提供的JSON模型。
+本章將導覽功能表新增至現有的`Header`元件。 導覽功能表是由AEM頁面階層所驅動，並使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
 
 ![已實作導覽](assets/navigation-routing/final-navigation-implemented.gif)
 
@@ -68,7 +71,7 @@ ht-degree: 0%
 
 ## 檢查HeaderComponent更新 {#inspect-header}
 
-在先前的章節中，`HeaderComponent`元件已新增為透過`app.component.html`包含的純Angular元件。 在本章中，`HeaderComponent`元件已從應用程式移除，並透過[範本編輯器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hant)新增。 這可讓使用者從AEM中設定`HeaderComponent`的導覽功能表。
+在先前的章節中，`HeaderComponent`元件已新增為透過`app.component.html`包含的純Angular元件。 在本章中，`HeaderComponent`元件已從應用程式移除，並透過[範本編輯器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)新增。 這可讓使用者從AEM中設定`HeaderComponent`的導覽功能表。
 
 >[!NOTE]
 >
@@ -113,7 +116,7 @@ ht-degree: 0%
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`元件將透過`sling:resourceSuperType`屬性繼承[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=zh-Hant)的所有功能。
+   AEM `Header`元件將透過`sling:resourceSuperType`屬性繼承[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)的所有功能。
 
 ## 將HeaderComponent新增至SPA範本 {#add-header-template}
 

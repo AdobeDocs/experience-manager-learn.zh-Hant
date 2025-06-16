@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
 duration: 252
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 1%
@@ -19,6 +20,8 @@ ht-degree: 1%
 ---
 
 # SPA編輯器專案 {#create-project}
+
+{{spa-editor-deprecation}}
 
 瞭解如何使用Adobe Experience Manager (AEM) Maven專案，開始整合Angular應用程式與AEM SPA Editor。
 
@@ -87,7 +90,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   > 注意`frontendModule=angular`屬性。 這會告訴AEM專案原型使用要與AEM SPA編輯器搭配使用的入門程式[Angular程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hant)，來啟動專案。
+   > 注意`frontendModule=angular`屬性。 這會告訴AEM專案原型使用要與AEM SPA編輯器搭配使用的入門程式[Angular程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)，來啟動專案。
 
 ## 建置專案
 
@@ -146,7 +149,7 @@ ht-degree: 1%
 
    專案所需的所有自訂程式碼都隨附在這些套件中，並安裝在AEM執行階段上。
 
-6. 您應該也會看到`spa.project.core`和`core.wcm.components`的多個套件。 這些是原型自動包含的相依性。 如需[AEM核心元件的詳細資訊，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)。
+6. 您應該也會看到`spa.project.core`和`core.wcm.components`的多個套件。 這些是原型自動包含的相依性。 如需[AEM核心元件的詳細資訊，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 ## 作者內容
 
