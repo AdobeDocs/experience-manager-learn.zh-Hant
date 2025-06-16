@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## 您將建置的內容
 
-本章將新增導覽至AEM中的SPA。 導覽功能表是由AEM頁面階層所驅動，並將使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html)提供的JSON模型。
+本章將新增導覽至AEM中的SPA。 導覽功能表是由AEM頁面階層所驅動，並將使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=zh-Hant)提供的JSON模型。
 
 ![已新增導覽](assets/navigation-routing/navigation-added.png)
 
