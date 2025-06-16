@@ -207,7 +207,7 @@ ht-degree: 0%
 
 在跳入SPA程式碼之前，請檢查AEM提供的JSON模型。
 
-1. 導覽至核心元件庫](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的[影像範例。
+1. 導覽至核心元件庫[&#128279;](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的影像範例。
 
    ![影像核心元件JSON](./assets/map-components/image-json.png)
 
@@ -246,7 +246,7 @@ ht-degree: 0%
 
    專案在`/mock-content/adobestock-140634652.jpeg`包含搭配&#x200B;**webpack開發伺服器**&#x200B;使用的範例影像。
 
-   您可以在](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/map-components-solution/ui.frontend/src/mocks/json/en.model.json)檢視完整的[en.model.json。
+   您可以在[&#128279;](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/map-components-solution/ui.frontend/src/mocks/json/en.model.json)檢視完整的en.model.json。
 
 3. 新增元件要顯示的庫存像片。
 

@@ -69,7 +69,7 @@ ht-degree: 1%
 
    注意`frontendModule=react`屬性。 這會告訴AEM專案原型使用要與AEM SPA編輯器搭配使用的啟動程式[React程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html)來啟動專案。 屬性（如`appTitle`、`appId`、`artifactId`和`groupId`）可用來識別專案和用途。
 
-   您可以在此處](https://github.com/adobe/aem-project-archetype#available-properties)找到設定專案[的可用屬性完整清單。
+   您可以在此處[&#128279;](https://github.com/adobe/aem-project-archetype#available-properties)找到設定專案的可用屬性完整清單。
 
 1. 下列資料夾和檔案結構是由本機檔案系統上的Maven原型所產生：
 
