@@ -8,9 +8,9 @@ sub-product: Experience Manager Sites
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
 index: y
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '341'
+source-git-commit: 6425188da75f789b0661ec9bfb79624b5704c92b
+workflow-type: tm+mt
+source-wordcount: '317'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 + [AEM Headless 概觀](./overview.md)
 + GraphQL {#graphql}
-   + [AEM Headless 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant){target=_blank}
+   + [AEM Headless 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
    + [概觀](./graphql/overview.md)
    + 快速設定 {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
@@ -72,20 +72,11 @@ ht-degree: 100%
    + [在 AEM 6.5 上安裝 GraphiQL](./graphql/how-to/install-graphiql-aem-6-5.md)
    + 範例 {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
-      + [Next.js](./graphql/example-apps/next-js.md)
       + [Web 元件](./graphql/example-apps/web-component.md)
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
       + [Node.js](./graphql/example-apps/server-to-server-app.md)
 + SPA 編輯器{#spa-editor}
-   + React{#react}
-      + [概觀](./spa-editor/react/overview.md)
-      + [1 - 建立專案](./spa-editor/react/create-project.md)
-      + [2 - 整合 SPA](./spa-editor/react/integrate-spa.md)
-      + [3 - 對應 SPA 元件](./spa-editor/react/map-components.md)
-      + [4 - 導覽和路由](./spa-editor/react/navigation-routing.md)
-      + [5 - 自訂元件](./spa-editor/react/custom-component.md)
-      + [6 - 擴展元件](./spa-editor/react/extend-component.md)
    + Angular{#angular}
       + [概觀](./spa-editor/angular/overview.md)
       + [1 - SPA 編輯器專案](./spa-editor/angular/create-project.md)
