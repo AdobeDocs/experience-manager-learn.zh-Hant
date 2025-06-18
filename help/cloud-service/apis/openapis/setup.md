@@ -1,6 +1,6 @@
 ---
-title: 設定OpenAPI型AEM API
-description: 瞭解如何設定您的AEM as a Cloud Service環境，以啟用對OpenAPI型AEM API的存取權。
+title: 設定基於 OpenAPI 的 AEM API
+description: 了解如何建立您的 AEM as a Cloud Service 環境，以便能夠存取基於 OpenAPI 的 AEM API。
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -12,16 +12,16 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 0%
+source-wordcount: '1493'
+ht-degree: 11%
 
 ---
 
-# 設定OpenAPI型AEM API
+# 設定基於 OpenAPI 的 AEM API
 
-瞭解如何設定您的AEM as a Cloud Service環境，以啟用對OpenAPI型AEM API的存取權。
+了解如何建立您的 AEM as a Cloud Service 環境，以便能夠存取基於 OpenAPI 的 AEM API。
 
 在此範例中，使用伺服器對伺服器驗證方法的AEM Assets API用於示範設定程式。 其他OpenAPI型AEM API也遵循相同步驟。
 
@@ -94,7 +94,7 @@ _新產品設定檔_&#x200B;的存在會在Adobe Developer Console (ADC)中啟�
 
 ![將開發人員關聯至產品設定檔](./assets/setup/associate-developer-to-product-profile.png)
 
-建立此關聯後，ADC專案的&#x200B;_資產作者API_&#x200B;可以設定所需的伺服器對伺服器驗證，並將ADC專案（在下一步中建立）的驗證帳戶與產品設定檔建立關聯。
+在此關聯之後，ADC專案的&#x200B;_資產作者API_&#x200B;可以設定所需的伺服器對伺服器驗證，並將ADC專案（在下一步中建立）中的驗證帳戶與產品設定檔建立關聯。
 
 >[!IMPORTANT]
 >
@@ -118,7 +118,7 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
    ![已建立新專案](./assets/setup/new-project-created.png)
 
-1. 按一下右上角的&#x200B;**編輯專案**&#x200B;按鈕以編輯專案名稱。 提供有意義的名稱，然後按一下[儲存]。**&#x200B;**
+1. 按一下右上角的&#x200B;**編輯專案**&#x200B;按鈕以編輯專案名稱。 提供有意義的名稱，然後按一下[儲存]。****
 
    ![編輯專案名稱](./assets/setup/edit-project-name.png)
 
@@ -133,6 +133,10 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 1. 在&#x200B;_新增API_&#x200B;對話方塊中，依&#x200B;_Experience Cloud_&#x200B;篩選，並選取所需的AEM API。 例如，在此案例中，已選取&#x200B;_資產作者API_。
 
    ![新增AEM API](./assets/s2s/add-aem-api.png)
+
+   >[!TIP]
+   >
+   >    如果所需的&#x200B;**AEM API卡**&#x200B;已停用，且&#x200B;_為什麼此卡已停用？_&#x200B;資訊顯示&#x200B;**需要授權**&#x200B;訊息，其中一個原因可能是您尚未更新AEM as a Cloud Service環境，如需詳細資訊，請參閱[更新AEM as a Cloud Service環境](#modernization-of-aem-as-a-cloud-service-environment)。
 
 1. 接下來，在&#x200B;_設定API_&#x200B;對話方塊中，選取所需的驗證選項。 例如，在此案例中，已選取&#x200B;**伺服器對伺服器**&#x200B;驗證選項。
 
@@ -198,7 +202,7 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
 ## 後續步驟
 
-將AEM執行個體設定為啟用ADC專案通訊後，您就可以開始使用以OpenAPI為基礎的AEM API。 瞭解如何使用不同的OAuth驗證方法以OpenAPI為基礎的AEM API：
+將AEM執行個體設定為啟用ADC專案通訊後，您就可以開始使用以OpenAPI為基礎的AEM API。 了解如何運用使用不同 OAuth 驗證方式的基於 OpenAPI 的 AEM API：
 
 <!-- CARDS
 {target = _self}
@@ -222,8 +226,8 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/invoke-api-using-oauth-s2s.md" title="使用伺服器對伺服器驗證叫用API" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/s2s/OAuth-S2S.png" alt="使用伺服器對伺服器驗證叫用API"
+                    <a href="./use-cases/invoke-api-using-oauth-s2s.md" title="使用伺服器對伺服器驗證叫用 API" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/s2s/OAuth-S2S.png" alt="使用伺服器對伺服器驗證叫用 API"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -231,9 +235,9 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" title="使用伺服器對伺服器驗證叫用API">使用伺服器對伺服器驗證啟動API</a>
+                        <a href="./use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" title="使用伺服器對伺服器驗證叫用 API">使用伺服器對伺服器驗證叫用 API</a>
                     </p>
-                    <p class="is-size-6">瞭解如何使用OAuth伺服器對伺服器驗證，從自訂NodeJS應用程式叫用OpenAPI型AEM API。</p>
+                    <p class="is-size-6">了解如何使用 OAuth 伺服器對伺服器驗證，從自訂 NodeJS 應用程式叫用基於 OpenAPI 的 AEM API。</p>
                 </div>
                 <a href="./use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
@@ -245,8 +249,8 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/invoke-api-using-oauth-web-app.md" title="使用網頁應用程式驗證叫用API" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/web-app/OAuth-WebApp.png" alt="使用網頁應用程式驗證叫用API"
+                    <a href="./use-cases/invoke-api-using-oauth-web-app.md" title="使用網頁應用程式驗證叫用 API" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/web-app/OAuth-WebApp.png" alt="使用網頁應用程式驗證叫用 API"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -254,9 +258,9 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" title="使用網頁應用程式驗證叫用API">使用網頁應用程式驗證啟動API</a>
+                        <a href="./use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" title="使用網頁應用程式驗證叫用 API">使用網頁應用程式驗證叫用 API</a>
                     </p>
-                    <p class="is-size-6">瞭解如何使用OAuth網頁應用程式驗證，從自訂網頁應用程式叫用OpenAPI型AEM API。</p>
+                    <p class="is-size-6">了解如何使用 OAuth 網頁應用程式驗證從自訂網頁應用程式叫用基於 OpenAPI 的 AEM API。</p>
                 </div>
                 <a href="./use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
@@ -268,8 +272,8 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" title="使用單頁應用程式驗證叫用API" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/spa/OAuth-SPA.png" alt="使用單頁應用程式驗證叫用API"
+                    <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" title="使用單頁應用程式驗證叫用 API" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/spa/OAuth-SPA.png" alt="使用單頁應用程式驗證叫用 API"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -277,7 +281,7 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" target="_self" rel="referrer" title="使用單頁應用程式驗證叫用API">使用單頁應用程式驗證啟動API</a>
+                        <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" target="_self" rel="referrer" title="使用單頁應用程式驗證叫用 API">使用單頁應用程式驗證叫用 API</a>
                     </p>
                     <p class="is-size-6">瞭解如何使用OAuth 2.0 PKCE流程，從自訂單頁應用程式(SPA)叫用OpenAPI型AEM API。</p>
                 </div>

@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 9a5d811cf92a09da27057f99e1b6b2ed8df2a414
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1776'
 ht-degree: 1%
 
 ---
@@ -85,6 +85,10 @@ OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動
 
    ![新增AEM API](../assets/s2s/add-aem-api.png)
 
+   >[!TIP]
+   >
+   >如果所需的&#x200B;**AEM API卡**&#x200B;已停用，且&#x200B;_為什麼此卡已停用？_&#x200B;資訊顯示&#x200B;**需要授權**&#x200B;訊息，其中一個原因可能是您尚未更新AEM as a Cloud Service環境，如需詳細資訊，請參閱[更新AEM as a Cloud Service環境](../setup.md#modernization-of-aem-as-a-cloud-service-environment)。
+
 1. 接著，在&#x200B;_設定API_&#x200B;對話方塊中，選取&#x200B;**伺服器對伺服器**&#x200B;驗證選項，然後按一下&#x200B;**下一步**。 伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。
 
    ![選取驗證](../assets/s2s/select-authentication.png)
@@ -145,7 +149,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 1. 展開&#x200B;_中繼資料_&#x200B;區段，然後按一下&#x200B;**傳遞指定資產的中繼資料**&#x200B;選項。
 
-1. 在右窗格中，按一下&#x200B;**嘗試它**&#x200B;按鈕。
+1. 在右窗格中，按一下&#x200B;**嘗試它**按鈕。
    ![API檔案](../assets/s2s/api-documentation.png)
 
 1. 輸入下列值：

@@ -12,9 +12,9 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
 workflow-type: tm+mt
-source-wordcount: '2213'
+source-wordcount: '2262'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 OAuth網頁應用程式驗證適用於具有前端和&#x200B;_後端_&#x200B;元件，且需要&#x200B;**代表使用者**&#x200B;存取AEM API的網頁應用程式。 它會使用OAuth 2.0 _authorization_code_&#x200B;授權型別來代表使用者取得存取權杖以存取AEM API。 如需詳細資訊，請參閱[ OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
 
-## 您能學到的內容{#what-you-learn}
+## 學習內容{#what-you-learn}
 
 在本教學課程中，您將學習如何：
 
@@ -49,7 +49,7 @@ WKND PIM應用程式是範例Web應用程式，用來管理儲存在AEM as a Clo
 
 Adobe Developer Console (ADC)專案已設定為使用OAuth Web App驗證存取Assets Author API。 它為WKND-PIM網頁應用程式提供必要的&#x200B;_client_id_&#x200B;和&#x200B;_client_secret_，以起始&#x200B;_authorization_code_&#x200B;授權流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3442768?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 
 下圖說明WKND-PIM網頁應用程式&#x200B;_取得使用者特定存取權杖以與Assets Author API_&#x200B;互動的功能流程。
@@ -461,6 +461,10 @@ OpenAPI型AEM API呼叫是從伺服器端（Express中介程式）發出，而�
 
    ![新增AEM API](../assets/s2s/add-aem-api.png)
 
+   >[!TIP]
+   >
+   >如果所需的&#x200B;**AEM API卡**&#x200B;已停用，且&#x200B;_為什麼此卡已停用？_&#x200B;資訊顯示&#x200B;**需要授權**&#x200B;訊息，其中一個原因可能是您尚未更新AEM as a Cloud Service環境，如需詳細資訊，請參閱[更新AEM as a Cloud Service環境](../setup.md#modernization-of-aem-as-a-cloud-service-environment)。
+
 1. 接著，在&#x200B;_設定API_&#x200B;對話方塊中，選取&#x200B;**使用者驗證**&#x200B;驗證選項，然後按一下&#x200B;**下一步**。
 
    ![設定AEM API](../assets/web-app/configure-aem-api.png)
@@ -493,7 +497,7 @@ OpenAPI型AEM API呼叫是從伺服器端（Express中介程式）發出，而�
 
 依預設，WKND Sites專案沒有顯示產品屬性所需的資產中繼資料結構。 讓我們建立資產中繼資料結構，並將其套用至AEM例項中的資產資料夾。
 
-1. 登入AEM as a Cloud Service資產例項。 使用[資產檢視](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/authoring/switch-views)導覽至`/content/dam/wknd-shared/en`資料夾。
+1. 登入AEM as a Cloud Service資產例項。 使用[資產檢視](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)導覽至`/content/dam/wknd-shared/en`資料夾。
 
    ![瀏覽至資料夾](../assets/web-app/navigate-to-folder.png)
 
