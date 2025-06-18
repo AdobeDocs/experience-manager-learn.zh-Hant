@@ -497,7 +497,7 @@ OpenAPI型AEM API呼叫是從伺服器端（Express中介程式）發出，而�
 
 依預設，WKND Sites專案沒有顯示產品屬性所需的資產中繼資料結構。 讓我們建立資產中繼資料結構，並將其套用至AEM例項中的資產資料夾。
 
-1. 登入AEM as a Cloud Service資產例項。 使用[資產檢視](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)導覽至`/content/dam/wknd-shared/en`資料夾。
+1. 登入AEM as a Cloud Service資產例項。 使用[資產檢視](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/authoring/switch-views)導覽至`/content/dam/wknd-shared/en`資料夾。
 
    ![瀏覽至資料夾](../assets/web-app/navigate-to-folder.png)
 
