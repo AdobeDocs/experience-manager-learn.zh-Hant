@@ -7,9 +7,9 @@ topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
 source-git-commit: 36917be459162e5399620c976bfe953cc5553c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '637'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -23,15 +23,15 @@ Adobe Experience Manager (AEM) Sites 是業界領先的體驗管理平台。本�
 
 AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建置完整頁面、最佳化邊緣效能，還是支援無周邊應用程式，AEM Sites 都能提供靈活的選項來滿足您的專案需求：
 
-1. **Edge Delivery Services**&#x200B;網站利用檔案式製作或Adobe Universal Editor來製作內容，然後啟動內容，再由Edge Delivery Services以HTML網頁的形式傳送給使用者。 此選項主要適用於&#x200B;_需要高效能、擴充性和速度的「新專案及現有專案_」。
-1. **Headless/API-first**&#x200B;網頁體驗使用內容片段編輯器或通用編輯器來製作內容，然後啟動該內容，並由AEM Publish以JSON格式傳送。 此選項主要適用於&#x200B;_新的和現有的專案_，這些專案需要將Headless內容傳送至行動應用程式、單頁應用程式(SPA)或其他Headless應用程式。
-1. **傳統AEM**&#x200B;不是使用AEM Sites建立網頁體驗的最新方法。 傳統AEM使用AEM作者的頁面編輯器來製作內容，然後啟用內容，並透過AEM Publish as HTML網頁傳送給使用者。 建議針對&#x200B;_現有專案_&#x200B;使用傳統AEM。
+1. **Edge Delivery Services** 網站利用文件型製作或 Adobe 通用編輯器來製作內容，然後啟動該內容，並透過 Edge Delivery Services 以 HTML 網頁格式傳送給終端使用者。此選項主要適用於對效能、擴充性及速度具有高需求的&#x200B;_新專案和現有專案_。
+1. **無周邊/API 優先**&#x200B;的網頁體驗會使用內容片段編輯器或通用編輯器來製作內容，然後啟動該內容，並透過 AEM Publish 以 JSON 的格式傳送。此選項主要適用於需要用無周邊方式傳送內容至行動裝置應用程式、單頁應用程式 (SPA) 或其他無周邊應用程式的&#x200B;_新專案和現有專案_。
+1. **傳統 AEM**&#x200B;並非使用 AEM Sites 建立網頁體驗的最新方法。傳統 AEM 使用 AEM Author 的頁面編輯器製作內容，然後啟動該內容，並透過 AEM Publish 以 HTML 網頁格式傳送給終端使用者。一般建議針對&#x200B;_現有專案_&#x200B;使用傳統 AEM。
 
-這些選項旨在滿足行銷組織的多樣化需求，可以透過任何管道或裝置快速且大規模地提供引人入勝的個人化體驗。
+這些選項旨在滿足行銷組織的多樣化需求，可以透過任何管道或裝置快速且大規模地提供吸引人的個人化體驗。
 
 >[!IMPORTANT]
 >
-> **Edge Delivery Services**&#x200B;是使用AEM Sites建置的最新方式。 其設計旨在大規模提供高效能網站，利用AdobeEdge Network的強大功能。
+> **Edge Delivery Services** 是使用 AEM Sites 建置的最新方式。其設計旨在運用 Adobe Edge Network 的強大效能，大規模建置高效能網站。
 
 以下圖表呈現不同的路徑：
 
@@ -41,16 +41,16 @@ AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建�
 
 以下表格針對這三條路徑進行高層級比較。其聚焦於每條路徑在內容製作和體驗傳遞方面的細微差別。
 
-|            | Edge Delivery Services | 無周邊/API 優先 | 傳統AEM |
+|            | Edge Delivery Services | 無周邊/API 優先 | 傳統 AEM |
 |---------------------|------------------------------|---------------------------------|---------------------------------------------|
-| **最適合** | 具有高流量、效能及擴充能力的網站 | 行動應用程式、SPA和其他Headless應用程式 | 現有專案（非最新方法） |
+| **最適合** | 對流量、效能與擴充性有高度需求的網站 | 行動應用程式、SPA 和其他無周邊應用程式 | 現有專案 (非最新方法) |
 | **製作工具** | 文件型製作、通用編輯器 | 內容片段、通用編輯器 | 頁面編輯器 |
 | **製作內容儲存** | 文件或 AEM Author (JCR) | AEM Author (JCR) | AEM Author (JCR) |
 | **傳遞** | Edge Delivery Services | AEM Publish (透過 Adobe CDN + Dispatcher) | AEM Publish (透過 Adobe CDN + Dispatcher) |
 | **傳遞內容儲存** | Edge Delivery Services | AEM Publish (JCR) | AEM Publish (JCR) |
 | **傳遞格式** | HTML | JSON | HTML |
 | **開發技術** | JavaScript、CSS | 任何 (例如 Swift、React 等) | Java™、JavaScript、CSS |
-| **實作階段** | 新專案和現有專案 | 新專案和現有專案 | 僅限現有專案 |
+| **實施階段** | 新建立及現有專案 | 新建立及現有專案 | 僅適用於現有專案 |
 
 ## 教學課程
 
@@ -63,12 +63,12 @@ AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建�
   {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with EDS.}
   {image = ./assets/edge-delivery-services.png}
   {target = _blank}
-* https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-with-aem-headless/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview
   {title = Headless/API-First - Tutorials}
   {description = Learn how to build headless applications powered by AEM content. Tutorials cover frameworks like iOS, Android, and React—choose what fits your stack.}
   {image = ./assets/headless.png}
   {target = _self}
-* https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
   {title = Traditional AEM - WKND Tutorial}
   {description = Learn how to build a sample AEM Sites project using the WKND tutorial. This guide walks you through project setup, Core Components, Editable Templates, client-side libraries, and component development.}
   {image = ./assets/aem-wknd-spa-editor-tutorial.png}
@@ -114,7 +114,7 @@ AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建�
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" title="無周邊/API 優先 - 教學課程">無周邊/API 優先 - 教學課程</a>
                     </p>
-                    <p class="is-size-6">了解如何建置由 AEM 內容支援的無周邊應用程式。教學課程涵蓋iOS、Android和React等架構，選擇適合您棧疊的專案。</p>
+                    <p class="is-size-6">了解如何建置由 AEM 內容支援的無周邊應用程式。教學課程涵蓋 iOS、Android 和 React 等框架，請根據您的堆疊選擇適合的框架。</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
@@ -126,8 +126,8 @@ AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" title="傳統AEM - WKND教學課程" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/aem-wknd-spa-editor-tutorial.png" alt="傳統AEM - WKND教學課程"
+                    <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" title="傳統 AEM - WKND 教學課程" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/aem-wknd-spa-editor-tutorial.png" alt="傳統 AEM - WKND 教學課程"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -135,7 +135,7 @@ AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" target="_self" rel="referrer" title="傳統AEM - WKND教學課程">傳統AEM - WKND教學課程</a>
+                        <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" target="_self" rel="referrer" title="傳統 AEM - WKND 教學課程">傳統 AEM - WKND 教學課程</a>
                     </p>
                     <p class="is-size-6">了解如何使用 WKND 教學課程建置 AEM Sites 專案範例。本指南會為您逐步解說專案設定、核心元件、可編輯的範本、用戶端資料庫和元件開發。</p>
                 </div>
