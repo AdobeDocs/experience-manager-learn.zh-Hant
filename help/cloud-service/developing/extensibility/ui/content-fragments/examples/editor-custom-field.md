@@ -11,7 +11,7 @@ last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
 exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: be710750cd6f2c71fa6b5eb8a6309d5965d67c82
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 瞭解如何在AEM內容片段編輯器中建立自訂欄位。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437645?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
 AEM UI擴充功能應使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)架構進行開發，因為這樣可與AEM其他部分維持一致的外觀與風格，並且擁有預先建立的廣泛功能庫，可減少開發時間。
 
@@ -42,7 +42,7 @@ AEM UI擴充功能應使用[Adobe React Spectrum](https://react-spectrum.adobe.c
 
 ### 內容片段模型定義
 
-此範例繫結至任何名稱為`sku`的內容片段欄位（透過`^sku$`的[規則運算式符合](#extension-registration)），並以自訂欄位取代。 此範例使用已更新的WKND Adventure內容片段模式，定義如下：
+此範例繫結至任何名稱為`sku`的內容片段欄位（透過[的](#extension-registration)規則運算式符合`^sku$`），並以自訂欄位取代。 此範例使用已更新的WKND Adventure內容片段模式，定義如下：
 
 ![內容片段模型定義](./assets/editor-custom-field/content-fragment-editor.png)
 
@@ -51,7 +51,7 @@ AEM UI擴充功能應使用[Adobe React Spectrum](https://react-spectrum.adobe.c
 
 ### 應用程式路由
 
-在主要React元件`App.js`中，包含轉譯`SkuField` React元件的`/sku-field`路由。
+在主要React元件`App.js`中，包含轉譯`/sku-field` React元件的`SkuField`路由。
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 
@@ -136,9 +136,9 @@ export default ExtensionRegistration;
 
 + 利用`useEffect`進行初始化並連線至AEM的內容片段編輯器，並在安裝完成前顯示載入狀態。
 + 在iFrame內呈現時，它會透過`onOpenChange`函式動態調整iFrame的高度，以符合Adobe React頻譜選擇器的下拉式清單。
-+ 使用`onSelectionChange`函式中的`connection.host.field.onChange(value)`將欄位選取內容傳回主機，確保選取的值已根據內容片段模型的指南驗證並自動儲存。
++ 使用`connection.host.field.onChange(value)`函式中的`onSelectionChange`將欄位選取內容傳回主機，確保選取的值已根據內容片段模型的指南驗證並自動儲存。
 
-自訂欄位會在插入內容片段編輯器的iFrame中轉譯。 自訂欄位程式碼與內容片段編輯器之間的通訊僅透過`connection`物件進行，由`@adobe/uix-guest`封裝中的`attach`函式建立。
+自訂欄位會在插入內容片段編輯器的iFrame中轉譯。 自訂欄位程式碼與內容片段編輯器之間的通訊僅透過`connection`物件進行，由`attach`封裝中的`@adobe/uix-guest`函式建立。
 
 `src/aem-cf-editor-1/web-src/src/components/SkuField.js`
 
@@ -189,7 +189,7 @@ const SkuField = (props) => {
    * In these cases adjust the Content Fragment Editor's iframe's height so the field doesn't get cut off.     *
    * @param {*} isOpen true if the picker is open, false if it's closed
    */
-  const onOpenChange = async (isOpen) => {
+  const onOpenChange = (isOpen) => {
     if (isOpen) {
       // Calculate the height of the picker box and its label, and surrounding padding.
       const pickerHeight = Number(document.body.clientHeight.toFixed(0));
@@ -202,12 +202,15 @@ const SkuField = (props) => {
       const height = Math.min(pickerHeight + optionsHeight, 400);
 
       // Set the height of the iframe in the Content Fragment Editor
-      await connection.host.field.setHeight(height);
+      connection.host.field.setStyles({
+        current: { height, },
+        parent: { height, },
+      })
     } else {
-      // Set the height of the iframe in the Content Fragment Editor to the height of the closed picker.
-      await connection.host.field.setHeight(
-        Number(document.body.clientHeight.toFixed(0))
-      );
+      connection.host.field.setStyles({
+        current: { height: 74 },
+        parent: { height: 74 },
+      })
     }
   };
 
