@@ -33,8 +33,8 @@ ht-degree: 3%
    - [Git](https://git-scm.com/downloads)
    - IDE或程式碼編輯器，例如[Visual Studio Code](https://code.visualstudio.com/)
 - 下載並安裝下列專案：
-   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk)：它包含用於在本機執行AEM Author和Publish以進行開發的Quickstart Jar。
-   - [Universal Editor服務](https://experienceleague.adobe.com/en/docs/experience-cloud/software-distribution/home)： Universal Editor服務的本機復本，具有功能子集，可從軟體發佈入口網站下載。
+   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk)：它包含用於在本機執行AEM Author和Publish以進行開發的Quickstart Jar。
+   - [Universal Editor服務](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud/software-distribution/home)： Universal Editor服務的本機復本，具有功能子集，可從軟體發佈入口網站下載。
    - [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy#local-ssl-proxy)：使用自我簽署憑證進行本機開發的簡單本機SSL HTTP Proxy。 AEM Universal Editor需要React應用程式的HTTPS URL，才能在編輯器中載入它。
 
 ## 本機設定
