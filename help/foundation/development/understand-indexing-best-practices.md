@@ -13,7 +13,7 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 7ada3c2e7deb414b924077a5d2988db16f28712c
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 1%
@@ -29,7 +29,7 @@ ht-degree: 1%
 - AEM as a Cloud Service僅支援Oak Lucene索引。
 - 索引設定應在AEM專案程式碼庫中管理，並使用Cloud Manager CI/CD管道進行部署。
 - 如果特定查詢有多個索引可供使用，則會使用預估成本最低的&#x200B;**索引**。
-- 如果指定的查詢沒有可用的索引，則會周遊內容樹以尋找相符的內容。 不過，透過`org.apache.jackrabbit.oak.query.QueryEngineSettingsService`的預設限制是僅遍歷10,0000個節點。
+- 如果指定的查詢沒有可用的索引，則會周遊內容樹以尋找相符的內容。 不過，透過`org.apache.jackrabbit.oak.query.QueryEngineSettingsService`的預設限制是僅遍歷100,000個節點。
 - 查詢的結果最後&#x200B;**篩選為**&#x200B;以確保目前的使用者具有讀取存取權。 這表示查詢結果可能小於索引節點的數目。
 - 在索引定義變更之後重新索引存放庫，需要時間，而且取決於存放庫的大小。
 
@@ -39,9 +39,9 @@ ht-degree: 1%
 
 有時候，您必須建立自訂索引以支援您的搜尋需求。 但在建立自訂索引之前，請遵循以下准則：
 
-- 瞭解搜尋需求，並檢查OOTB索引是否可支援搜尋需求。 透過Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`使用&#x200B;**查詢效能工具** (位於[本機SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS)。
+- 瞭解搜尋需求，並檢查OOTB索引是否可支援搜尋需求。 透過Developer Console或&#x200B;**使用**&#x200B;查詢效能工具[ (位於](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)本機SDK`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`和AEMCS)。
 
-- 定義最佳查詢，使用[最佳化查詢](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)流程圖和[JCR查詢速查表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=zh-Hant)以作參考。
+- 定義最佳查詢，使用[最佳化查詢](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)流程圖和[JCR查詢速查表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf)以作參考。
 
 - 如果OOTB索引不支援搜尋需求，您有兩個選擇。 但是，檢閱建立有效索引的[提示](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - 自訂OOTB索引：方便維護和升級的偏好選項。
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 - 避免在與OOTB索引相同的節點型別上建立自訂索引。 請改為使用`indexRules`節點中的必要屬性自訂OOTB索引。 例如，請勿在`dam:Asset`節點型別上建立自訂索引，而是自訂OOTB `damAssetLucene`索引。 _這是效能和功能問題的常見根本原因_。
 
-- 同時，請避免在索引規則(`indexRules`)節點下新增多個節點型別，例如`cq:Page`和`cq:Tag`。 請改為為每個節點型別建立個別的索引。
+- 同時，請避免在索引規則(`cq:Page`)節點下新增多個節點型別，例如`cq:Tag`和`indexRules`。 請改為為每個節點型別建立個別的索引。
 
 - 如上節所述，將索引定義儲存在`ui.apps/src/main/content/jcr_root/_oak_index`的AEM專案中，並使用Cloud Manager CI/CD管道進行部署。 如需詳細資訊，請參閱[部署自訂索引定義](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/operations/indexing)。
 
@@ -112,13 +112,13 @@ ht-degree: 1%
 
 下圖顯示`dam:Asset`節點型別的自訂索引，其中`includedPaths`屬性設定為特定路徑。
 
-dam：Asset nodetype![&#128279;](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)上的索引
+dam：Asset nodetype![上的](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)索引
 
 ##### 分析
 
 如果您在Assets上執行Omnisearch，則會傳回錯誤結果，因為自訂索引的估計成本較低。
 
-請勿在`dam:Asset`節點型別上建立自訂索引，但請使用`indexRules`節點中的必要屬性自訂OOTB `damAssetLucene`索引。
+請勿在`dam:Asset`節點型別上建立自訂索引，但請使用`damAssetLucene`節點中的必要屬性自訂OOTB `indexRules`索引。
 
 #### 索引規則下的多個節點型別
 
@@ -185,7 +185,7 @@ AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF�
 
 若要依mime型別停用Apache Tika，請執行以下步驟：
 
-- 在自訂或OOBT索引定義下新增`nt:unstructured`型別的`tika`節點。 在下列範例中，已針對OOTB `damAssetLucene`索引停用PDF MIME型別。
+- 在自訂或OOBT索引定義下新增`tika`型別的`nt:unstructured`節點。 在下列範例中，已針對OOTB `damAssetLucene`索引停用PDF MIME型別。
 
 ```xml
 /oak:index/damAssetLucene
@@ -197,7 +197,7 @@ AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF�
     </tika>
 ```
 
-- 在`tika`節點下新增包含以下詳細資料的`config.xml`。
+- 在`config.xml`節點下新增包含以下詳細資料的`tika`。
 
 ```xml
 <properties>
@@ -211,7 +211,7 @@ AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF�
 
 - 若要重新整理已儲存的索引，請在索引定義節點下將`refresh`屬性設定為`true`，如需詳細資訊，請參閱[索引定義屬性](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition:~:text=Defaults%20to%2010000-,refresh,-Optional%20boolean%20property)。
 
-下圖顯示具有`tika`節點和`config.xml`檔案的OOTB `damAssetLucene`索引，該索引會停用PDF和其他mime型別。
+下圖顯示具有`damAssetLucene`節點和`tika`檔案的OOTB `config.xml`索引，該索引會停用PDF和其他mime型別。
 
 具有tika節點的![OOTB damAssetLucene索引](./assets/understand-indexing-best-practices/ootb-index-with-tika-node.png)
 
@@ -219,11 +219,11 @@ AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF�
 
 若要完全停用Apache Tika，請遵循以下步驟：
 
-- 在`/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>`新增`includePropertyTypes`屬性並將值設定為`String`。 例如，在下圖中，已為OOBT `damAssetLucene`索引的`dam:Asset`節點型別新增`includePropertyTypes`屬性。
+- 在`includePropertyTypes`新增`/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>`屬性並將值設定為`String`。 例如，在下圖中，已為OOBT `includePropertyTypes`索引的`dam:Asset`節點型別新增`damAssetLucene`屬性。
 
 ![IncludePropertyTypes屬性](./assets/understand-indexing-best-practices/includePropertyTypes-prop.png)
 
-- 在`properties`節點底下新增具有下列屬性的`data`，確定它是屬性定義上方的第一個節點。 例如，請參閱以下影像：
+- 在`data`節點底下新增具有下列屬性的`properties`，確定它是屬性定義上方的第一個節點。 例如，請參閱以下影像：
 
 ```xml
 /oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>/properties/data
@@ -253,7 +253,7 @@ AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF�
 
 ### 查詢效能工具
 
-可透過Developer Console或`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`在[本機SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)和AEMCS取得的OOTB _查詢效能工具_&#x200B;可協助&#x200B;**分析查詢效能**&#x200B;和[JCR查詢速查表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=zh-Hant)以定義最佳查詢。
+可透過Developer Console或&#x200B;_在_&#x200B;本機SDK[和AEMCS取得的OOTB ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)查詢效能工具`https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`可協助&#x200B;**分析查詢效能**&#x200B;和[JCR查詢速查表](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en)以定義最佳查詢。
 
 ### 疑難排解工具和提示
 
@@ -261,19 +261,19 @@ AEM使用[Apache Tika](https://tika.apache.org/)從檔案&#x200B;_型別(如PDF�
 
 - 索引管理員可在`http://host:port/libs/granite/operations/content/diagnosistools/indexManager.html`取得，以取得型別、上次更新時間、大小等索引資訊。
 
-- 透過`http://host:port/system/console/slinglog`詳細記錄Oak查詢和索引相關的Java™套件（例如`org.apache.jackrabbit.oak.plugins.index`、`org.apache.jackrabbit.oak.query`和`com.day.cq.search`）以進行疑難排解。
+- 透過`org.apache.jackrabbit.oak.plugins.index`詳細記錄Oak查詢和索引相關的Java™套件（例如`org.apache.jackrabbit.oak.query`、`com.day.cq.search`和`http://host:port/system/console/slinglog`）以進行疑難排解。
 
 - _IndexStats_&#x200B;型別的JMX MBean可在`http://host:port/system/console/jmx`取得，以取得與非同步索引相關的索引資訊，例如狀態、進度或統計資料。 它還提供&#x200B;_FailingIndexStats_，如果此處沒有結果，則表示沒有索引損毀。 AsyncIndexerService會將任何在30分鐘內無法更新的索引（可設定）標籤為已損毀，並停止對其進行索引。 如果查詢沒有提供預期的結果，開發人員在繼續重新索引之前檢視此內容會很有幫助，因為重新索引的計算成本高昂且耗時。
 
 - _LuceneIndex_&#x200B;型別的JMX MBean可在`http://host:port/system/console/jmx`用於Lucene索引統計資料，例如大小、每個索引定義的檔案數。
 
-- 在`http://host:port/system/console/jmx`可用於Oak查詢統計資料的&#x200B;_QueryStat_&#x200B;型別的JMX MBean，包含具有查詢、執行時間等詳細資訊的緩慢和常見查詢。
+- 在&#x200B;_可用於Oak查詢統計資料的_ QueryStat`http://host:port/system/console/jmx`型別的JMX MBean，包含具有查詢、執行時間等詳細資訊的緩慢和常見查詢。
 
 ## 其他資源
 
 如需詳細資訊，請參閱下列檔案：
 
 - [Oak查詢和索引](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
-- [查詢和建立索引最佳做法](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
+- [查詢和建立索引最佳做法](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
 - [查詢和建立索引的最佳實務](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
 
