@@ -52,7 +52,7 @@ AEM as a Cloud Service運用整合式CDN層來保護和最佳化網站的傳送�
 
 標準流量篩選規則可用來強制實施特定業務的原則，例如速率限制或封鎖特定區域，以及根據請求屬性和標頭（例如IP位址、路徑或使用者代理）封鎖流量。
 另一方面，WAF流量篩選規則為已知的Web利用漏洞和攻擊向量提供全面的主動保護，並擁有進階智慧來限制誤判（亦即封鎖合法流量）。
-若要定義這兩種型別的規則，請使用YAML語法，請參閱[流量篩選規則語法](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)以取得詳細資訊。
+若要定義這兩種型別的規則，請使用YAML語法，請參閱[流量篩選規則語法](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)以取得詳細資訊。
 
 ## 何時及為何使用它們
 

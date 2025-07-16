@@ -38,7 +38,7 @@ ht-degree: 18%
 
 ## 流量篩選器規則的最佳實務
 
-- 使用Adobe [建議的標準流量篩選規則](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)作為基準，其中包括邊緣、來源保護和OFAC限制規則。
+- 使用Adobe [建議的標準流量篩選規則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)作為基準，其中包括邊緣、來源保護和OFAC限制規則。
 - 定期檢閱警報和記錄，以識別不當使用或設定錯誤的模式。
 - 根據您應用程式的流量模式和使用者行為調整速率限制的臨界值。
 
@@ -55,9 +55,9 @@ ht-degree: 18%
 
 ## WAF 規則的最佳實務
 
-- 從Adobe [建議的WAF規則](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)開始，其中包括封鎖已知不良IP、偵測DDoS攻擊及緩解機器人濫用的規則。
+- 從Adobe [建議的WAF規則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)開始，其中包括封鎖已知不良IP、偵測DDoS攻擊及緩解機器人濫用的規則。
 - `ATTACK` WAF標幟應警示您潛在威脅。 在移至`block`之前，請確定沒有誤判。
-- 如果建議的WAF規則未涵蓋特定威脅，請考慮根據您應用程式的獨特需求建立自訂規則。 請參閱檔案中的[WAF旗標](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)完整清單。
+- 如果建議的WAF規則未涵蓋特定威脅，請考慮根據您應用程式的獨特需求建立自訂規則。 請參閱檔案中的[WAF旗標](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)完整清單。
 
 ## 實作規則
 
@@ -132,6 +132,6 @@ ht-degree: 18%
 ## 其他資源
 
 - [流量篩選器規則，包括WAF規則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
-- [瞭解AEM中的DoS/DDoS預防](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understanding-dos-and-prevention-approaches)
+- [瞭解AEM中的DoS/DDoS預防](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/foundation/security/understanding-dos-and-prevention-approaches)
 - [使用流量篩選規則封鎖DoS和DDoS攻擊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules)
 

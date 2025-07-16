@@ -59,7 +59,7 @@ Adobe建議的Web應用程式防火牆(WAF)規則對於保護AEM網站免受複�
 
 此規則&#x200B;**封鎖**&#x200B;看起來可疑的&#x200B;*和*&#x200B;請求，這些請求都來自標籤為惡意的IP位址。 由於這兩個條件都符合，我們相信誤判（封鎖合法流量）的風險非常低。 已知不良IP會根據威脅情報摘要和其他來源進行識別。
 
-`ATTACK-FROM-BAD-IP` WAF旗標是用來識別這些要求。 它會彙總列在這裡[的數個WAF旗標](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)。
+`ATTACK-FROM-BAD-IP` WAF旗標是用來識別這些要求。 它會彙總列在這裡[的數個WAF旗標](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)。
 
 ```yaml
 kind: "CDN"
@@ -220,7 +220,7 @@ $./nikto.pl -useragent "AttackSimulationAgent (Demo/1.0)" -D V -Tuning 9 -ssl -h
 
 - **監視流量模式**：使用CDN記錄檔和ELK儀表板來監視流量模式，並識別流量中的任何異常或尖峰。 請注意ELK儀表板中的&#x200B;_WAF旗標分佈_&#x200B;和&#x200B;_熱門攻擊_&#x200B;面板，以瞭解偵測到的攻擊型別。
 - **調整wafFlags**：如果`ATTACK`旗標觸發太頻繁或
-您必須微調攻擊向量，才能使用特定WAF標幟建立自訂規則。 請參閱檔案中的[WAF旗標](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)完整清單。 請考慮先在`log`模式中試用新的自訂規則。
+您必須微調攻擊向量，才能使用特定WAF標幟建立自訂規則。 請參閱檔案中的[WAF旗標](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)完整清單。 請考慮先在`log`模式中試用新的自訂規則。
 - **移至封鎖規則**：一旦您驗證流量模式並調整WAF旗標，就可以考慮移至封鎖規則。
 
 ## 摘要
@@ -316,5 +316,5 @@ $./nikto.pl -useragent "AttackSimulationAgent (Demo/1.0)" -D V -Tuning 9 -ssl -h
 
 ## 其他資源
 
-- [建議的入門者規則](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)
-- [WAF旗標清單](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)
+- [建議的入門者規則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)
+- [WAF旗標清單](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)

@@ -38,7 +38,7 @@ ht-degree: 0%
 
 此教學課程包含多個部分，並假設[更新標準AEM專案](./update-project.md)中概述的步驟已完成。
 
-確保您有[許可權可在Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions)中建立和部署管道，以及[對AEM as a Cloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html)的存取權。
+確保您有[許可權可在Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=zh-Hant#role-definitions)中建立和部署管道，以及[對AEM as a Cloud Service環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=zh-Hant)的存取權。
 
 ## 重新命名現有管道
 
