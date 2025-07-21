@@ -1,6 +1,6 @@
 ---
-title: 概覽 — 保護AEM網站
-description: 瞭解如何使用流量篩選規則(包括其在AEM as a Cloud Service中的網頁應用程式防火牆(WAF)規則子類別)，保護您的AEM網站免受DoS、DDoS和惡意流量的傷害。
+title: 概觀 - 保護 AEM 網站
+description: 了解如何透過流量篩選器規則保護您的 AEM 網站不受 DoS、DDoS 與惡意流量的攻擊，包含 AEM as a Cloud Service 中的 Web 應用程式防火牆 WAF 規則子類別。
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
@@ -10,87 +10,89 @@ doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+exl-id: e6d67204-2f76-441c-a178-a34798fe266d
+source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
 workflow-type: tm+mt
 source-wordcount: '1185'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
+# 概觀 - 保護 AEM 網站
 
-# 概覽 — 保護AEM網站
+了解如何使用&#x200B;**流量篩選器規則**&#x200B;保護您的 AEM 網站不受阻斷服務 (DoS)、分散式阻斷服務 (DDoS)、惡意流量和複雜攻擊的侵害，其中包括 AEM as a Cloud Service 中的 **Web 應用程式防火牆 (WAF)** 規則子類別。
 
-瞭解如何使用&#x200B;**流量篩選器規則**，包括其在AEM as a Cloud Service中的&#x200B;**Web應用程式防火牆(WAF)**&#x200B;規則的子類別，來保護您的AEM網站免受拒絕服務(DoS)、分散式拒絕服務(DDoS)、惡意流量和複雜的攻擊。
-
-您也會瞭解標準流量篩選器與WAF流量篩選器規則之間的差異、何時使用，以及如何開始使用Adobe建議的規則。
+您也將了解標準流量篩選器規則與 WAF 流量篩選器規則之間的差別、適用時機，以及如何開始使用 Adobe 建議的規則。
 
 >[!IMPORTANT]
 >
-> WAF流量篩選規則需要額外的&#x200B;**WAF-DDoS保護**&#x200B;或&#x200B;**增強式安全性**&#x200B;授權。 依預設，Sites和Forms客戶可使用標準流量篩選規則。
+> WAF 流量篩選器規則需要額外的 **WAF-DDoS 防護**&#x200B;或&#x200B;**增強安全性**&#x200B;授權。在預設情況下，標準流量篩選器規則可供 Sites 和 Forms 客戶使用。
 
-## AEM as a Cloud Service的流量安全性簡介
 
-AEM as a Cloud Service運用整合式CDN層來保護和最佳化網站的傳送。 CDN層最關鍵的元件之一，是定義及強制執行流量規則的能力。 這些規則可做為防護盾牌，協助保護您的網站免受濫用、誤用和攻擊，而不會犧牲效能。
+>[!VIDEO](https://video.tv.adobe.com/v/3469394/?quality=12&learn=on)
 
-流量安全是維持連續運作時間、保護敏感資料，以及確保合法使用者獲得順暢體驗的必要條件。 AEM提供兩種型別的安全性規則：
+## AEM as a Cloud Service 中的流量安全性簡介
+
+AEM as a Cloud Service 運用整合式 CDN 層保護並最佳化網站的內容傳遞。CDN 層最重要其中一個元件是定義和執行流量規則的能力。這些規則做為保護盾，幫助保護您的網站不受濫用、誤用和攻擊，同時又不影響效能。
+
+流量安全性對於維持系統正常運作、保護敏感性資料，以及確保合法使用者獲得順暢體驗非常重要。AEM 提供兩種安全性規則的類別：
 
 - **標準流量篩選器規則**
-- **Web應用程式防火牆(WAF)流量篩選規則**
+- **Web 應用程式防火牆 (WAF) 流量篩選器規則**
 
-規則集可協助客戶防止常見且複雜的Web威脅、減少惡意或行為不當使用者端的雜訊，並透過請求記錄、封鎖和模式偵測來改善可觀察性。
+這些規則集有助於協助客戶防範常見與複雜的網路威脅、降低來自惡意或異常使用者的干擾，並透過要求記錄、封鎖與模式偵測提高可觀察性。
 
-## 標準和WAF流量篩選規則之間的差異
+## 標準和 WAF 流量篩選器規則之間的區別
 
-| 功能 | 標準流量篩選規則 | WAF流量篩選規則 |
+| 功能 | 標準流量篩選器規則 | WAF 流量篩選器規則 |
 |--------------------------|--------------------------------------------------|---------------------------------------------------------|
-| 用途 | 避免濫用，例如DoS、DDoS、刮削或機器人活動 | 偵測複雜攻擊模式並做出反應(例如OWASP Top 10)，這也能防範機器人 |
-| 範例 | 速率限制、地理封鎖、使用者代理程式篩選 | SQL插入、XSS、已知的攻擊IP |
-| 彈性 | 可透過YAML進行高度設定 | 可透過YAML使用預先定義的WAF旗標進行高度設定 |
-| 建議的模式 | 從`log`模式開始，然後移至`block`模式 | 開始為`block`個WAF旗標使用`ATTACK-FROM-BAD-IP`模式，為`log`個WAF旗標使用`ATTACK`模式，然後為兩者移至`block`模式 |
-| 部署 | 在YAML中定義並透過Cloud Manager設定管道部署 | 在具有`wafFlags`的YAML中定義並透過Cloud Manager設定管道部署 |
-| 授權 | 包含在Sites和Forms授權中 | **需要WAF-DDoS保護或增強式安全性授權** |
+| 用途 | 防止濫用行為，例如 DoS、DDoS、網頁爬蟲或機器人活動 | 偵測並因應複雜的攻擊模式 (例如 OWASP 十大安全漏洞)，這也可以防範機器人攻擊 |
+| 範例 | 速率限制、地理位置封鎖、使用者代理篩選 | SQL 注入、XSS、已知攻擊 IP |
+| 靈活性 | 透過 YAML 的高可設定性 | 藉由預先定義的 WAF 標幟，透過 YAML 的高可設定性 |
+| 建議的模式 | 從 `log` 模式開始，然後移至 `block` 模式 | 首先從 `block` 模式 (針對 `ATTACK-FROM-BAD-IP` WAF 標幟) 和 `log` 模式 (針對 `ATTACK` WAF 標誌) 開始，然後針對兩者轉到 `block` 模式 |
+| 部署 | 在 YAML 中定義並透過 Cloud Manager 設定管線部署 | 藉由 `wafFlags` 在 YAML 中定義並透過 Cloud Manager 設定管線部署 |
+| 授權 | 納入 Sites 和 Forms 授權 | **需要 WAF-DDoS 保護或增強安全性授權證** |
 
-標準流量篩選規則可用來強制實施特定業務的原則，例如速率限制或封鎖特定區域，以及根據請求屬性和標頭（例如IP位址、路徑或使用者代理）封鎖流量。
-另一方面，WAF流量篩選規則為已知的Web利用漏洞和攻擊向量提供全面的主動保護，並擁有進階智慧來限制誤判（亦即封鎖合法流量）。
-若要定義這兩種型別的規則，請使用YAML語法，請參閱[流量篩選規則語法](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)以取得詳細資訊。
+標準流量篩選器規則有助於執行企業特定的原則，例如速率限制或封鎖特定地區，以及根據要求屬性與標頭 (例如 IP 位址、路徑或使用者代理) 來封鎖流量。
+另一方面，WAF 流量篩選器規則可針對已知的網路漏洞與攻擊向量提供全面且主動的防護，並具備進階智慧功能以降低誤判 (例如：誤封合法流量) 的情況。
+若要定義這兩種類型的規則，需要使用 YAML 語法，請參閱[流量篩選器規則語法](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)以了解更多詳細資訊。
 
-## 何時及為何使用它們
+## 使用的時機和理由
 
-**在下列情況下使用標準流量篩選規則**：
+在以下情況下&#x200B;**使用標準流量篩選器規則**：
 
-- 您想要套用組織專屬的限制，例如IP速率節流。
-- 您知道需要篩選的特定模式（例如，惡意IP位址、區域、標題）。
+- 您想要套用特定於組織的限制，例如 IP 速率限制。
+- 您知道需要篩選的特定模式 (例如，惡意的 IP 位址、區域、標題)。
 
-**使用WAF流量篩選規則**，當：
+在以下情況下&#x200B;**使用 WAF 流量篩選器規則**：
 
-- 您想要從專家資料來源收集全面的&#x200B;**主動式保護**，以防範廣泛的已知攻擊模式（例如，插入、通訊協定濫用）以及已知的惡意IP。
-- 您想要拒絕惡意要求，同時限制封鎖合法流量的機會。
-- 您想要套用簡單的設定規則，以限制防禦常見複雜威脅的工作量。
+- 您需要全面的&#x200B;**主動防護**&#x200B;以抵禦廣泛已知的攻擊模式 (例如，注入、通訊協定濫用)，以及從專家資料來源收集的已知惡意 IP。
+- 您希望拒絕惡意要求，同時降低誤封合法流量的可能性。
+- 您希望透過套用簡單的設定規則，來降低防禦常見與複雜威脅所需的努力。
 
-這些規則共同提供了深入的防禦策略，可讓AEM as a Cloud Service客戶在保護其數位財產時，同時採取主動和被動的措施。
+這些規則共同構成一套縱深防禦策略，使 AEM as a Cloud Service 的客戶能夠採取主動與被動的安全措施，以保護其數位資產。
 
-## Adobe建議的規則
+## Adobe 建議的規則
 
-Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以協助您快速保護AEM網站的安全。
+Adobe 提供了標準流量篩選器和 WAF 流量篩選器規則的建議規則，以協助您迅速保護 AEM 網站的安全。
 
-- **標準流量篩選規則** （預設可用）：處理常見的不當使用案例，例如&#x200B;**CDN edge**、**origin**&#x200B;遭受DoS、DDoS和機器人攻擊，或來自受制裁國家的流量。\
+- **標準流量篩選器規則** (預設可用)：處理常見的濫用案例，例如針對 **CDN 邊緣**、**來源**&#x200B;或來自受制裁國家流量的 DoS、DDoS 和機器人攻擊。\
   例如：
-   - 在CDN邊緣&#x200B;_每秒發出超過500個要求_&#x200B;的速率限制IP
-   - 在來源&#x200B;_發出超過100個要求/秒_&#x200B;的速率限制IP
-   - 封鎖來自外國Assets控制辦公室(OFAC)所列國家的流量
+   - 對在 _CDN 邊緣_&#x200B;每秒發出超過 500 次要求的 IP 進行速率限制
+   - 對在&#x200B;_來源_&#x200B;每秒發出超過 100 次要求的 IP 進行速率限制
+   - 封鎖來自美國海外資產辦公室 (OFAC) 所列的國家流量
 
-- **WAF流量篩選規則** （需要附加授權）：針對複雜威脅(包括[OWASP十大威脅](https://owasp.org/www-project-top-ten/)，例如SQL插入、跨網站指令碼(XSS)和其他網頁應用程式攻擊)提供額外保護。
-例如：
-   - 封鎖來自已知錯誤IP位址的請求
-   - 記錄或封鎖標籤為攻擊的可疑要求
+- **WAF 流量篩選器規則** (需附加元件授權)：提供對複雜威脅的額外保護，包括像 SQL 注入、跨網站指令碼 (XSS) 和其他 Web 應用程式攻擊等 [OWASP 十大安全漏洞](https://owasp.org/www-project-top-ten/)的威脅。例如：
+   - 封鎖來自已知惡意 IP 位址的要求
+   - 記錄或封鎖標幟為攻擊的可疑要求
 
 >[!TIP]
 >
-> 從套用&#x200B;**Adobe建議的規則**&#x200B;開始，以受益於Adobe的安全性專業知識及持續更新。 若您的企業有特定風險或邊緣案例，或發現任何誤判（封鎖合法流量），您可以定義&#x200B;**自訂規則**&#x200B;或擴充預設集以符合您的需求。
+> 首先套用 **Adobe 建議的規則**，以善用 Adobe 的安全性專業知識與持續更新的防護機制。如果您的企業面臨特定風險或邊緣案例，或發現有誤判 (例如封鎖合法流量)，則可以定義&#x200B;**自訂規則**&#x200B;或擴充預設規則集以符合您的需求。
 
 ## 快速入門
 
-透過以下設定指南和使用案例，瞭解如何在AEM as a Cloud Service中定義、部署、測試及分析流量篩選規則，包括WAF規則。 這樣可為您提供背景知識，您之後可以放心地套用Adobe建議的規則。
+透過以下設定指南與使用案例，了解如何在 AEM as a Cloud Service 中定義、部署、測試與分析流量篩選器規則 (包含 WAF 規則)。此提供您背景知識，以便日後可以自信地套用 Adobe 建議的規則。
 
 <!-- CARDS
 {target = _self}
@@ -107,8 +109,8 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./setup.md" title="如何設定流量篩選規則，包括WAF規則" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/setup/rules-setup.png" alt="如何設定流量篩選規則，包括WAF規則"
+                    <a href="./setup.md" title="如何設定流量篩選器規則 (包括 WAF 規則)" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/setup/rules-setup.png" alt="如何設定流量篩選器規則 (包括 WAF 規則)"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -116,9 +118,9 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./setup.md" target="_self" rel="referrer" title="如何設定流量篩選規則，包括WAF規則">如何設定流量篩選器規則，包括WAF規則</a>
+                        <a href="./setup.md" target="_self" rel="referrer" title="如何設定流量篩選器規則 (包括 WAF 規則)">如何設定流量篩選器規則 (包括 WAF 規則)</a>
                     </p>
-                    <p class="is-size-6">瞭解如何設定以建立、部署、測試及分析流量篩選器規則(包括WAF規則)的結果。</p>
+                    <p class="is-size-6">了解如何設定、建立、部署、測試和分析流量篩選器規則 (包括 WAF 規則) 的結果。</p>
                 </div>
                 <a href="./setup.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">立即開始</span>
@@ -129,9 +131,9 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-## Adobe建議的規則設定指南
+## Adobe 建議的規則設定指南
 
-本指南逐步說明如何在您的AEM as a Cloud Service環境中設定和部署Adobe建議的標準流量篩選器和WAF流量篩選器規則。
+本指南提供逐步操作說明，協助您 AEM as a Cloud Service 環境中設定，並部署 Adobe 建議的標準流量篩選器規則與 WAF 流量篩選器規則。
 
 <!-- CARDS
 {target = _self}
@@ -154,8 +156,8 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/using-traffic-filter-rules.md" title="使用標準流量篩選規則保護AEM網站" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/use-cases/using-traffic-filter-rules.png" alt="使用標準流量篩選規則保護AEM網站"
+                    <a href="./use-cases/using-traffic-filter-rules.md" title="使用標準流量篩選器規則保護 AEM 網站" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/use-cases/using-traffic-filter-rules.png" alt="使用標準流量篩選器規則保護 AEM 網站"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -163,9 +165,9 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/using-traffic-filter-rules.md" target="_self" rel="referrer" title="使用標準流量篩選規則保護AEM網站">使用標準流量篩選規則保護AEM網站</a>
+                        <a href="./use-cases/using-traffic-filter-rules.md" target="_self" rel="referrer" title="使用標準流量篩選器規則保護 AEM 網站">使用標準流量篩選器規則保護 AEM 網站</a>
                     </p>
-                    <p class="is-size-6">瞭解如何使用Adobe在AEM as a Cloud Service中建議的標準流量篩選規則來保護AEM網站免受DoS、DDoS和機器人濫用。</p>
+                    <p class="is-size-6">了解如何使用 Adobe 建議的標準流量篩選器規則，在 AEM as a Cloud Service 中保護 AEM 網站不受 DoS、DDoS 攻擊與機器人濫用的侵害。</p>
                 </div>
                 <a href="./use-cases/using-traffic-filter-rules.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">套用規則</span>
@@ -177,8 +179,8 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/using-waf-rules.md" title="使用WAF規則保護AEM網站" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/use-cases/using-waf-rules.png" alt="使用WAF規則保護AEM網站"
+                    <a href="./use-cases/using-waf-rules.md" title="使用 WAF 規則保護 AEM 網站" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/use-cases/using-waf-rules.png" alt="使用 WAF 規則保護 AEM 網站"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -186,12 +188,12 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/using-waf-rules.md" target="_self" rel="referrer" title="使用WAF規則保護AEM網站">使用WAF規則保護AEM網站</a>
+                        <a href="./use-cases/using-waf-rules.md" target="_self" rel="referrer" title="使用 WAF 規則保護 AEM 網站">使用 WAF 規則保護 AEM 網站</a>
                     </p>
-                    <p class="is-size-6">瞭解如何使用AEM as a Cloud Service中推薦的Web應用程式防火牆(WAF)流量篩選規則，保護AEMAdobe網站免受複雜威脅，包括DoS、DDoS和機器人濫用。</p>
+                    <p class="is-size-6">了解如何使用 Adobe 建議的 Web 應用程式防火牆 (WAF) 流量篩選器規則，在 AEM as a Cloud Service 中保護網站不受包括 DoS、DDoS 及機器人濫用攻擊等在內的複雜威脅。</p>
                 </div>
                 <a href="./use-cases/using-waf-rules.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">啟動WAF</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">啟動 WAF</span>
                 </a>
             </div>
         </div>
@@ -201,7 +203,7 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
 
 ## 進階使用案例
 
-如需更進階的案例，您可以探索下列使用案例，示範如何根據特定業務需求實作自訂流量篩選規則：
+針對較進階的案例，您可以參考以下使用案例，了解如何根據特定業務需求實施自訂的流量篩選器規則。
 
 <!-- CARDS
 {target = _self}
@@ -218,8 +220,8 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./how-to/request-logging.md" title="監控敏感請求" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/how-to/wknd-login.png" alt="監控敏感請求"
+                    <a href="./how-to/request-logging.md" title="監視敏感性要求" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="assets/how-to/wknd-login.png" alt="監視敏感性要求"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -227,9 +229,9 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./how-to/request-logging.md" target="_self" rel="referrer" title="監控敏感請求">正在監視敏感要求</a>
+                        <a href="./how-to/request-logging.md" target="_self" rel="referrer" title="監視敏感性要求">監視敏感性要求</a>
                     </p>
-                    <p class="is-size-6">瞭解如何使用AEM as a Cloud Service中的流量篩選規則來記錄敏感請求，以監控這些請求。</p>
+                    <p class="is-size-6">了解如何透過使用 AEM as a Cloud Service 中的流量篩選器規則記錄敏感性要求以進行監視。</p>
                 </div>
                 <a href="./how-to/request-logging.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
@@ -241,8 +243,8 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./how-to/request-blocking.md" title="限制存取" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/how-to/elk-tool-dashboard-blocked.png" alt="限制存取"
+                    <a href="./how-to/request-blocking.md" title="限制存取權" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="assets/how-to/elk-tool-dashboard-blocked.png" alt="限制存取權"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -250,9 +252,9 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./how-to/request-blocking.md" target="_self" rel="referrer" title="限制存取">限制存取</a>
+                        <a href="./how-to/request-blocking.md" target="_self" rel="referrer" title="限制存取權">限制存取權</a>
                     </p>
-                    <p class="is-size-6">瞭解如何使用AEM as a Cloud Service中的流量篩選規則封鎖特定請求，以限制存取權。</p>
+                    <p class="is-size-6">了解如何使用 AEM as a Cloud Service 中的流量篩選器規則封鎖特定要求以限制存取。</p>
                 </div>
                 <a href="./how-to/request-blocking.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
@@ -264,8 +266,8 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./how-to/request-transformation.md" title="標準化請求" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/how-to/aemrequest-log-transformation.png" alt="標準化請求"
+                    <a href="./how-to/request-transformation.md" title="標準化要求" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="assets/how-to/aemrequest-log-transformation.png" alt="標準化要求"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -273,9 +275,9 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./how-to/request-transformation.md" target="_self" rel="referrer" title="標準化請求">標準化請求</a>
+                        <a href="./how-to/request-transformation.md" target="_self" rel="referrer" title="標準化要求">標準化要求</a>
                     </p>
-                    <p class="is-size-6">瞭解如何使用AEM as a Cloud Service中的流量篩選規則轉換請求，以標準化請求。</p>
+                    <p class="is-size-6">了解如何在 AEM as a Cloud Service 中，透過流量篩選器規則轉換要求以進行標準化處理。</p>
                 </div>
                 <a href="./how-to/request-transformation.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
@@ -288,4 +290,4 @@ Adobe為標準流量篩選器和WAF流量篩選器規則提供建議規則，以
 
 ## 其他資源
 
-- [流量篩選器規則，包括WAF規則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
+- [流量篩選規則包括 WAF 規則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
