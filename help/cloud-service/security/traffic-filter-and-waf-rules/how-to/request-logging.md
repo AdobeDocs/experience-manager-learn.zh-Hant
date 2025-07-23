@@ -1,6 +1,6 @@
 ---
-title: 監控敏感請求
-description: 瞭解如何使用AEM as a Cloud Service中的流量篩選規則來記錄敏感請求，以監控這些請求。
+title: 監視敏感性要求
+description: 了解如何透過使用 AEM as a Cloud Service 中的流量篩選器規則記錄敏感性要求以進行監視。
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
@@ -11,39 +11,39 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18311
 thumbnail: null
 source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '520'
-ht-degree: 34%
+ht-degree: 100%
 
 ---
 
-# 監控敏感請求
+# 監視敏感性要求
 
-瞭解如何使用AEM as a Cloud Service中的流量篩選規則來記錄敏感請求，以監控這些請求。
+了解如何透過使用 AEM as a Cloud Service 中的流量篩選器規則記錄敏感性要求以進行監視。
 
-記錄可讓您在不影響一般使用者或服務的情況下觀察流量模式，是實作封鎖規則之前重要的第一步。
+記錄功能可讓您在不影響一般使用者或服務的情況下觀察流量模式，這是實作封鎖規則之前的重要第一步。
 
-本教學課程示範如何針對AEM Publish服務&#x200B;**記錄WKND登入和登出路徑的要求**。
+本教學課程示範如何針對 AEM Publish 服務&#x200B;**記錄 WKND 登入和登出路徑的要求**。
 
-## 記錄請求的原因與時間
+## 記錄要求的理由和時機
 
-記錄特定請求是一種低風險、高價值的做法，可讓您瞭解使用者（潛在的惡意行為者）如何與您的AEM應用程式互動。 在強制實施封鎖規則之前，此功能特別有用，可讓您在不中斷合法流量的情況下調整安全性狀態。
+記錄特定要求是一種低風險、高價值的做法，有助於了解使用者 (以及潛在的惡意行為者) 與您 AEM 應用程式互動的方式。在實作封鎖規則之前，這項做法特別有幫助，能讓您在不干擾合法流量的情況下，更有信心地調整安全性態勢。
 
-紀錄的常見案例包括：
+記錄的常見案例包括：
 
-- 在將規則提升為`block`模式之前，驗證規則的影響和範圍。
-- 監控登入/登出路徑和驗證端點，以瞭解異常模式或暴力嘗試。
-- 追蹤對API端點的高頻存取是否可能濫用或DoS活動。
-- 在套用更嚴格的控制項之前，建立機器人行為的基準線。
-- 萬一發生安全性事件，請提供鑑證資料，以瞭解攻擊的性質和受影響的資源。
+- 在推廣至 `block` 模式之前驗證規則的影響和觸及範圍。
+- 監視登入/登出路徑和驗證端點是否有異常模式或暴力破解嘗試。
+- 追蹤對 API 端點的高頻率存取，以偵測潛在的濫用或 DoS 活動。
+- 在套用更嚴格的控制之前，建立機器人行為的基準。
+- 若發生安全性事件，請提供鑑識資料，以了解攻擊的性質及受影響的資源。
 
 ## 先決條件
 
-繼續之前，請確定您已完成必要的設定，如[如何設定流量篩選器和WAF規則](../setup.md)教學課程中所述。 此外，您已複製[AEM WKND Sites專案](https://github.com/adobe/aem-guides-wknd)並將其部署至您的AEM環境。
+繼續進行之前，請確保您已完成[如何設定流量篩選器和 WAF 規則](../setup.md)教學課程中所述的必要設定。此外，您已原地複製 [AEM WKND 網站專案](https://github.com/adobe/aem-guides-wknd)並部署至您的 AEM 環境。
 
-## 範例：記錄WKND登入和登出請求
+## 範例：記錄 WKND 登入和登出要求
 
-在此範例中，您會建立流量篩選規則，以記錄對AEM Publish服務上WKND登入和登出路徑提出的請求。 它可以協助您監控驗證嘗試，並識別潛在的安全問題。
+您在此範例中建立一個流量篩選器規則，記錄在 AEM Publish 服務上對 WKND 登入和登出路徑發出的要求。那有助於監視驗證嘗試並識別潛在的安全性問題。
 
 - 在 WKND 專案的 `/config/cdn.yaml` 檔案中新增以下規則。
 
@@ -70,15 +70,15 @@ data:
 
 - 提交變更並將其推送至 Cloud Manager Git 存放庫。
 
-- 使用先前建立的AEM設定管道[將變更部署到Cloud Manager環境](../setup.md#deploy-rules-using-adobe-cloud-manager)。
+- 使用[先前建立的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定管線，將變更部署至 AEM 環境。
 
-- 登入並登出程式的WKND網站（例如，`https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`）以測試規則。 您可以使用 `asmith/asmith` 作為使用者名稱和密碼。
+- 透過登入與登出程式中的 WKND 網站 (例如，`https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`) 測試該規則您可以使用 `asmith/asmith` 作為使用者名稱和密碼。
 
   ![WKND 登入](../assets/how-to/wknd-login.png)
 
 ## 分析
 
-讓我們從Cloud Manager下載AEMCS CDN記錄檔並使用`publish-auth-requests`AEMCS CDN記錄檔分析工具[，分析](../setup.md#setup-the-elastic-dashboard-tool)規則的結果。
+讓我們分析 `publish-auth-requests` 規則的結果，方法是透過從 Cloud Manager 下載 AEMCS CDN 記錄並使用 [AEMCS CDN 記錄分析工具](../setup.md#setup-the-elastic-dashboard-tool)。
 
 - 從 [Cloud Manager](https://my.cloudmanager.adobe.com/) 的「**環境**」卡片中，下載 AEMCS **Publish** 服務的 CDN 記錄。
 
