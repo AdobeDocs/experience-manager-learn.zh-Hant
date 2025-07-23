@@ -41,17 +41,17 @@ ht-degree: 100%
 
 ### 實作概觀
 
-實施步驟包括：
+實作步驟包括：
 
 - 將 WAF 規則新增至 AEM WKND 專案的 `/config/cdn.yaml` 檔案。
 - 提交變更並將其推送至 Cloud Manager Git 存放庫。
-- 使用 Cloud Manager 的設定管道將變更部署至 AEM 環境。
+- 使用 Cloud Manager 的設定管線將變更部署至 AEM 環境。
 - 透過使用 [Nikto](https://github.com/sullo/nikto/wiki) 模擬 DDoS 攻擊來測試規則。
 - 使用 AEMCS CDN 記錄和 ELK 儀表板工具分析結果。
 
 ## 先決條件
 
-在繼續操作之前，請確定您已完成[如何設定流量篩選器和 WAF 規則](../setup.md)教學課程中所述的必要設定。此外，您已原地複製 [AEM WKND 網站專案](https://github.com/adobe/aem-guides-wknd)並部署至您的 AEM 環境。
+繼續進行之前，請確保您已完成[如何設定流量篩選器和 WAF 規則](../setup.md)教學課程中所述的必要設定。此外，您已複製 [AEM WKND 網站專案](https://github.com/adobe/aem-guides-wknd)並將其部署至您的 AEM 環境。
 
 ## 審閱和定義規則
 
@@ -167,9 +167,9 @@ data:
 
 - 提交變更並將其推送至 Cloud Manager Git 存放庫。
 
-- 使用[先前建立的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定管道，將變更部署至 AEM 環境。
+- 使用[先前建立的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定管線，將變更部署至 AEM 環境。
 
-  ![Cloud Manager 設定管道](../assets/use-cases/cloud-manager-config-pipeline.png)
+  ![Cloud Manager 設定管線](../assets/use-cases/cloud-manager-config-pipeline.png)
 
 ## 測試規則
 
@@ -232,7 +232,7 @@ $./nikto.pl -useragent "AttackSimulationAgent (Demo/1.0)" -D V -Tuning 9 -ssl -h
 
 ## 使用案例－超越標準規則
 
-針對較進階的案例，您可以參考以下使用案例，了解如何根據特定業務需求實施自訂的流量篩選器規則。
+針對較進階的案例，您可以參考以下使用案例，了解如何根據特定業務需求實作自訂的流量篩選器規則。
 
 <!-- CARDS
 {target = _self}

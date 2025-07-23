@@ -31,7 +31,7 @@ ht-degree: 100%
 後續教學課程的基礎準備工作包括以下幾個步驟：
 
 - _在_ AEM 專案的 `config` 資料夾中建立規則
-- 使用 Adobe Cloud Manager 的設定管道&#x200B;_部署規則_。
+- 使用 Adobe Cloud Manager 的設定管線&#x200B;_部署規則_。
 - 使用 Curl、Vegeta 和 Nikto 等工具&#x200B;_測試規則_
 - 使用 AEMCS CDN 記錄分析工具&#x200B;_分析結果_
 
@@ -57,7 +57,7 @@ data:
 
 ![WKND AEM 專案規則檔案與資料夾](./assets/setup/wknd-rules-file-and-folder.png)
 
-您將在[下一個教學課程](#next-steps)中，學習如何將 Adobe **建議的標準流量篩選器和 WAF 規則**&#x200B;新增到上述檔案中，為您的實施奠定穩固的基礎。
+您將在[下一個教學課程](#next-steps)中，學習如何將 Adobe **建議的標準流量篩選器和 WAF 規則**&#x200B;新增到上述檔案中，為您的實作奠定穩固的基礎。
 
 ## 使用 Adobe Cloud Manager 部署規則
 
@@ -65,11 +65,11 @@ data:
 
 1. 登入 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 並選取您的程式。
 
-2. 從「**程式概觀**」頁面，前往「**管道**」卡片，然後按一下「**+ 新增**」以建立新的管道。
+2. 從「**程式概觀**」頁面，前往「**管線**」卡片，然後按一下「**+ 新增**」以建立新的管線。
 
-   ![Cloud Manager 管道卡片](./assets/setup/cloud-manager-pipelines-card.png)
+   ![Cloud Manager 管線卡片](./assets/setup/cloud-manager-pipelines-card.png)
 
-3. 在管道精靈中：
+3. 在管線精靈中：
 
    - **類型**：部署管道
    - **管道名稱**：Dev-Config
@@ -85,11 +85,11 @@ data:
    - **Git 分支**：您的工作分支
    - **程式碼位置**：`/config`
 
-   ![Cloud Manager 設定管道對話框](./assets/setup/cloud-manager-config-pipeline-step2-dialog.png)
+   ![Cloud Manager 設定管線對話框](./assets/setup/cloud-manager-config-pipeline-step2-dialog.png)
 
-5. 審閱管路設定並按一下「**儲存**」。
+5. 審閱管線設定並按一下「**儲存**」。
 
-您將在 [下一個教學課程](#next-steps)中，學習如何將管道部署到您的 AEM 環境。
+您將在 [下一個教學課程](#next-steps)中，學習如何將管線部署到您的 AEM 環境。
 
 ## 使用工具測試規則
 
@@ -174,11 +174,11 @@ AEMCS CDN 記錄分析工具支援兩個可觀察性平台，即 **ELK** (Elasti
 
 ## 摘要
 
-您已成功為在 AEM as a Cloud Service 中實施流量篩選器規則 (包括 WAF 規則) 奠定了基礎。您建立了設定檔案結構、部署管道，並準備了用於測試和分析結果的工具。
+您已成功為在 AEM as a Cloud Service 中實作流量篩選器規則 (包括 WAF 規則) 奠定了基礎。您建立了設定檔案結構、部署管線，並準備了用於測試和分析結果的工具。
 
 ## 後續步驟
 
-使用以下教學課程了解如何實施 Adobe 建議的規則：
+使用以下教學課程了解如何實作 Adobe 建議的規則：
 
 <!-- CARDS
 {target = _self}
@@ -248,7 +248,7 @@ AEMCS CDN 記錄分析工具支援兩個可觀察性平台，即 **ELK** (Elasti
 
 ## 進階使用案例
 
-除了 Adobe 建議的標準流量篩選器與 WAF 規則之外，也可以實施進階案例，以達成特定的業務需求。這些案例包括：
+除了 Adobe 建議的標準流量篩選器與 WAF 規則之外，也可以實作進階案例，以達成特定的業務需求。這些案例包括：
 
 <!-- CARDS
 {target = _self}
