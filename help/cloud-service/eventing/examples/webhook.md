@@ -24,7 +24,7 @@ ht-degree: 1%
 瞭解如何透過webhook接收AEM事件，並檢閱事件詳細資訊，例如裝載、標題和中繼資料。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449759?quality=12&learn=on&captions=chi_hant)
 
 
 >[!IMPORTANT]
