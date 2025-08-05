@@ -78,7 +78,7 @@ ht-degree: 99%
 + 生成式 AI {#generative-ai}
    + [產生變化版本](./generative-ai/generate-variations.md)
 + 內容片段 {#content-fragments}
-   + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
+   + [內容片段主控台](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=zh-Hant){target=_blank}
    + [製作內容片段](content-fragments/content-fragments-feature-video-use.md)
    + [傳遞內容片段](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [翻譯內容片段](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -86,7 +86,7 @@ ht-degree: 99%
 + 體驗片段 {#experience-fragments}
    + [使用體驗片段](experience-fragments/experience-fragments-feature-video-use.md)
    + [建置區塊](experience-fragments/building-blocks.md)
-   + [內容片段與體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
+   + [內容片段與體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=zh-Hant){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [概觀](./edge-delivery-services/overview.md)
    + 開發{#developing}
@@ -119,8 +119,8 @@ ht-degree: 99%
 + 開發 {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM 專案原型](developing/aem-project-archetype.md)
-   + [AEM Sites 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
-   + [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
+   + [AEM Sites 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant){target=_blank}
+   + [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hant){target=_blank}
    + [AEM SPA 編輯器和 React 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [擴充頁面屬性](developing/page-properties-technical-video-develop.md)
    + [回應式中斷點](developing/responsive-breakpoints.md)
