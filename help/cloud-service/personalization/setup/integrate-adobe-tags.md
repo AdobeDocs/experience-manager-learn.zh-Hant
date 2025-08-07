@@ -55,7 +55,7 @@ ht-degree: 1%
 4. 開啟新屬性。 **Core**&#x200B;擴充功能應該已經包含在內。 稍後，您將在設定Experimentation使用案例時新增&#x200B;**Web SDK**&#x200B;擴充功能，因為它需要其他設定，例如&#x200B;**資料串流ID**。\
    ![Adobe標籤核心擴充功能](../assets/setup/adobe-tags-core-extension.png)
 
-5. 移至&#x200B;**發佈流程**&#x200B;並按一下&#x200B;**新增程式庫**以建立部署程式庫，以發佈Tags屬性。
+5. 移至&#x200B;**發佈流程**&#x200B;並按一下&#x200B;**新增程式庫**&#x200B;以建立部署程式庫，以發佈Tags屬性。
    ![Adobe標籤發佈流程](../assets/setup/adobe-tags-publishing-flow.png)
 
 6. 在&#x200B;**建立資料庫**&#x200B;對話方塊中，提供：
