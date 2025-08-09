@@ -20,7 +20,7 @@ ht-degree: 0%
 
 瞭解在AEM Dynamic Media中發佈和最佳化視訊的最佳實務，包括自我調整串流、針對不同熒幕大小的智慧型裁切、自訂檢視器預設集，以及支援字幕、音軌和章節標籤。 它強調如何提升跨裝置的檢視者體驗、協助工具及行銷影響。
 
->[!VIDEO](https://video.tv.adobe.com/v/3470634/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3470689/?learn=on&enablevpops&captions=chi_hant)
 
 ## 支援資源
 
