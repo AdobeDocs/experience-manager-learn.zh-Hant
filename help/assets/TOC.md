@@ -8,7 +8,7 @@ version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: 82437ad5d395c5261b3a913b168e4068abb55206
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '458'
 ht-degree: 100%
 
@@ -147,7 +147,7 @@ ht-degree: 100%
       + [影像銳化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [顏色管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + 影片 {#video}
-      + [最佳實務](dynamic-media/dynamic-media-video-best-practices.md)
+      + [最佳做法](dynamic-media/dynamic-media-video-best-practices.md)
       + [360 度影片](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [自訂影片縮圖](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH 自適應串流](dynamic-media/dynamic-media-dash.md)
@@ -202,4 +202,4 @@ ht-degree: 100%
 + 部署{#deployment}
    + [多重租戶和同時開發](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hant){target=_blank}
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}
