@@ -1,7 +1,7 @@
 ---
 title: 使用OAuth單頁應用程式叫用OpenAPI型AEM API
 description: 瞭解如何透過OAuth 2.0 PKCE流程，使用自訂單頁應用程式(SPA)中的使用者型驗證，在AEM as a Cloud Service上叫用OpenAPI型AEM API。
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
@@ -12,7 +12,7 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
 workflow-type: tm+mt
 source-wordcount: '2130'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Adobe Developer Console (ADC)專案已設定為啟用OAuth單頁應用程式驗�
 >ADC專案未提供&#x200B;_client_secret_。 相反地，SPA會產生&#x200B;_code_verifier_&#x200B;和&#x200B;_code_challenge_，以安全地交換&#x200B;_存取權杖_&#x200B;的授權代碼。 如此一來，使用者端便無需儲存使用者端密碼，進而提升安全性。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456975?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 
@@ -373,7 +373,7 @@ WKND SPA使用使用者特定的存取權杖來叫用內容片段模型和DAM資
 
 ### 設定ADC專案{#configure-adc-project}
 
-設定ADC專案步驟是[設定OpenAPI型AEM API](../setup.md)中的&#x200B;_重複_。 請重複新增Assets、Sites API，並將其驗證方法設定為OAuth單頁應用程式。
+設定ADC專案步驟是&#x200B;_設定OpenAPI型AEM API_&#x200B;中的[重複](../setup.md)。 請重複新增Assets、Sites API，並將其驗證方法設定為OAuth單頁應用程式。
 
 1. 從[Adobe Developer Console](https://developer.adobe.com/console/projects)，開啟所需的專案。
 
@@ -423,7 +423,7 @@ WKND SPA使用使用者特定的存取權杖來叫用內容片段模型和DAM資
 
 AEM as a Cloud Service的跨原始資源共用(CORS)協助非AEM Web屬性對AEM API進行瀏覽器型使用者端呼叫。
 
-1. 在AEM專案中，從`/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/`資料夾中找到或建立`com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json`檔案。
+1. 在AEM專案中，從`com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json`資料夾中找到或建立`/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/`檔案。
 
    ![找到CORS組態檔](../assets/spa/locate-cors-config-file.png)
 
