@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+source-git-commit: 57da04874cfb37dcccbf605c65fbcba8f12849fb
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1811'
 ht-degree: 1%
 
 ---
@@ -68,11 +68,11 @@ OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動
 
 ## 設定ADC專案
 
-設定ADC專案步驟是[設定OpenAPI型AEM API](../setup.md)中的&#x200B;_重複_。 您需重複新增Assets Author API，並將其驗證方法設定為OAuth伺服器對伺服器。
+設定ADC專案步驟是&#x200B;_設定OpenAPI型AEM API_&#x200B;中的[重複](../setup.md)。 您需重複新增Assets Author API，並將其驗證方法設定為OAuth伺服器對伺服器。
 
 >[!TIP]
 >
->請確定您已完成[設定OpenAPI型AEM API](../setup.md#enable-aem-apis-access)文章中的&#x200B;**啟用AEM API存取**&#x200B;步驟。 若沒有它，將無法使用伺服器對伺服器驗證選項。
+>請確定您已完成&#x200B;**設定OpenAPI型AEM API**&#x200B;文章中的[啟用AEM API存取](../setup.md#enable-aem-apis-access)步驟。 若沒有它，將無法使用伺服器對伺服器驗證選項。
 
 
 1. 從[Adobe Developer Console](https://developer.adobe.com/console/projects)，開啟所需的專案。
@@ -82,6 +82,9 @@ OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動
    ![新增API](../assets/s2s/add-api.png)
 
 1. 在&#x200B;_新增API_&#x200B;對話方塊中，依&#x200B;_Experience Cloud_&#x200B;篩選，並選取&#x200B;**AEM Assets作者API**&#x200B;卡片，然後按一下&#x200B;**下一步**。
+如果您需要其他OpenAPI型AEM API，請參閱[Adobe Developer檔案](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis)以尋找符合您使用案例的API。
+
+   下列範例會逐步說明如何新增&#x200B;**AEM Assets Author API**。
 
    ![新增AEM API](../assets/s2s/add-aem-api.png)
 
@@ -125,7 +128,7 @@ OAuth伺服器對伺服器驗證適用於需要API存取而不需使用者互動
 
 ### 檢閱API
 
-在開發應用程式之前，請先檢閱&#x200B;_Assets作者API_&#x200B;中的[傳遞指定資產的中繼資料](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata)端點。 API語法為：
+在開發應用程式之前，請先檢閱[Assets作者API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata)中的&#x200B;_傳遞指定資產的中繼資料_&#x200B;端點。 API語法為：
 
 ```http
 GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
@@ -143,13 +146,13 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 ### 使用瀏覽器叫用API
 
-在開發應用程式之前，請先使用[API檔案](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)中的&#x200B;**嘗試它**&#x200B;功能叫用API。
+在開發應用程式之前，請先使用&#x200B;**API檔案**&#x200B;中的[嘗試它](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)功能叫用API。
 
 1. 在瀏覽器中開啟[Assets作者API檔案](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)。
 
 1. 展開&#x200B;_中繼資料_&#x200B;區段，然後按一下&#x200B;**傳遞指定資產的中繼資料**&#x200B;選項。
 
-1. 在右窗格中，按一下&#x200B;**嘗試它**&#x200B;按鈕。
+1. 在右窗格中，按一下&#x200B;**嘗試它**按鈕。
    ![API檔案](../assets/s2s/api-documentation.png)
 
 1. 輸入下列值：
@@ -192,7 +195,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 1. 以ADC專案的OAuth伺服器對伺服器認證中的實際值取代`.env`檔案中的預留位置。
 
-1. 將`src/index.js`檔案中的`<BUCKETNAME>`和`<ASSETID>`取代為實際值。
+1. 將`<BUCKETNAME>`檔案中的`<ASSETID>`和`src/index.js`取代為實際值。
 
 1. 執行NodeJS應用程式。
 
@@ -480,3 +483,4 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 ## 其他資源
 
 - [OAuth 伺服器對伺服器認證實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
+
