@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 82437ad5d395c5261b3a913b168e4068abb55206
-workflow-type: ht
-source-wordcount: '458'
-ht-degree: 100%
+source-git-commit: 4a4334047f600cd64a6f6be82974f280b786d0c1
+workflow-type: tm+mt
+source-wordcount: '459'
+ht-degree: 99%
 
 ---
 
@@ -117,6 +117,7 @@ ht-degree: 100%
    + [AEM 桌面應用程式](./creative-workflows/aem-desktop-app.md)
    + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
+   + [圖](./creative-workflows/figma.md)
 
 + Adobe Asset Link{#adobe-asset-link}
    + [建立](./adobe-asset-link/setup.md)
@@ -202,4 +203,4 @@ ht-degree: 100%
 + 部署{#deployment}
    + [多重租戶和同時開發](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hant){target=_blank}
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}
