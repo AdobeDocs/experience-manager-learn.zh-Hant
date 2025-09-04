@@ -1,5 +1,5 @@
 ---
-title: 實驗（A/B測試）
+title: 實驗 (A/B 測試)
 description: 瞭解如何使用Adobe Target在AEM as a Cloud Service (AEMCS)中測試不同的內容變數進行A/B測試。
 version: Experience Manager as a Cloud Service
 feature: Personalization
@@ -10,15 +10,15 @@ doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18720
 thumbnail: null
-source-git-commit: 70665c019f63df1e736292ad24c47624a3a80d49
+exl-id: c8a4f0bf-1f80-4494-abe6-9fbc138e4039
+source-git-commit: d81c657daa0b572076a4dcc0813d204e4bea77b0
 workflow-type: tm+mt
-source-wordcount: '1467'
-ht-degree: 0%
+source-wordcount: '1493'
+ht-degree: 1%
 
 ---
 
-
-# 實驗（A/B測試）
+# 實驗 (A/B 測試)
 
 瞭解如何使用Adobe Target在AEM as a Cloud Service (AEMCS)網站上測試不同的內容變數。
 
@@ -34,11 +34,17 @@ A/B測試可協助您比較不同內容版本，以判斷哪些版本在達成�
 
 變化會顯示在WKND首頁，讓您測量效能並判斷哪些版本可促進參與和轉換。
 
-請造訪[WKND啟用網站](https://wknd.enablementadobe.com/us/en.html)檢視A/B測試的實際運作情況。
+![A/B測試](../assets/use-cases/experiment/view-ab-test-variations.png)
+
+### 即時示範
+
+請造訪[WKND啟用網站](https://wknd.enablementadobe.com/us/en.html)檢視A/B測試的實際運作情況。 在下列影片中，您會看到首頁上透過不同瀏覽器顯示的&#x200B;**西澳洲露營**&#x200B;的所有三種變化。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3473005/?learn=on&enablevpops)
 
 ## 先決條件
 
-在繼續使用此實驗使用案例之前，請確定您已完成下列操作：
+繼續實驗使用案例之前，請確定您已完成下列操作：
 
 - [整合Adobe Target](../setup/integrate-adobe-target.md)：可讓您的團隊在AEM中集中建立和管理個人化內容，並在Adobe Target中將其啟用為優惠方案。
 - [在Adobe Experience Platform中整合標籤](../setup/integrate-adobe-tags.md)：可讓您的團隊管理和部署JavaScript以進行個人化和資料收集，而不需要重新部署AEM程式碼。
@@ -250,7 +256,7 @@ A/B測試設定程式涉及六個主要步驟，用於建立和設定實驗：
 
 ## 其他資源
 
-- [A/B測試總覽](https://experienceleague.adobe.com/zh-hant/docs/target/using/activities/abtest/test-ab)
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/home)
-- [資料串流總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/datastreams/overview)
-- [視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/visual-experience-composer)
+- [A/B測試總覽](https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
+- [資料串流總覽](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
+- [視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
