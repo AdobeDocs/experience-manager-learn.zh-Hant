@@ -22,4 +22,4 @@ ht-degree: 25%
 
 瞭解如何設定AEM Assets Content Hub以符合貴組織的需求。 此影片協助管理員瞭解Content Hub的組態設定，並提供量身打造的高階指示，以獲得最佳效能，並與組織目標保持一致。
 
->[!VIDEO](https://video.tv.adobe.com/v/3472917/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3472957/?learn=on&enablevpops&captions=chi_hant)

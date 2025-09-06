@@ -23,4 +23,4 @@ ht-degree: 29%
 
 瞭解如何使用Experience Manager Assets Content Hub程式和資產附加元件來設定Adobe Cloud Manager 。 也瞭解如何使用產品設定檔來設定使用者的存取權。
 
->[!VIDEO](https://video.tv.adobe.com/v/3472918/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3472946/?learn=on&captions=chi_hant)
