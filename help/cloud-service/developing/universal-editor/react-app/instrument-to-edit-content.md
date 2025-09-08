@@ -1,6 +1,6 @@
 ---
-title: 使用通用編輯器檢測React應用程式以編輯內容
-description: 瞭解如何使用Universal Editor檢測React應用程式以編輯內容。
+title: 檢測 React 應用程式以使用通用編輯器編輯內容
+description: 了解如何檢測 React 應用程式以使用通用編輯器編輯內容。
 version: Experience Manager as a Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
@@ -12,39 +12,39 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 2a25cd44-cbd1-465e-ae3f-d3876e915114
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 252d7045ba43c0998e9bb98fa86c399812ce92e9
 workflow-type: tm+mt
 source-wordcount: '1606'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 使用通用編輯器檢測React應用程式以編輯內容
+# 檢測 React 應用程式以使用通用編輯器編輯內容
 
-瞭解如何使用Universal Editor檢測React應用程式以編輯內容。
+了解如何檢測 React 應用程式以使用通用編輯器編輯內容。
 
 ## 先決條件
 
-您已依照先前[本機開發設定](./local-development-setup.md)步驟的說明設定本機開發環境。
+您已依照上一個[本機開發設定](./local-development-setup.md)步驟中的說明，設定本機開發環境。
 
-## 包含Universal Editor核心程式庫
+## 包括通用編輯器核心程式庫
 
-讓我們從WKND Teams React應用程式中包含Universal Editor核心程式庫開始。 這是一個JavaScript程式庫，提供已編輯應用程式與通用編輯器之間的通訊層。
+讓我們先在 WKND Teams React 應用程式中包含通用編輯器核心程式庫。這是在所編輯的應用程式和通用編輯器之間提供通訊層的 JavaScript 程式庫。
 
-在React應用程式中納入Universal Editor核心程式庫的方式有兩種：
+有兩種方法可以在 React 應用程式中包含通用編輯器核心程式庫：
 
-1. npm登入中的節點模組相依性，請參閱[@adobe/universal-editor-cors](https://www.npmjs.com/package/@adobe/universal-editor-cors)。
-1. HTML檔案中的指令碼標籤(`<script>`)。
+1. 來自 npm 登錄的節點模組相依性，請參閱 [@adobe/universal-editor-cors](https://www.npmjs.com/package/@adobe/universal-editor-cors)。
+1. HTML 檔案中的指令碼標記 (`<script>`)。
 
-在本教學課程中，讓我們使用指令碼標籤方法。
+對於本教學課程，我們使用指令碼標記方法。
 
-1. 安裝`react-helmet-async`套件以管理React應用程式中的`<script>`標籤。
+1. 安裝 `react-helmet-async` 封裝來管理 React 應用程式中的 `<script>` 標記。
 
    ```bash
    $ npm install react-helmet-async
    ```
 
-1. 更新WKND Teams React應用程式的`src/App.js`檔案，以包含Universal Editor核心程式庫。
+1. 更新 WKND Teams React 應用程式的 `src/App.js` 檔案，以便包含通用編輯器核心程式庫。
 
    ```javascript
    ...
@@ -59,7 +59,7 @@ ht-degree: 0%
                      Loads the LATEST Universal Editor library
                    */}
                    <script
-                       src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"
+                       src="https://universal-editor-service.adobe.io/cors.js"
                        async
                    />
                </Helmet>
@@ -83,17 +83,17 @@ ht-degree: 0%
    export default App;
    ```
 
-## 新增中繼資料 — 內容來源
+## 新增後設資料 - 內容來源
 
-若要將WKND Teams React應用程式&#x200B;_與內容來源_&#x200B;連線以進行編輯，您必須提供連線中繼資料。 Universal Editor服務會使用此中繼資料來建立與內容來源的連線。
+若要將 WKND Teams React 應用程式&#x200B;_與內容來源_&#x200B;連接以便進行編輯，您需要提供連線後設資料。通用編輯器服務使用此後設資料與內容來源建立連線。
 
-連線中繼資料會儲存為HTML檔案中的`<meta>`標籤。 連線中繼資料的語法如下：
+連線後設資料以 `<meta>` 標記儲存在 HTML 檔案中。連線後設資料的語法如下：
 
 ```html
 <meta name="urn:adobe:aue:<category>:<referenceName>" content="<protocol>:<url>">
 ```
 
-讓我們將連線中繼資料新增到`<Helmet>`元件內的WKND Teams React應用程式。 使用下列`<meta>`標籤更新`src/App.js`檔案。 在此範例中，內容來源是在`https://localhost:8443`上執行的本機AEM執行個體。
+我們要將連線後設資料新增到 `<Helmet>` 元件內的 WKND Teams React 應用程式。使用以下 `src/App.js` 標記更新 `<meta>` 檔案。在此範例中，內容來源是在 `https://localhost:8443`上執行的本機 AEM 實例。
 
 ```javascript
 ...
@@ -106,7 +106,7 @@ return (
                     Loads the LATEST Universal Editor library
                 */}
                 <script
-                    src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"
+                    src="https://universal-editor-service.adobe.io/cors.js"
                     async
                 />
                 {/* AEM Universal Editor :: Connection metadata 
@@ -125,19 +125,19 @@ return (
 export default App;
 ```
 
-`aemconnection`提供內容來源的簡短名稱。 後續檢測使用簡短名稱來參照內容來源。
+ `aemconnection` 提供內容來源的簡稱。後續的檢測會使用簡稱來指示內容來源。
 
-## 新增中繼資料 — 本機通用編輯器服務設定
+## 新增後設資料 - 本機通用編輯器服務設定
 
-Universal Editor服務的本機副本並非由Adobe託管，而是用於本機開發。 本機服務會繫結通用編輯器和AEM SDK，所以讓我們將本機通用編輯器服務中繼資料新增到WKND Teams React應用程式。
+我們不採用 Adobe 託管的通用編輯器服務，而是使用通用編輯器服務的本機副本進行本機開發。本機服務將通用編輯器和 AEM SDK 連結起來，所以我們要把本機通用編輯器服務後設資料新增至 WKND Teams React 應用程式。
 
-這些組態設定也會儲存為HTML檔案中的`<meta>`標籤。 本機Universal Editor服務中繼資料的語法如下：
+這些設定會以 `<meta>` 標記的形式儲存在 HTML 檔案中。本機通用編輯器服務後設資料的語法如下：
 
 ```html
 <meta name="urn:adobe:aue:config:service" content="<url>">
 ```
 
-讓我們將連線中繼資料新增到`<Helmet>`元件內的WKND Teams React應用程式。 使用下列`<meta>`標籤更新`src/App.js`檔案。 在此範例中，本機Universal Editor服務正在`https://localhost:8001`上執行。
+我們要將連線後設資料新增到 `<Helmet>` 元件內的 WKND Teams React 應用程式。使用以下 `src/App.js` 標記更新 `<meta>` 檔案。在此範例中，本機通用編輯器服務在 `https://localhost:8001` 上執行。
 
 ```javascript
 ...
@@ -151,7 +151,7 @@ function App() {
               Loads the LATEST Universal Editor library
           */}
           <script
-            src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"
+            src="https://universal-editor-service.adobe.io/cors.js"
             async
           />
           {/* AEM Universal Editor :: Connection metadata 
@@ -176,18 +176,18 @@ function App() {
 export default App;
 ```
 
-## 檢測React元件
+## 檢測 React 元件
 
-若要編輯WKND Teams React應用程式的內容（例如&#x200B;_團隊標題和團隊說明_），您必須檢測React元件。 檢測表示將相關資料屬性(`data-aue-*`)新增至您想要使用通用編輯器使其可編輯的HTML元素。 如需資料屬性的詳細資訊，請參閱[屬性和型別](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)。
+若要編輯 WKND Teams React 應用程式的內容 (例如 _團隊標題和團隊描述_)，您需要檢測 React 元件。檢測指在您想要透過通用編輯器編輯的 HTML 元素中，新增相關的資料屬性 (`data-aue-*`)。如需有關資料屬性的更多資訊，請參閱[屬性和類型](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types)。
 
-### 定義可編輯的元素
+### 定義可編輯元素
 
-讓我們從定義您要使用通用編輯器編輯的元素開始。 在WKND Teams React應用程式中，團隊標題和說明儲存在AEM的團隊內容片段中，因此是最佳編輯對象。
+我們從定義想要透過通用編輯器編輯的元素開始。在 WKND Teams React 應用程式中，團隊標題和描述儲存在 AEM 的團隊內容片段中，因此是最適合編輯的候選內容。
 
-讓我們檢測`Teams` React元件，使團隊標題和說明可編輯。
+讓我們檢測 `Teams` React 元件，讓團隊標題和描述變成可以編輯。
 
-1. 開啟WKND Teams React應用程式的`src/components/Teams.js`檔案。
-1. 將`data-aue-prop`、`data-aue-type`和`data-aue-label`屬性新增至團隊標題和說明元素。
+1. 開啟 WKND Teams React 應用程式的 `src/components/Teams.js` 檔案。
+1. 新增 `data-aue-prop`、`data-aue-type` 和 `data-aue-label` 屬性到團隊標題和描述元素。
 
    ```javascript
    ...
@@ -208,23 +208,23 @@ export default App;
    export default Teams;
    ```
 
-1. 重新整理瀏覽器中載入WKND Teams React應用程式的「通用編輯器」頁面。 您現在可以看到專案團隊標題和說明元素是可編輯的。
+1. 重新整理瀏覽器中載入 WKND Teams React 應用程式的通用編輯器頁面。現在您可以看到團隊標題和描述元素皆是可編輯的。
 
-   ![通用編輯器 — WKND團隊標題和描述可編輯](./assets/universal-editor-wknd-teams-title-desc-editable.png)
+   ![通用編輯器 - WKND Teams 標題和描述可編輯](./assets/universal-editor-wknd-teams-title-desc-editable.png)
 
-1. 如果您嘗試使用內嵌編輯或屬性邊欄來編輯團隊標題或說明，它會顯示載入進度環但不允許您編輯內容。 因為通用編輯器不知道載入和儲存內容的AEM資源詳細資訊。
+1. 如果您使用內嵌編輯或屬性邊欄來編輯團隊標題或描述，會顯示載入中轉圈圖示，但不允許您編輯內容。因為通用編輯器不知道載入和儲存內容的 AEM 資源詳細資料。
 
-   ![通用編輯器 — WKND團隊標題和描述載入](./assets/universal-editor-wknd-teams-title-desc-editable-loading.png)
+   ![通用編輯器 - WKND Teams 標題和描述載入中](./assets/universal-editor-wknd-teams-title-desc-editable-loading.png)
 
-簡而言之，上述變更在通用編輯器中將專案團隊標題和說明元素標籤為可編輯。 不過，**您尚無法編輯（透過內嵌或屬性邊欄）並儲存變更**，因為您需要使用`data-aue-resource`屬性新增AEM資源詳細資料。 讓我們在下個步驟中進行。
+總而言之，上述變更在通用編輯器中將團隊標題和描述元素標記為可編輯。然而，**您目前還無法編輯 (透過內嵌或屬性邊欄) 及儲存變更**，為此您需要使用 `data-aue-resource` 屬性新增 AEM 資源詳細資料。我們會在下一步完成這件事。
 
-### 定義AEM資源詳細資訊
+### 定義 AEM 資源詳細資料
 
-若要將已編輯的內容儲存回AEM以及在屬性邊欄中載入內容，您必須將AEM資源詳細資料提供給通用編輯器。
+要將編輯的內容儲存到 AEM 以及將內容載入到屬性邊欄中，您必須把 AEM 資源詳細資料提供給通用編輯器。
 
-在此案例中，AEM資源是團隊內容片段路徑，所以讓我們將資源詳細資料新增至頂層`<div>`元素的`Teams` React元件。
+在本案例中，AEM 資源是團隊內容片段的路徑，因此我們要將資源詳細資料新增至位在頂層 `<div>` 元素的 `Teams` React 元件。
 
-1. 更新`src/components/Teams.js`檔案以將`data-aue-resource`、`data-aue-type`和`data-aue-label`屬性新增到最上層`<div>`專案。
+1. 更新 `src/components/Teams.js` 檔案，將 `data-aue-resource`、`data-aue-type` 和 `data-aue-label` 屬性新增到頂層的 `<div>` 元素。
 
    ```javascript
    ...
@@ -250,39 +250,39 @@ export default App;
    export default Teams;
    ```
 
-   `data-aue-resource`屬性的值是團隊內容片段的AEM資源路徑。 `urn:aemconnection:`首碼使用連線中繼資料中定義的內容來源簡短名稱。
+   `data-aue-resource` 屬性的值是團隊內容片段的 AEM 資源路徑。`urn:aemconnection:` 前置詞使用在連線後設資料中定義的內容來源簡稱。
 
-1. 重新整理瀏覽器中載入WKND Teams React應用程式的「通用編輯器」頁面。 您現在可以看到頂層的Team元素可供編輯，但屬性邊欄仍未載入內容。 在瀏覽器的網路標籤中，您可以看到載入內容的`details`請求出現401未授權錯誤。 它嘗試使用IMS權杖進行驗證，但本機AEM SDK不支援IMS驗證。
+1. 重新整理瀏覽器中載入 WKND Teams React 應用程式的通用編輯器頁面。現在您可以看到頂層的團隊元素是可編輯的，但屬性邊欄仍然沒有載入內容。在瀏覽器的網路標籤中，對於載入內容的 `details` 請求，您可以看到「401 未授權錯誤」。這是想要使用 IMS 權杖進行驗證，但是本機 AEM SDK 不支援 IMS 驗證。
 
-   ![通用編輯器 — WKND團隊可編輯](./assets/universal-editor-wknd-teams-team-editable.png)
+   ![通用編輯器 - WKND Teams 團隊可編輯](./assets/universal-editor-wknd-teams-team-editable.png)
 
-1. 若要修正401未授權錯誤，您必須使用通用編輯器中的&#x200B;**Authentication headers**&#x200B;選項，將本機AEM SDK驗證詳細資料提供給通用編輯器。 作為其本機AEM SDK，`admin:admin`認證的值設定為`Basic YWRtaW46YWRtaW4=`。
+1. 若要修正 401 未授權錯誤，您必須使用通用編輯器中的&#x200B;**驗證標頭**&#x200B;選項，把本機 AEM SDK 驗證詳細資料提供給通用編輯器。作為其本機 AEM SDK，請將值設為 `Basic YWRtaW46YWRtaW4=` 以便使用 `admin:admin` 認證。
 
-   ![通用編輯器 — 新增驗證標頭](./assets/universal-editor-wknd-teams-team-editable-auth.png)
+   ![通用編輯器 - 新增驗證標頭](./assets/universal-editor-wknd-teams-team-editable-auth.png)
 
-1. 重新整理瀏覽器中載入WKND Teams React應用程式的「通用編輯器」頁面。 您現在可以看到屬性邊欄正在載入內容，而且您可以內嵌或使用屬性邊欄編輯團隊標題和說明。
+1. 重新整理瀏覽器中載入 WKND Teams React 應用程式的通用編輯器頁面。現在您可以看到屬性邊欄正在載入內容，而您可以用內嵌功能或屬性邊欄來編輯團隊標題和描述。
 
-   ![通用編輯器 — WKND團隊可編輯](./assets/universal-editor-wknd-teams-team-editable-props.png)
+   ![通用編輯器 - WKND Teams 團隊可編輯](./assets/universal-editor-wknd-teams-team-editable-props.png)
 
-#### 隱藏在機殼下
+#### 內部運作原理
 
-屬性邊欄會使用本機Universal Editor服務從AEM資源載入內容。 使用瀏覽器的網路標籤，您可以看到本機通用編輯器服務(`https://localhost:8001/details`)的POST要求，以載入內容。
+屬性邊欄使用本機通用編輯器服務從 AEM 資源載入內容。使用瀏覽器的網路標籤，您可以看到對本機通用編輯器服務發出的 POST 要求 (`https://localhost:8001/details`)，要求載入內容。
 
-當您使用內嵌編輯或屬性邊欄來編輯內容時，變更會使用本機Universal Editor服務儲存回AEM資源。 使用瀏覽器的網路標籤，您可以看到本機通用編輯器服務（`https://localhost:8001/update`或`https://localhost:8001/patch`）的POST要求以儲存內容。
+當您使用內嵌編輯或屬性邊欄編輯內容時，相關變更會使用本機通用編輯器服務儲存到 AEM 資源中。使用瀏覽器的網路標籤，您可以看到對本機通用編輯器服務發出的 POST 要求 (`https://localhost:8001/update` 或 `https://localhost:8001/patch`)，要求儲存內容。
 
-![通用編輯器 — WKND團隊可編輯](./assets/universal-editor-under-the-hood-request.png)
+![通用編輯器 - WKND Teams 團隊可編輯](./assets/universal-editor-under-the-hood-request.png)
 
-要求裝載JSON物件包含必要的詳細資料，例如內容伺服器(`connections`)、資源路徑(`target`)和更新的內容(`patch`)。
+請求承載 JSON 物件包含必要的詳細資料，例如內容伺服器 (`connections`)、資源路徑 (`target`)，以及更新後的內容 (`patch`)。
 
-![通用編輯器 — WKND團隊可編輯](./assets/universal-editor-under-the-hood-payload.png)
+![通用編輯器 - WKND Teams 團隊可編輯](./assets/universal-editor-under-the-hood-payload.png)
 
-### 展開可編輯的內容
+### 展開可編輯內容
 
-讓我們展開可編輯的內容，並將檢測套用至&#x200B;**團隊成員**，以便您可以使用屬性邊欄來編輯團隊成員。
+我們要展開可編輯內容並將檢測套用到&#x200B;**團隊成員**，以便您可以使用屬性邊欄編輯團隊成員。
 
-如上所述，我們將相關的`data-aue-*`屬性新增到`Teams` React元件中的團隊成員。
+如同上述，我們要在 `Teams` React 元件中對團隊成員新增相關的 `data-aue-*` 屬性。
 
-1. 更新`src/components/Teams.js`檔案以新增資料屬性至`<li key={index} className="team__member">`元素。
+1. 更新 `src/components/Teams.js` 檔案，以便將資料屬性新增到 `<li key={index} className="team__member">` 元素。
 
    ```javascript
    ...
@@ -311,23 +311,23 @@ export default App;
    export default Teams;
    ```
 
-   `data-aue-type`屬性的值為`component`，因為團隊成員儲存為AEM中的`Person`內容片段，有助於指出內容的移動/可刪除部分。
+   因為團隊成員是作為 `Person` 內容片段儲存到 AEM 中，所以 `data-aue-type` 屬性的值是 `component`，並協助指示內容中可移動/可刪除的部分。
 
-1. 重新整理瀏覽器中載入WKND Teams React應用程式的「通用編輯器」頁面。 您現在可以看到可以使用屬性邊欄編輯專案團隊成員。
+1. 重新整理瀏覽器中載入 WKND Teams React 應用程式的通用編輯器頁面。現在您可以看到團隊成員可以使用屬性邊欄進行編輯。
 
-   ![通用編輯器 — WKND團隊成員可編輯](./assets/universal-editor-wknd-teams-team-members-editable.png)
+   ![通用編輯器 - WKND Teams 團隊成員可編輯](./assets/universal-editor-wknd-teams-team-members-editable.png)
 
-#### 隱藏在機殼下
+#### 內部運作原理
 
-如上所述，內容擷取和儲存由本機Universal Editor服務完成。 向本機Universal Editor服務發出`/details`、`/update`或`/patch`要求，以載入及儲存內容。
+如同上述，內容檢索和儲存皆是由本機通用編輯器務完成。向本機通用編輯器發出 `/details`、`/update` 或 `/patch` 請求，要求載入和儲存內容。
 
 ### 定義新增和刪除內容
 
-目前為止，您已讓現有內容可供編輯，但如果您想要新增內容，該怎麼做？ 現在來使用通用編輯器新增新增或刪除團隊成員到WKND團隊的功能。 因此，內容作者不需要前往AEM新增或刪除團隊成員。
+到目前為止，您已經使現有內容可編輯，但若要增加新內容，該怎麼做？我們要讓通用編輯器擁有可以新增或刪除 WKND 團隊成員的功能。這樣，內容作者便不需要到 AEM 去新增或刪除團隊成員。
 
-不過，快速回顧一下，WKND團隊成員在AEM中儲存為`Person`內容片段，並使用`teamMembers`屬性與團隊內容片段相關聯。 若要檢閱AEM中的模型定義，請造訪[my-project](http://localhost:4502/libs/dam/cfm/models/console/content/models.html/conf/my-project)。
+無論如何，我們簡單回顧重點，WKND 團隊成員作為 `Person` 內容片段儲存在 AEM 中，並使用 `teamMembers` 屬性與團隊內容片段相關聯。若要檢閱 AEM 中的模型定義，請造訪 [my-project](http://localhost:4502/libs/dam/cfm/models/console/content/models.html/conf/my-project)。
 
-1. 首先，建立元件定義檔`/public/static/component-definition.json`。 此檔案包含`Person`內容片段的元件定義。 `aem/cf`外掛程式允許根據提供要套用之預設值的模型和範本插入內容片段。
+1. 首先，建立元件定義檔 `/public/static/component-definition.json`。這個檔案包含 `Person` 內容片段的元件定義。 `aem/cf` 外掛程式允許根據模型及範本來插入內容片段，而範本提供要套用的預設值。
 
    ```json
    {
@@ -360,7 +360,7 @@ export default App;
    }
    ```
 
-1. 接下來，在WKND Team React應用程式的`index.html`中參考上述元件定義檔案。 更新`public/index.html`檔案的`<head>`區段以包含元件定義檔案。
+1. 接下來，參照 WKND Team React 應用程式 `index.html` 中的上述元件定義檔。更新 `public/index.html` 檔案當中的 `<head>` 區段以便包含元件定義檔。
 
    ```html
    ...
@@ -373,7 +373,7 @@ export default App;
    ...
    ```
 
-1. 最後，更新`src/components/Teams.js`檔案以新增資料屬性。 要做為團隊成員容器的&#x200B;**MEMBERS**&#x200B;區段，讓我們將`data-aue-prop`、`data-aue-type`和`data-aue-label`屬性新增到`<div>`元素。
+1. 最後，更新 `src/components/Teams.js` 檔案以便新增資料屬性。**MEMBERS** 區段將用作團隊成員的容器，讓我們將 `data-aue-prop`、`data-aue-type`和 `data-aue-label` 屬性新增到 `<div>` 元素。
 
    ```javascript
    ...
@@ -403,24 +403,24 @@ export default App;
    export default Teams;
    ```
 
-1. 重新整理瀏覽器中載入WKND Teams React應用程式的「通用編輯器」頁面。 您現在可以看到&#x200B;**MEMBERS**&#x200B;區段作為容器。 您可以使用屬性邊欄和&#x200B;**+**&#x200B;圖示插入新團隊成員。
+1. 重新整理瀏覽器中載入 WKND Teams React 應用程式的通用編輯器頁面。現在您可以看到 **MEMBERS** 區段用作容器。您可以使用屬性邊欄和 **+** 圖示插入新團隊成員。
 
-   ![通用編輯器 — WKND團隊成員插入](./assets/universal-editor-wknd-teams-add-team-members.png)
+   ![通用編輯器 - WKND Teams 團隊成員插入](./assets/universal-editor-wknd-teams-add-team-members.png)
 
-1. 若要刪除團隊成員，請選取該團隊成員，然後按一下&#x200B;**刪除**&#x200B;圖示。
+1. 若要刪除團隊成員，請選取該團隊成員，然後按一下「**刪除**」圖示。
 
-   ![通用編輯器 — WKND團隊成員刪除](./assets/universal-editor-wknd-teams-delete-team-members.png)
+   ![通用編輯器 - WKND Teams 團隊成員刪除](./assets/universal-editor-wknd-teams-delete-team-members.png)
 
-#### 隱藏在機殼下
+#### 內部運作原理
 
-內容新增和刪除作業由本機Universal Editor服務完成。 對`/add`或`/remove`發出的POST要求具有詳細的裝載，已傳送到本機Universal Editor服務，以將內容新增或刪除AEM。
+新增和刪除內容的操作由本機通用編輯器服務完成。向本機通用編輯器服務發出包含詳細承載的 POST 要求至 `/add` 或 `/remove`，要求對 AEM 新增內容或刪除其中內容。
 
 ## 解決方案檔案
 
-若要驗證您的實作變更，或如果您無法讓WKND Teams React應用程式使用通用編輯器，請參閱[basic-tutorial-instructed-for-UE](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial-instrumented-for-UE)解決方案分支。
+若要驗證您的實施變更，或如果您無法讓 WKND Teams React 應用程式與通用編輯器搭配運作，請參考 [basic-tutorial-instrumented-for-UE](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial-instrumented-for-UE) 解決方案分支。
 
-[此處](https://github.com/adobe/aem-guides-wknd-graphql/compare/solution/basic-tutorial...solution/basic-tutorial-instrumented-for-UE?expand=1)提供使用&#x200B;**basic-tutorial**&#x200B;分支的逐檔案比較。
+您可以在[這裡](https://github.com/adobe/aem-guides-wknd-graphql/compare/solution/basic-tutorial...solution/basic-tutorial-instrumented-for-UE?expand=1)針對運作中的 **basic-tutorial** 分支進行檔案逐一比對。
 
 ## 恭喜
 
-您已成功檢測WKND Teams React應用程式，以使用通用編輯器新增、編輯和刪除內容。 您已瞭解如何包含核心程式庫、新增連線和本機Universal Editor服務中繼資料，以及使用各種資料(`data-aue-*`)屬性來檢測React元件。
+您已成功檢測 WKND Teams React 應用程式，以使用通用編輯器新增、編輯和刪除內容。您已經了解如何包含核心程式庫、新增連線和本機通用編輯器服務後設資料，以及如何使用各種資料 (`data-aue-*`) 屬性來檢測 React 元件。
