@@ -164,7 +164,7 @@ AEP的各種解決方案可用來收集、管理和收集行為資料，以建�
    - **名稱**： WKND-RDE-Behavioral-Targeting
    - **描述**：將頁面檢視資料傳送至Experience Platform的資料流
    - **對應結構描述**： WKND-RDE-Behavioral-Targeting
-按一下**儲存**&#x200B;以建立資料流。
+按一下&#x200B;**儲存**&#x200B;以建立資料流。
 
   ![設定資料流](../assets/use-cases/behavioral-targeting/configure-datastream-name-review.png)
 
@@ -183,7 +183,7 @@ AEP的各種解決方案可用來收集、管理和收集行為資料，以建�
 
   ![設定Adobe Experience Platform服務](../assets/use-cases/behavioral-targeting/configure-adobe-experience-platform-service.png)
 
-- 在&#x200B;**新增服務**&#x200B;步驟中，從下拉式清單中選取&#x200B;**Adobe Target**，然後輸入&#x200B;**目標環境ID**。 您可以在Adobe Target的&#x200B;**管理** > **環境**&#x200B;下找到目標環境ID。 按一下&#x200B;**儲存**以新增服務。
+- 在&#x200B;**新增服務**&#x200B;步驟中，從下拉式清單中選取&#x200B;**Adobe Target**，然後輸入&#x200B;**目標環境ID**。 您可以在Adobe Target的&#x200B;**管理** > **環境**&#x200B;下找到目標環境ID。 按一下&#x200B;**儲存**&#x200B;以新增服務。
   ![設定Adobe Target服務](../assets/use-cases/behavioral-targeting/configure-adobe-target-service.png)
 
 ### 建立及設定標籤屬性
@@ -200,7 +200,7 @@ Tags屬性是JavaScript程式碼的容器，可從您的網站收集資料並傳
 
 若要建立Tags屬性，請完成下列步驟：
 
-- 在&#x200B;**Adobe Experience Platform**&#x200B;中，從左側導覽按一下&#x200B;**標籤**，然後按一下&#x200B;**新增屬性**按鈕。
+- 在&#x200B;**Adobe Experience Platform**&#x200B;中，從左側導覽按一下&#x200B;**標籤**，然後按一下&#x200B;**新增屬性**&#x200B;按鈕。
   ![建立新標籤屬性](../assets/use-cases/behavioral-targeting/create-new-tags-property.png)
 
 - 在&#x200B;**建立屬性**&#x200B;對話方塊中，輸入下列內容：
@@ -212,7 +212,7 @@ Tags屬性是JavaScript程式碼的容器，可從您的網站收集資料並傳
 
   ![建立新標籤屬性](../assets/use-cases/behavioral-targeting/create-new-tags-property-dialog.png)
 
-- 開啟新屬性，從左側導覽按一下&#x200B;**擴充功能**，然後按一下&#x200B;**目錄**&#x200B;標籤。 搜尋&#x200B;**網頁SDK**&#x200B;並按一下&#x200B;**安裝**按鈕。
+- 開啟新屬性，從左側導覽按一下&#x200B;**擴充功能**，然後按一下&#x200B;**目錄**&#x200B;標籤。 搜尋&#x200B;**網頁SDK**&#x200B;並按一下&#x200B;**安裝**&#x200B;按鈕。
   ![安裝Web SDK擴充功能](../assets/use-cases/behavioral-targeting/install-web-sdk-extension.png)
 
 - 在&#x200B;**安裝擴充功能**&#x200B;對話方塊中，選取您先前建立的&#x200B;**資料流**，然後按一下&#x200B;**儲存**。
@@ -224,7 +224,7 @@ Tags屬性是JavaScript程式碼的容器，可從您的網站收集資料並傳
 
 建立下列資料元素來擷取重要頁面的詳細資訊。
 
-- 從左側導覽按一下&#x200B;**資料元素**，然後按一下&#x200B;**建立新資料元素**按鈕。
+- 從左側導覽按一下&#x200B;**資料元素**，然後按一下&#x200B;**建立新資料元素**&#x200B;按鈕。
   ![建立新資料元素](../assets/use-cases/behavioral-targeting/create-new-data-element.png)
 
 - 在&#x200B;**建立新資料元素**&#x200B;對話方塊中，輸入下列內容：
@@ -306,7 +306,7 @@ Tags屬性是JavaScript程式碼的容器，可從您的網站收集資料並傳
 
 建立規則以使用其他資料元素填入&#x200B;**XDM-Variable Pageview**&#x200B;資料元素，然後再將其傳送到Experience Platform。 當使用者瀏覽WKND網站時觸發規則。
 
-- 從左側導覽按一下&#x200B;**規則**，然後按一下&#x200B;**建立新規則**按鈕。
+- 從左側導覽按一下&#x200B;**規則**，然後按一下&#x200B;**建立新規則**&#x200B;按鈕。
   ![建立新規則](../assets/use-cases/behavioral-targeting/create-new-rule.png)
 
 - 在&#x200B;**建立新規則**&#x200B;對話方塊中，輸入下列內容：
@@ -375,7 +375,7 @@ Tags屬性是JavaScript程式碼的容器，可從您的網站收集資料並傳
 
       - 按一下&#x200B;**保留變更**&#x200B;以儲存動作組態。
 
-   - 再次，按一下[新增] ****&#x200B;以新增其他動作，並開啟&#x200B;**動作組態**&#x200B;精靈。
+   - 再次，按一下[新增] **&#x200B;**&#x200B;以新增其他動作，並開啟&#x200B;**動作組態**&#x200B;精靈。
       - **擴充功能**：選取&#x200B;**Adobe Experience Platform Web SDK**
       - **動作型別**：選取&#x200B;**傳送事件**
       - 在右側面板的&#x200B;**資料**&#x200B;區段中，將&#x200B;**XDM-Variable Pageview**&#x200B;資料元素對應至&#x200B;**網頁詳細資料頁面檢視**&#x200B;型別。
@@ -398,7 +398,7 @@ Tags屬性是JavaScript程式碼的容器，可從您的網站收集資料並傳
 
 程式庫是您建立和部署至網站的所有標籤設定（資料元素、規則、擴充功能）的集合。 它會將所有東西封裝在一起，讓資料收集正常運作。 針對行為鎖定目標，會發佈程式庫，讓資料收集規則在您的網站上生效。
 
-- 從左側導覽按一下&#x200B;**發佈流程**，然後按一下&#x200B;**新增資料庫**按鈕。
+- 從左側導覽按一下&#x200B;**發佈流程**，然後按一下&#x200B;**新增資料庫**&#x200B;按鈕。
   ![新增資料庫](../assets/use-cases/behavioral-targeting/add-library.png)
 
 - 在&#x200B;**新增程式庫**&#x200B;對話方塊中，輸入下列內容：
@@ -410,7 +410,7 @@ Tags屬性是JavaScript程式碼的容器，可從您的網站收集資料並傳
 
   ![新增資料庫](../assets/use-cases/behavioral-targeting/add-library-dialog.png)
 
-- 為&#x200B;**開發**&#x200B;泳道建置資料庫後，按一下省略符號（三個點）並選取&#x200B;**核准並發佈到生產環境**選項。
+- 為&#x200B;**開發**&#x200B;泳道建置資料庫後，按一下省略符號（三個點）並選取&#x200B;**核准並發佈到生產環境**&#x200B;選項。
   ![核准並發佈至生產環境](../assets/use-cases/behavioral-targeting/approve-publish-to-production.png)
 
 恭喜！您已使用規則建立Tags屬性，以便收集頁面詳細資料並將資料傳送至Experience Platform。 這是建立行為對象的基本步驟。
@@ -444,7 +444,7 @@ Adobe Target目的地(V2)可讓您直接在Adobe Target中啟用在Experience Pl
 
   ![Adobe Target目的地](../assets/use-cases/behavioral-targeting/adobe-target-destination.png)
 
-- 在&#x200B;**啟用目的地**&#x200B;步驟中，提供目的地的名稱，然後按一下&#x200B;**連線到目的地**按鈕。
+- 在&#x200B;**啟用目的地**&#x200B;步驟中，提供目的地的名稱，然後按一下&#x200B;**連線到目的地**&#x200B;按鈕。
   ![連線到目的地](../assets/use-cases/behavioral-targeting/connect-to-destination.png)
 
 - 在&#x200B;**目的地詳細資料**&#x200B;區段中，輸入下列內容：
@@ -465,10 +465,10 @@ Adobe Target目的地(V2)可讓您直接在Adobe Target中啟用在Experience Pl
 
 若要建立對象，請完成下列步驟：
 
-- 在&#x200B;**Adobe Experience Platform**&#x200B;中，從左側導覽按一下&#x200B;**對象**，然後按一下&#x200B;**建立對象**按鈕。
+- 在&#x200B;**Adobe Experience Platform**&#x200B;中，從左側導覽按一下&#x200B;**對象**，然後按一下&#x200B;**建立對象**&#x200B;按鈕。
   ![建立對象](../assets/use-cases/behavioral-targeting/create-audience.png)
 
-- 在&#x200B;**建立對象**&#x200B;對話方塊中，選取&#x200B;**建置規則**&#x200B;選項，然後按一下&#x200B;**建立**按鈕。
+- 在&#x200B;**建立對象**&#x200B;對話方塊中，選取&#x200B;**建置規則**&#x200B;選項，然後按一下&#x200B;**建立**&#x200B;按鈕。
   ![建立對象](../assets/use-cases/behavioral-targeting/create-audience-dialog.png)
 
 - 在&#x200B;**建立**&#x200B;步驟中，輸入下列內容：
@@ -515,7 +515,7 @@ AEM已整合Tags屬性以收集頁面檢視資料並將其傳送至Experience Pl
 
   ![Experience Manager](../assets/use-cases/behavioral-targeting/dx-experience-manager.png)
 
-- 導覽至您的AEM作者環境，然後按一下&#x200B;**網站**按鈕。
+- 導覽至您的AEM作者環境，然後按一下&#x200B;**網站**&#x200B;按鈕。
   ![AEM作者環境](../assets/use-cases/behavioral-targeting/aem-author-environment.png)
 
 ### 將標籤屬性整合併插入AEM頁面
@@ -600,7 +600,7 @@ Adobe Target中的活動是個人化行銷活動，其定義個人化內容何�
 
 現在，已建立活動，將個人化體驗傳送至&#x200B;**家庭旅行者**&#x200B;對象的首頁。
 
-- 在Adobe Target中，按一下&#x200B;**活動**，然後按一下&#x200B;**建立活動**&#x200B;按鈕並選取&#x200B;**體驗鎖定目標**活動型別。
+- 在Adobe Target中，按一下&#x200B;**活動**，然後按一下&#x200B;**建立活動**&#x200B;按鈕並選取&#x200B;**體驗鎖定目標**&#x200B;活動型別。
   ![建立活動](../assets/use-cases/behavioral-targeting/create-activity.png)
 
 - 在&#x200B;**建立體驗鎖定目標活動**&#x200B;對話方塊中，選取&#x200B;**Web**&#x200B;型別和&#x200B;**Visual**&#x200B;撰寫器選項，並輸入WKND網站首頁URL。 按一下「**建立**」按鈕以建立活動。
@@ -611,7 +611,7 @@ Adobe Target中的活動是個人化行銷活動，其定義個人化內容何�
 
   ![具有對象和選件的活動](../assets/use-cases/behavioral-targeting/activity-with-audience-n-offer.png)
 
-- 按一下「下一步」****&#x200B;並使用適當的目標與度量設定&#x200B;**目標與設定**&#x200B;區段，然後啟動它以即時推送變更。
+- 按一下「下一步」**&#x200B;**&#x200B;並使用適當的目標與度量設定&#x200B;**目標與設定**&#x200B;區段，然後啟動它以即時推送變更。
 
   ![使用目標與設定啟動](../assets/use-cases/behavioral-targeting/activate-with-goals-and-settings.png)
 
