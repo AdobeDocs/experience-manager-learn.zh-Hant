@@ -9,7 +9,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 9ee826cf-389f-4570-bfe1-0d43d3fed3e1
 duration: 574
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 1%
@@ -31,9 +31,9 @@ Adobe Experience Manager會重新想像AEM和Target之間的個人化工作流�
 * HTML選件與體驗片段選件之間的主要差異在於，針對稍後的使用者編輯只能在AEM中完成，然後與Adobe Target同步
 * 套用至體驗片段資料夾的Target雲端服務設定會繼承至直接在父資料夾下建立的所有體驗片段。 子資料夾不會繼承父雲端服務設定。
 * 為了建立個人化優惠方案，我們現在可以輕鬆運用AEM中儲存的內容。
-* 您可以建立Target活動的型別，包括Sensei支援的活動，例如自動分配、自動鎖定目標和Automated Personalization
+* 您可以建立Target活動的型別，包括AI支援的活動，例如自動分配、自動鎖定目標和Automated Personalization
 
 ## 其他資源 {#additional-resources}
 
-* [體驗片段檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=zh-Hant)
+* [體驗片段檔案](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
 * [使用體驗片段](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)
