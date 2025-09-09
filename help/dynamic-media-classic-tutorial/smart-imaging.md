@@ -21,7 +21,7 @@ ht-degree: 1%
 
 智慧型影像還能與Adobe同級最佳的優質服務充分整合，進一步提升效能。 此服務會尋找伺服器、網路和對等點之間的最佳網際網路路由，其延遲和/或封包遺失率比網際網路上的預設路由為最低。
 
-深入瞭解[智慧型影像](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html)。
+深入瞭解[智慧型影像](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html?lang=zh-Hant)。
 
 ## 智慧型影像的優點
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 如先前所述，智慧型影像處理可搭配現有的影像預設集使用，自動將影像轉換為最佳的新一代影像格式（例如WebP），同時維持視覺逼真度。
 
-深入瞭解[智慧型影像如何運作](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work)，包括支援的影像格式（以及不使用這些格式時會發生什麼情況）等詳細資訊，及其對使用中的現有影像預設集的影響。
+深入瞭解[智慧型影像如何運作](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html?lang=zh-Hant#how-does-smart-imaging-work)，包括支援的影像格式（以及不使用這些格式時會發生什麼情況）等詳細資訊，及其對使用中的現有影像預設集的影響。
 
 ## 智慧型影像的影響
 
@@ -47,11 +47,11 @@ ht-degree: 1%
 
 智慧型影像包含於您現有的Dynamic Media Classic授權中。 此功能不需額外付費。 若要充分運用此功能，您必須符合兩項需求：具備Adobe隨附的CDN和專用網域。 然後您必須為帳戶啟用，因為它未自動啟用。
 
-若要啟用智慧型影像，您必須傳送技術支援請求，請求者為 |建立支援案例| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 支援人員將與您合作，設定您將與智慧型影像建立關聯的自訂網域。 您將變更一個與快取相關的引數（存留時間或TTL），支援將清除快取。 您也可以選擇在推送至生產環境前執行選擇性預備步驟。 接著，當智慧型影像開啟時，您會以客戶要求的相同品質，提供客戶較小大小的影像。 這表示訪客的頁面載入速度更快 — 而且所有這一切都是自動完成的。
+若要啟用智慧型影像，您必須傳送技術支援請求，請求者為 |建立支援案例| [https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 支援人員將與您合作，設定您將與智慧型影像建立關聯的自訂網域。 您將變更一個與快取相關的引數（存留時間或TTL），支援將清除快取。 您也可以選擇在推送至生產環境前執行選擇性預備步驟。 接著，當智慧型影像開啟時，您會以客戶要求的相同品質，提供客戶較小大小的影像。 這表示訪客的頁面載入速度更快 — 而且所有這一切都是自動完成的。
 
 啟用智慧型影像之後，您需要確認其是否如預期般運作。
 
-您可能有其他關於智慧型影像的問題。 我們已整理好常見問題集(FAQ)的清單，並提供解答。 閱讀[常見問題集](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html)。
+您可能有其他關於智慧型影像的問題。 我們已整理好常見問題集(FAQ)的清單，並提供解答。 閱讀[常見問題集](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html?lang=zh-Hant)。
 
 ## 其他資源
 

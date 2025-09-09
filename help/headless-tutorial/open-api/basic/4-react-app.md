@@ -43,7 +43,7 @@ ht-degree: 1%
 
 此範例React應用程式會在本機（在`http://localhost:3000`）執行，並使用OpenAPI API連線至AEM Publish服務的AEM內容片段傳送。 若要允許此連線，必須在AEM Publish （或Preview）服務上設定CORS （跨原始資源共用）。
 
-依照設定在[上執行的SPA的`http://localhost:3000`指示，允許CORS要求傳送至AEM Publish服務](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#different-domains)。
+依照設定在[上執行的SPA的`http://localhost:3000`指示，允許CORS要求傳送至AEM Publish服務](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#different-domains)。
 
 ### 本機CORS Proxy
 
