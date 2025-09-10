@@ -46,7 +46,7 @@ Universal Editor需要[HTML屬性和中繼標籤](https://experienceleague.adobe
 首先，新增必要的中繼標籤，將React應用程式識別為相容於Universal Editor。
 
 1. 在您的React應用程式中開啟`public/index.html`。
-1. 在React應用程式的[區段中新增](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)通用編輯器中繼標籤和CORS指令碼`<head>`：
+1. 在React應用程式的[區段中新增](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)通用編輯器中繼標籤和CORS指令碼`<head>`：
 
    ```html
    <!DOCTYPE html>
