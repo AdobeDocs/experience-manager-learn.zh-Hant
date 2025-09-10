@@ -1,5 +1,5 @@
 ---
-title: 使用通用編輯器讓React應用程式可編輯 | Headless教學課程第5部分
+title: 使用通用編輯器編輯React應用程式 | Headless教學課程第5部分
 description: 瞭解如何透過新增必要的檢測工具和設定，使您的React應用程式可在AEM Universal Editor中編輯。
 version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
@@ -8,15 +8,15 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 duration: 800
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: da3bfa25a424e3176fb7d53189169515db225228
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 2%
 
 ---
 
 
-# 使用通用編輯器讓React應用程式可編輯
+# 使用通用編輯器編輯React應用程式
 
 在本章中，您將瞭解如何使用AEM Universal Editor讓[上一章](./4-react-app.md)中建立的React應用程式可編輯。 Universal Editor可讓內容作者直接在React應用程式體驗的環境中編輯內容，同時維持Headless應用程式的順暢體驗。
 
@@ -46,7 +46,7 @@ Universal Editor需要[HTML屬性和中繼標籤](https://experienceleague.adobe
 首先，新增必要的中繼標籤，將React應用程式識別為相容於Universal Editor。
 
 1. 在您的React應用程式中開啟`public/index.html`。
-1. 在React應用程式的[區段中新增](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)通用編輯器中繼標籤和CORS指令碼`<head>`：
+1. 在React應用程式的[區段中新增](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)通用編輯器中繼標籤和CORS指令碼`<head>`：
 
    ```html
    <!DOCTYPE html>
