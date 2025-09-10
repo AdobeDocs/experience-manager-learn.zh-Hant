@@ -50,7 +50,7 @@ AEM支援「平面」資料夾組織，這表示不同內容片段模型的內�
    * 標題： **英文**
    * 名稱： **en**
 
-   系統會建立根語言資料夾，放置專案以支援AEM的原生本地化功能。 即使您目前不需要本地化，最佳實務還是要設定專案以提供多語言支援。 如需詳細資訊，請參閱[下列檔案頁面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html)。
+   系統會建立根語言資料夾，放置專案以支援AEM的原生本地化功能。 即使您目前不需要本地化，最佳實務還是要設定專案以提供多語言支援。 如需詳細資訊，請參閱[下列檔案頁面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=zh-Hant)。
 
 1. 在新的&#x200B;**我的專案>英文**&#x200B;資料夾下建立兩個子資料夾，其值如下：
 
