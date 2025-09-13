@@ -45,7 +45,7 @@ ht-degree: 0%
 
 - **雜誌頁面**：當使用者閱讀&#x200B;_三篇或更多_&#x200B;篇文章時，他們被分類為&#x200B;**雜誌讀者**&#x200B;對象，並在雜誌頁面上看到個人化的英雄區段。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474001/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474012/?learn=on&enablevpops&captions=chi_hant)
 
 >[!TIP]
 >
