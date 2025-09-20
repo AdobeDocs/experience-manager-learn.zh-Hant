@@ -21,4 +21,4 @@ ht-degree: 0%
 
 瞭解AEM Assets as a Cloud Service如何使用Adobe GenAI產生和增加資產中繼資料，以輔助內容管理和探索。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474891/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474919/?learn=on&enablevpops&captions=chi_hant)
