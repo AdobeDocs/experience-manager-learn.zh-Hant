@@ -6,10 +6,10 @@ sub-product: Experience Manager Sites
 topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 36917be459162e5399620c976bfe953cc5553c82
-workflow-type: ht
-source-wordcount: '637'
-ht-degree: 100%
+source-git-commit: 2b3ff1957f9da313b71a73492777700ddbd79854
+workflow-type: tm+mt
+source-wordcount: '786'
+ht-degree: 38%
 
 ---
 
@@ -17,23 +17,23 @@ ht-degree: 100%
 
 {{edge-delivery-services}}
 
-Adobe Experience Manager (AEM) Sites 是業界領先的體驗管理平台。本使用手冊包含 AEM Sites 許多特性與功能的相關影片和教學課程。
+Adobe Experience Manager (AEM) Sites是Adobe的體驗管理平台，可透過網站、行動應用程式或任何其他數位頻道，提供數位體驗的製作、管理和傳送功能。
 
-## 使用 AEM Sites 進行建置的三種方式
+## 使用AEM Sites傳遞體驗的三種方式
 
-AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建置完整頁面、最佳化邊緣效能，還是支援無周邊應用程式，AEM Sites 都能提供靈活的選項來滿足您的專案需求：
+AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建置網站、最佳化邊緣效能，還是支援無周邊應用程式，AEM Sites都能根據您的專案需求提供彈性的選項：
 
-1. **Edge Delivery Services** 網站利用文件型製作或 Adobe 通用編輯器來製作內容，然後啟動該內容，並透過 Edge Delivery Services 以 HTML 網頁格式傳送給終端使用者。此選項主要適用於對效能、擴充性及速度具有高需求的&#x200B;_新專案和現有專案_。
-1. **無周邊/API 優先**&#x200B;的網頁體驗會使用內容片段編輯器或通用編輯器來製作內容，然後啟動該內容，並透過 AEM Publish 以 JSON 的格式傳送。此選項主要適用於需要用無周邊方式傳送內容至行動裝置應用程式、單頁應用程式 (SPA) 或其他無周邊應用程式的&#x200B;_新專案和現有專案_。
-1. **傳統 AEM**&#x200B;並非使用 AEM Sites 建立網頁體驗的最新方法。傳統 AEM 使用 AEM Author 的頁面編輯器製作內容，然後啟動該內容，並透過 AEM Publish 以 HTML 網頁格式傳送給終端使用者。一般建議針對&#x200B;_現有專案_&#x200B;使用傳統 AEM。
+1. **Edge Delivery Services**&#x200B;體驗使用Adobe的Edge Network以高速且低延遲的方式提供內容。 此服務會自動最佳化使用裝置、搜尋引擎和GenAI代理程式的內容。 作者可使用Adobe通用編輯器或檔案式製作來建立內容。
+1. **Headless/API-first**&#x200B;體驗使用AEM Publish，透過行動應用程式、單頁應用程式(SPA)或其他Headless使用者端的HTTP API，以JSON形式傳送內容。 作者使用內容片段編輯器或通用編輯器建立內容。
+1. **傳統AEM**&#x200B;體驗會使用AEM發佈以HTML網頁的形式傳送內容。 作者使用AEM作者的頁面編輯器建立內容。 此選項最適合現有專案或已移轉的專案。
 
-這些選項旨在滿足行銷組織的多樣化需求，可以透過任何管道或裝置快速且大規模地提供吸引人的個人化體驗。
+所有三個選項都是有效的方法，最佳選擇取決於您的使用案例和組織需求。 每種方法都可讓團隊在任何管道或裝置上，以快速和規模提供個人化、吸引人的體驗。
 
 >[!IMPORTANT]
 >
-> **Edge Delivery Services** 是使用 AEM Sites 建置的最新方式。其設計旨在運用 Adobe Edge Network 的強大效能，大規模建置高效能網站。
+> **Edge Delivery Services**&#x200B;是使用AEM提供網站的最新且最進階的方式。 它結合了Adobe Edge Network的速度和擴充能力，以及現代化的撰寫選項。 雖然我們建議將Edge Delivery Services用於新專案，但AEM Sites仍持續支援Headless和傳統方法，因此您可以選擇最符合您需求的路徑。
 
-以下圖表呈現不同的路徑：
+下圖說明使用AEM Sites建立體驗的不同選項：
 
 ![AEM-Sites-Content-Authoring-and-Experience-Delivery-Paths.png](./assets/aem-sites-authoring-and-experience-delivery-paths.png){width="700" zoomable="yes"}
 
@@ -43,32 +43,36 @@ AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建�
 
 |            | Edge Delivery Services | 無周邊/API 優先 | 傳統 AEM |
 |---------------------|------------------------------|---------------------------------|---------------------------------------------|
-| **最適合** | 對流量、效能與擴充性有高度需求的網站 | 行動應用程式、SPA 和其他無周邊應用程式 | 現有專案 (非最新方法) |
-| **製作工具** | 文件型製作、通用編輯器 | 內容片段、通用編輯器 | 頁面編輯器 |
-| **製作內容儲存** | 文件或 AEM Author (JCR) | AEM Author (JCR) | AEM Author (JCR) |
+| **最適合** | 對流量、效能與擴充性有高度需求的網站 | 行動應用程式、SPA 和其他無周邊應用程式 | 現有專案或移轉的專案 |
+| **編寫工具** | 檔案式撰寫、通用編輯器、頁面編輯器 | 內容片段、通用編輯器 | 頁面編輯器、通用編輯器 |
+| **編寫的內容存放區** | 文件或 AEM Author (JCR) | AEM Author (JCR) | AEM Author (JCR) |
 | **傳遞** | Edge Delivery Services | AEM Publish (透過 Adobe CDN + Dispatcher) | AEM Publish (透過 Adobe CDN + Dispatcher) |
-| **傳遞內容儲存** | Edge Delivery Services | AEM Publish (JCR) | AEM Publish (JCR) |
+| **傳遞內容存放區** | Edge Delivery Services | AEM Publish (JCR) | AEM Publish (JCR) |
 | **傳遞格式** | HTML | JSON | HTML |
-| **開發技術** | JavaScript、CSS | 任何 (例如 Swift、React 等) | Java™、JavaScript、CSS |
-| **實施階段** | 新建立及現有專案 | 新建立及現有專案 | 僅適用於現有專案 |
+| **開發技術** | JavaScript、CSS | 任何 (例如 Swift、React 等) | Java™、HTL、JavaScript、CSS |
+| **搜尋機器人和GenAI代理程式支援** | 針對機器人、搜尋引擎和GenAI代理程式最佳化 | 適用於機器人和代理程式，但可能需要SSR或其他設定 | 適用於機器人，但效能可能會比Edge Delivery Services慢 |
+
+## 從AMS或內部部署移轉
+
+如果您要從AMS或內部部署(OTP)移轉至AEM as a Cloud Service，Adobe鼓勵您評估直接移至Edge Delivery Services的方式。 移轉至AEM as a Cloud Service Publish所需的工作通常並不比這更多，但能提供更快速的效能和更大的擴充能力。 如果您認為Edge Delivery Services目前不是適合您的選擇，或是其他方法更符合您的需求，這些方法仍會完整支援您的專案，且是有效的選項。
 
 ## 教學課程
 
-透過以下教學課程，了解使用 AEM Sites 進行建置的三種途徑：
+深入瞭解使用AEM Sites建立的三種方法。 以下教學課程會逐步引導您瞭解每個選項的運作方式、相關工具及使用時機。
 
 <!-- CARDS
 
 * https://www.aem.live/docs/
   {title = Edge Delivery Services - Guides}
-  {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with EDS.}
+  {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with Edge Delivery Services.}
   {image = ./assets/edge-delivery-services.png}
   {target = _blank}
-* https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-with-aem-headless/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview
   {title = Headless/API-First - Tutorials}
   {description = Learn how to build headless applications powered by AEM content. Tutorials cover frameworks like iOS, Android, and React—choose what fits your stack.}
   {image = ./assets/headless.png}
   {target = _self}
-* https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
   {title = Traditional AEM - WKND Tutorial}
   {description = Learn how to build a sample AEM Sites project using the WKND tutorial. This guide walks you through project setup, Core Components, Editable Templates, client-side libraries, and component development.}
   {image = ./assets/aem-wknd-spa-editor-tutorial.png}
@@ -91,7 +95,7 @@ AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建�
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://www.aem.live/docs/" target="_blank" rel="referrer" title="Edge Delivery Services - 指南">Edge Delivery Services - 指南</a>
                     </p>
-                    <p class="is-size-6">透過完整指南探索 Edge Delivery Services。建置、發佈和啟動指南，涵蓋開始使用 EDS 所需的一切。</p>
+                    <p class="is-size-6">透過完整指南探索 Edge Delivery Services。建置、發佈和啟動指南涵蓋您開始使用Edge Delivery Services所需的一切。</p>
                 </div>
                 <a href="https://www.aem.live/docs/" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">了解更多</span>
