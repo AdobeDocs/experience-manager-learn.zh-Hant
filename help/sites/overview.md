@@ -6,7 +6,7 @@ sub-product: Experience Manager Sites
 topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 2b3ff1957f9da313b71a73492777700ddbd79854
+source-git-commit: 14ca2ba3d5b6c116e3fa8b437aa9ed90375ae468
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 38%
@@ -19,7 +19,7 @@ ht-degree: 38%
 
 Adobe Experience Manager (AEM) Sites是Adobe的體驗管理平台，可透過網站、行動應用程式或任何其他數位頻道，提供數位體驗的製作、管理和傳送功能。
 
-## 使用AEM Sites傳遞體驗的三種方式
+## 使用AEM Sites提供體驗的三種方法
 
 AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建置網站、最佳化邊緣效能，還是支援無周邊應用程式，AEM Sites都能根據您的專案需求提供彈性的選項：
 
@@ -67,12 +67,12 @@ AEM Sites 提供三種建置、製作和傳遞體驗的方式。無論您是建�
   {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with Edge Delivery Services.}
   {image = ./assets/edge-delivery-services.png}
   {target = _blank}
-* https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-with-aem-headless/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview
   {title = Headless/API-First - Tutorials}
   {description = Learn how to build headless applications powered by AEM content. Tutorials cover frameworks like iOS, Android, and React—choose what fits your stack.}
   {image = ./assets/headless.png}
   {target = _self}
-* https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
   {title = Traditional AEM - WKND Tutorial}
   {description = Learn how to build a sample AEM Sites project using the WKND tutorial. This guide walks you through project setup, Core Components, Editable Templates, client-side libraries, and component development.}
   {image = ./assets/aem-wknd-spa-editor-tutorial.png}
