@@ -82,13 +82,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> 我們也[提供通用的 AEM 核心元件 UI 套件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd)，可用作自訂專案的起點。
+> 我們也[提供通用的 AEM 核心元件 UI 套件](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd?lang=zh-Hant)，可用作自訂專案的起點。
 
 ## 建立文章頁面範本
 
 建立頁面時您必須選取範本，以用作建立頁面的基礎。範本定義所產生頁面的結構、初始內容和允許使用的元件。
 
-[可編輯範本](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)包含三個主要部分：
+[可編輯範本](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=zh-Hant)包含三個主要部分：
 
 1. **結構** - 定義屬於範本一部分的元件。內容作者無法編輯這些元件。
 1. **初始內容** - 定義範本開始時使用的元件，而內容作者可以編輯和/或刪除這些元件
@@ -160,7 +160,7 @@ ht-degree: 100%
 
 ## 使用體驗片段更新頁首和頁尾 {#experience-fragments}
 
-在建立全域內容 (例如頁首或頁尾) 時，常見的做法是使用[體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)。使用者可以利用體驗片段，將多個元件結合起來建立成單一可參考的元件。體驗片段的優點在於支援多網站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=zh-hant)。
+在建立全域內容 (例如頁首或頁尾) 時，常見的做法是使用[體驗片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=zh-Hant)。使用者可以利用體驗片段，將多個元件結合起來建立成單一可參考的元件。體驗片段的優點在於支援多網站管理和[本地化](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=zh-hant)。
 
 AEM 專案原型已產生頁首和頁尾。接下來，更新體驗片段以和模型相符。請按照以下影片的步驟操作：
 
@@ -262,7 +262,7 @@ AEM 專案原型已產生頁首和頁尾。接下來，更新體驗片段以和�
 
    頁面元件下方只有兩個 HTL 指令碼，`customfooterlibs.html` 和 `customheaderlibs.html`。*這個元件是如何轉譯頁面？*
 
-   `sling:resourceSuperType` 屬性指向 `core/wcm/components/page/v2/page`。此屬性允許 WKND 的頁面元件繼承&#x200B;**所有**&#x200B;核心元件頁面元件的功能。這是所謂的 [Proxy 元件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern)的第一個範例。如需更多資訊，請參閱[這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html)。
+   `sling:resourceSuperType` 屬性指向 `core/wcm/components/page/v2/page`。此屬性允許 WKND 的頁面元件繼承&#x200B;**所有**&#x200B;核心元件頁面元件的功能。這是所謂的 [Proxy 元件模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=zh-Hant#ProxyComponentPattern)的第一個範例。如需更多資訊，請參閱[這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=zh-Hant)。
 
 1. 檢查 WKND 元件中的另一個元件，即來自 `/apps/wknd/components/breadcrumb` 的 `Breadcrumb` 元件。請注意，您可以找到相同的 `sling:resourceSuperType` 屬性，但這次其指向 `core/wcm/components/breadcrumb/v2/breadcrumb`。這是使用 Proxy 元件模式來包含核心元件的另一個範例。事實上，WKND 程式碼基底中所有元件都是 AEM 核心元件的 Proxy (自訂示範 HellowWorld 元件除外)。在編寫自訂程式碼&#x200B;*之前*，儘可能重複使用核心元件的功能，是最佳做法。
 
@@ -312,7 +312,7 @@ AEM 專案原型已產生頁首和頁尾。接下來，更新體驗片段以和�
 
    將 HTL 拆分為多個指令碼的另一個原因，是為了讓 Proxy 元件覆寫個別指令碼以實施自訂商業邏輯。建立 HTL 指令碼 `customfooterlibs.html`和 `customheaderlibs.html` 具有明確的目的，就是要由實施中的專案覆寫。
 
-   [閱讀這篇文章](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)，您便可以更加了解可編輯的範本如何影響內容頁面的轉譯。
+   [閱讀這篇文章](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=zh-Hant)，您便可以更加了解可編輯的範本如何影響內容頁面的轉譯。
 
 1. 檢查另一個核心元件，例如位於 `/libs/core/wcm/components/breadcrumb/v2/breadcrumb` 的階層連結。檢視 `breadcrumb.html` 指令碼以了解最終如何產生階層連結元件的標記。
 

@@ -69,7 +69,7 @@ ht-degree: 100%
 
 ## 您將要建置的內容 {#what-build}
 
-本章使用[樣式系統功能](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)來建立文章頁面上使用的&#x200B;**標題**&#x200B;和&#x200B;**文字**&#x200B;元件的變化版本。
+本章使用[樣式系統功能](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html?lang=zh-Hant)來建立文章頁面上使用的&#x200B;**標題**&#x200B;和&#x200B;**文字**&#x200B;元件的變化版本。
 
 ![標題可用的樣式](assets/style-system/styles-added-title.png)
 
@@ -77,15 +77,15 @@ ht-degree: 100%
 
 ## 背景 {#background}
 
-開發人員和範本編輯者可使用[樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)建立元件的多個視覺變化版本。然後作者可以在編寫頁面時決定要使用哪個樣式。本教學課程的其餘部分使用樣式系統來實現幾種獨特的樣式，並用低程式碼方式使用核心元件。
+開發人員和範本編輯者可使用[樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=zh-Hant)建立元件的多個視覺變化版本。然後作者可以在編寫頁面時決定要使用哪個樣式。本教學課程的其餘部分使用樣式系統來實現幾種獨特的樣式，並用低程式碼方式使用核心元件。
 
 樣式系統的通用概念是，作者可以針對元件的外觀選擇多種不同的樣式。「樣式」由其 CSS 類別提供支援，而這些類別會注入到元件的外層 div 中。在用戶端程式庫中，根據這些樣式類別新增 CSS 規則，以便元件變更外觀。
 
-[樣式系統的詳細文件請參閱這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html)。我們也有一段很好的[技術影片協助您了解樣式系統](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html)。
+[樣式系統的詳細文件請參閱這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html?lang=zh-Hant)。我們也有一段很好的[技術影片協助您了解樣式系統](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html?lang=zh-Hant)。
 
 ## 底線樣式 - 標題 {#underline-style}
 
-[標題元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/title.html)已經使用 Proxy 帶入專案中，放在 `/apps/wknd/components/title` 之下並作為 **ui.apps** 模組的一部分。在 **ui.frontend** 模組中已經實施標題元素的預設樣式 (`H1`、`H2`、`H3`)。
+[標題元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/title.html?lang=zh-Hant)已經使用 Proxy 帶入專案中，放在 `/apps/wknd/components/title` 之下並作為 **ui.apps** 模組的一部分。在 **ui.frontend** 模組中已經實施標題元素的預設樣式 (`H1`、`H2`、`H3`)。
 
 [WKND 文章設計](assets/pages-templates/wknd-article-design.xd)包含帶有底線的標題元件獨特樣式。「樣式系統」可讓作者選擇新增底線樣式，而不是建立兩個元件或修改元件對話框。
 
@@ -195,7 +195,7 @@ ht-degree: 100%
 
 ## 引述區塊樣式 - 文字 {#text-component}
 
-接下來，重複類似的步驟將獨特的樣式套用至[文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html)。文字元件已經用 Proxy 帶入專案中，放在 `/apps/wknd/components/text` 之下並做為 **ui.apps** 模組的一部分。段落元素的預設樣式已在 **ui.frontend** 中實施。
+接下來，重複類似的步驟將獨特的樣式套用至[文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=zh-Hant)。文字元件已經用 Proxy 帶入專案中，放在 `/apps/wknd/components/text` 之下並做為 **ui.apps** 模組的一部分。段落元素的預設樣式已在 **ui.frontend** 中實施。
 
 [WKND 文章設計](assets/pages-templates/wknd-article-design.xd)包含帶有引述區塊的文字元件獨特樣式：
 

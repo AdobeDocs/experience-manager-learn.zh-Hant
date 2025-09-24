@@ -21,7 +21,7 @@ ht-degree: 100%
 
 # 用戶端程式庫與前端工作流程 {#client-side-libraries}
 
-了解如何使用用戶端程式庫 (或簡稱 clientlibs) 來部署和管理為 Adobe Experience Manager (AEM) Sites 實施的 CSS 和 JavaScript。此教學課程也介紹 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 模組，即分離的 [webpack](https://webpack.js.org/) 專案，如何與端到端建置流程整合。
+了解如何使用用戶端程式庫 (或簡稱 clientlibs) 來部署和管理為 Adobe Experience Manager (AEM) Sites 實施的 CSS 和 JavaScript。此教學課程也介紹 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=zh-Hant) 模組，即分離的 [webpack](https://webpack.js.org/) 專案，如何與端到端建置流程整合。
 
 ## 先決條件 {#prerequisites}
 
@@ -82,7 +82,7 @@ ht-degree: 100%
 1. 透過有條理的方式管理第三方框架的相依性
 1. 將 CSS/JS 串聯成一個或兩個請求，盡量減少用戶端請求的數量。
 
-如需使用[用戶端程式庫的更多資訊，請參閱這裡。](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)
+如需使用[用戶端程式庫的更多資訊，請參閱這裡。](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=zh-Hant)
 
 用戶端程式庫確實有一些限制。最值得注意的，就是對於常見的前端語言，如 Sass、LESS 和 TypeScript 的支援不多。在教學課程中，我們將了解 **ui.frontend** 模組如何協助解決這個問題。
 
@@ -90,7 +90,7 @@ ht-degree: 100%
 
 ## 用戶端資料庫的組織 {#organization}
 
-接下來，我們會探索由 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)產生的 clientlibs 的組織。
+接下來，我們會探索由 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)產生的 clientlibs 的組織。
 
 ![用戶端程式庫組織的概要圖](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -112,7 +112,7 @@ ht-degree: 100%
    | 名稱 | 說明 | 備註 |
    |-------------------| ------------| ------|
    | `clientlib-base` | WKND 網站運作所需的基本等級 CSS 和 JavaScript | 嵌入核心元件用戶端程式庫 |
-   | `clientlib-grid` | 產生讓[版本模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)能夠運作所需的 CSS。 | 可以在這裡設定行動裝置/平板電腦的中斷點 |
+   | `clientlib-grid` | 產生讓[版本模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=zh-Hant)能夠運作所需的 CSS。 | 可以在這裡設定行動裝置/平板電腦的中斷點 |
    | `clientlib-site` | 包含 WKND 網站的網站特定主題 | 由 `ui.frontend` 模組產生 |
    | `clientlib-dependencies` | 嵌入任何第三方相依性 | 由 `ui.frontend` 模組產生 |
 
@@ -120,7 +120,7 @@ ht-degree: 100%
 
 ## 更新基礎樣式 {#base-styles}
 
-接下來，更新 **[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)** 模組中定義的基礎樣式。 `ui.frontend` 模組中的檔案產生 `clientlib-site` 和 `clientlib-dependecies` 程式庫，而這兩個程式庫含有網站主題和任何第三方相依性。
+接下來，更新 **[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=zh-Hant)** 模組中定義的基礎樣式。 `ui.frontend` 模組中的檔案產生 `clientlib-site` 和 `clientlib-dependecies` 程式庫，而這兩個程式庫含有網站主題和任何第三方相依性。
 
 用戶端程式庫不支援更加進階的語言，例如 [Sass](https://sass-lang.com/) 或 [TypeScript](https://www.typescriptlang.org/)。有數種開放原始碼工具，例如 [NPM](https://www.npmjs.com/) 和 [webpack](https://webpack.js.org/) 可加速和最佳化前端開發。**ui.frontend** 模組的目標是能夠使用這些工具來管理大多數前端原始碼檔案。
 
@@ -220,7 +220,7 @@ AEM 專案原型自動設定此整合。接下來，探索其運作方式。
 
    >[!NOTE]
    >
-   >還有一個 `npm run prod` 設定檔可以將 JS 和 CSS 精簡化。每當透過 Maven 觸發 webpack 建置時，這就是標準編譯方式。有關 [ui.frontend 模組的更多詳細資訊請參閱這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)。
+   >還有一個 `npm run prod` 設定檔可以將 JS 和 CSS 精簡化。每當透過 Maven 觸發 webpack 建置時，這就是標準編譯方式。有關 [ui.frontend 模組的更多詳細資訊請參閱這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=zh-Hant)。
 
 1. 檢查 `ui.frontend/dist/clientlib-site/site.css` 之下的檔案 `site.css`：這是根據 Sass 原始碼檔案編譯的 CSS。
 
@@ -328,7 +328,7 @@ AEM 專案原型自動設定此整合。接下來，探索其運作方式。
 
    >[!WARNING]
    >
-   >對於發佈端而言，最重要的是用戶端程式庫&#x200B;**不是**&#x200B;由 **/apps** 提供，因為基於安全性理由應該使用 [Dispatcher 篩選器區段](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section)限制存取這個路徑。用戶端程式庫的 [allowProxy 屬性](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) 可確保 CSS 和 JS 由 **/etc.clientlibs** 提供。
+   >對於發佈端而言，最重要的是用戶端程式庫&#x200B;**不是**&#x200B;由 **/apps** 提供，因為基於安全性理由應該使用 [Dispatcher 篩選器區段](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#example-filter-section)限制存取這個路徑。用戶端程式庫的 [allowProxy 屬性](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=zh-Hant#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) 可確保 CSS 和 JS 由 **/etc.clientlibs** 提供。
 
 ### 後續步驟 {#next-steps}
 

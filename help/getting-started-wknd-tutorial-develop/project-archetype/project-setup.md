@@ -46,7 +46,7 @@ ht-degree: 100%
 
 ## 建立專案 {#create}
 
-要建立 AEM 的 Maven 多模組專案，有多個選項可供選擇。本教學課程使用 [Maven AEM 專案原型 **35**](https://github.com/adobe/aem-project-archetype)。Cloud Manager 也[提供 UI 精靈](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/project-creation/using-the-wizard.html)以便開始建立 AEM 應用程式專案。由 Cloud Manager UI 產生的基礎專案與直接使用原型建立的專案擁有相同的結構。
+要建立 AEM 的 Maven 多模組專案，有多個選項可供選擇。本教學課程使用 [Maven AEM 專案原型 **35**](https://github.com/adobe/aem-project-archetype)。Cloud Manager 也[提供 UI 精靈](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/project-creation/using-the-wizard.html?lang=zh-Hant)以便開始建立 AEM 應用程式專案。由 Cloud Manager UI 產生的基礎專案與直接使用原型建立的專案擁有相同的結構。
 
 >[!NOTE]
 >
@@ -176,10 +176,10 @@ ht-degree: 100%
 
 所產生的 AEM 專案由個別的 Maven 模組組成，且每個模組都有不同角色。本教學課程和大多數開發主要使用以下模組：
 
-* [核心](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html) - Java 程式碼，主要適用於後端開發人員。
-* [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) - 包含 CSS、JavaScript、Sass、TypeScript 的原始碼，主要適用於前端開發人員。
-* [ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)  - 包含元件和對話框定義，嵌入已編譯的 CSS 和 JavaScript 作為用戶端程式庫。
-* [ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html) - 包含結構化內容和設定，例如可編輯的範本、後設資料結構描述 (/content、/conf)。
+* [核心](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html?lang=zh-Hant) - Java 程式碼，主要適用於後端開發人員。
+* [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=zh-Hant) - 包含 CSS、JavaScript、Sass、TypeScript 的原始碼，主要適用於前端開發人員。
+* [ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html?lang=zh-Hant)  - 包含元件和對話框定義，嵌入已編譯的 CSS 和 JavaScript 作為用戶端程式庫。
+* [ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html?lang=zh-Hant) - 包含結構化內容和設定，例如可編輯的範本、後設資料結構描述 (/content、/conf)。
 
 * **所有** - 這是一個空的 Maven 模組，將上述模組結合成一個可以部署到 AEM 環境的封裝。
 
@@ -189,11 +189,11 @@ ht-degree: 100%
 
 ### 包含核心元件 {#core-components}
 
-[AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)是一組適用於 AEM 的標準化網站內容管理 (WCM) 元件。這些元件提供一套基礎功能，並針對個別專案進行樣式設定、自訂與擴充。
+[AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)是一組適用於 AEM 的標準化網站內容管理 (WCM) 元件。這些元件提供一套基礎功能，並針對個別專案進行樣式設定、自訂與擴充。
 
-AEM as a Cloud Service 環境包含最新版的 [AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。因此，為 AEM as a Cloud Service 產生的專案&#x200B;**不會**&#x200B;包含 AEM 核心元件的嵌入。
+AEM as a Cloud Service 環境包含最新版的 [AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。因此，為 AEM as a Cloud Service 產生的專案&#x200B;**不會**&#x200B;包含 AEM 核心元件的嵌入。
 
-針對 AEM 6.5/6.4 產生的專案，原型會自動在專案中嵌入 [AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。對於 AEM 6.5/6.4 來說，最佳做法是嵌入 AEM 核心元件，以確保最新版本隨您的專案一起部署。如需如何將核心元件[包含在專案中的更多資訊，請參閱這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components)。
+針對 AEM 6.5/6.4 產生的專案，原型會自動在專案中嵌入 [AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。對於 AEM 6.5/6.4 來說，最佳做法是嵌入 AEM 核心元件，以確保最新版本隨您的專案一起部署。如需如何將核心元件[包含在專案中的更多資訊，請參閱這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=zh-Hant#core-components)。
 
 ## 原始碼控制管理 {#source-control}
 
@@ -221,7 +221,7 @@ AEM 專案原型會產生範例 `.gitignore` 檔案，可用作可安全忽略�
 
 ### 核心模組 {#core-module}
 
-**[核心](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)**&#x200B;模組含有與專案相關的所有 Java™ 程式碼。建置&#x200B;**核心**&#x200B;模組會將一個 OSGi 套件部署到 AEM。僅建置此模組：
+**[核心](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html?lang=zh-Hant)**&#x200B;模組含有與專案相關的所有 Java™ 程式碼。建置&#x200B;**核心**&#x200B;模組會將一個 OSGi 套件部署到 AEM。僅建置此模組：
 
 1. 導覽至 `core` 資料夾 (在 `aem-guides-wknd` 下方)：
 
@@ -255,7 +255,7 @@ AEM 專案原型會產生範例 `.gitignore` 檔案，可用作可安全忽略�
 
 ### Ui.apps 和 Ui.content 模組 {#apps-content-module}
 
-**[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven 模組包含 `/apps` 路徑之下網站所需要的全部轉譯程式碼。其中包括以 AEM 格式儲存的 CSS/JS，稱為 [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)。還包括用來轉譯動態 HTML 的 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 指令碼。您可以把 **ui.apps** 模組視為 JCR 結構的對應，但此模組採用可以儲存在檔案系統中並提交給原始碼控制的格式。**ui.apps** 模組僅包含程式碼。
+**[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html?lang=zh-Hant)** maven 模組包含 `/apps` 路徑之下網站所需要的全部轉譯程式碼。其中包括以 AEM 格式儲存的 CSS/JS，稱為 [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=zh-Hant)。還包括用來轉譯動態 HTML 的 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant) 指令碼。您可以把 **ui.apps** 模組視為 JCR 結構的對應，但此模組採用可以儲存在檔案系統中並提交給原始碼控制的格式。**ui.apps** 模組僅包含程式碼。
 
 僅建置此模組：
 
@@ -327,7 +327,7 @@ AEM 專案原型會產生範例 `.gitignore` 檔案，可用作可安全忽略�
 
    同樣地，如果在連接埠 **4504** 上執行的 AEM 實例皆不可用，便會建置失敗。位在 `aem-guides-wknd/pom.xml` 的 POM 檔案會定義參數 `aem.port`。
 
-**[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** 模組的結構與 **ui.apps** 模組相同。唯一的差異是 **ui.content** 模組包含所謂的&#x200B;**可變**&#x200B;內容。**可變**&#x200B;內容基本上是指非程式碼設定，例如範本、原則或資料夾結構，這些設定儲存在原始碼控制&#x200B;**但是**&#x200B;可以在 AEM 實例上直接修改。在「頁面和範本」一章中會詳細討論其中細節。
+**[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html?lang=zh-Hant)** 模組的結構與 **ui.apps** 模組相同。唯一的差異是 **ui.content** 模組包含所謂的&#x200B;**可變**&#x200B;內容。**可變**&#x200B;內容基本上是指非程式碼設定，例如範本、原則或資料夾結構，這些設定儲存在原始碼控制&#x200B;**但是**&#x200B;可以在 AEM 實例上直接修改。在「頁面和範本」一章中會詳細討論其中細節。
 
 用於建置 **ui.apps** 模組的同一組 Maven 指令可以用來建置 **ui.content** 模組。您可以在 **ui.content** 資料夾中隨意重複上述步驟。
 

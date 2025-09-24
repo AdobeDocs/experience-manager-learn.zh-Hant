@@ -29,7 +29,7 @@ ht-degree: 100%
 
 此教學課程旨在與 **AEM as a Cloud Service** 搭配使用，並向下相容於 **AEM 6.5+** 和 **AEM 6.4.2+**。
 
-**[請至這裡檢視教學課程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
+**[請至這裡檢視教學課程！](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)**
 
 ## 將 WKND 部署到 AEM as a Cloud Service {#deploying-wknd-to-aem-as-a-cloud-service}
 
