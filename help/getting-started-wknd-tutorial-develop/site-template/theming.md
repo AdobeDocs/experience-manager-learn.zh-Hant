@@ -39,7 +39,7 @@ ht-degree: 100%
 
 接下來，對主題來源進行變更，以便網站與 WKND 品牌的外觀相符。
 
->[!VIDEO](https://video.tv.adobe.com/v/332918?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453631?quality=12&learn=on&captions=chi_hant)
 
 影片的概括性步驟：
 

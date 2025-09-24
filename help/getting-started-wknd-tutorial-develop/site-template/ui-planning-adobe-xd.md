@@ -41,7 +41,7 @@ ht-degree: 100%
 
 ## 標準網站範本 UI 套件 {#standard-site-template-uikit}
 
->[!VIDEO](https://video.tv.adobe.com/v/338680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448441?quality=12&learn=on&captions=chi_hant)
 
 概括性步驟：
 
