@@ -11,10 +11,10 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 2f7e10680c7211da836e33fdd241cd7f5d633d5f
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 0%
+source-wordcount: '788'
+ht-degree: 1%
 
 ---
 
@@ -49,9 +49,9 @@ $ mvn clean package
 
 ## 使用AEM-RDE外掛程式部署AEM成品
 
-首先，確定您已安裝[最新的`aio` CLI模組](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli)。
+首先，確定您已安裝[最新的`aio` CLI模組](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli)。
 
-然後，使用`aio aem:rde:install`命令來部署各種AEM成品。 現在您必須
+然後，使用`aio aem:rde:install`命令來部署各種AEM成品。
 
 ### 部署`all`和`dispatcher`封裝
 
@@ -71,8 +71,8 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
 
 讓我們增強`Hello World Component`並將其部署至RDE。
 
-1. 從`ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/`資料夾開啟對話方塊XML (`.content.xml`)檔案
-1. 在現有`Text`對話方塊欄位之後新增`Description`文字欄位
+1. 從`.content.xml`資料夾開啟對話方塊XML (`ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/`)檔案
+1. 在現有`Description`對話方塊欄位之後新增`Text`文字欄位
 
    ```xml
    ...
@@ -84,8 +84,8 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
    ...
    ```
 
-1. 從`ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld`資料夾開啟`helloworld.html`檔案
-1. 在`Text`屬性的現有`<div>`元素之後轉譯`Description`屬性。
+1. 從`helloworld.html`資料夾開啟`ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld`檔案
+1. 在`Description`屬性的現有`<div>`元素之後轉譯`Text`屬性。
 
    ```html
    ...
@@ -126,13 +126,13 @@ $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-S
 $ aio aem:rde:install --help
 ```
 
-標幟的含義不言自明，`-s`標幟有助於將部署目標定位到作者或發佈服務。 部署&#x200B;**content-file或content-xml**&#x200B;檔案時，請使用`-t`旗標以及`-p`旗標來指定AEM RDE環境中的目的地JCR路徑。
+標幟的含義不言自明，`-s`標幟有助於將部署目標定位到作者或發佈服務。 部署`-t`content-file或content-xml **檔案時，請使用**&#x200B;旗標以及`-p`旗標來指定AEM RDE環境中的目的地JCR路徑。
 
 ### 部署OSGi套件組合
 
 若要瞭解如何部署OSGi套件，請增強`HelloWorldModel` Java™類別並將其部署至RDE。
 
-1. 從`core/src/main/java/com/adobe/aem/guides/wknd/core/models`資料夾開啟`HelloWorldModel.java`檔案
+1. 從`HelloWorldModel.java`資料夾開啟`core/src/main/java/com/adobe/aem/guides/wknd/core/models`檔案
 1. 更新`init()`方法，如下所示：
 
    ```java
@@ -204,11 +204,11 @@ Apache或Dispatcher設定檔案&#x200B;**無法個別部署**，但整個Dispatc
 
 ### 部署組態(YAML)檔案
 
-可以使用`install`命令將CDN、維護工作、記錄檔轉送和AEM API驗證組態檔部署至RDE。 這些設定在AEM專案的`config`資料夾中管理為YAML檔案，如需詳細資訊，請參閱[支援的設定](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations)。
+可以使用`install`命令將CDN、維護工作、記錄檔轉送和AEM API驗證組態檔部署至RDE。 這些設定在AEM專案的`config`資料夾中管理為YAML檔案，如需詳細資訊，請參閱[支援的設定](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations)。
 
 若要瞭解如何部署組態檔，請增強`cdn`組態檔並將其部署到RDE。
 
-1. 從`config`資料夾開啟`cdn.yaml`檔案
+1. 從`cdn.yaml`資料夾開啟`config`檔案
 1. 更新所需的設定，例如，將速率限制更新為每秒200個請求
 
    ```yaml
@@ -268,13 +268,13 @@ aem rde status   Get a list of the bundles and configs deployed to the current r
 
 ## 下一步
 
-瞭解如何使用RDE[&#128279;](./development-life-cycle.md)快速提供功能的開發/部署生命週期。
+瞭解如何使用RDE[快速提供功能的](./development-life-cycle.md)開發/部署生命週期。
 
 
 ## 其他資源
 
-[RDE命令檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
+[RDE命令檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
 
 與AEM快速開發環境互動的[Adobe I/O Runtime CLI外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[AEM專案設定](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
+[AEM專案設定](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
