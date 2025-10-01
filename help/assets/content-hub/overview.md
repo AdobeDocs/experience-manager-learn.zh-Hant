@@ -47,7 +47,7 @@ ht-degree: 96%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/content-hub/set-up" title="建立" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472918/?format=jpeg&nocache=1759339176339" alt="建立"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472946/?format=jpeg&nocache=1759339176339&captions=chi_hant" alt="建立"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -70,7 +70,7 @@ ht-degree: 96%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/content-hub/configure" title="設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472917/?format=jpeg&nocache=1759339176369" alt="設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472957/?format=jpeg&nocache=1759339176369&captions=chi_hant" alt="設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -93,7 +93,7 @@ ht-degree: 96%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/content-hub/add-assets" title="新增資產" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432980/?format=jpeg&nocache=1759339176806" alt="新增資產"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3450293/?format=jpeg&nocache=1759339176806&captions=chi_hant" alt="新增資產"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -162,7 +162,7 @@ ht-degree: 96%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/content-hub/collections" title="集合" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435687/?format=jpeg&nocache=1759339176447" alt="集合"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3445311/?format=jpeg&nocache=1759339176447&captions=chi_hant" alt="集合"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -185,7 +185,7 @@ ht-degree: 96%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/content-hub/share" title="共用" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474890/?format=jpeg&nocache=1759339176327" alt="共用"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474930/?format=jpeg&nocache=1759339176327&captions=chi_hant" alt="共用"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -244,7 +244,7 @@ ht-degree: 96%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./use-cases/manage-assets.md" title="如何使用 AEM Assets Content Hub 管理資產" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3457638/?format=jpeg&nocache=1759339177153" alt="如何使用 AEM Assets Content Hub 管理資產"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3463075/?format=jpeg&nocache=1759339177153&captions=chi_hant" alt="如何使用 AEM Assets Content Hub 管理資產"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
