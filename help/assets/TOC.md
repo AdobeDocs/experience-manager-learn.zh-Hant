@@ -8,9 +8,9 @@ version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: 16b106d88d51d68819470758abd536ad42b019db
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '461'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -71,7 +71,7 @@ ht-degree: 99%
    + [浮水印](./advanced/watermarks.md)
 
 + 進階中繼資料管理{#metadata}
-   + [GenAI中繼資料](metadata/genai-metadata.md)
+   + [生成式 AI 中繼資料](metadata/genai-metadata.md)
    + [階層式中繼資料](metadata/cascade-metadata-feature-video-use.md)
    + [影像的智慧標記](metadata/image-smart-tags.md)
    + [自訂影像的智慧標記](metadata/custom-smart-tags.md)
@@ -118,7 +118,7 @@ ht-degree: 99%
    + [AEM 桌面應用程式](./creative-workflows/aem-desktop-app.md)
    + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
-   + [圖](./creative-workflows/figma.md)
+   + [Figma](./creative-workflows/figma.md)
 
 + Adobe Asset Link{#adobe-asset-link}
    + [建立](./adobe-asset-link/setup.md)
@@ -204,4 +204,4 @@ ht-degree: 99%
 + 部署{#deployment}
    + [多重租戶和同時開發](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hant){target=_blank}
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}

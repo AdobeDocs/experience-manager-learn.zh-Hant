@@ -13,9 +13,9 @@ last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 duration: 54
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '237'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 91%
 
 ### AEM 環境
 
-若要完成本教學課程，建議您擁有AEM as a Cloud Service環境的AEM管理員存取權。
+若要完成本教學課程，建議您具備 AEM as a Cloud Service 環境的 AEM 管理員存取權。
 
 ## 我們開始吧！
 
