@@ -10,10 +10,10 @@ doc-type: Feature Video
 duration: 323
 last-substantial-update: 2025-10-01T00:00:00Z
 jira: KT-19332
-source-git-commit: 4d17b28ed67d7e5b03caa5fb57701ab7ddbcb77f
+source-git-commit: 51b9fd68590c6f0b7f21d322063f1e9e5049b1c6
 workflow-type: tm+mt
-source-wordcount: '49'
-ht-degree: 0%
+source-wordcount: '67'
+ht-degree: 1%
 
 ---
 
@@ -23,3 +23,5 @@ ht-degree: 0%
 瞭解如何使用屬性式存取控制(ABAC)來設定及控制AEM Assets Content Hub中資產的存取。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops)
+
+[從AEM Assets Content Hub屬性型存取控制檔案下載屬性型存取控制定義試算表](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control)。
