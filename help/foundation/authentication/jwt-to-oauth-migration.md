@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解如何從過時的服務帳戶(JWT)憑證將其他Adobe解決方案移轉至新的OAuth伺服器對伺服器憑證。
 
->[!VIDEO](https://video.tv.adobe.com/v/3432960/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449249/?learn=on&captions=chi_hant)
