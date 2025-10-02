@@ -12,7 +12,7 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 937
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: d2714443fa644ba17afdfbed5e6da8091425aeab
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 4%
@@ -27,7 +27,7 @@ ht-degree: 4%
 >
 >此影片示範如何在網站地圖中使用相對URL。 Sitemap [應使用絕對URL](https://sitemaps.org/protocol.html)。 請參閱[組態](#absolute-sitemap-urls)以瞭解如何啟用絕對URL，因為下列影片並未說明此問題。
 
->[!VIDEO](https://video.tv.adobe.com/v/3454372?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
 
 ## 設定
 
@@ -50,9 +50,9 @@ AEM的Sitemap使用[Sling對應](https://sling.apache.org/documentation/the-slin
 
 ### Sitemap排程器OSGi設定
 
-定義在AEM中重新/產生並快取Sitemap之頻率（使用[cron運算式](https://cron.help/)）的[OSGi工廠設定](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)。
+定義在AEM中重新/產生並快取Sitemap之頻率（使用[cron運算式](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler)）的[OSGi工廠設定](https://cron.help/)。
 
-`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
+`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.author`
 
 ```json
 {
@@ -89,7 +89,7 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 
 ## 資源
 
-+ [AEM Sitemap檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=zh-Hant)
++ [AEM Sitemap檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
 + [Apache Sling Sitemap檔案](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org Sitemap檔案](https://www.sitemaps.org/protocol.html)
 + [Sitemap.org Sitemap索引檔案檔案](https://www.sitemaps.org/protocol.html#index)
