@@ -22,6 +22,6 @@ ht-degree: 1%
 
 瞭解如何使用屬性式存取控制(ABAC)來設定及控制AEM Assets Content Hub中資產的存取。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475425/?learn=on&enablevpops&captions=chi_hant)
 
 [從AEM Assets Content Hub屬性型存取控制檔案下載屬性型存取控制定義試算表](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control)。
