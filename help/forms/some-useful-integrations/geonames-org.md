@@ -91,6 +91,6 @@ AEM Forms資料整合提供直覺式使用者介面，可建立和使用[表單�
 可以從[這裡](assets/geonames-swagger-files.zip)下載已完成的swagger檔案
 swagger檔案說明下列REST API
 * [取得所有國家/地區](https://secure.geonames.org/countryInfoJSON?username=yourusername)
-* [取得Geoname物件的子系](https://secure.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+* [取得Geoname物件的子系](https://secure.geonames.org/children?formatted=true&geonameId=6252001&username=yourusername)
 
 您可以從這裡[&#128279;](assets/geonames-api-form-data-model.zip)下載已完成的表單資料模型

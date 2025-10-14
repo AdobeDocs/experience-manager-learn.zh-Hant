@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ## 遠端SPA對應
 
-離開遠端SPA之要求的對應是透過[Bootstrap ](./spa-bootstrap.md)中完成的`setupProxy`設定所設定。
+離開遠端SPA之要求的對應是透過[Bootstrap &#x200B;](./spa-bootstrap.md)中完成的`setupProxy`設定所設定。
 
 ## SPA編輯器對應
 

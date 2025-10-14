@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/40113?quality=12&learn=on&captions=chi_hant)
 
-* 使用的[[!DNL oak-run.jar]](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&amp;g=org.apache.jackrabbit&amp;a=oak-run&amp;v=1.8.0)版本必須與AEM執行個體上使用的Oak版本相符。
+* 使用的[[!DNL oak-run.jar]](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&g=org.apache.jackrabbit&a=oak-run&v=1.8.0)版本必須與AEM執行個體上使用的Oak版本相符。
 * 使用[!DNL oak-run.jar]管理索引時，會利用具有各種旗標的&#x200B;**[!DNL index]**&#x200B;命令來支援不同的作業。
 
    * `java -jar oak-run*.jar index ...`

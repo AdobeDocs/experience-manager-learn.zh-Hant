@@ -24,12 +24,12 @@ ht-degree: 2%
 
 所有Adobe服務都必須透過相同的Adobe組織，使用您的Adobe ID進行存取。
 
-+ [AEM as a Cloud Service ](#aem-as-a-cloud-service)
++ [AEM as a Cloud Service &#x200B;](#aem-as-a-cloud-service)
 + [App Builder](#app-builder)
    + 布建作業可能需要2到10天的時間
 + 雲端儲存空間
    + [Azure Blob儲存體](https://azure.microsoft.com/en-us/services/storage/blobs/)
-   + 或[Amazon S3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card)
+   + 或[Amazon S3](https://aws.amazon.com/s3/?did=ft_card&trk=ft_card)
 
 >[!WARNING]
 >
@@ -84,7 +84,7 @@ _布建Azure Blob儲存體的點進（無音訊）_
 
 ### Amazon S3{#amazon-s3}
 
-建議您使用[Microsoft Azure Blob Storage](#azure-blob-storage)完成本教學課程，不過也可以使用[Amazon S3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card)。
+建議您使用[Microsoft Azure Blob Storage](#azure-blob-storage)完成本教學課程，不過也可以使用[Amazon S3](https://aws.amazon.com/s3/?did=ft_card&trk=ft_card)。
 
 如果使用Amazon S3儲存空間，請在[設定專案的環境變數](../develop/environment-variables.md#amazon-s3)時，指定Amazon S3雲端儲存空間認證。
 

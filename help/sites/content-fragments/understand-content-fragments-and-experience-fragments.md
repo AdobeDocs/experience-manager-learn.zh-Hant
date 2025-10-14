@@ -131,7 +131,7 @@ Adobe Experience Manager的內容片段和體驗片段表面上看起來可能�
 </td>
 </tr><tr><td><strong>文件</strong></td>
 <td><ul>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=zh-Hant&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js" target="_blank">AEM內容片段使用手冊</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=zh-Hant&topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js" target="_blank">AEM內容片段使用手冊</a></li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=zh-Hant" target="_blank">在AEM中使用內容片段</a></li>
 </ul>
 </td>
@@ -172,7 +172,7 @@ Adobe Experience Manager的內容片段和體驗片段表面上看起來可能�
 
 ## 內容片段的支援資源
 
-+ [內容片段使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=zh-Hant&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
++ [內容片段使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=zh-Hant&topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
 + [Adobe Experience Manager as a Headless CMS簡介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html?lang=zh-hant)
 + [在AEM中使用內容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=zh-Hant)
 + [AEM WCM核心元件的內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hant)

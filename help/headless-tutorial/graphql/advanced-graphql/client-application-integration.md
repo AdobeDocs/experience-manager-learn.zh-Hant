@@ -44,7 +44,7 @@ ht-degree: 1%
 
 ## 目標 {#objectives}
 
-在本教學課程中，您將瞭解如何使用適用於JavaScript的[AEM Headless Client ](https://github.com/adobe/aem-headless-client-js)，將持續性查詢的請求整合到範例WKND GraphQL React應用程式中。
+在本教學課程中，您將瞭解如何使用適用於JavaScript的[AEM Headless Client &#x200B;](https://github.com/adobe/aem-headless-client-js)，將持續性查詢的請求整合到範例WKND GraphQL React應用程式中。
 
 ## 複製並執行範例使用者端應用程式 {#clone-client-app}
 

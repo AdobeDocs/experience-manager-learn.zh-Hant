@@ -39,7 +39,7 @@ AEM的URL重新導向解決方案如下：
 | [Apache `mod_rewrite`規則為Dispatcher設定](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
 | [ACS Commons — 重新導向地圖管理員](#redirect-map-manager) | ✘ | ✔ | ✔ | Dispatcher |
 | [ACS Commons — 重新導向管理員](#redirect-manager) | ✘ | ✔ | ✔ | AEM / DISPATCHER |
-| [ `Redirect`頁面屬性](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
+| [&#x200B; `Redirect`頁面屬性](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
 
 
 ## 解決方案選項
