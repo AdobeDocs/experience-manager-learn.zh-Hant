@@ -25,16 +25,16 @@ ht-degree: 100%
 
 歡迎使用專為初次接觸 Adobe Experience Manager (AEM) 的開發人員設計且包含多個部分的教學課程。此教學課程會逐步解說為虛擬生活風格品牌 WKND 實施 AEM 網站的情形。
 
-本教學課程開始時會使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)產生一個新專案。
+本教學課程開始時會使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)產生一個新專案。
 
 此教學課程能與 **AEM as a Cloud Service** 搭配使用，並向下相容於 **AEM 6.5.14+**。使用以下項目實作網站：
 
 * [Maven AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html?lang=zh-Hant)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
-* [可編輯的範本](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
-* [樣式系統](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
+* [可編輯的範本](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hant)
+* [樣式系統](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html?lang=zh-Hant)
 
 *預計需要 1 至 2 小時完成教學課程的每個部份。*
 
@@ -57,9 +57,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> **AEM as a Cloud Service 的新手嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)。
+> **AEM as a Cloud Service 的新手嗎？** 請參閱[以下指南以使用 AEM as a Cloud Service SDK 設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)。
 >
-> **AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)。
+> **AEM 6.5 的新手嗎？** 請參閱[以下指南以設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=zh-Hant)。
 
 ## GitHub {#github}
 
