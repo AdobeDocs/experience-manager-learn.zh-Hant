@@ -336,7 +336,7 @@ Adobe Experience Platform (AEP)的各種解決方案可用來收集、管理、�
 
   ![設定Adobe Experience Platform服務](../assets/use-cases/known-user-personalization/configure-adobe-experience-platform-service.png)
 
-- 在&#x200B;**新增服務**&#x200B;步驟中，從下拉式清單中選取&#x200B;**Adobe Target**，然後輸入&#x200B;**目標環境ID**。 您可以在Adobe Target的&#x200B;**管理** > **環境**&#x200B;下找到目標環境ID。 按一下&#x200B;**儲存**以新增服務。
+- 在&#x200B;**新增服務**&#x200B;步驟中，從下拉式清單中選取&#x200B;**Adobe Target**，然後輸入&#x200B;**目標環境ID**。 您可以在Adobe Target的&#x200B;**管理** > **環境**&#x200B;下找到目標環境ID。 按一下&#x200B;**儲存**&#x200B;以新增服務。
   ![設定Adobe Target服務](../assets/use-cases/known-user-personalization/configure-adobe-target-service.png)
 
 - 最終資料流應該如下所示：
@@ -372,7 +372,7 @@ Tags屬性是JavaScript程式碼的容器，可從您的網站收集資料並傳
 
   ![建立新標籤屬性](../assets/use-cases/known-user-personalization/create-new-tags-property-dialog.png)
 
-- 開啟新屬性，從左側導覽按一下&#x200B;**擴充功能**，然後按一下&#x200B;**目錄**&#x200B;標籤。 搜尋&#x200B;**網頁SDK**&#x200B;並按一下&#x200B;**安裝**按鈕。
+- 開啟新屬性，從左側導覽按一下&#x200B;**擴充功能**，然後按一下&#x200B;**目錄**&#x200B;標籤。 搜尋&#x200B;**網頁SDK**&#x200B;並按一下&#x200B;**安裝**&#x200B;按鈕。
   ![安裝Web SDK擴充功能](../assets/use-cases/known-user-personalization/install-web-sdk-extension.png)
 
 - 在&#x200B;**安裝擴充功能**&#x200B;對話方塊中，選取您先前建立的&#x200B;**資料流**，然後按一下&#x200B;**儲存**。
@@ -384,7 +384,7 @@ Tags屬性是JavaScript程式碼的容器，可從您的網站收集資料並傳
 
 建立下列資料元素來擷取重要頁面的詳細資訊。
 
-- 從左側導覽按一下&#x200B;**資料元素**，然後按一下&#x200B;**建立新資料元素**按鈕。
+- 從左側導覽按一下&#x200B;**資料元素**，然後按一下&#x200B;**建立新資料元素**&#x200B;按鈕。
   ![建立新資料元素](../assets/use-cases/known-user-personalization/create-new-data-element.png)
 
 - 在&#x200B;**建立新資料元素**&#x200B;對話方塊中，輸入下列內容：
@@ -524,7 +524,7 @@ Tags屬性是JavaScript程式碼的容器，可從您的網站收集資料並傳
 
 建立規則以使用其他資料元素填入&#x200B;**XDM-Variable Pageview**&#x200B;資料元素，然後再將其傳送到Experience Platform。 當使用者瀏覽WKND網站時觸發規則。
 
-- 從左側導覽按一下&#x200B;**規則**，然後按一下&#x200B;**建立新規則**按鈕。
+- 從左側導覽按一下&#x200B;**規則**，然後按一下&#x200B;**建立新規則**&#x200B;按鈕。
   ![建立新規則](../assets/use-cases/known-user-personalization/create-new-rule.png)
 
 - 在&#x200B;**建立新規則**&#x200B;對話方塊中，輸入下列內容：
@@ -670,7 +670,7 @@ Tags屬性是JavaScript程式碼的容器，可從您的網站收集資料並傳
 
 程式庫是您建立和部署至網站的所有標籤設定（資料元素、規則、擴充功能）的集合。 它會將所有東西封裝在一起，讓資料收集正常運作。 針對已知使用者個人化，會發佈程式庫，讓資料收集規則在您的網站上生效。
 
-- 從左側導覽按一下&#x200B;**發佈流程**，然後按一下&#x200B;**新增資料庫**按鈕。
+- 從左側導覽按一下&#x200B;**發佈流程**，然後按一下&#x200B;**新增資料庫**&#x200B;按鈕。
   ![新增資料庫](../assets/use-cases/known-user-personalization/add-library.png)
 
 - 在&#x200B;**新增程式庫**&#x200B;對話方塊中，輸入下列內容：
@@ -709,7 +709,7 @@ Adobe Target目的地(V2)可讓您直接在Adobe Target中啟用在Experience Pl
 
   ![Adobe Target目的地](../assets/use-cases/known-user-personalization/adobe-target-destination.png)
 
-- 在&#x200B;**啟用目的地**&#x200B;步驟中，提供目的地的名稱，然後按一下&#x200B;**連線到目的地**按鈕。
+- 在&#x200B;**啟用目的地**&#x200B;步驟中，提供目的地的名稱，然後按一下&#x200B;**連線到目的地**&#x200B;按鈕。
   ![連線到目的地](../assets/use-cases/known-user-personalization/connect-to-destination.png)
 
 - 在&#x200B;**目的地詳細資料**&#x200B;區段中，輸入下列內容：
@@ -1002,7 +1002,7 @@ $ git checkout -b feature/known-user-personalization
 
   ![ECID](../assets/use-cases/known-user-personalization/ecid.png)
 
-- 按一下&#x200B;**檢視**按鈕。
+- 按一下&#x200B;**檢視**&#x200B;按鈕。
   ![設定檔清單](../assets/use-cases/known-user-personalization/profile-list.png)
 
 - 按一下設定檔，您應該會看到設定檔的詳細資料。
@@ -1010,7 +1010,7 @@ $ git checkout -b feature/known-user-personalization
 
   在我的案例中，我透過兩種不同的瀏覽器存取我的WKND網站，因此我有兩個與使用者`teddy`相關聯的ECID。 兩個ECID的資料會彙整在一起，以建立設定檔。 您已開始瞭解身分彙整的強大功能，以及如何使用它來建立完整的客戶個人檔案。 不久，交易式資料就會與行為資料結合，以建立完整的客戶設定檔。
 
-- 按一下&#x200B;**事件**標籤，您應該會看到與設定檔相關的事件。
+- 按一下&#x200B;**事件**&#x200B;標籤，您應該會看到與設定檔相關的事件。
   ![設定檔事件](../assets/use-cases/known-user-personalization/profile-events.png)
 
 ### 擷取異動資料
@@ -1048,10 +1048,10 @@ $ git checkout -b feature/known-user-personalization
 
   ![拼接的設定檔詳細資料](../assets/use-cases/known-user-personalization/stitched-profile-details.png)
 
-- 按一下&#x200B;**屬性**標籤，您應該會看到與設定檔相關的交易和行為資料詳細資料。
+- 按一下&#x200B;**屬性**&#x200B;標籤，您應該會看到與設定檔相關的交易和行為資料詳細資料。
   ![拼接的設定檔屬性](../assets/use-cases/known-user-personalization/stitched-profile-attributes.png)
 
-- 按一下&#x200B;**檢視身分圖表**連結，檢視設定檔的身分圖表。
+- 按一下&#x200B;**檢視身分圖表**&#x200B;連結，檢視設定檔的身分圖表。
   ![身分圖表](../assets/use-cases/known-user-personalization/identity-graph.png)
 
 恭喜！您已拼接行為和交易式資料以建立完整的客戶設定檔。
@@ -1078,7 +1078,7 @@ $ git checkout -b feature/known-user-personalization
 
 若要建立對象，請完成下列步驟：
 
-- 在Adobe Experience Platform中，從左側導覽按一下&#x200B;**對象**，然後按一下&#x200B;**建立對象**&#x200B;按鈕。 然後選取&#x200B;**組建規則**&#x200B;選項，再按一下&#x200B;**建立**按鈕。
+- 在Adobe Experience Platform中，從左側導覽按一下&#x200B;**對象**，然後按一下&#x200B;**建立對象**&#x200B;按鈕。 然後選取&#x200B;**組建規則**&#x200B;選項，再按一下&#x200B;**建立**&#x200B;按鈕。
   ![建立對象](../assets/use-cases/known-user-personalization/create-audience.png)
 
 - 在&#x200B;**建立**&#x200B;步驟中，輸入下列內容：
@@ -1142,7 +1142,7 @@ $ git checkout -b feature/known-user-personalization
 
 Adobe Target中的活動是個人化行銷活動，其定義個人化內容何時及如何傳遞至特定對象。 針對已知使用者個人化，系統會建立活動，向登入且已購買任何滑雪裝備的使用者顯示滑雪裝備向上銷售選件。
 
-- 在Adobe Target中，按一下&#x200B;**活動**，然後按一下&#x200B;**建立活動**&#x200B;按鈕並選取&#x200B;**體驗鎖定目標**活動型別。
+- 在Adobe Target中，按一下&#x200B;**活動**，然後按一下&#x200B;**建立活動**&#x200B;按鈕並選取&#x200B;**體驗鎖定目標**&#x200B;活動型別。
   ![建立活動](../assets/use-cases/known-user-personalization/create-activity.png)
 
 - 在&#x200B;**建立體驗鎖定目標活動**&#x200B;對話方塊中，選取&#x200B;**Web**&#x200B;型別和&#x200B;**Visual**&#x200B;撰寫器選項(可讓您直接在您的網站上建立及測試個人化體驗的WYSIWYG編輯器)，並輸入WKND網站首頁URL。 按一下「**建立**」按鈕以建立活動。
@@ -1153,7 +1153,7 @@ Adobe Target中的活動是個人化行銷活動，其定義個人化內容何�
 
   ![具有對象和選件的活動](../assets/use-cases/known-user-personalization/activity-with-audience-n-offer.png)
 
-- 按一下「下一步」****&#x200B;並使用適當的目標與度量設定&#x200B;**目標與設定**&#x200B;區段，然後啟動它以即時推送變更。
+- 按一下「下一步」**&#x200B;**&#x200B;並使用適當的目標與度量設定&#x200B;**目標與設定**&#x200B;區段，然後啟動它以即時推送變更。
 
   ![使用目標與設定啟動](../assets/use-cases/known-user-personalization/activate-with-goals-and-settings.png)
 
