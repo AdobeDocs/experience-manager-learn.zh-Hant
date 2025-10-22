@@ -1,6 +1,7 @@
 ---
 title: Edge Delivery Services 和通用編輯器開發人員教學課程
 description: 了解使用 AEM 通用編輯器製作、並使用 Edge Delivery Service 傳遞的新網站開發基礎知識。
+short-description: 此開發人員教學課程說明如何建立AEM網站，結合強大的撰寫功能與通用編輯器，以及使用Edge Delivery Services快速傳送。 瞭解如何建立新專案、設定本機開發環境和建立自訂區塊。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -10,10 +11,10 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: f0ad5d66549970337118220156d7a6b0fd30fd57
-workflow-type: ht
-source-wordcount: '620'
-ht-degree: 100%
+source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
+workflow-type: tm+mt
+source-wordcount: '658'
+ht-degree: 94%
 
 ---
 
@@ -100,7 +101,7 @@ ht-degree: 100%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="設定本機開發環境" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443989/?format=jpeg&nocache=1753811862249&captions=chi_hant" alt="設定本機開發環境"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="設定本機開發環境"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

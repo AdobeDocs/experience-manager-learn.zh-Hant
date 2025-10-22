@@ -1,6 +1,7 @@
 ---
 title: AEM Headless OpenAPI教學課程 | 內容片段傳送
 description: 端對端教學課程，說明如何使用AEM的OpenAPI型內容片段傳送API來建立和公開內容。
+short-description: 此教學課程說明如何使用OpenAPI內容片段傳送來建置和公開AEM內容，以及在Headless CMS案例的外部應用程式中使用這些內容。
 doc-type: Tutorial
 mini-toc-levels: 1
 jira: KT-6678
@@ -11,10 +12,11 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 duration: 54
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+exl-id: 1bb7c415-58f8-4f6c-a0bc-38bdbdb521cf
+source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 22%
+source-wordcount: '393'
+ht-degree: 20%
 
 ---
 
