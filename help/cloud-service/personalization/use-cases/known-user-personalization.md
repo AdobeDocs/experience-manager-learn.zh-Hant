@@ -78,7 +78,7 @@ ht-degree: 1%
 - [整合Adobe Target](../setup/integrate-adobe-target.md)：可讓團隊在AEM中集中建立和管理個人化內容，並在Adobe Target中將其啟用為優惠方案。
 - [在Adobe Experience Platform中整合標籤](../setup/integrate-adobe-tags.md)：可讓團隊管理和部署JavaScript以進行個人化和資料收集，而無需重新部署AEM程式碼。
 
-也熟悉[Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/en/docs/id-service/using/home)和[Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home)概念，例如結構描述、資料集、資料流、對象、身分和設定檔。
+也熟悉[Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/home)和[Adobe Experience Platform](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/home)概念，例如結構描述、資料集、資料流、對象、身分和設定檔。
 
 在本教學課程中，您將瞭解身分拼接和在Adobe Experience Platform中建立客戶設定檔。 因此，將行為資料與交易式資料結合，可建立完整的客戶設定檔。
 
@@ -1186,9 +1186,9 @@ Adobe Target中的活動是個人化行銷活動，其定義個人化內容何�
 
 ## 其他資源
 
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
-- [資料串流總覽](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
-- [視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
-- [Edge區段](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation)
-- [對象型別](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview)
-- [Adobe Target連線](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/home)
+- [資料串流總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/datastreams/overview)
+- [視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/visual-experience-composer)
+- [Edge區段](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/methods/edge-segmentation)
+- [對象型別](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/types/overview)
+- [Adobe Target連線](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
