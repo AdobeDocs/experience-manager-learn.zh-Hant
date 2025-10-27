@@ -33,7 +33,7 @@ ht-degree: 1%
 
 ## 範例使用案例
 
->[!VIDEO](https://video.tv.adobe.com/v/3476105/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476120/?captions=chi_hant&learn=on&enablevpops)
 
 在本教學課程中，使用[範例WKND網站](https://github.com/adobe/aem-guides-wknd)，程式示範了已購買任何&#x200B;**Ski**&#x200B;冒險的&#x200B;**登入使用者**&#x200B;如何在&#x200B;**WKND首頁**&#x200B;看到個人化主圖。
 
