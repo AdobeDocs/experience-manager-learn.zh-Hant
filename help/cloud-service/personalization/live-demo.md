@@ -26,7 +26,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > 在多個瀏覽器視窗或無痕瀏覽/私人瀏覽模式中開啟示範網站，同時體驗不同的個人化變數。
-> > 使用私人瀏覽模式時，Firefox和Safari可能會封鎖ECID Cookie，或者使用一般瀏覽模式或在嘗試新的個人化案例之前清除Cookie。
+> &#x200B;> 使用私人瀏覽模式時，Firefox和Safari可能會封鎖ECID Cookie，或者使用一般瀏覽模式或在嘗試新的個人化案例之前清除Cookie。
 
 ## 示範使用案例
 
