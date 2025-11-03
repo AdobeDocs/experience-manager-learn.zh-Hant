@@ -11,7 +11,7 @@ last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18717
 thumbnail: null
 exl-id: c4fb11b9-b613-4522-b9da-18d7ae0826ec
-source-git-commit: 055dc7d666d082244d73d3494bac54d7eb4bb886
+source-git-commit: 4d345ba7b10ea21d7bc7eee89157de782e1c4350
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 8%
@@ -38,7 +38,7 @@ ht-degree: 8%
 
 ## Personalization使用案例的即時示範
 
-在[WKND啟用網站](https://wknd.enablementadobe.com/us/en.html){target="_blank"}上執行中的體驗個人化。 示範網站示範三種型別的個人化：A/B測試、行為鎖定和已知使用者個人化。
+在[WKND啟用網站](https://wknd.enablementadobe.com/us/en.html){target="wknd"}上執行中的體驗個人化。 示範網站示範三種型別的個人化：A/B測試、行為鎖定和已知使用者個人化。
 
 >[!TIP]
 >
