@@ -10,18 +10,18 @@ doc-type: Tutorial
 last-substantial-update: 2025-11-03T00:00:00Z
 jira: KT-19546
 thumbnail: KT-19546.jpeg
-source-git-commit: 9e99936fb03e085f6bc276c7d6ef5cc08e34d1e5
+source-git-commit: ed7af09d747d54a84d2583073d3c731388b5f516
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 1%
 
 ---
 
-# Personalization使用案例的即時示範
+# 個人化使用案例的即時示範
 
 請造訪[WKND啟用網站](https://wknd.enablementadobe.com/us/en.html){target="wknd"}，以檢視A/B測試、行為目標定位和已知使用者個人化的真實範例。
 
->[!VIDEO](https://video.tv.adobe.com/v/3476472/?captions=chi_hant&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476461/?learn=on&enablevpops)
 
 此頁面會引導您逐步示範每個個人化案例。 在您自己的AEM網站上建置這些功能之前，請先使用它來探索可行的方案。
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 | **已知使用者Personalization** | 根據從多個系統上的資料建置的完整客戶設定檔，量身打造體驗。 通常稱為&#x200B;_大規模個人化_ | 即時 |
 | **A/B 測試** | 測試不同的內容變數以找出績效最佳者。 通常稱為&#x200B;_實驗_ | 即時 |
 
-## 行為定向
+## 行為目標定位
 
 內容會在訪客瀏覽工作階段期間，根據訪客的動作和興趣自動調整。 這通常稱為&#x200B;_下一頁或相同頁面個人化_。
 
@@ -55,7 +55,7 @@ ht-degree: 1%
 | [冒險](https://wknd.enablementadobe.com/us/en/adventures.html){target="wknd"} | 以露營為主題的&#x200B;**裝備系列英雄**&#x200B;展示重要的露營裝置（睡袋、夾克、靴子），並附上「以合適的裝備開始您的下一次冒險」訊息 | 造訪任何與露營相關的冒險活動（例如，[Yosemite Backpacking](https://wknd.enablementadobe.com/us/en/adventures/yosemite-backpacking.html){target="wknd"}），然後導覽至「冒險活動」頁面 | ![冒險活動 — Camp Gear Collection Hero](./assets/live-demo/behavioral-adventures-camp-hero.png){width="200" zoomable="yes"} |
 | [雜誌](https://wknd.enablementadobe.com/us/en/magazine.html){target="wknd"} | 時間敏感的&#x200B;**雜誌促銷活動**，包含具有顯著「SALE！」的捲動WKND雜誌 徽章和特殊閱讀器價格（適用於問題和戶外系列） | 閱讀一或多個雜誌文章（例如，[滑雪旅行](https://wknd.enablementadobe.com/us/en/magazine/ski-touring.html){target="wknd"}），然後導覽至Magazine登陸頁面 | ![雜誌 — 銷售英雄](./assets/live-demo/behavioral-magazine-sale-hero.png){width="200" zoomable="yes"} |
 
-### Adventures and Magazine頁面（批次）
+### Adventures和Magazine頁面（批次）
 
 這些體驗是根據歷史行為，並會在您下次造訪時或當天稍後出現（批次個人化）。 資料會經過彙總並處理進入設定檔屬性，然後啟動至Adobe Experience Platform Edge Network。
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 **深入瞭解：**&#x200B;準備好在您自己的AEM網站上實作行為鎖定目標了嗎？ 從[行為目標定位教學課程](./use-cases/behavioral-targeting.md)開始，瞭解完整的設定程式。
 
-## 已知使用者Personalization
+## 已知使用者個人化
 
 根據跨多個系統（包括購買歷史記錄和客戶生命週期階段）的資料建置的完整客戶設定檔提供個人化體驗。 Adobe Experience Platform Edge Network是用來進行即時個人化決策。
 
@@ -76,7 +76,7 @@ WKND首頁主圖橫幅會根據已驗證的使用者設定檔進行個人化。 
 
 | 頁面 | 您將會看到的內容 | 如何測試 | 設定檔內容 | 體驗 |
 |------|-----------------|-------------|-----------------|------------|
-| [首頁](https://wknd.enablementadobe.com/us/en.html){target="wknd"} | 滑雪用品店內展示了&#x200B;**頂級滑雪裝備，並提供「額外25%優惠」**&#x200B;促銷活動，提供專家打包秘訣，為即將到來的滑雪探險做好準備 | 使用`teddy/teddy`或`asmith/asmith`登入並重新整理頁面 | 最近購買的滑雪冒險，因此追加銷售滑雪裝備 | ![住家 — 滑雪裝備向上銷售](./assets/live-demo/known-user-ski-gear-hero.png){width="200" zoomable="yes"} |
+| [首頁](https://wknd.enablementadobe.com/us/en.html){target="wknd"} | 滑雪用品店內展示了&#x200B;**頂級滑雪裝備，並提供「額外25%優惠」**&#x200B;促銷活動，提供專家打包秘訣，為即將到來的滑雪探險做好準備 | 使用`rwilson/rwilson`登入並重新整理頁面 | 最近購買的滑雪冒險，因此追加銷售滑雪裝備 | ![住家 — 滑雪裝備向上銷售](./assets/live-demo/known-user-ski-gear-hero.png){width="200" zoomable="yes"} |
 
 **深入瞭解：**&#x200B;準備好在您自己的AEM網站上實作已知使用者個人化了嗎？ 從[已知使用者Personalization教學課程](./use-cases/known-user-personalization.md)開始，瞭解完整的設定程式。
 
