@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 4d17b28ed67d7e5b03caa5fb57701ab7ddbcb77f
-workflow-type: ht
-source-wordcount: '464'
-ht-degree: 100%
+source-git-commit: bf996405c360c77475d9f76d5de9bcd4fde3c163
+workflow-type: tm+mt
+source-wordcount: '467'
+ht-degree: 99%
 
 ---
 
@@ -69,6 +69,7 @@ ht-degree: 100%
    + [中繼資料驅動的權限](./advanced/metadata-driven-permissions.md)
    + [影片隱藏字幕](./advanced/video-closed-captions.md)
    + [浮水印](./advanced/watermarks.md)
+   + [程式化資產上傳](./advanced/programmatic-asset-upload.md)
 
 + 進階中繼資料管理{#metadata}
    + [生成式 AI 中繼資料](metadata/genai-metadata.md)
@@ -146,7 +147,7 @@ ht-degree: 100%
       + [影像自動化](dynamic-media/dynamic-media-image-automation.md)
       + [Dynamic Media 範本](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media 快照](dynamic-media/dynamic-media-snapshot.md)
-      + [智慧型裁切](dynamic-media/smart-crop-feature-video-use.md)
+      + [智慧裁切](dynamic-media/smart-crop-feature-video-use.md)
       + [影像銳化](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [顏色管理](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + 影片 {#video}
@@ -205,4 +206,4 @@ ht-degree: 100%
 + 部署{#deployment}
    + [多重租戶和同時開發](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hant){target=_blank}
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}
