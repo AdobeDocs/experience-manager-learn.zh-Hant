@@ -50,7 +50,7 @@ _直接二進位上傳_&#x200B;方法可讓您使用&#x200B;_預先簽署的URL_
 
 >[!CAUTION]
 >
->在Java中沒有等同於[aem-upload](https://github.com/adobe/aem-upload)的資料庫。 使用者端應用程式必須以Node.js撰寫，才能使用&#x200B;_直接二進位上傳_&#x200B;方法。 如需詳細資訊，請參閱[Experience Manager Assets API與作業](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis)頁面。
+>在Java中沒有等同於[aem-upload](https://github.com/adobe/aem-upload)的資料庫。 使用者端應用程式必須以Node.js撰寫，才能使用&#x200B;_直接二進位上傳_&#x200B;方法。 如需詳細資訊，請參閱[Experience Manager Assets API與作業](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis)頁面。
 
 ## 範例應用程式
 
@@ -97,7 +97,7 @@ _直接二進位上傳_&#x200B;方法可讓您使用&#x200B;_預先簽署的URL_
 
 _aem-upload_ Node.js程式庫支援[多種驗證方法](https://github.com/adobe/aem-upload)。 下表摘要列出支援的&#x200B;_驗證方法_&#x200B;及其用途。
 
-| | 基本驗證 | [本機開發權杖](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [服務認證](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth網頁應用程式](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
+| | 基本驗證 | [本機開發權杖](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [服務認證](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth網頁應用程式](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
 |---|---|---|---|---|---|---|
 | 是否支援？ | &amp;amp；檢查； | &amp;amp；檢查； | &amp;amp；檢查； | &amp;amp；交叉； | &amp;amp；交叉； | &amp;amp；交叉； |
 | 用途 | 本機開發 | 本機開發 | 生產 | N/A | N/A | N/A |
@@ -176,7 +176,7 @@ _aem-upload_ Node.js程式庫支援[多種驗證方法](https://github.com/adobe
 
 1. 使用service-credentials.json檔案的路徑更新`AEM_SERVICE_CREDENTIALS_FILE`環境變數。
 
-1. 請確定服務認證使用者具有將資產上傳到AEM as a Cloud Service環境的必要許可權。 如需詳細資訊，請參閱[在AEM中設定存取權](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem)頁面。
+1. 請確定服務認證使用者具有將資產上傳到AEM as a Cloud Service環境的必要許可權。 如需詳細資訊，請參閱[在AEM中設定存取權](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem)頁面。
 
 >[!ENDTABS]
 
