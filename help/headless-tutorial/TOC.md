@@ -9,7 +9,7 @@ version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
 index: y
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 100%
 
@@ -28,7 +28,7 @@ ht-degree: 100%
       + [4 - 建置 React 應用程式](./open-api/basic/4-react-app.md)
       + [5 - 通用編輯器整合](./open-api/basic/5-universal-editor.md)
 + GraphQL {#graphql}
-   + [AEM Headless 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant){target=_blank}
+   + [AEM Headless 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
    + [概觀](./graphql/overview.md)
    + 快速設定 {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)

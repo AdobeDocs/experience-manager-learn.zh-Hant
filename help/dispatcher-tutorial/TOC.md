@@ -7,14 +7,14 @@ jira: KT-2233
 index: y
 team: TM
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 100%
 
 ---
 
 
-# AEM Dispatcher Cache 教學課程{#dispatcher-tutorial}
+# AEM Dispatcher 快取教學課程{#dispatcher-tutorial}
 
 + [概觀](overview.md)
 + [1 - 概念、模式與反模式](chapter-1.md)
