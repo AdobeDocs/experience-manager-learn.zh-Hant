@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解全新編輯器切換如何讓您輕鬆地在預設的新內容片段編輯器和傳統編輯器之間切換。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419312/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477327/?captions=chi_hant&learn=on)

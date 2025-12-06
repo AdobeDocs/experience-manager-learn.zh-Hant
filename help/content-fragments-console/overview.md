@@ -71,7 +71,7 @@ Adobe Experience Manager 的內容片段主控台讓內容片段的管理與製�
             <a href="./basics/content-fragment-editor.md" title="編輯器概觀"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3424373?format=jpeg"
+                src="https://video.tv.adobe.com/v/3477338?captions=chi_hant&format=jpeg"
                 alt="編輯器概觀">
             </a>
           </figure>
@@ -138,7 +138,7 @@ Adobe Experience Manager 的內容片段主控台讓內容片段的管理與製�
             <a href="./editor/new-editor-toggle.md" title="新編輯器切換"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="新
+                src="https://video.tv.adobe.com/v/3477327?captions=chi_hant&format=jpeg" alt="新
                 編輯器切換">
             </a>
           </figure>

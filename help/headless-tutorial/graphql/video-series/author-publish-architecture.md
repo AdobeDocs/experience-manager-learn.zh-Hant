@@ -27,4 +27,4 @@ ht-degree: 0%
 + 瞭解AEM製作和發佈架構，以及如何發佈內容
 + 瞭解搭配AEM發佈環境進行Headless傳送的最佳實務
 
->[!VIDEO](https://video.tv.adobe.com/v/333296?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450960?captions=chi_hant&quality=12&learn=on)

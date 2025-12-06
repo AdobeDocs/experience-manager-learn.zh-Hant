@@ -41,7 +41,7 @@ AEM Sites的頁面差異功能顯示以顏色快速檢視頁面中的變更內�
 
 ## 比較啟動頁面 {#comparing-launch-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/17746?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477349?captions=chi_hant&quality=12&learn=on)
 
 「頁面差異」功能也可用來識別Blueprint和即時副本、Blueprint和語言副本之間的差異。
 
