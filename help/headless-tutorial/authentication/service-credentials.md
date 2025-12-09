@@ -12,9 +12,9 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: dc29a4b7857ee8d1405c9ef8d14f09374c2bfd01
 workflow-type: tm+mt
-source-wordcount: '1963'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 與Adobe Experience Manager (AEM) as a Cloud Service的整合必須能夠安全地向AEM服務進行驗證。 AEM的Developer Console會授予服務憑證的存取權，這些憑證可用來促進外部應用程式、系統和服務以程式設計方式透過HTTP與AEM作者或發佈服務互動。
 
-AEM與使用[S2S OAuth (透過Adobe Developer Console](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)管理)的其他Adobe產品整合。 對於與服務帳戶的自訂整合，需在AEM Developer Console中使用和管理JWT憑證。
+AEM與使用[S2S OAuth (透過Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)管理)的其他Adobe產品整合。 對於與服務帳戶的自訂整合，需在AEM Developer Console中使用和管理JWT憑證。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
@@ -124,7 +124,7 @@ AEM與使用[S2S OAuth (透過Adobe Developer Console](https://experienceleague.
 
 + 當存在服務憑證時，外部應用程式在存取AEM as a Cloud Service時會使用此存取權杖，而不是本機開發存取權杖
 
-在本教學課程中，Adobe的`@adobe/jwt-auth` npm模組是用來在單一函式呼叫中，(1)從服務憑證產生JWT，以及(2)交換它以取得存取權杖。 如果您的應用程式不是以JavaScript為基礎，請檢閱其他語言的[範常式式碼](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)，瞭解如何從服務憑證建立JWT，並與Adobe IMS交換存取權杖。
+在本教學課程中，Adobe的`@adobe/jwt-auth` npm模組是用來在單一函式呼叫中，(1)從服務憑證產生JWT，以及(2)交換它以取得存取權杖。 如果您的應用程式並非以JavaScript為基礎，您可以開發採用您所選語言的自訂程式碼，該程式碼會從服務憑證建立JWT，並與Adobe IMS交換存取權杖。
 
 ## 讀取服務認證
 
@@ -219,12 +219,12 @@ function getCommandLineParams() {
 
 一旦技術帳戶AEM使用者存在於AEM中（具有存取權杖的第一個HTTP請求之後），就可以像管理其他AEM使用者一樣管理此AEM使用者的許可權。
 
-1. 首先，開啟從AEM Developer Console下載的服務認證JSON以找出技術帳戶的AEM登入名稱，然後找出應類似於`12345678-abcd-9000-efgh-0987654321c@techacct.adobe.com`的`integration.email`值。
+1. 首先，開啟從AEM Developer Console下載的服務認證JSON以找出技術帳戶的AEM登入名稱，然後找出應類似於`integration.email`的`12345678-abcd-9000-efgh-0987654321c@techacct.adobe.com`值。
 1. 以AEM管理員身分登入對應AEM環境的作者服務
 1. 瀏覽至&#x200B;__工具__ > __安全性__ > __使用者__
 1. 找到在步驟1中識別具有&#x200B;__登入名稱__&#x200B;的AEM使用者，並開啟其&#x200B;__屬性__
 1. 導覽至「__群組__」標籤，然後新增&#x200B;__DAM使用者__&#x200B;群組（他們可做為資產的寫入存取權）
-   + [檢視AEM提供的使用者群組清單](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hant#built-in-users-and-groups)，以將服務使用者新增至以獲得最佳許可權。 如果AEM提供的使用者群組都不夠用，請建立您自己的使用者群組，並新增適當的許可權。
+   + [檢視AEM提供的使用者群組清單](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups)，以將服務使用者新增至以獲得最佳許可權。 如果AEM提供的使用者群組都不夠用，請建立您自己的使用者群組，並新增適當的許可權。
 1. 點選&#x200B;__儲存並關閉__
 
 在AEM允許技術帳戶擁有資產的寫入許可權的情況下，請重新執行應用程式：
