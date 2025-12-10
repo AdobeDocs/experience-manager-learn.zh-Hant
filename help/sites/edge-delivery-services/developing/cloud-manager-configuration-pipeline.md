@@ -24,4 +24,4 @@ ht-degree: 1%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3458975/?learn=on&enablevpops)
 
-如需設定選項和格式的完整總覽，請參閱[Edge Delivery設定管道檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#yamls-for-eds)。
+如需設定選項和格式的完整總覽，請參閱[Edge Delivery設定管道檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/operations/config-pipeline#yamls-for-eds)。
