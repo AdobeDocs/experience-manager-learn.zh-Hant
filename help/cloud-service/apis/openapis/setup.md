@@ -210,11 +210,11 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
 1. 提交設定變更並將變更推送到Cloud Manager管道所連線的遠端Git存放庫。
 
-1. 在Cloud Manager中使用[設定管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)部署上述變更。
+1. 在Cloud Manager中使用[設定管道](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)部署上述變更。
 
    ![部署YAML](./assets/setup/config-pipeline.png)
 
-請注意，`api.yaml`檔案也可以使用命令列工具[安裝在](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[、](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)中。 在將設定變更部署到生產環境之前，這非常有用。
+請注意，`api.yaml`檔案也可以使用命令列工具[安裝在](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[、](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)中。 在將設定變更部署到生產環境之前，這非常有用。
 
 ## 後續步驟
 
