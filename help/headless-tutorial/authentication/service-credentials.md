@@ -191,7 +191,7 @@ function getCommandLineParams() {
 
    現在，視透過該`file`命令列引數傳入的JSON檔案（本機開發存取權杖JSON或服務認證JSON）而定，應用程式將會衍生存取權杖。
 
-   請記住，雖然服務憑證每365天過期一次，但JWT和對應的存取權杖會頻繁過期，而且需要在過期前重新整理。 使用Adobe IMS`refresh_token`提供的[ ](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)即可完成這項作業。
+   請記住，雖然服務憑證每365天過期一次，但JWT和對應的存取權杖會頻繁過期，而且需要在過期前重新整理。 使用Adobe IMS`refresh_token`提供的[&#x200B; &#x200B;](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens)即可完成這項作業。
 
 1. 完成這些變更後，服務認證JSON已從AEM Developer Console下載，為簡化起見，將儲存為`service_token.json`，並儲存於與此`index.js`相同的資料夾中。 現在，讓我們執行應用程式，將命令列引數`file`取代為`service_token.json`，並將`propertyValue`更新為新值，以便在AEM中顯示效果。
 

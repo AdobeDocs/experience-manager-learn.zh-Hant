@@ -55,7 +55,7 @@ ht-degree: 1%
 5. 在&#x200B;**選取產品設定檔**&#x200B;步驟中，選取&#x200B;**預設Workspace**，然後按一下&#x200B;**儲存已設定的API**。\
    ![選取產品設定檔](../assets/setup/adc-select-product-profiles.png)
 
-6. 在左側導覽中，選取&#x200B;**OAuth伺服器對伺服器**並檢閱組態詳細資料。 請注意使用者端ID和使用者端密碼 — 您需要這些值才能在AEM中設定IMS整合。
+6. 在左側導覽中，選取&#x200B;**OAuth伺服器對伺服器**&#x200B;並檢閱組態詳細資料。 請注意使用者端ID和使用者端密碼 — 您需要這些值才能在AEM中設定IMS整合。
    ![OAuth伺服器對伺服器詳細資料](../assets/setup/adc-oauth-server-to-server.png)
 
 ## 在AEM中為Target建立Adobe IMS設定
@@ -132,7 +132,7 @@ ht-degree: 1%
 
 若要確認整合可正確運作，請測試匯出功能：
 
-1. 在AEM中，建立新的體驗片段或開啟現有的體驗片段。 按一下工具列中的「匯出至Adobe Target」****。\
+1. 在AEM中，建立新的體驗片段或開啟現有的體驗片段。 按一下工具列中的「匯出至Adobe Target」**&#x200B;**。\
    ![將體驗片段匯出至Adobe Target](../assets/setup/aem-export-experience-fragment-to-adobe-target.png)
 
 2. 在Adobe Target中，前往&#x200B;**選件**&#x200B;區段，並確認體驗片段顯示為選件。\

@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## OSGi設定
 
-此OSGi設定範例透過`portForwards`enableEnvironmentAdvancedNetworkingConfiguration[作業的下列Cloud Manager ](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)規則，將AEM的Mail OSGi Service設定為使用外部郵件服務。
+此OSGi設定範例透過`portForwards`enableEnvironmentAdvancedNetworkingConfiguration[作業的下列Cloud Manager &#x200B;](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)規則，將AEM的Mail OSGi Service設定為使用外部郵件服務。
 
 ```json
 ...

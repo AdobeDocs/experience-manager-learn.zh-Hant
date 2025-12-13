@@ -87,8 +87,8 @@ AEM SDK會在[http://localhost:4502](http://localhost:4502)上啟動並自動啟
 
 為了執行快速設定，我們在此提供AEM套件，其中包含教學課程的最終AEM設定和內容。
 
-1. [下載 ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [下載 ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
+1. [下載 &#x200B;](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [下載 &#x200B;](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
 1. 使用[認證登入:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin`的AEM SDK封裝管理員。
 1. __上傳__&#x200B;在步驟1中下載的`wknd-app.all.x.x.x.zip`
 1. 點選專案&#x200B;__的__&#x200B;安裝`wknd-app.all.x.x.x.zip`按鈕

@@ -87,7 +87,7 @@ ht-degree: 9%
    ![新增資料夾](./assets/1/create-folder.png)
 
 1. 建立資料夾後，請選取資料夾並開啟其&#x200B;__屬性__。
-1. 在資料夾的&#x200B;__雲端設定__&#x200B;索引標籤中，選取先前建立的設定[](#enable-content-fragments-and-graphql)。
+1. 在資料夾的&#x200B;__雲端設定__&#x200B;索引標籤中，選取先前建立的設定[&#128279;](#enable-content-fragments-and-graphql)。
 
    ![資產資料夾AEM Headless雲端設定](./assets/1/cloud-config.png)
 

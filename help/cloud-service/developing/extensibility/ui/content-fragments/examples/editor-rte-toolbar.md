@@ -37,7 +37,7 @@ ht-degree: 0%
 
 | AEM UI已擴充 | 擴充點 |
 | ------------------------ | --------------------- |
-| [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [ RTF編輯器工具列](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
+| [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [&#x200B; RTF編輯器工具列](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
 
 ## 範例擴充功能
 

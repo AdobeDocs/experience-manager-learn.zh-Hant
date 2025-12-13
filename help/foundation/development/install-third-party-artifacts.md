@@ -77,7 +77,7 @@ ht-degree: 0%
 
 ## 在AEM專案中安裝協力廠商套件組合{#install-third-party-bundle}
 
-讓我們安裝並使用公開Maven存放庫[中不適用於AEM WKND專案的示範OSGi ](./assets/install-third-party-articafcts/my-example-bundle.zip)my-example-bundle _。_
+讓我們安裝並使用公開Maven存放庫[中不適用於AEM WKND專案的示範OSGi &#x200B;](./assets/install-third-party-articafcts/my-example-bundle.zip)my-example-bundle _。_
 
 **my-example-bundle**&#x200B;匯出`HelloWorldService`個OSGi服務，其`sayHello()`方法傳回`Hello Earth!`則訊息。
 

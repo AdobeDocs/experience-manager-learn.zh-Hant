@@ -54,7 +54,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 
 ## 程式碼範例
 
-此Java™程式碼範例屬於透過下列`portForwards`enableEnvironmentAdvancedNetworkingConfiguration[作業的Cloud Manager ](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)規則，連線至外部SQL Server Web伺服器的OSGi服務。
+此Java™程式碼範例屬於透過下列`portForwards`enableEnvironmentAdvancedNetworkingConfiguration[作業的Cloud Manager &#x200B;](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)規則，連線至外部SQL Server Web伺服器的OSGi服務。
 
 ```json
 ...

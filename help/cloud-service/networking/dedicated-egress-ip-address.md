@@ -113,7 +113,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
    等待15分鐘，讓Cloud Manager程式布建網路基礎結構。
 
-3. 檢查程式是否已使用Cloud Manager API __getNetworkInfrastructure__&#x200B;作業，使用先前步驟中從[ HTTP要求傳回的](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure)，完成`id`專用輸出IP位址`createNetworkInfrastructure`設定。
+3. 檢查程式是否已使用Cloud Manager API __getNetworkInfrastructure__&#x200B;作業，使用先前步驟中從[&#x200B; HTTP要求傳回的](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure)，完成`id`專用輸出IP位址`createNetworkInfrastructure`設定。
 
    __getNetworkInfrastructure HTTP要求__
 

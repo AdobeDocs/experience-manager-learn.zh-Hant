@@ -140,7 +140,7 @@ RewriteRule ^(.*)$ ${<MAPALIAS>:$1|/} [L,R=301]
 
 >[!BEGINTABS]
 
->DAM中的[!TAB 文字檔]
+>[!TAB DAM中的 文字檔]
 
 當URL重新導向以文字檔案中的機碼值組形式管理，並上傳至DAM時，設定如下。
 
