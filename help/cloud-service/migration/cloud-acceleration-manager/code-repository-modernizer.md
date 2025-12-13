@@ -21,4 +21,4 @@ ht-degree: 13%
 
 瞭解核心Repository Modernizer如何自動地將現有AEM Maven專案更新成相容於AEM as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336694?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444675?captions=chi_hant&quality=12&learn=on)

@@ -21,4 +21,4 @@ ht-degree: 12%
 
 瞭解AEM的程式碼重構工具如何協助將現有AEM專案自動轉換為相容於AEM as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336693?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444726?captions=chi_hant&quality=12&learn=on)

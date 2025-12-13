@@ -24,4 +24,4 @@ ht-degree: 13%
 
 瞭解如何自訂AEM Importer，以在網站移轉至使用Edge Delivery Services進行檔案編寫期間，最大化效率和準確性。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429596/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444256/?captions=chi_hant&learn=on)

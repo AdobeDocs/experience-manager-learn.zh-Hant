@@ -27,7 +27,7 @@ ht-degree: 4%
 >
 >此影片示範如何在網站地圖中使用相對URL。 Sitemap [應使用絕對URL](https://sitemaps.org/protocol.html)。 請參閱[組態](#absolute-sitemap-urls)以瞭解如何啟用絕對URL，因為下列影片並未說明此問題。
 
->[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454372?captions=chi_hant&quality=12&learn=on)
 
 ## 設定
 

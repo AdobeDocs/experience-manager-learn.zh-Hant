@@ -21,4 +21,4 @@ ht-degree: 16%
 
 瞭解資產工作流程移轉工具如何協助您將現有AEM Assets工作流程移轉至AEM as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336697?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438983?captions=chi_hant&quality=12&learn=on)

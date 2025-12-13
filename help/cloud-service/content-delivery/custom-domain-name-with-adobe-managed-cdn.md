@@ -46,7 +46,7 @@ ht-degree: 1%
 
 ## 產生SSL憑證
 
->[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441505?captions=chi_hant&quality=12&learn=on)
 
 您有兩個選項：
 

@@ -24,4 +24,4 @@ ht-degree: 0%
 
 瞭解如何使用及設定AEM Importer工具，將檔案編寫的網站移轉至Edge Delivery Services。
 
->[!VIDEO](https://video.tv.adobe.com/v/3429595/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443707/?captions=chi_hant&learn=on)

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 觀看Experience Catalyst如何善用人工智慧輕鬆地將WordPress網站移轉至AEM雲端服務。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459228/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461987/?captions=chi_hant&learn=on&enablevpops)

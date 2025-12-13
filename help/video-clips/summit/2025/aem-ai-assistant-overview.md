@@ -25,4 +25,4 @@ ht-degree: 0%
 
 瞭解AEM AI Assistant如何簡化尋找產品知識的流程，並自動化支援票證的建立。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459225/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461932/?captions=chi_hant&learn=on&enablevpops)

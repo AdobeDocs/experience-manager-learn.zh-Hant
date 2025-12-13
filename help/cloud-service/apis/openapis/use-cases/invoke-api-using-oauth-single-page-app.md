@@ -59,7 +59,7 @@ Adobe Developer Console (ADC)專案已設定為啟用OAuth單頁應用程式驗�
 >ADC專案未提供&#x200B;_client_secret_。 相反地，SPA會產生&#x200B;_code_verifier_&#x200B;和&#x200B;_code_challenge_，以安全地交換&#x200B;_存取權杖_&#x200B;的授權代碼。 如此一來，使用者端便無需儲存使用者端密碼，進而提升安全性。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3456975?captions=chi_hant&quality=12&learn=on)
 
 
 

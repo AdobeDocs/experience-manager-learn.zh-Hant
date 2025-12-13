@@ -21,7 +21,7 @@ ht-degree: 1%
 
 請造訪[WKND啟用網站](https://wknd.enablementadobe.com/us/en.html){target="wknd"}，以檢視A/B測試、行為目標定位和已知使用者個人化的真實範例。
 
->[!VIDEO](https://video.tv.adobe.com/v/3476461/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476472/?captions=chi_hant&learn=on&enablevpops)
 
 此頁面會引導您逐步示範每個個人化案例。 在您自己的AEM網站上建置這些功能之前，請先使用它來探索可行的方案。
 

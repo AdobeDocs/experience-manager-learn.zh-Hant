@@ -23,7 +23,7 @@ ht-degree: 0%
 
 瞭解如何在AEM內容片段編輯器中將Widget新增至RTF編輯器(RTE)。
 
->[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447443?captions=chi_hant&quality=12&learn=on)
 
 若要在RTF編輯器(RTE)中新增動態內容，可以使用&#x200B;**Widget**&#x200B;功能。 Widget可協助您在RTE中整合簡單或複雜的UI，您也可以使用所選JS架構來建立UI。 它們可視為在RTE中按下`{`特殊鍵所開啟的對話方塊。
 

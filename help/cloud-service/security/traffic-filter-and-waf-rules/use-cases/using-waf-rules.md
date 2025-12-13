@@ -30,7 +30,7 @@ ht-degree: 100%
 > WAF 流量篩選器規則需要額外的 **WAF-DDoS 防護**&#x200B;或&#x200B;**增強安全性**&#x200B;授權。在預設情況下，標準流量篩選器規則可供 Sites 和 Forms 客戶使用。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469441/?captions=chi_hant&quality=12&learn=on)
 
 ## 學習目標
 

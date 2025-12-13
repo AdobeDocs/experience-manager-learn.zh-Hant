@@ -23,7 +23,7 @@ ht-degree: 100%
 
 了解如何從 AEM 對需要雙向傳輸層安全性 (mTLS) 驗證的 Web API 進行 HTTPS 呼叫。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447870?captions=chi_hant&quality=12&learn=on)
 
 mTLS 或雙向 TLS 驗證會要求&#x200B;**用戶端和伺服器兩者進行雙向驗證**，藉以增強 TLS 通訊協定的安全性。這項驗證使用數位憑證來執行驗證。在強大安全性和身分驗證極為重要的情境中經常使用這項驗證。
 

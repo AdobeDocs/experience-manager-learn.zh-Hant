@@ -21,4 +21,4 @@ ht-degree: 9%
 
 瞭解索引轉換工具如何自動地將現有AEM索引定義轉換成相容於AEM as a Cloud Service。
 
->[!VIDEO](https://video.tv.adobe.com/v/336696?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443784?captions=chi_hant&quality=12&learn=on)

@@ -26,7 +26,7 @@ ht-degree: 2%
 
 體驗片段可讓內容作者重複使用跨通路的內容，包括Sites頁面和協力廠商系統。
 
->[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445618?captions=chi_hant&quality=12&learn=on)
 
 體驗片段是一組群組的元件，組合後會建立體驗。 例如，*Title*、*Image*、*Description*&#x200B;和&#x200B;*Call to action Button*&#x200B;可以合併為一個Teaser體驗。
 

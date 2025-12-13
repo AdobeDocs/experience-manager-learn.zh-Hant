@@ -22,7 +22,7 @@ ht-degree: 1%
 
 瞭解如何在AEM內容片段編輯器中建立自訂欄位。
 
->[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437645?captions=chi_hant&learn=on)
 
 AEM UI擴充功能應使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)架構進行開發，因為這樣可與AEM其他部分維持一致的外觀與風格，並且擁有預先建立的廣泛功能庫，可減少開發時間。
 

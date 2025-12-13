@@ -23,7 +23,7 @@ ht-degree: 0%
 
 AEM Headless應用程式支援整合式撰寫預覽。 預覽體驗會連結AEM作者的內容片段編輯器與您的自訂應用程式（可透過HTTP定址），允許應用程式的深層連結，以產生正在預覽的內容片段。
 
->[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449599?captions=chi_hant&quality=12&learn=on)
 
 若要使用內容片段預覽，必須符合數個條件：
 

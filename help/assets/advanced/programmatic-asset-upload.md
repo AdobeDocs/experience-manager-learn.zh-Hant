@@ -23,7 +23,7 @@ ht-degree: 1%
 瞭解如何使用使用[aem-upload](https://github.com/adobe/aem-upload) Node.js程式庫的使用者端應用程式，將資產上傳至AEM as a Cloud Service環境。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3476952?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3476963?captions=chi_hant&quality=12&learn=on)
 
 
 ## 學習內容

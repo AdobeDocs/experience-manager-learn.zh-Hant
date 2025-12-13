@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Emily Kellman分享Adobe.com如何使用「產生變數」來提高內容速度、減少時間表並提高轉換率。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459232/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462743/?captions=chi_hant&learn=on&enablevpops)

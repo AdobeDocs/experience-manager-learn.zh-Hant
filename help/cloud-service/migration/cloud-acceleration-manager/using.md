@@ -21,4 +21,4 @@ ht-degree: 0%
 
 使用Cloud Acceleration Manager工具的旁白逐步解說。
 
->[!VIDEO](https://video.tv.adobe.com/v/336699?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454681?captions=chi_hant&quality=12&learn=on)
