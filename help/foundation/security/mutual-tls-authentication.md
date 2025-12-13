@@ -122,7 +122,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
    ![AEM 私密金鑰和憑證已匯入](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
 
-若 API 提供者使用自我簽署的 CA 憑證，請將接收到的憑證匯入 AEM 的 TrustStore，並依照[此處](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html#httpclient-and-load-aem-truststore-material)的步驟進行。
+若 API 提供者使用自我簽署的 CA 憑證，請將接收到的憑證匯入 AEM 的 TrustStore，並依照[此處](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html?lang=zh-Hant#httpclient-and-load-aem-truststore-material)的步驟進行。
 
 同樣地，若 AEM 使用自我簽署的 CA 憑證，需要求 API 提供者匯入憑證。
 
@@ -217,7 +217,7 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 - 若 API 提供者使用自我簽署的 CA 憑證，請取得全域 AEM TrustStore，使用 `getAEMTrustStore(...)` 方法可完成此作業。
 - 建立一個 `SSLContextBuilder` 物件，請參閱 Java™ [API 詳細資訊](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html)。
 - 使用 `loadKeyMaterial(final KeyStore keystore,final char[] keyPassword)` 方法將使用者的 AEM KeyStore 載入到 `SSLContextBuilder` 中。
-- Keystore 密碼是建立 Keystore 時所設定的密碼，其應該會儲存在 OSGi 設定中，請參閱[機密設定值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)。
+- Keystore 密碼是建立 Keystore 時所設定的密碼，其應該會儲存在 OSGi 設定中，請參閱[機密設定值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values)。
 
 ## 避免 JVM Keystore 變更
 

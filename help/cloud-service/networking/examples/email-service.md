@@ -29,11 +29,11 @@ ht-degree: 0%
 + `smtp.port`設定為對應到目的地電子郵件服務主機和連線埠的`portForward.portOrig`連線埠。 此範例使用對應： `AEM_PROXY_HOST:30465` → `smtp.sendgrid.com:465`。
    + `smpt.port`設定為`portForward.portOrig`連線埠，而不是SMTP伺服器的實際連線埠。 `smtp.port`與`portForward.portOrig`連線埠之間的對應是由Cloud Manager `portForwards`規則所建立（如下所示）。
 
-由於密碼不得儲存在程式碼中，因此最好使用[機密OSGi設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)、使用AIO CLI或Cloud Manager API來設定電子郵件服務的使用者名稱和密碼。
+由於密碼不得儲存在程式碼中，因此最好使用[機密OSGi設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values)、使用AIO CLI或Cloud Manager API來設定電子郵件服務的使用者名稱和密碼。
 
 一般會使用[彈性連線埠輸出](../flexible-port-egress.md)來滿足與電子郵件服務整合，除非需要`allowlist` Adobe IP，在這種情況下可以使用[專用輸出IP位址](../dedicated-egress-ip-address.md)。
 
-此外，檢閱[傳送電子郵件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email)的AEM檔案。
+此外，檢閱[傳送電子郵件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=zh-Hant#sending-email)的AEM檔案。
 
 ## 進階網路支援
 
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/config/com.day.cq.mailer.DefaultMailService.cfg.json`
 
-根據您的電子郵件提供者（例如[等）要求，設定AEM的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email)DefaulMailService`smtp.ssl`。
+根據您的電子郵件提供者（例如[等）要求，設定AEM的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=zh-Hant#sending-email)DefaulMailService`smtp.ssl`。
 
 ```json
 {
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 可以使用下列其中一項，為每個環境設定`EMAIL_USERNAME`和`EMAIL_PASSWORD` OSGi變數和密碼：
 
-+ [Cloud Manager環境設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)
++ [Cloud Manager環境設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=zh-Hant)
 + 或使用`aio CLI`命令
 
   ```shell

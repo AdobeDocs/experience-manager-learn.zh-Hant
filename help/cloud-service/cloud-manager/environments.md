@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # 使用Adobe Cloud Manager — 環境
 
-[Cloud Manager環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html)由AEM Author、AEM Publish和Dispatcher服務組成。 不同的環境可支援角色，並使用不同的CI/CD管道與其互動。 Cloud Manager環境通常有一個生產環境、一個中繼環境及一個開發環境。
+[Cloud Manager環境](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html?lang=zh-Hant)由AEM Author、AEM Publish和Dispatcher服務組成。 不同的環境可支援角色，並使用不同的CI/CD管道與其互動。 Cloud Manager環境通常有一個生產環境、一個中繼環境及一個開發環境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)

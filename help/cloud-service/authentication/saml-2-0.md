@@ -333,7 +333,7 @@ AEM使用以下使用者屬性，這些屬性可透過Adobe Granite SAML 2.0驗�
 
 ### 使用加密
 
-當[加密AuthnRequest和SAML判斷提示](#encrypting-the-authnrequest-and-saml-assertion)時，需要下列屬性： `useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`。 `keyStorePassword`包含密碼，因此值不能儲存在OSGi組態檔中，而是使用[密碼組態值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)插入
+當[加密AuthnRequest和SAML判斷提示](#encrypting-the-authnrequest-and-saml-assertion)時，需要下列屬性： `useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`。 `keyStorePassword`包含密碼，因此值不能儲存在OSGi組態檔中，而是使用[密碼組態值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values)插入
 
 +++可選擇更新OSGi設定以使用加密
 
@@ -366,7 +366,7 @@ AEM使用以下使用者屬性，這些屬性可透過Adobe Granite SAML 2.0驗�
 
 + `useEncryption`已設定為`true`
 + `spPrivateKeyAlias`包含SAML整合使用之私密金鑰的金鑰庫專案別名。
-+ `keyStorePassword`包含包含[使用者金鑰儲存區密碼的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)OSGi密碼設定變數`authentication-service`。
++ `keyStorePassword`包含包含[使用者金鑰儲存區密碼的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values)OSGi密碼設定變數`authentication-service`。
 
 +++
 
@@ -452,7 +452,7 @@ AEM Publish支援單一反向連結篩選設定，因此請將SAML設定需求�
 ### 如何為新環境中的SAML使用者啟用動態群組成員資格
 
 為了大幅增強新AEM as a Cloud Service環境中的群組評估效能，建議在新環境中啟用動態群組成員資格功能。
-這也是在啟動資料同步時的必要步驟。 更多詳細資料[在此](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier)。
+這也是在啟動資料同步時的必要步驟。 更多詳細資料[在此](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier)。
 若要這麼做，請將下列屬性新增至OSGI設定檔：
 
 `/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`

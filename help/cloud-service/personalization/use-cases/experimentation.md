@@ -256,7 +256,7 @@ A/B測試設定程式涉及六個主要步驟，用於建立和設定實驗：
 
 ## 其他資源
 
-- [A/B測試總覽](https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab)
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
-- [資料串流總覽](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
-- [視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
+- [A/B測試總覽](https://experienceleague.adobe.com/zh-hant/docs/target/using/activities/abtest/test-ab)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/web-sdk/home)
+- [資料串流總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/datastreams/overview)
+- [視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/vec/visual-experience-composer)

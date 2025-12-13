@@ -57,8 +57,8 @@ ht-degree: 2%
 
 高階開發步驟為：
 
-1. [更新AEM as a Cloud Service環境](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
-1. [啟用AEM API存取權](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
+1. [更新AEM as a Cloud Service環境](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
+1. [啟用AEM API存取權](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
 1. [在Adobe Developer Console (ADC)中建立專案](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
 1. [初始化專案以進行本機開發](./runtime-action.md#initialize-project-for-local-development)
 1. 在ADC中設定專案
@@ -293,7 +293,7 @@ ht-degree: 2%
 
 依預設，WKND Sites專案沒有資產中繼資料結構可顯示PIM特定中繼資料，例如SKU、供應商名稱等。 讓我們建立資產中繼資料結構，並將其套用至AEM例項中的資產資料夾。
 
-1. 登入AEM as a Cloud Service Asset執行個體並出現在[資產檢視](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)中。
+1. 登入AEM as a Cloud Service Asset執行個體並出現在[資產檢視](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/authoring/switch-views)中。
 
    ![AEM Assets檢視](../assets/examples/assets-pim-integration/aem-assets-view.png)
 

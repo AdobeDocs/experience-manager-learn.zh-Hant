@@ -23,7 +23,7 @@ ht-degree: 0%
 
 與Adobe Experience Manager (AEM) as a Cloud Service的整合必須能夠安全地向AEM服務進行驗證。 AEM的Developer Console會授予服務憑證的存取權，這些憑證可用來促進外部應用程式、系統和服務以程式設計方式透過HTTP與AEM作者或發佈服務互動。
 
-AEM與使用[S2S OAuth (透過Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)管理)的其他Adobe產品整合。 對於與服務帳戶的自訂整合，需在AEM Developer Console中使用和管理JWT憑證。
+AEM與使用[S2S OAuth (透過Adobe Developer Console](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)管理)的其他Adobe產品整合。 對於與服務帳戶的自訂整合，需在AEM Developer Console中使用和管理JWT憑證。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
@@ -232,7 +232,7 @@ function getCommandLineParams() {
 1. 找到在步驟1中識別具有&#x200B;__登入名稱__&#x200B;的AEM使用者，並開啟其&#x200B;__屬性__
 1. 導覽至「__群組__」標籤，然後新增&#x200B;__DAM使用者__&#x200B;群組（他們可做為資產的寫入存取權）
 
-   + [檢視AEM提供的使用者群組清單](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups)，以將服務使用者新增至以獲得最佳許可權。 如果AEM提供的使用者群組都不夠用，請建立您自己的使用者群組，並新增適當的許可權。
+   + [檢視AEM提供的使用者群組清單](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hant#built-in-users-and-groups)，以將服務使用者新增至以獲得最佳許可權。 如果AEM提供的使用者群組都不夠用，請建立您自己的使用者群組，並新增適當的許可權。
 
 1. 點選&#x200B;__儲存並關閉__
 

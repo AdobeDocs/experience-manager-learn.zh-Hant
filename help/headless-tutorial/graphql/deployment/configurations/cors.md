@@ -59,7 +59,7 @@ AEM CORS OSGi Configuration Factory會定義接受CORS HTTP要求的允許條件
 + `supportedheaders`包含`"Authorization"`，因為應該授權給AEM作者的要求。
 + `supportscredentials`已設為`true`，因為對AEM作者的請求應該獲得授權。
 
-[進一步瞭解CORS OSGi設定。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
+[進一步瞭解CORS OSGi設定。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=zh-Hant)
 
 以下範例支援在AEM Author上使用AEM GraphQL持續查詢。 若要使用使用者端定義的GraphQL查詢，請在`allowedpaths`和`POST`中新增GraphQL端點URL至`supportedmethods`。
 

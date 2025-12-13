@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## OSGi設定
 
-由於密碼不得儲存在程式碼中，所以最好透過[機密OSGi設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values)、使用AIO CLI或Cloud Manager API設定，來提供SQL連線的使用者名稱和密碼。
+由於密碼不得儲存在程式碼中，所以最好透過[機密OSGi設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values)、使用AIO CLI或Cloud Manager API設定，來提供SQL連線的使用者名稱和密碼。
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/com.adobe.aem.wknd.examples.core.connections.impl.MySqlExternalServiceImpl.cfg.json`
 

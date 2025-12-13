@@ -34,7 +34,7 @@ Acroform是使用Acrobat建立的表單。 您可以使用Acrobat從頭開始建
 >
 >如果您要傳送以XFA為基礎的檔案，則需要將檔案平面化，且Acrobat Sign簽名標籤必須以靜態文字的形式顯示在檔案中。
 
-[Acrobat Sign文字標籤檔案](https://helpx.adobe.com/sign/using/text-tag.html)
+[Acrobat Sign文字標籤檔案](https://helpx.adobe.com/tw/sign/using/text-tag.html)
 
 >[!NOTE]
 >

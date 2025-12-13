@@ -21,7 +21,7 @@ ht-degree: 5%
 
 # 實施無管道 URL 重新導向
 
-瞭解如何在AEM as a Cloud Service中實作[管線免費URL重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)，讓行銷團隊無需開發人員即可管理重新導向。
+瞭解如何在AEM as a Cloud Service中實作[管線免費URL重新導向](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)，讓行銷團隊無需開發人員即可管理重新導向。
 
 在AEM中有多個管理URL重新導向的選項，如需詳細資訊，請參閱[URL重新導向](url-redirection.md)。
 
@@ -37,7 +37,7 @@ ht-degree: 5%
 
 ## 教學課程使用案例
 
-為了示範，假設WKND行銷團隊正在啟動新的滑雪行銷活動。 他們想要為滑雪冒險頁面建立簡短URL，並像管理內容一樣自行管理。 他們決定使用[管線免費URL重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)方法來管理URL重新導向。
+為了示範，假設WKND行銷團隊正在啟動新的滑雪行銷活動。 他們想要為滑雪冒險頁面建立簡短URL，並像管理內容一樣自行管理。 他們決定使用[管線免費URL重新導向](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)方法來管理URL重新導向。
 
 根據行銷團隊的需求，以下是需要建立的URL重新導向。
 
@@ -229,7 +229,7 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 >
 >*管道自由*&#x200B;用語是用來強調組態僅&#x200B;*部署一次*，而行銷團隊可以透過更新文字檔來管理URL重新導向。
 
-若要部署設定，請使用[Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)中的[完整棧疊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#web-tier-config-pipelines)或[Web層設定](https://my.cloudmanager.adobe.com/)管道。
+若要部署設定，請使用[Cloud Manager](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)中的[完整棧疊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#web-tier-config-pipelines)或[Web層設定](https://my.cloudmanager.adobe.com/)管道。
 
 ![透過完整棧疊管道部署](./assets/pipeline-free-redirects/deploy-full-stack-pipeline.png)
 
@@ -248,5 +248,5 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 
 ## 其他資源
 
-- [管道可用URL重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
+- [管道可用URL重新導向](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
 - [URL重新導向](url-redirection.md)

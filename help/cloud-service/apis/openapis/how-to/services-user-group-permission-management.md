@@ -90,7 +90,7 @@ ht-degree: 0%
 
 - 提交變更並將其推播到存放庫。
 
-- 使用[Cloud Manager完整棧疊管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)將變更部署到AEM執行個體。
+- 使用[Cloud Manager完整棧疊管道](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)將變更部署到AEM執行個體。
 
 - 您也可以使用&#x200B;**許可權**&#x200B;檢視來驗證使用者群組的許可權。 導覽至AEM執行個體中的&#x200B;**工具** > **安全性** > **許可權**。
 

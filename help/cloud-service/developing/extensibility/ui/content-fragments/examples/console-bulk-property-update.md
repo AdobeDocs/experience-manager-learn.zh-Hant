@@ -171,7 +171,7 @@ export default ExtensionRegistration;
 重要的是，從擴充功能與AEM的任何互動都應委派給[AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，這是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中執行的個別無伺服器程式。
 使用Adobe I/O Runtime動作與AEM通訊是為了避免跨原始資源共用(CORS)連線問題。
 
-提交大量屬性更新表單時，自訂`onSubmitHandler()`會叫用Adobe I/O Runtime動作，傳遞目前的AEM主機（網域）和使用者的AEM存取權杖，接著呼叫[AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)以更新內容片段。
+提交大量屬性更新表單時，自訂`onSubmitHandler()`會叫用Adobe I/O Runtime動作，傳遞目前的AEM主機（網域）和使用者的AEM存取權杖，接著呼叫[AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=zh-Hant)以更新內容片段。
 
 收到Adobe I/O Runtime動作的回應時，強制回應會更新，以顯示大量屬性更新作業的結果。
 

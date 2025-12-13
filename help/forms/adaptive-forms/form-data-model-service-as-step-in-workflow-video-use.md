@@ -32,7 +32,7 @@ ht-degree: 0%
   >
   >在AEM Forms 6.5及更新版本中，此功能可立即在[此處說明](form-data-model-service-as-step-in-aem65-workflow-video-use.md)使用
 
-* 使用SampleRest.war檔案設定tomcat，如[此處](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)所述。在Tomcat中部署的war檔案具有傳回申請人信用分數的代碼。 信用分數是介於200到800之間的隨機數字
+* 使用SampleRest.war檔案設定tomcat，如[此處](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=zh-Hant)所述。在Tomcat中部署的war檔案具有傳回申請人信用分數的代碼。 信用分數是介於200到800之間的隨機數字
 
 * [使用封裝管理員](assets/invoke-fdm-as-service-step.zip)將資產匯入AEM。封裝包含下列專案：
 

@@ -35,7 +35,7 @@ AEM Author服務使用CDN，但其目的在於增強產品資源的傳送，且�
 
 AEM Author CDN位於一般使用者（通常是行銷人員或內容作者）和AEM Author之間。 它會快取不可變檔案，例如支援AEM製作體驗的靜態資產，而非製作內容。
 
-AEM Author的CDN確實快取了多種可能值得關注的資源型別，包括對持續性查詢[的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances)可自訂TTL，以及對自訂使用者端資料庫[的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries)長TTL。
+AEM Author的CDN確實快取了多種可能值得關注的資源型別，包括對持續性查詢[的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant&author-instances)可自訂TTL，以及對自訂使用者端資料庫[的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#client-side-libraries)長TTL。
 
 ### 預設快取存留期
 
@@ -43,9 +43,9 @@ AEM Author的CDN確實快取了多種可能值得關注的資源型別，包括�
 
 | 內容類型 | 預設CDN快取期限 |
 |:------------ |:---------- |
-| [持續查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances) | 1 分鐘 |
-| [使用者端資料庫(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
-| [其他所有專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 未快取 |
+| [持續查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant&author-instances) | 1 分鐘 |
+| [使用者端資料庫(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#client-side-libraries) | 30 天 |
+| [其他所有專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#other-content) | 未快取 |
 
 
 ## AEM Dispatcher

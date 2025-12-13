@@ -208,7 +208,7 @@ render: async function (fragments) {
 
 >[!IMPORTANT]
 >
-> 請確定AEM Author執行個體已設定為允許來自AppBuilder應用程式執行所在原始位置的[跨原始請求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html)。 允許的來源包括`https://localhost:9080`、AppBuilder階段來源和AppBuilder生產來源。
+> 請確定AEM Author執行個體已設定為允許來自AppBuilder應用程式執行所在原始位置的[跨原始請求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=zh-Hant)。 允許的來源包括`https://localhost:9080`、AppBuilder階段來源和AppBuilder生產來源。
 >
 > 或者，擴充功能可以呼叫自訂[AppBuilder動作](../../runtime-action.md)，代表擴充功能向AEM Author提出要求。
 

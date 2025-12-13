@@ -88,7 +88,7 @@ AEM as a Cloud Service CDN中HTTP回應的快取是由以下來自來源`Cache-C
    ```
 
    `dispatcher/src/conf.d/enabled_vhosts`目錄中的vhost檔案是&#x200B;**目錄中檔案的** symlink`dispatcher/src/conf.d/available_vhosts`，因此請務必建立symlink （若不存在）。
-1. 使用[Cloud Manager - Web層設定管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines)或[RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration)，將vhost變更部署到所需的AEM as a Cloud Service環境。
+1. 使用[Cloud Manager - Web層設定管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=zh-Hant&#web-tier-config-pipelines)或[RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=zh-Hant#deploy-apache-or-dispatcher-configuration)，將vhost變更部署到所需的AEM as a Cloud Service環境。
 
 ### 自訂Java™程式碼
 
