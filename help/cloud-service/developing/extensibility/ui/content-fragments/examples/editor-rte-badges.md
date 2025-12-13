@@ -12,10 +12,10 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 83acbddb-9168-4d8b-84b5-97577d8a1ead
 duration: 538
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '729'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -31,20 +31,20 @@ RTE徽章最常見的使用案例是與[RTE Widget](https://developer.adobe.com/
 
 通常，與Widget關聯的徽章是用來新增具有外部系統相依性的動態內容，但&#x200B;_內容作者無法修改_&#x200B;插入的動態內容以維持完整性。 它們只能當作整個專案移除。
 
-使用`rte`擴充點將&#x200B;**徽章**&#x200B;新增到內容片段編輯器中的&#x200B;**RTE**。 使用`rte`擴充點的`getBadges()`方法新增一或多個徽章。
+使用&#x200B;**擴充點將**&#x200B;徽章&#x200B;**新增到內容片段編輯器中的** RTE`rte`。 使用`rte`擴充點的`getBadges()`方法新增一或多個徽章。
 
 此範例說明如何新增名為&#x200B;_Large Group Bookings Customer Service_&#x200B;的Widget，以在RTE內容中尋找、選取和新增特定於WKND冒險的客戶服務詳細資料，例如&#x200B;**代表姓名**&#x200B;和&#x200B;**電話號碼**。 使用徽章功能，**電話號碼**&#x200B;已變成&#x200B;**不可編輯**，但WKND內容作者可以編輯代表名稱。
 
 此外，**電話號碼**&#x200B;的樣式不同（藍色），這是徽章功能的額外使用案例。
 
-為了簡單起見，此範例使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)架構來開發Widget或對話方塊UI以及硬式編碼的WKND客戶服務電話號碼。 為了控制內容的非編輯和不同的樣式方面，在徽章定義的`prefix`和`suffix`屬性中使用`#`字元。
+為了簡單起見，此範例使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)架構來開發Widget或對話方塊UI以及硬式編碼的WKND客戶服務電話號碼。 為了控制內容的非編輯和不同的樣式方面，在徽章定義的`#`和`prefix`屬性中使用`suffix`字元。
 
 ## 擴充功能點
 
 此範例延伸至擴充點`rte`，在內容片段編輯器中將徽章新增至RTE。
 
 | AEM UI已擴充 | 擴充功能點 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [RTF編輯器徽章](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)和[RTF編輯器Widget](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## 範例擴充功能
@@ -55,7 +55,7 @@ RTE徽章最常見的使用案例是與[RTE Widget](https://developer.adobe.com/
 
 ### 擴充功能註冊
 
-對應至`index.html`路由的`ExtensionRegistration.js`是AEM擴充功能的進入點，並定義：
+對應至`ExtensionRegistration.js`路由的`index.html`是AEM擴充功能的進入點，並定義：
 
 + 在`getBadges()`中使用組態屬性`id`、`prefix`、`suffix`、`backgroundColor`和`textColor`定義徽章的定義。
 + 在此範例中，`#`字元用於定義此徽章的邊界，表示RTE中由`#`包圍的任何字串都會被視為此徽章的執行個體。
@@ -113,7 +113,7 @@ function ExtensionRegistration() {
 export default ExtensionRegistration;
 ```
 
-### 在`App.js`中新增`largeBookingsCustomerService`路由{#add-widgets-route}
+### 在`largeBookingsCustomerService`中新增`App.js`路由{#add-widgets-route}
 
 在主要React元件`App.js`中，新增`largeBookingsCustomerService`路由以呈現上述相對URL路徑的UI。
 
@@ -145,10 +145,10 @@ Widget或對話方塊UI是使用[Adobe React Spectrum](https://react-spectrum.ad
 
 + UI是使用React Spectrum元件來轉譯，例如[ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html)、[ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html)、[Button](https://react-spectrum.adobe.com/react-spectrum/Button.html)
 + `largeGroupCustomerServiceList`陣列具有代表名稱與電話號碼的硬式編碼對應。 在真實情境中，此資料可以從Adobe AppBuilder動作或外部系統、自行開發或雲端提供者為基礎的API閘道擷取。
-+ 已使用`useEffect` [React勾點](https://react.dev/reference/react/useEffect)初始化`guestConnection`，並管理為元件狀態。 它可用來與AEM主機通訊。
++ 已使用`guestConnection` `useEffect`React勾點[初始化](https://react.dev/reference/react/useEffect)，並管理為元件狀態。 它可用來與AEM主機通訊。
 + `handleCustomerServiceChange`函式取得代表名稱和電話號碼，並更新元件狀態變數。
-+ 使用`guestConnection`物件的`addCustomerServiceDetails`函式提供要執行的RTE指令。 在此案例中，`insertContent`指示和HTML程式碼片段。
-+ 若要使用徽章讓&#x200B;**電話號碼不可編輯**，請在`phoneNumber`變數（如`...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>`）之前和之後新增`#`特殊字元。
++ 使用`addCustomerServiceDetails`物件的`guestConnection`函式提供要執行的RTE指令。 在此案例中，`insertContent`指示和HTML程式碼片段。
++ 若要使用徽章讓&#x200B;**電話號碼不可編輯**，請在`#`變數（如`phoneNumber`）之前和之後新增`...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>`特殊字元。
 
 `src/aem-cf-editor-1/web-src/src/components/LargeBookingsCustomerService.js`
 

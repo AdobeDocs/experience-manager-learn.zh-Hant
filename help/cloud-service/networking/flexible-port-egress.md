@@ -1,24 +1,24 @@
 ---
-title: 彈性的連接埠輸出
+title: 彈性連接埠輸出
 description: 瞭解如何設定和使用彈性的連線埠輸出，以支援從AEM as a Cloud Service到外部服務的外部連線。
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 870
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 2%
 
 ---
 
-# 彈性的連接埠輸出
+# 彈性連接埠輸出
 
 瞭解如何設定和使用彈性的連線埠輸出，以支援從AEM as a Cloud Service到外部服務的外部連線。
 
@@ -30,7 +30,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 >[!MORELIKETHIS]
 >
-> 閱讀AEM as a Cloud Service [進階網路組態檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)，以取得有關彈性連線埠輸出的詳細資訊。
+> 閱讀AEM as a Cloud Service [進階網路組態檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)，以取得有關彈性連線埠輸出的詳細資訊。
 
 
 ## 先決條件
@@ -45,7 +45,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 + Cloud Manager計畫ID
 + Cloud Manager環境ID
 
-如需詳細資訊，[請檢閱如何設定、設定和取得Cloud Manger API認證](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用這些認證進行Cloud Manager API呼叫。
+如需詳細資訊，[請檢閱如何設定、設定和取得Cloud Manger API認證](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用這些認證進行Cloud Manager API呼叫。
 
 本教學課程使用`curl`來進行Cloud Manager API設定。 提供的`curl`命令採用Linux/macOS語法。 如果使用Windows命令提示字元，請將`\`分行符號取代為`^`。
 
@@ -87,7 +87,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 1. 首先，使用Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業，判斷在中設定進階網路的地區。 進行後續Cloud Manager API呼叫需要`region name`。 通常會使用生產環境所在的區域。
 
-   在[環境的詳細資料](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)底下的[Cloud Manager](https://my.cloudmanager.adobe.com)中尋找您的AEM as a Cloud Service環境地區。 Cloud Manager中顯示的地區名稱可以[對應到Cloud Manager API中使用的地區代碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments)。
+   在[環境的詳細資料](https://my.cloudmanager.adobe.com)底下的[Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)中尋找您的AEM as a Cloud Service環境地區。 Cloud Manager中顯示的地區名稱可以[對應到Cloud Manager API中使用的地區代碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments)。
 
    __listRegions HTTP要求__
 
@@ -99,7 +99,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
        -H 'Content-Type: application/json' 
    ```
 
-2. 使用Cloud Manager API [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業，為Cloud Manager程式啟用彈性的連線埠輸出。 使用從Cloud Manager API `listRegions`作業取得的適當`region`程式碼。
+2. 使用Cloud Manager API [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業，為Cloud Manager程式啟用彈性的連線埠輸出。 使用從Cloud Manager API `region`作業取得的適當`listRegions`程式碼。
 
    __createNetworkInfrastructure HTTP要求__
 
@@ -114,7 +114,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
    等待15分鐘，讓Cloud Manager程式布建網路基礎結構。
 
-3. 檢查環境是否已使用先前步驟中從`createNetworkInfrastructure` HTTP要求傳回的`id`，使用Cloud Manager API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure)作業，完成&#x200B;__彈性連線埠輸出__&#x200B;設定。
+3. 檢查環境是否已使用先前步驟中從&#x200B;__HTTP要求傳回的__，使用Cloud Manager API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure)作業，完成`id`彈性連線埠輸出`createNetworkInfrastructure`設定。
 
    __getNetworkInfrastructure HTTP要求__
 
@@ -134,7 +134,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 ## 為每個環境設定彈性的連線埠輸出代理
 
-1. 使用Cloud Manager API [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業，在每個AEM as a Cloud Service環境中啟用並設定&#x200B;__彈性連線埠輸出__&#x200B;設定。
+1. 使用Cloud Manager API __enableEnvironmentAdvancedNetworkingConfiguration__&#x200B;作業，在每個AEM as a Cloud Service環境中啟用並設定[彈性連線埠輸出](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)設定。
 
    __enableEnvironmentAdvancedNetworkingConfiguration HTTP要求__
 
@@ -217,11 +217,11 @@ AEM提供兩組特殊的Java™系統變數，這些變數對應至AEM的HTTP/HT
 | `AEM_HTTP_PROXY_PORT` | HTTPS連線的Proxy連線埠（設定遞補為`3128`） | `System.getenv().getOrDefault("AEM_HTTP_PROXY_PORT", 3128)` | `$[env:AEM_HTTP_PROXY_PORT;default=3128]` |
 | `AEM_HTTPS_PROXY_PORT` | HTTPS連線的Proxy連線埠（設定遞補為`3128`） | `System.getenv().getOrDefault("AEM_HTTPS_PROXY_PORT", 3128)` | `$[env:AEM_HTTPS_PROXY_PORT;default=3128]` |
 
-對非標準連線埠上的外部服務進行HTTP/HTTPS呼叫時，必須使用Cloud Manager API `enableEnvironmentAdvancedNetworkingConfiguration`作業定義沒有對應的`portForwards`，因為連線埠轉送「規則」是在「程式碼」中定義。
+對非標準連線埠上的外部服務進行HTTP/HTTPS呼叫時，必須使用Cloud Manager API `portForwards`作業定義沒有對應的`enableEnvironmentAdvancedNetworkingConfiguration`，因為連線埠轉送「規則」是在「程式碼」中定義。
 
 >[!TIP]
 >
-> 請參閱AEM as a Cloud Service的彈性連線埠輸出檔案，以取得[完整的路由規則集](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+> 請參閱AEM as a Cloud Service的彈性連線埠輸出檔案，以取得[完整的路由規則集](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 #### 程式碼範例
 

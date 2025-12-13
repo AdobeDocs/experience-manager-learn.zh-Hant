@@ -4,7 +4,7 @@ description: 瞭解如何使用OAuth伺服器對伺服器驗證，從自訂應�
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Beginner
 doc-type: Tutorial
 jira: KT-16516
@@ -12,7 +12,7 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 57da04874cfb37dcccbf605c65fbcba8f12849fb
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 1%
@@ -152,7 +152,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 
 1. 展開&#x200B;_中繼資料_&#x200B;區段，然後按一下&#x200B;**傳遞指定資產的中繼資料**&#x200B;選項。
 
-1. 在右窗格中，按一下&#x200B;**嘗試它**&#x200B;按鈕。
+1. 在右窗格中，按一下&#x200B;**嘗試它**按鈕。
    ![API檔案](../assets/s2s/api-documentation.png)
 
 1. 輸入下列值：
@@ -417,7 +417,7 @@ GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
    ...
    ```
 
-## 隱藏在機殼下
+## 內部運作原理
 
 成功引發API後，會在AEM Author服務中建立代表ADC專案的OAuth伺服器對伺服器認證的使用者，以及符合產品設定檔和服務設定的使用者群組。 _技術帳戶使用者_&#x200B;與產品設定檔和&#x200B;_服務_&#x200B;使用者群組相關聯，該使用者群組具有&#x200B;_讀取_&#x200B;資產中繼資料的必要許可權。
 

@@ -4,15 +4,15 @@ description: 瞭解如何在AEM Headless應用程式中設定AEM主機。
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10831
 thumbnail: KT-10831.jpg
 exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
 duration: 496
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1610'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 ...
 ```
 
-可以將`.env`和語意描述元（例如`.env.stage`或`.env.production`）後置化，以指定`.env`檔案供其他用途[使用](https://create-react-app.dev/docs/adding-custom-environment-variables/#what-other-env-files-can-be-used)。 執行`npm`命令前設定`REACT_APP_ENV`，可在執行或建置React應用程式時使用不同的`.env`檔案。
+可以將`.env`和語意描述元（例如[或](https://create-react-app.dev/docs/adding-custom-environment-variables/#what-other-env-files-can-be-used)）後置化，以指定`.env`檔案供其他用途`.env.stage`使用`.env.production`。 執行`.env`命令前設定`REACT_APP_ENV`，可在執行或建置React應用程式時使用不同的`npm`檔案。
 
 例如，React應用程式的`package.json`可能包含下列`scripts`設定：
 
@@ -88,7 +88,7 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 
 #### AEM headless使用者端
 
-適用於JavaScript [&#128279;](../../how-to/aem-headless-sdk.md)的AEM Headless使用者端包含AEM Headless使用者端，可向AEM的GraphQL API發出HTTP請求。 AEM Headless使用者端必須使用使用中`.env`檔案的值與其互動的AEM主機進行初始化。
+適用於JavaScript [的](../../how-to/aem-headless-sdk.md)AEM Headless使用者端包含AEM Headless使用者端，可向AEM的GraphQL API發出HTTP請求。 AEM Headless使用者端必須使用使用中`.env`檔案的值與其互動的AEM主機進行初始化。
 
 + `src/api/headlessClient.js`
 
@@ -162,7 +162,7 @@ let { data, error } = useAdventureByPath('/content/dam/wknd-shared/en/adventures
 
 +++
 
-+++ iOS™範例
++++ iOS™範例 
 
 此範例以[範例AEM Headless iOS™應用程式](../../example-apps/ios-swiftui-app.md)為基礎，說明如何設定AEM GraphQL API要求以根據[組建特定設定變數](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3)連線至不同的AEM主機。
 
@@ -230,9 +230,9 @@ Android™應用程式(以Java™撰寫時)應使用[適用於Java™](https://g
 #### 建置組態檔
 
 Android™應用程式會定義「productFlavors」，以針對不同用途建置成品。
-此範例顯示如何定義兩種Android™產品風格，提供開發(`dev`)和生產(`prod`)使用的不同AEM服務主機(`AEM_HOST`)值。
+此範例顯示如何定義兩種Android™產品風格，提供開發(`AEM_HOST`)和生產(`dev`)使用的不同AEM服務主機(`prod`)值。
 
-在應用程式的`build.gradle`檔案中，已建立名為`env`的新`flavorDimension`。
+在應用程式的`build.gradle`檔案中，已建立名為`flavorDimension`的新`env`。
 
 在`env`維度中，定義了兩個`productFlavors`： `dev`和`prod`。 每個`productFlavor`都使用`buildConfigField`來設定組建特定的變數，這些變數會定義要連線的AEM服務。
 
@@ -261,7 +261,7 @@ android {
 
 #### Android™載入器
 
-使用`buildConfigField`欄位中的`AEM_HOST`值初始化AEM Headless Client for Java™提供的`AEMHeadlessClient`產生器。
+使用`AEMHeadlessClient`欄位中的`AEM_HOST`值初始化AEM Headless Client for Java™提供的`buildConfigField`產生器。
 
 + `app/src/main/java/com/adobe/wknd/androidapp/loader/AdventuresLoader.java`
 
@@ -288,9 +288,9 @@ public class AdventuresLoader extends AsyncTaskLoader<AdventureList> {
 
 ## AEM影像URL
 
-從Headless應用程式到AEM的影像要求必須設定為與正確的AEM服務互動，如上表[&#128279;](#managing-aem-hosts)中的所述。
+從Headless應用程式到AEM的影像要求必須設定為與正確的AEM服務互動，如上表[中的](#managing-aem-hosts)所述。
 
-Adobe建議使用AEM GraphQL API中透過`_dynamicUrl`欄位提供的[最佳化影像](../../how-to/images.md)。 `_dynamicUrl`欄位會傳回無主機URL，此URL可加上用來查詢AEM GraphQL API之AEM服務主機的前置詞。 在GraphQL回應中的`_dynamicUrl`欄位看起來如下所示：
+Adobe建議使用AEM GraphQL API中透過[欄位提供的](../../how-to/images.md)最佳化影像`_dynamicUrl`。 `_dynamicUrl`欄位會傳回無主機URL，此URL可加上用來查詢AEM GraphQL API之AEM服務主機的前置詞。 在GraphQL回應中的`_dynamicUrl`欄位看起來如下所示：
 
 ```json
 {
@@ -347,7 +347,7 @@ query ($path: String!) {
 
 此範例以[範例AEM Headless React應用程式](../../example-apps/react-app.md)為基礎，說明如何設定影像URL以根據環境變數連線至正確的AEM服務。
 
-此範例顯示如何使用可設定的`REACT_APP_AEM_HOST` React環境變數為影像參考`_dynamicUrl`欄位加上前置詞。
+此範例顯示如何使用可設定的`_dynamicUrl` React環境變數為影像參考`REACT_APP_AEM_HOST`欄位加上前置詞。
 
 #### React環境檔案
 
@@ -361,7 +361,7 @@ REACT_APP_AEM_HOST=https://publish-p123-e456.adobeaemcloud.com
 ...
 ```
 
-可以將`.env`和語意描述元（例如`.env.stage`或`.env.production`）後置化，以指定`.env`檔案供其他用途[使用](https://create-react-app.dev/docs/adding-custom-environment-variables/#what-other-env-files-can-be-used)。 執行`npm`命令前設定`REACT_APP_ENV`，可在執行或建置React應用程式時使用不同的`.env`檔案。
+可以將`.env`和語意描述元（例如[或](https://create-react-app.dev/docs/adding-custom-environment-variables/#what-other-env-files-can-be-used)）後置化，以指定`.env`檔案供其他用途`.env.stage`使用`.env.production`。 執行`.env`命令前設定`REACT_APP_ENV`，可在執行或建置React應用程式時使用不同的`npm`檔案。
 
 例如，React應用程式的`package.json`可能包含下列`scripts`設定：
 
@@ -481,9 +481,9 @@ struct AdventureListItemView: View {
 #### 建置組態檔
 
 Android™應用程式會定義「productFlavors」，以針對不同用途建置成品。
-此範例顯示如何定義兩種Android™產品風格，提供開發(`dev`)和生產(`prod`)使用的不同AEM服務主機(`AEM_HOST`)值。
+此範例顯示如何定義兩種Android™產品風格，提供開發(`AEM_HOST`)和生產(`dev`)使用的不同AEM服務主機(`prod`)值。
 
-在應用程式的`build.gradle`檔案中，已建立名為`env`的新`flavorDimension`。
+在應用程式的`build.gradle`檔案中，已建立名為`flavorDimension`的新`env`。
 
 在`env`維度中，定義了兩個`productFlavors`： `dev`和`prod`。 每個`productFlavor`都使用`buildConfigField`來設定組建特定的變數，這些變數會定義要連線的AEM服務。
 
@@ -548,7 +548,7 @@ public class RemoteImagesCache implements Html.ImageGetter {
 
 #### Android™ view
 
-Android™檢視會使用GraphQL回應中的`_dynamicUrl`值，透過`RemoteImagesCache`取得影像資料。
+Android™檢視會使用GraphQL回應中的`RemoteImagesCache`值，透過`_dynamicUrl`取得影像資料。
 
 + `app/src/main/java/com/adobe/wknd/androidapp/AdventureDetailFragment.java`
 

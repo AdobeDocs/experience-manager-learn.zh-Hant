@@ -9,9 +9,9 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '854'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 透過我們的&#x200B;[**即時示範**](https://landing.adobe.com/tw/na/dynamic-media/ctir-2755/live-demos.html)探索Adobe Dynamic Media的可能性，讓尖端的解決方案變得生動有趣。 瞭解&#x200B;[**動態Assets**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/dynamic-assets.html)如何簡化工作流程及提升內容管理，並探索可吸引每個管道對象的&#x200B;[**互動式體驗**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/interactive-experiences.html)。 [瞭解Dynamic Media如何轉換您的內容策略](https://landing.adobe.com/tw/na/dynamic-media/ctir-2755/live-demos.html)！
 
-## Dynamic Media概觀
+## Dynamic Media 概觀
 
 >[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
@@ -115,4 +115,8 @@ ht-degree: 0%
 
 本影片說明銳利化影像為何對維持影像精確度至關重要，以及如何使用進階設定打造完美影像。
 
+<!--
+This link is broken
+
 >[!VIDEO](https://demos-pub.assetsadobe.com/etc/dam/viewers/s7viewers/html5/VideoViewer.html?asset=%2Fcontent%2Fdam%2Fdm-public-facing-upgrade-portal-video%2F04_DynamicImagery_AdvancedSettings_071917_BH.mp4&config=/etc/dam/presets/viewer/Video_social&serverUrl=https%3A%2F%2Fadobedemo62-h.assetsadobe.com%2Fis%2Fimage%2F&contenturl=%2F&config2=/etc/dam/presets/analytics&videoserverurl=https://gateway-na.assetsadobe.com/DMGateway/public/demoCo&posterimage=/content/dam/dm-public-facing-upgrade-portal-video/04_DynamicImagery_AdvancedSettings_071917_BH.mp4)
+-->

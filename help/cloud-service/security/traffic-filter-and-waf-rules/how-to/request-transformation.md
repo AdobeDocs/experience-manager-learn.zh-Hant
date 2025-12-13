@@ -4,14 +4,15 @@ description: 了解如何在 AEM as a Cloud Service 中，透過流量篩選器�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18313
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
+exl-id: eee81cd6-9090-45d6-b77f-a266de1d9826
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 100%
 
@@ -61,11 +62,10 @@ data:
 
 - 提交變更並將其推送至 Cloud Manager Git 存放庫。
 
-- 使用[先前建立的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定管線，將變更部署至 AEM 環境。
+- 使用[先前建立的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定管道，將變更部署至 AEM 環境。
 
 - 透過存取 WKND 網站的頁面 (例如 `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html?search=foo&campaignId=bar&otherParam=baz`) 以測試該規則。
 
 - 在 AEM 記錄中 (`aemrequest.log`)，應該可以看到將要求轉換為 `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html?search=foo&campaignId=bar`，並移除 `otherParam`。
 
   ![WKND 要求轉換](../assets/how-to/aemrequest-log-transformation.png)
-

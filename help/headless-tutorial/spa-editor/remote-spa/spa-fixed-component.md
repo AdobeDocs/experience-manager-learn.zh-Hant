@@ -3,7 +3,7 @@ title: 將可編輯的固定元件新增至遠端SPA
 description: 瞭解如何將可編輯的固定元件新增至遠端SPA。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7634
 thumbnail: kt-7634.jpeg
@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
 duration: 164
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '534'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 1. 使用來自`@adobe/aem-react-editable-components`的方法裝飾自訂Title元件，使其可編輯。
 1. 透過`MapTo`註冊可編輯的Title元件，以便稍後在[容器元件](./spa-container-component.md)中使用。
 
-若要這麼做：
+執行方法：
 
 1. 在IDE中的`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app`開啟遠端SPA專案
 1. 在`react-app/src/components/editable/core/Title.js`建立React元件
@@ -185,7 +185,7 @@ ht-degree: 0%
 
 1. 點選&#x200B;__完成__&#x200B;以儲存
 1. 在AEM SPA Editor中預覽變更
-1. 重新整理在[http://localhost:3000](http://localhost:3000)本機執行的WKND應用程式，並立即看到編寫的標題變更。
+1. 重新整理在[http://localhost:3000](http://localhost:3000)本機執行的WKND應用程式，並立即看到所編寫的標題變更。
 
    SPA中的![標題元件](./assets/spa-fixed-component/title-final.png)
 

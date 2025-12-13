@@ -10,7 +10,7 @@ level: Intermediate
 exl-id: 0c77a853-fa71-46ac-8626-99bc69d6222d
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 205
-source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -25,10 +25,14 @@ ht-degree: 0%
 >[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)
 
 若要在您的伺服器上測試此功能，請遵循下列指示
-* [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 這是設定中繼資料屬性的自訂OSGI套件組合。
->在AEM Forms 6.5及更高版本中，此功能可立即使用，如[在此說明](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* 使用SampleRest.war檔案設定tomcat，如[此處](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=zh-Hant)所述。在Tomcat中部署的war檔案具有傳回申請人信用分數的代碼。 信用分數是介於200到800之間的隨機數字
+* [下載並部署setvalue組合](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)。 這是設定中繼資料屬性的自訂OSGI套件組合。
+
+  >[!NOTE]
+  >
+  >在AEM Forms 6.5及更新版本中，此功能可立即在[此處說明](form-data-model-service-as-step-in-aem65-workflow-video-use.md)使用
+
+* 使用SampleRest.war檔案設定tomcat，如[此處](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)所述。在Tomcat中部署的war檔案具有傳回申請人信用分數的代碼。 信用分數是介於200到800之間的隨機數字
 
 * [使用封裝管理員](assets/invoke-fdm-as-service-step.zip)將資產匯入AEM。封裝包含下列專案：
 
@@ -38,4 +42,5 @@ ht-degree: 0%
 * 開啟[MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled)。 填寫詳細資料並提交。 在表單提交時，會觸發[借出應用程式工作流程](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)。
 
 ![工作流程](assets/fdm-as-service-step-workflow.PNG)。
+
 如果信用分數超過500，工作流程會利用「或分割」元件，將應用程式路由給管理員。 如果信用分數小於500，則會將應用程式傳送至cavery

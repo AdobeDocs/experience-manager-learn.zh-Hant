@@ -4,7 +4,7 @@ description: 瞭解如何從日誌中擷取初始的AEM事件集，並探索每�
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 280
@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
-source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 1%
@@ -32,8 +32,8 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >此教學課程中的即時示範端點先前託管於[問題](https://glitch.com/)。 自2025年7月起，Glitch已終止託管服務，且無法再存取端點。
->&#x200B;>我們正在積極努力將示範移轉至其他平台。 教學課程內容會維持正確狀態，而且我們很快會提供更新的連結。
->&#x200B;>感謝您的理解和耐心。
+>我們正在積極努力將示範移轉至其他平台。 教學課程內容會維持正確狀態，而且我們很快會提供更新的連結。
+>感謝您的理解和耐心。
 
 使用您自己的應用程式，直到即時示範端點再次可用為止。
 

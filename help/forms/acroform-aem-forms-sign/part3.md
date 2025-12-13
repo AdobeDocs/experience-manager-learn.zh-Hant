@@ -1,16 +1,16 @@
 ---
 title: 使用AEM Forms的Acroforms
 description: 整合Acroforms與AEM Forms的教學課程的第3部分。 在您的系統上測試工作流程與最適化表單。
-feature: adaptive-forms
+feature: Adaptive Forms
 doc-type: Tutorial
 version: Experience Manager 6.5
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 45
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '228'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 4. 請確定您傳送的引數是伺服器上的有效資料夾。
 5. 儲存變更。
 
-## 建立最適化表單
+## 建立自適應表單
 
 1. 使用先前步驟建立的結構描述建立調適型表單。
 2. 將一些結構描述元素拖放到最適化表單上。

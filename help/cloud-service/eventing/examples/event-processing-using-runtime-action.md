@@ -1,10 +1,10 @@
 ---
-title: 使用Adobe I/O Runtime動作處理的AEM事件
+title: 使用 Adobe I/O Runtime 動作處理 AEM 事件
 description: 瞭解如何使用Adobe I/O Runtime動作處理收到的AEM事件。
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 558
@@ -12,14 +12,14 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '548'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# 使用Adobe I/O Runtime動作處理的AEM事件
+# 使用 Adobe I/O Runtime 動作處理 AEM 事件
 
 瞭解如何使用[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)動作處理收到的AEM事件。 此範例增強先前範例的[Adobe I/O Runtime動作和AEM事件](runtime-action.md)，在繼續此範例之前，請確定您已完成它。
 
@@ -162,7 +162,7 @@ ht-degree: 0%
   ...
   ```
 
-  請參閱[AEM服務認證教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=zh-Hant)，瞭解更多相關資訊。 此外，用於管理密碼和動作引數的[App Builder組態檔](https://developer.adobe.com/app-builder/docs/guides/configuration/)。
+  請參閱[AEM服務認證教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en)，瞭解更多相關資訊。 此外，用於管理密碼和動作引數的[App Builder組態檔](https://developer.adobe.com/app-builder/docs/guides/configuration/)。
 
 - `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js`模組會將原始事件資料、活動訊息和修改詳細資料（如果有的話）儲存在Adobe I/O Runtime儲存空間。
 

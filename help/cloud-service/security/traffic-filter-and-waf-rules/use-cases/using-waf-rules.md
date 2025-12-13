@@ -4,7 +4,7 @@ description: 了解如何使用 Adobe 建議的 Web 應用程式防火牆 (WAF) 
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
@@ -12,8 +12,8 @@ badgeLicense: label="需要授權" type="positive" before-title="true"
 jira: KT-18308
 thumbnail: null
 exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
-source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1376'
 ht-degree: 100%
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 > WAF 流量篩選器規則需要額外的 **WAF-DDoS 防護**&#x200B;或&#x200B;**增強安全性**&#x200B;授權。在預設情況下，標準流量篩選器規則可供 Sites 和 Forms 客戶使用。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469441/?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## 學習目標
 
@@ -45,7 +45,7 @@ ht-degree: 100%
 
 - 將 WAF 規則新增至 AEM WKND 專案的 `/config/cdn.yaml` 檔案。
 - 提交變更並將其推送至 Cloud Manager Git 存放庫。
-- 使用 Cloud Manager 的設定管線將變更部署至 AEM 環境。
+- 使用 Cloud Manager 的設定管道將變更部署至 AEM 環境。
 - 透過使用 [Nikto](https://github.com/sullo/nikto/wiki) 模擬 DDoS 攻擊來測試規則。
 - 使用 AEMCS CDN 記錄和 ELK 儀表板工具分析結果。
 
@@ -167,9 +167,9 @@ data:
 
 - 提交變更並將其推送至 Cloud Manager Git 存放庫。
 
-- 使用[先前建立的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定管線，將變更部署至 AEM 環境。
+- 使用[先前建立的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定管道，將變更部署至 AEM 環境。
 
-  ![Cloud Manager 設定管線](../assets/use-cases/cloud-manager-config-pipeline.png)
+  ![Cloud Manager 設定管道](../assets/use-cases/cloud-manager-config-pipeline.png)
 
 ## 測試規則
 

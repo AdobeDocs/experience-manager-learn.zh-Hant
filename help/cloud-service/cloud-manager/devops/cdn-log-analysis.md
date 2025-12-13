@@ -4,7 +4,7 @@ description: 瞭解Adobe提供的AEM Cloud Service CDN記錄分析工具，以�
 version: Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Development
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Beginner
 doc-type: Tutorial
 duration: 219
@@ -12,10 +12,10 @@ last-substantial-update: 2024-05-17T00:00:00Z
 jira: KT-15505
 thumbnail: KT-15505.jpeg
 exl-id: 830c2486-099b-454f-bc07-6bf36e81ac8d
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '442'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 瞭解Adobe提供的&#x200B;_AEM Cloud Service CDN記錄分析工具_，以及如何協助深入瞭解您的CDN效能和AEM實作。
  
->[!VIDEO](https://video.tv.adobe.com/v/3446116?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3429177?quality=12&learn=on)
 
 ## 概觀
 
@@ -44,11 +44,11 @@ ht-degree: 0%
 
 為了快速啟動記錄分析，Adobe為Splunk和ELK棧疊提供預先建立的儀表板。
 
-- **CDN快取命中率**：提供按HIT、PASS和MISS狀態區分的快取命中率總計和要求總數的深入分析。 它也會提供熱門點選、通過和錯過URL。
+- **CDN 快取命中率**：針對總快取命中率和依照 HIT、PASS 和 MISS 狀態分類之要求總數提供深入分析。它也會提供熱門點選、通過和錯過URL。
 
   ![CDN快取命中率](assets/CHR-dashboard.png)
 
-- **CDN流量儀表板**：透過CDN和原始要求率、4xx和5xx錯誤率以及非快取要求，提供流量的深入分析。 此外，每個使用者端IP位址每秒的最大CND和來源要求數，以及最佳化CDN設定的更多深入分析。
+- **CDN 流量儀表板**：透過 CDN 和來源要求速率、4xx 和 5xx 錯誤率以及非快取要求，提供有關流量的深入分析。此外，每個使用者端IP位址每秒的最大CND和來源要求數，以及最佳化CDN設定的更多深入分析。
 
   ![CDN流量儀表板](assets/Traffic-dashboard.png)
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
   ![WAF儀表板](assets/WAF-Dashboard.png)
 
-## Splunk整合
+## Splunk 整合
 
 對於運用[Splunk](https://www.splunk.com/en_us/products/observability-cloud.html)且已啟用AEMCS記錄轉寄至其Splunk執行個體的組織，可以快速匯入預先建立的儀表板。 此設定有助於加速記錄分析，提供可操作的深入分析，以最佳化AEM實作並減少DOS攻擊等安全性威脅。
 
@@ -67,4 +67,4 @@ ht-degree: 0%
 
 [ELK棧疊](https://www.elastic.co/elastic-stack) (包含Elasticsearch、Logstash和Kibana)是另一個強大的記錄分析選項。 對於無法存取Splunk設定或記錄轉送功能的組織，此功能非常有用。 在本機設定ELK棧疊很簡單，工具提供Docker Compose檔案以快速開始。 接著，您可以匯入預先建立的控制面板，並擷取使用Adobe Cloud Manager下載的CDN記錄。
 
-您可以開始使用AEMCS CDN記錄分析[&#128279;](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis)指南的ELK Docker容器。
+您可以開始使用AEMCS CDN記錄分析[指南的](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis)ELK Docker容器。

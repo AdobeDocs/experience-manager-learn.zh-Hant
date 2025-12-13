@@ -4,7 +4,7 @@ description: 瞭解如何透過使用OAuth網頁應用程式的自訂網頁應�
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Intermediate
 doc-type: Tutorial
 jira: KT-16718
@@ -12,7 +12,7 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '2262'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 瞭解如何透過使用OAuth網頁應用程式的自訂網頁應用程式中的使用者型驗證，在AEM as a Cloud Service上叫用OpenAPI型AEM API。
 
-OAuth網頁應用程式驗證適用於具有前端和&#x200B;_後端_&#x200B;元件，且需要&#x200B;**代表使用者**&#x200B;存取AEM API的網頁應用程式。 它會使用OAuth 2.0 _authorization_code_&#x200B;授權型別來代表使用者取得存取權杖以存取AEM API。 如需詳細資訊，請參閱[&#x200B; OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
+OAuth網頁應用程式驗證適用於具有前端和&#x200B;_後端_&#x200B;元件，且需要&#x200B;**代表使用者**&#x200B;存取AEM API的網頁應用程式。 它會使用OAuth 2.0 _authorization_code_&#x200B;授權型別來代表使用者取得存取權杖以存取AEM API。 如需詳細資訊，請參閱[ OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
 
 ## 學習內容{#what-you-learn}
 
@@ -49,7 +49,7 @@ WKND PIM應用程式是範例Web應用程式，用來管理儲存在AEM as a Clo
 
 Adobe Developer Console (ADC)專案已設定為使用OAuth Web App驗證存取Assets Author API。 它為WKND-PIM網頁應用程式提供必要的&#x200B;_client_id_&#x200B;和&#x200B;_client_secret_，以起始&#x200B;_authorization_code_&#x200B;授權流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3442768?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 
 下圖說明WKND-PIM網頁應用程式&#x200B;_取得使用者特定存取權杖以與Assets Author API_&#x200B;互動的功能流程。
@@ -449,7 +449,7 @@ OpenAPI型AEM API呼叫是從伺服器端（Express中介程式）發出，而�
 
 ### 設定ADC專案
 
-設定ADC專案步驟是[設定OpenAPI型AEM API](../setup.md)中的&#x200B;_重複_。 您需重複新增Assets Author API，並將其驗證方法設定為OAuth網頁應用程式。
+設定ADC專案步驟是&#x200B;_設定OpenAPI型AEM API_&#x200B;中的[重複](../setup.md)。 您需重複新增Assets Author API，並將其驗證方法設定為OAuth網頁應用程式。
 
 1. 從[Adobe Developer Console](https://developer.adobe.com/console/projects)，開啟所需的專案。
 
@@ -497,11 +497,11 @@ OpenAPI型AEM API呼叫是從伺服器端（Express中介程式）發出，而�
 
 依預設，WKND Sites專案沒有顯示產品屬性所需的資產中繼資料結構。 讓我們建立資產中繼資料結構，並將其套用至AEM例項中的資產資料夾。
 
-1. 登入AEM as a Cloud Service資產例項。 使用[資產檢視](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/authoring/switch-views)導覽至`/content/dam/wknd-shared/en`資料夾。
+1. 登入AEM as a Cloud Service資產例項。 使用[資產檢視](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)導覽至`/content/dam/wknd-shared/en`資料夾。
 
    ![瀏覽至資料夾](../assets/web-app/navigate-to-folder.png)
 
-1. 建立&#x200B;**PIM**，並在其中建立&#x200B;**露營**&#x200B;資料夾，然後上傳&#x200B;**露營**&#x200B;資料夾中的[範例影像](../assets/web-app/camping-gear-imgs.zip)。
+1. 建立&#x200B;**PIM**，並在其中建立&#x200B;**露營**&#x200B;資料夾，然後上傳[露營](../assets/web-app/camping-gear-imgs.zip)資料夾中的&#x200B;**範例影像**。
 
    ![PIM資料夾](../assets/web-app/pim-folder.png)
 
@@ -577,7 +577,7 @@ OpenAPI型AEM API呼叫是從伺服器端（Express中介程式）發出，而�
    EXPRESS_SESSION_SECRET=1234554321
    ```
 
-   `AEM_ASSET_IDS`是&#x200B;**Camping**&#x200B;資料夾中已上傳影像的`jcr:uuid`屬性值。 如需詳細資訊，請參閱此[區段](./invoke-api-using-oauth-s2s.md#review-the-api)。
+   `AEM_ASSET_IDS`是`jcr:uuid`Camping **資料夾中已上傳影像的**&#x200B;屬性值。 如需詳細資訊，請參閱此[區段](./invoke-api-using-oauth-s2s.md#review-the-api)。
 
 1. 開啟終端機，並導覽至擷取的資料夾。 使用下列命令安裝必要的相依性。
 

@@ -4,14 +4,15 @@ description: 了解如何使用 AEM as a Cloud Service 中的流量篩選器規�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18312
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
+exl-id: 53cb8996-4944-4137-a979-6cf86b088d42
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 100%
 
@@ -68,7 +69,7 @@ data:
 
 - 提交變更並將其推送至 Cloud Manager Git 存放庫。
 
-- 使用[先前建立的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定管線，將變更部署至 AEM 環境。
+- 使用[先前建立的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定管道，將變更部署至 AEM 環境。
 
 - 存取 WKND 網站的內部頁面 (例如 `https://publish-pXXXX-eYYYY.adobeaemcloud.com/content/wknd/internal/demo-page.html`) 或使用下方的 CURL 命令，進行規則測試：
 

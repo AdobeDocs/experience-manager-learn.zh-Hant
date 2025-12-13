@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 6fd93d3b-6d56-43c5-86e6-2e2685deecc9
 duration: 345
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -25,19 +25,19 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
-可以使用`rte`擴充點將自訂按鈕新增到內容片段編輯器中的&#x200B;**RTE工具列**。 這個範例說明如何新增名為&#x200B;_新增提示_&#x200B;的自訂按鈕到RTE工具列並修改RTE中的內容。
+可以使用&#x200B;**擴充點將自訂按鈕新增到內容片段編輯器中的** RTE工具列`rte`。 這個範例說明如何新增名為&#x200B;_新增提示_&#x200B;的自訂按鈕到RTE工具列並修改RTE中的內容。
 
-使用`rte`擴充點的`getCustomButtons()`方法，可以將一或多個自訂按鈕新增至&#x200B;**RTE工具列**。 也可以分別使用`getCoreButtons()`和`removeButtons)`方法新增或移除標準RTE按鈕，例如&#x200B;_複製、貼上、粗體和斜體_。
+使用`rte`擴充點的`getCustomButtons()`方法，可以將一或多個自訂按鈕新增至&#x200B;**RTE工具列**。 也可以分別使用&#x200B;_和_&#x200B;方法新增或移除標準RTE按鈕，例如`getCoreButtons()`複製、貼上、粗體和斜體`removeButtons)`。
 
-此範例顯示如何使用自訂&#x200B;_新增提示_&#x200B;工具列按鈕插入醒目提示的筆記或提示。 反白顯示的附註或提示內容透過HTML元素和相關聯的CSS類別套用特殊格式。 使用`getCustomButtons()`的`onClick()`回呼方法插入預留位置內容和HTML程式碼。
+此範例顯示如何使用自訂&#x200B;_新增提示_&#x200B;工具列按鈕插入醒目提示的筆記或提示。 反白顯示的附註或提示內容透過HTML元素和相關聯的CSS類別套用特殊格式。 使用`onClick()`的`getCustomButtons()`回呼方法插入預留位置內容和HTML程式碼。
 
 ## 擴充點
 
 此範例會延伸至擴充點`rte`，以將自訂按鈕新增至內容片段編輯器中的RTE工具列。
 
 | AEM UI已擴充 | 擴充點 |
-| ------------------------ | --------------------- | 
-| [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [&#x200B; RTF編輯器工具列](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
+| ------------------------ | --------------------- |
+| [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [ RTF編輯器工具列](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
 
 ## 範例擴充功能
 

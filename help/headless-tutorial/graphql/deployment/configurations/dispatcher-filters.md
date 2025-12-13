@@ -4,20 +4,20 @@ description: 瞭解如何設定AEM發佈Dispatcher篩選器，以搭配AEM Graph
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10829
 thumbnail: kt-10829.jpg
 exl-id: b76b7c46-5cbd-4039-8fd6-9f0f10a4a84f
 duration: 48
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 1%
+source-wordcount: '200'
+ht-degree: 3%
 
 ---
 
-# Dispatcher篩選器
+# Dispatcher 篩選器
 
 Adobe Experience Manager as a Cloud Service使用AEM發佈Dispatcher篩選器，以確保只有應送達AEM的請求才能送達AEM。 預設會拒絕所有要求，而且必須明確新增允許URL的模式。
 
@@ -33,11 +33,11 @@ Adobe Experience Manager as a Cloud Service使用AEM發佈Dispatcher篩選器，
 
 AEM發佈Dispatcher篩選器設定會定義允許到達AEM的URL模式，且必須包含AEM持續查詢端點的URL首碼。
 
-| 使用者端連線至 | AEM 作者 | AEM 發佈 | AEM預覽 |
+| 使用者端連線至 | AEM 作者 | AEM Publish | AEM預覽 |
 |------------------------------------------:|:----------:|:-------------:|:-------------:|
 | 需要Dispatcher篩選器設定 | ✘ | ✔ | ✔ |
 
-新增URL模式為`/graphql/execute.json/*`的`allow`規則，並確認檔案識別碼（例如`/0600`，在範例伺服器陣列檔案中是唯一的）。
+新增URL模式為`allow`的`/graphql/execute.json/*`規則，並確認檔案識別碼（例如`/0600`，在範例伺服器陣列檔案中是唯一的）。
 這可讓持續查詢端點收到HTTP GET要求，例如`HTTP GET /graphql/execute.json/wknd-shared/adventures-all`到AEM Publish。
 
 如果在您的AEM Headless體驗中使用體驗片段，請對這些路徑執行相同的操作。

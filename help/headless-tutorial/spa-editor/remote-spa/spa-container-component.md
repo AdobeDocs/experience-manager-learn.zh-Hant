@@ -3,7 +3,7 @@ title: 將可編輯的React容器元件新增至遠端SPA
 description: 瞭解如何將可編輯的容器元件新增至遠端SPA，讓AEM作者可將元件拖放至其中。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7635
 thumbnail: kt-7635.jpeg
@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
 duration: 306
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1112'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 若要將可編輯區域新增至「首頁」檢視：
 
 1. 開啟並編輯`react-app/src/components/Home.js`
-1. 從`@adobe/aem-react-editable-components`匯入`ResponsiveGrid`元件，並將其新增至`Home`元件。
+1. 從`ResponsiveGrid`匯入`@adobe/aem-react-editable-components`元件，並將其新增至`Home`元件。
 1. 在`<ResponsiveGrid...>`元件上設定下列屬性
    1. `pagePath = '/content/wknd-app/us/en/home'`
    1. `itemPath = 'root/responsivegrid'`
@@ -51,7 +51,7 @@ ht-degree: 0%
 
    1. `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
-   `itemPath`對應至`Remote SPA Page` AEM範本中定義的`responsivegrid`節點，且會在從`Remote SPA Page` AEM範本建立的新AEM頁面上自動建立。
+   `itemPath`對應至`responsivegrid` AEM範本中定義的`Remote SPA Page`節點，且會在從`Remote SPA Page` AEM範本建立的新AEM頁面上自動建立。
 
    更新`Home.js`以新增`<ResponsiveGrid...>`元件。
 
@@ -237,7 +237,7 @@ export default EditableImage;
 ```
 
 
-1. 建立提供`EditableImage.scss`自訂樣式的SCSS檔案`src/components/editable/EditableImage.scss`。 這些樣式以可編輯的React元件的CSS類別為目標。
+1. 建立提供`src/components/editable/EditableImage.scss`自訂樣式的SCSS檔案`EditableImage.scss`。 這些樣式以可編輯的React元件的CSS類別為目標。
 1. 將下列SCSS新增至`EditableImage.scss`
 
    ```css
@@ -248,7 +248,7 @@ export default EditableImage;
     }
    ```
 
-1. 在`EditableImage.js`中匯入`EditableImage.scss`
+1. 在`EditableImage.scss`中匯入`EditableImage.js`
 
    ```javascript
    ...
@@ -266,7 +266,7 @@ export default EditableImage;
 新建立的`EditableText`和`EditableImage` React元件已在SPA中參照，並根據AEM傳回的JSON動態具現化。 若要確保SPA可以使用這些元件，請在`Home.js`中為其建立匯入陳述式
 
 1. 在IDE中開啟SPA專案
-1. 開啟檔案`src/Home.js`
+1. 開啟檔案 `src/Home.js`。
 1. 新增`AEMText`和`AEMImage`的匯入陳述式
 
    ```javascript
@@ -364,7 +364,7 @@ SPA更新為內嵌`<ResponsiveGrid...>`、三個可編輯的React元件（`Edita
    ![配置元件](./assets/spa-container-component/layout-components.png)
 
 1. 在AEM頁面編輯器中&#x200B;__預覽__&#x200B;您的變更
-1. 重新整理在[http://localhost:3000](http://localhost:3000)本機執行的WKND應用程式以檢視編寫的變更！
+1. 重新整理在[http://localhost:3000](http://localhost:3000)本機執行的WKND應用程式，以檢視所編寫的變更！
 
    SPA中的![容器元件](./assets/spa-container-component/localhost-final.png)
 

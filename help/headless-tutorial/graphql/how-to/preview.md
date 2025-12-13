@@ -4,7 +4,7 @@ description: 瞭解如何使用內容片段預覽來預覽所有作者，以快�
 version: Experience Manager as a Cloud Service
 feature: Content Fragments
 topic: Headless, Content Management, Development
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2023-03-17T00:00:00Z
@@ -12,7 +12,7 @@ jira: KT-10841
 thumbnail: 3416906.jpeg
 exl-id: 247d40a3-ff67-4c1f-86bf-3794d7ce3e32
 duration: 463
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 AEM Headless應用程式支援整合式撰寫預覽。 預覽體驗會連結AEM作者的內容片段編輯器與您的自訂應用程式（可透過HTTP定址），允許應用程式的深層連結，以產生正在預覽的內容片段。
 
->[!VIDEO](https://video.tv.adobe.com/v/3449599?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
 
 若要使用內容片段預覽，必須符合數個條件：
 
@@ -76,7 +76,7 @@ AEM Headless應用程式支援整合式撰寫預覽。 預覽體驗會連結AEM�
 
 ## URL和路由
 
-用來預覽內容片段的URL或路由必須可以使用[URL運算式](#url-expressions)來撰寫。 在這個啟用預覽的WKND應用程式版本中，冒險內容片段會透過繫結至路由`/adventure<CONTENT FRAGMENT PATH>`的`AdventureDetail`元件顯示。 因此，WKND Adventure模型的預覽URL必須設定為`https://preview.app.wknd.site:3000/adventure${contentFragment.path}`才能解析為此路由。
+用來預覽內容片段的URL或路由必須可以使用[URL運算式](#url-expressions)來撰寫。 在這個啟用預覽的WKND應用程式版本中，冒險內容片段會透過繫結至路由`AdventureDetail`的`/adventure<CONTENT FRAGMENT PATH>`元件顯示。 因此，WKND Adventure模型的預覽URL必須設定為`https://preview.app.wknd.site:3000/adventure${contentFragment.path}`才能解析為此路由。
 
 只有當應用程式具有可定址的路由時，內容片段預覽才有作用，該路由可以填入[URL運算式](#url-expressions)，該運算式會以可預覽的方式在應用程式中呈現該內容片段。
 

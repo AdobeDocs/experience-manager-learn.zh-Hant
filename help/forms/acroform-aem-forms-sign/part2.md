@@ -1,13 +1,13 @@
 ---
 title: 使用AEM Forms的Acroforms
 description: 將Acroforms與AEM Forms整合的第2部分。 從Acroform建立結構描述。
-feature: adaptive-forms
+feature: Adaptive Forms
 doc-type: Tutorial
 version: Experience Manager 6.5
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 34
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%

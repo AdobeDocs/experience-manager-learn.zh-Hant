@@ -4,16 +4,16 @@ description: 瞭解伺服器對伺服器AEM Headless部署的部署考量事項�
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10798
 thumbnail: kt-10798.jpg
 exl-id: d4ae08d9-dc43-4414-ab75-26853186a301
 duration: 48
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 1%
+source-wordcount: '228'
+ht-degree: 5%
 
 ---
 
@@ -27,7 +27,7 @@ AEM Headless伺服器對伺服器部署涉及伺服器端應用程式或程式�
 
 伺服器對伺服器應用程式部署必須具備下列部署設定。
 
-| 伺服器對伺服器應用程式連線到→ | AEM 作者 | AEM 發佈 | AEM預覽 |
+| 伺服器對伺服器應用程式連線到→ | AEM 作者 | AEM Publish | AEM預覽 |
 |---------------------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher篩選器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨原始資源共用(CORS) | ✘ | ✘ | ✘ |
@@ -37,7 +37,7 @@ AEM Headless伺服器對伺服器部署涉及伺服器端應用程式或程式�
 
 對AEM GraphQL API的授權要求通常會發生在伺服器對伺服器應用程式的內容中，因為其他應用程式型別（例如[單頁應用程式](./spa.md)、[行動裝置](./mobile.md)或[網頁元件](./web-component.md)）通常會使用授權，因為很難保護認證。
 
-向AEM as a Cloud Service授權請求時，請使用[服務認證型權杖驗證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=zh-Hant)。 若要進一步瞭解如何向AEM as a Cloud Service驗證請求，請檢閱[權杖型驗證教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hant)。 本教學課程會探索使用[AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html?lang=zh-Hant)的權杖式驗證，但相同的概念與方法適用於與AEM Headless GraphQL API互動的應用程式。
+向AEM as a Cloud Service授權請求時，請使用[服務認證型權杖驗證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html)。 若要進一步瞭解如何向AEM as a Cloud Service驗證請求，請檢閱[權杖型驗證教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)。 本教學課程會探索使用[AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)的權杖式驗證，但相同的概念與方法適用於與AEM Headless GraphQL API互動的應用程式。
 
 ## 範例伺服器對伺服器應用程式
 

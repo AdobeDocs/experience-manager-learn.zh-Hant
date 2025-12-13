@@ -3,7 +3,7 @@ title: 將可編輯的元件新增至遠端SPA的動態路由
 description: 瞭解如何將可編輯的元件新增至遠端SPA中的動態路由。
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7636
 thumbnail: kt-7636.jpeg
@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
 duration: 202
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 在前兩章中，我們將可編輯的元件內容從SPA的「首頁」檢視對應至AEM中位於`/content/wknd-app/us/en/`的對應遠端SPA根頁面。
 
-為SPA動態路由的可編輯元件定義對應類似，但是我們必須在路由執行個體與AEM頁面之間採取1:1對應配置。
+為SPA動態路由的可編輯元件定義對應類似，但是我們必須在路由的執行個體與AEM頁面之間建立1:1對應配置。
 
 在本教學課程中，我們會使用WKND冒險內容片段的名稱（此為路徑的最後一個區段），並將其對應至`/content/wknd-app/us/en/adventure`下的簡單路徑。
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ## 遠端SPA對應
 
-離開遠端SPA之要求的對應是透過[Bootstrap &#x200B;](./spa-bootstrap.md)中完成的`setupProxy`設定所設定。
+離開遠端SPA之要求的對應是透過`setupProxy`Bootstrap [中完成的](./spa-bootstrap.md)設定所設定。
 
 ## SPA編輯器對應
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 ## 更新WKND應用程式
 
-讓我們將在[最後一個章節](./spa-container-component.md)中建立的`<ResponsiveGrid...>`元件放入`AdventureDetail` SPA元件中，建立可編輯的容器。
+讓我們將在`<ResponsiveGrid...>`最後一個章節[中建立的](./spa-container-component.md)元件放入`AdventureDetail` SPA元件中，建立可編輯的容器。
 
 ### 放置ResponsiveGrid SPA元件
 

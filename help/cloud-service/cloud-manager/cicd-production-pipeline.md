@@ -7,11 +7,11 @@ kt: 6872, 6875
 thumbnail: 26317.jpg
 topic: Architecture
 feature: Cloud Manager, CI-CD Pipeline
-role: Architect, Developer, Admin
+role: Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
 duration: 408
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 53%
@@ -29,12 +29,12 @@ ht-degree: 53%
 
 ## 設定
 
-[CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html?lang=zh-Hant)設定會定義將起始管道的觸發程式、控制生產部署的引數以及效能測試引數。
+[CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html)設定會定義將起始管道的觸發程式、控制生產部署的引數以及效能測試引數。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### 管道執行
 
-[CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=zh-Hant)可用來建置程式碼，並透過Stage部署至生產環境，減少值所需的時間。
+[CI/CD生產管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html)可用來建置程式碼，並透過Stage部署至生產環境，減少值所需的時間。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)

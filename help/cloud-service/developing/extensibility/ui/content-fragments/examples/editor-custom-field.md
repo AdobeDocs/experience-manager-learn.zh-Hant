@@ -11,7 +11,7 @@ last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
 exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
-source-git-commit: be710750cd6f2c71fa6b5eb8a6309d5965d67c82
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 瞭解如何在AEM內容片段編輯器中建立自訂欄位。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437645?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
 AEM UI擴充功能應使用[Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html)架構進行開發，因為這樣可與AEM其他部分維持一致的外觀與風格，並且擁有預先建立的廣泛功能庫，可減少開發時間。
 
@@ -31,7 +31,7 @@ AEM UI擴充功能應使用[Adobe React Spectrum](https://react-spectrum.adobe.c
 此範例以自訂實施取代內容片段編輯器中的現有欄位。
 
 | AEM UI已擴充 | 擴充點 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [自訂表單元素轉譯](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/) |
 
 ## 範例擴充功能

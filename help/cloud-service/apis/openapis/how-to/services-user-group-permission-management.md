@@ -4,7 +4,7 @@ description: 瞭解如何在AEM as a Cloud Service中管理產品設定檔和服
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Beginner
 doc-type: Article
 jira: KT-17429
@@ -12,7 +12,7 @@ thumbnail: KT-17429.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 3230a8e7-6342-4497-9163-1898700f29a4
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 - 提交變更並將其推播到存放庫。
 
-- 使用[Cloud Manager完整棧疊管道](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)將變更部署到AEM執行個體。
+- 使用[Cloud Manager完整棧疊管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)將變更部署到AEM執行個體。
 
 - 您也可以使用&#x200B;**許可權**&#x200B;檢視來驗證使用者群組的許可權。 導覽至AEM執行個體中的&#x200B;**工具** > **安全性** > **許可權**。
 

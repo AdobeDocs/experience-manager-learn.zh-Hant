@@ -4,7 +4,7 @@ description: 瞭解如何在AEM as a Cloud Service的CDN中啟用HTTP回應的�
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2023-11-17T00:00:00Z
@@ -12,10 +12,10 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 544c3230-6eb6-4f06-a63c-f56d65c0ff4b
 duration: 174
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 0%
+source-wordcount: '631'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ![預設快取行為](../assets/how-to/aem-publish-default-cache-headers.png){width="800" zoomable="yes"}
 
-檢閱[AEM Publish — 預設快取存留期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html?lang=zh-Hant#cdn-cache-life)和[AEM Author — 預設快取存留期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?lang=zh-Hant&#default-cache-life)以取得詳細資訊。
+檢閱[AEM Publish — 預設快取存留期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html#cdn-cache-life)和[AEM Author — 預設快取存留期](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?#default-cache-life)以取得詳細資訊。
 
 總而言之，AEM as a Cloud Service會在AEM Publish中快取大部分的內容型別(HTML、JSON、JS、CSS和Assets)，並在AEM Author中快取少數內容型別(JS、CSS)。
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 以下摘要說明每個&#x200B;**標頭**&#x200B;的用途以及適用於標頭的&#x200B;**屬性**。
 
-|                     | 網頁瀏覽器 | CDN | 描述 |
+|                     | 網頁瀏覽器 | CDN | 說明 |
 |---------------------|:-----------:|:---------:|:-----------:|
 | Cache-Control | ✔ | ✔ | 此標題會控制網頁瀏覽器和CDN快取存留期。 |
 | Surrogate-Control | ✘ | ✔ | 此標題會控制CDN快取壽命。 |
@@ -98,8 +98,8 @@ ht-degree: 0%
    </LocationMatch>
    ```
 
-   `dispatcher/src/conf.d/enabled_vhosts`目錄中的vhost檔案是`dispatcher/src/conf.d/available_vhosts`目錄中檔案的&#x200B;**symlink**，因此請務必建立symlink （若不存在）。
-1. 使用[Cloud Manager - Web層設定管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=zh-Hant&#web-tier-config-pipelines)或[RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=zh-Hant#deploy-apache-or-dispatcher-configuration)，將vhost變更部署到所需的AEM as a Cloud Service環境。
+   `dispatcher/src/conf.d/enabled_vhosts`目錄中的vhost檔案是&#x200B;**目錄中檔案的** symlink`dispatcher/src/conf.d/available_vhosts`，因此請務必建立symlink （若不存在）。
+1. 使用[Cloud Manager - Web層設定管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines)或[RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration)，將vhost變更部署到所需的AEM as a Cloud Service環境。
 
 不過，若要讓網頁瀏覽器和CDN快取存留期的值不同，您可以使用上述範例中的`Surrogate-Control`標頭。 同樣地，若要在特定日期和時間讓快取到期，您可以使用`Expires`標頭。 此外，使用`stale-while-revalidate`和`stale-if-error`屬性，您可以控制回應內容的過時狀態處理。 AEM WKND專案有[參考過時狀態處理](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L150-L155) CDN快取設定。
 

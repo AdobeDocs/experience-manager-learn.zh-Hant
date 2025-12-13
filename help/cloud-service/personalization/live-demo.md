@@ -4,13 +4,13 @@ description: WKND啟用網站上使用中的體驗個人化作業，包含A/B測
 version: Experience Manager as a Cloud Service
 feature: Personalization, Integrations
 topic: Personalization, Integrations
-role: Developer, Architect, Leader, User
+role: Developer, Leader, User
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2025-11-03T00:00:00Z
 jira: KT-19546
 thumbnail: KT-19546.jpeg
-source-git-commit: ed7af09d747d54a84d2583073d3c731388b5f516
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 請造訪[WKND啟用網站](https://wknd.enablementadobe.com/us/en.html){target="wknd"}，以檢視A/B測試、行為目標定位和已知使用者個人化的真實範例。
 
->[!VIDEO](https://video.tv.adobe.com/v/3476472/?captions=chi_hant&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476461/?learn=on&enablevpops)
 
 此頁面會引導您逐步示範每個個人化案例。 在您自己的AEM網站上建置這些功能之前，請先使用它來探索可行的方案。
 

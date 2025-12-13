@@ -4,17 +4,17 @@ description: 瞭解AEM as a Cloud Service的進階網路選項。
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Integrations, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9354
 thumbnail: KT-9354.png
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
 duration: 85
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 2%
+source-wordcount: '420'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 AEM as a Cloud Service提供進階網路功能，可精確管理與AEM as a Cloud Service程式的連線。
 
-|                                                   | [生產計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html?lang=zh-Hant) | [沙箱方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html?lang=zh-Hant) |
+|                                                   | [生產計畫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [沙箱方案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
 |---------------------------------------------------|:-----------------------:|:---------------------:|
 | 支援進階網路 | ✔ | ✘ |
 
@@ -37,7 +37,7 @@ AEM的進階網路功能包含三個選項，用於管理與外部服務的連�
 | [__虛擬私人網路__](./vpn.md) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 
-如需有關選取適當進階網路型別時涉及之考量的詳細資訊，請參閱[進階網路檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html?lang=zh-Hant)。
+如需有關選取適當進階網路型別時涉及之考量的詳細資訊，請參閱[進階網路檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html)。
 
 ## 進階網路教學課程
 
@@ -46,7 +46,7 @@ AEM的進階網路功能包含三個選項，用於管理與外部服務的連�
 <table>
   <tr>
    <td>
-      <a  href="./flexible-port-egress.md"><img alt="彈性的連接埠輸出" src="./assets/flexible-port-egress.png"/></a>
+      <a  href="./flexible-port-egress.md"><img alt="彈性連接埠輸出" src="./assets/flexible-port-egress.png"/></a>
       <div><strong><a href="./flexible-port-egress.md">彈性連線埠輸出</a></strong></div>
       <p>
           允許非標準連線埠上的輸出AEM as a Cloud Service流量。
@@ -106,15 +106,15 @@ AEM的進階網路功能包含三個選項，用於管理與外部服務的連�
       </p>
     </td>   
     <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html?lang=zh-Hant"><img alt="套用IP允許清單" src="./assets/code_examples__vpn-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html?lang=zh-Hant">套用IP允許清單</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="套用IP允許清單" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">套用IP允許清單</a></strong></div>
       <p>
             設定IP允許清單，以便只有VPN流量可以存取AEM。
       </p>
     </td>
    <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html?lang=zh-Hant#restrict-vpn-to-ingress-connections"><img alt="AEM發佈的路徑型VPN存取限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html?lang=zh-Hant#restrict-vpn-to-ingress-connections">AEM Publish的路徑型VPN存取限制</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="AEM發佈的路徑型VPN存取限制" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">AEM Publish的路徑型VPN存取限制</a></strong></div>
       <p>
             AEM Publish上的特定路徑需要VPN存取權。
       </p>

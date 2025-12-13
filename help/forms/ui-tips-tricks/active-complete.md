@@ -11,7 +11,7 @@ jira: KT-9359
 exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 68
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 21%
@@ -24,10 +24,10 @@ ht-degree: 21%
 
 ![工具列間距](assets/active-completed.png)
 
-## 建立最適化表單
+## 建立自適應表單
 
 範例表單是使用以基本範本和畫布3.0主題為基礎的簡單調適型表單來建立。
-可以從這裡下載此文章[&#128279;](assets/icons.zip)中使用的圖示。
+可以從這裡下載此文章[中使用的](assets/icons.zip)圖示。
 
 
 ## 設定預設狀態的樣式

@@ -1,10 +1,10 @@
 ---
-title: AEM作者服務快取
+title: AEM Author 服務快取
 description: AEM as a Cloud Service Author服務快取的一般概觀。
 version: Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Performance
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Article
 last-substantial-update: 2023-08-28T00:00:00Z
@@ -12,10 +12,10 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: b8e09820-f1f2-4897-b454-16c0df5a0459
 duration: 56
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '281'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -35,7 +35,7 @@ AEM Author服務使用CDN，但其目的在於增強產品資源的傳送，且�
 
 AEM Author CDN位於一般使用者（通常是行銷人員或內容作者）和AEM Author之間。 它會快取不可變檔案，例如支援AEM製作體驗的靜態資產，而非製作內容。
 
-AEM Author的CDN確實快取了多種可能值得關注的資源型別，包括對持續性查詢[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant&author-instances)的[可自訂TTL，以及對自訂使用者端資料庫](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#client-side-libraries)的長TTL。
+AEM Author的CDN確實快取了多種可能值得關注的資源型別，包括對持續性查詢[的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances)可自訂TTL，以及對自訂使用者端資料庫[的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries)長TTL。
 
 ### 預設快取存留期
 
@@ -43,9 +43,9 @@ AEM Author的CDN確實快取了多種可能值得關注的資源型別，包括�
 
 | 內容類型 | 預設CDN快取期限 |
 |:------------ |:---------- |
-| [持續查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=zh-Hant&author-instances) | 1 分鐘 |
-| [使用者端資料庫(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#client-side-libraries) | 30 天 |
-| [其他所有專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=zh-Hant#other-content) | 未快取 |
+| [持續查詢(JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances) | 1 分鐘 |
+| [使用者端資料庫(JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 天 |
+| [其他所有專案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | 未快取 |
 
 
 ## AEM Dispatcher

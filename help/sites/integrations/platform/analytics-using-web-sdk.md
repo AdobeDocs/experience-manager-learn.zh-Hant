@@ -4,20 +4,20 @@ description: 使用現代的Platform Web SDK方法整合AEM Sites和Adobe Analyt
 version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
-role: Admin, Architect, Data Architect, Developer
+role: Admin, Developer
 level: Beginner, Intermediate
 doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
 badgeIntegration: label="整合" type="positive"
-badgeVersions: label="AEM Sites as a Cloud Service， AEM Sites 6.5" before-title="false"
+badgeVersions: label="AEM Sites as a Cloud Service、AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1529'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 0%
 
 ## 概觀
 
-瞭解使用者行為是每個行銷團隊的重要目標。 透過瞭解使用者如何與其內容互動，團隊可以做出明智的決策、最佳化策略並帶來更好的結果。 WKND行銷團隊是虛構的實體，已著眼於在其網站上實作Adobe Analytics以實現此目標。 主要目標是收集兩個關鍵量度的資料：頁面檢視和首頁行動號召(CTA)點按。
+瞭解使用者行為是每個行銷團隊的重要目標。 透過瞭解使用者如何與其內容互動，團隊可以做出明智的決策、最佳化策略並帶來更好的結果。 WKND行銷團隊是虛構的實體，已著眼於在其網站上實作Adobe Analytics以實現此目標。 主要目標是收集兩個關鍵量度的資料：頁面檢視和首頁call-to-action (CTA)點按。
 
-透過追蹤頁面檢視，團隊能夠分析哪些頁面最受使用者關注。 此外，追蹤首頁CTA點按次數可針對團隊召喚行動元素的成效提供寶貴的見解。 此資料可能會揭示哪些CTA正在與使用者產生共鳴、哪些需要調整，並可能發掘提升使用者參與度並促進轉換的新機會。
+透過追蹤頁面檢視，團隊能夠分析哪些頁面最受使用者關注。 此外，追蹤首頁CTA點按次數可針對團隊call-to-action元素的成效提供寶貴見解。 此資料可能會揭示哪些CTA正在與使用者產生共鳴、哪些需要調整，並可能發掘提升使用者參與度並促進轉換的新機會。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419872?quality=12&learn=on)
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 如果您沒有必要的許可權，使用[Adobe Admin Console](https://adminconsole.adobe.com/)的系統管理員可以授與必要的許可權。
 
-使用Platform Web SDK來探討AEM與Analytics的整合程式之前，請&#x200B;_回顧在[整合Experience Platform Web SDK](./web-sdk.md)教學課程中建立的基本元件和關鍵元素_。 為整合提供堅實的基礎。
+使用Platform Web SDK來探討AEM與Analytics的整合程式之前，請&#x200B;_回顧在_&#x200B;整合Experience Platform Web SDK[教學課程中建立的基本元件和關鍵元素](./web-sdk.md)。 為整合提供堅實的基礎。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419873?quality=12&learn=on)
 
@@ -76,7 +76,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-如需有關SDR檔案中應包含的概念和各種元素的詳細資訊，請造訪[建立和維護解決方案設計參考(SDR)檔案](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html?lang=zh-Hant)。 您也可以下載範例Excel範本，不過[此處](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx)也提供WKND特定版本。
+如需有關SDR檔案中應包含的概念和各種元素的詳細資訊，請造訪[建立和維護解決方案設計參考(SDR)檔案](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html)。 您也可以下載範例Excel範本，不過[此處](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx)也提供WKND特定版本。
 
 ## 設定Analytics — 報表套裝、Analysis Workspace
 
@@ -90,10 +90,10 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 若要進一步瞭解Analytics設定和概念，強烈建議使用下列資源：
 
-+ [報告套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html?lang=zh-Hant)
-+ [轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=zh-Hant)
-+ [個成功事件](https://experienceleague.adobe.com/zh-hant/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
-+ [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=zh-Hant)
++ [報告套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html)
++ [轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)
++ [個成功事件](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
++ [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)
 
 ## 更新資料流 — 新增Analytics服務
 
@@ -214,7 +214,7 @@ SDR檔案提供實施計畫的全面概觀，確保所有利害關係人一致�
 
 +++
 
-如需整合AEM核心元件與Adobe Client Data Layer的詳細資訊，請參閱[搭配使用Adobe Client Data Layer與AEM核心元件指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=zh-Hant)。
+如需整合AEM核心元件與Adobe Client Data Layer的詳細資訊，請參閱[搭配使用Adobe Client Data Layer與AEM核心元件指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)。
 
 
 >[!INFO]
@@ -273,9 +273,9 @@ Analysis Workspace是Adobe Analytics中的強大工具，可讓您以靈活且�
 
 ## 其他資源
 
-+ [整合Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html?lang=zh-Hant)
-+ [搭配核心元件使用Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=zh-Hant)
-+ [整合Experience Platform資料收集標籤和AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=zh-Hant)
-+ [Adobe Experience Platform Web SDK和Edge Network概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html?lang=zh-Hant)
-+ [資料彙集教學課程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html?lang=zh-Hant)
-+ [Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=zh-Hant)
++ [整合Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
++ [搭配核心元件使用Adobe使用者端資料層](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
++ [整合Experience Platform資料收集標籤和AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
++ [Adobe Experience Platform Web SDK和Edge Network概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
++ [資料彙集教學課程](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
++ [Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

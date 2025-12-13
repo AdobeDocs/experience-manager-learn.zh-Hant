@@ -4,17 +4,17 @@ description: 瞭解如何設定及使用專用輸出IP位址，此位址允許�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
-source-git-commit: 24d634fd1e62e873bc1dbb3ac0cd18f70129ee86
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1370'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -30,7 +30,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 >[!MORELIKETHIS]
 >
-> 如需專用輸出IP位址的詳細資訊，請參閱AEM as a Cloud Service [進階網路組態檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+> 如需專用輸出IP位址的詳細資訊，請參閱AEM as a Cloud Service [進階網路組態檔案](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 ## 先決條件
 
@@ -44,7 +44,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 + Cloud Manager計畫ID
 + Cloud Manager環境ID
 
-如需詳細資訊，[請檢閱如何設定、設定和取得Cloud Manger API認證](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用這些認證進行Cloud Manager API呼叫。
+如需詳細資訊，[請檢閱如何設定、設定和取得Cloud Manger API認證](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth)，以使用這些認證進行Cloud Manager API呼叫。
 
 本教學課程使用`curl`來進行Cloud Manager API設定。 提供的`curl`命令採用Linux/macOS語法。 如果使用Windows命令提示字元，請將`\`分行符號取代為`^`。
 
@@ -86,7 +86,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 1. 首先，使用Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業，判斷需要進階網路的地區。 進行後續Cloud Manager API呼叫需要`region name`。 通常會使用生產環境所在的區域。
 
-   在[環境的詳細資料](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)底下的[Cloud Manager](https://my.cloudmanager.adobe.com)中尋找您的AEM as a Cloud Service環境地區。 Cloud Manager中顯示的地區名稱可以[對應到Cloud Manager API中使用的地區代碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments)。
+   在[環境的詳細資料](https://my.cloudmanager.adobe.com)底下的[Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments)中尋找您的AEM as a Cloud Service環境地區。 Cloud Manager中顯示的地區名稱可以[對應到Cloud Manager API中使用的地區代碼](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments)。
 
    __listRegions HTTP要求__
 
@@ -98,7 +98,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
        -H 'Content-Type: application/json' 
    ```
 
-2. 使用Cloud Manager API [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業，為Cloud Manager程式啟用專用輸出IP位址。 使用從Cloud Manager API `listRegions`作業取得的適當`region`程式碼。
+2. 使用Cloud Manager API [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業，為Cloud Manager程式啟用專用輸出IP位址。 使用從Cloud Manager API `region`作業取得的適當`listRegions`程式碼。
 
    __createNetworkInfrastructure HTTP要求__
 
@@ -113,7 +113,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
    等待15分鐘，讓Cloud Manager程式布建網路基礎結構。
 
-3. 檢查程式是否已使用Cloud Manager API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure)作業，使用先前步驟中從`createNetworkInfrastructure` HTTP要求傳回的`id`，完成&#x200B;__專用輸出IP位址__&#x200B;設定。
+3. 檢查程式是否已使用Cloud Manager API __getNetworkInfrastructure__&#x200B;作業，使用先前步驟中從[ HTTP要求傳回的](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure)，完成`id`專用輸出IP位址`createNetworkInfrastructure`設定。
 
    __getNetworkInfrastructure HTTP要求__
 
@@ -134,7 +134,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 ## 為每個環境設定專用輸出IP位址代理
 
-1. 使用Cloud Manager API [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業，在每個AEM as a Cloud Service環境中設定&#x200B;__專用輸出IP位址__&#x200B;設定。
+1. 使用Cloud Manager API __enableEnvironmentAdvancedNetworkingConfiguration__&#x200B;作業，在每個AEM as a Cloud Service環境中設定[專用輸出IP位址](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)設定。
 
    __enableEnvironmentAdvancedNetworkingConfiguration HTTP要求__
 
@@ -196,7 +196,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 1. 可以使用Cloud Manager API [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)作業更新專用輸出IP位址設定。 請記住，`enableEnvironmentAdvancedNetworkingConfiguration`是`PUT`作業，因此每次呼叫此作業時，都必須提供所有規則。
 
-1. 在主機`p{programId}.external.adobeaemcloud.com`上使用DNS解析程式（例如[DNSChecker.org](https://dnschecker.org/)），或從命令列執行`dig`，取得&#x200B;__專用輸出IP位址__。
+1. 在主機&#x200B;__上使用DNS解析程式（例如__ DNSChecker.org[），或從命令列執行](https://dnschecker.org/)，取得`p{programId}.external.adobeaemcloud.com`專用輸出IP位址`dig`。
 
    ```shell
    $ dig +short p{programId}.external.adobeaemcloud.com
@@ -221,7 +221,7 @@ Cloud Manager程式只能有&#x200B;__單一__&#x200B;網路基礎結構型別�
 
 >[!TIP]
 >
-> 請參閱AEM as a Cloud Service的專用輸出IP位址檔案，以取得[完整的路由規則集](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
+> 請參閱AEM as a Cloud Service的專用輸出IP位址檔案，以取得[完整的路由規則集](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking)。
 
 
 ### HTTP/HTTPS

@@ -10,7 +10,7 @@ level: Intermediate
 exl-id: 1f13d82e-c1d0-4c8c-8468-b4a4c5897c71
 last-substantial-update: 2021-02-09T00:00:00Z
 duration: 239
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -21,7 +21,9 @@ ht-degree: 0%
 
 從AEM Forms 6.4開始，我們現在能使用表單資料模型服務做為AEM工作流程的一部分。 以下影片會逐步介紹在AEM工作流程中設定表單資料模型步驟所需的步驟
 
->此影片中示範的功能需要AEM Forms 6.5.1
+>[!NOTE]
+>
+>本影片所展示的功能需要AEM Forms 6.5.1
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28145?quality=12&learn=on)
@@ -39,4 +41,5 @@ ht-degree: 0%
 * 開啟[MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled)。 填寫詳細資料並提交。 在表單提交時，會觸發[借出應用程式工作流程](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html)。
 
 ![工作流程](assets/invokefdm651.PNG)。
+
 如果信用分數超過500，工作流程會利用「或分割」元件，將應用程式路由給管理員。 如果信用分數小於500，則會將應用程式傳送至cavery。

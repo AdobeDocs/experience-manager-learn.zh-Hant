@@ -4,15 +4,15 @@ description: 瞭解如何使用AEM的JDBC DataSourcePool和輸出連線埠，從
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
 duration: 117
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
@@ -35,8 +35,8 @@ ht-degree: 0%
 
 OSGi設定的連線字串使用：
 
-+ 透過[OSGi設定環境變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]`將`AEM_PROXY_HOST`值作為連線的主機
-+ `30001`是Cloud Manager連線埠轉寄對應`30001`→`mysql.example.com:3306`的`portOrig`值
++ 透過`AEM_PROXY_HOST`OSGi設定環境變數[ ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values)將`$[env:AEM_PROXY_HOST;default=proxy.tunnel]`值作為連線的主機
++ `30001`是Cloud Manager連線埠轉寄對應`portOrig`→`30001`的`mysql.example.com:3306`值
 
 由於密碼不得儲存在程式碼中，因此最好透過OSGi設定變數、使用AIO CLI或Cloud Manager API來設定SQL連線的使用者名稱和密碼。
 
@@ -61,7 +61,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 ## 程式碼範例
 
 此Java™程式碼範例屬於OSGi服務，透過AEM的DataSourcePool OSGi服務連線至外部MySQL資料庫。
-DataSourcePool OSGi Factory設定接著會指定透過[enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)作業中的`portForwards`規則對應到外部主機和連線埠`mysql.example.com:3306`的連線埠(`30001`)。
+DataSourcePool OSGi Factory設定接著會指定透過`30001`enableEnvironmentAdvancedNetworkingConfiguration`portForwards`作業中的[規則對應到外部主機和連線埠](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration)的連線埠(`mysql.example.com:3306`)。
 
 ```json
 ...

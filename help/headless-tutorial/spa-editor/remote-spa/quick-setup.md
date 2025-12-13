@@ -3,7 +3,7 @@ title: 快速設定SPA編輯器和遠端SPA
 description: 瞭解如何在15分鐘內啟動並執行遠端SPA和AEM SPA Editor！
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7629
 thumbnail: 333181.jpg
@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
 duration: 647
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '730'
 ht-degree: 10%
 
 ---
@@ -79,21 +79,21 @@ AEM SDK會在[http://localhost:4502](http://localhost:4502)上啟動並自動啟
 此教學課程依存於&#x200B;__WKND 2.1.0+的__&#x200B;專案（針對內容）。
 
 1. [下載最新版本的`aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
-1. 使用`admin`認證登入[http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)的AEM SDK封裝管理員。
+1. 使用[認證登入:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin`的AEM SDK封裝管理員。
 1. __上傳__&#x200B;在步驟1中下載的`aem-guides-wknd.all.x.x.x.zip`
-1. 點選專案`aem-guides-wknd.all-x.x.x.zip`的&#x200B;__安裝__&#x200B;按鈕
+1. 點選專案&#x200B;__的__&#x200B;安裝`aem-guides-wknd.all-x.x.x.zip`按鈕
 
 ## 下載及安裝WKND應用程式SPA套件
 
 為了執行快速設定，我們在此提供AEM套件，其中包含教學課程的最終AEM設定和內容。
 
-1. [下載 &#x200B;](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [下載 &#x200B;](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
-1. 使用`admin`認證登入[http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr)的AEM SDK封裝管理員。
+1. [下載 ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [下載 ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
+1. 使用[認證登入:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin`的AEM SDK封裝管理員。
 1. __上傳__&#x200B;在步驟1中下載的`wknd-app.all.x.x.x.zip`
-1. 點選專案`wknd-app.all.x.x.x.zip`的&#x200B;__安裝__&#x200B;按鈕
+1. 點選專案&#x200B;__的__&#x200B;安裝`wknd-app.all.x.x.x.zip`按鈕
 1. __上傳__&#x200B;在步驟2中下載的`wknd-app.ui.content.sample.x.x.x.zip`
-1. 點選專案`wknd-app.ui.content.sample.x.x.x.zip`的&#x200B;__安裝__&#x200B;按鈕
+1. 點選專案&#x200B;__的__&#x200B;安裝`wknd-app.ui.content.sample.x.x.x.zip`按鈕
 
 ## 下載WKND應用程式來源
 
@@ -131,7 +131,7 @@ $ npm run start
 
 在編寫內容之前，請安排瀏覽器視窗，讓AEM Author (`http://localhost:4502`)在左側，遠端SPA (`http://localhost:3000`)在右側。 這種排列方式可讓您檢視對AEM來源內容的變更如何立即反映在SPA中。
 
-1. 以`admin`身分登入[AEM SDK作者服務](http://localhost:4502)
+1. 以[身分登入](http://localhost:4502)AEM SDK作者服務`admin`
 1. 導覽至&#x200B;__網站> WKND應用程式>我們> en__
 1. 編輯&#x200B;__WKND應用程式首頁__
 1. 切換至&#x200B;__編輯__&#x200B;模式

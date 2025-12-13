@@ -10,14 +10,14 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 duration: 379
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 0%
 
 ---
 
-# 組態檔說明
+# 設定檔案說明
 
 [目錄](./overview.md)
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## conf.d/中包含的檔案
 
-| 檔案 | 檔案目的地 | 描述 |
+| 檔案 | 檔案目的地 | 說明 |
 | ---- | ---------------- | ----------- |
 | 檔案名稱`.conf` | `/etc/httpd/conf.d/` | 預設的Enterprise Linux安裝會使用此副檔名並包含資料夾，作為覆寫httpd.conf中宣告之設定的位置，並可讓您在Apache中的全域層級新增其他功能。 |
 | 檔案名稱`.vhost` | 分段： `/etc/httpd/conf.d/available_vhosts/`<br>作用中： `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><b>注意：</b> .vhost檔案不會複製到enabled_vhosts資料夾，但會使用符號連結指向available_vhosts/\*.vhost檔案的相對路徑</u><br><br> | \*.vhost （虛擬主機）檔案為`<VirtualHosts>`  比對主機名稱的專案，並允許Apache使用不同規則處理每個網域流量。 從`.vhost`檔案中，將會包含其他檔案，例如`rewrites`、`whitelisting`、`etc`。 |
@@ -40,10 +40,10 @@ ht-degree: 0%
 
 ## conf.dispatcher.d/中包含的檔案
 
-| 檔案 | 檔案目的地 | 描述 |
+| 檔案 | 檔案目的地 | 說明 |
 | --- | --- | --- |
 | 檔案名稱`.any` | `/etc/httpd/conf.dispatcher.d/` | AEM Dispatcher Apache模組從`*.any`個檔案取得其設定。 預設的父包含檔案為`conf.dispatcher.d/dispatcher.any` |
-| 檔案名稱`_farm.any` | 已暫存： `/etc/httpd/conf.dispatcher.d/available_farms/`<br>使用中： `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>注意：</b>這些伺服器陣列檔案不會複製到`enabled_farms`資料夾，但使用`symlinks`到`available_farms/*_farm.any`檔案<br/>`*_farm.any`的相對路徑，這些檔案包含在`conf.dispatcher.d/dispatcher.any`檔案中。 這些父伺服器陣列檔案可用來控制每個轉譯器或網站型別的模組行為。 在`available_farms`目錄中建立檔案，並在`enabled_farms`目錄中啟用`symlink`。  <br/>它會從`dispatcher.any`檔案依名稱自動包含這些專案。<br/><b>基準</b>伺服器陣列檔案以`000_`開頭，以確定它們會先載入。<br><b>自訂</b>伺服器陣列檔案應該在`100_`開始編號配置之後載入，以確保適當的包含行為。 |
+| 檔案名稱`_farm.any` | 已暫存： `/etc/httpd/conf.dispatcher.d/available_farms/`<br>使用中： `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>注意：</b>這些伺服器陣列檔案不會複製到`enabled_farms`資料夾，但使用`symlinks`到`available_farms/*_farm.any`檔案<br/>`*_farm.any`的相對路徑，這些檔案包含在`conf.dispatcher.d/dispatcher.any`檔案中。 這些父伺服器陣列檔案可用來控制每個轉譯器或網站型別的模組行為。 在`available_farms`目錄中建立檔案，並在`symlink`目錄中啟用`enabled_farms`。  <br/>它會從`dispatcher.any`檔案依名稱自動包含這些專案。<br/><b>基準</b>伺服器陣列檔案以`000_`開頭，以確定它們會先載入。<br><b>自訂</b>伺服器陣列檔案應該在`100_`開始編號配置之後載入，以確保適當的包含行為。 | |
 | 檔案名稱`_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any`個檔案包含在`conf.dispatcher.d/enabled_farms/*_farm.any`個檔案中。 每個陣列都有一組規則，可變更應該篩選掉的流量，而不會讓轉譯器得逞。 |
 | 檔案名稱`_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any`個檔案包含在`conf.dispatcher.d/enabled_farms/*_farm.any`個檔案中。 這些檔案是主機名稱或URI路徑的清單，將透過blob比對來判斷要使用哪個轉譯器為該請求提供服務 |
 | 檔案名稱`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any`個檔案包含在`conf.dispatcher.d/enabled_farms/*_farm.any`個檔案中。 這些檔案指定快取和不快取的專案 |
@@ -143,7 +143,7 @@ IncludeOptional conf.d/*.conf
 LoadModule dispatcher_module modules /mod_dispatcher .so
 ```
 
-若要在`<VirtualHost />`中使用模組，我們將設定檔拖放至名為`dispatcher_vhost.conf`的`/etc/httpd/conf.d/`中，在此檔案中，您會看到使用設定模組運作所需的基本引數：
+若要在`<VirtualHost />`中使用模組，我們將設定檔拖放至名為`/etc/httpd/conf.d/`的`dispatcher_vhost.conf`中，在此檔案中，您會看到使用設定模組運作所需的基本引數：
 
 ```
 <IfModule disp_apache2.c> 
@@ -193,7 +193,7 @@ IncludeOptional /etc/httpd/conf.d/enabled_vhosts/*.vhost
 
 ![此圖片顯示一個.vhost檔案如何包含來自變數、白名單及重寫資料夾的檔案](assets/explanation-config-files/Apache-Webserver-AMS-Vhost-Includes.png "Apache-Webserver-AMS-Vhost-Include")
 
-當來自`/etc/httpd/conf.d/availabled_vhosts/`目錄的任何`.vhost`檔案被符號連結到`/etc/httpd/conf.d/enabled_vhosts/`目錄時，它們將被用於執行組態中。
+當來自`.vhost`目錄的任何`/etc/httpd/conf.d/availabled_vhosts/`檔案被符號連結到`/etc/httpd/conf.d/enabled_vhosts/`目錄時，它們將被用於執行組態中。
 
 `.vhost`個檔案具有根據我們找到之共同片段的Sub Include。  變數、白名單和重寫規則等。
 
@@ -249,11 +249,11 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 ### AMS伺服器陣列包含
 
-![&lt;FILENAME>_farms.any將包含sub .any檔案以完成伺服器陣列設定。  在此圖片中，您可以看到陣列將包含每個頂層區段檔案快取、clientheader、篩選器、轉譯器和vhosts .any檔案](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Include")
+![<FILENAME>_farms.any將包含sub .any檔案以完成伺服器陣列設定。  在此圖片中，您可以看到陣列將包含每個頂層區段檔案快取、clientheader、篩選器、轉譯器和vhosts .any檔案](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Include")
 
 當來自`/etc/httpd/conf.dispatcher.d/available_farms/`目錄的任何FILENAME_farm.any檔案被符號連結到`/etc/httpd/conf.dispatcher.d/enabled_farms/`目錄時，它們將被用於執行組態中。
 
-伺服器陣列檔案具有以[伺服器陣列](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant#defining-farms-farms)的最上層區段為基礎的子包含，例如快取、clientheaders、篩選器、轉譯器和vhosts。
+伺服器陣列檔案具有以[伺服器陣列](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms)的最上層區段為基礎的子包含，例如快取、clientheaders、篩選器、轉譯器和vhosts。
 
 `FILENAME_farm.any`檔案會根據每個檔案需要包含在伺服器陣列檔案中的位置，為其包含include陳述式。  以下是`FILENAME_farm.any`檔案的語法範例，作為良好參考：
 

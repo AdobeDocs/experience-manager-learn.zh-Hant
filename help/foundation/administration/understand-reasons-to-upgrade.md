@@ -4,12 +4,12 @@ description: 為考慮升級至最新版Adobe Experience Manager 6的客戶提�
 version: Experience Manager 6.5
 topic: Upgrade
 feature: Release Information
-role: Leader, Architect, Developer, Admin, User
+role: Leader, Developer, Admin, User
 level: Beginner
 doc-type: Article
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
 duration: 538
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '2576'
 ht-degree: 1%
@@ -34,8 +34,8 @@ Adobe Experience Manager 6.5透過下列方式，持續增強系統的穩定性�
 
 AEM Sites引進了多項功能，旨在加速網站的建立和建置：
 
-+ **SPA Editor**&#x200B;支援可讓SPA （單頁應用程式）完全在AEM中撰寫，支援豐富、方便行銷人員的撰寫體驗。
-+_&#x200B;**JavaScript SDK** （SPA專案開始套件和支援的組建工具）可讓前端開發人員獨立於AEM開發與SPA編輯器相容的單頁應用程式。
++ **SPA Editor**支援可讓SPA （單頁應用程式）完全在AEM中撰寫，支援豐富、方便行銷人員的撰寫體驗。
++_**JavaScript SDK** （SPA專案開始套件和支援的組建工具）可讓前端開發人員獨立於AEM開發與SPA編輯器相容的單頁應用程式。
 + **核心元件**&#x200B;新增了大量新元件、**元件庫**&#x200B;以及現有核心元件的各種增強功能。
 + 進一步&#x200B;**翻譯**&#x200B;增強功能可簡化AEM Sites的翻譯。
 
@@ -82,7 +82,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
 
 以下為AEM所提供之主要基礎功能的對照表。 其中部分功能已在每個版本中新增的早期版本增量增強功能中引入。
 
-+ [AEM Foundation發行說明](https://helpx.adobe.com/tw/experience-manager/6-5/release-notes/wcm-platform.html)
++ [AEM Foundation發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html)
 
 ***✔<sup>+</sup>此版本中功能的重要增強功能。***
 
@@ -126,7 +126,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/indexing-via-the-oak-run-jar.html">oak-run.jar索引支援</a>：</strong>已改善Oak索引的重新索引/索引、統計資料收集和一致性檢查。</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/indexing-via-the-oak-run-jar.html">oak-run.jar索引支援</a>：</strong>已改善Oak索引的重新索引/索引、統計資料收集和一致性檢查。</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -136,7 +136,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html" target="_blank">自訂搜尋索引</a>： </strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html" target="_blank">自訂搜尋索引</a>： </strong>
                 可新增自訂索引定義，以最佳化查詢效能和搜尋關聯性。</td>
             <td> </td>
             <td>✔</td>
@@ -147,7 +147,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">線上修訂清除</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">線上修訂清除</a>：</strong>
                 執行存放庫維護，避免伺服器停機時間。</td>
             <td> </td>
             <td> </td>
@@ -158,7 +158,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/storage-elements-in-aem-6.html" target="_blank">TarMK或MongoMK存放庫儲存空間</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/storage-elements-in-aem-6.html" target="_blank">TarMK或MongoMK存放庫儲存空間</a>：</strong>
                 <br>使用TarMK （新一代的TarPM版本）簡單、高效能檔案式儲存的選項
                 使用MongoDB支援的儲存庫和MongoMK水平縮放<br>。</td>
             <td> </td>
@@ -170,7 +170,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/aem-with-mongodb.html" target="_blank">MongoMK效能和穩定性</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/aem-with-mongodb.html" target="_blank">MongoMK效能和穩定性</a>：</strong>
             自MongoMK推出AEM 6.0以來，已持續增強功能。</td>
             <td> </td>
             <td> </td>
@@ -181,7 +181,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/data-store-config.html#AmazonS3DataStore">Amazon S3資料存放區</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/data-store-config.html#AmazonS3DataStore">Amazon S3資料存放區</a>：</strong>
             運用可擴充的雲端儲存解決方案來儲存二進位資產。</td>
             <td>✔</td>
             <td>✔<sup>+</sup></td>
@@ -214,7 +214,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/operations-dashboard.html" target="_blank">操作儀表板</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/operations-dashboard.html" target="_blank">操作儀表板</a>：</strong>
  從AEM內執行維護、監控伺服器健康情況並分析效能。</td>
             <td></td>
             <td>✔</td>
@@ -225,7 +225,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/upgrade.html" target="_blank">升級改善</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/upgrade.html" target="_blank">升級改善</a>：</strong>
             升級改良功能可讓您更輕鬆、更快速地就地升級AEM。</td>
             <td> </td>
             <td> </td>
@@ -276,7 +276,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
 
 以下為AEM提供的主要安全性功能矩陣。 其中部分功能已在每個版本中新增的早期版本增量增強功能中引入。
 
-+ [安全性發行說明](https://helpx.adobe.com/tw/experience-manager/6-5/release-notes/wcm-platform.html#Security)
++ [安全性發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html#Security)
 
 ***✔表示此版本中的功能有重大增強功能。***
 
@@ -297,7 +297,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
     </thead>
     <tbody>
         <tr>
-        <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/security-service-users.html" target="_blank">服務使用者</a></strong>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-service-users.html" target="_blank">服務使用者</a></strong>
             <br>劃分許可權，避免不必要地使用管理員許可權。</td>
         <td></td>
         <td>✔</td>
@@ -308,7 +308,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank">金鑰庫管理</a></strong>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank">金鑰庫管理</a></strong>
             <br>全域信任存放區、憑證和金鑰都在存放庫中管理。</td>
         <td></td>
         <td>✔</td>
@@ -319,7 +319,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
         <td>✔</td>
     </tr>
     <tr>
-        <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong>CSRF</strong> <strong>保護</strong></a>
+        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong>CSRF</strong> <strong>保護</strong></a>
             <br>立即可用的跨網站要求偽造保護。</td>
         <td></td>
         <td></td>
@@ -330,7 +330,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
         <td>✔</td>
     </tr>
     <tr>
-        <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong>CORS</strong> <strong>支援</strong></a>
+        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong>CORS</strong> <strong>支援</strong></a>
             <br>跨原始資源共用支援，提供更大的應用程式彈性。</td>
         <td></td>
         <td></td>
@@ -341,7 +341,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://experienceleague.adobe.com/docs/?lang=zh-Hant" target="_blank">已改善SAML驗證支援</a><br>
+        <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">已改善SAML驗證支援</a><br>
  </strong>已改善SAML重新導向、最佳化的群組資訊，以及已解決的金鑰加密問題。
             <br>
         </td>
@@ -354,7 +354,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/ldap-config.html" target="_blank">LDAP作為OSGi設定</a><br>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html" target="_blank">LDAP作為OSGi設定</a><br>
  </strong>簡化LDAP驗證的管理和更新。</td>
         <td></td>
         <td>✔</td>
@@ -376,7 +376,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/user-group-ac-admin.html" target="_blank">CUG增強功能</a><br>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/user-group-ac-admin.html" target="_blank">CUG增強功能</a><br>
  </strong>已重新寫入封閉式使用者群組實作，以解決效能和擴充性問題。</td>
         <td></td>
         <td></td>
@@ -398,7 +398,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/encapsulated-token.html" target="_blank">封裝的Token支援</a></strong>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/encapsulated-token.html" target="_blank">封裝的Token支援</a></strong>
             <br>不再需要「粘性」工作階段來支援跨發佈執行個體的水準驗證。</td>
         <td> </td>
         <td> </td>
@@ -409,7 +409,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Adobe IMS驗證支援</a><br>
+        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Adobe IMS驗證支援</a><br>
  </strong>Adobe Managed Services (AMS)專用，透過Adobe IMS (Identity Management System)集中管理對AEM Author執行個體的存取。</td>
         <td> </td>
         <td> </td>
@@ -426,7 +426,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
 
 以下為AEM提供之主要Sites功能的矩陣。 其中部分功能已在每個版本中新增的早期版本增量增強功能中引入。
 
-+ [AEM Sites發行說明](https://helpx.adobe.com/tw/experience-manager/6-5/release-notes/sites.html)
++ [AEM Sites發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/sites.html)
 
 ***✔<sup>+</sup>此版本中功能的重要增強功能。***
 
@@ -458,7 +458,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/authoring/using/responsive-layout.html" target="_blank">回應式網站編寫</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/responsive-layout.html" target="_blank">回應式網站編寫</a>：</strong>
                 版面模式可讓編輯器根據回應式網站的裝置寬度調整元件大小。</td>
             <td></td>
             <td></td>
@@ -480,7 +480,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/core-components/user-guide.html" target="_blank">核心元件</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/core-components/user-guide.html" target="_blank">核心元件</a>：</strong>
             加速網站開發。 GitHub提供頻繁發行排程和彈性。</td>
             <td> </td>
             <td> </td>
@@ -491,7 +491,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/spa-overview.html" target="_blank">SPA編輯器</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/spa-overview.html" target="_blank">SPA編輯器</a>：</strong>
             使用以React為基礎的單頁應用程式(SPA)架構，建立可授權的Web體驗。</td>
             <td> </td>
             <td> </td>
@@ -513,7 +513,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/msm.html" target="_blank">多站台管理員(MSM)</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm.html" target="_blank">多站台管理員(MSM)</a>：</strong>
             管理共用相同內容的多個網站（即多語言、多個品牌）。</td>
             <td>✔</td>
             <td>✔</td>
@@ -524,7 +524,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/translation.html" target="_blank">內容翻譯</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html" target="_blank">內容翻譯</a>：</strong>
             隨插即用架構整合了業界領先的第三方翻譯服務。</td>
             <td></td>
             <td></td>
@@ -535,7 +535,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/contexthub.html" target="_blank">ContextHub</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub.html" target="_blank">ContextHub</a>：</strong>
             用於個人化內容的新一代使用者端內容架構。</td>
             <td></td>
             <td>✔</td>
@@ -546,7 +546,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/authoring/using/launches.html" target="_blank">啟動</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/launches.html" target="_blank">啟動</a>：</strong>
             在不中斷日常製作的前提下，為未來版本開發內容。</td>
             <td>✔</td>
             <td>✔</td>
@@ -601,7 +601,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/authoring/using/content-targeting-touch.html" target="_blank">Adobe Target整合</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/content-targeting-touch.html" target="_blank">Adobe Target整合</a>：</strong>
             逐步精靈以建立鎖定目標的體驗，並建立可重複使用的選件程式庫。</td>
             <td> </td>
             <td> </td>
@@ -612,7 +612,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/campaign.html" target="_blank">Adobe Campaign整合</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/campaign.html" target="_blank">Adobe Campaign整合</a>：</strong>
             與新一代電子郵件行銷活動解決方案輕鬆整合。</td>
             <td> </td>
             <td>✔</td>
@@ -645,7 +645,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/ecommerce.html" target="_blank">電子商務</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ecommerce.html" target="_blank">電子商務</a>：</strong>
             在網頁、行動裝置和社交接觸點之間，提供品牌和個人化的購物體驗。
             </td>
             <td>✔</td>
@@ -657,7 +657,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/communities/using/overview.html" target="_blank">社群</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/overview.html" target="_blank">社群</a>：</strong>
             論壇、執行緒評論、活動行事曆和許多其他功能允許與網站訪客進行深入互動。</td>
             <td>✔</td>
             <td>✔</td>
@@ -674,7 +674,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
 
 以下為AEM所提供之主要Assets功能的對照表。 其中部分功能已在每個版本中新增的早期版本增量增強功能中引入。
 
-+ [AEM Assets發行說明](https://helpx.adobe.com/tw/experience-manager/6-5/release-notes/assets.html)
++ [AEM Assets發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/assets.html)
 
 ***✔表示此版本中的功能有重大增強功能。***
 
@@ -695,7 +695,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/managing-assets-touch-ui.html" target="_blank">觸控最佳化UI</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets-touch-ui.html" target="_blank">觸控最佳化UI</a>：</strong>
             在桌上型電腦或觸控裝置上管理資產。</td>
             <td> </td>
             <td>✔</td>
@@ -706,7 +706,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/metadata.html" target="_blank">進階中繼資料管理</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/metadata.html" target="_blank">進階中繼資料管理</a>：</strong>
             中繼資料範本、中繼資料結構編輯器和大量中繼資料編輯。</td>
             <td> </td>
             <td>✔</td>
@@ -717,7 +717,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank">任務</a>和工作流程管理：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank">任務</a>和工作流程管理：</strong>
             運用AEM專案預先建立的工作流程與工作，用於數位資產的稽核與核准。</td>
             <td> </td>
             <td>✔</td>
@@ -739,7 +739,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/mac-api-assets.html" target="_blank">Assets HTTP API</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/mac-api-assets.html" target="_blank">Assets HTTP API</a>：</strong>
             透過HTTP和JSON以程式設計方式與資產互動。</td>
             <td> </td>
             <td> </td>
@@ -750,7 +750,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/link-sharing.html" target="_blank">連結共用</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/link-sharing.html" target="_blank">連結共用</a>：</strong>
             數位資產的簡單臨機共用，無需登入。</td>
             <td> </td>
             <td> </td>
@@ -761,7 +761,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/brand-portal/using/brand-portal.html" target="_blank">Brand Portal</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html" target="_blank">Brand Portal</a>：</strong>
             雲端服務SAAS解決方案，提供數位資產順暢的共用和分送。</td>
             <td> </td>
             <td> </td>
@@ -772,7 +772,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/use-assets-across-connected-assets-instances.html" target="_blank">已連線的Assets</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/use-assets-across-connected-assets-instances.html" target="_blank">已連線的Assets</a>：</strong>
             AEM Sites例項可順暢地存取及使用其他AEM Assets例項的資產。</td>
             <td> </td>
             <td> </td>
@@ -783,7 +783,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/touch-ui-asset-insights.html" target="_blank">資產分析</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/touch-ui-asset-insights.html" target="_blank">資產分析</a>：</strong>
             運用Adobe Analytics擷取客戶與數位資產的互動，並在AEM中檢視。</td>
             <td> </td>
             <td> </td>
@@ -794,7 +794,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/multilingual-assets.html" target="_blank">多語言Assets</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/multilingual-assets.html" target="_blank">多語言Assets</a>：</strong>
             使用語言根自動翻譯支援資產中繼資料。</td>
             <td> </td>
             <td> </td>
@@ -805,7 +805,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/enhanced-smart-tags.html" target="_blank">智慧標籤與管制</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/enhanced-smart-tags.html" target="_blank">智慧標籤與管制</a>：</strong>
             運用Adobe AI，使用有用的中繼資料自動標籤影像。</td>
             <td> </td>
             <td></td>
@@ -827,7 +827,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/indesign.html" target="_blank">Adobe InDesign Server整合</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/indesign.html" target="_blank">Adobe InDesign Server整合</a>：</strong>
             產生產品目錄。 根據InDesign範本製作手冊、傳單和印刷廣告。</td>
             <td> </td>
             <td> </td>
@@ -850,7 +850,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe影像程式庫</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe影像程式庫</a>：</strong>
                 <br>用於高品質檔案操控的Photoshop和Acrobat PDF資料庫。</td>
             <td> </td>
             <td> </td>
@@ -872,7 +872,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html" target="_blank">Adobe Stock整合</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html" target="_blank">Adobe Stock整合</a>：</strong>
             直接從AEM順暢存取及使用Adobe Stock影像。</td>
             <td> </td>
             <td> </td>
@@ -907,7 +907,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/managing-assets.html" target="_blank">影像處理</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets.html" target="_blank">影像處理</a>：</strong>
             以動態方式傳送不同大小和格式的影像，包括智慧型裁切。</td>
             <td> </td>
             <td></td>
@@ -918,7 +918,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/video-profiles.html" target="_blank">影片</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/video-profiles.html" target="_blank">影片</a>：</strong>
             進階視訊編碼和自我調整視訊串流</td>
             <td> </td>
             <td>✔</td>
@@ -929,7 +929,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/interactive-images.html" target="_blank">互動媒體</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/interactive-images.html" target="_blank">互動媒體</a>：</strong>
             建立互動式橫幅、包含可點選內容的影片，以展示重要選件。
             </td>
             <td> </td>
@@ -941,7 +941,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>集合（<a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/image-sets.html" target="_blank">影像</a>，<a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/spin-sets.html" target="_blank">迴轉</a>，<a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/mixed-media-sets.html" target="_blank">混合媒體</a>）：</strong>
+            <td><strong>集合（<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/image-sets.html" target="_blank">影像</a>，<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/spin-sets.html" target="_blank">迴轉</a>，<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/mixed-media-sets.html" target="_blank">混合媒體</a>）：</strong>
             允許使用者縮放、平移、旋轉和模擬360度的檢視體驗。</td>
             <td> </td>
             <td>✔</td>
@@ -952,7 +952,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/?lang=zh-Hant" target="_blank">檢視者</a>：</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">檢視者</a>：</strong>
             自訂品牌多媒體播放器和預設集，並支援不同的熒幕/裝置。</td>
             <td> </td>
             <td>✔</td>
@@ -963,7 +963,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/assets/using/delivering-dynamic-media-assets.html" target="_blank">傳遞</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/delivering-dynamic-media-assets.html" target="_blank">傳遞</a>：</strong>
             透過HTTP/2通訊協定連結或內嵌Dynamic Media內容及傳遞的彈性選項。</td>
             <td> </td>
             <td>✔</td>
@@ -1010,7 +1010,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/introduction-forms-authoring.html" target="_blank">最適化Forms編輯器</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html" target="_blank">最適化Forms編輯器</a>：</strong>
             根據裝置和瀏覽器設定，建立吸引人、回應式且最適化表單。</td>
             <td> </td>
             <td>✔</td>
@@ -1021,7 +1021,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html" target="_blank">記錄檔案</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html" target="_blank">記錄檔案</a>：</strong>
             建立檔案以確保資料擷取體驗或可列印版本的長期儲存。</td>
             <td> </td>
             <td>✔</td>
@@ -1032,7 +1032,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/themes.html" target="_blank">主題編輯器</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html" target="_blank">主題編輯器</a>：</strong>
             建立可重複使用的佈景主題來設定元件和表單面板的樣式。</td>
             <td> </td>
             <td> </td>
@@ -1043,7 +1043,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/template-editor.html" target="_blank">範本編輯器</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html" target="_blank">範本編輯器</a>：</strong>
             標準化及實作最適化表單的最佳作法。</td>
             <td> </td>
             <td> </td>
@@ -1054,7 +1054,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/aem-forms/6-5/whats-new.html#EnhancedintegrationwithAdobeSign" target="_blank">Acrobat Sign整合</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#EnhancedintegrationwithAdobeSign" target="_blank">Acrobat Sign整合</a>：</strong>
             允許根據簽署情境部署Acrobat Sign整合式表單。</td>
             <td> </td>
             <td> </td>
@@ -1065,7 +1065,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/cm-overview.html" target="_blank">通訊管理</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/cm-overview.html" target="_blank">通訊管理</a>：</strong>
             透過AEM Forms，您可以建立、管理和提供個人化和互動式客戶對應。
             </td>
             <td> </td>
@@ -1077,7 +1077,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/aem-forms/6-5/whats-new.html#AEMFormsdataintegration" target="_blank">協力廠商資料整合</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#AEMFormsdataintegration" target="_blank">協力廠商資料整合</a>：</strong>
             透過資料整合，系統會根據使用者在表單中的輸入，從不同的資料來源擷取資料。 在提交表單時，擷取的資料會回寫至資料來源。
             </td>
             <td> </td>
@@ -1089,7 +1089,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td>用於Forms處理的<strong><a href="https://helpx.adobe.com/tw/aem-forms/6-5/whats-new.html#FormscentricAEMWorkflowsforAEMFormsonOSGi" target="_blank">工作流程（在OSGi上）</a>：</strong>
+            <td>用於Forms處理的<strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#FormscentricAEMWorkflowsforAEMFormsonOSGi" target="_blank">工作流程（在OSGi上）</a>：</strong>
             簡化表單核准流程的部署。</td>
             <td> </td>
             <td> </td>
@@ -1111,7 +1111,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/introduction-managing-forms.html" target="_blank">表單管理員</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-managing-forms.html" target="_blank">表單管理員</a>：</strong>
             管理所有表單/檔案/信件的單一位置，例如啟用分析、翻譯、A/B測試、稽核和發佈。
             </td>
             <td> </td>
@@ -1123,7 +1123,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/aem-forms-app.html" target="_blank">AEM Forms應用程式</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/aem-forms-app.html" target="_blank">AEM Forms應用程式</a>：</strong>
             允許在iOS、Android或Windows上的應用程式內進行線上/離線表單處理。</td>
             <td> </td>
             <td>✔</td>
@@ -1134,7 +1134,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/aem-forms/6-5/adaptive-document.html" target="_blank">互動式通訊</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/adaptive-document.html" target="_blank">互動式通訊</a>：</strong>
             使用互動式元素（例如圖表，以前稱為Adaptive Documents）建立豐富的通訊（例如目標陳述式）。</td>
             <td> </td>
             <td> </td>
@@ -1156,7 +1156,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/aem-forms/6-5/whats-new.html#EnhancedDocumentSecurity" target="_blank">AEM Forms Document Security</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#EnhancedDocumentSecurity" target="_blank">AEM Forms Document Security</a>：</strong>
             安全地存取和授權PDF和Office檔案。
             </td>
             <td> </td>
@@ -1168,7 +1168,7 @@ Adobe Managed Services (AMS)客戶專屬的[Cloud Manager](https://adobe.ly/2HOD
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/tw/aem-forms/6-5/whats-new.html#Simplifiedauthoringexperience" target="_blank">正在測試架構</a>：</strong>
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#Simplifiedauthoringexperience" target="_blank">正在測試架構</a>：</strong>
             使用Calvin框架和Chrome外掛程式來支援及偵錯調適型表單。</td>
             <td> </td>
             <td> </td>

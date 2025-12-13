@@ -4,14 +4,15 @@ description: 了解如何透過使用 AEM as a Cloud Service 中的流量篩選�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18311
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: ht
+exl-id: 8fa0488f-b901-49bf-afa5-5ed29242355f
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 100%
 
@@ -70,7 +71,7 @@ data:
 
 - 提交變更並將其推送至 Cloud Manager Git 存放庫。
 
-- 使用[先前建立的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定管線，將變更部署至 AEM 環境。
+- 使用[先前建立的](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager 設定管道，將變更部署至 AEM 環境。
 
 - 透過登入與登出程式中的 WKND 網站 (例如，`https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`) 測試該規則您可以使用 `asmith/asmith` 作為使用者名稱和密碼。
 
@@ -104,4 +105,3 @@ data:
 - 檢閱更新後儀表板的「**已分析的要求**」、「**已標記的要求**」和「**已標記的要求詳細資訊**」面板。若為符合的 CDN 記錄項目，其應會顯示各項目的用戶端 IP (cli_ip)、主機、URL、動作 (waf_action) 和規則名稱 (waf_match) 的值。
 
   ![ELK 工具儀表板](../assets/how-to/elk-tool-dashboard.png)
-

@@ -1,24 +1,24 @@
 ---
-title: 整合Adobe Target
+title: 整合 Adobe Target
 description: 瞭解如何將AEM as a Cloud Service與Adobe Target整合，以管理和啟用個人化內容（體驗片段）作為選件。
 version: Experience Manager as a Cloud Service
 feature: Personalization, Integrations
 topic: Personalization, Integrations, Architecture
-role: Developer, Architect, Leader, Data Architect, User
+role: Developer, Leader, User
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18718
 thumbnail: null
-source-git-commit: 70665c019f63df1e736292ad24c47624a3a80d49
+exl-id: 86767e52-47ce-442c-a620-bc9e7ac2eaf3
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-
-# 整合Adobe Target
+# 整合 Adobe Target
 
 瞭解如何將AEM as a Cloud Service (AEMCS)與Adobe Target整合，以啟用個人化內容（例如體驗片段），作為Adobe Target中的選件。
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 5. 在&#x200B;**選取產品設定檔**&#x200B;步驟中，選取&#x200B;**預設Workspace**，然後按一下&#x200B;**儲存已設定的API**。\
    ![選取產品設定檔](../assets/setup/adc-select-product-profiles.png)
 
-6. 在左側導覽中，選取&#x200B;**OAuth伺服器對伺服器**&#x200B;並檢閱組態詳細資料。 請注意使用者端ID和使用者端密碼 — 您需要這些值才能在AEM中設定IMS整合。
+6. 在左側導覽中，選取&#x200B;**OAuth伺服器對伺服器**並檢閱組態詳細資料。 請注意使用者端ID和使用者端密碼 — 您需要這些值才能在AEM中設定IMS整合。
    ![OAuth伺服器對伺服器詳細資料](../assets/setup/adc-oauth-server-to-server.png)
 
 ## 在AEM中為Target建立Adobe IMS設定
@@ -132,7 +132,7 @@ ht-degree: 0%
 
 若要確認整合可正確運作，請測試匯出功能：
 
-1. 在AEM中，建立新的體驗片段或開啟現有的體驗片段。 按一下工具列中的「匯出至Adobe Target」**&#x200B;**。\
+1. 在AEM中，建立新的體驗片段或開啟現有的體驗片段。 按一下工具列中的「匯出至Adobe Target」****。\
    ![將體驗片段匯出至Adobe Target](../assets/setup/aem-export-experience-fragment-to-adobe-target.png)
 
 2. 在Adobe Target中，前往&#x200B;**選件**&#x200B;區段，並確認體驗片段顯示為選件。\
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 ## 其他資源
 
-- [Target API總覽](https://experienceleague.adobe.com/zh-hant/docs/target-dev/developer/api/target-api-overview)
-- [目標選件](https://experienceleague.adobe.com/zh-hant/docs/target/using/experiences/offers/manage-content)
+- [Target API總覽](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/target-api-overview)
+- [目標選件](https://experienceleague.adobe.com/en/docs/target/using/experiences/offers/manage-content)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/)
-- AEM中的[體驗片段](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)
+- AEM中的[體驗片段](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)

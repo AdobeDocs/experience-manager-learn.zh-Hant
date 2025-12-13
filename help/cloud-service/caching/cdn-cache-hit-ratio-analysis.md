@@ -4,7 +4,7 @@ description: 瞭解如何分析AEM as a Cloud Service提供的CDN記錄。 取�
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
@@ -12,7 +12,7 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -23,12 +23,12 @@ ht-degree: 0%
 
 在CDN快取的內容可減少網站使用者所經歷的延遲，這些使用者不需要等待請求回到Apache/Dispatcher或AEM發佈。 有鑑於此，建議您最佳化CDN快取命中率，以最大化可在CDN快取的內容量。
 
-瞭解如何分析提供的AEM as a Cloud Service **CDN記錄檔**，並取得深入分析，例如&#x200B;**快取命中率**，以及&#x200B;_MISS_&#x200B;和&#x200B;_PASS_&#x200B;快取型別&#x200B;**的**&#x200B;大URL，以用於最佳化目的。
+瞭解如何分析提供的AEM as a Cloud Service **CDN記錄檔**，並取得深入分析，例如&#x200B;**快取命中率**，以及&#x200B;**MISS _和_PASS _快取型別_的**&#x200B;大URL，以用於最佳化目的。
 
 
-CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`。 如需詳細資訊，請參閱[CDN記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=zh-Hant#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs)。 `cache`欄位提供快取&#x200B;_的_&#x200B;狀態相關資訊，其可能值為HIT、MISS或PASS。 讓我們檢視可能值的詳細資訊。
+CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`。 如需詳細資訊，請參閱[CDN記錄格式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs)。 `cache`欄位提供快取&#x200B;_的_&#x200B;狀態相關資訊，其可能值為HIT、MISS或PASS。 讓我們檢視可能值的詳細資訊。
 
-| 快取</br>可能的值的狀態 | 描述 |
+| 快取</br>可能的值的狀態 | 說明 |
 |------------------------------------|:-----------------------------------------------------:|
 | 點選 | 要求的資料在CDN快取中找到&#x200B;_，不需要向AEM伺服器提出fetch_&#x200B;要求。 |
 | 未命中 | 要求的資料在CDN快取中找不到&#x200B;_，必須向AEM伺服器要求_。 |
@@ -67,7 +67,7 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
 1. **Elasticsearch、Logstash和Kibana (ELK)**： [ELK儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md)可安裝在本機。
 1. **Splunk**： [Splunk儀表板工具](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md)需要存取Splunk以及已啟用[AEMCS記錄檔轉送](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs)才能擷取CDN記錄。
-1. **Jupyter Notebook**：已授權Adobe Experience Platform的客戶，可透過[Adobe Experience Platform](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)從遠端存取它，不需安裝額外的軟體。
+1. **Jupyter Notebook**：已授權Adobe Experience Platform的客戶，可透過[Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)從遠端存取它，不需安裝額外的軟體。
 
 ### 選項1：使用ELK儀表板工具
 
@@ -81,7 +81,7 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
    1. 複製下載的CDN記錄檔於特定環境的記錄檔資料夾中，例如`ELK/logs/stage`。
 
-   1. 按一下左上角的&#x200B;_導覽功能表> Analytics >控制面板> CDN快取命中率_，開啟&#x200B;**CDN快取命中率**&#x200B;控制面板。
+   1. 按一下左上角的&#x200B;**導覽功能表> Analytics >控制面板> CDN快取命中率**，開啟&#x200B;_CDN快取命中率_&#x200B;控制面板。
 
       ![CDN快取命中率 — Kibana儀表板](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -136,7 +136,7 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
 若要識別金鑰詳細資料，請使用[AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling)專案。 此專案提供Splunk控制面板以分析CDN記錄。
 
-1. 遵循AEMCS CDN記錄分析[&#128279;](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md)的Splunk儀表板的步驟並確保匯入&#x200B;**CDN快取命中率** Splunk儀表板。
+1. 遵循AEMCS CDN記錄分析[的](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md)Splunk儀表板的步驟並確保匯入&#x200B;**CDN快取命中率** Splunk儀表板。
 1. 如有需要，請更新Splunk儀表板中的&#x200B;_索引、Source型別和其他_&#x200B;篩選器值。
 
    ![Splunk儀表板](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
@@ -149,7 +149,7 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
 如果使用者不想在本機安裝軟體（亦即上節的ELK儀表板工具），有另一個選項，但需要Adobe Experience Platform的授權。
 
-[Jupyter Notebook](https://jupyter.org/)是開放原始碼的Web應用程式，可讓您建立包含程式碼、文字和視覺效果的檔案。 它用於資料轉換、視覺化和統計模型製作。 它可以作為Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)的一部分從遠端存取。
+[Jupyter Notebook](https://jupyter.org/)是開放原始碼的Web應用程式，可讓您建立包含程式碼、文字和視覺效果的檔案。 它用於資料轉換、視覺化和統計模型製作。 它可以作為Adobe Experience Platform[的一部分從遠端](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data)存取。
 
 #### 下載互動式Python筆記本檔案
 
@@ -202,4 +202,4 @@ CDN記錄以JSON格式提供，其中包含各種欄位，包括`url`、`cache`�
 
 如需詳細資訊，請參閱[最佳化CDN快取設定](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching)。
 
-AEM WKND專案具有參考CDN設定，如需詳細資訊，請參閱`wknd.vhost`檔案中的[CDN設定](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L137-L190)。
+AEM WKND專案具有參考CDN設定，如需詳細資訊，請參閱[檔案中的](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L137-L190)CDN設定`wknd.vhost`。

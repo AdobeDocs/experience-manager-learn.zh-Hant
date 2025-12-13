@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 duration: 1362
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # 大量屬性更新的擴充功能範例
 
->[!VIDEO](https://video.tv.adobe.com/v/3454471?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
 此範例AEM內容片段主控台擴充功能是一個[動作列](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/)擴充功能，可將內容片段屬性大量更新為通用值。
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 此範例延伸至擴充點`actionBar`，以將自訂按鈕新增至內容片段主控台。
 
 | AEM UI已擴充 | 擴充點 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [內容片段主控台](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [動作列](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 ### 擴充功能註冊
 
-對應至`index.html`路由的`ExtensionRegistration.js`是AEM擴充功能的進入點，並定義：
+對應至`ExtensionRegistration.js`路由的`index.html`是AEM擴充功能的進入點，並定義：
 
 1. 擴充功能按鈕的位置會顯示在AEM編寫體驗（`actionBar`或`headerMenu`）中
 1. `getButtons()`函式中的擴充按鈕定義
@@ -158,7 +158,7 @@ function ExtensionRegistration() {
 export default ExtensionRegistration;
 ```
 
-### 模型
+### 模態視窗
 
 每個擴充功能的路由（如[`App.js`](#app-routes)中的定義）都會對應至在擴充功能強制回應中呈現的React元件。
 
@@ -171,7 +171,7 @@ export default ExtensionRegistration;
 重要的是，從擴充功能與AEM的任何互動都應委派給[AppBuilder Adobe I/O Runtime動作](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/)，這是在[Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/)中執行的個別無伺服器程式。
 使用Adobe I/O Runtime動作與AEM通訊是為了避免跨原始資源共用(CORS)連線問題。
 
-提交大量屬性更新表單時，自訂`onSubmitHandler()`會叫用Adobe I/O Runtime動作，傳遞目前的AEM主機（網域）和使用者的AEM存取權杖，接著呼叫[AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=zh-Hant)以更新內容片段。
+提交大量屬性更新表單時，自訂`onSubmitHandler()`會叫用Adobe I/O Runtime動作，傳遞目前的AEM主機（網域）和使用者的AEM存取權杖，接著呼叫[AEM內容片段API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)以更新內容片段。
 
 收到Adobe I/O Runtime動作的回應時，強制回應會更新，以顯示大量屬性更新作業的結果。
 

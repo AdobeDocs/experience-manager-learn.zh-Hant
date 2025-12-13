@@ -4,7 +4,7 @@ description: 瞭解如何透過OAuth 2.0 PKCE流程，使用自訂單頁應用�
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Intermediate
 doc-type: Tutorial
 jira: KT-17430
@@ -12,7 +12,7 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '2130'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Adobe Developer Console (ADC)專案已設定為啟用OAuth單頁應用程式驗�
 >ADC專案未提供&#x200B;_client_secret_。 相反地，SPA會產生&#x200B;_code_verifier_&#x200B;和&#x200B;_code_challenge_，以安全地交換&#x200B;_存取權杖_&#x200B;的授權代碼。 如此一來，使用者端便無需儲存使用者端密碼，進而提升安全性。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456975?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 

@@ -7,11 +7,11 @@ jira: KT-6873
 thumbnail: 26316.jpg
 topic: Architecture
 feature: Cloud Manager, CI-CD Pipeline
-role: Architect, Developer, Admin
+role: Developer, Admin
 level: Beginner
 exl-id: b28805d3-bb2d-4f66-8daa-9a8eb7ecf0a1
 duration: 211
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 89%

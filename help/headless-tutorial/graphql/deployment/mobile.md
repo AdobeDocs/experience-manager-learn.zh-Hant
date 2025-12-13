@@ -4,15 +4,15 @@ description: 瞭解行動AEM Headless部署的部署考量事項。
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10796
 thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
 duration: 31
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '152'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ AEM Headless行動部署是iOS、Android™等原生行動應用程式。 以Hea
 
 以下部署設定必須就位以進行行動應用程式部署。
 
-| 行動應用程式連線至→ | AEM 作者 | AEM 發佈 | AEM預覽 |
+| 行動應用程式連線至→ | AEM 作者 | AEM Publish | AEM預覽 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher篩選器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | 跨原始資源共用(CORS) | ✘ | ✘ | ✘ |

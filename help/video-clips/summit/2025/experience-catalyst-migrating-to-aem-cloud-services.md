@@ -4,7 +4,7 @@ description: 觀看Experience Catalyst如何善用人工智慧輕鬆地將WordPr
 cloud: Experience Cloud
 solution: Experience Manager
 feature-set: Experience Manager
-role: Developer, Leader, Admin, Architect
+role: Developer, Leader, Admin
 level: Beginner, Intermediate, Experienced
 type: Event
 doc-type: Video Clip
@@ -13,16 +13,16 @@ feature: Generative AI, Migration, Onboarding, Developer Tools, Projects
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
+exl-id: da9a0a9b-000b-4dd6-895e-8b20ade31664
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
 
 ---
 
-
 # Experience Catalyst：移轉至AEM雲端服務
 
 觀看Experience Catalyst如何善用人工智慧輕鬆地將WordPress網站移轉至AEM雲端服務。
 
->[!VIDEO](https://video.tv.adobe.com/v/3461987/?learn=on&enablevpops&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3459228/?learn=on&enablevpops)

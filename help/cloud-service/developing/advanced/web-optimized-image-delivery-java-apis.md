@@ -4,7 +4,7 @@ description: 瞭解如何使用AEM as a Cloud Service的網頁最佳化影像傳
 version: Experience Manager as a Cloud Service
 feature: APIs, Sling Model, OSGI, HTL or HTML Template Language
 topic: Performance, Development
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Code Sample
 last-substantial-update: 2023-03-30T00:00:00Z
@@ -12,7 +12,7 @@ jira: KT-13014
 thumbnail: KT-13014.jpeg
 exl-id: c6bb9d6d-aef0-42d5-a189-f904bbbd7694
 duration: 352
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -25,15 +25,15 @@ ht-degree: 0%
 
 AEM as a Cloud Service支援[網頁最佳化的影像傳遞](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=zh-Hant)，這會自動產生資產的最佳化影像Web轉譯。 網頁最佳化的影像傳送可以使用三種主要方法：
 
-1. [使用AEM核心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hant)
-2. 建立[延伸AEM核心WCM元件影像元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html?lang=zh-Hant#tackling-the-image-problem)的自訂元件
+1. [使用AEM核心WCM元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+2. 建立[延伸AEM核心WCM元件影像元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html#tackling-the-image-problem)的自訂元件
 3. 建立使用AssetDelivery Java™ API產生網頁最佳化影像URL的自訂元件。
 
 本文探討如何在自訂元件中使用網頁最佳化影像Java™ API，讓程式碼型可在AEM as a Cloud Service和AEM SDK上運作。
 
 ## Java™ API
 
-[AssetDelivery API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html)是OSGi服務，可為影像資產產生網頁最佳化的傳送URL。 `AssetDelivery.getDeliveryURL(...)`允許的選項[記錄在這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=zh-Hant#can-i-use-web-optimized-image-delivery-with-my-own-component%3F)。
+[AssetDelivery API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html)是OSGi服務，可為影像資產產生網頁最佳化的傳送URL。 `AssetDelivery.getDeliveryURL(...)`允許的選項[記錄在這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html#can-i-use-web-optimized-image-delivery-with-my-own-component%3F)。
 
 `AssetDelivery` OSGi服務只有在AEM as a Cloud Service中執行時才能符合。 在AEM SDK上，對`AssetDelivery` OSGi服務的參考傳回`null`。 在AEM as a Cloud Service上執行時，最好有條件地使用網頁最佳化的URL，並在AEM SDK上使用後援影像URL。 通常，資產的Web轉譯便是一個足夠的遞補。
 
@@ -81,7 +81,7 @@ if (assetDelivery != null ) {
 
 當程式碼在AEM as a Cloud Service上執行時，會在自訂元件中使用網頁最佳化的Web影像轉譯。
 
-在AEM as a Cloud Service![&#128279;](./assets/web-optimized-image-delivery-java-apis/cloud-service.png)上進行網頁最佳化的影像
+在AEM as a Cloud Service![上進行](./assets/web-optimized-image-delivery-java-apis/cloud-service.png)網頁最佳化的影像
 
 _AEM as a Cloud Service支援AssetDelivery API，因此使用網頁最佳化的Web轉譯_
 
@@ -133,7 +133,7 @@ public interface WebOptimizedImage {
 }
 ```
 
-#### 實作
+#### 實施
 
 OSGi服務實作包含對AEM的`AssetDelivery` OSGi服務的選擇性參考，以及在AEM SDK上`AssetDelivery`為`null`時用來選取合適影像URL的遞補邏輯。 可以根據需求更新遞補邏輯。
 
@@ -289,7 +289,7 @@ public interface ExampleWebOptimizedImages {
 }
 ```
 
-#### 實作
+#### 實施
 
 Sling模型使用自訂`WebOptimizeImage` OSGi服務，為其元件顯示的影像資產收集Web最佳化的影像URL。
 
@@ -443,11 +443,11 @@ AEM元件繫結至`WebOptimizedImagesImpl` Sling模型實作的Sling資源型別
 
 
 
-元件透過`getImages()`接收`Img`物件的清單，其中包含在AEM as a Cloud Service上執行時網頁最佳化的WEBP影像。 元件透過`getImages()`接收`Img`物件的清單，其中包含在AEM SDK上執行時的靜態PNG/JPEG網頁影像。
+元件透過`Img`接收`getImages()`物件的清單，其中包含在AEM as a Cloud Service上執行時網頁最佳化的WEBP影像。 元件透過`Img`接收`getImages()`物件的清單，其中包含在AEM SDK上執行時的靜態PNG/JPEG網頁影像。
 
 #### HTL
 
-HTL使用`WebOptimizedImages` Sling模型，並由`getImages()`傳回`Img`物件清單的轉譯。
+HTL使用`WebOptimizedImages` Sling模型，並由`Img`傳回`getImages()`物件清單的轉譯。
 
 ```html
 <style>

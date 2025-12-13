@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 167a4b11-1202-4c7a-b022-f3f996348a4e
 duration: 476
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 瞭解如何在AEM內容片段編輯器中將Widget新增至RTF編輯器(RTE)。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447443?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
 若要在RTF編輯器(RTE)中新增動態內容，可以使用&#x200B;**Widget**&#x200B;功能。 Widget可協助您在RTE中整合簡單或複雜的UI，您也可以使用所選JS架構來建立UI。 它們可視為在RTE中按下`{`特殊鍵所開啟的對話方塊。
 
 通常Widget是用來插入具有外部系統相依性或可能根據目前內容而變更的動態內容。
 
-使用`rte`擴充點將&#x200B;**Widget**&#x200B;新增到內容片段編輯器中的&#x200B;**RTE**。 使用`rte`擴充點的`getWidgets()`方法新增一或多個Widget。 會透過按下`{`特殊鍵以開啟內容功能表選項來觸發，然後選取所需的Widget以載入自訂對話方塊UI。
+使用&#x200B;**擴充點將** Widget **新增到內容片段編輯器中的** RTE`rte`。 使用`rte`擴充點的`getWidgets()`方法新增一或多個Widget。 會透過按下`{`特殊鍵以開啟內容功能表選項來觸發，然後選取所需的Widget以載入自訂對話方塊UI。
 
 此範例說明如何新增名為&#x200B;_折扣代碼清單_&#x200B;的Widget，以在RTE內容中尋找、選取及新增WKND冒險特有折扣代碼。 這些折扣代碼可在外部系統中管理，例如Order Management系統(OMS)、產品資訊管理(PIM)、自主開發應用程式或Adobe AppBuilder動作。
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 此範例延伸至擴充點`rte`，在內容片段編輯器中將Widget新增至RTE。
 
 | AEM UI已擴充 | 擴充點 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [RTF編輯器Widget](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## 範例擴充功能
@@ -92,7 +92,7 @@ function ExtensionRegistration() {
 export default ExtensionRegistration;
 ```
 
-### 在`App.js`中新增`discountCodes`路由{#add-widgets-route}
+### 在`discountCodes`中新增`App.js`路由{#add-widgets-route}
 
 在主要React元件`App.js`中，新增`discountCodes`路由以呈現上述相對URL路徑的UI。
 
@@ -120,9 +120,9 @@ Widget或對話方塊UI是使用[Adobe React Spectrum](https://react-spectrum.ad
 
 + UI是使用React Spectrum元件來轉譯，例如[ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html)、[ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html)、[Button](https://react-spectrum.adobe.com/react-spectrum/Button.html)
 + `adventureDiscountCodes`陣列具有冒險名稱和折扣代碼的硬式編碼對應。 在真實情境中，此資料可以從Adobe AppBuilder動作或外部系統（例如PIM、OMS或自行開發的或雲端提供者型API閘道）擷取。
-+ 已使用`useEffect` [React勾點](https://react.dev/reference/react/useEffect)初始化`guestConnection`，並管理為元件狀態。 它可用來與AEM主機通訊。
++ 已使用`guestConnection` `useEffect`React勾點[初始化](https://react.dev/reference/react/useEffect)，並管理為元件狀態。 它可用來與AEM主機通訊。
 + `handleDiscountCodeChange`函式取得所選冒險名稱的折扣碼，並更新狀態變數。
-+ 使用`guestConnection`物件的`addDiscountCode`函式提供要執行的RTE指令。 在此案例中，會在RTE中插入實際折扣代碼的`insertContent`指示和HTML程式碼片段。
++ 使用`addDiscountCode`物件的`guestConnection`函式提供要執行的RTE指令。 在此案例中，會在RTE中插入實際折扣代碼的`insertContent`指示和HTML程式碼片段。
 
 `src/aem-cf-editor-1/web-src/src/components/DiscountCodes.js`
 

@@ -1,10 +1,10 @@
 ---
-title: 實作管道專用URL重新導向
+title: 實施無管道 URL 重新導向
 description: 瞭解如何在AEM as a Cloud Service中實作管道免費的URL重新導向，讓行銷團隊無需開發人員即可管理重新導向。
 version: Experience Manager as a Cloud Service
 feature: Operations, Dispatcher
 topic: Development, Content Management, Administration
-role: Architect, Developer, User
+role: Developer, User
 level: Beginner, Intermediate
 doc-type: Article
 duration: 0
@@ -12,16 +12,16 @@ last-substantial-update: 2025-02-05T00:00:00Z
 jira: KT-15739
 thumbnail: KT-15739.jpeg
 exl-id: 3b0f5971-38b8-4b9e-b90e-9de7432e0e9d
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '973'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
-# 實作管道專用URL重新導向
+# 實施無管道 URL 重新導向
 
-瞭解如何在AEM as a Cloud Service中實作[管線免費URL重新導向](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)，讓行銷團隊無需開發人員即可管理重新導向。
+瞭解如何在AEM as a Cloud Service中實作[管線免費URL重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)，讓行銷團隊無需開發人員即可管理重新導向。
 
 在AEM中有多個管理URL重新導向的選項，如需詳細資訊，請參閱[URL重新導向](url-redirection.md)。
 
@@ -37,11 +37,11 @@ ht-degree: 0%
 
 ## 教學課程使用案例
 
-為了示範，假設WKND行銷團隊正在啟動新的滑雪行銷活動。 他們想要為滑雪冒險頁面建立簡短URL，並像管理內容一樣自行管理。 他們決定使用[管線免費URL重新導向](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)方法來管理URL重新導向。
+為了示範，假設WKND行銷團隊正在啟動新的滑雪行銷活動。 他們想要為滑雪冒險頁面建立簡短URL，並像管理內容一樣自行管理。 他們決定使用[管線免費URL重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)方法來管理URL重新導向。
 
 根據行銷團隊的需求，以下是需要建立的URL重新導向。
 
-| SOURCE URL | 目標 URL |
+| 來源 URL | 目標 URL |
 |------------|------------|
 | /ski | /us/en/adventures.html |
 | /ski/northamerica | /us/en/adventures/downhill-skiing-wyoming.html |
@@ -74,7 +74,7 @@ DAM中的![文字檔](./assets/pipeline-free-redirects/text-file-in-dam.png)
 
 [ACS Commons — 重新導向對應管理員](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)提供方便好用的介面，可管理URL重新導向。
 
-例如，行銷團隊可以建立名稱為`SkiCampaign`的新&#x200B;*重新導向對應*&#x200B;頁面，並使用&#x200B;**編輯專案**&#x200B;索引標籤新增上述URL重新導向。 URL重新導向可在`/etc/acs-commons/redirect-maps/skicampaign/jcr:content.redirectmap.txt`取得。
+例如，行銷團隊可以建立名稱為&#x200B;*的新*&#x200B;重新導向對應`SkiCampaign`頁面，並使用&#x200B;**編輯專案**&#x200B;索引標籤新增上述URL重新導向。 URL重新導向可在`/etc/acs-commons/redirect-maps/skicampaign/jcr:content.redirectmap.txt`取得。
 
 ![重新導向地圖管理員](./assets/pipeline-free-redirects/redirect-map-manager.png)
 
@@ -100,11 +100,11 @@ DAM中的![文字檔](./assets/pipeline-free-redirects/text-file-in-dam.png)
 
 ### 為彈性模式啟用Dispatcher模組
 
-首先，確認Dispatcher模組已啟用&#x200B;_彈性模式_。 `dispatcher/src/opt-in`資料夾中有`USE_SOURCES_DIRECTLY`個檔案表示Dispatcher處於彈性模式。
+首先，確認Dispatcher模組已啟用&#x200B;_彈性模式_。 `USE_SOURCES_DIRECTLY`資料夾中有`dispatcher/src/opt-in`個檔案表示Dispatcher處於彈性模式。
 
 ### 以RewriteMap載入URL重新導向
 
-接下來，在`dispatcher/src/opt-in`資料夾中建立新的組態檔`managed-rewrite-maps.yaml`，其結構如下。
+接下來，在`managed-rewrite-maps.yaml`資料夾中建立新的組態檔`dispatcher/src/opt-in`，其結構如下。
 
 ```yaml
 maps:
@@ -114,7 +114,7 @@ maps:
     ttl: 300 # Optional, default is 300 seconds, the reload interval for the map
 ```
 
-在部署期間，Dispatcher會在`/tmp/rewrites`資料夾中建立`<MAPNAME>.map`檔案。
+在部署期間，Dispatcher會在`<MAPNAME>.map`資料夾中建立`/tmp/rewrites`檔案。
 
 >[!IMPORTANT]
 >
@@ -122,7 +122,7 @@ maps:
 
 ### 套用URL重新導向至傳入要求
 
-最後，建立或更新Apache重寫設定檔案以使用上述對應(`<MAPNAME>.map`)。 例如，讓我們使用`dispatcher/src/conf.d/rewrites`資料夾中的`rewrite.rules`檔案來套用URL重新導向。
+最後，建立或更新Apache重寫設定檔案以使用上述對應(`<MAPNAME>.map`)。 例如，讓我們使用`rewrite.rules`資料夾中的`dispatcher/src/conf.d/rewrites`檔案來套用URL重新導向。
 
 ```
 ...
@@ -139,11 +139,12 @@ RewriteRule ^(.*)$ ${<MAPALIAS>:$1|/} [L,R=301]
 讓我們檢閱[以上](#manage-redirects)提及的每個URL重新導向管理選項的Dispatcher設定。
 
 >[!BEGINTABS]
->[!TAB DAM中的 文字檔]
+
+>DAM中的[!TAB 文字檔]
 
 當URL重新導向以文字檔案中的機碼值組形式管理，並上傳至DAM時，設定如下。
 
-[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```yaml
 maps:
@@ -151,7 +152,7 @@ maps:
   path: /content/dam/wknd/redirects/skicampaign.txt
 ```
 
-[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```
 ...
@@ -170,7 +171,7 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 
 使用ACS Commons — 重新導向對應管理員管理URL重新導向時，設定如下。
 
-[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```yaml
 maps:
@@ -178,7 +179,7 @@ maps:
   path: /etc/acs-commons/redirect-maps/skicampaign/jcr:content.redirectmap.txt
 ```
 
-[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```
 ...
@@ -197,7 +198,7 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 
 使用ACS Commons — 重新導向管理員管理URL重新導向時，設定如下。
 
-[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE dispatcher/src/opt-in/managed-rewrite-maps.yaml]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```yaml
 maps:
@@ -205,7 +206,7 @@ maps:
   path: /conf/wknd/settings/redirects.txt
 ```
 
-[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="以下程式碼範例的檔案名稱。"}
+[!BADGE dispatcher/src/conf.d/rewrites/rewrite.rules]{type=Neutral tooltip="下方程式碼範例的檔案名稱。"}
 
 ```
 ...
@@ -228,7 +229,7 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 >
 >*管道自由*&#x200B;用語是用來強調組態僅&#x200B;*部署一次*，而行銷團隊可以透過更新文字檔來管理URL重新導向。
 
-若要部署設定，請使用[Cloud Manager](https://my.cloudmanager.adobe.com/)中的[完整棧疊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)或[Web層設定](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#web-tier-config-pipelines)管道。
+若要部署設定，請使用[Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline)中的[完整棧疊](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#web-tier-config-pipelines)或[Web層設定](https://my.cloudmanager.adobe.com/)管道。
 
 ![透過完整棧疊管道部署](./assets/pipeline-free-redirects/deploy-full-stack-pipeline.png)
 
@@ -247,5 +248,5 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 
 ## 其他資源
 
-- [管道可用URL重新導向](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
+- [管道可用URL重新導向](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
 - [URL重新導向](url-redirection.md)

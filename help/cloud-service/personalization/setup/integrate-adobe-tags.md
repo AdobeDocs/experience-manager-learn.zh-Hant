@@ -4,19 +4,19 @@ description: 瞭解如何將AEM as a Cloud Service與Adobe Experience Platform�
 version: Experience Manager as a Cloud Service
 feature: Personalization, Integrations
 topic: Personalization, Integrations, Architecture, Content Management
-role: Developer, Architect, Leader, Data Architect, User
+role: Developer, Leader, User
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18719
 thumbnail: null
-source-git-commit: 70665c019f63df1e736292ad24c47624a3a80d49
+exl-id: 71cfb9f5-57d9-423c-bd2a-f6940cc0b4db
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 1%
 
 ---
-
 
 # 整合Adobe Experience Platform中的標籤
 
@@ -48,14 +48,14 @@ ht-degree: 1%
    - **屬性型別**：選取&#x200B;**網頁**
    - **網域**：部署屬性的網域（例如，`.adobeaemcloud.com`）
 
-   按一下「**儲存**」。
+   按一下&#x200B;**儲存**。
 
    ![Adobe標籤屬性](../assets/setup/adobe-tags-property.png)
 
 4. 開啟新屬性。 **Core**&#x200B;擴充功能應該已經包含在內。 稍後，您將在設定Experimentation使用案例時新增&#x200B;**Web SDK**&#x200B;擴充功能，因為它需要其他設定，例如&#x200B;**資料串流ID**。\
    ![Adobe標籤核心擴充功能](../assets/setup/adobe-tags-core-extension.png)
 
-5. 移至&#x200B;**發佈流程**&#x200B;並按一下&#x200B;**新增程式庫**&#x200B;以建立部署程式庫，以發佈Tags屬性。
+5. 移至&#x200B;**發佈流程**&#x200B;並按一下&#x200B;**新增程式庫**以建立部署程式庫，以發佈Tags屬性。
    ![Adobe標籤發佈流程](../assets/setup/adobe-tags-publishing-flow.png)
 
 6. 在&#x200B;**建立資料庫**&#x200B;對話方塊中，提供：
@@ -127,5 +127,5 @@ ht-degree: 1%
 
 ## 其他資源
 
-- [Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/debugger/home)
+- [Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
 - [標記概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/home)

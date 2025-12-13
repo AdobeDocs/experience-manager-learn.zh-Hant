@@ -4,7 +4,7 @@ description: 瞭解如何在AEM as a Cloud Service的CDN中停用HTTP回應的�
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2023-11-30T00:00:00Z
@@ -12,7 +12,7 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 100
-source-git-commit: cf006f24abbc5aa4b91277b91d68538c41d33e15
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 預設快取行為
 
-AEM as a Cloud Service CDN中HTTP回應的快取是由以下來自來源`Cache-Control`、`Surrogate-Control`或`Expires`的HTTP回應標頭所控制。  不快取`Cache-Control`中包含`private`、`no-cache`或`no-store`的原始回應。
+AEM as a Cloud Service CDN中HTTP回應的快取是由以下來自來源`Cache-Control`、`Surrogate-Control`或`Expires`的HTTP回應標頭所控制。  不快取`private`中包含`no-cache`、`no-store`或`Cache-Control`的原始回應。
 
 部署以AEM專案原型為基礎的AEM專案時，檢閱AEM Publish和Author的[預設快取行為](./enable-caching.md#default-caching-behavior)。
 
@@ -87,8 +87,8 @@ AEM as a Cloud Service CDN中HTTP回應的快取是由以下來自來源`Cache-C
    </LocationMatch>
    ```
 
-   `dispatcher/src/conf.d/enabled_vhosts`目錄中的vhost檔案是`dispatcher/src/conf.d/available_vhosts`目錄中檔案的&#x200B;**symlink**，因此請務必建立symlink （若不存在）。
-1. 使用[Cloud Manager - Web層設定管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=zh-Hant&#web-tier-config-pipelines)或[RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=zh-Hant#deploy-apache-or-dispatcher-configuration)，將vhost變更部署到所需的AEM as a Cloud Service環境。
+   `dispatcher/src/conf.d/enabled_vhosts`目錄中的vhost檔案是&#x200B;**目錄中檔案的** symlink`dispatcher/src/conf.d/available_vhosts`，因此請務必建立symlink （若不存在）。
+1. 使用[Cloud Manager - Web層設定管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines)或[RDE命令](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration)，將vhost變更部署到所需的AEM as a Cloud Service環境。
 
 ### 自訂Java™程式碼
 

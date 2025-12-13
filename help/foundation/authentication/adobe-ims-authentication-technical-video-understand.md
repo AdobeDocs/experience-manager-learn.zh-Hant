@@ -6,16 +6,16 @@ feature: User and Groups
 doc-type: Technical Video
 jira: KT-781
 topic: Architecture
-role: Architect
+role: Developer
 level: Experienced
 exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
 duration: 405
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '399'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -44,4 +44,4 @@ Adobe Experience Manager推出適用於AEM例項的Admin Console支援，以及�
 
 ### 在Adobe Experience Manager中套用許可權
 
-在Adobe Experience Manager中，從Adobe IMS同步的使用者群組應以條件新增至[AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hant)，這些群組已預先設定適當許可權，可在AEM中執行特定工作集。 從Adobe IMS同步的使用者不應直接新增至[AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=zh-Hant)。
+在Adobe Experience Manager中，從Adobe IMS同步的使用者群組應以條件新增至[AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)，這些群組已預先設定適當許可權，可在AEM中執行特定工作集。 從Adobe IMS同步的使用者不應直接新增至[AEM提供的使用者群組](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)。

@@ -4,16 +4,16 @@ description: 瞭解Web元件/純JS型AEM Headless部署的部署考量事項。
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10797
 thumbnail: kt-10797.jpg
 exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
 duration: 31
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 2%
+source-wordcount: '155'
+ht-degree: 7%
 
 ---
 
@@ -26,7 +26,7 @@ AEM Headless [Web元件](https://developer.mozilla.org/en-US/docs/Web/Web_Compon
 
 下列部署設定必須就Web元件/JS部署。
 
-| 連線到→的Web元件/JS應用程式 | AEM 作者 | AEM 發佈 | AEM預覽 |
+| 連線到→的Web元件/JS應用程式 | AEM 作者 | AEM Publish | AEM預覽 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher篩選器](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [跨原始資源共用(CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
@@ -42,14 +42,14 @@ Adobe提供範例Web元件。
        <div class="card">
            <div class="card-image">
                <figure class="image is-16by9">
-                   <a href="../example-apps/web-component.md" title="Web元件" tabindex="-1">
-                       <img class="is-bordered-r-small" src="../example-apps/assets/web-component/web-component-card.png" alt="Web元件">
+                   <a href="../example-apps/web-component.md" title="Web 元件" tabindex="-1">
+                       <img class="is-bordered-r-small" src="../example-apps/assets/web-component/web-component-card.png" alt="Web 元件">
                    </a>
                </figure>
            </div>
            <div class="card-content is-padded-small">
                <div class="content">
-                   <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/web-component.md" title="Web元件">Web元件</a></p>
+                   <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/web-component.md" title="Web 元件">Web 元件</a></p>
                    <p class="is-size-6">以純JavaScript撰寫的範例Web元件會使用AEM Headless GraphQL API的內容。</p>
                    <a href="../example-apps/web-component.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">檢視範例</span>

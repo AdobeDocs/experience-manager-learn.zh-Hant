@@ -4,7 +4,7 @@ description: 檢閱基於 maven 的全堆疊 AEM Sites 專案的前端開發、�
 version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
@@ -13,8 +13,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
 duration: 364
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 100%
 
@@ -56,14 +56,14 @@ ht-degree: 100%
 
 在開發階段，更新 `ui.frontend/src/main/webpack` 資料夾中的 CSS、JS 檔案，即可進行樣式設定一類前端變更以及品牌重塑。然後，在建置期間，這些檔案經過 [webpack](https://webpack.js.org/) 模組套件工具和 maven 外掛程式最佳化後，會變成 AEM clientlibs 並放在 `ui.apps` 模組之下。
 
-在 Cloud Manager [__中執行__&#x200B;全堆疊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=zh-Hant)管道時，前端變更便會部署到 AEM as a Cloud Service 環境。
+在 Cloud Manager [__中執行__&#x200B;全堆疊](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)管道時，前端變更便會部署到 AEM as a Cloud Service 環境。
 
 前端資源會經由以 `/etc.clientlibs/` 開頭的 URI 路徑傳送到 Web 瀏覽器，並且通常會在 AEM Dispatcher 和內容傳遞網路上儲存快取。
 
 
 >[!NOTE]
 >
-> 同樣地，在 __AEM Quick Site Creation 歷程__&#x200B;中，執行&#x200B;__前端__&#x200B;管道即可把[前端變更](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html?lang=zh-Hant)部署到 AEM as a Cloud Service 環境中，請參閱[設定您的管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html?lang=zh-Hant)
+> 同樣地，在 __AEM Quick Site Creation 歷程__&#x200B;中，執行&#x200B;__前端__&#x200B;管道即可把[前端變更](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html)部署到 AEM as a Cloud Service 環境中，請參閱[設定您的管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html)
 
 ### 檢閱 WKND 網站專案中的 webpack 設定檔 {#development-frontend-webpack-clientlib}
 
@@ -134,7 +134,7 @@ ht-degree: 100%
 
 ### 部署至 AEM as a Cloud Service  {#deployment-frontend-aemaacs}
 
-[__全堆疊__&#x200B;管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=zh-Hant&#full-stack-pipeline)將這些變更部署到 AEM as a Cloud Service 環境。
+[__全堆疊__&#x200B;管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#full-stack-pipeline)將這些變更部署到 AEM as a Cloud Service 環境。
 
 
 ### 從 AEM as a Cloud Service 傳遞 {#delivery-frontend-aemaacs}

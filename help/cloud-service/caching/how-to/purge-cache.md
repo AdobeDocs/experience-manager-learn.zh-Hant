@@ -4,7 +4,7 @@ description: 瞭解如何從AEM as a Cloud Service的CDN中清除或移除快取
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,7 +12,7 @@ last-substantial-update: 2024-08-13T00:00:00Z
 jira: KT-15963
 thumbnail: KT-15963.jpeg
 exl-id: 5d81f6ee-a7df-470f-84b9-12374c878a1b
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 在本教學課程中，您將瞭解如何使用自助服務功能，設定及使用Purge API Token來清除範例[AEM WKND](https://github.com/adobe/aem-guides-wknd)網站的CDN快取。
 
->[!VIDEO](https://video.tv.adobe.com/v/3436944?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3432948?quality=12&learn=on)
 
 ## 快取失效vs明確清除
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 清除API權杖是透過在您的AEM專案代碼中設定CDN規則來建立。
 
-1. 從您AEM專案的主要`config`資料夾開啟`cdn.yaml`檔案。 例如，[WKND專案的cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml)檔案。
+1. 從您AEM專案的主要`cdn.yaml`資料夾開啟`config`檔案。 例如，[WKND專案的cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml)檔案。
 
 1. 將下列CDN規則新增至`cdn.yaml`檔案：
 
@@ -86,7 +86,7 @@ data:
 1. 然後選取&#x200B;**組態**&#x200B;索引標籤，再按一下&#x200B;**新增組態**&#x200B;按鈕。
 
 1. 在&#x200B;**環境組態**&#x200B;對話方塊中，輸入下列詳細資料：
-   - **名稱**：輸入環境變數的名稱。 它必須符合`cdn.yaml`檔案中的`purgeKey1`或`purgeKey2`值。
+   - **名稱**：輸入環境變數的名稱。 它必須符合`purgeKey1`檔案中的`purgeKey2`或`cdn.yaml`值。
    - **值**：輸入清除API Token值。
    - **已套用服務**：選取&#x200B;**全部**&#x200B;選項。
    - **型別**：選取&#x200B;**密碼**&#x200B;選項。
@@ -96,7 +96,7 @@ data:
 
 1. 重複上述步驟，為`purgeKey2`值建立第二個環境變數。
 
-1. 按一下[儲存]以儲存並套用變更。**&#x200B;**
+1. 按一下[儲存]以儲存並套用變更。****
 
 ### 部署CDN規則
 
@@ -129,7 +129,7 @@ Surrogate-Key: <SURROGATE_KEY>
 - **X-AEM-Purge-Key：`<PURGE_API_TOKEN>`**：包含清除API Token值的自訂標頭。
 - **X-AEM-Purge：`<PURGE_TYPE>`**：指定清除作業型別的自訂標頭。 值可以是`hard`、`soft`或`all`。 下表說明每種永久刪除型別：
 
-  | 清除型別 | 描述 |
+  | 清除型別 | 說明 |
   |:------------:|:-------------:|
   | hard （預設） | 立即移除快取的資源。 避免使用它，因為它會增加流向原始伺服器的流量。 |
   | 柔和 | 將快取的資源標示為過時，並從原始伺服器擷取最新版本。 |

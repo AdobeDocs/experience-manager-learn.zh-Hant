@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
 duration: 307
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 1%
@@ -32,7 +32,7 @@ ht-degree: 1%
 此範例延伸至擴充點`headerBar`，以將自訂按鈕新增至內容片段編輯器。
 
 | AEM UI已擴充 | 擴充點 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [內容片段編輯器](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [標題功能表](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
 
 ## 範例擴充功能
@@ -148,7 +148,7 @@ export default ExtensionRegistration;
 
 #### 內容片段資料
 
-可在`guestConnection.host.contentFragment`物件上使用`getContentFragment()`方法擷取使用中的內容片段。
+可在`getContentFragment()`物件上使用`guestConnection.host.contentFragment`方法擷取使用中的內容片段。
 
 ```javascript
 const contentFragment = await guestConnection.host.contentFragment.getContentFragment();

@@ -4,15 +4,15 @@ description: 了解如何透過流量篩選器規則保護您的 AEM 網站不�
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
-source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 100%
 
@@ -50,7 +50,7 @@ AEM as a Cloud Service 運用整合式 CDN 層保護並最佳化網站的內容�
 | 範例 | 速率限制、地理位置封鎖、使用者代理篩選 | SQL 注入、XSS、已知攻擊 IP |
 | 靈活性 | 透過 YAML 的高可設定性 | 藉由預先定義的 WAF 標幟，透過 YAML 的高可設定性 |
 | 建議的模式 | 從 `log` 模式開始，然後移至 `block` 模式 | 首先從 `block` 模式 (針對 `ATTACK-FROM-BAD-IP` WAF 標幟) 和 `log` 模式 (針對 `ATTACK` WAF 標誌) 開始，然後針對兩者轉到 `block` 模式 |
-| 部署 | 在 YAML 中定義並透過 Cloud Manager 設定管線部署 | 藉由 `wafFlags` 在 YAML 中定義並透過 Cloud Manager 設定管線部署 |
+| 部署 | 在 YAML 中定義並透過 Cloud Manager 設定管道部署 | 藉由 `wafFlags` 在 YAML 中定義並透過 Cloud Manager 設定管道部署 |
 | 授權 | 納入 Sites 和 Forms 授權 | **需要 WAF-DDoS 保護或增強安全性授權證** |
 
 標準流量篩選器規則有助於執行企業特定的原則，例如速率限制或封鎖特定地區，以及根據要求屬性與標頭 (例如 IP 位址、路徑或使用者代理程式) 來封鎖流量。

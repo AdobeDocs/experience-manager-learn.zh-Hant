@@ -1,10 +1,10 @@
 ---
-title: PIM整合的AEM Assets事件
+title: 用於 PIM 整合的 AEM Assets 事件
 description: 瞭解如何整合AEM Assets和產品資訊管理(PIM)系統，以進行資產中繼資料更新。
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 761
@@ -12,14 +12,14 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: ab499385a1df8c4b0ac58b6a382faa29b262e3ba
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1518'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# PIM整合的AEM Assets事件
+# 用於 PIM 整合的 AEM Assets 事件
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 整合的高層級流程如下：
 
-用於PIM整合的![AEM Assets事件](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
+![用於 PIM 整合的 AEM Assets 事件](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
 
 1. 當資產上傳完成且所有資產處理活動也完成時，AEM作者服務會觸發&#x200B;_資產處理完成_&#x200B;事件。 等候資產處理完成可確保任何現成可用的處理（例如中繼資料擷取）已完成。
 1. 事件已傳送至[Adobe I/O Events](https://developer.adobe.com/events/)服務。
@@ -57,8 +57,8 @@ ht-degree: 0%
 
 高階開發步驟為：
 
-1. [更新AEM as a Cloud Service環境](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
-1. [啟用AEM API存取權](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
+1. [更新AEM as a Cloud Service環境](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
+1. [啟用AEM API存取權](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
 1. [在Adobe Developer Console (ADC)中建立專案](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
 1. [初始化專案以進行本機開發](./runtime-action.md#initialize-project-for-local-development)
 1. 在ADC中設定專案
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 若要完成設定，請在AEM專案的`api.yaml`檔案中定義設定。 然後，使用Cloud Manager中的設定管道來部署`api.yaml`檔案。
 
-- 在AEM專案中，從`config`資料夾中找到或建立`api.yaml`檔案。
+- 在AEM專案中，從`api.yaml`資料夾中找到或建立`config`檔案。
 
   ![找出API YAML](../assets/examples/assets-pim-integration/locate-api-yaml.png)
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 ### 開發執行階段動作
 
-若要執行中繼資料擷取和更新，請先更新`src/dx-excshell-1/actions/generic`資料夾中自動建立的&#x200B;_通用_&#x200B;動作代碼。
+若要執行中繼資料擷取和更新，請先更新&#x200B;_資料夾中自動建立的_&#x200B;通用`src/dx-excshell-1/actions/generic`動作代碼。
 
 如需完整程式碼，請參閱附加的[WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip)檔案，以下區段將重點說明重要檔案。
 
@@ -293,7 +293,7 @@ ht-degree: 0%
 
 依預設，WKND Sites專案沒有資產中繼資料結構可顯示PIM特定中繼資料，例如SKU、供應商名稱等。 讓我們建立資產中繼資料結構，並將其套用至AEM例項中的資產資料夾。
 
-1. 登入AEM as a Cloud Service Asset執行個體並出現在[資產檢視](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/authoring/switch-views)中。
+1. 登入AEM as a Cloud Service Asset執行個體並出現在[資產檢視](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)中。
 
    ![AEM Assets檢視](../assets/examples/assets-pim-integration/aem-assets-view.png)
 

@@ -8,7 +8,7 @@ breadcrumb-title: AEM Forms 教學課程
 sub-product: Experience Manager Forms
 version: Experience Manager 6.4, Experience Manager 6.5
 index: y
-source-git-commit: c4b5a015f1c0d5e3877886052476871548ec9b0e
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 100%
@@ -316,8 +316,7 @@ ht-degree: 100%
    + [Workbench 簡介](aem-forms-workbench/workbench-introduction.md)
    + [建立表單流程](aem-forms-workbench/workbench-creating-a-process.md)
    + [流程偵錯](aem-forms-workbench/workbench-recording-and-testing-process.md)
-+ 列印管道的互動式通訊 
-{#ic-print-channel-tutorial}
++ 列印管道的互動式通訊 {#ic-print-channel-tutorial}
    + [1 - 簡介](ic-print-channel-tutorial/introduction.md)
    + [2 - 設定 Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
    + [3 - 建立資料來源](ic-print-channel-tutorial/create-data-source.md)

@@ -1,13 +1,13 @@
 ---
 title: 使用AEM Forms的Acroforms
 description: 將Acroforms與AEM Forms整合的第1部分。 使用Acroform建立最適化表單並合併資料以取得PDF。
-feature: adaptive-forms
+feature: Adaptive Forms
 doc-type: Tutorial
 version: Experience Manager 6.5
 badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 144
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Acroform是使用Acrobat建立的表單。 您可以使用Acrobat從頭開始建
 >
 >如果您要傳送以XFA為基礎的檔案，則需要將檔案平面化，且Acrobat Sign簽名標籤必須以靜態文字的形式顯示在檔案中。
 
-[Acrobat Sign文字標籤檔案](https://helpx.adobe.com/tw/sign/using/text-tag.html)
+[Acrobat Sign文字標籤檔案](https://helpx.adobe.com/sign/using/text-tag.html)
 
 >[!NOTE]
 >

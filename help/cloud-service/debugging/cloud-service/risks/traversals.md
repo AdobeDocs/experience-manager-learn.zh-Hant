@@ -2,7 +2,7 @@
 title: AEM as a Cloud Service中的周遊警告
 description: 瞭解如何在AEM as a Cloud Service中減輕周遊警告。
 feature: Migration
-role: Architect, Developer
+role: Developer
 level: Beginner
 jira: KT-10427
 hidefromtoc: true
@@ -11,10 +11,10 @@ index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
 duration: 155
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '715'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 _什麼是周遊警告？_
 
-周遊警告是&#x200B;__aemerror__&#x200B;記錄陳述式，指出正在AEM Publish服務上執行執行效能不佳的查詢。 周遊警告通常會以兩種方式顯示在AEM中：
+周遊警告是&#x200B;__aemerror__&#x200B;記錄陳述式，指出在AEM Publish服務上執行的查詢效能不佳。 周遊警告通常會以兩種方式顯示在AEM中：
 
 1. __查詢速度緩慢__&#x200B;未使用索引，導致回應時間緩慢。
 1. __失敗的查詢__，擲回`RuntimeNodeTraversalException`，導致中斷的體驗。
@@ -108,7 +108,7 @@ _什麼是周遊警告？_
 
 ## 1.分析{#analyze}
 
-首先，識別哪些AEM Publish服務會出現周遊警告。 若要這麼做，請從Cloud Manager下載Publish服務過去&#x200B;__三天__&#x200B;從所有環境（開發、中繼及生產）的`aemerror`記錄[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html?lang=zh-Hant#cloud-manager){target="_blank"}。
+首先，識別哪些AEM Publish服務會出現周遊警告。 若要這麼做，請從Cloud Manager下載過去[三天（開發、預備和生產）之所有環境`aemerror`的Publish服務](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"}記錄&#x200B;__。__
 
 ![下載AEM as a Cloud Service記錄檔](./assets/traversals/download-logs.jpg)
 
@@ -127,15 +127,15 @@ consider creating an index or changing the query
 
 + 與查詢執行相關聯的HTTP要求URL
 
-   + 範例： `GET /content/wknd/us/en/example.html HTTP/1.1`
+   + 範例：`GET /content/wknd/us/en/example.html HTTP/1.1`
 
 + Oak查詢語法
 
-   + 範例： `select [jcr:path], [jcr:score], * from [nt:base] as a where [xyz] = 'abc' and isdescendantnode(a, '/content')`
+   + 範例：`select [jcr:path], [jcr:score], * from [nt:base] as a where [xyz] = 'abc' and isdescendantnode(a, '/content')`
 
 + XPath查詢
 
-   + 範例： `/jcr:root/content//element(*, nt:base)[(@xyz = 'abc')] */, path=/content//*, property=[xyz=[abc]])`
+   + 範例：`/jcr:root/content//element(*, nt:base)[(@xyz = 'abc')] */, path=/content//*, property=[xyz=[abc]])`
 
 + 執行查詢的程式碼
 
@@ -159,14 +159,14 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
 
 __變更查詢__&#x200B;以新增可解析成現有索引限制的新查詢限制。 可能的話，偏好變更查詢而非變更索引。
 
-+ [瞭解如何調整查詢效能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=zh-Hant#query-performance-tuning){target="_blank"}
++ [瞭解如何調整查詢效能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 
 ### 調整索引
 
 __變更（或建立） AEM索引__，讓現有的查詢限制可解析為索引更新。
 
-+ [瞭解如何調整現有的索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=zh-Hant#query-performance-tuning){target="_blank"}
-+ [瞭解如何建立索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=zh-Hant#create-a-new-index){target="_blank"}
++ [瞭解如何調整現有的索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [瞭解如何建立索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target="_blank"}
 
 ## 3.確認{#verify}
 
@@ -174,15 +174,15 @@ __變更（或建立） AEM索引__，讓現有的查詢限制可解析為索引
 
 ![說明查詢](./assets/traversals/verify.gif)
 
-如果只對查詢[&#128279;](#adjust-the-query)進行調整，則可以透過Developer Console的[說明查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=zh-Hant#queries){target="_blank"}，直接在AEM as a Cloud Service上測試查詢。 說明查詢會針對AEM Author服務執行，但由於索引定義在Author和Publish服務中相同，因此針對AEM Author服務驗證查詢便已足夠。
+如果只對查詢[進行](#adjust-the-query)調整，則可以透過Developer Console的[Explain Query](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}，直接在AEM as a Cloud Service上測試查詢。 說明查詢會針對AEM Author服務執行，但由於索引定義在Author和Publish服務中是相同的，因此針對AEM Author服務驗證查詢便已足夠。
 
-如果已對索引[&#128279;](#adjust-the-index)進行調整，則必須將索引部署到AEM as a Cloud Service。 部署索引調整後，Developer Console的[Explain查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=zh-Hant#queries){target="_blank"}可用於進一步執行和調整查詢。
+如果已對索引[進行](#adjust-the-index)調整，則必須將索引部署到AEM as a Cloud Service。 部署索引調整後，Developer Console的[Explain查詢](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}可用於進一步執行和調整查詢。
 
 最終，所有變更（查詢和程式碼）都會提交至Git，並使用Cloud Manager部署至AEM as a Cloud Service。 部署後，將測試與原始周遊警告關聯的程式碼路徑，並確認周遊警告不再出現在`aemerror`記錄中。
 
 ## 其他資源
 
-檢視這些其他有用的資源，以瞭解AEM索引、搜尋和周遊警告。
+檢視這些其他實用的資源，以瞭解AEM索引、搜尋和周遊警告。
 
 <div class="columns is-multiline">
 
@@ -191,14 +191,14 @@ __變更（或建立） AEM索引__，讓現有的查詢限制可解析為索引
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=zh-Hant" title="Cloud 5 — 搜尋和索引" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 — 搜尋和索引"></a>
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜尋和索引" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 — 搜尋和索引"></a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=zh-Hant" title="Cloud 5 — 搜尋和索引">Cloud 5 — 搜尋和索引</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 — 搜尋和索引">Cloud 5 — 搜尋和索引</a></p>
                <p class="is-size-6">Cloud 5團隊會顯示AEM as a Cloud Service上搜尋和建立索引的來龍去脈。</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=zh-Hant" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
                </a>
            </div>
@@ -212,16 +212,16 @@ __變更（或建立） AEM索引__，讓現有的查詢限制可解析為索引
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=zh-Hant" title="內容搜尋與索引" tabindex="-1">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="內容搜尋與索引" tabindex="-1">
                    <img class="is-bordered-r-small" src="./assets/traversals/resources--docs.png" alt="內容搜尋與索引">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=zh-Hant" title="內容搜尋與索引">內容搜尋和索引檔案</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="內容搜尋與索引">內容搜尋和索引檔案</a></p>
                <p class="is-size-6">瞭解如何在AEM as a Cloud Service中建立和管理索引。</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=zh-Hant" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
                </a>
            </div>
@@ -234,16 +234,16 @@ __變更（或建立） AEM索引__，讓現有的查詢限制可解析為索引
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=zh-Hant" title="更新Oak索引" tabindex="-1">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="更新Oak索引" tabindex="-1">
                    <img class="is-bordered-r-small" src="./assets/traversals/resources--aem-experts-series.png" alt="更新Oak索引">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=zh-Hant" title="更新Oak索引">更新Oak索引</a></p>
-               <p class="is-size-6">瞭解如何將AEM 6 Oak索引定義轉換成相容於AEM as a Cloud Service，以及維護未來的索引。</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=zh-Hant" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="更新Oak索引">更新Oak索引</a></p>
+               <p class="is-size-6">瞭解如何將AEM 6 Oak索引定義轉換成與AEM as a Cloud Service相容的定義，並維護未來的索引。</p>
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
                </a>
            </div>

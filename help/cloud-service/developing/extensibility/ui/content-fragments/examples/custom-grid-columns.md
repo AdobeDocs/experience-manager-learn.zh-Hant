@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
 exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
 duration: 198
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 此範例延伸至擴充點`contentFragmentGrid`，以新增自訂欄至內容片段主控台。
 
 | AEM UI已擴充 | 擴充點 |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [內容片段主控台](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [格線資料行](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/) |
 
 ## 範例擴充功能
@@ -149,7 +149,7 @@ export default ExtensionRegistration;
 
 #### 內容片段資料
 
-`getColumns()`中的`render(..)`方法傳遞的是片段陣列。 陣列中的每個物件代表格線中的一列，並包含下列有關內容片段的中繼資料。 此中繼資料可用於格線中的熱門自訂欄。
+`render(..)`中的`getColumns()`方法傳遞的是片段陣列。 陣列中的每個物件代表格線中的一列，並包含下列有關內容片段的中繼資料。 此中繼資料可用於格線中的熱門自訂欄。
 
 
 ```javascript
@@ -161,7 +161,7 @@ render: async function (fragments) {
 }
 ```
 
-可作為`render(..)`方法中`fragments`引數的專案使用的內容片段JSON範例。
+可作為`fragments`方法中`render(..)`引數的專案使用的內容片段JSON範例。
 
 ```json
 {
@@ -208,7 +208,7 @@ render: async function (fragments) {
 
 >[!IMPORTANT]
 >
-> 請確定AEM Author執行個體已設定為允許來自AppBuilder應用程式執行所在原始位置的[跨原始請求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=zh-Hant)。 允許的來源包括`https://localhost:9080`、AppBuilder階段來源和AppBuilder生產來源。
+> 請確定AEM Author執行個體已設定為允許來自AppBuilder應用程式執行所在原始位置的[跨原始請求](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html)。 允許的來源包括`https://localhost:9080`、AppBuilder階段來源和AppBuilder生產來源。
 >
 > 或者，擴充功能可以呼叫自訂[AppBuilder動作](../../runtime-action.md)，代表擴充功能向AEM Author提出要求。
 
