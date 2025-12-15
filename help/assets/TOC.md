@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: bf996405c360c77475d9f76d5de9bcd4fde3c163
+source-git-commit: a43bd7ae4e5b0a6793c52b5a8d0f36e3c1b260b1
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 99%
+source-wordcount: '472'
+ht-degree: 98%
 
 ---
 
@@ -144,6 +144,7 @@ ht-degree: 99%
    + [Dynamic Media 概觀](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic 桌面應用程式](dynamic-media/dynamic-media-classic-desktop-application.md)
    + 影像 {#images}
+      + [URL語法和影像預設集](dynamic-media/dynamic-media-urls-and-image-presets.md)
       + [影像自動化](dynamic-media/dynamic-media-image-automation.md)
       + [Dynamic Media 範本](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media 快照](dynamic-media/dynamic-media-snapshot.md)
@@ -206,4 +207,4 @@ ht-degree: 99%
 + 部署{#deployment}
    + [多重租戶和同時開發](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=zh-Hant){target=_blank}
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}
