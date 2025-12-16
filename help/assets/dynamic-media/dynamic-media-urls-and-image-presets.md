@@ -21,6 +21,6 @@ ht-degree: 0%
 
 探索AEM Assets Dynamic Media URL語法，瞭解如何使用影像預設集將您的價值最大化。 增強您的資產管理功能並提高工作流程效率。
 
->[!VIDEO](https://video.tv.adobe.com/v/3477924/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477947/?captions=chi_hant&learn=on&enablevpops)
 
 觀看這段短片，瞭解如何在AEM Assets[中建立影像預設集](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets)。
