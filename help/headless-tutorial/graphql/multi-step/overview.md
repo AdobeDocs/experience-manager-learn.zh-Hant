@@ -12,10 +12,10 @@ level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 duration: 54
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: ht
-source-wordcount: '237'
-ht-degree: 100%
+source-git-commit: e7f556737cdf6a92c0503d3b4a52eef1f71c8330
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 88%
 
 ---
 
@@ -50,10 +50,11 @@ ht-degree: 100%
 
 ## 我們開始吧！
 
-從[定義內容片段模型](content-fragment-models.md)開始本教學課程。
+開始此教學課程： [定義內容片段模型](content-fragment-models.md)。
 
 ## GitHub 專案
 
-來源程式碼和內容套件可以在 [AEM 指南 - WKND GraphQL GitHub 專案](https://github.com/adobe/aem-guides-wknd-graphql)中找到。
+原始程式碼和內容套件可在`basic-tutorial`AEM Guides - WKND GraphQL GitHub專案[的](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial)資料夾中使用。
+
 
 若您發現本教學課程或程式碼有問題，請留下 [GitHub 問題](https://github.com/adobe/aem-guides-wknd-graphql/issues)。
