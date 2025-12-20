@@ -23,4 +23,4 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/335459?quality=12&learn=on)
 
-瞭解在AEM Assets中建立Dynamic Media URL和影像預設集的最佳實務，並瞭解其運作方式！ [在此觀看影片](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-urls-and-image-presets)。
+瞭解在AEM Assets中建立Dynamic Media URL和影像預設集的最佳實務，並瞭解其運作方式！ [在此觀看影片](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-urls-and-image-presets)。
