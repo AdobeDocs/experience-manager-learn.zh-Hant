@@ -11,10 +11,10 @@ duration: 75
 last-substantial-update: 2024-03-30T00:00:00Z
 jira: KT-15219
 exl-id: 1d7dd829-e235-4884-a13f-b6ea8f6b4b0b
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 100%
+source-wordcount: '374'
+ht-degree: 98%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 100%
             <td>網頁應用程式防火牆 (WAF)</td>
             <td>一項安全性解決方案，為協助網頁應用程式抵禦各種類型的攻擊。</td>
             <td>
-            <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis#waf-rules" target="_blank">WAF-DDoS 防護授權</a></td>
+            <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis#waf-rules" target="_blank">延伸安全性(先前名為WAF-DDoS Protection)授權</a></td>
             <td><a href="https://docs.aws.amazon.com/waf/" target="_blank">AWS</a> 或者透過 AMS 合約的 <a href="https://azure.microsoft.com/en-us/products/web-application-firewall" target="_blank">Azure</a> WAF。</td>
             <td>您偏好的 WAF</td>
         </tr>

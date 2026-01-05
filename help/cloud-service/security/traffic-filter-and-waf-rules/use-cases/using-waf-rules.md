@@ -12,10 +12,10 @@ badgeLicense: label="需要授權" type="positive" before-title="true"
 jira: KT-18308
 thumbnail: null
 exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '1376'
-ht-degree: 100%
+source-wordcount: '1386'
+ht-degree: 98%
 
 ---
 
@@ -27,10 +27,10 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
-> WAF 流量篩選器規則需要額外的 **WAF-DDoS 防護**&#x200B;或&#x200B;**增強安全性**&#x200B;授權。在預設情況下，標準流量篩選器規則可供 Sites 和 Forms 客戶使用。
+> WAF流量篩選規則需要額外的延伸安全性(先前稱為WAF-DdS Protection)或醫療保健延伸安全性（先前稱為Enhanced Security）授權。 在預設情況下，標準流量篩選器規則可供 Sites 和 Forms 客戶使用。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469441/?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## 學習目標
 

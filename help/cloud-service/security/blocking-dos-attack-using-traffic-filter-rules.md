@@ -12,10 +12,10 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 100%
+source-wordcount: '619'
+ht-degree: 93%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 100%
 我們來了解一些客戶可以採取的額外建議措施，以便保護他們的網站抵禦 DDoS 攻擊：
 
 - 實作 Adobe 建議的[標準流量篩選器規則](./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)，透過記錄和警告可疑行為來識別潛在的惡意流量模式。
-- 使用 **WAF-DDoS 防護**&#x200B;或&#x200B;**增強安全性**&#x200B;附加元件，並實作 Adobe 建議的 [WAF 流量篩選器規則](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)以防範複雜的攻擊，包括使用進階通訊協定或以承載為基礎的技術。
+- 使用「延伸安全性」(先前稱為WAF-DDoS Protection)或「醫療保健延伸安全性」（先前稱為「增強安全性」）附加元件，並實作Adobe建議的[WAF流量篩選規則](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)，以抵禦複雜攻擊，包括使用進階通訊協定或裝載型技術的攻擊。
 - 透過設定[要求轉換](./traffic-filter-and-waf-rules/how-to/request-transformation.md)以忽略不必要的查詢參數，進而增加快取覆蓋率。
 
 ## 快速入門
