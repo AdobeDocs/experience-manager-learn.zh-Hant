@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f4f177f2745cb03c81011679b9d88eaadeb9cae3
 workflow-type: tm+mt
-source-wordcount: '1859'
+source-wordcount: '1891'
 ht-degree: 9%
 
 ---
@@ -128,7 +128,7 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
    ![已建立新專案](./assets/setup/new-project-created.png)
 
-1. 按一下右上角的&#x200B;**編輯專案**&#x200B;按鈕以編輯專案名稱。 提供有意義的名稱，然後按一下[儲存]。**&#x200B;**
+1. 按一下右上角的&#x200B;**編輯專案**&#x200B;按鈕以編輯專案名稱。 提供有意義的名稱，然後按一下[儲存]。****
 
    ![編輯專案名稱](./assets/setup/edit-project-name.png)
 
@@ -154,7 +154,7 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
    ![選取驗證](./assets/s2s/select-authentication.png)
 
-   伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。 「網頁應用程式」和「單頁應用程式」驗證選項適用於需要代表使用者存取API的應用程式。 如需詳細資訊，請參閱[&#x200B; OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
+   伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。 「網頁應用程式」和「單頁應用程式」驗證選項適用於需要代表使用者存取API的應用程式。 如需詳細資訊，請參閱[ OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
 
    >[!TIP]
    >
@@ -179,7 +179,9 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
 ## 設定AEM執行個體以啟用ADC專案通訊{#configure-aem-instance}
 
-接下來，您需要設定AEM執行個體以啟用上述ADC專案通訊。 使用此設定時，ADC專案的ClientID無法與AEM執行個體通訊，導致了403禁止錯誤。 將此設定視為防火牆規則，僅允許允許允許的ClientID與AEM執行個體通訊。
+接下來，您需要設定AEM執行個體以啟用上述ADC專案通訊。
+
+若沒有此設定，ADC專案的ClientID無法與AEM執行個體通訊，並導致403禁止錯誤。 將此設定視為防火牆規則，僅允許允許允許的ClientID與AEM執行個體通訊。
 
 讓我們依照設定AEM執行個體的步驟來啟用上述ADC專案通訊。
 
@@ -210,11 +212,16 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
 1. 提交設定變更並將變更推送到Cloud Manager管道所連線的遠端Git存放庫。
 
-1. 在Cloud Manager中使用[設定管道](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)部署上述變更。
+1. 在Cloud Manager中使用[設定管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)部署上述變更。
 
    ![部署YAML](./assets/setup/config-pipeline.png)
 
-請注意，`api.yaml`檔案也可以使用命令列工具[安裝在](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[、](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)中。 在將設定變更部署到生產環境之前，這非常有用。
+請注意，`api.yaml`檔案也可以使用命令列工具[安裝在](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[、](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)中。 在將設定變更部署到生產環境之前，這非常有用。
+
+>[!CAUTION]
+>
+>YAML (`api.yaml`)檔案是設定AEM執行個體以啟用與ADC專案通訊的唯一方法。 此設定不支援其他方法，例如使用環境變數。
+
 
 ## 後續步驟
 
