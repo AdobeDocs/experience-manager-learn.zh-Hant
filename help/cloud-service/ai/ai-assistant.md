@@ -20,6 +20,6 @@ ht-degree: 6%
 
 瞭解[AEM AI Assistant](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#)如何簡化您的Adobe Experience Manager工作流程。 無論是尋找功能、瞭解最佳實務、疑難排解問題，還是建立支援票證，您都可以在AEM中智慧型陪伴。 透過AI支援的指引、見解和支援，大幅提升生產力 — 全都在一處。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475369/?captions=chi_hant&learn=on&enablevpops)
 
 *若要存取AEM AI小幫手，請依照[設定指南](./setup.md#aem-ai-assistant)，確定您已在AEM環境中設定存取權。*

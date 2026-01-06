@@ -24,7 +24,7 @@ ht-degree: 3%
 
 瞭解如何使用[Adobe Admin Console](https://adminconsole.adobe.com)在Adobe Experience Manager中設定AI助理的存取權。 若要讓使用者從「助理」取得回應並利用自動建立票證，此步驟是必要的。
 
->[!VIDEO](https://video.tv.adobe.com/v/3474066/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474077/?captions=chi_hant&learn=on&enablevpops)
 
 ### AEM中的代理程式
 
