@@ -28,7 +28,7 @@ ht-degree: 3%
 
 ### AEM中的代理程式
 
-若要在AEM中使用代理程式，您必須先設定[AEM AI小幫手](#aem-ai-assistant)存取權。 AEM中的代理程式必須由Adobe布建。 若要要求存取AEM中的代理程式，請聯絡您的Adobe代表或[Adobe支援](https://experienceleague.adobe.com/en/support)。
+若要在AEM中使用代理程式，您必須先設定[AEM AI小幫手](#aem-ai-assistant)存取權。 AEM中的代理程式必須由Adobe布建。 若要要求存取AEM中的代理程式，請聯絡您的Adobe代表或[Adobe支援](https://experienceleague.adobe.com/zh-hant/support)。
 
 ## 遊樂場
 
