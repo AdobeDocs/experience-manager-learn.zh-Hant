@@ -22,6 +22,6 @@ ht-degree: 0%
 
 Adobe Snapshot是視覺化展示工具，旨在說明Dynamic Media在最佳化及動態影像傳送方面的強大功能。 實驗測試影像或Dynamic Media URL，以視覺化方式觀察各種Dynamic Media影像修飾元、智慧型裁切以及針對檔案大小進行智慧型影像最佳化（使用WebP和AVIF傳送）的輸出。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419421/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445574/?captions=chi_hant&learn=on)
 
 [啟動Adobe快照](https://snapshot.scene7.com/)
