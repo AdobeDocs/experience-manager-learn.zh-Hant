@@ -25,4 +25,4 @@ ht-degree: 7%
 
 探索如何使用預設內容、區塊等組合檔案製作。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425701/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438827/?captions=chi_hant&learn=on)

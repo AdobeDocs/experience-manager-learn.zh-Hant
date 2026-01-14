@@ -25,4 +25,4 @@ ht-degree: 7%
 
 探索如何將檔案工作流程用於AEM檔案製作。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425720/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438301/?captions=chi_hant&learn=on)

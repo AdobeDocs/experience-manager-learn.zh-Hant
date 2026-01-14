@@ -25,4 +25,4 @@ ht-degree: 0%
 
 瞭解如何使用iFrame搭配AEM檔案製作來內嵌內容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425719/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438400/?captions=chi_hant&learn=on)

@@ -25,4 +25,4 @@ ht-degree: 4%
 
 深入瞭解重新導向在檔案編寫中的運作方式，以及作者如何在沒有技術專業知識的情況下輕鬆設定重新導向。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425704/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438554/?captions=chi_hant&learn=on)

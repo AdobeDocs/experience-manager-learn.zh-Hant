@@ -25,4 +25,4 @@ ht-degree: 12%
 
 探索檔案撰寫如何處理頁面層級中繼資料，以及作者如何在沒有任何技術專業知識的情況下進行更新。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425706/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438079/?captions=chi_hant&learn=on)

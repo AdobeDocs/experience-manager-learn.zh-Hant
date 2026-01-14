@@ -25,4 +25,4 @@ ht-degree: 9%
 
 探索如何防止搜尋引擎為使用AEM檔案製作功能製作的網頁編制索引。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425726/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438130/?captions=chi_hant&learn=on)

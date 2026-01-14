@@ -25,4 +25,4 @@ ht-degree: 0%
 
 瞭解如何使用AEM檔案編寫功能來版本編寫的檔案。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425728/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438807/?captions=chi_hant&learn=on)

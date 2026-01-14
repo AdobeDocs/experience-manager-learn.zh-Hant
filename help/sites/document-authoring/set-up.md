@@ -25,4 +25,4 @@ ht-degree: 0%
 
 有關如何為作者設定檔案編寫的指南。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425699/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438875/?captions=chi_hant&learn=on)
