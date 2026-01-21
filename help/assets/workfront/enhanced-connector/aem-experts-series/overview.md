@@ -100,4 +100,4 @@ ht-degree: 85%
 
 如果您使用Workfront Fusion連結Workfront和AEM Assets，要自動化專案建立和工作流程協調，請參閱Workfront Fusion和AEM Assets整合檔案。
 
-[使用Workfront Fusion將Workfront問題轉換為具有AEM工作流程的專案](https://experienceleague.adobe.com/en/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/use-fusion-to-create-project-with-workflows)
+[使用Workfront Fusion將Workfront問題轉換為具有AEM工作流程的專案](https://experienceleague.adobe.com/zh-hant/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/use-fusion-to-create-project-with-workflows)
