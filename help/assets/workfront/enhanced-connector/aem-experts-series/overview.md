@@ -13,10 +13,10 @@ badgeIntegration: label="整合" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service、AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
 duration: 49
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '280'
-ht-degree: 100%
+source-git-commit: 866dca32844a7185bdf3980e38570da1d44d8b83
+workflow-type: tm+mt
+source-wordcount: '328'
+ht-degree: 85%
 
 ---
 
@@ -95,3 +95,9 @@ ht-degree: 100%
    </td>
   </tr>  
 </tbody></table>
+
+## 透過Workfront Fusion連線
+
+如果您使用Workfront Fusion連結Workfront和AEM Assets，要自動化專案建立和工作流程協調，請參閱Workfront Fusion和AEM Assets整合檔案。
+
+[使用Workfront Fusion將Workfront問題轉換為具有AEM工作流程的專案](https://experienceleague.adobe.com/en/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/use-fusion-to-create-project-with-workflows)
