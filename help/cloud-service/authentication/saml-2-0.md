@@ -56,7 +56,7 @@ AEM Publish SAML 整合的典型流程如下：
 
 ## 配置流程
 
->[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3455355?captions=chi_hant&quality=12&learn=on)
 
 這支影片會介紹如何設定 SAML 2.0 與 AEM 整合為雲端服務發佈服務，並使用 Okta 作為 IDP。
 
