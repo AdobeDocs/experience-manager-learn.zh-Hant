@@ -68,7 +68,7 @@ AEM Publish SAML 整合的典型流程如下：
 + AEM 管理員存取 AEM 作為雲端服務環境
 + IDP 管理員存取權
 + 可選擇存取用於加密 SAML 有效載荷的公私鑰對
-+ AEM 網站頁面（或頁面樹），發佈至 AEM Publish，並 [由封閉使用者群組（CUG）保護](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
++ AEM 網站頁面（或頁面樹），發佈至 AEM Publish，並 [由封閉使用者群組（CUG）保護](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
 
 SAML 2.0 僅支援用於驗證 AEM Publish 或 Preview 的使用。 要管理使用 AEM Author 和 IDP 的認證，請 [將 IDP 與 Adobe IMS](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html) 整合。
 
@@ -333,7 +333,7 @@ AEM 使用以下使用者屬性，這些屬性可透過 `synchronizeAttributes` 
 
 ### 使用加密技術
 
-在加密 AuthnRequest 與 SAML 斷言[時](#encrypting-the-authnrequest-and-saml-assertion)，需具備以下屬性：`useEncryption`、、 `spPrivateKeyAlias` `keyStorePassword`和 。因此，該 `keyStorePassword` 值不應儲存在 OSGi 設定檔中，而是透過 [秘密設定值注入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)
+在加密 AuthnRequest 與 SAML 斷言[時](#encrypting-the-authnrequest-and-saml-assertion)，需具備以下屬性：`useEncryption`、、 `spPrivateKeyAlias` `keyStorePassword`和 。因此，該 `keyStorePassword` 值不應儲存在 OSGi 設定檔中，而是透過 [秘密設定值注入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values)
 
 +++可選擇更新OSGi設定以使用加密
 
@@ -366,7 +366,7 @@ AEM 使用以下使用者屬性，這些屬性可透過 `synchronizeAttributes` 
 
 + `useEncryption` 設定為 `true`
 + `spPrivateKeyAlias` 包含用於 SAML 整合的私鑰儲存項目別名。
-+ `keyStorePassword` 包含 [一個 OSGi 秘密設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values) ，內含 `authentication-service` 使用者金鑰儲存的密碼。
++ `keyStorePassword` 包含 [一個 OSGi 秘密設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values) ，內含 `authentication-service` 使用者金鑰儲存的密碼。
 
 +++
 
@@ -452,7 +452,7 @@ AEM Publish 支援單一的 Referrer 篩選器配置，因此將 SAML 設定需�
 ### 如何在新環境中為 SAML 使用者啟用動態群組成員資格
 
 為了大幅增強新AEM as a Cloud Service環境中的群組評估效能，建議在新環境中啟用動態群組成員資格功能。
-這也是在啟動資料同步時的必要步驟。 更多詳細資料[在此](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier)。
+這也是在啟動資料同步時的必要步驟。 更多詳細資料[在此](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier)。
 若要這麼做，請將下列屬性新增至OSGI設定檔：
 
 `/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
