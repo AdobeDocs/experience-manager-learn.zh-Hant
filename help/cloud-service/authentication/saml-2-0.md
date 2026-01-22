@@ -131,7 +131,7 @@ IDP的公開憑證會新增至AEM的全域信任存放區，並用來驗證IDP�
 
 ## 建立認證服務金鑰儲存{#authentication-service-keystore}
 
-_當 [SAML 2.0 認證處理程序的 OSGi 設定屬性`handleLogout`被設定為 或`true`](#saml-20-authenticationsaml-2-0-authentication)[需要 AuthnRequest 簽署/SAML 斷言加密](#install-aem-public-private-key-pair)時，就需要建立認證服務的金鑰儲存庫_
+_當 [SAML 2.0 認證處理程序的 OSGi 設定屬性`handleLogout`被設定為 或`true`](#saml-20-authenticationsaml-2-0-authentication) [需要 AuthnRequest 簽署/SAML 斷言加密](#install-aem-public-private-key-pair)時，就需要建立認證服務的金鑰儲存庫_
 
 1. 以 AEM 管理員身份登入 AEM Author，上傳私鑰。
 1. 請前往 __「工具>安全>使用者__」，選擇 __認證服務__ 使用者，並從上方動作列選擇 __屬性__ 。
@@ -329,11 +329,11 @@ AEM 使用以下使用者屬性，這些屬性可透過 `synchronizeAttributes` 
 1. 依照專案需求更新數值。 請參閱 __上方 SAML 2.0 認證處理程式 OSGi 組態詞彙表__ 以了解組態屬性的說明。 這些 `path` 內容樹應包含由封閉使用者群組（CUG）保護且需認證的內容，而此認證處理程序應負責保護。
 1. 建議但非強制，當值可能與發布週期不同步，或相似環境類型/服務層級間值不同時，使用 OSGi 環境變數與秘密。 預設值可用上述語法設定 `$[env:..;default=the-default-value]"` 。
 
-如果 SAML 設定在不同環境間有差異，OSGi 配置`config.publish.dev`可依特定屬性定義（、 `config.publish.stage``config.publish.prod`、 和 ）。
+如果 SAML 設定在不同環境間有差異，OSGi 配置`config.publish.dev`可依特定屬性定義（、 `config.publish.stage` `config.publish.prod`、 和 ）。
 
 ### 使用加密技術
 
-在加密 AuthnRequest 與 SAML 斷言[時](#encrypting-the-authnrequest-and-saml-assertion)，需具備以下屬性：`useEncryption`、、 `spPrivateKeyAlias``keyStorePassword`和 。因此，該 `keyStorePassword` 值不應儲存在 OSGi 設定檔中，而是透過 [秘密設定值注入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)
+在加密 AuthnRequest 與 SAML 斷言[時](#encrypting-the-authnrequest-and-saml-assertion)，需具備以下屬性：`useEncryption`、、 `spPrivateKeyAlias` `keyStorePassword`和 。因此，該 `keyStorePassword` 值不應儲存在 OSGi 設定檔中，而是透過 [秘密設定值注入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)
 
 +++可選擇更新OSGi設定以使用加密
 
@@ -402,7 +402,7 @@ AEM Publish 支援單一的 Referrer 篩選器配置，因此將 SAML 設定需�
 
 此 HTTP POST 請求的 `Origin` 標頭通常與 AEM 發佈主機的值不同，因此需要 CORS 設定。
 
-在測試本地 AEM SDK 的`localhost:4503` SAML 認證時，IDP 可能會將標頭設 `Origin` 為 `null`。 如果是，請加入`"null"``alloworigin`清單。
+在測試本地 AEM SDK 的`localhost:4503` SAML 認證時，IDP 可能會將標頭設 `Origin` 為 `null`。 如果是，請加入`"null"` `alloworigin`清單。
 
 1. 在你的專案中建立一個 OSGi 設定檔 `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~saml.cfg.json`
    + 更改 `/wknd-examples/` 您的專案名稱
@@ -447,7 +447,7 @@ AEM Publish 支援單一的 Referrer 篩選器配置，因此將 SAML 設定需�
 
 ## 動態團體成員制
 
-動態群組成員資格是 Apache Jackrabbit Oak[ 中的](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)一項功能，能提升群組評估與配置的效能。本節說明啟用此功能後，使用者與群組如何儲存，以及如何修改 SAML 認證處理程序的設定以啟用新舊環境。
+動態群組成員資格是 Apache Jackrabbit Oak[&#x200B; 中的](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)一項功能，能提升群組評估與配置的效能。本節說明啟用此功能後，使用者與群組如何儲存，以及如何修改 SAML 認證處理程序的設定以啟用新舊環境。
 
 ### 如何在新環境中為 SAML 使用者啟用動態群組成員資格
 
