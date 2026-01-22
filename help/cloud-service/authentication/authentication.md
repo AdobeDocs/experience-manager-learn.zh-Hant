@@ -24,7 +24,7 @@ AEM as a Cloud Service支援多種驗證選項，且會因服務型別而異。
 
 |                       | AEM 作者 | AEM Publish |
 |-----------------------|:----------:|:-----------:|
-| [Adobe IMS ](../accessing/overview.md)<br>*(AEM預覽不支援Adobe IMS)* | ✔ | ✔ |
+| [Adobe IMS &#x200B;](../accessing/overview.md)<br>*(AEM預覽不支援Adobe IMS)* | ✔ | ✔ |
 | [OpenID連線(OIDC)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/open-id-connect-support-for-aem-as-a-cloud-service-on-publish-tier) | ✘ | ✔ |
 | 透過Adobe IMS使用[SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✔ |
 | [SAML 2.0](./saml-2-0.md) | ✘ | ✔ |
