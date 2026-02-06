@@ -25,7 +25,7 @@ AEM開發代理程式可協助技術團隊（包括開發人員、DevOps工程�
 
 >[!TIP]
 >
-> 另請參閱[AEM代理程式概述](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)，以取得AEM as a Cloud Service中可用代理程式的完整清單、其功能，以及您如何存取它們。
+> 另請參閱[AEM代理程式概述](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)，以取得AEM as a Cloud Service中可用代理程式的完整清單、其功能，以及您如何存取它們。
 
 
 ## 概觀
@@ -41,9 +41,9 @@ AEM Development Agent提供數種功能，包括列出、疑難排解及修正�
 若要按照本教學課程進行學習，您需要：
 
 - AEM中的AI助理和代理程式已啟用。 參閱[在AEM中設定AI](./setup.md)以取得詳細資料，並注意該文章中提到的遊樂場將不具有AEM開發代理程式功能。
-- 使用開發人員或方案管理員角色存取Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)。 如需詳細資訊，請參閱[角色定義](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles#role-definitions)。
+- 使用開發人員或方案管理員角色存取Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)。 如需詳細資訊，請參閱[角色定義](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-manager/content/requirements/users-and-roles#role-definitions)。
 - AEM as a Cloud Service環境
-- 透過[Beta程式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)存取AEM中的代理程式
+- 透過[Beta程式](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)存取AEM中的代理程式
 - [WKND Sites專案](https://github.com/adobe/aem-guides-wknd)已複製至您的本機電腦
 
 ### AEM Development Agent的目前功能
@@ -122,7 +122,7 @@ AEM Development Agent的功能會持續擴充和定期更新。 如需意見與�
 
 ### 建立及設定程式碼品質管道
 
-本教學課程使用程式碼品質管道（非生產）來觸發管道失敗，以進行疑難排解。 如需程式碼品質管道的詳細資訊，請參閱[&#x200B; CI/CD管道簡介](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction)。
+本教學課程使用程式碼品質管道（非生產）來觸發管道失敗，以進行疑難排解。 如需程式碼品質管道的詳細資訊，請參閱[&#x200B; CI/CD管道簡介](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction)。
 
 - 在Cloud Manager中，導覽至&#x200B;**管道**&#x200B;區段並選取&#x200B;**新增** > **新增非生產管道**。
 - 在&#x200B;**新增非生產管道**&#x200B;對話方塊中，設定下列專案：
@@ -210,17 +210,17 @@ WKND Sites專案包括其他程式碼中斷和設定問題的範例，例如遺�
 
 ![比較分支](./assets/dev-agent/compare-branches.png)
 
-另請參閱[範例提示](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview#sample-prompts)，以取得有關如何使用AEM Development Agent的更多概念。
+另請參閱[範例提示](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview#sample-prompts)，以取得有關如何使用AEM Development Agent的更多概念。
 
 ## 摘要
 
 在本教學課程中，您已瞭解如何使用AEM開發代理程式，透過AI助理對失敗的CI/CD管道進行疑難排解和修正。 您也瞭解到Agentic AI如何透過提供可操作的見解和程式碼變更來加速技術工作流程。
 
-開始使用AEM中的AEM開發代理程式和其他代理程式來加速您的工作流程，如需詳細資訊，請參閱[AEM代理程式概觀](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)。
+開始使用AEM中的AEM開發代理程式和其他代理程式來加速您的工作流程，如需詳細資訊，請參閱[AEM代理程式概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)。
 
 ## 其他資源
 
 - [Experience Manager中的AI](./overview.md)
-- [AEM代理程式概觀](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
-- [開發代理程式總覽](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview)
-- [AEM代理程式概觀](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
+- [AEM代理程式概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
+- [開發代理程式總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview)
+- [AEM代理程式概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
