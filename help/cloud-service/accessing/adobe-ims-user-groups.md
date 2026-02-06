@@ -27,4 +27,4 @@ ht-degree: 65%
 
  Adobe IMS使用者群組會建立對AEM公開的使用者邏輯集，以便為AEM使用者定義更精細的許可權。
 
->[!VIDEO](https://video.tv.adobe.com/v/39150?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3479633?captions=chi_hant&quality=12&learn=on)
