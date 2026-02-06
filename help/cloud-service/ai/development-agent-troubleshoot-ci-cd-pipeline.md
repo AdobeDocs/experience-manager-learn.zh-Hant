@@ -122,7 +122,7 @@ AEM Development Agent的功能會持續擴充和定期更新。 如需意見與�
 
 ### 建立及設定程式碼品質管道
 
-本教學課程使用程式碼品質管道（非生產）來觸發管道失敗，以進行疑難排解。 如需程式碼品質管道的詳細資訊，請參閱[ CI/CD管道簡介](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction)。
+本教學課程使用程式碼品質管道（非生產）來觸發管道失敗，以進行疑難排解。 如需程式碼品質管道的詳細資訊，請參閱[&#x200B; CI/CD管道簡介](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction)。
 
 - 在Cloud Manager中，導覽至&#x200B;**管道**&#x200B;區段並選取&#x200B;**新增** > **新增非生產管道**。
 - 在&#x200B;**新增非生產管道**&#x200B;對話方塊中，設定下列專案：
