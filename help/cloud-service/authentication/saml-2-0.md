@@ -68,7 +68,7 @@ AEM Publish SAML整合的典型流程如下：
 + AEM管理員對AEM as a Cloud Service環境的存取權
 + IDP的管理員存取權
 + 選擇性地存取用來加密SAML裝載的公開/私人金鑰組
-+ AEM Sites頁面（或頁面樹狀結構），已發佈至AEM Publish和[受封閉式使用者群組(CUG)保護](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
++ AEM Sites頁面（或頁面樹狀結構），已發佈至AEM Publish和[受封閉式使用者群組(CUG)保護](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
 
 僅支援SAML 2.0向AEM發佈或預覽驗證使用者。 若要使用和IDP管理AEM Author的驗證，[請整合IDP與Adobe IMS](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html)。
 
@@ -334,7 +334,7 @@ AEM使用以下使用者屬性，這些屬性可透過Adobe Granite SAML 2.0驗�
 
 ### 使用加密
 
-當[加密AuthnRequest和SAML判斷提示](#encrypting-the-authnrequest-and-saml-assertion)時，需要下列屬性： `useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`。 `keyStorePassword`包含密碼，因此值不能儲存在OSGi組態檔中，而是使用[密碼組態值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)插入
+當[加密AuthnRequest和SAML判斷提示](#encrypting-the-authnrequest-and-saml-assertion)時，需要下列屬性： `useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`。 `keyStorePassword`包含密碼，因此值不能儲存在OSGi組態檔中，而是使用[密碼組態值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values)插入
 
 +++可選擇更新OSGi設定以使用加密
 
@@ -367,7 +367,7 @@ AEM使用以下使用者屬性，這些屬性可透過Adobe Granite SAML 2.0驗�
 
 + `useEncryption`已設定為`true`
 + `spPrivateKeyAlias`包含SAML整合使用之私密金鑰的金鑰庫專案別名。
-+ `keyStorePassword`包含包含[使用者金鑰儲存區密碼的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)OSGi密碼設定變數`authentication-service`。
++ `keyStorePassword`包含包含[使用者金鑰儲存區密碼的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values)OSGi密碼設定變數`authentication-service`。
 
 +++
 
@@ -453,7 +453,7 @@ AEM Publish支援單一反向連結篩選設定，因此請將SAML設定需求�
 ### 如何為新環境中的SAML使用者啟用動態群組成員資格
 
 為了大幅增強新AEM as a Cloud Service環境中的群組評估效能，建議在新環境中啟用動態群組成員資格功能。
-這也是在啟動資料同步時的必要步驟。 更多詳細資料[在此](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier)。
+這也是在啟動資料同步時的必要步驟。 更多詳細資料[在此](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier)。
 若要這麼做，請將下列屬性新增至OSGI設定檔：
 
 `/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
@@ -623,7 +623,7 @@ public void postSyncUserProcess(
 
 **重要：**&#x200B;若要修改存放庫中的使用者屬性，掛接實作需要：
 + 透過`SlingRepository`插入的`@Reference`參考
-+ 設定的[服務使用者](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)具有適當的許可權（設定於「Apache Sling Service User Mapper Service Improximtion」）
++ 設定的[服務使用者](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)具有適當的許可權（設定於「Apache Sling Service User Mapper Service Improximtion」）
 + 使用try-catch-finally區塊進行適當的工作階段管理
 
 ### 實施自訂SAML鉤點
@@ -809,7 +809,7 @@ SAML鉤點使用OSGi設定來指定它應該套用到哪個IDP。 在專案中�
 
 #### 步驟4：設定服務使用者（如果修改存放庫）
 
-如果SAML掛接需要修改存放庫中的使用者屬性（如`postSyncUserProcess`範例所示），則必須設定[服務使用者](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)：
+如果SAML掛接需要修改存放庫中的使用者屬性（如`postSyncUserProcess`範例所示），則必須設定[服務使用者](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)：
 
 1. 在`/ui.config/src/main/content/jcr_root/apps/myproject/osgiconfig/config/org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~saml.cfg.json`的專案中建立服務使用者對應：
 
@@ -852,8 +852,8 @@ end
 + **正在測試**：在部署到生產環境之前，請先在較低的環境中徹底測試自訂鉤點
 + **多個掛接**：可以設定多個SAML掛接實作；將執行所有相符的掛接。 使用OSGi元件中的`service.ranking`屬性來控制執行順序（較高的排名值會先執行）。 若要在多個SAML驗證處理常式工廠設定(`com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>`)中重複使用SAML掛接，請建立多個掛接設定（OSGi工廠設定），每個設定具有符合個別SAML驗證處理常式的不同`idpIdentifier`
 + **安全性**：在商業邏輯中使用SAML宣告的所有資料之前，請先驗證並處理這些資料
-+ **存放庫存取**：在`postSyncUserProcess`中修改使用者屬性時，請一律使用具有適當許可權的[服務使用者](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)，而非管理工作階段
-+ **服務使用者許可權**：將最低必要許可權授與[服務使用者](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) （例如，`jcr:read`上只有`rep:write`和`/home/users`，不是完整的系統管理員許可權）
++ **存放庫存取**：在`postSyncUserProcess`中修改使用者屬性時，請一律使用具有適當許可權的[服務使用者](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)，而非管理工作階段
++ **服務使用者許可權**：將最低必要許可權授與[服務使用者](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) （例如，`jcr:read`上只有`rep:write`和`/home/users`，不是完整的系統管理員許可權）
 + **工作階段管理**：一律使用try-catch-finally區塊，以確保儲存庫工作階段正確關閉，即使發生例外狀況亦然
 + **使用者同步處理時間**： `postSyncUserProcess`掛接會在使用者同步處理至OAK之後執行，因此使用者物件一定存在於該儲存庫中
 
