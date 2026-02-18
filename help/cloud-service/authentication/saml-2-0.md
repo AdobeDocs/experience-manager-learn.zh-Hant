@@ -11,20 +11,20 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 2ed303e316577363f6d1c265ef7f9cd6d81491d8
+source-git-commit: 4a8d97d8d65f0ff9b256cb233db5dd6a70fd2a8a
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '5215'
 ht-degree: 1%
 
 ---
 
 # SAML 2.0驗證{#saml-2-0-authentication}
 
-學習如何設定並認證終端使用者（非 AEM 作者）至您選擇的 SAML 2.0 相容 IDP。
+瞭解如何為您選擇的SAML 2.0相容的IDP設定及驗證一般使用者(而非AEM作者)。
 
-## AEM 作為雲端服務的 SAML 是什麼？
+## AEM as a Cloud Service適用的SAML為何？
 
-SAML 2.0 與 AEM Publish（或 Preview）整合，允許基於 AEM 的網頁體驗終端使用者驗證非 Adobe IDP（身份提供者），並以指定授權使用者身份存取 AEM。
+SAML 2.0與AEM Publish （或Preview）整合，可讓AEM型網頁體驗的一般使用者向非Adobe IDP （身分提供者）進行驗證，並以已命名的授權使用者身分存取AEM。
 
 |                       | AEM 作者 | AEM Publish |
 |-----------------------|:----------:|:-----------:|
@@ -32,58 +32,58 @@ SAML 2.0 與 AEM Publish（或 Preview）整合，允許基於 AEM 的網頁體�
 
 +++ 透過AEM瞭解SAML 2.0流程
 
-AEM Publish SAML 整合的典型流程如下：
+AEM Publish SAML整合的典型流程如下：
 
-1. 使用者向 AEM Publish 提出請求，表示需要認證。
-   + 使用者請求 CUGs/ACL 保護資源。
-   + 使用者請求一個受認證要求約束的資源。
-   + 使用者會跟著一個連結前往 AEM 的登入端點（例如 `/system/sling/login`），該連結明確請求登入操作。
-1. AEM 向 IDP 發出 AuthnRequest，請求 IDP 開始認證程序。
-1. 使用者會向 IDP 進行認證。
-   + 使用者會被 IDP 提示輸入憑證。
-   + 使用者已透過 IDP 認證，無需提供更多憑證。
-1. IDP 會產生包含使用者資料的 SAML 斷言，並使用 IDP 的私有憑證進行簽署。
-1. IDP 透過使用者的網頁瀏覽器（RESPECTIVE_PROTECTED_PATH/saml_login）透過 HTTP POST 將 SAML 斷言傳送至 AEM Publish。
-1. AEM Publish 接收 SAML 斷言，並使用 IDP 公開憑證驗證 SAML 斷言的完整性與真實性。
-1. AEM Publish 根據 SAML 2.0 OSGi 設定管理 AEM 使用者紀錄，以及 SAML 聲明的內容。
+1. 使用者向AEM發佈提出要求，並指示需要驗證。
+   + 使用者請求受CUG/ACL保護的資源。
+   + 使用者請求受驗證需求約束的資源。
+   + 使用者依循明確要求登入動作的AEM登入端點連結（即`/system/sling/login`）。
+1. AEM會向IDP發出AuthnRequest，要求IDP開始驗證程式。
+1. 使用者向IDP進行驗證。
+   + IDP會提示使用者輸入認證。
+   + 使用者已透過IDP驗證，無需再提供認證。
+1. IDP會產生包含使用者資料的SAML宣告，並使用IDP的私人憑證加以簽署。
+1. IDP會透過HTTP POST，透過使用者的網頁瀏覽器(RESPONSIVE_PROTECTED_PATH/saml_login)將SAML宣告傳送至AEM Publish。
+1. AEM Publish會收到SAML判斷提示，並使用IDP公開憑證驗證SAML判斷提示的完整性和真實性。
+1. AEM Publish會根據SAML 2.0 OSGi設定和SAML宣告的內容來管理AEM使用者記錄。
    + 建立使用者
    + 同步使用者屬性
-   + 更新 AEM 使用者群組成員資格
-1. AEM Publish 會在 HTTP 回應上設定 AEM `login-token` Cookie，用來驗證後續對 AEM Publish 的請求。
-1. AEM Publish 會依照 cookie 指定的 `saml_request_path` URL 將使用者重新導向 AEM Publish 上的網址。
+   + 更新AEM使用者群組成員資格
+1. AEM Publish會在HTTP回應上設定AEM `login-token` Cookie，用於向AEM Publish驗證後續請求。
+1. AEM發佈會將使用者重新導向至`saml_request_path` Cookie所指定的AEM發佈上的URL。
 
 +++
 
-## 配置流程
+## 設定逐步說明
 
->[!VIDEO](https://video.tv.adobe.com/v/3455355?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
 
-這支影片會介紹如何設定 SAML 2.0 與 AEM 整合為雲端服務發佈服務，並使用 Okta 作為 IDP。
+本影片逐步解說如何設定SAML 2.0與AEM as a Cloud Service Publish服務的整合，以及使用Okta做為IDP。
 
 ## 先決條件
 
-設定 SAML 2.0 認證時，以下條件是必要的：
+設定SAML 2.0驗證時，需要下列專案：
 
 + 部署管理員對Cloud Manager的存取權
-+ AEM 管理員存取 AEM 作為雲端服務環境
-+ IDP 管理員存取權
-+ 可選擇存取用於加密 SAML 有效載荷的公私鑰對
-+ AEM 網站頁面（或頁面樹），發佈至 AEM Publish，並 [由封閉使用者群組（CUG）保護](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
++ AEM管理員對AEM as a Cloud Service環境的存取權
++ IDP的管理員存取權
++ 選擇性地存取用來加密SAML裝載的公開/私人金鑰組
++ AEM Sites頁面（或頁面樹狀結構），已發佈至AEM Publish和[受封閉式使用者群組(CUG)保護](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
 
-SAML 2.0 僅支援用於驗證 AEM Publish 或 Preview 的使用。 要管理使用 AEM Author 和 IDP 的認證，請 [將 IDP 與 Adobe IMS](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html) 整合。
+僅支援SAML 2.0向AEM發佈或預覽驗證使用者。 若要使用和IDP管理AEM Author的驗證，[請整合IDP與Adobe IMS](https://helpx.adobe.com/tw/enterprise/using/set-up-identity.html)。
 
 
 ## 在AEM上安裝IDP公開憑證
 
 IDP的公開憑證會新增至AEM的全域信任存放區，並用來驗證IDP傳送的SAML宣告是否有效。
 
-+++SAML 斷言簽署流程
++++SAML宣告簽署流程
 
-![SAML 2.0 - IDP SAML 聲明簽署](./assets/saml-2-0/idp-signing-diagram.png)
+![SAML 2.0 - IDP SAML宣告簽署](./assets/saml-2-0/idp-signing-diagram.png)
 
-1. 使用者會向 IDP 進行認證。
-1. IDP 會產生包含使用者資料的 SAML 斷言。
-1. IDP 使用其私有憑證簽署 SAML 聲明。
+1. 使用者向IDP進行驗證。
+1. IDP會產生包含使用者資料的SAML宣告。
+1. IDP會使用IDP的私人憑證來簽署SAML宣告。
 1. IDP向AEM Publish的SAML端點(`.../saml_login`)起始使用者端HTTP POST，其中包含已簽署的SAML宣告。
 1. AEM Publish會收到包含已簽署SAML宣告的HTTP POST，可以使用IDP公開憑證驗證簽名。
 
@@ -91,9 +91,9 @@ IDP的公開憑證會新增至AEM的全域信任存放區，並用來驗證IDP�
 
 ![將IDP公開憑證新增至全域信任存放區](./assets/saml-2-0/global-trust-store.png)
 
-1. 從IDP取得 __公開證書__ 檔案。 此憑證允許 AEM 驗證 IDP 提供給 AEM 的 SAML 斷言。
+1. 從IDP取得&#x200B;__公用憑證__&#x200B;檔案。 此憑證可讓AEM驗證IDP提供給AEM的SAML判斷提示。
 
-   該證書為PEM格式，內容應如下：
+   憑證為PEM格式，應類似於：
 
    ```
    -----BEGIN CERTIFICATE-----
@@ -103,14 +103,14 @@ IDP的公開憑證會新增至AEM的全域信任存放區，並用來驗證IDP�
    -----END CERTIFICATE-----
    ```
 
-1. 以 AEM 管理員身份登入 AEM Author。
-1. 前往 __Tools > Security > Trust Store__。
-1. 創建或開設全球信託商店。 如果建立全球信任儲存庫，請將密碼存放在安全的地方。
-1. 展開 __從 CER 檔案__&#x200B;新增憑證。
-1. 選擇 __「選擇憑證檔案__」，並上傳由 IDP 提供的憑證檔案。
-1. 將地圖憑證留 __給使用者__ 空白。
-1. 選擇 __提交__。
-1. 新增的憑證顯示在「 __從 CRT 檔案__ 新增憑證」部分之上。
+1. 以AEM管理員身分登入AEM Author。
+1. 瀏覽至&#x200B;__工具>安全性>信任存放區__。
+1. 建立或開啟全域信任存放區。 如果建立全域信任存放區，請將密碼存放於安全的地方。
+1. 展開&#x200B;__從CER檔案__&#x200B;新增憑證。
+1. 選取&#x200B;__選取憑證檔案__，然後上傳IDP提供的憑證檔案。
+1. 保留&#x200B;__將憑證對應到使用者__&#x200B;空白。
+1. 選取&#x200B;__提交__。
+1. 新增的憑證出現在&#x200B;__從CRT檔案__&#x200B;新增憑證區段上方。
 1. 記下&#x200B;__別名__，因為此值用於[SAML 2.0驗證處理常式OSGi設定](#saml-2-0-authentication-handler-osgi-configuration)。
 1. 選取「__儲存並關閉__」。
 
@@ -118,77 +118,77 @@ IDP的公開憑證會新增至AEM的全域信任存放區，並用來驗證IDP�
 
 ![將全域信任存放區復寫到AEM發佈](./assets/saml-2-0/global-trust-store-replicate.png)
 
-1. 導覽至 __工具>部署>套件__。
+1. 瀏覽至&#x200B;__工具>部署>封裝__。
 1. 建立套件
-   + 套件名稱： `Global Trust Store`
+   + 封裝名稱： `Global Trust Store`
    + 版本： `1.0.0`
-   + 小組： `com.your.company`
+   + 群組： `com.your.company`
 1. 編輯新的&#x200B;__全域信任存放區__&#x200B;封裝。
 1. 選取&#x200B;__篩選器__&#x200B;索引標籤，並為根路徑`/etc/truststore`新增篩選器。
-1. 選擇 __完成__ ，然後 __儲存__。
-1. 選擇 __Global Trust Store__ 套件的&#x200B;__建置__&#x200B;按鈕。
-1. 建置完成後，選擇 __更多__ > __複製__ 以啟用全域信任儲存節點（`/etc/truststore`）以啟動 AEM 發佈。
+1. 選取&#x200B;__完成__，然後選取&#x200B;__儲存__。
+1. 選取&#x200B;__全域信任存放區__&#x200B;封裝的&#x200B;__建置__&#x200B;按鈕。
+1. 建置後，選取&#x200B;__更多__ > __復寫__&#x200B;以啟動全域信任存放區節點(`/etc/truststore`)至AEM Publish。
 
-## 建立認證服務金鑰儲存{#authentication-service-keystore}
+## 建立驗證服務金鑰存放區{#authentication-service-keystore}
 
-_當 [SAML 2.0 認證處理程序的 OSGi 設定屬性`handleLogout`被設定為 或`true`](#saml-20-authenticationsaml-2-0-authentication) [需要 AuthnRequest 簽署/SAML 斷言加密](#install-aem-public-private-key-pair)時，就需要建立認證服務的金鑰儲存庫_
+_當[SAML 2.0驗證處理常式OSGi組態屬性`handleLogout`設定為`true`](#saml-20-authenticationsaml-2-0-authentication)或需要[AuthnRequest簽署/SAML宣告加密](#install-aem-public-private-key-pair)時，需要建立驗證服務的金鑰存放區_
 
-1. 以 AEM 管理員身份登入 AEM Author，上傳私鑰。
-1. 請前往 __「工具>安全>使用者__」，選擇 __認證服務__ 使用者，並從上方動作列選擇 __屬性__ 。
-1. 選擇 __Keystore__ 標籤。
-1. 建立或開啟鑰匙庫。 如果建立金鑰儲存，請妥善保管密碼。
-   + [只有在需要 AuthnRequest 簽署/SAML 斷言加密時，才會在此金鑰庫](#install-aem-public-private-key-pair)中安裝公私密金鑰庫。
-   + 如果這個 SAML 整合支援登出，但不支援 AuthnRequest 簽署/SAML 斷言，那麼空的金鑰庫就足夠了。
+1. 以AEM管理員身分登入AEM Author以上傳私密金鑰。
+1. 導覽至&#x200B;__工具>安全性>使用者__，然後選取&#x200B;__驗證服務__&#x200B;使用者，並從頂端動作列選取&#x200B;__屬性__。
+1. 選取&#x200B;__金鑰存放區__&#x200B;索引標籤。
+1. 建立或開啟金鑰存放區。 如果建立金鑰存放區，請妥善儲存密碼。
+   + 只有在需要AuthnRequest簽署/SAML宣告加密時，才會將[公用/私用金鑰存放區安裝至此金鑰存放區](#install-aem-public-private-key-pair)。
+   + 如果此SAML整合支援登出，但不支援AuthnRequest簽署/SAML判斷提示，則空的金鑰儲存區就足夠了。
 1. 選取「__儲存並關閉__」。
-1. 建立包含更新後 __認證服務__ 使用者的套件。
+1. 建立包含已更新&#x200B;__authentication-service__&#x200B;使用者的封裝。
 
-   _Use以下使用套件的臨時解決方法&#x200B;:_
+   使用套件&#x200B;:_使用下列暫時因應措施(_U)
 
-   1. 導覽至 __工具>部署>套件__。
+   1. 瀏覽至&#x200B;__工具>部署>封裝__。
    1. 建立套件
-      + 套件名稱： `Authentication Service`
+      + 封裝名稱： `Authentication Service`
       + 版本： `1.0.0`
-      + 小組： `com.your.company`
-   1. 編輯新的 __認證服務金鑰儲存__ 套件。
-   1. 選擇 __篩選器__ 標籤，並為根路徑 `/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`添加一個篩選器。
-      + `<AUTHENTICATION SERVICE UUID>`可透過導覽至&#x200B;__「安全工具>使用者__」，並選擇&#x200B;__「認證服務__&#x200B;使用者」>找到。UUID 是 URL 的最後部分。
-   1. 選擇 __完成__ ，然後 __儲存__。
-   1. 選擇&#x200B;__驗證服務金鑰儲存__&#x200B;套件的&#x200B;__建置__&#x200B;按鈕。
-   1. 建置完成後，選擇 __更多__ > __複製__ 以啟用認證服務金鑰儲存以啟用 AEM 發佈。
+      + 群組： `com.your.company`
+   1. 編輯新的&#x200B;__驗證服務金鑰存放區__&#x200B;封裝。
+   1. 選取&#x200B;__篩選器__&#x200B;索引標籤，並為根路徑`/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`新增篩選器。
+      + 瀏覽至`<AUTHENTICATION SERVICE UUID>`工具>安全性>使用者&#x200B;__，並選取__&#x200B;驗證服務&#x200B;__使用者，即可找到__。 UUID是URL的最後一部分。
+   1. 選取&#x200B;__完成__，然後選取&#x200B;__儲存__。
+   1. 選取&#x200B;__Authentication Service Key Store__&#x200B;封裝的&#x200B;__建置__&#x200B;按鈕。
+   1. 建置後，選取&#x200B;__更多__ > __復寫__&#x200B;以啟動驗證服務金鑰存放區至AEM發佈。
 
-## 安裝 AEM 公私密金鑰對{#install-aem-public-private-key-pair}
+## 安裝AEM公開/私密金鑰組{#install-aem-public-private-key-pair}
 
-_安裝 AEM 公私密金鑰對是可選的_
+_安裝AEM公開/私密金鑰組為選用_
 
 AEM Publish可設定為簽署AuthnRequests (to IDP)及加密SAML宣告(to AEM)。 這是透過提供私密金鑰給AEM Publish並且比對公開金鑰給IDP來達成。
 
 +++ 瞭解AuthnRequest簽署流程（選用）
 
-AuthnRequest（由 AEM Publish 向 IDP 發出並啟動登入流程的請求）可由 AEM Publish 簽署。 為此，AEM Publish 會用私鑰簽署 AuthnRequest，然後 IDP 用公鑰驗證簽章。 這能保證 IDP 是 AEM Publish 發起並請求的，而非惡意第三方。
+AuthnRequest (起始登入程式的AEM Publish向IDP提出的請求)可由AEM Publish簽署。 為此，AEM Publish會使用私密金鑰對AuthnRequest簽名，讓IDP接著使用公開金鑰來驗證簽名。 這可向IDP保證AuthnRequest已起始並由AEM Publish請求，而非惡意的第三方。
 
-![SAML 2.0 - SP AuthnRequest 簽署](./assets/saml-2-0/sp-authnrequest-signing-diagram.png)
+![SAML 2.0 - SP AuthnRequest簽署](./assets/saml-2-0/sp-authnrequest-signing-diagram.png)
 
-1. 使用者向 AEM Publish 提出 HTTP 請求，進而向 IDP 發出 SAML 認證請求。
-1. AEM Publish 會產生 SAML 請求，發送給 IDP。
+1. 使用者向AEM Publish發出HTTP請求，結果向IDP發出SAML驗證請求。
+1. AEM Publish會產生要傳送給IDP的SAML請求。
 1. AEM Publish使用AEM的私密金鑰簽署SAML請求。
 1. AEM發佈會起始AuthnRequest，此HTTP使用者端重新導向至包含已簽署SAML請求的IDP。
 1. IDP會收到AuthnRequest，並使用AEM的公開金鑰驗證簽名，保證AEM Publish已起始AuthnRequest。
-1. AEM Publish 接著使用 IDP 公開憑證驗證解密後 SAML 斷言的完整性與真實性。
+1. AEM Publish接著會使用IDP公開憑證來驗證解密的SAML宣告的完整性和真實性。
 
 +++
 
-+++ 了解 SAML 斷言加密流程（可選）
++++ 瞭解SAML宣告加密流程（選擇性）
 
-所有 IDP 與 AEM Publish 之間的 HTTP 通訊都應該透過 HTTPS 進行，因此預設是安全的。 然而，依需求，若需要額外的保密性，SAML 斷言可加密，以超越 HTTPS 的保密。 為此，IDP 使用私鑰加密 SAML 斷言資料，AEM Publish 則利用私密金鑰解密 SAML 斷言。
+IDP與AEM Publish之間的所有HTTP通訊都應透過HTTPS，因此預設情況下是安全的。 不過，如有需要，SAML宣告可以加密，以備在HTTPS提供之保密性以外需要額外機密性的情況。 為此，IDP會使用私密金鑰加密SAML宣告資料，而AEM Publish會使用私密金鑰解密SAML宣告。
 
-![SAML 2.0 - SP SAML 斷言加密](./assets/saml-2-0/sp-samlrequest-encryption-diagram.png)
+![SAML 2.0 - SP SAML宣告加密](./assets/saml-2-0/sp-samlrequest-encryption-diagram.png)
 
-1. 使用者會向 IDP 進行認證。
-1. IDP 會產生包含使用者資料的 SAML 斷言，並使用 IDP 的私有憑證進行簽署。
-1. IDP 接著用 AEM 的公鑰加密 SAML 斷言，解密時需 AEM 私鑰。
-1. 加密的 SAML 斷言會透過使用者的網頁瀏覽器傳送至 AEM Publish。
-1. AEM Publish 會接收 SAML 斷言，並使用 AEM 的私鑰將其解密。
-1. IDP 會提示使用者進行驗證。
+1. 使用者向IDP進行驗證。
+1. IDP會產生包含使用者資料的SAML宣告，並使用IDP的私人憑證加以簽署。
+1. 然後IDP會使用AEM的公開金鑰加密SAML宣告，這需要AEM私密金鑰才能解密。
+1. 加密的SAML宣告會透過使用者的網頁瀏覽器傳送至AEM Publish。
+1. AEM Publish會收到SAML宣告，並使用AEM的私密金鑰加以解密。
+1. IDP會提示使用者進行驗證。
 
 +++
 
@@ -198,7 +198,7 @@ AuthnRequest簽署和SAML宣告加密都是選用專案，但是兩者都是使�
 
 1. 取得用來簽署AuthnRequest以及加密SAML宣告的公開金鑰、私密金鑰（DER格式為PKCS#8）及憑證鏈結檔案（這有可能是公開金鑰）。 這些金鑰通常由IT組織的安全團隊提供。
 
-   + 可使用 __openssl__ 產生自簽金鑰對：
+   + 可使用&#x200B;__openssl__&#x200B;產生自我簽署金鑰組：
 
    ```
    $ openssl req -x509 -sha256 -days 365 -newkey rsa:4096 -keyout aem-private.key -out aem-public.crt
@@ -210,80 +210,81 @@ AuthnRequest簽署和SAML宣告加密都是選用專案，但是兩者都是使�
    $ openssl pkcs8 -topk8 -inform der -nocrypt -in aem-private.der -outform der -out aem-private-pkcs8.der
    ```
 
-1. 將公鑰上傳到 IDP。
-   + 使用`openssl`上述方法，公鑰即為檔案。`aem-public.crt`
-1. 以 AEM 管理員身份登入 AEM Author，上傳私鑰。
-1. 前往 __信任儲存__>>安全工具，選擇 __認證服務__ 使用者，並從上方動作列選擇 __屬性__ 。
+1. 將公開金鑰上傳至IDP。
+   + 使用上述`openssl`方法，公開金鑰是`aem-public.crt`檔案。
+1. 以AEM管理員身分登入AEM Author以上傳私密金鑰。
+1. 瀏覽至&#x200B;__工具>安全性>信任存放區__，然後選取&#x200B;__驗證服務__&#x200B;使用者，並從最上方的動作列選取&#x200B;__內容__。
 1. 導覽至&#x200B;__工具>安全性>使用者__，然後選取&#x200B;__驗證服務__&#x200B;使用者，並從頂端動作列選取&#x200B;__屬性__。
 1. 選取&#x200B;__金鑰存放區__&#x200B;索引標籤。
-1. 建立或開啟金鑰存放區。 如果建立金鑰儲存，請妥善保管密碼。
-1. 選擇 __從 DER 檔案__&#x200B;新增私鑰，並將私鑰與鏈檔案加入 AEM：
-   + __別名__：提供一個有意義的名字，通常是流離失所者的名字。
-   + __私鑰檔案__：上傳私鑰檔案（DER 格式為 PKCS#8）。
-      + 用`openssl`上述方法，這就是檔案`aem-private-pkcs8.der`
-   + __選擇憑證鏈檔__：上傳隨附的鏈式檔案（這可能是公鑰）。
-      + 用`openssl`上述方法，這就是檔案`aem-public.crt`
+1. 建立或開啟金鑰存放區。 如果建立金鑰存放區，請妥善儲存密碼。
+1. 選取&#x200B;__從DER檔案新增私密金鑰__，並將私密金鑰和鏈結檔案新增至AEM：
+   + __別名__：提供有意義的名稱，通常是IDP的名稱。
+   + __私密金鑰檔案__：上傳私密金鑰檔案（DER格式為PKCS#8）。
+      + 使用上述`openssl`方法，這是`aem-private-pkcs8.der`檔案
+   + __選取憑證鏈結檔案__：上傳隨附的鏈結檔案（可能是公開金鑰）。
+      + 使用上述`openssl`方法，這是`aem-public.crt`檔案
    + 選取&#x200B;__提交__
 1. 新增的憑證出現在&#x200B;__從CRT檔案__&#x200B;新增憑證區段上方。
    + 記下&#x200B;__別名__，因為它用於[SAML 2.0驗證處理常式OSGi設定](#saml-20-authentication-handler-osgi-configuration)
 1. 選取「__儲存並關閉__」。
-1. 建立包含更新後 __認證服務__ 使用者的套件。
+1. 建立包含已更新&#x200B;__authentication-service__&#x200B;使用者的封裝。
 
-   _Use以下使用套件的臨時解決方法&#x200B;:_
+   使用套件&#x200B;:_使用下列暫時因應措施(_U)
 
-   1. 導覽至 __工具>部署>套件__。
+   1. 瀏覽至&#x200B;__工具>部署>封裝__。
    1. 建立套件
       + 封裝名稱： `Authentication Service`
       + 版本： `1.0.0`
-      + 小組： `com.your.company`
-   1. 編輯新的 __認證服務金鑰儲存__ 套件。
-   1. 選擇 __篩選器__ 標籤，並為根路徑 `/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`添加一個篩選器。
-      + `<AUTHENTICATION SERVICE UUID>`可透過導覽至&#x200B;__「安全工具>使用者__」，並選擇&#x200B;__「認證服務__&#x200B;使用者」>找到。UUID 是 URL 的最後部分。
-   1. 選擇 __完成__ ，然後 __儲存__。
-   1. 選擇&#x200B;__驗證服務金鑰儲存__&#x200B;套件的&#x200B;__建置__&#x200B;按鈕。
-   1. 建置完成後，選擇 __更多__ > __複製__ 以啟用認證服務金鑰儲存以啟用 AEM 發佈。
+      + 群組： `com.your.company`
+   1. 編輯新的&#x200B;__驗證服務金鑰存放區__&#x200B;封裝。
+   1. 選取&#x200B;__篩選器__&#x200B;索引標籤，並為根路徑`/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`新增篩選器。
+      + 瀏覽至`<AUTHENTICATION SERVICE UUID>`工具>安全性>使用者&#x200B;__，並選取__&#x200B;驗證服務&#x200B;__使用者，即可找到__。 UUID是URL的最後一部分。
+   1. 選取&#x200B;__完成__，然後選取&#x200B;__儲存__。
+   1. 選取&#x200B;__Authentication Service Key Store__&#x200B;封裝的&#x200B;__建置__&#x200B;按鈕。
+   1. 建置後，選取&#x200B;__更多__ > __復寫__&#x200B;以啟動驗證服務金鑰存放區至AEM發佈。
 
-## 設定 SAML 2.0 認證處理器{#configure-saml-2-0-authentication-handler}
+## 設定SAML 2.0驗證處理常式{#configure-saml-2-0-authentication-handler}
 
-AEM 的 SAML 設定是透過 __Adobe Granite SAML 2.0 認證處理程序__ OSGi 配置來執行的。該組態為 OSGi 工廠設定，意即單一 AEM 作為雲端服務發佈服務，可能包含多個 SAML 配置，涵蓋資料庫的離散資源樹;這對於多站點 AEM 部署非常有用。
+AEM的SAML設定是透過&#x200B;__Adobe Granite SAML 2.0驗證處理常式__ OSGi設定來執行。
+此設定是OSGi工廠設定，表示單一AEM as a Cloud Service Publish服務可能有多個SAML設定，涵蓋存放庫的分散資源樹狀結構；這對於多網站AEM部署很有用。
 
-+++ SAML 2.0 認證處理程式 OSGi 設定詞彙表
++++ SAML 2.0驗證處理常式OSGi設定字彙表
 
 ### Adobe Granite SAML 2.0驗證處理常式OSGi設定{#configure-saml-2-0-authentication-handler-osgi-configuration}
 
-|                                   | OSGi屬性 | 必要 | 價值格式 | 預設值 | 說明 |
+|                                   | OSGi屬性 | 必要 | 值格式 | 預設值 | 說明 |
 |-----------------------------------|-------------------------------|:--------:|:---------------------:|---------------------------|-------------|
 | 路徑 | `path` | ✔ | 字串陣列 | `/` | 此驗證處理常式用於的AEM路徑。 |
-| IDP URL | `idpUrl` | ✔ | 字串 |                           | IDP URL 會傳送 SAML 認證請求。 |
-| IDP 憑證別名 | `idpCertAlias` | ✔ | 字串 |                           | 在 AEM 全球信任儲存庫中找到的 IDP 證書別名 |
-| IDP HTTP 重定向 | `idpHttpRedirect` | ✘ | 布林值 | `false` | 指示是否是 HTTP 重定向到 IDP URL，而非發送 AuthnRequest。 設定為 以便 `true` IDP 發起驗證。 |
-| IDP 識別碼 | `idpIdentifier` | ✘ | 字串 |                           | 唯一的 IDP ID 以確保 AEM 使用者與群組的獨特性。 若為空，則改用 。`serviceProviderEntityId` |
-| 判斷提示消費者服務URL | `assertionConsumerServiceURL` | ✘ | 字串 |                           | `AssertionConsumerServiceURL` AuthnRequest 中的 URL 屬性，指定訊息必須傳送至 AEM 的地點`<Response>`。 |
-| SP實體 Id | `serviceProviderEntityId` | ✔ | 字串 |                           | 唯一識別 AEM 與 IDP 的關係;通常是 AEM 主機名稱。 |
-| SP 加密 | `useEncryption` | ✘ | 布林值 | `true` | 指示IDP是否加密SAML宣告。 需要設定`spPrivateKeyAlias`和`keyStorePassword`。 |
-| SP 私鑰別名 | `spPrivateKeyAlias` | ✘ | 字串 |                           | 私鑰 `authentication-service` 在使用者金鑰庫中的別名。 若 `useEncryption` 設定為 `true`，則為 必要。 |
-| SP 金鑰儲存密碼 | `keyStorePassword` | ✘ | 字串 |                           | &#39;authentication-service&#39;使用者金鑰存放區的密碼。 如果`useEncryption`設定為`true`則為必要。 |
+| IDP URL | `idpUrl` | ✔ | 字串 |                           | IDP URL：傳送SAML驗證請求。 |
+| IDP憑證別名 | `idpCertAlias` | ✔ | 字串 |                           | 在AEM的全域信任存放區中找到的IDP憑證別名 |
+| IDP HTTP重新導向 | `idpHttpRedirect` | ✘ | 布林值 | `false` | 指出是否有HTTP重新導向至IDP URL，而非傳送AuthnRequest。 針對IDP啟動的驗證設定為`true`。 |
+| IDP識別碼 | `idpIdentifier` | ✘ | 字串 |                           | 唯一IDP ID可確保AEM使用者和群組的唯一性。 如果空白，則改用`serviceProviderEntityId`。 |
+| 判斷提示消費者服務URL | `assertionConsumerServiceURL` | ✘ | 字串 |                           | AuthnRequest中的`AssertionConsumerServiceURL` URL屬性，指定必須將`<Response>`訊息傳送至AEM的位置。 |
+| SP實體ID | `serviceProviderEntityId` | ✔ | 字串 |                           | 向IDP唯一識別AEM；通常是AEM主機名稱。 |
+| SP加密 | `useEncryption` | ✘ | 布林值 | `true` | 指示IDP是否加密SAML宣告。 需要設定`spPrivateKeyAlias`和`keyStorePassword`。 |
+| SP私密金鑰別名 | `spPrivateKeyAlias` | ✘ | 字串 |                           | `authentication-service`使用者金鑰庫中私密金鑰的別名。 如果`useEncryption`設定為`true`則為必要。 |
+| SP金鑰庫密碼 | `keyStorePassword` | ✘ | 字串 |                           | &#39;authentication-service&#39;使用者金鑰存放區的密碼。 如果`useEncryption`設定為`true`則為必要。 |
 | 預設重新導向 | `defaultRedirectUrl` | ✘ | 字串 | `/` | 成功驗證後的預設重新導向URL。 可相對於AEM主機（例如`/content/wknd/us/en/html`）。 |
-| 使用者 ID 屬性 | `userIDAttribute` | ✘ | 字串 | `uid` | SAML 斷言屬性名稱，包含 AEM 使用者的使用者 ID。 留空以便使用 `Subject:NameId`. |
-| 自動建立 AEM 使用者 | `createUser` | ✘ | 布林值 | `true` | 顯示是否會在成功驗證時建立AEM使用者。 |
-| AEM使用者中間路徑 | `userIntermediatePath` | ✘ | 字串 |                           | 在建立 AEM 使用者時，此值作為中間路徑（例如， `/home/users/<userIntermediatePath>/jane@wknd.com`）。 需要 `createUser` 設定為 `true`。 |
-| AEM 使用者屬性 | `synchronizeAttributes` | ✘ | 字串陣列 |                           | 可在 AEM 使用者上儲存的 SAML 屬性映射列表，格式如下 `[ "saml-attribute-name=path/relative/to/user/node" ]` （例如， `[ "firstName=profile/givenName" ]`）。 請參閱 [完整的原生 AEM 屬性](#aem-user-attributes)清單。 |
-| 將使用者加入 AEM 群組 | `addGroupMemberships` | ✘ | 布林值 | `true` | 顯示 AEM 使用者在成功認證後是否自動加入 AEM 使用者群組。 |
-| AEM 群組成員屬性 | `groupMembershipAttribute` | ✘ | 字串 | `groupMembership` | SAML宣告屬性的名稱，該屬性包含使用者應新增至的AEM使用者群組清單。 需要`addGroupMemberships`設定為`true`。 |
-| 預設AEM群組 | `defaultGroups` | ✘ | 字串陣列 |                           | AEM 用戶群組的認證使用者清單會被加入（例如， `[ "wknd-user" ]`）。 需要 `addGroupMemberships` 設定為 `true`。 |
-| NameIDPolicy 格式 | `nameIdFormat` | ✘ | 字串 | `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` | 要在AuthnRequest訊息中傳送的NameIDPolicy格式引數值。 |
+| 使用者ID屬性 | `userIDAttribute` | ✘ | 字串 | `uid` | 包含AEM使用者之使用者ID的SAML宣告屬性名稱。 留空將使用`Subject:NameId`。 |
+| 自動建立AEM使用者 | `createUser` | ✘ | 布林值 | `true` | 顯示是否會在成功驗證時建立AEM使用者。 |
+| AEM使用者中間路徑 | `userIntermediatePath` | ✘ | 字串 |                           | 建立AEM使用者時，此值會作為中繼路徑（例如`/home/users/<userIntermediatePath>/jane@wknd.com`）。 需要`createUser`設定為`true`。 |
+| AEM使用者屬性 | `synchronizeAttributes` | ✘ | 字串陣列 |                           | 要儲存在AEM使用者上的SAML屬性對應清單，格式為`[ "saml-attribute-name=path/relative/to/user/node" ]` （例如`[ "firstName=profile/givenName" ]`）。 請參閱原生AEM屬性的[完整清單](#aem-user-attributes)。 |
+| 將使用者新增至AEM群組 | `addGroupMemberships` | ✘ | 布林值 | `true` | 表示在成功驗證後，AEM使用者是否自動新增到AEM使用者群組。 |
+| AEM群組成員資格屬性 | `groupMembershipAttribute` | ✘ | 字串 | `groupMembership` | SAML宣告屬性的名稱，該屬性包含使用者應新增至的AEM使用者群組清單。 需要`addGroupMemberships`設定為`true`。 |
+| 預設AEM群組 | `defaultGroups` | ✘ | 字串陣列 |                           | 已驗證身分的AEM使用者群組清單一律會新增至（例如，`[ "wknd-user" ]`）。 需要`addGroupMemberships`設定為`true`。 |
+| NameIDPolicy格式 | `nameIdFormat` | ✘ | 字串 | `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` | 要在AuthnRequest訊息中傳送的NameIDPolicy格式引數值。 |
 | 儲存SAML回應 | `storeSAMLResponse` | ✘ | 布林值 | `false` | 指示`samlResponse`值是否儲存在AEM `cq:User`節點上。 |
-| 處理登出 | `handleLogout` | ✘ | 布林值 | `false` | 表示登出請求是否由此 SAML 認證處理程序處理。 需要 `logoutUrl` 設定。 |
-| 登出網址 | `logoutUrl` | ✘ | 字串 |                           | SAML 登出請求傳送至 IDP 的網址。 若 `handleLogout` 設定為 `true`，則為 必要。 |
-| 時鐘公差 | `clockTolerance` | ✘ | 整數 | `60` | 在驗證 SAML 斷言時，IDP 與 AEM（SP）時鐘偏移容忍度。 |
-| 消化法 | `digestMethod` | ✘ | 字串 | `http://www.w3.org/2001/04/xmlenc#sha256` | IDP 在簽署 SAML 訊息時所使用的摘要演算法。 |
-| 簽名法 | `signatureMethod` | ✘ | 字串 | `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` | IDP 簽署 SAML 訊息時所使用的簽章演算法。 |
-| 身份同步類型 | `identitySyncType` | ✘ | `default` 或 `idp` | `default` | 請勿變更AEM as a Cloud Service的`from`預設值。 |
-| 服務排名 | `service.ranking` | ✘ | 整數 | `5002` | 較高排名的配置偏好於相同 `path`。 |
+| 處理登出 | `handleLogout` | ✘ | 布林值 | `false` | 指出此SAML驗證處理常式是否處理登出要求。 需要設定`logoutUrl`。 |
+| 登出URL | `logoutUrl` | ✘ | 字串 |                           | IDP的URL，將SAML登出請求傳送至此處。 如果`handleLogout`設定為`true`則為必要。 |
+| 時鐘公差 | `clockTolerance` | ✘ | 整數 | `60` | 驗證SAML宣告時，IDP和AEM (SP)時鐘扭曲容許度。 |
+| 摘要方法 | `digestMethod` | ✘ | 字串 | `http://www.w3.org/2001/04/xmlenc#sha256` | IDP在簽署SAML訊息時使用的摘要演演算法。 |
+| 簽章方法 | `signatureMethod` | ✘ | 字串 | `http://www.w3.org/2001/04/xmldsig-more#rsa-sha256` | IDP在簽署SAML訊息時使用的簽章演演算法。 |
+| 身分同步型別 | `identitySyncType` | ✘ | `default` 或 `idp` | `default` | 請勿變更AEM as a Cloud Service的`from`預設值。 |
+| 服務排名 | `service.ranking` | ✘ | 整數 | `5002` | 相同`path`偏好較高等級的設定。 |
 
-### AEM 使用者屬性{#aem-user-attributes}
+### AEM使用者屬性{#aem-user-attributes}
 
-AEM 使用以下使用者屬性，這些屬性可透過 `synchronizeAttributes` Adobe Granite SAML 2.0 認證處理程序 OSGi 設定中的屬性填充。  任何 IDP 屬性都可以同步到任何 AEM 使用者屬性，但映射到 AEM 的 use attribute 屬性（如下列出）後，AEM 就能自然使用這些屬性。
+AEM使用以下使用者屬性，這些屬性可透過Adobe Granite SAML 2.0驗證處理常式OSGi設定中的`synchronizeAttributes`屬性填入。  任何IDP屬性都可以同步至任何AEM使用者屬性，不過對應至AEM會使用屬性屬性（如下所列），讓AEM可以自然地使用這些屬性。
 
 | 使用者屬性 | 來自`rep:User`節點的相對屬性路徑 |
 |--------------------------------|--------------------------|
@@ -302,9 +303,9 @@ AEM 使用以下使用者屬性，這些屬性可透過 `synchronizeAttributes` 
 +++
 
 1. 在`/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json`的專案中建立OSGi設定檔，並在IDE中開啟。
-   + 改變 `/wknd-examples/` 到你的 `/<project name>/`
-   + 檔案名稱中 的識別 `~` 碼應能唯一識別此組態，因此可能是 IDP 的名稱，例如 `...~okta.cfg.json`。 數值應該是帶有連字符的字母數字。
-1. 將以下 JSON 貼上檔案， `com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json` 並視需要更新 `wknd` 參考資料。
+   + 將`/wknd-examples/`變更為您的`/<project name>/`
+   + 檔案名稱中`~`之後的識別碼應唯一識別此組態，因此它可能是IDP的名稱，例如`...~okta.cfg.json`。 值應為英數字元和連字型大小。
+1. 將下列JSON貼到`com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json`檔案中，並視需要更新`wknd`參考。
 
    ```json
    {
@@ -326,19 +327,19 @@ AEM 使用以下使用者屬性，這些屬性可透過 `synchronizeAttributes` 
    }
    ```
 
-1. 依照專案需求更新數值。 請參閱 __上方 SAML 2.0 認證處理程式 OSGi 組態詞彙表__ 以了解組態屬性的說明。 這些 `path` 內容樹應包含由封閉使用者群組（CUG）保護且需認證的內容，而此認證處理程序應負責保護。
-1. 建議但非強制，當值可能與發布週期不同步，或相似環境類型/服務層級間值不同時，使用 OSGi 環境變數與秘密。 預設值可用上述語法設定 `$[env:..;default=the-default-value]"` 。
+1. 依專案要求更新值。 如需設定屬性說明，請參閱上述&#x200B;__SAML 2.0驗證處理常式OSGi設定字彙表__。 `path`應包含受封閉使用者群組(CUG)保護且需要驗證的內容樹狀結構，此驗證處理常式應負責保護。
+1. 值可能會隨著發行週期不同步變更，或類似環境型別/服務層之間的值不同時，建議使用OSGi環境變數和秘密，但並非必要。 預設值可使用如上所示的`$[env:..;default=the-default-value]"`語法進行設定。
 
-如果 SAML 設定在不同環境間有差異，OSGi 配置`config.publish.dev`可依特定屬性定義（、 `config.publish.stage` `config.publish.prod`、 和 ）。
+如果SAML設定在不同環境之間不同，則每個環境（`config.publish.dev`、`config.publish.stage`和`config.publish.prod`）的OSGi設定可以使用特定屬性來定義。
 
-### 使用加密技術
+### 使用加密
 
-在加密 AuthnRequest 與 SAML 斷言[時](#encrypting-the-authnrequest-and-saml-assertion)，需具備以下屬性：`useEncryption`、、 `spPrivateKeyAlias` `keyStorePassword`和 。因此，該 `keyStorePassword` 值不應儲存在 OSGi 設定檔中，而是透過 [秘密設定值注入](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values)
+當[加密AuthnRequest和SAML判斷提示](#encrypting-the-authnrequest-and-saml-assertion)時，需要下列屬性： `useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`。 `keyStorePassword`包含密碼，因此值不能儲存在OSGi組態檔中，而是使用[密碼組態值](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)插入
 
 +++可選擇更新OSGi設定以使用加密
 
 1. 在IDE中開啟`/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json`。
-1. 將三個性質 `useEncryption`、 `spPrivateKeyAlias`、 和 `keyStorePassword` 相加如下所示。
+1. 新增三個屬性`useEncryption`、`spPrivateKeyAlias`和`keyStorePassword`，如下所示。
 
    ```json
    {
@@ -362,21 +363,21 @@ AEM 使用以下使用者屬性，這些屬性可透過 `synchronizeAttributes` 
    }
    ```
 
-1. 加密所需的三個 OSGi 設定屬性為：
+1. 加密所需的三個OSGi設定屬性是：
 
-+ `useEncryption` 設定為 `true`
-+ `spPrivateKeyAlias` 包含用於 SAML 整合的私鑰儲存項目別名。
-+ `keyStorePassword` 包含 [一個 OSGi 秘密設定變數](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=zh-Hant#secret-configuration-values) ，內含 `authentication-service` 使用者金鑰儲存的密碼。
++ `useEncryption`已設定為`true`
++ `spPrivateKeyAlias`包含SAML整合使用之私密金鑰的金鑰庫專案別名。
++ `keyStorePassword`包含包含[使用者金鑰儲存區密碼的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)OSGi密碼設定變數`authentication-service`。
 
 +++
 
-## 設定 Referrer 濾波器
+## 設定反向連結篩選器
 
-在SAML驗證程式期間，IDP會向AEM Publish的`.../saml_login`端點起始使用者端HTTP POST。 如果 IDP 與 AEM Publish 存在於不同來源地，AEM Publish __的 Referrer Filter__ 會透過 OSGi 設定，允許來自 IDP 來源的 HTTP POST。
+在SAML驗證程式期間，IDP會向AEM Publish的`.../saml_login`端點起始使用者端HTTP POST。 如果IDP和AEM Publish存在於不同的來源，AEM Publish的&#x200B;__反向連結篩選器__&#x200B;會透過OSGi設定允許來自IDP來源的HTTP POST。
 
-1. 在您的專案中建立（或編輯）OSGi 設定檔。`/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/org.apache.sling.security.impl.ReferrerFilter.cfg.json`
-   + 改變 `/wknd-examples/` 到你的 `/<project name>/`
-1. 確保 `allow.empty` 值設為 `true`，（ `allow.hosts` 或你喜歡，） `allow.hosts.regexp`包含 IDP 的來源，且 `filter.methods` 包含 `POST`。 OSGi 配置應類似：
+1. 在`/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/org.apache.sling.security.impl.ReferrerFilter.cfg.json`的專案中建立（或編輯） OSGi設定檔。
+   + 將`/wknd-examples/`變更為您的`/<project name>/`
+1. 請確定`allow.empty`值設為`true`，`allow.hosts` （或如果您偏好，`allow.hosts.regexp`）包含IDP的來源，且`filter.methods`包含`POST`。 OSGi設定應該類似於：
 
    ```json
    {
@@ -392,22 +393,22 @@ AEM 使用以下使用者屬性，這些屬性可透過 `synchronizeAttributes` 
    }
    ```
 
-AEM Publish 支援單一的 Referrer 篩選器配置，因此將 SAML 設定需求與現有設定合併。
+AEM Publish支援單一反向連結篩選設定，因此請將SAML設定需求與任何現有設定合併。
 
-每個環境（`config.publish.dev`、 `config.publish.stage`和 `config.publish.prod`）的 OSGi 配置可依特定屬性定義，若 `allow.hosts` （或 `allow.hosts.regex`） 在不同環境中有所不同。
+如果`config.publish.dev` （或`config.publish.stage`）在不同環境之間有所差異，則每個環境（`config.publish.prod`、`allow.hosts`和`allow.hosts.regex`）的OSGi設定都可以與特定屬性一起定義。
 
-## 配置跨來源資源共享（CORS）
+## 設定跨原始資源共用(CORS)
 
-在 SAML 認證過程中，IDP 會向 AEM Publish `.../saml_login` 端點發起客戶端 HTTP POST。 若 IDP 與 AEM Publish 存在於不同的主機/網域，AEM Publish __的 CRoss-Origin 資源共享（CORS）__ 必須設定為允許來自 IDP 主機/網域的 HTTP POST。
+在SAML驗證程式期間，IDP會向AEM Publish的`.../saml_login`端點起始使用者端HTTP POST。 如果IDP和AEM Publish存在於不同的主機/網域上，則AEM Publish的&#x200B;__CRoss-Origin Resource Sharing (CORS)__&#x200B;必須設定為允許來自IDP主機/網域的HTTP POST。
 
-此 HTTP POST 請求的 `Origin` 標頭通常與 AEM 發佈主機的值不同，因此需要 CORS 設定。
+此HTTP POST要求的`Origin`標頭通常與AEM Publish主機的值不同，因此需要CORS設定。
 
-在測試本地 AEM SDK 的`localhost:4503` SAML 認證時，IDP 可能會將標頭設 `Origin` 為 `null`。 如果是，請加入`"null"` `alloworigin`清單。
+在本機AEM SDK (`localhost:4503`)上測試SAML驗證時，IDP可能會將`Origin`標頭設定為`null`。 若是如此，請將`"null"`新增至`alloworigin`清單。
 
-1. 在你的專案中建立一個 OSGi 設定檔 `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~saml.cfg.json`
-   + 更改 `/wknd-examples/` 您的專案名稱
-   + 檔案名稱中 的識別 `~` 碼應能唯一識別此組態，因此可能是 IDP 的名稱，例如 `...CORSPolicyImpl~okta.cfg.json`。 數值應該是帶有連字符的字母數字。
-1. 將以下 JSON 貼上到檔案中 `com.adobe.granite.cors.impl.CORSPolicyImpl~...cfg.json` 。
+1. 在`/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~saml.cfg.json`的專案中建立OSGi設定檔
+   + 將`/wknd-examples/`變更為您的專案名稱
+   + 檔案名稱中`~`之後的識別碼應唯一識別此組態，因此它可能是IDP的名稱，例如`...CORSPolicyImpl~okta.cfg.json`。 值應為英數字元和連字型大小。
+1. 將下列JSON貼入`com.adobe.granite.cors.impl.CORSPolicyImpl~...cfg.json`檔案。
 
 ```json
 {
@@ -424,13 +425,13 @@ AEM Publish 支援單一的 Referrer 篩選器配置，因此將 SAML 設定需�
 }
 ```
 
-每個環境（`config.publish.dev`、 `config.publish.stage`和 `config.publish.prod`）的 OSGi 設定可依特定屬性定義，若 與 `alloworigin` `allowedpaths` 在不同環境中有所不同。
+如果`config.publish.dev`和`config.publish.stage`在不同環境之間不同，則每個環境（`config.publish.prod`、`alloworigin`和`allowedpaths`）的OSGi設定可以使用特定屬性來定義。
 
-## 設定 AEM Dispatcher 以允許 SAML HTTP POSTs
+## 設定AEM Dispatcher以允許SAML HTTP POST
 
-成功認證 IDP 後，IDP 將協調 HTTP POST 回 AEM 註冊 `/saml_login` 端點（在 IDP 中設定）。 此 HTTP POST 在 `/saml_login` Dispatcher 預設被阻擋，因此必須透過以下 Dispatcher 規則明確允許：
+成功驗證IDP後，IDP會為AEM註冊的`/saml_login`端點（在IDP中設定）編排HTTP POST。 此`/saml_login`的HTTP POST預設會在Dispatcher中遭到封鎖，因此必須使用下列Dispatcher規則明確允許使用：
 
-1. 在你的 IDE 裡開啟 `dispatcher/src/conf.dispatcher.d/filters/filters.any` 。
+1. 在IDE中開啟`dispatcher/src/conf.dispatcher.d/filters/filters.any`。
 1. 在檔案底部新增允許規則，將HTTP POST新增至結尾為`/saml_login`的URL。
 
 ```
@@ -443,16 +444,16 @@ AEM Publish 支援單一的 Referrer 篩選器配置，因此將 SAML 設定需�
 >[!NOTE]
 >在AEM中針對各種受保護路徑和不同IDP端點部署多個SAML設定時，請確保IDP張貼到RESPONSIVE_PROTECTED_PATH/saml_login端點以在AEM端選取適當的SAML設定。 如果同一受保護路徑有重複的SAML設定，則會隨機選取SAML設定。
 
-如果在 Apache 網頁伺服器設定了 URL`dispatcher/src/conf.d/rewrites/rewrite.rules` 重寫（），確保發送到 `.../saml_login` 端點的請求不會被誤搞。
+如果已設定Apache Webserver上的URL重新寫入(`dispatcher/src/conf.d/rewrites/rewrite.rules`)，請確定對`.../saml_login`端點的要求不會意外遭到竄改。
 
-## 動態團體成員制
+## 動態群組成員資格
 
-動態群組成員資格是 Apache Jackrabbit Oak[&#x200B; 中的](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)一項功能，能提升群組評估與配置的效能。本節說明啟用此功能後，使用者與群組如何儲存，以及如何修改 SAML 認證處理程序的設定以啟用新舊環境。
+動態群組成員資格是[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)中的功能，可提升群組評估及布建的效能。 本節說明啟用此功能時如何儲存使用者和群組，以及如何修改SAML驗證處理常式的組態，以便為新環境或現有環境啟用它。
 
-### 如何在新環境中為 SAML 使用者啟用動態群組成員資格
+### 如何為新環境中的SAML使用者啟用動態群組成員資格
 
 為了大幅增強新AEM as a Cloud Service環境中的群組評估效能，建議在新環境中啟用動態群組成員資格功能。
-這也是在啟動資料同步時的必要步驟。 更多詳細資料[在此](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier)。
+這也是在啟動資料同步時的必要步驟。 更多詳細資料[在此](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier)。
 若要這麼做，請將下列屬性新增至OSGI設定檔：
 
 `/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
@@ -462,9 +463,10 @@ AEM Publish 支援單一的 Referrer 篩選器配置，因此將 SAML 設定需�
 在先前未指定`identitySyncType`或設為`default`的現有部署中部署此設定時，將會建立新的使用者和群組，且必須將ACL套用至這些新使用者和群組。 請注意，外部群組不能包含本機使用者。 [Repoinit](https://sling.apache.org/documentation/bundles/repository-initialization.html)可用來建立SAML外部群組的ACL，即使這些群組僅在使用者執行登入時才會建立。
 為避免在ACL上重構此功能，已實作標準[移轉功能](#automatic-migration-to-dynamic-group-membership-for-existing-environments)。
 
-### 會員資格如何儲存在本地與外部群組中，並具備動態群組成員資格
+### 成員資格如何儲存在具有動態群組成員資格的本機及外部群組中
 
-在本地群組中，群組成員會儲存在 oak 屬性中： `rep:members`。 屬性包含群組中每個成員的 uid 清單。 更多詳情可在此[查閱](https://jackrabbit.apache.org/oak/docs/security/user/membership.html#member-representation-in-the-repository)。範例：
+在本機群組上，群組成員儲存在Oak屬性中： `rep:members`。 屬性包含群組每個成員的uid清單。 其他詳細資料可在[這裡](https://jackrabbit.apache.org/oak/docs/security/user/membership.html#member-representation-in-the-repository)找到。
+範例：
 
 ```
 {
@@ -480,7 +482,8 @@ AEM Publish 支援單一的 Referrer 篩選器配置，因此將 SAML 設定需�
 }
 ```
 
-具有動態群組成員的外部群組不會在群組條目中儲存任何成員。群組成員身份則儲存在使用者的條目中。 其他檔案可在[這裡](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)找到。 例如，這是群組的 OAK 節點：
+具有動態群組成員資格的外部群組不會儲存群組專案中的任何成員。
+群組成員資格會儲存在使用者專案中。 其他檔案可在[這裡](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)找到。 例如，這是群組的OAK節點：
 
 ```
 {
@@ -520,37 +523,37 @@ AEM Publish 支援單一的 Referrer 篩選器配置，因此將 SAML 設定需�
 }
 ```
 
-### 如何在現有環境中為 SAML 使用者啟用動態群組成員資格
+### 如何在現有環境中啟用SAML使用者的動態群組成員資格
 
-如前節所述，外部使用者與群組的格式與本地使用者與群組略有不同。 你可以為外部群組定義新的 ACL 並配置新的外部使用者，或使用以下描述的遷移工具。
+如上一節所述，外部使用者和群組的格式與本機使用者和群組使用的格式略有不同。 您可以為外部群組定義新的ACL並布建新的外部使用者，或使用如下所述的移轉工具。
 
-#### 啟用現有外部使用者環境的動態群組成員資格
+#### 為具有外部使用者的現有環境啟用動態群組成員資格
 
-當指定以下屬性時，SAML 認證處理器會建立外部使用者： `"identitySyncType": "idp"`。 在這種情況下，可以透過修改此性質來啟用動態群組成員資格： `"identitySyncType": "idp_dynamic"`。 不需要遷移。
+SAML驗證處理常式會在指定下列屬性時建立外部使用者： `"identitySyncType": "idp"`。 在此情況下，可以啟用動態群組成員資格，並將這個屬性修改為： `"identitySyncType": "idp_dynamic"`。 不需要移轉。
 
-#### 自動遷移至現有環境的動態群組成員，並有本地使用者
+#### 針對具有本機使用者的現有環境，自動移轉至動態群組成員資格
 
-當指定以下屬性時，SAML 認證處理器會建立本地使用者： `"identitySyncType": "default"`。 當該屬性未被指定時，這也是預設值。 本節說明自動遷移程序所執行的步驟。
+SAML驗證處理常式會在指定下列屬性時建立本機使用者： `"identitySyncType": "default"`。 若未指定屬性，此亦為預設值。 在本節中，我們將說明自動移轉程式所執行的步驟。
 
-當此遷移啟用時，會在使用者驗證過程中執行，包含以下步驟：
+啟用此移轉時，會在使用者驗證期間執行，並包含下列步驟：
 1. 本機使用者會移轉至外部使用者，同時保留原始使用者名稱。 這表示已移轉的本機使用者（現在為外部使用者）會保留其原始使用者名稱，而非遵循上一節中所述的命名語法。 將新增一個額外的屬性，稱為： `rep:externalId`，其值為`[user name];[idp]`。 未修改使用者`PrincipalName`。
-2. 每收到一個 SAML 斷言中的外部群組，都會建立一個外部群組。 若存在對應的局部群，則外部群會作為成員加入該本地群。
-3. 使用者會被加入外部群組。
-4. 當地使用者隨後會被移除出他所屬的所有 Saml 本地群組。 Saml 局部群由 OAK 屬性識別： `rep:managedByIdp`。 當 `syncType` 屬性未指定或未設為 `default`時，Saml 認證處理程序會設定此屬性。
+2. 對於SAML判斷提示中收到的每個外部群組，都會建立一個外部群組。 如果存在對應的本機群組，外部群組會作為成員新增至本機群組。
+3. 使用者會新增為外部群組的成員。
+4. 然後，本機使用者會從他曾是成員的所有Saml本機群組中移除。 Saml本機群組由OAK屬性識別： `rep:managedByIdp`。 當屬性`syncType`未指定或設定為`default`時，此屬性是由Saml驗證處理常式所設定。
 
-例如，若遷移前 `user1` 是本地使用者，且是本地群組 `group1`成員，遷移後將發生以下變更：
-`user1` 成為外部使用者。 屬性`rep:externalId`已新增至他的設定檔。
+例如，如果移轉之前`user1`是本機使用者，且是本機群組`group1`的成員，則移轉之後會發生下列變更：
+`user1`成為外部使用者。 屬性`rep:externalId`已新增至他的設定檔。
 `user1`成為外部群組的成員： `group1;idp`
 `user1`不再是本機群組的直接成員： `group1`
 `group1;idp`是本機群組的成員： `group1`。
 然後`user1`會透過繼承成為本機群組`group1`的成員
 
-外部群組的成員資格會儲存在屬性中的使用者設定檔中 `rep:externalPrincipalNames`
+外部群組的群組成員資格儲存在屬性`rep:externalPrincipalNames`的使用者設定檔中
 
-### 如何設定自動遷移至動態群組成員
+### 如何設定自動移轉至動態群組成員資格
 
-1. 請在 SAML OSGi 設定檔中啟用此屬性 `"identitySyncType": "idp_dynamic_simplified_id"` ： `com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json` ：
-2. 以出廠 PID 從以下 `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~`字母開始配置新的 OSGi 服務： 。 例如，PID 可以是： `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~myIdP`。 設定以下屬性：
+1. 啟用SAML OSGi組態檔中的屬性`"identitySyncType": "idp_dynamic_simplified_id"`： `com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json`：
+2. 設定新的OSGi服務，原廠PID的開頭為： `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~`。 例如，PID可以是： `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~myIdP`。 設定下列屬性：
 
 ```
 {
@@ -558,11 +561,305 @@ AEM Publish 支援單一的 Referrer 篩選器配置，因此將 SAML 設定需�
 }
 ```
 
-要遷移多個 SAML 配置，必須建立多個 的 `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration` OSGi 出廠設定，每個設定指定遷移目標 `idpIdentifier` 。
+若要移轉多個SAML組態，必須為`com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration`建立多個OSGi Factory組態，每個組態指定要移轉的`idpIdentifier`。
 
-## 部署 SAML 配置
+## 進階使用案例的自訂SAML鉤點
 
-OSGi 設定必須提交到 Git 中，並透過 Cloud Manager 部署至 AEM 的雲端服務。
+如果IDP無法在SAML宣告中傳送使用者設定檔資料和使用者群組成員資格，或者如果在同步到AEM之前需要轉換資料，則可以實施自訂SAML鉤點以擴展SAML驗證流程。 SAML掛接允許在驗證流程期間自訂群組成員資格指派、修改使用者設定檔屬性以及新增自訂商業邏輯。
+
+>[!NOTE]
+>**AEM as a Cloud Service**&#x200B;和&#x200B;**AEM LTS**&#x200B;支援自訂SAML鉤點。 舊版AEM不提供此功能。
+
+### 何時使用自訂SAML鉤點
+
+當需要執行以下動作時，自訂SAML鉤子會很有用：
+
++ 超出SAML宣告中所提供的自訂商業邏輯，以動態方式指派群組成員資格
++ 在將使用者設定檔資料同步至AEM之前，先轉換或擴充該資料
++ 將複雜的SAML屬性結構對應至AEM使用者屬性
++ 實作自訂授權規則或條件群組指派
++ 在SAML驗證期間新增自訂記錄或稽核
++ 在驗證過程中與外部系統整合
+
+### 瞭解SamlHook介面
+
+`com.adobe.granite.auth.saml.spi.SamlHook`介面提供在SAML驗證程式的不同階段叫用的兩種掛接方法：
+
+#### 1. postSamlValidationProcess
+
+這個方法在&#x200B;**之後呼叫**，SAML回應已經過驗證，但&#x200B;**在**&#x200B;之前，使用者同步處理程式就會開始。 這是修改SAML宣告資料的理想位置，例如新增或變形屬性。
+
+```java
+public void postSamlValidationProcess(
+    HttpServletRequest request, 
+    Assertion assertion, 
+    Message samlResponse)
+```
+
+**使用案例：**
++ 新增其他群組成員資格至判斷提示
++ 在同步處理屬性之前先轉換屬性值
++ 使用外部來源的資料擴充判斷提示
++ 驗證自訂商業規則
+
+#### 2. postSyncUserProcess
+
+此方法是在&#x200B;**之後呼叫**，使用者同步處理程式已完成。 此掛接可用於在AEM使用者建立或更新後執行其他操作。
+
+```java
+public void postSyncUserProcess(
+    HttpServletRequest request, 
+    HttpServletResponse response, 
+    Assertion assertion,
+    AuthenticationInfo authenticationInfo, 
+    String samlResponse)
+```
+
+**使用案例：**
++ 更新標準同步處理未涵蓋的其他使用者設定檔屬性
++ 在AEM中建立或更新自訂使用者相關的資源
++ 使用者驗證後觸發工作流程或通知
++ 記錄自訂驗證事件
+
+**重要：**&#x200B;若要修改存放庫中的使用者屬性，掛接實作需要：
++ 透過`SlingRepository`插入的`@Reference`參考
++ 設定的[服務使用者](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)具有適當的許可權（設定於「Apache Sling Service User Mapper Service Improximtion」）
++ 使用try-catch-finally區塊進行適當的工作階段管理
+
+### 實施自訂SAML鉤點
+
+下列步驟概述如何建立和部署自訂SAML鉤點：
+
+#### 步驟1：建立SAML鉤點實作
+
+在實作`com.adobe.granite.auth.saml.spi.SamlHook`介面的AEM專案中建立新的Java類別：
+
+```java
+package com.mycompany.aem.saml;
+
+import com.adobe.granite.auth.saml.spi.Assertion;
+import com.adobe.granite.auth.saml.spi.Attribute;
+import com.adobe.granite.auth.saml.spi.Message;
+import com.adobe.granite.auth.saml.spi.SamlHook;
+import org.apache.jackrabbit.api.JackrabbitSession;
+import org.apache.jackrabbit.api.security.user.Authorizable;
+import org.apache.jackrabbit.api.security.user.UserManager;
+import org.apache.sling.auth.core.spi.AuthenticationInfo;
+import org.apache.sling.jcr.api.SlingRepository;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.metatype.annotations.AttributeDefinition;
+import org.osgi.service.metatype.annotations.Designate;
+import org.osgi.service.metatype.annotations.ObjectClassDefinition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.annotation.Nonnull;
+import javax.jcr.RepositoryException;
+import javax.jcr.Session;
+import javax.jcr.ValueFactory;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@Component
+@Designate(ocd = SampleImpl.Configuration.class, factory = true)
+public class SampleImpl implements SamlHook {
+    @ObjectClassDefinition(name = "Saml Sample Authentication Handler Hook Configuration")
+    @interface Configuration {
+        @AttributeDefinition(
+                name = "idpIdentifier",
+                description = "Identifier of SAML Idp. Match the idpIdentifier property's value configured in the SAML Authentication Handler OSGi factory configuration (com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>) this SAML hook will hook into"
+        )
+        String idpIdentifier();
+
+    }
+
+    private static final String SAMPLE_SERVICE_NAME = "sample-saml-service";
+    private static final String CUSTOM_LOGIN_COUNT = "customLoginCount";
+
+    private final Logger log = LoggerFactory.getLogger(getClass());
+
+    private SlingRepository repository;
+
+    @SuppressWarnings("UnusedDeclaration")
+    @Reference(name = "repository", cardinality = ReferenceCardinality.MANDATORY)
+    public void bindRepository(SlingRepository repository) {
+        this.repository = repository;
+    }
+
+    /**
+     * This method is called after the user sync process is completed.
+     * At this point, the user has already been synchronized in OAK (created or updated).
+     * Example: Track login count by adding custom attributes to the user in the repository
+     *
+     * @param request
+     * @param response
+     * @param assertion
+     * @param authenticationInfo
+     * @param samlResponse
+     */
+    @Override
+    public void postSyncUserProcess(HttpServletRequest request, HttpServletResponse response, Assertion assertion,
+                                    AuthenticationInfo authenticationInfo, String samlResponse) {
+        log.info("Custom Audit Log: user {} successfully logged in", authenticationInfo.getUser());
+
+        // This code executes AFTER the user has been synchronized in OAK
+        // The user object already exists in the repository at this point
+        Session serviceSession = null;
+        try {
+            // Get a service session - requires "sample-saml-service" to be configured as system user
+            // Configure in: "Apache Sling Service User Mapper Service Amendment"
+            serviceSession = repository.loginService(SAMPLE_SERVICE_NAME, null);
+
+            // Get the UserManager to work with users and groups
+            UserManager userManager = ((JackrabbitSession) serviceSession).getUserManager();
+
+            // Get the authorizable (user) that just logged in
+            Authorizable user = userManager.getAuthorizable(authenticationInfo.getUser());
+
+            if (user != null && !user.isGroup()) {
+                ValueFactory valueFactory = serviceSession.getValueFactory();
+
+                // Increment login count
+                long loginCount = 1;
+                if (user.hasProperty(CUSTOM_LOGIN_COUNT)) {
+                    loginCount = user.getProperty(CUSTOM_LOGIN_COUNT)[0].getLong() + 1;
+                }
+                user.setProperty(CUSTOM_LOGIN_COUNT, valueFactory.createValue(loginCount));
+                log.debug("Set {} property to {} for user {}", CUSTOM_LOGIN_COUNT, loginCount, user.getID());
+
+                // Save all changes to the repository
+                if (serviceSession.hasPendingChanges()) {
+                    serviceSession.save();
+                    log.debug("Successfully saved custom attributes for user {}", user.getID());
+                }
+            } else {
+                log.warn("User {} not found or is a group", authenticationInfo.getUser());
+            }
+
+        } catch (RepositoryException e) {
+            log.error("Error adding custom attributes to user repository for user: {}",
+                     authenticationInfo.getUser(), e);
+        } finally {
+            if (serviceSession != null) {
+                serviceSession.logout();
+            }
+        }
+    }
+
+    /**
+     * This method is called after the SAML response is validated but before the user sync process starts.
+     * We can modify the assertion here to add custom attributes.
+     *
+     * @param request
+     * @param assertion
+     * @param samlResponse
+     */
+    @Override
+    public void postSamlValidationProcess(@Nonnull HttpServletRequest request, @Nonnull Assertion assertion, @Nonnull Message samlResponse) {
+        // Add the attribute "memberOf" with value "sample-group" to the assertion
+        // In this example "memberOf" is a multi-valued attribute that contains the groups from the Saml Idp
+        log.debug("Inside postSamlValidationProcess");
+        Attribute groupsAttr = assertion.getAttributes().get("groups");
+        if (groupsAttr != null) {
+            groupsAttr.addAttributeValue("sample-group-from-hook");
+        } else {
+            groupsAttr = new Attribute();
+            groupsAttr.setName("groups");
+            groupsAttr.addAttributeValue("sample-group-from-hook");
+            assertion.getAttributes().put("groups", groupsAttr);
+        }
+    }
+
+}
+```
+
+#### 步驟2：設定SAML鉤點
+
+SAML鉤點使用OSGi設定來指定它應該套用到哪個IDP。 在專案中建立OSGi設定檔，位置為：
+
+`/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.mycompany.aem.saml.CustomSamlHook~okta.cfg.json`
+
+```json
+{
+  "idpIdentifier": "$[env:SAML_IDP_ID;default=http://www.okta.com/exk4z55r44Jz9C6am5d7]",
+  "service.ranking": 100
+}
+```
+
+`idpIdentifier`必須符合在對應SAML驗證處理常式OSGi工廠設定(PID： `idpIdentifier`)中設定的`com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>.cfg.json`值。 此比對至關重要：系統只會針對具有相同`idpIdentifier`值的SAML驗證處理常式執行個體叫用SAML連結。 SAML驗證處理常式是工廠設定，這表示您可以有多個執行個體（例如，`com.adobe.granite.auth.saml.SamlAuthenticationHandler~okta.cfg.json`、`com.adobe.granite.auth.saml.SamlAuthenticationHandler~azure.cfg.json`），而且每個連結都透過`idpIdentifier`繫結至特定的處理常式。 在設定多個掛接時，`service.ranking`屬性會控制執行順序（較高的值會先執行）。
+
+#### 步驟3：新增Maven相依性
+
+將所需的SAML SPI相依性新增到AEM Maven核心專案的`pom.xml`。
+
+**對於AEM as a Cloud Service專案**，請使用包含SAML介面的AEM SDK API相依性：
+
+```xml
+<dependency>
+    <groupId>com.adobe.aem</groupId>
+    <artifactId>aem-sdk-api</artifactId>
+    <version>${aem.sdk.api}</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+`aem-sdk-api`成品包含所有必要的Adobe Granite SAML介面，包括`com.adobe.granite.auth.saml.spi.SamlHook`。
+
+#### 步驟4：設定服務使用者（如果修改存放庫）
+
+如果SAML掛接需要修改存放庫中的使用者屬性（如`postSyncUserProcess`範例所示），則必須設定[服務使用者](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)：
+
+1. 在`/ui.config/src/main/content/jcr_root/apps/myproject/osgiconfig/config/org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~saml.cfg.json`的專案中建立服務使用者對應：
+
+```json
+{
+  "user.mapping": [
+    "com.mycompany.aem.core:sample-saml-service=saml-hook-service"
+  ]
+}
+```
+
+1. 建立repoinit指令碼以定義位於`/ui.config/src/main/content/jcr_root/apps/myproject/osgiconfig/config/org.apache.sling.jcr.repoinit.RepositoryInitializer~saml.cfg.json`的服務使用者和許可權：
+
+```
+create service user saml-hook-service with path system/saml
+
+set ACL for saml-hook-service
+    allow jcr:read,rep:write,rep:userManagement on /home/users
+end
+```
+
+這會授予服務使用者讀取和修改存放庫中使用者屬性的許可權。
+
+#### 步驟5：部署至AEM
+
+將自訂SAML鉤點部署到AEM as a Cloud Service：
+
+1. 建置AEM專案
+1. 將程式碼提交到Cloud Manager Git存放庫
+1. 使用完整棧疊部署管道進行部署
+1. 當使用者透過SAML驗證時，SAML勾點將自動啟動
+
+
+### 重要考量
+
++ **符合**&#x200B;的IDP識別碼：在SAML連結中設定的`idpIdentifier`必須完全符合SAML驗證處理常式處理常式設定(`idpIdentifier`)中的`com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>`
++ **屬性名稱**：確定掛接中參照的屬性名稱（例如`groupMembership`）符合SAML驗證處理常式中設定的屬性
++ **效能**：在每個SAML驗證期間執行掛接實作時保持輕量型實作
++ **錯誤處理**：當發生應該無法通過驗證的嚴重錯誤時，SAML鉤點實作應該擲回`com.adobe.granite.auth.saml.spi.SamlHookException`。 SAML驗證處理常式會捕捉這些例外並傳回`AuthenticationInfo.FAIL_AUTH`。 對於存放庫作業，請一律捕獲`RepositoryException`並適當記錄錯誤。 使用try-catch-finally區塊以確保正確清理資源
++ **正在測試**：在部署到生產環境之前，請先在較低的環境中徹底測試自訂鉤點
++ **多個掛接**：可以設定多個SAML掛接實作；將執行所有相符的掛接。 使用OSGi元件中的`service.ranking`屬性來控制執行順序（較高的排名值會先執行）。 若要在多個SAML驗證處理常式工廠設定(`com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>`)中重複使用SAML掛接，請建立多個掛接設定（OSGi工廠設定），每個設定具有符合個別SAML驗證處理常式的不同`idpIdentifier`
++ **安全性**：在商業邏輯中使用SAML宣告的所有資料之前，請先驗證並處理這些資料
++ **存放庫存取**：在`postSyncUserProcess`中修改使用者屬性時，請一律使用具有適當許可權的[服務使用者](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)，而非管理工作階段
++ **服務使用者許可權**：將最低必要許可權授與[服務使用者](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) （例如，`jcr:read`上只有`rep:write`和`/home/users`，不是完整的系統管理員許可權）
++ **工作階段管理**：一律使用try-catch-finally區塊，以確保儲存庫工作階段正確關閉，即使發生例外狀況亦然
++ **使用者同步處理時間**： `postSyncUserProcess`掛接會在使用者同步處理至OAK之後執行，因此使用者物件一定存在於該儲存庫中
+
+## 部署SAML設定
+
+OSGi設定必須提交至Git並使用Cloud Manager部署至AEM as a Cloud Service。
 
 ```
 $ git remote -v            
@@ -573,32 +870,32 @@ $ git commit -m "SAML 2.0 configurations"
 $ git push adobe saml-auth:develop
 ```
 
-使用全端部署管線部署目標的 Cloud Manager Git 分支（此例 `develop`為 ），。
+使用完整棧疊部署管道部署目標Cloud Manager Git分支（在此範例中為`develop`）。
 
-## 呼叫 SAML 認證
+## 叫用SAML驗證
 
-SAML 認證流程可從 AEM 網站網頁啟動，透過建立特別製作的連結或按鈕。 以下描述的參數可依需求程式設定，例如登入按鈕可設定 `saml_request_path`，使用者在成功 SAML 認證後會被帶到不同的 AEM 頁面，依據按鈕的上下文。
+您可以建立巧盡心思打造的連結或按鈕，從AEM網站網頁叫用SAML驗證流程。 以下所述的引數可以視需要以程式設計方式設定，因此，例如，登入按鈕可能會根據按鈕的內容，將使用者成功進行SAML驗證時所在的`saml_request_path`設定到不同的AEM頁面。
 
-## 使用 SAML 時的安全快取
+## 使用SAML時的安全快取
 
-在 AEM 發佈實例中，大多數頁面通常會被快取。 然而，對於受 SAML 保護的路徑，快取應停用或啟用安全快取，並使用 auth_checker 配置。 欲了解更多資訊，請參閱此處提供的 [詳細資訊](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-dispatcher/using/configuring/permissions-cache)
+在AEM發佈執行個體上，通常會快取大部分頁面。 不過，對於受SAML保護的路徑，應使用auth_checker設定停用快取或啟用安全快取。 如需詳細資訊，請參閱[這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-dispatcher/using/configuring/permissions-cache)提供的詳細資料
 
-請注意，若您在未啟用auth_checker的情況下緩存受保護路徑，可能會遇到不可預測的行為。
+請注意，如果您在快取受保護路徑時未啟用auth_checker，則可能會遇到無法預期的行為。
 
-### GET 請求
+### GET要求
 
-SAML 認證可透過建立格式為以下格式的 HTTP GET 請求來啟動：
+可以透過以下格式建立HTTP GET請求來叫用SAML驗證：
 
 `HTTP GET /system/sling/login`
 
-並提供查詢參數：
+並提供查詢引數：
 
-| 查詢參數名稱 | 查詢參數值 |
+| 查詢引數名稱 | 查詢引數值 |
 |----------------------|-----------------------|
 | `resource` | 如[Adobe Granite SAML 2.0 Authentication Handler OSGi設定的](#configure-saml-2-0-authentication-handler) `path`屬性中所定義，任何SAML驗證處理常式監聽的JCR路徑或子路徑。 |
 | `saml_request_path` | 成功SAML驗證後，使用者應該前往的URL路徑。 |
 
-例如，這個 HTML 連結會觸發 SAML 登入流程，成功後會帶使用者前往 `/content/wknd/us/en/protected/page.html`。 您可以視需要以程式設計方式設定這些查詢引數。
+例如，此HTML連結將觸發SAML登入流程，成功後將使用者帶至`/content/wknd/us/en/protected/page.html`。 您可以視需要以程式設計方式設定這些查詢引數。
 
 ```html
 <a href="/system/sling/login?resource=/content/wknd&saml_request_path=/content/wknd/us/en/protected/page.html">
@@ -606,9 +903,9 @@ SAML 認證可透過建立格式為以下格式的 HTTP GET 請求來啟動：
 </a>
 ```
 
-## POST 請求
+## POST要求
 
-SAML 認證可透過建立格式為 HTTP POST 請求來啟動：
+可以透過以下格式建立HTTP POST請求來叫用SAML驗證：
 
 `HTTP POST /system/sling/login`
 
@@ -632,9 +929,9 @@ SAML 認證可透過建立格式為 HTTP POST 請求來啟動：
 
 ### Dispatcher 設定
 
-HTTP GET 與 POST 方法都需要用戶端存取 AEM 端 `/system/sling/login` 點，因此必須透過 AEM Dispatcher 允許。
+HTTP GET和POST方法都需要使用者端存取AEM的`/system/sling/login`端點，因此必須透過AEM Dispatcher允許它們。
 
-允許根據是否使用 GET 或 POST 來設定必要的 URL 模式
+根據是否使用GET或POST，允許必要的URL模式
 
 ```
 # Allow GET-based SAML authentication invocation
