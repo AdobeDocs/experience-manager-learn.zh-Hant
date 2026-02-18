@@ -8,10 +8,10 @@ role: Admin
 level: Beginner
 jira: KT-4999
 thumbnail: 39150.jpg
-last-substantial-update: 2026-02-06T00:00:00Z
+last-substantial-update: 2026-02-18T00:00:00Z
 exl-id: 40ba2368-edb7-4348-9aff-91194200092e
 duration: 160
-source-git-commit: 3ea020ef8521d0014c69c9cf900e49c5f695fe0c
+source-git-commit: 513344b4ca6325f8c67215e5f79d762491a9af9b
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 65%
@@ -27,4 +27,4 @@ ht-degree: 65%
 
  Adobe IMS使用者群組會建立對AEM公開的使用者邏輯集，以便為AEM使用者定義更精細的許可權。
 
->[!VIDEO](https://video.tv.adobe.com/v/3479633?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39150?quality=12&learn=on)
