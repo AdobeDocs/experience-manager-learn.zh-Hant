@@ -34,7 +34,7 @@ ht-degree: 2%
 - AEM as a Cloud Service **動作中心**&#x200B;會通知您專案中&#x200B;_已棄用的API_。
   ![動作中心已棄用的API](./assets/deprecated-apis/actions-center-deprecated-apis.png)
 
-- Cloud Manager管道中的&#x200B;**程式碼掃描**&#x200B;步驟會報告專案中已被取代的API，請檢閱&#x200B;**下載詳細資料**報告以檢視已被取代的API完整清單。
+- Cloud Manager管道中的&#x200B;**程式碼掃描**&#x200B;步驟會報告專案中已被取代的API，請檢閱&#x200B;**下載詳細資料**&#x200B;報告以檢視已被取代的API完整清單。
   ![在程式碼掃描中被取代的API](./assets/deprecated-apis/code-scanning-summary.png)
 
 - Cloud Manager管道中的&#x200B;**成品準備**&#x200B;步驟會報告專案中已被取代的API、**下載記錄檔**&#x200B;並在記錄檔中尋找&#x200B;_分析器警告_。
