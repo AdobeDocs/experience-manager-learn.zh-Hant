@@ -10,10 +10,10 @@ jira: KT-20288
 thumbnail: KT-20288.png
 last-substantial-update: 2026-02-09T00:00:00Z
 exl-id: 287894ea-9cc1-4c27-ac7e-967ad46f4789
-source-git-commit: effacd58725dab502f6fb6a4750646c1ea956de2
+source-git-commit: 08dd5006ebf4ebd94e8bc60594f8f1541feb810f
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 3%
+source-wordcount: '603'
+ht-degree: 2%
 
 ---
 
@@ -23,9 +23,29 @@ ht-degree: 3%
 
 ## 概觀
 
-AEM as a Cloud Service **動作中心**&#x200B;會通知您專案中&#x200B;_已棄用的API_。 為確保您的應用程式安全且效能，以及您能夠繼續使用Cloud Manager管道部署程式碼，請從您的專案中移除已棄用的API。
+為確保您的應用程式安全且效能，以及您能夠繼續使用Cloud Manager管道部署程式碼，請從您的專案中移除已棄用的API。
 
 在本教學課程中，您將瞭解如何使用[AEM Analyzer Maven外掛程式](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md)，在您的AEM as a Cloud Service環境中尋找及移除已棄用的API。
+
+## 關於已棄用API的通知
+
+關於已過時的API使用情形和修正注意事項會定期回報，讓我們檢閱一些範例。
+
+- AEM as a Cloud Service **動作中心**&#x200B;會通知您專案中&#x200B;_已棄用的API_。
+  ![動作中心已棄用的API](./assets/deprecated-apis/actions-center-deprecated-apis.png)
+
+- Cloud Manager管道中的&#x200B;**程式碼掃描**&#x200B;步驟會報告專案中已被取代的API，請檢閱&#x200B;**下載詳細資料**報告以檢視已被取代的API完整清單。
+  ![在程式碼掃描中被取代的API](./assets/deprecated-apis/code-scanning-summary.png)
+
+- Cloud Manager管道中的&#x200B;**成品準備**&#x200B;步驟會報告專案中已被取代的API、**下載記錄檔**&#x200B;並在記錄檔中尋找&#x200B;_分析器警告_。
+
+  ```
+  2026-02-20 15:40:48.376 Analyser warnings have been found 
+  2026-02-20 15:40:48.376 The analyser found the following warnings for author and publish : 
+  2026-02-20 15:40:48.376 [region-deprecated-api] com.adobe.aem.guides:aem-guides-wknd.core:4.0.5-SNAPSHOT: Usage of deprecated package found : org.apache.commons.lang : Commons Lang 2 is in maintenance mode. Commons Lang 3 should be used instead. Deprecated since 2021-04-30 For removal : 2021-12-31 (com.adobe.aem.guides:aem-guides-wknd.all:4.0.5-SNAPSHOT)
+  2026-02-20 15:40:56.458 Convert Merge Analyse finished.
+  ```
+
 
 ## 如何尋找已過時的API
 
@@ -39,7 +59,7 @@ AEM as a Cloud Service **動作中心**&#x200B;會通知您專案中&#x200B;_已
 
      ```xml
      ...
-     <aemanalyser.version>1.6.14</aemanalyser.version> <!-- Latest released version as of 09-Feb-2026 -->
+     <aemanalyser.version>1.6.16</aemanalyser.version> <!-- Latest released version as of 20-Feb-2026 -->
      ...
      <!-- AEM Analyser Plugin -->
      <plugin>
@@ -55,7 +75,7 @@ AEM as a Cloud Service **動作中心**&#x200B;會通知您專案中&#x200B;_已
 
      ```xml
      ...
-     <aem.sdk.api>2026.2.24288.20260204T121510Z-260100</aem.sdk.api> <!-- Latest available AEM SDK version as of 09-Feb-2026 -->
+     <aem.sdk.api>2026.2.24464.20260214T050318Z-260100</aem.sdk.api> <!-- Latest available AEM SDK version as of 20-Feb-2026 -->
      ...
      ```
 
@@ -117,10 +137,10 @@ AEM分析器報告&#x200B;**哪些**&#x200B;已過時，並提供如何修正的
 
 | 分析器警告型別 | 其表示方式 | 建議的動作 | 參照 |
 | --------------------- | ----------------- | ------------------ | --------- |
-| 已過時的AEM API | API即將從AEM as a Cloud Service中移除 | 以支援的公用API取代用法 | [API移除指南](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| 已棄用的AEM套件或類別 | 不再支援套件或類別 | 重構程式碼以使用建議的替代方案 | [已棄用的API](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
-| 已棄用的第三方程式庫 | 未來的SDK將不支援程式庫 | 升級相依性並重構使用方式 | [一般准則](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| 已遭取代的Sling / OSGi模式 | 偵測到舊版註解或API | 移轉至新式Sling和OSGi API | [移除Sling / OSGi模式](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 已過時的AEM API | API即將從AEM as a Cloud Service中移除 | 以支援的公用API取代用法 | [API移除指南](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 已棄用的AEM套件或類別 | 不再支援套件或類別 | 重構程式碼以使用建議的替代方案 | [已棄用的API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
+| 已棄用的第三方程式庫 | 未來的SDK將不支援程式庫 | 升級相依性並重構使用方式 | [一般准則](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| 已遭取代的Sling / OSGi模式 | 偵測到舊版註解或API | 移轉至新式Sling和OSGi API | [移除Sling / OSGi模式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
 | 計畫移除（未來日期） | API仍然有效，但稍後會強制移除 | 在管道執行之前排程清理 | [發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/release-notes/home) |
 
 ### 實用指引
@@ -134,4 +154,4 @@ AEM分析器報告&#x200B;**哪些**&#x200B;已過時，並提供如何修正的
 ## 其他資源
 
 - [AEM Analyzer Maven外掛程式](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md)
-- [已過時和已移除的功能和API](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)
+- [已過時和已移除的功能和API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)
