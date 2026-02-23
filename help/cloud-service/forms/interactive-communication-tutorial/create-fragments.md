@@ -21,7 +21,7 @@ ht-degree: 3%
 
 瞭解如何為互動式通訊檔案開發可重複使用的片段。 最佳化版面並確保客戶地址與信件內文區段的動態資料繫結。 使用格式設定、定位和邊界控制項來增強檔案設計。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480042/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480065/?captions=chi_hant&learn=on&enablevpops)
 
 ## 後續步驟
 

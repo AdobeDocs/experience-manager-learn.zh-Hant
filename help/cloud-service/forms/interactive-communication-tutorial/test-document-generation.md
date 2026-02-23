@@ -21,4 +21,4 @@ ht-degree: 0%
 
 瞭解如何使用API和Postman產生互動式通訊檔案。 此過程包括獲取檔案ID、驗證請求和使用預填配置來呈現PDF。 探索如何將此API整合至應用程式，以進行動態執行階段引數傳遞和安全驗證。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480017/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480040/?captions=chi_hant&learn=on&enablevpops)

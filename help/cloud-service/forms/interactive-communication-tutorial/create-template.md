@@ -21,7 +21,7 @@ ht-degree: 3%
 
 瞭解如何建立互動式通訊範本，以標準化傳出通訊。 這些範本可確保客戶溝通的一致性、控管和品牌一致性。 瞭解使用IC Web Designer和Object Library等工具建立、編輯和啟用範本以供日後使用的程式。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480029/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480053/?captions=chi_hant&learn=on&enablevpops)
 
 ## 後續步驟
 

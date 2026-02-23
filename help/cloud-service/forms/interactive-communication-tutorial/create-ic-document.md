@@ -21,7 +21,7 @@ ht-degree: 2%
 
 使用預先定義的範本和可重複使用的片段，建立互動式通訊檔案。 這可確保檔案建立的一致性和效率。 選取正確的表單資料模型(FDM)並將片段插入指定的目標區域，以內嵌動態資料。 測試最終輸出的精確度和格式。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480054/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480076/?captions=chi_hant&learn=on&enablevpops)
 
 ## 後續步驟
 
