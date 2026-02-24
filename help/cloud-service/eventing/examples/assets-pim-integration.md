@@ -12,18 +12,14 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 60ea92e57f2bd8bcbc204ccb48abea172e61c969
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1482'
 ht-degree: 2%
 
 ---
 
 # 用於 PIM 整合的 AEM Assets 事件
-
->[!IMPORTANT]
->
->本教學課程使用OpenAPI型AEM API。 如果您有興趣存取，建議您將使用案例說明以電子郵件寄至[aem-apis@adobe.com](mailto:aem-apis@adobe.com)，作為搶先使用方案的一部分。
 
 瞭解如何使用OpenAPI型AEM製作API接收Assets事件並據以更新AEM中的內容狀態。
 
@@ -57,8 +53,8 @@ ht-degree: 2%
 
 高階開發步驟為：
 
-1. [更新AEM as a Cloud Service環境](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
-1. [啟用AEM API存取權](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
+1. [更新AEM as a Cloud Service環境](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
+1. [啟用AEM API存取權](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
 1. [在Adobe Developer Console (ADC)中建立專案](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
 1. [初始化專案以進行本機開發](./runtime-action.md#initialize-project-for-local-development)
 1. 在ADC中設定專案
@@ -293,7 +289,7 @@ ht-degree: 2%
 
 依預設，WKND Sites專案沒有資產中繼資料結構可顯示PIM特定中繼資料，例如SKU、供應商名稱等。 讓我們建立資產中繼資料結構，並將其套用至AEM例項中的資產資料夾。
 
-1. 登入AEM as a Cloud Service Asset執行個體並出現在[資產檢視](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/assets/authoring/switch-views)中。
+1. 登入AEM as a Cloud Service Asset執行個體並出現在[資產檢視](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)中。
 
    ![AEM Assets檢視](../assets/examples/assets-pim-integration/aem-assets-view.png)
 
@@ -310,7 +306,7 @@ ht-degree: 2%
 
    下表列出中繼資料屬性及其對應欄位。
 
-   | 標籤 | 預留位置 | 中繼資料屬性 |
+   | 標籤 | 預留位置 | 後設資料屬性 |
    | --- | --- | --- |
    | SKU | 透過AEM Eventing整合自動填入 | `wknd-skuid` |
    | 供應商名稱 | 透過AEM Eventing整合自動填入 | `wknd-suppliername` |
