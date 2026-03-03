@@ -52,7 +52,7 @@ Experience Manager as a Cloud Service提供進階AI功能，以增強內容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./setup.md" title="在AEM中設定AI" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474066/?format=jpeg&nocache=1772461889360" alt="在AEM中設定AI"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474077/?captions=chi_hant&format=jpeg&nocache=1772461889360" alt="在AEM中設定AI"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -75,7 +75,7 @@ Experience Manager as a Cloud Service提供進階AI功能，以增強內容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./ai-assistant.md" title="AEM AI 助理" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475357/?format=jpeg&nocache=1772461889318" alt="AEM AI 助理"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475369/?captions=chi_hant&format=jpeg&nocache=1772461889318" alt="AEM AI 助理"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -98,7 +98,7 @@ Experience Manager as a Cloud Service提供進階AI功能，以增強內容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./agents/agents-in-aem.md" title="AEM中的代理程式" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3478455/?format=jpeg&nocache=1772461889348" alt="AEM中的代理程式"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3478466/?captions=chi_hant&format=jpeg&nocache=1772461889348" alt="AEM中的代理程式"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
