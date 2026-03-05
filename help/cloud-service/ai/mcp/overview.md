@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## AEM MCP伺服器清單
 
-所有AEM MCP伺服器都可在`https://mcp.adobeaemcloud.com/adobe/mcp/`下使用。 如需詳細資訊，請參閱[搭配AEM as a Cloud Service使用MCP](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service)。
+所有AEM MCP伺服器都可在`https://mcp.adobeaemcloud.com/adobe/mcp/`下使用。 如需詳細資訊，請參閱[搭配AEM as a Cloud Service使用MCP](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service)。
 
 - **內容** (`/content`) — 建立、讀取、更新和刪除頁面、片段和資產的完整存取權。
 - **內容（唯讀）** (`/content-readonly`) — 唯讀，可列出及取得頁面、片段和資產（無變更）。
@@ -76,7 +76,7 @@ AEM MCP伺服器可搭配一組已定義的MCP相容應用程式運作。 下列
 - [OpenAI ChatGPT](https://chatgpt.com/)
 - [Microsoft Copilot Studio](https://www.microsoft.com/en-us/microsoft-365-copilot/microsoft-copilot-studio)
 
-如需詳細資訊，請參閱[設定概述](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service#setup-overview)。
+如需詳細資訊，請參閱[設定概述](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service#setup-overview)。
 
 ## 使用案例
 
