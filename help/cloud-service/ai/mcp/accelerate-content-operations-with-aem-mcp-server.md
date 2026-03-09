@@ -22,7 +22,7 @@ ht-degree: 0%
 
 在本教學課程中，您&#x200B;_檢閱_&#x200B;冒險內容片段詳細資訊、_更新_&#x200B;片段（例如冒險價格）和&#x200B;_驗證_ IDE中的[WKND Adventures React應用程式](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)變更，並針對&#x200B;_較低的AEM環境_ （RDE或開發）執行驗證，而不離開MCP流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480895/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480906/?captions=chi_hant&learn=on&enablevpops)
 
 ## 概觀
 
