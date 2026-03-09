@@ -20,4 +20,4 @@ ht-degree: 0%
 
 AI Assistant可加速AEM工作、提供即時解答、引導功能使用、疑難排解問題，並建立支援票證，這一切都是透過Experience Manager介面完成的。 它有助於團隊更快地提供內容、減少檔案搜尋並改善營運效率。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480859/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480881/?captions=chi_hant&learn=on&enablevpops)

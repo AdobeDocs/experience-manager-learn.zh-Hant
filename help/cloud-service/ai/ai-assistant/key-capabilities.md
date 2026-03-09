@@ -20,4 +20,4 @@ ht-degree: 0%
 
 瞭解AI Assistant如何透過提供立即指南、程式碼片段和疑難排解步驟來加速AEM工作流程。 這樣可以減少支援工作量，並幫助團隊以更快的速度和更高的品質提供內容。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480858/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480870/?captions=chi_hant&learn=on&enablevpops)
