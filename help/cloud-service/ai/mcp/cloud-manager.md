@@ -24,4 +24,4 @@ Cloud Manager MCP Server可讓AEM開發人員直接在其IDE中執行管道、�
 >
 > Cloud Manager MCP伺服器現在處於Beta版。 若要要求存取權，請傳送電子郵件至[aemcs-mcp-feedback@adobe.com](mailto:aemcs-mcp-feedback@adobe.com)，其中包含使用案例的說明。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480340/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480353/?captions=chi_hant&learn=on&enablevpops)
