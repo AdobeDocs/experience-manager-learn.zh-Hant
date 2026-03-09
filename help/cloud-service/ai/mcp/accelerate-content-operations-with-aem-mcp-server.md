@@ -8,19 +8,21 @@ doc-type: tutorial
 duration: null
 last-substantial-update: 2026-03-04T00:00:00Z
 jira: KT-20474
-source-git-commit: c5f1c7f57181b1e9de6dd91aa2428f2fe1a04893
+exl-id: 843209cb-2f31-466c-b5b1-a9fb26965bc0
+source-git-commit: 6a0eb6e8f5fa9d7152f46d6b8054dc89ff656507
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 0%
 
 ---
 
-
 # 使用Content MCP伺服器加速AEM內容作業
 
 使用AI支援的IDE （例如&#x200B;**Cursor IDE**）中的[Content MCP Server](https://www.cursor.com/)，以自然語言處理AEM內容，無低階API程式碼或UI導覽。
 
 在本教學課程中，您&#x200B;_檢閱_&#x200B;冒險內容片段詳細資訊、_更新_&#x200B;片段（例如冒險價格）和&#x200B;_驗證_ IDE中的[WKND Adventures React應用程式](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)變更，並針對&#x200B;_較低的AEM環境_ （RDE或開發）執行驗證，而不離開MCP流程。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3480895/?learn=on&enablevpops)
 
 ## 概觀
 
@@ -36,10 +38,10 @@ AEM as a Cloud Service提供&#x200B;_MCP伺服器_，讓您的IDE或聊天應用
 
 1. 在您的電腦上開啟游標。
 
-1. 從[游標]功能表移至&#x200B;**設定** > **游標設定**&#x200B;以開啟設定視窗。
+1. 從[游標]功能表移至&#x200B;**設定** > **游標設定**以開啟設定視窗。
    ![資料指標設定](../assets/content-mcp-server/cursor-settings.png)
 
-1. 在左側邊欄中，按一下&#x200B;**工具與MCP**&#x200B;以開啟該面板。
+1. 在左側邊欄中，按一下&#x200B;**工具與MCP**以開啟該面板。
    ![工具與MCP](../assets/content-mcp-server/tools-mcp.png)
 
 1. 按一下&#x200B;**新增自訂MCP**&#x200B;或&#x200B;**新MCP伺服器**&#x200B;以開啟`mcp.json`，然後貼上這個組態：
@@ -68,7 +70,7 @@ AEM as a Cloud Service提供&#x200B;_MCP伺服器_，讓您的IDE或聊天應用
 
    ![新增AEM MCP伺服器](../assets/content-mcp-server/mcp-json-file.png)
 
-1. 在[游標設定]視窗中，按一下[連線]以啟動驗證程式。 **&#x200B;**&#x200B;它會使用OAuth 2.0 PKCE流程取得&#x200B;**使用者特定存取權杖**&#x200B;以存取AEM MCP伺服器。
+1. 在[游標設定]視窗中，按一下[連線]以啟動驗證程式。 ****&#x200B;它會使用OAuth 2.0 PKCE流程取得&#x200B;**使用者特定存取權杖**以存取AEM MCP伺服器。
    ![連線到AEM MCP伺服器](../assets/content-mcp-server/connect-to-aem-mcp-server.png)
 
 1. 使用Adobe ID登入，然後返回「游標設定」視窗。
@@ -92,7 +94,7 @@ AEM as a Cloud Service提供&#x200B;_MCP伺服器_，讓您的IDE或聊天應用
    $ git clone git@github.com:adobe/aem-guides-wknd.git
    ```
 
-1. 將[WKND網站](https://github.com/adobe/aem-guides-wknd)專案部署至您的RDE。 如需詳細步驟，請參閱[如何使用快速開發環境](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-aem-artifacts-using-the-aem-rde-plugin)。
+1. 將[WKND網站](https://github.com/adobe/aem-guides-wknd)專案部署至您的RDE。 如需詳細步驟，請參閱[如何使用快速開發環境](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-aem-artifacts-using-the-aem-rde-plugin)。
 
 1. 在IDE中開啟`react-app`資料夾。
 
