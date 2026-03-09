@@ -38,10 +38,10 @@ AEM as a Cloud Service提供&#x200B;_MCP伺服器_，讓您的IDE或聊天應用
 
 1. 在您的電腦上開啟游標。
 
-1. 從[游標]功能表移至&#x200B;**設定** > **游標設定**以開啟設定視窗。
+1. 從[游標]功能表移至&#x200B;**設定** > **游標設定**&#x200B;以開啟設定視窗。
    ![資料指標設定](../assets/content-mcp-server/cursor-settings.png)
 
-1. 在左側邊欄中，按一下&#x200B;**工具與MCP**以開啟該面板。
+1. 在左側邊欄中，按一下&#x200B;**工具與MCP**&#x200B;以開啟該面板。
    ![工具與MCP](../assets/content-mcp-server/tools-mcp.png)
 
 1. 按一下&#x200B;**新增自訂MCP**&#x200B;或&#x200B;**新MCP伺服器**&#x200B;以開啟`mcp.json`，然後貼上這個組態：
@@ -70,7 +70,7 @@ AEM as a Cloud Service提供&#x200B;_MCP伺服器_，讓您的IDE或聊天應用
 
    ![新增AEM MCP伺服器](../assets/content-mcp-server/mcp-json-file.png)
 
-1. 在[游標設定]視窗中，按一下[連線]以啟動驗證程式。 ****&#x200B;它會使用OAuth 2.0 PKCE流程取得&#x200B;**使用者特定存取權杖**以存取AEM MCP伺服器。
+1. 在[游標設定]視窗中，按一下[連線]以啟動驗證程式。 **&#x200B;**&#x200B;它會使用OAuth 2.0 PKCE流程取得&#x200B;**使用者特定存取權杖**&#x200B;以存取AEM MCP伺服器。
    ![連線到AEM MCP伺服器](../assets/content-mcp-server/connect-to-aem-mcp-server.png)
 
 1. 使用Adobe ID登入，然後返回「游標設定」視窗。
