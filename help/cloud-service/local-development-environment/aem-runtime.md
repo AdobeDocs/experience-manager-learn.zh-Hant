@@ -24,7 +24,7 @@ ht-degree: 7%
 >id="aemcloud_localdev_aemruntime"
 >title="本機 AEM 執行階段"
 >abstract="Adobe Experience Manager (AEM) 可透過 AEM as a Cloud Service  SDK 的 Quickstart Jar 在本機上執行。這讓開發人員在將自訂程式碼、設定和內容送交來源控制項前，即可先行部署和測試，然後再部署至 AEM as a Cloud Service 環境。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=zh-Hant" text="AEM as a Cloud Service SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載 AEM as a Cloud Service SDK"
 
 Adobe Experience Manager (AEM) 可透過 AEM as a Cloud Service  SDK 的 Quickstart Jar 在本機上執行。這讓開發人員在將自訂程式碼、設定和內容送交來源控制項前，即可先行部署和測試，然後再部署至 AEM as a Cloud Service 環境。
@@ -176,7 +176,7 @@ $ java -jar aem-publish-p4503.jar
 
 ## 模擬內容發佈 {#content-distribution}
 
-在真正的Cloud Service環境中，內容是使用[Sling內容發佈](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe管道從作者服務發佈到發佈服務。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution)是只能在雲端環境中使用的隔離微服務。
+在真正的Cloud Service環境中，內容是使用[Sling內容發佈](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe管道從作者服務發佈到發佈服務。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=zh-Hant#content-distribution)是只能在雲端環境中使用的隔離微服務。
 
 在開發期間，可能最好使用本機Author和Publish服務來模擬內容的分佈。 這可透過啟用舊版復寫代理程式來達成。
 
@@ -280,7 +280,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 ## 選用的本機AEM執行階段設定工作
 
-+ __OSGi設定環境變數和密碼變數__&#x200B;是為AEM本機執行階段[專門設定的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development)，而不是使用aio CLI來管理它們。
++ __OSGi設定環境變數和密碼變數__&#x200B;是為AEM本機執行階段[專門設定的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#local-development)，而不是使用aio CLI來管理它們。
 
 ## 何時更新Quickstart Jar
 
@@ -404,4 +404,4 @@ $ java --version
 + [下載AEM SDK](https://experience.adobe.com/#/downloads)
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [下載Docker](https://www.docker.com/)
-+ [Experience Manager Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience Manager Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
