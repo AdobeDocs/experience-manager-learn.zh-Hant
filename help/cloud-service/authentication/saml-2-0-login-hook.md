@@ -81,7 +81,7 @@ public void postSyncUserProcess(
 **重要資訊：**&#x200B;要修改儲存庫中的用戶屬性，掛接實現需要：
 
 + 通過`SlingRepository`注入的`@Reference`引用
-+ 已配置具有相應權限的[服務用戶](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)（在「Apache Sling服務用戶映射器服務修正」中配置）
++ 已配置具有相應權限的[服務用戶](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)（在「Apache Sling服務用戶映射器服務修正」中配置）
 + 使用try-catch-finally區塊進行適當的工作階段管理
 
 ## 實施自訂SAML鉤點
@@ -267,7 +267,7 @@ SAML掛接使用OSGi配置來指定它應應用到的IDP。 在項目中建立OS
 
 ### 設定服務使用者（選擇性）
 
-如果SAML掛接需要修改AEMJCR儲存庫中的內容（如`postSyncUserProcess`示例所示），則必須配置[服務用戶](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users):
+如果SAML掛接需要修改AEMJCR儲存庫中的內容（如`postSyncUserProcess`示例所示），則必須配置[服務用戶](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/advanced/service-users):
 
 1. 在項目`/ui.config/src/main/content/jcr_root/apps/myproject/osgiconfig/config/org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~saml.cfg.json`中建立服務用戶映射：
 
@@ -310,7 +310,7 @@ end
 + **正在測試**：在部署到生產環境之前，請先在較低的環境中徹底測試自訂鉤點
 + **多個掛接**：可以設定多個SAML掛接實作；將執行所有相符的掛接。 使用OSGi元件中的`service.ranking`屬性來控制執行順序（較高的排名值會先執行）。 若要在多個SAML驗證處理常式工廠設定(`com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>`)中重複使用SAML掛接，請建立多個掛接設定（OSGi工廠設定），每個設定具有符合個別SAML驗證處理常式的不同`idpIdentifier`
 + **安全性**：在業務邏輯中使用SAML斷言之前，先驗證和清理所有資料
-+ **儲存庫訪問**：在`postSyncUserProcess`中修改用戶屬性時，始終使用具有適當權限的[服務用戶](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)，而不是管理會話
-+ **服務用戶權限**：向[服務用戶](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)授予最低所需權限（例如，在`jcr:read`上僅`rep:write`和`/home/users`，未授予完全的管理權限）
++ **儲存庫訪問**：在`postSyncUserProcess`中修改用戶屬性時，始終使用具有適當權限的[服務用戶](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)，而不是管理會話
++ **服務用戶權限**：向[服務用戶](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/advanced/service-users)授予最低所需權限（例如，在`jcr:read`上僅`rep:write`和`/home/users`，未授予完全的管理權限）
 + **會話管理**：始終使用try-catch-finally塊確保儲存庫會話正確關閉，即使出現異常
 + **用戶同步計時**：在用戶已同步到OAK後執行`postSyncUserProcess`掛接，因此用戶對象在該位置保證存在於儲存庫中
