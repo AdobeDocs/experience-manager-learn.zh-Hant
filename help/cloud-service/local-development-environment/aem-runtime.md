@@ -24,7 +24,7 @@ ht-degree: 7%
 >id="aemcloud_localdev_aemruntime"
 >title="本機 AEM 執行階段"
 >abstract="Adobe Experience Manager (AEM) 可透過 AEM as a Cloud Service  SDK 的 Quickstart Jar 在本機上執行。這讓開發人員在將自訂程式碼、設定和內容送交來源控制項前，即可先行部署和測試，然後再部署至 AEM as a Cloud Service 環境。"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=zh-Hant" text="AEM as a Cloud Service SDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="下載 AEM as a Cloud Service SDK"
 
 Adobe Experience Manager (AEM) 可透過 AEM as a Cloud Service  SDK 的 Quickstart Jar 在本機上執行。這讓開發人員在將自訂程式碼、設定和內容送交來源控制項前，即可先行部署和測試，然後再部署至 AEM as a Cloud Service 環境。
@@ -66,7 +66,7 @@ $ java --version
 
 ## 下載AEM as a Cloud Service SDK
 
-AEM as a Cloud Service SDK (或AEM SDK)包含用於在本機執行AEM製作和發佈以進行開發的Quickstart Jar，以及相容的Dispatcher工具版本。
+AEM as a Cloud Service SDK （或AEM SDK）包含用於在本機執行AEM製作和發佈以進行開發的Quickstart Jar，以及相容的Dispatcher工具版本。
 
 1. 使用您的Adobe ID登入[https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
    + 請注意，您的Adobe組織&#x200B;__必須__&#x200B;已布建給AEM as a Cloud Service，才能下載AEM as a Cloud Service SDK。
@@ -89,7 +89,7 @@ AEM as a Cloud Service SDK (或AEM SDK)包含用於在本機執行AEM製作和�
    + `java -jar aem-author-p4502.jar`
       + 提供管理員密碼做為`admin`。 可接受任何管理員密碼，但建議使用本機開發的預設值，以減少重新設定的需求。
 
-   您&#x200B;*無法*&#x200B;按兩下[，以Cloud Service Quickstart Jar &#x200B;](#troubleshooting-double-click)形式啟動AEM。
+   您&#x200B;*無法*&#x200B;按兩下[，以Cloud Service Quickstart Jar ](#troubleshooting-double-click)形式啟動AEM。
 1. 在網頁瀏覽器中，存取本機AEM作者服務： [http://localhost:4502](http://localhost:4502)。 第一次啟動時，您可能需要等候數分鐘才能完成安裝。 通常，瀏覽器標籤會自動開啟。
 
 >[!BEGINTABS]
@@ -134,7 +134,7 @@ $ java -jar aem-author-p4502.jar
    + `java -jar aem-publish-p4503.jar`
       + 提供管理員密碼做為`admin`。 可接受任何管理員密碼，但建議使用本機開發的預設值，以減少重新設定的需求。
 
-   您&#x200B;*無法*&#x200B;按兩下[，以Cloud Service Quickstart Jar &#x200B;](#troubleshooting-double-click)形式啟動AEM。
+   您&#x200B;*無法*&#x200B;按兩下[，以Cloud Service Quickstart Jar ](#troubleshooting-double-click)形式啟動AEM。
 
 1. 您可以使用下列命令，將AEM專案或範例[AEM WKND Sites專案](https://github.com/adobe/aem-guides-wknd)複製並部署至本機AEM執行階段：
 
@@ -176,7 +176,7 @@ $ java -jar aem-publish-p4503.jar
 
 ## 模擬內容發佈 {#content-distribution}
 
-在真正的Cloud Service環境中，內容是使用[Sling內容發佈](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe管道從作者服務發佈到發佈服務。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=zh-Hant#content-distribution)是只能在雲端環境中使用的隔離微服務。
+在真正的Cloud Service環境中，內容是使用[Sling內容發佈](https://sling.apache.org/documentation/bundles/content-distribution.html)和Adobe管道從作者服務發佈到發佈服務。 [Adobe管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution)是只能在雲端環境中使用的隔離微服務。
 
 在開發期間，可能最好使用本機Author和Publish服務來模擬內容的分佈。 這可透過啟用舊版復寫代理程式來達成。
 
@@ -276,11 +276,11 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 ## 停止本機AEM執行階段
 
-若要停止本機AEM執行階段(AEM製作或發佈服務)，請開啟用來啟動AEM執行階段的命令列視窗，然後點選「`Ctrl-C`」。 等待AEM關閉。 當關機程式完成時，命令列提示字元可用。
+若要停止本機AEM執行階段（AEM製作或發佈服務），請開啟用來啟動AEM執行階段的命令列視窗，然後點選「`Ctrl-C`」。 等待AEM關閉。 當關機程式完成時，命令列提示字元可用。
 
 ## 選用的本機AEM執行階段設定工作
 
-+ __OSGi設定環境變數和密碼變數__&#x200B;是為AEM本機執行階段[專門設定的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#local-development)，而不是使用aio CLI來管理它們。
++ __OSGi設定環境變數和密碼變數__&#x200B;是為AEM本機執行階段[專門設定的](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development)，而不是使用aio CLI來管理它們。
 
 ## 何時更新Quickstart Jar
 
@@ -296,7 +296,7 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 1. 建立專用於包含「範例」內容的內容套件，以輔助開發並在Git中進行維護。 任何應透過AEM SDK升級而儲存的內容將儲存在此套件中，並在升級AEM SDK後重新部署。
 1. 使用[oak-upgrade](https://jackrabbit.apache.org/oak/docs/migration.html)搭配`includepaths`指示詞，將內容從先前的AEM SDK存放庫複製到新的AEM SDK存放庫。
-1. 使用AEM Package Manager備份任何內容，並將內容套件重新安裝在新的AEM SDKAEM SDK上。
+1. 使用AEM Package Manager備份任何內容，並將內容套件重新安裝在新的AEM SDK上。
 
 請記住，在AEM SDK升級之間使用上述方法來維護程式碼，表示開發反模式。 非一次性程式碼應源自開發IDE，並透過部署流入AEM SDK。
 
@@ -404,4 +404,4 @@ $ java --version
 + [下載AEM SDK](https://experience.adobe.com/#/downloads)
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [下載Docker](https://www.docker.com/)
-+ [Experience Manager Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
++ [Experience Manager Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)

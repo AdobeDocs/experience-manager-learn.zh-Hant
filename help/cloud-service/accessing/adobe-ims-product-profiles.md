@@ -27,8 +27,8 @@ ht-degree: 42%
 
 Adobe IMS產品設定檔賦予使用者登入AEM Author服務的權利，並根據使用者所屬的產品設定檔提供最低存取權。
 
->[!VIDEO](https://video.tv.adobe.com/v/3479636?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39156?quality=12&learn=on)
 
 ## 其他資源
 
-+ [在Admin Console檔案中管理產品和使用者存取權](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=zh-Hant#managing-products-and-user-access-in-admin-console)
++ [在Admin Console檔案中管理產品和使用者存取權](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)

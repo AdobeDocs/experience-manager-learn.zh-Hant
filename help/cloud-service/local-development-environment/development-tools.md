@@ -25,7 +25,7 @@ ht-degree: 6%
 >title="設定開發工具"
 >abstract="展開 Adobe Experience Manager (AEM) 的開發作業前，開發人員的電腦上需先安裝與設定一套簡單的開發工具。這些工具包括 Java、Maven、Adobe I/O CLI、開發 IDE 等。"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines" text="開發準則"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk" text="開發基本概念"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk" text="開發基礎知識"
 
 展開 Adobe Experience Manager (AEM) 的開發作業前，開發人員的電腦上需先安裝與設定一套簡單的開發工具。這些工具可支援AEM專案的開發與建置。
 
@@ -76,7 +76,7 @@ Homebrew是適用於macOS、Windows和Linux的開放原始碼套件管理程式�
 
 >[!TAB macOS]
 
-macOS[&#128279;](https://brew.sh/)上的Homebrew需要[Xcode](https://apps.apple.com/us/app/xcode/id497799835)或[命令列工具](https://developer.apple.com/download/more/)，可透過命令安裝：
+macOS[上的](https://brew.sh/)Homebrew需要[Xcode](https://apps.apple.com/us/app/xcode/id497799835)或[命令列工具](https://developer.apple.com/download/more/)，可透過命令安裝：
 
 ```shell
 $ xcode-select --install
@@ -100,7 +100,7 @@ $ xcode-select --install
 
 ## 安裝Git
 
-[Git](https://git-scm.com/)是[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html?lang=zh-Hant)使用的原始檔控制管理系統，因此是開發所需。
+[Git](https://git-scm.com/)是[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html)使用的原始檔控制管理系統，因此是開發所需。
 
 >[!BEGINTABS]
 
@@ -180,7 +180,7 @@ Apache Maven是開放原始碼Java命令列工具，用於建置從AEM專案Mave
 
 + AEM as a Cloud Services的尾部記錄
 + 從CLI管理Cloud Manager管道
-+ 部署至[AEM快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=zh-Hant)
++ 部署至[AEM快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
 
 ### 安裝Adobe I/O CLI
 
@@ -196,7 +196,7 @@ Adobe I/O Cloud Manager外掛程式可讓aio CLI透過`aio cloudmanager`命令�
 
 #### 設定Adobe I/O CLI驗證
 
-為了讓Adobe I/O CLI與Cloud Manager通訊，必須在Adobe I/O主控台[&#128279;](https://github.com/adobe/aio-cli-plugin-cloudmanager)中建立Cloud Manager整合，且必須取得認證才能成功驗證。
+為了讓Adobe I/O CLI與Cloud Manager通訊，必須在Adobe I/O主控台[中建立](https://github.com/adobe/aio-cli-plugin-cloudmanager)Cloud Manager整合，且必須取得認證才能成功驗證。
 
 1. 登入[console.adobe.io](https://console.adobe.io)
 1. 確保包含要連線之Cloud Manager產品的組織在Adobe組織切換器中處於活動狀態
@@ -217,7 +217,7 @@ Adobe I/O Cloud Manager外掛程式可讓aio CLI透過`aio cloudmanager`命令�
 
 ### 設定AEM快速開發環境外掛程式{#rde}
 
-AEM快速開發環境外掛程式可讓aio CLI透過`aio aem:rde`命令與AEM as a Cloud Service [快速開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=zh-Hant)互動。
+AEM快速開發環境外掛程式可讓aio CLI透過[命令與AEM as a Cloud Service ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)快速開發環境`aio aem:rde`互動。
 
 1. 執行`aio plugins:install @adobe/aio-cli-plugin-aem-rde`以安裝[AEM快速開發環境外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde)。
 
@@ -229,7 +229,7 @@ Adobe I/O Cloud Manager外掛程式可讓aio CLI透過`aio asset-compute`命令�
 
 ## 設定開發IDE
 
-AEM開發主要包括了Java和前端(JavaScript、CSS等)開發及XML管理。 以下是AEM開發中最常用的IDE。
+AEM開發主要包括了Java和前端（JavaScript、CSS等）開發及XML管理。 以下是AEM開發中最常用的IDE。
 
 ### IntelliJ IDEA
 
@@ -254,9 +254,9 @@ Visual Studio Code是前端開發人員建立前端程式碼、JavaScript、CSS�
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__&#x200B;是Java開發的熱門IDE，可支援Adobe提供的&#x200B;__[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=zh-Hant)__&#x200B;外掛程式，提供IDE中的GUI以供撰寫及同步JCR內容與本機AEM執行個體。
+__[Eclipse IDE](https://www.eclipse.org/ide/)__&#x200B;是Java開發的熱門IDE，可支援Adobe提供的&#x200B;__[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)__&#x200B;外掛程式，提供IDE中的GUI以供撰寫及同步JCR內容與本機AEM執行個體。
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [下載Eclipse](https://www.eclipse.org/ide/)
-+ [下載Eclipse開發工具](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=zh-Hant)
++ [下載Eclipse開發工具](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
