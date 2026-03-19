@@ -217,7 +217,7 @@ Adobe I/O Cloud Manager外掛程式可讓aio CLI透過`aio cloudmanager`命令�
 
 ### 設定AEM快速開發環境外掛程式{#rde}
 
-AEM快速開發環境外掛程式可讓aio CLI透過[命令與AEM as a Cloud Service ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)快速開發環境`aio aem:rde`互動。
+AEM快速開發環境外掛程式可讓aio CLI透過[命令與AEM as a Cloud Service &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)快速開發環境`aio aem:rde`互動。
 
 1. 執行`aio plugins:install @adobe/aio-cli-plugin-aem-rde`以安裝[AEM快速開發環境外掛程式](https://github.com/adobe/aio-cli-plugin-aem-rde)。
 
