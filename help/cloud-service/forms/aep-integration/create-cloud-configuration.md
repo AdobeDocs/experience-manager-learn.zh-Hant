@@ -22,7 +22,7 @@ ht-degree: 2%
 
 瞭解如何在AEM Forms中設定雲端設定，以安全地與Adobe Experience Platform整合。 使用Adobe Developer Console憑證為您的表單啟用順暢的資料提交和擷取。 本指南提供逐步指示，讓您有效率地設定連線。
 
->[!VIDEO](https://video.tv.adobe.com/v/3481496/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481507/?captions=chi_hant&learn=on&enablevpops)
 
 
 ## 後續步驟

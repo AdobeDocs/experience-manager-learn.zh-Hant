@@ -22,4 +22,4 @@ ht-degree: 0%
 
 瞭解如何透過AEM Forms提交內容在Adobe Experience Platform中建立和管理設定檔。 此整合可簡化資料管理並強化使用者體驗。
 
->[!VIDEO](https://video.tv.adobe.com/v/3481508/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481520/?captions=chi_hant&learn=on&enablevpops)
