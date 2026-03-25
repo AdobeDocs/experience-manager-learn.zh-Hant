@@ -7,10 +7,10 @@ recommendations: noDisplay, noCatalog
 duration: 30
 last-substantial-update: 2024-12-15T00:00:00Z
 exl-id: ede3fb19-d803-4b21-8c03-4283f7b4f7f4
-source-git-commit: 155fc2ec8df735888be303242d6221a64e31daad
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '243'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -18,17 +18,18 @@ ht-degree: 0%
 
 ## 簡介
 
-歡迎使用AEM Engineering的Cloud 5系列第四季。 任何產品實作階段的主要問題之一，就是這些範例、工具或API有足夠的程式碼範例和/或即時示範。 此系列的目標是在5分鐘或更短時間內提供關於AEM和Edge Delivery Services的有用資訊。
+歡迎使用AEM Engineering的Cloud 5系列第四季。 任何產品實作階段的主要問題之一，就是這些範例、工具或API有足夠的程式碼範例和/或即時示範。 本系列的目標是在5分鐘內提供AEM和Edge Delivery Services的實用資訊。
 
 ## 建議方塊
 
 造訪[建議方塊](https://forms.office.com/r/74P5Xz4UH0)以提交主題概念。
 
-## 第4季
+## 第 4 季
 
 每一季的長度各異，且會依固定排程發行。 請造訪此頁面，每週更新或關注您選擇的社交網路。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./season-4/cloud5-edge-delivery-services-best-practices.md {title=Development best practices for Edge Delivery Services}
 * ./season-4/cloud5-search-optimization.md {title=Search optimization in Edge Delivery Services}
@@ -42,7 +43,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" title="Edge Delivery Services的開發最佳實務" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441011/?format=jpeg&nocache=1734040055526&captions=chi_hant" alt="Edge Delivery Services的開發最佳實務"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440978/?format=jpeg&nocache=1734040055526" alt="Edge Delivery Services的開發最佳實務"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -52,10 +53,10 @@ ht-degree: 0%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" target="_blank" rel="referrer" title="Edge Delivery Services的開發最佳實務">Edge Delivery Services的開發最佳實務</a>
                     </p>
-                    <p class="is-size-6">探索與經驗豐富的架構師在Edge Delivery Services中進行開發的技巧。</p>
+                    <p class="is-size-6">與經驗豐富的架構師一起探索在Edge Delivery Services中進行開發的技術。</p>
                 </div>
                 <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看內容</span>
                 </a>
             </div>
         </div>
@@ -65,7 +66,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-search-optimization.md" title="Edge Delivery Services中的搜尋最佳化" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440989/?format=jpeg&nocache=1734040055519&captions=chi_hant" alt="Edge Delivery Services中的搜尋最佳化"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440976/?format=jpeg&nocache=1734040055519" alt="Edge Delivery Services中的搜尋最佳化"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -73,12 +74,12 @@ ht-degree: 0%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./season-4/cloud5-search-optimization.md" target="_blank" rel="referrer" title="Edge Delivery Services中的搜尋最佳化">Edge Delivery Services中的搜尋最佳化</a>
+                        <a href="./season-4/cloud5-search-optimization.md" target="_blank" rel="referrer" title="Edge Delivery Services中的搜尋最佳化">在Edge Delivery Services中最佳化搜尋</a>
                     </p>
                     <p class="is-size-6">處理大量記錄時，使用查詢和搜尋最佳化，將您的Lighthouse分數設為100次購買。</p>
                 </div>
                 <a href="./season-4/cloud5-search-optimization.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看內容</span>
                 </a>
             </div>
         </div>
@@ -88,7 +89,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-google-maps.md" title="與Google地圖整合" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441000/?format=jpeg&nocache=1734040055523&captions=chi_hant" alt="與Google地圖整合"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440977/?format=jpeg&nocache=1734040055523" alt="與Google地圖整合"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -101,7 +102,7 @@ ht-degree: 0%
                     <p class="is-size-6">探索如何將Edge Delivery Services與Google地圖整合。</p>
                 </div>
                 <a href="./season-4/cloud5-google-maps.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看內容</span>
                 </a>
             </div>
         </div>

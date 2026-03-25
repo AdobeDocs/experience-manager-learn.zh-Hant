@@ -1,7 +1,7 @@
 ---
 title: Edge Delivery Services 和通用編輯器開發人員教學課程
 description: 了解使用 AEM 通用編輯器製作、並使用 Edge Delivery Service 傳遞的新網站開發基礎知識。
-short-description: 此開發人員教學課程說明如何建立AEM網站，結合強大的撰寫功能與通用編輯器，以及使用Edge Delivery Services快速傳送。 瞭解如何建立新專案、設定本機開發環境和建立自訂區塊。
+short-description: 開發人員教學課程，內容說明如何建置結合強大製作功能與通用編輯器的 AEM 網站，以及使用 Edge Delivery Services 快速傳遞。了解如何建立新專案、設定本機開發環境，以及建置自訂區塊。
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,10 +11,10 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '658'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,8 @@ ht-degree: 94%
 
 了解如何在 AEM as a Cloud Service 中建立程式碼專案及設定新網站。這項設定使用編輯器進行內容創作以及透過 Edge Delivery Services 快速傳遞內容，因此可以流暢地進行開發。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./1-new-code-project.md
 * ./2-new-aem-site.md
@@ -88,7 +89,8 @@ ht-degree: 94%
 ## 開發設定
 
 了解如何設定您的本機開發環境以快速完成網站開發。此設定支援使用通用編輯器迅速建立網站，並透過 Edge Delivery Services 有效地傳遞內容，確保順暢且最佳化的開發工作流程。
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./3-local-development-environment.md
 * ./4-website-branding.md
@@ -101,7 +103,7 @@ ht-degree: 94%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="設定本機開發環境" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443989/?captions=chi_hant&format=jpeg&nocache=1753811862249" alt="設定本機開發環境"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="設定本機開發環境"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -149,7 +151,8 @@ ht-degree: 94%
 
 了解如何透過定義內容模型和設定用於測試與開發的範例內容建立新區塊。探索兩種轉譯區塊的方法，並了解如何進行建構，方能在 AEM 和 Edge Delivery Services 中達到最佳的效能和彈性。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./5-new-block.md {image = ./assets/5-new-block/card.png}
 * ./6-author-block.md {image = ./assets/6-author-block/card.png}
@@ -258,7 +261,8 @@ ht-degree: 94%
 
 現在您已完成本教學課程，請以這些重點的操作說明為基礎，建置更深厚的知識。這些指南擴大說明此處所討論的程式碼和概念，探索特定角色的使用案例、進階技術以及其他技巧，以利增強 Edge Delivery Services 和通用編輯器的開發技能。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./how-to/block-options.md
 * ./how-to/header-and-footer.md

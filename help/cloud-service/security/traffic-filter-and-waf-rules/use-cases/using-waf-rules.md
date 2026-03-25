@@ -12,7 +12,7 @@ badgeLicense: label="需要授權" type="positive" before-title="true"
 jira: KT-18308
 thumbnail: null
 exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
-source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 98%
@@ -27,10 +27,10 @@ ht-degree: 98%
 
 >[!IMPORTANT]
 >
-> WAF流量篩選規則需要額外的延伸安全性(先前稱為WAF-DdS Protection)或醫療保健延伸安全性（先前稱為Enhanced Security）授權。 在預設情況下，標準流量篩選器規則可供 Sites 和 Forms 客戶使用。
+> WAF流量篩選規則需要額外的延伸安全性（先前稱為WAF-DdS Protection）或醫療保健延伸安全性（先前稱為Enhanced Security）授權。 在預設情況下，標準流量篩選器規則可供 Sites 和 Forms 客戶使用。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469441/?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## 學習目標
 
@@ -234,7 +234,8 @@ $./nikto.pl -useragent "AttackSimulationAgent (Demo/1.0)" -D V -Tuning 9 -ssl -h
 
 針對較進階的案例，您可以參考以下使用案例，了解如何根據特定業務需求實作自訂的流量篩選器規則。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ../how-to/request-logging.md

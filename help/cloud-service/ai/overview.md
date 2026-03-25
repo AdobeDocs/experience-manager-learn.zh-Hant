@@ -8,7 +8,7 @@ doc-type: Catalog
 duration: 30
 last-substantial-update: 2026-01-05T00:00:00Z
 exl-id: cc255744-bb86-49cb-88ca-1266d28985a5
-source-git-commit: bf6a6f467c3ded713552e0077b13c41fb45511cb
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 22%
@@ -21,7 +21,8 @@ Experience Manager中的![AI](./assets/overview/hero.png)
 
 Experience Manager as a Cloud Service提供進階AI功能，以增強內容管理、簡化工作流程並改善使用者體驗。 透過整合AI支援的功能，例如AEM AI Assistant和AEM AI代理程式，使用者可以自動化工作、獲得見解並最佳化內容傳送。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./ai-assistant/overview.md
     {title = AEM AI Assistant}
@@ -55,7 +56,7 @@ Experience Manager as a Cloud Service提供進階AI功能，以增強內容管�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./ai-assistant/overview.md" title="AEM AI 助理" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475369/?captions=chi_hant&format=jpeg&nocache=1773082651757" alt="AEM AI 助理"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475357/?format=jpeg&nocache=1773082651757" alt="AEM AI 助理"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -134,7 +135,7 @@ Experience Manager as a Cloud Service提供進階AI功能，以增強內容管�
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="../../assets/search-and-discovery/ai-search.md" target="_blank" rel="referrer" title="AI 搜尋">AI 搜尋</a>
                     </p>
-                    <p class="is-size-6">瞭解AEM AssetsAI 搜尋如何以智慧化方式呈現相關資產並啟用更聰明的搜尋體驗，藉以強化搜尋。</p>
+                    <p class="is-size-6">瞭解AI 搜尋如何以智慧化方式呈現相關資產並啟用更聰明的搜尋體驗，藉以強化搜尋。</p>
                 </div>
                 <a href="../../assets/search-and-discovery/ai-search.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看內容</span>

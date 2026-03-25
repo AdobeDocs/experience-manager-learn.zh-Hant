@@ -11,7 +11,7 @@ thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '640'
 ht-degree: 5%
@@ -34,7 +34,7 @@ SPA由原生網頁資源的集合所組成： **HTML、CSS和JavaScript**。 這
 
 2. **在公司**&#x200B;資料中心&#x200B;**內部部署**&#x200B;主控
 
-3. **前端主控平台**，例如&#x200B;**AWS Amplify**、**Azure應用程式服務**、**Netlify**、**Heroku**、**Vercel**&#x200B;等。
+3. **前端託管平台**，例如&#x200B;**AWS Amplify**、**Azure App Service**、**Netlify**、**Heroku**、**Vercel**&#x200B;等。
 
 ## 部署設定
 
@@ -47,11 +47,11 @@ SPA由原生網頁資源的集合所組成： **HTML、CSS和JavaScript**。 這
 + AEM存取方式： `https://wknd.site/`
 + 透過`https://wknd.site/spa`存取SPA
 
-由於AEM和SPA都可從相同網域存取，網頁瀏覽器可讓SPA不需要CORS即可對AEM Headless端點執行XHR，並可共用HTTP Cookie (例如AEM的`login-token` Cookie)。
+由於AEM和SPA都可從相同網域存取，網頁瀏覽器可讓SPA不需要CORS即可對AEM Headless端點執行XHR，並可共用HTTP Cookie （例如AEM的`login-token` Cookie）。
 
 SPA和AEM流量在共用網域上的路由方式取決於您：具有多種來源的CDN、具有反向Proxy的HTTP伺服器、直接在AEM中託管SPA等等。
 
-以下是SPA生產部署所需的部署設定(在與AEM相同的網域上託管)。
+以下是SPA生產部署所需的部署設定（在與AEM相同的網域上託管）。
 
 | SPA連線至→ | AEM 作者 | AEM Publish | AEM預覽 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
@@ -66,9 +66,9 @@ SPA和AEM流量在共用網域上的路由方式取決於您：具有多種來�
 + AEM存取方式： `https://wknd.site/`
 + 透過`https://wknd-app.site/`存取SPA
 
-由於AEM和SPA可從不同的網域存取，網頁瀏覽器會強制實行安全性原則(例如[跨原始資源共用(CORS)](./configurations/cors.md))，並防止共用HTTP Cookie (例如AEM的`login-token` Cookie)。
+由於AEM和SPA可從不同的網域存取，網頁瀏覽器會強制實行安全性原則(例如[跨原始資源共用(CORS)](./configurations/cors.md))，並防止共用HTTP Cookie （例如AEM的`login-token` Cookie）。
 
-以下是SPA生產部署所需的部署設定(託管於AEM以外的網域時)。
+以下是SPA生產部署所需的部署設定（託管於AEM以外的網域時）。
 
 | SPA連線至→ | AEM 作者 | AEM Publish | AEM預覽 |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
@@ -94,7 +94,8 @@ SPA和AEM流量在共用網域上的路由方式取決於您：具有多種來�
 
 Adobe提供在React中編碼的範例單頁應用程式。
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ../example-apps/react-app.md
 

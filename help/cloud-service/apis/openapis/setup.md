@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: f4f177f2745cb03c81011679b9d88eaadeb9cae3
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 9%
@@ -128,7 +128,7 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
    ![已建立新專案](./assets/setup/new-project-created.png)
 
-1. 按一下右上角的&#x200B;**編輯專案**&#x200B;按鈕以編輯專案名稱。 提供有意義的名稱，然後按一下[儲存]。**&#x200B;**
+1. 按一下右上角的&#x200B;**編輯專案**&#x200B;按鈕以編輯專案名稱。 提供有意義的名稱，然後按一下[儲存]。****
 
    ![編輯專案名稱](./assets/setup/edit-project-name.png)
 
@@ -136,7 +136,7 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
 建立ADC專案後，您必須新增所需的AEM API、設定其驗證，並將驗證帳戶與產品設定檔建立關聯。
 
-在此案例中，**AEM Assets API**&#x200B;用於示範OpenAPI型AEM API設定程式。 不過，您可以依照類似的步驟，新增其他OpenAPI型AEM API (例如&#x200B;**AEM Sites API**、**AEM Forms API**&#x200B;等)。 AEM許可權會決定Adobe Developer Console (ADC)中可用的API。
+在此案例中，**AEM Assets API**&#x200B;用於示範OpenAPI型AEM API設定程式。 不過，您可以依照類似的步驟，新增其他OpenAPI型AEM API （例如&#x200B;**AEM Sites API**、**AEM Forms API**&#x200B;等）。 AEM許可權會決定Adobe Developer Console (ADC)中可用的API。
 
 1. 若要新增AEM API，請按一下&#x200B;**新增API**&#x200B;按鈕。
 
@@ -154,7 +154,7 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
    ![選取驗證](./assets/s2s/select-authentication.png)
 
-   伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。 「網頁應用程式」和「單頁應用程式」驗證選項適用於需要代表使用者存取API的應用程式。 如需詳細資訊，請參閱[&#x200B; OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
+   伺服器對伺服器驗證適用於需要API存取而不需使用者互動的後端服務。 「網頁應用程式」和「單頁應用程式」驗證選項適用於需要代表使用者存取API的應用程式。 如需詳細資訊，請參閱[ OAuth伺服器對伺服器與Web應用程式與單頁應用程式認證之間的差異](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials)。
 
    >[!TIP]
    >
@@ -212,11 +212,11 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
 1. 提交設定變更並將變更推送到Cloud Manager管道所連線的遠端Git存放庫。
 
-1. 在Cloud Manager中使用[設定管道](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)部署上述變更。
+1. 在Cloud Manager中使用[設定管道](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)部署上述變更。
 
    ![部署YAML](./assets/setup/config-pipeline.png)
 
-請注意，`api.yaml`檔案也可以使用命令列工具[安裝在](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[、](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)中。 在將設定變更部署到生產環境之前，這非常有用。
+請注意，`api.yaml`檔案也可以使用命令列工具[安裝在](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview)RDE[、](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)中。 在將設定變更部署到生產環境之前，這非常有用。
 
 >[!CAUTION]
 >
@@ -227,7 +227,8 @@ ADC專案用於新增所需的API、設定其驗證，以及將驗證帳戶與�
 
 將AEM執行個體設定為啟用ADC專案通訊後，您就可以開始使用以OpenAPI為基礎的AEM API。 了解如何運用使用不同 OAuth 驗證方式的基於 OpenAPI 的 AEM API：
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/invoke-api-using-oauth-s2s.md

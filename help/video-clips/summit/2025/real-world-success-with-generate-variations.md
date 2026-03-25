@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: df0a03c1-d278-4c45-afff-bfbdaffe83bd
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Emily Kellman分享Adobe.com如何使用「產生變數」來提高內容速度、減少時間表並提高轉換率。
 
->[!VIDEO](https://video.tv.adobe.com/v/3462743/?captions=chi_hant&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459232/?learn=on&enablevpops)

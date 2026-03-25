@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 39ed523f-abcd-49b5-978f-b795e109d7f5
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索最佳化數位體驗的三個主要原則：修正基本知識、運用AI並增強策略領導的能力。
 
->[!VIDEO](https://video.tv.adobe.com/v/3462053/?captions=chi_hant&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459234/?learn=on&enablevpops)

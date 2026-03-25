@@ -13,16 +13,16 @@ feature: Brand Experiences, Content Personalization, Multichannel Delivery, Rend
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
+exl-id: 71c0c58e-5789-417b-9a61-f290ca1b4ae5
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
 
 ---
 
-
 # 為不同的情境調整體驗
 
 瞭解體驗產生如何讓行銷人員適應各種角色、頻道和地理位置的內容，同時維持控制。
 
->[!VIDEO](https://video.tv.adobe.com/v/3462416/?learn=on&enablevpops&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3459245/?learn=on&enablevpops)

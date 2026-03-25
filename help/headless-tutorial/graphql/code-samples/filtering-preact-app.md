@@ -1,5 +1,5 @@
 ---
-title: 篩選前置應用程式
+title: 篩選 Preact 應用程式
 description: 一個簡單的預先應用程式，可篩選使用內容片段模組化的WKND Adventures。
 version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
@@ -13,14 +13,14 @@ hide: true
 hidefromtoc: true
 exl-id: d2b7e8ab-8bbc-495f-94f1-362ea47b3853
 duration: 26
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# 篩選前置應用程式
+# 篩選 Preact 應用程式
 
 探索AEM Headless GraphQL API使用[Preact](https://preactjs.com/)應用程式篩選資料的能力。 此Preact應用程式會建立可依活動型別篩選的WKND Adventures清單。
 

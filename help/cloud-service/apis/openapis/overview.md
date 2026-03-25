@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 100%
@@ -94,7 +94,8 @@ ht-degree: 100%
 
 了解如何建立 AEM as a Cloud Service 環境和 Adobe Developer Console 專案，以便能夠存取基於 OpenAPI 的 AEM API。也可以使用瀏覽器存取 AEM API 來驗證設定並檢閱要求和回應。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./setup.md
@@ -135,7 +136,8 @@ ht-degree: 100%
 
 了解如何運用使用不同 OAuth 驗證方式的基於 OpenAPI 的 AEM API：
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/invoke-api-using-oauth-s2s.md

@@ -11,7 +11,7 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
-source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1195'
 ht-degree: 98%
@@ -26,7 +26,7 @@ ht-degree: 98%
 
 >[!IMPORTANT]
 >
-> WAF流量篩選規則需要額外的延伸安全性(先前稱為WAF-DdS Protection)或醫療保健延伸安全性（先前稱為Enhanced Security）授權。 在預設情況下，標準流量篩選器規則可供 Sites 和 Forms 客戶使用。
+> WAF流量篩選規則需要額外的延伸安全性（先前稱為WAF-DdS Protection）或醫療保健延伸安全性（先前稱為Enhanced Security）授權。 在預設情況下，標準流量篩選器規則可供 Sites 和 Forms 客戶使用。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3469394/?quality=12&learn=on)
@@ -94,7 +94,8 @@ Adobe 提供了標準流量篩選器和 WAF 流量篩選器規則的建議規則
 
 透過以下設定指南與使用案例，了解如何在 AEM as a Cloud Service 中定義、部署、測試與分析流量篩選器規則 (包含 WAF 規則)。此提供您背景知識，以便日後可以自信地套用 Adobe 建議的規則。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./setup.md
@@ -135,7 +136,8 @@ Adobe 提供了標準流量篩選器和 WAF 流量篩選器規則的建議規則
 
 本指南提供逐步操作說明，協助您 AEM as a Cloud Service 環境中設定，並部署 Adobe 建議的標準流量篩選器規則與 WAF 流量篩選器規則。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/using-traffic-filter-rules.md
@@ -205,7 +207,8 @@ Adobe 提供了標準流量篩選器和 WAF 流量篩選器規則的建議規則
 
 針對較進階的案例，您可以參考以下使用案例，了解如何根據特定業務需求實作自訂的流量篩選器規則。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./how-to/request-logging.md

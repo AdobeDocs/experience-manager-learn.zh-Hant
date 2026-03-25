@@ -1,5 +1,5 @@
 ---
-title: 如何調查AEM中與索引相關的問題
+title: 如何在 AEM 中調查與索引相關的問題
 description: 調查索引相關問題的步驟
 type: Troubleshooting
 role: Admin
@@ -7,18 +7,18 @@ level: Intermediate
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Administration
-index: y
+index: true
 doc-type: Technical Video
 exl-id: 042a216d-980d-4912-a77b-e2ee04a27cfb
 duration: 120
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '36'
-ht-degree: 0%
+ht-degree: 44%
 
 ---
 
-# 如何調查AEM中與索引相關的問題
+# 如何在 AEM 中調查與索引相關的問題
 
 *此影片會逐步說明在AEM中調查索引相關問題的步驟。*
 

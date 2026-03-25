@@ -11,7 +11,7 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18307
 thumbnail: null
 exl-id: 5e235220-82f6-46e4-b64d-315f027a7024
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1780'
 ht-degree: 100%
@@ -263,7 +263,8 @@ data:
 
 了解如何實作 Adobe 建議的 WAF 規則，以保護您的 AEM 網站免於使用進階技術來繞過傳統安全措施的複雜威脅。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./using-waf-rules.md
@@ -305,7 +306,8 @@ data:
 
 針對較進階的案例，您可以參考以下使用案例，了解如何根據特定業務需求實作自訂的流量篩選器規則。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ../how-to/request-logging.md

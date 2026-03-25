@@ -1,5 +1,5 @@
 ---
-title: 篩選值應用程式
+title: 篩選 Vue 應用程式
 description: 一種簡單的值應用程式，可篩選使用內容片段模組化的WKND Adventures。
 version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
@@ -13,14 +13,14 @@ hide: true
 hidefromtoc: true
 exl-id: 8f96093a-4449-4249-9257-028e2ffd979b
 duration: 26
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# 篩選值應用程式
+# 篩選 Vue 應用程式
 
 探索AEM Headless GraphQL API使用[Vue](https://vuejs.org/)應用程式篩選資料的能力。 此React應用程式會建立可按活動型別篩選的WKND Adventures清單。
 

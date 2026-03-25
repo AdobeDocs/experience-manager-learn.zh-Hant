@@ -11,8 +11,8 @@ doc-type: Catalog
 duration: 660
 last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 100%
 
@@ -22,16 +22,17 @@ ht-degree: 100%
 
 了解如何使用 Edge Delivery Services 快速建立網站。
 
->[!VIDEO](https://video.tv.adobe.com/v/3453466/?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
 
 請參閱此[文件](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/overview)，了解關於 Edge Delivery Services 及其功能的完整詳細資訊。
 
 
 ## Edge Delivery Services 開發人員教學課程
 
-<!-- CARDS 
+<!-- 
+CARDS
 
-* https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial
+* https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial
   {title = Document-based authoring and Edge Delivery Services tutorial}
   {description = Learn how to create Edge Delivery Services web sites authored using Document-based authoring.}
   {cta = Start the tutorial}
@@ -49,7 +50,7 @@ ht-degree: 100%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="文件型製作和 Edge Delivery Services 教學課程" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial./media_18d1c2a9ecd6557f129e41b42a03a8dfbff1e27e9.png?width=400&format=png&optimize=medium" alt="文件型製作和 Edge Delivery Services 教學課程"
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial./media_18d1c2a9ecd6557f129e41b42a03a8dfbff1e27e9.png?width=400&format=png&optimize=medium" alt="文件型製作和 Edge Delivery Services 教學課程"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -108,7 +109,7 @@ ht-degree: 100%
             <a href="./developing/prerequisites.md" title="先決條件"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3434595/?format=jpeg&captions=chi_hant"
+                src="https://video.tv.adobe.com/v/3425709/?format=jpeg"
                 alt="先決條件">
             </a>
           </figure>
@@ -140,7 +141,7 @@ ht-degree: 100%
             <a href="./developing/aem-boilerplate.md" title="使用樣板專案範本"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3434622/?format=jpeg&captions=chi_hant" alt="設定
+                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="設定
                 樣板專案">
             </a>
           </figure>
@@ -172,7 +173,7 @@ ht-degree: 100%
             <a href="./developing/content-repository.md" title="連結 Google Drive"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3434731/?format=jpeg&captions=chi_hant" alt="連結 Google Drive">
+                src="https://video.tv.adobe.com/v/3425711/?format=jpeg" alt="連結 Google Drive">
             </a>
           </figure>
         </div>
@@ -202,7 +203,7 @@ ht-degree: 100%
           <figure class="image is-16by9">
             <a href="./developing/content-repository.md" title="連結 Sharepoint" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3446039/?format=jpeg&captions=chi_hant"
+                src="https://video.tv.adobe.com/v/3425712/?format=jpeg"
                 alt="連結 Sharepoint">
             </a>
           </figure>
@@ -234,7 +235,7 @@ ht-degree: 100%
             <a href="./developing/preview-and-publish.md" title="預覽和發佈內容"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3434720/?format=jpeg&captions=chi_hant" alt="預覽和發佈內容">
+                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="預覽和發佈內容">
             </a>
           </figure>
         </div>
@@ -297,7 +298,7 @@ ht-degree: 100%
             <a href="./developing/document-structure.md" title="文件結構"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3445200/?format=jpeg&captions=chi_hant"
+                src="https://video.tv.adobe.com/v/3425716/?format=jpeg"
                 alt="文件結構">
             </a>
           </figure>
@@ -329,7 +330,7 @@ ht-degree: 100%
             <a href="./developing/local-development.md" title="本機開發"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3434742/?format=jpeg&captions=chi_hant"
+                src="https://video.tv.adobe.com/v/3425717/?format=jpeg"
                 alt="本機開發">
             </a>
           </figure>
@@ -361,7 +362,7 @@ ht-degree: 100%
             <a href="./developing/git.md" title="與 Git 整合"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3441837/?format=jpeg&captions=chi_hant"
+                src="https://video.tv.adobe.com/v/3425718/?format=jpeg"
                 alt="與 Git 整合">
             </a>
           </figure>
@@ -398,7 +399,7 @@ ht-degree: 100%
             <a href="./how-to/rss.md" title="建立 RSS 摘要"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438010/?format=jpeg&captions=chi_hant"
+                src="https://video.tv.adobe.com/v/3425725/?format=jpeg"
                 alt="建立 RSS 摘要">
             </a>
           </figure>
@@ -430,7 +431,7 @@ ht-degree: 100%
             <a href="./how-to/social-media-sharing.md" title="社交媒體分享"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3439448/?format=jpeg&captions=chi_hant"
+                src="https://video.tv.adobe.com/v/3425974/?format=jpeg"
                 alt="社交媒體分享">
             </a>
           </figure>
@@ -462,7 +463,7 @@ ht-degree: 100%
             <a href="./how-to/delete-page.md" title="刪除頁面"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3438101/?format=jpeg&captions=chi_hant"
+                src="https://video.tv.adobe.com/v/3425973/?format=jpeg"
                 alt="刪除頁面">
             </a>
           </figure>

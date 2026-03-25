@@ -8,12 +8,12 @@ role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
-index: y
+index: true
 recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
 duration: 307
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 100%
@@ -30,7 +30,7 @@ ht-degree: 100%
 
 ## 全堆疊 AEM 專案設定變更概觀
 
->[!VIDEO](https://video.tv.adobe.com/v/3453620?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## 先決條件 {#prerequisites}
 
@@ -195,7 +195,7 @@ ht-degree: 100%
 
 ## 注意–「_啟用前端管道_」按鈕
 
-[邊欄選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=zh-Hant)的「[網站](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=zh-Hant)」選項，在選取您的網站根目錄或網站頁面時，顯示「**啟用前端管道**」按鈕。點按「**啟用前端管道**」按鈕將會覆寫上述 **Sling 設定**，請確保您透過 Cloud Manager 管道執行部署上述變更之後，**不會點按**&#x200B;到此按鈕。
+[邊欄選擇器](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)的「[網站](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html)」選項，在選取您的網站根目錄或網站頁面時，顯示「**啟用前端管道**」按鈕。點按「**啟用前端管道**」按鈕將會覆寫上述 **Sling 設定**，請確保您透過 Cloud Manager 管道執行部署上述變更之後，**不會點按**&#x200B;到此按鈕。
 
 ![「啟用前端管道」按鈕](assets/enable-front-end-Pipeline-button.png)
 
