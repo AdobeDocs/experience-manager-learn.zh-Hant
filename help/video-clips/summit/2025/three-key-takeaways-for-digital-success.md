@@ -25,4 +25,4 @@ ht-degree: 0%
 
 探索最佳化數位體驗的三個主要原則：修正基本知識、運用AI並增強策略領導的能力。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459234/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462053/?captions=chi_hant&learn=on&enablevpops)

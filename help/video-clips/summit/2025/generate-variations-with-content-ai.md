@@ -25,4 +25,4 @@ ht-degree: 0%
 
 瞭解Content AI如何讓您快速有效率地建立吸引人的內容變數。
 
->[!VIDEO](https://video.tv.adobe.com/v/3459227/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461888/?captions=chi_hant&learn=on&enablevpops)

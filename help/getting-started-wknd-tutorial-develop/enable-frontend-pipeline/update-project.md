@@ -30,7 +30,7 @@ ht-degree: 100%
 
 ## 全堆疊 AEM 專案設定變更概觀
 
->[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453620?captions=chi_hant&quality=12&learn=on)
 
 ## 先決條件 {#prerequisites}
 
