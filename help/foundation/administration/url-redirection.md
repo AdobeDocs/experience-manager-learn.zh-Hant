@@ -39,7 +39,7 @@ AEM的URL重新導向解決方案如下：
 | [Apache `mod_rewrite`規則為Dispatcher設定](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
 | [ACS Commons — 重新導向地圖管理員](#redirect-map-manager) | ✘ | ✔ | ✔ | Dispatcher |
 | [ACS Commons — 重新導向管理員](#redirect-manager) | ✘ | ✔ | ✔ | AEM / DISPATCHER |
-| [ `Redirect`頁面屬性](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
+| [&#x200B; `Redirect`頁面屬性](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
 
 
 ## 解決方案選項
@@ -86,7 +86,7 @@ AEM的URL重新導向解決方案如下：
 
 ### `Redirect`頁面屬性
 
-來自`Redirect`進階索引標籤[的現成(OOTB) ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties.html)頁面屬性可讓內容作者定義目前頁面的重新導向位置。 此解決方案最適合每個頁面重新導向案例，且沒有可檢視及管理頁面重新導向的中央位置。
+來自`Redirect`進階索引標籤[的現成(OOTB) &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties.html)頁面屬性可讓內容作者定義目前頁面的重新導向位置。 此解決方案最適合每個頁面重新導向案例，且沒有可檢視及管理頁面重新導向的中央位置。
 
 ## 哪個解決方案適合實施
 
