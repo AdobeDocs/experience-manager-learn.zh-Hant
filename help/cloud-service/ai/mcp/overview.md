@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## AEM MCP伺服器清單
 
-所有AEM MCP伺服器都可在`https://mcp.adobeaemcloud.com/adobe/mcp/`下使用。 如需詳細資訊，請參閱[搭配AEM as a Cloud Service使用MCP](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service)。
+所有AEM MCP伺服器都可在`https://mcp.adobeaemcloud.com/adobe/mcp/`下使用。 如需詳細資訊，請參閱[搭配AEM as a Cloud Service使用MCP](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service)。
 
 - **內容** (`/content`) — 建立、讀取、更新和刪除頁面、片段和資產的完整存取權。
 - **內容（唯讀）** (`/content-readonly`) — 唯讀，可列出及取得頁面、片段和資產（無變更）。
@@ -71,7 +71,7 @@ MCP是圍繞三個實體建置，**主機**、**使用者端**&#x200B;和&#x200B
 ## 設定
 
 AEM MCP伺服器可搭配一組已定義的MCP相容應用程式運作。
-若要在您偏好的IDE或聊天式應用程式中設定AEM MCP伺服器，請參閱[支援的MCP應用程式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications)以取得詳細資訊。
+若要在您偏好的IDE或聊天式應用程式中設定AEM MCP伺服器，請參閱[支援的MCP應用程式](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications)以取得詳細資訊。
 
 ## 使用案例
 
