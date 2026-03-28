@@ -25,7 +25,7 @@ ht-degree: 2%
 
 建立表單資料模型時使用的Swagger檔案可從這裡[下載](assets/UsersAndOrders.json)
 
->[!VIDEO](https://video.tv.adobe.com/v/3480005/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480028/?captions=chi_hant&learn=on&enablevpops)
 
 ## 後續步驟
 
