@@ -76,5 +76,5 @@ InDesign範本檔案和支援的影像
 
 下載[InDesign範本檔案和支援的影像](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
-* [InDesign CC試用版下載](https://creative.adobe.com/products/download/indesign)
-* InDesign Server試用版可從[Adobe發行前網站](https://www.adobeprerelease.com/)下載，或[CC Enterprise客戶可以聯絡其帳戶主管以要求am InDesign Server試用版授權](https://www.adobe.com/products/indesignserver/faq.html)
+* [InDesign CC試用版下載](https://creative.adobe.com/tw/products/download/indesign)
+* InDesign Server試用版可從[Adobe發行前網站](https://www.adobeprerelease.com/)下載，或[CC Enterprise客戶可以聯絡其帳戶主管以要求am InDesign Server試用版授權](https://www.adobe.com/tw/products/indesignserver/faq.html)
