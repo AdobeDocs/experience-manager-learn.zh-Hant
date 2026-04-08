@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 3e57cadc429724a49464a6a26c6f32ddf24228b1
+source-git-commit: 2eb26576a0308d8b74c2d1ce7db61c148936d076
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1505'
 ht-degree: 94%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 94%
       + [什麼是AI助理？](./ai/ai-assistant/what-is-ai-assistant.md)
       + [誰的AI Assistant？](./ai/ai-assistant/who-is-ai-assistant-for.md)
       + [主要功能](./ai/ai-assistant/key-capabilities.md)
+      + [AI Assistant與Agentic AI](./ai/ai-assistant/ai-assistant-and-agentic-ai.md)
    + 代理程式 {#agents}
       + [概觀](./ai/agents/agents-in-aem.md)
       + [開發代理程式和CI/CD疑難排解](./ai/agents/development-agent-troubleshoot-ci-cd-pipeline.md)
@@ -54,7 +55,7 @@ ht-degree: 94%
    + [Author 與 Publish 服務](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
-   + [AEM Assets Sidekick 外掛程式](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=zh-Hant){target=_blank}
+   + [AEM Assets Sidekick 外掛程式](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [方案](./cloud-manager/programs.md)
    + [環境](./cloud-manager/environments.md)
@@ -186,7 +187,7 @@ ht-degree: 94%
    + [快取](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
    + [Adobe CDN：快取之外的功能](./content-delivery/adobe-cdn-beyond-caching.md)
    + [自訂錯誤頁面](./content-delivery/custom-error-pages.md)
-   + [URL 重新導向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=zh-Hant){target=_blank}
+   + [URL 重新導向](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + 快取{#caching}
    + [概觀](./caching/overview.md)
    + [AEM Publish 服務](./caching/publish.md)
@@ -271,7 +272,7 @@ ht-degree: 94%
       + [資產工作流程移轉工具](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [導覽 Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [使用 Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
-+ [內容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=zh-Hant){target=_blank}
++ [內容片段](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
    + 針對 Forms as a Cloud Service 開發{#developing-for-cloud-service}
       + [1 - 快速入門](./forms/developing-for-cloud-service/getting-started.md)
@@ -456,11 +457,11 @@ ht-degree: 94%
    + [疑難排解](./asset-compute/troubleshooting.md)
 
 + 多步驟教學課程{#multi-step-tutorials}
-   + [AEM Sites 開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant){target=_blank}
-   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant){target=_blank}
+   + [AEM Sites 開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html){target=_blank}
    + [SPA 編輯器 (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
-   + [AEM Sites 和 Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=zh-Hant){target=_blank}
-   + [權杖型驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hant){target=_blank}
+   + [AEM Sites 和 Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html){target=_blank}
+   + [權杖型驗證](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html){target=_blank}
 + 專家資源 {#expert-resources}
    + AEM Champion {#aem-champions}
       + [Cloud Manager 上線教戰手冊](./expert-resources/aem-champions/onboarding-playbook.md)
