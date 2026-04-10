@@ -6,16 +6,18 @@ topic: Development
 feature: CDN Cache, Dispatcher
 exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
 duration: 149
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 0f9480bb52765daa01c5372a117a441adb03bb9d
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 1%
+source-wordcount: '696'
+ht-degree: 0%
 
 ---
 
 # 快取頁面變體
 
-瞭解如何設定和使用AEM as a Cloud Service來支援快取頁面變體。
+網路體驗通常需要根據不同的受眾來調整內容 — 無論是地理位置、個人化或實驗。 在本教學課程中，您將瞭解如何設定Adobe Experience Manager (AEM) as a Cloud Service，以使用`x-aem-variant` Cookie有效快取及提供多個頁面變體，確保大規模彈性及高效能。
+
+基本上，方法涉及專案的程式碼設定訪客專屬的`x-aem-variant` Cookie （例如，根據位置），然後轉換為CDN上的請求標題。 此值會透過Dispatcher重寫規則合併到請求URL中，允許AEM轉譯正確的變體，同時讓CDN和Dispatcher快取每個變體的單獨頁面版本。
 
 ## 範例使用案例
 
@@ -27,7 +29,7 @@ ht-degree: 1%
 
 + 識別變體索引鍵及其可能有的值數量。 在我們的範例中，我們因美國各州而異，因此數字上限為50。 這足夠小，不會導致CDN的變體限制發生問題。 [檢閱變體限制區段](#variant-limitations)。
 
-+ AEM程式碼必須將Cookie __&quot;x-aem-variant&quot;__&#x200B;設定為訪客的慣用狀態(例如 `Set-Cookie: x-aem-variant=NY`)。
++ 專案程式碼必須將Cookie __&quot;x-aem-variant&quot;__&#x200B;設定為訪客的偏好狀態(例如 `Set-Cookie: x-aem-variant=NY`)。 AEM和Adobe管理的CDN不會自動判斷或設定`x-aem-variant`。 如果出現此標題/Cookie，是因為您的應用程式已將其設定。 此標頭可透過自訂AEM Servlet或AEM Servlet篩選器設定（如下列程式碼範例所示）。
 
 + 訪客的後續請求會傳送該Cookie (例如 `"Cookie: x-aem-variant=NY"`)，且Cookie在CDN層級轉換為預先定義的標頭（即`x-aem-variant:NY`），這會傳遞給Dispatcher。
 
@@ -49,13 +51,13 @@ ht-degree: 1%
 
 ## 用途
 
-1. 為了示範此功能，我們將使用[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)的實作作為範例。
+1. 為了示範此功能，我們將使用[WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)的實作作為範例。
 
 1. 在AEM中實作[SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html)，以使用變數值在HTTP回應上設定`x-aem-variant` Cookie。
 
 1. AEM的CDN會自動將`x-aem-variant` Cookie轉換為相同名稱的HTTP標頭。
 
-1. 將Apache Web伺服器mod_rewrite規則新增至您的`dispatcher`專案，這會修改請求路徑以包含變體選擇器。
+1. 將Apache Web Server `mod_rewrite`規則新增到您的`dispatcher`專案，這會修改請求路徑以包含變體選擇器。
 
 1. 使用Cloud Manager部署篩選器並重寫規則。
 
@@ -120,7 +122,7 @@ ht-degree: 1%
   }
   ```
 
-+ __dispatcher/src/conf.d/rewrite.rules__&#x200B;檔案中的範例重寫規則(在Git中作為原始程式碼管理，並使用Cloud Manager部署)。
++ __dispatcher/src/conf.d/rewrite.rules__&#x200B;檔案中的範例重寫規則（在Git中作為原始程式碼管理，並使用Cloud Manager部署）。
 
   ```
   ...
