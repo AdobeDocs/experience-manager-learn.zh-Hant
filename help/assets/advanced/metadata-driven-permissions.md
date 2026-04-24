@@ -11,10 +11,10 @@ doc-type: Tutorial
 last-substantial-update: 2024-05-03T00:00:00Z
 exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
 duration: 158
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 794a0109e4b28b452c462c5cab37e2d094ab4897
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 0%
+source-wordcount: '783'
+ht-degree: 1%
 
 ---
 
@@ -46,7 +46,9 @@ ht-degree: 0%
        "status",
        "brand"
      ],
-     "restrictionContentPropertyNames":[],
+     "restrictionContentPropertyNames":[
+       "dam:rightsManaged"
+     ],
      "enabled":true
    }
    ```
@@ -64,7 +66,7 @@ ht-degree: 0%
 1. 輸入&#x200B;__許可權__&#x200B;的`jcr:read`
 1. 選取&#x200B;__許可權型別__&#x200B;的`Deny`
 1. 在[限制]下，選取`rep:ntNames`並輸入`dam:Asset`作為&#x200B;__限制值__
-1. 按一下&#x200B;__儲存__
+1. 按一下「__儲存__」
 
 ![拒絕存取](./assets/metadata-driven-permissions/deny-access.png)
 
@@ -78,10 +80,10 @@ ht-degree: 0%
 1. 選取&#x200B;__路徑__&#x200B;的`/content/dam` （或子資料夾）
 1. 輸入&#x200B;__許可權__&#x200B;的`jcr:read`
 1. 選取&#x200B;__許可權型別__&#x200B;的`Allow`
-1. 在&#x200B;__限制__&#x200B;下，選取OSGi設定[&#128279;](#configure-permissionable-properties)中設定的個資產中繼資料屬性名稱之一
+1. 在&#x200B;__限制__&#x200B;下，選取OSGi設定](#configure-permissionable-properties)中設定的[個資產中繼資料屬性名稱之一
 1. 在&#x200B;__限制值__&#x200B;欄位中輸入必要的中繼資料屬性值
 1. 按一下&#x200B;__+__&#x200B;圖示，將限制新增至存取控制專案
-1. 按一下&#x200B;__儲存__
+1. 按一下「__儲存__」
 
 ![允許存取](./assets/metadata-driven-permissions/allow-access.png)
 
@@ -108,9 +110,8 @@ ht-degree: 0%
 > 請務必注意：
 > 
 > - 使用&#x200B;__字串等同性__ (`=`) (尚未支援其他資料型別或運運算元，大於(`>`)或日期屬性)來針對限制評估屬性
-> - 若要允許限制屬性有多個值，可以從[選取型別]下拉式選單中選取相同的屬性，然後輸入新的限制值（例如`status=approved`、`status=wip`），再按一下[+]將限制新增至專案，以新增其他限制至存取控制專案
-> ![允許多個值](./assets/metadata-driven-permissions/allow-multiple-values.png)
-> - 支援&#x200B;__AND限制__，透過具有不同屬性名稱（例如`status=approved`、`brand=Adobe`）的單一Access Control專案中的多重限制，將評估為AND條件，亦即，選取的使用者群組將被授與具有`status=approved AND brand=Adobe`之資產的讀取存取權
+> - 若要允許限制屬性有多個值，可以從[選取型別]下拉式選單中選取相同的屬性，然後輸入新的限制值（例如`status=approved`、`status=wip`），再按一下[+]將限制新增至專案，以新增其他限制至存取控制專案> ![允許多個值](./assets/metadata-driven-permissions/allow-multiple-values.png)
+> - 支援&#x200B;__AND限制__，透過具有不同屬性名稱（例如`status=approved`、`brand=Adobe`）的單一「存取控制專案」中的多重限制，將會評估為AND條件，亦即將授與選取的使用者群組對資產的讀取存取權 `status=approved AND brand=Adobe`
 > ![允許多重限制](./assets/metadata-driven-permissions/allow-multiple-restrictions.png)
-> - 新增具有中繼資料屬性限制的存取控制專案，可支援&#x200B;__OR限制__，為專案建立OR條件，例如，限製為`status=approved`的單一專案，以及限製為`brand=Adobe`的單一專案將評估為`status=approved OR brand=Adobe`
+> - 透過新增具有中繼資料屬性限制的存取控制專案，可支援&#x200B;__OR限制__，因此會建立專案的OR條件，例如，限製為`status=approved`的單一專案以及限製為`brand=Adobe`的單一專案會評估為 `status=approved OR brand=Adobe`
 > ![允許多重限制](./assets/metadata-driven-permissions/allow-multiple-aces.png)

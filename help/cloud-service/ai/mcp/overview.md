@@ -9,9 +9,9 @@ duration: 0
 last-substantial-update: 2026-03-04T00:00:00Z
 jira: KT-20473
 exl-id: 7f2e4e37-6440-423e-9ba9-9228fe03600b
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: 794a0109e4b28b452c462c5cab37e2d094ab4897
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ ht-degree: 0%
 
 ## AEM MCP伺服器清單
 
-所有AEM MCP伺服器都可在`https://mcp.adobeaemcloud.com/adobe/mcp/`下使用。 如需詳細資訊，請參閱[搭配AEM as a Cloud Service使用MCP](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service)。
+所有AEM MCP伺服器都可在`https://mcp.adobeaemcloud.com/adobe/mcp/`下使用。 如需詳細資訊，請參閱[搭配AEM as a Cloud Service使用MCP](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service)。
 
-- **內容** (`/content`) — 建立、讀取、更新和刪除頁面、片段和資產的完整存取權。
-- **內容（唯讀）** (`/content-readonly`) — 唯讀，可列出及取得頁面、片段和資產（無變更）。
+- **內容** (`/content`) — 內容作業，包括建立、讀取、更新和刪除(CRUD)頁面與內容片段，以及資產匯入。
+- **內容（唯讀）** (`/content-readonly`) — 頁面和內容片段的唯讀內容作業（取得、清單/搜尋）。
 - **Cloud Manager** (`/cloudmanager`) — 管理Adobe Cloud Manager方案、環境、存放庫和管道。
 
 >[!TIP]
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 | 層面 | 以人為中心 | Agentic |
 | ------ | ------------- | ------- |
-| **誰會驅動動作** | 您。 <br> AI會在IDE或聊天式應用程式中為您建議或執行工具。 | AI。 <br>它會挑選要使用的工具，並以最小的指導持續進行。 |
+| **誰會驅動動作** | 您。<br> AI會在IDE或聊天式應用程式中為您建議或執行工具。 | AI。<br> 它會挑選要使用的工具，並以最小的指導持續進行。 |
 | **決定授權單位** | 一切由您掌控。 您核准或觸發每個步驟。 | AI擁有更多自由。 高影響力的動作可能需要護欄或核准。 |
 | **一般使用模式** | **每位開發人員**，您可從自己的IDE或聊天式應用程式使用它，每個工作階段一位開發人員，適合日常開發工作。 | **透過代理應用程式共用**，作為許多使用者或代理程式的共用服務和閘道。 |
 | **最適合** | 檢閱內容、進行引導式更新、探索或重複工作，同時保持在循環中。 | 系統應在最少干預下執行的代理工作流程、批次工作、管道和目標。 |
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 MCP伺服器是專為&#x200B;**個人操作的MCP使用者端**&#x200B;所設計，具有互動式UX和人力監督。 MCP工具規格建議&#x200B;_可以核准或拒絕工具呼叫的回圈中的人_。
 
-如果您在代理或自主系統中使用MCP伺服器，請將其視為單獨的相容性階層。 請&#x200B;**不要在**&#x200B;提示&#x200B;_、_&#x200B;允許清單&#x200B;_或_&#x200B;路由邏輯&#x200B;_中硬式編碼_&#x200B;工具名稱。 在MCP中，_工具名稱_&#x200B;是程式化識別碼，_說明_&#x200B;是LLM的模型化提示。 偏好以提示和選擇為基礎的功能或說明。
+如果您在代理或自主系統中使用MCP伺服器，請將其視為單獨的相容性階層。 請&#x200B;**不要在&#x200B;_提示_、_允許清單_或&#x200B;_路由邏輯_中硬式編碼**&#x200B;工具名稱。 在MCP中，_工具名稱_&#x200B;是程式化識別碼，_說明_&#x200B;是LLM的模型化提示。 偏好以提示和選擇為基礎的功能或說明。
 
 透過`tools/list`實作執行階段探索、處理工具清單變更(`notifications/tools/list_changed`)，並在上線和版本設定時與MCP伺服器提供者一致（如果您需要超出通訊協定基準的穩定性保證）。
 
@@ -71,7 +71,7 @@ MCP是圍繞三個實體建置，**主機**、**使用者端**&#x200B;和&#x200B
 ## 設定
 
 AEM MCP伺服器可搭配一組已定義的MCP相容應用程式運作。
-若要在您偏好的IDE或聊天式應用程式中設定AEM MCP伺服器，請參閱[支援的MCP應用程式](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications)以取得詳細資訊。
+若要在您偏好的IDE或聊天式應用程式中設定AEM MCP伺服器，請參閱[支援的MCP應用程式](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications)以取得詳細資訊。
 
 ## 使用案例
 
