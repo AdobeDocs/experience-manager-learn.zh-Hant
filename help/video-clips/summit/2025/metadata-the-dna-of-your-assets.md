@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Learn how metadata drives workflows, search, and insights, and how automation can enrich metadata to align with brand standards.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461976/?captions=chi_hant&learn=on&enablevpops)

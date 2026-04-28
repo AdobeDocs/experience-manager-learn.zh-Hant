@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Explore the three key principles for optimizing digital experiences: fixing the basics, leveraging AI, and empowering strategic leaders.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459234/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462053/?captions=chi_hant&learn=on&enablevpops)
