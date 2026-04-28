@@ -108,7 +108,7 @@ _什麼是周遊警告？_
 
 ## &#x200B;1. 分析{#analyze}
 
-首先，識別哪些AEM Publish服務會出現周遊警告。 若要這麼做，請從Cloud Manager下載過去&#x200B;__三天（開發、預備和生產）之所有環境[的Publish服務`aemerror`記錄](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"}。__
+首先，識別哪些AEM Publish服務會出現周遊警告。 若要這麼做，請從Cloud Manager下載過去&#x200B;__三天（開發、預備和生產）之所有環境[的Publish服務`aemerror`記錄](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html?lang=zh-Hant#cloud-manager){target="_blank"}。__
 
 ![下載AEM as a Cloud Service記錄檔](./assets/traversals/download-logs.jpg)
 
@@ -159,14 +159,14 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
 
 __變更查詢__&#x200B;以新增可解析成現有索引限制的新查詢限制。 可能的話，偏好變更查詢而非變更索引。
 
-+ [瞭解如何調整查詢效能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [瞭解如何調整查詢效能](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=zh-Hant#query-performance-tuning){target="_blank"}
 
 ### 調整索引
 
 __變更（或建立） AEM索引__，讓現有的查詢限制可解析為索引更新。
 
-+ [瞭解如何調整現有索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
-+ [瞭解如何建立索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target="_blank"}
++ [瞭解如何調整現有索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=zh-Hant#query-performance-tuning){target="_blank"}
++ [瞭解如何建立索引](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=zh-Hant#create-a-new-index){target="_blank"}
 
 ## &#x200B;3. 驗證{#verify}
 
@@ -174,9 +174,9 @@ __變更（或建立） AEM索引__，讓現有的查詢限制可解析為索引
 
 ![說明查詢](./assets/traversals/verify.gif)
 
-If only [adjustments to the query](#adjust-the-query) are made, the query can be directly tested on AEM as a Cloud Service via Developer Console&#39;s [Explain Query](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. Explain Query runs against the AEM Author service, however since index definitions are the same across the Author and Publish services, validating queries against the AEM Author service is sufficient.
+If only [adjustments to the query](#adjust-the-query) are made, the query can be directly tested on AEM as a Cloud Service via Developer Console&#39;s [Explain Query](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=zh-Hant#queries){target="_blank"}. Explain Query runs against the AEM Author service, however since index definitions are the same across the Author and Publish services, validating queries against the AEM Author service is sufficient.
 
-If [adjustments to the index](#adjust-the-index) are made, the index must be deployed to AEM as a Cloud Service. With the index adjustments deployed, Developer Console&#39;s [Explain Query](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} can be used to executed and tune the query further.
+If [adjustments to the index](#adjust-the-index) are made, the index must be deployed to AEM as a Cloud Service. With the index adjustments deployed, Developer Console&#39;s [Explain Query](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=zh-Hant#queries){target="_blank"} can be used to executed and tune the query further.
 
 Ultimately, all changes (query and code) are committed to Git and deployed to AEM as a Cloud Service using Cloud Manager. Once deployed, test the code paths associated with the original traversal warnings are retested, and verify that traversal warnings no longer appear in the `aemerror` log.
 
@@ -191,14 +191,14 @@ Check out these other useful resources for understanding AEM indexes, search, an
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 - Search &amp; Indexing" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 - Search &amp; Indexing"></a>
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=zh-Hant" title="Cloud 5 - Search &amp; Indexing" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 - Search &amp; Indexing"></a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 - Search &amp; Indexing">Cloud 5 - Search &amp; Indexing</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=zh-Hant" title="Cloud 5 - Search &amp; Indexing">Cloud 5 - Search &amp; Indexing</a></p>
                <p class="is-size-6">The Cloud 5 team shows explores the ins and outs of the search and indexing on AEM as a Cloud Service.</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=zh-Hant" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
                </a>
            </div>
@@ -212,16 +212,16 @@ Check out these other useful resources for understanding AEM indexes, search, an
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="Content Search and Indexing" tabindex="-1">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=zh-Hant" title="Content Search and Indexing" tabindex="-1">
                    <img class="is-bordered-r-small" src="./assets/traversals/resources--docs.png" alt="Content Search and Indexing">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="Content Search and Indexing">Content Search and indexing documentation</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=zh-Hant" title="Content Search and Indexing">Content Search and indexing documentation</a></p>
                <p class="is-size-6">Learn how to create and manage indexes in AEM as a Cloud Service.</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=zh-Hant" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
                </a>
            </div>
@@ -234,16 +234,16 @@ Check out these other useful resources for understanding AEM indexes, search, an
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="Modernizing your Oak indexes" tabindex="-1">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=zh-Hant" title="Modernizing your Oak indexes" tabindex="-1">
                    <img class="is-bordered-r-small" src="./assets/traversals/resources--aem-experts-series.png" alt="更新Oak索引">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="更新Oak索引">更新Oak索引</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=zh-Hant" title="更新Oak索引">更新Oak索引</a></p>
                <p class="is-size-6">瞭解如何將AEM 6 Oak索引定義轉換成與AEM as a Cloud Service相容的定義，並維護未來的索引。</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=zh-Hant" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">進一步瞭解</span>
                </a>
            </div>

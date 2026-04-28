@@ -27,7 +27,7 @@ AEM provides [AEM React Editable Components v2](https://www.npmjs.com/package/@a
 
 * [npm module](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 * [Github project](https://github.com/adobe/aem-react-editable-components)
-* [Adobe documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html)
+* [Adobe documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=zh-Hant)
 
 
 For more details and code samples for AEM React Editable Components v2 review the technical documentation:
@@ -38,7 +38,7 @@ For more details and code samples for AEM React Editable Components v2 review th
 
 ## AEM pages
 
-AEM React Editable Components work with both SPA Editor or Remote SPA React apps. Content populating the editable React components, must be exposed via AEM pages that extend the [SPA Page component](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html). AEM components, that maps to editable React components, must implement AEM&#39;s [Component Exporter framework](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html) - such as [AEM Core WCM Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
+AEM React Editable Components work with both SPA Editor or Remote SPA React apps. Content populating the editable React components, must be exposed via AEM pages that extend the [SPA Page component](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html?lang=zh-Hant). AEM components, that maps to editable React components, must implement AEM&#39;s [Component Exporter framework](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=zh-Hant) - such as [AEM Core WCM Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant).
 
 
 ## 相依性

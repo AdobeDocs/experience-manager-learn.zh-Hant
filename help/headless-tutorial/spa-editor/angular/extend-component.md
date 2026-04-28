@@ -33,13 +33,13 @@ ht-degree: 7%
 
 ## 您將要建置的內容
 
-在本章中，已建立新的`Card`元件。 `Card`元件會擴充[影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)，新增其他內容欄位，例如「標題」和「Call to action」按鈕，以針對SPA內的其他內容執行Teaser角色。
+在本章中，已建立新的`Card`元件。 `Card`元件會擴充[影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hant)，新增其他內容欄位，例如「標題」和「Call to action」按鈕，以針對SPA內的其他內容執行Teaser角色。
 
 ![卡片元件的最終製作](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> 在真實世界的實作中，視專案需求而定，可能更適合使用[Teaser元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html)，而不是擴充[影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)以產生`Card`元件。 建議您儘可能直接使用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
+> 在真實世界的實作中，視專案需求而定，可能更適合使用[Teaser元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html?lang=zh-Hant)，而不是擴充[影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hant)以產生`Card`元件。 建議您儘可能直接使用[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
 ## 先決條件
 
@@ -106,13 +106,13 @@ ht-degree: 7%
 
    請注意，`sling:resourceSuperType`指向`core/wcm/components/image/v2/image`。 這表示WKND SPA影像元件繼承了核心元件影像的功能。
 
-   也稱為[Proxy模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Sling資源繼承是一種強大的設計模式，可讓子元件繼承功能並在需要時擴充/覆寫行為。 Sling繼承支援多個層級的繼承，所以新`Card`元件最終會繼承核心元件影像的功能。
+   也稱為[Proxy模式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=zh-Hant#proxy-component-pattern) Sling資源繼承是一種強大的設計模式，可讓子元件繼承功能並在需要時擴充/覆寫行為。 Sling繼承支援多個層級的繼承，所以新`Card`元件最終會繼承核心元件影像的功能。
 
    許多開發團隊都會努力做到自我（請勿重複這點）。 Sling繼承可讓AEM實現此目標。
 
 4. 在`card`資料夾下，開啟檔案`_cq_dialog/.content.xml`。
 
-   此檔案是`Card`元件的元件對話方塊定義。 如果使用Sling繼承，則可以使用[Sling資源合併器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html)的功能來覆寫或擴充對話方塊的部分。 在此範例中，對話方塊中已新增索引標籤，以從作者擷取其他資料並填入卡片元件。
+   此檔案是`Card`元件的元件對話方塊定義。 如果使用Sling繼承，則可以使用[Sling資源合併器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=zh-Hant)的功能來覆寫或擴充對話方塊的部分。 在此範例中，對話方塊中已新增索引標籤，以從作者擷取其他資料並填入卡片元件。
 
    `sling:orderBefore`之類的屬性可讓開發人員選擇插入新標籤或表單欄位的位置。 在此情況下，`Text`索引標籤會插入`asset`索引標籤之前。 若要充分利用Sling Resource Merger，請務必瞭解[影像元件對話方塊](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml)的原始對話方塊節點結構。
 
@@ -296,7 +296,7 @@ Return to the IDE of your choice and open the `core` module.
    }
    ```
 
-   The `@PostConstruct initModel()` is called when the Sling Model is initialized, therefore it is a good opportunity to initialize objects that may be used by other methods in the model. The `pageManager` is one of several [Java™ backed global objects](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html) made available to Sling Models via the `@ScriptVariable` annotation. [getPage](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html)方法接受路徑並傳回AEM [Page](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html)物件，如果路徑未指向有效頁面，則傳回null。
+   The `@PostConstruct initModel()` is called when the Sling Model is initialized, therefore it is a good opportunity to initialize objects that may be used by other methods in the model. The `pageManager` is one of several [Java™ backed global objects](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=zh-Hant) made available to Sling Models via the `@ScriptVariable` annotation. [getPage](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html)方法接受路徑並傳回AEM [Page](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html)物件，如果路徑未指向有效頁面，則傳回null。
 
    這會初始化`cardPage`變數，其他新方法會使用此變數來傳回基礎連結頁面的相關資料。
 

@@ -177,7 +177,7 @@ The `_cq_editConfig.xml` file dictates the drag and drop behavior in the AEM aut
 
 ## Extend the Dialog {#extend-dialog}
 
-Our `Banner` component requires an extra text field in the dialog to capture the `bannerText`. Since we are using Sling inheritance, we can use features of the [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) to override or extend portions of the dialog. In this sample a new tab has been added to the dialog to capture additional data from an author to populate the Card Component.
+Our `Banner` component requires an extra text field in the dialog to capture the `bannerText`. Since we are using Sling inheritance, we can use features of the [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=zh-Hant) to override or extend portions of the dialog. In this sample a new tab has been added to the dialog to capture additional data from an author to populate the Card Component.
 
 1. In the `ui.apps` module, beneath the `banner` folder, create a folder named `_cq_dialog`.
 1. Beneath `_cq_dialog` create a Dialog definition file `.content.xml`. Populate it with the following:
