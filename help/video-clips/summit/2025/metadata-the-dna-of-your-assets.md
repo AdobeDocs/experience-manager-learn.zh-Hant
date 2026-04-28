@@ -1,6 +1,6 @@
 ---
-title: 中繼資料 — 您的Assets的DNA
-description: 瞭解中繼資料如何推動工作流程、搜尋和深入分析，以及自動化如何讓中繼資料更多元化，以符合品牌標準。
+title: Metadata - The DNA of Your Assets
+description: Learn how metadata drives workflows, search, and insights, and how automation can enrich metadata to align with brand standards.
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets
 feature-set: Experience Manager, Experience Manager Assets
@@ -14,15 +14,15 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: dcc6c975-dd7e-402d-844c-eccf888d9b2c
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
-# 中繼資料：Assets的DNA
+# Metadata: The DNA of Your Assets
 
-瞭解中繼資料如何推動工作流程、搜尋和深入分析，以及自動化如何讓中繼資料更多元化，以符合品牌標準。
+Learn how metadata drives workflows, search, and insights, and how automation can enrich metadata to align with brand standards.
 
->[!VIDEO](https://video.tv.adobe.com/v/3461976/?captions=chi_hant&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)

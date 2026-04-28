@@ -1,6 +1,6 @@
 ---
-title: 整合SPA | AEM SPA Editor and Angular快速入門
-description: 瞭解如何將在Angular中撰寫的單頁應用程式(SPA)原始程式碼與Adobe Experience Manager (AEM)專案整合。 瞭解如何使用現代前端工具(例如Angular的CLI工具)，以針對AEM JSON模型API快速開發SPA。
+title: 整合SPA | AEM SPA Editor和Angular快速入門
+description: 瞭解如何將在Angular中撰寫的單頁應用程式(SPA)原始程式碼與Adobe Experience Manager (AEM)專案整合。 瞭解如何使用現代前端工具（例如Angular的CLI工具），以針對AEM JSON模型API快速開發SPA。
 feature: SPA Editor
 version: Experience Manager as a Cloud Service
 jira: KT-5310
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
 duration: 536
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '2045'
-ht-degree: 0%
+source-wordcount: '2299'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 2. 瞭解如何使用本機開發伺服器來進行專屬的前端開發。
 3. 探索使用&#x200B;**proxy**&#x200B;和靜態&#x200B;**Mock**&#x200B;檔案來針對AEM JSON模型API開發
 
-## 您將建置的內容
+## 您將要建置的內容
 
 本章會將簡單的`Header`元件新增至SPA。 在建立此靜態`Header`元件的過程中，使用了數種AEM SPA開發方法。
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 ## 先決條件
 
-檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。
+檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具與指示。
 
 ### 取得程式碼
 
@@ -77,17 +77,17 @@ ht-degree: 0%
 
 *SPA整合的高階描述。*
 
-有關前端組建的其他資訊可在[此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hant)找到。
+有關前端組建的其他資訊可在[此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)找到。
 
 ## 檢查SPA整合 {#inspect-spa-integration}
 
-接下來，請檢查`ui.frontend`模組以瞭解由[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hant)自動產生的SPA。
+接下來，請檢查`ui.frontend`模組以瞭解由[AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)自動產生的SPA。
 
-1. 在您選擇的IDE中，開啟WKND SPA的AEM專案。 此教學課程將使用[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=zh-Hant#microsoft-visual-studio-code)。
+1. 在您選擇的IDE中，開啟WKND SPA的AEM專案。 此教學課程將使用[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code)。
 
    ![VSCode - AEM WKND SPA專案](./assets/integrate-spa/vscode-ide-openproject.png)
 
-2. 展開並檢查`ui.frontend`資料夾。 開啟檔案`ui.frontend/package.json`
+2. 展開並檢查`ui.frontend`資料夾。 開啟檔案 `ui.frontend/package.json`。
 
 3. 在`dependencies`下，您應該會看到數個與`@angular`相關的專案：
 
@@ -112,7 +112,7 @@ ht-degree: 0%
    "@adobe/cq-spa-page-model-manager": "^1.1.3",
    ```
 
-   上述模組構成[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html?lang=zh-Hant)，並提供可將SPA元件對應至AEM元件的功能。
+   上述模組構成[AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)，並提供可將SPA元件對應至AEM元件的功能。
 
 5. 在`package.json`檔案中定義了多個`scripts`：
 
@@ -132,11 +132,11 @@ ht-degree: 0%
 
    `build` — 編譯Angular應用程式以進行生產分送。 加入`&& clientlib`負責在建置期間將編譯的SPA作為使用者端程式庫複製到`ui.apps`模組中。 npm模組[aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator)已用來協助處理這個問題。
 
-   有關可用指令碼的更多詳細資料，請參閱[這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hant)。
+   有關可用指令碼的更多詳細資料，請參閱[這裡](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)。
 
-6. 檢查檔案`ui.frontend/clientlib.config.js`。 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs)使用此設定檔來決定如何產生使用者端程式庫。
+6. 檢查檔案 `ui.frontend/clientlib.config.js`。 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs)使用此設定檔來決定如何產生使用者端程式庫。
 
-7. 檢查檔案`ui.frontend/pom.xml`。 此檔案會將`ui.frontend`資料夾轉換為[Maven模組](https://maven.apache.org/guides/mini/guide-multiple-modules.html)。 `pom.xml`檔案已更新，以便在Maven組建期間使用[frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin)至&#x200B;**test**&#x200B;和&#x200B;**build** SPA。
+7. 檢查檔案 `ui.frontend/pom.xml`。 此檔案會將`ui.frontend`資料夾轉換為[Maven模組](https://maven.apache.org/guides/mini/guide-multiple-modules.html)。 `pom.xml`檔案已更新，以便在Maven組建期間使用[frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin)至&#x200B;**test**&#x200B;和&#x200B;**build** SPA。
 
 8. 在`ui.frontend/src/app/app.component.ts`檢查檔案`app.component.ts`：
 
@@ -239,7 +239,7 @@ ht-degree: 0%
    ES5 bundle generation complete.
    ```
 
-8. 導覽至`ui.apps`資料夾。 在`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular`下方，您應該會看到已從`ui.frontend/build`資料夾複製編譯的SPA檔案。
+8. 導覽至 `ui.apps` 檔案夾。 在`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular`下方，您應該會看到已從`ui.frontend/build`資料夾複製編譯的SPA檔案。
 
    ![在ui.apps中產生的使用者端資料庫](assets/integrate-spa/compiled-spa-uiapps.png)
 
@@ -424,7 +424,7 @@ ht-degree: 0%
 
    ![Angular JSON組建開發更新](assets/integrate-spa/angular-json-build-dev-update.png)
 
-7. 開啟檔案`ui.frontend/package.json`並新增新的&#x200B;**start：mock**&#x200B;命令以參照&#x200B;**proxy.mock.conf.json**&#x200B;檔案。
+7. 開啟檔案`ui.frontend/package.json`並新增新的&#x200B;**start:mock**&#x200B;命令以參照&#x200B;**proxy.mock.conf.json**&#x200B;檔案。
 
    ```diff
        "scripts": {
@@ -439,7 +439,7 @@ ht-degree: 0%
 
    新增指令可讓您在Proxy設定之間輕鬆切換。
 
-8. 如果目前正在執行，請停止&#x200B;**webpack開發伺服器**。 使用&#x200B;**start：mock**&#x200B;指令碼啟動&#x200B;**webpack dev server**：
+8. 如果目前正在執行，請停止&#x200B;**webpack開發伺服器**。 使用&#x200B;**start:mock**&#x200B;指令碼啟動&#x200B;**webpack dev server**：
 
    ```shell
    $ npm run start:mock
@@ -448,7 +448,7 @@ ht-degree: 0%
    > ng serve --open --proxy-config ./proxy.mock.conf.json
    ```
 
-   導覽至[http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)，您應該會看到相同的SPA，但現在正在從&#x200B;**模型** JSON檔案提取內容。
+   導覽至[http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)，您應該會看到相同的SPA，但現在正在從&#x200B;**Mock** JSON檔案提取內容。
 
 9. 對先前建立的&#x200B;**en.model.json**&#x200B;檔案進行小幅變更。 更新後的內容應立即反映在&#x200B;**webpack開發伺服器**&#x200B;中。
 

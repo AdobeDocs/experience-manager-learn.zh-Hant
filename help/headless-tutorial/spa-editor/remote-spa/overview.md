@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
 duration: 294
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 100%
+source-wordcount: '667'
+ht-degree: 89%
 
 ---
 
@@ -25,15 +25,15 @@ ht-degree: 100%
 
 歡迎瀏覽此多部分教學課程，適合想要透過 AEM SPA 編輯器為現有基於 React (或 Next.js) 的遠端 SPA 新增可編輯 AEM 內容的開發人員。
 
-本教學課程以 [WKND GraphQL 應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hant)為基礎，這是透過 AEM 的 GraphQL API 使用 AEM 內容片段內容的一個 React 應用程式，但不提供任何 SPA 內容情境式製作功能。
+本教學課程以 [WKND GraphQL 應用程式](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)為基礎，這是透過 AEM 的 GraphQL API 使用 AEM 內容片段內容的一個 React 應用程式，但不提供任何 SPA 內容情境式製作功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/3444858?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## 關於本教學課程
 
 本教學課程旨在說明如何更新遠端 SPA，或者不在 AEM 環境內執行的 SPA，以便能夠使用及傳遞在 AEM 中製作的內容。
 
-本教學課程中的大部分活動將焦點放在 JavaScript 開發，但也涵蓋關於 AEM 的重要層面。這些方面包括定義 AEM 中製作和儲存內容的位置，以及將 SPA 路由對應至 AEM 頁面。
+本教學課程中的大部分活動將焦點放在 JavaScript 開發，但也涵蓋關於 AEM 的重要層面。 這些方面包括定義 AEM 中製作和儲存內容的位置，以及將 SPA 路由對應至 AEM 頁面。
 
 本教學課程旨在與 **AEM as a Cloud Service** 搭配使用，並由兩個專案組成：
 
@@ -53,8 +53,8 @@ ht-degree: 100%
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
-+ [aem-guides-wknd.all-2.1.0.zip 或更高版本](https://github.com/adobe/aem-guides-wknd/releases)
-+ [aem-guides-wknd-graphql 原始程式碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main)
++ [aem-guides-wknd.all-2.1.0.zip或更高版本](https://github.com/adobe/aem-guides-wknd/releases)
++ [aem-guides-wknd-graphql原始碼](https://github.com/adobe/aem-guides-wknd-graphql/tree/main)
 
 本教學課程假設：
 
@@ -66,15 +66,15 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> **需要協助設定您的本機開發環境嗎？若要使用 AEM as a Cloud Service SDK 設定本機開發環境，**&#x200B;請參閱[以下指南](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)。
+> **需要協助設定您的本機開發環境嗎？** 請參閱[以下指南以使用AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)設定本機開發環境。
 
-## &#x200B;1. 設定 AEM 以便支援 SPA 編輯器
+## &#x200B;1. 設定適用於SPA編輯器的AEM
 
-需要進行 AEM 設定才能將 SPA 與 AEM SPA 編輯器整合。這些設定會透過 AEM 專案進行管理和部署。在此章節中，了解哪些是必要設定以及如何定義那些設定。
+需要進行 AEM 設定才能將 SPA 與 AEM SPA 編輯器整合。 這些設定會透過 AEM 專案進行管理和部署。 在此章節中，了解哪些是必要設定以及如何定義那些設定。
 
 + [了解如何設定 AEM 以支援 SPA 編輯器](./aem-configure.md)
 
-## &#x200B;2. 啟動 SPA
+## &#x200B;2. Bootstrap與SPA
 
 若要讓 AEM SPA 編輯器能夠將 SPA 整合到其製作環境中，必須在 SPA 中添加一些內容。
 
@@ -82,19 +82,19 @@ ht-degree: 100%
 
 ## &#x200B;3. 可編輯的固定元件
 
-首先，探索在 SPA 中新增可編輯的「固定元件」。這樣會說明開發人員如何在 SPA 中放置特定的可編輯元件。雖然作者可以變更元件的內容，但他們不能刪除元件或變更其放置環境、定位或大小。
+首先，探索在 SPA 中新增可編輯的「固定元件」。 這樣會說明開發人員如何在 SPA 中放置特定的可編輯元件。 雖然作者可以變更元件的內容，但他們不能刪除元件或變更其放置環境、定位或大小。
 
 + [了解可編輯的固定元件](./spa-fixed-component.md)
 
 ## &#x200B;4. 可編輯的容器元件
 
-接下來，探索在 SPA 中新增可編輯的「容器元件」。這會說明開發人員如何在 SPA 中放置容器元件。作者能夠在容器元件中放置經允許的元件，並調整元件的版面。
+接下來，探索在 SPA 中新增可編輯的「容器元件」。 這會說明開發人員如何在 SPA 中放置容器元件。 作者能夠在容器元件中放置經允許的元件，並調整元件的版面。
 
 + [了解可編輯的容器元件](./spa-container-component.md)
 
 ## &#x200B;5. 動態路由和可編輯的元件
 
-最後，使用前幾個章節所解釋的概念來實現動態路由；會根據路由的參數而顯示不同內容的路由。這會說明如何使用 AEM SPA 編輯器，在以程式設計方式驅動及推導出來的路由上製作內容。
+最後，使用前幾個章節所解釋的概念來實現動態路由；會根據路由的參數而顯示不同內容的路由。 這會說明如何使用 AEM SPA 編輯器，在以程式設計方式驅動及推導出來的路由上製作內容。
 
 + [了解動態路由和可編輯的元件](./spa-dynamic-routes.md)
 

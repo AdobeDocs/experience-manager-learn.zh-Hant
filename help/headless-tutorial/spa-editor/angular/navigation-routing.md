@@ -1,5 +1,5 @@
 ---
-title: 新增導覽和路由 | AEM SPA Editor and Angular快速入門
+title: 新增導覽和路由| AEM SPA Editor and Angular快速入門
 description: 瞭解如何使用AEM頁面和SPA Editor SDK支援SPA中的多個檢視。 動態導覽是使用Angular路由實作，並新增到現有的頁首元件。
 feature: SPA Editor
 version: Experience Manager as a Cloud Service
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
 duration: 669
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '2531'
-ht-degree: 0%
+source-wordcount: '2845'
+ht-degree: 2%
 
 ---
 
@@ -31,15 +31,15 @@ ht-degree: 0%
 2. 瞭解如何使用[Angular路由](https://angular.io/guide/router)在SPA的不同檢視之間導覽。
 3. 實作由AEM頁面階層驅動的動態導覽。
 
-## 您將建置的內容
+## 您將要建置的內容
 
-本章將導覽功能表新增至現有的`Header`元件。 導覽功能表是由AEM頁面階層所驅動，並使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=zh-Hant)提供的JSON模型。
+本章將導覽功能表新增至現有的`Header`元件。 導覽功能表是由AEM頁面階層所驅動，並使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)提供的JSON模型。
 
 ![已實作導覽](assets/navigation-routing/final-navigation-implemented.gif)
 
 ## 先決條件
 
-檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。
+檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具與指示。
 
 ### 取得程式碼
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 ## 檢查HeaderComponent更新 {#inspect-header}
 
-在先前的章節中，`HeaderComponent`元件已新增為透過`app.component.html`包含的純Angular元件。 在本章中，`HeaderComponent`元件已從應用程式移除，並透過[範本編輯器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=zh-Hant)新增。 這可讓使用者從AEM中設定`HeaderComponent`的導覽功能表。
+在先前的章節中，`HeaderComponent`元件已新增為透過`app.component.html`包含的純Angular元件。 在本章中，`HeaderComponent`元件已從應用程式移除，並透過[範本編輯器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)新增。 這可讓使用者從AEM中設定`HeaderComponent`的導覽功能表。
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ ht-degree: 0%
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`元件將透過`sling:resourceSuperType`屬性繼承[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=zh-Hant)的所有功能。
+   AEM `Header`元件將透過`sling:resourceSuperType`屬性繼承[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)的所有功能。
 
 ## 將HeaderComponent新增至SPA範本 {#add-header-template}
 
@@ -153,9 +153,9 @@ ht-degree: 0%
    在&#x200B;**[!UICONTROL 屬性]**&#x200B;下：
 
    * 將&#x200B;**[!UICONTROL 導覽根目錄]**&#x200B;設定為`/content/wknd-spa-angular/us/en`。
-   * 將&#x200B;**[!UICONTROL 排除根層級]**&#x200B;設定為&#x200B;**1**。
+   * 將「**[!UICONTROL 排除根層級]**」設定為「**1**」。
    * 取消勾選&#x200B;**[!UICONTROL 收集所有子頁面]**。
-   * 將&#x200B;**[!UICONTROL 導覽結構深度]**&#x200B;設定為&#x200B;**3**。
+   * 將「**[!UICONTROL 導覽結構深度]**」設定為「**3**」。
 
    ![設定標頭原則](assets/navigation-routing/header-policy.png)
 
@@ -257,11 +257,11 @@ ht-degree: 0%
 
    稍後，我們將觀察AEM SPA Editor SDK如何以動態方式載入其他內容。
 
-## 實作導覽
+## Implement the navigation
 
-接下來，使用新的`NavigationComponent`實作導覽功能表。 我們可以直接在`header.component.html`中新增程式碼，但更好的做法是避免大型元件。 請改為實作稍後可能重複使用的`NavigationComponent`。
+Next, implement the navigation menu with a new `NavigationComponent`. We could add the code directly in `header.component.html` but a better practice is to avoid large components. Instead, implement a `NavigationComponent` that could potentially be re-used later.
 
-1. 檢閱AEM `Header`元件在[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)公開的JSON：
+1. Review the JSON exposed by the AEM `Header` component at [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json):
 
    ```json
    ...
@@ -313,9 +313,9 @@ ht-degree: 0%
    ":type": "wknd-spa-angular/components/header"
    ```
 
-   AEM頁面的階層特性使用JSON建模，可用來填入導覽功能表。 請記得`Header`元件繼承了[導覽核心元件](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html)的所有功能，而且透過JSON公開的內容會自動對應至Angular `@Input`註解。
+   The hierarchical nature of the AEM pages are modeled in the JSON that can be used to populate a navigation menu. Recall that the `Header` component inherits all of the functionality of the [Navigation Core Component](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) and the content exposed through the JSON is automatically mapped to the Angular `@Input` annotation.
 
-2. 開啟新的終端機視窗，並導覽至SPA專案的`ui.frontend`資料夾。 使用Angular CLI工具建立新的`NavigationComponent`：
+2. Open a new terminal window and navigate to the `ui.frontend` folder of the SPA project. Create a new `NavigationComponent` using the Angular CLI tool:
 
    ```shell
    $ cd ui.frontend
@@ -327,7 +327,7 @@ ht-degree: 0%
    UPDATE src/app/app.module.ts (2032 bytes)
    ```
 
-3. 接下來，在新建立的`components/navigation`目錄中，使用Angular CLI建立名為`NavigationLink`的類別：
+3. Next create a class named `NavigationLink` using the Angular CLI in the newly created `components/navigation` directory:
 
    ```shell
    $ cd src/app/components/navigation/
@@ -336,9 +336,9 @@ ht-degree: 0%
    CREATE src/app/components/navigation/navigation-link.ts (32 bytes)
    ```
 
-4. 返回您選擇的IDE並在`/src/app/components/navigation/navigation-link.ts`的`navigation-link.ts`開啟檔案。
+4. Return to the IDE of your choice and open the file at `navigation-link.ts` at `/src/app/components/navigation/navigation-link.ts`.
 
-   ![開啟navigation-link.ts檔案](assets/navigation-routing/ide-navigation-link-file.png)
+   ![Open navigation-link.ts file](assets/navigation-routing/ide-navigation-link-file.png)
 
 5. 以下列專案填入`navigation-link.ts`：
 
@@ -365,11 +365,11 @@ ht-degree: 0%
    }
    ```
 
-   這是代表個別導覽連結的簡單類別。 在類別建構函式中，我們預期`data`是從AEM傳入的JSON物件。 此類別同時在`NavigationComponent`和`HeaderComponent`中使用，以輕鬆填入導覽結構。
+   This is a simple class to represent an individual navigation link. In the class constructor we expect `data` to be the JSON object passed in from AEM. This class is used within both the `NavigationComponent` and `HeaderComponent` to easily populate the navigation structure.
 
-   不會執行資料轉換，此類別主要是建立以強式輸入JSON模型。 請注意，`this.children`是型別為`NavigationLink[]`，而且建構函式會遞回建立`children`陣列中每個專案的新`NavigationLink`物件。 記住`Header`的JSON模型為階層式。
+   No data transformation is performed, this class is primarily created to strongly type the JSON model. Notice that `this.children` is typed as `NavigationLink[]` and that the constructor recursively creates new `NavigationLink` objects for each of the items in the `children` array. Recall that JSON model for the `Header` is hierarchical.
 
-6. 開啟檔案`navigation-link.spec.ts`。 這是`NavigationLink`類別的測試檔案。 以下列專案更新它：
+6. 開啟檔案 `navigation-link.spec.ts`。 This is the test file for the `NavigationLink` class. Update it with the following:
 
    ```js
    import { NavigationLink } from './navigation-link';
@@ -391,9 +391,9 @@ ht-degree: 0%
    });
    ```
 
-   請注意，`const data`會依照先前針對單一連結所檢查的相同JSON模型。 這遠非強大的單位測試，但應該足以測試`NavigationLink`的建構函式。
+   Notice that `const data` follows the same JSON model inspected earlier for a single link. This is far from a robust unit test, however it should suffice to test the constructor of `NavigationLink`.
 
-7. 開啟檔案`navigation.component.ts`。 以下列專案更新它：
+7. 開啟檔案 `navigation.component.ts`。 Update it with the following:
 
    ```js
    import { Component, OnInit, Input } from '@angular/core';
@@ -426,7 +426,7 @@ ht-degree: 0%
    }
    ```
 
-   `NavigationComponent`需要一個名為`items`的`object[]`，它是AEM的JSON模型。 此類別公開單一方法`get navigationLinks()`，它傳回`NavigationLink`物件的陣列。
+   `NavigationComponent` expects an `object[]` named `items` that is the JSON model from AEM. 此類別公開單一方法`get navigationLinks()`，它傳回`NavigationLink`物件的陣列。
 
 8. 開啟檔案`navigation.component.html`，並以下列專案更新它：
 
@@ -639,7 +639,7 @@ ht-degree: 0%
 
    `PageComponent`是Angular元件，代表AEM中的頁面，用來呈現相符的路由。 在稍後的教學課程中會檢閱`PageComponent`。
 
-   `AemPageDataResolver`由AEM SPA Editor JS SDK提供，是自訂[Angular路由器解析器](https://angular.io/api/router/Resolve)，用來將路由URL (AEM中包含.html副檔名的路徑)轉換為AEM中的資源路徑（不含副檔名的頁面路徑）。
+   `AemPageDataResolver`由AEM SPA Editor JS SDK提供，是自訂[Angular路由器解析器](https://angular.io/api/router/Resolve)，用來將路由URL （AEM中包含.html副檔名的路徑）轉換為AEM中的資源路徑（不含副檔名的頁面路徑）。
 
    例如，`AemPageDataResolver`會將路由的URL `content/wknd-spa-angular/us/en/home.html`轉換為`/content/wknd-spa-angular/us/en/home`的路徑。 用於根據JSON模型API中的路徑解析頁面內容。
 
@@ -724,7 +724,7 @@ ht-degree: 0%
 
    ![已實作導覽](assets/navigation-routing/final-navigation-implemented.gif)
 
-5. 透過直接導覽至[http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html)來嘗試深層連結。 請注意，瀏覽器的返回按鈕仍會繼續運作。
+5. 透過直接導覽至： [http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-angular/us/en/home/page-2.html)來嘗試深層連結。 請注意，瀏覽器的返回按鈕仍會繼續運作。
 
 ## 恭喜！ {#congratulations}
 

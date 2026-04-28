@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
 duration: 202
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '902'
-ht-degree: 0%
+source-wordcount: '919'
+ht-degree: 1%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ## 遠端SPA對應
 
-離開遠端SPA之要求的對應是透過`setupProxy`Bootstrap [中完成的](./spa-bootstrap.md)設定所設定。
+離開遠端SPA之要求的對應是透過[Bootstrap ](./spa-bootstrap.md)中完成的`setupProxy`設定所設定。
 
 ## SPA編輯器對應
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 ## 更新WKND應用程式
 
-讓我們將在`<ResponsiveGrid...>`最後一個章節[中建立的](./spa-container-component.md)元件放入`AdventureDetail` SPA元件中，建立可編輯的容器。
+讓我們將在[最後一個章節](./spa-container-component.md)中建立的`<ResponsiveGrid...>`元件放入`AdventureDetail` SPA元件中，建立可編輯的容器。
 
 ### 放置ResponsiveGrid SPA元件
 
@@ -174,7 +174,7 @@ function AdventureDetailRender(props) {
 
 ## 恭喜！
 
-恭喜！您已新增製作功能至SPA中的動態路由！
+恭喜！ 您已新增製作功能至SPA中的動態路由！
 
 * 將AEM React Editable元件的ResponsiveGrid元件新增至動態路由
 * 建立AEM頁面，以支援在SPA中製作兩個特定路徑（Bali Surf Camp和Beervana in Portland）

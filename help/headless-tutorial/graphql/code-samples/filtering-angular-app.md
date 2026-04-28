@@ -1,6 +1,6 @@
 ---
 title: 篩選 Angular 應用程式
-description: 簡易的Angular應用程式，可篩選使用內容片段模組化的WKND Adventures。
+description: A simple Angular app that filters WKND adventures modeled using Content Fragments.
 version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -13,9 +13,9 @@ hide: true
 hidefromtoc: true
 exl-id: c238dd83-65d3-4b04-b90e-19ed250b8e36
 duration: 26
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '141'
 ht-degree: 5%
 
 ---

@@ -1,5 +1,5 @@
 ---
-title: 將SPA元件對應至AEM元件 | AEM SPA Editor and React快速入門
+title: 將SPA元件對應至AEM元件| AEM SPA Editor and React快速入門
 description: 瞭解如何使用AEM SPA Editor JS SDK將React元件對應至Adobe Experience Manager (AEM)元件。 元件對應可讓使用者在AEM SPA Editor中對SPA元件進行動態更新，類似於傳統的AEM編寫。 您也將瞭解如何使用現成的AEM React Core Components。
 feature: SPA Editor
 version: Experience Manager as a Cloud Service
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
 duration: 477
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '2123'
-ht-degree: 0%
+source-wordcount: '2357'
+ht-degree: 8%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 1. 檢查React元件如何使用從AEM傳遞的動態屬性。
 1. 瞭解如何立即使用[React AEM核心元件](https://github.com/adobe/aem-react-core-wcm-components-examples)。
 
-## 您將建置的內容
+## 您將要建置的內容
 
 本章會檢查提供的`Text` SPA元件如何對應至AEM `Text`元件。 React核心元件（例如`Image` SPA元件）用於SPA並在AEM中編寫。 **配置容器**&#x200B;和&#x200B;**範本編輯器**&#x200B;原則的現成功能也可用來建立外觀稍有變化的檢視。
 
@@ -41,11 +41,11 @@ ht-degree: 0%
 
 ## 先決條件
 
-檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。 本章是[整合SPA](integrate-spa.md)章節的延續，但您只要遵循啟用SPA的AEM專案即可。
+檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具與指示。 本章是[整合SPA](integrate-spa.md)章節的延續，但您只要遵循啟用SPA的AEM專案即可。
 
 ## 對應方法
 
-基本概念是對應SPA元件至AEM元件。 AEM元件，執行伺服器端，將內容匯出為JSON模型API的一部分。 SPA會使用JSON內容，在瀏覽器中執行使用者端。 SPA元件和AEM元件之間會建立1:1對應。
+基本概念是對應SPA元件至AEM元件。 AEM元件，執行伺服器端，將內容匯出為JSON模型API的一部分。 SPA會使用JSON內容，在瀏覽器中執行使用者端。 在SPA元件和AEM元件之間建立1:1對應。
 
 ![將AEM元件對應至React元件的高階概觀](./assets/map-components/high-level-approach.png)
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 ## 檢查文字元件
 
-[AEM專案原型](https://github.com/adobe/aem-project-archetype)提供對應至AEM [文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hant)的`Text`元件。 這是&#x200B;**content**&#x200B;元件的範例，其會轉譯來自AEM的&#x200B;*content*。
+[AEM專案原型](https://github.com/adobe/aem-project-archetype)提供對應至AEM [文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)的`Text`元件。 這是&#x200B;**content**&#x200B;元件的範例，其會轉譯來自AEM的&#x200B;*content*。
 
 讓我們瞭解元件的運作方式。
 
@@ -224,19 +224,19 @@ AEM SPA Editor SDK會自動支援&#x200B;**配置容器**。 名稱所指示的&
 
    **配置容器**&#x200B;元件有`wcm/foundation/components/responsivegrid`的`sling:resourceType`，而且可由SPA編輯器使用`:type`屬性來辨識，就像`Text`和`Image`元件一樣。
 
-   SPA編輯器也提供相同的功能，可以使用[配置模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=zh-Hant#defining-layouts-layout-mode)來重新調整元件大小。
+   SPA編輯器也提供相同的功能，可以使用[配置模式](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode)來重新調整元件大小。
 
 2. 返回[http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html)。 新增其他&#x200B;**影像**&#x200B;元件，然後嘗試使用&#x200B;**配置**&#x200B;選項重新調整其大小：
 
    ![使用版面配置模式重新調整影像大小](./assets/map-components/responsive-grid-layout-change.gif)
 
-3. 重新開啟JSON模型[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)，並觀察作為JSON一部分的`columnClassNames`：
+3. 重新開啟JSON模型[http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)，並觀察JSON中的`columnClassNames`：
 
    ![欄類別名稱](./assets/map-components/responsive-grid-classnames.png)
 
    類別名稱`aem-GridColumn--default--4`表示元件應以12欄格線為4欄寬。 如需[回應式格線的詳細資訊，請參閱此處](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)。
 
-4. 返回IDE，在`ui.apps`模組中有一個在`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-grid`定義的使用者端程式庫。 開啟檔案`less/grid.less`。
+4. 返回IDE，在`ui.apps`模組中有一個在`ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-grid`定義的使用者端程式庫。 開啟檔案 `less/grid.less`。
 
    此檔案決定&#x200B;**配置容器**&#x200B;使用的中斷點（`default`、`tablet`和`phone`）。 此檔案旨在根據專案規格自訂。 目前中斷點設定為`1200px`和`768px`。
 
@@ -254,7 +254,7 @@ AEM SPA Editor SDK會自動支援&#x200B;**配置容器**。 名稱所指示的&
 
 ## （額外優點）將組態保留至原始檔控制 {#bonus-configs}
 
-在許多情況下，尤其是在AEM專案剛開始時，將設定（例如範本和相關內容原則）保留到原始檔控制中很有價值。 這可確保所有開發人員都針對相同的內容和設定集，且可確保環境之間有額外的一致性。 一旦專案達到一定的成熟度，管理範本的實務就可以交給特殊的超級使用者群組。
+在許多情況下，尤其是在AEM專案剛開始時，將設定（例如範本和相關內容原則）保留到原始檔控制中很有價值。 這樣可確保所有開發人員工作時均使用同一組內容和設定，並可提高不同環境之間的一致性。 專案達到特定成熟度後，即可將管理範本的做法移交給特殊的進階使用者群組。
 
 後續幾個步驟將使用Visual Studio Code IDE和[VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)進行，但可能會使用任何工具和您已設定為從AEM的本機執行個體&#x200B;**提取**&#x200B;或&#x200B;**匯入**&#x200B;內容的IDE來執行。
 
@@ -264,9 +264,9 @@ AEM SPA Editor SDK會自動支援&#x200B;**配置容器**。 名稱所指示的&
 
 2. 展開專案總管中的&#x200B;**ui.content**&#x200B;模組，並導覽至`/conf/wknd-spa-react/settings/wcm/templates`。
 
-3. **在`templates`資料夾上按一下滑鼠右鍵**&#x200B;並選取&#x200B;**從AEM伺服器匯入**：
+3. **用右鍵按一下** `templates` 資料夾並選取「**從 AEM 伺服器匯入**」：
 
-   ![VSCode匯入範本](./assets/map-components/import-aem-servervscode.png)
+   ![VSCode 匯入範本](./assets/map-components/import-aem-servervscode.png)
 
 4. 重複步驟以匯入內容，但選取位於`/conf/wknd-spa-react/settings/wcm/templates/policies`的&#x200B;**原則**&#x200B;資料夾。
 
@@ -283,19 +283,19 @@ AEM SPA Editor SDK會自動支援&#x200B;**配置容器**。 名稱所指示的&
     </workspaceFilter>
    ```
 
-   `filter.xml`檔案負責識別隨套件安裝的節點路徑。 請注意每個篩選器上的`mode="merge"`，這表示現有內容將不會被修改，只會新增內容。 由於內容作者可能正在更新這些路徑，因此程式碼部署&#x200B;**不會**&#x200B;覆寫內容非常重要。 請參閱[FileVault檔案](https://jackrabbit.apache.org/filevault/filter.html)，以取得使用篩選元素的詳細資訊。
+   `filter.xml` 檔案負責識別與封裝一起安裝的節點之路徑。 請注意每個篩選器上的`mode="merge"`，這表示現有內容將不會被修改，只會新增內容。 由於內容作者可能會更新這些路徑，因此務必確保程式碼部署&#x200B;**不會**&#x200B;覆寫內容。 關於使用篩選器元素的詳細資訊，請參閱 [FileVault 文件](https://jackrabbit.apache.org/filevault/filter.html)。
 
-   比較`ui.content/src/main/content/META-INF/vault/filter.xml`與`ui.apps/src/main/content/META-INF/vault/filter.xml`，瞭解每個模組所管理的不同節點。
+   比較 `ui.content/src/main/content/META-INF/vault/filter.xml` 和 `ui.apps/src/main/content/META-INF/vault/filter.xml` 來了解每個模組管理的不同節點。
 
 ## （額外練習）建立自訂影像元件 {#bonus-image}
 
-React核心元件已提供SPA影像元件。 不過，如果您需要額外的練習，請建立您自己的React實作，該實作會對應至AEM [影像元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=zh-Hant)。 `Image`元件是&#x200B;**content**&#x200B;元件的另一個範例。
+React核心元件已提供SPA影像元件。 不過，如果您需要額外的練習，請建立您自己的React實作，該實作會對應至AEM [影像元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)。 `Image`元件是&#x200B;**content**&#x200B;元件的另一個範例。
 
 ### 檢查JSON
 
 在跳入SPA程式碼之前，請檢查AEM提供的JSON模型。
 
-1. 導覽至核心元件庫[&#128279;](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的影像範例。
+1. 導覽至核心元件庫](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)中的[影像範例。
 
    ![影像核心元件JSON](./assets/map-components/image-json.png)
 
@@ -380,7 +380,7 @@ React核心元件已提供SPA影像元件。 不過，如果您需要額外的�
    }
    ```
 
-1. 在`Image.js`中，在`import`陳述式下方的頂端加入檔案參考：
+1. In `Image.js` add a reference to the file at the top beneath the `import` statements:
 
    ```js
    import React, {Component} from 'react';
@@ -389,7 +389,7 @@ React核心元件已提供SPA影像元件。 不過，如果您需要額外的�
    require('./Image.css');
    ```
 
-1. 開啟檔案`ui.frontend/src/components/import-components.js`並新增新`Image`元件的參考：
+1. Open the file `ui.frontend/src/components/import-components.js` and add a reference to the new `Image` component:
 
    ```js
    import './Page/Page';
@@ -399,24 +399,24 @@ React核心元件已提供SPA影像元件。 不過，如果您需要額外的�
    import './Image/Image'; //add reference to Image component
    ```
 
-1. 在`import-components.js`中註解React核心元件影像：
+1. In `import-components.js` comment out the React Core Component Image:
 
    ```js
    //MapTo('wknd-spa-react/components/image')(ImageV2, {isEmpty: ImageV2IsEmptyFn});
    ```
 
-   這將確保改用我們的自訂影像元件。
+   This will ensure that our custom Image component is used instead.
 
-1. 從專案的根使用Maven將SPA程式碼部署到AEM：
+1. From the root of the project deploy the SPA code to AEM using Maven:
 
    ```shell
    $ cd aem-guides-wknd-spa.react
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. 在AEM中檢查SPA。 頁面上的任何影像元件都應繼續運作。 檢查已轉譯的輸出，您應該會看到自訂影像元件的標籤，而不是React核心元件。
+1. Inspect the SPA in AEM. Any Image components on the page should continue to work. Inspect the rendered output and you should see the markup for our custom Image component instead of the React Core Component.
 
-   *自訂影像元件標籤*
+   *Custom Image component markup*
 
    ```html
    <div class="Image">
@@ -424,7 +424,7 @@ React核心元件已提供SPA影像元件。 不過，如果您需要額外的�
    </div>
    ```
 
-   *React核心元件影像標籤*
+   *React Core Component Image markup*
 
    ```html
    <div class="cmp-image cq-dd-image">
@@ -432,4 +432,4 @@ React核心元件已提供SPA影像元件。 不過，如果您需要額外的�
    </div>
    ```
 
-   這是擴充及實作您自己的元件的絕佳簡介。
+   This is a good introduction to extending and implementing your own components.

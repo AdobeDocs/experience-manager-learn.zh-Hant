@@ -1,6 +1,6 @@
 ---
-title: 數位成功的三個主要方法
-description: 探索最佳化數位體驗的三大原則 — 修正基本知識、運用AI並增強策略領導的能力。
+title: Three Key Takeaways for Digital Success
+description: Explore the three key principles for optimizing digital experiences - fixing the basics, leveraging AI, and empowering strategic leaders.
 cloud: Experience Cloud
 solution: Experience Manager
 feature-set: Experience Manager
@@ -14,15 +14,15 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 39ed523f-abcd-49b5-978f-b795e109d7f5
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 0%
 
 ---
 
-# 數位成功的三個主要方法
+# Three Key Takeaways for Digital Success
 
-探索最佳化數位體驗的三個主要原則：修正基本知識、運用AI並增強策略領導的能力。
+Explore the three key principles for optimizing digital experiences: fixing the basics, leveraging AI, and empowering strategic leaders.
 
->[!VIDEO](https://video.tv.adobe.com/v/3462053/?captions=chi_hant&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459234/?learn=on&enablevpops)

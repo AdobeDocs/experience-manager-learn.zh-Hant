@@ -1,5 +1,5 @@
 ---
-title: 新增導覽和路由 | AEM SPA Editor and React快速入門
+title: 新增導覽和路由| AEM SPA Editor and React快速入門
 description: 瞭解如何使用SPA Editor SDK將對應到AEM頁面，以支援SPA中的多個檢視。 動態導覽是使用React Router和React Core Components來實施。
 feature: SPA Editor
 version: Experience Manager as a Cloud Service
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
 duration: 337
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '1481'
-ht-degree: 0%
+source-wordcount: '1721'
+ht-degree: 2%
 
 ---
 
@@ -31,15 +31,15 @@ ht-degree: 0%
 1. 瞭解如何使用[React Router](https://reacttraining.com/react-router)，在SPA的不同檢視之間瀏覽。
 1. 使用AEM React核心元件，實作由AEM頁面階層驅動的動態導覽。
 
-## 您將建置的內容
+## 您將要建置的內容
 
-本章將新增導覽至AEM中的SPA。 導覽功能表是由AEM頁面階層所驅動，並將使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=zh-Hant)提供的JSON模型。
+本章將新增導覽至AEM中的SPA。 導覽功能表是由AEM頁面階層所驅動，並將使用[導覽核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html)提供的JSON模型。
 
 ![已新增導覽](assets/navigation-routing/navigation-added.png)
 
 ## 先決條件
 
-檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。 本章是[Map Components](map-components.md)章節的延續，但您只需要將已啟用SPA的AEM專案部署到本機AEM執行個體即可。
+檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具與指示。 本章是[Map Components](map-components.md)章節的延續，但您只需要將已啟用SPA的AEM專案部署到本機AEM執行個體即可。
 
 ## 將導覽新增至範本 {#add-navigation-template}
 
@@ -73,9 +73,9 @@ ht-degree: 0%
    在&#x200B;**屬性**&#x200B;下：
 
    * 將&#x200B;**導覽根目錄**&#x200B;設定為`/content/wknd-spa-react/us/en`。
-   * 將&#x200B;**排除根層級**&#x200B;設定為&#x200B;**1**。
-   * 取消勾選&#x200B;**收集所有子頁面**。
-   * 將&#x200B;**導覽結構深度**&#x200B;設定為&#x200B;**3**。
+   * 將「**排除根層級**」設定為「**1**」。
+   * 取消勾選「**收集所有子頁面**」。
+   * 將「**導覽結構深度**」設定為「**3**」。
 
    ![設定導覽原則](assets/navigation-routing/navigation-policy.png)
 
@@ -207,7 +207,7 @@ ht-degree: 0%
 
    AEM模型管理員瞭解&#x200B;**頁面3** JSON內容無法使用，並自動觸發其他XHR請求。
 
-1. 透過直接導覽至[http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html)來嘗試深層連結。 另請注意，瀏覽器的返回按鈕仍會繼續運作。
+1. 透過直接導覽至： [http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html)來嘗試深層連結。 另請注意，瀏覽器的返回按鈕仍會繼續運作。
 
 ## 檢查React路由  {#react-routing}
 

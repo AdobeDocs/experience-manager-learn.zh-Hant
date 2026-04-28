@@ -1,5 +1,5 @@
 ---
-title: SPA編輯器專案 | AEM SPA Editor and Angular快速入門
+title: SPA編輯器專案| AEM SPA Editor和Angular快速入門
 description: 瞭解如何使用Adobe Experience Manager (AEM) Maven專案，開始整合Angular應用程式與AEM SPA Editor。
 feature: SPA Editor, AEM Project Archetype
 version: Experience Manager as a Cloud Service
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
 duration: 252
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 1%
+source-wordcount: '1148'
+ht-degree: 6%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 1. 瞭解從Maven原型建立的新AEM SPA Editor專案結構。
 2. 將入門專案部署到AEM的本機執行個體。
 
-## 您將建置的內容
+## 您將要建置的內容
 
 在本章中，已根據[AEM專案原型](https://github.com/adobe/aem-project-archetype)部署新的AEM專案。 AEM專案是透過一個非常簡單的Angular SPA起點來啟動。 本章中使用的專案將作為WKND SPA實施的基礎，並在未來的章節中建置。
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 ## 先決條件
 
-檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。 請確定以&#x200B;**作者**&#x200B;模式啟動的Adobe Experience Manager全新執行個體正在本機執行。
+檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具與指示。 請確定以&#x200B;**作者**&#x200B;模式啟動的Adobe Experience Manager全新執行個體正在本機執行。
 
 ## 取得專案
 
@@ -90,7 +90,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   > 注意`frontendModule=angular`屬性。 這會告訴AEM專案原型使用要與AEM SPA編輯器搭配使用的入門程式[Angular程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=zh-Hant)，來啟動專案。
+   > 注意`frontendModule=angular`屬性。 這會告訴AEM專案原型使用要與AEM SPA編輯器搭配使用的入門程式[Angular程式碼基底](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html)，來啟動專案。
 
 ## 建置專案
 
@@ -139,7 +139,7 @@ ht-degree: 1%
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven設定檔&#x200B;***autoInstallSinglePackage***&#x200B;會編譯專案的個別模組，並將單一套件部署至AEM執行個體。 依預設，此套件會部署至在本機執行於連線埠&#x200B;**4502**&#x200B;上的AEM執行個體，並使用&#x200B;**admin：admin**&#x200B;的認證。
+   The Maven profile ***autoInstallSinglePackage*** compiles the individual modules of the project and deploys a single package to the AEM instance. 依預設，此套件會部署至在本機執行於連線埠&#x200B;**4502**&#x200B;上的AEM執行個體，並具有&#x200B;**admin:admin**&#x200B;的認證。
 
 4. 導覽至本機AEM執行個體上的&#x200B;**[!UICONTROL 封裝管理員]**： [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)。
 
@@ -149,7 +149,7 @@ ht-degree: 1%
 
    專案所需的所有自訂程式碼都隨附在這些套件中，並安裝在AEM執行階段上。
 
-6. 您應該也會看到`spa.project.core`和`core.wcm.components`的多個套件。 這些是原型自動包含的相依性。 如需[AEM核心元件的詳細資訊，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
+6. 您應該也會看到`spa.project.core`和`core.wcm.components`的多個套件。 這些是原型自動包含的相依性。 如需[AEM核心元件的詳細資訊，請參閱此處](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 ## 作者內容
 
@@ -205,7 +205,7 @@ ht-degree: 1%
 
    應該有對[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)的請求。 這包含所有將驅動SPA的內容（以JSON格式化）。
 
-5. 在新索引標籤中，開啟[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
+5. 在新標籤中，開啟[http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
 
    請求`en.model.json`代表將驅動應用程式的內容模型。 請檢查JSON輸出，您應該能夠找到代表&#x200B;**[!UICONTROL Text]**&#x200B;元件的程式碼片段。
 

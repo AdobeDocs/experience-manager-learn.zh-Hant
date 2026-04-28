@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
 duration: 306
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1121'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 1%
 若要將可編輯區域新增至「首頁」檢視：
 
 1. 開啟並編輯`react-app/src/components/Home.js`
-1. 從`ResponsiveGrid`匯入`@adobe/aem-react-editable-components`元件，並將其新增至`Home`元件。
+1. 從`@adobe/aem-react-editable-components`匯入`ResponsiveGrid`元件，並將其新增至`Home`元件。
 1. 在`<ResponsiveGrid...>`元件上設定下列屬性
    1. `pagePath = '/content/wknd-app/us/en/home'`
    1. `itemPath = 'root/responsivegrid'`
@@ -51,7 +51,7 @@ ht-degree: 1%
 
    1. `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
-   `itemPath`對應至`responsivegrid` AEM範本中定義的`Remote SPA Page`節點，且會在從`Remote SPA Page` AEM範本建立的新AEM頁面上自動建立。
+   `itemPath`對應至`Remote SPA Page` AEM範本中定義的`responsivegrid`節點，且會在從`Remote SPA Page` AEM範本建立的新AEM頁面上自動建立。
 
    更新`Home.js`以新增`<ResponsiveGrid...>`元件。
 
@@ -237,7 +237,7 @@ export default EditableImage;
 ```
 
 
-1. 建立提供`src/components/editable/EditableImage.scss`自訂樣式的SCSS檔案`EditableImage.scss`。 這些樣式以可編輯的React元件的CSS類別為目標。
+1. 建立提供`EditableImage.scss`自訂樣式的SCSS檔案`src/components/editable/EditableImage.scss`。 這些樣式以可編輯的React元件的CSS類別為目標。
 1. 將下列SCSS新增至`EditableImage.scss`
 
    ```css
@@ -248,7 +248,7 @@ export default EditableImage;
     }
    ```
 
-1. 在`EditableImage.scss`中匯入`EditableImage.js`
+1. 在`EditableImage.js`中匯入`EditableImage.scss`
 
    ```javascript
    ...
@@ -335,13 +335,13 @@ SPA更新為內嵌`<ResponsiveGrid...>`、三個可編輯的React元件（`Edita
    1. 文字
 1. __作者__ __標題__&#x200B;元件
    1. 點選「標題」元件，然後點選&#x200B;__扳手__&#x200B;圖示以&#x200B;__編輯__「標題」元件
-   1. 新增下列文字：
-      1. 標題： __夏天即將到來，讓我們充分利用它！__
+   1. Add the following text:
+      1. Title: __Summer is coming, let&#39;s make the most of it!__
       1. 型別： __H1__
    1. 點選&#x200B;__完成__
 1. __作者__ __影像__&#x200B;元件
-   1. 在影像元件上，從側邊欄(切換至Assets檢視後)將影像拖曳到中
-   1. 點選「影像」元件，然後點選「__扳手__」圖示以進行編輯
+   1. 在影像元件上，從側邊欄（切換至Assets檢視後）將影像拖曳到中
+   1. Tap the Image component, and tap the __wrench__ icon to edit
    1. 勾選&#x200B;__影像為裝飾性__&#x200B;核取方塊
    1. 點選&#x200B;__完成__
 1. __作者__ __文字__&#x200B;元件

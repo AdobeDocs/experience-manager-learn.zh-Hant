@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
 duration: 647
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 10%
+source-wordcount: '838'
+ht-degree: 13%
 
 ---
 
@@ -43,8 +43,8 @@ _快速設定的影片逐步解說_
 + [Git](https://git-scm.com/downloads)
 + 僅限macOS的必要條件
    + [Xcode](https://developer.apple.com/xcode/)或[Xcode命令列工具](https://developer.apple.com/xcode/resources/)
-+ [aem-guides-wknd.all-2.1.0.zip 或更高版本](https://github.com/adobe/aem-guides-wknd/releases)
-+ [aem-guides-wknd-graphql原始碼（分支： feature/spa-editor）](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
++ [aem-guides-wknd.all-2.1.0.zip或更高版本](https://github.com/adobe/aem-guides-wknd/releases)
++ [aem-guides-wknd-graphql原始碼(branch： feature/spa-editor)](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
 
 
 本教學課程假設：
@@ -69,35 +69,35 @@ _快速設定的影片逐步解說_
    # Provide `admin` as the admin user's password
    ```
 
-AEM SDK會在[http://localhost:4502](http://localhost:4502)上啟動並自動啟動。 使用下列憑證登入：
+AEM SDK會在[http://localhost:4502](http://localhost:4502)上啟動並自動啟動。 Log in using the following credentials:
 
-+ 使用者名稱： `admin`
-+ 密碼： `admin`
++ Username: `admin`
++ Password: `admin`
 
-## 下載及安裝WKND站台套件
+## Download and install WKND Site package
 
-此教學課程依存於&#x200B;__WKND 2.1.0+的__&#x200B;專案（針對內容）。
+This tutorial has a dependency on __WKND 2.1.0+&#39;s__ project (for content).
 
-1. [下載最新版本的`aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
-1. 使用[認證登入:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin`的AEM SDK封裝管理員。
-1. __上傳__&#x200B;在步驟1中下載的`aem-guides-wknd.all.x.x.x.zip`
-1. 點選專案&#x200B;__的__&#x200B;安裝`aem-guides-wknd.all-x.x.x.zip`按鈕
+1. [Download the latest version of `aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
+1. Log in to AEM SDK&#39;s Package Manager at [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) with the `admin` credentials.
+1. __Upload__ the `aem-guides-wknd.all.x.x.x.zip` downloaded in step 1
+1. Tap the __Install__ button for the entry `aem-guides-wknd.all-x.x.x.zip`
 
-## 下載及安裝WKND應用程式SPA套件
+## Download and install WKND App SPA packages
 
-為了執行快速設定，我們在此提供AEM套件，其中包含教學課程的最終AEM設定和內容。
+To perform a quick setup, AEM packages are provided here that contain the tutorial&#39;s final  AEM configuration and content.
 
-1. [下載 &#x200B;](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [下載 &#x200B;](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
-1. 使用[認證登入:4502http://localhost](http://localhost:4502/crx/packmgr)/crx/packmgr`admin`的AEM SDK封裝管理員。
-1. __上傳__&#x200B;在步驟1中下載的`wknd-app.all.x.x.x.zip`
-1. 點選專案&#x200B;__的__&#x200B;安裝`wknd-app.all.x.x.x.zip`按鈕
-1. __上傳__&#x200B;在步驟2中下載的`wknd-app.ui.content.sample.x.x.x.zip`
-1. 點選專案&#x200B;__的__&#x200B;安裝`wknd-app.ui.content.sample.x.x.x.zip`按鈕
+1. [Download `wknd-app.all.x.x.x.zip`](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [Download `wknd-app.ui.content.sample.x.x.x.zip`](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
+1. Log in to AEM SDK&#39;s Package Manager at [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) with the `admin` credentials.
+1. __Upload__ the `wknd-app.all.x.x.x.zip` downloaded in step 1
+1. Tap the __Install__ button for the entry `wknd-app.all.x.x.x.zip`
+1. __Upload__ the `wknd-app.ui.content.sample.x.x.x.zip` downloaded in step 2
+1. Tap the __Install__ button for the entry `wknd-app.ui.content.sample.x.x.x.zip`
 
-## 下載WKND應用程式來源
+## Download the WKND App source
 
-請由Github.com下載WKND應用程式的原始程式碼，並切換包含在本教學課程中執行之SPA變更的分支。
+Download the WKND App&#39;s source code by from Github.com, and switch the branch containing the changes to the SPA performed in this tutorial.
 
 ```
 $ mkdir -p ~/Code/wknd-app
@@ -106,9 +106,9 @@ $ git clone --branch feature/spa-editor https://github.com/adobe/aem-guides-wknd
 $ cd aem-guides-wknd-graphql
 ```
 
-## 啟動SPA應用程式
+## Start the SPA application
 
-從專案的根目錄，安裝SPA專案npm相依性並執行應用程式。
+From the project&#39;s root, install the SPA projects npm dependencies and run the application.
 
 ```
 $ cd ~/Code/wknd-app/aem-guides-wknd-graphql/react-app
@@ -116,7 +116,7 @@ $ npm install
 $ npm run start
 ```
 
-如果在執行`npm install`時發生錯誤，請嘗試下列步驟：
+If there are errors when running `npm install` try the following steps:
 
 ```
 $ cd ~/Code/wknd-app/aem-guides-wknd-graphql/react-app
@@ -125,13 +125,13 @@ $ npm install --legacy-peer-deps
 $ npm run start
 ```
 
-驗證SPA是否在[http://localhost:3000](http://localhost:3000)執行。
+Verify that the SPA is running at [http://localhost:3000](http://localhost:3000).
 
-## 在AEM SPA Editor中製作內容
+## Author content in AEM SPA Editor
 
-在編寫內容之前，請安排瀏覽器視窗，讓AEM Author (`http://localhost:4502`)在左側，遠端SPA (`http://localhost:3000`)在右側。 這種排列方式可讓您檢視對AEM來源內容的變更如何立即反映在SPA中。
+Before authoring content arrange your browser windows such that AEM Author (`http://localhost:4502`) is on the left, and the remote SPA  (`http://localhost:3000`) runs on the right. 這種排列方式可讓您檢視對AEM來源內容的變更如何立即反映在SPA中。
 
-1. 以[身分登入](http://localhost:4502)AEM SDK作者服務`admin`
+1. 以`admin`身分登入[AEM SDK作者服務](http://localhost:4502)
 1. 導覽至&#x200B;__網站> WKND應用程式>我們> en__
 1. 編輯&#x200B;__WKND應用程式首頁__
 1. 切換至&#x200B;__編輯__&#x200B;模式

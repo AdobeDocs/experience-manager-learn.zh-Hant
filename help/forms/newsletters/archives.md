@@ -1,40 +1,40 @@
 ---
-title: Experience League每月電子報封存。
-description: 下載電子報的封存版本。
+title: Experience League Monthly Newsletters Archive.
+description: Download archived versions of the newsletter.
 hidefromtoc: true
 hide: true
 exl-id: 16133400-b4c6-4d86-9c28-d5e230d55839
-source-git-commit: cfe98419bc04ad757adb8a14dde9068e62f0ea78
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%
 
 ---
 
-# Experience League每月電子報封存
+# Experience League Monthly Newsletters Archive
 
-我們每月的Experience League內容電子報可在此頁面下載。 請選取月份來存取及下載對應的版本。
+Our monthly Experience League Content Newsletters are available for download on this page. Please select a month to access and download the corresponding edition.
 
-| 2025年電子報 |
+| 2025 newsletters |
 |------------|
-| [1月](assets/Jan-Newsletter.pdf) |
-| [2月](assets/Feb-Newsletter.pdf) |
-| [3月](assets/March-Newsletter.pdf) |
-| [4月](assets/April-Newsletter.pdf) |
-| [5月](assets/May-Newsletter.pdf) |
-| [6月](assets/June-Newsletter.pdf) |
-| [7月](assets/July-Newsletter.pdf) |
-| [8月](assets/August-Newsletter.pdf) |
-| [9月](assets/Sept-Newsletter.pdf) |
-| [10月](assets/Oct-Newsletter.pdf) |
-| [11月](assets/Nov-Newsletter.pdf) |
-| [12月](assets/Dec-Newsletter.pdf) |
+| [January](assets/Jan-Newsletter.pdf) |
+| [February](assets/Feb-Newsletter.pdf) |
+| [March](assets/March-Newsletter.pdf) |
+| [April](assets/April-Newsletter.pdf) |
+| [May](assets/May-Newsletter.pdf) |
+| [June](assets/June-Newsletter.pdf) |
+| [July](assets/July-Newsletter.pdf) |
+| [August](assets/August-Newsletter.pdf) |
+| [September](assets/Sept-Newsletter.pdf) |
+| [October](assets/Oct-Newsletter.pdf) |
+| [November](assets/Nov-Newsletter.pdf) |
+| [December](assets/Dec-Newsletter.pdf) |
 
 
-| 2026年電子報 |
+| 2026 newsletters |
 |------------|
-| [1月](assets/Jan-2026.pdf) |
-| [2月](assets/Feb-2026.pdf) |
-| [3月](assets/March-2026.pdf) |
+| [January](assets/Jan-2026.pdf) |
+| [February](assets/Feb-2026.pdf) |
+| [March](assets/March-2026.pdf) |
 
 

@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
 duration: 164
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '543'
 ht-degree: 1%
 
 ---
@@ -135,14 +135,14 @@ ht-degree: 1%
    export default EditableTitle;
    ```
 
-   此`EditableTitle` React元件會包裝`Title` React元件，並將其包裝及裝飾為可在AEM SPA Editor中編輯。
+   This `EditableTitle` React component wraps the `Title` React component, wrapping and decorating it to be editable in AEM SPA Editor.
 
-### 使用React EditableTitle元件
+### Use the React EditableTitle component
 
-現在EditableTitle React元件已在中註冊並可在React應用程式中使用，請取代「首頁」檢視上的硬式編碼標題文字。
+Now that the EditableTitle React component is registered in and available for use within the React app, replace the hard-coded title text on the Home view.
 
-1. 編輯`react-app/src/components/Home.js`
-1. 在底部的`Home()`中，匯入`EditableTitle`並以新的`AEMTitle`元件取代硬式編碼的標題：
+1. Edit `react-app/src/components/Home.js`
+1. In the `Home()` at the bottom, import `EditableTitle` and replace the hard-coded title with the new `AEMTitle` component:
 
    ```javascript
    ...
@@ -166,32 +166,32 @@ ht-degree: 1%
 
 ![Home.js](./assets/spa-fixed-component/home-js-update.png)
 
-## 在AEM中編寫標題元件
+## Author the Title component in AEM
 
 1. 登入AEM Author
-1. 導覽至&#x200B;__網站> WKND應用程式__
-1. 點選&#x200B;__首頁__，然後從最上方的動作列選取&#x200B;__編輯__
-1. 從「頁面編輯器」右上角的編輯模式選取器中選取&#x200B;__編輯__
-1. 將游標暫留在WKND標誌下方和冒險清單上方的預設標題文字上，直到顯示藍色編輯外框為止
-1. 點選以公開元件的動作列，然後點選&#x200B;__扳手__&#x200B;以進行編輯
+1. Navigate to __Sites > WKND App__
+1. Tap __Home__ and select __Edit__ from the top action bar
+1. Select __Edit__ from the edit mode selector in the top right of the Page Editor
+1. Hover over the default title text below the WKND logo and above the adventures list, until the blue edit outline displays
+1. Tap to expose the component&#39;s action bar, and then tap the __wrench__  to edit
 
-   ![標題元件動作列](./assets/spa-fixed-component/title-action-bar.png)
+   ![Title component action bar](./assets/spa-fixed-component/title-action-bar.png)
 
-1. 編寫標題元件：
-   1. 標題： __WKND冒險__
-   1. 型別/大小： __H2__
+1. Author the Title component:
+   1. Title: __WKND Adventures__
+   1. Type/Size: __H2__
 
-      ![標題元件對話方塊](./assets/spa-fixed-component/title-dialog.png)
+      ![Title component dialog](./assets/spa-fixed-component/title-dialog.png)
 
-1. 點選&#x200B;__完成__&#x200B;以儲存
-1. 在AEM SPA Editor中預覽變更
-1. 重新整理在[http://localhost:3000](http://localhost:3000)本機執行的WKND應用程式，並立即看到所編寫的標題變更。
+1. Tap __Done__ to save
+1. Preview your changes in AEM SPA Editor
+1. Refresh the WKND App running locally on [http://localhost:3000](http://localhost:3000) and see the authored title changes immediately reflected.
 
-   SPA中的![標題元件](./assets/spa-fixed-component/title-final.png)
+   ![Title component in SPA](./assets/spa-fixed-component/title-final.png)
 
 ## 恭喜！
 
-您已將固定、可編輯的元件新增至WKND應用程式！ 您現在知道如何：
+You&#39;ve added a fixed, editable component to the WKND App! 您現在知道如何：
 
 * 建立固定但可編輯的元件至SPA
 * 在AEM中編寫固定元件

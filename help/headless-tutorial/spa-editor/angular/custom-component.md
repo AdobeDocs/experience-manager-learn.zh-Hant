@@ -1,5 +1,5 @@
 ---
-title: 建立自訂元件 | AEM SPA Editor and Angular快速入門
+title: 建立自訂元件| AEM SPA Editor and Angular快速入門
 description: 瞭解如何建立要與AEM SPA Editor搭配使用的自訂元件。 瞭解如何開發作者對話方塊和Sling模型，以擴充JSON模型來填入自訂元件。
 feature: SPA Editor
 version: Experience Manager as a Cloud Service
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
 duration: 308
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 0%
+source-wordcount: '1544'
+ht-degree: 8%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 2. 瞭解如何建立AEM元件對話方塊。
 3. 瞭解如何建立與SPA編輯器架構相容的&#x200B;**自訂** AEM元件。
 
-## 您將建置的內容
+## 您將要建置的內容
 
 前幾章的重點是開發SPA元件，並將它們對應至&#x200B;*現有*&#x200B;個AEM核心元件。 本章著重於如何建立及擴充&#x200B;*新*&#x200B;個AEM元件，以及如何操作AEM所提供的JSON模型。
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 ## 先決條件
 
-檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具和指示。
+檢閱設定[本機開發環境](overview.md#local-dev-environment)所需的工具與指示。
 
 ### 取得程式碼
 
@@ -53,35 +53,35 @@ ht-degree: 0%
    $ git checkout Angular/custom-component-start
    ```
 
-2. 使用Maven將程式碼庫部署到本機AEM執行個體：
+2. Deploy the code base to a local AEM instance using Maven:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   如果使用[AEM 6.x](overview.md#compatibility)，請新增`classic`設定檔：
+   If using [AEM 6.x](overview.md#compatibility) add the `classic` profile:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. 安裝傳統[WKND參考站台](https://github.com/adobe/aem-guides-wknd/releases/latest)的完成套件。 由[WKND參考網站](https://github.com/adobe/aem-guides-wknd/releases/latest)提供的影像會在WKND SPA上重複使用。 可以使用[AEM的封裝管理員](http://localhost:4502/crx/packmgr/index.jsp)來安裝封裝。
+3. Install the finished package for the traditional [WKND reference site](https://github.com/adobe/aem-guides-wknd/releases/latest). The images provided by [WKND reference site](https://github.com/adobe/aem-guides-wknd/releases/latest) are reused on the WKND SPA. The package can be installed using [AEM&#39;s Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
 
-   ![封裝管理員安裝wknd.all](./assets/map-components/package-manager-wknd-all.png)
+   ![Package Manager install wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
-您一律可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/custom-component-solution)上檢視完成的程式碼，或切換至分支`Angular/custom-component-solution`在本機簽出程式碼。
+您隨時可以在 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/custom-component-solution) 上檢視完成的程式碼，或透過切換到分支 `Angular/custom-component-solution` 在本機查看程式碼。
 
-## 定義AEM元件
+## Define the AEM Component
 
-AEM元件定義為節點和屬性。 在專案中，這些節點和屬性在`ui.apps`模組中表示為XML檔案。 接下來，在`ui.apps`模組中建立AEM元件。
+An AEM component is defined as a node and properties. In the project, these nodes and properties are represented as XML files in the `ui.apps` module. Next, create the AEM component in the `ui.apps` module.
 
 >[!NOTE]
 >
-> 快速重新整理AEM元件的[基本知識可能會有幫助](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=zh-Hant)。
+> A quick refresher on the [basics of AEM components may be helpful](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html).
 
-1. 在您選擇的IDE中開啟`ui.apps`資料夾。
-2. 瀏覽至`ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components`並建立名為`custom-component`的資料夾。
-3. 在`custom-component`資料夾下建立名為`.content.xml`的檔案。 以下列專案填入`custom-component/.content.xml`：
+1. Open the `ui.apps` folder in the IDE of your choice.
+2. Navigate to `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components` and create a folder named `custom-component`.
+3. Create a file named `.content.xml` beneath the `custom-component` folder. Populate the `custom-component/.content.xml` with the following:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -91,14 +91,14 @@ AEM元件定義為節點和屬性。 在專案中，這些節點和屬性在`ui.
        componentGroup="WKND SPA Angular - Content"/>
    ```
 
-   ![建立自訂元件定義](assets/custom-component/aem-custom-component-definition.png)
+   ![Create Custom Component defintion](assets/custom-component/aem-custom-component-definition.png)
 
-   `jcr:primaryType="cq:Component"` — 識別此節點是AEM元件。
+   `jcr:primaryType="cq:Component"` - identifies that this node is an AEM component.
 
-   `jcr:title`是顯示給內容作者的值，且`componentGroup`會決定編寫UI中的元件分組。
+   `jcr:title` is the value that is displayed to Content Authors and the `componentGroup` determines the grouping of components in the authoring UI.
 
-4. 在`custom-component`資料夾下，建立另一個名為`_cq_dialog`的資料夾。
-5. 在`_cq_dialog`資料夾下方建立名為`.content.xml`的檔案，並填入下列內容：
+4. Beneath the `custom-component` folder, create another folder named `_cq_dialog`.
+5. Beneath the `_cq_dialog` folder create a file named `.content.xml` and populate it with the following:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -149,29 +149,29 @@ AEM元件定義為節點和屬性。 在專案中，這些節點和屬性在`ui.
    </jcr:root>
    ```
 
-   ![自訂元件定義](assets/custom-component/dialog-custom-component-defintion.png)
+   ![Custom Component definition](assets/custom-component/dialog-custom-component-defintion.png)
 
-   上述XML檔案會為`Custom Component`產生簡單的對話方塊。 檔案的關鍵部分是內部`<message>`節點。 此對話方塊包含一個名為`Message`的簡單`textfield`，並將文字欄位的值保留到名為`message`的屬性。
+   The above XML file generates a simple dialog for the `Custom Component`. The critical part of the file is the inner `<message>` node. This dialog contains a simple `textfield` named `Message` and persist the value of the textifeld to a property named `message`.
 
    接著會建立Sling模型，以透過JSON模型公開`message`屬性的值。
 
    >[!NOTE]
    >
-   > 您可以檢視核心元件定義[&#128279;](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)，以檢視更多對話方塊範例。 您也可以檢視[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)中`/libs/granite/ui/components/coral/foundation/form`下方可用的其他表單欄位，例如`select`、`textarea`、`pathfield`。
+   > 您可以檢視核心元件定義](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components)，以檢視更多[對話方塊範例。 您也可以檢視[CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form)中`/libs/granite/ui/components/coral/foundation/form`下方可用的其他表單欄位，例如`select`、`textarea`、`pathfield`。
 
-   使用傳統AEM元件時，通常需要[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hant)指令碼。 由於SPA會轉譯元件，因此不需要HTL指令碼。
+   使用傳統AEM元件時，通常需要[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)指令碼。 由於SPA會轉譯元件，因此不需要HTL指令碼。
 
 ## 建立Sling模型
 
-Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可方便將資料從JCR對應至Java™變數。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=zh-Hant#sling-models)通常可封裝AEM元件的複雜伺服器端商業邏輯。
+Sling 模型是由註解驅動的 Java™「POJO」(一般的 Java™ 物件)，有助於將 JCR 的資料對應到 Java™ 變數。 [Sling模型](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models)通常可封裝AEM元件的複雜伺服器端商業邏輯。
 
-在SPA編輯器的內容中，Sling模型使用[Sling模型匯出工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=zh-Hant)，透過JSON模型透過功能公開元件的內容。
+在SPA編輯器的內容中，Sling模型使用[Sling模型匯出工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)，透過JSON模型透過功能公開元件的內容。
 
 1. 在您選擇的IDE中，開啟`core`模組。 `CustomComponent.java`和`CustomComponentImpl.java`已建立並作為章節起始程式碼的一部分進行存根。
 
    >[!NOTE]
    >
-   > 如果使用Visual Studio Code IDE，則安裝Java™[&#128279;](https://code.visualstudio.com/docs/java/extensions)的擴充功能可能會有幫助。
+   > 如果使用Visual Studio Code IDE，則安裝Java™](https://code.visualstudio.com/docs/java/extensions)的[擴充功能可能會有幫助。
 
 2. 在`core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/CustomComponent.java`開啟Java™介面`CustomComponent.java`：
 
@@ -238,7 +238,7 @@ Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可�
 
    >[!NOTE]
    >
-   > 您可以在[&#128279;](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)檢視已完成的CustomComponentImpl.java。
+   > 您可以在](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java)檢視[已完成的CustomComponentImpl.java。
 
 ## 更新Angular元件
 
@@ -334,7 +334,7 @@ Sling模型是註釋驅動的Java™ 「POJO」(Plain Old Java™物件)，可�
 
 恭喜，您已瞭解如何建立自訂AEM元件，以及Sling模型和對話方塊如何與JSON模型搭配運作。
 
-您一律可以在[GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/custom-component-solution)上檢視完成的程式碼，或切換至分支`Angular/custom-component-solution`在本機簽出程式碼。
+您隨時可以在 [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/custom-component-solution) 上檢視完成的程式碼，或透過切換到分支 `Angular/custom-component-solution` 在本機查看程式碼。
 
 ### 後續步驟 {#next-steps}
 

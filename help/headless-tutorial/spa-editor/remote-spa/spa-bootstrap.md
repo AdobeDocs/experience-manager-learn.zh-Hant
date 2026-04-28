@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: b8d43e44-014c-4142-b89c-ff4824b89c78
 duration: 327
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 2%
+source-wordcount: '1244'
+ht-degree: 3%
 
 ---
 
@@ -65,18 +65,18 @@ $ npm install @adobe/aem-react-editable-components
 
    * `REACT_APP_HOST_URI`：遠端SPA所連線之AEM服務的配置與主機。
       * 此值會隨著AEM環境（本機、開發、階段或生產）和AEM服務型別（製作與發佈）而改變
-   * `REACT_APP_USE_PROXY`：這可透過告知react開發伺服器使用`/content, /graphql, .model.json`模組代理AEM請求（例如`http-proxy-middleware`）來避免開發期間的CORS問題。
+   * `REACT_APP_USE_PROXY`：這可透過告知react開發伺服器使用`http-proxy-middleware`模組代理AEM請求（例如`/content, /graphql, .model.json`）來避免開發期間的CORS問題。
    * `REACT_APP_AUTH_METHOD`： AEM服務請求的驗證方法，選項為「service-token」、「dev-token」、「basic」或對no-auth使用案例保留空白
       * 與AEM Author搭配使用時需要使用
       * 可能需要搭配AEM Publish使用（如果內容受到保護）
       * 針對AEM SDK進行開發時，可透過基本驗證支援本機帳戶。 這是本教學課程中使用的方法。
-      * 與AEM as a Cloud Service整合時，請使用[存取權杖](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=zh-Hant)
+      * 與AEM as a Cloud Service整合時，請使用[存取權杖](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
    * `REACT_APP_BASIC_AUTH_USER`： SPA要驗證的AEM __使用者名稱__，擷取AEM內容。
    * `REACT_APP_BASIC_AUTH_PASS`： SPA的AEM __密碼__&#x200B;在擷取AEM內容時用來進行驗證。
 
 ## 整合ModelManager API
 
-使用應用程式可用的AEM SPA npm相依性，在叫用`ModelManager`之前，在專案的`index.js`中初始化AEM的`ReactDOM.render(...)`。
+使用應用程式可用的AEM SPA npm相依性，在叫用`ReactDOM.render(...)`之前，在專案的`index.js`中初始化AEM的`ModelManager`。
 
 [ModelManager](https://github.com/adobe/aem-spa-page-model-manager/blob/master/src/ModelManager.ts)負責連線至AEM以擷取可編輯的內容。
 
@@ -102,7 +102,7 @@ $ npm install @adobe/aem-react-editable-components
 
 ## 設定內部SPA代理
 
-建立可編輯的SPA時，最好在SPA[中設定](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)內部Proxy，將其設定為將適當的要求路由傳送至AEM。 這是使用[http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) npm模組完成的，此模組已由基礎WKND GraphQL應用程式安裝。
+建立可編輯的SPA時，最好在SPA](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)中設定[內部Proxy，將其設定為將適當的要求路由傳送至AEM。 這是使用[http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) npm模組完成的，此模組已由基礎WKND GraphQL應用程式安裝。
 
 1. 在IDE中開啟遠端SPA專案
 1. 在`src/proxy/setupProxy.spa-editor.auth.basic.js`開啟檔案
@@ -185,7 +185,7 @@ $ npm install @adobe/aem-react-editable-components
 
    此Proxy設定主要執行兩項作業：
 
-   1. 代理對AEM `http://localhost:3000`的SPA (`http://localhost:4502`)提出的特定要求
+   1. 代理對AEM `http://localhost:4502`的SPA (`http://localhost:3000`)提出的特定要求
       * 它只會代理其路徑符合模式的請求，這些模式指出它們應該由AEM提供服務，如`toAEM(path, req)`中所定義。
       * 它會將SPA路徑重寫至相對應的AEM頁面，如`pathRewriteToAEM(path, req)`中所定義
    1. 它會將CORS標頭新增至所有請求，以允許存取`res.header("Access-Control-Allow-Origin", REACT_APP_HOST_URI);`所定義的AEM內容
@@ -253,7 +253,7 @@ $ npm install @adobe/aem-react-editable-components
    }
    ```
 
-1. 針對&#x200B;__中上一頁按鈕的__&#x200B;兩個執行個體`src/components/AdventureDetails.js`
+1. 針對`src/components/AdventureDetails.js`中上一頁按鈕的&#x200B;__兩個執行個體__
 
    ```javascript
    const { REACT_APP_PUBLIC_URI } = process.env;
@@ -322,7 +322,7 @@ $ npm install @adobe/aem-react-editable-components
 
 1. 瀏覽[http://localhost:3000](http://localhost:3000)上的SPA。 應該一切正常！
 
-在http://localhost![上執行的:3000](./assets/spa-bootstrap/localhost-3000.png)SPA
+在http://localhost:3000](./assets/spa-bootstrap/localhost-3000.png)上執行的![SPA
 
 ## 在AEM SPA編輯器中開啟SPA
 
@@ -337,7 +337,7 @@ $ npm install @adobe/aem-react-editable-components
 1. 使用右上角的模式切換器切換至&#x200B;__預覽__
 1. 在SPA周圍按一下
 
-   在http://localhost![上執行的:3000](./assets/spa-bootstrap/spa-editor.png)SPA
+   在http://localhost:3000](./assets/spa-bootstrap/spa-editor.png)上執行的![SPA
 
 ## 恭喜！
 
