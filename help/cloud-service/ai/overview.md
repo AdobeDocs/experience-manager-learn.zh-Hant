@@ -1,6 +1,6 @@
 ---
-title: Experience Manager中的AI
-description: 探索Adobe Experience Manager as a Cloud Service內的AI，透過智慧型功能加強內容管理和交付。
+title: AI in Experience Manager
+description: Explore AI within Adobe Experience Manager as a Cloud Service, enhancing content management and delivery through intelligent features.
 version: Experience Manager as a Cloud Service
 role: Leader, User, Developer, Admin
 level: Beginner
@@ -8,18 +8,18 @@ doc-type: Catalog
 duration: 30
 last-substantial-update: 2026-01-05T00:00:00Z
 exl-id: cc255744-bb86-49cb-88ca-1266d28985a5
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 22%
+source-wordcount: '199'
+ht-degree: 18%
 
 ---
 
-# Experience Manager中的AI
+# AI in Experience Manager
 
-Experience Manager中的![AI](./assets/overview/hero.png)
+![AI in Experience Manager](./assets/overview/hero.png)
 
-Experience Manager as a Cloud Service提供進階AI功能，以增強內容管理、簡化工作流程並改善使用者體驗。 透過整合AI支援的功能，例如AEM AI Assistant和AEM AI代理程式，使用者可以自動化工作、獲得見解並最佳化內容傳送。
+Experience Manager as a Cloud Service provides advanced AI capabilities to enhance content management, streamline workflows, and improve user experiences. By integrating AI-powered features such as the AEM AI Assistant and AEM AI Agents, users can automate tasks, gain insights, and optimize content delivery.
 
 <!-- 
 CARDS
@@ -37,7 +37,13 @@ CARDS
 * ./mcp/overview.md
     {title = AEM MCP Servers}
     {description = Learn how to extend AEM into your favorite AI-tools.}
-    {cta = Learn}    
+    {cta = Learn}
+
+* ./ai-assited-development/overview.md
+    {title = AI-assisted development}
+    {description = Use Agent Skills, AGENTS.md, and MCP with your IDE to build production-ready AEM code.}
+    {image = ./ai-assited-development/assets/component-development/review-generated-code.png}
+    {cta = Learn}
 
 * ../../sites/generative-ai/generate-variations.md
     {title = Generate Variations}
@@ -56,7 +62,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./ai-assistant/overview.md" title="AEM AI 助理" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475369/?captions=chi_hant&format=jpeg&nocache=1773082651757" alt="AEM AI 助理"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475357/?format=jpeg&nocache=1773082651757" alt="AEM AI 助理"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -64,12 +70,12 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./ai-assistant/overview.md" target="_blank" rel="referrer" title="AEM AI 助理">AEM AI小幫手</a>
+                        <a href="./ai-assistant/overview.md" target="_blank" rel="referrer" title="AEM AI 助理">AEM AI Assistant</a>
                     </p>
-                    <p class="is-size-6">瞭解AI Assistant如何在AEM中提供產品知識和支援。</p>
+                    <p class="is-size-6">Learn how AI Assistant provides product knowledge and support in AEM.</p>
                 </div>
                 <a href="./ai-assistant/overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">學習</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Learn</span>
                 </a>
             </div>
         </div>
@@ -78,8 +84,8 @@ CARDS
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./mcp/overview.md" title="AEM MCP伺服器" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/content-mcp-server/update-adventure-price-prompt-response.png" alt="AEM MCP伺服器"
+                    <a href="./mcp/overview.md" title="AEM MCP Servers" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="assets/content-mcp-server/update-adventure-price-prompt-response.png" alt="AEM MCP Servers"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -87,12 +93,35 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./mcp/overview.md" target="_blank" rel="referrer" title="AEM MCP伺服器">AEM MCP伺服器</a>
+                        <a href="./mcp/overview.md" target="_blank" rel="referrer" title="AEM MCP Servers">AEM MCP Servers</a>
                     </p>
-                    <p class="is-size-6">瞭解如何將AEM擴充至您最愛的AI工具。</p>
+                    <p class="is-size-6">Learn how to extend AEM into your favorite AI-tools.</p>
                 </div>
                 <a href="./mcp/overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">學習</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Learn</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="AI-assisted development">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./ai-assited-development/overview.md" title="AI-assisted development" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="./ai-assited-development/assets/component-development/review-generated-code.png" alt="AI-assisted development"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./ai-assited-development/overview.md" target="_blank" rel="referrer" title="AI-assisted development">AI-assisted development</a>
+                    </p>
+                    <p class="is-size-6">Use Agent Skills, AGENTS.md, and MCP with your IDE to build production-ready AEM code.</p>
+                </div>
+                <a href="./ai-assited-development/overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Learn</span>
                 </a>
             </div>
         </div>
@@ -115,7 +144,7 @@ CARDS
                     <p class="is-size-6">Adobe Experience Manager 中的「產生變化版本」能夠針對任何體驗將文字和影像最佳化。</p>
                 </div>
                 <a href="../../sites/generative-ai/generate-variations.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看內容</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
                 </a>
             </div>
         </div>
@@ -133,12 +162,12 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="../../assets/search-and-discovery/ai-search.md" target="_blank" rel="referrer" title="AI 搜尋">AI 搜尋</a>
+                        <a href="../../assets/search-and-discovery/ai-search.md" target="_blank" rel="referrer" title="AI 搜尋">AI Search</a>
                     </p>
-                    <p class="is-size-6">瞭解AI 搜尋如何以智慧化方式呈現相關資產並啟用更聰明的搜尋體驗，藉以強化搜尋。</p>
+                    <p class="is-size-6">Learn how AEM Assets AI Search enhances search by intelligently surfacing relevant assets and enabling smarter search experiences.</p>
                 </div>
                 <a href="../../assets/search-and-discovery/ai-search.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看內容</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
                 </a>
             </div>
         </div>
