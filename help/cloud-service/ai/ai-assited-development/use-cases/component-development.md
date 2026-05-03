@@ -24,7 +24,7 @@ ht-degree: 2%
 
 在此逐步解說中，您在AI支援的IDE （例如Cursor）中使用自然語言，在[WKND Sites專案](https://github.com/adobe/aem-guides-wknd)中開發&#x200B;**促銷橫幅**&#x200B;元件。 編碼代理程式會套用`create-component` AEM代理程式技能以產生實作。
 
->[!VIDEO](https://video.tv.adobe.com/v/3484952/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3484963/?captions=chi_hant&learn=on&enablevpops)
 
 ## 先決條件
 
