@@ -65,10 +65,10 @@ Adobe透過[AEM技能](https://github.com/adobe/skills)存放庫提供Adobe代�
 
    如果&#x200B;**AGENTS.md**&#x200B;已經存在，則&#x200B;**不會**&#x200B;覆寫。
 
-1. 選擇安裝範圍。 對於此逐步解說，**專案**範圍是典型的，因此技能檔案會存在於存放庫中。
+1. 選擇安裝範圍。 對於此逐步解說，**專案**&#x200B;範圍是典型的，因此技能檔案會存在於存放庫中。
    ![選取安裝範圍](../assets/agent-skills/select-installation-scope.png)
 
-1. 確認`.agents/skills`下的安裝。 您應該會看到&#x200B;**SKILLS.md**以及相關的參考和資產資料夾。
+1. 確認`.agents/skills`下的安裝。 您應該會看到&#x200B;**SKILLS.md**&#x200B;以及相關的參考和資產資料夾。
    ![檢閱已安裝的技能](../assets/agent-skills/review-installed-skills.png)
 
 1. 當Adobe新增或更新技能時，請使用CLI來新增、更新、移除或列出這些技能。 若要檢視所有命令：
