@@ -121,7 +121,7 @@ CARDS
 
 ## 其他資源
 
-- [使用AI工具進行本機開發](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [使用AI工具進行本機開發](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [AI編碼代理程式的Adobe技能](https://github.com/adobe/skills)
 
