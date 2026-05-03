@@ -10,19 +10,21 @@ duration: 0
 last-substantial-update: 2026-04-24T00:00:00Z
 jira: KT-20901
 thumbnail: KT-20901.png
-source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
+exl-id: bd9b74e8-81ab-4d42-bd0a-5443248b5770
+source-git-commit: f93359e731b6c3fa549e9499ef693042eba3aad7
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 2%
 
 ---
 
-
 # 使用AEM Agent技能的元件開發
 
 瞭解如何使用AEM代理程式技能來開發AEM元件，作為[AI輔助開發](../overview.md)的一部分。
 
 在此逐步解說中，您在AI支援的IDE （例如Cursor）中使用自然語言，在[WKND Sites專案](https://github.com/adobe/aem-guides-wknd)中開發&#x200B;**促銷橫幅**&#x200B;元件。 編碼代理程式會套用`create-component` AEM代理程式技能以產生實作。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3484952/?learn=on&enablevpops)
 
 ## 先決條件
 
@@ -105,7 +107,7 @@ ht-degree: 2%
 
 ## 其他資源
 
-- [使用AI工具進行本機開發](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [使用AI工具進行本機開發](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [AI編碼代理程式的Adobe技能](https://github.com/adobe/skills)
 

@@ -10,13 +10,13 @@ duration: 0
 last-substantial-update: 2026-04-24T00:00:00Z
 jira: KT-20900
 thumbnail: KT-20900.png
-source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
+exl-id: c92d9124-4b92-4ee1-b04f-b6d1f82d53aa
+source-git-commit: f93359e731b6c3fa549e9499ef693042eba3aad7
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 4%
 
 ---
-
 
 # 設定AEM Agent技能
 
@@ -27,6 +27,8 @@ ht-degree: 4%
 Adobe透過[AEM技能](https://github.com/adobe/skills)存放庫提供Adobe代理程式技能。 另請參閱[AI輔助開發](../overview.md)，瞭解Adobe如何協助AI輔助開發。
 
 在本教學課程中，您會在[WKND Sites專案](https://github.com/adobe/aem-guides-wknd)的本機複製本上安裝技能。 您可以對自己的AEM as a Cloud Service專案使用相同的步驟。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3484940/?learn=on&enablevpops)
 
 ## 先決條件
 
@@ -63,10 +65,10 @@ Adobe透過[AEM技能](https://github.com/adobe/skills)存放庫提供Adobe代�
 
    如果&#x200B;**AGENTS.md**&#x200B;已經存在，則&#x200B;**不會**&#x200B;覆寫。
 
-1. 選擇安裝範圍。 對於此逐步解說，**專案**&#x200B;範圍是典型的，因此技能檔案會存在於存放庫中。
+1. 選擇安裝範圍。 對於此逐步解說，**專案**範圍是典型的，因此技能檔案會存在於存放庫中。
    ![選取安裝範圍](../assets/agent-skills/select-installation-scope.png)
 
-1. 確認`.agents/skills`下的安裝。 您應該會看到&#x200B;**SKILLS.md**&#x200B;以及相關的參考和資產資料夾。
+1. 確認`.agents/skills`下的安裝。 您應該會看到&#x200B;**SKILLS.md**以及相關的參考和資產資料夾。
    ![檢閱已安裝的技能](../assets/agent-skills/review-installed-skills.png)
 
 1. 當Adobe新增或更新技能時，請使用CLI來新增、更新、移除或列出這些技能。 若要檢視所有命令：
@@ -119,7 +121,7 @@ CARDS
 
 ## 其他資源
 
-- [使用AI工具進行本機開發](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [使用AI工具進行本機開發](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [AI編碼代理程式的Adobe技能](https://github.com/adobe/skills)
 
