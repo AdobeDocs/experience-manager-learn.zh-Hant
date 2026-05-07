@@ -69,8 +69,8 @@ MCP伺服器透過[模型內容通訊協定](https://modelcontextprotocol.io/)�
 
 針對AEM SDK和Dispatcher進行&#x200B;**本機開發**，請從[軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=mcp*&1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.0_values=software-type%3Atooling&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=3)入口網站安裝這&#x200B;**部本機MCP伺服器**：
 
-- **AEM Quickstart本機MCP伺服器**：公開本機AEM SDK執行個體的即時執行階段資料，以支援疑難排解和開發。 如需詳細資訊，請參閱[AEM Quickstart MCP Server](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server)。
-- **Dispatcher本機MCP伺服器**：啟用本機Dispatcher執行個體的執行階段驗證和檢查。 如需詳細資訊，請參閱[Dispatcher MCP伺服器](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server)。
+- **AEM Quickstart本機MCP伺服器**：公開本機AEM SDK執行個體的即時執行階段資料，以支援疑難排解和開發。 如需詳細資訊，請參閱[AEM Quickstart MCP Server](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server)。
+- **Dispatcher本機MCP伺服器**：啟用本機Dispatcher執行個體的執行階段驗證和檢查。 如需詳細資訊，請參閱[Dispatcher MCP伺服器](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server)。
 
 若為Adobe託管的AEM MCP伺服器（例如內容、唯讀內容和Cloud Manager），請參閱AEM中的[MCP伺服器](../mcp/overview.md)。
 
@@ -157,7 +157,7 @@ CARDS
 
 ## 其他資源
 
-- [使用AI工具進行本機開發](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [使用AI工具進行本機開發](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [AI編碼代理程式的Adobe技能](https://github.com/adobe/skills)
 
