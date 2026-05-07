@@ -3,26 +3,26 @@ title: AI輔助開發
 description: 瞭解AI輔助開發，其使用AI支援的IDE或編碼代理程式，以及AGENTS.md、Agent Skills和MCP伺服器，以幫助為AEM as a Cloud Service上的專案產生高品質、可用於生產的程式碼。
 version: Experience Manager as a Cloud Service
 feature: Developer Tools
-role: Developer, Architect
+role: Developer
 level: Beginner
 doc-type: Article
 duration: 0
 last-substantial-update: 2026-04-24T00:00:00Z
 jira: KT-20899
 thumbnail: KT-20899.pngKT-20899
-source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
+exl-id: 19b7ab0b-2f47-434a-a141-17701f432fac
+source-git-commit: 6f303c8fbec523227716fe0bc1bff8fceffad1f9
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 0%
 
 ---
 
-
 # AI輔助開發
 
 AI輔助開發使用AI支援的IDE或編碼代理程式，以及`AGENTS.md`、代理程式技能和MCP伺服器，來協助為AEM as a Cloud Service專案產生高品質、生產就緒的程式碼。
 
-Visual Studio Code[&#128279;](https://code.visualstudio.com/docs/copilot/overview)、[Claude Code](https://code.claude.com/docs/en/overview)中的工具，例如[Cursor](https://www.cursor.com/)、GitHub Copilot，以及類似的AI支援的IDE和編碼代理程式，有幾個主要方法可協助：
+Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview)、[Claude Code](https://code.claude.com/docs/en/overview)中的工具，例如[Cursor](https://www.cursor.com/)、[GitHub Copilot，以及類似的AI支援的IDE和編碼代理程式，有幾個主要方法可協助：
 
 - **更快的反複專案**：從描述所需功能或變更的自然語言提示產生或重構程式碼。
 - **學習輔助**：在提示時說明不熟悉的程式碼路徑、設定、概念或最佳實務。
@@ -69,8 +69,8 @@ MCP伺服器透過[模型內容通訊協定](https://modelcontextprotocol.io/)�
 
 針對AEM SDK和Dispatcher進行&#x200B;**本機開發**，請從[軟體發佈](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=mcp*&1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.0_values=software-type%3Atooling&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=3)入口網站安裝這&#x200B;**部本機MCP伺服器**：
 
-- **AEM Quickstart本機MCP伺服器**：公開本機AEM SDK執行個體的即時執行階段資料，以支援疑難排解和開發。 如需詳細資訊，請參閱[AEM Quickstart MCP Server](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server)。
-- **Dispatcher本機MCP伺服器**：啟用本機Dispatcher執行個體的執行階段驗證和檢查。 如需詳細資訊，請參閱[Dispatcher MCP伺服器](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server)。
+- **AEM Quickstart本機MCP伺服器**：公開本機AEM SDK執行個體的即時執行階段資料，以支援疑難排解和開發。 如需詳細資訊，請參閱[AEM Quickstart MCP Server](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server)。
+- **Dispatcher本機MCP伺服器**：啟用本機Dispatcher執行個體的執行階段驗證和檢查。 如需詳細資訊，請參閱[Dispatcher MCP伺服器](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server)。
 
 若為Adobe託管的AEM MCP伺服器（例如內容、唯讀內容和Cloud Manager），請參閱AEM中的[MCP伺服器](../mcp/overview.md)。
 
@@ -157,7 +157,7 @@ CARDS
 
 ## 其他資源
 
-- [使用AI工具進行本機開發](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [使用AI工具進行本機開發](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [AI編碼代理程式的Adobe技能](https://github.com/adobe/skills)
 
